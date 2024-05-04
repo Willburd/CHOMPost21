@@ -19,6 +19,7 @@
 				redexitlist += R
 	// Pick a random portal location, or spawn one at this controller as a fallback
 	if(redexitlist.len > 0)
-		create_redspace_wormhole( pick(redexitlist).loc, pick(redexitlist).loc, TRUE, 15 SECONDS, 45 SECONDS)
+		var/obj/effect/landmark/L = pick(redexitlist)
+		create_redspace_wormhole( src.loc, L.loc, TRUE, 15 SECONDS, 45 SECONDS)
 	else
 		create_redspace_wormhole( src.loc, src.loc, TRUE, 20, 30) // short portal time shows something is wrong.

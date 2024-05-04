@@ -31,7 +31,8 @@
 					redexitlist += R
 
 			if(redexitlist.len > 0)
-				do_teleport(M,pick( redexitlist).loc, 0,local = FALSE)
+				var/obj/effect/landmark/L = pick( redexitlist)
+				do_teleport(M, L.loc, 0,local = FALSE)
 			else
 				do_teleport(M, target, 1)  // fail...
 
@@ -50,5 +51,6 @@
 
 			if(redlist.len > 0)
 				// if teleport worked, drop out... otherwise just teleport normally, it means there was no redspace spawns!
-				do_teleport(M,pick( redlist).loc, 0,local = FALSE)
+				var/obj/effect/landmark/L = pick( redlist)
+				do_teleport(M, L.loc, 0,local = FALSE)
 				return

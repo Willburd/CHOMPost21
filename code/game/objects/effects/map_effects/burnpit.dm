@@ -43,13 +43,14 @@
 
 		// force fuel on tile to continue burning forever
 		var/obj/effect/decal/cleanable/liquid_fuel/fuel = locate(/obj/effect/decal/cleanable/liquid_fuel) in T
+		var/datum/gas_mixture/updated_air = T.return_air()
 		if(!fuel)
-			if(T.return_air().temperature < PHORON_MINIMUM_BURN_TEMPERATURE )
+			if(updated_air.temperature < PHORON_MINIMUM_BURN_TEMPERATURE )
 				new /obj/effect/decal/cleanable/liquid_fuel( T, rand(6,12), TRUE)
 			else
-				if(prob(5) && T.return_air().temperature < PHORON_MINIMUM_BURN_TEMPERATURE*1.2) // if we go above, we're on a player burn!
+				if(prob(5) && updated_air.temperature < PHORON_MINIMUM_BURN_TEMPERATURE*1.2) // if we go above, we're on a player burn!
 					T.make_air()
-					air_contents = T.return_air()
+					air_contents = updated_air
 					new /obj/effect/decal/cleanable/liquid_fuel( T, 1, TRUE)
 
 		// praise zorg
