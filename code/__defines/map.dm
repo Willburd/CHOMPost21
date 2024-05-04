@@ -11,6 +11,11 @@
 #define MAP_LEVEL_PERSIST       0x200   // Z-levels where SSpersistence should persist between rounds //CHOMPedit bumped to 0x200 because vorespawn, hopefully this doesn't break things
 #define MAP_LEVEL_MAPPABLE       0x400   // Z-levels where mapping units will work fully //CHOMPedit bumped to 0x400, somethingsomething don't break
 #define MAP_LEVEL_BELOW_BLOCKED   0x800   // Z-levels in multiz with level below not meant to be 'normally' accessible //CHOMPedit bumped to 0x800, please god do not break
+// Outpost 21 edit begin - Event levels and auto-clear
+#define MAP_LEVEL_EVENTS		0x1000	// Z-levels where events can spawn. Defaults to station_levels if unset.
+#define MAP_LEVEL_AIRMIX_CLEANS 0x2000 // Z-levels where the airmix of outside tiles are slowly reset, meaning you can never saturate the outside atmosphere
+// Outpost 21 edit end
+
 
 // Misc map defines.
 #define SUBMAP_MAP_EDGE_PAD 8 // Automatically created submaps are forbidden from being this close to the main map's edge.	//VOREStation Edit

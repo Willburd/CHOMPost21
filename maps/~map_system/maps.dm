@@ -348,6 +348,10 @@ var/list/all_maps = list()
 		map.accessible_z_levels["[z]"] = transit_chance
 	if(flags & MAP_LEVEL_MAPPABLE)
 		map.mappable_levels |= z
+	// Outpost 21 edit begin - Event levels and auto-clear
+	if(flags & MAP_LEVEL_EVENTS) map.event_levels += z
+	if(flags & MAP_LEVEL_AIRMIX_CLEANS) map.forced_airmix_levels += z
+	// Outpost 21 edit end
 	// Holomaps
 	// Auto-center the map if needed (Guess based on maxx/maxy)
 	if (holomap_offset_x < 0)

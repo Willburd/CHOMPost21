@@ -33,7 +33,7 @@ var/const/star_name		= "Virgo-Erigone"
 var/const/starsys_name	= "Virgo-Erigone"
 */
 //CHOMPStation Removal End
-var/const/game_version	= "CHOMPStation"	//CHOMPStation Edit TFF 24/12/19 - Chompers
+var/const/game_version	= "Outpost21"	//Outpost 21 Edit 24/12/19 - Chompers
 var/changelog_hash		= ""
 var/servernews_hash		= "" //ChompADD - news hash gen
 var/game_year			= (text2num(time2text(world.realtime, "YYYY")) + 544) //YW EDIT
