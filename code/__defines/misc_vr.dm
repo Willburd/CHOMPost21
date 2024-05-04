@@ -73,10 +73,12 @@
 #define MAT_PLASTITANIUMGLASS	"plastitanium glass"
 #define MAT_GOLDHULL	"gold hull"
 
+/* Outpost 21 edit - use ours
 #define RESIZE_MINIMUM 0.25
 #define RESIZE_MAXIMUM 2
 #define RESIZE_MINIMUM_DORMS 0.01
 #define RESIZE_MAXIMUM_DORMS 6
+*/
 
 #define RESIZE_HUGE 2
 #define RESIZE_BIG 1.5

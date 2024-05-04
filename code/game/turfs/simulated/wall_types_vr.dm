@@ -51,8 +51,25 @@ var/list/flesh_overlay_cache = list()
 			var/turf/T = get_step(src,direction)
 			if(istype(T) && !T.density)
 				var/place_dir = turn(direction, 180)
+				var/offset = 32
 				if(!flesh_overlay_cache["flesh_side_[place_dir]"])
 					flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
+					// Outpost 21 edit begin - Offset edge of flesh tiles to actually overhang other tiles
+					var/image/cache = null
+					switch(direction)
+						if(NORTH)
+							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache.pixel_y = offset
+						if(SOUTH)
+							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache.pixel_y = -offset
+						if(EAST)
+							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache.pixel_x = offset
+						if(WEST)
+							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache.pixel_x = -offset
+					// Outpost 21 edit end
 				add_overlay(flesh_overlay_cache["flesh_side_[place_dir]"])
 
 	if(update_neighbors)
@@ -187,7 +204,7 @@ var/list/flesh_overlay_cache = list()
 	icon_state = "sifwood"
 	icon = 'icons/turf/wall_masks_vr.dmi'
 
-//CHOMPEdit Start	
+//CHOMPEdit Start
 /turf/simulated/wall/rsifwood
 	icon_state = "sifwood"
 	icon = 'icons/turf/wall_masks_vr.dmi'

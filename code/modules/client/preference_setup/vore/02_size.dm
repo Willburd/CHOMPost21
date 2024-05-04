@@ -146,8 +146,14 @@
 
 /datum/category_item/player_setup_item/vore/size/OnTopic(var/href, var/list/href_list, var/mob/user)
 	if(href_list["size_multiplier"])
+		// Outpost 21 edit begin - use define limits in the character creator screen as well as ingame
+		/*
 		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from 25% to 200%", "Set Size", null, 200, 25)
 		if (!ISINRANGE(new_size,25,200))
+		*/
+		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from [RESIZE_MINIMUM * 100]% to [RESIZE_MAXIMUM * 100]%", "Set Size", null, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100)
+		if (!ISINRANGE(new_size,RESIZE_MINIMUM * 100,RESIZE_MAXIMUM * 100))
+			// Outpost 21 edit end
 			pref.size_multiplier = 1
 			to_chat(user, "<span class='notice'>Invalid size.</span>")
 			return TOPIC_REFRESH_UPDATE_PREVIEW
