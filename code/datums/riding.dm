@@ -148,8 +148,16 @@
 	else if(istype(next, /turf/simulated/floor/water) || istype(current, /turf/simulated/floor/water)) //We can move from land to water, or water to land, but not from land to land
 		..()
 	else
+		// Outpost 21 edit begin - SCREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE---
+		/*
 		to_chat(user, "<span class='warning'>Boats don't go on land!</span>")
 		return FALSE
+		*/
+		if(prob(5))
+			ridden.visible_message("SCREEE")
+		vehicle_move_delay = 8;
+		..()
+		// Outpost 21 edit end
 
 /datum/riding/boat/small // 'Small' boats can hold up to two people.
 
