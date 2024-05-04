@@ -221,7 +221,7 @@
 //	speak_chance = 1
 	a_intent = "harm"
 	var/corpse = /obj/effect/landmark/mobcorpse/tunnelclown
-	var/weapon1 = /obj/item/weapon/twohanded/fireaxe
+	var/weapon1 = /obj/item/weapon/material/twohanded/fireaxe // Outpost 21 edit - Actually use the real fireaxe
 	stop_when_pulled = 0
 	maxHealth = 100
 	health = 100

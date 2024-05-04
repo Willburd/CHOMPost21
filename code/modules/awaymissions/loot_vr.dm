@@ -135,7 +135,8 @@
 					prob(9);/obj/item/weapon/gun/projectile/automatic/mini_uzi,\
 					prob(9);/obj/item/weapon/gun/projectile/pistol,\
 					prob(9);/obj/item/weapon/gun/projectile/shotgun/pump/combat,\
-					prob(9);/obj/item/weapon/twohanded/fireaxe,\
+					// Outpost 21 edit - Actually use the real fireaxe
+					prob(9);/obj/item/weapon/material/twohanded/fireaxe,\
 					prob(9);/obj/item/weapon/cane/concealed,\
 					prob(9);/obj/item/weapon/gun/energy/gun,\
 					prob(8);/obj/item/weapon/gun/energy/ionrifle,\
