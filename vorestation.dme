@@ -1268,6 +1268,7 @@
 #include "code\game\objects\effects\map_effects\beam_point.dm"
 #include "code\game\objects\effects\map_effects\burnpit.dm"
 #include "code\game\objects\effects\map_effects\effect_emitter.dm"
+#include "code\game\objects\effects\map_effects\effect_emitter_op.dm"
 #include "code\game\objects\effects\map_effects\map_effects.dm"
 #include "code\game\objects\effects\map_effects\perma_light.dm"
 #include "code\game\objects\effects\map_effects\portal.dm"
