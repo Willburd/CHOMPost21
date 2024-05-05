@@ -61,6 +61,16 @@
 	else
 		if (src.has_power)
 			to_chat(src, span_red("You are now running on emergency backup power."))
+			// Outpost 21 edit begin - Disable all items so that they don't vanish from your inventory
+			var/current_selection_index = get_selected_module() // Will be 0 if nothing is selected.
+			var/i = 0
+			for(var/thing in list(module_state_1, module_state_2, module_state_3))
+				i++
+				select_module(i)
+				uneq_active()
+			if(current_selection_index) // Select the slot that the player had before if possible.
+				select_module(current_selection_index)
+			// Outpost 21 edit end
 		src.has_power = 0
 		if(lights_on) // Light is on but there is no power!
 			lights_on = 0
