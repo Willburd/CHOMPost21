@@ -22,6 +22,17 @@
 	desc = "This slick flesh ripples and squishes under your touch"
 	icon_state = "flesh_floor"
 	icon = 'icons/turf/stomach_vr.dmi'
+// Outpost 21 edit begin - Flesh terrain tweaked
+	temperature = TERRAFORMER_BODY_TEMP
+	initial_flooring = /decl/flooring/flesh
+
+/turf/simulated/floor/flesh/Initialize(mapload)
+	. = ..()
+	if(prob(30))
+		// alt puddles
+		flooring_override = pickweight(list("flesh_floor_puddle0","flesh_floor_puddle1","flesh_floor_puddle2","flesh_floor_puddle3"))
+	update_icon()
+// Outpost 21 edit end
 
 /turf/simulated/floor/flesh/colour
 	name = "flesh"
@@ -88,4 +99,3 @@
 	desc = "It is entirely made of sick, gurgling flesh. It is releasing a sickly odour."
 	icon_state = "bloodfloor_2"
 	icon = 'icons/goonstation/turf/meatland.dmi'
-
