@@ -254,6 +254,11 @@
 		amount -= used
 		if (amount <= 0)
 			amount = 0 // stop amount going negative ideally
+			// Outpost 21 edit begin - bug that only seems to happen when you click stacks stored in a bag, they remain onscreen till GCed randomly
+			if(istype( src.loc, /obj/item/weapon/storage/))
+				var/obj/item/weapon/storage/holder = src.loc
+				holder.remove_from_storage( src, null)
+			// Outpost 21 edit end
 			qdel(src) //should be safe to qdel immediately since if someone is still using this stack it will persist for a little while longer
 		update_icon()
 		return 1
@@ -419,6 +424,16 @@
 	else
 		..()
 	return
+
+
+// Outpost 21 edit begin - Help intent only prods instead of bonks
+/obj/item/stack/attack(mob/living/M as mob, mob/living/user as mob)
+	// prodding on help intent, ignored for borgs and bots because of endless coding stupidity.
+	if(M != user && !issilicon(M) && !isbot(M) && user.a_intent == I_HELP)
+		user.visible_message("<span class='notice'>[user] prods [M] with \the [src.name].</span>")
+		return 0
+	. = ..(M,user)
+// Outpost 21 edit end
 
 /obj/item/stack/attackby(obj/item/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/stack))
