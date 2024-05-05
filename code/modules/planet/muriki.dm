@@ -151,7 +151,7 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_overcast
 	name = "fog"
-	icon_state = "fog"
+	icon_state = "acidfog"
 	wind_high = 1
 	wind_low = 0
 	light_modifier = 0.7
