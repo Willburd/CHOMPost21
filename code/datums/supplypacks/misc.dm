@@ -88,6 +88,9 @@
 			/obj/item/toy/plushie/vox,
 			/obj/item/toy/plushie/shark,
 			//VOREStation Add End
+			//Outpost 21 add start
+			/obj/item/toy/plushie/tinytin,
+			//Outpost 21 add end
 			//YawnWider Add Start
 			/obj/item/toy/plushie/teshari/_yw,
 			/obj/item/toy/plushie/teshari/w_yw,

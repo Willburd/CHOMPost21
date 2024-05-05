@@ -66,7 +66,12 @@
 						/obj/item/toy/plushie/borgplushie/drake/jani,
 						/obj/item/toy/plushie/borgplushie/drake/trauma,
 						/obj/item/toy/plushie/otter,
-						/obj/item/toy/plushie/shark
+						/obj/item/toy/plushie/shark,
+						//Outpost 21 add start
+						/obj/item/toy/plushie/tinytin,
+						/obj/item/toy/plushie/jil,
+						/obj/item/toy/plushie/chu
+						//Outpost 21 add end
 						)
 
 /obj/machinery/clawmachine/update_icon()
