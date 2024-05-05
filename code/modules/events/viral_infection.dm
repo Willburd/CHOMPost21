@@ -42,7 +42,7 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	for(var/mob/living/carbon/human/G in player_list)
 		if(G.mind && G.stat != DEAD && G.is_client_active(5) && !player_is_antag(G.mind))
 			var/turf/T = get_turf(G)
-			if(T.z in using_map.event_levels) // Outpost 21 edit - Changed to event_levels from station_levels
+			if(T.z in using_map.event_levels)
 				candidates += G
 	if(!candidates.len)	return
 	candidates = shuffle(candidates)//Incorporating Donkie's list shuffle

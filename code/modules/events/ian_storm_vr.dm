@@ -14,7 +14,7 @@
 			var/turf/T = get_turf(C)
 			if(!T)
 				continue
-			if(!(T.z in using_map.station_levels))
+			if(!(T.z in using_map.event_levels))
 				continue
 			var/area/A = get_area(T)
 			if(A.flags & RAD_SHIELDED || A.flags & BLUE_SHIELDED)

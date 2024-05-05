@@ -17,7 +17,7 @@
 
 	gravity_is_on = !gravity_is_on
 	for(var/obj/machinery/gravity_generator/main/GG in machines)
-		if(GG.z in using_map.station_levels)
+		if(GG.z in using_map.event_levels)
 			GG.breaker = gravity_is_on
 			GG.set_power()
 			GG.charge_count = gravity_is_on ? 90 : 10

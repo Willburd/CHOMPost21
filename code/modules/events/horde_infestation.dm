@@ -19,7 +19,7 @@
 		var/in_area = get_area(temp_vent)
 		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
 			continue
-		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels)) //No spawns on welded vents
+		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.event_levels)) //No spawns on welded vents
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
 				vents += temp_vent
 
@@ -48,7 +48,7 @@
 			var/in_area = get_area(temp_vent)
 			if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
 				continue
-			if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
+			if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.event_levels))
 				if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change to 10 from 50 in order for spawns to work.
 					var/area/A = get_area(temp_vent)
 					if(!(A.forbid_events))

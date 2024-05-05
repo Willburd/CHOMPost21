@@ -30,11 +30,11 @@
 		command_announcement.Announce("The station has passed the radiation belt. Please allow for up to one minute while radiation levels dissipate, and report to medbay if you experience any unusual symptoms. Maintenance will lose all access again shortly.", "Anomaly Alert") //CHOMPEdit: Restored original message
 /datum/event/radiation_storm/proc/radiate()
 	var/radiation_level = rand(15, 35)
-	for(var/z in using_map.station_levels)
+	for(var/z in using_map.event_levels)
 		SSradiation.z_radiate(locate(1, 1, z), radiation_level, 1)
 
 	for(var/mob/living/carbon/C in living_mob_list)
-		if(!(C.z in using_map.station_levels) || C.isSynthetic() || isbelly(C.loc))
+		if(!(C.z in using_map.event_levels) || C.isSynthetic() || isbelly(C.loc))
 			continue
 		var/area/A = get_area(C)
 		if(!A)

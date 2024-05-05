@@ -12,7 +12,7 @@
 	command_announcement.Announce("What the fuck was that?!", "General Alert")
 
 /datum/event/clang/start()
-	affecting_z = global.using_map.station_levels
+	affecting_z = global.using_map.event_levels
 
 	var/startz = pick(affecting_z)
 	var/startx = 0

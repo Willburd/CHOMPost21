@@ -178,7 +178,7 @@
 	startedAt = world.time
 
 	if(!affecting_z)
-		affecting_z = using_map.station_levels.Copy()
+		affecting_z = using_map.event_levels.Copy()
 
 	setup()
 	..()

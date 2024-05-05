@@ -154,6 +154,10 @@ var/list/all_maps = list()
 		persist_levels = station_levels.Copy()
 	if(!mappable_levels?.len)
 		mappable_levels = station_levels.Copy()
+	// Outpost 21 edit begin - Event levels auto-fill as station levels if non exist
+	if(!event_levels?.len)
+		event_levels = station_levels.Copy()
+	// Outpost 21 edit end
 	if(!allowed_jobs || !allowed_jobs.len)
 		allowed_jobs = subtypesof(/datum/job)
 	if(default_skybox) //Type was specified

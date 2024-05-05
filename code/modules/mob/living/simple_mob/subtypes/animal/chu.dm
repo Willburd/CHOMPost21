@@ -332,7 +332,7 @@
 		if(!vent_found.Adjacent(holder))
 			vent_found = null
 			return
-		if(!(vent_found.loc.z in using_map.station_levels)) // how did you manage this? Shuttle?
+		if(!(vent_found.loc.z in using_map.event_levels)) // how did you manage this? Shuttle?
 			vent_found = null
 			return
 
@@ -348,7 +348,7 @@
 			vent_found = null
 			return
 		var/obj/machinery/atmospherics/unary/vent_pump/goalvent = attemptgoal
-		if(!(goalvent.loc.z in using_map.station_levels) || !goalvent.welded)
+		if(!(goalvent.loc.z in using_map.event_levels) || !goalvent.welded)
 			vent_found = null
 			return
 
@@ -429,7 +429,7 @@
 
 	else if((prob(10) && !target) ||(prob(60) && should_flee()))
 		// VENT TIME
-		if(holder.loc.z in using_map.station_levels)
+		if(holder.loc.z in using_map.event_levels)
 			for(var/obj/machinery/atmospherics/unary/vent_pump/searchvent in holder.loc.contents)
 				if(!searchvent.welded)
 					vent_found = searchvent
