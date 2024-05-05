@@ -36,9 +36,10 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	name = "openspace_backdrop"
 
 	anchored = TRUE
-
-	icon = 'icons/turf/floors.dmi'
-	icon_state = "grey"
+	// Outpost 21 edit begin - made pits a bit more obvious
+	icon = 'icons/turf/floors_op.dmi'
+	icon_state = "grey2"
+	// Outpost 21 edit end
 	plane = OPENSPACE_BACKDROP_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	vis_flags = VIS_INHERIT_ID
