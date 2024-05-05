@@ -14,7 +14,7 @@
 	circuit = /obj/item/weapon/circuitboard/tesla_coil
 
 	var/power_loss = 2
-	var/input_power_multiplier = 1
+	var/input_power_multiplier = 3 // Outpost 21 edit - buffed from 1 to 3 because Lady Tesla needs a bit more power output for the danger she poses. Make it comparable to the singulo/SM
 	var/zap_cooldown = 100
 	var/last_zap = 0
 	var/datum/wires/tesla_coil/wires = null

@@ -22,6 +22,7 @@
 	var/produced_power
 	var/energy_to_raise = 32
 	var/energy_to_lower = -20
+	plane = PLANE_LIGHTING_ABOVE // Outpost 21 edit - Tesla lag reduction
 
 /obj/singularity/energy_ball/New(loc, starting_energy = 50, is_miniball = FALSE)
 	..()
@@ -29,8 +30,10 @@
 
 /obj/singularity/energy_ball/Initialize()
 	. = ..()
+	/* Outpost 21 edit - Tesla lag reduction
 	if(!miniball)
 		set_light(10, 7, "#EEEEFF")
+	*/
 
 /obj/singularity/energy_ball/ex_act(severity, target)
 	return
@@ -228,9 +231,15 @@
 			var/dist = get_dist(source, A)
 			var/mob/living/L = A
 			if(dist <= zap_range && (dist < closest_dist || !closest_mob) && L.stat != DEAD && !(L.status_flags & GODMODE))
-				closest_mob = L
-				closest_atom = A
-				closest_dist = dist
+				// Outpost 21 edit begin - Lightning doesn't bleed indoors to kill mobs
+				if(isturf(L.loc))
+					var/turf/flr = L.loc
+					// being indoors will save you, also stops department pets dying to zaps out a window
+					if(flr.outdoors > -1)
+						closest_mob = L
+						closest_atom = A
+						closest_dist = dist
+				// Outpost 21 edit end
 
 		else if(closest_mob)
 			continue
