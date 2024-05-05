@@ -24,6 +24,15 @@
 	base_state = "pflash"
 	density = TRUE
 
+// Outpost 21 edit begin - Map start flashers enable proximity sensing
+/obj/machinery/flasher/portable/Initialize()
+	. = ..()
+	// if already anchored, setup the proxity check
+	if(anchored)
+		add_overlay("[base_state]-s")
+		sense_proximity(callback = /atom/proc/HasProximity)
+// Outpost 21 edit end
+
 /obj/machinery/flasher/power_change()
 	..()
 	if(!(stat & NOPOWER))

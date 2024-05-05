@@ -176,6 +176,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 \tz = activate held object (or y)
 \tf = cycle-intents-left
 \tg = cycle-intents-right
+\tb = Resist
 \t1 = activate module 1
 \t2 = activate module 2
 \t3 = activate module 3
@@ -194,6 +195,7 @@ Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+q = unequip active module
 \tCtrl+x = cycle active modules
 \tCtrl+z = activate held object (or Ctrl+y)
+\tCtrl+b = Resist
 \tCtrl+f = cycle-intents-left
 \tCtrl+g = cycle-intents-right
 \tCtrl+1 = activate module 1

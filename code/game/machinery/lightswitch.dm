@@ -29,6 +29,9 @@
 	if(!name)
 		name = "light switch ([area.name])"
 
+	// Outpost21 edit begin - Lightswitches start off
+	area.lightswitch = FALSE
+	// Outpost21 edit end
 	on = area.lightswitch
 	update_icon()
 
@@ -96,4 +99,3 @@
 	icon = 'icons/obj/power_breaker.dmi'
 	icon_state = "light1"
 	on = 0
-

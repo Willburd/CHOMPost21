@@ -288,7 +288,9 @@ var/global/list/light_type_cache = list()
 	plane = OBJ_PLANE
 	layer = OBJ_LAYER
 	desc = "A floor lamp."
-	light_type = /obj/item/weapon/light/bulb/large
+	// Outpost 21 edit begin - why was this a large bulb? It makes fixing it manually a pain when it's mostly used as room lighting...
+	light_type = /obj/item/weapon/light/bulb //large
+	// Outpost 21 edit end
 	construct_type = /obj/machinery/light_construct/flamp
 	shows_alerts = FALSE	//VOREStation Edit
 	var/lamp_shade = 1
@@ -350,8 +352,14 @@ var/global/list/light_type_cache = list()
 			cell = new/obj/item/weapon/cell/emergency_light(src)
 		var/obj/item/weapon/light/L = get_light_type_instance(light_type) //This is fine, but old code.
 		update_from_bulb(L)
-		if(prob(L.broken_chance))
+		// outpost 21 addition begin - redspace hell lights have a fixed broken chance, ignoring default breaking chance... also reduces lighting lag...
+		var/area/A = get_area(src)
+		if(A && A.broken_light_chance >= 0)
+			if(prob(A.broken_light_chance))
+				broken(1)
+		else if(prob(L.broken_chance))
 			broken(1)
+		// outpost 21 addition end
 
 	on = powered()
 	update(0)

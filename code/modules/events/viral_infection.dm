@@ -42,7 +42,7 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	for(var/mob/living/carbon/human/G in player_list)
 		if(G.mind && G.stat != DEAD && G.is_client_active(5) && !player_is_antag(G.mind))
 			var/turf/T = get_turf(G)
-			if(T.z in using_map.station_levels)
+			if(T.z in using_map.event_levels) // Outpost 21 edit - Changed to event_levels from station_levels
 				candidates += G
 	if(!candidates.len)	return
 	candidates = shuffle(candidates)//Incorporating Donkie's list shuffle
@@ -51,6 +51,10 @@ var/global/list/event_viruses = list() // so that event viruses are kept around 
 	var/list/used_candidates = list()
 	severity = max(EVENT_LEVEL_MUNDANE, severity - 1)
 	var/actual_severity = severity * rand(1, 3)
+	// Outpost 21 edit begin - low pop, uses half of candidate list
+	if(player_list.len <= (EVENT_LEVEL_MAJOR * 3))
+		actual_severity = max(FLOOR(rand(1, candidates.len / 2),1),1)
+	// Outpost 21 edit end
 	while(actual_severity > 0 && candidates.len)
 		var/datum/disease2/disease/D = pick(viruses)
 		infect_mob(candidates[1], D.getcopy())
