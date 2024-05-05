@@ -43,6 +43,13 @@
 		var/mob/living/simple_mob/animal/passive/mouse/M = target
 		visible_message(span_red("<b>SPLAT!</b>"))
 		M.splat()
+	// Outpost 21 edit begin - Jils get snapped too
+	else if(istype(target,/mob/living/simple_mob/vore/alienanimals/jil))
+		var/mob/living/simple_mob/vore/alienanimals/jil/J = target
+		if(J.getMaxHealth() <= 5) // incase of jillioth
+			visible_message("<font color='red'><b>SPLAT!</b></font>")
+			J.splat()
+	// Outpost 21 edit end
 	playsound(target, 'sound/effects/snap.ogg', 50, 1)
 	layer = MOB_LAYER - 0.2
 	armed = 0

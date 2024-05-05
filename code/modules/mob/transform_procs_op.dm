@@ -16,7 +16,7 @@
 	stunned = 0
 	update_canmove()
 
-	var/mob/living/simple_mob/vore/alienanimal/chu/new_mob = new /mob/living/simple_mob/vore/alienanimal/chu(src.loc)
+	var/mob/living/simple_mob/vore/alienanimals/chu/new_mob = new /mob/living/simple_mob/vore/alienanimals/chu(src.loc)
 	new_mob.isOriginal = FALSE // only the first is with no color overlays!
 	new_mob.overlay_colors["Body"] = rgb(r_skin,g_skin,b_skin)
 	new_mob.overlay_colors["Eyes"] = rgb(r_eyes,g_eyes,b_eyes)

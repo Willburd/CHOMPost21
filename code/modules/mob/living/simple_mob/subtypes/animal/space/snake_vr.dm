@@ -198,6 +198,13 @@
 		if(mouse.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
 			mouse.splat()
 			visible_emote(pick("swallows \the [mouse] whole!"))
+	// Outpost 21 edit begin - swallows jils
+	else if(istype(A,/mob/living/simple_mob/vore/alienanimals/jil))
+		var/mob/living/simple_mob/vore/alienanimals/jil/jil = A
+		if(jil.getMaxHealth() <= 5) // incase of jillioth
+			jil.splat()
+			visible_emote(pick("swallows \the [jil] whole!"))
+	// Outpost 21 edit end
 	else
 		..()
 

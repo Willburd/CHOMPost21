@@ -8,7 +8,7 @@
 	desc = "TODO - giant jil description"
 	value = CATALOGUER_REWARD_MEDIUM
 
-/mob/living/simple_mob/vore/jil
+/mob/living/simple_mob/vore/alienanimals/jil
 	name = "jil"
 	real_name = "jil"
 	desc = "A fluffy thieving creature that wanders maintenance."
@@ -62,7 +62,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/jil
 	melee_attack_delay = 0	// For some reason, having a delay makes item pick-up not work.
 
-/mob/living/simple_mob/vore/jil/jillilah
+/mob/living/simple_mob/vore/alienanimals/jil/jillilah
 	name = "jillilah"
 	real_name = "jillilah"
 	desc = "When you stare deep in her beady little eyes, you can feel an intense desire to declare independence..."
@@ -77,7 +77,7 @@
 	icon_splat = "jil_cargo_splat"
 	icon_rest = "jil_cargo_sleep"
 
-/mob/living/simple_mob/vore/jil/bean
+/mob/living/simple_mob/vore/alienanimals/jil/bean
 	name = "jilly-bean"
 	real_name = "jilly-bean"
 	desc = "They smell like diet cherry bepis..."
@@ -92,7 +92,7 @@
 	icon_splat = "jil_bean_splat"
 	icon_rest = "jil_bean_sleep"
 
-/mob/living/simple_mob/vore/jil/jillioth
+/mob/living/simple_mob/vore/alienanimals/jil/jillioth
 	name = "jillioth"
 	real_name = "jillioth"
 	desc = "Here to collect."
@@ -118,7 +118,7 @@
 	icon_splat = "jil_big_splat"
 	icon_rest = "jil_big_sleep"
 
-/mob/living/simple_mob/vore/jil/Initialize()
+/mob/living/simple_mob/vore/alienanimals/jil/Initialize()
 	. = ..()
 
 	verbs += /mob/living/proc/ventcrawl
@@ -129,7 +129,7 @@
 		// don't care about sizes, this will be funny when a jillioth is in a closet at map load
 		src.forceMove(C)
 
-/mob/living/simple_mob/vore/jil/Crossed(atom/movable/AM as mob|obj)
+/mob/living/simple_mob/vore/alienanimals/jil/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
 	if( ishuman(AM) )
@@ -137,14 +137,14 @@
 			bonk(src,prob(15))
 	..()
 
-/mob/living/simple_mob/vore/jil/death()
+/mob/living/simple_mob/vore/alienanimals/jil/death()
 	layer = MOB_LAYER
 	playsound(src, 'sound/effects/mouse_squeak_loud.ogg', 35, 1)
 	if(client)
 		client.time_died_as_mouse = world.time
 	..()
 
-	if(istype(src,/mob/living/simple_mob/vore/jil/jillilah))
+	if(istype(src,/mob/living/simple_mob/vore/alienanimals/jil/jillilah))
 		// drop cap
 		var/obj/item/clothing/head/soft/C = new /obj/item/clothing/head/soft // cargo hat!
 		C.name = "Jillilah's cap"
@@ -152,23 +152,23 @@
 		C.desc = "A tiny cargo hat, clearly not sized for a person, soaked in the innocent blood of its owner."
 		C.forceMove(src.loc) // drop on
 
-/mob/living/simple_mob/vore/jil/proc/splat()
+/mob/living/simple_mob/vore/alienanimals/jil/proc/splat()
 	death()
 	src.icon_dead = icon_splat
 	src.icon_state = icon_splat
 
-/mob/living/simple_mob/vore/jil/proc/bonk(var/mob/M, var/sound_play)
+/mob/living/simple_mob/vore/alienanimals/jil/proc/bonk(var/mob/M, var/sound_play)
 	// bonk noise
 	if(sound_play && sound_play)
 		M.say("*merp")
 
-/mob/living/simple_mob/vore/jil/proc/scream(var/mob/M, var/sound_play)
+/mob/living/simple_mob/vore/alienanimals/jil/proc/scream(var/mob/M, var/sound_play)
 	// screaming noise
 	if(sound_play)
 		to_chat(M, pick("Squee!","Squeee!","Squeak!","Eeeee!"))
 		playsound(M, 'sound/effects/mouse_squeak_loud.ogg', 35, 1)
 
-/mob/living/simple_mob/vore/jil/update_icon()
+/mob/living/simple_mob/vore/alienanimals/jil/update_icon()
 	..()
 	if(stat == DEAD)
 		// leave icon as is, set by death
@@ -177,7 +177,7 @@
 	else
 		icon_state = icon_living
 
-/mob/living/simple_mob/vore/jil/Life()
+/mob/living/simple_mob/vore/alienanimals/jil/Life()
 	. = ..()
 	if(stat != DEAD && !istype(loc,/obj/belly))
 		if((!mind || !mind.active) && client == null)
@@ -218,7 +218,7 @@
 				lying = FALSE
 				update_icon()
 
-/mob/living/simple_mob/vore/jil/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/mob/living/simple_mob/vore/alienanimals/jil/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(stat == DEAD)
 		return ..()
 	if(istype(O, /obj/item/weapon/grab))
@@ -317,7 +317,7 @@
 	update_forbidden_list()
 
 	// jil vs jillioth bonk behavior
-	if(!istype( holder, /mob/living/simple_mob/vore/jil/jillioth) || prob(5))
+	if(!istype( holder, /mob/living/simple_mob/vore/alienanimals/jil/jillioth) || prob(5))
 		// this is stupid, always set to 5 so it fails at first window bump, except the jillioth does random hits against it
 		failed_breakthroughs = 4
 
@@ -389,7 +389,7 @@
 	else if(istype(A, /obj/structure/closet))
 		// attempt to open!
 		var/obj/structure/closet/C = A
-		if(!C.opened && (C.can_open() || istype(holder,/mob/living/simple_mob/vore/jil/jillioth)))
+		if(!C.opened && (C.can_open() || istype(holder,/mob/living/simple_mob/vore/alienanimals/jil/jillioth)))
 			C.attack_hand(holder)
 	/*
 	else if(istype(A,/obj/machinery/atmospherics/unary/vent_pump) || istype(A,/obj/machinery/atmospherics/unary/vent_scrubber))
@@ -398,7 +398,7 @@
 	*/
 
 	// jil merp
-	var/mob/living/simple_mob/vore/jil/J = holder
+	var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
 	if(holder.get_active_hand())
 		J.bonk(J,TRUE)
 	else
@@ -430,11 +430,11 @@
 		// bonus interactions!
 		else if(istype(A,/obj/structure/closet)) // opening closets
 			var/obj/structure/closet/C = A
-			if(!C.opened && (C.can_open() || istype(holder,/mob/living/simple_mob/vore/jil/jillioth)))
+			if(!C.opened && (C.can_open() || istype(holder,/mob/living/simple_mob/vore/alienanimals/jil/jillioth)))
 				. += C
 		// fight god!
 		else if(istype(A,/obj/machinery/porta_turret) || istype(A,/obj/mecha))
-			if(istype(holder,/mob/living/simple_mob/vore/jil/jillioth))
+			if(istype(holder,/mob/living/simple_mob/vore/alienanimals/jil/jillioth))
 				. += A
 		/*
 		else if(istype(A,/obj/machinery/atmospherics/unary/vent_pump)) // entering vents
@@ -513,7 +513,7 @@
 			unreachable_locs -= forbid_loc // remove from list, enough to step to
 		else if(get_dist(holder.loc, forbid_loc) > 30)
 			unreachable_locs -= forbid_loc // remove from list, far enough to forget
-		else if(istype( holder, /mob/living/simple_mob/vore/jil/jillioth) && prob(50))
+		else if(istype( holder, /mob/living/simple_mob/vore/alienanimals/jil/jillioth) && prob(50))
 			unreachable_locs -= forbid_loc // random retry, jillioth
 		else if(prob(2))
 			unreachable_locs -= forbid_loc // random retry
@@ -539,7 +539,7 @@
 		if(target)
 			lose_target()
 
-		var/mob/living/simple_mob/vore/jil/J = holder
+		var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
 		J.scream(J,prob(30))
 
 		// don't run if grabbed
@@ -599,7 +599,7 @@
 
 			// scream at hostile
 			if(target && istype(target,/mob) && retaliate)
-				var/mob/living/simple_mob/vore/jil/J = holder
+				var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
 				J.scream(J,prob(30))
 
 			// wander from nest
@@ -630,7 +630,7 @@
 						last_pickup_turf = null // clear last pickup, we freaked out
 
 				if(holder.sleeping > 0 || holder.health < 5 || prob(15))
-					var/mob/living/simple_mob/vore/jil/J = holder
+					var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
 					if(J.sleeping <= 0)
 						J.Sleeping( 30 + rand(50))
 					holder.update_icon()
@@ -642,7 +642,7 @@
 /datum/ai_holder/simple_mob/intentional/jil/react_to_attack(atom/movable/attacker, ignore_timers = FALSE)
 	if(stance == STANCE_SLEEP) // If we're asleep, try waking up if someone's wailing on us.
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)
-		var/mob/living/simple_mob/vore/jil/J = holder
+		var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
 		J.SetSleeping(0)
 		J.resting = FALSE
 		J.lying = FALSE
@@ -661,9 +661,9 @@
 		return ..(attacker)
 
 	// scream, but only retaliate if jillioth
-	var/mob/living/simple_mob/vore/jil/J = holder
+	var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
 	J.scream(J,TRUE)
-	if(!istype(holder,/mob/living/simple_mob/vore/jil/jillioth))
+	if(!istype(holder,/mob/living/simple_mob/vore/alienanimals/jil/jillioth))
 		fear_run = 10 + rand(30)
 		if(target)
 			// lose target...

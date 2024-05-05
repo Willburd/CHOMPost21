@@ -85,7 +85,7 @@
 			C.loc = src.loc
 
 		if(6)
-			var/mob/living/simple_mob/vore/alienanimal/chu/C = new /mob/living/simple_mob/vore/alienanimal/chu()
+			var/mob/living/simple_mob/vore/alienanimals/chu/C = new /mob/living/simple_mob/vore/alienanimals/chu()
 			C.loc = src.loc
 
 		if(7)
@@ -115,7 +115,7 @@
 			C.loc = src.loc
 
 		if(3)
-			var/mob/living/simple_mob/vore/alienanimal/chu/C = new /mob/living/simple_mob/vore/alienanimal/chu()
+			var/mob/living/simple_mob/vore/alienanimals/chu/C = new /mob/living/simple_mob/vore/alienanimals/chu()
 			C.loc = src.loc
 
 		if(4)

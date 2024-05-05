@@ -40,7 +40,7 @@
 		return FALSE // wat
 
 	var/infestedchus = 0
-	for(var/mob/living/simple_mob/vore/alienanimal/chu/C in living_mob_list)
+	for(var/mob/living/simple_mob/vore/alienanimals/chu/C in living_mob_list)
 		if(C.stat != DEAD)
 			infestedchus++
 
@@ -61,7 +61,7 @@
 		return FALSE // wat
 
 	var/zombiecount = 0
-	for(var/mob/living/simple_mob/vore/alienanimal/chu/C in living_mob_list)
+	for(var/mob/living/simple_mob/vore/alienanimals/chu/C in living_mob_list)
 		if(C.stat != DEAD)
 			zombiecount++
 
