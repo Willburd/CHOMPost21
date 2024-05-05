@@ -432,19 +432,21 @@
 				circuit.construct(B)
 				circuit.loc = null
 				B.circuit = circuit
-				qdel(src)
-				return
 
-			else if(frame_type.frame_class == FRAME_CLASS_DISPLAY)
-				playsound(src, P.usesound, 50, 1)
-				to_chat(user, "<span class='notice'>You connect the monitor.</span>")
-				var/obj/machinery/B = new circuit.build_path(src.loc)
-				B.pixel_x = pixel_x
-				B.pixel_y = pixel_y
-				B.set_dir(dir)
-				circuit.construct(B)
-				circuit.loc = null
-				B.circuit = circuit
+				// Outpost 21 edit being - make computers merge with others beside it when constructed!
+				B.update_icon()
+				var/left = turn(B.dir, 90)
+				var/right = turn(B.dir, -90)
+				var/turf/L = get_step(B, left)
+				var/turf/R = get_step(B, right)
+				var/obj/machinery/computer/LC = locate() in L
+				var/obj/machinery/computer/RC = locate() in R
+				if(LC)
+					LC.update_icon()
+				if(RC)
+					LC.update_icon()
+				// Outpost 21 edit end
+
 				qdel(src)
 				return
 
