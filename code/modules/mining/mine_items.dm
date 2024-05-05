@@ -176,7 +176,7 @@
 	force = 5.0
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
-	
+
 /obj/item/weapon/shovel/wood
 	name = "wooden shovel"
 	desc = "An improvised tool for digging and moving dirt."
@@ -246,7 +246,7 @@
 	var/obj/item/stack/flag/F = locate() in get_turf(src)
 
 	var/turf/T = get_turf(src)
-	if(!T || !istype(T,/turf/simulated/mineral))
+	if(!T || T.is_space()) // || !istype(T,/turf/simulated/mineral)) outpost 21 edit - flags stand anywhere valid
 		to_chat(user, "The flag won't stand up in this terrain.")
 		return
 
@@ -330,8 +330,3 @@
 	newlightpole.icon_state = "[newlightpole.base_state]_on"
 	newlightpole.visible_message("<b>[user]</b> plants [newlightpole] firmly in the ground.")
 	src.use(1)
-
-
-
-
-
