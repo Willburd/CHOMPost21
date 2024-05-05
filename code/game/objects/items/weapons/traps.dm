@@ -22,6 +22,12 @@
 	var/camo_net = FALSE
 	var/stun_length = 0.25 SECONDS
 
+// Outpost 21 edit begin - Allow mapset traps to update icon
+/obj/item/weapon/beartrap/Initialize()
+	. = ..()
+	update_icon()
+// Outpost 21 edit end
+
 /obj/item/weapon/beartrap/proc/can_use(mob/user)
 	return (user.IsAdvancedToolUser() && !issilicon(user) && !user.stat && !user.restrained())
 
@@ -124,7 +130,7 @@
 		return
 	if(deployed && isliving(AM))
 		var/mob/living/L = AM
-		if(L.m_intent == "run")
+		if(L.mob_size > MOB_TINY && L.m_intent == "run")
 			L.visible_message(
 				"<span class='danger'>[L] steps on \the [src].</span>",
 				"<span class='danger'>You step on \the [src]!</span>",
