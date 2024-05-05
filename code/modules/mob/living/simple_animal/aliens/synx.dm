@@ -90,6 +90,10 @@
 
 //Shouldn't be affected by lack of atmos, it's a space eel. //nah lets give him some temperature
 
+	// Outpost 21 edit begin - muriki enzyme immunity
+	enzyme_affect = FALSE
+	// Outpost 21 edit end
+
 	minbodytemp = 223		//Below -50 Degrees Celcius
 	maxbodytemp = 323		//Above 50 Degrees Celcius
 	min_oxy = 0

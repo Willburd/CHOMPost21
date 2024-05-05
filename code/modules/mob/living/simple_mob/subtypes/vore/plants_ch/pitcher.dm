@@ -60,6 +60,10 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/last_lifechecks = 0 //Timing variable to limit vore/hungry proc calls
 	var/list/pitcher_plant_lure_messages = null
 
+	// Outpost 21 edit begin - muriki enzyme immunity
+	enzyme_affect = FALSE
+	// Outpost 21 edit end
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 

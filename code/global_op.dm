@@ -1,0 +1,1 @@
+var/list/nukeitems         = list()

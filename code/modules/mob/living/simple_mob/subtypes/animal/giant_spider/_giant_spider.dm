@@ -117,6 +117,10 @@
 		/obj/item/stack/material/chitin = 1\
 		)
 
+	// Outpost 21 edit begin - muriki enzyme immunity
+	enzyme_affect = FALSE
+	// Outpost 21 edit end
+
 	can_be_drop_prey = FALSE //CHOMP Add
 	allow_mind_transfer = TRUE //CHOMPAdd
 	species_sounds = "Spider"

@@ -43,6 +43,10 @@
 	var/slime_max = 35 //With a slug which moves once every 10 seconds and a 5 minute delete timer, this should never exceed 30.
 	var/mob/living/vore_memory = null
 
+	// Outpost 21 edit begin - muriki enzyme immunity
+	enzyme_affect = FALSE
+	// Outpost 21 edit end
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/vore/slug //I guess separating the vore variables is a little more organized?

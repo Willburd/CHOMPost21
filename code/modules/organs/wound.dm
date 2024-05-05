@@ -396,6 +396,17 @@
 				"scarred stump" = 0
 				)
 
+		// Outpost 21 edit begin - Acidic limb melting
+		if(DROPLIMB_ACID)
+			damage_type = BURN
+			stages = list(
+				"disfigured mass" = damage_amt*1.3,
+				"melted stump" = damage_amt,
+				"deformed stump" = damage_amt*0.5,
+				"scarred stump" = 0
+				)
+		// Outpost 21 edit end
+
 	..(damage_amt)
 
 /datum/wound/lost_limb/can_merge(var/datum/wound/other)

@@ -60,6 +60,10 @@
 
 	var/knockdown_chance = 15
 
+	// Outpost 21 edit begin - muriki enzyme immunity
+	enzyme_affect = FALSE
+	// Outpost 21 edit end
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/carp/apply_melee_effects(var/atom/A)

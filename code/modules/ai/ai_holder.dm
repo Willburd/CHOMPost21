@@ -229,6 +229,7 @@
 	home_turf = get_turf(holder)
 	manage_processing(AI_PROCESSING)
 	RegisterSignal(holder, COMSIG_MOB_STATCHANGE, PROC_REF(holder_stat_change))
+	maximum_path_distance = world.view*6 // outpost 21 addition - maximum path distance in AI
 	..()
 
 /datum/ai_holder/Destroy()

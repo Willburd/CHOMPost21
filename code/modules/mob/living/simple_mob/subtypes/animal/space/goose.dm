@@ -27,7 +27,11 @@
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
 	meat_amount = 3
-	
+
+	// Outpost 21 edit begin - muriki enzyme immunity
+	enzyme_affect = FALSE
+	// Outpost 21 edit end
+
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /datum/say_list/goose

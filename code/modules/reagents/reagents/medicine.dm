@@ -1230,7 +1230,7 @@
 			var/obj/item/organ/external/O = pick(H.organs)
 			if(prob(20) && !istype(O, /obj/item/organ/external/chest/unbreakable/slime) && !istype(O, /obj/item/organ/external/groin/unbreakable/slime))
 				to_chat(M, "<span class='critical'>You feel your [O] begin to dissolve, before it sloughs from your body.</span>")
-				O.droplimb() //Splat.
+				O.droplimb(TRUE, DROPLIMB_ACID) //Splat. Outpost 21 edit - Use new limb melting acid type
 		return
 
 	//Based roughly on Levofloxacin's rather severe side-effects
