@@ -18,6 +18,7 @@
 	density = TRUE
 	var/datum/gas_mixture/air_contents	// internal reservoir
 	var/mode = 1	// item mode 0=off 1=charging 2=charged
+	// Outpost 21 addition - 3=interlock error
 	var/flush = 0	// true if flush handle is pulled
 	var/obj/structure/disposalpipe/trunk/trunk = null // the attached pipe trunk
 	var/flushing = 0	// true if flushing in progress
@@ -412,7 +413,7 @@
 		add_overlay("[initial(icon_state)]-full")
 
 	// charging and ready light
-	if(mode == 1)
+	if(mode == 1 || mode == 3) // Outpost 21 edit - disposal failure
 		add_overlay("[initial(icon_state)]-charge")
 	else if(mode == 2)
 		add_overlay("[initial(icon_state)]-ready")
@@ -424,21 +425,40 @@
 		update_use_power(USE_POWER_OFF)
 		return
 
-	flush_count++
-	if( flush_count >= flush_every_ticks )
-		if( contents.len )
-			if(mode == 2)
-				spawn(0)
-					feedback_inc("disposal_auto_flush",1)
-					flush()
-		flush_count = 0
+	// Outpost 21 edit begin - disposal failure
+	if(mode == 3)
+		// broken machine interlock, flushes rooms to vacuum!
+		flush_count++
+		if( flush_count >= flush_every_ticks )
+			spawn(0)
+				feedback_inc("disposal_auto_flush",1)
+				flush()
+			flush_count = rand(0,10)
+	else
+		// normal flush behavior
+		flush_count++
+		if( flush_count >= flush_every_ticks )
+			if( contents.len )
+				if(mode == 2)
+					spawn(0)
+						feedback_inc("disposal_auto_flush",1)
+						flush()
+			flush_count = 0
+	// Outpost 21 edit end
 
 	src.updateDialog()
 
 	if(flush && air_contents.return_pressure() >= SEND_PRESSURE )	// flush can happen even without power
 		flush()
 
-	if(mode != 1) //if off or ready, no need to charge
+	// Outpost 21 edit begin - disposal failure
+	if(mode == 3)
+		src.pressurize() // drain the room!
+		if(!flush && prob(10))
+			flush = 1
+			update()
+	// Outpost 21 edit end
+	else if(mode != 1) //if off or ready, no need to charge
 		update_use_power(USE_POWER_IDLE)
 	else if(air_contents.return_pressure() >= SEND_PRESSURE)
 		mode = 2 //if full enough, switch to ready mode
@@ -456,7 +476,12 @@
 
 	var/power_draw = -1
 	if(env && env.temperature > 0)
-		var/transfer_moles = (PUMP_MAX_FLOW_RATE/env.volume)*env.total_moles	//group_multiplier is divided out here
+		// Outpost 21 edit begin - disposal failure
+		var/flowrate = PUMP_MAX_FLOW_RATE
+		if(mode == 3)
+			flowrate *= rand(9,29)
+		var/transfer_moles = (flowrate/env.volume)*env.total_moles	//group_multiplier is divided out here
+		// Outpost 21 edit end
 		power_draw = pump_gas(src, env, air_contents, transfer_moles, active_power_usage)
 
 	if (power_draw > 0)
@@ -487,7 +512,11 @@
 		playsound(src, 'sound/machines/disposalflush.ogg', 50, 0, 0)
 		last_sound = world.time
 	sleep(5) // wait for animation to finish
-	GLOB.disposals_flush_shift_roundstat++
+
+	// Outpost 21 edit begin - disposal failure
+	if(mode != 3)
+	// Outpost 21 edit end
+		GLOB.disposals_flush_shift_roundstat++
 
 
 	H.init(src, air_contents)	// copy the contents of disposer to holder
@@ -522,11 +551,12 @@
 
 			AM.forceMove(src.loc)
 			AM.pipe_eject(0)
-			if(!istype(AM,/mob/living/silicon/robot/drone)) //Poor drones kept smashing windows and taking system damage being fired out of disposals. ~Z
+			// Outpost 21 edit begin - The cleaner dropoff on our server vents to patient recovery this lead to INJURIES IN THE PATIENT WARD :D ~Willbird
+			if(!istype(src,/obj/machinery/disposal/wall/cleaner) && !istype(AM,/mob/living/silicon/robot/drone)) //Poor drones kept smashing windows and taking system damage being fired out of disposals. ~Z
 				spawn(1)
 					if(AM)
 						AM.throw_at(target, 5, 1)
-
+			// Outpost 21 edit end
 		H.vent_gas(loc)
 		qdel(H)
 
@@ -676,12 +706,18 @@
 	while(active)
 		sleep(1)		// was 1
 		if(!loc) return // check if we got GC'd
-		/*CHOMPREMOVAL: why, this makes no sense to be a randomized 3% chance damage apply
-		if(hasmob && prob(3))
-			for(var/mob/living/H in src)
-				if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
-					H.take_overall_damage(20, 0, "Blunt Trauma")//horribly maim any living creature jumping down disposals.  c'est la vie
-		*/
+
+		var/noiseprob = 2 // Outpost 21 addition - disposal clunking
+
+		// Outpost 21 edit begin - We like our disposals to do damage
+		if(hasmob)
+			noiseprob = 30
+			if(prob(3))
+				for(var/mob/living/H in src)
+					if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
+						H.take_overall_damage(20, 0, "Blunt Trauma")//horribly maim any living creature jumping down disposals.  c'est la vie
+		// Outpost 21 edit end
+
 		var/obj/structure/disposalpipe/curr = loc
 		last = curr
 		curr = curr.transfer(src)
@@ -690,6 +726,20 @@
 
 		if(!curr)
 			last.expel(src, loc, dir)
+
+		// outpost 21 edit begin - disposal clunking
+		// make noises to spook people lots, the teshari love it!
+		if(prob(40) && prob(noiseprob)) // double probability helps push this down in rarity
+			var/turf/T = get_turf(src)
+			playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
+			var/message = pick(
+				prob(90);"* clunk *",
+				prob(90);"* thud *",
+				prob(90);"* clatter *",
+				prob(1);"* <span style='font-size:2em'>ඞ</span> *"
+			)
+			T.runechat_message(message)
+		// outpost 21 edit end
 
 		//
 		if(!(count--))
@@ -922,6 +972,12 @@
 				spawn(1)
 					if(AM)
 						AM.throw_at(target, 100, 1)
+						// Outpost 21 edit begin - Disposals gib things if at a high enough damage
+						if(isliving(AM)) // same ignore as above
+							var/mob/living/L = AM
+							if(L.stat == DEAD && L.getBruteLoss() > 150)
+								L.gib() // SPLOOT out of tubes violently in a shower of gore
+						// Outpost 21 edit end
 			H.vent_gas(T)
 			qdel(H)
 
@@ -937,6 +993,12 @@
 				spawn(1)
 					if(AM)
 						AM.throw_at(target, 5, 1)
+						// Outpost 21 edit begin - Disposals gib things if at a high enough damage
+						if(isliving(AM)) // same ignore as above
+							var/mob/living/L = AM
+							if(L.stat == DEAD && L.getBruteLoss() > 150)
+								L.gib() // SPLOOT out of tubes violently in a shower of gore
+						// Outpost 21 edit end
 
 			H.vent_gas(T)	// all gas vent to turf
 			qdel(H)
@@ -1395,7 +1457,10 @@
 		return posdir
 
 /obj/structure/disposalpipe/sortjunction/transfer(var/obj/structure/disposalholder/H)
-	var/nextdir = nextdir(H.dir, H.destinationTag)
+	// outpost 21 edit begin - bodies are internally tagged for a special sorter!
+	var/detectedtag = check_corpse_sorter(H)
+	var/nextdir = nextdir(H.dir, detectedtag)
+	// outpost 21 edit end
 	H.set_dir(nextdir)
 	var/turf/T = H.nextloc()
 	var/obj/structure/disposalpipe/P = H.findpipe(T)
@@ -1600,6 +1665,13 @@
 			if(!istype(AM,/mob/living/silicon/robot/drone)) //Drones keep smashing windows from being fired out of chutes. Bad for the station. ~Z
 				spawn(5)
 					AM.throw_at(target, launch_dist, 1) //CHOMPEdit
+					// Outpost 21 edit begin - Disposals gib things if at a high enough damage
+					if(isliving(AM))
+						var/mob/living/L = AM
+						if(L.stat == DEAD && L.getBruteLoss() > 150)
+							L.gib() // SPLOOT out of tubes violently in a shower of gore
+					// Outpost 21 edit end
+
 		H.vent_gas(src.loc)
 		qdel(H)
 

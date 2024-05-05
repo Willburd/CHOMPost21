@@ -83,6 +83,9 @@
 #define DISPOSAL_SORT_NORMAL 0
 #define DISPOSAL_SORT_WILDCARD 1
 #define DISPOSAL_SORT_UNTAGGED 2
+// Outpost 21 edit begin - Disposal body sorter
+#define DISPOSAL_SORT_BODIES 3
+// Outpost 21 edit end
 
 // Macro for easy use of boilerplate code for searching for a valid node connection.
 #define STANDARD_ATMOS_CHOOSE_NODE(node_num, direction) \

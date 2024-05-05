@@ -17,7 +17,10 @@ export const DisposalBin = (props) => {
   const { mode, pressure, isAI, panel_open, flushing } = data;
   let stateColor;
   let stateText;
-  if (mode === 2) {
+  if (mode === 3) {
+    stateColor = 'bad';
+    stateText = 'Interlock Error';
+  } else if (mode === 2) {
     stateColor = 'good';
     stateText = 'Ready';
   } else if (mode <= 0) {

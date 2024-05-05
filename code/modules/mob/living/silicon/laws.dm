@@ -134,6 +134,10 @@
 
 // Ripped out from events.
 /mob/living/silicon/proc/generate_ion_law(var/exclude_crew_names = FALSE)
+	// Outpost 21 edit begin - Use Ours!
+	return generate_outpost_ion_law(exclude_crew_names)
+
+	/*
 	var/list/players = list()
 
 	for(var/mob/living/carbon/human/player in player_list)
@@ -205,3 +209,5 @@
 							"The crew needs eye protection from the nearby star. Make sure they wear sunglasses.")
 							// CHOMPEnd
 	return pick(laws)
+	*/
+	// Outpost 21 edit end

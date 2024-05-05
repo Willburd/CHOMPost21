@@ -1,4 +1,4 @@
-/proc/wormhole_event(var/set_duration = 5 MINUTES, var/wormhole_duration_modifier = 1)
+/proc/wormhole_event(var/set_duration = 5 MINUTES, var/wormhole_duration_modifier = 1, var/redspace = FALSE)
 	spawn()
 		var/list/pick_turfs = list()
 		var/list/Z_choices = list()
@@ -51,7 +51,10 @@
 //				pick_turfs -= exit
 				if( !exit || !istype(exit) )	continue	//sanity
 
-				create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
+				if(redspace)
+					create_redspace_wormhole(enter,exit,FALSE,wormhole_min_duration,wormhole_max_duration)
+				else
+					create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
 
 				sleep(sleep_duration)						//have a well deserved nap!
 

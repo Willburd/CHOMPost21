@@ -1526,7 +1526,13 @@
 	current_limb.relocate()
 
 /mob/living/carbon/human/drop_from_inventory(var/obj/item/W, var/atom/target = null)
-	return !(W in organs) && ..()
+	// outpost 21 edit begin - dropping anything while traveling in disposals, keeps it in the same disposal packet
+	if(W in organs)
+		return FALSE
+	if(isnull(target) && istype( src.loc,/obj/structure/disposalholder))
+		return remove_from_mob(W, src.loc)
+	return ..()
+	// outpost 21 edit end
 
 /mob/living/carbon/human/reset_view(atom/A, update_hud = 1)
 	..()
