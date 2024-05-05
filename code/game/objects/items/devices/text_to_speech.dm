@@ -22,7 +22,10 @@
 		named = 1
 		*/
 
+	user.set_typing_indicator(TRUE) // Outpost 21 addition - TTS device text bubbles
 	var/message = sanitize(tgui_input_text(user,"Choose a message to relay to those around you."))
+	user.set_typing_indicator(FALSE) // Outpost 21 addition - TTS device text bubbles
+
 	if(message)
 		audible_message("[icon2html(src, user.client)] \The [src.name] states, \"[message]\"", runemessage = "synthesized speech")
 		if(ismob(loc))
