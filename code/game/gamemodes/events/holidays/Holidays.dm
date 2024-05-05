@@ -70,6 +70,11 @@ var/global/list/Holiday = list() //Holidays are lists now, so we can have more t
 				if(3)
 					Holiday["Qixm-tes"] = "Qixm-tes, or 'Day of mourning', is a skrellian holiday where skrell gather at places \
 					of worship and sing a song of mourning for all those who have died in service to their kingdoms."
+				// Outpost 21 edit begin - Rest in peace Tin
+				if(11)
+					Holiday["Hug a Friend Day"] = "An unoffical holiday celebrating the joy of companionship and friends. \
+					In this cold and uncaring universe, having warmth and meaning to share with others makes life worth living."
+				// Outpost 21 edit end
 				if(14)
 					Holiday["Pi Day"] = "An unoffical holiday celebrating the mathematical constant Pi.  It is celebrated on \
 					March 14th, as the digits form 3 14, the first three significant digits of Pi.  Observance of Pi Day generally \
