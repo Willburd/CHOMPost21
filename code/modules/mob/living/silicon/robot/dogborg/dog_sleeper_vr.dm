@@ -648,6 +648,13 @@
 					//CHOMPAdd End
 					if(T.ckey)
 						GLOB.prey_digested_roundstat++
+						// Outpost 21 edit begin - deep hunger antag
+						if(!isnull(hound.mind))
+							for(var/datum/objective/O in hound.mind.objectives)
+								if(istype(O,/datum/objective/consume))
+									var/datum/objective/consume/C = O
+									C.digested += 1
+						// Outpost 21 edit end
 					if(patient == T)
 						patient_laststat = null
 						patient = null

@@ -8,7 +8,6 @@
 	icon = 'icons/mob/screen1.dmi'
 	icon_state = "x"
 
-/* Outpost 21 TODO - Enable once these antags are readded
 /obj/effect/landmark/late_antag/chu
 	name = "Chu - Lateload"
 	antag_id = MODE_CHU
@@ -20,7 +19,6 @@
 /obj/effect/landmark/late_antag/zombie
 	name = "Zombie - Lateload"
 	antag_id = MODE_ZOMBIE
-*/
 
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
@@ -87,7 +85,7 @@
 			C.loc = src.loc
 
 		if(6)
-			var/mob/living/simple_mob/vore/chu/C = new /mob/living/simple_mob/vore/chu()
+			var/mob/living/simple_mob/vore/alienanimal/chu/C = new /mob/living/simple_mob/vore/alienanimal/chu()
 			C.loc = src.loc
 
 		if(7)
@@ -117,7 +115,7 @@
 			C.loc = src.loc
 
 		if(3)
-			var/mob/living/simple_mob/vore/chu/C = new /mob/living/simple_mob/vore/chu()
+			var/mob/living/simple_mob/vore/alienanimal/chu/C = new /mob/living/simple_mob/vore/alienanimal/chu()
 			C.loc = src.loc
 
 		if(4)

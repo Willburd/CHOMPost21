@@ -11,7 +11,7 @@
 	threaten_sound = 'sound/voice/hiss4.ogg'
 	stand_down_sound = 'sound/voice/hiss3.ogg'
 
-/mob/living/simple_mob/vore/chu
+/mob/living/simple_mob/vore/alienanimal/chu
 	name = "chu"
 	real_name = "chu"
 	desc = "A \"friendly\" creature that wanders maintenance."
@@ -80,14 +80,14 @@
 		"Blood" = "#FFFFFF"
 	)
 
-/mob/living/simple_mob/vore/chu/Initialize()
+/mob/living/simple_mob/vore/alienanimal/chu/Initialize()
 	. = ..()
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
-	verbs += /mob/living/simple_mob/vore/chu/proc/infest
+	verbs += /mob/living/simple_mob/vore/alienanimal/chu/proc/infest
 	update_icon()
 
-/mob/living/simple_mob/vore/chu/proc/infest()
+/mob/living/simple_mob/vore/alienanimal/chu/proc/infest()
 	set category = "Abilities"
 	set name = "Infest Prey"
 
@@ -113,7 +113,7 @@
 					var/mob/living/carbon/human/Hu = L
 					if(istype(Hu.wear_suit, /obj/item/clothing/suit/space) && istype(Hu.head,/obj/item/clothing/head/helmet/space))
 						continue
-				if(istype(L,/mob/living/simple_mob/vore/chu))
+				if(istype(L,/mob/living/simple_mob/vore/alienanimal/chu))
 					continue
 				foundprey = L
 				foundbelly = B
@@ -146,7 +146,7 @@
 		to_chat(src, "<span class='warning'>\The [foundprey] is dead!</span>")
 		return
 
-	if(istype(foundprey,/mob/living/simple_mob/vore/chu))
+	if(istype(foundprey,/mob/living/simple_mob/vore/alienanimal/chu))
 		to_chat(src, "<span class='warning'>\The [foundprey] is already a chu!</span>")
 		return
 
@@ -189,10 +189,10 @@
 	to_chat(foundprey, "<span class='danger'>You have been infested by \the [src]!</span>")
 
 	var/allowghost = FALSE
-	var/mob/living/simple_mob/vore/chu/CC = null
+	var/mob/living/simple_mob/vore/alienanimal/chu/CC = null
 	if(!ishuman(foundprey) || !isnull(T.species.greater_form)) // Kinda hacky monkey check
 		// simple conversion
-		CC = new /mob/living/simple_mob/vore/chu(foundprey.loc)
+		CC = new /mob/living/simple_mob/vore/alienanimal/chu(foundprey.loc)
 		if(!isnull(foundprey.key))
 			CC.key = foundprey.key
 		else
@@ -248,7 +248,7 @@
 					if(L.stat == DEAD)
 						B.release_specific_contents(I) // spit out dead mobs
 
-/mob/living/simple_mob/vore/chu/update_icon()
+/mob/living/simple_mob/vore/alienanimal/chu/update_icon()
 	. = ..()
 	cut_overlays()
 	if(stat == DEAD)
@@ -293,7 +293,7 @@
 		I.blend_mode = BLEND_MULTIPLY
 		add_overlay(I)
 
-/mob/living/simple_mob/vore/chu/Life()
+/mob/living/simple_mob/vore/alienanimal/chu/Life()
 	. = ..()
 	// adjust sleep here, needs mind to sleep otherwise...
 	// adding the check so this doesn't conflict with life/handle_regular_status_updates()
@@ -379,7 +379,7 @@
 
 	// try stalking along with player chus
 	if(!target && leader == null && prob(80))
-		for(var/mob/living/simple_mob/vore/chu/C in range(4,holder))
+		for(var/mob/living/simple_mob/vore/alienanimal/chu/C in range(4,holder))
 			if(!isnull(C.key))
 				// try to stick around player chus, they can just tell!
 				set_follow(C, follow_for = 6 SECONDS)
@@ -413,7 +413,7 @@
 						B.release_specific_contents(thing)
 
 		if(wantcorrupt)
-			var/mob/living/simple_mob/vore/chu/C = holder
+			var/mob/living/simple_mob/vore/alienanimal/chu/C = holder
 			C.infest()
 			C.Sleeping(40)
 			holder.update_icon()
@@ -437,7 +437,7 @@
 /datum/ai_holder/simple_mob/melee/evasive/chu/react_to_attack(atom/movable/attacker, ignore_timers = FALSE)
 	if(stance == STANCE_SLEEP) // If we're asleep, try waking up if someone's wailing on us.
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)
-		var/mob/living/simple_mob/vore/chu/C = holder
+		var/mob/living/simple_mob/vore/alienanimal/chu/C = holder
 		C.SetSleeping(0)
 		C.resting = FALSE
 		C.lying = FALSE

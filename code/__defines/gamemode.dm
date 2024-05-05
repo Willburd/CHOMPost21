@@ -45,6 +45,10 @@
 #define BE_CURSEDSWORD	0x100000
 #define BE_SURVIVOR		0x200000
 //VOREStation Add End
+// outpost 21 addition begin
+#define BE_DEEPHUNGER 0x400000
+#define BE_ZOMBIE	  0x800000
+// outpost 21 addition end
 
 var/list/be_special_flags = list(
 	"Traitor"          = BE_TRAITOR,
@@ -69,8 +73,12 @@ var/list/be_special_flags = list(
 	"Morph"            = BE_MORPH,
 	"Corgi"            = BE_CORGI,
 	"Cursed Sword"     = BE_CURSEDSWORD,
-	"Ship Survivor"	   = BE_SURVIVOR
+	"Ship Survivor"	   = BE_SURVIVOR,
 	//VOREStation Add End
+	// outpost 21 addition begin
+	"Deep Hunger"      	= BE_DEEPHUNGER,
+	"Zombie"          	= BE_ZOMBIE
+	// outpost 21 addition end
 )
 
 
