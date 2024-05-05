@@ -61,7 +61,7 @@
 
 	return tgui_interact(user)
 
-/obj/machinery/power/grid_checker/proc/power_failure(var/announce = TRUE)
+/obj/machinery/power/grid_checker/proc/power_failure(var/announce = TRUE,var/extended = FALSE)
 	if(announce)
 		command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
 		the station's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
@@ -83,7 +83,12 @@
 
 	update_icon()
 
-	spawn(rand(4 MINUTES, 10 MINUTES) )
+	// Outpost 21 edit begin - extended gridcheck
+	var/time = rand(4 MINUTES, 10 MINUTES)
+	if(extended)
+		time = rand(20 MINUTES, 30 MINUTES)
+	// Outpost 21 edit end
+	spawn(time)
 		if(power_failing) // Check to see if engineering didn't beat us to it.
 			end_power_failure(TRUE)
 
