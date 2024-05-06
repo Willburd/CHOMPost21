@@ -51,10 +51,11 @@
 				if(!R.name)
 					continue
 				to_chat(user, span("notice", "Contains [R.volume]u of <b>[R.name]</b>.<br>[R.description]<br><br>"))
-				if(SSchemistry.chemical_reactions_by_product[R.id] != null && SSchemistry.chemical_reactions_by_product[R.id].len > 0)
+				var/list/products = SSchemistry.chemical_reactions_by_product[R.id]
+				if(products != null && products.len > 0)
 					var/segment = 1
 					var/list/display_reactions = list()
-					for(var/decl/chemical_reaction/CR in SSchemistry.chemical_reactions_by_product[R.id])
+					for(var/decl/chemical_reaction/CR in products)
 						if(!CR.spoiler)
 							display_reactions.Add(CR)
 					for(var/decl/chemical_reaction/CR in display_reactions)
@@ -65,20 +66,24 @@
 						segment += 1
 
 						for(var/RQ in CR.required_reagents)
-							to_chat(user, span("notice", " -parts [SSchemistry.chemical_reagents[RQ].name]<br>"))
+							var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
+							to_chat(user, span("notice", " -parts [r_RQ.name]<br>"))
 						for(var/IH in CR.inhibitors)
-							to_chat(user, span("notice", " -inhbi [SSchemistry.chemical_reagents[IH].name]<br>"))
+							var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
+							to_chat(user, span("notice", " -inhbi [r_IH.name]<br>"))
 						for(var/CL in CR.catalysts)
-							to_chat(user, span("notice", " -catyl [SSchemistry.chemical_reagents[CL].name]<br>"))
+							var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
+							to_chat(user, span("notice", " -catyl [r_CL.name]<br>"))
 						to_chat(user, span("notice", "<br>"))
 				else
 					to_chat(user, span("notice", "Potential Chemical breakdown: <br>UNKNOWN OR BASE-REAGENT<br><br>"))
 
-				if(SSchemistry.distilled_reactions_by_product[R.id] != null && SSchemistry.distilled_reactions_by_product[R.id].len > 0)
+				var/list/distilled_products = SSchemistry.distilled_reactions_by_product[R.id]
+				if(distilled_products != null && distilled_products.len > 0)
 					var/segment = 1
 
 					var/list/display_reactions = list()
-					for(var/decl/chemical_reaction/distilling/CR in SSchemistry.distilled_reactions_by_product[R.id])
+					for(var/decl/chemical_reaction/distilling/CR in distilled_products)
 						if(!CR.spoiler)
 							display_reactions.Add(CR)
 
@@ -92,11 +97,14 @@
 						to_chat(user, span("notice", " -temps [CR.temp_range[1]] - [CR.temp_range[2]]<br>"))
 
 						for(var/RQ in CR.required_reagents)
-							to_chat(user, span("notice", " -parts [SSchemistry.chemical_reagents[RQ].name]<br>"))
+							var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
+							to_chat(user, span("notice", " -parts [r_RQ.name]<br>"))
 						for(var/IH in CR.inhibitors)
-							to_chat(user, span("notice", " -inhbi [SSchemistry.chemical_reagents[IH].name]<br>"))
+							var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
+							to_chat(user, span("notice", " -inhbi [r_IH.name]<br>"))
 						for(var/CL in CR.catalysts)
-							to_chat(user, span("notice", " -catyl [SSchemistry.chemical_reagents[CL].name]<br>"))
+							var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
+							to_chat(user, span("notice", " -catyl [r_CL.name]<br>"))
 					to_chat(user, span("notice", "<br>"))
 
 		// Last, unseal it if it's an autoinjector.

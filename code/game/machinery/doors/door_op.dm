@@ -61,26 +61,31 @@
 				close_door_at = world.time + next_close_wait()
 
 /obj/machinery/door/flesh/update_icon(var/update_neighbors)
-    cut_overlays()
-    . = ..()
+	cut_overlays()
+	. = ..()
 
-    for(var/direction in cardinal)
-        var/turf/T = get_step(src,direction)
-        if(istype(T) && !T.density)
-            var/place_dir = turn(direction, 180)
-            var/offset = 32
-            if(!flesh_overlay_cache["flesh_side_[place_dir]"])
-                flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
-                switch(direction)
-                    if(NORTH)
-                        flesh_overlay_cache["flesh_side_[place_dir]"].pixel_y = offset
-                    if(SOUTH)
-                        flesh_overlay_cache["flesh_side_[place_dir]"].pixel_y = -offset
-                    if(EAST)
-                        flesh_overlay_cache["flesh_side_[place_dir]"].pixel_x = offset
-                    if(WEST)
-                        flesh_overlay_cache["flesh_side_[place_dir]"].pixel_x = -offset
-            add_overlay(flesh_overlay_cache["flesh_side_[place_dir]"])
+	for(var/direction in cardinal)
+		var/turf/T = get_step(src,direction)
+		if(istype(T) && !T.density)
+			var/place_dir = turn(direction, 180)
+			var/offset = 32
+			if(!flesh_overlay_cache["flesh_side_[place_dir]"])
+				flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
+				var/image/cache = null
+				switch(direction)
+					if(NORTH)
+						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache.pixel_y = offset
+					if(SOUTH)
+						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache.pixel_y = -offset
+					if(EAST)
+						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache.pixel_x = offset
+					if(WEST)
+						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache.pixel_x = -offset
+			add_overlay(flesh_overlay_cache["flesh_side_[place_dir]"])
 
 /obj/machinery/door/flesh/open()
 	playsound(src, 'sound/effects/blobattack.ogg', 100, 1)

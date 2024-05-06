@@ -61,9 +61,11 @@
 		sparks.start()
 		// send em to hell, or redspace if none exists... or just gib them
 		if(hellexitlist.len > 0)
-			C.forceMove(pick(hellexitlist).loc)
+			var/obj/effect/landmark/pick_exit = pick(hellexitlist)
+			C.forceMove(pick_exit.loc)
 		else if(redexitlist.len > 0)
-			C.forceMove(pick(redexitlist).loc)
+			var/obj/effect/landmark/pick_exit = pick(redexitlist)
+			C.forceMove(pick_exit.loc)
 		else
 			C.gib()
 		deathmessage = " and toots out of time and space"
