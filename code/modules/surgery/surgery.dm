@@ -133,7 +133,7 @@
 
 	return 1
 
-/obj/item/proc/do_surgery(mob/living/carbon/M, mob/living/user)
+/obj/item/proc/do_surgery(mob/living/carbon/M, mob/living/user, var/zone)
 	if(!can_do_surgery(M, user))
 		return 0
 	if(!istype(M))
@@ -141,7 +141,7 @@
 	if (user.a_intent == I_HURT)	//check for Hippocratic Oath
 		//Insert intentional hurt medical code here.
 		return 0
-	var/zone = user.zone_sel.selecting
+	// var/zone = user.zone_sel.selecting,  Outpost 21 edit - This is passed in manually in the autodoc instead of detected here!
 	if(zone in M.op_stage.in_progress) //Can't operate on someone repeatedly.
 		to_chat(user, "<span class='warning'>You can't operate on this area while surgery is already in progress.</span>")
 		return 1
@@ -184,10 +184,22 @@
 			return 0
 
 	var/datum/surgery_step/selected_surgery
-	if(available_surgeries.len > 1) //More than one possible? Ask them which one.
-		selected_surgery = tgui_input_list(user, "Select which surgery step you wish to perform", "Surgery Select", available_surgeries) //Shows the name in the list.
+	// Outpost 21 edit begin - Autodoc surgery selection
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		//More than one possible? Ask them which one.
+		if(available_surgeries.len > 1)
+			selected_surgery = tgui_input_list(user, "Select which surgery step you wish to perform", "Surgery Select", available_surgeries) //Shows the name in the list.
+		else
+			selected_surgery = pick(available_surgeries)
 	else
-		selected_surgery = pick(available_surgeries)
+		// autodoc coding horror
+		var/mob/living/carbon/human/monkey/auto_doc/D = user
+		var/obj/machinery/auto_doc/mach = D.owner_machine
+		for(var/surgery in available_surgeries)
+			if(surgery in mach.get_step_whitelist())
+				selected_surgery = surgery
+				break
+	// Outpost 21 edit end
 
 	if(isnull(selected_surgery)) //They clicked 'cancel'
 		return 1
@@ -204,6 +216,17 @@
 	// Bad surface may mean failure as well.
 	if(!prob(surface.surgery_odds))
 		success = FALSE
+
+	// Outpost 21 edit begin - Auto doc ignores tool success
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		// Bad tools make it less likely to succeed.
+		if(!prob(selected_surgery.tool_quality(src)))
+			success = FALSE
+
+		// Bad surface may mean failure as well.
+		if(!prob(surface.surgery_odds))
+			success = FALSE
+	// Outpost 21 edit end
 
 	// Not staying still fails you too.
 	if(success)

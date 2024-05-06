@@ -62,7 +62,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	if(SEND_SIGNAL(src, COMSIG_PARENT_ATTACKBY, I, user, click_parameters) & COMPONENT_CANCEL_ATTACK_CHAIN)
 		return FALSE
 
-	if(can_operate(src, user) && I.do_surgery(src,user))
+	if(can_operate(src, user) && I.do_surgery(src,user,user.zone_sel.selecting)) // Outpost 21 edit - Autodoc input recode
 		return TRUE
 
 	if(attempt_vr(src,"vore_attackby",args)) return //VOREStation Add - The vore, of course.

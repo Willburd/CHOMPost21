@@ -227,15 +227,29 @@
 	for(var/organ in target.internal_organs_by_name)
 		var/obj/item/organ/I = target.internal_organs_by_name[organ]
 		if(I && !(I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
-			attached_organs |= organ
+			attached_organs[I.name] = organ // Outpost 21 edit - use Organ name
 
-	var/organ_to_remove = tgui_input_list(user, "Which organ do you want to prepare for removal?", "Organ Choice", attached_organs)
+	// Outpost 21 edit begin - Autodoc code, and use organs actual name for malignants
+	var/organ_to_remove
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		// normal player input
+		organ_to_remove = tgui_input_list(user, "Which organ do you want to prepare for removal?", "Organ Choice", attached_organs)
+	else
+		// autodoc code
+		var/mob/living/carbon/human/monkey/auto_doc/D = user
+		var/obj/machinery/auto_doc/mach = D.owner_machine
+		if(mach.internal_organ_target in attached_organs)
+			organ_to_remove = mach.internal_organ_target
+
 	if(!organ_to_remove)
 		return 0
+	if(!attached_organs[organ_to_remove])
+		return 0
 
-	target.op_stage.current_organ = organ_to_remove
+	target.op_stage.current_organ = attached_organs[organ_to_remove]
 
-	return ..() && organ_to_remove
+	return ..() && attached_organs[organ_to_remove]
+	// Outpost 21 edit end
 
 /datum/surgery_step/internal/detatch_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -303,16 +317,31 @@
 	for(var/organ in target.internal_organs_by_name)
 		var/obj/item/organ/internal/I = target.internal_organs_by_name[organ]
 		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
-			removable_organs |= organ
+			removable_organs[I.name] = organ // Outpost 21 edit - use Organ name
 
-	var/organ_to_remove = tgui_input_list(user, "Which organ do you want to remove?", "Organ Choice", removable_organs)
+	// Outpost 21 edit begin - Autodoc code, and use organs actual name for malignants
+	var/organ_to_remove
+	if(istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		// autodoc magic
+		var/mob/living/carbon/human/monkey/auto_doc/doc = user
+		var/obj/machinery/auto_doc/mach = doc.owner_machine
+		if(mach)
+			var/obj/item/organ/internal/I = target.internal_organs_by_name[mach.internal_organ_target]
+			if(istype(I) && (I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
+				organ_to_remove = I.name
+	else
+		// normal input
+		organ_to_remove = tgui_input_list(user, "Which organ do you want to remove?", "Organ Choice", removable_organs)
+
 	if(!organ_to_remove) //They chose cancel!
 		to_chat(user, "<span class='notice'>You decide against preparing any organs for removal.</span>")
 		user.visible_message("<span class='filter_notice'>[user] starts pulling \the [tool] from [target]'s [affected].</span>", \
 		"<span class='filter_notice'>You start pulling \the [tool] from [target]'s [affected].</span>")
 		user.balloon_alert_visible("Starts pulling \the [tool] from [target]'s [affected]", "Pulling \the [tool] from \the [affected]") // CHOMPEdit
 
-	target.op_stage.current_organ = organ_to_remove
+	if(removable_organs[organ_to_remove])
+		target.op_stage.current_organ = removable_organs[organ_to_remove]
+	// Outpost 21 edit end
 
 	user.visible_message("<span class='filter_notice'>[user] starts removing [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
 	"<span class='filter_notice'>You start removing [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
@@ -385,23 +414,42 @@
 
 /* CHOMPedit begin, allow rotten/damaged organs to be inserted again to allow for organ repair in the case of worst-case-scenerio gib situation. Also to make a funny if lets say, a doctor didnt examine a damaged organ and inserted it anyway.
 	if(O.damage > (O.max_damage * 0.75))
-		to_chat(user, "<span class='warning'>\The [O.organ_tag] [o_is] in no state to be transplanted.</span>")
+		to_chat(user, "<span class='warning'>\The [O.name] [o_is] in no state to be transplanted.</span>")
 		return SURGERY_FAILURE
 */
 	if(!target.internal_organs_by_name[O.organ_tag])
 		organ_missing = 1
 	else
-		to_chat(user, "<span class='warning'>\The [target] already has [o_a][O.organ_tag].</span>")
-		user.balloon_alert("There is a [o_a][O.organ_tag] already!") // CHOMPEdit
+		to_chat(user, "<span class='warning'>\The [target] already has [o_a][O.name].</span>")
+		user.balloon_alert("There is a [o_a][O.name] already!") // CHOMPEdit
 		return SURGERY_FAILURE
 
+	/* Outpost 21 TODO - Malignant organs
+	if(O && istype(O,/obj/item/organ/internal/malignant))
+		// malignants can be put back in several locations
+		var/obj/item/organ/internal/malignant/ML = O
+		if(affected.organ_tag in ML.surgeryAllowedSites)
+			ML.parent_organ = affected.organ_tag
+			organ_compatible = 1
+		else
+			to_chat(user, "<span class='warning'>\The [ML.name] [o_do] normally go in \the [affected.name].</span>")
+			return SURGERY_FAILURE
+
+	else*/
 	if(O && affected.organ_tag == O.parent_organ)
 		organ_compatible = 1
 
 	else
-		to_chat(user, "<span class='warning'>\The [O.organ_tag] [o_do] normally go in \the [affected.name].</span>")
-		user.balloon_alert("\The [O.organ_tag] [o_do] normally go in \the [affected.name]") // CHOMPEdit
+		to_chat(user, "<span class='warning'>\The [O.name] [o_do] normally go in \the [affected.name].</span>")
+		user.balloon_alert("\The [O.name] [o_do] normally go in \the [affected.name]") // CHOMPEdit
 		return SURGERY_FAILURE
+
+	// Outpost 21 edit begin - Autodoc needs to release it's current stored organ
+	if(istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		var/mob/living/carbon/human/monkey/auto_doc/D = user
+		var/obj/machinery/auto_doc/mach = D.owner_machine
+		mach.finish_transplant()
+	// Outpost 21 edit end
 
 	return ..() && organ_missing && organ_compatible
 
@@ -457,14 +505,26 @@
 	var/list/removable_organs = list()
 	for(var/organ in target.internal_organs_by_name)
 		var/obj/item/organ/I = target.internal_organs_by_name[organ]
-		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && !(I.robotic >= ORGAN_ROBOT) && I.parent_organ == target_zone)
+		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && !(I.robotic >= ORGAN_NANOFORM) && I.parent_organ == target_zone)
 			removable_organs |= organ
 
-	var/organ_to_replace = tgui_input_list(user, "Which organ do you want to reattach?", "Organ Choice", removable_organs)
+	// Outpost 21 edit begin - Autodoc selection behavior
+	var/organ_to_replace
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		organ_to_replace = tgui_input_list(user, "Which organ do you want to reattach?", "Organ Choice", removable_organs)
+	else
+		if(removable_organs.len > 0)
+			organ_to_replace = pick(removable_organs)  // autodoc just picks any, because in most cases it will be the only one!
+
 	if(!organ_to_replace)
 		return 0
 
-	target.op_stage.current_organ = organ_to_replace
+	if(!removable_organs[organ_to_replace])
+		return 0
+
+	target.op_stage.current_organ = removable_organs[organ_to_replace]
+	// Outpost 21 edit end
+
 	return ..()
 
 /datum/surgery_step/internal/attach_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
