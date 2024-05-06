@@ -2,3 +2,6 @@
 	name = "Radio Host"
 /obj/effect/landmark/start/stowaway
 	name = "Stowaway"
+
+/obj/effect/landmark/event_spawn/maintpred
+	name = "maint_pred"

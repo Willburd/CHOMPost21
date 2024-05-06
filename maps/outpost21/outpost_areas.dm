@@ -46,6 +46,9 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/maintenance/substation/atmos
+	name = "Atmospherics Substation"
+
 //Processor. Our station is cool enough to have a giant vore eldrich horror for a terraforming station.
 /area/muriki/processor
 	name = "\improper Core Terraformer Processing"
@@ -258,6 +261,9 @@
 	icon_state = "orawhicir"
 	sound_env = SMALL_SOFTFLOOR
 
+/area/maintenance/substation/mining
+	name = "Mining Substation"
+
 /area/quartermaster/mining/
 	name = "\improper Mining Department"
 
@@ -450,6 +456,11 @@
 	icon_state = "orablasqu"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
+/area/library_office
+	name = "\improper Librarian Office"
+	icon_state = "library"
+	sound_env = SMALL_SOFTFLOOR
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 //Hallways-------
 /area/muriki/crewstairwell
@@ -1056,6 +1067,24 @@
 /area/maintenance
 	base_turf = /turf/simulated/mineral/floor/muriki
 
+/area/maintenance/basement
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+	flags = RAD_SHIELDED
+
+/area/maintenance/main
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+	flags = RAD_SHIELDED
+
+/area/maintenance/upper
+	name = "Maintenance"
+	icon_state = "amaint"
+	ambience = list('sound/ambience/maintenance/maintenance1.ogg','sound/ambience/maintenance/maintenance2.ogg')
+	flags = RAD_SHIELDED
+
 /area/maintenance/medicelev
 	name = "\improper Medical Elevator Maintenance Shaft"
 	base_turf = /turf/simulated/open
@@ -1185,6 +1214,9 @@
 	music = 'sound/ambience/signal.ogg'
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/maintenance/substation/virology
+	name = "Virology Substation"
 
 /area/medical/laundry
 	name = "\improper Medical Laundry Room"
@@ -2122,9 +2154,6 @@
 /area/library_conference_room
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
-/area/library_office
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-
 /area/chapel
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
@@ -2132,6 +2161,22 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/security/security_aid_station
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/medbay
+	name = "\improper Medbay Hallway - Stairwell"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/medbay2
+	name = "\improper Medbay Hallway - Basement"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/medbay3
+	name = "\improper Medbay Hallway - Primary"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/medbay4
+	name = "\improper Medbay Hallway - Vox"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/medical/psych
