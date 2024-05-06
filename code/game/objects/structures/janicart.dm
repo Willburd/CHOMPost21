@@ -370,6 +370,7 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 
 
 
+/* Outpost 21 edit begin - It lives on in code\modules\vehicles\janicart.dm
 //old style mischievio-cart
 /obj/structure/bed/chair/janicart
 	name = "janicart"
@@ -498,3 +499,4 @@ GLOBAL_LIST_BOILERPLATE(all_janitorial_carts, /obj/structure/janitorialcart)
 	icon = 'icons/obj/vehicles.dmi'
 	icon_state = "keys"
 	w_class = ITEMSIZE_TINY
+Outpost 21 edit end */
