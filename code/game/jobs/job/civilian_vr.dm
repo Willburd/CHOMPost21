@@ -263,7 +263,7 @@
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
 						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
-						"Artist" = /datum/alt_title/artist, "Fitness Instructor" = /datum/alt_title/fitnessinstructor, "Game Master" = /datum/alt_title/game_master)
+						"Artist" = /datum/alt_title/artist, "Fitness Instructor" = /datum/alt_title/fitnessinstructor, "Game Master" = /datum/alt_title/game_master, "Radio Host" = /datum/alt_title/radiohost) // Outpost 21 edit - Radiohost
 
 // Entertainer Alt Titles
 /datum/alt_title/actor

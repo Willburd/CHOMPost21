@@ -3,7 +3,7 @@
 						"Actor" = /datum/alt_title/actor, "Dancer" = /datum/alt_title/dancer, "Singer" = /datum/alt_title/singer,
 						"Magician" = /datum/alt_title/magician, "Comedian" = /datum/alt_title/comedian, "Tragedian" = /datum/alt_title/tragedian,
 						"Clown" = /datum/alt_title/clown, "Jester" = /datum/alt_title/clown/jester,"Fool" = /datum/alt_title/clown/fool,
-						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, "Fitness Instructor" = /datum/alt_title/fitness)  //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer, as well as fitness instructor
+						"Mime"= /datum/alt_title/mime,"Poseur"= /datum/alt_title/mime/poseur, "Fitness Instructor" = /datum/alt_title/fitness, "Radio Host" = /datum/alt_title/radiohost) // Outpost 21 edit - Radiohost //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer, as well as fitness instructor
 
 /datum/alt_title/fitness
 	title = "Fitness Instructor"
