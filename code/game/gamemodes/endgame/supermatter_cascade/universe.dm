@@ -78,9 +78,12 @@ The access requirements on the Asteroid Shuttles' consoles have now been revoked
 				C.req_access = list()
 				C.req_one_access = list()
 
-		spawn(5 MINUTES)
-			ticker.station_explosion_cinematic(0,null) // TODO: Custom cinematic
-			universe_has_ended = 1
+		// Outpost 21 edit begin - Don't end game anymore
+		//spawn(5 MINUTES)
+		//	ticker.station_explosion_cinematic(0,null) // TODO: Custom cinematic
+		//	universe_has_ended = 1
+		// Outpost 21 edit end
+
 		return
 
 /datum/universal_state/supermatter_cascade/proc/AreaSet()
