@@ -20,6 +20,12 @@
 		else if(is_broken())
 			owner.adjustToxLoss(0.3 * PROCESS_ACCURACY)
 
+	// Outpost 21 edit begin - General organ damage from withdraw, kidneys do a lot of the work
+	if(prob(70) && owner.chem_effects[CE_WITHDRAWL])
+		take_damage(owner.chem_effects[CE_WITHDRAWL] * 0.05 * PROCESS_ACCURACY, prob(1)) // Chance to warn them
+		owner.adjustToxLoss(owner.chem_effects[CE_WITHDRAWL] * 0.3 * PROCESS_ACCURACY)
+	// Outpost 21 edit end
+
 /obj/item/organ/internal/kidneys/handle_organ_proc_special()
 	. = ..()
 

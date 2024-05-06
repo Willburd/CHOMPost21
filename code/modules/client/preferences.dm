@@ -144,6 +144,10 @@ var/list/preferences_datums = list()
 	var/gen_record = ""
 	var/exploit_record = ""
 	var/disabilities = 0
+	// Outpost 21 edit begin - new disabilities and addictions
+	var/sdisabilities = 0
+	var/addictions = 0
+	// Outpost 21 edit end
 
 	var/economic_status = "Average"
 

@@ -117,6 +117,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["eyes_blue"]			>> pref.b_eyes
 	S["b_type"]				>> pref.b_type
 	S["disabilities"]		>> pref.disabilities
+	// Outpost 21 edit begin - more disabilities
+	S["sdisabilities"]		>> pref.sdisabilities
+	S["addictions"]			>> pref.addictions
+	// Outpost 21 edit end
 	S["organ_data"]			>> pref.organ_data
 	S["rlimb_data"]			>> pref.rlimb_data
 	S["body_markings"]		>> pref.body_markings
@@ -127,11 +131,13 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		>> pref.synth_markings
 	S["bgstate"]			>> pref.bgstate
 	S["body_descriptors"]	>> pref.body_descriptors
+	/* Outpost 21 edit - disable these
 	S["Wingdings"]			>> pref.wingdings //YWadd start
 	S["colorblind_mono"]	>> pref.colorblind_mono
 	S["colorblind_vulp"]	>> pref.colorblind_vulp
 	S["colorblind_taj"] 	>> pref.colorblind_taj
 	S["haemophilia"]        >> pref.haemophilia //YWadd end
+	*/
 	S["ear_style"]		>> pref.ear_style
 	S["r_ears"]			>> pref.r_ears
 	S["g_ears"]			>> pref.g_ears
@@ -188,6 +194,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["eyes_blue"]			<< pref.b_eyes
 	S["b_type"]				<< pref.b_type
 	S["disabilities"]		<< pref.disabilities
+	// Outpost 21 edit begin - more disabilities
+	S["sdisabilities"]		<< pref.sdisabilities
+	S["addictions"]			<< pref.addictions
+	// Outpost 21 edit end
 	S["organ_data"]			<< pref.organ_data
 	S["rlimb_data"]			<< pref.rlimb_data
 	S["body_markings"]		<< pref.body_markings
@@ -198,11 +208,13 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["synth_markings"]		<< pref.synth_markings
 	S["bgstate"]			<< pref.bgstate
 	S["body_descriptors"]	<< pref.body_descriptors
+	/* Outpost 21 edit - disable these
 	S["Wingdings"]          << pref.wingdings //YWadd start
 	S["colorblind_mono"]	<< pref.colorblind_mono
 	S["colorblind_vulp"]	<< pref.colorblind_vulp
 	S["colorblind_taj"] 	<< pref.colorblind_taj
 	S["haemophilia"]        << pref.haemophilia //YWadd end
+	*/
 	S["ear_style"]		<< pref.ear_style
 	S["r_ears"]			<< pref.r_ears
 	S["g_ears"]			<< pref.g_ears
@@ -261,6 +273,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
 
 	pref.disabilities	= sanitize_integer(pref.disabilities, 0, 65535, initial(pref.disabilities))
+	// Outpost 21 edit begin - more disabilities
+	pref.sdisabilities	= sanitize_integer(pref.sdisabilities, 0, 65535, initial(pref.sdisabilities))
+	pref.addictions		= sanitize_integer(pref.addictions, 0, 65535, initial(pref.addictions))
+	// Outpost 21 edit end
+
 	if(!pref.organ_data) pref.organ_data = list()
 	if(!pref.rlimb_data) pref.rlimb_data = list()
 	if(!pref.body_markings) pref.body_markings = list()
@@ -382,6 +399,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	character.set_gender(pref.biological_gender)
 
+	/* Outpost 21 edit - remove these
 	if(pref.species == "Grey")//YWadd START
 		character.wingdings = pref.wingdings
 
@@ -397,6 +415,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	if(pref.haemophilia == 1)
 		character.add_modifier(/datum/modifier/trait/haemophilia)
 	//YWadd END
+	*/
 
 	// Destroy/cyborgize organs and limbs.
 	//VOREStation Edit
@@ -719,7 +738,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		return TOPIC_HANDLED
 
 	else if(href_list["disabilities_yw"])
-		Disabilities_YW(user) //ChompEDIT - usr removal
+		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
 
 	else if(href_list["set_species"])
 		user << browse(null, "window=species")
@@ -1236,7 +1255,17 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
-		Disabilities_YW(user) //YW Edit //ChompEDIT - usr removal
+		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
+
+	else if(href_list["sdisabilities"])
+		var/disability_flag = text2num(href_list["sdisabilities"])
+		pref.sdisabilities ^= disability_flag
+		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
+
+	else if(href_list["addictions"])
+		var/addiction_flag = text2num(href_list["addictions"])
+		pref.addictions ^= addiction_flag
+		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
 
 	else if(href_list["toggle_preview_value"])
 		pref.equip_preview_mob ^= text2num(href_list["toggle_preview_value"])
@@ -1266,6 +1295,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		pref.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
 		return TOPIC_REFRESH_UPDATE_PREVIEW
 
+	/* Outpost 21 edit - disable these
 	//YW Add Start
 
 	else if(href_list["wingdings"])
@@ -1297,6 +1327,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		Disabilities_YW(user) //ChompEDIT - usr removal
 
 	//YW Add End
+	*/
 
 	else if(href_list["ear_style"])
 		var/new_ear_style = tgui_input_list(user, "Select an ear style for this character:", "Character Preference", pref.get_available_styles(global.ear_styles_list), pref.ear_style)

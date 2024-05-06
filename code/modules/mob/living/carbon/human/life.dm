@@ -197,35 +197,129 @@
 	if(stat != CONSCIOUS) //Let's not worry about tourettes if you're not conscious.
 		return
 
-	if (disabilities & EPILEPSY)
-		if ((prob(1) && paralysis < 1))
-			to_chat(src, span_red("You have a seizure!"))
-			for(var/mob/O in viewers(src, null))
-				if(O == src)
-					continue
-				O.show_message(text("<span class='danger'>[src] starts having a seizure!</span>"), 1)
-			Paralyse(10)
-			make_jittery(1000)
-	if (disabilities & COUGHING)
-		if ((prob(5) && paralysis <= 1))
-			drop_item()
-			spawn( 0 )
-				emote("cough")
-				return
-	if (disabilities & TOURETTES)
-		if ((prob(10) && paralysis <= 1))
-			Stun(10)
-			spawn( 0 )
-				switch(rand(1, 3))
-					if(1)
-						emote("twitch")
-					if(2 to 3)
-						say("[prob(50) ? ";" : ""][pick("SHIT", "PISS", "FUCK", "CUNT", "COCKSUCKER", "MOTHERFUCKER", "TITS")]")
-				make_jittery(100)
-				return
-	if (disabilities & NERVOUS)
-		if (prob(10))
-			stuttering = max(10, stuttering)
+	// outpost 21 edit begin - Major disabilities rework
+	var/anxietymedcount = 0 // DO NOT MIX THESE MEDS
+	var/seizuremedcount = 0
+	var/antihistaminescount = 0
+	if( bloodstr.get_reagent_amount("qerr_quem") > 0)
+		anxietymedcount += 1;
+	if( bloodstr.get_reagent_amount("paroxetine") > 0)
+		anxietymedcount += 1;
+		seizuremedcount += 1;
+	if( bloodstr.get_reagent_amount("citalopram") > 0)
+		anxietymedcount += 1;
+		seizuremedcount += 1;
+	if( bloodstr.get_reagent_amount("methylphenidate") > 0)
+		anxietymedcount += 1;
+		seizuremedcount += 1;
+	if( bloodstr.get_reagent_amount("tricordrazine") > 0) // startrek wiki says so
+		seizuremedcount += 1;
+	// lets check for any one of these... Faster than doing each one, as it'll trigger on the first one it finds instead of checking them all every time
+	if( bloodstr.get_reagent_amount("inaprovaline") > 0 || bloodstr.get_reagent_amount("menthol") > 0 || bloodstr.get_reagent_amount("adranol") > 0 || bloodstr.get_reagent_amount("immunosuprizine") > 0 || bloodstr.get_reagent_amount("malish-qualem") > 0)
+		antihistaminescount += 1; // there is no harm to stacking them as an allergy med, except their own overdoses anyway
+
+	// if no hazardous meds are mixed... just let any of the other ones work...
+	if( anxietymedcount == 0)
+		if( bloodstr.get_reagent_amount("adranol") > 0)
+			anxietymedcount = 1;
+		if( bloodstr.get_reagent_amount("nicotine") > 0)
+			anxietymedcount = 1;
+			antihistaminescount += 1;
+		if( ingested.get_reagent_amount("tea") > 0)
+			anxietymedcount = 1;
+			antihistaminescount += 1;
+
+	// alright, we need to see if we've mixed our meds... which is really bad.
+	if(anxietymedcount > 1)
+		if(prob(15) && prob(20))
+			stuttering = max(35, stuttering)
+			adjustHalLoss(2)
+			make_jittery(6)
+			if(prob(3))
+				to_chat(src, "<font color='red'>Everything feels wrong.</font>")
+				hallucination = 25
+				emote("twitch")
+				make_jittery(22)
+				adjustHalLoss(10)
+	// anxiety meds handled here
+	else if(anxietymedcount == 0)
+		if (disabilities & NERVOUS)
+			if (prob(15) && prob(8))
+				stuttering = max(15, stuttering)
+		if (disabilities & TOURETTES)
+			if ((prob(5) && prob(8) && paralysis <= 1))
+				Stun(2)
+				spawn( 0 )
+					switch(rand(1, 3))
+						if(1)
+							emote("twitch")
+						if(2 to 3)
+							say("[prob(50) ? ";" : ""][pick("SHIT", "PISS", "FUCK", "CUNT", "COCKSUCKER", "MOTHERFUCKER", "TITS")]")
+					make_jittery(20)
+	// seizure meds handled here
+	if(seizuremedcount == 0)
+		if (disabilities & EPILEPSY)
+			if ((prob(2) && prob(4) && paralysis < 1))
+				to_chat(src, "<font color='red'>You have a seizure!</font>")
+				for(var/mob/O in viewers(src, null))
+					if(O == src)
+						continue
+					O.show_message(text("<span class='danger'>[src] starts having a seizure!</span>"), 1)
+				Paralyse(10)
+				make_jittery(200)
+	// and not for sneezy stuff!
+	if(antihistaminescount == 0)
+		if(species.allergens & ALLERGEN_POLLEN) // this behaves in a funny way compared to all other allergens! Behaves like a disability
+			var/masked = FALSE
+			if(wear_mask) // masks block it entirely
+				if(wear_mask.item_flags & AIRTIGHT)
+					masked = !isnull(internal) // gas on
+				if(wear_mask.item_flags & BLOCK_GAS_SMOKE_EFFECT)
+					masked = TRUE
+			if(!masked)
+				var/isirritated = FALSE
+				var/things = list()
+				if(prob(22))
+					if(!isnull(r_hand))
+						things += r_hand
+					if(!isnull(l_hand))
+						things += l_hand
+
+				if(isturf(src.loc))
+					// terrain tests
+					things += src.loc.contents
+					if(prob(8))
+						if(istype(src.loc,/turf/simulated/floor/grass))
+							isirritated = TRUE // auto irritate!
+
+					if(!isirritated)
+						if(prob(12)) // ranged laggier check
+							things += orange(2,src.loc)
+
+				// scan irritants!
+				if(!isirritated)
+					for(var/obj/machinery/portable_atmospherics/hydroponics/irritanttray in things)
+						if(!irritanttray.dead && !isnull(irritanttray.seed))
+							isirritated = TRUE
+							break
+				if(!isirritated)
+					for(var/obj/effect/plant/irritant in things)
+						isirritated = TRUE
+						break
+				if(!isirritated)
+					for(var/obj/item/toy/bouquet/irritant in things)
+						isirritated = TRUE
+						break
+
+				if(isirritated)
+					to_chat(src, "<font color='red'>[pick("The air feels itchy!","Your face feels uncomfortable!","Your body tingles!")]</font>")
+					add_chemical_effect(CE_ALLERGEN, rand(5,20) * REM)
+		// may as well allow this to be handled in it's own way too
+		if (disabilities & COUGHING)
+			if ((prob(10) && prob(8) && paralysis <= 1))
+				if(prob(23)) drop_item()
+				spawn( 0 )
+					emote("cough")
 
 	var/rn = rand(0, 200)
 	if(getBrainLoss() >= 5)

@@ -40,12 +40,13 @@
 	CLUMSYBLOCK        = getAssignedBlock("CLUMSY",        numsToAssign)
 	FAKEBLOCK          = getAssignedBlock("FAKE",          numsToAssign)
 
-	// UNUSED!
-	//COUGHBLOCK         = getAssignedBlock("COUGH",         numsToAssign)
-	//GLASSESBLOCK       = getAssignedBlock("GLASSES",       numsToAssign)
-	//EPILEPSYBLOCK      = getAssignedBlock("EPILEPSY",      numsToAssign)
-	//TWITCHBLOCK        = getAssignedBlock("TWITCH",        numsToAssign)
-	//NERVOUSBLOCK       = getAssignedBlock("NERVOUS",       numsToAssign)
+	// Outpost 21 edit begin - no longer unused
+	COUGHBLOCK         = getAssignedBlock("COUGH",         numsToAssign)
+	GLASSESBLOCK       = getAssignedBlock("GLASSES",       numsToAssign)
+	EPILEPSYBLOCK      = getAssignedBlock("EPILEPSY",      numsToAssign)
+	TWITCHBLOCK        = getAssignedBlock("TWITCH",        numsToAssign)
+	NERVOUSBLOCK       = getAssignedBlock("NERVOUS",       numsToAssign)
+	// Outpost 21 edit end
 
 	// Bay muts (UNUSED)
 	//HEADACHEBLOCK      = getAssignedBlock("HEADACHE",      numsToAssign)

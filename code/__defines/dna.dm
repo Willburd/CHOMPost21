@@ -36,6 +36,10 @@
 #define COUGHING    0x4
 #define TOURETTES   0x8
 #define NERVOUS     0x10
+// Outpost 21 edit begin - more disabilities
+#define DEPRESSION     	0x20	// Roleplay drugs
+#define SCHIZOPHRENIA  	0x40	// Roleplay drugs
+// Outpost 21 edit end
 
 // sdisabilities
 #define BLIND 0x1
