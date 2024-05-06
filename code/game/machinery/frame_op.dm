@@ -1,7 +1,7 @@
 
 /datum/frame/frame_types/metal_detector
 	name = "Threat Scanner"
-	icon_override = 'icons/obj/stock_parts_vr.dmi'
+	icon_override = 'icons/obj/stock_parts_op.dmi'
 	circuit = /obj/item/weapon/circuitboard/metal_detector
 	frame_class = FRAME_CLASS_MACHINE
 
