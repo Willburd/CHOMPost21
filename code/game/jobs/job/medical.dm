@@ -141,6 +141,8 @@
 	job_description = "A Geneticist operates genetic manipulation equipment to repair any genetic defects encountered in crew, from cloning or radiation as examples. \
 						When required, geneticists have the skills to clone, and are the superior choice when available for doing so."
 
+	alt_titles = list("Gene Therapist" = /datum/alt_title/genetherapy, "Sleeve Engineer" = /datum/alt_title/sleeveengineer) // Outpost 21 addition - Alt titles for geneticist
+
 //////////////////////////////////
 //			Psychiatrist
 //////////////////////////////////
