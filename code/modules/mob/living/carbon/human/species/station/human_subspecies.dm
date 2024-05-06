@@ -48,7 +48,9 @@
 		O_BRAIN =    /obj/item/organ/internal/brain,
 		O_EYES =     /obj/item/organ/internal/eyes,
 		O_STOMACH =	 /obj/item/organ/internal/stomach,
-		O_INTESTINE =/obj/item/organ/internal/intestine
+		O_INTESTINE =/obj/item/organ/internal/intestine,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 /*

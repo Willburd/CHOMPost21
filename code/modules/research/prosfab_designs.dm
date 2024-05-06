@@ -275,6 +275,16 @@
 	time = 15
 	materials = list(MAT_STEEL = 5625, MAT_GLASS = 1000)
 
+/* Outpost 21 TODO - Prosthetic butt
+/datum/design/item/prosfab/pros/internal/butt
+	name = "Prosthetic Butt"
+	id = "pros_butt"
+	build_path = /obj/item/organ/internal/butt
+	time = 15
+	materials = list(MAT_STEEL = 3000, MAT_GLASS = 1000)
+//	req_tech = list(TECH_ENGINEERING = 2, TECH_MATERIAL = 2)
+*/
+
 //////////////////// Cyborg Parts ////////////////////
 /datum/design/item/prosfab/cyborg
 	category = list("Cyborg Parts")

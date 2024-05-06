@@ -36,7 +36,9 @@
 		O_SPLEEN = 		/obj/item/organ/internal/spleen,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
+		O_INTESTINE =	/obj/item/organ/internal/intestine,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 	// CHOMPEdit: Species Specific Sounds
@@ -155,7 +157,9 @@
 		O_BRAIN =    /obj/item/organ/internal/brain/unathi,
 		O_EYES =     /obj/item/organ/internal/eyes/unathi,
 		O_STOMACH =		/obj/item/organ/internal/stomach/unathi,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/unathi
+		O_INTESTINE =	/obj/item/organ/internal/intestine/unathi,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 
@@ -286,7 +290,9 @@
 		O_BRAIN =    /obj/item/organ/internal/brain,
 		O_EYES =     /obj/item/organ/internal/eyes/tajaran,
 		O_STOMACH =		/obj/item/organ/internal/stomach/tajaran,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
+		O_INTESTINE =	/obj/item/organ/internal/intestine,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 	default_emotes = list(
@@ -401,7 +407,9 @@
 		O_SPLEEN = 		/obj/item/organ/internal/spleen/skrell,
 		O_EYES =		/obj/item/organ/internal/eyes/skrell,
 		O_STOMACH =		/obj/item/organ/internal/stomach/skrell,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell
+		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 	default_emotes = list(
@@ -494,7 +502,9 @@
 	O_BRAIN =    /obj/item/organ/internal/brain,
 	O_EYES =     /obj/item/organ/internal/eyes,
 	O_STOMACH =	 /obj/item/organ/internal/stomach,
-	O_INTESTINE =/obj/item/organ/internal/intestine
+	O_INTESTINE =/obj/item/organ/internal/intestine,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 	)
 
 	descriptors = list(

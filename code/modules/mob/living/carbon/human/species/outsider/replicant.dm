@@ -63,7 +63,9 @@
 		O_AREJECT =		/obj/item/organ/internal/immunehub/replicant,
 		O_VRLINK = 		/obj/item/organ/internal/brainmirror,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
+		O_INTESTINE =	/obj/item/organ/internal/intestine,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 /datum/species/shapeshifter/replicant/alpha
@@ -100,7 +102,9 @@
 		O_ACID = 		/obj/item/organ/internal/xenos/acidgland/replicant,
 		O_VRLINK =		/obj/item/organ/internal/brainmirror,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
+		O_INTESTINE =	/obj/item/organ/internal/intestine,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 /datum/species/shapeshifter/replicant/beta
@@ -126,5 +130,7 @@
 		O_RESIN =		/obj/item/organ/internal/xenos/resinspinner/replicant,
 		O_VRLINK =		/obj/item/organ/internal/brainmirror,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
+		O_INTESTINE =	/obj/item/organ/internal/intestine,
+		// Outpost 21 edit - butt
+		O_BUTT = 		/obj/item/organ/internal/butt
 		)

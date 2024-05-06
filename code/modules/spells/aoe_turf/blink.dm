@@ -19,13 +19,15 @@
 	var/turf/T = pick(targets)
 	var/turf/starting = get_turf(user)
 	if(T)
-		if(user.buckled)
-			user.buckled = null
-		user.forceMove(T)
-
 		var/datum/effect/effect/system/smoke_spread/smoke = new /datum/effect/effect/system/smoke_spread()
 		smoke.set_up(3, 0, starting)
 		smoke.start()
+
+		// Outpost 21 edit begin - move this to after smoke, so it leaves smoke behind you instead of where you end up.
+		if(user.buckled)
+			user.buckled.unbuckle_mob( user, TRUE) // Outpost 21 edit - proper unbuckling
+		user.forceMove(T)
+		// Outpost 21 edit end
 
 		smoke = new()
 		smoke.set_up(3, 0, T)

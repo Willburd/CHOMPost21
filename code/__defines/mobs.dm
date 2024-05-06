@@ -193,7 +193,8 @@
 #define O_SPLEEN   "spleen"
 #define O_STOMACH  "stomach"
 #define O_INTESTINE "intestine"
-#define O_STANDARD list(O_EYES, O_HEART, O_LUNGS, O_BRAIN, O_LIVER, O_KIDNEYS, O_SPLEEN, O_APPENDIX, O_VOICE, O_STOMACH, O_INTESTINE)
+#define O_BUTT 		"butt" // Outpost 21 addition - butt
+#define O_STANDARD list(O_EYES, O_HEART, O_LUNGS, O_BRAIN, O_LIVER, O_KIDNEYS, O_SPLEEN, O_APPENDIX, O_VOICE, O_STOMACH, O_INTESTINE, O_BUTT)
 
 // Augments
 #define O_AUG_EYES "occular augment"

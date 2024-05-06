@@ -298,21 +298,23 @@
 				temp_img = icon('icons/obj/butts_vr.dmi', "vulp") // placeholder until we get fennec butts.
 			if(SPECIES_AKULA)
 				temp_img = icon('icons/obj/butts_vr.dmi', "xeno") // placeholder until we get proper sharkbutt. AKULA BE THICC ASS SHARKS MMMMMMMMMMMMMMKAY?
-			/* // Commented out because no icons exist, BUT if someone wants to sprite some more ASSCHEEKS, then just uncomment these and you have asses for each species. - Rykka.
+			// Outpost 21 edit begin - New butts by Meek!
 			if(SPECIES_TESHARI)
-				temp_img = icon('icons/obj/butts_vr.dmi', "tesh")
+				temp_img = icon('icons/obj/butts_op.dmi', "tesh")
+			if(SPECIES_SERGAL)
+				temp_img = icon('icons/obj/butts_op.dmi', "sergal")
+			if(SPECIES_NEVREAN)
+				temp_img = icon('icons/obj/butts_op.dmi', "nevrean")
+			// Outpost 21 edit end
+			/* // Commented out because no icons exist, BUT if someone wants to sprite some more ASSCHEEKS, then just uncomment these and you have asses for each species. - Rykka.
 			if(SPECIES_SHADEKIN || SPECIES_SHADEKIN_CREW)
 				temp_img = icon('icons/obj/butts_vr.dmi', "shadekin")
 			if(SPECIES_ALRAUNE)
 				temp_img = icon('icons/obj/butts_vr.dmi', "alraune")
-			if(SPECIES_NEVREAN)
-				temp_img = icon('icons/obj/butts_vr.dmi', "nevrean")
 			if(SPECIES_RAPALA)
 				temp_img = icon('icons/obj/butts_vr.dmi', "rapala")
 			if(SPECIES_ZADDAT)
 				temp_img = icon('icons/obj/butts_vr.dmi', "zaddat")
-			if(SPECIES_SERGAL)
-				temp_img = icon('icons/obj/butts_vr.dmi', "sergal")
 			*/
 			else // Sanity/Safety check - does their species not show up or not work, or did something fail, but they're DEFINITELY a /human/ subtype? Print the 'default' ass.
 				temp_img = icon('icons/obj/butts_vr.dmi', "human")

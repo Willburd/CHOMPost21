@@ -54,7 +54,7 @@
 		return
 
 	if(user && user.buckled)
-		user.buckled = null
+		user.buckled.unbuckle_mob( user, TRUE) // Outpost 21 edit - proper unbuckling
 
 	var/attempt = null
 	var/success = 0
@@ -67,6 +67,7 @@
 			break
 
 	if(!success)
+		to_chat(user, "The spell matrix was unable to locate a suitable teleport destination, because the destination area is entirely obstructed. Sorry.") // Outpost 21 edit - text failure feedback
 		user.loc = pick(L)
 
 	return

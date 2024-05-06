@@ -1,7 +1,7 @@
 /obj/item/weapon/spellbook
 	name = "spell book"
 	desc = "The legendary book of spells of the wizard."
-	icon = 'icons/obj/library.dmi'
+	icon = 'icons/obj/library_op.dmi' // Outpost 21 edit - spellbook
 	icon_state ="spellbook"
 	throw_speed = 1
 	throw_range = 5
@@ -54,6 +54,8 @@
 			<I>This spell creates your ethereal form, temporarily making you invisible and able to pass through walls.</I><BR>
 			<A href='byond://?src=\ref[src];spell_choice=knock'>Knock</A> (10)<BR>
 			<I>This spell opens nearby doors and does not require wizard garb.</I><BR>
+			<A href='byond://?src=\ref[src];spell_choice=buttblast'>Buttblast</A> (10)<BR>
+			<I>This spell removes a target's butt instantly.</I><BR>
 			<A href='byond://?src=\ref[src];spell_choice=noclothes'>Remove Clothes Requirement</A> <b>Warning: this takes away 2 spell choices.</b><BR>
 			<HR>
 			<B>Artefacts:</B><BR>
@@ -232,6 +234,12 @@
 								to_chat(H, "<span class='notice'>The walls suddenly disappear.</span>")
 							temp = "You have purchased a scrying orb, and gained x-ray vision."
 							max_uses--
+						// Outpost 21 edit begin - buttblasting
+						if("buttblast")
+							feedback_add_details("wizard_spell_learned","BB") //please do not change the abbreviation to keep data processing consistent. Add a unique id to any new spells
+							H.add_spell(new/spell/targeted/buttblast)
+							temp = "You have learned buttblast."
+						// Outpost 21 edit end
 		else
 			if(href_list["temp"])
 				temp = null
@@ -291,7 +299,7 @@
 
 /obj/item/weapon/spellbook/oneuse/fireball/recoil(mob/user as mob)
 	..()
-	explosion(user.loc, -1, 0, 2, 3, 0)
+	explosion(user.loc, -1, 1, 3, 4, 6) // Outpost 21 edit - Increased fireball explosion
 	qdel(src)
 
 /obj/item/weapon/spellbook/oneuse/smoke
