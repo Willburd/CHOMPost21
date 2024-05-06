@@ -1,6 +1,3 @@
-#define SOLID 1
-#define LIQUID 2
-#define GAS 3
 var/induromol_frequency = rand(700, 750) * 2 + 1 //signallers only increase by .2 increments
 var/induromol_code = rand(1, 50)
 
@@ -9,13 +6,14 @@ var/induromol_code = rand(1, 50)
 	id = "unknown"
 	description = "Currently unknown"
 	reagent_state = LIQUID
+	is_phoro = TRUE
 
 	//called by phorochemputer.dm, returns special message upon creating reagent
 	//mostly dangerous initial reactions, to ensure protective gear is worn
-	proc/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
-		if(reagent_state == GAS)
-			return "WARNING: Gaseous reaction detected! Repeating reaction inadvisable."
-		return message
+/datum/reagent/phororeagent/proc/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
+	if(reagent_state == GAS)
+		return "WARNING: Gaseous reaction detected! Repeating reaction inadvisable."
+	return message
 
 /*		Genetics is removed now.
 /datum/reagent/phororeagent/extreme_mutagen //this one should work fine, but genetics may still be a little messed up
@@ -36,7 +34,7 @@ var/induromol_code = rand(1, 50)
 			if(prob(91 - (min(src.volume, 60) / 1.5))) //odds are always against you, and high doses are dangerous
 				block = pick(FAKEBLOCK, FAKEBLOCK, DEAFBLOCK, DEAFBLOCK, CLUMSYBLOCK, BLINDBLOCK)
 			else
-				block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK)
+				block = pick(HULKBLOCK,XRAYBLOCK,TELEBLOCK,XRAYBLOCK,TELEBLOCK)
 
 			var/cur_DNA = H.dna.GetSEState(block)
 			do
@@ -130,14 +128,14 @@ var/induromol_code = rand(1, 50)
 						love_name = H.name
 
 				if(love_name)
-					to_chat(M, span_darkpink("You see [love_name]..."))
+					to_chat(M, "<font color='#e3209b'>You see [love_name]...</font>")
 					spawn(0)
 						sleep(10)
-						to_chat(M, span_darkpink("They are beautiful"))
+						to_chat(M, "<font color='#e3209b'>They are beautiful</font>")
 
 						if(M.mind) //give protect objective
 							var/datum/objective/protection = new/datum/objective()
-							protection.explanation_text = span_darkpink("Protect [love_name] at all costs")
+							protection.explanation_text = "<font color='#e3209b'>Protect [love_name] at all costs</font>"
 							M.mind.objectives.Add(protection)
 							var/obj_count = 1
 							to_chat(M, "<span class='notice'>Your current objectives:</span>")
@@ -155,15 +153,15 @@ var/induromol_code = rand(1, 50)
 						"[love_name] seems to be the essence of perfection",
 						"[love_name] can never be allowed to leave your side")
 
-						to_chat(M, span_darkpink("[pick(love_messages)]"))
+						to_chat(M, "<font color='#e3209b'>[pick(love_messages)]</font>")
 
 					else
-						to_chat(M, span_darkpink("You begin to build a trouser tent"))
+						to_chat(M, "<font color='#e3209b'>You begin to build a trouser tent</font>")
 	return ..()
 
 /datum/reagent/phororeagent/love_potion/on_remove(var/atom/A)
 	if(!istype(holder, /datum/reagents/metabolism/bloodstream))
-		if(istype(A, /mob/living))
+		if(isliving(A))
 			var/mob/living/M = A
 			if(M.mind)
 				var/message = "Your mind feels a lot more focused"
@@ -225,7 +223,7 @@ var/induromol_code = rand(1, 50)
 	color = "#F5F2F7"
 
 /datum/reagent/phororeagent/nasty/touch_mob(var/mob/M, var/volume)
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H << "<span class='warning'>You are so repulsed by the liquid splashed on you that you feel like puking</span>"
 	//	H.vomit() not fast enough
@@ -314,7 +312,7 @@ var/induromol_code = rand(1, 50)
 	..()
 
 /datum/reagent/phororeagent/babelizine/on_remove(var/atom/A)
-	if(istype(A, /mob/living))
+	if(isliving(A))
 		var/mob/living/M = A
 		M.universal_understand = 0
 		to_chat(M, "<span class='warning'>You no longer feel attuned to the spoken word.</span>")
@@ -385,7 +383,7 @@ var/induromol_code = rand(1, 50)
 	M.halloss = 100
 	M.stuttering = 10
 
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.shock_stage = min(H.shock_stage, 100)
 
@@ -395,9 +393,9 @@ var/induromol_code = rand(1, 50)
 			M.emote("scream")
 		else
 			if(prob(50))
-				M.emote("me", 1, "grits their teeth")
+				M.custom_emote(VISIBLE_MESSAGE, "grits their teeth")
 			else
-				M.emote("me", 1, "writhes in pain")
+				M.custom_emote(VISIBLE_MESSAGE, "writhes in pain")
 	..()
 
 /datum/reagent/phororeagent/fulguracin
@@ -407,12 +405,12 @@ var/induromol_code = rand(1, 50)
 	color = "#362F31"
 
 /datum/reagent/phororeagent/fulguracin/touch_mob(var/mob/M, var/volume)
-	if(istype(M, /mob/living/silicon))
+	if(issilicon(M))
 		var/mob/living/silicon/S = M
 		S.take_organ_damage(0, volume/2, emp = 1)
 		S << "<span class='notice'>Some of your systems report damage as a result of the liquid.</span>"
 	else
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(H.isSynthetic())
 				H.take_overall_damage(0, volume/2)
@@ -483,9 +481,9 @@ var/induromol_code = rand(1, 50)
 	if(!saved_icon)
 		saved_icon = M.icon //kind of hacky, shouldn't really cause too many problems
 
-	M.icon = 'icons/mob/belt.dmi' //belts because I can
+	M.icon = 'icons/inventory/belt/mob.dmi' //belts because I can
 
-	if(istype(M, /mob/living/carbon/human)) //hair still shows even though you're invisible...
+	if(ishuman(M)) //hair still shows even though you're invisible...
 		var/mob/living/carbon/human/H = M
 		if(!hair || ((H.h_style != hair) && (H.h_style != "Bald")))
 			hair = H.h_style
@@ -510,7 +508,7 @@ var/induromol_code = rand(1, 50)
 		to_chat(M, "<span class='notice'>Your skin feels normal again</span>")
 		M.digitalcamo = 0
 		M.icon = saved_icon
-		if(istype(M, /mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			if(hair)
 				H.h_style = hair
@@ -521,7 +519,7 @@ var/induromol_code = rand(1, 50)
 /datum/reagent/phororeagent/tegoxane/on_mob_death(var/mob/M)
 	M.icon = saved_icon
 	M.digitalcamo = 0
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(hair)
 			H.h_style = hair
@@ -732,7 +730,7 @@ var/induromol_code = rand(1, 50)
 	if(!init)
 		to_chat(M, "<span class='warning'>You start tripping balls.</span>")
 		init = 1
-	var/drugs = list("space_drugs", "serotrotium", "psilocybin", "nuka_cola", "atomicbomb", "hippiesdelight")
+	var/drugs = list( "serotrotium", "psilocybin", "nuka_cola", "atomicbomb", "hippiesdelight")
 	for(var/drug in drugs)
 		M.reagents.add_reagent(drug, 1)
 	M.reagents.add_reagent("mindbreaker", 0.2)
@@ -774,7 +772,7 @@ var/induromol_code = rand(1, 50)
 	color = "#F7E9BE"
 
 /datum/reagent/phororeagent/liquid_skin/touch_mob(var/mob/M, var/volume)
-	if(istype(M, /mob/living))
+	if(isliving(M))
 		var/mob/living/L = M
 		var/burned = L.getFireLoss() > 0
 		if(burned)
@@ -947,7 +945,7 @@ var/induromol_code = rand(1, 50)
 	..()
 
 /datum/reagent/phororeagent/liquid_bluespace/on_remove(var/atom/A)
-	if(istype(A, /mob/living/carbon/human))
+	if(ishuman(A))
 		var/mob/living/carbon/human/H = A
 		H.vomit()
 */
@@ -979,24 +977,24 @@ var/induromol_code = rand(1, 50)
 	var/mob_affected = 0
 	for(var/mob/living/L in T.contents)
 		mob_affected = 1
-		if(istype(L, /mob/living/carbon/human))
+		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
 			if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
 				H <<"<span class='warning'><b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b></span>"
 				H.death(0)
-		else if(!istype(L, /mob/living/silicon))
+		else if(!issilicon(L))
 			L.death(0)
 
 	if(mob_affected)
 		src = null
 /*
 /datum/reagent/phororeagent/gaseous/gaseous_death/touch_mob(var/mob/M, var/volume)
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!gaseous_reagent_check(H) && H.stat != 2) //protective clothing and living check
 			H <<"<span class='warning'><b>You realize you probably should have worn some safety equipment around dangerous chemicals.</b></span>"
 			H.death(0)
-	else if(!istype(M, /mob/living/silicon))
+	else if(!issilicon(M))
 		M.death(0)
 	src = null*/
 
@@ -1011,14 +1009,14 @@ var/induromol_code = rand(1, 50)
 	var/mob_affected = 0
 	for(var/mob/living/L in T.contents)
 		mob_affected = 1
-		if(istype(L, /mob/living/carbon/human))
+		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
 			if(!gaseous_reagent_check(H)) //protective clothing check
 				var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 				if(!(eyes.status & ORGAN_ROBOT))
 					eyes.take_damage(50)
 					H << "<span class='warning'><b>The gas stings your eyes like you have never felt before!</b></span>"
-		else if(!istype(L, /mob/living/silicon))
+		else if(!issilicon(L))
 			L.eye_blind = 500
 
 	if(mob_affected)
@@ -1026,14 +1024,14 @@ var/induromol_code = rand(1, 50)
 
 /*
 /datum/reagent/phororeagent/gaseous/occaecosone/touch_mob(var/mob/M, var/volume)
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!gaseous_reagent_check(H)) //protective clothing check
 			var/obj/item/organ/eyes = H.internal_organs_by_name["eyes"]
 			if(!(eyes.status & ORGAN_ROBOT))
 				eyes.take_damage(50)
 				H << "<span class='warning'><b>The gas stings your eyes like you have never felt before!</b></span>"
-	else if(!istype(M, /mob/living/silicon))
+	else if(!issilicon(M))
 		M.eye_blind = 500
 	src = null*/
 
@@ -1051,14 +1049,14 @@ var/induromol_code = rand(1, 50)
 	var/mob_affected = 0
 	for(var/mob/living/L in T.contents)
 		mob_affected = 1
-		if(istype(L, /mob/living/carbon/human))
+		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
 			if(!gaseous_reagent_check(H)) //protective clothing check
 				H.on_fire = 1
 				H.adjust_fire_stacks(20)
 				H.update_fire()
 		else
-			if(!istype(L, /mob/living/silicon))
+			if(!issilicon(L))
 				L.on_fire = 1
 				L.adjust_fire_stacks(20)
 
@@ -1066,14 +1064,14 @@ var/induromol_code = rand(1, 50)
 		src = null
 
 /*/datum/reagent/phororeagent/gaseous/ignisol/touch_mob(var/mob/M, var/volume)
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(!gaseous_reagent_check(H)) //protective clothing check
 			H.on_fire = 1
 			H.adjust_fire_stacks(20)
 			H.update_fire()
 	else
-		if(istype(M, /mob/living) && !istype(M, /mob/living/silicon))
+		if(isliving(M) && !issilicon(M))
 			var/mob/living/L = M
 			L.on_fire = 1
 			L.adjust_fire_stacks(20)

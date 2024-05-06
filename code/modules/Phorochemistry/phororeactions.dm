@@ -32,7 +32,7 @@
 /datum/phororeactions
 	var/list/random_reagents = list("hydrogen","lithium","carbon","nitrogen","oxygen","fluorine", \
 	"sodium","aluminum","silicon","phosphorus","sulfur","chlorine","potassium","iron", \
-	"copper","mercury","radium","water","sugar","sacid","tungsten", "lube", "inaprovaline", "space_drugs", \
+	"copper","mercury","radium","water","sugar","sacid","tungsten", "lube", "inaprovaline", \
 	"thermite", "tramadol", "cleaner", "kelotane", "dermaline", "anti_toxin", "synaptizine", \
 	 "alkysine", "imidazoline", "hyperzine", "ammonia", "sodiumchloride", "sterilizine", "silicate", "mindbreaker", \
 	 "impedrezene", "lipozine")

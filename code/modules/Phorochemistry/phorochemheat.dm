@@ -5,7 +5,7 @@
 	desc = "A small, open-topped glass container for delicate research samples. It sports a re-useable strip for labelling with a pen."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "solution_tray"
-	matter = list("glass" = 5)
+	matter = list(MAT_GLASS = 5)
 	w_class = 2.0
 	amount_per_transfer_from_this = 1
 	possible_transfer_amounts = list(1, 2)
@@ -17,68 +17,71 @@
 	name = "solution tray box"
 	icon_state = "solution_trays"
 
-	New()
-		..()
-		new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-		new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-		new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-		new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-		new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-		new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-		new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+/obj/item/weapon/storage/box/solution_trays/New()
+	..()
+	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
 
 /obj/item/weapon/reagent_containers/glass/beaker/tungsten
 	name = "beaker 'tungsten'"
-	New()
-		..()
-		reagents.add_reagent("tungsten",50)
-		update_icon()
+
+/obj/item/weapon/reagent_containers/glass/beaker/tungsten/New()
+	..()
+	reagents.add_reagent("tungsten",50)
+	update_icon()
 
 /obj/item/weapon/reagent_containers/glass/beaker/oxygen
 	name = "beaker 'oxygen'"
-	New()
-		..()
-		reagents.add_reagent("oxygen",50)
-		update_icon()
+
+/obj/item/weapon/reagent_containers/glass/beaker/oxygen/New()
+	..()
+	reagents.add_reagent("oxygen",50)
+	update_icon()
 
 /obj/item/weapon/reagent_containers/glass/beaker/sodium
 	name = "beaker 'sodium'"
-	New()
-		..()
-		reagents.add_reagent("sodium",50)
-		update_icon()
+
+/obj/item/weapon/reagent_containers/glass/beaker/sodium/New()
+	..()
+	reagents.add_reagent("sodium",50)
+	update_icon()
 
 /obj/item/weapon/reagent_containers/glass/beaker/lithium
 	name = "beaker 'lithium'"
 
-	New()
-		..()
-		reagents.add_reagent("lithium",50)
-		update_icon()
+/obj/item/weapon/reagent_containers/glass/beaker/lithium/New()
+	..()
+	reagents.add_reagent("lithium",50)
+	update_icon()
 
 /obj/item/weapon/reagent_containers/glass/beaker/water
 	name = "beaker 'water'"
 
-	New()
-		..()
-		reagents.add_reagent("water",50)
-		update_icon()
+/obj/item/weapon/reagent_containers/glass/beaker/water/New()
+	..()
+	reagents.add_reagent("water",50)
+	update_icon()
 
 /obj/item/weapon/reagent_containers/glass/beaker/water
 	name = "beaker 'water'"
 
-	New()
-		..()
-		reagents.add_reagent("water",50)
-		update_icon()
+/obj/item/weapon/reagent_containers/glass/beaker/water/New()
+	..()
+	reagents.add_reagent("water",50)
+	update_icon()
 
 /obj/item/weapon/reagent_containers/glass/beaker/fuel
 	name = "beaker 'fuel'"
 
-	New()
-		..()
-		reagents.add_reagent("fuel",50)
-		update_icon()
+/obj/item/weapon/reagent_containers/glass/beaker/fuel/New()
+	..()
+	reagents.add_reagent("fuel",50)
+	update_icon()
 
 
 /obj/machinery/bunsen_burner
@@ -87,9 +90,9 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "bunsen0"
 	var/heating = 0		//whether the bunsen is turned on
-	var/heated = 0		//whether the bunsen has been on long enough to let stuff react
 	var/obj/item/weapon/reagent_containers/held_container
-	var/heat_time = 50
+	var/heat_time = 15
+	var/current_temp = T0C
 
 /obj/machinery/bunsen_burner/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/reagent_containers))
@@ -102,11 +105,12 @@
 			user << "<span class='notice'>You put the [held_container] onto the [src].</span>"
 			var/image/I = image("icon"=W, "layer"=FLOAT_LAYER)
 			underlays += I
-			if(heating)
-				spawn(heat_time)
-					try_heating()
 	else
 		user << "<span class='warning'>You can't put the [W] onto the [src].</span>"
+
+/obj/machinery/bunsen_burner/AltClick(var/mob/user)
+	. = ..()
+	toggle()
 
 /obj/machinery/bunsen_burner/attack_ai()
     return
@@ -121,22 +125,43 @@
 	else
 		user << "<span class='warning'>There is nothing on the [src].</span>"
 
-/obj/machinery/bunsen_burner/proc/try_heating()
-	src.visible_message("<span class='notice'> icon[src] [src] hisses.</span>")
-	if(held_container && heating)
-		heated = 1
-		held_container.reagents.handle_reactions()
-		heated = 0
-		spawn(heat_time)
-			try_heating()
-
 /obj/machinery/bunsen_burner/verb/toggle()
 	set src in view(1)
 	set name = "Toggle bunsen burner"
-	set category = "IC"
+	set category = "Object"
 
 	heating = !heating
-	icon_state = "bunsen[heating]"
+	update_icon()
+
+/obj/machinery/bunsen_burner/process()
 	if(heating)
-		spawn(heat_time)
-			try_heating()
+		if(held_container == null || held_container.reagents == null || held_container.reagents.reagent_list.len <= 0)
+			src.visible_message("<span class='danger'>\The [src] clicks.</span>")
+			heating = FALSE
+			update_icon()
+			return
+
+		if((current_temp - T0C) % 25 == 0) // every 25 degree step
+			if(current_temp < 323.15)
+				src.visible_message("<span class='notice'>\The [src] sloshes.</span>")
+			else if(current_temp < 373.15)
+				src.visible_message("<span class='notice'>\The [src] hisses.</span>")
+			else if(current_temp < 473.15)
+				src.visible_message("<span class='notice'>\The [src] boils.</span>")
+			else if(current_temp < 773.15)
+				src.visible_message("<span class='notice'>\The [src] bubbles aggressively.</span>")
+			else if(current_temp < 1273.15)
+				src.visible_message("<span class='warning'>\The [src] violently shakes.</span>")
+			else
+				src.visible_message("<span class='danger'>\The [src] clicks.</span>")
+				heating = FALSE
+				update_icon()
+				return
+
+		held_container.reagents.handle_distilling()
+
+		// Increase temp till ended by 5 degrees
+		current_temp += 10
+
+/obj/machinery/bunsen_burner/update_icon()
+	icon_state = "bunsen[heating]"

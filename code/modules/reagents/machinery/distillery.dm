@@ -62,7 +62,7 @@
 /obj/machinery/portable_atmospherics/powered/reagent_distillery/Initialize()
 	. = ..()
 
-	create_reagents(600, /datum/reagents/distilling)
+	create_reagents(600) // Outpost 21 edit, distilling subtype removed
 
 	if(!base_state)
 		base_state = icon_state

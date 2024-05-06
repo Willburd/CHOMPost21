@@ -27,14 +27,19 @@
 	var/temp_shift = 0 // How much the temperature changes when the reaction occurs.
 
 /decl/chemical_reaction/distilling/can_happen(var/datum/reagents/holder)
-	if(!istype(holder, /datum/reagents/distilling) || !istype(holder.my_atom, /obj/machinery/portable_atmospherics/powered/reagent_distillery))
-		return FALSE
+	// Outpost 21 edit begin - Allow bunsen burner to distill
+	if(istype(holder.my_atom, /obj/machinery/portable_atmospherics/powered/reagent_distillery))
+		// Super special temperature check.
+		var/obj/machinery/portable_atmospherics/powered/reagent_distillery/RD = holder.my_atom
+		if(RD.current_temp < temp_range[1] || RD.current_temp > temp_range[2])
+			return FALSE
 
-	// Super special temperature check.
-	var/obj/machinery/portable_atmospherics/powered/reagent_distillery/RD = holder.my_atom
-	if(RD.current_temp < temp_range[1] || RD.current_temp > temp_range[2])
-		return FALSE
-
+	if(istype(holder.my_atom.loc, /obj/machinery/bunsen_burner))
+		// Bunsen burner alternative
+		var/obj/machinery/bunsen_burner/B = holder.my_atom.loc
+		if(!B.heating || B.current_temp < temp_range[1] || B.current_temp > temp_range[2])
+			return FALSE
+	// Outpost 21 edit end
 	return ..()
 
 /*
@@ -136,7 +141,7 @@
 
 	reaction_rate = HALF_LIFE(30)
 
-	temp_range = list(T20C, T20C + 2)
+	temp_range = list(T0C + 110, T0C + 190) // Outpost 21 edit - range changed for bunsen burner
 
 /decl/chemical_reaction/distilling/ale
 	name = "Distilling Ale"
@@ -149,7 +154,7 @@
 	reaction_rate = HALF_LIFE(30)
 
 	temp_shift = 0.5
-	temp_range = list(T0C + 7, T0C + 13)
+	temp_range = list(T0C + 90, T0C + 150) // Outpost 21 edit - range changed for bunsen burner
 
 // Unique
 /decl/chemical_reaction/distilling/berserkjuice
@@ -159,7 +164,7 @@
 	required_reagents = list("biomass" = 1, "hyperzine" = 3, "synaptizine" = 2, "phoron" = 1)
 	result_amount = 3
 
-	temp_range = list(T0C + 600, T0C + 700)
+	temp_range = list(T0C + 200, T0C + 250) // Outpost 21 edit - range changed for bunsen burner
 	temp_shift = 4
 
 /decl/chemical_reaction/distilling/berserkjuice/on_reaction(var/datum/reagents/holder, var/created_volume)
@@ -213,4 +218,4 @@
 
 	reaction_rate = HALF_LIFE(20)
 
-	temp_range = list(T0C + 90, T0C + 95)
+	temp_range = list(T0C + 90, T0C + 125) // Outpost 21 edit - range changed for bunsen burner
