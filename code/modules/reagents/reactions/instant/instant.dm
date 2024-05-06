@@ -1179,7 +1179,7 @@
 	id = "hydrophoron"
 	result = "hydrophoron"
 	required_reagents = list("hydrogen" = 1, "phoron" = 1)
-	inhibitors = list("nitrogen" = 1) //So it doesn't mess with lexorin
+	inhibitors = list("nitrogen" = 1,"copper" = 1) // So it doesn't mess with lexorin, Outpost 21 edit - and hemocyanin
 	result_amount = 2
 
 /decl/chemical_reaction/instant/deuterium
