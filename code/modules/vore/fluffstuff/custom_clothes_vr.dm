@@ -219,7 +219,7 @@
 	item_state = "russofurcoat"
 
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
-	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
+	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight, /obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/nitrogen,/obj/item/weapon/tank/emergency/phoron,/obj/item/weapon/tank/emergency/carbon_dioxide,/obj/item/weapon/tank/emergency/methane, /obj/item/weapon/storage/fancy/cigarettes, /obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask)
 	flags_inv = HIDETIE|HIDEHOLSTER
 
 //For general use
@@ -236,7 +236,7 @@
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	allowed = list(
-				/obj/item/weapon/tank/emergency/oxygen,
+				/obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/nitrogen,/obj/item/weapon/tank/emergency/phoron,/obj/item/weapon/tank/emergency/carbon_dioxide,/obj/item/weapon/tank/emergency/methane,
 				/obj/item/device/flashlight,
 				/obj/item/weapon/gun/energy,
 				/obj/item/weapon/gun/projectile,
@@ -306,7 +306,7 @@
 	blood_overlay_type = "coat"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
 	allowed = list(
-				/obj/item/weapon/tank/emergency/oxygen,
+				/obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/nitrogen,/obj/item/weapon/tank/emergency/phoron,/obj/item/weapon/tank/emergency/carbon_dioxide,/obj/item/weapon/tank/emergency/methane,
 				/obj/item/device/flashlight,
 				/obj/item/weapon/gun/energy,
 				/obj/item/weapon/gun/projectile,
@@ -993,7 +993,7 @@ No. With a teleporter? Just *no*. - Hawk, YW
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "octavgentlecoat_mob"
 	blood_overlay_type = "coat"
-	allowed = list(/obj/item/weapon/tank/emergency/oxygen, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/uv_light)
+	allowed = list(/obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/nitrogen,/obj/item/weapon/tank/emergency/phoron,/obj/item/weapon/tank/emergency/carbon_dioxide,/obj/item/weapon/tank/emergency/methane, /obj/item/device/flashlight,/obj/item/weapon/gun/energy,/obj/item/weapon/gun/projectile,/obj/item/ammo_magazine,/obj/item/ammo_casing,/obj/item/weapon/melee/baton,/obj/item/weapon/handcuffs,/obj/item/weapon/storage/fancy/cigarettes,/obj/item/weapon/flame/lighter,/obj/item/device/taperecorder,/obj/item/device/uv_light)
 
 //bwoincognito:Octavious Ward
 /obj/item/clothing/under/det/fluff/octavious
@@ -1209,7 +1209,7 @@ Departamental Swimsuits, for general use
 	icon_state = "trek_command"
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0) // Considering only staff heads get to pick it
 
-/obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only 
+/obj/item/clothing/under/rank/trek/eng //CHOMPEdit: Engineering only
 	name = "Operations Uniform"
 	desc = "The uniform worn by operations officers of the mid 2260s. You feel strangely vulnerable just seeing this..."
 	icon_state = "trek_engsec"
@@ -1272,7 +1272,7 @@ Departamental Swimsuits, for general use
 	permeability_coefficient = 0.50
 	allowed = list(
 		/obj/item/device/flashlight, /obj/item/device/analyzer,
-		/obj/item/device/radio, /obj/item/weapon/tank/emergency/oxygen,
+		/obj/item/device/radio, ,/obj/item/weapon/tank/emergency/nitrogen,/obj/item/weapon/tank/emergency/phoron,/obj/item/weapon/tank/emergency/carbon_dioxide,/obj/item/weapon/tank/emergency/methane,
 		/obj/item/weapon/reagent_containers/hypospray, /obj/item/device/healthanalyzer,
 		/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,
 		/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,
@@ -2448,7 +2448,7 @@ Departamental Swimsuits, for general use
 				H.update_inv_wear_suit()
 	else
 		RemoveHood_evelyn()
-		
+
 //Uncle_Fruit_VEVO - Bradley Khatibi
 /obj/item/clothing/shoes/fluff/airjordans
     name = "A pair of Air Jordan 1 Mid 'Black Gym Red's"
@@ -2470,8 +2470,8 @@ Departamental Swimsuits, for general use
 
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	item_state = "foxflightsuit_mob"
-	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS 
-	
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS|LEGS
+
 //Shalax: Cerise Duelliste
 /obj/item/weapon/storage/belt/security/fluff/cerise
 	name = "champion's belt"
@@ -2683,7 +2683,7 @@ End CHOMP Removal*/
 /obj/item/clothing/suit/storage/toggle/labcoat/fluff/parrizjacket
 	name = "pink crop bomber"
 	desc = "A pink crop bomber jacket that is just barely able to zip up at the front. It has a small Virgo Orbital Research Establishment patch on each shoulder."
-	icon_state = "parriz_jacket" 
+	icon_state = "parriz_jacket"
 
 //verysoft: Casey Brown
 /obj/item/clothing/glasses/big_round

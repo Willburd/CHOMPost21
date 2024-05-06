@@ -114,7 +114,7 @@
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ARCANE = 1)
 	desc = "A bulky suit of armour, bristling with spikes. It looks space-worthy."
 	w_class = ITEMSIZE_NORMAL
-	allowed = list(/obj/item/weapon/book/tome,/obj/item/weapon/melee/cultblade,/obj/item/weapon/tank/emergency/oxygen,/obj/item/device/suit_cooling_unit)
+	allowed = list(/obj/item/weapon/book/tome,/obj/item/weapon/melee/cultblade,/obj/item/weapon/tank/emergency/oxygen,/obj/item/weapon/tank/emergency/nitrogen,/obj/item/weapon/tank/emergency/phoron,/obj/item/weapon/tank/emergency/carbon_dioxide,/obj/item/weapon/tank/emergency/methane,/obj/item/device/suit_cooling_unit)
 	slowdown = 0.5
 	armor = list(melee = 60, bullet = 50, laser = 30, energy = 80, bomb = 30, bio = 30, rad = 30)
 	siemens_coefficient = 0
