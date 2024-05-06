@@ -1,0 +1,221 @@
+"ak" = (/obj/random/maintenance/engineering,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"aN" = (/obj/random/trash_pile,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"aP" = (/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"aT" = (/obj/random/flashlight,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"aZ" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/effect/landmark{name = "carpspawn"},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"bp" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/machinery/atmospherics/unary/vent_pump{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"bz" = (/obj/effect/landmark{name = "carpspawn"},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"bB" = (/obj/effect/floor_decal/corner/yellow/full{dir = 8},/obj/structure/mopbucket,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"bO" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/random/junk,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"cy" = (/obj/fiftyspawner/steel,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"cQ" = (/obj/machinery/light,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"dv" = (/obj/structure/frame,/turf/space,/area/submap/outpost21/structure_generic)
+"ee" = (/obj/machinery/light,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"eh" = (/turf/template_noop,/area/template_noop)
+"ek" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"er" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"eH" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"fo" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"fK" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/light,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"fL" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/portable_atmospherics/canister/empty/phoron,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"fV" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"gt" = (/obj/effect/floor_decal/corner/yellow{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"gF" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 1},/obj/random/maintenance/research,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"gM" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/obj/random/junk,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"iq" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ir" = (/obj/random/maintenance,/turf/space,/area/submap/outpost21/structure_generic)
+"is" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"iw" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ja" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"js" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"jA" = (/obj/structure/firedoor_assembly,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"jZ" = (/obj/fiftyspawner/steel,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"kB" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"lh" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"lL" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/maintenance/engineering,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"lX" = (/obj/effect/floor_decal/corner/yellow{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ms" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/random/vendordrink,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ne" = (/obj/structure/frame,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"nt" = (/obj/effect/floor_decal/corner/yellow/full{dir = 1},/obj/random/vendordrink,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"nF" = (/obj/random/smes_coil,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"nT" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 1},/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"nX" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ob" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ot" = (/obj/random/firstaid,/turf/space,/area/submap/outpost21/structure_generic)
+"pb" = (/obj/effect/floor_decal/corner/yellow/full,/obj/random/firstaid,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"pw" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/random/toolbox,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"px" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"pF" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/light,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"pQ" = (/obj/random/smes_coil,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"qb" = (/obj/machinery/light{dir = 4},/obj/effect/floor_decal/corner/yellow{dir = 6},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"qu" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"qx" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"qz" = (/obj/machinery/atmospherics/binary/pump{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"qA" = (/obj/structure/lattice,/obj/random/maintenance,/turf/space,/area/submap/outpost21/structure_generic)
+"ra" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"rR" = (/obj/machinery/portable_atmospherics/canister/empty,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"sf" = (/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"sk" = (/obj/machinery/door/airlock/maintenance/engi,/obj/machinery/door/firedoor,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"sK" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 1},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"sQ" = (/obj/effect/floor_decal/corner/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"sS" = (/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"sX" = (/obj/random/maintenance/research,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"tl" = (/obj/random/vendorfood,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"tS" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/random/donkpocketbox,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"tT" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/alarm{dir = 1; pixel_y = -26},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"uh" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"vb" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/alarm{pixel_y = 26},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"vN" = (/obj/effect/landmark{name = "carpspawn"},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"vS" = (/obj/structure/sign/signnew/radiation,/turf/simulated/wall,/area/submap/outpost21/structure_generic)
+"wI" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/random/maintenance/research,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"wP" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/maintenance/engineering,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"wY" = (/obj/structure/lattice,/obj/random/maintenance/engineering,/turf/space,/area/submap/outpost21/structure_generic)
+"xu" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"xz" = (/obj/machinery/light,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"xM" = (/obj/random/maintenance/research,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"xW" = (/obj/random/flashlight,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"xX" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/effect/landmark{name = "carpspawn"},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"yf" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"yp" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"yr" = (/obj/effect/floor_decal/corner/yellow,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"yw" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/random/junk,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"zb" = (/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"zw" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"zN" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"An" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"At" = (/obj/machinery/door/airlock/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/door/firedoor,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Av" = (/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/machinery/portable_atmospherics/canister/empty,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"AT" = (/obj/structure/sign/signnew/electrical,/turf/simulated/wall,/area/submap/outpost21/structure_generic)
+"Bg" = (/obj/structure/sign/securearea,/turf/simulated/wall,/area/submap/outpost21/structure_generic)
+"Bq" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"By" = (/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"BG" = (/obj/effect/floor_decal/corner/yellow,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"BO" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/fiftyspawner/steel,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Cq" = (/obj/machinery/atmospherics/portables_connector{dir = 8},/obj/machinery/portable_atmospherics/canister/phoron/engine_setup,/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"CA" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"CE" = (/obj/machinery/alarm{dir = 1; pixel_y = -26},/obj/random/maintenance/research,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"CI" = (/obj/structure/frame,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"CM" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Ds" = (/obj/random/toolbox,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"DE" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Ec" = (/obj/random/maintenance,/obj/random/maintenance,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"Em" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"EA" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/alarm{pixel_y = 26},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/obj/random/maintenance,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"EE" = (/obj/structure/sign/signnew/canisters,/turf/simulated/wall,/area/submap/outpost21/structure_generic)
+"EF" = (/obj/effect/floor_decal/corner/yellow/full{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"EI" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 1},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"EU" = (/obj/effect/floor_decal/corner/yellow/full{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Fx" = (/obj/effect/floor_decal/corner/yellow{dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/maintenance,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Fy" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"FP" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"FV" = (/obj/random/toolbox,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Gk" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Gu" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"GO" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"GY" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/light{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Hy" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/structure/barricade,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"HD" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 1},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"HG" = (/obj/machinery/light{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"HL" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/structure/firedoor_assembly,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Is" = (/obj/machinery/atmospherics/unary/vent_pump{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"IB" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"IM" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/random/toolbox,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Jb" = (/turf/template_noop,/area/submap/outpost21/structure_generic)
+"Jk" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/machinery/alarm{dir = 4; pixel_x = -26},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"JK" = (/obj/machinery/floodlight,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"JL" = (/obj/machinery/door/airlock/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 8},/obj/machinery/door/firedoor,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Kn" = (/obj/random/maintenance/engineering,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"Kx" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"KN" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/atmospherics/unary/vent_pump,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"KU" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/random/firstaid,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Lp" = (/obj/effect/floor_decal/corner/yellow{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/junk,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"LE" = (/obj/machinery/light{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"LM" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/light{dir = 4},/obj/random/firstaid,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"LW" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/light{dir = 1},/obj/random/maintenance/engineering,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Mi" = (/obj/random/junk,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Ms" = (/obj/structure/lattice,/turf/space,/area/submap/outpost21/structure_generic)
+"MP" = (/obj/random/smes_coil,/obj/random/smes_coil,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Nd" = (/obj/random/maintenance/engineering,/obj/random/maintenance/research,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"Nm" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/random/smes_coil,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Np" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Oh" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/alarm{dir = 1; pixel_y = -26},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Oi" = (/obj/effect/landmark{name = "carpspawn"},/turf/space,/area/submap/outpost21/structure_generic)
+"Ox" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/random/firstaid,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"OR" = (/obj/effect/floor_decal/corner/yellow{dir = 5},/obj/machinery/portable_atmospherics/canister/oxygen,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Po" = (/obj/machinery/portable_atmospherics/canister/empty,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Px" = (/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"PJ" = (/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"PV" = (/obj/machinery/door/airlock/engineering,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/door/firedoor,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Qs" = (/obj/effect/floor_decal/corner/yellow{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"QF" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/random/toolbox,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"QS" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/machinery/light{dir = 8},/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Rm" = (/obj/machinery/atmospherics/unary/vent_scrubber/on{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Rw" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"RD" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"RQ" = (/obj/effect/floor_decal/corner/yellow{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"SN" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/random/junk,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Tf" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Tl" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"TV" = (/obj/effect/floor_decal/corner/yellow/full{dir = 4},/obj/machinery/alarm{dir = 1; pixel_y = -26},/obj/machinery/portable_atmospherics/canister/empty,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"TY" = (/turf/simulated/wall,/area/submap/outpost21/structure_generic)
+"Uw" = (/turf/simulated/mineral/vacuum,/area/submap/outpost21/structure_generic)
+"Uz" = (/obj/effect/floor_decal/corner/yellow/full,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"UF" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/structure/barricade,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"VB" = (/obj/random/maintenance,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"VF" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"WA" = (/obj/effect/floor_decal/corner/yellow/full{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"WS" = (/turf/space,/area/submap/outpost21/structure_generic)
+"WZ" = (/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Xr" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 8},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Yf" = (/obj/random/trash_pile,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"Yy" = (/obj/random/maintenance,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"YP" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 1},/obj/random/junk,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"YR" = (/obj/effect/floor_decal/corner/yellow{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"YT" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Ze" = (/obj/effect/floor_decal/corner/yellow{dir = 6},/obj/machinery/light{dir = 4},/obj/random/toolbox,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Zj" = (/obj/random/maintenance,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Zp" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ZZ" = (/obj/effect/floor_decal/corner/yellow{dir = 9},/obj/machinery/alarm{dir = 4; pixel_x = -26},/obj/machinery/atmospherics/unary/vent_pump{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+
+(1,1,1) = {"
+eheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheh
+ehJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbMsJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbUwUwUwUwJbJbJbJbJbJbMsWSTYWSWSWSWSMsWSJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbUwUwUwUwJbJbJbJbJbJbMsGOTYTYTYTYTYMsMsWSWSWSJbJbJbJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbUwUwUwUwJbJbJbJbJbWSWSjAIBTYWAfLORORWZlhWSUwUwUwJbJbJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbUwUwJbJbJbJbWSWSWSMsWZsKTYRwPoWZByaPPoWZUwUwUwWSJbJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbJbJbJbJbJbWSWSqAMsMsWZYPTYCAaPByMiByByWZUwUwUwUwWSJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbJbJbJbJbJbMsWSWSWSTYWZRDEERwByByobbzakByByUwUwUwWSJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbJbJbJbMsMsirOiqAMsTYWZNpJLisisXrjsByVFqzCqWZUwUwWSJbJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbMsMsUwUwWSWSWSWSMsTYQSuhMsRwByBynTByquWZByWZUwWSWSJbJbJbUwUwUwJbJbJbeh
+ehJbJbWSWSWSUwUwMsWSqAMsWSWSTYbpHDMsWZakVFiqEIpxWZWZMsWZMsOiJbJbJbUwUwUwUwJbJbeh
+ehJbJbMsTYTYTYTYTYTYTYTYTYTYTYJkgFTYWZsQAvsSAvsSYRMsWZWZMsWSMsJbJbUwUwUwUwJbJbeh
+ehMsMsWSTYWAlhlhlhaNxMaTWZEUTYRwRDTYRwKxTYTYTYTYakMsKxTYqAMsMsJbJbJbUwUwUwJbJbeh
+ehJbMsMsTYCAWZzbByzbByzbByLMTYWZBqTYCAlXywlhBOlhakWZqbTYMsWSWSJbJbJbJbUwUwJbJbeh
+ehJbWSMsTYRwWZByvNRmzNIsZjIMTYWZBqTYWZererxXYRByFVByWZTYMsMsWSWSJbJbJbJbJbJbJbeh
+ehJbirMsTYWZMsererYRfVcyByakTYRwbOTYTYskTYTYpbOxQFWZMsUwUwUwWSWSJbJbJbJbJbJbJbeh
+ehJbWSTYTYTYTYTYTYCAfVByaPKxTYRwBqTYPoMsDsTYTYTYTYMsUwUwUwUwWSirWSJbJbJbJbJbJbeh
+ehJbWSTYYfKnsXVBTYSNfVbzYyEFTYCAGYTYPoMsakWZJKJKTYUwUwUwUwUwUwMsWSJbJbJbJbJbJbeh
+ehJbWSTYTYxWNdpQTYUzfVerTVTYTYfoAnTYTYWZakCEakakTYUwUwUwUwUwUwMsMsirWSJbJbJbJbeh
+ehJbJbWSTYTYTYskTYvSAtTYTYTYbBQsgtntTYTYTYTYTYskTYUwUwUwUwUwTYTYTYTYMsMsJbJbJbeh
+ehJbJbWSWZlhlhlhGkKNfVvbLWnXQsMiEmlXHLxulhaZGkWZWZMsUwUwMsWZlhlhWZMsWSWSJbJbJbeh
+ehJbJbWSirraxzqxyfzwwIFyfKekFxZpPxBGFPcQTlFyRQjaFykBwPlLtTlLeeYTWSWSWSWSJbJbJbeh
+ehJbJbJbWSTYTYTYTYTYTYTYTYTYWZYRyrEFTYTYTYTYTYTYATAtMsTYTYTYTYTYTYTYTYTYJbJbJbeh
+ehJbJbJbJbWSMsMsWSWSUwUwUwTYTYWZAnTYTYWAWZlhpwlhWZfVywlhKUlhWZEUTYMsWSWSJbJbJbeh
+ehJbJbJbJbJbJbWSOiWSWSUwUwUwTYWZGYTYWAWZCIMPnevNZjfVByzbWZneByNmTYirWSWSJbJbJbeh
+ehJbJbJbJbJbWSWSWSWSotUwUwUwTYYyBqTYWZaPWZMPneWZRmiwIsnenFneWZNmTYMsWSWSJbJbJbeh
+ehJbMsWSJbJbirTYTYTYTYTYTYTYTYRwBqTYeHBynenFMsUwUwUwMsnenFzbWZGuTYMsWSirJbJbJbeh
+ehJbMsMsWSJbWSTYtlmslhEACMLpPVZpypTYWZByWZMsUwUwUwUwMsnevNneWZKxTYMsWSWSJbJbJbeh
+ehJbWSMsWSJbWSTYRwakRmiwIsKxTYRwBqTYwYWZCIMsWZUwUwMsjZYyWZzbaPNmTYWSirWSJbJbJbeh
+ehJbJbWSJbJbWSTYCAcyWZakByZeBggMBqTYMsqAMsMsakererpFererOherpFaNTYWSWSJbJbJbJbeh
+ehJbJbJbJbWSWSTYRwYyMsWZaPIMTYRwTfTYMsMsWSdvWZWZTYTYTYTYTYTYTYTYTYWSWSJbJbJbJbeh
+ehJbJbJbJbWSirMsRwByMsMsWZIMTYZZDETYTYTYWSWSMsWSirMsMsWSMsWSWSWSWSWSJbJbJbJbJbeh
+ehJbJbUwUwWSWSMsWZvNByjZaPLETYWZEmsksfTYJbWSMsWSWSWSWSdvirWSWSOiWSWSJbJbJbJbJbeh
+ehJbJbUwUwWSMsMsWZrRsQtStSEFTYSNTfTYKnTYTYJbMsJbJbJbWSWSWSUwUwUwWSJbJbJbJbJbJbeh
+ehJbJbUwUwUwWSirWSWZWZTYTYTYTYUFHyTYPJsfTYWSJbJbJbJbJbUwUwUwUwUwUwJbJbJbJbJbJbeh
+ehJbJbJbUwUwWSWSWSOiWSWSMsMsTYeHHGTYEcKnskMsJbJbJbJbJbUwUwUwUwUwUwJbJbJbJbJbJbeh
+ehJbJbJbJbJbJbWSWSWSWSWSWSMsTYRwWZTYYfKnTYMsJbJbJbJbJbJbUwUwUwUwUwJbJbJbJbJbJbeh
+ehJbJbJbJbJbJbJbJbJbJbWSWSWSTYWZMsTYTYTYTYWSJbJbJbJbJbJbJbUwUwJbJbJbJbJbJbJbJbeh
+ehJbJbJbJbJbJbJbJbJbJbJbWSWSMsWSMsWSJbWSJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbJbeh
+eheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheheh
+"}

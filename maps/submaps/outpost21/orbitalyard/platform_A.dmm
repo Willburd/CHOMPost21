@@ -1,0 +1,35 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"c" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"f" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"g" = (/obj/machinery/trailblazer/yellow,/turf/simulated/floor/airless,/area/submap/outpost21/asteroid_generic)
+"j" = (/obj/structure/handrail{dir = 8},/turf/simulated/floor/airless,/area/submap/outpost21/asteroid_generic)
+"m" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"r" = (/obj/structure/handrail{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/asteroid_generic)
+"s" = (/obj/effect/floor_decal/industrial/warning{dir = 6},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"t" = (/obj/structure/dispenser,/obj/effect/floor_decal/industrial/warning{dir = 9},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"w" = (/turf/simulated/floor/airless,/area/submap/outpost21/asteroid_generic)
+"x" = (/turf/simulated/wall,/area/submap/outpost21/asteroid_generic)
+"y" = (/obj/effect/floor_decal/industrial/warning,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"A" = (/obj/structure/lattice,/turf/space,/area/submap/outpost21/asteroid_generic)
+"C" = (/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"E" = (/obj/structure/lattice,/obj/structure/handrail{dir = 4},/turf/space,/area/submap/outpost21/asteroid_generic)
+"H" = (/obj/random/firstaid,/obj/structure/table/steel,/obj/effect/floor_decal/industrial/warning{dir = 5},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"M" = (/turf/template_noop,/area/submap/outpost21/asteroid_generic)
+"R" = (/obj/structure/reagent_dispensers/fueltank,/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/asteroid_generic)
+"S" = (/obj/structure/lattice,/obj/structure/handrail{dir = 8},/turf/space,/area/submap/outpost21/asteroid_generic)
+"T" = (/turf/space,/area/submap/outpost21/asteroid_generic)
+
+(1,1,1) = {"
+aaaaaaaaaaaa
+aMMMATTTMMMa
+aMgAAAAAwgwa
+aTwwxxCAxAAa
+aTASxtcHxrTa
+aTTwCfCmCAAa
+aTTjxRysxETa
+aTAAxxwAxATa
+awATATTATAwa
+awgTATTAMgwa
+aMMMMMMMMMMa
+aaaaaaaaaaaa
+"}

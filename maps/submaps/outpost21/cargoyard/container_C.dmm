@@ -1,0 +1,23 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"g" = (/obj/machinery/door/airlock/angled_bay/standard/color/cargo{name = "Cargo Container"},/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"s" = (/obj/effect/landmark/vermin,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"u" = (/obj/structure/closet/crate,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/junk,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"D" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"F" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"L" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/wall/bay/steel,/area/submap/outpost21/yard_cargocontainer)
+"O" = (/obj/structure/closet/crate,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"P" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/obj/random/junk,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"R" = (/turf/template_noop,/area/submap/outpost21/yard_generic)
+"V" = (/obj/random/junk,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+
+(1,1,1) = {"
+aaaaaaaaa
+aRLLgLLRa
+aRLPDFLRa
+aRLFVPLRa
+aRLPsFLRa
+aRLFDFLRa
+aRLOVuLRa
+aRLLLLLRa
+aaaaaaaaa
+"}

@@ -191,3 +191,11 @@
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_cave/indoor
 	icon_state = "shorelinecorner_cave"
 	outdoors = OUTDOORS_NO
+
+
+// Base water given a few missing indoor types
+/turf/simulated/floor/water/deep/indoors
+	outdoors = OUTDOORS_NO
+
+/turf/simulated/floor/water/beach/indoors
+	outdoors = OUTDOORS_NO

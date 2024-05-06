@@ -1,0 +1,176 @@
+"aq" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 6},/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"aV" = (/obj/random/maintenance,/obj/effect/floor_decal/rust,/obj/random/contraband/nofail,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"bg" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 5},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"cm" = (/obj/effect/floor_decal/industrial/hatch/yellow,/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/machinery/portable_atmospherics/canister/phoron,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"dT" = (/obj/machinery/atmospherics/valve,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"ef" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"ey" = (/obj/structure/table/gamblingtable,/obj/random/flashlight,/obj/item/weapon/flame/lighter/random,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"eC" = (/obj/machinery/atmospherics/pipe/tank/phoron/full,/obj/structure/railing{dir = 8},/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"fU" = (/obj/effect/floor_decal/rust,/obj/structure/trash_pile,/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"gi" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/machinery/floodlight,/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"gm" = (/obj/structure/bed/chair/comfy,/obj/random/ammo,/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"gR" = (/obj/structure/bed/chair/sofa/right/brown{dir = 8},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"ji" = (/obj/structure/bed/chair/sofa/corner/brown{dir = 8},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"jn" = (/obj/machinery/portable_atmospherics/canister/empty,/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"jM" = (/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/machinery/atmospherics/pipe/simple/visible,/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"ko" = (/turf/space,/area/submap/outpost21/asteroid_generic)
+"kq" = (/obj/effect/floor_decal/rust,/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"kv" = (/obj/random/maintenance,/obj/structure/railing{dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"lA" = (/obj/random/maintenance,/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"mP" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/machinery/atmospherics/pipe/simple/visible{dir = 9},/turf/simulated/floor/tiled/steel/airless,/area/submap/outpost21/asteroid_generic)
+"nA" = (/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/simple_door/wood,/turf/simulated/floor/tiled/techfloor,/area/submap/outpost21/asteroid_generic)
+"oG" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 9},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"pi" = (/obj/effect/floor_decal/rust,/obj/random/ammo,/obj/machinery/atmospherics/pipe/manifold/visible,/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"po" = (/obj/effect/floor_decal/rust,/obj/effect/floor_decal/industrial/warning,/obj/machinery/atmospherics/pipe/simple/visible,/obj/item/weapon/flame/lighter/random,/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"pU" = (/obj/structure/table/gamblingtable,/obj/random/cash/huge,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"pX" = (/obj/machinery/atmospherics/pipe/vent/high_volume{dir = 8},/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"ru" = (/obj/random/contraband,/obj/structure/railing{dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"sN" = (/obj/structure/table/gamblingtable,/obj/random/donkpocketbox,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"uJ" = (/turf/simulated/mineral/floor/vacuum,/area/submap/outpost21/asteroid_generic)
+"vQ" = (/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"wh" = (/obj/machinery/atmospherics/valve/open,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"wm" = (/obj/effect/floor_decal/spline/fancy/wood,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"ws" = (/turf/simulated/floor/airless,/area/submap/outpost21/asteroid_generic)
+"wu" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"wE" = (/turf/template_noop,/area/submap/outpost21/asteroid_generic)
+"wL" = (/obj/structure/railing{dir = 4},/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"wX" = (/obj/item/weapon/tool/wrench/brass,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"xm" = (/turf/simulated/mineral/vacuum,/area/submap/outpost21/asteroid_generic)
+"xS" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"yf" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 5},/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"yy" = (/obj/effect/floor_decal/industrial/warning/corner{dir = 4},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"zL" = (/obj/machinery/door/airlock/external,/obj/machinery/atmospherics/pipe/simple/visible,/turf/simulated/floor/tiled/techfloor,/area/submap/outpost21/asteroid_generic)
+"AO" = (/obj/machinery/atmospherics/pipe/vent/high_volume,/turf/simulated/floor/airless,/area/submap/outpost21/asteroid_generic)
+"AU" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"AZ" = (/obj/effect/floor_decal/rust,/obj/machinery/atmospherics/pipe/vent/high_volume{dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"Ba" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/random/ammo,/obj/random/ammo,/obj/random/ammo,/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"Ew" = (/obj/random/maintenance,/obj/structure/railing,/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"EC" = (/obj/structure/sign/periodic{pixel_x = 32},/obj/machinery/floodlight{dir = 8},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"Fi" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 6},/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"FV" = (/obj/effect/floor_decal/rust,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"GL" = (/obj/effect/floor_decal/rust,/obj/random/toolbox,/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"Hc" = (/obj/item/weapon/storage/box/sinpockets,/obj/item/weapon/storage/box/sinpockets,/obj/item/weapon/storage/box/sinpockets,/obj/item/weapon/storage/box/sinpockets,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"Il" = (/obj/random/toolbox,/obj/item/weapon/storage/box/sinpockets,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"Jk" = (/obj/machinery/atmospherics/pipe/simple/visible,/turf/simulated/floor/airless,/area/submap/outpost21/asteroid_generic)
+"JW" = (/obj/structure/trash_pile,/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"Ke" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 9},/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"KO" = (/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"KR" = (/turf/template_noop,/area/template_noop)
+"KY" = (/obj/structure/fireaxecabinet{pixel_y = 32},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"Lh" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/obj/structure/bed/chair/bar_stool,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"Lz" = (/obj/random/maintenance,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"LC" = (/obj/structure/simple_door/wood,/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/turf/simulated/floor/tiled/techfloor,/area/submap/outpost21/asteroid_generic)
+"LG" = (/obj/structure/railing,/obj/machinery/atmospherics/pipe/vent/high_volume,/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"LM" = (/obj/random/maintenance,/obj/structure/railing,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"LP" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 8},/obj/structure/bed/chair/bar_stool,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"LV" = (/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew,/obj/structure/closet/crate/wooden,/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew,/obj/item/weapon/reagent_containers/food/drinks/bottle/redeemersbrew,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac,/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac,/obj/item/weapon/reagent_containers/food/drinks/bottle/cognac,/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"LW" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"Mj" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/steel/airless,/area/submap/outpost21/asteroid_generic)
+"NF" = (/obj/structure/lattice,/turf/space,/area/submap/outpost21/asteroid_generic)
+"OQ" = (/obj/effect/floor_decal/spline/fancy/wood,/obj/structure/bed/chair/bar_stool,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"OT" = (/obj/structure/bed/chair/sofa/left/brown{dir = 1},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"Pf" = (/obj/random/contraband,/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"Pn" = (/obj/machinery/atmospherics/pipe/vent/high_volume,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"Po" = (/obj/machinery/atmospherics/pipe/simple/visible{dir = 4},/obj/structure/simple_door/wood,/turf/simulated/floor/tiled/techfloor,/area/submap/outpost21/asteroid_generic)
+"PI" = (/obj/effect/floor_decal/industrial/hatch/yellow,/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"Qg" = (/obj/machinery/atmospherics/pipe/vent/high_volume{dir = 8},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"Qv" = (/obj/structure/railing{dir = 8},/obj/structure/railing,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"Rq" = (/obj/structure/table/gamblingtable,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/obj/random/cash/big,/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"Rx" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 1},/obj/effect/floor_decal/rust,/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"RM" = (/obj/random/firstaid,/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"RX" = (/obj/random/contraband/nofail,/obj/machinery/atmospherics/pipe/vent/high_volume{dir = 1},/obj/structure/railing{dir = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"SB" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/machinery/atmospherics/pipe/simple/visible,/obj/structure/closet/crate/wooden,/turf/simulated/floor/tiled/red,/area/submap/outpost21/asteroid_generic)
+"SM" = (/obj/structure/bed/chair/sofa/brown{dir = 1},/turf/simulated/floor/wood,/area/submap/outpost21/asteroid_generic)
+"TA" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 5},/obj/random/contraband,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+"TQ" = (/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/asteroid_generic)
+"TT" = (/obj/effect/floor_decal/industrial/warning{dir = 10},/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"Ua" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/effect/floor_decal/rust,/obj/machinery/atmospherics/pipe/manifold/visible{dir = 1},/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"Uk" = (/obj/effect/floor_decal/industrial/warning,/obj/item/weapon/tool/crowbar,/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"Wh" = (/obj/effect/floor_decal/industrial/warning{dir = 8},/obj/effect/floor_decal/rust,/obj/effect/floor_decal/industrial/warning{dir = 4},/obj/machinery/atmospherics/pipe/simple/visible{dir = 6},/turf/simulated/floor/tiled/steel/airless,/area/submap/outpost21/asteroid_generic)
+"WA" = (/turf/simulated/wall,/area/submap/outpost21/asteroid_generic)
+"Xa" = (/obj/machinery/atmospherics/pipe/tank/air/full,/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"Xc" = (/obj/effect/floor_decal/industrial/warning{dir = 1},/obj/random/maintenance,/turf/simulated/floor/tiled/techmaint,/area/submap/outpost21/asteroid_generic)
+"Zs" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 10},/obj/random/contraband/nofail,/turf/simulated/floor/carpet/purple,/area/submap/outpost21/asteroid_generic)
+
+(1,1,1) = {"
+KRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEkowEwEwEwEwEwEwEwEwEwEwEwEwEwEkoNFwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwENFkowEwEwEwEwEwEwEwEwEwEwEwEwEkoNFwEwEwEwEwEwENFNFwEwEwEwEwENFwEwEwEwEwEwEwEwEwEwEkokokoNFNFNFNFNFNFNFNFNFwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwENFkowEwEwEwEwEwEwEwEwEwEwEwEwEkoNFwEwEwEwEwEwENFwEwEwEwEwEwENFwEwEwEwEwEkokokokokoxmxmxmxmxmNFkokoNFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwENFkowEwEwEkokokokokokoNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFNFxmxmxmxmxmxmxmxmxmxmxmkokokowEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwENFkokokokokoxmxmxmxmxmxmxmxmxmxmxmkokokokokokoNFkokokokokokoNFkokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokokoNFwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEkoNFNFNFkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokokokokoNFkokokokokokoNFkokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokoNFwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokokokoNFkokokokokokoNFkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokokoNFkokokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkokoNFkokokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwENFkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkokokokokokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkowEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEkoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkokokokokokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokowEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwENFNFxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmNFkokokokokokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokowEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwENFxmxmxmxmxmxmxmuJuJuJkouJuJxmxmxmxmxmxmxmxmxmxmxmkokokokokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkowEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwENFxmxmxmxmxmuJuJuJuJkokouJuJxmxmxmxmxmxmxmxmxmxmxmxmkokokokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwENFxmxmxmxmuJuJuJuJkokouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmNFkokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwENFxmxmxmxmxmuJuJkokouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmkoNFkokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwENFwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEkoxmxmxmxmxmxmuJkouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFkokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwENFwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEkoxmxmxmxmxmxmuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFkokokokoxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFwEwEwEwEwEKR
+KRwEwEwEwEwEwEkokoxmxmxmxmxmxmxmuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFNFNFNFxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEwEKR
+KRwEwEwEkokokokokoxmxmxmxmxmxmxmuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokoNFkokokoxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFwEwEwEKR
+KRwEwEwEwEkoNFNFNFNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkokoNFkokoxmxmxmxmxmxmxmxmxmxmxmxmuJuJkokouJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEKR
+KRwEwEwEwEwEwEkokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJkokouJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEkokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokoNFkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJkokokouJuJxmxmxmxmxmxmxmuJuJxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJkokokouJuJuJuJxmxmxmxmxmuJuJuJuJxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEkokokoxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJkokouJuJuJuJuJuJxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmxmxmxmNFwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEkokoNFkoxmxmxmxmxmxmxmxmxmkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmuJuJuJuJuJuJuJuJkokouJuJuJxmxmxmxmxmxmxmxmxmwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEkoNFNFNFNFNFNFkokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmuJuJuJuJuJkokokouJuJxmxmxmxmxmxmxmxmxmwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEkoNFkokokokowENFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJxmxmxmxmxmxmxmxmuJuJuJuJuJkokokokouJuJxmxmxmxmxmxmxmxmwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFkowEwEwEwENFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJkokokouJuJxmxmxmxmxmxmxmxmwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJkokokouJuJxmxmxmxmxmxmxmwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJkokouJuJxmxmxmxmxmxmxmxmwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEkoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmxmxmxmNFwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmxmxmxmNFwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFkokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmNFNFwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFNFNFNFNFNFNFNFkokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmkoNFwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFkokokokokokoNFkokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmkoNFwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEkokokokokokoNFkokokokokokoNFkokokokokokoNFkoxmxmxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmkowENFwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFkokokokoxmxmxmxmxmxmxmxmxmkokoNFNFNFkoNFNFNFNFNFNFNFNFNFxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmkowEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFkoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFkokokokoxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkokokokokoxmxmxmxmxmxmxmxmxmxmuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFxmWAWAxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkokokokokokoxmxmxmxmxmxmxmxmxmxmuJxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwENFNFwsAOWAxmxmxmxmxmxmxmxmuJuJuJuJxmxmxmxmxmxmxmxmxmxmkokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwExmxmwsJkWAxmxmxmxmxmxmxmxmuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmkokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwENFwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwExmxmWAWAzLWAWAxmxmxmxmxmxmxmxmuJkokokouJuJxmxmxmxmxmxmxmxmxmNFNFNFNFNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFNFwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwENFwEwExmxmWAFimPPnWAxmxmxmxmxmxmxmxmxmxmkokokouJuJxmxmxmxmxmxmxmxmxmkokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFNFNFwENFwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwENFNFNFNFNFNFNFxmxmWAwhMjdTWAxmxmxmxmxmxmxmxmxmxmxmkokokouJuJxmxmxmxmxmxmxmxmkokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmkokokokoNFwENFwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwENFkoxmxmxmWAAZWhoGWAxmxmWAWAWAWAWAxmxmxmxmxmkokokouJxmxmxmxmxmxmxmxmNFkokokokokokoNFNFxmxmxmxmxmxmxmxmxmkokokokokoNFwENFwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwENFkoxmxmWAWAWAzLWAWAWAWAWALMEwLGWAxmxmxmxmxmxmkokouJuJxmxmxmxmxmxmxmNFkokokokokokokokoNFkokoNFkokokoNFkokokokokokoNFwENFwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwENFxmxmxmWAwLgijMQvWAGLfUyyLWBaSBWAWAWAWAWAWAxmuJuJuJuJxmxmxmxmxmxmxmNFkokokokokokokokoNFkokoNFkokokoNFNFkokokokokoNFwENFwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwExmxmxmxmxmWAruefyfUaPoAUAUAURxAUpikqLCpXeCXaWAxmxmuJuJxmxmxmxmxmxmxmxmNFkokokokokokokokoNFkokoxmxmxmxmxmxmxmxmkokoNFNFwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwExmxmxmxmxmxmxmxmWAwLTTUkpoWAWAWAWAnAWAWAWAWAFVcmPIWAxmxmxmuJxmxmxmxmxmxmxmxmNFNFNFNFNFNFNFNFNFNFxmxmxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwExmxmxmxmxmxmxmxmWATQkvkvRXWAgmRMKYbgQglAECWAwXvQaVWAxmxmxmuJxmxmxmxmxmxmxmxmNFkokokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFNFNFNFwEwEwEwEwEKR
+KRwEwEwEwEwExmxmxmxmxmxmxmxmxmWAWAWAWAWAWARqKewuLhLhTALVWAvQvQIlWAxmxmxmxmxmxmxmxmxmxmxmxmkokokokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmWAWALPeysNpUxSPfWALzvQHcWAxmxmxmxmxmxmxmxmxmxmxmxmkokokokokokokokokoxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEKR
+KRwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmWAZsOQwmwmaqJWWAXcjnjnWAxmxmxmxmxmxmxmxmxmxmxmxmkokokokokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEKR
+KRwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmWAKOKOKOgRWAWAWAWAWAWAWAxmxmxmxmxmxmxmxmxmxmxmNFkokokokokokokokoNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEKR
+KRwEwENFxmxmxmxmxmxmxmxmuJuJxmxmxmxmxmxmxmWAKOOTSMjiWAxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFNFNFNFNFNFNFNFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEKR
+KRwEwENFxmxmxmxmxmxmuJuJuJuJuJxmxmxmxmxmxmWAWAWAWAWAWAxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkoNFwEwEwEwEwEwEwEwENFxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEwEwEKR
+KRwEwENFxmxmxmxmxmxmuJuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmkokoNFwEwEwEwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEwEwEKR
+KRwEwENFxmxmxmxmxmxmuJuJkokokokouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFNFwEwEwEwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEwEwEKR
+KRwEwEwExmxmxmxmxmxmuJuJkokokokokokouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwENFwEwEwEwEwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFNFwEwEwEKR
+KRwEwEwExmxmxmxmxmxmxmuJuJkokokokokokouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwENFwEwEwEwEwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFkowEwEwEwEwEKR
+KRwEwEwEwExmxmxmxmxmxmxmxmuJuJkokokokokouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFwEwEwEwEwEwEKR
+KRwEwEwEwExmxmxmxmxmxmxmxmxmxmxmuJkokokokouJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmxmNFNFNFwEwEwEwEKR
+KRwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmuJuJkokouJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwENFNFxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFxmxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwENFwEwEwExmxmxmxmxmxmxmxmxmuJuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFxmxmxmxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwENFwEwEwENFxmxmxmxmxmxmxmxmxmxmuJuJuJuJuJuJuJxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFNFNFNFxmxmxmxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwENFwEwEwEwEwEwENFNFxmxmxmxmxmxmxmxmuJuJuJuJuJuJxmxmxmxmxmxmxmwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwENFNFNFNFNFNFwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwExmxmxmxmxmxmxmxmuJuJuJxmxmxmxmxmxmNFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEwExmxmxmxmxmxmxmxmxmxmxmxmxmkoNFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwEwEwEwENFNFwExmxmxmxmxmxmxmkokokoNFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFNFNFNFNFNFNFNFNFNFNFNFkowEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwENFwEwEwEwENFwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEwEKR
+KRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKRKR
+"}

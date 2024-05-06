@@ -1,0 +1,28 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/template_noop,/area/submap/outpost21/asteroid_generic)
+"c" = (/turf/simulated/wall/bay/steel,/area/submap/outpost21/asteroid_generic)
+"d" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"e" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/obj/random/junk,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"f" = (/obj/structure/closet/crate,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"g" = (/obj/machinery/door/airlock/angled_bay/standard/color/cargo{dir = 4; name = "Cargo Container"},/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"i" = (/obj/random/junk,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"j" = (/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"k" = (/obj/structure/closet/crate,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/junk,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"o" = (/obj/random/maintenance,/turf/space,/area/submap/outpost21/asteroid_generic)
+"x" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/obj/item/weapon/tank/vox,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"N" = (/obj/item/weapon/tank/oxygen,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"R" = (/obj/random/junk,/turf/space,/area/submap/outpost21/asteroid_generic)
+"T" = (/turf/space,/area/submap/outpost21/asteroid_generic)
+"Z" = (/obj/item/weapon/tank/emergency/nitrogen,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+
+(1,1,1) = {"
+aaaaaaaaa
+abRTobbba
+accccccca
+acdedNfca
+agjijjZca
+acxdjdkca
+accccccca
+abbTRobba
+aaaaaaaaa
+"}

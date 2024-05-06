@@ -1,0 +1,12 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"g" = (/obj/machinery/trailblazer/yellow,/turf/template_noop,/area/submap/outpost21/yard_generic)
+"R" = (/turf/simulated/floor/outdoors/sidewalk/muriki{icon_state = "slab"},/area/submap/outpost21/yard_generic)
+"W" = (/turf/template_noop,/area/submap/outpost21/yard_generic)
+
+(1,1,1) = {"
+aaaaa
+aRWWa
+aRgRa
+aWRWa
+aaaaa
+"}

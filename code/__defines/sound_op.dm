@@ -17,3 +17,10 @@
 	'sound/music/traitor.ogg',\
 	'sound/ambience/space/space_serithi.ogg'\
 	)
+
+#define AMBIENCE_OUTPOST list(\
+	'sound/ambience/expoutpost/expoutpost1.ogg',\
+	'sound/ambience/expoutpost/expoutpost2.ogg',\
+	'sound/ambience/expoutpost/expoutpost3.ogg',\
+	'sound/ambience/expoutpost/expoutpost4.ogg'\
+	)

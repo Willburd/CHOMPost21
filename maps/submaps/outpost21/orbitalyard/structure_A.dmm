@@ -1,0 +1,172 @@
+"aX" = (/obj/machinery/atmospherics/unary/freezer{icon_state = "freezer"},/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/milspec/sterile,/area/submap/outpost21/structure_generic)
+"bo" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/random/trash_pile,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"bA" = (/obj/structure/medical_stand,/obj/effect/floor_decal/corner/blue{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"bS" = (/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"cA" = (/obj/machinery/door/airlock/glass_medical,/obj/structure/disposalpipe/segment,/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"dg" = (/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"dn" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/effect/floor_decal/corner/blue{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"dD" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/structure/table/glass,/obj/machinery/alarm{dir = 1; pixel_y = -26},/obj/structure/disposalpipe/segment{dir = 4},/obj/random/medical,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ef" = (/obj/random/trash_pile,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"er" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"fh" = (/obj/effect/floor_decal/corner/blue{dir = 9},/obj/structure/table/glass,/obj/item/weapon/reagent_containers/glass/beaker/vial/random,/obj/item/weapon/reagent_containers/glass/beaker/vial/random,/obj/item/weapon/reagent_containers/glass/beaker/vial/random,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"fp" = (/obj/machinery/door/airlock/glass_medical,/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"fy" = (/obj/random/trash_pile,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"fE" = (/obj/machinery/atmospherics/pipe/manifold/hidden,/obj/effect/floor_decal/corner/blue{dir = 5},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"fI" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ge" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/obj/effect/floor_decal/corner/blue{dir = 5},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"gD" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"hc" = (/obj/machinery/door/airlock/glass_medical,/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"hB" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 8},/obj/effect/floor_decal/corner/blue{dir = 5},/obj/random/medical/pillbottle,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"hQ" = (/obj/machinery/portable_atmospherics/canister/empty,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"id" = (/obj/machinery/floodlight,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"ie" = (/obj/random/maintenance,/obj/random/maintenance,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"iv" = (/obj/structure/closet/secure_closet/medical2,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"iR" = (/obj/effect/floor_decal/corner/blue,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"iV" = (/obj/machinery/door/airlock/maintenance/medical,/obj/machinery/door/firedoor/border_only,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"kl" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"kv" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/random/maintenance,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"kA" = (/obj/random/maintenance,/turf/template_noop,/area/submap/outpost21/structure_generic)
+"kR" = (/obj/effect/floor_decal/corner/blue{dir = 4},/obj/random/firstaid,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"le" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"lp" = (/obj/structure/lattice,/turf/template_noop,/area/submap/outpost21/structure_generic)
+"lG" = (/obj/machinery/atmospherics/portables_connector{dir = 1},/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"mp" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"mx" = (/obj/machinery/door/airlock/silver{name = "Toilet"},/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"mI" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"mP" = (/obj/machinery/atmospherics/unary/freezer{icon_state = "freezer"},/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"nv" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/alarm{pixel_y = 26},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"nC" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"nJ" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/random/unidentified_medicine,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ob" = (/obj/effect/floor_decal/corner/blue{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/disposalpipe/segment,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"oN" = (/obj/structure/toilet{dir = 8},/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"pb" = (/obj/effect/floor_decal/corner/blue{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/disposalpipe/segment,/obj/random/medical/pillbottle,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"pe" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/machinery/light,/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"pN" = (/obj/random/multiple/gun,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"qr" = (/obj/structure/lattice,/obj/machinery/alarm{pixel_y = 26},/turf/space,/area/submap/outpost21/structure_generic)
+"qs" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"qI" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"rv" = (/obj/random/unidentified_medicine,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"sH" = (/obj/effect/floor_decal/corner/blue{dir = 9},/obj/machinery/light{dir = 8},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"tc" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/random/medical/pillbottle,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"tm" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"to" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"tD" = (/obj/machinery/alarm{pixel_y = 26},/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"tE" = (/obj/item/broken_device/random,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"tS" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ul" = (/obj/effect/floor_decal/corner/blue{dir = 8},/obj/item/broken_device/random,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"uD" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"uG" = (/obj/item/weapon/towel/random,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"uI" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/light{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"uJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 2; icon_state = "pipe-c"},/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"uK" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/structure/disposalpipe/segment{dir = 2; icon_state = "pipe-c"},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"uO" = (/obj/machinery/atmospherics/unary/vent_scrubber/on,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"vf" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/random/multiple/gun,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"vG" = (/obj/item/weapon/flame/lighter/random,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"wc" = (/obj/machinery/door/airlock/glass_medical,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/disposalpipe/segment,/obj/machinery/door/firedoor/border_only,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"wh" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/structure/table/glass,/obj/structure/disposalpipe/segment{dir = 4},/obj/random/firstaid,/obj/random/firstaid,/obj/random/firstaid,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ww" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/item/device/defib_kit/loaded,/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"wE" = (/obj/effect/floor_decal/corner/blue{dir = 9},/obj/machinery/light{dir = 8},/obj/random/unidentified_medicine,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"xs" = (/obj/machinery/portable_atmospherics/canister/nitrous_oxide,/turf/space,/area/submap/outpost21/structure_generic)
+"xJ" = (/turf/space,/area/submap/outpost21/structure_generic)
+"ye" = (/turf/simulated/mineral/vacuum,/area/submap/outpost21/structure_generic)
+"yn" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/junction{dir = 4; icon_state = "pipe-j2"},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"yM" = (/obj/structure/medical_stand,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 1},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"zb" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"zz" = (/obj/random/firstaid,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Ac" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"An" = (/obj/random/maintenance,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"AB" = (/obj/random/toolbox,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"BN" = (/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Cw" = (/obj/machinery/door/airlock/maintenance/medical,/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"CL" = (/turf/template_noop,/area/submap/outpost21/structure_generic)
+"CV" = (/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Ea" = (/obj/machinery/atmospherics/unary/cryo_cell{layer = 3.3},/turf/simulated/floor,/area/submap/outpost21/structure_generic)
+"Eg" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/alarm{pixel_y = 26},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Eq" = (/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 8},/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 8},/obj/structure/disposalpipe/junction{dir = 2; icon_state = "pipe-j2"},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"FJ" = (/obj/effect/floor_decal/corner/blue{dir = 6},/obj/item/weapon/reagent_containers/glass/beaker/vial/random,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"FM" = (/obj/machinery/light{dir = 8},/obj/structure/table/glass,/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"FP" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/machinery/vending/medical,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Gz" = (/obj/machinery/disposal,/obj/structure/disposalpipe/trunk{dir = 8},/turf/simulated/floor/tiled/white/airless,/area/submap/outpost21/structure_generic)
+"GH" = (/obj/effect/floor_decal/corner/blue{dir = 9},/obj/structure/closet/secure_closet/medical2,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"GU" = (/obj/effect/floor_decal/corner/blue{dir = 6},/obj/item/weapon/towel/random,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"HL" = (/obj/item/weapon/reagent_containers/glass/beaker/vial/random,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Jp" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/machinery/light,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Km" = (/obj/effect/floor_decal/corner/blue{dir = 9},/obj/machinery/alarm{dir = 4; pixel_x = -26},/obj/random/maintenance,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Le" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/machinery/alarm{dir = 1; pixel_y = -26},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Ln" = (/turf/template_noop,/area/template_noop)
+"LE" = (/obj/structure/lattice,/obj/machinery/light{dir = 1},/turf/space,/area/submap/outpost21/structure_generic)
+"Md" = (/obj/effect/floor_decal/corner/blue{dir = 6},/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"MV" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/disposalpipe/segment,/obj/random/unidentified_medicine,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Nh" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Nv" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"NP" = (/obj/structure/medical_stand,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"OM" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Px" = (/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"QR" = (/obj/item/weapon/storage/mre/random,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Rl" = (/obj/effect/floor_decal/corner/blue{dir = 5},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"RV" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 4},/obj/effect/floor_decal/corner/blue{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Sf" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/medical/pillbottle,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Sn" = (/obj/structure/disposalpipe/segment{dir = 2; icon_state = "pipe-c"},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"St" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/random/unidentified_medicine,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"SO" = (/obj/effect/floor_decal/corner/blue{dir = 10},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"SP" = (/turf/simulated/wall,/area/submap/outpost21/structure_generic)
+"Ti" = (/obj/structure/lattice,/obj/machinery/light{dir = 4},/turf/space,/area/submap/outpost21/structure_generic)
+"Tx" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"TN" = (/obj/random/contraband,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Xf" = (/obj/machinery/door/airlock/glass_medical,/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"XS" = (/obj/random/maintenance/medical,/turf/space,/area/submap/outpost21/structure_generic)
+"Ye" = (/obj/item/broken_device/random,/obj/random/toolbox,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"Yh" = (/obj/effect/floor_decal/corner/blue{dir = 6},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Yl" = (/obj/random/maintenance,/turf/space,/area/submap/outpost21/structure_generic)
+"Yz" = (/obj/effect/floor_decal/corner/blue{dir = 5},/obj/structure/table/glass,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"YE" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 10},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 9},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"YG" = (/obj/effect/floor_decal/corner/blue{dir = 10},/obj/random/medical/pillbottle,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"YJ" = (/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic)
+"YL" = (/obj/item/weapon/reagent_containers/glass/beaker/vial/random,/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"YU" = (/obj/machinery/door/airlock/glass_medical,/turf/simulated/floor/tiled/milspec/sterile,/area/submap/outpost21/structure_generic)
+"YW" = (/obj/effect/floor_decal/corner/blue{dir = 9},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"Zj" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/airless,/area/submap/outpost21/structure_generic)
+"ZX" = (/obj/structure/lattice,/turf/space,/area/submap/outpost21/structure_generic)
+
+(1,1,1) = {"
+LnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLn
+LnCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLZXCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLyeyeCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLZXyeyeyeCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLyeyeZXCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLZXCLCLCLCLCLCLCLZXCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLZXCLCLxJxJxJxJxJXSxJxJxJCLCLZXZXCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLZXZXZXZXxJxJxJxJxJxJxJxJxJxJxJyeyeZXxJCLZXCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLZXZXyeyexJZXxJxJxJXSxJBNxJxJxJXSxJxJyeyeyeyexJZXxJxJCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLyeyeyeyeZXxJxJBNxJBNhQhQxJxJxJBNxJyeyeyeyeyeZXxJxJxJxJCLCLCLCLCLCLLn
+LnCLCLCLCLZXyeyeyeyeyeZXSPSPSPSPiVSPSPxJSPSPSPyeyeyeyeyeZXxJxJxJZXZXZXZXZXCLCLLn
+LnCLCLCLCLCLyeyeyeyeyexJxJLEqrZXxJxJxJxJxJLEBNyeyeyeyeyeyexJxJxJSPSPZXCLCLCLCLLn
+LnCLCLCLCLCLyeyeyeyeyexJBNdgBNBNBNBNBNBNxJZXBNyeyeyeyeyeyexJxJxJxJCLCLCLCLCLCLLn
+LnCLCLCLCLCLZXyeyeyeyexJBNBNPxRlRlFPYzYzBNZXBNyeyeyeyeyeyexJxJSPxJCLCLCLCLCLCLLn
+LnCLCLCLCLZXZXyeyeZXyeBNpNdgrvdgdgNPdgefBNxJxsxJyeyeyeyexJSPxJxJxJCLCLCLCLCLCLLn
+LnCLCLZXxJxJZXxJyeZXZXefBNdgdgdgdgdgzzdgfyBNxJxsZXZXZXZXxJSPxJxJxJYlCLCLCLCLCLLn
+LnCLCLZXZXxJxJxJZXZXxJiRSOSOSOuliRnJSOSOBNZXxJSPxJxJxJZXxJSPxJxJxJxJCLCLCLCLCLLn
+LnCLZXZXxJxJXSxJxJSPZXYhmPEaEaYWYhEaEaaXBNBNTiSPBNABBNxJxJSPxJxJxJCLCLCLCLCLCLLn
+LnCLCLCLCLxJxJxJxJSPsHkRhBfEfERVdnfEfEgebAdgMdSPfhdgBNBNFJSPxJxJxsCLCLCLCLCLCLLn
+LnCLCLCLCLxJxJXSxJSPGHuOlGPxdgdguGdgtEdguOdgrvYUdgdgYLdgFJSPxJxJxJCLCLCLCLCLCLLn
+LnCLCLCLCLCLxJxJxJSPGHtSNvNvStNvNvSfyMNvYEdgGUSPuDdgBNHLYhSPZXxJxJCLCLCLCLCLCLLn
+LnCLCLCLCLxJxJZXxJSPqsnCpedDwhmpwwpeZjSnerLeivSPQRZXZXxJBNSPZXxJxJxJxJZXCLCLCLLn
+LnCLCLCLZXZXSPSPSPSPSPlpSPSPSPlpSPSPXfcASPSPSPSPSPSPSPxJSPSPxJSPSPSPZXZXCLCLCLLn
+LnCLCLCVYJmIzbzbEguIAcAczbzbzbAczbuItmynzbuKlenvleleleNhklvfZXdgTxBNxJZXZXZXCLLn
+LnCLCLCLBNxJBNBNdgboSOSOSOSOSOkvkvSOSOSOdgfIdgSOSOJpYGSOdgdgBNBNBNxJxJZXCLCLCLLn
+LnCLCLZXSPxJZXSPSPCwSPSPSPSPSPSPSPSPSPSPhcwcSPSPSPSPSPSPSPSPZXZXZXxJCLCLCLCLCLLn
+LnCLCLCLCLCLxJxJZXxJZXZXZXyeyeZXAnididSPYWobSPtDgDmxoNSPxJxJxJCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLxJxJZXxJxJZXyeyeyeSPZXTNYeSPwEpbSPbStcSPSPSPxJxJCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLxJxJxJxJZXyeyeyeyexJSPvGSPKmobSPBNBNAnoNSPxJxJCLCLCLCLCLZXZXCLCLLn
+LnCLCLCLCLCLCLxJxJxJxJZXyeyeyexJxJSPieSPYWfIlpbSBNSPSPSPxJCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLYlxJZXyeyeyexJyeSPAniVYWEqfpuJtobSBNxJCLCLCLCLCLCLkACLCLCLCLLn
+LnCLCLCLCLCLZXCLCLCLxJxJyeyeyeZXyeSPSPSPYWobSPFMGzBNxJxJCLCLCLCLCLCLCLCLCLCLCLLn
+LnCLCLCLCLCLyeZXCLCLxJxJZXxJyexJZXZXZXSPYWMVSPZXZXxJCLCLCLCLCLCLCLCLZXCLCLCLCLLn
+LnCLCLCLCLyeyeZXCLCLCLYlxJxJxJxJZXxJxJSPqIOMZXxJxJCLCLCLCLCLCLCLCLyeyeZXCLCLCLLn
+LnCLCLCLCLZXyeCLCLCLCLCLxJxJxJxJxJxJxJZXBNxJZXxJCLCLCLCLCLCLCLZXyeyeyeZXCLCLCLLn
+LnCLCLCLCLCLZXCLCLCLCLCLZXxJxJxJxJxJxJSPYWxJZXxJCLCLCLCLCLCLCLCLyeyeyeCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLCLCLZXZXCLCLCLxJxJxJBNxJxJCLCLCLCLCLCLCLCLCLCLyeyeCLCLCLCLLn
+LnCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLCLLn
+LnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLnLn
+"}

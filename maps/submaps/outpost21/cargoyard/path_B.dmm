@@ -1,0 +1,13 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"e" = (/turf/simulated/floor/outdoors/sidewalk/muriki{icon_state = "slab"},/area/submap/outpost21/yard_generic)
+"J" = (/turf/template_noop,/area/submap/outpost21/yard_generic)
+
+(1,1,1) = {"
+aaa
+aea
+aJa
+aea
+aea
+aJa
+aaa
+"}
