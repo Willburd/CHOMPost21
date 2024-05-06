@@ -185,7 +185,7 @@ Class Procs:
 		air.gas["carbon_dioxide"] 	= LERP(air.gas["carbon_dioxide"]	,T.carbon_dioxide	,rate)
 		air.gas["nitrogen"] 		= LERP(air.gas["nitrogen"]			,T.nitrogen			,rate)
 		air.gas["phoron"] 			= LERP(air.gas["phoron"]			,T.phoron			,rate)
-		//air.gas["methane"] 			= LERP(air.gas["methane"]			,T.methane			,rate) // TODO - REMEMBER ME!
+		air.gas["methane"] 			= LERP(air.gas["methane"]			,T.methane			,rate)
 		air.gas["nitrous_oxide"] 	= LERP(air.gas["nitrous_oxide"]		,T.nitrous_oxide	,rate)
 		air.update_values()
 

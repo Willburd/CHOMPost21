@@ -18,7 +18,7 @@
 	var/minrate = 0
 	var/maxrate = 10 * ONE_ATMOSPHERE
 
-	var/list/scrubbing_gas = list("phoron", "carbon_dioxide", "nitrous_oxide", "volatile_fuel")
+	var/list/scrubbing_gas = list("phoron", "carbon_dioxide", "nitrous_oxide", "volatile_fuel", "methane") // Outpost 21 edit - Methane
 
 /obj/machinery/portable_atmospherics/powered/scrubber/New()
 	..()

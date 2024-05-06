@@ -153,6 +153,8 @@
 				new_item = new /obj/item/weapon/tank/air(src.loc)
 			else if(prob(50))
 				new_item = new /obj/item/weapon/tank/anesthetic(src.loc)
+			else if(prob(25))
+				new_item = new /obj/item/weapon/tank/methane(src.loc) // Outpost 21 edit - Methane
 			else
 				new_item = new /obj/item/weapon/tank/phoron(src.loc)
 			icon_state = pick("oxygen","oxygen_fr","oxygen_f","phoron","anesthetic")

@@ -373,6 +373,7 @@
 	var/trigger_oxy = 0
 	var/trigger_co2 = 0
 	var/trigger_nitro = 0
+	var/trigger_ch4 = 0 // Outpost 21 edit - Methane
 
 	var/turf/T = get_turf(holder)
 	var/datum/gas_mixture/env = T.return_air()
@@ -390,6 +391,8 @@
 			trigger_co2 = 1
 		if(env.gas["nitrogen"] >= 10)
 			trigger_nitro = 1
+		if(env.gas["methane"] >= 10)
+			trigger_ch4 = 1 // Outpost 21 edit - Methane
 
 	for(var/datum/artifact_effect/my_effect in my_effects)
 		my_effect.artifact_id = artifact_id
@@ -419,3 +422,7 @@
 		//NITROGEN GAS ACTIVATION
 		if(my_effect.trigger == TRIGGER_NITRO && (trigger_nitro ^ my_effect.activated))
 			my_effect.ToggleActivate()
+
+		//METHANE GAS ACTIVATION
+		if(my_effect.trigger == TRIGGER_METHANE && (trigger_ch4 ^ my_effect.activated))
+			my_effect.ToggleActivate() // Outpost 21 edit - Methane

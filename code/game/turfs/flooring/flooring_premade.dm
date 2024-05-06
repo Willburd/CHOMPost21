@@ -332,11 +332,14 @@
 /turf/simulated/floor/reinforced/n20
 	oxygen = 0
 	nitrogen = 0
+	nitrous_oxide = ATMOSTANK_NITROUSOXIDE // Outpost 21 edit - allow default n2o amounts
 
+/* Outpost 21 edit - replaced with single line above!
 /turf/simulated/floor/reinforced/n20/Initialize()
 	. = ..()
 	if(!air) make_air()
 	air.adjust_gas("nitrous_oxide", ATMOSTANK_NITROUSOXIDE)
+*/
 
 /turf/simulated/floor/cult
 	name = "engraved floor"
@@ -515,13 +518,13 @@
 /turf/simulated/floor/snow/plating/drift
 	name = "snowy plating"
 	icon_state = "snowyplayingdrift"
-	initial_flooring = /decl/flooring/snow/plating/drift			  
+	initial_flooring = /decl/flooring/snow/plating/drift
 
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
 /turf/simulated/floor/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying || L.is_incorporeal()) // Flying things shouldn't make footprints. Outpost 21 addition - incorporial doesn't cost more food either
 			if(L.flying)
 				L.adjust_nutrition(-0.5)
 			return ..()

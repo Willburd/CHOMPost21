@@ -20,7 +20,7 @@
 
 	var/hibernate = 0 //Do we even process?
 	var/scrubbing = 1 //0 = siphoning, 1 = scrubbing
-	var/list/scrubbing_gas = list("carbon_dioxide", "phoron")
+	var/list/scrubbing_gas = list("carbon_dioxide", "phoron", "methane") // Outpost 21 edit - Methane
 
 	var/panic = 0 //is this scrubber panicked?
 
@@ -68,7 +68,9 @@
 	if(!istype(T))
 		return
 
-	if(!powered())
+	if(welded)
+		scrubber_icon += "weld"
+	else if(!powered())
 		scrubber_icon += "off"
 	else
 		scrubber_icon += "[use_power ? "[scrubbing ? "on" : "in"]" : "off"]"
@@ -115,6 +117,7 @@
 		"filter_phoron" = ("phoron" in scrubbing_gas),
 		"filter_n2o" = ("nitrous_oxide" in scrubbing_gas),
 		"filter_fuel" = ("volatile_fuel" in scrubbing_gas),
+		"filter_ch4" = ("methane" in scrubbing_gas),  // Outpost 21 edit - Methane
 		"sigtype" = "status"
 	)
 	if(!initial_loc.air_scrub_names[id_tag])
@@ -145,6 +148,15 @@
 	//broadcast_status()
 	if(!use_power || (stat & (NOPOWER|BROKEN)))
 		return 0
+
+	// Outpost 21 edit begin - Don't do anything if welded
+	if(welded)
+		//Fucking hibernate because you ain't doing shit.
+		hibernate = 1
+		spawn(rand(100,200))	//hibernate for 10 or 20 seconds randomly
+			hibernate = 0
+		return 0
+	// Outpost 21 edit end
 
 	var/datum/gas_mixture/environment = loc.return_air()
 
@@ -246,6 +258,13 @@
 	else if(signal.data["toggle_fuel_scrub"])
 		toggle += "volatile_fuel"
 
+	// Outpost 21 edit begin - Methane
+	if(!isnull(signal.data["ch4_scrub"]) && text2num(signal.data["ch4_scrub"]) != ("methane" in scrubbing_gas))
+		toggle += "methane"
+	else if(signal.data["toggle_ch4_scrub"])
+		toggle += "methane"
+	// Outpost 21 edit end
+
 	scrubbing_gas ^= toggle
 
 	if(signal.data["init"] != null)
@@ -270,6 +289,28 @@
 		update_icon()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+	// Outpost 21 edit begin - Allow welding these shut
+	if(istype(W, /obj/item/weapon/weldingtool))
+		var/obj/item/weapon/weldingtool/WT = W
+		if (WT.remove_fuel(0,user))
+			to_chat(user, "<span class='notice'>Now welding the vent.</span>")
+			if(do_after(user, 20 * WT.toolspeed))
+				if(!src || !WT.isOn()) return
+				playsound(src, WT.usesound, 50, 1)
+				if(!welded)
+					user.visible_message("<b>\The [user]</b> welds the vent shut.", "<span class='notice'>You weld the vent shut.</span>", "You hear welding.")
+					welded = 1
+					update_icon()
+				else
+					user.visible_message("<span class='notice'>[user] unwelds the vent.</span>", "<span class='notice'>You unweld the vent.</span>", "You hear welding.")
+					welded = 0
+					update_icon()
+			else
+				to_chat(user, "<span class='notice'>The welding tool needs to be on to start this task.</span>")
+		else
+			to_chat(user, "<span class='warning'>You need more welding fuel to complete this task.</span>")
+			return 1
+	// Outpost 21 edit end
 	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
@@ -279,6 +320,11 @@
 	if (node && node.level==1 && isturf(T) && !T.is_plating())
 		to_chat(user, "<span class='warning'>You must remove the plating first.</span>")
 		return 1
+	// Outpost 21 edit begin - Allow welding these shut
+	if (welded)
+		to_chat(user, "<span class='warning'>You cannot unwrench \the [src], it is welded down firmly.</span>")
+		return 1
+	// Outpost 21 edit end
 	if(!can_unwrench())
 		to_chat(user, "<span class='warning'>You cannot unwrench \the [src], it is too exerted due to internal pressure.</span>")
 		add_fingerprint(user)
@@ -298,3 +344,7 @@
 		. += "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 	else
 		. += "You are too far away to read the gauge."
+	// Outpost 21 edit begin - Allow welding these shut
+	if(welded)
+		. += "It seems welded shut."
+	// Outpost 21 edit end

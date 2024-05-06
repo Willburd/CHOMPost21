@@ -327,12 +327,15 @@ update_flag
 	switch(action)
 		if("relabel")
 			if(can_label)
+				// Outpost 21 edit - Added CH4 and PN20
 				var/list/colors = list(\
 					"\[N2O\]" = "redws", \
 					"\[N2\]" = "red", \
 					"\[O2\]" = "blue", \
 					"\[Phoron\]" = "orangeps", \
 					"\[CO2\]" = "black", \
+					"\[PN2O\]" = "purple", \
+					"\[CH4\]" = "green", \
 					"\[Air\]" = "grey", \
 					"\[CAUTION\]" = "yellow", \
 				)

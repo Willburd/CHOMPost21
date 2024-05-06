@@ -69,7 +69,8 @@
 #define TRIGGER_OXY 10
 #define TRIGGER_CO2 11
 #define TRIGGER_NITRO 12
-#define MAX_TRIGGER 12
+#define TRIGGER_METHANE 13 // Outpost 21 edit - Methane
+#define MAX_TRIGGER 13
 
 #define EFFECT_UNKNOWN 0
 #define EFFECT_ENERGY 1

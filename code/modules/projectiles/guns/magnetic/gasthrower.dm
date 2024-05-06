@@ -38,6 +38,7 @@
 	var/co2_amt = Tank.air_contents.gas["carbon_dioxide"]
 	var/oxy_amt = Tank.air_contents.gas["oxygen"]
 	var/n2o_amt = Tank.air_contents.gas["nitrous_oxide"]
+	var/ch4_amt = Tank.air_contents.gas["methane"] // Outpost 21 edit - Methane
 
 	if(isnull(co2_amt))
 		co2_amt = 0
@@ -48,8 +49,11 @@
 	if(isnull(n2o_amt))
 		n2o_amt = 0
 
+	if(isnull(ch4_amt))
+		ch4_amt = 0 // Outpost 21 edit - Methane
+
 	var/phoron_mix_proper = TRUE
-	if(!phoron_amt || phoron_amt < max(0.25, 3 + co2_amt - oxy_amt - (n2o_amt / 2)))
+	if( (!phoron_amt || phoron_amt < max(0.25, 3 + co2_amt - oxy_amt - (n2o_amt / 2))) && (!ch4_amt || ch4_amt < max(0.25, 3 + co2_amt - oxy_amt - (n2o_amt / 2))) ) // Outpost 21 edit - Methane counts as well!
 		phoron_mix_proper = FALSE
 
 	if(Tank.air_contents.return_pressure() >= T.air.return_pressure() && phoron_mix_proper)

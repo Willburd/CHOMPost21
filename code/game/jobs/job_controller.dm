@@ -569,12 +569,9 @@ var/global/datum/controller/occupations/job_master
 		H.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
 	// END EMAIL GENERATION
 
-	//Gives glasses to the vision impaired
-	if(H.disabilities & NEARSIGHTED)
-		var/equipped = H.equip_to_slot_or_del(new /obj/item/clothing/glasses/regular(H), slot_glasses)
-		if(equipped != 1)
-			var/obj/item/clothing/glasses/G = H.glasses
-			G.prescription = 1
+	// Outpost 21 edit begin - initialize internal tanks, doing last for maximum safety
+	H.equip_disability_items()
+	// Outpost 21 edit end
 
 	BITSET(H.hud_updateflag, ID_HUD)
 	BITSET(H.hud_updateflag, IMPLOYAL_HUD)

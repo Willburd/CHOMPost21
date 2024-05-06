@@ -13,6 +13,8 @@
 	var/configuring = 0
 	//var/target_pressure = ONE_ATMOSPHERE	//a base type as abstract as this should NOT be making these kinds of assumptions
 
+	var/initial_icon_updated = FALSE // Outpost 21 edit - These need to wait a bit, then do an icon update, or they won't init the icon correctly on map spawn!
+
 	var/tag_north = ATM_NONE
 	var/tag_south = ATM_NONE
 	var/tag_east = ATM_NONE
@@ -174,7 +176,7 @@
 			if(ATM_OUTPUT)
 				ic_on += "_out_glow"
 				ic_off += "_out"
-			if(ATM_O2 to ATM_N2O)
+			if(ATM_O2 to ATM_LASTGAS) // Outpost 21 edit - use ATM_LASTGAS instead of ATM_N2O
 				ic_on += "_filter"
 				ic_off += "_out"
 

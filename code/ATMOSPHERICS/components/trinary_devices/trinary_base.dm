@@ -7,6 +7,8 @@
 	var/mirrored = FALSE
 	var/tee = FALSE
 
+	var/initial_icon_updated = FALSE // Outpost 21 edit - These need to wait a bit, then do an icon update, or they won't init the icon correctly on map spawn!
+
 	var/datum/gas_mixture/air1
 	var/datum/gas_mixture/air2
 	var/datum/gas_mixture/air3

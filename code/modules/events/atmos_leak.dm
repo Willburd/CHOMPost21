@@ -22,6 +22,7 @@
 	var/gas_choices = list("carbon_dioxide", "nitrous_oxide") // Annoying
 	if(severity >= EVENT_LEVEL_MODERATE)
 		gas_choices += "phoron" // Dangerous
+		gas_choices += "methane" // Outpost 21 edit - Methane
 	// if(severity >= EVENT_LEVEL_MAJOR)
 	// 	gas_choices += "volatile_fuel" // Dangerous and no default atmos setup!
 	gas_type = pick(gas_choices)

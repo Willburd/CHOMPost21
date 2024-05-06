@@ -238,7 +238,7 @@
 	//Create gas mixture to hold data for passing
 	var/datum/gas_mixture/GM = new
 
-	GM.adjust_multi("oxygen", oxygen, "carbon_dioxide", carbon_dioxide, "nitrogen", nitrogen, "phoron", phoron, "nitrous_oxide", nitrous_oxide)
+	GM.adjust_multi("oxygen", oxygen, "carbon_dioxide", carbon_dioxide, "nitrogen", nitrogen, "phoron", phoron, "nitrous_oxide", nitrous_oxide, "methane", methane) // Outpost 21 edit - Methane, n2o values as well
 	GM.temperature = temperature
 
 	return GM
@@ -246,13 +246,14 @@
 /turf/remove_air(amount as num)
 	var/datum/gas_mixture/GM = new
 
-	var/sum = oxygen + carbon_dioxide + nitrogen + phoron + nitrous_oxide // Outpost 21 edit - Allow map set N2O
+	var/sum = oxygen + carbon_dioxide + nitrogen + phoron + nitrous_oxide + methane // Outpost 21 edit - Allow map set N2O and CH4
 	if(sum>0)
 		GM.gas["oxygen"] = (oxygen/sum)*amount
 		GM.gas["carbon_dioxide"] = (carbon_dioxide/sum)*amount
 		GM.gas["nitrogen"] = (nitrogen/sum)*amount
 		GM.gas["phoron"] = (phoron/sum)*amount
 		GM.gas["nitrous_oxide"] = (nitrous_oxide/sum)*amount // Outpost 21 edit - Allow map set N2O
+		GM.gas["methane"] = (methane/sum)*amount // Outpost 21 edit - Methane
 
 	GM.temperature = temperature
 	GM.update_values()
@@ -295,7 +296,7 @@
 /turf/proc/make_air()
 	air = new/datum/gas_mixture
 	air.temperature = temperature
-	air.adjust_multi("oxygen", oxygen, "carbon_dioxide", carbon_dioxide, "nitrogen", nitrogen, "phoron", phoron, "nitrous_oxide", nitrous_oxide) // Outpost 21 edit - Allow map set N2O
+	air.adjust_multi("oxygen", oxygen, "carbon_dioxide", carbon_dioxide, "nitrogen", nitrogen, "phoron", phoron, "nitrous_oxide", nitrous_oxide, "methane", methane) // Outpost 21 edit - Allow map set N2O and CH4
 	air.group_multiplier = 1
 	air.volume = CELL_VOLUME
 

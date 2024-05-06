@@ -77,6 +77,10 @@
 	var/max_co2 = 5					// CO2 max
 	var/min_n2 = 0					// N2 min
 	var/max_n2 = 0					// N2 max
+	// Outpost 21 addition begin - Methane
+	var/min_ch4 = 0					// CH4 min
+	var/max_ch4 = 5					// CH4 max
+	// Outpost 21 addition end
 	var/unsuitable_atoms_damage = 2	// This damage is taken when atmos doesn't fit all the requirements above
 
 	//Hostility settings
@@ -269,7 +273,7 @@
 
 	// Turf related slowdown
 	var/turf/T = get_turf(src)
-	if(T && T.movement_cost && (!hovering || !flying)) // Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
+	if(T && T.movement_cost && !(hovering || flying || is_incorporeal())) // Outpost 21 edit - Fixed check, Flying mobs ignore turf-based slowdown. Aquatic mobs ignore water slowdown, and can gain bonus speed in it.
 		if(istype(T,/turf/simulated/floor/water) && aquatic_movement)
 			. -= aquatic_movement - 1
 		else

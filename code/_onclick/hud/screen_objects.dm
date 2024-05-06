@@ -390,7 +390,7 @@
 												contents.Add(0)
 
 										// No races breath this, but never know about downstream servers.
-										if ("carbon dioxide")
+										if ("carbon_dioxide") // Outpost 21 edit - wrong id
 											if(t.air_contents.gas["carbon_dioxide"] && !t.air_contents.gas["phoron"])
 												contents.Add(t.air_contents.gas["carbon_dioxide"])
 											else
@@ -403,6 +403,13 @@
 											else
 												contents.Add(0)
 
+										// Outpost 21 edit begin - Methane
+										if ("methane")
+											if(t.air_contents.gas["methane"] && !t.air_contents.gas["oxygen"])
+												contents.Add(t.air_contents.gas["methane"])
+											else
+												contents.Add(0)
+										// Outpost 21 edit end
 
 								else
 									//no tank so we set contents to 0

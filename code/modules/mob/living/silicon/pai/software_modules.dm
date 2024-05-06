@@ -344,7 +344,8 @@
 			var/n2_level = environment.gas["nitrogen"]/total_moles
 			var/co2_level = environment.gas["carbon_dioxide"]/total_moles
 			var/phoron_level = environment.gas["phoron"]/total_moles
-			var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level)
+			var/methane_level = environment.gas["methane"]/total_moles // Outpost 21 edit - Methane
+			var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level+methane_level) // Outpost 21 edit - Methane
 
 			// entry is what the element is describing
 			// Type identifies which unit or other special characters to use
@@ -359,6 +360,7 @@
 						list("entry" = "Nitrogen", "units" = "kPa", "val" = "[round(n2_level*100,0.1)]", "bad_high" = 105, "poor_high" = 85, "poor_low" = 50, "bad_low" = 40),
 						list("entry" = "Carbon Dioxide", "units" = "kPa", "val" = "[round(co2_level*100,0.1)]", "bad_high" = 10, "poor_high" = 5, "poor_low" = 0, "bad_low" = 0),
 						list("entry" = "Phoron", "units" = "kPa", "val" = "[round(phoron_level*100,0.01)]", "bad_high" = 0.5, "poor_high" = 0, "poor_low" = 0, "bad_low" = 0),
+						list("entry" = "Methane", "units" = "kPa", "val" = "[round(methane_level*100,0.01)]", "bad_high" = 0.5, "poor_high" = 0, "poor_low" = 0, "bad_low" = 0), // Outpost 21 edit - Methane
 						list("entry" = "Other", "units" = "kPa", "val" = "[round(unknown_level, 0.01)]", "bad_high" = 1, "poor_high" = 0.5, "poor_low" = 0, "bad_low" = 0)
 						)
 

@@ -226,6 +226,7 @@ Class Procs:
 	if(A.phoron != B.phoron) return 0
 	if(A.carbon_dioxide != B.carbon_dioxide) return 0
 	if(A.nitrous_oxide != B.nitrous_oxide) return 0
+	if(A.methane != B.methane) return 0	// Outpost 21 edit - Methane
 	if(A.temperature != B.temperature) return 0
 	return 1
 

@@ -10,11 +10,13 @@
 #define ATM_CO2		5
 #define ATM_P		6	//Phoron
 #define ATM_N2O		7
+#define ATM_METHANE 8	// Outpost 21 addition - Methane
+#define ATM_LASTGAS	8   // Outpost 21 addition - Used to be whatever gas was last, use this instead so it's less butts to update with new atmos
 
 //--------------------------------------------
 // Omni port datum
 //
-// Used by omni devices to manage connections 
+// Used by omni devices to manage connections
 //  to other atmospheric objects.
 //--------------------------------------------
 /datum/omni_port
@@ -70,10 +72,10 @@
 			string = "East"
 		if(WEST)
 			string = "West"
-	
+
 	if(!capitalize && string)
 		string = lowertext(string)
-	
+
 	return string
 
 //returns a direction flag based on the string passed to it
@@ -94,16 +96,17 @@
 
 /proc/mode_to_gasid(var/mode)
 	switch(mode)
-		if(ATM_O2) 
+		if(ATM_O2)
 			return "oxygen"
-		if(ATM_N2) 
+		if(ATM_N2)
 			return "nitrogen"
-		if(ATM_CO2) 
+		if(ATM_CO2)
 			return "carbon_dioxide"
-		if(ATM_P) 
+		if(ATM_P)
 			return "phoron"
-		if(ATM_N2O) 
+		if(ATM_N2O)
 			return "nitrous_oxide"
+		if(ATM_METHANE)
+			return "methane"
 		else
 			return null
-	

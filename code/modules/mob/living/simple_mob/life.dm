@@ -153,6 +153,17 @@
 			else
 				clear_alert("co2")
 
+			// Outpost 21 edit begin - Methane
+			if(min_ch4 && Environment.gas["methane"] < min_ch4)
+				atmos_unsuitable = 2
+				throw_alert("methane_in_air", /obj/screen/alert/not_enough_methane)
+			else if(max_tox && Environment.gas["methane"] > max_ch4)
+				atmos_unsuitable = 2
+				throw_alert("methane_in_air", /obj/screen/alert/methane_in_air)
+			else
+				clear_alert("methane_in_air")
+			// Outpost 21 edit end
+
 	//Atmos effect
 	if(bodytemperature < minbodytemp)
 		adjustFireLoss(cold_damage_per_tick)
