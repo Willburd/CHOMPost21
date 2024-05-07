@@ -185,9 +185,12 @@ var/global/photo_count = 0
 		atoms.Add(the_turf);
 		// As well as anything that isn't invisible.
 		for(var/atom/A in the_turf)
-			if(A.invisibility) continue
-			if(A.plane > 0 && !(A.plane in picture_planes)) continue
+			// Outpost 21 edit begin - allow ghosts into photos
+			if(!istype(A,/mob/observer/dead))
+				if(A.invisibility) continue
+				if(A.plane > 0 && !(A.plane in picture_planes)) continue
 			atoms.Add(A)
+			// Outpost 21 edit end
 
 	// Sort the atoms into their layers
 	var/list/sorted = sort_atoms_by_layer(atoms)
@@ -222,22 +225,35 @@ var/global/photo_count = 0
 
 /obj/item/device/camera/proc/get_mobs(turf/the_turf as turf)
 	var/mob_detail
-	for(var/mob/living/carbon/A in the_turf)
-		if(A.invisibility) continue
-		var/holding = null
-		if(A.l_hand || A.r_hand)
-			if(A.l_hand) holding = "They are holding \a [A.l_hand]"
-			if(A.r_hand)
-				if(holding)
-					holding += " and \a [A.r_hand]"
-				else
-					holding = "They are holding \a [A.r_hand]"
+	// Outpost 21 edit begin - ghosts in photos
+	for(var/atom/S in the_turf)
+		if(isobserver(S))
+			// hide observers that are not ghosts
+			var/mob/observer/dead/G = S;
+			if(!G.is_dead()) continue
+			// add ghost description
+			if(!mob_detail)
+				mob_detail = "You can see a faded [G] on the photo."
+			else
+				mob_detail += "You can also see a faded [G] on the photo."
 
-		if(!mob_detail)
-			mob_detail = "You can see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]. "
-		else
-			mob_detail += "You can also see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]."
+		// add carbon descriptions
+		if(iscarbon(S))
+			var/mob/living/carbon/A = S
+			var/holding = null
+			if(A.l_hand || A.r_hand)
+				if(A.l_hand) holding = "They are holding \a [A.l_hand]"
+				if(A.r_hand)
+					if(holding)
+						holding += " and \a [A.r_hand]"
+					else
+						holding = "They are holding \a [A.r_hand]"
 
+			if(!mob_detail)
+				mob_detail = "You can see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]. "
+			else
+				mob_detail += "You can also see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]."
+	// Outpost 21 edit end
 	return mob_detail
 
 /obj/item/device/camera/afterattack(atom/target as mob|obj|turf|area, mob/user as mob, flag)
