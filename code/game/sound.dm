@@ -55,7 +55,7 @@
 			if(!T)
 				continue
 
-			var/area/A = V.loc
+			var/area/A = T.loc
 			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
 				continue
 
