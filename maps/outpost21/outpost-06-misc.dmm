@@ -587,7 +587,7 @@
 "zS" = (/obj/structure/table/alien/blue,/obj/item/device/radio/intercom/raider{dir = 1; pixel_y = 32},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
 "zT" = (/obj/structure/bed/chair/bay/shuttle,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
 "zU" = (/obj/item/weapon/storage/belt/medical/holding,/obj/item/weapon/storage/belt/utility/holding,/obj/structure/table/alien/blue,/obj/item/weapon/storage/belt/holding,/obj/item/weapon/storage/backpack/holding/duffle,/obj/machinery/door/window/brigdoor/westleft{req_access = null},/obj/structure/window/reinforced,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
-"zV" = (/obj/machinery/power/pointdefense{id_tag = "trawler_pd"},/turf/simulated/shuttle/plating/airless,/area/shuttle/skipjack)
+"zV" = (/obj/machinery/pointdefense{id_tag = "trawler_pd"},/turf/simulated/shuttle/plating/airless,/area/shuttle/skipjack)
 "zY" = (/obj/machinery/shower{dir = 4; pixel_x = 5},/obj/structure/window/phoronbasic,/obj/structure/curtain/open/shower/security,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
 "Aa" = (/obj/structure/handrail,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
 "Ad" = (/obj/machinery/mecha_part_fabricator/pros,/turf/unsimulated/floor{dir = 5; icon_state = "vault"},/area/wizard_station)
