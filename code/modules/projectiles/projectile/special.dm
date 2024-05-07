@@ -109,7 +109,7 @@
 /obj/item/projectile/meteor
 	name = "meteor"
 	icon = 'icons/obj/meteor.dmi'
-	icon_state = "smallf"
+	icon_state = "small" // Outpost 21 edit - use an actual icon_state
 	damage = 0
 	damage_type = BRUTE
 	nodamage = 1
