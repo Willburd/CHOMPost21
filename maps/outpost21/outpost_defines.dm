@@ -12,7 +12,7 @@
 	full_name = "ESHUI Atmospheric Terraforming Outpost 21"
 	path = "outpost"
 
-	lobby_icon = 'icons/misc/title_op.dmi'
+	lobby_icon = 'icons/misc/OUTPOST21.gif'
 	lobby_screens = list()
 
 	zlevel_datum_type = /datum/map_z_level/outpost
@@ -21,6 +21,8 @@
 	overmap_z = Z_LEVEL_OUTPOST_MISC
 	overmap_size = 25
 	overmap_event_areas = 9
+
+	default_law_type = /datum/ai_laws/eshui_standard
 
 	holomap_smoosh = list(list(
 		Z_LEVEL_OUTPOST_BASEMENT,
