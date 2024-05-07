@@ -8,6 +8,14 @@
 	if(istype(user))
 		user.spin(20, 1)
 
+	// outpost 21 edit begin - add the sillier interactions
+	if(prob(5))
+		var/mob/living/M = user
+		if(!M.isSynthetic())
+			M.vomit()
+			return
+	// outpost 21 edit end
+
 /decl/emote/visible/sidestep
 	key = "sidestep"
 	check_restraints = TRUE

@@ -2498,6 +2498,7 @@
 #include "code\modules\emotes\definitions\audible_furry_vr.dm"
 #include "code\modules\emotes\definitions\audible_scream.dm"
 #include "code\modules\emotes\definitions\audible_scream_ch.dm"
+#include "code\modules\emotes\definitions\audible_scream_op.dm"
 #include "code\modules\emotes\definitions\audible_scream_vr.dm"
 #include "code\modules\emotes\definitions\audible_slap.dm"
 #include "code\modules\emotes\definitions\audible_snap.dm"
