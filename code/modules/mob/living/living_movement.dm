@@ -234,13 +234,20 @@ default behaviour is:
 		MB.runOver(src)
 
 	if(istype(AM, /obj/vehicle))
-		var/obj/vehicle/V = AM
-		V.RunOver(src)
+		if(buckled != AM) // Outpost 21 edit - don't run ourselves over, needed for going down stairs!
+			var/obj/vehicle/V = AM
+			V.RunOver(src)
 
 // Almost all of this handles pulling movables behind us
 /mob/living/Move(atom/newloc, direct, movetime)
 	if(buckled && buckled.loc != newloc) //not updating position
-		if(!buckled.anchored && buckled.buckle_movable)
+		// Outpost 21 addition being - Interior capable vehicles, forwarding input from the seat
+		if(istype(buckled,/obj/structure/bed/chair/vehicle_interior_seat/pilot))
+			var/obj/structure/bed/chair/vehicle_interior_seat/pilot/P = buckled
+			P.relaymove(src, direct)
+			return 0
+		// Outpost 21 addition being end
+		else if(!buckled.anchored && buckled.buckle_movable)
 			return buckled.Move(newloc, direct)
 		else
 			return 0

@@ -89,6 +89,13 @@
 		throw_mode_off()
 		return TRUE
 
+	// Outpost 21 addition begin - Clicking while driving a interior controlled vehicle
+	if(!is_incorporeal() && buckled && istype(buckled,/obj/structure/bed/chair/vehicle_interior_seat) && (isturf(A) || isturf(A.loc)))
+		var/obj/structure/bed/chair/vehicle_interior_seat/S = buckled
+		if(LAZYLEN(S.paired_console.viewers))
+			return S.click_action(A, src, params)
+	// Outpost 21 addition end
+
 	var/obj/item/W = get_active_hand()
 
 	if(W == A) // Handle attack_self

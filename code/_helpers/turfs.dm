@@ -155,11 +155,26 @@
 	//Move the objects. Not forceMove because the object isn't "moving" really, it's supposed to be on the "same" turf.
 	for(var/obj/O in T)
 		if(O.simulated)
-			O.loc = X
+			// Outpost 21 edit begin - multi-loc objects need to check if it's their actual loc, and not just a corner!
+			if(O.locs.len > 1)
+				if(O.loc == T)
+					O.loc = X
+			else
+				O.loc = X
+			// Outpost 21 edit end
 			if(O.light_system == STATIC_LIGHT)
 				O.update_light()
 			if(z_level_change) // The objects still need to know if their z-level changed.
 				O.onTransitZ(T.z, X.z)
+			// Outpost 21 edit begin - Shuttle updates interior capable vehicles properly on movement
+			if(istype(O,/obj/vehicle/has_interior/controller))
+				// kinda hacky... but this is the only thing that has had issues.
+				// Because the shuttle doesn't actually call move(),
+				// and if you move on the same Z level then onTransitZ() doesn't work either!
+				var/obj/vehicle/has_interior/controller/V = O
+				V.update_weapons_location(V.loc)
+				V.update_exit_pos()
+			// Outpost 21 edit end
 
 	//Move the mobs unless it's an AI eye or other eye type.
 	for(var/mob/M in T)

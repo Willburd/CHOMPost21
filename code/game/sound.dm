@@ -13,33 +13,64 @@
  	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
-	var/list/listeners = player_list.Copy()
+	var/list/listeners = player_list.Copy() + interior_vehicle_list.Copy()
 	/*if(!ignore_walls) //these sounds don't carry through walls CHOMP Removal, ripping this logic up because it's unreliable and unnecessary.
 		/*for(var/mob/listen in listeners) //This is beyond fucking horrible. Please do not repeatedly call hear.
 			if(!(get_turf(listen) in hear(maxdistance,source)))
 				listeners -= listen*/
 		listeners = listeners & hearers(maxdistance,turf_source)*/
-	for(var/mob/M as anything in listeners)
-		if(!M || !M.client)
-			continue
-		var/turf/T = get_turf(M)
-		if(!T)
-			continue
-		var/area/A = T.loc
-		if((A.soundproofed || area_source.soundproofed) && (A != area_source))
-			continue
-		//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
+	for(var/atom/U as anything in listeners)
+		if(istype(U,/mob))
+			var/mob/M = U
+			if(!M || !M.client)
+				continue
+			var/turf/T = get_turf(M)
+			if(!T)
+				continue
+			var/area/A = T.loc
+			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+				continue
+			//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
 
-		//CHOMPEdit Begin
+			//CHOMPEdit Begin
 
-		if(!T || T.z != turf_source.z) //^ +1
-			continue
-		if(get_dist(T, turf_source) > maxdistance)
-			continue
-		if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
-			continue
+			if(!T || T.z != turf_source.z) //^ +1
+				continue
+			if(get_dist(T, turf_source) > maxdistance)
+				continue
+			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
+				continue
 
-		M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
+			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
+
+		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
+		else if(istype(U,/obj/vehicle/has_interior/controller))
+			// Already a sound forwarded to the interior of a vehicle, ignore me!
+			// Globals are heard over all maps anyway, so don't forward either!
+			if(is_global || istype(source,/obj/machinery/computer/vehicle_interior_console))
+				continue
+
+			var/obj/vehicle/has_interior/controller/V = U
+			var/turf/T = get_turf(V)
+			if(!T)
+				continue
+
+			var/area/A = V.loc
+			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+				continue
+
+			if(!T || T.z != turf_source.z) //^ +1
+				continue
+
+			var/distance = get_dist(T, turf_source)
+			if(distance > maxdistance)
+				continue
+			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
+				continue
+
+			if(V.interior_helm != null && vol > 0)
+				playsound(V.interior_helm,soundin, vol * 0.5 * (1 - (distance / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
+		// Outpost 21 addition end
 
 /mob/proc/playsound_local(turf/turf_source, soundin, vol as num, vary, frequency, falloff, is_global, channel = 0, pressure_affected = TRUE, sound/S, preference, volume_channel = null)
 	if(!client || ear_deaf > 0)
