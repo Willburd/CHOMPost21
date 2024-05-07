@@ -18,7 +18,7 @@
 	//hostile = 0
 	faction = "neutral"
 
-/mob/living/simple_mob/animal/synx/ai/pet/pet/diablo
+/mob/living/simple_mob/animal/synx/ai/pet/diablo
 	name = "Diablo"
 	desc = "A cold blooded, genderless, parasitic eel from the more distant and stranger areas of the cosmos. grey, perpetually grinning and possessing a hunger as enthusiastic and endless as humanity's sense of exploration. It has a tracking collar that doesn't seem to work."
 	icon_state = "synx_diablo_living"
