@@ -1,9 +1,9 @@
 // Detects reagents inside most containers, and acts as an infinite identification system for reagent-based unidentified objects.
 
-/obj/machinery/chemical_analyzer
-	name = "chem analyzer"
-	desc = "Used to precisely scan chemicals and other liquids inside various containers. \
-	It may also identify the liquid contents of unknown objects."
+/obj/machinery/chemical_analyzer_pro
+	name = "chem analyzer PRO"
+	desc = "New and improved! Used to precisely scan chemicals and other liquids inside various containers. \
+	It can also identify the liquid contents of unknown objects and their chemical breakdowns."
 	description_info = "This machine will try to tell you what reagents are inside of something capable of holding reagents. \
 	It is also used to 'identify' specific reagent-based objects with their properties obscured from inspection by normal means."
 	icon = 'icons/obj/chemical.dmi'
@@ -15,10 +15,10 @@
 	clicksound = "button"
 	var/analyzing = FALSE
 
-/obj/machinery/chemical_analyzer/update_icon()
+/obj/machinery/chemical_analyzer_pro/update_icon()
 	icon_state = "chem_analyzer[analyzing ? "-working":""]"
 
-/obj/machinery/chemical_analyzer/attackby(obj/item/I, mob/living/user)
+/obj/machinery/chemical_analyzer_pro/attackby(obj/item/I, mob/living/user)
 	if(!istype(I))
 		return ..()
 

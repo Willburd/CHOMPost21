@@ -491,7 +491,7 @@
 "ww" = (/obj/item/weapon/bananapeel,/turf/simulated/floor/carpet/gaycarpet,/area/planet/clown)
 "wx" = (/obj/structure/table/steel_reinforced,/obj/item/weapon/storage/toolbox/syndicate/powertools,/obj/item/clothing/glasses/welding,/turf/unsimulated/floor{dir = 5; icon_state = "vault"},/area/wizard_station)
 "wz" = (/obj/structure/grille{desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife."; health = 25; name = "Reinforced Grille"},/obj/structure/window/phoronreinforced{dir = 8},/obj/structure/window/phoronreinforced{dir = 4},/obj/structure/window/phoronreinforced,/obj/machinery/door/blast/regular{id = "skipjackshutters"; name = "Skipjack Blast Shielding"},/obj/structure/cable/cyan,/turf/simulated/shuttle/floor/alienplating,/area/shuttle/skipjack)
-"wM" = (/obj/machinery/chemical_analyzer,/obj/structure/table/alien,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
+"wM" = (/obj/machinery/chemical_analyzer_pro,/obj/structure/table/alien,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
 "wP" = (/obj/machinery/chemical_dispenser/full,/obj/structure/table/alien,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
 "wR" = (/turf/simulated/shuttle/wall/alien,/area/syndicate_mothership{name = "\improper Raider Base"})
 "wS" = (/obj/machinery/chem_master,/obj/structure/table/alien,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
