@@ -16,10 +16,12 @@
 	var/supported = 0
 	var/active = 0
 	var/list/resource_field = list()
+	var/list/gas_field = list() // Outpost 21 edit - gas drilling
 	var/obj/item/device/radio/intercom/faultreporter
 	var/drill_range = 5
 	var/offset = 2
 	var/current_capacity = 0
+	var/drill_moles_per_tick = 0 // Outpost 21 edit - gas drilling
 
 	var/list/stored_ore = list(
 		"sand" = 0,
@@ -154,7 +156,18 @@
 	if(istype(get_turf(src), /turf/simulated/mineral))
 		var/turf/simulated/mineral/M = get_turf(src)
 		M.GetDrilled()
+	// Outpost 21 edit begin -extract gasses!
+	else if(istype(get_turf(src), /turf/simulated/floor/gas_crack))
+		if(gas_field.len)
+			//Create gas mixture to hold data for passing
+			var/datum/gas_mixture/GM = new
+			for(var/gas in gas_field)
+				GM.adjust_multi(gas, drill_moles_per_tick)
+			GM.temperature = 423  // ~150C
 
+			var/atom/location = src.loc
+			location.assume_air(GM)
+	// Outpost 21 edit end
 	else if(istype(get_turf(src), /turf/simulated))
 		var/turf/simulated/T = get_turf(src)
 		T.ex_act(2.0)
@@ -212,7 +225,8 @@
 			harvesting.has_resources = 0
 			harvesting.resources = null
 			resource_field -= harvesting
-	else
+
+	else if(!gas_field.len) // Outpost 21 edit - won't stop digging if gas pressure is detected
 		active = 0
 		need_player_check = 1
 		update_icon()
@@ -369,7 +383,9 @@
 /obj/machinery/mining/drill/proc/get_resource_field()
 
 	resource_field = list()
+	gas_field = list() // Outpost 21 edit - gas mining
 	need_update_field = 0
+	drill_moles_per_tick = 0 // Outpost 21 edit - gas mining
 
 	var/turf/T = get_turf(src)
 	if(!istype(T)) return
@@ -383,8 +399,24 @@
 			if(!istype(mine_turf, /turf/space/))
 				if(mine_turf && mine_turf.has_resources)
 					resource_field += mine_turf
-
-	if(!resource_field.len)
+				// Outpost 21 edit begin - gas mining
+				if(istype(mine_turf,/turf/simulated/floor/gas_crack))
+					drill_moles_per_tick += 2
+					// Get gasses the cracks around us could give!
+					if(mine_turf.oxygen && !("oxygen" in gas_field))
+						gas_field.Add("oxygen")
+					if(mine_turf.nitrogen && !("nitrogen" in gas_field))
+						gas_field.Add("nitrogen")
+					if(mine_turf.carbon_dioxide && !("carbon_dioxide" in gas_field))
+						gas_field.Add("carbon_dioxide")
+					if(mine_turf.phoron && !("phoron" in gas_field))
+						gas_field.Add("phoron")
+					if(mine_turf.nitrous_oxide && !("nitrous_oxide" in gas_field))
+						gas_field.Add("nitrous_oxide")
+					if(mine_turf.methane && !("methane" in gas_field))
+						gas_field.Add("methane")
+				// Outpost 21 edit end
+	if(!resource_field.len && !gas_field.len) // Outpost 21 edit - gas mining
 		system_error("Resources depleted.")
 
 /obj/machinery/mining/drill/proc/use_cell_power()
