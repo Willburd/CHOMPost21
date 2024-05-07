@@ -319,5 +319,16 @@
 	icon_state = "redtwo"
 	item_state = "retro"
 
+// Outpost 21 edit begin - Lasertag omni
 /obj/item/weapon/gun/energy/lasertag/omni
+	icon_state = "omnitag"
+	item_state = "omnitag"
 	projectile_type = /obj/item/projectile/beam/lasertag/omni
+	required_vest = /obj/item/clothing/suit/omnitag
+	fire_delay = 10
+
+	firemodes = list(
+		list(mode_name="instagib rules", fire_delay=12, projectile_type=/obj/item/projectile/beam/lasertag/omni, charge_cost = 240),
+		list(mode_name="multi-hit rules", fire_delay=5, projectile_type=/obj/item/projectile/beam/lasertag/omni/multihit, charge_cost = 120),
+		)
+// Outpost 21 edit end

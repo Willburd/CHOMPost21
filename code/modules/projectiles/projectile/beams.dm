@@ -236,7 +236,7 @@
 /obj/item/projectile/beam/lasertag/blue/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
+		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag) || istype(M.wear_suit, /obj/item/clothing/suit/redtag)) // Outpost 21 edit - Omnitag
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
 			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
@@ -252,7 +252,18 @@
 /obj/item/projectile/beam/lasertag/blue/multihit/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
+		// Outpost 21 edit begin - Omnitag
+		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag))
+			var/obj/item/clothing/suit/omnitag/S = M.wear_suit
+			if (S.lasertag_health <= 1)
+				M.Weaken(5)
+				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				S.lasertag_health = initial(S.lasertag_health)
+			else
+				S.lasertag_health--
+				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+		// Outpost 21 edit end
+		else if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
 			var/obj/item/clothing/suit/redtag/S = M.wear_suit
 			if (S.lasertag_health <= 1)
 				M.Weaken(5)
@@ -271,7 +282,7 @@
 /obj/item/projectile/beam/lasertag/red/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
+		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag) || istype(M.wear_suit, /obj/item/clothing/suit/bluetag)) // Outpost 21 edit - Omnitag
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
 			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
@@ -287,6 +298,17 @@
 /obj/item/projectile/beam/lasertag/red/multihit/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
+		// Outpost 21 edit begin - Omnitag
+		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag))
+			var/obj/item/clothing/suit/omnitag/S = M.wear_suit
+			if (S.lasertag_health <= 1)
+				M.Weaken(5)
+				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				S.lasertag_health = initial(S.lasertag_health)
+			else
+				S.lasertag_health--
+				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+		// Outpost 21 edit end
 		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
 			var/obj/item/clothing/suit/bluetag/S = M.wear_suit
 			if(S.lasertag_health <= 1)
@@ -300,7 +322,8 @@
 
 /obj/item/projectile/beam/lasertag/omni//A laser tag bolt that stuns EVERYONE
 	icon_state = "omnilaser"
-	light_color = "#00C6FF"
+	// light_color = "#00C6FF" // Outpost 21 edit - Use purble
+	light_color = "#AA24AF"
 	hud_state = "monkey"
 
 	muzzle_type = /obj/effect/projectile/muzzle/laser_omni
@@ -310,9 +333,53 @@
 /obj/item/projectile/beam/lasertag/omni/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		if((istype(M.wear_suit, /obj/item/clothing/suit/bluetag))||(istype(M.wear_suit, /obj/item/clothing/suit/redtag)))
+		if((istype(M.wear_suit, /obj/item/clothing/suit/omnitag))||(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))||(istype(M.wear_suit, /obj/item/clothing/suit/redtag)))
 			M.Weaken(5)
+			// CHOMPEdit Start - The thing just to drop the ball if hit
+			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+				M.unEquip(M.l_hand)
+			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+				M.unEquip(M.r_hand)
+			// CHOMPEdit End
 	return 1
+
+// Outpost 21 edit begin - Multihit omnitag
+/obj/item/projectile/beam/lasertag/omni/multhit
+	name = "omni multi-hit lasertag beam"
+
+/obj/item/projectile/beam/lasertag/omni/multihit/on_hit(var/atom/target, var/blocked = 0)
+	if(ishuman(target))
+		var/mob/living/carbon/human/M = target
+		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag))
+			var/obj/item/clothing/suit/omnitag/S = M.wear_suit
+			if (S.lasertag_health <= 1)
+				M.Weaken(5)
+				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				S.lasertag_health = initial(S.lasertag_health)
+			else
+				S.lasertag_health--
+				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+		if(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))
+			var/obj/item/clothing/suit/bluetag/S = M.wear_suit
+			if(S.lasertag_health <= 1)
+				M.Weaken(5)
+				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				S.lasertag_health = initial(S.lasertag_health)
+			else
+				S.lasertag_health--
+				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+		if(istype(M.wear_suit, /obj/item/clothing/suit/redtag))
+			var/obj/item/clothing/suit/redtag/S = M.wear_suit
+			if(S.lasertag_health <= 1)
+				M.Weaken(5)
+				to_chat(M,"<span class='warning'>You have been defeated!</span>")
+				S.lasertag_health = initial(S.lasertag_health)
+			else
+				S.lasertag_health--
+				to_chat(M,"<span class='warning'>Danger! You have [num2text(S.lasertag_health)] hits remaining!</span>")
+	return 1
+
+// Outpost 21 edit end
 
 /obj/item/projectile/beam/sniper
 	name = "sniper beam"

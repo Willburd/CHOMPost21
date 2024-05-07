@@ -111,3 +111,10 @@
 	light_power = 3
 	light_color = "#FFFFFF"
 //CHOMPStation add end <3
+// Outpost 21 edit begin - laser tag
+/obj/effect/projectile/impact/laser_omni_tag
+	icon_state = "impact_darkb"
+	light_range = 2
+	light_power = 0.5
+	light_color = "#AA24AF"
+// Outpost 21 edit end
