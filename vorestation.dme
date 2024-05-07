@@ -5040,6 +5040,7 @@
 #include "modular_chomp\code\modules\mob\living\silicon\robot\sprites\science.dm"
 #include "modular_chomp\code\modules\mob\living\silicon\robot\sprites\security.dm"
 #include "modular_chomp\code\modules\mob\living\simple_animal\aliens\synx.dm"
+#include "modular_chomp\code\modules\mob\living\simple_animal\aliens\synx_op.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\butchering.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\catslug.dm"
 #include "modular_chomp\code\modules\mob\living\simple_mob\donteatbossmonsters.dm"
