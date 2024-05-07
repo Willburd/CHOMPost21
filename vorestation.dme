@@ -2893,6 +2893,7 @@
 #include "code\modules\keybindings\setup.dm"
 #include "code\modules\library\lib_items.dm"
 #include "code\modules\library\lib_machines.dm"
+#include "code\modules\library\lib_machines_op.dm"
 #include "code\modules\library\lib_readme.dm"
 #include "code\modules\library\hardcode_library\_library.dm"
 #include "code\modules\library\hardcode_library\fiction\APsychonaut.dm"

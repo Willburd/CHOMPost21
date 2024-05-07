@@ -1,0 +1,250 @@
+/*
+ * Library Public Computer
+ * Outpost 21 edit - Complete recode of this into a search engine for recipes and reagents
+ */
+/obj/machinery/librarywikicomp
+	name = "datacore computer"
+	icon = 'icons/obj/library.dmi'
+	icon_state = "computer"
+	anchored = TRUE
+	density = TRUE
+
+	desc = "Used for research, I swear!"
+
+	var/doc_title = "Click a search entry!"
+	var/doc_body = ""
+	var/searchmode = null
+	var/appliance = null //sublists for food menu
+	var/crash = FALSE
+
+	var/current_ad1 = ""
+	var/current_ad2 = ""
+
+/obj/machinery/librarywikicomp/Initialize()
+	. = ..()
+	GLOB.game_wiki.init_wiki_data() // self-prevents multiple reinitilizations
+	current_ad1 = get_ad()
+	current_ad2 = get_ad()
+
+/obj/machinery/librarywikicomp/attack_hand(mob/user)
+	if(..())
+		return 1
+	if(crash)
+		user.visible_message("[user] performs percussive maintenance on \the [src].", "You try to smack some sense into \the [src].")
+		if(prob(10))
+			crash = FALSE
+	if(!crash)
+		tgui_interact(user)
+		playsound(src, "keyboard", 40) // into console
+
+/obj/machinery/librarywikicomp/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "PublicLibrary", name)
+		ui.open()
+
+/obj/machinery/librarywikicomp/tgui_data(mob/user)
+	var/data[0]
+	if(GLOB.game_wiki)
+		if(!crash)
+			// search page
+			data["errorText"] = ""
+			data["searchmode"] = searchmode
+			data["ad_string1"] = current_ad1
+			data["ad_string2"] = current_ad2
+			// get searches
+			data["search"] = list()
+			data["appliance"] = appliance
+			if(searchmode == "Food Recipes")
+				if(appliance)
+					data["search"] = GLOB.game_wiki.searchcache_foodrecipe[appliance]
+				else
+					var/list/options = list()
+					for(var/app in list("Simple","Microwave","Fryer","Oven","Grill","Candy Maker","Cereal Maker"))
+						if(!isnull(GLOB.game_wiki.searchcache_foodrecipe["[app]"]))
+							options.Add("[app]")
+					data["search"] = options
+			if(searchmode == "Drink Recipes")
+				data["search"] = GLOB.game_wiki.searchcache_drinkrecipe
+			if(searchmode == "Chemistry")
+				data["search"] = GLOB.game_wiki.searchcache_chemreact
+			if(searchmode == "Catalogs")
+				data["search"] = GLOB.game_wiki.searchcache_catalogs
+			if(searchmode == "Materials")
+				data["search"] = GLOB.game_wiki.searchcache_material
+			if(searchmode == "Particle Physics")
+				data["search"] = GLOB.game_wiki.searchcache_smasher
+			if(searchmode == "Ores")
+				data["search"] = GLOB.game_wiki.searchcache_ore
+
+			// display message
+			data["title"] = doc_title
+			data["body"] = doc_body
+			data["print"] = (doc_body && length(doc_body) > 0)
+		else
+			// intentional TGUI crash, amazingly awful
+			data["searchmode"] = "Error"
+			data["search"] = -1
+	else
+		data["errorText"] = "Database unreachable."
+	return data
+
+/obj/machinery/librarywikicomp/tgui_act(action, params)
+	if(..())
+		return TRUE
+	add_fingerprint(usr)
+	playsound(src, "keyboard", 40) // into console
+
+	current_ad1 = get_ad()
+	current_ad2 = get_ad()
+
+	switch(action)
+		if("closesearch")
+			if(!crash)
+				searchmode = null
+				doc_title = "Click a search entry!"
+				doc_body = ""
+			. = TRUE
+
+		if("closeappliance")
+			if(!crash)
+				doc_title = "Click a search entry!"
+				doc_body = ""
+				appliance = null
+			. = TRUE
+
+		if("foodsearch")
+			if(!crash)
+				searchmode = "Food Recipes"
+			. = TRUE
+
+		if("drinksearch")
+			if(!crash)
+				searchmode = "Drink Recipes"
+			. = TRUE
+
+		if("oresearch")
+			if(!crash)
+				searchmode = "Ores"
+			. = TRUE
+
+		if("matsearch")
+			if(!crash)
+				searchmode = "Materials"
+			. = TRUE
+
+		if("smashsearch")
+			if(!crash)
+				searchmode = "Particle Physics"
+			. = TRUE
+
+		if("chemsearch")
+			if(!crash)
+				searchmode = "Chemistry"
+			. = TRUE
+
+		if("catalogsearch")
+			if(!crash)
+				searchmode = "Catalogs"
+			. = TRUE
+
+		if("crash")
+			// intentional TGUI crash, amazingly awful
+			if(!crash)
+				crash = TRUE
+				spawn(rand(1000,4000))
+					// crashes till it fixes itself
+					crash = FALSE
+			. = TRUE
+
+		if("print")
+			if(!crash && doc_title && doc_body)
+				visible_message("<span class='notice'>[src] rattles and prints out a sheet of paper.</span>")
+				// playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, 1)
+
+				var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(loc)
+				P.name = doc_title
+				P.info = doc_body
+			. = TRUE
+
+		// final search
+		if("search")
+			if(!crash)
+				var/search = params["data"]
+				var/datum/internal_wiki/page/P
+				var/setpage = TRUE
+				if(searchmode == "Food Recipes")
+					if(!appliance)
+						appliance = params["data"] // have not selected it yet
+						setpage = FALSE
+					else
+						P = GLOB.game_wiki.foodrecipe[search]
+				if(searchmode == "Drink Recipes")
+					P = GLOB.game_wiki.drinkrecipe[search]
+				if(searchmode == "Chemistry")
+					P = GLOB.game_wiki.chemreact[search]
+				if(searchmode == "Catalogs")
+					P = GLOB.game_wiki.catalogs[search]
+				if(searchmode == "Materials")
+					P = GLOB.game_wiki.materials[search]
+				if(searchmode == "Particle Physics")
+					P = GLOB.game_wiki.smashers[search]
+				if(searchmode == "Ores")
+					P = GLOB.game_wiki.ores[search]
+
+				if(setpage)
+					if(P)
+						doc_title = P.title
+						doc_body = P.get_data()
+					else
+						doc_title = "Error"
+						doc_body = "Invalid data."
+			. = TRUE
+
+/obj/machinery/librarywikicomp/proc/get_ad()
+	switch(rand(1,20))
+		if(1)
+			return "Inferior ears? Teshari enhancement surgeries might be for you!"
+		if(2)
+			return "Phoron huffers anonymous group chat. Join Today!"
+		if(3)
+			return "Hot and single Vox raiders near your system!"
+		if(4)
+			return "Need company? Holographic NIF friends! FREE DOWNLOAD!"
+		if(5)
+			return "LostSpagetti.sol your one stop SYNX DATING website!"
+		if(6)
+			return "HONK.bonk clown-only social media. Sign up TODAY!"
+		if(7)
+			return "FREE ORGANS! FREE ORGANS! FREE ORGANS! Terms apply."
+		if(8)
+			return "Smile.me.com.net.skrell.node.exe.js DOWNLOAD NOW!"
+		if(9)
+			return "Bankrupt? We can help! Buy uranium coins today!"
+		if(10)
+			return "CONGRATULATIONS, you're our [rand(1,10000)]TH visitor! DOWNLOAD!"
+		if(11)
+			return "Your system is out of date, DOWNLOAD DRIVERS!"
+		if(12)
+			return "Ms.Kitty can't hang in there long, click here to support FELINE INDEPENDENCE!"
+		if(13)
+			return "Cortical borer therapy! Treats anxiety, stress, and impending sense of univeral collapse!"
+		if(14)
+			return "Help I licked the supermatter! And other strange stories from Nanotrasen. FREE PDF!"
+		if(15)
+			return "TIME IS COMING TO AN END, BUY GOLD NOW!"
+		if(16)
+			return "Your own pet clown? It sounds too REAL to be TRUE! VIEW ARTICLE!"
+		if(17)
+			return "Are you a BIGSHOT? Investment opportunities inside!"
+		if(18)
+			return "Spacestation13.exe FREE DOWNLOAD NOW!"
+		if(19)
+			return "Bored and alone? Date a wizard today! WIZZBIZZ.KAZAM!"
+		else
+			return "Hot skrell babes in your area!"
+
+// mapper varient for dorms and residences
+/obj/machinery/librarywikicomp/personal
+	name = "personal datacore computer"
+	desc = "Have you Bingled THAT today?"
