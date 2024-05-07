@@ -146,28 +146,31 @@
 */
 	if(requires_wield && !wielded)
 		return
-	if(!proximity_flag && charged)//Mark a target, or mine a tile.
-		var/turf/proj_turf = user.loc
-		if(!isturf(proj_turf))
+	if(!(user.a_intent == I_HELP && user.is_preference_enabled(/datum/client_preference/safefiring))) // outpost 21 edit - holy shit this thing was silly without a safety
+		if(!proximity_flag && charged)//Mark a target, or mine a tile.
+			var/turf/proj_turf = user.loc
+			if(!isturf(proj_turf))
+				return
+			var/obj/item/projectile/destabilizer/D = new /obj/item/projectile/destabilizer(proj_turf)
+	/*
+			for(var/t in trophies)
+				var/obj/item/crusher_trophy/T = t
+				T.on_projectile_fire(D, user)
+	*/
+			D.preparePixelProjectile(target, user, clickparams)
+			D.firer = user
+			D.hammer_synced = src
+			playsound(user, 'sound/weapons/plasma_cutter.ogg', 100, 1)
+			D.fire()
+			charged = FALSE
+			update_icon()
+			addtimer(CALLBACK(src, PROC_REF(Recharge)), charge_time)
+			// * (user?.ConflictElementCount(CONFLICT_ELEMENT_CRUSHER) || 1 - tentatively commented out
 			return
-		var/obj/item/projectile/destabilizer/D = new /obj/item/projectile/destabilizer(proj_turf)
-/*
-		for(var/t in trophies)
-			var/obj/item/crusher_trophy/T = t
-			T.on_projectile_fire(D, user)
-*/
-		D.preparePixelProjectile(target, user, clickparams)
-		D.firer = user
-		D.hammer_synced = src
-		playsound(user, 'sound/weapons/plasma_cutter.ogg', 100, 1)
-		D.fire()
-		charged = FALSE
-		update_icon()
-		addtimer(CALLBACK(src, PROC_REF(Recharge)), charge_time)
-		// * (user?.ConflictElementCount(CONFLICT_ELEMENT_CRUSHER) || 1 - tentatively commented out
-		return
-	if(proximity_flag && isliving(target))
-		detonate(target, user)
+		if(proximity_flag && isliving(target))
+			detonate(target, user)
+	else
+		to_chat(user, "<span class='warning'>You refrain from firing \the [src] as your intent is set to help.</span>")
 
 /obj/item/weapon/kinetic_crusher/proc/detonate(mob/living/L, mob/living/user, thrown = FALSE)
 	var/datum/modifier/crusher_mark/CM = L.get_modifier_of_type(/datum/modifier/crusher_mark)
