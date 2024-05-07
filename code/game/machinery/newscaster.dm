@@ -96,7 +96,8 @@
 	FC.messages += newMsg
 	newMsg.parent_channel = FC
 	FC.update()
-	alert_readers(FC.announcement)
+	if(FC.announcement) // Outpost 21 edit - announce only if needed
+		alert_readers(FC.announcement)
 
 /datum/feed_network/proc/alert_readers(var/annoncement)
 	for(var/obj/machinery/newscaster/NEWSCASTER in GLOB.allCasters)
@@ -211,7 +212,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 
 	if(hitstaken > 0) //Cosmetic damage overlay
 		add_overlay("crack[hitstaken]")
-	
+
 	icon_state = "newscaster_normal"
 	add_overlay(emissive_appearance(icon, "newscaster_normal_ov"))
 	add_overlay(mutable_appearance(icon, "newscaster_normal_ov"))
@@ -272,7 +273,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 
 	if(!user.IsAdvancedToolUser())
 		return 0
-	
+
 	tgui_interact(user)
 
 /**
@@ -286,7 +287,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	temp = list(text = text, style = style)
 	if(update_now)
 		SStgui.update_uis(src)
-	
+
 /obj/machinery/newscaster/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
@@ -316,7 +317,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	data["wanted_issue"] = wanted_issue
 
 	data["securityCaster"] = !!securityCaster
-	
+
 	var/list/network_channels = list()
 	for(var/datum/feed_channel/FC in news_network.network_channels)
 		network_channels.Add(list(list(
@@ -365,6 +366,8 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 		if(!viewing_channel.censored)
 			for(var/datum/feed_message/M in viewing_channel.messages)
 				var/list/msgdata = list(
+					// Outpost 21 edit - Title
+					"title" = M.title,
 					"body" = M.body,
 					"img" = null,
 					"type" = M.message_type,
@@ -483,7 +486,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 			if(!paper_remaining)
 				set_temp("Unable to print newspaper. Insufficient paper. Please notify maintenance personnel to refill machine storage.", "danger", FALSE)
 				return TRUE
-			
+
 			print_paper()
 			set_temp("Printing successful. Please receive your newspaper from the bottom of the machine.", "success", FALSE)
 			return TRUE

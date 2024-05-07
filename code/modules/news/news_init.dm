@@ -1,8 +1,11 @@
 GLOBAL_DATUM_INIT(news_data, /datum/lore/news, new)
 
 /datum/feed_network/New()
-	CreateFeedChannel("Station Announcements", "NanoTrasen", 1, 1, "New Station Announcement Available")
+	//CreateFeedChannel("Station Announcements", "NanoTrasen", 1, 1, "New Station Announcement Available")
 	//CreateFeedChannel("Vir News Network", "Oculum Broadcast", 1, 1, "Updates from the Vir News Network!") //VOREStation Removal
+	// Outpost 21 edit - Use ours
+	CreateFeedChannel("Station Announcements", "Eshui Administration", 1, 1, "New Station Announcement Available")
+	CreateFeedChannel_FromFile("The Out-Post", "ESHUI Publishing Division", 'news_feed/outpost_vol_1.json')
 
 /datum/lore/news
 	var/datum/feed_channel/station_newspaper

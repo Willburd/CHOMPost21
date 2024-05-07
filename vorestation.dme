@@ -985,6 +985,7 @@
 #include "code\game\machinery\navbeacon.dm"
 #include "code\game\machinery\neonsign.dm"
 #include "code\game\machinery\newscaster.dm"
+#include "code\game\machinery\newscaster_op.dm"
 #include "code\game\machinery\nuclear_bomb.dm"
 #include "code\game\machinery\nuclear_bomb_op.dm"
 #include "code\game\machinery\nuke_cylinder_dispenser.dm"
