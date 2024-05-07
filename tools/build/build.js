@@ -202,7 +202,7 @@ export const DmTarget = new Juke.Target({
   inputs: [
     '_maps/map_files/generic/**',
     'maps/**/*.dm',
-    'maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
+    'maps/outpost21/**/*.dmm', // Placed here so it recompiles on map changes
     'maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
     'code/**',
     'html/**',
