@@ -42,25 +42,25 @@
 				security_level = SEC_LEVEL_YELLOW
 			if(SEC_LEVEL_VIOLET)
 				if(security_level < SEC_LEVEL_VIOLET)
-					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_violet_upto)]", "Attention! Alert level elevated to violet") // CHOMPEdit
+					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_violet_upto)]", "Attention! Alert level elevated to violet", new_sound = sound('sound/effects/alert_levels/red_alert.ogg')) // CHOMPEdit
 				else
 					security_announcement_down.Announce("[CONFIG_GET(string/alert_desc_violet_downto)]", "Attention! Alert level lowered to violet") // CHOMPEdit
 				security_level = SEC_LEVEL_VIOLET
 			if(SEC_LEVEL_ORANGE)
 				if(security_level < SEC_LEVEL_ORANGE)
-					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_orange_upto)]", "Attention! Alert level elevated to orange") // CHOMPEdit
+					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_orange_upto)]", "Attention! Alert level elevated to orange", new_sound = sound('sound/effects/alert_levels/red_alert.ogg')) // CHOMPEdit
 				else
 					security_announcement_down.Announce("[CONFIG_GET(string/alert_desc_orange_downto)]", "Attention! Alert level lowered to orange") // CHOMPEdit
 				security_level = SEC_LEVEL_ORANGE
 			if(SEC_LEVEL_BLUE)
 				if(security_level < SEC_LEVEL_BLUE)
-					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_blue_upto)]", "Attention! Alert level elevated to blue") // CHOMPEdit
+					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_blue_upto)]", "Attention! Alert level elevated to blue", new_sound = sound('sound/effects/alert_levels/red_alert.ogg')) // Outpost 21 edit
 				else
 					security_announcement_down.Announce("[CONFIG_GET(string/alert_desc_blue_downto)]", "Attention! Alert level lowered to blue") // CHOMPEdit
 				security_level = SEC_LEVEL_BLUE
 			if(SEC_LEVEL_RED)
 				if(security_level < SEC_LEVEL_RED)
-					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_red_upto)]", "Attention! Code red!", new_sound = sound('sound/effects/alert_levels/red_alert.ogg', volume = 75)) // CHOMPEdit
+					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_red_upto)]", "Attention! Code red!", new_sound = sound('sound/effects/alert_levels/outpost_red_alert.ogg', volume = 75)) // CHOMPEdit, Outpost 21 edit
 				else
 					security_announcement_down.Announce("[CONFIG_GET(string/alert_desc_red_downto)]", "Attention! Code red!") // CHOMPEdit
 				security_level = SEC_LEVEL_RED
