@@ -3172,6 +3172,7 @@
 #include "code\modules\mob\living\carbon\alien\alien.dm"
 #include "code\modules\mob\living\carbon\alien\alien_attacks.dm"
 #include "code\modules\mob\living\carbon\alien\alien_damage.dm"
+#include "code\modules\mob\living\carbon\alien\alien_op.dm"
 #include "code\modules\mob\living\carbon\alien\death.dm"
 #include "code\modules\mob\living\carbon\alien\emote.dm"
 #include "code\modules\mob\living\carbon\alien\life.dm"
