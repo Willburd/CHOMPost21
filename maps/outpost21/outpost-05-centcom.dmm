@@ -1301,7 +1301,7 @@
 "fBQ" = (/obj/structure/window/plastitanium{dir = 1},/obj/structure/window/plastitanium{dir = 8},/obj/effect/floor_decal/spline/plain{dir = 8},/obj/item/toy/plushie/borgplushie/drakiesec,/turf/simulated/floor/tiled/dark,/area/specialty/redspace)
 "fCA" = (/obj/effect/floor_decal/borderfloor{dir = 10},/obj/effect/floor_decal/corner/lightgrey/border{dir = 10},/turf/simulated/floor/tiled/dark,/area/specialty/redspace)
 "fCS" = (/obj/structure/curtain/open/shower/medical,/obj/structure/window/reinforced/tinted/frosted{dir = 8},/obj/machinery/shower,/obj/effect/floor_decal/spline/plain,/obj/effect/floor_decal/corner/blue/full{dir = 1},/turf/simulated/floor/tiled/kafel_full,/area/specialty/redspace)
-"fDl" = (/obj/effect/floor_decal/corner_techfloor_grid,/mob/living/simple_mob/vore/alienanimals/synx/ai/pet/diablo,/turf/simulated/floor/tiled/milspec,/area/specialty/redspace)
+"fDl" = (/obj/effect/floor_decal/corner_techfloor_grid,/mob/living/simple_mob/animal/synx/ai/pet/diablo,/turf/simulated/floor/tiled/milspec,/area/specialty/redspace)
 "fDr" = (/turf/simulated/floor/tiled/white,/area/centcom/bathroom)
 "fDM" = (/obj/machinery/door/airlock{name = "Unit 3"},/turf/simulated/floor/tiled/white,/area/centcom/bathroom)
 "fDW" = (/obj/structure/toilet{dir = 8},/turf/simulated/floor/tiled/white,/area/centcom/bathroom)
