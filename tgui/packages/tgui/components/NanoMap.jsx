@@ -159,8 +159,9 @@ export class NanoMap extends Component {
   }
 }
 
-const NanoMapMarker = (props) => {
+const NanoMapMarker = (props, context) => {
   const { x, y, zoom = 1, icon, tooltip, color, onClick } = props;
+  const { config } = useBackend(context);
 
   const handleOnClick = (e) => {
     pauseEvent(e);
