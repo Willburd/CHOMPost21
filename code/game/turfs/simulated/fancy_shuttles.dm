@@ -66,6 +66,13 @@ GLOBAL_LIST_EMPTY(fancy_shuttles)
 	take_damage(damage)
 	return damage
 
+// Outpost 21 edit begin - Half hulls
+/turf/simulated/wall/fancy_shuttle/low //you can see over it and it doesn't block air but you still cant walk over it
+	blocks_air = FALSE
+	opacity = FALSE
+	icon_state = "hull_low"
+// Outpost 21 edit end
+
 /turf/simulated/wall/fancy_shuttle/nondense
 	density = FALSE
 	blocks_air = FALSE

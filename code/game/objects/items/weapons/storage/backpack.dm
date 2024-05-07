@@ -57,13 +57,13 @@
 	name = "dufflebag of holding"
 	var/tilted = 0
 	icon_state = "holdingduffle"
-	
+
 /obj/item/weapon/storage/backpack/holding/duffle/Initialize()
 	. = ..()
 	if(prob(50))
 		icon_state = "[icon_state]_tilted"
 		tilted = 1
-	
+
 /obj/item/weapon/storage/backpack/holding/duffle/verb/tilt()
 	set name = "Adjust Duffelbag Angle"
 	set desc = "Adjust the angle of your dufflebag for cosmetic effect"
@@ -95,6 +95,7 @@
 		return FALSE
 	return ..()
 
+/* Outpost 21 edit - Removed this in favor of /obj/item/weapon/storage/bag/santabag
 /obj/item/weapon/storage/backpack/santabag
 	name = "\improper Santa's gift bag"
 	desc = "Space Santa uses this to deliver toys to all the nice children in space in Christmas! Wow, it's pretty big!"
@@ -103,6 +104,7 @@
 	w_class = ITEMSIZE_LARGE
 	max_w_class = ITEMSIZE_NORMAL
 	max_storage_space = ITEMSIZE_COST_NORMAL * 100 // can store a ton of shit!
+*/
 
 /obj/item/weapon/storage/backpack/cultpack
 	name = "trophy rack"
@@ -183,13 +185,13 @@
 	var/tilted = 0
 	var/can_tilt = 1
 	max_storage_space = INVENTORY_DUFFLEBAG_SPACE
-	
+
 /obj/item/weapon/storage/backpack/dufflebag/Initialize()
 	. = ..()
 	if(prob(50))
 		icon_state = "[icon_state]_tilted"
 		tilted = 1
-	
+
 /obj/item/weapon/storage/backpack/dufflebag/verb/tilt()
 	set name = "Adjust Duffelbag Angle"
 	set desc = "Adjust the angle of your dufflebag for cosmetic effect"
