@@ -1,4 +1,4 @@
-#define PHORONICS_TESTING 1
+#define PHORONICS_TESTING 0
 
 /datum/phororeaction
 	var/reactant_id = ""
