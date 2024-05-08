@@ -77,6 +77,8 @@
 
 	handle_vr_derez() // CHOMPedit
 
+	handle_dripping() // Outpost 21 edit
+
 /mob/living/proc/handle_breathing()
 	return
 

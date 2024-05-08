@@ -989,6 +989,40 @@
 			drowsyness = max(drowsyness, disable_severity)
 		if(species.allergen_reaction & AG_CONFUSE)
 			Confuse(disable_severity/4)
+		// outpost 21 addition begin - New allergen reactions!
+		if(species.allergen_reaction & AG_GIBBING)
+			if(prob(disable_severity / 8))
+				spawn(1)
+					emote(pick("whimper","shiver"))
+				spawn(3)
+					emote(pick("whimper","belch","shiver"))
+				spawn(4)
+					emote(pick("whimper","shiver"))
+				spawn(6)
+					emote(pick("belch"))
+					gib()
+			else if(prob(disable_severity))
+				emote(pick("whimper","belch","belch","belch","choke","shiver"))
+				Weaken(disable_severity / 3)
+		if(species.allergen_reaction & AG_SNEEZE)
+			if(prob(disable_severity/3))
+				if(prob(20))
+					to_chat(src, "<span class='warning'>You go to sneeze, but it gets caught in your sinuses!</span>")
+				else if(prob(80))
+					if(prob(30))
+						to_chat(src, "<span class='warning'>You feel like you are about to sneeze!</span>")
+					spawn(5)
+						emote("sneeze")
+						if(prob(23))
+							drop_item()
+		if(species.allergen_reaction & AG_COUGH)
+			if(prob(disable_severity/2))
+				emote(pick("cough","cough","cough","gasp","choke"))
+				if(prob(10))
+					drop_item()
+				if(prob(33))
+					adjustOxyLoss(damage_severity)
+		// outpost 21 addition end
 
 /mob/living/carbon/human/handle_environment(datum/gas_mixture/environment)
 	if(!environment)
@@ -1296,18 +1330,18 @@
 			for(var/obj/item/I in src)
 				if(I.contaminated)
 					if(check_belly(I)) continue //VOREStation Edit
-					if(src.species && src.species.get_bodytype() != "Vox" && src.species.get_bodytype() != "Shadekin")	//VOREStation Edit: shadekin
+					if(src.species && src.species.get_bodytype() != "Vox" && src.species.get_bodytype() != "Shadekin" && src.species.phoron_contact_mod > 0)	//VOREStation Edit: shadekin, Outpost 21 edit - phoron contact mod
 						// This is hacky, I'm so sorry.
 						if(I != l_hand && I != r_hand)	//If the item isn't in your hands, you're probably wearing it. Full damage for you.
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS
+							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * src.species.phoron_contact_mod  // Outpost 21 edit - phoron contact mod
 						else if(I == l_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
 							var/l_hand_blocked = 0
 							l_hand_blocked = 1-(100-getarmor(BP_L_HAND, "bio"))/100	//This should get a number between 0 and 1
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * l_hand_blocked
+							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * l_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit - phoron contact mod
 						else if(I == r_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
 							var/r_hand_blocked = 0
 							r_hand_blocked = 1-(100-getarmor(BP_R_HAND, "bio"))/100	//This should get a number between 0 and 1
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * r_hand_blocked
+							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * r_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit - phoron contact mod
 			if(total_phoronloss)
 				if(!(status_flags & GODMODE))
 					adjustToxLoss(total_phoronloss)

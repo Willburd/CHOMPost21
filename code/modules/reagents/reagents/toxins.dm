@@ -157,9 +157,9 @@
 /datum/reagent/toxin/phoron/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	M.adjust_fire_stacks(removed / 5)
-	if(alien == IS_VOX)
+	if(alien == IS_VOX || M.species.phoron_contact_mod == 0)
 		return
-	M.take_organ_damage(0, removed * 0.1) //being splashed directly with phoron causes minor chemical burns
+	M.take_organ_damage(0, removed * 0.1 * M.species.phoron_contact_mod) //being splashed directly with phoron causes minor chemical burns. Outpost 21 edit - Phoron contact mod
 	if(prob(50))
 		M.pl_effects()
 

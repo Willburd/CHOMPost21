@@ -99,10 +99,10 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 		return
 
 	//Burn skin if exposed.
-	if(vsc.plc.SKIN_BURNS && (species.breath_type != "phoron"))
+	if(vsc.plc.SKIN_BURNS && (species.breath_type != "phoron") && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
 		if(!pl_head_protected() || !pl_suit_protected())
-			burn_skin(0.75)
-			if(prob(20)) 
+			burn_skin(0.75 * species.phoron_contact_mod) // Outpost 21 edit - phoron contact mod
+			if(prob(20))
 				to_chat(src, "<span class='danger'>Your skin burns!</span>")
 			updatehealth()
 
@@ -131,8 +131,8 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 			burn_eyes()
 
 	//Genetic Corruption
-	if(vsc.plc.GENETIC_CORRUPTION && (species.breath_type != "phoron"))
-		if(rand(1,10000) < vsc.plc.GENETIC_CORRUPTION)
+	if(vsc.plc.GENETIC_CORRUPTION && (species.breath_type != "phoron") && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
+		if(rand(1,10000) < vsc.plc.GENETIC_CORRUPTION * species.phoron_contact_mod) // Outpost 21 edit - phoron contact mod
 			randmutb(src)
 			to_chat(src, "<span class='danger'>High levels of toxins cause you to spontaneously mutate!</span>")
 			domutcheck(src,null)

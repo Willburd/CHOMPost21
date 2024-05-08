@@ -438,10 +438,8 @@ var/datum/planet/muriki/planet_muriki = null
 	if(istype(H))
 		if(H.mind && H.mind.changeling)
 			return
-		/* Outpost 21 todo - Enzyme immunity trait
 		if(H.species)
 			probmod = H.species.enzyme_contact_mod
-		*/
 		if(probmod == 0)
 			return
 		if(!prob(100 * probmod))
