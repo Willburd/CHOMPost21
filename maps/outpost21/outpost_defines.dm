@@ -14,13 +14,7 @@
 
 	lobby_icon = 'icons/misc/OUTPOST21.gif'
 	lobby_screens = list()
-
-	zlevel_datum_type = /datum/map_z_level/outpost
-
-	use_overmap = TRUE
-	overmap_z = Z_LEVEL_OUTPOST_MISC
-	overmap_size = 25
-	overmap_event_areas = 9
+	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	default_law_type = /datum/ai_laws/eshui_standard
 
@@ -28,6 +22,8 @@
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER))
+
+	zlevel_datum_type = /datum/map_z_level/outpost
 
 	station_name  = "ESHUI Atmospheric Terraforming Outpost 21"
 	station_short = "Outpost 21"
@@ -37,6 +33,9 @@
 	company_name  = "ESHUI"
 	company_short = "ES"
 	starsys_name  = "SL-340"
+	use_overmap = TRUE
+	overmap_size = 25
+	overmap_event_areas = 9
 
 	shuttle_docked_message = "The scheduled elevator to the %dock_name% has arrived at the station. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The crew transfer elevator has left the station. Estimate %ETA% until the elevator arrives at the %dock_name%."
@@ -46,8 +45,6 @@
 	emergency_shuttle_leaving_dock = "The emergency elevator has left the station. Estimate %ETA% until it arrives at the %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation elevator has been called. It will arrive at the departure bay in approximately %ETA%."
 	emergency_shuttle_recall_message = "The emergency elevator has been recalled."
-
-	unit_test_z_levels = list(Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID)
 
 	station_networks = list(
 							NETWORK_CARGO,
@@ -62,9 +59,9 @@
 							NETWORK_ROBOTS,
 							NETWORK_PRISON,
 							NETWORK_SECURITY,
-							NETWORK_INTERROGATION
+							NETWORK_INTERROGATION,
+							NETWORK_OUTSIDE
 							)
-
 	secondary_networks = list(
 							NETWORK_ERT,
 							NETWORK_MERCENARY,
@@ -74,8 +71,22 @@
 							NETWORK_ALARM_POWER,
 							NETWORK_ALARM_FIRE
 							)
-
+	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cyborg Storage")
+	default_skybox = /datum/skybox_settings/outpost21
+	unit_test_z_levels = list(Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID)
+	unit_test_exempt_areas = list()
+	unit_test_exempt_from_atmos = list()
+
+	planet_datums_to_make = list(/datum/planet/muriki)
+
+	overmap_z = Z_LEVEL_OUTPOST_MISC
+	map_levels = list(
+			Z_LEVEL_OUTPOST_BASEMENT,
+			Z_LEVEL_OUTPOST_SURFACE,
+			Z_LEVEL_OUTPOST_UPPER,
+			Z_LEVEL_OUTPOST_ASTEROID
+		)
 
 	ai_shell_restricted = TRUE
 	ai_shell_allowed_levels = list(
@@ -85,7 +96,6 @@
 		Z_LEVEL_OUTPOST_UPPER
 		)
 
-	planet_datums_to_make = list(/datum/planet/muriki)
 
 /datum/map/outpost/perform_map_generation()
 	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 180, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge, 100, 20, 370, 150)
@@ -194,12 +204,10 @@
 	return list(Z_LEVEL_OUTPOST_ASTEROID)
 
 
-
-
-
-
-
-
+// Skybox Settings
+/datum/skybox_settings/outpost21
+	icon_state = "dyable"
+	random_color = TRUE
 
 // For making the 6-in-1 holomap, we calculate some offsets
 #define OUTPOST21_MAP_SIZEX 400
