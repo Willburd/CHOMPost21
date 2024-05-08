@@ -81,6 +81,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/hugemushroomslice/Initialize()
 	. = ..()
 	reagents.add_reagent("psilocybin", 3)
+	reagents.add_reagent("fungi", 3) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/tomatomeat
 	name = "tomato slice"

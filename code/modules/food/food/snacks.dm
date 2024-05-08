@@ -1104,6 +1104,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/mushroomslice/Initialize()
 	. = ..()
 	reagents.add_reagent("psilocybin", 3)
+	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/tomatomeat
 	name = "tomato slice"
@@ -1568,6 +1569,7 @@
 	. = ..()
 	reagents.add_reagent("amatoxin", 3)
 	reagents.add_reagent("psilocybin", 1)
+	reagents.add_reagent("fungi", 2) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/plump_pie
 	name = "plump pie"
@@ -1578,6 +1580,10 @@
 	nutriment_amt = 8
 	nutriment_desc = list("heartiness" = 2, "mushroom" = 3, "pie" = 3)
 	bitesize = 2
+
+/obj/item/weapon/reagent_containers/food/snacks/plump_pie/Initialize()
+	. = ..()
+	reagents.add_reagent("fungi", 2) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/plump_pie/Initialize()
 	. = ..()
@@ -1867,6 +1873,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/spacylibertyduff/Initialize()
 	. = ..()
 	reagents.add_reagent("psilocybin", 6)
+	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/amanitajelly
 	name = "Amanita Jelly"
@@ -1883,6 +1890,7 @@
 	. = ..()
 	reagents.add_reagent("amatoxin", 6)
 	reagents.add_reagent("psilocybin", 3)
+	reagents.add_reagent("fungi", 2) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/poppypretzel
 	name = "Poppy pretzel"
@@ -2406,6 +2414,7 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/plumphelmetbiscuit/Initialize()
 	. = ..()
+	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
 	if(prob(10))
 		name = "exceptional plump helmet biscuit"
 		desc = "Microwave is taken by a fey mood! It has cooked an exceptional plump helmet biscuit!"
@@ -2717,6 +2726,7 @@
 	reagents.add_reagent("tomatojuice", 5)
 	reagents.add_reagent("imidazoline", 5)
 	reagents.add_reagent("water", 5)
+	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/bearstew
 	name = "bear stew"
@@ -3757,7 +3767,8 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza/Initialize()
 	. = ..()
-	reagents.add_reagent("protein", 5)
+	reagents.add_reagent("protein", 3)
+	reagents.add_reagent("fungi", 5) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/slice/mushroompizza
 	name = "Mushroompizza slice"
@@ -4429,6 +4440,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/skrellsnacks/Initialize()
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
+	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/unajerky
 	name = "Moghes Imported Sissalik Jerky"
@@ -6538,6 +6550,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/skrellsnacks/Initialize()
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
+	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/sosjerky
 	name = "Scaredy's Private Reserve Beef Jerky"

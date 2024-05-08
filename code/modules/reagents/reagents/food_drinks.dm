@@ -301,6 +301,15 @@
 	taste_description = "tofu"
 	allergen_type = ALLERGEN_BEANS //Made from soy beans
 
+//  Outpost 21 edit begin - actually functional mushroom allergy
+/datum/reagent/nutriment/protein/fungi
+	name = "fungal protein"
+	id = "fungi"
+	taste_description = "some sort of fungus"
+	color = "#979797"
+	allergen_type = ALLERGEN_FUNGI
+//  Outpost 21 edit end
+
 /datum/reagent/nutriment/protein/seafood
 	name = "seafood protein"
 	id = "seafood"
