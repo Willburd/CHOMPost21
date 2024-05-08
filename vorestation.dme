@@ -5201,6 +5201,7 @@
 #include "modular_chomp\maps\submaps\surface_submaps\wilderness\wilderness.dm"
 #include "modular_chomp\maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "modular_outpost\code\datums\internal_wiki.dm"
+#include "modular_outpost\code\datums\internal_wiki_spoilers.dm"
 #include "modular_outpost\code\datums\standard_operating_procedure.dm"
 #include "modular_outpost\code\datums\Outfits\jobs\stowaway.dm"
 #include "modular_outpost\code\game\jobs\job\stowaway.dm"
