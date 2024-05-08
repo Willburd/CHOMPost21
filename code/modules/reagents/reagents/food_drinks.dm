@@ -492,7 +492,7 @@
 	reagent_state = LIQUID
 	nutriment_factor = 2
 	color = "#792300"
-	allergen_type = ALLERGEN_BEANS //Soy (beans)
+	allergen_type = ALLERGEN_BEANS | ALLERGEN_SALT //Soy (beans) // Outpost 21 edit - allergens
 
 /datum/reagent/nutriment/vinegar
 	name = "Vinegar"
@@ -650,6 +650,7 @@
 	color = "#FFFFFF"
 	overdose = REAGENTS_OVERDOSE
 	ingest_met = REM
+	allergen_type = ALLERGEN_SALT // Outpost 21 edit - allergens
 
 /datum/reagent/sodiumchloride/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -974,7 +975,7 @@
 	if(alien == IS_SLIME && water_based)
 		M.adjustToxLoss(removed * 2)
 	*/ //VOREStation Removal End
-	
+
 /datum/reagent/drink/overdose(var/mob/living/carbon/M, var/alien) //Add special interactions here in the future if desired.
 	..()
 
@@ -3252,7 +3253,7 @@
 	glass_desc = "Damn, the bartender even stirred it, not shook it."
 
 	allergen_type = ALLERGEN_FRUIT //Made from gin(fruit) and vermouth(fruit)
-  
+
 /datum/reagent/ethanol/cuba_libre
 	name = "Cuba Libre"
 	id = "cubalibre"
@@ -3541,7 +3542,7 @@
 	glass_name = "margarita"
 	glass_desc = "On the rocks with salt on the rim. Arriba~!"
 
-	allergen_type = ALLERGEN_FRUIT //Made from lime juice(fruit)
+	allergen_type = ALLERGEN_FRUIT | ALLERGEN_SALT //Made from lime juice(fruit), Outpost 21 edit - allergens
 
 /datum/reagent/ethanol/mead
 	name = "Mead"
@@ -3611,6 +3612,8 @@
 
 	glass_name = "red mead"
 	glass_desc = "A true Viking's beverage, though its color is strange."
+
+	allergen_type = ALLERGEN_SALT // Outpost 21 edit - allergens
 
 /datum/reagent/ethanol/sbiten
 	name = "Sbiten"

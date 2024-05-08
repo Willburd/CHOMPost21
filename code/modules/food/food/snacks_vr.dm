@@ -402,6 +402,7 @@
 	bitesize = 3
 	reagents.add_reagent("capsaicin", 4)
 	reagents.add_reagent("protein", 4)
+	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 
 /obj/item/weapon/reagent_containers/food/snacks/sharkmeatcubes
 	name = "shark cubes"
@@ -562,6 +563,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/nachos/Initialize()
 	. = ..()
 	reagents.add_reagent("nutriment", 1)
+	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 	bitesize = 1
 
 /obj/item/weapon/reagent_containers/food/snacks/cheesenachos
@@ -575,6 +577,7 @@
 	. = ..()
 	reagents.add_reagent("nutriment", 5)
 	reagents.add_reagent("protein", 2)
+	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 	bitesize = 2
 
 /obj/item/weapon/reagent_containers/food/snacks/milosoup
