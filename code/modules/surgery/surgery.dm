@@ -183,22 +183,8 @@
 		if(!do_after(user, 3 SECONDS, M))
 			return 0
 
-	var/datum/surgery_step/selected_surgery
 	// Outpost 21 edit begin - Autodoc surgery selection
-	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
-		//More than one possible? Ask them which one.
-		if(available_surgeries.len > 1)
-			selected_surgery = tgui_input_list(user, "Select which surgery step you wish to perform", "Surgery Select", available_surgeries) //Shows the name in the list.
-		else
-			selected_surgery = pick(available_surgeries)
-	else
-		// autodoc coding horror
-		var/mob/living/carbon/human/monkey/auto_doc/D = user
-		var/obj/machinery/auto_doc/mach = D.owner_machine
-		for(var/surgery in available_surgeries)
-			if(surgery in mach.get_step_whitelist())
-				selected_surgery = surgery
-				break
+	var/datum/surgery_step/selected_surgery = autodoc_surgery_step_select( user, available_surgeries, "Select which surgery step you wish to perform", "Surgery Select")
 	// Outpost 21 edit end
 
 	if(isnull(selected_surgery)) //They clicked 'cancel'

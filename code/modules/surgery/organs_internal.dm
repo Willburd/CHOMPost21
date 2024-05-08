@@ -230,22 +230,11 @@
 			attached_organs[I.name] = organ // Outpost 21 edit - use Organ name
 
 	// Outpost 21 edit begin - Autodoc code, and use organs actual name for malignants
-	var/organ_to_remove
-	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
-		// normal player input
-		organ_to_remove = tgui_input_list(user, "Which organ do you want to prepare for removal?", "Organ Choice", attached_organs)
-	else
-		// autodoc code
-		var/mob/living/carbon/human/monkey/auto_doc/D = user
-		var/obj/machinery/auto_doc/mach = D.owner_machine
-		if(mach.internal_organ_target in attached_organs)
-			organ_to_remove = mach.internal_organ_target
-
+	var/organ_to_remove = autodoc_organ_select( user, target, attached_organs, "Which organ do you want to prepare for removal?", "Organ Choice" )
 	if(!organ_to_remove)
 		return 0
 	if(!attached_organs[organ_to_remove])
 		return 0
-
 	target.op_stage.current_organ = attached_organs[organ_to_remove]
 
 	return ..() && attached_organs[organ_to_remove]
@@ -320,27 +309,17 @@
 			removable_organs[I.name] = organ // Outpost 21 edit - use Organ name
 
 	// Outpost 21 edit begin - Autodoc code, and use organs actual name for malignants
-	var/organ_to_remove
-	if(istype(user,/mob/living/carbon/human/monkey/auto_doc))
-		// autodoc magic
-		var/mob/living/carbon/human/monkey/auto_doc/doc = user
-		var/obj/machinery/auto_doc/mach = doc.owner_machine
-		if(mach)
-			var/obj/item/organ/internal/I = target.internal_organs_by_name[mach.internal_organ_target]
-			if(istype(I) && (I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
-				organ_to_remove = I.name
-	else
-		// normal input
-		organ_to_remove = tgui_input_list(user, "Which organ do you want to remove?", "Organ Choice", removable_organs)
-
+	var/organ_to_remove = autodoc_organ_select( user, target, removable_organs, "Which organ do you want to remove?", "Organ Choice" )
 	if(!organ_to_remove) //They chose cancel!
 		to_chat(user, "<span class='notice'>You decide against preparing any organs for removal.</span>")
 		user.visible_message("<span class='filter_notice'>[user] starts pulling \the [tool] from [target]'s [affected].</span>", \
 		"<span class='filter_notice'>You start pulling \the [tool] from [target]'s [affected].</span>")
 		user.balloon_alert_visible("Starts pulling \the [tool] from [target]'s [affected]", "Pulling \the [tool] from \the [affected]") // CHOMPEdit
+		return
+	if(!removable_organs[organ_to_remove])
+		return
 
-	if(removable_organs[organ_to_remove])
-		target.op_stage.current_organ = removable_organs[organ_to_remove]
+	target.op_stage.current_organ = removable_organs[organ_to_remove]
 	// Outpost 21 edit end
 
 	user.visible_message("<span class='filter_notice'>[user] starts removing [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
@@ -506,19 +485,12 @@
 	for(var/organ in target.internal_organs_by_name)
 		var/obj/item/organ/I = target.internal_organs_by_name[organ]
 		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && !(I.robotic >= ORGAN_NANOFORM) && I.parent_organ == target_zone)
-			removable_organs |= organ
+			removable_organs[I.name] = organ // Outpost 21 edit - use Organ name
 
 	// Outpost 21 edit begin - Autodoc selection behavior
-	var/organ_to_replace
-	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
-		organ_to_replace = tgui_input_list(user, "Which organ do you want to reattach?", "Organ Choice", removable_organs)
-	else
-		if(removable_organs.len > 0)
-			organ_to_replace = pick(removable_organs)  // autodoc just picks any, because in most cases it will be the only one!
-
+	var/organ_to_replace = autodoc_organ_select( user, target, removable_organs, "Which organ do you want to reattach?", "Organ Choice" )
 	if(!organ_to_replace)
 		return 0
-
 	if(!removable_organs[organ_to_replace])
 		return 0
 

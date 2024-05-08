@@ -91,7 +91,7 @@
 	whitelisted_steps.Add("Clamp Bleeders")
 	whitelisted_steps.Add("Retract Skin")
 	whitelisted_steps.Add("Cauterize Incision")
-	whitelisted_steps.Add("Detatch Organ")
+	whitelisted_steps.Add("Detach Organ")
 	whitelisted_steps.Add("Remove Organ")
 	whitelisted_steps.Add("Replace Organ")
 	whitelisted_steps.Add("Attach Organ")
@@ -143,6 +143,9 @@
 
 /obj/machinery/auto_doc/attackby(obj/item/O, mob/user)
 	. = ..()
+	if(operation_active)
+		to_chat(user, "<span class='notice'>You cannot insert the [O.name] while the [src] is operating.</span>")
+		return
 	if(istype(O,/obj/item/organ/internal))
 		add_fingerprint(user)
 		user.drop_item(src)
@@ -319,9 +322,6 @@
 	flick("end",src)
 
 /obj/machinery/auto_doc/proc/insert_organ(mob/user as mob, var/obj/item/organ/O)
-	if(operation_active)
-		to_chat(user, "<span class='notice'>You cannot insert the [O.name] while the [src] is operating.</span>")
-		return
 	if(!O)
 		return
 	if(tools[TOOL_TRANSPLANT])
@@ -364,6 +364,38 @@
 		icon_state = "operate"
 	else
 		icon_state = "idle"
+
+/proc/autodoc_surgery_step_select( var/user, var/list/available_surgeries, var/window_desc, var/window_title )
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		//More than one possible? Ask them which one.
+		if(available_surgeries.len > 1)
+			return tgui_input_list(user, window_desc, window_title, available_surgeries) //Shows the name in the list.
+		else if(available_surgeries.len > 0)
+			return available_surgeries[1] // First!
+		else
+			return null
+	else
+		// autodoc coding horror
+		var/mob/living/carbon/human/monkey/auto_doc/D = user
+		var/obj/machinery/auto_doc/mach = D.owner_machine
+		for(var/surgery in available_surgeries)
+			if(surgery in mach.get_step_whitelist())
+				return surgery
+		return null
+
+/proc/autodoc_organ_select( var/user, var/mob/living/carbon/human/target, var/list/named_organ_to_tag_list, var/window_desc, var/window_title )
+	// named_organ_to_tag_list is in the format "organ's name" -> organ_tag. EX: "Liver" -> "liver"
+	if(istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		var/mob/living/carbon/human/monkey/auto_doc/D = user
+		var/obj/machinery/auto_doc/mach = D.owner_machine
+		// Get the name of the organ we're trying to handle
+		if(mach.internal_organ_target in named_organ_to_tag_list)
+			var/obj/item/organ/internal/I = target.internal_organs_by_name[mach.internal_organ_target]
+			return I.name
+		return null
+	else
+		// Get a user input if not autodoc
+		return tgui_input_list(user, window_desc, window_title, named_organ_to_tag_list)
 
 #undef TOOL_FIXVEIN
 #undef TOOL_BONEGEL
