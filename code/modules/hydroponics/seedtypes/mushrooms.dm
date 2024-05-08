@@ -5,7 +5,7 @@
 	seed_noun = "spores"
 	display_name = "chanterelle mushrooms"
 	mutants = list("reishi","amanita","plumphelmet")
-	chems = list("nutriment" = list(1,25))
+	chems = list("nutriment" = list(1,25), "fungi" = list(3,26)) // Outpost 21 edit - mushroom allergy
 	splat_type = /obj/effect/plant
 	kitchen_tag = "mushroom"
 
@@ -44,7 +44,7 @@
 	seed_name = "plump helmet"
 	display_name = "plump helmet mushrooms"
 	mutants = list("walkingmushroom","towercap")
-	chems = list("nutriment" = list(2,10))
+	chems = list("nutriment" = list(2,10), "fungi" = list(3,26)) // Outpost 21 edit - mushroom allergy
 	kitchen_tag = "plumphelmet"
 
 /datum/seed/mushroom/plump/New()
@@ -62,7 +62,7 @@
 	seed_name = "reishi"
 	display_name = "reishi"
 	mutants = list("libertycap","glowshroom")
-	chems = list("nutriment" = list(1,50), "psilocybin" = list(3,5))
+	chems = list("nutriment" = list(1,50), "psilocybin" = list(3,5), "fungi" = list(3,26)) // Outpost 21 edit - mushroom allergy
 
 /datum/seed/mushroom/hallucinogenic/New()
 	..()
@@ -80,7 +80,7 @@
 	seed_name = "liberty cap"
 	display_name = "liberty cap mushrooms"
 	mutants = null
-	chems = list("nutriment" = list(1), "stoxin" = list(3,3), "bliss" = list(1,25))
+	chems = list("nutriment" = list(1), "stoxin" = list(3,3), "bliss" = list(1,25), "fungi" = list(3,26)) // Outpost 21 edit - mushroom allergy
 
 /datum/seed/mushroom/hallucinogenic/strong/New()
 	..()
@@ -96,7 +96,7 @@
 	seed_name = "fly amanita"
 	display_name = "fly amanita mushrooms"
 	mutants = list("destroyingangel","plastic")
-	chems = list("nutriment" = list(1), "amatoxin" = list(3,3), "psilocybin" = list(1,25))
+	chems = list("nutriment" = list(1), "amatoxin" = list(3,3), "psilocybin" = list(1,25), "fungi" = list(3,26)) // Outpost 21 edit - mushroom allergy
 
 /datum/seed/mushroom/poison/New()
 	..()
@@ -114,7 +114,7 @@
 	seed_name = "destroying angel"
 	display_name = "destroying angel mushrooms"
 	mutants = null
-	chems = list("nutriment" = list(1,50), "amatoxin" = list(13,3), "psilocybin" = list(1,25))
+	chems = list("nutriment" = list(1,50), "amatoxin" = list(13,3), "psilocybin" = list(1,25), "fungi" = list(3,26)) // Outpost 21 edit - mushroom allergy
 
 /datum/seed/mushroom/poison/death/New()
 	..()
@@ -146,7 +146,7 @@
 	name = "redcap"
 	seed_name = "red cap"
 	display_name = "red caps"
-	chems = list("woodpulp" = list(10,1), "tannin" = list(1,10))
+	chems = list("woodpulp" = list(10,1), "tannin" = list(1,10), "fungi" = list(3,6)) // Outpost 21 edit - mushroom allergy
 	mutants = null
 	has_item_product = null
 
@@ -159,7 +159,7 @@
 	seed_name = "glowshroom"
 	display_name = "glowshrooms"
 	mutants = null
-	chems = list("radium" = list(1,20))
+	chems = list("radium" = list(1,20), "fungi" = list(3,26)) // Outpost 21 edit - mushroom allergy
 
 /datum/seed/mushroom/glowshroom/New()
 	..()
@@ -179,7 +179,7 @@
 	seed_name = "plastellium"
 	display_name = "plastellium"
 	mutants = null
-	chems = list("plasticide" = list(1,10))
+	chems = list("plasticide" = list(1,10), "fungi" = list(2,6)) // Outpost 21 edit - mushroom allergy
 
 /datum/seed/mushroom/plastic/New()
 	..()
@@ -197,7 +197,7 @@
 	seed_name = "corpellian"
 	display_name = "corpellian"
 	mutants = null
-	chems = list("serotrotium" = list(5,10), "mold" = list(1,10))
+	chems = list("serotrotium" = list(5,10), "mold" = list(1,10), "fungi" = list(2,11)) // Outpost 21 edit - mushroom allergy
 
 /datum/seed/mushroom/spore/New()
 	..()
