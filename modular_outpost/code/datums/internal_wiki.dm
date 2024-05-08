@@ -439,11 +439,20 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			segment += 1
 
 			for(var/RQ in CR.required_reagents)
-				body += " <b>-Component: </b>[SSchemistry.chemical_reagents[RQ].name]<br>"
+				var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
+				if(!r_RQ)
+					continue
+				body += " <b>-Component: </b>[r_RQ.name]<br>"
 			for(var/IH in CR.inhibitors)
-				body += " <b>-Inhibitor: </b>[SSchemistry.chemical_reagents[IH].name]<br>"
+				var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
+				if(!r_IH)
+					continue
+				body += " <b>-Inhibitor: </b>[r_IH.name]<br>"
 			for(var/CL in CR.catalysts)
-				body += " <b>-Catalyst: </b>[SSchemistry.chemical_reagents[CL].name]<br>"
+				var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
+				if(!r_CL)
+					continue
+				body += " <b>-Catalyst: </b>[r_CL.name]<br>"
 	else
 		body += "<b>Potential Chemical breakdown: </b><br>UNKNOWN OR BASE-REAGENT<br>"
 
@@ -466,11 +475,20 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			body += " <b>-Temperature: </b> [CR.temp_range[1]] - [CR.temp_range[2]]<br>"
 
 			for(var/RQ in CR.required_reagents)
-				body += " <b>-Component: </b>[SSchemistry.chemical_reagents[RQ].name]<br>"
+				var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
+				if(!r_RQ)
+					continue
+				body += " <b>-Component: </b>[r_RQ.name]<br>"
 			for(var/IH in CR.inhibitors)
-				body += " <b>-Inhibitor: </b>[SSchemistry.chemical_reagents[IH].name]<br>"
+				var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
+				if(!r_IH)
+					continue
+				body += " <b>-Inhibitor: </b>[r_IH.name]<br>"
 			for(var/CL in CR.catalysts)
-				body += " <b>-Catalyst: </b>[SSchemistry.chemical_reagents[CL].name]<br>"
+				var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
+				if(!r_CL)
+					continue
+				body += " <b>-Catalyst: </b>[r_CL.name]<br>"
 
 
 /datum/internal_wiki/page/proc/food_assemble(var/datum/reagent/R)

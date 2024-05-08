@@ -67,12 +67,18 @@
 
 						for(var/RQ in CR.required_reagents)
 							var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
+							if(!r_RQ)
+								continue
 							to_chat(user, span("notice", " -parts [r_RQ.name]<br>"))
 						for(var/IH in CR.inhibitors)
 							var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
+							if(!r_IH)
+								continue
 							to_chat(user, span("notice", " -inhbi [r_IH.name]<br>"))
 						for(var/CL in CR.catalysts)
 							var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
+							if(!r_CL)
+								continue
 							to_chat(user, span("notice", " -catyl [r_CL.name]<br>"))
 						to_chat(user, span("notice", "<br>"))
 				else
@@ -98,12 +104,18 @@
 
 						for(var/RQ in CR.required_reagents)
 							var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
+							if(!r_RQ)
+								continue
 							to_chat(user, span("notice", " -parts [r_RQ.name]<br>"))
 						for(var/IH in CR.inhibitors)
 							var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
+							if(!r_IH)
+								continue
 							to_chat(user, span("notice", " -inhbi [r_IH.name]<br>"))
 						for(var/CL in CR.catalysts)
 							var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
+							if(!r_CL)
+								continue
 							to_chat(user, span("notice", " -catyl [r_CL.name]<br>"))
 					to_chat(user, span("notice", "<br>"))
 
