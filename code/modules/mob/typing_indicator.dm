@@ -43,6 +43,14 @@
 			qdel(typing_indicator_active)
 		typing_indicator_active = null
 
+	// Outpost 21 addition begin - used to forward ai typing indicator to holograms - Willbird
+	if(isAI(src))
+		var/mob/living/silicon/ai/A = src
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
+			var/obj/effect/overlay/aiholo/holo = A.holo.masters[A]
+			holo.set_typing_indicator(state)
+	// Outpost 21 addition end
+
 	return state
 
 /mob/verb/say_wrapper()
