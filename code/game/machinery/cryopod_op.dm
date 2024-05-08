@@ -1,3 +1,7 @@
+/obj/machinery/cryopod
+	// The corresponding spawn point type that user despawning here will return at next round.
+	// Note: We use a type instead of name so that its validity is checked at compile time.
+	var/spawnpoint_type = /datum/spawnpoint/cryo
 
 /obj/machinery/cryopod/robot/door/dorms/outpost
 	name = "Residential District Elevator"
@@ -13,3 +17,29 @@
 	on_store_visible_message_2 = "to the residential district."
 
 	time_till_despawn = 60 //1 second, lets make this fast
+
+/obj/machinery/cryopod/proc/log_special_item(var/atom/movable/item,var/mob/to_despawn)
+	ASSERT(item && to_despawn)
+
+	var/loaded_from_key
+	var/char_name = to_despawn.name
+	var/item_name = item.name
+
+	// Best effort key aquisition
+	if(ishuman(to_despawn))
+		var/mob/living/carbon/human/H = to_despawn
+		if(H.original_player)
+			loaded_from_key = H.original_player
+
+	if(!loaded_from_key && to_despawn.mind && to_despawn.mind.loaded_from_ckey)
+		loaded_from_key = to_despawn.mind.loaded_from_ckey
+
+	else
+		loaded_from_key = "INVALID"
+
+	// Log to harrass them later
+	log_game("CRYO [loaded_from_key]/([to_despawn.name]) cryo'd with [item_name] ([item.type])")
+	qdel(item)
+
+	if(control_computer && control_computer.allow_items)
+		control_computer.frozen_items += "[item_name] ([char_name])"

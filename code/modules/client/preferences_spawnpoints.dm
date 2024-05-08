@@ -38,6 +38,7 @@ var/list/spawntypes = list()
 /datum/spawnpoint/proc/get_spawn_position()
 	return get_turf(pick(turfs))
 
+/* Outpost 21 edit - Only use ours
 /datum/spawnpoint/arrivals
 	display_name = "Arrivals Shuttle"
 	msg = "will arrive to the station shortly by shuttle"
@@ -54,6 +55,7 @@ var/list/spawntypes = list()
 /datum/spawnpoint/gateway/New()
 	..()
 	turfs = latejoin_gateway
+*/__detect_rust_g
 /* VOREStation Edit
 /datum/spawnpoint/elevator
 	display_name = "Elevator"
@@ -63,6 +65,7 @@ var/list/spawntypes = list()
 	..()
 	turfs = latejoin_elevator
 */
+/* Outpost 21 edit - Only use ours
 /datum/spawnpoint/cryo
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
@@ -109,3 +112,4 @@ var/global/list/latejoin_tram   = list()
 /datum/spawnpoint/tram/New()
 	..()
 	turfs = latejoin_tram
+*/

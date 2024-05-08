@@ -158,7 +158,23 @@ var/list/outfits_decls_by_type_
 			H.equip_to_slot_or_del(new path(H), slot_tie)
 
 	if(H.species)
-		H.species.equip_survival_gear(H, flags&OUTFIT_EXTENDED_SURVIVAL, flags&OUTFIT_COMPREHENSIVE_SURVIVAL)
+		// Outpost 21 edit begin - Stowaway unique start equipment
+		if(flags&OUTFIT_STOWAWAY)
+			// A crowbar
+			var/obj/item/weapon/tool/crowbar/red/bar = new(H)
+			if(H.backbag == 1)
+				H.equip_to_slot_or_del(bar, slot_r_hand)
+			else
+				H.equip_to_slot_or_del(bar, slot_in_backpack)
+			// And glowstick
+			var/obj/item/extra = new /obj/item/device/flashlight/glowstick(H)
+			if(H.backbag == 1)
+				H.equip_to_slot_or_del(extra, slot_l_hand)
+			else
+				H.equip_to_slot_or_del(extra, slot_in_backpack)
+		// Outpost 21 edit end
+		else
+			H.species.equip_survival_gear(H, flags&OUTFIT_EXTENDED_SURVIVAL, flags&OUTFIT_COMPREHENSIVE_SURVIVAL)
 
 /decl/hierarchy/outfit/proc/equip_id(mob/living/carbon/human/H, rank, assignment)
 	if(!id_slot || !id_type)

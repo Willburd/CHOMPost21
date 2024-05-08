@@ -566,8 +566,15 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 		if(check_records && !R)
 			threatcount += 4
 
-		if(check_arrest && R && (R.fields["criminal"] == "*Arrest*"))
-			threatcount += 4
+		if(check_arrest)
+			if(R && (R.fields["criminal"] == "*Arrest*"))
+				threatcount += 4
+			else
+				// Outpost 21 edit begin - Check for noncrew department jobs, and then see if they've been granted an ID
+				var/datum/job/J = SSjob.get_job(job)
+				if(J?.departments.len > 0 && J?.departments[1] == DEPARTMENT_NONCREW && (!id || id.registered_name != name))
+					threatcount += 4
+				// Outpost 21 edit end
 
 	return threatcount
 

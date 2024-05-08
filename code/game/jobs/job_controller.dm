@@ -919,6 +919,22 @@ var/global/datum/controller/occupations/job_master
 		.["vorgans"] = vorgans
 		.["itemtf"] = item_to_be
 	//CHOMPEdit End
+	// Outpost 21 edit begin - Stowaway cancels standard spawns
+	if(rank == JOB_STOWAWAY)
+		var/list/safespawns = list();
+		var/list/spawnlist = list();
+		for(var/obj/effect/landmark/start/S in landmarks_list)
+			if(S.name == JOB_STOWAWAY)
+				spawnlist += S
+				var/mob/living/scan = (locate() in view("7x7", S.loc))
+				if(!scan)
+					safespawns += S
+		if(safespawns.len > 0)
+			var/spawning = pick(safespawns)
+			.["turf"] = get_turf(spawning)
+			.["msg"] = "will arrive at the station shortly"
+			return // If successful end here, otherwise fail over to standard spawning
+	// Outpost 21 edit end
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
