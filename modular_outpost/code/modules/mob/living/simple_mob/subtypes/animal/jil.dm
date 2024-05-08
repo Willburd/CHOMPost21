@@ -482,9 +482,11 @@
 		if(!hoard_items || get_dist(I, home_turf) < hoard_distance)
 			. -= I
 
-	var/new_target = pick_target(.)
-	give_target(new_target)
-	return new_target
+	var/atom/new_target = pick_target(.)
+	if(new_target && isturf(new_target.loc))
+		give_target(new_target)
+		return new_target
+	return null
 
 
 /datum/ai_holder/simple_mob/intentional/jil/should_go_home()
