@@ -1,39 +1,39 @@
 "a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/random/contraband,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/muriki/muriki,/area/submap/outpost21/yard_generic)
 "c" = (/turf/simulated/wall,/area/submap/outpost21/yard_generic)
 "d" = (/turf/template_noop,/area/submap/outpost21/yard_generic)
 "e" = (/turf/simulated/floor/outdoors/mud/muriki,/area/submap/outpost21/yard_generic)
-"g" = (/obj/random/tool,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/external,/area/submap/outpost21/yard_generic)
+"f" = (/obj/random/tool,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/muriki/muriki,/area/submap/outpost21/yard_generic)
+"g" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/muriki/muriki,/area/submap/outpost21/yard_generic)
 "h" = (/obj/random/maintenance,/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
+"i" = (/obj/random/maintenance,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/muriki/muriki,/area/submap/outpost21/yard_generic)
+"j" = (/obj/random/material,/obj/random/material,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/muriki/muriki,/area/submap/outpost21/yard_generic)
+"k" = (/obj/random/material,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/muriki/muriki,/area/submap/outpost21/yard_generic)
 "l" = (/obj/random/toolbox,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
+"m" = (/obj/random/firstaid,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/muriki/muriki,/area/submap/outpost21/yard_generic)
 "n" = (/obj/random/material,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
 "w" = (/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
 "x" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/wall,/area/submap/outpost21/yard_generic)
 "y" = (/obj/random/contraband,/turf/simulated/floor/outdoors/mud/muriki,/area/submap/outpost21/yard_generic)
 "A" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
 "E" = (/obj/machinery/door/airlock/engineering,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
-"F" = (/obj/random/maintenance,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/external,/area/submap/outpost21/yard_generic)
-"L" = (/obj/random/material,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/external,/area/submap/outpost21/yard_generic)
-"O" = (/obj/random/firstaid,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/external,/area/submap/outpost21/yard_generic)
 "R" = (/obj/random/maintenance,/obj/random/maintenance,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
 "S" = (/obj/random/maintenance,/turf/simulated/floor/outdoors/mud/muriki,/area/submap/outpost21/yard_generic)
-"T" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/external,/area/submap/outpost21/yard_generic)
 "W" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/outdoors/mud/muriki,/area/submap/outpost21/yard_generic)
 "X" = (/obj/random/maintenance,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/plating/external/muriki,/area/submap/outpost21/yard_generic)
-"Y" = (/obj/random/contraband,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/external,/area/submap/outpost21/yard_generic)
-"Z" = (/obj/random/material,/obj/random/material,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/plating/external/muriki},/turf/simulated/floor/tiled/external,/area/submap/outpost21/yard_generic)
 
 (1,1,1) = {"
 aaaaaaaaaaaaa
 addddddddddda
 adxxdceeeedda
 adxRddyxxxcda
-adxXddwYgAeda
+adxXddwbfAeda
 addeSddxExdda
-addxxxxxTWdda
-addxgFlAAxdda
-adSWTZTnZxwda
-adeEXTYLAEwda
-addxAOAgTxhda
+addxxxxxgWdda
+addxfilAAxdda
+adSWgjgnjxwda
+adeEXgbkAEwda
+addxAmAfgxhda
 addxxxxxxxdda
 aaaaaaaaaaaaa
 "}

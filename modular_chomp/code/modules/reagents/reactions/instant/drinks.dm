@@ -56,7 +56,7 @@
 /decl/chemical_reaction/instant/freshtea/green
 	id = "freshteagreen"
 	result = "freshteagreen"
-	required_reagents = list ("tealeavesgreen" = 1, "hotwater" = 9)
+	required_reagents = list ("tealeavesgreen" = 1, "water" = 9) // Outpost 21 edit - use water instead of hotwater, that's not even a reagent
 	result_amount = 10
 
 /decl/chemical_reaction/instant/instantteapowder/green
@@ -74,7 +74,7 @@
 /decl/chemical_reaction/instant/matcha
 	id = "matcha"
 	result = "matcha"
-	required_reagents = list ("matchapowder" = 1, "hotwater" = 2)
+	required_reagents = list ("matchapowder" = 1, "water" = 2) // Outpost 21 edit - use water instead of hotwater, that's not even a reagent
 	result_amount = 2
 
 /decl/chemical_reaction/instant/drinks/spiderdrink
@@ -186,7 +186,7 @@
 	name = "Hachi"
 	id = "hachi"
 	result = "hachi"
-	required_reagents = list("burbon" = 2, "sake" = 1, "lemonjuice" = 1, "mushroom" = 1) //Whoever coded this never made a mushroom reagent so this can't be created.
+	required_reagents = list("whiskey" = 2, "sake" = 1, "lemonjuice" = 1, "fungi" = 1) //Whoever coded this never made a mushroom reagent so this can't be created. Outpost 21 edit - fixed
 	result_amount = 5
 
 /decl/chemical_reaction/instant/drinks/narsour

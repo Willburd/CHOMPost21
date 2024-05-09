@@ -41,6 +41,10 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/floor/indoorrocks)
 // for shuttles
 MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/black)
 MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/white)
+// terraformer specific
+MURIKI_TURF_CREATE(/turf/simulated/floor/flesh)
+MURIKI_TURF_CREATE(/turf/simulated/floor/redgrid/off)
+MURIKI_TURF_CREATE(/turf/simulated/floor/tiled/techfloor/grid)
 //
 MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic)
 MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/deep)
@@ -94,6 +98,7 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner
 MURIKI_TURF_CREATE_UN(/turf/simulated/mineral)
 MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/alt)
 MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/alt/ignore_mapgen)
+MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/alt/ignore_cavegen)
 MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/floor)
 MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal)
 MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal_shiny)
