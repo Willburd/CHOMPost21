@@ -108,14 +108,13 @@
 	affected.open = 1
 
 	affected.createwound(CUT, 1)
+	// Outpost 21 edit begin - Granting this comments wish~
 	var/clamp_chance = 0 //I hate this. Make all laser scalpels a /laser subtype and give them a clamp_chance var???
-	if(istype(tool,/obj/item/weapon/surgical/scalpel/laser1))
-		clamp_chance = 75
-	if(istype(tool,/obj/item/weapon/surgical/scalpel/laser2))
-		clamp_chance = 85
-	if(istype(tool,/obj/item/weapon/surgical/scalpel/laser3))
-		clamp_chance = 95
-	if(clamp_chance)
+	if(istype(tool,/obj/item/weapon/surgical/scalpel))
+		var/obj/item/weapon/surgical/scalpel/T = tool
+		clamp_chance = T.clamp_chance // get clamp chance of tool
+	// Outpost 21 edit end
+	if(prob(clamp_chance))
 		affected.organ_clamp()
 		user.visible_message("<span class='notice'>[user] has made a bloodless incision on [target]'s [affected.name] with \the [tool].</span>", \
 		"<span class='notice'>You have made a bloodless incision on [target]'s [affected.name] with \the [tool].</span>",)

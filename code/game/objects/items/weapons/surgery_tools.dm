@@ -106,6 +106,8 @@
 	matter = list(MAT_STEEL = 10000, MAT_GLASS = 5000)
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
 	drop_sound = 'sound/items/drop/knife.ogg'
+	// Outpost 21 addition - actually move clamp chance into the scalpel so laser scapels use it
+	var/clamp_chance = 0 // chance that the scalple will perform cautery on its own
 
 /*
  * Researchable Scalpels
@@ -115,6 +117,8 @@
 	desc = "A scalpel augmented with a directed laser, for more precise cutting without blood entering the field.  This one looks basic and could be improved."
 	icon_state = "scalpel_laser1"
 	damtype = "fire"
+	// Outpost 21 addition - actually move clamp chance into the scalpel so laser scapels use it
+	clamp_chance = 75
 
 /obj/item/weapon/surgical/scalpel/laser2
 	name = "laser scalpel"
@@ -122,6 +126,8 @@
 	icon_state = "scalpel_laser2"
 	damtype = "fire"
 	force = 12.0
+	// Outpost 21 addition - actually move clamp chance into the scalpel so laser scapels use it
+	clamp_chance = 85
 
 /obj/item/weapon/surgical/scalpel/laser3
 	name = "laser scalpel"
@@ -129,12 +135,16 @@
 	icon_state = "scalpel_laser3"
 	damtype = "fire"
 	force = 15.0
+	// Outpost 21 addition - actually move clamp chance into the scalpel so laser scapels use it
+	clamp_chance = 95
 
 /obj/item/weapon/surgical/scalpel/manager
 	name = "incision management system"
 	desc = "A true extension of the surgeon's body, this marvel instantly and completely prepares an incision allowing for the immediate commencement of therapeutic steps."
 	icon_state = "scalpel_manager"
 	force = 7.5
+	// Outpost 21 edit - Unneeded but consistency
+	clamp_chance = 100
 
 /obj/item/weapon/surgical/scalpel/ripper
 	name = "jagged scalpel"
