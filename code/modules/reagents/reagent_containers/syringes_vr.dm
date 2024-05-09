@@ -18,7 +18,8 @@
 	return ..()
 
 /obj/item/weapon/reagent_containers/syringe/process()
-	dirtiness = min(dirtiness + targets.len,75)
+	if(prob(5)) // Outpost 21 edit - get dirtier over time, but more slowly
+		dirtiness = min(dirtiness + targets.len,75)
 	if(dirtiness >= 75)
 		STOP_PROCESSING(SSobj, src)
 	return 1
@@ -46,8 +47,8 @@
 	var/infect_chance = dirtiness        //Start with dirtiness
 	if(infect_chance <= 10 && (hash in targets)) //Extra fast uses on target is free
 		infect_chance = 0
-	infect_chance += (targets.len-1)*10    //Extra 10% per extra target
-	if(prob(infect_chance))
+	infect_chance += (targets.len-1)*5    //Extra 5% per extra target, outpost 21 edit - 10% to 5%
+	if(targets.len > 1 && prob(infect_chance)) // Outpost 21 edit - Using it on the same person is the same as normal code
 		log_and_message_admins("[loc] infected [target]'s [eo.name] with \the [src].")
 		infect_limb(eo)
 

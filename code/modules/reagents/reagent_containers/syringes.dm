@@ -228,7 +228,7 @@
 			else
 				to_chat(user, "<span class='notice'>The syringe is empty.</span>")
 
-//		dirty(target,affected) //VOREStation Add -- Removed by Request
+		dirty(target,affected) // Outpost 21 edit - syringe dirtying restored, but made less painful
 
 	return
 /* VOREStation Edit - See syringes_vr.dm
