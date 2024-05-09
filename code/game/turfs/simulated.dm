@@ -169,19 +169,35 @@
 			switch(src.wet)
 				if(2) // Lube
 					floor_type = "slippery"
-					slip_dist = 4
+					slip_dist = 100 // outpost 21 edit - special handling
 					slip_stun = 10
 				if(3) // Ice
 					floor_type = "icy"
 					slip_stun = 4
-					slip_dist = 2
+					slip_dist = rand(1,3) // outpost 21 edit - increased from 2
 
 			if(M.slip("the [floor_type] floor", slip_stun))
-				for(var/i = 1 to slip_dist)
-					if(isbelly(M.loc))	//VOREEdit, Stop the slip if we're in a belly. Inspired by a chompedit, cleaned it up with isbelly instead of a variable since the var was resetting too fast.
-						return
-					step(M, M.dir)
-					sleep(1)
+				// outpost 21 edit begin - Spacelube handled in special way
+				if(slip_dist >= 100)
+					for(var/i = 1 to slip_dist)
+						if(isbelly(M.loc))	// Stop the slip if we're in a belly. Inspired by a chompedit, cleaned it up with isbelly instead of a variable since the var was resetting too fast.
+							return
+						if(!step(M, M.dir))
+							return // done sliding, failed to move
+						// check tile for next slip
+						var/turf/simulated/ground = get_turf(M)
+						if(!istype(ground,/turf/simulated))
+							return // stop sliding as it is impossible to be on wet terrain?
+						if(ground.wet != 2)
+							return // done sliding, not lubed
+						sleep(1)
+				// outpost 21 edit end
+				else
+					for(var/i = 1 to slip_dist)
+						if(isbelly(M.loc))	//VOREEdit, Stop the slip if we're in a belly. Inspired by a chompedit, cleaned it up with isbelly instead of a variable since the var was resetting too fast.
+							return
+						step(M, M.dir)
+						sleep(1)
 			else
 				M.inertia_dir = 0
 		else
