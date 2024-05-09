@@ -71,12 +71,11 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	return return_name
 
 /obj/machinery/computer/rdconsole/proc/CallReagentName(var/ID)
-	var/return_name = ID
-	for(var/datum/reagent/R in SSchemistry.chemical_reagents)
-		if(R.id == ID)
-			return_name = R.name
-			break
-	return return_name
+	// Outpost 21 edit begin - Fixed reagent name return... Why was it a loop that checked all reagents, instead of the LOOKUP ARRAY WE ALREADY HAD - Willbird
+	if(isnull(SSchemistry.chemical_reagents[ID]))
+		return ID
+	return SSchemistry.chemical_reagents[ID].name
+	// Outpost 21 edit end
 
 /obj/machinery/computer/rdconsole/proc/SyncRDevices() //Makes sure it is properly sync'ed up with the devices attached to it (if any).
 	for(var/obj/machinery/r_n_d/D in range(3, src))

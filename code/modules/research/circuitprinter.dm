@@ -194,7 +194,14 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 		if(!reagents.has_reagent(C, D.chemicals[C]))
 			if(ret != "")
 				ret += ", "
-			ret += C
+			// Outpost 21 edit begin - return missing chemicals with the actual name
+			if(!isnull(SSchemistry.chemical_reagents[C]))
+				// get display name of C
+				ret += SSchemistry.chemical_reagents[C].name
+			else
+			 	// backup
+				ret += C
+			// Outpost 21 edit end
 	return ret
 
 /obj/machinery/r_n_d/circuit_imprinter/proc/build(var/datum/design/D)
