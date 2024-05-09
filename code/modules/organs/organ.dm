@@ -261,21 +261,30 @@ var/list/organ_cache = list()
 	// immunosuppressant that changes transplant data to make it match.
 	if(dna && can_reject)
 		if(!rejecting)
-			if(blood_incompatible(dna.b_type, owner.dna.b_type, species.name, owner.species.name)) //VOREStation Edit - Process species by name.
+			// Outpost 21 edit begin - Organ rejection drugs actually work
+			if(owner && (owner.bloodstr.get_reagent_amount("immunosuprizine") > 0 || owner.bloodstr.get_reagent_amount("malish-qualem")))
+				rejecting = 0
+			// Outpost 21 edit end
+			else if(blood_incompatible(dna.b_type, owner.dna.b_type, species.name, owner.species.name)) //VOREStation Edit - Process species by name.
 				rejecting = 1
 		else
-			rejecting++ //Rejection severity increases over time.
-			if(rejecting % 10 == 0) //Only fire every ten rejection ticks.
-				switch(rejecting)
-					if(1 to 50)
-						adjust_germ_level(1)
-					if(51 to 200)
-						adjust_germ_level(rand(1,2))
-					if(201 to 500)
-						adjust_germ_level(rand(2,3))
-					if(501 to INFINITY)
-						adjust_germ_level(rand(3,5))
-						owner.reagents.add_reagent("toxin", rand(1,2))
+			// Outpost 21 edit begin - Organ rejection drugs actually work
+			if(owner && (owner.bloodstr.get_reagent_amount("immunosuprizine") > 0 || owner.bloodstr.get_reagent_amount("malish-qualem")))
+				rejecting = 0
+			// Outpost 21 edit end
+			else
+				rejecting++ //Rejection severity increases over time.
+				if(rejecting % 10 == 0) //Only fire every ten rejection ticks.
+					switch(rejecting)
+						if(1 to 50)
+							adjust_germ_level(1)
+						if(51 to 200)
+							adjust_germ_level(rand(1,2))
+						if(201 to 500)
+							adjust_germ_level(rand(2,3))
+						if(501 to INFINITY)
+							adjust_germ_level(rand(3,5))
+							owner.reagents.add_reagent("toxin", rand(1,2))
 
 /obj/item/organ/proc/receive_chem(chemical as obj)
 	return 0
