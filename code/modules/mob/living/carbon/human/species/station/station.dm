@@ -698,8 +698,12 @@
 	var/obj/item/organ/internal/diona/node/light_organ = locate() in H.internal_organs
 
 	if(light_organ && !light_organ.is_broken())
+		// outpost 21 addition begin - lockers are dark and spooky!
 		var/light_amount = 0 //how much light there is in the place, affects receiving nutrition and healing
-		if(isturf(H.loc)) //else, there's considered to be no light
+		if(istype(H.loc,/obj/structure/closet))
+			light_amount = 0 // it's dark in here!
+		// outpost 21 addition end
+		else if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
 		// Don't overfeed, just make them full without going over.

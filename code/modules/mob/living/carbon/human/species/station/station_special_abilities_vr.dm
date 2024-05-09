@@ -186,10 +186,15 @@
 	bloodcolor = "#14AD8B"
 
 /mob/living/carbon/human/proc/getlightlevel() //easier than having the same code in like three places
-	if(isturf(src.loc)) //else, there's considered to be no light
+	// outpost 21 addition begin - lockers are dark and spooky!
+	if(istype(src.loc,/obj/structure/closet))
+		return 0 // it's dark in here!
+	else if(isturf(src.loc)) //else, there's considered to be no light
 		var/turf/T = src.loc
 		return T.get_lumcount() * 5
-	else return 0
+	else
+		return 0
+	// outpost 21 addition end
 
 /mob/living/carbon/human/proc/handle_feral()
 	if(handling_hal) return

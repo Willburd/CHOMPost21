@@ -1368,10 +1368,14 @@
 		return 0	//godmode
 
 	if(species.light_dam)
+		// outpost 21 addition begin - lockers are dark and spooky!
 		var/light_amount = 0
-		if(isturf(loc))
+		if(istype(loc,/obj/structure/closet))
+			light_amount = 0 // it's dark in here!
+		else if(isturf(loc))
 			var/turf/T = loc
 			light_amount = T.get_lumcount() * 10
+		// outpost 21 addition end
 		if(light_amount > species.light_dam) //if there's enough light, start dying
 			take_overall_damage(1,1)
 		else //heal in the dark
@@ -1547,6 +1551,11 @@
 		if(species.vision_organ)
 			vision = internal_organs_by_name[species.vision_organ]
 
+		// outpost 21 addition addition - lockers are dark and spooky!
+		if(istype(loc,/obj/structure/closet))
+			SetBlinded(1)
+			blinded =    1
+		// outpost 21 addition end
 		if(!species.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
 			SetBlinded(0)
 			blinded =    0

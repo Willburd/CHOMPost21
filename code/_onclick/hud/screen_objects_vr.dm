@@ -5,7 +5,13 @@
 		//Shadekin
 		if("darkness")
 			var/turf/T = get_turf(usr)
-			var/darkness = round(1 - T.get_lumcount(),0.1)
+			// outpost 21 addition begin - lockers are dark and spooky!
+			var/darkness = 0
+			if(T)
+				darkness = round(1 - T.get_lumcount(),0.1)
+			if(istype(usr.loc,/obj/structure/closet)) // it's dark in here!
+				darkness = 1
+			// outpost 21 addition end
 			to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
 		if("energy")
 			var/mob/living/simple_mob/shadekin/SK = usr
@@ -13,9 +19,14 @@
 				to_chat(usr,"<span class='notice'><b>Energy:</b> [SK.energy] ([SK.dark_gains])</span>")
 		if("shadekin status")
 			var/turf/T = get_turf(usr)
+			// outpost 21 addition begin - lockers are dark and spooky!
+			var/darkness = 0
 			if(T)
-				var/darkness = round(1 - T.get_lumcount(),0.1)
-				to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
+				darkness = round(1 - T.get_lumcount(),0.1)
+			if(istype(usr.loc,/obj/structure/closet)) // it's dark in here!
+				darkness = 1
+			// outpost 21 addition end
+			to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
 			var/mob/living/carbon/human/H = usr
 			if(istype(H) && istype(H.species, /datum/species/shadekin))
 				to_chat(usr,"<span class='notice'><b>Energy:</b> [H.shadekin_get_energy(H)]</span>")
@@ -43,7 +54,14 @@
 						feral_passing = FALSE
 					if(feral_passing)
 						var/turf/T = get_turf(H)
-						if(T.get_lumcount() <= 0.1)
+						// outpost 21 addition begin - lockers are dark and spooky!
+						var/darkness = 0
+						if(T)
+							darkness = round(1 - T.get_lumcount(),0.1)
+						if(istype(H.loc,/obj/structure/closet))
+							darkness = 1 // it's dark in here!
+						if(darkness <= 0.1)
+						// outpost 21 addition end
 							to_chat(usr, "<span class='notice'>You are slowly calming down in darkness' safety...</span>")
 
 						else if(isbelly(H.loc)) // Safety message for if inside a belly.
@@ -60,7 +78,7 @@
 					to_chat(usr, "<span class='notice'>We are currently reviving, and will be done in [round((H.revive_finished - world.time) / 10)] seconds, or [round(((H.revive_finished - world.time) * 0.1) / 60)] minutes.</span>")
 				else if(H.revive_ready == REVIVING_DONE)
 					to_chat(usr, "<span class='warning'>You should have a notification + alert for this! Bug report that this is still here!</span>")
-					
+
 		if("Ready to Hatch") // Allow Viewing Reconstruction Timer + Hatching for 'chimera
 			var/mob/living/carbon/human/H = usr
 			if(istype(H) && istype(H.species, /datum/species/xenochimera)) // If you're somehow able to click this while not a chimera, this should prevent weird runtimes. Will need changing if regeneration is ever opened to non-chimera using the same alert.

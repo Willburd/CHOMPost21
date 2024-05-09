@@ -162,6 +162,11 @@
 	else
 		src.blinded = 1
 
+	// outpost 21 addition begin - lockers are dark and spooky!
+	if(istype(loc, /obj/structure/closet))
+		src.blinded = 1
+	// outpost 21 addition end
+
 	return 1
 
 /mob/living/silicon/robot/handle_regular_hud_updates()
