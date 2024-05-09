@@ -362,13 +362,19 @@
 	//Shifted kin don't gain/lose energy (and save time if we're at the cap)
 	var/darkness = 1
 
-
+	// outpost 21 addition begin - lockers are dark and spooky!
 	var/turf/T = get_turf(src)
-	if(!T)
+	var/brightness = 1
+	if(istype(src.loc,/obj/structure/closet))
+		brightness = 0 // it's dark in here!
+	else if(T)
+		brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
+	else
 		dark_gains = 0
 		return
+	// outpost 21 addition end
 
-	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
+	brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
 
 	if(ability_flags & AB_PHASE_SHIFTED)
