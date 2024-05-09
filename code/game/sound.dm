@@ -125,8 +125,8 @@
 			S.frequency = get_rand_frequency()
 
 	// Outpost 21 edit begin - AI hologram can hear things
-	var/listener_position = get_turf(src) // used exclusively for sound_env stuff
-	var/turf/T
+	var/turf/T = get_turf(src)
+	var/listener_position = T // used exclusively for sound_env stuff
 	if(isAI(src))
 		// AI is silly, and we'd be doing a distance check across the station. Make it use the hologram's location... even if it makes more sense to use the emitter's. - Willbird
 		var/mob/living/silicon/ai/A = src
