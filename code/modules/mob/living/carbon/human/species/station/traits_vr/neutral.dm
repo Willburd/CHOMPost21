@@ -55,7 +55,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list(LANGUAGE_UNATHI))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat) // CHOMPEdit: exclude vassillian hiss
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_zaddat,/datum/trait/neutral/autohiss_zaddat) // Outpost 21 edit - add yinglet // CHOMPEdit: exclude vassillian hiss
 	custom_only = FALSE
 	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) //CHOMPRemove
 
@@ -68,7 +68,7 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian) // CHOMPEdit: exclude vassillian hiss
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat, /datum/trait/neutral/autohiss_vassilian,/datum/trait/neutral/autohiss_zaddat) // Outpost 21 edit - add yinglet // CHOMPEdit: exclude vassillian hiss
 	custom_only = FALSE
 	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) //CHOMPRemove
 
@@ -88,7 +88,7 @@
 			"v" = list("vv", "vvv")
 		),
 	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_zaddat) // Outpost 21 edit - add yinglet
 	custom_only = FALSE
 	//banned_species = list(SPECIES_TAJARAN, SPECIES_UNATHI, SPECIES_ZADDAT) // CHOMPRemove
 

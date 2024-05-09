@@ -101,3 +101,23 @@
 	desc = "This trait causes spontanious coughing as an Allergic reaction. If you don't have any allergens set, it does nothing. It does not apply to special reactions (such as unathi drowsiness from sugars)."
 	cost = 0
 	allergeneffect = AG_COUGH
+
+
+// autohiss
+/datum/trait/neutral/autohiss_zaddat
+	name = "Autohiss (Yinglet)"
+	desc = "You pronounce th's with a lisp"
+	cost = 0
+	var_changes = list(
+	autohiss_basic_map = list(
+			"thi" = list("z"),
+			"shi" = list("z"),
+			"tha" = list("z"),
+			"tho" = list("z")
+		),
+	autohiss_extra_map = list(
+			"the" = list("z"),
+			"so" = list("z")
+		),
+	autohiss_exempt = list(LANGUAGE_UNATHI))
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_zaddat)
