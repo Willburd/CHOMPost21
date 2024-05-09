@@ -6,7 +6,7 @@
 	flags = MATERIAL_UNMELTABLE
 	icon_colour = "#6C7364"
 	integrity = 1200
-	melting_point = 6000       // Hull plating.
+	melting_point = 26000 // Hull plating. Outpost 21 edit - was 6000
 	explosion_resistance = 200 // Hull plating.
 	hardness = 500
 	weight = 500

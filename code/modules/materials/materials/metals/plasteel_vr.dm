@@ -2,7 +2,7 @@
 	name = MAT_PLASTITANIUM
 	stack_type = /obj/item/stack/material/plastitanium
 	integrity = 600
-	melting_point = 9000
+	melting_point = 21000 //Outpost 21 edit - was 9000
 	icon_base = "solid"
 	icon_reinf = "reinf_over"
 	icon_colour = "#585658"
