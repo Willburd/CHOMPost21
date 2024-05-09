@@ -25,6 +25,8 @@
 
 	var/anomalous_organs = FALSE	// Can it print anomalous organs?
 
+	var/engineered_organs = FALSE // Outpost 21 edit - Can it print advanced engineered organs that any species can use (Abductor gameplay)
+
 	// These should be subtypes of /obj/item/organ
 	// Costs roughly 20u Phoron (1 sheet) per internal organ, limbs are 60u for limb and extremity
 	var/list/products = list(
@@ -57,6 +59,24 @@
 		"Respiration Nexus" = list(/obj/item/organ/internal/lungs/replicant/mending, 80),
 		"Adrenal Valve Cluster" = list(/obj/item/organ/internal/heart/replicant/rage, 80)
 		)
+
+	// Outpost 21 addition begin - engineered organs
+	var/list/engineered_products = list(
+		"Phoroketic Gland"  = list(/obj/item/organ/internal/malignant/engineered/chemorgan/phoron, 90),
+		"Trioketic Gland"  	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/tricord, 90),
+		"Tramoketic Gland"  = list(/obj/item/organ/internal/malignant/engineered/chemorgan/tramadol, 90),
+		"Dylovetic Gland"  	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/dylovene, 90),
+		"Citometic Gland"  	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/citalopram, 90),
+		"Bicordic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/bicaridine, 90),
+		"Dermalic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/dermaline, 90),
+		"Kelovetic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/kelotane, 90),
+		"Dexalic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/dexalin, 90),
+		"Hypalic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/hyperzine, 90),
+		"Spaceacilic Gland" = list(/obj/item/organ/internal/malignant/engineered/chemorgan/spaceacillin, 90),
+		"Inaprovic Gland" 	= list(/obj/item/organ/internal/malignant/engineered/chemorgan/inaprovaline, 90),
+		"Euphorian" 		= list(/obj/item/organ/internal/malignant/engineered/chemorgan/bliss, 90)
+		)
+	// Outpost 21 addition end
 
 /obj/machinery/organ_printer/attackby(var/obj/item/O, var/mob/user)
 	if(default_deconstruction_screwdriver(user, O))
@@ -150,6 +170,11 @@
 
 	if(anomalous_organs)
 		possible_list |= anomalous_products
+
+	// Outpost 21 edit begin - engineered organs
+	if(engineered_organs)
+		possible_list |= engineered_products
+	// Outpost 21 edit end
 
 	var/choice = tgui_input_list(usr, "What would you like to print?", "Print Choice", possible_list)
 

@@ -403,19 +403,18 @@
 		user.balloon_alert("There is a [o_a][O.name] already!") // CHOMPEdit
 		return SURGERY_FAILURE
 
-	/* Outpost 21 TODO - Malignant organs
+	// Outpost 21 addition begin - Malignant organs
 	if(O && istype(O,/obj/item/organ/internal/malignant))
-		// malignants can be put back in several locations
+		// malignant organs use a whitelist for allowed locations, and may be placed anywhere in it, not just one organ slot!
 		var/obj/item/organ/internal/malignant/ML = O
 		if(affected.organ_tag in ML.surgeryAllowedSites)
 			ML.parent_organ = affected.organ_tag
 			organ_compatible = 1
 		else
-			to_chat(user, "<span class='warning'>\The [ML.name] [o_do] normally go in \the [affected.name].</span>")
+			to_chat(user, "<span class='warning'>\The [ML.name] won't fit in \the [affected.name].</span>")
 			return SURGERY_FAILURE
-
-	else*/
-	if(O && affected.organ_tag == O.parent_organ)
+	// Outpost 21 addition end
+	else if(O && affected.organ_tag == O.parent_organ)
 		organ_compatible = 1
 
 	else

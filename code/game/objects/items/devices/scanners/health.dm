@@ -72,12 +72,29 @@
 	var/TX = M.getToxLoss() > 50 	? 	"<b>[M.getToxLoss()]</b>" 		: M.getToxLoss()
 	var/BU = M.getFireLoss() > 50 	? 	"<b>[M.getFireLoss()]</b>" 		: M.getFireLoss()
 	var/BR = M.getBruteLoss() > 50 	? 	"<b>[M.getBruteLoss()]</b>" 	: M.getBruteLoss()
+
+	// Outpost 21 edit being - show custom species
+	var/speciesdata = "???";
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		speciesdata = H.species.name
+		if(H.custom_species)
+			if( H.species.name == SPECIES_CUSTOM )
+				speciesdata = "[H.custom_species]"
+			else
+				speciesdata = "[H.custom_species] \[Similar biology to [H.species.name]\]"
+	// Outpost 21 edit end
+
 	if(M.status_flags & FAKEDEATH)
 		OX = fake_oxy > 50 			? 	"<b>[fake_oxy]</b>" 			: fake_oxy
 		dat += "<span class='notice'>Analyzing Results for [M]:</span><br>"
+		if(advscan >= 2) // Outpost 21 edit - show custom species
+			dat += "\tSapient Species: [speciesdata]<br>"
 		dat += "<span class='notice'>Overall Status: dead</span><br>"
 	else
 		dat += 	"<span class='notice'>Analyzing Results for [M]:\n\t Overall Status: [M.stat > 1 ? "dead" : "[round((M.health/M.getMaxHealth())*100) ]% healthy"]<br>"
+		if(advscan >= 2) // Outpost 21 edit - show custom species
+			dat += "\tSapient Species: [speciesdata]<br>"
 	dat += 		"\tKey: [span_cyan("Suffocation")]/[span_green("Toxin")]/[span_orange("Burns")]/[span_red("Brute")]<br>"
 	dat += 		"\tDamage Specifics: [span_cyan("[OX]")] - [span_green("[TX]")] - [span_orange("[BU]")] - [span_red("[BR]")]<br>"
 	dat +=		"Body Temperature: [M.bodytemperature-T0C]&deg;C ([M.bodytemperature*1.8-459.67]&deg;F)</span><br>"
@@ -234,16 +251,25 @@
 		dat += "<span class='warning'>Minor brain damage detected.</span><br>"
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		for(var/obj/item/organ/internal/appendix/a in H.internal_organs)
-			var/severity = ""
-			if(a.inflamed > 3)
-				severity = "Severe"
-			else if(a.inflamed > 2)
-				severity = "Moderate"
-			else if(a.inflamed >= 1)
-				severity = "Mild"
-			if(severity)
-				dat += "<span class='warning'>[severity] inflammation detected in subject [a.name].</span><br>"
+		// Outpost 21 edit begin - malignant organs
+		for(var/obj/item/organ/internal/io in H.internal_organs)
+			if(istype(io,/obj/item/organ/internal/appendix))
+				var/obj/item/organ/internal/appendix/a = io
+				var/severity = ""
+				if(a.inflamed > 3)
+					severity = "Severe"
+				else if(a.inflamed > 2)
+					severity = "Moderate"
+				else if(a.inflamed >= 1)
+					severity = "Mild"
+				if(severity)
+					dat += "<span class='warning'>[severity] inflammation detected in subject.</span><br>"
+			else if(istype(io,/obj/item/organ/internal/malignant))
+				if(advscan >= 2)
+					dat += "<span class='warning'>Anatomical irregularities detected in subject's [H.organs_by_name[io.parent_organ].name].</span><br>"
+				else
+					dat += "<span class='warning'>Anatomical irregularities detected in subject.</span><br>"
+		// Outpost 21 edit end
 		// Infections, fractures, and IB
 		var/basic_fracture = 0	// If it's a basic scanner
 		var/basic_ib = 0		// If it's a basic scanner

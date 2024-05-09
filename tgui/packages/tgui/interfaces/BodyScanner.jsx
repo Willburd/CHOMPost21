@@ -179,6 +179,7 @@ const BodyScannerMainOccupant = (props) => {
     >
       <LabeledList>
         <LabeledList.Item label="Name">{occupant.name}</LabeledList.Item>
+        <LabeledList.Item label="Species">{occupant.species}</LabeledList.Item>
         <LabeledList.Item label="Health">
           <ProgressBar
             min="0"
@@ -386,7 +387,7 @@ const BodyScannerMainOrgansExternal = (props) => {
                 <Box float="left" inline>
                   {!!o.bruteLoss && (
                     <Box inline position="relative">
-                      <Icon name="bone" />
+                      <Icon name="wrench" />
                       {round(o.bruteLoss, 0)}&nbsp;
                       <Tooltip position="top" content="Brute damage" />
                     </Box>

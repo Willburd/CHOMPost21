@@ -185,6 +185,18 @@
 		update_icon() //VOREStation Edit - Health display for consoles with light and such.
 		var/mob/living/carbon/human/H = occupant
 		occupantData["name"] = H.name
+
+		// Outpost 21 edit addition addition - species display
+		occupantData["species"] = H.species.name
+		if(H.custom_species)
+			if( H.species.name == SPECIES_CUSTOM )
+				// Fully custom species
+				occupantData["species"] = "[H.custom_species]"
+			else
+				// Using another species as base, doctors should know this to avoid some meds
+				occupantData["species"] = "[H.custom_species] \[Similar biology to [H.species.name]\]"
+		// Outpost 21 edit addition end
+
 		occupantData["stat"] = H.stat
 		occupantData["health"] = H.health
 		occupantData["maxHealth"] = H.getMaxHealth()
@@ -361,6 +373,19 @@
 
 	dat = "<font color='blue'><b>Occupant Statistics:</b></font><br>" //Blah obvious
 	if(istype(occupant)) //is there REALLY someone in there?
+		if(ishuman(occupant))
+			var/mob/living/carbon/human/H = occupant
+			// Outpost 21 edit begin - custom species display
+			var/speciestext = H.species.name
+			if(H.custom_species)
+				if( H.species.name == SPECIES_CUSTOM )
+					// Fully custom species
+					speciestext = "[H.custom_species]"
+					dat += "<font color='blue'>Sapient Species: [speciestext]</font><BR>"
+				else
+					speciestext = "[H.custom_species] \[Similar biology to [H.species.name]\]"
+					dat += "<font color='blue'>Sapient Species: [speciestext]</font><BR>"
+			// Outpost 21 edit end
 		var/t1
 		switch(occupant.stat) // obvious, see what their status is
 			if(0)
@@ -493,6 +518,7 @@
 			else
 				dat += "<td>[e.name]</td><td>-</td><td>-</td><td>Not Found</td>"
 			dat += "</tr>"
+		var/hasMalignants = "" // Outpost 21 edit - malignant organs
 		for(var/obj/item/organ/i in occupant.internal_organs)
 			var/mech = ""
 			var/i_dead = ""
@@ -524,6 +550,11 @@
 				if(A.inflamed)
 					infection = "Inflammation detected!"
 
+			// Outpost 21 edit begin - malignant organs
+			if(istype(i, /obj/item/organ/internal/malignant))
+				hasMalignants += "<font color='red'> -[occupant.organs_by_name[i.parent_organ].name]</font><BR>"
+			// Outpost 21 edit end
+
 			dat += "<tr>"
 			dat += "<td>[i.name]</td><td>N/A</td><td>[i.damage]</td><td>[infection]:[mech][i_dead]</td><td></td>"
 			dat += "</tr>"
@@ -532,6 +563,10 @@
 			dat += "<font color='red'>Cataracts detected.</font><BR>"
 		if(occupant.disabilities & NEARSIGHTED)
 			dat += "<font color='red'>Retinal misalignment detected.</font><BR>"
+		// Outpost 21 edit begin - malignant organs
+		if(hasMalignants != "")
+			dat += "<font color='red'>Unknown anatomy detected!</font><BR>" + hasMalignants
+		// Outpost 21 edit end
 	else
 		dat += "\The [src] is empty."
 
