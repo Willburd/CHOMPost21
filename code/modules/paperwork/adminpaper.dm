@@ -40,12 +40,15 @@
 	var/originhash = md5("[origin]")
 	var/timehash = copytext(md5("[world.time]"),1,10)
 	var/text = null
-	var/logo = tgui_alert(usr, "Do you want the header of your fax to have a NanoTrasen, SolGov, or Trader logo?","Fax Logo",list("NanoTrasen","SolGov","Trader")) //VOREStation Add - Trader
+	var/logo = tgui_alert(usr, "Do you want the header of your fax to have a NanoTrasen, SolGov, or Trader logo?","Fax Logo",list("Eshui","NanoTrasen","SolGov","Trader")) //VOREStation Add - Trader, Outpost 21 addition - Eshui
 	if(logo == "SolGov")
 		logo = "sglogo.png"
 	//VOREStation Edit/Add
 	else if(logo == "NanoTrasen")
 		logo = "ntlogo.png"
+	//Outpost 21 Edit/Add
+	else if(logo == "Eshui")
+		logo = "eslogo.png"
 	else
 		logo = "trader.png"
 	//VOREStation Edit/Add End

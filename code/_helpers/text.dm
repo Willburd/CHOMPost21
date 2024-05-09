@@ -423,9 +423,17 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 	t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 	t = replacetext(t, "\[row\]", "</td><tr>")
 	t = replacetext(t, "\[cell\]", "<td>")
+	// Outpost 21 begin - modified logos, use internal logos instead of remote files
+	t = replacetext(t, "\[logo\]", "<img src = eslogo.png>")
+	t = replacetext(t, "\[redlogo\]", "<img src = redntlogo.png>")
+	t = replacetext(t, "\[sglogo\]", "<img src = sglogo.png>")
+	t = replacetext(t, "\[ntlogo\]", "<img src = ntlogo.png>")
+	/*
 	t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>") //CHOMPEdit
 	t = replacetext(t, "\[redlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/redntlogo.png>") //CHOMPEdit
 	t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>") //CHOMPEdit
+	*/
+	// Outpost 21 edit - end
 	t = replacetext(t, "\[editorbr\]", "")
 	return t
 
@@ -473,9 +481,12 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 	t = replacetext(t, "</table>", "\[/grid\]")
 	t = replacetext(t, "<tr>", "\[row\]")
 	t = replacetext(t, "<td>", "\[cell\]")
-	t = replacetext(t, "<img src = ntlogo.png>", "\[logo\]")
+	// Outpost 21 edit begin - logos edited
+	t = replacetext(t, "<img src = eslogo.png>", "\[logo\]")
 	t = replacetext(t, "<img src = redntlogo.png>", "\[redlogo\]")
 	t = replacetext(t, "<img src = sglogo.png>", "\[sglogo\]")
+	t = replacetext(t, "<img src = ntlogo.png>", "\[ntlogo\]")
+	// Outpost 21 edit end
 	t = replacetext(t, "<span class=\"paper_field\"></span>", "\[field\]")
 	t = replacetext(t, "<span class=\"redacted\">R E D A C T E D</span>", "\[redacted\]")
 	t = strip_html_properly(t)

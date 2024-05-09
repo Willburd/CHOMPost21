@@ -376,12 +376,21 @@
 		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
+		// Outpost 21 edit begin - use our logo and built in files instead of remote
+		t = replacetext(t, "\[logo\]", "<img src = eslogo.png>")
+		t = replacetext(t, "\[ntlogo\]", "<img src = ntlogo.png>")
+		t = replacetext(t, "\[sglogo\]", "<img src = sglogo.png>")
+		t = replacetext(t, "\[trlogo\]", "<img src = trader.png>")
+		t = replacetext(t, "\[pclogo\]", "<img src = pclogo.png>")
+		/*
 		 //CHOMPEdit Start
 		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/ntlogo.png>")
 		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/sglogo.png>")
 		t = replacetext(t, "\[trlogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/trader.png>")
 		t = replacetext(t, "\[pclogo\]", "<img src = https://raw.githubusercontent.com/CHOMPStation2/CHOMPStation2/master/html/images/pclogo.png>")
 		//CHOMPEdit End
+		*/
+		// Outpost 21 edit end
 
 		t = "<font face=\"[deffont]\" color=[P ? P.colour : "black"]>[t]</font>"
 	else // If it is a crayon, and he still tries to use these, make them empty!
@@ -397,8 +406,12 @@
 		t = replacetext(t, "\[cell\]", "")
 		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
 		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
+		// Outpost 21 edit begin - handle the other logos and ours too
 		t = replacetext(t, "\[logo\]", "")
+		t = replacetext(t, "\[ntlogo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
+		t = replacetext(t, "\[trlogo\]", "")
+		// Outpost 21 edit end
 
 		t = "<font face=\"[crayonfont]\" color=[P ? P.colour : "black"]><b>[t]</b></font>"
 
