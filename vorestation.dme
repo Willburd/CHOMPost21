@@ -3012,6 +3012,7 @@
 #include "code\modules\mining\mine_items_vr.dm"
 #include "code\modules\mining\mine_outcrops.dm"
 #include "code\modules\mining\mine_turfs.dm"
+#include "code\modules\mining\mine_turfs_op.dm"
 #include "code\modules\mining\mine_turfs_vr.dm"
 #include "code\modules\mining\mineral_effect.dm"
 #include "code\modules\mining\ore.dm"
