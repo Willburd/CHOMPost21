@@ -25,13 +25,13 @@
 /mob/living/silicon/ai/ClickOn(var/atom/A, params)
 	if(!checkClickCooldown())
 		return
-	
+
 	setClickCooldown(1)
 
 	if(client.buildmode) // comes after object.Click to allow buildmode gui objects to be clicked
 		build_click(src, client.buildmode, params, A)
 		return
-		
+
 	if(multicam_on)
 		var/turf/T = get_turf(A)
 		if(T)
@@ -62,6 +62,12 @@
 	if(modifiers["ctrl"])
 		CtrlClickOn(A)
 		return
+
+	// Outpost 21 edit begin - hologram facing when clicked
+	if(holo && istype(holo.masters[src],/obj/effect/overlay/aiholo))
+		var/curdur = get_dir(get_turf(holo.masters[src]), get_turf(A))
+		holo.masters[src].set_dir(curdur)
+	// Outpost 21 edit end
 
 	if(aiCamera.in_camera_mode)
 		aiCamera.camera_mode_off()

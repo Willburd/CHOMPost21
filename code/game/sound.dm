@@ -14,6 +14,13 @@
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
 	var/list/listeners = player_list.Copy() + interior_vehicle_list.Copy()
+	// Outpost 21 edit begin - Get holograms from AIs
+	var/list/holo_listeners = list() // sorry for the duped bits of code ahead, but this is somewhat required to have AI holograms listen to game sounds - Willbird
+	for(var/mob/living/silicon/ai/A in player_list)
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
+			holo_listeners += A.holo.masters[A]
+	listeners += holo_listeners
+	// Outpost 21 edit end
 	/*if(!ignore_walls) //these sounds don't carry through walls CHOMP Removal, ripping this logic up because it's unreliable and unnecessary.
 		/*for(var/mob/listen in listeners) //This is beyond fucking horrible. Please do not repeatedly call hear.
 			if(!(get_turf(listen) in hear(maxdistance,source)))
@@ -43,6 +50,27 @@
 
 			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
 
+		// Outpost 21 addition begin - holograms can hear things
+		if(istype(U,/obj/effect/overlay/aiholo))
+			var/obj/effect/overlay/aiholo/H = U
+			if(!H.master || !H.master.client)
+				continue
+			var/turf/T = get_turf(H)
+			if(!T)
+				continue
+			var/area/A = T.loc
+			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+				continue
+
+			if(!T || T.z != turf_source.z) //^ +1
+				continue
+			if(get_dist(T, turf_source) > maxdistance)
+				continue
+			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
+				continue
+
+			H.master.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel, T)
+		// Outpost 21 addition end
 		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
 		else if(istype(U,/obj/vehicle/has_interior/controller))
 			// Already a sound forwarded to the interior of a vehicle, ignore me!
@@ -96,9 +124,17 @@
 		else
 			S.frequency = get_rand_frequency()
 
+	// Outpost 21 edit begin - AI hologram can hear things
+	var/listener_position = get_turf(src) // used exclusively for sound_env stuff
+	var/turf/T
+	if(isAI(src))
+		// AI is silly, and we'd be doing a distance check across the station. Make it use the hologram's location... even if it makes more sense to use the emitter's. - Willbird
+		var/mob/living/silicon/ai/A = src
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo))
+			T = get_turf(A.holo.masters[A])
+			listener_position = A.holo.masters[A]
 	if(isturf(turf_source))
-		var/turf/T = get_turf(src)
-
+	// Outpost 21 end
 		//sound volume falloff with distance
 		var/distance = get_dist(T, turf_source)
 
@@ -129,7 +165,7 @@
 
 		//Apply a sound environment.
 		if(!is_global)
-			S.environment = get_sound_env(pressure_factor)
+			S.environment = get_sound_env(listener_position,pressure_factor) // Outpost 21 edit - ai can hear sounds through hologram
 
 		var/dx = turf_source.x - T.x // Hearing from the right/left
 		S.x = dx
@@ -332,6 +368,17 @@
 					'modular_chomp/sound/effects/mech/powerloader_step.ogg',
 					'modular_chomp/sound/effects/mech/powerloader_step2.ogg')
 			// CHOMPedit end.
+			// Outpost 21 edit begin - vehicle crushing
+			if("vehicle_crush")
+				soundin = pick(
+					'sound/effects/grillehit.ogg',
+					'sound/effects/metalscrape1.ogg',
+					'sound/effects/metalscrape2.ogg',
+					'sound/effects/metalscrape3.ogg',
+					'sound/effects/locker_close.ogg',
+					'sound/effects/metal_close.ogg',
+					'sound/effects/meteorimpact.ogg')
+			// Outpost 21 edit end
 	return soundin
 
 //Are these even used? //Yes

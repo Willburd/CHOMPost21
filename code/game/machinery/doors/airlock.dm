@@ -1337,6 +1337,16 @@ About the new airlock wires panel:
 		if(distance <= world.view * 2)
 			if(T && T.z == get_z(src))
 				M.playsound_local(get_turf(src), sound, volume, 1, null, 0, TRUE, sound(sound), volume_channel = VOLUME_CHANNEL_DOORS)
+		// Outpost 21 edit begin - AI can hear doors through holograms
+		if(isAI(M))
+			var/mob/living/silicon/ai/A = M
+			if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo))
+				T = get_turf(A.holo)
+				distance = get_dist(T, get_turf(src))
+				if(distance <= world.view * 2)
+					if(T && T.z == get_z(src))
+						M.playsound_local(get_turf(src), sound, volume, 1, null, 0, TRUE, sound(sound), volume_channel = VOLUME_CHANNEL_DOORS)
+		// Outpost 21 edit end
 
 	if(src.closeOther != null && istype(src.closeOther, /obj/machinery/door/airlock/) && !src.closeOther.density)
 		src.closeOther.close()
@@ -1470,6 +1480,16 @@ About the new airlock wires panel:
 		if(distance <= world.view * 2)
 			if(T && T.z == get_z(src))
 				M.playsound_local(get_turf(src), sound, volume, 1, null, 0, TRUE, sound(sound), volume_channel = VOLUME_CHANNEL_DOORS)
+		// Outpost 21 edit begin - AI can hear doors through holograms
+		if(isAI(M))
+			var/mob/living/silicon/ai/A = M
+			if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo))
+				T = get_turf(A.holo)
+				distance = get_dist(T, get_turf(src))
+				if(distance <= world.view * 2)
+					if(T && T.z == get_z(src))
+						M.playsound_local(get_turf(src), sound, volume, 1, null, 0, TRUE, sound(sound), volume_channel = VOLUME_CHANNEL_DOORS)
+		// Outpost 21 edit end
 	for(var/turf/turf in locs)
 		var/obj/structure/window/killthis = (locate(/obj/structure/window) in turf)
 		if(killthis)

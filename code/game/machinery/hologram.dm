@@ -140,6 +140,13 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	A.holo = src
 	if(LAZYLEN(masters))
 		START_MACHINE_PROCESSING(src)
+	// Outpost 21 edit begin - ambience for AI when in hologram
+	var/area/ar = get_area(hologram.loc)
+	if(ar)
+		A.lastarea = ar
+		A.lastareachange = world.time
+		ar.play_ambience(A, initial = TRUE)
+	// Outpost 21 edit end
 	return 1
 
 /obj/machinery/hologram/holopad/proc/clear_holo(mob/living/silicon/ai/user)

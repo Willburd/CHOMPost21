@@ -677,11 +677,11 @@ var/global/image/backplane
 
 	return TRUE
 
-/mob/proc/get_sound_env(var/pressure_factor)
+/mob/proc/get_sound_env(var/spot, var/pressure_factor) // Outpost 21 edit - AI can hear through holograms
 	if (pressure_factor < 0.5)
 		return SPACE
 	else
-		var/area/A = get_area(src)
+		var/area/A = get_area(spot) // Outpost 21 edit - AI can hear through holograms, src -> spot
 		return A.sound_env
 
 /mob/proc/position_hud_item(var/obj/item/item, var/slot)
