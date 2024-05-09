@@ -205,9 +205,10 @@
 	var/area/A = get_area(src)
 	if((user.hallucination > 20 && prob(5)) || (A && A.haunted))
 		return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> Backup scan erased. Body scan erased. You deserve to die."
-	// Outpost 21 edit end
 
-	return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> A backup implant is required for automated notifications to the appropriate department in case of incident."
+	return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> Please ensure your suit's sensors are properly configured to alert medical and security personal to your current status."
+	// return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> A backup implant is required for automated notifications to the appropriate department in case of incident."
+	// Outpost 21 edit end
 
 /obj/machinery/medical_kiosk/process()
 	if(inoperable() || panel_open)
