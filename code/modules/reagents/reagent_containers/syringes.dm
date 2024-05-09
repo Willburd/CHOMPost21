@@ -229,11 +229,8 @@
 				to_chat(user, "<span class='notice'>The syringe is empty.</span>")
 
 			// Outpost 21 edit begin - syringe dirtying restored, but made less painful
-			var/mob/living/carbon/human/H = target
-			if(istype(H))
-				var/obj/item/organ/external/affected = H.get_organ(user.zone_sel.selecting)
-				if(affected)
-					dirty(target,affected)
+			if(affected)
+				dirty(target,affected)
 			// Outpost 21 edit end
 	return
 /* VOREStation Edit - See syringes_vr.dm
