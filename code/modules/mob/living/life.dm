@@ -252,7 +252,7 @@
 			set_light(distance, distance * 4, l_color = "#660066")
 			return TRUE
 
-	else if(glow_toggle)
+	else if(glow_toggle && !is_ventcrawling) // Outpost 21 edit hiding in vents hides your lights too!
 		set_light(glow_range, glow_intensity, glow_color)
 
 	else

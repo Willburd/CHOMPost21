@@ -1849,6 +1849,11 @@
 					if(item.zoom)
 						item.zoom()
 						break
+				// Outpost 21 edit begin - drop vehicle views
+				if(istype(buckled,/obj/structure/bed/chair/vehicle_interior_seat))
+					var/obj/structure/bed/chair/vehicle_interior_seat/VC = buckled
+					VC.paired_console.clean_all_viewers()
+				// Outpost 21 edit end
 
 	else //We aren't dead
 		sight &= ~(SEE_TURFS|SEE_MOBS|SEE_OBJS)
