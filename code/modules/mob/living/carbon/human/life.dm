@@ -480,9 +480,15 @@
 					to_chat(src, "<span class='warning'>You feel horribly ill.</span>")
 					AdjustWeakened(3)
 				if(prob(5) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// Outpost 21 edit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						malignant_organ_spawn(TRUE,FALSE,prob(40))
+					// Outpost 21 edit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 
 		else if (radiation >= 400 && radiation < 1500) //Equivalent of 8.0 to 30 Gy.
@@ -511,9 +517,15 @@
 					to_chat(src, "<span class='critical'>Your entire body feels like it's on fire!</span>")
 					adjustHalLoss(5)
 				if(prob(10) && internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// Outpost 21 edit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						malignant_organ_spawn(TRUE,FALSE,prob(60))
+					// Outpost 21 edit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 		else if (radiation >= 1500) //Above 30Gy. You had to get absolutely blasted with rads for this.
 			damage = 30
@@ -542,9 +554,15 @@
 					to_chat(src, "<span class='danger'>Your hand won't respond properly, you drop what you're holding!</span>")
 					drop_item()
 				if(internal_organs.len)
-					I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
-					if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
-					I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+					// Outpost 21 edit begin - organ mutations
+					if(prob(2))
+						// random organ time!
+						malignant_organ_spawn(prob(40),FALSE,TRUE)
+					// Outpost 21 edit end
+					else
+						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
+						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
+						I.take_damage(damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
 
 /* 		//Not-so-sparkledog code. TODO: Make a pref for 'special game interactions' that allows interactions that align with prefs to occur.
 		if(radiation >= 250) //Special effect stuff that occurs at certain rad levels.
