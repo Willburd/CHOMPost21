@@ -1495,6 +1495,18 @@
 			adjustHalLoss(-3)
 
 			if(sleeping)
+				// Outpost 21 edit begin - sleeping VERY SLOWLY heals
+				if(prob(2))
+					if(prob(50))
+						adjustBruteLoss(-1)
+					else
+						adjustFireLoss(-1)
+					if(bad_external_organs.len && prob(45))
+						var/obj/item/organ/badorgan = pick(bad_external_organs)
+						if(!badorgan.is_broken() && badorgan.is_bruised())
+							badorgan.damage -= 1
+				// Outpost 21 edit end
+
 				handle_dreams()
 				if (mind)
 					//Are they SSD? If so we'll keep them asleep but work off some of that sleep var in case of stoxin or similar.
