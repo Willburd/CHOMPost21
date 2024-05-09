@@ -31,11 +31,13 @@
 		/obj/item/stack/material/supermatter = list("supermatter")
 		)
 
+	/* Outpost 21 edit - disable radial menu
 	var/static/radial_examine = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_examine")
 	var/static/radial_eject = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_eject")
 	var/static/radial_grind = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_grind")
 	// var/static/radial_juice = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_juice")
 	// var/static/radial_mix = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_mix")
+	*/
 
 /obj/machinery/reagentgrinder/Initialize()
 	. = ..()
@@ -152,15 +154,71 @@
 	//CHOMPedit end
 	return 0
 
-/obj/machinery/reagentgrinder/AltClick(mob/user)
+// outpost 21 (large)edit begin - removing radial menu
+/obj/machinery/reagentgrinder/AltClick(var/mob/user)
 	. = ..()
-	if(user.incapacitated() || !Adjacent(user))
+	grind_verb()
+
+/obj/machinery/reagentgrinder/attack_hand(var/mob/user)
+	//interact(user)
+	if(isAI(user))
 		return
-	replace_beaker(user)
+	if(inuse || user.incapacitated() || !Adjacent(user))
+		return
 
-/obj/machinery/reagentgrinder/attack_hand(mob/user as mob)
-	interact(user)
+	if(beaker)
+		replace_beaker(user)
+		return
 
+	if(length(holdingitems))
+		eject(user)
+		return
+
+/obj/machinery/reagentgrinder/verb/grind_verb()
+	set name = "Grind"
+	set category = "Object"
+	set src in oview(1)
+
+	if(inuse || usr.incapacitated() || !Adjacent(usr) || stat & NOPOWER)
+		return
+	if(isAI(usr))
+		return
+	if(!beaker)
+		to_chat(usr, "No beaker inserted.")
+	else if(!length(holdingitems))
+		to_chat(usr, "\the [src] is empty.")
+	else
+		grind(usr)
+
+/obj/machinery/reagentgrinder/verb/eject_verb()
+	set name = "Eject Contents"
+	set category = "Object"
+	set src in oview(1)
+
+	if(inuse || usr.incapacitated() || !Adjacent(usr))
+		return
+	if(isAI(usr))
+		return
+	if(!length(holdingitems))
+		to_chat(usr, "\the [src] is already empty.")
+	else
+		eject(usr)
+
+/obj/machinery/reagentgrinder/verb/remove_beaker()
+	set name = "Remove Beaker"
+	set category = "Object"
+	set src in oview(1)
+
+	if(inuse || usr.incapacitated() || !Adjacent(usr))
+		return
+	if(isAI(usr))
+		return
+	if(!beaker)
+		to_chat(usr, "No beaker inserted.")
+	else
+		replace_beaker(usr)
+
+/*
 /obj/machinery/reagentgrinder/interact(mob/user as mob) // The microwave Menu //I am reasonably certain that this is not a microwave
 	if(inuse || user.incapacitated())
 		return
@@ -199,6 +257,7 @@
 			grind(user)
 		if("examine")
 			examine(user)
+*/
 
 /obj/machinery/reagentgrinder/proc/eject(mob/user)
 	if(user.incapacitated())
@@ -207,10 +266,10 @@
 		O.loc = src.loc
 		holdingitems -= O
 	holdingitems.Cut()
-	if(beaker)
-		replace_beaker(user)
+	//if(beaker)
+	//	replace_beaker(user)
 
-/obj/machinery/reagentgrinder/proc/grind()
+/obj/machinery/reagentgrinder/proc/grind(var/mob/user)
 
 	power_change()
 	if(stat & (NOPOWER|BROKEN))
@@ -267,7 +326,7 @@
 			if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
 				break
 
-/obj/machinery/reagentgrinder/proc/replace_beaker(mob/living/user, obj/item/weapon/reagent_containers/new_beaker)
+/obj/machinery/reagentgrinder/proc/replace_beaker(var/mob/living/user, var/obj/item/weapon/reagent_containers/new_beaker)
 	if(!user)
 		return FALSE
 	if(beaker)
@@ -280,6 +339,7 @@
 		beaker = new_beaker
 	update_icon()
 	return TRUE
+// outpost 21 (large)edit end - Yes, that is basically all of the file above us!
 
 // CHOMPedit start: Repurposed coffee grinders and supermatter do not mix.
 /obj/machinery/reagentgrinder/proc/puny_protons(regrets = 0)
