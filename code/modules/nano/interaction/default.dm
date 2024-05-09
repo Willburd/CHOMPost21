@@ -87,5 +87,5 @@
 	. = shared_nano_interaction(src_object)
 	if(. != STATUS_CLOSE)
 		. = min(., shared_living_nano_distance(src_object))
-		if(. == STATUS_UPDATE && (TK in mutations))	// If we have telekinesis and remain close enough, allow interaction.
+		if(. == STATUS_UPDATE && has_telegrip())	// If we have telekinesis and remain close enough, allow interaction. Outpost 21 edit - check TK gloves too
 			return STATUS_INTERACTIVE

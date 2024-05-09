@@ -5208,6 +5208,7 @@
 #include "modular_outpost\code\game\objects\structures\atmospherepost.dm"
 #include "modular_outpost\code\game\turfs\flooring\gas_cracks.dm"
 #include "modular_outpost\code\modules\client\preferences_spawnpoints.dm"
+#include "modular_outpost\code\modules\clothing\gloves\telekinetic.dm"
 #include "modular_outpost\code\modules\events\allisclean.dm"
 #include "modular_outpost\code\modules\events\bluespace_shell_station.dm"
 #include "modular_outpost\code\modules\events\borg_error.dm"

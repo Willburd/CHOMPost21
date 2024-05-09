@@ -291,6 +291,7 @@
 					prob(4);/obj/item/seeds/ambrosiavulgarisseed,
 					prob(4);/obj/item/weapon/gun/energy/sizegun,
 					prob(4);/obj/item/device/slow_sizegun,
+					prob(3);/obj/item/clothing/gloves/telekinetic, // outpost 21 addition
 					prob(4);/obj/item/clothing/accessory/collar/shock/bluespace,
 					prob(3);/obj/item/weapon/material/butterfly,
 					prob(3);/obj/item/weapon/material/butterfly/switchblade,

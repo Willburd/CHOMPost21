@@ -216,7 +216,7 @@
 	if(!mutations.len) return
 	if((LASER in mutations) && a_intent == I_HURT)
 		LaserEyes(A) // moved into a proc below
-	else if(TK in mutations)
+	else if(has_telegrip()) // Outpost 21 edit - check for TK gloves too
 		if(get_dist(src, A) > tk_maxrange)
 			return
 		A.attack_tk(src)
