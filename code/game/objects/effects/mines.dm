@@ -97,9 +97,10 @@
 		explode(M)
 
 	if(istype(M, /mob/living/))
-		if(!M.hovering || mob.flying || mob.is_incorporeal() || mob.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
+		var/mob/living/L = M
+		if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
 			GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
-			explode(M)
+			explode(L)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
