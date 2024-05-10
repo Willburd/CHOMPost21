@@ -131,6 +131,24 @@
 
 	user.setClickCooldown(user.get_attack_speed(W))
 
+	// Outpost 21 addition begin - Slamming heads into walls
+	if(isliving(user) && istype(W,/obj/item/weapon/grab))
+		var/mob/living/L = user
+		var/damage_done = L.slam_grabbed_mob_against_thing(W)
+		if(damage_done > -1)
+			var/obj/item/weapon/grab/G = W
+			var/mob/living/throw_mob = G.throw_held()
+			if(throw_mob)
+				// SMACK wall till it breaks!
+				if(L.zone_sel.selecting != BP_HEAD)
+					to_chat(L, "<span class='danger'>slammed [throw_mob] into the wall</span>")
+					if(damage_done >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2) attack_generic(L,damage_done,"slammed")
+				else
+					to_chat(L, "<span class='danger'>slammed [throw_mob] by the head into the wall</span>")
+					if(damage_done >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2) attack_generic(L,damage_done,"slammed")
+		return
+	// Outpost 21 addition end
+
 /*
 //As with the floors, only this time it works AND tries pushing the wall after it's done.
 	if(!construction_stage && user.a_intent == I_HELP)
@@ -411,5 +429,3 @@
 
 	else if(!istype(W,/obj/item/weapon/rcd) && !istype(W, /obj/item/weapon/reagent_containers))
 		return attack_hand(user)
-
-
