@@ -3346,6 +3346,7 @@
 #include "code\modules\mob\living\silicon\robot\robot_damage.dm"
 #include "code\modules\mob\living\silicon\robot\robot_items.dm"
 #include "code\modules\mob\living\silicon\robot\robot_movement.dm"
+#include "code\modules\mob\living\silicon\robot\robot_op.dm"
 #include "code\modules\mob\living\silicon\robot\robot_remote_control.dm"
 #include "code\modules\mob\living\silicon\robot\robot_vr.dm"
 #include "code\modules\mob\living\silicon\robot\dogborg\dog_modules_vr.dm"

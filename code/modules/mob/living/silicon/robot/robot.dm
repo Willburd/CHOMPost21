@@ -336,8 +336,12 @@
 		else
 			modules.Add(robot_module_types)
 			modules.Remove(GLOB.shell_module_blacklist) // CHOMPEdit - Managed Globals
+			// Outpost 21 edit begin - Admins always have ERT access
+			if(client && client.holder && client.holder.rights & R_ADMIN)
+				modules |= emergency_module_types
+			// Outpost 21 edit end
 			//CHOMPedit Add
-			if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
+			else if(crisis || security_level == SEC_LEVEL_RED || crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= emergency_module_types
 			//CHOMPedit end
