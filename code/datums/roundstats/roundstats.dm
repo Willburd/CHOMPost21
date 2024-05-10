@@ -26,6 +26,8 @@ GLOBAL_VAR_INIT(prey_absorbed_roundstat, 0)		//VOREStation Edit - Obviously
 GLOBAL_VAR_INIT(prey_digested_roundstat, 0)		//VOREStation Edit - Obviously
 GLOBAL_VAR_INIT(items_digested_roundstat, 0)	//VOREStation Edit - Obviously
 var/global/list/security_printer_tickets = list()	//VOREStation Edit
+GLOBAL_VAR_INIT(landmines_stepped_on_roundstat, 0)	//Outpost21 edit - oh boy
+GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 
 
 /hook/roundend/proc/RoundTrivia()//bazinga
@@ -55,6 +57,13 @@ var/global/list/security_printer_tickets = list()	//VOREStation Edit
 		valid_stats_list.Add("The elevator moved up [GLOB.turbo_lift_floors_moved_roundstat] floors today!")
 	else if(GLOB.disposals_flush_shift_roundstat > 40)
 		valid_stats_list.Add("The disposal system flushed a whole [GLOB.disposals_flush_shift_roundstat] times for this shift. We should really invest in waste treatement.")
+
+	// outpost 21 add - begin
+	if(GLOB.landmines_stepped_on_roundstat > 0)
+		valid_stats_list.Add("[GLOB.landmines_stepped_on_roundstat] landmines were stepped on!")
+	if(GLOB.gibber_fellin_roundstat > 0)
+		valid_stats_list.Add("[GLOB.gibber_fellin_roundstat] crew members were sacrificed to the gibber god of hydroponics!")
+	// outpost 21 add - end
 
 	//VOREStation add Start - Ticket time!
 	if(security_printer_tickets.len)

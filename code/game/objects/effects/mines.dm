@@ -93,10 +93,12 @@
 		return
 
 	if(istype(M, /obj/mecha))
+		GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
 		explode(M)
 
 	if(istype(M, /mob/living/))
-		if(!M.hovering) //CHOMPedit: let's not make wings ignore mines because we use those here.
+		if(!M.hovering || mob.flying || mob.is_incorporeal() || mob.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
+			GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
 			explode(M)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
@@ -399,6 +401,6 @@
 
 // This tells AI mobs to not be dumb and step on mines willingly.
 /obj/item/weapon/mine/is_safe_to_step(mob/living/L)
-	if(!L.hovering) //CHOMPedit: Let's not trivialize mines.
+	if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
 		return FALSE
 	return ..()
