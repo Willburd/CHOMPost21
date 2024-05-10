@@ -12,6 +12,15 @@
 	required_reagents = list("water" = 5, "teapowder" = 1)
 	result_amount = 5
 
+// Outpost 21 edit begin - missing tea reaction
+/decl/chemical_reaction/instant/drinks/decaftea
+	name = "Decaf tea"
+	id = "teadecaf"
+	result = "teadecaf"
+	required_reagents = list("water" = 5, "decafteapowder" = 1)
+	result_amount = 5
+// Outpost 21 edit end
+
 /decl/chemical_reaction/instant/drinks/hot_coco
 	name = "Hot Coco"
 	id = "hot_coco"
