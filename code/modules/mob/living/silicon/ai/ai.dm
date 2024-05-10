@@ -727,6 +727,8 @@ var/list/ai_verbs_default = list(
 								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"syndifox"))	// CHOMPStation Edit: Fox holograms!
 							if("fox, alt")															// CHOMPStation Edit: Fox holograms!
 								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"fox2"))		// CHOMPStation Edit: Fox holograms!
+							if("synx") 																	// outpost 21 edit - added synx
+								holo_icon = getHologramIcon(icon('icons/mob/synx.dmi',"synx_living"))	// outpost 21 edit - added synx
 
 //Toggles the luminosity and applies it by re-entereing the camera.
 /mob/living/silicon/ai/proc/toggle_camera_light()
