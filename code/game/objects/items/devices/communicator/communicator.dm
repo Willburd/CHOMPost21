@@ -89,7 +89,21 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 								"dust" = 'sound/effects/supermatter.ogg',
 								"spark" = 'sound/effects/sparks4.ogg',
 								"rad" = 'sound/items/geiger/high1.ogg',
-								"servo" = 'sound/machines/rig/rigservo.ogg')
+								"servo" = 'sound/machines/rig/rigservo.ogg',
+								// Outpost 21 edit begin - new pda alerts
+								"squish" = 'sound/effects/slime_squish.ogg',
+								"bubble"= 'sound/effects/bubbles.ogg',
+								"silly" = 'sound/effects/whistle.ogg',
+								"frog" 	= 'sound/voice/Croak.ogg',
+								"peep" 	= 'sound/voice/peep.ogg',
+								"quack" = 'sound/voice/quack.ogg',
+								"ough" 	= 'sound/misc/ough.ogg',
+								"stamp" = 'sound/bureaucracy/stamp.ogg',
+								"gnome" = 'sound/items/hooh.ogg',
+								"ratchet"= 'sound/items/Ratchet.ogg',
+								"tether"= 'sound/items/tinytether.ogg'
+								) // Outpost 21 edit end
+
 
 // Proc: New()
 // Parameters: None

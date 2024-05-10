@@ -9,6 +9,10 @@
 		new/datum/data/pda/app/main_menu,
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/news,
+		// Outpost 21 addition begin - New apps
+		new/datum/data/pda/app/weather,
+		new/datum/data/pda/app/sop,
+		// Outpost 21 addition end
 		new/datum/data/pda/app/messenger)
 
 /obj/item/device/pda/ai/proc/set_name_and_job(newname as text, newjob as text, newrank as null|text)

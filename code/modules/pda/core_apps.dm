@@ -74,6 +74,11 @@
 		if("Edit")
 			var/n = tgui_input_text(usr, "Please enter message", name, notehtml, multiline = TRUE, prevent_enter = TRUE)
 			if(pda.loc == usr)
+				// Outpost 21 edit begin - delete question
+				if(!n || n == "")
+					if(tgui_alert(usr, "Are you sure you want to delete note [alphabet_uppercase[currentnote]]?", "Confirm Delete", list("Delete", "No")) != "Delete")
+						return TRUE
+				// Outpost 21 edit end
 				note = adminscrub(n)
 				notehtml = html_decode(note)
 				note = replacetext(note, "\n", "<br>")

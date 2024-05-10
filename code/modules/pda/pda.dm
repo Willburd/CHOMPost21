@@ -52,7 +52,19 @@ var/global/list/obj/item/device/pda/PDAs = list()
 								"bork" = 'sound/voice/bork.ogg',
 								"roark" = 'sound/voice/roarbark.ogg',
 								"chitter" = 'sound/voice/moth/moth_chitter.ogg',
-								"squish" = 'sound/effects/slime_squish.ogg')
+								// Outpost 21 edit begin - new pda alerts
+								"squish" = 'sound/effects/slime_squish.ogg',
+								"bubble"= 'sound/effects/bubbles.ogg',
+								"silly" = 'sound/effects/whistle.ogg',
+								"frog" 	= 'sound/voice/Croak.ogg',
+								"peep" 	= 'sound/voice/peep.ogg',
+								"quack" = 'sound/voice/quack.ogg',
+								"ough" 	= 'sound/misc/ough.ogg',
+								"stamp" = 'sound/bureaucracy/stamp.ogg',
+								"gnome" = 'sound/items/hooh.ogg',
+								"ratchet"= 'sound/items/Ratchet.ogg',
+								"tether"= 'sound/items/tinytether.ogg'
+								) // Outpost 21 edit end
 	var/hidden = 0 // Is the PDA hidden from the PDA list?
 	var/touch_silent = 0 //If 1, no beeps on interacting.
 
@@ -70,6 +82,10 @@ var/global/list/obj/item/device/pda/PDAs = list()
 		new/datum/data/pda/app/main_menu,
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/news,
+		// Outpost 21 addition begin - New apps
+		new/datum/data/pda/app/weather,
+		new/datum/data/pda/app/sop,
+		// Outpost 21 addition end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,
 		new/datum/data/pda/app/atmos_scanner,
