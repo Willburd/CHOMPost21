@@ -21,17 +21,19 @@
 #define MIN_TEMPERATURE -40
 
 //all air alarms in area are connected via magic
+//Outpost 21 - Unfortunately not, they use freq 1439, and if you ever change it you will break everything
 /area
 	var/obj/machinery/alarm/master_air_alarm
 	var/list/air_vent_names = list()
 	var/list/air_scrub_names = list()
 	var/list/air_vent_info = list()
 	var/list/air_scrub_info = list()
+	var/list/air_alarms = list() // Outpost 21 edit - Multiple alarms in one area
 
 /obj/machinery/alarm
 	name = "alarm"
 	desc = "Used to control various station atmospheric systems. The light indicates the current air status of the area."
-	icon = 'icons/obj/monitors_vr.dmi' //VOREStation Edit - Other icons
+	icon = 'icons/obj/monitors_op.dmi' // Outpost 21 edit - Multiple alarms in one area
 	icon_state = "alarm_0"
 	layer = ABOVE_WINDOW_LAYER
 	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
@@ -99,7 +101,7 @@
 	alarms_hidden = TRUE
 
 /obj/machinery/alarm/angled
-	icon = 'icons/obj/wall_machines_angled.dmi'
+	icon = 'icons/obj/wall_machines_angled.dmi' // Outpost 21 todo - Make the angled machines have the new lights too!
 
 /obj/machinery/alarm/angled/hidden
 	alarms_hidden = TRUE
@@ -125,6 +127,7 @@
 	if(!pixel_x && !pixel_y)
 		offset_airalarm()
 	first_run()
+	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
 
 /obj/machinery/alarm/Destroy()
 	unregister_radio(src, frequency)
@@ -141,10 +144,7 @@
 	pixel_y = (dir & 3) ? (dir == 1 ? -26 : 26) : 0
 
 /obj/machinery/alarm/proc/first_run()
-	alarm_area = get_area(src)
-	area_uid = "\ref[alarm_area]"
-	if(name == "alarm")
-		name = "[alarm_area.name] Air Alarm"
+	update_area() // Outpost 21 edit - Multiple alarms in one area
 
 	if(!wires)
 		wires = new(src)
@@ -159,24 +159,32 @@
 	TLV["pressure"] =		list(ONE_ATMOSPHERE * 0.80, ONE_ATMOSPHERE * 0.90, ONE_ATMOSPHERE * 1.10, ONE_ATMOSPHERE * 1.20) /* kpa */
 	TLV["temperature"] =	list(T0C - 26, T0C, T0C + 40, T0C + 66) // K
 
-	update_icon()
+	// Outpost 21 addition begin - Multiple alarms in one area
+	if(!master_is_operating()) // select master alarm
+		elect_master()
+
+	// Mappers messed up, and have alarms with different frequencies in areas.
+	// This outright does not work, does nothing special, and makes any alarms on other freqs braindead.
+	// 1437 for atmospherics/fire alerts
+	// 1439 for air pumps, air scrubbers, atmo control
+	// Never change this on the alarm unless you want to break every alarm in their radio circuit.
+	// I'm CLEANING it here, to ensure even if mappers break it, it will fix itself instead, and if they code dig they will know why. Hello by the way~
+	frequency = 1439
+	alarm_frequency = 1437
+	set_frequency(frequency)
+	// Outpost 21 addition end
 
 /obj/machinery/alarm/proc/update_area()
 	alarm_area = get_area(src)
 	area_uid = "\ref[alarm_area]"
 	if(name == "alarm")
-		name = "[alarm_area.name] Air Alarm"
+		name = "[alarm_area.name] Air Alarm \[[rand(9999)]\]" // random number id to help with players locating alarms, cosmetic
 
-/obj/machinery/alarm/Initialize()
-	. = ..()
-	set_frequency(frequency)
-	if(!master_is_operating())
-		elect_master()
-	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
-
-/obj/machinery/alarm/process()
-	if((stat & (NOPOWER|BROKEN)) || shorted)
+/obj/machinery/alarm/proc/scan_atmo()
+	// Outpost 21 addition begin - Multiple alarms in one area
+	if(alarm_area.master_air_alarm.shorted)
 		return
+	// Outpost 21 addition end
 
 	var/turf/simulated/location = src.loc
 	if(!istype(location))	return//returns if loc is not simulated
@@ -221,7 +229,23 @@
 		if(RCON_YES)
 			remote_control = 1
 
+/obj/machinery/alarm/process()
+	// Outpost 21 addition begin - Multiple alarms in one area
+	if(!alarm_area)
+		return
+	if(!alarm_area.master_air_alarm)
+		elect_master()
+	if((stat & (NOPOWER|BROKEN)) || shorted)
+		return
+	if(src != alarm_area.master_air_alarm || alarm_area.master_air_alarm.shorted)
+		// only master scans! disable scans if in headless mode!
+		return
+
+	// if master is working at all, update all sensors!
+	for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+		AA.scan_atmo()
 	return
+	// Outpost 21 addition end
 
 /obj/machinery/alarm/proc/handle_heating_cooling(var/datum/gas_mixture/environment)
 	DECLARE_TLV_VALUES
@@ -333,15 +357,39 @@
 	return alarm_area && alarm_area.master_air_alarm && !(alarm_area.master_air_alarm.stat & (NOPOWER | BROKEN))
 
 /obj/machinery/alarm/proc/elect_master(exclude_self = FALSE)
+	// Outpost 21 addition begin - Multiple alarms in one area
+	if(!alarm_area)
+		return
+
+	// loop through all sensors to update the area's sensor list as well
+	alarm_area.master_air_alarm = null
+	alarm_area.air_alarms = list()
 	for(var/obj/machinery/alarm/AA in alarm_area)
+		alarm_area.air_alarms += AA
 		if(exclude_self && AA == src)
 			continue
-		if(!(AA.stat & (NOPOWER|BROKEN)))
+		if(!alarm_area.master_air_alarm && !(AA.stat & (NOPOWER|BROKEN)))
 			alarm_area.master_air_alarm = AA
-			return 1
-	return 0
+
+	if(alarm_area.master_air_alarm)
+		// new master found!
+		alarm_area.master_air_alarm.update_icon() // ensure all alarms update icon with new master
+		return 1
+	else
+		// failed to find new master
+		return 0
+	// Outpost 21 addition end
 
 /obj/machinery/alarm/update_icon()
+	// Outpost 21 addition begin - Multiple alarms in one area
+	if(alarm_area && alarm_area.master_air_alarm == src) // only master
+		// update icons of all other air alarms when master is updated
+		for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+			if(AA != alarm_area.master_air_alarm) // we're already doing this... No recursion please!
+				AA.update_icon()
+	// Outpost 21 addition end
+
+	// start actual update!
 	cut_overlays()
 
 	if(panel_open)
@@ -349,11 +397,32 @@
 		set_light(0)
 		set_light_on(FALSE)
 		return
-	if((stat & (NOPOWER|BROKEN)) || shorted)
+	if(!alarm_area || (stat & (NOPOWER|BROKEN)) || shorted) // Outpost 21 edit - Multiple alarms in one area
 		icon_state = "alarmp"
 		set_light(0)
 		set_light_on(FALSE)
 		return
+
+	// sub light!
+	// Outpost 21 addition begin - Multiple alarms in one area
+	if(alarm_area.master_air_alarm == src)
+		// master mode
+		add_overlay(mutable_appearance(icon, "alarm_Mmode"))
+		add_overlay(emissive_appearance(icon, "alarm_Mmode"))
+	else
+		if(!alarm_area.master_air_alarm || alarm_area.master_air_alarm.shorted)
+			// master is out! don't show display!
+			icon_state = "alarmp"
+			add_overlay(mutable_appearance(icon, "alarm_Xmode"))
+			add_overlay(emissive_appearance(icon, "alarm_Xmode"))
+			set_light(0)
+			set_light_on(FALSE)
+			return
+		else
+			// passive light on
+			add_overlay(mutable_appearance(icon, "alarm_Pmode"))
+			add_overlay(emissive_appearance(icon, "alarm_Pmode"))
+	// Outpost 21 addition end
 
 	var/icon_level = danger_level
 	if(alarm_area?.atmosalm)
@@ -363,9 +432,17 @@
 	switch(icon_level)
 		if(0)
 			icon_state = "alarm_0"
-			add_overlay(mutable_appearance(icon, "alarm_ov0"))
-			add_overlay(emissive_appearance(icon, "alarm_ov0"))
-			new_color = "#03A728"
+			// Outpost 21 addition begin - Multiple alarms in one area
+			if(alarm_area.master_air_alarm == src)
+				add_overlay(mutable_appearance(icon, "alarm_ov0"))
+				add_overlay(emissive_appearance(icon, "alarm_ov0"))
+				new_color = "#03A728"
+			else
+				// passive mode
+				add_overlay(mutable_appearance(icon, "alarm_ovP"))
+				add_overlay(emissive_appearance(icon, "alarm_ovP"))
+				new_color = "#0033FF"
+			// Outpost 21 addition end
 		if(1)
 			icon_state = "alarm_2" //yes, alarm2 is yellow alarm
 			add_overlay(mutable_appearance(icon, "alarm_ov2"))
@@ -455,10 +532,11 @@
 	return 1
 
 /obj/machinery/alarm/proc/apply_mode()
-	//propagate mode to other air alarms in the area
-	//TODO: make it so that players can choose between applying the new mode to the room they are in (related area) vs the entire alarm area
-	for(var/obj/machinery/alarm/AA in alarm_area)
-		AA.mode = mode
+	// Outpost 21 addition begin - Multiple alarms in one area
+	if(alarm_area)
+		for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+			AA.mode = mode //propagate mode to other air alarms in the area
+	// Outpost 21 addition end
 
 	switch(mode)
 		if(AALARM_MODE_SCRUBBING)
@@ -694,6 +772,12 @@
 				rcon_setting = RCON_AUTO
 			if(RCON_YES)
 				rcon_setting = RCON_YES
+
+		// Outpost 21 addition begin - Multiple alarms in one area
+		if(alarm_area)
+			for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+				AA.rcon_setting = rcon_setting
+		// Outpost 21 addition end
 		return TRUE
 
 	if(action == "temperature")
@@ -705,7 +789,13 @@
 			if(input_temperature > max_temperature || input_temperature < min_temperature)
 				to_chat(usr, "Temperature must be between [min_temperature]C and [max_temperature]C")
 			else
-				target_temperature = input_temperature + T0C
+				// Outpost 21 addition begin - Multiple alarms in one area
+				if(alarm_area)
+					for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+						AA.target_temperature = input_temperature + T0C
+				else
+					target_temperature = input_temperature + T0C
+				// Outpost 21 addition end
 		return TRUE
 
 	// Account for remote users here.
@@ -763,6 +853,10 @@
 					TLV[env][name] = round(value, 0.01)
 				clamp_tlv_values(env, name)
 				// investigate_log(" treshold value for [env]:[name] was set to [value] by [key_name(usr)]",INVESTIGATE_ATMOS)
+				// Outpost 21 addition begin - Multiple alarms in one area
+				for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+					AA.TLV[env][name] = TLV[env][name]
+				// Outpost 21 addition end
 				. = TRUE
 		if("mode")
 			mode = text2num(params["mode"])
