@@ -56,11 +56,34 @@
 	var/list/blacklisted_types = list()
 	// look if theres a better way to do this im all ears
 	blacklisted_types += subtypesof(/obj/item/toy/plushie/therapy)
+	blacklisted_types += /obj/item/toy/plushie/fluff // Outpost 21 edit - hide this
 	blacklisted_types += subtypesof(/obj/item/toy/plushie/fluff)
 	blacklisted_types += /obj/item/toy/plushie/borgplushie/drake //VOREStation addition
+	// Outpost 21 edit begin - teshari plush to their own entry
+	blacklisted_types += /obj/item/toy/plushie/teshari
+	blacklisted_types += subtypesof(/obj/item/toy/plushie/teshari)
+	// Outpost 21 edit end
 	for(var/obj/item/toy/plushie/plushie_type as anything in subtypesof(/obj/item/toy/plushie) - blacklisted_types)
 		plushies[initial(plushie_type.name)] = plushie_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(plushies))
+
+// Outpost 21 edit begin - teshari plush to their own entry
+/datum/gear/plushie_teshlifelike
+	display_name = "lifelike plushie selection"
+	path = /obj/item/toy/plushie/teshari
+
+/datum/gear/plushie_teshlifelike/New()
+	..()
+	var/list/plushies = list()
+	var/list/blacklisted_types = list()
+	// look if theres a better way to do this im all ears
+	for(var/obj/item/toy/plushie/teshari/plushie_type as anything in subtypesof(/obj/item/toy/plushie/teshari) - blacklisted_types)
+		plushies[initial(plushie_type.name)] = plushie_type
+	// and initial teshplush
+	var/obj/item/toy/plushie/teshari/plushie_type = /obj/item/toy/plushie/teshari
+	plushies[initial(plushie_type.name)] = plushie_type
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(plushies))
+// Outpost 21 edit end
 
 /datum/gear/figure
 	display_name = "action figure selection"
