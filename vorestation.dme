@@ -3087,6 +3087,7 @@
 #include "code\modules\mob\dead\observer\login.dm"
 #include "code\modules\mob\dead\observer\logout.dm"
 #include "code\modules\mob\dead\observer\observer.dm"
+#include "code\modules\mob\dead\observer\observer_op.dm"
 #include "code\modules\mob\dead\observer\observer_vr.dm"
 #include "code\modules\mob\dead\observer\say.dm"
 #include "code\modules\mob\freelook\chunk.dm"
