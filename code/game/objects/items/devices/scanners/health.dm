@@ -266,7 +266,8 @@
 					dat += "<span class='warning'>[severity] inflammation detected in subject.</span><br>"
 			else if(istype(io,/obj/item/organ/internal/malignant))
 				if(advscan >= 2)
-					dat += "<span class='warning'>Anatomical irregularities detected in subject's [H.organs_by_name[io.parent_organ].name].</span><br>"
+					var/obj/item/organ/internal/ORG = H.organs_by_name[io.parent_organ]
+					dat += "<span class='warning'>Anatomical irregularities detected in subject's [ORG.name].</span><br>"
 				else
 					dat += "<span class='warning'>Anatomical irregularities detected in subject.</span><br>"
 		// Outpost 21 edit end

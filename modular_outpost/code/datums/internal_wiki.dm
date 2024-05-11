@@ -300,7 +300,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 				app = "Simple"
 			if(!searchcache_foodrecipe[app])
 				searchcache_foodrecipe[app] = list()
-			searchcache_foodrecipe[app].Add("[P.title]")
+			var/list/FL = searchcache_foodrecipe[app]
+			FL.Add("[P.title]")
 			pages.Add(P)
 	for(var/Rp in drink_recipes)
 		if(drink_recipes[Rp] && !drink_recipes[Rp]["Spoiler"] && !isnull(drink_recipes[Rp]["Result"]))
@@ -337,7 +338,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	if(O.compresses_to)
 		var/datum/material/C = get_material_by_name(O.compresses_to)
 		body += "<b>Compress: [C.name]</b><br>"
-	body += "<b>Grind: [SSchemistry.chemical_reagents[O.reagent].name]</b><br>"
+	var/datum/reagent/REG = SSchemistry.chemical_reagents[O.reagent]
+	body += "<b>Grind: [REG.name]</b><br>"
 	if(O.alloy)
 		body += "<br>"
 		body += "<b>Alloy Component of: </b><br>"
@@ -424,11 +426,12 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body += "<br>"
 	body += allergen_assemble(R.allergen_type)
 	body += "<br>"
-	if(SSchemistry.chemical_reactions_by_product[R.id] != null && SSchemistry.chemical_reactions_by_product[R.id].len > 0)
+	var/list/reaction_list = SSchemistry.chemical_reactions_by_product[R.id]
+	if(reaction_list != null && reaction_list.len > 0)
 		var/segment = 1
 
 		var/list/display_reactions = list()
-		for(var/decl/chemical_reaction/CR in SSchemistry.chemical_reactions_by_product[R.id])
+		for(var/decl/chemical_reaction/CR in reaction_list)
 			if(!CR.spoiler)
 				display_reactions.Add(CR)
 		for(var/decl/chemical_reaction/CR in display_reactions)
@@ -456,12 +459,13 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	else
 		body += "<b>Potential Chemical breakdown: </b><br>UNKNOWN OR BASE-REAGENT<br>"
 
-	if(SSchemistry.distilled_reactions_by_product[R.id] != null && SSchemistry.distilled_reactions_by_product[R.id].len > 0)
+	var/list/distilled_list = SSchemistry.distilled_reactions_by_product[R.id]
+	if(distilled_list != null && distilled_list.len > 0)
 		body += "<br>"
 		var/segment = 1
 
 		var/list/display_reactions = list()
-		for(var/decl/chemical_reaction/distilling/CR in SSchemistry.distilled_reactions_by_product[R.id])
+		for(var/decl/chemical_reaction/distilling/CR in distilled_list)
 			if(!CR.spoiler)
 				display_reactions.Add(CR)
 
@@ -497,10 +501,11 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body += "<br>"
 	body += allergen_assemble(R.allergen_type)
 	body += "<br>"
-	if(SSchemistry.chemical_reactions_by_product[R.id] != null && SSchemistry.chemical_reactions_by_product[R.id].len > 0)
+	var/list/reaction_list = SSchemistry.chemical_reactions_by_product[R.id]
+	if(reaction_list != null && reaction_list.len > 0)
 		var/segment = 1
 		var/list/display_reactions = list()
-		for(var/decl/chemical_reaction/CR in SSchemistry.chemical_reactions_by_product[R.id])
+		for(var/decl/chemical_reaction/CR in reaction_list)
 			if(!CR.spoiler)
 				display_reactions.Add(CR)
 		for(var/decl/chemical_reaction/CR in display_reactions)
@@ -511,11 +516,14 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			segment += 1
 
 			for(var/RQ in CR.required_reagents)
-				body += " <b>-Component: </b>[SSchemistry.chemical_reagents[RQ].name]<br>"
+				var/datum/reagent/RQ_A = SSchemistry.chemical_reagents[RQ]
+				body += " <b>-Component: </b>[RQ_A.name]<br>"
 			for(var/IH in CR.inhibitors)
-				body += " <b>-Inhibitor: </b>[SSchemistry.chemical_reagents[IH].name]<br>"
+				var/datum/reagent/IH_A = SSchemistry.chemical_reagents[IH]
+				body += " <b>-Inhibitor: </b>[IH_A.name]<br>"
 			for(var/CL in CR.catalysts)
-				body += " <b>-Catalyst: </b>[SSchemistry.chemical_reagents[CL].name]<br>"
+				var/datum/reagent/CL_A = SSchemistry.chemical_reagents[CL]
+				body += " <b>-Catalyst: </b>[CL_A.name]<br>"
 	else
 		body += "<b>Recipe: </b>UNKNOWN<br>"
 
@@ -526,10 +534,11 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body += "<br>"
 	body += allergen_assemble(R.allergen_type)
 	body += "<br>"
-	if(SSchemistry.chemical_reactions_by_product[R.id] != null && SSchemistry.chemical_reactions_by_product[R.id].len > 0)
+	var/list/reaction_list = SSchemistry.chemical_reactions_by_product[R.id]
+	if(reaction_list != null && reaction_list.len > 0)
 		var/segment = 1
 		var/list/display_reactions = list()
-		for(var/decl/chemical_reaction/CR in SSchemistry.chemical_reactions_by_product[R.id])
+		for(var/decl/chemical_reaction/CR in reaction_list)
 			if(!CR.spoiler)
 				display_reactions.Add(CR)
 		for(var/decl/chemical_reaction/CR in display_reactions)
@@ -540,11 +549,14 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			segment += 1
 
 			for(var/RQ in CR.required_reagents)
-				body += " <b>-Component: </b>[SSchemistry.chemical_reagents[RQ].name]<br>"
+				var/datum/reagent/RQ_A = SSchemistry.chemical_reagents[RQ]
+				body += " <b>-Component: </b>[RQ_A.name]<br>"
 			for(var/IH in CR.inhibitors)
-				body += " <b>-Inhibitor: </b>[SSchemistry.chemical_reagents[IH].name]<br>"
+				var/datum/reagent/IH_A = SSchemistry.chemical_reagents[IH]
+				body += " <b>-Inhibitor: </b>[IH_A.name]<br>"
 			for(var/CL in CR.catalysts)
-				body += " <b>-Catalyst: </b>[SSchemistry.chemical_reagents[CL].name]<br>"
+				var/datum/reagent/CL_A = SSchemistry.chemical_reagents[CL]
+				body += " <b>-Catalyst: </b>[CL_A.name]<br>"
 	else
 		body += "<b>Mix: </b>UNKNOWN<br>"
 

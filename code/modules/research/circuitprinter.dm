@@ -197,7 +197,8 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 			// Outpost 21 edit begin - return missing chemicals with the actual name
 			if(!isnull(SSchemistry.chemical_reagents[C]))
 				// get display name of C
-				ret += SSchemistry.chemical_reagents[C].name
+				var/datum/reagent/REG = SSchemistry.chemical_reagents[C]
+				ret += REG.name
 			else
 			 	// backup
 				ret += C

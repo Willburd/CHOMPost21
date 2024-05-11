@@ -145,12 +145,13 @@
 			owner.AdjustWeakened(3 * base_mult)
 		if(prob(75))
 			owner.AdjustConfused(4 * base_mult)
+		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
 		if(damage >= min_broken_damage)
-			owner.custom_pain("<span class='warning'>You feel a painful sensation in your [owner.organs_by_name[parent_organ].name].</span>",damage,TRUE)
+			owner.custom_pain("<span class='warning'>You feel a painful sensation in your [O.name].</span>",damage,TRUE)
 			owner.AdjustBlinded(6 * base_mult)
 			owner.adjustToxLoss(4 * base_mult)
 		else
-			owner.custom_pain("<span class='warning'>You feel a strange sensation in your [owner.organs_by_name[parent_organ].name].</span>",damage / 10,TRUE)
+			owner.custom_pain("<span class='warning'>You feel a strange sensation in your [O.name].</span>",damage / 10,TRUE)
 
 /****************************************************
 				Tumor varients
@@ -291,14 +292,15 @@
 			owner.Confuse(30)
 
 	if(prob(2))
+		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
 		if(stage_progress > 200)
-			owner.custom_pain("<span class='warning'>You feel bloated. The pain in your [owner.organs_by_name[parent_organ].name] is agonizing.</span>",20,TRUE)
+			owner.custom_pain("<span class='warning'>You feel bloated. The pain in your [O.name] is agonizing.</span>",20,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces slightly.")
 		else if(stage_progress > 100)
-			owner.custom_pain("<span class='warning'>You feel a pressure inside your [owner.organs_by_name[parent_organ].name].</span>",5,TRUE)
+			owner.custom_pain("<span class='warning'>You feel a pressure inside your [O.name].</span>",5,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces painfully.")
 		else
-			owner.custom_pain("<span class='danger'>The pressure inside your [owner.organs_by_name[parent_organ].name] hurts.</span>",1,TRUE)
+			owner.custom_pain("<span class='danger'>The pressure inside your [O.name] hurts.</span>",1,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces painfully.")
 
 /obj/item/organ/internal/malignant/tumor/pinata/attackby(obj/item/weapon/W as obj, mob/user as mob)
@@ -438,13 +440,14 @@
 		thalers += stage
 
 	if(prob(2))
+		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
 		if(thalers < 100)
 
 		else if(thalers < 500)
 			owner.custom_pain("<span class='warning'>You feel bloated.</span>",1,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces slightly.")
 		else if(thalers < 1000)
-			owner.custom_pain("<span class='warning'>You feel a pressure inside your [owner.organs_by_name[parent_organ].name].</span>",6,TRUE)
+			owner.custom_pain("<span class='warning'>You feel a pressure inside your [O.name].</span>",6,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces painfully.")
 			if(prob(30))
 				owner.vomit()
@@ -453,7 +456,7 @@
 			else
 				owner.Confuse(15)
 		else if(thalers < 5000)
-			owner.custom_pain("<span class='danger'>The pressure inside your [owner.organs_by_name[parent_organ].name] hurts.</span>",15,TRUE)
+			owner.custom_pain("<span class='danger'>The pressure inside your [O.name] hurts.</span>",15,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces painfully.")
 			owner.Weaken(3)
 			if(prob(30))

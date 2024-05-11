@@ -33,10 +33,9 @@
   for(var/R in SSchemistry.chemical_reagents)
     testlist.Add(R)
     var/datum/reagent/current = SSchemistry.chemical_reagents[R]
-/*CHOMP Edit: Remove Phorochem code
     if(istype(current, /datum/reagent/phororeagent)) //phorochems are banned from this process, obviously
       continue
-*/
+
     allowed_reagents.Add(R)
   allowed_reagents -= banlist //apparently outright checking if it's in the banlist before it's added doesn't work?
 
@@ -78,18 +77,20 @@
   var/list/data = list()
   data["screenstate"] = screen_state
   if(loaded_beaker)
-    data["beakerchems"] = list()
+    var/list/beakerchems = list()
     for(var/datum/reagent/current in loaded_beaker.reagents.reagent_list)
-      data["beakerchems"].Add(list(list("name" = "[current.id]", "displayname" = SSchemistry.chemical_reagents[current.id])))
+      beakerchems.Add(list(list("name" = "[current.id]", "displayname" = SSchemistry.chemical_reagents[current.id])))
+    data["beakerchems"] = beakerchems
   if(seed)
     data["seedname"] = seed.seed.display_name
     data["health"] = seed.modified
     data["plantcolor"] = seed.seed.traits["[TRAIT_PLANT_COLOUR]"]
     data["fruitcolor"] = seed.seed.traits["[TRAIT_PRODUCT_COLOUR]"]
-    data["chems"] = list()
 
+    var/list/chems = list()
     for(var/chem_name in seed.seed.chems)
-      data["chems"].Add(list(list("name" = "[chem_name]", "displayname" = SSchemistry.chemical_reagents[chem_name])))
+      chems.Add(list(list("name" = "[chem_name]", "displayname" = SSchemistry.chemical_reagents[chem_name])))
+    data["chems"] = chems
 
   return data
 

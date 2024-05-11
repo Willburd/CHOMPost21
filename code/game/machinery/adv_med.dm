@@ -552,7 +552,8 @@
 
 			// Outpost 21 edit begin - malignant organs
 			if(istype(i, /obj/item/organ/internal/malignant))
-				hasMalignants += "<font color='red'> -[occupant.organs_by_name[i.parent_organ].name]</font><BR>"
+				var/obj/item/organ/internal/ORG = occupant.organs_by_name[i.parent_organ]
+				hasMalignants += "<font color='red'> -[ORG.name]</font><BR>"
 			// Outpost 21 edit end
 
 			dat += "<tr>"

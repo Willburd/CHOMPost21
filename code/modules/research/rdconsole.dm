@@ -74,7 +74,8 @@ won't update every console in existence) but it's more of a hassle to do. Also, 
 	// Outpost 21 edit begin - Fixed reagent name return... Why was it a loop that checked all reagents, instead of the LOOKUP ARRAY WE ALREADY HAD - Willbird
 	if(isnull(SSchemistry.chemical_reagents[ID]))
 		return ID
-	return SSchemistry.chemical_reagents[ID].name
+	var/datum/reagent/REG = SSchemistry.chemical_reagents[ID]
+	return REG.name
 	// Outpost 21 edit end
 
 /obj/machinery/computer/rdconsole/proc/SyncRDevices() //Makes sure it is properly sync'ed up with the devices attached to it (if any).
