@@ -104,10 +104,7 @@
 				H.visible_message("<span class='danger'>\The [H] performs CPR on \the [src]!</span>")
 				to_chat(H, "<span class='warning'>Repeat at least every 7 seconds.</span>")
 
-				if(istype(H) && health > CONFIG_GET(number/health_threshold_dead)) // CHOMPEdit
-					adjustOxyLoss(-(min(getOxyLoss(), 5)))
-					updatehealth()
-					to_chat(src, "<span class='notice'>You feel a breath of fresh air enter your lungs. It feels good.</span>")
+				perform_cpr(H) // Outpost 21 edit - We do our own cpr thing
 
 			else if(!(M == src && apply_pressure(M, M.zone_sel.selecting)))
 				help_shake_act(M)
