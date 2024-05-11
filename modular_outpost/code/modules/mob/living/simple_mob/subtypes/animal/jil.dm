@@ -483,7 +483,7 @@
 			. -= I
 
 	var/atom/new_target = pick_target(.)
-	if(new_target && isturf(new_target.loc))
+	if(new_target && isturf(new_target.loc) && new_target.loc != holder.loc)
 		give_target(new_target)
 		return new_target
 	return null
