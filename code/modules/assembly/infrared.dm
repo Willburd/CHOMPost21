@@ -139,6 +139,13 @@
 
 	set_dir(turn(dir, 270))
 
+/obj/item/device/assembly/infra/verb/rotate_counterclockwise()
+	set name = "Rotate Infrared Laser Counter-Clockwise"
+	set category = "Object"
+	set src in usr
+
+	set_dir(turn(dir, 90))
+
 /***************************IBeam*********************************/
 
 /obj/effect/beam/i_beam
