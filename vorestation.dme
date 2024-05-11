@@ -2654,7 +2654,7 @@
 #include "code\modules\food\glass\bottle_potion.dm"
 #include "code\modules\food\glass\bottle_vr.dm"
 #include "code\modules\food\glass\bottle\robot.dm"
-#include "code\modules\food\kitchen\gibber.dm"
+#include "code\modules\food\kitchen\gibber_op.dm"
 #include "code\modules\food\kitchen\icecream.dm"
 #include "code\modules\food\kitchen\microwave.dm"
 #include "code\modules\food\kitchen\microwave_ch.dm"

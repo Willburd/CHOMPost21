@@ -12,6 +12,11 @@
 	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
+	// Outpost 21 addition begin - Our resleever works different
+	var/allow_ghosts_to_trigger = FALSE // If true, enables standard behavior
+	var/releaseturf
+	var/throw_dir = WEST
+	// Outpost 21 addition end
 
 /obj/machinery/transhuman/autoresleever/update_icon()
 	. = ..()
@@ -25,6 +30,10 @@
 	update_icon()
 
 /obj/machinery/transhuman/autoresleever/attack_ghost(mob/observer/dead/user as mob)
+	// Outpost 21 addition begin - Our resleever works different
+	if(!allow_ghosts_to_trigger)
+		return
+	// Outpost 21 addition end
 	update_icon()
 	if(spawn_slots == 0)
 		to_chat(user, "<span class='warning'>There are no more respawn slots.</span>")
@@ -51,6 +60,10 @@
 		to_chat(user, "<span class='warning'>You need to have been spawned in order to respawn here.</span>")
 
 /obj/machinery/transhuman/autoresleever/attackby(var/mob/user)	//Let's not let people mess with this.
+	// Outpost 21 addition begin - Our resleever works different
+	if(!allow_ghosts_to_trigger)
+		return
+	// Outpost 21 addition end
 	update_icon()
 	if(istype(user,/mob/observer/dead))
 		attack_ghost(user)
@@ -109,6 +122,10 @@
 	var/picked_slot = ghost_client.prefs.default_slot
 
 	var/spawnloc = get_turf(src)
+	// Outpost 21 edit begin - release turf behaviors
+	if(releaseturf)
+		spawnloc = get_step( releaseturf, throw_dir)
+	// Outpost 21 edit end
 	//Did we actually get a loc to spawn them?
 	if(!spawnloc)
 		to_chat(ghost, "<span class='warning'>Could not find a valid location to spawn your character.</span>")
@@ -136,7 +153,13 @@
 	if(tgui_alert(ghost, "Would you like to be resleeved?", "Resleeve", list("No","Yes")) == "No")
 		return
 	var/mob/living/carbon/human/new_character
-	new_character = new(spawnloc)
+	// Outpost 21 edit begin - release turf behaviors
+	if(!releaseturf)
+		new_character = new(spawnloc)
+	else
+		// spawn inside, release after
+		new_character = new(src)
+	// Outpost 21 edit end
 
 	//We were able to spawn them, right?
 	if(!new_character)
@@ -217,6 +240,11 @@
 					new path(nif)
 				nif.durability = record.nif_durability
 
+	// Outpost 21 edit begin - release turf behaviors
+	if(releaseturf)
+		outpost_post_sleeve(new_character,spawnloc)
+	// Outpost 21 edit end
+
 	if(spawn_slots == -1)
 		return
 	else if(spawn_slots == 0)
@@ -224,3 +252,99 @@
 	else
 		spawn_slots --
 		return
+
+// Outpost 21 edit begin - our resleever works different
+/obj/machinery/transhuman/autoresleever/proc/link_gibber(var/obj/machinery/gibber/G)
+	G.sleevelink = src
+	releaseturf = get_turf(G)
+	throw_dir = G.gib_throw_dir
+
+/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/weapon/card/id/D)
+	if(stat || isnull(releaseturf))
+		return
+
+	// what even happened?
+	if(isnull(D))
+		src.visible_message("[src] flashes 'Invalid ID!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		return
+
+	// do not let guest IDs be used
+	if(istype(D,/obj/item/weapon/card/id/guest))
+		src.visible_message("[src] flashes 'Temporary guest ID identified!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		return
+
+	//Name matching is ugly but mind doesn't persist to look at.
+	var/datum/transcore_db/db = SStranscore.db_by_mind_name(D.registered_name)
+	if(isnull(db))
+		src.visible_message("[src] flashes 'No records detected for [D.registered_name]!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		return
+
+	var/datum/transhuman/mind_record/recordM = db.backed_up[D.registered_name]
+	var/datum/transhuman/body_record/recordB = db.body_scans[D.registered_name]
+
+	if(isnull(recordM))
+		src.visible_message("[src] flashes 'No mind records detected for [D.registered_name]!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		if((world.time - recordM.last_notification) < 30 MINUTES)
+			global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
+		return
+
+	if(isnull(recordB) || isnull(recordB.mydna) || isnull(recordB.mydna.dna))
+		src.visible_message("[src] flashes 'No body records for [D.registered_name], or dna was corrupted!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		if((world.time - recordM.last_notification) < 30 MINUTES)
+			global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
+		return
+
+	var/datum/species/chosen_species = GLOB.all_species[recordB.mydna.dna.species]
+	if(chosen_species.flags & NO_SCAN) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
+		src.visible_message("[src] flashes 'Could not resleeve [D.registered_name]. Invalid species!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		if((world.time - recordM.last_notification) < 30 MINUTES)
+			global_announcer.autosay("[D.registered_name] was unable to be resleeved by the automatic resleeving system.", "TransCore Oversight", "Medical")
+		return
+
+	// solve the ghost from mind refs
+	var/mob/ghost
+	var/client/ghost_client
+	for(var/client/C in GLOB.clients)
+		if(C.ckey == recordM.ckey)
+			ghost_client = C
+			ghost = ghost_client.mob
+			break
+
+	// Avoiding some funny messages
+	if(!stat && istype(ghost,/mob/observer/dead))
+		to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
+		autoresleeve(ghost)
+
+/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve( var/mob/living/carbon/human/new_character, var/spawnloc)
+	var/confuse_amount = rand(8,26)
+	var/blur_amount = rand(8,56)
+	var/sickness_duration = rand(20,30) MINUTES
+
+	// apply state
+	new_character.confused = max(new_character.confused, confuse_amount)
+	new_character.eye_blurry = max(new_character.eye_blurry, blur_amount)
+	new_character.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
+	new_character.adjustOxyLoss( rand(5,25))
+	new_character.adjustBruteLoss( rand(1,8), FALSE)
+	new_character.adjustToxLoss( rand(0,12))
+	new_character.adjustFireLoss( rand(0,8), FALSE)
+	new_character.adjustCloneLoss( rand(0,6))
+	new_character.sleeping = rand(4,6)
+	new_character.Life() // Force lifetick for instant effect
+
+	// Visuals and release
+	playsound(src, 'sound/machines/defib_charge.ogg', 50, 0)
+	spawn(1 SECONDS)
+		playsound(src, "bodyfall", 50, 1)
+		playsound(src, 'sound/machines/defib_zap.ogg', 50, 1, -1)
+
+	spawn(5 SECONDS)
+		new_character.forceMove(spawnloc)
+		new_character.throw_at(get_edge_target_turf(src.loc, throw_dir), 1,5)
+// Outpost 21 addition end
