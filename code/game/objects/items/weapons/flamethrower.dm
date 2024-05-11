@@ -200,5 +200,8 @@
 	igniter = new /obj/item/device/assembly/igniter(src)
 	igniter.secured = 0
 	status = 1
-	update_icon()
 	return
+
+/obj/item/weapon/flamethrower/full/Initialize()
+	. = ..()
+	update_icon() // Outpost 21 edit - overlay runtime fix

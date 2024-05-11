@@ -1302,8 +1302,8 @@
 	var/ammo_path = /obj/item/tank_shell
 	var/loaded = FALSE
 
-/obj/machinery/ammo_loader/New(l, d=0)
-	. = ..(l, d)
+/obj/machinery/ammo_loader/Initialize()
+	. = ..()
 	update_icon()
 
 /obj/machinery/ammo_loader/ex_act(severity)

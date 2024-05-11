@@ -114,7 +114,7 @@
 					playsound(src, sound_ejectchamber, 50, 0)
 					user.visible_message("<span class='notice'>[user] pulls back \the [bolt_name] and locks it in the open position[casing_chambered][other_ejected].</span>", \
 					"<span class='notice'>You pull back \the [bolt_name] and lock it in the open position[other_ejected][casing_chambered].</span>")
-				else 
+				else
 					user.visible_message("<span class='notice'>[user] pulls back \the [bolt_name] before releasing it, causing it to lock in the open position[casing_chambered][other_ejected].</span>", \
 					"<span class='notice'>You pull back \the [bolt_name] before releasing it, causing it to lock in the open position[casing_chambered][other_ejected].</span>")
 			else
@@ -167,7 +167,7 @@
 		else
 			bolt_open = TRUE
 			var/ejected = process_chambered()
-			
+
 			var/output = BOLT_OPENED
 			if(ejected) output |= BOLT_CASING_EJECTED
 			//if(chambering) output |= BOLT_CASING_CHAMBERED
@@ -300,7 +300,7 @@
 					chamber_bullet()
 					bolt_toggle()
 				playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
-				user.hud_used.update_ammo_hud(user, src) 
+				user.hud_used.update_ammo_hud(user, src)
 			if(SPEEDLOADER)
 				if(only_open_load && !bolt_open)
 					to_chat(user, "<span_class='warning'>[src] must have its bolt open to be loaded!</span>")
@@ -320,7 +320,7 @@
 				if(count)
 					user.visible_message("[user] reloads [src].", "<span class='notice'>You load [count] round\s into [src].</span>")
 					playsound(src, 'sound/weapons/empty.ogg', 50, 1)
-					user.hud_used.update_ammo_hud(user, src) 
+					user.hud_used.update_ammo_hud(user, src)
 		AM.update_icon()
 	else if(istype(A, /obj/item/ammo_casing))
 		var/obj/item/ammo_casing/C = A
@@ -334,15 +334,15 @@
 							if(do_after(user,5))
 								user.visible_message("<span class='notice'>[user] slides \the [C] into the [src]'s chamber.</span>","<span class='notice'>You slide \the [C] into the [src]'s chamber.</span>")
 								chambered = C
-								user.hud_used.update_ammo_hud(user, src) 
+								user.hud_used.update_ammo_hud(user, src)
 							else
 								return
 						else if(!(CHECK_BITFIELD(auto_loading_type,LOCK_OPEN_EMPTY) || (CHECK_BITFIELD(auto_loading_type,LOCK_MANUAL_LOCK))))
 							if(do_after(user,15))
 								user.visible_message("<span class='notice'>[user] holds open \the [src]'s [bolt_name] and slides [C] into the chamber before letting the bolt close again.</span>","<span class='notice'>You slide \the [C] into the [src]'s chamber.</span>")
-								
+
 								chambered = C
-								user.hud_used.update_ammo_hud(user, src) 
+								user.hud_used.update_ammo_hud(user, src)
 							else
 								return
 						else
@@ -372,7 +372,7 @@
 		loaded.Insert(1, C) //add to the head of the list
 		user.visible_message("[user] inserts \a [C] into [src].", "<span class='notice'>You insert \a [C] into [src].</span>")
 		playsound(src, 'sound/weapons/empty.ogg', 50, 1)
-		user.hud_used.update_ammo_hud(user, src) 
+		user.hud_used.update_ammo_hud(user, src)
 
 	else if(istype(A, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/storage = A
@@ -386,7 +386,7 @@
 				continue
 
 			load_ammo(ammo, user)
-			user.hud_used.update_ammo_hud(user, src) 
+			user.hud_used.update_ammo_hud(user, src)
 
 			if(loaded.len >= max_shells)
 				to_chat(user, "<span class='warning'>[src] is full.</span>")
@@ -463,7 +463,10 @@
 	..()
 	if(manual_chamber)
 		verbs |= /obj/item/weapon/gun/projectile/verb/change_firemode
-	update_icon()
+
+/obj/item/weapon/gun/projectile/Initialize()
+	. = ..()
+	update_icon() // Outpost 21 edit - overlay runtime fix
 
 /obj/item/weapon/gun/projectile/verb/change_firemode()
 	set name = "Switch firemode"

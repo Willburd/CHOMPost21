@@ -47,7 +47,6 @@
 
 /mob/living/bot/New()
 	..()
-	update_icons()
 
 	default_language = GLOB.all_languages[LANGUAGE_GALCOM]
 
@@ -66,6 +65,7 @@
 	. = ..()
 	if(on)
 		turn_on() // Update lights and other stuff
+	update_icons() // Outpost 21 edit - overlay runtime fix
 
 /mob/living/bot/Life()
 	..()

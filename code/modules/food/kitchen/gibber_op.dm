@@ -30,6 +30,7 @@
 
 /obj/machinery/gibber/autogibber/Initialize()
 	. = ..()
+	add_overlay("grjam") // Outpost 21 edit - overlay runtime fix
 	// outpost 21 edit - add gibber from above detection
 	var/obj/machinery/mineral/input/input_obj = locate( /obj/machinery/mineral/input, get_zstep(src, UP))
 	if(!input_obj)
@@ -97,10 +98,6 @@
 	if(!operating && isnull(occupant) && contents.len > 0 && prob(50))
 		updatesleever()
 		processcontents()
-
-/obj/machinery/gibber/New()
-	..()
-	add_overlay("grjam")
 
 /obj/machinery/gibber/update_icon()
 	cut_overlays()
