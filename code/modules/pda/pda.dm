@@ -28,43 +28,9 @@ var/global/list/obj/item/device/pda/PDAs = list()
 	var/mimeamt = 0 //How many silence left when infected with mime.exe
 	var/detonate = 1 // Can the PDA be blown up?
 	var/ttone = "beep" //The ringtone!
-	var/list/ttone_sound = list("beep" = 'sound/machines/twobeep.ogg',
-								"boom" = 'sound/effects/explosionfar.ogg',
-								"slip" = 'sound/misc/slip.ogg',
-								"honk" = 'sound/items/bikehorn.ogg',
-								"SKREE" = 'sound/voice/shriek1.ogg',
-								"xeno" = 'sound/voice/hiss1.ogg',
-								"dust" = 'sound/effects/supermatter.ogg', // CHOMPEdit - Keeps dust as ringtone
-								"spark" = 'sound/effects/sparks4.ogg',
-								"rad" = 'sound/items/geiger/high1.ogg',
-								"servo" = 'sound/machines/rig/rigservo.ogg',
-								// "buh-boop" = 'sound/misc/buh-boop.ogg', // CHOMPEdit - No.
-								"trombone" = 'sound/misc/sadtrombone.ogg',
-								"whistle" = 'sound/misc/boatswain.ogg',
-								"chirp" = 'sound/misc/nymphchirp.ogg',
-								"slurp" = 'sound/items/drink.ogg',
-								"pwing" = 'sound/items/nif_tone_good.ogg',
-								"clack" = 'sound/items/storage/toolbox.ogg',
-								"bzzt" = 'sound/misc/null.ogg',	//vibrate mode
-								"chimes" = 'sound/misc/notice3.ogg',
-								"prbt" = 'sound/voice/prbt.ogg',
-								"bark" = 'sound/voice/bark2.ogg',
-								"bork" = 'sound/voice/bork.ogg',
-								"roark" = 'sound/voice/roarbark.ogg',
-								"chitter" = 'sound/voice/moth/moth_chitter.ogg',
-								// Outpost 21 edit begin - new pda alerts
-								"squish" = 'sound/effects/slime_squish.ogg',
-								"bubble"= 'sound/effects/bubbles.ogg',
-								"silly" = 'sound/effects/whistle.ogg',
-								"frog" 	= 'sound/voice/Croak.ogg',
-								"peep" 	= 'sound/voice/peep.ogg',
-								"quack" = 'sound/voice/quack.ogg',
-								"ough" 	= 'sound/misc/ough.ogg',
-								"stamp" = 'sound/bureaucracy/stamp.ogg',
-								"gnome" = 'sound/items/hooh.ogg',
-								"ratchet"= 'sound/items/Ratchet.ogg',
-								"tether"= 'sound/items/tinytether.ogg'
-								) // Outpost 21 edit end
+	/* Outpost 21 edit begin - use the global list in code\modules\client\preference_setup\preference_setup_op.dm
+	var/list/ttone_sound = list()
+	*/ // Outpost 21 edit end
 	var/hidden = 0 // Is the PDA hidden from the PDA list?
 	var/touch_silent = 0 //If 1, no beeps on interacting.
 
@@ -123,8 +89,8 @@ var/global/list/obj/item/device/pda/PDAs = list()
 /obj/item/device/pda/proc/play_ringtone()
 	var/S
 
-	if(ttone in ttone_sound)
-		S = ttone_sound[ttone]
+	if(ttone in device_ringtones) // Outpost 21 edit - use global ringtone list
+		S = device_ringtones[ttone] // Outpost 21 edit - use global ringtone list
 	else
 		S = 'sound/machines/twobeep.ogg'
 	playsound(loc, S, 50, 1)

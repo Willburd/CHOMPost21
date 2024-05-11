@@ -79,30 +79,9 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 
 	// Ringtones! (Based on the PDA ones)
 	var/ttone = "beep" //The ringtone!
-	var/list/ttone_sound = list("beep" = 'sound/machines/twobeep.ogg',
-								"boom" = 'sound/effects/explosionfar.ogg',
-								"slip" = 'sound/misc/slip.ogg',
-								"honk" = 'sound/items/bikehorn.ogg',
-								"SKREE" = 'sound/voice/shriek1.ogg',
-								// "holy" = 'sound/items/PDA/ambicha4-short.ogg',
-								"xeno" = 'sound/voice/hiss1.ogg',
-								"dust" = 'sound/effects/supermatter.ogg',
-								"spark" = 'sound/effects/sparks4.ogg',
-								"rad" = 'sound/items/geiger/high1.ogg',
-								"servo" = 'sound/machines/rig/rigservo.ogg',
-								// Outpost 21 edit begin - new pda alerts
-								"squish" = 'sound/effects/slime_squish.ogg',
-								"bubble"= 'sound/effects/bubbles.ogg',
-								"silly" = 'sound/effects/whistle.ogg',
-								"frog" 	= 'sound/voice/Croak.ogg',
-								"peep" 	= 'sound/voice/peep.ogg',
-								"quack" = 'sound/voice/quack.ogg',
-								"ough" 	= 'sound/misc/ough.ogg',
-								"stamp" = 'sound/bureaucracy/stamp.ogg',
-								"gnome" = 'sound/items/hooh.ogg',
-								"ratchet"= 'sound/items/Ratchet.ogg',
-								"tether"= 'sound/items/tinytether.ogg'
-								) // Outpost 21 edit end
+	/* Outpost 21 edit begin - use the global list in code\modules\client\preference_setup\preference_setup_op.dm
+	var/list/ttone_sound = list()
+	*/ // Outpost 21 edit end
 
 
 // Proc: New()

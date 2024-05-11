@@ -99,6 +99,11 @@
 	// If the occupation window gets opened before SSJob initializes, then it'll just be blank, with no runtimes.
 	// It will work once init is finished.
 
+	// Outpost 21 edit begin - more feedback if the job controller isn't setup yet.
+	if(!SSjob || !SSjob.department_datums || !SSjob.department_datums.len)
+		. += "<b>Job controller is still initializing, please wait...<br>"
+	// Outpost 21 edit end
+
 	for(var/D in SSjob.department_datums)
 		var/datum/department/department = SSjob.department_datums[D]
 		if(department.centcom_only) // No joining as a centcom role, if any are ever added.

@@ -22,33 +22,9 @@
 	S["communicator_visibility"]	<< pref.communicator_visibility
 	S["ttone"]	<< pref.ringtone  // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
 
-var/global/list/valid_ringtones = list(
-		"beep",
-		"boom",
-		"slip",
-		"honk",
-		"SKREE",
-		"xeno",
-		"dust", // CHOMPEdit - Keeps dust as ringtone
-		"spark",
-		"rad",
-		"servo",
-		// "buh-boop", // CHOMPEdit - No.
-		"trombone",
-		"whistle",
-		"chirp",
-		"slurp",
-		"pwing",
-		"clack",
-		"bzzt",
-		"chimes",
-		"prbt",
-		"bark",
-		"bork",
-		"roark",
-		"chitter",
-		"squish"
-		)
+/* Outpost 21 edit begin - Use a global list shared with the communicator AND pda
+var/global/list/valid_ringtones = list()
+*/ // Outpost 21 edit end
 
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/general/equipment/copy_to_mob(var/mob/living/carbon/human/character)
@@ -120,7 +96,7 @@ var/global/list/valid_ringtones = list(
 	. += "Backpack Type: <a href='?src=\ref[src];change_backpack=1'><b>[backbaglist[pref.backbag]]</b></a><br>"
 	. += "PDA Type: <a href='?src=\ref[src];change_pda=1'><b>[pdachoicelist[pref.pdachoice]]</b></a><br>"
 	. += "Communicator Visibility: <a href='?src=\ref[src];toggle_comm_visibility=1'><b>[(pref.communicator_visibility) ? "Yes" : "No"]</b></a><br>"
-	. += "Ringtone (leave blank for job default): <a href='?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a><br>"
+	. += "Ringtone (leave blank for job default): <a href='?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a> <a href='?src=\ref[src];test_ringtone=1'><b>TEST</b></a><br>" // Outpost 21 edit - test ringtone
 
 	return jointext(.,null)
 
@@ -179,7 +155,7 @@ var/global/list/valid_ringtones = list(
 			pref.communicator_visibility = !pref.communicator_visibility
 			return TOPIC_REFRESH
 	else if(href_list["set_ringtone"])
-		var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", valid_ringtones + "Other", pref.ringtone)
+		var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", device_ringtones + "Other", pref.ringtone)
 		if(!choice || !CanUseTopic(user))
 			return TOPIC_NOACTION
 		if(choice == "Other")
@@ -189,5 +165,13 @@ var/global/list/valid_ringtones = list(
 		else
 			pref.ringtone = choice
 		return TOPIC_REFRESH
+	// Outpost 21 edit begin - testing ringtones
+	else if(href_list["test_ringtone"])
+		if(CanUseTopic(user))
+			var/S = 'sound/machines/twobeep.ogg'
+			if(pref.ringtone in device_ringtones)
+				S = device_ringtones[pref.ringtone]
+			SEND_SOUND(user.client, S)
+	// Outpost 21 edit end
 
 	return ..()
