@@ -108,7 +108,7 @@
 					to_chat(user, "<span class='notice'>\The [target.name] added to cargo compartment slot: [delivery_tag].</span>")
 				update_patient()
 			return
-		if(istype(target, /mob/living/simple_mob/animal/passive/mouse)) //Edible mice, dead or alive whatever. Mostly for carcass picking you cruel bastard :v
+		if(istype(target, /mob/living/simple_mob/animal/passive/mouse) || istype(target, /mob/living/simple_mob/animal/passive/lizard) || istype(target, /mob/living/simple_mob/vore/alienanimals/jil)) //Edible mice, dead or alive whatever. Mostly for carcass picking you cruel bastard :v, Outpost 21 edit - added some other vermin
 			var/mob/living/simple_mob/trashmouse = target
 			user.visible_message("<span class='warning'>[hound.name] is ingesting [trashmouse] into their [src.name].</span>", "<span class='notice'>You start ingesting [trashmouse] into your [src.name]...</span>")
 			if(do_after(user, 30, trashmouse) && length(contents) < max_item_count)

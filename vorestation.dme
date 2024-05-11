@@ -3355,6 +3355,7 @@
 #include "code\modules\mob\living\silicon\robot\robot_vr.dm"
 #include "code\modules\mob\living\silicon\robot\dogborg\dog_modules_vr.dm"
 #include "code\modules\mob\living\silicon\robot\dogborg\dog_modules_yw.dm"
+#include "code\modules\mob\living\silicon\robot\dogborg\dog_sleeper_op.dm"
 #include "code\modules\mob\living\silicon\robot\dogborg\dog_sleeper_vr.dm"
 #include "code\modules\mob\living\silicon\robot\drone\drone.dm"
 #include "code\modules\mob\living\silicon\robot\drone\drone_abilities.dm"
