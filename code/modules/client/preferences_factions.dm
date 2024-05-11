@@ -25,8 +25,7 @@ var/global/list/citizenship_choices = list(
 	"Qerr'balak",
 	"Greater Human Diaspora",
 	"Commonwealth of Sol-Procyon",
-	"Skrell Consensus",
-	"Eshui Residential District"
+	"Skrell Consensus"
 	)
 
 var/global/list/home_system_choices = list(
@@ -58,13 +57,13 @@ var/global/list/home_system_choices = list(
 	"AH-CV Prosperity",
 	"AH-CV Migrant",
 	"Altevian Colony Ship",
-	"NanoTrasen Incorporated",
-	"Eshui Incorporated"
+	"Eshui Residential"
 	)
 
 var/global/list/faction_choices = list(
 	"Sol Central",
 	"NanoTrasen Incorporated",
+	"Eshui Incorporated",
 	"Hephaestus Industries",
 	"Vey-Medical",
 	"Zeng-Hu Pharmaceuticals",
