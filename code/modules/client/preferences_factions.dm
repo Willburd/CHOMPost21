@@ -16,11 +16,17 @@ var/global/list/seen_religions = list()
 var/global/list/citizenship_choices = list(
 	"Earth",
 	"Mars",
+	"Venus",
 	"Sif",
+	"Tal",
 	"Binma",
 	"Moghes",
 	"Meralar",
-	"Qerr'balak"
+	"Qerr'balak",
+	"Greater Human Diaspora",
+	"Commonwealth of Sol-Procyon",
+	"Skrell Consensus",
+	"Eshui Residential District"
 	)
 
 var/global/list/home_system_choices = list(
@@ -51,7 +57,9 @@ var/global/list/home_system_choices = list(
 	"Ue-Orsi Flotilla",
 	"AH-CV Prosperity",
 	"AH-CV Migrant",
-	"Altevian Colony Ship"
+	"Altevian Colony Ship",
+	"NanoTrasen Incorporated",
+	"Eshui Incorporated"
 	)
 
 var/global/list/faction_choices = list(
