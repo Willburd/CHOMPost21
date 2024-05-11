@@ -60,11 +60,18 @@
 		to_chat(src, "There are no viable hosts within range...")
 		return
 
-	var/mob/living/carbon/M = tgui_input_list(src, "Who do you wish to infest?", "Target Choice", choices)
+	// Outpost 21 edit begin - borer fixes
+	var/mob/living/carbon/M = choices[1]
+	if(choices.len > 1)
+		M = tgui_input_list(src, "Who do you wish to infest?", "Target Choice", choices)
 
-	if(!M || !src) return
+	if(!M || !src)
+		return
 
-	if(!(src.Adjacent(M))) return
+	if(!(src.Adjacent(M)))
+		to_chat(src, "<span class='warning'>\The [M] has escaped your range...</span>")
+		return
+	// Outpost 21 edit end
 
 	if(M.has_brain_worms())
 		to_chat(src, "You cannot infest someone who is already infested!")
@@ -215,16 +222,53 @@
 		to_chat(src, span_blue("You are feeling far too docile to do that."))
 		return
 
+	// Outpost 21 edit begin - borer fixes
 	if(chemicals < 50)
 		to_chat(src, "You don't have enough chemicals!")
+		return
 
-	var/chem = tgui_input_list(usr, "Select a chemical to secrete.", "Chemicals", list("alkysine","bicaridine","hyperzine","tramadol"))
+	var/injectsize = 10
+	var/chem = tgui_input_list(usr	, "Select a chemical to secrete."
+									, "Chemicals", list("Repair Brain Tissue (alkysine)"
+									,"Repair Body (bicaridine)"
+									,"Make Drunk (ethanol)"
+									,"Cure Drunk (ethylredoxrazine)"
+									,"Enhance Speed (hyperzine)"
+									,"Pain Killer (tramadol)"
+									,"Euphoric High (bliss)"
+									,"Stablize Mind (citalopram)"
+								))
+	switch(chem) // scan for simplified name
+		if("Repair Brain Tissue (alkysine)")
+			chem = "alkysine"
+		if("Repair Body (bicaridine)")
+			chem = "bicaridine"
+		if("Make Drunk (ethanol)")
+			chem = "ethanol"
+			injectsize = 5
+		if("Cure Drunk (ethylredoxrazine)")
+			chem = "ethylredoxrazine"
+		if("Enhance Speed (hyperzine)")
+			chem = "hyperzine"
+		if("Pain Killer (tramadol)")
+			chem = "tramadol"
+		if("Euphoric High (bliss)")
+			chem = "bliss"
+			injectsize = 5
+		if("Stablize Mind (citalopram)")
+			chem = "citalopram"
+		else
+			if(chem)
+				// why did this happen?
+				to_chat(src, "<font color='red'><B>The option [chem] did not link to any valid option, inform a dev that the switch in borer_powers.dm/secrete_chemicals() is broken</B></font>")
+				chem = null
+	// Outpost 21 edit end
 
 	if(!chem || chemicals < 50 || !host || controlling || !src || stat) //Sanity check.
 		return
 
 	to_chat(src, span_red("<B>You squirt a measure of [chem] from your reservoirs into [host]'s bloodstream.</B>"))
-	host.reagents.add_reagent(chem, 10)
+	host.reagents.add_reagent(chem, injectsize) // Outpost 21 edit - borer fixes
 	chemicals -= 50
 
 /mob/living/simple_mob/animal/borer/verb/dominate_victim()
@@ -253,9 +297,23 @@
 		to_chat(src, "You cannot use that ability again so soon.")
 		return
 
-	var/mob/living/carbon/M = tgui_input_list(src, "Who do you wish to dominate?", "Target Choice", choices)
+	// Outpost 21 edit begin - borer fixes
+	if(!choices.len)
+		to_chat(src, "<span class='notice'>There are no viable targets within range...</span>")
+		return
+
+	var/mob/living/carbon/M = choices[1]
+	if(choices.len > 1)
+		tgui_input_list(src, "Who do you wish to dominate?", "Target Choice", choices)
+	// Outpost 21 edit end
 
 	if(!M || !src) return
+
+	// Outpost 21 edit begin - borer fixes
+	if(!(M in view(3,src)))
+		to_chat(src, "<span class='warning'>\The [M] escaped your influence...</span>")
+		return
+	// Outpost 21 edit end
 
 	if(M.has_brain_worms())
 		to_chat(src, "You cannot infest someone who is already infested!")

@@ -338,6 +338,13 @@
 	ling_chem_display.icon_state = "ling_chems"
 	hud_elements |= ling_chem_display
 
+	// Outpost 21 edit begin - borer fixes
+	borer_chem_display = new /obj/screen/borer/chems()
+	borer_chem_display.screen_loc = ui_ling_chemical_display
+	borer_chem_display.icon_state = "ling_chems"
+	hud_elements |= borer_chem_display
+	// Outpost 21 edit end
+
 	wiz_instability_display = new /obj/screen/wizard/instability()
 	wiz_instability_display.screen_loc = ui_wiz_instability_display
 	wiz_instability_display.icon_state = "wiz_instability_none"
@@ -416,6 +423,16 @@
 /obj/screen/ling/chems
 	name = "chemical storage"
 	icon_state = "power_display"
+
+// Outpost 21 edit begin - borer fixes
+/obj/screen/borer
+	invisibility = 101
+
+/obj/screen/borer/chems
+	name = "chemical storage"
+	icon = 'icons/mob/screen1_op.dmi'
+	icon_state = "power_display"
+// Outpost 21 edit end
 
 /obj/screen/wizard
 	invisibility = 101

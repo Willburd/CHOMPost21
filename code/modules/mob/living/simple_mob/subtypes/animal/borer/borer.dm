@@ -39,6 +39,7 @@
 	var/true_name = null						// String used when speaking among other worms.
 	var/controlling = FALSE						// Used in human death ceck.
 	var/docile = FALSE							// Sugar can stop borers from acting.
+	var/docile_counter = 0						// Outpost 21 edit - borer fixes
 
 	var/has_reproduced = FALSE
 	var/used_dominate							// world.time when the dominate power was last used.
@@ -52,7 +53,7 @@
 	antag = FALSE
 
 /mob/living/simple_mob/animal/borer/Login()
-	..()
+	. = ..() // Outpost 21 edit - borer fixes
 	if(antag && mind)
 		borers.add_antagonist(mind)
 
@@ -70,19 +71,27 @@
 	return ..()
 
 /mob/living/simple_mob/animal/borer/handle_special()
+	docile_counter-- // Outpost 21 edit - borer fixes
 	if(host && !stat && !host.stat)
+		// Outpost 21 edit begin - borer fixes
 		// Handle docility.
-		if(host.reagents.has_reagent("sugar") && !docile)
-			var/message = "You feel the soporific flow of sugar in your host's blood, lulling you into docility."
-			var/target = controlling ? host : src
-			to_chat(target, span("warning", message))
-			docile = TRUE
+		if(host.reagents.has_reagent("sugar"))
+			docile_counter = 1 SECONDS
+			if(docile_counter < 0)
+				docile_counter = 0
 
-		else if(docile)
-			var/message = "You shake off your lethargy as the sugar leaves your host's blood."
-			var/target = controlling ? host : src
-			to_chat(target, span("notice", message))
-			docile = FALSE
+			if(docile_counter > 0)
+				if(!docile)
+					var/message = "You feel the soporific flow of sugar in your host's blood, lulling you into docility."
+					var/target = controlling ? host : src
+					to_chat(target, span("warning", message))
+					docile = TRUE
+			else if(docile)
+				var/message = "You shake off your lethargy as the sugar leaves your host's blood."
+				var/target = controlling ? host : src
+				to_chat(target, span("notice", message))
+				docile = FALSE
+		// Outpost 21 edit end
 
 		// Chem regen.
 		if(chemicals < max_chemicals)
@@ -100,6 +109,33 @@
 
 			if(prob(host.brainloss/20))
 				host.say("*[pick(list("blink","blink_r","choke","aflap","drool","twitch","twitch_v","gasp"))]")
+
+	// Outpost 21 edit begin - borer hud
+	borer_chem_display.invisibility = 0
+	switch(chemicals)
+		if(0 to 9)
+			borer_chem_display.icon_state = "borer_chems0"
+		if(10 to 19)
+			borer_chem_display.icon_state = "borer_chems10"
+		if(20 to 29)
+			borer_chem_display.icon_state = "borer_chems20"
+		if(30 to 39)
+			borer_chem_display.icon_state = "borer_chems30"
+		if(40 to 49)
+			borer_chem_display.icon_state = "borer_chems40"
+		if(50 to 59)
+			borer_chem_display.icon_state = "borer_chems50"
+		if(60 to 69)
+			borer_chem_display.icon_state = "borer_chems60"
+		if(70 to 79)
+			borer_chem_display.icon_state = "borer_chems70"
+		if(80 to 89)
+			borer_chem_display.icon_state = "borer_chems80"
+		if(90 to 99)
+			borer_chem_display.icon_state = "borer_chems90"
+		else
+			borer_chem_display.icon_state = "borer_chems100"
+	// Outpost 21 edit end
 
 /mob/living/simple_mob/animal/borer/Stat()
 	..()
@@ -172,7 +208,7 @@
 	if(host.mind)
 		borers.remove_antagonist(host.mind)
 
-	forceMove(get_turf(host))
+	forceMove(get_turf(host.loc)) // Outpost 21 edit - borer fixes
 
 	reset_view(null)
 	machine = null
