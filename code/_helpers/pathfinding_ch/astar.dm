@@ -215,7 +215,7 @@ GLOBAL_VAR_INIT(astar_visualization_persist, 3 SECONDS)
 			top.pos.color = ASTAR_VISUAL_COLOR_OUT_OF_BOUNDS
 			turfs_got_colored[top.pos] = TRUE
 			#endif
-			continue
+			break // Outpost 21 edit - end loop early, do not bother with checking anything else, was continue
 
 		considering = get_step(current, NORTH)
 		ASTAR_HELL_DEFINE(considering, NORTH)

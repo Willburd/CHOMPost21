@@ -45,10 +45,13 @@
 	ai_log("calculate_path() : Exiting.", AI_LOG_DEBUG)
 
 //A* now, try to a path to a target
-/datum/ai_holder/proc/get_path(var/turf/target,var/get_to = 1, var/max_distance = world.view*6)
+/datum/ai_holder/proc/get_path(var/turf/target,var/get_to = 1, var/max_distance = 0)
 	ai_log("get_path() : Entering.",AI_LOG_DEBUG)
 	forget_path()
-	var/list/new_path = SSpathfinder.default_ai_pathfinding(src, target, get_to, max_path = max_distance) //CHOMPEdit
+	var/path_dist = max_distance
+	if(path_dist <= 0)
+		path_dist = world.view*3 // Outpost 21 edit - Max pathfinder distance from 6 to 3 times, as the pathfinder multiplies by 2 anyway
+	var/list/new_path = SSpathfinder.default_ai_pathfinding(src, target, get_to, max_path = path_dist) //CHOMPEdit
 
 	if(new_path && new_path.len)
 		path = new_path
