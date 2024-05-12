@@ -177,8 +177,6 @@ Class Procs:
 	// Most planets only have one atmosphere, and all other areas are indoor contained areas, or simply exposed to it. If your zlevel is that funky, just don't use MAP_LEVEL_AIRMIX_CLEANS
 	if(Master.current_runlevel < RUNLEVEL_GAME) // Active edges begone
 		return
-	if(prob(20))
-		return
 	var/turf/T = pick(contents)
 	if(istype(T) && T.outdoors > -1 && (T.z in using_map.forced_airmix_levels))
 		// slowly drain gasses back to atmospheric levels, rates are pulled out of my ass.
