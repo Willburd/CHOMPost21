@@ -1068,7 +1068,7 @@ var/global/list/SPECIALS = list(
 	/area/submap/virgo2,
 	/area/submap/event,
 	/area/submap/casino_event,
-	/area/vr //CHOMPedit
+	/area/virtual_reality // Outpost 21 edit
 	// /area/derelict //commented out, all hail derelict-rebuilders!
 )
 
@@ -1091,5 +1091,5 @@ var/global/list/area_or_turf_fail_types = typecacheof(list(
 	/area/submap/virgo2,
 	/area/submap/event,
 	/area/submap/casino_event,
-	/area/vr //CHOMPedit
+	/area/virtual_reality // Outpost 21 edit
 	))
