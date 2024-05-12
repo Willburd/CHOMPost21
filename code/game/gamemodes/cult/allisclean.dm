@@ -84,9 +84,7 @@ var/global/list/allisclean_list = list()
 		C2.gib()
 
 	else if (istype(A, /obj/))
-		qdel(A)
-
-		if (A)
+		if(A)
 			qdel(A)
 
 	/* Mr.clean will only clean!

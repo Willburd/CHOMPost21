@@ -276,6 +276,8 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 	return
 
 /obj/singularity/proc/consume(const/atom/A)
+	if(!(A.singuloCanEat()))
+		return 0
 	src.energy += A.singularity_act(src, current_size)
 	return
 
