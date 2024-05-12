@@ -97,6 +97,8 @@
 			return
 		if(W.loc != user) // This should stop mounted modules ending up outside the module.
 			return
+		if(istype(W, /obj/item/weapon/grab)) // Ignore input, cannot stuff into it anyway, and we don't want to drop the grab into the crate
+			return 0
 		user.drop_item()
 		if(W)
 			W.forceMove(src.loc)
