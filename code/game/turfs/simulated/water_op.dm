@@ -192,6 +192,10 @@
 	icon_state = "shorelinecorner_cave"
 	outdoors = OUTDOORS_NO
 
+/turf/simulated/floor/water/indoors/beach
+	// Indoor garden's beach uses split graphics...
+	icon = 'icons/turf/outdoors_op.dmi'
+	under_state = "beachsand"
 
 // Base water given a few missing indoor types
 /turf/simulated/floor/water/deep/indoors
