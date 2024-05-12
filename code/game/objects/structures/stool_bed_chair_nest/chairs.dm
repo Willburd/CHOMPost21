@@ -358,6 +358,7 @@
 /obj/structure/bed/chair/sofa/bench
 	name = "metal bench"
 	desc = "Almost as comfortable as waiting at a bus station for hours on end."
+	icon = 'icons/obj/sofas.dmi' // Outpost 21 edit - use this not the override
 	base_icon = "benchmiddle"
 	icon_state = "benchmiddle"
 	applies_material_colour = FALSE
