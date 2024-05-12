@@ -52,7 +52,7 @@
 				var/ammo_cut = rand(0,ammo_magazine.max_ammo)
 				ammo_magazine.contents.Cut(0,ammo_cut)
 				ammo_magazine.stored_ammo.Cut(0,ammo_cut)
-	update_icon()
+	// update_icon() Outpost 21 edit - overlay runtime fix
 
 /obj/item/weapon/gun/projectile/consume_next_projectile()
 	//get the next casing
