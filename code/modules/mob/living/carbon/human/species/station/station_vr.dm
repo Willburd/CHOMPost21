@@ -544,7 +544,7 @@
 	heat_level_3 = 1150
 
 	flags =  NO_SCAN
-	spawn_flags = SPECIES_IS_RESTRICTED //SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE CHOMPedit: disabled maybe forever
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE // Outpost 21 edit - restored crewkin
 
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
 
