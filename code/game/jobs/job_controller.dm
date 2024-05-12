@@ -464,6 +464,9 @@ var/global/datum/controller/occupations/job_master
 					custom_equip_slots.Add(G.slot)
 				else
 					spawn_in_storage += thing
+
+		// Outpost 21 edit - initialize internal tanks, doing last for maximum safety
+		H.equip_survival_tanks(FALSE)
 	else
 		to_chat(H, "<span class='filter_notice'>Your job is [rank] and the game just can't handle it! Please report this bug to an administrator.</span>")
 

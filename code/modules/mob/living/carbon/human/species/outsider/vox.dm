@@ -49,7 +49,7 @@
 
 	gluttonous = 1
 
-	breath_type = "nitrogen" //CHOMPedit
+	breath_type = "phoron" // Outpost 21 edit - phoron vox is correct thankyou
 	poison_type = "oxygen"
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
@@ -107,6 +107,7 @@
 /datum/species/vox/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0,var/comprehensive = 0)
 	. = ..()
 
+	/* Outpost 21 edit - we use our own tank code
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/weapon/tank/nitrogen(H), slot_back) //CHOMPedit
@@ -117,3 +118,4 @@
 	H.internal = locate(/obj/item/weapon/tank) in H.contents
 	if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
 		H.internals.icon_state = "internal1"
+	*/

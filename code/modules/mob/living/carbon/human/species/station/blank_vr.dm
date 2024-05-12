@@ -97,6 +97,8 @@
 //Called when spawning to equip them with special things.
 /datum/species/custom/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0, var/comprehensive = 0)
 	. = ..()
+
+	/* Outpost 21 edit - we use our own tank code
 	if(breath_type != "oxygen")
 		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 		var/obj/item/weapon/tank/tankpath
@@ -110,3 +112,4 @@
 			H.internal = H.r_hand
 			if(istype(H.internal,/obj/item/weapon/tank) && H.internals)
 				H.internals.icon_state = "internal1"
+	*/

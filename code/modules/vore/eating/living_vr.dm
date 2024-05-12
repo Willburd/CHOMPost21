@@ -757,7 +757,7 @@
 /datum/gas_mixture/belly_air/vox/New()
     . = ..()
     gas = list(
-        "nitrogen" = 100) // Chomp edit
+        "phoron" = 100) // Outpost 21 edit - phoron vox are correct thankyou
 
 /datum/gas_mixture/belly_air/zaddat
     volume = 2500

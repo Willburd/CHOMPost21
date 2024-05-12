@@ -277,6 +277,8 @@
 		add_verb(avatar,/mob/living/carbon/human/proc/vr_transform_into_mob)  //CHOMPEdit
 		add_verb(avatar,/mob/living/proc/set_size) //CHOMPEdit TGPanel // Introducing NeosVR
 		avatar.virtual_reality_mob = TRUE
+		avatar.equip_survival_tanks(TRUE) // Outpost 21 edit - so non-oxy breathers don't die horribly
+
 
 		// Prompt for username after they've enterred the body.
 		var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
