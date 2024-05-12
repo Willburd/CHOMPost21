@@ -418,8 +418,12 @@
 	last_search = world.time
 
 	for(var/atom/A in view(holder, vision_range))
+		// ignore if held by something else
+		if(!istype(A.loc,/turf))
+			continue
+
+		// disable for things already in hoard, food needs to be eaten though
 		if(!istype(A, /obj/item/weapon/reagent_containers/food) && get_dist(A, home_turf) < hoard_distance)
-			// disable for things already in hoard, food needs to be eaten though
 			continue
 
 		// collect items!
@@ -575,12 +579,12 @@
 			use_astar = FALSE
 		else if(holder.get_active_hand())
 			// long paths
-			use_astar = TRUE
+			// use_astar = TRUE  // Outpost 21 TODO - Unbreak Astar
 			maximum_path_distance = world.view*2
 		else
 			// short path to goal!
-			if(prob(50))
-				use_astar = TRUE
+			//if(prob(50))
+			// 	use_astar = TRUE  // Outpost 21 TODO - Unbreak Astar
 			maximum_path_distance = world.view
 
 		// clear old forbid turf
