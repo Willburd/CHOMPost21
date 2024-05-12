@@ -173,23 +173,23 @@
 
 	var/is_open = istype(new_turf,/turf/simulated/open)
 
+	if(!istype(new_turf,/turf/simulated/open/force_indoor)) // Outpost 21 edit - forced elevators and tram to have indoor state
+		propogate_sunlight_changes(oldtype, old_density, new_turf)
+		var/turf/simulated/cur_turf = src
+		if(is_open != was_open)
+			do
+				cur_turf = GetBelow(cur_turf)
+				if(is_open)
+					cur_turf.make_outdoors()
+				else
+					cur_turf.make_indoors()
+				cur_turf.propogate_sunlight_changes(oldtype, old_density, new_turf, above = TRUE)
+			while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
 
-	propogate_sunlight_changes(oldtype, old_density, new_turf)
-	var/turf/simulated/cur_turf = src
-	if(is_open != was_open)
-		do
-			cur_turf = GetBelow(cur_turf)
-			if(is_open)
-				cur_turf.make_outdoors()
-			else
-				cur_turf.make_indoors()
-			cur_turf.propogate_sunlight_changes(oldtype, old_density, new_turf, above = TRUE)
-		while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
-
-	//CHOMPEdit End
-	if(old_shandler) old_shandler.holder_change() //CHOMPEdit
-	if(preserve_outdoors)
-		outdoors = old_outdoors
+		//CHOMPEdit End
+		if(old_shandler) old_shandler.holder_change() //CHOMPEdit
+		if(preserve_outdoors)
+			outdoors = old_outdoors
 
 
 //CHOMPEdit begin

@@ -644,6 +644,7 @@
 
 /area/turbolift/secmain
 	name = "Security First Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "Security Main"
 	lift_floor_name = "Primary Security."
 	lift_announce_str = "Arriving at Security Primary."
@@ -651,6 +652,7 @@
 
 /area/turbolift/secupper
 	name = "Security Second Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "Security High Level"
 	lift_floor_name = "AI, Telecoms, Evac shuttle."
 	lift_announce_str = "Arriving at Security Upper Floor."
@@ -667,6 +669,7 @@
 
 /area/turbolift/medical
 	name = "Medbay First Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "Medbay"
 	lift_floor_name = "Lobby, Surgery, Primary Treatment, Psychology."
 	lift_announce_str = "Arriving at Medbay Primary."
@@ -674,6 +677,7 @@
 
 /area/turbolift/mediupper
 	name = "Medbay Second Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "Medical Recovery"
 	lift_floor_name = "Resleeving, CMO, Checkup, Recovery ward, Hangar."
 	lift_announce_str = "Arriving at Medical Loft."
@@ -690,6 +694,7 @@
 
 /area/turbolift/civmain
 	name = "Civilian First Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "First Floor"
 	lift_floor_name = "Bar, Bridge, Evac Hallway."
 	lift_announce_str = "Arriving at First Floor."
@@ -697,6 +702,7 @@
 
 /area/turbolift/civupper
 	name = "Civilian Second Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "Second Floor"
 	lift_floor_name = "Chapel, Library, Garden."
 	lift_announce_str = "Arriving at Second Floor."
@@ -713,6 +719,7 @@
 
 /area/turbolift/scimain
 	name = "Science First Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "Research First Floor"
 	lift_floor_name = "RnD, Robotics, RD."
 	lift_announce_str = "Arriving at First Floor."
@@ -720,6 +727,7 @@
 
 /area/turbolift/sciupper
 	name = "Science Second Floor"
+	base_turf = /turf/simulated/open/force_indoor
 	lift_floor_label = "Research Second Floor"
 	lift_floor_name = "Telesci, Xenoflora."
 	lift_announce_str = "Arriving at Second Floor."
@@ -1900,16 +1908,19 @@
 /area/muriki/tramstation/waste
 	name = "\improper Tram Station - Waste"
 	icon_state = "dark128"
+	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/muriki/tramstation/cargeng
 	name = "\improper Tram Station - Cargo Engineering"
 	icon_state = "dark128"
+	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/muriki/tramstation/civ
 	name = "\improper Tram Station - Civilian"
 	icon_state = "dark128"
+	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 
