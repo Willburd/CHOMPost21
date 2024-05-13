@@ -59,8 +59,10 @@
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
 	QDEL_NULL_LIST(organs)
+	/*  Outpost 21 edit - Nif removal
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add
+	*/
 	worn_clothing.Cut()
 
 

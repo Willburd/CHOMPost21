@@ -73,6 +73,7 @@
 		act = copytext(tempstr,1,splitpoint)
 		message = copytext(tempstr,splitpoint+1,0)
 
+	/* Outpost 21 edit - Nif removal
 	//VOREStation Add - NIF soulcatcher shortcuts
 	if(act == "nsay")
 		return nsay(message)
@@ -80,6 +81,7 @@
 	if(act == "nme")
 		return nme(message)
 	//VOREStation Add End
+	*/
 
 	var/decl/emote/use_emote = get_emote_by_key(act)
 	if(!istype(use_emote))

@@ -961,4 +961,4 @@ var/global/datum/controller/occupations/job_master
 	if(!ishuman(C.mob))
 		return
 	var/mob/living/carbon/human/CM = C.mob
-	SStranscore.m_backup(CM.mind, CM.nif, TRUE)
+	SStranscore.m_backup(CM.mind, null /* Outpost 21 edit - Nif removal CM.nif*/, TRUE)

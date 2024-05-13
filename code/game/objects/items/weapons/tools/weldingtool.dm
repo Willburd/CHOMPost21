@@ -169,7 +169,7 @@
 			message_admins("[key_name_admin(user)] triggered a fueltank explosion with a welding tool.")
 			log_game("[key_name(user)] triggered a fueltank explosion with a welding tool.")
 			to_chat(user, "<span class='danger'>You begin welding on the fueltank and with a moment of lucidity you realize... you are doomed.</span>") //CHOMP Edit: changed yawn edit to just say you are doomed
-			var/obj/structure/reagent_dispensers/fueltank/tank = O // CHOMPS edit - Readds welderbombing 
+			var/obj/structure/reagent_dispensers/fueltank/tank = O // CHOMPS edit - Readds welderbombing
 			tank.explode()
 			return
 	if (src.welding)
@@ -327,7 +327,7 @@
 		var/obj/item/organ/internal/eyes/E = H.internal_organs_by_name[O_EYES]
 		if(!E)
 			return
-		if(H.nif && H.nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION)) return //VOREStation Add - NIF
+		// if(H.nif && H.nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION)) return //VOREStation Add - NIF // Outpost 21 edit - Nif removal
 		switch(safety)
 			if(1)
 				to_chat(usr, "<span class='warning'>Your eyes sting a little.</span>")

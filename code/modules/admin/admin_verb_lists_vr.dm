@@ -122,8 +122,10 @@ var/list/admin_verbs_admin = list(
 	/client/proc/toggle_attack_logs,
 	/datum/admins/proc/paralyze_mob,
 	/client/proc/fixatmos,
+	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	*/
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
@@ -289,8 +291,10 @@ var/list/admin_verbs_debug = list(
 	/client/proc/simple_DPS,
 	/datum/admins/proc/view_feedback,
 	/client/proc/stop_sounds,
+	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	*/
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
@@ -429,7 +433,7 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/view_persistent_data,
 	/datum/admins/proc/view_txt_log,	//shows the server log (diary) for today,
 	/datum/admins/proc/view_atk_log,		//shows the server combat-log, doesn't do anything presently,
-	/datum/admins/proc/quick_nif, //CHOMPStation Add,
+	// /datum/admins/proc/quick_nif, //CHOMPStation Add, Outpost 21 edit - Nif removal
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )
@@ -577,8 +581,10 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
 	/client/proc/toggle_spawning_with_recolour,
+	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	*/
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 

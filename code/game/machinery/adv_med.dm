@@ -271,15 +271,17 @@
 				var/implantSubData[0]
 				var/obj/item/weapon/implant/I = thing
 			//VOREStation Block Edit Start
-				var/obj/item/device/nif/N = thing
+				// var/obj/item/device/nif/N = thing Outpost 21 edit - Nif removal
 				if(istype(I))
 					implantSubData["name"] =  I.name
 					implantSubData["known"] = istype(I) && I.known_implant
 					implantData.Add(list(implantSubData))
+				/* Outpost 21 edit - Nif removal
 				else
 					implantSubData["name"] =  N.name
 					implantSubData["known"] = istype(N) && N.known_implant
 					implantData.Add(list(implantSubData))
+				*/
 			//VOREStation Block Edit End
 
 			organData["implants"] = implantData
@@ -501,11 +503,13 @@
 
 			var/unknown_body = 0
 			for(var/obj/item/weapon/implant/I as anything in e.implants)
-				var/obj/item/device/nif/N = I //VOREStation Add: NIFs
+				// var/obj/item/device/nif/N = I //VOREStation Add: NIFs Outpost 21 edit - Nif removal
 				if(istype(I) && I.known_implant)
 					imp += "[I] implanted:"
+				/*  Outpost 21 edit - Nif removal
 				else if(istype(N) && N.known_implant) //VOREStation Add: NIFs
 					imp += "[N] implanted:"
+				*/
 				else
 					unknown_body++
 

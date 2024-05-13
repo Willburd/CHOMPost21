@@ -39,7 +39,8 @@
 	var/recently_used_attack = GA_SPEEDUP
 	var/all_special_attacks = list(GA_ADS, GA_CALLDOWN, GA_LINES, GA_BULLETHELL, GA_ILLUSION, GA_CONFUSION, GA_SPEEDUP)
 
-	loot_list = list(/obj/item/device/nif/glitch = 100)
+	// loot_list = list(/obj/item/device/nif/glitch = 100) Outpost 21 edit - Nif removal
+	loot_list = list(/obj/item/weapon/implant/backup)
 
 	can_be_drop_prey = FALSE //CHOMP Add
 	can_pain_emote = FALSE // CHOMPEdit: Can't feel pain

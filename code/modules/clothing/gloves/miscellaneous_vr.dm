@@ -82,7 +82,9 @@
 	heat_protection = HANDS
 	max_heat_protection_temperature = GLOVES_MAX_HEAT_PROTECTION_TEMPERATURE
 
+/* Outpost 21 edit - Nif removal, Because it uses nif hardclaws attack
 /obj/item/clothing/gloves/black/bloodletter
 	desc = "A pair of ordinary looking black gloves. On closer examination, they seem somewhat well-made, with an almost metallic sheen to them."
 	description_fluff = "A prohibited concealed weapon, the Melee Grip Reinforcement system is the product of the military applications of nanotechnology. The striking face of the glove hardens in response to impact, producing monofilament blades from the knuckles to greatly enhance the wearer's close-combat lethality."
 	special_attack_type = /datum/unarmed_attack/hardclaws
+*/

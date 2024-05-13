@@ -7,6 +7,7 @@ GLOBAL_DATUM_INIT(tgui_glasses_state, /datum/tgui_state/glasses_state, new)
 
 	return STATUS_CLOSE
 
+/* Outpost 21 edit - Nif removal
 GLOBAL_DATUM_INIT(tgui_nif_state, /datum/tgui_state/nif_state, new)
 /datum/tgui_state/nif_state/can_use_topic(var/src_object, var/mob/user)
 	if(ishuman(user))
@@ -23,7 +24,7 @@ GLOBAL_DATUM_INIT(tgui_nif_main_state, /datum/tgui_state/nif_main_state, new)
 		var/mob/living/carbon/human/H = user
 		if(!H.nif || src_object != H.nif)
 			return STATUS_CLOSE
-		
+
 		if(H.nif.stat == NIF_WORKING)
 			return user.shared_tgui_interaction()
 		else
@@ -39,3 +40,4 @@ GLOBAL_DATUM_INIT(tgui_commlink_state, /datum/tgui_state/commlink_state, new)
 			return user.shared_tgui_interaction()
 
 	return STATUS_CLOSE
+*/

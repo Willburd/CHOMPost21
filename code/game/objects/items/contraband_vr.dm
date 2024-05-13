@@ -51,7 +51,7 @@
 						/obj/item/clothing/accessory/permit/gun,
 						/obj/item/device/perfect_tele,
 						/obj/item/device/sleevemate,
-						/obj/item/weapon/disk/nifsoft/compliance,
+						// /obj/item/weapon/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 						/obj/item/weapon/implanter/compliance,
 						/obj/item/seeds/ambrosiadeusseed,
 						/obj/item/seeds/ambrosiavulgarisseed,

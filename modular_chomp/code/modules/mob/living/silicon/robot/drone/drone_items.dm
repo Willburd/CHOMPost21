@@ -7,7 +7,7 @@
 		/obj/item/capture_crystal,
 		/obj/item/clothing,
 		/obj/item/weapon/implanter,
-		/obj/item/weapon/disk/nifsoft/compliance,
+		// /obj/item/weapon/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 		/obj/item/weapon/handcuffs,
 		/obj/item/toy,
 		/obj/item/petrifier,
