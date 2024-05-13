@@ -91,7 +91,7 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 	//Handles all the bad things phoron can do.
 
 	//Contamination
-	if(vsc.plc.CLOTH_CONTAMINATION)
+	if(vsc?.plc.CLOTH_CONTAMINATION)
 		contaminate()
 
 	//Anything else requires them to not be dead.
@@ -99,7 +99,7 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 		return
 
 	//Burn skin if exposed.
-	if(vsc.plc.SKIN_BURNS && (species.breath_type != "phoron") && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
+	if(vsc?.plc.SKIN_BURNS && (species.breath_type != "phoron") && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
 		if(!pl_head_protected() || !pl_suit_protected())
 			burn_skin(0.75 * species.phoron_contact_mod) // Outpost 21 edit - phoron contact mod
 			if(prob(20))
@@ -107,7 +107,7 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 			updatehealth()
 
 	//Burn eyes if exposed.
-	if(vsc.plc.EYE_BURNS && species.breath_type && (species.breath_type != "phoron"))		//VOREStation Edit: those who don't breathe
+	if(vsc?.plc.EYE_BURNS && species.breath_type && (species.breath_type != "phoron"))		//VOREStation Edit: those who don't breathe
 		var/burn_eyes = 1
 
 		//Check for protective glasses
@@ -133,8 +133,8 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 			burn_eyes()
 
 	//Genetic Corruption
-	if(vsc.plc.GENETIC_CORRUPTION && (species.breath_type != "phoron") && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
-		if(rand(1,10000) < vsc.plc.GENETIC_CORRUPTION * species.phoron_contact_mod) // Outpost 21 edit - phoron contact mod
+	if(vsc?.plc.GENETIC_CORRUPTION && (species.breath_type != "phoron") && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
+		if(rand(1,10000) < vsc?.plc.GENETIC_CORRUPTION * species.phoron_contact_mod) // Outpost 21 edit - phoron contact mod
 			randmutb(src)
 			to_chat(src, "<span class='danger'>High levels of toxins cause you to spontaneously mutate!</span>")
 			domutcheck(src,null)
@@ -153,7 +153,7 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 /mob/living/carbon/human/proc/pl_head_protected()
 	//Checks if the head is adequately sealed.	//This is just odd. TODO: Make this respect the body_parts_covered stuff like thermal gear does.
 	if(head)
-		if(vsc.plc.PHORONGUARD_ONLY)
+		if(vsc?.plc.PHORONGUARD_ONLY)
 			if(head.flags & PHORONGUARD)
 				return 1
 		else if(head.body_parts_covered & EYES)
@@ -166,11 +166,11 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 	for(var/obj/item/protection in list(wear_suit, gloves, shoes))	//This is why it's odd. If I'm in a full suit, but my shoes and gloves aren't phoron proof, damage.
 		if(!protection)
 			continue
-		if(vsc.plc.PHORONGUARD_ONLY && !(protection.flags & PHORONGUARD))
+		if(vsc?.plc.PHORONGUARD_ONLY && !(protection.flags & PHORONGUARD))
 			return 0
 		coverage |= protection.body_parts_covered
 
-	if(vsc.plc.PHORONGUARD_ONLY)
+	if(vsc?.plc.PHORONGUARD_ONLY)
 		return 1
 
 	return BIT_TEST_ALL(coverage, UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS)
