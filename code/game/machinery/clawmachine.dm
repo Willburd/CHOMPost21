@@ -70,8 +70,13 @@
 						//Outpost 21 add start
 						/obj/item/toy/plushie/tinytin,
 						/obj/item/toy/plushie/jil,
-						/obj/item/toy/plushie/chu
+						/obj/item/toy/plushie/chu,
 						//Outpost 21 add end
+						//CHOMPStation Add Start
+						/obj/item/toy/plushie/red_dragon,
+						/obj/item/toy/plushie/green_dragon,
+						/obj/item/toy/plushie/purple_dragon
+						//CHOMPStation Add End
 						)
 
 /obj/machinery/clawmachine/update_icon()

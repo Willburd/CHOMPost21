@@ -518,7 +518,9 @@
 					/obj/item/clothing/under/teshari/undercoat/standard/brown_grey = 5,
 					/obj/item/clothing/under/vox/vox_casual = 5,
 					/obj/item/clothing/shoes/black = 20,
-					/obj/item/clothing/shoes/white = 20)
+					/obj/item/clothing/shoes/white = 20,
+					/obj/item/clothing/gloves/watch = 20
+					)
 	prices = list()
 
 /obj/machinery/vending/loadout/accessory
@@ -663,7 +665,11 @@
 					/obj/item/clothing/accessory/pride/pan = 5,
 					/obj/item/clothing/accessory/pride/lesbian = 5,
 					/obj/item/clothing/accessory/pride/intersex = 5,
-					/obj/item/clothing/accessory/pride/vore = 5)
+					/obj/item/clothing/accessory/pride/vore = 5,
+					/obj/item/clothing/gloves/watch = 5,
+					/obj/item/clothing/gloves/watch/silver = 5,
+					/obj/item/clothing/gloves/watch/gold = 5
+					)
 	prices = list(/obj/item/clothing/accessory = 50,
 					/obj/item/clothing/accessory/armband/med/color = 50,
 					/obj/item/clothing/accessory/asymmetric = 50,
@@ -795,7 +801,11 @@
 					/obj/item/clothing/accessory/pride/pan = 50,
 					/obj/item/clothing/accessory/pride/lesbian = 50,
 					/obj/item/clothing/accessory/pride/intersex = 50,
-					/obj/item/clothing/accessory/pride/vore = 50)
+					/obj/item/clothing/accessory/pride/vore = 50,
+					/obj/item/clothing/gloves/watch = 50,
+					/obj/item/clothing/gloves/watch/silver = 100,
+					/obj/item/clothing/gloves/watch/gold = 200
+					)
 	premium = list(/obj/item/weapon/bedsheet/rainbow = 1)
 	contraband = list(/obj/item/clothing/mask/gas/clown_hat = 1,
 	                   /obj/item/clothing/accessory/collar/collarplanet_earth = 5)

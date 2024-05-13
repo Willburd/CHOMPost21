@@ -714,6 +714,11 @@
 				/obj/item/toy/figure/psychologist,
 				/obj/item/toy/figure/paramedic,
 				/obj/item/toy/figure/ert,
+				//Outpost 21 add start
+				/obj/item/toy/plushie/tinytin,
+				/obj/item/toy/plushie/jil,
+				/obj/item/toy/plushie/chu,
+				//Outpost 21 add end
 				//chompstation Add start
 				/obj/item/toy/figure/station,
 				/obj/item/toy/sif)
@@ -780,8 +785,18 @@
 				/obj/item/toy/plushie/teshari/_yw,
 				/obj/item/toy/plushie/teshari/w_yw,
 				/obj/item/toy/plushie/teshari/b_yw,
-				/obj/item/toy/plushie/teshari/y_yw)
+				/obj/item/toy/plushie/teshari/y_yw,
 				//YawnWider Add End
+				//Outpost 21 add start
+				/obj/item/toy/plushie/tinytin,
+				/obj/item/toy/plushie/jil,
+				/obj/item/toy/plushie/chu,
+				//Outpost 21 add end
+				//CHOMPStation Add Start
+				/obj/item/toy/plushie/red_dragon,
+				/obj/item/toy/plushie/green_dragon,
+				/obj/item/toy/plushie/purple_dragon)
+				//CHOMPStation Add End
 
 /obj/random/plushielarge
 	name = "random large plushie"
