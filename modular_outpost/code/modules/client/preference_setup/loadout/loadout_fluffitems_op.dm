@@ -49,7 +49,7 @@
 
 /datum/gear/fluff/ESHUI_flightpin
 	display_name = "ESHUI Pilot's Qualification Pin"
-	path = /obj/item/clothing/accessory/solgov/specialty/pilot
+	path = /obj/item/clothing/accessory/solgov/specialty/pilot/eshui
 	ckeywhitelist = list("remthebold","seagha","synxplushy","darklord92")
 	character_name = list("Trashfire","Schale Vam","Khrutch Yizhnera","Aiektaaknell","Fynli","Drake Frostpaw","Sitka Niteshade","Tretch Qet")
 
