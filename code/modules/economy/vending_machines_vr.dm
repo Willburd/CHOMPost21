@@ -1248,7 +1248,7 @@
 					/obj/item/instrument/piano_synth/headphones/spacepods = 600,
 					/obj/item/clothing/gloves/bluespace = 500)
 	premium = list(/obj/item/device/perfect_tele/one_beacon = 1)
-	contraband = list(/obj/item/weapon/disk/nifsoft/compliance = 1)
+	contraband = list() // Outpost 21 edit - Nif removal: list(/obj/item/weapon/disk/nifsoft/compliance = 1)
 
 /obj/machinery/vending/event/gadget //FOR FACILITATING AND EQUIPPING EVENTS, DO NOT PLACE ON THE NORMAL MAP//
 	name = "Chips Co."
@@ -1277,7 +1277,7 @@
 					/obj/item/device/laser_pointer = 3,
 					/obj/item/clothing/glasses/omnihud = 10,
 					/obj/item/device/perfect_tele/one_beacon = 1,
-					/obj/item/weapon/disk/nifsoft/compliance = 1,
+					// /obj/item/weapon/disk/nifsoft/compliance = 1, Outpost 21 edit - Nif removal
 					/obj/item/device/perfect_tele/alien = 10)
 
 //////////////////END OF CHIPS CO. VENDORS//////////////////
@@ -1737,7 +1737,7 @@
 					/obj/item/instrument/piano_synth/headphones/spacepods = 600,
 					/obj/item/clothing/gloves/bluespace = 500)
 	premium = list(/obj/item/device/perfect_tele/one_beacon = 1)
-	contraband = list(/obj/item/weapon/disk/nifsoft/compliance = 1)
+	contraband = list() // Outpost 21 edit - Nif removal: list(/obj/item/weapon/disk/nifsoft/compliance = 1)
 
 // Loadout Vending Machines End
 
@@ -2563,7 +2563,7 @@
 					/obj/item/device/laser_pointer = 3,
 					/obj/item/clothing/glasses/omnihud = 10,
 					/obj/item/device/perfect_tele/one_beacon = 1,
-					/obj/item/weapon/disk/nifsoft/compliance = 1,
+					// /obj/item/weapon/disk/nifsoft/compliance = 1, Outpost 21 edit - Nif removal
 					/obj/item/device/perfect_tele/alien = 10)
 
 /obj/machinery/vending/event/costume //FOR FACILITATING AND EQUIPPING EVENTS, DO NOT PLACE ON THE NORMAL MAP//

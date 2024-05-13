@@ -30,7 +30,7 @@
 		/obj/item/device/lightreplacer,
 		/obj/item/weapon/book/tome,
 		/obj/item/weapon/cell/device/weapon/recharge/alien/hybrid,
-		/obj/item/weapon/disk/nifsoft/compliance,
+		// /obj/item/weapon/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 		/obj/item/weapon/implanter/adrenalin,
 		/obj/item/weapon/lego,
 		/obj/item/weapon/moneybag,

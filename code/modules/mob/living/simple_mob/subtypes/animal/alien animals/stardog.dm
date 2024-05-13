@@ -669,7 +669,7 @@
 	var/list/valid_treasure = list(
 		/obj/item/weapon/cell/infinite = 5,
 		/obj/item/weapon/cell/device/weapon/recharge/alien = 5,
-		/obj/item/device/nif/authentic = 1,
+		// /obj/item/device/nif/authentic = 1, Outpost 21 edit - Nif removal
 		/obj/item/toy/bosunwhistle = 50,
 		/obj/random/mouseray = 50,
 		/obj/item/weapon/gun/energy/mouseray/metamorphosis/advanced/random = 10,
@@ -1523,7 +1523,7 @@
 				if(istype(W, /obj/item/organ/internal/mmi_holder/posibrain))
 					var/obj/item/organ/internal/mmi_holder/MMI = W
 					MMI.removed()
-				if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif) || istype(W, /obj/item/organ))
+				if(istype(W, /obj/item/weapon/implant/backup) /* Outpost 21 edit - Nif removal || istype(W, /obj/item/device/nif)*/ || istype(W, /obj/item/organ))
 					continue
 				H.drop_from_inventory(W)
 			if(linked_mob)

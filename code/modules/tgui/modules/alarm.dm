@@ -32,10 +32,13 @@
 /datum/tgui_module/alarm_monitor/engineering/glasses/tgui_state(mob/user)
 	return GLOB.tgui_glasses_state
 
+
+/* Outpost 21 edit - Nif removal
 // Subtype for nif_state
 /datum/tgui_module/alarm_monitor/engineering/nif
 /datum/tgui_module/alarm_monitor/engineering/nif/tgui_state(mob/user)
 	return GLOB.tgui_nif_state
+*/
 
 // Subtype for NTOS
 /datum/tgui_module/alarm_monitor/engineering/ntos
@@ -99,7 +102,7 @@
 /datum/tgui_module/alarm_monitor/tgui_act(action, params)
 	if(..())
 		return TRUE
-	
+
 	// Camera stuff is AI only.
 	// If you're not an AI, this is a read-only UI.
 	if(!isAI(usr))

@@ -77,7 +77,7 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(8 * removed * chem_effective, 0)
-		
+
 /*CHOMPStation removal begin
 /datum/reagent/sleevingcure
 	name = "Vey-Med Resleeving Booster"
@@ -236,7 +236,7 @@
 			log_debug("polymorph human")
 			for(var/obj/item/W in M)
 				log_debug("polymorph items")
-				if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+				if(istype(W, /obj/item/weapon/implant/backup)) // Outpost 21 edit - Nif removal: || istype(W, /obj/item/device/nif))
 					log_debug("polymorph implants")
 					continue
 				M.drop_from_inventory(W)

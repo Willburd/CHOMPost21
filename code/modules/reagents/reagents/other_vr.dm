@@ -30,6 +30,7 @@
 					BI.forceMove(torso)
 					torso.implants += BI
 
+/* Outpost 21 edit - Nif removal
 /datum/reagent/nif_repair_nanites
 	name = "Programmed Nanomachines"
 	id = "nifrepairnanites"
@@ -48,6 +49,7 @@
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed)
+*/
 
 /datum/reagent/firefighting_foam
 	name = "Firefighting Foam"
@@ -114,6 +116,7 @@
 		M.heal_organ_damage(0.5 * removed, 0.5 * removed * chem_effective)
 		M.adjustToxLoss(-0.5 * removed * chem_effective)
 
+	/* Outpost 21 edit - Nif removal
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
@@ -121,6 +124,7 @@
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed*0.1)
+	*/
 
 //Special toxins for solargrubs
 /datum/reagent/grubshock

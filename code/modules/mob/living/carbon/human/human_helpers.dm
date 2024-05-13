@@ -188,10 +188,12 @@
 				var/obj/item/clothing/glasses/V = rig.visor.vision.glasses
 				compiled_vis |= V.enables_planes
 
+	/* Outpost 21 edit - Nif removal
 	//VOREStation Add - NIF Support
 	if(nif)
 		compiled_vis |= nif.planes_visible()
 	//event hud
+	*/
 	if(vantag_hud)
 		compiled_vis |= VIS_CH_VANTAG
 	//VOREStation Add End

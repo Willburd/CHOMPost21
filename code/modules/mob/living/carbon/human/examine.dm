@@ -275,7 +275,7 @@
 	vorestrings += examine_bellies()
 	vorestrings += examine_pickup_size()
 	vorestrings += examine_step_size()
-	vorestrings += examine_nif()
+	// vorestrings += examine_nif() Outpost 21 edit - Nif removal
 	vorestrings += examine_chimera()
 	for(var/entry in vorestrings)
 		if(entry == "" || entry == null)

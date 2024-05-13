@@ -22,6 +22,7 @@
 	else
 		//Okay, we can breathe, now check if we can get air
 		breath = get_breath_from_internal() //First, check for air from internals
+		/* Outpost 21 edit - Nif removal
 		//VOREStation Add - Respirocytes as a NIF implant
 		if(!breath && ishuman(src))
 			var/mob/living/carbon/human/H = src
@@ -29,6 +30,7 @@
 				var/datum/nifsoft/spare_breath/SB = H.nif.imp_check(NIF_SPAREBREATH)
 				breath = SB.resp_breath()
 		//VOREStation Add End
+		*/
 		if(!breath)
 			breath = get_breath_from_environment() //No breath from internals so let's try to get air from our location
 		if(!breath)

@@ -158,7 +158,7 @@
 		L.forceMove(pick(get_area_turfs(dump_area)))
 		if(!issilicon(L)) //Don't drop borg modules...
 			for(var/obj/item/I in L)
-				if(istype(I,/obj/item/weapon/implant) || istype(I,/obj/item/device/nif))
+				if(istype(I,/obj/item/weapon/implant)) // Outpost 21 edit - Nif removal: || istype(I,/obj/item/device/nif))
 					continue
 				if(istype(I,/obj/item/weapon/holder))
 					var/obj/item/weapon/holder/H = I

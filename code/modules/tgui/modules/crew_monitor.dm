@@ -84,7 +84,9 @@
 /datum/tgui_module/crew_monitor/robot/tgui_state(mob/user)
 	return GLOB.tgui_self_state
 
+/* Outpost 21 edit - Nif removal
 // Subtype for nif_state
 /datum/tgui_module/crew_monitor/nif
 /datum/tgui_module/crew_monitor/nif/tgui_state(mob/user)
 	return GLOB.tgui_nif_state
+*/

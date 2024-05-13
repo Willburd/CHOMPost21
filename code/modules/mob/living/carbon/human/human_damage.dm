@@ -147,7 +147,9 @@
 				if(M.energy_based)
 					M.energy_source.use(M.damage_cost*amount)
 				amount *= M.incoming_brute_damage_percent
+		/* Outpost 21 edit - Nif removal
 		if(nif && nif.flag_check(NIF_C_BRUTEARMOR,NIF_FLAGS_COMBAT)){amount *= 0.7} //VOREStation Edit - NIF mod for damage resistance for this type of damage
+		*/
 		take_overall_damage(amount, 0)
 	else
 		for(var/datum/modifier/M in modifiers)
@@ -169,7 +171,9 @@
 				if(M.energy_based)
 					M.energy_source.use(M.damage_cost*amount)
 				amount *= M.incoming_fire_damage_percent
+		/* Outpost 21 edit - Nif removal
 		if(nif && nif.flag_check(NIF_C_BURNARMOR,NIF_FLAGS_COMBAT)){amount *= 0.7} //VOREStation Edit - NIF mod for damage resistance for this type of damage
+		*/
 		take_overall_damage(0, amount)
 	else
 		for(var/datum/modifier/M in modifiers)
@@ -193,7 +197,9 @@
 					if(M.energy_based)
 						M.energy_source.use(M.damage_cost*amount)
 					amount *= M.incoming_brute_damage_percent
+			/* Outpost 21 edit - Nif removal
 			if(nif && nif.flag_check(NIF_C_BRUTEARMOR,NIF_FLAGS_COMBAT)){amount *= 0.7} //VOREStation Edit - NIF mod for damage resistance for this type of damage
+			*/
 			O.take_damage(amount, 0, sharp=is_sharp(damage_source), edge=has_edge(damage_source), used_weapon=damage_source)
 		else
 			for(var/datum/modifier/M in modifiers)
@@ -219,7 +225,9 @@
 					if(M.energy_based)
 						M.energy_source.use(M.damage_cost*amount)
 					amount *= M.incoming_fire_damage_percent
+			/* Outpost 21 edit - Nif removal
 			if(nif && nif.flag_check(NIF_C_BURNARMOR,NIF_FLAGS_COMBAT)){amount *= 0.7} //VOREStation Edit - NIF mod for damage resistance for this type of damage
+			*/
 			O.take_damage(0, amount, sharp=is_sharp(damage_source), edge=has_edge(damage_source), used_weapon=damage_source)
 		else
 			for(var/datum/modifier/M in modifiers)
@@ -606,7 +614,9 @@ This function restores all organs.
 	switch(damagetype)
 		if(BRUTE)
 			damageoverlaytemp = 20
+			/* Outpost 21 edit - Nif removal
 			if(nif && nif.flag_check(NIF_C_BRUTEARMOR,NIF_FLAGS_COMBAT)){damage *= 0.7}
+			*/
 			damage = damage*species.brute_mod
 
 			for(var/datum/modifier/M in modifiers)
@@ -623,7 +633,9 @@ This function restores all organs.
 				UpdateDamageIcon()
 		if(BURN)
 			damageoverlaytemp = 20
+			/* Outpost 21 edit - Nif removal
 			if(nif && nif.flag_check(NIF_C_BURNARMOR,NIF_FLAGS_COMBAT)){damage *= 0.7}
+			*/
 			damage = damage*species.burn_mod
 
 			for(var/datum/modifier/M in modifiers)

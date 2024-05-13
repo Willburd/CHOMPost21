@@ -99,7 +99,7 @@
 		/obj/item/weapon/storage/pill_bottle,
 		/obj/item/weapon/reagent_containers/pill,
 		/obj/item/weapon/reagent_containers/blood,
-		/obj/item/device/nif,       //Chompedit Add Nif handling
+		// /obj/item/device/nif,       //Chompedit Add Nif handling, Outpost 21 edit - Nif removal
 		/obj/item/stack/material/phoron,
 		/obj/item/weapon/tank/anesthetic,
 		/obj/item/weapon/disk/body_record //Vorestation Edit: this lets you get an empty sleeve or help someone else
@@ -182,8 +182,8 @@
 	desc = "A specialized grasping tool used to preserve and manipulate organic material."
 
 	can_hold = list(
-		/obj/item/organ,
-		/obj/item/device/nif //NIFs can be slapped in during surgery
+		/obj/item/organ
+		///obj/item/device/nif //NIFs can be slapped in during surgery, Outpost 21 edit - Nif removal
 		)
 
 /obj/item/weapon/gripper/no_use/organ/Entered(var/atom/movable/AM)
@@ -211,8 +211,8 @@
 		/obj/item/organ/external,
 		/obj/item/organ/internal/brain, //to insert into MMIs,
 		/obj/item/organ/internal/cell,
-		/obj/item/organ/internal/eyes/robot,
-		/obj/item/device/nif //NIFs can be slapped in during surgery
+		/obj/item/organ/internal/eyes/robot
+		// /obj/item/device/nif //NIFs can be slapped in during surgery. Outpost 21 edit - Nif removal
 		)
 
 /obj/item/weapon/gripper/no_use/mech

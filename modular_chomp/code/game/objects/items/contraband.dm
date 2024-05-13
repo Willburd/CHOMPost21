@@ -17,7 +17,7 @@
 		/obj/item/weapon/storage/fancy/cigar/havana,
 		/obj/item/weapon/card/emag_broken,
 		/obj/item/device/sleevemate,
-		/obj/item/weapon/disk/nifsoft/compliance,
+		// /obj/item/weapon/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 		/obj/item/seeds/ambrosiadeusseed,
 		/obj/item/seeds/ambrosiavulgarisseed,
 		/obj/item/device/bodysnatcher)

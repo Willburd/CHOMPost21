@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Nif removal
 /mob/observer/dead/verb/nifjoin()
 	set category = "Ghost"
 	set name = "Join Into Soulcatcher"
@@ -56,6 +57,7 @@
 		mind.active = TRUE
 
 		SC.catch_mob(src) //This will result in us being deleted so...
+*/
 
 /mob/observer/dead/verb/backup_ping()
 	set category = "Ghost"

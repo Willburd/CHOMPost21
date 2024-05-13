@@ -502,7 +502,7 @@ This function completely restores a damaged organ to perfect condition.
 
 	// remove embedded objects and drop them on the floor
 	for(var/obj/implanted_object in implants)
-		if(istype(implanted_object,/obj/item/weapon/implant) || istype(implanted_object,/obj/item/device/nif))	// We don't want to remove REAL implants. Just shrapnel etc. //VOREStation Edit - NIFs pls
+		if(istype(implanted_object,/obj/item/weapon/implant)) // Outpost 21 edit - Nif removal: || istype(implanted_object,/obj/item/device/nif))	// We don't want to remove REAL implants. Just shrapnel etc. //VOREStation Edit - NIFs pls
 			continue
 		implanted_object.loc = get_turf(src)
 		implants -= implanted_object
@@ -1442,7 +1442,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 	. = 0
 	for(var/obj/item/organ/external/L in organs)
 		for(var/obj/item/I in L.implants)
-			if(!istype(I,/obj/item/weapon/implant) && !istype(I,/obj/item/device/nif)) //VOREStation Add - NIFs
+			if(!istype(I,/obj/item/weapon/implant)) // Outpost 21 edit - Nif removal: && !istype(I,/obj/item/device/nif)) //VOREStation Add - NIFs
 				return 1
 
 /obj/item/organ/external/proc/is_hidden_by_sprite_accessory(var/clothing_only = FALSE)			// Clothing only will mean the check should only be used in places where we want to hide clothing icon, not organ itself.

@@ -105,7 +105,7 @@
 		slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot)) // CHOMPEdit
 		if(slot != default_slot)
 			default_slot = slot
-			nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF
+			// nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF // Outpost 21 edit - Nif removal
 			S["default_slot"] << slot
 
 	else

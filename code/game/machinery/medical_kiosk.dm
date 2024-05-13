@@ -193,11 +193,13 @@
 		return "<br><span class='warning'>Backup simulation performed. Remember to backup when you leave virtual reality!</span>"
 	// Outpost 21 edit end
 
+	/* Outpost 21 edit - Nif removal
 	var/nif = user.nif
 	if(nif)
 		persist_nif_data(user)
+	*/
 
-	our_db.m_backup(user.mind,nif,one_time = TRUE)
+	our_db.m_backup(user.mind,null /*Outpost 21 edit - Nif removal: nif */,one_time = TRUE)
 	var/datum/transhuman/body_record/BR = new()
 	BR.init_from_mob(user, TRUE, TRUE, database_key = db_key)
 

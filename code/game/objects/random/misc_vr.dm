@@ -30,7 +30,7 @@
 				prob(1);/obj/item/weapon/cell/void,
 				prob(1);/obj/item/weapon/cell/device/weapon/recharge/alien,
 				prob(1);/obj/item/clothing/shoes/boots/speed,
-				prob(1);/obj/item/device/nif,
+				// prob(1);/obj/item/device/nif, Outpost 21 edit - Nif removal
 				prob(1);/obj/item/device/paicard,
 				prob(2);/obj/item/weapon/storage/backpack/dufflebag/syndie,
 				prob(2);/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,
@@ -69,7 +69,7 @@
 				prob(1);/obj/item/weapon/cell/void,
 				prob(1);/obj/item/weapon/cell/device/weapon/recharge/alien,
 				prob(1);/obj/item/clothing/shoes/boots/speed,
-				prob(1);/obj/item/device/nif,
+				// prob(1);/obj/item/device/nif, Outpost 21 edit - Nif removal
 				prob(1);/obj/item/device/paicard,
 				prob(2);/obj/item/weapon/storage/backpack/dufflebag/syndie,
 				prob(2);/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo,

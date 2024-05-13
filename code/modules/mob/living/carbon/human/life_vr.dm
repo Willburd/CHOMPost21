@@ -58,12 +58,14 @@
 			vantag.icon_state = "hudblank"
 		apply_hud(VANTAG_HUD, vantag)
 
+/* Outpost 21 edit - Nif removal
 //Our call for the NIF to do whatever
 /mob/living/carbon/human/proc/handle_nif()
 	if(!nif) return
 
 	//Process regular life stuff
 	nif.life()
+*/
 
 //Overriding carbon move proc that forces default hunger factor
 /mob/living/carbon/Moved(atom/old_loc, direction, forced = FALSE)
@@ -82,4 +84,3 @@
 
 /mob/living/carbon
 	var/synth_cosmetic_pain = FALSE
-

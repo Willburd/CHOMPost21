@@ -227,6 +227,7 @@
 		var/datum/transhuman/mind_record/record = db.backed_up[new_character.mind.name]
 		if((world.time - record.last_notification) < 30 MINUTES)
 			global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Science" : "Medical")
+		/* Outpost 21 edit - Nif removal
 		spawn(0)	//Wait a second for nif to do its thing if there is one
 		if(record.nif_path)
 			var/obj/item/device/nif/nif
@@ -239,6 +240,7 @@
 				for(var/path in record.nif_software)
 					new path(nif)
 				nif.durability = record.nif_durability
+		*/
 
 	// Outpost 21 edit begin - release turf behaviors
 	if(releaseturf)
