@@ -470,6 +470,9 @@
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
+/area/hallway
+	base_turf = /turf/simulated/open
+
 /area/hallway/muriki/dorm
 	name = "\improper Dorm Hallway"
 	base_turf = /turf/simulated/mineral/floor/muriki
@@ -644,7 +647,7 @@
 
 /area/turbolift/secmain
 	name = "Security First Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "Security Main"
 	lift_floor_name = "Primary Security."
 	lift_announce_str = "Arriving at Security Primary."
@@ -652,7 +655,7 @@
 
 /area/turbolift/secupper
 	name = "Security Second Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "Security High Level"
 	lift_floor_name = "AI, Telecoms, Evac shuttle."
 	lift_announce_str = "Arriving at Security Upper Floor."
@@ -669,7 +672,7 @@
 
 /area/turbolift/medical
 	name = "Medbay First Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "Medbay"
 	lift_floor_name = "Lobby, Surgery, Primary Treatment, Psychology."
 	lift_announce_str = "Arriving at Medbay Primary."
@@ -677,7 +680,7 @@
 
 /area/turbolift/mediupper
 	name = "Medbay Second Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "Medical Recovery"
 	lift_floor_name = "Resleeving, CMO, Checkup, Recovery ward, Hangar."
 	lift_announce_str = "Arriving at Medical Loft."
@@ -694,7 +697,7 @@
 
 /area/turbolift/civmain
 	name = "Civilian First Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "First Floor"
 	lift_floor_name = "Bar, Bridge, Evac Hallway."
 	lift_announce_str = "Arriving at First Floor."
@@ -702,7 +705,7 @@
 
 /area/turbolift/civupper
 	name = "Civilian Second Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "Second Floor"
 	lift_floor_name = "Chapel, Library, Garden."
 	lift_announce_str = "Arriving at Second Floor."
@@ -719,7 +722,7 @@
 
 /area/turbolift/scimain
 	name = "Science First Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "Research First Floor"
 	lift_floor_name = "RnD, Robotics, RD."
 	lift_announce_str = "Arriving at First Floor."
@@ -727,7 +730,7 @@
 
 /area/turbolift/sciupper
 	name = "Science Second Floor"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	lift_floor_label = "Research Second Floor"
 	lift_floor_name = "Telesci, Xenoflora."
 	lift_announce_str = "Arriving at Second Floor."
@@ -1216,6 +1219,9 @@
 //
 // Medical ------------------------------------------------------------
 //
+/area/medical
+	base_turf = /turf/simulated/open
+
 /area/medical/stairwell
 	name = "\improper Medical Stairwell"
 	icon_state = "bluenew"
@@ -1225,6 +1231,7 @@
 
 /area/maintenance/substation/virology
 	name = "Virology Substation"
+	base_turf = /turf/simulated/open
 
 /area/medical/laundry
 	name = "\improper Medical Laundry Room"
@@ -1356,6 +1363,7 @@
 	icon_state = "away"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
+	base_turf = /turf/simulated/open
 
 /area/muriki/rooftop/engineering
 	name = "\improper Engineering Roof"
@@ -1497,6 +1505,7 @@
 	name = "\improper Research"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "purple"
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/chemistry
@@ -1690,6 +1699,7 @@
 	icon_state = "hallC"
 	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	base_turf = /turf/simulated/open
 
 /area/rnd/hallway/main
 	name = "\improper Primary Research hallway"
@@ -1908,19 +1918,19 @@
 /area/muriki/tramstation/waste
 	name = "\improper Tram Station - Waste"
 	icon_state = "dark128"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/muriki/tramstation/cargeng
 	name = "\improper Tram Station - Cargo Engineering"
 	icon_state = "dark128"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/muriki/tramstation/civ
 	name = "\improper Tram Station - Civilian"
 	icon_state = "dark128"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 
@@ -2100,6 +2110,7 @@
 
 /area/crew_quarters
 	holomap_color = HOLOMAP_AREACOLOR_CIV
+	base_turf = /turf/simulated/open
 
 /area/crew_quarters/sleep/engi_wash
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
@@ -2170,6 +2181,9 @@
 
 /area/lawoffice
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
+/area/security/prison
+	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/security/security_aid_station
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL

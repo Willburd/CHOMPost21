@@ -45,7 +45,9 @@
 	var/old_dynamic_lumcount = dynamic_lumcount
 	var/oldtype = src.type	//CHOMPEdit
 	var/old_density = src.density //CHOMPEdit
+	/* Outpost 21 edit - this isn't working correctly so disabling
 	var/was_open = istype(src,/turf/simulated/open) //CHOMPEdit
+	*/
 	//CHOMPEdit Begin
 	var/datum/sunlight_handler/old_shandler
 	var/turf/simulated/simself = src
@@ -171,25 +173,26 @@
 			if(SUNLIGHT_ONLY_SHADE)
 				vis_contents += sim_self.shandler.pshandler.vis_shade
 
-	var/is_open = istype(new_turf,/turf/simulated/open)
 
-	if(!istype(new_turf,/turf/simulated/open/force_indoor)) // Outpost 21 edit - forced elevators and tram to have indoor state
-		propogate_sunlight_changes(oldtype, old_density, new_turf)
-		var/turf/simulated/cur_turf = src
-		if(is_open != was_open)
-			do
-				cur_turf = GetBelow(cur_turf)
-				if(is_open)
-					cur_turf.make_outdoors()
-				else
-					cur_turf.make_indoors()
-				cur_turf.propogate_sunlight_changes(oldtype, old_density, new_turf, above = TRUE)
-			while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
+	//var/is_open = istype(new_turf,/turf/simulated/open) Outpost 21 edit - this isn't working correctly so disabling
 
-		//CHOMPEdit End
-		if(old_shandler) old_shandler.holder_change() //CHOMPEdit
-		if(preserve_outdoors)
-			outdoors = old_outdoors
+	propogate_sunlight_changes(oldtype, old_density, new_turf)
+	/* Outpost 21 edit - this isn't working correctly so disabling
+	var/turf/simulated/cur_turf = src
+	if(is_open != was_open)
+		do
+			cur_turf = GetBelow(cur_turf)
+			if(is_open)
+				cur_turf.make_outdoors()
+			else
+				cur_turf.make_indoors()
+			cur_turf.propogate_sunlight_changes(oldtype, old_density, new_turf, above = TRUE)
+		while(istype(cur_turf,/turf/simulated/open) && HasBelow(cur_turf.z))
+	*/
+	//CHOMPEdit End
+	if(old_shandler) old_shandler.holder_change() //CHOMPEdit
+	// if(preserve_outdoors) // Outpost 21 edit - this isn't working correctly so disabling
+	outdoors = old_outdoors
 
 
 //CHOMPEdit begin
