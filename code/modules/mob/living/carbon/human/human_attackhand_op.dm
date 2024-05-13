@@ -1,4 +1,4 @@
-/mob/living/carbon/human/verb/perform_cpr(var/mob/living/carbon/human/reviver)
+/mob/living/carbon/human/proc/perform_cpr(var/mob/living/carbon/human/reviver)
 	// Check for sanity
 	if(!istype(reviver,/mob/living/carbon/human))
 		return
