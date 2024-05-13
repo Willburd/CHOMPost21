@@ -172,6 +172,7 @@
 /mob/living/silicon/robot/handle_regular_hud_updates()
 	var/fullbright = FALSE
 	var/seemeson = FALSE
+	var/seejanhud = src.sight_mode & BORGJAN
 
 	var/area/A = get_area(src)
 	if(A?.no_spoilers)
@@ -228,6 +229,7 @@
 	if(plane_holder)
 		plane_holder.set_vis(VIS_FULLBRIGHT,fullbright)
 		plane_holder.set_vis(VIS_MESONS,seemeson)
+		plane_holder.set_vis(VIS_JANHUD,seejanhud)
 
 	..()
 
