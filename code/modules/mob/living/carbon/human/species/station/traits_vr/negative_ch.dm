@@ -334,6 +334,16 @@
 		// No point processing if we're already stressing the hell out.
 		if(H.hallucination >= hallucination_cap && H.loneliness_stage >= warning_cap)
 			return
+
+		// Outpost 21 addition begin - extended loneliness mechanics
+		if(H.mind && H.mind.changeling) // We are never alone~
+			H.loneliness_stage = 0
+			return
+		if(H.has_brain_worms()) // Brain friends!
+			sub_loneliness(H)
+			return
+		// Outpost 21 addition end
+
 		// Vored? Not gonna get frightened.
 		if(isbelly(H.loc))
 			sub_loneliness(H)
@@ -359,6 +369,14 @@
 			sub_loneliness(H)
 		for(var/obj/effect/overlay/aiholo/A in range(5, H))
 			sub_loneliness(H)
+
+		//Outpost 21 edit begin - tesh plushies count
+		for(var/obj/item/toy/plushie/teshari/P in range(5, H))
+			sub_loneliness(H)
+
+		for(var/obj/structure/plushie/tesh/S in range(8, H)) //Bigger, more range.
+			sub_loneliness(H)
+		//Outpost 21 edit end
 
 		// No company? Suffer :(
 		if(H.loneliness_stage < warning_cap)
