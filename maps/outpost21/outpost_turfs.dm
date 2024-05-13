@@ -11,6 +11,7 @@ MURIKI_TURF_CREATE(/turf/simulated/floor)
 
 // needed to avoid active edges over outdoor pits
 MURIKI_TURF_CREATE(/turf/simulated/open)
+MURIKI_TURF_CREATE_UN(/turf/simulated/open/indoor)
 // make varients of all outdoor tiles with muriki atmosphere on it, this feels dumb and excessive, but it's the way it's done...
 MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt)
 MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt_nograss)
@@ -32,9 +33,9 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/floor/indoorrocks)
 MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/black)
 MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/white)
 // terraformer specific
-MURIKI_TURF_CREATE(/turf/simulated/floor/flesh)
-MURIKI_TURF_CREATE(/turf/simulated/floor/redgrid/off)
-MURIKI_TURF_CREATE(/turf/simulated/floor/tiled/techfloor/grid)
+MURIKI_TURF_CREATE_UN(/turf/simulated/floor/flesh)
+MURIKI_TURF_CREATE_UN(/turf/simulated/floor/redgrid/off)
+MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/techfloor/grid)
 //
 MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic)
 MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/deep)
