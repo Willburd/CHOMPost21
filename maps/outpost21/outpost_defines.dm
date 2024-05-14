@@ -72,7 +72,7 @@
 							NETWORK_ALARM_FIRE
 							)
 	usable_email_tlds = list("internalmail.es")
-	allowed_spawns = list("Elevator", "Cyborg Storage")
+	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage")
 	default_skybox = /datum/skybox_settings/outpost21
 	unit_test_z_levels = list(Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID)
 	unit_test_exempt_areas = list()
