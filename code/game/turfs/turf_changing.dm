@@ -40,7 +40,9 @@
 	var/old_lighting_corner_SW = lighting_corner_SW
 	var/old_lighting_corner_NW = lighting_corner_NW
 	var/old_directional_opacity = directional_opacity
+	/* Outpost 21 edit - this isn't working correctly so disabling
 	var/old_outdoors = outdoors
+	*/
 	var/old_dangerous_objects = dangerous_objects
 	var/old_dynamic_lumcount = dynamic_lumcount
 	var/oldtype = src.type	//CHOMPEdit
@@ -192,7 +194,7 @@
 	//CHOMPEdit End
 	if(old_shandler) old_shandler.holder_change() //CHOMPEdit
 	// if(preserve_outdoors) // Outpost 21 edit - this isn't working correctly so disabling
-	outdoors = old_outdoors
+	//outdoors = old_outdoors
 
 
 //CHOMPEdit begin

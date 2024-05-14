@@ -61,7 +61,7 @@
 	docking_controller_tag = "Tram"
 	current_location = "tram_shed"
 //	landmark_transition = "tram_transit"
-	ceiling_type = /turf/simulated/shuttle/floor/white/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/white
 
 	destination_tags = list(
 		"tram_waste",
