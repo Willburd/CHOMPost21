@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(lighting)
 	name = "Lighting"
-	wait = 2
+	wait = 1 // Outpost 21 edit - Doing this more often counter intuitively means there is less in the stack when it updates. Meaning faster frames... Theoretically
 	init_order = INIT_ORDER_LIGHTING
 	flags = SS_TICKER
 	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY //CHOMPEdit Do some work during lobby waiting period. May as well.
