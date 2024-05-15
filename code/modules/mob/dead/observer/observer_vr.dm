@@ -1,6 +1,6 @@
 /* Outpost 21 edit - Nif removal
 /mob/observer/dead/verb/nifjoin()
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Join Into Soulcatcher"
 	set desc = "Select a player with a working NIF + Soulcatcher NIFSoft to join into it."
 
@@ -60,7 +60,7 @@
 */
 
 /mob/observer/dead/verb/backup_ping()
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Notify Transcore"
 	set desc = "If your past-due backup notification was missed or ignored, you can use this to send a new one."
 
@@ -88,7 +88,7 @@
 		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
 // CHOMPEdit: Revert Removal
 /mob/observer/dead/verb/backup_delay()
-	set category = "Ghost"
+	set category = "Ghost.Settings" //CHOMPEdit
 	set name = "Cancel Transcore Notification"
 	set desc = "You can use this to avoid automatic backup notification happening. Manual notification can still be used."
 
@@ -107,7 +107,7 @@
 		to_chat(src,"<span class='warning'>No backup record could be found, sorry.</span>")
 
 /mob/observer/dead/verb/findghostpod() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Find Ghost Pod"
 	set desc = "Find an active ghost pod"
 	set popup_menu = FALSE
@@ -134,7 +134,7 @@
 			to_chat(src, "<span class='filter_notice'>This ghost pod is not located in the game world.</span>")
 
 /mob/observer/dead/verb/findautoresleever()
-	set category = "Ghost"
+	set category = "Ghost.Join" //CHOMPEdit
 	set name = "Find Auto Resleever"
 	set desc = "Find a Auto Resleever"
 	set popup_menu = FALSE
