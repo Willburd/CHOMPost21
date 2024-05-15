@@ -1300,7 +1300,7 @@
 		return 0
 
 /mob/living/carbon/human/proc/bloody_doodle()
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 	set name = "Write in blood"
 	set desc = "Use blood on your hands to write a short message on the floor or a wall, murder mystery style."
 
@@ -1620,7 +1620,7 @@
 /mob/living/carbon/human/verb/pull_punches()
 	set name = "Pull Punches"
 	set desc = "Try not to hurt them."
-	set category = "IC"
+	set category = "IC.Game" //CHOMPEdit
 
 	if(stat) return
 	pulling_punches = !pulling_punches
