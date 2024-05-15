@@ -7,9 +7,6 @@ MURIKI_TURF_CREATE(/turf/simulated/open)
 	if(outdoors)
 		SSplanets.addTurf(src)
 
-/turf/simulated/open
-	dynamic_lighting = 1 //I don't care if there's no true multiz lighting, this looks so much nicer it's not even funny -KK (from turf_yw)
-
 MURIKI_TURF_CREATE(/turf/simulated/floor)
 
 // needed to avoid active edges over outdoor pits
