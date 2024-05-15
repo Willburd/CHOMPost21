@@ -54,12 +54,17 @@
 		addict_to_reagent("hyperzine")
 	if(prefs.addictions & ADDICT_ALCOHOL)
 		addict_to_reagent("ethanol")
+	if(prefs.addictions & ADDICT_SUSTENANCE)
+		addict_to_reagent("a_sustenance")
 
 
 /mob/living/proc/handle_addictions()
 	// Empty so it can be overridden
 
 /mob/living/carbon/handle_addictions()
+	// Don't process this if we're part of someone else
+	if(absorbed)
+		return
 	// All addictions start at 0.
 	var/list/addict = list()
 	for(var/datum/reagent/R in bloodstr.reagent_list)

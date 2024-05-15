@@ -40,6 +40,13 @@
 			var/perscrip = new /obj/item/weapon/storage/pill_bottle/dylovene() // anti-toxin for accidents
 			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
 			Bag.contents += perscrip
+
+		// Sustinance addiction... They REALLY need this one, so make sure they get it...
+		if(addiction_counters["a_sustenance"] && addiction_counters["a_sustenance"] > 0)
+			var/obj/item/weapon/reagent_containers/glass/beaker/vial/perscrip = new /obj/item/weapon/reagent_containers/glass/beaker/vial/sustenance()
+			perscrip.flags ^= OPENCONTAINER // Close the container
+			to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
+			Bag.contents += perscrip
 	else
 		to_chat(src, "<span class='danger'>Failed to locate a storage object for your medication on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
 

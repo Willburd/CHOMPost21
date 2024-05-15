@@ -18,6 +18,7 @@
 	dat += "Bliss: <a href='?src=\ref[src];addictions=[ADDICT_BLISS]'><b>[pref.addictions & ADDICT_BLISS ? "Yes" : "No"]</b></a><br>"
 	dat += "Oxycodone: <a href='?src=\ref[src];addictions=[ADDICT_OXY]'><b>[pref.addictions & ADDICT_OXY ? "Yes" : "No"]</b></a><br>"
 	dat += "Hyperzine: <a href='?src=\ref[src];addictions=[ADDICT_HYPER]'><b>[pref.addictions & ADDICT_HYPER ? "Yes" : "No"]</b></a><br>"
+	dat += "Sustenance: <a href='?src=\ref[src];addictions=[ADDICT_SUSTENANCE]'><b>[pref.addictions & ADDICT_SUSTENANCE ? "Yes" : "No"]</b></a><br>"
 	dat += "<h2>Roleplay Only</h2>"
 	dat += "Depression: <a href='?src=\ref[src];disabilities=[DEPRESSION]'><b>[pref.disabilities & DEPRESSION ? "Yes" : "No"]</b></a><br>"
 	dat += "Schizophrenia: <a href='?src=\ref[src];disabilities=[SCHIZOPHRENIA]'><b>[pref.disabilities & SCHIZOPHRENIA ? "Yes" : "No"]</b></a><br>"
