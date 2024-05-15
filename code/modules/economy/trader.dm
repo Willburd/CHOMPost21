@@ -324,8 +324,8 @@
 		/obj/item/capture_crystal/random = 50,
 		/obj/item/device/perfect_tele = 10,
 		/obj/item/device/chameleon = 25,
-		/obj/item/weapon/gun/energy/sizegun = 25,
-		/obj/item/device/slow_sizegun = 25,
+		// /obj/item/weapon/gun/energy/sizegun = 25, // outpost 21 no easy sizeguns
+		// /obj/item/device/slow_sizegun = 25, // outpost 21 no easy sizeguns
 		/obj/item/clothing/accessory/collar/shock/bluespace = 25,
 		/obj/item/weapon/implant/sizecontrol = 25,
 		/obj/item/clothing/under/hyperfiber/bluespace = 25,

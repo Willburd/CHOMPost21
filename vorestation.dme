@@ -2187,7 +2187,6 @@
 #include "code\modules\client\preference_setup\loadout\loadout_eyes_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_eyes_yw.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_fluffitems.dm"
-#include "code\modules\client\preference_setup\loadout\loadout_fluffitems_ch.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_general_vr.dm"
 #include "code\modules\client\preference_setup\loadout\loadout_gloves.dm"
