@@ -491,7 +491,7 @@
 		if(RED_EYES)
 			total_health = 150 //ChompEDIT - balance tweaks
 			energy_light = -1
-			energy_dark = 0.1
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 2 //CHOMPEdit - Add nutrition <-> dark energy conversion
 		if(PURPLE_EYES)
 			total_health = 100 //ChompEDIT - balance tweaks
@@ -511,7 +511,7 @@
 		if(ORANGE_EYES)
 			total_health = 125 //ChompEDIT - balance tweaks
 			energy_light = -0.5
-			energy_dark = 0.25
+			energy_dark = 0.5 //ChompEDIT
 			nutrition_conversion_scaling = 1.5 //CHOMPEdit - Add nutrition <-> dark energy conversion
 
 	H.maxHealth = total_health
