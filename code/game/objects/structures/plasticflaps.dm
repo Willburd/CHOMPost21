@@ -78,4 +78,4 @@
 	name = "airtight plastic flaps"
 	desc = "Heavy duty, airtight, plastic flaps. Have extra safety installed, preventing passage of living beings."
 	can_atmos_pass = ATMOS_PASS_NO
-	can_pass_lying = FALSE
+	can_pass_lying = TRUE // Outpost 21 edit
