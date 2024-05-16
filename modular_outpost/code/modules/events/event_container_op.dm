@@ -96,7 +96,6 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station			,12	, list(ASSIGNMENT_ANY = 5)													, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jellyfish Migration",	/datum/event/jellyfish_migration			,10	, list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SECURITY = 5, ASSIGNMENT_MEDICAL = 1)	, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Virus Outbreak", 		/datum/event/viral_infection				,5	, list(ASSIGNMENT_MEDICAL = 1) 												, TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 3)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",				/datum/event/blob							,2	, list(ASSIGNMENT_ENGINEER = 5) 											, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Chu Infestation",		/datum/event/chu_infestation				,0	, list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 1)						, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jil Infestation",		/datum/event/jil_infestation				,8	, list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 1)						, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clowns",				/datum/event/clune_infestation				,7	, list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 5) 					, TRUE),
@@ -117,7 +116,6 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Station",		/datum/event/bluespace_shelling				,0  , list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 99))
 	)
 	add_disabled_events(list(
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blob",				/datum/event/blob							,2	, list(ASSIGNMENT_ENGINEER = 5), TRUE), // disabled entirely due to lag issues
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "All Is Clean",		/datum/event/allisclean,					 0  , list(), TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Engineering",	/datum/event/bluespace_shelling/engineering	,0	, list(), TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Science",		/datum/event/bluespace_shelling/science		,0	, list(), TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 99)),
