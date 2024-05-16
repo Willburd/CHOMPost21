@@ -35,35 +35,33 @@
 /obj/structure/disposalpipe/sortjunction/proc/check_corpse_sorter(var/obj/structure/disposalholder/H)
 	var/detectedtag = H.destinationTag
 	if(istype(src,/obj/structure/disposalpipe/sortjunction/bodies) && detectedtag == "")
-		if(H.hasmob)
-			for(var/mob/living/L in H)
-				if(istype(L,/mob/living/carbon)) // only living carbons count not silicons
-					detectedtag = "corpse"
-					break
-		else
-			// Check for microholders, you can't skip the system this way either!
-			var/obj/item/weapon/holder/hold = null
-			for(var/obj/item/weapon/holder/hl in H)
-				if(!isnull(hl.held_mob) && istype(hl.held_mob,/mob/living/carbon))
-					hold = hl
-					break
-			if(!isnull(hold))
+		for(var/mob/living/L in H)
+			if(istype(L,/mob/living/carbon)) // only living carbons count not silicons
 				detectedtag = "corpse"
-			else
-				// check ID validity
-				var/obj/item/weapon/card/foundid = null
-				for(var/obj/item/weapon/card/id in H) // send these to medical body disposal as well
-					foundid = id
+				break
+		// Check for microholders, you can't skip the system this way either!
+		var/obj/item/weapon/holder/hold = null
+		for(var/obj/item/weapon/holder/hl in H)
+			if(!isnull(hl.held_mob) && istype(hl.held_mob,/mob/living/carbon))
+				hold = hl
+				break
+		if(!isnull(hold))
+			detectedtag = "corpse"
+		else
+			// check ID validity
+			var/obj/item/weapon/card/foundid = null
+			for(var/obj/item/weapon/card/id in H) // send these to medical body disposal as well
+				foundid = id
+				break
+			for(var/obj/item/device/pda/P in H)
+				if(!isnull(P.id)) // send these to medical body disposal as well
+					foundid = P.id
 					break
-				for(var/obj/item/device/pda/P in H)
-					if(!isnull(P.id)) // send these to medical body disposal as well
-						foundid = P.id
-						break
-				for(var/obj/item/weapon/storage in H)
-					for(var/obj/item/weapon/card/id in storage.contents)
-						foundid = id // check simple storages for idcards! one level deep only!
-						break
-				// check ID validity
-				if(!isnull(foundid) && !istype(foundid,/obj/item/weapon/card/id/guest))
-					detectedtag = "corpse"
+			for(var/obj/item/weapon/storage in H)
+				for(var/obj/item/weapon/card/id in storage.contents)
+					foundid = id // check simple storages for idcards! one level deep only!
+					break
+			// check ID validity
+			if(!isnull(foundid) && !istype(foundid,/obj/item/weapon/card/id/guest))
+				detectedtag = "corpse"
 	return detectedtag
