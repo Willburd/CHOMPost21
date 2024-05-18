@@ -1521,6 +1521,7 @@
 /area/rnd/lockers
 	name = "\improper Research Locker Room"
 	icon_state = "locker"
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/entry
@@ -1537,7 +1538,7 @@
 /area/rnd/otherlab
 	name = "\improper RnD Auxillary Laboratory"
 	icon_state = "outpost_research"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/telesci
@@ -1639,8 +1640,8 @@
 
 /area/rnd/research/oldrd
 	name = "\improper Synthetic Surgery"
-	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	base_turf = /turf/simulated/mineral/floor/muriki
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/rnd/research/laundry
 	name = "\improper Xenolab Laundry"
@@ -2226,7 +2227,8 @@
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/medical/robotics
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/medical/virology
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
