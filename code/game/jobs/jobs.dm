@@ -11,6 +11,7 @@ var/const/ENGINEER			=(1<<6)
 var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
+var/const/ROBOTICIST		=(1<<10) // Outpost 21 edit - Moved to engineering
 var/const/CLOWN				=(1<<13)
 var/const/MIME				=(1<<14)
 var/const/INTERN			=(1<<15)
@@ -25,7 +26,7 @@ var/const/DOCTOR			=(1<<4)
 var/const/GENETICIST		=(1<<5)
 var/const/VIROLOGIST		=(1<<6)
 var/const/PSYCHIATRIST		=(1<<7)
-var/const/ROBOTICIST		=(1<<8)
+//var/const/ROBOTICIST		=(1<<8) // Outpost 21 edit - Moved to engineering
 var/const/XENOBIOLOGIST		=(1<<9)
 var/const/PARAMEDIC			=(1<<10)
 var/const/PATHFINDER 		=(1<<11)
@@ -90,7 +91,8 @@ var/list/command_positions = list(
 var/list/engineering_positions = list(
 	"Chief Engineer",
 	"Station Engineer",
-	"Atmospheric Technician"
+	"Atmospheric Technician",
+	"Roboticist" // Outpost 21 edit - Moved to engineering
 )
 
 
@@ -108,7 +110,7 @@ var/list/science_positions = list(
 	"Research Director",
 	"Scientist",
 	"Geneticist",	//Part of both medical and science
-	"Roboticist",
+	// "Roboticist", // Outpost 21 edit - Moved to engineering
 	"Xenobiologist"
 )
 

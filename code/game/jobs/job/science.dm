@@ -129,16 +129,29 @@ VR edit end*/
 /datum/job/roboticist
 	title = "Roboticist"
 	flag = ROBOTICIST
-	departments = list(DEPARTMENT_RESEARCH)
-	department_flag = MEDSCI
+	// Outpost 21 edit begin - Moved to engineering
+	//departments = list(DEPARTMENT_RESEARCH)
+	//department_flag = MEDSCI
+	departments = list(DEPARTMENT_ENGINEERING)
+	department_flag = ENGSEC
+	// Outpost 21 edit end
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Research Director"
-	selection_color = "#633D63"
+	// Outpost 21 edit begin - Moved to engineering
+	//supervisors = "the Research Director"
+	//selection_color = "#633D63"
+	supervisors = "the Chief Engineer"
+	selection_color = "#5B4D20"
+	// Outpost 21 edit end
 	economic_modifier = 5
-	access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+	// Outpost 21 edit begin - Moved to engineering
+	//access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+	//minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+	access = list(access_robotics, access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_external_airlocks)
+	minimal_access = list(access_robotics, access_eva, access_engine, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks)
+	// Outpost 21 edit end
+
 	minimal_player_age = 7
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 	banned_job_species = list("digital")

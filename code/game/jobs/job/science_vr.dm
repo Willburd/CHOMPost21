@@ -84,7 +84,8 @@
 
 /datum/job/roboticist
 	total_positions = 3
-	pto_type = PTO_SCIENCE
+	//pto_type = PTO_SCIENCE
+	pto_type = PTO_ENGINEERING // Outpost 21 edit - moved to robotics
 	alt_titles = list("Assembly Technician" = /datum/alt_title/assembly_tech, "Biomechanical Engineer" = /datum/alt_title/biomech, "Mechatronic Engineer" = /datum/alt_title/mech_tech)
 
 /datum/alt_title/assembly_tech
