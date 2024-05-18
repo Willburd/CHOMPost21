@@ -4731,7 +4731,7 @@
 "dyT" = (/obj/structure/cable/heavyduty{icon_state = "4-8"},/turf/simulated/floor/plating/muriki,/area/maintenance/cave)
 "dzn" = (/obj/structure/window/reinforced/full,/obj/structure/grille,/obj/structure/cable/green,/obj/structure/cable/green{d2 = 2; icon_state = "0-2"},/turf/simulated/floor/plating,/area/medical/robotics)
 "dzp" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/effect/floor_decal/corner/purple,/turf/simulated/floor/tiled/white,/area/rnd/xenobiology)
-"dzG" = (/obj/machinery/door/airlock/glass_engineering{req_one_access = list(10,s52,56); name = "Robotics"},/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/steel_ridged,/area/engineering/atmoshall)
+"dzG" = (/obj/machinery/door/airlock/glass_engineering{req_one_access = list(10,29,52,56); name = "Robotics"},/obj/machinery/door/firedoor,/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/steel_ridged,/area/engineering/atmoshall)
 "dzL" = (/obj/random/trash,/turf/simulated/floor/plating/muriki,/area/maintenance/tug)
 "dzQ" = (/obj/effect/catwalk_plated/dark,/turf/simulated/floor/plating,/area/rnd/hallway/hazard)
 "dAl" = (/obj/structure/disposalpipe/segment{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 4},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable/heavyduty{icon_state = "4-8"},/obj/machinery/light/small{dir = 1},/turf/simulated/floor/plating/muriki,/area/maintenance/med)
