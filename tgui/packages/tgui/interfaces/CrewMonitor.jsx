@@ -174,7 +174,7 @@ const CrewMonitorMapView = (props) => {
             <NanoMap.Marker
               key={cm.ref}
               x={cm.x}
-              y={cm.y}
+              y={cm.y * data.ymult}
               zoom={props.zoom}
               icon="circle"
               tooltip={cm.name + ' (' + cm.assignment + ')'}

@@ -57,7 +57,7 @@ export const AtmosControlContent = (props) => {
               <NanoMap.Marker
                 key={cm.ref}
                 x={cm.x}
-                y={cm.y}
+                y={cm.y * data.ymult}
                 zoom={zoom}
                 icon="bell"
                 tooltip={cm.name}

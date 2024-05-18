@@ -261,8 +261,6 @@
 		"refreshing" = FALSE,
 		"map" = (using_map && using_map.path) ? using_map.path : "Unknown",
 		"mapZLevel" = map_z_level,
-		// Outpost 21 edit - width ratio for non-square maps
-		"mapWidthRatio" = world.maxx / world.maxy,
 		"window" = list(
 			"key" = window_key,
 			"size" = window_size,

@@ -48,7 +48,8 @@
 
 /datum/tgui_module/crew_monitor/tgui_static_data(mob/user)
 	. = ..()
-	.["zoomScale"] = world.maxx + world.maxy
+	.["ymult"] = world.maxx / world.maxy // Outpost 21 edit
+	.["zoomScale"] = world.maxx * 2 // + world.maxy // Outpost 21 edit, forced map squareness
 
 /datum/tgui_module/crew_monitor/tgui_data(mob/user)
 	var/data[0]
