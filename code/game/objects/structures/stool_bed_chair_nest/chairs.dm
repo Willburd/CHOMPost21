@@ -342,6 +342,7 @@
 /obj/structure/bed/chair/sofa/pew
 	name = "pew bench"
 	desc = "If they want you to go to church, why do they make these so uncomfortable?"
+	icon = 'icons/obj/sofas.dmi' // Outpost 21 edit - use this not the override
 	base_icon = "pewmiddle"
 	icon_state = "pewmiddle"
 	applies_material_colour = FALSE
