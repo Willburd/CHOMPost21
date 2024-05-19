@@ -174,6 +174,14 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/roarbark,
 	/decl/emote/audible/dook,
 	//VOREStation Add End
+	//YW ADDITION: Add Start
+	/decl/emote/audible/chirp,
+	/decl/emote/audible/hooh,
+	/decl/emote/audible/ack,
+	/decl/emote/audible/ough,
+	/decl/emote/audible/howl,
+	/decl/emote/visible/cross,
+	//YW ADDITION: Add End
 	//CHOMP Add start
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain,
