@@ -53,6 +53,7 @@
 		"Straight",
 		"Nub",
 		"Capra",
+		"Wide", // Outpost 21 edit - Grins!
 	)
 	var/horns
 	var/list/marking_styles = list(
@@ -67,6 +68,7 @@
 		"Normal"
 	)
 	var/eyes
+	var/has_collar = FALSE
 //TODO: Add more customization options, these are pretty scarce
 	faction = "Synx"
 
@@ -110,10 +112,13 @@
 	attack_edge = 1
 	attack_armor_type = "melee" //Default is melee but I'm stating this explicitly to make it more obvious to anybody reading this
 
+	var/randomized_design = TRUE // Outpost 21 edit - use set cosmetics
+	glow_range = 1 // Outpost 21 edit - Glow is off by default, but collar turns it on! Any synx can have one due to set style! Smaller range than 4
+
 /mob/living/simple_mob/animal/synx/Initialize()
 	..()
 	src.adjust_nutrition(src.max_nutrition)
-	build_icons(1)
+	build_icons(randomized_design)
 	voremob_loaded = 1
 	mob_radio = new /obj/item/device/radio/headset/mob_headset(src)	//We always give radios to spawned mobs anyway
 
@@ -617,6 +622,7 @@
 
 
 /mob/living/simple_mob/animal/synx/proc/build_icons(var/random)
+	glow_toggle = has_collar // Outpost 21 - tie glow to having a collar!
 	cut_overlays()
 	if(stat == DEAD)
 		icon_state = "synx_dead"
@@ -635,6 +641,8 @@
 		var/list/eyecolors = list("#FFE100","#FF6A00","#1C4DFF","#FF0000","#3D5EBE","#FF006E","#55CE21","#711BFF","#939EFF")
 		eyes = pick(eye_styles)
 		overlay_colors["Eyes"] = pick(eyecolors)
+		if(prob(2)) // Outpost 21 edit - Rare lost pet?
+			has_collar = TRUE
 
 
 	var/image/I = image(icon, "synx_body[body][transformed? "-t" : null][stomach_distended? "-s" : null]")
@@ -665,12 +673,20 @@
 	I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
 	add_overlay(I)
 
+	if(has_collar)
+		I = image(icon, "synx_collar[transformed? "-t" : null]")
+		I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+		I.plane = (status_flags & HIDING)? OBJ_PLANE : MOB_PLANE
+		I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
+		add_overlay(I)
+
+
 /mob/living/simple_mob/animal/synx/proc/set_style()
 	set name = "Set Style"
 	set desc = "Customise your icons."
 	set category = "Abilities.Synx"
 
-	var/list/options = list("Body","Horns","Marks","Eyes")
+	var/list/options = list("Body","Horns","Marks","Eyes","Collar")
 	for(var/option in options)
 		LAZYSET(options, option, new /image('icons/effects/synx_labels_ch.dmi', option))
 	var/choice = show_radial_menu(src, src, options, radius = 60)
@@ -730,6 +746,8 @@
 				return 0
 			eyes = choice
 			overlay_colors["Eyes"] = new_color
+		if("Collar")
+			has_collar = !has_collar
 	if(.)
 		build_icons()
 
@@ -741,8 +759,6 @@
 	name = "Bob"
 	desc = "A very regular pet."
 	tt_desc = "synxus pergulus"
-	glow_range = 4
-	glow_toggle = 1
 	player_msg = "You aren't supposed to be in this. Wrong mob."
 
 /mob/living/simple_mob/animal/synx/ai/pet/init_vore()
