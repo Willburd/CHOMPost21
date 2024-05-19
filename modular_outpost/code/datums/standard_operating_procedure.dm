@@ -61,7 +61,7 @@
 
 			<hr/><b>Research:</b><hr/> \
 			Research is expected to improve and increase the station's capabilities by finding improvement and lackluster capability in the station's various tools and departments. \
-			<br/><b>The Research Director</b> is expected to have a deep understanding of at least half of the sub-sections of research; Robotics, R&D, Circuitry, Xenoflora, Xenobiology, Xenoarcheology, Phoronics, Hazardous Xenobiology, Bluespace Telescience, Particle Acceleration and Creation, and extra-planetary exploration. They are expected to be able to lead researchers, focus them, and handle any research-created events. They are not expected to lead in any Moderate or Higher level events on station, except when other heads of staff are absent or deceased. \
+			<br/><b>The Research Director</b> is expected to have a deep understanding of at least half of the sub-sections of research; R&D, Xenoflora, Xenobiology, Xenoarcheology, Phoronics, Hazardous Xenobiology, Bluespace Telescience, Particle Acceleration and Creation, and extra-planetary exploration. They are expected to be able to lead researchers, focus them, and handle any research-created events. They are not expected to lead in any Moderate or Higher level events on station, except when other heads of staff are absent or deceased. \
 			<br/><b>Researchers</b> are expected to know at least one area of research, and to perform the tasks of that job as it requires. They are expected to serve the station first, and their own research aims second. They are expected to follow command orders during a crisis, and to avoid station damage whenever possible. \
 
 			<hr/><b>Cargo:</b><hr/> \
