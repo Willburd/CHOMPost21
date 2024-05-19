@@ -1198,7 +1198,7 @@
 	if(!item)
 		return FALSE //Grab processing has a chance of returning null
 
-/* CHOMPEdit. If I want to do a nice little give I use the actual verb for it.
+	// Outpost 21 edit begin - restore give on help throw
 	if(a_intent == I_HELP && Adjacent(target) && isitem(item) && ishuman(target))
 		var/obj/item/I = item
 		var/mob/living/carbon/human/H = target
@@ -1209,7 +1209,7 @@
 			to_chat(src, SPAN_NOTICE("You offer \the [I] to \the [target]."))
 			do_give(H)
 		return TRUE
-*/
+	// Outpost 21 edit end
 
 	drop_from_inventory(item)
 
