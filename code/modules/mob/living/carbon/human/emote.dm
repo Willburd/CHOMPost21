@@ -197,7 +197,8 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/scientist/pain,
 	//CHOMP Add end
 	//outpost 21 add begin
-	/decl/emote/visible/ragescree
+	/decl/emote/visible/ragescree,
+	/decl/emote/audible/woo
 	//outpost 21 add end
 )
 
