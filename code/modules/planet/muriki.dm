@@ -1,7 +1,7 @@
 var/datum/planet/muriki/planet_muriki = null
 //Dev note: This entire file handles weather and planetary effects. File name subject to change pending planet name finalization.
 /datum/time/muriki
-	seconds_in_day = 3 HOURS
+	seconds_in_day = 18 HOURS
 
 /datum/planet/muriki
 	name = "muriki"
