@@ -17,7 +17,7 @@
 		return
 
 	else // They're outside and hopefully on a planet.
-		if(!(T.z in SSplanets.z_to_planet) || !(SSplanets.z_to_planet[T.z]))
+		if(T.z <= 0 || SSplanets.z_to_planet.len < T.z || !(SSplanets.z_to_planet[T.z])) // Outpost 21 edit - removed in list check, was non-functional. Use length limit isntead.
 			to_chat(usr, span("warning", "You appear to be outside, but not on a planet... Something is wrong."))
 			return
 		var/datum/planet/P = SSplanets.z_to_planet[T.z]
