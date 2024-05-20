@@ -182,7 +182,7 @@
 /datum/access/robotics
 	id = access_robotics
 	desc = "Robotics"
-	region = ACCESS_REGION_RESEARCH
+	region = ACCESS_REGION_ENGINEERING
 
 /var/const/access_rd = 30
 /datum/access/rd

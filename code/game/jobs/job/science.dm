@@ -17,12 +17,12 @@
 	economic_modifier = 15
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter, access_sec_doors,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels) //Yawn added "access_maint_tunnels"
+			            access_research, access_xenobiology, access_ai_upload, access_tech_storage,
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels) //Yawn added "access_maint_tunnels". Outpost 21 edit - removed robotics
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
 			            access_tox_storage, access_teleporter, access_sec_doors,
-			            access_research, access_robotics, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels)
+			            access_research, access_xenobiology, access_ai_upload, access_tech_storage,
+			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_network, access_maint_tunnels) //Outpost 21 edit - removed robotics
 	alt_titles = list("Research Supervisor")
 
 	minimum_character_age = 25
@@ -58,7 +58,7 @@
 	supervisors = "the Research Director"
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch)
+	access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch) // Outpost 21 edit - removed robotics
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 	banned_job_species = list("digital")
@@ -103,7 +103,7 @@
 	supervisors = "the Research Director"
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(access_robotics, access_tox, access_tox_storage, access_research, access_xenobiology, access_hydroponics)
+	access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_hydroponics) // Outpost 21 edit - removed robotics
 	minimal_access = list(access_research, access_xenobiology, access_hydroponics, access_tox_storage)
 	banned_job_species = list("digital")
 
@@ -148,8 +148,8 @@ VR edit end*/
 	// Outpost 21 edit begin - Moved to engineering
 	//access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	//minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	access = list(access_robotics, access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_external_airlocks)
-	minimal_access = list(access_robotics, access_eva, access_engine, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks)
+	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
+	minimal_access = list(access_eva, access_engine, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
 	// Outpost 21 edit end
 
 	minimal_player_age = 7
