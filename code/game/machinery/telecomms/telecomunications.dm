@@ -37,7 +37,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	var/hide = 0				// Is it a hidden machine?
 	var/listening_level = 0	// 0 = auto set in New() - this is the z level that the machine is listening to.
 
-	var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises
+	// var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises // Outpost 21 edit - silence noises
 	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
 
 /obj/machinery/telecomms/proc/relay_information(datum/signal/signal, filter, copysig, amount = 20)
@@ -134,6 +134,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 		else
 			for(var/obj/machinery/telecomms/T in telecomms_list)
 				add_link(T)
+	/* Outpost 21 edit - silence noises
 	// CHOMPAdd: TComms humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
@@ -148,6 +149,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 			soundloop.mid_length = 30
 	soundloop.start()
 	// CHOMPAdd End
+	*/
 	. = ..()
 
 /obj/machinery/telecomms/Destroy()
@@ -155,7 +157,7 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	for(var/obj/machinery/telecomms/comm in telecomms_list)
 		comm.links -= src
 	links = list()
-	QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises
+	// QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises  // Outpost 21 edit - silence noises
 	..()
 
 // Used in auto linking
@@ -179,16 +181,16 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 	if(toggled)
 		if(stat & (BROKEN|NOPOWER|EMPED) || integrity <= 0) // if powered, on. if not powered, off. if too damaged, off
 			on = 0
-			soundloop.stop() // CHOMPAdd: Tcomms noises
+			//soundloop.stop() // CHOMPAdd: Tcomms noises // Outpost 21 edit - silence noises
 			noisy = FALSE
 		else
 			on = 1
 	else
 		on = 0
-		soundloop.stop() // CHOMPAdd: Tcomms noises
+		//soundloop.stop() // CHOMPAdd: Tcomms noises // Outpost 21 edit - silence noises
 		noisy = FALSE
 	if(!noisy) // CHOMPAdd: Tcomms noises
-		soundloop.start() // CHOMPAdd: Tcomms noises
+		//soundloop.start() // CHOMPAdd: Tcomms noises // Outpost 21 edit - silence noises
 		noisy = TRUE
 
 /obj/machinery/telecomms/process()
