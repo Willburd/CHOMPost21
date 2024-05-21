@@ -218,7 +218,7 @@
 	z = Z_LEVEL_OUTPOST_CENTCOM
 	name = "CentCom"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
-	base_turf = /turf/simulated/open //TODO: Set to lava when I remember the damn object path
+	base_turf = /turf/simulated/floor/lava
 
 /datum/map_z_level/outpost/basement
 	z = Z_LEVEL_OUTPOST_BASEMENT
