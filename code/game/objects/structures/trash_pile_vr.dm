@@ -159,6 +159,14 @@
 				else if(luck <= chance_alpha+chance_beta+chance_gamma)
 					I = produce_gamma_item()
 
+				//Outpost 21 edit begin - Randomized map objects were put in loot piles, so handle them...
+				if(istype(I,/obj/random))
+					var/obj/random/randy = I
+					var/new_I = randy.spawn_item()
+					qdel(I)
+					I = new_I // swap it
+				//Outpost 21 edit end
+
 				//We either have an item to hand over or we don't, at this point!
 				if(I)
 					searchedby += user.ckey
@@ -167,8 +175,14 @@
 					//CHOMPedit begin
 					var/disturbed_sleep = rand(1,100) //spawning of mobs, for now only the trash panda.
 					if(disturbed_sleep <= 5)
-						new /mob/living/simple_mob/animal/passive/raccoon_ch(get_turf(user), name)
-						visible_message("A raccoon jumps out of the trash!.")
+						if(prob(50))
+							new /mob/living/simple_mob/animal/passive/raccoon_ch(get_turf(user), name)
+							visible_message("A raccoon jumps out of the trash!.")
+						// Outpost 21 edit begin - 50% possum too!
+						else
+							new /mob/living/simple_mob/animal/passive/opossum(get_turf(user), name)
+							visible_message("An opossum jumps out of the trash!.")
+						// Outpost 21 edit end
 					//CHOMPedit end
 
 	else
