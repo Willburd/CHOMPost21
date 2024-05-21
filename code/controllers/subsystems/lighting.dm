@@ -3,7 +3,7 @@ SUBSYSTEM_DEF(lighting)
 	wait = 1 // Outpost 21 edit - Doing this more often counter intuitively means there is less in the stack when it updates. Meaning faster frames... Theoretically
 	init_order = INIT_ORDER_LIGHTING
 	flags = SS_TICKER
-	runlevels = RUNLEVELS_DEFAULT // Outpost 21 edit - removed lobby, planet lighting messes it up anyway //CHOMPEdit Do some work during lobby waiting period. May as well.
+	runlevels = RUNLEVELS_DEFAULT | RUNLEVEL_LOBBY //CHOMPEdit Do some work during lobby waiting period. May as well.
 	var/sun_mult = 1.0
 	var/static/list/sources_queue = list() // List of lighting sources queued for update.
 	var/static/list/corners_queue = list() // List of lighting corners queued for update.
