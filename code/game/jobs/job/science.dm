@@ -148,8 +148,8 @@ VR edit end*/
 	// Outpost 21 edit begin - Moved to engineering
 	//access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	//minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
-	minimal_access = list(access_eva, access_engine, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
+	access = list(access_robotics, access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
+	minimal_access = list(access_robotics, access_eva, access_engine, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
 	// Outpost 21 edit end
 
 	minimal_player_age = 7
