@@ -157,7 +157,7 @@
 	TLV["methane"] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa // Outpost 21 edit - Methane
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(ONE_ATMOSPHERE * 0.80, ONE_ATMOSPHERE * 0.90, ONE_ATMOSPHERE * 1.10, ONE_ATMOSPHERE * 1.20) /* kpa */
-	TLV["temperature"] =	list(T0C - 26, T0C, T0C + 40, T0C + 66) // K
+	TLV["temperature"] =	list(T0C - 36, T0C - 10, T0C + 40, T0C + 66) // K // Outpost 21 edit - lowered coldness range
 
 	// Outpost 21 addition begin - Multiple alarms in one area
 	if(!master_is_operating()) // select master alarm
