@@ -298,6 +298,10 @@ note dizziness decrements automatically in the mob's Life() proc.
 /mob/proc/spin(spintime, speed)
 	if(!speed || speed < 1)		// Do NOT spin with infinite speed, it will break the reality
 		return
+	// Outpost 21 edit begin - Weeeee
+	if(istype(buckled,/obj/structure/bed/chair/office))
+		playsound(src, 'sound/effects/roll.ogg', 100, 1)
+	// Outpost 21 edit end
 	spawn()
 		var/D = dir
 		while(spintime >= speed)
@@ -312,5 +316,11 @@ note dizziness decrements automatically in the mob's Life() proc.
 				if(WEST)
 					D = NORTH
 			set_dir(D)
+			// Outpost 21 edit begin - Weeeee
+			if(istype(buckled,/obj/structure/bed/chair/office))
+				var/obj/structure/bed/chair/office/O = buckled
+				O.dir = D
+				O.set_dir(D)
+			// Outpost 21 edit end
 			spintime -= speed
 	return
