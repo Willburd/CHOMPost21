@@ -10,8 +10,12 @@ export const pda_sop = (props, context) => {
   return (
     <Box>
       <Section title="Standard Operating Procedures">
-        <Button disabled={first} icon="chevron-left" onClick={() => act('prev')} content="Previous" />
-        <Button disabled={last} icon="chevron-right" onClick={() => act('next')} content="Next" />
+        <Button disabled={first} icon="chevron-left" onClick={() => act('prev')}>
+          Previous
+        </Button>
+        <Button disabled={last} icon="chevron-right" onClick={() => act('next')}>
+          Next
+        </Button>
         <Section title={sop_title}>
           {/* Uses dangerouslySetInnerHTML, This likely needs more sanitization, but it's not editable by players anyway? */}
           <div dangerouslySetInnerHTML={{ __html: sop_body }} />
