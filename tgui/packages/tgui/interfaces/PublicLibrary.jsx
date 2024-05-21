@@ -19,16 +19,16 @@ export const PublicLibrary = (props, context) => {
         <Section title="Bingle Search">
           {(!!searchmode && (
             <Section>
-              {(!!appliance && <Button icon="arrow-left" content="Back" onClick={() => act('closeappliance')} />) || (
-                <Button icon="arrow-left" content="Back" onClick={() => act('closesearch')} />
+              {(!!appliance && <Button icon="arrow-left" onClick={() => act('closeappliance')}>Back</Button>) || (
+                <Button icon="arrow-left" onClick={() => act('closesearch')}>Back</Button>
               )}
-              {!!print && <Button icon="print" content="Print" onClick={() => act('print')} />}
+              {!!print && <Button icon="print" onClick={() => act('print')}>Print</Button>}
               <Section title={title}>
                 <div dangerouslySetInnerHTML={{ __html: body }} />
               </Section>
               <Section title={searchmode}>
                 {search.map((Key) => (
-                  <Button content={Key} onClick={() => act('search', { data: Key })} />
+                  <Button onClick={() => act('search', { data: Key })}>{Key}</Button>
                 ))}
               </Section>
             </Section>
@@ -37,32 +37,32 @@ export const PublicLibrary = (props, context) => {
               <h2>The galaxys 18th most tollerated* infocore dispenser!</h2>
               <LabeledList>
                 <LabeledList.Item>
-                  <Button icon="search" content="Food Recipes" onClick={() => act('foodsearch')} />
+                  <Button icon="search" onClick={() => act('foodsearch')}>Food Recipes</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
-                  <Button icon="search" content="Drink Recipes" onClick={() => act('drinksearch')} />
+                  <Button icon="search" onClick={() => act('drinksearch')}>Drink Recipes</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
-                  <Button icon="search" content="Chemistry" onClick={() => act('chemsearch')} />
+                  <Button icon="search" onClick={() => act('chemsearch')}>Chemistry</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
-                  <Button icon="search" content="Ores" onClick={() => act('oresearch')} />
+                  <Button icon="search" onClick={() => act('oresearch')}>Ores</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
-                  <Button icon="search" content="Materials" onClick={() => act('matsearch')} />
+                  <Button icon="search" onClick={() => act('matsearch')}>Materials</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
-                  <Button icon="search" content="Particle Physics" onClick={() => act('smashsearch')} />
+                  <Button icon="search" onClick={() => act('smashsearch')}>Particle Physics</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
-                  <Button icon="search" content="Catalogs" onClick={() => act('catalogsearch')} />
+                  <Button icon="search" onClick={() => act('catalogsearch')}>Catalogs</Button>
                 </LabeledList.Item>
                 <LabeledList.Item />
                 <LabeledList.Item>
-                  <Button icon="download" content={ad_string1} onClick={() => act('crash')} />
+                  <Button icon="download" onClick={() => act('crash')}>{ad_string1}</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
-                  <Button icon="download" content={ad_string2} onClick={() => act('crash')} />
+                  <Button icon="download" onClick={() => act('crash')}>{ad_string2}</Button>
                 </LabeledList.Item>
               </LabeledList>
             </Section>
