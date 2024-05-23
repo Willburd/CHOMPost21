@@ -9,3 +9,10 @@
 	desc = "Allows contact exposure to phoron without ill effects. Your results may vary."
 	cost = 2
 	var_changes = list("phoron_contact_mod" = 0)
+
+/datum/trait/positive/breathes/vox_air
+	name = "Dust Huffer"
+	desc = "You breathe air instead of phoron. Used for custom vox-like creatures. Abusing this trait may result in a species ban."
+	var_changes = list("breath_type" = "oxygen", "poison_type" = "phoron", "ideal_air_type" = /datum/gas_mixture/belly_air)
+	cost = -5
+	allowed_species = list(SPECIES_VOX)
