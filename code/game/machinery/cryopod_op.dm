@@ -16,6 +16,8 @@
 	on_store_visible_message_1 = "makes a ding as it moves"
 	on_store_visible_message_2 = "to the residential district."
 
+	spawnpoint_type = /datum/spawnpoint/elevator // Custom for outpost
+
 	time_till_despawn = 60 //1 second, lets make this fast
 
 /obj/machinery/cryopod/proc/log_special_item(var/atom/movable/item,var/mob/to_despawn)
