@@ -80,16 +80,21 @@
 		riding_datum.handle_vehicle_offsets() // So the person in back goes to the front.
 
 /obj/vehicle/Move(var/newloc, var/direction, var/movetime)
-	if(world.time < l_move_time + move_delay) //This AND the riding datum move speed limit?
+	// Outpost 21 addition begin - Zmoving for falling
+	var/turf/newturf = newloc
+	var/zmove = (newturf && z != newturf.z)
+	// Outpost 21 edit end
+
+	if(!zmove && world.time < l_move_time + move_delay) //This AND the riding datum move speed limit? // Outpost 21 edit - zmove doesn't run this
 		return
 
-	if(mechanical && on && powered && cell.charge < charge_use)
+	if(!zmove && mechanical && on && powered && cell.charge < charge_use) // Outpost 21 edit - zmove doesn't run this
 		turn_off()
 		return
 
 	. = ..()
 
-	if(mechanical && on && powered)
+	if(!zmove && mechanical && on && powered) // Outpost 21 edit - zmove doesn't run this
 		cell.use(charge_use)
 
 	//Dummy loads do not have to be moved as they are just an overlay
