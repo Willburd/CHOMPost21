@@ -7,7 +7,6 @@
 
 /decl/emote/visible/ragescree/do_extra(mob/user)
 	. = ..()
-	// VOREStation Add - Fancy flips
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.Stun(5)
