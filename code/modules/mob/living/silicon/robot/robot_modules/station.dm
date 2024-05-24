@@ -620,7 +620,8 @@ var/global/list/robot_modules = list(
 					LANGUAGE_SIIK		= 1,
 					LANGUAGE_SKRELLIAN	= 1,
 					LANGUAGE_ROOTLOCAL	= 0,
-					LANGUAGE_GUTTER		= 1,
+					// Outpost 21 edit - Not for borgs
+					LANGUAGE_GUTTER		= 0,
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_SIGN		= 0,
 					LANGUAGE_BIRDSONG	= 1,
