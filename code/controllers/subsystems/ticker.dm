@@ -170,10 +170,12 @@ var/global/datum/controller/subsystem/ticker/ticker
 // Formerly the second half of setup() - The part that actually initializes everything and starts the game.
 /datum/controller/subsystem/ticker/proc/setup_startgame()
 	setup_economy()
+	/* Outpost 21 edit - We do this later
 	create_characters() //Create player characters and transfer them.
 	collect_minds()
 	equip_characters()
 //	data_core.manifest()
+	*/
 
 	callHook("roundstart")
 
@@ -185,24 +187,31 @@ var/global/datum/controller/subsystem/ticker/ticker
 			if (S.name != "AI" && S.name != "Stowaway") // Outpost 21 edit - don't clear stowaway points either
 				qdel(S)
 		to_world("<span class='boldannounce notice'><em>Enjoy the game!</em></span>")
-		// Outpost 21 edit begin - I like this secret too much to leave it behind
-		if(prob(95))
-			world << sound('sound/AI/welcome.ogg') //CHOMPEdit: Reverted to default welcome from Yawn edit
-		else
-			world << sound('sound/AI/yawn/welcome_secret.ogg')
-		// Outpost 21 edit end
+		// Outpost 21 edit - Moved startsound to after character spawn
 		//Holiday Round-start stuff	~Carn
 		Holiday_Game_Start()
-
-	var/list/adm = get_admin_counts()
-	if(adm["total"] == 0)
-		send2adminirc("A round has started with no admins online.")
 
 	current_state = GAME_STATE_PLAYING
 	Master.SetRunLevel(RUNLEVEL_GAME)
 
-	if(CONFIG_GET(flag/sql_enabled)) // CHOMPEdit
-		statistic_cycle() // Polls population totals regularly and stores them in an SQL DB -- TLE
+	// Outpost 21 edit begin - Create characters a little later to avoid weird hitches
+	spawn(5)
+		create_characters() //Create player characters and transfer them.
+		collect_minds()
+		equip_characters()
+
+		var/list/adm = get_admin_counts()
+		if(adm["total"] == 0)
+			send2adminirc("A round has started with no admins online.")
+
+		if(CONFIG_GET(flag/sql_enabled)) // CHOMPEdit
+			statistic_cycle() // Polls population totals regularly and stores them in an SQL DB -- TLE
+
+		if(prob(95))
+			world << sound('sound/AI/welcome.ogg') //CHOMPEdit: Reverted to default welcome from Yawn edit
+		else
+			world << sound('sound/AI/yawn/welcome_secret.ogg')
+	// Outpost 21 edit end
 
 	return 1
 
