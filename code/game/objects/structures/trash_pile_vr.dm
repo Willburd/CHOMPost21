@@ -305,6 +305,7 @@
 					prob(4);/obj/item/seeds/ambrosiavulgarisseed,
 					// prob(4);/obj/item/weapon/gun/energy/sizegun, // outpost 21 no easy sizeguns
 					// prob(4);/obj/item/device/slow_sizegun, // outpost 21 no easy sizeguns
+					prob(2);/obj/item/weapon/implanter/loyalty, // Outpost 21 addition - Kinda evil drops
 					prob(3);/obj/item/clothing/gloves/telekinetic, // outpost 21 addition
 					prob(4);/obj/item/clothing/accessory/collar/shock/bluespace,
 					prob(3);/obj/item/weapon/material/butterfly,
