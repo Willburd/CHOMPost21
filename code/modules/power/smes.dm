@@ -62,6 +62,9 @@ GLOBAL_LIST_EMPTY(smeses)
 	var/noisy = FALSE
 	// CHOMPAdd End
 
+	// Outpost 21 edit - critical smes to avoid powerouts on admin power drain
+	var/is_critical = FALSE
+
 /obj/machinery/power/smes/drain_power(var/drain_check, var/surge, var/amount = 0)
 
 	if(drain_check)
