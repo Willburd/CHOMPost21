@@ -12,3 +12,10 @@
 	result = "a_sustenance"
 	required_reagents = list("nutriment" = 1, "mutagen" = 1, "phoron" = 1)
 	result_amount = 1
+
+/decl/chemical_reaction/instant/sulphuricacid
+	name = "Sulphuric acid"
+	id = "sacid"
+	result = "sacid"
+	required_reagents = list("hydrogen" = 2,"sulfur" = 1,"oxygen" = 4)
+	result_amount = 5
