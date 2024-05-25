@@ -196,7 +196,7 @@
 	return shock_damage
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
-	if (src.health >= CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
+	if (src.health >= CONFIG_GET(number/health_threshold_crit) || on_fire) // CHOMPEdit, Outpost 21 edit - Should allow them to put out fires
 		if(src == M && istype(src, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = src
 			var/datum/gender/T = gender_datums[H.get_visible_gender()]

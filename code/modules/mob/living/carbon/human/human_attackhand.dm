@@ -74,10 +74,10 @@
 		if(I_HELP)
 
 			// VOREStation Edit - Begin
-			if (istype(H) && attempt_to_scoop(H))
+			if (istype(H) && attempt_to_scoop(H) && !on_fire) // Outpost 21 edit, on fire check
 				return 0;
 			// VOREStation Edit - End
-			if(istype(H) && health < CONFIG_GET(number/health_threshold_crit)) // CHOMPEdit
+			if(istype(H) && health < CONFIG_GET(number/health_threshold_crit) && !on_fire) // CHOMPEdit. Outpost 21 edit, on fire check
 				if(!H.check_has_mouth())
 					to_chat(H, "<span class='danger'>You don't have a mouth, you cannot perform CPR!</span>")
 					return
