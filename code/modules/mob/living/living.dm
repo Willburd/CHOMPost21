@@ -139,7 +139,7 @@
 		if(health > getMaxHealth()) //Overhealth
 			health = getMaxHealth()
 		var/initialhealth = health // CHOMPEdit: Getting our health before this check
-		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
+		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() // - halloss Outpost 21 edit - do halloss after pain emotes, so we don't scream from it
 		if(!((ishuman(src)) || (issilicon(src))) && src.can_pain_emote) // Only run this if we're non-human/non-silicon (bots and mechanical simplemobs should be allowed to make pain sounds) & can emote pain, bc humans + carbons already do this. human_damage doesn't call parent, but sanity is better here.
 			if(health < initialhealth) // Did we lose health?
 				// Yes. How much by?
@@ -157,6 +157,9 @@
 					if(51 to INFINITY)
 						if(prob(pain_noise * 3)  && !isbelly(loc)) // More likely, most severe damage. No pain noises inside bellies.
 							emote("pain")
+		// Outpost 21 edit begin - do halloss AFTER painscreams, as we don't scream from halloss here
+		health -= halloss
+		// Outpost 21 edit end
 	// CHOMPEdit End: Pain
 
 //This proc is used for mobs which are affected by pressure to calculate the amount of pressure that actually
