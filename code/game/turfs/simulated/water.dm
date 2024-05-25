@@ -190,7 +190,7 @@
 	return
 
 /mob/living/water_act(amount)
-	adjust_fire_stacks(-amount * 5)
+	adjust_fire_stacks(-amount * 10)
 	for(var/atom/movable/AM in contents)
 		AM.water_act(amount)
 	remove_modifiers_of_type(/datum/modifier/fire)
