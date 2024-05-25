@@ -33,10 +33,8 @@
 			continue
 		if(isAI(L)) // AI is fine
 			continue
-		/* Outpost 21 - TODO add autodoc again
 		if(istype(L,/mob/living/carbon/human/monkey/auto_doc))
 			continue
-		*/
 		if(ishuman(L))
 			// MMIs
 			var/mob/living/carbon/human/H = L
