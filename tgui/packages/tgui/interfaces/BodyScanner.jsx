@@ -30,6 +30,7 @@ const abnormalities = [
       ' possibly cancerous. Surgical removal is recommended.',
   ],
   ['hasVirus', 'bad', (occupant) => 'Viral pathogen detected in blood stream.'],
+  ['hasWithdrawl', 'bad', (occupant) => 'Chemical withdrawl detected.'],
   ['blind', 'average', (occupant) => 'Cataracts detected.'],
   [
     'colourblind',
@@ -276,6 +277,7 @@ const BodyScannerMainAbnormalities = (props) => {
 
   let hasAbnormalities =
     occupant.hasBorer ||
+    occupant.hasWithdrawl ||
     occupant.blind ||
     occupant.colourblind ||
     occupant.nearsighted ||

@@ -197,6 +197,15 @@
 				occupantData["species"] = "[H.custom_species] \[Similar biology to [H.species.name]\]"
 		// Outpost 21 edit addition end
 
+		// Outpost 21 edit begin - Addictions
+		var/has_withdrawl = FALSE
+		for(var/addic in H.addiction_counters)
+			if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
+				var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
+				has_withdrawl = TRUE
+				break
+		// Outpost 21 edit end
+
 		occupantData["stat"] = H.stat
 		occupantData["health"] = H.health
 		occupantData["maxHealth"] = H.getMaxHealth()
@@ -217,6 +226,7 @@
 		occupantData["bodyTempF"] = (((H.bodytemperature-T0C) * 1.8) + 32)
 
 		occupantData["hasBorer"] = H.has_brain_worms()
+		occupantData["hasWithdrawl"] = has_withdrawl
 
 		var/bloodData[0]
 		if(H.vessel)
@@ -375,6 +385,7 @@
 
 	dat = "<font color='blue'><b>Occupant Statistics:</b></font><br>" //Blah obvious
 	if(istype(occupant)) //is there REALLY someone in there?
+		var/has_withdrawl = "" // Outpost 21 edit - Addictions
 		if(ishuman(occupant))
 			var/mob/living/carbon/human/H = occupant
 			// Outpost 21 edit begin - custom species display
@@ -387,6 +398,13 @@
 				else
 					speciestext = "[H.custom_species] \[Similar biology to [H.species.name]\]"
 					dat += "<font color='blue'>Sapient Species: [speciestext]</font><BR>"
+			// Outpost 21 edit end
+			// Outpost 21 edit begin - Addictions
+			for(var/addic in H.addiction_counters)
+				if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
+					var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
+					has_withdrawl = R.name
+					break
 			// Outpost 21 edit end
 		var/t1
 		switch(occupant.stat) // obvious, see what their status is
@@ -570,7 +588,11 @@
 			dat += "<font color='red'>Retinal misalignment detected.</font><BR>"
 		// Outpost 21 edit begin - malignant organs
 		if(hasMalignants != "")
-			dat += "<font color='red'>Unknown anatomy detected!</font><BR>" + hasMalignants
+			dat += "<font color='red'>Unknown anatomy detected!</font><BR>[hasMalignants]<BR>"
+		// Outpost 21 edit end
+		// Outpost 21 edit begin - addictions
+		if(has_withdrawl != "")
+			dat += "<font color='red'>Experiencing chemical withdrawl!</font>[has_withdrawl]<BR>"
 		// Outpost 21 edit end
 	else
 		dat += "\The [src] is empty."

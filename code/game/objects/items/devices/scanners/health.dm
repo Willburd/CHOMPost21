@@ -271,6 +271,16 @@
 				else
 					dat += "<span class='warning'>Anatomical irregularities detected in subject.</span><br>"
 		// Outpost 21 edit end
+		// Outpost 21 edit begin - Addictions
+		for(var/addic in H.addiction_counters)
+			if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
+				var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
+				if(advscan >= 2)
+					dat += "<span class='warning'>Chemical dependance detected: [R.name].</span><br>"
+				else
+					dat += "<span class='warning'>Chemical dependance detected.</span><br>"
+					break
+		// Outpost 21 edit end
 		// Infections, fractures, and IB
 		var/basic_fracture = 0	// If it's a basic scanner
 		var/basic_ib = 0		// If it's a basic scanner
