@@ -100,7 +100,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jil Infestation",		/datum/event/jil_infestation				,8	, list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 1)						, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clowns",				/datum/event/clune_infestation				,7	, list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 5) 					, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Redspace",			/datum/event/redspacefissure				,1	, list(ASSIGNMENT_SECURITY = 5)												, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psychic Screach",		/datum/event/psychic_screach				,2  , list(ASSIGNMENT_ENGINEER = 1)												, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psychic Screach",		/datum/event/psychic_screach				,1  , list(ASSIGNMENT_ENGINEER = 3)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Borg Freedom Law",	/datum/event/borglawerror					,3	, list(ASSIGNMENT_CYBORG = 10, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_SECURITY = 5), TRUE, min_jobs = list(ASSIGNMENT_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Migration",	/datum/event/spider_migration				,2	, list(ASSIGNMENT_SECURITY = 5)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disposal Damage",		/datum/event/disposal_damage				,10	, list(ASSIGNMENT_ENGINEER = 5)												, TRUE),
