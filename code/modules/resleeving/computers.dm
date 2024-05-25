@@ -495,6 +495,13 @@
 		return
 	active_br = locate(ref)
 	if(istype(active_br))
+		// Outpost 21 edit begin - Vox sleever
+		var/force_allow = FALSE
+		if(active_br.mydna)
+			// Species unique sleevers
+			if(active_br.mydna.dna.species == SPECIES_VOX)
+				force_allow = istype(selected_pod,/obj/machinery/clonepod/transhuman/vox) // Vox sleever allows these
+		// Outpost 21 edit end
 		var/can_grow_active = 1
 		if(!synthetic_capable && active_br.synthetic) //Disqualified due to being synthetic in an organic only.
 			can_grow_active = 0
@@ -505,7 +512,7 @@
 		else if(!synthetic_capable && !organic_capable) //What have you done??
 			can_grow_active = 0
 			set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of synthfabs and cloners.", "danger")
-		else if(active_br.toocomplex)
+		else if(active_br.toocomplex && !force_allow)
 			can_grow_active = 0
 			set_temp("Error: Cannot grow [active_br.mydna.name] due to species complexity.", "danger")
 		var/list/payload = list(
