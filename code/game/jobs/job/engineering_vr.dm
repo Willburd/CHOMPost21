@@ -12,7 +12,7 @@
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
 			            access_heads, access_construction,
 			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload, access_gateway, access_robotics) // Outpost 21 edit - Added robotics
-	alt_titles = list("Head Engineer" = /datum/alt_title/head_engineer, "Foreman" = /datum/alt_title/foreman, "Maintenance Manager" = /datum/alt_title/maintenance_manager, "Ship Breaker" = /datum/alt_title/ship_breaker) // Outpost 21 addition - shipbreaker
+	alt_titles = list("Head Engineer" = /datum/alt_title/head_engineer, "Foreman" = /datum/alt_title/foreman, "Maintenance Manager" = /datum/alt_title/maintenance_manager)
 
 /datum/alt_title/head_engineer
 	title = "Head Engineer"
@@ -30,7 +30,7 @@
 /datum/job/engineer
 	pto_type = PTO_ENGINEERING
 	alt_titles = list("Maintenance Technician" = /datum/alt_title/maint_tech, "Engine Technician" = /datum/alt_title/engine_tech,
-						"Electrician" = /datum/alt_title/electrician, "Construction Engineer" = /datum/alt_title/construction_engi, "Engineering Contractor" = /datum/alt_title/engineering_contractor)
+						"Electrician" = /datum/alt_title/electrician, "Construction Engineer" = /datum/alt_title/construction_engi, "Engineering Contractor" = /datum/alt_title/engineering_contractor, "Ship Breaker" = /datum/alt_title/ship_breaker) // Outpost 21 addition - shipbreaker
 
 /datum/alt_title/construction_engi
 	title = "Construction Engineer"
