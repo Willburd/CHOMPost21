@@ -43,12 +43,6 @@ specialty pins
 	desc = "A golden pin denoting high level leadership positions, and authority on the station."
 	icon_state = "fleetpin_officer"
 
-/obj/item/clothing/accessory/solgov/specialty/pilot/eshui
-	name = "pilot's qualification pin"
-	icon = 'modular_outpost/icons/inventory/accessory/fluff_awards.dmi'
-	desc = "A gold pin denoting the qualification to fly station spacecraft."
-	icon_state = "pin_pilot"
-
 /*****
 badges
 *****/
