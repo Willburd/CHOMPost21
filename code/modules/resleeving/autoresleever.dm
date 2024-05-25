@@ -8,12 +8,12 @@
 	var/equip_body = FALSE				//If true, this will spawn the person with equipment
 	var/default_job = USELESS_JOB		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
 	var/ghost_spawns = FALSE			//If true, allows ghosts who haven't been spawned yet to spawn
-	var/vore_respawn = 5 MINUTES		//The time to wait if you died from vore
+	var/vore_respawn = 30 MINUTES		//The time to wait if you died from vore // Outpost 21 edit - 30 mins instead of 5
 	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
 	// Outpost 21 addition begin - Our resleever works different
-	var/allow_ghosts_to_trigger = FALSE // If true, enables standard behavior
+	var/allow_ghosts_to_trigger = TRUE // If true, enables standard behavior
 	var/releaseturf
 	var/throw_dir = WEST
 	// Outpost 21 addition end
@@ -70,11 +70,12 @@
 	else
 		return
 
-/obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost)
+/obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost,var/idscan = FALSE)
 	if(stat)
-		to_chat(ghost, "<span class='warning'>This machine is not functioning...</span>")
+		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately it is not functional...</span>")
 		return
 	if(!istype(ghost,/mob/observer/dead))
+		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.</span>") // Outpost 21 edit - actually inform players
 		return
 	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
 		if(istype(ghost.mind.current.loc, /obj/item/device/mmi))
@@ -246,7 +247,7 @@
 
 	// Outpost 21 edit begin - release turf behaviors
 	if(releaseturf)
-		outpost_post_sleeve(new_character,spawnloc)
+		outpost_post_sleeve(idscan,new_character,spawnloc)
 	// Outpost 21 edit end
 
 	if(spawn_slots == -1)
@@ -323,9 +324,9 @@
 	// Avoiding some funny messages
 	if(!stat && istype(ghost,/mob/observer/dead))
 		to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
-		autoresleeve(ghost)
+		autoresleeve(ghost,TRUE)
 
-/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve( var/mob/living/carbon/human/new_character, var/spawnloc)
+/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(var/idscan, var/mob/living/carbon/human/new_character, var/spawnloc)
 	var/confuse_amount = rand(8,26)
 	var/blur_amount = rand(8,56)
 	var/sickness_duration = rand(20,30) MINUTES
@@ -334,11 +335,13 @@
 	new_character.confused = max(new_character.confused, confuse_amount)
 	new_character.eye_blurry = max(new_character.eye_blurry, blur_amount)
 	new_character.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
-	new_character.adjustOxyLoss( rand(5,25))
-	new_character.adjustBruteLoss( rand(1,8), FALSE)
-	new_character.adjustToxLoss( rand(0,12))
-	new_character.adjustFireLoss( rand(0,8), FALSE)
-	new_character.adjustCloneLoss( rand(0,6))
+
+	if(idscan) // Harmful respawn
+		new_character.adjustOxyLoss( rand(5,25))
+		new_character.adjustBruteLoss( rand(1,8), FALSE)
+		new_character.adjustToxLoss( rand(0,12))
+		new_character.adjustFireLoss( rand(0,8), FALSE)
+		new_character.adjustCloneLoss( rand(0,6))
 	new_character.sleeping = rand(4,6)
 	new_character.Life() // Force lifetick for instant effect
 
