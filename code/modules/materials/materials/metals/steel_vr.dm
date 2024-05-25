@@ -31,7 +31,8 @@
 		new /datum/stack_recipe("dropship seat", /obj/structure/bed/chair/bay/shuttle, 4, one_per_turf = 1, on_floor = 1, time = 20),
 		new /datum/stack_recipe("small teshari nest", /obj/structure/bed/chair/bay/chair/padded/red/smallnest, 2, one_per_turf = 1, on_floor = 1, time = 10),
 		new /datum/stack_recipe("large teshari nest", /obj/structure/bed/chair/bay/chair/padded/red/bignest, 4, one_per_turf = 1, on_floor = 1, time = 20),
-		new /datum/stack_recipe("dance pole", /obj/structure/dancepole, 2, one_per_turf = 1, on_floor = 1, time = 20),
+		new /datum/stack_recipe("support pole", /obj/structure/dancepole, 2, one_per_turf = 1, on_floor = 1, time = 20), // Outpost 21 edit - Why are these
+		new /datum/stack_recipe("dance pole", /obj/structure/stripper_pole, 2, one_per_turf = 1, on_floor = 1, time = 20), // Outpost 21 edit - Different objects
 		new /datum/stack_recipe("light switch frame", /obj/item/frame/lightswitch, 2),
 		new /datum/stack_recipe_list("sofas",list(
 			new /datum/stack_recipe("red sofa middle", /obj/structure/bed/chair/sofa, 1, one_per_turf = 1, on_floor = 1), \

@@ -2088,7 +2088,7 @@
 "iPn" = (/obj/structure/table/rack,/obj/item/weapon/gun/projectile/automatic/bullpup,/obj/item/weapon/gun/projectile/automatic/bullpup,/obj/item/weapon/gun/projectile/automatic/bullpup,/obj/item/weapon/gun/projectile/automatic/bullpup,/obj/item/weapon/gun/projectile/automatic/bullpup,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/dark,/area/centcom/security)
 "iPo" = (/obj/effect/floor_decal/spline/fancy/wood{dir = 10},/obj/item/device/radio/intercom{name = "Station Intercom (General)"; pixel_y = -21},/turf/simulated/floor/wood,/area/specialty/redspace)
 "iPC" = (/obj/effect/floor_decal/spline/plain,/obj/machinery/computer/security/telescreen/entertainment{pixel_y = -36},/obj/structure/table/gamblingtable,/turf/simulated/floor/carpet/oracarpet,/area/centcom/living)
-"iPN" = (/obj/structure/dancepole,/turf/simulated/floor/carpet,/area/centcom/restaurant)
+"iPN" = (/obj/structure/stripper_pole,/turf/simulated/floor/carpet,/area/centcom/restaurant)
 "iQe" = (/obj/effect/floor_decal/rust,/obj/effect/floor_decal/industrial/warning/dust{dir = 4},/turf/simulated/floor/plating,/area/specialty/redspace)
 "iQm" = (/obj/machinery/atmospherics/pipe/simple/hidden{dir = 9},/obj/effect/floor_decal/industrial/warning{dir = 1},/turf/simulated/floor/tiled/white,/area/centcom/medical)
 "iQo" = (/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/lightgrey/border,/obj/machinery/vending/loadout/accessory,/turf/simulated/floor/tiled,/area/specialty/redspace)
