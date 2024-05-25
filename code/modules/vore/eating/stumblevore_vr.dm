@@ -27,7 +27,10 @@
 
 /mob/living/stumble_into(mob/living/M)
 	var/mob/living/carbon/human/S = src
-
+	// Outpost 21 edit begin - Buckled ignores stumbles due to constant issues with stairs and pulling on rollerbeds
+	if(S.buckled || M.buckled)
+		return
+	// Outpost 21 edit end
 	playsound(src, "punch", 25, 1, -1)
 	M.Weaken(4)
 	M.stop_flying()
