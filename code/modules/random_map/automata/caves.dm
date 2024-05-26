@@ -60,8 +60,10 @@
 		if(!T.ignore_cavegen)
 			if(map[current_cell] == FLOOR_CHAR)
 				T.make_floor()
+				/* Outpost 21 edit - Disabled this for our own spawners
 				if(prob(0.5)) // 1 in 200 chance //CHOMP Add
 					new /obj/structure/mob_spawner/scanner/mining_animals(T) //CHOMP Add
+				*/
 			else
 				T.make_wall()
 
