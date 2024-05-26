@@ -7,10 +7,12 @@
 	var/metroids = FALSE
 
 /datum/event/horde_infestation/setup()
+	/* Outpost 21 edit - Why?
 	if(prob(25)) //CHOMP Add 25% chance for the event to fail if chosen
 		log_debug("Horde infestation failed successfully.")
 		kill()
 		return //The event dies here.
+	*/
 
 	announceWhen = rand(announceWhen, announceWhen + 60)
 
