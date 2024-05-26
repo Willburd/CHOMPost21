@@ -208,7 +208,7 @@
 	taste_description = "sour staleness"
 	color = "#181818"
 	high_messages = FALSE
-	metabolism = REM * 0.124 // outpost 21 edit - require less a round
+	metabolism = REM * 0.08 // outpost 21 edit - require less a round
 
 /*///////////////////////////////////////////////////////////////////////////
 ///						PSYCHIATRIC DRUGS								/////
@@ -223,7 +223,7 @@
 	color = "#BF80BF"
 	high_message_list = list("You feel focused.", "Your attention is undivided.")
 	sober_message_list = list("It becomes harder to focus...", "You feel distractible.")
-	metabolism = REM * 0.09 // outpost 21 edit - require less a round
+	metabolism = REM * 0.045 // outpost 21 edit - require less a round
 
 /datum/reagent/drugs/citalopram
 	name = "Citalopram"
@@ -233,7 +233,7 @@
 	color = "#FF80FF"
 	high_message_list = list("Everything feels a bit more steady.", "Your mind feels stable.")
 	sober_message_list = list("You feel a little tired.", "You feel a little more listless...")
-	metabolism = REM * 0.09 // outpost 21 edit - require less a round
+	metabolism = REM * 0.045 // outpost 21 edit - require less a round
 
 /datum/reagent/drugs/paroxetine
 	name = "Paroxetine"
@@ -260,4 +260,4 @@
 	color = "#e6efe3"
 	high_message_list = list("You feel sluggish...", "You feel calm and collected.")
 	sober_message_list = list("You feel so much more antsy...", "Your concentration wavers.")
-	metabolism = REM * 0.124 // outpost 21 edit - require less a round
+	metabolism = REM * 0.06 // outpost 21 edit - require less a round

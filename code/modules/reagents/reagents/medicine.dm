@@ -923,7 +923,7 @@
 	overdose = 20
 	overdose_mod = 1.5
 	scannable = 1
-	metabolism = REM * 0.124 // outpost 21 edit - require less a round
+	metabolism = REM * 0.06 // outpost 21 edit - require less a round
 
 /datum/reagent/immunosuprizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/strength_mod = 1 * M.species.chem_strength_heal
@@ -978,7 +978,7 @@
 	taste_description = "mordant"
 	reagent_state = SOLID
 	color = "#84B2B0"
-	metabolism = REM * 0.124 // outpost 21 edit - require less a round
+	metabolism = REM * 0.06 // outpost 21 edit - require less a round
 	overdose = 20
 	overdose_mod = 1.5
 	scannable = 1
