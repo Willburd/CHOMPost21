@@ -1176,7 +1176,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "recreation_area"
 
 /area/crew_quarters/recreation_area
-	name = "\improper Recreation Area"
+	name = "\improper Art Lounge"
 	icon_state = "recreation_area"
 
 /area/crew_quarters/recreation_area_hallway
