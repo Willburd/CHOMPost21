@@ -31,6 +31,8 @@
 	if(prefs.disabilities & NERVOUS)
 		dna.SetSEState(NERVOUSBLOCK,1,1)
 		disabilities |= NERVOUS
+	if(prefs.disabilities & WINGDINGS)
+		disabilities |= WINGDINGS
 
 	// Apply genes
 	dna.UpdateSE()

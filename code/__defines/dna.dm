@@ -39,6 +39,7 @@
 // Outpost 21 edit begin - more disabilities
 #define DEPRESSION     	0x20	// Roleplay drugs
 #define SCHIZOPHRENIA  	0x40	// Roleplay drugs
+#define WINGDINGS     	0x80	// Better handling as disability
 // Outpost 21 edit end
 
 // sdisabilities

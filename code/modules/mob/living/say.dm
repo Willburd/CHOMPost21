@@ -120,7 +120,9 @@ var/list/channel_to_radio_key = new
 			. = 1
 		//VOREStation Edit End
 		//YW Edit start
-		if(wingdings)
+		if(disabilities & WINGDINGS) // wingdings) Outpost 21 edit - moved to disabilities
+			verb = pick("gibbers","gabbers","gahoos","gazonks") // Outpost 21 edit - Yeah lets just be stupid
+			S.message = Gibberish(S.message, 100) // Outpost 21 edit - Googlybonkers
 			S.message = span("wingdings",(S.message))
 			. = 1
 		//YW Edit End

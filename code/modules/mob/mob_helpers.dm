@@ -251,12 +251,17 @@
 	for(var/i = 1, i <= length(t), i++)
 
 		var/letter = copytext(t, i, i+1)
-		if(prob(50))
+		if(prob(50) || p == 100) // Outpost 21 edit - FORCED so that pretty much everything gets obscured
 			if(p >= 70)
 				letter = ""
 
+			// Outpost 21 begin - extended randomization for wingdings
+			var/rand_set = list("#","@","*","&","%","$","/", "<", ">", ";","*","*","*","*","*","*","*")
+			if(p >= 80)
+				rand_set += alphabet_uppercase
 			for(var/j = 1, j <= rand(0, 2), j++)
-				letter += pick("#","@","*","&","%","$","/", "<", ">", ";","*","*","*","*","*","*","*")
+				letter += pick(rand_set)
+			// Outpost 21 end
 
 		returntext += letter
 

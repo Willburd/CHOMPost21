@@ -6,6 +6,7 @@
 	dat += "<h2>Genetics</h2>"
 	dat += "Anxiety: <a href='?src=\ref[src];disabilities=[NERVOUS]'><b>[pref.disabilities & NERVOUS ? "Yes" : "No"]</b></a><br>"
 	dat += "Chronic Cough: <a href='?src=\ref[src];disabilities=[COUGHING]'><b>[pref.disabilities & COUGHING ? "Yes" : "No"]</b></a><br>"
+	dat += "Incomprehensible: <a href='?src=\ref[src];disabilities=[WINGDINGS]'><b>[pref.disabilities & WINGDINGS ? "Yes" : "No"]</b></a><br>"
 	dat += "Needs Glasses: <a href='?src=\ref[src];disabilities=[NEARSIGHTED]'><b>[pref.disabilities & NEARSIGHTED ? "Yes" : "No"]</b></a><br>"
 	dat += "Tourettes: <a href='?src=\ref[src];disabilities=[TOURETTES]'><b>[pref.disabilities & TOURETTES ? "Yes" : "No"]</b></a><br>"
 	dat += "Deaf: <a href='?src=\ref[src];sdisabilities=[DEAF]'><b>[pref.sdisabilities & DEAF ? "Yes" : "No"]</b></a><br>"
