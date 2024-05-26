@@ -48,8 +48,9 @@
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/wurmwoad = 3,
-		/obj/item/seeds/shrinkshroom = 3,
-		/obj/item/seeds/megashroom = 3)
+		///obj/item/seeds/shrinkshroom = 3, Outpost 21 edit - Contraband, moved to xenobot
+		///obj/item/seeds/megashroom = 3 Outpost 21 edit - Contraband, moved to xenobot
+		)
 
 //CHOMPedit: adds pitcherseed
 /obj/machinery/seed_storage/xenobotany
@@ -112,4 +113,7 @@
 		/obj/item/seeds/shrinkshroom = 3,
 		/obj/item/seeds/megashroom = 3,
 		/obj/item/seeds/lustflower = 2,
-		/obj/item/seeds/pitcherseed = 3)
+		/obj/item/seeds/pitcherseed = 3,
+		/obj/item/seeds/shrinkshroom = 3, // Outpost 21 edit - Contraband
+		/obj/item/seeds/megashroom = 3 // Outpost 21 edit - Contraband
+		)
