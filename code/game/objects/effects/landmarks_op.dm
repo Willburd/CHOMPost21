@@ -214,11 +214,18 @@
 			M.loc = src.loc
 
 		if(2)
-			var/obj/item/device/assembly/mousetrap/armed/M = new /obj/item/device/assembly/mousetrap/armed();
-			M.loc = src.loc
+			var/turf/srcturf = get_turf(src)
+			if(srcturf.outdoors == OUTDOORS_NO)
+				if(prob(20))
+					// rare spawn!
+					var/obj/item/weapon/lego/L = new /obj/item/weapon/lego()
+					L.loc = src.loc
+				else
+					var/obj/item/device/assembly/mousetrap/armed/M = new /obj/item/device/assembly/mousetrap/armed();
+					M.loc = src.loc
 
 		if(3)
 			var/obj/item/weapon/beartrap/M = new /obj/item/weapon/beartrap();
 			M.deployed = TRUE
-			M.update_icon();
+			M.update_icon()
 			M.loc = src.loc
