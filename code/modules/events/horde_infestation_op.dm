@@ -1,17 +1,15 @@
+#define SPIDERS 1
+#define TROIDS 2
+#define SLIMES 3
+
 /datum/event/horde_infestation
 	announceWhen	= 30
 	endWhen		= 200
 	var/spawncount = 1
 	var/list/vents = list()
-	var/spiders = FALSE
-	var/metroids = FALSE
+	var/spawning = 0
 
 /datum/event/horde_infestation/setup()
-	if(prob(25)) //CHOMP Add 25% chance for the event to fail if chosen
-		log_debug("Horde infestation failed successfully.")
-		kill()
-		return //The event dies here.
-
 	announceWhen = rand(announceWhen, announceWhen + 60)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines) //Gathering together all possible areas to spawn mobs.
@@ -23,26 +21,29 @@
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
 				vents += temp_vent
 
-	if(prob(50)) //50/50 chance on spiders or metroids.
-		log_debug("Hord event, spiders selected.")
-		spawncount = rand(4 * severity, 10 * severity)
-		sent_spiders_to_station = 0
-		spiders = TRUE
+	spawning = rand(SPIDERS,SLIMES)
+	switch(spawning)
+		if(SPIDERS)
+			log_debug("Hord event, spiders selected.")
+			spawncount = rand(4 * severity, 10 * severity)
+			sent_spiders_to_station = 0
 
-	else
-		log_debug("Horde event, metroids selected.")
-		spawncount = rand(2 * severity, 4 * severity)
-		metroids = TRUE
+		if(TROIDS)
+			log_debug("Horde event, metroids selected.")
+			spawncount = rand(2 * severity, 4 * severity)
 
+		if(SLIMES)
+			log_debug("Horde event, slimes selected.")
+			spawncount = rand(4 * severity, 10 * severity)
 
 /datum/event/horde_infestation/announce()
-	if(spiders) //Horrible way of doing this
+	if(spawning == SPIDERS || spawning == SLIMES)
 		command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
-	if(metroids) //Horrible way of doing this
+	if(spawning == TROIDS)
 		command_announcement.Announce("High-energy lifeforms detected coming aboard [station_name()]. All crew members, stay alert, and listen to security instructions.", "Lifesign Alert", new_sound = 'sound/misc/alarm1.ogg')
 
 /datum/event/horde_infestation/start()
-	if(spiders)
+	if(spawning == SPIDERS)
 		for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
 			//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
 			var/in_area = get_area(temp_vent)
@@ -66,7 +67,7 @@
 		//CHOMPEDIT END
 			vents -= vent
 			spawncount--
-	if(metroids)
+	if(spawning == TROIDS)
 		while((spawncount >= 1) && vents.len)
 			var/obj/vent = pick(vents)
 			var/spawn_metroids = pickweight(list(
@@ -81,11 +82,33 @@
 			vents -= vent
 			spawncount--
 		vents.Cut()
+	if(spawning == SLIMES)
+		while((spawncount >= 1) && vents.len)
+			var/obj/vent = pick(vents)
+			var/spawn_slimes = pickweight(list(
+				/mob/living/simple_mob/slime/xenobio = 30,
+				/mob/living/simple_mob/slime/xenobio/amber = 5,
+				/mob/living/simple_mob/slime/xenobio/blue = 5,
+				/mob/living/simple_mob/slime/xenobio/cerulean = 5,
+				/mob/living/simple_mob/slime/xenobio/dark = 5,
+				/mob/living/simple_mob/slime/xenobio/emerald = 10,
+				/mob/living/simple_mob/slime/xenobio/gold = 10,
+				/mob/living/simple_mob/slime/xenobio/nuclear = 5,
+				/mob/living/simple_mob/slime/xenobio/metal = 5,
+				/mob/living/simple_mob/slime/xenobio/ruby = 10,
+				/mob/living/simple_mob/slime/xenobio/sapphire = 10
+				))
+			new spawn_slimes(get_turf(vent))
+			vents -= vent
+			spawncount--
+		vents.Cut()
 
 /datum/event/horde_infestation/end()
-	if(spiders)
+	if(spawning == SPIDERS)
 		return
-	if(metroids)
+	if(spawning == SLIMES)
+		return
+	if(spawning == TROIDS)
 		var/list/area_names = list()
 		for(var/metroids in existing_metroids)
 			var/mob/living/M = metroids
@@ -100,3 +123,7 @@
 		if(area_names.len)
 			var/english_list = english_list(area_names)
 			command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the followng areas: [english_list]", "Lifesign Alert")
+
+#undef SPIDERS
+#undef TROIDS
+#undef SLIMES
