@@ -1535,7 +1535,7 @@
 "ijc" = (/obj/machinery/light/small/emergency{dir = 1},/obj/structure/catwalk,/obj/effect/floor_decal/flesh{dir = 1},/obj/effect/floor_decal/flesh,/turf/simulated/floor/plating,/area/muriki/processor/hall)
 "ikn" = (/obj/structure/disposalpipe/segment,/obj/machinery/power/thermoregulator/cryogaia{pixel_x = 32},/obj/structure/cable/green{d2 = 8; icon_state = "0-8"},/obj/effect/floor_decal/corner/purple{dir = 6},/turf/simulated/floor/tiled/white,/area/rnd/hallway/phoronicsbridge)
 "ilw" = (/obj/effect/floor_decal/spline/plain{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{dir = 4},/obj/structure/disposalpipe/segment{dir = 1; icon_state = "pipe-c"},/turf/simulated/floor/carpet/turcarpet,/area/djstation)
-"ilW" = (/obj/machinery/power/smes/buildable{charge = 5e+006; input_attempt = 1; input_level = 100000; output_level = 200000},/obj/structure/cable/cyan{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/greengrid,/area/ai)
+"ilW" = (/obj/machinery/power/smes/buildable{charge = 5e+006; input_attempt = 1; input_level = 100000; output_level = 200000; is_critical = 1},/obj/structure/cable/cyan{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/greengrid,/area/ai)
 "ima" = (/obj/effect/floor_decal/corner/brown/full{dir = 4},/obj/machinery/vending/cola{dir = 1},/turf/simulated/floor/tiled,/area/mint)
 "imj" = (/obj/effect/floor_decal/corner/purple{dir = 6},/obj/machinery/doorbell_chime{id_tag = "sciding"; name = "Research Call"; pixel_x = 30},/turf/simulated/floor/tiled/white,/area/rnd/hallway/phoronicsmainhall)
 "imm" = (/obj/structure/railing{dir = 8},/obj/structure/railing,/turf/simulated/floor/outpost_roof/muriki,/area/muriki/rooftop/cargo)
