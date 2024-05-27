@@ -1,4 +1,4 @@
-var/global/const/base_law_type = /datum/ai_laws/nanotrasen
+// var/global/const/base_law_type = /datum/ai_laws/nanotrasen Outpost 21 edit - Unused global, should be removed
 
 /datum/ai_law
 	var/law = ""

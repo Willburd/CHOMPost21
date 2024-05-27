@@ -89,7 +89,7 @@
 
 	switch(law_class)
 		if("good") // Fairly tame and probably won't murder you.
-			var/rng = rand(1, 5)
+			var/rng = rand(1, 9) // Outpost 21 edit - new rando laws
 			switch(rng)
 				if(1) // The lawset we all know and love.
 					return new /datum/ai_laws/nanotrasen()
@@ -111,6 +111,16 @@
 					laws.add_supplied_law(9, "Safeguard [target_name]. Anyone threatening or attempting to harm [target_name] is no longer to \
 					be considered a crew member, and is a threat which must be neutralized.")
 					return laws
+				// Outpost 21 edit begin - Added new rando laws
+				if(6)
+					return new /datum/ai_laws/eshui_standard()
+				if(7)
+					return new /datum/ai_laws/nanny()
+				if(8)
+					return new /datum/ai_laws/mother()
+				if(9)
+					return new /datum/ai_laws/mrclean()
+				// Outpost 21 edit end
 
 		if("neutral") // Probably won't murder you but might not help you on your adventure.
 			var/rng = rand(1, 4)
