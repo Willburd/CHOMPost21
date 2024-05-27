@@ -28,7 +28,7 @@
 	var/list/spawn_locations = list()
 
 	for(var/obj/effect/landmark/C in landmarks_list)
-		if(C.name == "carpspawn")
+		if(C.name == "carpspawn" && (C.z in using_map.station_levels))
 			spawn_locations.Add(C.loc)
 	spawn_locations = shuffle(spawn_locations)
 	num_groups = min(num_groups, spawn_locations.len)
