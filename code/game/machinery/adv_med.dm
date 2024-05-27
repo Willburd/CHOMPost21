@@ -201,7 +201,7 @@
 		var/has_withdrawl = FALSE
 		for(var/addic in H.addiction_counters)
 			if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
-				var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
+				//var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
 				has_withdrawl = TRUE
 				break
 		// Outpost 21 edit end
