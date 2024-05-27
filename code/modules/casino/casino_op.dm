@@ -5,11 +5,13 @@
 /obj/structure/casino_table/roulette_table/long
 	icon_state = "roulette_wheel_long"
 	//spin_state = "roulette_wheel_long_spinning"
+	icon = 'icons/obj/casino.dmi'
 
 /obj/structure/casino_table/roulette_long
 	name = "roulette table"
 	desc = "Roulette table."
 	icon_state = "roulette_long"
+	icon = 'icons/obj/casino.dmi'
 
 /obj/item/roulette_ball
 	name = "roulette ball"
