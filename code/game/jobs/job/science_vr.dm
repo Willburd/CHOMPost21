@@ -33,7 +33,7 @@
 	pto_type = PTO_SCIENCE
 	alt_titles = list("Researcher" = /datum/alt_title/researcher, "Lab Assistant" = /datum/alt_title/lab_assistant, "Xenoarchaeologist" = /datum/alt_title/xenoarch,
 						"Xenopaleontologist" = /datum/alt_title/xenopaleontologist, "Anomalist" = /datum/alt_title/anomalist, "Phoron Researcher" = /datum/alt_title/phoron_research,
-						"Gas Physicist" = /datum/alt_title/gas_physicist, "Circuit Designer" = /datum/alt_title/circuit_designer, "Circuit Programmer" = /datum/alt_title/circuit_programmer)
+						"Gas Physicist" = /datum/alt_title/gas_physicist) // Outpost 21 edit - moved circuit jobs to roboticist in engineering
 
 
 	access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch, access_xenobotany) // Outpost 21 edit - removed robotics
@@ -60,13 +60,13 @@
 
 /datum/alt_title/circuit_designer
 	title = "Circuit Designer"
-	title_blurb = "A Circuit Designer is a Scientist whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
-				   They work to create various useful devices using the capabilities of integrated circuitry."
+	title_blurb = "A Circuit Designer is a Engineer whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
+				   They work to create various useful devices using the capabilities of integrated circuitry." // Outpost 21 edit - engineering roboticist alt title
 
 /datum/alt_title/circuit_programmer
 	title = "Circuit Programmer"
-	title_blurb = "A Circuit Programmer is a Scientist whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
-				   They work to create various useful devices using the capabilities of integrated circuitry."
+	title_blurb = "A Circuit Programmer is a Engineer whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
+				   They work to create various useful devices using the capabilities of integrated circuitry." // Outpost 21 edit - engineering roboticist alt title
 
 
 /datum/job/xenobiologist
@@ -86,7 +86,7 @@
 	total_positions = 3
 	//pto_type = PTO_SCIENCE
 	pto_type = PTO_ENGINEERING // Outpost 21 edit - moved to robotics
-	alt_titles = list("Assembly Technician" = /datum/alt_title/assembly_tech, "Biomechanical Engineer" = /datum/alt_title/biomech, "Mechatronic Engineer" = /datum/alt_title/mech_tech)
+	alt_titles = list("Assembly Technician" = /datum/alt_title/assembly_tech, "Biomechanical Engineer" = /datum/alt_title/biomech, "Mechatronic Engineer" = /datum/alt_title/mech_tech, "Circuit Designer" = /datum/alt_title/circuit_designer, "Circuit Programmer" = /datum/alt_title/circuit_programmer) // Outpost 21 edit - Circuit jobs moved to engiee roboticist)
 
 /datum/alt_title/assembly_tech
 	title = "Assembly Technician"
