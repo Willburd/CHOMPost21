@@ -52,7 +52,7 @@
 		return 1
 
 /obj/item/toy/plushie/teshari/_yw
-	name = "lifelike teshari plush"
+	name = "lifelike teshari plush (Brown)" // Outpost 21 edit - loadout support
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_brown"
 	item_state = "teshariplushie_brown"
@@ -66,7 +66,7 @@
 		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
 /obj/item/toy/plushie/teshari/w_yw
-	name = "lifelike teshari plush"
+	name = "lifelike teshari plush (White)" // Outpost 21 edit - loadout support
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_white"
 	item_state = "teshariplushie_white"
@@ -80,7 +80,7 @@
 		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
 
 /obj/item/toy/plushie/teshari/b_yw
-	name = "lifelike teshari plush"
+	name = "lifelike teshari plush (Black)" // Outpost 21 edit - loadout support
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_black"
 	item_state = "teshariplushie_black"
@@ -95,7 +95,7 @@
 		slot_ear_str = 'icons/mob/toy_worn_yw.dmi')
 
 /obj/item/toy/plushie/teshari/y_yw
-	name = "lifelike teshari plush"
+	name = "lifelike teshari plush (Yellow)" // Outpost 21 edit - loadout support
 	desc = "This is a plush teshari. Very soft. The ammount of detail makes it almost look lifelike! Looks like it is sleeping. Shhh!"
 	icon_state = "teshariplushie_yellow"
 	item_state = "teshariplushie_yellow"
