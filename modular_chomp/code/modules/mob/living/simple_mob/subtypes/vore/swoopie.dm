@@ -242,7 +242,7 @@
 		for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
 			if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
 				LAZYSET(prey_excludes, L, world.time)
-				addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 5 MINUTES)
+				addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 30 SECONDS)
 // Outpost 21 edit end
 
 /datum/say_list/swoopie
