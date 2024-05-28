@@ -544,6 +544,7 @@
 #include "code\datums\supplypacks\costumes.dm"
 #include "code\datums\supplypacks\costumes_vr.dm"
 #include "code\datums\supplypacks\engineering.dm"
+#include "code\datums\supplypacks\engineering_op.dm"
 #include "code\datums\supplypacks\engineering_vr.dm"
 #include "code\datums\supplypacks\hardsuits.dm"
 #include "code\datums\supplypacks\hospitality.dm"
