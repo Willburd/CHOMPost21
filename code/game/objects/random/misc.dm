@@ -271,7 +271,9 @@
 				prob(1);/obj/item/weapon/handcuffs,
 				prob(1);/obj/item/weapon/handcuffs/legcuffs,
 				prob(2);/obj/item/weapon/reagent_containers/syringe/drugs,
-				prob(1);/obj/item/weapon/reagent_containers/syringe/steroid)
+				prob(1);/obj/item/weapon/reagent_containers/syringe/steroid,
+				prob(2);/obj/item/weapon/implanter/compliance, // Outpost 21 edit - implanters
+				prob(2);/obj/item/weapon/implanter/loyalty) // Outpost 21 edit - implanters
 
 /obj/random/contraband/nofail
 	name = "Guaranteed Random Illegal Item"
