@@ -60,7 +60,7 @@
 "aia" = (/obj/machinery/atmospherics/portables_connector{dir = 4},/obj/effect/floor_decal/industrial/outline/red,/turf/simulated/floor/tiled/steel,/area/rnd/research/phoronics/burn)
 "aie" = (/obj/item/device/radio/intercom/department/security{dir = 4; pixel_x = 21},/turf/simulated/floor/plating,/area/security/vacantoffice)
 "aiq" = (/obj/effect/floor_decal/flesh{dir = 1},/turf/simulated/floor/flesh/muriki,/area/muriki/processor/hall)
-"aiw" = (/obj/structure/sign/warning/incidentgibber{pixel_y = 32; name = "\improper Days without grinder incident sign."},/obj/structure/railing{dir = 4},/obj/effect/floor_decal/corner/brown{dir = 5},/turf/simulated/floor/tiled,/area/quartermaster/cargrecycle)
+"aiw" = (/obj/structure/sign/warning/incidentgibber{pixel_y = 32; name = "\improper Days without grinder incident sign."},/obj/structure/railing{dir = 4},/obj/effect/floor_decal/corner/brown{dir = 5},/obj/machinery/camera/network/cargo{c_tag = "CRG - Recycling"},/turf/simulated/floor/tiled,/area/quartermaster/cargrecycle)
 "aiA" = (/obj/structure/railing{dir = 8},/obj/effect/floor_decal/rust,/turf/simulated/floor/outpost_roof/muriki,/area/muriki/rooftop/medical)
 "aiN" = (/obj/structure/disposalpipe/segment,/obj/effect/floor_decal/corner/purple{dir = 6},/turf/simulated/floor/tiled/white,/area/rnd/hallway/phoronicsbridge)
 "aiP" = (/obj/machinery/atmospherics/pipe/simple/heat_exchanging{dir = 9},/turf/simulated/floor/outpost_roof/muriki,/area/muriki/rooftop/disposal)
