@@ -5,3 +5,6 @@
 
 /area/maintenance
 	use_maint_night_color = TRUE
+
+/area/mine
+	use_maint_night_color = TRUE
