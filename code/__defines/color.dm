@@ -201,7 +201,7 @@
 #define LIGHT_COLOR_INCANDESCENT_TUBE "#fffed9"
 #define LIGHT_COLOR_INCANDESCENT_BULB "#ffe7ce"
 #define LIGHT_COLOR_INCANDESCENT_FLASHLIGHT "#FFCC66"
-#define LIGHT_COLOR_NIGHTSHIFT "#EFCC86"
+#define LIGHT_COLOR_NIGHTSHIFT "#FF9732" // Outpost 21 edit - changed nightshift lights to be more intense, original "#EFCC86"
 
 //Fake ambient occlusion filter
 #define AMBIENT_OCCLUSION filter(type="drop_shadow", x=0, y=-2, size=4, offset=3, color="#04080F80")
