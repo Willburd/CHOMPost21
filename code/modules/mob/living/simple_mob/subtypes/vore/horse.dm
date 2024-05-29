@@ -139,6 +139,8 @@
 	vore_pounce_maxhealth = 200
 	vore_bump_emote	= "chomps down on"
 
+	enzyme_affect = FALSE // Outpost 21 edit - Kelpie of the acid lake
+
 /mob/living/simple_mob/vore/horse/kelpie/init_vore()
 	..()
 	var/obj/belly/B = vore_selected

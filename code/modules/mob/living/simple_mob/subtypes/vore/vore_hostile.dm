@@ -308,6 +308,8 @@
 	vore_standing_too = TRUE
 	unacidable = TRUE
 
+	enzyme_affect = FALSE // Outpost 21 edit - assumed to be such
+
 /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube/init_vore()
 	if(!voremob_loaded) //CHOMPAdd
 		return //CHOMPAdd
