@@ -59,7 +59,8 @@ var/global/list/item_vore_blacklist = list(
 		/obj/item/areaeditor/blueprints,
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/weapon/disk/nuclear,
-		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz)
+		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz,
+		/obj/item/airlock_brace) // Outpost 21 edit - doorbraces too
 
 //Classic Vore sounds
 var/global/list/classic_vore_sounds = list(
