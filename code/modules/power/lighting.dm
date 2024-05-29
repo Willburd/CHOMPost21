@@ -351,9 +351,15 @@ var/global/list/light_type_cache = list()
 		if(start_with_cell && !no_emergency)
 			cell = new/obj/item/weapon/cell/emergency_light(src)
 		var/obj/item/weapon/light/L = get_light_type_instance(light_type) //This is fine, but old code.
+		// Outpost 21 addition begin - Nightshift lights in maintenance tunnels are scary
+		var/area/A = get_area(src)
+		if(A && A.use_maint_night_color)
+			L.nightshift_color = LIGHT_COLOR_NIGHTSHIFT_MAINT
+		else
+			L.nightshift_color = LIGHT_COLOR_NIGHTSHIFT
+		// Outpost 21 addition end
 		update_from_bulb(L)
 		// outpost 21 addition begin - redspace hell lights have a fixed broken chance, ignoring default breaking chance... also reduces lighting lag...
-		var/area/A = get_area(src)
 		if(A && A.broken_light_chance >= 0)
 			if(prob(A.broken_light_chance))
 				broken(1)
