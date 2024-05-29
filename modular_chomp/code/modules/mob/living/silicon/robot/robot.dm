@@ -143,8 +143,8 @@
 	if(issilicon(user))
 		return TRUE
 	// Outpost 21 edit begin - GOOD GOD WHY. AI's pet exception
-	var/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/gamma/G = user
-	if(istype(G))
+	var/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/prim/P = user
+	if(istype(P))
 		return TRUE
 	// Outpost 21 edit end
 	return FALSE
