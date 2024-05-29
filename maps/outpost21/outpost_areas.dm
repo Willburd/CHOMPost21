@@ -286,6 +286,17 @@
 	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
+/area/quartermaster/cargupbreak
+	name = "\improper Cargo Upper Break Room"
+	base_turf = /turf/simulated/open
+	icon_state = "orawhicir"
+
+/area/quartermaster/cargrecycle
+	name = "\improper Cargo Reclycling"
+	base_turf = /turf/simulated/open
+	icon_state = "orawhicir"
+	ambience = AMBIENCE_ENGINEERING
+
 /area/muriki/septic
 	name = "\improper Septic Tank"
 	base_turf = /turf/simulated/mineral/floor/muriki
@@ -310,7 +321,6 @@
 	name = "Cargo Disposal Maintenance"
 	base_turf = /turf/simulated/open
 	icon_state = "orawhicir"
-
 
 //
 // Civilian ---------------------------------------------------------
