@@ -405,7 +405,25 @@
 	return 1
 
 /obj/machinery/door/proc/next_close_wait()
-	return (normalspeed ? 150 : 5)
+	// Outpost 21 edit begin - Large temp difs mean faster closing
+	var/lowest_temp = T20C
+	var/highest_temp = T0C
+	for(var/D in cardinal)
+		var/turf/target = get_step(loc, D)
+		if(!target.density)
+			var/datum/gas_mixture/airmix = target.return_air()
+			if(!airmix)
+				continue
+			if(airmix.temperature < lowest_temp)
+				lowest_temp = airmix.temperature
+			if(airmix.temperature > highest_temp)
+				highest_temp = airmix.temperature
+	// Fast close to keep in the heat
+	var/open_speed = 150
+	if(abs(highest_temp - lowest_temp) >= 5)
+		open_speed = 15
+	return (normalspeed ? open_speed : 5)
+	// Outpost 21 edit end
 
 /obj/machinery/door/proc/close(var/forced = 0)
 	if(!can_close(forced))
