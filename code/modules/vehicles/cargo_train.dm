@@ -354,7 +354,7 @@
 
 	//if we are attaching a trolley to an engine we don't care what direction
 	// it is in and it should probably be attached with the engine in the lead
-	if(istype(T, /obj/vehicle/train/trolley))
+	if(istype(T, /obj/vehicle/train/trolley) || istype(T, /obj/vehicle/train/trolly_tank)) // Outpost 21 edit - trolly tank support
 		T.attach_to(src, user)
 	else
 		var/T_dir = get_dir(src, T)	//figure out where T is wrt src

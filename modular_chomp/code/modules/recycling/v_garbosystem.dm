@@ -10,6 +10,7 @@
 	active_power_usage = 100
 	var/operating = FALSE
 	var/obj/machinery/recycling/crusher/crusher //Connects to regular crusher
+	var/obj/structure/garbage/fluidtrap/sump //Reagent trap for extraction and sorting
 	var/obj/machinery/button/garbosystem/button
 	var/list/affecting
 	var/voracity = 5 //How much stuff is swallowed at once.
@@ -83,6 +84,16 @@
 							playsound(src, 'sound/effects/splat.ogg', 50, 1)
 							L.gib()
 							items_taken++
+							// Outpost 21 addition begin - Sludge production, bodily transfers
+							if(sump)
+								sump.make_sludge(5)
+								if(ishuman(L))
+									// Splorch
+									var/mob/living/carbon/human/H = L
+									sump.reagent_feed(H.bloodstr,1)
+									sump.reagent_feed(H.ingested,1)
+									sump.reagent_feed(H.vessel,0.5)
+							// Outpost 21 addition end
 						else
 							L.adjustBruteLoss(25)
 							items_taken++
@@ -95,6 +106,12 @@
 						A.SpinAnimation(5,3)
 						spawn(15)
 							if(A.loc == loc)
+								// Outpost 21 addition begin - Allow reagent extraction
+								if(A.reagents && sump)
+									sump.reagent_feed(A.reagents,1)
+								if(istype(A,/obj/item/organ))
+									sump.make_biojunk(rand(4,9))
+								// Outpost 21 addition end
 								A.forceMove(src)
 								if(!is_type_in_list(A,item_digestion_blacklist))
 									crusher.take_item(A) //Force feed the poor bastard.
@@ -104,6 +121,10 @@
 						spawn(15)
 							if(A)
 								A.forceMove(src)
+								// Outpost 21 addition begin - Allow reagent extraction
+								if(A.reagents && sump)
+									sump.reagent_feed(A.reagents,1)
+								// Outpost 21 addition end
 								if(istype(A, /obj/structure/closet))
 									new /obj/item/stack/material/steel(loc, 2)
 								qdel(A)
