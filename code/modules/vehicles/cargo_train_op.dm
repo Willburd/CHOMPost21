@@ -42,7 +42,7 @@
 		return
 	. = ..()
 
-/obj/vehicle/train/trolly_tank/verb/load_container()
+/obj/vehicle/train/trolly_tank/verb/load_container(var/obj/item/weapon/reagent_containers/R = null)
 	set name = "Load Container"
 	set category = "Object"
 	set src in view(1)
@@ -51,14 +51,17 @@
 	if(!M || M.incapacitated())
 		return
 
-	var/obj/item/W = M.get_active_hand()
+	var/obj/item/W = R
+	if(R == null)
+		W = M.get_active_hand()
+
 	if(W == null)
 		return
 
 	if(istype(W,/obj/item/weapon/reagent_containers))
 		stored_container = W
 		M.drop_from_inventory(W,src)
-		to_chat(M,"You place \the [W] inside \the [src].")
+		visible_message("\The [M] loads \the [W] into \the [src].")
 		return
 
 /obj/vehicle/train/trolly_tank/AltClick(mob/user)

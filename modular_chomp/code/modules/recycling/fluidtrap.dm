@@ -61,7 +61,7 @@
 	if(istype(O,/obj/item/weapon/reagent_containers))
 		stored_container = O
 		user.drop_from_inventory(O,src)
-		to_chat(user,"You place \the [O] inside \the [src].")
+		visible_message("\The [user] loads \the [O] into \the [src].")
 		return
 
 /obj/structure/garbage/fluidtrap/attack_hand(mob/user)

@@ -112,11 +112,16 @@
 		latch(C, user)
 	else
 		// Outpost 21 edit begin - Draining the garbage sump
-		if(istype(src,/obj/vehicle/train/trolly_tank) && istype(C,/obj/structure/garbage/fluidtrap))
-			// Drain it!
-			C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
-			visible_message("\The [user] drains \the [C]'s tank into \the [src].")
-			return
+		if(istype(src,/obj/vehicle/train/trolly_tank))
+			if(istype(C,/obj/item/weapon/reagent_containers))
+				var/obj/vehicle/train/trolly_tank/N = src
+				N.load_container(C)
+				return
+			if(istype(C,/obj/structure/garbage/fluidtrap))
+				// Drain it!
+				C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
+				visible_message("\The [user] drains \the [C]'s tank into \the [src].")
+				return
 		// Outpost 21 edit end
 		if(!load(C, user))
 			to_chat(user, span_red("You were unable to load [C] on [src]."))
