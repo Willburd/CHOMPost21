@@ -49,8 +49,8 @@
 		/obj/item/seeds/wheatseed = 3,
 		/obj/item/seeds/whitebeetseed = 3,
 		/obj/item/seeds/wurmwoad = 3,
-		/obj/item/seeds/shrinkshroom = 3,
-		/obj/item/seeds/megashroom = 3,
+		// /obj/item/seeds/shrinkshroom = 3, // Outpost 21 edit - Contraband
+		// /obj/item/seeds/megashroom = 3, // Outpost 21 edit - Contraband
 		/obj/item/seeds/cinnamon = 3
 		) //CHOMPEdit - Seed list altered to include extra seeds available in seed_storage_vr.dm. Added cinnamon
 
