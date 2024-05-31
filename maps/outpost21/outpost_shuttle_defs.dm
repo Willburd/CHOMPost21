@@ -264,6 +264,18 @@
 	base_turf = /turf/simulated/floor
 	base_area = /area/medical/hangar
 
+/obj/effect/shuttle_landmark/premade/medical/prospector
+	name = "Prospector (Starboard Dock)"
+	landmark_tag = "prospector_docks_medical"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
+
+/obj/effect/shuttle_landmark/premade/medical/prospector_rear
+	name = "Prospector (Medical Dock)"
+	landmark_tag = "prospector_rear_medical"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
+
 //////////////////////////////////////////////////////////////
 // Security shuttle
 /datum/shuttle/autodock/overmap/security
@@ -280,6 +292,12 @@
 	landmark_tag = "outpost_security_hangar"
 	base_turf = /turf/simulated/floor
 	base_area = /area/security/hangar
+
+/obj/effect/shuttle_landmark/premade/security/prospector
+	name = "Prospector (Port Dock)"
+	landmark_tag = "prospector_docks_security"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
 
 //////////////////////////////////////////////////////////////
 // Trawler Shuttle
@@ -334,6 +352,11 @@
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
 
+/obj/effect/shuttle_landmark/premade/trawler/prospector
+	name = "Prospector (Trawler Dock)"
+	landmark_tag = "prospector_docks_trawler"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
 
 
 //////////////////////////////////////////////////////////////
@@ -349,3 +372,15 @@
 	landmark_tag = "outpost_engineering_pad"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
 	base_area = /area/mine/explored/muriki/surface
+
+/obj/effect/shuttle_landmark/premade/generic/prospector_port
+	name = "Prospector (Far-Port Dock)"
+	landmark_tag = "prospector_public_port"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
+
+/obj/effect/shuttle_landmark/premade/generic/prospector_starboard
+	name = "Prospector (Far-Starboard Dock)"
+	landmark_tag = "prospector_public_starboard"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
