@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Job removal
 /decl/hierarchy/outfit/noncrew
 	name = OUTFIT_JOB_NAME(JOB_OUTSIDER)
 	//hierarchy_type = /decl/hierarchy/outfit/noncrew
@@ -39,6 +40,7 @@
 	if(istype(wallet))
 		wallet.owner_name = H.real_name
 		wallet.worth = 1000
+*/
 
 /decl/hierarchy/outfit/noncrew/vr_avatar
 	pda_slot = null

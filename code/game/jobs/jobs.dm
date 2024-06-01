@@ -29,9 +29,9 @@ var/const/PSYCHIATRIST		=(1<<7)
 //var/const/ROBOTICIST		=(1<<8) // Outpost 21 edit - Moved to engineering
 var/const/XENOBIOLOGIST		=(1<<9)
 var/const/PARAMEDIC			=(1<<10)
-var/const/PATHFINDER 		=(1<<11)
-var/const/EXPLORER 			=(1<<12)
-var/const/SAR 				=(1<<13)
+//var/const/PATHFINDER 		=(1<<11)		// Outpost 21 edit - removed job
+//var/const/EXPLORER 			=(1<<12)	// Outpost 21 edit - removed job
+//var/const/SAR 				=(1<<13)	// Outpost 21 edit - removed job
 var/const/XENOBOTANIST		=(1<<14)
 var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
 
@@ -56,7 +56,7 @@ var/const/ENTREPRENEUR		=(1<<15)
 
 var/const/OTHER				=(1<<10) //CHOMPStation Add
 var/const/NONCREW			=(1<<0) //CHOMPStation Add
-var/const/ANOMALY			=(1<<0) //CHOMPstation Add
+//var/const/ANOMALY			=(1<<0) //CHOMPstation Add // Outpost 21 edit - removed job
 var/const/STOWAWAY			=(1<<1) // Outpost 21 edit - stowaways!
 /* // CHOMPedit: Comment out Talon positions, we don't have that here.
 //VOREStation Add

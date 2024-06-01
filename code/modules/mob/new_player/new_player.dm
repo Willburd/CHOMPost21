@@ -566,7 +566,7 @@
 
 	ticker.mode.latespawn(character)
 
-	//CHOMPEdit Begin - non-crew join don't get a message
+	/* Outpost 21 edit - Job Removal: //CHOMPEdit Begin - non-crew join don't get a message
 	if(rank == JOB_OUTSIDER)
 		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
@@ -575,7 +575,7 @@
 		log_and_message_admins("has joined the round as anomaly. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			ticker.minds += character.mind
-	//CHOMPEdit End
+	*/ //CHOMPEdit End
 	// Outpost 21 edit begin - Stowaways behave the same as above!
 	if(rank == JOB_STOWAWAY)
 		log_and_message_admins("has joined the round as non-crew. (<A HREF='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)

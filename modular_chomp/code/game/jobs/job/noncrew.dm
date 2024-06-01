@@ -1,3 +1,4 @@
+/* Outpost 21 edit - removed job
 /datum/job/noncrew
     title = JOB_OUTSIDER
     disallow_jobhop = TRUE
@@ -63,6 +64,7 @@
 		return TRUE
 	else
 		return FALSE
+*/
 
 /datum/job/vr_avatar //So VR avatars dont spawn with PDAs and flood the servers
 	title = JOB_VR

@@ -17,7 +17,7 @@
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
 	allowed_mob_types = JOB_CARBON
-	disallow_job = list(JOB_OUTSIDER)
+	// disallow_job = list(JOB_OUTSIDER) // Outpost 21 edit - Job removal
 
 /datum/spawnpoint/cryo/New()
 	..()
