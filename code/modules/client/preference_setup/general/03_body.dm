@@ -494,7 +494,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	var/datum/species/mob_species = GLOB.all_species[pref.species]
 	. += "<table><tr style='vertical-align:top'><td><b>Body</b> "
-	. += "(<a href='?src=\ref[src];random=1'>&reg;</A>)"
+	. += "(<a title='Randomize' href='?src=\ref[src];random=1'>&reg;</A>)" // Outpost 21 edit - Lets actually SHOW what this button does
 	. += "<br>"
 	. += "Species: <a href='?src=\ref[src];show_species=1'>[pref.species]</a><br>"
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
