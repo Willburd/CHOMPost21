@@ -79,7 +79,7 @@
 		if(alt_title && !(alt_title in job.alt_titles))
 			pref.player_alt_titles -= job.title
 
-/datum/category_item/player_setup_item/occupation/content(mob/user, limit = 25, list/splitJobs = list())
+/datum/category_item/player_setup_item/occupation/content(mob/user, limit = 15, list/splitJobs = list()) // Outpost 21 edit - wide is better than tall
 	if(!job_master)
 		return
 
