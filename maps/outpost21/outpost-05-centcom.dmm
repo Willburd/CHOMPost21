@@ -4622,7 +4622,7 @@
 "vGc" = (/obj/machinery/vending/cola{dir = 8; pixel_x = 8},/obj/effect/floor_decal/spline/fancy/wood{dir = 5},/turf/simulated/floor/wood,/area/specialty/redspace)
 "vGl" = (/obj/structure/table/rack/shelf,/obj/effect/floor_decal/milspec/color/blue/half{dir = 5},/turf/simulated/floor/tiled/milspec,/area/specialty/redspace)
 "vGA" = (/obj/effect/floor_decal/borderfloor{dir = 1},/obj/effect/floor_decal/corner/blue/border{dir = 1},/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled/steel,/area/specialty/redspace)
-"vGG" = (/obj/structure/table/wooden_reinforced,/turf/simulated/floor/wood,/area/centcom/living)
+"vGG" = (/obj/structure/table/wooden_reinforced,/obj/item/weapon/storage/photo_album,/turf/simulated/floor/wood,/area/centcom/living)
 "vHh" = (/obj/effect/floor_decal/spline/plain{dir = 10},/turf/simulated/floor/carpet/blue,/area/specialty/redspace)
 "vHL" = (/obj/structure/flora/pottedplant{icon_state = "plant-22"},/obj/machinery/newscaster{pixel_y = 30},/turf/simulated/floor/wood,/area/centcom/restaurant)
 "vIx" = (/obj/structure/table/reinforced,/obj/item/weapon/book/manual/barman_recipes,/obj/item/weapon/tool/screwdriver,/obj/item/weapon/flame/lighter/zippo,/obj/item/clothing/head/that{pixel_x = 4; pixel_y = 6},/turf/simulated/floor/lino,/area/specialty/redspace)
