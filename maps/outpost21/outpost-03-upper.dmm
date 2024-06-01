@@ -911,7 +911,7 @@
 "eIC" = (/obj/structure/cable/yellow{d1 = 2; d2 = 4; icon_state = "2-4"},/turf/simulated/floor/outpost_roof/muriki,/area/muriki/rooftop/engineering)
 "eIU" = (/obj/machinery/atmospherics/pipe/simple/heat_exchanging{dir = 6},/turf/simulated/floor/outpost_roof/muriki,/area/muriki/rooftop/disposal)
 "eKl" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/effect/floor_decal/borderfloor/corner{dir = 1},/obj/effect/floor_decal/corner/lightgrey/bordercorner{dir = 1},/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/turf/simulated/floor/tiled,/area/hallway/muriki/civup)
-"eKt" = (/obj/effect/floor_decal/corner/purple{dir = 10},/obj/machinery/computer/general_air_control/large_tank_control{dir = 1; input_tag = "phoronics_burn_in"; name = "Burn Chamber Monitor"; output_tag = "phoronics_burn_out"; sensors = list("burn_sensor" = "phoronic_burn_gas"); pixel_y = -2},/turf/simulated/floor/tiled/white,/area/rnd/research/phoronics/burn)
+"eKt" = (/obj/effect/floor_decal/corner/purple{dir = 10},/obj/machinery/computer/general_air_control/large_tank_control{dir = 1; input_tag = "phoronics_burn_in"; name = "Burn Chamber Monitor"; output_tag = "phoronics_burn_out"; sensors = list("phoronic_burn_gas" = "Chamber Sensor"); pixel_y = -2},/turf/simulated/floor/tiled/white,/area/rnd/research/phoronics/burn)
 "eKw" = (/obj/effect/floor_decal/chapel,/obj/structure/bed/chair/sofa/pew{dir = 8},/turf/simulated/floor/tiled/monotile{color = "#999999"},/area/chapel/main)
 "eKE" = (/obj/structure/sign/securearea,/turf/simulated/wall/r_wall,/area/tcommsat/computer)
 "eLh" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/mob/living/simple_mob/slime/xenobio/rainbow/kendrick,/turf/simulated/floor/wood,/area/rnd/rdoffice)
