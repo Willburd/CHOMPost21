@@ -1,8 +1,8 @@
 // addictions
-#define ADDICTION_PROC -1000 // point where addiction triggers, starts counting down from 0 to here!
-#define SLOWADDICT_PROC -5000 // point where certain chems with barely addictive traits will kick in
-#define FASTADDICT_PROC -100 // point where certain chems with super addictive traits will kick in
-#define ADDICTION_PEAK 175 // point where addicted mobs reset to upon getting their addiction satiated... Decays over time,triggering messages and sideeffects if under 80
+#define ADDICTION_PROC -2000 // point where addiction triggers, starts counting down from 0 to here!
+#define SLOWADDICT_PROC -6000 // point where certain chems with barely addictive traits will kick in
+#define FASTADDICT_PROC -500 // point where certain chems with super addictive traits will kick in
+#define ADDICTION_PEAK 200 // point where addicted mobs reset to upon getting their addiction satiated... Decays over time,triggering messages and sideeffects if under 80
 
 /mob/living/carbon/
 	var/list/addictions = list() // contains currently addicted chems
