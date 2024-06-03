@@ -10,7 +10,7 @@
 	active_power_usage = 100
 	var/operating = FALSE
 	var/obj/machinery/recycling/crusher/crusher //Connects to regular crusher
-	var/obj/structure/garbage/fluidtrap/sump //Reagent trap for extraction and sorting
+	var/obj/vehicle/train/trolly_tank/sump //Reagent trap for extraction and sorting
 	var/obj/machinery/button/garbosystem/button
 	var/list/affecting
 	var/voracity = 5 //How much stuff is swallowed at once.
@@ -31,6 +31,7 @@
 
 /obj/machinery/v_garbosystem/attack_hand(mob/living/user as mob)
 	operating = !operating
+	validate_tank() // Outpost 21 edit - attaching vehicle tanks
 	update()
 
 /obj/machinery/v_garbosystem/attack_ai(mob/user as mob)
@@ -85,14 +86,13 @@
 							L.gib()
 							items_taken++
 							// Outpost 21 addition begin - Sludge production, bodily transfers
-							if(sump)
-								sump.make_sludge(5)
-								if(ishuman(L))
-									// Splorch
-									var/mob/living/carbon/human/H = L
-									sump.reagent_feed(H.bloodstr,1)
-									sump.reagent_feed(H.ingested,1)
-									sump.reagent_feed(H.vessel,0.5)
+							transfer_organic_to_tank(5)
+							if(ishuman(L))
+								// Splorch
+								var/mob/living/carbon/human/H = L
+								transfer_reagent_to_tank(H.bloodstr,1)
+								transfer_reagent_to_tank(H.ingested,1)
+								transfer_reagent_to_tank(H.vessel,0.5)
 							// Outpost 21 addition end
 						else
 							L.adjustBruteLoss(25)
@@ -107,10 +107,8 @@
 						spawn(15)
 							if(A.loc == loc)
 								// Outpost 21 addition begin - Allow reagent extraction
-								if(A.reagents && sump)
-									sump.reagent_feed(A.reagents,1)
-								if(istype(A,/obj/item/organ))
-									sump.make_biojunk(rand(4,9))
+								if(A.reagents)
+									transfer_reagent_to_tank(A.reagents,1)
 								// Outpost 21 addition end
 								A.forceMove(src)
 								if(!is_type_in_list(A,item_digestion_blacklist))
@@ -122,8 +120,8 @@
 							if(A)
 								A.forceMove(src)
 								// Outpost 21 addition begin - Allow reagent extraction
-								if(A.reagents && sump)
-									sump.reagent_feed(A.reagents,1)
+								if(A.reagents)
+									transfer_reagent_to_tank(A.reagents,1)
 								// Outpost 21 addition end
 								if(istype(A, /obj/structure/closet))
 									new /obj/item/stack/material/steel(loc, 2)
@@ -151,6 +149,56 @@
 		else
 			to_chat(user, "Unable to empty filter while the machine is running.")
 	return ..()
+
+// Outpost 21 edit begin - transfering fluids to vehicle tanks
+/obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(var/datum/reagents/reg,var/multiplier)
+	if(!validate_tank())
+		return
+	var/volume_magic = reg.total_volume * multiplier
+	volume_magic -= rand(2,10) // reagent tax
+	if(volume_magic > 0)
+		reg.trans_to_holder( sump.reagents, volume_magic)
+		transfer_sludge_to_tank(rand(1,5))
+
+/obj/machinery/v_garbosystem/proc/transfer_organic_to_tank(var/amt)
+	if(!validate_tank())
+		return
+	var/ratioA = FLOOR(amt*0.2,1)
+	var/ratioB = FLOOR(amt*0.8,1)
+	if(ratioA > 0)
+		sump.reagents.add_reagent("protein", ratioA)
+	if(ratioB > 0)
+		sump.reagents.add_reagent("triglyceride", ratioB)
+	if(ratioB > 0 || ratioA > 0)
+		transfer_sludge_to_tank(rand(4,9))
+
+/obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(var/amt)
+	if(prob(10) || amt >= 5)
+		sump.reagents.add_reagent("toxin",amt)
+		visible_message("\The [src] gurgles.")
+
+/obj/machinery/v_garbosystem/proc/validate_tank()
+	if(!sump)
+		return link_grinder()
+	var/turf/T = loc
+	if(!T.AdjacentQuick(sump))
+		return link_grinder()
+	return TRUE
+
+/obj/machinery/v_garbosystem/proc/link_grinder()
+	// Link to vehicle fluid tanker
+	var/sump_prev = sump
+	sump = locate(/obj/vehicle/train/trolly_tank) in loc.contents
+	if(!sump)
+		for(var/dir in alldirs)
+			sump = locate(/obj/vehicle/train/trolly_tank, get_step(src, dir))
+			if(sump)
+				break
+	if(!isnull(sump))
+		if(isnull(sump_prev))
+			visible_message("\The [src] automatically connects a hose to \the [sump].")
+		return
+// Outpost 21 edit end
 
 /obj/machinery/button/garbosystem
 	name = "garbage grinder switch"
