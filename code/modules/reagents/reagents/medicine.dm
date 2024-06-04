@@ -3,7 +3,7 @@
 /datum/reagent/inaprovaline
 	name = "Inaprovaline"
 	id = "inaprovaline"
-	description = "Inaprovaline is a synaptic stimulant and cardiostimulant. Commonly used to stabilize patients. Also counteracts allergic reactions."
+	description = "Inaprovaline is a synaptic stimulant and cardiostimulant. Commonly used to stabilize patients. Also counteracts allergic reactions, and withdrawls from addictions." // Outpost 21 edit - addictions can be treated
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#00BFFF"
