@@ -5179,6 +5179,7 @@
 #include "modular_outpost\code\game\machinery\braces.dm"
 #include "modular_outpost\code\game\machinery\hologram_tutorials.dm"
 #include "modular_outpost\code\game\machinery\metal_detector.dm"
+#include "modular_outpost\code\game\machinery\smart_centrifuge.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\burnpit.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\redspaceexit.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\terraformer_glands.dm"
