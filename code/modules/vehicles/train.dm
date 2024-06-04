@@ -113,7 +113,7 @@
 	else
 		// Outpost 21 edit begin - Draining the garbage sump
 		if(istype(src,/obj/vehicle/train/trolly_tank))
-			if(istype(C,/obj/item/weapon/reagent_containers))
+			if(istype(C,/obj/item/weapon/reagent_containers/glass))
 				var/obj/vehicle/train/trolly_tank/N = src
 				N.load_container(C)
 				return

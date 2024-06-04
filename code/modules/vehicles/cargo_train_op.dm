@@ -6,7 +6,7 @@
 	anchored = FALSE
 	flags = OPENCONTAINER
 
-	var/obj/item/weapon/reagent_containers/stored_container = null
+	var/obj/item/weapon/reagent_containers/glass/stored_container = null
 
 /obj/vehicle/train/trolly_tank/Initialize()
 	. = ..()
@@ -41,28 +41,25 @@
 		unload_container()
 		return
 	. = ..()
-
-/obj/vehicle/train/trolly_tank/verb/load_container(var/obj/item/weapon/reagent_containers/R = null)
+/obj/vehicle/train/trolly_tank/verb/load_container_verb()
 	set name = "Load Container"
 	set category = "Object"
-	set src in view(1)
+	set src in oview(1)
 
 	var/mob/M = usr
 	if(!M || M.incapacitated())
 		return
 
-	var/obj/item/W = R
-	if(R == null)
-		W = M.get_active_hand()
-
-	if(W == null)
-		return
-
-	if(istype(W,/obj/item/weapon/reagent_containers))
-		stored_container = W
+	var/obj/item/W = M.get_active_hand()
+	if(istype(W,/obj/item/weapon/reagent_containers/glass))
 		M.drop_from_inventory(W,src)
+		stored_container = W
 		visible_message("\The [M] loads \the [W] into \the [src].")
-		return
+
+/obj/vehicle/train/trolly_tank/proc/load_container(var/obj/item/W)
+	if(istype(W,/obj/item/weapon/reagent_containers/glass))
+		stored_container.forceMove(src)
+		stored_container = W
 
 /obj/vehicle/train/trolly_tank/AltClick(mob/user)
 	fill_container()
@@ -70,7 +67,7 @@
 /obj/vehicle/train/trolly_tank/verb/unload_container()
 	set name = "Unload Container"
 	set category = "Object"
-	set src in view(1)
+	set src in oview(1)
 
 	if(stored_container)
 		visible_message("\The [usr] removes \the [stored_container] from \the [src].")
@@ -82,7 +79,7 @@
 /obj/vehicle/train/trolly_tank/verb/fill_container()
 	set name = "Fill Loaded Container"
 	set category = "Object"
-	set src in view(1)
+	set src in oview(1)
 
 	if(!stored_container)
 		to_chat(usr,"No container loaded.")
