@@ -365,7 +365,7 @@
 
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
-
+		
 		// Outpost 21 edit begin - deep hunger antag
 		if(!isnull(owner.mind))
 			for(var/datum/objective/O in owner.mind.objectives)
@@ -373,6 +373,9 @@
 					var/datum/objective/consume/C = O
 					C.digested += 1
 		// Outpost 21 edit end
+
+	owner.churn_count++ //CHOMPAdd
+	owner.handle_special_unlocks() //CHOMPAdd
 
 	var/personal_nutrition_modifier = M.get_digestion_nutrition_modifier()
 	var/pred_digestion_efficiency = owner.get_digestion_efficiency_modifier()

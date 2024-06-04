@@ -13,6 +13,7 @@
 	S["pdachoice"]	>> pref.pdachoice
 	S["communicator_visibility"]	>> pref.communicator_visibility
 	S["ttone"]	>> pref.ringtone // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
+	//S["shoe_hater"] >> pref.shoe_hater	//RS ADD //CHOMPRemove, remove RS No shoes
 
 /datum/category_item/player_setup_item/general/equipment/save_character(var/savefile/S)
 	S["all_underwear"] << pref.all_underwear
@@ -21,6 +22,7 @@
 	S["pdachoice"]	<< pref.pdachoice
 	S["communicator_visibility"]	<< pref.communicator_visibility
 	S["ttone"]	<< pref.ringtone  // CHOMPEdit - We use ttone in the pref so that it doesnt get reset
+	//S["shoe_hater"] << pref.shoe_hater	//RS ADD //CHOMPRemove, remove RS No shoes
 
 /* Outpost 21 edit begin - Use a global list shared with the communicator AND pda
 var/global/list/valid_ringtones = list()
@@ -97,6 +99,7 @@ var/global/list/valid_ringtones = list()
 	. += "PDA Type: <a href='?src=\ref[src];change_pda=1'><b>[pdachoicelist[pref.pdachoice]]</b></a><br>"
 	. += "Communicator Visibility: <a href='?src=\ref[src];toggle_comm_visibility=1'><b>[(pref.communicator_visibility) ? "Yes" : "No"]</b></a><br>"
 	. += "Ringtone (leave blank for job default): <a href='?src=\ref[src];set_ringtone=1'><b>[pref.ringtone]</b></a> <a href='?src=\ref[src];test_ringtone=1'><b>TEST</b></a><br>" // Outpost 21 edit - test ringtone
+	//. += "Spawn With Shoes:<a href='?src=\ref[src];toggle_shoes=1'><b>[(pref.shoe_hater) ? "No" : "Yes"]</b></a><br>" //RS Addition //CHOMPRemove, remove RS No shoes
 
 	return jointext(.,null)
 
@@ -173,5 +176,12 @@ var/global/list/valid_ringtones = list()
 				S = device_ringtones[pref.ringtone]
 			SEND_SOUND(user.client, S)
 	// Outpost 21 edit end
+	/*CHOMPRemove Start,  remove RS No shoes
+	else if(href_list["toggle_shoes"])	//RS ADD START
+		if(CanUseTopic(user))
+			pref.shoe_hater = !pref.shoe_hater
+			return TOPIC_REFRESH
+			//RS ADD END
+	*///CHOMPRemove End, remove RS No shoes
 
 	return ..()
