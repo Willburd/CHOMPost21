@@ -1,5 +1,5 @@
 /datum/preferences
-	var/media_volume = 1
+	var/media_volume = 0.1 // Outpost 21 edit - Lets not destroy new player ears
 	var/media_player = 2	// 0 = VLC, 1 = WMP, 2 = HTML5, 3+ = unassigned
 
 /datum/category_item/player_setup_item/volume_sliders/media
