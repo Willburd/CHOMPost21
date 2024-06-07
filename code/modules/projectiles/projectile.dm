@@ -529,6 +529,7 @@
 		thing.set_light(impact_light_range, impact_light_intensity, impact_light_color_override? impact_light_color_override : color)
 		beam_components.beam_components += thing
 	QDEL_IN(beam_components, duration)
+	beam_components = null // Release beam components so projectile can Qdel. They'll Qdel on their own with the above line.
 
 //Returns true if the target atom is on our current turf and above the right layer
 //If direct target is true it's the originally clicked target.
