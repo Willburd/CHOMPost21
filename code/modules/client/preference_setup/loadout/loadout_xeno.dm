@@ -239,7 +239,7 @@
 /datum/gear/uniform/dept/undercoat/robo
 	display_name = "roboticist undercoat (Teshari)"
 	path = /obj/item/clothing/under/teshari/undercoat/jobs/robo
-	allowed_roles = list("Research Director","Roboticist")
+	allowed_roles = list("Chief Engineer","Roboticist") // Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/uniform/dept/undercoat/medical
 	display_name = "medical undercoat (Teshari)"
@@ -436,7 +436,7 @@
 /datum/gear/suit/dept/cloak/robo
 	display_name = "roboticist cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/robo
-	allowed_roles = list("Research Director","Roboticist")
+	allowed_roles = list("Chief Engineer","Roboticist") // Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/suit/dept/cloak/robo/New()
 	..()

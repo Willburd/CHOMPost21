@@ -439,7 +439,7 @@
 /datum/gear/suit/wintercoat/science/robotics
 	display_name = "winter coat, robotics"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/science/robotics
-	allowed_roles = list("Research Director", "Roboticist")
+	allowed_roles = list("Chief Engineer","Roboticist") // Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/suit/wintercoat/science/rd
 	display_name = "winter coat, research director"

@@ -599,9 +599,9 @@
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_uniforms))
 
 /datum/gear/uniform/science_robotics_selector
-	display_name = "Science - Roboticist's Uniforms"
+	display_name = "Engineering - Roboticist's Uniforms"
 	description = "Select from a range of outfits available to all Roboticists."
-	allowed_roles = list("Research Director","Roboticist")
+	allowed_roles = list("Chief Engineer","Roboticist") // Outpost 21 edit - Roboticist moved to engineering
 	path = /obj/item/clothing/under/rank/neo_robo
 	sort_category = "Uniforms"
 	cost = 1
