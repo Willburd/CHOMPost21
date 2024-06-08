@@ -116,7 +116,7 @@
 	display_name = "pilot qualification pin"
 	description = "An iron pin denoting the qualification to fly USG spacecraft."
 	path = /obj/item/clothing/accessory/solgov/specialty/pilot
-	allowed_roles = list("Pathfinder","Pilot","Field Medic","Talon Pilot") //CHOMP keep explo
+	// allowed_roles = list("Pathfinder","Pilot","Field Medic","Talon Pilot") //CHOMP keep explo Outpost 21 edit, removed white list
 
 /datum/gear/accessory/flops
 	display_name = "drop straps"
