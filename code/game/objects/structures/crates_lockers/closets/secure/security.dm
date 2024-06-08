@@ -174,7 +174,7 @@
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/device/ticket_printer,		//CHOMPStation addition
-		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
+		// /obj/item/device/retail_scanner/security,	//CHOMPStation addition Outpost 21 edit - removed ancient retail system
 		/obj/item/clothing/accessory/bodycam // CHOMPEdit
 
 		)
@@ -219,7 +219,7 @@
 		/obj/item/clothing/shoes/boots/winter/security,
 		/obj/item/device/flashlight/maglight,
 		/obj/item/device/holowarrant,				//CHOMPStation addition
-		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
+		// /obj/item/device/retail_scanner/security,	//CHOMPStation addition Outpost 21 edit - removed ancient retail system
 		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
 		/obj/item/device/ticket_printer,			//CHOMPStation addition
 		/obj/item/clothing/accessory/bodycam // CHOMPEdit
@@ -284,7 +284,7 @@
 		/obj/item/device/taperecorder,
 		/obj/item/weapon/storage/bag/detective,
 		/obj/item/device/tape/random = 3,
-		/obj/item/device/retail_scanner/security,	//CHOMPStation addition
+		// /obj/item/device/retail_scanner/security,	//CHOMPStation addition Outpost 21 edit - removed ancient retail system
 		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
 		)
 

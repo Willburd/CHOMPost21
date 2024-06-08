@@ -80,7 +80,7 @@
 		/obj/item/poster/custom = 200,
 		/obj/item/device/ticket_printer = 200,
 		/obj/item/device/holowarrant = 200,
-		/obj/item/device/retail_scanner/security = 100,
+		///obj/item/device/retail_scanner/security = 100, // Outpost 21 edit - removed ancient retail system
 		/obj/item/taperoll/police = 100
 	)
 
