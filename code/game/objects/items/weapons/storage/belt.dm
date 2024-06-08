@@ -250,7 +250,12 @@
 		/obj/item/weapon/cell/device,
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/storage/quickdraw/syringe_case,
-		/obj/item/device/antibody_scanner, // Outpost 21 edit - This too
+		// Outpost 21 edit begin - additional medical tools
+		/obj/item/device/antibody_scanner,
+		/obj/item/device/sleevemate,
+		/obj/item/device/mass_spectrometer,
+		/obj/item/weapon/surgical,
+		// Outpost 21 edit end
 		/obj/item/ammo_casing/macrobattery // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
 		)
 
