@@ -255,6 +255,7 @@
 		/obj/item/device/sleevemate,
 		/obj/item/device/mass_spectrometer,
 		/obj/item/weapon/surgical,
+		/obj/item/clothing/mask/chewable/candy/lolli, // lol
 		// Outpost 21 edit end
 		/obj/item/ammo_casing/macrobattery // CHOMPedit: Macrobatteries for the Curabitur can fit into medbelts.
 		)
