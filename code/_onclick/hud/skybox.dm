@@ -1,4 +1,4 @@
-#define SKYBOX_PADDING	4	// How much larger we want the skybox image to be than client's screen (in turfs)
+#define SKYBOX_PADDING	7	// How much larger we want the skybox image to be than client's screen (in turfs) Outpost 21 edit - support for wider maps
 #define SKYBOX_PIXELS	736	// Size of skybox image in pixels
 #define SKYBOX_TURFS	(SKYBOX_PIXELS/WORLD_ICON_SIZE)
 
