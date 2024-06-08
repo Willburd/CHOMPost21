@@ -8,6 +8,7 @@
 #define OXY_DAMAGE 0x80
 // Outpost 21 addition begin
 #define WEIRD_ORGANS 0x100
+#define HUSKED_BODY 0x200
 
 /datum/category_item/catalogue/technology/medical_kiosk
 	name = "Medical Kiosk"
@@ -143,6 +144,10 @@
 		if(istype(I,/obj/item/organ/internal/malignant))
 			problems |= WEIRD_ORGANS
 		// Outpost 21 edit end
+	// Outpost 21 edit begin - show husking
+	if(HUSK in user.mutations)
+		problems |= HUSKED_BODY
+	// Outpost 21 edit end
 
 	if(user.getToxLoss() > 0)
 		problems |= TOXIN_DAMAGE
@@ -180,6 +185,10 @@
 	if(problems & WEIRD_ORGANS)
 		problem_text += "<br><span class='warning'>Anatomical irregularities detected - Please see a medical professional.</span>"
 	// Outpost 21 addition end
+	// Outpost 21 edit begin - show husking
+	if(problems & HUSKED_BODY)
+		problem_text += "<br><span class='danger'>Anatomical structure lost, resuscitation not possible!</span>"
+	// Outpost 21 edit end
 
 	return problem_text
 
@@ -297,3 +306,4 @@
 #undef OXY_DAMAGE
 // Outpost 21 edit - malignants
 #undef WEIRD_ORGANS
+#undef HUSKED_BODY

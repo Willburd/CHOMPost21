@@ -38,6 +38,9 @@ const abnormalities = [
     (occupant) => 'Photoreceptor abnormalities detected.',
   ],
   ['nearsighted', 'average', (occupant) => 'Retinal misalignment detected.'],
+  /* Outpost 21 add */
+  ['husked', 'bad', (occupant) => 'Anatomical structure lost, resuscitation not possible!'],
+  /* Outpost 21 add end */
   /* VOREStation Add */
   [
     'humanPrey',
@@ -290,6 +293,12 @@ const BodyScannerMainAbnormalities = (props) => {
     occupant.livingPrey ||
     occupant.objectPrey;
   /* VOREStation Add End */
+
+  /* Outpost 21 Add */
+  hasAbnormalities =
+  hasAbnormalities ||
+  occupant.husked;
+  /* Outpost 21 End */
 
   if (!hasAbnormalities) {
     return (
