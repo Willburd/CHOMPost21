@@ -22,7 +22,7 @@
 /obj/machinery/containment_field/Initialize()
 	. = ..()
 	shockdirs = list(turn(dir,90),turn(dir,-90))
-	sense_proximity(callback = /atom/proc/HasProximity)
+	//sense_proximity(callback = /atom/proc/HasProximity) // Outpost 21 edit - Major memory leak for any effect that touches the field
 
 /obj/machinery/containment_field/set_dir(new_dir)
 	. = ..()
@@ -30,7 +30,7 @@
 		shockdirs = list(turn(dir,90),turn(dir,-90))
 
 /obj/machinery/containment_field/Destroy()
-	unsense_proximity(callback = /atom/proc/HasProximity)
+	//unsense_proximity(callback = /atom/proc/HasProximity) // Outpost 21 edit - Major memory leak for any effect that touches the field
 	if(FG1 && !FG1.clean_up)
 		FG1.cleanup()
 	if(FG2 && !FG2.clean_up)
