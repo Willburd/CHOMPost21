@@ -198,6 +198,7 @@ var/list/_human_default_emotes = list(
 	//CHOMP Add end
 	//outpost 21 add begin
 	/decl/emote/visible/ragescree,
+	/decl/emote/visible/sdance,
 	/decl/emote/visible/floorspin/tantrum,
 	/decl/emote/audible/woo
 	//outpost 21 add end
@@ -352,6 +353,7 @@ var/list/_simple_mob_default_emotes = list(
 	//CHOMP Add end
 	//outpost 21 add begin
 	/decl/emote/audible/wawa,
+	/decl/emote/visible/sdance,
 	/decl/emote/visible/floorspin/tantrum,
 	/decl/emote/visible/ragescree
 	//outpost 21 add end

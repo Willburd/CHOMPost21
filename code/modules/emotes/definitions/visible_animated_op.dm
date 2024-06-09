@@ -100,3 +100,13 @@
 	sleep(1)
 	if(!QDELETED(user))
 		user.SpinAnimation(10,7) // two loops
+
+/decl/emote/visible/sdance
+	key = "sdance"
+	check_restraints = TRUE
+	emote_message_3p = "gracefully spins!"
+	emote_delay = 2 SECONDS
+
+/decl/emote/visible/sdance/do_extra(mob/user)
+	if(istype(user))
+		user.spin(20, 1)
