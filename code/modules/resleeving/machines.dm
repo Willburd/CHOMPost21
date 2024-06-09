@@ -637,11 +637,13 @@
 	if(new_imp.handle_implant(occupant, BP_HEAD))
 		new_imp.post_implant(occupant)
 
+	// Outpost 21 edit begin - Small edits to the flavor text. - Ignus
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
-		to_chat(occupant, "<span class='notice'>You feel a small pain in your head as you're given a new backup implant. Your new body feels comfortable already, however.</span>")
+		to_chat(occupant, "<span class='notice'>Your eyes open as you wake up in the tube, remembering only your last scan. Your new body feels comfortable, however.</span>")
 	else
-		to_chat(occupant, "<span class='warning'>You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least.</span>")
+		to_chat(occupant, "<span class='warning'>Your eyes wince at the light as you try to remember what happened, weren't you just in the lobby? It's disorienting.</span>")
+	// Outpost 21 edit end
 
 	occupant.confused = max(occupant.confused, confuse_amount)
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
