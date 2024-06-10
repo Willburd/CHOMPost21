@@ -66,13 +66,14 @@
 	name = "station intercom (Medbay)"
 	icon_state = "medintercom"
 	light_color = "#00aaff"
-	frequency = MED_I_FREQ
+	frequency = MED_FREQ //Outpost edit: Why was Med_I_Freq used? It appears bugged and functions separately from all other department radio channels.
+//						As such, I changed this to be in-line with the actual medical department radio to make it make sense, and keep things consistent.
 
 /obj/item/device/radio/intercom/department/security
 	name = "station intercom (Security)"
 	icon_state = "secintercom"
 	light_color = "#ff0000"
-	frequency = SEC_I_FREQ
+	frequency = SEC_FREQ //Outpost edit: See above.
 
 /obj/item/device/radio/intercom/entertainment
 	name = "entertainment intercom"

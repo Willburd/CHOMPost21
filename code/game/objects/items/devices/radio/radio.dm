@@ -8,11 +8,11 @@ var/global/list/default_internal_channels = list(
 	num2text(COMM_FREQ)= list(access_heads),
 	num2text(ENG_FREQ) = list(access_engine_equip, access_atmospherics),
 	num2text(MED_FREQ) = list(access_medical_equip),
-	num2text(MED_I_FREQ)=list(access_medical_equip),
+	num2text(MED_I_FREQ)=list(access_medical_equip), //outpost: Do we need this? Can probably comment out.
 	num2text(BDCM_FREQ) =list(access_security), // CHOMPEdit
 
 	num2text(SEC_FREQ) = list(access_security),
-	num2text(SEC_I_FREQ)=list(access_security),
+	num2text(SEC_I_FREQ)=list(access_security), //outpost: Do we need this? Can probably comment out.
 	num2text(SCI_FREQ) = list(access_tox, access_robotics, access_xenobiology),
 	num2text(SUP_FREQ) = list(access_cargo, access_mining_station),
 	num2text(SRV_FREQ) = list(access_janitor, access_library, access_hydroponics, access_bar, access_kitchen),
