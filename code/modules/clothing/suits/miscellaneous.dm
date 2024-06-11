@@ -46,6 +46,8 @@
 	desc = "Replica armor commonly worn by Dominion Of Mu'tu'bi soldiers from the hit series Spacer Trail. Modified for Laser Tag (Red Team)."
 	icon_state = "redtag2"
 
+// #undef LASER_TAG_HEALTH Outpost 21 edit - We use it in an override
+
 /*
  * 80s
  */

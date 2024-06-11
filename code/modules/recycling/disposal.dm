@@ -1743,3 +1743,7 @@
 		dirs = alldirs.Copy()
 
 	src.streak(dirs)
+
+#undef SEND_PRESSURE
+#undef PRESSURE_TANK_VOLUME
+#undef PUMP_MAX_FLOW_RATE
