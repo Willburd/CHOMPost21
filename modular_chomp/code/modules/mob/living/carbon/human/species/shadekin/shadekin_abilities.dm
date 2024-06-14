@@ -219,8 +219,10 @@
 			for(var/obj/item/O in organ.implants)
 				if(is_type_in_list(O, allowed_implants))
 					continue
+				/* Outpost 21 edit - Nif removal
 				if(O == nif)
 					nif.unimplant(src)
+				*/
 				O.forceMove(drop_location())
 				organ.implants -= O
 		if(!has_embedded_objects())
