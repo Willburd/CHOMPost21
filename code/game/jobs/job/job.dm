@@ -175,10 +175,12 @@
 	//return (brain_type && LAZYACCESS(ideal_age_by_species, brain_type)) || LAZYACCESS(ideal_age_by_species, brain_type) || ideal_character_age //VOREStation Removal
 
 /datum/job/proc/is_species_banned(species_name, brain_type)
+	/* Outpost 21 edit - Allow shadekin jobs, they're whitelist anyway
 	// CHOMPEdit begin -- Shadekin cannot be any crew position
 	if(species_name == SPECIES_SHADEKIN)
 		return TRUE
 	// CHOMPEdit end
+	*/
 	return FALSE // VOREStation Edit - Any species can be any job.
 	/* VOREStation Removal
 	if(banned_job_species == null)
