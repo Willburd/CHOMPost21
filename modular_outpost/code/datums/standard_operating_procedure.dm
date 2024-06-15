@@ -198,7 +198,7 @@
 			<br/>Following the RD is the Head of Personnel, who is in charge of maintaining crew order, enforcing SOP, condition codes, and ensuring crew needs are met. Any Civilian jobs fall under the authority of the head of personnel. \
 			<br/>Following the HOP is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain. \
 			<hr/>In the unlikely event where there is no head authority on the station, individuals of each department take charge based on seniority and experience, as follows. \
-			<br/>Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests. \
+			<br/>Command Secretary, Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests. \
 			<br/>The lowest ranking in the chain of command is the station AI. The station AI has no authority, and can never give orders to any non-synthetic crew, regardless of its laws. Synthetic crew and cyborgs fall under the station AI."
 
 /datum/sop_entry/stationlaw

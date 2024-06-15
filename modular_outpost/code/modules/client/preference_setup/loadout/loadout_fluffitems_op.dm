@@ -35,33 +35,45 @@
 	ckeywhitelist = list("buckwildwolf","darklord92","drakefrostpaw","jademanique","nadyr","remthebold","seagha","wdf71","synxplushy")
 	character_name = null
 
+/datum/gear/fluff/ESHUI_bronzemedal
+	display_name = "ESHUI Meritorious Defense Medal"
+	path = /obj/item/clothing/accessory/medal/solgov/bronze/sol/eshui
+	ckeywhitelist = list("drakefrostpaw","nadyr","Ozydev","remthebold","synxplushy","wdf71","CadeTiger")
+	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam")
+
 /datum/gear/fluff/ESHUI_medalval
 	display_name = "ESHUI Medal of Valor"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sol/eshui
 	ckeywhitelist = list("darklord92","remthebold")
 	character_name = list("Tesum Shari","Trashfire")
 
-/datum/gear/fluff/ESHUI_ironstar
-	display_name = "ESHUI Station Expeditionary Medal"
-	path = /obj/item/clothing/accessory/medal/solgov/iron/star/eshui
-	ckeywhitelist = list("drakefrostpaw","nadyr","Ozydev","remthebold","synxplushy","wdf71")
-	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz")
+/datum/gear/fluff/ESHUI_medalcomb
+	display_name = "ESHUI Combat Action Medal"
+	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
+	ckeywhitelist = list("Ozydev","Synxplushy")
+	character_name = list("Raine Rattlewag","Zeeshi")
 
 /datum/gear/fluff/ESHUI_rankpin
 	display_name = "ESHUI Officer's Qualification Pin"
 	path = /obj/item/clothing/accessory/solgov/specialty/officer/eshui
 	ckeywhitelist = list("remthebold","seagha")
-	character_name = list("Trashfire","Schale Vam","Aiektaaknell","Khrutch Yizhnera","Qrill", "Janik Vam")
+	character_name = list("Trashfire","Schale Vam","Aiektaaknell","Qrill", "Janik Vam")
+
+/datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
+	display_name = "ESHUI Captaincy Medal"
+	path = /obj/item/clothing/accessory/medal/gold/captain/eshui
+	ckeywhitelist = list("seagha")
+	character_name = list("Khrutch Yizhnera")
 
 /datum/gear/fluff/ESHUI_whiteheart
-	display_name = "ESHUI Medical Medal"
+	display_name = "ESHUI Medical Action Award"
 	path = /obj/item/clothing/accessory/medal/solgov/heart/eshui
 	ckeywhitelist = list("seagha")
 	character_name = list("Schale Vam")
 
-/datum/gear/fluff/ESHUI_goldhonor //Awarded for being the first to retrive it from the dragon's lair
+/datum/gear/fluff/ESHUI_goldhonormelt //Awarded for being the first to retrive it from the dragon's lair
 	display_name = "ESHUI Half-Melted Medal of Heroism"
-	path = /obj/item/clothing/accessory/medal/gold/heroism
+	path = /obj/item/clothing/accessory/medal/gold/heroismmelted/eshui
 	description = "An extremely rare golden medal awarded only by high ranking officials. To receive such a medal is the highest honor and as such, very few exist... this one looks charred and half melted."
 	ckeywhitelist = list("nadyr")
 	character_name = list("Taaa")
