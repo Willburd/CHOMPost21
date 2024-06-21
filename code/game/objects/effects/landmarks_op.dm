@@ -85,8 +85,6 @@
 			C.loc = src.loc
 
 		if(6)
-			if(prob(40))
-				return // Lower chance due to abuse.
 			var/mob/living/simple_mob/vore/alienanimals/chu/C = new /mob/living/simple_mob/vore/alienanimals/chu()
 			C.loc = src.loc
 
@@ -117,6 +115,8 @@
 			C.loc = src.loc
 
 		if(3)
+			if(prob(40))
+				return // Lower chance due to abuse.
 			var/mob/living/simple_mob/vore/alienanimals/chu/C = new /mob/living/simple_mob/vore/alienanimals/chu()
 			C.loc = src.loc
 
