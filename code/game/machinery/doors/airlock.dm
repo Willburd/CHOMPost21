@@ -1016,12 +1016,21 @@ About the new airlock wires panel:
 			flick("door_deny", src)
 		playsound(src, knock_hammer_sound, 50, 0, 3)
 	else if(arePowerSystemsOn()) //ChompEDIT - removed intent check
-		src.visible_message("[user] presses the door bell on \the [src].", "\The [src]'s bell rings.")
-		src.add_fingerprint(user)
+		// Outpost 21 edit begin - Electrified doors can be checked by ringing bell
+		if(isElectrified())
+			src.visible_message("[user] presses the door bell on \the [src], making it violently spark!", "\The [src] sparks!")
+			src.add_fingerprint(user)
+			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+			s.set_up(5, 1, src)
+			s.start()
+		else
+		// Outpost 21 edit end
+			src.visible_message("[user] presses the door bell on \the [src].", "\The [src]'s bell rings.")
+			src.add_fingerprint(user)
 		if(icon_state == "door_closed")
 			flick("door_deny", src)
 		playsound(src, knock_sound, 50, 0, 3)
-	else //ChompEDIT - removed intent check
+else //ChompEDIT - removed intent check
 		src.visible_message("[user] knocks on \the [src].", "Someone knocks on \the [src].")
 		src.add_fingerprint(user)
 		playsound(src, knock_unpowered_sound, 50, 0, 3)
