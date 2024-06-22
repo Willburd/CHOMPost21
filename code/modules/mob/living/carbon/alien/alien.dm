@@ -31,7 +31,8 @@
 	add_verb(src,/mob/living/proc/hide) //CHOMPEdit TGPanel
 
 	instance_num = rand(1, 1000)
-	name = "[initial(name)] ([instance_num])"
+	if(randomize_name)
+		name = "[initial(name)] ([instance_num])"
 	real_name = name
 	regenerate_icons()
 
