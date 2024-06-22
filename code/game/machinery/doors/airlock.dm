@@ -1030,7 +1030,7 @@ About the new airlock wires panel:
 		if(icon_state == "door_closed")
 			flick("door_deny", src)
 		playsound(src, knock_sound, 50, 0, 3)
-else //ChompEDIT - removed intent check
+	else //ChompEDIT - removed intent check
 		src.visible_message("[user] knocks on \the [src].", "Someone knocks on \the [src].")
 		src.add_fingerprint(user)
 		playsound(src, knock_unpowered_sound, 50, 0, 3)
