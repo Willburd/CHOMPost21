@@ -27,7 +27,7 @@
 	attacktext = list("chomped")
 	see_in_dark = 8
 	minbodytemp = 0
-	ai_holder_type = /datum/ai_holder/simple_mob/healbelly
+	ai_holder_type = /datum/ai_holder/simple_mob/healbelly/leopardmander // Outpost 21 edit - leopardmanders don't talk
 	max_buckled_mobs = 1
 	mount_offset_y = 32
 	mount_offset_x = -16
