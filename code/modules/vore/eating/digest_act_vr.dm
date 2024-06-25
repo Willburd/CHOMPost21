@@ -134,7 +134,13 @@
 				S.use(1)
 				digest_stage = w_class
 		else
-			if(istype(src, /obj/item/weapon/reagent_containers/food))
+			// Outpost 21 edit begin - pill digestion support
+			if(istype(src, /obj/item/weapon/reagent_containers/pill))
+				if(ishuman(B.owner) && reagents)
+					var/mob/living/carbon/human/H = B.owner
+					reagents.trans_to_holder(H.ingested, (reagents.total_volume), 1, 0)
+			// Outpost 21 edit end
+			else if(istype(src, /obj/item/weapon/reagent_containers/food))
 				if(ishuman(B.owner) && reagents)
 					var/mob/living/carbon/human/H = B.owner
 					reagents.trans_to_holder(H.ingested, (reagents.total_volume), B.nutrition_percent / 100, 0)
