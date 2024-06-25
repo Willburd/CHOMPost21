@@ -23,7 +23,9 @@
 	var/obj/item/weapon/weldingtool/weldtool = null
 	var/obj/item/device/assembly/igniter/igniter = null
 	var/obj/item/weapon/tank/phoron/ptank = null
-
+	// Outpost 21 edit begin - flamethrower rework
+	var/volume_per_max_burn = 20 // gets divided by the intended burn ratio
+	// Outpost 21 edit end
 
 /obj/item/weapon/flamethrower/Destroy()
 	QDEL_NULL(weldtool)
@@ -59,13 +61,56 @@
 	return
 
 /obj/item/weapon/flamethrower/afterattack(atom/target, mob/user, proximity)
-	if(!proximity) return
+	// outpost 21 edit begin - Flamethrower rework
+	/*if(!proximity) return
 	// Make sure our user is still holding us
 	if(user && user.get_active_hand() == src)
 		var/turf/target_turf = get_turf(target)
 		if(target_turf)
 			var/turflist = getline(user, target_turf)
 			flame_turf(turflist)
+	*/
+
+	// hackey dragon projectile spawn code... I should have ported it here, but that feels like stealing?
+	if(!lit || operating)	return
+	if(user && user.get_active_hand() == src)
+		if(user.a_intent == I_HELP && user.is_preference_enabled(/datum/client_preference/safefiring))
+			to_chat(user, "<span class='warning'>You refrain from firing \the [src] as your intent is set to help.</span>")
+			return
+
+		if(check_fuel())
+			// spawn projectile
+			// TODO - port this to it's own projectile so the damage can be balanced better?
+			var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
+			playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
+
+			// configure to be less broken! We're only a flamethrower, not a dragon!
+			P.submunition_spread_max = 10 + round(80*thrower_spew_percent())
+			P.submunition_spread_min = 5 + round(50*thrower_spew_percent())
+			P.submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 2 + round(thrower_spew_percent()*2))
+
+			// launch!
+			P.launch_projectile( target, BP_TORSO, src)
+
+			// suck out fuel and burn it
+			var/datum/gas_mixture/used_gas = ptank.air_contents.remove_ratio(volume_per_max_burn * thrower_spew_percent() / ptank.air_contents.volume)
+			qdel(used_gas)
+			update_icon()
+
+			// for updating hud stuff
+			for(var/mob/M in viewers(1, loc))
+				if((M.client && M.machine == src))
+					attack_self(M)
+		else
+			to_chat(user, "<span class='notice'>There is not enough pressure in [src]'s tank!</span>")
+			update_icon()
+
+		// prevent spam
+		operating = 1
+		sleep(15)
+		operating = 0
+	return
+	// outpost 21 edit end
 
 /obj/item/weapon/flamethrower/attackby(obj/item/W as obj, mob/user as mob)
 	if(user.stat || user.restrained() || user.lying)	return
@@ -135,6 +180,7 @@
 	usr.set_machine(src)
 	if(href_list["light"])
 		if(!ptank)	return
+		if(!check_fuel())	return // Outpost 21 edit - Flamethrower rework
 		if(ptank.air_contents.gas["phoron"] < 1)	return
 		if(!status)	return
 		lit = !lit
@@ -156,7 +202,7 @@
 	update_icon()
 	return
 
-
+/* Outpost 21 edit - Flamethrower rework
 //Called from turf.dm turf/dblclick
 /obj/item/weapon/flamethrower/proc/flame_turf(turflist)
 	if(!lit || operating)	return
@@ -192,6 +238,14 @@
 	target.hotspot_expose((ptank.air_contents.temperature*2) + 380,500) // -- More of my "how do I shot fire?" dickery. -- TLE
 	//location.hotspot_expose(1000,500,1)
 	return
+*/
+// Outpost 21 edit begin - Flamethrower rework
+/obj/item/weapon/flamethrower/proc/thrower_spew_percent()
+	return throw_amount / 5000
+
+/obj/item/weapon/flamethrower/proc/check_fuel()
+	return ptank != null && ptank.air_contents.total_moles > 5 // minimum fuel usage is five moles, for EXTREMELY hot mix or super low pressure
+// Outpost 21 edit end
 
 /obj/item/weapon/flamethrower/full/New(var/loc)
 	..()
