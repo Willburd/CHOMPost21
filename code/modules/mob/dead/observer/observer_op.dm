@@ -19,7 +19,7 @@
 
 /mob/observer/dead/verb/become_jil()
 	set name = "Become jil"
-	set category = "Ghost"
+	set category = "Ghost.Join"
 
 	if(CONFIG_GET(flag/disable_player_mice)) // CHOMPEdit
 		to_chat(src, "<span class='warning'>Spawning as a jil is currently disabled.</span>")
