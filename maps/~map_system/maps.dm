@@ -141,6 +141,12 @@ var/list/all_maps = list()
 
 	var/list/planet_datums_to_make = list() // Types of `/datum/planet`s that will be instantiated by SSPlanets.
 
+	// Outpost 21 edit begin - Custom ores per map
+	var/station_uses_common_ore_only = FALSE
+	var/common_ores = list("marble" = 3,/* "quartz" = 10, "copper" = 20, "tin" = 15, "bauxite" = 15*/, "uranium" = 10, "platinum" = 10, "hematite" = 70, "rutile" = 15, "carbon" = 70, "diamond" = 2, "gold" = 10, "silver" = 10, "phoron" = 20, "lead" = 3,/* "void opal" = 1,*/ "verdantium" = 1/*, "painite" = 1*/)
+	var/rare_ores = list("marble" = 5,/* "quartz" = 15, "copper" = 10, "tin" = 5, "bauxite" = 5*/, "uranium" = 15, "platinum" = 20, "hematite" = 15, "rutile" = 20, "carbon" = 15, "diamond" = 3, "gold" = 15, "silver" = 15, "phoron" = 25, "lead" = 5,/* "void opal" = 1,*/ "verdantium" = 2/*, "painite" = 1*/)
+	// Outpost 21 edit end
+
 /datum/map/New()
 	..()
 	if(zlevel_datum_type)
