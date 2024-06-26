@@ -51,3 +51,31 @@
 	projectiles_per_shot = 3
 	deviation = 0.3
 	fire_cooldown = 2
+
+/obj/item/vehicle_interior_weapon/pacify
+	name = "\improper MK-IV 'Crowd Pleaser' fire control"
+	desc = "A modified version of the L6 SAW, chambered in rubber rounds only. Fun for the whole family!"
+
+	icon = 'icons/obj/pointdefense.dmi'
+	icon_state = "pointdefense2"
+
+	projectile = /obj/item/projectile/bullet/pistol/rubber/strong
+	fire_sound = 'sound/weapons/gunshot3.ogg'
+	projectiles = 100 //Lots of rounds
+	projectiles_per_shot = 5
+	deviation = 0.2
+	fire_cooldown = 2
+
+/obj/item/vehicle_interior_weapon/hmg
+	name = "\improper Mounted Kord 6P50"
+	desc = "An appropriately mounted Kord 6P50, guaranteed to supress whatever the hell you're pointing at."
+
+	icon = 'icons/obj/pointdefense.dmi'
+	icon_state = "pointdefense2"
+
+	projectile = /obj/item/projectile/bullet/rifle/a127x108
+	fire_sound = 'sound/weapons/serdy/strela.ogg'
+	projectiles = 50 //10 bursts, matching the Scattershot's 10. Also, conveniently, doesn't eat your powercell when reloading like 300 bullets does.
+	projectiles_per_shot = 5
+	deviation = 0.2
+	fire_cooldown = 3
