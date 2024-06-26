@@ -2534,6 +2534,7 @@
 #include "code\modules\emotes\definitions\visible_animated.dm"
 #include "code\modules\emotes\definitions\visible_animated_op.dm"
 #include "code\modules\emotes\definitions\visible_custom_yw.dm"
+#include "code\modules\emotes\definitions\visible_op.dm"
 #include "code\modules\emotes\definitions\visible_vomit.dm"
 #include "code\modules\emotes\definitions\visible_vr.dm"
 #include "code\modules\entopics_vr\alternate_appearance.dm"

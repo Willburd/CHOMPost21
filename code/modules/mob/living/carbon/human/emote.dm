@@ -200,7 +200,9 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/ragescree,
 	/decl/emote/visible/sdance,
 	/decl/emote/visible/floorspin/tantrum,
-	/decl/emote/audible/woo
+	/decl/emote/audible/woo,
+	/decl/emote/visible/kiss,
+	/decl/emote/visible/dab
 	//outpost 21 add end
 )
 
@@ -355,7 +357,9 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/wawa,
 	/decl/emote/visible/sdance,
 	/decl/emote/visible/floorspin/tantrum,
-	/decl/emote/visible/ragescree
+	/decl/emote/visible/ragescree,
+	/decl/emote/visible/kiss,
+	/decl/emote/visible/dab
 	//outpost 21 add end
 	)
 	//VOREStation Add End
