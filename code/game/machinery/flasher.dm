@@ -28,9 +28,10 @@
 /obj/machinery/flasher/portable/Initialize()
 	. = ..()
 	// if already anchored, setup the proxity check
-	if(anchored)
-		add_overlay("[base_state]-s")
-		sense_proximity(callback = /atom/proc/HasProximity)
+	spawn(100)
+		if(anchored)
+			add_overlay("[base_state]-s")
+			sense_proximity(callback = /atom/proc/HasProximity)
 // Outpost 21 edit end
 
 /obj/machinery/flasher/power_change()
