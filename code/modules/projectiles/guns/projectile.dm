@@ -83,14 +83,19 @@
 	if (!chambered) return
 
 	// Aurora forensics port, gunpowder residue.
-	if(chambered.leaves_residue)
-		var/mob/living/carbon/human/H = loc
-		if(istype(H))
-			if(!H.gloves)
-				H.gunshot_residue = chambered.caliber
-			else
-				var/obj/item/clothing/G = H.gloves
-				G.gunshot_residue = chambered.caliber
+	// Outpost 21 edit begin - Try catch this for future sanity.
+	try
+		if(chambered.leaves_residue)
+			var/mob/living/carbon/human/H = loc
+			if(istype(H))
+				if(!H.gloves)
+					H.gunshot_residue = chambered.caliber
+				else
+					var/obj/item/clothing/G = H.gloves
+					G.gunshot_residue = chambered.caliber
+	catch(var/exception/E)
+		log_error("Cycled weapon could not apply gunshot_residue to something: [E]")
+	// Outpost 21 edit end
 
 	switch(handle_casings)
 		if(EJECT_CASINGS) //eject casing onto ground.
