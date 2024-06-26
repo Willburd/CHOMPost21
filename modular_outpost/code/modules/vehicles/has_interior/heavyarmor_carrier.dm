@@ -7,8 +7,8 @@
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "sec_apc"
 
-	health = 800
-	maxhealth = 800
+	health = 8000
+	maxhealth = 8000
 	fire_dam_coeff = 0.5
 	brute_dam_coeff = 0.4
 	breakwalls = FALSE
@@ -62,9 +62,9 @@
 	projectile = /obj/item/projectile/bullet/pistol/rubber/strong
 	fire_sound = 'sound/weapons/gunshot3.ogg'
 	projectiles = 100 //Lots of rounds
-	projectiles_per_shot = 5
+	projectiles_per_shot = 3
 	deviation = 0.2
-	fire_cooldown = 2
+	fire_cooldown = 3
 
 /obj/item/vehicle_interior_weapon/hmg
 	name = "\improper Mounted Kord 6P50"
