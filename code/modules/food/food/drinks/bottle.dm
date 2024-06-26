@@ -199,6 +199,11 @@
 		icon_rotation = spin_rotation
 		update_transform()
 
+// Outpost 21 edit begin - Altclick spins bottles without context menu
+/obj/item/weapon/reagent_containers/food/drinks/bottle/AltClick(mob/user)
+	spin_bottle()
+// Outpost 21 edit end
+
 //Keeping this here for now, I'll ask if I should keep it here.
 /obj/item/weapon/broken_bottle
 	name = "Broken Bottle"
