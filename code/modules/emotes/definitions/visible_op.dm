@@ -15,5 +15,7 @@
 
 /decl/emote/visible/dab
 	key = "dab"
+
+/decl/emote/visible/dab/New()
 	emote_message_3p_target = SPAN_WARNING("dabs at TARGET.")
 	emote_message_3p = SPAN_WARNING("dabs.")
