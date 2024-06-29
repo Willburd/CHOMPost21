@@ -384,6 +384,18 @@
 // 		return
 // 	return
 
+// Outpost 21 edit begin - Force ejection for unpowered disposals
+/obj/machinery/disposal/verb/force_eject()
+	set src in oview(1)
+	set category = "Object"
+	set name = "Force Eject"
+
+	if(flushing)
+		return
+
+	eject()
+// Outpost 21 edit end
+
 // eject the contents of the disposal unit
 /obj/machinery/disposal/proc/eject()
 	for(var/atom/movable/AM in src)
