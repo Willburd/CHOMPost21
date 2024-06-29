@@ -632,10 +632,12 @@
 		occupant.name = occupant.real_name
 		occupant.dna.real_name = occupant.real_name
 
+	/* Outpost 21 edit begin - We don't use backup implants
 	//Give them a backup implant
 	var/obj/item/weapon/implant/backup/new_imp = new()
 	if(new_imp.handle_implant(occupant, BP_HEAD))
 		new_imp.post_implant(occupant)
+	*/
 
 	// Outpost 21 edit begin - Small edits to the flavor text. - Ignus
 	//Inform them and make them a little dizzy.
