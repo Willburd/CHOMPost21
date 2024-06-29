@@ -1368,11 +1368,11 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		temp = H.species.body_temperature
-	// Outpost 21 edit end
 	if(M.bodytemperature > temp)
 		M.bodytemperature = max(temp, M.bodytemperature - (40 * TEMPERATURE_DAMAGE_COEFFICIENT))
 	else if(M.bodytemperature < temp+1)
 		M.bodytemperature = min(temp, M.bodytemperature + (40 * TEMPERATURE_DAMAGE_COEFFICIENT))
+	// Outpost 21 edit end
 
 /datum/reagent/rezadone
 	name = "Rezadone"
