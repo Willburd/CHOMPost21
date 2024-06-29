@@ -272,6 +272,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	)
 
 	uncommon_loot = list(
+		/obj/item/prop/alien/junk, // Outpost 21 edit - The only morphium supply without away missions
 		/obj/item/weapon/reagent_containers/syringe/steroid,
 		/obj/item/weapon/storage/pill_bottle/zoom,
 		/obj/item/weapon/storage/pill_bottle/happy,
@@ -435,6 +436,7 @@ Loot piles can be depleted, if loot_depleted is turned on.  Note that players wh
 	)
 
 	rare_loot = list(
+		/obj/item/prop/alien/junk, // Outpost 21 edit - The only morphium supply without away missions
 		/obj/item/weapon/cell/hyper,
 		/obj/item/weapon/aiModule/freeform,
 		/obj/item/weapon/aiModule/asimov,
