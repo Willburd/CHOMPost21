@@ -299,7 +299,7 @@
 	vore_default_mode = DM_SELECT
 	vore_icons = SA_ICON_LIVING
 	vore_stomach_name = "interior"
-	vore_default_item_mode = IM_DIGEST
+	vore_default_item_mode = IM_DIGEST_FOOD //OP edit: These things digest super fucking fast and mean, and lore-accurate cubes can't digest nonfood anyway.
 	vore_pounce_chance = 50
 	vore_pounce_cooldown = 10
 	vore_pounce_successrate	= 75
