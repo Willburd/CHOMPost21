@@ -245,11 +245,13 @@
 		return in_range
 	if(!overall_checks)
 		in_range |= M
+	/* Outpost 21 edit - Bellies don't count, you can't see the person, fear of CROWDS not persons in you!
 	if(M.vore_organs)
 		for(var/obj/belly/B in M.vore_organs)
 			for(var/mob/living/content in B.contents)
 				if(istype(content))
 					in_range |= check_mob_company(H,content)
+	*/
 	in_range |= check_contents(M,H)
 	return in_range
 
