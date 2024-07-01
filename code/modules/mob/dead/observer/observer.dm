@@ -749,10 +749,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if (usr != src)
 		return 0 //something is terribly wrong
 
-	var/ghosts_can_write
+	// Outpost 21 edit begin - We always allow spooky ghosts
+	var/ghosts_can_write = 1
+	/*
 	if(ticker.mode.name == "cult")
 		if(cult.current_antagonists.len > CONFIG_GET(number/cult_ghostwriter_req_cultists)) // CHOMPEdit
 			ghosts_can_write = 1
+	*/
+	// Outpost 21 edit end
 
 	if(!ghosts_can_write && !check_rights(R_ADMIN|R_EVENT|R_FUN, 0)) //Let's allow for admins to write in blood for events and the such.
 		to_chat(src, "<span class='filter_notice'>[span_red("The veil is not thin enough for you to do that.")]</span>")

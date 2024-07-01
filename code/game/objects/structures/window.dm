@@ -183,6 +183,17 @@
 	user.visible_message("<span class='notice'>Something knocks on [src].</span>")
 	playsound(src, 'sound/effects/Glasshit.ogg', 50, 1)
 
+// Outpost 21 edit begin - Spooky ghosts can knock on windows
+/obj/structure/window/attack_ghost(mob/observer/dead/user as mob)
+	/* Outpost 21 NOTICE - Use this condition instead to match normal cult behaviors for ghosts, we always allow ghost interactions on outpost 21 due to spooky!
+	if(ticker.mode.name == "cult" && cult.current_antagonists.len > CONFIG_GET(number/cult_ghostwriter_req_cultists) && user.Adjacent(src)) */
+	if(user.Adjacent(src))
+		user.visible_message("<span class='notice'>Unseen hands knock on [src].</span>")
+		playsound(src, 'sound/effects/Glasshit.ogg', 50, 1)
+	else
+		. = ..()
+// Outpost 21 edit end
+
 /obj/structure/window/attack_hand(mob/user as mob)
 	user.setClickCooldown(user.get_attack_speed())
 	if(HULK in user.mutations)
