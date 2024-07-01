@@ -137,6 +137,14 @@ const GeneralRecordsView = (_properties) => {
         <GeneralRecordsViewGeneral />
       </Section>
       <Section title="Actions" level={2}>
+        <Button
+          icon="upload"
+          disabled={!!general.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Employment Record
+        </Button>
         <Button.Confirm
           icon="trash"
           disabled={!!general.empty}
@@ -197,6 +205,7 @@ const GeneralRecordsViewGeneral = (_properties) => {
         </LabeledList>
         <Section title="Employment/skills summary" level={2} preserveWhitespace>
           {general.skills || 'No data found.'}
+          <Button icon="file" ml="0.5rem" onClick={() => act('edit_notes')} />
         </Section>
         <Section title="Comments/Log" level={2}>
           {general.comments.length === 0 ? (

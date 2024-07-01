@@ -190,6 +190,14 @@ const MedicalRecordsView = (_properties) => {
         <MedicalRecordsViewMedical />
       </Section>
       <Section title="Actions" level={2}>
+        <Button
+          icon="upload"
+          disabled={!!medical.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Medical Record
+        </Button>
         <Button.Confirm
           icon="trash"
           disabled={!!medical.empty}
@@ -288,12 +296,21 @@ const MedicalRecordsViewMedical = (_properties) => {
           <LabeledList.Item key={i} label={field.field}>
             <Box preserveWhitespace>
               {field.value}
-              <Button
+              {field.edit === "notes" ? (
+                <Button
+                icon="file"
+                ml="0.5rem"
+                mb={field.line_break ? '1rem' : 'initial'}
+                onClick={() => act('edit_notes')}
+                />
+              ) : (
+                <Button
                 icon="pen"
                 ml="0.5rem"
                 mb={field.line_break ? '1rem' : 'initial'}
                 onClick={() => doEdit(field)}
-              />
+                />
+              )}
             </Box>
           </LabeledList.Item>
         ))}

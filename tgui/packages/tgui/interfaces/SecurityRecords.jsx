@@ -122,6 +122,14 @@ const SecurityRecordsView = (_properties) => {
         <SecurityRecordsViewSecurity />
       </Section>
       <Section title="Actions">
+        <Button
+          icon="upload"
+          disabled={!!security.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Security Record
+        </Button>
         <Button.Confirm
           icon="trash"
           disabled={!!security.empty}
@@ -232,12 +240,21 @@ const SecurityRecordsViewSecurity = (_properties) => {
           <LabeledList.Item key={i} label={field.field}>
             <Box preserveWhitespace>
               {field.value}
-              <Button
-                icon="pen"
+              {field.edit === "notes" ? (
+                <Button
+                icon="file"
                 ml="0.5rem"
                 mb={field.line_break ? '1rem' : 'initial'}
-                onClick={() => doEdit(field)}
-              />
+                onClick={() => act('edit_notes')}
+                />
+              ) : (
+                <Button
+                  icon="pen"
+                  ml="0.5rem"
+                  mb={field.line_break ? '1rem' : 'initial'}
+                  onClick={() => doEdit(field)}
+                />
+              )}
             </Box>
           </LabeledList.Item>
         ))}

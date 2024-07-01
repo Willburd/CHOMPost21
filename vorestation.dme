@@ -5206,6 +5206,7 @@
 #include "modular_outpost\code\game\objects\structures\atmospherepost.dm"
 #include "modular_outpost\code\game\turfs\flooring\gas_cracks.dm"
 #include "modular_outpost\code\modules\client\preferences_spawnpoints.dm"
+#include "modular_outpost\code\modules\client\record_updater.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_fluffitems_op.dm"
 #include "modular_outpost\code\modules\clothing\accessories\fluff_awards.dm"
 #include "modular_outpost\code\modules\clothing\gloves\telekinetic.dm"
