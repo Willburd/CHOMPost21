@@ -227,6 +227,12 @@
 
 		occupantData["hasBorer"] = H.has_brain_worms()
 		occupantData["hasWithdrawl"] = has_withdrawl
+		
+		occupantData["colourblind"] = null
+		for(var/datum/modifier/M in H.modifiers)
+			if(!isnull(M.wire_colors_replace))
+				occupantData["colourblind"] = LAZYLEN(M.wire_colors_replace)
+				break
 
 		var/bloodData[0]
 		if(H.vessel)
