@@ -18,6 +18,12 @@ export const BodyScannerMainAbnormalities = (props: { occupant: occupant }) => {
     occupant.livingPrey ||
     occupant.objectPrey;
 
+  /* Outpost 21 Add */
+  hasAbnormalities =
+    hasAbnormalities ||
+    occupant.husked;
+  /* Outpost 21 End */
+
   if (!hasAbnormalities) {
     return (
       <Section title="Abnormalities">

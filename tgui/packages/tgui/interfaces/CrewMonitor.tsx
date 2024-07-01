@@ -12,6 +12,7 @@ type Data = {
   isAI: BooleanLike;
   map_levels: number[];
   crewmembers: crewmember[];
+  ymult: number;
 };
 
 type crewmember = {
@@ -218,7 +219,7 @@ const CrewMonitorMapView = (props: { zoom: number; onZoom: Function }) => {
             <NanoMap.Marker
               key={cm.ref}
               x={cm.x}
-              y={cm.y}
+              y={cm.y * data.ymult}
               zoom={props.zoom}
               icon="circle"
               tooltip={cm.name + ' (' + cm.assignment + ')'}

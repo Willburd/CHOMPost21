@@ -43,6 +43,9 @@ export const abnormalities: (string | ((occupant: occupant) => string))[][] = [
       return 'Foreign Object(s) detected: ' + occupant.objectPrey;
     },
   ],
+  /* Outpost 21 add */
+  ['husked', 'bad', (occupant) => 'Anatomical structure lost, resuscitation not possible!'],
+  /* Outpost 21 add end */
 ];
 
 export const damages: string[][] = [

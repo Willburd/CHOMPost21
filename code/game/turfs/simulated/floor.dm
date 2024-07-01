@@ -19,7 +19,6 @@
 		'sound/effects/footstep/plating3.ogg',
 		'sound/effects/footstep/plating4.ogg',
 		'sound/effects/footstep/plating5.ogg'))
-		/*, // Outpost 21 edit, we use these on floors instead of maint plating!
 		SPECIES_TESHARI = list(
 		'sound/effects/footstep/BudgieStep1.ogg',
 		'sound/effects/footstep/BudgieStep2.ogg',
@@ -27,7 +26,8 @@
 		'sound/effects/footstep/BudgieStep4.ogg',
 		'sound/effects/footstep/BudgieStep5.ogg',
 		'sound/effects/footstep/BudgieStep6.ogg',
-		))*/ // CHOMPedit: tesh steps CHOMPEdit - Better footsteps
+		))
+	*/ // CHOMPedit: tesh steps CHOMPEdit - Better footsteps
 
 	var/list/old_decals = null
 
