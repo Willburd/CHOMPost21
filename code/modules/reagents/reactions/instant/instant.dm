@@ -712,6 +712,7 @@
 /decl/chemical_reaction/instant/explosion_potassium/on_reaction(var/datum/reagents/holder, var/created_volume)
 	var/datum/effect/effect/system/reagents_explosion/e = new()
 	e.set_up(round (created_volume/10, 1), holder.my_atom, 0, 0)
+	/* Outpost 21 edit begin - Bigger explosionswhen you chug potassium
 	if(isliving(holder.my_atom))
 		e.amount *= 0.5
 		var/mob/living/L = holder.my_atom
@@ -719,7 +720,8 @@
 			e.amount *= 0.5
 	//VOREStation Add Start
 	else
-		holder.clear_reagents() //No more powergaming by creating a tiny amount of this
+	*/ // Outpost 21 edit end
+	holder.clear_reagents() //No more powergaming by creating a tiny amount of this
 	//VORESTation Add End
 	e.start()
 	//holder.clear_reagents() //VOREStation Removal
