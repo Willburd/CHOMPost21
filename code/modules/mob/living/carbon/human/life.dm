@@ -252,7 +252,9 @@
 	if(antihistaminescount == 0)
 		if(species.allergens & ALLERGEN_POLLEN) // this behaves in a funny way compared to all other allergens! Behaves like a disability
 			var/masked = FALSE
-			if(wear_mask) // masks block it entirely
+			if(istype(head,/obj/item/clothing/head/helmet/space) && !isnull(internal)) // Hardsuits
+				masked = TRUE
+			else if(wear_mask) // masks block it entirely
 				if(wear_mask.item_flags & AIRTIGHT)
 					masked = !isnull(internal) // gas on
 				if(wear_mask.item_flags & BLOCK_GAS_SMOKE_EFFECT)
