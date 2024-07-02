@@ -193,6 +193,10 @@
 		var/mob/living/simple_mob/SA = M
 		if(!SA.has_hands)
 			return 0
+		// Outpost 21 edit begin - Prevent tiny mobs from picking up themselves(Jils need this)
+		if(mob_size < MOB_SMALL && src == M)
+			return 0
+		// Outpost 21 edit end
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
 			to_chat(usr,"<span class='notice'>You have to unbuckle \the [src] before you pick them up.</span>")
