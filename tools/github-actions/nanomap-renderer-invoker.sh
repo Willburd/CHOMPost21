@@ -33,7 +33,8 @@ echo "Starting image resizing..."
 
 #Resize images to proper size and move them to the correct place
 for map in ./*.png; do
-    j=$(echo $map | sed -n "s/^\.\/\(.*\)-\([0-9]*\)\-1.png$/\1_nanomap_z\2.png/p")
+    #!j=$(echo $map | sed -n "s/^\.\/\(.*\)-\([0-9]*\)\-1.png$/\1_nanomap_z\2.png/p")
+	j=$(echo $map | sed -n "s/^\.\/\(.*\)-\([0-9]*\)\-\(.*\)\-1.png$/\1_nanomap_z\2.png/p")
     echo "Resizing $map and moving to icons/_nanomaps/$j"
     convert $map -resize 2240x2240 "$BASEDIR/icons/_nanomaps/$j"
 done
