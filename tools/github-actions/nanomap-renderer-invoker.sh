@@ -11,7 +11,7 @@ map_files=()
 for mapdir in ${mapdirs[@]}; do
     echo "Scanning $mapdir..."
     FULLMAPDIR=$BASEDIR/$mapdir
-    map_files+=($FULLMAPDIR/*-*[0-9].dmm)
+    map_files+=($FULLMAPDIR/*-*[0-9]-*.dmm)
 done
 
 #Print full map list
