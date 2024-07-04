@@ -7,8 +7,8 @@
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "sec_apc"
 
-	health = 8000
-	maxhealth = 8000
+	health = 900
+	maxhealth = 900
 	fire_dam_coeff = 0.5
 	brute_dam_coeff = 0.4
 	breakwalls = FALSE

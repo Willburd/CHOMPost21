@@ -112,15 +112,14 @@
 					for(var/obj/machinery/computer/vehicle_interior_console/C in T.contents)
 						C.desc = "Used to pilot the [name]. Use ctrl-click to quickly toggle the engine if you're adjacent. Alt-click will grab the keys, if present."
 						C.interior_controller = src
+						if(istype(C,/obj/machinery/computer/vehicle_interior_console/helm))
+							remote_turn_off()		//so engine verbs are correctly set
+							interior_helm = C 		// update vehicle, we found the pilot seat, so we know which console is the drivers!
 
 						for(var/obj/structure/bed/chair/vehicle_interior_seat/S in get_step(C.loc,C.dir))
 							S.paired_console = C
 							C.paired_seat = S
 							C.paired_seat.name = C.name + " Seat"
-							if(istype(S,/obj/structure/bed/chair/vehicle_interior_seat/pilot))
-								var/obj/structure/bed/chair/vehicle_interior_seat/pilot/PS = S
-								PS.remote_turn_off()	//so engine verbs are correctly set
-								interior_helm = C 		// update vehicle, we found the pilot seat, so we know which console is the drivers!
 							break
 
 						if(C.controls_weapon_index > 0)
@@ -135,10 +134,7 @@
 
 	// set exit pos
 	update_exit_pos()
-
-	// update weapon draw location
 	cached_dir = dir
-	update_weapons_location(loc)
 
 	if(!istype(intarea))
 		log_debug("Interior vehicle [name] was missing a defined area! Could not init...")
@@ -148,7 +144,34 @@
 
 	. = ..()
 
+/obj/vehicle/has_interior/controller/ex_act(severity)
+	// sparking!
+	for(var/turf/T in intarea.get_contents())
+		if(prob(30) && istype(T))
+			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+			sparks.set_up(3, 0, T)
+			sparks.attach(T)
+			sparks.start()
+
+	// noise!
+	playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
+
+	// make a smaller explosion inside
+	explosion(entrance_hatch, 0, 0, 4-severity, 8)
+
+    // disable ex_act destruction, would lead to gamebreaking behaviors
+	if(severity == 3)
+		take_damage(1)
+	if(severity == 2)
+		take_damage(3)
+	if(severity == 1)
+		take_damage(5)
+
 /obj/vehicle/has_interior/controller/relaymove(mob/user, direction)
+	if(stat)
+		// Destroyed
+		return FALSE
+
 	if(on)
 		// attempt destination
 		cached_dir = dir // update cached dir
@@ -157,7 +180,6 @@
 
 		if(user.stat || !user.canmove)
 			// knocked out controller
-			stop_move_sound()
 			return FALSE
 
 		// stairs check
@@ -167,7 +189,6 @@
 				S.use_stairs(src, newloc) // ... so use stairs!
 				start_move_sound()
 				return TRUE
-			stop_move_sound()
 			return could_move // stop movement here, do not break walls
 
 		// standard move
@@ -184,9 +205,6 @@
 			// normally called from Moved()!
 			if(dir == reverse_direction(cached_dir))
 				dir = cached_dir // hold direction...
-			stop_move_sound()
-		else
-			start_move_sound()
 
 		// break things we run over, IS A WIDE BOY
 		smash_at_loc(checkm) // at destination
@@ -199,12 +217,15 @@
 		// UNRELENTING VIOLENCE
 		for(var/turf/T in locs)
 			crush_mobs_at_loc(T)
+
+		start_move_sound()
 		return could_move
-	stop_move_sound()
 	return FALSE
 
 /obj/vehicle/has_interior/controller/Moved(atom/old_loc, direction, forced = FALSE, movetime)
 	. = ..()
+	// Always update weapon location after move
+	update_weapons_location(loc)
 	// restore breaking speed
 	has_breaking_speed = TRUE
 	if(dir == reverse_direction(cached_dir))
@@ -253,9 +274,23 @@
 			W.pixel_y = offsetxylist[2]
 
 /obj/vehicle/has_interior/controller/Destroy()
-	stop_move_sound()
-	interior_vehicle_list -= src;
+	update_weapons_location(loc)
+	if(on)
+		remote_turn_off()
+	if(move_loop)
+		stop_move_sound()
+		qdel(move_loop)
+		move_loop = null
 	. = ..()
+	interior_vehicle_list -= src;
+
+/obj/vehicle/has_interior/controller/proc/start_move_sound()
+	if(move_loop)
+		move_loop.start(src,TRUE)
+
+/obj/vehicle/has_interior/controller/proc/stop_move_sound()
+	if(move_loop)
+		move_loop.stop(src,TRUE)
 
 //-------------------------------------------
 // Violence!
@@ -457,31 +492,9 @@
 					var/mob/M = A
 					M.forceMove(exitpos)
 
-
-/obj/vehicle/has_interior/controller/ex_act(severity)
-	// sparking!
-	for(var/turf/T in intarea.get_contents())
-		if(prob(30) && istype(T))
-			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
-			sparks.set_up(3, 0, T)
-			sparks.attach(T)
-			sparks.start()
-
-	// noise!
-	playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
-
-	// make a smaller explosion inside
-	explosion(entrance_hatch, 0, 0, 6, 8)
-
-    // disable ex_act destruction, would lead to gamebreaking behaviors
-
-/obj/vehicle/has_interior/controller/proc/start_move_sound()
-	if(move_loop)
-		move_loop.start(src,TRUE)
-
-/obj/vehicle/has_interior/controller/proc/stop_move_sound()
-	if(move_loop)
-		move_loop.stop(src,TRUE)
+/obj/vehicle/has_interior/controller/explode()
+	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
+	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 
 
 //-------------------------------------------
@@ -562,12 +575,8 @@
 	else
 		C.forceMove(dest)
 
-
 /obj/vehicle/has_interior/controller/load(var/atom/movable/C, var/mob/user)
-	if(!ishuman(C))
-		return 0
-
-	return ..()
+	return 0
 
 /obj/vehicle/has_interior/controller/proc/light_set()
 	playsound(src, 'sound/machines/button.ogg', 100, 1, 0) // VOREStation Edit
@@ -586,6 +595,55 @@
 	. = ..(destination,direction,movetime)
 	update_weapons_location(loc)
 	update_exit_pos()
+
+/obj/vehicle/has_interior/controller/proc/remote_turn_on()
+	if(stat)
+		return
+	if(!key)
+		return
+	if(!cell)
+		return
+	else
+		turn_on()
+		update_stats()
+
+		if(interior_helm)
+			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
+			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
+			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
+
+			if(on)
+				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
+			else
+				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
+
+			if(headlights_enabled)
+				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
+			else
+				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+	light_set()
+	update_icon()
+
+/obj/vehicle/has_interior/controller/proc/remote_turn_off()
+	turn_off()
+	if(interior_helm)
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
+
+		if(!on)
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
+		else
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
+
+		if(!headlights_enabled)
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+		else
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
+	light_set()
+	update_icon()
 
 ////////////////////////////////////////////////////////////////////////////////
 // interior area objects
@@ -708,7 +766,7 @@
 	return 1
 
 /obj/machinery/door/vehicle_interior_hatch/ex_act(severity)
-	// nothing, because it would cause some gamebreaking behaviors
+	return // nothing, because it would cause some gamebreaking behaviors
 
 ////////////////////////////////////////////////////////////////////////////////
 // View consoles
@@ -803,7 +861,7 @@
 				unlook(M)
 
 /obj/machinery/computer/vehicle_interior_console/ex_act(severity)
-	// nothing
+	return // nothing
 
 /obj/machinery/computer/vehicle_interior_console/computer/update_icon()
 	if(!interior_controller.on)
@@ -833,30 +891,26 @@
 			user.drop_item()
 			W.forceMove(src)
 			interior_controller.key = W
-			paired_seat.verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/remove_key
+			verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/remove_key
 		return
 	..()
 
 /obj/machinery/computer/vehicle_interior_console/helm/CtrlClick(var/mob/user)
 	// helm expects pilot seat
-	if(istype(paired_seat,/obj/structure/bed/chair/vehicle_interior_seat/pilot))
-		var/obj/structure/bed/chair/vehicle_interior_seat/pilot/PSC = paired_seat
-		if(Adjacent(user))
-			if(interior_controller.on)
-				PSC.stop_engine()
-			else
-				PSC.start_engine()
+	if(Adjacent(user))
+		if(interior_controller.on)
+			stop_engine()
 		else
-			return ..()
+			start_engine()
+	else
+		return ..()
 
 /obj/machinery/computer/vehicle_interior_console/helm/AltClick(var/mob/user)
 	// helm expects pilot seat
-	if(istype(paired_seat,/obj/structure/bed/chair/vehicle_interior_seat/pilot))
-		var/obj/structure/bed/chair/vehicle_interior_seat/pilot/PSC = paired_seat
-		if(Adjacent(user))
-			PSC.remove_key()
-		else
-			return ..()
+	if(Adjacent(user))
+		remove_key()
+	else
+		return ..()
 
 /obj/machinery/computer/vehicle_interior_console/attack_hand(mob/user)
 	// same as normal, but EXPECTS you to be in the pilot seat!
@@ -864,6 +918,79 @@
 		to_chat(user, "<span class='notice'>You need to buckle into the seat to use this console!</span>")
 		return
 	. = ..()
+
+/obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine()
+	set name = "Start engine"
+	set category = "Object.Vehicle"
+	set src in oview(1)
+
+	if(interior_controller.on)
+		to_chat(usr, "The engine is already running.")
+		return
+
+	interior_controller.remote_turn_on()
+	if (interior_controller.on)
+		to_chat(usr, "You start [interior_controller]'s engine.")
+	else
+		if(!interior_controller.cell)
+			to_chat(usr, "[interior_controller] doesn't appear to have a power cell!")
+		else if(interior_controller.cell.charge < interior_controller.charge_use)
+			to_chat(usr, "[interior_controller] is out of power.")
+		else
+			to_chat(usr, "[interior_controller]'s engine won't start.")
+
+/obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine()
+	set name = "Stop engine"
+	set category = "Object.Vehicle"
+	set src in oview(1)
+
+	if(!interior_controller.on)
+		to_chat(usr, "The engine is already stopped.")
+		return
+
+	interior_controller.remote_turn_off()
+	if (!interior_controller.on)
+		to_chat(usr, "You stop [interior_controller]'s engine.")
+
+/obj/machinery/computer/vehicle_interior_console/helm/verb/remove_key()
+	set name = "Remove key"
+	set category = "Object.Vehicle"
+	set src in oview(1)
+
+	if(!interior_controller.key)
+		return
+
+	if(interior_controller.on)
+		interior_controller.remote_turn_off()
+
+	interior_controller.key.loc = usr.loc
+	if(!usr.get_active_hand())
+		usr.put_in_hands(interior_controller.key)
+	interior_controller.key = null
+
+	verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/remove_key
+
+/obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on()
+	set name = "Headlights on"
+	set category = "Object.Vehicle"
+	set src in oview(1)
+
+	interior_controller.headlights_enabled = TRUE
+	playsound(src, "switch", 40)
+
+	verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+	verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
+
+/obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off()
+	set name = "Headlights off"
+	set category = "Object.Vehicle"
+	set src in oview(1)
+
+	interior_controller.headlights_enabled = FALSE
+	playsound(src, "switch", 40)
+
+	verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+	verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
 
 ////////////////////////////////////////////////////////////////////////////////
 // Gunner console
@@ -935,143 +1062,13 @@
 	if(LAZYLEN(paired_console.viewers))
 		paired_console.clean_all_viewers()
 
-
-
 ////////////////////////////////////////////////////////////////////////////////
-// Pilot seat (verbs) these are ugly as hell, because so much is in the interior_controller, but verbs in seat!
-
-/obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/start_engine()
-	set name = "Start engine"
-	set category = "Object.Vehicle"
-	set src in view(0)
-
-	if(!ishuman(usr))
-		return
-
-	if(paired_console.interior_controller.on)
-		to_chat(usr, "The engine is already running.")
-		return
-
-	remote_turn_on()
-	if (paired_console.interior_controller.on)
-		to_chat(usr, "You start [paired_console.interior_controller]'s engine.")
-	else
-		if(!paired_console.interior_controller.cell)
-			to_chat(usr, "[paired_console.interior_controller] doesn't appear to have a power cell!")
-		else if(paired_console.interior_controller.cell.charge < paired_console.interior_controller.charge_use)
-			to_chat(usr, "[paired_console.interior_controller] is out of power.")
-		else
-			to_chat(usr, "[paired_console.interior_controller]'s engine won't start.")
-
+// Pilot seat
 /obj/structure/bed/chair/vehicle_interior_seat/pilot/relaymove(mob/user, direction)
 	if(LAZYLEN(paired_console.viewers) > 0) // only if driver is looking!
 		return paired_console.interior_controller.relaymove(user, direction) // forward to vehicle!
 	else
 		return FALSE
-
-/obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/stop_engine()
-	set name = "Stop engine"
-	set category = "Object.Vehicle"
-	set src in view(0)
-
-	if(!ishuman(usr))
-		return
-
-	if(!paired_console.interior_controller.on)
-		to_chat(usr, "The engine is already stopped.")
-		return
-
-	remote_turn_off()
-	if (!paired_console.interior_controller.on)
-		to_chat(usr, "You stop [paired_console.interior_controller]'s engine.")
-
-/obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/remove_key()
-	set name = "Remove key"
-	set category = "Object.Vehicle"
-	set src in view(0)
-
-	if(!ishuman(usr))
-		return
-
-	if(!paired_console.interior_controller.key)
-		return
-
-	if(paired_console.interior_controller.on)
-		remote_turn_off()
-
-	paired_console.interior_controller.key.loc = usr.loc
-	if(!usr.get_active_hand())
-		usr.put_in_hands(paired_console.interior_controller.key)
-	paired_console.interior_controller.key = null
-
-	verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/remove_key
-
-/obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_on()
-	set name = "Headlights on"
-	set category = "Object.Vehicle"
-	set src in view(0)
-
-	paired_console.interior_controller.headlights_enabled = TRUE
-	playsound(src, "switch", 40)
-
-	verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_on
-	verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_off
-
-/obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_off()
-	set name = "Headlights off"
-	set category = "Object.Vehicle"
-	set src in view(0)
-
-	paired_console.interior_controller.headlights_enabled = FALSE
-	playsound(src, "switch", 40)
-
-	verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_on
-	verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_off
-
-/obj/structure/bed/chair/vehicle_interior_seat/pilot/proc/remote_turn_on()
-	if(!paired_console.interior_controller.key)
-		return
-	if(!paired_console.interior_controller.cell)
-		return
-	else
-		paired_console.interior_controller.turn_on()
-		paired_console.interior_controller.update_stats()
-
-		verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/stop_engine
-		verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/start_engine
-		verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_on
-		verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_off
-
-		if(paired_console.interior_controller.on)
-			verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/stop_engine
-		else
-			verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/start_engine
-
-		if(paired_console.interior_controller.headlights_enabled)
-			verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_off
-		else
-			verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_on
-	paired_console.interior_controller.light_set()
-	paired_console.update_icon()
-
-/obj/structure/bed/chair/vehicle_interior_seat/pilot/proc/remote_turn_off()
-	paired_console.interior_controller.turn_off()
-	verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/stop_engine
-	verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/start_engine
-	verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_on
-	verbs -= /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_off
-
-	if(!paired_console.interior_controller.on)
-		verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/start_engine
-	else
-		verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/stop_engine
-
-	if(!paired_console.interior_controller.headlights_enabled)
-		verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_on
-	else
-		verbs += /obj/structure/bed/chair/vehicle_interior_seat/pilot/verb/headlights_off
-	paired_console.interior_controller.light_set()
-	paired_console.update_icon()
 
 //-------------------------------------------
 // Click through procs, for when you click in vehicle view!
@@ -1258,6 +1255,9 @@
 	var/startdir = dir2angle(dir)
 	dir = angle2dir(360 + startdir + (SIGN(closer_angle_difference(startdir,dir2angle(goaldir))) * 46))
 
+/obj/item/vehicle_interior_weapon/ex_act(severity)
+	return // No damage
+
 //-------------------------------------------
 // Internal machines, mostly weapon linked machinery
 //-------------------------------------------
@@ -1289,7 +1289,7 @@
 		add_fingerprint(usr)
 
 /obj/machinery/ammo_storage/ex_act(severity)
-	return 0 // no explosive act
+	return // no explosive act
 
 /obj/machinery/ammo_storage/attack_hand(mob/user)
 	if(ammo_count > 0)

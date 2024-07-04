@@ -8,8 +8,8 @@
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "sec_tank"
 
-	health = 2500
-	maxhealth = 2500
+	health = 1200
+	maxhealth = 1200
 	fire_dam_coeff = 0.5
 	brute_dam_coeff = 0.4
 	breakwalls = TRUE
@@ -21,14 +21,16 @@
 
 /datum/looping_sound/tank_move_loop
 	mid_sounds = list('modular_chomp/sound/effects/tank_treads.ogg'=1)
-	mid_length = 1 SECONDS
+	mid_length = 1.05 SECONDS
 	volume = 90
-	max_loops = 2
+	max_loops = 1
+	exclusive = TRUE
+	extends_time = TRUE
 	volume_chan = VOLUME_CHANNEL_MACHINERY
 
 /obj/item/weapon/key/heavyarmor_tank
 	name = "key"
-	desc = "A keyring with a small steel key, and a yellow fob reading \"Greater force\"."
+	desc = "A keyring with a small steel key, and a red fob reading \"Greater force\"."
 	icon = 'icons/obj/vehicles_op.dmi'
 	icon_state = "sec_tank"
 	w_class = ITEMSIZE_TINY

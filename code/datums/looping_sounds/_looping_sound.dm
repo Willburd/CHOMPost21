@@ -18,6 +18,7 @@
 	pref_check		(type)					If set to a /datum/client_preference type, will check if the hearer has that preference active before playing it to them.
 	volume_chan		(type)					If set to a specific volume channel via the incoming argument, we tell the playsound proc to modulate volume based on that channel //CHOMPedit
 	exclusive		(bool)					If true, only one of this sound is allowed to play. Relies on if started is true or not. If true, it will not start another loop until it is false.
+	extends_time	(bool)					Outpost 21 edit - Playing while looping refreshes start time of loop, used for sounds played during constant movement, that stop when movement stops.
 */
 /datum/looping_sound
 	var/list/atom/output_atoms
@@ -37,9 +38,11 @@
 	var/volume_chan //CHOMPedit
 	var/exclusive
 	var/falloff // CHOMPEdit: Add Falloff
+	var/extends_time // Outpost 21 edit
 
 	var/timerid
 	var/started
+	var/refreshed // Outpost 21 edit
 
 /datum/looping_sound/New(list/_output_atoms=list(), start_immediately=FALSE, disable_direct=FALSE)
 	if(!mid_sounds)
@@ -63,6 +66,10 @@
 		return //Chomp runtime
 	if(add_thing)
 		output_atoms |= add_thing
+	// Outpost 21 edit begin - Extending runtime loops
+	if(extends_time && max_loops)
+		refreshed = TRUE
+	// Outpost 21 edit end
 	if(timerid)
 		return
 	if(skip_start_sound && (!exclusive && !started)) // Skip start sounds optionally, check if we're exclusive AND started already
@@ -86,6 +93,11 @@
 	started = FALSE
 
 /datum/looping_sound/proc/sound_loop(starttime)
+	// Outpost 21 edit begin - Extending runtime loops
+	if(refreshed)
+		starttime = world.time
+		refreshed = FALSE
+	// Outpost 21 edit end
 	if(QDELETED(src) || (max_loops && world.time >= starttime + mid_length * max_loops)) //ChompEDIT - runtime
 		stop()
 		return

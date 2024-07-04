@@ -8,8 +8,8 @@
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "med_tank"
 
-	health = 1200
-	maxhealth = 1200
+	health = 800
+	maxhealth = 800
 	fire_dam_coeff = 0.2
 	brute_dam_coeff = 0.4
 	breakwalls = TRUE
@@ -24,4 +24,3 @@
 	icon = 'icons/obj/vehicles_op.dmi'
 	icon_state = "med_keys"
 	w_class = ITEMSIZE_TINY
-
