@@ -4,3 +4,4 @@
 	shoes = /obj/item/clothing/shoes/primitive
 	id_type = null // hardmode
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_STOWAWAY
+	pda_type = null

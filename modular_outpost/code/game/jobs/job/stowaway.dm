@@ -12,7 +12,7 @@
 	department_flag = OTHER
 	job_description = "Escaped clone, social outcast, ex-employee, or sentient wildlife; The maintenance tunnels of the station are your home. While you have no real authority or responsibility, your survival requires you to cooperate with the crew. This is not an antag role, but you may still defend yourself."
 	timeoff_factor = 0
-	account_allowed = 0
+	account_allowed = FALSE
 	requestable = FALSE
 	offmap_spawn = TRUE // spawns in unique spots only, and doesn't show up on regular datacore
 	has_headset = FALSE
