@@ -73,6 +73,8 @@
 	var/has_camera = TRUE
 	var/obj/machinery/camera/camera = null
 
+	var/datum/looping_sound/move_loop
+
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
@@ -155,6 +157,7 @@
 
 		if(user.stat || !user.canmove)
 			// knocked out controller
+			stop_move_sound()
 			return FALSE
 
 		// stairs check
@@ -162,7 +165,9 @@
 			could_move = Move(newloc, direction) // move to pos,
 			if(!could_move && S.dir == direction) // bumped back step...
 				S.use_stairs(src, newloc) // ... so use stairs!
+				start_move_sound()
 				return TRUE
+			stop_move_sound()
 			return could_move // stop movement here, do not break walls
 
 		// standard move
@@ -179,6 +184,9 @@
 			// normally called from Moved()!
 			if(dir == reverse_direction(cached_dir))
 				dir = cached_dir // hold direction...
+			stop_move_sound()
+		else
+			start_move_sound()
 
 		// break things we run over, IS A WIDE BOY
 		smash_at_loc(checkm) // at destination
@@ -192,6 +200,7 @@
 		for(var/turf/T in locs)
 			crush_mobs_at_loc(T)
 		return could_move
+	stop_move_sound()
 	return FALSE
 
 /obj/vehicle/has_interior/controller/Moved(atom/old_loc, direction, forced = FALSE, movetime)
@@ -244,8 +253,9 @@
 			W.pixel_y = offsetxylist[2]
 
 /obj/vehicle/has_interior/controller/Destroy()
-	. = ..()
+	stop_move_sound()
 	interior_vehicle_list -= src;
+	. = ..()
 
 //-------------------------------------------
 // Violence!
@@ -464,6 +474,14 @@
 	explosion(entrance_hatch, 0, 0, 6, 8)
 
     // disable ex_act destruction, would lead to gamebreaking behaviors
+
+/obj/vehicle/has_interior/controller/proc/start_move_sound()
+	if(move_loop)
+		move_loop.start(src,TRUE)
+
+/obj/vehicle/has_interior/controller/proc/stop_move_sound()
+	if(move_loop)
+		move_loop.stop(src,TRUE)
 
 
 //-------------------------------------------
@@ -752,25 +770,29 @@
 
 /obj/machinery/computer/vehicle_interior_console/proc/look(var/mob/user)
 	if(interior_controller)
-		apply_visual(user)
+		if(user.machine != src)
+			user.set_machine(src)
+		if(isliving(user))
+			var/mob/living/L = user
+			L.looking_elsewhere = 1
+			L.handle_vision()
 		user.reset_view(interior_controller)
-	user.set_machine(src)
-	if(isliving(user))
-		var/mob/living/L = user
-		L.looking_elsewhere = 1
-		L.handle_vision()
-	user.set_viewsize(world.view + interior_controller.extra_view)
-	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
-	LAZYDISTINCTADD(viewers, WEAKREF(user))
+		user.set_viewsize(world.view + interior_controller.extra_view)
+		RegisterSignal(user, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
+		LAZYDISTINCTADD(viewers, WEAKREF(user))
+	else
+		clean_all_viewers()
 
 /obj/machinery/computer/vehicle_interior_console/proc/unlook(var/mob/user)
-	user.reset_view()
+	interior_controller.stop_move_sound()
+	user.unset_machine()
 	if(isliving(user))
 		var/mob/living/L = user
 		L.looking_elsewhere = 0
 		L.handle_vision()
 	user.set_viewsize() // reset to default
-	UnregisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
+	user.reset_view()
+	UnregisterSignal(user, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
 	LAZYREMOVE(viewers, WEAKREF(user))
 
 /obj/machinery/computer/vehicle_interior_console/proc/clean_all_viewers()

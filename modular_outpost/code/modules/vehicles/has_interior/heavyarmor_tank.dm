@@ -17,7 +17,14 @@
 	weapons_equiped = list(/obj/item/vehicle_interior_weapon/mainturret)
 	// list of weapons, with a sublist containing directions, with a subsub list of x and ys
 	weapons_draw_offset = list(list("1" = list(-96,-96),"2" = list(-96,-96),"4" = list(-96,-96),"8" = list(-96,-96)) )
+	move_loop = new /datum/looping_sound/tank_move_loop()
 
+/datum/looping_sound/tank_move_loop
+	mid_sounds = list('modular_chomp/sound/effects/tank_treads.ogg'=1)
+	mid_length = 1 SECONDS
+	volume = 90
+	max_loops = 2
+	volume_chan = VOLUME_CHANNEL_MACHINERY
 
 /obj/item/weapon/key/heavyarmor_tank
 	name = "key"
