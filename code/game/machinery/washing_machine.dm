@@ -119,6 +119,7 @@
 				..()
 		else
 			..()
+	/* Outpost 21 edit - This feature doesn't even work
 	else if(istype(W,/obj/item/weapon/grab))
 		if((state == 1) && hacked)
 			var/obj/item/weapon/grab/G = W
@@ -128,6 +129,7 @@
 				state = 3
 		else
 			..()
+	*/
 
 	else if(is_type_in_list(W, disallowed_types))
 		to_chat(user, "<span class='warning'>You can't fit \the [W] inside.</span>")
