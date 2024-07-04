@@ -115,7 +115,7 @@
 			C.loc = src.loc
 
 		if(3)
-			if(prob(40))
+			if(prob(20) || istype(get_area(src), /area/rnd/xenobiology/xenobioh)) // Disabled in xenobio lockups due to abuse
 				return // Lower chance due to abuse.
 			var/mob/living/simple_mob/vore/alienanimals/chu/C = new /mob/living/simple_mob/vore/alienanimals/chu()
 			C.loc = src.loc
