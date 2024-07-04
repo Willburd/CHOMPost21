@@ -79,9 +79,15 @@
 		user.visible_message("[user] climbs on \the [src].","You climb on \the [src].")
 	else
 		visible_message("<span class='notice'>\The [C] has been laid on \the [src] by [user].</span>")
+	/* Outpost 21 edit - Not sure why this is needed, some things currently break it, locking you to the table for vision if you use anything with remote viewing
 	if(C.client)
 		C.client.perspective = EYE_PERSPECTIVE
 		C.client.eye = src
+	*/
+	// Outpost 21 edit begin - puller drops what they were pulling
+	if(C.pulledby)
+		C.pulledby.stop_pulling()
+	// Outpost 21 edit end
 	C.resting = 1
 	C.loc = src.loc
 	for(var/obj/O in src)
