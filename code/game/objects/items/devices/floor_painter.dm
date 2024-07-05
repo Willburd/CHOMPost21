@@ -8,12 +8,22 @@
 	var/paint_colour = "#FFFFFF"
 
 	var/list/decals = list(
-		"quarter-turf" =      list("path" = /obj/effect/floor_decal/corner, "precise" = 1, "coloured" = 1),
-		"hazard stripes" =    list("path" = /obj/effect/floor_decal/industrial/warning),
-		"corner, hazard" =    list("path" = /obj/effect/floor_decal/industrial/warning/corner),
-		"hatched marking" =   list("path" = /obj/effect/floor_decal/industrial/hatch, "coloured" = 1),
-		"dotted outline" =    list("path" = /obj/effect/floor_decal/industrial/outline, "coloured" = 1),
-		"loading sign" =      list("path" = /obj/effect/floor_decal/industrial/loading),
+		// Outpost 21 edit begin - Cleaning up markings
+		"Quarter-Turf" =      	list("path" = /obj/effect/floor_decal/corner, "precise" = 1, "coloured" = 1),
+
+		"Hazard Stripes" =    			list("path" = /obj/effect/floor_decal/industrial/warning),
+		"Hazard Stripes, Corner" =    	list("path" = /obj/effect/floor_decal/industrial/warning/corner),
+		"Hazard Stripes, Bookend" =    	list("path" = /obj/effect/floor_decal/industrial/warning/cee),
+
+		"Wood" =               			list("path" = /obj/effect/floor_decal/spline/fancy/wood),
+		"Wood, Corner" =               	list("path" = /obj/effect/floor_decal/spline/fancy/wood),
+		"Wood, Bookend" =               list("path" = /obj/effect/floor_decal/spline/fancy/wood/cee),
+
+		"Hatched Marking" =   list("path" = /obj/effect/floor_decal/industrial/hatch, "coloured" = 1),
+
+		"Dotted Outline" =    list("path" = /obj/effect/floor_decal/industrial/outline, "coloured" = 1),
+
+		"Loading Sign" =      list("path" = /obj/effect/floor_decal/industrial/loading),
 		"1" =                 list("path" = /obj/effect/floor_decal/sign),
 		"2" =                 list("path" = /obj/effect/floor_decal/sign/two),
 		"A" =                 list("path" = /obj/effect/floor_decal/sign/a),
@@ -25,7 +35,8 @@
 		"CMO" =               list("path" = /obj/effect/floor_decal/sign/cmo),
 		"V" =                 list("path" = /obj/effect/floor_decal/sign/v),
 		"Psy" =               list("path" = /obj/effect/floor_decal/sign/p),
-		"remove all decals" = list("path" = /obj/effect/floor_decal/reset)
+		// Outpost 21 edit end
+		"Remove All Decals" = list("path" = /obj/effect/floor_decal/reset)
 		)
 	var/list/paint_dirs = list(
 		"north" =       NORTH,

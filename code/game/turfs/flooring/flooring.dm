@@ -554,6 +554,7 @@ var/list/flooring_types
 	damage_temperature = T0C+200
 	descriptor = "planks"
 	build_type = /obj/item/stack/tile/wood
+	can_paint = 1 // Outpost 21 edit - Why not?
 	flags = TURF_CAN_BREAK | TURF_REMOVE_CROWBAR | TURF_REMOVE_SCREWDRIVER
 	footstep_sounds = list("human" = list(
 		'sound/effects/footstep/wood1.ogg',
