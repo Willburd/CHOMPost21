@@ -520,6 +520,10 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	use_emergency_overlay = TRUE
 
+/area/maintenance/substation/arrivals
+	name = "Arrivals Substation"
+	base_turf = /turf/simulated/open/force_indoor
+
 //Hallways-------
 /area/muriki/crewstairwell
 	name = "\improper Civilian Stairwell"
@@ -1842,6 +1846,10 @@
 	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
+/area/maintenance/substation/phoronics
+	name = "Phoronics Substation"
+	base_turf = /turf/simulated/open/force_indoor
+
 //----------------
 /area/rnd/hallway
 	name = "\improper Research hallway"
@@ -2661,12 +2669,6 @@
 	base_turf = /turf/simulated/open/force_indoor
 
 /area/maintenance/substation/medical
-	base_turf = /turf/simulated/open/force_indoor
-
-/area/maintenance/substation/arrivals
-	base_turf = /turf/simulated/open/force_indoor
-
-/area/maintenance/substation/phoronics
 	base_turf = /turf/simulated/open/force_indoor
 
 /area/rnd/xenobiology/xenoflora_storage
