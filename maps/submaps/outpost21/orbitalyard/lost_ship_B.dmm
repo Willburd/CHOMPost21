@@ -144,7 +144,7 @@
 "Wd" = (/obj/machinery/bodyscanner{dir = 8},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Yk" = (/obj/structure/shuttle/engine/heater,/turf/simulated/wall/pshull,/area/submap/outpost21/structure_generic/lostshipb)
 "Yn" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/adv{pixel_x = 1},/obj/item/weapon/storage/firstaid/toxin{pixel_x = 3; pixel_y = 3},/obj/structure/closet/secure_closet/medical_wall{pixel_x = 32; req_access = list(150)},/obj/item/weapon/storage/firstaid/fire{pixel_x = 1},/obj/item/weapon/storage/firstaid/o2{pixel_x = 3; pixel_y = 3},/obj/item/weapon/storage/firstaid/regular,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
-"Yv" = (/obj/effect/gibspawner/generic,/obj/effect/decal/cleanable/ash,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic/lostshipb)
+"Yv" = (/obj/effect/decal/cleanable/ash,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic/lostshipb)
 "YI" = (/obj/machinery/light/small/emergency,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "YZ" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 8},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Zq" = (/obj/structure/table/rack,/obj/machinery/light/small/emergency,/obj/fiftyspawner/steel,/obj/fiftyspawner/steel,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
