@@ -2663,6 +2663,12 @@
 /area/maintenance/substation/medical
 	base_turf = /turf/simulated/open/force_indoor
 
+/area/maintenance/substation/arrivals
+	base_turf = /turf/simulated/open/force_indoor
+
+/area/maintenance/substation/phoronics
+	base_turf = /turf/simulated/open/force_indoor
+
 /area/rnd/xenobiology/xenoflora_storage
 	base_turf = /turf/simulated/open/force_indoor
 
