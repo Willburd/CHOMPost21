@@ -13,6 +13,7 @@
 #include "structure_A.dmm"
 #include "platform_A.dmm"
 #include "container_LOST.dmm"
+#include "lost_ship_A.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -86,6 +87,7 @@
 	desc = "Random platform."
 	mappath = 'maps/submaps/outpost21/orbitalyard/container_LOST.dmm'
 	allow_duplicates = TRUE
+	discard_prob = 20
 	cost = 2
 
 //////////////////////////////////////////////////////////////
@@ -121,6 +123,14 @@
 	fixed_orientation = TRUE
 	cost = 55
 
+/datum/map_template/outpost21/space/orbitalyard_huge/lostship_A
+	name = "Lost Ship Variant A"
+	desc = "An old derelict ship"
+	mappath = 'maps/submaps/outpost21/orbitalyard/lost_ship_A.dmm'
+	allow_duplicates = FALSE
+	fixed_orientation = TRUE
+	cost = 50
+
 
 //////////////////////////////////////////////////////////////
 // Area definitions
@@ -143,3 +153,6 @@
 
 /area/submap/outpost21/structure_generic/has_gravity()
 	return 0
+
+/area/submap/outpost21/structure_generic/lostshipa
+	name = "\improper Abandoned Vessel"
