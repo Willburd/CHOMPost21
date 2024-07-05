@@ -1,0 +1,26 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/turf/template_noop,/area/submap/outpost21/asteroid_generic)
+"c" = (/obj/structure/table/rack/shelf/steel,/obj/random/contraband,/obj/random/contraband,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"f" = (/turf/simulated/wall/bay/steel,/area/submap/outpost21/asteroid_generic)
+"g" = (/obj/structure/table/rack/shelf/steel,/obj/random/multiple/ore_pile,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"h" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance/engineering,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"i" = (/obj/random/contraband,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"j" = (/obj/structure/closet/crate,/obj/random/gun/random,/obj/random/contraband,/obj/random/contraband,/obj/random/contraband,/obj/random/contraband,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"k" = (/obj/machinery/door/airlock/angled_bay/standard/color/cargo{name = "Cargo Container"; dir = 4},/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"l" = (/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"m" = (/obj/random/drinkbottle,/obj/random/drinkbottle,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"n" = (/obj/random/mre,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"o" = (/obj/structure/table/rack/shelf/steel,/obj/random/material/precious,/obj/random/material/precious,/obj/random/material/precious,/obj/random/material/precious,/obj/random/material/precious,/obj/random/material/precious,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"p" = (/obj/random/maintenance/medical,/obj/structure/closet/crate,/obj/random/contraband,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+
+(1,1,1) = {"
+aaaaaaaaa
+abbbbbbba
+afffffffa
+afchhijfa
+aklllnlfa
+afoomgpfa
+afffffffa
+abbbbbbba
+aaaaaaaaa
+"}

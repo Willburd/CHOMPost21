@@ -14,6 +14,8 @@
 #include "platform_A.dmm"
 #include "container_LOST.dmm"
 #include "lost_ship_A.dmm"
+#include "lost_ship_B.dmm"
+#include "container_C.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -87,8 +89,16 @@
 	desc = "Random platform."
 	mappath = 'maps/submaps/outpost21/orbitalyard/container_LOST.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 20
+	discard_prob = 5
 	cost = 2
+
+/datum/map_template/outpost21/space/orbitalyard/container_C
+	name = "Lost Contraband Container"
+	desc = "Random platform."
+	mappath = 'maps/submaps/outpost21/orbitalyard/container_C.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 30
+	cost = 4
 
 //////////////////////////////////////////////////////////////
 // Huge structures in the yard (usually one at a time...)
@@ -131,6 +141,14 @@
 	fixed_orientation = TRUE
 	cost = 50
 
+/datum/map_template/outpost21/space/orbitalyard_huge/lostship_B
+	name = "Lost Ship Variant B"
+	desc = "An old derelict ship"
+	mappath = 'maps/submaps/outpost21/orbitalyard/lost_ship_B.dmm'
+	allow_duplicates = FALSE
+	fixed_orientation = TRUE
+	discard_prob = 10
+	cost = 55
 
 //////////////////////////////////////////////////////////////
 // Area definitions
@@ -155,4 +173,7 @@
 	return 0
 
 /area/submap/outpost21/structure_generic/lostshipa
+	name = "\improper Abandoned Vessel"
+
+/area/submap/outpost21/structure_generic/lostshipb
 	name = "\improper Abandoned Vessel"
