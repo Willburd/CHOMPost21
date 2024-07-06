@@ -2,9 +2,25 @@ import { useBackend } from '../../backend';
 import { decodeHtmlEntities, toTitleCase } from 'common/string';
 import { Box, Section, LabeledList } from '../../components';
 
+type Data = {
+  weather: Weather[];
+};
+
+type Weather = {
+  Planet: string;
+  Time: string;
+  Weather: string;
+  Temperature;
+  High;
+  Low;
+  WindDir;
+  WindSpeed;
+  Forecast: string;
+};
+
 // Stolen wholesale from communicators.
-export const pda_weather = (props, context) => {
-  const { act, data } = useBackend(context);
+export const pda_weather = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { weather } = data;
 
