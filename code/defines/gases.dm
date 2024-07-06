@@ -18,6 +18,11 @@
 	specific_heat = 30	// J/(mol*K)
 	molar_mass = 0.044	// kg/mol
 
+	// Outpost 21 edit begin - smoke
+	tile_overlay = "smoke"
+	overlay_limit = 7
+	// Outpost 21 edit end
+
 /decl/xgm_gas/phoron
 	id = "phoron"
 	name = "Phoron"
