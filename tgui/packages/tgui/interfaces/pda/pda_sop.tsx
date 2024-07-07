@@ -2,8 +2,16 @@
 import { useBackend } from '../../backend';
 import { Box, Button, Section } from '../../components';
 
-export const pda_sop = (props, context) => {
-  const { act, data } = useBackend(context);
+type Data = {
+  sop_title: string;
+  sop_body: string;
+  sop_author: string;
+  first: boolean;
+  last: boolean;
+};
+
+export const pda_sop = (props) => {
+  const { act, data } = useBackend<Data>();
 
   const { sop_title, sop_body, sop_author, first, last } = data;
 
