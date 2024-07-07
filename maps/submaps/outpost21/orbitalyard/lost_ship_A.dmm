@@ -159,7 +159,6 @@
 "FT" = (/obj/effect/floor_decal/industrial/stand_clear/red,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostshipa)
 "Gj" = (/obj/structure/sign/signnew/canisters,/turf/simulated/wall/pshull,/area/submap/outpost21/structure_generic/lostshipa)
 "Gp" = (/obj/machinery/atmospherics/pipe/manifold/hidden{dir = 1},/turf/simulated/floor/tiled/milspec/sterile,/area/submap/outpost21/structure_generic/lostshipa)
-"Gq" = (/obj/structure/prop/fake_ai/dead,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostshipa)
 "Gs" = (/obj/machinery/atmospherics/pipe/manifold/hidden/blue{dir = 4},/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostshipa)
 "Gv" = (/obj/machinery/smartfridge/drying_rack,/turf/simulated/floor/tiled/kafel_full/green,/area/submap/outpost21/structure_generic/lostshipa)
 "Gz" = (/obj/structure/closet/emergsuit_wall{dir = 4; pixel_x = 32},/obj/structure/bed/chair/shuttle{dir = 8},/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostshipa)
@@ -293,7 +292,7 @@ UeUeUeddddXwJzrBnqnqiElBMfXeUwZMooZMNJhKMfnqWJEKnNYptKMfnqnqTMKHsZnqnqMfwRwRJHEA
 UeUeUeddddYeJznqnqnqRhGzMflNlNMfkKpelNlNMfAXKaMflNlNlNMflNlNWOznMflNlNMflNlNMfMfAQMflNlNgZqvsQnqnqTNEkddddddddddddddUeUe
 UeUeUeddddYehRrBnqnqPqkuhekukurjFykuDcbinJkuFyrjkukukuAMkukukuFygEkuDciykukukukuFySOkuIKbkkuvtnqnqPZecddddddddddddddUeUe
 UeUeUeddddYerZrBnqnqCPnqitnqnqnqWJEKCPCqnqnqWJEKnqnqnqwznqnqEwWJEKnqCPCqnqnqnqnqWJEKnqOcPFnqCPnqDnPZORddddddddddddddUeUe
-UeUeUeddddYeGqnqnqnqiErBMflNlNMfznMflNlNMfAXKaMflNlNlNMfMfMfMfznMfMfMfMflNlNMfYQupMflNlNNsnqnqnqWePZXGddddddddddddddUeUe
+UeUeUeddddYenqnqnqnqiErBMflNlNMfznMflNlNMfAXKaMflNlNlNMfMfMfMfznMfMfMfMflNlNMfYQupMflNlNNsnqnqnqWePZXGddddddddddddddUeUe
 UeUeUeddddAenIrBnqnqiElBMfKTiEfzWJwlHktcMfnqWJEmnNYptKMfvLERAOVABWeMeMMfsGsGyLYZBiMJMijfgZNzQOhvnWPZgZddddddddddddddUeUe
 UeUeUeddddgZgZmOnqnqnqnqlNnqnqFpIIKbnqnqlNFpIIKbnqCUCUMfLuLujuUigLLuLulNhPhPhPjLNIoghPrVgZgZlNlNgZypgZgZgZgZgZgZddddUeUe
 UeUeUeddddddaknqnqXMnqnqlNnqjmjmZqjmhzhzlNnqnqnqgZgPgPgZLuLuLuLuLuLuLulNGvhPOeOewBeEcBcBkBDRpZLoEmFrnqnqEmnqgZDpddddUeUe

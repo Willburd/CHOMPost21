@@ -21,7 +21,7 @@
 "gx" = (/obj/structure/sink{dir = 4; pixel_x = 11},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "gQ" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "he" = (/obj/machinery/atmospherics/pipe/simple/hidden/blue,/obj/effect/decal/cleanable/liquid_fuel,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/brigdoor{req_access = list(8)},/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
-"iA" = (/obj/random/trash,/obj/machinery/atmospherics/pipe/simple/hidden/blue,/obj/effect/decal/cleanable/liquid_fuel,/obj/structure/window/reinforced{dir = 1},/mob/living/carbon/human/dummy/mannequin/autoequip/tajaran,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"iA" = (/obj/random/trash,/obj/machinery/atmospherics/pipe/simple/hidden/blue,/obj/effect/decal/cleanable/liquid_fuel,/obj/structure/window/reinforced{dir = 1},/obj/random/cutout,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "jc" = (/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
 "jL" = (/turf/simulated/floor/tiled/red,/area/submap/outpost21/structure_generic/lostshipb)
 "kw" = (/obj/item/weapon/melee/energy/sword/pirate,/obj/item/clothing/suit/pirate,/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
@@ -137,7 +137,7 @@
 "Tg" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance/engineering,/obj/random/maintenance/engineering,/obj/random/maintenance/misc,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Ty" = (/obj/machinery/light/small/emergency,/obj/machinery/atmospherics/pipe/tank/air/full{dir = 1},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Uk" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/firedoor/glass,/obj/structure/grille,/obj/structure/sign/flag/catpirate/right,/turf/simulated/floor/plating,/area/submap/outpost21/structure_generic/lostshipb)
-"UD" = (/mob/living/carbon/human/dummy/mannequin/autoequip/tajaran,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"UD" = (/obj/random/cutout,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Vd" = (/obj/machinery/atmospherics/pipe/simple/hidden/blue,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Ve" = (/obj/machinery/iv_drip,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Vo" = (/obj/machinery/door/firedoor,/obj/item/weapon/material/shard/plastitaniumglass,/obj/structure/lattice,/obj/effect/decal/cleanable/ash,/turf/space,/area/submap/outpost21/structure_generic/lostshipb)
@@ -174,7 +174,7 @@ BFBFBFBFBFBFBFBFBFlvlvGFInCUGFCilvGFGFFfsEYvQqaWGFGFvFCiGFOsexGFlvlvBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFBFlvlvGFmIGFGFGFGFGFLhpmTcpmdEkwkUGFkRGFGFGFmIGFlvlvBFBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFBFlvlvGFnycfCRqkLgGFIFjcrfxGqirfGQGFPzTgqqtBMsGFlvlvBFBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFBFlvlvGFMiytnxtCCLGFfbQiIhyvEnSfUkGFmJdVdVdVLJGFlvlvBFBFBFBFBFBFBFBFBFBFBF
-BFBFBFBFBFBFBFBFBFlvlvetfGytUDtRAiPYvMvMvMJXvMvMvMPYyTeCtwdVDdetlvlvBFBFBFBFBFBFBFBFBFBFBF
+BFBFBFBFBFBFBFBFBFlvlvetfGUDyttRAiPYvMvMvMJXvMvMvMPYyTeCtwdVDdetlvlvBFBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFlvlvlvoEEpnxfSvlltGFRbZqytVdytdTyuGFxOLxhedVDdoElvlvlvBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFlvlvlvAsEpytpNGFZNGFGFGFMYGROlGFGFGFZNGFiAdVfGAslvlvlvBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFlvlvGFGFngOvpgGFKGyXMmFhMYcLOlsXWdCxyzGFTyPXngGFGFlvlvBFBFBFBFBFBFBFBFBFBF
