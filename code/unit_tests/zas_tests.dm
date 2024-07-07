@@ -116,7 +116,7 @@
 /datum/unit_test/zas_area_test/mining_area
 	name = "ZAS: Mining Area (Vacuum)"
 	area_path = /area/mine/explored
-	expectation = UT_VACUUM //CHOMPStation Edit 7/1/20 TFF - Revert to Vacuum checking
+	expectation = UT_NORMAL //CHOMPStation Edit 7/1/20 TFF - Revert to Vacuum checking // Outpost 21 edit - Not a vacuum
 
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"

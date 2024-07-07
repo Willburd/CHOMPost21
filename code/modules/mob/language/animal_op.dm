@@ -16,7 +16,7 @@
 	speech_verb = "merps"
 	ask_verb = "mips"
 	exclaim_verb = "meeps"
-	key = "j"
+	key = "J"
 	flags = RESTRICTED
 	machine_understands = FALSE
 	space_chance = 100
