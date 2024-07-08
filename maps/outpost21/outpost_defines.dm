@@ -76,8 +76,16 @@
 	default_skybox = /datum/skybox_settings/outpost21
 	unit_test_z_levels = list(Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID)
 	unit_test_exempt_areas = list()
-	unit_test_exempt_from_atmos = list(/area/muriki/processor,/area/muriki/elevator,/area/muriki/septic,/area/tcomm/chamber,/area/medical/voxlab/airgap,/area/rnd/xenobiology/lost)
-	unit_test_exempt_from_apc = list(/area/muriki/processor)
+	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
+										/area/muriki/elevator,
+										/area/muriki/septic,
+										/area/tcomm/chamber,
+										/area/medical/voxlab/airgap,
+										/area/rnd/xenobiology/lost,
+										/area/muriki/grounds,
+										/area/muriki/rooftop)
+	unit_test_exempt_from_apc = list(	/area/muriki/processor,
+										/area/muriki/grounds)
 
 	planet_datums_to_make = list(/datum/planet/muriki)
 
