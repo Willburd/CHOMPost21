@@ -148,6 +148,7 @@
 										/area/offworld/asteroidyard/external/yardzone,
 										// Actual unit test exceptions
 										/area/comms,
+										/area/muriki/tramstation/waste,
 										/area/engineering/engine_airlock,
 										/area/engineering/engine_room,
 										/area/muriki/lowerelev,
