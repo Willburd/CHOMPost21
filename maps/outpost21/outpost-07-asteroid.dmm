@@ -481,7 +481,7 @@
 "zG" = (/obj/structure/sign/electricshock,/turf/simulated/wall,/area/offworld/asteroidyard/station/engineering)
 "zH" = (/obj/structure/cable/orange{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/structure/cable/orange{d1 = 1; d2 = 8; icon_state = "1-8"},/obj/machinery/atmospherics/pipe/manifold/hidden/supply,/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,/turf/simulated/floor/tiled/milspec,/area/offworld/asteroidyard/station/halls)
 "zK" = (/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 4},/obj/structure/cable/orange{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/machinery/light{dir = 1},/obj/machinery/mineral/equipment_vendor,/obj/structure/disposalpipe/segment{dir = 4},/obj/effect/floor_decal/corner/brown{dir = 5},/turf/simulated/floor/tiled/milspec,/area/offworld/asteroidyard/station/dockingbay)
-"zL" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor,/area/offworld/asteroidyard/external)
+"zL" = (/obj/machinery/light/small{dir = 4},/turf/simulated/floor/airless,/area/offworld/asteroidyard/external)
 "zM" = (/obj/effect/floor_decal/industrial/warning/dust,/obj/machinery/atmospherics/pipe/manifold/hidden/supply{dir = 1},/turf/simulated/floor/tiled/milspec,/area/offworld/asteroidyard/station/engineering)
 "zQ" = (/obj/structure/cable/orange{d1 = 1; d2 = 2; icon_state = "1-2"},/turf/simulated/floor/tiled/milspec,/area/offworld/asteroidyard/station/cave)
 "zS" = (/obj/structure/table/rack/shelf/steel,/obj/item/weapon/storage/toolbox/electrical{pixel_y = 6},/obj/item/weapon/storage/toolbox/emergency,/obj/item/weapon/storage/toolbox/mechanical{pixel_y = -6},/turf/simulated/floor/tiled/milspec,/area/offworld/asteroidyard/station/cave)
