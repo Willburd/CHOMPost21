@@ -11,9 +11,7 @@
 	interval_upper_bound = 35 SECONDS
 
 /obj/effect/map_effect/interval/atmogland/trigger()
-	#ifdef UNIT_TEST
-	return FALSE
-	#endif
+	#if !UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -22,26 +20,24 @@
 		T.air.adjust_multi("oxygen", 0, "carbon_dioxide", 0, "nitrogen", 0, "phoron", 0, "methane", 0)
 		T.air.group_multiplier = air_contents.group_multiplier
 		T.air.volume = air_contents.volume
+	#endif
 
 /obj/effect/map_effect/interval/atmogland/airmix
 	name = "atmogland airmix"
 
 /obj/effect/map_effect/interval/atmogland/airmix/trigger()
-	#ifdef UNIT_TEST
-	return FALSE
-	#endif
+	#if !UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		// reset air
 		T.make_air()
+	#endif
 
 /obj/effect/map_effect/interval/atmogland/nitrogen
 	name = "atmogland nitrogen"
 
 /obj/effect/map_effect/interval/atmogland/nitrogen/trigger()
-	#ifdef UNIT_TEST
-	return FALSE
-	#endif
+	#if !UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -50,14 +46,13 @@
 		T.air.adjust_multi("oxygen", 0, "carbon_dioxide", 0, "nitrogen", ONE_ATMOSPHERE, "phoron", 0, "methane", 0)
 		T.air.group_multiplier = air_contents.group_multiplier
 		T.air.volume = air_contents.volume
+	#endif
 
 /obj/effect/map_effect/interval/atmogland/carbo
 	name = "atmogland carbondioxide"
 
 /obj/effect/map_effect/interval/atmogland/carbo/trigger()
-	#ifdef UNIT_TEST
-	return FALSE
-	#endif
+	#if !UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -66,14 +61,13 @@
 		T.air.adjust_multi("oxygen", 0, "carbon_dioxide", ONE_ATMOSPHERE, "nitrogen", 0, "phoron", 0, "methane", 0)
 		T.air.group_multiplier = air_contents.group_multiplier
 		T.air.volume = air_contents.volume
+	#endif
 
 /obj/effect/map_effect/interval/atmogland/phoron
 	name = "atmogland phoron"
 
 /obj/effect/map_effect/interval/atmogland/phoron/trigger()
-	#ifdef UNIT_TEST
-	return FALSE
-	#endif
+	#if !UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -82,14 +76,13 @@
 		T.air.adjust_multi("oxygen", 0, "carbon_dioxide", 0, "nitrogen", 0, "phoron", ONE_ATMOSPHERE, "methane", 0)
 		T.air.group_multiplier = air_contents.group_multiplier
 		T.air.volume = air_contents.volume
+	#endif
 
 /obj/effect/map_effect/interval/atmogland/methane
 	name = "atmogland methane"
 
 /obj/effect/map_effect/interval/atmogland/phoron/trigger()
-	#ifdef UNIT_TEST
-	return FALSE
-	#endif
+	#if !UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -98,14 +91,13 @@
 		T.air.adjust_multi("oxygen", 0, "carbon_dioxide", 0, "nitrogen", 0, "phoron", 0, "methane", ONE_ATMOSPHERE)
 		T.air.group_multiplier = air_contents.group_multiplier
 		T.air.volume = air_contents.volume
+	#endif
 
 /obj/effect/map_effect/interval/atmogland/bodyheat
 	name = "atmogland bodyheat"
 
 /obj/effect/map_effect/interval/atmogland/bodyheat/trigger()
-	#ifdef UNIT_TEST
-	return FALSE
-	#endif
+	#if !UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -115,3 +107,4 @@
 		if(air_contents.temperature > TERRAFORMER_BODY_TEMP + 5)
 			air_contents.temperature -= 2
 		T.air = air_contents;
+	#endif
