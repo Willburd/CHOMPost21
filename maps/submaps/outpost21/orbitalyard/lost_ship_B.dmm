@@ -5,12 +5,14 @@
 "cv" = (/obj/structure/sink{dir = 4; pixel_x = 11},/obj/machinery/atmospherics/pipe/simple/hidden/blue{dir = 9},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "cL" = (/obj/structure/table/steel,/obj/random/trash,/obj/machinery/atmospherics/pipe/simple/hidden/blue,/obj/structure/safe/floor,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "cS" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"cU" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/machinery/atmospherics/pipe/simple/hidden/universal{dir = 4},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "dE" = (/obj/item/weapon/tank/oxygen,/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
+"dK" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/machinery/atmospherics/pipe/simple/visible,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "dT" = (/obj/machinery/light/small/emergency,/obj/machinery/autolathe/armory,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
-"dV" = (/obj/effect/decal/cleanable/liquid_fuel,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"dV" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/machinery/atmospherics/pipe/simple/visible{dir = 10},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "et" = (/obj/machinery/door/firedoor,/obj/structure/window/plastitanium{dir = 1},/obj/structure/window/plastitanium{dir = 8},/obj/structure/window/plastitanium{dir = 4},/obj/structure/grille,/turf/simulated/floor/plating,/area/submap/outpost21/structure_generic/lostshipb)
 "ex" = (/obj/machinery/atmospherics/pipe/manifold/visible{dir = 4},/obj/machinery/meter,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/structure_generic/lostshipb)
-"eC" = (/obj/random/trash,/obj/machinery/atmospherics/pipe/simple/hidden/blue{dir = 4},/obj/effect/decal/cleanable/liquid_fuel,/obj/structure/ship_munition/disperser_charge/explosive,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/window/brigdoor{req_one_access = list(150); req_access = null; dir = 8},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"eC" = (/obj/random/trash,/obj/effect/decal/cleanable/liquid_fuel,/obj/structure/ship_munition/disperser_charge/explosive,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 4},/obj/machinery/door/window/brigdoor{req_one_access = list(150); req_access = null; dir = 8},/obj/machinery/atmospherics/pipe/simple/hidden/blue{dir = 9},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "eI" = (/obj/machinery/light/small,/turf/simulated/floor/tiled/red,/area/submap/outpost21/structure_generic/lostshipb)
 "eJ" = (/obj/machinery/atmospherics/unary/vent_pump/high_volume,/turf/simulated/floor/tiled/techfloor/grid,/area/submap/outpost21/structure_generic/lostshipb)
 "fb" = (/obj/structure/window/reinforced,/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/firedoor/glass,/obj/structure/grille,/obj/structure/sign/flag/catpirate/left,/turf/simulated/floor/plating,/area/submap/outpost21/structure_generic/lostshipb)
@@ -20,8 +22,9 @@
 "gk" = (/obj/item/weapon/material/shard/plastitaniumglass,/obj/structure/lattice,/obj/item/broken_device/random,/turf/space,/area/submap/outpost21/structure_generic/lostshipb)
 "gx" = (/obj/structure/sink{dir = 4; pixel_x = 11},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "gQ" = (/obj/machinery/light/small{dir = 8},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
-"he" = (/obj/machinery/atmospherics/pipe/simple/hidden/blue,/obj/effect/decal/cleanable/liquid_fuel,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/brigdoor{req_access = list(8)},/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
-"iA" = (/obj/random/trash,/obj/machinery/atmospherics/pipe/simple/hidden/blue,/obj/effect/decal/cleanable/liquid_fuel,/obj/structure/window/reinforced{dir = 1},/obj/random/cutout,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"gZ" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/machinery/atmospherics/pipe/simple/hidden/blue{dir = 6},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"he" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/brigdoor{req_access = list(8)},/obj/structure/table/rack/shelf/steel,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"iA" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/structure/window/reinforced{dir = 1},/obj/machinery/atmospherics/pipe/simple/visible{dir = 6},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "jc" = (/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
 "jL" = (/turf/simulated/floor/tiled/red,/area/submap/outpost21/structure_generic/lostshipb)
 "kw" = (/obj/item/weapon/melee/energy/sword/pirate,/obj/item/clothing/suit/pirate,/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
@@ -51,7 +54,7 @@
 "rf" = (/obj/item/weapon/material/shard/shrapnel,/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
 "sE" = (/obj/item/clothing/head/pirate,/obj/item/clothing/under/pirate,/obj/item/clothing/suit/pirate,/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
 "sX" = (/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/firedoor/glass,/obj/structure/grille,/turf/simulated/floor/plating,/area/submap/outpost21/structure_generic/lostshipb)
-"tw" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/misc,/obj/machinery/atmospherics/pipe/simple/hidden/blue{dir = 10},/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/brigdoor{req_access = list(8)},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"tw" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/cargo,/obj/random/maintenance/misc,/obj/random/contraband/nofail,/obj/random/contraband/nofail,/obj/structure/window/reinforced{dir = 1},/obj/machinery/door/window/brigdoor{req_access = list(8)},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "tB" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance/research,/obj/random/maintenance/research,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "tC" = (/obj/machinery/atmospherics/unary/vent_pump/on,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "tR" = (/obj/random/trash,/obj/machinery/atmospherics/pipe/simple/hidden/blue{dir = 5},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
@@ -99,6 +102,7 @@
 "IF" = (/obj/machinery/pointdefense_control,/turf/simulated/floor/tiled/milspec/raised{oxygen = 0; nitrogen = 0},/area/submap/outpost21/structure_generic/lostshipb)
 "IQ" = (/obj/machinery/button/remote/blast_door{id = "skipjackshutters"; name = "remote shutter control"; req_access = list(150)},/turf/simulated/wall/pshull,/area/submap/outpost21/structure_generic/lostshipb)
 "Jk" = (/obj/machinery/door/airlock/glass_external/public{locked = 1; icon_state = "door_locked"},/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic/lostshipb)
+"Jo" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/random/cutout,/obj/random/trash,/obj/machinery/atmospherics/pipe/simple/visible{dir = 9},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "JX" = (/obj/random/trash,/obj/machinery/atmospherics/pipe/manifold4w/hidden/blue,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Kf" = (/obj/structure/salvageable/shuttle_console,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic/lostshipb)
 "Kt" = (/obj/structure/bed/padded,/obj/structure/extinguisher_cabinet{dir = 4; pixel_x = -30},/obj/item/weapon/bedsheet/pirate,/obj/structure/curtain/bed,/turf/simulated/floor/tiled/red,/area/submap/outpost21/structure_generic/lostshipb)
@@ -142,6 +146,7 @@
 "Ve" = (/obj/machinery/iv_drip,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Vo" = (/obj/machinery/door/firedoor,/obj/item/weapon/material/shard/plastitaniumglass,/obj/structure/lattice,/obj/effect/decal/cleanable/ash,/turf/space,/area/submap/outpost21/structure_generic/lostshipb)
 "Wd" = (/obj/machinery/bodyscanner{dir = 8},/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
+"Yg" = (/obj/effect/decal/cleanable/liquid_fuel,/obj/machinery/atmospherics/valve,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Yk" = (/obj/structure/shuttle/engine/heater,/turf/simulated/wall/pshull,/area/submap/outpost21/structure_generic/lostshipb)
 "Yn" = (/obj/structure/table/standard,/obj/item/weapon/storage/firstaid/adv{pixel_x = 1},/obj/item/weapon/storage/firstaid/toxin{pixel_x = 3; pixel_y = 3},/obj/structure/closet/secure_closet/medical_wall{pixel_x = 32; req_access = list(150)},/obj/item/weapon/storage/firstaid/fire{pixel_x = 1},/obj/item/weapon/storage/firstaid/o2{pixel_x = 3; pixel_y = 3},/obj/item/weapon/storage/firstaid/regular,/turf/simulated/floor/tiled/milspec/raised,/area/submap/outpost21/structure_generic/lostshipb)
 "Yv" = (/obj/effect/decal/cleanable/ash,/turf/simulated/floor/airless,/area/submap/outpost21/structure_generic/lostshipb)
@@ -173,10 +178,10 @@ BFBFBFBFBFBFBFBFBFlvlvGFeJnYGFlvlvGFGFGFKfgkIiIQGFGFlvlvGFnYeJGFlvlvBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFBFlvlvGFInCUGFCilvGFGFFfsEYvQqaWGFGFvFCiGFOsexGFlvlvBFBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFBFlvlvGFmIGFGFGFGFGFLhpmTcpmdEkwkUGFkRGFGFGFmIGFlvlvBFBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFBFlvlvGFnycfCRqkLgGFIFjcrfxGqirfGQGFPzTgqqtBMsGFlvlvBFBFBFBFBFBFBFBFBFBFBF
-BFBFBFBFBFBFBFBFBFlvlvGFMiytnxtCCLGFfbQiIhyvEnSfUkGFmJdVdVdVLJGFlvlvBFBFBFBFBFBFBFBFBFBFBF
-BFBFBFBFBFBFBFBFBFlvlvetfGUDyttRAiPYvMvMvMJXvMvMvMPYyTeCtwdVDdetlvlvBFBFBFBFBFBFBFBFBFBFBF
-BFBFBFBFBFBFBFBFlvlvlvoEEpnxfSvlltGFRbZqytVdytdTyuGFxOLxhedVDdoElvlvlvBFBFBFBFBFBFBFBFBFBF
-BFBFBFBFBFBFBFBFlvlvlvAsEpytpNGFZNGFGFGFMYGROlGFGFGFZNGFiAdVfGAslvlvlvBFBFBFBFBFBFBFBFBFBF
+BFBFBFBFBFBFBFBFBFlvlvGFMiytnxtCCLGFfbQiIhyvEnSfUkGFmJgZcUdVLJGFlvlvBFBFBFBFBFBFBFBFBFBFBF
+BFBFBFBFBFBFBFBFBFlvlvetfGUDyttRAiPYvMvMvMJXvMvMvMPYyTeCtwdKDdetlvlvBFBFBFBFBFBFBFBFBFBFBF
+BFBFBFBFBFBFBFBFlvlvlvoEEpnxfSvlltGFRbZqytVdytdTyuGFxOLxheYgDdoElvlvlvBFBFBFBFBFBFBFBFBFBF
+BFBFBFBFBFBFBFBFlvlvlvAsEpytpNGFZNGFGFGFMYGROlGFGFGFZNGFiAJofGAslvlvlvBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFlvlvGFGFngOvpgGFKGyXMmFhMYcLOlsXWdCxyzGFTyPXngGFGFlvlvBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFlvlvGFGFQXQXGFGFaGYZytzWMYbhOlzWfWcScvGFGFQXQXGFGFlvlvBFBFBFBFBFBFBFBFBFBF
 BFBFBFBFBFBFBFBFlvlvlvGFHnHnGFGFCrytytRQYIDTYZRQVeLZxrGFGFHnHnGFlvlvlvBFBFBFBFBFBFBFBFBFBF
