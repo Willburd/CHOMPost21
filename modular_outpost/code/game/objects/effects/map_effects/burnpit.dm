@@ -29,6 +29,9 @@
 		OT.update()
 
 /obj/effect/map_effect/interval/burnpit/trigger()
+	#ifdef UNIT_TEST
+	return FALSE
+	#endif
 	var/turf/simulated/T = loc
 	if(T)
 		// never put this out, reset my own air tile to FORCE combustion, should be enough to boost the other tiles too
