@@ -79,7 +79,6 @@
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/elevator,
 										/area/muriki/septic,
-										/area/tcomm/chamber,
 										/area/medical/voxlab/airgap,
 										/area/rnd/xenobiology/lost,
 										/area/muriki/grounds,
