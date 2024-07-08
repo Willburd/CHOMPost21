@@ -101,7 +101,7 @@
 
 	// Outpost 21 edit begin - more feedback if the job controller isn't setup yet.
 	if(!SSjob || !SSjob.department_datums || !SSjob.department_datums.len)
-		. += "<b>Job controller is still initializing, please wait...<br>"
+		. += "<b>Job controller is still initializing, please wait...</b><br>"
 	// Outpost 21 edit end
 
 	for(var/D in SSjob.department_datums)

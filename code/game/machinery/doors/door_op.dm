@@ -49,6 +49,7 @@
 	return rand(200,5000)
 
 /obj/machinery/door/flesh/process()
+	#if !UNIT_TEST
 	if(close_door_at >= 0 && world.time >= close_door_at)
 		close_door_at = -1 // wait till ready
 		if(!src.density)
@@ -59,6 +60,7 @@
 			spawn(0)
 				open()
 				close_door_at = world.time + next_close_wait()
+	#endif
 
 /obj/machinery/door/flesh/update_icon(var/update_neighbors)
 	cut_overlays()
