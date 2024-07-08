@@ -408,7 +408,7 @@
 "bKh" = (/obj/item/weapon/deck/cards,/obj/structure/table/standard,/obj/effect/floor_decal/spline/fancy/wood{dir = 1},/obj/structure/sign/scenery/map/right_outpost21{pixel_y = 32},/turf/simulated/floor/wood,/area/specialty/redspace)
 "bKl" = (/obj/effect/landmark/vehicle_interior/entrypos,/obj/effect/floor_decal/industrial/loading{dir = 4},/turf/simulated/floor/tiled/steel_grid,/area/vehicle_interior/heavyarmor_medic_recovery)
 "bKC" = (/obj/machinery/door/vehicle_interior_hatch,/turf/simulated/floor,/area/vehicle_interior/heavyarmor_medic_recovery)
-"bKJ" = (/obj/machinery/door/firedoor/border_only,/obj/machinery/door/airlock/glass_external{frequency = 1380; id_tag = "trawler_bay_door"; req_one_access = list(13,48,52)},/turf/simulated/floor/tiled/techfloor,/area/specialty/redspace)
+"bKJ" = (/obj/machinery/door/firedoor/border_only,/obj/machinery/door/airlock/glass_external{frequency = 1380; id_tag = "trawler_bay_door"; req_one_access = list(13,48,52)},/obj/structure/fans/tiny,/turf/simulated/floor/tiled/techfloor,/area/specialty/redspace)
 "bKT" = (/turf/simulated/shuttle/wall/dark/hard_corner,/area/space)
 "bLg" = (/obj/structure/handrail{dir = 4},/obj/machinery/atmospherics/pipe/simple/visible,/turf/simulated/floor/tiled/techfloor,/area/shuttle/tram)
 "bLE" = (/obj/machinery/door/airlock/centcom{name = "General Access"; req_access = list(101)},/turf/simulated/floor/tiled,/area/centcom/control)
