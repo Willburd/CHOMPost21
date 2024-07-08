@@ -105,6 +105,7 @@
 										/area/muriki/rooftop/comgen,
 										/area/muriki/rooftop/cargen,
 										/area/muriki/rooftop/scigen,
+										/area/muriki/rooftop/civgen,
 										// The outside areas don't need scrubbers and vents
 										/area/muriki/grounds,
 										/area/muriki/grounds/shutt,
@@ -146,6 +147,7 @@
 										/area/offworld/asteroidyard/external,
 										/area/offworld/asteroidyard/external/yardzone,
 										// Actual unit test exceptions
+										/area/comms
 										/area/engineering/engine_airlock,
 										/area/engineering/engine_room,
 										/area/muriki/lowerelev,
