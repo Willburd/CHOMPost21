@@ -442,18 +442,31 @@
 		//VOREStation Edit End
 
 	//YAWNEDIT: Recoil knockdown for micros, ported from CHOMPStation
-	if(recoil_mode && iscarbon(user))
-		var/mob/living/carbon/nerd = user
-		var/mysize = nerd.size_multiplier
-		if(recoil_mode > 0)
-			if(mysize <= 0.60)
-				nerd.Weaken(1*recoil_mode)
-				if(!istype(src,/obj/item/weapon/gun/energy))
-					nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
-					to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
-				else
-					to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
-
+	if(last_shot == world.time) // Outpost 21 edit - why was this triggering if a bullet wasn't even fired?
+		if(recoil_mode && iscarbon(user))
+			var/mob/living/carbon/nerd = user
+			var/mysize = nerd.size_multiplier
+			if(recoil_mode > 0)
+				if(mysize <= 0.60)
+					nerd.Weaken(1*recoil_mode)
+					if(!istype(src,/obj/item/weapon/gun/energy))
+						nerd.adjustBruteLoss((5-mysize*4)*recoil_mode)
+						to_chat(nerd, "<span class='danger'>You're so tiny that you drop the gun and hurt yourself from the recoil!</span>")
+					else
+						to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
+				// Outpost 21 edit begin - Lightweights get knocked back if standing
+				else if(nerd.species.lightweight && one_handed_penalty >= 30 && recoil_mode > 0)
+					var/old_dir = nerd.dir
+					// Laying down stops this
+					if(!nerd.resting)
+						nerd.Weaken(1*recoil_mode)
+						step_away(nerd, get_step(nerd,nerd.dir))
+						to_chat(nerd, "<span class='danger'>\The [src]'s recoil knocks you over!</span>")
+					else if(one_handed_penalty >= 70) // Even laying down these weapons push a lightweight back
+						step_away(nerd, get_step(nerd,nerd.dir))
+						to_chat(nerd, "<span class='warning'>\The [src]'s recoil pushes you back!</span>")
+					nerd.dir = old_dir
+				// Outpost 21 edit end
 	//YAWNEDIT: Knockdown code end
 
 	user.hud_used.update_ammo_hud(user, src)
