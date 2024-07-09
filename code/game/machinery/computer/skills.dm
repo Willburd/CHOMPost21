@@ -217,7 +217,7 @@
 			// Outpost 21 edit begin - Update player's document
 			if("sync_r")
 				if(active1)
-					set_temp(client_update_record(active1,usr,"employment"))
+					set_temp(client_update_record(src,active1,usr))
 			if("edit_notes")
 				// The modal input in tgui is busted for this sadly...
 				var/new_notes = strip_html_simple(tgui_input_text(usr,"Enter new information here.","Character Preference", html_decode(active1.fields["notes"]), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
