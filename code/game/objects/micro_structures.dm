@@ -353,6 +353,8 @@ var/global/list/micro_tunnels = list()
 					return
 				if(QDELETED(src))
 					return
+				if(usr.loc != src) // Outpost 21 edit - don't move if you were taken out of the hole
+					return
 				var/obj/our_choice = choice
 
 				var/list/new_contained_mobs = list()
