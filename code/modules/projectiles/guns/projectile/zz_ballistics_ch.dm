@@ -1555,6 +1555,7 @@
 //shotgun.dm
 /obj/item/weapon/gun/projectile/shotgun
 	muzzle_velocity = 470 //Temporary
+	one_handed_penalty = 60 // Outpost 21 edit - Why wasn't this set?
 
 /obj/item/weapon/gun/projectile/shotgun/pump
 	manual_chamber = FALSE
