@@ -408,13 +408,26 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body  =  "<b>Requires Feeding: [S.get_trait(TRAIT_REQUIRES_NUTRIENTS) ? "YES" : "NO"]</b><br>"
 	body  += "<b>Requires Watering: [S.get_trait(TRAIT_REQUIRES_WATER) ? "YES" : "NO"]</b><br>"
 	body  += "<b>Requires Light: [S.get_trait(TRAIT_IDEAL_LIGHT)] lumen[S.get_trait(TRAIT_IDEAL_LIGHT) == 1 ? "" : "s"]<br>"
-	body  += "<b>Yield: [S.get_trait(TRAIT_YIELD)]</b><br>"
+	if(S.get_trait(TRAIT_YIELD) > 0)
+		body  += "<b>Yield: [S.get_trait(TRAIT_YIELD)]</b><br>"
 	body  += "<br>"
 
 	var/traits = FALSE
 	body  += "<b>Traits:</b><br>"
 	if(S.has_item_product)
 		body  += "<b>-Grown Byproducts</b><br>"
+		traits = TRUE
+	if(S.chems && !isnull(S.chems["woodpulp"]))
+		body  += "<b>-Wooden Growths</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_FLESH_COLOUR))
+		body  += "<b>-Choppable</b><br>"
+		traits = TRUE
+	if(S.kitchen_tag == "pumpkin")
+		body  += "<b>-Carvable</b><br>"
+		traits = TRUE
+	if(S.kitchen_tag == "potato")
+		body  += "<b>-Sliceable</b><br>"
 		traits = TRUE
 	if(S.get_trait(TRAIT_JUICY))
 		body  += "<b>-Juicy</b><br>"
@@ -457,13 +470,11 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	if(S.chems && S.chems.len > 0)
 		body  += "<b>Chemical Breakdown: </b><br>"
 		for(var/CB in S.chems)
-			var/amounts_list = S.chems[CB]
 			var/datum/reagent/CBR = SSchemistry.chemical_reagents[CB]
 			if(CBR)
-				if(amounts_list[1] == amounts_list[2])
-					body  += "<b>-[CBR.name] [amounts_list[2]]u</b><br>"
-				else
-					body  += "<b>-[CBR.name] [amounts_list[1]]u ~ [amounts_list[2]]u</b><br>"
+				body  += "<b>-[CBR.name]</b><br>"
+			else
+				body  += "<b>-[CB]?</b><br>"
 		body  += "<br>"
 	if(S.consume_gasses && S.consume_gasses.len > 0)
 		body  += "<b>Gasses Consumed: </b><br>"
