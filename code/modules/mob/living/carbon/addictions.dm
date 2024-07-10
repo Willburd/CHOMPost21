@@ -58,6 +58,8 @@
 		addict_to_reagent("ethanol")
 	if(prefs.addictions & ADDICT_SUSTENANCE)
 		addict_to_reagent("a_sustenance")
+	if(prefs.addictions & ADDICT_COFFEE)
+		addict_to_reagent("coffee")
 
 
 /mob/living/proc/handle_addictions()

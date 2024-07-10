@@ -13,6 +13,7 @@
 	dat += "Blind: <a href='?src=\ref[src];sdisabilities=[BLIND]'><b>[pref.sdisabilities & BLIND ? "Yes" : "No"]</b></a><br>"
 	dat += "Epilepsy: <a href='?src=\ref[src];disabilities=[EPILEPSY]'><b>[pref.disabilities & EPILEPSY ? "Yes" : "No"]</b></a><br>"
 	dat += "<h2>Addictions</h2>"
+	dat += "Coffee: <a href='?src=\ref[src];addictions=[ADDICT_COFFEE]'><b>[pref.addictions & ADDICT_COFFEE ? "Yes" : "No"]</b></a><br>"
 	dat += "Nicotine: <a href='?src=\ref[src];addictions=[ADDICT_NICOTINE]'><b>[pref.addictions & ADDICT_NICOTINE ? "Yes" : "No"]</b></a><br>"
 	dat += "Alcohol: <a href='?src=\ref[src];addictions=[ADDICT_ALCOHOL]'><b>[pref.addictions & ADDICT_ALCOHOL ? "Yes" : "No"]</b></a><br>"
 	dat += "Painkiller: <a href='?src=\ref[src];addictions=[ADDICT_PAINKILLER]'><b>[pref.addictions & ADDICT_PAINKILLER ? "Yes" : "No"]</b></a><br>"
