@@ -6,6 +6,10 @@
 
 GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
+/hook/roundstart/proc/create_ingame_wiki()
+	GLOB.game_wiki.init_wiki_data()
+	return TRUE
+
 /datum/internal_wiki/main
 	var/list/pages = list()
 
@@ -17,6 +21,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	var/list/drinkreact = list()
 	var/list/phororeact = list()
 	var/list/chemreact = list()
+	var/list/botseeds = list()
 
 	var/list/foodrecipe = list()
 	var/list/drinkrecipe = list()
@@ -35,12 +40,17 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	var/list/searchcache_drinkrecipe = list()
 	var/list/searchcache_chemreact = list()
 	var/list/searchcache_catalogs = list()
+	var/list/searchcache_botseeds = list()
 
 /datum/internal_wiki/main/proc/init_wiki_data()
 	if(pages.len)
 		return // already init
-	log_world("Init game built wiki")
+	init_mining_data()
+	init_kitchen_data()
+	init_lore_data()
+	log_world("Initialized Wiki Pages: [pages.len]")
 
+/datum/internal_wiki/main/proc/init_mining_data()
 	// assemble ore wiki
 	for(var/N in GLOB.ore_data)
 		var/ore/OR = GLOB.ore_data[N]
@@ -105,27 +115,17 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 				P.chemical_assemble(R)
 				spoilerreact["[R.name]"] = P
 			pages.Add(P)
-	init_kitchen_data()
-
-	// assemble low reward catalog entries
-	for(var/datum/category_group/G in GLOB.catalogue_data.categories)
-		for(var/datum/category_item/catalogue/item in G.items)
-			if(istype(item,/datum/category_item/catalogue/anomalous))
-				continue // lets always consider these spoilers
-			if(istype(item,/datum/category_item/catalogue/fauna/catslug/custom))
-				continue // too many silly entries
-			if(item.value > CATALOGUER_REWARD_TRIVIAL)
-				continue
-			var/datum/internal_wiki/page/catalog/P = new()
-			P.title = item.name
-			P.catalog_record = item
-			catalogs["[item.name]"] = P
-			searchcache_catalogs.Add("[item.name]")
-			pages.Add(P)
-
-	log_world("Wiki page count [pages.len]")
 
 /datum/internal_wiki/main/proc/init_kitchen_data()
+	// seeds and plants
+	for(var/SN in SSplants.seeds)
+		var/datum/seed/S = SSplants.seeds[SN]
+		if(S && S.roundstart && !S.mysterious)
+			var/datum/internal_wiki/page/P = new()
+			P.seed_assemble(S)
+			searchcache_botseeds.Add("[S.display_name]")
+			botseeds["[S.display_name]"] = P
+			pages.Add(P)
 	// this is basically a clone of code\modules\food\recipe_dump.dm
 	// drinks
 	var/list/drink_recipes = list()
@@ -311,6 +311,23 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			searchcache_drinkrecipe.Add("[P.title]")
 			pages.Add(P)
 
+/datum/internal_wiki/main/proc/init_lore_data()
+	// assemble low reward catalog entries
+	for(var/datum/category_group/G in GLOB.catalogue_data.categories)
+		for(var/datum/category_item/catalogue/item in G.items)
+			if(istype(item,/datum/category_item/catalogue/anomalous))
+				continue // lets always consider these spoilers
+			if(istype(item,/datum/category_item/catalogue/fauna/catslug/custom))
+				continue // too many silly entries
+			if(item.value > CATALOGUER_REWARD_TRIVIAL)
+				continue
+			var/datum/internal_wiki/page/catalog/P = new()
+			P.title = item.name
+			P.catalog_record = item
+			catalogs["[item.name]"] = P
+			searchcache_catalogs.Add("[item.name]")
+			pages.Add(P)
+
 /datum/internal_wiki/main/proc/allow_reagent(var/reagent)
 	// This is used to filter out some of the base reagent types, such as "drink", without putting spoiler tags on base types...
 	if(reagent == "reagent")
@@ -321,6 +338,10 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		return FALSE
 	return TRUE
 
+
+
+
+//////////////////////// PAGES AND THEIR CONSTRUCTION
 /datum/internal_wiki/page
 	var/title = ""
 	var/body = ""
@@ -382,8 +403,92 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		for(var/datum/stack_recipe/R in M.recipes)
 			body += "<b>-[R.title]</b><br>"
 
-/datum/internal_wiki/page/proc/smasher_assemble(var/datum/particle_smasher_recipe/M, var/resultname)
+/datum/internal_wiki/page/proc/seed_assemble(var/datum/seed/S)
+	title = S.display_name
+	body  =  "<b>Requires Feeding: [S.get_trait(TRAIT_REQUIRES_NUTRIENTS) ? "YES" : "NO"]</b><br>"
+	body  += "<b>Requires Watering: [S.get_trait(TRAIT_REQUIRES_WATER) ? "YES" : "NO"]</b><br>"
+	body  += "<b>Requires Light: [S.get_trait(TRAIT_IDEAL_LIGHT)] lumen[S.get_trait(TRAIT_IDEAL_LIGHT) == 1 ? "" : "s"]<br>"
+	body  += "<b>Yield: [S.get_trait(TRAIT_YIELD)]</b><br>"
+	body  += "<br>"
 
+	var/traits = FALSE
+	body  += "<b>Traits:</b><br>"
+	if(S.has_item_product)
+		body  += "<b>-Grown Byproducts</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_JUICY))
+		body  += "<b>-Juicy</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_IMMUTABLE))
+		body  += "<b>-Stable Genome</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_PRODUCES_POWER))
+		body  += "<b>-Voltaic</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_BIOLUM))
+		body  += "<b>-Bioluminescence</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_STINGS))
+		body  += "<b>-Stings</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_SPORING))
+		body  += "<b>-Produces Spores</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_CARNIVOROUS))
+		body  += "<b>-Carnivorous</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_PARASITE))
+		body  += "<b>-Parasitic</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_SPREAD))
+		body  += "<b>-Spreading</b><br>"
+		traits = TRUE
+	if(S.get_trait(TRAIT_EXPLOSIVE))
+		body  += "<b>-Explosive</b><br>"
+		traits = TRUE
+	if(!traits)
+		body  += "<b>-None</b><br>"
+	body  += "<br>"
+
+	if(S.has_mob_product)
+		body += "<b>DANGER - MAY BE MOBILE<br>"
+	body  += "<br>"
+
+	if(S.chems && S.chems.len > 0)
+		body  += "<b>Chemical Breakdown: </b><br>"
+		for(var/CB in S.chems)
+			var/amounts_list = S.chems[CB]
+			var/datum/reagent/CBR = SSchemistry.chemical_reagents[CB]
+			if(CBR)
+				if(amounts_list[1] == amounts_list[2])
+					body  += "<b>-[CBR.name] [amounts_list[2]]u</b><br>"
+				else
+					body  += "<b>-[CBR.name] [amounts_list[1]]u ~ [amounts_list[2]]u</b><br>"
+		body  += "<br>"
+	if(S.consume_gasses && S.consume_gasses.len > 0)
+		body  += "<b>Gasses Consumed: </b><br>"
+		for(var/CG in S.consume_gasses)
+			var/amount = "[gas_data.name[CG]]"
+			if (S.consume_gasses[CG] < 5)
+				amount = "[gas_data.name[CG]] (trace amounts)"
+			body  += "<b>-[amount]</b><br>"
+		body  += "<br>"
+	if(S.exude_gasses && S.exude_gasses.len > 0)
+		body  += "<b>Gasses Produced: </b><br>"
+		for(var/EG in S.exude_gasses)
+			var/amount = "[gas_data.name[EG]]"
+			if (S.exude_gasses[EG] < 5)
+				amount = "[gas_data.name[EG]] (trace amounts)"
+			body  += "<b>-[amount]</b><br>"
+		body  += "<br>"
+	if(S.mutants && S.mutants.len > 0)
+		body  += "<b>Mutant Strains: </b><br>"
+		for(var/MS in S.mutants)
+			var/datum/seed/mut = SSplants.seeds[MS]
+			if(mut)
+				body  += "<b>-[mut.display_name]</b><br>"
+
+/datum/internal_wiki/page/proc/smasher_assemble(var/datum/particle_smasher_recipe/M, var/resultname)
 	var/obj/item/stack/material/req_mat = null
 	if(M.required_material)
 		req_mat = new M.required_material
@@ -493,7 +598,6 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 				if(!r_CL)
 					continue
 				body += " <b>-Catalyst: </b>[r_CL.name]<br>"
-
 
 /datum/internal_wiki/page/proc/food_assemble(var/datum/reagent/R)
 	title = R.name

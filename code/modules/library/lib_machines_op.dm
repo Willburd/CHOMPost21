@@ -22,7 +22,6 @@
 
 /obj/machinery/librarywikicomp/Initialize()
 	. = ..()
-	GLOB.game_wiki.init_wiki_data() // self-prevents multiple reinitilizations
 	current_ad1 = get_ad()
 	current_ad2 = get_ad()
 
@@ -68,6 +67,8 @@
 				data["search"] = GLOB.game_wiki.searchcache_drinkrecipe
 			if(searchmode == "Chemistry")
 				data["search"] = GLOB.game_wiki.searchcache_chemreact
+			if(searchmode == "Botany")
+				data["search"] = GLOB.game_wiki.searchcache_botseeds
 			if(searchmode == "Catalogs")
 				data["search"] = GLOB.game_wiki.searchcache_catalogs
 			if(searchmode == "Materials")
@@ -143,6 +144,11 @@
 				searchmode = "Chemistry"
 			. = TRUE
 
+		if("botsearch")
+			if(!crash)
+				searchmode = "Botany"
+			. = TRUE
+
 		if("catalogsearch")
 			if(!crash)
 				searchmode = "Catalogs"
@@ -183,6 +189,8 @@
 					P = GLOB.game_wiki.drinkrecipe[search]
 				if(searchmode == "Chemistry")
 					P = GLOB.game_wiki.chemreact[search]
+				if(searchmode == "Botany")
+					P = GLOB.game_wiki.botseeds[search]
 				if(searchmode == "Catalogs")
 					P = GLOB.game_wiki.catalogs[search]
 				if(searchmode == "Materials")

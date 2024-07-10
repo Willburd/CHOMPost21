@@ -46,6 +46,9 @@ export const PublicLibrary = (props, context) => {
                   <Button icon="search" onClick={() => act('chemsearch')}>Chemistry</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
+                  <Button icon="search" onClick={() => act('botsearch')}>Botany</Button>
+                </LabeledList.Item>
+                <LabeledList.Item>
                   <Button icon="search" onClick={() => act('oresearch')}>Ores</Button>
                 </LabeledList.Item>
                 <LabeledList.Item>
