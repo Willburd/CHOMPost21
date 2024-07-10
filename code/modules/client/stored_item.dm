@@ -90,12 +90,20 @@
 			to_chat(user, "<span class='warning'>You have already taken something out of \the [src] this shift.</span>")
 			busy_bank = FALSE
 			return
+		/* Outpost 21 edit begin - Allow storing items back in the vault if you take it out accidentally
 		choice = tgui_alert(user, "If you remove this item from the bank, it will be unable to be stored again. Do you still want to remove it?", "[src]", list("No", "Yes"), timeout = 10 SECONDS)
 		icon_state = "item_bank_o"
 		if(!choice || choice == "No" || !Adjacent(user) || inoperable() || panel_open)
 			busy_bank = FALSE
 			icon_state = "item_bank"
 			return
+		else
+		*/
+		if(!Adjacent(user) || inoperable() || panel_open)
+			busy_bank = FALSE
+			icon_state = "item_bank"
+			return
+		// Outpost 21 edit end
 		else if(!do_after(user, 10 SECONDS, src, exclusive = TASK_ALL_EXCLUSIVE) || inoperable())
 			busy_bank = FALSE
 			icon_state = "item_bank"
@@ -104,7 +112,7 @@
 		log_admin("[key_name_admin(user)] retrieved [N] from the item bank.")
 		visible_message("<span class='notice'>\The [src] dispenses the [N] to \the [user].</span>")
 		user.put_in_hands(N)
-		N.persist_storable = FALSE
+		// N.persist_storable = FALSE // Outpost 21 edit - Allow storing items back in the vault if you take it out accidentally
 		var/path = src.persist_item_savefile_path(user)
 		var/savefile/F = new /savefile(src.persist_item_savefile_path(user))
 		F["persist item"] << null
@@ -114,7 +122,10 @@
 		busy_bank = FALSE
 		icon_state = "item_bank"
 	else if(choice == "Info")
-		to_chat(user, "<span class='notice'>\The [src] can store a single item for you between shifts! Anything that has been retrieved from the bank cannot be stored again in the same shift. Anyone can withdraw from the bank one time per shift. Some items are not able to be accepted by the bank.</span>")
+		// Outpost 21 edit begin - Allow storing items back in the vault if you take it out accidentally
+		// to_chat(user, "<span class='notice'>\The [src] can store a single item for you between shifts! Anything that has been retrieved from the bank cannot be stored again in the same shift. Anyone can withdraw from the bank one time per shift. Some items are not able to be accepted by the bank.</span>")
+		to_chat(user, "<span class='notice'>\The [src] can store a single item for you between shifts! Anyone can withdraw from the bank one time per shift. Some items are not able to be accepted by the bank.</span>")
+		// Outpost 21 edit end
 		busy_bank = FALSE
 		return
 	else if(!I)
