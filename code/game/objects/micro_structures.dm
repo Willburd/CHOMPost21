@@ -1,3 +1,5 @@
+var/global/list/micro_tunnels = list()
+
 /obj/structure/micro_tunnel
 	name = "mouse hole"
 	desc = "A tiny little hole... where does it go?"
@@ -18,6 +20,12 @@
 		/mob/living/simple_mob/slime
 	)
 
+// Outpost 21 edit begin - less terrible way of keeping track of micro tunnels
+/obj/structure/micro_tunnel/New()
+	. = ..()
+	micro_tunnels.Add(src)
+// Outpost 21 edit end
+
 /obj/structure/micro_tunnel/Initialize()
 	. = ..()
 	if(name == initial(name))
@@ -33,6 +41,9 @@
 		visible_message("<span class = 'warning'>\The [thing] tumbles out!</span>")
 		thing.forceMove(get_turf(src.loc))
 		thing.cancel_camera()
+	// Outpost 21 edit begin - less terrible way of keeping track of micro tunnels
+	micro_tunnels.Remove(src)
+	// Outpost 21 edit end
 
 	return ..()
 
@@ -63,7 +74,7 @@
 		if(myturf.z in P.expected_z_levels)
 			planet = P
 		else
-	for(var/obj/structure/micro_tunnel/t in world)
+	for(var/obj/structure/micro_tunnel/t in micro_tunnels)// Outpost 21 edit - less terrible way of keeping track of micro tunnels
 		if(t == src)
 			continue
 		if(magic || t.magic)
