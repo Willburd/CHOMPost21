@@ -30,6 +30,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	var/list/spoilermat = list()
 	var/list/spoilersmasher = list()
 	var/list/spoilerreact = list()
+	var/list/spoilerbotseeds = list()
 
 	var/list/catalogs = list()
 
@@ -122,10 +123,15 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		var/datum/seed/S = SSplants.seeds[SN]
 		if(S && S.roundstart && !S.mysterious)
 			var/datum/internal_wiki/page/P = new()
-			P.seed_assemble(S)
-			searchcache_botseeds.Add("[S.display_name]")
-			botseeds["[S.display_name]"] = P
-			pages.Add(P)
+			if(!S.spoiler)
+				P.seed_assemble(S)
+				searchcache_botseeds.Add("[S.display_name]")
+				botseeds["[S.display_name]"] = P
+				pages.Add(P)
+			else
+				P.seed_assemble(S)
+				spoilerbotseeds["[S.display_name]"] = P
+
 	// this is basically a clone of code\modules\food\recipe_dump.dm
 	// drinks
 	var/list/drink_recipes = list()
@@ -497,7 +503,10 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		for(var/MS in S.mutants)
 			var/datum/seed/mut = SSplants.seeds[MS]
 			if(mut)
-				body  += "<b>-[mut.display_name]</b><br>"
+				if(!mut.spoiler)
+					body  += "<b>-[mut.display_name]</b><br>"
+				else
+					body  += "<b>-Unknown Strain</b><br>"
 
 /datum/internal_wiki/page/proc/smasher_assemble(var/datum/particle_smasher_recipe/M, var/resultname)
 	var/obj/item/stack/material/req_mat = null

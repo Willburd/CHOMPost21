@@ -225,8 +225,10 @@
 	// anxiety meds handled here
 	else if(anxietymedcount == 0)
 		if (disabilities & NERVOUS)
-			if (prob(15) && prob(8))
+			if (prob(15) && prob(7))
 				stuttering = max(15, stuttering)
+				if(jitteriness < 100)
+					make_jittery(115)
 		if (disabilities & TOURETTES)
 			if ((prob(5) && prob(8) && paralysis <= 1))
 				Stun(2)

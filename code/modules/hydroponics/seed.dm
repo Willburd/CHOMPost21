@@ -32,6 +32,8 @@
 	var/list/mutagenic_reagents    // Reagents considered uniquely 'mutagenic' by a plant.
 	var/list/toxic_reagents        // Reagents considered uniquely 'toxic' by a plant.
 
+	var/spoiler = FALSE // If the seed appears in the ingame wiki
+
 /datum/seed/New()
 
 	set_trait(TRAIT_IMMUTABLE,            0)            // If set, plant will never mutate. If -1, plant is highly mutable.
