@@ -131,6 +131,15 @@ var/const/tk_maxrange = 15
 		apply_focus_overlay()
 		focus.throw_at(target, 10, 1, user)
 		last_throw = world.time
+		// Outpost 21 edit begin - TK gloves power use
+		if(ishuman(user))
+			var/mob/living/carbon/human/H_user = user
+			if(istype(H_user.gloves,/obj/item/clothing/gloves/telekinetic))
+				var/obj/item/clothing/gloves/telekinetic/TKG = H_user.gloves
+				TKG.use_grip_power(user,TRUE)
+				if(!TKG.has_grip_power())
+					qdel(src) // Drop TK
+		// Outpost 21 edit end
 	return
 
 /obj/item/tk_grab/attack(mob/living/M as mob, mob/living/user as mob, def_zone)

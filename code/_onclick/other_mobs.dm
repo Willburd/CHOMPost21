@@ -56,6 +56,11 @@
 		return
 
 	else if(has_telegrip()) // Outpost 21 edit - use check for gloves
+		// Outpost 21 edit begin - TK gloves power use
+		if(istype(gloves,/obj/item/clothing/gloves/telekinetic))
+			var/obj/item/clothing/gloves/telekinetic/TKG = gloves
+			TKG.use_grip_power(src,TRUE)
+		// Outpost 21 edit end
 		A.attack_tk(src)
 
 	else if(spitting) //Only used by xenos right now, can be expanded.
