@@ -231,3 +231,34 @@
 // Particle smash
 /datum/particle_smasher_recipe/verdantium_morphium
 	spoiler = TRUE
+
+// Seeds
+/datum/seed/hardlightseed
+	spoiler = TRUE
+
+/datum/seed/size
+	spoiler = TRUE
+
+/datum/seed/lustflower
+	spoiler = TRUE
+
+/datum/seed/apple/gold
+	spoiler = TRUE
+
+/datum/seed/tomato/killer
+	spoiler = TRUE
+
+/datum/seed/tomato/blue/teleport
+	spoiler = TRUE
+
+/datum/seed/tomato/blue/teleport
+	spoiler = TRUE
+
+/datum/seed/wabback/wild
+	spoiler = TRUE
+
+/datum/seed/wurmwoad
+	spoiler = TRUE
+
+/datum/seed/xenomorph
+	spoiler = TRUE
