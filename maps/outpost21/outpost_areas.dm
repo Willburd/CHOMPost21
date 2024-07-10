@@ -2406,6 +2406,12 @@
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open/force_indoor
 
+/area/security/secmail
+	name = "\improper Security Mail Room"
+	icon_state = "orablasqu"
+	base_turf = /turf/simulated/open/force_indoor
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
 /area/constructionsite/medical
 	base_turf = /turf/simulated/mineral/floor/muriki
 	use_emergency_overlay = TRUE
