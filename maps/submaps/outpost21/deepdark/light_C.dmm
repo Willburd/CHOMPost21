@@ -1,7 +1,7 @@
 "a" = (/turf/template_noop,/area/template_noop)
-"g" = (/obj/machinery/trailblazer/yellow,/turf/template_noop,/area/mine/explored/muriki/cave/deepdark)
+"g" = (/obj/machinery/trailblazer/yellow,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/mine/explored/muriki/cave/deepdark)
 "R" = (/turf/simulated/floor/outdoors/sidewalk/muriki{icon_state = "slab"},/area/mine/explored/muriki/cave/deepdark)
-"W" = (/turf/template_noop,/area/mine/explored/muriki/cave/deepdark)
+"W" = (/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"
 aaaaa

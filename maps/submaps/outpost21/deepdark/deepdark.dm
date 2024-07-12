@@ -24,7 +24,23 @@
 	desc = "Random light."
 	mappath = 'maps/submaps/outpost21/deepdark/light_A.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 60
+	discard_prob = 20
+	cost = 5
+
+/datum/map_template/outpost21/muriki/caves_deepdark/light_B
+	name = "Light Variant B"
+	desc = "Random light."
+	mappath = 'maps/submaps/outpost21/deepdark/light_B.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 5
+
+/datum/map_template/outpost21/muriki/caves_deepdark/light_C
+	name = "Light Variant C"
+	desc = "Random light."
+	mappath = 'maps/submaps/outpost21/deepdark/light_C.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 20
 	cost = 5
 
 /datum/map_template/outpost21/muriki/caves_deepdark/gas_A
@@ -32,7 +48,7 @@
 	desc = "Random gas pocket."
 	mappath = 'maps/submaps/outpost21/deepdark/gas_pocket_A.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 60
+	discard_prob = 20
 	cost = 15
 
 /datum/map_template/outpost21/muriki/caves_deepdark/gas_B
@@ -40,7 +56,15 @@
 	desc = "Random gas pocket."
 	mappath = 'maps/submaps/outpost21/deepdark/gas_pocket_B.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 60
+	discard_prob = 50
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/gas_C
+	name = "Gas Pocket Variant C"
+	desc = "Random gas pocket."
+	mappath = 'maps/submaps/outpost21/deepdark/gas_pocket_C.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 50
 	cost = 15
 
 /datum/map_template/outpost21/muriki/caves_deepdark/flesh_A
@@ -48,31 +72,23 @@
 	desc = "flesh varient."
 	mappath = 'maps/submaps/outpost21/deepdark/flesh_A.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 80
-	cost = 45
+	discard_prob = 40
+	cost = 25
 
 /datum/map_template/outpost21/muriki/caves_deepdark/flesh_B
 	name = "Flesh Variant B"
 	desc = "flesh varient."
 	mappath = 'maps/submaps/outpost21/deepdark/flesh_B.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 80
-	cost = 45
-
-/datum/map_template/outpost21/muriki/caves_deepdark/gas_C
-	name = "Gas Pocket Variant C"
-	desc = "Random gas pocket."
-	mappath = 'maps/submaps/outpost21/deepdark/gas_pocket_C.dmm'
-	allow_duplicates = TRUE
-	discard_prob = 60
-	cost = 15
+	discard_prob = 40
+	cost = 25
 
 /datum/map_template/outpost21/muriki/caves_deepdark/den_A
 	name = "Den A"
 	desc = "Random den."
 	mappath = 'maps/submaps/outpost21/deepdark/den_A.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 30
+	discard_prob = 20
 	cost = 15
 
 /datum/map_template/outpost21/muriki/caves_deepdark/den_B
@@ -80,7 +96,7 @@
 	desc = "Random den."
 	mappath = 'maps/submaps/outpost21/deepdark/den_B.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 70
+	discard_prob = 40
 	cost = 15
 
 //////////////////////////////////////////////////////////////
