@@ -1,0 +1,190 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/floor/flesh/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/obj/random/mob/synx,
+/turf/simulated/floor/flesh/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/turf/template_noop,
+/area/template_noop)
+"S" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+"}
+(2,1,1) = {"
+z
+S
+a
+f
+f
+S
+f
+S
+a
+S
+a
+z
+"}
+(3,1,1) = {"
+z
+a
+S
+a
+f
+f
+a
+a
+f
+f
+S
+z
+"}
+(4,1,1) = {"
+z
+f
+a
+a
+p
+a
+a
+a
+f
+a
+S
+z
+"}
+(5,1,1) = {"
+z
+f
+S
+a
+f
+a
+f
+f
+f
+a
+f
+z
+"}
+(6,1,1) = {"
+z
+a
+S
+f
+f
+p
+f
+a
+p
+a
+a
+z
+"}
+(7,1,1) = {"
+z
+S
+a
+a
+f
+a
+a
+a
+f
+f
+a
+z
+"}
+(8,1,1) = {"
+z
+S
+S
+f
+f
+a
+x
+a
+f
+f
+S
+z
+"}
+(9,1,1) = {"
+z
+S
+a
+a
+p
+a
+a
+f
+f
+f
+a
+z
+"}
+(10,1,1) = {"
+z
+S
+a
+S
+f
+f
+f
+f
+S
+a
+S
+z
+"}
+(11,1,1) = {"
+z
+S
+S
+a
+S
+f
+f
+a
+a
+S
+S
+z
+"}
+(12,1,1) = {"
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+z
+"}

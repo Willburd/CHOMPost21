@@ -1,0 +1,90 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"i" = (
+/obj/structure/bonfire,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/obj/structure/closet/tent/B,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/effect/landmark/hostile_xenobio,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+J
+J
+J
+o
+o
+a
+"}
+(3,1,1) = {"
+a
+o
+w
+J
+J
+o
+a
+"}
+(4,1,1) = {"
+a
+o
+o
+T
+J
+J
+a
+"}
+(5,1,1) = {"
+a
+o
+o
+z
+i
+J
+a
+"}
+(6,1,1) = {"
+a
+o
+J
+J
+J
+J
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+"}

@@ -4788,6 +4788,7 @@
 #include "maps\submaps\_readme.dm"
 #include "maps\submaps\outpost21\base.dm"
 #include "maps\submaps\outpost21\cargoyard\cargoyard.dm"
+#include "maps\submaps\outpost21\deepdark\deepdark.dm"
 #include "maps\submaps\outpost21\orbitalyard\orbitalyard.dm"
 #include "maps\~map_system\maps.dm"
 #include "maps\~map_system\maps_op.dm"

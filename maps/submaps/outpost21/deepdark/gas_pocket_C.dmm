@@ -1,0 +1,98 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/turf/simulated/mineral/floor/ignore_mapgen/cave{
+	nitrogen = 0;
+	oxygen = 0;
+	nitrous_oxide = 140
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"N" = (
+/turf/simulated/floor/gas_crack/nitro,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+W
+W
+W
+W
+W
+W
+W
+W
+"}
+(2,1,1) = {"
+W
+a
+a
+a
+a
+a
+a
+W
+"}
+(3,1,1) = {"
+W
+a
+a
+a
+H
+a
+a
+W
+"}
+(4,1,1) = {"
+W
+a
+H
+H
+H
+H
+a
+W
+"}
+(5,1,1) = {"
+W
+a
+a
+H
+N
+H
+a
+W
+"}
+(6,1,1) = {"
+W
+a
+a
+H
+H
+H
+a
+W
+"}
+(7,1,1) = {"
+W
+a
+a
+a
+a
+a
+a
+W
+"}
+(8,1,1) = {"
+W
+W
+W
+W
+W
+W
+W
+W
+"}
