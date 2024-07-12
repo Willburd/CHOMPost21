@@ -1,11 +1,12 @@
 //Outpost map defs
-#define Z_LEVEL_OUTPOST_BASEMENT					1
-#define Z_LEVEL_OUTPOST_SURFACE						2
-#define Z_LEVEL_OUTPOST_UPPER						3
-#define Z_LEVEL_OUTPOST_CENTCOM						4
-#define Z_LEVEL_OUTPOST_MISC 						5
-#define Z_LEVEL_OUTPOST_ASTEROID 					6
-#define Z_LEVEL_OUTPOST_VR		 					7
+#define Z_LEVEL_OUTPOST_DEEPDARK					1
+#define Z_LEVEL_OUTPOST_BASEMENT					2
+#define Z_LEVEL_OUTPOST_SURFACE						3
+#define Z_LEVEL_OUTPOST_UPPER						4
+#define Z_LEVEL_OUTPOST_CENTCOM						5
+#define Z_LEVEL_OUTPOST_MISC 						6
+#define Z_LEVEL_OUTPOST_ASTEROID 					7
+#define Z_LEVEL_OUTPOST_VR		 					8
 //Ensure these stay updated with map and z-level changes - Ignus
 /datum/map/outpost
 	name = "Outpost 21"
@@ -19,6 +20,7 @@
 	default_law_type = /datum/ai_laws/eshui_standard
 
 	holomap_smoosh = list(list(
+		Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER))
@@ -74,7 +76,7 @@
 	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage")
 	default_skybox = /datum/skybox_settings/outpost21
-	unit_test_z_levels = list(Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID)
+	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID)
 	unit_test_exempt_areas = list()
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
@@ -213,6 +215,7 @@
 
 	overmap_z = Z_LEVEL_OUTPOST_MISC
 	map_levels = list(
+			Z_LEVEL_OUTPOST_DEEPDARK,
 			Z_LEVEL_OUTPOST_BASEMENT,
 			Z_LEVEL_OUTPOST_SURFACE,
 			Z_LEVEL_OUTPOST_UPPER,
@@ -222,6 +225,7 @@
 	ai_shell_restricted = TRUE
 	ai_shell_allowed_levels = list(
 		Z_LEVEL_OUTPOST_CENTCOM,
+		Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER
@@ -238,6 +242,11 @@
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 150, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 200, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard)
 
+	//seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 450, /area/muriki/unexplored/deepdark, /datum/map_template/outpost21/muriki/caves_deepdark)
+
+	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_OUTPOST_DEEPDARK, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_DEEPDARK, world.maxx, world.maxy)         // Create the mining ore distribution map.
+
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_OUTPOST_BASEMENT, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_BASEMENT, world.maxx, world.maxy)         // Create the mining ore distribution map.
 
@@ -253,6 +262,7 @@
 
 /datum/planet/muriki
 	expected_z_levels = list(
+		Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER
@@ -355,10 +365,20 @@
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
 	base_turf = /turf/simulated/floor/lava
 
+/datum/map_z_level/outpost/deepdark
+	z = Z_LEVEL_OUTPOST_DEEPDARK
+	name = "Deepdark"
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN
+	base_turf = /turf/simulated/mineral/muriki
+	holomap_offset_x = OUTPOST21_HOLOMAP_MARGIN_X
+	holomap_offset_y = OUTPOST21_HOLOMAP_MARGIN_Y + (OUTPOST21_MAP_SIZEY * 20) - 32 // hidden
+	holomap_legend_x = 140
+	holomap_legend_y = 240
+
 /datum/map_z_level/outpost/basement
 	z = Z_LEVEL_OUTPOST_BASEMENT
 	name = "Basement"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_AIRMIX_CLEANS|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_AIRMIX_CLEANS|MAP_LEVEL_VORESPAWN
 	base_turf = /turf/simulated/open
 	holomap_offset_x = OUTPOST21_HOLOMAP_MARGIN_X
 	holomap_offset_y = OUTPOST21_HOLOMAP_MARGIN_Y + (OUTPOST21_MAP_SIZEY * 20) - 32 // hidden

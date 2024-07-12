@@ -1,5 +1,6 @@
 #if !defined(USING_MAP_DATUM)
 
+	#include "outpost-04-deepdark.dmm"
 	#include "outpost-01-basement.dmm"
 	#include "outpost-02-surface.dmm"
 	#include "outpost-03-upper.dmm"

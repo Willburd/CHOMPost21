@@ -205,7 +205,7 @@
 
 //EFFECTS AND TRIGGERS -----------------------------------------
 /obj/effect/landmark/map_data/muriki
-    height = 3 //Height marker. Provides the map with knowledge of how many z levels connecting below.
+    height = 4 //Height marker. Provides the map with knowledge of how many z levels connecting below.
 
 
 //These 'lost in space' ones should be moved to a higher level file, not map specific. Taken from YW

@@ -943,6 +943,15 @@
 /area/mine/unexplored/muriki
 	base_turf = /turf/simulated/mineral/floor/muriki
 
+/area/mine/explored/muriki/cave/deepdark
+	name = "\improper Muriki Underground"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "orange"
+/area/mine/unexplored/muriki/cave/deepdark
+	name = "\improper Muriki Underground"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "yellow"
+
 /area/mine/explored/muriki/cave/eng
 	name = "\improper Facility Engineering Tunnels"
 	sound_env = TUNNEL_ENCLOSED
