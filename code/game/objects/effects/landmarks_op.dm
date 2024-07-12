@@ -23,7 +23,7 @@
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
 
-/obj/effect/landmark/redspacemonsterspawn/New()
+/obj/effect/landmark/redspacemonsterspawn/Initialize()
 	. = ..()
 
 	if(prob(80))
@@ -96,7 +96,7 @@
 /obj/effect/landmark/hostile_xenobio
 	name = "dangerous xenobio spawner"
 
-/obj/effect/landmark/hostile_xenobio/New()
+/obj/effect/landmark/hostile_xenobio/Initialize()
 	. = ..()
 
 	if(prob(60))
