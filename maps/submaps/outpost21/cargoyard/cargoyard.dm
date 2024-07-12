@@ -9,6 +9,10 @@
 #include "path_A.dmm"
 #include "path_B.dmm"
 #include "light_A.dmm"
+#include "light_B.dmm"
+#include "light_C.dmm"
+#include "largeruin_A.dmm"
+#include "simple_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/cargoyard
