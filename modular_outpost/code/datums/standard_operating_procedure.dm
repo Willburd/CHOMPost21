@@ -358,7 +358,7 @@
 			<br/>  13a. Paramedics are authorized a maintenance jack for removing braces or opening unpowered doors in a life-saving emergency.\
 			<br/>14. Mind-altering implants: To include compliance and loyalty implants, NIFs, backup implants, or any other device that is capable of removing or altering one's mind or agency."
 
-/datum/sop_entry/contraband
+/datum/sop_entry/authequip
 	title = "Authorized Equipment"
 	author = "E-Shui Official"
 	body = 	"<b>Authorized Equipment:</b>\
