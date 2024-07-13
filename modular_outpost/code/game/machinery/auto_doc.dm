@@ -1,6 +1,7 @@
 #define TOOL_FIXVEIN "fixvein"
 #define TOOL_BONEGEL "bonegel"
 #define TOOL_TRANSPLANT "transplant"
+#define TOOL_BIOGEN "bioregenerator"
 
 /mob/living/carbon/human/monkey/auto_doc
 	// Absolutely awful crap for surgery tgui passthroughs... I hate this, but I really wanted to avoid redoing ALL OF SURGERY, sue me.
@@ -69,6 +70,7 @@
 	operations["insert_organ"] 				= open_site + list(TOOL_TRANSPLANT,TOOL_FIXVEIN) + close_site
 	operations["internal_bleeding"] 		= open_site + list(TOOL_FIXVEIN) + close_site
 	operations["repair_bone"] 				= open_site + list(TOOL_BONEGEL,TOOL_BONESET,TOOL_BONEGEL) + close_site
+	operations["heal_husk"] 				= list(TOOL_SCALPEL,TOOL_HEMOSTAT,TOOL_BIOGEN,TOOL_HEMOSTAT,TOOL_BIOGEN) + close_site
 	operations["reconstruct_face"] 			= list(TOOL_SCALPEL,TOOL_HEMOSTAT,TOOL_RETRACTOR) + close_site
 	operations["amputate_limb"] 			= list(TOOL_SAW)
 
@@ -83,6 +85,7 @@
 	tools[TOOL_FIXVEIN] 	= new /obj/item/weapon/surgical/FixOVein(src)
 	tools[TOOL_BONEGEL] 	= new /obj/item/weapon/surgical/bonegel(src)
 	tools[TOOL_CAUTERY] 	= new /obj/item/weapon/surgical/cautery(src)
+	tools[TOOL_BIOGEN] 		= new /obj/item/weapon/surgical/bioregen(src)
 	tools[TOOL_TRANSPLANT]  = null // special
 
 /obj/machinery/auto_doc/proc/get_step_whitelist()
@@ -109,6 +112,10 @@
 	whitelisted_steps.Add("Mend Vocal Cords")
 	whitelisted_steps.Add("Fix Face")
 	whitelisted_steps.Add("Cauterize Face")
+	// Dehusk
+	whitelisted_steps.Add("Create Structure")
+	whitelisted_steps.Add("Relocate Flesh")
+	whitelisted_steps.Add("Finish Structure")
 	// Emagged
 	whitelisted_steps.Add("Amputate Limb")
 	return whitelisted_steps
@@ -218,6 +225,8 @@
 			surgery_type.Add("Amputate Limb")
 		if(EO.organ_tag == BP_HEAD)
 			surgery_type.Add("Facial Repair")
+		if(EO.organ_tag == BP_TORSO)
+			surgery_type.Add("Tissue Regeneration")
 		// Proceed to surgeries
 		var/surgery = tgui_input_list(user, "Choose surgery:", "Surgery Type", surgery_type)
 		switch(surgery)
@@ -280,6 +289,10 @@
 				external_organ_target = O_MOUTH
 				operation_type = "reconstruct_face"
 				src.visible_message("\The [src] flashes 'Beginning operation: Reconstructing Face.")
+			if("Tissue Regeneration")
+				external_organ_target = BP_TORSO
+				operation_type = "heal_husk"
+				src.visible_message("\The [src] flashes 'Beginning operation: Tissue Regeneration.")
 			else
 				return
 	// BEGIN
@@ -423,3 +436,4 @@
 #undef TOOL_FIXVEIN
 #undef TOOL_BONEGEL
 #undef TOOL_TRANSPLANT
+#undef TOOL_BIOGEN
