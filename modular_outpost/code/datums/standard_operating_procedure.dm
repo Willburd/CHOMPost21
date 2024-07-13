@@ -413,20 +413,33 @@
 /datum/sop_entry/secguide
 	title = "A Guide to Security and Armor Choice"
 	author = "Head of Security, Janik Vam"
-	body = 	"Security work is hard, and gear equipment is essential to understand, to not overburden yourself, and drain security resources. Below will cover armor types and loadout expectations.\
-			<hr/>Each armor type is going to specialize in something, there are five types. <ul><li>Riot</li><li>Bullet</li><li>Ablative</li><li>Combat</li><li>Bomb</li></ul> \
-			<br/>--Riot armor is your go-to in most cases, it protects you the most against blunt force trauma, that's punches, animal bites, stuff flying at you, etc. Not to mention the shield is an extra layer of protection.  \
-			<br/>--Bullet armor is pretty self explanatory, it protects you from bullets. If cargo ever revolts you might want this, otherwise, avoid it. \
-			<br/>--Ablative armor. 'But Janik! It's shiny and pretty!' I hear you scream. Yes, it's designed to reflect lasers. If you get space pirates or research rebelling, it's good against that. Otherwise you'll die looking pretty. Stop using this for everything!  \
-			<br/>--Combat armor. This is in the red armory, it protects you decently against everything, but not as well as anything else will. If you don't know what you're facing, but you think it'll mess you up? Put this on. If you know your threat? Adjust to it.  \
-			<br/>--Bomb Proof Armor. This is a highly specific armor found in the green armory, designed to withstand explosives and not much else. If you have to go mine-defusing or think research is having too much fun with bombs, use this.\
-			<hr/>\
-			<br/>For equipment under code green, there are minor regulations on equipment loadout. I will break down what you should be carrying under normal, code-green conditions.\
-			<br/>Under code Green you should be wearing: Security-issued glasses, gloves, boots, headset, armored vest, security belt, holster, ID card, backpack. With your helmet and gas mask kept in your bag. You can replace your armored vest with a coat if conditions require, but it must remain in your bag.\
-			<br/>Your standard loadout is follows: 1 Firearm (Rubbers, or Taser) kept holstered. 1 stun baton in your belt. 1 maglight, either in belt or pocket. Up to 2 spare batteries. Up to 2 spare magazines if using rubbers. 1-2 pairs of handcuffs. And either a flash or pepperspray, kept in your pocket.\
-			<br/>Additional gear may include: area tape, hailers, flares, suit webbing, and an implanted death alarm. These are not required, each officer should assess usability and weight with every item.\
-			<br/>Under codes Yellow or higher, or when actively pursuing a target, you are required to pull your helmet out of your bag and put it on; if you weren't wearing your vest, put that on too. Your equipment is invaluable to a hostile force; protect it, and yourself.\
-			<hr/>Signed, Head of Security, Janik Vam.\
+	body = 	"Central said my last document wasnt 'professional' enough and came across too rude on new officers, so we'll try this again.\
+			<br/ Security work is hard, and gear equipment is essential to understand to not overburden yourself and drain security resources. Below will cover armor types and loadout expectations \
+			<hr/> \
+			<br/>Locations:\
+			<br/>In the green armory: Standard vest and helmet, biohazard suits, bomb suits, and EVA armor, located in the EVA storage upstairs.\
+			<br/>In the blue armory: Riot armor, Ablative armor, bullet-resistant armor.\
+			<br/>In the red armory: Combative armor.\
+			<hr/> \
+			<br/><b>-Standard vest:</b> Run of the mill, vest and helmet. While most stations don't allow you to wear the helmet on green, E-Shui doesn't care, it's officer choice. You must wear it on yellow or higher. This armor is basic protection against slaps and things thrown at you, much better than nothing, but it won't save you from a serious threat.\
+			<br/>\
+			<br/><b>-Biohazard:</b> Thick rubber suits that get way too hot to wear. Unlikely to be used by security as most biohazard situations are a code violet. But if medical needs help during such a crisis, have it ready.\
+			<br/>\
+			<br/><b>-Bomb suit:</b> Superheavy suits that will let you survive a lot of blasts. Put this on if you're going to be landmine defusing, if someone calls in an explosive threat of any kind, or anything else that might detonate. You will be glad you did. However, it's not great against bullets, energy weapons, or anything BUT explosives.\
+			<br/>\
+			<br/><b>-EVA armor:</b> You know what a hardsuit is. These are only authorized for off-station usgae, such as going up to the rec yard or anywhere else in orbit, or if you're going outside or into the terraformer. Again, do not use these on-station. And bring a suit cooler, if you thought the biohazard suits got hot you're in for a bad surprise\
+			<hr/> \
+			<br/><b>-Riot armor:</b> The first of the specialized armors. It'll protect you a lot against basic brute damage, fantastic when dealing with wildlife, and in my opinion, the only choice with a wildlife threat, especially when combined with the shield. It won't protect you as much as anything else for bullets or energy weapons however.\
+			<br/>\
+			<br/><b>-Ablative armor:</b> The shiny pretty armor that's the siren song of any officer. The reflective plates are designed to reflect lasers, giving it fantastic protection against laser weaponry, such as with pirates or rogue research agents. But imagine how effective a suit of shiny plastic and mirrors will be against bullets and giant spiders.\
+			<br/>\
+			<br/><b>-Bullet resistant:</b> Much like the other blue armory ones, it's a highly specialized suit of armor for bullets. Excellent for cargonia rebellions, and that's about it. Mostly worthless in my experience.\
+			<hr/> \
+			<br/><b>-Combative:</b> The 'red armor' security is most known for, tucked in the red armory. Think of it as a combination of all the above armors. It'll protect you very well against everything, but won't protect you as well as any of them would to a specific threat. If you have hostile actors on station and don't know what they have, equip this. Once you get a better threat assessment, readjust to other armors as needed.\
+			<br/>\
+			<br/>\
+			<br/>Signed,\
+			<br/>- Head of Security, Janik.\
 			<br/>This document rewritten to comply with EG-14, section C."
 
 /datum/sop_entry/triage
