@@ -242,6 +242,7 @@
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 150, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 200, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard)
 
+	seed_submaps(list(Z_LEVEL_OUTPOST_DEEPDARK), 400, /area/mine/unexplored/muriki/cave/deepdark, /datum/map_template/outpost21/muriki/caves_deepdark_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_DEEPDARK), 450, /area/mine/unexplored/muriki/cave/deepdark, /datum/map_template/outpost21/muriki/caves_deepdark)
 
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_OUTPOST_DEEPDARK, world.maxx, world.maxy) // Create the mining Z-level.

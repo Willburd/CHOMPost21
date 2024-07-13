@@ -1,0 +1,674 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/mob/living/simple_mob/clowns/flesh,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/obj/item/clothing/shoes/clown_shoes,
+/obj/random/contraband/nofail,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/obj/random/fantasy_item,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/mob/living/simple_mob/clowns/big/c_shift/anormal,
+/obj/item/clothing/shoes/clown_shoes,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"g" = (
+/mob/living/simple_mob/clowns/big/c_shift/anormal,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"h" = (
+/mob/living/simple_mob/clowns/big/honkmunculus,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"i" = (
+/mob/living/simple_mob/clowns/flesh,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"j" = (
+/mob/living/simple_mob/clowns/big/c_shift/anormal,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"k" = (
+/mob/living/simple_mob/clowns/big/mutant,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"l" = (
+/obj/item/clothing/mask/gas/clown_hat,
+/obj/item/clothing/shoes/clown_shoes,
+/obj/random/contraband/nofail,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/obj/item/clothing/mask/gas/clown_hat,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"n" = (
+/mob/living/simple_mob/clowns/big/destroyer,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/obj/item/device/pda/clown,
+/obj/item/clothing/shoes/clown_shoes,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/random/fantasy_item/better,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"q" = (
+/obj/item/weapon/reagent_containers/food/snacks/clownburger,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"r" = (
+/obj/item/device/pda/clown,
+/obj/item/clothing/mask/gas/clown_hat,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"s" = (
+/obj/random/contraband/nofail,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/mob/living/simple_mob/clowns/blob,
+/obj/random/fantasy_item,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"u" = (
+/obj/item/device/flashlight/lamp/clown{
+	pixel_y = 7
+	},
+/obj/structure/table/gold,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"v" = (
+/mob/living/simple_mob/clowns/big/longface,
+/obj/item/clothing/mask/gas/clown_hat,
+/obj/random/contraband/nofail,
+/obj/random/drinkbottle,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"x" = (
+/obj/item/clothing/shoes/clown_shoes,
+/obj/random/fantasy_item,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"y" = (
+/obj/item/clothing/shoes/clown_shoes,
+/obj/item/clothing/shoes/clown_shoes,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/random/drinkbottle,
+/obj/random/fantasy_item,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/obj/item/weapon/reagent_containers/food/snacks/clownburger,
+/obj/random/contraband/nofail,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"B" = (
+/obj/item/clothing/shoes/clown_shoes,
+/obj/random/drinkbottle,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"C" = (
+/mob/living/simple_mob/clowns/big/mayor,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"D" = (
+/obj/item/device/pda/clown,
+/mob/living/simple_mob/clowns/flesh,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"E" = (
+/mob/living/simple_mob/clowns/big/punished,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"F" = (
+/obj/item/clothing/shoes/clown_shoes,
+/obj/item/clothing/mask/gas/clown_hat,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/mob/living/simple_mob/clowns/big/honkling,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/obj/item/weapon/reagent_containers/food/snacks/clownburger,
+/obj/item/clothing/mask/gas/clown_hat,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"I" = (
+/obj/structure/table/gold,
+/obj/item/device/flashlight/lamp/clown{
+	pixel_y = 7
+	},
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"K" = (
+/obj/item/device/pda/clown,
+/obj/random/fantasy_item,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"L" = (
+/obj/item/clothing/shoes/clown_shoes,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"M" = (
+/obj/item/device/flashlight/lamp/clown,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"N" = (
+/mob/living/simple_mob/clowns/big/thicc,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"O" = (
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/mob/living/simple_mob/clowns/big/c_shift/anormal,
+/obj/item/clothing/mask/gas/clown_hat,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"Q" = (
+/obj/item/device/pda/clown,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"S" = (
+/obj/item/clothing/shoes/clown_shoes,
+/obj/random/drinkbottle,
+/obj/random/fantasy_item/better,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/mob/living/simple_mob/clowns/big/c_shift/anormal,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/item/clothing/mask/gas/clown_hat,
+/obj/item/clothing/shoes/clown_shoes,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/mob/living/simple_mob/clowns/flesh,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/turf/simulated/wall/cult,
+/area/mine/explored/muriki/cave/deepdark)
+"X" = (
+/obj/item/clothing/shoes/clown_shoes,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Y" = (
+/obj/item/clothing/mask/gas/clown_hat,
+/obj/random/drinkbottle,
+/turf/simulated/floor/carpet/purple,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/mob/living/simple_mob/clowns/big/chlown,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+J
+J
+J
+J
+J
+J
+J
+J
+J
+J
+w
+w
+w
+J
+J
+J
+J
+J
+a
+"}
+(3,1,1) = {"
+a
+J
+J
+J
+w
+w
+w
+w
+w
+w
+w
+w
+w
+w
+w
+J
+J
+J
+J
+a
+"}
+(4,1,1) = {"
+a
+J
+w
+w
+w
+f
+f
+T
+T
+X
+f
+T
+f
+f
+w
+w
+J
+J
+J
+a
+"}
+(5,1,1) = {"
+a
+J
+w
+i
+f
+f
+Z
+W
+W
+R
+W
+W
+W
+T
+f
+w
+J
+J
+J
+a
+"}
+(6,1,1) = {"
+a
+w
+w
+f
+T
+T
+f
+W
+m
+g
+I
+m
+W
+W
+f
+f
+w
+J
+J
+a
+"}
+(7,1,1) = {"
+a
+w
+w
+f
+f
+W
+W
+W
+L
+O
+E
+o
+D
+W
+b
+f
+f
+w
+J
+a
+"}
+(8,1,1) = {"
+a
+w
+w
+T
+f
+W
+k
+m
+g
+O
+z
+q
+y
+W
+W
+W
+T
+f
+J
+a
+"}
+(9,1,1) = {"
+a
+w
+w
+T
+f
+W
+O
+Q
+V
+q
+s
+V
+G
+p
+F
+W
+T
+f
+J
+a
+"}
+(10,1,1) = {"
+a
+w
+w
+f
+W
+W
+O
+t
+c
+r
+O
+C
+q
+Y
+m
+W
+M
+f
+w
+a
+"}
+(11,1,1) = {"
+a
+J
+w
+w
+W
+u
+U
+c
+H
+S
+O
+O
+A
+K
+h
+R
+f
+f
+w
+a
+"}
+(12,1,1) = {"
+a
+J
+w
+j
+R
+g
+O
+O
+L
+O
+W
+P
+O
+H
+O
+W
+M
+T
+w
+a
+"}
+(13,1,1) = {"
+a
+J
+w
+i
+W
+W
+V
+O
+n
+O
+q
+B
+c
+e
+I
+W
+W
+T
+w
+a
+"}
+(14,1,1) = {"
+a
+J
+J
+w
+j
+W
+W
+W
+O
+v
+V
+l
+Q
+p
+O
+g
+W
+f
+J
+a
+"}
+(15,1,1) = {"
+a
+J
+J
+w
+w
+w
+f
+W
+d
+O
+x
+O
+N
+O
+g
+W
+W
+f
+J
+a
+"}
+(16,1,1) = {"
+a
+J
+J
+J
+J
+w
+T
+W
+O
+g
+I
+O
+L
+W
+W
+W
+T
+f
+J
+a
+"}
+(17,1,1) = {"
+a
+J
+J
+J
+J
+w
+T
+W
+W
+W
+W
+R
+W
+W
+b
+T
+f
+J
+J
+a
+"}
+(18,1,1) = {"
+a
+J
+J
+J
+J
+J
+f
+f
+f
+T
+f
+T
+f
+T
+w
+w
+J
+J
+J
+a
+"}
+(19,1,1) = {"
+a
+J
+J
+J
+J
+J
+J
+J
+J
+J
+w
+w
+w
+J
+J
+J
+J
+J
+J
+a
+"}
+(20,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

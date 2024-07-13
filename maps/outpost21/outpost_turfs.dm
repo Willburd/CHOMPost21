@@ -39,6 +39,9 @@ MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/white)
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/flesh)
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/redgrid/off)
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/techfloor/grid)
+// Caverns without map gen
+MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/floor/ignore_mapgen)
+MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/floor/ignore_cavegen)
 //
 MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic)
 MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/deep)
@@ -294,6 +297,12 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal_shiny/ignore_mapgen)
 
 /turf/simulated/deathdrop/elevator_shaft
 	death_message = "You fall into the elevator shaft, the thin atmosphere inside does little to slow you down and by the time you hit the bottom there is nothing more than a bloody smear. The damage you did to the elevator and the cost of your potential resleeve will be deducted from your pay."
+
+/turf/simulated/deathdrop/liminal
+	death_message = "You pass into the empty darkness ahead of you, and fall into another repeating room. There is no way back. You cease to exist in the world you once called home. Now there is only the same room, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over..."
+	// Make space, hide this behind a door for SUCC
+	oxygen = 0
+	nitrogen = 0
 
 /turf/unsimulated/deathdrop/waterfall
 	death_message = "The increasing speed and current of the river swiftly drags you into the rapids, destoying any boat you had and cracking your body against the rocks. The harsh acids of the water then make short work at dissolving your corpse, lost to the river forever."

@@ -8,13 +8,29 @@
 #include "flesh_A.dmm"
 #include "flesh_B.dmm"
 #include "gas_pocket_A.dmm"
+#include "trap_A.dmm"
 #include "den_A.dmm"
 #include "den_B.dmm"
+#include "cave_A.dmm"
+#include "cave_B.dmm"
+#include "hall_A.dmm"
+#include "hall_B.dmm"
+#include "lake_A.dmm"
+#include "wall_A.dmm"
+#include "wall_B.dmm"
+#include "honk_A.dmm"
+#include "spider_A.dmm"
+#include "liminal_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
 	name = "Cave Content - Small"
 	desc = "Used to fill extra space to explore in the deep dark."
+	annihilate = TRUE
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge
+	name = "Cave Content - Big"
+	desc = "Used to fill EXTRA space to explore in the deep dark."
 	annihilate = TRUE
 
 //////////////////////////////////////////////////////////////
@@ -99,9 +115,102 @@
 	discard_prob = 40
 	cost = 15
 
-//////////////////////////////////////////////////////////////
-// Huge structures in the cave (usually one at a time...)
+/datum/map_template/outpost21/muriki/caves_deepdark/trap_A
+	name = "Trap A"
+	desc = "Random trap."
+	mappath = 'maps/submaps/outpost21/deepdark/trap_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 5
 
+//////////////////////////////////////////////////////////////
+// Huge structures in the cave
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/cave_A
+	name = "Cave A"
+	desc = "Random cave."
+	mappath = 'maps/submaps/outpost21/deepdark/cave_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 10
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/cave_B
+	name = "Cave B"
+	desc = "Random cave."
+	mappath = 'maps/submaps/outpost21/deepdark/cave_B.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 10
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/hall_A
+	name = "Hall A"
+	desc = "Random cave hall."
+	mappath = 'maps/submaps/outpost21/deepdark/hall_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 10
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/hall_B
+	name = "Hall B"
+	desc = "Random cave hall."
+	mappath = 'maps/submaps/outpost21/deepdark/hall_B.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 10
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/lake_A
+	name = "Lake A"
+	desc = "Random cave lake."
+	mappath = 'maps/submaps/outpost21/deepdark/lake_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/wall_A
+	name = "Wall A"
+	desc = "Random cave maint wall."
+	mappath = 'maps/submaps/outpost21/deepdark/wall_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 30
+	cost = 45
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/wall_B
+	name = "Wall B"
+	desc = "Random cave maint wall."
+	mappath = 'maps/submaps/outpost21/deepdark/wall_B.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 30
+	cost = 45
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/honk_A
+	name = "Honk A"
+	desc = "Random honk."
+	mappath = 'maps/submaps/outpost21/deepdark/honk_A.dmm'
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/spider_A
+	name = "Spider A"
+	desc = "Random spiders."
+	mappath = 'maps/submaps/outpost21/deepdark/spider_A.dmm'
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_A
+	name = "Liminal A"
+	desc = "Random liminal space."
+	mappath = 'maps/submaps/outpost21/deepdark/liminal_A.dmm'
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 30
 
 //////////////////////////////////////////////////////////////
 // Area definitions
+
+/area/submap/outpost21/cave_liminal_A
+	name = "\improper Come Closer"
+	icon_state = "red2"
+	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
+	ambience = AMBIENCE_OTHERWORLDLY
+	base_turf = /turf/simulated/mineral/floor/muriki
