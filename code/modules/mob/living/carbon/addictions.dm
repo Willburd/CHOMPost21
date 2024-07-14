@@ -107,8 +107,8 @@
 		else
 			// satiating addiction we already have
 			if(addiction_counters[A] < ADDICTION_PEAK)
-				if(addiction_counters[A] < 80)
-					addiction_counters[A] = 80
+				if(addiction_counters[A] < 100)
+					addiction_counters[A] = 100
 					var/datum/reagent/RR = SSchemistry.chemical_reagents[A]
 					to_chat(src, "<span class='notice'>You feel rejuvenated as the [RR.name] rushes through you.</span>")
 				addiction_counters[A] += rand(8,13)
