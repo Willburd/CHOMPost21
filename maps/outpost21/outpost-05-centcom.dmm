@@ -743,7 +743,7 @@
 "dmL" = (/obj/structure/window/reinforced/tinted{dir = 4},/obj/effect/floor_decal/corner/red/full{dir = 4},/obj/structure/closet/secure_closet/personal,/turf/simulated/floor/tiled/old_tile/white,/area/specialty/redspace)
 "dmU" = (/obj/machinery/light{dir = 8},/turf/simulated/floor/flesh,/area/specialty/redspace)
 "dmY" = (/obj/effect/floor_decal/milspec/cargo,/turf/simulated/floor/tiled/milspec,/area/specialty/redspace)
-"dnp" = (/obj/item/mecha_parts/part/gygax_head,/obj/structure/table/wooden_reinforced,/turf/simulated/floor/wood,/area/centcom/living)
+"dnp" = (/obj/item/mecha_parts/part/gygax_head,/obj/structure/table/wooden_reinforced,/obj/item/mecha_parts/part/phazon_head{pixel_y = 7},/turf/simulated/floor/wood,/area/centcom/living)
 "dnr" = (/obj/effect/floor_decal/borderfloor{dir = 5},/obj/effect/floor_decal/industrial/danger{dir = 5},/turf/simulated/floor/tiled,/area/specialty/redspace)
 "dnv" = (/obj/structure/target_stake,/obj/effect/floor_decal/milspec/color/emerald/half{dir = 1},/obj/effect/floor_decal/industrial/hatch/yellow,/turf/simulated/floor/tiled/milspec,/area/specialty/redspace)
 "dnA" = (/obj/structure/table/rack,/obj/structure/window/reinforced{dir = 1},/obj/item/clothing/gloves/arm_guard/riot,/obj/item/clothing/shoes/leg_guard/riot,/obj/item/clothing/suit/armor/riot/alt,/obj/item/clothing/head/helmet/riot,/obj/item/weapon/shield/riot,/obj/item/weapon/melee/baton/loaded,/obj/effect/floor_decal/industrial/outline/yellow,/turf/simulated/floor/tiled/dark,/area/centcom/security)

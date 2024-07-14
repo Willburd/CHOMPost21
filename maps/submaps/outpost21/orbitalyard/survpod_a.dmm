@@ -1,0 +1,45 @@
+"a" = (/turf/template_noop,/area/template_noop)
+"b" = (/obj/item/device/gps/computer,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"f" = (/obj/structure/sign/mining/survival{dir = 8},/turf/simulated/wall/rdshull,/area/submap/outpost21/structure_generic/lostpod)
+"h" = (/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"i" = (/obj/machinery/smartfridge/survival_pod,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"j" = (/obj/machinery/holoplant,/obj/structure/window/reinforced{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"n" = (/obj/machinery/microwave{pixel_y = -2},/obj/structure/table/steel{pixel_y = -9},/obj/structure/window/reinforced{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"q" = (/obj/machinery/light{dir = 4; light_color = "#DDFFD3"},/obj/structure/table/steel,/obj/item/trash/liquidfood,/obj/item/trash/liquidfood,/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"r" = (/obj/structure/fans/tiny,/obj/machinery/door/airlock/voidcraft/survival_pod,/obj/effect/floor_decal/industrial/danger/full,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"s" = (/obj/item/trash/liquidfood,/obj/structure/window/reinforced{dir = 8},/obj/machinery/door/window{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"t" = (/obj/item/trash/candy/cb09,/obj/structure/window/reinforced{dir = 8},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"u" = (/obj/structure/bed/chair/comfy/black,/obj/structure/window/reinforced{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"w" = (/obj/structure/table/survival_pod,/obj/item/weapon/storage/firstaid/adv,/obj/item/weapon/storage/pill_bottle/dice_nerd,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"y" = (/obj/item/trash/liquidfood,/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"z" = (/obj/structure/bed/pod,/obj/item/weapon/digestion_remains/skull/unknown/anthro,/obj/item/weapon/digestion_remains/ribcage,/obj/item/weapon/digestion_remains,/obj/item/weapon/digestion_remains,/obj/item/weapon/digestion_remains,/obj/item/weapon/digestion_remains/variant1,/obj/item/weapon/digestion_remains/variant1,/obj/item/weapon/digestion_remains/variant2,/obj/item/weapon/digestion_remains/variant2,/obj/item/weapon/digestion_remains/variant3,/obj/item/weapon/digestion_remains/variant3,/obj/item/weapon/bedsheet/cosmos,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"A" = (/obj/machinery/light,/obj/item/trash/coffee,/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"B" = (/obj/machinery/sleeper/survival_pod,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"C" = (/obj/structure/fans,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"D" = (/obj/machinery/button/remote/airlock/survival_pod{dir = 10; pixel_y = -24; id = null},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"E" = (/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"F" = (/obj/structure/sign/mining,/turf/simulated/wall/rdshull,/area/submap/outpost21/structure_generic/lostpod)
+"H" = (/obj/structure/table/steel,/obj/item/weapon/material/kitchen/utensil/fork{pixel_x = 12},/obj/item/trash/chipbasket,/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"I" = (/obj/structure/sign/mining/survival,/turf/simulated/wall/rdshull,/area/submap/outpost21/structure_generic/lostpod)
+"M" = (/obj/structure/tubes,/obj/machinery/recharge_station,/turf/simulated/floor/tiled/milspec,/area/submap/outpost21/structure_generic/lostpod)
+"N" = (/turf/simulated/wall/rdshull,/area/submap/outpost21/structure_generic/lostpod)
+"O" = (/obj/structure/sink/kitchen{dir = 8; pixel_x = -13},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"P" = (/obj/structure/sign/mining/survival{dir = 1},/turf/simulated/wall/rdshull,/area/submap/outpost21/structure_generic/lostpod)
+"S" = (/obj/structure/sign/mining/survival{dir = 4},/turf/simulated/wall/rdshull,/area/submap/outpost21/structure_generic/lostpod)
+"T" = (/obj/structure/bed/chair/comfy/black{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"U" = (/obj/structure/toilet,/turf/simulated/floor/tiled/milspec/sterile,/area/submap/outpost21/structure_generic/lostpod)
+"V" = (/obj/machinery/door/window{dir = 1},/turf/simulated/floor/carpet/bcarpet,/area/submap/outpost21/structure_generic/lostpod)
+"Y" = (/obj/machinery/shower,/obj/item/weapon/soap/deluxe,/obj/structure/curtain,/turf/simulated/floor/tiled/milspec/sterile,/area/submap/outpost21/structure_generic/lostpod)
+
+(1,1,1) = {"
+aaaaaaaaaa
+aaaaaaaaaa
+aNPNPNPNaa
+afCibYUSaa
+aNBEzsuNaa
+afwEMtqSaa
+aNnVjyHNaa
+afOAhDTSaa
+aNINrNFNaa
+aaaaaaaaaa
+"}

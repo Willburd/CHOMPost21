@@ -67,7 +67,6 @@
 	allow_duplicates = TRUE
 	cost = 5
 
-
 /datum/map_template/outpost21/space/orbitalyard/scaff_C
 	name = "Scaffolding Variant C"
 	desc = "Random construction."
@@ -75,12 +74,19 @@
 	allow_duplicates = TRUE
 	cost = 5
 
-
 /datum/map_template/outpost21/space/orbitalyard/platform_A
 	name = "Platform Variant A"
 	desc = "Random platform."
 	mappath = 'maps/submaps/outpost21/orbitalyard/platform_A.dmm'
 	allow_duplicates = TRUE
+	cost = 2
+
+/datum/map_template/outpost21/space/orbitalyard/lostshelter
+	name = "Lost survival pod 1"
+	desc = "Abandoned survival pod"
+	mappath = 'maps/submaps/outpost21/orbitalyard/survpod_a.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 15
 	cost = 2
 
 
@@ -177,3 +183,6 @@
 
 /area/submap/outpost21/structure_generic/lostshipb
 	name = "\improper Abandoned Vessel"
+
+/area/submap/outpost21/structure_generic/lostpod
+	name = "\improper Lost Survival Pod"
