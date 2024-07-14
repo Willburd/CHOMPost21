@@ -12,6 +12,7 @@
 #include "giant_asteroid_A.dmm"
 #include "structure_A.dmm"
 #include "platform_A.dmm"
+#include "survpod_a.dmm"
 #include "container_LOST.dmm"
 #include "lost_ship_A.dmm"
 #include "lost_ship_B.dmm"
