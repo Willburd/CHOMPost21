@@ -17,6 +17,7 @@
 #include "lost_ship_A.dmm"
 #include "lost_ship_B.dmm"
 #include "container_C.dmm"
+#include "alienship_A.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -156,6 +157,16 @@
 	fixed_orientation = TRUE
 	discard_prob = 10
 	cost = 55
+/*
+/datum/map_template/outpost21/space/orbitalyard_huge/alienship_A
+	name = "Abandoned Alien Vessel"
+	desc = "An old derelict ship"
+	mappath = 'maps/submaps/outpost21/orbitalyard/alienship_A.dmm'
+	allow_duplicates = FALSE
+	fixed_orientation = TRUE
+	discard_prob = 85
+	cost = 80
+*/
 
 //////////////////////////////////////////////////////////////
 // Area definitions
@@ -187,3 +198,7 @@
 
 /area/submap/outpost21/structure_generic/lostpod
 	name = "\improper Lost Survival Pod"
+
+/area/submap/outpost21/structure_generic/alienshipa
+	name = "\improper Alien Vessel"
+	requires_power = 0
