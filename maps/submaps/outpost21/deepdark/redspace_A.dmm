@@ -1,0 +1,2136 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ay" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"aJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"bk" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"bo" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"bR" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/item/device/geiger/wall/north,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ce" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"cs" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"cy" = (
+/obj/structure/sign/nosmoking_2,
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"cB" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"dv" = (
+/obj/structure/window/reinforced,
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"dB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
+	},
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"dX" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/industrial/danger/corner,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"eX" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"fB" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"ga" = (
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"hr" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"hB" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"hF" = (
+/obj/effect/floor_decal/corner/orange,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"hN" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"hS" = (
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"im" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 25
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"is" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"iC" = (
+/turf/simulated/mineral/alt/ignore_mapgen,
+/area/mine/explored/muriki/cave/deepdark)
+"jb" = (
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"jl" = (
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"kH" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"lf" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/closet,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"lk" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	name = "Engineering Locker Room";
+	req_one_access = list(10)
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/mine/explored/muriki/cave/deepdark)
+"ll" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/basic/full,
+/obj/structure/sign/department/ass,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"lK" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"lO" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/grille,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"lS" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/device/gps/engineering,
+/obj/item/device/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"lW" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"mm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"mT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"mU" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/elevator_warning,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"nQ" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"oe" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"oH" = (
+/obj/item/device/assembly/mousetrap/armed,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"oK" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"oV" = (
+/obj/structure/closet/secure_closet/atmos_personal,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/item/device/gps/engineering,
+/obj/item/device/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"pj" = (
+/obj/structure/salvageable/autolathe,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"pm" = (
+/obj/item/device/geiger/wall/south,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"py" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"pG" = (
+/obj/machinery/vending/engineering,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"qI" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/bed/chair/sofa/bench/left,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"qM" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"qV" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"rr" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/device/gps/engineering,
+/obj/item/device/gps/engineering,
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"rw" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/obj/structure/salvageable/console,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"sw" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/effect/floor_decal/eshui/emblem/eshui_l,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"sI" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"sU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"ta" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/firstaid/regular,
+/obj/item/bodybag/cryobag{
+	pixel_x = 6
+	},
+/obj/random/medical/lite,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"to" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"tt" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"tO" = (
+/obj/machinery/floodlight,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"tQ" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"ui" = (
+/obj/structure/table/reinforced,
+/obj/item/device/radio/off{
+	pixel_y = 6
+	},
+/obj/item/device/radio/off{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/device/radio/off{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/device/radio/off,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"uj" = (
+/obj/machinery/vending/assist,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"us" = (
+/obj/structure/closet,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"ut" = (
+/obj/machinery/vending/tool,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"uD" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"uZ" = (
+/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"vR" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"yf" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 8;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"yx" = (
+/obj/structure/bed/chair/sofa/bench,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"yV" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"zC" = (
+/obj/structure/sign/directions/evac,
+/obj/structure/sign/directions/tram{
+	pixel_y = -6
+	},
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"zY" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Ag" = (
+/obj/structure/closet/secure_closet/atmos_personal,
+/obj/item/device/gps/engineering,
+/obj/item/device/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"AJ" = (
+/obj/item/device/geiger/wall/north,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"AS" = (
+/obj/machinery/door/airlock{
+	id_tag = "eng_lobby_latrine";
+	name = "Single Occupant Latrine"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/mine/explored/muriki/cave/deepdark)
+"AX" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/bed/chair/sofa/bench/right,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Bj" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"BS" = (
+/obj/structure/table/standard,
+/obj/structure/bedsheetbin,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/weapon/soap/nanotrasen,
+/obj/random/soap,
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 10
+	},
+/obj/item/weapon/towel/random,
+/obj/item/weapon/towel/random,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"BU" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/eshui/emblem/eshui_r,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Cw" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"CH" = (
+/obj/item/weapon/hand_labeler,
+/obj/item/weapon/tape_roll,
+/obj/item/weapon/clipboard,
+/obj/item/weapon/folder/yellow,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Dc" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Df" = (
+/obj/structure/reagent_dispensers/foam,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Di" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Du" = (
+/turf/template_noop,
+/area/template_noop)
+"DJ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"DL" = (
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"DN" = (
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"DQ" = (
+/obj/item/device/geiger/wall/north,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"DW" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"EO" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/obj/machinery/requests_console/preset/engineering{
+	pixel_x = 2;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Fg" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"Fh" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"FM" = (
+/obj/structure/table/reinforced,
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"FS" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"GC" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"GL" = (
+/obj/structure/sign/department/eng{
+	pixel_x = 5
+	},
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"GN" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"GT" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Ha" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"HL" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/machinery/door/blast/gate/open{
+	dir = 4;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"HR" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/device/gps/engineering,
+/obj/item/device/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"IH" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"IV" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Jf" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"Jh" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Jk" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/yellow,
+/area/mine/explored/muriki/cave/deepdark)
+"JH" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"Ka" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Kg" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Kw" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"KZ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"LM" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"LQ" = (
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"LX" = (
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Mf" = (
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"ME" = (
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"MI" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"MX" = (
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Nz" = (
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"NY" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Oi" = (
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Oy" = (
+/obj/machinery/smartfridge/sheets{
+	description_info = "Materials stored in here will not last in-between rounds";
+	name = "\improper temporary Smart Sheet Storage"
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"OS" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Pi" = (
+/obj/structure/bed/chair/office/dark,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"PQ" = (
+/obj/effect/floor_decal/eshui/emblem/eshui_c,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Qb" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Qk" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/salvageable/console,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Qn" = (
+/obj/structure/sign/department/atmos,
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"Qr" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/closet,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Re" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Latrine"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/mine/explored/muriki/cave/deepdark)
+"RD" = (
+/obj/machinery/door/window/westleft{
+	dir = 4;
+	name = "Engineering Reception Desk";
+	req_access = list(10);
+	req_one_access = newlist()
+	},
+/obj/machinery/door/blast/gate/open{
+	dir = 4;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Sb" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Tz" = (
+/obj/structure/urinal{
+	pixel_y = 32
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"Ws" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"WC" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"WM" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/red,
+/obj/item/weapon/pen/blue{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Xq" = (
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"Xs" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"XP" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"XR" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 5
+	},
+/obj/machinery/partslathe,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"XX" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Yc" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Ye" = (
+/obj/structure/table/reinforced,
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/machinery/recharger{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Yp" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/structure/salvageable/console,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"YB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"YV" = (
+/obj/structure/railing,
+/obj/structure/catwalk,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Zk" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Zn" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ZJ" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ZN" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 8;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"ZO" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/obj/item/weapon/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/weapon/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/weapon/storage/briefcase/inflatable{
+	pixel_x = -3
+	},
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+"}
+(2,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+Du
+"}
+(3,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+ay
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+ay
+ay
+ay
+ay
+Du
+"}
+(4,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+Ws
+JH
+Ws
+Ws
+ay
+iC
+iC
+iC
+iC
+Oi
+Oi
+Ws
+Ws
+iC
+iC
+ay
+ay
+ay
+Du
+"}
+(5,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+Oi
+iC
+iC
+iC
+Ws
+Oi
+Oi
+Ws
+Ws
+iC
+iC
+iC
+Oi
+Oi
+Oi
+Oi
+Ws
+Ws
+Ws
+Ws
+ay
+ay
+ay
+Du
+"}
+(6,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Oi
+ZN
+yf
+Fg
+Fg
+Oi
+Oi
+Oi
+bk
+bk
+bk
+iC
+iC
+bk
+Fg
+AS
+Fg
+Fg
+dB
+Ws
+Ws
+iC
+ay
+ay
+Du
+"}
+(7,1,1) = {"
+Du
+ay
+ay
+iC
+Oi
+Oi
+Oi
+ce
+Fg
+uj
+WC
+py
+ZJ
+FM
+ZJ
+ZO
+Cw
+bk
+rw
+Fh
+jb
+Kw
+tQ
+Xs
+Oi
+Oi
+iC
+iC
+ay
+Du
+"}
+(8,1,1) = {"
+Du
+ay
+ay
+iC
+Ws
+Ws
+hS
+KZ
+Fg
+ut
+zY
+jb
+zY
+jb
+jb
+jb
+oe
+bk
+Qk
+is
+Pi
+MI
+tQ
+Xs
+AX
+Oi
+iC
+iC
+ay
+Du
+"}
+(9,1,1) = {"
+Du
+ay
+ay
+iC
+Ws
+Ws
+to
+FS
+Fg
+pG
+jb
+pj
+Ha
+Ha
+Ha
+GN
+Df
+bk
+Yp
+DL
+jb
+MI
+tQ
+Xs
+yx
+Oi
+Oi
+iC
+iC
+Du
+"}
+(10,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Ws
+Ws
+Sb
+Fg
+Jh
+jb
+uZ
+bo
+Qr
+lf
+Zn
+Oi
+Ws
+qV
+jb
+zY
+MI
+tQ
+Xs
+qI
+Oi
+Oi
+iC
+iC
+Du
+"}
+(11,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Ws
+Ws
+KZ
+Fg
+tO
+jb
+zY
+jb
+dv
+Bj
+cB
+DN
+bk
+CH
+jb
+ME
+MI
+tQ
+Xs
+vR
+Oi
+iC
+iC
+ay
+Du
+"}
+(12,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+hS
+DJ
+Fg
+tO
+jb
+NY
+jb
+eX
+kH
+Zn
+pm
+bk
+bR
+jb
+jb
+sI
+tQ
+Xs
+vR
+Oi
+iC
+iC
+ay
+Du
+"}
+(13,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+hS
+KZ
+Fg
+Oy
+jb
+Yc
+jb
+zY
+jb
+Ka
+mm
+cs
+zY
+jb
+zY
+WM
+tQ
+yV
+LM
+Oi
+iC
+iC
+ay
+Du
+"}
+(14,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Oi
+hS
+IH
+Fg
+XR
+GC
+oK
+jb
+jb
+Ye
+LQ
+ui
+bk
+EO
+mU
+jb
+ac
+tQ
+Xs
+dX
+Oi
+Oi
+iC
+iC
+Du
+"}
+(15,1,1) = {"
+Du
+ay
+iC
+iC
+iC
+Oi
+hS
+KZ
+zC
+hB
+hB
+hB
+LX
+LX
+ll
+hB
+hB
+bk
+Fg
+cy
+RD
+HL
+qM
+Xs
+vR
+Oi
+Oi
+iC
+iC
+Du
+"}
+(16,1,1) = {"
+Du
+ay
+iC
+iC
+Oi
+Oi
+Oi
+hN
+aJ
+XX
+XX
+XX
+to
+to
+XX
+sw
+XX
+Kg
+Jf
+Di
+lK
+Zk
+Zk
+DW
+vR
+iC
+iC
+iC
+iC
+Du
+"}
+(17,1,1) = {"
+Du
+ay
+iC
+iC
+Oi
+Oi
+Mf
+to
+hS
+to
+hS
+hS
+hS
+Mf
+hS
+PQ
+hS
+lO
+tt
+Qb
+Mf
+hS
+hS
+hS
+vR
+iC
+iC
+iC
+iC
+Du
+"}
+(18,1,1) = {"
+Du
+ay
+iC
+iC
+Oi
+iC
+hS
+hS
+hS
+hS
+hF
+OS
+hS
+im
+OS
+BU
+OS
+Kg
+tt
+YB
+lW
+hS
+hS
+to
+nQ
+iC
+iC
+ay
+ay
+Du
+"}
+(19,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+iC
+hS
+hF
+GT
+XP
+KZ
+Fg
+lk
+Fg
+cy
+Fg
+Fg
+bk
+bk
+GL
+Xs
+hS
+hS
+hS
+vR
+Ws
+Ws
+ay
+ay
+Du
+"}
+(20,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+iC
+hS
+KZ
+Qn
+IV
+fB
+Fg
+jl
+jl
+lS
+HR
+rr
+lS
+lS
+bk
+DQ
+mT
+hS
+hS
+vR
+JH
+ay
+ay
+ay
+Du
+"}
+(21,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+hS
+KZ
+hr
+Oi
+Oi
+Fg
+AJ
+Jk
+jl
+Jk
+jl
+MX
+jl
+bk
+sU
+Oi
+hS
+to
+vR
+iC
+iC
+ay
+ay
+Du
+"}
+(22,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+Oi
+Oi
+KZ
+hr
+Oi
+Oi
+Fg
+Ag
+Ag
+oV
+us
+us
+jl
+ta
+bk
+Oi
+Oi
+Oi
+hS
+LM
+iC
+iC
+ay
+ay
+Du
+"}
+(23,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+Oi
+FS
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Re
+Fg
+bk
+Oi
+Oi
+Oi
+hS
+dX
+Oi
+iC
+iC
+ay
+Du
+"}
+(24,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+iC
+Oi
+JH
+YV
+oH
+Fg
+Tz
+ga
+Xq
+iC
+iC
+Nz
+BS
+Ws
+Oi
+Oi
+Oi
+uD
+Dc
+Oi
+iC
+ay
+ay
+Du
+"}
+(25,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+iC
+Ws
+Ws
+Oi
+Oi
+Ws
+Ws
+Ws
+iC
+iC
+iC
+iC
+Ws
+Ws
+Ws
+iC
+Oi
+Oi
+Oi
+iC
+iC
+ay
+ay
+Du
+"}
+(26,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+iC
+iC
+Ws
+Ws
+Oi
+Ws
+Ws
+Ws
+iC
+iC
+iC
+iC
+iC
+Ws
+Ws
+iC
+iC
+Oi
+Oi
+iC
+iC
+iC
+iC
+ay
+Du
+"}
+(27,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+Oi
+Oi
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+ay
+Du
+"}
+(28,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+ay
+ay
+ay
+iC
+iC
+iC
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+ay
+ay
+Du
+"}
+(29,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+Du
+"}
+(30,1,1) = {"
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+"}

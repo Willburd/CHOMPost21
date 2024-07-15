@@ -11,10 +11,6 @@
 /obj/random/contraband/nofail,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
-"d" = (
-/obj/random/fantasy_item,
-/turf/simulated/floor/carpet/purple,
-/area/mine/explored/muriki/cave/deepdark)
 "e" = (
 /mob/living/simple_mob/clowns/big/c_shift/anormal,
 /obj/item/clothing/shoes/clown_shoes,
@@ -62,10 +58,6 @@
 /obj/item/clothing/shoes/clown_shoes,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
-"p" = (
-/obj/random/fantasy_item/better,
-/turf/simulated/floor/carpet/purple,
-/area/mine/explored/muriki/cave/deepdark)
 "q" = (
 /obj/item/weapon/reagent_containers/food/snacks/clownburger,
 /turf/simulated/floor/carpet/purple,
@@ -101,11 +93,6 @@
 "w" = (
 /turf/simulated/mineral/floor/ignore_cavegen/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
-"x" = (
-/obj/item/clothing/shoes/clown_shoes,
-/obj/random/fantasy_item,
-/turf/simulated/floor/carpet/purple,
-/area/mine/explored/muriki/cave/deepdark)
 "y" = (
 /obj/item/clothing/shoes/clown_shoes,
 /obj/item/clothing/shoes/clown_shoes,
@@ -113,7 +100,6 @@
 /area/mine/explored/muriki/cave/deepdark)
 "z" = (
 /obj/random/drinkbottle,
-/obj/random/fantasy_item,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "A" = (
@@ -163,11 +149,6 @@
 "J" = (
 /turf/template_noop,
 /area/mine/unexplored/muriki/cave/deepdark)
-"K" = (
-/obj/item/device/pda/clown,
-/obj/random/fantasy_item,
-/turf/simulated/floor/carpet/purple,
-/area/mine/explored/muriki/cave/deepdark)
 "L" = (
 /obj/item/clothing/shoes/clown_shoes,
 /turf/simulated/floor/carpet/purple,
@@ -422,7 +403,7 @@ q
 s
 V
 G
-p
+O
 F
 W
 T
@@ -466,7 +447,7 @@ S
 O
 O
 A
-K
+Q
 h
 R
 f
@@ -532,7 +513,7 @@ v
 V
 l
 Q
-p
+O
 O
 g
 W
@@ -549,9 +530,9 @@ w
 w
 f
 W
-d
 O
-x
+O
+L
 O
 N
 O

@@ -21,6 +21,9 @@
 #include "honk_A.dmm"
 #include "spider_A.dmm"
 #include "liminal_A.dmm"
+#include "redspace_A.dmm"
+#include "redspace_B.dmm"
+#include "redspace_C.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -203,6 +206,30 @@
 	mappath = 'maps/submaps/outpost21/deepdark/liminal_A.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 20
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_A
+	name = "Red A"
+	desc = "Random redspace leak."
+	mappath = 'maps/submaps/outpost21/deepdark/redspace_A.dmm'
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_B
+	name = "Red B"
+	desc = "Random redspace leak."
+	mappath = 'maps/submaps/outpost21/deepdark/redspace_B.dmm'
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_C
+	name = "Red C"
+	desc = "Random redspace leak."
+	mappath = 'maps/submaps/outpost21/deepdark/redspace_C.dmm'
+	allow_duplicates = FALSE
+	discard_prob = 50
 	cost = 30
 
 //////////////////////////////////////////////////////////////

@@ -1,0 +1,2123 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/structure/table/marble,
+/obj/machinery/reagentgrinder{
+	pixel_y = 5
+	},
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"ak" = (
+/obj/machinery/appliance/mixer/candy,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"at" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/bed/chair/wood,
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"aE" = (
+/obj/machinery/vending/boozeomat,
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"bm" = (
+/obj/machinery/appliance/cooker/grill,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"bK" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"bZ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/mineral/alt/ignore_mapgen,
+/area/mine/explored/muriki/cave/deepdark)
+"cV" = (
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"cY" = (
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	name = "Bar"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"dk" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"dP" = (
+/obj/item/weapon/stool/baystool/padded{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/sign/clock{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"dQ" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/techfloor{
+	color = "#eacd7c"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ez" = (
+/obj/machinery/vending/dinnerware,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"eT" = (
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"eZ" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"fg" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/structure/closet/emergsuit_wall{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"fi" = (
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"fq" = (
+/turf/simulated/mineral/alt/ignore_mapgen,
+/area/mine/explored/muriki/cave/deepdark)
+"gI" = (
+/obj/structure/table/gamblingtable,
+/obj/item/device/flashlight/lamp/green,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"gN" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/deskbell{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"hl" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"hG" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"hK" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"ib" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/material/knife/plastic,
+/obj/item/weapon/reagent_containers/food/snacks/mint,
+/obj/item/weapon/reagent_containers/food/snacks/spreads/butter,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"ij" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"im" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/structure/sign/department/bar{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"ip" = (
+/obj/machinery/appliance/cooker/fryer,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"iF" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"iS" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"jl" = (
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"jB" = (
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	pixel_y = 32
+	},
+/turf/simulated/floor/lino,
+/area/mine/explored/muriki/cave/deepdark)
+"jR" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"kk" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+	pixel_x = 5
+	},
+/obj/item/weapon/reagent_containers/food/condiment/cookingoil,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/reagent_containers/glass/beaker{
+	pixel_x = 5
+	},
+/obj/item/weapon/reagent_containers/dropper,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"kC" = (
+/obj/structure/table/marble,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"kN" = (
+/obj/item/device/flashlight/lamp/green{
+	pixel_x = -6;
+	pixel_y = 14
+	},
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/device/geiger/wall{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/item/weapon/material/ashtray/glass,
+/obj/machinery/recharger{
+	pixel_x = 7
+	},
+/obj/item/weapon/storage/box/cups{
+	pixel_x = -5
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"ll" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"lm" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"ln" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"ma" = (
+/obj/structure/table/marble,
+/obj/item/weapon/material/knife/butch,
+/obj/item/weapon/material/kitchen/rollingpin,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"mc" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/structure/sink/countertop{
+	dir = 8;
+	pixel_x = 8
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"mt" = (
+/obj/machinery/appliance/cooker/oven,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"nj" = (
+/turf/simulated/floor/lino,
+/area/mine/explored/muriki/cave/deepdark)
+"ny" = (
+/obj/machinery/appliance/mixer/cereal,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"nY" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/material/ashtray/glass,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"op" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/material/ashtray/glass,
+/turf/simulated/floor/lino,
+/area/mine/explored/muriki/cave/deepdark)
+"ox" = (
+/obj/structure/table/woodentable,
+/obj/machinery/reagentgrinder,
+/obj/item/weapon/reagent_containers/food/drinks/shaker{
+	pixel_x = -8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"oL" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/machinery/button/doorbell{
+	id = "kitchending";
+	name = "Kitchen Bell";
+	pixel_x = -12;
+	pixel_y = -9
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"pa" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"pb" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle,
+/obj/item/weapon/material/ashtray/glass,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"pm" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"pp" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/green/bordercorner,
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"pt" = (
+/obj/structure/table/gamblingtable,
+/obj/item/weapon/material/ashtray/glass,
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"pw" = (
+/obj/machinery/door/firedoor/glass/hidden,
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"px" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"pZ" = (
+/obj/structure/bed/chair/backed_grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+"qG" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"qH" = (
+/obj/structure/table/marble,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/item/device/flashlight/lamp/green,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"rM" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"rP" = (
+/obj/structure/bed/chair/bar_stool,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"tA" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"tF" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"tH" = (
+/obj/structure/sign/painting/public{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"tJ" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+"tW" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon{
+	pixel_x = 2
+	},
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"tX" = (
+/obj/effect/catwalk_plated,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"uC" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/sign/yessmoking_1{
+	pixel_y = -32
+	},
+/obj/machinery/disposal,
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"uF" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"vn" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"wm" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/structure/salvageable/implant_container,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"wT" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/glass_extra/straw,
+/obj/item/weapon/glass_extra/straw,
+/obj/item/weapon/glass_extra/straw,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"xc" = (
+/obj/machinery/vending/coffee,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"xg" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"xl" = (
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"xG" = (
+/obj/structure/bed/chair/bar_stool,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"xR" = (
+/obj/structure/flora/pottedplant/decorative,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"yd" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"zi" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/effect/decal/cleanable/liquid_fuel,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"zy" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"zV" = (
+/obj/structure/closet/gmcloset{
+	name = "formal wardrobe"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"An" = (
+/obj/structure/sign/scenery/map/left_outpost21,
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"Av" = (
+/obj/structure/bed/chair/bar_stool,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"AD" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"AH" = (
+/obj/structure/musician/piano{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Co" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Bar"
+	},
+/obj/machinery/door/firedoor/multi_tile,
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Cu" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_x = -28
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Dy" = (
+/obj/item/weapon/stool/baystool/padded{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Dz" = (
+/obj/structure/fireplace{
+	density = 0
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/machinery/elevator_warning{
+	pixel_x = -7;
+	pixel_y = 19
+	},
+/turf/simulated/floor/tiled/techfloor{
+	color = "#eacd7c"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"DI" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/machinery/door/firedoor/glass/hidden,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"Es" = (
+/obj/structure/sign/scenery/map/right_outpost21,
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"EL" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle,
+/obj/item/device/flashlight/lamp/green,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Fb" = (
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	pixel_y = 32
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"GI" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"GM" = (
+/obj/machinery/door/airlock{
+	name = "Bar Backroom";
+	req_access = list(25)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/lino,
+/area/mine/explored/muriki/cave/deepdark)
+"GU" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"Hk" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"HK" = (
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Im" = (
+/obj/machinery/holosign/bar{
+	id = "barsign"
+	},
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"In" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+"ID" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"IR" = (
+/obj/structure/bed/chair/backed_grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Jt" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"Kf" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/effect/decal/cleanable/liquid_fuel,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"Kj" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"KO" = (
+/obj/structure/table/standard,
+/obj/item/weapon/material/kitchen/utensil/spork/plastic,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Li" = (
+/obj/structure/table/marble,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/item/weapon/deskbell,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"Lj" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Lk" = (
+/obj/machinery/door/airlock/glass{
+	name = "Kitchen";
+	req_access = list(28)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"LQ" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"LV" = (
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/weapon/flame/candle,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Ma" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/bed/chair/wood,
+/obj/item/latexballon/whoopee,
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Mn" = (
+/obj/structure/table/gamblingtable,
+/obj/item/weapon/dice,
+/obj/effect/floor_decal/spline/plain,
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Mo" = (
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Ms" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"MD" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"MJ" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"MN" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"MQ" = (
+/obj/structure/sign/yessmoking_1{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/structure/table/rack,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/turf/simulated/floor/tiled/techfloor{
+	color = "#eacd7c"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"MR" = (
+/obj/structure/reagent_dispensers/water_cooler/full,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Nr" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"ND" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/machinery/chem_master,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"Oh" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"PL" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"QG" = (
+/obj/structure/bed/chair/backed_grey,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Rc" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/lino,
+/area/mine/explored/muriki/cave/deepdark)
+"Rd" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Rh" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+"Ss" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"SR" = (
+/obj/structure/table/marble,
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/reagent_containers/food/snacks/pie,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"TD" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"TO" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"TP" = (
+/obj/structure/table/woodentable,
+/obj/structure/sign/yessmoking_1{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"TS" = (
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
+/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
+/obj/item/weapon/reagent_containers/glass/rag,
+/obj/item/weapon/material/ashtray/glass,
+/turf/simulated/floor/lino,
+/area/mine/explored/muriki/cave/deepdark)
+"Uj" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Um" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Uq" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+"Uw" = (
+/obj/structure/table/gamblingtable,
+/obj/item/weapon/deck/cards,
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"UA" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Vk" = (
+/turf/template_noop,
+/area/template_noop)
+"Vn" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Vu" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"Vv" = (
+/obj/structure/table/marble,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 3
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/obj/item/weapon/reagent_containers/food/condiment/mustard{
+	pixel_y = 14
+	},
+/obj/item/weapon/reagent_containers/food/condiment/ketchup{
+	pixel_x = -6;
+	pixel_y = 14
+	},
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/item/weapon/reagent_containers/food/condiment/hotsauce{
+	pixel_x = 6;
+	pixel_y = 14
+	},
+/obj/item/weapon/reagent_containers/food/condiment/soysauce{
+	pixel_x = -12;
+	pixel_y = 14
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"VI" = (
+/obj/machinery/hologram/holopad,
+/obj/item/device/radio/beacon,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Wp" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/weapon/flame/candle,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Wq" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/sign/securearea{
+	desc = "Under the painting a plaque reads: 'While the meat grinder may not have spared you, fear not. Not one part of you has gone to waste... You were delicious.'";
+	icon_state = "monkey_painting";
+	name = "Punpun portrait";
+	pixel_x = 28;
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"WF" = (
+/obj/structure/coatrack,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"WQ" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"Xj" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/bed/chair/wood{
+	dir = 1
+	},
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Yi" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/item/device/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"Yl" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Yz" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"YB" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+"YR" = (
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+"ZR" = (
+/obj/structure/bed/chair/bar_stool,
+/turf/simulated/floor/tiled/neutral,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+"}
+(2,1,1) = {"
+Vk
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(3,1,1) = {"
+Vk
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+fq
+fq
+fq
+fq
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+fq
+fq
+fq
+WQ
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(4,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+fq
+fq
+fq
+HK
+fq
+xg
+xg
+xg
+xg
+WQ
+xg
+xg
+xg
+fq
+fq
+fq
+fq
+fq
+fq
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(5,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+fq
+HK
+HK
+HK
+HK
+HK
+HK
+xg
+xg
+dk
+xg
+xg
+xg
+xg
+xg
+HK
+HK
+fq
+fq
+fq
+WQ
+WQ
+WQ
+Vk
+"}
+(6,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+HK
+HK
+HK
+eT
+eT
+Mo
+eT
+HK
+HK
+eT
+TO
+eT
+eT
+eT
+eT
+eT
+HK
+HK
+HK
+fq
+fq
+WQ
+WQ
+WQ
+Vk
+"}
+(7,1,1) = {"
+Vk
+WQ
+fq
+fq
+HK
+HK
+HK
+pp
+Jt
+Jt
+Jt
+Jt
+Yi
+Jt
+Jt
+GU
+pp
+MD
+Jt
+vn
+Jt
+GU
+HK
+HK
+HK
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(8,1,1) = {"
+Vk
+WQ
+fq
+fq
+HK
+fq
+pw
+pw
+GI
+Um
+Um
+Um
+GI
+Im
+GI
+fi
+cY
+GI
+GI
+GI
+GI
+hl
+TO
+HK
+HK
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(9,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+fq
+bZ
+Uq
+KO
+pZ
+QG
+tJ
+IR
+GI
+WF
+Lj
+cV
+jR
+px
+Cu
+GI
+rM
+eT
+HK
+HK
+fq
+fq
+fq
+WQ
+Vk
+"}
+(10,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+fq
+fq
+xl
+YR
+xl
+YR
+xl
+Rh
+hK
+Lj
+cV
+cV
+Ma
+pt
+Mn
+GI
+fg
+eT
+HK
+xg
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(11,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+fq
+xG
+ZR
+xG
+ZR
+xG
+YR
+Hk
+ij
+cV
+cV
+cV
+at
+Uw
+gI
+An
+hl
+eT
+xg
+xg
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(12,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+fq
+nY
+oL
+gN
+tW
+wT
+xl
+In
+TD
+Vn
+Uj
+VI
+ID
+Rd
+UA
+Es
+hl
+Mo
+HK
+xg
+xg
+WQ
+WQ
+WQ
+Vk
+"}
+(13,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+eZ
+eZ
+eZ
+eZ
+SR
+YB
+hG
+GI
+Dz
+Yz
+cV
+HK
+cV
+xR
+GI
+hl
+eT
+HK
+dk
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(14,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+DI
+DI
+DI
+DI
+GI
+Um
+Um
+GI
+dQ
+Kj
+HK
+Oh
+HK
+Ss
+GI
+hl
+eT
+xg
+xg
+fq
+WQ
+WQ
+WQ
+Vk
+"}
+(15,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+Ms
+ib
+lm
+eZ
+ma
+Vv
+LQ
+GI
+MQ
+Yz
+cV
+pb
+HK
+Wp
+Um
+hl
+eT
+xg
+HK
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(16,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+fq
+eZ
+eZ
+pa
+HK
+HK
+eZ
+qH
+Av
+Lj
+cV
+tA
+cV
+ln
+Um
+hl
+MN
+HK
+HK
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(17,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+bm
+eZ
+MJ
+eZ
+HK
+HK
+qG
+kC
+rP
+yd
+cV
+iS
+cV
+tF
+Um
+hl
+HK
+HK
+HK
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(18,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+fq
+ip
+qG
+kk
+LQ
+LQ
+eZ
+eZ
+Li
+rP
+yd
+cV
+LV
+cV
+EL
+Um
+hl
+pa
+HK
+fq
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(19,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+fq
+mt
+Kf
+ND
+LQ
+LQ
+eZ
+ez
+Um
+Yz
+cV
+cV
+tA
+cV
+ln
+GI
+im
+eT
+fq
+fq
+fq
+fq
+WQ
+WQ
+Vk
+"}
+(20,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+fq
+HK
+zi
+Kf
+Kf
+eZ
+eZ
+eZ
+Lk
+bK
+Vn
+Uj
+yd
+xg
+ll
+Co
+Vu
+eT
+fq
+fq
+fq
+WQ
+WQ
+WQ
+Vk
+"}
+(21,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+HK
+HK
+mc
+ac
+wm
+ak
+ny
+GI
+GI
+TS
+Rc
+Dy
+xg
+xg
+Nr
+fi
+GU
+tX
+xg
+fq
+fq
+WQ
+WQ
+WQ
+Vk
+"}
+(22,1,1) = {"
+Vk
+WQ
+fq
+HK
+HK
+HK
+jl
+GI
+GI
+GI
+GI
+GI
+GI
+jB
+nj
+Rc
+Dy
+HK
+yd
+uC
+GI
+hl
+eT
+xg
+fq
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(23,1,1) = {"
+Vk
+WQ
+fq
+HK
+HK
+HK
+zi
+GI
+AD
+tH
+ox
+TP
+GI
+Fb
+nj
+Rc
+Dy
+cV
+cV
+dP
+GI
+hl
+eT
+xg
+fq
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(24,1,1) = {"
+Vk
+WQ
+fq
+fq
+HK
+HK
+Kf
+GI
+Yz
+cV
+cV
+uF
+GM
+HK
+nj
+Rc
+Dy
+cV
+pm
+AH
+GI
+PL
+iF
+xg
+xg
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(25,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+HK
+HK
+GI
+zV
+Yl
+Wq
+xc
+aE
+HK
+HK
+Rc
+Dy
+cV
+MR
+kN
+GI
+hl
+eT
+xg
+xg
+xg
+WQ
+WQ
+WQ
+Vk
+"}
+(26,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+HK
+HK
+GI
+GI
+GI
+GI
+xg
+xg
+HK
+HK
+op
+Dy
+yd
+cV
+Xj
+GI
+zy
+xg
+xg
+xg
+xg
+WQ
+WQ
+WQ
+Vk
+"}
+(27,1,1) = {"
+Vk
+WQ
+fq
+fq
+fq
+xg
+xg
+xg
+xg
+HK
+HK
+HK
+HK
+HK
+fq
+HK
+HK
+HK
+HK
+HK
+HK
+xg
+xg
+xg
+xg
+xg
+WQ
+WQ
+WQ
+Vk
+"}
+(28,1,1) = {"
+Vk
+WQ
+WQ
+fq
+fq
+fq
+xg
+xg
+xg
+xg
+xg
+dk
+xg
+HK
+fq
+fq
+HK
+fq
+fq
+xg
+xg
+xg
+xg
+xg
+WQ
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(29,1,1) = {"
+Vk
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+xg
+xg
+xg
+WQ
+fq
+fq
+fq
+fq
+fq
+fq
+fq
+fq
+fq
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+WQ
+Vk
+"}
+(30,1,1) = {"
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+Vk
+"}

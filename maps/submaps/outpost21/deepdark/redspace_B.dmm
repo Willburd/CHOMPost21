@@ -1,0 +1,2413 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/structure/sign/nosmoking_2,
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"ag" = (
+/obj/structure/bed/chair/bay/chair/padded/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"aU" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/full,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"be" = (
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/folder/white,
+/obj/item/weapon/pen,
+/obj/structure/table/standard,
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"bS" = (
+/turf/template_noop,
+/area/template_noop)
+"cg" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"cw" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"cF" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	id_tag = "MedbayFoyer";
+	name = "Medbay";
+	req_access = list(5)
+	},
+/obj/machinery/door/firedoor/multi_tile,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"cL" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"cN" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"dg" = (
+/obj/item/weapon/flag/medical,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"dk" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"dY" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"eR" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"fa" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/gate/thin/open{
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"fM" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"fQ" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"fX" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "medding";
+	name = "Medical Dinger";
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"gf" = (
+/obj/structure/table/rack,
+/obj/machinery/door/window/westright{
+	dir = 2;
+	name = "EVA Suit Storage";
+	req_access = newlist();
+	req_one_access = list(5,18)
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/fireaxecabinet{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"gF" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/box/masks,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"gR" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"gS" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"hv" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/storage/box,
+/obj/item/weapon/hand_labeler,
+/obj/item/weapon/packageWrap,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/item/device/destTagger,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"hI" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/water/acidic/indoor/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hZ" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/structure/table/glass,
+/obj/item/device/defib_kit/loaded,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"iu" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/item/device/geiger/wall{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"iF" = (
+/obj/structure/table/glass,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"jk" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"jo" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/structure/table/standard,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"jr" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"js" = (
+/obj/structure/table/standard,
+/obj/item/device/laser_pointer/blue,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"ju" = (
+/obj/structure/closet/secure_closet/medical1,
+/obj/item/weapon/storage/box/pillbottles,
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"jX" = (
+/obj/machinery/chemical_dispenser/full,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"kj" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"kO" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"lL" = (
+/obj/structure/table/reinforced,
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 32
+	},
+/obj/machinery/bunsen_burner,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"lR" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/table/standard,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"mj" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"mu" = (
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"mv" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"mK" = (
+/obj/structure/table/glass,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"ne" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"nw" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/westright{
+	dir = 2;
+	name = "EVA Suit Storage";
+	req_access = list(5)
+	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/medical/emt,
+/obj/item/weapon/tank/oxygen,
+/obj/item/clothing/head/helmet/space/void/medical/emt,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/item/device/suit_cooling_unit,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"nC" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/obj/structure/salvageable/autolathe,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"nJ" = (
+/obj/item/weapon/storage/box/syringes,
+/obj/item/weapon/tool/screwdriver,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"pq" = (
+/obj/structure/closet/secure_closet/chemical,
+/obj/item/weapon/storage/box/pillbottles,
+/obj/item/weapon/storage/box/pillbottles,
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"pA" = (
+/obj/structure/table/standard,
+/obj/machinery/door/window/eastright{
+	base_state = "left";
+	dir = 2;
+	icon_state = "left";
+	name = "Medical Reception";
+	req_access = list(5)
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"pP" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"qg" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"qz" = (
+/obj/structure/table/standard,
+/obj/item/device/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"rb" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"rd" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"rr" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"rs" = (
+/obj/machinery/vending/medical,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"ru" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"sh" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/machinery/door/window/westleft{
+	dir = 2;
+	name = "EVA Suit Storage";
+	req_access = list(5)
+	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/medical/emt,
+/obj/item/weapon/tank/oxygen,
+/obj/item/clothing/head/helmet/space/void/medical/emt,
+/obj/item/device/suit_cooling_unit,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"st" = (
+/obj/structure/sign/chemistry{
+	pixel_y = -32
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"tg" = (
+/obj/machinery/doorbell_chime{
+	id_tag = "medding";
+	name = "Medical Dinger";
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"uI" = (
+/obj/structure/bed/chair/bay/chair/padded/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"uJ" = (
+/obj/item/weapon/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/box/masks{
+	pixel_x = -7
+	},
+/obj/machinery/vending/wallmed1{
+	pixel_y = -32
+	},
+/obj/structure/table/glass,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"vc" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/item/device/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"vN" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"vR" = (
+/obj/structure/window/reinforced,
+/obj/structure/table/standard,
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"wg" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medical Storage";
+	req_access = list(5,66)
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"wL" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"wQ" = (
+/obj/machinery/chemical_analyzer_pro,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"wS" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/structure/sign/nosmoking_1{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"xt" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"xH" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"yi" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass_medical{
+	name = "Paramedic Station";
+	req_one_access = list(5,66)
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"yp" = (
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"ys" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"yx" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"yz" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass_medical{
+	id_tag = "surgery_observation";
+	name = "Surgery Observation";
+	req_one_access = null
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"yV" = (
+/obj/structure/table/rack/shelf,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"yY" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"zu" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"zM" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"An" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"AG" = (
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Bq" = (
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 4;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"Bs" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Cf" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Ch" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/blood,
+/obj/item/weapon/lasertagknife,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Cq" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"CT" = (
+/obj/machinery/chemical_dispenser/full,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Dk" = (
+/obj/structure/window/reinforced,
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"Ds" = (
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "MedbayFoyer";
+	name = "Medbay Doors Control";
+	pixel_x = -24;
+	pixel_y = -26
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"DL" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"DX" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"EV" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"EY" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/obj/machinery/light,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Fv" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Gd" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"GN" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"GR" = (
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/obj/structure/salvageable/console,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"GV" = (
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Hm" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/table/standard,
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"HL" = (
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Ia" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Iq" = (
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Iu" = (
+/obj/structure/bed/chair/bay/comfy/blue,
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"IN" = (
+/obj/structure/closet/wardrobe/chemistry_white,
+/obj/item/device/radio/headset/headset_med,
+/obj/effect/floor_decal/corner/blue/full,
+/obj/machinery/light,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"IO" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/southright{
+	dir = 8;
+	name = "Chemistry Desk";
+	req_access = list(33)
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/window/northright{
+	dir = 4;
+	name = "Chemistry Desk"
+	},
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/obj/effect/floor_decal/corner/blue/borderfull,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"IU" = (
+/obj/machinery/vending/cola{
+	dir = 8;
+	pixel_x = 7
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 6
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Ja" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"JI" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"JP" = (
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Kb" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medical";
+	req_one_access = list(5,66)
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Kf" = (
+/obj/machinery/door/firedoor/multi_tile,
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayrecquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Km" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"KG" = (
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/beakers,
+/obj/item/weapon/storage/box/syringes{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/storage/box/syringes,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"KY" = (
+/obj/machinery/vending/medical,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Lg" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
+"Ll" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/disposal,
+/obj/structure/sign/nosmoking_1{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/blue/full,
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"LD" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/nosmoking_1{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"LZ" = (
+/obj/item/weapon/material/shard,
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"MR" = (
+/obj/structure/sign/redcross{
+	desc = "The Star of Life, a symbol of Medical Aid.";
+	icon_state = "lifestar";
+	name = "Medbay"
+	},
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"Ne" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/machinery/disposal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"No" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"NA" = (
+/obj/effect/floor_decal/corner_techfloor_grid,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"OY" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"PD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/southright{
+	dir = 4;
+	name = "Chemistry Desk";
+	req_access = list(33)
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/window/southright{
+	dir = 8;
+	name = "Chemistry Desk";
+	req_access = list(33)
+	},
+/obj/effect/floor_decal/corner/blue/borderfull,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"PQ" = (
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayrecquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"PU" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Qj" = (
+/obj/machinery/door/firedoor/multi_tile,
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Tool Storage";
+	req_access = list(5);
+	req_one_access = list(5)
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"QW" = (
+/obj/machinery/door/airlock/glass,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"Rm" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"Rw" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"RU" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"RZ" = (
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"Sq" = (
+/turf/simulated/mineral/alt/ignore_mapgen,
+/area/mine/explored/muriki/cave/deepdark)
+"SG" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Tl" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/basic/full,
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Tw" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/salvageable/autolathe,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"TC" = (
+/obj/structure/table/rack,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -22
+	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"TI" = (
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"TM" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"TV" = (
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/spray/cleaner{
+	pixel_x = -5
+	},
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"Uy" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"UQ" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/item/weapon/storage/box/beakers,
+/obj/item/weapon/storage/box/beakers,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Vf" = (
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Vh" = (
+/obj/structure/flora/skeleton{
+	name = "\proper Wilhelm"
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"VS" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"VY" = (
+/obj/item/weapon/stool/padded{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Ws" = (
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Ww" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/machinery/reagentgrinder,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"WA" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/closet,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"WZ" = (
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Xc" = (
+/obj/structure/table/reinforced,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/obj/item/device/geiger/wall{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"XC" = (
+/obj/machinery/vending/wallmed1{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"XD" = (
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"XP" = (
+/obj/structure/sign/chemistry,
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"XV" = (
+/obj/structure/bed/chair/bay/comfy/blue,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"XY" = (
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
+"Yu" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"YD" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"YQ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/requests_console/preset/medical{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/structure/salvageable/bliss,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Za" = (
+/obj/item/weapon/material/shard,
+/obj/structure/flora/pottedplant/dead,
+/turf/simulated/floor/water/acidic/indoor,
+/area/mine/explored/muriki/cave/deepdark)
+"ZG" = (
+/obj/structure/sign/redcross{
+	desc = "The Star of Life, a symbol of Medical Aid.";
+	icon_state = "lifestar";
+	name = "Medbay"
+	},
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"ZH" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+"}
+(2,1,1) = {"
+bS
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+Sq
+Sq
+Sq
+Sq
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+bS
+"}
+(3,1,1) = {"
+bS
+cN
+cN
+cN
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+cN
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+cN
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+cN
+cN
+bS
+"}
+(4,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+AG
+AG
+Sq
+Sq
+Sq
+Sq
+Sq
+AG
+AG
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+AG
+Sq
+Sq
+cN
+bS
+"}
+(5,1,1) = {"
+bS
+cN
+Sq
+Sq
+AG
+AG
+AG
+AG
+Sq
+Sq
+Sq
+AG
+AG
+AG
+AG
+yY
+Rm
+Sq
+Sq
+Sq
+Sq
+jk
+EY
+Rm
+Ne
+AG
+AG
+Sq
+cN
+bS
+"}
+(6,1,1) = {"
+bS
+cN
+Sq
+Sq
+AG
+ne
+hZ
+AG
+Sq
+AG
+AG
+uJ
+Rm
+yx
+AG
+XC
+DL
+AG
+Sq
+Sq
+jk
+AG
+yz
+ZG
+vN
+Ws
+AG
+AG
+Sq
+bS
+"}
+(7,1,1) = {"
+bS
+cN
+Sq
+Sq
+AG
+Rm
+Rm
+AG
+AG
+AG
+AG
+Rm
+Rm
+Gd
+Vf
+fM
+DL
+AG
+jk
+jk
+AG
+AG
+tg
+Rm
+xH
+jk
+AG
+Sq
+Sq
+bS
+"}
+(8,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+AG
+TC
+HL
+HL
+OY
+Vf
+Ll
+Rm
+zu
+OY
+EV
+ae
+iF
+Uy
+Vf
+Vf
+Vf
+TM
+Tl
+vN
+jk
+jk
+Sq
+cN
+bS
+"}
+(9,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+AG
+PU
+OY
+wL
+wL
+Vf
+Yu
+Ia
+yx
+Vf
+Ds
+cF
+No
+Vf
+AG
+AG
+AG
+An
+Kf
+Km
+jk
+jk
+Sq
+cN
+bS
+"}
+(10,1,1) = {"
+bS
+cN
+cN
+cN
+Sq
+Sq
+PU
+Vf
+dY
+dY
+OY
+mj
+Ia
+yx
+XD
+qg
+WZ
+Fv
+eR
+jk
+jk
+AG
+cg
+PQ
+fQ
+AG
+AG
+Sq
+Sq
+bS
+"}
+(11,1,1) = {"
+bS
+cN
+cN
+cN
+Sq
+Sq
+KG
+Vf
+Ch
+dY
+Vf
+Vf
+Qj
+Vf
+XD
+EV
+ae
+Hm
+jk
+jk
+jk
+AG
+ag
+Tl
+vN
+AG
+AG
+AG
+Sq
+bS
+"}
+(12,1,1) = {"
+bS
+cN
+cN
+cN
+Sq
+Ia
+gF
+TI
+dY
+dY
+OY
+Vf
+WZ
+Vf
+Vf
+EV
+DL
+qz
+jk
+jk
+jk
+AG
+uI
+Tl
+vN
+GV
+AG
+AG
+Sq
+bS
+"}
+(13,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+wg
+Vf
+Vf
+Vf
+OY
+Vf
+Yu
+Ia
+yx
+OY
+vc
+DL
+be
+Vf
+jk
+jk
+AG
+uI
+Tl
+vN
+VS
+AG
+Sq
+Sq
+bS
+"}
+(14,1,1) = {"
+bS
+cN
+Sq
+Sq
+Sq
+Rm
+lR
+rr
+ne
+jo
+Vf
+rs
+Ia
+yx
+Vf
+EV
+DL
+Cf
+Vf
+AG
+AG
+AG
+uI
+Tl
+vN
+GV
+AG
+Sq
+Sq
+bS
+"}
+(15,1,1) = {"
+bS
+cN
+Sq
+Sq
+jk
+Rm
+Rm
+Rm
+Ia
+Ia
+yi
+Rm
+Rm
+fX
+Vf
+EV
+DL
+Cf
+OY
+dg
+pA
+RZ
+YD
+Tl
+vN
+VS
+AG
+Sq
+Sq
+bS
+"}
+(16,1,1) = {"
+bS
+cN
+Sq
+jk
+jk
+Rw
+RU
+Ia
+GR
+VY
+Vf
+aU
+Ia
+zu
+Vf
+yY
+DL
+YQ
+mv
+TV
+vR
+Za
+IU
+DL
+zM
+GV
+Sq
+Sq
+Sq
+bS
+"}
+(17,1,1) = {"
+bS
+cN
+cN
+JI
+AG
+JP
+Vh
+Ia
+KY
+Vf
+Vf
+mK
+Ia
+yx
+Vf
+iu
+DL
+DL
+PD
+hI
+LZ
+Dk
+DL
+DL
+XY
+Sq
+Sq
+Sq
+Sq
+bS
+"}
+(18,1,1) = {"
+bS
+cN
+cN
+Sq
+AG
+Uy
+WA
+Rm
+gf
+OY
+Vf
+dk
+Ia
+yx
+Vf
+EV
+Rm
+nJ
+HL
+RZ
+ju
+pq
+IN
+DL
+vN
+Sq
+Sq
+Sq
+Sq
+bS
+"}
+(19,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+XV
+gR
+Ia
+sh
+Vf
+Vf
+LD
+Rm
+yx
+Vf
+EV
+Rm
+hv
+Vf
+Vf
+RZ
+Vf
+XC
+DL
+vN
+GV
+Sq
+Sq
+Sq
+bS
+"}
+(20,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+Iu
+GN
+Ia
+nw
+Vf
+cw
+yp
+Rm
+yx
+Vf
+EV
+Rm
+Ww
+Vf
+Vf
+nC
+CT
+wS
+DL
+vN
+GV
+Sq
+Sq
+cN
+bS
+"}
+(21,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+js
+Sq
+Sq
+Sq
+Sq
+OY
+Vf
+yi
+Vf
+XD
+st
+Rm
+lL
+OY
+Vf
+NA
+mu
+rd
+gS
+vN
+Uy
+Sq
+Sq
+cN
+bS
+"}
+(22,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+ys
+Sq
+Sq
+Sq
+Sq
+OY
+Vf
+yi
+Vf
+AG
+jk
+jk
+jk
+TI
+Vf
+Cq
+wQ
+UQ
+ZH
+vN
+jk
+jk
+Sq
+cN
+bS
+"}
+(23,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+kj
+Sq
+Sq
+Sq
+Sq
+Sq
+yV
+Rm
+rb
+jk
+jk
+jk
+jk
+OY
+Vf
+Iq
+mu
+rd
+pP
+vN
+jk
+jk
+jk
+cN
+bS
+"}
+(24,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+cL
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+DL
+Kb
+jk
+jk
+jk
+AG
+ne
+DX
+Tw
+jX
+Xc
+DL
+vN
+GV
+JI
+AG
+cN
+bS
+"}
+(25,1,1) = {"
+bS
+cN
+cN
+Sq
+Sq
+Rm
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+MR
+Bq
+jk
+jk
+jk
+AG
+fa
+IO
+XP
+ae
+DL
+MR
+QW
+QW
+jk
+jk
+cN
+bS
+"}
+(26,1,1) = {"
+bS
+cN
+cN
+cN
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+SG
+jr
+Ja
+AG
+AG
+AG
+AG
+AG
+AG
+AG
+Bs
+Lg
+kO
+xt
+ru
+Sq
+Sq
+cN
+bS
+"}
+(27,1,1) = {"
+bS
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+Sq
+Sq
+Sq
+Sq
+Sq
+AG
+AG
+jk
+Sq
+Sq
+jk
+jk
+jk
+jk
+AG
+AG
+Sq
+cN
+cN
+bS
+"}
+(28,1,1) = {"
+bS
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+Sq
+Sq
+Sq
+jk
+JI
+jk
+jk
+Sq
+Sq
+Sq
+Sq
+jk
+AG
+AG
+Sq
+Sq
+cN
+cN
+bS
+"}
+(29,1,1) = {"
+bS
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+cN
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+cN
+cN
+cN
+bS
+"}
+(30,1,1) = {"
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+bS
+"}
