@@ -178,9 +178,11 @@
 		if(2)
 			var/newpath = pick(prob(30);/obj/effect/mine,
 				prob(25);/obj/effect/mine/frag,
-				prob(25);/obj/effect/mine/emp,
+				prob(2);/obj/effect/mine/emp,
 				prob(10);/obj/effect/mine/stun,
-				prob(10);/obj/effect/mine/incendiary)
+				prob(10);/obj/effect/mine/incendiary,
+				prob(10);/obj/effect/mine/spiders,
+				prob(10);/obj/effect/mine/portal)
 			var/obj/effect/mine/M = new newpath()
 			M.loc = src.loc
 
@@ -223,7 +225,12 @@
 				/obj/effect/mine/lasertag/red,
 				/obj/effect/mine/lasertag/blue,
 				/obj/effect/mine/lasertag/omni,
-				/obj/effect/mine/lasertag/all)
+				/obj/effect/mine/lasertag/all,
+				/obj/effect/mine/spiders,
+				/obj/effect/mine/portal,
+				/obj/effect/mine/glue,
+				/obj/effect/mine/confetti,
+				/obj/effect/mine/lube)
 			var/obj/effect/mine/M = new newpath()
 			M.loc = src.loc
 

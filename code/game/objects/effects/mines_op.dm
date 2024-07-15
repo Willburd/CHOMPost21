@@ -60,3 +60,183 @@
 	name = "chaos lasertag mine"
 	desc = "A small grey mine with 'BOOM' written on top, and an optical hazard warning on the side."
 	minetype = /obj/effect/mine/lasertag/all
+
+
+
+
+/obj/item/weapon/mine/spiders
+	name = "spider mine"
+	desc = "A small explosive mine with a spider symbol on the side."
+	minetype = /obj/effect/mine/spiders
+
+/obj/effect/mine/spiders
+	mineitemtype = /obj/item/weapon/mine/spiders
+
+/obj/effect/mine/spiders/explode(var/mob/living/M)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	var/i = rand(6,9)
+	while(i-- > 0)
+		new /obj/effect/spider/spiderling/non_growing(loc)
+	if(prob(20))
+		// danger
+		i = rand(3,5)
+		while(i-- > 0)
+			new /obj/effect/spider/spiderling(loc)
+	else
+		// regulars
+		i = rand(3,5)
+		while(i-- > 0)
+			new /obj/effect/spider/spiderling/varied(loc)
+	visible_message("\The [src.name] detonates!")
+	spawn(0)
+		qdel(src)
+
+
+
+/obj/item/weapon/mine/glue
+	name = "glue mine"
+	desc = "A small explosive mine with a sticky warning on the side."
+	minetype = /obj/effect/mine/glue
+
+/obj/effect/mine/glue
+	mineitemtype = /obj/item/weapon/mine/glue
+
+/obj/effect/mine/glue/explode(var/mob/living/M)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	for (var/turf/simulated/floor/target in range(1,src))
+		if(target.density)
+			continue
+		if(target.blocks_air)
+			continue
+		if(istype(target, /turf/simulated/floor/water)) //Important to stop my_slime from filling with null entries in water.
+			continue
+		new /obj/effect/slug_glue(target)
+	visible_message("\The [src.name] detonates!")
+	spawn(0)
+		qdel(src)
+
+
+
+
+/obj/item/weapon/mine/portal
+	name = "bluespace mine"
+	desc = "A small explosive mine with a bluespace warning on the side."
+	minetype = /obj/effect/mine/portal
+
+/obj/effect/mine/portal
+	mineitemtype = /obj/item/weapon/mine/portal
+
+/obj/effect/mine/portal/explode(var/mob/living/M)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	// Terrible code stolen from event portals
+	var/list/pick_turfs = list()
+	var/list/Z_choices = list()
+	var/turf/simulated/floor/enter = loc
+	if( !enter || !istype(enter) )	return	//sanity
+	Z_choices |= using_map.get_map_levels(1, FALSE)
+	for(var/turf/simulated/floor/T in world)
+		if(T.z in Z_choices)
+			if(!T.block_tele)
+				pick_turfs += T
+	if(pick_turfs.len)
+		var/wormhole_max_duration = round((2 MINUTES))
+		var/wormhole_min_duration = round((30 SECONDS))
+		//get our enter and exit locations
+		var/turf/simulated/floor/exit = pick(pick_turfs)
+		if( !exit || !istype(exit) )	return	//sanity
+		create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
+	// Zoop
+	visible_message("\The [src.name] detonates!")
+	var/obj/effect/portal/P = locate(/obj/effect/portal) in loc.contents
+	if(P)
+		P.teleport(M)
+	spawn(0)
+		qdel(src)
+
+
+
+/obj/item/weapon/mine/confetti
+	name = "surprise mine"
+	desc = "A small explosive mine with a birthday cake on the side."
+	minetype = /obj/effect/mine/confetti
+
+/obj/effect/mine/confetti
+	mineitemtype = /obj/item/weapon/mine/confetti
+
+/obj/effect/mine/confetti/explode(var/mob/living/M)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	// YAYYYYY
+	playsound(src, 'sound/items/confetti.ogg', 75, 1)
+	playsound(src, 'sound/effects/snap.ogg', 50, 1)
+	new /obj/effect/decal/cleanable/confetti(loc)
+	visible_message("\The [src.name] detonates!")
+	spawn(0)
+		qdel(src)
+
+
+
+/obj/item/weapon/mine/taarainbow
+	name = "surprise mine"
+	desc = "A small explosive mine with a birthday cake on the side."
+	minetype = /obj/effect/mine/taarainbow
+
+/obj/effect/mine/taarainbow // same as above, but makes candy
+	mineitemtype = /obj/item/weapon/mine/taarainbow
+
+/obj/effect/mine/taarainbow/explode(var/mob/living/M)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	playsound(src, 'sound/items/confetti.ogg', 75, 1)
+	playsound(src, 'sound/effects/snap.ogg', 50, 1)
+	// candy
+	var/count = rand(20,30)
+	while(count-- > 0)
+		var/picker = pick(/obj/item/clothing/mask/chewable/candy/gum,/obj/item/clothing/mask/chewable/candy/lolli,/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,/obj/item/weapon/reagent_containers/food/snacks/candy_corn)
+		var/obj/item/newcandy = new picker()
+		newcandy.loc = src.loc
+	// YAYYYYY
+	new /obj/effect/decal/cleanable/confetti(loc)
+	visible_message("\The [src.name] detonates!")
+	spawn(0)
+		qdel(src)
+
+
+
+/obj/item/weapon/mine/lube
+	name = "slip mine"
+	desc = "A small explosive mine with a banana warning on the side."
+	minetype = /obj/effect/mine/lube
+
+/obj/effect/mine/lube
+	mineitemtype = /obj/item/weapon/mine/lube
+
+/obj/effect/mine/lube/explode(var/mob/living/M)
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	for (var/turf/simulated/floor/target in range(3,src))
+		if(target.density)
+			continue
+		if(target.blocks_air)
+			continue
+		if(istype(target, /turf/simulated/floor/water))
+			continue
+		target.wet_floor(2) // loob
+	visible_message("\The [src.name] detonates!")
+	spawn(0)
+		qdel(src)
