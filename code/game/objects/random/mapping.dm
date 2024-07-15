@@ -150,7 +150,13 @@
 				prob(15);/obj/effect/mine/camo,
 				prob(15);/obj/effect/mine/emp/camo,
 				prob(10);/obj/effect/mine/stun,
-				prob(10);/obj/effect/mine/incendiary,)
+				prob(10);/obj/effect/mine/incendiary,
+				prob(10);/obj/effect/mine/spiders, // Outpost 21 addition - you bet you know what this does
+				prob(10);/obj/effect/mine/glue, // Outpost 21 addition
+				prob(10);/obj/effect/mine/portal, // Outpost 21 addition
+				prob(10);/obj/effect/mine/lube, // Outpost 21 addition
+				prob(1);/obj/effect/mine/confetti, // Outpost 21 addition
+				prob(1);/obj/effect/mine/taarainbow) // Outpost 21 addition - CANDY
 
 /obj/random/humanoidremains
 	name = "Random Humanoid Remains"
