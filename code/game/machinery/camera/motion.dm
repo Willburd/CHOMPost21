@@ -54,9 +54,15 @@
 	detectTime = -1
 	return 1
 
-/obj/machinery/camera/HasProximity(turf/T, atom/movable/AM, old_loc)
+/obj/machinery/camera/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER
+	if(isnull(WF))
+		return
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		return
 	// Motion cameras outside of an "ai monitored" area will use this to detect stuff.
 	if (!area_motion)
 		if(isliving(AM))
 			newTarget(AM)
-

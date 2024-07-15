@@ -31,7 +31,7 @@
 	spawn(100)
 		if(anchored)
 			add_overlay("[base_state]-s")
-			sense_proximity(callback = /atom/proc/HasProximity)
+			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
 // Outpost 21 edit end
 
 /obj/machinery/flasher/power_change()
@@ -109,7 +109,16 @@
 		flash()
 	..(severity)
 
-/obj/machinery/flasher/portable/HasProximity(turf/T, atom/movable/AM, oldloc)
+/obj/machinery/flasher/portable/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER
+	if(isnull(WF))
+		return
+
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		return
+
 	if(disable || !anchored || (last_flash && world.time < last_flash + 150))
 		return
 
@@ -126,12 +135,12 @@
 		if(!anchored)
 			user.show_message(text("<span class='warning'>[src] can now be moved.</span>"))
 			cut_overlays()
-			unsense_proximity(callback = /atom/proc/HasProximity)
+			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
 
 		else if(anchored)
 			user.show_message(text("<span class='warning'>[src] is now secured.</span>"))
 			add_overlay("[base_state]-s")
-			sense_proximity(callback = /atom/proc/HasProximity)
+			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
 
 /obj/machinery/button/flasher
 	name = "flasher button"

@@ -32,8 +32,12 @@
 	update_icon()
 	return secured
 
-/obj/item/device/assembly/prox_sensor/HasProximity(turf/T, atom/movable/AM, old_loc)
-	if(!istype(AM))
+/obj/item/device/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER
+	if(isnull(WF))
+		return
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
 	if (istype(AM, /obj/effect/beam))
@@ -90,9 +94,9 @@
 /obj/item/device/assembly/prox_sensor/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(isturf(old_loc))
-		unsense_proximity(range = range, callback = /atom/proc/HasProximity, center = old_loc)
+		unsense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc)
 	if(isturf(loc))
-		sense_proximity(range = range, callback = /atom/proc/HasProximity)
+		sense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity))
 	sense()
 
 /obj/item/device/assembly/prox_sensor/tgui_interact(mob/user, datum/tgui/ui)
