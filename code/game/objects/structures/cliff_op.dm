@@ -230,6 +230,11 @@ two tiles on initialization, and which way a cliff is facing may change during m
 		return FALSE
 	return ..()
 
+/obj/structure/cliff/CanPass(atom/movable/mover, turf/target)
+	return mover.z > z // Allow falling from above
+
+
+
 
 
 /obj/structure/cliff_end
