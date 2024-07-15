@@ -384,6 +384,14 @@
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_JANITOR
 
+/area/muriki/janiupstairs
+	name = "\improper Hydroponics Janitorial Closet"
+	icon_state = "cyablasqu"
+	sound_env = SMALL_ENCLOSED
+	base_turf = /turf/simulated/open/force_indoor
+	use_emergency_overlay = TRUE
+	holomap_color = HOLOMAP_AREACOLOR_JANITOR
+
 /area/muriki/cybstorage
 	name = "\improper Cyborg Storage"
 	icon_state = "shuttle"
