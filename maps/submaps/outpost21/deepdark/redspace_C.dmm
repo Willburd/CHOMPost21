@@ -385,6 +385,13 @@
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/mine/explored/muriki/cave/deepdark)
+"ql" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
 "qG" = (
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/effect/decal/cleanable/blood,
@@ -506,6 +513,12 @@
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/structure/salvageable/implant_container,
 /turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"wK" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/wood,
 /area/mine/explored/muriki/cave/deepdark)
 "wT" = (
 /obj/structure/table/marble,
@@ -823,6 +836,18 @@
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/kafel_full,
 /area/mine/explored/muriki/cave/deepdark)
+"Mx" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/mine/explored/muriki/cave/deepdark)
 "MD" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -1056,6 +1081,12 @@
 /obj/item/device/radio/beacon,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"VX" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/steel,
 /area/mine/explored/muriki/cave/deepdark)
 "Wp" = (
 /obj/structure/table/woodentable,
@@ -1333,7 +1364,7 @@ HK
 eT
 eT
 Mo
-eT
+VX
 HK
 HK
 eT
@@ -1497,14 +1528,14 @@ YR
 Hk
 ij
 cV
-cV
+wK
 cV
 at
 Uw
 gI
 An
 hl
-eT
+VX
 xg
 xg
 fq
@@ -1749,7 +1780,7 @@ Kf
 ND
 LQ
 LQ
-eZ
+ql
 ez
 Um
 Yz
@@ -1855,7 +1886,7 @@ HK
 yd
 uC
 GI
-hl
+Mx
 eT
 xg
 fq
@@ -1908,14 +1939,14 @@ Kf
 GI
 Yz
 cV
-cV
+wK
 uF
 GM
 HK
 nj
 Rc
 Dy
-cV
+wK
 pm
 AH
 GI

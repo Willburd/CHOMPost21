@@ -36,6 +36,12 @@
 /obj/item/device/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/mine/explored/muriki/cave/deepdark)
+"bX" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
 "ce" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/warning{
@@ -329,6 +335,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/mine/explored/muriki/cave/deepdark)
+"qD" = (
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
 "qI" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
@@ -495,6 +508,13 @@
 	name = "Engineering Lockdown"
 	},
 /turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"yg" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/mine/explored/muriki/cave/deepdark)
 "yx" = (
 /obj/structure/bed/chair/sofa/bench,
@@ -879,6 +899,14 @@
 "MX" = (
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Nd" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/industrial/danger/corner,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled,
 /area/mine/explored/muriki/cave/deepdark)
 "Nz" = (
 /turf/simulated/floor/tiled/kafel_full,
@@ -1373,7 +1401,7 @@ ay
 iC
 Oi
 Oi
-Oi
+bX
 ce
 Fg
 uj
@@ -1478,7 +1506,7 @@ uZ
 bo
 Qr
 lf
-Zn
+yg
 Oi
 Ws
 qV
@@ -1615,7 +1643,7 @@ jb
 ac
 tQ
 Xs
-dX
+Nd
 Oi
 Oi
 iC
@@ -1729,7 +1757,7 @@ hS
 hS
 hS
 hS
-hF
+qD
 OS
 hS
 im
@@ -1901,7 +1929,7 @@ Fg
 bk
 Oi
 Oi
-Oi
+bX
 hS
 dX
 Oi

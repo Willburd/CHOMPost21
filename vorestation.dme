@@ -5220,6 +5220,7 @@
 #include "modular_outpost\code\modules\clothing\accessories\fluff_awards.dm"
 #include "modular_outpost\code\modules\clothing\gloves\telekinetic.dm"
 #include "modular_outpost\code\modules\events\allisclean.dm"
+#include "modular_outpost\code\modules\events\badbody.dm"
 #include "modular_outpost\code\modules\events\bluespace_shell_station.dm"
 #include "modular_outpost\code\modules\events\borg_error.dm"
 #include "modular_outpost\code\modules\events\chu_infestation.dm"

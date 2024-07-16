@@ -848,6 +848,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/mine/explored/muriki/cave/deepdark)
+"Eo" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled,
+/area/mine/explored/muriki/cave/deepdark)
 "EV" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -1246,6 +1252,12 @@
 	},
 /obj/structure/salvageable/autolathe,
 /turf/simulated/floor/tiled/kafel_full/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Ty" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/white,
 /area/mine/explored/muriki/cave/deepdark)
 "TC" = (
 /obj/structure/table/rack,
@@ -1686,7 +1698,7 @@ TC
 HL
 HL
 OY
-Vf
+Ty
 Ll
 Rm
 zu
@@ -1697,7 +1709,7 @@ iF
 Uy
 Vf
 Vf
-Vf
+Ty
 TM
 Tl
 vN
@@ -1886,7 +1898,7 @@ Vf
 EV
 DL
 Cf
-Vf
+Ty
 AG
 AG
 AG
@@ -2010,7 +2022,7 @@ Vf
 dk
 Ia
 yx
-Vf
+Ty
 EV
 Rm
 nJ
@@ -2069,7 +2081,7 @@ Iu
 GN
 Ia
 nw
-Vf
+Ty
 cw
 yp
 Rm
@@ -2085,7 +2097,7 @@ CT
 wS
 DL
 vN
-GV
+Eo
 Sq
 Sq
 cN
