@@ -163,7 +163,7 @@
 			org.wounds +=  new /datum/wound/cut/small(4)
 			if(((org.damage >= 10 && prob(2)) || (org.damage >= 30 && prob(5)) || org.damage >= 80))
 				if(!(pick_zone == BP_GROIN || pick_zone == BP_TORSO || pick_zone == BP_HEAD))
-					if(!istype( body.loc, /obj/structure/morgue))
+					if(!istype( badbody.loc, /obj/structure/morgue))
 						org.droplimb(TRUE, DROPLIMB_ACID)
 		badbody.updatehealth()
 
