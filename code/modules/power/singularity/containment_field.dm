@@ -17,12 +17,11 @@
 	var/obj/machinery/field_generator/FG2 = null
 	var/list/shockdirs
 	var/hasShocked = 0 //Used to add a delay between shocks. In some cases this used to crash servers by spawning hundreds of sparks every second.
-	plane = PLANE_LIGHTING_ABOVE // Outpost 21 edit - Tesla lag reduction
 
 /obj/machinery/containment_field/Initialize()
 	. = ..()
 	shockdirs = list(turn(dir,90),turn(dir,-90))
-	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+	sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 /obj/machinery/containment_field/set_dir(new_dir)
 	. = ..()
@@ -30,7 +29,7 @@
 		shockdirs = list(turn(dir,90),turn(dir,-90))
 
 /obj/machinery/containment_field/Destroy()
-	unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+	unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 	if(FG1 && !FG1.clean_up)
 		FG1.cleanup()
 	if(FG2 && !FG2.clean_up)
@@ -53,6 +52,7 @@
 		return
 	shock(L)
 
+// CHOMPEdit Start
 /obj/machinery/containment_field/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -61,6 +61,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
+// CHOMPEdit End
 	if(!istype(AM, /mob/living) || AM:incorporeal_move)
 		return 0
 	if(!(get_dir(src,AM) in shockdirs))

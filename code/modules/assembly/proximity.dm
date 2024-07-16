@@ -32,6 +32,7 @@
 	update_icon()
 	return secured
 
+// CHOMPEdit Start
 /obj/item/device/assembly/prox_sensor/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -40,6 +41,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
+// CHOMPEdit End
 	if (istype(AM, /obj/effect/beam))
 		return
 	if (!isobserver(AM) && AM.move_speed < 12)
@@ -94,9 +96,9 @@
 /obj/item/device/assembly/prox_sensor/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(isturf(old_loc))
-		unsense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc)
+		unsense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 	if(isturf(loc))
-		sense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity))
+		sense_proximity(range = range, callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 	sense()
 
 /obj/item/device/assembly/prox_sensor/tgui_interact(mob/user, datum/tgui/ui)

@@ -1,3 +1,4 @@
+// CHOMPEdit Start
 /obj/effect/plant/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -6,7 +7,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
-
+// CHOMPEdit End
 	if(!is_mature() || seed.get_trait(TRAIT_SPREAD) != 2)
 		return
 
@@ -27,9 +28,9 @@
 	. = ..()
 	if(seed.get_trait(TRAIT_SPREAD)==2)
 		if(isturf(old_loc))
-			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc)
+			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 		if(isturf(loc))
-			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 /obj/effect/plant/attack_hand(var/mob/user)
 	manual_unbuckle(user)
@@ -106,7 +107,7 @@
 
 	//grabbing people
 	if(!victim.anchored && Adjacent(victim) && victim.loc != src.loc)
-		var/can_grab = prob(5) && is_mature() // outpost 21 edit - make less infurating
+		var/can_grab = 1
 		if(istype(victim, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = victim
 			if(istype(H.shoes, /obj/item/clothing/shoes/magboots) && (H.shoes.item_flags & NOSLIP))

@@ -110,9 +110,9 @@
 		return
 
 	name = seed.display_name
-	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/6) // Outpost 21 edit - heavily nerf health
+	max_health = round(seed.get_trait(TRAIT_ENDURANCE)/2)
 	if(seed.get_trait(TRAIT_SPREAD)==2)
-		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // Grabby
+		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // Grabby - CHOMPEdit
 		max_growth = VINE_GROWTH_STAGES
 		growth_threshold = max_health/VINE_GROWTH_STAGES
 		icon = 'icons/obj/hydroponics_vines.dmi'
@@ -131,7 +131,7 @@
 	if(max_growth > 2 && prob(50))
 		max_growth-- //Ensure some variation in final sprite, makes the carpet of crap look less wonky.
 
-	mature_time = world.time + seed.get_trait(TRAIT_MATURATION) + 20 SECONDS //prevent vines from maturing until at least a few seconds after they've been created. // outpost 21 edit - use "seconds" to nerf it
+	mature_time = world.time + seed.get_trait(TRAIT_MATURATION) + 15 //prevent vines from maturing until at least a few seconds after they've been created.
 	spread_chance = seed.get_trait(TRAIT_POTENCY)
 	spread_distance = ((growth_type>0) ? round(spread_chance*0.6) : round(spread_chance*0.3))
 	update_icon()
