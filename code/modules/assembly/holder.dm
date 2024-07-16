@@ -66,10 +66,11 @@
 /obj/item/device/assembly_holder/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(isturf(old_loc))
-		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc)
+		unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity), center = old_loc) // CHOMPEdit
 	if(isturf(loc))
-		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
+// CHOMPEdit Start
 /obj/item/device/assembly_holder/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -78,6 +79,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
+// CHOMPEdit End
 	if(a_left)
 		a_left.HasProximity(T, AM, old_loc)
 	if(a_right)

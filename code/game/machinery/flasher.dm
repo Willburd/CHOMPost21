@@ -24,16 +24,6 @@
 	base_state = "pflash"
 	density = TRUE
 
-// Outpost 21 edit begin - Map start flashers enable proximity sensing
-/obj/machinery/flasher/portable/Initialize()
-	. = ..()
-	// if already anchored, setup the proxity check
-	spawn(100)
-		if(anchored)
-			add_overlay("[base_state]-s")
-			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
-// Outpost 21 edit end
-
 /obj/machinery/flasher/power_change()
 	..()
 	if(!(stat & NOPOWER))
@@ -79,13 +69,11 @@
 		var/flash_time = strength
 		if(istype(O, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = O
-			/*  Outpost 21 edit - Nif removal
 			//VOREStation Edit Start
 			if(H.nif && H.nif.flag_check(NIF_V_FLASHPROT,NIF_FLAGS_VISION))
 				H.nif.notify("High intensity light detected, and blocked!",TRUE)
 				continue
 			//VOREStation Edit End
-			*/
 			if(!H.eyecheck() <= 0)
 				continue
 			flash_time *= H.species.flash_mod
@@ -109,7 +97,8 @@
 		flash()
 	..(severity)
 
-/obj/machinery/flasher/portable/HasProximity(turf/T, datum/weakref/WF, old_loc)
+// CHOMPEdit Start
+/obj/machinery/flasher/portable/HasProximity(turf/T, datum/weakref/WF, oldloc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
 		return
@@ -118,7 +107,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
-
+// CHOMPEdit End
 	if(disable || !anchored || (last_flash && world.time < last_flash + 150))
 		return
 
@@ -135,12 +124,12 @@
 		if(!anchored)
 			user.show_message(text("<span class='warning'>[src] can now be moved.</span>"))
 			cut_overlays()
-			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+			unsense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 		else if(anchored)
 			user.show_message(text("<span class='warning'>[src] is now secured.</span>"))
 			add_overlay("[base_state]-s")
-			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity)) // CHOMPEdit
 
 /obj/machinery/button/flasher
 	name = "flasher button"

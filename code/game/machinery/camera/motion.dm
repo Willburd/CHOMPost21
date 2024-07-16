@@ -54,6 +54,7 @@
 	detectTime = -1
 	return 1
 
+// CHOMPEdit start
 /obj/machinery/camera/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -62,6 +63,7 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
+	// CHOMPEdit End
 	// Motion cameras outside of an "ai monitored" area will use this to detect stuff.
 	if (!area_motion)
 		if(isliving(AM))
