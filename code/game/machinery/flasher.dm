@@ -24,6 +24,16 @@
 	base_state = "pflash"
 	density = TRUE
 
+// Outpost 21 edit begin - Map start flashers enable proximity sensing
+/obj/machinery/flasher/portable/Initialize()
+	. = ..()
+	// if already anchored, setup the proxity check
+	spawn(100)
+		if(anchored)
+			add_overlay("[base_state]-s")
+			sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
+// Outpost 21 edit end
+
 /obj/machinery/flasher/power_change()
 	..()
 	if(!(stat & NOPOWER))
@@ -70,9 +80,11 @@
 		if(istype(O, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = O
 			//VOREStation Edit Start
+			/*  Outpost 21 edit - Nif removal
 			if(H.nif && H.nif.flag_check(NIF_V_FLASHPROT,NIF_FLAGS_VISION))
 				H.nif.notify("High intensity light detected, and blocked!",TRUE)
 				continue
+			*/
 			//VOREStation Edit End
 			if(!H.eyecheck() <= 0)
 				continue
