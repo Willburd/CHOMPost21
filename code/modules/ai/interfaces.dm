@@ -52,7 +52,7 @@
 	return say(message)
 
 /mob/living/proc/IIsAlly(mob/living/L)
-	return istype(L) && src.faction == L.faction
+	return istype(L) && (src.faction == L.faction || L.AI_ignores) // Outpost 21 edit - Support for mobs that are entirely ignored by AI
 
 /mob/living/simple_mob/IIsAlly(mob/living/L)
 	. = ..()

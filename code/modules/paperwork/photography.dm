@@ -83,6 +83,39 @@ var/global/photo_count = 0
 	return
 
 
+// Outpost 21 addition begin - The image of a...
+/obj/item/weapon/photo/proc/statue_curse(var/user)
+	var/t = rand(260, 560) SECONDS
+	log_admin("[user] took a picture of an angel statue. It will spawn a statue in: [t / (1 SECOND)] seconds.")
+	addtimer(CALLBACK(src, PROC_REF(statue_spawn)), t)
+
+/obj/item/weapon/photo/proc/statue_spawn()
+	if(statue_photos_allowed <= 0)
+		return
+	if(!QDELETED(src))
+		var/turf/T = get_turf(src)
+		if(isturf(T))
+			visible_message("\The [src] flickers.")
+			spawn(10)
+				if(!QDELETED(src))
+					visible_message("\The [src] shakes.")
+					T = get_turf(src)
+					if(isturf(T))
+						for(var/obj/machinery/light/L in oview(12, T))
+							L.flicker(rand(20, 50))
+							spawn(rand(15,50))
+								if(prob(80))
+									L.broken()
+			spawn(13)
+				if(!QDELETED(src))
+					T = get_turf(src)
+					if(isturf(T))
+						new /mob/living/simple_mob/animal/statue(T)
+						statue_photos_allowed--
+					desc += SPAN_OCCULT("Part of the photo is smeared unnaturally.")
+// Outpost 21 edit end
+
+
 /**************
 * photo album *
 **************/
@@ -225,7 +258,7 @@ var/global/photo_count = 0
 
 /obj/item/device/camera/proc/get_mobs(turf/the_turf as turf)
 	var/mob_detail
-	// Outpost 21 edit begin - ghosts in photos
+	// Outpost 21 edit begin - ghosts in photos, and statues
 	for(var/atom/S in the_turf)
 		if(isobserver(S))
 			// hide observers that are not ghosts
@@ -253,6 +286,13 @@ var/global/photo_count = 0
 				mob_detail = "You can see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]. "
 			else
 				mob_detail += "You can also see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]."
+
+		// What a cursed photo
+		if(istype(S,/mob/living/simple_mob/animal/statue))
+			if(!mob_detail)
+				mob_detail = "You can see a statue of an angel on the photo."
+			else
+				mob_detail += "You can also see a statue of an angel on the photo."
 	// Outpost 21 edit end
 	return mob_detail
 
@@ -285,17 +325,26 @@ var/global/photo_count = 0
 	var/z_c	= target.z
 	var/list/turfs = list()
 	var/mobs = ""
+	var/statue = FALSE // Outpost 21 addition - The image of a...
 	for(var/i = 1 to size)
 		for(var/j = 1 to size)
 			var/turf/T = locate(x_c, y_c, z_c)
 			if(can_capture_turf(T, user))
 				turfs.Add(T)
 				mobs += get_mobs(T)
+				// Outpost 21 addition begin - The image of a...
+				if(locate(/mob/living/simple_mob/animal/statue) in T.contents)
+					statue = TRUE
+				// Outpost 21 addition end
 			x_c++
 		y_c--
 		x_c = x_c - size
 
 	var/obj/item/weapon/photo/p = createpicture(target, user, turfs, mobs, flag)
+	// Outpost 21 addition begin - The image of a...
+	if(statue)
+		p.statue_curse(user)
+	// Outpost 21 addition end
 
 	printpicture(user, p)
 
