@@ -8,6 +8,7 @@
 #define ASSIGNMENT_SCIENTIST "Scientist"
 #define ASSIGNMENT_SECURITY "Security"
 #define ASSIGNMENT_CARGO "Cargo"
+#define ASSIGNMENT_CHAPLAIN "Chaplain"
 
 //
 // VOREStation overrides to the default event manager configuration. //YW EDIT: WHY THE FUCK IS THIS NOT MENTIONED IN THE REGULAR FILE, AAAGGGHAA!
@@ -103,6 +104,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Body",		/datum/event/badbody						,1	, list(ASSIGNMENT_MEDICAL = 1)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Morgue",		/datum/event/badbody/morgue					,1	, list(ASSIGNMENT_MEDICAL = 1)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psychic Screach",		/datum/event/psychic_screach				,1  , list(ASSIGNMENT_ENGINEER = 2)												, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Weeping Statue",		/datum/event/weeping_statue					,1	, list(ASSIGNMENT_CHAPLAIN = 1,ASSIGNMENT_SECURITY = 1)	, TRUE, min_jobs = list(ASSIGNMENT_CHAPLAIN = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Borg Freedom Law",	/datum/event/borglawerror					,3	, list(ASSIGNMENT_CYBORG = 10, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_SECURITY = 5), TRUE, min_jobs = list(ASSIGNMENT_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Migration",	/datum/event/spider_migration				,2	, list(ASSIGNMENT_SECURITY = 5)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disposal Damage",		/datum/event/disposal_damage				,10	, list(ASSIGNMENT_ENGINEER = 5)												, TRUE),
@@ -146,3 +148,4 @@
 #undef ASSIGNMENT_SCIENTIST
 #undef ASSIGNMENT_SECURITY
 #undef ASSIGNMENT_CARGO
+#undef ASSIGNMENT_CHAPLAIN

@@ -95,6 +95,11 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		var/list/scanlist = oviewers(view_range, GOAL)
 		if(scanlist.len == 0)
 			forceMove(GOAL.loc)
+			// Lets make it more fun
+			for(var/obj/machinery/light/L in oview(12, loc))
+				L.flicker(rand(20, 50))
+				if(prob(40))
+					L.broken()
 
 /mob/living/simple_mob/animal/statue/attackby(var/obj/item/O as obj, var/mob/user as mob) //banishing the statue is a risky job
 	if(istype(O, /obj/item/weapon/nullrod))

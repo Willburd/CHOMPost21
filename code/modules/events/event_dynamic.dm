@@ -190,6 +190,7 @@ var/list/event_last_fired = list()
 	active_with_role["HOS"] = 0 //CHOMP Add
 	active_with_role["Warden"] = 0 //CHOMP Add
 	active_with_role["Cargo"] = 0 //CHOMP Add
+	active_with_role["Chaplain"] = 0 //Outpost 21 Add
 
 	for(var/mob/M in player_list)
 		if(!M.mind || !M.client || M.client.is_afk(10 MINUTES)) // longer than 10 minutes AFK counts them as inactive
@@ -245,5 +246,9 @@ var/list/event_last_fired = list()
 
 		if(M.mind.assigned_role == "Cargo") //CHOMP Add
 			active_with_role["Cargo"]++ //CHOMP Add
+
+		if(M.mind.assigned_role == "Chaplain") //Outpost 21 Add
+			active_with_role["Chaplain"]++ //Outpost 21 Add
+
 
 	return active_with_role
