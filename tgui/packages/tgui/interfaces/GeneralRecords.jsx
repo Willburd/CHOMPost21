@@ -137,6 +137,7 @@ const GeneralRecordsView = (_properties) => {
         <GeneralRecordsViewGeneral />
       </Section>
       <Section title="Actions" level={2}>
+        {/* Outpost 21 edit begin - Medical record sync */}
         <Button
           icon="upload"
           disabled={!!general.empty}
@@ -145,6 +146,7 @@ const GeneralRecordsView = (_properties) => {
         >
           Sync Employment Record
         </Button>
+        {/* Outpost 21 edit end */}
         <Button.Confirm
           icon="trash"
           disabled={!!general.empty}

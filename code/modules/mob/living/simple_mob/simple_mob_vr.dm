@@ -230,6 +230,13 @@
 	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		return
 
+	/* Outpost 21 edit - Nif removal
+	//CHOMPAdd Start
+	if(!soulgem)
+		soulgem = new(src)
+	//CHOMPAdd End
+	*/
+
 	if(LAZYLEN(vore_organs))
 		return
 

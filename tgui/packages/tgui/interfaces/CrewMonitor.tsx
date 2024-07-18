@@ -219,7 +219,9 @@ const CrewMonitorMapView = (props: { zoom: number; onZoom: Function }) => {
             <NanoMap.Marker
               key={cm.ref}
               x={cm.x}
+              /* Outpost 21 edit begin - Wide map support */
               y={cm.y * data.ymult}
+              /* Outpost 21 edit end */
               zoom={props.zoom}
               icon="circle"
               tooltip={cm.name + ' (' + cm.assignment + ')'}

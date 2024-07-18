@@ -1617,6 +1617,11 @@
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
 		if(R.mmi && R.mind && R.mmi.brainmob)
+			/* Outpost 21 edit - Nif removal
+			if((R.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && owner.soulgem && owner.soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
+				owner.soulgem.catch_mob(R, R.name)
+			else
+			*/
 			R.mmi.loc = src
 			items_preserved += R.mmi
 			var/obj/item/weapon/robot_module/MB = locate() in R.contents

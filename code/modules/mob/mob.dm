@@ -15,6 +15,7 @@
 	if(!istype(src,/mob/observer)) //CHOMPEdit
 		ghostize() //CHOMPEdit
 	//ChompEDIT start - fix hard qdels
+	// QDEL_NULL(soulgem) //CHOMPAdd // Outpost 21 edit - Nif removal
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
 	for(var/key in alerts) //clear out alerts

@@ -70,7 +70,9 @@ export const AtmosControlContent = (props) => {
               <NanoMap.Marker
                 key={cm.ref}
                 x={cm.x}
+                /* Outpost 21 edit begin - Wide map support */
                 y={cm.y * data.ymult}
+                /* Outpost 21 edit end */
                 zoom={zoom}
                 icon="bell"
                 tooltip={cm.name}

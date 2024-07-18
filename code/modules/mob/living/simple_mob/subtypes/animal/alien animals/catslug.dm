@@ -68,6 +68,7 @@
 		/obj/item/weapon/holder,
 		/obj/machinery/camera,
 		/obj/belly,
+		///obj/soulgem, // CHOMPAdd  // Outpost 21 edit - Nif removal
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/weapon/material,
