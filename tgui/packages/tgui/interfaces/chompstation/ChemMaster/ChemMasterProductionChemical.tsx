@@ -73,6 +73,14 @@ export const ChemMasterProductionChemical = (props: {
         >
           Create bottle (60u max)
         </Button>
+        {/* Outpost 21 edit begin - 2X bottle dispensing */}
+        <Button
+          icon="plus-square"
+          onClick={() => modalOpen('create_bottle_two')}
+        >
+          Two
+        </Button>
+        {/* Outpost 21 edit end */}
         <Button
           icon="plus-square"
           onClick={() => modalOpen('create_bottle_multiple')}
