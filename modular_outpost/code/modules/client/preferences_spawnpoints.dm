@@ -8,6 +8,8 @@
 
 /datum/spawnpoint/cyborg
 	display_name = "Cyborg Storage"
+	msg = "has been activated from storage" // Outpost 21 edit - wording
+	allowed_mob_types = JOB_SILICON // Outpost 21 edit - restrictions fixed
 
 /datum/spawnpoint/cyborg/New()
 	..()
