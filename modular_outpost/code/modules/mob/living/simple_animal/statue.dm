@@ -205,7 +205,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	threaten = FALSE
 	mauling = TRUE
 
-	use_astar = FALSE // Temporary until unbroken
+	use_astar = TRUE
 	maximum_path_distance = 25
 	intelligence_level = AI_SMART
 
@@ -293,7 +293,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		if(show_messages)
 			to_chat(L, SPAN_OCCULT(pick("Your camera flickers.","Your video feed flashes to static.")))
 		spawn(5)
-			L.eye_blurry += 30
+			L.eye_blurry += 20
 			L.Life() // Hacky but gets instant feedback
 	else
 		if(show_messages)
