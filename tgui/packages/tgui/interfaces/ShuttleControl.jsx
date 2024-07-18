@@ -449,9 +449,11 @@ const ShuttleControlConsoleWeb = (props) => {
                     <LabeledList.Item label="Phoron">
                       {sensor.phoron}%
                     </LabeledList.Item>
+                    {/* Outpost 21 edit begin - Methane */}
                     <LabeledList.Item label="Methane">
                       {sensor.methane}%
                     </LabeledList.Item>
+                    {/* Outpost 21 edit end */}
                     {(sensor.other && (
                       <LabeledList.Item label="Other">
                         {sensor.other}%

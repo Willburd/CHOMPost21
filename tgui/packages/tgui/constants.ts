@@ -222,12 +222,14 @@ const GASES = [
     label: 'N₂O',
     color: 'red',
   },
+  /* Outpost 21 edit begin - Methane */
   {
     id: 'methane',
     name: 'Methane',
     label: 'CH₄',
     color: 'orange',
   },
+  /* Outpost 21 edit end */
   {
     id: 'other',
     name: 'Other',

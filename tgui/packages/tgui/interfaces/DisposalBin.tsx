@@ -17,10 +17,11 @@ export const DisposalBin = (props) => {
   const { mode, pressure, isAI, panel_open, flushing } = data;
   let stateColor;
   let stateText;
+  /* Outpost 21 edit begin - Interlock error disposals */
   if (mode === 3) {
     stateColor = 'bad';
     stateText = 'Interlock Error';
-  } else if (mode === 2) {
+  } else if (mode === 2) { /* Outpost 21 edit end */
     stateColor = 'good';
     stateText = 'Ready';
   } else if (mode <= 0) {
