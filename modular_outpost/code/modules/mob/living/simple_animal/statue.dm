@@ -142,6 +142,10 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	return cached_watcher.resolve()
 
 /mob/living/simple_mob/animal/statue/proc/update_watcher()
+	// Cleanup and startup
+	if(!isnull(cached_watcher))
+		qdel_null(cached_watcher)
+
 	// Mirrors
 	var/list/nearview = view(6, src)
 	for(var/obj/structure/mirror/M in nearview) //Weeping angels hate mirrors. Probably because they're ugly af
@@ -153,6 +157,12 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		if(F.on)
 			cached_watcher = WEAKREF(F) //handle LAMPS
 			return
+
+	for(var/obj/machinery/floodlight/F in nearview) //floodlights
+		if(F.on)
+			cached_watcher = WEAKREF(F) //handle floodlights
+			return
+
 
 	// loop for viewers. This is kinda terrible and needs to be optimizied further.
 	var/list/mainview = viewers(view_range, src) - src
@@ -234,10 +244,17 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 					lose_target() // stops target lockups
 				else if(prob(30 + annoyance) && istype(watching,/obj/item/device/flashlight))
 					var/obj/item/device/flashlight/F = watching
-					F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
-					playsound(F, 'sound/effects/sparks3.ogg', 10, 1, -3) //Small cue that your light went dull in your pocket. //VOREStation Edit
-					F.on = 0
-					F.update_brightness()
+					if(F.on)
+						F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
+						playsound(F, 'sound/effects/sparks3.ogg', 10, 1, -3) //Small cue that your light went dull in your pocket. //VOREStation Edit
+						F.on = 0
+						F.update_brightness()
+					lose_target() // stops target lockups
+				else if(prob(30 + annoyance) && istype(watching,/obj/item/device/flashlight))
+					var/obj/machinery/floodlight/F = watching
+					if(F.on)
+						F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
+						F.turn_off(1)
 					lose_target() // stops target lockups
 				else if(prob(30) && T.get_lumcount() > 0.1)
 					ability_flash()
