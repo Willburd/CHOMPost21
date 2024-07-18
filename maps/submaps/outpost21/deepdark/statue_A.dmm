@@ -1,0 +1,251 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/obj/structure/prop/statue/angel{
+	icon = 'icons/obj/statue_ch.dmi';
+	icon_state = "Angel_Female_ch";
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/obj/structure/prop/statue/angel,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/structure/prop/statue/angel{
+	icon = 'icons/obj/statue_ch.dmi';
+	icon_state = "Angel_Female_ch";
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/obj/structure/prop/statue/angel{
+	icon = 'icons/obj/statue_ch.dmi';
+	icon_state = "Angel_Female_ch";
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"E" = (
+/obj/structure/prop/statue/angel{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/obj/structure/prop/statue/angel{
+	icon = 'icons/obj/statue_ch.dmi';
+	icon_state = "Angel_Female_ch"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"I" = (
+/obj/structure/prop/statue,
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/turf/template_noop,
+/area/template_noop)
+"T" = (
+/mob/living/simple_mob/animal/statue,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/structure/prop/statue/angel{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+"}
+(2,1,1) = {"
+P
+a
+a
+a
+a
+a
+J
+J
+J
+a
+a
+P
+"}
+(3,1,1) = {"
+P
+a
+a
+J
+J
+J
+J
+V
+J
+J
+a
+P
+"}
+(4,1,1) = {"
+P
+a
+a
+J
+G
+J
+V
+J
+p
+J
+a
+P
+"}
+(5,1,1) = {"
+P
+a
+J
+J
+J
+V
+I
+J
+V
+J
+J
+P
+"}
+(6,1,1) = {"
+P
+a
+J
+E
+J
+V
+V
+V
+J
+V
+J
+P
+"}
+(7,1,1) = {"
+P
+a
+J
+J
+V
+V
+f
+V
+V
+o
+a
+P
+"}
+(8,1,1) = {"
+P
+a
+J
+J
+T
+V
+U
+V
+V
+J
+a
+P
+"}
+(9,1,1) = {"
+P
+a
+J
+J
+V
+J
+J
+V
+J
+V
+a
+P
+"}
+(10,1,1) = {"
+P
+a
+a
+J
+d
+J
+V
+J
+A
+a
+a
+P
+"}
+(11,1,1) = {"
+P
+a
+a
+a
+J
+J
+J
+J
+a
+a
+a
+P
+"}
+(12,1,1) = {"
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+P
+"}

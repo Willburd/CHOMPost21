@@ -24,6 +24,7 @@
 #include "redspace_A.dmm"
 #include "redspace_B.dmm"
 #include "redspace_C.dmm"
+#include "statue_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -91,7 +92,7 @@
 	desc = "flesh varient."
 	mappath = 'maps/submaps/outpost21/deepdark/flesh_A.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 40
+	discard_prob = 60
 	cost = 25
 
 /datum/map_template/outpost21/muriki/caves_deepdark/flesh_B
@@ -99,7 +100,7 @@
 	desc = "flesh varient."
 	mappath = 'maps/submaps/outpost21/deepdark/flesh_B.dmm'
 	allow_duplicates = TRUE
-	discard_prob = 40
+	discard_prob = 60
 	cost = 25
 
 /datum/map_template/outpost21/muriki/caves_deepdark/den_A
@@ -231,6 +232,15 @@
 	allow_duplicates = FALSE
 	discard_prob = 50
 	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/statue_A
+	name = "statue A"
+	desc = "Random statue."
+	mappath = 'maps/submaps/outpost21/deepdark/statue_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 85
+	cost = 30
+
 
 //////////////////////////////////////////////////////////////
 // Area definitions
