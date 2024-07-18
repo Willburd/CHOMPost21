@@ -550,15 +550,18 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		"belly_rub_target" = host.belly_rub_target,
 		"vore_sprite_color" = host.vore_sprite_color,
 		"vore_sprite_multiply" = host.vore_sprite_multiply,
+		/* Outpost 21 edit - Nif removal
 		//Soulcatcher
 		"soulcatcher_allow_capture" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE,
 		"soulcatcher_allow_transfer" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER,
 		"soulcatcher_allow_deletion" = (global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION_INSTANT))
 		//CHOMPEdit end
+		*/
 	)
 	//CHOMPAdd Start, Soulcatcher
-	var/list/stored_souls = list()
+	//var/list/stored_souls = list() // Outpost 21 edit - Nif removal
 	data["soulcatcher"] = null
+	/* // Outpost 21 edit - Nif removal
 	if(host.soulgem)
 		data["soulcatcher"] = list()
 		for(var/soul in host.soulgem.brainmobs)
@@ -577,6 +580,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 		data["soulcatcher"]["mind_backups"] = host.soulgem.flag_check(NIF_SC_BACKUPS)
 		data["soulcatcher"]["ar_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
 		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
+	*/
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host
@@ -2148,6 +2152,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.client.prefs_vr.no_latejoin_prey_warning_persists = host.no_latejoin_prey_warning_persists
 			unsaved_changes = TRUE
 			return TRUE
+		/*  // Outpost 21 edit - Nif removal
 		//Soulcatcher prefs
 		if("toggle_soulcatcher_allow_capture")
 			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_CAPTURE
@@ -2171,6 +2176,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_DELETION_INSTANT
 			unsaved_changes = TRUE
 			return TRUE
+		*/
 		if("adjust_own_size")
 			var/new_size = text2num(params["new_mob_size"])
 			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
@@ -2180,6 +2186,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					H.adjust_nutrition(-VORE_RESIZE_COST)
 					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
+		/* Outpost 21 edit - Nif removal
 		//Soulcatcher settings
 		if("soulcatcher_toggle")
 			host.soulgem.toggle_setting(SOULGEM_ACTIVE)
@@ -2296,6 +2303,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				host.soulgem.set_custom_message(message, "delete")
 			return TRUE
 		//CHOMPEdit end
+		*/
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
@@ -3772,10 +3780,12 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 				tgui_alert_async(user,failure_msg,"Error!")
 				return FALSE
 
+			/* Outpost 21 edit - Nif removal
 			//CHOMPAdd Start, Soulcatcher
 			if(host.soulgem?.linked_belly == host.vore_selected)
 				host.soulgem.linked_belly = null
 			//CHOMPAdd End, Soulcatcher
+			*/
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]

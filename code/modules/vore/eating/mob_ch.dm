@@ -30,4 +30,4 @@
 	var/updating_fullness = FALSE
 	var/obj/belly/previewing_belly
 
-	var/obj/soulgem/soulgem
+	// var/obj/soulgem/soulgem // Outpost 21 edit - Nif removal

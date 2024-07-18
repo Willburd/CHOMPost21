@@ -56,10 +56,12 @@
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
 	if(LAZYLEN(vore_organs))
+		/* // Outpost 21 edit - Nif removal
 		//CHOMPAdd Start
 		if(!soulgem)
 			soulgem = new(src)
 		//CHOMPAdd End
+		*/
 		return TRUE
 
 	//We'll load our client's organs if we have one
@@ -84,11 +86,13 @@
 			var/mob/living/carbon/human/H = src
 			if(istype(H.species,/datum/species/monkey))
 				allow_spontaneous_tf = TRUE
+		/* // Outpost 21 edit - Nif removal
 		//CHOMPAdd Start
 		if(!soulgem)
 			soulgem = new(src)
 		return TRUE
 		//CHOMPAdd End
+		*/
 
 //
 // Hide vore organs in contents
@@ -298,7 +302,7 @@
 
 	P.belly_prefs = serialized
 
-	P.soulcatcher_prefs = src.soulgem.serialize() // CHOMPAdd
+	// P.soulcatcher_prefs = src.soulgem.serialize() // CHOMPAdd // Outpost 21 edit - Nif removal
 	return TRUE
 
 //
@@ -373,6 +377,7 @@
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 
+	/* Outpost 21 edit - Nif removal
 	if(soulgem)
 		src.soulgem.release_mobs()
 		QDEL_NULL(soulgem)
@@ -380,6 +385,7 @@
 		soulgem = list_to_object(P.soulcatcher_prefs, src)
 	else
 		soulgem = new(src)
+	*/
 
 	return TRUE
 

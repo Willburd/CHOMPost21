@@ -6,7 +6,7 @@ import { Window } from '../../../layouts';
 import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
-import { VoreSoulcatcher } from './VoreSoulcatcher';
+{/* import { VoreSoulcatcher } from './VoreSoulcatcher'; // Outpost 21 edit - Nif removal */}
 import { VoreUserPreferences } from './VoreUserPreferences';
 
 /**
@@ -174,10 +174,13 @@ export const VorePanel = () => {
       icon_overflow={icon_overflow}
     />
   );
+  {/* Outpost 21 edit begin - Nife removal
   tabs[1] = (
     <VoreSoulcatcher our_bellies={our_bellies} soulcatcher={soulcatcher} />
   );
   tabs[2] = (
+  */}
+  tabs[1] = (
     <VoreUserPreferences
       prefs={prefs}
       selected={selected}
@@ -223,11 +226,14 @@ export const VorePanel = () => {
             Bellies
             <Icon name="list" ml={0.5} />
           </Tabs.Tab>
+          {/* Outpost 21 edit begin - Nife removal
           <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
             Soulcatcher
             <Icon name="ghost" ml={0.5} />
           </Tabs.Tab>
           <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(2)}>
+          Outpost 21 edit end */}
+          <Tabs.Tab selected={tabIndex === 2} onClick={() => setTabIndex(1)}>
             Preferences
             <Icon name="user-cog" ml={0.5} />
           </Tabs.Tab>

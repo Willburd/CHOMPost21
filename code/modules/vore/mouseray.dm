@@ -113,7 +113,7 @@
 				M.vore_organs -= B
 				ourmob.vore_organs += B
 			ourmob.nutrition = M.nutrition
-			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 		ourmob.ckey = M.ckey
 
@@ -178,7 +178,7 @@
 				M.vore_organs -= B
 				new_mob.vore_organs += B
 			new_mob.nutrition = M.nutrition //CHOMPAdd
-			M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
+			// M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)
@@ -222,7 +222,7 @@
 			vore_organs -= B
 			ourmob.vore_organs += B
 		ourmob.nutrition = nutrition
-		soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+		// soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 	ourmob.ckey = ckey
 	ourmob.Life(1)
@@ -379,7 +379,7 @@
 				M.vore_organs -= B
 				ourmob.vore_organs += B
 			ourmob.nutrition = M.nutrition
-			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)

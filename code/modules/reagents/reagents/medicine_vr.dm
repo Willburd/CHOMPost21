@@ -233,7 +233,7 @@
 			M.vore_organs -= B
 			ourmob.vore_organs += B
 
-		M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
+		// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 		ourmob.Life(1)
 		if(ishuman(M))
@@ -294,7 +294,7 @@
 				M.vore_organs -= B
 				new_mob.vore_organs += B
 
-			M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher
+			// M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 			new_mob.ckey = M.ckey
 			if(M.ai_holder && new_mob.ai_holder)

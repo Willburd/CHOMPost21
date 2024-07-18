@@ -8,7 +8,7 @@ import {
   VoreUserPreferencesAesthetic,
   VoreUserPreferencesDevouring,
   VoreUserPreferencesMechanical,
-  VoreUserPreferencesSoulcatcher,
+  /*VoreUserPreferencesSoulcatcher, // Outpost 21 edit - Nif removal */
   VoreUserPreferencesSpawn,
   VoreUserPreferencesSpontaneous,
 } from './VoreUserPreferencesTabs';
@@ -694,10 +694,12 @@ export const VoreUserPreferences = (props: {
         can_be_drop_pred={can_be_drop_pred}
         preferences={preferences}
       />
+      {/* // Outpost 21 edit - Nif removal
       <VoreUserPreferencesSoulcatcher
         soulcatcher_allow_capture={soulcatcher_allow_capture}
         preferences={preferences}
       />
+      */}
       <VoreUserPreferencesSpawn
         latejoin_vore={latejoin_vore}
         no_spawnpred_warning_time={no_spawnpred_warning_time}
