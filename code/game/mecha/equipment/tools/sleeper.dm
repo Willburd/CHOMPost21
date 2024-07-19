@@ -197,6 +197,12 @@
 		return 1
 	return
 
+// Outpost 21 edit begin - Container resisting from in a mecha compartment, because verb menu is temporarily broken...
+/obj/item/mecha_parts/mecha_equipment/tool/sleeper/container_resist(var/mob/living)
+	if(occupant == living)
+		eject()
+// Outpost 21 edit end
+
 /obj/item/mecha_parts/mecha_equipment/tool/sleeper/verb/eject()
 	set name = "Sleeper Eject"
 	set category = "Exosuit Interface"
