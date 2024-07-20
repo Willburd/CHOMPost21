@@ -2201,6 +2201,14 @@
 	dynamic_lighting = 1
 	requires_power = TRUE
 
+/area/virtual_reality/spacesim // acts like space with lights
+	dynamic_lighting = 1
+	always_unpowered = TRUE
+	requires_power = FALSE
+
+/area/virtual_reality/spacesim/has_gravity()
+	return 0
+
 /area/specialty/hell
 	name = "\improper Unknown"
 	base_turf = /turf/simulated/floor/lava
