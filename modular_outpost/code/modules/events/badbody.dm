@@ -37,7 +37,7 @@
 
 	var/bodies = 1
 	if(in_morgue)
-		bodies = rand(1,5)
+		bodies = rand(1,6)
 		if(bodies > spawn_locations.len)
 			bodies = spawn_locations.len
 	var/list/client_list = GLOB.clients.Copy()
@@ -60,7 +60,8 @@
 				spawn_locations.Remove(spot)
 				var/obj/structure/morgue/M = spot
 				M.update()
-			break
+			if(bodies <= 0)
+				break
 
 	if(bodies > 0)
 		log_debug("Badbody failed to spawn successful body.")
