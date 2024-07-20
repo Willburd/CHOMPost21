@@ -1,7 +1,7 @@
 /obj/item/device/encryptionkey/heads/hop
 	name = "head of personnel's encryption key"
 	icon_state = "hop_cypherkey"
-	channels = list("Supply" = 1, "Service" = 1, "Command" = 1, "Security" = 1) //YW Edit: removes Explorer channel access, not in line with our chain of command. CHOMP: We accept this
+	channels = list("Supply" = 1, "Service" = 1, "Command" = 1, "Security" = 1, "Explorer" = 1) //YW Edit: removes Explorer channel access, not in line with our chain of command. CHOMP: We accept this // Outpost 21 edit - Allow exploration meetups on radio
 
 /obj/item/device/encryptionkey/heads/ai_integrated
 	name = "ai integrated encryption key"
@@ -12,7 +12,7 @@
 /obj/item/device/encryptionkey/heads/captain
 	name = "site manager's encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Away Team" = 1)
+	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "Away Team" = 1, "Explorer" = 1) // Outpost 21 edit - Allow exploration meetups on radio
 
 /obj/item/device/encryptionkey/heads/rd
 	name = "research director's encryption key"
