@@ -6,7 +6,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ay" = (
 /turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
@@ -19,36 +19,36 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "bk" = (
 /turf/simulated/wall/r_wall,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "bo" = (
 /obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "bR" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
 /obj/item/device/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "bX" = (
 /obj/effect/landmark{
 	name = "badbody"
 	},
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ce" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "cs" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/airlock/glass_engineering{
@@ -56,21 +56,21 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "cy" = (
 /obj/structure/sign/nosmoking_2,
 /turf/simulated/wall,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "cB" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "dv" = (
 /obj/structure/window/reinforced,
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "dB" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -86,12 +86,12 @@
 	},
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "dX" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "eX" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -99,44 +99,44 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "fB" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ga" = (
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "hr" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "hB" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/basic/full,
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "hF" = (
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "hN" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
 	},
 /obj/effect/landmark/redspacemonsterspawn,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "hS" = (
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "im" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
@@ -145,22 +145,22 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "is" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "iC" = (
 /turf/simulated/mineral/alt/ignore_mapgen,
 /area/mine/explored/muriki/cave/deepdark)
 "jb" = (
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "jl" = (
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "kH" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -170,7 +170,7 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "lf" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -180,7 +180,7 @@
 	},
 /obj/structure/closet,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "lk" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
@@ -188,14 +188,14 @@
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ll" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/basic/full,
 /obj/structure/sign/department/ass,
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "lK" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -210,7 +210,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "lO" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/window/reinforced,
@@ -225,13 +225,13 @@
 	},
 /obj/structure/grille,
 /turf/simulated/floor,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "lS" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/item/device/gps/engineering,
 /obj/item/device/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "lW" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -240,25 +240,25 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "mm" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "mT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/landmark/redspacemonsterspawn,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "mU" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
 /obj/machinery/elevator_warning,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "nQ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
@@ -266,17 +266,17 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "oe" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /obj/effect/floor_decal/milspec/color/orange/half,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "oH" = (
 /obj/item/device/assembly/mousetrap/armed,
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "oK" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/material/glass{
@@ -301,7 +301,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "oV" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/device/radio/intercom{
@@ -312,54 +312,57 @@
 /obj/item/device/gps/engineering,
 /obj/item/device/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "pj" = (
 /obj/structure/salvageable/autolathe,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "pm" = (
 /obj/item/device/geiger/wall/south,
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "py" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "pG" = (
 /obj/machinery/vending/engineering,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
+"qv" = (
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
 "qD" = (
 /obj/effect/floor_decal/corner/orange,
 /obj/effect/landmark{
 	name = "badbody"
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "qI" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/bed/chair/sofa/bench/left,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "qM" = (
 /obj/structure/grille,
 /obj/structure/window/basic/full,
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "qV" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "rr" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/item/device/gps/engineering,
@@ -370,21 +373,21 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "rw" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
 /obj/structure/salvageable/console,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "sw" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "sI" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/orange{
@@ -392,7 +395,7 @@
 	},
 /obj/item/weapon/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "sU" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -402,7 +405,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ta" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/storage/firstaid/regular,
@@ -411,11 +414,11 @@
 	},
 /obj/random/medical/lite,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "to" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "tt" = (
 /obj/machinery/door/blast/gate/open{
 	dir = 2;
@@ -426,14 +429,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "tO" = (
 /obj/machinery/floodlight,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "tQ" = (
 /obj/structure/grille,
 /obj/structure/window/basic/full,
@@ -443,7 +446,7 @@
 	name = "Engineering Lockdown"
 	},
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ui" = (
 /obj/structure/table/reinforced,
 /obj/item/device/radio/off{
@@ -463,18 +466,18 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "uj" = (
 /obj/machinery/vending/assist,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "us" = (
 /obj/structure/closet,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ut" = (
 /obj/machinery/vending/tool,
 /obj/effect/floor_decal/milspec/color/orange/half{
@@ -484,23 +487,23 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "uD" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "uZ" = (
 /obj/item/taperoll/engineering,
 /obj/item/taperoll/engineering,
 /obj/item/taperoll/engineering,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "vR" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "yf" = (
 /obj/machinery/door/blast/gate/open{
 	dir = 8;
@@ -508,20 +511,20 @@
 	name = "Engineering Lockdown"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "yg" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/landmark{
 	name = "badbody"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "yx" = (
 /obj/structure/bed/chair/sofa/bench,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "yV" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/borderfloor{
@@ -531,28 +534,31 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
+"zx" = (
+/turf/simulated/flesh,
+/area/submap/outpost21/cave_red_A)
 "zC" = (
 /obj/structure/sign/directions/evac,
 /obj/structure/sign/directions/tram{
 	pixel_y = -6
 	},
 /turf/simulated/wall,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "zY" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Ag" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/device/gps/engineering,
 /obj/item/device/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "AJ" = (
 /obj/item/device/geiger/wall/north,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "AS" = (
 /obj/machinery/door/airlock{
 	id_tag = "eng_lobby_latrine";
@@ -560,20 +566,23 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "AX" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/bed/chair/sofa/bench/right,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
+"Be" = (
+/turf/simulated/mineral/alt/ignore_mapgen,
+/area/submap/outpost21/cave_red_A)
 "Bj" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "BS" = (
 /obj/structure/table/standard,
 /obj/structure/bedsheetbin,
@@ -588,7 +597,7 @@
 /obj/item/weapon/towel/random,
 /obj/item/weapon/towel/random,
 /turf/simulated/floor/tiled/kafel_full,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "BU" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -598,14 +607,14 @@
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Cw" = (
 /obj/structure/reagent_dispensers/fueltank/high,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "CH" = (
 /obj/item/weapon/hand_labeler,
 /obj/item/weapon/tape_roll,
@@ -616,13 +625,13 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Dc" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Df" = (
 /obj/structure/reagent_dispensers/foam,
 /obj/effect/floor_decal/milspec/color/orange/half,
@@ -630,7 +639,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Di" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -645,7 +654,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Du" = (
 /turf/template_noop,
 /area/template_noop)
@@ -658,18 +667,18 @@
 	pixel_y = -21
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "DL" = (
 /obj/effect/landmark/redspacemonsterspawn,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "DN" = (
 /obj/item/device/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "DQ" = (
 /obj/item/device/geiger/wall/north,
 /obj/effect/floor_decal/borderfloor{
@@ -682,7 +691,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "DW" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -691,7 +700,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
+"EM" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/cave_red_A)
 "EO" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/corner/orange/full{
@@ -702,16 +715,16 @@
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Fg" = (
 /turf/simulated/wall,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Fh" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "FM" = (
 /obj/structure/table/reinforced,
 /obj/machinery/doorbell_chime{
@@ -723,31 +736,31 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "FS" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "GC" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "GL" = (
 /obj/structure/sign/department/eng{
 	pixel_x = 5
 	},
 /turf/simulated/wall/r_wall,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "GN" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "GT" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/corner/orange{
@@ -755,11 +768,11 @@
 	},
 /obj/machinery/disposal,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Ha" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "HL" = (
 /obj/structure/grille,
 /obj/structure/window/basic/full,
@@ -769,7 +782,7 @@
 	name = "Engineering Lockdown"
 	},
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "HR" = (
 /obj/structure/closet/secure_closet/engineering_personal,
 /obj/machinery/light{
@@ -778,7 +791,7 @@
 /obj/item/device/gps/engineering,
 /obj/item/device/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "IH" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -789,14 +802,14 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "IV" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/steel_grid,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Jf" = (
 /obj/machinery/door/blast/gate/open{
 	dir = 2;
@@ -812,17 +825,17 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Jh" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Jk" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/yellow,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "JH" = (
 /obj/machinery/door/flesh,
 /turf/simulated/floor/tiled/techmaint,
@@ -832,27 +845,27 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Kg" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Kw" = (
 /obj/effect/floor_decal/corner/orange/full,
 /obj/structure/salvageable/console{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "KZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "LM" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -861,7 +874,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "LQ" = (
 /obj/random/tech_supply,
 /obj/random/tech_supply,
@@ -874,19 +887,19 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "LX" = (
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Mf" = (
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ME" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "MI" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -895,11 +908,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "MX" = (
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Nd" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
@@ -907,10 +920,10 @@
 	name = "badbody"
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Nz" = (
 /turf/simulated/floor/tiled/kafel_full,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "NY" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/material/plastic{
@@ -929,7 +942,7 @@
 	amount = 10
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Oi" = (
 /turf/simulated/floor/flesh,
 /area/mine/explored/muriki/cave/deepdark)
@@ -945,39 +958,39 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "OS" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Pi" = (
 /obj/structure/bed/chair/office/dark,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "PQ" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Qb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Qk" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
 /obj/structure/salvageable/console,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Qn" = (
 /obj/structure/sign/department/atmos,
 /turf/simulated/wall,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Qr" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -985,14 +998,14 @@
 	},
 /obj/structure/closet,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Re" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Latrine"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "RD" = (
 /obj/machinery/door/window/westleft{
 	dir = 4;
@@ -1006,7 +1019,7 @@
 	name = "Engineering Lockdown"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Sb" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -1016,7 +1029,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Tz" = (
 /obj/structure/urinal{
 	pixel_y = 32
@@ -1028,7 +1041,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Ws" = (
 /turf/simulated/flesh,
 /area/mine/explored/muriki/cave/deepdark)
@@ -1037,7 +1050,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "WM" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/paper_bin,
@@ -1050,14 +1063,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Xq" = (
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/kafel_full,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Xs" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -1066,26 +1079,26 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "XP" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "XR" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 5
 	},
 /obj/machinery/partslathe,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "XX" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Yc" = (
 /obj/structure/table/reinforced,
 /obj/item/stack/material/steel{
@@ -1104,7 +1117,7 @@
 	amount = 50
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Ye" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger{
@@ -1119,7 +1132,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Yp" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -1134,7 +1147,7 @@
 	},
 /obj/structure/salvageable/console,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "YB" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -1146,12 +1159,12 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "YV" = (
 /obj/structure/railing,
 /obj/structure/catwalk,
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Zk" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -1160,18 +1173,18 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "Zn" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ZJ" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ZN" = (
 /obj/machinery/door/blast/gate/open{
 	dir = 8;
@@ -1179,7 +1192,7 @@
 	name = "Engineering Lockdown"
 	},
 /turf/simulated/floor/flesh,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 "ZO" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
@@ -1200,7 +1213,7 @@
 	},
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/milspec,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/cave_red_A)
 
 (1,1,1) = {"
 Du
@@ -1373,21 +1386,21 @@ ZN
 yf
 Fg
 Fg
-Oi
-Oi
-Oi
+qv
+qv
+qv
 bk
 bk
 bk
-iC
-iC
+Be
+Be
 bk
 Fg
 AS
 Fg
 Fg
 dB
-Ws
+zx
 Ws
 iC
 ay
@@ -1419,7 +1432,7 @@ jb
 Kw
 tQ
 Xs
-Oi
+qv
 Oi
 iC
 iC
@@ -1497,7 +1510,7 @@ ay
 iC
 iC
 Ws
-Ws
+zx
 Sb
 Fg
 Jh
@@ -1507,8 +1520,8 @@ bo
 Qr
 lf
 yg
-Oi
-Ws
+qv
+zx
 qV
 jb
 zY
@@ -1529,7 +1542,7 @@ ay
 iC
 iC
 Ws
-Ws
+zx
 KZ
 Fg
 tO
@@ -1689,7 +1702,7 @@ iC
 iC
 Oi
 Oi
-Oi
+qv
 hN
 aJ
 XX
@@ -1852,8 +1865,8 @@ iC
 hS
 KZ
 hr
-Oi
-Oi
+qv
+qv
 Fg
 AJ
 Jk
@@ -1864,7 +1877,7 @@ MX
 jl
 bk
 sU
-Oi
+qv
 hS
 to
 vR
@@ -1881,11 +1894,11 @@ ay
 ay
 iC
 Oi
-Oi
+qv
 KZ
 hr
-Oi
-Oi
+qv
+qv
 Fg
 Ag
 Ag
@@ -1895,9 +1908,9 @@ us
 jl
 ta
 bk
-Oi
-Oi
-Oi
+qv
+qv
+qv
 hS
 LM
 iC
@@ -1913,7 +1926,7 @@ ay
 ay
 iC
 iC
-Oi
+qv
 FS
 Fg
 Fg
@@ -1927,8 +1940,8 @@ Fg
 Re
 Fg
 bk
-Oi
-Oi
+qv
+qv
 bX
 hS
 dX
@@ -1945,23 +1958,23 @@ ay
 ay
 iC
 iC
-iC
-Oi
-JH
+Be
+qv
+EM
 YV
 oH
 Fg
 Tz
 ga
 Xq
-iC
-iC
+Be
+Be
 Nz
 BS
-Ws
-Oi
-Oi
-Oi
+zx
+qv
+qv
+qv
 uD
 Dc
 Oi

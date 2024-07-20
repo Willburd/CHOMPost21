@@ -21,10 +21,12 @@
 #include "honk_A.dmm"
 #include "spider_A.dmm"
 #include "liminal_A.dmm"
+#include "liminal_B.dmm"
 #include "redspace_A.dmm"
 #include "redspace_B.dmm"
 #include "redspace_C.dmm"
 #include "statue_A.dmm"
+#include "hole_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -209,6 +211,14 @@
 	discard_prob = 20
 	cost = 30
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_B
+	name = "Liminal B"
+	desc = "Random liminal space."
+	mappath = 'maps/submaps/outpost21/deepdark/liminal_B.dmm'
+	allow_duplicates = FALSE // DO NOT SPAWN TWICE, has a controller effect for the area...
+	discard_prob = 20
+	cost = 30
+
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_A
 	name = "Red A"
 	desc = "Random redspace leak."
@@ -241,6 +251,14 @@
 	discard_prob = 85
 	cost = 30
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/hole_A
+	name = "hole A"
+	desc = "Random hole."
+	mappath = 'maps/submaps/outpost21/deepdark/hole_A.dmm'
+	allow_duplicates = FALSE
+	discard_prob = 75
+	cost = 30
+
 
 //////////////////////////////////////////////////////////////
 // Area definitions
@@ -248,6 +266,45 @@
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
 	icon_state = "red2"
+	secret_name = FALSE
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
+	ambience = AMBIENCE_OTHERWORLDLY
+	base_turf = /turf/simulated/mineral/floor/muriki
+
+/area/submap/outpost21/cave_liminal_B
+	name = "\improper GET OUT"
+	var/show_name = "GET OUT" // replaces name
+	icon_state = "red2"
+	secret_name = FALSE
+	always_unpowered = FALSE
+	requires_power = FALSE
+	sound_env = SOUND_ENVIRONMENT_AUDITORIUM
+	ambience = AMBIENCE_MAINTENANCE
+	base_turf = /turf/simulated/mineral/floor/muriki
+
+/area/submap/outpost21/cave_liminal_B/get_name()
+	return show_name
+
+/area/submap/outpost21/cave_red_A
+	name = "\improper Our Pulsing Mass"
+	icon_state = "red2"
+	secret_name = FALSE
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	ambience = AMBIENCE_OTHERWORLDLY
+	base_turf = /turf/simulated/mineral/floor/muriki
+
+/area/submap/outpost21/cave_red_B
+	name = "\improper Inside Us"
+	secret_name = FALSE
+	icon_state = "red2"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	ambience = AMBIENCE_OTHERWORLDLY
+	base_turf = /turf/simulated/mineral/floor/muriki
+
+/area/submap/outpost21/cave_red_C
+	name = "\improper Touch Our Skin"
+	icon_state = "red2"
+	secret_name = FALSE
+	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki

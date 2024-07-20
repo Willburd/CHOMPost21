@@ -1,0 +1,1015 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aE" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"di" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/weapon/material/knife/butch,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"dY" = (
+/turf/simulated/wall/wood,
+/area/submap/outpost21/cave_liminal_B)
+"eZ" = (
+/obj/structure/coatrack,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"fL" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"hv" = (
+/obj/structure/fence/wood{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ih" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"iu" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"kb" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"lC" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/table/woodentable,
+/obj/structure/sink/countertop{
+	dir = 8;
+	pixel_x = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"mQ" = (
+/obj/item/device/flashlight/lamp/green{
+	pixel_y = 14
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/outpost21/cave_liminal_B)
+"nD" = (
+/obj/structure/fence/wood/corner,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"oq" = (
+/obj/item/device/flashlight/lamp/green{
+	pixel_y = 14
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"oA" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/effect/map_effect/interval/liminal_B_controller,
+/obj/structure/bed/bath,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"sn" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/cave_liminal_B)
+"tH" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/orangedouble,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/outpost21/cave_liminal_B)
+"uh" = (
+/obj/structure/fence/wood{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"uv" = (
+/obj/structure/table/wooden_reinforced,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"vs" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"wt" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"wL" = (
+/obj/machinery/computer/security/wooden_tv,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"wN" = (
+/obj/structure/window/basic/full,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/cave_liminal_B)
+"wW" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Aw" = (
+/obj/item/trash/plate{
+	pixel_x = -5
+	},
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/outpost21/cave_liminal_B)
+"Cv" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"CK" = (
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Du" = (
+/obj/structure/fence/wood/end{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Gw" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/machinery/appliance/cooker/oven/yeoldoven,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"GC" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Hw" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"HV" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/outpost21/cave_liminal_B)
+"HW" = (
+/obj/structure/table/rack/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"It" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"IC" = (
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"JF" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Lw" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Nb" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"NP" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"NW" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"OZ" = (
+/obj/structure/table/rack/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Pt" = (
+/obj/machinery/light/small,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Qy" = (
+/turf/template_noop,
+/area/template_noop)
+"QZ" = (
+/obj/structure/bed/chair/oldsofa/right{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Rw" = (
+/turf/simulated/floor/carpet/tealcarpet,
+/area/submap/outpost21/cave_liminal_B)
+"Sj" = (
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ts" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"TN" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"TS" = (
+/obj/structure/toilet/wooden,
+/obj/effect/floor_decal/spline/fancy/wood/three_quarters,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Uz" = (
+/obj/structure/bed/chair/oldsofa{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"UT" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/outpost21/cave_liminal_B)
+"Xh" = (
+/obj/item/device/flashlight/lamp/green{
+	pixel_y = 14
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"XH" = (
+/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/carpet/purcarpet,
+/area/submap/outpost21/cave_liminal_B)
+"YX" = (
+/obj/structure/table/wooden_reinforced,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"ZP" = (
+/obj/structure/bed/chair/oldsofa/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+
+(1,1,1) = {"
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+"}
+(2,1,1) = {"
+Qy
+vs
+vs
+vs
+vs
+vs
+vs
+IC
+IC
+IC
+vs
+vs
+IC
+IC
+vs
+IC
+IC
+IC
+IC
+vs
+vs
+vs
+vs
+vs
+Qy
+"}
+(3,1,1) = {"
+Qy
+vs
+vs
+vs
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+vs
+vs
+vs
+vs
+Qy
+"}
+(4,1,1) = {"
+Qy
+vs
+vs
+IC
+IC
+IC
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+IC
+IC
+IC
+IC
+IC
+vs
+Qy
+"}
+(5,1,1) = {"
+Qy
+vs
+vs
+vs
+Sj
+Sj
+Du
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+hv
+nD
+Sj
+Sj
+IC
+vs
+Qy
+"}
+(6,1,1) = {"
+Qy
+vs
+vs
+IC
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+uh
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(7,1,1) = {"
+Qy
+vs
+vs
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+dY
+dY
+dY
+dY
+dY
+dY
+Sj
+Sj
+Sj
+uh
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(8,1,1) = {"
+Qy
+vs
+vs
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+dY
+TS
+sn
+wt
+Hw
+wN
+Sj
+Sj
+Sj
+uh
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(9,1,1) = {"
+Qy
+vs
+Sj
+Sj
+Sj
+Sj
+dY
+dY
+dY
+dY
+dY
+dY
+dY
+NW
+TN
+dY
+Sj
+Sj
+Sj
+uh
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(10,1,1) = {"
+Qy
+IC
+Sj
+Sj
+Sj
+Sj
+dY
+OZ
+HW
+YX
+dY
+HV
+UT
+NW
+TN
+dY
+dY
+wN
+dY
+dY
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(11,1,1) = {"
+Qy
+IC
+Sj
+Sj
+Sj
+Sj
+sn
+It
+iu
+uv
+dY
+mQ
+tH
+It
+GC
+dY
+NP
+Xh
+Lw
+dY
+Sj
+Sj
+IC
+vs
+Qy
+"}
+(12,1,1) = {"
+Qy
+IC
+Sj
+Sj
+Sj
+Sj
+dY
+dY
+dY
+dY
+dY
+dY
+dY
+sn
+dY
+dY
+NW
+CK
+TN
+dY
+Sj
+Sj
+vs
+vs
+Qy
+"}
+(13,1,1) = {"
+Qy
+IC
+Sj
+Sj
+Sj
+Sj
+dY
+JF
+Nb
+wW
+Hw
+dY
+oA
+Nb
+Nb
+Nb
+Ts
+CK
+Pt
+dY
+Sj
+Sj
+vs
+vs
+Qy
+"}
+(14,1,1) = {"
+Qy
+vs
+Sj
+Sj
+Sj
+Sj
+dY
+wL
+Rw
+Rw
+TN
+dY
+NW
+UT
+UT
+UT
+UT
+CK
+TN
+sn
+Sj
+Sj
+vs
+vs
+Qy
+"}
+(15,1,1) = {"
+Qy
+vs
+Sj
+Sj
+Sj
+Sj
+dY
+NW
+Rw
+Rw
+TN
+sn
+NW
+HV
+Aw
+XH
+UT
+CK
+eZ
+dY
+Sj
+Sj
+IC
+vs
+Qy
+"}
+(16,1,1) = {"
+Qy
+vs
+Sj
+Sj
+Sj
+Sj
+dY
+oq
+Rw
+Rw
+ih
+dY
+NW
+UT
+UT
+UT
+UT
+iu
+aE
+dY
+Sj
+Sj
+Sj
+vs
+Qy
+"}
+(17,1,1) = {"
+Qy
+vs
+Sj
+Sj
+Sj
+Sj
+dY
+fL
+QZ
+Uz
+ZP
+dY
+Cv
+kb
+Gw
+lC
+di
+dY
+dY
+dY
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(18,1,1) = {"
+Qy
+IC
+Sj
+Sj
+Sj
+Sj
+dY
+dY
+wN
+wN
+dY
+dY
+dY
+dY
+dY
+wN
+wN
+dY
+Sj
+Sj
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(19,1,1) = {"
+Qy
+IC
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(20,1,1) = {"
+Qy
+IC
+IC
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(21,1,1) = {"
+Qy
+IC
+IC
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+IC
+Qy
+"}
+(22,1,1) = {"
+Qy
+vs
+vs
+IC
+IC
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+IC
+vs
+IC
+IC
+Sj
+Sj
+Sj
+Sj
+Sj
+Sj
+IC
+vs
+Qy
+"}
+(23,1,1) = {"
+Qy
+vs
+vs
+vs
+IC
+vs
+IC
+IC
+IC
+vs
+vs
+IC
+vs
+vs
+vs
+vs
+IC
+IC
+IC
+IC
+IC
+IC
+IC
+vs
+Qy
+"}
+(24,1,1) = {"
+Qy
+vs
+vs
+vs
+vs
+vs
+vs
+IC
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+vs
+Qy
+"}
+(25,1,1) = {"
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+Qy
+"}

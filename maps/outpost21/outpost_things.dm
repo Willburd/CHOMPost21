@@ -338,3 +338,32 @@
 	icon = 'icons/obj/stationobjs_op.dmi'
 	icon_state = "enzyme"
 	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
+
+
+// Submap things
+/obj/effect/map_effect/interval/liminal_B_controller
+	name = "liminal B controller"
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x2"
+	opacity = 0
+
+	always_run = TRUE
+	interval_lower_bound = 5 SECONDS
+	interval_upper_bound = 20 SECONDS
+
+/obj/effect/map_effect/interval/liminal_B_controller/trigger()
+	var/area/submap/outpost21/cave_liminal_B/A = get_area(src)
+	if(!istype(A,/area/submap/outpost21/cave_liminal_B))
+		return
+	// Do not edit name directly, it mulches the warp to area list
+	A.show_name = pick("GET OUT","I HATE YOU","GET OUT OF ME","I FEEL YOU INSIDE ME","GET OUT","IT HURTS","LEAVE LEAVE LEAVE LEAVE","GET OUT GET OUT GET OUT GET OUT")
+	if(prob(5))
+		var/list/mobs = locate(/mob/living) in range(10, get_turf(src))
+		if(mobs.len > 0)
+			var/mob/living/L = pick(mobs)
+			if(prob(10))
+				L.adjustOxyLoss(rand(23,37),TRUE)
+			else if(prob(50))
+				L.adjustBruteLoss(rand(3,7),TRUE)
+			else
+				L.adjustFireLoss(rand(3,7),TRUE)

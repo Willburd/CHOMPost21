@@ -300,9 +300,35 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal_shiny/ignore_mapgen)
 
 /turf/simulated/deathdrop/liminal
 	death_message = "You pass into the empty darkness ahead of you, and fall into another repeating room. There is no way back. You cease to exist in the world you once called home. Now there is only the same room, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over..."
-	// Make space, hide this behind a door for SUCC
-	oxygen = 0
-	nitrogen = 0
+
+/turf/simulated/deathdrop/liminal_home_pit
+	death_message = "The wind rushes past you as you fall into the darkness... Then you wake up."
+
+/turf/simulated/deathdrop/liminal_home_pit/Entered(atom/A)
+	spawn(0)
+		if(A.is_incorporeal())
+			return
+		if(istype( A, /atom/movable))
+			var/atom/movable/AM = A
+			if(!AM.can_fall()) // flying checks
+				return
+		if(ismob( A))
+			var/mob/M = A
+			var/list/redexitlist = list()
+			for(var/obj/effect/landmark/R in landmarks_list)
+				if(R.name == "redexit")
+					redexitlist += R
+
+			if(redexitlist.len > 0)
+				var/obj/effect/landmark/L = pick( redexitlist)
+				do_teleport(M, L.loc, 0,local = FALSE)
+				to_chat( A, "<span class='danger'>[death_message]</span>")
+				// passout on return to reality
+				if(ishuman(M))
+					var/mob/living/carbon/human/H = M
+					H.AdjustSleeping(15)
+					H.AdjustWeakened(3)
+					H.adjustHalLoss(-9)
 
 /turf/unsimulated/deathdrop/waterfall
 	death_message = "The increasing speed and current of the river swiftly drags you into the rapids, destoying any boat you had and cracking your body against the rocks. The harsh acids of the water then make short work at dissolving your corpse, lost to the river forever."
