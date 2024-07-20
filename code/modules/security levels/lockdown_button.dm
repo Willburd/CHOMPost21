@@ -73,11 +73,14 @@
 	user.set_machine(src)
 
 	var/dat = "<h1>Lockdown Control Console</h1>"
-	if(!unlocked && !isAI(user))
+	if(!unlocked && !isAI(user) && !issilicon(user))
 		dat += "Swipe ID card to unlock."
 		dat += "<br><hr><br>"
 	else
-		dat += "Swipe ID card to lock."
+		if(!isAI(user) && !issilicon(user))
+			dat += "Swipe ID card to lock."
+		else
+			dat += "AI ACCESS MODE."
 		dat += "<br><hr><br>"
 		dat += "Select an lockdown to trigger:<ul>"
 		for(var/link in linked_lockdowns)
@@ -88,14 +91,14 @@
 
 /obj/machinery/lockdown_console/Topic(href, href_list)
 	..()
-	if(!Adjacent(usr) && !isAI(usr))
+	if(!Adjacent(usr) && !isAI(usr) && !issilicon(usr))
 		return
 	if(usr.stat || stat & (BROKEN|NOPOWER))
 		to_chat(usr, "This device is without power.")
 		return
 
 	playsound(src, 'sound/machines/button.ogg', 100, 1)
-	if(!unlocked && !isAI(usr))
+	if(!unlocked && !isAI(usr) && !issilicon(usr))
 		to_chat(usr, "<span class='warning'>Access denied.</span>")
 		flick("lockdown_reject",src)
 		return
