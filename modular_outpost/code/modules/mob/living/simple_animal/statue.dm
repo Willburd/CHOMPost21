@@ -142,9 +142,8 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	return cached_watcher.resolve()
 
 /mob/living/simple_mob/animal/statue/proc/update_watcher()
-	// Cleanup and startup
-	if(!isnull(cached_watcher))
-		qdel_null(cached_watcher)
+	// Preclear
+	cached_watcher = null
 
 	// Mirrors
 	var/list/nearview = view(6, src)
@@ -152,17 +151,17 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		if((!M.shattered )||(!M.glass))
 			cached_watcher = WEAKREF(M) //if it sees the mirror, it sees itself, right?
 			return
-
-	for(var/obj/item/device/flashlight/F in nearview) //lamps
+ 	// lamps
+	for(var/obj/item/device/flashlight/F in nearview)
 		if(F.on)
-			cached_watcher = WEAKREF(F) //handle LAMPS
+			cached_watcher = WEAKREF(F)
 			return
 
-	for(var/obj/machinery/floodlight/F in nearview) //floodlights
+	// floodlights
+	for(var/obj/machinery/floodlight/F in nearview)
 		if(F.on)
-			cached_watcher = WEAKREF(F) //handle floodlights
+			cached_watcher = WEAKREF(F)
 			return
-
 
 	// loop for viewers. This is kinda terrible and needs to be optimizied further.
 	var/list/mainview = viewers(view_range, src) - src
@@ -185,9 +184,6 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 				bordom_reset(M.occupant.client)
 				cached_watcher = WEAKREF(M.occupant)
 				return
-
-	cached_watcher = null
-	return
 
 /mob/living/simple_mob/animal/statue/proc/bordom_reset(var/player)
 	if(player)
