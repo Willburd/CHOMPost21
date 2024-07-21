@@ -85,7 +85,7 @@
 		return
 
 	if((world.time - last_launch) <= launch_cooldown)
-		to_chat(user, "<span class='notice'>\The [src] is still re-priming for launch.</span>")
+		to_chat(user, "<span class='notice'>\The [src] is still re-priming for launch. Ready in [abs(launch_cooldown - (world.time - last_launch)) / (1 SECOND)] seconds.</span>")
 		return
 
 	if(!anchored)

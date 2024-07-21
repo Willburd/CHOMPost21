@@ -108,12 +108,17 @@ var/datum/planet/muriki/planet_muriki = null
 /datum/weather_holder/muriki
 	temperature = 293.15 // 20c
 	allowed_weather_types = list(
-		WEATHER_CLEAR	= new /datum/weather/muriki/clear(),
+		WEATHER_CLEAR		= new /datum/weather/muriki/clear(),
 		WEATHER_LIGHT_SNOW	= new /datum/weather/muriki/light_snow(),
+		WEATHER_SNOW		= new /datum/weather/muriki/light_snow(),
+		WEATHER_BLIZZARD	= new /datum/weather/muriki/light_snow(),
 		WEATHER_OVERCAST	= new /datum/weather/muriki/acid_overcast(),
+		WEATHER_FOG			= new /datum/weather/muriki/acid_overcast(),
 		WEATHER_RAIN        = new /datum/weather/muriki/acid_rain(),
 		WEATHER_STORM		= new /datum/weather/muriki/acid_storm(),
-		WEATHER_HAIL		= new /datum/weather/muriki/acid_hail()
+		WEATHER_HAIL		= new /datum/weather/muriki/acid_hail(),
+		WEATHER_FALLOUT_TEMP	= new /datum/weather/muriki/fallout/temp(),
+		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti()
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR = 0,
@@ -411,9 +416,34 @@ var/datum/planet/muriki/planet_muriki = null
 		"It begins to snow lightly.",
 		)
 
-
 /mob/living/
 	var/enzyme_affect = TRUE
+
+/datum/weather/muriki/fallout/temp //fixys firework stars
+	name = "short-term fallout"
+	timer_low_bound = 1
+	timer_high_bound = 3
+	transition_chances = list(
+		WEATHER_FALLOUT = 10,
+		WEATHER_RAIN = 50,
+		WEATHER_STORM = 20
+		)
+
+/datum/weather/muriki/confetti //fixys firework stars
+	name = "confetti"
+	icon_state = "confetti"
+
+	transition_chances = list(
+		WEATHER_RAIN = 50,
+		WEATHER_OVERCAST = 20,
+		WEATHER_CONFETTI = 5
+		)
+	observed_message = "Confetti is raining from the sky."
+	transition_messages = list(
+		"Suddenly, colorful confetti starts raining from the sky."
+	)
+	imminent_transition_message = "A rain is starting... A rain of confetti...?"
+
 
 
 /proc/muriki_enzyme_affect_mob( var/mob/living/L, var/multiplier, var/mist, var/submerged)
