@@ -21,6 +21,9 @@
 "eZ" = (
 /obj/structure/coatrack,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -32
+	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "fL" = (
@@ -28,6 +31,9 @@
 	dir = 5
 	},
 /obj/structure/table/wooden_reinforced,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "hv" = (
@@ -41,6 +47,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -32
+	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "iu" = (
@@ -54,6 +63,10 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "lC" = (
@@ -65,6 +78,7 @@
 	dir = 8;
 	pixel_x = 8
 	},
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "mQ" = (
@@ -94,6 +108,15 @@
 	},
 /obj/effect/map_effect/interval/liminal_B_controller,
 /obj/structure/bed/bath,
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"pd" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "sn" = (
@@ -135,6 +158,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "wN" = (
@@ -147,6 +173,15 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"yZ" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
 	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
@@ -163,6 +198,14 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "CK" = (
@@ -188,6 +231,16 @@
 /obj/structure/table/rack/shelf/wood,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"GD" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = -32
 	},
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
@@ -217,6 +270,10 @@
 "IC" = (
 /turf/simulated/mineral/floor/ignore_cavegen/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
+"IT" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 "JF" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
@@ -260,6 +317,13 @@
 /obj/machinery/light/small,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/alt,
+/area/submap/outpost21/cave_liminal_B)
+"Qm" = (
+/obj/structure/table/wooden_reinforced,
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/submap/outpost21/cave_liminal_B)
 "Qy" = (
 /turf/template_noop,
@@ -507,9 +571,9 @@ vs
 Sj
 Sj
 Sj
-Sj
-Sj
-Sj
+IT
+IT
+IT
 Sj
 dY
 dY
@@ -518,7 +582,7 @@ dY
 dY
 dY
 Sj
-Sj
+IT
 Sj
 uh
 Sj
@@ -545,7 +609,7 @@ wt
 Hw
 wN
 Sj
-Sj
+IT
 Sj
 uh
 Sj
@@ -569,7 +633,7 @@ dY
 dY
 dY
 NW
-TN
+GD
 dY
 Sj
 Sj
@@ -593,7 +657,7 @@ OZ
 HW
 YX
 dY
-HV
+Qm
 UT
 NW
 TN
@@ -654,7 +718,7 @@ dY
 dY
 NW
 CK
-TN
+GD
 dY
 Sj
 Sj
@@ -702,7 +766,7 @@ Rw
 Rw
 TN
 dY
-NW
+pd
 UT
 UT
 UT
@@ -761,7 +825,7 @@ UT
 UT
 UT
 UT
-iu
+yZ
 aE
 dY
 Sj
