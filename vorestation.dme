@@ -4465,6 +4465,7 @@
 #include "code\modules\surgery\organ_ripper_vr.dm"
 #include "code\modules\surgery\organs_internal.dm"
 #include "code\modules\surgery\other.dm"
+#include "code\modules\surgery\other_op.dm"
 #include "code\modules\surgery\robotics.dm"
 #include "code\modules\surgery\surgery.dm"
 #include "code\modules\surgery\~defines.dm"
