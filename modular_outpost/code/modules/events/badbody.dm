@@ -139,13 +139,13 @@
 	badbody.stat = DEAD
 	badbody.SetSpecialVoice("Unknown")
 	// Brainrot
-	var/obj/item/organ/internal/brain/B = badbody.organs_by_name[O_BRAIN]
+	var/obj/item/organ/internal/brain/B = badbody.internal_organs_by_name[O_BRAIN]
 	if(!isnull(B))
 		B.removed(null)
 		qdel(B)
 	// Damage organs
 	for(var/org in badbody.organs_by_name)
-		var/obj/item/organ/internal/O = badbody.organs_by_name[org]
+		var/obj/item/organ/internal/O = badbody.internal_organs_by_name[org]
 		if(istype(O,/obj/item/organ/internal))
 			if(prob(5))
 				O.removed(null)
