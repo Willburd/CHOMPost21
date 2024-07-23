@@ -262,6 +262,7 @@
 					prob(2);/obj/item/toy/tennis/red,
 					prob(2);/obj/item/toy/tennis/yellow,
 					prob(2);/obj/item/toy/tennis/green,
+					prob(2);/obj/item/clothing/head/fishing, // Outpost 21 edit - what have we brought upons ourselves
 					prob(2);/obj/item/toy/tennis/cyan,
 					prob(2);/obj/item/toy/tennis/blue,
 					prob(2);/obj/item/toy/tennis/purple,
