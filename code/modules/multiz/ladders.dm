@@ -41,6 +41,36 @@
 		return ..()
 
 /obj/structure/ladder/attackby(obj/item/C as obj, mob/user as mob)
+	// Outpost 21 edit begin - Deconstructing ladder
+	if(C.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weapon/weldingtool/WT = C.get_welder()
+		if(WT.remove_fuel(0, user))
+			playsound(src, 'sound/items/Welder2.ogg', 50, 1)
+			user.visible_message("\The [user] starts to deconstruct \the [src].", \
+				"You start to deconstruct \the [src].", \
+				"You hear welding")
+			if(do_after(user, 2 SECONDS))
+				if(QDELETED(src) || !WT.isOn()) return
+				var/obj/structure/ladder_assembly/A
+				to_chat(user, "You deconstruct \the [src].")
+				if(target_up)
+					target_up.visible_message("\The [target_up] deconstructs from below")
+					A = new /obj/structure/ladder_assembly(target_up.loc)
+					A.state = 2 // CONSTRUCTION_WELDED in code\modules\multiz\ladder_assembly_vr.dm
+					A.anchored = TRUE
+					qdel(target_up)
+				if(target_down)
+					target_down.visible_message("\The [target_down] deconstructs from above")
+					A = new /obj/structure/ladder_assembly(target_down.loc)
+					A.state = 2 // CONSTRUCTION_WELDED in code\modules\multiz\ladder_assembly_vr.dm
+					A.anchored = TRUE
+					qdel(target_down)
+				A = new /obj/structure/ladder_assembly(loc)
+				A.state = 1 // CONSTRUCTION_WRENCHED in code\modules\multiz\ladder_assembly_vr.dm
+				A.anchored = TRUE
+				qdel(src)
+			return
+	// Outpost 21 edit end
 	attack_hand(user)
 	return
 
@@ -108,6 +138,10 @@
 	target_ladder.audible_message("<span class='notice'>You hear something coming [direction] \the [src]</span>", runemessage = "clank clank")
 
 	if(do_after(M, climb_time, src))
+		// Outpost 21 edit begin - Deconstructing ladder
+		if(QDELETED(target_ladder) || QDELETED(src) || QDELETED(M))
+			return
+		// Outpost 21 edit end
 		var/turf/T = get_turf(target_ladder)
 		for(var/atom/A in T)
 			if(!A.CanPass(M, M.loc, 1.5, 0))
