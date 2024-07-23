@@ -58,6 +58,7 @@ var/list/possible_cable_coil_colours = list(
 	layer = WIRES_LAYER
 	color = COLOR_RED
 	var/obj/machinery/power/breakerbox/breaker_box
+	var/broken = FALSE // Outpost 21 edit - broken wire trap
 
 /obj/structure/cable/drain_power(var/drain_check, var/surge, var/amount = 0)
 	if(drain_check)
@@ -104,8 +105,21 @@ var/list/possible_cable_coil_colours = list(
 	if(level==1) hide(!T.is_plating())
 	cable_list += src //add it to the global cable list
 
+// Outpost 21 edit begin - broken wire trap
+/obj/structure/cable/Initialize(mapload)
+	. = ..()
+	if(mapload && prob(1))
+		var/area/A = get_area(src)
+		if(istype(A,/area/maintenance) || istype(A,/area/mine))
+			fray()
+// Outpost 21 edit end
 
 /obj/structure/cable/Destroy()					// called when a cable is deleted
+	// Outpost 21 edit begin - broken wire trap
+	if(broken)
+		unsense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
+	// Outpost 21 edit end
+
 	if(powernet)
 		cut_cable_from_powernet()				// update the powernets
 	cable_list -= src							//remove it from global cable list
@@ -113,6 +127,10 @@ var/list/possible_cable_coil_colours = list(
 
 /obj/structure/cable/examine(mob/user)
 	. = ..()
+	// Outpost 21 edit begin - broken wire trap
+	if(broken)
+		. += "<span class='warning'>It looks frayed! Some tape might help.</span>"
+	// Outpost 21 edit end
 	if(isobserver(user))
 		. += "<span class='warning'>[powernet?.avail > 0 ? "[DisplayPower(powernet.avail)] in power network." : "The cable is not powered."]</span>"
 
@@ -160,6 +178,53 @@ var/list/possible_cable_coil_colours = list(
 /obj/structure/cable/update_icon()
 	icon_state = "[d1]-[d2]"
 	alpha = invisibility ? 127 : 255
+	// Outpost 21 edit begin - broken wire trap
+	overlays.Cut()
+	if(broken && !invisibility)
+		var/image/broke = image('icons/obj/power_cond_damaged.dmi', src, "[d1]-[d2]")
+		broke.appearance_flags = (RESET_COLOR|PIXEL_SCALE|KEEP_APART)
+		overlays += broke
+		var/image/spark = image('icons/obj/power_cond_damaged.dmi', src, "spark")
+		spark.appearance_flags = (RESET_COLOR|PIXEL_SCALE|RESET_ALPHA|KEEP_APART)
+		spark.plane = OBJ_PLANE
+		spark.layer = UNDER_JUNK_LAYER-0.001 // Spark above most things
+		overlays += spark
+	// Outpost 21 edit end
+
+// Outpost 21 edit begin - broken wire trap
+/obj/structure/cable/proc/fray()
+	if(d1 >= 16 || breaker_box)
+		return // Invalid
+	if(!broken)
+		broken = TRUE
+		update_icon()
+		sense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
+
+/obj/structure/cable/proc/unfray()
+	if(broken)
+		broken = FALSE
+		update_icon()
+		unsense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
+
+/obj/structure/cable/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	SIGNAL_HANDLER
+	if(!T.is_plating()) // floor panels stop wires from shocking...
+		return
+	if(isnull(WF))
+		return
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
+		return
+	if(ishuman(AM))
+		var/mob/living/carbon/human/H = AM
+		if(H.shoes && H.shoes.flags & NOCONDUCT)
+			return
+	if(isliving(AM))
+		var/mob/living/M = AM
+		shock(M,80,1)
+		return
+// Outpost 21 edit end
 
 //Telekinesis has no effect on a cable
 /obj/structure/cable/attack_tk(mob/user)
@@ -169,6 +234,8 @@ var/list/possible_cable_coil_colours = list(
 //   - Wirecutters : cut it duh !
 //   - Cable coil : merge cables
 //   - Multitool : get the power currently passing through the cable
+//   - Sharp Items : frays wires - Outpost 21 edit
+//   - Tape Roll : repairs wires if frayed - Outpost 21 edit
 //
 
 /obj/structure/cable/attackby(obj/item/W, mob/user)
@@ -177,7 +244,17 @@ var/list/possible_cable_coil_colours = list(
 	if(!T.is_plating())
 		return
 
-	if(W.has_tool_quality(TOOL_WIRECUTTER))
+	// Outpost 21 edit begin - broken wire trap
+	if(broken && istype(W,/obj/item/weapon/tape_roll))
+		if(do_after(user,2 SECONDS,src))
+			if(broken)
+				unfray()
+				to_chat(user, "<span class='warning'>You repair \the [src]'s sheath with \the [W].</span>")
+				src.add_fingerprint(user)
+		return
+
+	else if(W.has_tool_quality(TOOL_WIRECUTTER))
+	// Outpost 21 edit end
 		var/obj/item/stack/cable_coil/CC
 		if(d1 == UP || d2 == UP)
 			to_chat(user, "<span class='warning'>You must cut this cable from above.</span>")
@@ -234,6 +311,10 @@ var/list/possible_cable_coil_colours = list(
 	else
 		if(!(W.flags & NOCONDUCT))
 			shock(user, 50, 0.7)
+		// Outpost 21 edit begin - broken wire trap
+		if(is_sharp(W))
+			fray()
+		// Outpost 21 edit end
 
 	src.add_fingerprint(user)
 
@@ -255,14 +336,21 @@ var/list/possible_cable_coil_colours = list(
 		if(1.0)
 			qdel(src)
 		if(2.0)
-			if (prob(50))
+			// Outpost 21 edit begin - broken wire trap
+			if (prob(10))
+				fray()
+			else if (prob(50))
+			// Outpost 21 edit end
 				new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
 				qdel(src)
 
 		if(3.0)
 			if (prob(25))
-				new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
-				qdel(src)
+				// Outpost 21 edit begin - broken wire trap
+				fray()
+				//new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
+				//qdel(src)
+				// Outpost 21 edit end
 	return
 
 /obj/structure/cable/proc/cableColor(var/colorC)

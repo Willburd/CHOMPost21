@@ -47,6 +47,7 @@
 	icon_state = "galoshes_dry"
 	permeability_coefficient = 0.05
 	siemens_coefficient = 0
+	flags = NOCONDUCT // Outpost 21 edit - Frayed wire traps
 	item_flags = NOSLIP
 	slowdown = SHOES_SLOWDOWN+0.5
 	species_restricted = null

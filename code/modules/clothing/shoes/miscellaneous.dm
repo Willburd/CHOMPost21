@@ -23,6 +23,7 @@
 	icon_state = "galoshes"
 	permeability_coefficient = 0.05
 	siemens_coefficient = 0 //They're thick rubber boots! Of course they won't conduct electricity!
+	flags = NOCONDUCT // Outpost 21 edit - Frayed wire traps... The janitor is too powerful!
 	item_flags = NOSLIP
 	slowdown = SHOES_SLOWDOWN+0.5
 	species_restricted = null
