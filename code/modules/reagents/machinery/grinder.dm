@@ -31,6 +31,31 @@
 		/obj/item/stack/material/supermatter = list("supermatter")
 		)
 
+	// Outpost 21 edit begin - ore grinding
+	var/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 10) unless you like decimals.
+		/obj/item/weapon/ore/glass = list("silicon"),
+		/obj/item/weapon/ore/iron = list("iron"),
+		/obj/item/weapon/ore/coal = list("carbon"),
+		///obj/item/weapon/ore/copper = list("copper"),
+		///obj/item/weapon/ore/tin = list("tin"),
+		///obj/item/weapon/ore/void_opal = list("silicon","silicon","oxygen","water"),
+		///obj/item/weapon/ore/painite = list("calcium","aluminum","oxygen","oxygen"),
+		///obj/item/weapon/ore/quartz = list("silicon","oxygen"),
+		///obj/item/weapon/ore/bauxite = list("aluminum","aluminum"),
+		/obj/item/weapon/ore/phoron = list("phoron"),
+		/obj/item/weapon/ore/silver = list("silver"),
+		/obj/item/weapon/ore/gold = list("gold"),
+		/obj/item/weapon/ore/marble = list("silicon","aluminum","aluminum","sodium","calcium"), // Some nice variety here
+		/obj/item/weapon/ore/uranium = list("uranium"),
+		/obj/item/weapon/ore/diamond = list("carbon"),
+		/obj/item/weapon/ore/osmium = list("platinum"), // should be osmium
+		/obj/item/weapon/ore/lead = list("lead"),
+		/obj/item/weapon/ore/hydrogen = list("hydrogen"),
+		/obj/item/weapon/ore/verdantium = list("radium","phoron","nitrogen","phosphorus","sodium"), // Some fun stuff to be useful with
+		/obj/item/weapon/ore/rutile = list("tungsten","oxygen") // Should be titanium
+	)
+	// Outpost 21 edit end
+
 	/* Outpost 21 edit - disable radial menu
 	var/static/radial_examine = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_examine")
 	var/static/radial_eject = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_eject")
@@ -139,7 +164,7 @@
 
 		return 0
 
-	if(!sheet_reagents[O.type] && (!O.reagents || !O.reagents.total_volume))
+	if(!sheet_reagents[O.type] && !ore_reagents[O.type] && (!O.reagents || !O.reagents.total_volume)) // Outpost 21 edit - ore grinding
 		to_chat(user, "\The [O] is not suitable for blending.")
 		return 1
 
@@ -317,6 +342,23 @@
 					else
 						beaker.reagents.add_reagent(sheet_components, (amount_to_take*REAGENTS_PER_SHEET))
 					continue
+
+		// Outpost 21 addition begin - Ore grinding
+		if(ore_reagents[O.type])
+			var/obj/item/weapon/ore/R = O
+			if(istype(R))
+				var/list/ore_components = ore_reagents[R.type]
+				if(remaining_volume >= REAGENTS_PER_ORE)
+					holdingitems -= R
+					qdel(R)
+					if(islist(ore_components))
+						var/amount_to_take = (REAGENTS_PER_ORE/(ore_components.len))
+						for(var/i in ore_components)
+							beaker.reagents.add_reagent(i, amount_to_take)
+					else
+						beaker.reagents.add_reagent(ore_components, REAGENTS_PER_ORE)
+					continue
+		// Outpost 21 addition end
 
 		if(O.reagents)
 			O.reagents.trans_to_obj(beaker, min(O.reagents.total_volume, remaining_volume))
