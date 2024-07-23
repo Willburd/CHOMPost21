@@ -5,18 +5,25 @@
 	icon_state = "sextractor"
 	density = TRUE
 	anchored = TRUE
+	circuit = /obj/item/weapon/circuitboard/smart_centrifuge
 
 	var/working = FALSE
 
 /obj/machinery/smart_centrifuge/Initialize()
 	. = ..()
+	// TODO - Remove this bit once machines are converted to Initialize
+	if(ispath(circuit))
+		circuit = new circuit(src)
 	create_reagents(5000)
 	flags |= OPENCONTAINER
+	default_apply_parts()
 
 /obj/machinery/smart_centrifuge/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(in_use)
 		to_chat(user, "<span class='notice'>\The [src] is still spinning.</span>")
 		return
+	if(O.has_tool_quality(TOOL_CROWBAR))
+		return dismantle()
 	if(default_unfasten_wrench(user, O, 20))
 		return
 	return ..()
