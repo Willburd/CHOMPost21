@@ -171,7 +171,9 @@
 		istype(thing,/obj/item/weapon/bluespace_harpoon) || \
 		istype(thing,/obj/item/weapon/arrow) || \
 		istype(thing,/obj/item/weapon/spike) || \
-		istype(thing,/obj/item/mecha_parts) \
+		istype(thing,/obj/item/mecha_parts) || \
+		istype(thing,/obj/item/clothing/gloves/yellow) || \
+		istype(thing,/obj/item/clothing/gloves/fyellow) \
 	)
 		return 2
 	else if( \
@@ -194,7 +196,8 @@
 		istype(thing,/obj/item/weapon/inducer) || \
 		istype(thing,/obj/item/weapon/rcd) || \
 		istype(thing,/obj/item/weapon/shield) || \
-		istype(thing,/obj/item/weapon/weldpack) \
+		istype(thing,/obj/item/weapon/weldpack) || \
+		istype(thing,/obj/item/clothing/gloves/telekinetic) \
 	)
 		return 1
 	else
