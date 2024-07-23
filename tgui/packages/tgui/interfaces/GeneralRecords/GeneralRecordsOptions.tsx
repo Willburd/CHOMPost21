@@ -21,6 +21,16 @@ export const GeneralRecordsView = (props) => {
         <GeneralRecordsViewGeneral />
       </Section>
       <Section title="Actions">
+        {/* Outpost 21 edit begin - Medical record sync */}
+        <Button
+          icon="upload"
+          disabled={!!general!.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Employment Record
+        </Button>
+        {/* Outpost 21 edit end */}
         <Button.Confirm
           icon="trash"
           disabled={!!general!.empty}

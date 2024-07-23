@@ -35,6 +35,16 @@ export const SecurityRecordsView = (props) => {
         <SecurityRecordsViewSecurity />
       </Section>
       <Section title="Actions">
+        {/* Outpost 21 edit begin - Medical record sync */}
+        <Button
+          icon="upload"
+          disabled={!!security!.empty}
+          color="good"
+          onClick={() => act('sync_r')}
+        >
+          Sync Security Record
+        </Button>
+        {/* Outpost 21 edit end */}
         <Button.Confirm
           icon="trash"
           disabled={!!security!.empty}

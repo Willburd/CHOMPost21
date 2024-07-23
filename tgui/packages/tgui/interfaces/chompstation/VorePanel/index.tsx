@@ -176,7 +176,7 @@ export const VorePanel = () => {
       icon_overflow={icon_overflow}
     />
   );
-  {/* Outpost 21 edit begin - Nife removal
+  {/* Outpost 21 edit begin - Nif removal
   tabs[1] = (
     <VoreSoulcatcher our_bellies={our_bellies} soulcatcher={soulcatcher} />
   );
@@ -228,7 +228,7 @@ export const VorePanel = () => {
             Bellies
             <Icon name="list" ml={0.5} />
           </Tabs.Tab>
-          {/* Outpost 21 edit begin - Nife removal
+          {/* Outpost 21 edit begin - Nif removal
           <Tabs.Tab selected={tabIndex === 1} onClick={() => setTabIndex(1)}>
             Soulcatcher
             <Icon name="ghost" ml={0.5} />
