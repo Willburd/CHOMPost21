@@ -1,0 +1,73 @@
+/obj/item/weapon/circuitboard/lockdown_console
+	name = T_BOARD("lockdown console")
+	build_path = /obj/machinery/lockdown_console
+	board_type = new /datum/frame/frame_types/lockdown_console
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+
+/obj/item/weapon/circuitboard/metal_detector
+	name = T_BOARD("threat scanner")
+	build_path = /obj/machinery/metal_detector //metal_detector temp
+	board_type = new /datum/frame/frame_types/metal_detector
+	origin_tech = list(TECH_MAGNET = 4, TECH_BIO = 2, TECH_DATA = 2)
+	req_components = list(
+							/obj/item/weapon/stock_parts/scanning_module = 4,
+							/obj/item/weapon/stock_parts/capacitor/adv = 1,		//for the JUICE
+							/obj/item/weapon/stock_parts/motor = 2,
+							/obj/item/stack/cable_coil = 5)
+
+/obj/item/weapon/circuitboard/smart_centrifuge
+	name = T_BOARD("smart centrifuge")
+	build_path = /obj/machinery/smart_centrifuge
+	board_type = new /datum/frame/frame_types/smart_centrifuge
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+	origin_tech = list(TECH_MAGNET = 1, TECH_DATA = 2)
+	req_components = list(
+							/obj/item/weapon/stock_parts/scanning_module = 1,
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/weapon/stock_parts/gear = 3,
+							/obj/item/stack/material/glass/reinforced = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_grinder
+	name = T_BOARD("industrial chemical grinder")
+	build_path = /obj/machinery/reagentgrinder/industrial
+	board_type = new /datum/frame/frame_types/industrial_reagent_grinder
+	req_components = list(
+							/obj/item/weapon/stock_parts/capacitor/adv = 1,		//for the JUICE
+							/obj/item/weapon/stock_parts/motor = 2,
+							/obj/item/weapon/stock_parts/gear = 2,
+							/obj/item/weapon/reagent_containers/glass/beaker/large = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_pump
+	name = T_BOARD("industrial chemical pump")
+	build_path = /obj/machinery/reagent_refinery/pump
+	board_type = new /datum/frame/frame_types/industrial_reagent_pump
+	req_components = list(
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/stack/material/glass/reinforced = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_filter
+	name = T_BOARD("industrial chemical filter")
+	build_path = /obj/machinery/reagent_refinery/filter
+	board_type = new /datum/frame/frame_types/industrial_reagent_filter
+	req_components = list(
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/weapon/stock_parts/scanning_module = 1,
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/weapon/stock_parts/gear = 1,
+							/obj/item/stack/material/glass/reinforced = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_vat
+	name = T_BOARD("industrial chemical vat")
+	build_path = /obj/machinery/reagent_refinery/vat
+	board_type = new /datum/frame/frame_types/industrial_reagent_vat
+	req_components = list(
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/stack/material/glass/reinforced = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_pipe
+	name = T_BOARD("industrial chemical pipe")
+	build_path = /obj/machinery/reagent_refinery/pipe
+	board_type = new /datum/frame/frame_types/industrial_reagent_pipe
+	req_components = list(
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/stack/material/glass/reinforced = 1)

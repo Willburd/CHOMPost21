@@ -2,7 +2,7 @@
 
 /obj/machinery/metal_detector
 	name = "Threat Detector"
-	icon = 'icons/obj/machines/metal_detector.dmi'
+	icon = 'modular_outpost/icons/obj/machines/metal_detector.dmi'
 	icon_state = "detector_0"
 	density = FALSE
 	anchored = TRUE

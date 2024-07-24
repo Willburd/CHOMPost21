@@ -22,10 +22,16 @@
 	if(in_use)
 		to_chat(user, "<span class='notice'>\The [src] is still spinning.</span>")
 		return
-	if(O.has_tool_quality(TOOL_CROWBAR))
-		return dismantle()
+	if(default_deconstruction_screwdriver(user, O))
+		update_icon()
+		return
+
+	if(default_deconstruction_crowbar(user, O))
+		return
+
 	if(default_unfasten_wrench(user, O, 20))
 		return
+
 	return ..()
 
 /obj/machinery/smart_centrifuge/attack_hand(mob/user)

@@ -15,6 +15,23 @@
 	var/limit = 10
 	var/list/holdingitems = list()
 	var/list/sheet_reagents = list( //have a number of reageents divisible by REAGENTS_PER_SHEET (default 20) unless you like decimals,
+		// Outpost 21 edit begin - More sheets to grind
+		/obj/item/stack/material/plastic = list("carbon","carbon","oxygen","chlorine","sulper"),
+		/obj/item/stack/material/copper = list("copper"),
+		/obj/item/stack/material/wood = list("carbon","carbon","protein","potassium","sodium"),
+		/obj/item/stack/material/stick = list("carbon","carbon","protein","potassium","sodium"),
+		/obj/item/stack/material/log = list("carbon","carbon","protein","potassium","sodium"),
+		/obj/item/stack/material/algae = list("carbon","nitrogen","nitrogen","phosphorus","phosphorus"),
+		/obj/item/stack/material/cardboard = list("carbon","carbon","potassium","sodium"),
+		/obj/item/stack/material/graphite = list("carbon"),
+		/obj/item/stack/material/aluminium = list("aluminium"),
+		/obj/item/stack/material/glass/reinforced = list("silicon","silicon","silicon","iron","carbon"),
+		/obj/item/stack/material/leather = list("carbon","carbon","protein","protein","triglyceride"),
+		/obj/item/stack/material/cloth = list("carbon","carbon","carbon","protein","sodium"),
+		/obj/item/stack/material/fiber = list("carbon","carbon","carbon","protein","sodium"),
+		/obj/item/stack/material/fur = list("carbon","carbon","carbon","protein","sodium"),
+		/obj/item/stack/material/deuterium = list("hydrogen"),
+		// Outpost 21 edit end
 		/obj/item/stack/material/iron = list("iron"),
 		/obj/item/stack/material/uranium = list("uranium"),
 		/obj/item/stack/material/phoron = list("phoron"),
@@ -311,7 +328,12 @@
 	spawn(60)
 		inuse = 0
 
+	process_contents() // Outpost 21 edit - seperate this out for industrial grinder use
+
+// Outpost 21 edit begin - seperate this out for industrial grinder use
+/obj/machinery/reagentgrinder/proc/process_contents()
 	// Process.
+	var/original_volume = beaker.reagents.total_volume // Outpost 21 edit - keep track of if we gained any reagents
 	for (var/obj/item/O in holdingitems)
 		//CHOMPedit start
 		if(istype(O,/obj/item/stack/material/supermatter))
@@ -367,6 +389,10 @@
 				qdel(O)
 			if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
 				break
+
+	// if we gained regents then return true
+	return original_volume < beaker.reagents.total_volume // Outpost 21 edit - keep track of if we gained any reagents
+// Outpost 21 edit end
 
 /obj/machinery/reagentgrinder/proc/replace_beaker(var/mob/living/user, var/obj/item/weapon/reagent_containers/new_beaker)
 	if(!user)
