@@ -43,10 +43,10 @@
 /obj/machinery/reagent_refinery/vat/update_icon()
 	cut_overlays()
 	// GOOBY!
-	if(reagents.total_volume > 0)
+	if(reagents.total_volume >= 5)
 		var/percent = (reagents.total_volume / reagents.maximum_volume) * 100
 		switch(percent)
-			if(0 to 20)			percent = 2
+			if(5 to 20)			percent = 2
 			if(20 to 40) 		percent = 4
 			if(40 to 60)		percent = 6
 			if(60 to 80)		percent = 8

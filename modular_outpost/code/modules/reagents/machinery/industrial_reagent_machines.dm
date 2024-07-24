@@ -100,7 +100,7 @@
 
 
 // Climbing is kinda critical for these
-/obj/machinery/reagent_refinery/proc/climb_on()
+/obj/machinery/reagent_refinery/verb/climb_on()
 	set name = "Climb structure"
 	set desc = "Climbs onto a structure."
 	set category = "Object"

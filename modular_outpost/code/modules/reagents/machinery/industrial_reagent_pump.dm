@@ -34,10 +34,13 @@
 
 /obj/machinery/reagent_refinery/pump/update_icon()
 	cut_overlays()
-	if(reagents.total_volume > 0)
+	if(reagents.total_volume >= 5)
 		var/image/filling = image(icon, loc, "pump_r",dir = dir)
 		filling.color = reagents.get_color()
 		add_overlay(filling)
+
+/obj/machinery/reagent_refinery/pump/attack_hand(mob/user)
+	set_APTFT()
 
 /obj/machinery/reagent_refinery/pump/verb/rotate_clockwise()
 	set name = "Rotate Pump Clockwise"

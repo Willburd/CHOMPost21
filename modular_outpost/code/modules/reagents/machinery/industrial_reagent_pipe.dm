@@ -9,9 +9,6 @@
 	idle_power_usage = 0
 	active_power_usage = 10
 	circuit = /obj/item/weapon/circuitboard/industrial_reagent_pipe
-	// Chemical bath funtimes!
-	can_buckle = TRUE
-	buckle_lying = TRUE
 	default_max_vol = 60 // smoll
 
 /obj/machinery/reagent_refinery/pipe/Initialize()
