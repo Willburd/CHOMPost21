@@ -129,5 +129,5 @@
 	. = ..()
 
 // Dragging onto this results in buckling!
-/obj/machinery/reagent_refinery/can_climb(var/mob/living/user, post_climb_check=0)
+/obj/machinery/reagent_refinery/vat/can_climb(var/mob/living/user, post_climb_check=0)
 	return FALSE
