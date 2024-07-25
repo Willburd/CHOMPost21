@@ -638,6 +638,36 @@
 	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/engineering/refinery/main
+	name = "\improper Chemical Refinery"
+	icon_state = "primarystorage"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/refinery/tankstorage
+	name = "\improper Chemical Refinery Tank Storage"
+	icon_state = "eva"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/refinery/observation
+	name = "\improper Chemical Refinery Observation Room"
+	icon_state = "darkred"
+	base_turf = /turf/simulated/open/force_indoor
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/refinery/lab
+	name = "\improper Chemical Refinery Lab"
+	icon_state = "primarystorage"
+	base_turf = /turf/simulated/open/force_indoor
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/refinery/tugstorage
+	name = "\improper Chemical Refinery Tug Storage"
+	icon_state = "maint_pumpstation"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/engineering/auxstore
 	name = "\improper Engineering Aux Storage"
 	icon_state = "auxstorage"
