@@ -16,6 +16,7 @@
 	icon_override = 'modular_outpost/icons/obj/stock_parts.dmi'
 	frame_class = FRAME_CLASS_MACHINE
 
+// Refinery machines
 /datum/frame/frame_types/industrial_reagent_grinder
 	name = "Industrial Chemical Grinder"
 	icon_override = 'modular_outpost/icons/obj/stock_parts_refinery.dmi'
@@ -38,5 +39,10 @@
 
 /datum/frame/frame_types/industrial_reagent_pipe
 	name = "Industrial Chemical Pipe"
+	icon_override = 'modular_outpost/icons/obj/stock_parts_refinery.dmi'
+	frame_class = FRAME_CLASS_MACHINE
+
+/datum/frame/frame_types/industrial_reagent_waste_processor
+	name = "Industrial Chemical Waste Processor"
 	icon_override = 'modular_outpost/icons/obj/stock_parts_refinery.dmi'
 	frame_class = FRAME_CLASS_MACHINE

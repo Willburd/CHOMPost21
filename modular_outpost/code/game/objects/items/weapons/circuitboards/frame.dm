@@ -27,12 +27,13 @@
 							/obj/item/weapon/stock_parts/gear = 3,
 							/obj/item/stack/material/glass/reinforced = 1)
 
+// Refinery machines
 /obj/item/weapon/circuitboard/industrial_reagent_grinder
 	name = T_BOARD("industrial chemical grinder")
 	build_path = /obj/machinery/reagentgrinder/industrial
 	board_type = new /datum/frame/frame_types/industrial_reagent_grinder
 	req_components = list(
-							/obj/item/weapon/stock_parts/capacitor/adv = 1,		//for the JUICE
+							/obj/item/weapon/stock_parts/capacitor = 1,
 							/obj/item/weapon/stock_parts/motor = 2,
 							/obj/item/weapon/stock_parts/gear = 2,
 							/obj/item/weapon/reagent_containers/glass/beaker/large = 1)
@@ -70,4 +71,14 @@
 	board_type = new /datum/frame/frame_types/industrial_reagent_pipe
 	req_components = list(
 							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/stack/material/glass/reinforced = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_waste_processor
+	name = T_BOARD("industrial chemical waste processor")
+	build_path = /obj/machinery/reagent_refinery/waste_processor
+	board_type = new /datum/frame/frame_types/industrial_reagent_waste_processor
+	req_components = list(
+							/obj/item/weapon/stock_parts/capacitor = 4,
+							/obj/item/weapon/stock_parts/micro_laser = 4,
+							/obj/item/weapon/stock_parts/manipulator = 1,
 							/obj/item/stack/material/glass/reinforced = 1)

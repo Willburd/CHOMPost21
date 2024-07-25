@@ -1,6 +1,6 @@
 /obj/machinery/reagent_refinery/pipe
 	name = "Industrial Chemical Pipe"
-	desc = "A large pipe with a small built in pump to encourage flow."
+	desc = "A large pipe with a small built in pump to encourage flow. The red marks show where the flow is coming from."
 	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
 	icon_state = "pipe"
 	density = TRUE

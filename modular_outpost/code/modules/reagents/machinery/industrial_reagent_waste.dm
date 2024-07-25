@@ -1,0 +1,107 @@
+/obj/machinery/reagent_refinery/waste_processor
+	name = "Industrial Chemical Waste Processor"
+	desc = "A large chemical processing chamber. Chemicals inside are energized into plasma and collected as raw energy! Unfortunately the process is only 17% efficient, a net loss of power."
+	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
+	icon_state = "waste"
+	density = TRUE
+	anchored = TRUE
+	use_power = USE_POWER_IDLE
+	idle_power_usage = 0
+	active_power_usage = 200
+	circuit = /obj/item/weapon/circuitboard/industrial_reagent_waste_processor
+	// Chemical bath funtimes!
+	can_buckle = TRUE
+	buckle_lying = TRUE
+	default_max_vol = 6000
+
+/obj/machinery/reagent_refinery/waste_processor/Initialize()
+	. = ..()
+	// TODO - Remove this bit once machines are converted to Initialize
+	if(ispath(circuit))
+		circuit = new circuit(src)
+	default_apply_parts()
+	update_icon()
+	// Can't be set on these
+	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
+
+/obj/machinery/reagent_refinery/waste_processor/process()
+	if(!anchored)
+		return
+
+	power_change()
+	if(stat & (NOPOWER|BROKEN))
+		return
+
+	if (reagents.total_volume > 0 && prob((reagents.total_volume / reagents.maximum_volume) * 100))
+		use_power_oneoff(active_power_usage)
+		reagents.clear_reagents()
+
+/obj/machinery/reagent_refinery/waste_processor/update_icon()
+	cut_overlays()
+	if(anchored)
+		for(var/direction in cardinal)
+			var/turf/T = get_step(get_turf(src),direction)
+			var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
+			if(!other) // snowflake grinders...
+				other = locate(/obj/machinery/reagentgrinder/industrial) in T
+			if(other && other.anchored)
+				// weird handling for side connections... Otherwise, anything pointing into use gets connected back!
+				if(istype(other,/obj/machinery/reagent_refinery/filter))
+					var/obj/machinery/reagent_refinery/filter/filt = other
+					var/check_dir = 0
+					if(filt.filter_side == 1)
+						check_dir = turn(filt.dir, 270)
+					else
+						check_dir = turn(filt.dir, 90)
+					if(check_dir == reverse_dir[direction])
+						var/image/intake = image(icon, icon_state = "waste_intakes", dir = direction)
+						add_overlay(intake)
+						continue
+				if(other.dir == reverse_dir[direction])
+					var/image/intake = image(icon, icon_state = "waste_intakes", dir = direction)
+					add_overlay(intake)
+
+/obj/machinery/reagent_refinery/waste_processor/verb/rotate_clockwise()
+	set name = "Rotate Waste Processor Clockwise"
+	set category = "Object"
+	set src in view(1)
+
+	if (usr.stat || usr.restrained() || anchored)
+		return
+
+	src.set_dir(turn(src.dir, 270))
+	update_icon()
+
+/obj/machinery/reagent_refinery/waste_processor/verb/rotate_counterclockwise()
+	set name = "Rotate Waste Processor Counterclockwise"
+	set category = "Object"
+	set src in view(1)
+
+	if (usr.stat || usr.restrained() || anchored)
+		return
+
+	src.set_dir(turn(src.dir, 90))
+	update_icon()
+
+/obj/machinery/reagent_refinery/waste_processor/examine(mob/user, infix, suffix)
+	. = ..()
+	. += "The meter shows [FLOOR((reagents.total_volume / reagents.maximum_volume) * 100,1)]% full. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
+
+/obj/machinery/reagent_refinery/waste_processor/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))
+		return
+	if(istype(C,/obj/vehicle/train/trolly_tank))
+		// Drain it!
+		C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
+		visible_message("\The [user] drains \the [C] into \the [src].")
+		update_icon()
+		return
+	if(istype(C,/obj/item/weapon/reagent_containers/glass) || \
+		istype(C,/obj/item/weapon/reagent_containers/food/drinks/glass2) || \
+		istype(C,/obj/item/weapon/reagent_containers/food/drinks/shaker))
+		// Drain it!
+		C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
+		visible_message("\The [user] dumps \the [C] into \the [src].")
+		update_icon()
+		return
+	. = ..()

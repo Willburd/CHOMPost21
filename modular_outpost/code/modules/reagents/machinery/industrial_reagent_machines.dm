@@ -74,7 +74,7 @@
 		return
 
 	// no back/forth, filters don't use just their forward, they send the side too!
-	if(dir == reverse_dir[source_forward_dir])
+	if(dir == reverse_dir[source_forward_dir] && !istype(target,/obj/machinery/reagent_refinery/waste_processor)) // Waste tanks accept from all sides
 		return
 
 	// pumps and filters can only be FED in a straight line

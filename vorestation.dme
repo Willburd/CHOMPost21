@@ -5254,6 +5254,7 @@
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_pipe.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_pump.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_vat.dm"
+#include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_waste.dm"
 #include "modular_outpost\code\modules\security levels\lockdown_button.dm"
 #include "modular_outpost\code\modules\vehicles\janicart.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\controller.dm"
