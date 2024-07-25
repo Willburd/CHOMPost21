@@ -159,6 +159,7 @@
 	if(volume_magic > 0)
 		reg.trans_to_holder( sump.reagents, volume_magic)
 		transfer_sludge_to_tank(rand(1,5))
+	sump.update_icon()
 
 /obj/machinery/v_garbosystem/proc/transfer_organic_to_tank(var/amt)
 	if(!validate_tank())
@@ -171,6 +172,7 @@
 		sump.reagents.add_reagent("triglyceride", ratioB)
 	if(ratioB > 0 || ratioA > 0)
 		transfer_sludge_to_tank(rand(4,9))
+	sump.update_icon()
 
 /obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(var/amt)
 	if(prob(10) || amt >= 5)
@@ -194,9 +196,8 @@
 			sump = locate(/obj/vehicle/train/trolly_tank, get_step(src, dir))
 			if(sump)
 				break
-	if(!isnull(sump))
-		if(isnull(sump_prev))
-			visible_message("\The [src] automatically connects a hose to \the [sump].")
+	if(!isnull(sump) && sump_prev != sump)
+		visible_message("\The [src] automatically connects a hose to \the [sump].")
 		return
 // Outpost 21 edit end
 

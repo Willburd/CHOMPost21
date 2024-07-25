@@ -7,6 +7,7 @@
 	flags = OPENCONTAINER
 
 	var/obj/item/weapon/reagent_containers/glass/stored_container = null
+	paint_color = "#decd12"
 
 /obj/vehicle/train/trolly_tank/Initialize()
 	. = ..()
@@ -26,6 +27,30 @@
 /obj/vehicle/train/trolly_tank/RunOver(var/mob/living/M)
 	..()
 	attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
+
+/obj/vehicle/train/trolly_tank/attackby(obj/item/W, mob/user)
+
+	if(istype(W, /obj/item/device/multitool))
+		var/new_paint = input(usr, "Please select paint color.", "Paint Color", paint_color) as color|null
+		if(new_paint)
+			paint_color = new_paint
+			update_icon()
+			return
+
+	if(istype(W, /obj/item/weapon/pen))
+		var/t = tgui_input_text(user, "What would you like the label to be?", text("[]", src.name), null, MAX_NAME_LEN)
+		if (user.get_active_hand() != W)
+			return
+		if((!in_range(src, user) && src.loc != user))
+			return
+		t = sanitizeSafe(t, MAX_NAME_LEN)
+		if(t)
+			src.name = "[initial(name)] - '[t]'"
+		else
+			src.name = initial(name)
+		return
+
+	. = ..()
 
 /obj/vehicle/train/trolly_tank/update_car(var/train_length, var/active_engines)
 	src.train_length = train_length
@@ -97,3 +122,14 @@
 /obj/vehicle/train/trolly_tank/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The meter shows [FLOOR((reagents.total_volume / reagents.maximum_volume) * 100,1)]% full."
+
+/obj/vehicle/train/trolly_tank/update_icon()
+	. = ..()
+	cut_overlays()
+	if(reagents && reagents.total_volume > 0)
+		var/image/chems = image(icon, icon_state = "[icon_state]_r", dir = NORTH)
+		chems.color = reagents.get_color()
+		add_overlay(chems)
+	var/image/Bodypaint = image(icon, icon_state = "[icon_state]_c", dir = NORTH)
+	Bodypaint.color = paint_color
+	add_overlay(Bodypaint)
