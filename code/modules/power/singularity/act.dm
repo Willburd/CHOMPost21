@@ -130,3 +130,6 @@
 
 /mob/new_player/singuloCanEat()
 	return 0
+
+/turf/unsimulated/wall/supermatter/singuloCanEat() // Outpost 21 addition - stop eating bluespace!
+	return 0
