@@ -165,7 +165,7 @@
 /obj/machinery/reagentgrinder/industrial/examine(mob/user)
 	. = list(initial(desc)) // Clears the parent's messy stuff
 	if(beaker)
-		. += "The meter shows [FLOOR((beaker.reagents.total_volume / beaker.reagents.maximum_volume) * 100,1)]% full."
+		. += "The meter shows [FLOOR((beaker.reagents.total_volume / beaker.reagents.maximum_volume) * 100,1)]% full. It is pumping chemicals at a rate of [beaker.amount_per_transfer_from_this]u."
 
 /obj/machinery/reagentgrinder/industrial/grind(var/mob/user)
 	return

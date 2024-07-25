@@ -21,7 +21,7 @@
 		return
 
 	if(!isnull(O.reagents))
-		if(!(O.flags & OPENCONTAINER)) // The idea is that the scanner has to touch the reagents somehow. This is done to prevent cheesing unidentified autoinjectors.
+		if(!(O.flags & OPENCONTAINER) && !istype(O,/obj/machinery/reagent_refinery/vat)) // Outpost 21 edit - Reagent scanner can always scan vats // The idea is that the scanner has to touch the reagents somehow. This is done to prevent cheesing unidentified autoinjectors.
 			to_chat(user, span("warning", "\The [O] is sealed, and cannot be scanned by \the [src] until unsealed."))
 			return
 

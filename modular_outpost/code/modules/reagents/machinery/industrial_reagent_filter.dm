@@ -73,7 +73,7 @@
 		return
 
 	// Get a list of reagents currently inside!
-	var/list/tgui_list = list("None" = "","Bypass" = "-1","All" = "-2")
+	var/list/tgui_list = list("Disabled" = "","Bypass" = "-1","All" = "-2")
 	for(var/datum/reagent/R in reagents.reagent_list)
 		if(R)
 			tgui_list[R.name] = R.id
@@ -124,9 +124,9 @@
 	var/filter = "disabled"
 	if(filter_reagent_id == "-1")
 		filter = "filtering out nothing"
-	else if(filter_reagent_id != "-2")
+	else if(filter_reagent_id == "-2")
 		filter = "filtering out everything"
 	else if(filter_reagent_id != "")
 		var/datum/reagent/R = SSchemistry.chemical_reagents[filter_reagent_id]
 		filter = R.name
-	. += "The meter shows [FLOOR((reagents.total_volume / reagents.maximum_volume) * 100,1)]% full. It is currently [filter]."
+	. += "The meter shows [FLOOR((reagents.total_volume / reagents.maximum_volume) * 100,1)]% full. It is currently [filter]. At a rate of [amount_per_transfer_from_this]u."
