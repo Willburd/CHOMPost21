@@ -13,6 +13,7 @@
 	// reagent control
 	reagents = new/datum/reagents(default_max_vol)
 	reagents.my_atom = src
+	update_neighbours()
 
 /obj/machinery/reagent_refinery/Moved(atom/old_loc, direction, forced)
 	. = ..()
@@ -25,12 +26,7 @@
 		user.visible_message("[user.name] [anchored ? "secures" : "unsecures"] the bolts holding [src.name] to the floor.", \
 					"You [anchored ? "secure" : "unsecure"] the bolts holding [src] to the floor.", \
 					"You hear a ratchet.")
-		// Update icons and neighbour icons to avoid loss of sanity
-		for(var/direction in cardinal)
-			var/turf/T = get_step(get_turf(src),direction)
-			var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
-			if(other && other.anchored)
-				other.update_icon()
+		update_neighbours()
 		update_icon()
 		return
 	if(istype(O,/obj/item/weapon/reagent_containers/glass) || \
@@ -52,6 +48,15 @@
 	if(default_deconstruction_crowbar(user, O))
 		return
 	. = ..()
+
+/obj/machinery/reagent_refinery/proc/update_neighbours()
+	// Update icons and neighbour icons to avoid loss of sanity
+	for(var/direction in cardinal)
+		var/turf/T = get_step(get_turf(src),direction)
+		var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
+		if(other && other.anchored)
+			other.update_icon()
+
 
 /obj/machinery/reagent_refinery/verb/set_APTFT() //set amount_per_transfer_from_this
 	set name = "Set transfer amount"
@@ -96,8 +101,6 @@
 			target.update_icon()
 			update_icon()
 		return amount
-
-
 
 // Climbing is kinda critical for these
 /obj/machinery/reagent_refinery/verb/climb_on()
