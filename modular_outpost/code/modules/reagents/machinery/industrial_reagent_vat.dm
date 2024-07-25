@@ -75,11 +75,11 @@
 						check_dir = turn(filt.dir, 270)
 					else
 						check_dir = turn(filt.dir, 90)
-					if(check_dir == reverse_dir[direction])
+					if(check_dir == reverse_dir[direction] && dir != direction)
 						var/image/intake = image(icon, icon_state = "vat_intakes", dir = direction)
 						add_overlay(intake)
 						continue
-				if(other.dir == reverse_dir[direction])
+				if(other.dir == reverse_dir[direction] && dir != direction)
 					var/image/intake = image(icon, icon_state = "vat_intakes", dir = direction)
 					add_overlay(intake)
 
