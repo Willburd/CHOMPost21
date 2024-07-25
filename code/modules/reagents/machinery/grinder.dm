@@ -18,9 +18,9 @@
 		// Outpost 21 edit begin - More sheets to grind
 		/obj/item/stack/material/plastic = list("carbon","carbon","oxygen","chlorine","sulper"),
 		/obj/item/stack/material/copper = list("copper"),
-		/obj/item/stack/material/wood = list("carbon","carbon","protein","potassium","sodium"),
-		/obj/item/stack/material/stick = list("carbon","carbon","protein","potassium","sodium"),
-		/obj/item/stack/material/log = list("carbon","carbon","protein","potassium","sodium"),
+		/obj/item/stack/material/wood = list("carbon","carbon","nitrogen","potassium","sodium"),
+		/obj/item/stack/material/stick = list("carbon","carbon","nitrogen","potassium","sodium"),
+		/obj/item/stack/material/log = list("carbon","carbon","nitrogen","potassium","sodium"),
 		/obj/item/stack/material/algae = list("carbon","nitrogen","nitrogen","phosphorus","phosphorus"),
 		/obj/item/stack/material/cardboard = list("carbon","carbon","potassium","sodium"),
 		/obj/item/stack/material/graphite = list("carbon"),

@@ -116,6 +116,7 @@
 		// Drain it!
 		C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
 		visible_message("\The [user] drains \the [C] into \the [src].")
+		update_icon()
 		return
 	if(istype(C,/obj/item/weapon/reagent_containers/glass) || \
 		istype(C,/obj/item/weapon/reagent_containers/food/drinks/glass2) || \
@@ -123,6 +124,7 @@
 		// Drain it!
 		C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
 		visible_message("\The [user] dumps \the [C] into \the [src].")
+		update_icon()
 		return
 	. = ..()
 

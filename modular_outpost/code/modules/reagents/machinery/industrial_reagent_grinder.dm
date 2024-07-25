@@ -63,7 +63,7 @@
 			M.update_icon()
 
 /obj/machinery/reagentgrinder/industrial/proc/transfer_tank(var/obj/machinery/reagent_refinery/target)
-	if(!beaker || beaker.reagents.total_volume <= 0 || !can_use_power_oneoff(active_power_usage))
+	if(!anchored || !target.anchored || !beaker || beaker.reagents.total_volume <= 0 || !can_use_power_oneoff(active_power_usage))
 		return
 	// Transfer to target in amounts every process tick!
 	beaker.reagents.trans_to_obj(target, beaker.amount_per_transfer_from_this)
