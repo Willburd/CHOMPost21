@@ -29,11 +29,13 @@
 	if(stat & (NOPOWER|BROKEN))
 		return
 
-	if (amount_per_transfer_from_this > 0 && reagents.total_volume > 0)
-		// dump reagents to next refinery machine
-		var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
-		if(target)
-			transfer_tank( target, dir)
+	if (amount_per_transfer_from_this <= 0 || reagents.total_volume <= 0)
+		return
+
+	// dump reagents to next refinery machine
+	var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
+	if(target)
+		transfer_tank( reagents, target, dir)
 
 /obj/machinery/reagent_refinery/pipe/update_icon()
 	cut_overlays()

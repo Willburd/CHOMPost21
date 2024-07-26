@@ -32,7 +32,11 @@
 	if(stat & (NOPOWER|BROKEN))
 		return
 
-	if (reagents.total_volume > 0 && prob((reagents.total_volume / reagents.maximum_volume) * 100))
+	if (reagents.total_volume <= 0)
+		return
+
+	if (prob((reagents.total_volume / reagents.maximum_volume) * 100))
+		flick("waste_burn",src)
 		use_power_oneoff(active_power_usage)
 		reagents.clear_reagents()
 

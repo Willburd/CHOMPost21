@@ -11,8 +11,9 @@
 /obj/machinery/reagent_refinery/Initialize(mapload)
 	. = ..()
 	// reagent control
-	reagents = new/datum/reagents(default_max_vol)
-	reagents.my_atom = src
+	if(default_max_vol > 0)
+		reagents = new/datum/reagents(default_max_vol)
+		reagents.my_atom = src
 	update_neighbours()
 
 /obj/machinery/reagent_refinery/Moved(atom/old_loc, direction, forced)
@@ -41,7 +42,6 @@
 		reagents.trans_to_obj(C, reagents.total_volume)
 		playsound(src, 'sound/machines/reagent_dispense.ogg', 25, 1)
 		to_chat(usr,"You drain \the [src] into \the [C].")
-		update_icon()
 		return
 	if(default_deconstruction_screwdriver(user, O))
 		return
@@ -67,14 +67,23 @@
 		amount_per_transfer_from_this = N
 	update_icon()
 
-/obj/machinery/reagent_refinery/proc/transfer_tank( var/obj/machinery/reagent_refinery/target, var/source_forward_dir, var/filter_id = "")
-	if(reagents.total_volume <= 0|| !anchored || !target.anchored)
+/obj/machinery/reagent_refinery/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target, var/source_forward_dir, var/filter_id = "")
+	if(RT.total_volume <= 0|| !anchored || !target.anchored)
 		return
 	if(!can_use_power_oneoff(active_power_usage))
 		return
 
+	// Hub fills tankers, not itself!
+	if(istype(target,/obj/machinery/reagent_refinery/hub))
+		if(dir == reverse_dir[source_forward_dir] ) // Hub faces into instead of away
+			return
+		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(target)
+		if(!tanker)
+			return
+		target = tanker // forward it to the tanker!
+
 	// no back/forth, filters don't use just their forward, they send the side too!
-	if(dir == reverse_dir[source_forward_dir] && !istype(target,/obj/machinery/reagent_refinery/waste_processor)) // Waste tanks accept from all sides
+	else if(dir == reverse_dir[source_forward_dir] && !istype(target,/obj/machinery/reagent_refinery/waste_processor)) // Waste tanks accept from all sides
 		return
 
 	// pumps and filters can only be FED in a straight line
@@ -84,22 +93,16 @@
 	// Transfer to target in amounts every process tick!
 	use_power_oneoff(active_power_usage)
 	if(filter_id == "")
-		var/amount = reagents.trans_to_obj(target, amount_per_transfer_from_this)
-		if(amount > 0)
-			target.update_icon()
-			update_icon()
+		var/amount = RT.trans_to_obj(target, amount_per_transfer_from_this)
 		return amount
 	else
 		// Split out reagent...
 		// Yet another hack, because I refuse to rewrite base code for a module. It's a shame it can't just be forced.
 		var/old_flags = target.flags
 		target.flags |= OPENCONTAINER // trans_id_to expects an opencontainer flag, but this is closed plumbing...
-		var/amount = reagents.trans_id_to(target, filter_id, amount_per_transfer_from_this)
+		var/amount = RT.trans_id_to(target, filter_id, amount_per_transfer_from_this)
 		target.flags = old_flags
 		// End hacky flag stuff
-		if(amount > 0)
-			target.update_icon()
-			update_icon()
 		return amount
 
 // Climbing is kinda critical for these
@@ -184,3 +187,6 @@
 		to_chat(user, "<span class='notice'>You need hands for this.</span>")
 		return 0
 	return 1
+
+/obj/machinery/reagent_refinery/on_reagent_change(changetype)
+	update_icon()

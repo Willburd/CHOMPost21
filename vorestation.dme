@@ -5251,6 +5251,7 @@
 #include "modular_outpost\code\modules\reagents\machinery\chemalyzerpro.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_filter.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_grinder.dm"
+#include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_hub.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_machines.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_pipe.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_pump.dm"

@@ -55,18 +55,19 @@
 		playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 		playsound(src, 'sound/effects/metalscrape2.ogg', 50, 1)
 
-	if (beaker.amount_per_transfer_from_this > 0 && beaker.reagents.total_volume > 0)
-		// dump reagents to next refinery machine
-		var/obj/machinery/reagent_refinery/M = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
-		if(M)
-			transfer_tank(M)
-			M.update_icon()
+	if (beaker.amount_per_transfer_from_this <= 0 || beaker.reagents.total_volume <= 0)
+		return
 
-/obj/machinery/reagentgrinder/industrial/proc/transfer_tank(var/obj/machinery/reagent_refinery/target)
-	if(!anchored || !target.anchored || !beaker || beaker.reagents.total_volume <= 0 || !can_use_power_oneoff(active_power_usage))
+	// dump reagents to next refinery machine
+	var/obj/machinery/reagent_refinery/M = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
+	if(M)
+		transfer_tank( beaker.reagents, M)
+
+/obj/machinery/reagentgrinder/industrial/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target)
+	if(!anchored || !target.anchored || RT.total_volume <= 0 || !can_use_power_oneoff(active_power_usage))
 		return
 	// Transfer to target in amounts every process tick!
-	beaker.reagents.trans_to_obj(target, beaker.amount_per_transfer_from_this)
+	RT.trans_to_obj(target, beaker.amount_per_transfer_from_this)
 	// Power use
 	use_power_oneoff(active_power_usage)
 

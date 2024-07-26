@@ -133,3 +133,6 @@
 	var/image/Bodypaint = image(icon, icon_state = "[icon_state]_c", dir = NORTH)
 	Bodypaint.color = paint_color
 	add_overlay(Bodypaint)
+
+/obj/vehicle/train/trolly_tank/on_reagent_change(changetype)
+	update_icon()

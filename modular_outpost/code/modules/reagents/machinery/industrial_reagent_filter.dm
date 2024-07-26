@@ -45,12 +45,12 @@
 			check_dir = turn(src.dir, 90)
 		var/obj/machinery/reagent_refinery/filter_target = locate(/obj/machinery/reagent_refinery) in get_step(get_turf(src),check_dir)
 		if(filter_target && reagents.total_volume > 0)
-			transfer_tank( filter_target, check_dir, filter_reagent_id == "-2" ? "" : filter_reagent_id)
+			transfer_tank( reagents, filter_target, check_dir, filter_reagent_id == "-2" ? "" : filter_reagent_id)
 	// dump reagents to next refinery machine if all of the target reagent has been filtered out
 	if(filter_reagent_id != "-2") // "all" filter option pushes it all out the side path
 		var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(get_turf(src),dir)
 		if(target && reagents.total_volume > 0)
-			transfer_tank( target, target.dir)
+			transfer_tank( reagents, target, target.dir)
 
 /obj/machinery/reagent_refinery/filter/update_icon()
 	cut_overlays()

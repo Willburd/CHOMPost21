@@ -82,3 +82,11 @@
 							/obj/item/weapon/stock_parts/micro_laser = 4,
 							/obj/item/weapon/stock_parts/manipulator = 1,
 							/obj/item/stack/material/glass/reinforced = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_hub
+	name = T_BOARD("industrial chemical hub")
+	build_path = /obj/machinery/reagent_refinery/hub
+	board_type = new /datum/frame/frame_types/industrial_reagent_hub
+	req_components = list(
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/weapon/stock_parts/manipulator = 1)
