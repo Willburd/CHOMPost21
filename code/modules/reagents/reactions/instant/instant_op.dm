@@ -19,11 +19,3 @@
 	result = "sacid"
 	required_reagents = list("hydrogen" = 2,"sulfur" = 1,"oxygen" = 4)
 	result_amount = 5
-
-/decl/chemical_reaction/instant/sugar // Or engi-chem won't have fun
-	name = "Sugar"
-	id = "sugar"
-	result = "sugar"
-	catalysts = list("phoron" = 1)
-	required_reagents = list("carbon" = 1,"hydrogen" = 2,"oxygen" = 1)
-	result_amount = 1

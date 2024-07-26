@@ -4230,6 +4230,7 @@
 #include "code\modules\reagents\reactions\_reactions.dm"
 #include "code\modules\reagents\reactions\_reactions_op.dm"
 #include "code\modules\reagents\reactions\distilling\distilling.dm"
+#include "code\modules\reagents\reactions\distilling\distilling_op.dm"
 #include "code\modules\reagents\reactions\fusion\fusion.dm"
 #include "code\modules\reagents\reactions\instant\drinks.dm"
 #include "code\modules\reagents\reactions\instant\drinks_vr.dm"

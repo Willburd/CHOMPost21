@@ -602,6 +602,11 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			segment += 1
 
 			body += " <b>-Temperature: </b> [CR.temp_range[1]] - [CR.temp_range[2]]<br>"
+			body += " <b>-Pressure: </b> [isnull(CR.minimum_xgm_pressure) ? 0 : CR.minimum_xgm_pressure]kpa to [isnull(CR.maximum_xgm_pressure) ? "~" : CR.maximum_xgm_pressure]kpa<br>"
+			if(CR.require_xgm_gas)
+				body += " <b>-Requires Gas: </b> [CR.require_xgm_gas]<br>"
+			if(CR.rejects_xgm_gas)
+				body += " <b>-Rejects Gas: </b> [CR.rejects_xgm_gas]<br>"
 
 			for(var/RQ in CR.required_reagents)
 				var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
