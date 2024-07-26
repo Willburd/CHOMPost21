@@ -92,6 +92,12 @@
 	if((istype(target,/obj/machinery/reagent_refinery/pump) || istype(target,/obj/machinery/reagent_refinery/filter)) && dir != source_forward_dir)
 		return
 
+	// locked until distilling mode
+	if(istype(target,/obj/machinery/reagent_refinery/reactor))
+		var/obj/machinery/reagent_refinery/reactor/R = target
+		if(R.toggle_mode == 1)
+			return
+
 	// Transfer to target in amounts every process tick!
 	use_power_oneoff(active_power_usage)
 	if(filter_id == "")
