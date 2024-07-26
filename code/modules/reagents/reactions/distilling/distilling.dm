@@ -35,8 +35,10 @@
 
 /decl/chemical_reaction/distilling/can_happen(var/datum/reagents/holder)
 	// Outpost 21 addition begin - If reaction requires a specific atmosphere in order to distill
+	var/datum/gas_mixture/GM = holder.my_atom.return_air()
 	if(require_xgm_gas || rejects_xgm_gas || minimum_xgm_pressure || maximum_xgm_pressure)
-		var/datum/gas_mixture/GM = holder.my_atom.return_air()
+		if(!GM)
+			return
 		if(require_xgm_gas && GM.gas[require_xgm_gas] <= 10) // If have required gas to react
 			return
 		if(rejects_xgm_gas && GM.gas[rejects_xgm_gas] >= 1) // If blocked by a gas it doesn't like
@@ -46,6 +48,14 @@
 		if(maximum_xgm_pressure && GM.return_pressure() > maximum_xgm_pressure)
 			return
 	// Outpost 21 addition end
+
+	// Outpost 21 edit begin - Allow industrial reagent reactor to distill
+	if(istype(holder.my_atom, /obj/machinery/reagent_refinery/reactor))
+		if(!GM)
+			return
+		if(GM.temperature < temp_range[1] || GM.temperature > temp_range[2])
+			return FALSE
+	// Outpost 21 edit end
 
 	// Outpost 21 edit begin - Allow bunsen burner to distill
 	if(istype(holder.my_atom, /obj/machinery/portable_atmospherics/powered/reagent_distillery))

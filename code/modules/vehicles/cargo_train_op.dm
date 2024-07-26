@@ -122,7 +122,7 @@
 
 /obj/vehicle/train/trolly_tank/examine(mob/user, infix, suffix)
 	. = ..()
-	. += "The meter shows [FLOOR((reagents.total_volume / reagents.maximum_volume) * 100,1)]% full."
+	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u."
 
 /obj/vehicle/train/trolly_tank/update_icon()
 	. = ..()

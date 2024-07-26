@@ -21,6 +21,7 @@
 	// remove these
 	verbs -= /obj/machinery/reagentgrinder/verb/grind_verb
 	verbs -= /obj/machinery/reagentgrinder/verb/remove_beaker
+	update_neighbours()
 	update_icon()
 	// Bonus materials that we can grind that the base grinder cannot!
 	sheet_reagents += list(
@@ -40,6 +41,14 @@
 		var/image/dot = image(icon, icon_state = "grinder_dot_[ beaker.amount_per_transfer_from_this > 0 ? "on" : "off" ]")
 		add_overlay(dot)
 	return
+
+/obj/machinery/reagentgrinder/industrial/proc/update_neighbours()
+	// Update icons and neighbour icons to avoid loss of sanity
+	for(var/direction in cardinal)
+		var/turf/T = get_step(get_turf(src),direction)
+		var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
+		if(other && other.anchored)
+			other.update_icon()
 
 /obj/machinery/reagentgrinder/industrial/process()
 	if(!anchored || !beaker)
@@ -88,7 +97,7 @@
 		beaker.amount_per_transfer_from_this = old
 	update_icon()
 
-/obj/machinery/reagentgrinder/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/reagentgrinder/industrial/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.has_tool_quality(TOOL_WRENCH))
 		playsound(src, O.usesound, 75, 1)
 		anchored = !anchored
@@ -166,7 +175,7 @@
 /obj/machinery/reagentgrinder/industrial/examine(mob/user)
 	. = list(initial(desc)) // Clears the parent's messy stuff
 	if(beaker)
-		. += "The meter shows [FLOOR((beaker.reagents.total_volume / beaker.reagents.maximum_volume) * 100,1)]% full. It is pumping chemicals at a rate of [beaker.amount_per_transfer_from_this]u."
+		. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [beaker.amount_per_transfer_from_this]u."
 
 /obj/machinery/reagentgrinder/industrial/grind(var/mob/user)
 	return
@@ -174,5 +183,5 @@
 /obj/machinery/reagentgrinder/industrial/AltClick(var/mob/user)
 	return
 
-/obj/machinery/reagentgrinder/attack_hand(var/mob/user)
+/obj/machinery/reagentgrinder/industrial/attack_hand(var/mob/user)
 	return

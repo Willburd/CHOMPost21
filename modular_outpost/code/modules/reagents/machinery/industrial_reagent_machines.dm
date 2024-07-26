@@ -77,6 +77,8 @@
 	if(istype(target,/obj/machinery/reagent_refinery/hub))
 		if(dir == reverse_dir[source_forward_dir] ) // Hub faces into instead of away
 			return
+		if(istype(target,/obj/machinery/reagent_refinery/filter) && dir == reverse_dir[source_forward_dir]) // Don't try to backfill filters
+			return
 		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(target)
 		if(!tanker)
 			return

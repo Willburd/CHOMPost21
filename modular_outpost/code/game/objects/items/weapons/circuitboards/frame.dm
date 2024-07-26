@@ -90,3 +90,14 @@
 	req_components = list(
 							/obj/item/weapon/stock_parts/motor = 1,
 							/obj/item/weapon/stock_parts/manipulator = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_reactor
+	name = T_BOARD("industrial chemical reactor")
+	build_path = /obj/machinery/reagent_refinery/reactor
+	board_type = new /datum/frame/frame_types/industrial_reagent_reactor
+	req_components = list(
+							/obj/item/weapon/stock_parts/motor = 1,
+							/obj/item/weapon/stock_parts/capacitor = 4,
+							/obj/item/weapon/stock_parts/micro_laser = 4,
+							/obj/item/weapon/stock_parts/manipulator = 1,
+							/obj/item/stack/material/glass/reinforced = 1)
