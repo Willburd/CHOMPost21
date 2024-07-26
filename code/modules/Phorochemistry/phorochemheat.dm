@@ -131,6 +131,12 @@
 	set category = "IC.Game" //CHOMPEdit
 
 	heating = !heating
+
+	var/datum/gas_mixture/GM = return_air()
+	if(GM)
+		current_temp = GM.temperature // Reset gas on start
+	else
+		current_temp = T0C
 	update_icon()
 
 /obj/machinery/bunsen_burner/process()
@@ -142,15 +148,15 @@
 			return
 
 		if((current_temp - T0C) % 25 == 0) // every 25 degree step
-			if(current_temp < 323.15)
+			if(current_temp < T0C + 50)
 				src.visible_message("<span class='notice'>\The [src] sloshes.</span>")
-			else if(current_temp < 373.15)
+			else if(current_temp <  T0C + 100)
 				src.visible_message("<span class='notice'>\The [src] hisses.</span>")
-			else if(current_temp < 473.15)
+			else if(current_temp <  T0C + 200)
 				src.visible_message("<span class='notice'>\The [src] boils.</span>")
-			else if(current_temp < 773.15)
+			else if(current_temp <  T0C + 400)
 				src.visible_message("<span class='notice'>\The [src] bubbles aggressively.</span>")
-			else if(current_temp < 1273.15)
+			else if(current_temp <  T0C + 600)
 				src.visible_message("<span class='warning'>\The [src] violently shakes.</span>")
 			else
 				src.visible_message("<span class='danger'>\The [src] clicks.</span>")
