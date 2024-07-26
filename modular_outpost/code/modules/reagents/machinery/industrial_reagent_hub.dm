@@ -44,19 +44,20 @@
 	if(!other) // snowflake grinders...
 		other = locate(/obj/machinery/reagentgrinder/industrial) in T
 	var/intake = FALSE
-	if(other && other.anchored)
-		// weird handling for side connections... Otherwise, anything pointing into use gets connected back!
-		if(istype(other,/obj/machinery/reagent_refinery/filter))
-			var/obj/machinery/reagent_refinery/filter/filt = other
-			var/check_dir = 0
-			if(filt.filter_side == 1)
-				check_dir = turn(filt.dir, 270)
-			else
-				check_dir = turn(filt.dir, 90)
-			if(check_dir == reverse_dir[dir])
+	if(other && other.anchored)// Waste processors do not connect to anything as outgoing
+		if(!istype(other,/obj/machinery/reagent_refinery/waste_processor))
+			// weird handling for side connections... Otherwise, anything pointing into use gets connected back!
+			if(istype(other,/obj/machinery/reagent_refinery/filter))
+				var/obj/machinery/reagent_refinery/filter/filt = other
+				var/check_dir = 0
+				if(filt.filter_side == 1)
+					check_dir = turn(filt.dir, 270)
+				else
+					check_dir = turn(filt.dir, 90)
+				if(check_dir == reverse_dir[dir])
+					intake = TRUE
+			if(other.dir == reverse_dir[dir])
 				intake = TRUE
-		if(other.dir == reverse_dir[dir])
-			intake = TRUE
 	// Get main dir pipe
 	if(intake)
 		var/image/pipe = image(icon, icon_state = "hub_intakes", dir = dir)

@@ -7,11 +7,12 @@
 	flags = OPENCONTAINER
 
 	var/obj/item/weapon/reagent_containers/glass/stored_container = null
-	paint_color = "#decd12"
+	paint_color = "#efdd16"
 
 /obj/vehicle/train/trolly_tank/Initialize()
 	. = ..()
 	create_reagents(5000)
+	update_icon()
 
 /obj/vehicle/train/trolly_tank/insert_cell(var/obj/item/weapon/cell/C, var/mob/living/carbon/human/H)
 	return
@@ -127,7 +128,19 @@
 	. = ..()
 	cut_overlays()
 	if(reagents && reagents.total_volume > 0)
-		var/image/chems = image(icon, icon_state = "[icon_state]_r", dir = NORTH)
+		var/percent = (reagents.total_volume / reagents.maximum_volume) * 100
+		switch(percent)
+			if(0 to 10)			percent = 10
+			if(10 to 20) 		percent = 20
+			if(20 to 30) 		percent = 30
+			if(30 to 40) 		percent = 40
+			if(40 to 50)		percent = 50
+			if(50 to 60)		percent = 60
+			if(60 to 70)		percent = 70
+			if(70 to 80)		percent = 80
+			if(80 to 90)		percent = 90
+			if(90 to INFINITY)	percent = 100
+		var/image/chems = image(icon, icon_state = "[icon_state]_r_[percent]", dir = NORTH)
 		chems.color = reagents.get_color()
 		add_overlay(chems)
 	var/image/Bodypaint = image(icon, icon_state = "[icon_state]_c", dir = NORTH)

@@ -69,6 +69,9 @@
 			if(!other) // snowflake grinders...
 				other = locate(/obj/machinery/reagentgrinder/industrial) in T
 			if(other && other.anchored)
+				// Waste processors do not connect to anything as outgoing
+				if(istype(other,/obj/machinery/reagent_refinery/waste_processor))
+					continue
 				// weird handling for side connections... Otherwise, anything pointing into use gets connected back!
 				if(istype(other,/obj/machinery/reagent_refinery/filter))
 					var/obj/machinery/reagent_refinery/filter/filt = other

@@ -56,7 +56,7 @@
 	cut_overlays()
 	icon_state = "filter_[filter_side == 1 ? "r" : "l"]"
 
-	if(reagents.total_volume > 0)
+	if(reagents && reagents.total_volume > 0)
 		var/image/filling = image(icon, loc, "[icon_state]_r",dir = dir)
 		filling.color = reagents.get_color()
 		add_overlay(filling)
