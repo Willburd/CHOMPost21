@@ -1879,6 +1879,7 @@
 #include "code\game\turfs\flooring\flooring_decals_op.dm"
 #include "code\game\turfs\flooring\flooring_decals_vr.dm"
 #include "code\game\turfs\flooring\flooring_decals_yw.dm"
+#include "code\game\turfs\flooring\flooring_op.dm"
 #include "code\game\turfs\flooring\flooring_premade.dm"
 #include "code\game\turfs\flooring\flooring_premade_op.dm"
 #include "code\game\turfs\flooring\flooring_vr.dm"
