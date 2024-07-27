@@ -1,3 +1,5 @@
+var/global/list/vats_to_rain_into = list() // Faster than checks, and handles all weather datums...
+
 /obj/machinery/reagent_refinery/vat
 	name = "Industrial Chemical Vat"
 	desc = "A large mixing vat for huge quantities of chemicals. Don't fall in!"
@@ -21,6 +23,11 @@
 		circuit = new circuit(src)
 	default_apply_parts()
 	update_icon()
+	vats_to_rain_into.Add(src)
+
+/obj/machinery/reagent_refinery/vat/Destroy()
+	. = ..()
+	vats_to_rain_into.Remove(src)
 
 /obj/machinery/reagent_refinery/vat/process()
 	if(buckled_mobs && buckled_mobs.len && reagents.total_volume > 0)

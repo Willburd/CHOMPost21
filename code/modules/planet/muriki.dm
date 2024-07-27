@@ -227,6 +227,16 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_rain/process_effects()
 	..()
+	// Fill chem vats
+	if(prob(10))
+		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
+			if(V.z in holder.our_planet.expected_z_levels)
+				var/turf/T = get_turf(V)
+				if(!T.is_outdoors())
+					continue
+				if(prob(40))
+					V.reagents.add_reagent("water",5)
+
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
@@ -293,6 +303,16 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_storm/process_effects()
 	..()
+	// Fill chem vats
+	if(prob(20))
+		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
+			if(V.z in holder.our_planet.expected_z_levels)
+				var/turf/T = get_turf(V)
+				if(!T.is_outdoors())
+					continue
+				if(prob(40))
+					V.reagents.add_reagent("water",10)
+
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)

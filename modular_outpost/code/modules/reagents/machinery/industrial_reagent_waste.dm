@@ -12,7 +12,7 @@
 	// Chemical bath funtimes!
 	can_buckle = TRUE
 	buckle_lying = TRUE
-	default_max_vol = 6000
+	default_max_vol = 5000
 
 /obj/machinery/reagent_refinery/waste_processor/Initialize()
 	. = ..()
