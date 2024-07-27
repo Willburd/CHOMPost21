@@ -51,7 +51,7 @@
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
 	ckeywhitelist = list("ozydev","synxplushy")
-	character_name = list("Raine Rattlewag","Zeeshi")
+	character_name = list("Raine Rattlewag","Cracker","Zeeshi")
 
 /datum/gear/fluff/ESHUI_rankpin
 	display_name = "ESHUI Officer's Qualification Pin"
