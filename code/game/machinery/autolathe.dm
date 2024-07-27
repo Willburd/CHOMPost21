@@ -132,6 +132,12 @@
 	if(is_robot_module(O))
 		return 0
 
+	// Outpost 21 edit begin - Must be empty storage!
+	if(istype(O, /obj/item/weapon/storage) && O.contents.len > 0)
+		to_chat(user, "You cannot insert this item into \the [src] while it has things in it!")
+		return 1
+	// Outpost 21 edit end
+
 	if(istype(O,/obj/item/ammo_magazine/clip) || istype(O,/obj/item/ammo_magazine/s357) || istype(O,/obj/item/ammo_magazine/s38) || istype (O,/obj/item/ammo_magazine/s44)/* VOREstation Edit*/) // Prevents ammo recycling exploit with speedloaders.
 		to_chat(user, "\The [O] is too hazardous to recycle with the autolathe!")
 		return
