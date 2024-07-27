@@ -141,7 +141,7 @@
 		to_chat(user, "<span class='notice'>\the [src] is too full to possibly fit anything else inside of it.</span>")
 		return
 
-	if (istype(W, /obj/item/weapon/ore))
+	if (istype(W, /obj/item/weapon/ore) && !istype(W, /obj/item/weapon/ore/slag))
 		var/obj/item/weapon/ore/ore = W
 		stored_ore[ore.material]++
 		current_capacity++
