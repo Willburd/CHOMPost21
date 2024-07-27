@@ -861,6 +861,7 @@
 
 /datum/reagent/drink/coffee/nukie/mega/shock/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
+	/* Outpost 21 edit - Nif removal
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
@@ -871,8 +872,39 @@
 		else if(prob(5))
 			M.confused = max(M.confused, 20)
 			M.emote(pick("shudders", "seems lost", "blanks for a moment"))
-	M.adjust_nutrition(4 * removed)
+	*/
+	// Outpost 21 edit begin - makes super jittery and speedy for small time
+	var/threshold = 1 * M.species.chem_strength_tox
+	if(alien == IS_SKRELL)
+		threshold = 1.2
 
+	if(alien == IS_SLIME)
+		threshold = 0.8
+
+	var/drug_strength = 20
+	var/effective_dose = dose
+	if(issmall(M)) effective_dose *= 2
+	if(effective_dose < 1 * threshold)
+		M.apply_effect(3, STUTTER)
+		M.make_jittery(10)
+		if(prob(3))
+			M.emote(pick("twitch", "giggle"))
+	else if(effective_dose < 2 * threshold)
+		M.apply_effect(3, STUTTER)
+		M.make_jittery(20)
+		M.hallucination = max(M.hallucination, drug_strength * threshold)
+		if(prob(5))
+			M.emote(pick("twitch", "giggle"))
+	else
+		M.apply_effect(3, STUTTER)
+		M.make_jittery(30)
+		M.hallucination = max(M.hallucination, drug_strength * threshold)
+		if(prob(10))
+			M.emote(pick("twitch", "giggle"))
+	if(prob(5))
+		M.emote(pick("twitch", "giggle"))
+	// Outpost 21 edit end
+	M.adjust_nutrition(4 * removed)
 
 /datum/reagent/drink/coffee/nukie/mega/fast //Like hyperzine, but instead of overdosing, it occassionally burns you
 	name = "Nukie Mega Rapid"

@@ -640,8 +640,10 @@
 				to_chat(T, "<span class='danger'>An odd sensation flows through your body as you as [src] begins to drain you to dangerous levels!</span>")
 			if(51 to 98)
 				if(T.stat == DEAD)
+					/* Outpost 21 edit - Nif removal
 					if(soulgem?.flag_check(SOULGEM_ACTIVE | SOULGEM_CATCHING_DRAIN, TRUE))
 						soulgem.catch_mob(T)
+					*/
 					T.apply_damage(500, OXY) //Bit of fluff.
 					absorbing_prey = 0
 					to_chat(src, "<span class='notice'>You have completely drained [T], killing them.</span>")
@@ -656,8 +658,10 @@
 				if(drain_finalized != 1)
 					stage = 51
 			if(100) //They shouldn't  survive long enough to get here, but just in case.
+				/* Outpost 21 edit - Nif removal
 				if(soulgem?.flag_check(SOULGEM_ACTIVE | SOULGEM_CATCHING_DRAIN, TRUE))
 					soulgem.catch_mob(T)
+				*/
 				T.apply_damage(500, OXY) //Kill them.
 				absorbing_prey = 0
 				to_chat(src, "<span class='notice'>You have completely drained [T], killing them in the process.</span>")
