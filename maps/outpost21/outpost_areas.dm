@@ -1412,7 +1412,7 @@
 	icon_state = "quartdelivery"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = SMALL_SOFTFLOOR
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/medical/locker
 	name = "\improper Medical Locker Room"
@@ -2271,6 +2271,13 @@
 
 /area/engineering/engine_room
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/mail
+	name = "\improper Engineering Mailing Room"
+	icon_state = "quartdelivery"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	sound_env = SMALL_SOFTFLOOR
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/maintenance/incinerator
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
