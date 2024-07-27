@@ -358,9 +358,7 @@
 	// Do not edit name directly, it mulches the warp to area list
 	A.show_name = pick("GET OUT","I HATE YOU","GET OUT OF ME","I FEEL YOU INSIDE ME","GET OUT","IT HURTS","LEAVE LEAVE LEAVE LEAVE","GET OUT GET OUT GET OUT GET OUT")
 	if(prob(5))
-		var/list/mobs = locate(/mob/living) in range(10, get_turf(src))
-		if(mobs.len > 0)
-			var/mob/living/L = pick(mobs)
+		for(var/mob/living/L in range(10, get_turf(src)))
 			if(prob(10))
 				L.adjustOxyLoss(rand(23,37),TRUE)
 			else if(prob(50))
