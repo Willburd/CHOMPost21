@@ -24,7 +24,16 @@ export const MedicalRecordsViewMedical = (props) => {
           <LabeledList.Item key={i} label={field.field}>
             <Box preserveWhitespace>
               {field.value}
-              <Button icon="pen" ml="0.5rem" onClick={() => doEdit(field)} />
+              {/* Outpost 21 edit begin - multiline editor for records */}
+              {!!field.edit && (
+                field.edit === "notes" ? (
+                  <Button icon="pen" ml="1rem" onClick={() => act('edit_notes')} />
+                ) : (
+                  <Button icon="pen" ml="0.5rem" onClick={() => doEdit(field)} />
+                )
+              )}
+              {/* Outpost 21 edit begin end */}
+
             </Box>
           </LabeledList.Item>
         ))}
