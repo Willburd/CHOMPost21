@@ -132,6 +132,11 @@ SUBSYSTEM_DEF(supply)
 							for(var/datum/reagent/R in tank.reagents.reagent_list)
 								total_value += FLOOR(R.volume, 1) * R.supply_conversion_value
 								total_units += FLOOR(R.volume, 1)
+								// Update endround data
+								if(isnull(refined_chems_sold[R.industrial_use]))
+									refined_chems_sold[R.industrial_use] = FLOOR(R.volume, 1)
+								else
+									refined_chems_sold[R.industrial_use] += FLOOR(R.volume, 1)
 						EC.contents[EC.contents.len]["value"] = total_value
 						EC.contents[EC.contents.len]["quantity"] = total_units
 						EC.value += EC.contents[EC.contents.len]["value"]
