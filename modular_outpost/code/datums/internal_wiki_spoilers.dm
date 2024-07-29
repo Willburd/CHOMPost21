@@ -1,4 +1,6 @@
 // Materials
+/datum/reagent/epinephrine
+	spoiler = TRUE
 /datum/material/placeholder
 	spoiler = TRUE
 /datum/material/flockium
@@ -48,6 +50,10 @@
 /datum/material/cloth/orange
 	spoiler = TRUE
 /datum/material/carpet
+	spoiler = TRUE
+/datum/reagent/glamour_scaling
+	spoiler = TRUE
+/datum/reagent/amorphorovir
 	spoiler = TRUE
 
 // Food/drink

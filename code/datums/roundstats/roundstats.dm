@@ -92,6 +92,24 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 		valid_stats_list.Add("A total of [GLOB.items_digested_roundstat] items were digested today!")
 	//VOREStation Add End
 
+	// outpost 21 add begin - supply points for chem sales!
+	var/points = 0
+	var/units = 0
+	if(GLOB.refined_chems_sold && GLOB.refined_chems_sold.len > 0)
+		valid_stats_list.Add("<span class = 'warning'>The station exported:</span>")
+		for(var/D in GLOB.refined_chems_sold)
+			units += GLOB.refined_chems_sold[D]["units"]
+			points += GLOB.refined_chems_sold[D]["value"]
+
+			var/dols = GLOB.refined_chems_sold[D]["value"] * SSsupply.points_per_money
+			dols = FLOOR(dols * 100,1) / 100 // Truncate decimals
+			valid_stats_list.Add("[ GLOB.refined_chems_sold[D]["units"] ]u of [ D ], for [ GLOB.refined_chems_sold[D]["value"] ] points! A total of [dols] [dols > 1 ? "thalers" : "thaler"]")
+
+	var/end_dols = points * SSsupply.points_per_money
+	end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
+	valid_stats_list.Add("For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
+	// outpost 21 add end
+
 	if(LAZYLEN(valid_stats_list))
 		to_world("<B>Shift trivia!</B>")
 

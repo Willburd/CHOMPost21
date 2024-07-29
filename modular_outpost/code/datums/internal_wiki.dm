@@ -386,11 +386,12 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body  = "<b>Integrity: [M.integrity]</b><br>"
 	body += "<b>Hardness: [M.hardness]</b><br>"
 	body += "<b>Weight: [M.weight]</b><br>"
-	body += "<b>Cargo Points: [M.supply_conversion_value] per sheet, [M.supply_conversion_value * 50] per stack</b><br>"
+	var/stack_size = 50
+	body += "<b>Cargo Points: [M.supply_conversion_value] per sheet, [M.supply_conversion_value * stack_size] per stack of [stack_size]</b><br>"
 	var/value = M.supply_conversion_value * SSsupply.points_per_money
 	value = FLOOR(value * 100,1) / 100 // Truncate decimals
 	if(value > 0)
-		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"] per sheet  |  [(value*50)] [(value*50) > 1 ? "thalers" : "thaler"] per stack</b><br>"
+		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"] per sheet  |  [(value*stack_size)] [(value*stack_size) > 1 ? "thalers" : "thaler"] per stack of [stack_size]</b><br>"
 	body += "<br>"
 	body += "<b>Transparent: [M.opacity >= 0.5 ? "No" : "Yes"]</b><br>"
 	body += "<b>Conductive: [M.conductive ? "Yes" : "No"]</b><br>"
@@ -550,13 +551,14 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 /datum/internal_wiki/page/proc/chemical_assemble(var/datum/reagent/R)
 	title = R.name
 	body  = "<b>Description: </b>[R.description]<br>"
+	var/tank_size = 5000
 	if(R.industrial_use)
 		body  += "<b>Industrial Use: </b>[R.industrial_use]<br>"
-	body += "<b>Cargo Points: [R.supply_conversion_value] per unit, [R.supply_conversion_value * 50] per tank</b><br>"
+	body += "<b>Cargo Points: [R.supply_conversion_value] per unit, [R.supply_conversion_value * tank_size] per [tank_size] tank</b><br>"
 	var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money
 	value = FLOOR(value * 100,1) / 100 // Truncate decimals
 	if(value > 0)
-		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"] per [REAGENTS_PER_SHEET] units  |  [(value*5000)] [(value*5000) > 1 ? "thalers" : "thaler"] per [5000] unit tank</b><br>"
+		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"] per [REAGENTS_PER_SHEET] units  |  [(value*tank_size)] [(value*tank_size) > 1 ? "thalers" : "thaler"] per [tank_size] unit tank</b><br>"
 	if(R.overdose > 0)
 		body += "<b>Overdose: </b>[R.overdose]U<br>"
 	body += "<b>Flavor: </b>[R.taste_description]<br>"

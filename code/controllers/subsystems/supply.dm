@@ -123,25 +123,35 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
-					//Outpost 21 edit begin - Sell reagent tanks
-					if(istype(A, /obj/vehicle/train/trolly_tank))
-						var/obj/vehicle/train/trolly_tank/tank = A
-						var/total_value = 0
-						var/total_units = 0
-						if(tank.reagents && tank.reagents.reagent_list > 0)
-							for(var/datum/reagent/R in tank.reagents.reagent_list)
-								total_value += FLOOR(R.volume, 1) * R.supply_conversion_value
-								total_units += FLOOR(R.volume, 1)
-								// Update endround data
-								if(isnull(refined_chems_sold[R.industrial_use]))
-									refined_chems_sold[R.industrial_use] = FLOOR(R.volume, 1)
-								else
-									refined_chems_sold[R.industrial_use] += FLOOR(R.volume, 1)
-						EC.contents[EC.contents.len]["value"] = total_value
-						EC.contents[EC.contents.len]["quantity"] = total_units
-						EC.value += EC.contents[EC.contents.len]["value"]
-					//Outpost 21 edit end
 
+			//Outpost 21 edit begin - Sell reagent tanks
+			else if(istype(MA, /obj/vehicle/train/trolly_tank))
+				var/obj/vehicle/train/trolly_tank/tank = MA
+				if(tank && tank.reagents && tank.reagents.reagent_list.len > 0)
+					var/actually_trying_bonus = FALSE
+					for(var/datum/reagent/R in tank.reagents.reagent_list)
+						// Update export values
+						EC.contents[++EC.contents.len] = list(
+							"object" = "\proper[R.name]",
+							"value" = FLOOR(R.volume, 1) * R.supply_conversion_value,
+							"quantity" = FLOOR(R.volume, 1)
+						)
+						EC.value += EC.contents[EC.contents.len]["value"]
+
+						if(R.volume >= 2000)
+							actually_trying_bonus = TRUE // Send at least 2000u of a chem for a discount on the tank
+						// Update end round data
+						if(isnull(GLOB.refined_chems_sold[R.industrial_use]))
+							var/list/data = list()
+							data["units"] = FLOOR(R.volume, 1)
+							data["value"] = FLOOR(R.volume, 1) * R.supply_conversion_value
+							GLOB.refined_chems_sold[R.industrial_use] = data
+						else
+							GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
+							GLOB.refined_chems_sold[R.industrial_use]["value"] += FLOOR(R.volume, 1) * R.supply_conversion_value
+					if(actually_trying_bonus)
+						base_value += 5 // Discount on next tank bonus
+			//Outpost 21 edit end
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything
 			else

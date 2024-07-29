@@ -48,6 +48,7 @@
 	conductivity = 10
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
+	supply_conversion_value = 1 // Outpost 21 edit - This was missing...
 
 /datum/material/lead
 	name = MAT_LEAD

@@ -1,13 +1,13 @@
 #define SHEET_TO_REAGENT_EQUIVILENT *(1/REAGENTS_PER_SHEET) // 0.05 normally 1/20
 
-// Use these, unless it had a sheet analog to match
-#define EXPORT_VALUE_UNWANTED 0.1 SHEET_TO_REAGENT_EQUIVILENT
-#define EXPORT_VALUE_COMMON 1 SHEET_TO_REAGENT_EQUIVILENT
-#define EXPORT_VALUE_RARE 2 SHEET_TO_REAGENT_EQUIVILENT
-#define EXPORT_VALUE_PROCESSED 3 SHEET_TO_REAGENT_EQUIVILENT
-#define EXPORT_VALUE_HIGHREFINED 4 SHEET_TO_REAGENT_EQUIVILENT
-#define EXPORT_VALUE_MASSINDUSTRY 5 SHEET_TO_REAGENT_EQUIVILENT
-#define EXPORT_VALUE_PEAK 6 SHEET_TO_REAGENT_EQUIVILENT
+// Use these, unless it had a sheet analog to match,    VAL * 0.05 * 5000 = per full tank points
+#define EXPORT_VALUE_UNWANTED 0.1 SHEET_TO_REAGENT_EQUIVILENT	// 25 per tank
+#define EXPORT_VALUE_COMMON 0.24 SHEET_TO_REAGENT_EQUIVILENT	// 60 per tank
+#define EXPORT_VALUE_RARE 0.6 SHEET_TO_REAGENT_EQUIVILENT		// 150 per tank
+#define EXPORT_VALUE_PROCESSED 1 SHEET_TO_REAGENT_EQUIVILENT	// 250 per tank
+#define EXPORT_VALUE_HIGHREFINED 2 SHEET_TO_REAGENT_EQUIVILENT	// 500 per tank
+#define EXPORT_VALUE_MASSINDUSTRY 3 SHEET_TO_REAGENT_EQUIVILENT	// 750 per tank
+#define EXPORT_VALUE_PEAK 4 SHEET_TO_REAGENT_EQUIVILENT			// 1000 per tank
 
 // Use these or you'll get weird endround lists
 #define EXPORT_REASON_BIOHAZARD "unwanted biohazards"
@@ -31,7 +31,7 @@
 #define EXPORT_REASON_LUBE "industrial lubricants"
 
 // End of round global list, each macro above is used as a list index for the amount of that export type sold!
-var/global/list/refined_chems_sold = list()
+GLOBAL_LIST_EMPTY(refined_chems_sold)
 
 // The tl;dr here is that the supply_conversion_value of the reagent should just match the per sheet value with the macro above.
 // That should keep everything inline and not cause any cargo exploits.
@@ -102,7 +102,7 @@ var/global/list/refined_chems_sold = list()
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/iron
-	supply_conversion_value = EXPORT_VALUE_COMMON
+	supply_conversion_value = 1 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = EXPORT_REASON_RAW
 
 /datum/reagent/lithium
@@ -1067,6 +1067,146 @@ var/global/list/refined_chems_sold = list()
 
 /datum/reagent/toxin/liquidlife
 	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
+	industrial_use = EXPORT_REASON_MATSCI
+
+// code\modules\Phorochemistry\phororeagent.dm
+/datum/reagent/phororeagent/bicordrazine
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_DRUG
+
+/datum/reagent/phororeagent/genedrazine
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_DRUG
+
+/datum/reagent/phororeagent/lacertusol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/love_potion
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_ILLDRUG
+
+/datum/reagent/phororeagent/nasty
+	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	industrial_use = EXPORT_REASON_BIOHAZARD
+
+/datum/reagent/phororeagent/babelizine
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/calcisol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/malaxitol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/paralitol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/doloran
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/fulguracin
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/mortemol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/tegoxane
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/expulsicol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/oculusosone
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/destitutionecam
+	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	industrial_use = EXPORT_REASON_BIOHAZARD
+
+/datum/reagent/phororeagent/sapoformator
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_CLEAN
+
+/datum/reagent/phororeagent/rad_x
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/caloran
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/the_stuff
+	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
+	industrial_use = EXPORT_REASON_ILLDRUG
+
+/datum/reagent/phororeagent/frioline
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/luxitol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/phororeagent/liquid_skin
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/energized_phoron
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/induromol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/obscuritol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/tartrate
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/phororeagent/oxyphoromin
+	supply_conversion_value = EXPORT_VALUE_PEAK
+	industrial_use = EXPORT_REASON_PHORON
+
+/datum/reagent/phororeagent/gaseous/occaecosone
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+/datum/reagent/phororeagent/gaseous/ignisol
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	industrial_use = EXPORT_REASON_WEAPONS
+
+// code\modules\Phorochemistry\misc_phoronics.dm
+/datum/reagent/nitrate
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/aluminum_nitrate
+	supply_conversion_value = EXPORT_VALUE_RARE
+	industrial_use = EXPORT_REASON_MATSCI
+
+// code\game\gamemodes\changeling\powers\epinephrine_overdose.dm
+/datum/reagent/epinephrine
+	supply_conversion_value = EXPORT_VALUE_RARE
+	industrial_use = EXPORT_REASON_MATSCI
+
+// code\modules\mob\living\carbon\human\species\lleill\lleill_items.dm
+/datum/reagent/glamour_scaling
+	supply_conversion_value = EXPORT_VALUE_RARE
 	industrial_use = EXPORT_REASON_MATSCI
 
 #undef EXPORT_REASON_BIOHAZARD
