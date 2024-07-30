@@ -1,6 +1,7 @@
 #define SHEET_TO_REAGENT_EQUIVILENT *(1/REAGENTS_PER_SHEET) // 0.05 normally 1/20
 
 // Use these, unless it had a sheet analog to match,    VAL * 0.05 * 5000 = per full tank points
+#define EXPORT_VALUE_NO 0.02 SHEET_TO_REAGENT_EQUIVILENT		// 5 per tank
 #define EXPORT_VALUE_UNWANTED 0.1 SHEET_TO_REAGENT_EQUIVILENT	// 25 per tank
 #define EXPORT_VALUE_COMMON 0.24 SHEET_TO_REAGENT_EQUIVILENT	// 60 per tank
 #define EXPORT_VALUE_RARE 0.6 SHEET_TO_REAGENT_EQUIVILENT		// 150 per tank
@@ -8,6 +9,7 @@
 #define EXPORT_VALUE_HIGHREFINED 2 SHEET_TO_REAGENT_EQUIVILENT	// 500 per tank
 #define EXPORT_VALUE_MASSINDUSTRY 3 SHEET_TO_REAGENT_EQUIVILENT	// 750 per tank
 #define EXPORT_VALUE_PEAK 4 SHEET_TO_REAGENT_EQUIVILENT			// 1000 per tank
+#define EXPORT_VALUE_GODTIER 8 SHEET_TO_REAGENT_EQUIVILENT		// 2000 per tank
 
 // Use these or you'll get weird endround lists
 #define EXPORT_REASON_BIOHAZARD "unwanted biohazards"
@@ -57,7 +59,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/water
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_RAW
 
 /datum/reagent/antibodies
@@ -159,15 +161,15 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 
 // code\modules\reagents\reagents\drugs.dm
 /datum/reagent/drugs/bliss
-	supply_conversion_value = EXPORT_VALUE_PROCESSED
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = EXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/ambrosia_extract
-	supply_conversion_value = EXPORT_VALUE_PROCESSED
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = EXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/psilocybin
-	supply_conversion_value = EXPORT_VALUE_PROCESSED
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = EXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/talum_quem
@@ -196,11 +198,11 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 
 // code\modules\reagents\reagents\food_drinks_vr.dm
 /datum/reagent/toxin/meatcolony
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/toxin/plantcolony
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 // code\modules\reagents\reagents\food_drinks.dm
@@ -324,8 +326,8 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_DIET
 
 /datum/reagent/polymorph
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_ILLDRUG
+	supply_conversion_value = EXPORT_VALUE_HIGHREFINED // bonus
+	industrial_use = EXPORT_REASON_WEAPONS
 
 /datum/reagent/glamour
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
@@ -531,7 +533,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 
 // code\modules\reagents\reagents\other_ch.dm
 /datum/reagent/liquidspideregg
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/nutriment/pitcher_nectar
@@ -637,7 +639,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_MEDSCI
 
 /datum/reagent/water/holywater
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_RAW
 
 /datum/reagent/ammonia
@@ -705,7 +707,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_MATSCI
 
 /datum/reagent/defective_nanites
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/nutriment/fishbait
@@ -742,7 +744,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/toxin/neurotoxic_protein
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/toxin/hydrophoron
@@ -766,11 +768,11 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/toxin/mold
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/toxin/expired_medicine
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/toxin/stimm
@@ -810,11 +812,11 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_INDUSTRY
 
 /datum/reagent/acid/digestive
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/acid/diet_digestive
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/thermite/venom
@@ -874,15 +876,15 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_MATSCI
 
 /datum/reagent/shredding_nanites
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/irradiated_nanites
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/neurophage_nanites
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 // code\modules\reagents\reagents\vore_ch.dm
@@ -900,19 +902,19 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 
 // code\modules\reagents\reagents\vore_vr.dm
 /datum/reagent/macrocillin
-	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
+	supply_conversion_value = EXPORT_VALUE_GODTIER
 	industrial_use = EXPORT_REASON_MEDSCI
 
 /datum/reagent/microcillin
-	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
+	supply_conversion_value = EXPORT_VALUE_GODTIER
 	industrial_use = EXPORT_REASON_MEDSCI
 
 /datum/reagent/normalcillin
-	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
+	supply_conversion_value = EXPORT_VALUE_GODTIER
 	industrial_use = EXPORT_REASON_MEDSCI
 
 /datum/reagent/sizeoxadone
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
+	supply_conversion_value = EXPORT_VALUE_PEAK
 	industrial_use = EXPORT_REASON_MEDSCI
 
 /datum/reagent/ickypak
@@ -946,12 +948,12 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 
 // modular_chomp\code\modules\reagents\reagents\dispenser.dm
 /datum/reagent/miasma
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 // modular_chomp\code\modules\reagents\reagents\food_drinks.dm
 /datum/reagent/slimedrink
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/cinnamonpowder
@@ -1087,7 +1089,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_ILLDRUG
 
 /datum/reagent/phororeagent/nasty
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/phororeagent/babelizine
@@ -1131,7 +1133,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_MEDSCI
 
 /datum/reagent/phororeagent/destitutionecam
-	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 /datum/reagent/phororeagent/sapoformator
@@ -1229,11 +1231,13 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 #undef EXPORT_REASON_CLEAN
 #undef EXPORT_REASON_LUBE
 
+#undef EXPORT_VALUE_NO
 #undef EXPORT_VALUE_UNWANTED
 #undef EXPORT_VALUE_COMMON
 #undef EXPORT_VALUE_RARE
 #undef EXPORT_VALUE_PROCESSED
 #undef EXPORT_VALUE_HIGHREFINED
 #undef EXPORT_VALUE_MASSINDUSTRY
+#undef EXPORT_VALUE_GODTIER
 
 #undef SHEET_TO_REAGENT_EQUIVILENT

@@ -9,9 +9,10 @@ SUBSYSTEM_DEF(supply)
 
 	//supply points
 	var/points = 50
-	var/points_per_process = 1.0	// Processes every 20 seconds, so this is 3 per minute
+	var/points_per_process = 0 // Outpost 21 edit - changed 1.0 to 0	// Processes every 20 seconds, so this is 3 per minute
 	var/points_per_slip = 2
-	var/points_per_money = 0.02 // 1 point for $50
+	var/points_per_money = 8 // Outpost 21 edit - changed from 0.02 to 8, matches cargopoint vendor. Taxes cash exports to avoid exploits. // 1 point for $50
+	var/cash_tax = 0.05 //  Outpost 21 edit - Amount REMAINING after taxing. We have higher money conversion so exports are more valuable, and taxes on raw cash export
 	//control
 	var/ordernum
 	var/list/shoppinglist = list()			// Approved orders
@@ -116,13 +117,13 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = P.get_amount()
 						EC.value += EC.contents[EC.contents.len]["value"]
 
+
 					//Sell spacebucks
 					if(istype(A, /obj/item/weapon/spacecash))
 						var/obj/item/weapon/spacecash/cashmoney = A
-						EC.contents[EC.contents.len]["value"] = cashmoney.worth * points_per_money
+						EC.contents[EC.contents.len]["value"] = (cashmoney.worth * points_per_money) * cash_tax // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
-
 
 			//Outpost 21 edit begin - Sell reagent tanks
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
