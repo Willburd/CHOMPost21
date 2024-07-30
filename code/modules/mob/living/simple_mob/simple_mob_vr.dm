@@ -230,6 +230,7 @@
 	if(!vore_active || no_vore || !voremob_loaded) //CHOMPedit: On-demand belly loading.
 		return
 
+	AddElement(/datum/element/slosh) // Sloshy element
 	/* Outpost 21 edit - Nif removal
 	//CHOMPAdd Start
 	if(!soulgem)

@@ -47,7 +47,7 @@
 
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
-		if(M)
+		if(!QDELETED(M))
 			M.init_vore()
 
 	//return TRUE to hook-caller
@@ -55,6 +55,7 @@
 
 /mob/proc/init_vore()
 	//Something else made organs, meanwhile.
+	AddElement(/datum/element/slosh) // CHOMPEdit - Sloshy element
 	if(LAZYLEN(vore_organs))
 		/* // Outpost 21 edit - Nif removal
 		//CHOMPAdd Start
@@ -93,6 +94,11 @@
 		return TRUE
 		//CHOMPAdd End
 		*/
+
+/mob/living/init_vore()
+	if(no_vore)
+		return FALSE
+	return ..()
 
 //
 // Hide vore organs in contents
