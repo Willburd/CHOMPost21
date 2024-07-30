@@ -459,6 +459,8 @@
 		return
 	if(stat & (BROKEN|NOPOWER))
 		return
+	if(M.buckled) // Outpost 21 edit - Consistant behavior with scanner
+		return
 	if(occupant)
 		to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
 		return
@@ -471,6 +473,8 @@
 		visible_message("\The [user] starts putting [M] into \the [src].")
 
 	if(do_after(user, 20))
+		if(M.buckled) // Outpost 21 edit - Consistant behavior with scanner
+			return
 		if(occupant)
 			to_chat(user, "<span class='warning'>\The [src] is already occupied.</span>")
 			return
