@@ -203,6 +203,11 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/open/force_indoor
 
+/area/muriki/bathroom/engrefinery
+	name = "\improper Moonshiner"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/simulated/mineral/floor/muriki
+
 /area/muriki/bathroom/kitchen
 	name = "\improper Kitchen Comode"
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
@@ -638,15 +643,33 @@
 	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/engineering/refinery
+	ambience = AMBIENCE_MAINTENANCE
+
 /area/engineering/refinery/main
 	name = "\improper Chemical Refinery"
 	icon_state = "primarystorage"
 	base_turf = /turf/simulated/mineral/floor/muriki
+	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/refinery/aid_station
+	name = "\improper Refinery Medical Station"
+	icon_state = "medbay2"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/engineering/refinery/tankstorage
 	name = "\improper Chemical Refinery Tank Storage"
 	icon_state = "eva"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	sound_env = SMALL_ENCLOSED
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/refinery/backup_gen
+	name = "\improper Chemical Refinery Generator"
+	icon_state = "darkred"
+	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
@@ -654,18 +677,22 @@
 	name = "\improper Chemical Refinery Observation Room"
 	icon_state = "darkred"
 	base_turf = /turf/simulated/open/force_indoor
+	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/engineering/refinery/lab
 	name = "\improper Chemical Refinery Lab"
 	icon_state = "primarystorage"
 	base_turf = /turf/simulated/open/force_indoor
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ATMOS
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/engineering/refinery/tugstorage
 	name = "\improper Chemical Refinery Tug Storage"
 	icon_state = "maint_pumpstation"
 	base_turf = /turf/simulated/mineral/floor/muriki
+	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/engineering/auxstore
@@ -2467,6 +2494,8 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/security/security_aid_station
+	name = "\improper Security Medical Station"
+	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open/force_indoor
 
