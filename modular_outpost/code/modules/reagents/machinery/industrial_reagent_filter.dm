@@ -12,7 +12,7 @@
 	var/filter_side = -1 // L
 	var/filter_reagent_id = ""
 
-	var/possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60)
+	possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60)
 	default_max_vol = 60 // smoll to match pipes
 
 /obj/machinery/reagent_refinery/filter/alt

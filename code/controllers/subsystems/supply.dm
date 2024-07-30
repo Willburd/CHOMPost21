@@ -128,29 +128,44 @@ SUBSYSTEM_DEF(supply)
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
 				var/obj/vehicle/train/trolly_tank/tank = MA
 				if(tank && tank.reagents && tank.reagents.reagent_list.len > 0)
-					var/actually_trying_bonus = FALSE
-					for(var/datum/reagent/R in tank.reagents.reagent_list)
-						// Update export values
-						EC.contents[++EC.contents.len] = list(
-							"object" = "\proper[R.name]",
-							"value" = FLOOR(R.volume, 1) * R.supply_conversion_value,
-							"quantity" = FLOOR(R.volume, 1)
-						)
-						EC.value += EC.contents[EC.contents.len]["value"]
+					if(tank.reagents.total_volume < 4000)
+						EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send full tanks only. Payment rendered null under terms of agreement."
+							)
+					else if(tank.reagents.reagent_list.len >= 3)
+						EC.contents = list(
+								"error" = "Error: Product was improperly refined. Send purified mixtures only. Payment rendered null under terms of agreement."
+							)
+					else
+						var/actually_trying_bonus = FALSE
+						for(var/datum/reagent/R in tank.reagents.reagent_list)
+							// Update export values
+							EC.contents[++EC.contents.len] = list(
+								"object" = "\proper[R.name]",
+								"value" = FLOOR(R.volume, 1) * R.supply_conversion_value,
+								"quantity" = FLOOR(R.volume, 1)
+							)
+							EC.value += EC.contents[EC.contents.len]["value"]
 
-						if(R.volume >= 2000)
-							actually_trying_bonus = TRUE // Send at least 2000u of a chem for a discount on the tank
-						// Update end round data
-						if(isnull(GLOB.refined_chems_sold[R.industrial_use]))
-							var/list/data = list()
-							data["units"] = FLOOR(R.volume, 1)
-							data["value"] = FLOOR(R.volume, 1) * R.supply_conversion_value
-							GLOB.refined_chems_sold[R.industrial_use] = data
-						else
-							GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
-							GLOB.refined_chems_sold[R.industrial_use]["value"] += FLOOR(R.volume, 1) * R.supply_conversion_value
-					if(actually_trying_bonus)
-						base_value += 5 // Discount on next tank bonus
+							if(R.volume >= 2000)
+								actually_trying_bonus = TRUE // Send at least 2000u of a chem for a discount on the tank
+							if(R.industrial_use)
+								// Update end round data
+								if(isnull(GLOB.refined_chems_sold[R.industrial_use]))
+									var/list/data = list()
+									data["units"] = FLOOR(R.volume, 1)
+									data["value"] = FLOOR(R.volume, 1) * R.supply_conversion_value
+									GLOB.refined_chems_sold[R.industrial_use] = data
+								else
+									GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
+									GLOB.refined_chems_sold[R.industrial_use]["value"] += FLOOR(R.volume, 1) * R.supply_conversion_value
+
+						if(actually_trying_bonus)
+							base_value += 5 // Discount on next tank bonus
+				else
+					EC.contents = list(
+							"error" = "Error: Product was improperly packaged. Nothing found in chemical tanker. Payment rendered null under terms of agreement."
+						)
 			//Outpost 21 edit end
 
 			// Make a log of it, but it wasn't shipped properly, and so isn't worth anything
