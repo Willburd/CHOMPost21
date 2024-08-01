@@ -100,7 +100,7 @@
 							to_chat(user, span("notice", "Potential Chemical Distillation [segment]: <br>"))
 						segment += 1
 
-						to_chat(user, span("notice", " -temps [CR.temp_range[1]] - [CR.temp_range[2]]<br>"))
+						to_chat(user, span("notice", " -temps [CR.temp_range[1]]k - [CR.temp_range[2]]k<br>"))
 
 						for(var/RQ in CR.required_reagents)
 							var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]

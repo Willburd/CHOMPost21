@@ -1,6 +1,7 @@
-/decl/chemical_reaction/distilling/sugar // Or engi-chem won't have fun
+// Or engi-chem won't have fun
+/decl/chemical_reaction/distilling/sugar
 	name = "Distilling Sugar"
-	id = "sugar"
+	id = "distill_sugar"
 	result = "sugar"
 	required_reagents = list("carbon" = 1,"hydrogen" = 2)
 	result_amount = 2
@@ -10,3 +11,16 @@
 
 	require_xgm_gas = "oxygen" // should be easy!
 	rejects_xgm_gas = "phoron" // should be easy!
+
+/decl/chemical_reaction/distilling/hydrogen
+	name = "Distilling Hydrogen"
+	id = "distill_hydrogen"
+	result = "hydrogen"
+	required_reagents = list("water" = 1)
+	result_amount = 2
+
+	temp_range = list(T20C + 320, T20C + 690)
+	temp_shift = 3 // It's burning off phoron and oxygen
+
+	require_xgm_gas = "phoron"
+	rejects_xgm_gas = "oxygen"
