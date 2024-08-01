@@ -19,7 +19,7 @@
 	required_reagents = list("water" = 1)
 	result_amount = 2
 
-	temp_range = list(T20C + 320, T20C + 690)
+	temp_range = list(T20C + 110, T20C + 290)
 	temp_shift = 3 // It's burning off phoron and oxygen
 
 	require_xgm_gas = "phoron"
