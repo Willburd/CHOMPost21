@@ -5120,7 +5120,6 @@
 #include "modular_chomp\code\modules\paperwork\pen.dm"
 #include "modular_chomp\code\modules\planet\sif.dm"
 #include "modular_chomp\code\modules\planet\smokestar\turf.dm"
-#include "modular_chomp\code\modules\player_tips\player_tips_list.dm"
 #include "modular_chomp\code\modules\point\point.dm"
 #include "modular_chomp\code\modules\power\cells\device_cells.dm"
 #include "modular_chomp\code\modules\power\cells\esoteric_cells.dm"
