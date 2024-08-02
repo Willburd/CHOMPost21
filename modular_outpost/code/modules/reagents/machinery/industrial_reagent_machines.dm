@@ -75,12 +75,17 @@
 
 	// Hub fills tankers, not itself!
 	if(istype(target,/obj/machinery/reagent_refinery/hub))
+		if(istype(src,/obj/machinery/reagent_refinery/hub)) // Hubs cannot send into other hubs
+			return
 		if(dir == reverse_dir[source_forward_dir] ) // Hub faces into instead of away
 			return
 		if(istype(target,/obj/machinery/reagent_refinery/filter) && dir == reverse_dir[source_forward_dir]) // Don't try to backfill filters
 			return
+		var/obj/machinery/reagent_refinery/hub/H = target
 		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(target)
 		if(!tanker)
+			return
+		if(world.time < tanker.l_move_time + H.wait_delay) // await cooldown to avoid spamming moving tanks
 			return
 		target = tanker // forward it to the tanker!
 
