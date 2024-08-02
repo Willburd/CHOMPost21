@@ -401,11 +401,11 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body += "<b>Reflectivity: [M.reflectivity * 100]%</b><br>"
 	body += "<br>"
 	if(M.melting_point != null)
-		body += "<b>Melting Point: [M.melting_point]k</b><br>"
+		body += "<b>Melting Point: [M.melting_point]K ([M.melting_point - T0C]C)</b><br>"
 	else
 		body += "<b>Melting Point: --- </b><br>"
 	if(M.ignition_point != null)
-		body += "<b>Ignition Point: [M.ignition_point]k</b><br>"
+		body += "<b>Ignition Point: [M.ignition_point]K ([M.ignition_point - T0C]C)</b><br>"
 	else
 		body += "<b>Ignition Point: --- </b><br>"
 	M.get_recipes() // generate if not already
@@ -535,7 +535,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 				body += "<b>-[scanitm.name]</b><br>"
 				qdel(scanitm)
 	body += "<b>Threshold Energy: [M.required_energy_min] - [M.required_energy_max]</b><br>"
-	body += "<b>Threshold Temp: [M.required_atmos_temp_min]k - [M.required_atmos_temp_max]k</b><br>"
+	body += "<b>Threshold Temp: [M.required_atmos_temp_min]k - [M.required_atmos_temp_max]k | ([M.required_atmos_temp_min - T0C]C - [M.required_atmos_temp_max - T0C]C)</b><br>"
 	if(M.reagents != null && M.reagents.len > 0)
 		body += "<br>"
 		body += "<b>Inducers: </b><br>"
@@ -615,7 +615,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 				body += "<b>Potential Chemical Distillation [segment]: </b><br>"
 			segment += 1
 
-			body += " <b>-Temperature: </b> [CR.temp_range[1]]k - [CR.temp_range[2]]k<br>"
+			body += " <b>-Temperature: </b> [CR.temp_range[1]]K - [CR.temp_range[2]]K | ([CR.temp_range[1] - T0C]C - [CR.temp_range[2] - T0C]C)<br>"
 			body += " <b>-Pressure: </b> [isnull(CR.minimum_xgm_pressure) ? 0 : CR.minimum_xgm_pressure]kpa to [isnull(CR.maximum_xgm_pressure) ? "~" : CR.maximum_xgm_pressure]kpa<br>"
 			if(CR.require_xgm_gas)
 				body += " <b>-Requires Gas: </b> [CR.require_xgm_gas]<br>"
