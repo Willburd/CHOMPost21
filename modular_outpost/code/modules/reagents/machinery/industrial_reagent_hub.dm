@@ -10,6 +10,7 @@
 	active_power_usage = 10
 	circuit = /obj/item/weapon/circuitboard/industrial_reagent_hub
 	default_max_vol = 0
+	var/wait_delay = 4 SECONDS
 
 /obj/machinery/reagent_refinery/hub/Initialize()
 	. = ..()
@@ -33,7 +34,7 @@
 	var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
 	if(target && target.dir != reverse_dir[dir])
 		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in loc
-		if(tanker && tanker.reagents.total_volume > 0)
+		if(tanker && tanker.reagents.total_volume > 0 && world.time > tanker.l_move_time + wait_delay)
 			// dump reagents to next refinery machine
 			transfer_tank( tanker.reagents, target, dir)
 
