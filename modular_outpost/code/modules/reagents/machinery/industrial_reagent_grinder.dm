@@ -23,12 +23,6 @@
 	verbs -= /obj/machinery/reagentgrinder/verb/remove_beaker
 	update_neighbours()
 	update_icon()
-	// Bonus materials that we can grind that the base grinder cannot!
-	sheet_reagents += list(
-		/obj/item/stack/material/glass/phoronrglass = list("silicon","silicon","silicon","phoron","phoron"),
-		/obj/item/stack/material/diamond = list("carbon"),
-		/obj/item/stack/material/durasteel = list("iron","iron","carbon","carbon","platinum")
-	)
 
 /obj/machinery/reagentgrinder/industrial/update_icon()
 	overlays.Cut()
@@ -137,7 +131,7 @@
 		return
 	if(holdingitems.len >= limit)
 		return
-	if(!sheet_reagents[AM.type] && !ore_reagents[AM.type] && (!AM.reagents || !AM.reagents.total_volume))
+	if(!global.sheet_reagents[AM.type] && !global.ore_reagents[AM.type] && (!AM.reagents || !AM.reagents.total_volume)) // Outpost 21 edit - globalized grinding list
 		return
 
 	AM.forceMove(src)

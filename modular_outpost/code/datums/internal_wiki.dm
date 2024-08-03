@@ -381,6 +381,23 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		body += "<br>"
 		body += "<b>No known Alloys</b><br>"
 
+	if(global.ore_reagents[O.ore])
+		body += "<br>"
+		body += "<b>Ore Grind Results: </b><br>"
+		var/list/output = global.ore_reagents[O.ore]
+		var/list/collect = list()
+		var/total_parts = 0
+		for(var/Rid in output)
+			var/datum/reagent/CBR = SSchemistry.chemical_reagents[Rid]
+			if(CBR)
+				if(!collect[CBR.name])
+					collect[CBR.name] = 0
+				collect[CBR.name] += 1
+				total_parts += 1
+		var/per_part = REAGENTS_PER_SHEET / total_parts
+		for(var/N in collect)
+			body += "<b>-[N]: [collect[N] * per_part]u</b><br>"
+
 /datum/internal_wiki/page/proc/material_assemble(var/datum/material/M)
 	title = M.display_name
 	body  = "<b>Integrity: [M.integrity]</b><br>"
@@ -408,6 +425,22 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		body += "<b>Ignition Point: [M.ignition_point]K ([M.ignition_point - T0C]C)</b><br>"
 	else
 		body += "<b>Ignition Point: --- </b><br>"
+	if(global.sheet_reagents[M.stack_type])
+		body += "<br>"
+		body += "<b>Sheet Grind Results: </b><br>"
+		var/list/output = global.sheet_reagents[M.stack_type]
+		var/list/collect = list()
+		var/total_parts = 0
+		for(var/Rid in output)
+			var/datum/reagent/CBR = SSchemistry.chemical_reagents[Rid]
+			if(CBR)
+				if(!collect[CBR.name])
+					collect[CBR.name] = 0
+				collect[CBR.name] += 1
+				total_parts += 1
+		var/per_part = REAGENTS_PER_SHEET / total_parts
+		for(var/N in collect)
+			body += "<b>-[N]: [collect[N] * per_part]u</b><br>"
 	M.get_recipes() // generate if not already
 	if(M.recipes != null && M.recipes.len > 0)
 		body += "<br>"
