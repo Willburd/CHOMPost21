@@ -49,7 +49,7 @@
 	conductivity = 10
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 0.25 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/lead
 	name = MAT_LEAD
@@ -60,7 +60,7 @@
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	radiation_resistance = 25 // Lead is Special and so gets to block more radiation than it normally would with just weight, totalling in 48 protection.
-	supply_conversion_value = 2
+	supply_conversion_value = 0.5 // Outpost 21 edit - reduced value
 
 /datum/material/gold
 	name = "gold"
@@ -84,7 +84,7 @@
 	stack_origin_tech = list(TECH_MATERIAL = 3)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 2
+	supply_conversion_value = 1 // Outpost 21 edit - reduced value
 
 /datum/material/platinum
 	name = "platinum"
@@ -166,7 +166,7 @@
 	melting_point = T0C+3600
 	radiation_resistance = 15
 	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_MAGNET = 2)
-	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 0.5 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/bronze
 	name = "bronze"
@@ -177,7 +177,7 @@
 	integrity = 120
 	conductivity = 12
 	protectiveness = 9 // 33%
-	supply_conversion_value = 2 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/tin
 	name = "tin"
@@ -187,7 +187,7 @@
 	icon_colour = "#b2afaf"
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 1
+	supply_conversion_value = 0.5 // Outpost 21 edit - reduced value
 	hardness = 50
 	weight = 13
 
@@ -200,7 +200,7 @@
 	icon_colour = "#af633e"
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 1
+	supply_conversion_value = 0.5 // Outpost 21 edit - reduced value
 	weight = 13
 	hardness = 50
 
@@ -212,5 +212,5 @@
 	stack_type = /obj/item/stack/material/aluminium
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 2
+	supply_conversion_value = 1 // Outpost 21 edit - reduced value
 	weight = 10

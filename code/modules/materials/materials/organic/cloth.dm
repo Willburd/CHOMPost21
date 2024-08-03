@@ -128,7 +128,7 @@
 	conductive = 0
 	hardness = 5
 	integrity = 40
-	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 0.25 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/cotton
 	name = "cotton"
@@ -141,7 +141,7 @@
 	conductive = 0
 	hardness = 5
 	integrity = 10
-	supply_conversion_value = 2 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/fibers
 	name = MAT_FIBERS
@@ -158,4 +158,4 @@
 	hardness = 5
 	integrity = 5
 	stack_type = /obj/item/stack/material/fiber //CHOMPEdit
-	supply_conversion_value = 2 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...

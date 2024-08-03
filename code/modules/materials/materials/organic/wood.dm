@@ -76,7 +76,7 @@
 	integrity = 65	//a bit stronger than regular wood
 	hardness = 20
 	weight = 20	//likewise, heavier
-	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 0.5 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/wood/hardwood/generate_recipes()
 	..()
@@ -101,7 +101,7 @@
 	sheet_plural_name = "logs"
 	sheet_collective_name = "pile"
 	pass_stack_colors = TRUE
-	supply_conversion_value = 1
+	supply_conversion_value = 0.5 // Outpost 21 edit - reduced value
 
 /datum/material/wood/log/generate_recipes()
 	recipes = list(
@@ -129,7 +129,7 @@
 	stack_type = /obj/item/stack/material/stick
 	sheet_collective_name = "pile"
 	pass_stack_colors = TRUE
-	supply_conversion_value = 1
+	supply_conversion_value = 0.5 // Outpost 21 edit - reduced value
 	sheet_singular_name = "stick"
 	sheet_plural_name = "sticks"
 
