@@ -33,6 +33,7 @@
 	door_icon_base = "metal"
 	icon_colour = "#D1E6E3"
 	icon_reinf = "reinf_metal"
+	supply_conversion_value = 4 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/titanium/generate_recipes()
 	..()
@@ -48,7 +49,7 @@
 	conductivity = 10
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 1 // Outpost 21 edit - This was missing...
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/lead
 	name = MAT_LEAD
@@ -126,6 +127,7 @@
 	sheet_plural_name = "ingots"
 	is_fusion_fuel = 1
 	conductive = 0
+	supply_conversion_value = 3 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/tritium
 	name = "tritium"
@@ -136,6 +138,7 @@
 	sheet_plural_name = "ingots"
 	is_fusion_fuel = 1
 	conductive = 0
+	supply_conversion_value = 4 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/osmium
 	name = "osmium"
@@ -163,6 +166,7 @@
 	melting_point = T0C+3600
 	radiation_resistance = 15
 	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_MAGNET = 2)
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/bronze
 	name = "bronze"
@@ -173,6 +177,7 @@
 	integrity = 120
 	conductivity = 12
 	protectiveness = 9 // 33%
+	supply_conversion_value = 2 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/tin
 	name = "tin"

@@ -9,6 +9,7 @@
     melting_point = T0C+300
     protectiveness = 1 // 4%
     conductive = 0
+	spoiler = TRUE
 
 //CARPET materials
 

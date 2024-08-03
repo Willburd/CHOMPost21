@@ -119,6 +119,7 @@
 	sheet_plural_name = "gems"
 	icon_base = "stone"
 	table_icon_base = "stone"
+	supply_conversion_value = 10 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/verdantium
 	name = MAT_VERDANTIUM
@@ -165,5 +166,3 @@
 	supply_conversion_value = 13
 	icon_base = "stone"
 	table_icon_base = "stone"
-
-

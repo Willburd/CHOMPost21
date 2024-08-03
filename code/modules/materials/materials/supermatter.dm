@@ -17,6 +17,7 @@
 	is_fusion_fuel = 1
 	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_PHORON = 5, TECH_BLUESPACE = 4)
 	flags = MATERIAL_UNMELTABLE
+	supply_conversion_value = 30 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/supermatter/generate_recipes()
 	recipes = list(

@@ -12,6 +12,7 @@
 	conductivity = 2 // For the sake of material armor diversity, we're gonna pretend this plastic is a good insulator.
 	melting_point = T0C+371 //assuming heat resistant plastic
 	stack_origin_tech = list(TECH_MATERIAL = 3)
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/plastic/generate_recipes()
 	..()

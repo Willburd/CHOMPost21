@@ -16,6 +16,7 @@
 	radiation_resistance = 10
 	stack_origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 2) // CHOMPedit: No longer super powerful for research.
 	stack_type = /obj/item/stack/material/resin
+	supply_conversion_value = 2 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/resin/can_open_material_door(var/mob/living/user)
 	var/mob/living/carbon/M = user

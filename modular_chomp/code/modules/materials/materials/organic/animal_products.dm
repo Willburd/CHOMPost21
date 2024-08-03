@@ -12,6 +12,7 @@
 	protectiveness = 40
 	reflectivity = 0.4
 	conductivity = 1
+	supply_conversion_value = 5 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/dragonscale
 	name = "dragon scale"
@@ -22,6 +23,7 @@
 	protectiveness = 75
 	reflectivity = 0.6
 	conductivity = 1
+	supply_conversion_value = 7 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/phorondragonscale
 	name = "phoron dragon scale"
@@ -32,6 +34,7 @@
 	protectiveness = 80
 	reflectivity = 0.8
 	conductivity = 1
+	supply_conversion_value = 10 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/xenochitin
 	name = "xenochitin"
@@ -42,3 +45,4 @@
 	protectiveness = 40
 	reflectivity = 0.6
 	conductivity = 0.5
+	supply_conversion_value = 5 // Outpost 21 edit - Added supply sell price. This was missing...

@@ -17,6 +17,8 @@
 	spoiler = TRUE
 /datum/material/cult
 	spoiler = TRUE
+/datum/material/cloth_red
+	spoiler = TRUE
 /datum/material/steel/holographic
 	spoiler = TRUE
 /datum/material/plastic/holographic

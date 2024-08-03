@@ -9,6 +9,7 @@
 	icon_colour = "#666677"
 	flags = MATERIAL_UNMELTABLE
 	composite_material = list(MAT_STEEL = SHEET_MATERIAL_AMOUNT)
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/steel/hull/place_sheet(var/turf/target) //Deconstructed into normal steel sheets.
 	new /obj/item/stack/material/steel(target)

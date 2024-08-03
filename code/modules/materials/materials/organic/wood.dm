@@ -76,6 +76,7 @@
 	integrity = 65	//a bit stronger than regular wood
 	hardness = 20
 	weight = 20	//likewise, heavier
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/wood/hardwood/generate_recipes()
 	..()
@@ -134,4 +135,4 @@
 
 /datum/material/wood/stick/generate_recipes()
 	return
-//VOREStation Addition End 
+//VOREStation Addition End

@@ -13,6 +13,7 @@
 	created_fulltile_window = /obj/structure/window/titanium/full
 	wire_product = null
 	rod_product = /obj/item/stack/material/glass/titanium
+	supply_conversion_value = 4 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/glass/plastaniumglass
 	name = MAT_PLASTITANIUMGLASS
@@ -29,3 +30,4 @@
 	created_fulltile_window = /obj/structure/window/plastitanium/full
 	wire_product = null
 	rod_product = /obj/item/stack/material/glass/plastitanium
+	supply_conversion_value = 5 // Outpost 21 edit - Added supply sell price. This was missing...

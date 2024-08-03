@@ -273,6 +273,7 @@
 	hardness = 10
 	sheet_singular_name = "sheet"
 	sheet_plural_name = "sheets"
+	supply_conversion_value = 2 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /obj/item/stack/material/algae
 	name = "algae sheet"

@@ -269,6 +269,7 @@
 	melting_point = T0C+300
 	weight = 1
 	pass_stack_colors = TRUE
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 var/global/list/datum/stack_recipe/wax_recipes = list( \
 	new/datum/stack_recipe("candle", /obj/item/weapon/flame/candle) \

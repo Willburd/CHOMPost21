@@ -27,6 +27,7 @@
 	integrity = 201 //hack to stop kitchen benches being flippable, todo: refactor into weight system
 	stack_type = /obj/item/stack/material/marble
 	supply_conversion_value = 2
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/stone/marble/generate_recipes()
 	..()
@@ -61,6 +62,7 @@
 	weight = 27
 	hardness = 60
 	var/image/texture
+	supply_conversion_value = 1 // Outpost 21 edit - Added supply sell price. This was missing...
 
 /datum/material/stone/concrete/generate_recipes()
 	..()
