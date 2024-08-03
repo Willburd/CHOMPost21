@@ -18,7 +18,6 @@
 	color = "#42291a"
 	default_type = MAT_HARDWOOD
 	description_info = "Rich, lustrous hardwood, imported from offworld at moderate expense. Mostly used for luxurious furniture, and not very good for weapons or other structures."
-	supply_conversion_value = 1 // Outpost 21 edit - This was missing...
 
 /obj/item/stack/material/log
 	name = "log"
