@@ -131,11 +131,11 @@ SUBSYSTEM_DEF(supply)
 				if(tank && tank.reagents && tank.reagents.reagent_list.len > 0)
 					if(tank.reagents.total_volume < 4000)
 						EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send full tanks only. Payment rendered null under terms of agreement."
+								"error" = "Error: Product was improperly packaged. Send full tanks only (minimum 4000 units). Payment rendered null under terms of agreement."
 							)
 					else if(tank.reagents.reagent_list.len >= 3)
 						EC.contents = list(
-								"error" = "Error: Product was improperly refined. Send purified mixtures only. Payment rendered null under terms of agreement."
+								"error" = "Error: Product was improperly refined. Send purified mixtures only (too many chemicals in tank). Payment rendered null under terms of agreement."
 							)
 					else
 						var/actually_trying_bonus = FALSE
