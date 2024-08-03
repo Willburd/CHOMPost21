@@ -73,13 +73,11 @@
 	if(!can_use_power_oneoff(active_power_usage))
 		return
 
-	// Hub fills tankers, not itself!
+	// Hub fills tankers, not itself! Has some special rules
 	if(istype(target,/obj/machinery/reagent_refinery/hub))
 		if(istype(src,/obj/machinery/reagent_refinery/hub)) // Hubs cannot send into other hubs
 			return
-		if(dir == reverse_dir[source_forward_dir] ) // Hub faces into instead of away
-			return
-		if(istype(target,/obj/machinery/reagent_refinery/filter) && dir == reverse_dir[source_forward_dir]) // Don't try to backfill filters
+		if(dir == reverse_dir[source_forward_dir] ) // The hub must be facing into its source to accept input, unlike others
 			return
 		var/obj/machinery/reagent_refinery/hub/H = target
 		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(target)
@@ -94,7 +92,7 @@
 		return
 
 	// pumps and filters can only be FED in a straight line
-	if((istype(target,/obj/machinery/reagent_refinery/pump) || istype(target,/obj/machinery/reagent_refinery/filter)) && dir != source_forward_dir)
+	if((istype(target,/obj/machinery/reagent_refinery/pump) || istype(target,/obj/machinery/reagent_refinery/filter)) && dir != target.dir)
 		return
 
 	// locked until distilling mode

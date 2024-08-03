@@ -1,5 +1,4 @@
 var/global/list/sheet_reagents = list( //have a number of reageents divisible by REAGENTS_PER_SHEET (default 20) unless you like decimals,
-	// Outpost 21 edit begin - More sheets to grind
 	/obj/item/stack/material/plastic = list("carbon","carbon","oxygen","chlorine","sulper"),
 	/obj/item/stack/material/copper = list("copper"),
 	/obj/item/stack/material/wood = list("carbon","woodpulp","nitrogen","potassium","sodium"),
@@ -19,7 +18,7 @@ var/global/list/sheet_reagents = list( //have a number of reageents divisible by
 	/obj/item/stack/material/diamond = list("carbon"),
 	/obj/item/stack/material/durasteel = list("iron","iron","carbon","carbon","platinum"),
 	/obj/item/stack/material/wax = list("ethanol","triglyceride"),
-	// Outpost 21 edit end
+	// Original grinder
 	/obj/item/stack/material/iron = list("iron"),
 	/obj/item/stack/material/uranium = list("uranium"),
 	/obj/item/stack/material/phoron = list("phoron"),
@@ -36,7 +35,7 @@ var/global/list/sheet_reagents = list( //have a number of reageents divisible by
 	/obj/item/stack/material/supermatter = list("supermatter")
 	)
 
-var/global/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 10) unless you like decimals.
+var/global/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
 	/obj/item/weapon/ore/glass = list("silicon"),
 	/obj/item/weapon/ore/iron = list("iron"),
 	/obj/item/weapon/ore/coal = list("carbon"),

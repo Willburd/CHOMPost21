@@ -53,7 +53,7 @@
 	if(filter_reagent_id != "-2") // "all" filter option pushes it all out the side path
 		var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(get_turf(src),dir)
 		if(target && reagents.total_volume > 0)
-			transfer_tank( reagents, target, target.dir)
+			transfer_tank( reagents, target, dir)
 
 /obj/machinery/reagent_refinery/filter/update_icon()
 	cut_overlays()
