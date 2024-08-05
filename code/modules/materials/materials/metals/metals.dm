@@ -111,6 +111,7 @@
 
 /datum/material/mhydrogen
 	name = "mhydrogen"
+	display_name = "metallic hydrogen" // Outpost 21 edit - Why did this not have a pretty name?
 	stack_type = /obj/item/stack/material/mhydrogen
 	icon_colour = "#E6C5DE"
 	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 6, TECH_MAGNET = 5)
