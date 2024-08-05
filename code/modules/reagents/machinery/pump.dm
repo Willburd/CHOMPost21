@@ -18,7 +18,7 @@
 
 	var/obj/item/weapon/cell/cell = null
 	var/obj/item/hose_connector/output/Output = null
-	var/reagents_per_cycle = 40
+	var/reagents_per_cycle = 5 // Outpost 21 edit - severe nerf to unupgraded speed
 	var/on = 0
 	var/unlocked = 0
 	var/open = 0
