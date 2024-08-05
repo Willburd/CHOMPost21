@@ -690,9 +690,16 @@
 
 /area/engineering/refinery/tugstorage
 	name = "\improper Chemical Refinery Tug Storage"
-	icon_state = "maint_pumpstation"
+	icon_state = "auxstorage"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = SMALL_ENCLOSED
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/engineering/refinery/pump_station
+	name = "\improper Chemical Refinery Pump Station"
+	icon_state = "maint_pumpstation"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/engineering/auxstore
