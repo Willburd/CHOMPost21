@@ -338,7 +338,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 /datum/internal_wiki/main/proc/allow_reagent(var/reagent)
 	// This is used to filter out some of the base reagent types, such as "drink", without putting spoiler tags on base types...
-	if(reagent == "")
+	if(!reagent || reagent == "")
 		return FALSE
 	if(reagent == "reagent")
 		return FALSE
