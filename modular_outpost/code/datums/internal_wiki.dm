@@ -136,6 +136,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	// drinks
 	var/list/drink_recipes = list()
 	for(var/decl/chemical_reaction/instant/drinks/CR in SSchemistry.chemical_reactions)
+		if(isnull(CR.result))
+			continue // Probably explodes instead
 		var/datum/reagent/Rd = SSchemistry.chemical_reagents[CR.result]
 		if(!isnull(Rd))
 			drink_recipes[CR.type] = list("Result" = "[CR.name]",
@@ -365,10 +367,10 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body = ""
 	if(O.smelts_to)
 		var/datum/material/S = get_material_by_name(O.smelts_to)
-		body += "<b>Smelting: [S.name]</b><br>"
+		body += "<b>Smelting: [S.display_name]</b><br>"
 	if(O.compresses_to)
 		var/datum/material/C = get_material_by_name(O.compresses_to)
-		body += "<b>Compressing: [C.name]</b><br>"
+		body += "<b>Compressing: [C.display_name]</b><br>"
 	if(O.alloy)
 		body += "<br>"
 		body += "<b>Alloy Component of: </b><br>"
