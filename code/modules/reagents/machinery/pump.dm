@@ -158,11 +158,20 @@
 			return FALSE
 		default_unfasten_wrench(user, W, 2 SECONDS)
 
-	else if(istype(W, /obj/item/weapon/cell) && open)
+	else if(istype(W, /obj/item/weapon/cell))
+		// Outpost 21 edit begin - clarifying how these even work
+		if(!open)
+			if(unlocked)
+				to_chat(user, SPAN_NOTICE("The battery panel is screwed shut."))
+			else
+				to_chat(user, SPAN_NOTICE("The battery panel is watertight and cannot be opened without a crowbar."))
+			return FALSE
+		// Outpost 21 edit end
 		if(istype(cell))
 			to_chat(user, "<span class='notice'>There is a power cell already installed.</span>")
 			return FALSE
 		user.drop_from_inventory(W, src)
+		cell = W // Outpost 21 edit - how long were these broken for? The cell placed inside was not actually assigned, so it could never power on. - Willbird
 		to_chat(user, "<span class='notice'>You insert the power cell.</span>")
 
 	else
