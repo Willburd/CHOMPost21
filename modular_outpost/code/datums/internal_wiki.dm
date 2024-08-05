@@ -145,6 +145,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 									"Reagents" = CR.required_reagents ? CR.required_reagents.Copy() : list(),
 									"Catalysts" = CR.catalysts ? CR.catalysts.Copy() : list(),
 									"Spoiler" = CR.spoiler)
+		else
+			log_runtime(EXCEPTION("Invalid reagent result id: [CR.result] in instant drink reaction id: [CR.id]"))
 	// Build the kitchen recipe lists
 	var/list/food_recipes = subtypesof(/datum/recipe)
 	for(var/Rp in food_recipes)
@@ -336,6 +338,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 /datum/internal_wiki/main/proc/allow_reagent(var/reagent)
 	// This is used to filter out some of the base reagent types, such as "drink", without putting spoiler tags on base types...
+	if(reagent == "")
+		return FALSE
 	if(reagent == "reagent")
 		return FALSE
 	if(reagent == "drugs")
@@ -361,12 +365,10 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body = ""
 	if(O.smelts_to)
 		var/datum/material/S = get_material_by_name(O.smelts_to)
-		body += "<b>Smelt: [S.name]</b><br>"
+		body += "<b>Smelting: [S.name]</b><br>"
 	if(O.compresses_to)
 		var/datum/material/C = get_material_by_name(O.compresses_to)
-		body += "<b>Compress: [C.name]</b><br>"
-	var/datum/reagent/REG = SSchemistry.chemical_reagents[O.reagent]
-	body += "<b>Grind: [REG.name]</b><br>"
+		body += "<b>Compressing: [C.name]</b><br>"
 	if(O.alloy)
 		body += "<br>"
 		body += "<b>Alloy Component of: </b><br>"
@@ -381,6 +383,15 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		body += "<br>"
 		body += "<b>No known Alloys</b><br>"
 
+	if(O.reagent)
+		body += "<br>"
+		var/datum/reagent/REG = SSchemistry.chemical_reagents[O.reagent]
+		if(REG)
+			body += "<b>Fluid Pump Results:</b><br>"
+			body += "<b>-[REG.name]</b><br>"
+		else
+			log_runtime(EXCEPTION("Invalid reagent id: [O.reagent] in pump results for ore [title]"))
+
 	if(global.ore_reagents[O.ore])
 		body += "<br>"
 		body += "<b>Ore Grind Results: </b><br>"
@@ -394,6 +405,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 					collect[CBR.name] = 0
 				collect[CBR.name] += 1
 				total_parts += 1
+			else
+				log_runtime(EXCEPTION("Invalid reagent id: [Rid] in grind results for ore [title]"))
 		var/per_part = REAGENTS_PER_SHEET / total_parts
 		for(var/N in collect)
 			body += "<b>-[N]: [collect[N] * per_part]u</b><br>"
@@ -427,20 +440,24 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		body += "<b>Ignition Point: --- </b><br>"
 	if(global.sheet_reagents[M.stack_type])
 		body += "<br>"
-		body += "<b>Sheet Grind Results: </b><br>"
 		var/list/output = global.sheet_reagents[M.stack_type]
-		var/list/collect = list()
-		var/total_parts = 0
-		for(var/Rid in output)
-			var/datum/reagent/CBR = SSchemistry.chemical_reagents[Rid]
-			if(CBR)
-				if(!collect[CBR.name])
-					collect[CBR.name] = 0
-				collect[CBR.name] += 1
-				total_parts += 1
-		var/per_part = REAGENTS_PER_SHEET / total_parts
-		for(var/N in collect)
-			body += "<b>-[N]: [collect[N] * per_part]u</b><br>"
+		if(output && output.len > 0)
+			body += "<b>Sheet Grind Results: </b><br>"
+			var/list/collect = list()
+			var/total_parts = 0
+			for(var/Rid in output)
+				var/datum/reagent/CBR = SSchemistry.chemical_reagents[Rid]
+				if(CBR)
+					if(!collect[CBR.name])
+						collect[CBR.name] = 0
+					collect[CBR.name] += 1
+					total_parts += 1
+				else
+					log_runtime(EXCEPTION("Invalid reagent id: [Rid] in grind results for sheet [title]"))
+			if(total_parts > 0)
+				var/per_part = REAGENTS_PER_SHEET / total_parts
+				for(var/N in collect)
+					body += "<b>-[N]: [collect[N] * per_part]u</b><br>"
 	M.get_recipes() // generate if not already
 	if(M.recipes != null && M.recipes.len > 0)
 		body += "<br>"
@@ -519,7 +536,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			if(CBR)
 				body  += "<b>-[CBR.name]</b><br>"
 			else
-				body  += "<b>-[CB]?</b><br>"
+				log_runtime(EXCEPTION("Invalid reagent id: [CB] in chemical breakdown for seed [title]"))
 		body  += "<br>"
 	if(S.consume_gasses && S.consume_gasses.len > 0)
 		body  += "<b>Gasses Consumed: </b><br>"
@@ -575,7 +592,10 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		for(var/R in M.reagents)
 			var/amnt = M.reagents[R]
 			var/datum/reagent/Rd = SSchemistry.chemical_reagents[R]
-			body += "<b>-[Rd.name] [amnt]u</b><br>"
+			if(Rd)
+				body += "<b>-[Rd.name] [amnt]u</b><br>"
+			else
+				log_runtime(EXCEPTION("Invalid reagent id: [Rd] in inducer for atom smasher [title]"))
 	body += "<br>"
 	body += "<b>Results: [resultname]</b><br>"
 	body += "<b>Probability: [M.probability]%</b><br>"
@@ -616,16 +636,19 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			for(var/RQ in CR.required_reagents)
 				var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
 				if(!r_RQ)
+					log_runtime(EXCEPTION("Invalid reagent id: [RQ] in chemical instant component for [title]"))
 					continue
 				body += " <b>-Component: </b>[r_RQ.name]<br>"
 			for(var/IH in CR.inhibitors)
 				var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
 				if(!r_IH)
+					log_runtime(EXCEPTION("Invalid reagent id: [IH] in chemical instant inhibitor for [title]"))
 					continue
 				body += " <b>-Inhibitor: </b>[r_IH.name]<br>"
 			for(var/CL in CR.catalysts)
 				var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
 				if(!r_CL)
+					log_runtime(EXCEPTION("Invalid reagent id: [CL] in chemical instant catalyst for [title]"))
 					continue
 				body += " <b>-Catalyst: </b>[r_CL.name]<br>"
 	else
@@ -658,16 +681,19 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			for(var/RQ in CR.required_reagents)
 				var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
 				if(!r_RQ)
+					log_runtime(EXCEPTION("Invalid reagent id: [RQ] in chemical distilation component for [title]"))
 					continue
 				body += " <b>-Component: </b>[r_RQ.name]<br>"
 			for(var/IH in CR.inhibitors)
 				var/decl/chemical_reaction/r_IH = SSchemistry.chemical_reagents[IH]
 				if(!r_IH)
+					log_runtime(EXCEPTION("Invalid reagent id: [IH] in chemical distilation inhibitor for [title]"))
 					continue
 				body += " <b>-Inhibitor: </b>[r_IH.name]<br>"
 			for(var/CL in CR.catalysts)
 				var/decl/chemical_reaction/r_CL = SSchemistry.chemical_reagents[CL]
 				if(!r_CL)
+					log_runtime(EXCEPTION("Invalid reagent id: [CL] in chemical distilation catalyst for [title]"))
 					continue
 				body += " <b>-Catalyst: </b>[r_CL.name]<br>"
 
@@ -693,12 +719,21 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 			for(var/RQ in CR.required_reagents)
 				var/datum/reagent/RQ_A = SSchemistry.chemical_reagents[RQ]
+				if(!RQ_A)
+					log_runtime(EXCEPTION("Invalid reagent id: [RQ] in food instant component for [title]"))
+					continue
 				body += " <b>-Component: </b>[RQ_A.name]<br>"
 			for(var/IH in CR.inhibitors)
 				var/datum/reagent/IH_A = SSchemistry.chemical_reagents[IH]
+				if(!IH_A)
+					log_runtime(EXCEPTION("Invalid reagent id: [IH] in food instant inhibitor for [title]"))
+					continue
 				body += " <b>-Inhibitor: </b>[IH_A.name]<br>"
 			for(var/CL in CR.catalysts)
 				var/datum/reagent/CL_A = SSchemistry.chemical_reagents[CL]
+				if(!CL_A)
+					log_runtime(EXCEPTION("Invalid reagent id: [CL] in food instant catalyst for [title]"))
+					continue
 				body += " <b>-Catalyst: </b>[CL_A.name]<br>"
 	else
 		body += "<b>Recipe: </b>UNKNOWN<br>"
@@ -726,12 +761,21 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 			for(var/RQ in CR.required_reagents)
 				var/datum/reagent/RQ_A = SSchemistry.chemical_reagents[RQ]
+				if(!RQ_A)
+					log_runtime(EXCEPTION("Invalid reagent id: [RQ] in drink instant component for [title]"))
+					continue
 				body += " <b>-Component: </b>[RQ_A.name]<br>"
 			for(var/IH in CR.inhibitors)
 				var/datum/reagent/IH_A = SSchemistry.chemical_reagents[IH]
+				if(!IH_A)
+					log_runtime(EXCEPTION("Invalid reagent id: [IH] in drink instant inhibitor for [title]"))
+					continue
 				body += " <b>-Inhibitor: </b>[IH_A.name]<br>"
 			for(var/CL in CR.catalysts)
 				var/datum/reagent/CL_A = SSchemistry.chemical_reagents[CL]
+				if(!CL_A)
+					log_runtime(EXCEPTION("Invalid reagent id: [CL] in drink instant catalyst for [title]"))
+					continue
 				body += " <b>-Catalyst: </b>[CL_A.name]<br>"
 	else
 		body += "<b>Mix: </b>UNKNOWN<br>"
