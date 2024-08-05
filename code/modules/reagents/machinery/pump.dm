@@ -193,15 +193,13 @@
 	. = ..()
 	R.add_reagent("water", round(volume, 0.1))
 
-	var/datum/gas_mixture/air = return_air() // v
-	if(air.temperature <= T0C) // Outpost 21 edit - Uses the current air temp, instead of the turf starting temp - Willbird
+	if(temperature <= T0C)
 		R.add_reagent("ice", round(volume / 2, 0.1))
 
-	for(var/turf/simulated/mineral/M in orange(5,src)) // Outpost 21 edit - Uses the turf as center instead of an unset usr
-		log_world(M.name)
-		if(M.mineral) // v
-			log_world("[M.mineral.reagent] [round(volume / 2, 0.1)] [volume]")
-			R.add_reagent(M.mineral.reagent, round(volume / 2, 0.1)) // Outpost 21 edit - Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change - Willbird
+	for(var/turf/simulated/mineral/M in orange(5))
+		if(istype(M.mineral, /obj/effect/mineral))
+			var/obj/effect/mineral/ore = M.mineral
+			reagents.add_reagent(ore.ore_reagent, round(volume / 2, 0.1))
 
 /turf/simulated/floor/water/pool/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
