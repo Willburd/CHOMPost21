@@ -64,13 +64,13 @@
 				T.resources["mhydrogen"] = 0
 				T.resources["verdantium"] = 0
 				T.resources["lead"]     = 0
-				//T.resources["copper"] =   rand(RESOURCE_MID_MIN, RESOURCE_HIGH_MAX)
-				//T.resources["tin"] =      rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
-				//T.resources["bauxite"] =  rand(RESOURCE_LOW_MIN, RESOURCE_LOW_MAX)
+				T.resources["copper"] =   rand(RESOURCE_MID_MIN, RESOURCE_HIGH_MAX) // Outpost 21 edit begin - Restored older ores
+				T.resources["tin"] =      rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX) // Outpost 21 edit begin - Restored older ores
+				T.resources["bauxite"] =  rand(RESOURCE_LOW_MIN, RESOURCE_LOW_MAX) // Outpost 21 edit begin - Restored older ores
 				T.resources["rutile"] =   0
-				//T.resources["void opal"] = 0
-				//T.resources["quartz"] = 0
-				//T.resources["painite"] = 0
+				T.resources["void opal"] = 0 // Outpost 21 edit begin - Restored older ores
+				T.resources["quartz"] = 0 // Outpost 21 edit begin - Restored older ores
+				T.resources["painite"] = 0 // Outpost 21 edit begin - Restored older ores
 			else if(current_cell < deep_val) // Rare metals.
 				T.resources["gold"] =     rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["silver"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
@@ -79,17 +79,17 @@
 				T.resources["platinum"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["verdantium"] = rand(RESOURCE_LOW_MIN, RESOURCE_LOW_MAX)
 				T.resources["lead"] =     rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
-				T.resources["mhydrogen"] = 0
+				T.resources["mhydrogen"] = rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX)
 				T.resources["diamond"] =  0
 				T.resources["hematite"] = 0
 				T.resources["marble"] =   0
-				//T.resources["copper"] =   0
-				//T.resources["tin"] =      rand(RESOURCE_MID_MIN, RESOURCE_MID_MAX)
-				//T.resources["bauxite"] =  0
+				T.resources["copper"] =   0 // Outpost 21 edit begin - Restored older ores
+				T.resources["tin"] =      rand(RESOURCE_MID_MIN, RESOURCE_MID_MAX) // Outpost 21 edit begin - Restored older ores
+				T.resources["bauxite"] =  0 // Outpost 21 edit begin - Restored older ores
 				T.resources["rutile"] =   0
-				//T.resources["void opal"] = 0
-				//T.resources["quartz"] = 0
-				//T.resources["painite"] = 0
+				T.resources["void opal"] = 0 // Outpost 21 edit begin - Restored older ores
+				T.resources["quartz"] = rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX) // Outpost 21 edit begin - Restored older ores
+				T.resources["painite"] = rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX) // Outpost 21 edit begin - Restored older ores
 			else                             // Deep metals.
 				T.resources["uranium"] =  rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX)
 				T.resources["diamond"] =  rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX)
@@ -102,13 +102,13 @@
 				T.resources["hematite"] = 0
 				T.resources["gold"] =     0
 				T.resources["silver"] =   0
-				//T.resources["copper"] =   0
-				//T.resources["tin"] =      0
-				//T.resources["bauxite"] =  0
+				T.resources["copper"] =   0 // Outpost 21 edit begin - Restored older ores
+				T.resources["tin"] =      0 // Outpost 21 edit begin - Restored older ores
+				T.resources["bauxite"] =  0 // Outpost 21 edit begin - Restored older ores
 				T.resources["rutile"] =   0
-				//T.resources["void opal"] = 0
-				//T.resources["quartz"] = 0
-				//T.resources["painite"] = 0
+				T.resources["void opal"] = rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX) // Outpost 21 edit begin - Restored older ores
+				T.resources["quartz"] = rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX) // Outpost 21 edit begin - Restored older ores
+				T.resources["painite"] = rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX) // Outpost 21 edit begin - Restored older ores
 	return
 
 /datum/random_map/noise/ore/get_map_char(var/value)

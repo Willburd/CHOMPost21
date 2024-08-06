@@ -483,6 +483,7 @@
 	id = "sodiumchloride"
 	result = "sodiumchloride"
 	required_reagents = list("sodium" = 1, "chlorine" = 1)
+	inhibitors = list("titanium") // Outpost 21 edit - titanium dioxide refinement uses a similar formula
 	result_amount = 2
 
 /decl/chemical_reaction/instant/condensedcapsaicin

@@ -67,12 +67,14 @@ var/list/mining_overlay_cache = list()
 		"verdantium" = /obj/item/weapon/ore/verdantium,
 		"marble" = /obj/item/weapon/ore/marble,
 		"lead" = /obj/item/weapon/ore/lead,
-//		"copper" = /obj/item/weapon/ore/copper,
-//		"tin" = /obj/item/weapon/ore/tin,
-//		"bauxite" = /obj/item/weapon/ore/bauxite,
-//		"void opal" = /obj/item/weapon/ore/void_opal,
-//		"painite" = /obj/item/weapon/ore/painite,
-//		"quartz" = /obj/item/weapon/ore/quartz,
+		// Outpost 21 edit begin - Restored older ores
+		"copper" = /obj/item/weapon/ore/copper,
+		"tin" = /obj/item/weapon/ore/tin,
+		"bauxite" = /obj/item/weapon/ore/bauxite,
+		"void opal" = /obj/item/weapon/ore/void_opal,
+		"painite" = /obj/item/weapon/ore/painite,
+		"quartz" = /obj/item/weapon/ore/quartz,
+		// Outpost 21 edit end
 		"rutile" = /obj/item/weapon/ore/rutile
 	)
 

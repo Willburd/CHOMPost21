@@ -35,7 +35,7 @@
 	"copper","mercury","radium","water","sugar","sacid","tungsten", "lube", "inaprovaline", \
 	"thermite", "tramadol", "cleaner", "kelotane", "dermaline", "anti_toxin", "synaptizine", \
 	 "alkysine", "imidazoline", "hyperzine", "ammonia", "sodiumchloride", "sterilizine", "silicate", "mindbreaker", \
-	 "impedrezene", "lipozine")
+	 "impedrezene", "lipozine","titanium") // Outpost 21 edit - added titanium to randoms
 	var/list/reactions = list()
 
 /datum/phororeactions/proc/set_up_reactions()

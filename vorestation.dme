@@ -4276,6 +4276,7 @@
 #include "code\modules\reagents\reagents\_reagents_op.dm"
 #include "code\modules\reagents\reagents\core.dm"
 #include "code\modules\reagents\reagents\dispenser.dm"
+#include "code\modules\reagents\reagents\dispenser_op.dm"
 #include "code\modules\reagents\reagents\drugs.dm"
 #include "code\modules\reagents\reagents\food_drinks.dm"
 #include "code\modules\reagents\reagents\food_drinks_op.dm"

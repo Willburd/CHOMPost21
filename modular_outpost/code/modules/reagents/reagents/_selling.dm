@@ -76,7 +76,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 
 // code\modules\reagents\reagents\dispenser.dm
 /datum/reagent/aluminum
-	supply_conversion_value = 2 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
+	supply_conversion_value = 1 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = EXPORT_REASON_RAW
 
 /datum/reagent/calcium
@@ -92,7 +92,11 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_RAW
 
 /datum/reagent/copper
-	supply_conversion_value = 1 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
+	supply_conversion_value = 0.5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
+	industrial_use = EXPORT_REASON_PRECURSOR
+
+/datum/reagent/tin
+	supply_conversion_value = 0.5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/fluorine
@@ -158,6 +162,15 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/tungsten
 	supply_conversion_value = EXPORT_VALUE_COMMON
 	industrial_use = EXPORT_REASON_PRECURSOR
+
+// code\modules\reagents\reagents\dispenser_op.dm
+/datum/reagent/titanium_dioxide
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_COSMETIC
+
+/datum/reagent/titanium
+	supply_conversion_value = EXPORT_VALUE_RARE
+	industrial_use = EXPORT_REASON_INDUSTRY
 
 // code\modules\reagents\reagents\drugs.dm
 /datum/reagent/drugs/bliss
@@ -599,7 +612,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/silver
-	supply_conversion_value = 2 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
+	supply_conversion_value = 1 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/platinum
@@ -752,7 +765,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/toxin/lead
-	supply_conversion_value = 2 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
+	supply_conversion_value = 0.5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/toxin/spidertoxin

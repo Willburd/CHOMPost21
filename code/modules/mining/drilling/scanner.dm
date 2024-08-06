@@ -41,13 +41,13 @@
 			var/ore_type
 
 			switch(metal)
-				if("sand", "carbon", "marble", /*"quartz"*/)	ore_type = "surface minerals"
-				if("hematite", /*"tin", "copper", "bauxite",*/ "lead")	ore_type = "industrial metals"
-				if("gold", "silver", "rutile")					ore_type = "precious metals"
-				if("diamond", /*"painite"*/)	ore_type = "precious gems"
-				if("uranium")									ore_type = "nuclear fuel"
+				if("sand", "carbon", "marble", "quartz")			ore_type = "surface minerals" // Outpost 21 edit begin - Restored older ores
+				if("hematite", "tin", "copper", "bauxite", "lead")	ore_type = "industrial metals" // Outpost 21 edit begin - Restored older ores
+				if("gold", "silver", "rutile")						ore_type = "precious metals"
+				if("diamond", "painite")							ore_type = "precious gems" // Outpost 21 edit begin - Restored older ores
+				if("uranium")										ore_type = "nuclear fuel"
 				if("phoron", "platinum", "mhydrogen")				ore_type = "exotic matter"
-				if("verdantium", /*"void opal"*/)				ore_type = "anomalous matter"
+				if("verdantium", "void opal")						ore_type = "anomalous matter" // Outpost 21 edit begin - Restored older ores
 
 			if(ore_type) metals[ore_type] += T.resources[metal]
 

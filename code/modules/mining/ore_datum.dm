@@ -175,7 +175,8 @@
 	ore = /obj/item/weapon/ore/lead
 	scan_icon = "mineral_rare"
 	reagent = "lead"
-/*
+
+// Outpost 21 edit begin - Restored older ores
 /ore/copper
 	name = "copper"
 	display_name = "copper"
@@ -215,7 +216,8 @@
 	ore = /obj/item/weapon/ore/bauxite
 	scan_icon = "mineral_common"
 	reagent = "aluminum"
-*/
+// Outpost 21 edit end
+
 /ore/rutile
 	name = "rutile"
 	display_name = "rutile"
@@ -225,7 +227,9 @@
 	alloy = 1
 	ore = /obj/item/weapon/ore/rutile
 	scan_icon = "mineral_uncommon"
-/*
+	reagent = "titanium_diox"
+
+// Outpost 21 edit begin - Restored older ores
 /ore/painite
 	name = "painite"
 	display_name = "rough painite"
@@ -243,4 +247,4 @@
 	spread_chance = 1
 	ore = /obj/item/weapon/ore/void_opal
 	scan_icon = "mineral_rare"
-*/
+// Outpost 21 edit end
