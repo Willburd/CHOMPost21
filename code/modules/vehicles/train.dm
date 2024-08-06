@@ -115,7 +115,7 @@
 		if(istype(src,/obj/vehicle/train/trolly_tank))
 			if(istype(C,/obj/item/weapon/reagent_containers/glass))
 				var/obj/vehicle/train/trolly_tank/N = src
-				N.load_container(C)
+				N.load_container(user,C)
 				return
 		// Outpost 21 edit end
 		if(!load(C, user))

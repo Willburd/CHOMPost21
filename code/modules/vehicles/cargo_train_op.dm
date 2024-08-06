@@ -93,16 +93,23 @@
 	if(!M || M.incapacitated())
 		return
 
+	if(stored_container)
+		return
+
 	var/obj/item/W = M.get_active_hand()
 	if(istype(W,/obj/item/weapon/reagent_containers/glass))
-		M.drop_from_inventory(W,src)
 		stored_container = W
-		visible_message("\The [M] loads \the [W] into \the [src].")
+		M.drop_from_inventory(stored_container,src)
+		visible_message("\The [M] loads \the [stored_container] into \the [src].")
 
-/obj/vehicle/train/trolly_tank/proc/load_container(var/obj/item/W)
+/obj/vehicle/train/trolly_tank/proc/load_container(var/mob/user,var/obj/item/W)
+	if(stored_container)
+		return
 	if(istype(W,/obj/item/weapon/reagent_containers/glass))
-		stored_container.forceMove(src)
-		stored_container = W
+		if(W.loc == user)
+			stored_container = W
+			user.drop_from_inventory(stored_container,src)
+			visible_message("\The [user] loads \the [stored_container] into \the [src].")
 
 /obj/vehicle/train/trolly_tank/AltClick(mob/user)
 	fill_container()
