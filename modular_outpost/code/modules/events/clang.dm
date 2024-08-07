@@ -1,7 +1,7 @@
 /datum/event/clang
 	announceWhen 	= 1
 	startWhen		= 10
-	endWhen			= 15
+	endWhen			= 35
 
 /datum/event/clang/announce()
 	command_announcement.Announce("Attention [station_name()]. Unknown ultra-dense high-velocity object entering stratosphere!", "General Alert")
@@ -20,10 +20,12 @@
 	var/endy = 0
 	var/endx = 0
 	var/startside = pick(cardinal)
+	if(prob(50))
+		startside = pick(list(EAST,WEST)) // Outpost 21 edit - our station is wide
 
 	// Random pos along an edge with a percent buffer to prevent corner spawns
-	var/wid = world.maxx * 0.15
-	var/hig = world.maxy * 0.15
+	var/wid = world.maxx * 0.05
+	var/hig = world.maxy * 0.05
 	var/map_l = wid
 	var/map_r = world.maxx - wid
 	var/map_b = hig
