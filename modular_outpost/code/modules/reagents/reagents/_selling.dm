@@ -104,7 +104,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_RAW
 
 /datum/reagent/hydrogen
-	supply_conversion_value = EXPORT_VALUE_COMMON
+	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/iron
