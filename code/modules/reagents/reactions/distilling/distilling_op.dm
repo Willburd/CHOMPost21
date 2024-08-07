@@ -10,7 +10,7 @@
 	temp_shift = -1
 
 	require_xgm_gas = "oxygen" // should be easy!
-	rejects_xgm_gas = "phoron" // should be easy!
+	rejects_xgm_gas = "nitrogen" // So you can't do it on a bunsen
 
 /decl/chemical_reaction/distilling/hydrogen
 	name = "Distilling Hydrogen"

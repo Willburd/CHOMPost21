@@ -5263,6 +5263,7 @@
 #include "modular_outpost\code\modules\player_tips\player_tips_list.dm"
 #include "modular_outpost\code\modules\reagents\machinery\chemalyzerpro.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_filter.dm"
+#include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_furnace.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_grinder.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_hub.dm"
 #include "modular_outpost\code\modules\reagents\machinery\industrial_reagent_machines.dm"

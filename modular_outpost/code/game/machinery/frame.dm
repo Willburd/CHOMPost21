@@ -56,3 +56,8 @@
 	name = "Industrial Chemical Reactor"
 	icon_override = 'modular_outpost/icons/obj/stock_parts_refinery.dmi'
 	frame_class = FRAME_CLASS_MACHINE
+
+/datum/frame/frame_types/industrial_reagent_furnace
+	name = "Industrial Chemical Sintering Furnace"
+	icon_override = 'modular_outpost/icons/obj/stock_parts_refinery.dmi'
+	frame_class = FRAME_CLASS_MACHINE

@@ -80,7 +80,16 @@
 	for(var/datum/reagent/R in reagents.reagent_list)
 		if(R)
 			tgui_list[R.name] = R.id
-	var/select = tgui_input_list(usr, "Select chemical to filter:", "Chemical Select", tgui_list)
+
+	var/filter = "disabled"
+	if(filter_reagent_id == "-1")
+		filter = "filtering out nothing"
+	else if(filter_reagent_id == "-2")
+		filter = "filtering out everything"
+	else if(filter_reagent_id != "")
+		var/datum/reagent/R = SSchemistry.chemical_reagents[filter_reagent_id]
+		filter = "filtering [R.name]"
+	var/select = tgui_input_list(usr, "Select chemical to filter. It is currently [filter].", "Chemical Select", tgui_list)
 
 	if (usr.stat || usr.restrained())
 		return
@@ -131,5 +140,5 @@
 		filter = "filtering out everything"
 	else if(filter_reagent_id != "")
 		var/datum/reagent/R = SSchemistry.chemical_reagents[filter_reagent_id]
-		filter = R.name
+		filter = "filtering [R.name]"
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is currently [filter]. At a rate of [amount_per_transfer_from_this]u."

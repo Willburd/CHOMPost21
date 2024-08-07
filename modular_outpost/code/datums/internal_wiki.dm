@@ -614,6 +614,21 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	value = FLOOR(value * 100,1) / 100 // Truncate decimals
 	if(value > 0)
 		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"] per [REAGENTS_PER_SHEET] units  |  [(value*tank_size)] [(value*tank_size) > 1 ? "thalers" : "thaler"] per [tank_size] unit tank</b><br>"
+	if(global.reagent_sheets[R.id])
+		var/mat_id = global.reagent_sheets[R.id]
+		switch(mat_id)
+			if("FLAG_SMOKE")
+				body += "<b>Sintering Results: COMBUSTION</b><br>"
+			if("FLAG_EXPLODE")
+				body += "<b>Sintering Results: DETONATION</b><br>"
+			if("FLAG_SPIDERS")
+				body += "<b>Sintering Results: DO NOT EVER</b><br>"
+			else
+				var/datum/material/C = get_material_by_name(global.reagent_sheets[R.id])
+				if(C)
+					body += "<b>Sintering Results: [C.display_name] [C.sheet_plural_name]</b><br>"
+				else
+					log_runtime(EXCEPTION("Invalid sintering result id: [global.reagent_sheets[R.id]] in reagent [title]"))
 	if(R.overdose > 0)
 		body += "<b>Overdose: </b>[R.overdose]U<br>"
 	body += "<b>Flavor: </b>[R.taste_description]<br>"

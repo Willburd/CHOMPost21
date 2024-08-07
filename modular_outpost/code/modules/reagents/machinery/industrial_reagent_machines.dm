@@ -87,19 +87,22 @@
 			return
 		target = tanker // forward it to the tanker!
 
-	// no back/forth, filters don't use just their forward, they send the side too!
-	else if(dir == reverse_dir[source_forward_dir] && !istype(target,/obj/machinery/reagent_refinery/waste_processor)) // Waste tanks accept from all sides
-		return
+	else
+		// pumps, furnaces and filters can only be FED in a straight line
+		if(istype(target,/obj/machinery/reagent_refinery/pump) || istype(target,/obj/machinery/reagent_refinery/filter) || istype(target,/obj/machinery/reagent_refinery/furnace))
+			if(dir != target.dir)
+				return
 
-	// pumps and filters can only be FED in a straight line
-	if((istype(target,/obj/machinery/reagent_refinery/pump) || istype(target,/obj/machinery/reagent_refinery/filter)) && dir != target.dir)
-		return
+		// no back/forth, filters don't use just their forward, they send the side too!
+		if(!istype(target,/obj/machinery/reagent_refinery/waste_processor)) // Waste tanks accept from all sides
+			if(target.dir == reverse_dir[source_forward_dir])
+				return
 
-	// locked until distilling mode
-	if(istype(target,/obj/machinery/reagent_refinery/reactor))
-		var/obj/machinery/reagent_refinery/reactor/R = target
-		if(R.toggle_mode == 1)
-			return
+		// locked until distilling mode
+		if(istype(target,/obj/machinery/reagent_refinery/reactor))
+			var/obj/machinery/reagent_refinery/reactor/R = target
+			if(R.toggle_mode == 1)
+				return
 
 	// Transfer to target in amounts every process tick!
 	use_power_oneoff(active_power_usage)

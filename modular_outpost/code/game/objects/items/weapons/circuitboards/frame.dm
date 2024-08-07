@@ -101,3 +101,14 @@
 							/obj/item/weapon/stock_parts/micro_laser = 4,
 							/obj/item/weapon/stock_parts/manipulator = 1,
 							/obj/item/stack/material/glass/reinforced = 1)
+
+/obj/item/weapon/circuitboard/industrial_reagent_furnace
+	name = T_BOARD("industrial chemical sintering furnace")
+	build_path = /obj/machinery/reagent_refinery/furnace
+	board_type = new /datum/frame/frame_types/industrial_reagent_furnace
+	req_components = list(
+							/obj/item/weapon/stock_parts/motor = 2,
+							/obj/item/weapon/stock_parts/capacitor = 4,
+							/obj/item/weapon/stock_parts/scanning_module = 1,
+							/obj/item/weapon/stock_parts/manipulator = 1,
+							/obj/item/weapon/stock_parts/gear = 2)
