@@ -2508,6 +2508,7 @@
 #include "code\modules\economy\trader.dm"
 #include "code\modules\economy\vending.dm"
 #include "code\modules\economy\vending_machines.dm"
+#include "code\modules\economy\vending_machines_op.dm"
 #include "code\modules\economy\vending_machines_vr.dm"
 #include "code\modules\economy\vending_refills.dm"
 #include "code\modules\emotes\emote_define.dm"

@@ -80,6 +80,7 @@
 	var/has_logs = 0 //defaults to 0, set to anything else for vendor to have logs
 	var/can_rotate = 1 //Defaults to yes, can be set to 0 for vendors without or with unwanted directionals.
 
+	var/forced_icon_path = null // Outpost 21 edit - Cargovendi can be loaded with any item, but icons for them don't exist on tgui side unless they're vendable... So just force an icon instead.
 
 /obj/machinery/vending/Initialize()
 	. = ..()
@@ -189,7 +190,12 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	var/obj/item/weapon/card/id/I = W.GetID()
-
+	// Outpost 21 edit begin - Cargo resale vendor
+	if(I && panel_open)
+		var/obj/machinery/vending/cargo_resale/CR = src
+		if(CR.cargo_vendor_unlocking( I, user))
+			return
+	// Outpost 21 edit end
 	if(I || istype(W, /obj/item/weapon/spacecash))
 		attack_hand(user)
 		return
@@ -225,6 +231,11 @@ GLOBAL_LIST_EMPTY(vending_products)
 			add_overlay("[initial(icon_state)]-panel")
 		else
 			cut_overlay("[initial(icon_state)]-panel")
+			// Outpost 21 edit begin - Cargo vendor locking back up... QoL mostly so you don't need to swipe ID again when closing it
+			if(istype(src,/obj/machinery/vending/cargo_resale))
+				var/obj/machinery/vending/cargo_resale/CR = src
+				CR.cargo_locked = TRUE
+			// Outpost 21 edit end
 
 		SStgui.update_uis(src)  // Speaker switch is on the main UI, not wires UI
 		return
@@ -253,11 +264,17 @@ GLOBAL_LIST_EMPTY(vending_products)
 			anchored = !anchored
 		return
 	else
-
-		for(var/datum/stored_item/vending_product/R in product_records)
-			if(istype(W, R.item_path) && (W.name == R.item_name))
-				stock(W, R, user)
+		// Outpost 21 edit begin - Cargo resale vendor
+		if(istype(src,/obj/machinery/vending/cargo_resale))
+			var/obj/machinery/vending/cargo_resale/CR = src
+			if(CR.stock_cargo_vendor( W, user))
 				return
+		else
+		// Outpost 21 edit end
+			for(var/datum/stored_item/vending_product/R in product_records)
+				if(istype(W, R.item_path) && (W.name == R.item_name))
+					stock(W, R, user)
+					return
 		..()
 
 /**
@@ -447,6 +464,17 @@ GLOBAL_LIST_EMPTY(vending_products)
 	else
 		data["panel"] = 0
 
+	// Outpost 21 edit begin - Cargo vendor configuring
+	data["cargo_configure"] = 0
+	if(istype(src,/obj/machinery/vending/cargo_resale))
+		var/obj/machinery/vending/cargo_resale/CR = src
+		if(!CR.cargo_locked)
+			data["cargo_configure"] = 1
+
+	// Force icons for the vendi, because icons are made at startup from the vendi contents... I cannot get icons to players dynamically for tgui!
+	data["forced_icon_path"] = replacetext(replacetext("[forced_icon_path]", "/obj/item/", ""), "/", "-")
+	// Outpost 21 edit end
+
 	var/mob/living/carbon/human/H
 	var/obj/item/weapon/card/id/C
 
@@ -507,6 +535,15 @@ GLOBAL_LIST_EMPTY(vending_products)
 				flick("[icon_state]-deny",src)
 				playsound(src, 'sound/machines/deniedbeep.ogg', 50, 0)
 				return
+			// Outpost 21 edit begin - Cargo vendor configuring
+			if(istype(src,/obj/machinery/vending/cargo_resale))
+				var/key = text2num(params["vend"])
+				var/datum/stored_item/vending_product/R = product_records[key]
+				var/obj/machinery/vending/cargo_resale/CR = src
+				if(!CR.cargo_locked)
+					CR.set_cargo_price( R, usr)
+					return
+			// Outpost 21 edit end
 			if(panel_open)
 				to_chat(usr, "<span class='warning'>[src] cannot dispense products while its service panel is open!</span>")
 				return
