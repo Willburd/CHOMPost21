@@ -11,16 +11,24 @@
 	var/cargo_locked = TRUE
 	var/vending_account = "Cargo" // Which department bankaccount this goes to
 
-	req_access = list(access_cargo)
+	var/unlock_access = list(access_cargo)
 	forced_icon_path = /obj/item/weapon/spacecash/c20
 
 /obj/machinery/vending/cargo_resale/do_not_use
 	// This exists exclusively so that we have icons for the cargo vendor above. Due to startup tgui icon init only getting the icons of the initial vendable products.
 	products = list(/obj/item/weapon/spacecash/c1,/obj/item/weapon/spacecash/c5,/obj/item/weapon/spacecash/c10,/obj/item/weapon/spacecash/c20,/obj/item/weapon/spacecash/c50,/obj/item/weapon/spacecash/c100,/obj/item/weapon/spacecash/c200,/obj/item/weapon/spacecash/c500,/obj/item/weapon/spacecash/c1000)
 
+/obj/machinery/vending/cargo_resale/Destroy()
+	// Drop inventory before clearing it
+	for(var/datum/stored_item/vending_product/R in product_records)
+		for(var/obj/I in R.instances)
+			I.forceMove(loc)
+		R.instances = list()
+	return ..()
+
 /obj/machinery/vending/cargo_resale/proc/cargo_vendor_unlocking(var/obj/item/weapon/card/id/C, mob/user as mob)
 	// Handle unlocking machine if cargo
-	if(!(req_access[1] in C.access)) //doesn't have this access
+	if(!(unlock_access[1] in C.access)) //doesn't have this access
 		return FALSE
 	cargo_locked = !cargo_locked
 	visible_message("<span class='info'>\The [user] [cargo_locked ? "locks" : "unlocks"] \the [src]'s restocking controls.</span>")
@@ -35,12 +43,33 @@
 				stock(W, R, user)
 				return TRUE
 
-		// Unvendables... This will grow...
-		if(istype(W,/obj/item/stack))
-			to_chat(user,SPAN_NOTICE("\The [src] cannot vend \the [W]."))
+		// Basic unvendables
+		if(W.my_augment)
+			to_chat(user,SPAN_NOTICE("\The [src] cannot vend an attached implant."))
 			return FALSE
-		if(istype(W,/obj/item/weapon/holder))
+		if(istype(W,/obj/item/stack) || istype(W,/obj/item/weapon/holder) || istype(W,/obj/item/weapon/grab) || istype(W,/obj/item/weapon/card/id))
 			to_chat(user,SPAN_NOTICE("\The [src] cannot vend this."))
+			return FALSE
+		// Per item sanity filter. I hate everything about this.
+		if(istype(W,/obj/item/device/vac_attachment) \
+		|| istype(W,/obj/item/weapon/shockpaddles/linked) \
+		|| istype(W,/obj/item/device/radio/bluespacehandset/linked) \
+		|| istype(W,/obj/item/weapon/cmo_disk_holder) \
+		|| istype(W,/obj/item/weapon/rig) \
+		|| istype(W,/obj/item/weapon/telecube) \
+		|| istype(W,/obj/item/weapon/reagent_containers/glass/bottle/adminordrazine) \
+		|| istype(W,/obj/item/weapon/gun/energy/sizegun/admin) \
+		|| istype(W,/obj/item/weapon/melee/cursedblade) \
+		|| istype(W,/obj/item/device/radio/bluespacehandset/linked) \
+		|| istype(W,/obj/item/device/paicard) \
+		|| istype(W,/obj/item/device/radio/bluespacehandset/linked) \
+		|| istype(W,/obj/item/organ) \
+		|| istype(W,/obj/item/device/soulstone) \
+		|| istype(W,/obj/item/device/aicard) \
+		|| istype(W,/obj/item/device/mmi) \
+		|| istype(W,/obj/item/weapon/spacecash) \
+		|| istype(W,/obj/item/weapon/spacecasinocash))
+			to_chat(user,SPAN_NOTICE("\The [src] should not vend this."))
 			return FALSE
 
 		// Add new entry if safe
@@ -66,6 +95,13 @@
 /obj/machinery/vending/cargo_resale/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The slot for restocking and inserting a [vending_account] department ID is [cargo_locked ? "locked behind a small screwed on panel" : "unlocked"]."
+
+// Remove empty products from machine on final vend
+/obj/machinery/vending/delayed_vend(datum/stored_item/vending_product/R, mob/user)
+	. = ..()
+	if(R && R.instances.len <= 0)
+		product_records.Remove(R)
+		SStgui.update_uis(src)
 
 /**
  *  Add money for current purchase to the vendor account.
@@ -94,7 +130,7 @@
 	// icon = 'icons/obj/vending_op.dmi'
 	icon_state = "nutri" // Outpost todo - custom vendi
 	vending_account = "Civilian" // Which department bankaccount this goes to
-	req_access = list(access_kitchen,access_bar)
+	unlock_access = list(access_kitchen,access_bar)
 
 /obj/machinery/vending/cargo_resale/medi
 	name = "Medicare Vendor"
@@ -102,7 +138,7 @@
 	// icon = 'icons/obj/vending_op.dmi'
 	icon_state = "med" // Outpost todo - custom vendi
 	vending_account = "Medical" // Which department bankaccount this goes to
-	req_access = list(access_medical)
+	unlock_access = list(access_medical)
 
 /obj/machinery/vending/cargo_resale/sci
 	name = "Technology Vendor"
@@ -110,4 +146,4 @@
 	// icon = 'icons/obj/vending_op.dmi'
 	icon_state = "nutri" // Outpost todo - custom vendi
 	vending_account = "Research" // Which department bankaccount this goes to
-	req_access = list(access_research)
+	unlock_access = list(access_research)
