@@ -39,7 +39,7 @@ var/global/list/sheet_reagents = list( //have a number of reageents divisible by
 	)
 
 var/global/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
-	/obj/item/weapon/ore/glass = list("silicon"),
+	/obj/item/weapon/ore/glass = list("silicate"),
 	/obj/item/weapon/ore/iron = list("iron"),
 	/obj/item/weapon/ore/coal = list("carbon"),
 	/obj/item/weapon/ore/copper = list("copper"),

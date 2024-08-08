@@ -20,6 +20,13 @@
 	required_reagents = list("hydrogen" = 2,"sulfur" = 1,"oxygen" = 4)
 	result_amount = 5
 
+/decl/chemical_reaction/instant/silicon
+	name = "Silicon"
+	id = "silicon"
+	result = "silicon"
+	required_reagents = list("silicate" = 1, "sacid" = 1,"sulfur" = 1)
+	result_amount = 1
+
 /decl/chemical_reaction/instant/riotsmoke
 	name = "Riotgas"
 	id = "riotsmoke"
