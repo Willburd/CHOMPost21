@@ -41,16 +41,18 @@
 	throw_range = 20
 	var/randomize = TRUE
 	var/square_chance = 10
-	
+
 /obj/item/weapon/soap/Initialize()
 	if(randomize && prob(square_chance))
 		icon_state = "[icon_state]-alt"
 
 /obj/item/weapon/soap/nanotrasen
+	name = "Soap (Nanotrasen)" // Outpost 21 edit - Custom names
 	desc = "A NanoTrasen-brand bar of soap. Smells of phoron, a years-old marketing gimmick."
 	icon_state = "soapnt"
 
 /obj/item/weapon/soap/deluxe
+	name = "Soap (Deluxe)" // Outpost 21 edit - Custom names
 	icon_state = "soapdeluxe"
 
 /obj/item/weapon/soap/deluxe/New()
@@ -58,82 +60,102 @@
 	..()
 
 /obj/item/weapon/soap/syndie
+	name = "Soap (Syndicate)" // Outpost 21 edit - Custom names
 	desc = "An untrustworthy bar of soap. Smells of fear."
 	icon_state = "soapsyndie"
 
 /obj/item/weapon/soap/space_soap
+	name = "Soap (Space)" // Outpost 21 edit - Custom names
 	desc = "Smells like hot metal and walnuts."
 	icon_state = "space_soap"
 
 /obj/item/weapon/soap/water_soap
+	name = "Soap (Pool)" // Outpost 21 edit - Custom names
 	desc = "Smells like chlorine."
 	icon_state = "water_soap"
 
 /obj/item/weapon/soap/fire_soap
+	name = "Soap (Fire)" // Outpost 21 edit - Custom names
 	desc = "Smells like a campfire."
 	icon_state = "fire_soap"
 
 /obj/item/weapon/soap/rainbow_soap
+	name = "Soap (Rainbow)" // Outpost 21 edit - Custom names
 	desc = "Smells sickly sweet."
 	icon_state = "rainbow_soap"
 
 /obj/item/weapon/soap/diamond_soap
+	name = "Soap (Diamond)" // Outpost 21 edit - Custom names
 	desc = "Smells like saffron and vanilla."
 	icon_state = "diamond_soap"
 
 /obj/item/weapon/soap/uranium_soap
+	name = "Soap (Uranium)" // Outpost 21 edit - Custom names
 	desc = "Smells not great... Not terrible."
 	icon_state = "uranium_soap"
 
 /obj/item/weapon/soap/silver_soap
+	name = "Soap (Silver)" // Outpost 21 edit - Custom names
 	desc = "Smells like birch and amaranth."
 	icon_state = "silver_soap"
 
 /obj/item/weapon/soap/brown_soap
+	name = "Soap (Brown)" // Outpost 21 edit - Custom names
 	desc = "Smells like cinnamon and cognac."
 	icon_state = "brown_soap"
 
 /obj/item/weapon/soap/white_soap
+	name = "Soap (Nutty)" // Outpost 21 edit - Custom names
 	desc = "Smells like nutmeg and oats."
 	icon_state = "white_soap"
 
 /obj/item/weapon/soap/grey_soap
+	name = "Soap (Grey)" // Outpost 21 edit - Custom names
 	desc = "Smells like bergamot and lilies."
 	icon_state = "grey_soap"
 
 /obj/item/weapon/soap/pink_soap
+	name = "Soap (Gum)" // Outpost 21 edit - Custom names
 	desc = "Smells like bubblegum."
 	icon_state = "pink_soap"
 
 /obj/item/weapon/soap/purple_soap
+	name = "Soap (Purple)" // Outpost 21 edit - Custom names
 	desc = "Smells like lavender."
 	icon_state = "purple_soap"
 
 /obj/item/weapon/soap/blue_soap
+	name = "Soap (Blue)" // Outpost 21 edit - Custom names
 	desc = "Smells like cardamom."
 	icon_state = "blue_soap"
 
 /obj/item/weapon/soap/cyan_soap
+	name = "Soap (Berries)" // Outpost 21 edit - Custom names
 	desc = "Smells like bluebells and peaches."
 	icon_state = "cyan_soap"
 
 /obj/item/weapon/soap/green_soap
+	name = "Soap (Grass)" // Outpost 21 edit - Custom names
 	desc = "Smells like a freshly mowed lawn."
 	icon_state = "green_soap"
 
 /obj/item/weapon/soap/yellow_soap
+	name = "Soap (Lemon)" // Outpost 21 edit - Custom names
 	desc = "Smells like citron and ginger."
 	icon_state = "yellow_soap"
 
 /obj/item/weapon/soap/orange_soap
+	name = "Soap (Orange)" // Outpost 21 edit - Custom names
 	desc = "Smells like oranges and dark chocolate."
 	icon_state = "orange_soap"
 
 /obj/item/weapon/soap/red_soap
+	name = "Soap (Cherry)" // Outpost 21 edit - Custom names
 	desc = "Smells like cherries."
 	icon_state = "red_soap"
 
 /obj/item/weapon/soap/golden_soap
+	name = "Soap (Honey)" // Outpost 21 edit - Custom names
 	desc = "Smells like honey."
 	icon_state = "golden_soap"
 
