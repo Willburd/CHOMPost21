@@ -492,7 +492,7 @@ var/global/datum/controller/occupations/job_master
 	log_game("SPECIES [key_name(H)] is a: \"[H.species.name]\"") //VOREStation Add
 
 	// If they're head, give them the account info for their department
-	if(H.mind && job.department_accounts)
+	if(H.mind && job.department_accounts && !job.forbid_department_account_access)
 		var/remembered_info = ""
 		for(var/D in job.department_accounts)
 			var/datum/money_account/department_account = department_accounts[D]

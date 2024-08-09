@@ -24,6 +24,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/stowaway
 	access = list()
 	minimal_access = list()
+	forbid_department_account_access = TRUE
 
 /datum/job/stowaway/New()
 	..()

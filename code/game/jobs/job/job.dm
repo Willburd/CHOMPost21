@@ -43,10 +43,12 @@
 	var/list/restricted_keys = list()		//CHOMPadd
 	var/list/shift_keys = list()			//CHOMPadd
 
+	var/forbid_department_account_access = FALSE // Outpost 21 edit - Does not provide the account ID and key for the department's bank account
+
 /datum/job/New()
 	. = ..()
 	// Outpost 21 edit begin - We allow the whole department to use the bank account
-	if(account_allowed && !offmap_spawn)
+	if(account_allowed && !offmap_spawn && !forbid_department_account_access)
 		var/list/accounts = list() // heads get head stuff
 		for(var/dept in (departments + departments_managed + department_accounts))
 			if(!locate(dept) in accounts)
@@ -103,7 +105,7 @@
 
 	to_chat(H, "<span class='notice'><b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b></span>")
 	// Outpost 21 edit begin - Show department accounts too so players know they have access
-	if(account_allowed)
+	if(account_allowed && !forbid_department_account_access)
 		for(var/dept in department_accounts)
 			var/datum/money_account/bank_account = global.department_accounts[dept]
 			if(bank_account)

@@ -28,6 +28,7 @@
 						another job. Though they are part of the crew, they have no real authority."
 	timeoff_factor = 0 // Interns, noh
 	requestable = FALSE
+	forbid_department_account_access = TRUE
 
 /datum/alt_title/intern_eng
 	title = "Apprentice Engineer"
@@ -99,6 +100,7 @@
 	timeoff_factor = 0
 	requestable = FALSE
 	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler)
+	forbid_department_account_access = TRUE
 
 /datum/job/assistant/New()
 	..()
