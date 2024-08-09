@@ -63,6 +63,12 @@
 
 	w_class = ITEMSIZE_SMALL
 
+	// Outpost 21 edit begin - Needs to be redefined here, or the switch statement beneath with no default case can never change target limb... Also prevents putting it in your shoulder when it's a hand implant. - Willbird
+	organ_tag = O_AUG_R_HAND
+	parent_organ = BP_R_HAND
+	target_slot = slot_r_hand
+	// Outpost 21 edit end
+
 	integrated_object_type = /obj/item/weapon/portable_scanner
 
 /obj/item/organ/internal/augment/armmounted/hand/attackby(obj/item/I as obj, mob/user as mob)
