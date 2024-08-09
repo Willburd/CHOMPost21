@@ -112,7 +112,7 @@
 			"x" = list("ks", "kss", "ksss")
 		),
 	autohiss_exempt = list("Sinta'unathi"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_yinglet) // Outpost 21 edit - add yinglet //YW edit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_tajaran/xenochimera
 	sort = TRAIT_SORT_SPECIES
@@ -126,7 +126,7 @@
 			"r" = list("rr", "rrr", "rrrr")
 		),
 	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian) //YW edit: exclude vassillian hiss
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian, /datum/trait/neutral/autohiss_yinglet) // Outpost 21 edit - add yinglet  //YW edit: exclude vassillian hiss
 
 /datum/trait/neutral/autohiss_vassilian/xenochimera
 	sort = TRAIT_SORT_SPECIES
@@ -145,7 +145,7 @@
         "r" = list("rk")
 	),
 	autohiss_exempt = list("Vespinae"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_yinglet) // Outpost 21 edit - add yinglet
 //End YW edit
 
 /datum/trait/positive/cocoon_tf/xenochimera

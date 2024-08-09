@@ -40,7 +40,7 @@
 	reaction = AG_COUGH
 
 // autohiss
-/datum/trait/neutral/autohiss_zaddat
+/datum/trait/neutral/autohiss_yinglet
 	name = "Autohiss (Yinglet)"
 	desc = "You pronounce th's with a lisp"
 	cost = 0
