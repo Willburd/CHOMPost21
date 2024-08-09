@@ -55,5 +55,5 @@
 			"the" = list("z"),
 			"so" = list("z")
 		),
-	autohiss_exempt = list(LANGUAGE_UNATHI))
+	autohiss_exempt = list())
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_zaddat)

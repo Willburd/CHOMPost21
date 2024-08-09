@@ -145,7 +145,7 @@
         "r" = list("rk")
 	),
 	autohiss_exempt = list("Vespinae"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi,/datum/trait/neutral/autohiss_yinglet) // Outpost 21 edit - add yinglet
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_yinglet) // Outpost 21 edit - add yinglet
 //End YW edit
 
 /datum/trait/positive/cocoon_tf/xenochimera

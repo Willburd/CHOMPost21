@@ -86,7 +86,7 @@
         "r" = list("rk")
 	),
 	autohiss_exempt = list("Vespinae"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_yinglet) // Outpost 21 edit - add yinglet
 
 /datum/trait/neutral/gargoyle
 	name = "Gargoyle (Adjustable)"
