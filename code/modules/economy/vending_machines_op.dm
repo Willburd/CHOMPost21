@@ -73,7 +73,7 @@
 			return FALSE
 
 		// Add new entry if safe
-		var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, W.type, price = 0)
+		var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, W.type, W.name, price = 0)
 		product.instances = list() // So we don't reinit and get a free item upon calling stock()
 		product_records.Add(product)
 		stock(W, product, user)
