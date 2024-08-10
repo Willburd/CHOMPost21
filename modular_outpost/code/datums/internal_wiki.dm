@@ -471,7 +471,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	title = S.display_name
 	body  =  "<b>Requires Feeding: [S.get_trait(TRAIT_REQUIRES_NUTRIENTS) ? "YES" : "NO"]</b><br>"
 	body  += "<b>Requires Watering: [S.get_trait(TRAIT_REQUIRES_WATER) ? "YES" : "NO"]</b><br>"
-	body  += "<b>Requires Light: [S.get_trait(TRAIT_IDEAL_LIGHT)] lumen[S.get_trait(TRAIT_IDEAL_LIGHT) == 1 ? "" : "s"]<br>"
+	body  += "<b>Requires Light: [S.get_trait(TRAIT_IDEAL_LIGHT)] lumen[S.get_trait(TRAIT_IDEAL_LIGHT) == 1 ? "" : "s"]</b><br>"
 	if(S.get_trait(TRAIT_YIELD) > 0)
 		body  += "<b>Yield: [S.get_trait(TRAIT_YIELD)]</b><br>"
 	body  += "<br>"
@@ -528,7 +528,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body  += "<br>"
 
 	if(S.has_mob_product)
-		body += "<b>DANGER - MAY BE MOBILE<br>"
+		body += "<b>DANGER - MAY BE MOBILE</b><br>"
 	body  += "<br>"
 
 	if(S.chems && S.chems.len > 0)

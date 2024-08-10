@@ -10,7 +10,10 @@ export const BodyScannerMainAbnormalities = (props: { occupant: occupant }) => {
     occupant.blind ||
     occupant.colourblind ||
     occupant.nearsighted ||
-    occupant.hasVirus;
+    occupant.hasVirus ||
+  /* Outpost 21 Add */
+    occupant.husked;
+  /* Outpost 21 End */
 
   hasAbnormalities =
     hasAbnormalities ||
@@ -18,11 +21,6 @@ export const BodyScannerMainAbnormalities = (props: { occupant: occupant }) => {
     occupant.livingPrey ||
     occupant.objectPrey;
 
-  /* Outpost 21 Add */
-  hasAbnormalities =
-    hasAbnormalities ||
-    occupant.husked;
-  /* Outpost 21 End */
 
   if (!hasAbnormalities) {
     return (

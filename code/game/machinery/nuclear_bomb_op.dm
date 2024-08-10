@@ -34,14 +34,14 @@
 			var/obj/item/weapon/paper/P = new(paper_spawn_loc)
 			P.info = "The nuclear authorization code is: <b>[r_code]</b>"
 			P.name = "nuclear bomb code"
-			error("Nuclear codes paper spawned, location [P.loc]")
+			log_world("Nuclear codes paper spawned, location [P.loc.x] [P.loc.y] [P.loc.z]")
 
 		nukeitems -= paper_spawn_loc
 		var/nukedisk_spawn_loc = paper_spawn_loc
 		if(nukeitems.len > 0)
 			nukedisk_spawn_loc = pick(nukeitems)
 		var/obj/item/weapon/disk/nuclear/disk = new /obj/item/weapon/disk/nuclear(nukedisk_spawn_loc)
-		error("Nuclear disk spawned, location [disk.loc]")
+		log_world("Nuclear disk spawned, location [disk.loc.x] [disk.loc.y] [disk.loc.z]")
 	else
 		error("No nuclear landmarks defined")
 

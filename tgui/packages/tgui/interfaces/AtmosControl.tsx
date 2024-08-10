@@ -17,6 +17,7 @@ type alarm = {
 type Data = {
   alarms: alarm[];
   zoomScale: number;
+  ymult: number; // Outpost 21 edit - Wide map support
 };
 
 export const AtmosControl = (props) => {
