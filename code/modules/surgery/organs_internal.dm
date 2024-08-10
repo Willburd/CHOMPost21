@@ -84,7 +84,7 @@
 				user.balloon_alert_visible("Starts treating damage to [target]'s [I.name]", "Treating damage to \the [I.name]") // CHOMPEdit
 				if(I.organ_tag == O_BRAIN && I.status == ORGAN_DEAD && target.can_defib == 0) //Let people know they still got more work to get the brain back into working order.
 					to_chat(user, "<span class='warning'>You fix their [I] but the neurological structure is still heavily damaged and in need of repair.</span>")
-					user.balloon_alert("Fixed \the [I], neurological structure still in neeed of repair.") // CHOMPEdit
+					user.balloon_alert(user, "Fixed \the [I], neurological structure still in neeed of repair.") // CHOMPEdit
 				I.damage = 0
 				I.status = 0
 				if(I.organ_tag == O_EYES)
@@ -380,7 +380,7 @@
 
 	if((affected.robotic >= ORGAN_ROBOT) && !(O.robotic >= ORGAN_ROBOT))
 		to_chat(user, "<span class='danger'>You cannot install a naked organ into a robotic body.</span>")
-		user.balloon_alert("You cannot install a naked organ into a robotic body.") // CHOMPEdit
+		user.balloon_alert(user, "You cannot install a naked organ into a robotic body.") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	if(!target.species)
@@ -399,8 +399,8 @@
 	if(!target.internal_organs_by_name[O.organ_tag])
 		organ_missing = 1
 	else
-		to_chat(user, "<span class='warning'>\The [target] already has [o_a][O.name].</span>")
-		user.balloon_alert("There is a [o_a][O.name] already!") // CHOMPEdit
+		to_chat(user, "<span class='warning'>\The [target] already has [o_a][O.organ_tag].</span>")
+		user.balloon_alert(user, "There is a [o_a][O.organ_tag] already!") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	// Outpost 21 addition begin - Malignant organs
@@ -418,8 +418,8 @@
 		organ_compatible = 1
 
 	else
-		to_chat(user, "<span class='warning'>\The [O.name] [o_do] normally go in \the [affected.name].</span>")
-		user.balloon_alert("\The [O.name] [o_do] normally go in \the [affected.name]") // CHOMPEdit
+		to_chat(user, "<span class='warning'>\The [O.organ_tag] [o_do] normally go in \the [affected.name].</span>")
+		user.balloon_alert(user, "\The [O.organ_tag] [o_do] normally go in \the [affected.name]") // CHOMPEdit
 		return SURGERY_FAILURE
 
 	// Outpost 21 edit begin - Autodoc needs to release it's current stored organ
