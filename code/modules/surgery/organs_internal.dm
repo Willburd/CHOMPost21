@@ -242,17 +242,20 @@
 
 /datum/surgery_step/internal/detatch_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+	var/obj/item/organ/internal/removing = target.internal_organs_by_name[target.op_stage.current_organ] // Outpost 21 edit - Use organ's name
 
-	user.visible_message("<span class='filter_notice'>[user] starts to separate [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
-	"<span class='filter_notice'>You start to separate [target]'s [target.op_stage.current_organ] with \the [tool].</span>" )
-	user.balloon_alert_visible("Starts to separate [target]'s [target.op_stage.current_organ]", "Separating \the [target.op_stage.current_organ]") // CHOMPEdit
+	user.visible_message("<span class='filter_notice'>[user] starts to separate [target]'s [removing] with \the [tool].</span>", \
+	"<span class='filter_notice'>You start to separate [target]'s [removing] with \the [tool].</span>" ) // Outpost 21 edit - Use organ's name
+	user.balloon_alert_visible("Starts to separate [target]'s [removing]", "Separating \the [removing]") // CHOMPEdit // Outpost 21 edit - Use organ's name
 	target.custom_pain("The pain in your [affected.name] is living hell!", 100)
 	..()
 
 /datum/surgery_step/internal/detatch_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] has separated [target]'s [target.op_stage.current_organ] with \the [tool].</span>" , \
-	"<span class='notice'>You have separated [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
-	user.balloon_alert_visible("Separates [target]'s [target.op_stage.current_organ]", "Separated \the [target.op_stage.current_organ]") // CHOMPEdit
+	var/obj/item/organ/internal/removing = target.internal_organs_by_name[target.op_stage.current_organ] // Outpost 21 edit - Use organ's name
+
+	user.visible_message("<span class='notice'>[user] has separated [target]'s [removing] with \the [tool].</span>" , \
+	"<span class='notice'>You have separated [target]'s [removing] with \the [tool].</span>") // Outpost 21 edit - Use organ's name
+	user.balloon_alert_visible("Separates [target]'s [removing]", "Separated \the [removing]") // CHOMPEdit // Outpost 21 edit - Use organ's name
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
@@ -322,10 +325,12 @@
 	target.op_stage.current_organ = removable_organs[organ_to_remove]
 	// Outpost 21 edit end
 
-	user.visible_message("<span class='filter_notice'>[user] starts removing [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
-	"<span class='filter_notice'>You start removing [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
-	user.balloon_alert_visible("Starts removing [target]'s [target.op_stage.current_organ]", "Removing \the [target.op_stage.current_organ]") // CHOMPEdit
-	target.custom_pain("Someone's ripping out your [target.op_stage.current_organ]!", 100)
+	var/obj/item/organ/internal/removing = target.internal_organs_by_name[target.op_stage.current_organ] // Outpost 21 edit - Use organ's name
+
+	user.visible_message("<span class='filter_notice'>[user] starts removing [target]'s [removing] with \the [tool].</span>", \
+	"<span class='filter_notice'>You start removing [target]'s [removing] with \the [tool].</span>") // Outpost 21 edit - Use organ's name
+	user.balloon_alert_visible("Starts removing [target]'s [removing]", "Removing \the [removing]") // CHOMPEdit // Outpost 21 edit - Use organ's name
+	target.custom_pain("Someone's ripping out your [removing]!", 100)
 	..()
 
 /datum/surgery_step/internal/remove_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -337,9 +342,11 @@
 
 	// Extract the organ!
 	if(target.op_stage.current_organ)
-		user.visible_message("<span class='notice'>[user] has removed [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
-		"<span class='notice'>You have removed [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
-		user.balloon_alert_visible("Removes [target]'s [target.op_stage.current_organ]", "Removed \the [target.op_stage.current_organ]") // CHOMPEdit
+		var/obj/item/organ/internal/removing = target.internal_organs_by_name[target.op_stage.current_organ] // Outpost 21 edit - Use organ's name
+
+		user.visible_message("<span class='notice'>[user] has removed [target]'s [removing] with \the [tool].</span>", \
+		"<span class='notice'>You have removed [target]'s [removing] with \the [tool].</span>") // Outpost 21 edit - Use organ's name
+		user.balloon_alert_visible("Removes [target]'s [removing]", "Removed \the [removing]") // CHOMPEdit // Outpost 21 edit - Use organ's name
 		var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
 		if(O && istype(O))
 			O.removed(user)
@@ -399,8 +406,8 @@
 	if(!target.internal_organs_by_name[O.organ_tag])
 		organ_missing = 1
 	else
-		to_chat(user, "<span class='warning'>\The [target] already has [o_a][O.organ_tag].</span>")
-		user.balloon_alert(user, "There is a [o_a][O.organ_tag] already!") // CHOMPEdit
+		to_chat(user, "<span class='warning'>\The [target] already has [o_a][O].</span>") // Outpost 21 edit - Use organ name directly
+		user.balloon_alert(user, "There is a [o_a][O] already!") // CHOMPEdit // Outpost 21 edit - Use organ name directly
 		return SURGERY_FAILURE
 
 	// Outpost 21 addition begin - Malignant organs
@@ -411,15 +418,15 @@
 			ML.parent_organ = affected.organ_tag
 			organ_compatible = 1
 		else
-			to_chat(user, "<span class='warning'>\The [ML.name] won't fit in \the [affected.name].</span>")
+			to_chat(user, "<span class='warning'>\The [O] won't fit in \the [affected.name].</span>")
 			return SURGERY_FAILURE
 	// Outpost 21 addition end
 	else if(O && affected.organ_tag == O.parent_organ)
 		organ_compatible = 1
 
 	else
-		to_chat(user, "<span class='warning'>\The [O.organ_tag] [o_do] normally go in \the [affected.name].</span>")
-		user.balloon_alert(user, "\The [O.organ_tag] [o_do] normally go in \the [affected.name]") // CHOMPEdit
+		to_chat(user, "<span class='warning'>\The [O] [o_do] normally go in \the [affected.name].</span>") // Outpost 21 edit - Use organ name directly
+		user.balloon_alert(user, "\The [O] [o_do] normally go in \the [affected.name]") // CHOMPEdit // Outpost 21 edit - Use organ name directly
 		return SURGERY_FAILURE
 
 	// Outpost 21 edit begin - Autodoc needs to release it's current stored organ
@@ -499,16 +506,20 @@
 	return ..()
 
 /datum/surgery_step/internal/attach_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='filter_notice'>[user] begins reattaching [target]'s [target.op_stage.current_organ] with \the [tool].</span>", \
-	"<span class='filter_notice'>You start reattaching [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
-	user.balloon_alert_visible("Begins reattaching [target]'s [target.op_stage.current_organ]", "Reattaching [target.op_stage.current_organ]") // CHOMPEdit
-	target.custom_pain("Someone's digging needles into your [target.op_stage.current_organ]!", 100)
+	var/obj/item/organ/internal/removing = target.internal_organs_by_name[target.op_stage.current_organ] // Outpost 21 edit - Use organ's name
+
+	user.visible_message("<span class='filter_notice'>[user] begins reattaching [target]'s [removing] with \the [tool].</span>", \
+	"<span class='filter_notice'>You start reattaching [target]'s [removing] with \the [tool].</span>") // Outpost 21 edit - Use organ's name
+	user.balloon_alert_visible("Begins reattaching [target]'s [removing]", "Reattaching [removing]") // CHOMPEdit // Outpost 21 edit - Use organ's name
+	target.custom_pain("Someone's digging needles into your [removing]!", 100) // Outpost 21 edit - Use organ's name
 	..()
 
 /datum/surgery_step/internal/attach_organ/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message("<span class='notice'>[user] has reattached [target]'s [target.op_stage.current_organ] with \the [tool].</span>" , \
-	"<span class='notice'>You have reattached [target]'s [target.op_stage.current_organ] with \the [tool].</span>")
-	user.balloon_alert_visible("Reattached [target]'s [target.op_stage.current_organ]", "Reattached [target.op_stage.current_organ]") // CHOMPEdit
+	var/obj/item/organ/internal/removing = target.internal_organs_by_name[target.op_stage.current_organ] // Outpost 21 edit - Use organ's name
+
+	user.visible_message("<span class='notice'>[user] has reattached [target]'s [removing] with \the [tool].</span>" , \
+	"<span class='notice'>You have reattached [target]'s [removing] with \the [tool].</span>") // Outpost 21 edit - Use organ's name
+	user.balloon_alert_visible("Reattached [target]'s [removing]", "Reattached [removing]") // CHOMPEdit // Outpost 21 edit - Use organ's name
 
 	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
 	if(I && istype(I))
