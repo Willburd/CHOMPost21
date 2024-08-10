@@ -48,14 +48,14 @@
 
 /decl/chemical_reaction/instant/titanium_refine
 	name = "Titanium"
-	id = "titanium_purify"
+	id = "titanium"
 	result = "titanium"
 	required_reagents = list("titanium_diox" = 1, "chlorine" = 4, "sodium" = 1)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/titanium_oxidation
 	name = "Titanium dioxide"
-	id = "titanium_oxidation"
+	id = "titanium_diox"
 	result = "titanium_diox"
 	required_reagents = list("titanium" = 1, "oxygen" = 2)
 	result_amount = 1
