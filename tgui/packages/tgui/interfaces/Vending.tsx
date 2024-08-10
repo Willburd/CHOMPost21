@@ -44,7 +44,7 @@ type product = {
 
 const VendingRow = (props: { product: product }) => {
   const { act, data } = useBackend<Data>();
-  const { actively_vending, cargo_configure,forced_icon_path } = data; //Outpost 21 edit - Cargo vendor configuring, forced sale icons
+  const { actively_vending, cargo_configure, forced_icon_path } = data; // Outpost 21 edit - Cargo vendor configuring, forced sale icons
   const { product } = props;
   return (
     <Table.Row className="candystripe">

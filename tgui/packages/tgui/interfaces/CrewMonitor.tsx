@@ -12,7 +12,7 @@ type Data = {
   isAI: BooleanLike;
   map_levels: number[];
   crewmembers: crewmember[];
-  ymult: number;
+  ymult: number; // Outpost 21 edit - Wide map support
 };
 
 type crewmember = {
