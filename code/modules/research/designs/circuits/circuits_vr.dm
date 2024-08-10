@@ -190,3 +190,12 @@
 	req_tech = list(TECH_DATA = 4, TECH_ENGINEERING = 3, TECH_COMBAT = 2)
 	build_path = /obj/item/weapon/circuitboard/pointdefense_control
 	sort_string = "OAABB"
+
+// Outpost 21 edit begin - missing circuitboard
+/datum/design/circuit/fluid_pump
+	name = "Fluid Pump"
+	id = "fluid_pump"
+	req_tech = list(TECH_DATA = 1)
+	build_path = /obj/item/weapon/circuitboard/fluidpump
+	sort_string = "NAAFA"
+// Outpost 21 edit end

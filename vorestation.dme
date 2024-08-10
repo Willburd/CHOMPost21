@@ -4347,6 +4347,7 @@
 #include "code\modules\research\designs\circuits\ai_modules.dm"
 #include "code\modules\research\designs\circuits\circuits.dm"
 #include "code\modules\research\designs\circuits\circuits_ch.dm"
+#include "code\modules\research\designs\circuits\circuits_op.dm"
 #include "code\modules\research\designs\circuits\circuits_vr.dm"
 #include "code\modules\research\designs\circuits\circuits_yw.dm"
 #include "code\modules\research\designs\circuits\disks.dm"
