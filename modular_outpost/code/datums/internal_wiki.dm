@@ -528,7 +528,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body  += "<br>"
 
 	if(S.has_mob_product)
-		body += "<b>DANGER - MAY BE MOBILE<br>"
+		body += "<b>DANGER - MAY BE MOBILE</b><br>"
 	body  += "<br>"
 
 	if(S.chems && S.chems.len > 0)
