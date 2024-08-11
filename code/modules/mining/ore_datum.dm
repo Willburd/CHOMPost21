@@ -206,6 +206,7 @@
 	spread_chance = 5
 	ore = /obj/item/weapon/ore/quartz
 	scan_icon = "mineral_common"
+	reagent = "silicon" // Outpost 21 edit - Pumps silicon instead of silicate
 
 /ore/bauxite
 	name = "bauxite"

@@ -201,7 +201,7 @@
 		if(M.mineral) // v
 			R.add_reagent(M.mineral.reagent, round(volume / 5, 0.1)) // Outpost 21 edit - Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change - Willbird. Also nerfed amount to 1/5 instead of 1/2
 		else if(prob(10))
-			R.add_reagent(M.mineral.reagent, 0.1) // Outpost 21 edit - Nerfed further by taking up tank with junk sand
+			R.add_reagent("silicate", 0.1) // Outpost 21 edit - Nerfed further by taking up tank with junk sand
 
 /turf/simulated/floor/water/pool/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
