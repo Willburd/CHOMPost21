@@ -7,6 +7,10 @@
 #define MENU_SPECIFICRECORD "Specific Record"
 #define MENU_OOCNOTES "OOC Notes"
 
+// Matches code\modules\client\preference_setup\vore\02_size.dm
+#define WEIGHT_MIN 70
+#define WEIGHT_MAX 500
+
 /obj/machinery/computer/transhuman/designer
 	name = "body design console"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
@@ -126,13 +130,27 @@
 		data["activeBodyRecord"] = list(
 			"real_name" = active_br.mydna.name,
 			"speciesname" = active_br.speciesname ? active_br.speciesname : active_br.mydna.dna.species,
+			// Outpost 21 edit begin - New body data
+			"species_custom" = active_br.mydna.dna.custom_species,
+			"species_icon" = active_br.mydna.dna.base_species,
+			"can_use_custom_icon" = GLOB.all_species[active_br.mydna.dna.species].selects_bodytype,
+			"blood_type" = active_br.mydna.dna.b_type,
+			"blood_color" = active_br.mydna.dna.blood_color,
+			"weight" = active_br.weight,
+			"flavors" = list(),
+			// Outpost 21 edit end
 			"gender" = active_br.bodygender,
 			"synthetic" = active_br.synthetic ? "Yes" : "No",
-			"locked" = active_br.locked ? "Low" : "High",
+			"locked" = active_br.locked, // Outpost 21 edit - directly pass in lock/unlocked
 			"scale" = player_size_name(active_br.sizemult),
 			"booc" = active_br.body_oocnotes,
 			"styles" = list()
 		)
+
+		// Outpost 21 edit begin - New body data
+		var/list/flavors = data["activeBodyRecord"]["flavors"]
+		flavors += active_br.mydna.flavor.Copy()
+		// Outpost 21 edit end
 
 		var/list/styles = data["activeBodyRecord"]["styles"]
 		var/list/temp
@@ -405,9 +423,66 @@
 	ASSERT(istype(B))
 	var/datum/category_item/player_setup_item/general/basic/G = CG.items_by_name["Basic"]
 	ASSERT(istype(G))
+	// Outpost 21 edit begin - New body data
+	var/datum/category_item/player_setup_item/general/flavor/F = CG.items_by_name["Flavor"]
+	ASSERT(istype(F))
+	// Outpost 21 edit end
 	var/datum/category_item/player_setup_item/vore/traits/V = CC.categories_by_name["VORE"].items_by_name["Traits"]
 	ASSERT(istype(V))
 	var/list/use_different_category = list("custom_base" = V) //add more here if needed
+
+	// Outpost 21 edit begin - New body data
+	if(params["target_href"] == "rename")
+		var/raw_name = tgui_input_text(user, "Choose your character's name:", "Character Name")
+		if (!isnull(raw_name))
+			var/new_name = sanitize_name(raw_name, P.species, FALSE)
+			if(new_name)
+				active_br.mydna.name = new_name
+				active_br.mydna.dna.real_name = new_name
+			else
+				to_chat(user, "<span class='warning'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</span>")
+			update_preview_icon()
+		return 1
+
+	if(params["target_href"] == "custom_species")
+		var/raw_choice = sanitize(tgui_input_text(user, "Input your custom species name:",
+			"Character Preference", P.custom_species, MAX_NAME_LEN), MAX_NAME_LEN)
+		active_br.mydna.dna.custom_species = raw_choice
+		update_preview_icon()
+		return 1
+
+	if(params["target_href"] == "custom_base" && GLOB.all_species[P.species].selects_bodytype)
+		var/list/choices = GLOB.custom_species_bases
+		choices = (choices | P.species)
+		var/text_choice = tgui_input_list(usr, "Pick an icon set for your species:","Icon Base", choices)
+		if(text_choice in choices)
+			active_br.mydna.dna.base_species = text_choice
+			update_preview_icon()
+		return 1
+
+	if(params["target_href"] == "blood_color")
+		var/color_choice = input(usr, "Pick a blood color (does not apply to synths)","Blood Color",active_br.mydna.dna.blood_color) as color
+		if(color_choice)
+			active_br.mydna.dna.blood_color = sanitize_hexcolor(color_choice, default="#A10808")
+			update_preview_icon()
+		return 1
+
+	if(params["target_href"] == "weight")
+		var/new_weight = tgui_input_number(user, "Choose your character's relative body weight.\n\
+			This measurement should be set relative to a normal 5'10'' person's body and not the actual size of your character.\n\
+			If you set your weight to 500 because you're a naga or have metal implants then complain that you're a blob I\n\
+			swear to god I will find you and I will punch you for not reading these directions!\n\
+			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN)
+		if(new_weight)
+			var/unit_of_measurement = tgui_alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", list("Pounds", "Kilograms"))
+			if(unit_of_measurement == "Pounds")
+				new_weight = round(text2num(new_weight),4)
+			if(unit_of_measurement == "Kilograms")
+				new_weight = round(2.20462*text2num(new_weight),4)
+			active_br.weight = sanitize_integer(new_weight, WEIGHT_MIN, WEIGHT_MAX, P.weight_vr)
+			update_preview_icon()
+		return 1
+	// Outpost 21 edit end
 
 	if(params["target_href"] == "bio_gender")
 		var/new_gender = tgui_input_list(user, "Choose your character's biological gender:", "Character Preference", G.get_genders())
@@ -422,9 +497,18 @@
 	href_list["[params["target_href"]]"] = params["target_value"]
 	var/datum/category_item/player_setup_item/to_use = (params["target_href"] in use_different_category) ? use_different_category[params["target_href"]] : B
 
+	// Outpost 21 edit begin - New body data
+	if(params["target_href"] == "flavor_text")
+		F.OnTopic(list2params(href_list), href_list, user)
+		F.copy_to_mob(mannequin)
+		active_br.init_from_mob(mannequin, FALSE, FALSE) // reinit
+		update_preview_icon()
+		return
+	// Outpost 21 edit end
+
 	var/action = 0
 	action = to_use.OnTopic(list2params(href_list), href_list, user)
-	if(action & TOPIC_UPDATE_PREVIEW && mannequin && active_br)
+	if((action & TOPIC_UPDATE_PREVIEW || action & TOPIC_REFRESH) && mannequin && active_br) // Outpost 21 edit - Update design preview more often
 		to_use.copy_to_mob(mannequin)
 		active_br.mydna.dna.ResetUIFrom(mannequin)
 		update_preview_icon()
@@ -462,6 +546,9 @@
 		new /obj/item/weapon/disk/body_record(src)
 
 #undef MOB_HEX_COLOR
+
+#undef WEIGHT_MIN
+#undef WEIGHT_MAX
 
 #undef MENU_MAIN
 #undef MENU_BODYRECORDS
