@@ -76,7 +76,10 @@
 				var/msg = strip_html_simple(tgui_input_text(user,"Set the flavor text for your [href_list["flavor_text"]]. Put in a single space to make blank.","Flavor Text",html_decode(pref.flavor_texts[href_list["flavor_text"]]), multiline = TRUE, prevent_enter = TRUE)) //ChompEDIT - usr removal
 				if(CanUseTopic(user) && msg)
 					pref.flavor_texts[href_list["flavor_text"]] = msg
-		SetFlavorText(user)
+		// Outpost 21 edit begin - Don't do this if called from the design console.
+		if(isnewplayer(user))
+			SetFlavorText(user)
+		// Outpost 21 edit end
 		return TOPIC_HANDLED
 
 	else if(href_list["flavour_text_robot"])
