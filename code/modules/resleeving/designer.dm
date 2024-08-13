@@ -138,8 +138,12 @@
 			// Outpost 21 edit begin - New body data
 			"blood_type" = active_br.mydna.dna.b_type,
 			"blood_color" = active_br.mydna.dna.blood_color,
+			"blood_reagents" = active_br.mydna.dna.blood_reagents,
 			"weight" = !isnull(active_br.weight) ? active_br.weight : 137, // 137 id default in code\modules\client\preference_setup\vore\02_size.dm
 			"flavors" = list(),
+			"scale_appearance" = active_br.mydna.dna.scale_appearance ? "Fuzzy" : "Sharp",
+			"offset_override" = active_br.mydna.dna.offset_override ? "Odd" : "Even",
+			"species_sound" = active_br.mydna.dna.species_sound,
 			// Outpost 21 edit end
 			"gender" = active_br.bodygender,
 			"synthetic" = active_br.synthetic ? "Yes" : "No",
@@ -287,16 +291,16 @@
 					to_chat(usr, "<span class='warning'>ERROR: This body record is restricted.</span>")
 					return
 				else
-					log_admin("[usr] wrote an unlocked version of [active_br.mydna.name]'s bodyrecord to a disk. Their preferences do not allow body impersonation, but may be allowed with OOC consent.")
-				if(disk && active_br)
-					active_br.locked = FALSE // remove lock
+					message_admins("[usr] wrote an unlocked version of [active_br.mydna.name]'s bodyrecord to a disk. Their preferences do not allow body impersonation, but may be allowed with OOC consent.")
+			if(disk && active_br)
+				active_br.locked = FALSE // remove lock
 			// Outpost 21 edit end
-					disk.stored = new /datum/transhuman/body_record(active_br) // Saves a COPY!
-					disk.name = "[initial(disk.name)] ([active_br.mydna.name])"
-					/* Outpost 21 edit - Why eject the disk, there is a perfectly good eject button right here...
-					disk.forceMove(get_turf(src))
-					disk = null
-					*/
+				disk.stored = new /datum/transhuman/body_record(active_br) // Saves a COPY!
+				disk.name = "[initial(disk.name)] ([active_br.mydna.name])"
+				/* Outpost 21 edit - Why eject the disk, there is a perfectly good eject button right here...
+				disk.forceMove(get_turf(src))
+				disk = null
+				*/
 
 		if("ejectdisk")
 			disk.forceMove(get_turf(src))
@@ -453,6 +457,9 @@
 	// Outpost 21 edit begin - Autofill some fields not covered by above
 	for(var/key in active_br.mydna.flavor)
 		P.flavor_texts[key]	= active_br.mydna.flavor[key]
+	P.fuzzy = active_br.mydna.dna.scale_appearance
+	P.offset_override = active_br.mydna.dna.offset_override
+	P.species_sound = active_br.mydna.dna.species_sounds
 	// Outpost 21 edit end
 
 	// Now we start using the player_setup objects to do stuff!
@@ -471,7 +478,7 @@
 	// Outpost 21 edit end
 	var/datum/category_item/player_setup_item/vore/traits/V = CC.categories_by_name["VORE"].items_by_name["Traits"]
 	ASSERT(istype(V))
-	var/list/use_different_category = list("rename" = G, "bio_gender" = G, "blood_reagents" = V, "custom_species" = V, "blood_color" = V, "custom_base" = V, "weight" = S, "flavor_text" = F) //add more here if needed, Outpost 21 edit - Added more because it was needed
+	var/list/use_different_category = list("rename" = G, "bio_gender" = G, "blood_reagents" = V, "custom_species" = V, "blood_color" = V, "custom_base" = V, "species_sound_options" = S, "toggle_fuzzy" = S, "toggle_offset_override" = S, "weight" = S, "flavor_text" = F) //add more here if needed, Outpost 21 edit - Added more because it was needed
 
 	// Outpost 21 edit - Moved bio_gender to the same place as the rest below
 
@@ -484,44 +491,63 @@
 	action = to_use.OnTopic(list2params(href_list), href_list, user)
 	if((action & TOPIC_UPDATE_PREVIEW || action & TOPIC_REFRESH_UPDATE_PREVIEW || action & TOPIC_HANDLED || action & TOPIC_REFRESH) && mannequin && active_br) // Outpost 21 edit - Handled and Refreshes also count for check!
 		// Outpost 21 edit begin - Specific handling of certain hrefs
-		if(params["target_href"] == "rename")
-			active_br.mydna.name = P.real_name
-			active_br.mydna.dna.real_name = P.real_name
-			update_preview_icon()
-			return 1
-		if(params["target_href"] == "bio_gender")
-			active_br.bodygender = P.biological_gender
-			active_br.mydna.dna.SetUIState(DNA_UI_GENDER, P.biological_gender!=MALE, 1)
-			update_preview_icon()
-			return 1
-		if(params["target_href"] == "custom_species")
-			active_br.mydna.dna.custom_species = P.custom_species
-			active_br.speciesname = P.custom_species
-			update_preview_icon()
-			return 1
-		if(params["target_href"] == "blood_color")
-			active_br.mydna.dna.blood_color = P.blood_color
-			update_preview_icon()
-			return 1
-		if(params["target_href"] == "blood_type")
-			active_br.mydna.dna.b_type = P.b_type
-			update_preview_icon()
-			return 1
-		if(params["target_href"] == "weight")
-			active_br.weight = P.weight_vr
-			update_preview_icon()
-			return 1
-		if(params["target_href"] == "flavor_text")
-			to_use.copy_to_mob(mannequin)
-			for(var/key in mannequin.flavor_texts) // Get the flavors from the mob, which we just got from pref!
-				active_br.mydna.flavor[key] = mannequin.flavor_texts[key]
-			update_preview_icon()
-			return
+		switch(params["target_href"])
+			if("rename")
+				active_br.mydna.name = P.real_name
+				active_br.mydna.dna.real_name = P.real_name
+				update_preview_icon()
+				return 1
+			if("bio_gender")
+				active_br.bodygender = P.biological_gender
+				active_br.mydna.dna.SetUIState(DNA_UI_GENDER, P.biological_gender!=MALE, 1)
+				update_preview_icon()
+				return 1
+			if("custom_species")
+				active_br.mydna.dna.custom_species = P.custom_species
+				active_br.speciesname = P.custom_species
+				update_preview_icon()
+				return 1
+			if("blood_color")
+				active_br.mydna.dna.blood_color = P.blood_color
+				update_preview_icon()
+				return 1
+			if("blood_type")
+				active_br.mydna.dna.b_type = P.b_type
+				update_preview_icon()
+				return 1
+			if("blood_reagents")
+				active_br.mydna.dna.blood_reagents = P.blood_reagents
+				update_preview_icon()
+				return 1
+			if("weight")
+				active_br.weight = P.weight_vr
+				update_preview_icon()
+				return 1
+			if("flavor_text")
+				to_use.copy_to_mob(mannequin)
+				for(var/key in mannequin.flavor_texts) // Get the flavors from the mob, which we just got from pref!
+					active_br.mydna.flavor[key] = mannequin.flavor_texts[key]
+				update_preview_icon()
+				return 1
+			if("toggle_fuzzy")
+				active_br.mydna.dna.scale_appearance = P.fuzzy
+				update_preview_icon()
+				return 1
+			if("toggle_offset_override")
+				active_br.mydna.dna.offset_override = P.offset_override
+				update_preview_icon()
+				return 1
+			if("species_sound_options")
+				active_br.mydna.dna.species_sound = P.species_sound
+				update_preview_icon()
+				return 1
 		// Outpost 21 edit end
 		to_use.copy_to_mob(mannequin)
-		var/blood_col = active_br.mydna.dna.blood_color // Outpost 21 edit - Because everyone is afraid to touch genetics...
+		// Outpost 21 edit begin - handle some things UI overrides if not set beforehand
+		mannequin.species.blood_color = active_br.mydna.dna.blood_color
+		mannequin.species.blood_reagents = active_br.mydna.dna.blood_reagents
+		// Outpost 21 edit - end
 		active_br.mydna.dna.ResetUIFrom(mannequin)
-		active_br.mydna.dna.blood_color = blood_col // Outpost 21 edit - blood_color is not stored in UIs and is cleared...
 		update_preview_icon()
 		return 1
 

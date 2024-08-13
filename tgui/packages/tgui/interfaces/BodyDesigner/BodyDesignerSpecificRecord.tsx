@@ -97,17 +97,6 @@ export const BodyDesignerSpecificRecord = (props: {
                 <LabeledList.Item label="Synthetic">
                   {activeBodyRecord.synthetic}
                 </LabeledList.Item>
-                <LabeledList.Item label="Mind Compat">
-                  {activeBodyRecord.locked ? 'Low' : 'High'}
-                  <Button
-                    ml={1}
-                    icon="eye"
-                    disabled={!activeBodyRecord.booc}
-                    onClick={() => act('boocnotes')}
-                  >
-                    View OOC Notes
-                  </Button>
-                </LabeledList.Item>
                 <LabeledList.Item label="Weight">
                   <Button
                     icon="pen"
@@ -137,6 +126,18 @@ export const BodyDesignerSpecificRecord = (props: {
                   </Button>
                   <Button
                     icon="pen"
+                    disabled={activeBodyRecord.locked === 1}
+                    onClick={() =>
+                      act('href_conversion', {
+                        target_href: 'blood_reagents',
+                        target_value: 1,
+                      })
+                    }
+                  >
+                    {activeBodyRecord.blood_reagents}
+                  </Button>
+                  <Button
+                    icon="pen"
                     backgroundColor={activeBodyRecord.blood_color}
                     disabled={activeBodyRecord.locked === 1}
                     onClick={() =>
@@ -149,6 +150,35 @@ export const BodyDesignerSpecificRecord = (props: {
                     Color
                   </Button>
                 </LabeledList.Item>
+                <LabeledList.Item label="Species Sound">
+                  <Button
+                    icon="pen"
+                    disabled={activeBodyRecord.locked === 1}
+                    onClick={() =>
+                      act('href_conversion', {
+                        target_href: 'species_sound_options',
+                        target_value: 1,
+                      })
+                    }
+                  >
+                    {activeBodyRecord.species_sound}
+                  </Button>
+                </LabeledList.Item>
+                <LabeledList.Item label="Mind Compat">
+                  {activeBodyRecord.locked ? 'Low' : 'High'}
+                  <Button
+                    ml={1}
+                    icon="eye"
+                    disabled={!activeBodyRecord.booc}
+                    onClick={() => act('boocnotes')}
+                  >
+                    View OOC Notes
+                  </Button>
+                </LabeledList.Item>
+              </LabeledList>
+            </Section>
+            <Section title="Flavor Text">
+              <LabeledList>
                 {Object.keys(activeBodyRecord.flavors).map((key) => {
                   return (
                     <LabeledList.Item key={key} label={capitalize(key)}>
@@ -185,6 +215,34 @@ export const BodyDesignerSpecificRecord = (props: {
                   }
                 >
                   {activeBodyRecord.scale}
+                </Button>
+              </LabeledList.Item>
+              <LabeledList.Item label="Scaled Appearance">
+                <Button
+                  icon="pen"
+                  disabled={activeBodyRecord.locked === 1}
+                  onClick={() =>
+                    act('href_conversion', {
+                      target_href: 'toggle_fuzzy',
+                      target_value: 1,
+                    })
+                  }
+                >
+                  {activeBodyRecord.scale_appearance}
+                </Button>
+              </LabeledList.Item>
+              <LabeledList.Item label="Scaling Center">
+                <Button
+                  icon="pen"
+                  disabled={activeBodyRecord.locked === 1}
+                  onClick={() =>
+                    act('href_conversion', {
+                      target_href: 'toggle_offset_override',
+                      target_value: 1,
+                    })
+                  }
+                >
+                  {activeBodyRecord.offset_override}
                 </Button>
               </LabeledList.Item>
               <LabeledList.Item label="Digitigrade">

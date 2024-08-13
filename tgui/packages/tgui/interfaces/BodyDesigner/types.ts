@@ -41,10 +41,13 @@ export type activeBodyRecord = {
   };
   markings: { name: Record<string, { on: BooleanLike; color: string }> }; // Record entries match BP regions
   /* Outpost 21 edit begin - More body information */
+  scale_appearance: string;
+  offset_override: string;
+  species_sound : string;
   weight : string;
   blood_type : string;
   blood_color : string;
-  blood_reagent : string;
+  blood_reagents : string;
   flavors : { general: string, head: string, face: string, eyes: string, arms: string, hands: string,  legs: string,  feet: string }
   /* Outpost 21 edit end */
 };

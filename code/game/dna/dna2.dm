@@ -57,6 +57,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	var/base_species = "Human"
 	var/list/species_traits = list()
 	var/blood_color = "#A10808"
+	var/blood_reagents = "iron" // Outpost 21 edit - missing dna entry
+	var/scale_appearance = 0 // Outpost 21 edit - missing dna entry
+	var/offset_override = 0 // Outpost 21 edit - missing dna entry
+	var/species_sounds = 0 // Outpost 21 edit - missing dna entry
 	var/custom_say
 	var/custom_ask
 	var/custom_whisper
@@ -86,6 +90,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	new_dna.custom_species=custom_species //VOREStaton Edit
 	new_dna.species_traits=species_traits.Copy() //VOREStation Edit
 	new_dna.blood_color=blood_color //VOREStation Edit
+	new_dna.blood_reagents=blood_reagents // Outpost 21 edit - missing dna entry
+	new_dna.scale_appearance = scale_appearance // Outpost 21 edit - missing dna entry
+	new_dna.offset_override = offset_override // Outpost 21 edit - missing dna entry
+	new_dna.species_sounds = species_sounds // Outpost 21 edit - missing dna entry
 	new_dna.custom_say=custom_say //VOREStaton Edit
 	new_dna.custom_ask=custom_ask //VOREStaton Edit
 	new_dna.custom_whisper=custom_whisper //VOREStaton Edit
@@ -160,6 +168,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	src.custom_species = character.custom_species
 	src.base_species = character.species.base_species
 	src.blood_color = character.species.blood_color
+	src.blood_reagents = character.species.blood_reagents // Outpost 21 edit - missing dna entry
+	src.scale_appearance = character.fuzzy // Outpost 21 edit - missing dna entry
+	src.offset_override = character.offset_override // Outpost 21 edit - missing dna entry
+	src.species_sounds = character.species.species_sounds // Outpost 21 edit - missing dna entry
 	src.species_traits = character.species.traits.Copy()
 	src.custom_say = character.custom_say
 	src.custom_ask = character.custom_ask

@@ -244,6 +244,9 @@
 		H.custom_whisper = dna.custom_whisper
 		H.custom_exclaim = dna.custom_exclaim
 		H.species.blood_color = dna.blood_color
+		H.species.blood_reagents = dna.blood_reagents // Outpost 21 edit - missing dna entry
+		H.fuzzy = dna.scale_appearance // Outpost 21 edit - missing dna entry
+		H.offset_override = dna.offset_override // Outpost 21 edit - missing dna entry
 		H.custom_heat = dna.custom_heat
 		H.custom_cold = dna.custom_cold
 		var/datum/species/S = H.species
