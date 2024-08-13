@@ -255,6 +255,7 @@
 /datum/disease2/effect/shakey/activate(var/mob/living/carbon/mob,var/multiplier)
 	shake_camera(mob,5*multiplier)
 
+/* Traitgenes edit begin - TODO - Restore this when possible with traitgene
 /datum/disease2/effect/telepathic
 	name = "Pineal Gland Decalcification"
 	stage = 3
@@ -262,6 +263,7 @@
 /datum/disease2/effect/telepathic/activate(var/mob/living/carbon/mob,var/multiplier)
 		mob.dna.SetSEState(REMOTETALKBLOCK,1)
 		domutcheck(mob, null, MUTCHK_FORCED)
+*/
 
 /datum/disease2/effect/mind
 	name = "Neurodegeneration"

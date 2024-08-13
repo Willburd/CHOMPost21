@@ -15,6 +15,18 @@
 	var/custom_only = FALSE			// Trait only available for custom species	// Outpost 21 edit - Allow traits on most species regardless of custom
 	var/varchange_type = TRAIT_VARCHANGE_ALWAYS_OVERRIDE	//Mostly used for non-custom species.
 	var/has_preferences //if set, should be a list of the preferences for this trait in the format: list("identifier/name of var to edit" = list(typeofpref, "text to display in prefs", TRAIT_NO_VAREDIT_TARGET/TRAIT_VAREDIT_TARGET_SPECIES/etc, (optional: default value)), etc) typeofpref should follow the defines in _traits.dm (eg. TRAIT_PREF_TYPE_BOOLEAN)
+	// Traitgenes edit - Traits can toggle mutations and disabilities
+	var/is_genetrait = FALSE // When their trait's datum is init, it will be added to the library of genes a carbon can be mutated to have or not have
+	var/activity_bounds = DNA_DEFAULT_BOUNDS // Activation requirement for trait to turn on/off. Dna is automatically configured for this when first spawned
+	var/hidden = FALSE  // If a trait does not show on the list, only useful for genetics enabled traits
+	var/mutation = 0 	// Mutation to give (or 0)
+	var/disability = 0 	// Disability to give (or 0)
+	var/sdisability = 0 // SDisability to give (or 0)
+	var/activation_message = null // If not null, shows a message when activated as a gene
+	var/deactivation_message = null // If not null, shows a message when deactivated as a gene
+
+	var/datum/dna/gene/linked_gene = null // Internal use, do not assign.
+	// Traitgenes edit end
 
 //Proc can be overridden lower to include special changes, make sure to call up though for the vars changes
 /datum/trait/proc/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null) //VOREStation edit: trait_prefs is a list in the format: list(identifier = value, etc)
@@ -34,8 +46,44 @@
 					S.vars[trait] = trait_prefs[trait]
 				if(TRAIT_VAREDIT_TARGET_MOB)
 					H.vars[trait] = trait_prefs[trait]
+	// Traitgenes edit - Traits can toggle mutations and disabilities
+	if(mutation)
+		if(!(mutation in H.mutations))
+			H.mutations.Add(mutation)
+	if(disability)
+		H.disabilities |= disability // bitflag
+	if(sdisability)
+		H.sdisabilities |= sdisability // bitflag
+	// Traitgenes edit end
 	add_verb(H,/mob/living/carbon/human/proc/trait_tutorial) //CHOMPEdit TGPanel
 	return
+
+// Traitgenes edit - Disabling traits, genes can be turned off after all!
+/datum/trait/proc/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+	ASSERT(S)
+	if(var_changes)
+		for(var/V in var_changes)
+			S.vars[V] = initial(S.vars[V])
+	if(mutation)
+		H.mutations.Remove(mutation)
+	if(disability)
+		if(H.disabilities & disability > 0)
+			H.disabilities ^= disability // bitflag
+	if(sdisability)
+		if(H.sdisabilities & sdisability > 0)
+			H.sdisabilities ^= sdisability // bitflag
+	return
+
+/datum/trait/proc/send_message(var/mob/living/carbon/human/H, var/enabled)
+	if(enabled)
+		if(!activation_message)
+			return
+		to_chat(H,activation_message)
+	else
+		if(!deactivation_message)
+			return
+		to_chat(H,deactivation_message)
+// Traitgenes edit end
 
 //Applying trait to preferences rather than just us.
 /datum/trait/proc/apply_pref(var/datum/preferences/P)

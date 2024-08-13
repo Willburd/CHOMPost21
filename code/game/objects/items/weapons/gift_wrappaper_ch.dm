@@ -98,12 +98,12 @@
 		/obj/item/weapon/grenade/spawnergrenade/casino/zorgoia,
 		/obj/item/weapon/grenade/spawnergrenade/casino/gygax,
 		/obj/item/weapon/lego,
-		/obj/item/weapon/dnainjector/nobreath,
-		/obj/item/weapon/dnainjector/regenerate,
-		/obj/item/weapon/dnainjector/remoteview,
-		/obj/item/weapon/dnainjector/runfast,
-		/obj/item/weapon/dnainjector/telemut,
-		/obj/item/weapon/dnainjector/xraymut,
+		///obj/item/weapon/dnainjector/nobreath, Traitgenes edit TODO - Needs replacement injectors
+		///obj/item/weapon/dnainjector/regenerate, Traitgenes edit TODO - Needs replacement injectors
+		///obj/item/weapon/dnainjector/remoteview, Traitgenes edit TODO - Needs replacement injectors
+		///obj/item/weapon/dnainjector/runfast, Traitgenes edit TODO - Needs replacement injectors
+		///obj/item/weapon/dnainjector/telemut, Traitgenes edit TODO - Needs replacement injectors
+		///obj/item/weapon/dnainjector/xraymut, Traitgenes edit TODO - Needs replacement injectors
 		/obj/item/instrument/accordion,
 		/obj/item/instrument/banjo,
 		/obj/item/instrument/bikehorn,
@@ -164,7 +164,7 @@
 
 	var/gift_type_chaos = pick(
 		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/gorilla,
-		/obj/item/weapon/dnainjector/hulkmut,
+		///obj/item/weapon/dnainjector/hulkmut, Traitgenes edit TODO - Needs replacement injectors
 		/obj/item/weapon/grenade/spawnergrenade/casino/infinitycake,
 		/obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer,
 		/obj/item/weapon/spellbook,

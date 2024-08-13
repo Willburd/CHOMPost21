@@ -492,13 +492,17 @@
 			if(prob(95))
 				if(prob(75))
 					randmutb(connected.occupant)
+				/* Traitgenes edit - we don't do cosmetic mutations anymore
 				else
 					randmuti(connected.occupant)
+				*/
 			else
 				if(prob(95))
 					randmutg(connected.occupant)
+				/* Traitgenes edit - we don't do cosmetic mutations anymore
 				else
 					randmuti(connected.occupant)
+				*/
 
 			connected.occupant.apply_effect(((radiation_intensity*3)+radiation_duration*3), IRRADIATE, check_protection = 0)
 		if("radiationDuration")
@@ -542,9 +546,11 @@
 				if(prob(20 + radiation_intensity))
 					randmutb(connected.occupant)
 					domutcheck(connected.occupant,connected)
+				/* Traitgenes edit - we don't do cosmetic mutations anymore
 				else
 					randmuti(connected.occupant)
 					connected.occupant.UpdateAppearance()
+				*/
 				connected.occupant.apply_effect(((radiation_intensity*2)+radiation_duration), IRRADIATE, check_protection = 0)
 	////////////////////////////////////////////////////////
 		if("injectRejuvenators")
@@ -600,10 +606,12 @@
 						//testing("Random bad mut!")
 						randmutb(connected.occupant)
 						domutcheck(connected.occupant,connected)
+					/* Traitgenes edit - we don't do cosmetic mutations anymore
 					else
 						randmuti(connected.occupant)
 						//testing("Random identity mut!")
 						connected.occupant.UpdateAppearance()
+					*/
 		if("ejectBeaker")
 			if(connected.beaker)
 				var/obj/item/weapon/reagent_containers/glass/B = connected.beaker

@@ -27,12 +27,14 @@
 			/datum/disease2/effect/cough,
 			/datum/disease2/effect/fridge,
 			/datum/disease2/effect/drowsness),
+		/* Traitgenes edit begin - TODO - Restore this when possible with traitgene
 		"Brain Bloat" = list(
 			/datum/disease2/effect/invisible,
 			/datum/disease2/effect/headache,
 			/datum/disease2/effect/telepathic,
 			/datum/disease2/effect/nothing
 		),
+		*/
 		"Glutton's Gut" = list(
 			/datum/disease2/effect/drool,
 			/datum/disease2/effect/hungry,

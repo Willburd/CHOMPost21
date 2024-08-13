@@ -624,16 +624,18 @@
 
 	if(M.dna)
 		if(prob(removed * 10)) // Removed is .2 per tick. Multiplying it by 10 makes it a 2% chance per tick. 10 units has 50 ticks, so 10 units injected should give a single good/bad mutation.
-			randmuti(M)
+			// randmuti(M) Traitgenes edit - we don't do cosmetic mutations anymore
 			if(prob(98))
 				randmutb(M)
 			else
 				randmutg(M)
 			domutcheck(M, null)
 			M.UpdateAppearance()
+		/* Traitgenes edit - we don't do cosmetic mutations anymore
 		if(prob(removed * 40)) //Additionally, let's make it so there's an 8% chance per tick for a random cosmetic/not guranteed good/bad mutation.
 			randmuti(M)//This should equate to 4 random cosmetic mutations per 10 injected/20 ingested/30 touching units
 			to_chat(M, "<span class='warning'>You feel odd!</span>")
+		*/
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
 /datum/reagent/slimejelly
@@ -896,16 +898,18 @@
 
 	if(M.dna)
 		if(prob(removed * 10))
-			randmuti(M)
+			//randmuti(M) Traitgenes edit - we don't do cosmetic mutations anymore
 			if(prob(98))
 				randmutb(M)
 			else
 				randmutg(M)
 			domutcheck(M, null)
 			M.UpdateAppearance()
+		/* Traitgenes edit - we don't do cosmetic mutations anymore
 		if(prob(removed * 40))
 			randmuti(M)
 			to_chat(M, "<span class='warning'>You feel odd!</span>")
+		*/
 	M.apply_effect(16 * removed, IRRADIATE, 0)
 
 /datum/reagent/aslimetoxin
@@ -926,16 +930,18 @@
 
 	if(M.dna)
 		if(prob(removed * 10))
-			randmuti(M)
+			// randmuti(M) Traitgenes edit - we don't do cosmetic mutations anymore
 			if(prob(98))
 				randmutb(M)
 			else
 				randmutg(M)
 			domutcheck(M, null)
 			M.UpdateAppearance()
+		/* Traitgenes edit - we don't do cosmetic mutations anymore
 		if(prob(removed * 40))
 			randmuti(M)
 			to_chat(M, "<span class='warning'>You feel odd!</span>")
+		*/
 	M.apply_effect(6 * removed, IRRADIATE, 0)
 
 /*

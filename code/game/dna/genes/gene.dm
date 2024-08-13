@@ -23,6 +23,7 @@
 	// Any of a number of GENE_ flags.
 	var/flags=0
 
+
 /**
 * Is the gene active in this mob's DNA?
 */
@@ -120,3 +121,42 @@
 	if(deactivation_messages.len)
 		var/msg = pick(deactivation_messages)
 		to_chat(M, "<span class='warning'>[msg]</span>")
+
+
+
+
+
+// Traitgenes edit - Genes are linked to traits now
+/////////////////////
+// TRAIT GENES
+//
+// Activate traits with a message when enabled
+//
+/////////////////////
+
+
+/datum/dna/gene/trait
+	flags = MUTCHK_FORCED // For sanity, for now.
+	var/activation_prob=45
+	var/datum/trait/linked_trait = null // Internal use, do not assign.
+
+/datum/dna/gene/trait/can_activate(var/mob/M,var/flags)
+	if(flags & MUTCHK_FORCED)
+		return 1
+	// Probability check
+	return probinj(activation_prob,(flags&MUTCHK_FORCED))
+
+/datum/dna/gene/trait/activate(var/mob/M)
+	if(linked_trait && ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(H.species) // Lets avoid runtime assertions
+			linked_trait.apply( H.species, H, H.species.traits[linked_trait.type])
+			linked_trait.send_message( H, TRUE)
+
+/datum/dna/gene/trait/deactivate(var/mob/M)
+	if(linked_trait && ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(H.species) // Lets avoid runtime assertions
+			linked_trait.unapply( H.species, H )
+			linked_trait.send_message( H, FALSE)
+// Traitgenes edit end

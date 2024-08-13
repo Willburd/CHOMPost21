@@ -2,6 +2,7 @@
 // (mostly) DNA2 SETUP
 /////////////////////////
 
+/* Traitgenes edit begin - Blocks have finally been retired, huzzah!
 // Randomize block, assign a reference name, and optionally define difficulty (by making activation zone smaller or bigger)
 // The name is used on /vg/ for species with predefined genetic traits,
 //  and for the DNA panel in the player panel.
@@ -15,9 +16,13 @@
 	dna_activity_bounds[assigned]=activity_bounds
 	//testing("[name] assigned to block #[assigned].")
 	return assigned
+*/
 
 /proc/setupgenetics()
+	// TODO - new gene block randomization
 
+
+	/* Traitgenes edit begin - Blocks have finally been retired, huzzah!
 	if (prob(50))
 		// Currently unused.  Will revisit. - N3X
 		BLOCKADD = rand(-300,300)
@@ -82,3 +87,4 @@
 				assignedToBlock=blocks_assigned[G.block]
 			assignedToBlock.Add(G.name)
 			blocks_assigned[G.block]=assignedToBlock
+	*/

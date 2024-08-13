@@ -141,9 +141,8 @@ var/list/preferences_datums = list()
 	var/sec_record = ""
 	var/gen_record = ""
 	var/exploit_record = ""
-	var/disabilities = 0
+	// var/disabilities = 0 // Traitgenes edit - Traits replace old pref disability code
 	// Outpost 21 edit begin - new disabilities and addictions
-	var/sdisabilities = 0
 	var/addictions = 0
 	// Outpost 21 edit end
 
@@ -402,6 +401,10 @@ var/list/preferences_datums = list()
 
 	// Ask the preferences datums to apply their own settings to the new mob
 	player_setup.copy_to_mob(character)
+
+
+	// Traitgenes edit - TODO - Init the dna SEs HERE from initial pref setup, based on the gene traits we chose.
+
 
 	// VOREStation Edit - Sync up all their organs and species one final time
 	character.force_update_organs()

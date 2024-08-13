@@ -47,6 +47,7 @@
 #define MUTE  0x2
 #define DEAF  0x4
 
+/* Traitgenes edit - Blocks have finally been retired, huzzah!
 // The way blocks are handled badly needs a rewrite, this is horrible.
 // Too much of a project to handle at the moment, TODO for later.
 var/BLINDBLOCK    = 0
@@ -79,6 +80,7 @@ var/HALLUCINATIONBLOCK = 0
 var/NOPRINTSBLOCK      = 0
 var/SHOCKIMMUNITYBLOCK = 0
 var/SMALLSIZEBLOCK     = 0
+*/
 
 // Define block bounds (off-low,off-high,on-low,on-high)
 // Used in setupgame.dm

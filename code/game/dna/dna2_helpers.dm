@@ -24,41 +24,48 @@
 /proc/randmutb(var/mob/living/M)
 	if(!M || !(M.dna)) return
 	M.dna.check_integrity()
+	/* Traitgenes edit TODO - Give negative trait genes instead
 	//var/block = pick(GLASSESBLOCK,COUGHBLOCK,FAKEBLOCK,NERVOUSBLOCK,CLUMSYBLOCK,TWITCHBLOCK,HEADACHEBLOCK,BLINDBLOCK,DEAFBLOCK,HALLUCINATIONBLOCK) // Most of these are disabled anyway.
 	var/block = pick(FAKEBLOCK,CLUMSYBLOCK,BLINDBLOCK,DEAFBLOCK)
 	M.dna.SetSEState(block, 1)
+	*/
 
 // Give Random Good Mutation to M
 /proc/randmutg(var/mob/living/M)
 	if(!M || !(M.dna)) return
 	M.dna.check_integrity()
+	/* Traitgenes edit TODO - Give positive trait genes instead
 	//var/block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,NOBREATHBLOCK,REMOTEVIEWBLOCK,REGENERATEBLOCK,INCREASERUNBLOCK,REMOTETALKBLOCK,MORPHBLOCK,BLENDBLOCK,NOPRINTSBLOCK,SHOCKIMMUNITYBLOCK,SMALLSIZEBLOCK) // Much like above, most of these blocks are disabled in code.
 	var/block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,REGENERATEBLOCK,REMOTETALKBLOCK)
 	M.dna.SetSEState(block, 1)
+	*/
 
+/* Traitgenes edit - we don't do cosmetic mutations anymore, overlays have largely replaced UI data, and cannot be changed... So just gets broken entirely anyway.
 // Random Appearance Mutation
 /proc/randmuti(var/mob/living/M)
 	if(!M || !(M.dna)) return
 	M.dna.check_integrity()
 	M.dna.SetUIValue(rand(1,DNA_UI_LENGTH),rand(1,4095))
+*/
 
 // Scramble UI or SE.
 /proc/scramble(var/UI, var/mob/M, var/prob)
 	if(!M || !(M.dna))	return
 	M.dna.check_integrity()
+	/* Traitgenes edit - we don't do cosmetic mutations anymore, overlays have largely replaced UI data, and cannot be changed... So just gets broken entirely anyway.
 	if(UI)
 		for(var/i = 1, i <= DNA_UI_LENGTH-1, i++)
 			if(prob(prob))
 				M.dna.SetUIValue(i,rand(1,4095),1)
 		M.dna.UpdateUI()
 		M.UpdateAppearance()
-
 	else
-		for(var/i = 1, i <= DNA_SE_LENGTH-1, i++)
-			if(prob(prob))
-				M.dna.SetSEValue(i,rand(1,4095),1)
-		M.dna.UpdateSE()
-		domutcheck(M, null)
+	*/
+	for(var/i = 1, i <= DNA_SE_LENGTH-1, i++)
+		if(prob(prob))
+			M.dna.SetSEValue(i,rand(1,4095),1)
+	M.dna.UpdateSE()
+	domutcheck(M, null)
 	return
 
 // I haven't yet figured out what the fuck this is supposed to do.

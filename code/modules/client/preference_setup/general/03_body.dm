@@ -116,9 +116,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["eyes_green"]			>> pref.g_eyes
 	S["eyes_blue"]			>> pref.b_eyes
 	S["b_type"]				>> pref.b_type
-	S["disabilities"]		>> pref.disabilities
+	//S["disabilities"]		>> pref.disabilities // Traitgenes edit - Traits replace old pref disability code
 	// Outpost 21 edit begin - more disabilities
-	S["sdisabilities"]		>> pref.sdisabilities
 	S["addictions"]			>> pref.addictions
 	// Outpost 21 edit end
 	S["organ_data"]			>> pref.organ_data
@@ -193,9 +192,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	S["eyes_green"]			<< pref.g_eyes
 	S["eyes_blue"]			<< pref.b_eyes
 	S["b_type"]				<< pref.b_type
-	S["disabilities"]		<< pref.disabilities
+	// S["disabilities"]		<< pref.disabilities // Traitgenes edit - Traits replace old pref disability code
 	// Outpost 21 edit begin - more disabilities
-	S["sdisabilities"]		<< pref.sdisabilities
 	S["addictions"]			<< pref.addictions
 	// Outpost 21 edit end
 	S["organ_data"]			<< pref.organ_data
@@ -272,9 +270,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.b_eyes			= sanitize_integer(pref.b_eyes, 0, 255, initial(pref.b_eyes))
 	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
 
-	pref.disabilities	= sanitize_integer(pref.disabilities, 0, 65535, initial(pref.disabilities))
+	// pref.disabilities	= sanitize_integer(pref.disabilities, 0, 65535, initial(pref.disabilities)) // Traitgenes edit - Traits replace old pref disability code
 	// Outpost 21 edit begin - more disabilities
-	pref.sdisabilities	= sanitize_integer(pref.sdisabilities, 0, 65535, initial(pref.sdisabilities))
 	pref.addictions		= sanitize_integer(pref.addictions, 0, 65535, initial(pref.addictions))
 	// Outpost 21 edit end
 
@@ -1252,15 +1249,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 		return TOPIC_REFRESH
 
+	/* Traitgenes edit - Traits replace old pref disability code
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
 		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
-
-	else if(href_list["sdisabilities"])
-		var/disability_flag = text2num(href_list["sdisabilities"])
-		pref.sdisabilities ^= disability_flag
-		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
+	*/
 
 	else if(href_list["addictions"])
 		var/addiction_flag = text2num(href_list["addictions"])

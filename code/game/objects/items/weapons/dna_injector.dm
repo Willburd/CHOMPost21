@@ -125,10 +125,13 @@
 		to_chat(user, "<span class='warning'>Apparently it didn't work...</span>")
 		return
 
+
 	// Used by admin log.
 	var/injected_with_monkey = ""
+	/* Traitgenes edit - No monkey gene, doesn't work with the marking overlays anyway
 	if((buf.types & DNA2_BUF_SE) && (block ? (GetState() && block == MONKEYBLOCK) : GetState(MONKEYBLOCK)))
 		injected_with_monkey = " <span class='danger'>(MONKEY)</span>"
+	*/
 
 	add_attack_logs(user,M,"[injected_with_monkey] used the [name] on")
 
@@ -136,6 +139,7 @@
 	inject(M, user)
 	return
 
+/* Traitgenes edit - Disable old injectors
 /obj/item/weapon/dnainjector/hulkmut
 	name = "\improper DNA injector (Hulk)"
 	desc = "This will make you big and strong, but give you a bad skin condition."
@@ -576,3 +580,4 @@
 /obj/item/weapon/dnainjector/m2h/New()
 	block = MONKEYBLOCK
 	..()
+*/
