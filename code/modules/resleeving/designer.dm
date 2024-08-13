@@ -143,7 +143,7 @@
 			"flavors" = list(),
 			"scale_appearance" = active_br.mydna.dna.scale_appearance ? "Fuzzy" : "Sharp",
 			"offset_override" = active_br.mydna.dna.offset_override ? "Odd" : "Even",
-			"species_sound" = active_br.mydna.dna.species_sound,
+			"species_sound" = active_br.mydna.dna.species_sounds,
 			// Outpost 21 edit end
 			"gender" = active_br.bodygender,
 			"synthetic" = active_br.synthetic ? "Yes" : "No",
@@ -538,7 +538,7 @@
 				update_preview_icon()
 				return 1
 			if("species_sound_options")
-				active_br.mydna.dna.species_sound = P.species_sound
+				active_br.mydna.dna.species_sounds = P.species_sound
 				update_preview_icon()
 				return 1
 		// Outpost 21 edit end
