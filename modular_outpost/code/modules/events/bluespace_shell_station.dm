@@ -10,7 +10,8 @@
 		/area/holodeck,
 		/area/engineering/gravgen,
 		/area/maintenance/incinerator,
-		/area/engineering/coreproctunnel
+		/area/engineering/coreproctunnel,
+		/area/muriki/crew/bunker
 	)
 
 	var/spawncount = 0
