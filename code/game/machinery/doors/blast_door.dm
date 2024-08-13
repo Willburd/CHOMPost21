@@ -438,6 +438,11 @@
 	width = 2
 	dir = NORTH
 
+/obj/machinery/door/blast/multi_tile/two_tile_ver/open
+	icon_state = "open"
+	opacity = 0
+	density = FALSE
+
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec
 	icon = 'icons/obj/doors/1x4blast_hor_sec.dmi'
 	bound_width = 128

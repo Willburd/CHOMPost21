@@ -537,6 +537,16 @@
 	name = "Arrivals Substation"
 	base_turf = /turf/simulated/open/force_indoor
 
+/area/muriki/crew/bunker
+	name = "\improper Emergency Bunker"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	icon_state = "cyawhicir"
+
+/area/hallway/muriki/bunkerhall
+	name = "\improper Bunker Access Hallway"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	icon_state = "cyawhicir"
+
 //Hallways-------
 /area/muriki/crewstairwell
 	name = "\improper Civilian Stairwell"
