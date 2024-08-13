@@ -8,7 +8,7 @@ import {
   ColorBox,
   Flex,
   LabeledList,
-  Section,
+  Section
 } from '../../components';
 import { activeBodyRecord } from './types';
 
@@ -47,10 +47,10 @@ export const BodyDesignerSpecificRecord = (props: {
           </Flex.Item>
         </Flex.Item>
       </Section>
-      <Flex.Item basis="300px">
+      <Flex.Item basis="600px">
         <Flex direction="row">
           <Flex.Item basis="48%">
-            <Section title="General" height="300px" style={{ overflow: 'auto' }}>
+            <Section title="General">
               <LabeledList>
                 <LabeledList.Item label="Name">
                   <Button
@@ -67,9 +67,6 @@ export const BodyDesignerSpecificRecord = (props: {
                   </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Species">
-                  {activeBodyRecord.speciesname}
-                </LabeledList.Item>
-                <LabeledList.Item label="Custom Species Name">
                   <Button
                     icon="pen"
                     disabled={activeBodyRecord.locked === 1}
@@ -80,21 +77,7 @@ export const BodyDesignerSpecificRecord = (props: {
                       })
                     }
                   >
-                    {activeBodyRecord.species_custom}
-                  </Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Custom Species Icon">
-                  <Button
-                    icon="pen"
-                    disabled={!activeBodyRecord.can_use_custom_icon || activeBodyRecord.locked === 1}
-                    onClick={() =>
-                      act('href_conversion', {
-                        target_href: 'custom_base',
-                        target_value: 1,
-                      })
-                    }
-                  >
-                    {activeBodyRecord.species_icon}
+                    {activeBodyRecord.speciesname}
                   </Button>
                 </LabeledList.Item>
                 <LabeledList.Item label="Bio. Sex">
@@ -166,6 +149,25 @@ export const BodyDesignerSpecificRecord = (props: {
                     Color
                   </Button>
                 </LabeledList.Item>
+                {Object.keys(activeBodyRecord.flavors).map((key) => {
+                  return (
+                    <LabeledList.Item key={key} label={capitalize(key)}>
+                      <Button
+                        icon="pen"
+                        disabled={activeBodyRecord.locked === 1}
+                        onClick={() =>
+                          act('href_conversion', {
+                            target_href: 'flavor_text',
+                            target_value: key,
+                          })
+                        }
+                      >
+                        Edit
+                      </Button>
+                      {activeBodyRecord.flavors[key]}
+                    </LabeledList.Item>
+                  );
+                })}
               </LabeledList>
             </Section>
           </Flex.Item>

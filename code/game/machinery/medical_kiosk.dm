@@ -210,7 +210,7 @@
 
 	our_db.m_backup(user.mind,null /*Outpost 21 edit - Nif removal: nif */,one_time = TRUE)
 	var/datum/transhuman/body_record/BR = new()
-	BR.init_from_mob(user, TRUE, TRUE, database_key = db_key)
+	BR.init_from_mob(user, TRUE, user.resleeve_lock, database_key = db_key) // Outpost 21 edit - Maintain resleeve_lock
 
 	// Outpost 21 edit begin - what a mean halucination
 	var/area/A = get_area(src)

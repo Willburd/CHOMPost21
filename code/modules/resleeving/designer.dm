@@ -7,10 +7,6 @@
 #define MENU_SPECIFICRECORD "Specific Record"
 #define MENU_OOCNOTES "OOC Notes"
 
-// Matches code\modules\client\preference_setup\vore\02_size.dm
-#define WEIGHT_MIN 70
-#define WEIGHT_MAX 500
-
 /obj/machinery/computer/transhuman/designer
 	name = "body design console"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
@@ -29,6 +25,7 @@
 	var/obj/screen/south_preview = null
 	var/obj/screen/east_preview = null
 	var/obj/screen/west_preview = null
+	var/obj/screen/north_preview = null // Outpost 21 edit begin - New preview direction
 	// Mannequins are somewhat expensive to create, so cache it
 	var/mob/living/carbon/human/dummy/mannequin/mannequin = null
 	var/obj/item/weapon/disk/body_record/disk = null
@@ -46,19 +43,27 @@
 	south_preview.name = ""
 	south_preview.assigned_map = map_name
 	south_preview.del_on_map_removal = FALSE
-	south_preview.screen_loc = "[map_name]:1,1"
+	south_preview.screen_loc = "[map_name]:2,1"
 
 	east_preview = new
 	east_preview.name = ""
 	east_preview.assigned_map = map_name
 	east_preview.del_on_map_removal = FALSE
-	east_preview.screen_loc = "[map_name]:2,1"
+	east_preview.screen_loc = "[map_name]:4,1"
 
 	west_preview = new
 	west_preview.name = ""
 	west_preview.assigned_map = map_name
 	west_preview.del_on_map_removal = FALSE
 	west_preview.screen_loc = "[map_name]:0,1"
+
+	// Outpost 21 edit begin - New preview direction
+	north_preview = new
+	north_preview.name = ""
+	north_preview.assigned_map = map_name
+	north_preview.del_on_map_removal = FALSE
+	north_preview.screen_loc = "[map_name]:6,1"
+	// Outpost 21 edit end
 
 	our_db = SStranscore.db_by_key(db_key)
 
@@ -131,12 +136,9 @@
 			"real_name" = active_br.mydna.name,
 			"speciesname" = active_br.speciesname ? active_br.speciesname : active_br.mydna.dna.species,
 			// Outpost 21 edit begin - New body data
-			"species_custom" = active_br.mydna.dna.custom_species,
-			"species_icon" = active_br.mydna.dna.base_species,
-			"can_use_custom_icon" = GLOB.all_species[active_br.mydna.dna.species].selects_bodytype,
 			"blood_type" = active_br.mydna.dna.b_type,
 			"blood_color" = active_br.mydna.dna.blood_color,
-			"weight" = active_br.weight,
+			"weight" = !isnull(active_br.weight) ? active_br.weight : 137, // 137 id default in code\modules\client\preference_setup\vore\02_size.dm
 			"flavors" = list(),
 			// Outpost 21 edit end
 			"gender" = active_br.bodygender,
@@ -154,6 +156,13 @@
 
 		var/list/styles = data["activeBodyRecord"]["styles"]
 		var/list/temp
+
+		// Outpost 21 edit begin - NMoved custom species icon to top of list
+		if (mannequin.species && mannequin.species.selects_bodytype)
+			if (!mannequin.species.base_species)
+				mannequin.species.base_species = mannequin.species.name
+			styles["Bodytype"] = list("styleHref" = "custom_base", "style" = mannequin.species.base_species)
+		// Outpost 21 edit end
 
 		temp = list("styleHref" = "ear_style", "style" = "Normal")
 		if(mannequin.ear_style)
@@ -206,10 +215,7 @@
 		if(mannequin.species && (mannequin.species.appearance_flags & HAS_SKIN_COLOR))
 			styles["Body Color"] = list("colorHref" = "skin_color", "color" = MOB_HEX_COLOR(mannequin, skin))
 
-		if (mannequin.species && mannequin.species.selects_bodytype)
-			if (!mannequin.species.base_species)
-				mannequin.species.base_species = mannequin.species.name
-			styles["Bodytype"] = list("styleHref" = "custom_base", "style" = mannequin.species.base_species)
+		// Outpost 21 edit - Moved bodytype up
 
 		var/datum/preferences/designer/P = new()
 		apply_markings_to_prefs(mannequin, P)
@@ -274,11 +280,23 @@
 				menu = MENU_SPECIFICRECORD
 
 		if("savetodisk")
-			if(disk && active_br)
-				disk.stored = new /datum/transhuman/body_record(active_br) // Saves a COPY!
-				disk.name = "[initial(disk.name)] ([active_br.mydna.name])"
-				disk.forceMove(get_turf(src))
-				disk = null
+			// Outpost 21 edit begin - Allow editing people's records with OOC consent
+			if(active_br.locked)
+				var/answer = tgui_alert(usr,"This body record will be written to a disk and allow any mind to inhabit it. This is against the current body owner's configured OOC preferences for body impersonation. Please confirm that you have permission to do this, and are sure! Admins will be notified.","Mind Compatability",list("No","Yes"))
+				if(answer == "No")
+					to_chat(usr, "<span class='warning'>ERROR: This body record is restricted.</span>")
+					return
+				else
+					log_admin("[usr] wrote an unlocked version of [active_br.mydna.name]'s bodyrecord to a disk. Their preferences do not allow body impersonation, but may be allowed with OOC consent.")
+				if(disk && active_br)
+					active_br.locked = FALSE // remove lock
+			// Outpost 21 edit end
+					disk.stored = new /datum/transhuman/body_record(active_br) // Saves a COPY!
+					disk.name = "[initial(disk.name)] ([active_br.mydna.name])"
+					/* Outpost 21 edit - Why eject the disk, there is a perfectly good eject button right here...
+					disk.forceMove(get_turf(src))
+					disk = null
+					*/
 
 		if("ejectdisk")
 			disk.forceMove(get_turf(src))
@@ -309,21 +327,28 @@
 	var/mutable_appearance/MA = new(mannequin)
 	south_preview.appearance = MA
 	south_preview.dir = SOUTH
-	south_preview.screen_loc = "[map_name]:1,1"
+	south_preview.screen_loc = "[map_name]:2,1"
 	south_preview.name = ""
 	east_preview.appearance = MA
 	east_preview.dir = EAST
-	east_preview.screen_loc = "[map_name]:2,1"
+	east_preview.screen_loc = "[map_name]:4,1"
 	east_preview.name = ""
 	west_preview.appearance = MA
 	west_preview.dir = WEST
 	west_preview.screen_loc = "[map_name]:0,1"
 	west_preview.name = ""
+	// Outpost 21 edit begin - New preview direction
+	north_preview.appearance = MA
+	north_preview.dir = NORTH
+	north_preview.screen_loc = "[map_name]:6,1"
+	north_preview.name = ""
+	// Outpost 21 edit end
 
 /obj/machinery/computer/transhuman/designer/proc/give_client_previews(client/C)
 	C.register_map_obj(south_preview)
 	C.register_map_obj(east_preview)
 	C.register_map_obj(west_preview)
+	C.register_map_obj(north_preview) // Outpost 21 edit begin - New preview direction
 
 
 /obj/machinery/computer/transhuman/designer/proc/update_preview_mob(var/mob/living/carbon/human/H)
@@ -383,6 +408,15 @@
 	if(H.wing_style)
 		H.wing_style.em_block = FALSE
 
+	// Outpost 21 edit begin - Autofill some fields not covered by above
+	for(var/key in R.flavor)
+		H.flavor_texts[key]	= R.flavor[key]
+	H.weight = active_br.weight
+	// stupid dupe vars
+	H.b_type = active_br.mydna.dna.b_type
+	H.blood_color = active_br.mydna.dna.blood_color
+	// Outpost 21 edit end
+
 	// And as for clothing...
 	// We don't actually dress them! This is a medical machine, handle the nakedness DOCTOR!
 
@@ -416,9 +450,15 @@
 	apply_markings_to_prefs(mannequin, P)
 	apply_ears_to_prefs(mannequin, P)
 
+	// Outpost 21 edit begin - Autofill some fields not covered by above
+	for(var/key in active_br.mydna.flavor)
+		P.flavor_texts[key]	= active_br.mydna.flavor[key]
+	// Outpost 21 edit end
+
 	// Now we start using the player_setup objects to do stuff!
 	var/datum/category_collection/CC = P.player_setup
 	var/datum/category_group/CG = CC.categories_by_name["General"]
+
 	var/datum/category_item/player_setup_item/general/body/B = CG.items_by_name["Body"]
 	ASSERT(istype(B))
 	var/datum/category_item/player_setup_item/general/basic/G = CG.items_by_name["Basic"]
@@ -426,91 +466,62 @@
 	// Outpost 21 edit begin - New body data
 	var/datum/category_item/player_setup_item/general/flavor/F = CG.items_by_name["Flavor"]
 	ASSERT(istype(F))
+	var/datum/category_item/player_setup_item/vore/size/S = CC.categories_by_name["VORE"].items_by_name["Size"]
+	ASSERT(istype(S))
 	// Outpost 21 edit end
 	var/datum/category_item/player_setup_item/vore/traits/V = CC.categories_by_name["VORE"].items_by_name["Traits"]
 	ASSERT(istype(V))
-	var/list/use_different_category = list("custom_base" = V) //add more here if needed
+	var/list/use_different_category = list("rename" = G, "bio_gender" = G, "blood_reagents" = V, "custom_species" = V, "blood_color" = V, "custom_base" = V, "weight" = S, "flavor_text" = F) //add more here if needed, Outpost 21 edit - Added more because it was needed
 
-	// Outpost 21 edit begin - New body data
-	if(params["target_href"] == "rename")
-		var/raw_name = tgui_input_text(user, "Choose your character's name:", "Character Name")
-		if (!isnull(raw_name))
-			var/new_name = sanitize_name(raw_name, P.species, FALSE)
-			if(new_name)
-				active_br.mydna.name = new_name
-				active_br.mydna.dna.real_name = new_name
-			else
-				to_chat(user, "<span class='warning'>Invalid name. Your name should be at least 2 and at most [MAX_NAME_LEN] characters long. It may only contain the characters A-Z, a-z, -, ' and .</span>")
-			update_preview_icon()
-		return 1
-
-	if(params["target_href"] == "custom_species")
-		var/raw_choice = sanitize(tgui_input_text(user, "Input your custom species name:",
-			"Character Preference", P.custom_species, MAX_NAME_LEN), MAX_NAME_LEN)
-		active_br.mydna.dna.custom_species = raw_choice
-		update_preview_icon()
-		return 1
-
-	if(params["target_href"] == "custom_base" && GLOB.all_species[P.species].selects_bodytype)
-		var/list/choices = GLOB.custom_species_bases
-		choices = (choices | P.species)
-		var/text_choice = tgui_input_list(usr, "Pick an icon set for your species:","Icon Base", choices)
-		if(text_choice in choices)
-			active_br.mydna.dna.base_species = text_choice
-			update_preview_icon()
-		return 1
-
-	if(params["target_href"] == "blood_color")
-		var/color_choice = input(usr, "Pick a blood color (does not apply to synths)","Blood Color",active_br.mydna.dna.blood_color) as color
-		if(color_choice)
-			active_br.mydna.dna.blood_color = sanitize_hexcolor(color_choice, default="#A10808")
-			update_preview_icon()
-		return 1
-
-	if(params["target_href"] == "weight")
-		var/new_weight = tgui_input_number(user, "Choose your character's relative body weight.\n\
-			This measurement should be set relative to a normal 5'10'' person's body and not the actual size of your character.\n\
-			If you set your weight to 500 because you're a naga or have metal implants then complain that you're a blob I\n\
-			swear to god I will find you and I will punch you for not reading these directions!\n\
-			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN)
-		if(new_weight)
-			var/unit_of_measurement = tgui_alert(user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", list("Pounds", "Kilograms"))
-			if(unit_of_measurement == "Pounds")
-				new_weight = round(text2num(new_weight),4)
-			if(unit_of_measurement == "Kilograms")
-				new_weight = round(2.20462*text2num(new_weight),4)
-			active_br.weight = sanitize_integer(new_weight, WEIGHT_MIN, WEIGHT_MAX, P.weight_vr)
-			update_preview_icon()
-		return 1
-	// Outpost 21 edit end
-
-	if(params["target_href"] == "bio_gender")
-		var/new_gender = tgui_input_list(user, "Choose your character's biological gender:", "Character Preference", G.get_genders())
-		if(new_gender)
-			active_br.bodygender = new_gender
-			active_br.mydna.dna.SetUIState(DNA_UI_GENDER, new_gender!=MALE, 1)
-		update_preview_icon()
-		return 1
+	// Outpost 21 edit - Moved bio_gender to the same place as the rest below
 
 	var/href_list = list()
 	href_list["src"] = "\ref[src]"
 	href_list["[params["target_href"]]"] = params["target_value"]
 	var/datum/category_item/player_setup_item/to_use = (params["target_href"] in use_different_category) ? use_different_category[params["target_href"]] : B
 
-	// Outpost 21 edit begin - New body data
-	if(params["target_href"] == "flavor_text")
-		F.OnTopic(list2params(href_list), href_list, user)
-		F.copy_to_mob(mannequin)
-		active_br.init_from_mob(mannequin, FALSE, FALSE) // reinit
-		update_preview_icon()
-		return
-	// Outpost 21 edit end
-
 	var/action = 0
 	action = to_use.OnTopic(list2params(href_list), href_list, user)
-	if((action & TOPIC_UPDATE_PREVIEW || action & TOPIC_REFRESH) && mannequin && active_br) // Outpost 21 edit - Update design preview more often
+	if((action & TOPIC_UPDATE_PREVIEW || action & TOPIC_REFRESH_UPDATE_PREVIEW || action & TOPIC_HANDLED || action & TOPIC_REFRESH) && mannequin && active_br) // Outpost 21 edit - Handled and Refreshes also count for check!
+		// Outpost 21 edit begin - Specific handling of certain hrefs
+		if(params["target_href"] == "rename")
+			active_br.mydna.name = P.real_name
+			active_br.mydna.dna.real_name = P.real_name
+			update_preview_icon()
+			return 1
+		if(params["target_href"] == "bio_gender")
+			active_br.bodygender = P.biological_gender
+			active_br.mydna.dna.SetUIState(DNA_UI_GENDER, P.biological_gender!=MALE, 1)
+			update_preview_icon()
+			return 1
+		if(params["target_href"] == "custom_species")
+			active_br.mydna.dna.custom_species = P.custom_species
+			active_br.speciesname = P.custom_species
+			update_preview_icon()
+			return 1
+		if(params["target_href"] == "blood_color")
+			active_br.mydna.dna.blood_color = P.blood_color
+			update_preview_icon()
+			return 1
+		if(params["target_href"] == "blood_type")
+			active_br.mydna.dna.b_type = P.b_type
+			update_preview_icon()
+			return 1
+		if(params["target_href"] == "weight")
+			active_br.weight = P.weight_vr
+			update_preview_icon()
+			return 1
+		if(params["target_href"] == "flavor_text")
+			to_use.copy_to_mob(mannequin)
+			for(var/key in mannequin.flavor_texts) // Get the flavors from the mob, which we just got from pref!
+				active_br.mydna.flavor[key] = mannequin.flavor_texts[key]
+			update_preview_icon()
+			return
+		// Outpost 21 edit end
 		to_use.copy_to_mob(mannequin)
+		var/blood_col = active_br.mydna.dna.blood_color // Outpost 21 edit - Because everyone is afraid to touch genetics...
 		active_br.mydna.dna.ResetUIFrom(mannequin)
+		active_br.mydna.dna.blood_color = blood_col // Outpost 21 edit - blood_color is not stored in UIs and is cleared...
 		update_preview_icon()
 		return 1
 
@@ -546,9 +557,6 @@
 		new /obj/item/weapon/disk/body_record(src)
 
 #undef MOB_HEX_COLOR
-
-#undef WEIGHT_MIN
-#undef WEIGHT_MAX
 
 #undef MENU_MAIN
 #undef MENU_BODYRECORDS
