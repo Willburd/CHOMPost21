@@ -181,7 +181,7 @@ export const DmMapsIncludeTarget = new Juke.Target({
       //...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
       //...Juke.glob('_maps/shuttles/**/*.dmm'),
       //...Juke.glob('_maps/templates/**/*.dmm'),
-      ...Juke.glob('maps/southern_cross/**/*.dmm'),
+      ...Juke.glob('maps/outpost21/**/*.dmm'),
       ...Juke.glob('maps/submap/**/*.dmm'),
 
     ];
