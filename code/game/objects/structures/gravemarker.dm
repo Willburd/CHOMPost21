@@ -128,6 +128,7 @@
 	src.set_dir(turn(src.dir, 270))
 	return
 
+//VOREstation edit: counter-clockwise rotation
 /obj/structure/gravemarker/verb/rotate_counterclockwise()
 	set name = "Rotate Grave Marker Counter-Clockwise"
 	set category = "Object"

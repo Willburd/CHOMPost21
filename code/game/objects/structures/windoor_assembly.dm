@@ -290,6 +290,7 @@
 	update_icon()
 	return
 
+//VOREstation edit: counter-clockwise rotation
 /obj/structure/windoor_assembly/verb/rotate_counterclockwise()
 	set name = "Rotate Windoor Assembly Counter-Clockwise"
 	set category = "Object"
@@ -308,6 +309,7 @@
 
 	update_icon()
 	return
+//VOREstation edit end
 
 //Flips the windoor assembly, determines whather the door opens to the left or the right
 /obj/structure/windoor_assembly/verb/flip()

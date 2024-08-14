@@ -548,6 +548,7 @@
 	src.set_dir(turn(src.dir, 270))
 	return 1
 
+//VOREstation edit: counter-clockwise rotation
 /obj/machinery/mining/brace/verb/rotate_counterclockwise()
 	set name = "Rotate Brace Counter-Clockwise"
 	set category = "Object"

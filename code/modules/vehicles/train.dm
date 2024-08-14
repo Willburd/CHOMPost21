@@ -38,7 +38,7 @@
 		unattach()
 
 /obj/vehicle/train/Bump(atom/Obstacle)
-	if(istype(Obstacle,/obj/structure/stairs)) // Outpost 21 edit - Stair support for towing vehicles
+	if(istype(Obstacle,/obj/structure/stairs)) // VOREstation edit - Stair support for towing vehicles
 		return ..()
 	if(!istype(Obstacle, /atom/movable))
 		return

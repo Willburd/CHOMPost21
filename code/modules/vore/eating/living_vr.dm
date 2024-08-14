@@ -383,15 +383,17 @@
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
 
-	/* Outpost 21 edit - Nif removal
-	if(soulgem)
-		src.soulgem.release_mobs()
-		QDEL_NULL(soulgem)
-	if(P.soulcatcher_prefs.len)
-		soulgem = list_to_object(P.soulcatcher_prefs, src)
-	else
-		soulgem = new(src)
-	*/
+		/* Outpost 21 edit - Nif removal
+		//CHOMPAdd Start
+		if(soulgem)
+			src.soulgem.release_mobs()
+			QDEL_NULL(soulgem)
+		if(P.soulcatcher_prefs.len)
+			soulgem = list_to_object(P.soulcatcher_prefs, src)
+		else
+			soulgem = new(src)
+		//CHMPAdd End
+		*/
 
 	return TRUE
 

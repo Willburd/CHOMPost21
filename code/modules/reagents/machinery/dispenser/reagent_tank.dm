@@ -359,6 +359,7 @@
 	src.set_dir(turn(src.dir, 270))
 	return 1
 
+//VOREstation edit: counter-clockwise rotation
 /obj/structure/reagent_dispensers/water_cooler/verb/rotate_counterclockwise()
 	set name = "Rotate Cooler Counter-Clockwise"
 	set category = "Object"
@@ -369,6 +370,7 @@
 		return 0
 	src.set_dir(turn(src.dir, 90))
 	return 1
+//VOREstation edit end
 
 /obj/structure/reagent_dispensers/water_cooler/attackby(obj/item/I as obj, mob/user as mob)
 	if(I.has_tool_quality(TOOL_WRENCH))
