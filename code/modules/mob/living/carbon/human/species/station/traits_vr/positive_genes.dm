@@ -1,5 +1,5 @@
 /datum/trait/positive/superpower_nobreathe
-	name = "Superpower: No Breathing"
+	name = "No Breathing"
 	desc = "You do not need to breathe."
 	cost = 5
 	custom_only = FALSE
@@ -8,15 +8,18 @@
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = mNobreath
+	activity_bounds = DNA_HARD_BOUNDS
 	activation_message="You feel no need to breathe."
 
+/* Was disabled in setupgame.dm, likely nonfunctional
 /datum/trait/positive/superpower_remoteview
-	name = "Superpower: Remote Viewing"
+	name = "Remote Viewing"
 	desc = "Remotely view other locations."
 	cost = 5
 	custom_only = FALSE
 
 	is_genetrait = TRUE
+	activity_bounds = DNA_HARDER_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = mRemote
@@ -29,33 +32,38 @@
 /datum/trait/positive/superpower_remoteview/unapply(datum/species/S, mob/living/carbon/human/H)
 	. = ..()
 	remove_verb(H, /mob/living/carbon/human/proc/remoteobserve)
+*/
 
 /datum/trait/positive/superpower_regenerate
-	name = "Superpower: Regenerate"
+	name = "Regenerate"
 	desc = "Remotely communicate"
 	cost = 5
 	custom_only = FALSE
 
 	is_genetrait = TRUE
+	activity_bounds = DNA_HARDER_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = mRegen
 	activation_message="You feel better."
 
+/* Was disabled in setupgame.dm, likely nonfunctional
 /datum/trait/positive/superpower_increaserun
-	name = "Superpower: Super Speed"
+	name = "Super Speed"
 	desc = "Remotely communicate"
 	cost = 5
 	custom_only = FALSE
 
 	is_genetrait = TRUE
+	activity_bounds = DNA_HARDER_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = mRun
 	activation_message="Your leg muscles pulsate."
+*/
 
 /datum/trait/positive/superpower_remotetalk
-	name = "Superpower: Telepathy"
+	name = "Telepathy"
 	desc = "Remotely communicate"
 	cost = 5
 	custom_only = FALSE
@@ -64,6 +72,7 @@
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = mRemotetalk
+	activity_bounds = DNA_HARDER_BOUNDS
 	activation_message="You expand your mind outwards."
 
 /datum/trait/positive/superpower_remotetalk/apply(datum/species/S, mob/living/carbon/human/H)
@@ -75,7 +84,7 @@
 	remove_verb(H, /mob/living/carbon/human/proc/remotesay)
 
 /datum/trait/positive/superpower_morph
-	name = "Superpower: Morph"
+	name = "Morph"
 	desc = "It's morphing time!"
 	cost = 5
 	custom_only = FALSE
@@ -84,6 +93,7 @@
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = mMorph
+	activity_bounds = DNA_HARDER_BOUNDS
 	activation_message="Your skin feels strange."
 
 /datum/trait/positive/superpower_morph/apply(datum/species/S, mob/living/carbon/human/H)
@@ -94,8 +104,9 @@
 	. = ..()
 	remove_verb(H, /mob/living/carbon/human/proc/morph)
 
+/* Was disabled in setupgame.dm, likely nonfunctional
 /datum/trait/positive/superpower_cold_resist
-	name = "Superpower: Cold Resistance"
+	name = "Cold Resistance"
 	desc = "Gain resistance to the cold."
 	cost = 5
 	custom_only = FALSE
@@ -105,9 +116,11 @@
 
 	mutation = COLD_RESISTANCE
 	activation_message="Your body is filled with warmth."
+*/
 
+/* Was disabled in setupgame.dm, likely nonfunctional
 /datum/trait/positive/superpower_noprints
-	name = "Superpower: No Prints"
+	name = "No Prints"
 	desc = "Your hands leave no fingerprints behind."
 	cost = 5
 	custom_only = FALSE
@@ -117,9 +130,11 @@
 
 	mutation = mFingerprints
 	activation_message="Your fingers feel numb."
+*/
 
+/* Was disabled in setupgame.dm, likely nonfunctional
 /datum/trait/positive/superpower_noshock
-	name = "Superpower: Shock Immunity"
+	name = "Shock Immunity"
 	desc = "You become immune to shocks."
 	cost = 5
 	custom_only = FALSE
@@ -129,10 +144,11 @@
 
 	mutation = mShock
 	activation_message="Your skin feels strange."
+*/
 
 /* Disabled in favor of the actually working toggle agility trait
 /datum/trait/positive/superpower_midget
-	name = "Superpower: Midget"
+	name = "Midget"
 	desc = "You become immune to shocks."
 	cost = 5
 	custom_only = FALSE
@@ -145,24 +161,26 @@
 */
 
 /datum/trait/positive/superpower_xray
-	name = "Superpower: X-Ray Vision"
+	name = "X-Ray Vision"
 	desc = "You can see through walls."
 	cost = 5
 	custom_only = FALSE
 
 	is_genetrait = TRUE
+	activity_bounds = DNA_HARDER_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = XRAY
 	activation_message="The walls suddenly disappear."
 
 /datum/trait/positive/superpower_tk
-	name = "Superpower: Telekenesis"
+	name = "Telekenesis"
 	desc = "You can see through walls."
 	cost = 5
 	custom_only = FALSE
 
 	is_genetrait = TRUE
+	activity_bounds = DNA_HARD_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 
 	mutation = TK

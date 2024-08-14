@@ -402,9 +402,20 @@ var/list/preferences_datums = list()
 	// Ask the preferences datums to apply their own settings to the new mob
 	player_setup.copy_to_mob(character)
 
-
-	// Traitgenes edit - TODO - Init the dna SEs HERE from initial pref setup, based on the gene traits we chose.
-
+	// Traitgenes edit begin - Init the dna SEs from initial pref setup, based on the gene traits we chose, don't do any automatic messaging, or reactivate the genes however... Traits already did that!
+	if(character.species.traits)
+		for(var/TR in character.species.traits)
+			var/datum/trait/T = all_traits[TR]
+			if(!T)
+				continue
+			if(!T.linked_gene)
+				continue
+			var/datum/dna/gene/trait/gene = T.linked_gene
+			character.active_genes |= gene.name
+			character.dna.SetSEState(gene.block, TRUE, TRUE)
+			testing("[gene.name] Setup activated!")
+		character.dna.UpdateSE() // Apply genetics. We just want the SE's refreshed.
+	// Traitgenes edit end
 
 	// VOREStation Edit - Sync up all their organs and species one final time
 	character.force_update_organs()

@@ -18,7 +18,7 @@
 	// Traitgenes edit - Traits can toggle mutations and disabilities
 	var/is_genetrait = FALSE // When their trait's datum is init, it will be added to the library of genes a carbon can be mutated to have or not have
 	var/activity_bounds = DNA_DEFAULT_BOUNDS // Activation requirement for trait to turn on/off. Dna is automatically configured for this when first spawned
-	var/hidden = FALSE  // If a trait does not show on the list, only useful for genetics enabled traits
+	var/hidden = FALSE  // If a trait does not show on the list, only useful for genetics only traits that cannot be taken at character creation
 	var/mutation = 0 	// Mutation to give (or 0)
 	var/disability = 0 	// Disability to give (or 0)
 	var/sdisability = 0 // SDisability to give (or 0)
@@ -59,11 +59,20 @@
 	return
 
 // Traitgenes edit - Disabling traits, genes can be turned off after all!
-/datum/trait/proc/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/proc/unapply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
 			S.vars[V] = initial(S.vars[V])
+	if (trait_prefs)
+		for (var/trait in trait_prefs)
+			switch(has_preferences[trait][3])
+				if(TRAIT_NO_VAREDIT_TARGET)
+					continue
+				if(TRAIT_VAREDIT_TARGET_SPECIES)
+					S.vars[trait] = initial(S.vars[trait])
+				if(TRAIT_VAREDIT_TARGET_MOB)
+					S.vars[trait] = initial(H.vars[trait])
 	if(mutation)
 		H.mutations.Remove(mutation)
 	if(disability)

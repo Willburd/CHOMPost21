@@ -138,7 +138,7 @@ var/SMALLSIZEBLOCK     = 0
 #define DNA_UI_WING3_B     47 // VOREStation snippet end.
 #define DNA_UI_LENGTH      47 // VOREStation Edit - Needs to match the highest number above.
 
-#define DNA_SE_LENGTH 49 // VOREStation Edit (original was UI+11)
+#define DNA_SE_LENGTH 50 // Traitgenes edit - Even 50,expand if traitgenes get bigger then 30+
 
 //DNA modifiers
 // Buffer datatype flags.

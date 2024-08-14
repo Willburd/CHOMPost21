@@ -2,7 +2,7 @@
 // (mostly) DNA2 SETUP
 /////////////////////////
 
-/* Traitgenes edit begin - Blocks have finally been retired, huzzah!
+/* Traitgenes edit - Blocks have finally been retired, huzzah!
 // Randomize block, assign a reference name, and optionally define difficulty (by making activation zone smaller or bigger)
 // The name is used on /vg/ for species with predefined genetic traits,
 //  and for the DNA panel in the player panel.
@@ -16,13 +16,8 @@
 	dna_activity_bounds[assigned]=activity_bounds
 	//testing("[name] assigned to block #[assigned].")
 	return assigned
-*/
 
 /proc/setupgenetics()
-	// TODO - new gene block randomization
-
-
-	/* Traitgenes edit begin - Blocks have finally been retired, huzzah!
 	if (prob(50))
 		// Currently unused.  Will revisit. - N3X
 		BLOCKADD = rand(-300,300)
@@ -87,4 +82,35 @@
 				assignedToBlock=blocks_assigned[G.block]
 			assignedToBlock.Add(G.name)
 			blocks_assigned[G.block]=assignedToBlock
-	*/
+*/
+
+// Traitgenes edit begin - Setup gentics using traits as a foundation for each gene. Basically making genetics automagic instead of something that needs to be maintained...
+/proc/setupgenetics(var/list/trait_list)
+	if(!trait_list)
+		return
+	var/list/blocks_remaining = list()
+	var/I = 0
+	while(I++ <= DNA_SE_LENGTH)
+		blocks_remaining.Add(I)
+	for(var/TI in trait_list)
+		var/datum/trait/T = trait_list[TI]
+		if(T.is_genetrait)
+			if(blocks_remaining.len <= 0)
+				CRASH("DNA2: Ran out of usable blocks! DNA_SE_LENGTH limit is [DNA_SE_LENGTH]. Raise it if you need more!")
+			// Init
+			var/datum/dna/gene/trait/G = new /datum/dna/gene/trait()
+			G.block = pick(blocks_remaining)
+			var/tex = uppertext(T.name)
+			G.name = "[copytext(tex,1,min( 8, length(tex)+1 ))]:[G.block]"
+			T.linked_gene = G
+			G.linked_trait = T
+			dna_activity_bounds[G.block]=T.activity_bounds
+			// Handle global block data
+			log_world("DNA2: Assigned [G.name] - Linked to trait [T.name].")
+			assigned_blocks[G.block]=G.name
+			dna_genes.Add(G)
+			blocks_remaining.Remove(G.block)
+	log_world("DNA2: Created traitgenes with [blocks_remaining.len] remaining blocks. Used [DNA_SE_LENGTH - blocks_remaining.len] out of [DNA_SE_LENGTH] ")
+	if(blocks_remaining.len < 10)
+		warning("DNA2: Blocks remaining is less than 10. The DNA_SE_LENGTH should be raised.")
+// Traitgenes edit end

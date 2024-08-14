@@ -28,7 +28,7 @@
 * Is the gene active in this mob's DNA?
 */
 /datum/dna/gene/proc/is_active(var/mob/M)
-	return (M.active_genes && (type in M.active_genes))
+	return (M.active_genes && (name in M.active_genes)) // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes
 
 // Return 1 if we can activate.
 // HANDLE MUTCHK_FORCED HERE!
@@ -77,6 +77,7 @@
 	return 0
 
 
+/* Traitgenes edit - Not needed anymore, only traitgenes.
 /////////////////////
 // BASIC GENES
 //
@@ -121,8 +122,7 @@
 	if(deactivation_messages.len)
 		var/msg = pick(deactivation_messages)
 		to_chat(M, "<span class='warning'>[msg]</span>")
-
-
+*/
 
 
 
@@ -136,12 +136,30 @@
 
 
 /datum/dna/gene/trait
-	flags = MUTCHK_FORCED // For sanity, for now.
-	var/activation_prob=45
+	desc="Gene linked to a trait."
+	var/activation_prob=100 // For sanity sakes, at least right now...
 	var/datum/trait/linked_trait = null // Internal use, do not assign.
 
+/datum/dna/gene/trait/Destroy()
+	// unlink circular reference
+	if(linked_trait)
+		linked_trait.linked_gene = null
+	linked_trait = null
+	. = ..()
+
+// Use these when displaying info to players
+/datum/dna/gene/trait/proc/get_name()
+	if(linked_trait)
+		return linked_trait.name
+	return name
+
+/datum/dna/gene/trait/proc/get_desc()
+	if(linked_trait)
+		return linked_trait.desc
+	return desc
+
 /datum/dna/gene/trait/can_activate(var/mob/M,var/flags)
-	if(flags & MUTCHK_FORCED)
+	if(flags & MUTCHK_FORCED || activation_prob >= 100)
 		return 1
 	// Probability check
 	return probinj(activation_prob,(flags&MUTCHK_FORCED))
@@ -152,11 +170,18 @@
 		if(H.species) // Lets avoid runtime assertions
 			linked_trait.apply( H.species, H, H.species.traits[linked_trait.type])
 			linked_trait.send_message( H, TRUE)
+			// Add trait
+			if(!(linked_trait.type in H.species.traits))
+				H.species.traits.Add(linked_trait.type)
 
 /datum/dna/gene/trait/deactivate(var/mob/M)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
-			linked_trait.unapply( H.species, H )
+			linked_trait.unapply( H.species, H, H.species.traits[linked_trait.type])
 			linked_trait.send_message( H, FALSE)
+			// Remove trait
+			if(linked_trait.type in H.species.traits)
+				linked_trait.remove(H.species) // Probably does nothing, but may as well call it
+				H.species.traits.Remove(linked_trait.type)
 // Traitgenes edit end

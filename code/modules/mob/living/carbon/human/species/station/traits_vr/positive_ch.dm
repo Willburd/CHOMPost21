@@ -142,6 +142,13 @@
 	name = "Table Passer"
 	desc = "You move over or under tables with ease of a Teshari."
 	cost = 2
+
+	// Traitgenes edit begin - Replacement for /datum/trait/positive/superpower_midget, made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+	activation_message="Your skin feels rubbery."
+	// Traitgenes edit begin end
+
 	has_preferences = list("pass_table" = list(TRAIT_PREF_TYPE_BOOLEAN, "On spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
 /datum/trait/positive/table_passer/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
@@ -149,6 +156,14 @@
 	if (trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE
 	add_verb(H,/mob/living/proc/toggle_pass_table) //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - All genetraits need an unapply proc
+/datum/trait/positive/table_passer/unapply(datum/species/S, mob/living/carbon/human/H)
+	. = ..()
+	if (H.pass_flags & PASSTABLE > 0)
+		H.pass_flags ^= PASSTABLE
+	remove_verb(H,/mob/living/proc/toggle_pass_table)
+// Traitgenes edit begin end
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling Expert"

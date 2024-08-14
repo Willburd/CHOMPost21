@@ -18,7 +18,7 @@ SUBSYSTEM_DEF(atoms)
 	var/list/BadInitializeCalls = list()
 
 /datum/controller/subsystem/atoms/Initialize() // CHOMPEdit
-	setupgenetics() //to set the mutations' place in structural enzymes, so initializers know where to put mutations.
+	// setupgenetics() //to set the mutations' place in structural enzymes, so initializers know where to put mutations. // Traitgenes edit - Blocks have finally been retired, huzzah!
 	initialized = INITIALIZATION_INNEW_MAPLOAD
 	to_world_log("Initializing objects")
 	admin_notice("<span class='danger'>Initializing objects</span>", R_DEBUG)

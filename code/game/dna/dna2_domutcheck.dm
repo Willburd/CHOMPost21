@@ -22,7 +22,7 @@
 			gene_active = M.dna.GetSEState(gene.block)
 
 		// Prior state
-		var/gene_prior_status = (gene.type in M.active_genes)
+		var/gene_prior_status = (gene.name in M.active_genes) // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes
 		var/changed = gene_active != gene_prior_status || (gene.flags & GENE_ALWAYS_ACTIVATE)
 
 		// If gene state has changed:
@@ -32,12 +32,12 @@
 				testing("[gene.name] activated!")
 				gene.activate(M,connected,flags)
 				if(M)
-					M.active_genes |= gene.type
+					M.active_genes |= gene.name // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes
 					M.update_icon = 1
 			// If Gene is NOT active:
 			else
 				testing("[gene.name] deactivated!")
 				gene.deactivate(M,connected,flags)
 				if(M)
-					M.active_genes -= gene.type
+					M.active_genes -= gene.name // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes
 					M.update_icon = 1
