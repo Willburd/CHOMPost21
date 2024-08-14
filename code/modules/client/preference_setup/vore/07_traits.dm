@@ -254,7 +254,7 @@ var/global/list/valid_bloodreagents = list("default","iron","copper","phoron","s
 		pref.dirty_synth = 0
 
 	var/datum/species/S = character.species
-	var/datum/species/new_S = S.produceCopy(pref.pos_traits + pref.neu_traits + pref.neg_traits, character, pref.custom_base)
+	var/datum/species/new_S = S.produceCopy(pref.pos_traits + pref.neu_traits + pref.neg_traits, character, pref.custom_base, TRUE) // Traitgenes edit - reset_dna flag required, or genes get reset on resleeve
 
 	for(var/datum/trait/T in new_S.traits)
 		T.apply_pref(src)

@@ -141,15 +141,22 @@ var/global/floorIsLava = 0
 				body += "<br><br>"
 				body += "<b>DNA Blocks:</b><br><table border='0'><tr><th>&nbsp;</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>"
 				var/bname
-				for(var/block=1;block<=DNA_SE_LENGTH;block++)
+				for(var/datum/dna/gene/gene in dna_genes) // Traitgenes edit - more reliable way to check gene states
+					var/block = gene.block
 					if(((block-1)%5)==0)
 						body += "</tr><tr><th>[block-1]</th>"
-					bname = assigned_blocks[block]
+					bname = gene.name // Traitgenes edit - more reliable way to check gene states
 					body += "<td>"
 					if(bname)
-						var/bstate=M.dna.GetSEState(block)
+						var/bstate=(bname in M.active_genes) // Traitgenes edit - more reliable way to check gene states
+						// Traitgenes edit begin - show traint linked names on mouseover
+						var/tname = bname
+						if(istype(gene,/datum/dna/gene/trait))
+							var/datum/dna/gene/trait/T = gene
+							tname = T.get_name()
+						// Traitgenes edit end
 						var/bcolor="[(bstate)?"#006600":"#ff0000"]"
-						body += "<A href='?src=\ref[src];[HrefToken()];togmutate=\ref[M];block=[block]' style='color:[bcolor];'>[bname]</A><sub>[block]</sub>"
+						body += "<A href='?src=\ref[src];[HrefToken()];togmutate=\ref[M];block=[block]' style='color:[bcolor];' title='[tname]'>[bname]</A><sub>[block]</sub>" // Traitgenes edit - show traint linked names on mouseover
 					else
 						body += "[block]"
 					body+="</td>"

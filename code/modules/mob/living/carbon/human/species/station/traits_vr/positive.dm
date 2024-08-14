@@ -10,6 +10,14 @@
 //	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJ, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
 //	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
 
+	// Traitgenes edit begin - Replaces /datum/trait/positive/superpower_increaserun, made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your leg muscles pulsate."
+	// Traitgenes edit end
+
+
 /datum/trait/positive/hardy
 	name = "Hardy"
 	desc = "Allows you to carry heavy equipment with less slowdown."
@@ -51,6 +59,12 @@
 	desc = "Decreases your susceptibility to electric shocks by 50%." //CHOMP Edit - GRAMMAR PLS.
 	cost = 3 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.5) //CHOMP Edit
+
+	// Traitgenes edit begin - Replacement for /datum/trait/positive/superpower_noshock, made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+	activation_message="Your skin feels strange."
+	// Traitgenes edit begin end
 
 /*   //Chompedit, moving to Positive_ch.dm so it wont be messed with from upstream
 /datum/trait/positive/darksight

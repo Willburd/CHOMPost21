@@ -75,6 +75,7 @@
 	disability=NERVOUS
 	activation_message="You feel nervous."
 
+/* Replaced by /datum/trait/negative/blindness
 /datum/trait/negative/disability_blind
 	name = "Blinded"
 	desc = "You are unable to see anything."
@@ -86,6 +87,10 @@
 
 	sdisability=BLIND
 	activation_message="You can't seem to see anything."
+
+/datum/trait/negative/disability_blind/handle_environment_special(var/mob/living/carbon/human/H)
+	H.sdisabilities |= sdisability 		// In space, no one can hear you scream
+*/
 
 /datum/trait/negative/disability_mute
 	name = "Mute"
@@ -99,6 +104,9 @@
 	sdisability=MUTE
 	activation_message="Your throat feels strange..."
 
+/datum/trait/negative/disability_mute/handle_environment_special(var/mob/living/carbon/human/H)
+	H.sdisabilities |= sdisability 		// In space, no one can hear you scream
+
 /datum/trait/negative/disability_deaf
 	name = "Deaf"
 	desc = "You are unable to hear anything."
@@ -110,6 +118,9 @@
 
 	sdisability=DEAF
 	activation_message="It's kinda quiet."
+
+/datum/trait/negative/disability_deaf/handle_environment_special(var/mob/living/carbon/human/H)
+	H.sdisabilities |= sdisability 		// In space, I can't hear shit
 
 /datum/trait/negative/disability_deaf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	. = ..()
@@ -132,3 +143,39 @@
 
 	disability=NEARSIGHTED
 	activation_message="Your eyes feel weird..."
+
+/datum/trait/negative/disability_wingdings
+	name = "Incomprehensible"
+	desc = "You are unable to speak normally, everything you say comes out as insane gibberish."
+	cost = -2
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	disability=WINGDINGS
+	activation_message="You feel a little... Ga-hoo!"
+
+/datum/trait/negative/disability_deteriorating
+	name = "Rotting Genetics"
+	desc = "Your body is slowly failing due to a chronic genetic disorder, expect to lose limbs or have organs shutdown randomly."
+	cost = -4
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	disability=DETERIORATE
+	activation_message="You feel sore..."
+
+/datum/trait/negative/disability_gibbing
+	name = "Gibbingtons"
+	desc = "Your body is on the edge of exploding, anything could set it off! A rare genetic disorder, only discovered with the invention of resleeving technology!"
+	cost = -5
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	hidden = TRUE
+
+	disability=GIBBING
+	activation_message="You feel bloated..."

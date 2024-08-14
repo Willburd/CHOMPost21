@@ -6,6 +6,7 @@
 		if((COLD_RESISTANCE in mutations) || (prob(1)))
 			heal_organ_damage(0,1)
 
+	/* Traitgenes edit - replaced by trait's handle_environment()
 	// DNA2 - Gene processing.
 	// The HULK stuff that was here is now in the hulk gene.
 	if(!isSynthetic())
@@ -14,6 +15,7 @@
 				continue
 			if(gene.is_active(src))
 				gene.OnMobLife(src)
+	*/
 
 	radiation = CLAMP(radiation,0,250)
 

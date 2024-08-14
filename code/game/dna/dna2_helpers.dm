@@ -257,7 +257,7 @@
 		H.custom_heat = dna.custom_heat
 		H.custom_cold = dna.custom_cold
 		var/datum/species/S = H.species
-		S.produceCopy(dna.species_traits, H, dna.base_species)
+		S.produceCopy(dna.species_traits, H, dna.base_species, FALSE) // Traitgenes edit - reset_dna flag required, or genes get reset on resleeve
 		// VOREStation Edit End
 
 		H.force_update_organs() //VOREStation Add - Gotta do this too

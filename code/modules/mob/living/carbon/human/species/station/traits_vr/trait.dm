@@ -58,7 +58,7 @@
 	add_verb(H,/mob/living/carbon/human/proc/trait_tutorial) //CHOMPEdit TGPanel
 	return
 
-// Traitgenes edit - Disabling traits, genes can be turned off after all!
+// Traitgenes edit begin - Disabling traits, genes can be turned off after all!
 /datum/trait/proc/unapply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)

@@ -69,7 +69,7 @@
 		..()
 */
 
-/datum/species/proc/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base)
+/datum/species/proc/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base, var/reset_dna = TRUE) // Traitgenes edit - reset_dna flag required, or genes get reset on resleeve
 	ASSERT(src)
 	ASSERT(istype(H))
 	var/datum/species/new_copy = new src.type()
@@ -101,7 +101,7 @@
 	if(new_copy.holder_type)
 		H.holder_type = new_copy.holder_type
 
-	if(H.dna)
+	if(H.dna && reset_dna)
 		H.dna.ready_dna(H)
 
 	handle_base_eyes(H, custom_base) //ChompEDIT. ensure custom species with a base get the correct eyes

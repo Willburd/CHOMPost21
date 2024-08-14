@@ -157,12 +157,13 @@
 		H.pass_flags |= PASSTABLE
 	add_verb(H,/mob/living/proc/toggle_pass_table) //CHOMPEdit TGPanel
 
-// Traitgenes edit begin - All genetraits need an unapply proc
+// Traitgenes edit begin - All genetraits need an unapply proc if they do anything special
 /datum/trait/positive/table_passer/unapply(datum/species/S, mob/living/carbon/human/H)
 	. = ..()
-	if (H.pass_flags & PASSTABLE > 0)
+	if (H.pass_flags & PASSTABLE)
 		H.pass_flags ^= PASSTABLE
-	remove_verb(H,/mob/living/proc/toggle_pass_table)
+	if(!(/mob/living/proc/toggle_pass_table in S.inherent_verbs)) // Teshari shouldn't lose agility
+		remove_verb(H,/mob/living/proc/toggle_pass_table)
 // Traitgenes edit begin end
 
 /datum/trait/positive/grappling_expert

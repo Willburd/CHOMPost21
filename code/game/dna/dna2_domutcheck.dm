@@ -4,6 +4,7 @@
 // connected: Machine we're in, type unchecked so I doubt it's used beyond monkeying
 // flags: See below, bitfield.
 #define MUTCHK_FORCED        1
+#define MUTCHK_HIDEMSG       2 // Traitgenes edit - Hide gene activation/deactivation messages, mostly for resleeving so you don't get spammed
 /proc/domutcheck(var/mob/living/M, var/connected=null, var/flags=0)
 	for(var/datum/dna/gene/gene in dna_genes)
 		if(!M || !M.dna)
@@ -26,17 +27,17 @@
 		var/changed = gene_active != gene_prior_status || (gene.flags & GENE_ALWAYS_ACTIVATE)
 
 		// If gene state has changed:
-		if(changed)
+		if(changed || flags & MUTCHK_FORCED) // Traitgenes edit - MUTCHK_FORCED always applies or removes genes
 			// Gene active (or ALWAYS ACTIVATE)
 			if(gene_active || (gene.flags & GENE_ALWAYS_ACTIVATE))
-				testing("[gene.name] activated!")
+				//testing("[gene.name] activated!")
 				gene.activate(M,connected,flags)
 				if(M)
 					M.active_genes |= gene.name // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes
 					M.update_icon = 1
 			// If Gene is NOT active:
 			else
-				testing("[gene.name] deactivated!")
+				//testing("[gene.name] deactivated!")
 				gene.deactivate(M,connected,flags)
 				if(M)
 					M.active_genes -= gene.name // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes

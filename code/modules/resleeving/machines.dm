@@ -117,6 +117,7 @@
 
 	//Update appearance, remake icons
 	H.UpdateAppearance()
+	domutcheck(H,null,MUTCHK_FORCED | MUTCHK_HIDEMSG) // Traitgenes edit - Reapply mutations, UpdateAppearance sets traits based on species_traits, we want to reapply
 	H.sync_organ_dna()
 	H.regenerate_icons()
 
@@ -345,6 +346,7 @@
 
 	//Update appearance, remake icons
 	H.UpdateAppearance()
+	domutcheck(H,null,MUTCHK_FORCED | MUTCHK_HIDEMSG) // Traitgenes edit - Reapply mutations, UpdateAppearance sets traits based on species_traits, we want to reapply
 	H.sync_organ_dna()
 	H.regenerate_icons()
 

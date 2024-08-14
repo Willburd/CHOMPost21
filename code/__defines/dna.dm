@@ -40,6 +40,8 @@
 #define DEPRESSION     	0x20	// Roleplay drugs
 #define SCHIZOPHRENIA  	0x40	// Roleplay drugs
 #define WINGDINGS     	0x80	// Better handling as disability
+#define DETERIORATE     0x100	// Body melts slowly, medical loves you!
+#define GIBBING     	0x200	// Landmine for genetics to find
 // Outpost 21 edit end
 
 // sdisabilities

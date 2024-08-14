@@ -658,12 +658,15 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	if(!LAZYLEN(mutations))
 		return //No mutations, no icons.
 
+	/* Traitgenes edit - Disabled due to no maintenance, and it being broken on anything that isn't human shaped
 	//TODO: THIS PROC???
 	var/fat
 	if(FAT in mutations)
 		fat = "fat"
+	*/
 
 	var/image/standing	= image(icon = 'icons/effects/genetics.dmi', layer = BODY_LAYER+MUTATIONS_LAYER)
+	/* Traitgenes edit - Disabled due to no maintenance, and it being broken on anything that isn't human shaped
 	var/g = gender == FEMALE ? "f" : "m"
 
 	for(var/datum/dna/gene/gene in dna_genes)
@@ -673,6 +676,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			var/underlay = gene.OnDrawUnderlays(src,g,fat)
 			if(underlay)
 				standing.underlays += underlay
+	*/
 
 	for(var/mut in mutations)
 		if(mut == LASER)

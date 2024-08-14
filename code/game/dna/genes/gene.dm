@@ -28,7 +28,7 @@
 * Is the gene active in this mob's DNA?
 */
 /datum/dna/gene/proc/is_active(var/mob/M)
-	return (M.active_genes && (name in M.active_genes)) // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes
+	return (M.active_genes && (name in M.active_genes)) // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes. It is always unique due to the block number being appended to it.
 
 // Return 1 if we can activate.
 // HANDLE MUTCHK_FORCED HERE!
@@ -48,6 +48,7 @@
 
 // This section inspired by goone's bioEffects.
 
+/* Traitgenes edit - Disabled due to no maintenance or calls
 /**
 * Called in each life() tick.
 */
@@ -75,7 +76,7 @@
 */
 /datum/dna/gene/proc/OnDrawUnderlays(var/mob/M, var/g, var/fat)
 	return 0
-
+*/
 
 /* Traitgenes edit - Not needed anymore, only traitgenes.
 /////////////////////
@@ -168,20 +169,29 @@
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
-			linked_trait.apply( H.species, H, H.species.traits[linked_trait.type])
-			linked_trait.send_message( H, TRUE)
 			// Add trait
-			if(!(linked_trait.type in H.species.traits))
-				H.species.traits.Add(linked_trait.type)
+			if(linked_trait.type in H.species.traits)
+				return
+			linked_trait.apply( H.species, H, H.species.traits[linked_trait.type])
+			H.species.traits.Add(linked_trait.type)
+			if(!(linked_trait.type in H.dna.species_traits)) // Set species traits too
+				H.dna.species_traits.Add(linked_trait.type)
+			// message player with change
+			if(flags & MUTCHK_HIDEMSG <= 0)
+				linked_trait.send_message( H, TRUE)
 
 /datum/dna/gene/trait/deactivate(var/mob/M)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
-			linked_trait.unapply( H.species, H, H.species.traits[linked_trait.type])
-			linked_trait.send_message( H, FALSE)
 			// Remove trait
-			if(linked_trait.type in H.species.traits)
-				linked_trait.remove(H.species) // Probably does nothing, but may as well call it
-				H.species.traits.Remove(linked_trait.type)
-// Traitgenes edit end
+			if(!(linked_trait.type in H.species.traits))
+				return
+			linked_trait.unapply( H.species, H, H.species.traits[linked_trait.type])
+			linked_trait.remove(H.species) // Does nothing, but may as well call it because it exists and has a place now
+			H.species.traits.Remove(linked_trait.type)
+			if(linked_trait.type in H.dna.species_traits) // Clear species traits too
+				H.dna.species_traits.Remove(linked_trait.type)
+			// message player with change
+			if(flags & MUTCHK_HIDEMSG <= 0)
+				linked_trait.send_message( H, FALSE)
