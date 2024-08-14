@@ -178,18 +178,18 @@
 			M.client.perspective = EYE_PERSPECTIVE
 			M.client.eye = src
 		M.loc = src
-		// update_use_power(USE_POWER_ACTIVE) Outpost 21 edit - borers crash VR don't let them in
+		//update_use_power(USE_POWER_ACTIVE)
 		occupant = M
 
 		update_icon()
 
-		// Outpost 21 edit begin - crashes borers, byond does not like moving the weirdly bound client that borers become. So lets just prevent it altogether
+		//VOREstation edit - crashes borers
 		if(!M.has_brain_worms())
 			update_use_power(USE_POWER_ACTIVE)
 			enter_vr()
 		else
 			to_chat(user, "<span class='warning'>\The [src] rejects [M] with a sharp beep.</span>")
-		// Outpost 21 edit end
+		//VOREstation edit end
 	return
 
 /obj/machinery/vr_sleeper/proc/go_out(var/forced = TRUE)

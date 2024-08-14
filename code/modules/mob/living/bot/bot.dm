@@ -47,6 +47,9 @@
 
 /mob/living/bot/New()
 	..()
+	//update_icons() //VOREstation edit: moved to Init
+
+	//default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit: moved to Init
 
 	botcard = new /obj/item/weapon/card/id(src)
 	botcard.access = botcard_access.Copy()
@@ -63,8 +66,8 @@
 	. = ..()
 	if(on)
 		turn_on() // Update lights and other stuff
-	update_icons() // Outpost 21 edit - overlay runtime fix
-	default_language = GLOB.all_languages[LANGUAGE_GALCOM] // Outpost 21 edit - runtime fix
+	update_icons() //VOREstation edit - overlay runtime fix
+	default_language = GLOB.all_languages[LANGUAGE_GALCOM] //VOREstation edit - runtime fix
 
 /mob/living/bot/Life()
 	..()

@@ -89,13 +89,13 @@
 					/obj/random/contraband,
 					/obj/random/contraband,
 					/obj/random/weapon/guarenteed)
-	//Outpost 21 edit begin - Randomized map objects were put in loot piles, so handle them...
+	//VOREstation edit - Randomized map objects were put in loot piles, so handle them...
 	if(istype(loot,/obj/random))
 		var/obj/random/randy = loot
 		var/new_I = randy.spawn_item()
 		qdel(loot)
 		loot = new_I // swap it
-	//Outpost 21 edit end
+	//VOREstation edit end
 	new loot(usr.loc)
 	to_chat(user, "You unwrap the package.")
 	qdel(src)

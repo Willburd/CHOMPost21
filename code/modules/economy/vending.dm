@@ -721,6 +721,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 	src.set_dir(turn(src.dir, 270))
 	return 1
 
+//VOREstation edit: counter-clockwise rotation
 /obj/machinery/vending/verb/rotate_counterclockwise()
 	set name = "Rotate Vending Machine Counter-Clockwise"
 	set category = "Object"
@@ -735,6 +736,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 		return 0
 	src.set_dir(turn(src.dir, 90))
 	return 1
+//VOREstation edit end
 
 /obj/machinery/vending/verb/check_logs()
 	set name = "Check Vending Logs"

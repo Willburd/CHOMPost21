@@ -270,4 +270,3 @@
 /obj/machinery/light/broken/small/Initialize()
 	. = ..()
 	broken()
-
