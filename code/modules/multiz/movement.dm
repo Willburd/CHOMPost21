@@ -340,10 +340,10 @@
 /obj/mecha/can_fall()
 	return TRUE
 
-// Outpost 21 edit begin - Falling vehicles.
+// VOREstation edit - Falling vehicles.
 /obj/vehicle/can_fall()
 	return TRUE
-// Outpost 21 edit end
+// VOREstation edit end
 
 /obj/item/pipe/can_fall()
 	. = ..()

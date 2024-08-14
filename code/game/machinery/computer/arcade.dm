@@ -43,13 +43,13 @@
 
 	else if(LAZYLEN(prizes))
 		var/prizeselect = pickweight(prizes)
-		//Outpost 21 edit begin - Randomized map objects were put in loot piles, so handle them...
+		//VOREstation edit - Randomized map objects were put in loot piles, so handle them...
 		if(istype(prizeselect,/obj/random))
 			var/obj/random/randy = prizeselect
 			var/new_I = randy.spawn_item()
 			qdel(prizeselect)
 			prizeselect = new_I // swap it
-		//Outpost 21 edit end
+		//VOREstation edit end
 		new prizeselect(src.loc)
 
 		if(istype(prizeselect, /obj/item/clothing/suit/syndicatefake)) //Helmet is part of the suit
