@@ -127,7 +127,7 @@
 
 
 
-// Traitgenes edit - Genes are linked to traits now
+// Traitgenes edit - Genes are linked to traits now. Because no one bothered to maintain genes, and instead jumped through two different trait systems to avoid them. So here we are. - Willbird
 /////////////////////
 // TRAIT GENES
 //
