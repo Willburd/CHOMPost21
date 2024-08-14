@@ -141,11 +141,23 @@ var/global/floorIsLava = 0
 				body += "<br><br>"
 				body += "<b>DNA Blocks:</b><br><table border='0'><tr><th>&nbsp;</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th>"
 				var/bname
-				for(var/datum/dna/gene/gene in dna_genes) // Traitgenes edit - more reliable way to check gene states
-					var/block = gene.block
+				var/list/output_list = list()
+				// Traitgenes edit begin - more reliable way to check gene states
+				for(var/block=1;block<=DNA_SE_LENGTH;block++)
+					output_list["[block]"] = null
+				for(var/datum/dna/gene/gene in dna_genes)
+					output_list["[gene.block]"] = gene
+				// Traitgenes edit end
+				for(var/block=1;block<=DNA_SE_LENGTH;block++) // Traitgenes edit - more reliable way to check gene states
+					var/datum/dna/gene/gene = output_list["[block]"] // Traitgenes edit - more reliable way to check gene states
 					if(((block-1)%5)==0)
 						body += "</tr><tr><th>[block-1]</th>"
-					bname = gene.name // Traitgenes edit - more reliable way to check gene states
+					// Traitgenes edit begin - more reliable way to check gene states
+					if(gene)
+						bname = gene.name
+					else
+						bname = ""
+					// Traitgenes edit end
 					body += "<td>"
 					if(bname)
 						var/bstate=(bname in M.active_genes) // Traitgenes edit - more reliable way to check gene states

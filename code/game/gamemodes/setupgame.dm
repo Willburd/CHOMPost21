@@ -104,10 +104,10 @@
 			G.name = "[copytext(tex,1,min( 8, length(tex)+1 ))]:[G.block]"
 			T.linked_gene = G
 			G.linked_trait = T
-			dna_activity_bounds[G.block]=T.activity_bounds
+			dna_activity_bounds["[G.block]"]=T.activity_bounds // Traitgenes edit - use id instead of index
 			// Handle global block data
 			log_world("DNA2: Assigned [G.name] - Linked to trait [T.name].")
-			assigned_blocks[G.block]=G.name
+			assigned_blocks["[G.block]"]=G.name // Traitgenes edit - use id instead of index
 			dna_genes.Add(G)
 			blocks_remaining.Remove(G.block)
 	log_world("DNA2: Created traitgenes with [blocks_remaining.len] remaining blocks. Used [DNA_SE_LENGTH - blocks_remaining.len] out of [DNA_SE_LENGTH] ")

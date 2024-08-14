@@ -15,7 +15,7 @@
 // DNA Gene activation boundaries, see dna2.dm.
 // Returns a list object with 4 numbers.
 /proc/GetDNABounds(var/block)
-	var/list/BOUNDS=dna_activity_bounds[block]
+	var/list/BOUNDS=dna_activity_bounds["[block]"] // Traitgenes edit - use id instead of index
 	if(!istype(BOUNDS))
 		return DNA_DEFAULT_BOUNDS
 	return BOUNDS
