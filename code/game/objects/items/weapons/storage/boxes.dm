@@ -150,12 +150,16 @@
 	name = "box of DNA injectors"
 	desc = "This box contains injectors it seems."
 	icon_state = "dna"
-	/* Traitgenes edit begin - No monkey gene, doesn't work with the marking overlays anyway
+	// Traitgenes edit begin - New injector loot
+	starts_with = list(
+		/obj/item/weapon/dnainjector/random_labeled = 6
+	)
+	/*
 	starts_with = list(
 		/obj/item/weapon/dnainjector/h2m = 3,
 		/obj/item/weapon/dnainjector/m2h = 3
 	)
-	*/
+	*/ // Traitgenes edit end
 
 /obj/item/weapon/storage/box/flashbangs
 	name = "box of flashbangs (WARNING)"

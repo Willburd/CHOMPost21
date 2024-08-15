@@ -25,7 +25,9 @@ var/global/list/assigned_blocks[DNA_SE_LENGTH]
 
 // Traitgenes edit begin - Genes accessible by global VV, and lists for good and bad mutations for quick randomized selection of traitgenes. Removed dna from gene's path
 GLOBAL_LIST_EMPTY_TYPED(dna_genes, /datum/gene)
+GLOBAL_LIST_EMPTY(trait_to_dna_genes) // Reverse lookup genes
 GLOBAL_LIST_EMPTY_TYPED(dna_genes_good, /datum/gene/trait)
+GLOBAL_LIST_EMPTY_TYPED(dna_genes_neutral, /datum/gene/trait)
 GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 // Traitgenes edit end
 

@@ -109,10 +109,13 @@
 			// Handle global block data
 			log_world("DNA2: Assigned [G.name] - Linked to trait [T.name].")
 			assigned_blocks[G.block]=G.name
+			GLOB.trait_to_dna_genes[T.type] = G
 			GLOB.dna_genes.Add(G)
 			blocks_remaining.Remove(G.block)
 			// Add traitgenes to good/bad gene lists for randomized mutation procs!
-			if(istype(T,/datum/trait/negative) || (istype(T,/datum/trait/neutral) && prob(50))) // neutrals should be considered either good or bad randomly per round
+			if(istype(T,/datum/trait/neutral))
+				GLOB.dna_genes_neutral.Add(G)
+			else if(istype(T,/datum/trait/negative))
 				GLOB.dna_genes_bad.Add(G)
 			else
 				GLOB.dna_genes_good.Add(G)

@@ -19,7 +19,11 @@
 	var/datatype=0
 	var/value=0
 
-/obj/item/weapon/dnainjector/New()
+	// Traitgenes edit begin - Removed subtype, replaced with flag. Allows for safe injectors. Mostly for admin usage.
+	var/has_radiation = TRUE
+	// Traitgenes edit end
+
+/obj/item/weapon/dnainjector/Initialize() // Traitgenes edit - Moved to init
 	if(datatype && block)
 		buf=new
 		buf.dna=new
@@ -28,6 +32,7 @@
 		//testing("[name]: DNA2 SE blocks prior to SetValue: [english_list(buf.dna.SE)]")
 		SetValue(src.value)
 		//testing("[name]: DNA2 SE blocks after SetValue: [english_list(buf.dna.SE)]")
+	. = ..() // Traitgenes edit - Moved to init
 
 /obj/item/weapon/dnainjector/proc/GetRealBlock(var/selblock)
 	if(selblock==0)
@@ -64,7 +69,7 @@
 		return buf.dna.SetUIValue(real_block,val)
 
 /obj/item/weapon/dnainjector/proc/inject(mob/M as mob, mob/user as mob)
-	if(istype(M,/mob/living))
+	if(istype(M,/mob/living) && has_radiation)
 		var/mob/living/L = M
 		L.apply_effect(rand(5,20), IRRADIATE, check_protection = 0)
 		L.apply_damage(max(2,L.getCloneLoss()), CLONE)
@@ -138,6 +143,66 @@
 	// Apply the DNA shit.
 	inject(M, user)
 	return
+
+
+// Traitgenes edit begin - Injectors are randomized now due to no hardcoded genes. Split into good or bad, and then versions that specify what they do on the label.
+/obj/item/weapon/dnainjector/proc/pick_block(var/datum/gene/trait/G, var/labeled, var/allow_disable)
+	if(G)
+		block = G.block
+		datatype = DNA2_BUF_SE
+		value = 0xFFF
+		if(allow_disable)
+			value = pick(0x000,0xFFF)
+		if(labeled)
+			name = initial(name) + " - [value == 0x000 ? "Removes" : ""] [G.get_name()]"
+
+/obj/item/weapon/dnainjector/random
+	name = "\improper DNA injector"
+	desc = "This injects the person with DNA."
+
+// Purely rando
+/obj/item/weapon/dnainjector/random/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral + GLOB.dna_genes_bad), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral + GLOB.dna_genes_bad), TRUE, TRUE)
+	. = ..()
+
+// Good/bad but also neutral genes mixed in, less OP selection of genes
+/obj/item/weapon/dnainjector/random_good/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral ), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_good_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral ), TRUE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_bad/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad + GLOB.dna_genes_neutral ), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_bad_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad + GLOB.dna_genes_neutral ), TRUE, TRUE)
+	. = ..()
+
+// Purely good/bad genes, intended to be usually good rewards or punishments
+/obj/item/weapon/dnainjector/random_verygood/Initialize()
+	pick_block( pick(GLOB.dna_genes_good), FALSE, FALSE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_verygood_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_good), TRUE, FALSE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_verybad/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad), FALSE, FALSE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_verybad_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad), TRUE, FALSE)
+	. = ..()
+
 
 /* Traitgenes edit - Disable old injectors
 /obj/item/weapon/dnainjector/hulkmut
