@@ -42,7 +42,7 @@
 		if(changed || flags & MUTCHK_FORCED) // Traitgenes edit - MUTCHK_FORCED always applies or removes genes
 			// Gene active (or ALWAYS ACTIVATE)
 			if(gene_active || (gene.flags & GENE_ALWAYS_ACTIVATE))
-				// Traitgenes edit begin - Handle trait conflicts, do not activate if so!
+				// Traitgenes edit begin - Handle trait conflicts, do not activate if so! Has to be done here so that SE activation without trait activation is possible.
 				if(istype(gene,/datum/dna/gene/trait))
 					var/datum/dna/gene/trait/TG = gene
 					if(!ishuman(M))
