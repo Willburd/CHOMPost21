@@ -25,7 +25,7 @@
 	if(!M || !(M.dna)) return
 	M.dna.check_integrity()
 	// Traitgenes edit begin - Pick from bad traitgenes
-	var/datum/dna/gene/trait/T = pick(GLOB.dna_genes_bad)
+	var/datum/gene/trait/T = pick(GLOB.dna_genes_bad)
 	M.dna.SetSEState(T.block, TRUE)
 	/*
 	//var/block = pick(GLASSESBLOCK,COUGHBLOCK,FAKEBLOCK,NERVOUSBLOCK,CLUMSYBLOCK,TWITCHBLOCK,HEADACHEBLOCK,BLINDBLOCK,DEAFBLOCK,HALLUCINATIONBLOCK) // Most of these are disabled anyway.
@@ -39,7 +39,7 @@
 	if(!M || !(M.dna)) return
 	M.dna.check_integrity()
 	// Traitgenes edit begin - Pick from good traitgenes
-	var/datum/dna/gene/trait/T = pick(GLOB.dna_genes_good)
+	var/datum/gene/trait/T = pick(GLOB.dna_genes_good)
 	M.dna.SetSEState(T.block, TRUE)
 	/*
 	//var/block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,NOBREATHBLOCK,REMOTEVIEWBLOCK,REGENERATEBLOCK,INCREASERUNBLOCK,REMOTETALKBLOCK,MORPHBLOCK,BLENDBLOCK,NOPRINTSBLOCK,SHOCKIMMUNITYBLOCK,SMALLSIZEBLOCK) // Much like above, most of these blocks are disabled in code.

@@ -9,7 +9,7 @@
 	// Traitgenes edit begin - Sort genes into currently active, and deactivated... Genes that are active and may deactivate should do so before attempting to activate genes(to avoid conflicts blocking them!)
 	var/list/enabled_genes = list()
 	var/list/disabled_genes = list()
-	for(var/datum/dna/gene/gene in GLOB.dna_genes) // Traitgenes edit - Genes accessible by global VV
+	for(var/datum/gene/gene in GLOB.dna_genes) // Traitgenes edit - Genes accessible by global VV, removed dna from path
 		if(!M || !M.dna)
 			return
 		if(gene.block)
@@ -17,7 +17,7 @@
 				enabled_genes.Add(gene)
 			else
 				disabled_genes.Add(gene)
-	for(var/datum/dna/gene/gene in enabled_genes + disabled_genes)
+	for(var/datum/gene/gene in enabled_genes + disabled_genes) // Traitgenes edit - Removed /dna/ from path
 	// Traitgenes edit end
 		if(!M || !M.dna)
 			return
@@ -43,8 +43,8 @@
 			// Gene active (or ALWAYS ACTIVATE)
 			if(gene_active || (gene.flags & GENE_ALWAYS_ACTIVATE))
 				// Traitgenes edit begin - Handle trait conflicts, do not activate if so! Has to be done here so that SE activation without trait activation is possible.
-				if(istype(gene,/datum/dna/gene/trait))
-					var/datum/dna/gene/trait/TG = gene
+				if(istype(gene,/datum/gene/trait))
+					var/datum/gene/trait/TG = gene
 					if(!ishuman(M))
 						continue // Trait genes are human only
 					var/mob/living/carbon/human/H = M

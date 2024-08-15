@@ -145,11 +145,11 @@ var/global/floorIsLava = 0
 				// Traitgenes edit begin - more reliable way to check gene states
 				for(var/setup_block=1;setup_block<=DNA_SE_LENGTH;setup_block++)
 					output_list["[setup_block]"] = null
-				for(var/datum/dna/gene/gene in GLOB.dna_genes) // Traitgenes edit - Genes accessible by global VV
+				for(var/datum/gene/gene in GLOB.dna_genes) // Traitgenes edit - Genes accessible by global VV. Removed /dna/ from path
 					output_list["[gene.block]"] = gene
 				// Traitgenes edit end
 				for(var/block=1;block<=DNA_SE_LENGTH;block++) // Traitgenes edit - more reliable way to check gene states
-					var/datum/dna/gene/gene = output_list["[block]"]
+					var/datum/gene/gene = output_list["[block]"] // Traitgenes edit - Removed /dna/ from path
 					if(((block-1)%5)==0)
 						body += "</tr><tr><th>[block-1]</th>"
 					// Traitgenes edit begin - more reliable way to check gene states
@@ -163,8 +163,8 @@ var/global/floorIsLava = 0
 						var/bstate=(bname in M.active_genes) // Traitgenes edit - more reliable way to check gene states
 						// Traitgenes edit begin - show traint linked names on mouseover
 						var/tname = bname
-						if(istype(gene,/datum/dna/gene/trait))
-							var/datum/dna/gene/trait/T = gene
+						if(istype(gene,/datum/gene/trait))
+							var/datum/gene/trait/T = gene
 							tname = T.get_name()
 						var/bcolor="[(bstate)?"#006600":"#ff0000"]"
 						if(!bstate && M.dna.GetSEState(block)) // Gene isn't active, but the dna says it is... Was blocked by another gene!

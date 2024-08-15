@@ -669,7 +669,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	/* Traitgenes edit - Disabled due to no maintenance, and it being broken on anything that isn't human shaped
 	var/g = gender == FEMALE ? "f" : "m"
 
-	for(var/datum/dna/gene/gene in dna_genes)
+	for(var/datum/gene/gene in dna_genes) // Traitgenes edit - Removed /dna/ from path
 		if(!gene.block)
 			continue
 		if(gene.is_active(src))

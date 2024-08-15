@@ -25,7 +25,7 @@
 	var/activation_message = null // If not null, shows a message when activated as a gene
 	var/deactivation_message = null // If not null, shows a message when deactivated as a gene
 
-	var/datum/dna/gene/trait/linked_gene = null // Internal use, do not assign.
+	var/datum/gene/trait/linked_gene = null // Internal use, do not assign.
 	// Traitgenes edit end
 
 //Proc can be overridden lower to include special changes, make sure to call up though for the vars changes

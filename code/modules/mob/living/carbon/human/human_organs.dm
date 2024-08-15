@@ -209,9 +209,9 @@
 				continue
 			if(!T.linked_gene)
 				continue
-			var/datum/dna/gene/trait/gene = T.linked_gene
+			var/datum/gene/trait/gene = T.linked_gene
 			dna.SetSEState(gene.block, TRUE, TRUE)
-			testing("[gene.name] Setup activated!")
+			// testing("[gene.name] Setup activated!")
 		dna.UpdateSE()
 	domutcheck( src, null, MUTCHK_FORCED | MUTCHK_HIDEMSG)
 // Traitgenes edit end

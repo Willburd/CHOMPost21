@@ -71,8 +71,8 @@
 
 	// And the genes that actually do the work. (domutcheck improvements)
 	var/list/blocks_assigned[DNA_SE_LENGTH]
-	for(var/gene_type in typesof(/datum/dna/gene))
-		var/datum/dna/gene/G = new gene_type
+	for(var/gene_type in typesof(/datum/gene)) // Traitgenes edit - Removed /dna/ from path
+		var/datum/gene/G = new gene_type // Traitgenes edit - Removed /dna/ from path
 		if(G.block)
 			if(G.block in blocks_assigned)
 				warning("DNA2: Gene [G.name] trying to use already-assigned block [G.block] (used by [english_list(blocks_assigned[G.block])])")
@@ -99,7 +99,7 @@
 			if(blocks_remaining.len <= 0)
 				CRASH("DNA2: Ran out of usable blocks! DNA_SE_LENGTH limit is [DNA_SE_LENGTH]. Raise it if you need more!")
 			// Init
-			var/datum/dna/gene/trait/G = new /datum/dna/gene/trait()
+			var/datum/gene/trait/G = new /datum/gene/trait()
 			G.block = pick(blocks_remaining)
 			var/tex = uppertext(T.name)
 			G.name = "[copytext(tex,1,min( 8, length(tex)+1 ))]:[G.block]"
@@ -123,14 +123,15 @@
 	// Any remaining conflicts will be handled by the conflict-o-tron midround using a quicker scan flag
 	log_world("DNA2: Checking trait gene conflicts")
 	var/list/compare_list = list()
-	for(var/target in all_traits)
-		compare_list.Add(target)
-	for(var/datum/dna/gene/trait/gene in GLOB.dna_genes)
+	for(var/datum/gene/trait/gene in GLOB.dna_genes) // was orginally all_traits, but having 300 entry lists for 50 genes at launch was pointless. the caches will fill as characters spawn with traits instead... A small tradeoff
+		if(gene.linked_trait)
+			compare_list.Add(gene.linked_trait.type)
+	for(var/datum/gene/trait/gene in GLOB.dna_genes)
 		gene.has_conflict( compare_list, FALSE )
 	log_world("DNA2: Initial Conflict summary")
 	// Future coders: Don't worry, has_conflict() is run whenever a traitgene tries to enable itself as well, and adds to the trait conflict lists in each gene...
 	// This is to setup the initial segments for the gene editing machines to sort gene segments with.
-	for(var/datum/dna/gene/trait/gene in GLOB.dna_genes)
+	for(var/datum/gene/trait/gene in GLOB.dna_genes)
 		if(gene.conflict_traits.len)
 			var/summery = ""
 			for(var/path in gene.conflict_traits)

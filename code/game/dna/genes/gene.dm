@@ -9,7 +9,7 @@
 * @author N3X15 <nexisentertainment@gmail.com>
 */
 
-/datum/dna/gene
+/datum/gene // Traitgenes edit - Removed /dna/ from path... WHY WAS THIS A SUBTYPE OF DNA!? It's taking a huge struct and making 50 of them at startup, growing with every new var and list stuffed in /datum/dna - Willbird
 	// Display name
 	var/name="BASE GENE"
 
@@ -27,23 +27,23 @@
 /**
 * Is the gene active in this mob's DNA?
 */
-/datum/dna/gene/proc/is_active(var/mob/M)
+/datum/gene/proc/is_active(var/mob/M) // Traitgenes edit - Removed /dna/ from path
 	return (M.active_genes && (name in M.active_genes)) // Traitgenes edit - Use name instead, cannot use type with dynamically setup traitgenes. It is always unique due to the block number being appended to it.
 
 // Return 1 if we can activate.
 // HANDLE MUTCHK_FORCED HERE!
-/datum/dna/gene/proc/can_activate(var/mob/M, var/flags)
+/datum/gene/proc/can_activate(var/mob/M, var/flags) // Traitgenes edit - Removed /dna/ from path
 	return 0
 
 // Called when the gene activates.  Do your magic here.
-/datum/dna/gene/proc/activate(var/mob/M, var/connected, var/flags)
+/datum/gene/proc/activate(var/mob/M, var/connected, var/flags) // Traitgenes edit - Removed /dna/ from path
 	return
 
 /**
 * Called when the gene deactivates.  Undo your magic here.
 * Only called when the block is deactivated.
 */
-/datum/dna/gene/proc/deactivate(var/mob/M, var/connected, var/flags)
+/datum/gene/proc/deactivate(var/mob/M, var/connected, var/flags) // Traitgenes edit - Removed /dna/ from path
 	return
 
 // This section inspired by goone's bioEffects.
@@ -52,19 +52,19 @@
 /**
 * Called in each life() tick.
 */
-/datum/dna/gene/proc/OnMobLife(var/mob/M)
+/datum/gene/proc/OnMobLife(var/mob/M) // Traitgenes edit - Removed /dna/ from path
 	return
 
 /**
 * Called when the mob dies
 */
-/datum/dna/gene/proc/OnMobDeath(var/mob/M)
+/datum/gene/proc/OnMobDeath(var/mob/M) // Traitgenes edit - Removed /dna/ from path
 	return
 
 /**
 * Called when the mob says shit
 */
-/datum/dna/gene/proc/OnSay(var/mob/M, var/message)
+/datum/gene/proc/OnSay(var/mob/M, var/message) // Traitgenes edit - Removed /dna/ from path
 	return message
 
 /**
@@ -74,7 +74,7 @@
 * @params g Gender (m or f)
 * @params fat Fat? (0 or 1)
 */
-/datum/dna/gene/proc/OnDrawUnderlays(var/mob/M, var/g, var/fat)
+/datum/gene/proc/OnDrawUnderlays(var/mob/M, var/g, var/fat) // Traitgenes edit - Removed /dna/ from path
 	return 0
 */
 
@@ -91,7 +91,7 @@
 /////////////////////
 
 
-/datum/dna/gene/basic
+/datum/gene/basic // Traitgenes edit - Removed /dna/ from path
 	name="BASIC GENE"
 
 	// Mutation to give
@@ -106,19 +106,19 @@
 	// Possible deactivation messages
 	var/list/deactivation_messages=list()
 
-/datum/dna/gene/basic/can_activate(var/mob/M,var/flags)
+/datum/gene/basic/can_activate(var/mob/M,var/flags) // Traitgenes edit - Removed /dna/ from path
 	if(flags & MUTCHK_FORCED)
 		return 1
 	// Probability check
 	return probinj(activation_prob,(flags&MUTCHK_FORCED))
 
-/datum/dna/gene/basic/activate(var/mob/M)
+/datum/gene/basic/activate(var/mob/M) // Traitgenes edit - Removed /dna/ from path
 	M.mutations.Add(mutation)
 	if(activation_messages.len)
 		var/msg = pick(activation_messages)
 		to_chat(M, "<span class='notice'>[msg]</span>")
 
-/datum/dna/gene/basic/deactivate(var/mob/M)
+/datum/gene/basic/deactivate(var/mob/M) // Traitgenes edit - Removed /dna/ from path
 	M.mutations.Remove(mutation)
 	if(deactivation_messages.len)
 		var/msg = pick(deactivation_messages)
@@ -136,13 +136,13 @@
 /////////////////////
 
 
-/datum/dna/gene/trait
+/datum/gene/trait
 	desc="Gene linked to a trait."
 	var/activation_prob=100 // For sanity sakes, at least right now...
 	var/datum/trait/linked_trait = null // Internal use, do not assign.
 	var/list/conflict_traits = list() // Cache known traits that don't work with this one, instead of doing it all at once, or EVERY time we do a mutation check
 
-/datum/dna/gene/trait/Destroy()
+/datum/gene/trait/Destroy()
 	// unlink circular reference
 	if(linked_trait)
 		linked_trait.linked_gene = null
@@ -150,23 +150,23 @@
 	. = ..()
 
 // Use these when displaying info to players
-/datum/dna/gene/trait/proc/get_name()
+/datum/gene/trait/proc/get_name()
 	if(linked_trait)
 		return linked_trait.name
 	return name
 
-/datum/dna/gene/trait/proc/get_desc()
+/datum/gene/trait/proc/get_desc()
 	if(linked_trait)
 		return linked_trait.desc
 	return desc
 
-/datum/dna/gene/trait/can_activate(var/mob/M,var/flags)
+/datum/gene/trait/can_activate(var/mob/M,var/flags)
 	// Probability checks only
 	if(flags & MUTCHK_FORCED || activation_prob >= 100)
 		return TRUE
 	return probinj(activation_prob,(flags&MUTCHK_FORCED))
 
-/datum/dna/gene/trait/proc/has_conflict(var/list/traits_to_check, var/quick_scan = TRUE)
+/datum/gene/trait/proc/has_conflict(var/list/traits_to_check, var/quick_scan = TRUE)
 	// Behold the CONFLICT-O-TRON. Checks for trait conflicts the same way code\modules\client\preference_setup\vore\07_traits.dm does,
 	// and then caches the results. Cause traits can't change conflicts mid-round. Unless that changes someday, god help us all if so.
 
@@ -184,7 +184,6 @@
 			continue
 
 		// check trait if not. CONFLICT-O-TRON ENGAGE
-		var/first = TRUE // makes setup log less spammy
 		conflict_traits[P] = FALSE
 
 		var/datum/trait/instance_test = all_traits[P]
@@ -194,10 +193,6 @@
 			// depending on scan mode we want to scan all, or only the first failure
 			if(quick_scan)
 				return TRUE
-			else
-				if(first)
-					first = FALSE
-					log_world("DNA2: Trait gene for [get_name()], conflicts with [ instance_test.name ]. Adding to known conflicts list.")
 			continue
 		for(var/V in linked_trait.var_changes)
 			if(V == "flags")
@@ -208,10 +203,6 @@
 				// depending on scan mode we want to scan all, or only the first failure
 				if(quick_scan)
 					return TRUE
-				else
-					if(first)
-						first = FALSE
-						log_world("DNA2: Trait gene for [get_name()], conflicts with [ instance_test.name ]. Adding to known conflicts list.")
 				continue
 		for(var/V in linked_trait.var_changes_pref)
 			if(V in instance_test.var_changes_pref)
@@ -220,15 +211,10 @@
 				// depending on scan mode we want to scan all, or only the first failure
 				if(quick_scan)
 					return TRUE
-				else
-					if(first)
-						first = FALSE
-						log_world("DNA2: Trait gene for [get_name()], conflicts with [ instance_test.name ]. Adding to known conflicts list.")
 				continue
 	return has_conflict
 
-
-/datum/dna/gene/trait/activate(var/mob/M)
+/datum/gene/trait/activate(var/mob/M)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
@@ -243,7 +229,7 @@
 			if(flags & MUTCHK_HIDEMSG <= 0)
 				linked_trait.send_message( H, TRUE)
 
-/datum/dna/gene/trait/deactivate(var/mob/M)
+/datum/gene/trait/deactivate(var/mob/M)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
