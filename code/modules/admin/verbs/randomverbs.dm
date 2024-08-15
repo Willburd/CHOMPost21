@@ -512,6 +512,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	picked_client.prefs.copy_to(new_character)
 	if(new_character.dna)
 		new_character.dna.ResetUIFrom(new_character)
+		new_character.sync_dna_traits(TRUE) // Traitgenes edit - Sync traits to genetics if needed
 		new_character.sync_organ_dna()
 	if(inhabit)
 		new_character.key = player_key

@@ -54,6 +54,7 @@
 	if(dna)
 		dna.ready_dna(src)
 		dna.real_name = real_name
+		sync_dna_traits(FALSE) // Traitgenes edit - Sync traits to genetics if needed
 		sync_organ_dna()
 
 	//verbs |= /mob/living/proc/toggle_selfsurgery //VOREStation Removal
@@ -1019,6 +1020,7 @@
 		client.prefs.copy_to(src)
 		if(dna)
 			dna.ResetUIFrom(src)
+			sync_dna_traits(TRUE) // Traitgenes edit - Sync traits to genetics if needed
 			sync_organ_dna()
 	// end vorestation addition
 

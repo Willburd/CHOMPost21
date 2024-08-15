@@ -143,13 +143,13 @@ var/global/floorIsLava = 0
 				var/bname
 				var/list/output_list = list()
 				// Traitgenes edit begin - more reliable way to check gene states
-				for(var/block=1;block<=DNA_SE_LENGTH;block++)
-					output_list["[block]"] = null
+				for(var/setup_block=1;setup_block<=DNA_SE_LENGTH;setup_block++)
+					output_list["[setup_block]"] = null
 				for(var/datum/dna/gene/gene in dna_genes)
 					output_list["[gene.block]"] = gene
 				// Traitgenes edit end
 				for(var/block=1;block<=DNA_SE_LENGTH;block++) // Traitgenes edit - more reliable way to check gene states
-					var/datum/dna/gene/gene = output_list["[block]"] // Traitgenes edit - more reliable way to check gene states
+					var/datum/dna/gene/gene = output_list["[block]"]
 					if(((block-1)%5)==0)
 						body += "</tr><tr><th>[block-1]</th>"
 					// Traitgenes edit begin - more reliable way to check gene states
@@ -166,9 +166,11 @@ var/global/floorIsLava = 0
 						if(istype(gene,/datum/dna/gene/trait))
 							var/datum/dna/gene/trait/T = gene
 							tname = T.get_name()
-						// Traitgenes edit end
 						var/bcolor="[(bstate)?"#006600":"#ff0000"]"
-						body += "<A href='?src=\ref[src];[HrefToken()];togmutate=\ref[M];block=[block]' style='color:[bcolor];' title='[tname]'>[bname]</A><sub>[block]</sub>" // Traitgenes edit - show traint linked names on mouseover
+						if(!bstate && M.dna.GetSEState(block)) // Gene isn't active, but the dna says it is... Was blocked by another gene!
+							bcolor="#d88d00"
+						// Traitgenes edit end
+						body += "<A href='?src=\ref[src];[HrefToken()];togmutate=\ref[M];block=[block]' style='color:[bcolor];' title='[tname]'>[bname]</A><sub>[block]</sub>" // Traitgenes edit - show trait linked names on mouseover
 					else
 						body += "[block]"
 					body+="</td>"

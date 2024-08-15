@@ -595,9 +595,22 @@
 	cost = 0
 	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your eyes feel strange..."
+	// Traitgenes edit end
+
 /datum/trait/neutral/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/colorblind_monochrome)
+
+// Traitgenes edit begin - Made into a gene trait
+/datum/trait/neutral/colorblind/mono/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.remove_a_modifier_of_type(/datum/modifier/trait/colorblind_monochrome)
+// Traitgenes edit end
 
 /datum/trait/neutral/colorblind/para_vulp
 	name = "Colorblindness (Para Vulp)"
@@ -605,9 +618,22 @@
 	cost = 0
 	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your eyes feel strange..."
+	// Traitgenes edit end
+
 /datum/trait/neutral/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/colorblind_vulp)
+
+// Traitgenes edit begin - Made into a gene trait
+/datum/trait/neutral/colorblind/para_vulp/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.remove_a_modifier_of_type(/datum/modifier/trait/colorblind_vulp)
+// Traitgenes edit end
 
 /datum/trait/neutral/colorblind/para_taj
 	name = "Colorblindness (Para Taj)"
@@ -615,9 +641,22 @@
 	cost = 0
 	custom_only = FALSE //CHOMPedit: Some of this are named with species, and there is a descent number of reasons to have this.
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your eyes feel strange..."
+	// Traitgenes edit end
+
 /datum/trait/neutral/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
+
+// Traitgenes edit begin - Made into a gene trait
+/datum/trait/neutral/colorblind/para_taj/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	H.remove_a_modifier_of_type(/datum/modifier/trait/colorblind_taj)
+// Traitgenes edit end
 
 // Body shape traits
 /datum/trait/neutral/taller

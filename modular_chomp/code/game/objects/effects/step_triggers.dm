@@ -40,7 +40,7 @@ But for now, for what it's been used for, it works.
 		if(H.drop_from_inventory(W))
 			W.forceMove(locker)
 
-	/* Traitgenes edit begin - TODO - HANDLE THIS CORRECTLY
+	/* Traitgenes edit TODO - HANDLE THIS CORRECTLY
 	if(remove_mutations)
 		var/needs_update = H.mutations.len > 0
 		for(var/entry in H.mutations)

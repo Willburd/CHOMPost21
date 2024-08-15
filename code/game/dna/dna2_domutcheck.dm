@@ -6,7 +6,19 @@
 #define MUTCHK_FORCED        1
 #define MUTCHK_HIDEMSG       2 // Traitgenes edit - Hide gene activation/deactivation messages, mostly for resleeving so you don't get spammed
 /proc/domutcheck(var/mob/living/M, var/connected=null, var/flags=0)
+	// Traitgenes edit begin - Sort genes into currently active, and deactivated... Genes that are active and may deactivate should do so before attempting to activate genes(to avoid conflicts blocking them!)
+	var/list/enabled_genes = list()
+	var/list/disabled_genes = list()
 	for(var/datum/dna/gene/gene in dna_genes)
+		if(!M || !M.dna)
+			return
+		if(gene.block)
+			if(gene.name in M.active_genes || gene.flags & GENE_ALWAYS_ACTIVATE)
+				enabled_genes.Add(gene)
+			else
+				disabled_genes.Add(gene)
+	for(var/datum/dna/gene/gene in enabled_genes + disabled_genes)
+	// Traitgenes edit end
 		if(!M || !M.dna)
 			return
 		if(!gene.block)
@@ -30,6 +42,15 @@
 		if(changed || flags & MUTCHK_FORCED) // Traitgenes edit - MUTCHK_FORCED always applies or removes genes
 			// Gene active (or ALWAYS ACTIVATE)
 			if(gene_active || (gene.flags & GENE_ALWAYS_ACTIVATE))
+				// Traitgenes edit begin - Handle trait conflicts, do not activate if so!
+				if(istype(gene,/datum/dna/gene/trait))
+					var/datum/dna/gene/trait/TG = gene
+					if(!ishuman(M))
+						continue // Trait genes are human only
+					var/mob/living/carbon/human/H = M
+					if(TG.has_conflict(H.species.traits))
+						continue // The SE is on, but the gene is denied...
+				// Traitgenes edit end
 				//testing("[gene.name] activated!")
 				gene.activate(M,connected,flags)
 				if(M)

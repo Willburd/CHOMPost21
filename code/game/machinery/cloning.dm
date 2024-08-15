@@ -133,6 +133,7 @@
 	else
 		H.dna = R.dna
 	H.UpdateAppearance()
+	H.sync_dna_traits(FALSE) // Traitgenes edit - Sync traits to genetics if needed
 	H.sync_organ_dna()
 	if(heal_level < 60)
 		randmutb(H) //Sometimes the clones come out wrong.

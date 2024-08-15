@@ -255,7 +255,7 @@
 /datum/disease2/effect/shakey/activate(var/mob/living/carbon/mob,var/multiplier)
 	shake_camera(mob,5*multiplier)
 
-/* Traitgenes edit begin - TODO - Restore this when possible with traitgene
+/* Traitgenes edit TODO - Restore this when possible with traitgene
 /datum/disease2/effect/telepathic
 	name = "Pineal Gland Decalcification"
 	stage = 3

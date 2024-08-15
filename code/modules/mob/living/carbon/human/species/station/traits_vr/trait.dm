@@ -25,7 +25,7 @@
 	var/activation_message = null // If not null, shows a message when activated as a gene
 	var/deactivation_message = null // If not null, shows a message when deactivated as a gene
 
-	var/datum/dna/gene/linked_gene = null // Internal use, do not assign.
+	var/datum/dna/gene/trait/linked_gene = null // Internal use, do not assign.
 	// Traitgenes edit end
 
 //Proc can be overridden lower to include special changes, make sure to call up though for the vars changes
@@ -72,15 +72,13 @@
 				if(TRAIT_VAREDIT_TARGET_SPECIES)
 					S.vars[trait] = initial(S.vars[trait])
 				if(TRAIT_VAREDIT_TARGET_MOB)
-					S.vars[trait] = initial(H.vars[trait])
+					H.vars[trait] = initial(H.vars[trait])
 	if(mutation)
 		H.mutations.Remove(mutation)
 	if(disability)
-		if(H.disabilities & disability > 0)
-			H.disabilities ^= disability // bitflag
+		H.disabilities &= ~disability // bitflag
 	if(sdisability)
-		if(H.sdisabilities & sdisability > 0)
-			H.sdisabilities ^= sdisability // bitflag
+		H.sdisabilities &= ~sdisability // bitflag
 	return
 
 /datum/trait/proc/send_message(var/mob/living/carbon/human/H, var/enabled)

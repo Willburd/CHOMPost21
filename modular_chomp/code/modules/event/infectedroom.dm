@@ -27,7 +27,7 @@
 			/datum/disease2/effect/cough,
 			/datum/disease2/effect/fridge,
 			/datum/disease2/effect/drowsness),
-		/* Traitgenes edit begin - TODO - Restore this when possible with traitgene
+		/* Traitgenes edit TODO - Restore this when possible with traitgene
 		"Brain Bloat" = list(
 			/datum/disease2/effect/invisible,
 			/datum/disease2/effect/headache,

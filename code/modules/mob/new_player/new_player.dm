@@ -750,6 +750,7 @@
 	client.init_verbs()
 	new_character.dna.ready_dna(new_character)
 	new_character.dna.b_type = client.prefs.b_type
+	new_character.sync_dna_traits(TRUE) // Traitgenes edit - Sync traits to genetics if needed
 	new_character.sync_organ_dna()
 
 	new_character.sync_disabilites_and_addictions(client.prefs) // Outpost 21 addition - Handle all of these in one place, as we do a lot more!

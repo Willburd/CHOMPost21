@@ -140,6 +140,7 @@
 	desc="Gene linked to a trait."
 	var/activation_prob=100 // For sanity sakes, at least right now...
 	var/datum/trait/linked_trait = null // Internal use, do not assign.
+	var/list/conflict_traits = list() // Cache known traits that don't work with this one, instead of doing it all at once, or EVERY time we do a mutation check
 
 /datum/dna/gene/trait/Destroy()
 	// unlink circular reference
@@ -160,10 +161,72 @@
 	return desc
 
 /datum/dna/gene/trait/can_activate(var/mob/M,var/flags)
+	// Probability checks only
 	if(flags & MUTCHK_FORCED || activation_prob >= 100)
-		return 1
-	// Probability check
+		return TRUE
 	return probinj(activation_prob,(flags&MUTCHK_FORCED))
+
+/datum/dna/gene/trait/proc/has_conflict(var/list/traits_to_check, var/quick_scan = TRUE)
+	// Behold the CONFLICT-O-TRON. Checks for trait conflicts the same way code\modules\client\preference_setup\vore\07_traits.dm does,
+	// and then caches the results. Cause traits can't change conflicts mid-round. Unless that changes someday, god help us all if so.
+
+	var/has_conflict = FALSE
+	var/path = linked_trait.type
+	for(var/P in traits_to_check)
+		// don't get triggered by self
+		if(P == path)
+			continue
+
+		// check if cached first...
+		if(!isnull(conflict_traits[P]))
+			if(quick_scan && conflict_traits[P])
+				return TRUE
+			continue
+
+		// check trait if not. CONFLICT-O-TRON ENGAGE
+		var/first = TRUE // makes setup log less spammy
+		conflict_traits[P] = FALSE
+
+		var/datum/trait/instance_test = all_traits[P]
+		if(path in instance_test.excludes)
+			conflict_traits[P] = TRUE
+			has_conflict = TRUE
+			// depending on scan mode we want to scan all, or only the first failure
+			if(quick_scan)
+				return TRUE
+			else
+				if(first)
+					first = FALSE
+					log_world("DNA2: Trait gene for [get_name()], conflicts with [ instance_test.name ]. Adding to known conflicts list.")
+			continue
+		for(var/V in linked_trait.var_changes)
+			if(V == "flags")
+				continue
+			if(V in instance_test.var_changes)
+				conflict_traits[P] = TRUE
+				has_conflict = TRUE
+				// depending on scan mode we want to scan all, or only the first failure
+				if(quick_scan)
+					return TRUE
+				else
+					if(first)
+						first = FALSE
+						log_world("DNA2: Trait gene for [get_name()], conflicts with [ instance_test.name ]. Adding to known conflicts list.")
+				continue
+		for(var/V in linked_trait.var_changes_pref)
+			if(V in instance_test.var_changes_pref)
+				conflict_traits[P] = TRUE
+				has_conflict = TRUE
+				// depending on scan mode we want to scan all, or only the first failure
+				if(quick_scan)
+					return TRUE
+				else
+					if(first)
+						first = FALSE
+						log_world("DNA2: Trait gene for [get_name()], conflicts with [ instance_test.name ]. Adding to known conflicts list.")
+				continue
+	return has_conflict
+
 
 /datum/dna/gene/trait/activate(var/mob/M)
 	if(linked_trait && ishuman(M))
