@@ -23,7 +23,12 @@ var/global/list/dna_activity_bounds[DNA_SE_LENGTH]
 // Used to determine what each block means (admin hax and species stuff on /vg/, mostly)
 var/global/list/assigned_blocks[DNA_SE_LENGTH]
 
-var/global/list/datum/dna/gene/dna_genes[0]
+// Traitgenes edit begin - Genes accessible by global VV, and lists for good and bad mutations for quick randomized selection of traitgenes
+GLOBAL_LIST_EMPTY_TYPED(dna_genes, /datum/dna/gene)
+GLOBAL_LIST_EMPTY_TYPED(dna_genes_good, /datum/dna/gene/trait)
+GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/dna/gene/trait)
+// Traitgenes edit end
+
 
 /////////////////
 // GENE DEFINES

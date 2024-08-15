@@ -84,7 +84,7 @@
 			blocks_assigned[G.block]=assignedToBlock
 */
 
-// Traitgenes edit begin - Setup gentics using traits as a foundation for each gene. Basically making genetics automagic instead of something that needs to be maintained...
+// Traitgenes edit begin - Setup genetics using traits as a foundation for each gene. Basically making genetics automagic instead of something that needs to be maintained...
 /proc/setupgenetics(var/list/trait_list)
 	if(!trait_list)
 		return
@@ -109,8 +109,13 @@
 			// Handle global block data
 			log_world("DNA2: Assigned [G.name] - Linked to trait [T.name].")
 			assigned_blocks[G.block]=G.name
-			dna_genes.Add(G)
+			GLOB.dna_genes.Add(G)
 			blocks_remaining.Remove(G.block)
+			// Add traitgenes to good/bad gene lists for randomized mutation procs!
+			if(istype(T,/datum/trait/negative) || (istype(T,/datum/trait/neutral) && prob(50))) // neutrals should be considered either good or bad randomly per round
+				GLOB.dna_genes_bad.Add(G)
+			else
+				GLOB.dna_genes_good.Add(G)
 	log_world("DNA2: Created traitgenes with [blocks_remaining.len] remaining blocks. Used [DNA_SE_LENGTH - blocks_remaining.len] out of [DNA_SE_LENGTH] ")
 	if(blocks_remaining.len < 10)
 		warning("DNA2: Blocks remaining is less than 10. The DNA_SE_LENGTH should be raised.")
@@ -120,12 +125,12 @@
 	var/list/compare_list = list()
 	for(var/target in all_traits)
 		compare_list.Add(target)
-	for(var/datum/dna/gene/trait/gene in dna_genes)
+	for(var/datum/dna/gene/trait/gene in GLOB.dna_genes)
 		gene.has_conflict( compare_list, FALSE )
 	log_world("DNA2: Initial Conflict summary")
 	// Future coders: Don't worry, has_conflict() is run whenever a traitgene tries to enable itself as well, and adds to the trait conflict lists in each gene...
 	// This is to setup the initial segments for the gene editing machines to sort gene segments with.
-	for(var/datum/dna/gene/trait/gene in dna_genes)
+	for(var/datum/dna/gene/trait/gene in GLOB.dna_genes)
 		if(gene.conflict_traits.len)
 			var/summery = ""
 			for(var/path in gene.conflict_traits)

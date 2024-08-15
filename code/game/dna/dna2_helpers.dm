@@ -24,21 +24,29 @@
 /proc/randmutb(var/mob/living/M)
 	if(!M || !(M.dna)) return
 	M.dna.check_integrity()
-	/* Traitgenes edit TODO - Give negative trait genes instead
+	// Traitgenes edit begin - Pick from bad traitgenes
+	var/datum/dna/gene/trait/T = pick(GLOB.dna_genes_bad)
+	M.dna.SetSEState(T.block, TRUE)
+	/*
 	//var/block = pick(GLASSESBLOCK,COUGHBLOCK,FAKEBLOCK,NERVOUSBLOCK,CLUMSYBLOCK,TWITCHBLOCK,HEADACHEBLOCK,BLINDBLOCK,DEAFBLOCK,HALLUCINATIONBLOCK) // Most of these are disabled anyway.
 	var/block = pick(FAKEBLOCK,CLUMSYBLOCK,BLINDBLOCK,DEAFBLOCK)
 	M.dna.SetSEState(block, 1)
 	*/
+	// Traitgenes edit end
 
 // Give Random Good Mutation to M
 /proc/randmutg(var/mob/living/M)
 	if(!M || !(M.dna)) return
 	M.dna.check_integrity()
-	/* Traitgenes edit TODO - Give positive trait genes instead
+	// Traitgenes edit begin - Pick from good traitgenes
+	var/datum/dna/gene/trait/T = pick(GLOB.dna_genes_good)
+	M.dna.SetSEState(T.block, TRUE)
+	/*
 	//var/block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,NOBREATHBLOCK,REMOTEVIEWBLOCK,REGENERATEBLOCK,INCREASERUNBLOCK,REMOTETALKBLOCK,MORPHBLOCK,BLENDBLOCK,NOPRINTSBLOCK,SHOCKIMMUNITYBLOCK,SMALLSIZEBLOCK) // Much like above, most of these blocks are disabled in code.
 	var/block = pick(HULKBLOCK,XRAYBLOCK,FIREBLOCK,TELEBLOCK,REGENERATEBLOCK,REMOTETALKBLOCK)
 	M.dna.SetSEState(block, 1)
 	*/
+	// Traitgenes edit end
 
 /* Traitgenes edit - we don't do cosmetic mutations anymore, overlays have largely replaced UI data, and cannot be changed... So just gets broken entirely anyway.
 // Random Appearance Mutation

@@ -145,7 +145,7 @@ var/global/floorIsLava = 0
 				// Traitgenes edit begin - more reliable way to check gene states
 				for(var/setup_block=1;setup_block<=DNA_SE_LENGTH;setup_block++)
 					output_list["[setup_block]"] = null
-				for(var/datum/dna/gene/gene in dna_genes)
+				for(var/datum/dna/gene/gene in GLOB.dna_genes) // Traitgenes edit - Genes accessible by global VV
 					output_list["[gene.block]"] = gene
 				// Traitgenes edit end
 				for(var/block=1;block<=DNA_SE_LENGTH;block++) // Traitgenes edit - more reliable way to check gene states

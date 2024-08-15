@@ -9,7 +9,7 @@
 	// Traitgenes edit begin - Sort genes into currently active, and deactivated... Genes that are active and may deactivate should do so before attempting to activate genes(to avoid conflicts blocking them!)
 	var/list/enabled_genes = list()
 	var/list/disabled_genes = list()
-	for(var/datum/dna/gene/gene in dna_genes)
+	for(var/datum/dna/gene/gene in GLOB.dna_genes) // Traitgenes edit - Genes accessible by global VV
 		if(!M || !M.dna)
 			return
 		if(gene.block)
