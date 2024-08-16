@@ -526,20 +526,31 @@
 			if(!connected.occupant)
 				return
 
-			if(prob(95))
-				if(prob(75))
-					randmutb(connected.occupant)
-				/* Traitgenes edit - we don't do cosmetic mutations anymore
-				else
-					randmuti(connected.occupant)
-				*/
-			else
+			// Traitgenes edit begin - Make the fullbody irritation more risky
+			if(prob((radiation_intensity*2) + (radiation_duration*2)))
 				if(prob(95))
-					randmutg(connected.occupant)
-				/* Traitgenes edit - we don't do cosmetic mutations anymore
+					if(prob(75))
+						randmutb(connected.occupant)
+					/* Traitgenes edit - we don't do cosmetic mutations anymore
+					else
+						randmuti(connected.occupant)
+					*/
 				else
-					randmuti(connected.occupant)
-				*/
+					if(prob(95))
+						randmutg(connected.occupant)
+					/* Traitgenes edit - we don't do cosmetic mutations anymore
+					else
+						randmuti(connected.occupant)
+					*/
+			// Traitgenes edit end
+			// Traitgenes edit begin - Do gene updates here, and more comprehensively
+			connected.occupant.UpdateAppearance()
+			if(ishuman(connected.occupant))
+				var/mob/living/carbon/human/H = connected.occupant
+				H.sync_dna_traits(FALSE)
+				H.sync_organ_dna()
+			connected.occupant.regenerate_icons()
+			// Traitgenes edit end
 
 			connected.occupant.apply_effect(((radiation_intensity*3)+radiation_duration*3), IRRADIATE, check_protection = 0)
 		if("radiationDuration")
