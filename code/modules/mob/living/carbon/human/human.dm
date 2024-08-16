@@ -1219,7 +1219,10 @@
 		holder_type = null
 		hunger_rate = initial(hunger_rate) //VOREStation Add
 
-	species = GLOB.all_species[new_species]
+	// Traitgenes edit begin - This used to be just GLOB.all_species[new_species]. This means every monkey on the station would update the original monkey species datum when their genetics changed. - Willbird
+	var/new_species_path = GLOB.all_species[new_species].type
+	species = new new_species_path()
+	// Traitgenes edit end
 
 	if(species.language)
 		add_language(species.language)
