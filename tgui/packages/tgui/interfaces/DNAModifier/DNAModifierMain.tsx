@@ -182,11 +182,11 @@ const DNAModifierMainSE = (props) => {
 const DNAModifierMainRadiationEmitter = (props) => {
   const { act, data } = useBackend<Data>();
 
-  const { radiationIntensity, radiationDuration } = data;
+  const { radiationIntensity, radiationDuration, occupant } = data; // Traitgenes edit - Allow accessing menus while no occupant is inside
 
   return (
     // Traitgenes edit begin - Allow accessing menus while no occupant is inside
-    (!!props.hasOccupant && !!props.isDNAInvalid ? (
+    (occupant && occupant.isViableSubject ? ( // Traitgenes edit - Allow accessing menus while no occupant is inside
       <Section title="Radiation Emitter">
         <LabeledList>
           <LabeledList.Item label="Intensity">
