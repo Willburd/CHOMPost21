@@ -161,7 +161,7 @@
 		var/list/styles = data["activeBodyRecord"]["styles"]
 		var/list/temp
 
-		// Outpost 21 edit begin - NMoved custom species icon to top of list
+		// Outpost 21 edit begin - Moved custom species icon to top of list
 		if (mannequin.species && mannequin.species.selects_bodytype)
 			if (!mannequin.species.base_species)
 				mannequin.species.base_species = mannequin.species.name
@@ -177,6 +177,11 @@
 			if(mannequin.ear_style.extra_overlay)
 				temp["color2"] = MOB_HEX_COLOR(mannequin, ears2)
 				temp["colorHref2"] = "ear_color2"
+			// Outpost 21 edit begin - Support color3
+			if(mannequin.ear_style.extra_overlay2)
+				temp["color3"] = MOB_HEX_COLOR(mannequin, ears3)
+				temp["colorHref3"] = "ear_color3"
+			// Outpost 21 edit end
 		styles["Ears"] = temp
 
 		temp = list("styleHref" = "tail_style", "style" = "Normal")
@@ -188,6 +193,11 @@
 			if(mannequin.tail_style.extra_overlay)
 				temp["color2"] = MOB_HEX_COLOR(mannequin, tail2)
 				temp["colorHref2"] = "tail_color2"
+			// Outpost 21 edit begin - Support color3
+			if(mannequin.tail_style.extra_overlay2)
+				temp["color3"] = MOB_HEX_COLOR(mannequin, tail3)
+				temp["colorHref3"] = "tail_color3"
+			// Outpost 21 edit end
 		styles["Tail"] = temp
 
 		temp = list("styleHref" = "wing_style", "style" = "Normal")
@@ -199,6 +209,11 @@
 			if(mannequin.wing_style.extra_overlay)
 				temp["color2"] = MOB_HEX_COLOR(mannequin, wing2)
 				temp["colorHref2"] = "wing_color2"
+			// Outpost 21 edit begin - Support color3
+			if(mannequin.wing_style.extra_overlay2)
+				temp["color3"] = MOB_HEX_COLOR(mannequin, wing3)
+				temp["colorHref3"] = "wing_color3"
+			// Outpost 21 edit end
 		styles["Wing"] = temp
 
 		temp = list("styleHref" = "hair_style", "style" = mannequin.h_style)

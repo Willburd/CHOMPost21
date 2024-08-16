@@ -194,6 +194,7 @@ export const BodyDesignerSpecificRecord = (props: {
                       >
                         Edit
                       </Button>
+                      <br />
                       {activeBodyRecord.flavors[key]}
                     </LabeledList.Item>
                   );
@@ -325,6 +326,33 @@ export const BodyDesignerSpecificRecord = (props: {
                           width="32px"
                           height="20px"
                           color={style.color2}
+                          style={{
+                            border: '1px solid #fff',
+                          }}
+                        />
+                      </Box>
+                    ) : (
+                      ''
+                    )}
+                    {style.colorHref3 ? (
+                      <Box>
+                        <Button
+                          icon="pen"
+                          disabled={activeBodyRecord.locked === 1}
+                          onClick={() =>
+                            act('href_conversion', {
+                              target_href: style.colorHref3,
+                              target_value: 1,
+                            })
+                          }
+                        >
+                          {style.color3}
+                        </Button>
+                        <ColorBox
+                          verticalAlign="top"
+                          width="32px"
+                          height="20px"
+                          color={style.color3}
                           style={{
                             border: '1px solid #fff',
                           }}
