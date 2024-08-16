@@ -16,6 +16,14 @@
 	var/varchange_type = TRAIT_VARCHANGE_ALWAYS_OVERRIDE	//Mostly used for non-custom species.
 	var/has_preferences //if set, should be a list of the preferences for this trait in the format: list("identifier/name of var to edit" = list(typeofpref, "text to display in prefs", TRAIT_NO_VAREDIT_TARGET/TRAIT_VAREDIT_TARGET_SPECIES/etc, (optional: default value)), etc) typeofpref should follow the defines in _traits.dm (eg. TRAIT_PREF_TYPE_BOOLEAN)
 	// Traitgenes edit - Traits can toggle mutations and disabilities
+
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	// IMPORTANT - in 99% of situations you should NOT need to edit gene code when adding a new traitgene. Genes only handle the on/off state of traits, traits control the changes and behaviors!
+	// Just keep pretending genecode doesn't exist and you should be fine. Traitgenes were made with that in mind, and are not intended to be something you need to edit every time you add a traitgene.
+	// Traitgenes only require that your trait has both an apply() and unapply() if it does anything like adding verbs. Otherwise, you don't even need to add trait exceptions. traitgenes handle it automatically.
+	// You probably shouldn't mark traits as traitgenes if they are custom species only, species locked, or species banned traits however... - Willbird
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 	var/is_genetrait = FALSE // When their trait's datum is init, it will be added to the library of genes a carbon can be mutated to have or not have
 	var/activity_bounds = DNA_DEFAULT_BOUNDS // Activation requirement for trait to turn on/off. Dna is automatically configured for this when first spawned
 	var/hidden = FALSE  // If a trait does not show on the list, only useful for genetics only traits that cannot be taken at character creation
@@ -24,6 +32,7 @@
 	var/sdisability = 0 // SDisability to give (or 0)
 	var/activation_message = null // If not null, shows a message when activated as a gene
 	var/deactivation_message = null // If not null, shows a message when deactivated as a gene
+	var/list/primitive_expression_messages=list() // Monkey's custom emote when they have this gene!
 
 	var/datum/gene/trait/linked_gene = null // Internal use, do not assign.
 	// Traitgenes edit end

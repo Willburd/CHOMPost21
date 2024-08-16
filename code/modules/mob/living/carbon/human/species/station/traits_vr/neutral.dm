@@ -39,6 +39,7 @@
 	hidden = FALSE
 
 	activation_message="Your body is filled with warmth."
+	primitive_expression_messages=list("pants.")
 	// Traitgenes edit end
 
 /datum/trait/neutral/hotadapt
@@ -55,6 +56,7 @@
 	hidden = FALSE
 
 	activation_message="Your body feels chilly."
+	primitive_expression_messages=list("shivers.")
 	// Traitgenes edit end
 
 

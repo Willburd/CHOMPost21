@@ -26,6 +26,7 @@
 
 	disability=EPILEPSY
 	activation_message="You get a headache."
+	primitive_expression_messages=list("shudders and twitches.")
 
 /datum/trait/negative/disability_cough
 	name = "Coughing Fits"
@@ -50,6 +51,7 @@
 
 	disability=CLUMSY
 	activation_message="You feel lightheaded."
+	primitive_expression_messages=list("trips.")
 
 /datum/trait/negative/disability_tourettes
 	name = "Tourettes Syndrome"
@@ -62,6 +64,7 @@
 
 	disability=TOURETTES
 	activation_message="You twitch."
+	primitive_expression_messages=list("twitches and chitters.")
 
 /datum/trait/negative/disability_anxiety
 	name = "Anxiety Disorder"
@@ -74,6 +77,7 @@
 
 	disability=NERVOUS
 	activation_message="You feel nervous."
+	primitive_expression_messages=list("anxiously chitters.")
 
 /* Replaced by /datum/trait/negative/blindness
 /datum/trait/negative/disability_blind
@@ -103,6 +107,7 @@
 
 	sdisability=MUTE
 	activation_message="Your throat feels strange..."
+	primitive_expression_messages=list("screams without a sound.")
 
 /datum/trait/negative/disability_mute/handle_environment_special(var/mob/living/carbon/human/H)
 	H.sdisabilities |= sdisability 		// In space, no one can hear you scream
@@ -118,6 +123,7 @@
 
 	sdisability=DEAF
 	activation_message="It's kinda quiet."
+	primitive_expression_messages=list("stares blanky.")
 
 /datum/trait/negative/disability_deaf/handle_environment_special(var/mob/living/carbon/human/H)
 	H.sdisabilities |= sdisability 		// In space, I can't hear shit
@@ -143,6 +149,7 @@
 
 	disability=NEARSIGHTED
 	activation_message="Your eyes feel weird..."
+	primitive_expression_messages=list("squints and stares.")
 
 /datum/trait/negative/disability_wingdings
 	name = "Incomprehensible"
@@ -155,6 +162,7 @@
 
 	disability=WINGDINGS
 	activation_message="You feel a little... Ga-hoo!"
+	primitive_expression_messages=list("zooks!","bloops!","boinks!")
 
 /datum/trait/negative/disability_deteriorating
 	name = "Rotting Genetics"
@@ -167,6 +175,7 @@
 
 	disability=DETERIORATE
 	activation_message="You feel sore..."
+	primitive_expression_messages=list("shudders.","gasps.","chokes.")
 
 /datum/trait/negative/disability_gibbing
 	name = "Gibbingtons"
@@ -179,3 +188,4 @@
 
 	disability=GIBBING
 	activation_message="You feel bloated..."
+	primitive_expression_messages=list("shudders.","gasps.","chokes.")

@@ -15,6 +15,7 @@
 	hidden = FALSE
 
 	activation_message="Your leg muscles pulsate."
+	primitive_expression_messages=list("dances around.")
 	// Traitgenes edit end
 
 

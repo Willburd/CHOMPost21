@@ -84,6 +84,7 @@
 
 	sdisability=BLIND
 	activation_message="You can't seem to see anything."
+	primitive_expression_messages=list("stumbles aimlessly.")
 	// Traitgenes edit end
 
 /datum/trait/negative/blindness/handle_environment_special(var/mob/living/carbon/human/H)

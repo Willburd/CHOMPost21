@@ -46,6 +46,7 @@
 
 	mutation = mRegen
 	activation_message="You feel better."
+	primitive_expression_messages=list("'s skin shift's strangely.")
 
 /* Replaced by /datum/trait/positive/speed_fast
 /datum/trait/positive/superpower_increaserun
@@ -74,6 +75,7 @@
 	mutation = mRemotetalk
 	activity_bounds = DNA_HARDER_BOUNDS
 	activation_message="You expand your mind outwards."
+	primitive_expression_messages=list("makes noises to itself.")
 
 /datum/trait/positive/superpower_remotetalk/apply(datum/species/S, mob/living/carbon/human/H)
 	. = ..()
@@ -131,6 +133,7 @@
 
 	mutation = mFingerprints
 	activation_message="Your fingers feel numb."
+	primitive_expression_messages=list("flexes its digits.")
 
 /* Replaced by /datum/trait/positive/nonconductive_plus (technically nerfed!)
 /datum/trait/positive/superpower_noshock
@@ -172,6 +175,7 @@
 
 	mutation = XRAY
 	activation_message="The walls suddenly disappear."
+	primitive_expression_messages=list("stares at something it cannot see.")
 
 /datum/trait/positive/superpower_tk
 	name = "Telekenesis"
@@ -185,6 +189,20 @@
 
 	mutation = TK
 	activation_message="You feel smarter."
+	primitive_expression_messages=list("grabs at something it cannot reach.")
+
+/datum/trait/positive/superpower_laser
+	name = "Laser Vision"
+	desc = "You can blast lasers from your eyes."
+	cost = 5
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	activity_bounds = DNA_HARD_BOUNDS
+	hidden = TRUE // Cannot start with superpowers
+
+	mutation = LASER
+	activation_message="Your eyes feel strange..."
 
 /datum/trait/positive/superpower_hulk
 	name = "Hulk"
@@ -209,3 +227,27 @@
 			H.mutations.Remove(HULK)
 		H.Weaken(3)
 		H.emote("collapse")
+
+/datum/trait/positive/superpower_superfart
+	name = "Super Fart"
+	desc = "Sin beyond mortal comprehension, this could only be the geneticist's fault."
+	cost = 6
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	activity_bounds = DNA_HARD_BOUNDS
+	hidden = TRUE // Cannot start with superpowers
+
+	mutation = TK
+	activation_message="You feel incredible pressure inside of you."
+	deactivation_message="The pressure inside of you vanishes."
+	primitive_expression_messages=list("toots.")
+
+/datum/trait/positive/superpower_superfart/apply(datum/species/S, mob/living/carbon/human/H)
+	. = ..()
+	add_verb(H, /mob/living/proc/super_fart)
+
+/datum/trait/positive/superpower_superfart/unapply(datum/species/S, mob/living/carbon/human/H)
+	. = ..()
+	if(!(/mob/living/proc/super_fart in S.inherent_verbs))
+		remove_verb(H, /mob/living/proc/super_fart)

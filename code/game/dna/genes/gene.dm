@@ -132,7 +132,10 @@
 // TRAIT GENES
 //
 // Activate traits with a message when enabled
-//
+// IMPORTANT - in 99% of situations you should NOT need to edit gene code when adding a new traitgene. Genes only handle the on/off state of traits, traits control the changes and behaviors!
+// Just keep pretending genecode doesn't exist and you should be fine. Traitgenes were made with that in mind, and are not intended to be something you need to edit every time you add a traitgene.
+// Traitgenes only require that your trait has both an apply() and unapply() if it does anything like adding verbs. Otherwise, you don't even need to add trait exceptions. traitgenes handle it automatically.
+// You probably shouldn't mark traits as traitgenes if they are custom species only, species locked, or species banned traits however... - Willbird
 /////////////////////
 
 
@@ -169,7 +172,8 @@
 /datum/gene/trait/proc/has_conflict(var/list/traits_to_check, var/quick_scan = TRUE)
 	// Behold the CONFLICT-O-TRON. Checks for trait conflicts the same way code\modules\client\preference_setup\vore\07_traits.dm does,
 	// and then caches the results. Cause traits can't change conflicts mid-round. Unless that changes someday, god help us all if so.
-
+	// You do not need to add any unique exceptions here, check trait code instead if you want to handle conflicts and forced exceptions.
+	// They already handle it. This just uses the same system. - Willbird
 	var/has_conflict = FALSE
 	var/path = linked_trait.type
 	for(var/P in traits_to_check)
