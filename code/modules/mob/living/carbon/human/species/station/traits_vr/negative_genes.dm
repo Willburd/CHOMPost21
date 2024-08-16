@@ -131,7 +131,8 @@
 /datum/trait/negative/disability_deaf/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	. = ..()
 	H.ear_deaf = 1
-	H.deaf_loop.start(skip_start_sound = TRUE) // CHOMPStation Add: Ear Ringing/Deafness
+	if(H.stat != DEAD)
+		H.deaf_loop.start(skip_start_sound = TRUE) // CHOMPStation Add: Ear Ringing/Deafness
 
 /datum/trait/negative/disability_deaf/unapply(datum/species/S, mob/living/carbon/human/H)
 	. = ..()
