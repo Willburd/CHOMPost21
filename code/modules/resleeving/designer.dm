@@ -568,6 +568,7 @@
 	item_state = "card-id"
 	w_class = ITEMSIZE_SMALL
 	var/datum/transhuman/body_record/stored = null
+	var/read_only = FALSE //  Traitgenes edit TODO - make this accessible, and respected by all consoles...
 
 /*
  *	Diskette Box

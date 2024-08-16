@@ -20,7 +20,7 @@ export const DNAModifierMain = (props: { isDNAInvalid: BooleanLike }) => {
   const { act, data } = useBackend<Data>();
 
   const { selectedMenuKey, hasOccupant } = data;
-
+  /* Traitgenes edit - Allow accessing menus while no occupant is inside
   if (!hasOccupant) {
     return (
       <Section flexGrow>
@@ -46,7 +46,9 @@ export const DNAModifierMain = (props: { isDNAInvalid: BooleanLike }) => {
       </Section>
     );
   }
+  */
   let body;
+  /* Traitgenes edit - Body design console is used to edit UIs now
   if (selectedMenuKey === 'ui') {
     body = (
       <>
@@ -54,7 +56,9 @@ export const DNAModifierMain = (props: { isDNAInvalid: BooleanLike }) => {
         <DNAModifierMainRadiationEmitter />
       </>
     );
-  } else if (selectedMenuKey === 'se') {
+  } else
+  */
+  if (selectedMenuKey === 'se') {
     body = (
       <>
         <DNAModifierMainSE />
@@ -85,6 +89,7 @@ export const DNAModifierMain = (props: { isDNAInvalid: BooleanLike }) => {
   );
 };
 
+/* Traitgenes edit - Body design console is used to edit UIs now
 const DNAModifierMainUI = (props) => {
   const { act, data } = useBackend<Data>();
 
@@ -128,6 +133,7 @@ const DNAModifierMainUI = (props) => {
     </Section>
   );
 };
+*/
 
 const DNAModifierMainSE = (props) => {
   const { act, data } = useBackend<Data>();
@@ -135,19 +141,42 @@ const DNAModifierMainSE = (props) => {
   const { selectedSEBlock, selectedSESubBlock, dnaBlockSize, occupant } = data;
 
   return (
-    <Section title="Modify Structural Enzymes">
-      <DNAModifierBlocks
-        dnaString={occupant.structuralEnzymes || ''}
-        selectedBlock={selectedSEBlock}
-        selectedSubblock={selectedSESubBlock}
-        blockSize={dnaBlockSize}
-        action="selectSEBlock"
-      />
-      <Button icon="radiation" onClick={() => act('pulseSERadiation')}>
-        Irradiate Block
-      </Button>
-    </Section>
-  );
+    // Traitgenes edit begin - Allow accessing menus while no occupant is inside
+    (!occupant ? (
+      <Section flexGrow>
+        <Flex height="100%">
+          <Flex.Item grow="1" align="center" textAlign="center" color="label">
+            <Icon name="user-slash" mb="0.5rem" size={5} />
+            <br />
+            No occupant in DNA modifier.
+          </Flex.Item>
+        </Flex>
+      </Section>
+    ) : (!occupant.isViableSubject ? (
+      <Section flexGrow>
+        <Flex height="100%">
+          <Flex.Item grow="1" align="center" textAlign="center" color="label">
+            <Icon name="user-slash" mb="0.5rem" size={5} />
+            <br />
+            No operation possible on this subject.
+          </Flex.Item>
+        </Flex>
+      </Section>
+    ) : (
+      <Section title="Modify Structural Enzymes">
+        <DNAModifierBlocks
+          dnaString={occupant.structuralEnzymes || ''}
+          selectedBlock={selectedSEBlock}
+          selectedSubblock={selectedSESubBlock}
+          blockSize={dnaBlockSize}
+          action="selectSEBlock"
+        />
+        <Button icon="radiation" onClick={() => act('pulseSERadiation')}>
+          Irradiate Block
+        </Button>
+      </Section>
+    ))));
+    // Traitgenes edit end
 };
 
 const DNAModifierMainRadiationEmitter = (props) => {
@@ -156,47 +185,50 @@ const DNAModifierMainRadiationEmitter = (props) => {
   const { radiationIntensity, radiationDuration } = data;
 
   return (
-    <Section title="Radiation Emitter">
-      <LabeledList>
-        <LabeledList.Item label="Intensity">
-          <Knob
-            minValue={1}
-            maxValue={10}
-            stepPixelSize={20}
-            value={radiationIntensity}
-            ml="0"
-            onChange={(e, val) => act('radiationIntensity', { value: val })}
-          />
-        </LabeledList.Item>
-        <LabeledList.Item label="Duration">
-          <Knob
-            minValue={1}
-            maxValue={20}
-            stepPixelSize={10}
-            unit="s"
-            value={radiationDuration}
-            ml="0"
-            onChange={(e, val) => act('radiationDuration', { value: val })}
-          />
-        </LabeledList.Item>
-      </LabeledList>
-      <Button
-        icon="radiation"
-        tooltip="Mutates a random block of either the occupant's UI or SE."
-        tooltipPosition="top"
-        mt="0.5rem"
-        onClick={() => act('pulseRadiation')}
-      >
-        Pulse Radiation
-      </Button>
-    </Section>
-  );
+    // Traitgenes edit begin - Allow accessing menus while no occupant is inside
+    (!!props.hasOccupant && !!props.isDNAInvalid ? (
+      <Section title="Radiation Emitter">
+        <LabeledList>
+          <LabeledList.Item label="Intensity">
+            <Knob
+              minValue={1}
+              maxValue={10}
+              stepPixelSize={20}
+              value={radiationIntensity}
+              ml="0"
+              onChange={(e, val) => act('radiationIntensity', { value: val })}
+            />
+          </LabeledList.Item>
+          <LabeledList.Item label="Duration">
+            <Knob
+              minValue={1}
+              maxValue={20}
+              stepPixelSize={10}
+              unit="s"
+              value={radiationDuration}
+              ml="0"
+              onChange={(e, val) => act('radiationDuration', { value: val })}
+            />
+          </LabeledList.Item>
+        </LabeledList>
+        <Button
+          icon="radiation"
+          tooltip="Mutates a random block of DNA." // Traitgenes edit - Body design console is used to edit UIs now. Not this.
+          tooltipPosition="top"
+          mt="0.5rem"
+          onClick={() => act('pulseRadiation')}
+        >
+          Pulse Radiation
+        </Button>
+      </Section>
+  ) : ("")));
+  // Traitgenes edit end
 };
 
 const DNAModifierMainRejuvenators = (props) => {
   const { act, data } = useBackend<Data>();
 
-  const { isBeakerLoaded, beakerVolume, beakerLabel } = data;
+  const { isBeakerLoaded, beakerVolume, beakerLabel, hasOccupant  } = data; // Traitgenes edit - Allow accessing menus while no occupant is inside
 
   return (
     <Section
@@ -217,7 +249,7 @@ const DNAModifierMainRejuvenators = (props) => {
             {rejuvenatorsDoses.map((a, i) => (
               <Button
                 key={i}
-                disabled={a > beakerVolume}
+                disabled={a > beakerVolume || !hasOccupant} // Traitgenes edit - Allow accessing menus while no occupant is inside
                 icon="syringe"
                 onClick={() =>
                   act('injectRejuvenators', {
@@ -229,7 +261,7 @@ const DNAModifierMainRejuvenators = (props) => {
               </Button>
             ))}
             <Button
-              disabled={beakerVolume <= 0}
+              disabled={beakerVolume <= 0 || !hasOccupant} // Traitgenes edit - Allow accessing menus while no occupant is inside
               icon="syringe"
               onClick={() =>
                 act('injectRejuvenators', {

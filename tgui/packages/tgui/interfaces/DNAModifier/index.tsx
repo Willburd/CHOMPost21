@@ -19,7 +19,7 @@ export const DNAModifier = (props) => {
   return (
     <Window width={660} height={870}>
       <ComplexModal />
-      {irradiating && <DNAModifierIrradiating duration={irradiating} />}
+      {!!irradiating ? (<DNAModifierIrradiating duration={irradiating} />) : ("")} { /* Traitgenes edit - Fixed irradiating overlay showing 0 at top of menu when hidden */ }
       <Window.Content className="Layout__content--flexColumn">
         <DNAModifierOccupant isDNAInvalid={isDNAInvalid} />
         <DNAModifierMain isDNAInvalid={isDNAInvalid} />
