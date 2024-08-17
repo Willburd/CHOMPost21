@@ -4,6 +4,14 @@
 	cost = 0
 	var_changes = list("drippy" = 1)
 
+	// Traitgenes edit begin - Made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="You feel softer..."
+	primitive_expression_messages=list("drips.")
+	// Traitgenes edit end
+
 // Allergens
 /datum/trait/neutral/allergy/pollen
 	name = "Allergy: Pollen"

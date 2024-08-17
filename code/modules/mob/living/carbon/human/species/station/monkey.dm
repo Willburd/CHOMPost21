@@ -66,7 +66,7 @@
 			step(H, pick(cardinal))
 		if(prob(5))
 			// Handle generic gene expression emotes
-			if(!H.species || !H.species.traits || !H.species.traits.len)
+			if(!H.species || !H.species.traits || H.species.traits.len == 0)
 				H.emote(pick("scratch","jump","roll","tail")) // fallbacks
 			var/datum/trait/T = all_traits[pick(H.species.traits)]
 			if(T)

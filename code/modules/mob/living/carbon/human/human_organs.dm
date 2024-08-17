@@ -199,7 +199,7 @@
 		O.trace_chemicals[A.name] = 100
 
 // Traitgenes edit begin - Init genes based on the traits currently active
-/mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits)
+/mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits, var/hide_message = TRUE)
 	if(!dna || !species)
 		return
 	if(refresh_traits && species.traits)
@@ -213,7 +213,10 @@
 			dna.SetSEState(gene.block, TRUE, TRUE)
 			// testing("[gene.name] Setup activated!")
 		dna.UpdateSE()
-	domutcheck( src, null, MUTCHK_FORCED | MUTCHK_HIDEMSG)
+	var/flgs = MUTCHK_FORCED
+	if(hide_message)
+		flgs |= MUTCHK_HIDEMSG
+	domutcheck( src, null, hide_message)
 // Traitgenes edit end
 
 /mob/living/carbon/human/proc/sync_organ_dna()

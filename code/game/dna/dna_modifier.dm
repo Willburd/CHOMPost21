@@ -342,7 +342,7 @@
 	. = ..()
 	for(var/i=0;i<3;i++)
 		// Traitgenes edit begin - Use bodyrecords
-		var/datum/transhuman/body_record/R = new
+		var/datum/transhuman/body_record/R = new /datum/transhuman/body_record()
 		R.mydna = new
 		R.mydna.dna = new
 		R.mydna.dna.ResetUI()
@@ -544,10 +544,9 @@
 					*/
 			// Traitgenes edit end
 			// Traitgenes edit begin - Do gene updates here, and more comprehensively
-			connected.occupant.UpdateAppearance()
 			if(ishuman(connected.occupant))
 				var/mob/living/carbon/human/H = connected.occupant
-				H.sync_dna_traits(FALSE)
+				H.sync_dna_traits(FALSE,FALSE)
 				H.sync_organ_dna()
 			connected.occupant.regenerate_icons()
 			// Traitgenes edit end
@@ -666,10 +665,9 @@
 						connected.occupant.UpdateAppearance()
 					*/
 				// Traitgenes edit begin - Do gene updates here, and more comprehensively
-				connected.occupant.UpdateAppearance()
 				if(ishuman(connected.occupant))
 					var/mob/living/carbon/human/H = connected.occupant
-					H.sync_dna_traits(FALSE)
+					H.sync_dna_traits(FALSE,TRUE)
 					H.sync_organ_dna()
 				connected.occupant.regenerate_icons()
 				// Traitgenes edit end
@@ -701,7 +699,10 @@
 				if("saveDNA")
 					playsound(src, "keyboard", 40) // into console
 					if(connected.occupant && connected.occupant.dna)
-						var/datum/transhuman/body_record/databuf = new(connected.occupant)
+						// Traitgenes edit begin - Properly clone records
+						var/datum/transhuman/body_record/databuf = new /datum/transhuman/body_record()
+						databuf.init_from_mob(connected.occupant)
+						// Traitgenes edit end
 						databuf.mydna.types = DNA2_BUF_SE // structurals only
 						if(ishuman(connected.occupant))
 							var/mob/living/carbon/human/H = connected.occupant
@@ -750,7 +751,7 @@
 				if("clear")
 					playsound(src, "keyboard", 40) // Traitgenes edit - Better UI sounds
 					// Traitgenes edit begin - Storing the entire body record
-					var/datum/transhuman/body_record/R = new
+					var/datum/transhuman/body_record/R = new /datum/transhuman/body_record()
 					R.mydna = new
 					R.mydna.dna = new
 					R.mydna.dna.ResetUI()
@@ -820,7 +821,10 @@
 					playsound(src, "keyboard", 40) // Traitgenes edit - Better UI sounds
 					if(isnull(disk) || disk.read_only || !disk.stored)
 						return
-					var/datum/transhuman/body_record/databuf = new /datum/transhuman/body_record(disk.stored)
+					// Traitgenes edit begin - Properly clone records
+					var/datum/transhuman/body_record/databuf = new /datum/transhuman/body_record()
+					databuf.init_from_br(disk.stored)
+					// Traitgenes edit end
 					databuf.mydna.types = DNA2_BUF_SE // structurals only
 					buffers[bufferId] = databuf
 				if("saveDisk")
@@ -828,7 +832,10 @@
 					if(isnull(disk) || disk.read_only)
 						return
 					var/datum/transhuman/body_record/buf = buffers[bufferId]
-					disk.stored = new /datum/transhuman/body_record(buf)
+					// Traitgenes edit begin - Properly clone records
+					disk.stored = new /datum/transhuman/body_record()
+					disk.stored.init_from_br(buf)
+					// Traitgenes edit end
 					disk.stored.mydna.types = DNA2_BUF_UI|DNA2_BUF_UE|DNA2_BUF_SE // DNA disks need to maintain their data
 					disk.name = "Body Design Disk ('[buf.mydna.name]')"
 				if("sleeveDisk")

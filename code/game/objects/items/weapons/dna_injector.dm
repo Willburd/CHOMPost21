@@ -92,10 +92,17 @@
 				M.dna.UpdateSE()
 			else
 				M.dna.SetSEValue(block,src.GetValue())
-			domutcheck(M, null, block!=null)
 			uses--
+			// Traitgenes edit - Moved gene checks to after side effects
 			if(prob(5))
 				trigger_side_effect(M)
+		// Traitgenes edit begin - Do gene updates here, and more comprehensively
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			H.sync_dna_traits(FALSE,FALSE)
+			H.sync_organ_dna()
+		M.regenerate_icons()
+		// Traitgenes edit end
 
 	spawn(0)//this prevents the collapse of space-time continuum
 		if (user)

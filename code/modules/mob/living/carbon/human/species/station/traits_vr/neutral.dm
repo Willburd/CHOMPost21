@@ -314,9 +314,24 @@
 	var_changes = list("has_glowing_eyes" = 1)
 	has_preferences = list("has_glowing_eyes" = list(TRAIT_PREF_TYPE_BOOLEAN, "Glowing on spawn", TRAIT_VAREDIT_TARGET_SPECIES))
 
+	// Traitgenes edit begin - Made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your eyes feel brighter."
+	primitive_expression_messages=list("eyes twinkle.")
+	// Traitgenes edit end
+
 /datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/carbon/human/proc/toggle_eye_glow) //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - Made into a genetrait
+/datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	if(!(/mob/living/carbon/human/proc/toggle_eye_glow in S.inherent_verbs))
+		remove_verb(H,/mob/living/carbon/human/proc/toggle_eye_glow) //CHOMPEdit TGPanel
+// Traitgenes edit end
 
 /datum/trait/neutral/glowing_body
 	name = "Glowing Body"
@@ -326,10 +341,27 @@
 	has_preferences = list("glow_toggle" = list(TRAIT_PREF_TYPE_BOOLEAN, "Glowing on spawn", TRAIT_VAREDIT_TARGET_MOB, FALSE), \
 							"glow_color" = list(TRAIT_PREF_TYPE_COLOR, "Glow color", TRAIT_VAREDIT_TARGET_MOB))
 
+	// Traitgenes edit begin - Made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="You feel enlightened."
+	primitive_expression_messages=list("shines and sparkles.")
+	// Traitgenes edit end
+
 /datum/trait/neutral/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/glow_toggle) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/proc/glow_color) //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - Made into a genetrait
+/datum/trait/neutral/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	if(!(/mob/living/proc/glow_toggle in S.inherent_verbs))
+		add_verb(H,/mob/living/proc/glow_toggle) //CHOMPEdit TGPanel
+	if(!(/mob/living/proc/glow_color in S.inherent_verbs))
+		add_verb(H,/mob/living/proc/glow_color) //CHOMPEdit TGPanel
+// Traitgenes edit end
 
 //Allergen traits! Not available to any species with a base allergens var.
 /datum/trait/neutral/allergy
