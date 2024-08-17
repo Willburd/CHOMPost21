@@ -68,15 +68,16 @@
 			// Handle generic gene expression emotes
 			if(!H.species || !H.species.traits || H.species.traits.len == 0)
 				H.emote(pick("scratch","jump","roll","tail")) // fallbacks
-			var/datum/trait/T = all_traits[pick(H.species.traits)]
-			if(T)
-				var/geneexpression
-				if(T.primitive_expression_messages.len)
-					geneexpression = pick(T.primitive_expression_messages)
-				if(geneexpression)
-					H.custom_emote(VISIBLE_MESSAGE, "[geneexpression]")
-				else
-					H.emote(pick("scratch","jump","roll","tail"))
+			else
+				var/datum/trait/T = all_traits[pick(H.species.traits)]
+				if(T)
+					var/geneexpression
+					if(T.primitive_expression_messages.len)
+						geneexpression = pick(T.primitive_expression_messages)
+					if(geneexpression)
+						H.custom_emote(VISIBLE_MESSAGE, "[geneexpression]")
+					else
+						H.emote(pick("scratch","jump","roll","tail"))
 		// More... intense, expressions...
 		if(prob(5) && H.mutations.len)
 			if((LASER in H.mutations))
