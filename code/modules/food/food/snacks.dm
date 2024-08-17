@@ -2000,6 +2000,10 @@
 	H.real_name = H.species.get_random_name()
 	H.name = H.real_name
 	H.low_sorting_priority = TRUE
+	H.species.produceCopy(H.species.traits.Copy(),H,null,FALSE) // Traitgenes edit - Make the spawned monkeys have unique species datums.
+	// I cannot find a way to move this into human/monkey initilization without breaking character creation. sorry.
+	// This does mean that map and admin spawn monkeys are broken, but so are AI human mobs, so only use monkey cubes.
+	// (It's not like anyone map spawns monkeys anyway.) - Willbird
 	if(ismob(loc))
 		var/mob/M = loc
 		M.unEquip(src)
