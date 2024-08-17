@@ -152,7 +152,8 @@
 	icon_state = "dna"
 	// Traitgenes edit begin - New injector loot
 	starts_with = list(
-		/obj/item/weapon/dnainjector/random_labeled = 6
+		/obj/item/weapon/dnainjector/random_labeled = 3,
+		/obj/item/weapon/dnainjector/random = 3
 	)
 	/*
 	starts_with = list(
