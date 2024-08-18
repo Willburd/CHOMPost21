@@ -21,6 +21,7 @@
 	// remove these
 	verbs -= /obj/machinery/reagentgrinder/verb/grind_verb
 	verbs -= /obj/machinery/reagentgrinder/verb/remove_beaker
+	// Update neighbours and self for state
 	update_neighbours()
 	update_icon()
 

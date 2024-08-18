@@ -6,6 +6,7 @@ var/global/list/sheet_reagents = list( //have a number of reageents divisible by
 	/obj/item/stack/material/stick = list("carbon","woodpulp","nitrogen","potassium","sodium"),
 	/obj/item/stack/material/log = list("carbon","woodpulp","nitrogen","potassium","sodium"),
 	/obj/item/stack/material/algae = list("carbon","nitrogen","nitrogen","phosphorus","phosphorus"),
+	/obj/item/stack/material/algae/ten = list("carbon","nitrogen","nitrogen","phosphorus","phosphorus"), // THIS, IS, STUPID
 	/obj/item/stack/material/cardboard = list("paper"),
 	/obj/item/stack/material/graphite = list("carbon"),
 	/obj/item/stack/material/aluminium = list("aluminum"),

@@ -14,7 +14,9 @@
 	if(default_max_vol > 0)
 		reagents = new/datum/reagents(default_max_vol)
 		reagents.my_atom = src
+	// Update neighbours and self for state
 	update_neighbours()
+	update_icon()
 
 /obj/machinery/reagent_refinery/Moved(atom/old_loc, direction, forced)
 	. = ..()
