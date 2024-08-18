@@ -25,10 +25,12 @@
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
-	update_icon()
 	beaker = new /obj/item/weapon/reagent_containers/glass/beaker/bluespace(src) // Get it all out as fast as possible
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
+	// Update neighbours and self for state
+	update_neighbours()
+	update_icon()
 
 /obj/machinery/reagent_refinery/furnace/Destroy()
 	. = ..()

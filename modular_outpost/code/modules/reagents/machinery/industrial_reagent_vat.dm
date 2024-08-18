@@ -14,7 +14,7 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 	// Chemical bath funtimes!
 	can_buckle = TRUE
 	buckle_lying = TRUE
-	default_max_vol = 1000
+	default_max_vol = 2500
 
 /obj/machinery/reagent_refinery/vat/Initialize()
 	. = ..()
@@ -22,8 +22,9 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
-	update_icon()
 	vats_to_rain_into.Add(src)
+	// Can't be set on these
+	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
 
 /obj/machinery/reagent_refinery/vat/Destroy()
 	. = ..()

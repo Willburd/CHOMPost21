@@ -16,6 +16,8 @@
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
+	// Update neighbours and self for state
+	update_neighbours()
 	update_icon()
 
 /obj/machinery/reagent_refinery/pump/process()

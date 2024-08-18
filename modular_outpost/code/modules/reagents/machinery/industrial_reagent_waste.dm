@@ -20,7 +20,6 @@
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
-	update_icon()
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
 

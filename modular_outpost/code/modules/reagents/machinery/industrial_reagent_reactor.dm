@@ -23,11 +23,13 @@
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
-	update_icon()
 	internal_tank = new /obj/machinery/portable_atmospherics/canister/empty()
 	update_gas_network()
 	toggle_mode = 0 // 0 = intake and boil, 1 = output
 	next_mode_toggle = world.time + dis_time SECONDS
+	// Update neighbours and self for state
+	update_neighbours()
+	update_icon()
 
 /obj/machinery/reagent_refinery/reactor/Destroy()
 	. = ..()
