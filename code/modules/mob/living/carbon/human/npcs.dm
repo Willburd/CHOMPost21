@@ -11,5 +11,7 @@
 	name = "Pun Pun"
 	real_name = name
 	w_uniform = new /obj/item/clothing/under/punpun(src)
+	species.produceCopy(species.traits.Copy(),src,null,FALSE) // Traitgenes edit - Make the spawned monkeys have unique species datums.
+	// I don't know why the above doesn't work for other monkeys, but at least punpun is fixed for being map spawned...
 	regenerate_icons()
 	can_be_drop_prey = TRUE //CHOMP Add
