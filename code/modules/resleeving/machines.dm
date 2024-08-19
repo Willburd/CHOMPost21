@@ -96,11 +96,13 @@
 	H.Paralyse(4)
 	H.updatehealth()
 
+	/* Outpost 21 edit - Lets not
 	//Grower specific mutations
 	if(heal_level < 60)
 		randmutb(H)
 		H.dna.UpdateSE()
 		H.dna.UpdateUI()
+	*/
 
 	//Update appearance, remake icons
 	H.UpdateAppearance()
