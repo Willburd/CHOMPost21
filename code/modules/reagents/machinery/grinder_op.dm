@@ -71,6 +71,7 @@ var/global/list/reagent_sheets = list( // Recompressing reagents back into sheet
 	"aluminum" 		= MAT_ALUMINIUM,
 	"titanium" 		= MAT_TITANIUM,
 	"iron" 			= MAT_IRON,
+	"lead" 			= MAT_LEAD,
 	"uranium"		= MAT_URANIUM,
 	"phoron" 		= MAT_PHORON,
 	"gold" 			= MAT_GOLD,
