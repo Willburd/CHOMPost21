@@ -22,7 +22,7 @@
 
 /decl/chemical_reaction/instant/silicon
 	name = "Silicon"
-	id = "silicon"
+	id = "reduce_silicate"
 	result = "silicon"
 	required_reagents = list("silicate" = 1, "sacid" = 1,"sulfur" = 1)
 	result_amount = 1
@@ -48,14 +48,14 @@
 
 /decl/chemical_reaction/instant/titanium_refine
 	name = "Titanium"
-	id = "titanium"
+	id = "reduce_titanium"
 	result = "titanium"
 	required_reagents = list("titanium_diox" = 1, "chlorine" = 4, "sodium" = 1)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/titanium_oxidation
 	name = "Titanium dioxide"
-	id = "titanium_diox"
+	id = "oxidize_titanium"
 	result = "titanium_diox"
 	required_reagents = list("titanium" = 1, "oxygen" = 2)
 	result_amount = 1
