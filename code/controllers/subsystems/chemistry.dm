@@ -54,8 +54,8 @@ SUBSYSTEM_DEF(chemistry)
 				LAZYINITLIST(distilled_reactions_by_product[D.result])
 				distilled_reactions_by_product[D.result] += D // for reverse lookup
 			else
-				LAZYINITLIST(chemical_reactions_by_product[D.id])
-				chemical_reactions_by_product[D.id] += D // for reverse lookup
+				LAZYINITLIST(chemical_reactions_by_product[D.result])
+				chemical_reactions_by_product[D.result] += D // for reverse lookup
 			// Outpost 21 addition end
 
 			LAZYINITLIST(add_to[reagent_id])
