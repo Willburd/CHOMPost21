@@ -69,9 +69,7 @@
 	name = T_BOARD("industrial chemical pipe")
 	build_path = /obj/machinery/reagent_refinery/pipe
 	board_type = new /datum/frame/frame_types/industrial_reagent_pipe
-	req_components = list(
-							/obj/item/weapon/stock_parts/motor = 1,
-							/obj/item/stack/material/glass/reinforced = 1)
+	req_components = list( /obj/item/stack/material/glass/reinforced = 1)
 
 /obj/item/weapon/circuitboard/industrial_reagent_waste_processor
 	name = T_BOARD("industrial chemical waste processor")

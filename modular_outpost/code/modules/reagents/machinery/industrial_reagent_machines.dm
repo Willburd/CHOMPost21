@@ -74,9 +74,9 @@
 	update_icon()
 
 /obj/machinery/reagent_refinery/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target, var/source_forward_dir, var/filter_id = "")
-	if(RT.total_volume <= 0|| !anchored || !target.anchored)
+	if(RT.total_volume <= 0 || !anchored || !target.anchored)
 		return
-	if(!can_use_power_oneoff(active_power_usage))
+	if(active_power_usage > 0 && !can_use_power_oneoff(active_power_usage))
 		return
 
 	// Hub fills tankers, not itself! Has some special rules
@@ -111,7 +111,8 @@
 				return
 
 	// Transfer to target in amounts every process tick!
-	use_power_oneoff(active_power_usage)
+	if(active_power_usage > 0)
+		use_power_oneoff(active_power_usage)
 	if(filter_id == "")
 		var/amount = RT.trans_to_obj(target, amount_per_transfer_from_this)
 		return amount
