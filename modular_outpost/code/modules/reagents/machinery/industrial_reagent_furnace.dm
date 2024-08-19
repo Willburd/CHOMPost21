@@ -112,7 +112,8 @@
 						if(!played_sound)
 							playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 							played_sound = TRUE
-						var/obj/item/stack/material/S = printing.place_sheet(spawn_t, 1) // One at a time
+						var/obj/item/stack/material/S = printing.place_sheet(src, 1) // One at a time
+						S.forceMove(spawn_t) // autostack
 						if(!istype(S))
 							warning("[src] tried to eject material '[printing]', which didn't generate a proper stack when asked!")
 	// dump reagents to next refinery machine if all of the target reagent has been filtered out
@@ -224,3 +225,4 @@
 		var/datum/reagent/R = SSchemistry.chemical_reagents[filter_reagent_id]
 		filter = "sintering [R.name]"
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is currently [filter]."
+	. += "The sintering mold is [ (beaker.reagents.total_volume / REAGENTS_PER_SHEET) * 100 ]% full."

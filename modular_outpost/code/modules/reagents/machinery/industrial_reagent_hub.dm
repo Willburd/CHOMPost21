@@ -1,13 +1,13 @@
 /obj/machinery/reagent_refinery/hub
 	name = "Industrial Chemical Hub"
-	desc = "A platform for loading and unloading cargo tug tankers."
+	desc = "A platform for loading and unloading cargo tug tankers. Does not require power to fill trolly tanks."
 	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
 	icon_state = "hub"
 	density = FALSE
 	anchored = TRUE
-	use_power = USE_POWER_IDLE
+	use_power = USE_POWER_OFF // Does not require power for pipes
 	idle_power_usage = 0
-	active_power_usage = 10
+	active_power_usage = 0
 	circuit = /obj/item/weapon/circuitboard/industrial_reagent_hub
 	default_max_vol = 0
 	var/wait_delay = 4 SECONDS
@@ -26,8 +26,7 @@
 	if(!anchored)
 		return
 
-	power_change()
-	if(stat & (NOPOWER|BROKEN))
+	if(stat & (BROKEN))
 		return
 
 	if (amount_per_transfer_from_this <= 0)

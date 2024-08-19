@@ -1,13 +1,13 @@
 /obj/machinery/reagent_refinery/pipe
 	name = "Industrial Chemical Pipe"
-	desc = "A large pipe with a small built in pump to encourage flow. The red marks show where the flow is coming from."
+	desc = "A large pipe made for transporting industrial chemicals. It has a low-power passive pump. The red marks show where the flow is coming from. Does not require power."
 	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
 	icon_state = "pipe"
 	density = TRUE
 	anchored = TRUE
-	use_power = USE_POWER_IDLE
+	use_power = USE_POWER_OFF // Does not require power for pipes
 	idle_power_usage = 0
-	active_power_usage = 10
+	active_power_usage = 0
 	circuit = /obj/item/weapon/circuitboard/industrial_reagent_pipe
 	default_max_vol = 60 // smoll
 
@@ -27,8 +27,7 @@
 	if(!anchored)
 		return
 
-	power_change()
-	if(stat & (NOPOWER|BROKEN))
+	if(stat & (BROKEN))
 		return
 
 	if (amount_per_transfer_from_this <= 0 || reagents.total_volume <= 0)
@@ -88,3 +87,7 @@
 
 	src.set_dir(turn(src.dir, 90))
 	update_icon()
+
+/obj/machinery/reagent_refinery/pipe/examine(mob/user, infix, suffix)
+	. = ..()
+	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u."
