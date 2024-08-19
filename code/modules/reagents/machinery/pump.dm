@@ -1,11 +1,13 @@
 /obj/machinery/pump
 	name = "fluid pump"
-	desc = "A fluid pumping machine."
+	desc = "A fluid pumping machine. Can extract fluids from water, or be used to frack from deep fissures." // Outpost 21 edit - Fracking explaination
 
 	description_info = "A machine that can pump fluid from certain turfs.<br>\
 	Water can be pumped from any body of water. Certain locations or environmental\
 	conditions  can cause different byproducts to be produced.<br>\
-	Magma or Lava can be pumped to produce mineralized fluid."
+	Magma or Lava can be pumped to produce mineralized fluid.<br>\
+	Can also be used to frack for deeply embedded fluids if used in the\
+	deep fissure often found in gas pockets." // Outpost 21 edit - Fracking explaination
 
 	anchored = 0
 	density = 1
@@ -198,7 +200,7 @@
 		R.add_reagent("ice", round(volume / 2, 0.1))
 
 	for(var/turf/simulated/mineral/M in orange(5,src)) // Outpost 21 edit - Uses the turf as center instead of an unset usr
-		if(M.mineral) // v
+		if(M.mineral && prob(40)) // v
 			R.add_reagent(M.mineral.reagent, round(volume / 5, 0.1)) // Outpost 21 edit - Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change - Willbird. Also nerfed amount to 1/5 instead of 1/2
 		else if(prob(10))
 			R.add_reagent("silicate", 0.1) // Outpost 21 edit - Nerfed further by taking up tank with junk sand
