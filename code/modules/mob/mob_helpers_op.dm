@@ -26,8 +26,6 @@
 										"hell",
 										"crap")
 	var/haystack = t
-
-	var/list/results = list()
 	for(var/filter in swear_censoring_list)
 		var/regex/needle = regex(filter, "i")
 		while(TRUE)
