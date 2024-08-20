@@ -100,6 +100,12 @@ var/list/channel_to_radio_key = new
 		if(S.speaking && (S.speaking.flags & NO_STUTTER || S.speaking.flags & SIGNLANG))
 			continue
 
+		// Outpost 21 edit begin - moved to disabilities
+		if(disabilities & CENSORED) // wingdings) Outpost 21 edit - moved to disabilities
+			S.message = censor_swears(S.message) // Outpost 21 edit - Googlybonkers
+			. = 1
+		// Outpost 21 edit end
+
 		if((HULK in mutations) && health >= 25 && length(S.message))
 			S.message = "[uppertext(S.message)]!!!"
 			verb = pick("yells","roars","hollers")

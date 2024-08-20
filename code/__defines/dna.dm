@@ -42,6 +42,7 @@
 #define WINGDINGS     	0x80	// Better handling as disability
 #define DETERIORATE     0x100	// Body melts slowly, medical loves you!
 #define GIBBING     	0x200	// Landmine for genetics to find
+#define CENSORED     	0x400	// Cannot swear
 // Outpost 21 edit end
 
 // sdisabilities

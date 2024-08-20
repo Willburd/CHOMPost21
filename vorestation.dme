@@ -3080,6 +3080,7 @@
 #include "code\modules\mob\mob_grab.dm"
 #include "code\modules\mob\mob_grab_specials.dm"
 #include "code\modules\mob\mob_helpers.dm"
+#include "code\modules\mob\mob_helpers_op.dm"
 #include "code\modules\mob\mob_helpers_vr.dm"
 #include "code\modules\mob\mob_movement.dm"
 #include "code\modules\mob\mob_movement_ch.dm"

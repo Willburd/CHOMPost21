@@ -190,3 +190,16 @@
 	disability=GIBBING
 	activation_message="You feel bloated..."
 	primitive_expression_messages=list("shudders.","gasps.","chokes.")
+
+/datum/trait/negative/disability_censored
+	name = "Censored"
+	desc = "You are unable to speak profanity. To an excessive degree..."
+	cost = -1
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	disability=CENSORED
+	activation_message="You feel less rude..."
+	primitive_expression_messages=list("BEEPS!")
