@@ -35,10 +35,11 @@
 		for(var/metal in ore_types)
 			if(!M.resources[metal])
 				return
-			if(!ore_types[metal] || !ore_types[metal].len)
+			var/list/ore_list = ore_types[metal]
+			if(!ore_list || !ore_list.len)
 				return
 			if(prob(60))
-				var/reagent_id = pick(ore_types[metal])
+				var/reagent_id = pick(ore_list)
 				R.add_reagent(reagent_id, round(volume, 0.1))
 
 
