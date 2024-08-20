@@ -153,6 +153,7 @@
 
 
 // Traitgenes edit begin - Injectors are randomized now due to no hardcoded genes. Split into good or bad, and then versions that specify what they do on the label.
+// Otherwise scroll down further for how to make unique injectors
 /obj/item/weapon/dnainjector/proc/pick_block(var/datum/gene/trait/G, var/labeled, var/allow_disable)
 	if(G)
 		block = G.block
@@ -209,6 +210,60 @@
 /obj/item/weapon/dnainjector/random_verybad_labeled/Initialize()
 	pick_block( pick(GLOB.dna_genes_bad), TRUE, FALSE)
 	. = ..()
+
+
+// If you want a unique injector, use a subtype of these
+/obj/item/weapon/dnainjector/set_trait
+	var/trait_path
+
+/obj/item/weapon/dnainjector/set_trait/Initialize()
+	if(trait_path && GLOB.trait_to_dna_genes[trait_path])
+		pick_block( GLOB.trait_to_dna_genes[trait_path], TRUE, FALSE)
+	else
+		qdel(src)
+		return
+	. = ..()
+
+// Only has the superpowers for loot tables and other rewards
+/obj/item/weapon/dnainjector/set_trait/hulk
+	trait_path = /datum/trait/positive/superpower_hulk
+
+/obj/item/weapon/dnainjector/set_trait/xray
+	trait_path = /datum/trait/positive/superpower_xray
+
+/obj/item/weapon/dnainjector/set_trait/tk
+	trait_path = /datum/trait/positive/superpower_tk
+
+/obj/item/weapon/dnainjector/set_trait/remotetalk
+	trait_path = /datum/trait/positive/superpower_remotetalk
+
+/obj/item/weapon/dnainjector/set_trait/remoteview
+	trait_path = /datum/trait/positive/superpower_remoteview
+
+/obj/item/weapon/dnainjector/set_trait/coldadapt
+	trait_path = /datum/trait/neutral/coldadapt
+
+/obj/item/weapon/dnainjector/set_trait/hotadapt
+	trait_path = /datum/trait/neutral/hotadapt
+
+/obj/item/weapon/dnainjector/set_trait/nobreathe
+	trait_path = /datum/trait/positive/superpower_nobreathe
+
+/obj/item/weapon/dnainjector/set_trait/regenerate
+	trait_path = /datum/trait/positive/superpower_regenerate
+
+/obj/item/weapon/dnainjector/set_trait/haste
+	trait_path = /datum/trait/positive/speed_fast
+
+/obj/item/weapon/dnainjector/set_trait/morph
+	trait_path = /datum/trait/positive/superpower_morph
+
+/obj/item/weapon/dnainjector/set_trait/nonconduct
+	trait_path = /datum/trait/positive/nonconductive_plus
+
+/obj/item/weapon/dnainjector/set_trait/table_passer
+	trait_path = /datum/trait/positive/table_passer
+// Traitgenes edit end
 
 
 /* Traitgenes edit - Disable old injectors

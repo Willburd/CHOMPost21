@@ -957,9 +957,12 @@
 
 	var/list/mob/creatures = list()
 
+	var/turf/current = get_turf(src) // Traitgenes edit - Needs to be on station or same z to perform telepathy
 	for(var/mob/living/carbon/h in mob_list)
 		var/turf/temp_turf = get_turf(h)
-		if((temp_turf.z != 1 && temp_turf.z != 5) || h.stat!=CONSCIOUS) //Not on mining or the station. Or dead
+		if(h == src || istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Traitgenes edit - Don't target self, Outpost 21 edit - autodocs hidden
+			continue
+		if(!((temp_turf.z in using_map.station_levels) || current.z == temp_turf.z) || h.stat!=CONSCIOUS) // Traitgenes edit - Needs to be on station or same z to perform telepathy
 			continue
 		creatures += h
 

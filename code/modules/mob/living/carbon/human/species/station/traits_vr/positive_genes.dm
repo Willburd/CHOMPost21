@@ -11,7 +11,6 @@
 	activity_bounds = DNA_HARD_BOUNDS
 	activation_message="You feel no need to breathe."
 
-/* Was disabled in setupgame.dm, likely nonfunctional
 /datum/trait/positive/superpower_remoteview
 	name = "Remote Viewing"
 	desc = "Remotely view other locations."
@@ -32,7 +31,6 @@
 /datum/trait/positive/superpower_remoteview/unapply(datum/species/S, mob/living/carbon/human/H)
 	. = ..()
 	remove_verb(H, /mob/living/carbon/human/proc/remoteobserve)
-*/
 
 /datum/trait/positive/superpower_regenerate
 	name = "Regenerate"

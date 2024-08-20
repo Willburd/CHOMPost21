@@ -222,15 +222,19 @@
 		CASINO_PRIZE("Implant: Surge", /obj/item/weapon/implantcase/surge, 1, 500, "implants"),
 		CASINO_PRIZE("Implant: Wrist sword", /obj/item/weapon/implantcase/sword, 1, 1000, "implants"),
 		// Traitgenes edit begin - New injector loot
-		CASINO_PRIZE("DNA Injector: Enhancement", /obj/item/weapon/dnainjector/random_verygood_labeled, 1, 1000, "implants"),
-		CASINO_PRIZE("DNA Injector: Impairment", /obj/item/weapon/dnainjector/random_verybad_labeled, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: No breath", /obj/item/weapon/dnainjector/set_trait/nobreathe , 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Regenerate", /obj/item/weapon/dnainjector/set_trait/regenerate , 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Remote view", /obj/item/weapon/dnainjector/set_trait/remoteview , 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Sprinter", /obj/item/weapon/dnainjector/set_trait/haste , 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/weapon/dnainjector/set_trait/tk , 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: X-ray", /obj/item/weapon/dnainjector/set_trait/xray , 1, 1000, "implants"),
 		/*
-		CASINO_PRIZE("Genemod: No breath", /obj/item/weapon/dnainjector/nobreath, 1, 1000, "implants"), Traitgenes edit TODO - Needs replacement injectors
-		CASINO_PRIZE("Genemod: Regenerate", /obj/item/weapon/dnainjector/regenerate, 1, 1000, "implants"), Traitgenes edit TODO - Needs replacement injectors
-		CASINO_PRIZE("Genemod: Remote view", /obj/item/weapon/dnainjector/remoteview, 1, 1000, "implants"), Traitgenes edit TODO - Needs replacement injectors
-		CASINO_PRIZE("Genemod: Sprinter", /obj/item/weapon/dnainjector/runfast, 1, 1000, "implants"), Traitgenes edit TODO - Needs replacement injectors
-		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/weapon/dnainjector/telemut, 1, 1000, "implants"), Traitgenes edit TODO - Needs replacement injectors
-		CASINO_PRIZE("Genemod: X-ray", /obj/item/weapon/dnainjector/xraymut, 1, 1000, "implants"), Traitgenes edit TODO - Needs replacement injectors
+		CASINO_PRIZE("Genemod: No breath", /obj/item/weapon/dnainjector/nobreath, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Regenerate", /obj/item/weapon/dnainjector/regenerate, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Remote view", /obj/item/weapon/dnainjector/remoteview, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Sprinter", /obj/item/weapon/dnainjector/runfast, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: Telekinesis", /obj/item/weapon/dnainjector/telemut, 1, 1000, "implants"),
+		CASINO_PRIZE("Genemod: X-ray", /obj/item/weapon/dnainjector/xraymut, 1, 1000, "implants"),
 		*/ // Traitgenes edit end
 	)
 

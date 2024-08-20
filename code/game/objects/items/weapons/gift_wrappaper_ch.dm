@@ -100,11 +100,11 @@
 		/obj/item/weapon/lego,
 		// Traitgenes edit begin - New injector loot
 		/obj/item/weapon/dnainjector/random_verygood_labeled,
-		/obj/item/weapon/dnainjector/random_verygood_labeled,
-		/obj/item/weapon/dnainjector/random_verygood_labeled,
-		/obj/item/weapon/dnainjector/random_verygood,
-		/obj/item/weapon/dnainjector/random_verygood,
-		/obj/item/weapon/dnainjector/random_verygood,
+		/obj/item/weapon/dnainjector/set_trait/nobreathe,
+		/obj/item/weapon/dnainjector/set_trait/regenerate,
+		/obj/item/weapon/dnainjector/set_trait/remoteview,
+		/obj/item/weapon/dnainjector/set_trait/haste,
+		/obj/item/weapon/dnainjector/set_trait/xray,
 		/*
 		/obj/item/weapon/dnainjector/nobreath,
 		/obj/item/weapon/dnainjector/regenerate,
