@@ -141,7 +141,9 @@ var/SMALLSIZEBLOCK     = 0
 #define DNA_UI_WING3_B     47 // VOREStation snippet end.
 #define DNA_UI_LENGTH      47 // VOREStation Edit - Needs to match the highest number above.
 
-#define DNA_SE_LENGTH 70 // Traitgenes edit - Expanded from 49 to 70, there have been a considerable expansion of genes. Leaves room for future expansion.
+#define DNA_SE_LENGTH 84 // Traitgenes edit - Expanded from 49 to 84, there have been a considerable expansion of genes.
+// This leaves room for future expansion. This can be arbitrarily raised without worry if genes start to get crowded.
+// The dna editor is 7 cols, and this should probably be multiples of it. Should have more than 10 empty genes after setup. - Willbird
 
 //DNA modifiers
 // Buffer datatype flags.
