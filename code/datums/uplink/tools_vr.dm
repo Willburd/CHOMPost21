@@ -28,10 +28,12 @@
 	path = /obj/item/device/holomap_beacon/ert
 	antag_roles = list("ert")
 
+/* Outpost 21 edit - Removed modular computers
 /datum/uplink_item/item/tools/basiclaptop
 	name = "Laptop (Basic)"
 	item_cost = 5
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/cheap
+*/
 
 /datum/uplink_item/item/tools/survivalcapsule
 	name = "Survival Capsule"
@@ -58,10 +60,12 @@
 	item_cost = 10
 	path = /obj/item/weapon/storage/briefcase/inflatable
 
+/* Outpost 21 edit - Removed modular computers
 /datum/uplink_item/item/tools/elitetablet
 	name = "Tablet (Advanced)"
 	item_cost = 15
 	path = /obj/item/modular_computer/tablet/preset/custom_loadout/advanced
+*/
 
 /datum/uplink_item/item/tools/metal
 	name = "Metal (50 sheets)"
@@ -88,10 +92,12 @@
 	item_cost = 15
 	path = /obj/item/weapon/storage/pouch/large
 
+/* Outpost 21 edit - Removed modular computers
 /datum/uplink_item/item/tools/elitelaptop
 	name = "Laptop (Advanced)"
 	item_cost = 20
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/elite
+*/
 
 /datum/uplink_item/item/tools/inducer
 	name = "Inducer"
@@ -120,10 +126,12 @@
 	item_cost = 40
 	path = /obj/item/device/perfect_tele
 
+/* Outpost 21 edit - Removed modular computers
 /datum/uplink_item/item/tools/uav
 	name = "Recon Skimmer"
 	item_cost = 40
 	path = /obj/item/device/uav
+*/
 
 /datum/uplink_item/item/tools/barcapsule
 	name = "Survival Capsule (Bar)"

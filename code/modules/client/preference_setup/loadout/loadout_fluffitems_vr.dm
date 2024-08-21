@@ -185,11 +185,13 @@
 	ckeywhitelist = list("bobofboblandia")
 	character_name = list("Charles Gettler")
 
+/* Outpost 21 edit - Removed modular computers
 /datum/gear/fluff/nettie_tablet
 	path = /obj/item/modular_computer/tablet/preset/custom_loadout/nettie
 	display_name = "Remodeled Tablet"
 	ckeywhitelist = list("bricker98")
 	character_name = list("Nettie Stough")
+*/
 
 /datum/gear/fluff/xin_sovietuniform
 	path = /obj/item/clothing/under/soviet
@@ -1203,12 +1205,14 @@
 	ckeywhitelist = list("theskringdinger")
 	character_name = list("Monty Kopic")
 
+/* Outpost 21 edit - Removed modular computers
 /datum/gear/fluff/shadow_laptop
 	path = /obj/item/modular_computer/laptop/preset/custom_loadout/advanced/shadowlarkens
 	display_name = "Shadow's Laptop"
 	ckeywhitelist = list("tigercat2000")
 	character_name = list("Shadow Larkens")
 	cost = 5
+*/
 
 /datum/gear/fluff/konor_medal
 	path = /obj/item/clothing/accessory/medal/silver/unity

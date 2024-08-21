@@ -153,7 +153,7 @@
 /****************
 modular computers
 ****************/
-
+/* Outpost 21 edit - Removed modular computers
 /datum/gear/utility/cheaptablet
 	display_name = "tablet computer: cheap"
 	display_name = "tablet computer, cheap"
@@ -194,3 +194,4 @@ modular computers
 /datum/gear/utility/customlaptop/New()
 	..()
 	gear_tweaks += new /datum/gear_tweak/laptop()
+*/

@@ -564,6 +564,7 @@ var/global/datum/controller/occupations/job_master
 	if(job.req_admin_notify)
 		to_chat(H, "<span class='filter_notice'><b>You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.</b></span>")
 
+	/* Outpost 21 edit - Removed modular computers
 	// EMAIL GENERATION
 	// Email addresses will be created under this domain name. Mostly for the looks.
 	var/domain = "freemail.nt"
@@ -589,6 +590,7 @@ var/global/datum/controller/occupations/job_master
 			to_chat(H, "<span class='filter_notice'>Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes.</span>")
 			H.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
 	// END EMAIL GENERATION
+	*/
 
 	// Outpost 21 edit begin - initialize internal tanks, doing last for maximum safety
 	H.equip_disability_items()

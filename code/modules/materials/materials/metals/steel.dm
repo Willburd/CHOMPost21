@@ -63,12 +63,13 @@
 			new /datum/stack_recipe("emergency shutter", /obj/structure/firedoor_assembly, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 			new /datum/stack_recipe("multi-tile airlock assembly", /obj/structure/door_assembly/multi_tile, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 		)),
+		/* Outpost 21 edit - Removed modular computers
 		new /datum/stack_recipe_list("modular computer frames", list(
 			new /datum/stack_recipe("modular console frame", /obj/item/modular_computer/console, 20, recycle_material = "[name]"),\
 			new /datum/stack_recipe("modular telescreen frame", /obj/item/modular_computer/telescreen, 10, recycle_material = "[name]"),\
 			new /datum/stack_recipe("modular laptop frame", /obj/item/modular_computer/laptop, 10, recycle_material = "[name]"),\
 			new /datum/stack_recipe("modular tablet frame", /obj/item/modular_computer/tablet, 5, recycle_material = "[name]"),\
-		)),
+		)),*/
 		new /datum/stack_recipe_list("filing cabinets", list(
 			new /datum/stack_recipe("filing cabinet", /obj/structure/filingcabinet, 4, time = 20, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 			new /datum/stack_recipe("tall filing cabinet", /obj/structure/filingcabinet/filingcabinet, 4, time = 20, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
