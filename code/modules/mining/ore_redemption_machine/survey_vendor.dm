@@ -31,8 +31,10 @@
 		new /datum/data/mining_equipment("Survey Tools - Mapping Beacon",/obj/item/device/holomap_beacon,									25),
 		new /datum/data/mining_equipment("Survey Tools - Shovel",		/obj/item/weapon/shovel,											20),
 		new /datum/data/mining_equipment("Survey Tools - Mechanical Trap",	/obj/item/weapon/beartrap,										30),
+		/* Outpost 21 edit - Removed modular computers
 		new /datum/data/mining_equipment("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,	100),
 		new /datum/data/mining_equipment("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,	300),
+		*/
 		new /datum/data/mining_equipment("Injector (L) - Glucose",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,	30),
 		new /datum/data/mining_equipment("Injector (L) - Panacea",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/purity,	30),
 		new /datum/data/mining_equipment("Injector (L) - Trauma",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,	50),
@@ -110,8 +112,10 @@
 		EQUIPMENT("Absinthe",					/obj/item/weapon/reagent_containers/food/drinks/bottle/absinthe,	10),
 		EQUIPMENT("Whiskey",					/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,		10),
 		EQUIPMENT("Cigar",						/obj/item/clothing/mask/smokable/cigarette/cigar/havana,			15),
+		/* Outpost 21 edit - Removed modular computers
 		EQUIPMENT("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,	50),
 		EQUIPMENT("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,	100),
+		*/
 		EQUIPMENT("Industrial Equipment - Phoron Bore",	/obj/item/weapon/gun/magnetic/matfed/phoronbore/loaded,		300),
 		EQUIPMENT("Industrial Equipment - Inducer",			/obj/item/weapon/inducer,								750),
 		EQUIPMENT("Laser Pointer",				/obj/item/device/laser_pointer,										90),
@@ -121,7 +125,9 @@
 		EQUIPMENT("Soap",						/obj/item/weapon/soap/nanotrasen,									20),
 		EQUIPMENT("Thalers - 100",				/obj/item/weapon/spacecash/c100,									100),
 		EQUIPMENT("Umbrella",					/obj/item/weapon/melee/umbrella/random,								20),
+		/* Outpost 21 edit - Removed modular computers
 		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/device/uav,												40),
+		*/
 	//CHOMPedit Start
 	    EQUIPMENT("Mining-Grade PSG",			/obj/item/device/personal_shield_generator/belt/mining/loaded,		100),
 	    EQUIPMENT("Security-Grade PSG",			/obj/item/device/personal_shield_generator/belt/security/loaded,	200),

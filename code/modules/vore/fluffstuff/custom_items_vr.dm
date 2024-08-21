@@ -1250,6 +1250,7 @@
 	name = "Old security insignia"
 	desc = "Insignia denoting assignment to the security department. These fit Expeditionary Corps uniforms. This one seems to be from the 2100s..."
 
+/* Outpost 21 edit - Removed modular computers
 //Tigercat2000 - Shadow Larkens
 /obj/item/modular_computer/laptop/preset/custom_loadout/advanced/shadowlarkens
 	name = "Shadow's laptop computer"
@@ -1259,6 +1260,7 @@
 	icon_state_unpowered = "shadowlaptop-open"
 	icon_state = "shadowlaptop-open"
 	icon_state_closed = "shadowlaptop-closed"
+*/
 
 //Rboys2 - Clara Mali
 /obj/item/weapon/reagent_containers/food/drinks/glass2/fluff/claraflask
@@ -1492,6 +1494,7 @@ End CHOMP Removal*/
 	icon_state = "lemonplush"
 	attack_verb = list("blorbled", "slimed", "absorbed", "glomped")
 
+/* Outpost 21 edit - Removed modular computers
 //Bricker98:Nettie Stough
 /obj/item/modular_computer/tablet/preset/custom_loadout/nettie
   name = "Remodeled Tablet"
@@ -1509,7 +1512,7 @@ End CHOMP Removal*/
   nano_printer = new/obj/item/weapon/computer_hardware/nano_printer(src)
   battery_module = new/obj/item/weapon/computer_hardware/battery_module(src)
   battery_module.charge_to_full()
-
+*/
 
 //Stobarico - Kyu Comet
 /obj/item/instrument/piano_synth/fluff/kyutar

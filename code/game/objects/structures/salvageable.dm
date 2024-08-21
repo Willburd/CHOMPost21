@@ -71,14 +71,18 @@
 		/obj/item/trash/material/metal = 60,
 		/obj/item/weapon/stock_parts/capacitor = 60,
 		/obj/item/weapon/stock_parts/capacitor = 60,
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card = 40,
 		/obj/item/weapon/computer_hardware/network_card = 40,
 		/obj/item/weapon/computer_hardware/processor_unit = 40,
 		/obj/item/weapon/computer_hardware/processor_unit = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
-		/obj/item/weapon/stock_parts/capacitor/adv = 30,
+		*/
+		/obj/item/weapon/stock_parts/capacitor/adv = 30
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card/advanced = 20
+		*/
 	)
 /obj/structure/salvageable/computer/Initialize()
 	. = ..()
@@ -148,7 +152,8 @@
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/trash/material/circuit = 60,
-		/obj/item/trash/material/metal = 60,
+		/obj/item/trash/material/metal = 60
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card = 40,
 		/obj/item/weapon/computer_hardware/network_card = 40,
 		/obj/item/weapon/computer_hardware/processor_unit = 40,
@@ -162,6 +167,7 @@
 		/obj/item/weapon/computer_hardware/hard_drive/advanced = 30,
 		/obj/item/weapon/computer_hardware/hard_drive/advanced = 30,
 		/obj/item/weapon/computer_hardware/network_card/advanced = 20
+		*/
 	)
 
 /obj/structure/salvageable/data/Initialize()
@@ -177,10 +183,12 @@
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/trash/material/circuit = 60,
 		/obj/item/trash/material/metal = 60,
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card = 40,
 		/obj/item/weapon/computer_hardware/network_card = 40,
 		/obj/item/weapon/computer_hardware/processor_unit = 40,
 		/obj/item/weapon/computer_hardware/processor_unit = 40,
+		*/
 		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
 		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
 		/obj/item/weapon/stock_parts/subspace/analyzer = 40,
@@ -190,8 +198,10 @@
 		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
 		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
 		/obj/item/weapon/stock_parts/subspace/crystal = 30,
-		/obj/item/weapon/stock_parts/subspace/crystal = 30,
+		/obj/item/weapon/stock_parts/subspace/crystal = 30
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card/advanced = 20
+		*/
 	)
 
 /obj/structure/salvageable/server/Initialize()
@@ -206,7 +216,8 @@
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 70,
 		/obj/item/trash/material/circuit = 60,
-		/obj/item/trash/material/metal = 60,
+		/obj/item/trash/material/metal = 60
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card = 60,
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40,
 		/obj/item/weapon/computer_hardware/network_card/wired = 40,
@@ -217,6 +228,7 @@
 		/obj/item/weapon/computer_hardware/processor_unit/photonic/small = 30,
 		/obj/item/weapon/computer_hardware/hard_drive = 60,
 		/obj/item/weapon/computer_hardware/hard_drive/advanced = 40
+		*/
 	)
 
 /obj/structure/salvageable/personal/Initialize()
@@ -229,9 +241,11 @@
 	icon_state = "bliss0"
 	salvageable_parts = list(
 		/obj/item/weapon/stock_parts/console_screen = 90,
-		/obj/item/stack/cable_coil{amount = 5} = 90,
+		/obj/item/stack/cable_coil{amount = 5} = 90
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/processor_unit/photonic = 60,
 		/obj/item/weapon/computer_hardware/hard_drive/cluster = 50
+		*/
 	)
 
 /obj/structure/salvageable/bliss/Initialize()
@@ -308,12 +322,14 @@
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
+		/obj/item/weapon/stock_parts/capacitor = 60
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
 		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		*/
 	)
 
 /obj/structure/salvageable/implant_container_os
@@ -337,13 +353,15 @@
 	salvageable_parts = list(
 		/obj/item/weapon/stock_parts/console_screen = 90,
 		/obj/item/stack/cable_coil{amount = 5} = 90,
-		/obj/item/stack/material/glass{amount = 5} = 90,
+		/obj/item/stack/material/glass{amount = 5} = 90
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/processor_unit/small = 60,
 		/obj/item/weapon/computer_hardware/processor_unit/photonic = 50,
 		/obj/item/weapon/computer_hardware/hard_drive/super = 50,
 		/obj/item/weapon/computer_hardware/hard_drive/super = 50,
 		/obj/item/weapon/computer_hardware/hard_drive/cluster = 50,
 		/obj/item/weapon/computer_hardware/network_card/wired = 40
+		*/
 	)
 
 /obj/structure/salvageable/server_os
@@ -353,10 +371,12 @@
 		/obj/item/weapon/stock_parts/console_screen = 80,
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card/wired = 40,
 		/obj/item/weapon/computer_hardware/network_card/wired = 40,
 		/obj/item/weapon/computer_hardware/processor_unit = 40,
 		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
+		*/
 		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
 		/obj/item/weapon/stock_parts/subspace/amplifier = 40,
 		/obj/item/weapon/stock_parts/subspace/analyzer = 40,
@@ -366,8 +386,10 @@
 		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
 		/obj/item/weapon/stock_parts/subspace/transmitter = 40,
 		/obj/item/weapon/stock_parts/subspace/crystal = 30,
-		/obj/item/weapon/stock_parts/subspace/crystal = 30,
+		/obj/item/weapon/stock_parts/subspace/crystal = 30
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card/wired = 20
+		*/
 	)
 
 /obj/structure/salvageable/console_os
@@ -378,12 +400,14 @@
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/weapon/stock_parts/console_screen = 80,
 		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
+		/obj/item/weapon/stock_parts/capacitor = 60
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/processor_unit/small = 40,
 		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		*/
 	)
 
 /obj/structure/salvageable/console_broken_os
@@ -393,12 +417,14 @@
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/weapon/stock_parts/console_screen = 80,
 		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
+		/obj/item/weapon/stock_parts/capacitor = 60
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/processor_unit = 40,
 		/obj/item/weapon/computer_hardware/processor_unit/photonic = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/card_slot = 40,
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		*/
 	)
 
 /obj/structure/salvageable/slotmachine1
@@ -410,8 +436,10 @@
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
+		/obj/item/weapon/stock_parts/capacitor = 60
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		*/
 	)
 
 /obj/structure/salvageable/slotmachine2
@@ -423,6 +451,8 @@
 		/obj/item/stack/cable_coil{amount = 5} = 90,
 		/obj/item/stack/material/glass{amount = 5} = 90,
 		/obj/item/weapon/stock_parts/capacitor = 60,
-		/obj/item/weapon/stock_parts/capacitor = 60,
+		/obj/item/weapon/stock_parts/capacitor = 60
+		/* Outpost 21 edit - Removed modular computers
 		/obj/item/weapon/computer_hardware/network_card/advanced = 40
+		*/
 	)

@@ -225,7 +225,9 @@
 					/obj/item/weapon/book/codex/casino,
 					/obj/item/weapon/storage/wallet/casino,
 					/obj/item/device/flash,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/tablet/preset/custom_loadout/hybrid,
+					*/
 					/obj/item/weapon/spacecasinocash/c1000,
 					/obj/item/weapon/spacecasinocash/c500
 					)
@@ -312,7 +314,9 @@
 					/obj/item/weapon/book/codex/casino,
 					/obj/item/weapon/storage/wallet/casino,
 					/obj/item/device/flash,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
+					*/
 					/obj/item/weapon/spacecasinocash/c1000,
 					/obj/item/weapon/spacecasinocash/c500
 					)
