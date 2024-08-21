@@ -281,7 +281,7 @@
 					active_record = diskette.stored.mydna // Traitgenes edit - Storing the entire body record
 					set_temp("Successfully loaded from disk.", "success")
 				if("save")
-					if(isnull(diskette) || diskette.read_only || isnull(active_record))
+					if(isnull(diskette) || isnull(active_record)) // Traitgenes edit - Removed readonly
 						set_temp("Error: The data could not be saved.", "danger")
 						return
 

@@ -819,7 +819,7 @@
 				// Traitgenes edit begin - Storing the entire body record
 				if("loadDisk")
 					playsound(src, "keyboard", 40) // Traitgenes edit - Better UI sounds
-					if(isnull(disk) || disk.read_only || !disk.stored)
+					if(isnull(disk) || !disk.stored) // Traitgenes edit - Removed readonly
 						return
 					// Traitgenes edit begin - Properly clone records
 					var/datum/transhuman/body_record/databuf = new /datum/transhuman/body_record()
@@ -829,7 +829,7 @@
 					buffers[bufferId] = databuf
 				if("saveDisk")
 					playsound(src, "keyboard", 40) // Traitgenes edit - Better UI sounds
-					if(isnull(disk) || disk.read_only)
+					if(isnull(disk)) // Traitgenes edit - Removed readonly
 						return
 					var/datum/transhuman/body_record/buf = buffers[bufferId]
 					// Traitgenes edit begin - Properly clone records
@@ -848,7 +848,7 @@
 		if("wipeDisk")
 			playsound(src, "keyboard", 40) // Traitgenes edit - Better UI sounds
 			// Traitgenes edit begin - Storing the entire body record
-			if(isnull(disk) || disk.read_only)
+			if(isnull(disk))
 				return
 			disk.stored = null
 			// Traitgenes edit end
