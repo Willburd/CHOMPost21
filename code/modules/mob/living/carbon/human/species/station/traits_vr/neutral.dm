@@ -265,10 +265,27 @@
 	custom_only = FALSE
 	var_changes = list("trashcan" = 1)
 
+	// Traitgenes edit begin - made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your stomach feels strange."
+	primitive_expression_messages=list("eats something off the ground.")
+	// Traitgenes edit end
+
 /datum/trait/neutral/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
 	add_verb(H,/mob/living/proc/toggle_trash_catching) //Ported from chompstation //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - made into a genetrait
+/datum/trait/neutral/trashcan/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	..()
+	if(/mob/living/carbon/human/proc/remoteobserve in S.inherent_verbs)
+		remove_verb(H,/mob/living/carbon/human/proc/remoteobserve)
+	if(/mob/living/proc/toggle_trash_catching in S.inherent_verbs)
+		remove_verb(H,/mob/living/proc/toggle_trash_catching)
+// Traitgenes edit end
 
 /datum/trait/neutral/gem_eater
 	name = "Expensive Taste"
@@ -277,9 +294,24 @@
 	custom_only = FALSE
 	var_changes = list("organic_food_coeff" = 0, "eat_minerals" = 1)
 
+	// Traitgenes edit begin - made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your stomach feels strange."
+	primitive_expression_messages=list("eats something off the ground.")
+	// Traitgenes edit end
+
 /datum/trait/neutral/gem_eater/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/eat_minerals) //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - made into a genetrait
+/datum/trait/neutral/gem_eater/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	..()
+	if(/mob/living/proc/eat_minerals in S.inherent_verbs)
+		add_verb(H,/mob/living/proc/eat_minerals)
+// Traitgenes edit end
 
 /datum/trait/neutral/synth_chemfurnace
 	name = "Biofuel Processor"
@@ -371,9 +403,22 @@
 	custom_only = FALSE
 	var/allergen = ALLERGEN_GRAINS
 
+	// Traitgenes edit begin - Made ALL ALLERGYS into gene traits
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Something feels odd..."
+	// Traitgenes edit end
+
 /datum/trait/neutral/allergy/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	S.allergens |= allergen
 	..()
+
+// Traitgenes edit begin - Made ALL ALLERGYS into gene traits
+/datum/trait/neutral/allergy/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+	S.allergens &= ~allergen
+	..()
+// Traitgenes edit end
 
 /datum/trait/neutral/allergy/meat
 	name = "Allergy: Meat"
@@ -536,6 +581,13 @@
 	custom_only = FALSE
 	var_changes = list("spice_mod" = 3) // 300% as effective if spice_mod is set to 1. If it's not 1 in species.dm, update this!
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your belly feels strange..."
+	// Traitgenes edit end
+
 /datum/trait/neutral/spice_intolerance_basic
 	name = "Spice Intolerance, Heavy"
 	desc = "Spicy (and chilly) peppers are twice as strong. (This does not affect pepperspray.)"
@@ -571,6 +623,13 @@
 	custom_only = FALSE
 	var_changes = list("spice_mod" = 0.25) // 25% as effective if spice_mod is set to 1. If it's not 1 in species.dm, update this!
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your belly feels strange..."
+	// Traitgenes edit end
+
 // Alcohol Traits Start Here, from negative to positive.
 /datum/trait/neutral/alcohol_intolerance_advanced
 	name = "Liver of Air"
@@ -578,6 +637,13 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("chem_strength_alcohol" = 0.33)
+
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your belly feels strange..."
+	// Traitgenes edit end
 
 /datum/trait/neutral/alcohol_intolerance_basic
 	name = "Liver of Lilies"
@@ -621,6 +687,13 @@
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("chem_strength_alcohol" = 4)
+
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your belly feels strange..."
+	// Traitgenes edit end
 // Alcohol Traits End Here.
 
 /datum/trait/neutral/colorblind/mono
@@ -829,9 +902,23 @@
 	cost = 0
 	custom_only = FALSE
 
+	// Traitgenes edit begin - made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your mind feels more powerful."
+	// Traitgenes edit end
+
 /datum/trait/neutral/dominate_predator/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/proc/dominate_predator) //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - made into a genetrait
+/datum/trait/neutral/dominate_predator/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	..()
+	if(/mob/proc/dominate_predator in S.inherent_verbs)
+		remove_verb(H,/mob/proc/dominate_predator)
+// Traitgenes edit end
 
 /datum/trait/neutral/dominate_prey
 	name = "Dominate Prey"
@@ -839,9 +926,23 @@
 	cost = 0
 	custom_only = FALSE
 
+	// Traitgenes edit begin - made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your mind feels more powerful."
+	// Traitgenes edit end
+
 /datum/trait/neutral/dominate_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/dominate_prey) //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - made into a genetrait
+/datum/trait/neutral/dominate_prey/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	..()
+	if(/mob/living/proc/dominate_prey in S.inherent_verbs)
+		add_verb(H,/mob/living/proc/dominate_prey)
+// Traitgenes edit end
 
 /datum/trait/neutral/submit_to_prey
 	name = "Submit To Prey"
@@ -849,9 +950,23 @@
 	cost = 0
 	custom_only = FALSE
 
+	// Traitgenes edit begin - made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your mind feels more fluid."
+	// Traitgenes edit end
+
 /datum/trait/neutral/submit_to_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/lend_prey_control) //CHOMPEdit TGPanel
+
+// Traitgenes edit begin - made into a genetrait
+/datum/trait/neutral/submit_to_prey/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	..()
+	if(/mob/living/proc/lend_prey_control in S.inherent_verbs)
+		add_verb(H,/mob/living/proc/lend_prey_control) //CHOMPEdit TGPanel
+// Traitgenes edit end
 
 /datum/trait/neutral/vertical_nom
 	name = "Vertical Nom"

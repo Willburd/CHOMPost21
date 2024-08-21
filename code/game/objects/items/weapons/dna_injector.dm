@@ -211,6 +211,14 @@
 	pick_block( pick(GLOB.dna_genes_bad), TRUE, FALSE)
 	. = ..()
 
+// Random neutral traits
+/obj/item/weapon/dnainjector/random_neutral/Initialize()
+	pick_block( pick(GLOB.dna_genes_neutral ), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_neutral_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_neutral ), TRUE, TRUE)
+	. = ..()
 
 // If you want a unique injector, use a subtype of these
 /obj/item/weapon/dnainjector/set_trait

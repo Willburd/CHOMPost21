@@ -30,7 +30,8 @@
 
 /datum/trait/positive/superpower_remoteview/unapply(datum/species/S, mob/living/carbon/human/H)
 	. = ..()
-	remove_verb(H, /mob/living/carbon/human/proc/remoteobserve)
+	if(/mob/living/carbon/human/proc/remoteobserve in S.inherent_verbs)
+		remove_verb(H, /mob/living/carbon/human/proc/remoteobserve)
 
 /datum/trait/positive/superpower_regenerate
 	name = "Regenerate"
