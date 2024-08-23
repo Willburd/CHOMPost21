@@ -73,6 +73,7 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_mud/indoor)
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_plate/indoor)
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_cave/indoor)
+MURIKI_TURF_CREATE_UN(/turf/simulated/floor/lava)
 
 /turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
 	name = "rocks"

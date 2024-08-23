@@ -22,11 +22,15 @@
 #include "spider_A.dmm"
 #include "liminal_A.dmm"
 #include "liminal_B.dmm"
+#include "liminal_C.dmm"
 #include "redspace_A.dmm"
 #include "redspace_B.dmm"
 #include "redspace_C.dmm"
 #include "statue_A.dmm"
 #include "hole_A.dmm"
+#include "lava_A.dmm"
+#include "lava_B.dmm"
+#include "biohazard_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -129,6 +133,22 @@
 	discard_prob = 20
 	cost = 5
 
+/datum/map_template/outpost21/muriki/caves_deepdark/lava_A
+	name = "Lava A"
+	desc = "Random lava."
+	mappath = 'maps/submaps/outpost21/deepdark/lava_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/lava_B
+	name = "Lava B"
+	desc = "Random lava."
+	mappath = 'maps/submaps/outpost21/deepdark/lava_B.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 60
+	cost = 15
+
 //////////////////////////////////////////////////////////////
 // Huge structures in the cave
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/cave_A
@@ -219,6 +239,14 @@
 	discard_prob = 20
 	cost = 30
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_C
+	name = "Liminal C"
+	desc = "Random liminal space."
+	mappath = 'maps/submaps/outpost21/deepdark/liminal_C.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 40
+	cost = 10
+
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_A
 	name = "Red A"
 	desc = "Random redspace leak."
@@ -258,6 +286,14 @@
 	allow_duplicates = FALSE
 	discard_prob = 75
 	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/biohazard_A
+	name = "biohazard A"
+	desc = "Random biohazard."
+	mappath = 'maps/submaps/outpost21/deepdark/biohazard_A.dmm'
+	allow_duplicates = TRUE
+	discard_prob = 75
+	cost = 20
 
 
 //////////////////////////////////////////////////////////////
