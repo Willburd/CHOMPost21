@@ -135,10 +135,12 @@
 	H.UpdateAppearance()
 	H.sync_dna_traits(FALSE) // Traitgenes edit - Sync traits to genetics if needed
 	H.sync_organ_dna()
-	if(heal_level < 60 && prob(10)) // Traitgenes edit - This happens WAY more often now that genetics works, nerfed with a percent
+	/* Outpost 21 edit - Lets not
+	if(heal_level < 60)
 		randmutb(H) //Sometimes the clones come out wrong.
 		H.dna.UpdateSE()
 		H.dna.UpdateUI()
+	*/
 
 	H.set_cloned_appearance()
 	update_icon()
