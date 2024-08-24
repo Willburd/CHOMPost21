@@ -47,6 +47,12 @@
 	ckeywhitelist = list("darklord92","remthebold")
 	character_name = list("Tesum Shari","Trashfire")
 
+/datum/gear/fluff/ESHUI_medaldefop
+	display_name = "ESHUI Defensive Operations Medal"
+	path = /obj/item/clothing/accessory/medal/solgov/iron/star/eshui
+	ckeywhitelist = list("jollytjerry11")
+	character_name = list("Shawn Foley")
+
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
