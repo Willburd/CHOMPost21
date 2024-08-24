@@ -29,7 +29,7 @@
 	create_reagents(200)
 	. = ..()
 	default_apply_parts()
-	cell = default_use_hicell()
+	cell = locate(/obj/item/weapon/cell/high) in component_parts // Outpost 21 edit - Use the cell provided
 
 	Output = new(src)
 
