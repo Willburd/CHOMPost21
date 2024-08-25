@@ -77,7 +77,7 @@
 				if(CanUseTopic(user) && msg)
 					pref.flavor_texts[href_list["flavor_text"]] = msg
 		// Outpost 21 edit begin - Don't do this if called from the design console.
-		if(isnewplayer(user))
+		if(!istype(pref,/datum/preferences/designer))
 			SetFlavorText(user)
 		// Outpost 21 edit end
 		return TOPIC_HANDLED
