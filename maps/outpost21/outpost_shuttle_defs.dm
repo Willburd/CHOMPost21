@@ -207,20 +207,16 @@
 	landmark_tag = "skipjack_transit"
 
 /obj/effect/shuttle_landmark/premade/skipjack/station_ne
-	name = "ES Outpost 21 (NE)"
-	landmark_tag = "skipjack_station_ne"
+	name = "ES Outpost 21 (Mountains)"
+	landmark_tag = "skipjack_station_mount"
 
 /obj/effect/shuttle_landmark/premade/skipjack/station_nw
-	name = "ES Outpost 21 (NW)"
-	landmark_tag = "skipjack_station_nw"
+	name = "Reclaimation Yard (West)"
+	landmark_tag = "skipjack_yard_west"
 
 /obj/effect/shuttle_landmark/premade/skipjack/station_se
-	name = "ES Outpost 21 (SE)"
-	landmark_tag = "skipjack_station_se"
-
-/obj/effect/shuttle_landmark/premade/skipjack/station_sw
-	name = "ES Outpost 21 (SW)"
-	landmark_tag = "skipjack_station_sw"
+	name = "Reclaimation Yard (East)"
+	landmark_tag = "skipjack_yard_east"
 
 //////////////////////////////////////////////////////////////
 // ERT Shuttle

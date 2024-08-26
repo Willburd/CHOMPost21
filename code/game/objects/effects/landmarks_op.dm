@@ -179,11 +179,15 @@
 			var/newpath = pick(prob(30);/obj/effect/mine,
 				prob(25);/obj/effect/mine/frag,
 				prob(2);/obj/effect/mine/emp,
+				prob(1);/obj/effect/mine/dnascramble,
 				prob(10);/obj/effect/mine/stun,
 				prob(10);/obj/effect/mine/incendiary,
 				prob(10);/obj/effect/mine/spiders,
 				prob(10);/obj/effect/mine/portal)
 			var/obj/effect/mine/M = new newpath()
+			if(prob(60))
+				M.camo_net = TRUE
+				M.alpha = 50 // Wish this was part of a proc instead of magic num
 			M.loc = src.loc
 
 		if(3)
@@ -230,8 +234,12 @@
 				/obj/effect/mine/portal,
 				/obj/effect/mine/glue,
 				/obj/effect/mine/confetti,
-				/obj/effect/mine/lube)
+				/obj/effect/mine/lube,
+				/obj/effect/mine/dnascramble)
 			var/obj/effect/mine/M = new newpath()
+			if(prob(20))
+				M.camo_net = TRUE
+				M.alpha = 50 // Wish this was part of a proc instead of magic num
 			M.loc = src.loc
 
 		if(2)
