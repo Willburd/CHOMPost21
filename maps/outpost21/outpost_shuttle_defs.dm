@@ -185,15 +185,14 @@
 	cloaked = TRUE
 	announcer = "Automated Traffic Control"
 	arrival_message = "Attention.  Unidentified object approaching the colony."
-	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Borealis gravity well with current velocity."
+	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Muriki gravity well with current velocity."
 	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
 
 	destination_tags = list(
 		"skipjack_base",
-		"skipjack_station_ne",
-		"skipjack_station_nw",
-		"skipjack_station_se",
-		"skipjack_station_sw"
+		"skipjack_station_mount",
+		"skipjack_yard_west",
+		"skipjack_yard_east"
 	)
 
 /obj/effect/shuttle_landmark/premade/skipjack/base
