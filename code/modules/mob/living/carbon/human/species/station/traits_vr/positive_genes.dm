@@ -85,6 +85,7 @@
 	if(!(/mob/living/carbon/human/proc/remotesay in S.inherent_verbs))
 		remove_verb(H, /mob/living/carbon/human/proc/remotesay)
 
+/* Too out of date to port, only handles old UI values, can't do markings or other cosmetics... replace with promie verbs?
 /datum/trait/positive/superpower_morph
 	name = "Morph"
 	desc = "It's morphing time!"
@@ -106,6 +107,7 @@
 	. = ..()
 	if(!(/mob/living/carbon/human/proc/morph in S.inherent_verbs))
 		remove_verb(H, /mob/living/carbon/human/proc/morph)
+*/
 
 /* Replaced by /datum/trait/neutral/coldadapt
 /datum/trait/positive/superpower_cold_resist
