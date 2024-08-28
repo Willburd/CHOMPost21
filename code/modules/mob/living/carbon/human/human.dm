@@ -1018,6 +1018,13 @@
 						H.brainmob.mind.transfer_to(src)
 						qdel(H)
 
+	// Traitgenes edit begin - Disable all traits currently active, before prefs.copy_to() is applied, as it refreshes the traits list!
+	for(var/datum/gene/trait/gene in GLOB.dna_genes)
+		if(gene.name in active_genes)
+			gene.deactivate(src)
+			active_genes -= gene.name
+	// Traitgenes edit end
+
 	// Vorestation Addition - reapply markings/appearance from prefs for player mobs
 	if(client) //just to be sure
 		client.prefs.copy_to(src)
