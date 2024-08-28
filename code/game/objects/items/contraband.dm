@@ -13,7 +13,7 @@
 	name = "bottle of Zoom pills"
 	desc = "Highly illegal drug. Trade brain for speed."
 	wrapper_color = COLOR_BLUE
-	starts_with = list(/obj/item/weapon/reagent_containers/pill/zoom = 7)
+	starts_with = list(/obj/item/weapon/reagent_containers/pill/zoom_old = 7) // Outpost 21 edit - Zoom pill rebalanced yet again
 
 /obj/item/weapon/reagent_containers/glass/beaker/vial/random
 	flags = 0
