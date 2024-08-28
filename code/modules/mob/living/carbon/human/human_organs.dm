@@ -216,7 +216,7 @@
 	var/flgs = MUTCHK_FORCED
 	if(hide_message)
 		flgs |= MUTCHK_HIDEMSG
-	domutcheck( src, null, hide_message)
+	domutcheck( src, null, flgs)
 // Traitgenes edit end
 
 /mob/living/carbon/human/proc/sync_organ_dna()

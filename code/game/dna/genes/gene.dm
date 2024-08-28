@@ -32,18 +32,18 @@
 
 // Return 1 if we can activate.
 // HANDLE MUTCHK_FORCED HERE!
-/datum/gene/proc/can_activate(var/mob/M, var/flags) // Traitgenes edit - Removed /dna/ from path
+/datum/gene/proc/can_activate(var/mob/M, var/mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return 0
 
 // Called when the gene activates.  Do your magic here.
-/datum/gene/proc/activate(var/mob/M, var/connected, var/flags) // Traitgenes edit - Removed /dna/ from path
+/datum/gene/proc/activate(var/mob/M, var/connected, var/mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return
 
 /**
 * Called when the gene deactivates.  Undo your magic here.
 * Only called when the block is deactivated.
 */
-/datum/gene/proc/deactivate(var/mob/M, var/connected, var/flags) // Traitgenes edit - Removed /dna/ from path
+/datum/gene/proc/deactivate(var/mob/M, var/connected, var/mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return
 
 // This section inspired by goone's bioEffects.
@@ -141,7 +141,6 @@
 
 /datum/gene/trait
 	desc="Gene linked to a trait."
-	var/activation_prob=100 // For sanity sakes, at least right now...
 	var/datum/trait/linked_trait = null // Internal use, do not assign.
 	var/list/conflict_traits = list() // Cache known traits that don't work with this one, instead of doing it all at once, or EVERY time we do a mutation check
 
@@ -163,17 +162,23 @@
 		return linked_trait.desc
 	return desc
 
-/datum/gene/trait/can_activate(var/mob/M,var/flags)
-	// Probability checks only
-	if(flags & MUTCHK_FORCED || activation_prob >= 100)
-		return TRUE
-	return probinj(activation_prob,(flags&MUTCHK_FORCED))
+/datum/gene/trait/can_activate(var/mob/M,var/mut_flags)
+	return TRUE // We don't do probability checks for trait genes, due to the spiderweb of logic they are with conflicting genes. Check has_conflicts() for how conflicting traits are handled.
 
+/**
+ * Behold the CONFLICT-O-TRON. Checks for trait conflicts the same way code\modules\client\preference_setup\vore\07_traits.dm does,
+ * and then caches the results. Cause traits can't change conflicts mid-round. Unless that changes someday, god help us all if so.
+ * You do not need to add any unique exceptions here, check trait code instead if you want to handle conflicts and forced exceptions.
+ * They already handle it. This just uses the same system. - Willbird
+ *
+ * quick_scan = FALSE, will do a deep conflict check. Checking every trait in the list, and not just failing out at the first one that conflicts.
+ *
+ * Recommended way to write has_conflict calls:
+ * ```
+ * has_conflict(traits_to_check = list(trait_path))
+ * ```
+ */
 /datum/gene/trait/proc/has_conflict(var/list/traits_to_check, var/quick_scan = TRUE)
-	// Behold the CONFLICT-O-TRON. Checks for trait conflicts the same way code\modules\client\preference_setup\vore\07_traits.dm does,
-	// and then caches the results. Cause traits can't change conflicts mid-round. Unless that changes someday, god help us all if so.
-	// You do not need to add any unique exceptions here, check trait code instead if you want to handle conflicts and forced exceptions.
-	// They already handle it. This just uses the same system. - Willbird
 	var/has_conflict = FALSE
 	var/path = linked_trait.type
 	for(var/P in traits_to_check)
@@ -218,7 +223,7 @@
 				continue
 	return has_conflict
 
-/datum/gene/trait/activate(var/mob/M)
+/datum/gene/trait/activate(var/mob/M, var/connected, var/mut_flags)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
@@ -230,10 +235,10 @@
 			if(!(linked_trait.type in H.dna.species_traits)) // Set species traits too
 				H.dna.species_traits.Add(linked_trait.type)
 			// message player with change
-			if(flags & MUTCHK_HIDEMSG <= 0)
+			if(!(mut_flags & MUTCHK_HIDEMSG))
 				linked_trait.send_message( H, TRUE)
 
-/datum/gene/trait/deactivate(var/mob/M)
+/datum/gene/trait/deactivate(var/mob/M, var/connected, var/mut_flags)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
@@ -246,5 +251,5 @@
 			if(linked_trait.type in H.dna.species_traits) // Clear species traits too
 				H.dna.species_traits.Remove(linked_trait.type)
 			// message player with change
-			if(flags & MUTCHK_HIDEMSG <= 0)
+			if(!(mut_flags & MUTCHK_HIDEMSG))
 				linked_trait.send_message( H, FALSE)
