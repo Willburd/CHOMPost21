@@ -224,8 +224,7 @@
 		if(H.dna)
 			H.dna.SetSEState(linked_gene.block, FALSE, FALSE) // Turn this thing off or so help me--
 			domutcheck(H,null,MUTCHK_FORCED)
-		else
-			H.mutations.Remove(HULK)
+		H.mutations.Remove(HULK)
 		H.Weaken(3)
 		H.emote("collapse")
 
