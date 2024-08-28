@@ -455,7 +455,7 @@
 					else
 						to_chat(nerd, "<span class='danger'>You're so tiny that the pull of the trigger causes you to drop the gun!</span>")
 				// Outpost 21 edit begin - Lightweights get knocked back if standing
-				else if(nerd.species.lightweight && one_handed_penalty >= 30 && recoil_mode > 0)
+				else if((nerd.species.lightweight || nerd.species.lightweight_light) && one_handed_penalty >= 30 && recoil_mode > 0)
 					var/old_dir = nerd.dir
 					// Laying down stops this
 					if(!nerd.resting)
