@@ -263,8 +263,10 @@
 /obj/item/weapon/dnainjector/set_trait/haste
 	trait_path = /datum/trait/positive/speed_fast
 
+/* Too out of date to port, only handles old UI values, can't do markings or other cosmetics... replace with promie verbs?
 /obj/item/weapon/dnainjector/set_trait/morph
 	trait_path = /datum/trait/positive/superpower_morph
+*/
 
 /obj/item/weapon/dnainjector/set_trait/nonconduct
 	trait_path = /datum/trait/positive/nonconductive_plus
