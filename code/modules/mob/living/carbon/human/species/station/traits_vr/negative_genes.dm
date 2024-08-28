@@ -49,7 +49,7 @@
 	is_genetrait = TRUE
 	hidden = FALSE
 
-	disability=CLUMSY
+	mutation=CLUMSY
 	activation_message="You feel lightheaded."
 	primitive_expression_messages=list("trips.")
 
