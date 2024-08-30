@@ -16,6 +16,9 @@ var/global/client_record_update_lock = FALSE
 
 
 /proc/client_update_record(var/obj/machinery/computer/COM, var/user)
+	if(!COM || QDELETED(COM))
+		return "Invalid console"
+
 	if(jobban_isbanned(user, "Records") )
 		COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
 		playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
@@ -23,21 +26,22 @@ var/global/client_record_update_lock = FALSE
 
 	var/record_string = ""
 	var/datum/data/record/active
+	var/console_path = null
 	if(istype(COM,/obj/machinery/computer/med_data))
-		if(COM && !QDELETED(COM))
-			var/obj/machinery/computer/med_data/MCOM = COM
-			active = MCOM.active2
+		var/obj/machinery/computer/med_data/MCOM = COM
+		active = MCOM.active2
 		record_string = "medical"
+		console_path = /obj/machinery/computer/med_data
 	if(istype(COM,/obj/machinery/computer/skills))
-		if(COM && !QDELETED(COM))
-			var/obj/machinery/computer/skills/ECOM = COM
-			active = ECOM.active1
+		var/obj/machinery/computer/skills/ECOM = COM
+		active = ECOM.active1
 		record_string = "employment"
+		console_path = /obj/machinery/computer/skills
 	if(istype(COM,/obj/machinery/computer/secure_data))
-		if(COM && !QDELETED(COM))
-			var/obj/machinery/computer/secure_data/SCOM = COM
-			active = SCOM.active2
+		var/obj/machinery/computer/secure_data/SCOM = COM
+		active = SCOM.active2
 		record_string = "security"
+		console_path = /obj/machinery/computer/secure_data
 
 	if(client_record_update_lock)
 		to_chat(user,"Update already in progress! Please wait a moment...")
@@ -49,14 +53,14 @@ var/global/client_record_update_lock = FALSE
 	spawn(60 SECONDS)
 		client_record_update_lock = FALSE
 
-	to_chat(user,"Update sent! Please wait for a response...")
-	message_admins("[user] pushed [record_string] record update to [active.fields["name"]].")
-
-	if(!active)
+	if(!active || !console_path)
 		if(COM && !QDELETED(COM))
 			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Record or console destroyed)"
+
+	to_chat(user,"Update sent! Please wait for a response...")
+	message_admins("[user] pushed [record_string] record update to [active.fields["name"]].")
 
 	var/mob/M = get_current_mob_from_record(active)
 	if(!M)
@@ -95,26 +99,31 @@ var/global/client_record_update_lock = FALSE
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Client does not exist)"
 
-	// Update records in the consoles
-	if(COM && !QDELETED(COM))
-		if(istype(COM,/obj/machinery/computer/med_data))
+	// Update records in the consoles, remember this can happen a while after a record is closed on the console... Use cached data.
+	switch(console_path)
+		if(/obj/machinery/computer/med_data)
 			P.med_record = new_data
-			var/obj/machinery/computer/med_data/MCOM = COM
-			MCOM.active2.fields["notes"] = new_data
-		if(istype(COM,/obj/machinery/computer/skills))
+			if(active)
+				active.fields["notes"] = new_data
+		if(/obj/machinery/computer/skills)
 			P.gen_record = new_data
-			var/obj/machinery/computer/skills/ECOM = COM
-			ECOM.active1.fields["notes"] = new_data
-		if(istype(COM,/obj/machinery/computer/secure_data))
+			if(active)
+				active.fields["notes"] = new_data
+		if(/obj/machinery/computer/secure_data)
 			P.sec_record = new_data
-			var/obj/machinery/computer/secure_data/SCOM = COM
-			SCOM.active2.fields["notes"] = new_data
+			if(active)
+				active.fields["notes"] = new_data
 
+	// Update player record
 	P.save_preferences()
 	P.save_character()
+	if(M)
+		to_chat(M,SPAN_NOTICE("Your [record_string] record for [active.fields["name"]] has been updated."))
 	message_admins("[active.fields["name"]] accepted the [record_string] record update from [user].")
 
+		// ding!
 	if(COM && !QDELETED(COM))
 		COM.visible_message(SPAN_NOTICE("\The [COM] dings!"))
 		playsound(COM, 'sound/machines/ding.ogg', 50, 1)
+
 	return "Record syncronized."
