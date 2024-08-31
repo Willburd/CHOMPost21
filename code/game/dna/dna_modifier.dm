@@ -458,7 +458,7 @@
 		occupantData["name"] = connected.occupant.real_name
 		occupantData["stat"] = connected.occupant.stat
 		occupantData["isViableSubject"] = 1
-		if(NOCLONE in connected.occupant.mutations || !src.connected.occupant.dna)
+		if(NOCLONE in connected.occupant.mutations || !src.connected.occupant.dna || src.connected.occupant.isSynthetic()) // Traitgenes edit - Synthetics cannot be mutated
 			occupantData["isViableSubject"] = 0
 		occupantData["health"] = connected.occupant.health
 		occupantData["maxHealth"] = connected.occupant.maxHealth
