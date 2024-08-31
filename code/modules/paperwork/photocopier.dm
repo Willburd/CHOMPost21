@@ -305,6 +305,8 @@
 				temp_img = icon('icons/obj/butts_op.dmi', "sergal")
 			if(SPECIES_NEVREAN)
 				temp_img = icon('icons/obj/butts_op.dmi', "nevrean")
+			if(SPECIES_ALTEVIAN)
+				temp_img = icon('icons/obj/butts_op.dmi', "altevian")
 			// Outpost 21 edit end
 			/* // Commented out because no icons exist, BUT if someone wants to sprite some more ASSCHEEKS, then just uncomment these and you have asses for each species. - Rykka.
 			if(SPECIES_SHADEKIN || SPECIES_SHADEKIN_CREW)
