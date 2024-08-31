@@ -59,7 +59,7 @@
 			list(/obj/item/device/personal_shield_generator/belt/mining/loaded, 6) = 2,
 			list(pick(subtypesof(/obj/item/weapon/melee/energy/sword) - /obj/item/weapon/melee/energy/sword/charge), 6) = 2,
 			// Traitgenes edit begin - New injector loot
-			list(/obj/item/weapon/dnainjector/random_good,/obj/item/weapon/dnainjector/random_good_labeled,/obj/item/weapon/dnainjector/random_labeled,/obj/item/weapon/dnainjector/random, 6) = 2,
+			list(pick(/obj/item/weapon/dnainjector/random_good,/obj/item/weapon/dnainjector/random_good_labeled,/obj/item/weapon/dnainjector/random_labeled,/obj/item/weapon/dnainjector/random), 6) = 2,
 			/*
 			list(pick(/obj/item/weapon/dnainjector/xraymut, /obj/item/weapon/dnainjector/nobreath, /obj/item/weapon/dnainjector/insulation), 6) = 2,
 			*/ // Traitgenes edit end
