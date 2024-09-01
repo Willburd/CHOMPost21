@@ -393,8 +393,8 @@ var/datum/planet/muriki/planet_muriki = null
 	var/max_lightning_cooldown = 15 SECONDS
 
 	transition_chances = list(
-		WEATHER_DOWNPOURFATAL = 90,
-		WEATHER_STORM = 10
+		WEATHER_DOWNPOURFATAL = 95,
+		WEATHER_STORM = 5
 	)
 	observed_message = "Extreme rain is crushing you, get to cover!"
 	transition_messages = list(
@@ -477,7 +477,8 @@ var/datum/planet/muriki/planet_muriki = null
 	var/max_lightning_cooldown = 3 SECONDS
 
 	transition_chances = list(
-		WEATHER_RAIN = 90,
+		WEATHER_DOWNPOURFATAL = 65,
+		WEATHER_RAIN = 25,
 		WEATHER_CLEAR = 10
 	)
 	observed_message = "Extreme rain is crushing you, get to cover!"
