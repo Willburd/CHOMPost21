@@ -74,7 +74,7 @@
 	loot_list = list(/obj/item/borg/upgrade/basic/syndicate = 6, /obj/item/borg/upgrade/basic/vtec = 6, /obj/item/weapon/material/knife/ritual = 6 /* Outpost 21 edit - Nif removal: , /obj/item/weapon/disk/nifsoft/compliance = 6*/ )
 
 	can_be_drop_prey = FALSE //CHOMP Add
-	allow_mind_transfer = TRUE //CHOMPAdd
+	allow_mind_transfer = TRUE
 
 	// Outpost 21 edit begin - muriki enzyme immunity
 	enzyme_affect = FALSE

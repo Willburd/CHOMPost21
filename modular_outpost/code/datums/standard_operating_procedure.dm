@@ -272,6 +272,8 @@
 			<br/>\
 			<br/><b>Illegal parking:</b> To park a vehicle in such a way that it becomes a nuisance or hazard to crew movement. <b>Minimum sentence:</b> Immediate impound of the vehicle, 500 Thalers. Vehicle cannot be returned from impound until the fine is paid.\
 			<br/>\
+			<br/><b>Kidnapping:</b> To forcibly imprison, detain, or restrict movement of a crew member, when NOT acting in a lawful security or medical manner. <b>Minimum sentence:</b> 1 hour brig, 1000 Thalers.\
+			<br/>\
 			<br/><b>Manslaughter:</b> To accidentally kill a crew member, often through negligence, without malice or forethought. <b>Minimum sentence:</b> 1 hour brig, 2000 Thalers. Trial required.\
 			<br/>\
 			<br/><b>Medical Malpractice:</b> To deviate from medical standards by neglect or omission, in a way that causes injury or death to a patient. <b>Minimum sentence:</b> 2 hours brig, 1500 Thalers.\
