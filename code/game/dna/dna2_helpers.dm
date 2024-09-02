@@ -169,6 +169,12 @@
 		var/hair = dna.GetUIValueRange(DNA_UI_HAIR_STYLE,hair_styles_list.len)
 		if((0 < hair) && (hair <= hair_styles_list.len))
 			H.h_style = hair_styles_list[hair]
+		// Outpost 21 edit begin - missing dna entry
+		H.grad_style = dna.grad_style
+		H.r_grad = dna.r_grad
+		H.g_grad = dna.g_grad
+		H.b_grad = dna.b_grad
+		// Outpost 21 edit end
 
 		//Facial Hair
 		var/beard = dna.GetUIValueRange(DNA_UI_BEARD_STYLE,facial_hair_styles_list.len)
@@ -247,6 +253,13 @@
 		H.species.blood_reagents = dna.blood_reagents // Outpost 21 edit - missing dna entry
 		H.fuzzy = dna.scale_appearance // Outpost 21 edit - missing dna entry
 		H.offset_override = dna.offset_override // Outpost 21 edit - missing dna entry
+		H.synth_markings = dna.synth_markings // Outpost 21 edit - missing dna entry
+		// Outpost 21 edit begin - missing dna entry
+		H.grad_style = dna.grad_style
+		H.r_grad = dna.r_grad
+		H.g_grad = dna.g_grad
+		H.b_grad = dna.b_grad
+		// Outpost 21 edit end
 		H.custom_heat = dna.custom_heat
 		H.custom_cold = dna.custom_cold
 		var/datum/species/S = H.species
