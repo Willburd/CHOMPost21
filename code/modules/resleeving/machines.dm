@@ -345,6 +345,13 @@
 	H.dna = R.dna.Clone()
 	H.original_player = current_project.ckey
 
+	// Outpost 21 begin edit - Apply digi to synths
+	//Apply legs
+	H.digitigrade = R.dna.digitigrade // ensure clone mob has digitigrade var set appropriately
+	if(H.dna.digitigrade <> R.dna.digitigrade)
+		H.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
+	// Outpost 21 end
+
 	//Apply damage
 	H.adjustBruteLoss(brute_value)
 	H.adjustFireLoss(burn_value)
