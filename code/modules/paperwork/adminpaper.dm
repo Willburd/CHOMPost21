@@ -41,6 +41,8 @@
 	var/timehash = copytext(md5("[world.time]"),1,10)
 	var/text = null
 	var/logo = tgui_alert(usr, "Do you want the header of your fax to have a NanoTrasen, SolGov, or Trader logo?","Fax Logo",list("Eshui","NanoTrasen","SolGov","Trader")) //VOREStation Add - Trader, Outpost 21 addition - Eshui
+	if(!logo)
+		return
 	if(logo == "SolGov")
 		logo = "sglogo.png"
 	//VOREStation Edit/Add
