@@ -1,4 +1,3 @@
-import { BooleanLike } from 'common/react';
 
 import { useBackend } from '../../backend';
 import {
@@ -16,7 +15,7 @@ import { DNAModifierBlocks } from './DNAModifierBlocks';
 import { DNAModifierMainBuffers } from './DNAModifierMainBuffers';
 import { Data } from './types';
 
-export const DNAModifierMain = (props: { isDNAInvalid: BooleanLike }) => {
+export const DNAModifierMain = (props /* : {isDNAInvalid: BooleanLike} */) => { /* Traitgenes edit - Allow accessing menus while no occupant is inside */
   const { act, data } = useBackend<Data>();
 
   const { selectedMenuKey, hasOccupant } = data;
@@ -228,7 +227,7 @@ const DNAModifierMainRadiationEmitter = (props) => {
 const DNAModifierMainRejuvenators = (props) => {
   const { act, data } = useBackend<Data>();
 
-  const { isBeakerLoaded, beakerVolume, beakerLabel, hasOccupant  } = data; // Traitgenes edit - Allow accessing menus while no occupant is inside
+  const { isBeakerLoaded, beakerVolume, beakerLabel, hasOccupant } = data; // Traitgenes edit - Allow accessing menus while no occupant is inside
 
   return (
     <Section

@@ -1,6 +1,5 @@
 import { useBackend } from '../../backend';
 import { Box, Button, Icon, LabeledList, Section } from '../../components';
-import { SleeperOccupant } from '../Sleeper/SleeperOccupant';
 import { buffData, Data } from './types';
 
 export const DNAModifierMainBuffers = (props) => {
