@@ -48,7 +48,7 @@ export type activeBodyRecord = {
   blood_type : string;
   blood_color : string;
   blood_reagents : string;
-  flavors : { general: string, head: string, face: string, eyes: string, arms: string, hands: string,  legs: string,  feet: string }
+  flavors : { general: string, head: string, face: string, eyes: string, arms: string, hands: string, legs: string, feet: string }
   /* Outpost 21 edit end */
 };
 
