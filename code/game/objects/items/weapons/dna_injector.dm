@@ -74,7 +74,16 @@
 		L.apply_effect(rand(5,20), IRRADIATE, check_protection = 0)
 		L.apply_damage(max(2,L.getCloneLoss()), CLONE)
 
-	if (!(NOCLONE in M.mutations) && !M.isSynthetic()) // prevents drained people from having their DNA changed, Traitgenes edit - Synthetics cannot be mutated
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	var/allow = TRUE
+	if(M.isSynthetic())
+		allow = FALSE
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			allow = FALSE
+	// Traitgenes edit end
+	if (!(NOCLONE in M.mutations) && allow) // prevents drained people from having their DNA changed, Traitgenes edit - NO_SCAN and Synthetics cannot be mutated
 		if (buf.types & DNA2_BUF_UI)
 			if (!block) //isolated block?
 				M.UpdateAppearance(buf.dna.UI.Copy())

@@ -6,9 +6,15 @@
 #define MUTCHK_FORCED        1
 #define MUTCHK_HIDEMSG       2 // Traitgenes edit - Hide gene activation/deactivation messages, mostly for resleeving so you don't get spammed
 /proc/domutcheck(var/mob/living/M, var/connected=null, var/flags=0)
-	// Traitgenes edit begin - Sort genes into currently active, and deactivated... Genes that are active and may deactivate should do so before attempting to activate genes(to avoid conflicts blocking them!)
-	if(M.isSynthetic()) // Synthetics cannot be mutated
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	if(M.isSynthetic())
 		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			return
+	// Traitgenes edit end
+	// Traitgenes edit begin - Sort genes into currently active, and deactivated... Genes that are active and may deactivate should do so before attempting to activate genes(to avoid conflicts blocking them!)
 	var/list/enabled_genes = list()
 	var/list/disabled_genes = list()
 	for(var/datum/gene/gene in GLOB.dna_genes) // Traitgenes edit - Genes accessible by global VV, removed dna from path

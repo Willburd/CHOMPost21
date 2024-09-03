@@ -23,8 +23,14 @@
 // Give Random Bad Mutation to M
 /proc/randmutb(var/mob/living/M)
 	if(!M || !(M.dna)) return
-	if(M.isSynthetic()) // Traitgenes edit - Synthetics cannot be mutated
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	if(M.isSynthetic())
 		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			return
+	// Traitgenes edit end
 	M.dna.check_integrity()
 	// Traitgenes edit begin - Pick from bad traitgenes
 	var/datum/gene/trait/T = pick(GLOB.dna_genes_bad + (prob(10) ? GLOB.dna_genes_neutral : list()) ) // Chance for neutrals as well
@@ -39,8 +45,14 @@
 // Give Random Good Mutation to M
 /proc/randmutg(var/mob/living/M)
 	if(!M || !(M.dna)) return
-	if(M.isSynthetic()) // Traitgenes edit - Synthetics cannot be mutated
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	if(M.isSynthetic())
 		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			return
+	// Traitgenes edit end
 	M.dna.check_integrity()
 	// Traitgenes edit begin - Pick from good traitgenes
 	var/datum/gene/trait/T = pick(GLOB.dna_genes_good + (prob(10) ? GLOB.dna_genes_neutral : list()) ) // Chance for neutrals as well
@@ -63,8 +75,14 @@
 // Scramble UI or SE.
 /proc/scramble(var/UI, var/mob/M, var/prob)
 	if(!M || !(M.dna))	return
-	if(M.isSynthetic()) // Traitgenes edit - Synthetics cannot be mutated
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	if(M.isSynthetic())
 		return
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			return
+	// Traitgenes edit end
 	M.dna.check_integrity()
 	/* Traitgenes edit - we don't do cosmetic mutations anymore, overlays have largely replaced UI data, and cannot be changed... So just gets broken entirely anyway.
 	if(UI)

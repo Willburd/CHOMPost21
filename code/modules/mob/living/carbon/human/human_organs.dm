@@ -202,8 +202,12 @@
 /mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits, var/hide_message = TRUE)
 	if(!dna || !species)
 		return
-	if(isSynthetic()) // Synthetics cannot be mutated
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	if(isSynthetic())
 		return
+	if(species.flags & NO_SCAN)
+		return
+	// Traitgenes edit end
 	if(refresh_traits && species.traits)
 		for(var/TR in species.traits)
 			var/datum/trait/T = all_traits[TR]

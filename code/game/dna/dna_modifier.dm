@@ -458,8 +458,17 @@
 		occupantData["name"] = connected.occupant.real_name
 		occupantData["stat"] = connected.occupant.stat
 		occupantData["isViableSubject"] = 1
-		if(NOCLONE in connected.occupant.mutations || !src.connected.occupant.dna || src.connected.occupant.isSynthetic()) // Traitgenes edit - Synthetics cannot be mutated
+		// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+		var/allowed = TRUE
+		if(src.connected.occupant.isSynthetic())
+			allowed = FALSE
+		if(ishuman(src.connected.occupant))
+			var/mob/living/carbon/human/H = src.connected.occupant
+			if(!H.species || (H.species.flags & NO_SCAN))
+				allowed = FALSE
+		if(!allowed || (NOCLONE in connected.occupant.mutations) || !src.connected.occupant.dna)
 			occupantData["isViableSubject"] = 0
+		// Traitgenes edit end
 		occupantData["health"] = connected.occupant.health
 		occupantData["maxHealth"] = connected.occupant.maxHealth
 		occupantData["minHealth"] = CONFIG_GET(number/health_threshold_dead) // CHOMPEdit
