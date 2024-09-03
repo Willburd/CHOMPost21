@@ -1,5 +1,4 @@
 //Simulated
-MURIKI_TURF_CREATE(/turf/simulated/open)
 /turf/simulated/open/muriki
 	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
 /turf/simulated/open/muriki/New()
@@ -9,71 +8,6 @@ MURIKI_TURF_CREATE(/turf/simulated/open)
 
 /turf/simulated/open
 	dynamic_lighting = 1 //I don't care if there's no true multiz lighting, this looks so much nicer it's not even funny -KK (from turf_yw)
-
-MURIKI_TURF_CREATE(/turf/simulated/floor)
-
-// needed to avoid active edges over outdoor pits
-MURIKI_TURF_CREATE(/turf/simulated/open)
-MURIKI_TURF_CREATE_UN(/turf/simulated/open/indoor)
-// make varients of all outdoor tiles with muriki atmosphere on it, this feels dumb and excessive, but it's the way it's done...
-MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt)
-MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/newdirt_nograss)
-MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
-MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/mud)
-MURIKI_TURF_CREATE(/turf/simulated/floor/tiled/muriki)
-MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/sidewalk)
-MURIKI_TURF_CREATE(/turf/simulated/floor/plating/external)
-MURIKI_TURF_CREATE(/turf/simulated/floor/outpost_roof)
-MURIKI_TURF_CREATE(/turf/simulated/floor/solarpanel)
-MURIKI_TURF_CREATE(/turf/simulated/floor/glass/reinforced)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/plating) //UN ones are outdoors adjacent. Same atmo, same temp, no rain.
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/techfloor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/techfloor/grid)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/dark)
-MURIKI_TURF_CREATE(/turf/simulated/floor/maglev) // for outdoor track, use normal ones indoors
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/indoorrocks)
-// for shuttles
-MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/black)
-MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/white)
-// terraformer specific
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/flesh)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/redgrid/off)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/techfloor/grid)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/blood)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/digestive_enzymes)
-// Caverns without map gen
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/floor/ignore_mapgen)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/floor/ignore_cavegen)
-//
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/deep)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/corner)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/deep/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/indoor)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/shoreline_dirt)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/shoreline_mud)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/shoreline_plate)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/shoreline_cave)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/shoreline_dirt/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/shoreline_plate/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/shoreline_cave/indoor)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/corner/corner_dirt)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/corner/corner_mud)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/corner/corner_plate)
-MURIKI_TURF_CREATE(/turf/simulated/floor/water/acidic/shoreline/corner/corner_cave)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_dirt/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_mud/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_plate/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/water/acidic/shoreline/corner/corner_cave/indoor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/floor/lava)
 
 /turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
 	name = "rocks"
@@ -93,17 +27,6 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/floor/lava)
 /turf/simulated/floor/shuttle/black
 	icon = 'icons/turf/shuttle_white.dmi'
 	icon_state = "floor_black"
-
-// caves!
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/alt)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/alt/ignore_mapgen)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/alt/ignore_cavegen)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/floor)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal_shiny)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal/ignore_mapgen)
-MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal_shiny/ignore_mapgen)
 
 	//This proc is responsible for ore generation on surface turfs
 /turf/simulated/mineral/muriki/make_ore(var/rare_ore)
@@ -342,6 +265,3 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal_shiny/ignore_mapgen)
 	death_message = "The increasing speed and current of the river swiftly drags you into the rapids, destoying any boat you had and cracking your body against the rocks. The harsh acids of the water then make short work at dissolving your corpse, lost to the river forever."
 	icon = 'icons/turf/outdoors_op.dmi'
 	icon_state = "searapids" // So it shows up in the map editor as water.
-
-MURIKI_TURF_CREATE_UN(/turf/simulated/deathdrop/waterfall)
-MURIKI_TURF_CREATE_UN(/turf/simulated/deathdrop/elevator_shaft) // probably not needed?
