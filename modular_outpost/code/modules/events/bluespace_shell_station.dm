@@ -156,3 +156,11 @@
 	bottom_y = 15
 	right_x = 80
 	top_y = 70
+
+
+
+
+// Stub definitions for unit testing, outpost 21 map has actual defs
+/area/engineering/coreproctunnel
+
+/area/muriki/crew/bunker
