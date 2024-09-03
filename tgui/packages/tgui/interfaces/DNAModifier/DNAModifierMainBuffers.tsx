@@ -64,7 +64,7 @@ const DNAModifierMainBuffersElement = (props: {
             >
               Rename
             </Button>
-            { /* Traitgenes edit begin - So the geneticist doesn't need to fight with the doctor for the sleeve pod */ }
+            {/* Traitgenes edit begin - So the geneticist doesn't need to fight with the doctor for the sleeve pod */}
             <Button
               disabled={!buffer.data || !buffer.owner} // Traitgenes edit - Allow accessing menus while no occupant is inside
               icon="user-plus"
@@ -79,7 +79,7 @@ const DNAModifierMainBuffersElement = (props: {
             >
               Grow Body
             </Button>
-            { /* Traitgenes edit end */ }
+            {/* Traitgenes edit end */}
             <Button
               disabled={!buffer.data || !data.hasDisk || !buffer.owner} // Traitgenes edit - Allow accessing menus while no occupant is inside
               icon="save"
@@ -99,8 +99,8 @@ const DNAModifierMainBuffersElement = (props: {
       >
         <LabeledList>
           <LabeledList.Item label="Write">
-            { /* Traitgenes edit begin - use body records instead of unique disks */ }
-            { /*
+            {/* Traitgenes edit begin - use body records instead of unique disks */}
+            {/*
             <Button
               icon="arrow-circle-down"
               mb="0"
@@ -125,7 +125,7 @@ const DNAModifierMainBuffersElement = (props: {
             >
               Subject U.I and U.E.
             </Button>
-            */ }
+            */}
             <Button
               disabled={!hasOccupant || !occupant.isViableSubject} // Traitgenes edit - Allow accessing menus while no occupant is inside
               icon="arrow-circle-down"
@@ -139,7 +139,7 @@ const DNAModifierMainBuffersElement = (props: {
             >
               From Subject
             </Button>
-            { /* Traitgenes edit end */ }
+            {/* Traitgenes edit end */}
             <Button
               disabled={!data.hasDisk || !data.disk.data}
               icon="arrow-circle-down"
@@ -196,7 +196,9 @@ const DNAModifierMainBuffersElement = (props: {
                   Block Injector
                 </Button>
                 <Button
-                  disabled={!hasOccupant || !buffer.owner || !occupant.isViableSubject} // Traitgenes edit - Allow accessing menus while no occupant is inside
+                  disabled={
+                    !hasOccupant || !buffer.owner || !occupant.isViableSubject
+                  } // Traitgenes edit - Allow accessing menus while no occupant is inside
                   icon="user"
                   mb="0"
                   onClick={() =>

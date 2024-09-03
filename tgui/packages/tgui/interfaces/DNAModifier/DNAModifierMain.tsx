@@ -1,4 +1,3 @@
-
 import { useBackend } from '../../backend';
 import {
   Box,
@@ -15,7 +14,8 @@ import { DNAModifierBlocks } from './DNAModifierBlocks';
 import { DNAModifierMainBuffers } from './DNAModifierMainBuffers';
 import { Data } from './types';
 
-export const DNAModifierMain = (props /* : {isDNAInvalid: BooleanLike} */) => { /* Traitgenes edit - Allow accessing menus while no occupant is inside */
+export const DNAModifierMain = (props /* : {isDNAInvalid: BooleanLike} */) => {
+  /* Traitgenes edit - Allow accessing menus while no occupant is inside */
   const { act, data } = useBackend<Data>();
 
   const { selectedMenuKey, hasOccupant } = data;
@@ -141,7 +141,7 @@ const DNAModifierMainSE = (props) => {
 
   return (
     // Traitgenes edit begin - Allow accessing menus while no occupant is inside
-    (!occupant ? (
+    !occupant ? (
       <Section flexGrow>
         <Flex height="100%">
           <Flex.Item grow="1" align="center" textAlign="center" color="label">
@@ -151,7 +151,7 @@ const DNAModifierMainSE = (props) => {
           </Flex.Item>
         </Flex>
       </Section>
-    ) : (!occupant.isViableSubject ? (
+    ) : !occupant.isViableSubject ? (
       <Section flexGrow>
         <Flex height="100%">
           <Flex.Item grow="1" align="center" textAlign="center" color="label">
@@ -174,8 +174,9 @@ const DNAModifierMainSE = (props) => {
           Irradiate Block
         </Button>
       </Section>
-    ))));
-    // Traitgenes edit end
+    )
+  );
+  // Traitgenes edit end
 };
 
 const DNAModifierMainRadiationEmitter = (props) => {
@@ -185,7 +186,7 @@ const DNAModifierMainRadiationEmitter = (props) => {
 
   return (
     // Traitgenes edit begin - Allow accessing menus while no occupant is inside
-    (occupant && occupant.isViableSubject ? ( // Traitgenes edit - Allow accessing menus while no occupant is inside
+    occupant && occupant.isViableSubject ? ( // Traitgenes edit - Allow accessing menus while no occupant is inside
       <Section title="Radiation Emitter">
         <LabeledList>
           <LabeledList.Item label="Intensity">
@@ -220,7 +221,10 @@ const DNAModifierMainRadiationEmitter = (props) => {
           Pulse Radiation
         </Button>
       </Section>
-  ) : ("")));
+    ) : (
+      ''
+    )
+  );
   // Traitgenes edit end
 };
 

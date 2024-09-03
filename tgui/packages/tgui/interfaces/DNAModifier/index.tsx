@@ -14,10 +14,29 @@ export const DNAModifier = (props) => {
   return (
     <Window width={660} height={870}>
       <ComplexModal />
-      {irradiating ? (<DNAModifierIrradiating duration={irradiating} />) : ("")} { /* Traitgenes edit - Fixed irradiating overlay showing 0 at top of menu when hidden */ }
+      {irradiating ? (
+        <DNAModifierIrradiating duration={irradiating} />
+      ) : (
+        ''
+      )}{' '}
+      {/* Traitgenes edit - Fixed irradiating overlay showing 0 at top of menu when hidden */}
       <Window.Content className="Layout__content--flexColumn">
-        <DNAModifierOccupant isDNAInvalid={!occupant.isViableSubject || !occupant.uniqueIdentity || !occupant.structuralEnzymes} /> { /* Traitgenes edit - Fixed irradiating overlay showing 0 at top of menu when hidden */ }
-        <DNAModifierMain isDNAInvalid={!occupant.isViableSubject || !occupant.uniqueIdentity || !occupant.structuralEnzymes} />  { /* Traitgenes edit - Fixed irradiating overlay showing 0 at top of menu when hidden */ }
+        <DNAModifierOccupant
+          isDNAInvalid={
+            !occupant.isViableSubject ||
+            !occupant.uniqueIdentity ||
+            !occupant.structuralEnzymes
+          }
+        />{' '}
+        {/* Traitgenes edit - Fixed irradiating overlay showing 0 at top of menu when hidden */}
+        <DNAModifierMain
+          isDNAInvalid={
+            !occupant.isViableSubject ||
+            !occupant.uniqueIdentity ||
+            !occupant.structuralEnzymes
+          }
+        />{' '}
+        {/* Traitgenes edit - Fixed irradiating overlay showing 0 at top of menu when hidden */}
       </Window.Content>
     </Window>
   );

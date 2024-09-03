@@ -47,13 +47,14 @@ type modalData = {
 
 export type buffData = {
   data: {
-    data: number[],
-    owner: string,
-    label: string,
-    type: string,
-    ue: string,
-    ui: string,
-    se: string} | null; // Traitgenes edit - Fixed data structure
+    data: number[];
+    owner: string;
+    label: string;
+    type: string;
+    ue: string;
+    ui: string;
+    se: string;
+  } | null; // Traitgenes edit - Fixed data structure
   owner: string | null;
   label: string | null;
   type: string | null;
