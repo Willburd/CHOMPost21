@@ -20,7 +20,7 @@
 	item_state = "whoopee"
 
 /obj/item/latexballon/whoopee/proc/poot()
-	playsound(src, 'sound/effects/poot.ogg', 100, 1)
+	playsound(src, 'modular_outpost/sound/effects/poot.ogg', 100, 1)
 	loc.assume_air(air_contents)
 	air_contents = null
 	icon_state = "whoopee"
@@ -39,12 +39,12 @@
 		return
 	if(istype(loc,/turf/))
 		poot()
-		
+
 
 /obj/item/latexballon/whoopee/attackby(obj/item/W as obj, mob/user as mob)
 	if(can_puncture(W))
 		burst()
-	
+
 /obj/item/latexballon/whoopee/attack_self(mob/user as mob)
 	src.add_fingerprint(user)
 	if(icon_state == "whoopee_bursted")

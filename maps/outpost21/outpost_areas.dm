@@ -818,7 +818,7 @@
 // finalized elevator areas, lift itself makes these once init
 /area/turbolift
 	delay_time = 2 SECONDS
-	forced_ambience = list('sound/music/elevator2.ogg')
+	forced_ambience = list('modular_outpost/sound/music/elevator2.ogg')
 	dynamic_lighting = FALSE //Temporary fix for elevator lighting
 	flags = RAD_SHIELDED
 	requires_power = FALSE

@@ -22,7 +22,7 @@
 	C.gutdeathpressure += 1
 	var/range = 5 + C.gutdeathpressure
 	// obnoxious, and eventually fatal
-	playsound(C, 'sound/effects/poot.ogg', 100, 1)
+	playsound(C, 'modular_outpost/sound/effects/poot.ogg', 100, 1)
 	for(var/mob/M in living_mobs(range))
 		var/dist = get_dist(M.loc, src.loc)
 		shake_camera(M, dist > 8 ? 3 : 5, dist > 10 ? 1 : 3)

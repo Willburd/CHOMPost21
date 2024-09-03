@@ -2,7 +2,7 @@
 	key = "tantrum"
 	emote_message_1p = "You flail around on the floor screaming!"
 	emote_message_3p = "flails around on the floor screaming!"
-	emote_sound = 'sound/voice/ragescree.ogg'
+	emote_sound = 'modular_outpost/sound/voice/ragescree.ogg'
 	emote_delay = 4.5 SECONDS
 	var/static/list/spin_dirs_tantrum = list(
 		NORTH,

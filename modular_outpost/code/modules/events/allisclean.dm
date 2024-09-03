@@ -3,7 +3,7 @@
 	endWhen		= 600
 
 /datum/event/allisclean/start()
-	command_announcement.Announce("Attention [station_name()]. Unidentified energy signals detected on all frequencies, are you seeing these readings-- All will be clean. --What was that!? ", new_sound = 'sound/misc/allisclean.ogg')
+	command_announcement.Announce("Attention [station_name()]. Unidentified energy signals detected on all frequencies, are you seeing these readings-- All will be clean. --What was that!? ", new_sound = 'modular_outpost/sound/misc/allisclean.ogg')
 	for(var/mob/living/L in player_list)
 		L.say("All will be clean.")
 	var/list/spots = list()
