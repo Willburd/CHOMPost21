@@ -51,7 +51,10 @@ const VendingRow = (props: { product: product }) => {
       <Table.Cell collapsing>
         {(product.isatom && (
           <span
-            className={classes(['vending32x32', forced_icon_path ? forced_icon_path : product.path])}
+            className={classes([
+              'vending32x32',
+              forced_icon_path ? forced_icon_path : product.path,
+            ])}
             style={{
               verticalAlign: 'middle',
             }}
@@ -91,11 +94,11 @@ const VendingRow = (props: { product: product }) => {
           }
         >
           {/* Outpost 21 edit begin - Cargo vendor configuring */}
-          {cargo_configure ? (
-            'Set(' + product.price + '₮)'
-          ) : (
-            product.price ? 'Buy (' + product.price + '₮)' : 'Vend'
-          )}
+          {cargo_configure
+            ? 'Set(' + product.price + '₮)'
+            : product.price
+              ? 'Buy (' + product.price + '₮)'
+              : 'Vend'}
           {/* Outpost 21 edit end */}
         </Button>
       </Table.Cell>

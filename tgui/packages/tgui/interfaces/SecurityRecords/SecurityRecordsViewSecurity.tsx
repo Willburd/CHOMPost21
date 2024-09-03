@@ -25,8 +25,8 @@ export const SecurityRecordsViewSecurity = (props) => {
             <Box preserveWhitespace>
               {field.value}
               {/* Outpost 21 edit begin - multiline editor for records */}
-              {!!field.edit && (
-                field.edit === "notes" ? (
+              {!!field.edit &&
+                (field.edit === 'notes' ? (
                   <Button
                     icon="pen"
                     ml="1rem"
@@ -39,8 +39,7 @@ export const SecurityRecordsViewSecurity = (props) => {
                     mb={'initial'}
                     onClick={() => doEdit(field)}
                   />
-                )
-              )}
+                ))}
               {/* Outpost 21 edit begin end */}
             </Box>
           </LabeledList.Item>

@@ -18,10 +18,18 @@ export const pda_sop = (props) => {
   return (
     <Box>
       <Section title="Standard Operating Procedures">
-        <Button disabled={first} icon="chevron-left" onClick={() => act('prev')}>
+        <Button
+          disabled={first}
+          icon="chevron-left"
+          onClick={() => act('prev')}
+        >
           Previous
         </Button>
-        <Button disabled={last} icon="chevron-right" onClick={() => act('next')}>
+        <Button
+          disabled={last}
+          icon="chevron-right"
+          onClick={() => act('next')}
+        >
           Next
         </Button>
         <Section title={sop_title}>

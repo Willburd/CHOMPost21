@@ -20,7 +20,7 @@ export const BodyDesignerSpecificRecord = (props: {
   const { activeBodyRecord, mapRef } = props;
   return activeBodyRecord ? (
     <Flex direction="column">
-      { /* Outpost 21 edit begin - Major layout changes */ }
+      {/* Outpost 21 edit begin - Major layout changes */}
       <Section
         title="Specific Record"
         buttons={
@@ -423,7 +423,7 @@ export const BodyDesignerSpecificRecord = (props: {
           </Flex.Item>
         </Flex>
       </Flex.Item>
-      { /* Outpost 21 edit end */ }
+      {/* Outpost 21 edit end */}
     </Flex>
   ) : (
     <Box color="bad">ERROR: Record Not Found!</Box>
