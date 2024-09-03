@@ -36,21 +36,21 @@
 /datum/map_template/outpost21/space/orbitalyard/chunk_A
 	name = "Asteroid Variant A"
 	desc = "Random asteroid."
-	mappath = 'maps/submaps/outpost21/orbitalyard/chunk_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/chunk_A.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/space/orbitalyard/chunk_B
 	name = "Asteroid Variant B"
 	desc = "Random asteroid."
-	mappath = 'maps/submaps/outpost21/orbitalyard/chunk_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/chunk_B.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/space/orbitalyard/chunk_C
 	name = "Asteroid Variant C"
 	desc = "Random asteroid."
-	mappath = 'maps/submaps/outpost21/orbitalyard/chunk_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/chunk_C.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
@@ -58,35 +58,35 @@
 /datum/map_template/outpost21/space/orbitalyard/scaff_A
 	name = "Scaffolding Variant A"
 	desc = "Random construction."
-	mappath = 'maps/submaps/outpost21/orbitalyard/scaff_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/scaff_A.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/space/orbitalyard/scaff_B
 	name = "Scaffolding Variant B"
 	desc = "Random construction."
-	mappath = 'maps/submaps/outpost21/orbitalyard/scaff_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/scaff_B.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/space/orbitalyard/scaff_C
 	name = "Scaffolding Variant C"
 	desc = "Random construction."
-	mappath = 'maps/submaps/outpost21/orbitalyard/scaff_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/scaff_C.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/space/orbitalyard/platform_A
 	name = "Platform Variant A"
 	desc = "Random platform."
-	mappath = 'maps/submaps/outpost21/orbitalyard/platform_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/platform_A.dmm'
 	allow_duplicates = TRUE
 	cost = 2
 
 /datum/map_template/outpost21/space/orbitalyard/lostshelter
 	name = "Lost survival pod 1"
 	desc = "Abandoned survival pod"
-	mappath = 'maps/submaps/outpost21/orbitalyard/survpod_a.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/survpod_a.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 15
 	cost = 2
@@ -95,7 +95,7 @@
 /datum/map_template/outpost21/space/orbitalyard/container_LOST
 	name = "Lost Container"
 	desc = "Random platform."
-	mappath = 'maps/submaps/outpost21/orbitalyard/container_LOST.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/container_LOST.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 5
 	cost = 2
@@ -103,7 +103,7 @@
 /datum/map_template/outpost21/space/orbitalyard/container_C
 	name = "Lost Contraband Container"
 	desc = "Random platform."
-	mappath = 'maps/submaps/outpost21/orbitalyard/container_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/container_C.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 30
 	cost = 4
@@ -113,14 +113,14 @@
 /datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_A
 	name = "Giant Asteroid Variant A"
 	desc = "Random Giant asteroid."
-	mappath = 'maps/submaps/outpost21/orbitalyard/giant_asteroid_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/giant_asteroid_A.dmm'
 	allow_duplicates = TRUE
 	cost = 40
 
 /datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_B
 	name = "Giant Asteroid Variant B"
 	desc = "Random Giant asteroid."
-	mappath = 'maps/submaps/outpost21/orbitalyard/giant_asteroid_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/giant_asteroid_B.dmm'
 	allow_duplicates = FALSE // has secret in it
 	fixed_orientation = TRUE
 	cost = 50
@@ -128,7 +128,7 @@
 /datum/map_template/outpost21/space/orbitalyard_huge/structure_A
 	name = "Structure Variant A"
 	desc = "Destroyed ruins of a facility."
-	mappath = 'maps/submaps/outpost21/orbitalyard/structure_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/structure_A.dmm'
 	allow_duplicates = FALSE
 	fixed_orientation = TRUE
 	cost = 55
@@ -136,7 +136,7 @@
 /datum/map_template/outpost21/space/orbitalyard_huge/structure_B
 	name = "Structure Variant B"
 	desc = "Destroyed ruins of a facility."
-	mappath = 'maps/submaps/outpost21/orbitalyard/structure_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/structure_B.dmm'
 	allow_duplicates = FALSE
 	fixed_orientation = TRUE
 	cost = 55
@@ -144,7 +144,7 @@
 /datum/map_template/outpost21/space/orbitalyard_huge/lostship_A
 	name = "Lost Ship Variant A"
 	desc = "An old derelict ship"
-	mappath = 'maps/submaps/outpost21/orbitalyard/lost_ship_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/lost_ship_A.dmm'
 	allow_duplicates = FALSE
 	fixed_orientation = TRUE
 	cost = 50
@@ -152,7 +152,7 @@
 /datum/map_template/outpost21/space/orbitalyard_huge/lostship_B
 	name = "Lost Ship Variant B"
 	desc = "An old derelict ship"
-	mappath = 'maps/submaps/outpost21/orbitalyard/lost_ship_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/lost_ship_B.dmm'
 	allow_duplicates = FALSE
 	fixed_orientation = TRUE
 	discard_prob = 10
@@ -161,7 +161,7 @@
 /datum/map_template/outpost21/space/orbitalyard_huge/alienship_A
 	name = "Abandoned Alien Vessel"
 	desc = "An old derelict ship"
-	mappath = 'maps/submaps/outpost21/orbitalyard/alienship_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/orbitalyard/alienship_A.dmm'
 	allow_duplicates = FALSE
 	fixed_orientation = TRUE
 	discard_prob = 85
