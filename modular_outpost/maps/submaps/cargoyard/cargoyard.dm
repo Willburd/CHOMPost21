@@ -32,35 +32,35 @@
 /datum/map_template/outpost21/muriki/cargoyard/container_A
 	name = "Container Variant A"
 	desc = "Random container."
-	mappath = 'maps/submaps/outpost21/cargoyard/container_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/container_A.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/muriki/cargoyard/container_B
 	name = "Container Variant B"
 	desc = "Random container."
-	mappath = 'maps/submaps/outpost21/cargoyard/container_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/container_B.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/muriki/cargoyard/container_C
 	name = "Container Variant C"
 	desc = "Random container."
-	mappath = 'maps/submaps/outpost21/cargoyard/container_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/container_C.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/muriki/cargoyard/container_D
 	name = "Container Variant D"
 	desc = "Random container."
-	mappath = 'maps/submaps/outpost21/cargoyard/container_D.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/container_D.dmm'
 	allow_duplicates = TRUE
 	cost = 5
 
 /datum/map_template/outpost21/muriki/cargoyard/path_A
 	name = "Path Variant A"
 	desc = "Random path."
-	mappath = 'maps/submaps/outpost21/cargoyard/path_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/path_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 30
 	cost = 5
@@ -68,7 +68,7 @@
 /datum/map_template/outpost21/muriki/cargoyard/path_B
 	name = "Path Variant B"
 	desc = "Random path."
-	mappath = 'maps/submaps/outpost21/cargoyard/path_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/path_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 30
 	cost = 5
@@ -76,7 +76,7 @@
 /datum/map_template/outpost21/muriki/cargoyard/light_A
 	name = "Light Variant A"
 	desc = "Random light."
-	mappath = 'maps/submaps/outpost21/cargoyard/light_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/light_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 5
@@ -84,7 +84,7 @@
 /datum/map_template/outpost21/muriki/cargoyard/light_B
 	name = "Light Variant B"
 	desc = "Random light."
-	mappath = 'maps/submaps/outpost21/cargoyard/light_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/light_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 5
@@ -92,7 +92,7 @@
 /datum/map_template/outpost21/muriki/cargoyard/light_C
 	name = "Light Variant C"
 	desc = "Random light."
-	mappath = 'maps/submaps/outpost21/cargoyard/light_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/light_C.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 5
@@ -103,7 +103,7 @@
 /datum/map_template/outpost21/muriki/cargoyard_huge/largeruin_A
 	name = "Large Ruins Variant A"
 	desc = "Random large ruins in the yard."
-	mappath = 'maps/submaps/outpost21/cargoyard/largeruin_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/largeruin_A.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 30
 	cost = 90
@@ -111,7 +111,7 @@
 /datum/map_template/outpost21/muriki/cargoyard_huge/simple_A
 	name = "Simple Yard Variant A"
 	desc = "Random place in the yard."
-	mappath = 'maps/submaps/outpost21/cargoyard/simple_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/cargoyard/simple_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 30

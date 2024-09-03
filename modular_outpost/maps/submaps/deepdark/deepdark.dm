@@ -48,7 +48,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/light_A
 	name = "Light Variant A"
 	desc = "Random light."
-	mappath = 'maps/submaps/outpost21/deepdark/light_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/light_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 5
@@ -56,7 +56,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/light_B
 	name = "Light Variant B"
 	desc = "Random light."
-	mappath = 'maps/submaps/outpost21/deepdark/light_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/light_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 5
@@ -64,7 +64,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/light_C
 	name = "Light Variant C"
 	desc = "Random light."
-	mappath = 'maps/submaps/outpost21/deepdark/light_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/light_C.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 5
@@ -72,7 +72,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/gas_A
 	name = "Gas Pocket Variant A"
 	desc = "Random gas pocket."
-	mappath = 'maps/submaps/outpost21/deepdark/gas_pocket_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/gas_pocket_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 15
@@ -80,7 +80,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/gas_B
 	name = "Gas Pocket Variant B"
 	desc = "Random gas pocket."
-	mappath = 'maps/submaps/outpost21/deepdark/gas_pocket_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/gas_pocket_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 50
 	cost = 15
@@ -88,7 +88,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/gas_C
 	name = "Gas Pocket Variant C"
 	desc = "Random gas pocket."
-	mappath = 'maps/submaps/outpost21/deepdark/gas_pocket_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/gas_pocket_C.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 50
 	cost = 15
@@ -96,7 +96,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/flesh_A
 	name = "Flesh Variant A"
 	desc = "flesh varient."
-	mappath = 'maps/submaps/outpost21/deepdark/flesh_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/flesh_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 25
@@ -104,7 +104,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/flesh_B
 	name = "Flesh Variant B"
 	desc = "flesh varient."
-	mappath = 'maps/submaps/outpost21/deepdark/flesh_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/flesh_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 25
@@ -112,7 +112,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/den_A
 	name = "Den A"
 	desc = "Random den."
-	mappath = 'maps/submaps/outpost21/deepdark/den_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/den_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 15
@@ -120,7 +120,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/den_B
 	name = "Den B"
 	desc = "Random den."
-	mappath = 'maps/submaps/outpost21/deepdark/den_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/den_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 40
 	cost = 15
@@ -128,7 +128,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/trap_A
 	name = "Trap A"
 	desc = "Random trap."
-	mappath = 'maps/submaps/outpost21/deepdark/trap_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/trap_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 5
@@ -136,7 +136,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/lava_A
 	name = "Lava A"
 	desc = "Random lava."
-	mappath = 'maps/submaps/outpost21/deepdark/lava_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/lava_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 15
@@ -144,7 +144,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark/lava_B
 	name = "Lava B"
 	desc = "Random lava."
-	mappath = 'maps/submaps/outpost21/deepdark/lava_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/lava_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 60
 	cost = 15
@@ -154,7 +154,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/cave_A
 	name = "Cave A"
 	desc = "Random cave."
-	mappath = 'maps/submaps/outpost21/deepdark/cave_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/cave_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 10
 	cost = 25
@@ -162,7 +162,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/cave_B
 	name = "Cave B"
 	desc = "Random cave."
-	mappath = 'maps/submaps/outpost21/deepdark/cave_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/cave_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 10
 	cost = 25
@@ -170,7 +170,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/hall_A
 	name = "Hall A"
 	desc = "Random cave hall."
-	mappath = 'maps/submaps/outpost21/deepdark/hall_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/hall_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 10
 	cost = 25
@@ -178,7 +178,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/hall_B
 	name = "Hall B"
 	desc = "Random cave hall."
-	mappath = 'maps/submaps/outpost21/deepdark/hall_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/hall_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 10
 	cost = 25
@@ -186,7 +186,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/lake_A
 	name = "Lake A"
 	desc = "Random cave lake."
-	mappath = 'maps/submaps/outpost21/deepdark/lake_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/lake_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 25
@@ -194,7 +194,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/wall_A
 	name = "Wall A"
 	desc = "Random cave maint wall."
-	mappath = 'maps/submaps/outpost21/deepdark/wall_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/wall_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 30
 	cost = 45
@@ -202,7 +202,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/wall_B
 	name = "Wall B"
 	desc = "Random cave maint wall."
-	mappath = 'maps/submaps/outpost21/deepdark/wall_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/wall_B.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 30
 	cost = 45
@@ -210,7 +210,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/honk_A
 	name = "Honk A"
 	desc = "Random honk."
-	mappath = 'maps/submaps/outpost21/deepdark/honk_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/honk_A.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 20
 	cost = 30
@@ -218,7 +218,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/spider_A
 	name = "Spider A"
 	desc = "Random spiders."
-	mappath = 'maps/submaps/outpost21/deepdark/spider_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/spider_A.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 20
 	cost = 30
@@ -226,7 +226,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_A
 	name = "Liminal A"
 	desc = "Random liminal space."
-	mappath = 'maps/submaps/outpost21/deepdark/liminal_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/liminal_A.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 20
 	cost = 30
@@ -234,7 +234,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_B
 	name = "Liminal B"
 	desc = "Random liminal space."
-	mappath = 'maps/submaps/outpost21/deepdark/liminal_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/liminal_B.dmm'
 	allow_duplicates = FALSE // DO NOT SPAWN TWICE, has a controller effect for the area...
 	discard_prob = 20
 	cost = 30
@@ -242,7 +242,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_C
 	name = "Liminal C"
 	desc = "Random liminal space."
-	mappath = 'maps/submaps/outpost21/deepdark/liminal_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/liminal_C.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 40
 	cost = 10
@@ -250,7 +250,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_A
 	name = "Red A"
 	desc = "Random redspace leak."
-	mappath = 'maps/submaps/outpost21/deepdark/redspace_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/redspace_A.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 50
 	cost = 30
@@ -258,7 +258,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_B
 	name = "Red B"
 	desc = "Random redspace leak."
-	mappath = 'maps/submaps/outpost21/deepdark/redspace_B.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/redspace_B.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 50
 	cost = 30
@@ -266,7 +266,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_C
 	name = "Red C"
 	desc = "Random redspace leak."
-	mappath = 'maps/submaps/outpost21/deepdark/redspace_C.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/redspace_C.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 50
 	cost = 30
@@ -274,7 +274,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/statue_A
 	name = "statue A"
 	desc = "Random statue."
-	mappath = 'maps/submaps/outpost21/deepdark/statue_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/statue_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 85
 	cost = 30
@@ -282,7 +282,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/hole_A
 	name = "hole A"
 	desc = "Random hole."
-	mappath = 'maps/submaps/outpost21/deepdark/hole_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/hole_A.dmm'
 	allow_duplicates = FALSE
 	discard_prob = 75
 	cost = 30
@@ -290,7 +290,7 @@
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/biohazard_A
 	name = "biohazard A"
 	desc = "Random biohazard."
-	mappath = 'maps/submaps/outpost21/deepdark/biohazard_A.dmm'
+	mappath = 'modular_outpost/maps/submaps/deepdark/biohazard_A.dmm'
 	allow_duplicates = TRUE
 	discard_prob = 75
 	cost = 20
@@ -298,6 +298,16 @@
 
 //////////////////////////////////////////////////////////////
 // Area definitions
+/area/mine/explored/muriki/cave/deepdark
+	name = "\improper Muriki Underground"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "orange"
+	always_unpowered = TRUE
+/area/mine/unexplored/muriki/cave/deepdark
+	name = "\improper Muriki Underground"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "yellow"
+	always_unpowered = TRUE
 
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
