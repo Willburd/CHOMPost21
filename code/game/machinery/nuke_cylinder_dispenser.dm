@@ -152,7 +152,7 @@
 				set_density(FALSE)
 				user.visible_message("[user] arms [cylinder].", "You arm [cylinder].")
 				flick("loading", src)
-				playsound(src.loc,'sound/effects/caution.ogg',50,1,5)
+				playsound(src.loc,'modular_outpost/sound/effects/caution.ogg',50,1,5)
 				var/obj/machinery/nuclearbomb/station/computer = locate(/obj/machinery/nuclearbomb/station) in get_area(src)
 				computer.radiowarn( FALSE, TRUE )
 		update_icon()

@@ -44,7 +44,7 @@
 
 /obj/item/toy/plushie/tinytin/sec/attack_self(mob/user as mob)
 	if(!cooldown)
-		playsound(user, 'sound/misc/tinytin_fuckedup.ogg', 85, 0)
+		playsound(user, 'modular_outpost/sound/misc/tinytin_fuckedup.ogg', 85, 0)
 		src.visible_message("<span class='danger'>That means you fucked up!</span>")
 		cooldown = 1
 		addtimer(CALLBACK(src, .proc/cooldownreset), 50)

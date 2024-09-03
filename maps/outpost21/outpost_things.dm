@@ -200,7 +200,7 @@
 
 //DATUMS -------------------------------------------------------------
 /datum/turbolift
-	music = list('sound/music/elevator2.ogg')
+	music = list('modular_outpost/sound/music/elevator2.ogg')
 
 
 //EFFECTS AND TRIGGERS -----------------------------------------

@@ -2,7 +2,7 @@
 	key = "ragescree"
 	emote_message_1p = "You begin screaming!"
 	emote_message_3p = "begins screaming!"
-	emote_sound = 'sound/voice/ragescree.ogg'
+	emote_sound = 'modular_outpost/sound/voice/ragescree.ogg'
 	emote_delay = 4.5 SECONDS
 
 /decl/emote/visible/ragescree/do_extra(mob/user)

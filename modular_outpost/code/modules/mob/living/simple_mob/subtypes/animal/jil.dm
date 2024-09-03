@@ -365,7 +365,7 @@
 					holder.light_range = 2
 					holder.make_jittery(115)
 					fear_run = 60
-					playsound( holder, 'sound/voice/ragescree.ogg', 35, 1)
+					playsound( holder, 'modular_outpost/sound/voice/ragescree.ogg', 35, 1)
 					spawn(9 SECONDS)
 						holder.drop_l_hand()
 						holder.drop_r_hand()
