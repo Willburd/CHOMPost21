@@ -1,6 +1,7 @@
-import { useBackend } from '../../backend';
 import { decodeHtmlEntities, toTitleCase } from 'common/string';
-import { Box, Section, LabeledList } from '../../components';
+
+import { useBackend } from '../../backend';
+import { Box, LabeledList, Section } from '../../components';
 
 type Data = {
   weather: Weather[];

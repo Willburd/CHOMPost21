@@ -8,7 +8,7 @@ import {
   ColorBox,
   Flex,
   LabeledList,
-  Section
+  Section,
 } from '../../components';
 import { activeBodyRecord } from './types';
 
