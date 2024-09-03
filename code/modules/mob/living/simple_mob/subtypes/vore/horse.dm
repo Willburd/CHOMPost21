@@ -142,7 +142,9 @@
 	enzyme_affect = FALSE // Outpost 21 edit - Kelpie of the acid lake
 
 /mob/living/simple_mob/vore/horse/kelpie/init_vore()
-	..()
+	if(!voremob_loaded) //CHOMPAdd
+		return //CHOMPAdd
+	.=..() //CHOMPEdit
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "With a final few gulps, the kelpie finishes swallowing you down into its hot, humid gut... and with a slosh, your weight makes the equine's belly hang down slightly like some sort of organic hammock. The thick, damp air is tinged with the smell of seaweed, and the surrounding flesh wastes no time in clenching and massaging down over its newfound fodder."
