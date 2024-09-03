@@ -90,6 +90,14 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 			return
 		M = new_M
 
+	// Outpost 21 edit begin - Scanning dogborg will scan its sleeper's occupant
+	if(isrobot(M))
+		var/mob/living/silicon/robot/R = M
+		var/obj/item/device/dogborg/sleeper/S = locate() in R.module.modules
+		if(S && S.patient)
+			scan_mob(S.patient, user)
+			return
+	// Outpost 21 edit end
 	if(ishuman(M))
 		scan_mob(M, user)
 	else
