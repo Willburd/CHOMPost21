@@ -74,64 +74,6 @@
 		else
 			to_chat(user, "<font color='blue'>You unsecure \the [src].</font>")
 
-//Trailblazers, nice fancy mounted lights... again, move these to their own file higher up.
-/datum/category_item/catalogue/material/trail_blazer
-	name = "Ice Colony Equipment - Trailblazer"
-	desc = "This is a glowing stick embedded in the ground with a light on top, commonly used in surface installations."
-	value = CATALOGUER_REWARD_EASY
-
-/obj/machinery/trailblazer
-	name = "trail blazer"
-	desc = "A glowing stick- light."
-	icon = 'icons/obj/mining_yw.dmi'
-	icon_state = "redtrail_light_on"
-	density = TRUE
-	anchored = TRUE
-	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
-
-/obj/machinery/trailblazer/Initialize()
-	randomize_color()
-	return ..()
-
-/obj/machinery/trailblazer/proc/randomize_color()
-	if(prob(30))
-		icon_state = "redtrail_light_on"
-		set_light(2, 2, "#FF0000")
-	else
-		set_light(2, 2, "#33CC33")
-
-/obj/machinery/trailblazer/red
-	name = "trail blazer"
-	desc = "A glowing stick- light.This one is glowing red."
-	icon = 'icons/obj/mining_yw.dmi'
-	icon_state = "redtrail_light_on"
-
-/obj/machinery/trailblazer/red/randomize_color()
-	if(prob(30))
-		icon_state = "redtrail_light_on"
-	set_light(2, 2, "#FF0000")
-
-/obj/machinery/trailblazer/blue
-	name = "trail blazer"
-	desc = "A glowing stick- light. This one is glowing blue."
-	icon = 'icons/obj/mining_yw.dmi'
-	icon_state = "bluetrail_light_on"
-
-/obj/machinery/trailblazer/blue/randomize_color()
-	if(prob(30))
-		icon_state = "bluetrail_light_on"
-	set_light(2, 2, "#C4FFFF")
-
-/obj/machinery/trailblazer/yellow
-	name = "trail blazer"
-	desc = "A glowing stick- light. This one is glowing yellow."
-	icon_state = "yellowtrail_light_on"
-
-/obj/machinery/trailblazer/yellow/randomize_color()
-	if(prob(30))
-		icon_state = "yellowtrail_light_on"
-	set_light(2, 2, "#ffea00")
-
 /obj/machinery/computer/security/exploration
 	name = "head mounted camera monitor"
 	desc = "Used to access the built-in cameras in helmets."
@@ -338,32 +280,3 @@
 	icon = 'icons/obj/stationobjs_op.dmi'
 	icon_state = "enzyme"
 	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
-
-
-// Submap things
-/obj/effect/map_effect/interval/liminal_B_controller
-	name = "liminal B controller"
-	icon = 'icons/mob/screen1.dmi'
-	icon_state = "x2"
-	opacity = 0
-
-	always_run = TRUE
-	interval_lower_bound = 5 SECONDS
-	interval_upper_bound = 20 SECONDS
-
-/obj/effect/map_effect/interval/liminal_B_controller/trigger()
-	var/area/submap/outpost21/cave_liminal_B/A = get_area(src)
-	if(!istype(A,/area/submap/outpost21/cave_liminal_B))
-		return
-	// Do not edit name directly, it mulches the warp to area list
-	A.show_name = pick("GET OUT","I HATE YOU","GET OUT OF ME","I FEEL YOU INSIDE ME","GET OUT","IT HURTS","LEAVE LEAVE LEAVE LEAVE","GET OUT GET OUT GET OUT GET OUT")
-	if(prob(5))
-		for(var/mob/living/L in range(10, get_turf(src)))
-			if(!L)
-				continue
-			if(prob(10))
-				L.adjustOxyLoss(rand(23,37),TRUE)
-			else if(prob(50))
-				L.adjustBruteLoss(rand(3,7),TRUE)
-			else
-				L.adjustFireLoss(rand(3,7),TRUE)
