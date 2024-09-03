@@ -448,12 +448,14 @@
 /datum/unit_test/zas_area_test/xenobio
 	name = "ZAS: Xenobiology"
 	area_path = /area/rnd/xenobiology
+
 /*
 /datum/unit_test/zas_area_test/mining_area
 	name = "ZAS: Mining Area (Vacuum)"
 	area_path = /area/mine/explored
 	expectation = UT_VACUUM
 */
+
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"
 	area_path = /area/quartermaster/storage
