@@ -354,3 +354,68 @@
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
+
+
+//////////////////////////////////////////////////////////////
+// Liminal area specialty controllers
+/obj/effect/map_effect/interval/liminal_B_controller
+	name = "liminal B controller"
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x2"
+	opacity = 0
+
+	always_run = TRUE
+	interval_lower_bound = 5 SECONDS
+	interval_upper_bound = 20 SECONDS
+
+/obj/effect/map_effect/interval/liminal_B_controller/trigger()
+	var/area/submap/outpost21/cave_liminal_B/A = get_area(src)
+	if(!istype(A,/area/submap/outpost21/cave_liminal_B))
+		return
+	// Do not edit name directly, it mulches the warp to area list
+	A.show_name = pick("GET OUT","I HATE YOU","GET OUT OF ME","I FEEL YOU INSIDE ME","GET OUT","IT HURTS","LEAVE LEAVE LEAVE LEAVE","GET OUT GET OUT GET OUT GET OUT")
+	if(prob(5))
+		for(var/mob/living/L in range(10, get_turf(src)))
+			if(!L)
+				continue
+			if(prob(10))
+				L.adjustOxyLoss(rand(23,37),TRUE)
+			else if(prob(50))
+				L.adjustBruteLoss(rand(3,7),TRUE)
+			else
+				L.adjustFireLoss(rand(3,7),TRUE)
+
+
+//////////////////////////////////////////////////////////////
+// Liminal area specialty deathdrops
+/turf/simulated/deathdrop/liminal
+	death_message = "You pass into the empty darkness ahead of you, and fall into another repeating room. There is no way back. You cease to exist in the world you once called home. Now there is only the same room, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over, over and over..."
+
+/turf/simulated/deathdrop/liminal_home_pit
+	death_message = "The wind rushes past you as you fall into the darkness... Then you wake up."
+
+/turf/simulated/deathdrop/liminal_home_pit/Entered(atom/A)
+	spawn(0)
+		if(A.is_incorporeal())
+			return
+		if(istype( A, /atom/movable))
+			var/atom/movable/AM = A
+			if(!AM.can_fall()) // flying checks
+				return
+		if(ismob( A))
+			var/mob/M = A
+			var/list/redexitlist = list()
+			for(var/obj/effect/landmark/R in landmarks_list)
+				if(R.name == "redexit")
+					redexitlist += R
+
+			if(redexitlist.len > 0)
+				var/obj/effect/landmark/L = pick( redexitlist)
+				do_teleport(M, L.loc, 0,local = FALSE)
+				to_chat( A, "<span class='danger'>[death_message]</span>")
+				// passout on return to reality
+				if(ishuman(M))
+					var/mob/living/carbon/human/H = M
+					H.AdjustSleeping(15)
+					H.AdjustWeakened(3)
+					H.adjustHalLoss(-9)
