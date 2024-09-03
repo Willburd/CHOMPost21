@@ -6,7 +6,9 @@ import { Window } from '../../../layouts';
 import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
-{ /* import { VoreSoulcatcher } from './VoreSoulcatcher'; // Outpost 21 edit - Nif removal */ }
+{
+  /* import { VoreSoulcatcher } from './VoreSoulcatcher'; // Outpost 21 edit - Nif removal */
+}
 import { VoreUserPreferences } from './VoreUserPreferences';
 
 /**
@@ -177,7 +179,8 @@ export const VorePanel = () => {
       icon_overflow={icon_overflow}
     />
   );
-  { /* Outpost 21 edit begin - Nif removal
+  {
+    /* Outpost 21 edit begin - Nif removal
   tabs[1] = (
     <VoreSoulcatcher
       our_bellies={our_bellies}
@@ -186,7 +189,8 @@ export const VorePanel = () => {
     />
   );
   tabs[2] = (
-  */ }
+  */
+  }
   tabs[1] = (
     <VoreUserPreferences
       prefs={prefs}

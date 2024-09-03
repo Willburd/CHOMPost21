@@ -21,7 +21,8 @@ export const DisposalBin = (props) => {
   if (mode === 3) {
     stateColor = 'bad';
     stateText = 'Interlock Error';
-  } else if (mode === 2) { /* Outpost 21 edit end */
+  } else if (mode === 2) {
+    /* Outpost 21 edit end */
     stateColor = 'good';
     stateText = 'Ready';
   } else if (mode <= 0) {

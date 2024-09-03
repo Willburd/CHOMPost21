@@ -39,9 +39,11 @@ export const BodyDesigner = (props) => {
   let body = MenuToTemplate[menu];
 
   return (
-    <Window width={750} height={850}> { /* Outpost 21 edit - Larger window for less scrolling */ }
+    <Window width={750} height={850}>
+      {' '}
+      {/* Outpost 21 edit - Larger window for less scrolling */}
       <Window.Content>
-      { /* Outpost 21 edit begin - Disk button always visible */ }
+        {/* Outpost 21 edit begin - Disk button always visible */}
         <Box>
           <Button
             icon="save"
@@ -57,11 +59,17 @@ export const BodyDesigner = (props) => {
           >
             Load From Disk
           </Button>
-          <Button icon="eject" onClick={() => act('ejectdisk')} disabled={!disk} > { /* Outpost 21 edit - They just disable instead! */ }
+          <Button
+            icon="eject"
+            onClick={() => act('ejectdisk')}
+            disabled={!disk}
+          >
+            {' '}
+            {/* Outpost 21 edit - They just disable instead! */}
             Eject
           </Button>
         </Box>
-        { /* Outpost 21 edit end */ }
+        {/* Outpost 21 edit end */}
         {body}
       </Window.Content>
     </Window>

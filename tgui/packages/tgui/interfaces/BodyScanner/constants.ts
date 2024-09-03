@@ -44,7 +44,11 @@ export const abnormalities: (string | ((occupant: occupant) => string))[][] = [
     },
   ],
   /* Outpost 21 add */
-  ['husked', 'bad', (occupant) => 'Anatomical structure lost, resuscitation not possible!'],
+  [
+    'husked',
+    'bad',
+    (occupant) => 'Anatomical structure lost, resuscitation not possible!',
+  ],
   /* Outpost 21 add end */
 ];
 
