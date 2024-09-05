@@ -5,6 +5,7 @@
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Mining Trawler"
 	known = TRUE // we own this lol
+	fore_dir = EAST
 
 /obj/machinery/computer/shuttle_control/explore/trawler
 	name = "short jump console"
@@ -33,6 +34,7 @@
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Security Carrier"
 	known = TRUE // we own this lol
+	fore_dir = SOUTH
 
 /obj/machinery/computer/shuttle_control/explore/security
 	name = "short jump console"
