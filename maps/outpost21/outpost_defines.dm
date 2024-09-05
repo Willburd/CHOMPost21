@@ -20,7 +20,6 @@
 	default_law_type = /datum/ai_laws/eshui_standard
 
 	holomap_smoosh = list(list(
-		Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER))
