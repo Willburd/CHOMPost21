@@ -63,7 +63,7 @@
 	display_name = "ESHUI Officer's Qualification Pin"
 	path = /obj/item/clothing/accessory/solgov/specialty/officer/eshui
 	ckeywhitelist = list("remthebold","seagha")
-	character_name = list("Trashfire","Schale Vam","Aiektaaknell","Janik Vam")
+	character_name = list("Trashfire","Schale Vam","Aiektaaknell","Janik Vam","Zeeshi","Shawn Foley")
 
 /datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
 	display_name = "ESHUI Captaincy Medal"
