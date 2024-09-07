@@ -16,17 +16,20 @@
 	name = "ESCC Bunker"
 	landmark_tag = "escape_centcom"
 	docking_controller = "centcom_dock"
-	base_area = /area/space
-	base_turf = /turf/space
+	base_area = /area/centcom/main_hall
+	base_turf = /turf/unsimulated/deathdrop/elevator_shaft
 
 /obj/effect/shuttle_landmark/premade/escape/transit
 	name = "Elevator Shaft"
 	landmark_tag = "escape_transit"
+	base_turf = /turf/unsimulated/deathdrop/elevator_shaft
 
 /obj/effect/shuttle_landmark/premade/escape/station
 	name = "ES Outpost21"
 	landmark_tag = "escape_station"
 	docking_controller = "escape_dock"
+	base_area = /area/engineering/gravgen
+	base_turf = /turf/unsimulated/deathdrop/elevator_shaft
 
 //////////////////////////////////////////////////////////////
 // Supply shuttle
@@ -44,8 +47,8 @@
 /obj/effect/shuttle_landmark/premade/supply/centcom
 	name = "ESCC Bunker"
 	landmark_tag = "supply_centcom"
-	base_area = /area/space
-	base_turf = /turf/space
+	base_area = /area/centcom/suppy
+	base_turf = /turf/unsimulated/floor/techfloor_grid
 
 /obj/effect/shuttle_landmark/premade/supply/station
 	name = "ES Outpost21"
