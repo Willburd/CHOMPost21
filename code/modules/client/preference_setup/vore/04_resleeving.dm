@@ -34,10 +34,12 @@
 				if(pref.resleeve_scan)
 					var/datum/transhuman/body_record/BR = new()
 					BR.init_from_mob(character, pref.resleeve_scan, pref.resleeve_lock)
+					to_chat(character, "<span class='notice'><b>Your body record has been synced with the [using_map.dock_name] database</b></span>") // Outpost 21 edit - Notify of record updates
 				if(pref.mind_scan)
 					var/datum/transcore_db/our_db = SStranscore.db_by_key(null)
 					if(our_db)
 						our_db.m_backup(character.mind,null /*Outpost 21 edit - Nif removal: character.nif */,one_time = TRUE) // CHOMPedit end
+						to_chat(character, "<span class='notice'><b>Your mind record has been synced with the [using_map.dock_name] database</b></span>") // Outpost 21 edit - Notify of record updates
 			if(pref.resleeve_lock)
 				character.resleeve_lock = character.ckey
 			character.original_player = character.ckey
