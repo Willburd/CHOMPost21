@@ -35,9 +35,7 @@ export type occupant = {
   humanPrey: number;
   objectPrey: number;
   weight: number;
-  /* Outpost 21 add */
   husked: BooleanLike;
-  /* Outpost 21 add end */
 };
 
 type reagent = { name: string; amount: number; overdose: BooleanLike };

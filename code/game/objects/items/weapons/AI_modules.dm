@@ -269,11 +269,10 @@ AI MODULES
 	desc = "A 'reset' AI module: 'Clears all, except the inherent, laws.'"
 	origin_tech = list(TECH_DATA = 3, TECH_MATERIAL = 4)
 
-// Outpost 21 edit begin - Use the map's defined default
+// VOREstation edit: use map default laws
 /obj/item/weapon/aiModule/reset/Initialize()
 	. = ..()
 	laws = new global.using_map.default_law_type // Pull from loaded map
-// Outpost 21 edit end
 
 /obj/item/weapon/aiModule/reset/transmitInstructions(var/mob/living/silicon/ai/target, var/mob/sender)
 	log_law_changes(target, sender)
