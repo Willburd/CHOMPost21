@@ -37,7 +37,7 @@
 				if(pref.mind_scan)
 					var/datum/transcore_db/our_db = SStranscore.db_by_key(null)
 					if(our_db)
-						our_db.m_backup(character.mind,character.nif,one_time = TRUE) // CHOMPedit end
+						our_db.m_backup(character.mind,null /*Outpost 21 edit - Nif removal: character.nif */,one_time = TRUE) // CHOMPedit end
 			if(pref.resleeve_lock)
 				character.resleeve_lock = character.ckey
 			character.original_player = character.ckey
