@@ -6,10 +6,11 @@
 #define RADIATION_DAMAGE 0x20
 #define TOXIN_DAMAGE 0x40
 #define OXY_DAMAGE 0x80
-// Outpost 21 addition begin
-#define WEIRD_ORGANS 0x100
-#define HUSKED_BODY 0x200
 
+#define HUSKED_BODY 0x100
+#define WEIRD_ORGANS 0x200
+
+// Outpost 21 addition begin
 /datum/category_item/catalogue/technology/medical_kiosk
 	name = "Medical Kiosk"
 	desc = "A standard issue medical kiosk, also called a \"save station\". Used for scanning injuries deeper than a normal health analyzer, in addition, it scans and saves the current neural network of crew for uploading into the station's database for resleeving. Don't forget to save!"
@@ -144,11 +145,8 @@
 		if(istype(I,/obj/item/organ/internal/malignant))
 			problems |= WEIRD_ORGANS
 		// Outpost 21 edit end
-	// Outpost 21 edit begin - show husking
 	if(HUSK in user.mutations)
 		problems |= HUSKED_BODY
-	// Outpost 21 edit end
-
 	if(user.getToxLoss() > 0)
 		problems |= TOXIN_DAMAGE
 	if(user.getOxyLoss() > 0)
@@ -185,10 +183,8 @@
 	if(problems & WEIRD_ORGANS)
 		problem_text += "<br><span class='warning'>Anatomical irregularities detected - Please see a medical professional.</span>"
 	// Outpost 21 addition end
-	// Outpost 21 edit begin - show husking
 	if(problems & HUSKED_BODY)
 		problem_text += "<br><span class='danger'>Anatomical structure lost, resuscitation not possible!</span>"
-	// Outpost 21 edit end
 
 	return problem_text
 
@@ -304,6 +300,6 @@
 #undef RADIATION_DAMAGE
 #undef TOXIN_DAMAGE
 #undef OXY_DAMAGE
-// Outpost 21 edit - malignants
-#undef WEIRD_ORGANS
+
 #undef HUSKED_BODY
+#undef WEIRD_ORGANS // Outpost 21 edit - malignants

@@ -10,12 +10,12 @@
 	var/obj/item/weapon/circuitboard/circuit = null
 	var/obj/item/device/mmi/brain = null
 
-// Outpost 21 edit begin - Respect map config's default
+// VOREstation edit: Respect map config's default
 /obj/structure/AIcore/Initialize(var/mapload)
 	. = ..()
 	if(mapload)
 		laws = new global.using_map.default_law_type
-// Outpost 21 edit end
+// VOREstation edit end
 
 /obj/structure/AIcore/attackby(obj/item/P as obj, mob/user as mob)
 

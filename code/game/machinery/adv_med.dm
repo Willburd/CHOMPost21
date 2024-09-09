@@ -359,7 +359,7 @@
 
 		occupantData["blind"] = (H.sdisabilities & BLIND)
 		occupantData["nearsighted"] = (H.disabilities & NEARSIGHTED)
-		occupantData["husked"] = (HUSK in H.mutations) // Outpost 21 edit - show husking
+		occupantData["husked"] = (HUSK in H.mutations) // VOREstation edit
 		occupantData = attempt_vr(src, "get_occupant_data_vr", list(occupantData, H)) //VOREStation Insert
 	data["occupant"] = occupantData
 
@@ -601,10 +601,8 @@
 		if(has_withdrawl != "")
 			dat += "<font color='red'>Experiencing chemical withdrawl!</font>[has_withdrawl]<BR>"
 		// Outpost 21 edit end
-		// Outpost 21 edit begin - show husking
-		if(HUSK in occupant.mutations)
+		if(HUSK in occupant.mutations) // VOREstation edit
 			dat += "<font color='red'>Anatomical structure lost, resuscitation not possible!</font><BR>"
-		// Outpost 21 edit end
 	else
 		dat += "\The [src] is empty."
 

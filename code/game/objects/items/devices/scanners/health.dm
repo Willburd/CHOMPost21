@@ -281,10 +281,8 @@
 					dat += "<span class='warning'>Chemical dependance detected.</span><br>"
 					break
 		// Outpost 21 edit end
-		// Outpost 21 edit begin - show husking
 		if(HUSK in H.mutations)
 			dat += "<span class='danger'>Anatomical structure lost, resuscitation not possible!</span><br>"
-		// Outpost 21 edit end
 		// Infections, fractures, and IB
 		var/basic_fracture = 0	// If it's a basic scanner
 		var/basic_ib = 0		// If it's a basic scanner
