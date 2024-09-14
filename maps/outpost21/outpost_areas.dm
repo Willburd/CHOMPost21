@@ -933,6 +933,7 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/muriki/grounds/graveyard
 	name = "\improper Facility Graveyard"
