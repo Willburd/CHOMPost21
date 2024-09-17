@@ -1,7 +1,7 @@
 import { decodeHtmlEntities, toTitleCase } from 'common/string';
 
-import { useBackend } from '../../backend';
-import { Box, LabeledList, Section } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, LabeledList, Section } from 'tgui/components';
 
 type Data = {
   weather: Weather[];

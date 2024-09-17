@@ -74,7 +74,7 @@
 	// hackey dragon projectile spawn code... I should have ported it here, but that feels like stealing?
 	if(!lit || operating)	return
 	if(user && user.get_active_hand() == src)
-		if(user.a_intent == I_HELP && user.is_preference_enabled(/datum/client_preference/safefiring))
+		if(user.a_intent == I_HELP && user.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))
 			to_chat(user, "<span class='warning'>You refrain from firing \the [src] as your intent is set to help.</span>")
 			return
 

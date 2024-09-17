@@ -1,6 +1,6 @@
 /* eslint react/no-danger: "off" */
-import { useBackend } from '../../backend';
-import { Box, Button, Section } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Button, Section } from 'tgui/components';
 
 type Data = {
   sop_title: string;

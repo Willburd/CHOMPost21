@@ -6,9 +6,11 @@ export const ControlAdmin = (props) => {
 
   return (
     <Section title="Admin Controls">
+      { /* Outpost 21 edit - Removed Nifs
       <Button fluid onClick={() => act('quick_nif')}>
         Quick NIF
       </Button>
+      */ }
       <Button fluid onClick={() => act('resize')}>
         Resize
       </Button>

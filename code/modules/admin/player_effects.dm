@@ -501,8 +501,10 @@
 				return
 
 			for(var/obj/item/W in Tar)
+				/* Outpost 21 edit - Nif removal
 				if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))	//VOREStation Edit - There's basically no reason to remove either of these
 					continue	//VOREStation Edit
+				*/
 				Tar.drop_from_inventory(W)
 
 		if("drop_specific")
@@ -555,6 +557,7 @@
 
 		////////ADMIN//////////////
 
+		/* Outpost 21 edit - Nif removal
 		if("quick_nif")
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
@@ -588,6 +591,7 @@
 				else
 					new /obj/item/device/nif(Tar)
 			log_and_message_admins("[key_name(user)] Quick NIF'd [Tar.real_name] with a [input_NIF].")
+		*/
 
 		if("resize")
 			user.client.resize(target)
