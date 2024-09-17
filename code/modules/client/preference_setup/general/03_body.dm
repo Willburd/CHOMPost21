@@ -112,7 +112,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.g_eyes				= save_data["eyes_green"]
 	pref.b_eyes				= save_data["eyes_blue"]
 	pref.b_type				= save_data["b_type"]
-	pref.disabilities		= save_data["disabilities"] // Traitgenes edit - Traits replace old pref disability code
+	// pref.disabilities		= save_data["disabilities"] // Traitgenes edit - Traits replace old pref disability code
 	// Outpost 21 edit begin - more disabilities
 	pref.addictions			= save_data["addictions"]
 	// Outpost 21 edit end
