@@ -1,4 +1,4 @@
-import { decodeHtmlEntities, toTitleCase } from 'common/string';
+import { toTitleCase, decodeHtmlEntities } from 'common/string';
 
 import { useBackend } from 'tgui/backend';
 import { Box, LabeledList, Section } from 'tgui/components';
