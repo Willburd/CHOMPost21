@@ -737,6 +737,8 @@
 					O.mend_fracture()		//Only works if the bone won't rebreak, as usual
 					H.custom_pain(SPAN_DANGER("<b><font size=2>You feel a terrible agony tear through your [O.name]!</font></b>"),60,TRUE) // Outpost 21 edit - MAKE THIS PAIN MORE OBVIOUS
 					H.AdjustWeakened(10)		//Bones being regrown will knock you over // Outpost 21 edit - MAKE THIS PAIN MORE OBVIOUS
+					H.adjustHalLoss(60)
+					H.AdjustStunned(1)		//Bones being regrown will knock you over - CHOMPEdit - Crawling made this trivial, get stunned
 		//CHOMPEdit End
 
 /datum/reagent/myelamine

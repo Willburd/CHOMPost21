@@ -1159,7 +1159,7 @@
 		return
 
 	// intent check
-	if(user_calling.a_intent == I_HELP && user_calling.is_preference_enabled(/datum/client_preference/safefiring))
+	if(user_calling.a_intent == I_HELP && user_calling.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))
 		to_chat(user_calling, "<span class='warning'>You refrain from firing the mounted \the [src] as your intent is set to help.</span>")
 		return
 
