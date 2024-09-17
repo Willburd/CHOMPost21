@@ -146,7 +146,7 @@
 */
 	if(requires_wield && !wielded)
 		return
-	if(!(user.a_intent == I_HELP && user.is_preference_enabled(/datum/client_preference/safefiring))) // outpost 21 edit - holy shit this thing was silly without a safety
+	if(!(user.a_intent == I_HELP && user.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))) // outpost 21 edit - holy shit this thing was silly without a safety
 		if(!proximity_flag && charged)//Mark a target, or mine a tile.
 			var/turf/proj_turf = user.loc
 			if(!isturf(proj_turf))
