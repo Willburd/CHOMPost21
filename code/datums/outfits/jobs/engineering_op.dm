@@ -1,5 +1,5 @@
 /decl/hierarchy/outfit/job/engineering/chems
-	name = OUTFIT_JOB_NAME("Chemical Engineer")
+	name = OUTFIT_JOB_NAME(JOB_ALT_CHEMENGINEER)
 	head = /obj/item/clothing/head/hardhat
 	uniform = /obj/item/clothing/under/rank/engineer
 	belt = /obj/item/weapon/storage/belt/utility/chemtech
