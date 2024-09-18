@@ -96,7 +96,9 @@
 	name = JOB_TALON_PILOT
 /obj/effect/landmark/start/talonminer
 	name = JOB_TALON_MINER
+/* Outpost 21 edit - disable these jobs
 /obj/effect/landmark/start/outsider
 	name = JOB_OUTSIDER
 /obj/effect/landmark/start/anomaly
 	name = JOB_ANOMALY
+*/

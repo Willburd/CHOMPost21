@@ -194,6 +194,7 @@
 	#define JOB_ALT_FISHER "Fisher"
 	#define JOB_ALT_FORTUNE_TELLER "Fortune Teller"
 	#define JOB_ALT_SPIRIT_HEALER "Spirit Healer"
+	#define JOB_ALT_RADIOHOST "Radio Host" // Outpost 21 addition
 //___________________________________________________________
 
 
@@ -205,6 +206,8 @@
 	#define JOB_ALT_ELECTRICIAN "Electrician"
 	#define JOB_ALT_CONSTRUCTION_ENGINEER "Construction Engineer"
 	#define JOB_ALT_ENGINEERING_CONTRACTOR "Engineering Contractor"
+	#define JOB_ALT_SHIPBREAKER "Ship Breaker"
+	#define JOB_ALT_CHEMENGINEER "Chemical Engineer"
 
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
 	// Atmospheric Technician alt titles

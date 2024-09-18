@@ -30,7 +30,7 @@
 /datum/job/engineer
 	pto_type = PTO_ENGINEERING
 	alt_titles = list(JOB_ALT_MAINTENANCE_TECHNICIAN = /datum/alt_title/maint_tech, JOB_ALT_ENGINE_TECHNICIAN = /datum/alt_title/engine_tech,
-						JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor, "Ship Breaker" = /datum/alt_title/ship_breaker, "Chemical Engineer" = /datum/alt_title/chem_tech) // Outpost 21 addition - shipbreaker, Chemical Engineer
+						JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor, JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker, JOB_ALT_CHEMENGINEER = /datum/alt_title/chem_tech) // Outpost 21 addition - shipbreaker, Chemical Engineer
 
 /datum/alt_title/construction_engi
 	title = JOB_ALT_CONSTRUCTION_ENGINEER
