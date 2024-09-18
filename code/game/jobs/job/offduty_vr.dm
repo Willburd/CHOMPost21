@@ -3,11 +3,11 @@
 //
 
 /datum/job/offduty_civilian
-	title = "Off-duty Worker"
+	title = JOB_OFFDUTY_WORKER
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
-	faction = "Station"
+	faction = FACTION_STATION
 	departments = list(DEPARTMENT_OFFDUTY)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#9b633e"
@@ -20,11 +20,11 @@
 	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_cargo
-	title = "Off-duty Cargo"
+	title = JOB_OFFDUTY_CARGO
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
-	faction = "Station"
+	faction = FACTION_STATION
 	departments = list(DEPARTMENT_OFFDUTY)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#9b633e"
@@ -37,11 +37,11 @@
 	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_engineering
-	title = "Off-duty Engineer"
+	title = JOB_OFFDUTY_ENGINEER
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
-	faction = "Station"
+	faction = FACTION_STATION
 	departments = list(DEPARTMENT_OFFDUTY)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#5B4D20"
@@ -54,11 +54,11 @@
 	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_medical
-	title = "Off-duty Medic"
+	title = JOB_OFFDUTY_MEDIC
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
-	faction = "Station"
+	faction = FACTION_STATION
 	departments = list(DEPARTMENT_OFFDUTY)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#013D3B"
@@ -71,11 +71,11 @@
 	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_science
-	title = "Off-duty Scientist"
+	title = JOB_OFFDUTY_SCIENTIST
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
-	faction = "Station"
+	faction = FACTION_STATION
 	departments = list(DEPARTMENT_OFFDUTY)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#633D63"
@@ -88,11 +88,11 @@
 	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_security
-	title = "Off-duty Officer"
+	title = JOB_OFFDUTY_OFFICER
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
-	faction = "Station"
+	faction = FACTION_STATION
 	departments = list(DEPARTMENT_OFFDUTY)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#601C1C"
@@ -105,11 +105,11 @@
 	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_exploration
-	title = "Off-duty Explorer"
+	title = JOB_OFFDUTY_EXPLORER
 	latejoin_only = TRUE
 	timeoff_factor = -1
 	total_positions = -1
-	faction = "Station"
+	faction = FACTION_STATION
 	departments = list(DEPARTMENT_OFFDUTY)
 	supervisors = "nobody! Enjoy your time off"
 	selection_color = "#999440"
