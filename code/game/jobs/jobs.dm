@@ -12,6 +12,7 @@ var/const/ATMOSTECH			=(1<<7)
 var/const/AI				=(1<<8)
 var/const/CYBORG			=(1<<9)
 var/const/ROBOTICIST		=(1<<10) // Outpost 21 edit - Moved to engineering
+var/const/BRIGPHYS 			=(1<<11) // CHOMPAdd - Brig Physician // Outpost 21 edit - altered to 11 and put in engsec where it is assigned
 var/const/CLOWN				=(1<<13)
 var/const/MIME				=(1<<14)
 var/const/INTERN			=(1<<15)
@@ -34,7 +35,6 @@ var/const/PARAMEDIC			=(1<<10)
 //var/const/SAR 				=(1<<13)	// Outpost 21 edit - removed job
 var/const/XENOBOTANIST		=(1<<14)
 var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
-var/const/BRIGPHYS 			=(1<<16) // CHOMPAdd - Brig Physician
 
 var/const/CIVILIAN			=(1<<2)
 
