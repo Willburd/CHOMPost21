@@ -34,6 +34,7 @@ var/const/PARAMEDIC			=(1<<10)
 //var/const/SAR 				=(1<<13)	// Outpost 21 edit - removed job
 var/const/XENOBOTANIST		=(1<<14)
 var/const/PILOT 			=(1<<15) //ChompEDIT - ours is with the other explo jobs.
+var/const/BRIGPHYS 			=(1<<16) // CHOMPAdd - Brig Physician
 
 var/const/CIVILIAN			=(1<<2)
 
