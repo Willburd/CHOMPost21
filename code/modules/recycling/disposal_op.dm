@@ -58,6 +58,10 @@
 					foundid = P.id
 					break
 			for(var/obj/item/weapon/storage in H)
+				for(var/obj/item/device/pda/P in storage.contents)
+					if(!isnull(P.id)) // send these to medical body disposal as well
+						foundid = P.id
+						break
 				for(var/obj/item/weapon/card/id in storage.contents)
 					foundid = id // check simple storages for idcards! one level deep only!
 					break
