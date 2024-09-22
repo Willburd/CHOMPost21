@@ -20,11 +20,9 @@ var/global/list/micro_tunnels = list()
 		/mob/living/simple_mob/slime
 	)
 
-// Outpost 21 edit begin - less terrible way of keeping track of micro tunnels
 /obj/structure/micro_tunnel/New()
 	. = ..()
 	micro_tunnels.Add(src)
-// Outpost 21 edit end
 
 /obj/structure/micro_tunnel/Initialize()
 	. = ..()
@@ -44,6 +42,8 @@ var/global/list/micro_tunnels = list()
 	// Outpost 21 edit begin - less terrible way of keeping track of micro tunnels
 	micro_tunnels.Remove(src)
 	// Outpost 21 edit end
+
+	micro_tunnels.Remove(src)
 
 	return ..()
 
@@ -74,7 +74,7 @@ var/global/list/micro_tunnels = list()
 		if(myturf.z in P.expected_z_levels)
 			planet = P
 		else
-	for(var/obj/structure/micro_tunnel/t in micro_tunnels)// Outpost 21 edit - less terrible way of keeping track of micro tunnels
+	for(var/obj/structure/micro_tunnel/t in micro_tunnels)
 		if(t == src)
 			continue
 		if(magic || t.magic)
@@ -353,7 +353,7 @@ var/global/list/micro_tunnels = list()
 					return
 				if(QDELETED(src))
 					return
-				if(usr.loc != src) // Outpost 21 edit - don't move if you were taken out of the hole
+				if(usr.loc != src)
 					return
 				var/obj/our_choice = choice
 
