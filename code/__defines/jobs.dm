@@ -79,6 +79,7 @@
 		#define JOB_ALT_RESEARCH_ASSISTANT "Research Assistant"
 		#define JOB_ALT_VISITOR "Visitor"
 		#define JOB_ALT_RESIDENT "Resident"
+		#define JOB_ALT_SPACER "Spacer" // Outpost 21 addition
 //___________________________________________________________
 
 
