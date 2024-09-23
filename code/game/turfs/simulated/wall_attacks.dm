@@ -127,7 +127,7 @@
 		return success_smash(user)
 	return fail_smash(user)
 
-/turf/simulated/wall/attackby(var/obj/item/weapon/W, var/mob/user)
+/turf/simulated/wall/attackby(var/obj/item/weapon/W, var/mob/user, attack_modifier, click_parameters) // CHOMPEdit - attack_modifier, click_parameters
 
 	user.setClickCooldown(user.get_attack_speed(W))
 
@@ -152,7 +152,7 @@
 /*
 //As with the floors, only this time it works AND tries pushing the wall after it's done.
 	if(!construction_stage && user.a_intent == I_HELP)
-		if(try_graffiti(user,W))
+		if(try_graffiti(user,W, click_parameters)) // CHOMPEdit - Commented, but- Still. Just in case.
 			return
 */
 
