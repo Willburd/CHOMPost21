@@ -514,6 +514,7 @@
 	id = "lexorin"
 	result = "lexorin"
 	required_reagents = list("phoron" = 1, "hydrogen" = 1, "nitrogen" = 1)
+	inhibitors = list("copper" = 1) // Outpost 21 edit - messes with hemocyanin
 	result_amount = 3
 
 /decl/chemical_reaction/instant/methylphenidate
