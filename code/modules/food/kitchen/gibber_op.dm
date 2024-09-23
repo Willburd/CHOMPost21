@@ -357,7 +357,7 @@
 			thing.throw_at( get_edge_target_turf(thing.loc, gib_throw_dir),rand(1,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.
 
 	// Pass ID to sleever
-	spawn(10)
+	spawn(100) // needs big delay time to make sure the host is dead if stayed in brain
 		if(!isnull(sleevecard))
 			sleevelink.get_id_trigger(sleevecard)
 
