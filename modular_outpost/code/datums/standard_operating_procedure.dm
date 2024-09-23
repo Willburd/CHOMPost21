@@ -506,7 +506,7 @@
 			<b><i>Clonex:</b></i> 20 Phoron, 20 oxygen, 10 water, 10 oxygen, 30 sodium. (Cryox plus sodium) \
 			<br/> \
 			<hr/><b><center>SUFFOCATION DAMAGE IN NON-OXYGEN BREATHERS</center></b> \
-			<b>Hemocyanin:</b> A specialty medication for treating suffocation damage in non-oxygen breathers. Deliver by injection only. Overdose is 7 units. -- 3 Phoron, 3 Copper, 9 Hydrogen, 18 Nitrogen, 27 Carbon. (1 part phoron, 1 part copper, 3 parts hydrogen, 6 parts nitrogen, 9 parts carbon)<hr/> \
+			<b>Hemocyanin:</b> A specialty medication for treating suffocation damage in non-oxygen breathers. Deliver by injection only. Overdose is 7 units. -- 10 Phoron, 20 Copper, 20 Hydrogen, 30 Nitrogen, 30 Carbon.<hr/> \
 			<br/> \
 			You'll notice I don't put Tramadol on here, that's because patients can stop being babies and deal with the pain until you are done saving their lives. Make any painkillers last, when you finally grow tired of the whining. \
 			<br/> \
