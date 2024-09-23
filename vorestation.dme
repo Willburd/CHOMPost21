@@ -1301,6 +1301,7 @@
 #include "code\game\objects\effects\spiders.dm"
 #include "code\game\objects\effects\spiders_op.dm"
 #include "code\game\objects\effects\step_triggers.dm"
+#include "code\game\objects\effects\step_triggers_op.dm"
 #include "code\game\objects\effects\wire_deleter.dm"
 #include "code\game\objects\effects\zone_divider.dm"
 #include "code\game\objects\effects\zz_portals_ch.dm"
