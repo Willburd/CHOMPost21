@@ -293,7 +293,13 @@
 		H.fuzzy = dna.scale_appearance // Outpost 21 edit - missing dna entry
 		H.offset_override = dna.offset_override // Outpost 21 edit - missing dna entry
 		H.synth_markings = dna.synth_markings // Outpost 21 edit - missing dna entry
-		// Outpost 21 edit begin - missing dna entry
+		// Outpost 21 edit begin - missing dna entry, Species sounds
+		H.species.species_sounds = dna.species_sounds
+		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
+		H.species.species_sounds_male = dna.species_sounds_male
+		H.species.species_sounds_female = dna.species_sounds_female
+		// Outpost 21 edit end
+		// Outpost 21 edit begin - missing dna entry, hair gradient
 		H.grad_style = dna.grad_style
 		H.r_grad = dna.r_grad
 		H.g_grad = dna.g_grad
