@@ -60,9 +60,14 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	var/blood_reagents = "iron" // Outpost 21 edit - missing dna entry
 	var/scale_appearance = 0 // Outpost 21 edit - missing dna entry
 	var/offset_override = 0 // Outpost 21 edit - missing dna entry
-	var/species_sounds = 0 // Outpost 21 edit - missing dna entry
 	var/synth_markings = 0 // Outpost 21 edit - missing dna entry
-	// Outpost 21 edit begin - missing dna entry, these should really be UIs
+	// Outpost 21 edit begin - missing dna entry, Species sounds
+	var/species_sounds = "None"
+	var/gender_specific_species_sounds = FALSE
+	var/species_sounds_male = "None"
+	var/species_sounds_female = "None"
+	// Outpost 21 edit end
+	// Outpost 21 edit begin - missing dna entry, hair gradient
 	var/grad_style = 0
 	var/r_grad = 0
 	var/g_grad = 0
@@ -100,9 +105,14 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	new_dna.blood_reagents=blood_reagents // Outpost 21 edit - missing dna entry
 	new_dna.scale_appearance = scale_appearance // Outpost 21 edit - missing dna entry
 	new_dna.offset_override = offset_override // Outpost 21 edit - missing dna entry
-	new_dna.species_sounds = species_sounds // Outpost 21 edit - missing dna entry
 	new_dna.synth_markings = synth_markings // Outpost 21 edit - missing dna entry
-	// Outpost 21 edit begin - missing dna entry
+	// Outpost 21 edit begin - missing dna entry, Species sounds
+	new_dna.species_sounds = species_sounds
+	new_dna.gender_specific_species_sounds = gender_specific_species_sounds
+	new_dna.species_sounds_male = species_sounds_male
+	new_dna.species_sounds_female = species_sounds_female
+	// Outpost 21 edit end
+	// Outpost 21 edit begin - missing dna entry, hair gradient
 	new_dna.grad_style = grad_style
 	new_dna.r_grad = r_grad
 	new_dna.g_grad = g_grad
@@ -185,9 +195,14 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	src.blood_reagents = character.species.blood_reagents // Outpost 21 edit - missing dna entry
 	src.scale_appearance = character.fuzzy // Outpost 21 edit - missing dna entry
 	src.offset_override = character.offset_override // Outpost 21 edit - missing dna entry
-	src.species_sounds = character.species.species_sounds // Outpost 21 edit - missing dna entry
 	src.synth_markings = character.synth_markings // Outpost 21 edit - missing dna entry
-	// Outpost 21 edit begin - missing dna entry (these should really be a UI entry, but no one maintains them anyway)
+	// Outpost 21 edit begin - missing dna entry, Species sounds
+	src.species_sounds = character.species.species_sounds
+	src.gender_specific_species_sounds = character.species.gender_specific_species_sounds
+	src.species_sounds_male = character.species.species_sounds_male
+	src.species_sounds_female = character.species.species_sounds_female
+	// Outpost 21 edit end
+	// Outpost 21 edit begin - missing dna entry, hair gradient
 	src.grad_style = character.grad_style
 	src.r_grad = character.r_grad
 	src.g_grad = character.g_grad
