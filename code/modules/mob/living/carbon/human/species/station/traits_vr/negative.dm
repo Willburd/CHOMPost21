@@ -140,6 +140,13 @@
 	excludes = list(/datum/trait/negative/lightweight_light) //CHOMPedit Added a lesser version of this trait
 	custom_only = FALSE
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="You feel a little fragile..."
+	// Traitgenes edit end
+
 /datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Makes all pain effects twice as strong, and occur at half as much damage."

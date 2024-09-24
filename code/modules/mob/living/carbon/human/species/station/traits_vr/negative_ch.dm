@@ -52,6 +52,13 @@
 	cost = -1
 	special_env = TRUE
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your body feels strange..."
+	// Traitgenes edit end
+
 /datum/trait/negative/low_blood_sugar/handle_environment_special(var/mob/living/carbon/human/H)
 	if(H.nutrition > 200)	//Sanity check because stupid bugs >:v
 		return
