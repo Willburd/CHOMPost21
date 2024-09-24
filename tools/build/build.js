@@ -37,9 +37,9 @@ Juke.setup({ file: import.meta.url }).then((code) => {
 const DME_NAME = 'vorestation';
 const CUTTER_SUFFIX = '.png.toml'
 
-// Stores the contents of _build_dependencies.sh as a key value pair
+// Stores the contents of dependencies.sh as a key value pair
 // Best way I could figure to get ahold of this stuff
-const dependencies = fs.readFileSync('_build_dependencies.sh', 'utf8')
+const dependencies = fs.readFileSync('dependencies.sh', 'utf8')
   .split("\n")
   .map((statement) => statement.replace("export", "").trim())
   .filter((value) => !(value == "" || value.startsWith("#")))
@@ -77,7 +77,7 @@ export const CiParameter = new Juke.Parameter({ type: 'boolean' });
 
 export const ForceRecutParameter = new Juke.Parameter({
   type: 'boolean',
-  name: "force_recut",
+  name: "force-recut",
 });
 
 export const WarningParameter = new Juke.Parameter({
@@ -183,7 +183,6 @@ export const DmMapsIncludeTarget = new Juke.Target({
       //...Juke.glob('_maps/templates/**/*.dmm'),
       ...Juke.glob('maps/outpost21/**/*.dmm'),
       ...Juke.glob('maps/submap/**/*.dmm'),
-
     ];
     const content = folders
       .map((file) => file.replace('_maps/', ''))
@@ -208,8 +207,10 @@ export const DmTarget = new Juke.Target({
     'html/**',
     'icons/**',
     'interface/**',
+    'sound/**',
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
+    'modular_chomp/sound/**',
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],
@@ -354,8 +355,8 @@ export const TguiTarget = new Juke.Target({
     'tgui/public/tgui.bundle.js',
     'tgui/public/tgui-panel.bundle.css',
     'tgui/public/tgui-panel.bundle.js',
-    //'tgui/public/tgui-say.bundle.css',
-    //'tgui/public/tgui-say.bundle.js',
+    'tgui/public/tgui-say.bundle.css',
+    'tgui/public/tgui-say.bundle.js',
   ],
   executes: () => yarn('tgui:build'),
 });
