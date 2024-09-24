@@ -97,6 +97,7 @@
 	picked_client.prefs.copy_to(new_character)
 	if(new_character.dna)
 		new_character.dna.ResetUIFrom(new_character)
+		new_character.sync_dna_traits(TRUE)
 		new_character.sync_organ_dna()
 	for(var/lang in picked_client.prefs.alternate_languages)
 		var/datum/language/chosen_language = GLOB.all_languages[lang]

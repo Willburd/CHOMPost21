@@ -308,6 +308,43 @@
 				if(prob(23)) drop_item()
 				spawn( 0 )
 					emote("cough")
+	if(dna)
+		if(disabilities & DETERIORATE && prob(2) && prob(3)) // stacked percents for rarity
+			// random strange symptoms from organ/limb
+			custom_emote(VISIBLE_MESSAGE, "flinches slightly.")
+			switch(rand(1,4))
+				if(1)
+					adjustToxLoss(rand(2,8))
+				if(2)
+					adjustCloneLoss(rand(1,2))
+				if(3)
+					add_chemical_effect(CE_PAINKILLER, rand(8,28))
+				else
+					adjustOxyLoss(rand(13,26))
+			// external organs need to fall off if damaged enough
+			var/obj/item/organ/O = pick(organs)
+			if(O && !(O.organ_tag == BP_GROIN || O.organ_tag == BP_TORSO) && istype(O,/obj/item/organ/external))
+				var/obj/item/organ/external/E = O
+				if(O.damage >= O.min_broken_damage && O.robotic <= ORGAN_ASSISTED && prob(70))
+					add_chemical_effect(CE_PAINKILLER, 120) // what limb? Extreme nerve damage. Can't feel a thing + shock
+					E.droplimb(TRUE, DROPLIMB_ACID)
+		if(disabilities & GIBBING)
+			gutdeathpressure += 0.01
+			if(gutdeathpressure > 0 && prob(gutdeathpressure))
+				emote(pick("whimper","belch","belch","belch","choke","shiver"))
+				Weaken(gutdeathpressure / 3)
+			if((gutdeathpressure/3) >= 1 && prob(gutdeathpressure/3))
+				gutdeathpressure = 0 // to stop retriggering
+				spawn(1)
+					emote(pick("whimper","shiver"))
+				spawn(3)
+					emote(pick("whimper","belch","shiver"))
+				spawn(4)
+					emote(pick("whimper","shiver"))
+				spawn(6)
+					emote(pick("belch"))
+					gib()
+	// outpost 21 edit end
 
 	var/rn = rand(0, 200)
 	if(getBrainLoss() >= 5)
@@ -363,14 +400,16 @@
 	 	if((mRegen in mutations))
 	 		heal_organ_damage(0.2,0.2)
 
+	/* Traitgenes edit - replaced by trait's handle_environment()
 	// DNA2 - Gene processing.
 	// The HULK stuff that was here is now in the hulk gene.
 	if(!isSynthetic())
-		for(var/datum/dna/gene/gene in dna_genes)
+		for(var/datum/gene/gene in dna_genes) // Traitgenes edit - Removed /dna/ from path
 			if(!gene.block)
 				continue
 			if(gene.is_active(src))
 				gene.OnMobLife(src)
+	*/
 
 	radiation = CLAMP(radiation,0,2500) //Max of 50Gy. If you reach that...You're going to wish you were dead. You probably will be dead.
 	accumulated_rads = CLAMP(accumulated_rads,0,2500) //Max of 50Gy as well. You should never get higher than this. You will be dead before you can reach this.

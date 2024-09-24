@@ -3,10 +3,24 @@
 	desc = "You breathe carbon dioxide instead of oxygen (which is poisonous to you). Incidentally, phoron isn't poisonous to breathe to you."
 	var_changes = list("breath_type" = "carbon_dioxide", "exhale_type" = "oxygen", "poison_type" = "oxygen", "ideal_air_type" = /datum/gas_mixture/belly_air/carbon_dioxide_breather)
 
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your chest hurts..."
+	// Traitgenes edit end
+
 /datum/trait/negative/breathes/methane
 	name = "Methane Breather"
 	desc = "You breathe methane instead of oxygen (which is poisonous to you)."
 	var_changes = list("breath_type" = "methane", "poison_type" = "oxygen", "ideal_air_type" = /datum/gas_mixture/belly_air/methane_breather)
+
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your chest hurts..."
+	// Traitgenes edit end
 
 /datum/trait/negative/phoron_vulnerable
 	name = "Phoron Vulnerability"

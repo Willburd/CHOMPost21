@@ -40,6 +40,9 @@
 #define DEPRESSION     	0x20	// Roleplay drugs
 #define SCHIZOPHRENIA  	0x40	// Roleplay drugs
 #define WINGDINGS     	0x80	// Better handling as disability
+#define DETERIORATE     0x100	// Body melts slowly, medical loves you!
+#define GIBBING     	0x200	// Landmine for genetics to find
+#define CENSORED     	0x400	// Cannot swear
 // Outpost 21 edit end
 
 // sdisabilities
@@ -47,6 +50,7 @@
 #define MUTE  0x2
 #define DEAF  0x4
 
+/* Traitgenes edit - Blocks have finally been retired, huzzah!
 // The way blocks are handled badly needs a rewrite, this is horrible.
 // Too much of a project to handle at the moment, TODO for later.
 var/BLINDBLOCK    = 0
@@ -79,6 +83,7 @@ var/HALLUCINATIONBLOCK = 0
 var/NOPRINTSBLOCK      = 0
 var/SHOCKIMMUNITYBLOCK = 0
 var/SMALLSIZEBLOCK     = 0
+*/
 
 // Define block bounds (off-low,off-high,on-low,on-high)
 // Used in setupgame.dm
@@ -136,7 +141,9 @@ var/SMALLSIZEBLOCK     = 0
 #define DNA_UI_WING3_B     47 // VOREStation snippet end.
 #define DNA_UI_LENGTH      47 // VOREStation Edit - Needs to match the highest number above.
 
-#define DNA_SE_LENGTH 49 // VOREStation Edit (original was UI+11)
+#define DNA_SE_LENGTH 84 // Traitgenes edit - Expanded from 49 to 84, there have been a considerable expansion of genes.
+// This leaves room for future expansion. This can be arbitrarily raised without worry if genes start to get crowded.
+// The dna editor is 7 cols, and this should probably be multiples of it. Should have more than 10 empty genes after setup. - Willbird
 
 //DNA modifiers
 // Buffer datatype flags.

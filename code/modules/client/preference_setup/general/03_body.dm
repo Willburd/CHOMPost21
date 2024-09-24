@@ -112,9 +112,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.g_eyes				= save_data["eyes_green"]
 	pref.b_eyes				= save_data["eyes_blue"]
 	pref.b_type				= save_data["b_type"]
-	pref.disabilities		= save_data["disabilities"]
-	pref.sdisabilities		= save_data["sdisabilities"]
+	// pref.disabilities		= save_data["disabilities"] // Traitgenes edit - Traits replace old pref disability code
+	// Outpost 21 edit begin - more disabilities
 	pref.addictions			= save_data["addictions"]
+	// Outpost 21 edit end
 	pref.organ_data			= save_data["organ_data"]
 	pref.rlimb_data			= save_data["rlimb_data"]
 	pref.body_markings		= save_data["body_markings"]
@@ -186,9 +187,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	save_data["eyes_green"]			= pref.g_eyes
 	save_data["eyes_blue"]			= pref.b_eyes
 	save_data["b_type"]				= pref.b_type
-	save_data["disabilities"]		= pref.disabilities
-	save_data["sdisabilities"]		= pref.sdisabilities
+	// save_data["disabilities"]		= pref.disabilities // Traitgenes edit - Traits replace old pref disability code
+	// Outpost 21 edit begin - more disabilities
 	save_data["addictions"]			= pref.addictions
+	// Outpost 21 edit end
 	save_data["organ_data"]			= pref.organ_data
 	save_data["rlimb_data"]			= pref.rlimb_data
 	save_data["body_markings"]		= pref.body_markings
@@ -263,9 +265,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.b_eyes			= sanitize_integer(pref.b_eyes, 0, 255, initial(pref.b_eyes))
 	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
 
-	pref.disabilities	= sanitize_integer(pref.disabilities, 0, 65535, initial(pref.disabilities))
+	// pref.disabilities	= sanitize_integer(pref.disabilities, 0, 65535, initial(pref.disabilities)) // Traitgenes edit - Traits replace old pref disability code
 	// Outpost 21 edit begin - more disabilities
-	pref.sdisabilities	= sanitize_integer(pref.sdisabilities, 0, 65535, initial(pref.sdisabilities))
 	pref.addictions		= sanitize_integer(pref.addictions, 0, 65535, initial(pref.addictions))
 	// Outpost 21 edit end
 
@@ -1250,15 +1251,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 		return TOPIC_REFRESH
 
+	/* Traitgenes edit - Traits replace old pref disability code
 	else if(href_list["disabilities"])
 		var/disability_flag = text2num(href_list["disabilities"])
 		pref.disabilities ^= disability_flag
 		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
-
-	else if(href_list["sdisabilities"])
-		var/disability_flag = text2num(href_list["sdisabilities"])
-		pref.sdisabilities ^= disability_flag
-		Disabilities_OP(user) // Outpost 21 edit - We use different disabilities
+	*/
 
 	else if(href_list["addictions"])
 		var/addiction_flag = text2num(href_list["addictions"])

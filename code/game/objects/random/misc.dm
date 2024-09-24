@@ -273,7 +273,8 @@
 				prob(2);/obj/item/weapon/reagent_containers/syringe/drugs,
 				prob(1);/obj/item/weapon/reagent_containers/syringe/steroid,
 				prob(2);/obj/item/weapon/implanter/compliance, // Outpost 21 edit - implanters
-				prob(2);/obj/item/weapon/implanter/loyalty) // Outpost 21 edit - implanters
+				prob(2);/obj/item/weapon/implanter/loyalty, // Outpost 21 edit - implanters
+				prob(1);/obj/item/weapon/dnainjector/random_verygood_labeled) // Outpost 21 edit - Lets add a little chaos
 
 /obj/random/contraband/nofail
 	name = "Guaranteed Random Illegal Item"

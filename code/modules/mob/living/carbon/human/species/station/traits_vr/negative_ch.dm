@@ -78,8 +78,17 @@
 	special_env = TRUE
 	custom_only = FALSE
 
+	// Traitgenes edit begin - Replaces /datum/trait/negative/disability_blind, made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	sdisability=BLIND
+	activation_message="You can't seem to see anything."
+	primitive_expression_messages=list("stumbles aimlessly.")
+	// Traitgenes edit end
+
 /datum/trait/negative/blindness/handle_environment_special(var/mob/living/carbon/human/H)
-	H.sdisabilities |= BLIND 		//no matter what you do, the blindess still comes for you
+	H.sdisabilities |= sdisability 		//no matter what you do, the blindess still comes for you // Traitgenes edit - tweaked to be consistant with other gene traits by using var
 
 /datum/trait/negative/schizophrenia
 	name = "Episodic hallucinations."

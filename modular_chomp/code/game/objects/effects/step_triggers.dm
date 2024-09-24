@@ -40,30 +40,22 @@ But for now, for what it's been used for, it works.
 		if(H.drop_from_inventory(W))
 			W.forceMove(locker)
 
+	// Traitgenes edit begin - new remove genes code, didn't want to solve per-trait unique mutation shenanigans... So we just strip your entire genome. This is an admin anti-powergaming tool anyway.
 	if(remove_mutations)
-		var/needs_update = H.mutations.len > 0
-		for(var/entry in H.mutations)
-			var/mut
-			switch(entry)
-				if(TK)
-					mut = TELEBLOCK
-				if(XRAY)
-					mut = XRAYBLOCK
-				if(HULK)
-					mut = HULKBLOCK
-				if(mRemotetalk)
-					mut = REMOTETALKBLOCK
-				if(COLD_RESISTANCE)
-					mut = FIREBLOCK
-			if(mut)
-				new /obj/item/weapon/dnainjector/safe(locker, block_type = mut)
-				H.dna.SetSEState(mut,0)
-		H.mutations = list()
-		H.disabilities = 0
-		H.sdisabilities = 0
-		if(needs_update)
+		for(var/datum/gene/gene in GLOB.dna_genes)
+			if(gene.name in H.active_genes)
+				// Setup injector
+				var/obj/item/weapon/dnainjector/D = new /obj/item/weapon/dnainjector(locker)
+				D.name = initial(D.name) + " - RESTORE: [gene.name]" //lazy, but we may as well support base genes... even if unused...
+				D.block = gene.block
+				D.buf.types = DNA2_BUF_SE
+				D.SetValue( H.dna.GetSEValue(gene.block) ) // Get original block's value for the injector
+				D.has_radiation = FALSE // safe to use these!
+				// Turn off gene
+				H.dna.SetSEState(gene.block,0)
 			domutcheck(H,null,MUTCHK_FORCED)
 			H.update_mutations()
+	// Traitgenes edit end
 	if(H.species.name == SPECIES_VOX || SPECIES_ZADDAT)	//Species that 'actually' require survival gear to live. The rest don't.
 		H.species.equip_survival_gear(H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/chameleon(H), slot_w_uniform)

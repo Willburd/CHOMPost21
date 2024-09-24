@@ -9,40 +9,6 @@
 	var/list/addiction_counters = list() // contains ID sorted counters
 
 /mob/living/carbon/proc/sync_disabilites_and_addictions(var/datum/preferences/prefs)
-	// Genetics tied
-	if(prefs.sdisabilities & BLIND)
-		dna.SetSEState(BLINDBLOCK,1,1)
-		sdisabilities |= BLIND
-	if(prefs.sdisabilities & DEAF)
-		dna.SetSEState(DEAFBLOCK,1,1)
-		sdisabilities |= DEAF
-	if(prefs.disabilities & NEARSIGHTED)
-		dna.SetSEState(GLASSESBLOCK,1,1)
-		disabilities |= NEARSIGHTED
-	if(prefs.disabilities & EPILEPSY)
-		dna.SetSEState(EPILEPSYBLOCK,1,1)
-		disabilities |= EPILEPSY
-	if(prefs.disabilities & COUGHING)
-		dna.SetSEState(COUGHBLOCK,1,1)
-		disabilities |= COUGHING
-	if(prefs.disabilities & TOURETTES)
-		dna.SetSEState(TWITCHBLOCK,1,1)
-		disabilities |= TOURETTES
-	if(prefs.disabilities & NERVOUS)
-		dna.SetSEState(NERVOUSBLOCK,1,1)
-		disabilities |= NERVOUS
-	if(prefs.disabilities & WINGDINGS)
-		disabilities |= WINGDINGS
-
-	// Apply genes
-	dna.UpdateSE()
-
-	// RP only, makes you start with meds
-	if(prefs.disabilities & DEPRESSION)
-		disabilities |= DEPRESSION
-	if(prefs.disabilities & SCHIZOPHRENIA)
-		disabilities |= SCHIZOPHRENIA
-
 	// addictions
 	if(prefs.addictions & ADDICT_NICOTINE)
 		addict_to_reagent("nicotine")

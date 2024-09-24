@@ -133,11 +133,14 @@
 	else
 		H.dna = R.dna
 	H.UpdateAppearance()
+	H.sync_dna_traits(FALSE) // Traitgenes edit - Sync traits to genetics if needed
 	H.sync_organ_dna()
+	/* Outpost 21 edit - Lets not
 	if(heal_level < 60)
 		randmutb(H) //Sometimes the clones come out wrong.
 		H.dna.UpdateSE()
 		H.dna.UpdateUI()
+	*/
 
 	H.set_cloned_appearance()
 	update_icon()
@@ -480,6 +483,7 @@
 
 #undef MINIMUM_HEAL_LEVEL
 
+/* Traitgenes edit begin - Use body record disks instead of a unique one
 //Disk stuff.
 //The return of data disks?? Just for transferring between genetics machine/cloning machine.
 //TO-DO: Make the genetics machine accept them.
@@ -510,7 +514,9 @@
 	buf.dna.UI=list(0x066,0x000,0x033,0x000,0x000,0x000,0xAF0,0x033,0x066,0x0FF,0x4DB,0x002,0x690)
 	//buf.dna.UI=list(0x0C8,0x0C8,0x0C8,0x0C8,0x0C8,0x0C8,0x000,0x000,0x000,0x000,0x161,0xFBD,0xDEF) // Farmer Jeff
 	buf.dna.UpdateUI()
+*/
 
+/* Traitgenes edit begin - No monkey gene, doesn't work with the marking overlays anyway
 /obj/item/weapon/disk/data/monkey
 	name = "data disk - 'Mr. Muggles'"
 	read_only = 1
@@ -524,7 +530,9 @@
 		new_SE += rand(1,1024)
 	buf.dna.SE=new_SE
 	buf.dna.SetSEValueRange(MONKEYBLOCK,0xDAC, 0xFFF)
+*/
 
+/* Traitgenes edit begin - Use body record disks instead of a unique one
 /obj/item/weapon/disk/data/New()
 	..()
 	var/diskcolor = pick(0,1,2)
@@ -537,6 +545,7 @@
 /obj/item/weapon/disk/data/examine(mob/user)
 	. = ..()
 	. += "The write-protect tab is set to [read_only ? "protected" : "unprotected"]."
+*/
 
 /*
  *	Diskette Box
@@ -548,13 +557,15 @@
 
 /obj/item/weapon/storage/box/disks/New()
 	..()
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
-	new /obj/item/weapon/disk/data(src)
+	// Traitgenes edit begin - Use body record disks instead of a unique one
+	new /obj/item/weapon/disk/body_record(src)
+	new /obj/item/weapon/disk/body_record(src)
+	new /obj/item/weapon/disk/body_record(src)
+	new /obj/item/weapon/disk/body_record(src)
+	new /obj/item/weapon/disk/body_record(src)
+	new /obj/item/weapon/disk/body_record(src)
+	new /obj/item/weapon/disk/body_record(src)
+	// Traitgenes edit end
 
 /*
  *	Manual -- A big ol' manual.

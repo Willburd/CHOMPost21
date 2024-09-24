@@ -143,9 +143,8 @@ var/list/preferences_datums = list()
 	var/sec_record = ""
 	var/gen_record = ""
 	var/exploit_record = ""
-	var/disabilities = 0
+	// var/disabilities = 0 // Traitgenes edit - Traits replace old pref disability code
 	// Outpost 21 edit begin - new disabilities and addictions
-	var/sdisabilities = 0
 	var/addictions = 0
 	// Outpost 21 edit end
 

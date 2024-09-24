@@ -260,8 +260,12 @@
 	stage = 3
 
 /datum/disease2/effect/telepathic/activate(var/mob/living/carbon/mob,var/multiplier)
-		mob.dna.SetSEState(REMOTETALKBLOCK,1)
+	// Traitgenes edit begin - Use the lookup list to find the block, as it is randomized each shift.
+	var/datum/gene/trait/G = GLOB.trait_to_dna_genes[/datum/trait/positive/superpower_remotetalk]
+	if(G)
+		mob.dna.SetSEState(G.block,TRUE)
 		domutcheck(mob, null, MUTCHK_FORCED)
+	// Traitgenes edit end
 
 /datum/disease2/effect/mind
 	name = "Neurodegeneration"

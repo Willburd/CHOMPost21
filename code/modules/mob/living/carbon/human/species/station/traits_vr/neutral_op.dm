@@ -4,6 +4,14 @@
 	cost = 0
 	var_changes = list("drippy" = 1)
 
+	// Traitgenes edit begin - Made into a genetrait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="You feel softer..."
+	primitive_expression_messages=list("drips.")
+	// Traitgenes edit end
+
 // Allergens
 /datum/trait/neutral/allergy/pollen
 	name = "Allergy: Pollen"
@@ -57,3 +65,15 @@
 		),
 	autohiss_exempt = list())
 	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_zaddat)
+
+/datum/trait/neutral/depression
+	name = "Depression"
+	desc = "You have depression, and start with medication for it. This trait is purely for roleplay, and has no mechanics."
+	cost = 0
+	disability = DEPRESSION
+
+/datum/trait/neutral/schizophrenia
+	name = "Schizophrenia"
+	desc = "You have schizophrenia or a similar form of dementia, and start with medication for it. This trait is purely for roleplay, and has no mechanics."
+	cost = 0
+	disability = SCHIZOPHRENIA

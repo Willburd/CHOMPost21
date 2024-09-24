@@ -19,7 +19,11 @@
 	var/datatype=0
 	var/value=0
 
-/obj/item/weapon/dnainjector/New()
+	// Traitgenes edit begin - Removed subtype, replaced with flag. Allows for safe injectors. Mostly for admin usage.
+	var/has_radiation = TRUE
+	// Traitgenes edit end
+
+/obj/item/weapon/dnainjector/Initialize() // Traitgenes edit - Moved to init
 	if(datatype && block)
 		buf=new
 		buf.dna=new
@@ -28,6 +32,7 @@
 		//testing("[name]: DNA2 SE blocks prior to SetValue: [english_list(buf.dna.SE)]")
 		SetValue(src.value)
 		//testing("[name]: DNA2 SE blocks after SetValue: [english_list(buf.dna.SE)]")
+	. = ..() // Traitgenes edit - Moved to init
 
 /obj/item/weapon/dnainjector/proc/GetRealBlock(var/selblock)
 	if(selblock==0)
@@ -64,12 +69,21 @@
 		return buf.dna.SetUIValue(real_block,val)
 
 /obj/item/weapon/dnainjector/proc/inject(mob/M as mob, mob/user as mob)
-	if(istype(M,/mob/living))
+	if(istype(M,/mob/living) && has_radiation)
 		var/mob/living/L = M
 		L.apply_effect(rand(5,20), IRRADIATE, check_protection = 0)
 		L.apply_damage(max(2,L.getCloneLoss()), CLONE)
 
-	if (!(NOCLONE in M.mutations)) // prevents drained people from having their DNA changed
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	var/allow = TRUE
+	if(M.isSynthetic())
+		allow = FALSE
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(!H.species || H.species.flags & NO_SCAN)
+			allow = FALSE
+	// Traitgenes edit end
+	if (!(NOCLONE in M.mutations) && allow) // prevents drained people from having their DNA changed, Traitgenes edit - NO_SCAN and Synthetics cannot be mutated
 		if (buf.types & DNA2_BUF_UI)
 			if (!block) //isolated block?
 				M.UpdateAppearance(buf.dna.UI.Copy())
@@ -87,10 +101,17 @@
 				M.dna.UpdateSE()
 			else
 				M.dna.SetSEValue(block,src.GetValue())
-			domutcheck(M, null, block!=null)
 			uses--
+			// Traitgenes edit - Moved gene checks to after side effects
 			if(prob(5))
 				trigger_side_effect(M)
+		// Traitgenes edit begin - Do gene updates here, and more comprehensively
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			H.sync_dna_traits(FALSE,FALSE)
+			H.sync_organ_dna()
+		M.regenerate_icons()
+		// Traitgenes edit end
 
 	spawn(0)//this prevents the collapse of space-time continuum
 		if (user)
@@ -125,10 +146,13 @@
 		to_chat(user, "<span class='warning'>Apparently it didn't work...</span>")
 		return
 
+
 	// Used by admin log.
 	var/injected_with_monkey = ""
+	/* Traitgenes edit - No monkey gene, doesn't work with the marking overlays anyway
 	if((buf.types & DNA2_BUF_SE) && (block ? (GetState() && block == MONKEYBLOCK) : GetState(MONKEYBLOCK)))
 		injected_with_monkey = " <span class='danger'>(MONKEY)</span>"
+	*/
 
 	add_attack_logs(user,M,"[injected_with_monkey] used the [name] on")
 
@@ -136,6 +160,132 @@
 	inject(M, user)
 	return
 
+
+// Traitgenes edit begin - Injectors are randomized now due to no hardcoded genes. Split into good or bad, and then versions that specify what they do on the label.
+// Otherwise scroll down further for how to make unique injectors
+/obj/item/weapon/dnainjector/proc/pick_block(var/datum/gene/trait/G, var/labeled, var/allow_disable)
+	if(G)
+		block = G.block
+		datatype = DNA2_BUF_SE
+		value = 0xFFF
+		if(allow_disable)
+			value = pick(0x000,0xFFF)
+		if(labeled)
+			name = initial(name) + " - [value == 0x000 ? "Removes" : ""] [G.get_name()]"
+
+/obj/item/weapon/dnainjector/random
+	name = "\improper DNA injector"
+	desc = "This injects the person with DNA."
+
+// Purely rando
+/obj/item/weapon/dnainjector/random/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral + GLOB.dna_genes_bad), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral + GLOB.dna_genes_bad), TRUE, TRUE)
+	. = ..()
+
+// Good/bad but also neutral genes mixed in, less OP selection of genes
+/obj/item/weapon/dnainjector/random_good/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral ), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_good_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_good + GLOB.dna_genes_neutral ), TRUE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_bad/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad + GLOB.dna_genes_neutral ), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_bad_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad + GLOB.dna_genes_neutral ), TRUE, TRUE)
+	. = ..()
+
+// Purely good/bad genes, intended to be usually good rewards or punishments
+/obj/item/weapon/dnainjector/random_verygood/Initialize()
+	pick_block( pick(GLOB.dna_genes_good), FALSE, FALSE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_verygood_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_good), TRUE, FALSE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_verybad/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad), FALSE, FALSE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_verybad_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_bad), TRUE, FALSE)
+	. = ..()
+
+// Random neutral traits
+/obj/item/weapon/dnainjector/random_neutral/Initialize()
+	pick_block( pick(GLOB.dna_genes_neutral ), FALSE, TRUE)
+	. = ..()
+
+/obj/item/weapon/dnainjector/random_neutral_labeled/Initialize()
+	pick_block( pick(GLOB.dna_genes_neutral ), TRUE, TRUE)
+	. = ..()
+
+// If you want a unique injector, use a subtype of these
+/obj/item/weapon/dnainjector/set_trait
+	var/trait_path
+
+/obj/item/weapon/dnainjector/set_trait/Initialize()
+	if(trait_path && GLOB.trait_to_dna_genes[trait_path])
+		pick_block( GLOB.trait_to_dna_genes[trait_path], TRUE, FALSE)
+	else
+		qdel(src)
+		return
+	. = ..()
+
+// Only has the superpowers for loot tables and other rewards
+/obj/item/weapon/dnainjector/set_trait/hulk
+	trait_path = /datum/trait/positive/superpower_hulk
+
+/obj/item/weapon/dnainjector/set_trait/xray
+	trait_path = /datum/trait/positive/superpower_xray
+
+/obj/item/weapon/dnainjector/set_trait/tk
+	trait_path = /datum/trait/positive/superpower_tk
+
+/obj/item/weapon/dnainjector/set_trait/remotetalk
+	trait_path = /datum/trait/positive/superpower_remotetalk
+
+/obj/item/weapon/dnainjector/set_trait/remoteview
+	trait_path = /datum/trait/positive/superpower_remoteview
+
+/obj/item/weapon/dnainjector/set_trait/coldadapt
+	trait_path = /datum/trait/neutral/coldadapt
+
+/obj/item/weapon/dnainjector/set_trait/hotadapt
+	trait_path = /datum/trait/neutral/hotadapt
+
+/obj/item/weapon/dnainjector/set_trait/nobreathe
+	trait_path = /datum/trait/positive/superpower_nobreathe
+
+/obj/item/weapon/dnainjector/set_trait/regenerate
+	trait_path = /datum/trait/positive/superpower_regenerate
+
+/obj/item/weapon/dnainjector/set_trait/haste
+	trait_path = /datum/trait/positive/speed_fast
+
+/* Too out of date to port, only handles old UI values, can't do markings or other cosmetics... replace with promie verbs?
+/obj/item/weapon/dnainjector/set_trait/morph
+	trait_path = /datum/trait/positive/superpower_morph
+*/
+
+/obj/item/weapon/dnainjector/set_trait/nonconduct
+	trait_path = /datum/trait/positive/nonconductive_plus
+
+/obj/item/weapon/dnainjector/set_trait/table_passer
+	trait_path = /datum/trait/positive/table_passer
+// Traitgenes edit end
+
+
+/* Traitgenes edit - Disable old injectors
 /obj/item/weapon/dnainjector/hulkmut
 	name = "\improper DNA injector (Hulk)"
 	desc = "This will make you big and strong, but give you a bad skin condition."
@@ -576,3 +726,4 @@
 /obj/item/weapon/dnainjector/m2h/New()
 	block = MONKEYBLOCK
 	..()
+*/

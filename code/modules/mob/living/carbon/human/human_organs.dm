@@ -198,6 +198,33 @@
 		var/obj/item/organ/O = pick(organs)
 		O.trace_chemicals[A.name] = 100
 
+// Traitgenes edit begin - Init genes based on the traits currently active
+/mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits, var/hide_message = TRUE)
+	if(!dna || !species)
+		return
+	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
+	if(isSynthetic())
+		return
+	if(species.flags & NO_SCAN)
+		return
+	// Traitgenes edit end
+	if(refresh_traits && species.traits)
+		for(var/TR in species.traits)
+			var/datum/trait/T = all_traits[TR]
+			if(!T)
+				continue
+			if(!T.linked_gene)
+				continue
+			var/datum/gene/trait/gene = T.linked_gene
+			dna.SetSEState(gene.block, TRUE, TRUE)
+			// testing("[gene.name] Setup activated!")
+		dna.UpdateSE()
+	var/flgs = MUTCHK_FORCED
+	if(hide_message)
+		flgs |= MUTCHK_HIDEMSG
+	domutcheck( src, null, flgs)
+// Traitgenes edit end
+
 /mob/living/carbon/human/proc/sync_organ_dna()
 	var/list/all_bits = internal_organs|organs
 	for(var/obj/item/organ/O in all_bits)

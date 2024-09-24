@@ -98,12 +98,21 @@
 		/obj/item/weapon/grenade/spawnergrenade/casino/zorgoia,
 		/obj/item/weapon/grenade/spawnergrenade/casino/gygax,
 		/obj/item/weapon/lego,
+		// Traitgenes edit begin - New injector loot
+		/obj/item/weapon/dnainjector/random_verygood_labeled,
+		/obj/item/weapon/dnainjector/set_trait/nobreathe,
+		/obj/item/weapon/dnainjector/set_trait/regenerate,
+		/obj/item/weapon/dnainjector/set_trait/remoteview,
+		/obj/item/weapon/dnainjector/set_trait/haste,
+		/obj/item/weapon/dnainjector/set_trait/xray,
+		/*
 		/obj/item/weapon/dnainjector/nobreath,
 		/obj/item/weapon/dnainjector/regenerate,
 		/obj/item/weapon/dnainjector/remoteview,
 		/obj/item/weapon/dnainjector/runfast,
 		/obj/item/weapon/dnainjector/telemut,
 		/obj/item/weapon/dnainjector/xraymut,
+		*/ // Traitgenes edit end
 		/obj/item/instrument/accordion,
 		/obj/item/instrument/banjo,
 		/obj/item/instrument/bikehorn,
@@ -164,7 +173,11 @@
 
 	var/gift_type_chaos = pick(
 		/obj/item/weapon/grenade/spawnergrenade/casino/gygax/gorilla,
+		// Traitgenes edit begin - New injector loot
+		/obj/item/weapon/dnainjector/random_verygood_labeled,
+		/*
 		/obj/item/weapon/dnainjector/hulkmut,
+		*/ // Traitgenes edit end
 		/obj/item/weapon/grenade/spawnergrenade/casino/infinitycake,
 		/obj/item/weapon/grenade/spawnergrenade/casino/universal_technomancer,
 		/obj/item/weapon/spellbook,

@@ -5,7 +5,7 @@ export const stats: string[][] = [
 ];
 
 export const operations: string[][] = [
-  ['ui', 'Modify U.I.', 'dna'],
+  // ['ui', 'Modify U.I.', 'dna'], Traitgenes edit - Body design console is used to edit UIs now
   ['se', 'Modify S.E.', 'dna'],
   ['buffer', 'Transfer Buffers', 'syringe'],
   ['rejuvenators', 'Rejuvenators', 'flask'],

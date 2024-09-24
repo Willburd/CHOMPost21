@@ -144,6 +144,7 @@ Please do not abuse this ability.
 	prey.prefs.copy_to(new_character)
 	if(new_character.dna)
 		new_character.dna.ResetUIFrom(new_character)
+		new_character.sync_dna_traits(TRUE) // Traitgenes edit - Sync traits to genetics if needed
 		new_character.sync_organ_dna()
 	new_character.key = player_key
 	if(new_character.mind)

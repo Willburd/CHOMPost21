@@ -33,8 +33,11 @@
 	for(var/obj/item/W in src)
 		drop_from_inventory(W)
 	set_species(species.primitive_form)
+
+	/* Traitgenes edit begin - No monkey gene, doesn't work with the marking overlays anyway, but the rest of this function will do it anyway
 	dna.SetSEState(MONKEYBLOCK,1)
 	dna.SetSEValueRange(MONKEYBLOCK,0xDAC, 0xFFF)
+	*/
 
 	to_chat(src, "<B>You are now [species.name]. </B>")
 	qdel(animation)

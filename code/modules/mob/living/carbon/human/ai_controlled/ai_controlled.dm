@@ -43,6 +43,8 @@
 
 	..(loc, generate_species)
 
+	species.produceCopy(species.traits.Copy(),src,null,FALSE) // Traitgenes edit - Make the spawned npcs have unique species so genetics, if you manage to edit them SOMEHOW, don't break the base species datum
+
 	h_style = to_wear_hair
 
 	if(to_wear_uniform)

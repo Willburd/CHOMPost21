@@ -30,6 +30,8 @@
 	var/db_key
 	var/datum/transcore_db/our_db // These persist all round and are never destroyed, just keep a hard ref
 
+	var/gene_sequencing = FALSE // Traitgenes edit - create a dna injector for fixing dna, but don't let it be abusable
+
 /obj/machinery/computer/transhuman/resleeving/Initialize()
 	. = ..()
 	pods = list()
@@ -442,6 +444,28 @@
 				selected_sleever = selected
 		if("menu")
 			menu = clamp(text2num(params["num"]), MENU_MAIN, MENU_MIND)
+		// Traitgenes edit begin - create a dna injector based off the BR currently selected, to allow normal doctors to reset someone's SEs
+		if("genereset")
+			if(gene_sequencing)
+				set_temp("Sequencing Record... Please wait.")
+				tgui_modal_clear(src)
+			else if(istype(active_br))
+				set_temp("Sequencing Record...")
+				tgui_modal_clear(src)
+				gene_sequencing = TRUE
+				// Make the injector here, so no desync
+				var/obj/item/weapon/dnainjector/I = new(src)
+				I.name += " ([active_br.mydna.name] - Resequencer)"
+				I.desc = "Resequences structural enzymes to match the body record this was created from."
+				I.buf = active_br.mydna.copy()
+				I.buf.types = DNA2_BUF_SE
+				spawn(20 SECONDS)
+					I.forceMove(loc)
+					gene_sequencing = FALSE
+					set_temp("Injector dispensed...")
+					visible_message(SPAN_NOTICE("\The [src] ejects \the [I]."))
+					playsound(src, 'sound/machines/ding.ogg', 50, 1)
+		// Traitgenes edit end
 		if("cleartemp")
 			temp = null
 		else

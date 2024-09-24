@@ -2000,6 +2000,7 @@
 	H.real_name = H.species.get_random_name()
 	H.name = H.real_name
 	H.low_sorting_priority = TRUE
+	H.species.produceCopy(H.species.traits.Copy(),H,null,FALSE) // Traitgenes edit - Make the spawned monkeys have unique species datums. Apparently Initilize() doesn't catch it... - Willbird
 	if(ismob(loc))
 		var/mob/M = loc
 		M.unEquip(src)

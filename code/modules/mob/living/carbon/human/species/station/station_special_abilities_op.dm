@@ -1,7 +1,7 @@
 /mob/living/proc/super_fart()
 	set name = "Super Fart"
 	set desc = "Release a horrifying wave of your presence, or just be a giant asshole."
-	set category = "Abilities.General"
+	set category = "Superpower"
 
 	// Please, lets just keep this as a joke.
 	var/mob/living/carbon/human/C = src
