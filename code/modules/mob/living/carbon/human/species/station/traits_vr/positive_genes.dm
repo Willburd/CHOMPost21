@@ -238,7 +238,6 @@
 	activity_bounds = DNA_HARD_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 
-	mutation = TK
 	activation_message="You feel incredible pressure inside of you."
 	deactivation_message="The pressure inside of you vanishes."
 	primitive_expression_messages=list("toots.")
