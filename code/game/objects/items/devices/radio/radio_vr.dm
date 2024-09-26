@@ -3,6 +3,17 @@
 	canhear_range = 0
 	adhoc_fallback = TRUE
 
+// Outpost 21 edit begin - Track these if they exist
+/obj/item/device/radio/phone/Initialize()
+	. = ..()
+	phones_on_station.Add(src)
+
+/obj/item/device/radio/phone/Destroy()
+	. = ..()
+	phones_on_station.Remove(src)
+
+// Outpost 21 edit end
+
 /obj/item/device/radio/emergency
 	name = "Medbay Emergency Radio Link"
 	icon_state = "med_walkietalkie"

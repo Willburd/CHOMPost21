@@ -83,6 +83,9 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Chu Pack",					/datum/event/chu_infestation,			0, 		list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 1)	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jil Pack",					/datum/event/jil_infestation,			3, 		list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 1)	, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virus Outbreak", 			/datum/event/viral_infection,			5, 		list(ASSIGNMENT_MEDICAL = 1)							, TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Phone Spiders",			/datum/event/phone_spiders,				3),
+
+
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Escaped Slimes",			/datum/event/escaped_slimes, 			5,		list(ASSIGNMENT_SCIENCE = 1, ASSIGNMENT_ENGINEER = 5, ASSIGNMENT_SECURITY = 5), TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			20,		list(ASSIGNMENT_ANY = 3)								, FALSE)
 	)
