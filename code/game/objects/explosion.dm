@@ -4,6 +4,12 @@
 	var/multi_z_scalar = CONFIG_GET(number/multi_z_explosion_scalar) // CHOMPEdit
 	spawn(0)
 		var/start = world.timeofday
+		// Outpost 21 edit begin - Handle eaten explosives in bellies
+		while(isbelly(epicenter)) // Lets assume recursive prey has happened...
+			var/obj/belly/B = epicenter
+			epicenter = B.owner.loc
+		// Outpost 21 edit end
+
 		epicenter = get_turf(epicenter)
 		if(!epicenter) return
 
