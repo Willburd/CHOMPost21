@@ -221,8 +221,8 @@
 // Shot with taser/stunvolver
 /mob/living/simple_mob/stun_effect_act(var/stun_amount, var/agony_amount, var/def_zone, var/used_weapon=null)
 	if(taser_kill)
-		var/stunDam = 0
-		var/agonyDam = 0
+		//var/stunDam = 0
+		//var/agonyDam = 0
 		var/armor = run_armor_check(def_zone = null, attack_flag = "energy")
 
 		// Outpost 21 edit begin - Handle simplemob taser damage as stuns with some damage. Instead of treating a high stun time as insane damage.
