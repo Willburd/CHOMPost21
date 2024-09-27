@@ -5227,6 +5227,7 @@
 #include "modular_outpost\code\datums\Outfits\jobs\stowaway.dm"
 #include "modular_outpost\code\game\jobs\job\stowaway.dm"
 #include "modular_outpost\code\game\machinery\auto_doc.dm"
+#include "modular_outpost\code\game\machinery\bluespace_denier.dm"
 #include "modular_outpost\code\game\machinery\braces.dm"
 #include "modular_outpost\code\game\machinery\frame.dm"
 #include "modular_outpost\code\game\machinery\hologram_tutorials.dm"
