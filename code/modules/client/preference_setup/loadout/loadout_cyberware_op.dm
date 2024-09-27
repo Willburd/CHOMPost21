@@ -1,0 +1,17 @@
+/datum/gear/utility/implant/generic/compliance
+	display_name = "implant, compliance"
+	description = "Implant which allows for forcing obedience in the host. Highly illegal inside Solgov space, with few exceptions. Laws are configured at round start."
+	path = /obj/item/weapon/implant/compliance/loadout
+	slot = "implant"
+	exploitable = 1
+	sort_category = "Cyberware"
+	cost = 3
+
+/datum/gear/utility/implant/generic/loyalty
+	display_name = "implant, loyalty"
+	description = "Implant which makes you forcibly serve a company or faction. Highly illegal inside Solgov space, with few exceptions."
+	path = /obj/item/weapon/implant/loyalty
+	slot = "implant"
+	exploitable = 1
+	sort_category = "Cyberware"
+	cost = 3
