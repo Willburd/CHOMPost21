@@ -193,15 +193,14 @@
 		return 1
 	selected_surgery = available_surgeries[selected_surgery] //Sets the name they selected to be the datum.
 
-	// Outpost 21 edit begin - Prepare to amputate, and allow canceling
-	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc) && istype(selected_surgery,/datum/surgery_step/generic/amputate))
+	// VOREstation edit start
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc) && istype(selected_surgery,/datum/surgery_step/generic/amputate)) // Outpost 21 edit - Autodoc support
 		var/obj/item/organ/external/affected = M.get_organ(zone)
 		to_chat(user, "<span class='danger'>You are preparing to amputate \the [M]'s [affected.name]!</span>")
 		if(!do_after(user, 3 SECONDS, M))
 			to_chat(user, "<span class='warning'>You reconsider performing an amputation...</span>")
 			return 0
-	// Outpost 21 edit end
-
+	// VOREstation edit end
 	M.op_stage.in_progress += zone
 	selected_surgery.begin_step(user, M, zone, src)		//start on it
 	var/success = TRUE
