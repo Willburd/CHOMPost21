@@ -128,19 +128,9 @@
 
 	//Stun Beams
 	if(P.taser_effect)
-		// Outpost 21 edit begin - Handle simplemob taser damage as halloss
-		if(P.damage_type == HALLOSS && isanimal(src))
-			// Stuns mops and does reduced damage to nerf tasers on mobs
-			var/stun_amount = FLOOR( rand( P.damage / 2, P.damage), 1)
-			Stun(stun_amount)
-			Weaken(stun_amount)
-			apply_damage( FLOOR( P.agony / 8, 1), BURN, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge)
-		else
-			// unchanged behavior
-			stun_effect_act(0, P.agony, def_zone, P)
-			if(!P.nodamage)
-				apply_damage(P.damage, P.damage_type, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge)
-		// Outpost 21 edit end
+		stun_effect_act(0, P.agony, def_zone, P)
+		if(!P.nodamage)
+			apply_damage(P.damage, P.damage_type, def_zone, absorb, soaked, 0, P, sharp=proj_sharp, edge=proj_edge)
 		qdel(P)
 		return
 
