@@ -15,3 +15,12 @@
 	exploitable = 1
 	sort_category = "Cyberware"
 	cost = 3
+
+/datum/gear/utility/implant/generic/death
+	display_name = "implant, death alarm"
+	description = "An implanted alarm which monitors host vital signs and transmits a radio message upon death."
+	path = /obj/item/weapon/implant/death_alarm
+	slot = "implant"
+	exploitable = 1
+	sort_category = "Cyberware"
+	cost = 2
