@@ -225,6 +225,14 @@
 		var/agonyDam = 0
 		var/armor = run_armor_check(def_zone = null, attack_flag = "energy")
 
+		// Outpost 21 edit begin - Handle simplemob taser damage as stuns with some damage. Instead of treating a high stun time as insane damage.
+		Stun(stun_amount + rand(0, agony_amount))
+		Weaken(rand(agony_amount/2,agony_amount))
+		if(stun_amount)
+			apply_damage(damage = FLOOR( stun_amount / 8, 1), damagetype = BURN, def_zone = null, blocked = armor, blocked = resistance, used_weapon = used_weapon, sharp = FALSE, edge = FALSE)
+		if(agony_amount)
+			apply_damage(damage = FLOOR( agony_amount / 8, 1), damagetype = BURN, def_zone = null, blocked = armor, blocked = resistance, used_weapon = used_weapon, sharp = FALSE, edge = FALSE)
+		/*
 		if(stun_amount)
 			stunDam += stun_amount * 0.5
 			apply_damage(damage = stunDam, damagetype = BURN, def_zone = null, blocked = armor, blocked = resistance, used_weapon = used_weapon, sharp = FALSE, edge = FALSE)
@@ -232,8 +240,8 @@
 		if(agony_amount)
 			agonyDam += agony_amount * 0.5
 			apply_damage(damage = agonyDam, damagetype = BURN, def_zone = null, blocked = armor, blocked = resistance, used_weapon = used_weapon, sharp = FALSE, edge = FALSE)
-
-
+		*/
+		// Outpost 21 edit end
 // Electromagnetism
 /mob/living/simple_mob/emp_act(severity)
 	..() // To emp_act() its contents.
@@ -315,4 +323,3 @@
 	if(ignore_thickness)
 		return TRUE
 	return !thick_armor
-
