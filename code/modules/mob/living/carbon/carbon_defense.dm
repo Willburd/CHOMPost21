@@ -166,7 +166,7 @@
 	else
 		var/initialhealth = health // CHOMPEdit: Getting our health before this check
 		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss
-		if(!((ishuman(src)) || (issilicon(src))) && can_feel_pain() || ((src.isSynthetic() && synth_cosmetic_pain))) // Only run this if we're non-human/non-silicon + can feel pain, bc humans already do this. human_damage doesn't call parent, but sanity is better here.
+		if((!((ishuman(src)) || (issilicon(src))) && can_feel_pain() || ((src.isSynthetic() && synth_cosmetic_pain))) && !(src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream))) // Only run this if we're non-human/non-silicon + can feel pain, bc humans already do this. human_damage doesn't call parent, but sanity is better here. // Outpost 21 edit - Hide automatic pain scream
 			if(health < initialhealth) // Did we lose health?
 				// Yes. How much by?
 				var/damage = initialhealth - health // Get our damage (say, 200 - 180 = 20, etc etc)

@@ -152,7 +152,7 @@
 			health = getMaxHealth()
 		var/initialhealth = health // CHOMPEdit: Getting our health before this check
 		health = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() // - halloss Outpost 21 edit - do halloss after pain emotes, so we don't scream from it
-		if(!((ishuman(src)) || (issilicon(src))) && src.can_pain_emote && src.client?.prefs?.read_preference(/datum/preference/toggle/auto_pain_scream)) // Only run this if we're non-human/non-silicon (bots and mechanical simplemobs should be allowed to make pain sounds) & can emote pain, bc humans + carbons already do this. human_damage doesn't call parent, but sanity is better here. // Outpost 21 edit - Hide automatic pain scream
+		if(!((ishuman(src)) || (issilicon(src))) && src.can_pain_emote && !(src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream))) // Only run this if we're non-human/non-silicon (bots and mechanical simplemobs should be allowed to make pain sounds) & can emote pain, bc humans + carbons already do this. human_damage doesn't call parent, but sanity is better here. // Outpost 21 edit - Hide automatic pain scream
 			if(health < initialhealth) // Did we lose health?
 				// Yes. How much by?
 				var/damage = initialhealth - health // Get our damage (say, 200 - 180 = 20, etc etc)

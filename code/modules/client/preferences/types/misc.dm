@@ -77,9 +77,9 @@
 	savefile_identifier = PREFERENCE_PLAYER
 
 // Outpost 21 edit begin - Hide automatic pain scream
-/datum/preference/toggle/auto_pain_scream
+/datum/preference/toggle/hide_pain_scream
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
-	savefile_key = "AUTO_PAIN_SCREAM"
-	default_value = TRUE
+	savefile_key = "HIDE_PAIN_SCREAM"
+	default_value = FALSE
 	savefile_identifier = PREFERENCE_PLAYER
 // Outpost 21 edit end
