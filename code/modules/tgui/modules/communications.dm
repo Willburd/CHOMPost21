@@ -36,6 +36,7 @@
 	var/datum/lore/atc_controller/ATC
 
 	var/list/req_access = list()
+	var/obj/machinery/computer/communications/comm_console = null // Outpost 21 edit - use the comm's console access
 
 /datum/tgui_module/communications/New(host)
 	. = ..()
@@ -223,6 +224,11 @@
 			setMenuState(usr, COMM_SCREEN_MAIN)
 			return
 		// Login function.
+		// Outpost 21 edit begin - use console's access to allow min-access
+		if(istype(comm_console,/obj/machinery/computer/communications))
+			if(comm_console.check_access_list(usr.GetAccess()))
+				authenticated = COMM_AUTHENTICATION_MIN
+		// Outpost 21 edit end
 		if(check_access(usr, access_heads))
 			authenticated = COMM_AUTHENTICATION_MIN
 		if(check_access(usr, access_captain))
