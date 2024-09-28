@@ -80,3 +80,11 @@ export const MessengerEmbeds: FeatureToggle = {
     'When enabled, PDAs and Communicators will attempt to embed links from discord & imgur.',
   component: CheckboxInput,
 };
+
+export const AUTO_PAIN_SCREAM: FeatureToggle = {
+  name: 'Automatic Pain Scream',
+  category: 'GAMEPLAY',
+  description:
+    'When enabled, taking damage will cause your character to scream automatically.',
+  component: CheckboxInput,
+};
