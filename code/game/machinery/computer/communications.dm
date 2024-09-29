@@ -15,6 +15,7 @@
 /obj/machinery/computer/communications/Initialize()
 	. = ..()
 	communications = new(src)
+	communications.comm_console = src // Outpost 21 edit - use the comm's console access
 
 /obj/machinery/computer/communications/emag_act(var/remaining_charges, var/mob/user)
 	if(!emagged)

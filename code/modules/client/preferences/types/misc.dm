@@ -75,3 +75,11 @@
 	savefile_key = "MessengerEmbeds"
 	default_value = TRUE
 	savefile_identifier = PREFERENCE_PLAYER
+
+// Outpost 21 edit begin - Hide automatic pain scream
+/datum/preference/toggle/hide_pain_scream
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "HIDE_PAIN_SCREAM"
+	default_value = FALSE
+	savefile_identifier = PREFERENCE_PLAYER
+// Outpost 21 edit end
