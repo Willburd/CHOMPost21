@@ -544,6 +544,9 @@
 		if(istype(to_despawn, /mob/living/dominated_brain))
 			depart_announce = FALSE
 
+		if(job == JOB_STOWAWAY) // Outpost 21 edit - Don't announce stowaways
+			depart_announce = FALSE
+
 		if(src.quiet) // CHOMPEdit - No announcement.
 			depart_announce = FALSE
 

@@ -5,7 +5,7 @@
 			continue
 		if(!(A.z in using_map.event_levels))
 			continue
-		if(H.job == "Stowaway" && prob(90)) // stowaways only have a 10% chance to proc
+		if(H.job == JOB_STOWAWAY && prob(90)) // stowaways only have a 10% chance to proc
 			continue
 		if(H.client && H.malignant_organ_spawn(TRUE,TRUE,prob(20)))
 			break

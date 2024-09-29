@@ -690,7 +690,14 @@
 			for(var/mob/M in player_list) if(M.mind && M.client && M.mind.assigned_role == job.title && M.client.inactivity <= 10 MINUTES)
 				active++
 
-			var/string = "<a href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([job.current_positions]) (Active: [active])</a><br>"
+			// Outpost 21 edit begin - Hide some job counts
+			var/current_positions_count = job.current_positions
+			var/active_count = active
+			if(job.title == JOB_STOWAWAY)
+				current_positions_count = "?"
+				active_count = "?"
+			var/string = "<a href='byond://?src=\ref[src];SelectedJob=[job.title]'>[job.title] ([current_positions_count]) (Active: [active_count])</a><br>"
+			// Outpost 21 edit end
 
 			if(job.offmap_spawn) //At the bottom
 				deferred += string

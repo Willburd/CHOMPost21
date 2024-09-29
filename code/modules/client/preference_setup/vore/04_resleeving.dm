@@ -29,7 +29,7 @@
 		spawn(50)
 			if(QDELETED(character) || QDELETED(pref))
 				return // They might have been deleted during the wait
-			if(character.job != "Stowaway" && !character.virtual_reality_mob && !(/mob/living/carbon/human/proc/exit_vr in character.verbs)) // CHOMPedit start: janky fix to prevent resleeving VR avatars but beats refactoring transcore // Outpost 21 edit - stowaways don't get records by default
+			if(character.job != JOB_STOWAWAY && !character.virtual_reality_mob && !(/mob/living/carbon/human/proc/exit_vr in character.verbs)) // CHOMPedit start: janky fix to prevent resleeving VR avatars but beats refactoring transcore // Outpost 21 edit - stowaways don't get records by default
 				if(pref.resleeve_scan)
 					var/datum/transhuman/body_record/BR = new()
 					BR.init_from_mob(character, pref.resleeve_scan, pref.resleeve_lock)
