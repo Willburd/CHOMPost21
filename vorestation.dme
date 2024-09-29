@@ -2485,6 +2485,7 @@
 #include "code\modules\clothing\under\jobs\security.dm"
 #include "code\modules\clothing\under\xenos\teshari.dm"
 #include "code\modules\clothing\under\xenos\vox.dm"
+#include "code\modules\clothing\under\xenos\vox_op.dm"
 #include "code\modules\compass\_compass.dm"
 #include "code\modules\compass\compass_holder.dm"
 #include "code\modules\compass\compass_waypoint.dm"
