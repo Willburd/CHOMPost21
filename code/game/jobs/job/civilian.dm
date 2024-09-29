@@ -243,5 +243,5 @@
 /datum/job/lawyer/equip(var/mob/living/carbon/human/H)
 	. = ..()
 	if(.)
-		H.implant_loyalty(H)
+		H.implant_loyalty(H) // Outpost 21 edit, implant_loyalty(src) is incorrect, first argument is now true/false force override, not the target mob
 //YW UNCOMMENTING END
