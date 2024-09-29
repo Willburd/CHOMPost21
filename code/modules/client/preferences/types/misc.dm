@@ -83,3 +83,9 @@
 	default_value = FALSE
 	savefile_identifier = PREFERENCE_PLAYER
 // Outpost 21 edit end
+
+/datum/preference/toggle/autopunctuation
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "AutoPunctuation"
+	default_value = FALSE
+	savefile_identifier = PREFERENCE_PLAYER
