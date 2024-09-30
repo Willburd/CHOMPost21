@@ -22,7 +22,7 @@
 					"Cooper" = /mob/living/simple_mob/animal/passive/mouse/mining,
 					"Poly" = /mob/living/simple_mob/animal/passive/bird/parrot/poly,
 					"Runtime" = /mob/living/simple_mob/animal/passive/cat/runtime,
-					"Apple" = /mob/living/simple_mob/animal/passive/mouse/white/apple,
+					"Tom" = /mob/living/simple_mob/animal/passive/mouse/brown/Tom,
 					"Jilly-bean" = /mob/living/simple_mob/vore/alienanimals/jil/bean,
 					"Miros" = /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug)
 
