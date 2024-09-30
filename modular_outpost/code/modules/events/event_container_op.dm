@@ -115,6 +115,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Exotic Horde Infestation",	/datum/event/highdangerinfestation	,1	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Horde Infestation",			/datum/event/horde_infestation		,1	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Infected Room",				/datum/event/infectedroom			,1	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Security Drill",		/datum/event/security_drill					,1	, list(ASSIGNMENT_SECURITY = 1,ASSIGNMENT_ANY = 5) 							, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "All Is Clean",		/datum/event/allisclean						,0  , list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Engineering",	/datum/event/bluespace_shelling/engineering	,0	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Science",		/datum/event/bluespace_shelling/science		,0	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 99)),
