@@ -22,7 +22,7 @@
 	name_language = LANGUAGE_LLEILL
 
 	flags =  NO_SCAN | NO_MINOR_CUT | NO_INFECT |  NO_HALLUCINATION
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags = SPECIES_IS_RESTRICTED // SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE Outpost 21 edit - none of these
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_UNDERWEAR
 
 	max_age = 200
@@ -239,4 +239,3 @@
 /datum/species/lleill/add_inherent_verbs(var/mob/living/carbon/human/H)
 	..()
 	add_lleill_abilities(H)
-

@@ -116,16 +116,20 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	// Outpost 21 edit begin - more disabilities
 	pref.addictions			= save_data["addictions"]
 	// Outpost 21 edit end
-	pref.organ_data			= save_data["organ_data"]
-	pref.rlimb_data			= save_data["rlimb_data"]
-	pref.body_markings		= save_data["body_markings"]
+	pref.organ_data			= check_list_copy(save_data["organ_data"])
+	pref.rlimb_data			= check_list_copy(save_data["rlimb_data"])
+	pref.body_markings		= check_list_copy(save_data["body_markings"])
+	for(var/i in pref.body_markings)
+		pref.body_markings[i] = check_list_copy(pref.body_markings[i])
+		for(var/j in pref.body_markings[i])
+			pref.body_markings[i][j] = check_list_copy(pref.body_markings[i][j])
 	pref.synth_color		= save_data["synth_color"]
 	pref.r_synth			= save_data["synth_red"]
 	pref.g_synth			= save_data["synth_green"]
 	pref.b_synth			= save_data["synth_blue"]
 	pref.synth_markings		= save_data["synth_markings"]
 	pref.bgstate			= save_data["bgstate"]
-	pref.body_descriptors	= save_data["body_descriptors"]
+	pref.body_descriptors	= check_list_copy(save_data["body_descriptors"])
 	/* Outpost 21 edit - disable these
 	pref.wingdings			= save_data["Wingdings"]
 	pref.colorblind_mono	= save_data["colorblind_mono"]
@@ -191,16 +195,21 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	// Outpost 21 edit begin - more disabilities
 	save_data["addictions"]			= pref.addictions
 	// Outpost 21 edit end
-	save_data["organ_data"]			= pref.organ_data
-	save_data["rlimb_data"]			= pref.rlimb_data
-	save_data["body_markings"]		= pref.body_markings
+	save_data["organ_data"]			= check_list_copy(pref.organ_data)
+	save_data["rlimb_data"]			= check_list_copy(pref.rlimb_data)
+	var/list/body_markings 			= check_list_copy(pref.body_markings)
+	for(var/i in pref.body_markings)
+		body_markings[i] = check_list_copy(body_markings[i])
+		for(var/j in body_markings[i])
+			body_markings[i][j] = check_list_copy(body_markings[i][j])
+	save_data["body_markings"]		= body_markings
 	save_data["synth_color"]		= pref.synth_color
 	save_data["synth_red"]			= pref.r_synth
 	save_data["synth_green"]		= pref.g_synth
 	save_data["synth_blue"]			= pref.b_synth
 	save_data["synth_markings"]		= pref.synth_markings
 	save_data["bgstate"]			= pref.bgstate
-	save_data["body_descriptors"]	= pref.body_descriptors
+	save_data["body_descriptors"]	= check_list_copy(pref.body_descriptors)
 	/* Outpost 21 edit - disable these
 	save_data["Wingdings"]			= pref.wingdings
 	save_data["colorblind_mono"]	= pref.colorblind_mono

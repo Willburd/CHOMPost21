@@ -87,3 +87,11 @@ export const HIDE_PAIN_SCREAM: FeatureToggle = {
   description: 'When enabled, stops automatic screaming when damage is taken.',
   component: CheckboxInput,
 };
+
+export const AutoPunctuation: FeatureToggle = {
+  name: 'Automatic Punctuation',
+  category: 'GAMEPLAY',
+  description:
+    'When enabled, if your message ends in a letter with no punctuation, a period will be added.',
+  component: CheckboxInput,
+};
