@@ -54,7 +54,7 @@
 //Processor. Our station is cool enough to have a giant vore eldrich horror for a terraforming station.
 /area/muriki/processor
 	name = "\improper Core Terraformer Processing"
-	base_turf = /turf/simulated/floor/flesh
+	base_turf = /turf/simulated/open
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
