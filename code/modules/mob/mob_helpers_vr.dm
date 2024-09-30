@@ -20,6 +20,7 @@
 			plane_holder.set_vis(VIS_CH_VANTAG,FALSE)
 			vis_enabled -= VIS_CH_VANTAG
 
+	/* Outpost 21 edit - Nif removal
 	//CHOMPAdd Start Soulcatcher
 	if(soulgem?.flag_check(SOULGEM_SEE_SR_SOULS))
 		plane_holder.set_vis(VIS_SOULCATCHER, TRUE)
@@ -28,6 +29,7 @@
 		plane_holder.set_vis(VIS_SOULCATCHER, FALSE)
 		vis_enabled -= VIS_SOULCATCHER
 	//CHOMPAdd End
+	*/
 	return
 
 
