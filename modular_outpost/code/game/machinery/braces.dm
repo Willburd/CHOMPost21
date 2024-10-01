@@ -1,6 +1,6 @@
 // MAINTENANCE JACK - Allows removing of braces with certain delay.
 // ported from https://github.com/Baystation12/Baystation12/blob/dev/code/game/machinery/doors/braces.dm, mostly, removed ID and electronics parts. Focuses entirely on maintnence jack lockdowns
-/obj/item/weapon/tool/crowbar/brace_jack
+/obj/item/tool/crowbar/brace_jack
 	name = "maintenance jack"
 	desc = "A special crowbar that can be used to safely remove airlock braces from airlocks."
 	w_class = ITEMSIZE_SMALL
@@ -76,10 +76,10 @@
 
 /obj/item/airlock_brace/attackby(obj/item/W as obj, mob/user as mob)
 	..()
-	if (istype(W, /obj/item/weapon/tool/crowbar/brace_jack) && user.a_intent == I_HELP)
+	if (istype(W, /obj/item/tool/crowbar/brace_jack) && user.a_intent == I_HELP)
 		if(!airlock)
 			return
-		var/obj/item/weapon/tool/crowbar/brace_jack/C = W
+		var/obj/item/tool/crowbar/brace_jack/C = W
 		to_chat(user, "You begin forcibly removing \the [src] with \the [C].")
 		playsound(user, 'sound/machines/door/airlock_creaking.ogg', 100, 1) // pulling doorjack up!
 		if(do_after(user, rand(150,300), airlock))
@@ -87,8 +87,8 @@
 			unlock_brace(user)
 		return
 
-	if(istype(W, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/C = W
+	if(istype(W, /obj/item/weldingtool))
+		var/obj/item/weldingtool/C = W
 		if(cur_health == max_health)
 			to_chat(user, "\The [src] does not require repairs.")
 			return

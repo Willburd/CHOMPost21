@@ -7,7 +7,7 @@
 	density = FALSE
 	anchored = TRUE
 	unacidable = TRUE
-	circuit = /obj/item/weapon/circuitboard/metal_detector
+	circuit = /obj/item/circuitboard/metal_detector
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	active_power_usage = 200
@@ -127,76 +127,76 @@
 	if(!thing)
 		return -1
 	if( \
-		istype(thing,/obj/item/weapon/tool/prybar) || \
-		istype(thing,/obj/item/weapon/tank/emergency) || \
-		istype(thing,/obj/item/weapon/melee/umbrella) || \
-		istype(thing,/obj/item/weapon/grenade/chem_grenade/cleaner) \
+		istype(thing,/obj/item/tool/prybar) || \
+		istype(thing,/obj/item/tank/emergency) || \
+		istype(thing,/obj/item/melee/umbrella) || \
+		istype(thing,/obj/item/grenade/chem_grenade/cleaner) \
 	)
 		return 0
 	else if( \
-		istype(thing,/obj/item/weapon/tool/crowbar/brace_jack) || \
-		istype(thing,/obj/item/weapon/flamethrower) || \
-		istype(thing,/obj/item/weapon/disk/nuclear) || \
-		istype(thing,/obj/item/weapon/camera_bug) || \
-		istype(thing,/obj/item/weapon/melee) || \
-		istype(thing,/obj/item/weapon/electric_hand) || \
-		istype(thing,/obj/item/weapon/finger_lockpick) || \
-		istype(thing,/obj/item/weapon/card/emag) || \
-		istype(thing,/obj/item/weapon/material/sword) || \
-		istype(thing,/obj/item/weapon/material/twohanded) || \
-		istype(thing,/obj/item/weapon/material/knife) || \
-		istype(thing,/obj/item/weapon/material/whip) || \
-		istype(thing,/obj/item/weapon/material/butterfly) || \
-		istype(thing,/obj/item/weapon/material/harpoon) || \
-		istype(thing,/obj/item/weapon/material/knife) || \
-		istype(thing,/obj/item/weapon/material/star) || \
-		istype(thing,/obj/item/weapon/mine) || \
-		istype(thing,/obj/item/weapon/reagent_containers/hypospray) || \
-		istype(thing,/obj/item/weapon/reagent_containers/syringe) || \
-		istype(thing,/obj/item/weapon/dnainjector) || \
-		istype(thing,/obj/item/weapon/surgical) || \
-		istype(thing,/obj/item/weapon/syndie) || \
-		istype(thing,/obj/item/weapon/hand_tele) || \
-		istype(thing,/obj/item/weapon/beartrap) || \
-		istype(thing,/obj/item/weapon/nullrod) || \
-		istype(thing,/obj/item/weapon/grenade) || \
-		istype(thing,/obj/item/weapon/implanter) || \
-		istype(thing,/obj/item/weapon/implantpad) || \
-		istype(thing,/obj/item/weapon/chainsaw) || \
-		istype(thing,/obj/item/weapon/deadringer) || \
-		istype(thing,/obj/item/weapon/telecube) || \
-		istype(thing,/obj/item/weapon/gun) || \
-		istype(thing,/obj/item/weapon/pickaxe) || \
-		istype(thing,/obj/item/weapon/broken_gun) || \
-		istype(thing,/obj/item/weapon/bluespace_harpoon) || \
-		istype(thing,/obj/item/weapon/arrow) || \
-		istype(thing,/obj/item/weapon/spike) || \
+		istype(thing,/obj/item/tool/crowbar/brace_jack) || \
+		istype(thing,/obj/item/flamethrower) || \
+		istype(thing,/obj/item/disk/nuclear) || \
+		istype(thing,/obj/item/camera_bug) || \
+		istype(thing,/obj/item/melee) || \
+		istype(thing,/obj/item/electric_hand) || \
+		istype(thing,/obj/item/finger_lockpick) || \
+		istype(thing,/obj/item/card/emag) || \
+		istype(thing,/obj/item/material/sword) || \
+		istype(thing,/obj/item/material/twohanded) || \
+		istype(thing,/obj/item/material/knife) || \
+		istype(thing,/obj/item/material/whip) || \
+		istype(thing,/obj/item/material/butterfly) || \
+		istype(thing,/obj/item/material/harpoon) || \
+		istype(thing,/obj/item/material/knife) || \
+		istype(thing,/obj/item/material/star) || \
+		istype(thing,/obj/item/mine) || \
+		istype(thing,/obj/item/reagent_containers/hypospray) || \
+		istype(thing,/obj/item/reagent_containers/syringe) || \
+		istype(thing,/obj/item/dnainjector) || \
+		istype(thing,/obj/item/surgical) || \
+		istype(thing,/obj/item/syndie) || \
+		istype(thing,/obj/item/hand_tele) || \
+		istype(thing,/obj/item/beartrap) || \
+		istype(thing,/obj/item/nullrod) || \
+		istype(thing,/obj/item/grenade) || \
+		istype(thing,/obj/item/implanter) || \
+		istype(thing,/obj/item/implantpad) || \
+		istype(thing,/obj/item/chainsaw) || \
+		istype(thing,/obj/item/deadringer) || \
+		istype(thing,/obj/item/telecube) || \
+		istype(thing,/obj/item/gun) || \
+		istype(thing,/obj/item/pickaxe) || \
+		istype(thing,/obj/item/broken_gun) || \
+		istype(thing,/obj/item/bluespace_harpoon) || \
+		istype(thing,/obj/item/arrow) || \
+		istype(thing,/obj/item/spike) || \
 		istype(thing,/obj/item/mecha_parts) || \
 		istype(thing,/obj/item/clothing/gloves/yellow) || \
 		istype(thing,/obj/item/clothing/gloves/fyellow) \
 	)
 		return 2
 	else if( \
-		istype(thing,/obj/item/weapon/tank) || \
-		istype(thing,/obj/item/weapon/tank) || \
-		istype(thing,/obj/item/weapon/disk) || \
-		istype(thing,/obj/item/weapon/storage/pill_bottle) || \
-		istype(thing,/obj/item/weapon/storage/firstaid) || \
-		istype(thing,/obj/item/weapon/storage/toolbox) || \
-		istype(thing,/obj/item/weapon/stock_parts) || \
-		istype(thing,/obj/item/weapon/material/shard) || \
-		istype(thing,/obj/item/weapon/weldingtool) || \
-		istype(thing,/obj/item/weapon/circuitboard) || \
-		istype(thing,/obj/item/weapon/tool) || \
-		istype(thing,/obj/item/weapon/reagent_containers/pill) || \
-		istype(thing,/obj/item/weapon/reagent_containers/chem_disp_cartridge) || \
-		istype(thing,/obj/item/weapon/shockpaddles) || \
-		istype(thing,/obj/item/weapon/handcuffs) || \
-		istype(thing,/obj/item/weapon/extinguisher) || \
-		istype(thing,/obj/item/weapon/inducer) || \
-		istype(thing,/obj/item/weapon/rcd) || \
-		istype(thing,/obj/item/weapon/shield) || \
-		istype(thing,/obj/item/weapon/weldpack) || \
+		istype(thing,/obj/item/tank) || \
+		istype(thing,/obj/item/tank) || \
+		istype(thing,/obj/item/disk) || \
+		istype(thing,/obj/item/storage/pill_bottle) || \
+		istype(thing,/obj/item/storage/firstaid) || \
+		istype(thing,/obj/item/storage/toolbox) || \
+		istype(thing,/obj/item/stock_parts) || \
+		istype(thing,/obj/item/material/shard) || \
+		istype(thing,/obj/item/weldingtool) || \
+		istype(thing,/obj/item/circuitboard) || \
+		istype(thing,/obj/item/tool) || \
+		istype(thing,/obj/item/reagent_containers/pill) || \
+		istype(thing,/obj/item/reagent_containers/chem_disp_cartridge) || \
+		istype(thing,/obj/item/shockpaddles) || \
+		istype(thing,/obj/item/handcuffs) || \
+		istype(thing,/obj/item/extinguisher) || \
+		istype(thing,/obj/item/inducer) || \
+		istype(thing,/obj/item/rcd) || \
+		istype(thing,/obj/item/shield) || \
+		istype(thing,/obj/item/weldpack) || \
 		istype(thing,/obj/item/clothing/gloves/telekinetic) \
 	)
 		return 1
@@ -205,7 +205,7 @@
 		return 0
 
 /obj/machinery/metal_detector/attackby(obj/item/W, mob/user)
-	if(W.is_wrench() || W.is_screwdriver() || W.is_crowbar() || istype(W, /obj/item/weapon/storage/part_replacer))
+	if(W.is_wrench() || W.is_screwdriver() || W.is_crowbar() || istype(W, /obj/item/storage/part_replacer))
 		if(default_unfasten_wrench(user, W))
 			return
 		if(default_deconstruction_screwdriver(user, W))

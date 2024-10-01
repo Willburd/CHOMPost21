@@ -1,4 +1,4 @@
-/obj/item/device/dogborg/sleeper/container_resist(mob/living/prey)
+/obj/item/dogborg/sleeper/container_resist(mob/living/prey)
 	hound = src.loc
 	if(istype(prey,/mob/living/voice)) //Voices shouldn't be able to resist but we have this here just in case.
 		return

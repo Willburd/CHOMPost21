@@ -11,8 +11,8 @@
 	dir = 6
 	},
 /obj/structure/table/woodentable,
-/obj/item/weapon/material/kitchen/rollingpin,
-/obj/item/weapon/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "dY" = (
@@ -63,7 +63,7 @@
 	dir = 4
 	},
 /obj/structure/closet/secure_closet/freezer/fridge,
-/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel,
+/obj/item/reagent_containers/food/snacks/sliceable/cheesewheel,
 /obj/structure/sign/painting/library_secure{
 	pixel_x = 30
 	},
@@ -78,11 +78,11 @@
 	dir = 8;
 	pixel_x = 8
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/reagent_containers/food/condiment/small/saltshaker,
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "mQ" = (
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 14
 	},
 /obj/structure/table/wooden_reinforced,
@@ -93,7 +93,7 @@
 /turf/simulated/mineral/floor/ignore_cavegen/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "oq" = (
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 14
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -125,7 +125,7 @@
 /area/submap/outpost21/cave_liminal_B)
 "tH" = (
 /obj/structure/bed/double/padded,
-/obj/item/weapon/bedsheet/orangedouble,
+/obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/outpost21/cave_liminal_B)
 "uh" = (
@@ -189,7 +189,7 @@
 /obj/item/trash/plate{
 	pixel_x = -5
 	},
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/outpost21/cave_liminal_B)
@@ -198,14 +198,14 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/food/condiment/enzyme,
+/obj/item/reagent_containers/food/condiment/enzyme,
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "CK" = (
@@ -371,7 +371,7 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/outpost21/cave_liminal_B)
 "Xh" = (
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 14
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -381,7 +381,7 @@
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "XH" = (
-/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/material/kitchen/utensil/spoon,
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/carpet/purcarpet,
 /area/submap/outpost21/cave_liminal_B)

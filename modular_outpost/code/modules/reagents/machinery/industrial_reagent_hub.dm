@@ -8,7 +8,7 @@
 	use_power = USE_POWER_OFF // Does not require power for pipes
 	idle_power_usage = 0
 	active_power_usage = 0
-	circuit = /obj/item/weapon/circuitboard/industrial_reagent_hub
+	circuit = /obj/item/circuitboard/industrial_reagent_hub
 	default_max_vol = 0
 	var/wait_delay = 4 SECONDS
 

@@ -5,7 +5,7 @@
 	icon_state = "sextractor"
 	density = TRUE
 	anchored = TRUE
-	circuit = /obj/item/weapon/circuitboard/smart_centrifuge
+	circuit = /obj/item/circuitboard/smart_centrifuge
 
 	var/working = FALSE
 
@@ -52,7 +52,7 @@
 				for(var/datum/reagent/RL in reagents.reagent_list)
 					if(RL.volume > 0)
 						// Lets solve how much we need to drain into the container...
-						var/obj/item/weapon/reagent_containers/chem_disp_cartridge/CD = new(src)
+						var/obj/item/reagent_containers/chem_disp_cartridge/CD = new(src)
 						var/remain_vol = RL.volume - CD.reagents.maximum_volume
 						if(remain_vol < 0)
 							remain_vol = 0

@@ -66,7 +66,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/chu)
 
 	has_langs = list(LANGUAGE_CHU)
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	say_list_type = /datum/say_list/chu
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive/chu

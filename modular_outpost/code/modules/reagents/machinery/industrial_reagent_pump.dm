@@ -8,7 +8,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 0
 	active_power_usage = 50
-	circuit = /obj/item/weapon/circuitboard/industrial_reagent_pump
+	circuit = /obj/item/circuitboard/industrial_reagent_pump
 
 /obj/machinery/reagent_refinery/pump/Initialize()
 	. = ..()

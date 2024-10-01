@@ -5,7 +5,7 @@
 	surgery_name = "Recreate Vital Structures"
 	priority = 2
 	allowed_tools = list(
-		/obj/item/weapon/surgical/bioregen = 100
+		/obj/item/surgical/bioregen = 100
 	)
 
 	can_infect = 0

@@ -1,2 +1,2 @@
-/obj/item/weapon/reagent_containers/chem_disp_cartridge
+/obj/item/reagent_containers/chem_disp_cartridge
 	hemocyanin	spawn_reagent = "hemocyanin"

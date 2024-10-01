@@ -4,7 +4,7 @@
 /area/mine/unexplored/muriki/cave/deepdark)
 "b" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 2;
 	pixel_x = -8
 	},
@@ -51,14 +51,14 @@
 /area/template_noop)
 "z" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 14
 	},
 /turf/simulated/floor/tiled,
 /area/submap/outpost21/cave_liminal_A)
 "A" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 12;
 	pixel_x = -8
 	},
@@ -66,7 +66,7 @@
 /area/submap/outpost21/cave_liminal_A)
 "C" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 2;
 	pixel_x = 6
 	},

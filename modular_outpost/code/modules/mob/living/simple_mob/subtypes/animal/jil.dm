@@ -56,7 +56,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/jil)
 
 	has_langs = list("Jil")
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	say_list_type = /datum/say_list/jil
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/jil
@@ -221,16 +221,16 @@
 /mob/living/simple_mob/vore/alienanimals/jil/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(stat == DEAD)
 		return ..()
-	if(istype(O, /obj/item/weapon/grab))
+	if(istype(O, /obj/item/grab))
 		return ..()
-	if(istype(O, /obj/item/weapon/holder))
+	if(istype(O, /obj/item/holder))
 		return ..()
 	if(user.a_intent != I_HELP)
 		// num num num
-		if(istype(O,/obj/item/weapon/reagent_containers/food))
-			var/obj/item/weapon/reagent_containers/food/F = O
+		if(istype(O,/obj/item/reagent_containers/food))
+			var/obj/item/reagent_containers/food/F = O
 			F.attack(src,src)
-	if(istype(O, /obj/item/weapon/newspaper))
+	if(istype(O, /obj/item/newspaper))
 		visible_message("<font color='blue'>[user] baps \the [src] on the nose with the rolled up [O]</font>")
 		drop_l_hand()
 		drop_r_hand()
@@ -276,7 +276,7 @@
 	base_wander_delay = 1
 	max_home_distance = 850
 	var/unreachable_locs = list()   //cleared when reaching nest/dropoff item, prevents window breaking spam
-	var/forbidden_objs = list(/obj/item/weapon/deck,/obj/item/weapon/paper_bin,/obj/item/stack) // things that don't play well with jils
+	var/forbidden_objs = list(/obj/item/deck,/obj/item/paper_bin,/obj/item/stack) // things that don't play well with jils
 	var/last_pickup_turf = null // when a jil return an item to the nest, this turf is removed from the forbid, so lockers work better
 
 /datum/ai_holder/simple_mob/intentional/jil/New()
@@ -305,7 +305,7 @@
 /datum/ai_holder/simple_mob/intentional/jil/pre_melee_attack(atom/A)
 	if(istype(A, /obj/item))
 		var/obj/item/I = A
-		if(istype(I, /obj/item/weapon/reagent_containers/food))	// If we can't pick it up, or it's edible, go to harm.
+		if(istype(I, /obj/item/reagent_containers/food))	// If we can't pick it up, or it's edible, go to harm.
 			holder.a_intent = I_HURT
 		else
 			holder.a_intent = I_HELP
@@ -352,8 +352,8 @@
 
 /datum/ai_holder/simple_mob/intentional/jil/post_melee_attack(atom/A)
 	if(istype(A, /obj/item) && !holder.get_active_hand() && holder.Adjacent(A))
-		if(istype(A, /obj/item/weapon/flame/lighter))
-			var/obj/item/weapon/flame/lighter/R = A
+		if(istype(A, /obj/item/flame/lighter))
+			var/obj/item/flame/lighter/R = A
 			var/obj/item/I = A
 			I.attack_hand(holder)
 			spawn(5)
@@ -371,15 +371,15 @@
 						holder.drop_r_hand()
 						new /obj/effect/decal/cleanable/ash(holder.loc) // Turn it to ashes!
 						holder.Destroy()
-		else if(istype(A, /obj/item/device))
-			var/obj/item/device/D = A
+		else if(istype(A, /obj/item))
+			var/obj/item/D = A
 			if(!D.anchored)
 				// attempt grab of target!
 				D.attack_hand(holder)
 			else
 				// interact with anchored items
-				if(istype(A, /obj/item/device/radio/intercom))
-					var/obj/item/device/radio/intercom/Ic = D
+				if(istype(A, /obj/item/radio/intercom))
+					var/obj/item/radio/intercom/Ic = D
 					Ic.listening = !Ic.listening
 		else
 			// attempt grab of target!
@@ -423,7 +423,7 @@
 			continue
 
 		// disable for things already in hoard, food needs to be eaten though
-		if(!istype(A, /obj/item/weapon/reagent_containers/food) && get_dist(A, home_turf) < hoard_distance)
+		if(!istype(A, /obj/item/reagent_containers/food) && get_dist(A, home_turf) < hoard_distance)
 			continue
 
 		// collect items!

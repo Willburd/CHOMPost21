@@ -35,8 +35,8 @@
 	return TRUE
 
 /obj/machinery/nuke_cylinder_dispenser/attackby(obj/item/O, mob/user)
-	if(!open && powered() && istype(O,/obj/item/weapon/card/id))
-		var/obj/item/weapon/card/id/id = O
+	if(!open && powered() && istype(O,/obj/item/card/id))
+		var/obj/item/card/id/id = O
 		if(check_access(id))
 			locked = !locked
 			if(!locked)
@@ -94,11 +94,11 @@
 	var/damaged = 0
 
 /obj/machinery/self_destruct/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I, /obj/item/weapon/weldingtool))
+	if(istype(I, /obj/item/weldingtool))
 		if(damaged)
 			user.visible_message("[user] begins to repair [src].", "You begin repairing [src].")
 			if(do_after(usr, 100, src))
-				var/obj/item/weapon/weldingtool/W = I
+				var/obj/item/weldingtool/W = I
 				if(W.remove_fuel(10,user))
 					damaged = 0
 					user.visible_message("[user] repairs [src].", "You repair [src].")

@@ -113,7 +113,7 @@
 
 /datum/event/badbody/proc/set_items(var/mob/living/carbon/human/badbody)
 	// Strip body of some stuff
-	var/obj/item/find_id = locate(/obj/item/weapon/card/id) in badbody.contents
+	var/obj/item/find_id = locate(/obj/item/card/id) in badbody.contents
 	if(find_id)
 		badbody.drop_from_inventory(find_id)
 		qdel(find_id)
@@ -122,7 +122,7 @@
 			badbody.drop_from_inventory(C)
 			qdel(C)
 	// Plant gps...
-	var/obj/item/device/gps/G = new /obj/item/device/gps(badbody.loc)
+	var/obj/item/gps/G = new /obj/item/gps(badbody.loc)
 	G.gps_tag = pick("SOS","ERROR","BAD NAME","OUT OF RANGE","BAD SIGNAL","CHECK NAME","CHECK SIGNAL","TEST MODE ACTIVE",badbody.real_name)
 	G.tracking = TRUE
 	G.name = "global positioning system ([G.gps_tag])"
@@ -291,7 +291,7 @@
 		if(5)
 			if(A)
 				if(!A.always_unpowered) // in a cave anyway, do nothing. This is for when it's on station!
-					for(var/obj/item/device/radio/intercom/R in get_area_all_atoms(A))
+					for(var/obj/item/radio/intercom/R in get_area_all_atoms(A))
 						if(!R.listening)
 							R.ToggleReception()
 			return world.time + rand(700,1200)

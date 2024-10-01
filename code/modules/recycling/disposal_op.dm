@@ -40,8 +40,8 @@
 				detectedtag = "corpse"
 				break
 		// Check for microholders, you can't skip the system this way either!
-		var/obj/item/weapon/holder/hold = null
-		for(var/obj/item/weapon/holder/hl in H)
+		var/obj/item/holder/hold = null
+		for(var/obj/item/holder/hl in H)
 			if(!isnull(hl.held_mob) && istype(hl.held_mob,/mob/living/carbon))
 				hold = hl
 				break
@@ -49,23 +49,23 @@
 			detectedtag = "corpse"
 		else
 			// check ID validity
-			var/obj/item/weapon/card/foundid = null
-			for(var/obj/item/weapon/card/id in H) // send these to medical body disposal as well
+			var/obj/item/card/foundid = null
+			for(var/obj/item/card/id in H) // send these to medical body disposal as well
 				foundid = id
 				break
-			for(var/obj/item/device/pda/P in H)
+			for(var/obj/item/pda/P in H)
 				if(!isnull(P.id)) // send these to medical body disposal as well
 					foundid = P.id
 					break
-			for(var/obj/item/weapon/storage in H)
-				for(var/obj/item/device/pda/P in storage.contents)
+			for(var/obj/item/storage in H)
+				for(var/obj/item/pda/P in storage.contents)
 					if(!isnull(P.id)) // send these to medical body disposal as well
 						foundid = P.id
 						break
-				for(var/obj/item/weapon/card/id in storage.contents)
+				for(var/obj/item/card/id in storage.contents)
 					foundid = id // check simple storages for idcards! one level deep only!
 					break
 			// check ID validity
-			if(!isnull(foundid) && !istype(foundid,/obj/item/weapon/card/id/guest))
+			if(!isnull(foundid) && !istype(foundid,/obj/item/card/id/guest))
 				detectedtag = "corpse"
 	return detectedtag

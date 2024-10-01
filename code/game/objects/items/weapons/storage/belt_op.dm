@@ -1,9 +1,9 @@
-/obj/item/weapon/storage/belt/utility/chemtech
+/obj/item/storage/belt/utility/chemtech
 	starts_with = list(
-		/obj/item/weapon/tool/screwdriver,
-		/obj/item/weapon/tool/wrench,
-		/obj/item/weapon/weldingtool,
-		/obj/item/weapon/tool/crowbar,
-		/obj/item/weapon/tool/wirecutters,
-		/obj/item/device/reagent_scanner
+		/obj/item/tool/screwdriver,
+		/obj/item/tool/wrench,
+		/obj/item/weldingtool,
+		/obj/item/tool/crowbar,
+		/obj/item/tool/wirecutters,
+		/obj/item/reagent_scanner
 	)

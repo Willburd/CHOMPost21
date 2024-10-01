@@ -8,7 +8,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 0
 	active_power_usage = 200
-	circuit = /obj/item/weapon/circuitboard/industrial_reagent_waste_processor
+	circuit = /obj/item/circuitboard/industrial_reagent_waste_processor
 	// Chemical bath funtimes!
 	can_buckle = TRUE
 	buckle_lying = TRUE
@@ -102,9 +102,9 @@
 		visible_message("\The [user] drains \the [C] into \the [src].")
 		update_icon()
 		return
-	if(istype(C,/obj/item/weapon/reagent_containers/glass) || \
-		istype(C,/obj/item/weapon/reagent_containers/food/drinks/glass2) || \
-		istype(C,/obj/item/weapon/reagent_containers/food/drinks/shaker))
+	if(istype(C,/obj/item/reagent_containers/glass) || \
+		istype(C,/obj/item/reagent_containers/food/drinks/glass2) || \
+		istype(C,/obj/item/reagent_containers/food/drinks/shaker))
 		// Drain it!
 		C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
 		visible_message("\The [user] dumps \the [C] into \the [src].")

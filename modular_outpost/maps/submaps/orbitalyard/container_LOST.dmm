@@ -9,11 +9,11 @@
 "j" = (/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
 "k" = (/obj/structure/closet/crate,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/maintenance,/obj/random/junk,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
 "o" = (/obj/random/maintenance,/turf/space,/area/submap/outpost21/asteroid_generic)
-"x" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/obj/item/weapon/tank/vox,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
-"N" = (/obj/item/weapon/tank/oxygen,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"x" = (/obj/structure/table/rack/shelf/steel,/obj/random/maintenance,/obj/item/tank/vox,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"N" = (/obj/item/tank/oxygen,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
 "R" = (/obj/random/junk,/turf/space,/area/submap/outpost21/asteroid_generic)
 "T" = (/turf/space,/area/submap/outpost21/asteroid_generic)
-"Z" = (/obj/item/weapon/tank/emergency/nitrogen,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
+"Z" = (/obj/item/tank/emergency/nitrogen,/turf/simulated/floor/plating,/area/submap/outpost21/asteroid_generic)
 
 (1,1,1) = {"
 aaaaaaaaa

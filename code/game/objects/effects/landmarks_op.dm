@@ -245,14 +245,14 @@
 			if(srcturf.outdoors == OUTDOORS_NO)
 				if(prob(20))
 					// rare spawn!
-					var/obj/item/weapon/lego/L = new /obj/item/weapon/lego()
+					var/obj/item/lego/L = new /obj/item/lego()
 					L.loc = src.loc
 				else
-					var/obj/item/device/assembly/mousetrap/armed/M = new /obj/item/device/assembly/mousetrap/armed();
+					var/obj/item/assembly/mousetrap/armed/M = new /obj/item/assembly/mousetrap/armed();
 					M.loc = src.loc
 
 		if(3)
-			var/obj/item/weapon/beartrap/M = new /obj/item/weapon/beartrap();
+			var/obj/item/beartrap/M = new /obj/item/beartrap();
 			M.deployed = TRUE
 			M.update_icon()
 			M.loc = src.loc

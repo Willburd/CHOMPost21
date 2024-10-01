@@ -80,7 +80,7 @@
 						else if(isliving(thing))
 							var/mob/living/L = thing
 							for(var/obj/item/W in L)
-								if(istype(W, /obj/item/weapon/implant/backup)/* || istype(W, /obj/item/device/nif) */)	//VOREStation Edit - There's basically no reason to remove either of these
+								if(istype(W, /obj/item/implant/backup)/* || istype(W, /obj/item/nif) */)	//VOREStation Edit - There's basically no reason to remove either of these
 									continue	//VOREStation Edit
 								L.drop_from_inventory(W)
 							new /obj/effect/decal/cleanable/ash(L.loc) // Turn it to ashes!

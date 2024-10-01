@@ -18,14 +18,14 @@
 
 	var/scrubbing = FALSE //Floor cleaning enabled
 	var/amount_per_transfer_from_this = 5 //shit I dunno, adding this so syringes stop runtime erroring. --NeoFite
-	var/obj/item/weapon/storage/bag/trash/mybag	= null
+	var/obj/item/storage/bag/trash/mybag	= null
 	var/callme = "pimpin' ride"	//how do people refer to it?
 
-	key_type = /obj/item/weapon/key/janicart
+	key_type = /obj/item/key/janicart
 
 	catalogue_data = list(/datum/category_item/catalogue/technology/janicart)
 
-/obj/item/weapon/key/janicart
+/obj/item/key/janicart
 	name = "key"
 	desc = "A keyring with a small steel key, and a pink fob reading \"Pussy Wagon\"."
 	icon = 'icons/obj/vehicles.dmi'
@@ -39,7 +39,7 @@
 	..()
 	// apply speed
 	move_delay = 0.5
-	cell = new /obj/item/weapon/cell/high(src)
+	cell = new /obj/item/cell/high(src)
 	key = new key_type(src)
 	turn_off()	//so engine verbs are correctly set
 	create_reagents(600)
@@ -47,15 +47,15 @@
 	var/image/I = new(icon = 'icons/obj/vehicles_op.dmi', icon_state = "pussywagon_overlay", layer = src.layer + 0.2) //over mobs
 	add_overlay(I)
 
-/obj/vehicle/train/engine/janicart/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/mop))
+/obj/vehicle/train/engine/janicart/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/mop))
 		if(reagents.total_volume > 1)
 			reagents.trans_to_obj(W, 2)
 			to_chat(user, "<span class='notice'>You wet [W] in the [callme].</span>")
 			playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 		else
 			to_chat(user, "<span class='notice'>This [callme] is out of water!</span>")
-	else if(istype(W, /obj/item/weapon/storage/bag/trash))
+	else if(istype(W, /obj/item/storage/bag/trash))
 		to_chat(user, "<span class='notice'>You hook the trashbag onto the [callme].</span>")
 		user.drop_item()
 		W.loc = src
@@ -70,7 +70,7 @@
 	else
 		..()
 
-/obj/vehicle/train/engine/janicart/insert_cell(var/obj/item/weapon/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicle/train/engine/janicart/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
 	..()
 	update_stats()
 

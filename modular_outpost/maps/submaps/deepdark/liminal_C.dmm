@@ -5,12 +5,12 @@
 "e" = (
 /obj/effect/landmark/redspaceexit,
 /obj/structure/bed,
-/obj/item/weapon/bedsheet/blue,
+/obj/item/bedsheet/blue,
 /turf/simulated/floor/tiled/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "m" = (
 /obj/structure/table/sifwooden_reinforced,
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_y = 14
 	},
 /turf/simulated/floor/tiled/muriki,

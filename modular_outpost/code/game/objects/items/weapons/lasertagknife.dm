@@ -1,7 +1,7 @@
 
 ////////Laser Tag////////////////////
 
-/obj/item/weapon/lasertagknife
+/obj/item/lasertagknife
 	name = "universal laser tag dagger"
 	desc = "Rubber knife with a glowing fancy edge. It has no team allegiance!"
 	icon = 'icons/obj/weapons_op.dmi'
@@ -17,21 +17,21 @@
 	pickup_sound = 'sound/items/pickup/knife.ogg'
 	var/required_vest = /obj/item/clothing/suit/omnitag
 
-/obj/item/weapon/lasertagknife/blue
+/obj/item/lasertagknife/blue
 	name = "blue laser tag dagger"
 	desc = "Rubber knife with a blue glowing fancy edge!"
 	icon_state = "tagknifeblue"
 	item_state_slots = list(slot_r_hand_str = "tagknifeblue", slot_l_hand_str = "tagknifeblue")
 	required_vest = /obj/item/clothing/suit/bluetag
 
-/obj/item/weapon/lasertagknife/red
+/obj/item/lasertagknife/red
 	name = "red laser tag dagger"
 	desc = "Rubber knife with a red glowing fancy edge!"
 	icon_state = "tagknifered"
 	item_state_slots = list(slot_r_hand_str = "tagknifered", slot_l_hand_str = "tagknifered")
 	required_vest = /obj/item/clothing/suit/redtag
 
-/obj/item/weapon/lasertagknife/attack(mob/M, mob/user)
+/obj/item/lasertagknife/attack(mob/M, mob/user)
 	var/success = FALSE
 	var/mob/living/carbon/human/userH = user
 	if(userH && istype(userH.wear_suit, required_vest))
@@ -48,7 +48,7 @@
 		playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
 	return 1
 
-/obj/item/weapon/lasertagknife/blue/attack(mob/M, mob/user)
+/obj/item/lasertagknife/blue/attack(mob/M, mob/user)
 	var/success = FALSE
 	var/mob/living/carbon/human/userH = user
 	if(userH && istype(userH.wear_suit, required_vest))
@@ -65,7 +65,7 @@
 		playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
 	return 1
 
-/obj/item/weapon/lasertagknife/red/attack(mob/M, mob/user)
+/obj/item/lasertagknife/red/attack(mob/M, mob/user)
 	var/success = FALSE
 	var/mob/living/carbon/human/userH = user
 	if(userH && istype(userH.wear_suit, required_vest))

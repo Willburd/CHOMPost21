@@ -3,14 +3,14 @@
 /turf/template_noop,
 /area/template_noop)
 "i" = (
-/obj/item/weapon/bone/skull,
+/obj/item/bone/skull,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/muriki/cave/deepdark)
 "o" = (
 /turf/simulated/mineral/alt/ignore_mapgen/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "w" = (
-/obj/item/weapon/digestion_remains/skull/zorren,
+/obj/item/digestion_remains/skull/zorren,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/muriki/cave/deepdark)
 "z" = (

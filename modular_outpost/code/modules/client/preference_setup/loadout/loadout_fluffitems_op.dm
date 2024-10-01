@@ -13,7 +13,7 @@
 
 /*
 /datum/gear/fluff/testhorn
-	path = /obj/item/weapon/bikehorn
+	path = /obj/item/bikehorn
 	display_name = "Airhorn - Example Item" //Don't use the same as another item
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("broman2000")

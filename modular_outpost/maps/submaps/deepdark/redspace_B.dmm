@@ -22,7 +22,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
@@ -30,11 +30,11 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "be" = (
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/folder/white,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/folder/white,
+/obj/item/pen,
 /obj/structure/table/standard,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -89,7 +89,7 @@
 /turf/simulated/wall,
 /area/submap/outpost21/cave_red_B)
 "dg" = (
-/obj/item/weapon/flag/medical,
+/obj/item/flag/medical,
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "dk" = (
@@ -189,11 +189,11 @@
 /area/submap/outpost21/cave_red_B)
 "gF" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/masks,
+/obj/item/storage/box/masks,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
@@ -226,13 +226,13 @@
 /area/submap/outpost21/cave_red_B)
 "hv" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box,
-/obj/item/weapon/hand_labeler,
-/obj/item/weapon/packageWrap,
+/obj/item/storage/box,
+/obj/item/hand_labeler,
+/obj/item/packageWrap,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
-/obj/item/device/destTagger,
+/obj/item/destTagger,
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "hI" = (
@@ -252,11 +252,11 @@
 	dir = 6
 	},
 /obj/structure/table/glass,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/radio/intercom/department/medbay{
+/obj/item/radio/intercom/department/medbay{
 	dir = 4;
 	pixel_x = 21
 	},
@@ -266,7 +266,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 1;
 	pixel_y = -30
 	},
@@ -307,14 +307,14 @@
 /area/submap/outpost21/cave_red_B)
 "js" = (
 /obj/structure/table/standard,
-/obj/item/device/laser_pointer/blue,
+/obj/item/laser_pointer/blue,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/mine/explored/muriki/cave/deepdark)
 "ju" = (
 /obj/structure/closet/secure_closet/medical1,
-/obj/item/weapon/storage/box/pillbottles,
-/obj/item/weapon/material/shard,
+/obj/item/storage/box/pillbottles,
+/obj/item/material/shard,
 /turf/simulated/floor/water/acidic/indoor,
 /area/submap/outpost21/cave_red_B)
 "jX" = (
@@ -338,14 +338,14 @@
 /area/submap/outpost21/cave_red_B)
 "lL" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/intercom/department/medbay{
+/obj/item/radio/intercom/department/medbay{
 	dir = 1;
 	pixel_y = 21
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 32
@@ -415,12 +415,12 @@
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/medical/emt,
-/obj/item/weapon/tank/oxygen,
+/obj/item/tank/oxygen,
 /obj/item/clothing/head/helmet/space/void/medical/emt,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "nC" = (
@@ -431,13 +431,13 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/submap/outpost21/cave_red_B)
 "nJ" = (
-/obj/item/weapon/storage/box/syringes,
-/obj/item/weapon/tool/screwdriver,
+/obj/item/storage/box/syringes,
+/obj/item/tool/screwdriver,
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
 	name = "Chemistry Cleaner"
 	},
@@ -448,8 +448,8 @@
 /area/submap/outpost21/cave_red_B)
 "pq" = (
 /obj/structure/closet/secure_closet/chemical,
-/obj/item/weapon/storage/box/pillbottles,
-/obj/item/weapon/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
+/obj/item/storage/box/pillbottles,
 /turf/simulated/floor/water/acidic/indoor,
 /area/submap/outpost21/cave_red_B)
 "pA" = (
@@ -488,7 +488,7 @@
 /area/submap/outpost21/cave_red_B)
 "qz" = (
 /obj/structure/table/standard,
-/obj/item/device/radio/intercom/department/medbay{
+/obj/item/radio/intercom/department/medbay{
 	dir = 1;
 	pixel_y = 21
 	},
@@ -508,7 +508,7 @@
 /area/submap/outpost21/cave_red_B)
 "rd" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
@@ -555,9 +555,9 @@
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/medical/emt,
-/obj/item/weapon/tank/oxygen,
+/obj/item/tank/oxygen,
 /obj/item/clothing/head/helmet/space/void/medical/emt,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
@@ -598,11 +598,11 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "uJ" = (
-/obj/item/weapon/storage/box/gloves{
+/obj/item/storage/box/gloves{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/masks{
+/obj/item/storage/box/masks{
 	pixel_x = -7
 	},
 /obj/machinery/vending/wallmed1{
@@ -615,7 +615,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -653,7 +653,7 @@
 /area/submap/outpost21/cave_red_B)
 "wS" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /obj/structure/sign/nosmoking_1{
 	pixel_y = -32
 	},
@@ -809,7 +809,7 @@
 "Ch" = (
 /obj/structure/table/standard,
 /obj/effect/decal/cleanable/blood,
-/obj/item/weapon/lasertagknife,
+/obj/item/lasertagknife,
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "Cq" = (
@@ -829,7 +829,7 @@
 /area/submap/outpost21/cave_red_B)
 "Dk" = (
 /obj/structure/window/reinforced,
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/water/acidic/indoor,
 /area/submap/outpost21/cave_red_B)
 "Ds" = (
@@ -961,7 +961,7 @@
 /area/submap/outpost21/cave_red_B)
 "IN" = (
 /obj/structure/closet/wardrobe/chemistry_white,
-/obj/item/device/radio/headset/headset_med,
+/obj/item/radio/headset/headset_med,
 /obj/effect/floor_decal/corner/blue/full,
 /obj/machinery/light,
 /obj/item/clothing/glasses/science,
@@ -1058,12 +1058,12 @@
 /area/submap/outpost21/cave_red_B)
 "KG" = (
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/beakers,
-/obj/item/weapon/storage/box/syringes{
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/syringes{
 	pixel_x = 4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/box/syringes,
+/obj/item/storage/box/syringes,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
@@ -1112,7 +1112,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "LZ" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /turf/simulated/floor/water/acidic/indoor,
 /area/submap/outpost21/cave_red_B)
 "Mp" = (
@@ -1229,7 +1229,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
@@ -1287,7 +1287,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -22
@@ -1310,10 +1310,10 @@
 /area/submap/outpost21/cave_red_B)
 "TV" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/spray/cleaner{
+/obj/item/reagent_containers/spray/cleaner{
 	pixel_x = -5
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/water/acidic/indoor,
 /area/submap/outpost21/cave_red_B)
 "Uy" = (
@@ -1325,8 +1325,8 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
-/obj/item/weapon/storage/box/beakers,
-/obj/item/weapon/storage/box/beakers,
+/obj/item/storage/box/beakers,
+/obj/item/storage/box/beakers,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/submap/outpost21/cave_red_B)
 "Vf" = (
@@ -1344,7 +1344,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/outpost21/cave_red_B)
 "VY" = (
-/obj/item/weapon/stool/padded{
+/obj/item/stool/padded{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue{
@@ -1384,11 +1384,11 @@
 /area/submap/outpost21/cave_red_B)
 "Xc" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 1;
 	pixel_y = -30
 	},
@@ -1458,7 +1458,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "Za" = (
-/obj/item/weapon/material/shard,
+/obj/item/material/shard,
 /obj/structure/flora/pottedplant/dead,
 /turf/simulated/floor/water/acidic/indoor,
 /area/submap/outpost21/cave_red_B)

@@ -40,26 +40,26 @@ var/global/list/sheet_reagents = list( //have a number of reageents divisible by
 	)
 
 var/global/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
-	/obj/item/weapon/ore/glass = list("silicate"),
-	/obj/item/weapon/ore/iron = list("iron"),
-	/obj/item/weapon/ore/coal = list("carbon"),
-	/obj/item/weapon/ore/copper = list("copper"),
-	/obj/item/weapon/ore/tin = list("tin"),
-	/obj/item/weapon/ore/void_opal = list("silicon","silicon","oxygen","water"),
-	/obj/item/weapon/ore/painite = list("calcium","aluminum","oxygen","oxygen"),
-	/obj/item/weapon/ore/quartz = list("silicon","oxygen"),
-	/obj/item/weapon/ore/bauxite = list("aluminum","aluminum"),
-	/obj/item/weapon/ore/phoron = list("phoron"),
-	/obj/item/weapon/ore/silver = list("silver"),
-	/obj/item/weapon/ore/gold = list("gold"),
-	/obj/item/weapon/ore/marble = list("silicon","aluminum","aluminum","sodium","calcium"), // Some nice variety here
-	/obj/item/weapon/ore/uranium = list("uranium"),
-	/obj/item/weapon/ore/diamond = list("carbon"),
-	/obj/item/weapon/ore/osmium = list("platinum"), // should be osmium
-	/obj/item/weapon/ore/lead = list("lead"),
-	/obj/item/weapon/ore/hydrogen = list("hydrogen"),
-	/obj/item/weapon/ore/verdantium = list("radium","phoron","nitrogen","phosphorus","sodium"), // Some fun stuff to be useful with
-	/obj/item/weapon/ore/rutile = list("titanium_diox")
+	/obj/item/ore/glass = list("silicate"),
+	/obj/item/ore/iron = list("iron"),
+	/obj/item/ore/coal = list("carbon"),
+	/obj/item/ore/copper = list("copper"),
+	/obj/item/ore/tin = list("tin"),
+	/obj/item/ore/void_opal = list("silicon","silicon","oxygen","water"),
+	/obj/item/ore/painite = list("calcium","aluminum","oxygen","oxygen"),
+	/obj/item/ore/quartz = list("silicon","oxygen"),
+	/obj/item/ore/bauxite = list("aluminum","aluminum"),
+	/obj/item/ore/phoron = list("phoron"),
+	/obj/item/ore/silver = list("silver"),
+	/obj/item/ore/gold = list("gold"),
+	/obj/item/ore/marble = list("silicon","aluminum","aluminum","sodium","calcium"), // Some nice variety here
+	/obj/item/ore/uranium = list("uranium"),
+	/obj/item/ore/diamond = list("carbon"),
+	/obj/item/ore/osmium = list("platinum"), // should be osmium
+	/obj/item/ore/lead = list("lead"),
+	/obj/item/ore/hydrogen = list("hydrogen"),
+	/obj/item/ore/verdantium = list("radium","phoron","nitrogen","phosphorus","sodium"), // Some fun stuff to be useful with
+	/obj/item/ore/rutile = list("titanium_diox")
 )
 
 var/global/list/reagent_sheets = list( // Recompressing reagents back into sheets

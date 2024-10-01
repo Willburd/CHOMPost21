@@ -3,7 +3,7 @@
 	desc = "Kylos model 72 varient 4, heavy asset reclaimation vehicle. For when lesser force has failed."
 	move_delay = 4
 
-	key_type = /obj/item/weapon/key/heavyarmor_tank
+	key_type = /obj/item/key/heavyarmor_tank
 
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "sec_tank"
@@ -28,7 +28,7 @@
 	extends_time = TRUE
 	volume_chan = VOLUME_CHANNEL_MACHINERY
 
-/obj/item/weapon/key/heavyarmor_tank
+/obj/item/key/heavyarmor_tank
 	name = "key"
 	desc = "A keyring with a small steel key, and a red fob reading \"Greater force\"."
 	icon = 'icons/obj/vehicles_op.dmi'

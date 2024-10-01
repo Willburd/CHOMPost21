@@ -31,7 +31,7 @@
 		var/paper_spawn_loc = pick(nukeitems)
 		if(paper_spawn_loc)
 			// Create and pass on the bomb code paper.
-			var/obj/item/weapon/paper/P = new(paper_spawn_loc)
+			var/obj/item/paper/P = new(paper_spawn_loc)
 			P.info = "The nuclear authorization code is: <b>[r_code]</b>"
 			P.name = "nuclear bomb code"
 			log_world("Nuclear codes paper spawned, location [P.loc.x] [P.loc.y] [P.loc.z]")
@@ -40,7 +40,7 @@
 		var/nukedisk_spawn_loc = paper_spawn_loc
 		if(nukeitems.len > 0)
 			nukedisk_spawn_loc = pick(nukeitems)
-		var/obj/item/weapon/disk/nuclear/disk = new /obj/item/weapon/disk/nuclear(nukedisk_spawn_loc)
+		var/obj/item/disk/nuclear/disk = new /obj/item/disk/nuclear(nukedisk_spawn_loc)
 		log_world("Nuclear disk spawned, location [disk.loc.x] [disk.loc.y] [disk.loc.z]")
 	else
 		error("No nuclear landmarks defined")
@@ -134,7 +134,7 @@
 				auth = null
 			else
 				var/obj/item/I = usr.get_active_hand()
-				if(istype(I, /obj/item/weapon/disk/nuclear))
+				if(istype(I, /obj/item/disk/nuclear))
 					usr.drop_item()
 					I.loc = src
 					auth = I

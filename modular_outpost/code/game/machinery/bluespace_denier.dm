@@ -81,7 +81,7 @@
 	if(ishuman(AM))
 		flash()
 
-/obj/machinery/bluespace_denier/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/bluespace_denier/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH))
 		add_fingerprint(user)
 		anchored = !anchored

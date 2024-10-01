@@ -1,10 +1,10 @@
 // Gives oties an ID card to use on doors, so they don't destroy security if you walk too fast.
 /mob/living/simple_mob/vore/otie/security
-	var/obj/item/weapon/card/id/idcard
+	var/obj/item/card/id/idcard
 
 /mob/living/simple_mob/vore/otie/security/New()
 	. = ..()
-	idcard = new /obj/item/weapon/card/id/security(src)
+	idcard = new /obj/item/card/id/security(src)
 	idcard.access = list(access_security, access_eva, access_sec_doors, access_brig, access_maint_tunnels, access_external_airlocks) // Minimal access officer
 	idcard.age = 0
 	idcard.registered_name	= name

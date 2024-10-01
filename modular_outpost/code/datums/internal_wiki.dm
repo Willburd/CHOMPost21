@@ -185,19 +185,19 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		var/working_ing_list = list()
 		food_recipes[Rp]["has_coatable_items"] = FALSE
 		for(var/I in food_recipes[Rp]["Ingredients"])
-			if(I == /obj/item/weapon/holder/mouse) // amazing snowflake runtime fix, initilizing a holder makes it flip out because it's not in a mob.
+			if(I == /obj/item/holder/mouse) // amazing snowflake runtime fix, initilizing a holder makes it flip out because it's not in a mob.
 				if("mouse" in working_ing_list)
 					var/sofar = working_ing_list["mouse"]
 					working_ing_list["mouse"] = sofar+1
 				else
 					working_ing_list["mouse"] = 1
-			else if(I == /obj/item/weapon/holder/diona) // YOU TOO
+			else if(I == /obj/item/holder/diona) // YOU TOO
 				if("diona" in working_ing_list)
 					var/sofar = working_ing_list["diona"]
 					working_ing_list["diona"] = sofar+1
 				else
 					working_ing_list["diona"] = 1
-			else if(I == /obj/item/weapon/holder) // And you especially, needed for "splat" microwave recipe
+			else if(I == /obj/item/holder) // And you especially, needed for "splat" microwave recipe
 				if("micro" in working_ing_list)
 					var/sofar = working_ing_list["micro"]
 					working_ing_list["micro"] = sofar+1
@@ -205,7 +205,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 					working_ing_list["micro"] = 1
 			else
 				var/atom/ing = new I()
-				if(istype(ing, /obj/item/weapon/reagent_containers/food/snacks)) // only subtypes of this have a coating variable and are checked for it (fruit are a subtype of this, so there's a check for them too later)
+				if(istype(ing, /obj/item/reagent_containers/food/snacks)) // only subtypes of this have a coating variable and are checked for it (fruit are a subtype of this, so there's a check for them too later)
 					food_recipes[Rp]["has_coatable_items"] = TRUE
 
 				//So now we add something like "Bread" = 3

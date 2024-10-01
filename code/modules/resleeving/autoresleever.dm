@@ -78,10 +78,10 @@
 		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.</span>") // Outpost 21 edit - actually inform players
 		return
 	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
-		if(istype(ghost.mind.current.loc, /obj/item/device/mmi))
+		if(istype(ghost.mind.current.loc, /obj/item/mmi))
 			if(tgui_alert(ghost, "Your brain is still alive, using the auto-resleever will delete that brain. Are you sure?", "Delete Brain", list("No","Yes")) != "Yes")
 				return
-			if(istype(ghost.mind.current.loc, /obj/item/device/mmi))
+			if(istype(ghost.mind.current.loc, /obj/item/mmi))
 				qdel(ghost.mind.current.loc)
 		else
 			to_chat(ghost, "<span class='warning'>Your body is still alive, you cannot be resleeved.</span>")
@@ -220,7 +220,7 @@
 	message_admins("[new_character.ckey]'s character [new_character.real_name] has been auto-resleeved.")
 
 	/* Outpost 21 edit - remove backup implanter
-	var/obj/item/weapon/implant/backup/imp = new(src)
+	var/obj/item/implant/backup/imp = new(src)
 
 	if(imp.handle_implant(new_character,new_character.zone_sel.selecting))
 		imp.post_implant(new_character)
@@ -234,7 +234,7 @@
 		/* Outpost 21 edit - Nif removal
 		spawn(0)	//Wait a second for nif to do its thing if there is one
 		if(record.nif_path)
-			var/obj/item/device/nif/nif
+			var/obj/item/nif/nif
 			if(new_character.nif)
 				nif = new_character.nif
 			else
@@ -265,7 +265,7 @@
 	releaseturf = get_turf(G)
 	throw_dir = G.gib_throw_dir
 
-/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/weapon/card/id/D)
+/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/card/id/D)
 	if(stat || isnull(releaseturf))
 		return
 
@@ -276,7 +276,7 @@
 		return
 
 	// do not let guest IDs be used
-	if(istype(D,/obj/item/weapon/card/id/guest))
+	if(istype(D,/obj/item/card/id/guest))
 		src.visible_message("[src] flashes 'Temporary guest ID identified!', and lets out a loud incorrect sounding beep!")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		return
