@@ -2269,6 +2269,7 @@
 	dynamic_lighting = 1
 	always_unpowered = TRUE
 	requires_power = FALSE
+	has_gravity = FALSE
 
 /area/virtual_reality/spacesim/has_gravity()
 	return 0
