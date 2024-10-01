@@ -118,7 +118,7 @@ SUBSYSTEM_DEF(supply)
 
 					//Sell spacebucks
 					if(istype(A, /obj/item/spacecash))
-						var/obj/item/weapon/spacecash/cashmoney = A
+						var/obj/item/spacecash/cashmoney = A
 						EC.contents[EC.contents.len]["value"] = (cashmoney.worth * points_per_money) * cash_tax // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]

@@ -130,8 +130,8 @@
 	closet_appearance = /decl/closet_appearance/wardrobe/purple
 
 	starts_with = list(
-		/obj/item/weapon/gun/energy/lasertag/omni = 4,
-		/obj/item/weapon/lasertagknife = 4,
+		/obj/item/gun/energy/lasertag/omni = 4,
+		/obj/item/lasertagknife = 4,
 		/obj/item/clothing/suit/omnitag = 4,
 		/obj/item/clothing/head/helmet/lasertag = 4)
 // Outpost 21 edit end

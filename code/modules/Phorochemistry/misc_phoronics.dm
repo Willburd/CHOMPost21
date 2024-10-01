@@ -54,7 +54,7 @@
 	desc = "Ovenless Brownies!"
 	filling_color = "#A79459"
 
-/obj/item/weapon/reagent_containers/food/snacks/brownies/New()
+/obj/item/reagent_containers/food/snacks/brownies/New()
 	..()
 	reagents.add_reagent("nutriment", 6)
 

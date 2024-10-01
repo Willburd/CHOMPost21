@@ -132,11 +132,11 @@
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	// Outpost 21 addition begin - Slamming heads into walls
-	if(isliving(user) && istype(W,/obj/item/weapon/grab))
+	if(isliving(user) && istype(W,/obj/item/grab))
 		var/mob/living/L = user
 		var/damage_done = L.slam_grabbed_mob_against_thing(W)
 		if(damage_done > -1)
-			var/obj/item/weapon/grab/G = W
+			var/obj/item/grab/G = W
 			var/mob/living/throw_mob = G.throw_held()
 			if(throw_mob)
 				// SMACK wall till it breaks!

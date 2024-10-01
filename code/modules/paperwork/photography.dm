@@ -84,12 +84,12 @@ var/global/photo_count = 0
 
 
 // Outpost 21 addition begin - The image of a...
-/obj/item/weapon/photo/proc/statue_curse(var/user)
+/obj/item/photo/proc/statue_curse(var/user)
 	var/t = rand(260, 560) SECONDS
 	log_admin("[user] took a picture of an angel statue. It will spawn a statue in: [t / (1 SECOND)] seconds.")
 	addtimer(CALLBACK(src, PROC_REF(statue_spawn)), t)
 
-/obj/item/weapon/photo/proc/statue_spawn()
+/obj/item/photo/proc/statue_spawn()
 	if(statue_photos_allowed <= 0)
 		return
 	if(!QDELETED(src))

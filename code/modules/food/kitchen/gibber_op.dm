@@ -71,10 +71,10 @@
 		var/obj/item/thing = A
 		thing.loc = src
 		// proc sleever if it gets an ID
-		if(istype(A, /obj/item/weapon/card/id))
+		if(istype(A, /obj/item/card/id))
 			updatesleever()
 			processcontents()
-		else if(istype(A, /obj/item/device/pda))
+		else if(istype(A, /obj/item/pda))
 			updatesleever()
 			processcontents()
 		return
@@ -135,7 +135,7 @@
 	return 1
 
 /obj/machinery/gibber/attackby(var/obj/item/W, var/mob/user)
-	var/obj/item/weapon/grab/G = W
+	var/obj/item/grab/G = W
 
 	if(default_unfasten_wrench(user, W, 40))
 		return
@@ -249,7 +249,7 @@
 
 		var/slab_name = grindable.name
 		var/slab_count = grindable.meat_amount
-		var/slab_type = grindable.meat_type ? grindable.meat_type : /obj/item/weapon/reagent_containers/food/snacks/meat
+		var/slab_type = grindable.meat_type ? grindable.meat_type : /obj/item/reagent_containers/food/snacks/meat
 		var/slab_nutrition = grindable.nutrition / 15
 
 		// extra loot from butchery!
@@ -269,7 +269,7 @@
 
 		while(slab_count)
 			slab_count--
-			var/obj/item/weapon/reagent_containers/food/snacks/meat/new_meat = new slab_type(src, rand(3,8))
+			var/obj/item/reagent_containers/food/snacks/meat/new_meat = new slab_type(src, rand(3,8))
 			if(istype(new_meat))
 				new_meat.name = "[slab_name] [new_meat.name]"
 				new_meat.reagents.add_reagent("nutriment",slab_nutrition)
@@ -328,12 +328,12 @@
 
 /obj/machinery/gibber/proc/processcontents()
 	// don't call this if currently processing something else, be careful!
-	var/obj/item/weapon/card/id/sleevecard // because we can only run one resleeve at a time...
+	var/obj/item/card/id/sleevecard // because we can only run one resleeve at a time...
 	for (var/obj/thing in contents)
 		var/processtobiomass = FALSE
 		if(!isnull(sleevelink))
 			// PROCESS ORGANICS INTO SLURRY
-			if(istype(thing, /obj/item/stack/animalhide) || istype(thing, /obj/item/weapon/reagent_containers/food/snacks/meat))
+			if(istype(thing, /obj/item/stack/animalhide) || istype(thing, /obj/item/reagent_containers/food/snacks/meat))
 				processtobiomass = TRUE
 			else if(istype(thing, /obj/item/organ))
 				var/obj/item/organ/O = thing
@@ -342,10 +342,10 @@
 			else if(istype(thing, /obj/effect/decal/cleanable/blood/gibs))
 				if(prob(70))
 					processtobiomass = TRUE
-			else if(istype(thing, /obj/item/weapon/card/id))
+			else if(istype(thing, /obj/item/card/id))
 				sleevecard = thing // this makes it so the last ID detected is the one used...
-			else if(istype(thing, /obj/item/device/pda))
-				var/obj/item/device/pda/P = thing
+			else if(istype(thing, /obj/item/pda))
+				var/obj/item/pda/P = thing
 				if(!isnull(P.id))
 					sleevecard = P.id // this makes it so the last ID detected is the one used...
 

@@ -1,4 +1,4 @@
-/obj/item/device/laser_designator
+/obj/item/laser_designator
 	name = "laser designator"
 	desc = "Used to call down the fist of God!"
 	icon = 'icons/obj/device_op.dmi'
@@ -16,15 +16,15 @@
 	var/recharging = 0
 	var/recharge_locked = 0
 
-/obj/item/device/laser_designator/attack(mob/living/M, mob/user)
+/obj/item/laser_designator/attack(mob/living/M, mob/user)
 	laser_act(M, user)
 
-/obj/item/device/laser_designator/afterattack(var/atom/target, var/mob/living/user, flag, params)
+/obj/item/laser_designator/afterattack(var/atom/target, var/mob/living/user, flag, params)
 	if(flag)	//we're placing the object on a table or in backpack
 		return
 	laser_act(target, user)
 
-/obj/item/device/laser_designator/proc/laser_act(var/atom/target, var/mob/living/user)
+/obj/item/laser_designator/proc/laser_act(var/atom/target, var/mob/living/user)
 	if(!(user in (viewers(world.view,target))))
 		return
 	if(!(target in view(user, world.view)))
@@ -76,7 +76,7 @@
 	spawn(cooldown)
 		icon_state = item_state
 
-/obj/item/device/laser_designator/proc/call_down_the_fist_of_god(var/mob/user, var/atom/target,var/turf/hithere)
+/obj/item/laser_designator/proc/call_down_the_fist_of_god(var/mob/user, var/atom/target,var/turf/hithere)
 	if(target && !istype(hithere))
 		hithere = get_turf(target)
 	if(!target && !hithere)
@@ -92,7 +92,7 @@
 			var/hitsize = 3
 			explosion(hithere, 2, hitsize,hitsize * 1.5)
 
-/obj/item/device/laser_designator/process()
+/obj/item/laser_designator/process()
 	if(prob(5))
 		energy += 1
 		if(energy >= max_energy)

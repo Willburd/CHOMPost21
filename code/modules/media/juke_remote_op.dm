@@ -1,10 +1,10 @@
-/obj/item/device/juke_remote
+/obj/item/juke_remote
 	var/area/autolinkareajuke_onspawn = null // mostly for the radiohost
 
-/obj/item/device/juke_remote/Initialize()
+/obj/item/juke_remote/Initialize()
 	return INITIALIZE_HINT_LATELOAD
 
-/obj/item/device/juke_remote/LateInitialize()
+/obj/item/juke_remote/LateInitialize()
 	// autopair if uses a area link
 	if(!isnull(autolinkareajuke_onspawn))
 		for(var/obj/machinery/M in global.machines)

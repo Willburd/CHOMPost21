@@ -60,9 +60,9 @@
 /obj/structure/closet/secure_closet/guncabinet/excursion/New()
 	..()
 	for(var/i = 1 to 4)
-		new /obj/item/weapon/gun/energy/locked/frontier(src)
+		new /obj/item/gun/energy/locked/frontier(src)
 	for(var/i = 1 to 4)
-		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
+		new /obj/item/gun/energy/locked/frontier/holdout(src)
 
 //Taken from YW, why is this not in the dance pole's file itself? Redundant code, or just their mappers dumb? TODO: Fix.
 /obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -200,9 +200,9 @@
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
 // OP edit: This should be moved >:V put it in the window file or something.
-/obj/item/device/radio/intercom
+/obj/item/radio/intercom
 	layer = ABOVE_WINDOW_LAYER
-/obj/item/weapon/storage/secure/safe
+/obj/item/storage/secure/safe
 	layer = ABOVE_WINDOW_LAYER
 /obj/machinery/airlock_sensor
 	layer = ABOVE_WINDOW_LAYER
@@ -255,7 +255,7 @@
 
 
 //I know this should be somewhere else but I can't think of where to put it right now. I'll move it later. Todo
-/obj/item/weapon/paper/armorguide
+/obj/item/paper/armorguide
 	name = "Guide to Armor Choice"
 	desc = "Also titled: how to not die to a spider, and become slightly more robust."
 	info = "TEST"

@@ -1149,7 +1149,7 @@ About the new airlock wires panel:
 				return
 
 	// Outpost 21 edit begin - Attempt to detatch a doorbrace from the airlock
-	if(brace && C && istype(C, /obj/item/weapon/tool/crowbar/brace_jack) && user.a_intent == I_HELP)
+	if(brace && C && istype(C, /obj/item/tool/crowbar/brace_jack) && user.a_intent == I_HELP)
 		return brace.attackby(C, user)
 
 	if(!brace && istype(C, /obj/item/airlock_brace))

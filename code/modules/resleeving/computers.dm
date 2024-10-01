@@ -454,7 +454,7 @@
 				tgui_modal_clear(src)
 				gene_sequencing = TRUE
 				// Make the injector here, so no desync
-				var/obj/item/weapon/dnainjector/I = new(src)
+				var/obj/item/dnainjector/I = new(src)
 				I.name += " ([active_br.mydna.name] - Resequencer)"
 				I.desc = "Resequences structural enzymes to match the body record this was created from."
 				I.buf = active_br.mydna.copy()

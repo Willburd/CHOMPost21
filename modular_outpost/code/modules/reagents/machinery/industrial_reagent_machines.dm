@@ -36,15 +36,15 @@
 		update_neighbours()
 		update_icon()
 		return
-	if(istype(O,/obj/item/weapon/reagent_containers/glass) || \
-		istype(O,/obj/item/weapon/reagent_containers/food/drinks/glass2) || \
-		istype(O,/obj/item/weapon/reagent_containers/food/drinks/shaker))
+	if(istype(O,/obj/item/reagent_containers/glass) || \
+		istype(O,/obj/item/reagent_containers/food/drinks/glass2) || \
+		istype(O,/obj/item/reagent_containers/food/drinks/shaker))
 		// Transfer FROM internal beaker to this.
 		if (reagents.total_volume <= 0)
 			to_chat(usr,"\The [src] is empty. There is nothing to drain into \the [O].")
 			return
 		// Fill up the whole volume if we can, DUMP IT OUT
-		var/obj/item/weapon/reagent_containers/C = O
+		var/obj/item/reagent_containers/C = O
 		reagents.trans_to_obj(C, reagents.total_volume)
 		playsound(src, 'sound/machines/reagent_dispense.ogg', 25, 1)
 		to_chat(usr,"You drain \the [src] into \the [C].")

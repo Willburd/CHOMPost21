@@ -39,7 +39,7 @@ var/global/list/allisclean_list = list()
 			i += 1
 			var/obj/machinery/atmospherics/unary/vent_pump/vent = pick(vents)
 			if(!vent.welded)
-				var/obj/item/weapon/grenade/chem_grenade/cleaner/C = new /obj/item/weapon/grenade/chem_grenade/cleaner(vent.loc)
+				var/obj/item/grenade/chem_grenade/cleaner/C = new /obj/item/grenade/chem_grenade/cleaner(vent.loc)
 				C.stage = 2
 				C.detonate( FALSE )
 

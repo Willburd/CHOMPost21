@@ -45,12 +45,12 @@
 					/obj/item/circuitboard/mecha/phazon/targeting,
 					/obj/item/circuitboard/mecha/phazon/peripherals,
 					/obj/item/circuitboard/mecha/phazon/main,
-					/obj/item/device/bodysnatcher,
-					/obj/item/device/mindbinder,	//CHOMPAdd
+					/obj/item/bodysnatcher,
+					/obj/item/mindbinder,	//CHOMPAdd
 					/obj/item/bluespace_harpoon,
 					/obj/item/clothing/accessory/permit/gun,
-					/obj/item/device/perfect_tele,
-					/obj/item/device/sleevemate,
+					/obj/item/perfect_tele,
+					/obj/item/sleevemate,
 					// /obj/item/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 					/obj/item/implanter/compliance,
 					/obj/item/seeds/ambrosiadeusseed,
@@ -87,8 +87,7 @@
 					/obj/random/contraband,
 					/obj/random/contraband,
 					/obj/random/contraband,
-					/obj/random/contraband,
-					/obj/random/weapon/guarenteed)
+					/obj/random/contraband)
 	//VOREstation edit - Randomized map objects were put in loot piles, so handle them...
 	if(istype(loot,/obj/random))
 		var/obj/random/randy = loot

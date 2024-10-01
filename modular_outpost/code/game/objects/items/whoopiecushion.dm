@@ -10,7 +10,7 @@
 	item_state = "whoopee"
 	layer = HIDING_LAYER
 
-/obj/item/latexballon/whoopee/blow(obj/item/weapon/tank/tank)
+/obj/item/latexballon/whoopee/blow(obj/item/tank/tank)
 	if(icon_state == "whoopee_bursted")
 		return
 	if(!tank.air_contents || tank.air_contents.return_pressure() <= 0)
@@ -55,7 +55,7 @@
 	if(do_after(user, 2 SECONDS, src))
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
-			if(istype(H.internal,/obj/item/weapon/tank))
+			if(istype(H.internal,/obj/item/tank))
 				blow(H.internal)
 				return
 		if(isturf(user.loc))

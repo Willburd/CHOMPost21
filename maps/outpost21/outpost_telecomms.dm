@@ -57,11 +57,11 @@
 		num2text(EXP_FREQ) = list(access_explorer)
 	)
 
-/obj/item/device/multitool/outpost_buffered
+/obj/item/multitool/outpost_buffered
 	name = "pre-linked multitool (outpost hub)"
 	desc = "This multitool has already been linked to the outpost telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/device/multitool/outpost_buffered/Initialize()
+/obj/item/multitool/outpost_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/outpost)
 
@@ -106,11 +106,11 @@
 	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ)
 	autolinkers = list("y_common")
 
-/obj/item/device/multitool/asteroid_buffered
+/obj/item/multitool/asteroid_buffered
 	name = "pre-linked multitool (reclamation-yard hub)"
 	desc = "This multitool has already been linked to the reclamation-yard telecomms hub and can be used to configure one (1) relay."
 
-/obj/item/device/multitool/asteroid_buffered/Initialize()
+/obj/item/multitool/asteroid_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/asteroid)
 */

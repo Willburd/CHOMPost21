@@ -12,11 +12,11 @@
 	var/vending_account = "Cargo" // Which department bankaccount this goes to
 
 	var/unlock_access = list(access_cargo)
-	forced_icon_path = /obj/item/weapon/spacecash/c20
+	forced_icon_path = /obj/item/spacecash/c20
 
 /obj/machinery/vending/cargo_resale/do_not_use
 	// This exists exclusively so that we have icons for the cargo vendor above. Due to startup tgui icon init only getting the icons of the initial vendable products.
-	products = list(/obj/item/weapon/spacecash/c1,/obj/item/weapon/spacecash/c5,/obj/item/weapon/spacecash/c10,/obj/item/weapon/spacecash/c20,/obj/item/weapon/spacecash/c50,/obj/item/weapon/spacecash/c100,/obj/item/weapon/spacecash/c200,/obj/item/weapon/spacecash/c500,/obj/item/weapon/spacecash/c1000)
+	products = list(/obj/item/spacecash/c1,/obj/item/spacecash/c5,/obj/item/spacecash/c10,/obj/item/spacecash/c20,/obj/item/spacecash/c50,/obj/item/spacecash/c100,/obj/item/spacecash/c200,/obj/item/spacecash/c500,/obj/item/spacecash/c1000)
 
 /obj/machinery/vending/cargo_resale/Destroy()
 	// Drop inventory before clearing it
@@ -26,7 +26,7 @@
 		R.instances = list()
 	return ..()
 
-/obj/machinery/vending/cargo_resale/proc/cargo_vendor_unlocking(var/obj/item/weapon/card/id/C, mob/user as mob)
+/obj/machinery/vending/cargo_resale/proc/cargo_vendor_unlocking(var/obj/item/card/id/C, mob/user as mob)
 	// Handle unlocking machine if cargo
 	if(!(unlock_access[1] in C.access)) //doesn't have this access
 		return FALSE
@@ -35,7 +35,7 @@
 	SStgui.update_uis(src)
 	return TRUE
 
-/obj/machinery/vending/cargo_resale/proc/stock_cargo_vendor(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/vending/cargo_resale/proc/stock_cargo_vendor(obj/item/W as obj, mob/user as mob)
 	if(panel_open)
 		// check if already has
 		for(var/datum/stored_item/vending_product/R in product_records)
@@ -47,28 +47,28 @@
 		if(W.my_augment)
 			to_chat(user,SPAN_NOTICE("\The [src] cannot vend an attached implant."))
 			return FALSE
-		if(istype(W,/obj/item/stack) || istype(W,/obj/item/weapon/holder) || istype(W,/obj/item/weapon/grab) || istype(W,/obj/item/weapon/card/id))
+		if(istype(W,/obj/item/stack) || istype(W,/obj/item/holder) || istype(W,/obj/item/grab) || istype(W,/obj/item/card/id))
 			to_chat(user,SPAN_NOTICE("\The [src] cannot vend this."))
 			return FALSE
 		// Per item sanity filter. I hate everything about this.
-		if(istype(W,/obj/item/device/vac_attachment) \
-		|| istype(W,/obj/item/weapon/shockpaddles/linked) \
-		|| istype(W,/obj/item/device/radio/bluespacehandset/linked) \
-		|| istype(W,/obj/item/weapon/cmo_disk_holder) \
-		|| istype(W,/obj/item/weapon/rig) \
-		|| istype(W,/obj/item/weapon/telecube) \
-		|| istype(W,/obj/item/weapon/reagent_containers/glass/bottle/adminordrazine) \
-		|| istype(W,/obj/item/weapon/gun/energy/sizegun/admin) \
-		|| istype(W,/obj/item/weapon/melee/cursedblade) \
-		|| istype(W,/obj/item/device/radio/bluespacehandset/linked) \
-		|| istype(W,/obj/item/device/paicard) \
-		|| istype(W,/obj/item/device/radio/bluespacehandset/linked) \
+		if(istype(W,/obj/item/vac_attachment) \
+		|| istype(W,/obj/item/shockpaddles/linked) \
+		|| istype(W,/obj/item/radio/bluespacehandset/linked) \
+		|| istype(W,/obj/item/cmo_disk_holder) \
+		|| istype(W,/obj/item/rig) \
+		|| istype(W,/obj/item/telecube) \
+		|| istype(W,/obj/item/reagent_containers/glass/bottle/adminordrazine) \
+		|| istype(W,/obj/item/gun/energy/sizegun/admin) \
+		|| istype(W,/obj/item/melee/cursedblade) \
+		|| istype(W,/obj/item/radio/bluespacehandset/linked) \
+		|| istype(W,/obj/item/paicard) \
+		|| istype(W,/obj/item/radio/bluespacehandset/linked) \
 		|| istype(W,/obj/item/organ) \
-		|| istype(W,/obj/item/device/soulstone) \
-		|| istype(W,/obj/item/device/aicard) \
-		|| istype(W,/obj/item/device/mmi) \
-		|| istype(W,/obj/item/weapon/spacecash) \
-		|| istype(W,/obj/item/weapon/spacecasinocash))
+		|| istype(W,/obj/item/soulstone) \
+		|| istype(W,/obj/item/aicard) \
+		|| istype(W,/obj/item/mmi) \
+		|| istype(W,/obj/item/spacecash) \
+		|| istype(W,/obj/item/spacecasinocash))
 			to_chat(user,SPAN_NOTICE("\The [src] should not vend this."))
 			return FALSE
 

@@ -4,7 +4,7 @@
 	icon = 'icons/obj/monitors_op.dmi'
 	icon_state = "lockdown"
 	layer = ABOVE_WINDOW_LAYER
-	circuit = /obj/item/weapon/circuitboard/lockdown_console
+	circuit = /obj/item/circuitboard/lockdown_console
 	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 2
@@ -18,12 +18,12 @@
 	attack_hand(user)
 	return
 
-/obj/machinery/lockdown_console/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/lockdown_console/attackby(obj/item/W as obj, mob/user as mob)
 	if(stat & (NOPOWER|BROKEN))
 		to_chat(user, "This device is not powered.")
 		return
-	if(istype(W,/obj/item/weapon/card/id))
-		var/obj/item/weapon/card/id/ID = W
+	if(istype(W,/obj/item/card/id))
+		var/obj/item/card/id/ID = W
 		if(access_keycard_auth in ID.access)
 			unlocked = !unlocked
 			updateUsrDialog()
@@ -38,7 +38,7 @@
 		if(do_after(user, 10 * W.toolspeed))
 			to_chat(user, "You remove the faceplate from the [src]")
 			var/obj/structure/frame/A = new /obj/structure/frame(loc)
-			var/obj/item/weapon/circuitboard/M = new circuit(A)
+			var/obj/item/circuitboard/M = new circuit(A)
 			A.frame_type = M.board_type
 			A.need_circuit = 0
 			A.pixel_x = pixel_x

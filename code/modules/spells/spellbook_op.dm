@@ -1,10 +1,10 @@
-/obj/item/weapon/spellbook/oneuse/buttblast
+/obj/item/spellbook/oneuse/buttblast
 	spell = /spell/targeted/buttblast
 	spellname = "buttblast"
 	icon_state ="bookknock"
 	desc = "This book seems indecent."
 
-/obj/item/weapon/spellbook/oneuse/buttblast/recoil(mob/user as mob)
+/obj/item/spellbook/oneuse/buttblast/recoil(mob/user as mob)
 	..()
 	to_chat(user, "<span class='warning'>You're knocked down!</span>")
 	if(ishuman(user))

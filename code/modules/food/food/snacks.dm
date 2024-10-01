@@ -1632,7 +1632,7 @@
 	. = ..()
 	reagents.add_reagent("fungi", 2) // Outpost 21 edit - mushroom allergy
 
-/obj/item/weapon/reagent_containers/food/snacks/plump_pie/Initialize()
+/obj/item/reagent_containers/food/snacks/plump_pie/Initialize()
 	. = ..()
 	if(prob(10))
 		name = "exceptional plump pie"
@@ -7181,7 +7181,7 @@
 	nutriment_amt = 4
 	bitesize = 1
 
-/obj/item/weapon/reagent_containers/food/snacks/hakarl/Initialize()
+/obj/item/reagent_containers/food/snacks/hakarl/Initialize()
 	.=..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 

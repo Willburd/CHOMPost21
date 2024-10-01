@@ -368,7 +368,7 @@
 	item_state = "vest"
 	icon_override = 'icons/inventory/accessory/mob.dmi'
 	item_state_slots = list(slot_r_hand_str = "wcoat", slot_l_hand_str = "wcoat")
-	allowed = list(/obj/item/pen, /obj/item/paper, /obj/item/device/flashlight, /obj/item/tank/emergency/oxygen,/obj/item/tank/emergency/nitrogen,/obj/item/tank/emergency/phoron,/obj/item/tank/emergency/carbon_dioxide,/obj/item/tank/emergency/methane, /obj/item/storage/fancy/cigarettes, /obj/item/storage/box/matches, /obj/item/reagent_containers/food/drinks/flask)
+	allowed = list(/obj/item/pen, /obj/item/paper, /obj/item/flashlight, /obj/item/tank/emergency/oxygen,/obj/item/tank/emergency/nitrogen,/obj/item/tank/emergency/phoron,/obj/item/tank/emergency/carbon_dioxide,/obj/item/tank/emergency/methane, /obj/item/storage/fancy/cigarettes, /obj/item/storage/box/matches, /obj/item/reagent_containers/food/drinks/flask)
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	slot_flags = SLOT_OCLOTHING | SLOT_TIE
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO

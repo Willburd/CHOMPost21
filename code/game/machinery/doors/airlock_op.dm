@@ -4,9 +4,9 @@
 
 /obj/machinery/door/airlock/centcom/nameddorm/check_access(obj/item/I)
 	// special dorm airlock that checks for names instead of req_access
-	if(!istype(I,/obj/item/weapon/card/id))
+	if(!istype(I,/obj/item/card/id))
 		return FALSE
-	var/obj/item/weapon/card/id/D = I
+	var/obj/item/card/id/D = I
 	for(var/name in matchnames)
 		if(name == D.registered_name)
 			return TRUE

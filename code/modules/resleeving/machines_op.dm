@@ -8,7 +8,7 @@
 	name = "vox regeneration pod"
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
-	circuit = /obj/item/weapon/circuitboard/transhuman_clonepod
+	circuit = /obj/item/circuitboard/transhuman_clonepod
 
 	// file override, uses the same icon_states!
 	icon = 'icons/obj/cloning.dmi'

@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/spray/xenowatergun
+/obj/item/reagent_containers/spray/xenowatergun
 	name = "water gun"
 	desc = "Heavy duty water pistol, for dealing with rambunctious alien life."
 	icon = 'icons/obj/janitor.dmi'
@@ -8,6 +8,6 @@
 	possible_transfer_amounts = null
 	volume = 250
 
-/obj/item/weapon/reagent_containers/spray/xenowatergun/Initialize()
+/obj/item/reagent_containers/spray/xenowatergun/Initialize()
 	. = ..()
 	reagents.add_reagent("water", 250)

@@ -313,7 +313,7 @@
 					/obj/item/pda/bar,
 					/obj/item/book/codex/casino,
 					/obj/item/storage/wallet/casino,
-					/obj/item/device/flash,
+					/obj/item/flash,
 					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/laptop/preset/custom_loadout/hybrid,
 					*/

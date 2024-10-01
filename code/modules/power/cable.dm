@@ -245,7 +245,7 @@ var/list/possible_cable_coil_colours = list(
 		return
 
 	// Outpost 21 edit begin - broken wire trap
-	if(broken && istype(W,/obj/item/weapon/tape_roll))
+	if(broken && istype(W,/obj/item/tape_roll))
 		if(do_after(user,2 SECONDS,src))
 			if(broken)
 				unfray()

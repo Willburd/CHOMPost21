@@ -35,7 +35,7 @@ var/global/list/active_radio_jammers = list()
 /obj/item/radio_jammer/New()
 	power_source = new(src)
 
-/obj/item/device/radio_jammer/Initialize()
+/obj/item/radio_jammer/Initialize()
 	. = ..()
 	update_icon() // So it starts with the full overlay. Outpost 21 edit - overlay runtime fix
 

@@ -64,7 +64,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		log_debug("[client_ckey] preferences migrating from [current_version] to v15....")
 		to_chat(client, span_danger("Migrating savefile from version [current_version] to v15..."))
 
-		migration_15_nif_path(S)
+		// migration_15_nif_path(S) // Outpost 21 edit - Nif Removal
 
 		log_debug("[client_ckey] preferences successfully migrated from [current_version] to v15.")
 		to_chat(client, span_danger("v15 savefile migration complete."))

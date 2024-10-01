@@ -1,4 +1,4 @@
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/hemocyanin
+/obj/item/reagent_containers/hypospray/autoinjector/hemocyanin
 	name = "autoinjector (hc)"
 	icon = 'icons/obj/syringe_op.dmi'
 	icon_state = "copper"

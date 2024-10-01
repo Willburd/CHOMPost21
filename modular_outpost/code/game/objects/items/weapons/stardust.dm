@@ -1,4 +1,4 @@
-/obj/item/weapon/book/manual/stardust_game
+/obj/item/book/manual/stardust_game
 	name = "Stardust Gameplay Handbook"
 	desc = "A guide for playing Stardust, a tabletop roleplaying system."
 	icon_state = "commandGuide"
@@ -6,7 +6,7 @@
 	author = "Willbird"
 	title = "Stardust Gameplay Handbook"
 
-/obj/item/weapon/book/manual/stardust_game/New()
+/obj/item/book/manual/stardust_game/New()
 	..()
 	dat = {"<html>
 	 <head>
@@ -332,7 +332,7 @@
 </html>"}
 
 
-/obj/item/weapon/paper/stardust_character_template
+/obj/item/paper/stardust_character_template
 	name = "Stardust Character Sheet Template"
 	info = {"<p>
 		<b>Name</b> : ___ || <b>Player</b> : ___ <br>
@@ -391,7 +391,7 @@
 		Scan with PDA and modify as needed before reprinting."}
 
 
-/obj/item/weapon/paper/stardust_item_template
+/obj/item/paper/stardust_item_template
 	name = "Stardust Item Sheet Template"
 	info = {"<p>
 		<b>Name</b> : ___________<br>
@@ -408,7 +408,7 @@
 		</p>"}
 
 
-/obj/item/weapon/paper/stardust_armor_template
+/obj/item/paper/stardust_armor_template
 	name = "Stardust Armor Sheet Template"
 	info = {"<p>
 		<b>Name</b> : ___________<br>
@@ -420,7 +420,7 @@
 		</p>"}
 
 
-/obj/item/weapon/paper/stardust_psi_template
+/obj/item/paper/stardust_psi_template
 	name = "Stardust Psi-Ability Template"
 	info = {"<p>
 		<b>Name</b> : ___________<br>

@@ -310,7 +310,7 @@
 
 		// Outpost 21 addition begin - Ore grinding
 		if(global.ore_reagents[O.type])
-			var/obj/item/weapon/ore/R = O
+			var/obj/item/ore/R = O
 			if(istype(R))
 				var/list/ore_components = global.ore_reagents[R.type]
 				if(remaining_volume >= REAGENTS_PER_ORE)

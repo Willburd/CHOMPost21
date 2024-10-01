@@ -8,7 +8,7 @@
 	use_power = USE_POWER_OFF // Does not require power for pipes
 	idle_power_usage = 0
 	active_power_usage = 0
-	circuit = /obj/item/weapon/circuitboard/industrial_reagent_pipe
+	circuit = /obj/item/circuitboard/industrial_reagent_pipe
 	default_max_vol = 60 // smoll
 
 /obj/machinery/reagent_refinery/pipe/Initialize()

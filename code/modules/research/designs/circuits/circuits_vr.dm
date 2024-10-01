@@ -215,7 +215,7 @@
 	name = "Fluid Pump"
 	id = "fluid_pump"
 	req_tech = list(TECH_DATA = 1)
-	build_path = /obj/item/weapon/circuitboard/fluidpump
+	build_path = /obj/item/circuitboard/fluidpump
 	sort_string = "NAAFA"
 	department = LATHE_ALL | LATHE_ENGINEERING // CHOMPAdd
 // Outpost 21 edit end

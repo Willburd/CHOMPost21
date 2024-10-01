@@ -41,8 +41,8 @@
 
 	locked = 0
 	load_item_visible = FALSE
-	var/obj/item/weapon/key/key
-	var/key_type = /obj/item/weapon/key/cargo_train // override me
+	var/obj/item/key/key
+	var/key_type = /obj/item/key/cargo_train // override me
 	var/breakwalls = FALSE
 	var/has_breaking_speed = TRUE // if becomes stopped by a wall, this becomes false, until we are able to free move again (including reversing)
 	var/headlight_maxrange = 10
@@ -80,7 +80,7 @@
 //-------------------------------------------
 /obj/vehicle/has_interior/controller/New()
 	. = ..()
-	cell = new /obj/item/weapon/cell/high(src)
+	cell = new /obj/item/cell/high(src)
 	if(haskey)
 		key = new key_type(src)
 	for(var/weapon_type in weapons_equiped)
@@ -778,7 +778,7 @@
 	icon_keyboard = "security_key"
 	icon_screen = "cameras"
 	light_color = "#a91515"
-	circuit = /obj/item/weapon/circuitboard/security
+	circuit = /obj/item/circuitboard/security
 
 	var/list/viewers // Weakrefs to mobs in direct-view mode.
 	var/obj/vehicle/has_interior/controller/interior_controller = null
@@ -885,7 +885,7 @@
 		. += "The power light is [interior_controller.on ? "on" : "off"].\nThere are[interior_controller.key ? "" : " no"] keys in the ignition."
 		. += "The charge meter reads [interior_controller.cell? round(interior_controller.cell.percent(), 0.01) : 0]%"
 
-/obj/machinery/computer/vehicle_interior_console/helm/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/computer/vehicle_interior_console/helm/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, interior_controller.key_type))
 		if(!interior_controller.key)
 			user.drop_item()

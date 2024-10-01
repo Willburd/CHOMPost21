@@ -336,9 +336,9 @@
 		if((istype(M.wear_suit, /obj/item/clothing/suit/omnitag))||(istype(M.wear_suit, /obj/item/clothing/suit/bluetag))||(istype(M.wear_suit, /obj/item/clothing/suit/redtag)))
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
-			if(istype(M.l_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.l_hand)
-			if(istype(M.r_hand, /obj/item/weapon/laserdome_hyperball))
+			if(istype(M.r_hand, /obj/item/laserdome_hyperball))
 				M.unEquip(M.r_hand)
 			// CHOMPEdit End
 	return 1

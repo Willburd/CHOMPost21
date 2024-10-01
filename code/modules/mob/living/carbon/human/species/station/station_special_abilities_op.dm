@@ -38,7 +38,7 @@
 		air_contents.gas["methane"] = 0.07 * MOLES_CELLSTANDARD
 		T.assume_air(air_contents)
 		// hell toot
-		for(var/obj/item/weapon/storage/bible/B in T.contents)
+		for(var/obj/item/storage/bible/B in T.contents)
 			findholybook = B
 			break
 	if(findholybook)

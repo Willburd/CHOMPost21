@@ -43,7 +43,7 @@
 /obj/structure/ladder/attackby(obj/item/C as obj, mob/user as mob)
 	// Outpost 21 edit begin - Deconstructing ladder
 	if(C.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weapon/weldingtool/WT = C.get_welder()
+		var/obj/item/weldingtool/WT = C.get_welder()
 		if(WT.remove_fuel(0, user))
 			playsound(src, 'sound/items/Welder2.ogg', 50, 1)
 			user.visible_message("\The [user] starts to deconstruct \the [src].", \

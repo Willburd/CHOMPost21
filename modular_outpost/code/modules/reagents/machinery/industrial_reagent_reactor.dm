@@ -8,7 +8,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 0
 	active_power_usage = 500
-	circuit = /obj/item/weapon/circuitboard/industrial_reagent_reactor
+	circuit = /obj/item/circuitboard/industrial_reagent_reactor
 	default_max_vol = 2500
 	var/obj/machinery/portable_atmospherics/canister/internal_tank
 	var/toggle_mode = 0 // 0 = intake and boil, 1 = output

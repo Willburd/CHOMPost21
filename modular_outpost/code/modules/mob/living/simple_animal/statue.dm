@@ -102,7 +102,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 					L.broken()
 
 /mob/living/simple_mob/animal/statue/attackby(var/obj/item/O as obj, var/mob/user as mob) //banishing the statue is a risky job
-	if(istype(O, /obj/item/weapon/nullrod))
+	if(istype(O, /obj/item/nullrod))
 		visible_message("<span class='warning'>[user] tries to banish [src] with [O]!</span>")
 		if(do_after(user, 15, src))
 			if(banishable)
@@ -152,7 +152,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 			cached_watcher = WEAKREF(M) //if it sees the mirror, it sees itself, right?
 			return
  	// lamps
-	for(var/obj/item/device/flashlight/F in nearview)
+	for(var/obj/item/flashlight/F in nearview)
 		if(F.on)
 			cached_watcher = WEAKREF(F)
 			return
@@ -238,15 +238,15 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 				if(prob(30 + annoyance) && istype(watching,/obj/structure/mirror))
 					ability_mirrorshmash()
 					lose_target() // stops target lockups
-				else if(prob(30 + annoyance) && istype(watching,/obj/item/device/flashlight))
-					var/obj/item/device/flashlight/F = watching
+				else if(prob(30 + annoyance) && istype(watching,/obj/item/flashlight))
+					var/obj/item/flashlight/F = watching
 					if(F.on)
 						F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
 						playsound(F, 'sound/effects/sparks3.ogg', 10, 1, -3) //Small cue that your light went dull in your pocket. //VOREStation Edit
 						F.on = 0
 						F.update_brightness()
 					lose_target() // stops target lockups
-				else if(prob(30 + annoyance) && istype(watching,/obj/item/device/flashlight))
+				else if(prob(30 + annoyance) && istype(watching,/obj/item/flashlight))
 					var/obj/machinery/floodlight/F = watching
 					if(F.on)
 						F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
@@ -272,7 +272,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		holder.pulledby.stop_pulling()
 		holder.pulledby.Stun(4)
 	if(holder.grabbed_by.len > 0)
-		for(var/obj/item/weapon/grab/G in holder.grabbed_by)
+		for(var/obj/item/grab/G in holder.grabbed_by)
 			if(G.assailant != holder)
 				blind_target(G.assailant,FALSE)
 				G.assailant.Stun(4)

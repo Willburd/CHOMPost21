@@ -168,7 +168,7 @@
 				visible_message("<span class='notice'>[src] rattles and prints out a sheet of paper.</span>")
 				// playsound(loc, 'sound/goonstation/machines/printer_dotmatrix.ogg', 50, 1)
 
-				var/obj/item/weapon/paper/P = new /obj/item/weapon/paper(loc)
+				var/obj/item/paper/P = new /obj/item/paper(loc)
 				P.name = doc_title
 				P.info = doc_body
 			. = TRUE

@@ -8,12 +8,12 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
 	active_power_usage = 500
-	circuit = /obj/item/weapon/circuitboard/industrial_reagent_furnace
+	circuit = /obj/item/circuitboard/industrial_reagent_furnace
 	var/filter_side = -1 // L
 	var/filter_reagent_id = ""
 
 	default_max_vol = 60
-	var/obj/item/weapon/reagent_containers/beaker = null // Safer than retooling all of reagent code to support a second reagent var inside this one object
+	var/obj/item/reagent_containers/beaker = null // Safer than retooling all of reagent code to support a second reagent var inside this one object
 
 /obj/machinery/reagent_refinery/furnace/alt
 	filter_side = 1 // R
@@ -25,7 +25,7 @@
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
-	beaker = new /obj/item/weapon/reagent_containers/glass/beaker/bluespace(src) // Get it all out as fast as possible
+	beaker = new /obj/item/reagent_containers/glass/beaker/bluespace(src) // Get it all out as fast as possible
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
 	// Update neighbours and self for state

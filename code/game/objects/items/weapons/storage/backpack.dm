@@ -95,7 +95,7 @@
 		return FALSE
 	return ..()
 
-/* Outpost 21 edit - Removed this in favor of /obj/item/weapon/storage/bag/santabag
+/* Outpost 21 edit - Removed this in favor of /obj/item/storage/bag/santabag
 /obj/item/storage/backpack/santabag
 	name = "\improper Santa's gift bag"
 	desc = "Space Santa uses this to deliver toys to all the nice children in space in Christmas! Wow, it's pretty big!"

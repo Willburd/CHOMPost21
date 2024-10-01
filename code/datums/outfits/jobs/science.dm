@@ -33,7 +33,7 @@
 /decl/hierarchy/outfit/job/science/roboticist
 	name = OUTFIT_JOB_NAME(JOB_ROBOTICIST)
 	uniform = /obj/item/clothing/under/rank/roboticist
-	l_ear = /obj/item/device/radio/headset/headset_eng // Outpost 21 edit - Moved to engineering
+	l_ear = /obj/item/radio/headset/headset_eng // Outpost 21 edit - Moved to engineering
 	shoes = /obj/item/clothing/shoes/black
 	belt = /obj/item/storage/belt/utility/full/multitool
 	id_type = /obj/item/card/id/engineering // Outpost 21 edit - Moved to engineering

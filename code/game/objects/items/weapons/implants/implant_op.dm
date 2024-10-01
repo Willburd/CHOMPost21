@@ -1,10 +1,10 @@
 //////////////////////////////
 //	Compliance Implant
 //////////////////////////////
-/obj/item/weapon/implant/compliance/loadout
+/obj/item/implant/compliance/loadout
 	var/initial = TRUE
 
-/obj/item/weapon/implant/compliance/loadout/post_implant(mob/source, mob/living/user = usr)
+/obj/item/implant/compliance/loadout/post_implant(mob/source, mob/living/user = usr)
 	if(initial)
 		initial = FALSE
 		spawn(30)

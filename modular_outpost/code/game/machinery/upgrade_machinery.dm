@@ -19,14 +19,14 @@
 	var/list/parts_found = list()
 	for(var/i = 1, i <= loc.contents.len, i++)
 		var/obj/item/W = loc.contents[i]
-		if(istype(W, /obj/item/weapon/smes_coil))
+		if(istype(W, /obj/item/smes_coil))
 			parts_found.Add(W)
 
 	// If any coils are on us, clear base coils and rebuild using these ones
 	if(parts_found.len == 0)
 		return
 	while(TRUE)
-		var/obj/item/weapon/smes_coil/C = locate(/obj/item/weapon/smes_coil) in component_parts
+		var/obj/item/smes_coil/C = locate(/obj/item/smes_coil) in component_parts
 		if(isnull(C))
 			break
 		component_parts.Remove(C)
@@ -50,25 +50,25 @@
 	var/list/parts_found = list()
 	for(var/i = 1, i <= loc.contents.len, i++)
 		var/obj/item/W = loc.contents[i]
-		if(istype(W, /obj/item/weapon/stock_parts/capacitor))
+		if(istype(W, /obj/item/stock_parts/capacitor))
 			parts_found.Add(W)
-		if(istype(W, /obj/item/weapon/stock_parts/micro_laser))
+		if(istype(W, /obj/item/stock_parts/micro_laser))
 			parts_found.Add(W)
 
 	// Wipe old parts for new ones!
 	if(parts_found.len == 0)
 		return
-	if(locate(/obj/item/weapon/stock_parts/capacitor) in parts_found)
+	if(locate(/obj/item/stock_parts/capacitor) in parts_found)
 		while(TRUE)
-			var/obj/item/weapon/stock_parts/capacitor/C = locate(/obj/item/weapon/stock_parts/capacitor) in component_parts
+			var/obj/item/stock_parts/capacitor/C = locate(/obj/item/stock_parts/capacitor) in component_parts
 			if(isnull(C))
 				break
 			component_parts.Remove(C)
 			C.forceMove(src.loc)
 			C.Destroy()
-	if(locate(/obj/item/weapon/stock_parts/micro_laser) in parts_found)
+	if(locate(/obj/item/stock_parts/micro_laser) in parts_found)
 		while(TRUE)
-			var/obj/item/weapon/stock_parts/micro_laser/M = locate(/obj/item/weapon/stock_parts/micro_laser) in component_parts
+			var/obj/item/stock_parts/micro_laser/M = locate(/obj/item/stock_parts/micro_laser) in component_parts
 			if(isnull(M))
 				break
 			component_parts.Remove(M)

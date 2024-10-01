@@ -236,9 +236,9 @@
 		owner.vomit()
 		cooldown = rand(cooldownmin,cooldownmax)
 
-/obj/item/organ/internal/malignant/tumor/potato/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W,/obj/item/weapon/material/knife))
-		new /obj/item/weapon/reagent_containers/food/snacks/rawsticks(get_turf(src))
+/obj/item/organ/internal/malignant/tumor/potato/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W,/obj/item/material/knife))
+		new /obj/item/reagent_containers/food/snacks/rawsticks(get_turf(src))
 		to_chat(user, "<span class='notice'>You cut the mimetic potato.</span>")
 		qdel(src)
 		return
@@ -247,7 +247,7 @@
 		if(C.use(5))
 			//TODO: generalize this.
 			to_chat(user, "<span class='notice'>You add some cable to the [src.name] and slide it inside the battery casing.</span>")
-			var/obj/item/weapon/cell/potato/pocell = new /obj/item/weapon/cell/potato(get_turf(user))
+			var/obj/item/cell/potato/pocell = new /obj/item/cell/potato(get_turf(user))
 			if(src.loc == user && ishuman(user))
 				user.put_in_hands(pocell)
 			pocell.maxcharge = 2000 // same as potato
@@ -303,7 +303,7 @@
 			owner.custom_pain("<span class='danger'>The pressure inside your [O.name] hurts.</span>",1,TRUE)
 			owner.custom_emote(VISIBLE_MESSAGE, "winces painfully.")
 
-/obj/item/organ/internal/malignant/tumor/pinata/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/organ/internal/malignant/tumor/pinata/attackby(obj/item/W as obj, mob/user as mob)
 	if(can_puncture(W))
 		pop()
 		return
@@ -313,7 +313,7 @@
 	// place a ton of candy at location, then delete organ!
 	var/count = rand(20,30)
 	while(count-- > 0)
-		var/picker = pick(/obj/item/clothing/mask/chewable/candy/gum,/obj/item/clothing/mask/chewable/candy/lolli,/obj/item/weapon/reagent_containers/food/snacks/candy/gummy,/obj/item/weapon/reagent_containers/food/snacks/candy_corn)
+		var/picker = pick(/obj/item/clothing/mask/chewable/candy/gum,/obj/item/clothing/mask/chewable/candy/lolli,/obj/item/reagent_containers/food/snacks/candy/gummy,/obj/item/reagent_containers/food/snacks/candy_corn)
 		var/obj/item/newcandy = new picker()
 		newcandy.loc = src.loc
 
@@ -472,7 +472,7 @@
 			pop()
 		cooldown = rand(cooldownmin,cooldownmax)
 
-/obj/item/organ/internal/malignant/tumor/moneyorgan/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/item/organ/internal/malignant/tumor/moneyorgan/attackby(obj/item/W as obj, mob/user as mob)
 	if(can_puncture(W))
 		pop()
 		return

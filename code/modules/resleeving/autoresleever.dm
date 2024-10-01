@@ -265,7 +265,7 @@
 	releaseturf = get_turf(G)
 	throw_dir = G.gib_throw_dir
 
-/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/weapon/card/id/D)
+/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/card/id/D)
 	if(stat || isnull(releaseturf))
 		return
 
@@ -276,7 +276,7 @@
 		return
 
 	// do not let guest IDs be used
-	if(istype(D,/obj/item/weapon/card/id/guest))
+	if(istype(D,/obj/item/card/id/guest))
 		src.visible_message("[src] flashes 'Temporary guest ID identified!', and lets out a loud incorrect sounding beep!")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		return

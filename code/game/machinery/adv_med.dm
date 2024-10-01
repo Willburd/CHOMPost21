@@ -227,7 +227,7 @@
 
 		occupantData["hasBorer"] = H.has_brain_worms()
 		occupantData["hasWithdrawl"] = has_withdrawl
-		
+
 		occupantData["colourblind"] = null
 		for(var/datum/modifier/M in H.modifiers)
 			if(!isnull(M.wire_colors_replace))
@@ -527,7 +527,7 @@
 					infected = "Gangrene Detected:"
 
 			var/unknown_body = 0
-			for(var/obj/item/weapon/implant/I as anything in e.implants)
+			for(var/obj/item/implant/I as anything in e.implants)
 				// var/obj/item/nif/N = I //VOREStation Add: NIFs Outpost 21 edit - Nif removal
 				if(istype(I) && I.known_implant)
 					imp += "[I] implanted:"

@@ -6,7 +6,7 @@
 	anchored = FALSE
 	flags = OPENCONTAINER
 
-	var/obj/item/weapon/reagent_containers/glass/stored_container = null
+	var/obj/item/reagent_containers/glass/stored_container = null
 	paint_color = "#efdd16"
 
 	// Support hoses
@@ -31,7 +31,7 @@
 	QDEL_NULL(OutputSocket)
 	. = ..()
 
-/obj/vehicle/train/trolly_tank/insert_cell(var/obj/item/weapon/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicle/train/trolly_tank/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
 	return
 
 /obj/vehicle/train/trolly_tank/Bump(atom/Obstacle)
@@ -48,14 +48,14 @@
 
 /obj/vehicle/train/trolly_tank/attackby(obj/item/W, mob/user)
 
-	if(istype(W, /obj/item/device/multitool))
+	if(istype(W, /obj/item/multitool))
 		var/new_paint = input(usr, "Please select paint color.", "Paint Color", paint_color) as color|null
 		if(new_paint)
 			paint_color = new_paint
 			update_icon()
 			return
 
-	if(istype(W, /obj/item/weapon/pen))
+	if(istype(W, /obj/item/pen))
 		var/t = tgui_input_text(user, "What would you like the label to be?", text("[]", src.name), null, MAX_NAME_LEN)
 		if (user.get_active_hand() != W)
 			return
@@ -97,7 +97,7 @@
 		return
 
 	var/obj/item/W = M.get_active_hand()
-	if(istype(W,/obj/item/weapon/reagent_containers/glass))
+	if(istype(W,/obj/item/reagent_containers/glass))
 		stored_container = W
 		M.drop_from_inventory(stored_container,src)
 		visible_message("\The [M] loads \the [stored_container] into \the [src].")
@@ -105,7 +105,7 @@
 /obj/vehicle/train/trolly_tank/proc/load_container(var/mob/user,var/obj/item/W)
 	if(stored_container)
 		return
-	if(istype(W,/obj/item/weapon/reagent_containers/glass))
+	if(istype(W,/obj/item/reagent_containers/glass))
 		if(W.loc == user)
 			stored_container = W
 			user.drop_from_inventory(stored_container,src)

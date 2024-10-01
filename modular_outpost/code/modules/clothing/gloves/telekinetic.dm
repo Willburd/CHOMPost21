@@ -37,9 +37,9 @@
 	else
 		return ..()
 
-/obj/item/clothing/gloves/telekinetic/attackby(obj/item/weapon/W, mob/user as mob)
-	if(istype(W, /obj/item/weapon/cell))
-		if(!istype(W, /obj/item/weapon/cell/device))
+/obj/item/clothing/gloves/telekinetic/attackby(obj/item/W, mob/user as mob)
+	if(istype(W, /obj/item/cell))
+		if(!istype(W, /obj/item/cell/device))
 			if(!cell)
 				user.drop_item()
 				W.loc = src

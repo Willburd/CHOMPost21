@@ -256,8 +256,8 @@
 		if (amount <= 0)
 			amount = 0 // stop amount going negative ideally
 			// Outpost 21 edit begin - bug that only seems to happen when you click stacks stored in a bag, they remain onscreen till GCed randomly
-			if(istype( src.loc, /obj/item/weapon/storage/))
-				var/obj/item/weapon/storage/holder = src.loc
+			if(istype( src.loc, /obj/item/storage/))
+				var/obj/item/storage/holder = src.loc
 				holder.remove_from_storage( src, null)
 			// Outpost 21 edit end
 			qdel(src) //should be safe to qdel immediately since if someone is still using this stack it will persist for a little while longer

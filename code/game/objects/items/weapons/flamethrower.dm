@@ -240,10 +240,10 @@
 	return
 */
 // Outpost 21 edit begin - Flamethrower rework
-/obj/item/weapon/flamethrower/proc/thrower_spew_percent()
+/obj/item/flamethrower/proc/thrower_spew_percent()
 	return throw_amount / 5000
 
-/obj/item/weapon/flamethrower/proc/check_fuel()
+/obj/item/flamethrower/proc/check_fuel()
 	return ptank != null && ptank.air_contents.total_moles > 5 // minimum fuel usage is five moles, for EXTREMELY hot mix or super low pressure
 // Outpost 21 edit end
 
@@ -256,6 +256,6 @@
 	status = 1
 	return
 
-/obj/item/weapon/flamethrower/full/Initialize()
+/obj/item/flamethrower/full/Initialize()
 	. = ..()
 	update_icon() // Outpost 21 edit - overlay runtime fix

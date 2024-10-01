@@ -29,7 +29,7 @@
 		/obj/item/flashlight/slime,
 		/obj/item/lightreplacer,
 		/obj/item/book/tome,
-		/obj/item/cell/recharge/alien/hybrid,
+		/obj/item/cell/device/weapon/recharge/alien/hybrid,
 		// /obj/item/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 		/obj/item/implanter/adrenalin,
 		/obj/item/lego,

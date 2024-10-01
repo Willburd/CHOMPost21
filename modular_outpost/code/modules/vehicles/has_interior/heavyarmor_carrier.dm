@@ -2,7 +2,7 @@
 	name = "armored personal carrier"
 	move_delay = 2
 
-	key_type = /obj/item/weapon/key/heavyarmor_carrier
+	key_type = /obj/item/key/heavyarmor_carrier
 
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "sec_apc"
@@ -17,7 +17,7 @@
 	weapons_draw_offset = list(list("1" = list(20,20),"2" = list(-20,10),"4" = list(12,20),"8" = list(-12,34)) )
 
 
-/obj/item/weapon/key/heavyarmor_carrier
+/obj/item/key/heavyarmor_carrier
 	name = "key"
 	desc = "A keyring with a small steel key, and a yellow fob reading \"Band wagon\"."
 	icon = 'icons/obj/vehicles_op.dmi'
