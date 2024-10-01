@@ -387,7 +387,7 @@ var/list/mob/living/forced_ambiance_list = new
 	if(!L.lastarea)
 		L.lastarea = src
 	var/area/oldarea = L.lastarea
-	if((oldarea.has_gravity == 0) && (has_gravity == 1) && (L.m_intent == "run")) // Being ready when you change areas gives you a chance to avoid falling all together.
+	if((oldarea.get_gravity() == 0) && (get_gravity() == 1) && (L.m_intent == "run")) // Being ready when you change areas gives you a chance to avoid falling all together.
 		thunk(L)
 		L.update_floating( L.Check_Dense_Object() )
 
@@ -432,10 +432,10 @@ var/list/mob/living/forced_ambiance_list = new
 	src.has_gravity = gravitystate
 
 	for(var/mob/M in src)
-		if(has_gravity)
+		if(get_gravity())
 			thunk(M)
 		M.update_floating( M.Check_Dense_Object() )
-		M.update_gravity(has_gravity)
+		M.update_gravity(get_gravity())
 
 /area/proc/thunk(mob)
 	if(istype(get_turf(mob), /turf/space)) // Can't fall onto nothing.
@@ -476,17 +476,17 @@ var/list/mob/living/forced_ambiance_list = new
 			for(var/obj/machinery/door/blast/temp_blast in src)
 				temp_blast.open()
 
-/area/has_gravity()
+/area/get_gravity()
 	return has_gravity
 
-/area/space/has_gravity()
+/area/space/get_gravity()
 	return 0
 
-/proc/has_gravity(atom/AT, turf/T)
+/proc/get_gravity(atom/AT, turf/T)
 	if(!T)
 		T = get_turf(AT)
 	var/area/A = get_area(T)
-	if(A && A.has_gravity())
+	if(A && A.get_gravity())
 		return 1
 	return 0
 
