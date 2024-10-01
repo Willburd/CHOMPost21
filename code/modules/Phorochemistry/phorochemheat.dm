@@ -1,6 +1,6 @@
 //chemistry stuff here so that it can be easily viewed/modified
 
-/obj/item/weapon/reagent_containers/glass/solution_tray
+/obj/item/reagent_containers/glass/solution_tray
 	name = "solution tray"
 	desc = "A small, open-topped glass container for delicate research samples. It sports a re-useable strip for labelling with a pen."
 	icon = 'icons/obj/device.dmi'
@@ -13,21 +13,21 @@
 	flags = OPENCONTAINER
 	unacidable = 1
 
-/obj/item/weapon/storage/box/solution_trays
+/obj/item/storage/box/solution_trays
 	name = "solution tray box"
 	icon_state = "solution_trays"
 
 /obj/item/weapon/storage/box/solution_trays/New()
 	..()
-	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
-	new /obj/item/weapon/reagent_containers/glass/solution_tray( src )
+	new /obj/item/reagent_containers/glass/solution_tray( src )
+	new /obj/item/reagent_containers/glass/solution_tray( src )
+	new /obj/item/reagent_containers/glass/solution_tray( src )
+	new /obj/item/reagent_containers/glass/solution_tray( src )
+	new /obj/item/reagent_containers/glass/solution_tray( src )
+	new /obj/item/reagent_containers/glass/solution_tray( src )
+	new /obj/item/reagent_containers/glass/solution_tray( src )
 
-/obj/item/weapon/reagent_containers/glass/beaker/tungsten
+/obj/item/reagent_containers/glass/beaker/tungsten
 	name = "beaker 'tungsten'"
 
 /obj/item/weapon/reagent_containers/glass/beaker/tungsten/New()
@@ -35,7 +35,7 @@
 	reagents.add_reagent("tungsten",50)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/oxygen
+/obj/item/reagent_containers/glass/beaker/oxygen
 	name = "beaker 'oxygen'"
 
 /obj/item/weapon/reagent_containers/glass/beaker/oxygen/New()
@@ -43,7 +43,7 @@
 	reagents.add_reagent("oxygen",50)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/sodium
+/obj/item/reagent_containers/glass/beaker/sodium
 	name = "beaker 'sodium'"
 
 /obj/item/weapon/reagent_containers/glass/beaker/sodium/New()
@@ -51,7 +51,7 @@
 	reagents.add_reagent("sodium",50)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/lithium
+/obj/item/reagent_containers/glass/beaker/lithium
 	name = "beaker 'lithium'"
 
 /obj/item/weapon/reagent_containers/glass/beaker/lithium/New()
@@ -59,7 +59,7 @@
 	reagents.add_reagent("lithium",50)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/water
+/obj/item/reagent_containers/glass/beaker/water
 	name = "beaker 'water'"
 
 /obj/item/weapon/reagent_containers/glass/beaker/water/New()
@@ -67,7 +67,7 @@
 	reagents.add_reagent("water",50)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/water
+/obj/item/reagent_containers/glass/beaker/water
 	name = "beaker 'water'"
 
 /obj/item/weapon/reagent_containers/glass/beaker/water/New()
@@ -75,7 +75,7 @@
 	reagents.add_reagent("water",50)
 	update_icon()
 
-/obj/item/weapon/reagent_containers/glass/beaker/fuel
+/obj/item/reagent_containers/glass/beaker/fuel
 	name = "beaker 'fuel'"
 
 /obj/item/weapon/reagent_containers/glass/beaker/fuel/New()
@@ -90,12 +90,12 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "bunsen0"
 	var/heating = 0		//whether the bunsen is turned on
-	var/obj/item/weapon/reagent_containers/held_container
+	var/obj/item/reagent_containers/held_container
 	var/heat_time = 15
 	var/current_temp = T0C
 
-/obj/machinery/bunsen_burner/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/reagent_containers))
+/obj/machinery/bunsen_burner/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/reagent_containers))
 		if(held_container)
 			user << "<span class='warning'>You must remove the [held_container] first.</span>"
 		else

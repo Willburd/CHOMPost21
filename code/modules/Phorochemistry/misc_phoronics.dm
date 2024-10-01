@@ -45,10 +45,10 @@
 
 /decl/chemical_reaction/instant/brownies/on_reaction(var/datum/reagents/holder, var/created_volume)
 	for(var/i = 0; i < 3; i++)
-		new /obj/item/weapon/reagent_containers/food/snacks/brownies(get_turf(holder.my_atom))
+		new /obj/item/reagent_containers/food/snacks/brownies(get_turf(holder.my_atom))
 	return
 
-/obj/item/weapon/reagent_containers/food/snacks/brownies
+/obj/item/reagent_containers/food/snacks/brownies
 	name = "Brownies"
 	icon_state = "waffles"
 	desc = "Ovenless Brownies!"
@@ -58,7 +58,7 @@
 	..()
 	reagents.add_reagent("nutriment", 6)
 
-/obj/item/weapon/induromol
+/obj/item/induromol
 	name = "Hardened Induromol"
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "ore_platinum"

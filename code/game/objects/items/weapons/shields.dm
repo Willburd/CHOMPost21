@@ -32,7 +32,7 @@
 /obj/item/proc/unique_parry_check(mob/user, mob/attacker, atom/damage_source)	// An overrideable version of the above proc.
 	return default_parry_check(user, attacker, damage_source)
 
-/obj/item/weapon/shield
+/obj/item/shield
 	name = "shield"
 	var/base_block_chance = 50
 	preserve_item = 1
@@ -41,7 +41,7 @@
 				slot_r_hand_str = 'icons/mob/items/righthand_melee.dmi',
 				)
 
-/obj/item/weapon/shield/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/shield/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(user.incapacitated())
 		return 0
 
@@ -53,10 +53,10 @@
 			return 1
 	return 0
 
-/obj/item/weapon/shield/proc/get_block_chance(mob/user, var/damage, atom/damage_source = null, mob/attacker = null)
+/obj/item/shield/proc/get_block_chance(mob/user, var/damage, atom/damage_source = null, mob/attacker = null)
 	return base_block_chance
 
-/obj/item/weapon/shield/riot
+/obj/item/shield/riot
 	name = "riot shield"
 	desc = "A shield adept for close quarters engagement.  It's also capable of protecting from less powerful projectiles."
 	icon = 'icons/obj/weapons.dmi'
@@ -73,7 +73,7 @@
 	base_block_chance = 70 // Outpost 21 edit - Buffed riot shield blocking chance
 	var/cooldown = 0 //shield bash cooldown. based on world.time
 
-/obj/item/weapon/shield/riot/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+/obj/item/shield/riot/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(user.incapacitated())
 		return 0
 
@@ -99,8 +99,8 @@
 			return 1
 	return 0
 
-/obj/item/weapon/shield/riot/attackby(obj/item/weapon/W as obj, mob/user as mob)
-	if(istype(W, /obj/item/weapon/melee/baton))
+/obj/item/shield/riot/attackby(obj/item/W as obj, mob/user as mob)
+	if(istype(W, /obj/item/melee/baton))
 		if(cooldown < world.time - 25)
 			user.visible_message("<span class='warning'>[user] bashes [src] with [W]!</span>")
 			playsound(src, 'sound/effects/shieldbash.ogg', 50, 1)
@@ -112,7 +112,7 @@
  * Energy Shield
  */
 
-/obj/item/weapon/shield/energy
+/obj/item/shield/energy
 	name = "energy combat shield"
 	desc = "A shield capable of stopping most projectile and melee attacks. It can be retracted, expanded, and stored anywhere."
 	icon = 'icons/obj/weapons.dmi'
@@ -136,7 +136,7 @@
 			slot_r_hand_str = 'icons/mob/items/righthand_melee.dmi',
 			)
 
-/obj/item/weapon/shield/energy/handle_shield(mob/user)
+/obj/item/shield/energy/handle_shield(mob/user)
 	if(!active)
 		return 0 //turn it on first!
 	. = ..()
@@ -147,14 +147,14 @@
 		spark_system.start()
 		playsound(src, 'sound/weapons/blade1.ogg', 50, 1)
 
-/obj/item/weapon/shield/energy/get_block_chance(mob/user, var/damage, atom/damage_source = null, mob/attacker = null)
+/obj/item/shield/energy/get_block_chance(mob/user, var/damage, atom/damage_source = null, mob/attacker = null)
 	if(istype(damage_source, /obj/item/projectile))
 		var/obj/item/projectile/P = damage_source
 		if((is_sharp(P) && damage > 10) || istype(P, /obj/item/projectile/beam))
 			return (base_block_chance - round(damage / 3)) //block bullets and beams using the old block chance
 	return base_block_chance
 
-/obj/item/weapon/shield/energy/attack_self(mob/living/user as mob)
+/obj/item/shield/energy/attack_self(mob/living/user as mob)
 	if ((CLUMSY in user.mutations) && prob(50))
 		to_chat(user, "<span class='warning'>You beat yourself in the head with [src].</span>")
 		user.take_organ_damage(5)
@@ -183,7 +183,7 @@
 	add_fingerprint(user)
 	return
 
-/obj/item/weapon/shield/energy/update_icon()
+/obj/item/shield/energy/update_icon()
 	var/mutable_appearance/blade_overlay = mutable_appearance(icon, "[icon_state]_blade")
 	if(lcolor)
 		blade_overlay.color = lcolor
@@ -203,7 +203,7 @@
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
 
-/obj/item/weapon/shield/energy/AltClick(mob/living/user)
+/obj/item/shield/energy/AltClick(mob/living/user)
 	if(!in_range(src, user))	//Basic checks to prevent abuse
 		return
 	if(user.incapacitated() || !istype(user))
@@ -215,11 +215,11 @@
 			lcolor = sanitize_hexcolor(energy_color_input)
 		update_icon()
 
-/obj/item/weapon/shield/energy/examine(mob/user)
+/obj/item/shield/energy/examine(mob/user)
 	. = ..()
 	. += "<span class='notice'>Alt-click to recolor it.</span>"
 
-/obj/item/weapon/shield/riot/tele
+/obj/item/shield/riot/tele
 	name = "telescopic shield"
 	desc = "An advanced riot shield made of lightweight materials that collapses for easy storage."
 	icon = 'icons/obj/weapons.dmi'
@@ -232,13 +232,13 @@
 	w_class = ITEMSIZE_NORMAL
 	var/active = 0
 /*
-/obj/item/weapon/shield/energy/IsShield()
+/obj/item/shield/energy/IsShield()
 	if(active)
 		return 1
 	else
 		return 0
 */
-/obj/item/weapon/shield/riot/tele/attack_self(mob/living/user)
+/obj/item/shield/riot/tele/attack_self(mob/living/user)
 	active = !active
 	icon_state = "teleriot[active]"
 	playsound(src, 'sound/weapons/empty.ogg', 50, 1)

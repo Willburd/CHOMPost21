@@ -35,7 +35,7 @@ But for now, for what it's been used for, it works.
 		H.forceMove(Mtarget.loc)
 	var/obj/locker = new /obj/structure/closet/secure_closet/mind(target.loc, mind_target = H.mind)
 	for(var/obj/item/W in H)
-		if(istype(W, /obj/item/weapon/implant/backup)) // Outpost 21 edit - Nif removal: || istype(W, /obj/item/device/nif))
+		if(istype(W, /obj/item/implant/backup)) // Outpost 21 edit - Nif removal: || istype(W, /obj/item/nif))
 			continue	//VOREStation Edit
 		if(H.drop_from_inventory(W))
 			W.forceMove(locker)
@@ -45,7 +45,7 @@ But for now, for what it's been used for, it works.
 		for(var/datum/gene/gene in GLOB.dna_genes)
 			if(gene.name in H.active_genes)
 				// Setup injector
-				var/obj/item/weapon/dnainjector/D = new /obj/item/weapon/dnainjector(locker)
+				var/obj/item/dnainjector/D = new /obj/item/dnainjector(locker)
 				D.name = initial(D.name) + " - RESTORE: [gene.name]" //lazy, but we may as well support base genes... even if unused...
 				D.block = gene.block
 				D.buf.types = DNA2_BUF_SE
@@ -60,7 +60,7 @@ But for now, for what it's been used for, it works.
 		H.species.equip_survival_gear(H)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/chameleon(H), slot_w_uniform)
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-	H.equip_to_slot_or_del(new /obj/item/device/radio/headset(H),slot_l_ear)
+	H.equip_to_slot_or_del(new /obj/item/radio/headset(H),slot_l_ear)
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/permit(H), slot_l_hand)
 
 
