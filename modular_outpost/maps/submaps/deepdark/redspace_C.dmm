@@ -4,11 +4,11 @@
 /obj/machinery/reagentgrinder{
 	pixel_y = 5
 	},
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
-/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/reagent_containers/glass/beaker/measuring_cup,
+/obj/item/reagent_containers/glass/beaker/measuring_cup,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
@@ -72,7 +72,7 @@
 /turf/simulated/floor/flesh,
 /area/mine/explored/muriki/cave/deepdark)
 "dP" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -122,14 +122,14 @@
 /area/mine/explored/muriki/cave/deepdark)
 "gI" = (
 /obj/structure/table/gamblingtable,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flashlight/lamp/green,
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/outpost21/cave_red_C)
 "gN" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/deskbell{
+/obj/item/deskbell{
 	anchored = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -164,9 +164,9 @@
 "ib" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/material/knife/plastic,
-/obj/item/weapon/reagent_containers/food/snacks/mint,
-/obj/item/weapon/reagent_containers/food/snacks/spreads/butter,
+/obj/item/material/knife/plastic,
+/obj/item/reagent_containers/food/snacks/mint,
+/obj/item/reagent_containers/food/snacks/spreads/butter,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "ij" = (
@@ -221,15 +221,15 @@
 /area/submap/outpost21/cave_red_C)
 "kk" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/enzyme{
+/obj/item/reagent_containers/food/condiment/enzyme{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/cookingoil,
+/obj/item/reagent_containers/food/condiment/cookingoil,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/reagent_containers/glass/beaker{
+/obj/item/reagent_containers/glass/beaker{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/dropper,
+/obj/item/reagent_containers/dropper,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "kC" = (
@@ -240,21 +240,21 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "kN" = (
-/obj/item/device/flashlight/lamp/green{
+/obj/item/flashlight/lamp/green{
 	pixel_x = -6;
 	pixel_y = 14
 	},
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 1;
 	pixel_y = -30
 	},
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /obj/machinery/recharger{
 	pixel_x = 7
 	},
-/obj/item/weapon/storage/box/cups{
+/obj/item/storage/box/cups{
 	pixel_x = -5
 	},
 /turf/simulated/floor/wood,
@@ -279,8 +279,8 @@
 /area/submap/outpost21/cave_red_C)
 "ma" = (
 /obj/structure/table/marble,
-/obj/item/weapon/material/knife/butch,
-/obj/item/weapon/material/kitchen/rollingpin,
+/obj/item/material/knife/butch,
+/obj/item/material/kitchen/rollingpin,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/machinery/light{
 	dir = 8
@@ -312,18 +312,18 @@
 "nY" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "op" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /turf/simulated/floor/lino,
 /area/submap/outpost21/cave_red_C)
 "ox" = (
 /obj/structure/table/woodentable,
 /obj/machinery/reagentgrinder,
-/obj/item/weapon/reagent_containers/food/drinks/shaker{
+/obj/item/reagent_containers/food/drinks/shaker{
 	pixel_x = -8
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -348,8 +348,8 @@
 /area/submap/outpost21/cave_red_C)
 "pb" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/flame/candle,
+/obj/item/material/ashtray/glass,
 /turf/simulated/floor/flesh,
 /area/submap/outpost21/cave_red_C)
 "pm" = (
@@ -363,7 +363,7 @@
 /area/submap/outpost21/cave_red_C)
 "pt" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/material/ashtray/glass,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/outpost21/cave_red_C)
 "pw" = (
@@ -405,11 +405,11 @@
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 1
 	},
-/obj/item/device/flashlight/lamp/green,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/flashlight/lamp/green,
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -457,10 +457,10 @@
 /area/submap/outpost21/cave_red_C)
 "tJ" = (
 /obj/structure/table/standard,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
 /obj/effect/floor_decal/spline/plain{
@@ -473,10 +473,10 @@
 /obj/effect/floor_decal/corner/grey/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/material/kitchen/utensil/spoon{
+/obj/item/material/kitchen/utensil/spoon{
 	pixel_x = 2
 	},
-/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/material/kitchen/utensil/fork,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
@@ -525,17 +525,17 @@
 /area/submap/outpost21/cave_red_C)
 "wT" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
+/obj/item/reagent_containers/food/condiment/small/sugar,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/glass_extra/straw,
-/obj/item/weapon/glass_extra/straw,
-/obj/item/weapon/glass_extra/straw,
+/obj/item/glass_extra/straw,
+/obj/item/glass_extra/straw,
+/obj/item/glass_extra/straw,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "xc" = (
@@ -644,7 +644,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/outpost21/cave_red_C)
 "Dy" = (
-/obj/item/weapon/stool/baystool/padded{
+/obj/item/stool/baystool/padded{
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -678,8 +678,8 @@
 /area/submap/outpost21/cave_red_C)
 "EL" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/flame/candle,
-/obj/item/device/flashlight/lamp/green,
+/obj/item/flame/candle,
+/obj/item/flashlight/lamp/green,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/submap/outpost21/cave_red_C)
@@ -764,7 +764,7 @@
 /area/submap/outpost21/cave_red_C)
 "KO" = (
 /obj/structure/table/standard,
-/obj/item/weapon/material/kitchen/utensil/spork/plastic,
+/obj/item/material/kitchen/utensil/spork/plastic,
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
@@ -778,7 +778,7 @@
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 1
 	},
-/obj/item/weapon/deskbell,
+/obj/item/deskbell,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "Lj" = (
@@ -801,15 +801,15 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "LV" = (
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/submap/outpost21/cave_red_C)
@@ -823,9 +823,9 @@
 /area/submap/outpost21/cave_red_C)
 "Mn" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/dice,
+/obj/item/dice,
 /obj/effect/floor_decal/spline/plain,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -838,8 +838,8 @@
 "Ms" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/reagent_containers/spray/cleaner,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_C)
 "Mx" = (
@@ -962,11 +962,11 @@
 "SR" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/reagent_containers/food/snacks/pie,
+/obj/item/reagent_containers/food/snacks/pie,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 22
@@ -1002,10 +1002,10 @@
 	dir = 8;
 	health = 1e+006
 	},
-/obj/item/weapon/reagent_containers/food/drinks/flask/barflask,
-/obj/item/weapon/reagent_containers/food/drinks/flask/vacuumflask,
-/obj/item/weapon/reagent_containers/glass/rag,
-/obj/item/weapon/material/ashtray/glass,
+/obj/item/reagent_containers/food/drinks/flask/barflask,
+/obj/item/reagent_containers/food/drinks/flask/vacuumflask,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/material/ashtray/glass,
 /turf/simulated/floor/lino,
 /area/submap/outpost21/cave_red_C)
 "Uj" = (
@@ -1028,7 +1028,7 @@
 /area/submap/outpost21/cave_red_C)
 "Uw" = (
 /obj/structure/table/gamblingtable,
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /turf/simulated/floor/carpet/turcarpet,
 /area/submap/outpost21/cave_red_C)
 "UA" = (
@@ -1060,26 +1060,26 @@
 /area/submap/outpost21/cave_red_C)
 "Vv" = (
 /obj/structure/table/marble,
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 3
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/sugar,
-/obj/item/weapon/reagent_containers/food/condiment/mustard{
+/obj/item/reagent_containers/food/condiment/small/sugar,
+/obj/item/reagent_containers/food/condiment/mustard{
 	pixel_y = 14
 	},
-/obj/item/weapon/reagent_containers/food/condiment/ketchup{
+/obj/item/reagent_containers/food/condiment/ketchup{
 	pixel_x = -6;
 	pixel_y = 14
 	},
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
-/obj/item/weapon/reagent_containers/food/condiment/hotsauce{
+/obj/item/reagent_containers/food/condiment/hotsauce{
 	pixel_x = 6;
 	pixel_y = 14
 	},
-/obj/item/weapon/reagent_containers/food/condiment/soysauce{
+/obj/item/reagent_containers/food/condiment/soysauce{
 	pixel_x = -12;
 	pixel_y = 14
 	},
@@ -1087,7 +1087,7 @@
 /area/submap/outpost21/cave_red_C)
 "VI" = (
 /obj/machinery/hologram/holopad,
-/obj/item/device/radio/beacon,
+/obj/item/radio/beacon,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
 /area/submap/outpost21/cave_red_C)
@@ -1099,15 +1099,15 @@
 /area/submap/outpost21/cave_red_C)
 "Wp" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 2;
 	pixel_y = 6
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -2;
 	pixel_y = 4
 	},
-/obj/item/weapon/flame/candle,
+/obj/item/flame/candle,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/submap/outpost21/cave_red_C)
@@ -1150,7 +1150,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -1163,7 +1163,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 22

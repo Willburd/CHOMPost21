@@ -9,7 +9,7 @@
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "M" = (
-/obj/item/weapon/paper/card/heart{
+/obj/item/paper/card/heart{
 	name = "Go Home Hole";
 	desc = "A paper card with a heart on the cover.";
 	info = "Go home friend! Happy home go in hole! Home in hole! Hole is happy home!"

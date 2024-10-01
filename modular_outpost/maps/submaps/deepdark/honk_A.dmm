@@ -54,16 +54,16 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "o" = (
-/obj/item/device/pda/clown,
+/obj/item/pda/clown,
 /obj/item/clothing/shoes/clown_shoes,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "q" = (
-/obj/item/weapon/reagent_containers/food/snacks/clownburger,
+/obj/item/reagent_containers/food/snacks/clownburger,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "r" = (
-/obj/item/device/pda/clown,
+/obj/item/pda/clown,
 /obj/item/clothing/mask/gas/clown_hat,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
@@ -77,7 +77,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "u" = (
-/obj/item/device/flashlight/lamp/clown{
+/obj/item/flashlight/lamp/clown{
 	pixel_y = 7
 	},
 /obj/structure/table/gold,
@@ -103,7 +103,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "A" = (
-/obj/item/weapon/reagent_containers/food/snacks/clownburger,
+/obj/item/reagent_containers/food/snacks/clownburger,
 /obj/random/contraband/nofail,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
@@ -117,7 +117,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "D" = (
-/obj/item/device/pda/clown,
+/obj/item/pda/clown,
 /mob/living/simple_mob/clowns/flesh,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
@@ -135,13 +135,13 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "H" = (
-/obj/item/weapon/reagent_containers/food/snacks/clownburger,
+/obj/item/reagent_containers/food/snacks/clownburger,
 /obj/item/clothing/mask/gas/clown_hat,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "I" = (
 /obj/structure/table/gold,
-/obj/item/device/flashlight/lamp/clown{
+/obj/item/flashlight/lamp/clown{
 	pixel_y = 7
 	},
 /turf/simulated/floor/carpet/purple,
@@ -154,7 +154,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "M" = (
-/obj/item/device/flashlight/lamp/clown,
+/obj/item/flashlight/lamp/clown,
 /turf/simulated/mineral/floor/ignore_cavegen/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "N" = (
@@ -170,7 +170,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "Q" = (
-/obj/item/device/pda/clown,
+/obj/item/pda/clown,
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "R" = (

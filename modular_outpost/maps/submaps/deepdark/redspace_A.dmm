@@ -33,7 +33,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/item/device/geiger/wall/north,
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/cave_red_A)
 "bX" = (
@@ -228,8 +228,8 @@
 /area/submap/outpost21/cave_red_A)
 "lS" = (
 /obj/structure/closet/secure_closet/engineering_personal,
-/obj/item/device/gps/engineering,
-/obj/item/device/gps/engineering,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/outpost21/cave_red_A)
 "lW" = (
@@ -274,7 +274,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/cave_red_A)
 "oH" = (
-/obj/item/device/assembly/mousetrap/armed,
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/flesh,
 /area/submap/outpost21/cave_red_A)
 "oK" = (
@@ -304,13 +304,13 @@
 /area/submap/outpost21/cave_red_A)
 "oV" = (
 /obj/structure/closet/secure_closet/atmos_personal,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/obj/item/device/gps/engineering,
-/obj/item/device/gps/engineering,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/outpost21/cave_red_A)
 "pj" = (
@@ -318,7 +318,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/cave_red_A)
 "pm" = (
-/obj/item/device/geiger/wall/south,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/flesh,
 /area/submap/outpost21/cave_red_A)
 "py" = (
@@ -365,8 +365,8 @@
 /area/submap/outpost21/cave_red_A)
 "rr" = (
 /obj/structure/closet/secure_closet/engineering_personal,
-/obj/item/device/gps/engineering,
-/obj/item/device/gps/engineering,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
 /obj/machinery/doorbell_chime{
 	id_tag = "engdinger";
 	name = "Engineering Dinger";
@@ -393,7 +393,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/cave_red_A)
 "sU" = (
@@ -408,7 +408,7 @@
 /area/submap/outpost21/cave_red_A)
 "ta" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
 /obj/item/bodybag/cryobag{
 	pixel_x = 6
 	},
@@ -449,19 +449,19 @@
 /area/submap/outpost21/cave_red_A)
 "ui" = (
 /obj/structure/table/reinforced,
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_y = 6
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/item/device/radio/off{
+/obj/item/radio/off{
 	pixel_x = -6;
 	pixel_y = 4
 	},
-/obj/item/device/radio/off,
-/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/item/radio/off,
+/obj/item/reagent_containers/spray/cleaner,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 6
 	},
@@ -551,12 +551,12 @@
 /area/submap/outpost21/cave_red_A)
 "Ag" = (
 /obj/structure/closet/secure_closet/atmos_personal,
-/obj/item/device/gps/engineering,
-/obj/item/device/gps/engineering,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/outpost21/cave_red_A)
 "AJ" = (
-/obj/item/device/geiger/wall/north,
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/outpost21/cave_red_A)
 "AS" = (
@@ -589,13 +589,13 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/weapon/soap/nanotrasen,
+/obj/item/soap/nanotrasen,
 /obj/random/soap,
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
-/obj/item/weapon/towel/random,
-/obj/item/weapon/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
 /turf/simulated/floor/tiled/kafel_full,
 /area/submap/outpost21/cave_red_A)
 "BU" = (
@@ -616,10 +616,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/cave_red_A)
 "CH" = (
-/obj/item/weapon/hand_labeler,
-/obj/item/weapon/tape_roll,
-/obj/item/weapon/clipboard,
-/obj/item/weapon/folder/yellow,
+/obj/item/hand_labeler,
+/obj/item/tape_roll,
+/obj/item/clipboard,
+/obj/item/folder/yellow,
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -662,7 +662,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
@@ -673,14 +673,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/cave_red_A)
 "DN" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
 /turf/simulated/floor/flesh,
 /area/submap/outpost21/cave_red_A)
 "DQ" = (
-/obj/item/device/geiger/wall/north,
+/obj/item/geiger/wall/north,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -788,8 +788,8 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/gps/engineering,
-/obj/item/device/gps/engineering,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
 /turf/simulated/floor/tiled/yellow,
 /area/submap/outpost21/cave_red_A)
 "IH" = (
@@ -1053,9 +1053,9 @@
 /area/submap/outpost21/cave_red_A)
 "WM" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen/red,
-/obj/item/weapon/pen/blue{
+/obj/item/paper_bin,
+/obj/item/pen/red,
+/obj/item/pen/blue{
 	pixel_x = 4;
 	pixel_y = 4
 	},
@@ -1140,7 +1140,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
@@ -1201,14 +1201,14 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = 3;
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_y = 3
 	},
-/obj/item/weapon/storage/briefcase/inflatable{
+/obj/item/storage/briefcase/inflatable{
 	pixel_x = -3
 	},
 /obj/structure/table/rack,
