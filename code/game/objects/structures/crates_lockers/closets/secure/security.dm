@@ -281,6 +281,7 @@
 		/obj/item/storage/briefcase/crimekit,
 		/obj/item/taperecorder,
 		/obj/item/storage/bag/detective,
+		/obj/item/tape/random = 3,
 		// /obj/item/retail_scanner/security,	//CHOMPStation addition Outpost 21 edit - removed ancient retail system
 		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
 		)
