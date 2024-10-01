@@ -177,7 +177,7 @@
 	ambience = AMBIENCE_OUTPOST21_SPACE
 	base_turf = /turf/space
 
-/area/submap/outpost21/asteroid_generic/has_gravity()
+/area/submap/outpost21/asteroid_generic/get_gravity()
 	return 0
 
 /area/submap/outpost21/structure_generic
@@ -187,7 +187,7 @@
 	ambience = AMBIENCE_OUTPOST21_SPACE
 	base_turf = /turf/space
 
-/area/submap/outpost21/structure_generic/has_gravity()
+/area/submap/outpost21/structure_generic/get_gravity()
 	return 0
 
 /area/submap/outpost21/structure_generic/lostshipa

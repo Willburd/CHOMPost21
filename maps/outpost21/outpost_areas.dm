@@ -2025,7 +2025,7 @@
 	base_turf = /turf/space
 	ambience = AMBIENCE_SPACE
 
-/area/offworld/asteroidyard/external/has_gravity()
+/area/offworld/asteroidyard/external/get_gravity()
 	return 0
 
 /area/offworld/asteroidyard/external/yardzone
@@ -2271,7 +2271,7 @@
 	requires_power = FALSE
 	has_gravity = FALSE
 
-/area/virtual_reality/spacesim/has_gravity()
+/area/virtual_reality/spacesim/get_gravity()
 	return 0
 
 /area/specialty/hell
