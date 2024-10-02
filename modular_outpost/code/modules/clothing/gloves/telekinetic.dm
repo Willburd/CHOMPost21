@@ -19,7 +19,7 @@
 		cell.checked_use(use_power_amount)
 		if(play_sound)
 			if(cell.charge < use_power_amount)
-				to_chat(user,SPAN_DANGER("\The [src] bwoop as it runs out of power."))
+				to_chat(user,span_danger("\The [src] bwoop as it runs out of power."))
 				playsound(src,'sound/machines/synth_no.ogg')
 			else
 				playsound(src,'sound/machines/generator/generator_end.ogg',70,1)

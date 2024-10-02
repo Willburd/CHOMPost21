@@ -8,14 +8,14 @@
 
 /decl/emote/visible/kiss/New()
 	..()
-	emote_message_1p_target = SPAN_WARNING(emote_message_1p_target)
-	emote_message_1p =        SPAN_WARNING(emote_message_1p)
-	emote_message_3p_target = SPAN_WARNING(emote_message_3p_target)
-	emote_message_3p =        SPAN_WARNING(emote_message_3p)
+	emote_message_1p_target = span_warning(emote_message_1p_target)
+	emote_message_1p =        span_warning(emote_message_1p)
+	emote_message_3p_target = span_warning(emote_message_3p_target)
+	emote_message_3p =        span_warning(emote_message_3p)
 
 /decl/emote/visible/dab
 	key = "dab"
 
 /decl/emote/visible/dab/New()
-	emote_message_3p_target = SPAN_WARNING("dabs on TARGET.")
-	emote_message_3p = SPAN_WARNING("dabs.")
+	emote_message_3p_target = span_warning("dabs on TARGET.")
+	emote_message_3p = span_warning("dabs.")

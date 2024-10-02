@@ -29,7 +29,7 @@
 
 /decl/emote/audible/snap/do_emote(var/atom/user, var/extra_params)
 	if(!can_snap(user))
-		to_chat(user, SPAN_WARNING("You need at least one working hand to snap your fingers."))
+		to_chat(user, span_warning("You need at least one working hand to snap your fingers."))
 		return FALSE
 
 	// outpost 21 edit begin - add the sillier interactions
@@ -41,7 +41,7 @@
 			if(prob(3))
 				L.adjust_fire_stacks(2)
 				L.IgniteMob()
-				L.visible_message(SPAN_DANGER("[L] bursts into flames!"))
+				L.visible_message(span_danger("[L] bursts into flames!"))
 	// outpost 21 edit end
 
 	. = ..()

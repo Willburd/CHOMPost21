@@ -17,7 +17,7 @@
 	update_icon()
 
 /obj/machinery/nuke_cylinder_dispenser/emag_act(var/remaining_charges, var/mob/user)
-	to_chat(user, SPAN_NOTICE("The card fails to do anything. It seems this device has an advanced encryption system."))
+	to_chat(user, span_notice("The card fails to do anything. It seems this device has an advanced encryption system."))
 	return 0
 
 /obj/machinery/nuke_cylinder_dispenser/attack_hand(mob/user as mob)
@@ -45,7 +45,7 @@
 			user.visible_message("[user] [locked ? "locks" : "unlocks"] \the [src].", "You [locked ? "lock" : "unlock"] \the [src].")
 			update_icon()
 		else
-			to_chat(user, SPAN_WARNING("Access denied."))
+			to_chat(user, span_warning("Access denied."))
 		return
 	if(open && istype(O, /obj/item/nuclear_cylinder) && (contents.len < 6))
 		user.visible_message("[user] begins inserting \the [O] into storage.", "You begin inserting \the [O] into storage.")

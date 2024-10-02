@@ -131,7 +131,7 @@
 	if(target.buckled)
 		return 0
 	if(target.has_buckled_mobs())
-		to_chat(user, span("warning", "\The [target] has other entities attached to it. Remove them first."))
+		to_chat(user, span_warning( "\The [target] has other entities attached to it. Remove them first."))
 		return
 	// Traitgenes edit end
 	put_in(target)
@@ -944,42 +944,42 @@
 /obj/machinery/computer/scan_consolenew/proc/print_sleeve(var/mob/user, var/datum/transhuman/body_record/active_br)
 	//deleted record
 	if(!istype(active_br))
-		to_chat(user, span("danger", "Error: Data corruption."))
+		to_chat(user, span_danger( "Error: Data corruption."))
 		return
 	//Trying to make an fbp
 	if(active_br.synthetic )
-		to_chat(user, span("danger", "Error: Cannot grow synthetic."))
+		to_chat(user, span_danger( "Error: Cannot grow synthetic."))
 		return
 	//No pods
 	var/obj/machinery/clonepod/transhuman/pod = locate() in get_area(src)
 	if(!pod)
-		to_chat(user, span("danger", "Error: No growpods detected."))
+		to_chat(user, span_danger( "Error: No growpods detected."))
 		return
 	//Already doing someone.
 	if(pod.occupant)
-		to_chat(user, span("danger", "Error: Growpod is currently occupied."))
+		to_chat(user, span_danger( "Error: Growpod is currently occupied."))
 		return
 	//Not enough materials.
 	if(pod.get_biomass() < CLONE_BIOMASS)
-		to_chat(user, span("danger", "Error: Not enough biomass."))
+		to_chat(user, span_danger( "Error: Not enough biomass."))
 		return
 	//Gross pod (broke mid-cloning or something).
 	if(pod.mess)
-		to_chat(user, span("danger", "Error: Growpod malfunction."))
+		to_chat(user, span_danger( "Error: Growpod malfunction."))
 		return
 	//Disabled in config.
 	if(!CONFIG_GET(flag/revival_cloning)) // CHOMPEdit
-		to_chat(user, span("danger", "Error: Unable to initiate growing cycle."))
+		to_chat(user, span_danger( "Error: Unable to initiate growing cycle."))
 		return
 	//Invalid genes!
 	if(active_br.mydna.name == "Empty" || active_br.mydna.id == null)
-		to_chat(user, span("danger", "Error: Data corruption."))
+		to_chat(user, span_danger( "Error: Data corruption."))
 		return
 	//Do the cloning!
 	if(!pod.growclone(active_br))
-		to_chat(user, span("danger", "Initiating growing cycle... Error: Post-initialisation failed. Growing cycle aborted."))
+		to_chat(user, span_danger( "Initiating growing cycle... Error: Post-initialisation failed. Growing cycle aborted."))
 		return
-	to_chat(user, span("notice", "Initiating growing cycle..."))
+	to_chat(user, span_notice( "Initiating growing cycle..."))
 
 #undef DNA_BLOCK_SIZE
 

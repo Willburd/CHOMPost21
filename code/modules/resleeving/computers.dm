@@ -463,7 +463,7 @@
 					I.forceMove(loc)
 					gene_sequencing = FALSE
 					set_temp("Injector dispensed...")
-					visible_message(SPAN_NOTICE("\The [src] ejects \the [I]."))
+					visible_message(span_notice("\The [src] ejects \the [I]."))
 					playsound(src, 'sound/machines/ding.ogg', 50, 1)
 		// Traitgenes edit end
 		if("cleartemp")

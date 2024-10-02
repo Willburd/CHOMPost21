@@ -115,9 +115,9 @@
 	update_icon()
 	if(message)
 		if(on)
-			message = SPAN_NOTICE("\The [src] turns on.")
+			message = span_notice("\The [src] turns on.")
 		else
-			message = SPAN_NOTICE("\The [src] shuts down.")
+			message = span_notice("\The [src] shuts down.")
 		visible_message(message)
 	return TRUE
 
@@ -144,7 +144,7 @@
 /obj/machinery/pump/attackby(obj/item/W, mob/user)
 	. = TRUE
 	if(W.has_tool_quality(TOOL_SCREWDRIVER) && !open)
-		to_chat(user, SPAN_NOTICE("You [unlocked ? "screw" : "unscrew"] the battery panel."))
+		to_chat(user, span_notice("You [unlocked ? "screw" : "unscrew"] the battery panel."))
 		unlocked = !unlocked
 
 	else if(W.has_tool_quality(TOOL_CROWBAR) && unlocked)
@@ -164,9 +164,9 @@
 		// Outpost 21 edit begin - clarifying how these even work
 		if(!open)
 			if(unlocked)
-				to_chat(user, SPAN_NOTICE("The battery panel is screwed shut."))
+				to_chat(user, span_notice("The battery panel is screwed shut."))
 			else
-				to_chat(user, SPAN_NOTICE("The battery panel is watertight and cannot be opened without a crowbar."))
+				to_chat(user, span_notice("The battery panel is watertight and cannot be opened without a crowbar."))
 			return FALSE
 		// Outpost 21 edit end
 		if(istype(cell))

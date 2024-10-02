@@ -304,13 +304,13 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 			return
 	if(L.isSynthetic())
 		if(show_messages)
-			to_chat(L, SPAN_OCCULT(pick("Your camera flickers.","Your video feed flashes to static.")))
+			to_chat(L, span_cult(pick("Your camera flickers.","Your video feed flashes to static.")))
 		spawn(5)
 			L.eye_blurry += 20
 			L.Life() // Hacky but gets instant feedback
 	else
 		if(show_messages)
-			to_chat(L, SPAN_OCCULT(pick("Your eyes feel very heavy.", "You blink suddenly!", "Your eyes close involuntarily!")))
+			to_chat(L, span_cult(pick("Your eyes feel very heavy.", "You blink suddenly!", "Your eyes close involuntarily!")))
 		spawn(5)
 			L.Blind(2)
 			L.Life() // Hacky but gets instant feedback
@@ -325,7 +325,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 				if(prob(40 + annoyance))
 					L.broken()
 		if(get_L)
-			holder.visible_message(SPAN_OCCULT("\The [holder] slowly points at \the [get_L]."))
+			holder.visible_message(span_cult("\The [holder] slowly points at \the [get_L]."))
 	return
 
 /datum/ai_holder/simple_mob/intentional/statue/proc/ability_mirrorshmash()
@@ -337,7 +337,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 			get_M = M
 			mirrors.Add(WEAKREF(M))
 	if(get_M)
-		holder.visible_message(SPAN_OCCULT("\The [holder] slowly points at \the [get_M]."))
+		holder.visible_message(span_cult("\The [holder] slowly points at \the [get_M]."))
 	if(mirrors.len)
 		set_busy(TRUE)
 		spawn(2 SECONDS)

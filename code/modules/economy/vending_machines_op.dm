@@ -45,10 +45,10 @@
 
 		// Basic unvendables
 		if(W.my_augment)
-			to_chat(user,SPAN_NOTICE("\The [src] cannot vend an attached implant."))
+			to_chat(user,span_notice("\The [src] cannot vend an attached implant."))
 			return FALSE
 		if(istype(W,/obj/item/stack) || istype(W,/obj/item/holder) || istype(W,/obj/item/grab) || istype(W,/obj/item/card/id))
-			to_chat(user,SPAN_NOTICE("\The [src] cannot vend this."))
+			to_chat(user,span_notice("\The [src] cannot vend this."))
 			return FALSE
 		// Per item sanity filter. I hate everything about this.
 		if(istype(W,/obj/item/vac_attachment) \
@@ -69,7 +69,7 @@
 		|| istype(W,/obj/item/mmi) \
 		|| istype(W,/obj/item/spacecash) \
 		|| istype(W,/obj/item/spacecasinocash))
-			to_chat(user,SPAN_NOTICE("\The [src] should not vend this."))
+			to_chat(user,span_notice("\The [src] should not vend this."))
 			return FALSE
 
 		// Add new entry if safe

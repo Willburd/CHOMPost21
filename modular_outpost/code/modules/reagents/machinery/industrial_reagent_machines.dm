@@ -26,7 +26,7 @@
 	if(O.has_tool_quality(TOOL_WRENCH))
 		for(var/obj/machinery/reagent_refinery/R in loc.contents)
 			if(R != src)
-				to_chat(usr,SPAN_WARNING("You cannot anchor \the [src] until \The [R] is moved out of the way!"))
+				to_chat(usr,span_warning("You cannot anchor \the [src] until \The [R] is moved out of the way!"))
 				return
 		playsound(src, O.usesound, 75, 1)
 		anchored = !anchored
