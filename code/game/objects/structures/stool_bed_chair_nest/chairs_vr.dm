@@ -16,7 +16,7 @@
 /obj/structure/bed/chair/sofa/corner
 	base_icon = "sofacorner"
 	icon_state = "sofacorner"	//CHOMPstation edit: preview in map maker
-	
+
 /obj/structure/bed/chair/modern_chair
 	name = "modern chair"
 	desc = "It's like sitting in an egg."
@@ -61,10 +61,12 @@
 	// Strings.
 	desc = initial(desc)
 	if(padding_material)
-		name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
+		if(!override_name) // Outpost 21 edit - Keep set map names
+			name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
 		desc += " It's made of [material.use_name] and covered with [padding_material.use_name]."
 	else
-		name = "[material.display_name] [initial(name)]"
+		if(!override_name) // Outpost 21 edit - Keep set map names
+			name = "[material.display_name] [initial(name)]"
 		desc += " It's made of [material.use_name]."
 
 	// Prep icon.

@@ -21,6 +21,7 @@
 	var/datum/material/padding_material
 	var/base_icon = "bed"
 	var/applies_material_colour = 1
+	var/override_name = FALSE // Outpost 21 edit - Keep set map names
 
 /obj/structure/bed/New(var/newloc, var/new_material, var/new_padding_material)
 	..(newloc)
@@ -62,10 +63,12 @@
 	// Strings.
 	desc = initial(desc)
 	if(padding_material)
-		name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
+		if(!override_name) // Outpost 21 edit - Keep set map names
+			name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
 		desc += " It's made of [material.use_name] and covered with [padding_material.use_name]."
 	else
-		name = "[material.display_name] [initial(name)]"
+		if(!override_name) // Outpost 21 edit - Keep set map names
+			name = "[material.display_name] [initial(name)]"
 		desc += " It's made of [material.use_name]."
 
 /obj/structure/bed/CanPass(atom/movable/mover, turf/target)
