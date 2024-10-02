@@ -134,14 +134,14 @@
 	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER + " and " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#013D3B"
 	economic_modifier = 7
-	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_research)
-	minimal_access = list(access_medical, access_morgue, access_genetics, access_research)
+	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics) //, access_research) Outpost 21 edit - Removed science access
+	minimal_access = list(access_medical, access_morgue, access_genetics) //, access_research) Outpost 21 edit - Removed science access
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/geneticist
 	job_description = "A " + JOB_GENETICIST + " operates genetic manipulation equipment to repair any genetic defects encountered in crew, from cloning or radiation as examples. \
 						When required, geneticists have the skills to clone, and are the superior choice when available for doing so."
 
-	alt_titles = list("Gene Therapist" = /datum/alt_title/genetherapy, "Sleeve Engineer" = /datum/alt_title/sleeveengineer) // Outpost 21 addition - Alt titles for geneticist
+	alt_titles = list(JOB_ALT_GENE_THERAPIST = /datum/alt_title/genetherapy, JOB_ALT_SLEEVE_ENGINEER = /datum/alt_title/sleeveengineer) // Outpost 21 addition - Alt titles for geneticist
 
 //////////////////////////////////
 //			Psychiatrist

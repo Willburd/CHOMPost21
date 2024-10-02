@@ -207,8 +207,8 @@
 	#define JOB_ALT_ELECTRICIAN "Electrician"
 	#define JOB_ALT_CONSTRUCTION_ENGINEER "Construction Engineer"
 	#define JOB_ALT_ENGINEERING_CONTRACTOR "Engineering Contractor"
-	#define JOB_ALT_SHIPBREAKER "Ship Breaker"
-	#define JOB_ALT_CHEMENGINEER "Chemical Engineer"
+	#define JOB_ALT_SHIPBREAKER "Ship Breaker" // Outpost 21 addition
+	#define JOB_ALT_CHEMENGINEER "Chemical Engineer" // Outpost 21 addition
 
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
 	// Atmospheric Technician alt titles
@@ -265,6 +265,8 @@
 #define JOB_SEARCH_AND_RESCUE "Search and Rescue" // CHOMPEdit, actual JOB here
 
 #define JOB_GENETICIST "Geneticist" //Disabled atm
+	#define JOB_ALT_GENE_THERAPIST "Gene Therapist" // Outpost 21 addition
+	#define JOB_ALT_SLEEVE_ENGINEER "Sleeve Engineer" // Outpost 21 addition
 //___________________________________________________________
 
 
