@@ -26,7 +26,7 @@
 		// outpost 21 edit begin - add the sillier interactions
 		if(prob(2))
 			AdjustWeakened(12)
-			visible_message(SPAN_WARNING("\The [src] collapses their ankle!"), SPAN_WARNING("You collapses your ankle!"))
+			visible_message(span_warning("\The [src] collapses their ankle!"), span_warning("You collapses your ankle!"))
 			if(prob(50))
 				var/obj/item/organ/external/left_leg = get_organ(BP_L_LEG)
 				if(left_leg)
@@ -46,7 +46,7 @@
 	if(isturf(loc))
 		for(var/obj/structure/stairs/top/S in loc.contents)
 			S.use_stairs_instant(src)
-			visible_message(SPAN_WARNING("\The [src] falls down the stairs!"), SPAN_WARNING("You fall down the stairs!"))
+			visible_message(span_warning("\The [src] falls down the stairs!"), span_warning("You fall down the stairs!"))
 			Confuse(10) //Thud
 			AdjustWeakened(12)
 			adjustBruteLoss(8)

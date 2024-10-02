@@ -41,7 +41,7 @@
 			if(prob(3))
 				L.adjust_fire_stacks(2)
 				L.IgniteMob()
-				L.visible_message(SPAN_DANGER("[L] bursts into flames!"))
+				L.visible_message(span_danger("[L] bursts into flames!"))
 	// outpost 21 edit end
 
 	. = ..()

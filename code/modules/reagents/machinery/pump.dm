@@ -164,9 +164,9 @@
 		// Outpost 21 edit begin - clarifying how these even work
 		if(!open)
 			if(unlocked)
-				to_chat(user, SPAN_NOTICE("The battery panel is screwed shut."))
+				to_chat(user, span_notice("The battery panel is screwed shut."))
 			else
-				to_chat(user, SPAN_NOTICE("The battery panel is watertight and cannot be opened without a crowbar."))
+				to_chat(user, span_notice("The battery panel is watertight and cannot be opened without a crowbar."))
 			return FALSE
 		// Outpost 21 edit end
 		if(istype(cell))

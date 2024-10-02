@@ -112,7 +112,7 @@ var/global/photo_count = 0
 					if(isturf(T))
 						new /mob/living/simple_mob/animal/statue(T)
 						statue_photos_allowed--
-					desc += SPAN_OCCULT("Part of the photo is smeared unnaturally.")
+					desc += span_cult("Part of the photo is smeared unnaturally.")
 // Outpost 21 edit end
 
 

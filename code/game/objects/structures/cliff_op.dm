@@ -164,9 +164,9 @@ two tiles on initialization, and which way a cliff is facing may change during m
 			safe_fall = H.species.handle_falling(H, T, silent = TRUE, planetary = FALSE)
 
 		if(safe_fall)
-			visible_message(span("notice", "\The [L] glides down from \the [src]."))
+			visible_message(span_notice( "\The [L] glides down from \the [src]."))
 		else
-			visible_message(span("danger", "\The [L] falls off \the [src]!"))
+			visible_message(span_danger( "\The [L] falls off \the [src]!"))
 		L.forceMove(T)
 
 		if(!safe_fall)
@@ -174,7 +174,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 			if(istype(L.buckled, /obj/vehicle)) // People falling off in vehicles will take less damage, but will damage the vehicle severely.
 				var/obj/vehicle/vehicle = L.buckled
 				vehicle.adjust_health(20)
-				to_chat(L, span("warning", "\The [vehicle] absorbs some of the impact, damaging it."))
+				to_chat(L, span_warning( "\The [vehicle] absorbs some of the impact, damaging it."))
 
 			playsound(L, 'sound/effects/break_stone.ogg', 70, 1)
 			L.Weaken(2)
@@ -183,14 +183,14 @@ two tiles on initialization, and which way a cliff is facing may change during m
 		sleep(fall_time) // A brief delay inbetween the two sounds helps sell the 'ouch' effect.
 
 		if(safe_fall)
-			visible_message(span("notice", "\The [L] lands on \the [T]."))
+			visible_message(span_notice( "\The [L] lands on \the [T]."))
 			playsound(L, "rustle", 25, 1)
 			return
 
 		playsound(L, "punch", 70, 1)
 		shake_camera(L, 1, 1)
 
-		visible_message(span("danger", "\The [L] hits \the [T]!"))
+		visible_message(span_danger( "\The [L] hits \the [T]!"))
 
 		// The bigger they are, the harder they fall.
 		// They will take at least 20 damage at the minimum, and tries to scale up to 40% of their max health.
@@ -205,7 +205,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 		// Now fall off more cliffs below this one if they exist.
 		var/obj/structure/cliff/bottom_cliff = locate() in T
 		if(bottom_cliff)
-			visible_message(span("danger", "\The [L] rolls down towards \the [bottom_cliff]!"))
+			visible_message(span_danger( "\The [L] rolls down towards \the [bottom_cliff]!"))
 			sleep(5)
 			bottom_cliff.fall_off_cliff(L)
 
@@ -221,7 +221,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 			climb_delay = 25 SECONDS
 			return ..() // Do the other checks too.
 
-	to_chat(user, span("warning", "\The [src] is too steep to climb."))
+	to_chat(user, span_warning( "\The [src] is too steep to climb."))
 	return FALSE
 
 // This tells AI mobs to not be dumb and step off cliffs willingly.

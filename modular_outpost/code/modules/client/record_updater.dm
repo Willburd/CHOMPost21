@@ -20,7 +20,7 @@ var/global/client_record_update_lock = FALSE
 		return "Invalid console"
 
 	if(jobban_isbanned(user, "Records") )
-		COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+		COM.visible_message(span_notice("\The [COM] buzzes!"))
 		playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization denied (OOC: You are banned from editing records)"
 
@@ -46,7 +46,7 @@ var/global/client_record_update_lock = FALSE
 	if(client_record_update_lock)
 		to_chat(user,"Update already in progress! Please wait a moment...")
 		if(COM && !QDELETED(COM))
-			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update already in progress! Please wait a moment..."
 	client_record_update_lock = TRUE
@@ -55,7 +55,7 @@ var/global/client_record_update_lock = FALSE
 
 	if(!active || !console_path)
 		if(COM && !QDELETED(COM))
-			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Record or console destroyed)"
 
@@ -65,14 +65,14 @@ var/global/client_record_update_lock = FALSE
 	var/mob/M = get_current_mob_from_record(active)
 	if(!M)
 		if(COM && !QDELETED(COM))
-			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Client mob does not exist, has no mind record, or is possesssed)"
 
 	var/client/C = M.client
 	if(!C)
 		if(COM && !QDELETED(COM))
-			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Record's owner is offline)"
 
@@ -80,7 +80,7 @@ var/global/client_record_update_lock = FALSE
 	if(choice == "Refuse Update")
 		message_admins("[active.fields["name"]] refused [record_string] record update from [user] without review.")
 		if(COM && !QDELETED(COM))
-			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Client refused without review)"
 
@@ -89,13 +89,13 @@ var/global/client_record_update_lock = FALSE
 	if(!new_data)
 		message_admins("[active.fields["name"]] refused [record_string] record update from [user] with review.")
 		if(COM && !QDELETED(COM))
-			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Client refused with review)"
 	if(!M || !M.client || !P)
 		message_admins("[active.fields["name"]]'s [record_string] record could not be updated, client disconnected.")
 		if(COM && !QDELETED(COM))
-			COM.visible_message(SPAN_NOTICE("\The [COM] buzzes!"))
+			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return "Update syncronization failed (OOC: Client does not exist)"
 
@@ -118,12 +118,12 @@ var/global/client_record_update_lock = FALSE
 	P.save_preferences()
 	P.save_character()
 	if(M)
-		to_chat(M,SPAN_NOTICE("Your [record_string] record for [active.fields["name"]] has been updated."))
+		to_chat(M,span_notice("Your [record_string] record for [active.fields["name"]] has been updated."))
 	message_admins("[active.fields["name"]] accepted the [record_string] record update from [user].")
 
 		// ding!
 	if(COM && !QDELETED(COM))
-		COM.visible_message(SPAN_NOTICE("\The [COM] dings!"))
+		COM.visible_message(span_notice("\The [COM] dings!"))
 		playsound(COM, 'sound/machines/ding.ogg', 50, 1)
 
 	return "Record syncronized."
