@@ -61,6 +61,8 @@ const rank2icon = {
   Engineer: 'toolbox',
   'Maintenance Technician': 'wrench',
   'Engine Technician': 'toolbox',
+  'Ship Breaker': 'rocket', // Outpost 21 addition
+  'Chemical Engineer': ['mortar-pestle', 'wrench'], // Outpost 21 addition
   Electrician: 'screwdriver',
   'Construction Engineer': 'trowel-bricks',
   'Engineering Contractor': 'ruler',
@@ -95,6 +97,8 @@ const rank2icon = {
   Psychotherapist: 'couch',
   // Genetecist
   Geneticist: 'dna',
+  'Gene Therapist': ['dna', 'screwdriver'], // Outpost 21 addition
+  'Sleeve Engineer': ['dna', 'wrench'], // Outpost 21 addition
   // Brig Physician
   'Brig Physician': ['kit-medical', 'shield-halved'],
   'Security Medic': ['kit-medical', 'shield-halved'],
@@ -210,6 +214,7 @@ const rank2icon = {
   Tragedian: 'face-sad-tear',
   Artist: 'smile-beam',
   'Game Master': 'dice',
+  'Radio Host': 'radio', // Outpost 21 addition
   // Entrepreneur
   Entrepreneur: 'building',
   Lawyer: 'gavel',
@@ -243,6 +248,7 @@ const rank2icon = {
   'Research Assistant"': ['school', 'flask'],
   Visitor: 'user',
   Resident: 'user',
+  Spacer: 'user', // Outpost 21 addition
   // IAA
   'Internal Affairs Agent': 'balance-scale',
   'Internal Affairs Liaison': 'balance-scale',
@@ -378,6 +384,8 @@ const rank2color = {
   Engineer: 'orange',
   'Maintenance Technician': 'orange',
   'Engine Technician': 'orange',
+  'Ship Breaker': 'orange', // Outpost 21 addition
+  'Chemical Engineer': 'orange', // Outpost 21 addition
   Electrician: 'orange',
   'Construction Engineer': 'orange',
   'Engineering Contractor': 'orange',
@@ -412,6 +420,8 @@ const rank2color = {
   Psychotherapist: 'teal',
   // Genetecist
   Geneticist: 'teal',
+  'Gene Therapist': 'teal', // Outpost 21 addition
+  'Sleeve Engineer': 'teal', // Outpost 21 addition
   // Brig Physician
   'Brig Physician': 'teal',
   'Security Medic': 'teal',
@@ -527,6 +537,7 @@ const rank2color = {
   Tragedian: 'green',
   Artist: 'green',
   'Game Master': 'green',
+  'Radio Host': 'green', // Outpost 21 addition
   // Entrepreneur
   Entrepreneur: 'green',
   Lawyer: 'green',
@@ -560,6 +571,7 @@ const rank2color = {
   'Research Assistant"': 'green',
   Visitor: 'green',
   Resident: 'green',
+  Spacer: 'green', // Outpost 21 addition
   // IAA
   'Internal Affairs Agent': 'blue',
   'Internal Affairs Liaison': 'blue',
