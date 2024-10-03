@@ -136,8 +136,12 @@
 	if(!A || QDELETED(A))
 		show_tvs(loc)
 
-	if(get_dist(get_turf(src), get_turf(A)) > 5)
-		show_tvs(loc)
+	// Outpost 21 edit begin - Awful fix to make cameras actually follow if worn, see bodycam/process() for more information
+	if(camera.status)
+		var/old_loc = loc
+		loc = get_turf(A) // can't move to the same place, so hackydance time
+		forceMove(old_loc,get_dir(loc,get_turf(old_loc)),0)
+	// Outpost 21 edit end
 
 /obj/item/tvcamera/update_icon()
 	..()
@@ -299,8 +303,27 @@
 	if(!A || QDELETED(A))
 		show_bodycamera_tvs(loc)
 
-	if(get_dist(get_turf(src), get_turf(A)) > 5)
-		show_bodycamera_tvs(loc)
+	// Outpost 21 edit begin - Use the turf location, or the distance checks here fail
+	if(bcamera.status)
+		// This is awful and hacky... I have no idea how to do it otherwise, I tried everything for 10 hours. This is all that worked.
+		// The bodycam_tvs were getting updates correctly, but the vischunks were not. Updating them manually did not seem to work either.
+		// Things tried include, done in a multitude of ways:
+		// cameranet.updateVisibility(bcamera, 0)
+		// cameranet.updateVisibility(T, 0)
+		// cameranet.updatePortableCamera(bcamera)
+		// cameranet.majorChunkChange(T, 2)
+		// SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, T, get_dir(T,goal), TRUE, 0)
+		// Moved(T, get_dir(T,goal), TRUE, 0)
+		//
+		// Doing it this way is hacky, but likely safe. It's technically keeping the camera in the same place anyway,
+		// I just falsify that it is entering the location from somewhere else. If anyone else wants to take a swing
+		// at this original code here was just show_bodycamera_tvs(loc). I'm concerned over T.Exited(), but this only
+		// runs on clothing already in that turf anyway. I am sorry for this sinful fix. Performance wise however,
+		// this fix has less performance impact then a borg walking around with camera on. - Willbird
+		var/old_loc = loc
+		loc = get_turf(A) // can't move to the same place, so hackydance time
+		forceMove(old_loc,get_dir(loc,get_turf(old_loc)),0)
+	// Outpost 21 edit end
 
 /obj/item/clothing/accessory/bodycam/update_icon()
 	..()
