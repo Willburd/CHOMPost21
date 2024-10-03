@@ -85,6 +85,26 @@
 				C.halloss = 30
 				C.emote("scream")
 				deathmessage = " and explodes their butt off"
+	// Propel!
+	var/movementdirection = src.dir
+	if(buckled && isobj(buckled))
+		spawn(0)
+			if(!buckled.anchored)
+				var/obj/structure/bed/chair/CH
+				if(istype(buckled, /obj/structure/bed/chair))
+					CH = buckled
+				var/list/move_speed = list(1, 1, 1, 2, 2, 3)
+				for(var/i in 1 to 6)
+					if(CH) CH.propelled = (6-i)
+					buckled.Move(get_step(src,movementdirection), movementdirection)
+					sleep(move_speed[i])
+				//additional movement
+				for(var/i in 1 to 3)
+					buckled.Move(get_step(src,movementdirection), movementdirection)
+					sleep(3)
+	if((istype(loc, /turf/space)) || (lastarea.get_gravity() == 0))
+		inertia_dir = movementdirection
+		step(src, movementdirection)
 	// lights rattled or bursted
 	for(var/obj/machinery/light/L in orange(10, C))
 		if(prob(C.gutdeathpressure * 2))
@@ -93,3 +113,14 @@
 		else
 			L.flicker(4)
 	C.visible_message("<span class='danger'>\The [C] unleashes a violent and obnoxious blast from their rear[deathmessage]!</span>","<span class='danger'>You unleash the horrifying power of your rump!</span>");
+
+/mob/living/proc/super_fart_flame()
+	if(stat != DEAD)
+		var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
+		playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
+		// configure to be less broken! We're only a flamethrower, not a dragon!
+		P.submunition_spread_max = 40
+		P.submunition_spread_min = 25
+		P.submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 3)
+		// launch!
+		P.launch_projectile( get_step(src,reverse_dir[src.dir]), BP_TORSO, src)

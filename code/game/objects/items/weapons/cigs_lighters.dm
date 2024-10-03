@@ -670,6 +670,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 				cig.light("<span class='rose'>[user] whips the [name] out and holds it for [M].</span>")
 			else
 				cig.light("<span class='notice'>[user] holds the [name] out for [M], and lights the [cig.name].</span>")
+	// Outpost 21 edit begin - Lighting superfart
+	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit)
+		M.super_fart()
+		M.super_fart_flame()
+	// Outpost 21 edit end
 	else
 		..()
 
