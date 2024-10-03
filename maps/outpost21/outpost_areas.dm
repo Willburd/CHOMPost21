@@ -142,6 +142,7 @@
 	flags = RAD_SHIELDED
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open/force_indoor
+	block_tracking = TRUE // Hide from cams like dorms
 
 /area/muriki/bathroom/atmospherics
 	name = "\improper Atmospherics Latrine"
