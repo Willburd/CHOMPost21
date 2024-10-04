@@ -850,7 +850,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		to_chat(M, "<span class='warning'>The solution spews out foam!</span>")
+		to_chat(M, span_warning("The solution spews out foam!"))
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 0)
@@ -872,7 +872,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		to_chat(M, "<span class='warning'>The solution spews out a metalic foam!</span>")
+		to_chat(M, span_warning("The solution spews out a metalic foam!"))
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 1)
@@ -890,7 +890,7 @@
 	var/location = get_turf(holder.my_atom)
 
 	for(var/mob/M in viewers(5, location))
-		to_chat(M, "<span class='warning'>The solution spews out a metalic foam!</span>")
+		to_chat(M, span_warning("The solution spews out a metalic foam!"))
 
 	var/datum/effect/effect/system/foam_spread/s = new()
 	s.set_up(created_volume, location, holder, 2)
