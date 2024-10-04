@@ -250,7 +250,7 @@
 				for(var/mob/O in viewers(src, null))
 					if(O == src)
 						continue
-					O.show_message(span_danger("[src] starts having a seizure!")), 1)
+					O.show_message(span_danger("[src] starts having a seizure!"), 1)
 				Paralyse(10)
 				make_jittery(200)
 	// and not for sneezy stuff!

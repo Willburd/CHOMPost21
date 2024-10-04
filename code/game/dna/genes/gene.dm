@@ -123,7 +123,7 @@
 	if(deactivation_messages.len)
 		var/msg = pick(deactivation_messages)
 		to_chat(M, span_warning("[msg]"))
-
+*/
 
 
 // Traitgenes edit - Genes are linked to traits now. Because no one bothered to maintain genes, and instead jumped through two different trait systems to avoid them. So here we are. - Willbird
