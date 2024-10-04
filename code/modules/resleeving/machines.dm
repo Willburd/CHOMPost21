@@ -427,7 +427,7 @@
 /obj/machinery/transhuman/synthprinter/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
 	if(busy)
-		to_chat(user, "<span class='notice'>\The [src] is busy. Please wait for completion of previous operation.</span>")
+		to_chat(user, span_notice("\The [src] is busy. Please wait for completion of previous operation."))
 		return
 	if(default_deconstruction_screwdriver(user, W))
 		return
@@ -436,15 +436,15 @@
 	if(default_part_replacement(user, W))
 		return
 	if(panel_open)
-		to_chat(user, "<span class='notice'>You can't load \the [src] while it's opened.</span>")
+		to_chat(user, span_notice("You can't load \the [src] while it's opened."))
 		return
 	if(!istype(W, /obj/item/stack/material))
-		to_chat(user, "<span class='notice'>You cannot insert this item into \the [src]!</span>")
+		to_chat(user, span_notice("You cannot insert this item into \the [src]!"))
 		return
 
 	var/obj/item/stack/material/S = W
 	if(!(S.material.name in stored_material))
-		to_chat(user, "<span class='warning'>\The [src] doesn't accept [S.material]!</span>")
+		to_chat(user, span_warning("\The [src] doesn't accept [S.material]!"))
 		return
 
 	var/amnt = S.perunit
@@ -573,7 +573,7 @@
 		C.removePersonality()
 		qdel(C)
 		sleevecards++
-		to_chat(user, "<span class='notice'>You store \the [C] in \the [src].</span>")
+		to_chat(user, span_notice("You store \the [C] in \the [src]."))
 		return
 
 	return ..()
@@ -590,7 +590,7 @@
 	if(!ishuman(user) && !isrobot(user))
 		return 0 //not a borg or human
 	if(panel_open)
-		to_chat(user, "<span class='notice'>Close the maintenance panel first.</span>")
+		to_chat(user, span_notice("Close the maintenance panel first."))
 		return 0 //panel open
 
 	if(O.buckled)
@@ -627,7 +627,7 @@
 
 	//In case they already had a mind!
 	if(occupant && occupant.mind)
-		to_chat(occupant, "<span class='warning'>You feel your mind being overwritten...</span>")
+		to_chat(occupant, span_warning("You feel your mind being overwritten..."))
 		log_and_message_admins("was resleeve-wiped from their body.",occupant.mind)
 		occupant.ghostize()
 
@@ -678,9 +678,9 @@
 	// Outpost 21 edit begin - Small edits to the flavor text. - Ignus
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
-		to_chat(occupant, "<span class='notice'>Your eyes open as you wake up in the tube, remembering only your last scan. Your new body feels comfortable, however.</span>")
+		to_chat(occupant, span_notice("Your eyes open as you wake up in the tube, remembering only your last scan. Your new body feels comfortable, however."))
 	else
-		to_chat(occupant, "<span class='warning'>Your eyes wince at the light as you try to remember what happened, weren't you just in the lobby? It's disorienting.</span>")
+		to_chat(occupant, span_warning("Your eyes wince at the light as you try to remember what happened, weren't you just in the lobby? It's disorienting."))
 	// Outpost 21 edit end
 
 	occupant.confused = max(occupant.confused, confuse_amount)
@@ -708,10 +708,10 @@
 
 /obj/machinery/transhuman/resleever/proc/put_mob(mob/living/carbon/human/M as mob)
 	if(!ishuman(M))
-		to_chat(usr, "<span class='warning'>\The [src] cannot hold this!</span>")
+		to_chat(usr, span_warning("\The [src] cannot hold this!"))
 		return
 	if(src.occupant)
-		to_chat(usr, "<span class='warning'>\The [src] is already occupied!</span>")
+		to_chat(usr, span_warning("\The [src] is already occupied!"))
 		return
 	if(M.client)
 		M.client.perspective = EYE_PERSPECTIVE

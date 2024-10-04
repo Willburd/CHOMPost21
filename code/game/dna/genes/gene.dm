@@ -116,15 +116,14 @@
 	M.mutations.Add(mutation)
 	if(activation_messages.len)
 		var/msg = pick(activation_messages)
-		to_chat(M, "<span class='notice'>[msg]</span>")
+		to_chat(M, span_notice("[msg]"))
 
 /datum/gene/basic/deactivate(var/mob/M) // Traitgenes edit - Removed /dna/ from path
 	M.mutations.Remove(mutation)
 	if(deactivation_messages.len)
 		var/msg = pick(deactivation_messages)
-		to_chat(M, "<span class='warning'>[msg]</span>")
+		to_chat(M, span_warning("[msg]"))
 */
-
 
 
 // Traitgenes edit - Genes are linked to traits now. Because no one bothered to maintain genes, and instead jumped through two different trait systems to avoid them. So here we are. - Willbird

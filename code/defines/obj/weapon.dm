@@ -353,7 +353,7 @@
 		if (C.bugged && C.status)
 			cameras.Add(C)
 	if (length(cameras) == 0)
-		to_chat(usr, "<span class='warning'>No bugged functioning cameras found.</span>")
+		to_chat(usr, span_warning("No bugged functioning cameras found."))
 		return
 
 	var/list/friendly_cameras = new/list()
@@ -456,7 +456,7 @@
 /obj/item/storage/part_replacer/examine(mob/user)
 	. = ..()
 	if(!reskin_ran)
-		. += "<span class='notice'>[src]'s external casing can be modified via alt-click.</span>"
+		. += span_notice("[src]'s external casing can be modified via alt-click.")
 
 /obj/item/storage/part_replacer/AltClick(mob/user)
 	. = ..()

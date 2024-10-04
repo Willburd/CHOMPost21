@@ -71,14 +71,14 @@
 		if(nc)
 			channel = nc
 			camera.c_tag = channel
-			to_chat(usr, "<span class='notice'>New channel name - '[channel]' is set</span>")
+			to_chat(usr, span_notice("New channel name - '[channel]' is set"))
 	if(href_list["video"])
 		camera.set_status(!camera.status)
 		if(camera.status)
-			to_chat(usr,"<span class='notice'>Video streaming activated. Broadcasting on channel '[channel]'</span>")
+			to_chat(usr,span_notice("Video streaming activated. Broadcasting on channel '[channel]'"))
 			show_tvs(loc)
 		else
-			to_chat(usr,"<span class='notice'>Video streaming deactivated.</span>")
+			to_chat(usr,span_notice("Video streaming deactivated."))
 			hide_tvs()
 			for(var/obj/machinery/computer/security/telescreen/entertainment/ES as anything in GLOB.entertainment_screens)
 				ES.stop_showing()
@@ -86,9 +86,9 @@
 	if(href_list["sound"])
 		radio.ToggleBroadcast()
 		if(radio.broadcasting)
-			to_chat(usr,"<span class='notice'>Audio streaming activated. Broadcasting on frequency [format_frequency(radio.frequency)].</span>")
+			to_chat(usr,span_notice("Audio streaming activated. Broadcasting on frequency [format_frequency(radio.frequency)]."))
 		else
-			to_chat(usr,"<span class='notice'>Audio streaming deactivated.</span>")
+			to_chat(usr,span_notice("Audio streaming deactivated."))
 	if(!href_list["close"])
 		attack_self(usr)
 
@@ -302,28 +302,12 @@
 	var/atom/A = showing.resolve()
 	if(!A || QDELETED(A))
 		show_bodycamera_tvs(loc)
+	if(get_dist(get_turf(src), get_turf(A)) > 0) // No realtime updates
+		update_feed()
 
-	// Outpost 21 edit begin - Use the turf location, or the distance checks here fail
+/obj/item/clothing/accessory/bodycam/proc/update_feed()
 	if(bcamera.status)
-		// This is awful and hacky... I have no idea how to do it otherwise, I tried everything for 10 hours. This is all that worked.
-		// The bodycam_tvs were getting updates correctly, but the vischunks were not. Updating them manually did not seem to work either.
-		// Things tried include, done in a multitude of ways:
-		// cameranet.updateVisibility(bcamera, 0)
-		// cameranet.updateVisibility(T, 0)
-		// cameranet.updatePortableCamera(bcamera)
-		// cameranet.majorChunkChange(T, 2)
-		// SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, T, get_dir(T,goal), TRUE, 0)
-		// Moved(T, get_dir(T,goal), TRUE, 0)
-		//
-		// Doing it this way is hacky, but likely safe. It's technically keeping the camera in the same place anyway,
-		// I just falsify that it is entering the location from somewhere else. If anyone else wants to take a swing
-		// at this original code here was just show_bodycamera_tvs(loc). I'm concerned over T.Exited(), but this only
-		// runs on clothing already in that turf anyway. I am sorry for this sinful fix. Performance wise however,
-		// this fix has less performance impact then a borg walking around with camera on. - Willbird
-		var/old_loc = loc
-		loc = get_turf(A) // can't move to the same place, so hackydance time
-		forceMove(old_loc,get_dir(loc,get_turf(old_loc)),0)
-	// Outpost 21 edit end
+		SEND_SIGNAL(bcamera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
 
 /obj/item/clothing/accessory/bodycam/update_icon()
 	..()
@@ -349,7 +333,7 @@
 	var/obj/item/TVAssembly/A = new(user)
 	qdel(S)
 	user.put_in_hands(A)
-	to_chat(user, "<span class='notice'>You add the infrared sensor to the robot head.</span>")
+	to_chat(user, span_notice("You add the infrared sensor to the robot head."))
 	user.drop_from_inventory(src)
 	qdel(src)
 
@@ -368,7 +352,7 @@
 		if(0)
 			if(istype(W, /obj/item/robot_parts/robot_component/camera))
 				var/obj/item/robot_parts/robot_component/camera/CA = W
-				to_chat(user, "<span class='notice'>You add the camera module to [src]</span>")
+				to_chat(user, span_notice("You add the camera module to [src]"))
 				user.drop_item()
 				qdel(CA)
 				desc = "This TV camera assembly has a camera module."
@@ -379,22 +363,22 @@
 				user.drop_item()
 				qdel(T)
 				buildstep++
-				to_chat(user, "<span class='notice'>You add the tape recorder to [src]</span>")
+				to_chat(user, span_notice("You add the tape recorder to [src]"))
 		if(2)
 			if(istype(W, /obj/item/stack/cable_coil))
 				var/obj/item/stack/cable_coil/C = W
 				if(!C.use(3))
-					to_chat(user, "<span class='notice'>You need six cable coils to wire the devices.</span>")
+					to_chat(user, span_notice("You need six cable coils to wire the devices."))
 					..()
 					return
 				C.use(3)
 				buildstep++
-				to_chat(user, "<span class='notice'>You wire the assembly</span>")
+				to_chat(user, span_notice("You wire the assembly"))
 				desc = "This TV camera assembly has wires sticking out"
 				return
 		if(3)
 			if(istype(W, /obj/item/tool/wirecutters))
-				to_chat(user, "<span class='notice'> You trim the wires.</span>")
+				to_chat(user, span_notice(" You trim the wires."))
 				buildstep++
 				desc = "This TV camera assembly needs casing."
 				return
@@ -403,7 +387,7 @@
 				var/obj/item/stack/material/steel/S = W
 				buildstep++
 				S.use(1)
-				to_chat(user, "<span class='notice'>You encase the assembly in a Ward-Takeshi casing.</span>")
+				to_chat(user, span_notice("You encase the assembly in a Ward-Takeshi casing."))
 				var/turf/T = get_turf(src)
 				new /obj/item/tvcamera(T)
 				user.drop_from_inventory(src)

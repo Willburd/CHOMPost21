@@ -179,7 +179,7 @@
 		to_chat(user, "The bolt lights wire is cut - The door bolt lights are permanently disabled.")
 		return
 	lights = !lights
-	to_chat(user, "<span class='notice'>Lights are now [lights ? "on." : "off."]</span>")
+	to_chat(user, span_notice("Lights are now [lights ? "on." : "off."]"))
 	update_icon()
 	return TRUE
 
