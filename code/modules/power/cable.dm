@@ -218,10 +218,14 @@ var/list/possible_cable_coil_colours = list(
 		return
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
+		if(H.is_incorporeal())
+			return
 		if(H.shoes && H.shoes.flags & NOCONDUCT)
 			return
 	if(isliving(AM))
 		var/mob/living/M = AM
+		if(M.is_incorporeal())
+			return
 		shock(M,80,1)
 		return
 // Outpost 21 edit end
