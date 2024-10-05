@@ -37,7 +37,7 @@
 	var/static_environ = 0
 
 	var/music = null
-	var/has_gravity = 1
+	var/has_gravity = 1 // Don't check this var directly; use get_gravity() instead
 	var/secret_name = FALSE // This tells certain things that display areas' names that they shouldn't display this area's name.
 	var/obj/machinery/power/apc/apc = null
 	var/no_air = null

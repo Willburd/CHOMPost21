@@ -776,7 +776,7 @@
 /decl/chemical_reaction/instant/drinks/minttea_decaf
 	name = "Decaf Mint Tea"
 	id = "decafminttea"
-	result = "mintteadecaf" // Outpost 21 edit - wrong reagent id
+	result = "mintteadecaf"
 	required_reagents = list("teadecaf" = 5, "mint" = 1)
 	result_amount = 6
 
@@ -790,7 +790,7 @@
 /decl/chemical_reaction/instant/drinks/lemontea_decaf
 	name = "Decaf Lemon Tea"
 	id = "decaflemontea"
-	result = "lemonteadecaf" // Outpost 21 edit - wrong reagent id
+	result = "lemonteadecaf"
 	required_reagents = list("teadecaf" = 5, "lemonjuice" = 1)
 	result_amount = 6
 
@@ -804,7 +804,7 @@
 /decl/chemical_reaction/instant/drinks/limetea_decaf
 	name = "Decaf Lime Tea"
 	id = "decaflimetea"
-	result = "limeteadecaf" // Outpost 21 edit - wrong reagent id
+	result = "limeteadecaf"
 	required_reagents = list("teadecaf" = 5, "limejuice" = 1)
 	result_amount = 6
 
@@ -818,7 +818,7 @@
 /decl/chemical_reaction/instant/drinks/orangetea_decaf
 	name = "Decaf Orange Tea"
 	id = "decaforangetea"
-	result = "orangeteadecaf" // Outpost 21 edit - wrong reagent id
+	result = "orangeteadecaf"
 	required_reagents = list("teadecaf" = 5, "orangejuice" = 1)
 	result_amount = 6
 
@@ -832,7 +832,7 @@
 /decl/chemical_reaction/instant/drinks/berrytea_decaf
 	name = "Decaf Berry Tea"
 	id = "decafberrytea"
-	result = "berryteadecaf" // Outpost 21 edit - wrong reagent id
+	result = "berryteadecaf"
 	required_reagents = list("teadecaf" = 5, "berryjuice" = 1)
 	result_amount = 6
 
