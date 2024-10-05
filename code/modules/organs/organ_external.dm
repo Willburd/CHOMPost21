@@ -912,7 +912,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 			var/gore_sound = "[(status >= ORGAN_ROBOT) ? "sizzling sound of melting metal" : "sickening drips of melting flesh"]"
 			owner.visible_message(
 				span_danger("\The [owner]'s [src.name] sloughs off[gore]!"),\
-				span_moderate("<b>Your [src.name] sloughs off of your body[gore]!</b>"),\
+				span_bolddanger("<b>Your [src.name] sloughs off of your body[gore]!</b>"),\
 				span_danger("You hear the [gore_sound]."))
 		// Outpost 21 edit end
 

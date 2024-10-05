@@ -529,7 +529,7 @@
 			if(active_br.mydna.dna.species == SPECIES_VOX)
 				force_allow = istype(selected_pod,/obj/machinery/clonepod/transhuman/vox) // Vox sleever allows these
 		// Outpost 21 edit end
-		var/can_grow_active = TRUE
+		can_grow_active = TRUE
 		if(!synthetic_capable && active_br.synthetic) //Disqualified due to being synthetic in an organic only.
 			can_grow_active = FALSE
 			set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of synthfabs.", "danger")
