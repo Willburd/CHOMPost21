@@ -47,7 +47,7 @@
 	req_one_access = list(access_heads)
 
 /obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
-	if(get_security_level() in list("green","blue"))
+	if(get_security_level() in list("green","yellow"))
 		return FALSE
 
 	return ..(user)
