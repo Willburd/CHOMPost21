@@ -131,17 +131,15 @@
 /obj/item/tvcamera/process()
 	if(!showing)
 		return PROCESS_KILL
-
+	// Outpost 21 edit begin - Use the turf, or distance checks in process() fail
 	var/atom/A = showing.resolve()
 	if(!A || QDELETED(A))
-		show_tvs(loc)
-
-	// Outpost 21 edit begin - Awful fix to make cameras actually follow if worn, see bodycam/process() for more information
-	if(camera.status)
-		var/old_loc = loc
-		loc = get_turf(A) // can't move to the same place, so hackydance time
-		forceMove(old_loc,get_dir(loc,get_turf(old_loc)),0)
+		show_tvs(get_turf(src))
+	var/turf/T = get_turf(A)
+	if(get_dist(get_turf(src), T) > 0) // No realtime updates
+		show_tvs(T)
 	// Outpost 21 edit end
+		update_feed()
 
 /obj/item/tvcamera/update_icon()
 	..()
@@ -156,6 +154,10 @@
 		H.update_inv_r_hand()
 		H.update_inv_l_hand()
 		H.update_inv_belt()
+
+/obj/item/tvcamera/proc/update_feed()
+	if(camera.status)
+		SEND_SIGNAL(camera, COMSIG_OBSERVER_MOVED) // Forward the movement signal
 
 // CHOMPEdit Start - Bodycam
 // Security Bodycam

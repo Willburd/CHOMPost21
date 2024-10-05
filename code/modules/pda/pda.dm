@@ -62,7 +62,7 @@ var/global/list/obj/item/pda/PDAs = list()
 	var/list/notifying_programs = list()
 	var/retro_mode = 0
 
-	var/gunshot_residue	//CHOMPEDIT - Fixes a bug where guns cannot be operated while wrist pda
+	// var/gunshot_residue // VOREstation edit: prevents wrist PDA from preventing gun use // CHOMPRemove no bandaids
 
 /obj/item/pda/examine(mob/user)
 	. = ..()
