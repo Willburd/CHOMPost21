@@ -82,8 +82,8 @@
 	if(!target && !hithere)
 		return
 
-	if(security_level < SEC_LEVEL_BLUE)
-		set_security_level(SEC_LEVEL_BLUE)
+	if(security_level < SEC_LEVEL_RED)
+		set_security_level(SEC_LEVEL_RED)
 		command_announcement.Announce("Bluespace artillery fire detected. Brace for impact.")
 	log_and_message_admins("[key_name(target)] has been hit by Bluespace Artillery fired by [key_name(user ? user : usr)]")
 
