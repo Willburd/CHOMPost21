@@ -6,13 +6,16 @@
 	// Please, lets just keep this as a joke.
 	var/mob/living/carbon/human/C = src
 	if(C.stat == DEAD)
-		to_chat(C,"<span class='notice'>The dead cannot toot!</span>")
+		to_chat(C,span_notice("The dead cannot toot!"))
 		return
 
 	// find butt
 	var/obj/item/organ/internal/butt/Bu = locate() in C.internal_organs
 	if(!Bu)
-		to_chat(C,"<span class='notice'>Try as you might, you cannot toot without a butt to toot toots from!</span>")
+		to_chat(C,span_notice("Try as you might, you cannot toot without a butt to toot toots from!"))
+		return
+	if(!Bu.can_super_fart())
+		to_chat(C,span_notice("Your butt's safety limiter prevents your tooter from tooting!"))
 		return
 	Bu.structural_integrity -= rand(1,6)
 	if(Bu.structural_integrity < 0)
@@ -112,7 +115,7 @@
 				L.broken()
 		else
 			L.flicker(4)
-	C.visible_message("<span class='danger'>\The [C] unleashes a violent and obnoxious blast from their rear[deathmessage]!</span>","<span class='danger'>You unleash the horrifying power of your rump!</span>");
+	C.visible_message(span_danger("\The [C] unleashes a violent and obnoxious blast from their rear[deathmessage]!"),span_danger("You unleash the horrifying power of your rump!"));
 
 /mob/living/proc/super_fart_flame()
 	if(stat != DEAD)
