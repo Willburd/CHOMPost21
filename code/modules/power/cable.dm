@@ -183,6 +183,8 @@ var/list/possible_cable_coil_colours = list(
 	if(broken && !invisibility)
 		var/image/broke = image('icons/obj/power_cond_damaged.dmi', src, "[d1]-[d2]")
 		broke.appearance_flags = (RESET_COLOR|PIXEL_SCALE|KEEP_APART)
+		broke.plane = OBJ_PLANE
+		broke.layer = HIDING_LAYER // Above things for SAFETY
 		overlays += broke
 		var/image/spark = image('icons/obj/power_cond_damaged.dmi', src, "spark")
 		spark.appearance_flags = (RESET_COLOR|PIXEL_SCALE|RESET_ALPHA|KEEP_APART)
