@@ -84,14 +84,14 @@
 	wake_lock(user)
 
 	// User requests service
-	user.visible_message("<b>[user]</b> wakes [src].", "You wake [src].")
+	user.visible_message(span_bold("[user]") + " wakes [src].", "You wake [src].")
 	var/choice = tgui_alert(user, "What service would you like?", "[src]", list("Health Scan", "Backup Scan", "Cancel"), timeout = 10 SECONDS)
 	if(!choice || choice == "Cancel" || !Adjacent(user) || inoperable() || panel_open)
 		suspend()
 		return
 
 	// Service begins, delay
-	visible_message("<b>\The [src]</b> scans [user] thoroughly!")
+	visible_message(span_bold("\The [src]") + " scans [user] thoroughly!")
 	flick("kiosk_active", src)
 	if(!do_after(user, 10 SECONDS, src, exclusive = TASK_ALL_EXCLUSIVE) || inoperable())
 		suspend()
@@ -101,10 +101,10 @@
 	switch(choice)
 		if("Health Scan")
 			var/health_report = tell_health_info(user)
-			to_chat(user, span_notice("<b>Health report results:</b>")+health_report)
+			to_chat(user, span_boldnotice("Health report results:")+health_report)
 		if("Backup Scan")
 			if(!our_db)
-				to_chat(user, "<span class='notice'><b>Backup scan results:</b></span><br>DATABASE ERROR!")
+				to_chat(user, span_boldnotice("<b>Backup scan results:</b>") + "<br>DATABASE ERROR!")
 			else
 				var/scan_report = do_backup_scan(user)
 				to_chat(user, span_notice("<b>Backup scan results:</b>")+scan_report)
@@ -114,12 +114,12 @@
 
 /obj/machinery/medical_kiosk/proc/tell_health_info(mob/living/user)
 	if(!istype(user))
-		return "<br><span class='warning'>Unable to perform diagnosis on this type of life form.</span>"
+		return "<br>" + span_warning("Unable to perform diagnosis on synthetic life forms.")
 	if(user.isSynthetic())
-		return "<br><span class='warning'>Unable to perform diagnosis on synthetic life forms.</span>"
+		return "<br>" + span_warning("Unable to perform diagnosis on synthetic life forms.")
 	// Outpost 21 edit - Halucination replies
 	if(user.hallucination > 20 && prob(30))
-		return "<br><span class='notice'>[halu_text(user)]</span>"
+		return "<br>" + span_notice("[halu_text(user)]")
 
 	var/problems = 0
 	for(var/obj/item/organ/external/E in user)
@@ -158,44 +158,44 @@
 
 	if(!problems)
 		if(user.getHalLoss() > 0)
-			return "<br><span class='warning'>Mild concussion detected - advising bed rest until patient feels well. No other anatomical issues detected.</span>"
+			return "<br>" + span_warning("Mild concussion detected - advising bed rest until patient feels well. No other anatomical issues detected.")
 		else
-			return "<br><span class='notice'>No anatomical issues detected.</span>"
+			return "<br>" + span_notice("No anatomical issues detected.")
 
 	var/problem_text = ""
 	if(problems & BROKEN_BONES)
-		problem_text += "<br><span class='warning'>Broken bones detected - see a medical professional and move as little as possible.</span>"
+		problem_text += "<br>" + span_warning("Broken bones detected - see a medical professional and move as little as possible.")
 	if(problems & INTERNAL_BLEEDING)
-		problem_text += "<br><span class='danger'>Internal bleeding detected - seek medical attention, ASAP!</span>"
+		problem_text += "<br>" + span_danger("Internal bleeding detected - seek medical attention, ASAP!")
 	if(problems & EXTERNAL_BLEEDING)
-		problem_text += "<br><span class='warning'>External bleeding detected - advising pressure with cloth and bandaging.</span>"
+		problem_text += "<br>" + span_warning("External bleeding detected - advising pressure with cloth and bandaging.")
 	if(problems & SERIOUS_EXTERNAL_DAMAGE)
-		problem_text += "<br><span class='danger'>Severe anatomical damage detected - seek medical attention.</span>"
+		problem_text += "<br>" + span_danger("Severe anatomical damage detected - seek medical attention.")
 	if(problems & SERIOUS_INTERNAL_DAMAGE)
-		problem_text += "<br><span class='danger'>Severe internal damage detected - seek medical attention.</span>"
+		problem_text += "<br>" + span_danger("Severe internal damage detected - seek medical attention.")
 	if(problems & RADIATION_DAMAGE)
-		problem_text += "<br><span class='danger'>Exposure to ionizing radiation detected - seek medical attention.</span>"
+		problem_text += "<br>" + span_danger("Exposure to ionizing radiation detected - seek medical attention.")
 	if(problems & TOXIN_DAMAGE)
-		problem_text += "<br><span class='warning'>Exposure to toxic materials detected - induce vomiting if you have consumed anything recently.</span>"
+		problem_text += "<br>" + span_warning("Exposure to toxic materials detected - induce vomiting if you have consumed anything recently.")
 	if(problems & OXY_DAMAGE)
-		problem_text += "<br><span class='warning'>Blood/air perfusion level is below acceptable norms - use concentrated oxygen if necessary.</span>"
+		problem_text += "<br>" + span_warning("Blood/air perfusion level is below acceptable norms - use concentrated oxygen if necessary.")
 	// Outpost 21 addition begin - malignant organs
 	if(problems & WEIRD_ORGANS)
-		problem_text += "<br><span class='warning'>Anatomical irregularities detected - Please see a medical professional.</span>"
+		problem_text += "<br>" + span_warning("Anatomical irregularities detected - Please see a medical professional.")
 	// Outpost 21 addition end
 	if(problems & HUSKED_BODY)
-		problem_text += "<br><span class='danger'>Anatomical structure lost, resuscitation not possible!</span>"
+		problem_text += "<br>" + span_danger("Anatomical structure lost, resuscitation not possible!")
 
 	return problem_text
 
 /obj/machinery/medical_kiosk/proc/do_backup_scan(mob/living/carbon/human/user)
 	if(!istype(user))
-		return "<br><span class='warning'>Unable to perform full scan. Please see a medical professional.</span>"
+		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
 	if(!user.mind)
-		return "<br><span class='warning'>Unable to perform full scan. Please see a medical professional.</span>"
+		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
 	// Outpost 21 edit begin - VR kiosks don't save
 	if(istype(get_area(src), /area/virtual_reality))
-		return "<br><span class='warning'>Backup simulation performed. Remember to backup when you leave virtual reality!</span>"
+		return "<br>" + span_warning("Backup simulation performed. Remember to backup when you leave virtual reality!")
 	// Outpost 21 edit end
 
 	/* Outpost 21 edit - Nif removal
@@ -211,12 +211,13 @@
 	// Outpost 21 edit begin - what a mean halucination
 	var/area/A = get_area(src)
 	if((user.hallucination > 20 && prob(5)) || (A && A.haunted))
-		return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> Backup scan erased. Body scan erased. You deserve to die."
+		return "<br>" + span_notice("Backup scan completed!") + "<br><b>Note:</b> Backup scan erased. Body scan erased. You deserve to die."
 
-	return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> Please ensure your suit's sensors are properly configured to alert medical and security personal to your current status."
-	// return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> A backup implant is required for automated notifications to the appropriate department in case of incident."
+	return "<br>" + span_notice("Backup scan completed!") + "<br><b>Note:</b> Please ensure your suit's sensors are properly configured to alert medical and security personal to your current status."
+	// return "<br>" + span_notice("Backup scan completed!") + "<br><b>Note:</b> A backup implant is required for automated notifications to the appropriate department in case of incident."
 	// Outpost 21 edit end
 
+// Outpost 21 edit begin - kiosk announcements
 /obj/machinery/medical_kiosk/process()
 	if(inoperable() || panel_open)
 		return
@@ -246,7 +247,6 @@
 			msgcooldown = 60 SECONDS
 	return
 
-// Outpost 21 edit begin - kiosk announcements
 /obj/machinery/medical_kiosk/proc/halu_text(mob/living/target)
 	if(prob(15))
 		return "You're not who you say you are."
