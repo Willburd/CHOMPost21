@@ -3,7 +3,7 @@
 //	default = FALSE
 
 /datum/config_entry/flag/use_jobwhitelist
-	default = FALSE // Outpost 21 edit - default state false, otherwise configs files can't turn it off
+	default = FALSE
 
 // FIXME: Unused
 ///datum/config_entry/flag/emojis
