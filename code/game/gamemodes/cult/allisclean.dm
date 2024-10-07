@@ -12,6 +12,8 @@ var/global/list/allisclean_list = list()
 	dissipate = 0 // Do we lose energy over time?
 	grav_pull = 12 //How many tiles out do we pull?
 	consume_range = 3 //How many tiles out do we eat
+
+	movement_type = UNSTOPPABLE // Because allisclean doesn't destroy walls
 	var/list/vents = list()
 
 /obj/singularity/allisclean/New()
