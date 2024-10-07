@@ -88,6 +88,14 @@
 
 //  A CKEYS
 
+// Astra - // Astra
+/datum/gear/fluff/astra_ritualknife
+	path = /obj/item/material/knife/ritual/fluff/astra
+	display_name = "Polished Ritual Knife"
+	description = "A well kept strange ritual knife, There is a small tag with the name 'Astra Ether' on it. They are probably looking for this."
+	ckeywhitelist = list("astraether")
+	character_name = list("Astra Ether")
+
 //  B CKEYS
 
 //  C CKEYS
