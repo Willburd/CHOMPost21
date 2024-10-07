@@ -43,6 +43,9 @@
 			if(department == -1 || A.holomap_color == department || A.holomap_color == HOLOMAP_AREACOLOR_MEDICAL || A.holomap_color == HOLOMAP_AREACOLOR_COMMAND || A.holomap_color == HOLOMAP_AREACOLOR_CARGO)
 				finalareas += A
 
+	// special behavior on bunker
+	finalareas -= /area/muriki/crew/bunker
+
 /datum/event/bluespace_shelling/announce()
 	command_announcement.Announce("Attention [station_name()]. Bluespace shelling confirmed for [department_name]. Fire for Effect. All crew must retreat to a safe distance, seek shelter, and remain in place until the all clear is given. ETA 30 seconds.", "Bluespace Shelling")
 	set_security_level(seclevel)
@@ -57,29 +60,28 @@
 			boom(2)
 			if(prob(20))
 				boom(2)
-			if(prob(20))
-				boom(1)
-			if(prob(20))
+			if(prob(10))
 				boom(1)
 
 			if(spawncount == 1)
 				command_announcement.Announce("Attention [station_name()]. Commencing final volley, brace for impact.", "Bluespace Shelling")
 		else
 			// end it
-			boom(3)
 			boom(2)
 			boom(2)
-			boom(1)
-			boom(1)
-			boom(1)
+			boom(2)
+			if(prob(20))
+				boom(1)
+			if(prob(20))
+				boom(1)
 			endWhen = 0 // Now
 			command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. All clear. Assess damage, and begin repair operations.", "Bluespace Shelling")
 		spawncount--
 
 /datum/event/bluespace_shelling/proc/boom(var/mult)
-	var/hitsize = rand(1,3) * mult
+	var/hitsize = rand(1,2) * mult
 	if(spawncount <= 0)
-		hitsize = rand(3,7) * mult // final shots
+		hitsize = rand(2,5) * mult // final shots
 
 	var/escape = 20
 	while(escape > 0) // reattempt
@@ -90,7 +92,7 @@
 			break
 		escape--
 
-	shotdelaytime = world.time + (rand(hitsize,hitsize * 3) SECONDS)
+	shotdelaytime = world.time + (rand(hitsize * 2,hitsize * 5) SECONDS)
 
 
 /datum/event/bluespace_shelling/engineering
