@@ -6008,7 +6008,7 @@
 "rkZ" = (/obj/structure/cable/green{d1 = 4; d2 = 8; icon_state = "4-8"},/obj/effect/floor_decal/corner/red{dir = 10},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/obj/item/radio/intercom/department/security{pixel_y = -21},/obj/item/radio/intercom{name = "Station Intercom (General)"; pixel_y = -32},/turf/simulated/floor/tiled/kafel_full,/area/muriki/bathroom/security)
 "rla" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 4},/turf/simulated/floor/tiled/dark,/area/security/tactical)
 "rlb" = (/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 5},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 9},/turf/simulated/floor/tiled/techfloor,/area/engineering/refinery/tankstorage)
-"rlf" = (/obj/structure/bed/chair/bay/comfy/red{dir = 8},/obj/effect/floor_decal/spline/plain{dir = 6},/obj/structure/disposalpipe/segment,/turf/simulated/floor/carpet/bcarpet,/area/security/briefing_room)
+"rlf" = (/obj/structure/bed/chair/bay/comfy/red{dir = 8},/obj/effect/floor_decal/spline/plain{dir = 6},/obj/structure/disposalpipe/segment,/obj/effect/landmark/start{name = "Brig Physician"},/turf/simulated/floor/carpet/bcarpet,/area/security/briefing_room)
 "rls" = (/obj/structure/closet/radiation,/turf/simulated/floor/tiled/milspec,/area/engineering/engine_monitoring)
 "rlA" = (/obj/effect/forcefield{desc = "You can't get in. Heh."; invisibility = 60; layer = 1; name = "Blocker"},/obj/machinery/light{dir = 1},/turf/simulated/shuttle/floor/voidcraft,/area/muriki/arriveelev)
 "rlM" = (/obj/effect/floor_decal/milspec/color/red/half,/obj/structure/disposalpipe/segment{dir = 4},/turf/simulated/floor/tiled/milspec,/area/security/mechent)
