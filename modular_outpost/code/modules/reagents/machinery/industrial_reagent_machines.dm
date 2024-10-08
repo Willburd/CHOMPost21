@@ -18,6 +18,12 @@
 	update_neighbours()
 	update_icon()
 
+/obj/machinery/reagent_refinery/Destroy()
+	if(reagents.reagent_list.len && reagents.total_volume > 30)
+		visible_message(span_danger("\The [src] splashes everywhere as it is disassembled!"))
+		reagents.splash_area(get_turf(src),2)
+	. = ..()
+
 /obj/machinery/reagent_refinery/Moved(atom/old_loc, direction, forced)
 	. = ..()
 	update_icon()
