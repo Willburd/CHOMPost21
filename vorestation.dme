@@ -591,6 +591,7 @@
 #include "code\datums\supplypacks\engineering_op.dm"
 #include "code\datums\supplypacks\hardsuits.dm"
 #include "code\datums\supplypacks\hospitality.dm"
+#include "code\datums\supplypacks\hospitality_op.dm"
 #include "code\datums\supplypacks\hydroponics.dm"
 #include "code\datums\supplypacks\materials.dm"
 #include "code\datums\supplypacks\materials_yw.dm"
