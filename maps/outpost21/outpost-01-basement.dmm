@@ -3217,7 +3217,7 @@
 "bjW" = (/obj/effect/floor_decal/spline/fancy/wood/corner{dir = 4},/obj/machinery/light_switch{pixel_x = -25; pixel_y = 30},/obj/effect/floor_decal/steeldecal/steel_decals10{dir = 8},/obj/effect/floor_decal/steeldecal/steel_decals10{dir = 1},/turf/simulated/floor/wood,/area/quartermaster/breakroom)
 "bjX" = (/obj/structure/disposalpipe/segment,/turf/simulated/floor/wood,/area/quartermaster/breakroom)
 "bjY" = (/obj/effect/floor_decal/spline/plain{dir = 10},/turf/simulated/floor/carpet/bcarpet,/area/quartermaster/breakroom)
-"bjZ" = (/obj/item/toy/plushie/pillow/green,/turf/simulated/floor/carpet/bcarpet,/area/quartermaster/breakroom)
+"bjZ" = (/obj/structure/hookah,/turf/simulated/floor/carpet/bcarpet,/area/quartermaster/breakroom)
 "bka" = (/obj/structure/bed/chair/sofa/left/brown{dir = 8},/obj/effect/landmark/start/cargo,/turf/simulated/floor/carpet/bcarpet,/area/quartermaster/breakroom)
 "bkb" = (/obj/structure/mirror{dir = 8; pixel_x = -32},/obj/structure/sink{dir = 8; pixel_x = -12},/turf/simulated/floor/tiled/old_tile/white,/area/muriki/bathroom/cargolower)
 "bkc" = (/obj/structure/cable/green{d1 = 1; d2 = 2; icon_state = "1-2"},/obj/machinery/atmospherics/pipe/simple/hidden/supply{dir = 6},/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{dir = 6},/turf/simulated/floor/tiled/old_tile/white,/area/muriki/bathroom/cargolower)
