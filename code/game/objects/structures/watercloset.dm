@@ -515,8 +515,14 @@
 	anchored = TRUE
 	var/busy = 0 	//Something's being washed at the moment
 
-/obj/structure/sink/MouseDrop_T(var/obj/item/thing, var/mob/user)
+/obj/structure/sink/MouseDrop_T(var/obj/thing, var/mob/user) // Outpost 21 edit - obj/item/thing -> obj/item
 	..()
+	// Outpost 21 edit begin - snowflake handling for draining hookah
+	if(istype(thing,/obj/item/hookah_pipe))
+		var/obj/item/hookah_pipe/P = thing
+		if(P.owner)
+			thing = P.owner // Forward to owner, instead of butchering this code further. Rest of this proc handles it normally!
+	// Outpost 21 edit end
 	if(!istype(thing) || !thing.is_open_container())
 		return ..()
 	if(!usr.Adjacent(src))
