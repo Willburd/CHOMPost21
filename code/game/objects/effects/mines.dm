@@ -96,10 +96,15 @@
 		GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
 		explode(M)
 
+	if(istype(M, /obj/vehicle)) // Outpost 21 edit - why do vehicles not trigger them before?
+		GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
+		explode(M)
+
 	if(istype(M, /mob/living/))
 		var/mob/living/L = M
 		if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
-			GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
+			if(L.client) // Outpost 21 edit - this is a funny tracker
+				GLOB.landmines_stepped_on_roundstat++
 			explode(L)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)

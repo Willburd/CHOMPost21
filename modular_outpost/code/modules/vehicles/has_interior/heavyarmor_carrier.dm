@@ -6,6 +6,7 @@
 
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "sec_apc"
+	base_icon = "sec_apc"
 
 	health = 900
 	maxhealth = 900
@@ -30,6 +31,7 @@
 
 	icon = 'icons/obj/pointdefense.dmi'
 	icon_state = "pointdefense2"
+	base_icon = "pointdefense2"
 
 	projectile = /obj/item/projectile/bullet/pellet/shotgun/flak
 	fire_sound = 'sound/weapons/Gunshot_shotgun.ogg'
@@ -44,6 +46,7 @@
 
 	icon = 'icons/obj/pointdefense.dmi'
 	icon_state = "pointdefense2"
+	base_icon = "pointdefense2"
 
 	projectile = /obj/item/projectile/bullet/pistol/medium
 	fire_sound = 'sound/weapons/Gunshot_machinegun.ogg'

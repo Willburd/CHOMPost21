@@ -7,6 +7,7 @@
 
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "sec_tank"
+	base_icon = "sec_tank"
 
 	health = 1200
 	maxhealth = 1200
@@ -41,6 +42,7 @@
 
 	icon = 'icons/obj/vehicles_224x224.dmi'
 	icon_state = "tank_turret"
+	base_icon = "tank_turret"
 
 	// graphics offset of lorge boi
 	old_x = -64

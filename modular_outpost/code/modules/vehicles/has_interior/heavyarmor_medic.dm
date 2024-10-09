@@ -7,6 +7,7 @@
 
 	icon = 'icons/obj/vehicles_160x160.dmi'
 	icon_state = "med_tank"
+	base_icon = "med_tank"
 
 	health = 800
 	maxhealth = 800
