@@ -3,6 +3,7 @@
 
 /proc/spacevine_infestation(var/potency_min=70, var/potency_max=100, var/maturation_min=5, var/maturation_max=15)
 	spawn() //to stop the secrets panel hanging
+		/* Outpost 21 edit begin - Use landmarks instead of area checks
 		var/list/turf/simulated/floor/turfs = list() //list of all the empty floor turfs in the hallway areas //CHOMPedit start: keeping old method over upstream's landmark method
 		for(var/areapath in typesof(/area/hallway))
 			var/area/A = locate(areapath)
@@ -11,7 +12,10 @@
 					turfs += F
 
 		if(turfs.len) //Pick a turf to spawn at if we can
-			var/turf/simulated/floor/T = pick(turfs) //CHOMPedit end
+		*/
+		//var/turf/simulated/floor/T = pick(turfs) //CHOMPedit end
+		var/turf/simulated/floor/T = pick(vinestart)
+		if(T)
 			var/datum/seed/seed = SSplants.create_random_seed(1)
 			seed.set_trait(TRAIT_SPREAD,2)             // So it will function properly as vines.
 			seed.set_trait(TRAIT_POTENCY,rand(potency_min, potency_max)) // 70-100 potency will help guarantee a wide spread and powerful effects.
@@ -27,6 +31,7 @@
 			message_admins(span_notice("Event: Spacevines spawned at [T.loc] ([T.x],[T.y],[T.z])"))
 			return
 		message_admins(span_notice("Event: Spacevines failed to find a viable turf."))
+		// Outpost 21 edit end
 
 /obj/effect/dead_plant
 	anchored = TRUE
