@@ -77,15 +77,14 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jellyfish School",			/datum/event/jellyfish_migration,		10,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_SECURITY = 15, ASSIGNMENT_MEDICAL = 3), TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Supply Demand",			/datum/event/supply_demand,				1,		list(ASSIGNMENT_ANY = 5, ASSIGNMENT_SCIENCE = 15, ASSIGNMENT_GARDENER = 10, ASSIGNMENT_ENGINEER = 10, ASSIGNMENT_MEDICAL = 15), TRUE, min_jobs = list(ASSIGNMENT_CARGO = 1)), //YW EDIT, Readded
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Wormholes",				/datum/event/wormholes, 				20),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Vines",				/datum/event/spacevine, 				15,		list(ASSIGNMENT_ENGINEER = 7, ASSIGNMENT_GARDENER = 2)	, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Atmos Leak",				/datum/event/atmos_leak, 				10,		list(ASSIGNMENT_ENGINEER = 25)							, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Vines",				/datum/event/spacevine, 				8,		list(ASSIGNMENT_ENGINEER = 3, ASSIGNMENT_GARDENER = 2)	, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Atmos Leak",				/datum/event/atmos_leak, 				10,		list(ASSIGNMENT_ENGINEER = 15)							, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Psychic Screach",			/datum/event/psychic_screach,			1, 		list(ASSIGNMENT_ENGINEER = 1)							, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Chu Pack",					/datum/event/chu_infestation,			0, 		list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 1)	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jil Pack",					/datum/event/jil_infestation,			3, 		list(ASSIGNMENT_ENGINEER = 1,ASSIGNMENT_SECURITY = 1)	, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virus Outbreak", 			/datum/event/viral_infection,			5, 		list(ASSIGNMENT_MEDICAL = 1)							, TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Phone Spiders",			/datum/event/phone_spiders,				3),
-
-
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Moss",				/datum/event/spacemoss, 				12,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_GARDENER = 2)		, TRUE),
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Escaped Slimes",			/datum/event/escaped_slimes, 			5,		list(ASSIGNMENT_SCIENCE = 1, ASSIGNMENT_ENGINEER = 5, ASSIGNMENT_SECURITY = 5), TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			20,		list(ASSIGNMENT_ANY = 3)								, FALSE)
 	)
