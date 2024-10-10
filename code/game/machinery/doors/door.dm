@@ -79,6 +79,11 @@
 	density = FALSE
 	update_nearby_tiles()
 	. = ..()
+	// Outpost 21 edit begin - Trigger claymores if door is destroyed
+	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
+	if(las)
+		las.Trigger(src)
+	// Outpost 21 edit end
 
 /obj/machinery/door/process()
 	if(close_door_at && world.time >= close_door_at)
@@ -395,6 +400,13 @@
 	update_icon()
 	set_opacity(0)
 	operating = 0
+
+	// Outpost 21 edit begin - Trigger claymores if doors open
+	spawn(5)
+		var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
+		if(las)
+			las.Trigger(src)
+	// Outpost 21 edit end
 
 	if(autoclose)
 		autoclose_in(next_close_wait())

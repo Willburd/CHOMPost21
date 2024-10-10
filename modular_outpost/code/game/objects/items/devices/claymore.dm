@@ -61,6 +61,14 @@
 	while(TRUE)
 		// next turf, check if solid
 		T = get_turf(get_step(T,dir))
+		// Check for opening doors
+		var/obj/machinery/door/D = locate() in T.contents
+		if(D && D.density)
+			var/obj/effect/step_trigger/claymore_laser/las = new(T)
+			las.owner = WEAKREF(src)
+			las.invisibility = 99 // hide this one!
+			lasers.Add(las)
+			return
 		if(!T.CanPass(src, T))
 			return
 		for(var/atom/A in T)
