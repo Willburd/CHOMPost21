@@ -96,6 +96,13 @@
 	ckeywhitelist = list("astraether")
 	character_name = list("Astra Ether")
 
+/datum/gear/fluff/astra_jobledger
+	path = /obj/item/book/ledger/astra
+	display_name = "Job Ledger"
+	description = "A small book keeping track of jobs performed for the station."
+	ckeywhitelist = list("astraether")
+	character_name = list("Astra Ether")
+
 //  B CKEYS
 
 //  C CKEYS

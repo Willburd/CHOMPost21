@@ -213,6 +213,54 @@
 	item_state = "flag_fifteen"
 
 
+// Job ledgers
+/obj/item/book/ledger
+	name = "Job Ledger"
+	icon = 'icons/obj/library_op.dmi'
+	icon_state = "ledger"
+	item_state = "ledger"
+	author = "ESHUI"
+	title = "Job Ledger"
+	due_date = 0 // Game time in 1/10th seconds
+	unique = 1   // 0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
+	var/ledge = list()
+
+/obj/item/book/ledger/Initialize()
+	. = ..()
+	dat = {"<html>
+			<head>
+			<style>
+			h1 {font-size: 18px; margin: 15px 0px 5px;}
+			h2 {font-size: 15px; margin: 15px 0px 5px;}
+			h3 {font-size: 13px; margin: 15px 0px 5px;}
+			li {margin: 2px 0px 2px 15px;}
+			ul {margin: 5px; padding: 0px;}
+			ol {margin: 5px; padding: 0px 15px;}
+			body {font-size: 13px; font-family: Verdana;}
+			</style>
+			</head>
+			<body>
+			<h1>Work Orders</h1>
+			<ol>"}
+	for(var/list/L in ledge)
+		// Always should be safe... If this somehow gets reinit with custom data.
+		L[1] = sanitizeSafe(L[1])
+		L[2] = sanitizeSafe(L[2])
+		L[3] = sanitizeSafe(L[3])
+		dat += "<li><b>\[[L[1]]\][L[2]]:</b> [L[3]]</li>"
+	dat += {"</ol>
+				</body>
+			</html>
+			"}
+
+/obj/item/book/ledger/astra
+	name = "Job Ledger (Astra)"
+	title = "Job Ledger (Astra)"
+	ledge = list(
+		list("5-Oct-2568","Chu Infestation","304T")
+	)
+
+
 // TEMP DEFINITIONS SOME NOT MEANT FOR HERE! These exist purely to placate loadout code's typechecks
 /obj/item/toy/plushie/fluff
 	name = "TEMP PLUSH BASE - DELETE ONCE WE ADD A PLUSH"
