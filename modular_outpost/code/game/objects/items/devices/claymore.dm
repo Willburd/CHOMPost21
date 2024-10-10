@@ -28,21 +28,22 @@
 	. = ..()
 
 /obj/effect/mine/claymore/explode(var/mob/living/M)
-	if(!triggered)
-		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-		triggered = 1
-		s.set_up(3, 1, src)
-		s.start()
-		var/turf/O = get_turf(src)
-		if(!O)
-			return
-		var/obj/item/projectile/P = new /obj/item/projectile/bullet/shotgun/buckshot/shell(src)
-		var/target_zone = pick(BP_HEAD, BP_TORSO, BP_GROIN, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
-		P.launch_projectile_from_turf(get_step(get_turf(loc),dir), target_zone, src)
-		visible_message("\The [src.name] detonates!")
-		spawn(0)
-			qdel(s)
-			qdel(src)
+	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
+		return
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	var/turf/O = get_turf(src)
+	if(!O)
+		return
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/shotgun/buckshot/shell(src)
+	var/target_zone = pick(BP_HEAD, BP_TORSO, BP_GROIN, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
+	P.launch_projectile_from_turf(get_step(get_turf(loc),dir), target_zone, src)
+	visible_message("\The [src.name] detonates!")
+	spawn(0)
+		qdel(s)
+		qdel(src)
 
 /obj/effect/mine/claymore/Crossed(atom/movable/AM as mob|obj)
 	if(ismob(AM))
