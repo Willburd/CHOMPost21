@@ -46,6 +46,8 @@
 		qdel(src)
 
 /obj/effect/mine/claymore/Crossed(atom/movable/AM as mob|obj)
+	if(istype(AM, /mob/observer) || AM.is_incorporeal())
+		return
 	if(ismob(AM))
 		var/mob/M = AM
 		if(M.m_intent == "walk")
