@@ -5259,6 +5259,7 @@
 #include "modular_outpost\code\game\objects\effects\map_effects\terraformer_glands.dm"
 #include "modular_outpost\code\game\objects\items\candybowl.dm"
 #include "modular_outpost\code\game\objects\items\whoopiecushion.dm"
+#include "modular_outpost\code\game\objects\items\devices\claymore.dm"
 #include "modular_outpost\code\game\objects\items\devices\laserdesignator.dm"
 #include "modular_outpost\code\game\objects\items\weapons\lasertagknife.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\frame.dm"

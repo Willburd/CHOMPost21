@@ -445,6 +445,12 @@
 	if(fire)
 		qdel(fire)
 
+	// Outpost 21 edit begin - Same as fire above, but for claymores
+	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
+	if(las)
+		las.Trigger(src)
+	// Outpost 21 edit end
+
 	return 1
 
 /obj/machinery/door/proc/requiresID()

@@ -47,6 +47,9 @@
 	s.set_up(3, 1, src)
 	s.start()
 
+	if(ismob(M) && M.client) // Outpost 21 edit - this is a funny tracker
+		GLOB.landmines_stepped_on_roundstat++
+
 	if(trap)
 		trigger_trap(M)
 		visible_message("\The [src.name] flashes as it is triggered!")
@@ -93,18 +96,14 @@
 		return
 
 	if(istype(M, /obj/mecha))
-		GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
 		explode(M)
 
 	if(istype(M, /obj/vehicle)) // Outpost 21 edit - why do vehicles not trigger them before?
-		GLOB.landmines_stepped_on_roundstat++ // Outpost 21 edit - this is a funny tracker
 		explode(M)
 
 	if(istype(M, /mob/living/))
 		var/mob/living/L = M
 		if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
-			if(L.client) // Outpost 21 edit - this is a funny tracker
-				GLOB.landmines_stepped_on_roundstat++
 			explode(L)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
@@ -343,6 +342,10 @@
 /obj/item/mine/proc/prime(mob/user as mob, var/explode_now = FALSE)
 	visible_message("\The [src.name] beeps as the priming sequence completes.")
 	var/obj/effect/mine/R = new minetype(get_turf(src))
+	// Outpost 21 edit begin - Directional claymore
+	if(istype(R,/obj/effect/mine/claymore))
+		R.dir = user.dir
+	// Outpost 21 edit end
 	src.transfer_fingerprints_to(R)
 	R.add_fingerprint(user)
 	if(trap)
