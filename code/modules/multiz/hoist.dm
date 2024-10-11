@@ -24,12 +24,13 @@
 	can_buckle = TRUE
 	anchored = TRUE
 	description_info = "Click and drag someone (or any object) to this to attach them to the clamp. If you are within reach, when you click and drag this to a turf adjacent to you, it will move the attached object there and release it."
+	plane = ABOVE_MOB_PLANE // Outpost 21 edit - better vis
 
 /obj/effect/hoist_hook/attack_hand(mob/living/user)
 	return // This has to be overridden so that it works properly.
 
 /obj/effect/hoist_hook/MouseDrop_T(atom/movable/AM,mob/user)
-	if (use_check(user, USE_DISALLOW_SILICONS))
+	if (use_check(user, 0)) // Outpost 21 edit - allow silicons
 		return
 
 	if (!AM.simulated || AM.anchored)
@@ -54,7 +55,7 @@
 	..()
 	if(!Adjacent(usr) || !dest.Adjacent(usr)) return // carried over from the default proc
 
-	if (!ishuman(usr))
+	if (!(ishuman(usr) || issilicon(usr))) // Outpost 21 edit - allow silicons
 		return
 
 	if (usr.incapacitated())
@@ -172,9 +173,13 @@
 				source_hoist.break_hoist()
 			return
 
+// Outpost 21 edit begin - allow silicons
+/obj/structure/hoist/attack_robot(mob/living/user)
+	attack_hand(user)
+ // Outpost 21 edit end
 
 /obj/structure/hoist/attack_hand(mob/living/user)
-	if (!ishuman(user))
+	if (!(ishuman(user) || issilicon(user))) // Outpost 21 edit - allow silicons
 		return
 
 	if (user.incapacitated())
@@ -223,7 +228,7 @@
 	set category = "Object"
 	set src in range(1)
 
-	if (!ishuman(usr))
+	if (!(ishuman(usr) || issilicon(usr))) // Outpost 21 edit - allow silicons
 		return
 
 	if (isobserver(usr) || usr.incapacitated())
