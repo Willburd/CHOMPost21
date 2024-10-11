@@ -31,6 +31,7 @@ export type Data = {
     author: string;
     censored: BooleanLike;
     messages: {
+      title: string; // Outpost 21 edit - show title
       body: string;
       img: string | null;
       type: string;

@@ -84,7 +84,13 @@ export const NewscasterViewSelected = (props: { setScreen: Function }) => {
       {(!!viewing_channel.messages.length &&
         viewing_channel.messages.map((message) => (
           <Section key={message.ref}>
-            - {decodeHtmlEntities(message.body)}
+            {
+              decodeHtmlEntities(message.title) +
+                ' - ' +
+                decodeHtmlEntities(
+                  message.body,
+                ) /* Outpost 21 edit - show title */
+            }
             {!!message.img && (
               <Box>
                 <Image src={'data:image/png;base64,' + message.img} />
