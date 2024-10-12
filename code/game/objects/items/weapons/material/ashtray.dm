@@ -3,7 +3,7 @@ var/global/list/ashtray_cache = list()
 /obj/item/material/ashtray
 	name = "ashtray"
 	icon = 'icons/obj/objects.dmi'
-	icon_state = "blank"
+	icon_state = "ashtray" // Outpost 21 edit - Was "blank" but that makes mapping them suck
 	randpixel = 5
 	force_divisor = 0.1
 	thrown_force_divisor = 0.1
