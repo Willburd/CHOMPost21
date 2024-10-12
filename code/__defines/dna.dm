@@ -13,6 +13,7 @@
 #define NOCLONE         8
 #define LASER           9  // Harm intent - click anywhere to shoot lasers from eyes.
 #define HEAL            10 // Healing people with hands.
+#define FLASHPROOF		11 // Outpost 21 edit - Flashproof eye genes replacing nif
 
 #define SKELETON      29
 #define PLANT         30

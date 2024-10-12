@@ -85,6 +85,10 @@
 				H.nif.notify("High intensity light detected, and blocked!",TRUE)
 				continue
 			*/
+			// Outpost 21 edit begin - flashproof mutation replacing nif code
+			if(FLASHPROOF in H.mutations)
+				continue
+			// Outpost 21 edit end
 			//VOREStation Edit End
 			if(!H.eyecheck() <= 0)
 				continue

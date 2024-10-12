@@ -57,6 +57,10 @@
 							continue
 						//VOREStation Edit End
 						*/
+						// Outpost 21 edit begin - flashproof mutation replacing nif code
+						if(FLASHPROOF in H.mutations)
+							continue
+						// Outpost 21 edit end
 						if(!H.eyecheck() <= 0)
 							continue
 						flash_time *= H.species.flash_mod

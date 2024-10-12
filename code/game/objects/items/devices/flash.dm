@@ -177,6 +177,12 @@
 			H.nif.notify("High intensity light detected, and blocked!",TRUE)
 	//VOREStation Add End
 	*/
+	// Outpost 21 edit begin - flashproof mutation replacing nif code
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+		if(FLASHPROOF in H.mutations)
+			flashfail = 1
+	// Outpost 21 edit end
 
 	if(iscarbon(M) && !flashfail) //VOREStation Add - NIF
 		var/mob/living/carbon/C = M

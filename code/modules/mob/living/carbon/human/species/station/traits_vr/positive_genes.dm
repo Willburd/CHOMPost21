@@ -250,3 +250,16 @@
 	. = ..()
 	if(!(/mob/living/proc/super_fart in S.inherent_verbs))
 		remove_verb(H, /mob/living/proc/super_fart)
+
+/datum/trait/positive/superpower_flashproof
+	name = "Flash Resistance"
+	desc = "Your eyes are protected against sudden flashes of intense light."
+	cost = 5
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	activity_bounds = DNA_HARDER_BOUNDS
+	hidden = TRUE // Cannot start with superpowers
+
+	mutation = FLASHPROOF
+	activation_message="Your eyes feel more robust, how nifty..."
