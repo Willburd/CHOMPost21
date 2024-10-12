@@ -1365,7 +1365,6 @@
 /datum/reagent/leporazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	// Outpost 21 edit begin - use human species for bodytemp instead of assuming normal temp
 	var/temp = 310
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -1374,7 +1373,6 @@
 		M.bodytemperature = max(temp, M.bodytemperature - (40 * TEMPERATURE_DAMAGE_COEFFICIENT))
 	else if(M.bodytemperature < temp+1)
 		M.bodytemperature = min(temp, M.bodytemperature + (40 * TEMPERATURE_DAMAGE_COEFFICIENT))
-	// Outpost 21 edit end
 
 /datum/reagent/rezadone
 	name = "Rezadone"
