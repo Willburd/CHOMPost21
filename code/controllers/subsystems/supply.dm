@@ -97,6 +97,10 @@ SUBSYSTEM_DEF(supply)
 							"quantity" = 1
 						)
 
+					// Outpost 21 edit - Why do you pain me so, janihud can be SOLD... Upstream needs to figure this out, bandaids everywhere.
+					if(istype(A,/obj/effect/decal/jan_hud))
+						continue
+
 					// Sell manifests
 					if(find_slip && istype(A,/obj/item/paper/manifest))
 						var/obj/item/paper/manifest/slip = A
