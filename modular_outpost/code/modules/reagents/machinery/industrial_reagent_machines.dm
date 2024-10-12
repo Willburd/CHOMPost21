@@ -3,11 +3,6 @@
 	var/amount_per_transfer_from_this = 120
 	var/possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60,80,100,120)
 
-	// It's dumb that this needs to be copied here.
-	var/climbable = TRUE
-	var/list/climbers
-	var/climb_delay = 3.5 SECONDS
-
 /obj/machinery/reagent_refinery/Initialize(mapload)
 	. = ..()
 	// reagent control
@@ -147,73 +142,6 @@
 		do_climb(target)
 	else
 		return ..()
-
-/obj/machinery/reagent_refinery/proc/can_climb(var/mob/living/user, post_climb_check=0)
-	if (!climbable || !can_touch(user) || (!post_climb_check && (user in climbers)))
-		return 0
-
-	if (!user.Adjacent(src))
-		to_chat(user, "<span class='danger'>You can't climb there, the way is blocked.</span>")
-		return 0
-
-	var/obj/occupied = turf_is_crowded()
-	if(occupied)
-		to_chat(user, "<span class='danger'>There's \a [occupied] in the way.</span>")
-		return 0
-	return 1
-
-/obj/machinery/reagent_refinery/proc/turf_is_crowded()
-	var/turf/T = get_turf(src)
-	if(!T || !istype(T))
-		return "empty void"
-	if(T.density)
-		return T
-	for(var/obj/O in T.contents)
-		if(istype(O,/obj/machinery/reagent_refinery))
-			var/obj/machinery/reagent_refinery/S = O
-			if(S.climbable) continue
-		if(O && O.density && !(O.flags & ON_BORDER)) //ON_BORDER structures are handled by the Adjacent() check.
-			return O
-	return 0
-
-/obj/machinery/reagent_refinery/proc/do_climb(var/mob/living/user)
-	if (!can_climb(user))
-		return
-
-	usr.visible_message("<span class='warning'>[user] starts climbing onto \the [src]!</span>")
-	LAZYDISTINCTADD(climbers, user)
-
-	if(!do_after(user,(issmall(user) ? climb_delay * 0.6 : climb_delay)))
-		LAZYREMOVE(climbers, user)
-		return
-
-	if (!can_climb(user, post_climb_check=1))
-		LAZYREMOVE(climbers, user)
-		return
-
-	usr.forceMove(climb_to(user))
-
-	if (get_turf(user) == get_turf(src))
-		usr.visible_message("<span class='warning'>[user] climbs onto \the [src]!</span>")
-	LAZYREMOVE(climbers, user)
-
-/obj/machinery/reagent_refinery/proc/climb_to(var/mob/living/user)
-	return get_turf(src)
-
-/obj/machinery/reagent_refinery/proc/can_touch(var/mob/user)
-	if (!user)
-		return 0
-	if(!Adjacent(user))
-		return 0
-	if (user.restrained() || user.buckled)
-		to_chat(user, "<span class='notice'>You need your hands and legs free for this.</span>")
-		return 0
-	if (user.stat || user.paralysis || user.sleeping || user.lying || user.weakened)
-		return 0
-	if (isAI(user))
-		to_chat(user, "<span class='notice'>You need hands for this.</span>")
-		return 0
-	return 1
 
 /obj/machinery/reagent_refinery/on_reagent_change(changetype)
 	update_icon()

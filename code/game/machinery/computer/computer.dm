@@ -9,9 +9,9 @@
 	idle_power_usage = 300
 	active_power_usage = 300
 	blocks_emissive = FALSE
-	var/climbable = TRUE
-	var/list/climbers
-	var/climb_delay = 3.5 SECONDS
+	//var/climbable = TRUE // Outpost 21 edit - These are moved up to /obj/machinery
+	//var/list/climbers
+	//var/climb_delay = 3.5 SECONDS
 	var/processing = 0
 
 	var/icon_keyboard = "generic_key"
@@ -153,6 +153,7 @@
 	else
 		return ..()
 
+/* Outpost 21 edit - Moved to /obj/machinery
 /obj/machinery/computer/proc/can_climb(var/mob/living/user, post_climb_check=0)
 	if (!climbable || !can_touch(user) || (!post_climb_check && (user in climbers)))
 		return 0
@@ -220,3 +221,4 @@
 		to_chat(user, span_notice("You need hands for this."))
 		return 0
 	return 1
+*/

@@ -58,3 +58,20 @@
 			new new_machine(T)
 			qdel(src)
 	return ..()
+
+// Outpost 21 edit begin - Climbing is kinda critical for these
+/obj/machinery/the_singularitygen/verb/climb_on()
+	set name = "Climb structure"
+	set desc = "Climbs onto a structure."
+	set category = "Object"
+	set src in oview(1)
+
+	do_climb(usr)
+
+/obj/machinery/the_singularitygen/MouseDrop_T(mob/target, mob/user)
+	var/mob/living/H = user
+	if(istype(H) && can_climb(H) && target == user)
+		do_climb(target)
+	else
+		return ..()
+// Outpost 21 edit end
