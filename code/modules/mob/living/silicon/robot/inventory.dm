@@ -206,6 +206,8 @@
 
 //cycle_modules() - Cycles through the list of selected modules.
 /mob/living/silicon/robot/proc/cycle_modules()
+
+	/* Outpost 21 edit begin - Improved select behavior
 	var/slot_start = get_selected_module()
 	if(slot_start) deselect_module(slot_start) //Only deselect if we have a selected slot.
 
@@ -222,8 +224,27 @@
 			return
 		slot_num++
 		if(slot_num > 3) slot_num = 1 //Wrap around.
+	*/
 
-	return
+	var/slot_start = get_selected_module()
+	if(slot_start) deselect_module(slot_start) //Only deselect if we have a selected slot.
+
+	var/slot_num
+	if(slot_start == 0)
+		slot_num = 1
+	else
+		slot_num = slot_start + 1
+
+	// Attempt to rotate through the slots until we're past slot 3, or find the next usable slot. Allows skipping empty slots, while still having an empty slot at end of rotation.
+	while(TRUE)
+		if(module_active(slot_num))
+			select_module(slot_num)
+			return
+		slot_num++
+		if(slot_num > 3)
+			return // no slot found, empty slot time!
+
+	// Outpost 21 edit end
 
 /mob/living/silicon/robot/proc/activate_module(var/obj/item/O)
 	if(!(locate(O) in src.module.modules) && !(locate(O) in src.module.emag))
