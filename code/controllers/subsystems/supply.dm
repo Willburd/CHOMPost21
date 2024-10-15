@@ -127,6 +127,12 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
+					// CHOMPAdd Start - Sell salvage
+					if(istype(A, /obj/item/salvage))
+						var/obj/item/salvage/salvagedStuff = A
+						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
+					// CHOMPAdd End
+
 			//Outpost 21 edit begin - Sell reagent tanks
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
 				var/obj/vehicle/train/trolly_tank/tank = MA
