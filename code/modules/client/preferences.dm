@@ -388,7 +388,8 @@ var/list/preferences_datums = list()
 		return 1
 
 	if(href_list["save"])
-		save_character()
+		if(save_character())
+			to_chat(usr,span_notice("Character [player_setup?.preferences?.real_name] saved!")) // Outpost 21 edit - Show char save in chat!
 		save_preferences()
 	else if(href_list["reload"])
 		load_preferences()
