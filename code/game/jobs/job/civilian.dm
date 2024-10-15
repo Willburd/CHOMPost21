@@ -169,7 +169,7 @@
 	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
+	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - We put jani in cargo
 	selection_color = "#515151"
 	access = list(access_janitor, access_maint_tunnels)
 	minimal_access = list(access_janitor, access_maint_tunnels)
