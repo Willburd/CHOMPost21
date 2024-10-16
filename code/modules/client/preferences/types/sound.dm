@@ -66,7 +66,7 @@
 /datum/preference/toggle/emote_sounds
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "EMOTE_SOUNDS"
-	default_value = TRUE
+	default_value = FALSE // Outpost 21 edit - Default to off
 	savefile_identifier = PREFERENCE_PLAYER
 
 /datum/preference/toggle/whisper_sounds
@@ -78,7 +78,7 @@
 /datum/preference/toggle/subtle_sounds
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "SUBTLE_SOUNDS"
-	default_value = TRUE
+	default_value = FALSE // Outpost 21 edit - Default to off
 	savefile_identifier = PREFERENCE_PLAYER
 
 /datum/preference/toggle/air_pump_noise
