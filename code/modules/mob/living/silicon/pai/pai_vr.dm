@@ -322,7 +322,7 @@
 	|| istype(A,/obj/machinery/computer/security/telescreen) \
 	|| istype(A,/obj/structure/musician) \
 	|| istype(A,/obj/machinery/shower) \
-	|| istype(A,/obj/structure/lift/panel) \
+/*	|| istype(A,/obj/structure/lift/panel) \ Cannot use tgui interface, so disabling for now */
 	|| istype(A,/obj/structure/lift/button) \
 	|| istype(A,/obj/machinery/conveyor_switch))
 		var/obj/O = A
