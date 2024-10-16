@@ -1859,6 +1859,7 @@
 #include "code\game\objects\structures\stool_bed_chair_nest\bed.dm"
 #include "code\game\objects\structures\stool_bed_chair_nest\chairs.dm"
 #include "code\game\objects\structures\stool_bed_chair_nest\chairs_ch.dm"
+#include "code\game\objects\structures\stool_bed_chair_nest\chairs_op.dm"
 #include "code\game\objects\structures\stool_bed_chair_nest\chairs_vr.dm"
 #include "code\game\objects\structures\stool_bed_chair_nest\stools.dm"
 #include "code\game\objects\structures\stool_bed_chair_nest\stools_vr.dm"
