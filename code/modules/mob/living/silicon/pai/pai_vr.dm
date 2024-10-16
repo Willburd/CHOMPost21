@@ -313,6 +313,27 @@
 /mob/living/silicon/pai/UnarmedAttack(atom/A, proximity_flag)
 	. = ..()
 
+	// Outpost 21 edit begin - Allow some really specific interactions, allow pais to do a bit more then just sit around being pointless.
+	if(istype(A,/obj/structure/closet) \
+	|| istype(A,/obj/structure/fence/door) \
+	|| istype(A,/obj/machinery/light_switch) \
+	|| istype(A,/obj/machinery/button) \
+	|| istype(A,/obj/machinery/access_button) \
+	|| istype(A,/obj/machinery/computer/security/telescreen) \
+	|| istype(A,/obj/structure/musician) \
+	|| istype(A,/obj/machinery/shower) \
+	|| istype(A,/obj/structure/lift/panel) \
+	|| istype(A,/obj/structure/lift/button) \
+	|| istype(A,/obj/machinery/conveyor_switch))
+		var/obj/O = A
+		O.attack_hand(src)
+		return
+	if(istype(A,/obj/item/flashlight/lamp))
+		var/obj/item/flashlight/lamp/L = A
+		L.toggle_light()
+		return
+	// Outpost 21 edit end
+
 	if(!ismob(A) || A == src)
 		return
 
