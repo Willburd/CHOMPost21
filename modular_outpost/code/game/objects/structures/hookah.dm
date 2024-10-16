@@ -92,6 +92,7 @@
 	if(occupant != living)
 		return FALSE
 	to_chat(occupant, span_warning("You manage to pull yourself free of \the [src]."))
+	occupant.reset_view(null)
 	occupant.forceMove(get_turf(src))
 	occupant = null
 
@@ -115,8 +116,10 @@
 			if(!C.can_be_drop_prey || !C.food_vore)
 				to_chat(C, span_warning("You manage to pull yourself free of \the [src] at the last second!"))
 				to_chat(user, span_notice("[C] barely escapes from your mouth!"))
+				C.reset_view(null)
 				C.forceMove(get_turf(src))
 			else
+				C.reset_view(null)
 				C.forceMove(user.vore_selected)
 			occupant = null
 	else
