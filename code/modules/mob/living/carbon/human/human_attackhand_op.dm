@@ -6,7 +6,7 @@
 	// Allows medical to circulate chems on mostly dead bodies without dialysis Extreme hackjob medical ahead!
 	var/tempstat = stat
 	stat = CONSCIOUS
-	var/i = 8
+	var/i = rand(7,14)
 	while(i-- > 0)
 		handle_chemicals_in_body() // extremely hacky way of chem circulation, most chems require you to be alive to do stuff to the body... Done multiple times to increase speed.
 	stat = tempstat
@@ -21,11 +21,18 @@
 
 	// standard CPR ahead, adjust oxy and refresh health
 	if(health > CONFIG_GET(number/health_threshold_crit) && prob(10))
+		if(istype(species, /datum/species/xenochimera))
+			visible_message(span_danger("\The [src]'s body twitches and gurgles a bit. You can't seem to resuscitate them like this!"))
+			return // Handle xenochim, can't cpr them back to life
+		if(HUSK in mutations)
+			visible_message(span_danger("\The [src]'s body crunches and snaps. It's too desiccated to resuscitate!"))
+			return // Handle husked, cure it before you can revive
+
 		// allow revive chance
 		var/mob/observer/dead/ghost = get_ghost()
 		if(ghost)
 			ghost.notify_revive("Someone is trying to resuscitate you. Re-enter your body if you want to be revived!", 'sound/effects/genetics.ogg', source = src)
-		visible_message("<span class='warning'>\The [src]'s body convulses a bit.</span>")
+		visible_message(span_warning("\The [src]'s body convulses a bit."))
 
 		// REVIVE TIME, masically stolen from defib.dm
 		dead_mob_list.Remove(src)
@@ -56,4 +63,4 @@
 	else if(health > CONFIG_GET(number/health_threshold_dead))
 		adjustOxyLoss(-(min(getOxyLoss(), 5)))
 		updatehealth()
-		to_chat(src, "<span class='notice'>You feel a breath of fresh air enter your lungs. It feels good.</span>")
+		to_chat(src, span_notice("You feel a breath of fresh air enter your lungs. It feels good."))
