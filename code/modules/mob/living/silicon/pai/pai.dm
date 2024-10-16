@@ -9,7 +9,7 @@
 
 	holder_type = /obj/item/holder/pai
 
-	can_pull_size = ITEMSIZE_SMALL
+	can_pull_size = ITEMSIZE_NORMAL // Outpost 21 edit - Pai can pull more objects
 	can_pull_mobs = MOB_PULL_SMALLER
 
 	idcard_type = /obj/item/card/id
