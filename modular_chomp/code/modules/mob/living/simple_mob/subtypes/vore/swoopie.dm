@@ -49,7 +49,11 @@
 											/mob/living/simple_mob/slime/promethean)
 	var/static/list/pest_creatures = list(	/mob/living/simple_mob/animal/passive/mouse,
 											/mob/living/simple_mob/animal/passive/lizard,
-											/mob/living/simple_mob/animal/passive/cockroach)
+											/mob/living/simple_mob/animal/passive/cockroach,
+											// Outpost 21 edit begin - outpost creatures, note: uses EXACT types, no inheretance!
+											/mob/living/simple_mob/vore/alienanimals/jil,
+											/mob/living/simple_mob/vore/alienanimals/jil/jillioth)
+											// Outpost 21 edit end
 	var/obj/item/vac_attachment/swoopie/Vac
 
 	enzyme_affect = FALSE // Outpost 21 edit
