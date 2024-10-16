@@ -33,7 +33,7 @@
 		return FALSE
 
 	// outpost 21 edit begin - add the sillier interactions
-	if(isliving(user))
+	if(isliving(user) && !ispAI(user))
 		var/mob/living/L = user
 		var/lasttime = L.lastsnapemotetime
 		L.lastsnapemotetime = world.time
