@@ -18,11 +18,9 @@
 	heat_proof = 1
 
 /obj/machinery/door/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	// Outpost 21 edit begin - Blastdoors block damage to doors from fire
 	for(var/obj/machinery/door/blast/B in loc.contents)
 		if(B.density)
 			return
-	// Outpost 21 edit end
 
 	var/maxtemperature = 1800 //same as a normal steel wall
 	var/destroytime = 20 //effectively gives an airlock 200HP between breaking and completely disintegrating
