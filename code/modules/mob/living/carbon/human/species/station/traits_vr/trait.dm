@@ -64,7 +64,7 @@
 	if(sdisability)
 		H.sdisabilities |= sdisability // bitflag
 	// Traitgenes edit end
-	add_verb(H,/mob/living/carbon/human/proc/trait_tutorial) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/trait_tutorial)
 	return
 
 // Traitgenes edit begin - Disabling traits, genes can be turned off after all!

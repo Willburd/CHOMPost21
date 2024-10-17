@@ -129,7 +129,7 @@
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/carbon/human/proc/bloodsuck) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/bloodsuck)
 
 /datum/trait/neutral/bloodsucker_freeform
 	name = "Bloodsucker"
@@ -150,7 +150,7 @@
 
 /datum/trait/neutral/bloodsucker_freeform/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/carbon/human/proc/bloodsuck) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/bloodsuck)
 
 /datum/trait/neutral/succubus_drain
 	name = "Succubus Drain"
@@ -160,9 +160,9 @@
 
 /datum/trait/neutral/succubus_drain/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/carbon/human/proc/succubus_drain) //CHOMPEdit TGPanel
-	add_verb(H,/mob/living/carbon/human/proc/succubus_drain_finalize) //CHOMPEdit TGPanel
-	add_verb(H,/mob/living/carbon/human/proc/succubus_drain_lethal) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/succubus_drain)
+	add_verb(H, /mob/living/carbon/human/proc/succubus_drain_finalize)
+	add_verb(H, /mob/living/carbon/human/proc/succubus_drain_lethal)
 
 /datum/trait/neutral/venom_bite
 	name = "Venomous Injection"
@@ -191,8 +191,7 @@
 
 /datum/trait/neutral/venom_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	//H.verbs |= /mob/living/proc/injection
-	add_verb(H,/mob/living/proc/injection) //CHOMPedit tgpanel
+	add_verb(H, /mob/living/proc/injection)
 	H.trait_injection_reagents += "microcillin"		// get small
 	H.trait_injection_reagents += "macrocillin"		// get BIG
 	H.trait_injection_reagents += "normalcillin"	// normal
@@ -225,7 +224,7 @@
 
 /datum/trait/neutral/long_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/long_vore) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/long_vore)
 
 /datum/trait/neutral/feeder
 	name = "Feeder"
@@ -235,7 +234,7 @@
 
 /datum/trait/neutral/feeder/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/carbon/human/proc/slime_feed) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/slime_feed)
 
 /datum/trait/neutral/stuffing_feeder
 	name = "Food Stuffer"
@@ -246,7 +245,7 @@
 
 /datum/trait/neutral/stuffing_feeder/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/toggle_stuffing_mode) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/toggle_stuffing_mode)
 
 /datum/trait/neutral/hard_vore
 	name = "Hard Vore" //CHOMPedit Renamed Brutal Predation to Hard Vore, because some people don't know what this actually does
@@ -256,7 +255,7 @@
 
 /datum/trait/neutral/hard_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/shred_limb) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/shred_limb)
 
 /datum/trait/neutral/trashcan
 	name = "Trash Can"
@@ -275,8 +274,8 @@
 
 /datum/trait/neutral/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/eat_trash) //CHOMPEdit TGPanel
-	add_verb(H,/mob/living/proc/toggle_trash_catching) //Ported from chompstation //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/eat_trash)
+	add_verb(H, /mob/living/proc/toggle_trash_catching) //Ported from chompstation
 
 // Traitgenes edit begin - made into a genetrait
 /datum/trait/neutral/trashcan/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
@@ -304,7 +303,7 @@
 
 /datum/trait/neutral/gem_eater/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/eat_minerals) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/eat_minerals)
 
 // Traitgenes edit begin - made into a genetrait
 /datum/trait/neutral/gem_eater/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
@@ -356,7 +355,7 @@
 
 /datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/carbon/human/proc/toggle_eye_glow) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/toggle_eye_glow)
 
 // Traitgenes edit begin - Made into a genetrait
 /datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -383,8 +382,8 @@
 
 /datum/trait/neutral/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/glow_toggle) //CHOMPEdit TGPanel
-	add_verb(H,/mob/living/proc/glow_color) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/glow_toggle)
+	add_verb(H, /mob/living/proc/glow_color)
 
 // Traitgenes edit begin - Made into a genetrait
 /datum/trait/neutral/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -911,7 +910,7 @@
 
 /datum/trait/neutral/dominate_predator/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/proc/dominate_predator) //CHOMPEdit TGPanel
+	add_verb(H, /mob/proc/dominate_predator)
 
 // Traitgenes edit begin - made into a genetrait
 /datum/trait/neutral/dominate_predator/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
@@ -935,7 +934,7 @@
 
 /datum/trait/neutral/dominate_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/dominate_prey) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/dominate_prey)
 
 // Traitgenes edit begin - made into a genetrait
 /datum/trait/neutral/dominate_prey/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
@@ -959,7 +958,7 @@
 
 /datum/trait/neutral/submit_to_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/lend_prey_control) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/lend_prey_control)
 
 // Traitgenes edit begin - made into a genetrait
 /datum/trait/neutral/submit_to_prey/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
@@ -976,7 +975,7 @@
 
 /datum/trait/neutral/vertical_nom/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	add_verb(H,/mob/living/proc/vertical_nom) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/proc/vertical_nom)
 
 /datum/trait/neutral/micro_size_down
 	name = "Light Frame"
@@ -1072,7 +1071,7 @@
 
 /datum/trait/neutral/synth_cosmetic_pain/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
 	..()
-	add_verb(H,/mob/living/carbon/human/proc/toggle_pain_module) //CHOMPEdit TGPanel
+	add_verb(H, /mob/living/carbon/human/proc/toggle_pain_module)
 
 //Food preferences ported from RogueStar
 
