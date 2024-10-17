@@ -37,11 +37,9 @@
 	else
 		to_chat(user, "You stop entering the exosuit.")
 
-// Outpost 21 edit begin - Container resisting from in a mecha compartment, because verb menu is temporarily broken...
 /obj/item/mecha_parts/mecha_equipment/tool/passenger/container_resist(var/mob/living)
 	if(occupant == living)
 		eject()
-// Outpost 21 edit end
 
 /obj/item/mecha_parts/mecha_equipment/tool/passenger/verb/eject()
 	set name = "Eject"
@@ -51,7 +49,6 @@
 
 	if(usr != occupant)
 		return
-	// Outpost 21 edit begin - Locked compartment handled in a special way
 	if(door_locked)
 		to_chat(occupant, "<span class='notice'>\The [src] is locked! You begin operating the emergency unlock mechanism. This will take one minute.</span>")
 		sleep(600)
@@ -62,7 +59,6 @@
 			occupant_message("Passenger compartment hatch unlocked.")
 			if (chassis)
 				chassis.visible_message("The hatch on \the [chassis] unlocks.", "You hear something latching.")
-	// Outpost 21 edit end
 	to_chat(occupant, "You climb out from \the [src].")
 	go_out()
 	occupant_message("[occupant] disembarked.")
