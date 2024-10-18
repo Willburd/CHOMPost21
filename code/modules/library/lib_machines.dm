@@ -304,13 +304,16 @@
 				dat += "</table>"
 			*/
 			dat += "<h3>External Archive</h3>"
-			if(!SSpersistence.all_books || !SSpersistence.all_books.len)
+			if(!SSpersistence.all_books)
 				dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
+			else if(!SSpersistence.all_books.len)
+				dat +=	"<font color=red><b>ERROR</b> The external archive is currently empty.</font>"
 			else
 				dat += {"<table>
 				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td></td></tr>"}
 				for(var/list/token in SSpersistence.all_books)
-					dat += "<tr><td>[token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];import_external=[token["uid"]]'>\[Order\]</A><A href='?src=\ref[src];delete_external=[token["uid"]]'>\[Del\]</A></td></tr>"
+					if(!token["deleted"])
+						dat += "<tr><td>[token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];import_external=[token["uid"]]'>\[Order\]</A><A href='?src=\ref[src];delete_external=[token["uid"]]'>\[Del\]</A></td></tr>"
 				dat += "</table>"
 			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 			// Outpost 21 edit end
@@ -476,45 +479,16 @@
 							qdel(query) //CHOMPEdit TGSQL
 						*/
 						spawn(0)
-							var/replacing = null
-							var/search_id = "[scanner.cache.name]_[scanner.cache.author]_[scanner.cache.libcategory]"
-							for(var/entry in SSpersistence.all_books)
-								if(entry["uid"] == search_id)
-									if(usr.client && usr.client.holder && usr.client.holder.rights & R_ADMIN)
-										replacing = entry // store the data entry from the list for editing later
-										break
-									else
-										tgui_alert_async(usr, "Uploaded book \"[scanner.cache.name]\" by \"[scanner.cache.author]\" already exists, and could not be uploaded.")
-										return
-							// Append a list with the new token, formatting is weird because it's all_books + newlist(token).
-							// If it was just the token it would add all the token's keys to the all_books list!
-							var/list/data = list(
-								"uid" = search_id,
-								"name" = scanner.cache.name,
-								"title" = scanner.cache.name,
-								"dat" = scanner.cache.dat,
-								"libcategory" = scanner.cache.libcategory,
-								"author" = scanner.cache.author,
-								"icon_state" = scanner.cache.icon_state
-							)
-							if(istype(scanner.cache,/obj/item/book/bundle))
-								// Collect pages if a bundle
-								var/obj/item/book/bundle/bund = scanner.cache
-								var/list/PG = list()
-								for(var/page in bund.pages)
-									PG.Add(page)
-								data["pages"] = PG
-							else
-								// false otherwise
-								data["pages"] = FALSE
-
-							if(replacing)
-								for(var/key in data)
-									replacing["[key]"] = data["[key]"] // bulk replace all keys
-								tgui_alert_async(usr, "Uploaded book \"[scanner.cache.name]\" by \"[scanner.cache.author]\" already exists, and has been replaced.")
-							else
-								SSpersistence.all_books += list(data)
-								tgui_alert_async(usr, "\"[scanner.cache.name]\" by \"[scanner.cache.author]\", Upload Complete!")
+							var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+							var/status = SSBooks.add_new_book(scanner.cache,usr.client)
+							switch(status)
+								if(0)
+									tgui_alert_async(usr, "Uploaded book \"[scanner.cache.name]\" by \"[scanner.cache.author]\" already exists, and could not be uploaded. Only a system administrator may replace books.")
+								if(1)
+									tgui_alert_async(usr, "\"[scanner.cache.name]\" by \"[scanner.cache.author]\", Upload Complete!")
+								if(2)
+									tgui_alert_async(usr, "Uploaded book \"[scanner.cache.name]\" by \"[scanner.cache.author]\" already exists, and has been replaced.")
+						// Outpost 21 edit end
 	//VOREStation Edit End
 
 	/* Outpost 21 edit - Books to SSpersistence
@@ -565,36 +539,15 @@
 	// Outpost 21 edit begin - Books to SSpersistence
 	if(href_list["import_external"])
 		var/get_id = href_list["import_external"]
-		for(var/list/token in SSpersistence.all_books)
-			if(token["uid"] == get_id)
-				var/obj/item/book/NewBook
-				if(token["pages"])
-					// not false or null, assume a bundle book!
-					var/obj/item/book/bundle/bund = new /obj/item/book/bundle(get_turf(src))
-					for(var/page in token["pages"])
-						bund.pages.Add(page)
-					NewBook = bund
-				else
-					// normal book
-					NewBook = new(get_turf(src))
-				NewBook.name = "[token["name"]]"
-				NewBook.title = "[token["title"]]"
-				NewBook.dat = "[token["dat"]]"
-				NewBook.libcategory = "[token["libcategory"]]"
-				NewBook.author = "[token["author"]]"
-				NewBook.icon_state = "[token["icon_state"]]"
-				NewBook.unique = TRUE
-				break
+		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+		if(isnull(SSBooks.get_stored_book(get_id,get_turf(src))))
+			tgui_alert_async(usr, "This book's data is invalid, please try another from the catalogue.")
 	if(href_list["delete_external"])
-		if(usr.client && usr.client.holder && usr.client.holder.rights & R_ADMIN)
-			var/get_id = href_list["delete_external"]
-			for(var/list/token in SSpersistence.all_books)
-				if(token["uid"] == get_id)
-					var/hold_name = token["title"]
-					var/hold_auth = token["author"]
-					SSpersistence.all_books.Remove(list(token)) // Weird beyond list behavior, lists subtract elements on Remove() needs to be in a list to remove it's own element of the list...
-					tgui_alert_async(usr, "\"[hold_name]\" by \"[hold_auth]\", Deletion Complete!")
-					break
+		var/get_id = href_list["delete_external"]
+		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+		var/status = SSBooks.delete_stored_book(get_id,usr.client)
+		if(status)
+			tgui_alert_async(usr, "Deletion Complete!")
 		else
 			tgui_alert_async(usr, "Only a system admin may delete database entries.")
 	// Outpost 21 edit end
