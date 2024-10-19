@@ -2,6 +2,7 @@
 	name = "library_books"
 	//entries_expire_at = 1000 // Basically forever
 	var/max_entries = 1000 //1000 paintings is a lot, and will take a long time to cycle through.
+	var/ready_to_write = TRUE // Abuse prevention
 
 /datum/persistent/library_books/SetFilename()
     filename = "data/persistent/[lowertext(using_map.name)]-library_books.json"
@@ -20,7 +21,8 @@
 		!isnull(token["uid"]) && \
 		!isnull(token["title"]) && \
 		!isnull(token["author"]) && \
-		!isnull(token["deleted"])
+		!isnull(token["deleted"]) && \
+		!isnull(token["protected"])
 	)
 
 /datum/persistent/library_books/proc/CheckBookSanity(var/list/token)
@@ -49,13 +51,19 @@
 
 	// cleanup list
 	var/list/output_list = list()
-	for(var/list/entry in SSpersistence.all_books)
+	for(var/entry_id in SSpersistence.all_books)
+		var/list/entry = SSpersistence.all_books[entry_id]
+		if(!entry)
+			continue
 		if(!CheckTokenSanity(entry))
 			continue
+		if(entry["protected"])
+			entry["deleted"] = FALSE // if this somehow happens due to VV meddling
 		if(!entry["deleted"])
 			log_admin("A book was deleted during the round")
-			output_list.Add(list(entry))
+			output_list[entry_id] = entry
 		else
+			entry["protected"] = TRUE // Protect flag book next round. Require admin deletion by default. Current books in the round should be admin protected if abuse happens.
 			var/hash = md5(entry["uid"])
 			var/filecheck = "data/persistent/library/[hash]-library_book.json"
 			if(fexists(filecheck))
@@ -67,25 +75,29 @@
 	to_file(file(filename), json_encode(output_list))
 	SSpersistence.all_books = output_list // Update list, for manual debugging
 
-/datum/persistent/library_books/proc/add_new_book(var/obj/item/book/B,var/client/C)
+/datum/persistent/library_books/proc/add_new_book(var/obj/item/book/B)
 	var/search_id = "[B.name]_[B.author]_[B.libcategory]"
 	var/replacing = null
-	for(var/entry in SSpersistence.all_books)
-		if(entry["uid"] != search_id)
-			continue
-		if(entry["deleted"] || ( C && C.holder && C.holder.rights & R_ADMIN ))
-			replacing = entry // store the data entry from the list for editing later
-			break
-		else
-			return 0 // no replace
 
-	// Append a list with the new token, formatting is weird because it's all_books + newlist(token).
-	// If it was just the token it would add all the token's keys to the all_books list!
+	var/hash_key = md5(search_id)
+	var/list/entry = SSpersistence.all_books[hash_key]
+
+	if(!ready_to_write)
+		return 4 // Timeout
+
+	if(entry)
+		replacing = entry // store the data entry from the list for editing later
+		if(replacing["uid"] != search_id)
+			return 0 // IF SOMEHOW
+		if(replacing["protected"])
+			return 0
+
 	var/list/data = list(
 		"uid" = search_id,
 		"title" = B.name,
 		"author" = B.author,
-		"deleted" = FALSE
+		"deleted" = FALSE,
+		"protected" = FALSE // ADMIN deletion prevention
 	)
 
 	if(replacing)
@@ -94,55 +106,91 @@
 			was_deleted = TRUE
 		for(var/key in data)
 			replacing["[key]"] = data["[key]"] // bulk replace all keys
-		save_book_to_file(B)
+		if(!save_book_to_file(B))
+			replacing["deleted"] = TRUE
+			return 3 // Error
 		if(was_deleted)
 			return 1 // pretend it's newly saved
 		return 2 // replaced old one
 	else
-		SSpersistence.all_books += list(data)
-		save_book_to_file(B)
+		SSpersistence.all_books[hash_key] = data
+		if(!save_book_to_file(B))
+			data["deleted"] = TRUE
+			return 3 // Error
 		return 1 // new saved
 
 /datum/persistent/library_books/proc/get_stored_book(var/uid,var/location,var/unique = TRUE)
-	for(var/list/token in SSpersistence.all_books)
-		if(token["uid"] != uid)
-			continue
-		if(token["deleted"])
-			return
-		var/list/data = load_book_from_file(token)
-		if(!data)
-			return
-		var/obj/item/book/NewBook
-		if(data["pages"])
-			// not false or null, assume a bundle book!
-			var/obj/item/book/bundle/bund = new /obj/item/book/bundle(location)
-			for(var/page in data["pages"])
-				bund.pages.Add(page)
-			NewBook = bund
-		else
-			// normal book
-			NewBook = new(location)
-		NewBook.name = "[data["name"]]"
-		NewBook.title = "[data["title"]]"
-		NewBook.dat = "[data["dat"]]"
-		NewBook.libcategory = "[data["libcategory"]]"
-		NewBook.author = "[data["author"]]"
-		NewBook.icon_state = "[data["icon_state"]]"
-		NewBook.unique = unique
-		return NewBook
+	if(!uid) // somehow null ui, possibly bad data used
+		return null
+	var/hash_key = md5(uid)
+	var/list/token = SSpersistence.all_books[hash_key]
+	if(!token)
+		return null
+	if(token["uid"] != uid) // IF SOMEHOW
+		return null
+	if(token["deleted"])
+		return null
+	var/list/data = load_book_from_file(token)
+	if(!data)
+		return null
+	var/obj/item/book/NewBook
+	if(data["pages"])
+		// not false or null, assume a bundle book!
+		var/obj/item/book/bundle/bund = new /obj/item/book/bundle(location)
+		for(var/page in data["pages"])
+			bund.pages.Add(page)
+		NewBook = bund
+	else
+		// normal book
+		NewBook = new(location)
+	NewBook.name = "[data["name"]]"
+	NewBook.title = "[data["title"]]"
+	NewBook.dat = "[data["dat"]]"
+	NewBook.libcategory = "[data["libcategory"]]"
+	NewBook.author = "[data["author"]]"
+	NewBook.icon_state = "[data["icon_state"]]"
+	NewBook.unique = unique
+	return NewBook
 
-/datum/persistent/library_books/proc/delete_stored_book(var/uid,var/client/C,var/force = FALSE)
+/datum/persistent/library_books/proc/delete_stored_book(var/uid)
 	if(!uid) // somehow null ui, possibly bad data used
 		return FALSE
-	if(force || (C && C.holder && C.holder.rights & R_ADMIN))
-		for(var/list/token in SSpersistence.all_books)
-			if(token["uid"] != uid)
-				continue
-			token["deleted"] = TRUE // We remove books during Shutdown, so admins can undelete books using VV before round ends
-			return TRUE
+	var/hash_key = md5(uid)
+	var/list/token = SSpersistence.all_books[hash_key]
+	if(!token)
 		return FALSE
-	else
+	if(token["uid"] != uid)
+		return FALSE // IF SOMEHOW
+	if(token["protected"])
+		token["deleted"] = FALSE // incase
 		return FALSE
+	token["deleted"] = TRUE // We remove books during Shutdown, so admins can undelete books using VV before round ends
+	return TRUE
+
+/datum/persistent/library_books/proc/restore_stored_book(var/uid)
+	if(!uid) // somehow null ui, possibly bad data used
+		return FALSE
+	var/hash_key = md5(uid)
+	var/list/token = SSpersistence.all_books[hash_key]
+	if(!token)
+		return FALSE
+	if(token["uid"] != uid) // IF SOMEHOW
+		return FALSE
+	token["deleted"] = FALSE
+	return TRUE
+
+/datum/persistent/library_books/proc/protect_stored_book(var/uid)
+	if(!uid) // somehow null ui, possibly bad data used
+		return FALSE
+	var/hash_key = md5(uid)
+	var/list/token = SSpersistence.all_books[hash_key]
+	if(!token)
+		return FALSE
+	if(token["uid"] != uid) // IF SOMEHOW
+		return FALSE
+	token["protected"] = !token["protected"] // Undelete+ prevents deletion again.
+	token["deleted"] = FALSE
+	return TRUE
 
 /datum/persistent/library_books/proc/save_book_to_file(var/obj/item/book/B)
 	var/search_id = "[B.name]_[B.author]_[B.libcategory]"
@@ -167,18 +215,24 @@
 		data["pages"] = FALSE
 	// I sense stupidity
 	if(!CheckBookSanity(data))
-		return
+		return FALSE
 	var/hash = md5(data["uid"])
 	var/filecheck = "data/persistent/library/[hash]-library_book.json"
 	if(fexists(filecheck))
 		fdel(filecheck) // remove old
 	to_file(file(filecheck), json_encode(data))
+	// Prevent file writing abuse
+	ready_to_write = FALSE
+	spawn(40)
+		ready_to_write = TRUE
+	return fexists(filecheck) // Check if write failed due to bad encode
 
 /datum/persistent/library_books/proc/load_book_from_file(var/token)
 	if(!token)
 		return
 	if(!CheckTokenSanity(token))
-		delete_stored_book(token["uid"],null,TRUE) // Invalid token entry somehow
+		token["protected"] = FALSE // invalid now
+		delete_stored_book(token["uid"]) // Invalid token entry somehow
 		return
 	var/hash = md5(token["uid"])
 	var/filecheck = "data/persistent/library/[hash]-library_book.json"
@@ -186,10 +240,12 @@
 		return
 	var/str = file2text(filecheck)
 	if(!str)
-		delete_stored_book(token["uid"],null,TRUE) // WELP, failed parse.
+		token["protected"] = FALSE // invalid now
+		delete_stored_book(token["uid"]) // WELP, failed parse.
 		return
 	var/decode = json_decode(str)
 	if(!decode || !CheckBookSanity(decode))
-		delete_stored_book(token["uid"],null,TRUE) // Why?... Old format?
+		token["protected"] = FALSE // invalid now
+		delete_stored_book(token["uid"]) // Why?... Old format?
 		return
 	return decode
