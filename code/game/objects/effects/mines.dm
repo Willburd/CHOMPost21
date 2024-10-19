@@ -5,7 +5,7 @@
 	anchored = TRUE
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "landmine"
-	var/triggered = 0
+	var/triggered = FALSE
 	var/smoke_strength = 3
 	var/obj/item/mine/mineitemtype = /obj/item/mine
 	var/panel_open = FALSE
@@ -45,7 +45,7 @@
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-	triggered = 1
+	triggered = TRUE
 	s.set_up(3, 1, src)
 	s.start()
 
@@ -139,7 +139,7 @@
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-	triggered = 1
+	triggered = TRUE
 	s.set_up(3, 1, src)
 	s.start()
 	if(istype(M))
@@ -157,7 +157,7 @@
 /obj/effect/mine/stun/explode(var/mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
-	triggered = 1
+	triggered = TRUE
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()
@@ -174,7 +174,7 @@
 /obj/effect/mine/n2o/explode(var/mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
-	triggered = 1
+	triggered = TRUE
 	for (var/turf/simulated/floor/target in range(1,src))
 		if(!target.blocks_air)
 			target.assume_gas("nitrous_oxide", 30)
@@ -188,7 +188,7 @@
 /obj/effect/mine/phoron/explode(var/mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
-	triggered = 1
+	triggered = TRUE
 	for (var/turf/simulated/floor/target in range(1,src))
 		if(!target.blocks_air)
 			target.assume_gas("phoron", 30)
@@ -204,7 +204,7 @@
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-	triggered = 1
+	triggered = TRUE
 	s.set_up(3, 1, src)
 	s.start()
 	if(istype(M, /obj/mecha))
@@ -227,7 +227,7 @@
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-	triggered = 1
+	triggered = TRUE
 	s.set_up(3, 1, src)
 	s.start()
 	var/turf/O = get_turf(src)
@@ -247,7 +247,7 @@
 /obj/effect/mine/training/explode(var/mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
-	triggered = 1
+	triggered = TRUE
 	visible_message("\The [src.name]'s light flashes rapidly as it 'explodes'.")
 	new src.mineitemtype(get_turf(src))
 	spawn(0)
@@ -259,7 +259,7 @@
 /obj/effect/mine/emp/explode(var/mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
-	triggered = 1 //ChompEDIT recursing mines
+	triggered = TRUE
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()
@@ -277,7 +277,7 @@
 /obj/effect/mine/incendiary/explode(var/mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
-	triggered = 1
+	triggered = TRUE
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
 	s.set_up(3, 1, src)
 	s.start()
@@ -295,7 +295,7 @@
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-	triggered = 1
+	triggered = TRUE
 	s.set_up(3, 1, src)
 	s.start()
 

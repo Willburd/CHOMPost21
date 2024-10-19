@@ -41,7 +41,7 @@
 			H.updatehealth()
 	else if(ismouse(target))
 		var/mob/living/simple_mob/animal/passive/mouse/M = target
-		visible_message(span_red("<b>SPLAT!</b>"))
+		visible_message(span_bolddanger("SPLAT!"))
 		M.splat()
 	// Outpost 21 edit begin - Jils get snapped too
 	else if(istype(target,/mob/living/simple_mob/vore/alienanimals/jil))
