@@ -163,14 +163,19 @@
 //////////////////////////////////
 /datum/job/janitor
 	title = JOB_JANITOR
+	/* Outpost 21 edit - Janitor part of cargo
 	flag = JANITOR
 	departments = list(DEPARTMENT_CIVILIAN)
+	*/
+	flag = JANITOR
+	departments = list(DEPARTMENT_CARGO)
 	department_flag = CIVILIAN
 	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - We put jani in cargo
-	selection_color = "#515151"
+	selection_color = "#7a4f33" // Outpost 21 edit - Janitor part of cargo
+	// selection_color = "#515151"
 	access = list(access_janitor, access_maint_tunnels)
 	minimal_access = list(access_janitor, access_maint_tunnels)
 
