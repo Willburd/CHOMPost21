@@ -401,10 +401,10 @@
 				if( H.species.name == SPECIES_CUSTOM )
 					// Fully custom species
 					speciestext = "[H.custom_species]"
-					dat += "<font color='blue'>Sapient Species: [speciestext]</font><BR>"
+					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
 				else
 					speciestext = "[H.custom_species] \[Similar biology to [H.species.name]\]"
-					dat += "<font color='blue'>Sapient Species: [speciestext]</font><BR>"
+					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
 			// Outpost 21 edit end
 			// Outpost 21 edit begin - Addictions
 			for(var/addic in H.addiction_counters)
@@ -583,7 +583,7 @@
 			// Outpost 21 edit begin - malignant organs
 			if(istype(i, /obj/item/organ/internal/malignant))
 				var/obj/item/organ/internal/ORG = occupant.organs_by_name[i.parent_organ]
-				hasMalignants += "<font color='red'> -[ORG.name]</font><BR>"
+				hasMalignants += span_red(" -[ORG.name]") + "<BR>"
 			// Outpost 21 edit end
 
 			dat += "<tr>"
@@ -596,11 +596,11 @@
 			dat += span_red("Retinal misalignment detected.") + "<BR>"
 		// Outpost 21 edit begin - malignant organs
 		if(hasMalignants != "")
-			dat += span_red("Unknown anatomy detected!</font><BR>[hasMalignants]")
+			dat += span_red("Unknown anatomy detected!") + "<BR>[hasMalignants]"
 		// Outpost 21 edit end
 		// Outpost 21 edit begin - addictions
 		if(has_withdrawl != "")
-			dat += span_red("Experiencing chemical withdrawal!</font>[has_withdrawl]")
+			dat += span_red("Experiencing chemical withdrawal!") + "<BR>[has_withdrawl]"
 		// Outpost 21 edit end
 		if(HUSK in occupant.mutations) // VOREstation edit
 			dat += span_red("Anatomical structure lost, resuscitation not possible!") + "<BR>"
