@@ -7,6 +7,8 @@ var/global/pai_accessible_objects = list(
 	/obj/machinery/shower, \
 	/obj/structure/lift/panel, \
 	/obj/structure/lift/button, \
+	/obj/machinery/disposal, \
+	/obj/machinery/disposal/mail_reciever, \
 	// Entertainment
 	/obj/structure/musician, \
 	/obj/machinery/media/jukebox, \
