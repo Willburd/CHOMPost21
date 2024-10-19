@@ -30,8 +30,10 @@
 	var/title
 	var/category = "Any"
 	var/author
+	/* Outpost 21 edit begin - Books to SSpersistence
 	var/SQLquery
 	var/list/SQLargs //CHOMPEdit TGSQL
+	*/
 
 /obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
@@ -112,6 +114,7 @@
 			author = null
 		author = sanitizeSQL(author)
 	if(href_list["search"])
+		/* Outpost 21 edit begin - Books to SSpersistence
 		SQLquery = "SELECT author, title, category, id FROM library WHERE "
 		SQLargs = list() //CHOMPEdit begin
 		if(category == "Any")
@@ -123,6 +126,7 @@
 			SQLargs["t_author"] = author
 			SQLargs["t_title"] = title
 			SQLargs["t_category"] = category //CHOMPEdit End
+		*/
 		screenstate = 1
 
 	if(href_list["back"])
