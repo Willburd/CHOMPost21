@@ -619,11 +619,29 @@
 	density = TRUE
 	var/obj/item/book/cache		// Last scanned book
 
+// Outpost 21 edit begin - Books to SSpersistence
 /obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
+	if(cache) // Prevent stacking books in here, unlike the original code.
+		to_chat(user,span_warning("\The [src] already has a book inside it!"))
+		return
 	if(istype(O, /obj/item/book))
 		user.drop_item()
 		O.loc = src
+		cache = O
+		visible_message(span_notice("\The [O] was inserted into \the [src]."))
 
+/obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
+	if(cache) // Prevent stacking books in here
+		cache = null
+		for(var/obj/item/book/B in contents) // The old code allowed stacking, if multiple things end up in here somehow we may as well drop them all out too.
+			B.loc = src.loc
+		visible_message(span_notice("\The [src] ejects a book."))
+		return
+	to_chat(user,span_warning("There is nothing to eject from \the [src]!"))
+// Outpost 21 edit end
+
+/* Outpost 21 edit begin - Books to SSpersistence
+// This isn't needed, the library comp should handle the act of scanning
 /obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
 	var/dat = "<HEAD><TITLE>Scanner Control Interface</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
@@ -657,7 +675,7 @@
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
 	return
-
+*/
 
 /*
  * Book binder
