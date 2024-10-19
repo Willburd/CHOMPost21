@@ -33,7 +33,7 @@
 /obj/item/encryptionkey/qm
 	name = "quartermaster's encryption key"
 	icon_state = "qm_cypherkey"
-	channels = list(CHANNEL_SUPPLY = 1) //YW Edit: removes command channel access, not in line with our chain of command. CHOMP: We accept this
+	channels = list(CHANNEL_SUPPLY = 1, CHANNEL_COMMAND = 1) //YW Edit: removes command channel access, not in line with our chain of command. CHOMP: We accept this. Outpost 21 Back to command!
 
 /obj/item/encryptionkey/pilot
 	name = "pilot's encryption key"

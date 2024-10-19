@@ -313,24 +313,17 @@
 /mob/living/silicon/pai/UnarmedAttack(atom/A, proximity_flag)
 	. = ..()
 
-	// Outpost 21 edit begin - Allow some really specific interactions, allow pais to do a bit more then just sit around being pointless.
-	if(istype(A,/obj/structure/closet) \
-	|| istype(A,/obj/structure/fence/door) \
-	|| istype(A,/obj/machinery/light_switch) \
-	|| istype(A,/obj/machinery/button) \
-	|| istype(A,/obj/machinery/access_button) \
-	|| istype(A,/obj/machinery/computer/security/telescreen) \
-	|| istype(A,/obj/structure/musician) \
-	|| istype(A,/obj/machinery/shower) \
-/*	|| istype(A,/obj/structure/lift/panel) \ Cannot use tgui interface, so disabling for now */
-	|| istype(A,/obj/structure/lift/button) \
-	|| istype(A,/obj/machinery/conveyor_switch))
+	// Outpost 21 edit begin - Allow some really specific PAI interactions, allow pais to do a bit more then just sit around being pointless.
+	if(A.type in global.pai_accessible_objects) // direct paths not a type-check
 		var/obj/O = A
 		O.attack_hand(src)
 		return
 	if(istype(A,/obj/item/flashlight/lamp))
 		var/obj/item/flashlight/lamp/L = A
 		L.toggle_light()
+		return
+	if(istype(A,/obj/machinery/computer)) // All other computers explain why it's not compatible
+		to_chat(src,span_warning("A firewall prevents you from interfacing with this device!"))
 		return
 	// Outpost 21 edit end
 

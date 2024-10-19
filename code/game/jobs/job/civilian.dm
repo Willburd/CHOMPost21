@@ -97,8 +97,8 @@
 	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
 	selection_color = "#9b633e"
 	economic_modifier = 5
-	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce)
-	minimal_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce)
+	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce, access_keycard_auth, access_teleporter, access_heads) // Outpost 21 edit - Access_keycard_auth, Access_teleporter, Access_heads added
+	minimal_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce, access_keycard_auth, access_teleporter, access_heads) // Outpost 21 edit - Access_keycard_auth, Access_teleporter, Access_heads added
 	banned_job_species = list("digital", SPECIES_PROMETHEAN)
 
 	ideal_character_age = 40
@@ -163,14 +163,19 @@
 //////////////////////////////////
 /datum/job/janitor
 	title = JOB_JANITOR
+	/* Outpost 21 edit - Janitor part of cargo
 	flag = JANITOR
 	departments = list(DEPARTMENT_CIVILIAN)
+	*/
+	flag = JANITOR
+	departments = list(DEPARTMENT_CARGO)
 	department_flag = CIVILIAN
 	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - We put jani in cargo
-	selection_color = "#515151"
+	selection_color = "#7a4f33" // Outpost 21 edit - Janitor part of cargo
+	// selection_color = "#515151"
 	access = list(access_janitor, access_maint_tunnels)
 	minimal_access = list(access_janitor, access_maint_tunnels)
 
