@@ -112,7 +112,7 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 	// outpost 21 add end
 
 	if(LAZYLEN(valid_stats_list))
-		to_world("<B>Shift trivia!</B>")
+		to_world(span_world("Shift trivia!"))
 
 		for(var/body in valid_stats_list)
-			to_world("[body]")
+			to_world(span_filter_system("[body]"))
