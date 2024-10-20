@@ -50,8 +50,8 @@
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/iron/star/eshui
-	ckeywhitelist = list("jollytjerry11")
-	character_name = list("Shawn Foley")
+	ckeywhitelist = list("jollytjerry11","synxplushy","darklord92","niilomarvy")
+	character_name = list("Ed'Reith Foley","Zeeshi","Vi'Akit","Ral'Hathamee")
 
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
@@ -63,7 +63,7 @@
 	display_name = "ESHUI Officer's Qualification Pin"
 	path = /obj/item/clothing/accessory/solgov/specialty/officer/eshui
 	ckeywhitelist = list("remthebold","seagha")
-	character_name = list("Trashfire","Schale Vam","Aiektaaknell","Janik Vam","Zeeshi","Shawn Foley")
+	character_name = list("Trashfire","Schale Vam","Aiektaaknell","Janik Vam","Zeeshi","Ed'Reith Foley")
 
 /datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
 	display_name = "ESHUI Captaincy Medal"
