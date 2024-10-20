@@ -285,6 +285,18 @@ This device records all warnings given and teleport events for admin review in c
 			destination = beacons[wrong_name]
 			to_chat(user,span_warning("\The [src] malfunctions and sends you to the wrong beacon!"))
 
+	// Outpost 21 edit begin - Teleport redspace chance
+	else if(prob(1))
+		var/list/redlist = list()
+		for(var/obj/effect/landmark/R in landmarks_list)
+			if(R.name == "redentrance")
+				redlist += R
+		if(redlist.len > 0)
+			// if teleport worked, drop out... otherwise just teleport normally, it means there was no redspace spawns!
+			destination = pick(redlist)
+			to_chat(user,span_danger("Something feels wrong..."))
+	// Outpost 21 edit end
+
 	//Destination beacon vore checking
 	var/turf/dT = get_turf(destination)
 	var/atom/real_dest = dT

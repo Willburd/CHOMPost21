@@ -158,10 +158,13 @@
 	if(pick_turfs.len)
 		var/wormhole_max_duration = round((2 MINUTES))
 		var/wormhole_min_duration = round((30 SECONDS))
-		//get our enter and exit locations
 		var/turf/simulated/floor/exit = pick(pick_turfs)
 		if( !exit || !istype(exit) )	return	//sanity
-		create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
+		//get our enter and exit locations
+		if(prob(1))
+			create_redspace_wormhole(enter,exit,FALSE,wormhole_min_duration,wormhole_max_duration)
+		else
+			create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
 	// Zoop
 	visible_message("\The [src.name] detonates!")
 	var/obj/effect/portal/P = locate(/obj/effect/portal) in loc.contents
