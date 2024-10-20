@@ -30,8 +30,10 @@
 	var/title
 	var/category = "Any"
 	var/author
+	/* Outpost 21 edit begin - Books to SSpersistence
 	var/SQLquery
 	var/list/SQLargs //CHOMPEdit TGSQL
+	*/
 
 /obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
@@ -44,6 +46,7 @@
 			<A href='?src=\ref[src];setauthor=1'>Filter by Author: [author]</A><BR>
 			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
+			/* Outpost 21 edit begin - Books to SSpersistence
 			establish_old_db_connection()
 			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
@@ -65,6 +68,21 @@
 				qdel(query)
 				dat += "</table><BR>"
 			dat += "<A href='?src=\ref[src];back=1'>\[Go Back\]</A><BR>"
+			*/
+			if(!SSpersistence.all_books)
+				dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
+			else if(!SSpersistence.all_books.len)
+				dat +=	"<font color=red><b>ERROR</b> The external archive is currently empty.</font>"
+			else
+				dat += {"<table>
+				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
+				for(var/token_id in SSpersistence.all_books)
+					var/list/token = SSpersistence.all_books[token_id]
+					if(token && !token["deleted"])
+						dat += "<tr><td>[token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td></td></tr>"
+				dat += "</table>"
+			dat += "<A href='?src=\ref[src];back=1'>\[Go Back\]</A><BR>"
+			// Outpost 21 edit end
 	user << browse(dat, "window=publiclibrary")
 	onclose(user, "publiclibrary")
 
@@ -96,6 +114,7 @@
 			author = null
 		author = sanitizeSQL(author)
 	if(href_list["search"])
+		/* Outpost 21 edit begin - Books to SSpersistence
 		SQLquery = "SELECT author, title, category, id FROM library WHERE "
 		SQLargs = list() //CHOMPEdit begin
 		if(category == "Any")
@@ -107,6 +126,7 @@
 			SQLargs["t_author"] = author
 			SQLargs["t_title"] = title
 			SQLargs["t_category"] = category //CHOMPEdit End
+		*/
 		screenstate = 1
 
 	if(href_list["back"])
@@ -280,10 +300,11 @@
 			<A href='?src=\ref[src];arccheckout=1'>Yes.</A><BR>
 			<A href='?src=\ref[src];switchscreen=0'>No.</A><BR>"}
 		if(8)
+			/* Outpost 21 edit begin - Books to SSpersistence
 			dat += "<h3>External Archive</h3>" //VOREStation Edit
 			establish_old_db_connection()
 
-			//dat += "<h3>" + span_red("arning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.") + "</h3>" //VOREStation Removal
+			//dat += "<h3>" + span_red("Warning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.") + "</h3>" //VOREStation Removal
 
 			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
@@ -302,8 +323,22 @@
 					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
 				qdel(query) //CHOMPEdit TGSQL
 				dat += "</table>"
+			*/
+			dat += "<h3>External Archive</h3>"
+			if(!SSpersistence.all_books)
+				dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
+			else if(!SSpersistence.all_books.len)
+				dat +=	"<font color=red><b>ERROR</b> The external archive is currently empty.</font>"
+			else
+				dat += {"<table>
+				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td></td></tr>"}
+				for(var/token_id in SSpersistence.all_books)
+					var/list/token = SSpersistence.all_books[token_id]
+					if(token && !token["deleted"])
+						dat += "<tr><td>[token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];import_external=[token["uid"]]'>\[Order\]</A><A href='?src=\ref[src];delete_external=[token["uid"]]'>\[Del\]</A></td></tr>"
+				dat += "</table>"
 			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
-
+			// Outpost 21 edit end
 	//dat += "<A HREF='?src=\ref[user];mach_close=library'>Close</A><br><br>"
 	user << browse(dat, "window=library")
 	onclose(user, "library")
@@ -319,6 +354,7 @@
 		usr.set_machine(src)
 		var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
 
+		/* Outpost 21 edit begin - Books to SSpersistence
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 		establish_old_db_connection()
 
@@ -340,6 +376,27 @@
 				dat += "</td></tr>"
 			dat += "</table>"
 			qdel(query) // CHOMPEdit
+		*/
+		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
+		if(!SSpersistence.all_books)
+			dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
+		else if(!SSpersistence.all_books.len)
+			dat +=	"<font color=red><b>ERROR</b> The external archive is currently empty.</font>"
+		else
+			dat += {"<table>
+			<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
+			for(var/token_id in SSpersistence.all_books)
+				var/list/token = SSpersistence.all_books[token_id]
+				if(!token)
+					continue
+				var/protected = ""
+				if(!token["deleted"])
+					if(token["protected"])
+						protected = "PROTECT - "
+					dat += "<tr><td>[protected][token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];delete_external=[token["uid"]]'>\[Del\]</A> <A href='?src=\ref[src];protect_external=[token["uid"]]'>\[Protect\]</A></td></tr>"
+				else
+					dat += "<tr><td>DELETED - [token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];restore_external=[token["uid"]]'>\[Restore\]</A> <A href='?src=\ref[src];protect_external=[token["uid"]]'>\[Protect\]</A></td></tr>"
+			dat += "</table>"
 		dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
 
 		user << browse(dat, "window=library")
@@ -441,6 +498,7 @@
 					if(scanner.cache.unique)
 						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
 					else
+						/* Outpost 21 edit - Books to SSpersistence
 						establish_old_db_connection()
 						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
 							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
@@ -463,8 +521,25 @@
 								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
 								tgui_alert_async(usr, "Upload Complete.")
 							qdel(query) //CHOMPEdit TGSQL
+						*/
+						spawn(0)
+							var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+							var/status = SSBooks.add_new_book(scanner.cache,usr.client)
+							switch(status)
+								if(0)
+									tgui_alert_async(usr, "Uploaded book \"[scanner.cache.name]\" by \"[scanner.cache.author]\" already exists, and is protected .")
+								if(1)
+									tgui_alert_async(usr, "\"[scanner.cache.name]\" by \"[scanner.cache.author]\", Upload Complete!")
+								if(2)
+									tgui_alert_async(usr, "Replaced book \"[scanner.cache.name]\" by \"[scanner.cache.author]\".")
+								if(3)
+									tgui_alert_async(usr, "Upload failed to parse \"[scanner.cache.name]\" by \"[scanner.cache.author]\".")
+								if(4)
+									tgui_alert_async(usr, "Please wait, still processing.")
+						// Outpost 21 edit end
 	//VOREStation Edit End
 
+	/* Outpost 21 edit - Books to SSpersistence
 	if(href_list["targetid"])
 		var/sqlid = sanitizeSQL(href_list["targetid"])
 		establish_old_db_connection()
@@ -494,6 +569,7 @@
 				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
 				break
 			qdel(query) //CHOMPEdit TGSQL
+	*/
 
 	if(href_list["orderbyid"])
 		var/orderid = tgui_input_number(usr, "Enter your order:")
@@ -507,6 +583,30 @@
 		var/newpath = href_list["hardprint"]
 		var/obj/item/book/NewBook = new newpath(get_turf(src))
 		NewBook.name = "Book: [NewBook.name]"
+		NewBook.unique = TRUE // Outpost 21 edit - Books to SSpersistence. Prevent rescanning these hardprints
+	// Outpost 21 edit begin - Books to SSpersistence
+	if(href_list["import_external"])
+		var/get_id = href_list["import_external"]
+		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+		if(isnull(SSBooks.get_stored_book(get_id,get_turf(src))))
+			tgui_alert_async(usr, "This book's data is invalid, please try another from the catalogue.")
+	if(href_list["delete_external"])
+		var/get_id = href_list["delete_external"]
+		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+		var/status = SSBooks.delete_stored_book(get_id)
+		if(status)
+			tgui_alert_async(usr, "Deletion Complete!")
+		else
+			tgui_alert_async(usr, "This book cannot be deleted due to administrative request.")
+	if(href_list["restore_external"])
+		var/get_id = href_list["restore_external"]
+		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+		SSBooks.restore_stored_book(get_id)
+	if(href_list["protect_external"])
+		var/get_id = href_list["protect_external"]
+		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+		SSBooks.protect_stored_book(get_id)
+	// Outpost 21 edit end
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
 	return
@@ -523,11 +623,29 @@
 	density = TRUE
 	var/obj/item/book/cache		// Last scanned book
 
+// Outpost 21 edit begin - Books to SSpersistence
 /obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
+	if(cache) // Prevent stacking books in here, unlike the original code.
+		to_chat(user,span_warning("\The [src] already has a book inside it!"))
+		return
 	if(istype(O, /obj/item/book))
 		user.drop_item()
 		O.loc = src
+		cache = O
+		visible_message(span_notice("\The [O] was inserted into \the [src]."))
 
+/obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
+	if(cache) // Prevent stacking books in here
+		cache = null
+		for(var/obj/item/book/B in contents) // The old code allowed stacking, if multiple things end up in here somehow we may as well drop them all out too.
+			B.loc = src.loc
+		visible_message(span_notice("\The [src] ejects a book."))
+		return
+	to_chat(user,span_warning("There is nothing to eject from \the [src]!"))
+// Outpost 21 edit end
+
+/* Outpost 21 edit begin - Books to SSpersistence
+// This isn't needed, the library comp should handle the act of scanning
 /obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
 	var/dat = "<HEAD><TITLE>Scanner Control Interface</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
@@ -561,7 +679,7 @@
 	src.add_fingerprint(usr)
 	src.updateUsrDialog()
 	return
-
+*/
 
 /*
  * Book binder

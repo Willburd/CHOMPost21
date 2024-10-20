@@ -9,6 +9,7 @@ SUBSYSTEM_DEF(persistence)
 	var/list/obj/structure/sign/painting/painting_frames = list()
 	var/list/all_paintings = list()
 	var/list/unpicked_paintings = list()
+	var/list/all_books = list() // Outpost 21 edit - Books to SSpersistence
 
 // CHOMPEdit Start
 /datum/controller/subsystem/persistence/Initialize()
