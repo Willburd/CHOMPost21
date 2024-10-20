@@ -122,7 +122,6 @@
 	desc = "Random Giant asteroid."
 	mappath = 'modular_outpost/maps/submaps/orbitalyard/giant_asteroid_B.dmm'
 	allow_duplicates = FALSE // has secret in it
-	fixed_orientation = TRUE
 	cost = 50
 
 /datum/map_template/outpost21/space/orbitalyard_huge/structure_A
@@ -130,7 +129,6 @@
 	desc = "Destroyed ruins of a facility."
 	mappath = 'modular_outpost/maps/submaps/orbitalyard/structure_A.dmm'
 	allow_duplicates = FALSE
-	fixed_orientation = TRUE
 	cost = 55
 
 /datum/map_template/outpost21/space/orbitalyard_huge/structure_B
@@ -138,7 +136,6 @@
 	desc = "Destroyed ruins of a facility."
 	mappath = 'modular_outpost/maps/submaps/orbitalyard/structure_B.dmm'
 	allow_duplicates = FALSE
-	fixed_orientation = TRUE
 	cost = 55
 
 /datum/map_template/outpost21/space/orbitalyard_huge/lostship_A
@@ -146,7 +143,6 @@
 	desc = "An old derelict ship"
 	mappath = 'modular_outpost/maps/submaps/orbitalyard/lost_ship_A.dmm'
 	allow_duplicates = FALSE
-	fixed_orientation = TRUE
 	cost = 50
 
 /datum/map_template/outpost21/space/orbitalyard_huge/lostship_B
@@ -154,7 +150,6 @@
 	desc = "An old derelict ship"
 	mappath = 'modular_outpost/maps/submaps/orbitalyard/lost_ship_B.dmm'
 	allow_duplicates = FALSE
-	fixed_orientation = TRUE
 	discard_prob = 10
 	cost = 55
 /*
@@ -163,7 +158,6 @@
 	desc = "An old derelict ship"
 	mappath = 'modular_outpost/maps/submaps/orbitalyard/alienship_A.dmm'
 	allow_duplicates = FALSE
-	fixed_orientation = TRUE
 	discard_prob = 85
 	cost = 80
 */
