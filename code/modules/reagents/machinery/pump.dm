@@ -29,7 +29,6 @@
 	create_reagents(200)
 	. = ..()
 	default_apply_parts()
-	cell = locate(/obj/item/cell/high) in component_parts // Outpost 21 edit - Use the cell provided
 
 	Output = new(src)
 
@@ -59,6 +58,8 @@
 	src.reagents.trans_to_holder(R, src.reagents.total_volume)
 	qdel(src.reagents)
 	src.reagents = R
+
+	cell = locate(/obj/item/cell/high) in component_parts // Outpost 21 edit - Use the cell provided
 
 /obj/machinery/pump/update_icon()
 	..()
