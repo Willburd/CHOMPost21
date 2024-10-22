@@ -104,6 +104,7 @@
 				"current_positions" = job.current_positions,
 				"active" = active,
 				"offmap" = job.offmap_spawn,
+				"hidden" = job.title == JOB_STOWAWAY // Outpost 21 edit - Hide stowaways
 			))
 
 	data["jobs"] = jobs

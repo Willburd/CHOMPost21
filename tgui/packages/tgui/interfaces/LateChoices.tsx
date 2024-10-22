@@ -31,6 +31,7 @@ type Job = {
   current_positions: number;
   active: number;
   offmap: boolean;
+  hidden: boolean; // Outpost 21 edit - Hide stowaways
 };
 
 type Data = {
@@ -168,7 +169,9 @@ const JobButton = (props: { job: Job }) => {
       <Stack>
         <Stack.Item grow>{job.title}</Stack.Item>
         <Stack.Item>
-          ({job.current_positions}) (Active: {job.active})
+          ({job.hidden ? '?' : job.current_positions}) (Active:{' '}
+          {job.hidden ? '?' : job.active}){' '}
+          {/* Outpost 21 edit - Hide stowaways */}
         </Stack.Item>
       </Stack>
     </Button>
