@@ -191,13 +191,13 @@
 	author = "E-Shui Official"
 	body = 	"Through either the natures of a frontier world, crew death, crew departure, or otherwise, you will invariably not have a fully staffed crew. This is where the Chain of Command comes into play, everyone has a boss, and almost everyone has someone under them. Knowing who your boss is at any given moment is critical. \
 			<br/>From the top, the head authority is Central Command, you will rarely engage with CC directly, things have gone horribly wrong if so. CC reports to E-Shui Main. \
-			<br/>The captain of the station, sometimes called the Colony Director, is the highest authority on the station. However, there is an exception for the CMO being a higher authority for determining the health of the captain. \
+			<br/>The Captain of the station, sometimes called the Colony Director, is the highest authority on the station. However, there is an exception for the CMO being a higher authority for determining the health of the captain. The captain is in charge of managing the station, and filling in the gaps of missing heads of personnel. \
 			<br/>The Chief Medical Officer is the second highest command of the station, following the lack of a CD, the CMO is responsible for the safety and wellfare of the entire station. \
 			<br/>Following the CMO is the Head of Security, who is responsible for the security of the station. Depending on alert status, the HoS may take authority over the CMO. \
-			<br/>Following CMO is the Chief Engineer, who is responsible for the maintenance and function of all station functions, as well as assembling evacuation points, and assisting in recovery efforts as needed. \
+			<br/>Following HoS is the Chief Engineer, who is responsible for the maintenance and function of all station functions, as well as assembling evacuation points, and assisting in recovery efforts as needed. \
 			<br/>Following the CE is the Research Director, who is in charge of the research wing. \
-			<br/>Following the RD is the Head of Personnel, who is in charge of maintaining crew order, enforcing SOP, condition codes, and ensuring crew needs are met. Any Civilian jobs fall under the authority of the head of personnel. \
-			<br/>Following the HOP is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain. \
+			<br/>Following the RD is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain. \
+			<br/>Following the QM is the Command Secretary (Formerly known as Head of Personnel, sometimes called the Executive Officer), they are in charge of resolving disputes between heads, having the final say on SoP direction and interpretation, acting judge on the station, and resolving inter-department conflicts with staff. They can change crewmember IDs as necessary, however with a captain present they can be tasked to act in their stead to carry out tasks for the function of the station while the captain operates in filling in with another head. \
 			<hr/>In the unlikely event where there is no head authority on the station, individuals of each department take charge based on seniority and experience, as follows. \
 			<br/>Command Secretary, Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests. \
 			<br/>The lowest ranking in the chain of command is the station AI. The station AI has no authority, and can never give orders to any non-synthetic crew, regardless of its laws. Synthetic crew and cyborgs fall under the station AI."
@@ -512,4 +512,181 @@
 			<br/> \
 			<b><i>Tramadol:</b></i> Painkiller, highly effective. Overdoses at 30 units. 10 carbon, 10 sugar, 10 oxygen, 30 nitrogen, 30 water, 30 ethanol, 30 oxygen."
 
+/datum/sop_entry/unknownact
+	title = "Unknown Actors"
+	author = "E-Shui Official"
+	body = 	"<center><large>E-Shui Policy on Unknown Actors on Station</center></large> \
+			<br/>This document's purpose is to clarify E-Shui Official policy on Unknown Actors on station to include, but not limited to: Vox raiders, Stowaways, Shipwreck survivors, Shadekin, Lost Drones, Rogue Synthetics, NT visitors, False Inspectors, and any other entity living or synthetic that is not E-Shui personnel and not an expected and cleared visitor. \
+			<br/> \
+			<br/>Under SoP Documentation <i>'Condition Codes'</i>, any unknown actor is an immediate Code Blue situation as a confirmed hostile threat to the station. Any actor noted with lethal capability, ranged weaponry, or shadekin with phasing ability, are a Code Red threat. \
+			<br/>Any unknown actor is to be identified as rapidly as possible, with threat level adjusted appropriately to the maximum estimated threat the individual, or group of individuals can cause. \
+			<br/>The following procedures are recommendations and not a requirement to follow, as each threat to the station will likely be unique, and security forces and station staff must be able and willing to adapt to the threat. \
+			<br/><hr/><hr/> \
+			<br/><b>Threats to the Terraformer:</b> \
+			<br/>  <b>Definition:</b> Any individual or creature capable of and willing to cause direct and permanent harm to the Terraforming unit. \
+			<br/>  <b>Notes:</b> The Terraformer is resilient, and has sufficient immuno-response to ward off Chu'Ukara infection, Synx inhabitation, or dosages less than 3ku of chloral hydrate. Most station threats will be unable to harm it. Stray artillery fire or tank shells can heal over time with appropriate medical procedures to avoid scarring. Attention must be given to individuals attempting to seek entry into the Euthanizer core. Threats may attempt to use social engineering instead of direct force, under no circumstance is detailed information about Terraformer access, policies, turret controller locations, trap locations, or any other information to be  given to any unauthorized individual, and such information is not to be transmitted over Radio or Body Camera microphone. \
+			<br/>  <b>Threat:</b> VERY HIGH. Assess capability and resources as below or per situation. Utilize all available force and extreme violence to neutralize any creature of individual seeking access into the Euthanizer. \
+			<br/>  <b>Recommended Action:</b> Primary attention must be given to the twin access points; Primary Euthanizer access, located on the surface on the Southeastern edge of the outer shell, under turret protection. And the Atmospherics Waste line, sealed by blast doors. The latter is considered a lower level access as there is no direct access from the waste line to the Euthanizer. Utilize all force available to neutralize any threat seeking to gain access to the Terraformer's Euthanizer, and ensure power from engineering to the defense turrets is not interrupted. All station staff must take appropriate action at direction of security to prevent Euthanizer Activation. \
+			<hr/> \
+			<center><b>Stowaways</b></center> \
+			<br/>  <b>Definition:</b> Individuals that exist and live within E-Shui grounds, but are not current E-Shui staff. Many of these individuals come from defunct resleevers, crashed ships, extraspace anomalies, escaped prisoners, or defunct employees. Many may not know Galcom, or have poor linguistic and reason capability, usage of translators is recommended. \
+			<br/>  <b>Notes:</b> Recent events have made it necessary to clarify the station is not to 'adopt' stowaways from the station, many are not in a safe mental state for crew operation, may carry unwanted diseases, and may be Forking risk. \
+			<br/>  <b>Threat:</b> MEDIUM. Stowaways are likely poorly equipped and poorly armed, expect high levels of mental instability and excessive hostility and paranoia. Survival is highly indicative of identification and evasion of traps and countermeasures located on station. \
+			<br/>  <b>Recommended Action:</b> Lock down departments, restrain and capture individuals for interrogation. Execution is not authorized unless necessary on capture. Ensure steps are taken to secure any lose tools or belongings to avoid theft and counter-utilization by stowaways. \
+			<hr/> \
+			<center><b>Vox Raiders</center></b> \
+			<br/>  <b>Definition:</b> Individuals of the Vox species, often from raiding ships. Located on station grounds their actions can range from mundane or openly hostile. Many have no to poor understanding of Galcom or station languages, and translators will be required by one or both parties. \
+			<br/>  <b>Notes:</b> E-Shui is required by classified trade deals to offer fuel and resupply to Vox vessels, and to offer amnesty and shelter to Vox ships and crew regardless of pursuit by SolGov, NT, or other official entities. However, Vox vessels and crew seeking this offer must declare their arrival to E-Shui, and either surrender weaponry and subversion devices for the duration of their stay, or remain off-station, such as parking at the reclamation yard. If a vox vessel and crew do not declare their arrival prior to, or immediately upon arrival, they are assumed to be hostile. \
+			<br/>  <b>Threat:</b> HIGH. Expect technology beyond our current creation ability, high reasoning and planning. Expect lethal and concealable weaponry at all times, with devices to circumvent all traps and measures. Vox species are immune to tasers. Utilize extreme caution.  \
+			<br/>  <b>Recommended Action:</b> Assumption of immediate Red-level threat until disproved by Vox crew. All departments MUST lock down, with maintenance doors being bolted and braced against intrusion. Regular patrols must be made to all secure areas, and at least one individual must remain on watch on the main access to the Terraformer's Euthanizer. Strong recommendation of usage for any tactical vehicles for grounds patrols after maintenance access is sealed off, as allowed by crew staffing. Patrols of maintenance after sealing are to be performed by minimum 2 man teams, and any individual performing any patrol must have body cameras equipped, fully activated, and configured to their name. \
+			<hr/> \
+			<center><b>Shadekin</center></b> \
+			<br/>  <b>Definition:</b> Members of the shadekin species with or without the ability to 'phase' in and out of bluespace. Eye color is indicative of anticipated behavior. Due to classified trade deals, and prior experiences Shadekin are considered hostile upon detection unless proven otherwise following capture and interview. \
+			<br/>  <b>Notes:</b> Pattern behavior is not indicative of every shadekin but implied: Blue: Curious, often friendly. Green: Timid but curious. Yellow: Shy, very rare. Purple: Tricksters and pranksters. Orange: Potential hostility, be wary. Red: The most common, high hostility and predatory behavior. Black: Burned out, inability to phase. Treat as stowaway. \
+			<br/>  <b>Threat:</b> HIGH. Ability to phase and bypass almost all security devices and traps. Dephasing devices are the only guaranteed function against this. Often have high resistance to tasers. Ability to phase in over a target predatoraly, immediately consuming their victim. \
+			<br/>  <b>Recommended Action:</b> Immediate Code Red upon confirmed detection of any phase-capable shadekin. Departments are exempt from standard SoP code-red lock down. Utilization of dephasers at critical areas or triage locations is necessary. Medical should prepare and disperse vomit-inducing pills to crew members immediately, in order of chain of command. \
+			<hr/> \
+			<center><b>NT Inspectors and Spies</center></b> \
+			<br/>  <b>Definition:</b> Individuals of rival company Nanotrasen, either branded/official or not. May be posing as visitors. \
+			<br/>  <b>Notes:</b> Nanotrasen will likely be making efforts to sabotage and claim planetary rights under phoron mining laws as terraforming process draws nearer to completion. \
+			<br/>  <b>Threat:</b> LOW. Likely unarmed and unarmored. High capability for legal finagling. \
+			<br/>  <b>Recommended Action:</b> Cargo is to lock down and ship off any mined phoron, and destroy any records of phoron deposits in the ground, mining and research are authorized to ignite any phoronic gas deposits. Under no circumstance is the NT individual to perform geological surveys or ore scanning. Assess if visiting credentials are verified and authorized by E-Shui Central Command. Arrest for trespassing upon any misalignment of paperwork. Security or command are to maintain watch, and arrest upon noticing suspicious activity or intensive questioning for suspicious activity. \
+			<hr/> \
+			<center><b>Shipwreck Survivors</center></b> \
+			<br/>  <b>Definition:</b> Any individuals on station grounds, reclamation yard capture, or otherwise in SL-340 space that are stranded. Either on a destroyed ship, lifepod, survival capsule, or other method of survival. \
+			<br/>  <b>Notes:</b> E-Shui is bound by SolGov Law to make attempts with maximum reasonable ability to rescue and recover survivors of any non-hostile shipwreck in the shortest timeframe reasonable. Vox Shipwreck survivors must be rescued and given all attempts of recovery and aid, regardless of raider status, and central command must be immediately informed to make appropriate contact to classified partners for return. \
+			<br/>  <b>Threat:</b> LOW. Likely malnourished and low on supplies. May be hostile on initial rescue attempts due to fear, paranoia, or hallucinations. \
+			<br/>  <b>Recommended Action:</b> Immediate dispatch of engineering, security, and medical forces to the site of the wreck. Recover and stabilize any individuals, and maintain under medical arrest until cleared, then treat as station visitor until transport off-world can be arranged with central command. Wanted individuals or survivors of a hostile shipwreck should be arrested pending trial. \
+			<hr/> \
+			<center><b>Lost Drones and Rogue Synths</center></b> \
+			<br/>  <b>Definition:</b> Any drone, cyborg, positronic, or other artificial life that is not employed by E-Shui or bound by standard E-Shui law. \
+			<br/>  <b>Notes:</b> May be sabotaged or damaged drones from reclamation yard processes, old security defenses, or other unknown sources. \
+			<br/>  <b>Threat:</b> HIGH. Many synthetics boast high durability and toolsets, to include weaponry and shielding. These systems may be absent or damaged, but should be considered in a threat assessment. \
+			<br/>  <b>Recommended Action:</b> Code Blue threat, utilize ion weaponry to quickly disable and dispatch threat if it impedes station grounds and safety. Lost drones from reclamation yard or security processes are likely to be recovered by other drones in short order, avoidance until then is preferred, but not required. \
+			<hr/> \
+			<center><b>Changelings</center></b> \
+			<br/>  <b>Definition:</b> Largely unknown entities capable of devouring and mimicking individuals. \
+			<br/>  <b>Notes:</b> Unknown motivations, and unknown skillset. \
+			<br/>  <b>Threat:</b> VERY HIGH. Unknown skillset, unknown motivations. Ability to mimic any individual previously consumed. \
+			<br/>  <b>Recommended Action:</b> Immediate red-level threat. All staff are to pair up and remain on high alert. Do not trust corpses. \
+			<hr/> \
+			<center><b>Malicious Trespassers</center></b> \
+			<br/>  <b>Definition:</b> Hostile actors to the station, such as Syndicate members, E-Shui saboteurs, Nanotrasen Nuclear Squads, or any other well-equipped individuals entering station property to cause mass damage, terrorism, or casualties on station. \
+			<br/>  <b>Notes:</b> Largely focused on corporate espionage, focusing on destruction of station or death of crew. May be well equipped. \
+			<br/>  <b>Threat:</b> HIGH. Expect lethal weaponry and hardsuits, with subversion devices to prevent camera tracking, with door hacking capability. Likely unable to reliably defuse station traps, utilize frequently. \
+			<br/>  <b>Recommended Action:</b> Code Red Situation. All departments MUST lock down, with maintenance doors being bolted and braced against intrusion. Regular patrols must be made to all secure areas, and at least one individual must remain on watch on the main access to the Terraformer's Euthanizer. Strong recommendation of usage for any tactical vehicles for grounds patrols after maintenance access is sealed off, as allowed by crew staffing. Patrols of maintenance after sealing are to be performed by minimum 2 man teams, and any individual performing any patrol must have body cameras equipped, fully activated, and configured to their name. \
+			<hr/> \
+			<center><b>Chu-Ukara Parasites</center></b> \
+			<br/>  <b>Definition:</b> Infectious parasites of unknown origin, capable of devouring and infecting individuals into their species to spread. \
+			<br/>  <b>Notes:</b> Most often found in the caverns and deeper areas of maintenance. \
+			<br/>  <b>Threat:</b> HIGH. Capability to utilize station ductwork for rapid movement and growth, certain specimens, especially those of high-reasoning species post infection, display high levels of tactical capability. \
+			<br/>  <b>Recommended Action:</b> Code Red situation. Vents and Scrubbers should be welded closed in critical areas with non-essential crew evacuating to the bunker or off-station. Maintenance should be bolted, bracing is not required. Recommended usage of station flamethrowers, directional mines, and bluespace artillery for large infestations. \
+			<hr/> \
+			<center><b>All Other Entities</center></b> \
+			<br/>  <b>Definition:</b> Any other threats not previously identified \
+			<br/>  <b>Notes:</b> Utilize caution. Recall defense of the Terraformer is highest priority above station survival, but Terraformer defense cannot occur without station. Continual watch of Euthanizer access is necessary for any threat capable of or willing to cause damage to the Terraformer. \
+			<br/>  <b>Threat:</b> VARIABLE \
+			<br/>  <b>Recommended Action:</b> Utilize best judgment for weapon usage, condition code, and actions taken. Under no circumstance is the Terraformers Euthanizer to be breached or activated. Avoid excessive damage to the station, and avoid unnecessary crew loss."
+
+
+/datum/sop_entry/buildcode
+	title = "Building Code"
+	author = "E-Shui Official"
+	body = 	"<center><large><b>E-Shui Building Code.</center></large></b>\
+			<br>E-Shui adheres to SolGov construction standards, with modifications to ensure crewmember safety and understanding of procedures and construction. \
+			<br>A 'room' is defined as any enclosed space with three or more walls, and ceiling with at least one entry point, designed for prolonged usage for a specific purpose, defined or undefined. \
+			<br>A 'hallway' is defined as a long connecting tunnel, either enclosed or open, connecting multiple rooms and areas together. \
+			<br>An 'area' is defined as either a room or hallway, designed as one functional location, even when the room or hallway is subdivided into multiple smaller sections. \
+			<br><hr><hr> \
+			<br>General Guidelines: \
+			<br>Every room is required to have: \
+			<br>- One fire extinguisher, tested semi-annually. \
+			<br>- One fire alarm, mounted on a wall 3ft-4ft off the ground, tested annually. \
+			<br>- One air vent and air scrubber pair per 600 square feet of floor space to maintain optimal air circulation and refilling. \
+			<br>- One air alarm, mounted on a wall 4ft from the ground, tested monthly with temperatures to range between 15C and 32C except in freezers, which must be within -10C and 0C. \
+			<br>- One lightswitch per entry point, located as close to the entry point as possible. Light switches must be equipped with a low-draw LED light to aid in discovery and usage. \
+			<br>- One intercom, mounted on a wall 3-5ft off the ground. Multiple intercoms in a room must be stacked vertically on the same section of wall space, unless the count would exceed 3 intercoms, in which following intercoms must be place directly horizontally, repeating in sets of 3. \
+			<br>- One APC, wall mounted 3 1/2ft - 4ft off the ground. Connected directly to appropriate power cables. \
+			<br>- One disposal outlet, unless placed in a sensitive operations room where the presence of a disposal outlet would cause injury or damage to station crew and property \
+			<br>- Emergency shutters over every window and doorway to ensure proper sealing of the room in event of a gas leak or environmental failure. Shutters must be connected to the rooms air alarm via wired or wireless connections, and tested monthly. \
+			<br>- Catwalk access panels are to be installed at every major junction of piping, wiring, and air pipes no closer than 5 meters apart. Catwalk access panels are not to be tiled over. Only department-relevant repainting of the frame is authorized. \
+			<br><hr> \
+			<br>Every hallway in addition must include: \
+			<br>- One geiger counter, mounted 4ft-6ft off the ground. \
+			<br>- One AI display, mounted at 4ft-5ft off the ground. \
+			<br>- One Station Status Display, mounted at 4ft5ft off the ground. \
+			<br>- Station and AI displays must be mounted in parallel; either directly across, or directly adjacent to one another for ease of discovery, when both are to be mounted in an area. \
+			<br>- Hallways may not have a lightswitch, and must be always lit during station hours. \
+			<br><hr> \
+			<br>Every head of staff office must also include:\
+			<br>- One Command and Communications console\
+			<br>- One Keycard Authenticator\
+			<br>- Any and all lockdown switches for the department, located in the same area and appropriately labeled\
+			<br>- One set of paperwork machinery. (Fax machine, paper shredder, employment records, photocopier, paper bin, and department head stamp)\
+			<br>- One fireaxe cabinet for emergency usage\
+			<br>- One Requests Console specialized for the appropriate department\
+			<br><hr> \
+			<br>No wall-mounted machinery is to be mounted in an inaccessible location. They cannot be mounted more than 6 feet high, or less than 2 feet low. In the case of Heavier Than Air Gas (HTAG) sensors, they must be mounted 4-6 inches from the floor, directly below the rooms air alarm and connected by hard wire. No wireless methods may connect air sensors to their controller. \
+			<br>Wall mounted machinery is not to be blocked by furniture that would impede or unreasonably delay access during an emergency. \
+			<br>Fire extinguisher count is a minimum and not maximum. Areas with more flammability hazard, or spaces larger than 500sqft should consider having multiple cabinets for ease of usage in an emergency. \
+			<br>Light switches are not to be installed in public hallways, or critical department hallways, as these areas must remain continually lit. \
+			<br>Every room excluding hallways must be designated as smoking or nonsmoking, and must be signed appropriately on the interior or exterior of the room.  \
+			<br>Any room that is subdivided into multiple sections capable of being airtight, such as rooms that have inner doors, glass walls, or any other method of dividing a room, all individual sections of the room are required to have a unique pair of air alarms, and vent and scrubber pair, to ensure safety and proper airflow. \
+			<br><hr> \
+			<center><b>Optional wall installations:</center></b>\
+			<br>Newscasters, AI displays, Station Status Displays, Nanomed stations, Station maps, and Geiger counters are optional wall mounted devices able to be installed. These devices must be installed at a usable height on clear wall space as space allows. At least one of every device is required to be installed in every department, and at least one in every break room. \
+			<br>Wall mounted power cell chargers must be installed 3ft-4ft off the ground, with up to 3 per wall section. Desk-based chargers must be securely attached to the table, with up to two chargers per table. Internal breakers must be tested monthly. \
+			<br><hr> \
+			<center><b>Construction:</center></b> \
+			<br>Station walls are to be made out of steel, divided into even sections, approximately 1m in size. All interior walls are to be built to standard. All station exterior walls are to be reinforced. In addition, all exterior walls of a department, separating a department from a civilian access area must also be reinforced. All exterior walls, roof tiles, railings, and staircases must also be coated in E-Shui rigidized protegenous polymer \
+			<br>\
+			<br>Windows are to follow standard based on need and area: Any windows on a ground floor, or basement level, where wildlife or hostile actors could walk along ground to access it; defined as 'exterior windows', must be constructed with a dual pane, with a grill placed in-between. Window grills leading into a department, or secure area must be electrified. Windows dividing a department from a civilian area, or dividing a secure area must be counted as an exterior window and reinforced as such. \
+			<br>Inner-station windows, such as dividing a hallway and room, when not separating a department from a civilian area, must be only a single 'full tile' window, with a grill installed underneath it. Interior station windows that are not separating departments or secure areas are not to be electrified. \
+			<br>Exterior windows on a roof level, where they access open space or an exposed roof lacking an exterior ladder or stairwell are to be constructed using a minor hybrid system, where the primary window is a full panel, with an additional pane installed on the exterior. Ones leading into departments or secure areas must be electrified. \
+			<br>\
+			<br> Airlocks are always to be designed as a ground level exterior barrier, with reinforced walls on every connecting wall of the airlock, and double-paned windows on both sides of the airlock. An access button must be provided on both interior and exterior, mounted at 3ft-4ft off the ground, with an airlock controller mounted inside the airlock at 4ft off the ground. Airlocks must be supplied with umbrellas and flashlights for external access, and an emergency closet inside, or immediately outside of the airlock within the station.\
+			<br>\
+			<br>Wiring must be color coded to voltage specifications. Each inner-department must be green in color, with sub-department wires heading in descending order from cyan, yellow, red, gray, white, then color of choice except for orange, green, or prior used colors. All wires along the station spine and maintenance must be heavy duty cabling. Each departments inner wires must be separated by a breaker box, bypassing the department Superconducting Magnetic Energy Storage (SMES) device. Each SMES must be located indoors, in maintenance, with access for both engineering and the relevant department. \
+			<br>Station power that is not along the station spine, but connects to the mains power connecting off the engine output SMES, or directly to engine output in the event of the engine bypass being enabled, the must be orange in color to denote the higher voltage. High density cables along the spine are not to connect directly to a department SMES. \
+			<br>Wiring is to avoid crossing under walls or dense structures, when wiring must pass under walls, an access panel must be installed in the wall to allow access to the wire, and to signal engineers of the wires passage. When crossing secure windows must not pass through, and instead must be dotted through to ensure proper electrification of the window. Wiring in unsecure areas is allowed to pass straight through a window grille, or under a doorway. \
+			<br>APCs and wiring connections are not to be installed above large, immobile machinery that impedes or disrupts access to the APC or wire reconnection in the event of necessary reconstruction or sabotage. Wiring that connects to lightning rods, solar panels, or other alternate forms of power generation must connect to the stations main line and not departmental power, except in the case of critical areas such as Telecoms or the AI core. \
+			<br>Station wiring is not to cross in matching directions with a different coded wire. Wire crosses and splits exceeding 5 meters must have an access panel installed above the junction. Wire junctions under catwalk access do not need an access panel. \
+			<br>\
+			<br>Station bathrooms are designated as a private area, and are not to have any; cameras, microphones, chips, sensors, or any other method of recording or monitoring crew in the bathrooms. Each individual stall is to have at least one scrubber vent to allow proper ventilation of gasses, and must have a drainage port located by the main door, and at the lowest point of the room, to allow for safe drainage. Bathrooms must include at least one sink, mirror, and toilet. With urinals, and cyborg charger as allowed by space. All bathroom devices; sinks, toilets, showers, runoff drains, and any other liquid disposal drainage must link to the station septic tank for safe filtration and disposal. Each bathroom must be uniquely named per department for safe and rapid location for medical or engineering incidents, names must not use profanity, vulgar or racial slurs, deceptive implications, or duplicated names in any of the primary languages recognized by E-Shui official. (Galactic common, Schechi, Tradeband, Vox Pidgin, Canilunzt, Sagaru, or SolGov Braille) \
+			<br>\
+			<br>Station showers must have appropriate drainage, with drains in each shower stall, at the entrance, and at the lowest point of the room. Each stall must be constructed with tinted or frosted glass, a shower head built to SolGov standard of metal or PVC piping. Shower head water must be connected to the freshwater tank located on site, and tested regularly for enzymatic contamination. (See: E-Shui inspection guidelines) \
+			<br>Showers must be equipped with at least one table of plastic or glass per 5 showers for towel and clothing storage. The Air Alarm in the room must be adjusted for humidity removal. \
+			<br>\
+			<br>Railings must be installed along every open edge, to the sides and back of every stairwell, and anywhere that presents a hazard to crew safety should movement be unimpeded. Railings must be secured at both ends and every 3 feet, with a horizontal rung located at 2ft, and 4.5ft off the ground. Railings must be coated with an enzyme neutralizer. \
+			<br>Staircases must be constructed with a textured surface of; ridged, ribbed, slatted, or bumped surfacing, and given a non-slip painting. Stairs must descend at a 7-11 run. Ramps for garage access must not exceed an 8% grade, and must also be treated with a nonslip paint. Every staircase landing must have a drainage vent linked to the station gray water disposal. \
+			<br>\
+			<br>Disposal pipes are not to cross under walls, and must be constructed of 3ft diameter steel. The stations disposal network is to make one continuous loop from and to cargo. A package sorting diversion junction must be located directly after the cargo outlet for appropriate sorting prior to waste transitioning to the incinerator, and an E-Shui proprietary Autosleeving Body Diversion Junction located prior to the cargo waste and mail sorting area. Direct to incinerator lines are not to link with the primary disposal loop until after the package sorting diversion junction, when directly destined for the incinerator. \
+			<br>All disposal outlets direct to incinerator must be color coded red, with appropriate signage located directly above the bin. Disposal pipes in maintenance that cross or link with another pipe that are destined for the incinerator must be signed appropriately. \
+			<br>All department disposal mail sorting junctions must be linked to only one disposal outlet, and the corresponding disposal outlet must be color coded blue and labeled with the appropriate destination label. \
+			<br>Any department mailing rooms must be supplied with at least 2 meters of exposed conveyor belt with a connecting controller, flaps for crew safety, and a table for storing packaging material on. The table and belts must not impede crew mobility. \
+			<br>\
+			<br>Wooden floors installed on station must be constructed of treated wood, painted with a clear rigidized protegenous polymer. Boards must be within 2-5 inches wide, and 4-12 feet long, unless space necessitates trimming. Boards must have empty space filled with water and enzyme proof adhesives to maintain structure and minimize risk of separation. Carpets must be installed with a slip-proof cover along the edges to minimize wear and tear, and lessen tripping hazards. \
+			<br>\
+			<br>Every department must have at least one break room accessible at any time by that department's crew members. Each break room must have a wooden or carpeted floor, at least one sofa, microwave and/or vending machine for food and drink. In addition, they must contain a cyborg charger either in the break room, or in easy and immediate access just outside of the break room.\
+			<br>\
+			<br>Station tram magnetic levitation tracks must be constructed 5 meters apart between pairs, with each pair being exactly 2 feet apart. They may not have a grade of more than 6 degrees, and must remain equally spaced during all turning maneuvers. \
+			<br><hr> \
+			<center><b>Medstations:</center></b>\
+			Medical emergency treatment rooms located throughout the station must be equipped with at minimum: 2 lights, one body scanner, one backup kiosk, and appropriate table space for medicine storage and stocked with multiple roller beds for safe transport. Each medical treatment area must be appropriately signed and may not be configured for night lighting, and lights must be on at all times during station hours.\
+			All med stations must be publicly accessible, even when located inside of departments. All medical stations must be floor marked and signed as a medical area for ease of location.\
+			<br><hr> \
+			<center><b>Marking:</center></b>\
+			<br>Every department must be signed to denote importance and accessibility. Sub-departments must also be appropriately signed. Department signs must be color coded appropriately and mounted 3-5' off the ground from the bottom of the sign. \
+			<br>In public hallways, directional signs must be mounted in sequence with the center located 4' off the ground, and must be mounted at every major intersection and tram station. \
+			<br>Areas of hazardous nature must be clearly and appropriately marked for crew safety prior to entrance into any area that might prove hazardous. Warning signs may be adjusted on height based on crew expected usage at eye level or close to the hazard itself in the case of small or specific hazard areas. \
+			<br>Machinery must be clearly marked for the hazard it poses to crew along the machine itself. \
+			<br>Any area accessed vertically must be marked with a faint gray outline to allow for appropriate and safe ladder placement. Vertical connections of latticework and catwalks must have a rung 2-3 inches in diameter with a 2 inch gap, connected every foot to the base catwalk to allow for ladder securing during operation. \
+			<br>\
+			<br>Floor trim must be appropriately colored and designed for station usage for quick and efficient navigation. Department color codes must be: Command: White, Medical: Light blue, Security: Red, Engineering: Orange, Atmospherics: Black, Research: Purple or Violet, Cargo and Mining: Brown, Hydroponics: Light green, Janitorial and Service: Tan. Civilian: Light gray. Vox treatment and Virology: Blue and Black Alternating. \
+			<br>All floor markings must extend from the wall's edge to half of the floor tile, approximately half a meter. Markings within a department must be a solid color from the wall, and alternating every meter in the case of shared departments. Floor markings in any publicly accessed areas may only extend half of the distance, with the remaining half being a gray or black ridged trim. The inset color must match the adjacent department, alternating in the case of a shared department. \
+			<br><hr> \
+			<center><b>Maintenance:</center></b>\
+			<br>Maintenance tunnels must be constructed no greater than 6' tall and 4' wide, and no less than 2' by 2'. Maintenance tunnel access must be specifically marked and must be publicly accessible. Maintenance doors that leave maintenance areas or follow the station spine must be marked with brown or tan coloration, while doors that separate maintenance areas and do not connect the spine must be marked with green coloration. Maintenance doors that enter or exit specific departments must be access locked and color coded to the specific department. \
+			<br>Explosive and destructive devices are not to be placed on station spine or critical infrastructure, to include any destructive area of effect caused by the detonation of security devices. \
+			<br>Nondestructive security devices such as beartraps, mouse traps, tactical slippage devices, or nondestructive land mines are authorized but discouraged to be placed on critical station infrastructure, but may not be placed in any civilian area on station, except in condition red, and must be removed immediately upon cessation of threats. \ "
 
