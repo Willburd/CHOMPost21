@@ -5287,6 +5287,7 @@
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\frame.dm"
 #include "modular_outpost\code\game\objects\structures\atmospherepost.dm"
 #include "modular_outpost\code\game\objects\structures\hookah.dm"
+#include "modular_outpost\code\game\objects\structures\residential_teleporter.dm"
 #include "modular_outpost\code\game\turfs\flooring\gas_cracks.dm"
 #include "modular_outpost\code\modules\client\preferences_spawnpoints.dm"
 #include "modular_outpost\code\modules\client\record_updater.dm"
