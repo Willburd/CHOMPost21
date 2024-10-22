@@ -76,8 +76,6 @@
 		handle_addictions() // Outpost 21 addition - dwugs
 		handle_statuses() //all special effects, stunned, weakened, jitteryness, hallucination, sleeping, etc
 
-	handle_actions()
-
 	update_canmove()
 
 	handle_regular_hud_updates()

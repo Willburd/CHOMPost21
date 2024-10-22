@@ -257,7 +257,8 @@
 	name = "Job Ledger (Astra)"
 	title = "Job Ledger (Astra)"
 	ledge = list(
-		list("5-Oct-2568","Chu Infestation","304T")
+		list("5-Oct-2568","Chu Infestation","304T"),
+		list("Forever and ever~","Your space friend~","A delicious addition~")
 	)
 
 
