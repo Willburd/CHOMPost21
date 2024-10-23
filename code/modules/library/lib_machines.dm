@@ -8,7 +8,7 @@
  *		Book Binder
  */
 
-#define INVPAGESIZE 5
+#define INVPAGESIZE 4
 
 /*
  * Borrowbook datum
@@ -189,38 +189,53 @@
 	var/list/checks = list()
 	var/start_entry = 1 + (inventory_page * INVPAGESIZE) // 6 per page in inventory
 	var/entry_count = 0
+	var/inv_left = (inventory_page > 0)
+	var/inv_right = TRUE
 	switch(screenstate)
 		if("inventory") // barcode scanned books for checkout
+			if(inventory_page + INVPAGESIZE > inventory.len / INVPAGESIZE)
+				inv_right = FALSE
 			for(var/obj/item/book/B in inventory)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
-				if(entry_count > start_entry + INVPAGESIZE)
+				if(entry_count >= start_entry + INVPAGESIZE)
 					break
 				if(B)
 					inv += list(tgui_add_book(B))
 		if("online") // internal archive (hardcoded books)
+			if(inventory_page + INVPAGESIZE > all_books.len / INVPAGESIZE)
+				inv_right = FALSE
 			for(var/BP in all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
-				if(entry_count > start_entry + INVPAGESIZE)
+				if(entry_count >= start_entry + INVPAGESIZE)
 					break
 				var/obj/item/book/B = all_books[BP]
 				if(B)
 					inv += list(tgui_add_book(B))
 		if("archive") // external archive (SSpersistance database)
+			if(inventory_page + INVPAGESIZE > SSpersistence.all_books.len / INVPAGESIZE)
+				inv_right = FALSE
 			for(var/token_id in SSpersistence.all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
-				if(entry_count > start_entry + INVPAGESIZE)
+				if(entry_count >= start_entry + INVPAGESIZE)
 					break
 				var/list/token = SSpersistence.all_books[token_id]
 				if(token)
 					inv += list(tgui_add_token(token))
 		if("checkedout") // books checked out of the library
+			if(inventory_page + INVPAGESIZE > checkouts.len / INVPAGESIZE)
+				inv_right = FALSE
 			for(var/datum/borrowbook/BB in checkouts)
+				entry_count++
+				if(entry_count < start_entry)
+					continue
+				if(entry_count >= start_entry + INVPAGESIZE)
+					break
 				// for returns
 				var/list/book = list()
 				book["bookname"] = BB.bookname
@@ -237,6 +252,8 @@
 				checks += list(book)
 	data["inventory"] = inv
 	data["checks"] = checks
+	data["inv_left"] = inv_left
+	data["inv_right"] = inv_right
 	// Book scanner
 	data["scanned"] = null
 	data["scanner_error"] = ""
@@ -295,6 +312,7 @@
 	add_fingerprint(usr)
 	switch(action)
 		if("switchscreen")
+			inventory_page = 0 // reset inv menus
 			screenstate = params["switchscreen"]
 			if(screenstate == "arcane")
 				if(!src.emagged)

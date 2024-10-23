@@ -1,5 +1,6 @@
 import { useBackend } from '../../backend';
 import { Box, Button, Divider, Section } from '../../components';
+import { MenuPageChanger } from './MenuParts';
 import { Data } from './types';
 
 export const MenuCheckedOut = (props) => {
@@ -36,20 +37,7 @@ export const MenuCheckedOut = (props) => {
         </Box>
       )}
       <Divider />
-      <Button
-        icon="eye"
-        disabled={checks.length === 0}
-        onClick={() => act('inv_prev', { inv_prev: 1 })}
-      >
-        Prev
-      </Button>
-      <Button
-        icon="eye"
-        disabled={checks.length === 0}
-        onClick={() => act('inv_nex', { inv_nex: 1 })}
-      >
-        Next
-      </Button>
+      <MenuPageChanger lencheck={checks.length} />
     </Section>
   );
 };

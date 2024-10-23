@@ -1,5 +1,6 @@
 import { useBackend } from '../../backend';
 import { Box, Button, Divider, Section } from '../../components';
+import { MenuPageChanger } from './MenuParts';
 import { Data } from './types';
 
 export const MenuArchiveInventory = (props) => {
@@ -44,20 +45,7 @@ export const MenuArchiveInventory = (props) => {
         </Box>
       )}
       <Divider />
-      <Button
-        icon="eye"
-        disabled={inventory.length === 0}
-        onClick={() => act('inv_prev', { inv_prev: 1 })}
-      >
-        Prev
-      </Button>
-      <Button
-        icon="eye"
-        disabled={inventory.length === 0}
-        onClick={() => act('inv_nex', { inv_nex: 1 })}
-      >
-        Next
-      </Button>
+      <MenuPageChanger lencheck={inventory.length} />
     </Section>
   );
 };

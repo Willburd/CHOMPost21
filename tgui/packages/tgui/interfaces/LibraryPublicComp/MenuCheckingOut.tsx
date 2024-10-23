@@ -9,6 +9,15 @@ export const MenuCheckingOut = (props) => {
 
   return (
     <Section title="Check out a Book">
+      <Button icon="eye" onClick={() => act('editbook', { editbook: 1 })}>
+        Edit
+      </Button>
+      Book: {buffer_book} <br />
+      <Button icon="eye" onClick={() => act('editmob', { editmob: 1 })}>
+        Edit
+      </Button>
+      Recipient: {buffer_mob} <br />
+      <Divider />
       <Button onClick={() => act('decreasetime', { decreasetime: 1 })}>
         -
       </Button>

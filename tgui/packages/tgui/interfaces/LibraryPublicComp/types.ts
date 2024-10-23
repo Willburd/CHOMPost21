@@ -3,6 +3,8 @@ export type Data = {
   emagged: boolean;
   // database
   inventory: Book[];
+  inv_left: boolean;
+  inv_right: boolean;
   // scanner
   scanned: Book | null;
   scanner_error: string;
