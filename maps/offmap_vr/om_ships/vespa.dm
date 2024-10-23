@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/vespa
 	name = "OM Ship - Vespa (New Z)"
 	desc = "The Vespa, a Hephaestus Industries vessel."
-	mappath = "maps/offmap_vr/om_ships/vespa.dmm"
+	mappath = 'vespa.dmm'
 
 // The shuttle's area(s)
 /area/ship/expe

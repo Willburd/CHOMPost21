@@ -7,7 +7,7 @@
 /datum/map_template/om_ships/screebarge
 	name = "OM Ship - Battle Barge"
 	desc = "The BATTLE BARGE."
-	mappath = "maps/offmap_vr/om_ships/screebarge.dmm"
+	mappath = 'screebarge.dmm'
 	annihilate = TRUE
 
 // The shuttle's area(s)

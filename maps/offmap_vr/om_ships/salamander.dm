@@ -7,14 +7,14 @@
 /datum/map_template/om_ships/salamander
 	name = "OM Ship - Salamander Corvette"
 	desc = "A medium multirole spacecraft."
-	mappath = "maps/offmap_vr/om_ships/salamander.dmm"
+	mappath = 'salamander.dmm'
 	annihilate = TRUE
 
 // Map template for spawning the shuttle
 /datum/map_template/om_ships/salamander_wreck
 	name = "OM Ship - Salamander Corvette Wreckage"
 	desc = "A medium multirole spacecraft, or at least what's left of it."
-	mappath = "maps/offmap_vr/om_ships/salamander_wreck.dmm"
+	mappath = 'salamander_wreck.dmm'
 	annihilate = TRUE
 
 // The shuttle's area(s)

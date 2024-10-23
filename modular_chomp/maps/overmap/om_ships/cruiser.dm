@@ -122,7 +122,7 @@
 /datum/map_template/om_ships/cruiser
 	name = "OM Ship - Daedalus (Centcom)"
 	desc = "A large NT cruiser."
-	mappath = "modular_chomp/maps/overmap/om_ships/cruiser.dmm"
+	mappath = 'cruiser.dmm'
 
 /obj/effect/overmap/visitable/ship/cruiser
 	name = "NDV Daedalus"
