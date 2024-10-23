@@ -96,6 +96,7 @@
 		"uid" = search_id,
 		"title" = B.name,
 		"author" = B.author,
+		"category" = B.libcategory,
 		"deleted" = FALSE,
 		"protected" = FALSE // ADMIN deletion prevention
 	)

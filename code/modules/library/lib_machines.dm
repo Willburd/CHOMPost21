@@ -8,6 +8,8 @@
  *		Book Binder
  */
 
+#define INVPAGESIZE 5
+
 /*
  * Borrowbook datum
  */
@@ -46,29 +48,6 @@
 			<A href='?src=\ref[src];setauthor=1'>Filter by Author: [author]</A><BR>
 			<A href='?src=\ref[src];search=1'>\[Start Search\]</A><BR>"}
 		if(1)
-			/* Outpost 21 edit begin - Books to SSpersistence
-			establish_old_db_connection()
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.") + "<BR>"
-			else if(!SQLquery)
-				dat += span_red(span_bold("ERROR") + ": Malformed search request. Please contact your system administrator for assistance.") + "<BR>"
-			else
-				dat += {"<table>
-				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
-
-				var/datum/db_query/query = SSdbcore.NewQuery(SQLquery, SQLargs) //CHOMPEdit TGSQL
-				query.Execute()
-
-				while(query.NextRow())
-					var/author = query.item[1]
-					var/title = query.item[2]
-					var/category = query.item[3]
-					var/id = query.item[4]
-					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td>[id]</td></tr>"
-				qdel(query)
-				dat += "</table><BR>"
-			dat += "<A href='?src=\ref[src];back=1'>\[Go Back\]</A><BR>"
-			*/
 			if(!SSpersistence.all_books)
 				dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
 			else if(!SSpersistence.all_books.len)
@@ -149,12 +128,11 @@
 	icon_state = "computer"
 	anchored = TRUE
 	density = TRUE
-	var/arcanecheckout = 0
-	var/screenstate = 0 // 0 - Main Menu, 1 - Inventory, 2 - Checked Out, 3 - Check Out a Book
+	var/screenstate = 0
+	var/inventory_page = 0
 	var/sortby = "author"
 	var/buffer_book
 	var/buffer_mob
-	var/upload_category = "Fiction"
 	var/list/checkouts = list()
 	var/list/inventory = list()
 	var/checkoutperiod = 5 // In minutes
@@ -196,152 +174,300 @@
 			var/obj/item/book/M = new path(null)
 			all_books[M.title] = M
 
-/obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
-	var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
+/obj/machinery/librarycomp/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "LibraryPublicComp", name)
+		ui.open()
+
+/obj/machinery/librarycomp/tgui_data(mob/user)
+	var/data[0]
+	data["screenstate"] = screenstate
+	data["emagged"] = emagged
+	// Book storage
+	var/list/inv = list()
+	var/list/checks = list()
+	var/start_entry = 1 + (inventory_page * INVPAGESIZE) // 6 per page in inventory
+	var/entry_count = 0
 	switch(screenstate)
-		if(0)
-			// Main Menu //VOREStation Edit start
-			dat += {"<A href='?src=\ref[src];switchscreen=1'>1. View General Inventory</A><BR>
-			<A href='?src=\ref[src];switchscreen=2'>2. View Checked Out Inventory</A><BR>
-			<A href='?src=\ref[src];switchscreen=3'>3. Check out a Book</A><BR>
-			<A href='?src=\ref[src];switchscreen=4'>4. Connect to Internal Archive</A><BR>
-			<A href='?src=\ref[src];switchscreen=5'>5. Upload New Title to Archive</A><BR>
-			<A href='?src=\ref[src];switchscreen=6'>6. Print a Bible</A><BR>
-			<A href='?src=\ref[src];switchscreen=8'>8. Access External Archive</A><BR>"} //VOREStation Edit end
-			if(src.emagged)
-				dat += "<A href='?src=\ref[src];switchscreen=7'>7. Access the Forbidden Lore Vault</A><BR>"
-			if(src.arcanecheckout)
-				new /obj/item/book/tome(src.loc)
-				var/datum/gender/T = gender_datums[user.get_visible_gender()]
-				to_chat(user, span_warning("Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it."))
-				user.visible_message(span_infoplain(span_bold("\The [user]") + " stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older."), 2)
-				src.arcanecheckout = 0
-		if(1)
-			// Inventory
-			dat += "<H3>Inventory</H3><BR>"
-			for(var/obj/item/book/b in inventory)
-				dat += "[b.name] <A href='?src=\ref[src];delbook=\ref[b]'>(Delete)</A><BR>"
-			dat += "<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
-		if(2)
-			// Checked Out
-			dat += "<h3>Checked Out Books</h3><BR>"
-			for(var/datum/borrowbook/b in checkouts)
-				var/timetaken = world.time - b.getdate
-				//timetaken *= 10
+		if("inventory") // barcode scanned books for checkout
+			for(var/obj/item/book/B in inventory)
+				entry_count++
+				if(entry_count < start_entry)
+					continue
+				if(entry_count > start_entry + INVPAGESIZE)
+					break
+				if(B)
+					inv += list(tgui_add_book(B))
+		if("online") // internal archive (hardcoded books)
+			for(var/BP in all_books)
+				entry_count++
+				if(entry_count < start_entry)
+					continue
+				if(entry_count > start_entry + INVPAGESIZE)
+					break
+				var/obj/item/book/B = all_books[BP]
+				if(B)
+					inv += list(tgui_add_book(B))
+		if("archive") // external archive (SSpersistance database)
+			for(var/token_id in SSpersistence.all_books)
+				entry_count++
+				if(entry_count < start_entry)
+					continue
+				if(entry_count > start_entry + INVPAGESIZE)
+					break
+				var/list/token = SSpersistence.all_books[token_id]
+				if(token)
+					inv += list(tgui_add_token(token))
+		if("checkedout") // books checked out of the library
+			for(var/datum/borrowbook/BB in checkouts)
+				// for returns
+				var/list/book = list()
+				book["bookname"] = BB.bookname
+				book["mobname"] = BB.mobname
+				var/timetaken = world.time - BB.getdate
 				timetaken /= 600
 				timetaken = round(timetaken)
-				var/timedue = b.duedate - world.time
-				//timedue *= 10
+				var/timedue = BB.duedate - world.time
 				timedue /= 600
-				if(timedue <= 0)
-					timedue = span_red(span_bold("(OVERDUE)") + " [timedue]")
+				book["timetaken"] = round(timetaken)
+				book["timedue"] = round(timedue)
+				book["overdue"] = round(timedue) <= 0
+				book["ref"] = REF(BB)
+				checks += list(book)
+	data["inventory"] = inv
+	data["checks"] = checks
+	// Book scanner
+	data["scanned"] = null
+	data["scanner_error"] = ""
+	if(!scanner)
+		for(var/obj/machinery/libraryscanner/S in range(9))
+			scanner = S
+			break
+	if(!scanner)
+		data["scanner_error"] = "No scanner found within wireless network range."
+	else if(!scanner.cache)
+		data["scanner_error"] = "No data found in scanner memory."
+	else
+		data["scanned"] = tgui_add_book(scanner.cache)
+	// Checkout entrys
+	data["checkoutperiod"] = checkoutperiod
+	data["world_time"] = world.time
+	data["buffer_book"] = buffer_book
+	data["buffer_mob"] = buffer_mob
+	return data
+
+/obj/machinery/librarycomp/proc/tgui_add_book(var/obj/item/book/B)
+	var/list/book = list()
+	book["id"] = B.type
+	book["title"] = B.name
+	if(B.author)
+		book["author"] = B.author
+	else
+		book["author"] = "Anonymous"
+	book["category"] = B.libcategory
+	book["deleted"] = FALSE
+	book["protected"] = TRUE
+	book["unique"] = B.unique
+	book["ref"] = "[REF(B)]"
+	book["type"] = "[B.type]"
+	return book
+
+/obj/machinery/librarycomp/proc/tgui_add_token(var/list/token)
+	var/list/book = list()
+	book["id"] = token["uid"]
+	book["title"] = token["title"]
+	if(token["author"])
+		book["author"] = token["author"]
+	else
+		book["author"] = "Anonymous"
+	book["category"] = token["libcategory"]
+	book["deleted"] = token["deleted"]
+	book["protected"] = token["protected"] // ADMIN deletion prevention
+	book["unique"] = FALSE
+	book["ref"] = token["uid"]
+	book["type"] = "[/obj/item/book]"
+	return book
+
+/obj/machinery/librarycomp/tgui_act(action, params)
+	if(..())
+		return TRUE
+	add_fingerprint(usr)
+	switch(action)
+		if("switchscreen")
+			screenstate = params["switchscreen"]
+			if(screenstate == "arcane")
+				if(!src.emagged)
+					screenstate = "inventory" // Prevent access to forbidden lore vault if emag is fixed somehow
+			else if(screenstate == "bible")
+				if(!bibledelay)
+					new /obj/item/storage/bible(src.loc)
+					bibledelay = 1
+					spawn(60)
+						bibledelay = 0
 				else
-					timedue = round(timedue)
-				dat += {"\"[b.bookname]\", Checked out to: [b.mobname]<BR>--- Taken: [timetaken] minutes ago, Due: in [timedue] minutes<BR>
-				<A href='?src=\ref[src];checkin=\ref[b]'>(Check In)</A><BR><BR>"}
-			dat += "<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
-		if(3)
-			// Check Out a Book
-			dat += {"<h3>Check Out a Book</h3><BR>
-			Book: [src.buffer_book]
-			<A href='?src=\ref[src];editbook=1'>\[Edit\]</A><BR>
-			Recipient: [src.buffer_mob]
-			<A href='?src=\ref[src];editmob=1'>\[Edit\]</A><BR>
-			Checkout Date : [world.time/600]<BR>
-			Due Date: [(world.time + checkoutperiod)/600]<BR>
-			(Checkout Period: [checkoutperiod] minutes) (<A href='?src=\ref[src];increasetime=1'>+</A>/<A href='?src=\ref[src];decreasetime=1'>-</A>)
-			<A href='?src=\ref[src];checkout=1'>(Commit Entry)</A><BR>
-			<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"}
-		if(4)
-			dat += "<h3>Internal Archive</h3>"
-			if(!all_books || !all_books.len)
-				dat +=	span_red(span_bold("ERROR") + " Something has gone seriously wrong. Contact System Administrator for more information.")
-			else
-				dat += {"<table>
-				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
+					for (var/mob/V in hearers(src))
+						V.show_message(span_infoplain(span_bold("[src]") + "'s monitor flashes, \"Bible printer currently unavailable, please wait a moment.\""))
+			. = TRUE
 
-				for(var/name in all_books)
-					var/obj/item/book/masterbook = all_books[name]
-					var/id = masterbook.type
-					var/author = masterbook.author
-					var/title = masterbook.name
-					var/category = masterbook.libcategory
-					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];hardprint=[id]'>\[Order\]</A></td></tr>"
-				dat += "</table>"
-			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
-		if(5)
-			//dat += "<H3>ERROR</H3>" //VOREStation Removal
-			//dat+= span_red("Library Database is in Secure Management Mode.") + "<BR>\ //VOREStation Removal
-			//Contact a System Administrator for more information.<BR>" //VOREStation Removal
-			//VOREstation Edit Start
-			dat += "<H3>Upload a New Title</H3>"
-			if(!scanner)
-				for(var/obj/machinery/libraryscanner/S in range(9))
-					scanner = S
-					break
-			if(!scanner)
-				dat += span_red("No scanner found within wireless network range.") + "<BR>"
-			else if(!scanner.cache)
-				dat += span_red("No data found in scanner memory.") + "<BR>"
-			else
-				dat += {"<TT>Data marked for upload...</TT><BR>
-				<TT>Title: </TT>[scanner.cache.name]<BR>"}
-				if(!scanner.cache.author)
-					scanner.cache.author = "Anonymous"
-				dat += {"<TT>Author: </TT><A href='?src=\ref[src];setauthor=1'>[scanner.cache.author]</A><BR>
-				<TT>Category: </TT><A href='?src=\ref[src];setcategory=1'>[upload_category]</A><BR>
-				<A href='?src=\ref[src];upload=1'>\[Upload\]</A><BR>"}
-			//VOREStation Edit End
-			dat += "<A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
-		if(7)
-			dat += {"<h3>Accessing Forbidden Lore Vault v 1.3</h3>
-			Are you absolutely sure you want to proceed? EldritchTomes Inc. takes no responsibilities for loss of sanity resulting from this action.<p>
-			<A href='?src=\ref[src];arccheckout=1'>Yes.</A><BR>
-			<A href='?src=\ref[src];switchscreen=0'>No.</A><BR>"}
-		if(8)
-			/* Outpost 21 edit begin - Books to SSpersistence
-			dat += "<h3>External Archive</h3>" //VOREStation Edit
-			establish_old_db_connection()
+		if("increasetime")
+			checkoutperiod += 1
+			. = TRUE
 
-			//dat += "<h3>" + span_red("Warning: System Administrator has slated this archive for removal. Personal uploads should be taken to the NT board of internal literature.") + "</h3>" //VOREStation Removal
+		if("decreasetime")
+			checkoutperiod -= 1
+			if(checkoutperiod < 5)
+				checkoutperiod = 5
+			. = TRUE
 
-			if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-				dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
-			else
-				dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
-				<table>
-				<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-				var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY :t_sortby", list("t_sortby" = sortby)) //CHOMPEdit TGSQL
-				query.Execute()
+		if("editbook")
+			buffer_book = sanitizeSafe(tgui_input_text(usr, "Enter the book's title:"))
+			. = TRUE
 
-				while(query.NextRow())
-					var/id = query.item[1]
-					var/author = query.item[2]
-					var/title = query.item[3]
-					var/category = query.item[4]
-					dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];targetid=[id]'>\[Order\]</A></td></tr>"
-				qdel(query) //CHOMPEdit TGSQL
-				dat += "</table>"
-			*/
-			dat += "<h3>External Archive</h3>"
-			if(!SSpersistence.all_books)
-				dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
-			else if(!SSpersistence.all_books.len)
-				dat +=	"<font color=red><b>ERROR</b> The external archive is currently empty.</font>"
+		if("editmob")
+			buffer_mob = sanitize(tgui_input_text(usr, "Enter the recipient's name:", null, null, MAX_NAME_LEN), MAX_NAME_LEN)
+			. = TRUE
+
+		if("checkout")
+			var/datum/borrowbook/b = new /datum/borrowbook
+			b.bookname = sanitizeSafe(buffer_book)
+			b.mobname = sanitize(buffer_mob)
+			b.getdate = world.time
+			b.duedate = world.time + (checkoutperiod * 600)
+			checkouts.Add(b)
+			screenstate = "checkedout" // more clear what happened
+			. = TRUE
+
+		if("checkin")
+			var/datum/borrowbook/b = locate(params["checkin"]) in checkouts
+			checkouts.Remove(b)
+			. = TRUE
+
+		if("delbook")
+			var/obj/item/book/b = locate(params["delbook"]) in inventory
+			inventory.Remove(b)
+			. = TRUE
+
+		if("quickcheck")
+			// Quickly set a checkout title
+			var/obj/item/book/b = locate(params["delbook"]) in inventory
+			buffer_book = sanitize(b.title)
+			screenstate = "checking"
+			. = TRUE
+
+		if("inv_prev")
+			inventory_page--
+			if(inventory_page < 0)
+				inventory_page = 0
+
+		if("inv_nex")
+			inventory_page++
+			var/siz = 0
+			switch(screenstate)
+				if("inventory") // barcode scanned books for checkout
+					siz = inventory.len / INVPAGESIZE
+				if("online") // internal archive (hardcoded books)
+					siz = all_books.len / INVPAGESIZE
+				if("archive") // external archive (SSpersistance database)
+					siz = SSpersistence.all_books.len / INVPAGESIZE
+				if("checkedout") // books checked out of the library
+					siz = checkouts.len / INVPAGESIZE
+			if(inventory_page > siz)
+				inventory_page-- // go back
+
+
+		if("setauthor")
+			var/newauthor = sanitize(tgui_input_text(usr, "Enter the author's name: "))
+			if(newauthor)
+				scanner.cache.author = newauthor
+			. = TRUE
+
+		if("setcategory")
+			var/newcategory = tgui_input_list(usr, "Choose a category: ", "Category", list("Fiction", "Non-Fiction", "Adult", "Reference", "Religion"))
+			if(newcategory)
+				scanner.cache.libcategory = newcategory
+			. = TRUE
+
+		if("upload")
+			if(scanner)
+				if(scanner.cache)
+					if(!scanner.cache.unique)
+						spawn(0)
+							var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+							var/status = SSBooks.add_new_book(scanner.cache,usr.client)
+							switch(status)
+								if(0)
+									tgui_alert_async(usr, "Uploaded book \"[scanner.cache.name]\" by \"[scanner.cache.author]\" already exists, and is protected .")
+								if(1)
+									tgui_alert_async(usr, "\"[scanner.cache.name]\" by \"[scanner.cache.author]\", Upload Complete!")
+								if(2)
+									tgui_alert_async(usr, "Replaced book \"[scanner.cache.name]\" by \"[scanner.cache.author]\".")
+								if(3)
+									tgui_alert_async(usr, "Upload failed to parse \"[scanner.cache.name]\" by \"[scanner.cache.author]\".")
+								if(4)
+									tgui_alert_async(usr, "Please wait, still processing.")
+			. = TRUE
+
+		if("orderbyid")
+			var/orderid = tgui_input_number(usr, "Enter your order:")
+			if(orderid)
+				if(isnum(orderid))
+					var/nhref = "src=\ref[src];targetid=[orderid]"
+					spawn() src.Topic(nhref, params2list(nhref), src)
+			. = TRUE
+
+		if("sort")
+			if(params["sort"] in list("author", "title", "category"))
+				sortby = params["sort"]
+				. = TRUE
+
+		if("hardprint")
+			var/newpath = params["hardprint"]
+			var/obj/item/book/NewBook = new newpath(get_turf(src))
+			NewBook.name = "Book: [NewBook.name]"
+			NewBook.unique = TRUE
+			. = TRUE
+
+		if("import_external")
+			var/get_id = params["import_external"]
+			var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+			if(isnull(SSBooks.get_stored_book(get_id,get_turf(src))))
+				tgui_alert_async(usr, "This book's data is invalid, please try another from the catalogue.")
+			. = TRUE
+
+		if("delete_external")
+			var/get_id = params["delete_external"]
+			var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+			var/status = SSBooks.delete_stored_book(get_id)
+			if(status)
+				tgui_alert_async(usr, "Deletion Complete!")
 			else
-				dat += {"<table>
-				<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td></td></tr>"}
-				for(var/token_id in SSpersistence.all_books)
-					var/list/token = SSpersistence.all_books[token_id]
-					if(token && !token["deleted"])
-						dat += "<tr><td>[token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];import_external=[token["uid"]]'>\[Order\]</A><A href='?src=\ref[src];delete_external=[token["uid"]]'>\[Del\]</A></td></tr>"
-				dat += "</table>"
-			dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
-			// Outpost 21 edit end
-	//dat += "<A HREF='?src=\ref[user];mach_close=library'>Close</A><br><br>"
-	user << browse(dat, "window=library")
-	onclose(user, "library")
+				tgui_alert_async(usr, "This book cannot be deleted due to administrative request.")
+			. = TRUE
+
+		if("restore_external")
+			var/get_id = params["restore_external"]
+			var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+			SSBooks.restore_stored_book(get_id)
+			. = TRUE
+
+		if("protect_external")
+			var/get_id = params["protect_external"]
+			var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+			SSBooks.protect_stored_book(get_id)
+			. = TRUE
+
+		if("arcane_checkout")
+			new /obj/item/book/tome(src.loc)
+			var/datum/gender/T = gender_datums[usr.get_visible_gender()]
+			to_chat(usr, span_warning("Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it."))
+			usr.visible_message(span_infoplain(span_bold("\The [usr]") + " stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older."), 2)
+			screenstate = "home"
+			. = TRUE
+
+/obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
+	usr.set_machine(src)
+	tgui_interact(user)
 
 //VOREStation Addition Start
 /obj/machinery/librarycomp/attack_ghost(mob/user)
@@ -353,30 +479,6 @@
 	else
 		usr.set_machine(src)
 		var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
-
-		/* Outpost 21 edit begin - Books to SSpersistence
-		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
-		establish_old_db_connection()
-
-		if(!SSdbcore.IsConnected())
-			dat += span_red(span_bold("ERROR") + ": Unable to contact External Archive. Please contact your system administrator for assistance.")
-		else
-			dat += {"<A href='?src=\ref[src];orderbyid=1'>(Order book by SS<sup>13</sup>BN)</A><BR><BR>
-			<table>
-			<tr><td><A href='?src=\ref[src];sort=author>AUTHOR</A></td><td><A href='?src=\ref[src];sort=title>TITLE</A></td><td><A href='?src=\ref[src];sort=category>CATEGORY</A></td><td></td></tr>"}
-			var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, author, title, category FROM library ORDER BY [sortby]")
-			query.Execute()
-
-			while(query.NextRow())
-				var/id = query.item[1]
-				var/author = query.item[2]
-				var/title = query.item[3]
-				var/category = query.item[4]
-				dat += "<tr><td>[author]</td><td>[title]</td><td>[category]</td><td><A href='?src=\ref[src];delid=[id]'>\[Del\]</A>"
-				dat += "</td></tr>"
-			dat += "</table>"
-			qdel(query) // CHOMPEdit
-		*/
 		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
 		if(!SSpersistence.all_books)
 			dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
@@ -418,198 +520,6 @@
 	else
 		..()
 
-/obj/machinery/librarycomp/Topic(href, href_list)
-	if(..())
-		usr << browse(null, "window=library")
-		onclose(usr, "library")
-		return
-
-	if(href_list["switchscreen"])
-		switch(href_list["switchscreen"])
-			if("0")
-				screenstate = 0
-			if("1")
-				screenstate = 1
-			if("2")
-				screenstate = 2
-			if("3")
-				screenstate = 3
-			if("4")
-				screenstate = 4
-			if("5")
-				screenstate = 5
-			if("6")
-				if(!bibledelay)
-					new /obj/item/storage/bible(src.loc)
-					bibledelay = 1
-					spawn(60)
-						bibledelay = 0
-
-				else
-					for (var/mob/V in hearers(src))
-						V.show_message(span_infoplain(span_bold("[src]") + "'s monitor flashes, \"Bible printer currently unavailable, please wait a moment.\""))
-
-			if("7")
-				screenstate = 7
-			if("8")
-				screenstate = 8
-	if(href_list["arccheckout"])
-		if(src.emagged)
-			src.arcanecheckout = 1
-		src.screenstate = 0
-	if(href_list["increasetime"])
-		checkoutperiod += 1
-	if(href_list["decreasetime"])
-		checkoutperiod -= 1
-		if(checkoutperiod < 1)
-			checkoutperiod = 1
-	if(href_list["editbook"])
-		buffer_book = sanitizeSafe(tgui_input_text(usr, "Enter the book's title:"))
-	if(href_list["editmob"])
-		buffer_mob = sanitize(tgui_input_text(usr, "Enter the recipient's name:", null, null, MAX_NAME_LEN), MAX_NAME_LEN)
-	if(href_list["checkout"])
-		var/datum/borrowbook/b = new /datum/borrowbook
-		b.bookname = sanitizeSafe(buffer_book)
-		b.mobname = sanitize(buffer_mob)
-		b.getdate = world.time
-		b.duedate = world.time + (checkoutperiod * 600)
-		checkouts.Add(b)
-	if(href_list["checkin"])
-		var/datum/borrowbook/b = locate(href_list["checkin"])
-		checkouts.Remove(b)
-	if(href_list["delbook"])
-		var/obj/item/book/b = locate(href_list["delbook"])
-		inventory.Remove(b)
-	if(href_list["setauthor"])
-		var/newauthor = sanitize(tgui_input_text(usr, "Enter the author's name: "))
-		if(newauthor)
-			scanner.cache.author = newauthor
-	if(href_list["setcategory"])
-		var/newcategory = tgui_input_list(usr, "Choose a category: ", "Category", list("Fiction", "Non-Fiction", "Adult", "Reference", "Religion"))
-		if(newcategory)
-			upload_category = newcategory
-
-	//VOREStation Edit Start
-	if(href_list["upload"])
-		if(scanner)
-			if(scanner.cache)
-				var/choice = tgui_alert(usr, "Are you certain you wish to upload this title to the Archive?", "Confirmation", list("Confirm", "Abort"))
-				if(choice == "Confirm")
-					if(scanner.cache.unique)
-						tgui_alert_async(usr, "This book has been rejected from the database. Aborting!")
-					else
-						/* Outpost 21 edit - Books to SSpersistence
-						establish_old_db_connection()
-						if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-							tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
-						else
-							/*
-							var/sqltitle = dbcon.Quote(scanner.cache.name)
-							var/sqlauthor = dbcon.Quote(scanner.cache.author)
-							var/sqlcontent = dbcon.Quote(scanner.cache.dat)
-							var/sqlcategory = dbcon.Quote(upload_category)
-							*/
-							var/list/sql_args = list("t_title" = scanner.cache.name, "t_author" = scanner.cache.author, "t_content" = scanner.cache.dat, "t_category" = upload_category) //CHOMPEdit TGSQL
-							/*var/sqltitle = sanitizeSQL(scanner.cache.name) CHOMPEdit TGSQL
-							var/sqlauthor = sanitizeSQL(scanner.cache.author)
-							var/sqlcontent = sanitizeSQL(scanner.cache.dat)
-							var/sqlcategory = sanitizeSQL(upload_category)*/
-							var/datum/db_query/query = SSdbcore.NewQuery("INSERT INTO library (author, title, content, category) VALUES (:t_author, :t_title, :t_content, :t_category)", sql_args) //CHOMPEdit TGSQL
-							if(!query.Execute())
-								to_chat(usr,query.ErrorMsg())
-							else
-								log_game("[usr.name]/[usr.key] has uploaded the book titled [scanner.cache.name], [length(scanner.cache.dat)] signs")
-								tgui_alert_async(usr, "Upload Complete.")
-							qdel(query) //CHOMPEdit TGSQL
-						*/
-						spawn(0)
-							var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
-							var/status = SSBooks.add_new_book(scanner.cache,usr.client)
-							switch(status)
-								if(0)
-									tgui_alert_async(usr, "Uploaded book \"[scanner.cache.name]\" by \"[scanner.cache.author]\" already exists, and is protected .")
-								if(1)
-									tgui_alert_async(usr, "\"[scanner.cache.name]\" by \"[scanner.cache.author]\", Upload Complete!")
-								if(2)
-									tgui_alert_async(usr, "Replaced book \"[scanner.cache.name]\" by \"[scanner.cache.author]\".")
-								if(3)
-									tgui_alert_async(usr, "Upload failed to parse \"[scanner.cache.name]\" by \"[scanner.cache.author]\".")
-								if(4)
-									tgui_alert_async(usr, "Please wait, still processing.")
-						// Outpost 21 edit end
-	//VOREStation Edit End
-
-	/* Outpost 21 edit - Books to SSpersistence
-	if(href_list["targetid"])
-		var/sqlid = sanitizeSQL(href_list["targetid"])
-		establish_old_db_connection()
-		if(!SSdbcore.IsConnected()) //CHOMPEdit TGSQL
-			tgui_alert_async(usr, "Connection to Archive has been severed. Aborting.")
-		if(bibledelay)
-			for (var/mob/V in hearers(src))
-				V.show_message(span_infoplain(span_bold("[src]") + "'s monitor flashes, \"Printer unavailable. Please allow a short time before attempting to print.\""))
-		else
-			bibledelay = 1
-			spawn(6)
-				bibledelay = 0
-			var/datum/db_query/query = SSdbcore.NewQuery("SELECT * FROM library WHERE id=[sqlid]") //CHOMPEdit TGSQL
-			query.Execute()
-
-			while(query.NextRow())
-				var/author = query.item[2]
-				var/title = query.item[3]
-				var/content = query.item[4]
-				var/obj/item/book/B = new(src.loc)
-				B.name = "Book: [title]"
-				B.title = title
-				B.author = author
-				B.dat = content
-				B.icon_state = "book[rand(1,16)]"
-				B.item_state = B.icon_state
-				src.visible_message("[src]'s printer hums as it produces a completely bound book. How did it do that?")
-				break
-			qdel(query) //CHOMPEdit TGSQL
-	*/
-
-	if(href_list["orderbyid"])
-		var/orderid = tgui_input_number(usr, "Enter your order:")
-		if(orderid)
-			if(isnum(orderid))
-				var/nhref = "src=\ref[src];targetid=[orderid]"
-				spawn() src.Topic(nhref, params2list(nhref), src)
-	if(href_list["sort"] in list("author", "title", "category"))
-		sortby = href_list["sort"]
-	if(href_list["hardprint"])
-		var/newpath = href_list["hardprint"]
-		var/obj/item/book/NewBook = new newpath(get_turf(src))
-		NewBook.name = "Book: [NewBook.name]"
-		NewBook.unique = TRUE // Outpost 21 edit - Books to SSpersistence. Prevent rescanning these hardprints
-	// Outpost 21 edit begin - Books to SSpersistence
-	if(href_list["import_external"])
-		var/get_id = href_list["import_external"]
-		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
-		if(isnull(SSBooks.get_stored_book(get_id,get_turf(src))))
-			tgui_alert_async(usr, "This book's data is invalid, please try another from the catalogue.")
-	if(href_list["delete_external"])
-		var/get_id = href_list["delete_external"]
-		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
-		var/status = SSBooks.delete_stored_book(get_id)
-		if(status)
-			tgui_alert_async(usr, "Deletion Complete!")
-		else
-			tgui_alert_async(usr, "This book cannot be deleted due to administrative request.")
-	if(href_list["restore_external"])
-		var/get_id = href_list["restore_external"]
-		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
-		SSBooks.restore_stored_book(get_id)
-	if(href_list["protect_external"])
-		var/get_id = href_list["protect_external"]
-		var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
-		SSBooks.protect_stored_book(get_id)
-	// Outpost 21 edit end
-	src.add_fingerprint(usr)
-	src.updateUsrDialog()
-	return
 
 /*
  * Library Scanner
@@ -623,7 +533,6 @@
 	density = TRUE
 	var/obj/item/book/cache		// Last scanned book
 
-// Outpost 21 edit begin - Books to SSpersistence
 /obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
 	if(cache) // Prevent stacking books in here, unlike the original code.
 		to_chat(user,span_warning("\The [src] already has a book inside it!"))
@@ -642,44 +551,7 @@
 		visible_message(span_notice("\The [src] ejects a book."))
 		return
 	to_chat(user,span_warning("There is nothing to eject from \the [src]!"))
-// Outpost 21 edit end
 
-/* Outpost 21 edit begin - Books to SSpersistence
-// This isn't needed, the library comp should handle the act of scanning
-/obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
-	var/dat = "<HEAD><TITLE>Scanner Control Interface</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
-	if(cache)
-		dat += span_darkgray("Data stored in memory.") + "<BR>"
-	else
-		dat += "No data stored in memory.<BR>"
-	dat += "<A href='?src=\ref[src];scan=1'>\[Scan\]</A>"
-	if(cache)
-		dat += "       <A href='?src=\ref[src];clear=1'>\[Clear Memory\]</A><BR><BR><A href='?src=\ref[src];eject=1'>\[Remove Book\]</A>"
-	else
-		dat += "<BR>"
-	user << browse(dat, "window=scanner")
-	onclose(user, "scanner")
-
-/obj/machinery/libraryscanner/Topic(href, href_list)
-	if(..())
-		usr << browse(null, "window=scanner")
-		onclose(usr, "scanner")
-		return
-
-	if(href_list["scan"])
-		for(var/obj/item/book/B in contents)
-			cache = B
-			break
-	if(href_list["clear"])
-		cache = null
-	if(href_list["eject"])
-		for(var/obj/item/book/B in contents)
-			B.loc = src.loc
-	src.add_fingerprint(usr)
-	src.updateUsrDialog()
-	return
-*/
 
 /*
  * Book binder
@@ -724,3 +596,5 @@
 			qdel(O)
 	else
 		..()
+
+#undef INVPAGESIZE
