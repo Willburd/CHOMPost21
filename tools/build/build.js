@@ -158,7 +158,7 @@ export const IconCutterTarget = new Juke.Target({
     if(get(ForceRecutParameter))
       return [];
     const folders = [
-      ...Juke.glob(`icons/**/*${CUTTER_SUFFIX}`),
+      ...Juke.glob(`icons/**/*${CUTTER_SUFFIX}`, `modular_chomp/icons/**/*${CUTTER_SUFFIX}`),
     ];
     return folders
       .map((file) => file.replace(`${CUTTER_SUFFIX}`, '.dmi'));
@@ -211,6 +211,10 @@ export const DmTarget = new Juke.Target({
     'modular_chomp/code/**',
     'modular_chomp/icons/**',
     'modular_chomp/sound/**',
+    'modular_chomp/maps/**/*.dm',
+    'modular_chomp/maps/soluna_nexus/**/*.dmm', // Placed here so it recompiles on map changes
+    'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
+    'modular_chomp/maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
     `${DME_NAME}.dme`,
     NamedVersionFile,
   ],

@@ -11,7 +11,7 @@
 	interval_upper_bound = 35 SECONDS
 
 /obj/effect/map_effect/interval/atmogland/trigger()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -26,7 +26,7 @@
 	name = "atmogland airmix"
 
 /obj/effect/map_effect/interval/atmogland/airmix/trigger()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		// reset air
@@ -37,7 +37,7 @@
 	name = "atmogland nitrogen"
 
 /obj/effect/map_effect/interval/atmogland/nitrogen/trigger()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -52,7 +52,7 @@
 	name = "atmogland carbondioxide"
 
 /obj/effect/map_effect/interval/atmogland/carbo/trigger()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -67,7 +67,7 @@
 	name = "atmogland phoron"
 
 /obj/effect/map_effect/interval/atmogland/phoron/trigger()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -82,7 +82,7 @@
 	name = "atmogland methane"
 
 /obj/effect/map_effect/interval/atmogland/phoron/trigger()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
@@ -97,7 +97,7 @@
 	name = "atmogland bodyheat"
 
 /obj/effect/map_effect/interval/atmogland/bodyheat/trigger()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
 		var/datum/gas_mixture/air_contents = T.return_air()
