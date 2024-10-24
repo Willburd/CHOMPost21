@@ -1,4 +1,5 @@
 export type Data = {
+  is_public: boolean;
   screenstate: string;
   emagged: boolean;
   // database

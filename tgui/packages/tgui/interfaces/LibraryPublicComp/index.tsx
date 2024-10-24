@@ -10,6 +10,8 @@ import { MenuArchiveStation } from './MenuArchiveStation';
 import { MenuCheckedOut } from './MenuCheckedOut';
 import { MenuCheckingOut } from './MenuCheckingOut';
 import { MenuHome } from './MenuHome';
+import { MenuPublicDownload } from './MenuPublicDownload';
+import { MenuPublicStation } from './MenuPublicStation';
 import { MenuUpload } from './MenuUpload';
 import { Data } from './types';
 
@@ -55,5 +57,9 @@ const MenuPage = (props) => {
       return <MenuArcane />;
     case 'archive':
       return <MenuArchiveStation />;
+    case 'publicarchive':
+      return <MenuPublicStation />;
+    case 'publiconline':
+      return <MenuPublicDownload />;
   }
 };

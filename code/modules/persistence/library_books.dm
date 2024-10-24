@@ -11,7 +11,7 @@
 	. = ..()
 	if(fexists(filename))
 		SSpersistence.all_books = json_decode(file2text(filename))
-		for(var/ID in tokens)
+		for(var/ID in SSpersistence.all_books)
 			var/list/token = SSpersistence.all_books[ID]
 			if(!CheckTokenSanity(token))
 				SSpersistence.all_books -= token
