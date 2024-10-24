@@ -49,7 +49,7 @@
 	return rand(200,5000)
 
 /obj/machinery/door/flesh/process()
-	#if !UNIT_TEST
+	#ifndef UNIT_TEST
 	if(close_door_at >= 0 && world.time >= close_door_at)
 		close_door_at = -1 // wait till ready
 		if(!src.density)
