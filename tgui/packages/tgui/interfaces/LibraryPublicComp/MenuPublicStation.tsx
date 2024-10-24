@@ -12,7 +12,10 @@ export const MenuPublicStation = (props) => {
     <Section title="Exonet Catalog">
       {inventory.length > 0 ? (
         inventory.map((book) => (
-          <Section title={book.title} key={book.id}>
+          <Section
+            title={book.deleted ? 'DELETED-' + book.title : book.title}
+            key={book.id}
+          >
             {book.author} - {book.category}
             <Divider />
           </Section>

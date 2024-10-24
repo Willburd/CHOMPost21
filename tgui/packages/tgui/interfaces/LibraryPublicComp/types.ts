@@ -3,6 +3,7 @@ export type Data = {
   screenstate: string;
   emagged: boolean;
   // database
+  admin_mode: boolean;
   inventory: Book[];
   inv_left: boolean;
   inv_right: boolean;

@@ -66,6 +66,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 /obj/machinery/librarypubliccomp/tgui_data(mob/user)
 	var/data[0]
+	data["admin_mode"] = FALSE
 	data["is_public"] = TRUE
 	data["screenstate"] = screenstate
 	var/list/inv = list()
@@ -106,7 +107,6 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 /obj/machinery/librarypubliccomp/tgui_act(action, params)
 	if(..())
 		return TRUE
-	add_fingerprint(usr)
 	switch(action)
 		if("switchscreen")
 			playsound(src, "keyboard", 40)
@@ -131,9 +131,12 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 					siz = global.all_books.len / INVPAGESIZE
 			if(inventory_page > siz)
 				inventory_page-- // go back
+	if(.)
+		SStgui.update_uis(src)
 
 /obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
+	add_fingerprint(usr)
 	tgui_interact(user)
 
 /*
@@ -168,6 +171,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 /obj/machinery/librarycomp/tgui_data(mob/user)
 	var/data[0]
+	data["admin_mode"] = (user.client?.holder?.rights & R_ADMIN)
 	data["is_public"] = FALSE
 	data["screenstate"] = screenstate
 	data["emagged"] = emagged
@@ -297,7 +301,6 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 /obj/machinery/librarycomp/tgui_act(action, params)
 	if(..())
 		return TRUE
-	add_fingerprint(usr)
 	switch(action)
 		if("switchscreen")
 			playsound(src, "keyboard", 40)
@@ -447,11 +450,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 			playsound(src, "keyboard", 40)
 			var/get_id = params["delete_external"]
 			var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
-			var/status = SSBooks.delete_stored_book(get_id)
-			if(status)
-				tgui_alert_async(usr, "Deletion Complete!")
-			else
-				tgui_alert_async(usr, "This book cannot be deleted due to administrative request.")
+			SSBooks.delete_stored_book(get_id)
 			. = TRUE
 
 		if("restore_external")
@@ -462,10 +461,11 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 			. = TRUE
 
 		if("protect_external")
-			playsound(src, "keyboard", 40)
-			var/get_id = params["protect_external"]
-			var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
-			SSBooks.protect_stored_book(get_id)
+			if(usr.client?.holder?.rights & R_ADMIN)
+				playsound(src, "keyboard", 40)
+				var/get_id = params["protect_external"]
+				var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
+				SSBooks.protect_stored_book(get_id)
 			. = TRUE
 
 		if("arcane_checkout")
@@ -476,46 +476,13 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 			usr.visible_message(span_infoplain(span_bold("\The [usr]") + " stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older."), 2)
 			screenstate = "home"
 			. = TRUE
+	if(.)
+		SStgui.update_uis(src)
 
 /obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
 	usr.set_machine(src)
+	add_fingerprint(usr)
 	tgui_interact(user)
-
-//VOREStation Addition Start
-/obj/machinery/librarycomp/attack_ghost(mob/user)
-
-	var/show_admin_options = check_rights(R_ADMIN, show_msg = FALSE)
-	if(!show_admin_options)
-		. = ..()
-
-	else
-		usr.set_machine(src)
-		var/dat = "<HEAD><TITLE>Book Inventory Management</TITLE></HEAD><BODY>\n" // <META HTTP-EQUIV='Refresh' CONTENT='10'>
-		dat += "<h3>ADMINISTRATIVE MANAGEMENT</h3>"
-		if(!SSpersistence.all_books)
-			dat +=	"<font color=red><b>ERROR</b> Something has gone seriously wrong. Contact System Administrator for more information.</font>"
-		else if(!SSpersistence.all_books.len)
-			dat +=	"<font color=red><b>ERROR</b> The external archive is currently empty.</font>"
-		else
-			dat += {"<table>
-			<tr><td>AUTHOR</td><td>TITLE</td><td>CATEGORY</td><td>SS<sup>13</sup>BN</td></tr>"}
-			for(var/token_id in SSpersistence.all_books)
-				var/list/token = SSpersistence.all_books[token_id]
-				if(!token)
-					continue
-				var/protected = ""
-				if(!token["deleted"])
-					if(token["protected"])
-						protected = "PROTECT - "
-					dat += "<tr><td>[protected][token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];delete_external=[token["uid"]]'>\[Del\]</A> <A href='?src=\ref[src];protect_external=[token["uid"]]'>\[Protect\]</A></td></tr>"
-				else
-					dat += "<tr><td>DELETED - [token["author"]]</td><td>[token["title"]]</td><td>[token["libcategory"]]</td><td><A href='?src=\ref[src];restore_external=[token["uid"]]'>\[Restore\]</A> <A href='?src=\ref[src];protect_external=[token["uid"]]'>\[Protect\]</A></td></tr>"
-			dat += "</table>"
-		dat += "<BR><A href='?src=\ref[src];switchscreen=0'>(Return to main menu)</A><BR>"
-
-		user << browse(dat, "window=library")
-		onclose(user, "library")
-//VOREStation Addition End
 
 /obj/machinery/librarycomp/emag_act(var/remaining_charges, var/mob/user)
 	if (src.density && !src.emagged)

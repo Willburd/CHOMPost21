@@ -12,11 +12,15 @@ export const MenuArchiveDownload = (props) => {
     <Section title="Browsing Exonet">
       {inventory.length > 0 ? (
         inventory.map((book) => (
-          <Section title={book.title} key={book.id}>
+          <Section
+            title={book.deleted ? 'DELETED - ' + book.title : book.title}
+            key={book.id}
+          >
             {book.author} - {book.category}
             <br />
             <Button
               icon="eye"
+              disabled={book.deleted}
               onClick={() => act('hardprint', { hardprint: book.type })}
             >
               Print

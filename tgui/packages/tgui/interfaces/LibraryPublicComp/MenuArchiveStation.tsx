@@ -12,11 +12,15 @@ export const MenuArchiveStation = (props) => {
     <Section title="Station Archive">
       {inventory.length > 0 ? (
         inventory.map((book) => (
-          <Section title={book.title} key={book.id}>
+          <Section
+            title={book.deleted ? 'DELETED - ' + book.title : book.title}
+            key={book.id}
+          >
             {book.author} - {book.category}
             <br />
             <Button
               icon="eye"
+              disabled={book.deleted}
               onClick={() =>
                 act('import_external', { import_external: book.id })
               }
@@ -26,13 +30,30 @@ export const MenuArchiveStation = (props) => {
             <Button.Confirm
               icon="eye"
               color="red"
-              disabled={book.protected}
+              disabled={book.protected || book.deleted}
               onClick={() =>
                 act('delete_external', { delete_external: book.id })
               }
             >
               {book.protected ? 'Protected' : 'Delete'}
             </Button.Confirm>
+            {data.admin_mode ? (
+              <Button
+                icon="eye"
+                color="green"
+                onClick={() =>
+                  act('protect_external', { protect_external: book.id })
+                }
+              >
+                {book.deleted
+                  ? 'Restore'
+                  : book.protected
+                    ? 'Unprotect'
+                    : 'Protect'}
+              </Button>
+            ) : (
+              ''
+            )}
             <Divider />
           </Section>
         ))
