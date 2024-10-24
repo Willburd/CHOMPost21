@@ -8,7 +8,7 @@
  *		Book Binder
  */
 
-#define INVPAGESIZE 4
+#define INVPAGESIZE 5
 
 /*
  * Borrowbook datum
@@ -193,7 +193,7 @@
 	var/inv_right = TRUE
 	switch(screenstate)
 		if("inventory") // barcode scanned books for checkout
-			if(inventory_page + INVPAGESIZE > inventory.len / INVPAGESIZE)
+			if(inventory_page + 1 > inventory.len / INVPAGESIZE)
 				inv_right = FALSE
 			for(var/obj/item/book/B in inventory)
 				entry_count++
@@ -204,7 +204,7 @@
 				if(B)
 					inv += list(tgui_add_book(B))
 		if("online") // internal archive (hardcoded books)
-			if(inventory_page + INVPAGESIZE > all_books.len / INVPAGESIZE)
+			if(inventory_page + 1 > all_books.len / INVPAGESIZE)
 				inv_right = FALSE
 			for(var/BP in all_books)
 				entry_count++
@@ -216,7 +216,7 @@
 				if(B)
 					inv += list(tgui_add_book(B))
 		if("archive") // external archive (SSpersistance database)
-			if(inventory_page + INVPAGESIZE > SSpersistence.all_books.len / INVPAGESIZE)
+			if(inventory_page + 1 > SSpersistence.all_books.len / INVPAGESIZE)
 				inv_right = FALSE
 			for(var/token_id in SSpersistence.all_books)
 				entry_count++
@@ -228,7 +228,7 @@
 				if(token)
 					inv += list(tgui_add_token(token))
 		if("checkedout") // books checked out of the library
-			if(inventory_page + INVPAGESIZE > checkouts.len / INVPAGESIZE)
+			if(inventory_page + 1 > checkouts.len / INVPAGESIZE)
 				inv_right = FALSE
 			for(var/datum/borrowbook/BB in checkouts)
 				entry_count++
@@ -313,7 +313,8 @@
 	switch(action)
 		if("switchscreen")
 			inventory_page = 0 // reset inv menus
-			screenstate = params["switchscreen"]
+			if(params["switchscreen"] != "bible") // don't change screens if printing a bible
+				screenstate = params["switchscreen"]
 			if(screenstate == "arcane")
 				if(!src.emagged)
 					screenstate = "inventory" // Prevent access to forbidden lore vault if emag is fixed somehow

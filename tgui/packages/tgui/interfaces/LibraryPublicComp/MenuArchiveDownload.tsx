@@ -35,7 +35,7 @@ export const MenuArchiveDownload = (props) => {
         </Box>
       )}
       <Divider />
-      <MenuPageChanger lencheck={inventory.length} />
+      <MenuPageChanger />
     </Section>
   );
 };

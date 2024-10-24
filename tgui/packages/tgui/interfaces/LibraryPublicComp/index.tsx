@@ -17,7 +17,7 @@ export const LibraryPublicComp = (props) => {
   const { act, data } = useBackend<Data>();
 
   return (
-    <Window width={730} height={600}>
+    <Window width={730} height={670}>
       <Window.Content>
         <Flex>
           <Flex.Item basis="33%">

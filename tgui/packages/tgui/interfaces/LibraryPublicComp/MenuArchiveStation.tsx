@@ -47,7 +47,7 @@ export const MenuArchiveStation = (props) => {
         </Box>
       )}
       <Divider />
-      <MenuPageChanger lencheck={inventory.length} />
+      <MenuPageChanger />
     </Section>
   );
 };

@@ -10,16 +10,16 @@ export const MenuArcane = (props) => {
       <center>
         Are you absolutely sure you want to proceed? EldritchTomes Inc. takes no
         responsibilities for loss of sanity resulting from this action.
+        <br />
+        <Button.Confirm
+          icon="eye"
+          onClick={() =>
+            act('switchscreen', { arcane_checkout: 'arcane_checkout' })
+          }
+        >
+          Accept Responsibility
+        </Button.Confirm>
       </center>
-      <br />
-      <Button.Confirm
-        icon="eye"
-        onClick={() =>
-          act('switchscreen', { arcane_checkout: 'arcane_checkout' })
-        }
-      >
-        Accept Responsibility
-      </Button.Confirm>
     </Section>
   );
 };

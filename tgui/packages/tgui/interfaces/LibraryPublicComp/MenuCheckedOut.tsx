@@ -37,7 +37,7 @@ export const MenuCheckedOut = (props) => {
         </Box>
       )}
       <Divider />
-      <MenuPageChanger lencheck={checks.length} />
+      <MenuPageChanger />
     </Section>
   );
 };

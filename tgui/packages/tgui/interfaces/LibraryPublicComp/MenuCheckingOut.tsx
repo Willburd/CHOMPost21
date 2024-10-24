@@ -26,9 +26,11 @@ export const MenuCheckingOut = (props) => {
         +
       </Button>
       <Divider />
-      <Button icon="eye" onClick={() => act('checkout', { checkout: 1 })}>
-        Commit Entry
-      </Button>
+      <center>
+        <Button icon="eye" onClick={() => act('checkout', { checkout: 1 })}>
+          Commit Entry
+        </Button>
+      </center>
     </Section>
   );
 };
