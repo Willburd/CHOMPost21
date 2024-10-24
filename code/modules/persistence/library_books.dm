@@ -11,10 +11,10 @@
 	. = ..()
 	if(fexists(filename))
 		SSpersistence.all_books = json_decode(file2text(filename))
-		var/list/tokens = SSpersistence.all_books
-		for(var/list/token in tokens)
+		for(var/ID in tokens)
+			var/list/token = SSpersistence.all_books[ID]
 			if(!CheckTokenSanity(token))
-				tokens -= token
+				SSpersistence.all_books -= token
 
 /datum/persistent/library_books/CheckTokenSanity(var/list/token)
 	return ( \
