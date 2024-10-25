@@ -103,13 +103,12 @@
 
 		H.mind.initial_account = M
 
-	to_chat(H, "<span class='notice'><b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b></span>")
 	// Outpost 21 edit begin - Show department accounts too so players know they have access
 	if(account_allowed && !forbid_department_account_access)
 		for(var/dept in department_accounts)
 			var/datum/money_account/bank_account = global.department_accounts[dept]
 			if(bank_account)
-				to_chat(H, span_boldnotice("Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]"))
+				to_chat(H, "<span class='notice'><b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b></span>")
 	// Outpost 21 edit end
 
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/qdel()
