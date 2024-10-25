@@ -19,7 +19,7 @@ export const LibraryPublicComp = (props) => {
   const { act, data } = useBackend<Data>();
 
   return (
-    <Window width={730} height={670}>
+    <Window width={710} height={720}>
       <Window.Content>
         <Flex>
           <Flex.Item basis="33%">
@@ -38,28 +38,18 @@ const MenuPage = (props) => {
   const { act, data } = useBackend<Data>();
   const { screenstate } = data;
 
-  let screen_menu = '';
-  switch (screenstate) {
-    default:
-    case 'home':
-      return <MenuHome />;
-    case 'inventory':
-      return <MenuArchiveInventory />;
-    case 'checkedout':
-      return <MenuCheckedOut />;
-    case 'checking':
-      return <MenuCheckingOut />;
-    case 'online':
-      return <MenuArchiveDownload />;
-    case 'upload':
-      return <MenuUpload />;
-    case 'arcane':
-      return <MenuArcane />;
-    case 'archive':
-      return <MenuArchiveStation />;
-    case 'publicarchive':
-      return <MenuPublicStation />;
-    case 'publiconline':
-      return <MenuPublicDownload />;
-  }
+  let screen_menu = {
+    home: <MenuHome />,
+    inventory: <MenuArchiveInventory />,
+    checkedout: <MenuCheckedOut />,
+    checking: <MenuCheckingOut />,
+    online: <MenuArchiveDownload />,
+    upload: <MenuUpload />,
+    arcane: <MenuArcane />,
+    archive: <MenuArchiveStation />,
+    publicarchive: <MenuPublicStation />,
+    publiconline: <MenuPublicDownload />,
+  };
+
+  return screen_menu[screenstate] ? screen_menu[screenstate] : <MenuHome />;
 };

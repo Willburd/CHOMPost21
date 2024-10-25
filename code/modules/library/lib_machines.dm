@@ -9,6 +9,7 @@
  */
 
 #define INVPAGESIZE 6
+#define INVPAGESIZEPUBLIC 7
 var/global/list/all_books // moved to global list so it can be shared by public comps
 
 // Moved to a hook instead of in initilize. The whole pre-packaged book inventory is fully static and isn't meant to be changed anyway
@@ -36,6 +37,8 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	for(var/path in subtypesof(/obj/item/book/bundle/custom_library) - base_genre_books)
 		var/obj/item/book/M = new path(null)
 		global.all_books[M.title] = M
+
+	return TRUE
 
 /*
  * Borrowbook datum
@@ -70,31 +73,31 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	data["is_public"] = TRUE
 	data["screenstate"] = screenstate
 	var/list/inv = list()
-	var/start_entry = 1 + (inventory_page * INVPAGESIZE) // 6 per page in inventory
+	var/start_entry = 1 + (inventory_page * INVPAGESIZEPUBLIC) // 6 per page in inventory
 	var/entry_count = 0
 	var/inv_left = (inventory_page > 0)
 	var/inv_right = TRUE
 	switch(screenstate)
 		if("publicarchive") // external archive (SSpersistance database)
-			if(inventory_page + 1 >= SSpersistence.all_books.len / INVPAGESIZE)
+			if(inventory_page + 1 >= SSpersistence.all_books.len / INVPAGESIZEPUBLIC)
 				inv_right = FALSE
 			for(var/token_id in SSpersistence.all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
-				if(entry_count >= start_entry + INVPAGESIZE)
+				if(entry_count >= start_entry + INVPAGESIZEPUBLIC)
 					break
 				var/list/token = SSpersistence.all_books[token_id]
 				if(token)
 					inv += list(tgui_add_library_token(token))
 		if("publiconline") // internal archive (hardcoded books)
-			if(inventory_page + 1 >= global.all_books.len / INVPAGESIZE)
+			if(inventory_page + 1 >= global.all_books.len / INVPAGESIZEPUBLIC)
 				inv_right = FALSE
 			for(var/BP in global.all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
-				if(entry_count >= start_entry + INVPAGESIZE)
+				if(entry_count >= start_entry + INVPAGESIZEPUBLIC)
 					break
 				var/obj/item/book/B = global.all_books[BP]
 				if(B)
@@ -126,10 +129,10 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 			var/siz = 0
 			switch(screenstate)
 				if("publicarchive") // external archive (SSpersistance database)
-					siz = SSpersistence.all_books.len / INVPAGESIZE
+					siz = SSpersistence.all_books.len / INVPAGESIZEPUBLIC
 				if("publiconline") // internal archive (hardcoded books)
-					siz = global.all_books.len / INVPAGESIZE
-			if(inventory_page > siz)
+					siz = global.all_books.len / INVPAGESIZEPUBLIC
+			if(inventory_page + 1 >= siz)
 				inventory_page-- // go back
 	if(.)
 		SStgui.update_uis(src)
@@ -304,21 +307,22 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	switch(action)
 		if("switchscreen")
 			playsound(src, "keyboard", 40)
-			if(params["switchscreen"] != "bible") // don't change screens if printing a bible
+			if(params["switchscreen"] != "bible")
 				inventory_page = 0 // reset inv menus
 				screenstate = params["switchscreen"]
-			if(screenstate == "arcane")
-				if(!src.emagged)
-					screenstate = "inventory" // Prevent access to forbidden lore vault if emag is fixed somehow
-			else if(screenstate == "bible")
+			else
+				// don't change screens if printing a bible
 				if(!bibledelay)
 					new /obj/item/storage/bible(src.loc)
 					bibledelay = 1
 					spawn(60)
 						bibledelay = 0
 				else
-					for (var/mob/V in hearers(src))
-						V.show_message(span_infoplain(span_bold("[src]") + "'s monitor flashes, \"Bible printer currently unavailable, please wait a moment.\""))
+					visible_message(span_infoplain(span_bold("[src]") + "'s monitor flashes, \"Bible printer currently unavailable, please wait a moment.\""))
+			// Prevent access to forbidden lore vault if emag is fixed somehow
+			if(params["switchscreen"] == "arcane")
+				if(!src.emagged)
+					screenstate = "inventory"
 			. = TRUE
 
 		if("increasetime")
@@ -392,7 +396,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 					siz = SSpersistence.all_books.len / INVPAGESIZE
 				if("checkedout") // books checked out of the library
 					siz = checkouts.len / INVPAGESIZE
-			if(inventory_page > siz)
+			if(inventory_page + 1 >= siz)
 				inventory_page-- // go back
 
 		if("setauthor")
@@ -577,3 +581,4 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 		..()
 
 #undef INVPAGESIZE
+#undef INVPAGESIZEPUBLIC
