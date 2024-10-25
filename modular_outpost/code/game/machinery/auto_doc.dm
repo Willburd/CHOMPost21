@@ -53,7 +53,7 @@
 	var/external_organ_target = BP_GROIN
 	var/internal_organ_target = O_APPENDIX
 
-/obj/machinery/auto_doc/New()
+/obj/machinery/auto_doc/Initialize(mapload)
 	. = ..()
 	create_tools()
 	create_operations()
