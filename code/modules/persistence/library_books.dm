@@ -60,10 +60,10 @@
 		if(entry["protected"])
 			entry["deleted"] = FALSE // if this somehow happens due to VV meddling
 		if(!entry["deleted"])
-			log_admin("A book was deleted during the round")
+			entry["protected"] = TRUE // Protect flag book next round. Require admin deletion by default. Current books in the round should be admin protected if abuse happens.
 			output_list[entry_id] = entry
 		else
-			entry["protected"] = TRUE // Protect flag book next round. Require admin deletion by default. Current books in the round should be admin protected if abuse happens.
+			log_admin("A book was deleted during the round")
 			var/hash = md5(entry["uid"])
 			var/filecheck = "data/persistent/library/[hash]-library_book.json"
 			if(fexists(filecheck))
