@@ -11,7 +11,7 @@
 	name = "soulflower"
 	seed_name = "soulflower"
 	display_name = "soulflowers"
-	chems = list("nutriment" = list(1,10), "souldew" = list(1,13))
+	chems = list("nutriment" = list(1,10), "souldew" = list(1,3)) // Outpost 21 edit - Hydroponics chem nerf
 	mutants = null
 
 /datum/seed/flower/sunflower/soulflower/New()
@@ -29,7 +29,7 @@
 	seed_name = "cherrybomb"
 	seed_noun = "pits"
 	display_name = "cherry bomb tree"
-	chems = list("nutriment" = list(1,15), "liquidfire" = list(1,15), "cherryjelly" = list(10,15))
+	chems = list("nutriment" = list(1,15), "liquidfire" = list(1,3), "cherryjelly" = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/cherries/cherrybomb/New()
 	..()
@@ -42,11 +42,11 @@
 	seed_name = "livewireorange"
 	seed_noun = "livewireorange"
 	display_name = "livewire orange tree"
-	chems = list("nutriment" = list(1,15), "liquidlife" = list(1,15), "orangejuice" = list(10,15))
+	chems = list("nutriment" = list(1,15), "liquidlife" = list(1,3), "orangejuice" = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/citrus/orange/nuclearorange
 	name = "nuclearorange"
 	seed_name = "nuclearorange"
 	seed_noun = "nuclearorange"
 	display_name = "nuclear orange tree"
-	chems = list("nutriment" = list(1,15), "deathblood" = list(1,15), "lemonjuice" = list(10,15))
+	chems = list("nutriment" = list(1,15), "deathblood" = list(1,3), "lemonjuice" = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf

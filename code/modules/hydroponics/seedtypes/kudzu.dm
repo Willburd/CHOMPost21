@@ -3,7 +3,7 @@
 	seed_name = "kudzu"
 	display_name = "kudzu vines"
 	kitchen_tag = "kudzu"
-	chems = list("nutriment" = list(1,50), "anti_toxin" = list(1,25))
+	chems = list("nutriment" = list(1,50), "anti_toxin" = list(1,5)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/kudzu/New()
 	..()

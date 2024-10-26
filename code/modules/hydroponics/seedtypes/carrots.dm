@@ -3,7 +3,7 @@
 	seed_name = "carrot"
 	display_name = "carrots"
 	kitchen_tag = "carrot"
-	chems = list("nutriment" = list(1,20), "imidazoline" = list(3,5), "carrotjuice" = list(10,20))
+	chems = list("nutriment" = list(1,20), "imidazoline" = list(0,2), "carrotjuice" = list(10,20)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/carrots/New()
 	..()

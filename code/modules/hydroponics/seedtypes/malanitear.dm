@@ -3,7 +3,7 @@
 	seed_name = "Malani's tear"
 	display_name = "Malani's tear leaves"
 	kitchen_tag = "mtear"
-	chems = list("honey" = list(1,10), "kelotane" = list(3,5))
+	chems = list("honey" = list(1,10), "kelotane" = list(1,2)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/mtear/New()
 	..()
