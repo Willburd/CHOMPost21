@@ -1,5 +1,6 @@
 /proc/wormhole_event(var/set_duration = 5 MINUTES, var/wormhole_duration_modifier = 1, var/redspace = FALSE)
 	spawn()
+	/* Outpost 21 edit begin - Dechomp this
 	// CHOMPEdit Start - Only allowing these to go to the station
 		var/list/pick_turfs = list()
 		var/list/exits = list()
@@ -8,6 +9,11 @@
 		Z_choices |= using_map.get_map_levels(1, FALSE)
 		Z_choices -= global.using_map.sealed_levels
 	// CHOMPEdit End
+	*/
+		var/list/pick_turfs = list()
+		var/list/exits = list()
+		var/list/Z_choices = global.using_map.event_levels
+	// Outpost 21 edit end
 		for(var/turf/simulated/floor/T in world)
 			if(T.z in Z_choices)
 				if(!T.block_tele)
@@ -30,8 +36,14 @@
 			var/wormhole_max_duration = round((5 MINUTES) * wormhole_duration_modifier)
 			var/wormhole_min_duration = round((30 SECONDS) * wormhole_duration_modifier)
 
-			//All ready. Announce that bad juju is afoot.
-			command_announcement.Announce("Space-time anomalies detected on the station. There is no additional data.", "Anomaly Alert", new_sound = 'sound/AI/spanomalies.ogg')
+			// Outpost 21 edit begin - Redspace portals
+			if(!redspace)
+				//All ready. Announce that bad juju is afoot.
+				command_announcement.Announce("Space-time anomalies detected on the station. There is no additional data.", "Anomaly Alert", new_sound = 'sound/AI/spanomalies.ogg')
+			else
+				//All ready. Announce that bad bad bad things are happening
+				command_announcement.Announce("%&(£&%@%(*$&£/{}detected near the [station_name()]. Please£&?*(%RUN&(*RUN$%RUN&({}AI-controlled equipment£%@%(*RUN$%&RUNRUNRUN(£&?RUN*(%&£/{}RUNRUNerrorsRUN.RUN.RUN.RUN.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
+			// Outpost 21 edit end
 
 			//prob(20) can be approximated to 1 wormhole every 5 turfs!
 			//admittedly less random but totally worth it >_<
