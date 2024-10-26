@@ -503,7 +503,6 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	else
 		..()
 
-
 /*
  * Library Scanner
  */

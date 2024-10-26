@@ -15,21 +15,21 @@
 	seed_name = "orange sapbean"
 	display_name = "orange sapbean"
 	mutants = list("purplesapbean","bluesapbean","blacksapbean")
-	chems = list("orangesap" = list(0,10))
+	chems = list("orangesap" = list(0,1)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/soybean/sapbean/purple
 	name = "purplesapbean"
 	seed_name = "purple sapbean"
 	display_name = "purple sapbean"
 	mutants = list("orangesapbean","bluesapbean","blacksapbean")
-	chems = list("purplesap" = list(0,10))
+	chems = list("purplesap" = list(0,1)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/soybean/sapbean/blue
 	name = "bluesapbean"
 	seed_name = "blue sapbean"
 	display_name = "blue sapbean"
 	mutants = list("orangesapbean","purplesapbean","blacksapbean")
-	chems = list("bluesap" = list(0,10))
+	chems = list("bluesap" = list(0,1)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/soybean/sapbean/black //A bean with all the power but in so little quanitity
 	name = "blacksapbean"
