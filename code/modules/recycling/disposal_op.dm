@@ -24,7 +24,7 @@
 /obj/structure/disposalpipe/sortjunction/bodies
 	name = "body recovery junction"
 	desc = "An underfloor disposal pipe which filters out detectable bodies, living or soon to be dead."
-	subtype = 2
+	subtype = DISPOSAL_SORT_BODIES
 
 /obj/structure/disposalpipe/sortjunction/bodies/divert_check(var/checkTag)
 	return checkTag == "corpse"
