@@ -252,7 +252,7 @@
 
 /datum/reagent/lithium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
+		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(cardinal))
 		if(prob(5))
 			M.emote(pick("twitch", "drool", "moan"))
@@ -267,7 +267,7 @@
 
 /datum/reagent/mercury/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
+		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(cardinal))
 		if(prob(5))
 			M.emote(pick("twitch", "drool", "moan"))
