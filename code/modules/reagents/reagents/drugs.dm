@@ -64,7 +64,7 @@
 		drug_strength = drug_strength * 1.2
 
 	M.druggy = max(M.druggy, drug_strength)
-	if(prob_proc == TRUE && prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
+	if(prob_proc == TRUE && prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained() && !M.resting) // Outpost 21 edit - Resting stops drug movement
 		step(M, pick(cardinal))
 		prob_proc = FALSE
 	if(prob_proc == TRUE && prob(7))
