@@ -107,6 +107,21 @@
 
 //  C CKEYS
 
+//Cameron653: Diana Kuznetsova
+/datum/gear/fluff/diana_robe
+	path = /obj/item/clothing/suit/fluff/purp_robes
+	display_name = "Diana's Robes"
+	slot = slot_wear_suit
+	ckeywhitelist = list("cameron653")
+	character_name = list("Diana Kuznetsova")
+
+/datum/gear/fluff/diana_tiara
+	path = /obj/item/clothing/head/fluff/pink_tiara
+	display_name = "Diana's Tiara"
+	slot = slot_head
+	ckeywhitelist = list("cameron653")
+	character_name = list("Diana Kuznetsova")
+
 //  D CKEYS
 
 //  E CKEYS

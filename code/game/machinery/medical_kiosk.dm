@@ -38,6 +38,12 @@
 /obj/machinery/medical_kiosk/Initialize()
 	. = ..()
 	our_db = SStranscore.db_by_key(db_key)
+	// Outpost 21 edit begin - Missing circuit board on deconstruct, but will eventually be removed on machine recode
+	// TODO - Remove this bit once machines are converted to Initialize
+	if(ispath(circuit))
+		circuit = new circuit(src)
+	default_apply_parts()
+	// Outpost 21 edit end
 
 /obj/machinery/medical_kiosk/update_icon()
 	. = ..()
