@@ -210,6 +210,9 @@ var/list/possible_cable_coil_colours = list(
 
 /obj/structure/cable/HasProximity(turf/T, datum/weakref/WF, old_loc)
 	SIGNAL_HANDLER
+	if(!broken) // if this somehow happens
+		unfray()
+		return
 	if(!T.is_plating()) // floor panels stop wires from shocking...
 		return
 	if(isnull(WF))
@@ -293,6 +296,9 @@ var/list/possible_cable_coil_colours = list(
 
 		investigate_log("was cut by [key_name(user, user.client)] in [user.loc.loc]","wires") //ChompEDIT usr --> user
 
+		if(broken) // Outpost 21 edit - Cutting cable off should fix it too, somehow it was persisting broken state...?
+			unfray()
+
 		qdel(src)
 		return
 
@@ -303,6 +309,8 @@ var/list/possible_cable_coil_colours = list(
 			to_chat(user, "Not enough cable")
 			return
 		coil.cable_join(src, user)
+		if(broken) // Outpost 21 edit - Adding cable autofixes others
+			unfray()
 
 	else if(istype(W, /obj/item/multitool))
 
