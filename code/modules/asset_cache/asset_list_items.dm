@@ -494,7 +494,7 @@
 		"soluna_nexus_nanomap_z7.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z7.png',
 		"soluna_nexus_nanomap_z8.png"		= 'icons/_nanomaps/soluna_nexus_nanomap_z8.png',
 		"soluna_nexus_nanomap_z9.png"		= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
-		
+
 		"relic_base_nanomap_z1.png"			= 'icons/_nanomaps/relic_base_nanomap_z1.png',
 		"relicbase_nanomap_z2.png"			= 'icons/_nanomaps/relicbase_nanomap_z2.png',
 		"relicbase_nanomap_z3.png"			= 'icons/_nanomaps/relicbase_nanomap_z3.png',
@@ -508,7 +508,7 @@
 		"relicbase_nanomap_z11.png"		= 'icons/_nanomaps/relicbase_nanomap_z11.png',
 		"relicbase_nanomap_z12.png"		= 'icons/_nanomaps/relicbase_nanomap_z12.png',
 		"relicbase_nanomap_z13.png"		= 'icons/_nanomaps/relicbase_nanomap_z13.png',*/
-		*/// CHOMP Edit End
+		// CHOMP Edit End
 		// Outpost 21 edit begin - Use our outpost
 		"outpost_nanomap_z1.png"			= 'icons/_nanomaps/outpost_nanomap_z04.png',
 		"outpost_nanomap_z2.png"			= 'icons/_nanomaps/outpost_nanomap_z01.png',
