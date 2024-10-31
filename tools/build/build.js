@@ -181,6 +181,10 @@ export const DmMapsIncludeTarget = new Juke.Target({
       //...Juke.glob('_maps/RandomZLevels/**/*.dmm'),
       //...Juke.glob('_maps/shuttles/**/*.dmm'),
       //...Juke.glob('_maps/templates/**/*.dmm'),
+      //...Juke.glob('modular_chomp/maps/soluna_nexus/**/*.dmm'),
+      //...Juke.glob('modular_chomp/maps/southern_cross/**/*.dmm'),
+      //...Juke.glob('modular_chomp/maps/relic_base/**/*.dmm'),
+      //...Juke.glob('modular_chomp/maps/submap/**/*.dmm'),
       ...Juke.glob('maps/outpost21/**/*.dmm'),
       ...Juke.glob('maps/submap/**/*.dmm'),
     ];
@@ -212,8 +216,10 @@ export const DmTarget = new Juke.Target({
     'modular_chomp/icons/**',
     'modular_chomp/sound/**',
     'modular_chomp/maps/**/*.dm',
-    'modular_chomp/maps/soluna_nexus/**/*.dmm', // Placed here so it recompiles on map changes
-    'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
+    //'modular_chomp/maps/soluna_nexus/**/*.dmm', // Placed here so it recompiles on map changes
+    //'modular_chomp/maps/southern_cross/**/*.dmm', // Placed here so it recompiles on map changes
+    //'modular_chomp/maps/relic_base/**/*.dmm', // Placed here so it recompiles on map changes
+    'modular_chomp/maps/outpost21/**/*.dmm', // Placed here so it recompiles on map changes
     'modular_chomp/maps/submap/**/*.dmm', // Placed here so it recompiles on map changes
     `${DME_NAME}.dme`,
     NamedVersionFile,
