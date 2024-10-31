@@ -2440,6 +2440,14 @@ End Chomp edit */
 					else if((R.fields["id"] == E.fields["id"]) && (R.fields["criminal"] == "Released"))
 						holder.icon_state = "hudreleased"
 						break
+
+		// Outpost 21 edit begin - Check for noncrew department jobs, and then see if they've been granted an ID
+		var/datum/job/J = SSjob.get_job(job)
+		var/obj/item/card/id/id = GetIdCard()
+		if(J?.departments.len > 0 && J?.departments[1] == DEPARTMENT_NONCREW && (!id || id.registered_name != name))
+			holder.icon_state = "hudwanted"
+		// Outpost 21 edit end
+
 		if(block_hud)
 			holder.icon_state = "hudblank"
 		apply_hud(WANTED_HUD, holder)
