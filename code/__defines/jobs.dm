@@ -209,6 +209,7 @@
 	#define JOB_ALT_ENGINEERING_CONTRACTOR "Engineering Contractor"
 	#define JOB_ALT_SHIPBREAKER "Ship Breaker" // Outpost 21 addition
 	#define JOB_ALT_CHEMENGINEER "Chemical Engineer" // Outpost 21 addition
+	#define JOB_ALT_COMPUTER_TECHNICIAN "Computer Technician"
 
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
 	// Atmospheric Technician alt titles
@@ -304,6 +305,7 @@
 	#define JOB_ALT_ASSEMBLY_TECHNICIAN "Assembly Technician"
 	#define JOB_ALT_BIOMECHANICAL_ENGINEER "Biomechanical Engineer"
 	#define JOB_ALT_MECHATRONIC_ENGINEER "Mechatronic Engineer"
+	#define JOB_ALT_SOFTWARE_ENGINEER "Software Engineer"
 
 #define JOB_XENOBOTANIST "Xenobotanist"
 	// Xenobotanist alt titles
