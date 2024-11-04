@@ -20,7 +20,7 @@
 
 	var/obj/item/cell/cell = null
 	var/obj/item/hose_connector/output/Output = null
-	var/reagents_per_cycle = 5 // Outpost 21 edit - severe nerf to unupgraded speed
+	var/reagents_per_cycle = 5 // severe nerf to unupgraded speed
 	var/on = 0
 	var/unlocked = 0
 	var/open = 0
@@ -59,7 +59,7 @@
 	qdel(src.reagents)
 	src.reagents = R
 
-	cell = locate(/obj/item/cell/high) in component_parts // Outpost 21 edit - Use the cell provided
+	cell = locate(/obj/item/cell) in src
 
 /obj/machinery/pump/update_icon()
 	..()
@@ -162,14 +162,12 @@
 		default_unfasten_wrench(user, W, 2 SECONDS)
 
 	else if(istype(W, /obj/item/cell))
-		// Outpost 21 edit begin - clarifying how these even work
 		if(!open)
 			if(unlocked)
 				to_chat(user, span_notice("The battery panel is screwed shut."))
 			else
 				to_chat(user, span_notice("The battery panel is watertight and cannot be opened without a crowbar."))
 			return FALSE
-		// Outpost 21 edit end
 		if(istype(cell))
 			to_chat(user, span_notice("There is a power cell already installed."))
 			return FALSE
@@ -180,7 +178,7 @@
 	else
 		. = ..()
 
-	RefreshParts()
+	RefreshParts() // Handles cell assignment
 	update_icon()
 
 
@@ -197,12 +195,12 @@
 	R.add_reagent("water", round(volume, 0.1))
 
 	var/datum/gas_mixture/air = return_air() // v
-	if(air.temperature <= T0C) // Outpost 21 edit - Uses the current air temp, instead of the turf starting temp - Willbird
+	if(air.temperature <= T0C) // Uses the current air temp, instead of the turf starting temp
 		R.add_reagent("ice", round(volume / 2, 0.1))
 
-	for(var/turf/simulated/mineral/M in orange(5,src)) // Outpost 21 edit - Uses the turf as center instead of an unset usr
+	for(var/turf/simulated/mineral/M in orange(5,src)) // Uses the turf as center instead of an unset usr
 		if(M.mineral && prob(40)) // v
-			R.add_reagent(M.mineral.reagent, round(volume / 5, 0.1)) // Outpost 21 edit - Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change - Willbird. Also nerfed amount to 1/5 instead of 1/2
+			R.add_reagent(M.mineral.reagent, round(volume / 5, 0.1)) // Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change. Also nerfed amount to 1/5 instead of 1/2
 		else if(prob(10))
 			R.add_reagent("silicate", 0.1) // Outpost 21 edit - Nerfed further by taking up tank with junk sand
 
