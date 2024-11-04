@@ -88,7 +88,17 @@
 	total_positions = 3
 	//pto_type = PTO_SCIENCE
 	pto_type = PTO_ENGINEERING // Outpost 21 edit - moved to robotics
-	alt_titles = list(JOB_ALT_ASSEMBLY_TECHNICIAN = /datum/alt_title/assembly_tech, JOB_ALT_BIOMECHANICAL_ENGINEER = /datum/alt_title/biomech, JOB_ALT_MECHATRONIC_ENGINEER = /datum/alt_title/mech_tech, JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer, JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer) // Outpost 21 edit - Circuit jobs moved to engiee roboticist)
+	alt_titles = list(
+		JOB_ALT_ASSEMBLY_TECHNICIAN = /datum/alt_title/assembly_tech,
+		JOB_ALT_BIOMECHANICAL_ENGINEER = /datum/alt_title/biomech,
+		JOB_ALT_MECHATRONIC_ENGINEER = /datum/alt_title/mech_tech,
+		JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer,
+		JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer,
+		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi) // Outpost 21 edit - Circuit jobs moved to engiee roboticist
+
+/datum/alt_title/software_engi
+	title = JOB_ALT_SOFTWARE_ENGINEER
+	title_blurb = "A " + JOB_ALT_SOFTWARE_ENGINEER + " specializes in working with software and firmware. They also often deal with integrated circuits."
 
 /datum/alt_title/assembly_tech
 	title = JOB_ALT_ASSEMBLY_TECHNICIAN
