@@ -78,8 +78,17 @@ export const VorePanel = (props) => {
                 Bellies
                 <Icon name="list" ml={0.5} />
               </Tabs.Tab>
+              {/* Outpost 21 edit begin - Nif removal
               <Tabs.Tab
                 selected={tabIndex === 1}
+                onClick={() => setTabIndex(1)}
+              >
+                Soulcatcher
+                <Icon name="ghost" ml={0.5} />
+              </Tabs.Tab>
+			        Outpost 21 edit end */}
+              <Tabs.Tab
+                selected={tabIndex === 2}
                 onClick={() => setTabIndex(1)}
               >
                 Preferences
