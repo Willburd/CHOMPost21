@@ -73,7 +73,11 @@
 
 /mob/living/carbon/human/Destroy()
 	human_mob_list -= src
-	QDEL_NULL_LIST(organs)
+	QDEL_NULL_LIST(organs) // CHOMPEdit
+	/* //REMOVE - this is done on mob/living/Destroy
+	for(var/organ in organs)
+		qdel(organ)
+	*/
 	/*  Outpost 21 edit - Nif removal
 	if(nif)
 		QDEL_NULL(nif)	//VOREStation Add
@@ -951,7 +955,7 @@
 
 /mob/living/carbon/human/proc/remotesay()
 	set name = "Project mind"
-	set category = "Superpower"
+	set category = "Abilities.Superpower"
 
 	if(stat!=CONSCIOUS)
 		reset_view(0)
@@ -980,7 +984,7 @@
 
 /mob/living/carbon/human/proc/remoteobserve()
 	set name = "Remote View"
-	set category = "Superpower"
+	set category = "Abilities.Superpower"
 
 	if(stat!=CONSCIOUS)
 		remoteview_target = null
@@ -1355,7 +1359,7 @@
 		return 0
 
 /mob/living/carbon/human/proc/bloody_doodle()
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set name = "Write in blood"
 	set desc = "Use blood on your hands to write a short message on the floor or a wall, murder mystery style."
 
@@ -1675,7 +1679,7 @@
 /mob/living/carbon/human/verb/pull_punches()
 	set name = "Pull Punches"
 	set desc = "Try not to hurt them."
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 
 	if(stat) return
 	pulling_punches = !pulling_punches

@@ -117,7 +117,7 @@
 
 /mob/living/simple_mob/animal/passive/fox/renault/verb/become_friends()
 	set name = "Become Friends"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set src in view(1)
 
 	var/mob/living/L = usr
@@ -176,7 +176,7 @@
 
 /mob/living/simple_mob/animal/passive/fox/fluff/verb/friend()
 	set name = "Become Friends"
-	set category = "IC.Game" //CHOMPEdit
+	set category = "IC.Game"
 	set src in view(1)
 
 	if(friend && usr == friend)
