@@ -250,7 +250,7 @@ export const VorePanel = () => {
                 Bellies
                 <Icon name="list" ml={0.5} />
               </Tabs.Tab>
-			{/* Outpost 21 edit begin - Nif removal
+              {/* Outpost 21 edit begin - Nif removal
               <Tabs.Tab
                 selected={tabIndex === 1}
                 onClick={() => setTabIndex(1)}
