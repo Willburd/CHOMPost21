@@ -154,8 +154,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	for(var/Rp in food_recipes)
 		//Lists don't work with datum-stealing no-instance initial() so we have to.
 		var/datum/recipe/R = new Rp()
-		var/obj/res = new R.result()
-		if(!isnull(res))
+		if(!isnull(R.result))
+			var/obj/res = new R.result()
 			food_recipes[Rp] = list(
 						"Result" = "[res.name]",
 						"Desc" = "[res.desc]",
