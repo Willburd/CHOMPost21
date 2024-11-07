@@ -154,8 +154,9 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	for(var/Rp in food_recipes)
 		//Lists don't work with datum-stealing no-instance initial() so we have to.
 		var/datum/recipe/R = new Rp()
-		var/obj/res = new R.result()
-		food_recipes[Rp] = list(
+		if(!isnull(R.result))
+			var/obj/res = new R.result()
+			food_recipes[Rp] = list(
 						"Result" = "[res.name]",
 						"Desc" = "[res.desc]",
 						"Flavor" = "",
@@ -169,7 +170,9 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 						"Allergens" = 0,
 						"Spoiler" = R.spoiler
 						)
-		qdel(res)
+			qdel(res)
+		else
+			log_runtime(EXCEPTION("Invalid result object: [R.result] in food recipe type: [Rp]"))
 		qdel(R)
 	// basically condiments, tofu, cheese, soysauce, etc
 	for(var/decl/chemical_reaction/instant/food/CR in SSchemistry.chemical_reactions)

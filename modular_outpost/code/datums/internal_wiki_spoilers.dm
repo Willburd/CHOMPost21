@@ -73,8 +73,6 @@
 	spoiler = TRUE
 /datum/recipe/dankpocket
 	spoiler = TRUE
-/datum/recipe/ruinedvirusdish
-	spoiler = TRUE
 /datum/recipe/gigapuddi/happy
 	spoiler = TRUE
 /datum/recipe/gigapuddi/anger
