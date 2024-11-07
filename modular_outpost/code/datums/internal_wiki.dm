@@ -170,9 +170,9 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 						"Allergens" = 0,
 						"Spoiler" = R.spoiler
 						)
+			qdel(res)
 		else
 			log_runtime(EXCEPTION("Invalid result object: [R.result] in food recipe type: [Rp]"))
-		qdel(res)
 		qdel(R)
 	// basically condiments, tofu, cheese, soysauce, etc
 	for(var/decl/chemical_reaction/instant/food/CR in SSchemistry.chemical_reactions)
