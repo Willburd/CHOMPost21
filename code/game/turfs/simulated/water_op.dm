@@ -9,6 +9,7 @@
 	icon_state = "acid_shallow" // So it shows up in the map editor as water.
 	water_icon = 'icons/turf/outdoors_op.dmi'
 
+	has_fish = FALSE // No fish in this pond
 	water_state = "acid_shallow"
 	outdoors = OUTDOORS_YES
 	reagent_type = "water"
