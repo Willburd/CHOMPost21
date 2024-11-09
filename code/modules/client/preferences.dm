@@ -47,6 +47,7 @@ var/list/preferences_datums = list()
 	var/spawnpoint = "Elevator" 		//where this character will spawn (0-2). Outpost 21 edit - Default changed on new files
 	var/b_type = "A+"					//blood type (not-chooseable)
 	var/blood_reagents = "default"		//blood restoration reagents
+	var/headset = 1						//headset type
 	var/backbag = 2						//backpack type
 	var/pdachoice = 1					//PDA type
 	//var/shoe_hater = FALSE				//RS ADD - if true, will spawn with no shoes //CHOMPRemove, remove RS No shoes
