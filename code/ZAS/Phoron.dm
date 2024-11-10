@@ -13,7 +13,7 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 	var/PHORONGUARD_ONLY_NAME = "\"PhoronGuard Only\""
 	var/PHORONGUARD_ONLY_DESC = "If this is on, only biosuits and spacesuits protect against contamination and ill effects."
 
-	var/GENETIC_CORRUPTION = 0
+	var/GENETIC_CORRUPTION = 2 // Outpost 21 - Genetics damage phoron
 	var/GENETIC_CORRUPTION_NAME = "Genetic Corruption Chance"
 	var/GENETIC_CORRUPTION_DESC = "Chance of genetic corruption as well as toxic damage, X in 10,000."
 

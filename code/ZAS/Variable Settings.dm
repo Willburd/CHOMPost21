@@ -200,7 +200,7 @@ var/global/vs_control/vsc = new
 		if("Phoron - Standard")
 			plc.CLOTH_CONTAMINATION = 1 //If this is on, phoron does damage by getting into cloth.
 			plc.PHORONGUARD_ONLY = 0
-			plc.GENETIC_CORRUPTION = 0 //Chance of genetic corruption as well as toxic damage, X in 1000.
+			plc.GENETIC_CORRUPTION = 2 //Chance of genetic corruption as well as toxic damage, X in 1000. // Outpost 21 - Genetics damage phoron
 			plc.SKIN_BURNS = 0       //Phoron has an effect similar to mustard gas on the un-suited.
 			plc.EYE_BURNS = 1 //Phoron burns the eyes of anyone not wearing eye protection.
 			plc.PHORON_HALLUCINATION = 0
@@ -209,7 +209,7 @@ var/global/vs_control/vsc = new
 		if("Phoron - Low Hazard")
 			plc.CLOTH_CONTAMINATION = 0 //If this is on, phoron does damage by getting into cloth.
 			plc.PHORONGUARD_ONLY = 0
-			plc.GENETIC_CORRUPTION = 0 //Chance of genetic corruption as well as toxic damage, X in 1000
+			plc.GENETIC_CORRUPTION = 3 //Chance of genetic corruption as well as toxic damage, X in 1000 // Outpost 21 - Genetics damage phoron
 			plc.SKIN_BURNS = 0       //Phoron has an effect similar to mustard gas on the un-suited.
 			plc.EYE_BURNS = 1 //Phoron burns the eyes of anyone not wearing eye protection.
 			plc.PHORON_HALLUCINATION = 0
@@ -218,7 +218,7 @@ var/global/vs_control/vsc = new
 		if("Phoron - High Hazard")
 			plc.CLOTH_CONTAMINATION = 1 //If this is on, phoron does damage by getting into cloth.
 			plc.PHORONGUARD_ONLY = 0
-			plc.GENETIC_CORRUPTION = 0 //Chance of genetic corruption as well as toxic damage, X in 1000.
+			plc.GENETIC_CORRUPTION = 4 //Chance of genetic corruption as well as toxic damage, X in 1000. // Outpost 21 - Genetics damage phoron
 			plc.SKIN_BURNS = 1       //Phoron has an effect similar to mustard gas on the un-suited.
 			plc.EYE_BURNS = 1 //Phoron burns the eyes of anyone not wearing eye protection.
 			plc.PHORON_HALLUCINATION = 1
