@@ -20,6 +20,7 @@
 	contraband += list(/obj/item/rms = 5)
 
 /obj/machinery/vending/medical/Initialize()
+	. = ..()
 	products += list(/obj/item/storage/box/khcrystal = 4, // /obj/item/backup_implanter = 3, Outpost 21 edit - remove backup implanter
 					/obj/item/clothing/glasses/omnihud/med = 4, /obj/item/glasses_kit = 1,  /obj/item/storage/quickdraw/syringe_case = 4)
 
