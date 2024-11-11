@@ -56,6 +56,23 @@
 
 /obj/item/reagent_containers/syringe/on_reagent_change()
 	update_icon()
+	// Outpost 21 edit begin - Sterilization of dirty needles
+	// This should really be moved to a reagent var...
+	if(reagents.has_reagent("sacid", 1) \
+	|| reagents.has_reagent("cleaner", 1) \
+	|| reagents.has_reagent("ammonia", 1) \
+	|| reagents.has_reagent("chlorine", 1) \
+	|| reagents.has_reagent("ethanol", 1) \
+	|| reagents.has_reagent("chloralhydrate", 1) \
+	|| reagents.has_reagent("sterilizine", 1) \
+	|| reagents.has_reagent("fluorine", 1) \
+	|| reagents.has_reagent("vodka", 1) \
+	|| reagents.has_reagent("vodkamartini", 1) \
+	|| reagents.has_reagent("vodkatonic", 1) \
+	|| reagents.has_reagent("unathiliquor", 1) \
+	|| reagents.has_reagent("phoron", 1))
+		sterilize()
+	// Outpost 21 edit end
 
 /obj/item/reagent_containers/syringe/pickup(mob/user)
 	..()
@@ -397,6 +414,16 @@
 	//reagents.add_reagent("adrenaline",5) //VOREStation Edit - No thanks.
 	reagents.add_reagent("hyperzine",10)
 
+// Outpost 21 edit begin - Sterilization of dirty needles
+/obj/item/reagent_containers/syringe/proc/sterilize()
+	dirtiness = 0
+	QDEL_LIST_NULL(viruses)
+	LAZYCLEARLIST(targets)
+	if(used)
+		used = FALSE
+		STOP_PROCESSING(SSobj, src)
+// Outpost 21 edit end
+
 /obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo)
 	if(!ishuman(loc))
 		return //Avoid borg syringe problems.
@@ -433,6 +460,7 @@
 			target.ContractDisease(virus)
 
 	if(!used)
+		used = TRUE // Outpost 21 edit - missing flag?
 		START_PROCESSING(SSobj, src)
 
 /obj/item/reagent_containers/syringe/proc/infect_limb(var/obj/item/organ/external/eo)
