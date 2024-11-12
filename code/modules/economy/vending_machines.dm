@@ -419,7 +419,7 @@
 					/obj/item/storage/pill_bottle/carbon = 2,
 					/obj/item/clothing/mask/chewable/candy/lolli = 15,
 					/obj/item/storage/box/khcrystal = 4,
-					/obj/item/backup_implanter = 3,
+					///obj/item/backup_implanter = 3, // Outpost 21 edit - remove backup implanter
 					/obj/item/clothing/glasses/omnihud/med = 4,
 					/obj/item/glasses_kit = 1,
 					/obj/item/storage/quickdraw/syringe_case = 4)
