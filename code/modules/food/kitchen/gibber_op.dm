@@ -70,13 +70,8 @@
 		// items move into gibber for processing and ejection
 		var/obj/item/thing = A
 		thing.loc = src
-		// proc sleever if it gets an ID
-		if(istype(A, /obj/item/card/id))
-			updatesleever()
-			processcontents()
-		else if(istype(A, /obj/item/pda))
-			updatesleever()
-			processcontents()
+		updatesleever()
+		scanforid(thing)
 		return
 	if(!ismob(A))
 		return
@@ -313,6 +308,7 @@
 					continue
 
 		// DIE MONSTER!
+		scanforid(src)
 		processcontents()
 		update_icon()
 
@@ -326,9 +322,20 @@
 		var/mob/living/L = M
 		L.release_vore_contents(silent = TRUE)
 
+
+/obj/machinery/gibber/proc/scanforid(var/obj/thing)
+	// Scan for ID
+	if(!isnull(sleevelink))
+		var/list/checks = list()
+		checks |= thing
+		checks |= recursive_content_check(thing,checks, recursion_limit = 5, client_check = FALSE, sight_check = FALSE, include_mobs = FALSE, include_objects = TRUE, ignore_show_messages = TRUE)
+		for (var/obj/O in checks)
+			if(istype(O, /obj/item/card/id))
+				sleevelink.get_id_trigger(O)
+
+
 /obj/machinery/gibber/proc/processcontents()
 	// don't call this if currently processing something else, be careful!
-	var/obj/item/card/id/sleevecard // because we can only run one resleeve at a time...
 	for (var/obj/thing in contents)
 		var/processtobiomass = FALSE
 		if(!isnull(sleevelink))
@@ -342,24 +349,12 @@
 			else if(istype(thing, /obj/effect/decal/cleanable/blood/gibs))
 				if(prob(70))
 					processtobiomass = TRUE
-			else if(istype(thing, /obj/item/card/id))
-				sleevecard = thing // this makes it so the last ID detected is the one used...
-			else if(istype(thing, /obj/item/pda))
-				var/obj/item/pda/P = thing
-				if(!isnull(P.id))
-					sleevecard = P.id // this makes it so the last ID detected is the one used...
-
 		if(processtobiomass)
 			// process and destroy
 			thing.Destroy()
 		else
 			thing.forceMove( src.loc) // Drop it onto the turf for throwing.
 			thing.throw_at( get_edge_target_turf(thing.loc, gib_throw_dir),rand(1,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.
-
-	// Pass ID to sleever
-	spawn(100) // needs big delay time to make sure the host is dead if stayed in brain
-		if(!isnull(sleevecard))
-			sleevelink.get_id_trigger(sleevecard)
 
 	// if anything survived, toss it out, it was ungibbable
 	spawn(12)

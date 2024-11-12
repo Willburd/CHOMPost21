@@ -313,19 +313,22 @@
 			global_announcer.autosay("[D.registered_name] was unable to be resleeved by the automatic resleeving system.", "TransCore Oversight", "Medical")
 		return
 
-	// solve the ghost from mind refs
-	var/mob/ghost
-	var/client/ghost_client
-	for(var/client/C in GLOB.clients)
-		if(C.ckey == recordM.ckey)
-			ghost_client = C
-			ghost = ghost_client.mob
-			break
+	playsound(src, 'sound/machines/medbayscanner1.ogg', 50, 0) // Make it clear the ID was processed and it's waiting
+	visible_message("\The [src] flashes 'Record found, preparing to resleeve [D.registered_name]!'")
+	spawn(100) // needs big delay time to make sure the host is dead if stayed in brain
+		// solve the ghost from mind refs
+		var/mob/ghost
+		var/client/ghost_client
+		for(var/client/C in GLOB.clients)
+			if(C.ckey == recordM.ckey)
+				ghost_client = C
+				ghost = ghost_client.mob
+				break
 
-	// Avoiding some funny messages
-	if(!stat && istype(ghost,/mob/observer/dead))
-		to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
-		autoresleeve(ghost,TRUE)
+		// Avoiding some funny messages
+		if(!stat && istype(ghost,/mob/observer/dead))
+			to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
+			autoresleeve(ghost,TRUE)
 
 /obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(var/idscan, var/mob/living/carbon/human/new_character, var/spawnloc)
 	var/confuse_amount = rand(8,26)
