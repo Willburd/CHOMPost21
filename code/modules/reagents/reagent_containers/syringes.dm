@@ -59,6 +59,7 @@
 	// Outpost 21 edit begin - Sterilization of dirty needles
 	// This should really be moved to a reagent var...
 	if(reagents.has_reagent("sacid", 1) \
+	|| reagents.has_reagent("pacid", 1) \
 	|| reagents.has_reagent("cleaner", 1) \
 	|| reagents.has_reagent("ammonia", 1) \
 	|| reagents.has_reagent("chlorine", 1) \
