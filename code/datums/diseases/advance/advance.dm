@@ -1,11 +1,23 @@
 GLOBAL_LIST_EMPTY(archive_diseases)
 
+/*
 GLOBAL_LIST_INIT(advance_cures, list(
 	"sodiumchloride", "sugar", "orangejuice",
 	"spaceacilin", "glucose", "ethanol",
 	"dyloteane", "impedrezene", "hepanephrodaxon",
 	"gold", "silver"
 ))
+*/
+// Outpost 21 edit begin - Lets use some actual meds, instead of random things from the kitchen
+GLOBAL_LIST_INIT(advance_cures, list(
+	"anti_toxin","spaceacilin","ethanol",
+	"bicaridine","inaprovaline","hyronalin",
+	"ammonia", "ryetalyn", "radium",
+	"ethylredoxrazine", "imidazoline", "dermaline",
+	"calciumcarbonate", "corophizine",
+	"ethanol", "leporazine", "peridaxon"
+))
+// Outpost 21 edit end
 
 /datum/disease/advance
 	name = "Unknown"
