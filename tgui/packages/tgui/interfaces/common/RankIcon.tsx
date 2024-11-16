@@ -80,6 +80,7 @@ const rank2icon = {
   Physician: 'suitcase-medical',
   'Medical Practitioner': 'suitcase-medical',
   Surgeon: 'syringe',
+  'Xenoanatomy Specialist': ['syringe', 'bugs'], // Outpost 21 addition
   'Emergency Physician': 'suitcase-medical',
   Nurse: 'user-nurse',
   Orderly: 'book-medical',
