@@ -178,6 +178,8 @@
 		if(current_pickup >= max_pickup)
 			max_pickup_reached = 1
 			break
+		if(istype(O, /obj/item/ore/slag))
+			continue
 		var/obj/item/ore/ore = O
 		stored_ore[ore.material]++
 		current_capacity++

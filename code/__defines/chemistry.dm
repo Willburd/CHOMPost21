@@ -41,8 +41,7 @@
 #define CE_ALLERGEN "allergyreaction" // Self explanatory
 #define CE_DARKSIGHT "darksight" // Gives perfect vision in dark
 
-#define REAGENTS_PER_SHEET 20
-#define REAGENTS_PER_ORE 20 // Outpost 21 addition - Ore grinding
+#define REAGENTS_PER_ORE 20
 
 // Attached to CE_ANTIBIOTIC
 #define ANTIBIO_NORM	1

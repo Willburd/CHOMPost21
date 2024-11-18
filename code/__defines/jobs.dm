@@ -210,6 +210,7 @@
 	#define JOB_ALT_SHIPBREAKER "Ship Breaker" // Outpost 21 addition
 	#define JOB_ALT_CHEMENGINEER "Chemical Engineer" // Outpost 21 addition
 	#define JOB_ALT_COMPUTER_TECHNICIAN "Computer Technician"
+	#define JOB_ALT_SALVAGE_TECHNICIAN "Salvage Technician"
 
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
 	// Atmospheric Technician alt titles

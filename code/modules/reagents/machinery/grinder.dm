@@ -1,3 +1,55 @@
+// Don't need a new list for every grinder in the game
+var/global/list/sheet_reagents = list( //have a number of reagents divisible by REAGENTS_PER_SHEET (default 20) unless you like decimals.
+	/obj/item/stack/material/plastic = list("carbon","carbon","oxygen","chlorine","sulfur"),
+	/obj/item/stack/material/copper = list("copper"),
+	/obj/item/stack/material/wood = list("carbon","woodpulp","nitrogen","potassium","sodium"),
+	/obj/item/stack/material/stick = list("carbon","woodpulp","nitrogen","potassium","sodium"),
+	/obj/item/stack/material/log = list("carbon","woodpulp","nitrogen","potassium","sodium"),
+	/obj/item/stack/material/algae = list("carbon","nitrogen","nitrogen","phosphorus","phosphorus"),
+	/obj/item/stack/material/graphite = list("carbon"),
+	/obj/item/stack/material/aluminium = list("aluminum"), // The material is aluminium, but the reagent is aluminum...
+	/obj/item/stack/material/glass/reinforced = list("silicon","silicon","silicon","iron","carbon"),
+	/obj/item/stack/material/leather = list("carbon","carbon","protein","protein","triglyceride"),
+	/obj/item/stack/material/cloth = list("carbon","carbon","carbon","protein","sodium"),
+	/obj/item/stack/material/fiber = list("carbon","carbon","carbon","protein","sodium"),
+	/obj/item/stack/material/fur = list("carbon","carbon","carbon","sulfur","sodium"),
+	/obj/item/stack/material/deuterium = list("hydrogen"),
+	/obj/item/stack/material/glass/phoronrglass = list("silicon","silicon","silicon","phoron","phoron"),
+	/obj/item/stack/material/diamond = list("carbon"),
+	/obj/item/stack/material/durasteel = list("iron","iron","carbon","carbon","platinum"),
+	/obj/item/stack/material/wax = list("ethanol","triglyceride"),
+	/obj/item/stack/material/iron = list("iron"),
+	/obj/item/stack/material/uranium = list("uranium"),
+	/obj/item/stack/material/phoron = list("phoron"),
+	/obj/item/stack/material/gold = list("gold"),
+	/obj/item/stack/material/silver = list("silver"),
+	/obj/item/stack/material/platinum = list("platinum"),
+	/obj/item/stack/material/mhydrogen = list("hydrogen"),
+	/obj/item/stack/material/steel = list("iron", "carbon"),
+	/obj/item/stack/material/plasteel = list("iron", "iron", "carbon", "carbon", "platinum"), //8 iron, 8 carbon, 4 platinum,
+	/obj/item/stack/material/snow = list("water"),
+	/obj/item/stack/material/sandstone = list("silicon", "oxygen"),
+	/obj/item/stack/material/glass = list("silicon"),
+	/obj/item/stack/material/glass/phoronglass = list("platinum", "silicon", "silicon", "silicon"), //5 platinum, 15 silicon,
+	/obj/item/stack/material/supermatter = list("supermatter")
+	)
+var/global/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
+	/obj/item/ore/glass = list("silicon"),
+	/obj/item/ore/iron = list("iron"),
+	/obj/item/ore/coal = list("carbon"),
+	/obj/item/ore/phoron = list("phoron"),
+	/obj/item/ore/silver = list("silver"),
+	/obj/item/ore/gold = list("gold"),
+	/obj/item/ore/marble = list("silicon","aluminum","aluminum","sodium","calcium"), // Some nice variety here
+	/obj/item/ore/uranium = list("uranium"),
+	/obj/item/ore/diamond = list("carbon"),
+	/obj/item/ore/osmium = list("platinum"), // should contain osmium
+	/obj/item/ore/lead = list("lead"),
+	/obj/item/ore/hydrogen = list("hydrogen"),
+	/obj/item/ore/verdantium = list("radium","phoron","nitrogen","phosphorus","sodium"), // Some fun stuff to be useful with
+	/obj/item/ore/rutile = list("tungsten","oxygen") // Should be titanium
+)
+
 /obj/machinery/reagentgrinder
 
 	name = "All-In-One Grinder"
@@ -14,7 +66,6 @@
 	var/obj/item/reagent_containers/beaker = null
 	var/limit = 10
 	var/list/holdingitems = list()
-	// Outpost 21 edit - Moved grindable list to global for wiki
 
 	/* Outpost 21 edit - disable radial menu
 	var/static/radial_examine = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_examine")
@@ -124,7 +175,7 @@
 
 		return 0
 
-	if(!global.sheet_reagents[O.type] && !global.ore_reagents[O.type] && (!O.reagents || !O.reagents.total_volume)) // Outpost 21 edit - ore grinding. globalized lists
+	if(!global.sheet_reagents[O.type] && !global.ore_reagents[O.type] && (!O.reagents || !O.reagents.total_volume))
 		to_chat(user, "\The [O] is not suitable for blending.")
 		return 1
 
@@ -291,10 +342,10 @@
 		if(remaining_volume <= 0)
 			break
 
-		if(global.sheet_reagents[O.type]) // Outpost 21 edit - globalized grinding list
+		if(global.sheet_reagents[O.type])
 			var/obj/item/stack/stack = O
 			if(istype(stack))
-				var/list/sheet_components = global.sheet_reagents[stack.type] // Outpost 21 edit - globalized grinding list
+				var/list/sheet_components = global.sheet_reagents[stack.type]
 				var/amount_to_take = max(0,min(stack.get_amount(),round(remaining_volume/REAGENTS_PER_SHEET)))
 				if(amount_to_take)
 					stack.use(amount_to_take)
@@ -308,7 +359,6 @@
 						beaker.reagents.add_reagent(sheet_components, (amount_to_take*REAGENTS_PER_SHEET))
 					continue
 
-		// Outpost 21 addition begin - Ore grinding
 		if(global.ore_reagents[O.type])
 			var/obj/item/ore/R = O
 			if(istype(R))
@@ -323,7 +373,6 @@
 					else
 						beaker.reagents.add_reagent(ore_components, REAGENTS_PER_ORE)
 					continue
-		// Outpost 21 addition end
 
 		if(O.reagents)
 			O.reagents.trans_to_obj(beaker, min(O.reagents.total_volume, remaining_volume))
