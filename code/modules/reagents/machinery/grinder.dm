@@ -34,6 +34,13 @@ var/global/list/sheet_reagents = list( //have a number of reagents divisible by 
 	/obj/item/stack/material/supermatter = list("supermatter")
 	)
 var/global/list/ore_reagents = list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
+	/obj/item/ore/copper = list("copper"),
+	/obj/item/ore/tin = list("tin"),
+	/obj/item/ore/void_opal = list("silicon","silicon","oxygen","water"),
+	/obj/item/ore/painite = list("calcium","aluminum","oxygen","oxygen"),
+	/obj/item/ore/quartz = list("silicon","oxygen"),
+	/obj/item/ore/bauxite = list("aluminum","aluminum"),
+	// Original grinder
 	/obj/item/ore/glass = list("silicon"),
 	/obj/item/ore/iron = list("iron"),
 	/obj/item/ore/coal = list("carbon"),
