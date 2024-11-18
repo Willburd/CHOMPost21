@@ -42,13 +42,21 @@
 			modules.Add(shell_module_types)
 			// CHOMPAdd Start, shell blacklist and crisis mode for shells
 			modules.Remove(GLOB.shell_module_blacklist)
-			if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
+			// Outpost 21 edit begin - Admins always have ERT access
+			if(usr.client && usr.client.holder && usr.client.holder.rights & R_ADMIN)
+				modules |= emergency_module_types
+			// Outpost 21 edit end
+			else if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= emergency_module_types
 			// CHOMPAdd End
 		else
 			modules.Add(robot_module_types)
-			if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
+			// Outpost 21 edit begin - Admins always have ERT access
+			if(usr.client && usr.client.holder && usr.client.holder.rights & R_ADMIN)
+				modules |= emergency_module_types
+			// Outpost 21 edit end
+			else if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(R, span_red("Crisis mode active. Combat module available."))
 				modules |= emergency_module_types
 			for(var/module_name in whitelisted_module_types)
