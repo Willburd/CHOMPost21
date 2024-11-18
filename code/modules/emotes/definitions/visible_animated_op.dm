@@ -84,8 +84,8 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.Stun(5)
-		if(H.jitteriness < 100)
-			H.make_jittery(115)
+		if(H.jitteriness < 80)
+			H.make_jittery(95)
 
 /decl/emote/visible/floorspin/tantrum/spin_dir(var/mob/user)
 	set waitfor = FALSE
