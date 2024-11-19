@@ -235,7 +235,7 @@
 	base_turf = /turf/simulated/open/force_indoor
 
 /area/muriki/bathroom/scilower
-	name = "\improper Science Lavoreatory"
+	name = "\improper Science Lavoratory"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
