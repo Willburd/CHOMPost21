@@ -230,12 +230,12 @@
 	base_turf = /turf/simulated/open/force_indoor
 
 /area/muriki/bathroom/sciupper
-	name = "\improper Science Lavatory"
+	name = "\improper Research Lavatory"
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	base_turf = /turf/simulated/open/force_indoor
 
 /area/muriki/bathroom/scilower
-	name = "\improper Lower Science Lavatory"
+	name = "\improper Science Lavoreatory"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
@@ -547,6 +547,10 @@
 	name = "\improper Bunker Access Hallway"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "cyawhicir"
+
+/area/maintenance/roof_tube_access
+	name = "Civilian Roof Access"
+	base_turf = /turf/simulated/open/force_indoor
 
 //Hallways-------
 /area/muriki/crewstairwell
@@ -1752,6 +1756,12 @@
 	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
+/area/rnd/entry_aux
+	name = "\improper Research Auxiliary Decontamination"
+	icon_state = "decontamination"
+	base_turf = /turf/simulated/open/force_indoor
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
 /area/rnd/stairwell
 	name = "\improper Science Stairwell"
 	icon_state = "purple"
@@ -1806,7 +1816,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/rnd/research/atmosia
-	name = "\improper Research Scrubber Filtration"
+	name = "\improper Sphenoidal Atmospherics"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
@@ -1879,6 +1889,19 @@
 	name = "\improper Research Break Room"
 	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+/area/rnd/research/medical_roof
+	name = "\improper Research First aid"
+	base_turf = /turf/simulated/open/force_indoor
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/rnd/research/roof_eva
+	name = "\improper Research Roof Access"
+	base_turf = /turf/simulated/open/force_indoor
+
+/area/rnd/research/xenoflora_storage
+	name = "\improper Xenoflora Storage"
+	base_turf = /turf/simulated/open/force_indoor
 
 /area/rnd/research/phoronics
 	name = "\improper Phoronics"
