@@ -119,6 +119,41 @@
 
 	return 1
 
+// Outpost 21 edit begin - Cable name test
+/datum/unit_test/wire_iconsgood
+	name = "MAP: Cable Test (Defined Z-Levels)"
+
+/datum/unit_test/wire_iconsgood/start_test()
+	set background=1
+
+	var/wire_test_count = 0
+	var/bad_tests = 0
+	var/turf/T = null
+	var/obj/structure/cable/C = null
+
+	var/list/exempt_from_wires = list()
+	exempt_from_wires += using_map.unit_test_exempt_from_wires.Copy()
+	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
+
+	for(C in world)
+		T = get_turf(C)
+		var/area/A = get_area(T)
+		if(T && (T.z in zs_to_test) && !(A.type in exempt_from_wires))
+			wire_test_count++
+			var/combined_dir = "[C.d1]-[C.d2]"
+			if(C.icon_state != combined_dir || C.d1 >= C.d2)
+				bad_tests++
+				var/bad_msg = "--------------- [T.name] \[[T.x] / [T.y] / [T.z]\]"
+				log_unit_test("[bad_msg] Contains wires with icon_states that do not match their D1 and D2 values, or with backward D1 and D2 values.")
+
+	if(bad_tests)
+		fail("\[[bad_tests] / [wire_test_count]\] Some wires have icon_states that do not match their D1 and D2 values, or with backward d1 and d2 values. D1 must be smaller than D2.")
+	else
+		pass("All \[[wire_test_count]\] wires had no incorrect icons or D1 and D2 values.")
+
+	return 1
+// Outpost 21 edit end
+
 /datum/unit_test/template_noops
 	name = "MAP: Template no-ops (all maps)"
 
