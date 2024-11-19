@@ -155,7 +155,7 @@
 					log_unit_test("[bad_msg] Contains wires with icon_states that do not match their D1 and D2 values, or with backward D1 and D2 values. D1 must be smaller than D2.")
 
 	if(bad_tests)
-		fail("\[[bad_tests] / [wire_test_count]\] Some wires have icon_states that do not match their D1 and D2 values, or with backward d1 and d2 values. D1 must be smaller than D2.")
+		fail("\[[bad_tests] / [wire_test_count]\] Some wires have icon_states that do not match their D1 and D2 values, or with incorrect D1 and D2 values.")
 	else
 		pass("All \[[wire_test_count]\] wires had no incorrect icons or D1 and D2 values.")
 
