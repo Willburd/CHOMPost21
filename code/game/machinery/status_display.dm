@@ -21,11 +21,11 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 10
 	circuit =  /obj/item/circuitboard/status_display
-	var/mode = 1	// 0 = Blank
+	var/mode = 4	// 0 = Blank	// Outpost 21 edit - Moved to show station time by default
 					// 1 = Shuttle timer
 					// 2 = Arbitrary message(s)
 					// 3 = alert picture
-					// 4 = Supply shuttle timer
+					// 4 = Supply shuttle timer (updated to station time?)
 
 	var/picture_state	// icon_state of alert picture
 	var/message1 = ""	// message line 1
