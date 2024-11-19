@@ -121,7 +121,7 @@
 
 // Outpost 21 edit begin - Cable name test
 /datum/unit_test/wire_iconsgood
-	name = "MAP: Cable Test (Defined Z-Levels)"
+	name = "MAP: Cable icon connection Test (Defined Z-Levels)"
 
 /datum/unit_test/wire_iconsgood/start_test()
 	set background=1
@@ -140,11 +140,19 @@
 		var/area/A = get_area(T)
 		if(T && (T.z in zs_to_test) && !(A.type in exempt_from_wires))
 			wire_test_count++
+			var/bad_msg = "--------------- [T.name] \[[T.x] / [T.y] / [T.z]\]"
 			var/combined_dir = "[C.d1]-[C.d2]"
-			if(C.icon_state != combined_dir || C.d1 >= C.d2)
-				bad_tests++
-				var/bad_msg = "--------------- [T.name] \[[T.x] / [T.y] / [T.z]\]"
-				log_unit_test("[bad_msg] Contains wires with icon_states that do not match their D1 and D2 values, or with backward D1 and D2 values.")
+			if(C.icon_state != combined_dir)
+				if(C.d1 == UP)
+					if(C.d2 != 0)
+						bad_tests++
+						log_unit_test("[bad_msg] Contains wires with icon_states that do not match their D1 and D2 values, upward wires must be 16-0.")
+				else if(C.d1 == DOWN)
+					bad_tests++
+					log_unit_test("[bad_msg] Contains wires with icon_states that do not match their D1 and D2 values, downward wires must be 32-x.")
+				else if(C.d1 >= C.d2)
+					bad_tests++
+					log_unit_test("[bad_msg] Contains wires with icon_states that do not match their D1 and D2 values, or with backward D1 and D2 values. D1 must be smaller than D2.")
 
 	if(bad_tests)
 		fail("\[[bad_tests] / [wire_test_count]\] Some wires have icon_states that do not match their D1 and D2 values, or with backward d1 and d2 values. D1 must be smaller than D2.")
