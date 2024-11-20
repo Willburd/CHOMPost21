@@ -105,7 +105,7 @@
 	if(!isturf(src.loc))
 		return
 
-	switch(rand(1,11))
+	switch(rand(1,10))
 		if(1)
 			var/mob/living/simple_mob/animal/synx/C = new /mob/living/simple_mob/animal/synx/ai()
 			C.loc = src.loc
@@ -123,30 +123,26 @@
 			C.loc = src.loc
 
 		if(5)
-			var/mob/living/simple_mob/animal/passive/gaslamp/G = new /mob/living/simple_mob/animal/passive/gaslamp()
-			G.loc = src.loc
-
-		if(6)
 			var/mob/living/simple_mob/animal/giant_spider/S = new /mob/living/simple_mob/animal/giant_spider()
 			S.loc = src.loc
 
-		if(7)
+		if(6)
 			var/mob/living/simple_mob/vore/leopardmander/M = new /mob/living/simple_mob/vore/leopardmander()
 			M.loc = src.loc
 
-		if(8)
+		if(7)
 			var/mob/living/simple_mob/animal/space/goose/G = new /mob/living/simple_mob/animal/space/goose()
 			G.loc = src.loc
 
-		if(9)
+		if(8)
 			var/mob/living/simple_mob/vore/oregrub/G = new /mob/living/simple_mob/vore/oregrub()
 			G.loc = src.loc
 
-		if(10)
+		if(9)
 			var/mob/living/simple_mob/vore/pitcher_plant/P = new /mob/living/simple_mob/vore/pitcher_plant()
 			P.loc = src.loc
 
-		if(11)
+		if(10)
 			var/mob/living/simple_mob/vore/alienanimals/dustjumper/D = new /mob/living/simple_mob/vore/alienanimals/dustjumper()
 			D.loc = src.loc
 
