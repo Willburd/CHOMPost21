@@ -12,6 +12,8 @@
 	vore_escape_chance = 10
 
 /mob/living/simple_mob/animal/synx/ai/pet/grins/Initialize()
+	//Configure speaker list for their name
+	voices = list(name)
 	//Configure design
 	randomized_design = FALSE
 	body = "Normal"
