@@ -14,7 +14,7 @@
 	desc = "A fluffy thieving creature that wanders maintenance."
 	tt_desc = "Crinitus Latrunculus"
 
-	icon = 'icons/mob/animal_op.dmi'
+	icon = 'modular_outpost/icons/mob/animal.dmi'
 	icon_state = "jil"
 	icon_living = "jil"
 	icon_dead = "jil_dead"

@@ -18,7 +18,7 @@
 	tt_desc = "Chitter"
 	player_msg = "Eat others, and infest them with your strange parasitic powers!"
 
-	icon = 'icons/mob/animal_op.dmi'
+	icon = 'modular_outpost/icons/mob/animal.dmi'
 	icon_state = "chu"
 	icon_living = "chu"
 	icon_dead = "chu_dead"
