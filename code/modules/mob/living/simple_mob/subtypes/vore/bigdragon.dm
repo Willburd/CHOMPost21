@@ -209,6 +209,36 @@ I think I covered everything.
 	melee_damage_lower = 20
 	melee_damage_upper = 15
 
+//Outpost addition start, unique one for the crystal den on the map.
+/mob/living/simple_mob/vore/bigdragon/murikiboss //Outpost addition. The local terror is a bit more intimidating.
+	name = "Zircon"
+	desc = "A large, intimidating creature reminiscent of the traditional idea of medieval fire breathing lizards. This one is the unofficial 'lord' of outpost-21. You should run."
+	notame = 1 //He's got a hoard, he don't want your bribes.
+	special_attack_cooldown = 50 //Faster windups, he's mean.
+	allow_spontaneous_tf = 0 //No mouseray cheat for you.
+	resizable = 0 //No size gun cheesing~
+	capture_crystal = FALSE //He ain't your pet... honestly I should do this for the default type... maybe same with the others, tbfh.
+
+	armor = list(
+				"melee" = 25,
+				"bullet" = 25,
+				"laser" = 50,
+				"energy" = 10,
+				"bomb" = 80,
+				"bio" = 100,
+				"rad" = 100) //Tough boi ain't so easy to take down. Lasereyes aren't a win button here~ High armor to rad, bombs, and bio for cheese protection.
+
+	armor_soak = list(
+				"melee" = 7,
+				"bullet" = 5,
+				"laser" = 5,
+				"energy" = 0,
+				"bomb" = 10,
+				"bio" = 0,
+				"rad" = 0) //Straight removal of damage, after(?) the above armor percentage kicks in. Allows it to be immune to being nibbled to death by weak mobs that don't hit the gym.
+
+//Outpost addition end.
+
 ///
 ///		Misc define stuff
 ///
@@ -218,7 +248,8 @@ I think I covered everything.
 	emote_hear = list("chuffs", "rawrs", "wehs", "roars", "scoffs", "yawns")
 	emote_see = list("licks their chops", "stretches", "yawns", "snarls")
 	say_maybe_target = list("Hrmph?")
-	say_got_target = list("FOOL.", "+INSOLENT+.", "YOU'VE MADE A MISTAKE TODAY.")
+//	say_got_target = list("FOOL.", "+INSOLENT+.", "YOU'VE MADE A MISTAKE TODAY.") //Outpost edit: Yes dragons are "smart", and can talk in fantasy, but doesn't the speech feel very out of place to anyone else? Let's just leave this to player controlled ones.
+	say_got_target = list("ROAR!", "RHAAGH!")
 
 /datum/category_item/catalogue/fauna/bigdragon
 	name = "Invasive Fauna - Large Dragon"
@@ -693,7 +724,8 @@ I think I covered everything.
 		if(!enraged)
 			if(health <= (maxHealth * 0.5))
 				enraged = 1
-				say("No more games. COME HERE.")
+//				say("No more games. COME HERE.")
+				say("!lets out a loud, guttural roar, shaking the blood from its body as its eyes take on a murderous look.")
 		if(enraged)
 			if(health >= (maxHealth * 0.5))
 				enraged = 0
@@ -912,7 +944,8 @@ I think I covered everything.
 	if(faction == FACTION_NEUTRAL)
 		return	//We're already friendly
 	if(enraged || notame)
-		say("NO FORGIVENESS")
+//		say("NO FORGIVENESS") //Outpost edit, same as above. Let's keep the speech to player-controlled dergs
+		say("!snarls loudly, betraying its petty grudge.")
 		return //No talk me I angy
 
 	handle_tame_item(O, user)
@@ -964,11 +997,18 @@ I think I covered everything.
 					return 1
 
 // Outpost 21 edit begin - customizable says for heal bellies
-/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(var/mob/P)
+/*/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(var/mob/P)
 	return list(
 				"Hey, [P.name]! You are injured, hold still.",
 				"[P.name]! Come here, let me help.",
 				"[P.name], you need help."
+				)
+*/
+/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(var/mob/P) //Another outpost edit to remove speech
+	return list(
+				"!grumbles warmly at [P.name]!",
+				"!snorts at [P.name] caringly.",
+				"!squints at [P.name] with the scorn of a caring mother."
 				)
 
 /datum/ai_holder/simple_mob/healbelly/leopardmander/patient_confirm_say_list(var/mob/P) // leopardmander override, so that they don't speak!
@@ -1055,11 +1095,14 @@ I think I covered everything.
 			if(H.IIsAlly(attacker))
 				switch(warnings)
 					if(0)
-						H.say("Stop that.")
+//						H.say("Stop that.")
+						H.say("!grumbles.")
 					if(1)
-						H.say("I'm warning you here.")
+//						H.say("I'm warning you here.")
+						H.say("!growls deeply.")
 					if(2)
-						H.say("You do that again, and you'll regret it.")
+//						H.say("You do that again, and you'll regret it.") //Outpost speech tweaks again. Look at me go!
+						H.say("!snarls and bares its fangs.")
 					if(3)
 						H.enrage(attacker)
 						return
@@ -1073,7 +1116,8 @@ I think I covered everything.
 	enraged = 1
 	norange = 0
 	faction = FACTION_DRAGON
-	say("HAVE IT YOUR WAY THEN")
+//	say("HAVE IT YOUR WAY THEN") //Outpost edit.. can't. stop. me noooooooooow~.. what, don't know that song?
+	say("!bellows out a warcry and goes for the attack!")
 	qdel(ai_holder)
 	var/datum/ai_holder/simple_mob/intentional/dragon/D = new /datum/ai_holder/simple_mob/intentional/dragon(src)
 	ai_holder = D

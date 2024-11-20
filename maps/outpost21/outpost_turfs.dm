@@ -92,6 +92,16 @@
 /turf/unsimulated/mineral/muriki
 	blocks_air = TRUE
 
+/turf/unsimulated/mineral/muriki/basalt
+	icon = 'modular_chomp/icons/turf/thor.dmi'
+	icon_state = "deeprock-solid"
+	desc = "Dark black basalt. Packed impossibly tightly, there is no way to get past this."
+
+/turf/unsimulated/mineral/muriki/crystal
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "rock-crystal-shiny-dense"
+	desc = "Deep blue, shiny material of hyper compressed crystal. It looks completely unbreakable."
+
 /turf/unsimulated/floor/steel
 	icon = 'icons/turf/flooring/tiles_vr.dmi'
 	icon_state = "steel"
