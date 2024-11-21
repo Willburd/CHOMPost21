@@ -68,7 +68,7 @@
 // For changeling detection
 /decl/chemical_reaction/distilling/anti_changeling
 	name = "Distilling Water From Blood"
-	id = "distill_biomass"
+	id = "distill_antichangeling"
 	result = "water"
 	inhibitors = list("sugar" = 1) // or it would block biomass
 	required_reagents = list("blood" = 1)
