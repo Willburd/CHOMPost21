@@ -2,7 +2,7 @@
 	name = "virus culture"
 	desc = "A bottle with a virus culture"
 	icon_state = "bottle-1"
-	var/list/data = list("donor" = null, "viruses" = null, "blood_DNA" = null, "blood_type" = null, "resistances" = null, "trace_chems" = null)
+	var/list/data = list("donor" = null, "viruses" = null, "blood_DNA" = null, "blood_type" = null, "resistances" = null, "trace_chems" = null, "changeling"=FALSE) // Outpost 21 edit - changling blood effects
 	var/list/diseases = list()
 
 /obj/item/reagent_containers/glass/bottle/culture/cold

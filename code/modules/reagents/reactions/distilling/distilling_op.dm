@@ -64,3 +64,20 @@
 
 	require_xgm_gas = "phoron"
 	rejects_xgm_gas = "oxygen"
+
+// For changeling detection
+/decl/chemical_reaction/distilling/anti_changeling
+	name = "Distilling Water From Blood"
+	id = "distill_biomass"
+	result = "water"
+	inhibitors = list("sugar" = 1) // or it would block biomass
+	required_reagents = list("blood" = 1)
+	temp_range = list(T20C + 80, T20C + 330)
+	temp_shift = -2
+	result_amount = 1
+
+/decl/chemical_reaction/distilling/anti_changeling/on_reaction(var/datum/reagents/holder, var/created_volume)
+	var/datum/reagent/blood/B = holder.get_reagent("blood")
+	if(B.changling_blood_test(holder))
+		return
+	. = ..()

@@ -1,5 +1,5 @@
 /datum/reagent/blood
-	data = new/list("donor" = null, "viruses" = null, "species" = SPECIES_HUMAN, "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "resistances" = null, "trace_chem" = null, "antibodies" = list())
+	data = new/list("donor" = null, "viruses" = null, "species" = SPECIES_HUMAN, "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "resistances" = null, "trace_chem" = null, "antibodies" = list(), "changeling" = FALSE) // Outpost 21 edit - changling blood effects
 	name = "Blood"
 	id = "blood"
 	taste_description = "iron"
@@ -104,6 +104,11 @@
 	if(!data || !newdata)
 		return
 
+	// Outpost 21 edit blood - changling blood effects
+	if(newdata["species"] != "synthetic" && (data["changeling"] || newdata["changeling"]))
+		data["changeling"] = TRUE;
+	// Outpost 21 edit end
+
 	if(data["viruses"] || newdata["viruses"])
 		var/list/mix1 = data["viruses"]
 		var/list/mix2 = newdata["viruses"]
@@ -166,6 +171,20 @@
 
 	M.inject_blood(src, volume * volume_mod)
 	remove_self(volume)
+
+// Outpost 21 edit begin - changeling blood test
+/datum/reagent/blood/proc/changling_blood_test(var/datum/reagents/holder)
+	if(data["changeling"])
+		var/location = get_turf(holder.my_atom)
+		holder.my_atom.visible_message(span_danger("The blood in \the [holder.my_atom] screams and leaps out!"))
+		if(istype(holder.my_atom,/obj/item/reagent_containers/glass))
+			holder.splash(location, holder.total_volume)
+		holder.clear_reagents() // lets be sure it's all gone if it was in something weird instead
+		playsound(holder.my_atom, 'sound/effects/splat.ogg', 50, 1)
+		playsound(holder.my_atom, 'sound/voice/hiss6.ogg', 50, 1)
+		return TRUE
+	return FALSE
+// Outpost 21 edit end
 
 /datum/reagent/blood/synthblood
 	name = "synthetic blood"

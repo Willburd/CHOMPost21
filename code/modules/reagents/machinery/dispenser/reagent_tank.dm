@@ -550,4 +550,4 @@
 
 /obj/structure/reagent_dispensers/bloodbarrel/Initialize()
 	. = ..()
-	reagents.add_reagent("blood", 1000, list("donor"=null,"viruses"=null,"blood_DNA"=null,"blood_type"="O-","resistances"=null,"trace_chem"=null))
+	reagents.add_reagent("blood", 1000, list("donor"=null,"viruses"=null,"blood_DNA"=null,"blood_type"="O-","resistances"=null,"trace_chem"=null,"changeling"=FALSE)) // Outpost 21 edit - changling blood effects

@@ -175,6 +175,13 @@
 		// to_chat(user, span_notice("You dip \the [W] into \the [src]."))
 		balloon_alert(user, "[W] dipped into \the [src].") // CHOMPEdit - Changed to balloon alert
 		reagents.touch_obj(W, reagents.total_volume)
+	// Outpost 21 edit begin - changeling blood test
+	if(W.is_hot())
+		var/datum/reagent/blood/B = reagents.get_reagent("blood")
+		if(B)
+			balloon_alert(user, "\The [W] burns the blood in \the [src].")
+			B.changling_blood_test(reagents)
+	// Outpost 21 edit end
 
 /obj/item/reagent_containers/glass/proc/update_name_label()
 	if(label_text == "")
