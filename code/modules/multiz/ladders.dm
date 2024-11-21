@@ -137,7 +137,12 @@
 
 	target_ladder.audible_message(span_notice("You hear something coming [direction] \the [src]"), runemessage = "clank clank")
 
-	if(do_after(M, climb_time, src))
+	var/climb_modifier = 1
+	if(istype(M, /mob/living/carbon/human))
+		var/mob/living/carbon/human/MS = M
+		climb_modifier = MS.species.climb_mult
+
+	if(do_after(M, (climb_time * climb_modifier), src))
 		// Outpost 21 edit begin - Deconstructing ladder
 		if(QDELETED(target_ladder) || QDELETED(src) || QDELETED(M))
 			return
