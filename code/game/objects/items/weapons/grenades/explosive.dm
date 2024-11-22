@@ -27,7 +27,7 @@
 
 /obj/item/grenade/explosive/proc/on_explosion(var/turf/O)
 	if(explosion_size)
-		explosion(O, -1, -1, explosion_size, round(explosion_size/2), 0)
+		explosion(O, explosion_size-1, explosion_size, explosion_size + 1, round(explosion_size/2), 0) // Outpost 21 edit - Actually perform an explosion, changes values from -1, -1, explosion_size
 
 // Waaaaay more pellets
 /obj/item/grenade/explosive/frag

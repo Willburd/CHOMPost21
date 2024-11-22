@@ -233,6 +233,7 @@
 	var/turf/O = get_turf(src)
 	if(!O)
 		return
+	explosion(O, 0, 1, 2, 3, 0) // Outpost 21 edit - Actually perform an explosion
 	src.fragmentate(O, 20, 7, list(/obj/item/projectile/bullet/pellet/fragment)) //only 20 weak fragments because you're stepping directly on it
 	visible_message("\The [src.name] detonates!")
 	spawn(0)
