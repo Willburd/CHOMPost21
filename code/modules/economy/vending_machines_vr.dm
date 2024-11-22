@@ -31,6 +31,30 @@
 					/obj/item/reagent_containers/food/snacks/sliceable/bananabread = 2,
 					/obj/item/reagent_containers/food/snacks/sliceable/creamcheesebread = 2
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(	/obj/item/reagent_containers/food/snacks/tomatosoup = 15,
+					/obj/item/reagent_containers/food/snacks/mushroomsoup = 10,
+					/obj/item/reagent_containers/food/snacks/jellysandwich = 10,
+					/obj/item/reagent_containers/food/snacks/taco = 15,
+					/obj/item/reagent_containers/food/snacks/cheeseburger = 15,
+					/obj/item/reagent_containers/food/snacks/grilledcheese = 10,
+					/obj/item/reagent_containers/food/snacks/hotdog = 10,
+					/obj/item/reagent_containers/food/snacks/loadedbakedpotato = 10,
+					/obj/item/reagent_containers/food/snacks/omelette = 15,
+					/obj/item/reagent_containers/food/snacks/pastatomato = 10,
+					/obj/item/reagent_containers/food/snacks/tofuburger = 10,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza = 25,
+					/obj/item/reagent_containers/food/snacks/waffles = 15,
+					/obj/item/reagent_containers/food/snacks/muffin = 10,
+					/obj/item/reagent_containers/food/snacks/appletart = 5,
+					/obj/item/reagent_containers/food/snacks/sliceable/applecake = 10,
+					/obj/item/reagent_containers/food/snacks/sliceable/bananabread = 10,
+					/obj/item/reagent_containers/food/snacks/sliceable/creamcheesebread = 10
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/mysterysoup = 10)
 	vend_delay = 15
 
@@ -77,6 +101,17 @@
 					/obj/item/reagent_containers/food/snacks/meatballspagetti = 10,
 					/obj/item/reagent_containers/food/snacks/meatball = 15
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(	/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple = 25,
+					/obj/item/reagent_containers/food/snacks/pastatomato = 15,
+					/obj/item/reagent_containers/food/snacks/meatballspagetti = 15,
+					/obj/item/reagent_containers/food/snacks/meatball = 15
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/sliceable/pizza/oldpizza = 1)
 	vend_delay = 10
 
@@ -100,6 +135,22 @@
 					)
 	contraband = list(/obj/item/reagent_containers/food/snacks/ghostburger = 3,
 					/obj/item/reagent_containers/food/snacks/tofuburger = 5)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(/obj/item/reagent_containers/food/snacks/monkeyburger = 20,
+					/obj/item/reagent_containers/food/snacks/cheeseburger = 20,
+					/obj/item/reagent_containers/food/snacks/fishburger = 20,
+					/obj/item/reagent_containers/food/snacks/clownburger = 20,
+					/obj/item/reagent_containers/food/snacks/mimeburger = 20,
+					/obj/item/reagent_containers/food/snacks/bigbiteburger = 20,
+					/obj/item/reagent_containers/food/snacks/superbiteburger = 30,
+					/obj/item/reagent_containers/food/snacks/burger/bacon = 15,
+					/obj/item/reagent_containers/food/snacks/hotdog = 15,
+					/obj/item/reagent_containers/food/snacks/chickenfillet = 15,
+					/obj/item/reagent_containers/food/snacks/fries = 10,
+					/obj/item/reagent_containers/food/snacks/cheesyfries = 10,
+					/obj/item/reagent_containers/food/snacks/chilicheesefries = 10
+					)
+	// Outpost 21 edit end
 	vend_delay = 10
 
 /obj/machinery/vending/foodmeat
@@ -115,6 +166,17 @@
 					/obj/item/reagent_containers/food/snacks/stuffed_meatball = 15,
 					/obj/item/reagent_containers/food/snacks/meatsteak = 20
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(/obj/item/reagent_containers/food/snacks/ribplate = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/meatbread = 25,
+					/obj/item/reagent_containers/food/snacks/meat_pocket = 15,
+					/obj/item/reagent_containers/food/snacks/meatpie = 15,
+					/obj/item/reagent_containers/food/snacks/bacon_flatbread = 15,
+					/obj/item/reagent_containers/food/snacks/roastbeef = 25,
+					/obj/item/reagent_containers/food/snacks/stuffed_meatball = 15,
+					/obj/item/reagent_containers/food/snacks/meatsteak = 20
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/monkeysdelight = 5)
 	vend_delay = 10
 
@@ -134,6 +196,20 @@
 					/obj/item/reagent_containers/food/snacks/lomein = 10,
 					/obj/item/reagent_containers/food/snacks/friedrice = 10
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/sliceable/sushi = 10,
+					/obj/item/reagent_containers/food/snacks/chawanmushi = 10,
+					/obj/item/reagent_containers/food/snacks/generalschicken = 20,
+					/obj/item/reagent_containers/food/snacks/chickenkatsu = 20,
+					/obj/item/reagent_containers/food/snacks/sweet_and_sour = 10,
+					/obj/item/reagent_containers/food/snacks/bibimbap = 15,
+					/obj/item/reagent_containers/food/snacks/hotandsoursoup = 10,
+					/obj/item/reagent_containers/food/snacks/kitsuneudon = 20,
+					/obj/item/reagent_containers/food/snacks/milosoup = 10,
+					/obj/item/reagent_containers/food/snacks/lomein = 20,
+					/obj/item/reagent_containers/food/snacks/friedrice = 15
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/monkeyburger = 1)
 	vend_delay = 10
 
@@ -152,6 +228,19 @@
 					/obj/item/reagent_containers/food/snacks/cuttlefishcooked = 10,
 					/obj/item/reagent_containers/food/snacks/monkfishcooked = 10
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/sliceable/grilled_carp = 15,
+					/obj/item/reagent_containers/food/snacks/kudzudonburi = 15,
+					/obj/item/reagent_containers/food/snacks/zestfish = 15,
+					/obj/item/reagent_containers/food/snacks/lobstercooked = 20,
+					/obj/item/reagent_containers/food/snacks/sashimi = 20,
+					/obj/item/reagent_containers/food/snacks/sharkmeatcooked = 25,
+					/obj/item/reagent_containers/food/snacks/sharkmeatdip = 25,
+					/obj/item/reagent_containers/food/snacks/sharkmeatcubes = 25,
+					/obj/item/reagent_containers/food/snacks/cuttlefishcooked = 10,
+					/obj/item/reagent_containers/food/snacks/monkfishcooked = 15
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/sliceable/monkfish = 1)
 	vend_delay = 10
 
@@ -170,6 +259,19 @@
 					/obj/item/reagent_containers/food/snacks/tofurkey = 10,
 					/obj/item/reagent_containers/food/snacks/stuffing = 10
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/beetsoup = 10,
+					/obj/item/reagent_containers/food/snacks/eggplantparm = 10,
+					/obj/item/reagent_containers/food/snacks/eggbowl = 15,
+					/obj/item/reagent_containers/food/snacks/flowerchildsalad = 15,
+					/obj/item/reagent_containers/food/snacks/tossedsalad = 10,
+					/obj/item/reagent_containers/food/snacks/fruitsalad = 10,
+					/obj/item/reagent_containers/food/snacks/grilledcheese = 15,
+					/obj/item/reagent_containers/food/snacks/stewedsoymeat = 10,
+					/obj/item/reagent_containers/food/snacks/tofurkey = 20,
+					/obj/item/reagent_containers/food/snacks/stuffing = 20
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/meatsteak = 1)
 	vend_delay = 10
 
@@ -198,6 +300,29 @@
 					/obj/item/reagent_containers/food/snacks/chocolatebar = 10,
 					/obj/item/reagent_containers/food/snacks/chocolatepiece = 20
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/applepie = 15,
+					/obj/item/reagent_containers/food/snacks/cherrypie = 15,
+					/obj/item/reagent_containers/food/snacks/sliceable/keylimepie = 15,
+					/obj/item/reagent_containers/food/snacks/pie = 15,
+					/obj/item/reagent_containers/food/snacks/sliceable/pumpkinpie = 20,
+					/obj/item/reagent_containers/food/snacks/berryclafoutis = 10,
+					/obj/item/reagent_containers/food/snacks/funnelcake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/plaincake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/birthdaycake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/carrotcake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/cheesecake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/lemoncake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/limecake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/orangecake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/peanutcake = 20,
+					/obj/item/reagent_containers/food/snacks/icecreamsandwich = 15,
+					/obj/item/reagent_containers/food/snacks/cookie = 5,
+					/obj/item/reagent_containers/food/snacks/sliceable/brownies = 5,
+					/obj/item/reagent_containers/food/snacks/chocolatebar = 10,
+					/obj/item/reagent_containers/food/snacks/chocolatepiece = 5
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/donut/chaos = 10)
 	vend_delay = 10
 
