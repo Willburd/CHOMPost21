@@ -49,3 +49,7 @@
 	backpack = /obj/item/storage/backpack
 	satchel_one = /obj/item/storage/backpack/satchel/norm
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/roboticist
+
+	headset = /obj/item/radio/headset/headset_eng // Outpost 21 edit - Moved to engineering
+	headset_alt = /obj/item/radio/headset/alt/headset_eng // Outpost 21 edit - Moved to engineering
+	headset_earbud = /obj/item/radio/headset/earbud/headset_eng // Outpost 21 edit - Moved to engineering
