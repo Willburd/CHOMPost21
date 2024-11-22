@@ -327,7 +327,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/reagent_scanner/adv(src)
 	src.modules += new /obj/item/roller_holder(src)
 	src.modules += new /obj/item/reagent_containers/borghypo/crisis(src)
-	src.modules += new /obj/item/reagent_containers/glass/beaker/large/borg(src)
+	src.modules += new /obj/item/reagent_containers/glass/beaker/large/cyborg(src)
 	src.modules += new /obj/item/reagent_containers/dropper/industrial(src)
 	src.modules += new /obj/item/reagent_containers/syringe(src)
 	src.modules += new /obj/item/gripper/no_use/organ(src)
@@ -648,7 +648,7 @@ var/global/list/robot_modules = list(
 /obj/item/robot_module/robot/clerical/butler/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/gripper/service(src)
-	src.modules += new /obj/item/reagent_containers/glass/bucket(src)
+	src.modules += new /obj/item/reagent_containers/glass/bucket/cyborg(src)
 	src.modules += new /obj/item/material/minihoe(src)
 	src.modules += new /obj/item/material/knife/machete/hatchet(src)
 	src.modules += new /obj/item/analyzer/plant_analyzer(src)
@@ -755,7 +755,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/surgical/hemostat/cyborg(src) //Synth repair
 	src.modules += new /obj/item/surgical/surgicaldrill/cyborg(src) //NIF repair
 	src.modules += new /obj/item/reagent_containers/syringe(src)
-	src.modules += new /obj/item/reagent_containers/glass/beaker/large/borg(src)
+	src.modules += new /obj/item/reagent_containers/glass/beaker/large/cyborg(src)
 	src.modules += new /obj/item/storage/part_replacer(src)
 	src.modules += new /obj/item/shockpaddles/robot/jumper(src)
 	src.modules += new /obj/item/melee/baton/slime/robot(src)

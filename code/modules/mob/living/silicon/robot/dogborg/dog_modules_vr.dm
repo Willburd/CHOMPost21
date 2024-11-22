@@ -617,16 +617,16 @@
 		T.apply_effect(5, STUN, armor_block)
 		T.drop_both_hands() //CHOMPEdit Stuns no longer drop items
 
-/obj/item/reagent_containers/glass/beaker/large/borg
+/obj/item/reagent_containers/glass/beaker/large/cyborg
 	var/mob/living/silicon/robot/R
 	var/last_robot_loc
 
-/obj/item/reagent_containers/glass/beaker/large/borg/Initialize()
+/obj/item/reagent_containers/glass/beaker/large/cyborg/Initialize()
 	. = ..()
 	R = loc.loc
 	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
 
-/obj/item/reagent_containers/glass/beaker/large/borg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
+/obj/item/reagent_containers/glass/beaker/large/cyborg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
 	if(old_loc == R || old_loc == R.module)
 		last_robot_loc = old_loc
 	if(!istype(loc, /obj/machinery) && loc != R && loc != R.module)
@@ -638,7 +638,35 @@
 		if(loc == R)
 			hud_layerise()
 
-/obj/item/reagent_containers/glass/beaker/large/borg/Destroy()
+/obj/item/reagent_containers/glass/beaker/large/cyborg/Destroy()
+	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
+	R = null
+	last_robot_loc = null
+	..()
+
+
+/obj/item/reagent_containers/glass/bucket/cyborg
+	var/mob/living/silicon/robot/R
+	var/last_robot_loc
+
+/obj/item/reagent_containers/glass/bucket/cyborg/Initialize()
+	. = ..()
+	R = loc.loc
+	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
+
+/obj/item/reagent_containers/glass/bucket/cyborg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
+	if(old_loc == R || old_loc == R.module)
+		last_robot_loc = old_loc
+	if(!istype(loc, /obj/machinery) && loc != R && loc != R.module)
+		if(last_robot_loc)
+			forceMove(last_robot_loc)
+			last_robot_loc = null
+		else
+			forceMove(R)
+		if(loc == R)
+			hud_layerise()
+
+/obj/item/reagent_containers/glass/bucket/cyborg/Destroy()
 	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 	R = null
 	last_robot_loc = null

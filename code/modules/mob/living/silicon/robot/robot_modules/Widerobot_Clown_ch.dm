@@ -17,7 +17,7 @@
 
 /obj/item/robot_module/robot/clerical/honkborg/create_equipment(var/mob/living/silicon/robot/R)
 	src.modules += new /obj/item/gripper/service(src)
-	src.modules += new /obj/item/reagent_containers/glass/bucket(src)
+	src.modules += new /obj/item/reagent_containers/glass/bucket/cyborg(src)
 	src.modules += new /obj/item/material/minihoe(src)
 	src.modules += new /obj/item/analyzer/plant_analyzer(src)
 	src.modules += new /obj/item/storage/bag/serviceborg(src)
