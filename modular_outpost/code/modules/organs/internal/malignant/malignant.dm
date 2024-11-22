@@ -38,7 +38,20 @@
 			parent_organ = force_location
 		return ..( holder, internal)
 
-/mob/living/carbon/human/proc/malignant_organ_spawn( var/allowtumors = TRUE, var/allowparasites = TRUE, var/allowengineered = TRUE)
+/mob/living/carbon/human/proc/random_malignant_organ( var/allowtumors = TRUE, var/allowparasites = TRUE, var/allowengineered = TRUE)
+	// get a list of valid malignant organs and spawn one
+	var/list/paths = list()
+	if(allowtumors)
+		paths += subtypesof(/obj/item/organ/internal/malignant/tumor)
+	if(allowparasites)
+		paths += subtypesof(/obj/item/organ/internal/malignant/parasite)
+	if(allowengineered)
+		paths += subtypesof(/obj/item/organ/internal/malignant/engineered)
+	return malignant_organ_spawn(pick(paths)) // place in body
+
+/mob/living/carbon/human/proc/malignant_organ_spawn(var/type_path)
+	if(!type_path)
+		return FALSE
 	if(stat == DEAD)
 		return FALSE
 	if(isSynthetic())
@@ -49,21 +62,12 @@
 	|| species.name == SPECIES_PROMETHEAN \
 	|| species.name == SPECIES_PROTEAN \
 	|| species.name == SPECIES_REPLICANT)
-		return
+		return FALSE
 
-	// get a list of valid malignant organs and spawn one
-	var/list/paths = list()
-	if(allowtumors)
-		paths += subtypesof(/obj/item/organ/internal/malignant/tumor)
-	if(allowparasites)
-		paths += subtypesof(/obj/item/organ/internal/malignant/parasite)
-	if(allowengineered)
-		paths += subtypesof(/obj/item/organ/internal/malignant/engineered)
-	// place in body
-	var/neworganpath = pick(paths)
-	var/obj/item/organ/internal/malignant/neworgan = new neworganpath( src, TRUE)
+	var/obj/item/organ/internal/malignant/neworgan = new type_path( src, TRUE)
 	if(neworgan.status == 0) // healthy new organ spawned... Otherwise this is a failure...
 		return TRUE
+
 	// welp, clean up.
 	neworgan.Destroy()
 	return FALSE

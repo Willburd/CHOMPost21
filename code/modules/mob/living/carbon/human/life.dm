@@ -510,7 +510,7 @@
 					// Outpost 21 edit begin - organ mutations
 					if(prob(2))
 						// random organ time!
-						malignant_organ_spawn(TRUE,FALSE,prob(40))
+						random_malignant_organ(TRUE,FALSE,prob(40))
 					// Outpost 21 edit end
 					else
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
@@ -547,7 +547,7 @@
 					// Outpost 21 edit begin - organ mutations
 					if(prob(2))
 						// random organ time!
-						malignant_organ_spawn(TRUE,FALSE,prob(60))
+						random_malignant_organ(TRUE,FALSE,prob(60))
 					// Outpost 21 edit end
 					else
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
@@ -584,7 +584,7 @@
 					// Outpost 21 edit begin - organ mutations
 					if(prob(2))
 						// random organ time!
-						malignant_organ_spawn(prob(40),FALSE,TRUE)
+						random_malignant_organ(prob(40),FALSE,TRUE)
 					// Outpost 21 edit end
 					else
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
