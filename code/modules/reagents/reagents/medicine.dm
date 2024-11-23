@@ -1029,6 +1029,13 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/ryetalyn/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	// Outpost 21 edit begin - Ryetalyn is for genetics damage curing not resetting mutations, breaks traitgenes
+	if(alien == IS_DIONA)
+		return
+	var/chem_effective = 1 * M.species.chem_strength_heal
+	M.adjustCloneLoss(-2 * removed * chem_effective)
+
+	/*
 	var/needs_update = M.mutations.len > 0
 
 	M.mutations = list()
@@ -1065,6 +1072,8 @@
 	// Might need to update appearance for hulk etc.
 	if(needs_update && ishuman(M))
 		H.update_mutations()
+	*/
+	// Outpost 21 edit end
 
 /*/datum/reagent/hyperzine
 	name = "Hyperzine"
