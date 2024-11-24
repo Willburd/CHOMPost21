@@ -547,6 +547,7 @@
 		"relicbase_nanomap_z11.png"		= 'icons/_nanomaps/relicbase_nanomap_z11.png',
 		"relicbase_nanomap_z12.png"		= 'icons/_nanomaps/relicbase_nanomap_z12.png',
 		"relicbase_nanomap_z13.png"		= 'icons/_nanomaps/relicbase_nanomap_z13.png',
+		*/
 		// CHOMP Edit End
 		// Outpost 21 edit begin - Use our outpost
 		"outpost_nanomap_z1.png"			= 'icons/_nanomaps/outpost_nanomap_z04.png',
