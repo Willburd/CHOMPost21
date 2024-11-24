@@ -736,6 +736,16 @@ var/datum/planet/muriki/planet_muriki = null
 			O.damage += 12
 			to_chat(L,  "<span class='danger'>Your lungs burn!</span>")
 
+	// Skip complex checks if simple mob that's not immune
+	if(isanimal(L))
+		if(!submerged)
+			to_chat(L, "<span class='danger'>The acidic environment burns your body!</span>")
+			L.adjustFireLoss( 0.8 * multiplier, FALSE)
+		else
+			to_chat(L, "<span class='danger'>The acidic pool is digesting your body!</span>")
+			L.adjustFireLoss( 0.8 * multiplier,  FALSE) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
+		return
+
 
 	// find damaging zones to burn mobs skin!
 	var/obj/item/protection = null
