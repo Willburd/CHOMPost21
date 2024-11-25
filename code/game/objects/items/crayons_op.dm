@@ -7,7 +7,7 @@
 	var/colour = null
 	var/shadeColour = null
 
-/obj/effect/auto_crayon/Initialize()
+/obj/effect/auto_crayon/New()
 	. = ..()
 	if(colour == null)
 		switch(rand(1,6))
@@ -35,6 +35,5 @@
 				colour = "#DA00FF"
 				shadeColour = "#810CFF"
 
-	spawn(1)
-		new /obj/effect/decal/cleanable/crayon(loc,colour,shadeColour,icon_state)
-		qdel(src)
+	new /obj/effect/decal/cleanable/crayon(loc,colour,shadeColour,icon_state)
+	qdel(src)
