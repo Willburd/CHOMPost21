@@ -35,5 +35,6 @@
 				colour = "#DA00FF"
 				shadeColour = "#810CFF"
 
-	new /obj/effect/decal/cleanable/crayon(loc,colour,shadeColour,icon_state)
-	Destroy()
+	spawn(1)
+		new /obj/effect/decal/cleanable/crayon(loc,colour,shadeColour,icon_state)
+		qdel(src)
