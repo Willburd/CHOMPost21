@@ -39,5 +39,7 @@
 
 		add_overlay(mainOverlay)
 		add_overlay(shadeOverlay)
+
+	add_janitor_hud_overlay()
 	return
 // CHOMPEdit End
