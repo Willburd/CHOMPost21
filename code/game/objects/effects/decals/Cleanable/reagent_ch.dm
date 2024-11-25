@@ -44,5 +44,8 @@
 	name = custombasename
 	desc = custombasedesc
 
+	cut_overlays()
+	add_janitor_hud_overlay()
+
 /obj/effect/decal/cleanable/blood/reagent/Crossed(mob/living/carbon/human/perp)
 	//Nothing, we dont wanna spread our mess all over, at least not until people want that

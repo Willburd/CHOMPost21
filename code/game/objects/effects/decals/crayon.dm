@@ -11,7 +11,6 @@
 	var/art_shade
 
 /obj/effect/decal/cleanable/crayon/Initialize(var/ml, main = "#FFFFFF",shade = "#000000",var/type = "rune", new_age = 0)
-	. = ..(ml, new_age) // mapload, age
 	name = type
 	desc = "A [type] drawn in crayon."
 
@@ -26,7 +25,7 @@
 		if("graffiti")
 			type = pick("amyjon","face","matt","revolution","engie","guy","end","dwarf","uboa")
 
-	update_icon()
+	. = ..(ml, new_age) // mapload, age
 
 /obj/effect/decal/cleanable/crayon/update_icon()
 	cut_overlays()
@@ -39,5 +38,7 @@
 
 		add_overlay(mainOverlay)
 		add_overlay(shadeOverlay)
+
+	add_janitor_hud_overlay()
 	return
 // CHOMPEdit End

@@ -143,6 +143,8 @@ var/global/list/image/fluidtrack_cache=list()
 		add_overlay(I)
 	updatedtracks=0 // Clear our memory of updated tracks.
 
+	add_janitor_hud_overlay()
+
 /obj/effect/decal/cleanable/blood/tracks/footprints
 	name = "wet footprints"
 	dryname = "dried footprints"

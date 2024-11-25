@@ -83,6 +83,9 @@ var/global/list/image/splatter_cache=list()
 		name = initial(name)
 		desc = initial(desc)
 
+	cut_overlays()
+	add_janitor_hud_overlay()
+
 /obj/effect/decal/cleanable/blood/Crossed(mob/living/carbon/human/perp)
 	if(perp.is_incorporeal())
 		return
