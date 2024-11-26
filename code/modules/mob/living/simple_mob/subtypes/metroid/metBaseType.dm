@@ -62,6 +62,8 @@
 
 	can_be_drop_prey = FALSE //CHOMP Add
 
+	enzyme_affect = FALSE // Outpost 21 add
+
 	can_pain_emote = TRUE
 	species_sounds = "Metroid"
 	pain_emote_1p = list("skree")
