@@ -84,7 +84,7 @@
 	else
 		to_chat(usr, span_notice("You cannot do this in your current state."))
 
-
+/* Outpost 21 edit - Having this makes the gun literally non-functional, cannot rack the shell.
 /obj/item/gun/projectile/shotgun/compact/attack_self(mob/user as mob)
 	if(issilicon(usr))
 		return
@@ -93,6 +93,7 @@
 		toggle_stock()
 	else
 		to_chat(usr, span_notice("You cannot do this in your current state."))
+*/
 
 /obj/item/gun/projectile/shotgun/compact/ui_action_click(mob/unused_user, actiontype)
 	var/mob/living/user = loc
