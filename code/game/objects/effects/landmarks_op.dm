@@ -90,7 +90,14 @@
 				, /mob/living/simple_mob/clowns/big/thicc
 				, /mob/living/simple_mob/clowns/big/punished
 				, /mob/living/simple_mob/clowns/big/cluwne
-				, /mob/living/simple_mob/clowns/big/honkmunculus))
+				, /mob/living/simple_mob/clowns/big/honkmunculus
+				, /mob/living/simple_mob/clowns/big/tunnelclown
+				, /mob/living/simple_mob/clowns/big/sentinel
+				, /mob/living/simple_mob/clowns/big/destroyer
+				, /mob/living/simple_mob/clowns/big/chlown
+				, /mob/living/simple_mob/clowns/big/clowns
+				, /mob/living/simple_mob/clowns/big/mayor
+				, /mob/living/simple_mob/clowns/big/honkling))
 				new chosen_clown(src.loc)
 				subcount--
 			spawncount--
