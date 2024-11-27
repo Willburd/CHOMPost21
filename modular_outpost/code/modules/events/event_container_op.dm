@@ -114,6 +114,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clang",				/datum/event/clang							,1	, list(ASSIGNMENT_ENGINEER = 3)												, TRUE, min_jobs = list(ASSIGNMENT_ENGINEER = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Exotic Horde Infestation",	/datum/event/highdangerinfestation	,1	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Horde Infestation",			/datum/event/horde_infestation		,1	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Quake",				/datum/event/quake							,1  , list(ASSIGNMENT_ENGINEER = 4)												, TRUE),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Infected Room",				/datum/event/infectedroom			,1	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Security Advisement",	/datum/event/security_drill					,1	, list(ASSIGNMENT_SECURITY = 1,ASSIGNMENT_ANY = 5) 							, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Septic Explosion",	/datum/event/septic_explosion				,1	, list(ASSIGNMENT_ENGINEER = 1) 											, TRUE, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),
