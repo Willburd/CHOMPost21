@@ -67,6 +67,12 @@
 			latejoin_cyborg += loc
 			delete_me = 1
 			return
+		// Outpost 21 edit begin - latejoin dorms
+		if("JoinLateDorm")
+			latejoin_dorm += loc
+			delete_me = 1
+			return
+		// Outpost 21 edit end
 		if("prisonwarp")
 			prisonwarp += loc
 			delete_me = 1

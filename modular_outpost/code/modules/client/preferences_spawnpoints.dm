@@ -25,6 +25,17 @@
 	..()
 	turfs = latejoin_cryo
 
+// Outpost 21 edit begin - latejoin dorms
+/datum/spawnpoint/dorm
+	display_name = "On-Site Dorms"
+	msg = "has clocked in from the on-site dorms"
+	allowed_mob_types = JOB_CARBON
+	disallow_job = list(JOB_STOWAWAY)
+
+/datum/spawnpoint/dorm/New()
+	..()
+	turfs = latejoin_dorm
+// Outpost 21 edit end
 
 /datum/spawnpoint/vore
 	display_name = "Vorespawn - Prey"

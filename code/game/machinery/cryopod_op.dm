@@ -5,7 +5,7 @@
 
 /obj/machinery/cryopod/robot/door/dorms/outpost
 	name = "Residential District Elevator"
-	desc = "A small elevator that goes down to the deeper section of the colony."
+	desc = "A small elevator that goes down to a deeper section of the colony."
 	icon = 'icons/obj/Cryogenic2_op.dmi'
 	icon_state = "lift_closed"
 	base_icon_state = "lift_closed"
