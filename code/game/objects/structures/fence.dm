@@ -123,6 +123,13 @@
 	var/open = FALSE
 	var/locked = FALSE
 
+	// Outpost 21 edit begin - picking fence gates
+	var/lock_type = "simple"	//string matched to "pick_type" on /obj/item/lockpick
+	var/can_pick = TRUE	//can it be picked/bypassed?
+	var/lock_difficulty = 2	//multiplier to picking/bypassing time
+	var/keysound = 'sound/items/toolbelt_equip.ogg'
+	// Outpost 21 edit end
+
 /obj/structure/fence/door/Initialize()
 	update_door_status()
 	return ..()
@@ -143,6 +150,29 @@
 		to_chat(user, span_warning("\The [src] is [!open ? "locked" : "stuck open"]."))
 
 	return TRUE
+
+// Outpost 21 edit begin - picking fence gates
+/obj/structure/fence/door/attackby(obj/item/W, mob/user)
+	if(istype(W,/obj/item/lockpick))
+		var/obj/item/lockpick/L = W
+		if(!locked)
+			to_chat(user, span_notice("\The [src] isn't locked."))
+			return
+		else if(lock_type != L.pick_type) //make sure our types match
+			to_chat(user, span_warning("\The [L] can't pick \the [src]. Another tool might work?"))
+			return
+		else if(!can_pick)
+			to_chat(user, span_warning("\The [src] can't be [L.pick_verb]ed."))
+			return
+		else
+			to_chat(user, span_notice("You start to [L.pick_verb] the lock on \the [src]..."))
+			playsound(src, keysound,100, 1)
+			if(do_after(user, L.pick_time * lock_difficulty))
+				to_chat(user, span_notice("Success!"))
+				locked = FALSE
+		return
+	. = ..()
+// Outpost 21 edit end
 
 // Outpost 21 edit begin - Allow borgs to open fences
 /obj/structure/fence/door/attack_ai(mob/user as mob)
