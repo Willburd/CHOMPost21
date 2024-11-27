@@ -158,7 +158,7 @@
 
 //Returns the ideal gas specific entropy of the whole mix. This is the entropy per mole of /mixed/ gas.
 /datum/gas_mixture/proc/specific_entropy()
-	if (!gas.len || total_moles == 0)
+	if (!gas.len || total_moles == 0 || temperature == 0) // Outpost 21 edit - Temperature check
 		return SPECIFIC_ENTROPY_VACUUM
 
 	. = 0
@@ -179,7 +179,7 @@
 	which is bit more realistic (natural log), and returns a fairly accurate entropy around room temperatures and pressures.
 */
 /datum/gas_mixture/proc/specific_entropy_gas(var/gasid)
-	if (!(gasid in gas) || gas[gasid] == 0)
+	if (!(gasid in gas) || gas[gasid] == 0 || temperature == 0) // Outpost 21 edit - Temperature check
 		return SPECIFIC_ENTROPY_VACUUM	//that gas isn't here
 
 	//group_multiplier gets divided out in volume/gas[gasid] - also, V/(m*T) = R/(partial pressure)
