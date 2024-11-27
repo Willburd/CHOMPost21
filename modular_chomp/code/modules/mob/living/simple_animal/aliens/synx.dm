@@ -10,7 +10,7 @@
 
 	 //Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
 	icon = 'modular_chomp/icons/mob/synx_modular.dmi'//giving synxes their own DMI file!
-	icon_state = "synx_living"
+	icon_state = "synx_bodyNormal" // "synx_living" // Outpost 21 edit - give synx a map icon
 	icon_living = "synx_living"
 	icon_dead = "synx_dead"
 	mob_bump_flag = SIMPLE_ANIMAL //This not existing was breaking vore bump for some reason.
@@ -117,6 +117,7 @@
 
 /mob/living/simple_mob/animal/synx/Initialize()
 	..()
+	icon_state = "synx_living" // Outpost 21 edit - give synx a map icon, reset it here as this uses a layering system instead
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(randomized_design)
 	voremob_loaded = 1
