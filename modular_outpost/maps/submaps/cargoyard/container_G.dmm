@@ -1,0 +1,24 @@
+"a" = (/obj/random/junk,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"e" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"f" = (/obj/structure/closet/crate,/obj/random/material,/obj/random/material,/obj/random/material,/obj/random/material,/obj/random/material,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"j" = (/obj/structure/table/rack/shelf/steel,/obj/random/junk,/obj/random/junk,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"s" = (/turf/template_noop,/area/submap/outpost21/yard_generic)
+"v" = (/obj/structure/table/rack/shelf/steel,/obj/random/firstaid,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"x" = (/turf/template_noop,/area/template_noop)
+"A" = (/obj/machinery/door/airlock/angled_bay/standard/color/cargo{dir = 4; name = "Cargo Container"},/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"F" = (/obj/structure/closet/crate,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"O" = (/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/wall/bay/steel,/area/submap/outpost21/yard_cargocontainer)
+"S" = (/obj/structure/closet/crate,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/random/multiple/ore_pile,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+"Z" = (/obj/structure/table/rack/shelf/steel,/obj/random/junk,/obj/effect/auto_roof{roof_type = /turf/simulated/floor/muriki},/turf/simulated/floor/plating,/area/submap/outpost21/yard_cargocontainer)
+
+(1,1,1) = {"
+xxxxxxxxx
+xsssssssx
+xOOOOOOOx
+xOjjFFSOx
+xAeaeeaOx
+xOvZfffOx
+xOOOOOOOx
+xsssssssx
+xxxxxxxxx
+"}

@@ -6,6 +6,9 @@
 #include "container_B.dmm"
 #include "container_C.dmm"
 #include "container_D.dmm"
+#include "container_E.dmm"
+#include "container_F.dmm"
+#include "container_G.dmm"
 #include "path_A.dmm"
 #include "path_B.dmm"
 #include "light_A.dmm"
@@ -56,6 +59,35 @@
 	mappath = "modular_outpost/maps/submaps/cargoyard/container_D.dmm"
 	allow_duplicates = TRUE
 	cost = 5
+
+/datum/map_template/outpost21/muriki/cargoyard/container_E
+	name = "Container Variant E"
+	desc = "Random container."
+	mappath = "modular_outpost/maps/submaps/cargoyard/container_E.dmm"
+	allow_duplicates = TRUE
+	cost = 7 //slightly higher cut it's got some nice stuff. Makes it a bit more rare
+
+/datum/map_template/outpost21/muriki/cargoyard/container_F
+	name = "Container Variant F"
+	desc = "Random container."
+	mappath = "modular_outpost/maps/submaps/cargoyard/container_F.dmm"
+	allow_duplicates = TRUE
+	cost = 4 //little lower, cuz its kindof crap intentionally.
+
+/datum/map_template/outpost21/muriki/cargoyard/container_G
+	name = "Container Variant G"
+	desc = "Random container."
+	mappath = "modular_outpost/maps/submaps/cargoyard/container_G.dmm"
+	allow_duplicates = TRUE
+	cost = 7
+
+/datum/map_template/outpost21/muriki/cargoyard/container_H
+	name = "Container Variant H"
+	desc = "Random container."
+	mappath = "modular_outpost/maps/submaps/cargoyard/container_H.dmm"
+	allow_duplicates = TRUE
+	cost = 5
+
 
 /datum/map_template/outpost21/muriki/cargoyard/path_A
 	name = "Path Variant A"
