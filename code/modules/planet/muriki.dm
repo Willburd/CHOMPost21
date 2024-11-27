@@ -903,6 +903,15 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/mineral/crystal_shiny/ignore_mapgen)
 // Deathdrops
 MURIKI_TURF_CREATE_UN(/turf/simulated/deathdrop/waterfall)
 MURIKI_TURF_CREATE_UN(/turf/simulated/deathdrop/elevator_shaft) // probably not needed?
+// Winter
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow/snow2)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow/gravsnow)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow/plating/drift)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/ice)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/ice/dark)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/ice/dark_smooth)
 
 #undef MURIKI_SET_ATMOS
 #undef MURIKI_TURF_CREATE
