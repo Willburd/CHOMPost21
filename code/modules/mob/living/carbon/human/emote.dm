@@ -195,6 +195,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/malehumanscream,
 	/decl/emote/audible/scientist/scream,
 	/decl/emote/audible/scientist/pain,
+	/decl/emote/audible/caw,
 	//CHOMP Add end
 	//outpost 21 add begin
 	/decl/emote/visible/ragescree,
@@ -352,6 +353,7 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr,
+	/decl/emote/audible/caw,
 	//CHOMP Add end
 	//outpost 21 add begin
 	/decl/emote/audible/wawa,
