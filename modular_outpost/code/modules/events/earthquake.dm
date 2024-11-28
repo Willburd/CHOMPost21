@@ -3,7 +3,7 @@
 	startWhen = 20
 
 /datum/event/quake/announce()
-	command_announcement.Announce("Sudden seismic activity detected in lower crust. Possible tectonic event incoming. All personale should seek structurally safe locations and stay low to the ground.", "Structural Alert")
+	command_announcement.Announce("Sudden seismic activity detected in lower crust. Possible tectonic event incoming. All personnel should seek structurally safe locations and stay low to the ground.", "Structural Alert")
 
 /datum/event/quake/start()
 	affecting_z = global.using_map.station_levels
