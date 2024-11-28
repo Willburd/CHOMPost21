@@ -68,6 +68,7 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	var/scale_appearance = 0 // Outpost 21 edit - missing dna entry
 	var/offset_override = 0 // Outpost 21 edit - missing dna entry
 	var/synth_markings = 0 // Outpost 21 edit - missing dna entry
+	var/custom_speech_bubble = "default" // Outpost 21 edit - missing dna entry
 	// Outpost 21 edit begin - missing dna entry, Species sounds
 	var/species_sounds = "None"
 	var/gender_specific_species_sounds = FALSE
@@ -113,6 +114,7 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	new_dna.scale_appearance = scale_appearance // Outpost 21 edit - missing dna entry
 	new_dna.offset_override = offset_override // Outpost 21 edit - missing dna entry
 	new_dna.synth_markings = synth_markings // Outpost 21 edit - missing dna entry
+	new_dna.custom_speech_bubble = custom_speech_bubble // Outpost 21 edit - missing dna entry
 	// Outpost 21 edit begin - missing dna entry, Species sounds
 	new_dna.species_sounds = species_sounds
 	new_dna.gender_specific_species_sounds = gender_specific_species_sounds
@@ -207,6 +209,7 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	src.scale_appearance = character.fuzzy // Outpost 21 edit - missing dna entry
 	src.offset_override = character.offset_override // Outpost 21 edit - missing dna entry
 	src.synth_markings = character.synth_markings // Outpost 21 edit - missing dna entry
+	src.custom_speech_bubble = character.custom_speech_bubble // Outpost 21 edit - missing dna entry
 	// Outpost 21 edit begin - missing dna entry, Species sounds
 	src.species_sounds = character.species.species_sounds
 	src.gender_specific_species_sounds = character.species.gender_specific_species_sounds

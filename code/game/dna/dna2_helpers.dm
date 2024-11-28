@@ -307,6 +307,7 @@
 		H.fuzzy = dna.scale_appearance // Outpost 21 edit - missing dna entry
 		H.offset_override = dna.offset_override // Outpost 21 edit - missing dna entry
 		H.synth_markings = dna.synth_markings // Outpost 21 edit - missing dna entry
+		H.custom_speech_bubble = dna.custom_speech_bubble // Outpost 21 edit - missing dna entry
 		// Outpost 21 edit begin - missing dna entry, Species sounds
 		H.species.species_sounds = dna.species_sounds
 		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
