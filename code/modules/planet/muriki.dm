@@ -123,14 +123,47 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_FALLOUT_TEMP	= new /datum/weather/muriki/fallout/temp(),
 		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti()
 		)
-	roundstart_weather_chances = list(
-		WEATHER_CLEAR = 0,
-		WEATHER_LIGHT_SNOW = 0,
-		WEATHER_OVERCAST = 5,
-		WEATHER_RAIN = 40,
-		WEATHER_STORM = 50,
-		WEATHER_HAIL = 5
-		)
+	roundstart_weather_chances = list() // See New() for seasonal starting weathers
+
+/datum/weather_holder/muriki/New(source)
+	switch(GLOB.world_time_season)
+		if("spring")
+			roundstart_weather_chances = list(
+				WEATHER_CLEAR = 0,
+				WEATHER_LIGHT_SNOW = 25,
+				WEATHER_OVERCAST = 5,
+				WEATHER_RAIN = 40,
+				WEATHER_STORM = 20,
+				WEATHER_HAIL = 15
+				)
+		if("summer")
+			roundstart_weather_chances = list(
+				WEATHER_CLEAR = 0,
+				WEATHER_LIGHT_SNOW = 0,
+				WEATHER_OVERCAST = 10,
+				WEATHER_RAIN = 40,
+				WEATHER_STORM = 50,
+				WEATHER_HAIL = 5
+				)
+		if("autumn")
+			roundstart_weather_chances = list(
+				WEATHER_CLEAR = 0,
+				WEATHER_LIGHT_SNOW = 10,
+				WEATHER_OVERCAST = 0,
+				WEATHER_RAIN = 40,
+				WEATHER_STORM = 40,
+				WEATHER_HAIL = 15
+				)
+		if("winter")
+			roundstart_weather_chances = list(
+				WEATHER_CLEAR = 0,
+				WEATHER_LIGHT_SNOW = 50,
+				WEATHER_OVERCAST = 0,
+				WEATHER_RAIN = 20,
+				WEATHER_STORM = 10,
+				WEATHER_HAIL = 25
+				)
+	. = ..()
 
 /datum/weather/muriki
 	name = "muriki base"
@@ -143,12 +176,7 @@ var/datum/planet/muriki/planet_muriki = null
 	temp_low = T0C
 	wind_high = 2
 	wind_low = 1
-	transition_chances = list(
-		WEATHER_CLEAR = 15,
-		WEATHER_RAIN = 75,
-		WEATHER_HAIL = 5,
-		WEATHER_LIGHT_SNOW = 5
-		)
+	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "The sky is clear."
 	transition_messages = list(
 		"The sky clears up.",
@@ -157,6 +185,38 @@ var/datum/planet/muriki/planet_muriki = null
 		)
 	sky_visible = TRUE
 
+/datum/weather/muriki/clear/New()
+	switch(GLOB.world_time_season)
+		if("spring")
+			transition_chances = list(
+				WEATHER_CLEAR = 15,
+				WEATHER_RAIN = 65,
+				WEATHER_HAIL = 5,
+				WEATHER_LIGHT_SNOW = 15
+				)
+		if("summer")
+			transition_chances = list(
+				WEATHER_CLEAR = 15,
+				WEATHER_RAIN = 65,
+				WEATHER_HAIL = 5,
+				WEATHER_OVERCAST = 15
+				)
+		if("autumn")
+			transition_chances = list(
+				WEATHER_CLEAR = 15,
+				WEATHER_RAIN = 75,
+				WEATHER_HAIL = 5,
+				WEATHER_LIGHT_SNOW = 5
+				)
+		if("winter")
+			transition_chances = list(
+				WEATHER_CLEAR = 15,
+				WEATHER_RAIN = 45,
+				WEATHER_HAIL = 15,
+				WEATHER_LIGHT_SNOW = 25
+				)
+	. = ..()
+
 /datum/weather/muriki/acid_overcast
 	name = "fog"
 	icon_state = "acidfog"
@@ -164,12 +224,7 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 0
 	light_modifier = 0.7
 	effect_message = "<span class='notice'>Acidic mist surrounds you.</span>"
-	transition_chances = list(
-		WEATHER_OVERCAST = 15,
-		WEATHER_RAIN = 80,
-		WEATHER_HAIL = 4,
-		WEATHER_CLEAR = 1
-		)
+	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is misting, all you can see are corrosive clouds."
 	transition_messages = list(
 		"All you can see is fog.",
@@ -204,6 +259,37 @@ var/datum/planet/muriki/planet_muriki = null
 			// digest dead things
 			muriki_enzyme_affect_mob(L,3,FALSE,FALSE)
 
+/datum/weather/muriki/acid_overcast/New()
+	switch(GLOB.world_time_season)
+		if("spring")
+			transition_chances = list(
+				WEATHER_OVERCAST = 15,
+				WEATHER_RAIN = 60,
+				WEATHER_HAIL = 10,
+				WEATHER_LIGHT_SNOW = 10,
+				WEATHER_CLEAR = 5,
+				)
+		if("summer")
+			transition_chances = list(
+				WEATHER_OVERCAST = 35,
+				WEATHER_RAIN = 60,
+				WEATHER_CLEAR = 5
+				)
+		if("autumn")
+			transition_chances = list(
+				WEATHER_OVERCAST = 15,
+				WEATHER_RAIN = 80,
+				WEATHER_HAIL = 4,
+				WEATHER_CLEAR = 1
+				)
+		if("winter")
+			transition_chances = list(
+				WEATHER_OVERCAST = 15,
+				WEATHER_RAIN = 40,
+				WEATHER_LIGHT_SNOW = 20,
+				WEATHER_HAIL = 25
+				)
+	. = ..()
 
 /datum/weather/muriki/acid_rain
 	name = "rain"
@@ -215,18 +301,49 @@ var/datum/planet/muriki/planet_muriki = null
 	light_modifier = 0.5
 	effect_message = "<span class='notice'>Acidic rain falls on you.</span>"
 
-	transition_chances = list(
-		WEATHER_OVERCAST = 15,
-		WEATHER_RAIN = 30,
-		WEATHER_STORM = 50,
-		WEATHER_HAIL = 5
-		)
+	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is raining."
 	transition_messages = list(
 		"The sky is dark, and acidic rain falls down upon you."
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rain
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
+
+/datum/weather/muriki/acid_rain/New()
+	switch(GLOB.world_time_season)
+		if("spring")
+			transition_chances = list(
+				WEATHER_OVERCAST = 5,
+				WEATHER_RAIN = 60,
+				WEATHER_STORM = 45,
+				WEATHER_HAIL = 10,
+				WEATHER_LIGHT_SNOW = 5
+			)
+		if("summer")
+			transition_chances = list(
+				WEATHER_OVERCAST = 55,
+				WEATHER_RAIN = 25,
+				WEATHER_STORM = 10,
+				WEATHER_HAIL = 5,
+				WEATHER_CLEAR = 5
+			)
+		if("autumn")
+			transition_chances = list(
+				WEATHER_OVERCAST = 15,
+				WEATHER_RAIN = 30,
+				WEATHER_STORM = 45,
+				WEATHER_HAIL = 5,
+				WEATHER_LIGHT_SNOW = 5,
+			)
+		if("winter")
+			transition_chances = list(
+				WEATHER_OVERCAST = 5,
+				WEATHER_RAIN = 15,
+				WEATHER_STORM = 50,
+				WEATHER_LIGHT_SNOW = 10,
+				WEATHER_HAIL = 15
+			)
+	. = ..()
 
 /datum/weather/muriki/acid_rain/process_effects()
 	..()
@@ -296,14 +413,41 @@ var/datum/planet/muriki/planet_muriki = null
 	outdoor_sounds_type = /datum/looping_sound/weather/rain
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
+	transition_chances = list() // See New() for seasonal transitions
 
-	transition_chances = list(
-		WEATHER_RAIN = 65,
-		WEATHER_STORM = 20,
-		WEATHER_DOWNPOURWARNING = 7, // Fun times ahead
-		WEATHER_HAIL = 5,
-		WEATHER_OVERCAST = 3
-		)
+/datum/weather/muriki/acid_storm/New()
+	switch(GLOB.world_time_season)
+		if("spring")
+			transition_chances = list(
+				WEATHER_RAIN = 45,
+				WEATHER_STORM = 30,
+				WEATHER_DOWNPOURWARNING = 6, // Fun times ahead
+				WEATHER_HAIL = 15,
+				WEATHER_OVERCAST = 4
+				)
+		if("summer")
+			transition_chances = list(
+				WEATHER_RAIN = 70,
+				WEATHER_STORM = 26,
+				WEATHER_DOWNPOURWARNING = 4 // Fun times ahead
+				)
+		if("autumn")
+			transition_chances = list(
+				WEATHER_RAIN = 45,
+				WEATHER_STORM = 30,
+				WEATHER_DOWNPOURWARNING = 4, // Fun times ahead
+				WEATHER_HAIL = 15,
+				WEATHER_OVERCAST = 6
+				)
+		if("winter")
+			transition_chances = list(
+				WEATHER_RAIN = 55,
+				WEATHER_STORM = 10,
+				WEATHER_DOWNPOURWARNING = 3, // Fun times ahead
+				WEATHER_HAIL = 25,
+				WEATHER_OVERCAST = 7
+				)
+	. = ..()
 
 /datum/weather/muriki/acid_storm/process_effects()
 	..()
@@ -625,15 +769,36 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_high = 1
 	wind_low = 0
 	light_modifier = 0.8
-	transition_chances = list(
-		WEATHER_LIGHT_SNOW = 80,
-		WEATHER_CLEAR = 20
-		)
+	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is snowing lightly."
 	transition_messages = list(
 		"Small snowflakes begin to fall from above.",
 		"It begins to snow lightly.",
 		)
+
+/datum/weather/muriki/light_snow/New()
+	switch(GLOB.world_time_season)
+		if("spring")
+			transition_chances = list(
+				WEATHER_LIGHT_SNOW = 50,
+				WEATHER_CLEAR = 50
+				)
+		if("summer")
+			transition_chances = list(
+				WEATHER_LIGHT_SNOW = 10,
+				WEATHER_CLEAR = 90
+				)
+		if("autumn")
+			transition_chances = list(
+				WEATHER_LIGHT_SNOW = 50,
+				WEATHER_CLEAR = 50
+				)
+		if("winter")
+			transition_chances = list(
+				WEATHER_LIGHT_SNOW = 80,
+				WEATHER_CLEAR = 20
+				)
+	. = ..()
 
 /mob/living/
 	var/enzyme_affect = TRUE
