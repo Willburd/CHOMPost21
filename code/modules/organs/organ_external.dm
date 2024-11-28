@@ -359,7 +359,7 @@
 
 	//If limb took enough damage, try to cut or tear it off
 	if(owner && loc == owner && !is_stump())
-		if(!cannot_amputate && CONFIG_GET(flag/limbs_can_break) && (brute_dam + burn_dam) >= (max_damage * CONFIG_GET(number/organ_health_multiplier)))
+		if(!cannot_amputate && CONFIG_GET(flag/limbs_can_break) && ((brute_dam + burn_dam) * 2.5) >= (max_damage * CONFIG_GET(number/organ_health_multiplier))) // Outpost 21 edit - increase limb drop chance
 			//organs can come off in three cases
 			//1. If the damage source is edge_eligible and the brute damage dealt exceeds the edge threshold, then the organ is cut off.
 			//2. If the damage amount dealt exceeds the disintegrate threshold, the organ is completely obliterated.
@@ -383,14 +383,14 @@
 				droplimb(TRUE, DROPLIMB_BURN)
 			//VOREStation Add End
 			//VOREStation Edit - We have special droplimb handling for prom/proteans
-			else if(edge_eligible && brute >= (max_damage * 0.75) / DROPLIMB_THRESHOLD_EDGE && prob(brute))
+			else if(edge_eligible && brute >= max_damage / DROPLIMB_THRESHOLD_EDGE && prob(brute))
 				droplimb(0, DROPLIMB_EDGE)
-			else if((burn >= (max_damage * 0.15) / DROPLIMB_THRESHOLD_DESTROY) && prob(burn)) // Outpost 21 edit - increased droplimb chance
+			else if((burn >= (max_damage * 0.25) / DROPLIMB_THRESHOLD_DESTROY) && prob(burn*0.75)) // Outpost 21 edit - increase limb drop chance
 				droplimb(0, DROPLIMB_BURN)
-			else if((brute >= (max_damage * 0.35) / DROPLIMB_THRESHOLD_DESTROY && prob(brute))) // Outpost 21 edit - increased droplimb chance
+			else if((brute >= (max_damage * 0.45) / DROPLIMB_THRESHOLD_DESTROY && prob(brute*0.5))) // Outpost 21 edit - increase limb drop chance
 				droplimb(0, DROPLIMB_BLUNT)
 			//VOREStation Edit End
-			else if(brute >= (max_damage * 0.35) / DROPLIMB_THRESHOLD_TEAROFF && prob(brute * 0.5)) // Outpost 21 edit - increased droplimb chance
+			else if(brute >= max_damage / DROPLIMB_THRESHOLD_TEAROFF && prob(brute*0.33))
 				droplimb(0, DROPLIMB_EDGE)
 			else if(spread_dam && owner && parent && (brute_overflow || burn_overflow) && (brute_overflow >= 5 || burn_overflow >= 5) && !permutation) //No infinite damage loops.
 				var/brute_third = brute_overflow * 0.33
