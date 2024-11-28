@@ -387,7 +387,7 @@
 				droplimb(0, DROPLIMB_EDGE)
 			else if((burn >= (max_damage * 0.25) / DROPLIMB_THRESHOLD_DESTROY) && prob(burn*0.75)) // Outpost 21 edit - increase limb drop chance
 				droplimb(0, DROPLIMB_BURN)
-			else if((brute >= (max_damage * 0.45) / DROPLIMB_THRESHOLD_DESTROY && prob(brute*0.5))) // Outpost 21 edit - increase limb drop chance
+			else if((brute >= (max_damage * 0.30) / DROPLIMB_THRESHOLD_DESTROY && prob(brute))) // Outpost 21 edit - increase limb drop chance
 				droplimb(0, DROPLIMB_BLUNT)
 			//VOREStation Edit End
 			else if(brute >= max_damage / DROPLIMB_THRESHOLD_TEAROFF && prob(brute*0.33))
