@@ -167,7 +167,7 @@
 
 /obj/machinery/power/tesla_coil/amplifier/RefreshParts()
 	..()
-	var/amp_eff = 1
+	amp_eff = 1
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
 		amp_eff += C.rating
 
@@ -190,7 +190,7 @@
 
 /obj/machinery/power/tesla_coil/recaster/RefreshParts()
 	..()
-	var/zap_range = 5
+	zap_range = 5
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
 		zap_range += C.rating
 

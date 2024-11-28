@@ -385,12 +385,12 @@
 			//VOREStation Edit - We have special droplimb handling for prom/proteans
 			else if(edge_eligible && brute >= (max_damage * 0.75) / DROPLIMB_THRESHOLD_EDGE && prob(brute))
 				droplimb(0, DROPLIMB_EDGE)
-			else if((burn >= (max_damage * 0.45) / DROPLIMB_THRESHOLD_DESTROY) && prob(burn * 0.5)) // Outpost 21 edit - increased droplimb chance
+			else if((burn >= (max_damage * 0.15) / DROPLIMB_THRESHOLD_DESTROY) && prob(burn)) // Outpost 21 edit - increased droplimb chance
 				droplimb(0, DROPLIMB_BURN)
-			else if((brute >= (max_damage * 0.65) / DROPLIMB_THRESHOLD_DESTROY && prob(brute))) // Outpost 21 edit - increased droplimb chance
+			else if((brute >= (max_damage * 0.35) / DROPLIMB_THRESHOLD_DESTROY && prob(brute))) // Outpost 21 edit - increased droplimb chance
 				droplimb(0, DROPLIMB_BLUNT)
 			//VOREStation Edit End
-			else if(brute >= (max_damage * 0.45) / DROPLIMB_THRESHOLD_TEAROFF && prob(brute * 0.5)) // Outpost 21 edit - increased droplimb chance
+			else if(brute >= (max_damage * 0.35) / DROPLIMB_THRESHOLD_TEAROFF && prob(brute * 0.5)) // Outpost 21 edit - increased droplimb chance
 				droplimb(0, DROPLIMB_EDGE)
 			else if(spread_dam && owner && parent && (brute_overflow || burn_overflow) && (brute_overflow >= 5 || burn_overflow >= 5) && !permutation) //No infinite damage loops.
 				var/brute_third = brute_overflow * 0.33
