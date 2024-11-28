@@ -310,11 +310,11 @@
 	name = "ball of fire"
 	desc = "Don't stand in the fire."
 	icon_state = "fireball"
-	damage = 10
+	damage = 20 // Outpost 21 edit - increased damage
 	embed_chance = 0
 	incendiary = 2
 	flammability = 4
-	agony = 30
+	agony = 3 // Outpost 21 edit - lowered agony
 	range = 4
 	vacuum_traversal = 0
 	hud_state = "flame"
