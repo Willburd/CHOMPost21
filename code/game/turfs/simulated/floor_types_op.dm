@@ -46,3 +46,16 @@
 		if(ismob( A))
 			to_chat( A, "<span class='danger'>[death_message]</span>")
 		qdel(A)
+
+/turf/simulated/floor/plating/snow
+	name = "frozen plating"
+	icon_state = "snowyplating"
+	icon = 'icons/turf/snow_new.dmi'
+
+/turf/simulated/floor/snow
+	name = "heavy snow"
+	icon_state = "snow"
+
+/turf/simulated/floor/snow/snow2
+	name = "snow"
+	icon_state = "snownew"
