@@ -63,6 +63,8 @@
 	|| species.name == SPECIES_PROTEAN \
 	|| species.name == SPECIES_REPLICANT)
 		return FALSE
+	if(mind && mind.changeling)
+		return FALSE
 
 	var/obj/item/organ/internal/malignant/neworgan = new type_path( src, TRUE)
 	if(neworgan.status == 0) // healthy new organ spawned... Otherwise this is a failure...
