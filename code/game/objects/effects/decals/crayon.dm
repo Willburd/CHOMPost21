@@ -5,7 +5,6 @@
 	plane = DIRTY_PLANE
 	layer = DIRTY_LAYER
 	anchored = TRUE
-// CHOMPEdit Start - Pretty much all of this file changed
 	var/art_type
 	var/art_color
 	var/art_shade
@@ -14,7 +13,7 @@
 	name = type
 	desc = "A [type] drawn in crayon."
 
-	// Persistence vars.
+	// Persistence vars. Unused here but used downstream. If someone updates the persistance code, it's here.
 	art_type = type
 	art_color = main
 	art_shade = shade
