@@ -164,6 +164,10 @@
 		if (new_name)
 			custom_name = new_name
 			sprite_name = new_name
+			// Outpost 21 edit begin - if missing the crew manifest uses incorrect original name, plus the other robot rename functions like /datum/eventkit/modify_robot/tgui_act() sets this?
+			name = new_name
+			real_name = new_name
+			// Outpost 21 edit end
 
 /mob/living/silicon/robot/proc/apply_module(var/datum/robot_sprite/new_datum, var/new_module)
 	icon_selected = TRUE
