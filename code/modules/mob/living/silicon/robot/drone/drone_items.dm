@@ -181,6 +181,7 @@
 /obj/item/gripper/scene
 	name = "misc gripper"
 	desc = "A simple grasping tool that can hold a variety of 'general' objects..."
+	icon_state = "gripper-old" // Outpost 21 edit - Misc gripper uses unique art so it can be easily located
 
 	can_hold = list(
 		/obj/item/capture_crystal,
