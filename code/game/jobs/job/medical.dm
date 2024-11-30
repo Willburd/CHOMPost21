@@ -75,8 +75,8 @@
 						familiar with basic first aid, and a number of accompanying medications, and can generally save, if not cure, a majority of the \
 						patients they encounter."
 	alt_titles = list(JOB_ALT_PHYSICIAN = /datum/alt_title/physician, JOB_ALT_MEDICAL_PRACTITIONER = /datum/alt_title/medical_practitioner, JOB_ALT_SURGEON = /datum/alt_title/surgeon,
-							JOB_ALT_EMERGENCY_PHYSICIAN = /datum/alt_title/emergency_physician, JOB_ALT_NURSE = /datum/alt_title/nurse, JOB_ALT_ORDERLY = /datum/alt_title/orderly,
-						JOB_ALT_VIROLOGIST = /datum/alt_title/virologist, JOB_ALT_MEDICAL_CONTRACTOR = /datum/alt_title/medical_contractor)
+						JOB_ALT_EMERGENCY_PHYSICIAN = /datum/alt_title/emergency_physician, JOB_ALT_NURSE = /datum/alt_title/nurse, JOB_ALT_ORDERLY = /datum/alt_title/orderly,
+						JOB_ALT_VIROLOGIST = /datum/alt_title/virologist, JOB_ALT_MEDICAL_CONTRACTOR = /datum/alt_title/medical_contractor, JOB_ALT_XENOSPECIALIST = /datum/alt_title/xenoanatomyspecialist) // Outpost 21 edit Xenospecialist
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 3)
 
@@ -166,12 +166,12 @@
 /datum/job/geneticist
 	title = JOB_GENETICIST
 	flag = GENETICIST
-	departments = list(DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH)
+	departments = list(DEPARTMENT_MEDICAL) // Outpost 21 edit - Removed science
 	department_flag = MEDSCI
 	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER + " and " + JOB_RESEARCH_DIRECTOR
+	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER // Outpost 21 edit - Removed science
 	selection_color = "#013D3B"
 	economic_modifier = 7
 	access = list(access_medical, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics) //, access_research) Outpost 21 edit - Removed science access

@@ -28,12 +28,13 @@
 
 	access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
-			            access_heads, access_construction, access_sec_doors,
-			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload, access_robotics) // Outpost 21 edit - Added robotics
+			            access_heads, access_construction,
+			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload, access_gateway, access_robotics) // Outpost 21 edit - Added robotics
+
 	minimal_access = list(access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels,
 			            access_teleporter, access_external_airlocks, access_atmospherics, access_emergency_storage, access_eva,
-			            access_heads, access_construction, access_sec_doors,
-			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload, access_robotics) // Outpost 21 edit - Added robotics
+			            access_heads, access_construction,
+			            access_ce, access_RC_announce, access_keycard_auth, access_tcomsat, access_ai_upload, access_gateway, access_robotics) // Outpost 21 edit - Added robotics
 	alt_titles = list(JOB_ALT_HEAD_ENGINEER = /datum/alt_title/head_engineer, JOB_ALT_FOREMAN = /datum/alt_title/foreman, JOB_ALT_MAINTENANCE_MANAGER = /datum/alt_title/maintenance_manager)
 	minimal_player_age = 31 //ChompEDIT
 
@@ -73,7 +74,7 @@
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics)
 	minimal_access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction)
 	alt_titles = list(JOB_ALT_MAINTENANCE_TECHNICIAN = /datum/alt_title/maint_tech, JOB_ALT_ENGINE_TECHNICIAN = /datum/alt_title/engine_tech,
-						JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor,  JOB_ALT_COMPUTER_TECHNICIAN = /datum/alt_title/computer_tech, JOB_ALT_SALVAGE_TECHNICIAN = /datum/alt_title/salvage_tech)
+					JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor,  JOB_ALT_COMPUTER_TECHNICIAN = /datum/alt_title/computer_tech, JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker, JOB_ALT_CHEMENGINEER = /datum/alt_title/chem_tech) // Outpost 21 addition - shipbreaker, Chemical Engineer
 
 	minimal_player_age = 3
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
@@ -136,8 +137,8 @@
 	access = list(access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_atmospherics, access_external_airlocks)
 	minimal_access = list(access_eva, access_engine, access_atmospherics, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks)
 
-	alt_titles = list(JOB_ALT_ATMOSPHERIC_ENGINEER = /datum/alt_title/atmos_engi, JOB_ALT_ATMOSPHERIC_MAINTAINER = /datum/alt_title/atmos_maint, /*CHOMPEdit JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech*/
-						JOB_ALT_FUEL_TECHNICIAN = /datum/alt_title/refuel_tech)
+	alt_titles = list(JOB_ALT_ATMOSPHERIC_ENGINEER = /datum/alt_title/atmos_engi, JOB_ALT_ATMOSPHERIC_MAINTAINER = /datum/alt_title/atmos_maint, JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech,
+						JOB_ALT_FUEL_TECHNICIAN = /datum/alt_title/refuel_tech) // Outpost 21 edit - reenable disposals tech
 
 	minimal_player_age = 3
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
