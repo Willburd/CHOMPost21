@@ -1,6 +1,6 @@
 var/global/client_record_update_lock = FALSE
 
-// Manually updating records from medical console to a player's save. Because players can barely be trusted to update records themselves. Just let medical do it.
+// Manually updating records from medical console to a player's save.
 /proc/get_current_mob_from_record(var/datum/data/record/active)
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(active.fields["name"])
 	if(db)

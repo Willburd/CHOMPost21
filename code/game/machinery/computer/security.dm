@@ -270,7 +270,6 @@
 					qdel(active1)
 				if(active2)
 					qdel(active2)
-			// Outpost 21 edit begin - Update player's document
 			if("sync_r")
 				if(active2)
 					set_temp(client_update_record(src,usr))
@@ -281,7 +280,6 @@
 					if(new_notes != "" || tgui_alert(usr, "Are you sure you want to delete the current record's notes?", "Confirm Delete", list("Delete", "No")) == "Delete")
 						if(usr.Adjacent(src))
 							active2.fields["notes"] = new_notes
-			// Outpost 21 edit end
 			if("d_rec")
 				var/datum/data/record/general_record = locate(params["d_rec"] || "")
 				if(!data_core.general.Find(general_record))
