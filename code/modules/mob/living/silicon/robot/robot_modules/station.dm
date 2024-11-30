@@ -218,9 +218,9 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/boop_module(src)
 	src.modules += new /obj/item/flash/robot(src)
 	src.modules += new /obj/item/extinguisher(src)
-	src.modules += new /obj/item/gripper/scene(src) //CHOMPEdit - Give all borgs a scene gripper
 	src.modules += new /obj/item/tool/crowbar/cyborg(src)
 	src.modules += new /obj/item/tape_roll/cyborg(src) // Outpost 21 addition - Tape roll for our wires
+	src.modules += new /obj/item/gripper/scene(src)
 
 /obj/item/robot_module/robot/standard
 	name = "standard robot module"
