@@ -16,8 +16,8 @@
 	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
 	selection_color = "#9b633e"
 	economic_modifier = 5
-	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce)
-	minimal_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce)
+	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce, access_keycard_auth, access_teleporter, access_heads) // Outpost 21 edit - Access_keycard_auth, Access_teleporter, Access_heads added
+	minimal_access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_qm, access_mining, access_mining_station, access_RC_announce, access_keycard_auth, access_teleporter, access_heads) // Outpost 21 edit - Access_keycard_auth, Access_teleporter, Access_heads added
 	banned_job_species = list("digital", SPECIES_PROMETHEAN)
 
 	ideal_character_age = 40
