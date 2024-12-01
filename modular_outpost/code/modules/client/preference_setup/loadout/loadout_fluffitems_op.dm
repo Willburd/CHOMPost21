@@ -77,6 +77,12 @@
 	ckeywhitelist = list("seagha")
 	character_name = list("Schale Vam")
 
+/datum/gear/fluff/ESHUI_servemed
+	display_name = "ESHUI ESHUI Service Medal"
+	path = /obj/item/clothing/accessory/medal/solgov/gold/sun/eshui
+	ckeywhitelist = list("seagha")
+	character_name = list("Aiektaaknell")
+
 /datum/gear/fluff/ESHUI_goldhonormelt //Awarded for being the first to retrive it from the dragon's lair
 	display_name = "ESHUI Half-Melted Medal of Heroism"
 	path = /obj/item/clothing/accessory/medal/gold/heroismmelted/eshui

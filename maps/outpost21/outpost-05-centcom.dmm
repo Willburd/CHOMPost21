@@ -1520,7 +1520,7 @@
 "gec" = (/obj/effect/floor_decal/borderfloor,/obj/effect/floor_decal/corner/lightgrey/border,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/tiled,/area/specialty/redspace)
 "ger" = (/obj/structure/table/standard,/obj/item/radio/intercom/department/medbay{dir = 1; pixel_y = 21},/obj/item/radio/phone/medbay{name = "Medbay Lobby Phone"; pixel_x = 6; pixel_y = 8},/obj/effect/floor_decal/borderfloor{dir = 1},/obj/effect/floor_decal/corner/blue/border{dir = 1},/turf/simulated/floor/tiled/white,/area/specialty/redspace)
 "geu" = (/obj/machinery/doorbell_chime{id_tag = "engdinger"; name = "Engineering Dinger"; pixel_x = -30},/obj/structure/dispenser/phoron,/obj/effect/floor_decal/milspec/color/orange/half{dir = 9},/turf/simulated/floor/tiled/milspec,/area/specialty/redspace)
-"geE" = (/obj/machinery/door/airlock/centcom/nameddorm{matchnames = list("Lett","Possu","Dayns"); name = "The Dayns' Residence"},/obj/structure/sign/christmas/wreath,/turf/simulated/floor/wood,/area/centcom/living)
+"geE" = (/obj/machinery/door/airlock/centcom/nameddorm{matchnames = list("Lett","Poss","Dayns","Mimi"); name = "The Dayns' Residence"},/obj/structure/sign/christmas/wreath,/turf/simulated/floor/wood,/area/centcom/living)
 "geI" = (/obj/structure/table/wooden_reinforced,/obj/effect/floor_decal/spline/fancy/wood{dir = 4},/turf/simulated/floor/wood,/area/specialty/redspace)
 "geK" = (/obj/effect/floor_decal/corner/brown/full{dir = 1},/turf/simulated/floor/tiled,/area/specialty/redspace)
 "geP" = (/obj/structure/sink{dir = 1},/obj/structure/mirror{pixel_y = -30},/obj/effect/floor_decal/corner/purple{dir = 10},/turf/simulated/floor/tiled/kafel_full,/area/specialty/redspace)
