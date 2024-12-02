@@ -49,15 +49,20 @@
 
 /turf/simulated/floor/plating/snow
 	name = "frozen plating"
-	icon_state = "snowyplating"
 	icon = 'icons/turf/snow.dmi'
+	icon_state = "snowyplating"
 
 /turf/simulated/floor/snow
 	name = "heavy snow"
-	icon_state = "snow"
 	icon = 'icons/turf/snow_new.dmi'
+	icon_state = "snow"
 
 /turf/simulated/floor/snow/snow2
 	name = "snow"
-	icon_state = "snownew"
 	icon = 'icons/turf/snow.dmi'
+	icon_state = "snow"
+
+/turf/simulated/floor/snow/gravsnow
+	name = "Gravel"
+	icon = 'icons/turf/snow.dmi'
+	icon_state = "gravsnow"
