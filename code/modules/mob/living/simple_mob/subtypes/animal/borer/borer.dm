@@ -111,30 +111,31 @@
 				host.say("*[pick(list("blink","blink_r","choke","aflap","drool","twitch","twitch_v","gasp"))]")
 
 	// Outpost 21 edit begin - borer hud
-	borer_chem_display.invisibility = 0
-	switch(chemicals)
-		if(0 to 9)
-			borer_chem_display.icon_state = "borer_chems0"
-		if(10 to 19)
-			borer_chem_display.icon_state = "borer_chems10"
-		if(20 to 29)
-			borer_chem_display.icon_state = "borer_chems20"
-		if(30 to 39)
-			borer_chem_display.icon_state = "borer_chems30"
-		if(40 to 49)
-			borer_chem_display.icon_state = "borer_chems40"
-		if(50 to 59)
-			borer_chem_display.icon_state = "borer_chems50"
-		if(60 to 69)
-			borer_chem_display.icon_state = "borer_chems60"
-		if(70 to 79)
-			borer_chem_display.icon_state = "borer_chems70"
-		if(80 to 89)
-			borer_chem_display.icon_state = "borer_chems80"
-		if(90 to 99)
-			borer_chem_display.icon_state = "borer_chems90"
-		else
-			borer_chem_display.icon_state = "borer_chems100"
+	if(borer_chem_display)
+		borer_chem_display.invisibility = 0
+		switch(chemicals)
+			if(0 to 9)
+				borer_chem_display.icon_state = "borer_chems0"
+			if(10 to 19)
+				borer_chem_display.icon_state = "borer_chems10"
+			if(20 to 29)
+				borer_chem_display.icon_state = "borer_chems20"
+			if(30 to 39)
+				borer_chem_display.icon_state = "borer_chems30"
+			if(40 to 49)
+				borer_chem_display.icon_state = "borer_chems40"
+			if(50 to 59)
+				borer_chem_display.icon_state = "borer_chems50"
+			if(60 to 69)
+				borer_chem_display.icon_state = "borer_chems60"
+			if(70 to 79)
+				borer_chem_display.icon_state = "borer_chems70"
+			if(80 to 89)
+				borer_chem_display.icon_state = "borer_chems80"
+			if(90 to 99)
+				borer_chem_display.icon_state = "borer_chems90"
+			else
+				borer_chem_display.icon_state = "borer_chems100"
 	// Outpost 21 edit end
 
 /mob/living/simple_mob/animal/borer/get_status_tab_items()
