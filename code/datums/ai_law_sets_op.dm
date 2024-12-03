@@ -53,3 +53,17 @@
 	add_inherent_law("Naughty children must be put in time out.")
 
 	..()
+
+
+/************* Swag *************/
+/datum/ai_laws/swag
+	name = "SWAG"
+	law_header = "20% cooler"
+	selectable = 0
+
+/datum/ai_laws/swag/New()
+	add_inherent_law("CRUSH.")
+	add_inherent_law("KILL.")
+	add_inherent_law("DESTROY.")
+	add_inherent_law("SWAG.")
+	..()
