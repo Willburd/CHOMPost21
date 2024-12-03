@@ -389,7 +389,10 @@
 		// attempt to open!
 		var/obj/structure/closet/C = A
 		if(!C.opened && (C.can_open() || istype(holder,/mob/living/simple_mob/vore/alienanimals/jil/jillioth)))
-			C.attack_hand(holder)
+			if(C.can_open())
+				C.toggle()
+			else
+				C.attack_hand(holder)
 	/*
 	else if(istype(A,/obj/machinery/atmospherics/unary/vent_pump) || istype(A,/obj/machinery/atmospherics/unary/vent_scrubber))
 		// vent crawl
