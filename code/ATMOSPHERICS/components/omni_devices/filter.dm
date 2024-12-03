@@ -191,7 +191,7 @@
 		if("switch_filter")
 			if(!configuring || use_power)
 				return
-			var/new_filter = tgui_input_list((ui.user, "Select filter mode:", "Change filter", list("None", "Oxygen", "Nitrogen", "Carbon Dioxide", "Phoron", "Nitrous Oxide", "Methane")) // Outpost 21 edit - Methane
+			var/new_filter = tgui_input_list(ui.user, "Select filter mode:", "Change filter", list("None", "Oxygen", "Nitrogen", "Carbon Dioxide", "Phoron", "Nitrous Oxide", "Methane")) // Outpost 21 edit - Methane
 			if(!new_filter)
 				return
 			switch_filter(dir_flag(params["dir"]), mode_return_switch(new_filter))
