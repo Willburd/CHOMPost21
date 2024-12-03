@@ -77,7 +77,7 @@
 	if(host && !stat && !host.stat)
 		// Outpost 21 edit begin - borer fixes
 		// Handle docility.
-		if(host.reagents.has_reagent("sugar"))
+		if(host.reagents.has_reagent("sugar") || host.ingested.has_reagent("sugar"))
 			docile_counter = 1 SECONDS
 			if(docile_counter < 0)
 				docile_counter = 0
@@ -246,6 +246,15 @@
 
 /mob/living/simple_mob/animal/borer/cannot_use_vents()
 	return
+
+// Outpost 21 edit begin - borer fixes
+/mob/living/simple_mob/animal/borer/extra_huds(var/datum/hud/hud,var/icon/ui_style,var/list/hud_elements)
+	// Chem hud
+	borer_chem_display = new /obj/screen/borer/chems()
+	borer_chem_display.screen_loc = ui_ling_chemical_display
+	borer_chem_display.icon_state = "ling_chems"
+	hud_elements |= borer_chem_display
+// Outpost 21 edit end
 
 // This is awful but its literally say code.
 /mob/living/simple_mob/animal/borer/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
