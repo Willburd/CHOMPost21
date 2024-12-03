@@ -360,7 +360,6 @@
 				if(!R.lit)
 					R.attack_self(src)
 				if(R.lit)
-					holder.visible_message("<span class='danger'>\The [holder] bursts into flames!</span>")
 					holder.add_modifier(/datum/modifier/fire/stack_managed/weak, 60 SECONDS)
 					holder.light_range = 2
 					holder.make_jittery(115)
