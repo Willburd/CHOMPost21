@@ -161,7 +161,7 @@
 		else
 			return null
 
-/obj/machinery/atmospherics/omni/atmos_filter/tgui_act(action, params)
+/obj/machinery/atmospherics/omni/atmos_filter/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -180,7 +180,7 @@
 		if("set_flow_rate")
 			if(!configuring || use_power)
 				return
-			var/new_flow_rate = tgui_input_number(usr,"Enter new flow rate limit (0-[max_flow_rate]L/s)","Flow Rate Control",set_flow_rate,max_flow_rate,0)
+			var/new_flow_rate = tgui_input_number(ui.user,"Enter new flow rate limit (0-[max_flow_rate]L/s)","Flow Rate Control",set_flow_rate,max_flow_rate,0)
 			set_flow_rate = between(0, new_flow_rate, max_flow_rate)
 			. = TRUE
 		if("switch_mode")
@@ -191,7 +191,7 @@
 		if("switch_filter")
 			if(!configuring || use_power)
 				return
-			var/new_filter = tgui_input_list(usr, "Select filter mode:", "Change filter", list("None", "Oxygen", "Nitrogen", "Carbon Dioxide", "Phoron", "Nitrous Oxide", "Methane")) // Outpost 21 edit - Methane
+			var/new_filter = tgui_input_list(ui.user, "Select filter mode:", "Change filter", list("None", "Oxygen", "Nitrogen", "Carbon Dioxide", "Phoron", "Nitrous Oxide", "Methane")) // Outpost 21 edit - Methane
 			if(!new_filter)
 				return
 			switch_filter(dir_flag(params["dir"]), mode_return_switch(new_filter))
