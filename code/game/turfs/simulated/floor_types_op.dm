@@ -52,17 +52,17 @@
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snowyplating"
 
-/turf/simulated/floor/snow
+/turf/simulated/floor/outdoors/snow
 	name = "heavy snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
 
-/turf/simulated/floor/snow/snow2
+/turf/simulated/floor/outdoors/snow/snow2
 	name = "snow"
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snow"
 
-/turf/simulated/floor/snow/gravsnow
+/turf/simulated/floor/outdoors/snow/gravsnow
 	name = "Gravel"
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "gravsnow"
