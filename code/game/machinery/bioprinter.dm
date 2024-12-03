@@ -176,7 +176,7 @@
 		possible_list |= engineered_products
 	// Outpost 21 edit end
 
-	var/choice = tgui_input_list(usr, "What would you like to print?", "Print Choice", possible_list)
+	var/choice = tgui_input_list(user, "What would you like to print?", "Print Choice", possible_list)
 
 	if(!choice || printing || (stat & (BROKEN|NOPOWER)))
 		return

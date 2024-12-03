@@ -194,7 +194,7 @@
 
 	return data
 
-/obj/machinery/atmospherics/trinary/atmos_filter/tgui_act(action, params)
+/obj/machinery/atmospherics/trinary/atmos_filter/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -230,7 +230,7 @@
 				if(5)//removing CH4
 					filtered_out += "methane" // Outpost 21 edit - Methane
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	update_icon()
 
 //
