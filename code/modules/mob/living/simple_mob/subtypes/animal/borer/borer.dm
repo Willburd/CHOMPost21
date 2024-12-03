@@ -46,6 +46,8 @@
 
 	can_be_drop_prey = FALSE //CHOMP Add
 
+	enzyme_affect = FALSE // Outpost 21 edit - safe outside
+
 /mob/living/simple_mob/animal/borer/roundstart
 	roundstart = TRUE
 
