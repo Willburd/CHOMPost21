@@ -426,9 +426,11 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	var/space = !istype(B)
 
 	if(!space)
-		if(min(A.zone.contents.len, B.zone.contents.len) < ZONE_MIN_SIZE || (direct && (equivalent_pressure(A.zone,B.zone) || current_cycle == 0)))
+		// Outpost 21 edit begin - Maximum zone size
+		if(A.zone.contents.len + B.zone.contents.len <= ZONE_MAX_SIZE && (min(A.zone.contents.len, B.zone.contents.len) < ZONE_MIN_SIZE || (direct && (equivalent_pressure(A.zone,B.zone) || current_cycle == 0))))
 			merge(A.zone,B.zone)
 			return
+		// Outpost 21 edit end
 
 	var/a_to_b = get_dir(A,B)
 	var/b_to_a = get_dir(B,A)
@@ -522,6 +524,10 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	if(A.phoron != B.phoron)
 		return FALSE
 	if(A.carbon_dioxide != B.carbon_dioxide)
+		return FALSE
+	if(A.nitrous_oxide != B.nitrous_oxide) // Outpost 21 edit - Nitrous oxide
+		return FALSE
+	if(A.methane != B.methane) // Outpost 21 edit - Methane
 		return FALSE
 	if(A.temperature != B.temperature)
 		return FALSE
