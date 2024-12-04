@@ -21,7 +21,7 @@
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
 				vents += temp_vent
 
-	spawning = rand(SPIDERS,SLIMES)
+	spawning = rand(SPIDERS,SLIMES,TROIDS) // Outpost 21 edit - allowed troids
 	switch(spawning)
 		if(SPIDERS)
 			log_debug("Hord event, spiders selected.")
