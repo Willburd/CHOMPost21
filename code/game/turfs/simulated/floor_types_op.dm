@@ -56,13 +56,20 @@
 	name = "heavy snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
+	demote_to = /turf/simulated/floor/outdoors/newdirt_nograss
 
 /turf/simulated/floor/outdoors/snow/snow2
 	name = "snow"
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "snow"
+	demote_to = /turf/simulated/floor/outdoors/newdirt_nograss
 
 /turf/simulated/floor/outdoors/snow/gravsnow
 	name = "Gravel"
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "gravsnow"
+	demote_to = /turf/simulated/floor/outdoors/newdirt_nograss
+
+// Unique types for roofs
+/turf/simulated/floor/outdoors/snow/roofing
+	demote_to = /turf/simulated/floor/outpost_roof

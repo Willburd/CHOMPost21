@@ -1070,6 +1070,7 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/deathdrop/waterfall)
 MURIKI_TURF_CREATE_UN(/turf/simulated/deathdrop/elevator_shaft) // probably not needed?
 // Winter
 MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow/roofing)
 MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/snow/snow2)
 MURIKI_TURF_CREATE(/turf/simulated/floor/plating/snow)
 MURIKI_TURF_CREATE(/turf/simulated/floor/snow/gravsnow)
