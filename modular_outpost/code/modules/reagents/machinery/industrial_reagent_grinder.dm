@@ -15,7 +15,6 @@
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))
 		circuit = new circuit(src)
-	default_apply_parts()
 	// custom amounts to match reagent vat machines
 	beaker.possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60,80,100,120)
 	// remove these
@@ -65,15 +64,60 @@
 	// dump reagents to next refinery machine
 	var/obj/machinery/reagent_refinery/M = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
 	if(M)
-		transfer_tank( beaker.reagents, M)
+		transfer_tank( beaker.reagents, M, dir)
 
-/obj/machinery/reagentgrinder/industrial/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target)
-	if(!anchored || !target.anchored || RT.total_volume <= 0 || !can_use_power_oneoff(active_power_usage))
+/obj/machinery/reagentgrinder/industrial/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target, var/source_forward_dir, var/filter_id = "")
+	if(RT.total_volume <= 0 || !anchored || !target.anchored)
 		return
+	if(active_power_usage > 0 && !can_use_power_oneoff(active_power_usage))
+		return
+
+	// Hub fills tankers, not itself! Has some special rules
+	if(istype(target,/obj/machinery/reagent_refinery/hub))
+		if(istype(src,/obj/machinery/reagent_refinery/hub)) // Hubs cannot send into other hubs
+			return
+		if(dir == reverse_dir[source_forward_dir] ) // The hub must be facing into its source to accept input, unlike others
+			return
+		var/obj/machinery/reagent_refinery/hub/H = target
+		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(target)
+		if(!tanker)
+			return
+		if(world.time < tanker.l_move_time + H.wait_delay) // await cooldown to avoid spamming moving tanks
+			return
+		target = tanker // forward it to the tanker!
+
+	else
+		// pumps, furnaces and filters can only be FED in a straight line
+		if(istype(target,/obj/machinery/reagent_refinery/pump) || istype(target,/obj/machinery/reagent_refinery/filter) || istype(target,/obj/machinery/reagent_refinery/furnace))
+			if(dir != target.dir)
+				return
+
+		// no back/forth, filters don't use just their forward, they send the side too!
+		if(!istype(target,/obj/machinery/reagent_refinery/waste_processor)) // Waste tanks accept from all sides
+			if(target.dir == reverse_dir[source_forward_dir])
+				return
+
+		// locked until distilling mode
+		if(istype(target,/obj/machinery/reagent_refinery/reactor))
+			var/obj/machinery/reagent_refinery/reactor/R = target
+			if(R.toggle_mode == 1)
+				return
+
 	// Transfer to target in amounts every process tick!
-	RT.trans_to_obj(target, beaker.amount_per_transfer_from_this)
-	// Power use
-	use_power_oneoff(active_power_usage)
+	if(active_power_usage > 0)
+		use_power_oneoff(active_power_usage)
+	if(filter_id == "")
+		var/amount = RT.trans_to_obj(target, beaker.amount_per_transfer_from_this)
+		return amount
+	else
+		// Split out reagent...
+		// Yet another hack, because I refuse to rewrite base code for a module. It's a shame it can't just be forced.
+		var/old_flags = target.flags
+		target.flags |= OPENCONTAINER // trans_id_to expects an opencontainer flag, but this is closed plumbing...
+		var/amount = RT.trans_id_to(target, filter_id, beaker.amount_per_transfer_from_this)
+		target.flags = old_flags
+		// End hacky flag stuff
+		return amount
 
 /obj/machinery/reagentgrinder/industrial/Moved(atom/old_loc, direction, forced)
 	. = ..()
@@ -108,7 +152,7 @@
 		update_icon()
 		return
 
-	if (istype(O,/obj/item/reagent_containers/glass) || \
+	if(istype(O,/obj/item/reagent_containers/glass) || \
 		istype(O,/obj/item/reagent_containers/food/drinks/glass2) || \
 		istype(O,/obj/item/reagent_containers/food/drinks/shaker))
 		// Transfer FROM internal beaker to this.
@@ -172,7 +216,7 @@
 /obj/machinery/reagentgrinder/industrial/examine(mob/user)
 	. = list(initial(desc)) // Clears the parent's messy stuff
 	if(beaker)
-		. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [beaker.amount_per_transfer_from_this]u."
+		. += "The meter shows [beaker.reagents.total_volume]u / [beaker.reagents.maximum_volume]u. It is pumping chemicals at a rate of [beaker.amount_per_transfer_from_this]u."
 
 /obj/machinery/reagentgrinder/industrial/grind(var/mob/user)
 	return
