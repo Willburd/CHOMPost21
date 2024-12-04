@@ -39,7 +39,7 @@
 		new /datum/data/mining_equipment("Injector (L) - Panacea",/obj/item/reagent_containers/hypospray/autoinjector/biginjector/purity,	30),
 		new /datum/data/mining_equipment("Injector (L) - Trauma",/obj/item/reagent_containers/hypospray/autoinjector/biginjector/brute,	50),
 		new /datum/data/mining_equipment("Nanopaste Tube",				/obj/item/stack/nanopaste,											50),
-		new /datum/data/mining_equipment("Defense Equipment - Phase Pistol",/obj/item/gun/energy/locked/phasegun/pistol,					15), //CHOMPedit
+		new /datum/data/mining_equipment("Defense Equipment - Phase Pistol",/obj/item/gun/energy/locked/phasegun/pistol/unlocked,					15), //CHOMPedit // Outpost 21 edit - unlock most explo guns
 		new /datum/data/mining_equipment("Defense Equipment - Smoke Bomb",/obj/item/grenade/smokebomb,								50),
 		new /datum/data/mining_equipment("Defense Equipment - Razor Drone Deployer",/obj/item/grenade/spawnergrenade/manhacks/station,	50),
 		new /datum/data/mining_equipment("Defense Equipment - Sentry Drone Deployer",/obj/item/grenade/spawnergrenade/ward,			100),
@@ -56,11 +56,11 @@
 		EQUIPMENT("Defense Equipment - Plasteel Machete",		/obj/item/material/knife/machete,							50),
 		EQUIPMENT("Defense Equipment - Razor Drone Deployer",	/obj/item/grenade/spawnergrenade/manhacks/station/locked,	100),
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",	/obj/item/grenade/spawnergrenade/ward,						150),
-		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/rifle,				800), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Frontier Shotgun", 	/obj/item/gun/energy/locked/frontier/shotgun,				800), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/gun/energy/locked/frontier/carbine,				800), //CHOMPEDIT
-		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/gun/energy/locked/frontier,					600), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/holdout,				300), //CHOMPADD
+		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/rifle/unlocked,				800), //CHOMPADD // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Frontier Shotgun", 	/obj/item/gun/energy/locked/frontier/shotgun/unlocked,				800), //CHOMPADD // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Frontier Carbine",		/obj/item/gun/energy/locked/frontier/carbine/unlocked,				800), //CHOMPEDIT // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Frontier Phaser",		/obj/item/gun/energy/locked/frontier/unlocked,					600), //CHOMPADD // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/holdout/unlocked,				300), //CHOMPADD // Outpost 21 edit - unlock most explo guns
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",	/obj/item/kinetic_crusher/machete/dagger,					75),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",	/obj/item/kinetic_crusher/machete,							250),
 		EQUIPMENT("Fishing Net",								/obj/item/material/fishing_net,								50),

@@ -21,7 +21,7 @@
 	id = "phasepistol"
 	req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun/pistol
+	build_path = /obj/item/gun/energy/locked/phasegun/pistol/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAA"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -29,7 +29,7 @@
 	id = "phasecarbine"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 2, TECH_POWER = 2)
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun
+	build_path = /obj/item/gun/energy/locked/phasegun/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAB"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -37,7 +37,7 @@
 	id = "phaserifle"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 3, TECH_POWER = 3)
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 500, MAT_SILVER = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun/rifle
+	build_path = /obj/item/gun/energy/locked/phasegun/rifle/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAC"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -45,7 +45,7 @@
 	id = "phasecannon"
 	req_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4, TECH_POWER = 4)
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_DIAMOND = 750)
-	build_path = /obj/item/gun/energy/locked/phasegun/cannon
+	build_path = /obj/item/gun/energy/locked/phasegun/cannon/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAD"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -53,7 +53,7 @@
 	id = "holdout frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 100, MAT_PHORON = 1000)
-	build_path = /obj/item/gun/energy/locked/frontier/holdout
+	build_path = /obj/item/gun/energy/locked/frontier/holdout/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAE"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -61,7 +61,7 @@
 	id = "frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 2000)
-	build_path = /obj/item/gun/energy/locked/frontier
+	build_path = /obj/item/gun/energy/locked/frontier/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAF"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -69,7 +69,7 @@
 	id = "carbine frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 8, TECH_MATERIAL = 6, TECH_PHORON = 6)
 	materials = list(MAT_STEEL = 6500, MAT_GLASS = 900, MAT_DURASTEEL = 150, MAT_VERDANTIUM = 200, MAT_PHORON = 4000)
-	build_path = /obj/item/gun/energy/locked/frontier/carbine
+	build_path = /obj/item/gun/energy/locked/frontier/carbine/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAG"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -77,7 +77,7 @@
 	id = "marksman rifle frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 900, MAT_DURASTEEL = 200, MAT_VERDANTIUM = 250, MAT_PHORON = 2000)
-	build_path = /obj/item/gun/energy/locked/frontier/rifle
+	build_path = /obj/item/gun/energy/locked/frontier/rifle/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAH"
 	department = LATHE_ALL | LATHE_SECURITY
 
@@ -85,7 +85,7 @@
 	id = "handbow frontier phaser"
 	req_tech = list(TECH_COMBAT = 4, TECH_POWER = 7, TECH_MATERIAL = 6, TECH_PHORON = 6)
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 1000)
-	build_path = /obj/item/gun/energy/locked/frontier/handbow
+	build_path = /obj/item/gun/energy/locked/frontier/handbow/unlocked // Outpost 21 edit - unlock most explo guns
 	sort_string = "MACAI"
 	department = LATHE_ALL | LATHE_SECURITY
 

@@ -40,9 +40,9 @@
 	req_one_access = list(access_explorer,access_pilot,access_medical_equip)
 	products = list(
 				// Phase
-					/obj/item/gun/energy/locked/phasegun/pistol = 10,
-					/obj/item/gun/energy/locked/phasegun = 10,
-					/obj/item/gun/energy/locked/phasegun/rifle = 5,
+					/obj/item/gun/energy/locked/phasegun/pistol/unlocked = 10, // Outpost 21 edit - unlock most explo guns
+					/obj/item/gun/energy/locked/phasegun/unlocked = 10, // Outpost 21 edit - unlock most explo guns
+					/obj/item/gun/energy/locked/phasegun/rifle/unlocked = 5, // Outpost 21 edit - unlock most explo guns
 				// Laser
 					/obj/item/gun/energy/laser = 5,
 				// Ballistic
