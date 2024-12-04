@@ -1035,6 +1035,7 @@
 #include "code\game\machinery\deployable.dm"
 #include "code\game\machinery\deployable_vr.dm"
 #include "code\game\machinery\door_control.dm"
+#include "code\game\machinery\door_control_op.dm"
 #include "code\game\machinery\doorbell_vr.dm"
 #include "code\game\machinery\doppler_array.dm"
 #include "code\game\machinery\exonet_node.dm"
