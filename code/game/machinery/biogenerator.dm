@@ -233,8 +233,9 @@
 		if(i >= 10)
 			to_chat(user, span_notice("\The [src] is already full! Activate it."))
 		else
+			var/obj/item/storage/bag/container = O
 			for(var/obj/item/reagent_containers/food/snacks/grown/G in O.contents)
-				G.loc = src
+				container.remove_from_storage(G, src)
 				i++
 				if(i >= 10)
 					to_chat(user, span_notice("You fill \the [src] to its capacity."))
