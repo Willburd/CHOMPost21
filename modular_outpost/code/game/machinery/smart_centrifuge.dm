@@ -52,7 +52,7 @@
 				for(var/datum/reagent/RL in reagents.reagent_list)
 					if(RL.volume > 0)
 						// Lets solve how much we need to drain into the container...
-						var/obj/item/reagent_containers/chem_disp_cartridge/CD = new(src)
+						var/obj/item/reagent_containers/glass/bottle/CD = new(src)
 						var/remain_vol = RL.volume - CD.reagents.maximum_volume
 						if(remain_vol < 0)
 							remain_vol = 0
@@ -63,9 +63,13 @@
 							CD.reagents.add_reagent( RL.id, trans_vol, RL.data, FALSE)
 							reagents.remove_reagent( RL.id, trans_vol, FALSE )
 							// Lets finish by naming it
-							CD.setLabel(RL.name)
+							CD.name = "[RL.name] bottle"
+							CD.icon_state = "bottle-1"
+							CD.update_icon()
 							CD.forceMove(loc) // Drop it outside
-							sleep(30)
+							CD.pixel_x = rand(-7, 7) // random position
+							CD.pixel_y = rand(-7, 7)
+							sleep(10)
 						else
 							qdel(CD) // Nah.. nothing...
 			sleep(10)
