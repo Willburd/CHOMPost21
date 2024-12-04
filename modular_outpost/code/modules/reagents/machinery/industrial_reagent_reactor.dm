@@ -117,6 +117,15 @@
 	src.set_dir(turn(src.dir, 90))
 	update_icon()
 
+/obj/machinery/reagent_refinery/reactor/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
+	// no back/forth, filters don't use just their forward, they send the side too!
+	if(dir == reverse_dir[source_forward_dir])
+		return 0
+	// locked until distilling mode
+	if(toggle_mode == 1)
+		return 0
+	. = ..(origin_machine, RT, source_forward_dir, filter_id)
+
 /obj/machinery/reagent_refinery/reactor/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."

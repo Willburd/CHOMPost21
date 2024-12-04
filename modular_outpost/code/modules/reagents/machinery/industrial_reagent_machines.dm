@@ -74,58 +74,31 @@
 		amount_per_transfer_from_this = N
 	update_icon()
 
+/obj/machinery/reagent_refinery/proc/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "") // Handle transfers in an override, instead of one monster function that typechecks like transfer_tank() used to be
+	// Transfer to target in amounts every process tick!
+	if(filter_id == "")
+		var/amount = RT.trans_to_obj(src, amount_per_transfer_from_this)
+		return amount
+	// Split out reagent...
+	// Yet another hack, because I refuse to rewrite base code for a module. It's a shame it can't just be forced.
+	var/old_flags = flags
+	flags |= OPENCONTAINER // trans_id_to expects an opencontainer flag, but this is closed plumbing...
+	var/amount = RT.trans_id_to(src, filter_id, amount_per_transfer_from_this)
+	flags = old_flags
+	// End hacky flag stuff
+	return amount
+
 /obj/machinery/reagent_refinery/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target, var/source_forward_dir, var/filter_id = "")
 	if(RT.total_volume <= 0 || !anchored || !target.anchored)
-		return
+		return 0
 	if(active_power_usage > 0 && !can_use_power_oneoff(active_power_usage))
-		return
-
-	// Hub fills tankers, not itself! Has some special rules
-	if(istype(target,/obj/machinery/reagent_refinery/hub))
-		if(istype(src,/obj/machinery/reagent_refinery/hub)) // Hubs cannot send into other hubs
-			return
-		if(dir == reverse_dir[source_forward_dir] ) // The hub must be facing into its source to accept input, unlike others
-			return
-		var/obj/machinery/reagent_refinery/hub/H = target
-		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(target)
-		if(!tanker)
-			return
-		if(world.time < tanker.l_move_time + H.wait_delay) // await cooldown to avoid spamming moving tanks
-			return
-		target = tanker // forward it to the tanker!
-
-	else
-		// pumps, furnaces and filters can only be FED in a straight line
-		if(istype(target,/obj/machinery/reagent_refinery/pump) || istype(target,/obj/machinery/reagent_refinery/filter) || istype(target,/obj/machinery/reagent_refinery/furnace))
-			if(dir != target.dir)
-				return
-
-		// no back/forth, filters don't use just their forward, they send the side too!
-		if(!istype(target,/obj/machinery/reagent_refinery/waste_processor)) // Waste tanks accept from all sides
-			if(target.dir == reverse_dir[source_forward_dir])
-				return
-
-		// locked until distilling mode
-		if(istype(target,/obj/machinery/reagent_refinery/reactor))
-			var/obj/machinery/reagent_refinery/reactor/R = target
-			if(R.toggle_mode == 1)
-				return
-
-	// Transfer to target in amounts every process tick!
-	if(active_power_usage > 0)
+		return 0
+	if(!istype(target,/obj/machinery/reagent_refinery)) // cannot transfer into grinders anyway, so it's fine to do it this way.
+		return 0
+	var/transfered = target.handle_transfer(src,RT,source_forward_dir,filter_id)
+	if(transfered > 0 && active_power_usage > 0)
 		use_power_oneoff(active_power_usage)
-	if(filter_id == "")
-		var/amount = RT.trans_to_obj(target, amount_per_transfer_from_this)
-		return amount
-	else
-		// Split out reagent...
-		// Yet another hack, because I refuse to rewrite base code for a module. It's a shame it can't just be forced.
-		var/old_flags = target.flags
-		target.flags |= OPENCONTAINER // trans_id_to expects an opencontainer flag, but this is closed plumbing...
-		var/amount = RT.trans_id_to(target, filter_id, amount_per_transfer_from_this)
-		target.flags = old_flags
-		// End hacky flag stuff
-		return amount
+	return transfered
 
 // Climbing is kinda critical for these
 /obj/machinery/reagent_refinery/verb/climb_on()

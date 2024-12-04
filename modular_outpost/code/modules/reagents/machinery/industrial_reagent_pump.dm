@@ -68,6 +68,12 @@
 	src.set_dir(turn(src.dir, 90))
 	update_icon()
 
+/obj/machinery/reagent_refinery/pump/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
+	// pumps, furnaces and filters can only be FED in a straight line
+	if(source_forward_dir != dir)
+		return 0
+	. = ..(origin_machine, RT, source_forward_dir, filter_id)
+
 /obj/machinery/reagent_refinery/pump/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."

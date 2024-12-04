@@ -122,6 +122,12 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 	. = ..()
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
 
+/obj/machinery/reagent_refinery/vat/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
+	// no back/forth, filters don't use just their forward, they send the side too!
+	if(dir == reverse_dir[source_forward_dir])
+		return 0
+	. = ..(origin_machine, RT, source_forward_dir, filter_id)
+
 /obj/machinery/reagent_refinery/vat/MouseDrop_T(var/atom/movable/C, mob/user as mob)
 	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))
 		return

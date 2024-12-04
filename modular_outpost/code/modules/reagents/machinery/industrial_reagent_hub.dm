@@ -90,6 +90,23 @@
 	src.set_dir(turn(src.dir, 90))
 	update_icon()
 
+/obj/machinery/reagent_refinery/hub/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
+	if(istype(origin_machine,/obj/machinery/reagent_refinery/hub)) // Hubs cannot send into other hubs
+		return 0
+	if(dir != reverse_dir[source_forward_dir] ) // The hub must be facing into its source to accept input, unlike others
+		return 0
+	var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(src)
+	if(!tanker)
+		return 0
+	if(world.time < tanker.l_move_time + wait_delay) // await cooldown to avoid spamming moving tanks
+		return 0
+	// Don't call parent, we're transfering into the holding tank instead
+	if(filter_id == "")
+		return RT.trans_to_obj(tanker, amount_per_transfer_from_this)
+	else
+		// Split out reagent...
+		return RT.trans_id_to(tanker, filter_id, amount_per_transfer_from_this)
+
 /obj/machinery/reagent_refinery/hub/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
