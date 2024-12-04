@@ -45,8 +45,6 @@
 			/mob/living/simple_mob/vore/demon/engorge,
 			/mob/living/simple_mob/humanoid/cultist/noodle,
 			/mob/living/simple_mob/humanoid/cultist/tesh,
-			/mob/living/simple_mob/humanoid/cultist/human/bloodjaunt/fireball,
-			/mob/living/simple_mob/humanoid/cultist/tesh,
 			// Candy
 			/mob/living/simple_mob/vore/candy/redcabold,
 			/mob/living/simple_mob/vore/candy/bluecabold,
