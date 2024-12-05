@@ -313,7 +313,7 @@
 		S.produceCopy(dna.species_traits, H, dna.base_species, FALSE) // Traitgenes edit - reset_dna flag required, or genes get reset on resleeve
 		// VOREStation Edit End
 
-		// Outpost 21 edit begin - Needs to be done after producecopy. blood reagent, Species sounds
+		// Outpost 21 edit begin - missing dna entry, Needs to be done after producecopy. blood reagent, Species sounds
 		H.species.blood_reagents = dna.blood_reagents
 		H.species.species_sounds = dna.species_sounds
 		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
