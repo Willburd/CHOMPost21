@@ -208,12 +208,6 @@
 		var/hair = dna.GetUIValueRange(DNA_UI_HAIR_STYLE,hair_styles_list.len)
 		if((0 < hair) && (hair <= hair_styles_list.len))
 			H.h_style = hair_styles_list[hair]
-		// Outpost 21 edit begin - missing dna entry
-		H.grad_style = dna.grad_style
-		H.r_grad = dna.r_grad
-		H.g_grad = dna.g_grad
-		H.b_grad = dna.b_grad
-		// Outpost 21 edit end
 
 		//Facial Hair
 		var/beard = dna.GetUIValueRange(DNA_UI_BEARD_STYLE,facial_hair_styles_list.len)
@@ -303,18 +297,16 @@
 		H.custom_whisper = dna.custom_whisper
 		H.custom_exclaim = dna.custom_exclaim
 		H.species.blood_color = dna.blood_color
-		H.species.blood_reagents = dna.blood_reagents // Outpost 21 edit - missing dna entry
-		H.fuzzy = dna.scale_appearance // Outpost 21 edit - missing dna entry
-		H.offset_override = dna.offset_override // Outpost 21 edit - missing dna entry
-		H.synth_markings = dna.synth_markings // Outpost 21 edit - missing dna entry
-		H.custom_speech_bubble = dna.custom_speech_bubble // Outpost 21 edit - missing dna entry
-		// Outpost 21 edit begin - missing dna entry, Species sounds
+		// Outpost 21 edit begin - missing dna entry, blood reagent, scale appearance, scale offset, synth markings, speach bubble type, Species sounds, hair gradient
+		H.species.blood_reagents = dna.blood_reagents
+		H.fuzzy = dna.scale_appearance
+		H.offset_override = dna.offset_override
+		H.synth_markings = dna.synth_markings
+		H.custom_speech_bubble = dna.custom_speech_bubble
 		H.species.species_sounds = dna.species_sounds
 		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
 		H.species.species_sounds_male = dna.species_sounds_male
 		H.species.species_sounds_female = dna.species_sounds_female
-		// Outpost 21 edit end
-		// Outpost 21 edit begin - missing dna entry, hair gradient
 		H.grad_style = dna.grad_style
 		H.r_grad = dna.r_grad
 		H.g_grad = dna.g_grad
