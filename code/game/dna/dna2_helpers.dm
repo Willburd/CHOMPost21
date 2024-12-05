@@ -297,16 +297,11 @@
 		H.custom_whisper = dna.custom_whisper
 		H.custom_exclaim = dna.custom_exclaim
 		H.species.blood_color = dna.blood_color
-		// Outpost 21 edit begin - missing dna entry, blood reagent, scale appearance, scale offset, synth markings, speach bubble type, Species sounds, hair gradient
-		H.species.blood_reagents = dna.blood_reagents
+		// Outpost 21 edit begin - missing dna entry, scale appearance, scale offset, synth markings, speach bubble type, Species sounds, hair gradient
 		H.fuzzy = dna.scale_appearance
 		H.offset_override = dna.offset_override
 		H.synth_markings = dna.synth_markings
 		H.custom_speech_bubble = dna.custom_speech_bubble
-		H.species.species_sounds = dna.species_sounds
-		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
-		H.species.species_sounds_male = dna.species_sounds_male
-		H.species.species_sounds_female = dna.species_sounds_female
 		H.grad_style = dna.grad_style
 		H.r_grad = dna.r_grad
 		H.g_grad = dna.g_grad
@@ -317,6 +312,14 @@
 		var/datum/species/S = H.species
 		S.produceCopy(dna.species_traits, H, dna.base_species, FALSE) // Traitgenes edit - reset_dna flag required, or genes get reset on resleeve
 		// VOREStation Edit End
+
+		// Outpost 21 edit begin - Needs to be done after producecopy. blood reagent, Species sounds
+		H.species.blood_reagents = dna.blood_reagents
+		H.species.species_sounds = dna.species_sounds
+		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
+		H.species.species_sounds_male = dna.species_sounds_male
+		H.species.species_sounds_female = dna.species_sounds_female
+		// Outpost 21 edit end
 
 		H.force_update_organs() //VOREStation Add - Gotta do this too
 		H.force_update_limbs()
