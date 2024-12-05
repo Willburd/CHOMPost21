@@ -45,7 +45,8 @@
 		"Foot, Left"   = list(/obj/item/organ/external/foot,  20),
 		"Foot, Right"   = list(/obj/item/organ/external/foot/right,  20),
 		"Hand, Left"   = list(/obj/item/organ/external/hand,  20),
-		"Hand, Right"   = list(/obj/item/organ/external/hand/right,  20)
+		"Hand, Right"   = list(/obj/item/organ/external/hand/right,  20),
+		"Organ Lattice" = list(/obj/item/organ/internal/malignant/engineered/lattice,  30) // Outpost 21 edit - Bioprinting engineered lattice organs
 		)
 
 	var/list/complex_products = list(

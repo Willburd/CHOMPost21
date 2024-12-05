@@ -584,21 +584,18 @@
 	Will find lots of use with abductors in the future!
 ****************************************************/
 
-/* Disabled engineering from the ground up
 // Basic lattice, needs to grow in a host for a bit
 /obj/item/organ/internal/malignant/engineered/lattice
 	name = "organ lattice"
 	icon_state = "lattice"
-	desc = "A cellular framework made for engineering organs, requires radium to properly grow."
+	desc = "A cellular framework made for engineering organs, it needs to grow before it can be mutated."
 	var/growth = 0 		// grows until it hits trigger
-	var/chemsoak = 0 	// if it's been fed the amount of chems it wants, counts DOWN when being satisfied
 	var/growth_trigger = 1
 	var/prepared = FALSE
-	var/mutating = FALSE
+	var/chem_target = null
 
 /obj/item/organ/internal/malignant/engineered/lattice/New(var/mob/living/holder, var/internal, var/force_location = null, var/forcetag = null)
 	growth_trigger = rand(150,200)
-	chemsoak = rand(50,90)
 	return ..( holder, internal, force_location, forcetag)
 
 /obj/item/organ/internal/malignant/engineered/lattice/process()
@@ -608,114 +605,87 @@
 		return
 	if(!owner)
 		return
-	if(mutating)
+	if(chem_target)
 		// finished, ready to TRANSFORM
-		growth++
-
-		// check bloodstream for reagents, see if we're being chemically trained
-		var/list/possibletraining = list() // adds the chemid if present, then picks a random one once training is finished
-
-		if(owner.radiation > 400)
-			// check for radiation training options?
-			//var/list/radlist = list() // used like chemlist is, once we have rad trained organs
-			chemsoak -= 1
+		if(owner.radiation > 20)
+			growth++
+			owner.nutrition -= rand(1,3)
+		if(owner.nutrition > 20)
 			if(growth > growth_trigger)
-				damage += 3
-				add_autopsy_data("Radiation degenerated training cells", 3)
-				cooldown = rand(5,10)
+				// spawn new organ, delete us
+				var/newpath = get_mutation_result(chem_target)
+				if(newpath)
+					var/ourowner = owner
+					var/ourloc = parent_organ
+					var/ourtag = organ_tag
+					Destroy()
+					new newpath(ourowner, TRUE, ourloc, ourtag)
+			cooldown = rand(2,5)
 		else
-			// check for reagents that we can train on
-			var/anychecks = FALSE
-			var/list/chemlist = list("phoron","tricordrazine","tramadol","anti_toxin","citalopram","bicaridine","dermaline","kelotane","dexalin","hyperzine","spaceacillin","inaprovaline","bliss")
-			for(var/chem in chemlist)
-				if(owner.bloodstr.get_reagent_amount(chem) > 0)
-					anychecks = TRUE
-					possibletraining.Add(chem)
-			if(anychecks)
-				chemsoak -= 1
-			else if(growth > growth_trigger)
-				damage += 3
-				add_autopsy_data("Apoptotic training cells", 3)
-				cooldown = rand(5,10)
+			damage += 1
+			add_autopsy_data("Apoptotic training cells", 3)
+			cooldown = rand(5,10)
 
-		// TRAINING FINISHED
-		if(chemsoak <= 0)
-			if(possibletraining.len == 0)
-				damage += 5
-				add_autopsy_data("Apoptotic training cells", 5) // quickly dies if you mess this up
-				cooldown = rand(5,10)
-				return
-			var/newpath = null
-			var/trainingpick = pick(possibletraining)
-			switch(trainingpick)
-				if("phoron")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/phoron
-				if("tricordrazine")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/tricord
-				if("tramadol")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/tramadol
-				if("anti_toxin")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dylovene
-				if("citalopram")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/citalopram
-				if("bicaridine")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/bicaridine
-				if("dermaline")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dermaline
-				if("kelotane")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/kelotane
-				if("dexalin")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dexalin
-				if("hyperzine")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/hyperzine
-				if("spaceacillin")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/spaceacillin
-				if("inaprovaline")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/inaprovaline
-				if("bliss")
-					newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/bliss
-			// spawn new organ, delete us
-			if(newpath)
-				var/ourowner = owner
-				var/ourloc = parent_organ
-				var/ourtag = organ_tag
-				Destroy()
-				new newpath(ourowner, TRUE, ourloc, ourtag)
-	else if(prepared)
-		if(chemsoak > 0)
-			if(owner.bloodstr.get_reagent_amount("mutagen") > 0)
-				// soak the organ till ready for mutation
-				chemsoak -= 1
-		else
-			// BEGIN MUTATION PROCESS
-			mutating = TRUE
-			name = "mutoid"
-			icon_state = "lattice-mutated"
-			desc = "A fully grown mutoid ready for chemical or radiation training."
-			growth = 0
-			growth_trigger = rand(160,210) // we will quickly start dying now unless trained
-			chemsoak = rand(80,150) // chemical training time
-			update_icon()
-	else
-		if(chemsoak > 0 && owner.bloodstr.get_reagent_amount("radium") > 0)
-			// soak the organ till grown
-			chemsoak -= 1
-		growth++
+	else if(!prepared)
+		owner.nutrition -= rand(1,3)
+		if(owner.nutrition > 20)
+			growth++
 		if(growth > growth_trigger)
-			if(chemsoak <= 0)
-				name = "proto-organ"
-				icon_state = "lattice-grown"
-				desc = "A half grown proto-organ ready for initial mutation."
-				prepared = TRUE
-				growth = 0
-				chemsoak = rand(40,60) // mutagen soak time
-				update_icon()
-			else
-				// breaks organ
-				damage += 1
-				add_autopsy_data("Early development radium starvation", 1)
-				cooldown = rand(5,10)
-*/
+			name = "proto-organ"
+			icon_state = "lattice-grown"
+			desc = "A half grown proto-organ ready for chemical injection."
+			prepared = TRUE
+			growth = 0
+			update_icon()
+		cooldown = rand(2,6)
+
+/obj/item/organ/internal/malignant/engineered/lattice/proc/get_mutation_result(var/reagent)
+	var/newpath = null
+	switch(reagent)
+		if("phoron")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/phoron
+		if("tricordrazine")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/tricord
+		if("tramadol")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/tramadol
+		if("anti_toxin")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dylovene
+		if("citalopram")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/citalopram
+		if("bicaridine")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/bicaridine
+		if("dermaline")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dermaline
+		if("kelotane")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/kelotane
+		if("dexalin")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dexalin
+		if("hyperzine")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/hyperzine
+		if("spaceacillin")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/spaceacillin
+		if("inaprovaline")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/inaprovaline
+		if("bliss")
+			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/bliss
+	return newpath
+
+/obj/item/organ/internal/malignant/engineered/lattice/proc/make_mutoid(var/reagent)
+	if(!prepared)
+		return FALSE
+	if(chem_target)
+		return FALSE
+	if(!get_mutation_result(reagent))
+		return FALSE
+	// BEGIN MUTATION PROCESS
+	chem_target = reagent
+	name = "mutoid"
+	icon_state = "crypto" // TEMP TODO: "lattice-mutated"
+	desc = "A fully grown mutoid ready for radiation training."
+	growth = 0
+	growth_trigger = rand(160,210) // we will quickly start dying now unless trained
+	update_icon()
+	return TRUE
 
 // Chemical dispensing organs, USES SUB TYPES
 /obj/item/organ/internal/malignant/engineered/chemorgan
