@@ -288,8 +288,9 @@
 		to_chat(src, span_warning("You cannot do that in your current state."))
 		return
 
+	var/attack_range = 5 // Outpost 21 edit - borer fixes, attack range
 	var/list/choices = list()
-	for(var/mob/living/carbon/C in view(3,src))
+	for(var/mob/living/carbon/C in view(attack_range,src)) // Outpost 21 edit - borer fixes, attack range
 		if(C.stat != 2)
 			choices += C
 
@@ -297,7 +298,7 @@
 		to_chat(src, span_warning("You cannot use that ability again so soon."))
 		return
 
-	// Outpost 21 edit begin - borer fixes
+	// Outpost 21 edit begin - borer fixes, no targets
 	if(!choices.len)
 		to_chat(src, "<span class='notice'>There are no viable targets within range...</span>")
 		return
@@ -309,8 +310,8 @@
 
 	if(!M || !src) return
 
-	// Outpost 21 edit begin - borer fixes
-	if(!(M in view(3,src)))
+	// Outpost 21 edit begin - borer fixes, target lost
+	if(!(M in view(attack_range,src)))
 		to_chat(src, "<span class='warning'>\The [M] escaped your influence...</span>")
 		return
 	// Outpost 21 edit end
@@ -321,7 +322,10 @@
 
 	to_chat(src, span_red("You focus your psychic lance on [M] and freeze their limbs with a wave of terrible dread."))
 	to_chat(M, span_red("You feel a creeping, horrible sense of dread come over you, freezing your limbs and setting your heart racing."))
-	M.Weaken(10)
+	// Outpost 21 edit begin - borer fixes, chomp crawling compensation
+	M.Weaken(15)
+	M.Stun(10)
+	// Outpost 21 edit end
 
 	used_dominate = world.time
 
