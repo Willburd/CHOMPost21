@@ -78,7 +78,7 @@
 	var/BU = M.getFireLoss() > 50 	? 	span_bold("[M.getFireLoss()]") 		: M.getFireLoss()
 	var/BR = M.getBruteLoss() > 50 	? 	span_bold("[M.getBruteLoss()]")  	: M.getBruteLoss()
 	var/analyzed_results = ""
-	
+
 	// Outpost 21 edit being - show custom species
 	var/speciesdata = "???";
 	if(ishuman(M))
@@ -279,7 +279,7 @@
 		dat += "<br>"
 //	if (M.reagents && M.reagents.get_reagent_amount("inaprovaline"))
 //		user.show_message(span_notice("Bloodstream Analysis located [M.reagents:get_reagent_amount("inaprovaline")] units of rejuvenation chemicals."))
-	if (M.has_brain_worms())
+	if (advscan >= 2 && M.has_brain_worms()) // Outpost 21 edit - locked behind phasic to aid borer's painful gameplay
 		dat += span_warning("Subject suffering from aberrant brain activity. Recommend further scanning.")
 		dat += "<br>"
 	else if (M.getBrainLoss() >= 60 || !M.has_brain())

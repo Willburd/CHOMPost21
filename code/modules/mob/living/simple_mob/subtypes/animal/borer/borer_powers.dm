@@ -116,6 +116,9 @@
 		//Update their traitor status.
 		if(host.mind)
 			borers.add_antagonist_mind(host.mind, 1, borers.faction_role_text, borers.faction_welcome)
+			// Outpost 21 edit begin - Make it clear to the player not to scream on radio instantly
+			tgui_alert(host, "You have been infested by a cortical borer, and are now held hostage by a brain worm. Please listen to what they have to say; they're in your head. Shouting over radio that you've been infected is probably a bad idea...", "Borer Infestation", list("Ok"))
+			// Outpost 21 edit end
 
 		if(istype(M,/mob/living/carbon/human))
 			var/mob/living/carbon/human/H = M
@@ -322,9 +325,8 @@
 
 	to_chat(src, span_red("You focus your psychic lance on [M] and freeze their limbs with a wave of terrible dread."))
 	to_chat(M, span_red("You feel a creeping, horrible sense of dread come over you, freezing your limbs and setting your heart racing."))
-	// Outpost 21 edit begin - borer fixes, chomp crawling compensation
-	M.Weaken(15)
-	M.Stun(10)
+	// Outpost 21 edit begin - borer fixes, host needs to sleep to avoid radio screaming that ruins the borer interactions
+	M.Sleeping(30)
 	// Outpost 21 edit end
 
 	used_dominate = world.time

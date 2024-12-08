@@ -11,6 +11,12 @@
 		var/obj/O = A
 		return O.attack_hand(src)
 
+	// Outpost 21 edit begin - borers cannot prod from inside host
+	if(istype(src,/mob/living/simple_mob/animal/borer) && istype(loc,/mob))
+		to_chat(src,"You cannot interact with that from inside a host!")
+		return
+	// Outpost 21 edit end
+
 	switch(a_intent)
 		if(I_HELP)
 
