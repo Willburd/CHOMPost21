@@ -8,8 +8,8 @@
 	var/equip_body = FALSE				//If true, this will spawn the person with equipment
 	var/default_job = JOB_ALT_VISITOR		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
 	var/ghost_spawns = FALSE			//If true, allows ghosts who haven't been spawned yet to spawn
-	var/vore_respawn = 30 MINUTES		//The time to wait if you died from vore // Outpost 21 edit - 30 mins instead of 5
-	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
+	var/vore_respawn = 15 MINUTES		//The time to wait if you died from vore // Outpost 21 edit - 15 mins
+	var/respawn = 15 MINUTES			//The time to wait if you didn't die from vore // Outpost 21 edit - 15 mins
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
 	// Outpost 21 addition begin - Our resleever works different
