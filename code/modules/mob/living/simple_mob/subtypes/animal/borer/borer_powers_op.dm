@@ -1,5 +1,5 @@
 /mob/living/simple_mob/animal/borer/verb/taste_chemicals()
-	set category = "Abilities"
+	set category = "Abilities.Borer"
 	set name = "Taste Blood"
 	set desc = "Tastes the chemicals in your host's bloodstream."
 
