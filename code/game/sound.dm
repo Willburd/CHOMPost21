@@ -35,7 +35,7 @@
 			if(!T)
 				continue
 			var/area/A = T.loc
-			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 				continue
 			//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
 
@@ -59,7 +59,7 @@
 			if(!T)
 				continue
 			var/area/A = T.loc
-			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 				continue
 
 			if(!T || T.z != turf_source.z) //^ +1
@@ -84,7 +84,7 @@
 				continue
 
 			var/area/A = T.loc
-			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 				continue
 
 			if(!T || T.z != turf_source.z) //^ +1

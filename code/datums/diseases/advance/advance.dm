@@ -4,8 +4,8 @@ GLOBAL_LIST_EMPTY(archive_diseases)
 GLOBAL_LIST_INIT(advance_cures, list(
 	"sodiumchloride", "sugar", "orangejuice",
 	"spaceacillin", "glucose", "ethanol",
-	"dyloteane", "impedrezene", "hepanephrodaxon",
-	"gold", "silver"
+	"leporazine", "impedrezene", "hepanephrodaxon",
+	"silver", "gold"
 ))
 */
 // Outpost 21 edit begin - Lets use some actual meds, instead of random things from the kitchen
@@ -245,6 +245,13 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	var/s = safepick(GenerateSymptoms(min_level, max_level, 1))
 	if(s)
 		AddSymptom(s)
+		Refresh(1)
+	return
+
+/datum/disease/advance/proc/PickyEvolve(var/list/datum/symptom/D)
+	var/s = safepick(D)
+	if(s)
+		AddSymptom(new s)
 		Refresh(1)
 	return
 

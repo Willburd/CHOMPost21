@@ -83,6 +83,8 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 		var/datum/sprite_accessory/instance = style_list[path]
 		if(!istype(instance))
 			continue
+		if(instance.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
+			continue
 		if(instance.ckeys_allowed && (!client || !(client.ckey in instance.ckeys_allowed)))
 			continue
 		if(instance.species_allowed && (!species || !(species in instance.species_allowed)) && (!client || !check_rights(R_ADMIN | R_EVENT | R_FUN, 0, client)) && (!custom_base || !(custom_base in instance.species_allowed))) //VOREStation Edit: Custom Species

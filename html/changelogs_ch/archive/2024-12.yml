@@ -47,3 +47,21 @@
   - maptweak: Removed the chemistry lab in xenoarch - the lab already has a massive
       coolant supply. Added a sulphuric acid dispenser in its place
   - maptweak: Removes the crew monitor from xenoarch
+2024-12-05:
+  Kashargul:
+  - bugfix: ai robot module list
+2024-12-06:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: You can now de and reconstruct all parts of an airlock.
+  - rscadd: Ability to set tags on different airlock parts (button, sensor, vent pumps)
+      with a multitool.
+2024-12-07:
+  Kashargul:
+  - bugfix: liquid transfer not working when the partner's vorgan had no reagent datum
+      before
+  - bugfix: 'limit check respecting the belly reagent limit, not the character limit
+
+      fix reagent transfer between borgs and simple mobs'
+2024-12-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: pilot, explorer and centcomm headset types having different functions
