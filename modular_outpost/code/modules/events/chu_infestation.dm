@@ -22,7 +22,7 @@
 					if((ishuman(L) || issilicon(L)) && L.stat != DEAD)
 						continue // skip... Too close to player
 				var/area/A = get_area(temp_vent)
-				if(!(A.forbid_events))
+				if(!(A.flag_check(AREA_FORBID_EVENTS)))
 					vents += temp_vent
 
 	while((spawncount >= 1) && vents.len)

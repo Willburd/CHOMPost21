@@ -15,10 +15,10 @@
 	// Outpost 21 edit end
 	var/obj/item/organ/internal/appendix/A = internal_organs_by_name[O_APPENDIX]
 	if(istype(A) && !A.inflamed)
-		A.inflamed = 1
+		ForceContractDisease(new /datum/disease/appendicitis)
 		return 1
 	return 0
-
+/*
 /obj/item/organ/internal/appendix/process()
 	..()
 
@@ -51,7 +51,7 @@
 			owner.adjustToxLoss(25)
 			groin.wounds += W
 			inflamed = 1
-
+*/
 /obj/item/organ/internal/appendix/removed()
 	if(inflamed)
 		icon_state = "[initial(icon_state)]inflamed"

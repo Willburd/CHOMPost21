@@ -312,7 +312,7 @@
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
 	icon_state = "red2"
-	secret_name = FALSE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
@@ -321,7 +321,7 @@
 	name = "\improper GET OUT"
 	var/show_name = "GET OUT" // replaces name
 	icon_state = "red2"
-	secret_name = FALSE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	always_unpowered = FALSE
 	requires_power = FALSE
 	sound_env = SOUND_ENVIRONMENT_AUDITORIUM
@@ -334,14 +334,14 @@
 /area/submap/outpost21/cave_red_A
 	name = "\improper Our Pulsing Mass"
 	icon_state = "red2"
-	secret_name = FALSE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/submap/outpost21/cave_red_B
 	name = "\improper Inside Us"
-	secret_name = FALSE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	icon_state = "red2"
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
@@ -350,7 +350,7 @@
 /area/submap/outpost21/cave_red_C
 	name = "\improper Touch Our Skin"
 	icon_state = "red2"
-	secret_name = FALSE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki

@@ -139,10 +139,9 @@
 	name = "\improper Bathroom. Don't use."
 	icon_state = "cyablatri"
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open/force_indoor
-	block_tracking = TRUE // Hide from cams like dorms
 
 /area/muriki/bathroom/atmospherics
 	name = "\improper Atmospherics Latrine"

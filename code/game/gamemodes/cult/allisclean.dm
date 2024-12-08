@@ -24,7 +24,7 @@ var/global/list/allisclean_list = list()
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in SSmachines.all_machines)
 		if(temp_vent.loc.z in using_map.event_levels)
 			var/area/A = get_area(temp_vent)
-			if(!(A.forbid_events))
+			if(!(A.flag_check(AREA_FORBID_EVENTS)))
 				vents += temp_vent
 
 /obj/singularity/allisclean/Destroy()
