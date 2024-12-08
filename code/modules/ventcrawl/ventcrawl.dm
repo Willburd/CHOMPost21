@@ -181,11 +181,11 @@ var/list/ventcrawl_machinery = list(
 					if(HAZARD_HIGH_PRESSURE to INFINITY)
 						to_chat(src, span_danger("You feel a roaring wind pushing you away from the vent!"))
 
-			fade_towards(vent_found,45)
+			fade_towards(vent_found,vent_crawl_time)
 			prepping_to_ventcrawl = 1
-			spawn(50)
+			spawn(vent_crawl_time + 5)
 				prepping_to_ventcrawl = 0
-			if(!do_after(src, 45, vent_found, 1, 1))
+			if(!do_after(src, vent_crawl_time, vent_found, 1, 1))
 				return
 			if(!can_ventcrawl())
 				return

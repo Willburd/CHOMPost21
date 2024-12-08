@@ -48,6 +48,8 @@
 
 	enzyme_affect = FALSE // Outpost 21 edit - safe outside
 
+	vent_crawl_time = 30 // Outpost 21 edit - faster crawler
+
 /mob/living/simple_mob/animal/borer/roundstart
 	roundstart = TRUE
 

@@ -245,3 +245,5 @@
 	var/custom_footstep = FOOTSTEP_MOB_SHOE // CHOMPEdit
 	var/list/viruses = list()
 	var/list/resistances = list()
+
+	var/vent_crawl_time = 45 // Outpost 21 addition - vent crawling speed can be defined per mob
