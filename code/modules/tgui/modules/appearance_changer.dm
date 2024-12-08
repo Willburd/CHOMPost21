@@ -611,6 +611,8 @@
 		return FALSE
 	if(!isnull(X.species_allowed) && !(target.species.name in X.species_allowed) && (!istype(target.species, /datum/species/custom))) // Letting custom species access wings/ears/tails.
 		return FALSE
+	if(X.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
+		return FALSE
 
 	if(LAZYLEN(X.ckeys_allowed) && !(user?.ckey in X.ckeys_allowed) && !(target.ckey in X.ckeys_allowed))
 		return FALSE

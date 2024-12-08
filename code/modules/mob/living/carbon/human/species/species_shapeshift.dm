@@ -95,6 +95,8 @@ var/list/wrapped_species_by_ref = list()
 			continue
 		if(gender == FEMALE && S.gender == MALE)
 			continue
+		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
+			continue
 		if(!(species.get_bodytype(src) in S.species_allowed))
 			continue
 		valid_hairstyles += hairstyle
@@ -103,6 +105,8 @@ var/list/wrapped_species_by_ref = list()
 		if(gender == MALE && S.gender == FEMALE)
 			continue
 		if(gender == FEMALE && S.gender == MALE)
+			continue
+		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
 			continue
 		if(!(species.get_bodytype(src) in S.species_allowed))
 			continue
