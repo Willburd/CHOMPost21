@@ -228,10 +228,12 @@
 		center_of_mass_x = 16 // CHOMPEdit
 		center_of_mass_y =  16 // CHOMPEdit
 
+	/* Outpost 21 edit - Ancient retail system removed
 	if(R.price_tag)
 		price_tag = R.price_tag
 	else
 		price_tag = null
+	*/
 
 /obj/item/reagent_containers/food/drinks/grande
 	name = "grande cup"
@@ -279,10 +281,12 @@
 		center_of_mass_x = 16 // CHOMPEdit
 		center_of_mass_y =  16 // CHOMPEdit
 
+	/* Outpost 21 edit - Ancient retail system removed
 	if(R.price_tag)
 		price_tag = R.price_tag
 	else
 		price_tag = null
+	*/
 
 /obj/item/reagent_containers/food/drinks/venti
 	name = "venti cup"
@@ -330,7 +334,9 @@
 		center_of_mass_x = 16 // CHOMPEdit
 		center_of_mass_y =  16 // CHOMPEdit
 
+	/* Outpost 21 edit - Ancient retail system removed
 	if(R.price_tag)
 		price_tag = R.price_tag
 	else
 		price_tag = null
+	*/

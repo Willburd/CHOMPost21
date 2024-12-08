@@ -30,7 +30,7 @@
 		if(istype(U,/mob))
 			var/mob/M = U
 			if(!M || !M.client)
-			continue
+				continue
 			var/turf/T = get_turf(M)
 			if(!T)
 				continue
@@ -84,7 +84,7 @@
 				continue
 
 			var/area/A = T.loc
-			if((A.soundproofed || area_source.soundproofed) && (A != area_source))
+			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 				continue
 
 			if(!T || T.z != turf_source.z) //^ +1
