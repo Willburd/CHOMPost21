@@ -37,7 +37,7 @@
 
 /obj/item/borg/upgrade/utility/reset
 	name = "robotic module reset board"
-	desc = "Used to reset a cyborg's module. Destroys any higher than basic upgrades applied to the robot."
+	desc = "Used to reset a cyborg's module. Destroys any higher than basic upgrades applied to the robot. DOES NOT RESET LAWS, only equiped modules." // Outpost 21 edit - clarified mechanics
 	icon_state = "cyborg_upgrade1"
 	item_state = "cyborg_upgrade"
 	require_module = 1
