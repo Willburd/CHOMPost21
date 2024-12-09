@@ -615,7 +615,7 @@
 					/obj/item/clothing/under/teshari/undercoat/standard/purple_grey = 5,
 					/obj/item/clothing/under/teshari/undercoat/standard/pink_grey = 5,
 					/obj/item/clothing/under/teshari/undercoat/standard/brown_grey = 5,
-					/obj/item/clothing/under/vox/vox_casual/no_accessory = 5,
+					/obj/item/clothing/under/vox/vox_casual/station = 5,
 					/obj/item/clothing/shoes/black = 20,
 					/obj/item/clothing/shoes/white = 20,
 					/obj/item/clothing/accessory/watch = 20
@@ -2114,7 +2114,7 @@
 					/obj/item/clothing/under/teshari/undercoat/standard/purple_grey = 5,
 					/obj/item/clothing/under/teshari/undercoat/standard/pink_grey = 5,
 					/obj/item/clothing/under/teshari/undercoat/standard/brown_grey = 5,
-					/obj/item/clothing/under/vox/vox_casual/no_accessory = 5,
+					/obj/item/clothing/under/vox/vox_casual/station = 5,
 					/obj/item/clothing/shoes/black = 20,
 					/obj/item/clothing/shoes/white = 20)
 	prices = list()
