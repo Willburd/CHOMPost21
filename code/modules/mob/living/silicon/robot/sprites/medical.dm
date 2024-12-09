@@ -75,6 +75,7 @@
 
 /datum/robot_sprite/medical/worm
 	name = "W02M - Crisis" //CHOMPEdit
+	module_type = "Crisis" // Outpost 21 edit - Crisis only. surgical already exists
 	sprite_icon_state = "worm-crisis" //CHOMPEdit
 	has_custom_open_sprites = TRUE
 	sprite_icon = 'modular_chomp/icons/mob/wormborg.dmi' //CHOMPEdit
