@@ -5,7 +5,7 @@ var/global/list/robot_modules = list(
 	"Research" 		= /obj/item/robot_module/robot/research,
 	"Miner" 		= /obj/item/robot_module/robot/miner,
 	"Crisis" 		= /obj/item/robot_module/robot/medical/crisis,
-//	"Surgeon" 		= /obj/item/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal.
+	"Surgeon" 		= /obj/item/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal. // Split surgery and crisis borgs again
 	"Security" 		= /obj/item/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/robot_module/robot/security/combat,
 	"Engineering"	= /obj/item/robot_module/robot/engineering,
@@ -244,8 +244,8 @@ var/global/list/robot_modules = list(
 	pto_type = PTO_MEDICAL
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
-/* CHOMPedit start: Removal of Surgeon module. *
-
+/* CHOMPedit start: Removal of Surgeon module.
+*/ // Outpost 21 edit - Split surgery and crisis borgs again
 /obj/item/robot_module/robot/medical/surgeon
 	name = "surgeon robot module"
 
@@ -271,6 +271,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/shockpaddles/robot(src)
 	src.modules += new /obj/item/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/reagent_containers/syringe(src)
+	src.modules += new /obj/item/roller_holder(src) // Outpost 21 edit - don't drag bodies
 
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 
@@ -278,7 +279,7 @@ var/global/list/robot_modules = list(
 	PS.reagents.add_reagent("pacid", 250)
 	PS.name = "Polyacid spray"
 
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000)
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(30000) // CHOMPedit: Increased capacity.
 	synths += medicine
 
 	var/obj/item/stack/nanopaste/N = new /obj/item/stack/nanopaste(src)
@@ -295,7 +296,7 @@ var/global/list/robot_modules = list(
 	O.synths = list(medicine)
 	src.modules += N
 	src.modules += B
-	src.modules += O
+	src.modules += O_AUG_SPINE
 
 	src.modules += new /obj/item/dogborg/sleeper/trauma(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
@@ -314,7 +315,7 @@ var/global/list/robot_modules = list(
 		PS.reagents.add_reagent("pacid", 2 * amount)
 
 	..()
-
+/* Outpost 21 edit - Split surgery and crisis borgs again
 * CHOMPedit end: Removal of Surgeon module. */
 
 /obj/item/robot_module/robot/medical/crisis
@@ -333,6 +334,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/gripper/no_use/organ(src)
 	src.modules += new /obj/item/gripper/medical(src)
 	src.modules += new /obj/item/shockpaddles/robot(src)
+/* Outpost 21 edit - Split surgery and crisis borgs again
 // CHOMPedit start: Combining Surgeon and Crisis.
 	src.modules += new /obj/item/autopsy_scanner(src)
 	src.modules += new /obj/item/surgical/scalpel/cyborg(src)
@@ -346,6 +348,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/surgical/surgicaldrill/cyborg(src)
 	src.modules += new /obj/item/surgical/bioregen/cyborg(src)
 // CHOMPedit end: Combining Surgeon and Crisis.
+*/
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
 	src.modules += new /obj/item/holosign_creator/medical(src) //CHOMPAdd
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)

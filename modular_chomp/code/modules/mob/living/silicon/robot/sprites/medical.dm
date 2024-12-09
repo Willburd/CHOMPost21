@@ -1,14 +1,14 @@
 //Medical into Crisis type merge
 /datum/robot_sprite/surgical
-	module_type = "Crisis"
+	module_type =  "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
 
 /datum/robot_sprite/dogborg/surgical
-	module_type = "Crisis"
+	module_type =  "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
 
 // Tall sprites
 
 /datum/robot_sprite/dogborg/tall/surgical
-	module_type = "Crisis"
+	module_type =  "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical_large.dmi'
 
 
