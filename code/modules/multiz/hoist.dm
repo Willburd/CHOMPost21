@@ -92,7 +92,7 @@
 	icon = 'icons/obj/hoists.dmi'
 	icon_state = "hoist_base"
 	var/broken = 0
-	density = TRUE
+	density = FALSE // Outpost 21 edit - having this be dense results in too many issues
 	anchored = TRUE
 	name = "hoist"
 	desc = "A manual hoist, uses a clamp and pulley to hoist things."
