@@ -64,7 +64,8 @@
 
 /obj/machinery/metal_detector/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal() || istype(AM,/mob/observer)) // ectoplasm begone
-		return
+		if(prob(98))
+			return
 	if(stat & (NOPOWER|BROKEN) || !anchored)
 		return
 	if(world.time >= cooldown)
