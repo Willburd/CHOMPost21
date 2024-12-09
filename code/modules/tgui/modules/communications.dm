@@ -73,7 +73,7 @@
 	var/old_level = security_level
 	if(!tmp_alertlevel) tmp_alertlevel = SEC_LEVEL_GREEN
 	if(tmp_alertlevel < SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN
-	if(tmp_alertlevel > SEC_LEVEL_BLUE) tmp_alertlevel = SEC_LEVEL_BLUE //Cannot engage delta with this
+	if(tmp_alertlevel > SEC_LEVEL_RED) tmp_alertlevel = SEC_LEVEL_RED //Cannot engage delta with this. Outpost 21 edit - Allow red alert
 	set_security_level(tmp_alertlevel)
 	if(security_level != old_level)
 		//Only notify the admins if an actual change happened
@@ -90,6 +90,8 @@
 				feedback_inc("alert_comms_orange",1)
 			if(SEC_LEVEL_BLUE)
 				feedback_inc("alert_comms_blue",1)
+			if(SEC_LEVEL_RED) // Outpost 21 edit - Allow red alert
+				feedback_inc("alert_comms_red",1)
 	tmp_alertlevel = 0
 
 /datum/tgui_module/communications/tgui_data(mob/user)
@@ -141,6 +143,7 @@
 		list("id" = SEC_LEVEL_BLUE,   "name" = "Blue",   "icon" = "eye"),
 		list("id" = SEC_LEVEL_ORANGE, "name" = "Orange", "icon" = "wrench"),
 		list("id" = SEC_LEVEL_VIOLET, "name" = "Violet", "icon" = "biohazard"),
+		list("id" = SEC_LEVEL_RED, 	  "name" = "Red", 	 "icon" = "close"), // Outpost 21 edit - Red alert is easier
 	)
 
 	var/datum/comm_message_listener/l = obtain_message_listener()

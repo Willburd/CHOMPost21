@@ -88,7 +88,7 @@
 
 	if(screen == 1)
 		dat += "Select an event to trigger:<ul>"
-		dat += "<li><A href='?src=\ref[src];triggerevent=Red alert'>Red alert</A></li>"
+		dat += "<li><A href='?src=\ref[src];triggerevent=Delta alert'>Delta alert</A></li>" // Outpost 21 edit - Delta alert from card slide console
 		if(!CONFIG_GET(flag/ert_admin_call_only))
 			dat += "<li><A href='?src=\ref[src];triggerevent=Emergency Response Team'>Emergency Response Team</A></li>"
 
@@ -164,9 +164,9 @@
 
 /obj/machinery/keycard_auth/proc/trigger_event()
 	switch(event)
-		if("Red alert")
-			set_security_level(SEC_LEVEL_RED)
-			feedback_inc("alert_keycard_auth_red",1)
+		if("Delta alert") // Outpost 21 edit - Delta alert from card slide console
+			set_security_level(SEC_LEVEL_DELTA) // Outpost 21 edit - Delta alert from card slide console
+			feedback_inc("alert_keycard_auth_delta",1) // Outpost 21 edit - Delta alert from card slide console
 		if("Grant Emergency Maintenance Access")
 			make_maint_all_access()
 			feedback_inc("alert_keycard_auth_maintGrant",1)
