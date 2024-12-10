@@ -169,7 +169,7 @@
 		if(proximity_flag && isliving(target))
 			detonate(target, user)
 	else
-		to_chat(user, "<span class='warning'>You refrain from firing \the [src] as your intent is set to help.</span>")
+		to_chat(user, span_warning("You refrain from firing \the [src] as your intent is set to help."))
 
 /obj/item/kinetic_crusher/proc/detonate(mob/living/L, mob/living/user, thrown = FALSE)
 	var/datum/modifier/crusher_mark/CM = L.get_modifier_of_type(/datum/modifier/crusher_mark)

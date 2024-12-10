@@ -97,16 +97,16 @@
 /obj/machinery/bunsen_burner/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/reagent_containers))
 		if(held_container)
-			user << "<span class='warning'>You must remove the [held_container] first.</span>"
+			user << span_warning("You must remove the [held_container] first.")
 		else
 			user.drop_item(src)
 			held_container = W
 			held_container.loc = src
-			user << "<span class='notice'>You put the [held_container] onto the [src].</span>"
+			user << span_notice("You put the [held_container] onto the [src].")
 			var/image/I = image("icon"=W, "layer"=FLOAT_LAYER)
 			underlays += I
 	else
-		user << "<span class='warning'>You can't put the [W] onto the [src].</span>"
+		user << span_warning("You can't put the [W] onto the [src].")
 
 /obj/machinery/bunsen_burner/AltClick(var/mob/user)
 	. = ..()
@@ -118,12 +118,23 @@
 /obj/machinery/bunsen_burner/attack_hand(mob/user as mob)
 	if(held_container)
 		underlays = null
-		user << "<span class='notice'>You remove the [held_container] from the [src].</span>"
+		user << span_notice("You remove the [held_container] from the [src].")
 		held_container.loc = src.loc
 		held_container.attack_hand(user)
 		held_container = null
 	else
-		user << "<span class='warning'>There is nothing on the [src].</span>"
+		user << span_warning("There is nothing on the [src].")
+
+/* Outpost 21 edit - Bunsen burner altered
+/obj/machinery/bunsen_burner/proc/try_heating()
+	src.visible_message(span_notice(" icon[src] [src] hisses."))
+	if(held_container && heating)
+		heated = 1
+		held_container.reagents.handle_reactions()
+		heated = 0
+		spawn(heat_time)
+			try_heating()
+*/
 
 /obj/machinery/bunsen_burner/verb/toggle()
 	set src in view(1)

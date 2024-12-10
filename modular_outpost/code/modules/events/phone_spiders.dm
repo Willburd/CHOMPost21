@@ -19,7 +19,7 @@
 		while(sub >= 1)
 			var/obj/effect/spider/spiderling/phone_spider/S = new /obj/effect/spider/spiderling/phone_spider(phone.loc)
 			if(first)
-				phone.visible_message("<span class='warning'>A pack of [S]s makes their way out of \the [phone]!</span>")
+				phone.visible_message( span_warning("A pack of [S]s makes their way out of \the [phone]!"))
 				first = FALSE
 			sub--
 			spawncount--

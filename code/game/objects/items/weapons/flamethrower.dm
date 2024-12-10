@@ -75,7 +75,7 @@
 	if(!lit || operating)	return
 	if(user && user.get_active_hand() == src)
 		if(user.a_intent == I_HELP && user.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))
-			to_chat(user, "<span class='warning'>You refrain from firing \the [src] as your intent is set to help.</span>")
+			to_chat(user, span_warning("You refrain from firing \the [src] as your intent is set to help."))
 			return
 
 		if(check_fuel())
@@ -102,7 +102,7 @@
 				if((M.client && M.machine == src))
 					attack_self(M)
 		else
-			to_chat(user, "<span class='notice'>There is not enough pressure in [src]'s tank!</span>")
+			to_chat(user, span_notice("There is not enough pressure in [src]'s tank!"))
 			update_icon()
 
 		// prevent spam

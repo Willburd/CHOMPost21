@@ -53,13 +53,13 @@
 
 		// check if not on same turf (nearby check!)
 		if(loc != throw_mob.loc)
-			to_chat(src, "<span class='danger'>Couldn't slam [throw_mob] into the wall! They are too far away!</span>")
+			to_chat(src, span_danger("Couldn't slam [throw_mob] into the wall! They are too far away!"))
 			return -1
 
 		// check if head is gone... otherwise torso should always exist? Would check anyway...
 		var/obj/item/organ/external/affecting = throw_mob.get_organ(hit_zone)
 		if(!affecting || affecting.is_stump())
-			to_chat(src, "<span class='danger'>Couldn't slam [throw_mob] into the wall! They are missing the limb targeted!</span>")
+			to_chat(src, span_danger("Couldn't slam [throw_mob] into the wall! They are missing the limb targeted!"))
 			return -1
 
 		// BAM

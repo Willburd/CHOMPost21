@@ -8,7 +8,7 @@
 /obj/item/toy/plushie/jil/attack_self(mob/user as mob)
 	if(!cooldown)
 		playsound(user, 'sound/voice/merp.ogg', 10, 0)
-		src.visible_message("<span class='danger'>Merp!</span>")
+		src.visible_message(span_danger("Merp!"))
 		cooldown = 1
 		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
 	return ..()
@@ -26,7 +26,7 @@
 /obj/item/toy/plushie/tinytin/attack_self(mob/user as mob)
 	if(!cooldown)
 		playsound(user, 'sound/voice/peep.ogg', 30, 0)
-		src.visible_message("<span class='danger'>Peep peep!</span>")
+		src.visible_message(span_danger("Peep peep!"))
 		cooldown = 1
 		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
 	return ..()
@@ -45,7 +45,7 @@
 /obj/item/toy/plushie/tinytin/sec/attack_self(mob/user as mob)
 	if(!cooldown)
 		playsound(user, 'modular_outpost/sound/misc/tinytin_fuckedup.ogg', 85, 0)
-		src.visible_message("<span class='danger'>That means you fucked up!</span>")
+		src.visible_message(span_danger("That means you fucked up!"))
 		cooldown = 1
 		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
 	return ..()
@@ -61,7 +61,7 @@
 /obj/item/toy/plushie/chu/attack_self(mob/user as mob)
 	if(!cooldown)
 		playsound(user, pick('sound/voice/hiss2.ogg','sound/voice/hiss3.ogg','sound/voice/hiss4.ogg') , 50, 0)
-		src.visible_message("<span class='danger'>Chitter!</span>")
+		src.visible_message(span_danger("Chitter!"))
 		cooldown = 1
 		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
 	return ..()

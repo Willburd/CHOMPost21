@@ -15,9 +15,12 @@
 		var/list/Z_choices = global.using_map.event_levels
 	// Outpost 21 edit end
 		for(var/turf/simulated/floor/T in world)
+			var/area/A = T.loc
 			if(T.z in Z_choices)
 				if(!T.block_tele)
 					pick_turfs += T
+				if(A.flag_check(AREA_FORBID_EVENTS)) // CHOMPEdit - No spawning in dorms
+					continue
 		// CHOMPAdd Start - Chance to end up in a belly. Fun (:
 		for(var/mob/living/mob in player_list)
 			if(mob.can_be_drop_pred && isfloor(mob.loc))

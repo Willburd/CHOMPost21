@@ -21,7 +21,7 @@
 
 /obj/machinery/door/flesh/hitby(AM as mob|obj, var/speed=5)
     // no damage
-    visible_message("<span class='danger'>[src.name] was hit by [AM], with no visible effect.</span>")
+    visible_message(span_danger("[src.name] was hit by [AM], with no visible effect."))
 
 /obj/machinery/door/flesh/attackby(obj/item/I as obj, mob/user as mob)
     // no interaction

@@ -81,7 +81,7 @@
 							playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 							playsound(src, 'sound/effects/smoke.ogg', 20, 1)
 							played_sound = TRUE
-						visible_message("<span class='notice'>\The [src] vomits a gout of smoke!</span>")
+						visible_message(span_notice("\The [src] vomits a gout of smoke!"))
 						var/datum/effect/effect/system/smoke_spread/bad/smoke = new /datum/effect/effect/system/smoke_spread/bad
 						smoke.attach(src)
 						smoke.set_up(10, 0, get_turf(src), 300)
@@ -89,7 +89,7 @@
 				if("FLAG_EXPLODE")
 					// Detonate
 					if(!played_sound)
-						visible_message("<span class='notice'>\The [src] catches fire and violently explodes!</span>")
+						visible_message(span_danger("\The [src] catches fire and violently explodes!"))
 						played_sound = TRUE
 					explosion(loc, 0, 1, 2, 4)
 					visible_message("\The [src.name] detonates!")

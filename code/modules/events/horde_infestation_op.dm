@@ -8,6 +8,7 @@
 	var/spawncount = 1
 	var/list/vents = list()
 	var/spawning = 0
+	var/list/alive_metroids = list()
 
 /datum/event/horde_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 60)
@@ -78,7 +79,7 @@
 				/mob/living/simple_mob/metroid/juvenile/zeta = 2,
 				/mob/living/simple_mob/metroid/juvenile/omega = 1,
 				))
-			new spawn_metroids(get_turf(vent))
+			alive_metroids.Add(new spawn_metroids(get_turf(vent)))
 			vents -= vent
 			spawncount--
 		vents.Cut()
@@ -110,7 +111,7 @@
 		return
 	if(spawning == TROIDS)
 		var/list/area_names = list()
-		for(var/metroids in existing_metroids)
+		for(var/metroids in alive_metroids)
 			var/mob/living/M = metroids
 			if(!M || M.stat == DEAD)
 				continue

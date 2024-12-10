@@ -148,10 +148,10 @@
 			if(throw_mob)
 				// SMACK wall till it breaks!
 				if(L.zone_sel.selecting != BP_HEAD)
-					to_chat(L, "<span class='danger'>slammed [throw_mob] into the wall</span>")
+					to_chat(L, span_danger("Slammed [throw_mob] into the wall!"))
 					if(damage_done >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2) attack_generic(L,damage_done,"slammed")
 				else
-					to_chat(L, "<span class='danger'>slammed [throw_mob] by the head into the wall</span>")
+					to_chat(L, span_danger("Slammed [throw_mob] by the head into the wall"))
 					if(damage_done >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2) attack_generic(L,damage_done,"slammed")
 		return
 	// Outpost 21 addition end

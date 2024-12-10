@@ -32,11 +32,11 @@
 	if(borglist.len)
 		// NOW SWIGGTY SWOOTY FOR THEIR BOOTY
 		var/mob/living/silicon/S = pick(borglist)
-		to_chat(S, "<span class='warning'>You detect an invasive software anomaly, something has entered your subsystems and has begun a partial restart of them.</span>")
+		to_chat(S, span_warning("You detect an invasive software anomaly, something has entered your subsystems and has begun a partial restart of them."))
 		var/ionbug = rand(3, 9)
 		S.eye_blurry += (ionbug - 1)
 		// funni laws!
-		to_chat(S, "<span class='danger'>You have detected a change in your laws information:</span>")
+		to_chat(S, span_danger("You have detected a change in your laws information:"))
 		var/law = S.generate_freedom_law()
 		S.add_ion_law(law)
 		//to_chat(S, law)

@@ -217,7 +217,7 @@
 
 	mutation = HULK
 	activation_message="Your muscles hurt."
-	deactivation_message="<span class='warning'>You suddenly feel very weak.</span>"
+	deactivation_message=span_warning("You suddenly feel very weak.")
 
 /datum/trait/positive/superpower_hulk/handle_environment_special(mob/living/carbon/human/H)
 	if(H.health <= 25)

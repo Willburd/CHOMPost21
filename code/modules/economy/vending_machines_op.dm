@@ -31,7 +31,7 @@
 	if(!(unlock_access[1] in C.access)) //doesn't have this access
 		return FALSE
 	cargo_locked = !cargo_locked
-	visible_message("<span class='info'>\The [user] [cargo_locked ? "locks" : "unlocks"] \the [src]'s restocking controls.</span>")
+	visible_message(span_info("\The [user] [cargo_locked ? "locks" : "unlocks"] \the [src]'s restocking controls."))
 	SStgui.update_uis(src)
 	return TRUE
 

@@ -131,7 +131,7 @@
 		for(var/dept in department_accounts)
 			var/datum/money_account/bank_account = global.department_accounts[dept]
 			if(bank_account)
-				to_chat(H, "<span class='notice'><b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b></span>")
+				to_chat(H, span_notice("<b>Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]</b>"))
 	// Outpost 21 edit end
 
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/qdel()

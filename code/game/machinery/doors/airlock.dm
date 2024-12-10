@@ -1142,7 +1142,7 @@ About the new airlock wires panel:
 		return
 	// Outpost 21 edit begin
 	if(brace)
-		to_chat(user, text("<span class='warning'>The airlock's brace holds it firmly in place.</span>"))
+		to_chat(user, span_warning(text("The airlock's brace holds it firmly in place.")))
 	// Outpost 21 edit end
 	if(welded)
 		to_chat(user, span_warning("The airlock has been welded shut!"))
@@ -1177,12 +1177,12 @@ About the new airlock wires panel:
 	if(!brace && istype(C, /obj/item/airlock_brace))
 		var/obj/item/airlock_brace/A = C
 		if(!density)
-			to_chat(user, "<span class='warning'>You must close \the [src] before installing \the [A]!</span>")
+			to_chat(user, span_warning("You must close \the [src] before installing \the [A]!"))
 			return
 
 		playsound(user, 'sound/machines/lockreset.ogg', 50, 1) // pulling doorjack down!
 		if(do_after(user, 6 SECONDS, src) && density && A && user.unEquip(A, src))
-			to_chat(user, "<span class='notice'>You successfully install \the [A].</span>")
+			to_chat(user, span_notice("You successfully install \the [A]."))
 			A.lock_brace(src)
 		return
 	// Outpost 21 edit end
@@ -1237,7 +1237,8 @@ About the new airlock wires panel:
 	// Outpost 21 edit begin - Crowbar can only wedge doors open on help, so you can beat doorbraces off of them! Also brace feedback.
 	else if(C.has_tool_quality(TOOL_CROWBAR) && user.a_intent == I_HELP)
 		if(brace)
-			to_chat(user, text("<span class='notice'>The airlock's brace holds it firmly in place.</span>"))
+			to_chat(user, span_notice(text("The airlock's brace holds it firmly in place.")))
+
 		// Outpost 21 edit end
 		else if(can_remove_electronics())
 			playsound(src, C.usesound, 75, 1)
@@ -1690,7 +1691,7 @@ About the new airlock wires panel:
 		brace.cur_health = clamp(brace.cur_health - damage, 0, brace.max_health)
 		if(brace.cur_health <= 0)
 			var/obj/item/airlock_brace/braceTemp = brace // store the brace reference so it can be deleted after
-			visible_message(text("<span class='danger'>\The [braceTemp] is smashed off of the airlock!</span>"))
+			visible_message(span_danger(text("\The [braceTemp] is smashed off of the airlock!")))
 			braceTemp.unlock_brace(null)
 			qdel(braceTemp)
 	else
@@ -1699,7 +1700,7 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/examine(mob/user)
 	if(brace)
 		. = ..()
-		. += text("<span class='danger'>A [brace] is installed on the airlock, preventing it from opening. </span>")
+		. += span_danger(text("A [brace] is installed on the airlock, preventing it from opening."))
 		. += brace.examine_health()
 	else
 		. += ..()

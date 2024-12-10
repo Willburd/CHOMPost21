@@ -84,12 +84,12 @@
 									continue	//VOREStation Edit
 								L.drop_from_inventory(W)
 							new /obj/effect/decal/cleanable/ash(L.loc) // Turn it to ashes!
-							L.visible_message("<span class='warning'>[L] turned to ash in the heat of the incinerator!</span>")
+							L.visible_message( span_warning("[L] turned to ash in the heat of the incinerator!"))
 							L.Destroy()
 						else if(istype(thing,/obj/item))
 							var/obj/item/I = thing
 							new /obj/effect/decal/cleanable/ash(I.loc) // Turn it to ashes!
-							I.visible_message("<span class='warning'>[I] turned to ash in the heat of the incinerator!</span>")
+							I.visible_message(span_warning("[I] turned to ash in the heat of the incinerator!"))
 							I.Destroy()
 
 		// random updates to the space above

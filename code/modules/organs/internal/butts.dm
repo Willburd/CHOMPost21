@@ -61,13 +61,13 @@
 	if(robotic < ORGAN_ASSISTED)
 		return FALSE
 	if(safety_system)
-		safety_system = TRUE
+		safety_system = FALSE
 		to_chat(user, "You break the pressure safety system of \the [src].")
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(2, 1, src)
 		s.start()
 		playsound(src, 'sound/machines/defib_charge.ogg', 50, 0) // beep boop
-		visible_message("<span class='warning'>BZZzZZzZZzZT</span>")
+		visible_message(span_warning("BZZzZZzZZzZT"))
 	return TRUE
 
 /obj/item/organ/internal/butt/proc/assblasted(mob/living/user,var/fling = FALSE)

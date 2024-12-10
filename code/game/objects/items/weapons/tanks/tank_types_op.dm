@@ -63,7 +63,7 @@
 /obj/item/tank/carbon_dioxide/examine(mob/user)
 	. = ..()
 	if(loc == user && (air_contents.gas["carbon_dioxide"] < 10))
-		. += "<span class='danger'>The meter on \the [src] indicates you are almost out of carbon dioxide!</span>"
+		. += span_danger("The meter on \the [src] indicates you are almost out of carbon dioxide!")
 		//playsound(user, 'sound/effects/alert.ogg', 50, 1)
 
 // Methane
@@ -81,5 +81,5 @@
 /obj/item/tank/methane/examine(mob/user)
 	. = ..()
 	if(loc == user && (air_contents.gas["methane"] < 10))
-		. += "<span class='danger'>The meter on \the [src] indicates you are almost out of methane!</span>"
+		. += span_danger("The meter on \the [src] indicates you are almost out of methane!")
 		//playsound(user, 'sound/effects/alert.ogg', 50, 1)

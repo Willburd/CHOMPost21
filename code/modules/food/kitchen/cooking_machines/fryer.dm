@@ -134,7 +134,7 @@
 		CI.container.reagents.add_reagent("water",ice_reagent.volume)
 		CI.container.reagents.del_reagent("ice")
 		get_cooking_work(CI)
-		visible_message("<span class='danger'>\The [src] violently bubbles and explodes in a shower of oil and steam!</span>")
+		visible_message(span_danger("\The [src] violently bubbles and explodes in a shower of oil and steam!"))
 		for(var/mob/living/L in living_mobs(2))
 			shake_camera(L, 3, 2)
 			L.Stun(3)

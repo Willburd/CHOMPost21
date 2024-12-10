@@ -313,7 +313,7 @@
 			if(active_br.locked)
 				var/answer = tgui_alert(usr,"This body record will be written to a disk and allow any mind to inhabit it. This is against the current body owner's configured OOC preferences for body impersonation. Please confirm that you have permission to do this, and are sure! Admins will be notified.","Mind Compatability",list("No","Yes"))
 				if(answer == "No")
-					to_chat(usr, "<span class='warning'>ERROR: This body record is restricted.</span>")
+					to_chat(usr, span_warning("ERROR: This body record is restricted."))
 					return
 				else
 					message_admins("[usr] wrote an unlocked version of [active_br.mydna.name]'s bodyrecord to a disk. Their preferences do not allow body impersonation, but may be allowed with OOC consent.")
