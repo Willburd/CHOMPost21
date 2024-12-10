@@ -20,7 +20,7 @@
 
 	flags =            NO_SCAN | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT | NO_PAIN
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_LIPS
-	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
+	spawn_flags		 = SPECIES_IS_RESTRICTED // SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE Outpost 21 edit - restricted
 	health_hud_intensity = 2
 	num_alternate_languages = 3
 	species_language = LANGUAGE_EAL
@@ -141,6 +141,7 @@
 		for(var/path in powertypes)
 			abilities += new path()
 
+/* Outpost 21 edit - Nif removal:
 /datum/species/protean/create_organs(var/mob/living/carbon/human/H)
 	var/obj/item/nif/saved_nif = H.nif
 	if(saved_nif)
@@ -149,6 +150,7 @@
 	..()
 	if(saved_nif)
 		saved_nif.quick_implant(H)
+*/
 
 /datum/species/protean/get_race_key()
 	var/datum/species/real = GLOB.all_species[base_species]
@@ -220,12 +222,13 @@
 	spawn(0) //Let their real nif load if they have one
 		if(!H) //Human could have been deleted in this amount of time. Observing does this, mannequins, etc.
 			return
+		/* Outpost 21 edit - Nif removal
 		if(!H.nif)
 			var/obj/item/nif/protean/new_nif = new()
 			new_nif.quick_implant(H)
 		else
 			H.nif.durability = 25
-
+		*/
 		new /obj/item/rig/protean(H,H)
 
 /datum/species/protean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
