@@ -363,7 +363,13 @@
 								span_userdanger("[user] has shocked you with its tongue! You can feel the betrayal."))
 			playsound(src, 'sound/weapons/Egloves.ogg', 50, 1, -1)
 		else
-			user.visible_message(span_notice("\The [user] affectionately licks all over \the [target]'s face!"), span_notice("You affectionately lick all over \the [target]'s face!"))
+			// Outpost 21 edit begin - target zones with lick
+			var/licked_zone = parse_zone(user.zone_sel.selecting)
+			var/lick_adverb = ""
+			if(user.a_intent != I_HURT)
+				lick_adverb = "affectionately "
+			user.visible_message(span_notice("\The [user] [lick_adverb]licks all over \the [target]'s [licked_zone]!"), span_notice("You [lick_adverb]lick all over \the [target]'s [licked_zone]!"))
+			// Outpost 21 edit end
 			playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
 			water.use_charge(5) //CHOMPAdd
 			var/mob/living/carbon/human/H = target
