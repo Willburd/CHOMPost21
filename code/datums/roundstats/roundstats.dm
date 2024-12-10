@@ -96,7 +96,8 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 	var/points = 0
 	var/units = 0
 	if(GLOB.refined_chems_sold && GLOB.refined_chems_sold.len > 0)
-		valid_stats_list.Add("<span class = 'warning'>The station exported:</span>")
+		valid_stats_list.Add(span_warning("The station exported:"))
+
 		for(var/D in GLOB.refined_chems_sold)
 			units += GLOB.refined_chems_sold[D]["units"]
 			points += GLOB.refined_chems_sold[D]["value"]

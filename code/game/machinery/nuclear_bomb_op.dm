@@ -123,7 +123,7 @@
 	if(!usr.canmove || usr.stat || usr.restrained())
 		return
 	if(timeleft <= self_destruct_cutoff)
-		to_chat(usr, "<span class='warning'>The self-destruct sequence has reached terminal countdown, system has been disabled.</span>")
+		to_chat(usr, span_warning("The self-destruct sequence has reached terminal countdown, system has been disabled."))
 		return
 	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))))
 		usr.set_machine(src)
@@ -165,13 +165,13 @@
 					if(timing == -1.0)
 						return
 					if(safety)
-						to_chat(usr, "<span class='warning'>The safety is still on.</span>")
+						to_chat(usr, span_warning("The safety is still on."))
 						timing = FALSE
 						return
 					for(var/inserter in inserters)
 						var/obj/machinery/self_destruct/sd = inserter
 						if(!sd || !sd.armed)
-							to_chat(usr, "<span class='warning'>An inserter has not been armed or is damaged.</span>")
+							to_chat(usr, span_warning("An inserter has not been armed or is damaged."))
 							timing = FALSE
 							return
 					timing = !(timing)
@@ -200,7 +200,7 @@
 							bomb_set = 0
 						update_icon()
 					else
-						to_chat(usr, "<span class='warning'>Cannot enable safety, self destruct is armed.</span>")
+						to_chat(usr, span_warning("Cannot enable safety, self destruct is armed."))
 
 		add_fingerprint(usr)
 		for(var/mob/M in viewers(1, src))

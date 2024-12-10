@@ -242,7 +242,7 @@
 	set src in oview(1)
 
 	if(do_after(usr, 40))
-		usr.visible_message("<span class='info'>[usr] pulls \The [src]'s ejection switch!</span>")
+		usr.visible_message(span_info("[usr] pulls \The [src]'s ejection switch!"))
 		release_vore_contents()
 		for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
 			if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.

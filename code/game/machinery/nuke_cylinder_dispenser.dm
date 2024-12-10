@@ -105,7 +105,7 @@
 				return
 	if(istype(I, /obj/item/nuclear_cylinder))
 		if(damaged)
-			to_chat(user, "<span class='warning'>[src] is damaged, you cannot place the cylinder.</span>")
+			to_chat(user, span_warning("[src] is damaged, you cannot place the cylinder."))
 			return
 		if(cylinder)
 			to_chat(user, "There is already a cylinder here.")
@@ -126,14 +126,14 @@
 		. = TRUE
 		if(armed)
 			if(damaged)
-				to_chat(user, "<span class='warning'>The inserter has been damaged, unable to disarm.</span>")
+				to_chat(user, span_warning("The inserter has been damaged, unable to disarm."))
 				return
 			var/obj/machinery/nuclearbomb/nuke = locate(/obj/machinery/nuclearbomb/station) in get_area(src)
 			if(!nuke)
-				to_chat(user, "<span class='warning'>Unable to interface with the self destruct terminal, unable to disarm.</span>")
+				to_chat(user, span_warning("Unable to interface with the self destruct terminal, unable to disarm."))
 				return
 			if(nuke.timing)
-				to_chat(user, "<span class='warning'>The self destruct sequence is in progress, unable to disarm.</span>")
+				to_chat(user, span_warning("The self destruct sequence is in progress, unable to disarm."))
 				return
 			user.visible_message("[user] begins extracting [cylinder].", "You begin extracting [cylinder].")
 			if(do_after(user, 40, src))
@@ -143,7 +143,7 @@
 					set_density(TRUE)
 					flick("unloading", src)
 				else
-					to_chat(user, "<span class='warning'>The self destruct sequence is in progress, unable to disarm.</span>")
+					to_chat(user, span_warning("The self destruct sequence is in progress, unable to disarm."))
 					return
 		else if(!damaged)
 			user.visible_message("[user] begins to arm [cylinder].", "You begin to arm [cylinder].")
@@ -187,13 +187,13 @@
 				set_damaged()
 
 /obj/machinery/self_destruct/proc/set_damaged()
-		src.visible_message("<span class='warning'>[src] dents and chars.</span>")
+		src.visible_message(span_warning("[src] dents and chars."))
 		damaged = 1
 
 /obj/machinery/self_destruct/examine(mob/user)
 	. = ..()
 	if(damaged)
-		to_chat(user, "<span class='warning'>[src] is damaged, it needs repairs.</span>")
+		to_chat(user, span_warning("[src] is damaged, it needs repairs."))
 		return
 	if(armed)
 		to_chat(user, "[src] is armed and ready.")

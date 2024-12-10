@@ -159,7 +159,7 @@
 		return 1
 	// Outpost 21 edit begin - Must be empty storage!
 	if(istype(O, /obj/item/storage) && O.contents.len > 0)
-		to_chat(user, "<span class='notice'>You cannot insert this item into \the [src] while it has things in it!</span>")
+		to_chat(user, span_notice("You cannot insert this item into \the [src] while it has things in it!"))
 		return 1
 	// Outpost 21 edit end
 	if(stat)

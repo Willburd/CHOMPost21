@@ -71,6 +71,6 @@
 	if(paired_console.controls_weapon_index > 0)
 		var/obj/item/vehicle_interior_weapon/W = paired_console.interior_controller.internal_weapons_list[paired_console.controls_weapon_index]
 		if(!W || paired_console.interior_controller.health <= 0)
-			to_chat(user, "<span class='warning'>Weapon is inoperable!</span>")
+			to_chat(user, span_warning("Weapon is inoperable!"))
 		else
 			W.action(target, params, user)

@@ -804,7 +804,7 @@
 						connected.occupant.dna.SE = buf.mydna.dna.SE.Copy()
 						connected.occupant.dna.UpdateSE()
 						domutcheck(connected.occupant,connected, MUTCHK_FORCED | MUTCHK_HIDEMSG) // TOO MANY MUTATIONS FOR MESSAGES
-						to_chat(connected.occupant, "<span class='warning'>Your body stings as it wildly changes!</span>")
+						to_chat(connected.occupant, span_warning("Your body stings as it wildly changes!"))
 
 						// apply genes
 						if(ishuman(connected.occupant))

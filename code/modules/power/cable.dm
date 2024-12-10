@@ -129,7 +129,7 @@ var/list/possible_cable_coil_colours = list(
 	. = ..()
 	// Outpost 21 edit begin - broken wire trap
 	if(broken)
-		. += "<span class='warning'>It looks frayed! Some tape might help.</span>"
+		. += span_warning("It looks frayed! Some tape might help.")
 	// Outpost 21 edit end
 	if(isobserver(user))
 		. += span_warning("[powernet?.avail > 0 ? "[DisplayPower(powernet.avail)] in power network." : "The cable is not powered."]")
@@ -258,7 +258,7 @@ var/list/possible_cable_coil_colours = list(
 		if(do_after(user,2 SECONDS,src))
 			if(broken)
 				unfray()
-				to_chat(user, "<span class='warning'>You repair \the [src]'s sheath with \the [W].</span>")
+				to_chat(user, span_warning("You repair \the [src]'s sheath with \the [W]."))
 				src.add_fingerprint(user)
 		return
 

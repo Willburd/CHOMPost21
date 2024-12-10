@@ -188,7 +188,7 @@
 	/* Outpost 21 NOTICE - Use this condition instead to match normal cult behaviors for ghosts, we always allow ghost interactions on outpost 21 due to spooky!
 	if(ticker.mode.name == "cult" && cult.current_antagonists.len > CONFIG_GET(number/cult_ghostwriter_req_cultists) && user.Adjacent(src)) */
 	if(user.Adjacent(src))
-		user.visible_message("<span class='notice'>Unseen hands knock on [src].</span>")
+		user.visible_message(span_notice("Unseen hands knock on [src]."))
 		playsound(src, 'sound/effects/Glasshit.ogg', 50, 1)
 	else
 		. = ..()

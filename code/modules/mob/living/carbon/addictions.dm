@@ -76,7 +76,7 @@
 				if(addiction_counters[A] < 100)
 					addiction_counters[A] = 100
 					var/datum/reagent/RR = SSchemistry.chemical_reagents[A]
-					to_chat(src, "<span class='notice'>You feel rejuvenated as the [RR.name] rushes through you.</span>")
+					to_chat(src, span_notice("You feel rejuvenated as the [RR.name] rushes through you."))
 				addiction_counters[A] += rand(8,13)
 
 	// For all counters above 100, count down

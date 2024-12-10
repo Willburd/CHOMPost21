@@ -412,7 +412,7 @@
 			if(redexitlist.len > 0)
 				var/obj/effect/landmark/L = pick( redexitlist)
 				do_teleport(M, L.loc, 0,local = FALSE)
-				to_chat( A, "<span class='danger'>[death_message]</span>")
+				to_chat( A, span_danger(death_message))
 				// passout on return to reality
 				if(ishuman(M))
 					var/mob/living/carbon/human/H = M

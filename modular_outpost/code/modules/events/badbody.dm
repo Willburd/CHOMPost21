@@ -234,7 +234,7 @@
 					speak = ";" + speak
 
 	if(speak != "")
-		body.visible_message("<span class='warning'>\The [body] [pick("shudders","cracks","snaps","crunches","twitches")] and speaks.</span>")
+		body.visible_message( span_warning("\The [body] [pick("shudders","cracks","snaps","crunches","twitches")] and speaks."))
 		// Hacky, but I refused to rewrite say code just for this
 		var/old_stat = body.stat
 		body.stat = CONSCIOUS
@@ -296,7 +296,7 @@
 							R.ToggleReception()
 			return world.time + rand(700,1200)
 		if(6)
-			body.visible_message("<span class='danger'>\The [body] [pick("shudders","cracks","snaps","crunches","twitches")] and screams!</span>")
+			body.visible_message( span_danger("\The [body] [pick("shudders","cracks","snaps","crunches","twitches")] and screams!"))
 			// Hacky, but I refused to rewrite say code just for this
 			var/old_stat = body.stat
 			body.stat = CONSCIOUS

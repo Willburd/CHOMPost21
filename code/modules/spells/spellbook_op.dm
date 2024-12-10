@@ -6,7 +6,7 @@
 
 /obj/item/spellbook/oneuse/buttblast/recoil(mob/user as mob)
 	..()
-	to_chat(user, "<span class='warning'>You're knocked down!</span>")
+	to_chat(user, span_warning("You're knocked down!"))
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		user.Weaken(20)

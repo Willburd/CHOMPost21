@@ -14,5 +14,5 @@
 			if(!AM.can_fall()) // flying checks
 				return
 		if(ismob( A))
-			to_chat( A, "<span class='danger'>[death_message]</span>")
+			to_chat( A, span_danger(death_message))
 		qdel(A)

@@ -28,7 +28,7 @@
 
 /obj/machinery/door/vehicle_interior_hatch/hitby(AM as mob|obj, var/speed=5)
     // no damage
-    visible_message("<span class='danger'>[src.name] was hit by [AM], with no visible effect.</span>")
+    visible_message( span_danger("[src.name] was hit by [AM], with no visible effect."))
 
 /obj/machinery/door/vehicle_interior_hatch/MouseDrop_T(var/atom/movable/C, mob/user as mob)
 	attackby( null, user)
@@ -41,7 +41,7 @@
 		return
 
 	// successful, begin exit!
-	user.visible_message("<span class='notice'>[user] starts leaving the [interior_controller].</span>", "<span class='notice'>You start leaving the [interior_controller].</span>")
+	user.visible_message( span_notice("[user] starts leaving the [interior_controller]."), span_notice("You start leaving the [interior_controller]."))
 	if(do_after(user, 20))
 		if(Adjacent(user))
 			interior_controller.exit_interior(user)

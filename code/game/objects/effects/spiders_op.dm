@@ -11,5 +11,5 @@
 	amount_grown = -1
 
 /obj/effect/spider/spiderling/phone_spider/die()
-	visible_message("<span class='alert'>[src] fades away!</span>")
+	visible_message(span_alert("[src] fades away!"))
 	qdel(src)
