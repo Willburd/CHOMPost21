@@ -1452,6 +1452,12 @@
 	sound_env = SMALL_SOFTFLOOR
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
+/area/medical/chem_storage
+	name = "\improper Medical Chemical Storage"
+	icon_state = "locker"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	sound_env = SMALL_ENCLOSED
+
 /area/medical/locker
 	name = "\improper Medical Locker Room"
 	icon_state = "locker"
