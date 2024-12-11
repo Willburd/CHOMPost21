@@ -1,6 +1,6 @@
 /obj/machinery/chemical_dispenser
 	name = "chemical dispenser"
-	desc = "Automagically fabricates chemicals from electricity."
+	desc = "Holds chemical dispenser cartridges for the purpose of easily mixing them." // "Automagically fabricates chemicals from electricity." // Outpost 21 edit - Chem dispenser changes
 	icon = 'icons/obj/chemical.dmi'
 	icon_state = "dispenser"
 	clicksound = "switch"

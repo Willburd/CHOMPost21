@@ -3,7 +3,7 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser{anchored = FALSE}
 		)
-	cost = 25
+	cost = 200 // Outpost 21 edit - Dispenser price increase, this was 25
 	containertype = /obj/structure/largecrate
 	containername = "reagent dispenser crate"
 	group = "Reagents"
@@ -13,7 +13,7 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser/bar_alc{anchored = FALSE}
 		)
-	cost = 25
+	cost = 150 // Outpost 21 edit - Dispenser price increase, this was 25
 	containertype = /obj/structure/largecrate
 	containername = "booze dispenser crate"
 	group = "Reagents"
@@ -23,7 +23,7 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser/bar_soft{anchored = FALSE}
 		)
-	cost = 25
+	cost = 150 // Outpost 21 edit - Dispenser price increase, this was 25
 	containertype = /obj/structure/largecrate
 	containername = "soda dispenser crate"
 	group = "Reagents"
@@ -33,7 +33,7 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser/bar_coffee{anchored = FALSE}
 		)
-	cost = 25
+	cost = 150 // Outpost 21 edit - Dispenser price increase, this was 25
 	containertype = /obj/structure/largecrate
 	containername = "coffee dispenser crate"
 	group = "Reagents"
@@ -43,11 +43,12 @@
 	contains = list(
 			/obj/machinery/chemical_dispenser/bar_syrup{anchored = FALSE}
 		)
-	cost = 25
+	cost = 150 // Outpost 21 edit - Dispenser price increase, this was 25
 	containertype = /obj/structure/largecrate
 	containername = "Syrup dispenser crate"
 	group = "Reagents"
 
+/* Outpost 21 edit - Use refill canisters
 /datum/supply_pack/reagents
 	name = "Chemistry dispenser refill"
 	contains = list(
@@ -80,6 +81,7 @@
 	containername = "chemical crate"
 	access = list(access_chemistry)
 	group = "Reagents"
+*/
 
 /datum/supply_pack/alcohol_reagents
 	name = "Bar alcoholic dispenser refill"

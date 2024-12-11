@@ -4,6 +4,7 @@
 	var/list/dispense_reagents = list()
 	var/process_tick = 0
 
+/* Outpost 21 edit - Chem dispenser changes, disable chem regeneration
 /obj/machinery/chemical_dispenser/process()
 	if(!_recharge_reagents)
 		return
@@ -26,6 +27,7 @@
 				. = 1
 		if(.)
 			SStgui.update_uis(src)
+*/
 
 /obj/machinery/chemical_dispenser
 	dispense_reagents = list(

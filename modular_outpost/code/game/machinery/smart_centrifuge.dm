@@ -35,6 +35,27 @@
 	return ..()
 
 /obj/machinery/smart_centrifuge/attack_hand(mob/user)
+	spin_reagents(user,FALSE)
+
+/obj/machinery/smart_centrifuge/verb/isolate_reagents()
+	set name = "Isolate Reagents Automatically"
+	set category = "Object"
+	set src in view(1)
+	spin_reagents(usr,FALSE,FALSE)
+
+/obj/machinery/smart_centrifuge/verb/isolate_reagents_bottle()
+	set name = "Isolate Reagents To Bottles"
+	set category = "Object"
+	set src in view(1)
+	spin_reagents(usr,TRUE,FALSE)
+
+/obj/machinery/smart_centrifuge/verb/isolate_reagents_canisters()
+	set name = "Isolate Reagents To Canisters"
+	set category = "Object"
+	set src in view(1)
+	spin_reagents(usr,FALSE,TRUE)
+
+/obj/machinery/smart_centrifuge/proc/spin_reagents(mob/user, var/force_bottle, var/force_canister)
 	if(working)
 		to_chat(user, "<span class='notice'>\The [src] is still spinning.</span>")
 		return
@@ -50,9 +71,19 @@
 		spawn(200) // Do it itself
 			while(reagents.reagent_list.len > 0)
 				for(var/datum/reagent/RL in reagents.reagent_list)
-					if(RL.volume > 0)
+					// Handle special bottle types
+					var/obj/item/reagent_containers/CD
+					if(force_canister || (RL.volume >= 500 && !force_bottle))
+						CD = new /obj/item/reagent_containers/chem_canister(src)
+						var/obj/item/reagent_containers/chem_canister/CHEM = CD
+						CHEM.setLabel(RL.name)
+						CHEM.loaded_reagent = RL.id
+					else if(RL.volume > 0)
+						CD = new /obj/item/reagent_containers/glass/bottle(src)
+						CD.name = "[RL.name] bottle"
+						CD.icon_state = "bottle-1"
+					if(CD)
 						// Lets solve how much we need to drain into the container...
-						var/obj/item/reagent_containers/glass/bottle/CD = new(src)
 						var/remain_vol = RL.volume - CD.reagents.maximum_volume
 						if(remain_vol < 0)
 							remain_vol = 0
@@ -62,9 +93,6 @@
 							playsound(src, 'sound/machines/reagent_dispense.ogg', 25, 1)
 							CD.reagents.add_reagent( RL.id, trans_vol, RL.data, FALSE)
 							reagents.remove_reagent( RL.id, trans_vol, FALSE )
-							// Lets finish by naming it
-							CD.name = "[RL.name] bottle"
-							CD.icon_state = "bottle-1"
 							CD.update_icon()
 							CD.forceMove(loc) // Drop it outside
 							CD.pixel_x = rand(-7, 7) // random position
@@ -88,3 +116,10 @@
 		visible_message("\The [user] drains \the [C] into \the [src].")
 		return
 	. = ..()
+
+
+/obj/machinery/smart_centrifuge/examine(mob/user, infix, suffix)
+	. = ..()
+	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u."
+	for(var/datum/reagent/RL in reagents.reagent_list)
+		. += "[RL.name]: [RL.volume]u."

@@ -139,7 +139,8 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 		return
 	if(istype(C,/obj/item/reagent_containers/glass) || \
 		istype(C,/obj/item/reagent_containers/food/drinks/glass2) || \
-		istype(C,/obj/item/reagent_containers/food/drinks/shaker))
+		istype(C,/obj/item/reagent_containers/food/drinks/shaker) || \
+		istype(C,/obj/item/reagent_containers/chem_canister))
 		// Drain it!
 		C.reagents.trans_to_holder( src.reagents, src.reagents.maximum_volume)
 		visible_message("\The [user] dumps \the [C] into \the [src].")
