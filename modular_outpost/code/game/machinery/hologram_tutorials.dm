@@ -126,7 +126,8 @@
 
 /obj/machinery/hologram/holo_tutorial/intro_4
 	dialog = list(	"Some objects will have unique interactions, if you drag yourself, or another object onto it.",
-					"For example, while standing next to railings like these, you can click and drag yourself onto them. This will allow you to climb over the railing."
+					"For example, while standing next to railings like these, you can click and drag yourself onto them. This will allow you to climb over the railing.",
+					"If an object can be climbed, it will always have the option to do so from the right click menu as well."
 					)
 
 /obj/machinery/hologram/holo_tutorial/intro_5
@@ -137,7 +138,7 @@
 					"You can drop objects in your current active hand, by clicking the drop icon at the bottom right of your screen. You can also press Q.",
 					"To swap your current active hand, click the background of the hand slot. You can also press X.",
 					"Many objects will only respond to empty hands, or have unique interactions with specific objects.",
-					"For example; The locker will only open and close if you use empty hands, and can be bolted and unbolted from the floor with a wrench."
+					"For example; The locker will only open and close if you use empty hands, and can be bolted and unbolted from the floor with a wrench while it is open."
 					)
 
 /obj/machinery/hologram/holo_tutorial/intro_6
@@ -151,7 +152,7 @@
 					"Containers will also show this menu, if you alt-click them. Just like how you can see all the objects in a location by alt-clicking, as you were taught earlier.",
 					"If you click a container with an object in your active hand, you will place it inside of the container.",
 					"Try experimenting with the backpacks, boxes, and medical kits in this room, move on when you are comfortable with container interactions.",
-					"Remember, if a container is already inside of another container or your are not beside that container, you will not be able to take items out from it or put items into it."
+					"Remember, if you are not beside that container, you will not be able to take items out from it or put items into it."
 					)
 
 /obj/machinery/hologram/holo_tutorial/intro_8
@@ -186,33 +187,30 @@
 /obj/machinery/hologram/holo_tutorial/intro_11
 	dialog = list(	"Some actions are performed by dragging yourself onto an object. Such as buckling yourself to a seat.",
 					"Once you are buckled to something, you can unbuckle yourself by clicking the icon in the top right of the screen, or by pressing b to resist.",
-					"If you are ever trapped inside of an object, or restrained, using resist is a reliable way to break free."
+					"If you are ever trapped inside of an object, or restrained, using resist is a reliable way to break free.",
+					"You can also unbuckle yourself, and others, by clicking the object they are buckled to."
 					)
 
 /obj/machinery/hologram/holo_tutorial/intro_12
 	dialog = list(	"Your verb tabs, and how to use them.",
 					"The tabs in the top right of your window contain all possible interactions you can do. These are called Verbs.",
 					"Many interactions are only possible from these tabs, many also have hotkeys to do them quickly.",
-					"Your most important tabs are: IC, in character actions; Objects, interactions with simple objects; Equipment, interactions with worn or ridden objects and Powers, special abilities that are innate to your body.",
-					"IC, or in character actions allow you to rest, sleep, resist, climbing up or down, and even saying things!",
-					"Objects, this tab will show any interactions that you can perform with nearby objects. In most cases, all of these interactions will be accessible by right clicking the object itself. Like you learned to do so before.",
-					"Equipment, similar to the objects tab, it contains interactions with objects. However these objects are usually worn, or ridden. Equipment such as hardsuits, mechs, or vehicles will have their interactions in this tab.",
-					"Finally your Powers tab is where you can use, or toggle, various abilities your species or genetics allows you to perform. For example: Teshari can use this tab to toggle their agility, and promethean may enter their blob form."
-					)
+					"Verbs are sorted into various types such as: IC, in character actions; OOC, actions performed out of character such as ooc talking; Abilities, such as super powers and species quirks; Or the object tab, for usable equipment nearby to you or in your hands.",
+					"Each section is full of interactions, it is encouraged to use the LOOC verb in the OOC section to ask how certain verbs work, as many objects in the game can interact in strange and subtle ways that sometimes are not clear.")
 
 /obj/machinery/hologram/holo_tutorial/intro_13
 	dialog = list(	"This vehicle is called a cargo tug. To operate it, you will need to perform several interactions.",
 					"First, you must be buckled to it.",
-					"Second, you must turn on the engine, using the equipment tab.",
+					"Second, you must turn on the engine, using the start engine verb, either from the right-click menu or the object tab.",
 					"If you cannot start the engine, the keys may be missing. Click the vehicle while holding the keys to put them in.",
-					"You may then move the tug.",
+					"You may then move the tug while you are riding it.",
 					"Finally, to properly shutdown the tug. Turn off the engine, and optionally remove the keys.",
 					"Please, leave the keys in this room, or in the tug. Once you are comfortable interacting with a vehicle, move onto the next room."
 					)
 
 /obj/machinery/hologram/holo_tutorial/intro_14
 	dialog = list(	"To pass through these plastic flaps, you must be laying on the ground.",
-					"Step onto the conveyor, while it is moving, and use the rest verb in your IC tab."
+					"While laying on the ground you may crawl slowly, or activate the conveyor and ride it."
 					)
 
 /obj/machinery/hologram/holo_tutorial/intro_15
