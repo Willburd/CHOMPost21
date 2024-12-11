@@ -83,16 +83,29 @@
 	usr.update_inv_back()
 
 /obj/item/storage/backpack/holding/attackby(obj/item/W as obj, mob/user as mob)
+	/* Outpost 21 edit begin - Bluespace item mechanics tweaked
 	if(istype(W, /obj/item/storage/backpack/holding))
 		to_chat(user, span_warning("The Bluespace interfaces of the two devices conflict and malfunction."))
 		qdel(W)
 		return
+	*/
+	for(var/typ in bluespace_item_types)
+		if(istype(W,typ))
+			bluespace_bag_malfunction(user,src,W)
+			return
+	// Outpost 21 edit end
 	. = ..()
 
 //Please don't clutter the parent storage item with stupid hacks.
 /obj/item/storage/backpack/holding/can_be_inserted(obj/item/W as obj, stop_messages = 0)
+	/* Outpost 21 edit begin - Bluespace item mechanics tweaked
 	if(istype(W, /obj/item/storage/backpack/holding))
 		return FALSE
+	*/
+	for(var/typ in bluespace_item_types)
+		if(istype(W,typ))
+			return FALSE
+	// Outpost 21 edit end
 	return ..()
 
 /* Outpost 21 edit - Removed this in favor of /obj/item/storage/bag/santabag

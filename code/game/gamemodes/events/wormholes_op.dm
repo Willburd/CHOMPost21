@@ -3,9 +3,7 @@
 	var/obj/effect/portal/portal_redspace/P = new /obj/effect/portal/portal_redspace( enter )
 	P.target = exit
 	P.creator = null
-	P.icon = 'icons/obj/objects.dmi'
 	P.failchance = 0
-	P.icon_state = "anom"
 	P.name = "wormhole"
 	if(is_return_portal)
 		P.icon = 'icons/effects/effects.dmi'
