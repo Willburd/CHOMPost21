@@ -7,17 +7,8 @@
 	var/inflame_progress = 0
 
 /mob/living/carbon/human/proc/appendicitis()
-	if(stat == DEAD)
-		return 0
-	// Outpost 21 edit begin - Changelings immune to organ based events
-	if(mind && mind.changeling)
-		return 0
-	// Outpost 21 edit end
-	var/obj/item/organ/internal/appendix/A = internal_organs_by_name[O_APPENDIX]
-	if(istype(A) && !A.inflamed)
-		ForceContractDisease(new /datum/disease/appendicitis)
-		return 1
-	return 0
+	return ForceContractDisease(new /datum/disease/appendicitis)
+
 /*
 /obj/item/organ/internal/appendix/process()
 	..()
