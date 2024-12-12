@@ -85,7 +85,7 @@
 				var/obj/O = AM
 				alert_lev = slot_scan(O)
 				// if a mob is on a buckled object, detect it!
-				if(O.buckled_mobs.len)
+				if(O.buckled_mobs && O.buckled_mobs.len)
 					for(var/mob/M in O.buckled_mobs)
 						for(var/obj/item/I in M.contents)
 							alert_lev = max( alert_lev, slot_scan(I))
