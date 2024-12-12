@@ -9,7 +9,13 @@
 			continue
 		if(!(A.z in using_map.event_levels))
 			continue
+		//if(A.flag_check(RAD_SHIELDED))
+		//	continue
+		if(isbelly(H.loc))
+			continue
 		if(H.job == JOB_STOWAWAY && prob(90)) // stowaways only have a 10% chance to proc
+			continue
+		if(mind && mind.changeling) // Changelings immune to organ based events
 			continue
 		// Outpost 21 edit end
 		if(H.client && H.appendicitis())
