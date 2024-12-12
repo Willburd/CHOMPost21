@@ -280,3 +280,134 @@
 	icon = 'icons/obj/stationobjs_op.dmi'
 	icon_state = "enzyme"
 	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
+
+
+
+
+//Freezable Airlock Door
+/obj/machinery/door/airlock/glass_external/freezable
+	maxhealth = 600
+	var/frozen = 0
+	var/freezing = 0 //see process().
+	var/deiceTools[0]
+	var/nextWeatherCheck
+
+/obj/machinery/door/airlock/glass_external/freezable/New()
+	//Associate objects with the number of seconds it would take to de-ice a door.
+	//Most items are either more or less effecient at it.
+	//For items with very specific cases (like welders using fuel, or needing to be on) see attackby().
+	deiceTools[/obj/item/tool/crowbar/brace_jack] = 3 // OUR version of an Ice Pick
+	deiceTools[/obj/item/tool/crowbar] = 5 //Crowbar
+	deiceTools[/obj/item/pen] = 30 //Pen
+	deiceTools[/obj/item/card] = 35 //Cards. (Mostly ID cards)
+
+	//Generic weapon items. Tools are better then weapons.
+	//This is for preventing "Sierra" syndrome that could result from needing very specific objects.
+	deiceTools[/obj/item/tool] = 10
+	deiceTools[/obj/item] = 12
+	..()
+
+/obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I, mob/user as mob)
+	//Special cases for tools that need more then just a type check.
+	var/welderTime = 5 //Welder
+
+	//debug
+	//message_admins("[user] has used \the [I] of type [I.type] on [src]", R_DEBUG)
+
+	if(frozen)
+
+		//the welding tool is a special snowflake.
+		if(istype(I, /obj/item/weldingtool))
+			var/obj/item/weldingtool/welder = I
+			if(welder.remove_fuel(0,user) && welder && welder.isOn())
+				to_chat(user, span_notice("You start to melt the ice off \the [src]"))
+				playsound(src, welder.usesound, 50, 1)
+				if(do_after(user, welderTime SECONDS))
+					to_chat(user, span_notice("You finish melting the ice off \the [src]"))
+					unFreeze()
+					return
+
+		if(istype(I, /obj/item/pen/crayon))
+			to_chat(user, span_notice("You try to use \the [I] to clear the ice, but it crumbles away!"))
+			qdel(I)
+			return
+
+		//Most items will be checked in this for loop using the list in New().
+		//Code for objects with specific checks (Like the welder) should be inserted above.
+		for(var/IT in deiceTools)
+			if(istype(I, IT))
+				handleRemoveIce(I, user, deiceTools[IT])
+				return
+
+		//if we can't de-ice the door tell them what's wrong.
+		to_chat(user, span_notice("\the [src] is frozen shut!"))
+		return
+	..()
+
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/W as obj, mob/user as mob, var/time = 15 as num)
+	to_chat(user, span_notice("You start to chip at the ice covering \the [src]"))
+	if(do_after(user, text2num(time SECONDS)))
+		unFreeze()
+		to_chat(user, span_notice("You finish chipping the ice off \the [src]"))
+
+/obj/machinery/door/airlock/glass_external/freezable/proc/unFreeze()
+	frozen = 0
+	update_icon()
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/proc/freeze()
+	frozen = 1
+	update_icon()
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/update_icon()
+	..()
+	if(frozen)
+		overlays += image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock")
+	return
+
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()
+	var/planet_temp = T20C
+	var/turf/T = get_turf(src)
+	var/datum/planet/P = SSplanets.z_to_planet[T.z]
+	if(P.weather_holder.temperature < 261.15) // -12c
+		if(!frozen && density && prob(P.weather_holder.temperature < 253.15 ? 40 : 5)) // if under -20, way higher chance to freeze
+			freeze()
+	else if(P.weather_holder.temperature > T0C) // Above 0 to have any chance at unfreezing
+		if(frozen && prob(10))
+			unFreeze()
+	return
+/obj/machinery/door/airlock/glass_external/freezable/process()
+	if(world.time >= nextWeatherCheck && !freezing)  //don't do the thing if i'm already doing it.
+		freezing = 1
+		var/random = rand(2,7)
+		nextWeatherCheck = (world.time + ((random + 13) SECONDS))
+		handleFreezeUnfreeze()
+		freezing = 0
+	..()
+
+/obj/machinery/door/airlock/glass_external/freezable/examine(mob/user)
+	. = ..()
+	if(frozen)
+		to_chat(user, "it's frozen shut!")
+
+/obj/machinery/door/airlock/glass_external/freezable/open(var/forced = 0)
+	//Frozen airlocks can't open.
+	if(frozen && !forced)
+		return
+	else if(frozen && forced)
+		unFreeze()
+		return ..()
+	else
+		..()
+
+/obj/machinery/door/airlock/glass_external/freezable/close(var/forced = 0)
+	//Frozen airlocks can't shut either. (Though they shouldn't be able to freeze open)
+	if(frozen && !forced)
+		return
+	else if(frozen && forced)
+		unFreeze()
+		return ..()
+	else
+		..()
+//end of freezable airlock stuff.

@@ -110,8 +110,8 @@ var/datum/planet/muriki/planet_muriki = null
 	allowed_weather_types = list(
 		WEATHER_CLEAR		= new /datum/weather/muriki/clear(),
 		WEATHER_LIGHT_SNOW	= new /datum/weather/muriki/light_snow(),
-		WEATHER_SNOW		= new /datum/weather/muriki/light_snow(),
-		WEATHER_BLIZZARD	= new /datum/weather/muriki/light_snow(),
+		WEATHER_SNOW		= new /datum/weather/muriki/snow(),
+		WEATHER_BLIZZARD	= new /datum/weather/muriki/blizzard(),
 		WEATHER_OVERCAST	= new /datum/weather/muriki/acid_overcast(),
 		WEATHER_FOG			= new /datum/weather/muriki/acid_overcast(),
 		WEATHER_RAIN        = new /datum/weather/muriki/acid_rain(),
@@ -704,7 +704,7 @@ var/datum/planet/muriki/planet_muriki = null
 	name = "hail"
 	icon_state = "hail"
 	temp_high = 263.15  // -10c
-	temp_low = 253.15	// -20c
+	temp_low = 258.15 // -15c
 	light_modifier = 0.3
 	flight_failure_modifier = 15
 	timer_low_bound = 2
@@ -795,13 +795,67 @@ var/datum/planet/muriki/planet_muriki = null
 				)
 		if("winter")
 			transition_chances = list(
-				WEATHER_LIGHT_SNOW = 80,
+				WEATHER_LIGHT_SNOW = 40,
+				WEATHER_SNOW = 40,
 				WEATHER_CLEAR = 20
 				)
 	. = ..()
 
-/mob/living/
-	var/enzyme_affect = TRUE
+/datum/weather/muriki/snow
+	name = "moderate snow"
+	icon_state = "snowfall_med"
+	temp_high = 258.15 // -15c
+	temp_low = 253.15 // -20c
+	wind_high = 2
+	wind_low = 0
+	light_modifier = 0.5
+	flight_failure_modifier = 5
+	transition_chances = list(
+		WEATHER_LIGHT_SNOW = 10,
+		WEATHER_SNOW = 50,
+		WEATHER_BLIZZARD = 30,
+		WEATHER_HAIL = 5,
+		WEATHER_CLEAR = 5
+		)
+	observed_message = "It is snowing."
+	transition_messages = list(
+		"It's starting to snow.",
+		"The air feels much colder as snowflakes fall from above."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
+	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
+
+/datum/weather/muriki/blizzard
+	name = "blizzard"
+	icon_state = "snowfall_heavy"
+	temp_high = 253.15 // -20c
+	temp_low = 223.15 // -50c
+	wind_high = 4
+	wind_low = 2
+	light_modifier = 0.3
+	flight_failure_modifier = 10
+	transition_chances = list(
+		WEATHER_SNOW = 45,
+		WEATHER_BLIZZARD = 40,
+		WEATHER_HAIL = 10,
+		WEATHER_CLEAR = 5
+		)
+	observed_message = "A blizzard blows snow everywhere."
+	transition_messages = list(
+		"Strong winds howl around you as a blizzard appears.",
+		"It starts snowing heavily, and it feels extremly cold now."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
+	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
+
+/datum/weather/muriki/blizzard/process_effects()
+	..()
+	for(var/mob/living/L as anything in living_mob_list)
+		if(L.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(L)
+			if(!T.is_outdoors() || istype(L, /mob/living/simple_mob))
+				continue // They're indoors so no need to rain on them.
+			L.inflict_heat_damage(rand(1, 1))
 
 /datum/weather/muriki/fallout/temp //fixys firework stars
 	name = "short-term fallout"
@@ -829,6 +883,12 @@ var/datum/planet/muriki/planet_muriki = null
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
 
 
+
+
+
+// Muriki enzymatic rain effects
+/mob/living/
+	var/enzyme_affect = TRUE
 
 /proc/muriki_enzyme_affect_mob( var/mob/living/L, var/multiplier, var/mist, var/submerged)
 	// drop out early if no damage anyway
