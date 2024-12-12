@@ -15,7 +15,7 @@
 			continue
 		if(H.job == JOB_STOWAWAY && prob(90)) // stowaways only have a 10% chance to proc
 			continue
-		if(mind && mind.changeling) // Changelings immune to organ based events
+		if(H.mind && H.mind.changeling) // Changelings immune to organ based events
 			continue
 		// Outpost 21 edit end
 		if(H.client && H.appendicitis())
