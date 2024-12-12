@@ -58,7 +58,8 @@
 	update_icon()
 	// Outpost 21 edit begin - Sterilization of dirty needles
 	// This should really be moved to a reagent var...
-	if(reagents.has_reagent(REAGENT_ID_SACID, 1) \
+	if(reagents && reagents.reagent_list \
+	&& (reagents.has_reagent(REAGENT_ID_SACID, 1) \
 	|| reagents.has_reagent(REAGENT_ID_PACID, 1) \
 	|| reagents.has_reagent(REAGENT_ID_CLEANER, 1) \
 	|| reagents.has_reagent(REAGENT_ID_AMMONIA, 1) \
@@ -71,7 +72,7 @@
 	|| reagents.has_reagent(REAGENT_ID_VODKAMARTINI, 1) \
 	|| reagents.has_reagent(REAGENT_ID_VODKATONIC, 1) \
 	|| reagents.has_reagent(REAGENT_ID_UNATHILIQUOR, 1) \
-	|| reagents.has_reagent(REAGENT_ID_PHORON, 1))
+	|| reagents.has_reagent(REAGENT_ID_PHORON, 1)))
 		sterilize()
 	// Outpost 21 edit end
 
