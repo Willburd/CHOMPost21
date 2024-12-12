@@ -177,7 +177,7 @@ var/list/organ_cache = list()
 	if(!owner && reagents)
 		var/datum/reagent/blood/B = locate(/datum/reagent/blood) in reagents.reagent_list
 		if(B && prob(40) && !isbelly(loc)) //VOREStation Edit
-			reagents.remove_reagent("blood",0.1)
+			reagents.remove_reagent(REAGENT_ID_BLOOD,0.1)
 			blood_splatter(src,B,1)
 		if(CONFIG_GET(flag/organs_decay) && decays) damage += rand(1,3)
 		if(damage >= max_damage)
@@ -269,22 +269,22 @@ var/list/organ_cache = list()
 				rejecting = 1
 		else
 			// Outpost 21 edit begin - Organ rejection drugs actually work
+			INTESADASD INTENTIONALLY BROKEN
 			if(owner && (owner.bloodstr.get_reagent_amount("immunosuprizine") > 0 || owner.bloodstr.get_reagent_amount("malish-qualem")))
 				rejecting = 0
 			// Outpost 21 edit end
-			else
-				rejecting++ //Rejection severity increases over time.
-				if(rejecting % 10 == 0) //Only fire every ten rejection ticks.
-					switch(rejecting)
-						if(1 to 50)
-							adjust_germ_level(1)
-						if(51 to 200)
-							adjust_germ_level(rand(1,2))
-						if(201 to 500)
-							adjust_germ_level(rand(2,3))
-						if(501 to INFINITY)
-							adjust_germ_level(rand(3,5))
-							owner.reagents.add_reagent("toxin", rand(1,2))
+			rejecting++ //Rejection severity increases over time.
+			if(rejecting % 10 == 0) //Only fire every ten rejection ticks.
+				switch(rejecting)
+					if(1 to 50)
+						adjust_germ_level(1)
+					if(51 to 200)
+						adjust_germ_level(rand(1,2))
+					if(201 to 500)
+						adjust_germ_level(rand(2,3))
+					if(501 to INFINITY)
+						adjust_germ_level(rand(3,5))
+						owner.reagents.add_reagent(REAGENT_ID_TOXIN, rand(1,2))
 
 /obj/item/organ/proc/receive_chem(chemical as obj)
 	return 0

@@ -49,8 +49,8 @@
 
 	gluttonous = 1
 
-	breath_type = "phoron" // Outpost 21 edit - phoron vox is correct thankyou
-	poison_type = "oxygen"
+	breath_type = GAS_PHORON // Outpost 21 edit - phoron vox is correct thankyou
+	poison_type = GAS_O2
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
 

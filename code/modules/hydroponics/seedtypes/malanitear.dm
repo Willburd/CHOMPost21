@@ -1,9 +1,9 @@
 /datum/seed/mtear
-	name = "mtear"
+	name = PLANT_MTEAR
 	seed_name = "Malani's tear"
 	display_name = "Malani's tear leaves"
-	kitchen_tag = "mtear"
-	chems = list("honey" = list(1,10), "kelotane" = list(1,2)) // Outpost 21 edit - Hydroponics chem nerf
+	kitchen_tag = PLANT_MTEAR
+	chems = list(REAGENT_ID_HONEY = list(1,10), REAGENT_ID_KELOTANE = list(1,2)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/mtear/New()
 	..()

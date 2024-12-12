@@ -99,10 +99,10 @@
 	. = ..()
 
 	/* Outpost 21 edit - we use our own tank code
-	if(breath_type != "oxygen")
+	if(breath_type != GAS_O2)
 		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 		var/obj/item/tank/tankpath
-		if(breath_type == "phoron")
+		if(breath_type == GAS_PHORON)
 			tankpath = /obj/item/tank/vox
 		else
 			tankpath = text2path("/obj/item/tank/" + breath_type)

@@ -28,60 +28,46 @@
 	new /obj/item/reagent_containers/glass/solution_tray( src )
 
 /obj/item/reagent_containers/glass/beaker/tungsten
-	name = "beaker 'tungsten'"
-
-/obj/item/reagent_containers/glass/beaker/tungsten/New()
-	..()
-	reagents.add_reagent("tungsten",50)
-	update_icon()
+	name = "beaker '" + REAGENT_ID_TUNGSTEN + "'"
+	New()
+		..()
+		reagents.add_reagent(REAGENT_ID_TUNGSTEN,50)
+		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/oxygen
-	name = "beaker 'oxygen'"
-
-/obj/item/reagent_containers/glass/beaker/oxygen/New()
-	..()
-	reagents.add_reagent("oxygen",50)
-	update_icon()
+	name = "beaker '" + REAGENT_ID_OXYGEN + "'"
+	New()
+		..()
+		reagents.add_reagent(REAGENT_ID_OXYGEN,50)
+		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/sodium
-	name = "beaker 'sodium'"
-
-/obj/item/reagent_containers/glass/beaker/sodium/New()
-	..()
-	reagents.add_reagent("sodium",50)
-	update_icon()
+	name = "beaker '" + REAGENT_ID_SODIUM + "'"
+	New()
+		..()
+		reagents.add_reagent(REAGENT_ID_SODIUM,50)
+		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/lithium
-	name = "beaker 'lithium'"
-
-/obj/item/reagent_containers/glass/beaker/lithium/New()
-	..()
-	reagents.add_reagent("lithium",50)
-	update_icon()
-
-/obj/item/reagent_containers/glass/beaker/water
-	name = "beaker 'water'"
-
-/obj/item/reagent_containers/glass/beaker/water/New()
-	..()
-	reagents.add_reagent("water",50)
-	update_icon()
+	name = "beaker '" + REAGENT_ID_LITHIUM + "'"
+	New()
+		..()
+		reagents.add_reagent(REAGENT_ID_LITHIUM,50)
+		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/water
-	name = "beaker 'water'"
-
-/obj/item/reagent_containers/glass/beaker/water/New()
-	..()
-	reagents.add_reagent("water",50)
-	update_icon()
+	name = "beaker '" + REAGENT_ID_WATER + "'"
+	New()
+		..()
+		reagents.add_reagent(REAGENT_ID_WATER,50)
+		update_icon()
 
 /obj/item/reagent_containers/glass/beaker/fuel
-	name = "beaker 'fuel'"
-
-/obj/item/reagent_containers/glass/beaker/fuel/New()
-	..()
-	reagents.add_reagent("fuel",50)
-	update_icon()
+	name = "beaker '" + REAGENT_ID_FUEL + "'"
+	New()
+		..()
+		reagents.add_reagent(REAGENT_ID_FUEL,50)
+		update_icon()
 
 
 /obj/machinery/bunsen_burner

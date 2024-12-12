@@ -1,9 +1,9 @@
 /datum/seed/carrots
-	name = "carrot"
-	seed_name = "carrot"
+	name = PLANT_CARROT
+	seed_name = PLANT_CARROT
 	display_name = "carrots"
-	kitchen_tag = "carrot"
-	chems = list("nutriment" = list(1,20), "imidazoline" = list(0,2), "carrotjuice" = list(10,20)) // Outpost 21 edit - Hydroponics chem nerf
+	kitchen_tag = PLANT_CARROT
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,20), REAGENT_ID_IMIDAZOLINE = list(0,2), REAGENT_ID_CARROTJUICE = list(10,20)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/carrots/New()
 	..()
