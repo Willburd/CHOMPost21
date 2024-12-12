@@ -146,11 +146,10 @@
 
 	if(istype(src,/mob/living/simple_mob/vore/alienanimals/jil/jillilah))
 		// drop cap
-		var/obj/item/clothing/head/soft/C = new /obj/item/clothing/head/soft // cargo hat!
+		var/obj/item/clothing/head/soft/C = new /obj/item/clothing/head/soft(loc) // cargo hat!
 		C.name = "Jillilah's cap"
 		C.add_blood(src)
 		C.desc = "A tiny cargo hat, clearly not sized for a person, soaked in the innocent blood of its owner."
-		C.forceMove(src.loc) // drop on
 
 /mob/living/simple_mob/vore/alienanimals/jil/proc/splat()
 	death()
@@ -358,16 +357,18 @@
 			I.attack_hand(holder)
 			spawn(5)
 				if(!R.lit)
-					R.attack_self(src)
+					R.attack_self(holder)
 				if(R.lit)
 					holder.add_modifier(/datum/modifier/fire/stack_managed/weak, 60 SECONDS)
 					holder.light_range = 2
 					holder.make_jittery(115)
 					fear_run = 60
+					holder.visible_message(span_danger("\The [holder] bursts into flames!"),span_danger("You burst into flames!"),span_danger("Something screams!"))
 					playsound( holder, 'modular_outpost/sound/voice/ragescree.ogg', 35, 1)
 					spawn(9 SECONDS)
 						holder.drop_l_hand()
 						holder.drop_r_hand()
+						holder.death()
 						new /obj/effect/decal/cleanable/ash(holder.loc) // Turn it to ashes!
 						holder.Destroy()
 		else if(istype(A, /obj/item))
