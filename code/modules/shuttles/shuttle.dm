@@ -20,6 +20,7 @@
 	var/sound_landing = 'sound/effects/shuttles/shuttle_landing.ogg'
 
 	var/knockdown = 1 //whether shuttle downs non-buckled people when it moves
+	var/bluespace = TRUE // Outpost 21 edit - shuttles that don't gib phased shadekin
 
 	var/defer_initialisation = FALSE //If this this shuttle should be initialised automatically.
 	                                 //If set to true, you are responsible for initialzing the shuttle manually.
@@ -316,7 +317,8 @@
 					continue
 				if(isliving(AM))
 					var/mob/living/bug = AM
-					bug.gib()
+					if(bluespace || !bug.is_incorporeal()) // Outpost 21 edit - shuttles that don't gib phased shadekin
+						bug.gib()
 				else
 					qdel(AM) //it just gets atomized I guess? TODO throw it into space somewhere, prevents people from using shuttles as an atom-smasher
 	var/list/radios = list()	//CHOMPEdit

@@ -63,6 +63,7 @@
 	shuttle_area = /area/shuttle/tram
 	docking_controller_tag = "Tram"
 	current_location = "tram_shed"
+	bluespace = FALSE // don't smoosh shadekin
 //	landmark_transition = "tram_transit"
 	ceiling_type = /turf/simulated/shuttle/floor/white
 
