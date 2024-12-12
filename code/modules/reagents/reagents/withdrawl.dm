@@ -12,7 +12,7 @@
 		if(prob(2))
 			M.Weaken(1)
 	else if(current_addiction > 10)
-		if(M.bloodstr.has_reagent("inaprovaline") || M.bloodstr.has_reagent("inaprovalaze"))
+		if(M.bloodstr.has_reagent(REAGENT_ID_INAPROVALINE) || M.bloodstr.has_reagent(REAGENT_ID_INAPROVALAZE))
 			// Inaprovaline can be used to treat addiction
 			if(prob(1))
 				switch(rand(1,3))

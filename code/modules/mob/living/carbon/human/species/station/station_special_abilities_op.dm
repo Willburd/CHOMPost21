@@ -38,7 +38,7 @@
 		// release gas
 		var/datum/gas_mixture/air_contents = new
 		air_contents.temperature = C.bodytemperature
-		air_contents.gas["methane"] = 0.07 * MOLES_CELLSTANDARD
+		air_contents.gas[GAS_CH4] = 0.07 * MOLES_CELLSTANDARD
 		T.assume_air(air_contents)
 		// hell toot
 		for(var/obj/item/storage/bible/B in T.contents)

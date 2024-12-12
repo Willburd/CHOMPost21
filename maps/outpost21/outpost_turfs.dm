@@ -35,28 +35,28 @@
 	var/mineral_name
 	if(rare_ore)
 		mineral_name = pickweight(list(
-			"marble" = 3,
-			"uranium" = 10,
-			"platinum" = 10,
-			"hematite" = 20,
-			"carbon" = 20,
-			"diamond" = 1,
-			"gold" = 8,
-			"silver" = 8,
-			"phoron" = 18,
-			"lead" = 2,
-			"verdantium" = 1))
+			ORE_MARBLE = 3,
+			ORE_URANIUM = 10,
+			ORE_PLATINUM = 10,
+			ORE_HEMATITE = 20,
+			ORE_CARBON = 20,
+			ORE_DIAMOND = 1,
+			ORE_GOLD = 8,
+			ORE_SILVER = 8,
+			ORE_PHORON = 18,
+			ORE_LEAD = 2,
+			ORE_VERDANTIUM = 1))
 	else
 		mineral_name = pickweight(list(
-			"marble" = 2,
-			"uranium" = 5,
-			"platinum" = 5,
-			"hematite" = 35,
-			"carbon" = 35,
-			"gold" = 3,
-			"silver" = 3,
-			"phoron" = 25,
-			"lead" = 1))
+			ORE_MARBLE = 2,
+			ORE_URANIUM = 5,
+			ORE_PLATINUM = 5,
+			ORE_HEMATITE = 35,
+			ORE_CARBON = 35,
+			ORE_GOLD = 3,
+			ORE_SILVER = 3,
+			ORE_PHORON = 25,
+			ORE_LEAD = 1))
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]
 		UpdateMineral()
@@ -68,22 +68,22 @@
 	var/mineral_name
 	if(rare_ore)
 		mineral_name = pickweight(list(
-			"uranium" = 10,
-			"platinum" = 10,
-			"hematite" = 10,
-			"carbon" = 10,
-			"diamond" = 4,
-			"gold" = 15,
-			"silver" = 15))
+			ORE_URANIUM = 10,
+			ORE_PLATINUM = 10,
+			ORE_HEMATITE = 10,
+			ORE_CARBON = 10,
+			ORE_DIAMOND = 4,
+			ORE_GOLD = 15,
+			ORE_SILVER = 15))
 	else
 		mineral_name = pickweight(list(
-			"uranium" = 7,
-			"platinum" = 7,
-			"hematite" = 28,
-			"carbon" = 28,
-			"diamond" = 2,
-			"gold" = 7,
-			"silver" = 7))
+			ORE_URANIUM = 7,
+			ORE_PLATINUM = 7,
+			ORE_HEMATITE = 28,
+			ORE_CARBON = 28,
+			ORE_DIAMOND = 2,
+			ORE_GOLD = 7,
+			ORE_SILVER = 7))
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]
 		UpdateMineral()

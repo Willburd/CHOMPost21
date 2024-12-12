@@ -228,7 +228,7 @@
 	alloy = 1
 	ore = /obj/item/ore/rutile
 	scan_icon = "mineral_uncommon"
-	reagent = "titanium_diox"
+	reagent = REAGENT_ID_TITANIUMDIOX
 
 // Outpost 21 edit begin - Restored older ores
 /ore/painite

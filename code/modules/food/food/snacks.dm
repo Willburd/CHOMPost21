@@ -1669,7 +1669,7 @@
 
 /obj/item/reagent_containers/food/snacks/plump_pie/Initialize()
 	. = ..()
-	reagents.add_reagent("fungi", 2) // Outpost 21 edit - mushroom allergy
+	reagents.add_reagent(REAGENT_ID_FUNGI, 2) // Outpost 21 edit - mushroom allergy
 
 /obj/item/reagent_containers/food/snacks/plump_pie/Initialize()
 	. = ..()
@@ -2569,7 +2569,7 @@
 
 /obj/item/reagent_containers/food/snacks/plumphelmetbiscuit/Initialize()
 	. = ..()
-	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
+	reagents.add_reagent(REAGENT_ID_FUNGI, 1) // Outpost 21 edit - mushroom allergy
 	if(prob(10))
 		name = "exceptional plump helmet biscuit"
 		desc = "Microwave is taken by a fey mood! It has cooked an exceptional plump helmet biscuit!"
@@ -4747,7 +4747,7 @@
 /obj/item/reagent_containers/food/snacks/skrellsnacks/Initialize()
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
-	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
+	reagents.add_reagent(REAGENT_ID_FUNGI, 1) // Outpost 21 edit - mushroom allergy
 
 /obj/item/reagent_containers/food/snacks/unajerky
 	name = "Moghes Imported Sissalik Jerky"
@@ -6922,7 +6922,7 @@
 /obj/item/reagent_containers/food/snacks/skrellsnacks/Initialize()
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
-	reagents.add_reagent("fungi", 1) // Outpost 21 edit - mushroom allergy
+	reagents.add_reagent(REAGENT_ID_FUNGI, 1) // Outpost 21 edit - mushroom allergy
 
 /obj/item/reagent_containers/food/snacks/sosjerky
 	name = "Scaredy's Private Reserve Beef Jerky"

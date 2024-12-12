@@ -53,7 +53,7 @@
 				if(output&32)
 					signal.data[GAS_CO2] = round(100*air_sample.gas[GAS_CO2]/total_moles,0.1)
 				if(output&64)
-					signal.data[GAS_METHANE] = round(100*air_sample.gas["methane"]/total_moles,0.1)
+					signal.data[GAS_CH4] = round(100*air_sample.gas[GAS_CH4]/total_moles,0.1)
 			else
 				signal.data[GAS_O2] = 0
 				signal.data[GAS_PHORON] = 0

@@ -107,6 +107,6 @@
 		if(ATM_N2O)
 			return GAS_N2O
 		if(ATM_METHANE)
-			return GAS_METHANE
+			return GAS_CH4
 		else
 			return null

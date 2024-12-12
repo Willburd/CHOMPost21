@@ -267,7 +267,7 @@
 			var/obj/item/reagent_containers/food/snacks/meat/new_meat = new slab_type(src, rand(3,8))
 			if(istype(new_meat))
 				new_meat.name = "[slab_name] [new_meat.name]"
-				new_meat.reagents.add_reagent("nutriment",slab_nutrition)
+				new_meat.reagents.add_reagent(REAGENT_ID_NUTRIMENT,slab_nutrition)
 				if(grindable.reagents)
 					grindable.reagents.trans_to_obj(new_meat, round(grindable.reagents.total_volume/(2 + grindable.meat_amount),1))
 

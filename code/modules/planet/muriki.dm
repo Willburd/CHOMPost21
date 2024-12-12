@@ -355,7 +355,7 @@ var/datum/planet/muriki/planet_muriki = null
 				if(!T.is_outdoors())
 					continue
 				if(prob(40))
-					V.reagents.add_reagent("water",8)
+					V.reagents.add_reagent(REAGENT_ID_WATER,8)
 
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -459,7 +459,7 @@ var/datum/planet/muriki/planet_muriki = null
 				if(!T.is_outdoors())
 					continue
 				if(prob(40))
-					V.reagents.add_reagent("water",16)
+					V.reagents.add_reagent(REAGENT_ID_WATER,16)
 
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -557,7 +557,7 @@ var/datum/planet/muriki/planet_muriki = null
 				if(!T.is_outdoors())
 					continue
 				if(prob(50))
-					V.reagents.add_reagent("water",25)
+					V.reagents.add_reagent(REAGENT_ID_WATER,25)
 
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
@@ -640,7 +640,7 @@ var/datum/planet/muriki/planet_muriki = null
 				if(!T.is_outdoors())
 					continue
 				if(prob(60))
-					V.reagents.add_reagent("water",35)
+					V.reagents.add_reagent(REAGENT_ID_WATER,35)
 
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)

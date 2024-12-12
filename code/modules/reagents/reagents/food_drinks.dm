@@ -304,8 +304,8 @@
 
 //  Outpost 21 edit begin - actually functional mushroom allergy
 /datum/reagent/nutriment/protein/fungi
-	name = "fungal protein"
-	id = "fungi"
+	name = REAGENT_FUNGI
+	id = REAGENT_ID_FUNGI
 	taste_description = "some sort of fungus"
 	color = "#979797"
 	allergen_type = ALLERGEN_FUNGI

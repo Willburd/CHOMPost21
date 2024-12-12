@@ -124,15 +124,15 @@
 //This causes a slow drop in oil levels, encouraging refill after extended use
 /obj/machinery/appliance/cooker/fryer/do_cooking_tick(var/datum/cooking_item/CI)
 	// Outpost 21 addition begin - ice in deepfrier
-	if(CI.container && CI.container.reagents.has_reagent("ice",10))
+	if(CI.container && CI.container.reagents.has_reagent(REAGENT_ID_ICE,10))
 		// YOU DID THIS
 		var/datum/effect/effect/system/steam_spread/steam = new /datum/effect/effect/system/steam_spread()
 		steam.set_up(10, 0, get_turf(src))
 		steam.attach(src)
 		steam.start()
-		var/datum/reagent/ice_reagent = CI.container.reagents.get_reagent("ice")
-		CI.container.reagents.add_reagent("water",ice_reagent.volume)
-		CI.container.reagents.del_reagent("ice")
+		var/datum/reagent/ice_reagent = CI.container.reagents.get_reagent(REAGENT_ID_ICE)
+		CI.container.reagents.add_reagent(REAGENT_ID_WATER,ice_reagent.volume)
+		CI.container.reagents.del_reagent(REAGENT_ID_ICE)
 		get_cooking_work(CI)
 		visible_message(span_danger("\The [src] violently bubbles and explodes in a shower of oil and steam!"))
 		for(var/mob/living/L in living_mobs(2))

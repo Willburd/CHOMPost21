@@ -53,7 +53,8 @@
 	icon_state = "waffles"
 	desc = "Ovenless Brownies!"
 	filling_color = "#A79459"
-	New()
+
+/obj/item/reagent_containers/food/snacks/brownies/New()
 		..()
 		reagents.add_reagent(REAGENT_ID_NUTRIMENT, 6)
 

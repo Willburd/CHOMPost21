@@ -642,31 +642,31 @@
 /obj/item/organ/internal/malignant/engineered/lattice/proc/get_mutation_result(var/reagent)
 	var/newpath = null
 	switch(reagent)
-		if("phoron")
+		if(REAGENT_ID_PHORON)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/phoron
-		if("tricordrazine")
+		if(REAGENT_ID_TRICORDRAZINE, REAGENT_ID_TRICORLIDAZE)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/tricord
-		if("tramadol")
+		if(REAGENT_ID_TRAMADOL)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/tramadol
-		if("anti_toxin")
+		if(REAGENT_ID_ANTITOXIN)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dylovene
-		if("citalopram")
+		if(REAGENT_ID_CITALOPRAM)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/citalopram
-		if("bicaridine")
+		if(REAGENT_ID_BICARIDINE, REAGENT_ID_BICARIDAZE)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/bicaridine
-		if("dermaline")
+		if(REAGENT_ID_DERMALINE, REAGENT_ID_DERMALAZE)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dermaline
-		if("kelotane")
+		if(REAGENT_ID_KELOTANE)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/kelotane
-		if("dexalin")
+		if(REAGENT_ID_DEXALIN, REAGENT_ID_DEXALINP)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/dexalin
-		if("hyperzine")
+		if(REAGENT_ID_HYPERZINE)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/hyperzine
-		if("spaceacillin")
+		if(REAGENT_ID_SPACEACILLIN)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/spaceacillin
-		if("inaprovaline")
+		if(REAGENT_ID_INAPROVALINE, REAGENT_ID_INAPROVALAZE)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/inaprovaline
-		if("bliss")
+		if(REAGENT_ID_BLISS)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/bliss
 	return newpath
 
@@ -719,17 +719,17 @@
 /obj/item/organ/internal/malignant/engineered/chemorgan/phoron
 	name = "phoroketic gland"
 	icon_state = "chem_phoron"
-	chemid = "phoron"
+	chemid = REAGENT_ID_PHORON
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/tricord
 	name = "trioketic gland"
 	icon_state = "chem_tricord"
-	chemid = "tricordrazine"
+	chemid = REAGENT_ID_TRICORDRAZINE
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/tramadol
 	name = "tramoketic gland"
 	icon_state = "chem_tramadol"
-	chemid = "tramadol"
+	chemid = REAGENT_ID_TRAMADOL
 	deg_chance = 3
 	deg_intensity = 2
 	side_effect_multiplier = 1
@@ -737,32 +737,32 @@
 /obj/item/organ/internal/malignant/engineered/chemorgan/dylovene
 	name = "dylovetic gland"
 	icon_state = "chem_dylo"
-	chemid = "anti_toxin"
+	chemid = REAGENT_ID_ANTITOXIN
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/citalopram
 	name = "citometic gland"
 	icon_state = "chem_cita"
-	chemid = "citalopram"
+	chemid = REAGENT_ID_CITALOPRAM
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/bicaridine
 	name = "bicordic gland"
 	icon_state = "chem_bicar"
-	chemid = "bicaridine"
+	chemid = REAGENT_ID_BICARIDINE
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/dermaline
 	name = "dermalic gland"
 	icon_state = "chem_derma"
-	chemid = "dermaline"
+	chemid = REAGENT_ID_DERMALINE
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/kelotane
 	name = "kelovetic gland"
 	icon_state = "chem_kelo"
-	chemid = "kelotane"
+	chemid = REAGENT_ID_KELOTANE
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/dexalin
 	name = "dexalic gland"
 	icon_state = "chem_dexa"
-	chemid = "dexalin"
+	chemid = REAGENT_ID_DEXALIN
 	deg_chance = 5
 	deg_intensity = 1
 	side_effect_multiplier = 2
@@ -770,22 +770,22 @@
 /obj/item/organ/internal/malignant/engineered/chemorgan/hyperzine
 	name = "hypalic gland"
 	icon_state = "chem_hyper"
-	chemid = "hyperzine"
+	chemid = REAGENT_ID_HYPERZINE
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/spaceacillin
 	name = "spaceacilic gland"
 	icon_state = "chem_cillin"
-	chemid = "spaceacillin"
+	chemid = REAGENT_ID_SPACEACILLIN
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/inaprovaline
 	name = "inaprovic gland"
 	icon_state = "chem_inapro"
-	chemid = "inaprovaline"
+	chemid = REAGENT_ID_INAPROVALINE
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/bliss
 	name = "euphorian"
 	icon_state = "chem_bliss"
-	chemid = "bliss"
+	chemid = REAGENT_ID_BLISS
 	deg_chance = 5
 	deg_intensity = 3
 	side_effect_multiplier = 2

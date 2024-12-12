@@ -38,8 +38,8 @@
 	var/co2_amt = Tank.air_contents.gas[GAS_CO2]
 	var/oxy_amt = Tank.air_contents.gas[GAS_O2]
 	var/n2o_amt = Tank.air_contents.gas[GAS_N2O]
-	var/ch4_amt = Tank.air_contents.gas[GAS_METHANE] // Outpost 21 edit - Methane
-	
+	var/ch4_amt = Tank.air_contents.gas[GAS_CH4] // Outpost 21 edit - Methane
+
 	if(isnull(co2_amt))
 		co2_amt = 0
 

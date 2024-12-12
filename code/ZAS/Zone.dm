@@ -171,6 +171,7 @@ Class Procs:
 	update_planet_surface()
 	// Outpost 21 edit end
 
+// Outpost 21 edit begin - Outdoor atmospheres on planets reset to default state over time.)
 /zone/proc/update_planet_surface()
 	// Planet airmix cannot be saturated by station antics, slowly bleed this to base air if an outside turf is in our contents. - Willbird
 	// It's advisable to not mix multiple different kinds of outside flagged turfs, if they have different initial atmos, thankfully this probably never happens.
@@ -181,13 +182,14 @@ Class Procs:
 	if(istype(T) && T.outdoors > -1 && (T.z in using_map.forced_airmix_levels))
 		// slowly drain gasses back to atmospheric levels, rates are pulled out of my ass.
 		var/rate = rand(1,8) / 500
-		air.gas["oxygen"] 			= LERP(air.gas["oxygen"]			,T.oxygen			,rate)
-		air.gas["carbon_dioxide"] 	= LERP(air.gas["carbon_dioxide"]	,T.carbon_dioxide	,rate)
-		air.gas["nitrogen"] 		= LERP(air.gas["nitrogen"]			,T.nitrogen			,rate)
-		air.gas["phoron"] 			= LERP(air.gas["phoron"]			,T.phoron			,rate)
-		air.gas["methane"] 			= LERP(air.gas["methane"]			,T.methane			,rate)
-		air.gas["nitrous_oxide"] 	= LERP(air.gas["nitrous_oxide"]		,T.nitrous_oxide	,rate)
+		air.gas[GAS_O2] 			= LERP(air.gas[GAS_O2]				,T.oxygen			,rate)
+		air.gas[GAS_CO2] 			= LERP(air.gas[GAS_CO2]				,T.carbon_dioxide	,rate)
+		air.gas[GAS_N2] 			= LERP(air.gas[GAS_N2]				,T.nitrogen			,rate)
+		air.gas[GAS_PHORON] 		= LERP(air.gas[GAS_PHORON]			,T.phoron			,rate)
+		air.gas[GAS_CH4] 		= LERP(air.gas[GAS_CH4]			,T.methane			,rate)
+		air.gas[GAS_N2O] 			= LERP(air.gas[GAS_N2O]				,T.nitrous_oxide	,rate)
 		air.update_values()
+// Outpost 21 edit end
 
 /zone/proc/dbg_data(mob/M)
 	to_chat(M,name)

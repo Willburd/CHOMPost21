@@ -35,14 +35,14 @@
 			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
 			Bag.contents += perscrip
 
-		if(!isnull(species.breath_type) && species.breath_type != "oxygen")
+		if(!isnull(species.breath_type) && species.breath_type != GAS_O2)
 			// antitox pills
 			var/perscrip = new /obj/item/storage/pill_bottle/dylovene() // anti-toxin for accidents
 			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
 			Bag.contents += perscrip
 
 		// Sustinance addiction... They REALLY need this one, so make sure they get it...
-		if(addiction_counters["a_sustenance"] && addiction_counters["a_sustenance"] > 0)
+		if(addiction_counters[REAGENT_ID_ASUSTENANCE] && addiction_counters[REAGENT_ID_ASUSTENANCE] > 0)
 			var/obj/item/reagent_containers/glass/beaker/vial/perscrip = new /obj/item/reagent_containers/glass/beaker/vial/sustenance()
 			perscrip.flags ^= OPENCONTAINER // Close the container
 			to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
@@ -51,16 +51,16 @@
 		to_chat(src, "<span class='danger'>Failed to locate a storage object for your medication on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
 
 /mob/living/carbon/human/proc/equip_survival_tanks(var/forceback = FALSE)
-	if(!isnull(species) && !isnull(species.breath_type) && species.breath_type != "oxygen")
+	if(!isnull(species) && !isnull(species.breath_type) && species.breath_type != GAS_O2)
 		// configure tank
 		var/obj/item/tank/gastank = null
-		if(species.breath_type == "phoron")
+		if(species.breath_type == GAS_PHORON)
 			gastank = new /obj/item/tank/vox(src)
-		if(species.breath_type == "nitrogen")
+		if(species.breath_type == GAS_N2)
 			gastank = new /obj/item/tank/nitrogen(src)
-		if(species.breath_type == "carbon_dioxide")
+		if(species.breath_type == GAS_CO2)
 			gastank = new /obj/item/tank/carbon_dioxide(src)
-		if(species.breath_type == "methane")
+		if(species.breath_type == GAS_CH4)
 			gastank = new /obj/item/tank/methane(src)
 
 		// back, or hand...

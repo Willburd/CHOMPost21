@@ -9,7 +9,7 @@
 			var/o2_level = environment.gas[GAS_O2]/total_moles
 			var/n2_level = environment.gas[GAS_N2]/total_moles
 			var/co2_level = environment.gas[GAS_CO2]/total_moles
-			var/methane_level = environment.gas[GAS_METHANE]/total_moles	// Outpost 21 edit - Methane
+			var/methane_level = environment.gas[GAS_CH4]/total_moles	// Outpost 21 edit - Methane
 			var/phoron_level = environment.gas[GAS_PHORON]/total_moles
 			var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level)
 

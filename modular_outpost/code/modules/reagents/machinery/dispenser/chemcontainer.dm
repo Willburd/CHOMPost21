@@ -113,48 +113,48 @@
 
 // Preloads
 /obj/item/reagent_containers/chem_canister/water
-	loaded_reagent = "water"
+	loaded_reagent = REAGENT_ID_WATER
 /obj/item/reagent_containers/chem_canister/sugar
-	loaded_reagent = "sugar"
+	loaded_reagent = REAGENT_ID_SUGAR
 /obj/item/reagent_containers/chem_canister/hydrogen
-	loaded_reagent = "hydrogen"
+	loaded_reagent = REAGENT_ID_HYDROGEN
 /obj/item/reagent_containers/chem_canister/lithium
-	loaded_reagent = "lithium"
+	loaded_reagent = REAGENT_ID_LITHIUM
 /obj/item/reagent_containers/chem_canister/carbon
-	loaded_reagent = "carbon"
+	loaded_reagent = REAGENT_ID_CARBON
 /obj/item/reagent_containers/chem_canister/nitrogen
-	loaded_reagent = "nitrogen"
+	loaded_reagent = REAGENT_ID_NITROGEN
 /obj/item/reagent_containers/chem_canister/oxygen
-	loaded_reagent = "oxygen"
+	loaded_reagent = REAGENT_ID_OXYGEN
 /obj/item/reagent_containers/chem_canister/fluorine
-	loaded_reagent = "fluorine"
+	loaded_reagent = REAGENT_ID_FLUORINE
 /obj/item/reagent_containers/chem_canister/sodium
-	loaded_reagent = "sodium"
+	loaded_reagent = REAGENT_ID_SODIUM
 /obj/item/reagent_containers/chem_canister/aluminum
-	loaded_reagent = "aluminum"
+	loaded_reagent = REAGENT_ID_ALUMINIUM
 /obj/item/reagent_containers/chem_canister/silicon
-	loaded_reagent = "silicon"
+	loaded_reagent = REAGENT_ID_SILICON
 /obj/item/reagent_containers/chem_canister/phosphorus
-	loaded_reagent = "phosphorus"
+	loaded_reagent = REAGENT_ID_PHOSPHORUS
 /obj/item/reagent_containers/chem_canister/sulfur
-	loaded_reagent = "sulfur"
+	loaded_reagent = REAGENT_ID_SULFUR
 /obj/item/reagent_containers/chem_canister/chlorine
-	loaded_reagent = "chlorine"
+	loaded_reagent = REAGENT_ID_CHLORINE
 /obj/item/reagent_containers/chem_canister/potassium
-	loaded_reagent = "potassium"
+	loaded_reagent = REAGENT_ID_POTASSIUM
 /obj/item/reagent_containers/chem_canister/iron
-	loaded_reagent = "iron"
+	loaded_reagent = REAGENT_ID_IRON
 /obj/item/reagent_containers/chem_canister/copper
-	loaded_reagent = "copper"
+	loaded_reagent = REAGENT_ID_COPPER
 /obj/item/reagent_containers/chem_canister/mercury
-	loaded_reagent = "mercury"
+	loaded_reagent = REAGENT_ID_MERCURY
 /obj/item/reagent_containers/chem_canister/radium
-	loaded_reagent = "radium"
+	loaded_reagent = REAGENT_ID_RADIUM
 /obj/item/reagent_containers/chem_canister/ethanol
-	loaded_reagent = "ethanol"
+	loaded_reagent = REAGENT_ID_ETHANOL
 /obj/item/reagent_containers/chem_canister/sacid
-	loaded_reagent = "sacid"
+	loaded_reagent = REAGENT_ID_SACID
 /obj/item/reagent_containers/chem_canister/tungsten
-	loaded_reagent = "tungsten"
+	loaded_reagent = REAGENT_ID_TUNGSTEN
 /obj/item/reagent_containers/chem_canister/calcium
-	loaded_reagent = "calcium"
+	loaded_reagent = REAGENT_ID_CALCIUM

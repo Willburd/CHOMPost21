@@ -751,7 +751,7 @@
 		GAS_O2         = IC_PINTYPE_NUMBER,
 		GAS_N2          = IC_PINTYPE_NUMBER,
 		GAS_CO2           = IC_PINTYPE_NUMBER,
-		GAS_METHANE           = IC_PINTYPE_NUMBER, // Outpost 21 edit - Methane
+		GAS_CH4           = IC_PINTYPE_NUMBER, // Outpost 21 edit - Methane
 		GAS_PHORON           = IC_PINTYPE_NUMBER,
 		"other"           = IC_PINTYPE_NUMBER
 	)
@@ -774,7 +774,7 @@
 		var/n2_level = environment.gas[GAS_N2]/total_moles
 		var/co2_level = environment.gas[GAS_CO2]/total_moles
 		var/phoron_level = environment.gas[GAS_PHORON]/total_moles
-		var/methane_level = environment.gas[GAS_METHANE]/total_moles // Outpost 21 edit - Methane
+		var/methane_level = environment.gas[GAS_CH4]/total_moles // Outpost 21 edit - Methane
 		var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level+methane_level) // Outpost 21 edit - Methane
 		set_pin_data(IC_OUTPUT, 1, pressure)
 		set_pin_data(IC_OUTPUT, 2, round(environment.temperature-T0C,0.1))

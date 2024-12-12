@@ -396,7 +396,7 @@
 			trigger_co2 = 1
 		if(env.gas[GAS_N2] >= 10)
 			trigger_nitro = 1
-		if(env.gas["methane"] >= 10)
+		if(env.gas[GAS_CH4] >= 10)
 			trigger_ch4 = 1 // Outpost 21 edit - Methane
 
 	for(var/datum/artifact_effect/my_effect in my_effects)

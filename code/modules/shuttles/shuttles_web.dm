@@ -462,7 +462,7 @@
 		var/n2_level = environment.gas[GAS_N2]/total_moles
 		var/co2_level = environment.gas[GAS_CO2]/total_moles
 		var/phoron_level = environment.gas[GAS_PHORON]/total_moles
-		var/methane_level = environment.gas[GAS_METHANE]/total_moles // Outpost 21 edit - Methane
+		var/methane_level = environment.gas[GAS_CH4]/total_moles // Outpost 21 edit - Methane
 		var/unknown_level =  1-(o2_level+n2_level+co2_level+phoron_level+methane_level) // Outpost 21 edit - Methane
 		aircontents = list(\
 			"pressure" = "[round(pressure,0.1)]",\
@@ -471,7 +471,7 @@
 			GAS_CO2 = "[round(co2_level*100,0.1)]",\
 			GAS_PHORON = "[round(phoron_level*100,0.01)]",\
 			// Outpost 21 edit - Methane
-			GAS_METHANE = "[round(methane_level*100,0.01)]",\
+			GAS_CH4 = "[round(methane_level*100,0.01)]",\
 			"other" = "[round(unknown_level, 0.01)]",\
 			"temp" = "[round(environment.temperature-T0C,0.1)]",\
 			"reading" = TRUE\

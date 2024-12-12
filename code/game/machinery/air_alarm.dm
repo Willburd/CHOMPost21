@@ -116,7 +116,7 @@
 	TLV[GAS_O2] =			list(-1.0, -1.0,-1.0,-1.0) // Partial pressure, kpa
 	TLV[GAS_CO2] = list(-1.0, -1.0,   5,  10) // Partial pressure, kpa
 	TLV[GAS_PHORON] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
-	TLV[GAS_METHANE] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa // Outpost 21 edit - Methane
+	TLV[GAS_CH4] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa // Outpost 21 edit - Methane
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.40,ONE_ATMOSPHERE*1.60) /* kpa */
 	TLV["temperature"] =	list(20, 40, 140, 160) // K
@@ -154,7 +154,7 @@
 	TLV[GAS_N2] =		list(0, 0, 135, 140) // Partial pressure, kpa
 	TLV[GAS_CO2] = list(-1.0, -1.0, 5, 10) // Partial pressure, kpa
 	TLV[GAS_PHORON] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
-	TLV[GAS_METHANE] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa // Outpost 21 edit - Methane
+	TLV[GAS_CH4] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa // Outpost 21 edit - Methane
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(ONE_ATMOSPHERE * 0.80, ONE_ATMOSPHERE * 0.90, ONE_ATMOSPHERE * 1.10, ONE_ATMOSPHERE * 1.20) /* kpa */
 	TLV["temperature"] =	list(T0C - 36, T0C - 10, T0C + 40, T0C + 66) // K // Outpost 21 edit - lowered coldness range
@@ -316,7 +316,7 @@
 	var/co2_dangerlevel = TEST_TLV_VALUES
 	LOAD_TLV_VALUES(TLV[GAS_PHORON], environment.gas[GAS_PHORON]*partial_pressure)
 	var/phoron_dangerlevel = TEST_TLV_VALUES
-	LOAD_TLV_VALUES(TLV["methane"], environment.gas["methane"]*partial_pressure) // Outpost 21 edit - Methane
+	LOAD_TLV_VALUES(TLV[GAS_CH4], environment.gas[GAS_CH4]*partial_pressure) // Outpost 21 edit - Methane
 	var/methane_dangerlevel = TEST_TLV_VALUES
 	LOAD_TLV_VALUES(TLV["temperature"], environment.temperature)
 	var/temperature_dangerlevel = TEST_TLV_VALUES
@@ -738,7 +738,7 @@
 		var/list/selected
 		var/list/thresholds = list()
 
-		var/list/gas_names = list(GAS_O2, GAS_CO2, GAS_PHORON, GAS_METHANE, "other")	//Gas ids made to match code\defines\gases.dm // Outpost 21 edit - Methane
+		var/list/gas_names = list(GAS_O2, GAS_CO2, GAS_PHORON, GAS_CH4, "other")	//Gas ids made to match code\defines\gases.dm // Outpost 21 edit - Methane
 		for(var/g in gas_names)
 			thresholds[++thresholds.len] = list("name" = g, "settings" = list())
 			selected = TLV[g]
@@ -971,7 +971,7 @@
 /obj/machinery/alarm/sifwilderness/first_run()
 	. = ..()
 
-	TLV["oxygen"] =			list(16, 17, 135, 140)
+	TLV[GAS_O2] =			list(16, 17, 135, 140)
 	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.50,ONE_ATMOSPHERE*1.60)
 	TLV["temperature"] =	list(T0C - 40, T0C - 31, T0C + 40, T0C + 120)
 // CHOMPEdit END

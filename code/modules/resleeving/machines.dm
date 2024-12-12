@@ -118,7 +118,7 @@
 
 	// Traitgenes edit begin - Moved breathing equipment to AFTER the genes set it
 	//Give breathing equipment if needed
-	if(current_project.breath_type != GAS_O2) sdfasffassa INTENTIONAL_BREAK
+	if(current_project.breath_type != null && current_project.breath_type != GAS_O2)
 		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 		var/obj/item/tank/tankpath
 		if(current_project.breath_type == GAS_PHORON)

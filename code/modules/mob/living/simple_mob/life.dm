@@ -155,10 +155,10 @@
 				clear_alert("co2")
 
 			// Outpost 21 edit begin - Methane
-			if(min_ch4 && Environment.gas["methane"] < min_ch4)
+			if(min_ch4 && Environment.gas[GAS_CH4] < min_ch4)
 				atmos_unsuitable = 2
 				throw_alert("methane_in_air", /obj/screen/alert/not_enough_methane)
-			else if(max_tox && Environment.gas["methane"] > max_ch4)
+			else if(max_tox && Environment.gas[GAS_CH4] > max_ch4)
 				atmos_unsuitable = 2
 				throw_alert("methane_in_air", /obj/screen/alert/methane_in_air)
 			else

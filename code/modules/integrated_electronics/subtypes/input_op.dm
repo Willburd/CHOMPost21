@@ -5,7 +5,7 @@
 	complexity = 3
 	inputs = list()
 	outputs = list(
-		"methane"       = IC_PINTYPE_NUMBER
+		GAS_CH4       = IC_PINTYPE_NUMBER
 	)
 	activators = list("scan" = IC_PINTYPE_PULSE_IN, "on scanned" = IC_PINTYPE_PULSE_OUT)
 	spawn_flags = IC_SPAWN_RESEARCH
@@ -21,7 +21,7 @@
 	var/total_moles = environment.total_moles
 
 	if (total_moles)
-		var/methane_level = environment.gas["methane"]/total_moles
+		var/methane_level = environment.gas[GAS_CH4]/total_moles
 		set_pin_data(IC_OUTPUT, 1, round(methane_level*100,0.1))
 	else
 		set_pin_data(IC_OUTPUT, 1, 0)

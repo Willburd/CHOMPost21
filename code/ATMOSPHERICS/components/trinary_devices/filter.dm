@@ -55,7 +55,7 @@
 		if(4)//removing N2O
 			filtered_out = list(GAS_N2O)
 		if(5)//removing CH4
-			filtered_out = list(GAS_METHANE) // Outpost 21 edit - Methane
+			filtered_out = list(GAS_CH4) // Outpost 21 edit - Methane
 
 	air1.volume = ATMOS_DEFAULT_VOLUME_FILTER
 	air2.volume = ATMOS_DEFAULT_VOLUME_FILTER
@@ -228,7 +228,7 @@
 				if(4)//removing N2O
 					filtered_out += GAS_N2O
 				if(5)//removing CH4
-					filtered_out += GAS_METHANE // Outpost 21 edit - Methane
+					filtered_out += GAS_CH4 // Outpost 21 edit - Methane
 
 	add_fingerprint(ui.user)
 	update_icon()

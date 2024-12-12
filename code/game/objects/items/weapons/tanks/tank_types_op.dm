@@ -12,8 +12,8 @@
 /obj/item/tank/phoroanesthetic/Initialize()
 	. = ..()
 
-	air_contents.gas["phoron"] = (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C) * O2STANDARD
-	air_contents.gas["nitrous_oxide"] = (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C) * N2STANDARD
+	air_contents.gas[GAS_PHORON] = (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C) * O2STANDARD
+	air_contents.gas[GAS_N2O] = (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C) * N2STANDARD
 	air_contents.update_values()
 
 
@@ -30,7 +30,7 @@
 
 /obj/item/tank/emergency/carbon_dioxide/Initialize()
 	. = ..()
-	src.air_contents.adjust_gas("carbon_dioxide", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
 // Methane
 /obj/item/tank/emergency/methane
@@ -42,7 +42,7 @@
 
 /obj/item/tank/emergency/methane/Initialize()
 	. = ..()
-	src.air_contents.adjust_gas("methane", (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
+	src.air_contents.adjust_gas(GAS_CH4, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
 
 /*
@@ -58,11 +58,11 @@
 
 /obj/item/tank/carbon_dioxide/Initialize()
 	. = ..()
-	src.air_contents.adjust_gas("carbon_dioxide", (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
+	src.air_contents.adjust_gas(GAS_CO2, (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
 
 /obj/item/tank/carbon_dioxide/examine(mob/user)
 	. = ..()
-	if(loc == user && (air_contents.gas["carbon_dioxide"] < 10))
+	if(loc == user && (air_contents.gas[GAS_CO2] < 10))
 		. += span_danger("The meter on \the [src] indicates you are almost out of carbon dioxide!")
 		//playsound(user, 'sound/effects/alert.ogg', 50, 1)
 
@@ -76,10 +76,10 @@
 
 /obj/item/tank/methane/Initialize()
 	. = ..()
-	src.air_contents.adjust_gas("methane", (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
+	src.air_contents.adjust_gas(GAS_CH4, (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
 
 /obj/item/tank/methane/examine(mob/user)
 	. = ..()
-	if(loc == user && (air_contents.gas["methane"] < 10))
+	if(loc == user && (air_contents.gas[GAS_CH4] < 10))
 		. += span_danger("The meter on \the [src] indicates you are almost out of methane!")
 		//playsound(user, 'sound/effects/alert.ogg', 50, 1)

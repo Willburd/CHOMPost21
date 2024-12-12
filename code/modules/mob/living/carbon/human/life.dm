@@ -185,31 +185,31 @@
 	var/anxietymedcount = 0 // DO NOT MIX THESE MEDS
 	var/seizuremedcount = 0
 	var/antihistaminescount = 0
-	if( bloodstr.get_reagent_amount("qerr_quem") > 0)
+	if( bloodstr.get_reagent_amount(REAGENT_ID_QERRQUEM) > 0)
 		anxietymedcount += 1;
-	if( bloodstr.get_reagent_amount("paroxetine") > 0)
-		anxietymedcount += 1;
-		seizuremedcount += 1;
-	if( bloodstr.get_reagent_amount("citalopram") > 0)
+	if( bloodstr.get_reagent_amount(REAGENT_ID_PAROXETINE) > 0)
 		anxietymedcount += 1;
 		seizuremedcount += 1;
-	if( bloodstr.get_reagent_amount("methylphenidate") > 0)
+	if( bloodstr.get_reagent_amount(REAGENT_ID_CITALOPRAM) > 0)
 		anxietymedcount += 1;
 		seizuremedcount += 1;
-	if( bloodstr.get_reagent_amount("tricordrazine") > 0) // startrek wiki says so
+	if( bloodstr.get_reagent_amount(REAGENT_ID_METHYLPHENIDATE) > 0)
+		anxietymedcount += 1;
+		seizuremedcount += 1;
+	if( bloodstr.get_reagent_amount(REAGENT_ID_TRICORDRAZINE) > 0) // startrek wiki says so
 		seizuremedcount += 1;
 	// lets check for any one of these... Faster than doing each one, as it'll trigger on the first one it finds instead of checking them all every time
-	if( bloodstr.get_reagent_amount("inaprovaline") > 0 || bloodstr.get_reagent_amount("menthol") > 0 || bloodstr.get_reagent_amount("adranol") > 0 || bloodstr.get_reagent_amount("immunosuprizine") > 0 || bloodstr.get_reagent_amount("malish-qualem") > 0)
+	if( bloodstr.get_reagent_amount(REAGENT_ID_INAPROVALINE) > 0 || bloodstr.get_reagent_amount(REAGENT_ID_MENTHOL) > 0 || bloodstr.get_reagent_amount(REAGENT_ID_ADRANOL) > 0 || bloodstr.get_reagent_amount(REAGENT_ID_IMMUNOSUPRIZINE) > 0 || bloodstr.get_reagent_amount(REAGENT_ID_MALISHQUALEM) > 0)
 		antihistaminescount += 1; // there is no harm to stacking them as an allergy med, except their own overdoses anyway
 
 	// if no hazardous meds are mixed... just let any of the other ones work...
 	if( anxietymedcount == 0)
-		if( bloodstr.get_reagent_amount("adranol") > 0)
+		if( bloodstr.get_reagent_amount(REAGENT_ID_ADRANOL) > 0)
 			anxietymedcount = 1;
-		if( bloodstr.get_reagent_amount("nicotine") > 0)
+		if( bloodstr.get_reagent_amount(REAGENT_ID_NICOTINE) > 0)
 			anxietymedcount = 1;
 			antihistaminescount += 1;
-		if( ingested.get_reagent_amount("tea") > 0)
+		if( ingested.get_reagent_amount(REAGENT_ID_TEA) > 0)
 			anxietymedcount = 1;
 			antihistaminescount += 1;
 
@@ -396,9 +396,9 @@
 		if((COLD_RESISTANCE in mutations) || (prob(1)))
 			heal_organ_damage(0,1)
 
-	 if(stat != DEAD) //CHOMPadd: Until I find where nutrion heal code is anyway
-	 	if((mRegen in mutations))
-	 		heal_organ_damage(0.2,0.2)
+	if(stat != DEAD) //CHOMPadd: Until I find where nutrion heal code is anyway
+		if((mRegen in mutations))
+			heal_organ_damage(0.2,0.2)
 
 	/* Traitgenes edit - replaced by trait's handle_environment()
 	// DNA2 - Gene processing.
@@ -780,11 +780,11 @@
 		poison_type = species.poison_type
 	else
 		poison_type = GAS_PHORON
-	poison = breath.gas[poison_type]
+	poison_toxin = breath.gas[poison_type] // Outpost 21 edit - Methane
 
 	// Outpost 21 edit begin - Methane, hacky code, always poison unless you are a methane breather, species poisons needs a refactor to support multiple gasses
-	if(species.breath_type != GAS_METHANE )
-		poison_methane = breath.gas[GAS_METHANE]
+	if(species.breath_type != GAS_CH4 )
+		poison_methane = breath.gas[GAS_CH4]
 	// Outpost 21 edit end
 
 	if(species.exhale_type)
@@ -818,7 +818,7 @@
 				throw_alert("oxy", /obj/screen/alert/not_enough_nitro)
 			if(GAS_CO2)
 				throw_alert("oxy", /obj/screen/alert/not_enough_co2)
-			if(GAS_METHANE)
+			if(GAS_CH4)
 				throw_alert("oxy", /obj/screen/alert/not_enough_methane) // Outpost 21 edit - Methane
 			if(GAS_VOLATILE_FUEL)
 				throw_alert("oxy", /obj/screen/alert/not_enough_fuel)
@@ -875,17 +875,17 @@
 
 	// Outpost 21 edit begin - Methane
 	if(methane_pp > safe_toxins_min)
-		var/SA_pp = (breath.gas["methane"] / breath.total_moles) * breath_pressure
+		var/SA_pp = (breath.gas[GAS_CH4] / breath.total_moles) * breath_pressure
 		if(SA_pp > 0.15)
 			if(prob(4))
 				spawn(0) to_chat(src,"<span class='warning'>You smell rotten eggs.</span>")
 	if(methane_pp > safe_toxins_max)
 		var/ratio = (poison_methane/safe_toxins_max) * 10
 		if(reagents)
-			reagents.add_reagent("toxin", CLAMP(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
-			breath.adjust_gas("methane", -poison_methane/6, update = 0) //update after
+			reagents.add_reagent(REAGENT_ID_TOXIN, CLAMP(ratio, MIN_TOXIN_DAMAGE, MAX_TOXIN_DAMAGE))
+			breath.adjust_gas(GAS_CH4, -poison_methane/6, update = 0) //update after
 
-		breath.adjust_gas("methane", -breath.gas["methane"]/6, update = 0) //update after
+		breath.adjust_gas(GAS_CH4, -breath.gas[GAS_CH4]/6, update = 0) //update after
 		throw_alert("methane_in_air", /obj/screen/alert/methane_in_air)
 	else
 		clear_alert("methane_in_air")

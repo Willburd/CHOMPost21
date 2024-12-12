@@ -391,8 +391,8 @@
 
 										// No races breath this, but never know about downstream servers.
 										if (GAS_CO2) // Outpost 21 edit - wrong id
-											if(t.air_contents.gas["carbon_dioxide"] && !t.air_contents.gas["phoron"])
-												contents.Add(t.air_contents.gas["carbon_dioxide"])
+											if(t.air_contents.gas[GAS_CO2] && !t.air_contents.gas[GAS_PHORON])
+												contents.Add(t.air_contents.gas[GAS_CO2])
 											else
 												contents.Add(0)
 
@@ -404,9 +404,9 @@
 												contents.Add(0)
 
 										// Outpost 21 edit begin - Methane
-										if (GAS_METHANE)
-											if(t.air_contents.gas["methane"] && !t.air_contents.gas["oxygen"])
-												contents.Add(t.air_contents.gas["methane"])
+										if (GAS_CH4)
+											if(t.air_contents.gas[GAS_CH4] && !t.air_contents.gas[GAS_O2])
+												contents.Add(t.air_contents.gas[GAS_CH4])
 											else
 												contents.Add(0)
 										// Outpost 21 edit end

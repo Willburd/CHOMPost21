@@ -32,6 +32,7 @@
 #include "code\__defines\_protect.dm"
 #include "code\__defines\_reagents.dm"
 #include "code\__defines\_reagents_ch.dm"
+#include "code\__defines\_reagents_op.dm"
 #include "code\__defines\_tick.dm"
 #include "code\__defines\action.dm"
 #include "code\__defines\addictions.dm"

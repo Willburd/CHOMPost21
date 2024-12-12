@@ -17,7 +17,7 @@
 	name = "Decaf tea"
 	id = "teadecaf"
 	result = "teadecaf"
-	required_reagents = list("water" = 5, "decafteapowder" = 1)
+	required_reagents = list(REAGENT_ID_WATER = 5, REAGENT_ID_DECAFTEAPOWDER = 1)
 	result_amount = 5
 // Outpost 21 edit end
 

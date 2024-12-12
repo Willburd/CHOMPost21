@@ -291,7 +291,7 @@
 	color = "#808080"
 
 /datum/reagent/oxygen/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(M.species.poison_type == "oxygen") // outpost 21 edit, changed from alien == IS_VOX to be consistant with poison oxygen behavior
+	if(M.species.poison_type == GAS_O2) // outpost 21 edit, changed from alien == IS_VOX to be consistant with poison oxygen behavior
 		M.adjustToxLoss(removed * 3)
 
 /datum/reagent/phosphorus

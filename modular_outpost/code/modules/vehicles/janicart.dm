@@ -134,7 +134,7 @@
 /obj/vehicle/train/engine/janicart/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(scrubbing)
-		if(reagents.has_reagent("water", 1) || reagents.has_reagent("cleaner", 1))
+		if(reagents.has_reagent(REAGENT_ID_WATER, 1) || reagents.has_reagent(REAGENT_ID_CLEANER, 1))
 			var/turf/tile = loc
 			tile.clean_blood()
 			if(istype(tile, /turf/simulated))

@@ -15,9 +15,9 @@
 
 /obj/effect/decal/cleanable/blood/reagent/New(var/spill_name, var/spill_color, var/spill_reagentid, var/new_amount, var/ckey_user, var/ckey_spawn)
 	switch(spill_reagentid)	//To ensure that if people spill some liquids, it wont cause issues with spawning, like spilling blood. Also allow for spilling of certain things to
-		if("blood")
+		if(REAGENT_ID_BLOOD)
 			return
-		if("water")		//Dont recall if we have a water puddle system, but keeping this blacklisted, would be silly with dried water puddles.
+		if(REAGENT_ID_WATER)		//Dont recall if we have a water puddle system, but keeping this blacklisted, would be silly with dried water puddles.
 			return
 
 	ckey_source = ckey_spawn

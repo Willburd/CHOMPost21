@@ -20,7 +20,7 @@
 
 	var/hibernate = 0 //Do we even process?
 	var/scrubbing = 1 //0 = siphoning, 1 = scrubbing
-	var/list/scrubbing_gas = list(GAS_CO2, GAS_PHORON, GAS_METHANE)) // Outpost 21 edit - Methane
+	var/list/scrubbing_gas = list(GAS_CO2, GAS_PHORON, GAS_CH4) // Outpost 21 edit - Methane
 
 	var/panic = 0 //is this scrubber panicked?
 
@@ -117,7 +117,7 @@
 		"filter_phoron" = (GAS_PHORON in scrubbing_gas),
 		"filter_n2o" = (GAS_N2O in scrubbing_gas),
 		"filter_fuel" = (GAS_VOLATILE_FUEL in scrubbing_gas),
-		"filter_ch4" = (GAS_METHANE in scrubbing_gas),  // Outpost 21 edit - Methane
+		"filter_ch4" = (GAS_CH4 in scrubbing_gas),  // Outpost 21 edit - Methane
 		"sigtype" = "status"
 	)
 	if(!initial_loc.air_scrub_names[id_tag])
@@ -259,10 +259,10 @@
 		toggle += GAS_VOLATILE_FUEL
 
 	// Outpost 21 edit begin - Methane
-	if(!isnull(signal.data["ch4_scrub"]) && text2num(signal.data["ch4_scrub"]) != ("methane" in scrubbing_gas))
-		toggle += "methane"
+	if(!isnull(signal.data["ch4_scrub"]) && text2num(signal.data["ch4_scrub"]) != (GAS_CH4 in scrubbing_gas))
+		toggle += GAS_CH4
 	else if(signal.data["toggle_ch4_scrub"])
-		toggle += "methane"
+		toggle += GAS_CH4
 	// Outpost 21 edit end
 
 	scrubbing_gas ^= toggle
