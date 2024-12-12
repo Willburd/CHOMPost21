@@ -61,9 +61,11 @@
 #define REAGENT_ID_ALIZENE "alizene"
 
 // Does not exist?
+/* Outpost 21 edit - They don't now!
 #define REAGENT_ID_SPACEDRUGS "space_drugs"
 #define REAGENT_ID_HOTWATER "hotwater"
 #define REAGENT_ID_BURBON "burbon"
+*/
 
 // Food & Drinks
 #define REAGENT_GELATIN "Gelatin"

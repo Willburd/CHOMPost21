@@ -16,7 +16,7 @@
 /decl/chemical_reaction/instant/drinks/decaftea
 	name = "Decaf tea"
 	id = "teadecaf"
-	result = "teadecaf"
+	result = REAGENT_ID_TEADECAF
 	required_reagents = list(REAGENT_ID_WATER = 5, REAGENT_ID_DECAFTEAPOWDER = 1)
 	result_amount = 5
 // Outpost 21 edit end

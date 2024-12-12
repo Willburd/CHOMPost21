@@ -186,7 +186,7 @@
 	name = REAGENT_HACHI
 	id = REAGENT_ID_HACHI
 	result = REAGENT_ID_HACHI
-	required_reagents = list(REAGENT_ID_BURBON = 2, REAGENT_ID_SAKE = 1, REAGENT_ID_LEMONJUICE = 1, REAGENT_ID_FUNGI = 1) //Whoever coded this never made a mushroom reagent so this can't be created. Outpost 21 edit - fixed
+	required_reagents = list(REAGENT_ID_VODKA = 2, REAGENT_ID_SAKE = 1, REAGENT_ID_LEMONJUICE = 1, REAGENT_ID_FUNGI = 1) //Whoever coded this never made a mushroom reagent so this can't be created. Outpost 21 edit - fixed
 	result_amount = 5
 
 /decl/chemical_reaction/instant/drinks/narsour
