@@ -70,3 +70,25 @@
 		host.ckey = src.ckey
 		host.add_ventcrawl(vent_found)
 		to_chat(host, "<span class='info'>You are now a Jil, a fluffy little thief that seeks to steal anything you can grab, and bring it back to your nest. Be warned, the crew might not like you taking their things.</span>")
+
+/mob/observer/dead/proc/alert_of_death(var/datum/transhuman/mind_record/MR)
+	ASSERT(MR)
+	var/datum/transcore_db/db = SStranscore.db_by_mind_name(MR.mindname)
+	var/datum/transhuman/body_record/BR = db.body_scans[MR.mindname]
+	if(!client)	return
+
+	var/turf/T = null
+	if(mind && mind.current && can_reenter_corpse)
+		if(!istype(T,/turf/space))
+			T = get_turf(mind.current.loc)
+		if(T && !(T.z in using_map.station_levels))
+			T = null // lost in spess
+
+	if(T)
+		// Found location of body
+		var/xx = T.x + rand(-5,5)
+		var/yy = T.y + rand(-5,5)
+		global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan. Their last known GPS location was near [xx], [yy], [ using_map.get_zlevel_name(T.z) ]. The crew is advised to recover their body if possible. They have been verified as deceased by scout drones. No other bio-signature matches detected, resleeving is confirmed legal.", "TransCore Oversight", CHANNEL_COMMON)
+	else
+		// No body found
+		global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan, and cannot be located on the planet's surface. Medical is advised to resleeve them if possible, as scanner drones have been unable to locate their body. A missing persons notice will be forwarded to SolGov authorities if an abduction has occured.", "TransCore Oversight", CHANNEL_COMMON)

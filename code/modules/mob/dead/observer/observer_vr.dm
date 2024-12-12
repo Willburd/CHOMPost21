@@ -62,7 +62,7 @@
 /mob/observer/dead/verb/backup_ping()
 	set category = "Ghost.Join"
 	set name = "Notify Transcore"
-	set desc = "If your past-due backup notification was missed or ignored, you can use this to send a new one."
+	set desc = "Sends a message over radio of your body's vague location, or that your body is no longer on the planet, notifying medical to resleeve you. Can only be done 5 minutes after death, or the previous radio message."
 
 	if(!mind)
 		to_chat(src,span_warning("Your ghost is missing game values that allow this functionality, sorry."))
@@ -73,15 +73,19 @@
 		if(!(record.dead_state == MR_DEAD))
 			if((world.time - timeofdeath ) > 5 MINUTES)	//Allows notify transcore to be used if you have an entry but for some reason weren't marked as dead
 				record.dead_state = MR_DEAD				//Such as if you got scanned but didn't take an implant. It's a little funky, but I mean, you got scanned
-				db.notify(record)						//So you probably will want to let someone know if you die.
+				// db.notify(record)						//So you probably will want to let someone know if you die.
+				alert_of_death(record) // Outpost 21 edit - changed notify code
 				record.last_notification = world.time
 				to_chat(src, span_notice("New notification has been sent."))
 			else
-				to_chat(src, span_warning("Your backup is not past-due yet."))
+				// to_chat(src, span_warning("Your backup is not past-due yet."))
+				to_chat(src, span_warning("Too little time has passed since your death."))  // Outpost 21 edit - Notify transcore to notify medical for player clarity
 		else if((world.time - record.last_notification) < 5 MINUTES)
-			to_chat(src, span_warning("Too little time has passed since your last notification."))
+			// to_chat(src, span_warning("Too little time has passed since your last notification."))
+			to_chat(src, span_warning("Too little time has passed since your death."))  // Outpost 21 edit - Notify transcore to notify medical for player clarity
 		else
-			db.notify(record)
+			// db.notify(record)
+			alert_of_death(record) // Outpost 21 edit - changed notify code
 			record.last_notification = world.time
 			to_chat(src, span_notice("New notification has been sent."))
 	else
