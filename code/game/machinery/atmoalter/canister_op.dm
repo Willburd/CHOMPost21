@@ -8,7 +8,7 @@
 /obj/machinery/portable_atmospherics/canister/nitrophoric_oxide/Initialize()
 	..()
 	var/list/air_mix = StandardAirMix()
-	src.air_contents.adjust_multi("phoron", air_mix["oxygen"], "nitrous_oxide", air_mix["nitrogen"])
+	src.air_contents.adjust_multi(GAS_PHORON, air_mix[GAS_O2], GAS_N2O, air_mix[GAS_N2])
 
 	src.update_icon()
 	return 1
@@ -23,7 +23,7 @@
 /obj/machinery/portable_atmospherics/canister/methane/Initialize()
 	..()
 
-	src.air_contents.adjust_gas("methane", MolesForPressure())
+	src.air_contents.adjust_gas(GAS_CH4, MolesForPressure())
 	src.update_icon()
 	return 1
 

@@ -255,7 +255,7 @@
 
 /obj/item/reagent_containers/food/drinks/milk/Initialize()
 	. = ..()
-	reagents.add_reagent("milk", 50)
+	reagents.add_reagent(REAGENT_ID_MILK, 50)
 
 /obj/item/reagent_containers/food/drinks/soymilk
 	name = "soymilk carton"
@@ -270,7 +270,7 @@
 
 /obj/item/reagent_containers/food/drinks/soymilk/Initialize()
 	. = ..()
-	reagents.add_reagent("soymilk", 50)
+	reagents.add_reagent(REAGENT_ID_SOYMILK, 50)
 
 /obj/item/reagent_containers/food/drinks/smallmilk
 	name = "small milk carton"
@@ -286,7 +286,7 @@
 
 /obj/item/reagent_containers/food/drinks/smallmilk/Initialize()
 	. = ..()
-	reagents.add_reagent("milk", 30)
+	reagents.add_reagent(REAGENT_ID_MILK, 30)
 
 /obj/item/reagent_containers/food/drinks/smallchocmilk
 	name = "small chocolate milk carton"
@@ -302,7 +302,7 @@
 
 /obj/item/reagent_containers/food/drinks/smallchocmilk/Initialize()
 	. = ..()
-	reagents.add_reagent("chocolate_milk", 30)
+	reagents.add_reagent(REAGENT_ID_CHOCOLATEMILK, 30)
 
 /obj/item/reagent_containers/food/drinks/coffee
 	name = "\improper Robust Coffee"
@@ -317,7 +317,7 @@
 
 /obj/item/reagent_containers/food/drinks/coffee/Initialize()
 	. = ..()
-	reagents.add_reagent("coffee", 30)
+	reagents.add_reagent(REAGENT_ID_COFFEE, 30)
 
 /obj/item/reagent_containers/food/drinks/tea
 	name = "cup of Duke Purple tea"
@@ -333,7 +333,7 @@
 
 /obj/item/reagent_containers/food/drinks/tea/Initialize()
 	. = ..()
-	reagents.add_reagent("tea", 30)
+	reagents.add_reagent(REAGENT_ID_TEA, 30)
 
 /obj/item/reagent_containers/food/drinks/decaf_tea
 	name = "cup of Count Mauve decaffeinated tea"
@@ -349,7 +349,7 @@
 
 /obj/item/reagent_containers/food/drinks/decaf_tea/Initialize()
 	. = ..()
-	reagents.add_reagent("teadecaf", 30)
+	reagents.add_reagent(REAGENT_ID_TEADECAF, 30)
 
 /obj/item/reagent_containers/food/drinks/ice
 	name = "cup of ice"
@@ -359,7 +359,7 @@
 	center_of_mass_y= 10 //CHOMPEdit
 /obj/item/reagent_containers/food/drinks/ice/Initialize()
 	. = ..()
-	reagents.add_reagent("ice", 30)
+	reagents.add_reagent(REAGENT_ID_ICE, 30)
 
 /obj/item/reagent_containers/food/drinks/h_chocolate
 	name = "cup of Counselor's Choice hot cocoa"
@@ -375,7 +375,7 @@
 
 /obj/item/reagent_containers/food/drinks/h_chocolate/Initialize()
 	. = ..()
-	reagents.add_reagent("hot_coco", 30)
+	reagents.add_reagent(REAGENT_ID_HOTCOCO, 30)
 
 /obj/item/reagent_containers/food/drinks/greentea
 	name = "cup of green tea"
@@ -391,7 +391,7 @@
 
 /obj/item/reagent_containers/food/drinks/greentea/Initialize()
 	. = ..()
-	reagents.add_reagent("greentea", 30)
+	reagents.add_reagent(REAGENT_ID_GREENTEA, 30)
 
 /obj/item/reagent_containers/food/drinks/chaitea
 	name = "cup of chai tea"
@@ -407,7 +407,7 @@
 
 /obj/item/reagent_containers/food/drinks/chaitea/Initialize()
 	. = ..()
-	reagents.add_reagent("chaitea", 30)
+	reagents.add_reagent(REAGENT_ID_CHAITEA, 30)
 
 /obj/item/reagent_containers/food/drinks/decaf
 	name = "cup of decaf coffee"
@@ -423,7 +423,7 @@
 
 /obj/item/reagent_containers/food/drinks/decaf/Initialize()
 	. = ..()
-	reagents.add_reagent("decaf", 30)
+	reagents.add_reagent(REAGENT_ID_DECAF, 30)
 
 /obj/item/reagent_containers/food/drinks/dry_ramen
 	name = "Cup Ramen"
@@ -438,7 +438,7 @@
 
 /obj/item/reagent_containers/food/drinks/dry_ramen/Initialize()
 	. = ..()
-	reagents.add_reagent("dry_ramen", 30)
+	reagents.add_reagent(REAGENT_ID_DRYRAMEN, 30)
 
 /obj/item/reagent_containers/food/drinks/sillycup
 	name = "paper cup"

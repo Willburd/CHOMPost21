@@ -10,4 +10,4 @@
 
 /obj/item/reagent_containers/spray/xenowatergun/Initialize()
 	. = ..()
-	reagents.add_reagent("water", 250)
+	reagents.add_reagent(REAGENT_ID_WATER, 250)

@@ -5,7 +5,7 @@
 
 /obj/item/reagent_containers/pill/paroxetine/Initialize()
 	. = ..()
-	reagents.add_reagent("paroxetine", 5)
+	reagents.add_reagent(REAGENT_ID_PAROXETINE, 5)
 
 /obj/item/reagent_containers/pill/lithium
 	name = "Lithium (5u)"
@@ -14,7 +14,7 @@
 
 /obj/item/reagent_containers/pill/lithium/Initialize()
 	. = ..()
-	reagents.add_reagent("lithium", 5)
+	reagents.add_reagent(REAGENT_ID_LITHIUM, 5)
 
 /obj/item/reagent_containers/pill/zoom_old
 	name = "Zoom pill"
@@ -24,6 +24,6 @@
 /obj/item/reagent_containers/pill/zoom_old/Initialize()
 	. = ..()
 	if(prob(10))
-		reagents.add_reagent("expired_medicine", 5)
-	reagents.add_reagent("stimm", 10)
+		reagents.add_reagent(REAGENT_ID_EXPIREDMEDICINE, 5)
+	reagents.add_reagent(REAGENT_ID_STIMM, 10)
 	color = reagents.get_color()

@@ -27,6 +27,6 @@
 /datum/trait/positive/breathes/vox_air
 	name = "Dust Huffer"
 	desc = "You breathe air instead of phoron. Used for custom vox-like creatures. Abusing this trait may result in a species ban."
-	var_changes = list("breath_type" = "oxygen", "poison_type" = "phoron", "ideal_air_type" = /datum/gas_mixture/belly_air)
+	var_changes = list("breath_type" = GAS_O2, "poison_type" = GAS_PHORON, "ideal_air_type" = /datum/gas_mixture/belly_air)
 	cost = 5
 	allowed_species = list(SPECIES_VOX)

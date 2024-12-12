@@ -243,23 +243,23 @@
 								))
 	switch(chem) // scan for simplified name
 		if("Repair Brain Tissue (alkysine)")
-			chem = "alkysine"
+			chem = REAGENT_ID_ALKYSINE
 		if("Repair Body (bicaridine)")
-			chem = "bicaridine"
+			chem = REAGENT_ID_BICARIDINE
 		if("Make Drunk (ethanol)")
-			chem = "ethanol"
+			chem = REAGENT_ID_ETHANOL
 			injectsize = 5
 		if("Cure Drunk (ethylredoxrazine)")
-			chem = "ethylredoxrazine"
+			chem = REAGENT_ID_ETHYLREDOXRAZINE
 		if("Enhance Speed (hyperzine)")
-			chem = "hyperzine"
+			chem = REAGENT_ID_HYPERZINE
 		if("Pain Killer (tramadol)")
-			chem = "tramadol"
+			chem = REAGENT_ID_TRAMADOL
 		if("Euphoric High (bliss)")
-			chem = "bliss"
+			chem = REAGENT_ID_BLISS
 			injectsize = 5
 		if("Stablize Mind (citalopram)")
-			chem = "citalopram"
+			chem = REAGENT_ID_CITALOPRAM
 		else
 			if(chem)
 				// why did this happen?

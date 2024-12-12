@@ -2,20 +2,20 @@ GLOBAL_LIST_EMPTY(archive_diseases)
 
 /*
 GLOBAL_LIST_INIT(advance_cures, list(
-	"sodiumchloride", "sugar", "orangejuice",
-	"spaceacillin", "glucose", "ethanol",
-	"leporazine", "impedrezene", "hepanephrodaxon",
-	"silver", "gold"
+	REAGENT_ID_SODIUMCHLORIDE, REAGENT_ID_SUGAR, REAGENT_ID_ORANGEJUICE,
+	REAGENT_ID_SPACEACILLIN, REAGENT_ID_GLUCOSE, REAGENT_ID_ETHANOL,
+	REAGENT_ID_LEPORAZINE, REAGENT_ID_IMPEDREZENE, REAGENT_ID_HEPANEPHRODAXON,
+	REAGENT_ID_SILVER, REAGENT_ID_GOLD
 ))
 */
 // Outpost 21 edit begin - Lets use some actual meds, instead of random things from the kitchen
 GLOBAL_LIST_INIT(advance_cures, list(
-	"anti_toxin","spaceacilin","ethanol",
-	"bicaridine","inaprovaline","hyronalin",
-	"ammonia", "ryetalyn", "radium",
-	"ethylredoxrazine", "imidazoline", "dermaline",
-	"calciumcarbonate", "corophizine",
-	"ethanol", "leporazine", "peridaxon"
+	REAGENT_ID_ANTITOXIN, REAGENT_ID_SPACEACILLIN,REAGENT_ID_ETHANOL,
+	REAGENT_ID_BICARIDINE,REAGENT_ID_INAPROVALINE,REAGENT_ID_HYRONALIN,
+	REAGENT_ID_RYETALYN, REAGENT_ID_RADIUM, REAGENT_ID_PERIDAXON,
+	REAGENT_ID_ETHYLREDOXRAZINE, REAGENT_ID_IMIDAZOLINE, REAGENT_ID_DERMALINE,
+	REAGENT_ID_CALCIUMCARBONATE, REAGENT_ID_COROPHIZINE,
+	REAGENT_ID_ETHANOL, REAGENT_ID_LEPORAZINE
 ))
 // Outpost 21 edit end
 

@@ -24,42 +24,44 @@
 	var/drill_moles_per_tick = 0 // Outpost 21 edit - gas drilling
 
 	var/list/stored_ore = list(
-		"sand" = 0,
-		"hematite" = 0,
-		"carbon" = 0,
-		"raw copper" = 0,
-		"raw tin" = 0,
-		"void opal" = 0,
-		"painite" = 0,
-		"quartz" = 0,
-		"raw bauxite" = 0,
-		"phoron" = 0,
-		"silver" = 0,
-		"gold" = 0,
-		"marble" = 0,
-		"uranium" = 0,
-		"diamond" = 0,
-		"platinum" = 0,
-		"lead" = 0,
-		"mhydrogen" = 0,
-		"verdantium" = 0,
-		"rutile" = 0)
+		ORE_SAND = 0,
+		ORE_HEMATITE = 0,
+		ORE_CARBON = 0,
+		ORE_COPPER = 0,
+		ORE_TIN = 0,
+		ORE_VOPAL = 0,
+		ORE_PAINITE = 0,
+		ORE_QUARTZ = 0,
+		ORE_BAUXITE = 0,
+		ORE_PHORON = 0,
+		ORE_SILVER = 0,
+		ORE_GOLD = 0,
+		ORE_MARBLE = 0,
+		ORE_URANIUM = 0,
+		ORE_DIAMOND = 0,
+		ORE_PLATINUM = 0,
+		ORE_LEAD = 0,
+		ORE_MHYDROGEN = 0,
+		ORE_VERDANTIUM = 0,
+		ORE_RUTILE = 0)
 
 	var/list/ore_types = list(
-		"hematite" = /obj/item/ore/iron,
-		"uranium" = /obj/item/ore/uranium,
-		"gold" = /obj/item/ore/gold,
-		"silver" = /obj/item/ore/silver,
-		"diamond" = /obj/item/ore/diamond,
-		"phoron" = /obj/item/ore/phoron,
-		"platinum" = /obj/item/ore/osmium,
-		"mhydrogen" = /obj/item/ore/hydrogen,
-		"sand" = /obj/item/ore/glass,
-		"carbon" = /obj/item/ore/coal,
-		"copper" = /obj/item/ore/copper,
-		"tin" = /obj/item/ore/tin,
-		"bauxite" = /obj/item/ore/bauxite,
-		"rutile" = /obj/item/ore/rutile
+		ORE_HEMATITE = /obj/item/ore/iron,
+		ORE_URANIUM = /obj/item/ore/uranium,
+		ORE_GOLD = /obj/item/ore/gold,
+		ORE_SILVER = /obj/item/ore/silver,
+		ORE_DIAMOND = /obj/item/ore/diamond,
+		ORE_PHORON = /obj/item/ore/phoron,
+		ORE_PLATINUM = /obj/item/ore/osmium,
+		ORE_MHYDROGEN = /obj/item/ore/hydrogen,
+		ORE_SAND = /obj/item/ore/glass,
+		ORE_CARBON = /obj/item/ore/coal,
+		// Outpost 21 edit begin - Restored older ores
+		ORE_COPPER = /obj/item/ore/copper,
+		ORE_TIN = /obj/item/ore/tin,
+		ORE_BAUXITE = /obj/item/ore/bauxite,
+		// Outpost 21 edit end
+		ORE_RUTILE = /obj/item/ore/rutile
 		)
 
 	//Upgrades
@@ -71,16 +73,20 @@
 
 	// Found with an advanced laser. exotic_drilling >= 1
 	var/list/ore_types_uncommon = list(
-		MAT_MARBLE = /obj/item/ore/marble,
-		MAT_PAINITE = /obj/item/ore/painite,
-		MAT_QUARTZ = /obj/item/ore/quartz,
-		MAT_LEAD = /obj/item/ore/lead
+		ORE_MARBLE = /obj/item/ore/marble,
+		// Outpost 21 edit begin - Restored older ores
+		ORE_PAINITE = /obj/item/ore/painite,
+		ORE_QUARTZ = /obj/item/ore/quartz,
+		// Outpost 21 edit end
+		ORE_LEAD = /obj/item/ore/lead
 		)
 
 	// Found with an ultra laser. exotic_drilling >= 2
 	var/list/ore_types_rare = list(
-		MAT_VOPAL = /obj/item/ore/void_opal,
-		MAT_VERDANTIUM = /obj/item/ore/verdantium
+		// Outpost 21 edit begin - Restored older ores
+		ORE_VOPAL = /obj/item/ore/void_opal,
+		// Outpost 21 edit end
+		ORE_VERDANTIUM = /obj/item/ore/verdantium
 		)
 
 	//Flags
@@ -403,18 +409,18 @@
 				if(istype(mine_turf,/turf/simulated/floor/gas_crack))
 					drill_moles_per_tick += 2
 					// Get gasses the cracks around us could give!
-					if(mine_turf.oxygen && !("oxygen" in gas_field))
-						gas_field.Add("oxygen")
-					if(mine_turf.nitrogen && !("nitrogen" in gas_field))
-						gas_field.Add("nitrogen")
-					if(mine_turf.carbon_dioxide && !("carbon_dioxide" in gas_field))
-						gas_field.Add("carbon_dioxide")
-					if(mine_turf.phoron && !("phoron" in gas_field))
-						gas_field.Add("phoron")
-					if(mine_turf.nitrous_oxide && !("nitrous_oxide" in gas_field))
-						gas_field.Add("nitrous_oxide")
-					if(mine_turf.methane && !("methane" in gas_field))
-						gas_field.Add("methane")
+					if(mine_turf.oxygen && !(GAS_O2 in gas_field))
+						gas_field.Add(GAS_O2)
+					if(mine_turf.nitrogen && !(GAS_N2 in gas_field))
+						gas_field.Add(GAS_N2)
+					if(mine_turf.carbon_dioxide && !(GAS_CO2 in gas_field))
+						gas_field.Add(GAS_CO2)
+					if(mine_turf.phoron && !(GAS_PHORON in gas_field))
+						gas_field.Add(GAS_PHORON)
+					if(mine_turf.nitrous_oxide && !(GAS_N2O in gas_field))
+						gas_field.Add(GAS_N2O)
+					if(mine_turf.methane && !(GAS_CH4 in gas_field))
+						gas_field.Add(GAS_CH4)
 				// Outpost 21 edit end
 	if(!resource_field.len && !gas_field.len) // Outpost 21 edit - gas mining
 		system_error("Resources depleted.")

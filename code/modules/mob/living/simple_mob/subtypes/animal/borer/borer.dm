@@ -79,7 +79,7 @@
 	if(host && !stat && !host.stat)
 		// Outpost 21 edit begin - borer fixes
 		// Handle docility.
-		if(host.reagents.has_reagent("sugar") || host.ingested.has_reagent("sugar"))
+		if(host.reagents.has_reagent(REAGENT_ID_SUGAR) || host.ingested.has_reagent(REAGENT_ID_SUGAR))
 			docile_counter = 1 SECONDS
 			if(docile_counter < 0)
 				docile_counter = 0

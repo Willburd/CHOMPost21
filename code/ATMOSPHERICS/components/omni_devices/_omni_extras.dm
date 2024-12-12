@@ -97,16 +97,16 @@
 /proc/mode_to_gasid(var/mode)
 	switch(mode)
 		if(ATM_O2)
-			return "oxygen"
+			return GAS_O2
 		if(ATM_N2)
-			return "nitrogen"
+			return GAS_N2
 		if(ATM_CO2)
-			return "carbon_dioxide"
+			return GAS_CO2
 		if(ATM_P)
-			return "phoron"
+			return GAS_PHORON
 		if(ATM_N2O)
-			return "nitrous_oxide"
+			return GAS_N2O
 		if(ATM_METHANE)
-			return "methane"
+			return GAS_CH4
 		else
 			return null

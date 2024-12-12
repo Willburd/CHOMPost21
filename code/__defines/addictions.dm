@@ -9,6 +9,6 @@
 
 #define CE_WITHDRAWL "withdrawl" // Withdrawl symptoms
 
-var/list/addictives	    = list("oxycodone","nicotine","hyperzine","bliss","ambrosia_extract","talum_quem","methylphenidate","paracetamol","tricordrazine","ethanol","coffee","a_sustenance")
-var/list/fast_addictives= list("oxycodone","hyperzine","bliss","methylphenidate") // needs to be in above list too
-var/list/slow_addictives= list("paracetamol","tricordrazine","a_sustenance","ethanol","nicotine","coffee") // needs to be in above list too
+var/list/addictives	    = list(REAGENT_ID_OXYCODONE,REAGENT_ID_NICOTINE,REAGENT_ID_HYPERZINE,REAGENT_ID_BLISS,REAGENT_ID_AMBROSIAEXTRACT,REAGENT_ID_TALUMQUEM,REAGENT_ID_METHYLPHENIDATE,REAGENT_ID_PARACETAMOL,REAGENT_ID_TRICORDRAZINE,REAGENT_ID_ETHANOL,REAGENT_ID_COFFEE,REAGENT_ID_ASUSTENANCE)
+var/list/fast_addictives= list(REAGENT_ID_OXYCODONE,REAGENT_ID_HYPERZINE,REAGENT_ID_BLISS,REAGENT_ID_METHYLPHENIDATE) // needs to be in above list too
+var/list/slow_addictives= list(REAGENT_ID_PARACETAMOL,REAGENT_ID_TRICORDRAZINE,REAGENT_ID_ASUSTENANCE,REAGENT_ID_ETHANOL,REAGENT_ID_NICOTINE,REAGENT_ID_COFFEE) // needs to be in above list too

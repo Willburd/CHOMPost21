@@ -1,7 +1,7 @@
 /datum/reagent/hemocyanin
-	name = "Hemocyanin"
-	id = "hemocyanin"
-	description = "Hemocyanin is a copper based artifical blood, modified to repair cellular respiration damage. Usually for creatures harmed by oxygen exposure."
+	name = REAGENT_HEMOCYANIN
+	id = REAGENT_ID_HEMOCYANIN
+	description = REAGENT_HEMOCYANIN + " is a copper based artifical blood, modified to repair cellular respiration damage. Usually for creatures harmed by oxygen exposure."
 	taste_description = "metallic"
 	reagent_state = LIQUID
 	color = "#309bb3"
@@ -10,15 +10,15 @@
 	scannable = 1
 
 /datum/reagent/hemocyanin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(M.species.poison_type != "oxygen") // outpost 21 edit, changed form alien != IS_VOX to be consistant with poison oxygen behavior
+	if(M.species.poison_type != GAS_O2) // outpost 21 edit, changed form alien != IS_VOX to be consistant with poison oxygen behavior
 		M.adjustToxLoss(removed * 9)
 	else if(alien != IS_DIONA)
 		M.adjustOxyLoss(-15 * removed * M.species.chem_strength_heal)
 
 	// cleans a bunch of other meds, acts as replacement specialized blood
-	holder.remove_reagent("lexorin", 3 * removed)
-	holder.remove_reagent("dexalin", 3 * removed)
-	holder.remove_reagent("dexalinp", 3 * removed)
+	holder.remove_reagent(REAGENT_ID_LEXORIN, 3 * removed)
+	holder.remove_reagent(REAGENT_ID_DEXALIN, 3 * removed)
+	holder.remove_reagent(REAGENT_ID_DEXALINP, 3 * removed)
 
 /datum/reagent/hemocyanin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -27,8 +27,8 @@
 	M.adjustToxLoss(2 * removed)
 
 /datum/reagent/acid/artificial_sustenance
-	name = "Artificial Sustenance"
-	id = "a_sustenance"
+	name = REAGENT_ASUSTENANCE
+	id = REAGENT_ID_ASUSTENANCE
 	description = "A drug used to stablize vat grown bodies. Often used to control the lifespan of biological experiments." // Who else remembers Cybersix?
 	taste_description = "burning metal"
 	reagent_state = LIQUID
@@ -39,7 +39,7 @@
 
 /datum/reagent/acid/artificial_sustenance/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	// You need me...
-	if(M.addiction_counters && M.addiction_counters["a_sustenance"])
+	if(M.addiction_counters && M.addiction_counters[REAGENT_ID_ASUSTENANCE])
 		return
 	// Continue to acid damage, no changes on injection or splashing, as this is meant to be edible only to those pre-addicted to it! Not a snowflake acid that doesn't hurt you!
 	. = ..()

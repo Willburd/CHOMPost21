@@ -73,8 +73,6 @@
 
 /mob/observer/dead/proc/alert_of_death(var/datum/transhuman/mind_record/MR)
 	ASSERT(MR)
-	var/datum/transcore_db/db = SStranscore.db_by_mind_name(MR.mindname)
-	var/datum/transhuman/body_record/BR = db.body_scans[MR.mindname]
 	if(!client)	return
 
 	var/turf/T = null

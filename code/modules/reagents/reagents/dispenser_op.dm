@@ -1,7 +1,7 @@
 // Exists for reagent parity with mats
 /datum/reagent/titanium_dioxide
-	name = "Titanium dioxide"
-	id = "titanium_diox"
+	name = REAGENT_TITANIUMDIOX
+	id = REAGENT_ID_TITANIUMDIOX
 	description = "A crumbly white powder, often used in dyes."
 	taste_description = "metal"
 	taste_mult = 0 //no taste
@@ -9,8 +9,8 @@
 	color = "#cadcef"
 
 /datum/reagent/titanium
-	name = "Titanium"
-	id = "titanium"
+	name = REAGENT_TITANIUM
+	id = REAGENT_ID_TITANIUM
 	description = "A chemical element, lightweight and biologically inert."
 	taste_description = "metal"
 	taste_mult = 0 //no taste
@@ -18,8 +18,8 @@
 	color = "#cadcef"
 
 /datum/reagent/tin
-	name = "Tin"
-	id = "tin"
+	name = REAGENT_TIN
+	id = REAGENT_ID_TIN
 	description = "A chemical element, soft and highly flexible."
 	taste_description = "metal"
 	taste_mult = 0 //no taste

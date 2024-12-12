@@ -9,20 +9,20 @@
 
 	// Fracking results for fluid pump
 	var/static/list/ore_types = list(
-		// "hematite" = list("silicate","iron","carbon"), // rusty rocks, but i don't include it here because it makes uranium impossible due to emp pulse reaction, it's easy to get iron anyway
-		"uranium" = list("uranium","radium","calcium","phosphorus"),
-		"copper" = list("gold","copper","lead"), // Commonly
-		"gold" = list("gold","copper","lead"), // Found
-		"tin" = list("gold","copper","lead"), // Together
-		"silver" = list("silver","lead","copper"), // lead loves this one too
-		"diamond" = list("titanium_diox","phosphorus","sulfur","carbon"), // Ignius process
-		"phoron" = list("phoron","radium","phosphorus","sulfur"), // Ignius heavymetals?
-		"platinum" = list("platinum","copper"), // Don't have much to group it with
-		"mhydrogen" = list("silicate","hydrogen"),
-		"sand" = list("silicate","silicon","lithium","phosphorus","calcium","sodiumchloride","carbon"), // Catch all sedimentry
-		"carbon" = list("silicate","carbon","sodiumchloride"), // Salty coal
-		"bauxite" = list("titanium_diox","aluminum","sodiumchloride"), // ore's general components and neighbours
-		"rutile" = list("titanium_diox","silicate","silicon","sodiumchloride") // ore's general components and neighbours
+		// "hematite" = list(REAGENT_ID_SILICATE,REAGENT_ID_IRON,REAGENT_ID_CARBON), // rusty rocks, but i don't include it here because it makes uranium impossible due to emp pulse reaction, it's easy to get iron anyway
+		ORE_URANIUM = list(REAGENT_ID_URANIUM,REAGENT_ID_RADIUM,REAGENT_ID_CALCIUM,REAGENT_ID_PHOSPHORUS),
+		ORE_COPPER = list(REAGENT_ID_GOLD,REAGENT_ID_COPPER,REAGENT_ID_LEAD), // Commonly
+		ORE_GOLD = list(REAGENT_ID_GOLD,REAGENT_ID_COPPER,REAGENT_ID_LEAD), // Found
+		ORE_TIN = list(REAGENT_ID_GOLD,REAGENT_ID_COPPER,REAGENT_ID_LEAD), // Together
+		ORE_SILVER = list(REAGENT_ID_SILVER,REAGENT_ID_LEAD,REAGENT_ID_COPPER), // lead loves this one too
+		ORE_DIAMOND = list(REAGENT_ID_TITANIUMDIOX,REAGENT_ID_PHOSPHORUS,REAGENT_ID_SULFUR,REAGENT_ID_CARBON), // Ignius process
+		ORE_PHORON = list(REAGENT_ID_PHORON,REAGENT_ID_RADIUM,REAGENT_ID_PHOSPHORUS,REAGENT_ID_SULFUR), // Ignius heavymetals?
+		ORE_PLATINUM = list(REAGENT_ID_PLATINUM,REAGENT_ID_COPPER), // Don't have much to group it with
+		ORE_MHYDROGEN = list(REAGENT_ID_SILICATE,REAGENT_ID_HYDROGEN),
+		ORE_SAND = list(REAGENT_ID_SILICATE,REAGENT_ID_SILICON,REAGENT_ID_LITHIUM,REAGENT_ID_PHOSPHORUS,REAGENT_ID_CALCIUM,REAGENT_ID_SODIUMCHLORIDE,REAGENT_ID_CARBON), // Catch all sedimentry
+		ORE_CARBON = list(REAGENT_ID_SILICATE,REAGENT_ID_CARBON,REAGENT_ID_SODIUMCHLORIDE), // Salty coal
+		ORE_BAUXITE = list(REAGENT_ID_TITANIUMDIOX,REAGENT_ID_ALUMINIUM,REAGENT_ID_SODIUMCHLORIDE), // ore's general components and neighbours
+		ORE_RUTILE = list(REAGENT_ID_TITANIUMDIOX,REAGENT_ID_SILICATE,REAGENT_ID_SILICON,REAGENT_ID_SODIUMCHLORIDE) // ore's general components and neighbours
 		)
 
 /turf/simulated/floor/gas_crack/pump_reagents(var/datum/reagents/R, var/volume)
@@ -49,7 +49,7 @@
 
 /turf/simulated/floor/gas_crack/oxygen/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("oxygen", round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_OXYGEN, round(volume / 2, 0.1))
 
 
 /turf/simulated/floor/gas_crack/nitrogen
@@ -58,7 +58,7 @@
 
 /turf/simulated/floor/gas_crack/nitrogen/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("nitrogen", round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_NITROGEN, round(volume / 2, 0.1))
 
 
 /turf/simulated/floor/gas_crack/carbon
@@ -67,7 +67,7 @@
 
 /turf/simulated/floor/gas_crack/carbon/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("carbon", round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_CARBON, round(volume / 2, 0.1))
 
 
 /turf/simulated/floor/gas_crack/nitro
@@ -76,8 +76,8 @@
 
 /turf/simulated/floor/gas_crack/nitro/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("oxygen", round(volume / 3, 0.1))
-	R.add_reagent("nitrogen", round(volume / 3, 0.1))
+	R.add_reagent(REAGENT_ID_OXYGEN, round(volume / 3, 0.1))
+	R.add_reagent(REAGENT_ID_NITROGEN, round(volume / 3, 0.1))
 
 
 /turf/simulated/floor/gas_crack/phoron
@@ -86,7 +86,7 @@
 
 /turf/simulated/floor/gas_crack/phoron/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("phoron", round(volume / 3, 0.1))
+	R.add_reagent(REAGENT_ID_PHORON, round(volume / 3, 0.1))
 
 
 /turf/simulated/floor/gas_crack/methane
@@ -95,8 +95,8 @@
 
 /turf/simulated/floor/gas_crack/methane/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("sulfur", round(volume / 2, 0.1))
-	R.add_reagent("Phosphorus", round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_SULFUR, round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_PHOSPHORUS, round(volume / 2, 0.1))
 
 
 /turf/simulated/floor/gas_crack/air
@@ -106,8 +106,8 @@
 
 /turf/simulated/floor/gas_crack/air/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("oxygen", round(volume / 2, 0.1))
-	R.add_reagent("nitrogen", round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_OXYGEN, round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_NITROGEN, round(volume / 2, 0.1))
 
 
 /turf/simulated/floor/gas_crack/terrible
@@ -117,6 +117,6 @@
 
 /turf/simulated/floor/gas_crack/terrible/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent("sulfur", round(volume / 2, 0.1))
-	R.add_reagent("Phosphorus", round(volume / 2, 0.1))
-	R.add_reagent("phoron", round(volume / 3, 0.1))
+	R.add_reagent(REAGENT_ID_SULFUR, round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_PHOSPHORUS, round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_PHORON, round(volume / 3, 0.1))

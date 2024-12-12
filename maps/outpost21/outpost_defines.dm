@@ -231,8 +231,8 @@
 		)
 
 	station_uses_common_ore_only = TRUE
-	common_ores = list("marble" = 8, "quartz" = 10, "copper" = 20, "tin" = 15, "bauxite" = 15, "uranium" = 5, "platinum" = 6, "hematite" = 70, "rutile" = 15, "carbon" = 70, "diamond" = 1, "gold" = 6, "silver" = 5, "phoron" = 1, "lead" = 35, "void opal" = 1, "verdantium" = 1, "painite" = 1)
-	rare_ores = list("marble" = 5, "quartz" = 15, "copper" = 10, "tin" = 5, "bauxite" = 5, "uranium" = 25, "platinum" = 25, "hematite" = 15, "rutile" = 20, "carbon" = 25, "diamond" = 8, "gold" = 25, "silver" = 10, "phoron" = 25, "lead" = 15, "void opal" = 1, "verdantium" = 3, "painite" = 1)
+	common_ores = list(ORE_MARBLE = 8, ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 15, ORE_URANIUM = 5, ORE_PLATINUM = 6, ORE_HEMATITE = 70, ORE_RUTILE = 15, ORE_CARBON = 70, ORE_DIAMOND = 1, ORE_GOLD = 6, ORE_SILVER = 5, ORE_PHORON = 1, ORE_LEAD = 35, ORE_VOPAL = 1, ORE_VERDANTIUM = 1, ORE_PAINITE = 1)
+	rare_ores = list(ORE_MARBLE = 5, ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5, ORE_URANIUM = 25, ORE_PLATINUM = 25, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 25, ORE_DIAMOND = 8, ORE_GOLD = 25, ORE_SILVER = 10, ORE_PHORON = 25, ORE_LEAD = 15, ORE_VOPAL = 1, ORE_VERDANTIUM = 3, ORE_PAINITE = 1)
 
 /datum/map/outpost/perform_map_generation()
 	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)

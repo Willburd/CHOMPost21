@@ -9,38 +9,38 @@
 		|| (H.isSynthetic())
 
 /datum/reagent/nitrate
-	id = "nitrate"
-	name = "Nitrate"
+	id = REAGENT_ID_NITRATE
+	name = REAGENT_NITRATE
 	description = "Nitrate, not that interesting."
 	reagent_state = LIQUID
 	color = "#D8DFE3"
 
 /datum/reagent/aluminum_nitrate
-	id = "aluminum_nitrate"
-	name = "Aluminum Nitrate"
+	id = REAGENT_ID_ALUMINUMNITRATE
+	name = REAGENT_ALUMINUMNITRATE
 	description = "Aluminum Nitrate, now that's interesting!"
 	reagent_state = LIQUID
 	color = "#E1CFE3"
 
-/decl/chemical_reaction/instant/nitrate
-	name = "Nitrate"
-	id = "nitrate"
-	result = "nitrate"
-	required_reagents = list("nitrogen" = 1, "oxygen" = 3)
+/decl/chemical_reaction/nitrate
+	name = REAGENT_NITRATE
+	id = REAGENT_ID_NITRATE
+	result = REAGENT_ID_NITRATE
+	required_reagents = list(REAGENT_ID_NITROGEN = 1, REAGENT_ID_OXYGEN = 3)
 	result_amount = 4
 
-/decl/chemical_reaction/instant/aluminum_nitrate
-	name = "Aluminum Nitrate"
-	id = "aluminum_nitrate"
-	result = "aluminum_nitrate"
-	required_reagents = list("aluminum" = 1, "nitrate" = 3)
+/decl/chemical_reaction/aluminum_nitrate
+	name = REAGENT_ALUMINUMNITRATE
+	id = REAGENT_ID_ALUMINUMNITRATE
+	result = REAGENT_ID_ALUMINUMNITRATE
+	required_reagents = list(REAGENT_ID_ALUMINIUM = 1, REAGENT_ID_NITRATE = 3)
 	result_amount = 4
 
 /decl/chemical_reaction/instant/brownies
 	name = "Brownies"
 	id = "brownies"
 	result = null
-	required_reagents = list("aluminum_nitrate" = 40, "tartrate" = 20)
+	required_reagents = list(REAGENT_ID_ALUMINUMNITRATE = 40, REAGENT_ID_TARTRATE = 20)
 	result_amount = 1
 
 /decl/chemical_reaction/instant/brownies/on_reaction(var/datum/reagents/holder, var/created_volume)
@@ -55,8 +55,8 @@
 	filling_color = "#A79459"
 
 /obj/item/reagent_containers/food/snacks/brownies/New()
-	..()
-	reagents.add_reagent("nutriment", 6)
+		..()
+		reagents.add_reagent(REAGENT_ID_NUTRIMENT, 6)
 
 /obj/item/induromol
 	name = "Hardened Induromol"

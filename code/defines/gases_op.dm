@@ -1,5 +1,5 @@
 /decl/xgm_gas/methane
-	id = "methane"
+	id = GAS_CH4
 	name = "Methane"
 	specific_heat = 34	// J/(mol*K)
 	molar_mass = 0.016	// kg/mol
