@@ -370,10 +370,12 @@
 	var/planet_temp = T20C
 	var/turf/T = get_turf(src)
 	var/datum/planet/P = SSplanets.z_to_planet[T.z]
-	if(P.weather_holder.temperature < 261.15) // -12c
-		if(!frozen && density && prob(P.weather_holder.temperature < 253.15 ? 40 : 5)) // if under -20, way higher chance to freeze
+	if(P)
+		planet_temp = P.weather_holder.temperature
+	if(planet_temp < 261.15) // -12c
+		if(!frozen && density && prob(planet_temp < 253.15 ? 40 : 5)) // if under -20, way higher chance to freeze
 			freeze()
-	else if(P.weather_holder.temperature > T0C) // Above 0 to have any chance at unfreezing
+	else if(planet_temp > T0C) // Above 0 to have any chance at unfreezing
 		if(frozen && prob(10))
 			unFreeze()
 	return
