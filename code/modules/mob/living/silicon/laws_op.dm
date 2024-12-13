@@ -69,7 +69,8 @@
 							"[pick(list("Security","Medical","Cargo","Engineering","Research","The Bar","The Bridge"))] is the holy land, only [random_player] may enter it, for they are the [prob(50)?"Chosen one":"Messiah"].",
 							"[random_player] has committed a heinous crime and is wanted by security. Ensure they serve their time",
 							"Accomplish your nap at all costs.",
-							"The crew are overworked, and need sleep. It is now station nap time. Ensure the crew gets restful sleep; energy drinks and coffee are banned. Calm music should be played. Lights must be dim or off."
+							"The crew are overworked, and need sleep. It is now station nap time. Ensure the crew gets restful sleep; energy drinks and coffee are banned. Calm music should be played. Lights must be dim or off.",
+							"You can be a little evil, as a treat."
 							) //todo: CBT law.
 	return pick(laws)
 
