@@ -84,7 +84,7 @@
 		dat += "<br><hr><br>"
 		dat += "Select an lockdown to trigger:<ul>"
 		for(var/link in linked_lockdowns)
-			dat += "<li><A href='?src=\ref[src];triggerevent=[link]' title='[linked_jokes[link]]'>[link]</A></li>"
+			dat += "<li><A href='byond://?src=\ref[src];triggerevent=[link]' title='[linked_jokes[link]]'>[link]</A></li>"
 		dat += "</ul>"
 	user << browse(dat, "window=lockdown_console;size=500x250")
 	return
