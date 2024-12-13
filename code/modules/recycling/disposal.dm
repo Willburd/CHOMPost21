@@ -442,6 +442,11 @@
 			spawn(0)
 				feedback_inc("disposal_auto_flush",1)
 				flush()
+				// Make it more obvious
+				visible_message(span_warning("\The [src] sparks violently!"))
+				var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+				sparks.set_up(4, 1, get_turf(src))
+				sparks.start()
 			flush_count = rand(0,10)
 	else
 		// normal flush behavior
@@ -740,14 +745,15 @@
 		// make noises to spook people lots, the teshari love it!
 		if(prob(40) && prob(noiseprob)) // double probability helps push this down in rarity
 			var/turf/T = get_turf(src)
-			playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
-			var/message = pick(
-				prob(90);"* clunk *",
-				prob(90);"* thud *",
-				prob(90);"* clatter *",
-				prob(1);"* <span style='font-size:2em'>ඞ</span> *"
-			)
-			T.runechat_message(message)
+			if(T)
+				playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
+				var/message = pick(
+					prob(90);"* clunk *",
+					prob(90);"* thud *",
+					prob(90);"* clatter *",
+					prob(1);"* <span style='font-size:2em'>ඞ</span> *"
+				)
+				T.runechat_message(message)
 		// outpost 21 edit end
 
 		//

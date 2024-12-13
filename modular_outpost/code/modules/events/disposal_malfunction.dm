@@ -7,13 +7,12 @@
 	if(!machines.len)
 		return
 
-	var/obj/machinery/disposal/D
 	var/list/disposals = list()
-	var/remaining_attempts = 50
-	while(remaining_attempts-- > 0)
-		D = acquire_random_disposal()
-		if(D)
-			disposals.Add(D)
+	for(var/obj/machinery/M in machines)
+		if(istype(M,/obj/machinery/disposal))
+			var/obj/machinery/disposal/D = M
+			if(!(D.stat & BROKEN) && D.mode != 3 && D.anchored)
+				disposals.Add(M)
 	if(!disposals.len)
 		return
 
@@ -23,20 +22,14 @@
 		if(EVENT_LEVEL_MUNDANE)
 			severity_range = 4
 		if(EVENT_LEVEL_MODERATE)
-			severity_range = 11
+			severity_range = 12
 		if(EVENT_LEVEL_MAJOR)
-			severity_range = 30
+			severity_range = 20
 
 	// break amount of disposals based on severity
 	while(disposals.len && severity_range-- > 0)
-		D = pick(disposals)
-		disposals.Remove(D)
-
-		// break em!
-		D.malfunction()
-
-/datum/event/disposal_damage/proc/acquire_random_disposal()
-	var/obj/machinery/disposal/D = pick(machines)
-	if(istype(D,/obj/machinery/disposal/) && !(D.stat & BROKEN) && D.mode != 3)
-		return D
-	return null
+		var/obj/machinery/disposal/D = pick(disposals)
+		if(D)
+			// break em!
+			D.malfunction()
+			disposals.Remove(D)
