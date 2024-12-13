@@ -5,7 +5,7 @@
 	if(!istype(hound))
 		return ..(prey)
 	if(prob(98))
-		to_chat(prey, "<span class='notice'>The walls of the [src] resist your struggling!</span>")
+		to_chat(prey, "<span class='notice'>The walls of \the [src] resist your struggling!</span>")
 		return
 
 	var/escape_time = 20 SECONDS
@@ -18,3 +18,7 @@
 
 	// Eject
 	go_out()
+
+/obj/item/dogborg/sleeper/K9/container_resist(mob/living/prey)
+	to_chat(prey, "<span class='notice'>The walls of \the [src] resist your struggling! \The [src] does not have an ejection system!</span>")
+	return // No resisting out of brig
