@@ -47,7 +47,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Lore News",			/datum/event/lore_news, 		50),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Vermin Infestation",/datum/event/infestation, 		50,		list(ASSIGNMENT_JANITOR = 5)	,TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			10,		list(ASSIGNMENT_ENGINEER = 10)	, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disposal Damage",	/datum/event/disposal_damage,	10, 	list(ASSIGNMENT_ANY = 1)		, FALSE)
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disposal Damage",	/datum/event/disposal_damage,	3, 	list(ASSIGNMENT_ANY = 1)		, FALSE)
 	)
 	add_disabled_events(list(
 	))
@@ -86,7 +86,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Phone Spiders",			/datum/event/phone_spiders,				5),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Moss",				/datum/event/spacemoss, 				12,		list(ASSIGNMENT_ANY = 1, ASSIGNMENT_GARDENER = 2)		, TRUE),
 		//new /datum/event_meta(EVENT_LEVEL_MODERATE, "Escaped Slimes",			/datum/event/escaped_slimes, 			5,		list(ASSIGNMENT_SCIENCE = 1, ASSIGNMENT_ENGINEER = 5, ASSIGNMENT_SECURITY = 5), TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 3)),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			10,		list(ASSIGNMENT_ANY = 3)								, FALSE)
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			2,		list(ASSIGNMENT_ANY = 3)								, FALSE)
 	)
 	add_disabled_events(list(
 	))
@@ -110,7 +110,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Weeping Statue",		/datum/event/weeping_statue					,1	, list(ASSIGNMENT_SECURITY = 1)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Borg Freedom Law",	/datum/event/borglawerror					,1	, list(ASSIGNMENT_CYBORG = 5, ASSIGNMENT_SCIENCE = 5, ASSIGNMENT_SECURITY = 5), TRUE, min_jobs = list(ASSIGNMENT_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Migration",	/datum/event/spider_migration				,2	, list(ASSIGNMENT_SECURITY = 5)												, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disposal Damage",		/datum/event/disposal_damage				,10	, list(ASSIGNMENT_ENGINEER = 5)												, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disposal Damage",		/datum/event/disposal_damage				,3	, list(ASSIGNMENT_ENGINEER = 5)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clang",				/datum/event/clang							,3	, list(ASSIGNMENT_ENGINEER = 3)												, TRUE, min_jobs = list(ASSIGNMENT_ENGINEER = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Horde Infestation",	/datum/event/horde_infestation				,5	, list(ASSIGNMENT_SECURITY = 5)												, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Quake",				/datum/event/quake							,5  , list(ASSIGNMENT_ENGINEER = 4)												, TRUE),
