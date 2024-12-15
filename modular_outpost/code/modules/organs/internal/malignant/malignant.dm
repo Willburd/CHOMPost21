@@ -710,11 +710,11 @@
 			handle_sideeffects(side_effect_multiplier)
 	else
 		// process the chems!
-		if(owner.bloodstr.get_reagent_amount(chemid) < 1)
-			if(prob(50))
+		if(owner.bloodstr.get_reagent_amount(chemid) < 5)
+			if(prob(10))
 				owner.nutrition = max(owner.nutrition - 1,0) // num num
-			owner.bloodstr.add_reagent(chemid,rand(3,5))
-			cooldown = 50
+			owner.bloodstr.add_reagent(chemid,rand(5,10))
+			cooldown = rand(5,10)
 
 /obj/item/organ/internal/malignant/engineered/chemorgan/phoron
 	name = "phoroketic gland"
