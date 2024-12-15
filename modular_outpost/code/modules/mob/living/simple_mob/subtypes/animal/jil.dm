@@ -6,7 +6,7 @@
 /datum/category_item/catalogue/fauna/jil/jillioth
 	name = "Muriki Fauna - Jillioth"
 	desc = "TODO - giant jil description"
-	value = CATALOGUER_REWARD_MEDIUM
+	value = CATALOGUER_REWARD_EASY
 
 /mob/living/simple_mob/vore/alienanimals/jil
 	name = "jil"
