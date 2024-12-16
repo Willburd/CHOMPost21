@@ -64,9 +64,10 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 
 /datum/lore/atc_controller/proc/shift_ending(var/evac = 0)
 	//CHOMPStation Edit Start TFF 28/12/19 - Shuttle transfer, not Tram.
-	msg("Automated Shuttle departing [using_map.station_name] for [using_map.dock_name] on routine transfer route.","NT Automated Shuttle")
+	//Outpost edit - We use an elevator.
+	msg("Elevator departing [using_map.station_name] for [using_map.dock_name] for scheduled crew transfer.","ES Central Command")
 	sleep(5 SECONDS)
-	msg("Automated Shuttle, cleared to complete routine transfer from [using_map.station_name] to [using_map.dock_name].")
+	msg("Elevator ascent to [using_map.dock_name] confirmed. Stand by for scheduled crew change-over.")
 	//CHOMPStation Edit End
 
 /datum/lore/atc_controller/proc/random_convo(var/force_chatter_type)
