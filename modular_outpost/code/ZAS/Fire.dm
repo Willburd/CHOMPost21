@@ -1,4 +1,4 @@
-/turf/proc/lingering_fire()
+/turf/proc/lingering_fire(fl)
 	return
 
 /turf/simulated/lingering_fire(fl)
@@ -67,7 +67,7 @@
 
 	//spread while burning out oxygen
 	var/datum/gas_mixture/air_contents = my_tile.return_air()
-	var/gas_exchange = rand(0.01,0.05)
+	var/gas_exchange = rand(0.005,0.02)
 	air_contents.remove_by_flag(XGM_GAS_OXIDIZER, gas_exchange)
 	air_contents.adjust_gas(GAS_CO2, gas_exchange)
 
@@ -111,7 +111,7 @@
 					enemy_tile.lingering_fire(firelevel * splitrate)
 					firelevel -= (1 - splitrate)
 
-			else if(prob(10))
+			else if(prob(4))
 				enemy_tile.adjacent_fire_act(loc, air_contents, air_contents.temperature, air_contents.volume)
 
 	//*** Get the fuel and oxidizer amounts

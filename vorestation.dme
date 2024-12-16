@@ -5361,6 +5361,7 @@
 #include "modular_outpost\code\modules\events\dirty_room.dm"
 #include "modular_outpost\code\modules\events\disposal_malfunction.dm"
 #include "modular_outpost\code\modules\events\earthquake.dm"
+#include "modular_outpost\code\modules\events\electrical_fire.dm"
 #include "modular_outpost\code\modules\events\event_container_op.dm"
 #include "modular_outpost\code\modules\events\jil_infestation.dm"
 #include "modular_outpost\code\modules\events\phone_spiders.dm"
