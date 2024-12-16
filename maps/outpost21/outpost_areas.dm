@@ -2566,6 +2566,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/crew_quarters/medbreak
+	name = "\improper Medical Break Room"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/crew_quarters/medical_restroom

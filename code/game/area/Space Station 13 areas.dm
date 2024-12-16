@@ -1575,7 +1575,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	music = 'sound/ambience/signal.ogg'
 
 /area/crew_quarters/medbreak
-	name = "\improper Medical Break Room"
+	name = "\improper Break Room"
 	icon_state = "medbay3"
 	music = 'sound/ambience/signal.ogg'
 
