@@ -25,6 +25,10 @@
 			F.firelevel = 1
 		F.ultimate_burnout = 0 // reset
 		zone.fire_tiles |= src
+		// Add co2
+		var/datum/gas_mixture/air_contents = return_air()
+		air_contents.adjust_gas(GAS_CO2, rand(0.1,0.5))
+		air_contents.update_values()
 
 /obj/fire/lingering
 	//Icon for fire on turfs.
@@ -53,13 +57,13 @@
 
 	var/turf/simulated/my_tile = loc
 	if(!istype(my_tile) || !my_tile.zone)
-		if(my_tile.fire == src)
+		if(my_tile && my_tile.fire == src)
 			my_tile.fire = null
 		qdel(src)
 		return 1
 
 	// Don't burn forever, eventually we have no more fuel
-	ultimate_burnout += 0.0001
+	ultimate_burnout += 0.001
 
 	//spread while burning out oxygen
 	var/datum/gas_mixture/air_contents = my_tile.return_air()
@@ -117,7 +121,7 @@
 			total_oxidizers += air_contents.gas[g]
 
 	// Remove dying fires
-	var/invalid_fire = total_oxidizers < 1 || air_contents.temperature <= T0C || ultimate_burnout >= 1 || my_tile.is_outdoors()
+	var/invalid_fire = total_oxidizers < 1 || air_contents.temperature <= (T0C + 15) || ultimate_burnout >= 1 || my_tile.is_outdoors()
 	if(prob(30) || invalid_fire)
 		if(total_oxidizers < 10 && prob(10))
 			firelevel *= 0.95
@@ -130,7 +134,7 @@
 
 /obj/fire/lingering/ex_act(strength)
 	. = ..()
-	var/turf/T = get_turf()
+	var/turf/T = get_turf(src)
 	if(T)
 		T.fire = null
 		qdel(src)
