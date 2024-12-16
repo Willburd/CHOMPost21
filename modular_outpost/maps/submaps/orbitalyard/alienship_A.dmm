@@ -6,6 +6,7 @@
 "cr" = (/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "cN" = (/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
 "cV" = (/obj/machinery/ion_engine{dir = 4},/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
+"dp" = (/obj/structure/loot_pile/surface/alien,/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
 "dF" = (/obj/structure/table/alien/blue,/obj/item/surgical/FixOVein/alien,/obj/item/surgical/surgicaldrill/alien{pixel_y = -7},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "eA" = (/obj/structure/prop/dominator/blue,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "fc" = (/obj/machinery/porta_turret/alien{check_all = 0; check_anomalies = 0; check_arrest = 0; check_records = 0},/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
@@ -75,6 +76,7 @@
 "Vb" = (/obj/structure/prop/machine/core,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "VL" = (/obj/structure/prop/machine/biosyphon,/obj/structure/table/alien/blue,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "VX" = (/obj/item/card/id/keycard,/obj/item/digestion_remains/skull/vox,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"We" = (/obj/structure/loot_pile/surface/alien,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "XK" = (/obj/structure/prop/machine/alien_tank/starts_broken,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Yb" = (/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
 "Ym" = (/obj/machinery/chemical_dispenser/ert/specialops/abductor,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
@@ -99,7 +101,7 @@ QgIvIvIvqvqvzkzkpEzkqvkGqvkGqvqvqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgIvIvIvqvqvqvkKzkkKStkKStqvzkzkzkqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgIvIvIvqvqvPSzkzkzkzkzkqvzkfXzkqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgQgIvIvIvqvqvzkzkzkfXfXqvJLfXzkkKqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
-QgQgQgQgQgIvIvIvqvqvqvqvqvCAqvckzkzkYmaPzkqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
+QgQgQgQgQgIvIvIvqvqvqvqvqvCAqvckzkzkYmaPWeqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgQgQgIvIvIvIvqvzkzkfXfXCAfXzkzkzkzkzkzkqvqvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvQgQgQgQgQgQgQgQg
 QgQgQgQgQgQgIvIvqvqvzkzkzkfXCAfXzkzkzkzkzkzkPSqvqvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvQgQgQgQg
 QgQgQgQgQgQgIvIvqvPSzkzkqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvIvIvIvIvIvIvIvIvQgQg
@@ -121,7 +123,7 @@ QgQgQgQgQgIvIvIvqvqvqvqvqvtgqvYbcNFhftYbFhFhIuIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgQgIvIvIvqvqvPxzkzkfXfXqvcNRdYbYbYbIuIvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgIvIvIvqvqvAuzkzkzkLTzkqvcNYbYbRdIuIvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgIvIvIvqvqvLPzkzkRBRBzkzkqvYbFhYbIuIvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
-QgIvIvIvqvqvbizkzkzkzkzkzklOqvYbYbqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
+QgIvIvIvqvqvbizkzkzkzkzkzklOqvdpYbqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgIvIvqvqvaAzkzkdFFBszubzkZBqvqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgqvqvqvqvqvqvqvqvqvqvqvqvqvqvIvIvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg

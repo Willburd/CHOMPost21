@@ -828,8 +828,8 @@ var/datum/planet/muriki/planet_muriki = null
 /datum/weather/muriki/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
-	temp_high = 253.15 // -20c
-	temp_low = 223.15 // -50c
+	temp_high = 243.15 // -30c
+	temp_low = 213.15 // -60c
 	wind_high = 4
 	wind_low = 2
 	light_modifier = 0.3
@@ -847,15 +847,6 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
-
-/datum/weather/muriki/blizzard/process_effects()
-	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors() || istype(L, /mob/living/simple_mob))
-				continue // They're indoors so no need to rain on them.
-			L.inflict_heat_damage(rand(1, 1))
 
 /datum/weather/muriki/fallout/temp //fixys firework stars
 	name = "short-term fallout"

@@ -8,7 +8,7 @@
 #define GAS_VOLATILE_FUEL "volatile_fuel"
 
 // Gas Reagents
-#define REAGENT_CARBON_DIOXIDE "Nitrogen"
+#define REAGENT_CARBON_DIOXIDE "Carbon Dioxide" // Outpost 21 edit - You missed one (was Nitrogen)
 #define REAGENT_NITROGEN "Nitrogen"
 #define REAGENT_ID_NITROGEN "nitrogen"
 #define REAGENT_NITROUS_OXIDE "Nitrous Oxide"
