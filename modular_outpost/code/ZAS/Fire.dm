@@ -1,3 +1,5 @@
+var/global/lingering_fires = 0 // If this is over a certain large number, fires will start dying out to reduce server lag
+
 /turf/proc/lingering_fire(fl)
 	return
 
@@ -27,7 +29,7 @@
 		zone.fire_tiles |= src
 		// Add co2
 		var/datum/gas_mixture/air_contents = return_air()
-		air_contents.adjust_gas(GAS_CO2, rand(0.1,0.5))
+		air_contents.adjust_gas(GAS_CO2, rand(1,5))
 		air_contents.update_values()
 
 /obj/fire/lingering
@@ -36,7 +38,7 @@
 	anchored = TRUE
 	mouse_opacity = 0
 
-	icon = 'icons/effects/fire.dmi'
+	icon = 'modular_outpost/icons/effects/fire.dmi'
 	icon_state = "fire"
 	light_color = "#ED9200"
 	layer = GASFIRE_LAYER		// CHOMPEdit
@@ -49,8 +51,10 @@
 		fl = 0.01
 	. = ..(mapload, fl)
 	// uses parent fire init, so lets clear these
+	icon_state = "[initial(icon_state)]-[rand(0,2)]"
 	color = initial(color)
 	set_light(3, 1, l_color = light_color)
+	lingering_fires++
 
 /obj/fire/lingering/process()
 	. = 1
@@ -67,12 +71,12 @@
 
 	//spread while burning out oxygen
 	var/datum/gas_mixture/air_contents = my_tile.return_air()
-	var/gas_exchange = rand(0.005,0.02)
+	var/gas_exchange = rand(0.2,1)
 	air_contents.remove_by_flag(XGM_GAS_OXIDIZER, gas_exchange)
 	air_contents.adjust_gas(GAS_CO2, gas_exchange)
 
 	var/starting_energy = air_contents.temperature * air_contents.heat_capacity()
-	air_contents.temperature = (starting_energy + vsc.fire_fuel_energy_release * gas_exchange) / air_contents.heat_capacity()
+	air_contents.temperature = (starting_energy + vsc.fire_fuel_energy_release * (gas_exchange / 5)) / air_contents.heat_capacity()
 	air_contents.update_values()
 
 	// Affect contents
@@ -121,7 +125,7 @@
 			total_oxidizers += air_contents.gas[g]
 
 	// Remove dying fires
-	var/invalid_fire = total_oxidizers < 1 || air_contents.temperature <= (T0C + 15) || ultimate_burnout >= 1 || my_tile.is_outdoors()
+	var/invalid_fire = total_oxidizers < 1 || air_contents.temperature <= (T0C + 15) || ultimate_burnout >= 1 || my_tile.is_outdoors() || lingering_fires >= 1000
 	if(prob(30) || invalid_fire)
 		if(total_oxidizers < 10 && prob(10))
 			firelevel *= 0.95
@@ -138,3 +142,7 @@
 	if(T)
 		T.fire = null
 		qdel(src)
+
+/obj/fire/lingering/Destroy()
+	. = ..()
+	lingering_fires--

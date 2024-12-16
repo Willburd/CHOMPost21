@@ -46,4 +46,4 @@
 		sparks.start()
 
 		var/turf/T = get_turf(M)
-		T.lingering_fire(0.35)
+		T.lingering_fire(0.30)

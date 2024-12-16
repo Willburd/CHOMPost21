@@ -115,7 +115,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Horde Infestation",	/datum/event/horde_infestation				,5	, list(ASSIGNMENT_SECURITY = 5)												, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Quake",				/datum/event/quake							,5  , list(ASSIGNMENT_ENGINEER = 4)												, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blood Writing",		/datum/event/dirty_room/cult				,1	, list(ASSIGNMENT_ANY = 3)													, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Fire",		/datum/event/electrical_fire				,2	, list(ASSIGNMENT_ENGINEER = 5)												, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Fire",		/datum/event/electrical_fire				,2	, list(ASSIGNMENT_ENGINEER = 5)												, FALSE),
 		//new /datum/event_meta(EVENT_LEVEL_MAJOR, "Infected Room",				/datum/event/infectedroom			,1	, list()																	, TRUE, min_jobs = list(ASSIGNMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Security Advisement",	/datum/event/security_drill					,10	, list(ASSIGNMENT_SECURITY = 1,ASSIGNMENT_ANY = 5) 							, TRUE, min_jobs = list(ASSIGNMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Septic Explosion",	/datum/event/septic_explosion				,4	, list(ASSIGNMENT_ENGINEER = 1) 											, TRUE, min_jobs = list(ASSIGNMENT_ENGINEER = 1)),

@@ -5,9 +5,9 @@
 #define SUPER_BURN 0.8
 #define MEGA_BURN 1
 
-#define LOW_CHANCE 5
-#define MED_CHANCE 15
-#define HIGH_CHANCE 30
+#define LOW_CHANCE 3
+#define MED_CHANCE 6
+#define HIGH_CHANCE 12
 
 // Additional fire_acts(), macro that assembles a proc that runs every time fire acts on the assigned object path of x.
 // If it rolls the prob("c"hance) it will feed the lingering fire a 0 to 1 value as "b"urn. Then ex_act(1) the object while leaving ash behind.
@@ -41,7 +41,6 @@ FIREACT_BURNS(/obj/item/tape_roll,LOW_CHANCE,LOW_BURN)
 FIREACT_BURNS(/obj/structure/sign/christmas,LOW_CHANCE,LOW_BURN) // IT CRIMBO, OH NO IT CRIMBO
 FIREACT_BURNS(/obj/structure/table/woodentable,MED_CHANCE,LOW_BURN)
 FIREACT_BURNS(/obj/structure/table/gamblingtable,MED_CHANCE,LOW_BURN)
-FIREACT_BURNS(/obj/structure/bed,MED_CHANCE,LOW_BURN)
 //////////////////////////// GOOD BURN ////////////////////////////
 FIREACT_BURNS(/obj/item/stack/material/stick,MED_CHANCE,GOOD_BURN)
 FIREACT_BURNS(/obj/item/stack/material/wax,MED_CHANCE,GOOD_BURN)
@@ -51,6 +50,8 @@ FIREACT_BURNS(/obj/item/instrument,LOW_CHANCE,GOOD_BURN)
 FIREACT_BURNS(/obj/item/toy/plushie,MED_CHANCE,GOOD_BURN)
 FIREACT_BURNS(/obj/item/towel,HIGH_CHANCE,GOOD_BURN)
 FIREACT_BURNS(/obj/structure/closet/crate/wooden,MED_CHANCE,GOOD_BURN)
+FIREACT_BURNS(/obj/structure/bed,MED_CHANCE,GOOD_BURN)
+FIREACT_BURNS(/obj/structure/curtain,MED_CHANCE,GOOD_BURN)
 //////////////////////////// HIGH BURN ////////////////////////////
 FIREACT_BURNS(/obj/item/stack/material/wood,MED_CHANCE,HIGH_BURN)
 FIREACT_BURNS(/obj/structure/flora/tree,LOW_CHANCE,HIGH_BURN)
