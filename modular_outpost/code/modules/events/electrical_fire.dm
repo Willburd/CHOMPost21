@@ -13,8 +13,6 @@
 			continue
 		if(istype( A, /area/shuttle ))
 			continue
-		if(istype( A, /area/muriki/bathroom ) || istype( A, /area/medical/voxlab ) ) // Outpost 21 specific
-			continue
 		var/turf/T = get_turf(M)
 		if(!T)
 			continue
