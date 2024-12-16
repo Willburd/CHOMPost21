@@ -152,7 +152,7 @@
 	allow_duplicates = FALSE
 	discard_prob = 10
 	cost = 55
-/*
+
 /datum/map_template/outpost21/space/orbitalyard_huge/alienship_A
 	name = "Abandoned Alien Vessel"
 	desc = "An old derelict ship"
@@ -160,7 +160,7 @@
 	allow_duplicates = FALSE
 	discard_prob = 85
 	cost = 80
-*/
+
 
 //////////////////////////////////////////////////////////////
 // Area definitions
