@@ -12,7 +12,7 @@
 "fc" = (/obj/machinery/porta_turret/alien{check_all = 0; check_anomalies = 0; check_arrest = 0; check_records = 0},/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
 "ft" = (/obj/structure/lattice,/obj/structure/meteorite,/turf/space,/area/space)
 "fX" = (/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/space)
-"hH" = (/obj/structure/bed/alien,/mob/living/simple_mob/mechanical/cyber_horror/vox,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"hH" = (/obj/structure/bed/alien,/mob/living/simple_mob/mechanical/cyber_horror/vox{ID_provided = 1; myid_access = list(300)},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "kB" = (/obj/structure/prop/machine/conduit/starts_on,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "kG" = (/obj/structure/bed/alien,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "kK" = (/turf/simulated/shuttle/wall/alien/hard_corner,/area/space)
@@ -32,6 +32,7 @@
 "tg" = (/obj/machinery/door/airlock/alien/blue/public{name = "alien airlock"; req_one_access = list(803)},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "ub" = (/obj/structure/table/alien/blue,/obj/item/roller/adv,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "ut" = (/obj/structure/table/alien/blue,/obj/random/greaterportalloot,/obj/random/greaterportalloot,/obj/random/greaterportalloot,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"uE" = (/mob/living/simple_mob/mechanical/cyber_horror/vox{ID_provided = 1; myid_access = list(300)},/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "uG" = (/obj/machinery/door/airlock/alien/blue{name = "bridge"; req_one_access = list(802)},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "vy" = (/obj/machinery/power/port_gen/large_altevian,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "vC" = (/obj/item/vox/armalis_armour,/obj/item/vox/armalis_amp,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
@@ -48,6 +49,7 @@
 "Fh" = (/turf/simulated/shuttle/plating/airless,/area/space)
 "Fi" = (/obj/structure/loot_pile/surface/alien/end,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "FB" = (/obj/structure/table/alien/blue,/obj/item/surgical/cautery/alien,/obj/item/surgical/retractor/alien{pixel_y = -9},/obj/item/surgical/scalpel/alien{pixel_y = 8},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"Gg" = (/obj/structure/fans/hardlight/colorable/abductor,/obj/machinery/door/airlock/alien/blue{name = "Exterior"; req_one_access = list(801)},/obj/effect/mine/dnascramble{camo_net = 1},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Iu" = (/obj/structure/lattice,/turf/space,/area/space)
 "Iv" = (/turf/space,/area/space)
 "Jn" = (/obj/structure/table/alien,/obj/item/clothing/accessory/medal/dungeon/alien_ufo,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
@@ -57,11 +59,12 @@
 "KD" = (/obj/structure/table/alien,/obj/item/prop/alien/junk,/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Le" = (/obj/structure/prop/machine/bsb_on,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "LP" = (/obj/machinery/optable,/obj/machinery/oxygen_pump/phoroanesthetic{pixel_x = -32},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
-"LT" = (/mob/living/simple_mob/mechanical/cyber_horror/vox,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"LT" = (/mob/living/simple_mob/mechanical/cyber_horror/vox{ID_provided = 1; myid_access = list(300)},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Mc" = (/obj/structure/loot_pile/surface/alien/security,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Nc" = (/obj/structure/window/phoronreinforced{dir = 8},/obj/structure/window/phoronreinforced{dir = 4},/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
 "NI" = (/obj/structure/window/phoronreinforced{dir = 8},/obj/structure/window/phoronreinforced{dir = 4},/obj/structure/window/phoronreinforced,/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
 "Ov" = (/obj/structure/table/alien/blue,/obj/machinery/artifact,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"OY" = (/obj/effect/mine/claymore{dir = 8},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Pt" = (/obj/structure/table/alien/blue,/obj/item/storage/belt/utility/alien/full,/obj/item/storage/belt/utility/alien/full,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Px" = (/obj/machinery/sleeper/survival_pod,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "PK" = (/obj/structure/table/alien/blue,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
@@ -75,8 +78,9 @@
 "Td" = (/obj/structure/prop/alien/pod/open,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Vb" = (/obj/structure/prop/machine/core,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "VL" = (/obj/structure/prop/machine/biosyphon,/obj/structure/table/alien/blue,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
-"VX" = (/obj/item/card/id/keycard,/obj/item/digestion_remains/skull/vox,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"VX" = (/obj/item/card/id/keycard,/obj/item/digestion_remains/skull/vox,/mob/living/simple_mob/mechanical/cyber_horror/vox{ID_provided = 1; myid_access = list(300)},/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "We" = (/obj/structure/loot_pile/surface/alien,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
+"Wh" = (/obj/effect/mine/emp/camo,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "XK" = (/obj/structure/prop/machine/alien_tank/starts_broken,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
 "Yb" = (/turf/simulated/shuttle/floor/alienplating/vacuum,/area/space)
 "Ym" = (/obj/machinery/chemical_dispenser/ert/specialops/abductor,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/space)
@@ -99,23 +103,23 @@ QgqvqvqvqvqvqvqvqvqvqvqvqvqvqvIvIvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgIvIvqvqvQEhHzkkKzkqvoDqvoDqvqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgIvIvIvqvqvzkzkpEzkqvkGqvkGqvqvqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgIvIvIvqvqvqvkKzkkKStkKStqvzkzkzkqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
-QgQgQgIvIvIvqvqvPSzkzkzkzkzkqvzkfXzkqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
+QgQgQgIvIvIvqvqvPSzkzkzkzkzkqvzkuEzkqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgQgIvIvIvqvqvzkzkzkfXfXqvJLfXzkkKqvqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgQgQgIvIvIvqvqvqvqvqvCAqvckzkzkYmaPWeqvqvIvIvIvIvIvQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQgQg
 QgQgQgQgQgIvIvIvIvqvzkzkfXfXCAfXzkzkzkzkzkzkqvqvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvQgQgQgQgQgQgQgQg
 QgQgQgQgQgQgIvIvqvqvzkzkzkfXCAfXzkzkzkzkzkzkPSqvqvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvQgQgQgQg
 QgQgQgQgQgQgIvIvqvPSzkzkqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvIvIvIvIvIvIvIvIvQgQg
-QgQgQgQgIvIvIvIvqvkKzkzkzkzkzkfXCAfXzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkqvqvqvqvqvIvIvIvIvIvQg
+QgQgQgQgIvIvIvIvqvkKzkzkzkzkzkfXCAfXzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkOYqvqvqvqvqvIvIvIvIvIvQg
 QgQgQgIvIvIvIvIvIvJEzkzkzkzkzkfXCAfXzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkPSqvPSqvqvqvqvIvIvQg
 QgQgQgIvIvIvqvqvqvqvqvqvqvqvzkzkqvqvqvqvqvqvqvqvPSzkzkPSqvqvqvqvqvqvqvqvqvqvzkzkzkqvcrFiKDZIqvIvIvQg
 QgQgQgIvIvqvqvzkzkkBnSwTwTqvzkzkqvEoEoXKVLvEOvqvqvzkzkqvqvnemvmvMcMcqOqOqOqvqvzkzkqvzkzkzkzkqvqvIvQg
-QgQgQgIvIvcVZpvyzkzkzkzkfXkKfXzkqvzkzkzkzkzkzkfXqvfXfXqvfXzkzkzkzkzkzkzkzkPSqvzkfXqvfXzkzkzkEcqvIvQg
-QgQgQgIvIvcVNczkzkzkLTLefXpEfXzkqvPSzkzkzkzkzkfXJzfXfXJzfXrUrUlxPKPKPKPKzkBRqvVXfXuGfXzkzkvCSgqvIvQg
+QgQgQgIvIvcVZpvyzkzkzkzkWhkKfXzkqvzkzkzkzkzkzkfXqvfXfXqvfXzkzkzkzkzkzkzkzkPSqvzkfXqvfXzkzkzkEcqvIvQg
+QgQgQgIvIvcVNczkzkzkLTLefXpEfXzkqvPSzkzkLTzkzkfXJzfXfXJzfXrUrUlxPKPKPKPKzkBRqvVXfXuGfXzkzkvCSgqvIvQg
 QgQgQgIvIvcVNIzkzkzkzkzkfXkKfXzkqvzkzkzkzkzkzkfXqvfXfXqvfXzkzkzkzkzkzkzkzkPSqvzkfXqvfXzkzkzkSgqvIvQg
 QgQgQgIvIvqvqvvyzkVbnSwTwTqvzkzkqvEoXKEoeAeAOvqvqvzkzkqvqvotTdwhMcMcututPtqvqvzkzkqvzkzkzkzkqvqvIvQg
 QgQgQgIvIvIvqvqvqvqvqvqvqvqvzkzkqvqvqvqvqvqvqvqvPSzkzkPSqvqvqvqvqvqvqvqvqvqvzkzkzkqvzkFiraJnqvIvIvQg
-QgQgQgIvIvIvIvIvIvJEzkzkzkzkzkfXCAfXzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkPSqvPSqvqvqvqvIvIvQg
-QgQgQgQgIvIvIvIvqvkKzkzkzkzkzkfXCAfXzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkqvqvqvqvqvIvIvIvIvIvQg
+QgQgQgIvIvIvIvIvIvGgzkzkzkzkzkfXCAfXzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkPSqvPSqvqvqvqvIvIvQg
+QgQgQgQgIvIvIvIvqvkKzkzkzkzkzkfXCAfXzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkzkOYqvqvqvqvqvIvIvIvIvIvQg
 QgQgQgQgQgQgIvIvqvPSzkzkqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvqvIvIvIvIvIvIvIvIvQgQg
 QgQgQgQgQgQgIvIvqvqvzkzkzkfXCAYbYbFhaMYbYbFhfcqvqvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvQgQgQgQg
 QgQgQgQgQgIvIvIvIvqvzkzkfXfXCAYbyTcNYbYbYbYbqvqvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvIvQgQgQgQgQgQgQgQg

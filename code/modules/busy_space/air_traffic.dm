@@ -67,7 +67,7 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 	//Outpost edit - We use an elevator.
 	msg("Elevator departing [using_map.station_name] for [using_map.dock_name] for scheduled crew transfer.","ES Central Command")
 	sleep(5 SECONDS)
-	msg("Elevator ascent to [using_map.dock_name] confirmed. Stand by for scheduled crew change-over.")
+	msg("Elevator ascent to [using_map.dock_name] confirmed. Stand by for scheduled crew transfer.")
 	//CHOMPStation Edit End
 
 /datum/lore/atc_controller/proc/random_convo(var/force_chatter_type)
