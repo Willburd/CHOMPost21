@@ -21,6 +21,7 @@ FIREACT_BURNS(/obj/item/soap,LOW_CHANCE,TRASH_BURN)
 FIREACT_BURNS(/obj/item/storage/pill_bottle,MED_CHANCE,TRASH_BURN)
 FIREACT_BURNS(/obj/item/assembly/mousetrap,HIGH_CHANCE,TRASH_BURN)
 FIREACT_BURNS(/obj/structure/table/standard,LOW_CHANCE,TRASH_BURN)
+FIREACT_BURNS(/obj/item/deck,LOW_CHANCE,TRASH_BURN)
 //////////////////////////// LOW BURN ////////////////////////////
 FIREACT_BURNS(/obj/item/stack/material/plastic,LOW_CHANCE,LOW_BURN)
 FIREACT_BURNS(/obj/item/paper_bin,HIGH_CHANCE,LOW_BURN)

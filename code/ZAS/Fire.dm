@@ -54,7 +54,7 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 			// Outpost 21 edit begin - Lingering fires
 			if(istype(T.fire) && !istype(T.fire,/obj/fire/lingering))
 				qdel(T.fire)
-				if(prob(90))
+				if(prob(10))
 					T.lingering_fire(1)
 				else
 					T.fire = null
