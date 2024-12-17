@@ -1,2 +1,2 @@
 /datum/material/alienalloy
-	melting_point = 26000 // Hull plating.
+	melting_point = 46000 // Hull plating.
