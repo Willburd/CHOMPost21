@@ -1128,7 +1128,3 @@ MURIKI_TURF_CREATE(/turf/simulated/floor/snow/gravsnow)
 MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/ice)
 MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/ice/dark)
 MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/ice/dark_smooth)
-
-#undef MURIKI_SET_ATMOS
-#undef MURIKI_TURF_CREATE
-#undef MURIKI_TURF_CREATE_UN

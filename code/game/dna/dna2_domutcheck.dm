@@ -3,8 +3,7 @@
 // M: Mob to mess with
 // connected: Machine we're in, type unchecked so I doubt it's used beyond monkeying
 // flags: See below, bitfield.
-#define MUTCHK_FORCED        1
-#define MUTCHK_HIDEMSG       2 // Traitgenes edit - Hide gene activation/deactivation messages, mostly for resleeving so you don't get spammed
+
 /proc/domutcheck(var/mob/living/M, var/connected=null, var/flags=0)
 	// Traitgenes edit begin - NO_SCAN and Synthetics cannot be mutated
 	if(M.isSynthetic())

@@ -18,13 +18,12 @@
 /datum/disease/appendicitis/stage_act()
 	if(!..())
 		return
-	var/obj/item/organ/internal/appendix/A = affected_mob.internal_organs_by_name[O_APPENDIX] // Outpost 21 edit - UNDO ME WHEN VIRO IS FIXED, TODO REVERT
 	switch(stage)
 		if(1)
 			if(prob(5))
 				affected_mob.adjustToxLoss(1)
 		if(2)
-			// Outpost 21 edit - UNDO ME WHEN VIRO IS FIXED, TODO REVERT, /A was defined here
+			var/obj/item/organ/internal/appendix/A = affected_mob.internal_organs_by_name[O_APPENDIX]
 			if(A)
 				A.inflamed = TRUE
 			if(prob(3))
@@ -44,7 +43,3 @@
 				affected_mob.custom_emote(VISIBLE_MESSAGE, "winces painfully.")
 				affected_mob.Stun(rand(4, 6))
 				affected_mob.adjustToxLoss(2)
-	// Outpost 21 edit begin - UNDO ME WHEN VIRO IS FIXED, TODO REVERT
-	if(!A)
-		cure()
-	// Outpost 21 edit end
