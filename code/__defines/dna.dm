@@ -173,3 +173,4 @@ var/SMALLSIZEBLOCK     = 0
 
 // Gene flags
 #define GENE_ALWAYS_ACTIVATE 1
+#define MUTCHK_HIDEMSG       2 // Traitgenes edit - Hide gene activation/deactivation messages, mostly for resleeving so you don't get spammed
