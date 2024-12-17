@@ -1799,6 +1799,7 @@
 #include "code\game\objects\structures\electricchair.dm"
 #include "code\game\objects\structures\elevator_warning.dm"
 #include "code\game\objects\structures\extinguisher.dm"
+#include "code\game\objects\structures\extinguisher_op.dm"
 #include "code\game\objects\structures\fence.dm"
 #include "code\game\objects\structures\fireaxe.dm"
 #include "code\game\objects\structures\fitness.dm"
