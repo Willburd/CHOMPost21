@@ -166,7 +166,7 @@
 					qdel(I)
 					I = new_I // swap it
 				//VOREstation edit end
-				
+
 				//We either have an item to hand over or we don't, at this point!
 				if(I)
 					searchedby += user.ckey
@@ -324,6 +324,7 @@
 					prob(2);/obj/item/selectable_item/chemistrykit/size,
 					prob(2);/obj/item/selectable_item/chemistrykit/gender,
 					prob(2);/obj/item/clothing/gloves/bluespace/emagged,
+					prob(2);/obj/item/reagent_containers/glass/beaker/vial/sustenance, // Outpost 21 edit - Lost artificial sustinance vials
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 					// prob(1);/obj/item/nif/bad, Outpost 21 edit - Nif removal
 					prob(1);/obj/item/radio_jammer,
