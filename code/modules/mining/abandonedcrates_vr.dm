@@ -107,7 +107,8 @@
 			list(/obj/item/card/emag, 11) = 1,
 			list(/obj/item/melee/shock_maul, 11) = 3,
 			list(/obj/item/clothing/suit/storage/vest/martian_miner/reinforced, 4) = 6,
-			list(/obj/item/storage/backpack/sport/hyd/catchemall, 11) = 1
+			list(/obj/item/storage/backpack/sport/hyd/catchemall, 11) = 1,
+			list(/obj/item/prop/alien/junk, 12) = 1, // Outpost 21 edit - Morphium drops
 			))
 		var/path = choice[1]
 		var/value = choice[2]

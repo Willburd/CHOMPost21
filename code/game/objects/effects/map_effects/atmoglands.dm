@@ -1,5 +1,3 @@
-#define TERRAFORMER_BODY_TEMP 333
-
 /obj/effect/map_effect/interval/atmogland
 	name = "atmogland space"
 	icon = 'icons/mob/screen1.dmi'
