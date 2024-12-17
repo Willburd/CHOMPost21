@@ -51,9 +51,14 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 				fuel_objs -= fuel
 	else
 		for(var/turf/simulated/T in fire_tiles)
-			if(istype(T.fire))
-				T.fire.RemoveFire()
-			T.fire = null
+			// Outpost 21 edit begin - Lingering fires
+			if(istype(T.fire) && !istype(T.fire,/obj/fire/lingering))
+				qdel(T.fire)
+				if(prob(10))
+					T.lingering_fire(1)
+				else
+					T.fire = null
+			// Outpost 21 edit end
 		fire_tiles.Cut()
 		fuel_objs.Cut()
 
@@ -86,6 +91,13 @@ If it gains pressure too slowly, it may leak or just rupture instead of explodin
 	return 0
 
 /turf/simulated/create_fire(fl)
+	// Outpost 21 edit begin - Lingering fire
+	if(fire && istype(fire,/obj/fire/lingering))
+		var/obj/fire/F = fire
+		F.RemoveFire() // sets T.fire to null
+		qdel(F)
+	// Outpost 21 edit end
+
 	if(fire)
 		fire.firelevel = max(fl, fire.firelevel)
 		return 1

@@ -139,7 +139,7 @@
 	name = "\improper Bathroom. Don't use."
 	icon_state = "cyablatri"
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open/force_indoor
 
@@ -1502,6 +1502,7 @@
 	name = "\improper Vox Treatment Lab"
 	icon_state = "purple"
 	sound_env = SMALL_ENCLOSED
+	flags = AREA_FORBID_EVENTS
 	base_turf = /turf/simulated/mineral/floor/muriki
 	ambience = list(AMBIENCE_OTHERWORLDLY, AMBIENCE_OUTPOST)
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
