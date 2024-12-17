@@ -96,6 +96,7 @@ SUBSYSTEM_DEF(air)
 	var/list/active_fire_zones = list()
 	var/list/active_hotspots = list()
 	var/list/active_edges = list()
+	var/lingering_fires = 0 // Outpost 21 edit - If this is over a certain large number, fires will start dying out to reduce server lag
 
 	var/active_zones = 0
 	var/current_cycle = 0
