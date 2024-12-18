@@ -146,27 +146,20 @@
 	. = ..()
 
 /obj/vehicle/has_interior/controller/ex_act(severity)
-	// sparking!
-	for(var/turf/T in intarea.get_contents())
-		if(prob(30) && istype(T))
-			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
-			sparks.set_up(3, 0, T)
-			sparks.attach(T)
-			sparks.start()
-
 	// noise!
 	playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
 
 	// make a smaller explosion inside
-	explosion(entrance_hatch, 0, 0, 4-severity, 8)
+	explosion(entrance_hatch, 0, 0, 6, 8)
 
     // disable ex_act destruction, would lead to gamebreaking behaviors
-	if(severity == 3)
-		take_damage(1)
-	if(severity == 2)
-		take_damage(3)
-	if(severity == 1)
-		take_damage(5)
+	switch(severity)
+		if(3)
+			take_damage(10)
+		if(2)
+			take_damage(30)
+		if(1)
+			take_damage(50)
 
 /obj/vehicle/has_interior/controller/relaymove(mob/user, direction)
 	if(stat)
