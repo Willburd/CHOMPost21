@@ -81,7 +81,7 @@
 		if(check_fuel())
 			// spawn projectile
 			// TODO - port this to it's own projectile so the damage can be balanced better?
-			var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
+			var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon/flamethrower(get_turf(src))
 			playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
 
 			// configure to be less broken! We're only a flamethrower, not a dragon!
@@ -259,3 +259,16 @@
 /obj/item/flamethrower/full/Initialize()
 	. = ..()
 	update_icon() // Outpost 21 edit - overlay runtime fix
+
+
+// Outpost 21 edit begin - Flamethrower rework
+/obj/item/projectile/bullet/dragon/flamethrower
+	name = "flames"
+	submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame/flamethrower = 2)
+	damage = 0
+
+/obj/item/projectile/bullet/incendiary/dragonflame/flamethrower
+	name = "flames"
+	icon_state = null
+	damage = 5
+// Outpost 21 edit end
