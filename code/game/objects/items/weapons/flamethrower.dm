@@ -85,9 +85,9 @@
 			playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
 
 			// configure to be less broken! We're only a flamethrower, not a dragon!
-			P.submunition_spread_max = 10 + round(80*thrower_spew_percent())
+			P.submunition_spread_max = 30 + round(80*thrower_spew_percent())
 			P.submunition_spread_min = 5 + round(50*thrower_spew_percent())
-			P.submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 2 + round(thrower_spew_percent()*2))
+			P.submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 1 + round(thrower_spew_percent()*2))
 
 			// launch!
 			P.launch_projectile( target, BP_TORSO, src)
@@ -270,5 +270,5 @@
 /obj/item/projectile/bullet/incendiary/dragonflame/flamethrower
 	name = "flames"
 	icon_state = null
-	damage = 5
+	damage = 2
 // Outpost 21 edit end
