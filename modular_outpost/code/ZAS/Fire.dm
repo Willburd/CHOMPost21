@@ -2,6 +2,14 @@
 	return
 
 /turf/simulated/lingering_fire(fl)
+	if(istype(src,/turf/space))
+		return 0
+
+	if(istype(src,/turf/simulated/open))
+		var/turf/below = GetBelow(src)
+		if(below)
+			return below.lingering_fire(fl) // drop it down
+
 	if(!zone)
 		return 1
 
