@@ -13,7 +13,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
-	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
+	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - Hydroponics/Service is QM responsibility
 	selection_color = "#aaaaaa" // Outpost 21 edit - Show hydroponics as green, was "#515151"
 	sorting_order = 2 // Outpost 21 edit - Show hydroponics as green
 	access = list(access_hydroponics, access_bar, access_kitchen)
@@ -52,7 +52,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
-	supervisors = "the "+ JOB_HEAD_OF_PERSONNEL
+	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - Hydroponics/Service is QM responsibility
 	selection_color = "#cccccc" // Outpost 21 edit - Show hydroponics as green, was "#515151"
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_kitchen)
@@ -87,7 +87,7 @@
 	total_positions = 2
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
-	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
+	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - Hydroponics/Service is QM responsibility
 	selection_color = "#aaaaaa" // Outpost 21 edit - Show hydroponics as green, was "#515151"
 	sorting_order = 2 // Outpost 21 edit - Show hydroponics as green
 	access = list(access_hydroponics, access_bar, access_kitchen)

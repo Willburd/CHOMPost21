@@ -153,7 +153,7 @@
 
 /datum/job/assistant		// Visitor
 	title = JOB_ALT_VISITOR
-	supervisors = "nobody! You don't work here"
+	supervisors = "nobody! You don't work here, but station rank and laws still apply to you" // Outpost 21 edit - Some sanity to visitor job
 	job_description = "A " + JOB_ALT_VISITOR + " is just there to visit the place. They have no real authority or responsibility."
 	timeoff_factor = 0
 	requestable = FALSE
