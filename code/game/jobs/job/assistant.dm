@@ -71,7 +71,7 @@
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "the staff from the department you're interning in"
-	selection_color = "#555555"
+	selection_color = "#515151" // Outpost 21 edit, why was this different? was "#555555"
 	economic_modifier = 2
 	access = list()			//See /datum/job/intern/get_access()
 	minimal_access = list()	//See /datum/job/intern/get_access()

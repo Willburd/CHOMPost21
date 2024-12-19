@@ -108,7 +108,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 						of the crew, including their money and access. If necessary, the " + JOB_HEAD_OF_PERSONNEL + " is first in line to assume Acting Command." //YW EDIT
 	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro, JOB_ALT_DEPUTY_MANAGER = /datum/alt_title/deputy_manager, JOB_ALT_STAFF_MANAGER = /datum/alt_title/staff_manager,
 						JOB_ALT_FACILITY_STEWARD = /datum/alt_title/facility_steward, JOB_ALT_FIRST_MATE = /datum/alt_title/first_mate //CHOMPEdit
-						, JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR = /datum/alt_title/performance_management_supervisor) //CHOMPEdit
+						, JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR = /datum/alt_title/performance_management_supervisor, //CHOMPEdit
+						// Outpost 21 edit begin - Command Secretary folded into HoP
+						JOB_ALT_COMMAND_LIAISON = /datum/alt_title/command_liaison, JOB_ALT_COMMAND_ASSISTANT = /datum/alt_title/command_assistant, JOB_ALT_COMMAND_INTERN = /datum/alt_title/command_intern,
+						JOB_ALT_BRIDGE_SECRETARY = /datum/alt_title/bridge_secretary, JOB_ALT_BRIDGE_ASSISTANT = /datum/alt_title/bridge_assistant,
+						JOB_ALT_BRIDGE_OFFICER = /datum/alt_title/bridge_officer, JOB_ALT_COMMAND_SECRETARY = /datum/alt_title/bridge_officer,
+						// Outpost 21 edit end
+						)
 
 	access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers, access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads, access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue, access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer, access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station, access_hop, access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth, access_gateway, access_entertainment)
 	minimal_access = list(access_security, access_sec_doors, access_brig, access_forensics_lockers,access_medical, access_engine, access_change_ids, access_ai_upload, access_eva, access_heads,access_all_personal_lockers, access_maint_tunnels, access_bar, access_janitor, access_construction, access_morgue, access_crematorium, access_kitchen, access_cargo, access_cargo_bot, access_mailsorting, access_qm, access_hydroponics, access_lawyer,access_chapel_office, access_library, access_research, access_mining, access_heads_vault, access_mining_station, access_hop, access_RC_announce, access_clown, access_tomfoolery, access_mime, access_keycard_auth, access_gateway, access_entertainment)
@@ -141,7 +147,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 //////////////////////////////////
 //		Command Secretary
 //////////////////////////////////
-
+/* Outpost 21 edit - Command sec folded into hop
 /datum/job/secretary
 	title = JOB_COMMAND_SECRETARY
 	flag = BRIDGE
@@ -168,6 +174,12 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	outfit_type = /decl/hierarchy/outfit/job/secretary
 	job_description = "A " + JOB_COMMAND_SECRETARY + " handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \
 						They are not Heads of Staff, and have no real authority."
+*/
+
+// Outpost 21 edit begin - Command Secretary folded into HoP
+/datum/alt_title/command_secretary
+	title = JOB_ALT_COMMAND_SECRETARY
+// Outpost 21 edit end
 
 /datum/alt_title/command_liaison
 	title = JOB_ALT_COMMAND_LIAISON

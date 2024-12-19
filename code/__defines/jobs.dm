@@ -16,8 +16,9 @@
 	#define JOB_ALT_FIRST_MATE "First Mate"
 	#define JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR "Performance Management Supervisor"
 
-#define JOB_COMMAND_SECRETARY "Command Secretary"
+//#define JOB_COMMAND_SECRETARY "Command Secretary" // Outpost 21 edit - Command Secretary folded into HoP
 	// Command Secretary alt titles
+	#define JOB_ALT_COMMAND_SECRETARY "Command Secretary"
 	#define JOB_ALT_COMMAND_LIAISON "Command Liaison"
 	#define JOB_ALT_COMMAND_ASSISTANT "Command Assistant"
 	#define JOB_ALT_COMMAND_INTERN "Command Intern"

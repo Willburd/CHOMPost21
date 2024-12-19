@@ -50,7 +50,7 @@ var/const/MINER				=(1<<8)
 var/const/LAWYER			=(1<<9)
 var/const/CHAPLAIN			=(1<<10)
 var/const/ASSISTANT			=(1<<11)
-var/const/BRIDGE			=(1<<12)
+//var/const/BRIDGE			=(1<<12) //Outpost 21 edit - Command sec folded into hop
 //var/const/PILOT 			=(1<<13) //ChompEDIT - ours is with the other explo jobs.
 var/const/ENTERTAINER		=(1<<14)
 var/const/ENTREPRENEUR		=(1<<15)
@@ -84,7 +84,7 @@ var/list/command_positions = list(
 	JOB_CHIEF_ENGINEER,
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
-	JOB_COMMAND_SECRETARY,
+	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into hop
 	JOB_BLUESHIELD_GUARD // YW Edit
 )
 

@@ -14,7 +14,8 @@
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
 	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
-	selection_color = "#515151"
+	selection_color = "#aaaaaa" // Outpost 21 edit - Show hydroponics as green, was "#515151"
+	sorting_order = 2 // Outpost 21 edit - Show hydroponics as green
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_bar)
 
@@ -52,9 +53,10 @@
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
 	supervisors = "the "+ JOB_HEAD_OF_PERSONNEL
-	selection_color = "#515151"
+	selection_color = "#cccccc" // Outpost 21 edit - Show hydroponics as green, was "#515151"
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_kitchen)
+	sorting_order = 3 // Outpost 21 edit - Show hydroponics as green
 
 	outfit_type = /decl/hierarchy/outfit/job/service/chef
 	job_description = "A " + JOB_CHEF + " cooks food for the crew. They generally have permission to charge for food or deny service to unruly diners."
@@ -86,7 +88,8 @@
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
 	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
-	selection_color = "#515151"
+	selection_color = "#aaaaaa" // Outpost 21 edit - Show hydroponics as green, was "#515151"
+	sorting_order = 2 // Outpost 21 edit - Show hydroponics as green
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_hydroponics)
 
@@ -175,6 +178,7 @@
 	selection_color = "#515151"
 	access = list(access_library, access_maint_tunnels)
 	minimal_access = list(access_library)
+	sorting_order = 1 // Outpost 21 edit - Put visitor and intern next to eachother, move this up
 
 	outfit_type = /decl/hierarchy/outfit/job/librarian
 	job_description = "The " + JOB_LIBRARIAN + " curates the book selection in the Library, so the crew might enjoy it."
@@ -228,7 +232,7 @@
 /datum/job/lawyer
 	title = JOB_INTERNAL_AFFAIRS_AGENT
 	flag = LAWYER
-	departments = list(DEPARTMENT_CIVILIAN)
+	departments = list(DEPARTMENT_COMMAND) // Outpost 21 edit - IAA is a commandstaff job here
 	department_flag = CIVILIAN
 	faction = FACTION_STATION
 	total_positions = 2
@@ -236,7 +240,8 @@
 	pto_type = PTO_CIVILIAN
 	disallow_jobhop = TRUE
 	supervisors = "company officials and Corporate Regulations"
-	selection_color = "#515151"
+	// selection_color = "#515151" // Outpost 21 edit - IAA is a commandstaff job here
+	selection_color = "#1D1D4F" // Outpost 21 edit - IAA is a commandstaff job here
 	economic_modifier = 7
 	access = list(access_lawyer, access_sec_doors, access_maint_tunnels, access_heads)
 	minimal_access = list(access_lawyer, access_sec_doors, access_heads)

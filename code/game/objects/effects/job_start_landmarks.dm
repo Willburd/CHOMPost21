@@ -2,8 +2,10 @@
 	name = JOB_SITE_MANAGER
 /obj/effect/landmark/start/hop
 	name = JOB_HEAD_OF_PERSONNEL
+/* Outpost 21 edit - Command sec folded into hop
 /obj/effect/landmark/start/commandsecretary
 	name = JOB_COMMAND_SECRETARY
+*/
 /obj/effect/landmark/start/hos
 	name = JOB_HEAD_OF_SECURITY
 /obj/effect/landmark/start/warden

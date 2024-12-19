@@ -55,10 +55,12 @@
 	name = "Silver ID"
 	initial_sprite_stack = list("base-stamp-silver", "top-blue", "stamp-n")
 
+/* Outpost 21 edit - Command sec folded into hop
 /obj/item/card/id/silver/secretary
 	name = "Secretary's ID"
 	initial_sprite_stack = list("base-stamp", "top-blue", "stamp-n")
 	rank = JOB_COMMAND_SECRETARY
+*/
 
 /obj/item/card/id/silver/hop
 	name = JOB_HEAD_OF_PERSONNEL + " ID"
