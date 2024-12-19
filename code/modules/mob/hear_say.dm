@@ -25,7 +25,7 @@
 			piece = capitalize_utf(piece)
 
 		if(always_stars)
-			piece = stars(piece)
+			piece = stars(piece, clamp( 100 - always_stars, 5, 100) ) // Outpost 21 edit begin - haunted areas cause compression, pass through compression from messages
 		else if(!say_understands(speaker, SP.speaking))
 			if(SP.speaking.flags & INAUDIBLE)
 				piece = ""

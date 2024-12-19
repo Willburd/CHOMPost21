@@ -179,7 +179,10 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	if(is_freq_listening(signal)) // detect subspace signals
 
 		signal.data["done"] = 1 // mark the signal as being broadcasted since we're a broadcaster
-		signal.data["compression"] = 0 // decompress since we're a processor
+		// Outpost 21 edit begin - haunted areas cause compression, Precompressed signals pass through and remain messed up
+		if(!signal.data["haunted"])
+			signal.data["compression"] = 0 // decompress since we're a processor
+		// Outpost 21 edit end
 
 		// Search for the original signal and mark it as done as well
 		var/datum/signal/original = signal.data["original"]
@@ -234,7 +237,10 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 	if(is_freq_listening(signal)) // detect subspace signals
 
 		//signal.data["done"] = 1 // mark the signal as being broadcasted since we're a broadcaster
-		signal.data["compression"] = 0
+		// Outpost 21 edit begin - haunted areas cause compression, Precompressed signals pass through and remain messed up
+		if(!signal.data["haunted"])
+			signal.data["compression"] = 0
+		// Outpost 21 end
 
 		/*
 		// Search for the original signal and mark it as done as well
@@ -542,14 +548,14 @@ var/message_delay = 0 // To make sure restarting the recentmessages list is kept
 			// Displays garbled message (ie "f*c* **u, **i*er!")
 		if(length(heard_garbled))
 			for (var/mob/R in heard_garbled)
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 1, vname)
+				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, compression, vname) // Outpost 21 edit - haunted areas cause compression, Pass through compression
 				if(R.read_preference(/datum/preference/toggle/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
 
 		/* --- Complete gibberish. Usually happens when there's a compressed message --- */
 		if(length(heard_gibberish))
 			for (var/mob/R in heard_gibberish)
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 1)
+				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, compression) // Outpost 21 edit - haunted areas cause compression, Pass through compression
 				if(R.read_preference(/datum/preference/toggle/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
 

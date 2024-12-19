@@ -464,7 +464,8 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		"server" = null, // the last server to log this signal
 		"reject" = 0,	// if nonzero, the signal will not be accepted by any broadcasting machinery
 		"level" = pos_z, // The source's z level
-		"verb" = verb
+		"verb" = verb,
+		"haunted" = FALSE // Outpost 21 edit - haunted areas cause compression
 	)
 	signal.frequency = connection.frequency // Quick frequency set
 
@@ -483,6 +484,13 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 			bs_tx_weakref = null
 			to_chat(loc, span_warning("\The [src] buzzes to inform you of the lack of a functioning connection."))
 			return FALSE
+
+		// Outpost 21 edit begin - haunted areas cause compression
+		var/area/A = get_area(M)
+		if(A && A.haunted)
+			signal.data["compression"] = rand(20,70)
+			signal.data["haunted"] = TRUE
+		// Outpost 21 edit end
 
 		//Transmitted in the blind. If we get a message back, cool. If not, oh well.
 		signal.transmission_method = TRANSMISSION_BLUESPACE
@@ -503,6 +511,13 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		// First, we want to generate a new radio signal
 		signal.transmission_method = TRANSMISSION_SUBSPACE
+
+		// Outpost 21 edit begin - haunted areas cause compression
+		var/area/A = get_area(M)
+		if(A && A.haunted)
+			signal.data["compression"] = rand(20,70)
+			signal.data["haunted"] = TRUE
+		// Outpost 21 edit end
 
 		//#### Sending the signal to all subspace receivers ####//
 		for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
@@ -533,6 +548,13 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		signal.transmission_method = TRANSMISSION_SUBSPACE
 		signal.data["compression"] = 0
 
+		// Outpost 21 edit begin - haunted areas cause compression
+		var/area/A = get_area(M)
+		if(A && A.haunted)
+			signal.data["compression"] = rand(20,70)
+			signal.data["haunted"] = TRUE
+		// Outpost 21 edit end
+
 		for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
 			R.receive_signal(signal)
 
@@ -541,6 +563,13 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 			R.receive_signal(signal)
 
 	for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
+		// Outpost 21 edit begin - haunted areas cause compression
+		var/area/A = get_area(M)
+		if(A && A.haunted)
+			signal.data["compression"] = rand(20,70)
+			signal.data["haunted"] = TRUE
+		// Outpost 21 edit end
+
 		R.receive_signal(signal)
 
 		if(signal.data["done"] && (pos_z in signal.data["level"]))
@@ -549,6 +578,13 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 				subspace_transmission = TRUE
 			// we're done here.
 			return TRUE
+
+	// Outpost 21 edit begin - haunted areas cause compression
+	var/area/A = get_area(M)
+	if(A && A.haunted)
+		signal.data["compression"] = rand(20,70)
+		signal.data["haunted"] = TRUE
+	// Outpost 21 edit end
 
 	//Nothing handled any sort of remote radio-ing and returned before now, just squawk on this zlevel.
 	return Broadcast_Message(connection, M, voicemask, pick(M.speak_emote),

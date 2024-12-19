@@ -536,10 +536,13 @@ var/global/list/obj/machinery/telecomms/telecomms_list = list()
 
 	if(is_freq_listening(signal))
 
-		if(process_mode)
-			signal.data["compression"] = 0 // uncompress subspace signal
-		else
-			signal.data["compression"] = 100 // even more compressed signal
+		// Outpost 21 edit begin - haunted areas cause compression, Precompressed signals pass through and remain messed up
+		if(!signal.data["haunted"])
+			if(process_mode)
+				signal.data["compression"] = 0 // uncompress subspace signal
+			else
+				signal.data["compression"] = 100 // even more compressed signal
+		// Outpost 21 edit end
 
 		if(istype(machine_from, /obj/machinery/telecomms/bus))
 			relay_direct_information(signal, machine_from) // send the signal back to the machine
