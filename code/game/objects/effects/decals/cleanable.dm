@@ -55,7 +55,7 @@ generic_filth = TRUE means when the decal is saved, it will be switched out for 
 	hud.layer = BELOW_MOB_LAYER
 	hud.mouse_opacity = 0
 	//HUD VARIANT: Allows the hud to show up with it's normal alpha, even if the 'dirty thing' it's attached to has a low alpha (ex: dirt). If you want to disable it, simply comment out the lines between the 'HUD VARIANT' tag!
-	hud.appearance_flags = RESET_ALPHA
+	hud.appearance_flags = RESET_ALPHA | RESET_COLOR
 	hud.alpha = 128 + (alpha / 2) // Outpost 21 edit - half alpha, but still fade a bit based on dirt alpha
 	//HUD VARIANT end
 	add_overlay(hud)
