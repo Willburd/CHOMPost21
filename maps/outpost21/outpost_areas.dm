@@ -2270,7 +2270,7 @@
 	base_turf = /turf/simulated/floor/flesh
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
