@@ -1402,7 +1402,7 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "bridge"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_NO_SPOILERS | AREA_FORBID_EVENTS
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	broken_light_chance = 85
 	haunted = TRUE
 
