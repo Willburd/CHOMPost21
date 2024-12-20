@@ -89,7 +89,7 @@
 	return null
 
 /obj/item/flash/proc/clown_check(var/mob/user)
-	if(user && (CLUMSY in user.mutations) && prob(50))
+	if(user && (CLUMSY in user.mutations) && prob(10)) // Outpost 21 edit - Made clumsy less obnoxious
 		to_chat(user, span_warning("\The [src] slips out of your hand."))
 		user.drop_item()
 		return 0
