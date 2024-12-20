@@ -60,7 +60,7 @@
 	if(!armed)
 		to_chat(user, span_notice("You arm [src]."))
 	else
-		if((CLUMSY in user.mutations) && prob(50))
+		if((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
 			var/which_hand = "l_hand"
 			if(!user.hand)
 				which_hand = "r_hand"
@@ -76,7 +76,7 @@
 
 /obj/item/assembly/mousetrap/attack_hand(var/mob/living/user)
 	if(armed)
-		if((CLUMSY in user.mutations) && prob(50))
+		if((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
 			var/which_hand = "l_hand"
 			if(!user.hand)
 				which_hand = "r_hand"

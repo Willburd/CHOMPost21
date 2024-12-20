@@ -32,7 +32,7 @@
 	if(!user.IsAdvancedToolUser())
 		return
 
-	if ((CLUMSY in user.mutations) && prob(50))
+	if ((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
 		to_chat(user, span_warning("Uh ... how do those things work?!"))
 		place_handcuffs(user, user)
 		return
@@ -218,7 +218,7 @@ var/last_chew = 0
 	if(!user.IsAdvancedToolUser())
 		return
 
-	if ((CLUMSY in user.mutations) && prob(50))
+	if ((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
 		to_chat(user, span_warning("Uh ... how do those things work?!"))
 		place_legcuffs(user, user)
 		return

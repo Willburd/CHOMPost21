@@ -20,7 +20,7 @@
 	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/grenade/proc/clown_check(var/mob/living/user)
-	if((CLUMSY in user.mutations) && prob(50))
+	if((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
 		to_chat(user, span_warning("Huh? How does this thing work?"))
 
 		activate(user)

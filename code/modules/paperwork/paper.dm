@@ -176,7 +176,7 @@
 	set category = "Object"
 	set src in usr
 
-	if((CLUMSY in usr.mutations) && prob(50))
+	if((CLUMSY in usr.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
 		to_chat(usr, span_warning("You cut yourself on the paper."))
 		return
 	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN), MAX_NAME_LEN)

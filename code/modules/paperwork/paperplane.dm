@@ -63,7 +63,7 @@
 		update_icon()
 
 	else if(is_hot(P))
-		if(user.disabilities & CLUMSY && prob(10))
+		if(user.disabilities & CLUMSY && prob(5)) // Outpost 21 edit - Made clumsy less obnoxious
 			user.visible_message(span_warning("[user] accidentally ignites themselves!"), \
 				span_userdanger("You miss the [src] and accidentally light yourself on fire!"))
 			user.unEquip(P)
