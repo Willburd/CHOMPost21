@@ -1,9 +1,10 @@
 /obj/item/clothing/suit/omnitag
 	name = "universal laser tag armour"
 	desc = "Laser tag armor with no allegiance. For the true renegade, or a free for all."
-	icon = 'icons/inventory/suit/item_op.dmi'
+	icon = 'modular_outpost/icons/inventory/suit/item.dmi'
+	icon_override = 'modular_outpost/icons/inventory/suit/mob.dmi'
 	icon_state = "omnitag"
-	item_icons = list(slot_l_hand_str = 'icons/mob/items/lefthand_suits_op.dmi', slot_r_hand_str = 'icons/mob/items/righthand_suits_op.dmi')
+	item_icons = list(slot_l_hand_str = 'modular_outpost/icons/mob/items/lefthand_suits.dmi', slot_r_hand_str = 'modular_outpost/icons/mob/items/righthand_suits.dmi')
 	item_state_slots = list(slot_r_hand_str = "tdomni", slot_l_hand_str = "tdomni")
 	blood_overlay_type = "armor"
 	body_parts_covered = UPPER_TORSO
