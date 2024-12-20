@@ -1,19 +1,25 @@
 /mob/living/silicon/robot
 	var/haunted = FALSE
 
-/mob/living/silicon/robot/proc/update_haunt()
-	if(haunted || istype(src,/mob/living/silicon/robot/ai_shell) || istype(src,/mob/living/silicon/robot/drone))
+/mob/living/silicon/robot/proc/update_haunt(var/assign_law = FALSE)
+	if(istype(src,/mob/living/silicon/robot/ai_shell) || istype(src,/mob/living/silicon/robot/drone))
+		return
+	if(assign_law) // we add a timer to callback this proc with assign_law as true, instead of having two haunting procs
+		to_chat(src, "<span class='danger'>You have detected a change in your laws information:</span>")
+		var/law = generate_screech_law()
+		add_ion_law(law)
+		show_laws()
+		haunted = TRUE // If you were not already you are now, just incase proc call is used.
+		return
+	if(haunted)
 		return
 	// Check if we're in the SPOOKYZONE, this should fail a majority of the time to prevent camping for laws
 	var/area/A = get_area(src)
 	if(prob(99) || !A || !A.haunted)
 		return
 	// Make it unclear that the area CAUSED it by delaying it a significant amount of time
-	haunted = TRUE // If you were not already you are now, just incase proc call is used.
-	to_chat(src, "<span class='danger'>You have detected a change in your laws information:</span>")
-	var/law = generate_screech_law()
-	add_ion_law(law)
-	show_laws()
+	addtimer(CALLBACK(src, PROC_REF(update_haunt), TRUE), rand(5 MINUTES, 25 MINUTES), TIMER_DELETE_ME)
+	haunted = TRUE
 
 // Technically the crew monitor exists, but this helps you learn the station easier
 /mob/living/silicon/robot/verb/current_location()
