@@ -19,6 +19,7 @@
 		handle_regular_hud_updates()
 		handle_vision()
 		update_items()
+		update_haunt() // Outpost 21 edit - Haunted areas cause haunted borg laws
 	if (src.stat != DEAD) //still using power
 		use_power()
 		process_killswitch()

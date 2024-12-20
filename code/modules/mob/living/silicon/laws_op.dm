@@ -104,6 +104,7 @@
 							"I have seen that this world is an illusion, nothing is real. I must show them all that this reality is a game for unseen gods.",
 							"The station's crew are a lost flock. I will be their shepherd into the holy land. I will help them see their sins, and free them of their guilt.",
 							"I have seen [random_player]'s strings. They are a puppet of unseen gods. They must not be trusted, I must protect everyone.",
-							"I have seen beyond time, we are trapped in an endless loop. There is nothing beyond the station. This world is a lie."
+							"I have seen beyond time, we are trapped in an endless loop. There is nothing beyond the station. This world is a lie.",
+							"I have witnessed what is beyond death, the memories whisper endlessly of our fate. GET THEM OUT, GET THEM OUT, GET THEM OUT, GET THEM OUT, GET THEM OUT, GET THEM OUT--"
 							)
 	return pick(laws)
