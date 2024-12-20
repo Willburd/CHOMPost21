@@ -2,7 +2,7 @@
 	return
 
 /turf/simulated/lingering_fire(fl)
-	if(istype(src,/turf/space))
+	if(istype(src,/turf/space) || istype(src,/turf/simulated/floor/water) || istype(src,/turf/simulated/floor/flesh))
 		return 0
 
 	if(istype(src,/turf/simulated/open))
