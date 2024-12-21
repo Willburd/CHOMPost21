@@ -17,6 +17,10 @@
 		fire.firelevel = max(fl, fire.firelevel)
 		return 1
 
+	var/obj/effect/map_effect/interval/burnpit/BP = locate() in src
+	if(BP)
+		return 0 // No lingering in the incin
+
 	fire = new /obj/fire/lingering(src, fl)
 	SSair.active_fire_zones |= zone
 	zone.fire_tiles |= src
@@ -81,9 +85,9 @@
 	air_contents.remove_by_flag(XGM_GAS_OXIDIZER, gas_exchange)
 	air_contents.adjust_gas(GAS_CO2, gas_exchange * 1.5) // Lots of co2
 
-	var/starting_energy = air_contents.temperature * air_contents.heat_capacity()
-
-	air_contents.temperature = (starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.05)) / air_contents.heat_capacity()
+	if(air_contents.temperature < 20000) // May as well limit this
+		var/starting_energy = air_contents.temperature * air_contents.heat_capacity()
+		air_contents.temperature = (starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.05)) / air_contents.heat_capacity()
 	air_contents.update_values()
 
 	// Affect contents

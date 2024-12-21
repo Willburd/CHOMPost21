@@ -32,6 +32,9 @@
 	#ifndef UNIT_TEST
 	var/turf/simulated/T = loc
 	if(T)
+		if(T.fire_protection > world.time-30)
+			qdel(src) // Clear burnpit for sanity
+			return
 		// never put this out, reset my own air tile to FORCE combustion, should be enough to boost the other tiles too
 		var/datum/gas_mixture/air_contents = T.return_air()
 		if(!air_contents)
