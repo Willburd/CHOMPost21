@@ -303,11 +303,13 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "orange"
 	always_unpowered = TRUE
+	haunted = TRUE
 /area/mine/unexplored/muriki/cave/deepdark
 	name = "\improper Muriki Underground"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "yellow"
 	always_unpowered = TRUE
+	haunted = TRUE
 
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
@@ -316,6 +318,7 @@
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
 
 /area/submap/outpost21/cave_liminal_B
 	name = "\improper GET OUT"
@@ -327,6 +330,7 @@
 	sound_env = SOUND_ENVIRONMENT_AUDITORIUM
 	ambience = AMBIENCE_MAINTENANCE
 	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
 
 /area/submap/outpost21/cave_liminal_B/get_name()
 	return show_name
@@ -338,6 +342,7 @@
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
 
 /area/submap/outpost21/cave_red_B
 	name = "\improper Inside Us"
@@ -346,6 +351,7 @@
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
 
 /area/submap/outpost21/cave_red_C
 	name = "\improper Touch Our Skin"
@@ -354,6 +360,7 @@
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
 
 
 //////////////////////////////////////////////////////////////
