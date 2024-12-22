@@ -57,7 +57,7 @@
 	base_turf = /turf/simulated/open
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
@@ -139,7 +139,7 @@
 	name = "\improper Bathroom. Don't use."
 	icon_state = "cyablatri"
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
+	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open/force_indoor
 
@@ -1017,11 +1017,13 @@
 	name = "\improper Facility Tunnels"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = TUNNEL_ENCLOSED
+	flags = AREA_BLOCK_GHOST_SIGHT
 
 /area/mine/unexplored/muriki/cave
 	name = "\improper Muriki Caverns"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = TUNNEL_ENCLOSED
+	flags = AREA_BLOCK_GHOST_SIGHT
 
 //Subdivided areas because holy crap zas hates our map.
 //Basement. Dept.
@@ -1239,6 +1241,7 @@
 	name = "\improper Tug Graveyard"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = TUNNEL_ENCLOSED
+	flags = AREA_BLOCK_GHOST_SIGHT
 	icon_state = "dk_yellow"
 
 //Moon riiiiver
@@ -1247,6 +1250,7 @@
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/water/acidic/deep/muriki
 	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
+	flags = AREA_BLOCK_GHOST_SIGHT
 	music = 'sound/ambience/ruins/ruins3.ogg'
 
 /area/mine/explored/muriki/river/mouth
@@ -1272,7 +1276,7 @@
 //
 /area/maintenance
 	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_GHOST_SIGHT
 
 /area/maintenance/basement
 	name = "Maintenance"
@@ -1402,7 +1406,7 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "bridge"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	broken_light_chance = 85
 	haunted = TRUE
 
@@ -1815,6 +1819,7 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "blue"
 	use_emergency_overlay = FALSE
+	flags = AREA_BLOCK_GHOST_SIGHT
 
 /area/rnd/xenobiology/burn
 	name = "\improper Xenobiology Threat Supression"
@@ -2054,6 +2059,7 @@
 	has_gravity = 0
 	ambience = AMBIENCE_OUTPOST21_SPACE
 	base_turf = /turf/space
+	flags = AREA_BLOCK_GHOST_SIGHT
 	ambience = AMBIENCE_SPACE
 
 /area/offworld/asteroidyard/external/get_gravity()
@@ -2271,7 +2277,7 @@
 	base_turf = /turf/simulated/floor/flesh
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
@@ -2284,7 +2290,7 @@
 	base_turf = /turf/simulated/floor/weird_things/dark
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SPACE
 	ambience = AMBIENCE_FOREBODING
 	music = 'sound/ambience/ambisin1.ogg'
@@ -2320,6 +2326,9 @@
 //
 // Outpost holomap modifications, or base turf fixes ONLY. !!!OVERRIDES!!! ---------------------------------------------------------------------
 //
+/area/mine/unexplored
+	flags = AREA_BLOCK_GHOST_SIGHT
+
 /area/supply/station
 	base_turf = /turf/simulated/floor/outdoors/mud/muriki
 
