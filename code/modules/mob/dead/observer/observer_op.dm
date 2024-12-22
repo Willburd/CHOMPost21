@@ -1,22 +1,3 @@
-/mob/observer/dead
-	// use visualnets for observer spoiler hiding
-	var/list/visibleChunks = list()
-	var/datum/visualnet/visualnet
-	var/use_static = TRUE
-	var/static_visibility_range = 16
-
-
-/mob/observer/dead/New(mob/body)
-	. = ..()
-	// Use AI camera net
-	visualnet = cameranet
-
-/mob/observer/dead/Moved(atom/old_loc, direction, forced)
-	. = ..()
-	use_static = !(check_rights(R_ADMIN|R_FUN|R_EVENT, 0, src) || (client && client.buildmode))
-	if(visualnet && use_static)
-		visualnet.visibility(src, client)
-
 /mob/observer/dead/verb/become_jil()
 	set name = "Become jil"
 	set category = "Ghost.Join"
