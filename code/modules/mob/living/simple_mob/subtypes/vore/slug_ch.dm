@@ -6,7 +6,7 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/slug)
 	tt_desc = "S Arion hortensis"
 	icon = 'modular_chomp/icons/mob/vore_ch.dmi'
-	icon_dead = "slug_dead" // Outpost 21 edit - no longer invisible dead slugs
+	icon_dead = "slug-dead"
 	icon_living = "slug"
 	icon_state = "slug"
 	faction = "slug" //A faction other than neutral is necessary to get the slug to try eating station crew.
