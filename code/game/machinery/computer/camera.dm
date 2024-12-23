@@ -136,17 +136,29 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 
 /obj/machinery/computer/security/telescreen/entertainment/Click(location, control, params)
 	var/list/modifiers = params2list(params)
+	// Outpost 21 edit begin - Toggle verb
 	if(modifiers["alt"])
-		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
-			toggle()
-			visible_message(span_infoplain(span_bold("[usr]") + " toggles [src] [enabled ? "on" : "off"]."),span_info("You toggle [src] [enabled ? "on" : "off"]."), runemessage = "click")
+		toggle_on_off()
 	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
-			return
+		return
+	// Outpost 21 edit end
 	if(modifiers["shift"])
 		attack_hand(usr)
 		return
 	..()
 	//CHOMPEdit end
+
+// Outpost 21 edit begin - Toggle verb
+/obj/machinery/computer/security/telescreen/entertainment/verb/toggle_on_off()
+	set name = "Toggle power"
+	set desc = "Turn the bodycamera monitor on or off."
+	set category = "Object"
+	set src in oview(1)
+
+	if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
+		toggle()
+		visible_message(span_infoplain(span_bold("[usr]") + " toggles [src] [enabled ? "on" : "off"]."),span_info("You toggle [src] [enabled ? "on" : "off"]."), runemessage = "click")
+// Outpost 21 edit end
 
 /obj/machinery/computer/security/telescreen/entertainment/update_icon()
 	return // NUH
@@ -246,17 +258,29 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 
 /obj/machinery/computer/security/telescreen/bodycamera/Click(location, control, params)
 	var/list/modifiers = params2list(params)
+	// Outpost 21 edit begin - Toggle verb
 	if(modifiers["alt"])
-		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
-			bodycam_toggle()
-			visible_message("<b>[usr]</b> toggles [src] [enabled ? "on" : "off"].","You toggle [src] [enabled ? "on" : "off"].", runemessage = "click")
+		toggle_on_off()
 	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
-			return
+		return
+	// Outpost 21 edit end
 	if(modifiers["shift"])
 		attack_hand(usr)
 		return
 	..()
 	//CHOMPEdit end
+
+// Outpost 21 edit begin - Toggle verb
+/obj/machinery/computer/security/telescreen/bodycamera/verb/toggle_on_off()
+	set name = "Toggle power"
+	set desc = "Turn the bodycamera monitor on or off."
+	set category = "Object"
+	set src in oview(1)
+
+	if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
+		bodycam_toggle()
+		visible_message("<b>[usr]</b> toggles [src] [enabled ? "on" : "off"].","You toggle [src] [enabled ? "on" : "off"].", runemessage = "click")
+// Outpost 21 edit end
 
 /obj/machinery/computer/security/telescreen/bodycamera/update_icon()
 	return // NUH
