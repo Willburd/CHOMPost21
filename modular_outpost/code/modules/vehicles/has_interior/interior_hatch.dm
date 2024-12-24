@@ -50,6 +50,7 @@
 	attackby( null, user)
 
 /obj/machinery/door/vehicle_interior_hatch/attack_ai(mob/user)
+	return
 	// no behavior
 
 /obj/machinery/door/vehicle_interior_hatch/attack_generic(mob/user as mob)
@@ -57,15 +58,23 @@
 	attackby( null, user)
 
 /obj/machinery/door/vehicle_interior_hatch/emag_act(var/remaining_charges)
+	return
     // no behavior
 
 /obj/machinery/door/vehicle_interior_hatch/emp_act(severity)
+	return
+    // immune to
+
+/obj/machinery/door/vehicle_interior_hatch/take_damage(damage)
+	return
     // immune to
 
 /obj/machinery/door/vehicle_interior_hatch/ex_act(severity)
+	return
     // immune to
 
 /obj/machinery/door/vehicle_interior_hatch/blob_act()
+	return
     // even you bob
 
 /obj/machinery/door/vehicle_interior_hatch/requiresID()
@@ -117,6 +126,3 @@
 		M.show_message("You hear a click from the bottom of the door.", 2)
 	update_icon()
 	return 1
-
-/obj/machinery/door/vehicle_interior_hatch/ex_act(severity)
-	return // nothing, because it would cause some gamebreaking behaviors
