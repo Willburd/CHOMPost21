@@ -35,6 +35,8 @@
 	var/lighting_alpha = 255
 	incorporeal_move = 1
 
+	var/toggled_invisible = 0 // Outpost 21 edit - Last time toggle_visibility() was called
+
 	var/is_manifest = 0 //If set to 1, the ghost is able to whisper. Usually only set if a cultist drags them through the veil.
 	var/ghost_sprite = null
 	var/global/list/possible_ghost_sprites = list(
@@ -145,8 +147,6 @@
 	observer_mob_list += src
 	..()
 	visualnet = ghostnet
-
-	var/toggled_invisible = 0 // Outpost 21 edit - Last time toggle_visibility() was called
 
 /mob/observer/dead/proc/checkStatic()
 	return !(check_rights(R_ADMIN|R_FUN|R_EVENT|R_SERVER, 0, src) || (client && client.buildmode) || isbelly(loc))
