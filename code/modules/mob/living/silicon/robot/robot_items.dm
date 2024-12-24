@@ -29,9 +29,15 @@
 				flick("portable_analyzer_scan", src)
 				playsound(src, 'sound/items/Welder2.ogg', 50, 1)
 				var/research_levels = list()
-				for(var/T in loaded_item.origin_tech)
-					files.UpdateTech(T, loaded_item.origin_tech[T])
-					research_levels += "\The [loaded_item] had level [loaded_item.origin_tech[T]] in [CallTechName(T)]."
+				// Outpost 21 edit begin - Science rebalance, circuitboards aren't gamebreaking
+				if(istype(loaded_item,/obj/item/circuitboard) || istype(loaded_item,/obj/item/integrated_circuit))
+					files.UpdateTech(TECH_DATA, 1)
+					research_levels += "\The [loaded_item] had level 1 in [CallTechName(TECH_DATA)]."
+				else
+				// Outpost 21 edit end
+					for(var/T in loaded_item.origin_tech)
+						files.UpdateTech(T, loaded_item.origin_tech[T])
+						research_levels += "\The [loaded_item] had level [loaded_item.origin_tech[T]] in [CallTechName(T)]."
 				if (length(research_levels))
 					to_chat(user, span_filter_notice("[jointext(research_levels,"<br>")]"))
 				loaded_item = null
@@ -118,8 +124,13 @@
 				M.show_message(span_notice("[user] sweeps \the [src] over \the [I]."), 1)
 			flick("[initial(icon_state)]-scan", src)
 			if(I.origin_tech && I.origin_tech.len)
-				for(var/T in I.origin_tech)
-					to_chat(user, span_notice("\The [I] had level [I.origin_tech[T]] in [CallTechName(T)]."))
+				// Outpost 21 edit begin - Science rebalance, circuitboards aren't gamebreaking
+				if(istype(I,/obj/item/circuitboard) || istype(I,/obj/item/integrated_circuit))
+					to_chat(user, span_notice("\The [I] had level 1 in [CallTechName(TECH_DATA)]."))
+				else
+				// Outpost 21 edit end
+					for(var/T in I.origin_tech)
+						to_chat(user, span_notice("\The [I] had level [I.origin_tech[T]] in [CallTechName(T)]."))
 			else
 				to_chat(user, span_notice("\The [I] cannot be scanned by \the [src]."))
 
