@@ -1,0 +1,143 @@
+/obj/item/spaceflare
+	origin_tech = list(TECH_DATA = 3, TECH_BLUESPACE = 4)
+
+/datum/design/item/mecha/teleporter
+	req_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 5)
+
+/datum/design/item/mecha/cloak
+	req_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 5)
+
+/obj/item/reagent_containers/hypospray
+	origin_tech = list(TECH_BIO = 7, TECH_DATA = 5)
+
+/obj/item/reagent_containers/hypospray/science
+	origin_tech = list(TECH_BIO = 5, TECH_MATERIAL = 2)
+
+/obj/item/reagent_containers/hypospray/vial // CMO version
+	origin_tech = list(TECH_COMBAT = 7, TECH_ILLEGAL = 5, TECH_MATERIAL = 5, TECH_MAGNET = 2)
+
+/obj/item/mecha_parts/part/janus_head
+	origin_tech = list(TECH_DATA = 5, TECH_MATERIAL = 5, TECH_MAGNET = 6, TECH_PRECURSOR = 1)
+
+/obj/item/mecha_parts/part/phazon_head
+	origin_tech = list(TECH_DATA = 5, TECH_MATERIAL = 5, TECH_MAGNET = 6)
+
+/obj/item/denecrotizer // Away mission stuff
+	origin_tech = list(TECH_BIO = 6, TECH_ARCANE = 1)
+
+/obj/item/denecrotizer/medical
+	origin_tech = list(TECH_BIO = 5)
+
+/obj/item/selectable_item/chemistrykit
+	origin_tech = list(TECH_BIO = 4, TECH_MATERIAL = 4)
+
+/obj/item/capture_crystal
+	origin_tech = list(TECH_BLUESPACE = 5, TECH_MATERIAL = 4, TECH_DATA = 5)
+
+/obj/item/dnainjector
+	origin_tech = list(TECH_BIO = 4)
+
+/obj/item/grenade/spawnergrenade/clustaur
+	origin_tech = list(TECH_ILLEGAL = 1, TECH_MATERIAL = 1)
+
+/obj/item/implant/compressed
+	origin_tech = list(TECH_MATERIAL = 4, TECH_BIO = 4, TECH_ILLEGAL = 2)
+
+/obj/item/implant/death_alarm
+	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 2, TECH_DATA = 1)
+
+/obj/item/implant/adrenalin
+	origin_tech = list(TECH_COMBAT = 4, TECH_BIO = 4)
+
+/obj/item/implant/loyalty
+	origin_tech = list(TECH_ILLEGAL = 3, TECH_BIO = 5)
+
+/obj/item/implant/chem
+	origin_tech = list(TECH_DATA = 5, TECH_BIO = 4)
+
+/obj/item/implant/dexplosive
+	origin_tech = list(TECH_ILLEGAL = 5, TECH_COMBAT = 4, TECH_BIO = 4)
+
+/obj/item/implant/tracking
+	origin_tech = list(TECH_DATA = 5, TECH_BIO = 4)
+
+/obj/item/implant/vrlanguage
+	origin_tech = list(TECH_BIO = 4)
+
+/obj/item/implant/sizecontrol
+	origin_tech = list(TECH_BLUESPACE = 4, TECH_BIO = 4)
+
+/obj/item/implant/compliance
+	origin_tech = list(TECH_ILLEGAL = 4, TECH_BIO = 5)
+
+/obj/item/inducer
+	origin_tech = list(TECH_BLUESPACE = 7, TECH_MATERIAL = 6, TECH_POWER = 7)
+
+/obj/item/inducer/unloaded
+	origin_tech = list(TECH_BLUESPACE = 3, TECH_MATERIAL = 4, TECH_POWER = 5)
+
+/obj/item/inducer/sci
+	origin_tech = list(TECH_BLUESPACE = 3, TECH_MATERIAL = 4, TECH_POWER = 5)
+
+/obj/item/deadringer
+	origin_tech = list(TECH_ILLEGAL = 7, TECH_DATA = 5)
+
+/obj/item/clothing/accessory/collar/shock
+	origin_tech = list(TECH_ILLEGAL = 1, TECH_POWER = 1)
+
+/obj/item/clothing/accessory/collar/shock/bluespace
+	origin_tech = list(TECH_BLUESPACE = 4)
+
+/obj/item/clothing/glasses/night
+	origin_tech = list(TECH_MAGNET = 5, TECH_ILLEGAL = 5, TECH_COMBAT = 5)
+
+/obj/item/clothing/shoes/magboots
+	origin_tech = list(TECH_ENGINEERING = 4, TECH_MAGNET = 4)
+
+/obj/item/clothing/shoes/magboots/vox
+	origin_tech = list(TECH_ENGINEERING = 4, TECH_MAGNET = 4, TECH_COMBAT = 3)
+
+/obj/item/rig
+	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 6, TECH_DATA = 5)
+
+/obj/item/rig/breacher
+	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 5, TECH_DATA = 5)
+
+/obj/item/rig/vox
+	origin_tech = list(TECH_MATERIAL = 4, TECH_ENGINEERING = 3, TECH_BIO = 4, TECH_MAGNET = 3, TECH_DATA = 2)
+
+/obj/item/clothing/suit/armor/alien
+	origin_tech = list(TECH_COMBAT = 7, TECH_ILLEGAL = 5, TECH_MATERIAL = 5, TECH_MAGNET = 2)
+
+/obj/item/clothing/suit/storage/vest/heavy
+	origin_tech = list(TECH_COMBAT = 5)
+
+/obj/item/clothing/under/hyperfiber
+	origin_tech = list(TECH_BLUESPACE = 3)
+
+/obj/item/clothing/under/hyperfiber/bluespace
+	origin_tech = list(TECH_BLUESPACE = 4)
+
+/obj/item/clothing/gloves/bluespace
+	origin_tech = list(TECH_BLUESPACE = 4)
+
+/obj/item/bluespace_harpoon
+	origin_tech = list(TECH_BLUESPACE = 7)
+
+/obj/item/gun/launcher/crossbow
+	origin_tech = list(TECH_COMBAT = 5)
+
+/obj/item/gun/energy/mouseray
+	origin_tech = list(TECH_BLUESPACE = 4, TECH_ILLEGAL = 2)
+
+/obj/item/gun/energy/mouseray/medical
+	origin_tech = list(TECH_BIO = 4, TECH_DATA = 4)
+
+/obj/item/gun/energy/mouseray/metamorphosis
+	origin_tech = list(TECH_BIO = 4, TECH_BLUESPACE = 4, TECH_ILLEGAL = 4)
+
+/obj/item/gun/energy/mouseray/metamorphosis/advanced
+	origin_tech = list(TECH_BIO = 5, TECH_BLUESPACE = 4, TECH_ILLEGAL = 5)
+
+/obj/item/gun/energy/mouseray
+	origin_tech = list(TECH_BLUESPACE = 4, TECH_ILLEGAL = 2)
