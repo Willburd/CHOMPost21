@@ -146,6 +146,8 @@
 	..()
 	visualnet = ghostnet
 
+	var/toggled_invisible = 0 // Outpost 21 edit - Last time toggle_visibility() was called
+
 /mob/observer/dead/proc/checkStatic()
 	return !(check_rights(R_ADMIN|R_FUN|R_EVENT|R_SERVER, 0, src) || (client && client.buildmode) || isbelly(loc))
 
@@ -869,6 +871,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	// Outpost 21 edit begin - Allow ghosts to manifest
 	if(!user)
 		visible_message(span_purple("The ghost of \the [src] is dragged back in to our plane of reality!"))
+		toggle_visibility(TRUE)
 		return
 	// Outpost 21 edit end
 	if(plane != PLANE_WORLD)
@@ -903,7 +906,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set name = "Toggle Visibility"
 	set desc = "Allows you to turn (in)visible (almost) at will."
 
-	var/toggled_invisible
+	// Outpost 21 edit, moved var/toggled_invisible to /mob/observer/dead
 	if(!forced && plane == PLANE_GHOSTS && world.time < toggled_invisible + 600)
 		to_chat(src, span_filter_notice("You must gather strength before you can turn visible again..."))
 		return
