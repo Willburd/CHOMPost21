@@ -73,11 +73,15 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 
 // Turn to dust when killed
 /mob/living/simple_mob/animal/statue/death()
-	dust()
+	if(stat != DEAD)
+		stat = DEAD
+		dust()
 
 // Turn to dust when gibbed
 /mob/living/simple_mob/animal/statue/gib()
-	dust()
+	if(stat != DEAD)
+		stat = DEAD
+		dust()
 
 /mob/living/simple_mob/animal/statue/Life()
 	. = ..()
@@ -223,7 +227,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	var/mob/living/simple_mob/animal/statue/S = holder
 	var/mob/watching = S.get_watcher()
 	var/turf/T = get_turf(holder.loc)
-	if(prob(20) || T.get_lumcount() < 0.1) // 20% chance to update watchers, but if we have a watcher and the rooms dark... Check faster.
+	if(prob(40) || T.get_lumcount() < 0.1) // 40% chance to update watchers, but if we have a watcher and the rooms dark... Check faster.
 		S.update_watcher()
 		watching = S.get_watcher()
 	if(watching)
@@ -235,7 +239,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		if(can_retaliate)
 			can_retaliate = FALSE
 			if (annoyance > 10)
-				if(prob(30 + annoyance) && istype(watching,/obj/structure/mirror))
+				if(prob(40 + annoyance) && istype(watching,/obj/structure/mirror))
 					ability_mirrorshmash()
 					lose_target() // stops target lockups
 				else if(prob(30 + annoyance) && istype(watching,/obj/item/flashlight))
@@ -246,20 +250,20 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 						F.on = 0
 						F.update_brightness()
 					lose_target() // stops target lockups
-				else if(prob(30 + annoyance) && istype(watching,/obj/item/flashlight))
+				else if(prob(30 + annoyance) && istype(watching,/obj/machinery/floodlight))
 					var/obj/machinery/floodlight/F = watching
 					if(F.on)
 						F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
 						F.turn_off(1)
 					lose_target() // stops target lockups
+				else if(prob(20 + (annoyance/2)))
+					ability_blind()
+					lose_target() // stops target lockups
 				else if(prob(30) && T.get_lumcount() > 0.1)
 					ability_flash()
 					lose_target() // stops target lockups
-				else if(prob(10 + (annoyance/2)))
-					ability_blind()
-					lose_target() // stops target lockups
 				annoyance -= 5
-			spawn(rand(20,50))
+			spawn(rand(10,30))
 				can_retaliate = TRUE
 		// Slowly get more grumpy
 		if((annoyance + 1) < 800)
@@ -292,8 +296,8 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 // Powers
 /datum/ai_holder/simple_mob/intentional/statue/proc/ability_blind()
 	var/mob/living/simple_mob/animal/statue/S = holder
-	for(var/mob/living/L in oviewers(S.view_range, holder))
-		if(prob(70))
+	for(var/mob/living/L in oviewers(S.view_range, get_turf(S)))
+		if(prob(90))
 			blind_target(L)
 	return
 
@@ -316,16 +320,15 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 			L.Life() // Hacky but gets instant feedback
 
 /datum/ai_holder/simple_mob/intentional/statue/proc/ability_flash()
-	if(prob(60))
-		var/get_L = null
-		for(var/obj/machinery/light/L in oview(12, holder))
-			get_L = L
-			L.flicker(rand(20, 50))
-			spawn(rand(15,50))
-				if(prob(40 + annoyance))
-					L.broken()
-		if(get_L)
-			holder.visible_message(span_cult("\The [holder] slowly points at \the [get_L]."))
+	var/get_L = null
+	for(var/obj/machinery/light/L in oview(12, holder))
+		get_L = L
+		L.flicker(rand(40, 90))
+		spawn(rand(15,50))
+			if(prob(50 + annoyance))
+				L.broken()
+	if(get_L)
+		holder.visible_message(span_cult("\The [holder] slowly points at \the [get_L]."))
 	return
 
 /datum/ai_holder/simple_mob/intentional/statue/proc/ability_mirrorshmash()

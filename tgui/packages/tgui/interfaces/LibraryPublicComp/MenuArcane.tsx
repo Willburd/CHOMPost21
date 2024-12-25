@@ -14,7 +14,7 @@ export const MenuArcane = (props) => {
         <Button.Confirm
           icon="eye"
           onClick={() =>
-            act('switchscreen', { arcane_checkout: 'arcane_checkout' })
+            act('arcane_checkout', { arcane_checkout: 'arcane_checkout' })
           }
         >
           Accept Responsibility

@@ -12,6 +12,7 @@
 	sheet_singular_name = "crystal"
 	sheet_plural_name = "crystals"
 	supply_conversion_value = 5
+	is_fusion_fuel = TRUE // Outpost 21 edit - enable fuelrod phoron
 
 /*
 // Commenting this out while fires are so spectacularly lethal, as I can't seem to get this balanced appropriately.
