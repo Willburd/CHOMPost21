@@ -2,7 +2,7 @@
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
 	result = /obj/item/stack/material/lead
-	required_material = /obj/item/stack/material/osmium
+	required_material = /obj/item/stack/material/platinum
 
 	required_energy_min = 100
 	required_energy_max = 300
@@ -14,8 +14,8 @@
 /datum/particle_smasher_recipe/uranium_lead
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
-	result = /obj/item/stack/material/uranium
-	required_material = /obj/item/stack/material/lead
+	result = /obj/item/stack/material/lead
+	required_material = /obj/item/stack/material/uranium
 
 	required_energy_min = 50
 	required_energy_max = 600
@@ -27,8 +27,8 @@
 /datum/particle_smasher_recipe/uranium_platinum
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
-	result = /obj/item/stack/material/uranium
-	required_material = /obj/item/stack/material/platinum
+	result = /obj/item/stack/material/platinum
+	required_material = /obj/item/stack/material/uranium
 
 	required_energy_min = 600
 	required_energy_max = 650
