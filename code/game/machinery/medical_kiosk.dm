@@ -245,11 +245,15 @@
 
 		if((count == 1 && istype(halucinateTarget,/mob/living/carbon)) || (AR && AR.haunted))
 			// halucination replies
-			balloon_alert_visible(halu_text(halucinateTarget))
+			var/text = halu_text(halucinateTarget)
+			balloon_alert_visible(text)
+			visible_message(text)
 			msgcooldown = 60 SECONDS
 		else
 			// tease people to backup
-			balloon_alert_visible(advert_text())
+			var/text = advert_text()
+			balloon_alert_visible(text)
+			visible_message(text)
 			msgcooldown = 60 SECONDS
 	return
 
