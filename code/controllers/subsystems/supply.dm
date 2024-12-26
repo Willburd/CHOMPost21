@@ -127,6 +127,7 @@ SUBSYSTEM_DEF(supply)
 					if(istype(A, /obj/item/salvage))
 						var/obj/item/salvage/salvagedStuff = A
 						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
+						EC.value += EC.contents[EC.contents.len]["value"]
 					// CHOMPAdd End
 
 					// Outpost 21 edit begin - Selling slime cores
