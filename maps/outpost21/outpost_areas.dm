@@ -253,6 +253,11 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
+/area/muriki/bathroom/virology
+	name = "\improper Biohazard Dump"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	base_turf = /turf/simulated/open/force_indoor
+
 /area/muriki/bathroom/casino
 	name = "\improper Casino Royal Flush"
 	base_turf = /turf/simulated/mineral/floor/muriki
@@ -749,6 +754,9 @@
 	music = 'sound/ambience/ambimine.ogg'
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = FALSE
+
+/area/engineering/atmos/tank_storage
+	name = "\improper Atmospherics Secure Storage"
 
 //them dat der bluespezz warpy magic
 /area/teleporter/engineering
@@ -1631,6 +1639,18 @@
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
+/area/medical/virology/prep
+	name = "\improper Virology Preperation"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/virology/quarantine_airlock
+	name = "\improper Virology Quarantine Airlock"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/virology/quarantine_quarantine
+	name = "\improper Virology Quarantine"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
 //
 // Rooftops-----------------------------------------------------------------------
 //
@@ -1938,6 +1958,11 @@
 
 /area/rnd/research/exp_prep
 	name = "\improper Xenolab Expedition Preperation"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+/area/rnd/research/xenobio_storage
+	name = "\improper Xenolab Storage"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
