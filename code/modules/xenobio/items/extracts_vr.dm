@@ -45,6 +45,10 @@
 		. += "This extract has [uses] more use\s."
 	else
 		. += "This extract is inert."
+	// Outpost 21 edit begin - Selling slime cores
+	if(supply_conversion_value)
+		. += "Sells for about [supply_conversion_value] supply points."
+	// Outpost 21 edit end
 
 /decl/chemical_reaction/instant/slime
 	var/required = null
