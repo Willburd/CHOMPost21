@@ -47,9 +47,22 @@
 			var/area_good = 1
 			var/bad_msg = "--------------- [A.name]([A.type])"
 
-			if(isnull(A.apc) && !(A.type in exempt_from_apc))
-				log_unit_test("[bad_msg] lacks an APC. (X[A.x]|Y[A.y]) - Z[A.z])")
-				area_good = 0
+			// Outpost 21 edit begin - Scan for areas with extra APCs
+			if(!(A.type in exempt_from_apc))
+				if(isnull(A.apc))
+					log_unit_test("[bad_msg] lacks an APC. (X[A.x]|Y[A.y]) - Z[A.z])")
+					area_good = 0
+				else
+					var/list/apc_list = list()
+					for(var/turf/T in get_current_area_turfs(A))
+						for(var/atom/S in T.contents)
+							if(istype(S,/obj/machinery/power/apc))
+								apc_list.Add(S)
+					if(apc_list.len > 1)
+						area_good = 0
+						for(var/obj/machinery/power/P in apc_list)
+							log_unit_test("[bad_msg] has too many APCs. (X[P.x]|Y[P.y]) - Z[P.z])")
+			// Outpost 21 edit end
 
 			if(!A.air_scrub_info.len && !(A.type in exempt_from_atmos))
 				log_unit_test("[bad_msg] lacks an Air scrubber. (X[A.x]|Y[A.y]) - (Z[A.z])")

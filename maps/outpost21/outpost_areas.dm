@@ -253,6 +253,11 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
+/area/muriki/bathroom/virology
+	name = "\improper Biohazard Dump"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	base_turf = /turf/simulated/open/force_indoor
+
 /area/muriki/bathroom/casino
 	name = "\improper Casino Royal Flush"
 	base_turf = /turf/simulated/mineral/floor/muriki
@@ -750,6 +755,9 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = FALSE
 
+/area/engineering/atmos/tank_storage
+	name = "\improper Atmospherics Secure Storage"
+
 //them dat der bluespezz warpy magic
 /area/teleporter/engineering
 	name = "\improper Engineering Teleporter"
@@ -1073,7 +1081,6 @@
 	name = "\improper Muriki Medical Caverns"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "bluenew"
-	use_emergency_overlay = TRUE
 
 /area/mine/unexplored/muriki/cave/med
 	name = "\improper Muriki Caverns Near Medical"
@@ -1097,6 +1104,57 @@
 	name = "\improper Muriki Caverns Near Civilian"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "dark128"
+
+//cavern access
+/area/mine/explored/muriki/cave/sci/west_access
+	name = "\improper Research Cavern Access West"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "purple"
+/area/mine/explored/muriki/cave/sci/east_access
+	name = "\improper Research Cavern Access East"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "purple"
+/area/maintenance/research/north
+	name = "\improper North Research Maintenance"
+	icon_state = "pmaint"
+/area/maintenance/research/closet
+	name = "\improper Research Maintenance Closet"
+	icon_state = "pmaint"
+
+/area/mine/explored/muriki/cave/med/east_access
+	name = "\improper Medical Cavern Access West"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "bluenew"
+/area/mine/explored/muriki/cave/med/resleever_exit
+	name = "\improper Medical Automatic Resleeving Access"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "bluenew"
+	use_emergency_overlay = TRUE
+
+/area/mine/explored/muriki/cave/civ/south_access
+	name = "\improper Civilian Cavern Access South"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "dark128"
+/area/mine/explored/muriki/cave/civ/east_access
+	name = "\improper Civilian Cavern Access East"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "dark128"
+
+/area/maintenance/civ/closet
+	name = "\improper Civilian Maintenance Closet"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/bunker
+	name = "\improper Bunker Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/north
+	name = "\improper North Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/east
+	name = "\improper East Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
 
 //fillers
 /area/mine/unexplored/muriki/cave/terra
@@ -1377,7 +1435,7 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/maintenance/civ
-	name = "\improper Near Civilian Maintenance"
+	name = "\improper Civilian Pool Maintenance"
 	icon_state = "maintcentral"
 	base_turf = /turf/simulated/mineral/floor/muriki
 
@@ -1419,6 +1477,15 @@
 	name = "\improper Maintenance Spine"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "orawhisqu"
+
+/area/maintenance/spine/civ
+	name = "\improper Maintenance Spine Civilian"
+
+/area/maintenance/spine/eng
+	name = "\improper Maintenance Spine Engineering"
+
+/area/maintenance/spine/waste
+	name = "\improper Maintenance Spine Waste"
 
 /area/maintenance/tug
 	name = "\improper Maintenance Tug Tunnel"
@@ -1570,6 +1637,18 @@
 	name = "\improper Automated Resleever"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "blue"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/virology/prep
+	name = "\improper Virology Preperation"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/virology/quarantine_airlock
+	name = "\improper Virology Quarantine Airlock"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/medical/virology/quarantine_quarantine
+	name = "\improper Virology Quarantine"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 //
@@ -1882,6 +1961,11 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
+/area/rnd/research/xenobio_storage
+	name = "\improper Xenolab Storage"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
 /area/rnd/research/mailing
 	name = "\improper Research Mailing"
 	base_turf = /turf/simulated/open/force_indoor
@@ -2107,9 +2191,15 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/offworld/asteroidyard/station/storage
-	name = "\improper Reclamation Yard Storage"
+	name = "\improper Reclamation Yard Primary Storage"
 	icon_state = "locker"
 	sound_env = ASTEROID
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
+/area/offworld/asteroidyard/station/storage_aux
+	name = "\improper Reclamation Yard Material Storage"
+	icon_state = "locker"
+	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/offworld/asteroidyard/station/bar
