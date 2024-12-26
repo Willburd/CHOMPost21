@@ -1435,7 +1435,7 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/maintenance/civ
-	name = "\improper Near Civilian Maintenance"
+	name = "\improper Civilian Pool Maintenance"
 	icon_state = "maintcentral"
 	base_turf = /turf/simulated/mineral/floor/muriki
 
@@ -2191,9 +2191,15 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/offworld/asteroidyard/station/storage
-	name = "\improper Reclamation Yard Storage"
+	name = "\improper Reclamation Yard Primary Storage"
 	icon_state = "locker"
 	sound_env = ASTEROID
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
+/area/offworld/asteroidyard/station/storage_aux
+	name = "\improper Reclamation Yard Material Storage"
+	icon_state = "locker"
+	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/offworld/asteroidyard/station/bar
