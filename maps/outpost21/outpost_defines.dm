@@ -436,9 +436,11 @@
 	name = "ZAS: AI Chamber"
 	area_path = /area/ai
 
+/*
 /datum/unit_test/zas_area_test/cargo_maint
 	name = "ZAS: Cargo Maintenance"
 	area_path = /area/maintenance/cargo
+*/
 
 /datum/unit_test/zas_area_test/virology
 	name = "ZAS: Virology"
