@@ -129,6 +129,13 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
 					// CHOMPAdd End
 
+					// Outpost 21 edit begin - Selling slime cores
+					if(istype(A, /obj/item/slime_extract))
+						var/obj/item/slime_extract/slime_stuff = A
+						EC.contents[EC.contents.len]["value"] = slime_stuff.supply_conversion_value
+						EC.value += EC.contents[EC.contents.len]["value"]
+					// Outpost 21 edit end
+
 			//Outpost 21 edit begin - Sell reagent tanks
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
 				var/obj/vehicle/train/trolly_tank/tank = MA
