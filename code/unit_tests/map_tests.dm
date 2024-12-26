@@ -54,7 +54,7 @@
 					area_good = 0
 				else
 					var/list/apc_list = list()
-					for(var/turf/T in get_area_turfs(A.type))
+					for(var/turf/T in get_current_area_turfs(A))
 						for(var/atom/S in T.contents)
 							if(istype(S,/obj/machinery/power/apc))
 								apc_list.Add(S)
