@@ -141,3 +141,6 @@
 
 /obj/item/gun/energy/mouseray
 	origin_tech = list(TECH_BLUESPACE = 4, TECH_ILLEGAL = 2)
+
+/obj/item/juke_remote
+	origin_tech = list(TECH_MAGNET = 1, TECH_DATA = 1)
