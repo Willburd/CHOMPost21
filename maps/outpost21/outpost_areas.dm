@@ -1073,7 +1073,6 @@
 	name = "\improper Muriki Medical Caverns"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "bluenew"
-	use_emergency_overlay = TRUE
 
 /area/mine/unexplored/muriki/cave/med
 	name = "\improper Muriki Caverns Near Medical"
@@ -1097,6 +1096,57 @@
 	name = "\improper Muriki Caverns Near Civilian"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "dark128"
+
+//cavern access
+/area/mine/explored/muriki/cave/sci/west_access
+	name = "\improper Research Cavern Access West"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "purple"
+/area/mine/explored/muriki/cave/sci/east_access
+	name = "\improper Research Cavern Access East"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "purple"
+/area/maintenance/research/north
+	name = "\improper North Research Maintenance"
+	icon_state = "pmaint"
+/area/maintenance/research/closet
+	name = "\improper Research Maintenance Closet"
+	icon_state = "pmaint"
+
+/area/mine/explored/muriki/cave/med/east_access
+	name = "\improper Medical Cavern Access West"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "bluenew"
+/area/mine/explored/muriki/cave/med/resleever_exit
+	name = "\improper Medical Automatic Resleeving Access"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "bluenew"
+	use_emergency_overlay = TRUE
+
+/area/mine/explored/muriki/cave/civ/south_access
+	name = "\improper Civilian Cavern Access South"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "dark128"
+/area/mine/explored/muriki/cave/civ/east_access
+	name = "\improper Civilian Cavern Access East"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "dark128"
+
+/area/maintenance/civ/closet
+	name = "\improper Civilian Maintenance Closet"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/bunker
+	name = "\improper Bunker Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/north
+	name = "\improper North Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/east
+	name = "\improper East Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
 
 //fillers
 /area/mine/unexplored/muriki/cave/terra
@@ -1419,6 +1469,15 @@
 	name = "\improper Maintenance Spine"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "orawhisqu"
+
+/area/maintenance/spine/civ
+	name = "\improper Maintenance Spine Civilian"
+
+/area/maintenance/spine/eng
+	name = "\improper Maintenance Spine Engineering"
+
+/area/maintenance/spine/waste
+	name = "\improper Maintenance Spine Waste"
 
 /area/maintenance/tug
 	name = "\improper Maintenance Tug Tunnel"
