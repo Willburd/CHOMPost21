@@ -116,14 +116,12 @@ GLOBAL_LIST_INIT(design_datums, list())
 	for(var/datum/tech/KT in known_tech)
 		if(KT.id == ID && KT.level <= level)
 			// Outpost 21 edit begin - Randomize tech levels to avoid metagaming
-			var/final_level = level
-			if(level > KT.level)
-				var/R = 0
-				if(prob(20) || level >= 6)
-					R = 1 // Original mechanics, give the full tech!
-				else
-					R = rand(0.5,1) // Weighted toward higher end
-				final_level = round(level * R)
+			var/R = 0
+			if(prob(20) || level >= 6)
+				R = 1 // Original mechanics, give the full tech!
+			else
+				R = rand(0.5,1) // Weighted toward higher end
+			var/final_level = round(level * R)
 			// Outpost 21 edit end
 			KT.level = max(KT.level + 1, final_level - 1)
 	return
