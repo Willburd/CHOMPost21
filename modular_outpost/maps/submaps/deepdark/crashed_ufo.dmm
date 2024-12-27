@@ -1,0 +1,93 @@
+"aa" = (/turf/template_noop,/area/template_noop)
+"ab" = (/turf/simulated/shuttle/floor/alienplating/external,/area/submap/outpost21/crashed_ufo)
+"ac" = (/turf/simulated/shuttle/wall/alien,/area/submap/outpost21/crashed_ufo)
+"ad" = (/obj/structure/closet/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ae" = (/obj/structure/closet/alien,/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ag" = (/obj/machinery/door/airlock/alien/locked,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ah" = (/obj/effect/decal/remains/xeno,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ai" = (/obj/machinery/porta_turret/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aj" = (/obj/structure/loot_pile/surface/alien/engineering,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ak" = (/obj/structure/prop/alien/computer,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"al" = (/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"am" = (/obj/structure/bed/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ao" = (/obj/structure/table/alien,/obj/item/clothing/head/helmet/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ap" = (/obj/structure/prop/alien/power,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aq" = (/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"ar" = (/obj/structure/table/alien,/obj/item/paper/alien{icon_state = "alienpaper_words"; info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"},/obj/random/tool/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"as" = (/turf/simulated/shuttle/wall/alien/hard_corner,/area/submap/outpost21/crashed_ufo)
+"at" = (/obj/structure/prop/alien/computer,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"au" = (/obj/structure/table/alien,/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"av" = (/obj/structure/table/alien,/obj/item/paper/alien{icon_state = "alienpaper_words"; info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"},/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aw" = (/obj/structure/loot_pile/surface/alien/security,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"ax" = (/obj/structure/prop/alien/computer{dir = 8},/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"ay" = (/obj/structure/prop/alien/computer{icon_state = "console-c"; dir = 4},/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"az" = (/obj/machinery/door/airlock/alien/locked{welded = 1},/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aA" = (/obj/structure/bed/alien,/obj/effect/decal/remains/xeno,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aC" = (/obj/random/tool/alien,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aF" = (/obj/structure/prop/alien/computer/camera/flipped{icon_state = "camera_flipped"; dir = 4},/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aG" = (/obj/structure/prop/alien/computer/camera{icon_state = "camera"; dir = 8},/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aH" = (/obj/machinery/porta_turret/alien,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aI" = (/obj/machinery/door/airlock/alien/locked{p_open = 1},/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aJ" = (/obj/effect/decal/remains/robot,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aL" = (/obj/item/stack/cable_coil/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aM" = (/obj/structure/table/alien,/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aN" = (/obj/structure/table/alien,/obj/item/paper/alien{icon_state = "alienpaper_words"; info = "\[i]This tablet has a large collection of symbols that you've never seen before outside this ship. You have no hope of figuring out what any of the mean...\[/i]"},/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aO" = (/obj/structure/prop/alien/computer{icon_state = "console-c"; dir = 4},/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aP" = (/obj/structure/table/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aQ" = (/obj/structure/table/alien,/obj/random/tool/alien,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aR" = (/obj/structure/bed/alien,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aS" = (/obj/structure/prop/alien/computer/camera,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aT" = (/obj/structure/closet/alien,/obj/item/paper/alien,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aU" = (/obj/structure/bed/alien,/obj/effect/decal/remains/xeno,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"aV" = (/obj/structure/loot_pile/surface/alien/end,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"aW" = (/obj/structure/table/alien,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"ba" = (/obj/machinery/door/airlock/alien/locked,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"bb" = (/obj/effect/decal/remains/lizard,/obj/random/tool/alien,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"bc" = (/obj/structure/prop/alien/dispenser,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"bd" = (/obj/structure/table/alien,/obj/random/tool/alien,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"be" = (/obj/structure/loot_pile/surface/alien/medical,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"bf" = (/obj/structure/closet/alien,/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"bg" = (/obj/structure/prop/alien/dispenser,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"bh" = (/obj/effect/decal/remains/mouse,/turf/simulated/shuttle/floor/alien,/area/submap/outpost21/crashed_ufo)
+"bi" = (/obj/structure/closet/alien,/obj/item/prop/alien/junk,/obj/item/prop/alien/junk,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"bq" = (/obj/effect/decal/remains/human{desc = "They look like human remains. Based on the equipment you saw nearby when you walked in, they were some kind of command person, and a poor one at that."},/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"bt" = (/obj/machinery/door/airlock/alien/public,/turf/simulated/shuttle/floor/alienplating,/area/submap/outpost21/crashed_ufo)
+"bv" = (/turf/simulated/mineral/floor/ignore_mapgen,/area/template_noop)
+
+(1,1,1) = {"
+aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaaaaaaaabababababababababaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaababababacacacacacacacababababaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaabababacacacacadalalaladacacacacabababaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaababacacacalagalalalahalalalagalacacacababaaaaaaaaaaaaaa
+aaaaaaaaaaaaababacacalalalacalalalalalalalacalalalacacababaaaaaaaaaaaa
+aaaaaaaaaaababacacalalacacacacaialalalaiacacacacalalacacababaaaaaaaaaa
+aaaaaaaaababacacalalacacajakacacalalalacacamahacacalalacacababaaaaaaaa
+aaaaaaababacacalalacacaialalaWacacalacacaoalahaeacacalalacacababaaaaaa
+aaaaaaabacacalalacacapalalaqaWaNasagasacacagacacacacacalalacacabaaaaaa
+aaaaababacalalacacapalalaqaqaqalasalasaiaqaqatauauacacacalalacababaaaa
+aaaaabacacalacacaialalaCaqaqalalagalagalalaqaqaqavacadacacalacacabaaaa
+aaaaabacalalacajalalaqaqaqalalajasalasawalalaqaqaxacalahacalalacabaaaa
+aaababacagacacayalaqaqaqalaladacasazasacawalalaqaqagalaAacacagacababaa
+aaabacacalalacacaWaWaqalalalacacatalatacacalalalaqacaQacacalalacacabaa
+aaabacadalalaiacacaPalahalacacaFaqalaqaGacacalalaHacacacaialalaeacabaa
+aaabacalalalalalacasasaIasacaqaqaqaJaqaqaqacasagasasacalalalalalacabaa
+aaabacalalaLalalalagalalalacaiaqaMaNaraqaiacalalalagalalalalalalacabaa
+aaabacalalalalalacasasagasacaOaqaPahaQaqaxacasagasasacahalalalalacabaa
+aaabacadalalaiacacatacaqaRacacaqaqaqaqaqacacaSaqaqaTacacaialaladacabaa
+aaabacacalalacacaqaqacaqaqaUacacaiaVaiacacaWaqaqaqacacacacalalacacabaa
+aaababacagacacaWaqaUasacaqaqaRacacacacacbdaHaqaqasacaqacacacagacababaa
+aaaaabacalalacavaqaqbaaqaqaqaqaUasalasaFaqaqaqaqbaaqbbaqacalalacabaaaa
+aaaaabacacalacacbcbdasaiaqacaqaqagalagaqaqaqaqaqasacaqacacalacacabaaaa
+aaaaababacalalacacacacasagasacacasalasaqaqasbaasacacacacalalacababaaaa
+aaaaaaabacacalalacacacbealalalbeasagasbfacacaqacacacacalalacacabaaaaaa
+aaaaaaababacacalalacacbgalalbeacacalacacacaqbhaqacacalalacacababaaaaaa
+aaaaaaaaababacacalalacacbibeacacalalalacacacaqacacalalacacababaaaaaaaa
+aaaaaaaaaaababacacalalacacacacaialalalaiacacacacalalacacababaaaaaaaaaa
+aaaaaaaaaaaaababacacalalalasalalalalalalalasalalalacacababaaaaaaaaaaaa
+aaaaaaaaaaaaaaababacacacalagalalalalbqalalagalacacacababaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaabababacacasacalasbtasalacasacacabababaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaaababababacasasalasacacababababaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaabvbvbvabababasbtasabababbvbvbvaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaaaabvbvbvbvbvbvbvbvbvbvbvbvbvbvbvaaaaaaaaaaaaaaaaaaaa
+"}
