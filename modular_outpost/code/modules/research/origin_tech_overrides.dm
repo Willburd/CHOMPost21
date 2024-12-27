@@ -37,7 +37,7 @@
 
 // * Combat Tech *
 // ****************
-obj/item/clothing/mask/gas
+/obj/item/clothing/mask/gas
 	origin_tech = list(TECH_COMBAT = 1, TECH_BIO = 1)
 
 /obj/item/gun/launcher/crossbow
@@ -96,14 +96,14 @@ obj/item/clothing/mask/gas
 /obj/item/inducer/sci
 	origin_tech = list(TECH_BLUESPACE = 3, TECH_MATERIAL = 4, TECH_POWER = 5)
 
-/datum/design/item/mecha/teleporter
-	req_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 5)
+/obj/item/mecha_parts/mecha_equipment/teleporter
+	origin_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 5)
 
-/datum/design/item/mecha/cloak
-	req_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 5)
+/obj/item/mecha_parts/mecha_equipment/cloak
+	origin_tech = list(TECH_BLUESPACE = 5, TECH_MAGNET = 5)
 
 /obj/item/extraction_pack
-	req_tech = list(TECH_BLUESPACE = 4)
+	origin_tech = list(TECH_BLUESPACE = 4)
 
 // * Meditech *
 // ****************
