@@ -137,6 +137,22 @@ SUBSYSTEM_DEF(supply)
 						EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
+					// Outpost 21 edit begin - Selling slime cores
+					if(istype(A, /obj/item/organ/internal))
+						var/obj/item/organ/internal/organ_stuff = A
+						if(!istype(CR,/obj/structure/closet/crate/freezer))
+							EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+							)
+						else if(organ_stuff.health != initial(organ_stuff.health) )
+							EC.contents = list(
+								"error" = "Error: Product was damaged on arrival."
+							)
+						else
+							EC.contents[EC.contents.len]["value"] = organ_stuff.supply_conversion_value
+							EC.value += EC.contents[EC.contents.len]["value"]
+					// Outpost 21 edit end
+
 			//Outpost 21 edit begin - Sell reagent tanks
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
 				var/obj/vehicle/train/trolly_tank/tank = MA

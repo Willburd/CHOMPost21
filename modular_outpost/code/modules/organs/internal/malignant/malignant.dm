@@ -131,6 +131,7 @@
 	dead_icon = "engineered-dead"
 	can_reject = 0
 	surgeryAllowedSites = list(BP_GROIN, BP_TORSO) // Lets keep these a little more restricted, due to size and complexity
+	supply_conversion_value = 100
 
 /obj/item/organ/internal/malignant/engineered/proc/update_degeneration(var/degradechance, var/intensity)
 	if(degradechance == 0)
@@ -226,6 +227,7 @@
 	validBPspawns = list(BP_GROIN, BP_TORSO)
 	cooldownmin = 15
 	cooldownmax = 35
+	supply_conversion_value = 10
 
 /obj/item/organ/internal/malignant/tumor/potato/process()
 	. = ..()
@@ -349,6 +351,7 @@
 	validBPspawns = list(BP_GROIN, BP_TORSO)
 	cooldownmin = 25
 	cooldownmax = 65
+	supply_conversion_value = 50
 
 /obj/item/organ/internal/malignant/tumor/bluespace/process()
 	. = ..()
@@ -395,6 +398,7 @@
 	validBPspawns = list(BP_GROIN)
 	cooldownmin = 25
 	cooldownmax = 95
+	supply_conversion_value = 50
 
 /obj/item/organ/internal/malignant/tumor/beerbelly/process()
 	. = ..()
@@ -426,6 +430,7 @@
 	cooldownmin = 15
 	cooldownmax = 25
 	var/thalers = 0
+	supply_conversion_value = 25
 
 /obj/item/organ/internal/malignant/tumor/moneyorgan/process()
 	. = ..()
@@ -444,6 +449,7 @@
 
 	if(prob(6))
 		thalers += stage
+		supply_conversion_value = initial(supply_conversion_value) + ((thalers * SSsupply.points_per_money) * SSsupply.cash_tax)
 
 	if(prob(2))
 		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
@@ -593,6 +599,7 @@
 	var/growth_trigger = 1
 	var/prepared = FALSE
 	var/chem_target = null
+	supply_conversion_value = 0
 
 /obj/item/organ/internal/malignant/engineered/lattice/New(var/mob/living/holder, var/internal, var/force_location = null, var/forcetag = null)
 	growth_trigger = rand(150,200)
