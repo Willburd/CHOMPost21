@@ -60,6 +60,10 @@
 /obj/item/tank/jetpack
 	origin_tech = list(TECH_ENGINEERING = 4)
 
+/obj/item/reagent_containers/glass/beaker/noreact
+	origin_tech = list(TECH_MATERIAL = 3, TECH_MAGNET = 2)
+
+
 // * Illegal Tech *
 // ****************
 /obj/item/grenade/spawnergrenade/clustaur
