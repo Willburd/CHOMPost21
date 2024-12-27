@@ -63,6 +63,8 @@
 /obj/item/reagent_containers/glass/beaker/noreact
 	origin_tech = list(TECH_MATERIAL = 3, TECH_MAGNET = 2)
 
+/obj/item/binoculars
+	origin_tech = list(TECH_MAGNET = 1)
 
 // * Illegal Tech *
 // ****************
@@ -105,10 +107,16 @@
 	origin_tech = list(TECH_COMBAT = 7, TECH_ILLEGAL = 5, TECH_MATERIAL = 5, TECH_MAGNET = 2)
 
 /obj/item/material/butterfly
-	origin_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
+	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 1)
+
+/obj/item/material/knife/tacknife
+	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 1)
 
 /obj/item/flash
 	origin_tech = list(TECH_COMBAT = 2)
+
+/obj/item/syringe_cartridge
+	origin_tech = list(TECH_COMBAT = 1)
 
 // * Bluespace Tech *
 // ****************
@@ -159,6 +167,9 @@
 
 /obj/item/cracker
 	origin_tech = list(TECH_BLUESPACE = 3)
+
+/obj/item/reagent_containers/glass/beaker/bluespace
+	origin_tech = list(TECH_BLUESPACE = 1, TECH_MATERIAL = 5)
 
 // * Meditech *
 // ****************
@@ -246,6 +257,12 @@
 /obj/item/stack/medical/splint
 	origin_tech = list(TECH_BIO = 1)
 
+/obj/item/bone
+	origin_tech = list(TECH_BIO = 2)
+
+/obj/item/bone/skull/unknown
+	origin_tech = list(TECH_BIO = 3)
+
 // * Datatech *
 // ****************
 /obj/item/juke_remote
@@ -278,6 +295,9 @@
 /obj/item/integrated_electronics
 	origin_tech = list(TECH_DATA = 4)
 
+/obj/item/instrument/piano_synth/headphones/spacepods
+	origin_tech = list(TECH_DATA = 4, TECH_BLUESPACE = 1, TECH_MAGNET = 3)
+
 // * Implant Tech *
 // ****************
 /obj/item/implant/compliance
@@ -306,6 +326,9 @@
 
 /obj/item/implant/adrenalin
 	origin_tech = list(TECH_COMBAT = 4, TECH_BIO = 4)
+
+/obj/item/implant/backup
+	origin_tech = list(TECH_ILLEGAL = 3, TECH_BIO = 3)
 
 // * Slimes *
 // ****************
