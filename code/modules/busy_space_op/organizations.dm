@@ -14,11 +14,13 @@
 	history = ""
 	work = "terraforming and atmospherics services"
 	headquarters = "Earth"
-	motto = ""
+	motto = "Making better worlds."
 
 	org_type = "corporate"
 	slogans = list(
 			"Eshui Atmospherics - Breathing new life into the universe.",
+			"Eshui Atmospherics - When you need a breath of fresh air.",
+			"Eshui Atmospherics - We're inside you, with every breath of fresh air."
 			)
 	ship_prefixes = list("ESU" = "a general operations", "ESX" = "a hauling", "ESH" = "a bulk transport", "ESR" = "a resupply")
 	//martian mountains
@@ -55,7 +57,26 @@
 			"Glycine",
 			"Syncytin",
 			)
-	//destination_names = list()
+	destination_names = list(
+			"Venus",
+			"Earth",
+			"Luna",
+			"Mars",
+			"Titan",
+			"Europa",
+			"Outpost 19",
+			"Outpost 17",
+			"Outpost 15",
+			"Outpost 24",
+			"Gateway One above Luna",
+			"SolCom Headquarters on Earth",
+			"Olympus City on Mars",
+			"Hermes Naval Shipyard above Mars",
+			"Cairo Station above Earth",
+			"Glitnir Orbital Gateway above Pluto",
+			"a SolGov embassy",
+			"a classified location"
+			)
 
 
 // Governments
