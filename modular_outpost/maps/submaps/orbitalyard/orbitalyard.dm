@@ -143,6 +143,7 @@
 	desc = "An old derelict ship"
 	mappath = "modular_outpost/maps/submaps/orbitalyard/lost_ship_A.dmm"
 	allow_duplicates = FALSE
+	discard_prob = 10
 	cost = 50
 
 /datum/map_template/outpost21/space/orbitalyard_huge/lostship_B
@@ -158,7 +159,7 @@
 	desc = "An old derelict ship"
 	mappath = "modular_outpost/maps/submaps/orbitalyard/alienship_A.dmm"
 	allow_duplicates = FALSE
-	discard_prob = 85
+	discard_prob = 55
 	cost = 80
 
 
