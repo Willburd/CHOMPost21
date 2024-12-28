@@ -174,6 +174,9 @@
 /obj/item/reagent_containers/glass/beaker/bluespace
 	origin_tech = list(TECH_BLUESPACE = 1, TECH_MATERIAL = 5)
 
+/obj/item/reagent_containers/food/drinks/bluespace_coffee
+	origin_tech = list(TECH_BLUESPACE = 3, TECH_MATERIAL = 3)
+
 // * Meditech *
 // ****************
 /obj/item/gun/energy/mouseray/medical
