@@ -217,6 +217,7 @@
 		/obj/item/stack/material/steel,
 		/obj/item/stack/material/glass,
 		/obj/item/lightreplacer,
+		/obj/item/lightpainter,
 		/obj/item/pickaxe/plasmacutter
 	)
 
@@ -498,6 +499,7 @@
 		/obj/item/soap,
 		/obj/item/holosign_creator, //CHOMPAdd
 		/obj/item/lightreplacer,
+		/obj/item/lightpainter,
 		/obj/item/clothing/glasses/hud/janitor
 		)
 
