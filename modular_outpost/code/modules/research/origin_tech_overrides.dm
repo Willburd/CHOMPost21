@@ -66,6 +66,9 @@
 /obj/item/binoculars
 	origin_tech = list(TECH_MAGNET = 1)
 
+/obj/item/lightpainter
+	origin_tech = list(TECH_MATERIAL = 1, TECH_ENGINEERING = 2)
+
 // * Illegal Tech *
 // ****************
 /obj/item/grenade/spawnergrenade/clustaur
