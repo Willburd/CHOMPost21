@@ -117,6 +117,7 @@
 		/obj/item/stack/material/steel,
 		/obj/item/stack/material/glass,
 		/obj/item/lightreplacer,
+		/obj/item/lightpainter,
 		/obj/item/cell
 	) //Vorestation Add - makes it actually useful lmao, adds sheets and cells as well as light replacers and lets you take any extinguisher that fits
 

@@ -49,6 +49,7 @@
 		paths += subtypesof(/obj/item/organ/internal/malignant/parasite)
 	if(allowengineered)
 		paths += subtypesof(/obj/item/organ/internal/malignant/engineered)
+		paths -= /obj/item/organ/internal/malignant/engineered/chemorgan // Don't use this one
 	return malignant_organ_spawn(pick(paths)) // place in body
 
 /mob/living/carbon/human/proc/malignant_organ_spawn(var/type_path)
@@ -679,6 +680,11 @@
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/inaprovaline
 		if(REAGENT_ID_BLISS)
 			newpath = /obj/item/organ/internal/malignant/engineered/chemorgan/bliss
+		if(REAGENT_ID_ETHANOL)
+			newpath = /obj/item/organ/internal/malignant/tumor/beerbelly
+		if(REAGENT_POTATOJUICE)
+			newpath = /obj/item/organ/internal/malignant/tumor/potato
+
 	return newpath
 
 /obj/item/organ/internal/malignant/engineered/lattice/proc/make_mutoid(var/reagent)
