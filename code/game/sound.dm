@@ -21,11 +21,6 @@
 			holo_listeners += A.holo.masters[A]
 	listeners += holo_listeners
 	// Outpost 21 edit end
-	/*if(!ignore_walls) //these sounds don't carry through walls CHOMP Removal, ripping this logic up because it's unreliable and unnecessary.
-		/*for(var/mob/listen in listeners) //This is beyond fucking horrible. Please do not repeatedly call hear.
-			if(!(get_turf(listen) in hear(maxdistance,source)))
-				listeners -= listen*/
-		listeners = listeners & hearers(maxdistance,turf_source)*/
 	for(var/atom/U as anything in listeners)
 		if(istype(U,/mob))
 			var/mob/M = U
@@ -38,8 +33,6 @@
 			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
 				continue
 			//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
-
-			//CHOMPEdit Begin
 
 			if(!T || T.z != turf_source.z) //^ +1
 				continue
@@ -131,7 +124,7 @@
 	vol *= client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
 	S.volume = vol
 
-	if(vary || frequency) //CHOMPEdit
+	if(vary || frequency)
 		if(frequency)
 			S.frequency = frequency
 		else
