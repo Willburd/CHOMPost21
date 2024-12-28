@@ -2367,7 +2367,7 @@
 	base_turf = /turf/simulated/floor/flesh
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
@@ -2380,7 +2380,7 @@
 	base_turf = /turf/simulated/floor/weird_things/dark
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	sound_env = SPACE
 	ambience = AMBIENCE_FOREBODING
 	music = 'sound/ambience/ambisin1.ogg'
@@ -2406,7 +2406,7 @@
 	base_turf = /turf/simulated/floor/lava
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'

@@ -311,14 +311,14 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "orange"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
 /area/mine/unexplored/muriki/cave/deepdark
 	name = "\improper Muriki Underground"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "yellow"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
 
 /area/submap/outpost21/cave_liminal_A
