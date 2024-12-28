@@ -247,13 +247,13 @@
 			// halucination replies
 			var/text = halu_text(halucinateTarget)
 			balloon_alert_visible(text)
-			visible_message(text)
+			visible_message("\The [src] says [text]")
 			msgcooldown = 60 SECONDS
 		else
 			// tease people to backup
 			var/text = advert_text()
 			balloon_alert_visible(text)
-			visible_message(text)
+			visible_message("\The [src] says [text]")
 			msgcooldown = 60 SECONDS
 	return
 
