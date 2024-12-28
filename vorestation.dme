@@ -2257,6 +2257,7 @@
 #include "code\modules\casino\slots.dm"
 #include "code\modules\catalogue\atoms.dm"
 #include "code\modules\catalogue\catalogue_data.dm"
+#include "code\modules\catalogue\catalogue_data_op.dm"
 #include "code\modules\catalogue\catalogue_data_vr.dm"
 #include "code\modules\catalogue\catalogue_data_yw.dm"
 #include "code\modules\catalogue\cataloguer.dm"
