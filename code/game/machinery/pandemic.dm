@@ -70,8 +70,8 @@
 	icon_state = "pandemic[(beaker)?"1":"0"][!(stat & NOPOWER) ? "" : "_nopower"]"
 
 /obj/machinery/computer/pandemic/proc/create_culture(name, bottle_type = "culture", cooldown = 50)
-	var/obj/item/reagent_containers/glass/bottle/B = new/obj/item/reagent_containers/glass/bottle(loc)
-	B.icon_state = "bottle10"
+	var/obj/item/reagent_containers/glass/bottle/vaccine/B = new /obj/item/reagent_containers/glass/bottle/vaccine(loc) // Outpost 21 edit - Use unique vaccine bottle for cargo resale
+	//B.icon_state = "bottle10"
 	B.pixel_x = rand(-3, 3)
 	B.pixel_y = rand(-3, 3)
 	replicator_cooldown(cooldown)
@@ -150,6 +150,13 @@
 
 			var/obj/item/reagent_containers/glass/bottle/B = create_culture(vaccine_name, REAGENT_ID_VACCINE, 200)
 			B.reagents.add_reagent(REAGENT_ID_VACCINE, 15, list(vaccine_type))
+
+			// Outpost 21 edit begin - Consume the blood so it's not endlessly farmable
+			if(beaker && beaker.reagents && length(beaker.reagents.reagent_list))
+				beaker.reagents.remove_reagent( REAGENT_ID_BLOOD, 5)
+				if(!length(beaker.reagents.reagent_list))
+					update_tgui_static_data(ui.user) // finished beaker!
+			// Outpost 21 edit end
 		if("eject_beaker")
 			eject_beaker()
 			update_tgui_static_data(ui.user)
