@@ -11,6 +11,8 @@
 	var/wait = null
 	var/selected_strain_index = 1
 	var/obj/item/reagent_containers/beaker = null
+	var/allow_strains = TRUE // Outpost 21 edit - Split viro machines
+	var/allow_antibodies = FALSE // Outpost 21 edit - Split viro machines
 
 /obj/machinery/computer/pandemic/Initialize(mapload)
 	. = ..()
@@ -290,6 +292,14 @@
 			if(D)
 				resistances += list(D.name)
 	data["resistances"] = resistances
+
+	// Outpost 21 edit begin - Split viro machines
+	data["show_strains"] = allow_strains
+	if(!allow_strains)
+		data["strains"] = list()
+	if(!allow_antibodies)
+		data["resistances"] = list()
+	// Outpost 21 edit end
 
 /obj/machinery/computer/pandemic/proc/eject_beaker()
 	set name = "Eject Beaker"

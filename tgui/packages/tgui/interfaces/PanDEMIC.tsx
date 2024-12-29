@@ -19,6 +19,7 @@ type Data = {
   selectedStrainIndex: number;
   strains: Strain[];
   synthesisCooldown: boolean;
+  show_strains: boolean; // Outpost 21 edit - Split viro machines, show strains
 };
 
 type Strain = {
@@ -48,22 +49,55 @@ export const PanDEMIC = () => {
     beakerContainsBlood,
     beakerContainsVirus,
     resistances,
+    show_strains,
   } = data;
 
   let emptyPlaceholder: JSX.Element | null = null;
+
+  /* Outpost 21 edit being - Split viro machines, show antibodies */
+  if (show_strains) {
+    if (!beakerLoaded) {
+      emptyPlaceholder = <>No container loaded.</>;
+    } else if (!beakerContainsBlood) {
+      emptyPlaceholder = <>No virus sample found in the loaded container.</>;
+    } else if (beakerContainsBlood && !beakerContainsVirus) {
+      emptyPlaceholder = <>No disease detected in provided virus sample.</>;
+    }
+
+    return (
+      <Window width={575} height={510}>
+        <Window.Content>
+          <Stack fill vertical>
+            {emptyPlaceholder && !beakerContainsVirus ? (
+              <Section
+                title="Container Information"
+                buttons={<CommonCultureActions />}
+              >
+                <NoticeBox>{emptyPlaceholder}</NoticeBox>
+              </Section>
+            ) : (
+              <CultureInformationSection />
+            )}
+          </Stack>
+        </Window.Content>
+      </Window>
+    );
+  }
+
+  // Isolator antibody menu
   if (!beakerLoaded) {
     emptyPlaceholder = <>No container loaded.</>;
   } else if (!beakerContainsBlood) {
     emptyPlaceholder = <>No blood sample found in the loaded container.</>;
-  } else if (beakerContainsBlood && !beakerContainsVirus) {
-    emptyPlaceholder = <>No disease detected in provided blood sample.</>;
+  } else if (beakerContainsBlood && resistances.length === 0) {
+    emptyPlaceholder = <>No antibodies detected in provided virus sample.</>;
   }
 
   return (
     <Window width={575} height={510}>
       <Window.Content>
         <Stack fill vertical>
-          {emptyPlaceholder && !beakerContainsVirus ? (
+          {emptyPlaceholder && resistances.length === 0 ? (
             <Section
               title="Container Information"
               buttons={<CommonCultureActions />}
@@ -71,13 +105,18 @@ export const PanDEMIC = () => {
               <NoticeBox>{emptyPlaceholder}</NoticeBox>
             </Section>
           ) : (
-            <CultureInformationSection />
+            <Section
+              title="Antibody Information"
+              buttons={<CommonCultureActions />}
+            >
+              <ResistancesSection />
+            </Section>
           )}
-          {resistances.length > 0 && <ResistancesSection />}
         </Stack>
       </Window.Content>
     </Window>
   );
+  /* Outpost 21 edit being - end */
 };
 
 const CommonCultureActions = () => {
