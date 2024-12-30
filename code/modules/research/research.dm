@@ -115,7 +115,15 @@ GLOBAL_LIST_INIT(design_datums, list())
 /datum/research/proc/UpdateTech(var/ID, var/level)
 	for(var/datum/tech/KT in known_tech)
 		if(KT.id == ID && KT.level <= level)
-			KT.level = max(KT.level + 1, level - 1)
+			// Outpost 21 edit begin - Randomize tech levels to avoid metagaming
+			var/R = 0
+			if(prob(20) || level >= 6)
+				R = 1 // Original mechanics, give the full tech!
+			else
+				R = rand(0.5,1) // Weighted toward higher end
+			var/final_level = round(level * R)
+			// Outpost 21 edit end
+			KT.level = max(KT.level + 1, final_level - 1)
 	return
 
 // A simple helper proc to find the name of a tech with a given ID.

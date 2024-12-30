@@ -11,7 +11,7 @@
 	pry = 1
 	toolspeed = 1
 	tool_qualities = list(TOOL_CROWBAR)
-	origin_tech = list(TECH_ENGINEERING = 1)
+	origin_tech = list(TECH_ENGINEERING = 2, TECH_COMBAT = 1)
 	matter = list(MAT_DURASTEEL = 50)
 
 
@@ -25,6 +25,7 @@
 	var/cur_health
 	var/max_health = 450
 	var/obj/machinery/door/airlock/airlock = null
+	origin_tech = list(TECH_ENGINEERING = 2)
 
 
 
