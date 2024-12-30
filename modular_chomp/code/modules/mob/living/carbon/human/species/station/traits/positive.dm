@@ -21,7 +21,7 @@
 /datum/trait/positive/virus_immune
 	name = "Virus Immune"
 	desc = "You are immune to viruses."
-	cost = 1
+	cost = 2 // Outpost 21 edit - Virus immunity costs more
 
 	can_take = ORGANICS //no reason to clog up synth selection
 	var_changes = list("virus_immune" = 1)
