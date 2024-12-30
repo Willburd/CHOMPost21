@@ -168,10 +168,17 @@
 		return list()
 
 	var/list/data = list()
-	for(var/T in I.origin_tech)
+	// Outpost 21 edit begin - Science rebalance, circuitboards aren't gamebreaking
+	var/list/tech_list = I.origin_tech.Copy()
+	if(istype(I,/obj/item/circuitboard) || istype(I,/obj/item/integrated_circuit))
+		tech_list = list(TECH_DATA = 1)
+	else
+		tech_list = I.origin_tech
+	// Outpost 21 edit end
+	for(var/T in tech_list)
 		var/list/subdata = list(
 			"name" = CallTechName(T),
-			"level" = I.origin_tech[T],
+			"level" = tech_list[T], // Outpost 21 edit - Science rebalance
 			"current" = null,
 		)
 		for(var/datum/tech/F in files.known_tech)
@@ -419,8 +426,14 @@
 							linked_destroy.icon_state = "d_analyzer"
 							return
 
-					for(var/T in linked_destroy.loaded_item.origin_tech)
-						files.UpdateTech(T, linked_destroy.loaded_item.origin_tech[T])
+
+					// Outpost 21 edit begin - Science rebalance, circuitboards aren't gamebreaking
+					if(istype(linked_destroy.loaded_item,/obj/item/circuitboard) || istype(linked_destroy.loaded_item,/obj/item/integrated_circuit))
+						files.UpdateTech(TECH_DATA, 1)
+					else
+					// Outpost 21 edit end
+						for(var/T in linked_destroy.loaded_item.origin_tech)
+							files.UpdateTech(T, linked_destroy.loaded_item.origin_tech[T])
 					if(linked_lathe && linked_destroy.loaded_item.matter) // Also sends salvaged materials to a linked protolathe, if any.
 						for(var/t in linked_destroy.loaded_item.matter)
 							if(t in linked_lathe.materials)

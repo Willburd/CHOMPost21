@@ -99,8 +99,13 @@
 				if(analyzer && istype(target,/obj/item))
 					var/obj/item/tech_item = target
 					var/list/tech_levels = list()
-					for(var/T in tech_item.origin_tech)
-						tech_levels += "\The [tech_item] has level [tech_item.origin_tech[T]] in [CallTechName(T)]."
+					// Outpost 21 edit begin - Science rebalance, circuitboards aren't gamebreaking
+					if(istype(tech_item,/obj/item/circuitboard) || istype(tech_item,/obj/item/integrated_circuit))
+						tech_levels += "\The [tech_item] has level 1 in [CallTechName(TECH_DATA)]."
+					else
+					// Outpost 21 edit end
+						for(var/T in tech_item.origin_tech)
+							tech_levels += "\The [tech_item] has level [tech_item.origin_tech[T]] in [CallTechName(T)]."
 					to_chat(user, span_notice("[jointext(tech_levels, "<br>")]"))
 				if(delivery)
 					if(islist(deliverylists[delivery_tag]))
@@ -684,9 +689,15 @@
 				else
 					if(analyzer && digested)
 						var/obj/item/tech_item = T
-						for(var/tech in tech_item.origin_tech)
-							files.UpdateTech(tech, tech_item.origin_tech[tech])
+						// Outpost 21 edit begin - Science rebalance, circuitboards aren't gamebreaking
+						if(istype(tech_item,/obj/item/circuitboard) || istype(tech_item,/obj/item/integrated_circuit))
+							files.UpdateTech(TECH_DATA, 1)
 							synced = FALSE
+						else
+						// Outpost 21 edit end
+							for(var/tech in tech_item.origin_tech)
+								files.UpdateTech(tech, tech_item.origin_tech[tech])
+								synced = FALSE
 					//CHOMPAdd Start
 					if(volume && water)
 						water.add_charge(volume)
