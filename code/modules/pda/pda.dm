@@ -47,6 +47,7 @@ var/global/list/obj/item/pda/PDAs = list()
 	var/list/programs = list(
 		new/datum/data/pda/app/main_menu,
 		new/datum/data/pda/app/notekeeper,
+		new/datum/data/pda/app/timeclock, //CHOMPEdit: Add the timeclock to default apps
 		new/datum/data/pda/app/news,
 		// Outpost 21 addition begin - New apps
 		new/datum/data/pda/app/weather,
