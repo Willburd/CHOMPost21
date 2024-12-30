@@ -5446,8 +5446,6 @@
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_hatch.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_seat.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_weapons.dm"
-#include "modular_outpost\code\ZAS\Fire.dm"
-#include "modular_outpost\code\ZAS\Fire_Acts.dm"
 #include "modular_outpost\maps\overmap\space_pois\space_pois.dm"
 #include "modular_outpost\maps\submaps\base.dm"
 #include "modular_outpost\maps\submaps\cargoyard\cargoyard.dm"
