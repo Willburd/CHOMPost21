@@ -56,7 +56,7 @@
 			if(usr.client && usr.client.holder && usr.client.holder.rights & R_ADMIN)
 				modules |= emergency_module_types
 			// Outpost 21 edit end
-			else if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
+			else if(R.crisis || security_level >= SEC_LEVEL_RED || R.crisis_override)
 				to_chat(R, span_red("Crisis mode active. Combat module available."))
 				modules |= emergency_module_types
 			for(var/module_name in whitelisted_module_types)
@@ -154,7 +154,7 @@
 		if("confirm")
 			R.apply_name(new_name)
 			R.apply_module(sprite_datum, selected_module)
-			R.update_multibelly() // CHOMPAdd Multibelly
+			R.update_multibelly()
 			R.transform_module()
 			close_ui()
 			. = TRUE
