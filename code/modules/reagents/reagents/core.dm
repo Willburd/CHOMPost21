@@ -261,7 +261,7 @@
 	else if(volume >= 10)
 		T.wet_floor(1)
 
-	T.apply_fire_protection() // Outpost 21 edit - Apply fire protection so fires can actually be put out
+	T.apply_fire_protection() // CHOMPAdd - Apply fire protection so fires can actually be put out.
 
 /datum/reagent/water/touch_obj(var/obj/O, var/amount)
 	..()
