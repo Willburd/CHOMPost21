@@ -70,12 +70,19 @@
 	icon_state = "pandemic[(beaker)?"1":"0"][!(stat & NOPOWER) ? "" : "_nopower"]"
 
 /obj/machinery/computer/pandemic/proc/create_culture(name, bottle_type = "culture", cooldown = 50)
-	var/obj/item/reagent_containers/glass/bottle/vaccine/B = new /obj/item/reagent_containers/glass/bottle/vaccine(loc) // Outpost 21 edit - Use unique vaccine bottle for cargo resale
-	//B.icon_state = "bottle10"
+	// Outpost 21 edit begin - Use unique vaccine bottle for cargo resale
+	var/obj/item/reagent_containers/glass/bottle/B
+	if(istype(src,/obj/machinery/computer/pandemic/isolator))
+		B = new /obj/item/reagent_containers/glass/bottle/vaccine(loc)
+		B.name = "[name] [bottle_type] vessel"
+	else
+		B = new(loc)
+		B.icon_state = "bottle10"
+		B.name = "[name] [bottle_type] bottle"
+	// Outpost 21 edit end
 	B.pixel_x = rand(-3, 3)
 	B.pixel_y = rand(-3, 3)
 	replicator_cooldown(cooldown)
-	B.name = "[name] [bottle_type] bottle"
 	return B
 
 /obj/machinery/computer/pandemic/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
