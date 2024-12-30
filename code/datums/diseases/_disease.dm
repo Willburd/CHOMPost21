@@ -90,6 +90,11 @@ GLOBAL_LIST_INIT(diseases, subtypesof(/datum/disease))
 		if(has_cure && prob(cure_chance))
 			cure()
 			return FALSE
+		// Outpost 21 edit begin - Diseases are automatically cured after a long period to prevent expoiting megaviruses
+		if(check_natural_immunity())
+			cure()
+			return FALSE
+		// Outpost 21 edit end
 	return TRUE
 
 /datum/disease/proc/has_cure()
