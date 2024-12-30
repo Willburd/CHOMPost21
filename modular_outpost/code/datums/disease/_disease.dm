@@ -4,6 +4,8 @@
 /datum/disease/proc/start_cure_timer()
 	if(has_timer) // Do not set a timer if we already made one
 		return
+	if(!(disease_flags & CURABLE))
+		return
 	has_timer = TRUE
 	addtimer(CALLBACK(src, PROC_REF(check_natural_immunity)), (1 HOUR) + rand( -20 MINUTES, 30 MINUTES), TIMER_DELETE_ME) // Once this period is over, allow random cure chances
 
@@ -11,6 +13,8 @@
 	// Infected mobs eventually make antibodies to viruses if they are
 	// mild enough to survive for hours with it in them.
 	// Check every 10 minutes or so if we pass the dice roll for naturalized curing.
+	if(!(disease_flags & CURABLE))
+		return
 	if(prob( rand(10,15) ))
 		has_timer = FALSE
 		cure()
