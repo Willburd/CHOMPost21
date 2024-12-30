@@ -160,7 +160,7 @@ SUBSYSTEM_DEF(supply)
 							EC.contents = list(
 								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
 							)
-						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount( REAGENT_ID_VACCINE) < sale_bottle.volume || (sale_bottle.flags & OPENCONTAINER))
+						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount( REAGENT_ID_VACCINE) < sale_bottle.volume)
 							EC.contents = list(
 								"error" = "Error: Tainted product in batch. Was opened, contaminated, or was not full. Payment rendered null under terms of agreement."
 							)
