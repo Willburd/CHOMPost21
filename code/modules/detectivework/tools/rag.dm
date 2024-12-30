@@ -163,7 +163,7 @@
 		src.ignite()
 	if(exposed_temperature >= 900 + T0C)
 		var/turf/T = get_turf(src)
-		T?.feed_lingering_fire(0.1) // Outpost 21 edit - Lingering fire, feeding fires
+		T?.feed_lingering_fire(0.1) // CHOMPAdd - Lingering fire, feeding fires
 		new /obj/effect/decal/cleanable/ash(get_turf(src))
 		qdel(src)
 

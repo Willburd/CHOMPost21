@@ -55,7 +55,7 @@
 					my_target = T2
 				else
 					my_target = pick(the_targets)
-				W.create_reagents(10) // Outpost 21 edit - Raised from 5 to 10
+				W.create_reagents(10) // CHOMPEdit
 				if(!W || !src)
 					return
 				reagents.trans_to_obj(W, spray_amount)

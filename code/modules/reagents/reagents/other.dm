@@ -463,7 +463,7 @@
 		for(var/mob/living/simple_mob/slime/M in T)
 			M.adjustToxLoss(rand(5, 10))
 
-	T.apply_fire_protection() // Outpost 21 edit - Apply fire protection
+	T.apply_fire_protection() // CHOMPAdd - Apply fire protection
 
 /datum/reagent/space_cleaner/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.r_hand)
