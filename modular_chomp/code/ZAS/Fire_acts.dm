@@ -14,8 +14,6 @@
 #define BURN_TEMP_METAL 	T0C + 1400
 #define BURN_TEMP_PHOROFIRE	T0C + 5000
 
-
-
 // Additional fire_acts(), macro that assembles a proc that runs every time fire acts on the assigned object path of x.
 // If it rolls the prob("c"hance) it will feed the lingering fire a 0 to 1 value as "b"urn.
 // Then checks if the current turf temp is greater than t, is so it ex_act(1)s the object while leaving ash behind.
