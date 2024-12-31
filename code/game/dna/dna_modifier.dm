@@ -162,6 +162,12 @@
 	SStgui.update_uis(src)
 
 /obj/machinery/dna_scannernew/attackby(var/obj/item/item as obj, var/mob/user as mob)
+	// Traitgenes edit begin - Deconstructable dna scanner
+	if(default_deconstruction_screwdriver(user, item))
+		return
+	if(default_deconstruction_crowbar(user, item))
+		return
+	// Traitgenes edit end
 	if(istype(item, /obj/item/reagent_containers/glass))
 		if(beaker)
 			to_chat(user, span_warning("A beaker is already loaded into the machine."))
@@ -205,6 +211,25 @@
 	src.add_fingerprint(user)
 	qdel(G)
 	return
+
+// Traitgenes edit begin - Deconstructable dna scanner
+/obj/machinery/dna_scannernew/dismantle()
+	// release contents
+	if(beaker)
+		beaker.forceMove( get_turf(src))
+		beaker = null
+	if(occupant)
+		occupant.forceMove( get_turf(src))
+		occupant = null
+	// Disconnect from our terminal
+	for(var/dirfind in cardinal)
+		var/obj/machinery/computer/scan_consolenew/console = locate(/obj/machinery/computer/scan_consolenew, get_step(src, dirfind))
+		if(console && console.connected == src)
+			console.connected = null
+			SStgui.close_uis(console)
+			break
+	. = ..()
+// Traitgenes edit end
 
 /obj/machinery/dna_scannernew/proc/put_in(var/mob/M)
 	if(M.client)
