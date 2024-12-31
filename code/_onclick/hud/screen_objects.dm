@@ -390,7 +390,7 @@
 												contents.Add(0)
 
 										// No races breath this, but never know about downstream servers.
-										if (GAS_CO2) // Outpost 21 edit - wrong id
+										if (GAS_CO2)
 											if(t.air_contents.gas[GAS_CO2] && !t.air_contents.gas[GAS_PHORON])
 												contents.Add(t.air_contents.gas[GAS_CO2])
 											else
