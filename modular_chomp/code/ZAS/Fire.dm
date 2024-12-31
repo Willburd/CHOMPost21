@@ -1,3 +1,5 @@
+#define FIRE_MAX_TEMP 20000
+
 /turf/proc/lingering_fire(fl)
 	return
 
@@ -86,11 +88,11 @@
 	air_contents.remove_by_flag(XGM_GAS_OXIDIZER, gas_exchange)
 	air_contents.adjust_gas(GAS_CO2, gas_exchange * 1.5) // Lots of CO2
 
-	// Outpost 21 edit begin - Limit max lingering fire temp gain, or engines melt
-	if(air_contents.temperature < 20000) // May as well limit this
+
+	// Limit max lingering fire temp gain, or engines melt
+	if(air_contents.temperature < FIRE_MAX_TEMP) // May as well limit this
 		var/starting_energy = air_contents.temperature * air_contents.heat_capacity()
 		air_contents.temperature = (starting_energy + vsc.fire_fuel_energy_release * (gas_exchange * 1.05)) / air_contents.heat_capacity()
-	// Outpost 21 edit end
 	air_contents.update_values()
 
 	// Affect contents
@@ -128,10 +130,8 @@
 					enemy_tile.lingering_fire(firelevel * splitrate)
 					firelevel -= (1 - splitrate)
 
-			// Outpost 21 edit begin - Fixed broken condition, was one level of scope too deep
 			else if(prob(20))
 				enemy_tile.adjacent_fire_act(loc, air_contents, air_contents.temperature, air_contents.volume)
-			// Outpost 21 edit end
 
 	var/total_oxidizers = 0
 	for(var/g in air_contents.gas)
@@ -156,8 +156,8 @@
 		T.fire = null
 		qdel(src)
 
-// Outpost 21 edit begin - Fixes lingering fires counting up forever
 /obj/fire/lingering/Destroy()
 	. = ..()
 	SSair.lingering_fires--
-// Outpost 21 edit end
+
+#undef FIRE_MAX_TEMP
