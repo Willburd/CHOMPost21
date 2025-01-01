@@ -36,6 +36,7 @@
 
 /mob/proc/AddDisease(datum/disease/D, respect_carrier = FALSE)
 	var/datum/disease/DD = new D.type(1, D, 0)
+	DD.start_cure_timer() // Outpost 21 edit - Diseases are automatically cured after a long period to prevent expoiting megaviruses
 	viruses += DD
 	DD.affected_mob = src
 	active_diseases += DD

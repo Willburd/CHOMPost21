@@ -11,6 +11,8 @@
 	var/wait = null
 	var/selected_strain_index = 1
 	var/obj/item/reagent_containers/beaker = null
+	var/allow_strains = TRUE // Outpost 21 edit - Split viro machines
+	var/allow_antibodies = FALSE // Outpost 21 edit - Split viro machines
 
 /obj/machinery/computer/pandemic/Initialize(mapload)
 	. = ..()
@@ -68,12 +70,19 @@
 	icon_state = "pandemic[(beaker)?"1":"0"][!(stat & NOPOWER) ? "" : "_nopower"]"
 
 /obj/machinery/computer/pandemic/proc/create_culture(name, bottle_type = "culture", cooldown = 50)
-	var/obj/item/reagent_containers/glass/bottle/B = new/obj/item/reagent_containers/glass/bottle(loc)
-	B.icon_state = "bottle10"
+	// Outpost 21 edit begin - Use unique vaccine bottle for cargo resale
+	var/obj/item/reagent_containers/glass/bottle/B
+	if(istype(src,/obj/machinery/computer/pandemic/isolator))
+		B = new /obj/item/reagent_containers/glass/bottle/vaccine(loc)
+		B.name = "[name] [bottle_type] vessel"
+	else
+		B = new(loc)
+		B.icon_state = "bottle10"
+		B.name = "[name] [bottle_type] bottle"
+	// Outpost 21 edit end
 	B.pixel_x = rand(-3, 3)
 	B.pixel_y = rand(-3, 3)
 	replicator_cooldown(cooldown)
-	B.name = "[name] [bottle_type] bottle"
 	return B
 
 /obj/machinery/computer/pandemic/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
@@ -148,6 +157,13 @@
 
 			var/obj/item/reagent_containers/glass/bottle/B = create_culture(vaccine_name, REAGENT_ID_VACCINE, 200)
 			B.reagents.add_reagent(REAGENT_ID_VACCINE, 15, list(vaccine_type))
+
+			// Outpost 21 edit begin - Consume the blood so it's not endlessly farmable
+			if(beaker && beaker.reagents && length(beaker.reagents.reagent_list))
+				beaker.reagents.remove_reagent( REAGENT_ID_BLOOD, 5)
+				if(!length(beaker.reagents.reagent_list))
+					update_tgui_static_data(ui.user) // finished beaker!
+			// Outpost 21 edit end
 		if("eject_beaker")
 			eject_beaker()
 			update_tgui_static_data(ui.user)
@@ -290,6 +306,14 @@
 			if(D)
 				resistances += list(D.name)
 	data["resistances"] = resistances
+
+	// Outpost 21 edit begin - Split viro machines
+	data["show_strains"] = allow_strains
+	if(!allow_strains)
+		data["strains"] = list()
+	if(!allow_antibodies)
+		data["resistances"] = list()
+	// Outpost 21 edit end
 
 /obj/machinery/computer/pandemic/proc/eject_beaker()
 	set name = "Eject Beaker"

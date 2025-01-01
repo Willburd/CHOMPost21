@@ -153,6 +153,22 @@ SUBSYSTEM_DEF(supply)
 							EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
+					// Outpost 21 edit begin - Selling vaccines
+					if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
+						var/obj/item/reagent_containers/glass/bottle/vaccine/sale_bottle = A
+						if(!istype(CR,/obj/structure/closet/crate/freezer))
+							EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+							)
+						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount( REAGENT_ID_VACCINE) < sale_bottle.volume)
+							EC.contents = list(
+								"error" = "Error: Tainted product in batch. Was opened, contaminated, or was not full. Payment rendered null under terms of agreement."
+							)
+						else
+							EC.contents[EC.contents.len]["value"] = 5
+							EC.value += EC.contents[EC.contents.len]["value"]
+					// Outpost 21 edit end
+
 			//Outpost 21 edit begin - Sell reagent tanks
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
 				var/obj/vehicle/train/trolly_tank/tank = MA
