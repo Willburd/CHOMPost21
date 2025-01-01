@@ -1542,6 +1542,14 @@
 	. = ..()
 	new/obj/effect/decal/cleanable/pie_smudge(src.loc)
 	src.visible_message(span_danger("\The [src.name] splats."),span_danger("You hear a splat."))
+	// Outpost 21 edit begin - Pie splat
+	if(isliving(hit_atom))
+		var/mob/living/L = hit_atom
+		L.Blind(5)
+		L.Weaken(2)
+		L.Stun(2)
+		L.Life() // Instant feedback to player
+	// Outpost 21 edit end
 	qdel(src)
 
 /obj/item/reagent_containers/food/snacks/berryclafoutis

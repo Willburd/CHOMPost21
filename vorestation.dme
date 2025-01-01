@@ -4267,6 +4267,7 @@
 #include "code\modules\projectiles\guns\energy\cell_loaded_vr\nsfw_cells.dm"
 #include "code\modules\projectiles\guns\launcher\bows.dm"
 #include "code\modules\projectiles\guns\launcher\confetti.dm"
+#include "code\modules\projectiles\guns\launcher\confetti_op.dm"
 #include "code\modules\projectiles\guns\launcher\crossbow.dm"
 #include "code\modules\projectiles\guns\launcher\grenade_launcher.dm"
 #include "code\modules\projectiles\guns\launcher\pneumatic.dm"
