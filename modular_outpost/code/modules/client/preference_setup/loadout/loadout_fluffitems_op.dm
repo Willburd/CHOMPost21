@@ -94,7 +94,7 @@
 
 //  A CKEYS
 
-// Astra - // Astra
+// astra: Astra
 /datum/gear/fluff/astra_ritualknife
 	path = /obj/item/material/knife/ritual/fluff/astra
 	display_name = "Polished Ritual Knife"
@@ -150,6 +150,14 @@
 
 //  N CKEYS
 
+//niilomarvy: Tobin
+/datum/gear/fluff/ESHUI_bronzemedal
+	display_name = "Morphium Coin"
+	path = /obj/item/coin/morphium
+	description = "A small coin made out of some kind of exotic metal."
+	ckeywhitelist = list("niilomarvy")
+	character_name = list("Tobin")
+
 //  O CKEYS
 
 //  P CKEYS
@@ -160,12 +168,21 @@
 
 //  S CKEYS
 
+//seagha: Khrutch Yizhnera
 /datum/gear/fluff/eshui_ds_hat
 	display_name = "Army Campaign Cover"
 	path = /obj/item/clothing/head/service/army/campaign
 	description = "An intimidating hat bearing the crest of the USDF Army Crest. Typically only found on the heads of Drill Sergeants."
 	ckeywhitelist = list("seagha")
 	character_name = list("Khrutch Yizhnera")
+
+//synxplushy: Sitka Nightshade
+/datum/gear/fluff/alien_captain_medal
+	display_name = "alien captain medal"
+	path = /obj/item/clothing/accessory/medal/dungeon/alien_ufo
+	description = "It vaguely like a star. It looks like something an alien captain might've worn. Probably."
+	ckeywhitelist = list(,"synxplushy")
+	character_name = list("Sitka Nightshade")
 
 //  T CKEYS
 
