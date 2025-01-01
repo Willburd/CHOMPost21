@@ -1,5 +1,6 @@
 //Misc weapons
 /datum/design/item/weapon/gun/launcher/confetti_cannon
+	name = "confetti cannon" // Outpost 21 edit - Missing name?
 	desc = "Stuff it with paper and shoot! You'll be a hit at every party."
 	id = "confetti_cannon"
 	req_tech = list(TECH_COMBAT = 2, TECH_MATERIAL = 2)
