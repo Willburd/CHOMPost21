@@ -14,6 +14,13 @@
 	}\
 	src.contents += P;
 
+/obj/structure/noticeboard/bridge
+	name = "Command notice board"
+
+/obj/structure/noticeboard/bridge/Initialize()
+	. = ..()
+
+
 /obj/structure/noticeboard/cargo
 	name = "Cargo notice board"
 	icon_state = "nboard03"
@@ -108,5 +115,20 @@
 	ADD_NOTICE("Memo: SoP","<br>Review your SoP, found in your PDA. E-Shui is starting to crack down on this, understand we're different than NT. Make sure crew are aware; IGNORANCE IS NOT AN EXCUSE!",list(/obj/item/stamp/hos))
 	ADD_NOTICE("Staff Notice: Document Your Arrests!","<br>Document your arrests, stop letting crew run around with empty records and no evidence you had to slap their wrist, especially for severe things! <br>This is on you, if they don't get permanent records, so do your jobs.",list(/obj/item/stamp/ward))
 	. = ..()
+
+
+/obj/structure/noticeboard/stowaway
+	name = "Forgotten notice board"
+	icon_state = "nboard05"
+
+/obj/structure/noticeboard/stowaway/Initialize()
+	var/obj/item/paper/P
+	ADD_NOTICE("Drawing: Traps","<br>On the paper is a crudely drawn image of a raptor-like creature. They appear to be kneeling down and inspecting in front of them. <br>In front of them is a small box with a laser coming from it, a bear trap, and a frayed wire sparking angrily. The raptor appears to be drawing an 'X' on the floor",null)
+	ADD_NOTICE("Drawing: Walls","<br>On the paper is a crudely drawn image of a raptor-like creature. The creature appears to be drawing an arrow on the ground, pointing towards a section of wall they're pushing back into place. The wall section appears to be dislodged somehow.",null)
+	ADD_NOTICE("Drawing: Borgs","<br>On the paper is a crudely drawn image of a raptor-like creature, and a dogborg. The dogborg looms in the distance with a menacing aura, the raptor is running and hiding from the dogborg. Images of 'X' and skulls surround the borg.",null)
+	ADD_NOTICE("Drawing: Menace","<br>On the paper is a horrifying visage of a ghoulish face. The surrounding paper is scribbled with attempts of drawing... something. The drawing seems to radiate menace, but you're not even sure what it's trying to warn you of.",null)
+	ADD_NOTICE("Drawing: Rest","<br>On the paper is a crudely drawn image of a raptor-like creature, they appear to be laying in a bed with closed eyes. A detailed smile can be seen drawn on the floor of the image. The image appears to display peace and safety.",null)
+	. = ..()
+
 
 #undef ADD_NOTICE
