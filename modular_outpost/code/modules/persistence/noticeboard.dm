@@ -12,54 +12,101 @@
 			qdel(SP);\
 		}\
 	}\
-	src.contents += P;\
+	src.contents += P;
 
-/obj/structure/noticeboard/anomaly
-	name = "xenoarchaeology notice board"
+/obj/structure/noticeboard/cargo
+	name = "Cargo notice board"
+	icon_state = "nboard03"
 
-/obj/structure/noticeboard/anomaly/Initialize()
+/obj/structure/noticeboard/cargo/Initialize()
+	var/obj/item/paper/P
+	ADD_NOTICE("Staff Notice: STOP GETTING CAUGHT","<br>B shift, this one's for you: you're not supposed to be stealing from other departments, drop the cargonia shit. Or at least stop getting CAUGHT.",list(/obj/item/stamp/qm))
+	ADD_NOTICE("Staff Notice: Sell your stuff","<br>You have a vending machine in the front. Cargo points aren't free anymore, sell the stuff you 'find', use the thalers from it to get cargo points directly.",list(/obj/item/stamp/qm))
+	ADD_NOTICE("Containers","<br>There's a bunch of connexes in the storage yard outside, all three shifts leave stuff there from time to time, and extra shipment stuff. Go rummaging through those.",null)
+	. = ..()
+
+
+/obj/structure/noticeboard/engineering
+	name = "engineering notice board"
+	icon_state = "nboard02"
+
+/obj/structure/noticeboard/engineering/Initialize()
+	var/obj/item/paper/P
+	ADD_NOTICE("Staff Notice: Wires","<br>I don't know who needs to hear this, but you can recolor wire sets with a multitool, and fix frayed wires with ducttape. <br>Oh also, you can pick up your cut wires quicker by just shuffling around the bundle first, then scooping up the whole thing.",null)
+	ADD_NOTICE("Staff Notice: Fireaxe","<br>I don't know who, but don't let me find out. Stop stealing the damn fireaxe out of atmospherics. It is there EXCLUSIVELY for emergencies, such as needing to smash windows to vent a fire. If I find it missing or blood-soaked again, I will find out who you are, and we're gunna have words.",list(/obj/item/stamp/ce))
+	. = ..()
+
+
+/obj/structure/noticeboard/exploration
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/exploration/Initialize()
+	var/obj/item/paper/P
+	ADD_NOTICE("Staff Notice: Mining Trawler","<br>The mining trawler is a big beast of a ship meant for taking up to the orbital rec-yard, or other derelicts. <br>Don't hog the damn thing. Take Science with you so they can gather artifacts, take Sec because some of those wrecks are active, that kind of thing. <br>There's a role for everyone up there. Don't be selfish.",list(/obj/item/stamp/qm))
+	. = ..()
+
+
+/obj/structure/noticeboard/janitor
+	name = "Janitorial notice board"
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/janitor/Initialize()
+	var/obj/item/paper/P
+	ADD_NOTICE("Staff Notice: Cleaning","<br>Yo, departments have to keep themselves clean. Help if you wanna, but you don't gotta. Just keep the civilian areas nice and slick. <br>Also, if you're from another station, we answer to the QM here, not the HoP. So, make friends, bring them trash to recycle, that kinda thing. <br>Cargo IS your department to clean, though.",null)
+	. = ..()
+
+
+/obj/structure/noticeboard/library
+	icon_state = "nboard01"
+
+/obj/structure/noticeboard/library/Initialize()
+	var/obj/item/paper/P
+	ADD_NOTICE("Bingle","<br>Our libary has received a computer with authorized Bingle usage! Use it to research anything and everything, it's a very handy wiki, and always up to date.<br> If the computer crashes just give it a wack, it's old tech.",null)
 	. = ..()
 
 
 /obj/structure/noticeboard/medical
 	name = "medical notice board"
-	icon_state = "nboard02"
+	icon_state = "nboard04"
 
 /obj/structure/noticeboard/medical/Initialize()
 	var/obj/item/paper/P
-	ADD_NOTICE("Staff Notice: Patient rooms","<br>No matter how many times I've said this, it doesn't seem to stick, so I'm leaving this reminder: Screwing patients in the patient rooms is a serious breach of professionality and your code of ethics. Take it to the dorms.",list(/obj/item/stamp/cmo))
-	ADD_NOTICE("Staff Notice: Breakroom \& Storage","<br>Enjoy the view from the new breakroom. You've also got a storage room full of leftover supplies from the shift before yours.",null)
+	ADD_NOTICE("Staff Notice: Engineered Organs","<br>We got our bioprinter updated with the new model, this'll let you grow organ lattices. <br>Keep them in a fed patient until they're a proto-organ, take them out, inject them with meds; it should respond well, put them back in and irradiate them.<br> Central loves these, so hit up cargo for extras you grow!",list(/obj/item/stamp/cmo))
+	ADD_NOTICE("Staff Notice: In-depth checks","<br>Remember to check the body scan THOROUGHLY! Check for additional organs, and check breathing types if the cause of ailments isn't obvious. Not everything is in big flashing red text, do your jobs!",null)
+	ADD_NOTICE("Staff Notice: Genetic resets", "<br>Hey, our resleeving equipment got updated. If someone comes in and their genetics are all messed up from radiation, landmines, or your own screwing around in the genetics lab. You can use it to print a reset injector.",list(/obj/item/stamp/cmo))
+	ADD_NOTICE("Memo: Taaa", "<br>C shift: you might encounter a Teshari known as Taaa. Familiarize yourself with his medical records (you should be doing this with ALL your patients), use extreme care IF you treat him, do not approach him with a needle, let HIM come to YOU. PS: He has restraining orders against certain medical staff, please respect those.",list(/obj/item/stamp/cmo))
 	. = ..()
 
 
-/obj/structure/noticeboard/toxins
-	name = "toxins lab notice board"
+/obj/structure/noticeboard/phoronics
+	name = "Phoronics lab notice board"
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/toxins/Initialize()
+/obj/structure/noticeboard/phoronics/Initialize()
 	var/obj/item/paper/P
-	ADD_NOTICE("Staff Notice: Toxins Mixing","<br>Toxins Mixing is currently shut down for the time being, due to damage requiring parts from off station to fix. Please do not use at this time, or risk setting the entire outpost on fire.",list(/obj/item/stamp/rd))
+	ADD_NOTICE("Staff Notice: Phoronics","<br>Use caution in phoronics. We're looking at getting explosion-reactive crystals ordered in, and getting central to accept explosives for cargo payment. Be safe when experimenting. <br> For now, mining loves bomb-mining, just make sure they only off them OFF-WORLD.",list(/obj/item/stamp/rd))
 	. = ..()
 
 
-/obj/structure/noticeboard/library
-	icon_state = "nboard02"
+/obj/structure/noticeboard/research
+	name = "Research notice board"
+	icon_state = "nboard01"
 
-/obj/structure/noticeboard/library/Initialize()
+/obj/structure/noticeboard/research/Initialize()
 	var/obj/item/paper/P
-	ADD_NOTICE("Library Warning: coffee stains","<br>I seem to tell you guys this daily, but please, stop bringing coffee to carpeted areas. It's hard enough to get the stains off wood,let alone carpet.",null)
-	ADD_NOTICE("Library Warning: loud noises","Ssshh!<br>People are trying to read in the library, stop bringing the jukebox over there!",null)
+	ADD_NOTICE("Staff Notice: Long Term Storage","<br>The material storage in the RnD is emptied every shift, if you want to save your materials for the next shift, go downstairs into long-term storage. Put them in there!",list(/obj/item/stamp/rd))
 	. = ..()
 
 
-/obj/structure/noticeboard/exploration
+/obj/structure/noticeboard/security
+	name = "Security notice board"
 	icon_state = "nboard03"
 
-/obj/structure/noticeboard/exploration/Initialize()
+/obj/structure/noticeboard/security/Initialize()
 	var/obj/item/paper/P
-	ADD_NOTICE("Memo: Prototype ship","<br> With the lost of our last Research installation and the damage sustained to the old exploration shuttle,We've decided to finally approve the construction of the Prototype Star-Runner class Exploration Vessel. Keep in mind it's a prototype, so try not to scratch it's paint. We don't have a second.",list(/obj/item/stamp/centcomm))
-	ADD_NOTICE("Memo RE: Expedition Requirements","Jones,<br>For the last time, Expeditions regulations require atleast three crew members, including the Pathfinder and/or Research Director. The next time you activate your bluespace drive with less then that, and you're fired from the department.I won't have this conversation again. <br>- R.F",list(/obj/item/stamp/rd))
-	ADD_NOTICE("Memo RE: Pilot duties","Pilots, As you're fully aware, we're on the edge of civilized space out here. <br> Leaving the shuttle area is dangerious. This is why the Prototype is equipped with a proper camera system to keep an eye on the explorers. If you get yourselves killed, and an explorer has to crash land the ship back here, the company is NOT going to be happy.<br>- R.F",list(/obj/item/stamp/rd))
+	ADD_NOTICE("Staff Notice: Armored Asset Vehicles","<br>Security forces, in the red armory you'll find a ladder. That ladder takes you to the garage. Use that to store impounded vehicles <br>There's two armored vehicles down there, the tank and APC. Keys are in HoS office and Warden's office respectively, use them however you see fit on code red. Ask a senior if you need driving lessons.",list(/obj/item/stamp/hos))
+	ADD_NOTICE("Memo: SoP","<br>Review your SoP, found in your PDA. E-Shui is starting to crack down on this, understand we're different than NT. Make sure crew are aware; IGNORANCE IS NOT AN EXCUSE!",list(/obj/item/stamp/hos))
+	ADD_NOTICE("Staff Notice: Document Your Arrests!","<br>Document your arrests, stop letting crew run around with empty records and no evidence you had to slap their wrist, especially for severe things! <br>This is on you, if they don't get permanent records, so do your jobs.",list(/obj/item/stamp/ward))
 	. = ..()
 
 #undef ADD_NOTICE
