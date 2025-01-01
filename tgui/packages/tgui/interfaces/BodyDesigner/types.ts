@@ -25,7 +25,7 @@ export type activeBodyRecord = {
   speciesname: string;
   gender: string;
   synthetic: string;
-  locked: BooleanLike /* Outpost 21 edit - Directly use locked status */;
+  locked: BooleanLike;
   scale: string;
   booc: string;
   digitigrade: BooleanLike;
@@ -41,7 +41,6 @@ export type activeBodyRecord = {
     Bodytype: { styleHref: string; style: string };
   };
   markings: { name: Record<string, { on: BooleanLike; color: string }> }; // Record entries match BP regions
-  /* Outpost 21 edit begin - More body information */
   scale_appearance: string;
   offset_override: string;
   species_sound: string;
@@ -59,7 +58,6 @@ export type activeBodyRecord = {
     legs: string;
     feet: string;
   };
-  /* Outpost 21 edit end */
 };
 
 type colourableStyle = {

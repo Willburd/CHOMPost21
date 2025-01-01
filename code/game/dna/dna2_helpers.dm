@@ -297,7 +297,6 @@
 		H.custom_whisper = dna.custom_whisper
 		H.custom_exclaim = dna.custom_exclaim
 		H.species.blood_color = dna.blood_color
-		// Outpost 21 edit begin - missing dna entry, scale appearance, scale offset, synth markings, speach bubble type, Species sounds, hair gradient
 		H.fuzzy = dna.scale_appearance
 		H.offset_override = dna.offset_override
 		H.synth_markings = dna.synth_markings
@@ -306,20 +305,19 @@
 		H.r_grad = dna.r_grad
 		H.g_grad = dna.g_grad
 		H.b_grad = dna.b_grad
-		// Outpost 21 edit end
 		H.custom_heat = dna.custom_heat
 		H.custom_cold = dna.custom_cold
 		var/datum/species/S = H.species
 		S.produceCopy(dna.species_traits, H, dna.base_species, FALSE) // Traitgenes edit - reset_dna flag required, or genes get reset on resleeve
 		// VOREStation Edit End
 
-		// Outpost 21 edit begin - missing dna entry, Needs to be done after producecopy. blood reagent, Species sounds
 		H.species.blood_reagents = dna.blood_reagents
+		// CHOMPEnable Start
 		H.species.species_sounds = dna.species_sounds
 		H.species.gender_specific_species_sounds = dna.gender_specific_species_sounds
 		H.species.species_sounds_male = dna.species_sounds_male
 		H.species.species_sounds_female = dna.species_sounds_female
-		// Outpost 21 edit end
+		// CHOMPEnable ENd
 
 		H.force_update_organs() //VOREStation Add - Gotta do this too
 		H.force_update_limbs()

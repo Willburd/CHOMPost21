@@ -33,7 +33,7 @@
 
 /* Example from Polaris code
 /datum/species/monkey/tajaran
-	name = "Farwa"
+	name = SPECIES_MONKEY_TAJ
 	name_plural = "Farwa"
 
 	icobase = 'icons/mob/human_races/monkeys/r_farwa.dmi'
@@ -68,35 +68,27 @@
 /mob/living/carbon/human/sharkm
 	low_sorting_priority = TRUE
 
-// Traitgenes edit begin - Make the spawned monkeys have unique species datums. Moved to init like the others.
 /mob/living/carbon/human/sharkm/Initialize(var/new_loc)
-	. = ..(new_loc, SPECIES_MONKEY_AKULA)
+	..(new_loc, SPECIES_MONKEY_AKULA)
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
-// Traitgenes edit end
 
 /mob/living/carbon/human/sergallingm
 	low_sorting_priority = TRUE
 
-// Traitgenes edit begin - Make the spawned monkeys have unique species datums. Moved to init like the others.
 /mob/living/carbon/human/sergallingm/Initialize(var/new_loc)
-	. = ..(new_loc, SPECIES_MONKEY_SERGAL)
+	..(new_loc, SPECIES_MONKEY_SERGAL)
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
-// Traitgenes edit end
 
 /mob/living/carbon/human/sparram
 	low_sorting_priority = TRUE
 
-// Traitgenes edit begin - Make the spawned monkeys have unique species datums. Moved to init like the others.
 /mob/living/carbon/human/sparram/Initialize(var/new_loc)
-	. = ..(new_loc, SPECIES_MONKEY_NEVREAN)
+	..(new_loc, SPECIES_MONKEY_NEVREAN)
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
-// Traitgenes edit end
 
 /mob/living/carbon/human/wolpin
 	low_sorting_priority = TRUE
 
-// Traitgenes edit begin - Make the spawned monkeys have unique species datums. Moved to init like the others.
 /mob/living/carbon/human/wolpin/Initialize(var/new_loc)
-	. = ..(new_loc, SPECIES_MONKEY_VULPKANIN)
+	..(new_loc, SPECIES_MONKEY_VULPKANIN)
 	species.produceCopy(species.traits.Copy(),src,null,FALSE)
-// Traitgenes edit end
