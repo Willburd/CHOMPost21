@@ -110,6 +110,10 @@
 								if(A.reagents)
 									transfer_reagent_to_tank(A.reagents,1)
 								// Outpost 21 addition end
+								// Outpost 21 addition begin - Ores grind to reagents
+								if(istype(A,/obj/item/ore))
+									transfer_ore_to_tank(A,1)
+								// Outpost 21 addition end
 								A.forceMove(src)
 								if(!is_type_in_list(A,item_digestion_blacklist))
 									crusher.take_item(A) //Force feed the poor bastard.
@@ -158,6 +162,20 @@
 	volume_magic -= rand(2,10) // reagent tax
 	if(volume_magic > 0)
 		reg.trans_to_holder( sump.reagents, volume_magic)
+		transfer_sludge_to_tank(rand(1,5))
+	sump.update_icon()
+
+/obj/machinery/v_garbosystem/proc/transfer_ore_to_tank(var/obj/item/ore/R,var/multiplier)
+	if(!validate_tank())
+		return
+	if(global.ore_reagents[R.type])
+		var/list/ore_components = global.ore_reagents[R.type]
+		if(islist(ore_components))
+			var/amount_to_take = (REAGENTS_PER_ORE/(ore_components.len))
+			for(var/i in ore_components)
+				sump.reagents.add_reagent(i, amount_to_take * multiplier)
+		else
+			sump.reagents.add_reagent(ore_components, REAGENTS_PER_ORE * multiplier)
 		transfer_sludge_to_tank(rand(1,5))
 	sump.update_icon()
 
