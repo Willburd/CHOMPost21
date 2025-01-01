@@ -176,14 +176,6 @@
 	ckeywhitelist = list("seagha")
 	character_name = list("Khrutch Yizhnera")
 
-//synxplushy: Sitka Nightshade
-/datum/gear/fluff/alien_captain_medal
-	display_name = "alien captain medal"
-	path = /obj/item/clothing/accessory/medal/dungeon/alien_ufo
-	description = "It vaguely like a star. It looks like something an alien captain might've worn. Probably."
-	ckeywhitelist = list(,"synxplushy")
-	character_name = list("Sitka Nightshade")
-
 //  T CKEYS
 
 //  U CKEYS
