@@ -12,7 +12,9 @@
 			qdel(SP);\
 		}\
 	}\
-	src.contents += P;
+	contents += P;\
+	icon_state = "nboard0[contents.len > 5 ? 5 : contents.len]";
+
 
 /obj/structure/noticeboard/bridge
 	name = "Command notice board"

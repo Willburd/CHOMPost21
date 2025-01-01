@@ -8,7 +8,7 @@
 	anchored = TRUE
 	var/list/notices
 	var/base_icon_state = "nboard0"
-	var/const/max_notices = 5
+	var/const/max_notices = 25 // Outpost 21 edit - Notice board has more notes
 
 /obj/structure/noticeboard/Initialize()
 	. = ..()
@@ -58,7 +58,7 @@
 	dismantle()
 
 /obj/structure/noticeboard/update_icon()
-	icon_state = "[base_icon_state][LAZYLEN(notices)]"
+	icon_state = "[base_icon_state][LAZYLEN(notices) > 5 ? 5 : LAZYLEN(notices)]" // Outpost 21 edit - Notice board has more notes
 
 /obj/structure/noticeboard/attackby(obj/item/I, mob/user)
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
