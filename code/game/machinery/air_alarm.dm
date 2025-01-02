@@ -33,7 +33,7 @@
 /obj/machinery/alarm
 	name = "alarm"
 	desc = "Used to control various station atmospheric systems. The light indicates the current air status of the area."
-	icon = 'icons/obj/monitors_op.dmi' // Outpost 21 edit - Multiple alarms in one area
+	icon = 'modular_outpost/icons/obj/monitors.dmi' // Outpost 21 edit - Multiple alarms in one area
 	icon_state = "alarm_0"
 	layer = ABOVE_WINDOW_LAYER
 	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature

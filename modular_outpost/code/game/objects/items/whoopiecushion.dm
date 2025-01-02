@@ -1,11 +1,11 @@
 /obj/item/latexballon/whoopee
 	name = "whoopee cushion"
-	icon = 'icons/obj/items_op.dmi'
+	icon = 'modular_outpost/icons/obj/items.dmi'
 	desc = "A joke as old as time."
 	icon_state = "whoopee"
 	item_icons = list(
-			slot_l_hand_str = 'icons/mob/items/lefthand_gloves_op.dmi',
-			slot_r_hand_str = 'icons/mob/items/righthand_gloves_op.dmi',
+			slot_l_hand_str = 'modular_outpost/icons/mob/items/lefthand_gloves.dmi',
+			slot_r_hand_str = 'modular_outpost/icons/mob/items/righthand_gloves.dmi',
 			)
 	item_state = "whoopee"
 	layer = HIDING_LAYER

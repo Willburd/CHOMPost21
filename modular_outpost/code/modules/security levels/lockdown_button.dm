@@ -1,7 +1,7 @@
 /obj/machinery/lockdown_console
 	name = "Lockdown Control Console"
 	desc = "This device is used to control various lockdown shutters across the station."
-	icon = 'icons/obj/monitors_op.dmi'
+	icon = 'modular_outpost/icons/obj/monitors.dmi'
 	icon_state = "lockdown"
 	layer = ABOVE_WINDOW_LAYER
 	circuit = /obj/item/circuitboard/lockdown_console

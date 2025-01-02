@@ -22,7 +22,7 @@
 	desc = "This slick flesh ripples and squishes under your touch"
 	icon_state = "flesh_floor"
 // Outpost 21 edit begin - Flesh terrain tweaked
-	icon = 'icons/turf/stomach_op.dmi'
+	icon = 'modular_outpost/icons/turf/stomach.dmi'
 	temperature = TERRAFORMER_BODY_TEMP
 	initial_flooring = /decl/flooring/flesh
 

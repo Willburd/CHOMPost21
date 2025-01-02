@@ -5,7 +5,7 @@
 
 /obj/vehicle/train/engine/janicart
 	name = "janicart"
-	icon = 'icons/obj/vehicles_op.dmi'
+	icon = 'modular_outpost/icons/obj/vehicles.dmi'
 	icon_state = "pussywagon"
 	on = 0
 	powered = 1
@@ -44,7 +44,7 @@
 	turn_off()	//so engine verbs are correctly set
 	create_reagents(600)
 
-	var/image/I = new(icon = 'icons/obj/vehicles_op.dmi', icon_state = "pussywagon_overlay", layer = src.layer + 0.2) //over mobs
+	var/image/I = new(icon = 'modular_outpost/icons/obj/vehicles.dmi', icon_state = "pussywagon_overlay", layer = src.layer + 0.2) //over mobs
 	add_overlay(I)
 
 /obj/vehicle/train/engine/janicart/attackby(obj/item/W as obj, mob/user as mob)
@@ -121,7 +121,7 @@
 	..()
 	cut_overlays()
 	if(!open)
-		var/image/O = image(icon = 'icons/obj/vehicles_op.dmi', icon_state = "pussywagon_overlay", dir = src.dir)
+		var/image/O = image(icon = 'modular_outpost/icons/obj/vehicles.dmi', icon_state = "pussywagon_overlay", dir = src.dir)
 		O.layer = FLY_LAYER
 		O.plane = MOB_PLANE
 		add_overlay(O)

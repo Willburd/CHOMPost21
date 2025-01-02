@@ -1,7 +1,7 @@
 /obj/item/laser_designator
 	name = "laser designator"
 	desc = "Used to call down the fist of God!"
-	icon = 'icons/obj/device_op.dmi'
+	icon = 'modular_outpost/icons/obj/device.dmi'
 	icon_state = "designator"
 	item_state = "designator"
 	slot_flags = SLOT_BELT

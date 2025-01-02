@@ -21,7 +21,7 @@
 /obj/item/key/heavyarmor_carrier
 	name = "key"
 	desc = "A keyring with a small steel key, and a yellow fob reading \"Band wagon\"."
-	icon = 'icons/obj/vehicles_op.dmi'
+	icon = 'modular_outpost/icons/obj/vehicles.dmi'
 	icon_state = "sec_apc"
 	w_class = ITEMSIZE_TINY
 

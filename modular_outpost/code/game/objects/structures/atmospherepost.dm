@@ -1,7 +1,7 @@
 /obj/structure/atmopost
 	name = "atmospheric probe"
 	desc = "A tall pole with a machine mounted on it. It displays the current atmospheric conditions on a sign beneath it. It reads: "
-	icon = 'icons/obj/32x64_op.dmi'
+	icon = 'modular_outpost/icons/obj/32x64.dmi'
 	icon_state = "atmopost"
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER

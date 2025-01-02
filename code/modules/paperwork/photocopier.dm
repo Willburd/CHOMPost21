@@ -300,13 +300,13 @@
 				temp_img = icon('icons/obj/butts_vr.dmi', "xeno") // placeholder until we get proper sharkbutt. AKULA BE THICC ASS SHARKS MMMMMMMMMMMMMMKAY?
 			// Outpost 21 edit begin - New butts by Meek!
 			if(SPECIES_TESHARI)
-				temp_img = icon('icons/obj/butts_op.dmi', "tesh")
+				temp_img = icon('modular_outpost/icons/obj/butts.dmi', "tesh")
 			if(SPECIES_SERGAL)
-				temp_img = icon('icons/obj/butts_op.dmi', "sergal")
+				temp_img = icon('modular_outpost/icons/obj/butts.dmi', "sergal")
 			if(SPECIES_NEVREAN)
-				temp_img = icon('icons/obj/butts_op.dmi', "nevrean")
+				temp_img = icon('modular_outpost/icons/obj/butts.dmi', "nevrean")
 			if(SPECIES_ALTEVIAN)
-				temp_img = icon('icons/obj/butts_op.dmi', "altevian")
+				temp_img = icon('modular_outpost/icons/obj/butts.dmi', "altevian")
 			// Outpost 21 edit end
 			/* // Commented out because no icons exist, BUT if someone wants to sprite some more ASSCHEEKS, then just uncomment these and you have asses for each species. - Rykka.
 			if(SPECIES_SHADEKIN || SPECIES_SHADEKIN_CREW)

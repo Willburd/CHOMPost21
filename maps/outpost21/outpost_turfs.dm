@@ -236,10 +236,10 @@
 
 /turf/unsimulated/deathdrop/waterfall
 	death_message = "The increasing speed and current of the river swiftly drags you into the rapids, destoying any boat you had and cracking your body against the rocks. The harsh acids of the water then make short work at dissolving your corpse, lost to the river forever."
-	icon = 'icons/turf/outdoors_op.dmi'
+	icon = 'modular_outpost/icons/turf/outdoors.dmi'
 	icon_state = "searapids" // So it shows up in the map editor as water.
 
 /turf/simulated/deathdrop/waterfall
 	death_message = "The increasing speed and current of the river swiftly drags you into the rapids, destoying any boat you had and cracking your body against the rocks. The harsh acids of the water then make short work at dissolving your corpse, lost to the river forever."
-	icon = 'icons/turf/outdoors_op.dmi'
+	icon = 'modular_outpost/icons/turf/outdoors.dmi'
 	icon_state = "searapids" // So it shows up in the map editor as water.

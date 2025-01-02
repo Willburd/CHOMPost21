@@ -32,7 +32,7 @@
 /obj/item/key/heavyarmor_tank
 	name = "key"
 	desc = "A keyring with a small steel key, and a red fob reading \"Greater force\"."
-	icon = 'icons/obj/vehicles_op.dmi'
+	icon = 'modular_outpost/icons/obj/vehicles.dmi'
 	icon_state = "sec_tank"
 	w_class = ITEMSIZE_TINY
 
@@ -64,7 +64,7 @@
 /obj/item/projectile/bullet/kyshell
 	name ="TD Type-L \"Reclaimer\" Shell"
 	desc = "Boom"
-	icon = 'icons/obj/grenade_op.dmi'
+	icon = 'modular_outpost/icons/obj/grenade.dmi'
 	icon_state = "shell"
 	damage = 35 // Bonk
 	range = 90

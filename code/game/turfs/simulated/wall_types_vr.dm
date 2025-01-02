@@ -17,7 +17,7 @@
 /turf/simulated/flesh
 	name = "flesh wall"
 	desc = "The fleshy surface of this wall squishes nicely under your touch but looks and feels extremly strong"
-	icon = 'icons/turf/stomach_op.dmi' // Outpost 21 edit - Flesh terrain tweaked
+	icon = 'modular_outpost/icons/turf/stomach.dmi' // Outpost 21 edit - Flesh terrain tweaked
 	icon_state = "flesh"
 	opacity = 1
 	density = TRUE
@@ -45,7 +45,7 @@ var/list/flesh_overlay_cache = list()
 	cut_overlays()
 
 	if(density)
-		icon = 'icons/turf/stomach_op.dmi' // Outpost 21 edit - Flesh terrain tweaked
+		icon = 'modular_outpost/icons/turf/stomach.dmi' // Outpost 21 edit - Flesh terrain tweaked
 		icon_state = "flesh"
 		for(var/direction in cardinal)
 			var/turf/T = get_step(src,direction)
@@ -53,7 +53,7 @@ var/list/flesh_overlay_cache = list()
 				var/place_dir = turn(direction, 180)
 				var/offset = 32
 				if(!flesh_overlay_cache["flesh_side_[place_dir]"])
-					flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_op.dmi', "flesh_side", dir = place_dir) // Outpost 21 edit - Flesh terrain tweaked
+					flesh_overlay_cache["flesh_side_[place_dir]"] = image('modular_outpost/icons/turf/stomach.dmi', "flesh_side", dir = place_dir) // Outpost 21 edit - Flesh terrain tweaked
 					// Outpost 21 edit begin - Offset edge of flesh tiles to actually overhang other tiles
 					var/image/cache = null
 					switch(direction)

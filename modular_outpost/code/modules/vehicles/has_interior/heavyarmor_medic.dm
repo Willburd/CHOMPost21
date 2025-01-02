@@ -22,6 +22,6 @@
 /obj/item/key/heavyarmor_medic
 	name = "key"
 	desc = "A keyring with a small steel key, and a blue and white fob reading \"Do No Harm\" with the Rod of Asclepius engraved on it."
-	icon = 'icons/obj/vehicles_op.dmi'
+	icon = 'modular_outpost/icons/obj/vehicles.dmi'
 	icon_state = "med_keys"
 	w_class = ITEMSIZE_TINY

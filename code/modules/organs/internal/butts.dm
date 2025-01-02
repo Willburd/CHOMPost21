@@ -1,7 +1,7 @@
 /obj/item/organ/internal/butt
 	name = "butt"
 	icon_state = "butt"
-	icon = 'icons/obj/surgery_op.dmi'
+	icon = 'modular_outpost/icons/obj/surgery.dmi'
 	desc = "It jiggles like jello when you shake it."
 	gender = PLURAL
 	organ_tag = O_BUTT

@@ -428,7 +428,7 @@
 
 /obj/screen/borer/chems
 	name = "chemical storage"
-	icon = 'icons/mob/screen1_op.dmi'
+	icon = 'modular_outpost/icons/mob/screen1.dmi'
 	icon_state = "power_display"
 // Outpost 21 edit end
 
