@@ -57,7 +57,6 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	var/base_species = "Human"
 	var/list/species_traits = list()
 	var/blood_color = "#A10808"
-	// Outpost 21 edit begin - missing dna entry, blood reagent, scale appearance, scale offset, synth markings, speach bubble type, Species sounds, hair gradient
 	var/blood_reagents = "iron"
 	var/scale_appearance = 0
 	var/offset_override = 0
@@ -71,7 +70,6 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	var/r_grad = 0
 	var/g_grad = 0
 	var/b_grad = 0
-	// Outpost 21 edit end
 	var/custom_say
 	var/custom_ask
 	var/custom_whisper
@@ -101,7 +99,6 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	new_dna.custom_species=custom_species //VOREStaton Edit
 	new_dna.species_traits=species_traits.Copy() //VOREStation Edit
 	new_dna.blood_color=blood_color //VOREStation Edit
-	// Outpost 21 edit begin - missing dna entry, blood reagent, scale appearance, scale offset, synth markings, speach bubble type, Species sounds, hair gradient
 	new_dna.blood_reagents=blood_reagents
 	new_dna.scale_appearance = scale_appearance
 	new_dna.offset_override = offset_override
@@ -115,7 +112,6 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	new_dna.r_grad = r_grad
 	new_dna.g_grad = g_grad
 	new_dna.b_grad = b_grad
-	// Outpost 21 edit end
 	new_dna.custom_say=custom_say //VOREStaton Edit
 	new_dna.custom_ask=custom_ask //VOREStaton Edit
 	new_dna.custom_whisper=custom_whisper //VOREStaton Edit
@@ -194,7 +190,6 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	src.custom_species = character.custom_species
 	src.base_species = character.species.base_species
 	src.blood_color = character.species.blood_color
-	// Outpost 21 edit begin - missing dna entry, blood reagent, scale appearance, scale offset, synth markings, speach bubble type, Species sounds, hair gradient
 	src.blood_reagents = character.species.blood_reagents
 	src.scale_appearance = character.fuzzy
 	src.offset_override = character.offset_override
@@ -208,7 +203,6 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 	src.r_grad = character.r_grad
 	src.g_grad = character.g_grad
 	src.b_grad = character.b_grad
-	// Outpost 21 edit end
 	src.species_traits = character.species.traits.Copy()
 	src.custom_say = character.custom_say
 	src.custom_ask = character.custom_ask

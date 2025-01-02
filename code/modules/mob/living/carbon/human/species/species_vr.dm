@@ -106,12 +106,10 @@
 	if(new_copy.holder_type)
 		H.holder_type = new_copy.holder_type
 
-	// Traitgenes edit begin - reset_dna flag required, or genes get reset on resleeve
 	if(H.dna && reset_dna)
 		H.dna.ready_dna(H)
-	// Traitgenes edit end
 
-	handle_base_eyes(H, custom_base) //ChompEDIT. ensure custom species with a base get the correct eyes
+	handle_base_eyes(H, custom_base)
 
 	return new_copy
 

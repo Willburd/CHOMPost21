@@ -40,22 +40,19 @@ export const BodyDesigner = (props) => {
 
   return (
     <Window width={750} height={850}>
-      {' '}
-      {/* Outpost 21 edit - Larger window for less scrolling */}
       <Window.Content>
-        {/* Outpost 21 edit begin - Disk button always visible */}
         <Box>
           <Button
             icon="save"
             onClick={() => act('savetodisk')}
-            disabled={!disk || !activeBodyRecord} // Outpost 21 edit - They just disable instead!
+            disabled={!disk || !activeBodyRecord}
           >
             Save To Disk
           </Button>
           <Button
             icon="save"
             onClick={() => act('loadfromdisk')}
-            disabled={!disk || !diskStored} // Outpost 21 edit - They just disable instead!
+            disabled={!disk || !diskStored}
           >
             Load From Disk
           </Button>
@@ -64,12 +61,9 @@ export const BodyDesigner = (props) => {
             onClick={() => act('ejectdisk')}
             disabled={!disk}
           >
-            {' '}
-            {/* Outpost 21 edit - They just disable instead! */}
             Eject
           </Button>
         </Box>
-        {/* Outpost 21 edit end */}
         {body}
       </Window.Content>
     </Window>

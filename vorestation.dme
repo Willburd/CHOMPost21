@@ -111,7 +111,6 @@
 #include "code\__defines\misc_op.dm"
 #include "code\__defines\mob_ch.dm"
 #include "code\__defines\mobs.dm"
-#include "code\__defines\mobs_vr.dm"
 #include "code\__defines\mobs_yw.dm"
 #include "code\__defines\nifsoft.dm"
 #include "code\__defines\objects.dm"
