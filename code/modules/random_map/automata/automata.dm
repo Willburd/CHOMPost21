@@ -9,16 +9,15 @@
 	var/cell_dead_value = FLOOR_CHAR // As above for death.
 	var/cell_threshold = 5           // Cell becomes alive with this many live neighbors.
 
-/* Outpost 21 edit begin - Use old automata generator, as our map size completely breaks the rust module from upstream, it expects squares.
 // Automata-specific procs and processing.
 /datum/random_map/automata/seed_map()
 	return // Do not seed, we use Verdigris for this now
 
 /datum/random_map/automata/generate_map()
 	map = verdigris_generate_automata(limit_x, limit_y, iterations, initial_wall_cell)
-*/
 
-/datum/random_map/automata/generate_map() // If the rust module is fixed, remove this proc and uncomment above
+/* Outpost 21 edit - Old generation code if needed
+/datum/random_map/automata/generate_map()
 	for(var/iter = 1 to iterations)
 		var/list/next_map[limit_x*limit_y]
 		var/count
@@ -63,6 +62,7 @@
 			CHECK_TICK
 		map = next_map
 // Outpost 21 edit end
+*/
 
 /datum/random_map/automata/get_additional_spawns(value, turf/T)
 	return
