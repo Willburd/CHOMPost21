@@ -178,8 +178,8 @@
 /obj/item/ore_chunk
 	name = "ore chunk"
 	desc = "A conglomerate of ore."
-	icon = 'icons/obj/mining_ore_vr.dmi' // Outpost 21 edit - what the fuck. Was xenoarch, but that literally has no icon_states for ores...
-	icon_state = "strange"
+	icon = 'icons/obj/mining_ore_vr.dmi'
+	icon_state = "ore2"
 	randpixel = 8
 	w_class = ITEMSIZE_LARGE //CHOMPEdit
 	var/list/stored_ore = list(
