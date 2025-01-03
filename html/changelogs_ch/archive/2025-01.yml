@@ -13,3 +13,11 @@
 2025-01-02:
   Asher-42:
   - bugfix: adds modules to med solgov hardsuit, due to it using the wrong obj path.
+2025-01-03:
+  Aroliacue:
+  - maptweak: Patient rooms in medbay now have rad-shielding.
+  SilencedMP5A5:
+  - rscadd: Assorted Event mobs
+  - rscadd: Some Event related turfs
+  - rscadd: Event mob related sounds
+  - rscadd: A bunch of related icons
