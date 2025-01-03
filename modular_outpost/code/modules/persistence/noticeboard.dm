@@ -25,12 +25,13 @@
 
 /obj/structure/noticeboard/cargo
 	name = "Cargo notice board"
-	icon_state = "nboard03"
+	icon_state = "nboard04"
 
 /obj/structure/noticeboard/cargo/Initialize()
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: STOP GETTING CAUGHT","<br>B shift, this one's for you: you're not supposed to be stealing from other departments, drop the cargonia shit. Or at least stop getting CAUGHT.",list(/obj/item/stamp/qm))
 	ADD_NOTICE("Staff Notice: Sell your stuff","<br>You have a vending machine in the front. Cargo points aren't free anymore, sell the stuff you 'find', use the thalers from it to get cargo points directly.",list(/obj/item/stamp/qm))
+	ADD_NOTICE("Staff Notice: Points","<br>Cargo points don't fill automatically, Central wants us to ship off useful things.<br>Tug tanks full of medicines, organs, materials, slime cores, vaccines, straight thalers, salvage, that kind of stuff. Make sure they're packaged right in crates and ship 'em off. <br>Oh and get those manifests back from stuff people order! Those sell too, after you stamp them.",list(/obj/item/stamp/qm))
 	ADD_NOTICE("Containers","<br>There's a bunch of connexes in the storage yard outside, all three shifts leave stuff there from time to time, and extra shipment stuff. Go rummaging through those.",null)
 	. = ..()
 
