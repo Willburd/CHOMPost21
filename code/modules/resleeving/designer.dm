@@ -151,6 +151,20 @@
 		var/list/flavors = data["activeBodyRecord"]["flavors"]
 		flavors += active_br.mydna.flavor.Copy()
 
+		// Outpost 21 edit begin - Missing flavortext on stock bodies
+		if(flavors.len == 0)
+			flavors["general"] = ""
+			flavors["head"] = ""
+			flavors["face"] = ""
+			flavors["eyes"] = ""
+			flavors["torso"] = ""
+			flavors["arms"] = ""
+			flavors["hands"] = ""
+			flavors["legs"] = ""
+			flavors["feet"] = ""
+			data["activeBodyRecord"]["flavors"] = flavors.Copy()
+		// Outpost 21 edit end
+
 		var/list/styles = data["activeBodyRecord"]["styles"]
 		var/list/temp
 

@@ -1,4 +1,4 @@
-/datum/supply_pack/randomised/hospitality/sweets
+/datum/supply_pack/randomised/hospitality/hookah
 	num_contained = 1
 	contains = list(
 			/obj/structure/hookah
