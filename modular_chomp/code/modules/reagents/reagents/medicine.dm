@@ -122,7 +122,7 @@
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(6 * removed * chem_effective * chem_effective, -1 * removed)
+		M.heal_organ_damage(6 * removed * chem_effective * chem_effective, -2 * removed) // Outpost 21 edit - Chem update rebalance, Reduced from 6 to 8, -1 to -2
 
 /datum/reagent/burncard/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -188,7 +188,7 @@
 		chem_effective = 0.5
 		M.adjustBruteLoss(3 * removed)
 	if(alien != IS_DIONA)
-		M.heal_organ_damage(-1 * removed, 6 * removed * chem_effective * chem_effective)
+		M.heal_organ_damage(-2 * removed, 8 * removed * chem_effective * chem_effective) // Outpost 21 edit - Chem update rebalance, Reduced from -1 to -2, 6 to 8
 
 /datum/reagent/bloodsealer
 	name = REAGENT_BLOODSEALER
@@ -269,13 +269,13 @@
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(M.stat == DEAD)
 		M.adjustOxyLoss(-3 * removed * chem_effective)
-		M.heal_organ_damage(3 * removed * chem_effective, 3 * removed * chem_effective)
-		M.adjustToxLoss(-3 * removed * chem_effective)
+		M.heal_organ_damage(2.5 * removed * chem_effective, 1.5 * removed * chem_effective) // Outpost 21 edit - Chem update rebalance, Reduced from 3 to 2.5
+		M.adjustToxLoss(-2.5 * removed * chem_effective) // Outpost 21 edit - Chem update rebalance, Reduced from 3 to 2.5
 
 /datum/reagent/quadcord
 	name = REAGENT_QUADCORD
 	id = REAGENT_ID_QUADCORD
-	description = "An experimental drug that is meant to further enhance tricord"
+	description = "An experimental drug that is meant to further enhance tricord. Has a sedative effect on the subject's nervous system while treating various shock symptoms." // Outpost 21 edit - Chem update rebalance, Treats other ailments
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#FF3399"
@@ -290,6 +290,13 @@
 		M.heal_organ_damage(0.5 * removed * chem_effective, 0.5 * removed * chem_effective)
 		M.adjustToxLoss(-0.5 * removed * chem_effective)
 		M.adjustBrainLoss(-1 * removed * chem_effective)
+		// Outpost 21 edit begin - Chem update rebalance, Treats other ailments
+		M.adjustHalLoss(-3 * removed * chem_effective)
+		M.drowsyness = max(M.drowsyness - 5, 0)
+		M.AdjustParalysis(-1)
+		M.AdjustWeakened(-1)
+		M.hallucination = max(0, M.hallucination - 10)
+		// Outpost 21 edit end
 
 //tier 2
 /datum/reagent/juggernog
