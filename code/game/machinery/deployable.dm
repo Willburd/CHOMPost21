@@ -107,7 +107,7 @@ Deployable items
 		icon_state = "barrier[locked]"
 
 /obj/machinery/deployable/barrier/CanPass(atom/movable/mover, turf/target)//So bullets will fly over and stuff.
-	if(istype(mover) && mover.checkpass(PASSTABLE))
+	if(istype(mover) && mover.checkpass(PASSTABLE) && !isliving(mover)) // Outpost 21 edit - Teshari can no longer evade security
 		return TRUE
 	return FALSE
 
