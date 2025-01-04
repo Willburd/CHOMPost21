@@ -225,7 +225,6 @@
 //All atoms
 /atom/proc/examine(mob/user, var/infix = "", var/suffix = "")
 	SHOULD_CALL_PARENT(TRUE)
-	..() // Outpost 21 edit - Does not call parent?
 	//This reformat names to get a/an properly working on item descriptions when they are bloody
 	var/f_name = "\a [src][infix]."
 	if(src.blood_DNA && !istype(src, /obj/effect/decal))

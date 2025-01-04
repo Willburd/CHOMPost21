@@ -173,6 +173,7 @@
 
 // Disabled actions
 /obj/machinery/reagentgrinder/industrial/examine(mob/user)
+	. = ..() // Outpost 21 edit - Does not call parent?
 	. = list(initial(desc)) // Clears the parent's messy stuff
 	if(beaker)
 		. += "The meter shows [beaker.reagents.total_volume]u / [beaker.reagents.maximum_volume]u. It is pumping chemicals at a rate of [beaker.amount_per_transfer_from_this]u."
