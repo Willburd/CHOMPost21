@@ -1,6 +1,7 @@
 ////////////////////////////////////
 ////////////   MEDICINE   /////////
 //////////////////////////////////
+/* Outpost 21 edit - Removing badly designed chems
 /datum/reagent/claridyl
 	name = REAGENT_CLARIDYL
 	id = REAGENT_ID_CLARIDYL
@@ -84,6 +85,7 @@
 	M.adjustFireLoss(1)
 	M.adjustBruteLoss(1)
 	M.adjustToxLoss(1)
+*/
 
 /datum/reagent/tercozolam
 	name = REAGENT_TERCOZOLAM
@@ -95,7 +97,7 @@
 
 ///SAP REAGENTS////
 //This is all a direct port from aeiou.
-
+/* Outpost 21 edit - Removing badly designed chems
 /datum/reagent/hannoa
 	name = REAGENT_HANNOA
 	id = REAGENT_ID_HANNOA
@@ -194,3 +196,4 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(12 * removed * chem_effective, 0)
+*/

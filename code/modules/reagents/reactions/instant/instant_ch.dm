@@ -4,7 +4,7 @@
 	result = REAGENT_ID_APHRODISIAC
 	required_reagents = list(REAGENT_ID_CARBON = 2, REAGENT_ID_HYDROGEN = 2, REAGENT_ID_OXYGEN = 2, REAGENT_ID_WATER = 1)
 	result_amount = 6
-
+/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/claridyl
 	name = REAGENT_CLARIDYL
 	id = REAGENT_ID_CLARIDYL
@@ -37,7 +37,7 @@
 	id = REAGENT_ID_EDENSNAKE
 	result = REAGENT_ID_EDENSNAKE
 	required_reagents = list(REAGENT_ID_EDEN = 1, REAGENT_ID_ETHANOL = 1)
-
+*/
 /decl/chemical_reaction/instant/tercozolam
 	id = REAGENT_ID_TERCOZOLAM
 	result = REAGENT_ID_TERCOZOLAM
@@ -72,6 +72,7 @@
 	required_reagents = list(REAGENT_ID_BICARIDINE = 1, REAGENT_ID_IRON = 2, REAGENT_ID_KELOTANE = 1, REAGENT_ID_BLUESAP = 1)
 	result_amount = 1
 
+/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/hannoa
 	name = REAGENT_HANNOA
 	id = REAGENT_ID_HANNOA
@@ -85,6 +86,7 @@
 	result = REAGENT_ID_BULLVALENE
 	required_reagents = list(REAGENT_ID_DERMALINE = 1, REAGENT_ID_ORANGESAP = 1, REAGENT_ID_COPPER = 1)
 	result_amount = 1
+*/
 
 /decl/chemical_reaction/instant/nutrient
 	name = REAGENT_NUTRIMENT
@@ -95,13 +97,14 @@
 	result_amount = 3
 
 /////SERAZINE RECIPES//////
-
+/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/alizene
 	name = REAGENT_ALIZENE
 	id = REAGENT_ID_ALIZENE
 	result = REAGENT_ID_ALIZENE
 	required_reagents = list(REAGENT_ID_BICARIDINE = 1, REAGENT_ID_SERAZINE = 1, REAGENT_ID_TUNGSTEN = 1)
 	result_amount = 3
+*/
 
 // Frost oil reactions for material sheets
 /decl/chemical_reaction/instant/solidification/aluminium

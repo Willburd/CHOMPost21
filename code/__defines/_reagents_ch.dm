@@ -39,6 +39,7 @@
 #define REAGENT_ID_SORBITOL "sorbitol"
 #define REAGENT_CONCENTRATEDRADIUM "Concentrated Radium"
 #define REAGENT_ID_CONCENTRATEDRADIUM "concentrated_radium"
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_CLARIDYL "Claridyl Natural Remedy"
 #define REAGENT_ID_CLARIDYL "claridyl"
 #define REAGENT_DYLOTEANE "The Anti-Irish"
@@ -49,8 +50,10 @@
 #define REAGENT_ID_EDEN "eden"
 #define REAGENT_EDENSNAKE "Tainted Eden"
 #define REAGENT_ID_EDENSNAKE "eden_snake"
+*/
 #define REAGENT_TERCOZOLAM "Tercozolam"
 #define REAGENT_ID_TERCOZOLAM "tercozolam"
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_HANNOA "Hannoa"
 #define REAGENT_ID_HANNOA "hannoa"
 #define REAGENT_BULLVALENE "bullvalene"
@@ -59,6 +62,7 @@
 #define REAGENT_ID_SERAZINE "serazine"
 #define REAGENT_ALIZENE "Alizene"
 #define REAGENT_ID_ALIZENE "alizene"
+*/
 
 // Does not exist?
 /* Outpost 21 edit - They don't now!

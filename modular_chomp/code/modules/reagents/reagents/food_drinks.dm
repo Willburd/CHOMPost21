@@ -43,6 +43,7 @@
 	cup_name = "cup of matcha latte"
 	cup_desc = "A nice and refreshing beverage while you are studying."
 
+/* Outpost 21 edit - Removing badly designed chems
 /datum/reagent/drink/tea/dyloteane
 	name = REAGENT_DYLOTEANE
 	id = REAGENT_ID_DYLOTEANE
@@ -71,6 +72,7 @@
 		M.drowsyness = max(0, M.drowsyness - 6 * removed * chem_effective)
 		M.hallucination = max(0, M.hallucination - 9 * removed * chem_effective)
 		M.adjustToxLoss(-1 * removed * chem_effective)
+*/
 
 /datum/reagent/slimedrink
 	name = REAGENT_SLIMEDRINK

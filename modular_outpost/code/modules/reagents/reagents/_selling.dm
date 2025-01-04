@@ -268,6 +268,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
 // code\modules\reagents\reagents\medicine_ch.dm
+/*
 /datum/reagent/claridyl
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
 	industrial_use = EXPORT_REASON_DRUG
@@ -283,11 +284,13 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/eden/snake
 	supply_conversion_value = EXPORT_VALUE_COMMON
 	industrial_use = EXPORT_REASON_BIOHAZARD
+*/
 
 /datum/reagent/tercozolam
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
 	industrial_use = EXPORT_REASON_DRUG
 
+/*
 /datum/reagent/hannoa
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
 	industrial_use = EXPORT_REASON_DRUG
@@ -303,6 +306,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/alizene
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_DRUG
+*/
 
 // code\modules\reagents\reagents\medicine_op.dm
 /datum/reagent/hemocyanin
