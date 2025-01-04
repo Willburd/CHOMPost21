@@ -126,7 +126,7 @@
 	name = "sweetbreeze"
 	seed_name = "sweet breeze"
 	display_name = "sweet breeze"
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_SERAZINE = list(1,10))
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_MENTHOL = list(1,5)) // Outpost 21 edit - REAGENT_ID_SERAZINE to REAGENT_ID_MENTHOL, 1-10 to 1-5
 	mutants = null
 
 /datum/seed/flower/lavender/sweetbreeze/New()
