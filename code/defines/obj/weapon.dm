@@ -45,6 +45,7 @@
 /obj/item/soap/Initialize()
 	if(randomize && prob(square_chance))
 		icon_state = "[icon_state]-alt"
+	. = ..()
 
 /obj/item/soap/nanotrasen
 	name = "Soap (Nanotrasen)" // Outpost 21 edit - Custom names

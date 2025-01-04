@@ -5,7 +5,7 @@
 	icon = 'icons/obj/32x64.dmi'
 	icon_state = "hoop"
 	anchored = TRUE
-	density = TRUE
+	density = FALSE // Don't block players
 	unacidable = TRUE
 	throwpass = 1
 

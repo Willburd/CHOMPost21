@@ -50,7 +50,7 @@
 		return
 	if(ismob(AM))
 		var/mob/M = AM
-		if(M.m_intent == "walk")
+		if(M.m_intent == I_WALK)
 			return // safely moved onto it
 		visible_message(span_danger("\The [M] carelessly runs into and bumps \the [src]!"))
 	. = ..()
@@ -111,7 +111,7 @@
 		return
 	if(ismob(A))
 		var/mob/M = A
-		if(M.m_intent == "walk")
+		if(M.m_intent == I_WALK)
 			return // safely moved onto it
 	// Trigger the boom!
 	C.explode(A)
