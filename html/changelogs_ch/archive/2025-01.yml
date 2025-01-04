@@ -29,3 +29,6 @@
   - rscadd: Some Event related turfs
   - rscadd: Event mob related sounds
   - rscadd: A bunch of related icons
+2025-01-04:
+  Kashargul:
+  - bugfix: bonfire examine
