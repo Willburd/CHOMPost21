@@ -1743,7 +1743,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
 /area/security/brig/lowobservation
-	name = "\improper Security Low Security Brig Observation"
+	name = "\improper Security Sparring Ring"
 	base_turf = /turf/simulated/open/force_indoor
 	icon_state = "security_sub"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
