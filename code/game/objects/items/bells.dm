@@ -82,7 +82,7 @@
 	// Outpost 21 edit end
 
 /obj/item/deskbell/proc/ring(mob/user)
-	if(user.a_intent == "harm")
+	if(user.a_intent == I_HURT)
 		playsound(src, 'sound/effects/deskbell_rude.ogg', 50, 1)
 		to_chat(user,span_notice("You hammer [src] rudely!"))
 		if (prob(2))
