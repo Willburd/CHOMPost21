@@ -523,10 +523,9 @@ This function restores all organs.
 	return organs_by_name[zone]
 */
 
-/mob/living/carbon/human/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/soaked = 0, var/sharp = FALSE, var/edge = FALSE, var/obj/used_weapon = null)
+/mob/living/carbon/human/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/soaked = 0, var/sharp = FALSE, var/edge = FALSE, var/obj/used_weapon = null, var/projectile = FALSE)
 	if(Debug2)
 		to_world_log("## DEBUG: human/apply_damage() was called on [src], with [damage] damage, an armor value of [blocked], and a soak value of [soaked].")
-
 	var/obj/item/organ/external/organ = null
 	if(isorgan(def_zone))
 		organ = def_zone
@@ -629,7 +628,7 @@ This function restores all organs.
 						M.energy_source.use(M.damage_cost*damage)
 					damage *= M.incoming_brute_damage_percent
 
-			if(organ.take_damage(damage, 0, sharp, edge, used_weapon))
+			if(organ.take_damage(damage, 0, sharp, edge, used_weapon, projectile=projectile))
 				UpdateDamageIcon()
 		if(BURN)
 			damageoverlaytemp = 20
@@ -648,7 +647,7 @@ This function restores all organs.
 						M.energy_source.use(M.damage_cost*damage)
 					damage *= M.incoming_fire_damage_percent
 
-			if(organ.take_damage(0, damage, sharp, edge, used_weapon))
+			if(organ.take_damage(0, damage, sharp, edge, used_weapon, projectile=projectile))
 				UpdateDamageIcon()
 
 	// CHOMPEdit: Pain Emotes!
