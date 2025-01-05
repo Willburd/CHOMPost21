@@ -3,15 +3,14 @@
 	. = ..()
 	// Handles automagically upgrades to machines based on components placed on a machine during map init
 	if(mapload)
-		spawn(100)
-			// Sanity checks
-			if(!QDELETED(src) && isturf(loc))
-				handle_mapped_upgrades()
+		addtimer(CALLBACK(src, PROC_REF(handle_mapped_upgrades)), 100, TIMER_DELETE_ME)
 // This is meant to be overridden per machine
 /obj/machinery/proc/handle_mapped_upgrades()
 	return
 // Each machine is a special snowflake... sadly.
 /obj/machinery/power/smes/buildable/handle_mapped_upgrades()
+	if(QDELETED(src) || !isturf(loc))
+		return
 	// Detect new coils placed by mappers
 	var/list/parts_found = list()
 	for(var/i = 1, i <= loc.contents.len, i++)
@@ -39,7 +38,9 @@
 	RefreshParts()
 
 /obj/machinery/power/rtg/handle_mapped_upgrades()
-	// Detect new coils placed by mappers
+	if(QDELETED(src) || !isturf(loc))
+		return
+	// Detect new coils parts by mappers
 	var/list/parts_found = list()
 	for(var/i = 1, i <= loc.contents.len, i++)
 		var/obj/item/W = loc.contents[i]
