@@ -19,9 +19,14 @@
 
 	var/busy = 0
 
-/obj/structure/casino_table/attackby(obj/item/W as obj, mob/user as mob)
+/obj/structure/casino_table/attackby(obj/item/W as obj, mob/user as mob, var/hit_modifier, var/click_parameters) // Outpost 21 edit - Precise placement on casino table
 	if(item_place)
-		user.drop_item(src.loc)
+		// Outpost 21 edit begin - Precise placement on casino table
+		if(user.unEquip(W, 0, src.loc) && user.client?.prefs?.read_preference(/datum/preference/toggle/precision_placement))
+			auto_align(W, click_parameters)
+		else
+			user.drop_item(src.loc)
+		// Outpost 21 edit end
 	return
 
 /obj/structure/casino_table/roulette_table
