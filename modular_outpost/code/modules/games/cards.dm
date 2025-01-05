@@ -7,8 +7,14 @@
 
 /obj/item/deck/cards/blackjack/New()
 	..()
+	// Remove original jokers
+	for(var/datum/playingcard/C in cards)
+		if(C.name == "joker")
+			cards -= C
+			qdel(C)
+	// Six times the fun! +1 original deck
 	var/datum/playingcard/P
-	for(var/i = 0, i<6, i++) // Six times the fun!
+	for(var/i = 0, i<5, i++) // Six times the fun! +1 original deck
 		for(var/suit in list("spades","clubs","diamonds","hearts"))
 
 			var/colour
