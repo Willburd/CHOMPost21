@@ -110,8 +110,8 @@
 		W.registered_name = real_name
 		equip_to_slot_or_del(W, slot_wear_id)
 
-	if(generate_dead)
-		death()
+	//if(generate_dead) // Outpost 21 edit - Removing sleeps from init. Recomendation: Move to after-spawn timer or lateinit
+	//	death()
 
 /*
  * Subtypes.

@@ -407,8 +407,8 @@
 			handle_post_fire(user, target, pointblank, reflex)
 			update_icon()
 
-		if(i < burst)
-			sleep(burst_delay)
+		//if(i < burst)
+		// sleep(burst_delay)  // Outpost 21 edit - Removing sleeps from init. Recomendation: Move to timer, or handle in a less stupid way.
 
 		if(!(target && target.loc))
 			target = targloc

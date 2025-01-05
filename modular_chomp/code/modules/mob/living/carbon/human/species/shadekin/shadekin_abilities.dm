@@ -149,8 +149,8 @@
 		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
 		phaseanim.dir = dir
 		alpha = 0
-		custom_emote(1,"phases in!")
-		sleep(5) //The duration of the TP animation
+		// custom_emote(1,"phases in!") // Outpost 21 edit - Removing sleeps from init. Recomendation: Change to visible message? Calls tgui input()
+		// sleep(5) //The duration of the TP animation // Outpost 21 edit - Removing sleeps from init. Recomendation: Move to timer
 		canmove = original_canmove
 		alpha = initial(alpha)
 		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)

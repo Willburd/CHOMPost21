@@ -37,7 +37,7 @@
 
 	var/prev_shuttle_queue_state = SSshuttles.block_init_queue
 	SSshuttles.block_init_queue = TRUE
-	var/machinery_was_awake = SSmachines.suspend() // Suspend machinery (if it was not already suspended)
+	var/machinery_was_awake = FALSE//SSmachines.suspend() // Suspend machinery (if it was not already suspended) // Outpost 21 edit - Removing sleeps from init. Recomendation: Good fucking luck, i'm notsure to what to even do here, calls stoplag()and loops once stopped
 
 	var/list/atom/atoms = list()
 	var/list/area/areas = list()

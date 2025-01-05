@@ -55,8 +55,8 @@
 
 		//Cosmetics mostly
 		flick("tp_in",src)
-		custom_emote(1,"phases in!")
-		sleep(5) //The duration of the TP animation
+		// custom_emote(1,"phases in!") // Outpost 21 edit - Removing sleeps from init. Recomendation: Change to visible message? Calls tgui input()
+		// sleep(5) //The duration of the TP animation  // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer or just remove it?
 		canmove = original_canmove
 
 		//Potential phase-in vore

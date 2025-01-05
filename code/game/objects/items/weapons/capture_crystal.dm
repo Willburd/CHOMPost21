@@ -501,16 +501,16 @@
 			playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 	else if(!active)					//The ball isn't set up, let's try to set it up.
 		if(isliving(target))	//We're hitting a mob, let's try to capture it.
-			sleep(10)
+			//sleep(10) // Outpost 21 edit - Removing sleeps from init. Recomendation: Cleanup into a timer?
 			activate(thrower, target)
 			return
-		sleep(10)
+		//sleep(10) // Outpost 21 edit - Removing sleeps from init. Recomendation: Cleanup into a timer?
 		activate(thrower, src)
 	else if(!bound_mob)				//We hit something else, and we don't have a mob, so we can't really do anything!
 		to_chat(thrower, span_notice("\The [src] clicks unpleasantly..."))
 		playsound(src, 'sound/effects/capture-crystal-negative.ogg', 75, 1, -1)
 	else if(bound_mob in contents)	//We have our mob! Let's try to let it out.
-		sleep(10)
+		//sleep(10) // Outpost 21 edit - Removing sleeps from init. Recomendation: Cleanup into a timer?
 		unleash(thrower, src)
 		update_icon()
 	else						//Our mob isn't here, we can't do anything.

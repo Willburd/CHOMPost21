@@ -46,7 +46,7 @@
 		M.set_species(species)
 	//TODO: insert appearance randomization, needs to be species-based
 	M.real_name = src.name
-	M.death(1) //Kills the new mob
+	// M.death(1) //Kills the new mob // Outpost 21 edit - Removing sleeps from init. Recomendation: Move to after-spawn timer or lateinit
 	//TODO: insert cause of death handling/wound simulation here
 	if(src.corpseuniform)
 		M.equip_to_slot_or_del(new src.corpseuniform(M), slot_w_uniform)

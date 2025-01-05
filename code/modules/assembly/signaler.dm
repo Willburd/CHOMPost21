@@ -123,7 +123,7 @@
 	if(!frequency)
 		return
 	if(!radio_controller)
-		sleep(20)
+		//sleep(20) // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer?
 	if(!radio_controller)
 		return
 

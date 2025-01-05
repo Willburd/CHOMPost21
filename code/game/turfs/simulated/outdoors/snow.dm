@@ -71,7 +71,7 @@
 	if(isliving(M)) // Outpost 21 edit - Ice runtime fix
 		if((M.weakened && prob(10)) || (M.m_intent == "walk" && prob(95))) // Outpost 21 edit - Ice changes
 			return ..()
-		sleep(1 * world.tick_lag)
+		// sleep(1 * world.tick_lag) // Outpost 21 edit - Removing sleeps from init. Recomendation: whatever is the fix for wet floor slips
 		if(istype(M, /mob/living))
 			if(M.weakened == 0)
 				to_chat(M, span_warning("You slide across the ice!"))

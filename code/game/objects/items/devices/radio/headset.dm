@@ -185,7 +185,7 @@
 
 	for (var/ch_name in channels)
 		if(!radio_controller)
-			sleep(30) // Waiting for the radio_controller to be created.
+			// sleep(30) // Waiting for the radio_controller to be created. // Outpost 21 edit - This is just bad, and the coder should feel bad. Move to late init, or a hook, or timer, or SOMETHING
 		if(!radio_controller)
 			src.name = "broken radio headset"
 			return

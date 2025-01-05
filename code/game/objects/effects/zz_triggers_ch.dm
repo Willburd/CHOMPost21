@@ -66,7 +66,7 @@
 			to_chat(mover,"<span class='[message_span_class]'>"+trig_message+"</span>")
 		has_been_used = TRUE
 		been_triggered_by |= mover
-	else 
+	else
 		return
 
 /obj/effect/ctrigger/proc/update_trig_targets()
@@ -88,4 +88,4 @@
 /obj/effect/ctrigger/Initialize(mapload)
 	. = ..()
 	if(trig_target_paths.len)
-		update_trig_targets()
+		update_trig_targets() // Outpost 21 edit - Removing sleeps from init. Recomendation: Contains sinful get_all_of_type, which calls stoplag/CHECKTICK... I dunno what to do. does thisreally need a stoplag call?

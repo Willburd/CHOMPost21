@@ -650,7 +650,7 @@ var/induromol_code = rand(1, 50)
 		var/datum/effect/effect/system/foam_spread/soapfoam = new()
 		soapfoam.set_up(12, T, cleaner, 0)
 		soapfoam.start()
-		sleep(50)
+		// sleep(50) // Outpost 21 edit - Removing sleeps from init. Recomendation: Not really even a chomp issue, timer or remove
 		var/list/soaps = typesof(/obj/item/soap)// - /obj/item/soap/fluff/azare_siraj_1
 		var/soap_type = pick(soaps)
 		var/obj/item/soap/S = new soap_type()

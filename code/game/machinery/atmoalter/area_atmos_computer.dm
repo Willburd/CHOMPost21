@@ -103,7 +103,7 @@
 	if(!found)
 		status = "ERROR: No scrubber found!"
 
-	updateUsrDialog()
+	// updateUsrDialog() // Outpost 21 edit - Removing sleeps from init. Recomendation: It calls attack_hand() which calls unbuckling code... wat? Move to timer if actually needed??
 
 // The one that only works in the same map area
 /obj/machinery/computer/area_atmos/area

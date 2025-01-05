@@ -69,8 +69,8 @@
 
 	true_name = "[pick("Primary","Secondary","Tertiary","Quaternary")] [rand(1000,9999)]"
 
-	if(!roundstart && antag)
-		request_player()
+	//if(!roundstart && antag)
+	//	request_player() // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer??
 
 	return ..()
 

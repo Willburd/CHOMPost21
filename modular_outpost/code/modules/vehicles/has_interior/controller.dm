@@ -369,11 +369,9 @@
 			else
 				EF.visible_message("<span class='danger'>\The [src] begins forcing itself through \the [EF]!</span>")
 
-			if(do_after(src, EF.strength * 5))
-				EF.adjust_strength(rand(-8, -10))
-				EF.visible_message("<span class='danger'>\The [src] crashes through \the [EF]!</span>")
-			else
-				EF.visible_message("<span class='danger'>\The [EF] reverberates as it returns to normal.</span>")
+			// Outpost 21 TODO, remove this doafter with a timer, or just smash the barriers. it's a tank lmao
+			EF.adjust_strength(rand(-8, -10))
+			EF.visible_message("<span class='danger'>\The [src] crashes through \the [EF]!</span>")
 
 			// shakey time
 			shake_cab()

@@ -8,7 +8,7 @@
 
 /turf/space/transit/Initialize()
 	. = ..()
-	toggle_transit(reverse_dir[pushdirection])
+	toggle_transit(reverse_dir[pushdirection]) // Outpost 21 edit - Removing sleeps from init. Recomendation: This callscapture_crystal stuff, which calls a bunch of sleeps()
 
 //------------------------
 

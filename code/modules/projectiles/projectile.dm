@@ -195,9 +195,11 @@
 	var/safety = range * 3
 	record_hitscan_start(RETURN_POINT_VECTOR_INCREMENT(src, Angle, MUZZLE_EFFECT_PIXEL_INCREMENT, 1))
 	while(loc && !QDELETED(src))
+		/* // Outpost 21 edit - Removing sleeps from init, recomendation: I have no idea how to fix this??
 		if(paused)
 			stoplag(1)
 			continue
+		*/
 		if(safety-- <= 0)
 			if(loc)
 				Bump(loc)

@@ -391,10 +391,10 @@
 	do_animate("opening")
 	icon_state = "door0"
 	set_opacity(0)
-	sleep(anim_length_before_density)
+	//sleep(anim_length_before_density) // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer?
 	src.density = FALSE
 	update_nearby_tiles()
-	sleep(anim_length_before_finalize)
+	//sleep(anim_length_before_finalize) // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer?
 	src.layer = open_layer
 	explosion_resistance = 0
 	update_icon()
@@ -441,12 +441,12 @@
 
 	close_door_at = 0
 	do_animate("closing")
-	sleep(anim_length_before_density)
+	//sleep(anim_length_before_density) // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer?
 	src.density = TRUE
 	explosion_resistance = initial(explosion_resistance)
 	src.layer = closed_layer
 	update_nearby_tiles()
-	sleep(anim_length_before_finalize)
+	//sleep(anim_length_before_finalize) // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer?
 	update_icon()
 	if(visible && !glass)
 		set_opacity(1)	//caaaaarn!

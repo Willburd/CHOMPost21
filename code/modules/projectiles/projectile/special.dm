@@ -121,7 +121,7 @@
 		loc = A.loc
 		return
 
-	sleep(-1) //Might not be important enough for a sleep(-1) but the sleep/spawn itself is necessary thanks to explosions and metoerhits
+	// sleep(-1) //Might not be important enough for a sleep(-1) but the sleep/spawn itself is necessary thanks to explosions and metoerhits // Outpost 21 edit - Removing sleeps from init, recomendation: Why?
 
 	if(src)//Do not add to this if() statement, otherwise the meteor won't delete them
 		if(A)

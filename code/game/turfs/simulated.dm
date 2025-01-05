@@ -186,14 +186,14 @@
 							return // stop sliding as it is impossible to be on wet terrain?
 						if(ground.wet != 2)
 							return // done sliding, not lubed
-						sleep(1)
+						//sleep(1)  // Outpost 21 edit - Removing sleeps from init. Recomendation: Our slip is written different, but your slip code basically does this the same way... Rewrite?
 				// outpost 21 edit end
 				else
 					for(var/i = 1 to slip_dist)
 						if(isbelly(M.loc))	//VOREEdit, Stop the slip if we're in a belly. Inspired by a chompedit, cleaned it up with isbelly instead of a variable since the var was resetting too fast.
 							return
 						step(M, M.dir)
-						sleep(1)
+						//sleep(1) Outpost 21 edit - Removing sleeps from init. Recomendation: Our slip is written different, but your slip code basically does this the same way... Rewrite?
 			else
 				M.inertia_dir = 0
 		else

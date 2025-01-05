@@ -16,11 +16,11 @@
 	// First, ask all the ghosts who want to be asked.
 	for(var/mob/observer/dead/D as anything in observer_mob_list)
 		if(evaluate_candidate(D))
-			ask_question(D)
+			// ask_question(D) // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer? Async somehow? I've no idea, but it needs to get out of here because it's blocking Init()
 
 	// Then wait awhile.
 	while(!finished)
-		sleep(1 SECOND)
+		// sleep(1 SECOND) // Outpost 21 edit - Removing sleeps from init. Recomendation: Timer...?
 		wait_time -= 1 SECOND
 		if(wait_time <= 0)
 			finished = TRUE

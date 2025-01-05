@@ -210,58 +210,58 @@
 		for(var/mob/thing in mob_list)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /obj/machinery/door))
 		for(var/obj/machinery/door/thing in world)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /obj/machinery))
 		for(var/obj/machinery/thing in machines)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /obj))
 		for(var/obj/thing in world)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /atom/movable))
 		for(var/atom/movable/thing in world)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /turf))
 		for(var/turf/thing in world)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /atom))
 		for(var/atom/thing in world)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /client))
 		for(var/client/thing in GLOB.clients)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else if (ispath(T, /datum))
 		for(var/datum/thing)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with
 
 	else
 		for(var/datum/thing in world)
 			if (typecache[thing.type])
 				. += thing
-			CHECK_TICK
+			// CHECK_TICK // Outpost 21 edit - Removing sleeps from init. Recomendation: Probably don't call this entire proc in Init() to begin with

@@ -86,7 +86,7 @@
 
 /obj/kbutton/Initialize(mapload)
 	. = ..()
-	update_trig_targets()
+	update_trig_targets() // Outpost 21 edit - Removing sleeps from init. Recomendation: Contains sinful get_all_of_type(), which calls stoplag/CHECKTICK... I dunno what to do. does thisreally need a stoplag call?
 	return
 
 /obj/kbutton/single_use
