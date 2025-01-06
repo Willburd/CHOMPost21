@@ -35,7 +35,7 @@
 
 /datum/trait/positive/superpower_regenerate
 	name = "Regenerate"
-	desc = "Remotely communicate"
+	desc = "Repairs wounds slowly, including internal bleeding."
 	cost = 5
 	custom_only = FALSE
 
