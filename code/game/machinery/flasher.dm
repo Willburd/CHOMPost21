@@ -77,7 +77,7 @@
 			continue
 
 		var/flash_time = strength
-		if(istype(O, /mob/living/carbon/human))
+		if(ishuman(O))
 			var/mob/living/carbon/human/H = O
 			//VOREStation Edit Start
 			/*  Outpost 21 edit - Nif removal

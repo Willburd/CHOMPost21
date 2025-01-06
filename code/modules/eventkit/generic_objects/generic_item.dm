@@ -48,7 +48,7 @@
 						continue
 
 					var/flash_time = 10
-					if(istype(O, /mob/living/carbon/human))
+					if(ishuman(O))
 						var/mob/living/carbon/human/H = O
 						/* Outpost 21 edit - Nif removal
 						//VOREStation Edit Start

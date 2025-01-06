@@ -65,7 +65,7 @@
 		return
 	// Outpost 21 addition end
 	update_icon()
-	if(istype(user,/mob/observer/dead))
+	if(isobserver(user))
 		attack_ghost(user)
 	else
 		return
@@ -74,7 +74,7 @@
 	if(stat)
 		to_chat(ghost, span_warning("Auto-resleever has recieved your ID. Unfortunately it is not functional..."))
 		return
-	if(!istype(ghost,/mob/observer/dead))
+	if(!isobserver(ghost))
 		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.</span>") // Outpost 21 edit - actually inform players
 		return
 	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
