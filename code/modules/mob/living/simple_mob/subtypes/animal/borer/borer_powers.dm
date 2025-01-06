@@ -77,7 +77,7 @@
 		to_chat(src, span_warning("You cannot infest someone who is already infested!"))
 		return
 
-	if(istype(M,/mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 
 		var/obj/item/organ/external/E = H.organs_by_name[BP_HEAD]
@@ -120,7 +120,7 @@
 			tgui_alert(host, "You have been infested by a cortical borer, and are now held hostage by a brain worm. Please listen to what they have to say; they're in your head. Shouting over radio that you've been infected is probably a bad idea...", "Borer Infestation", list("Ok"))
 			// Outpost 21 edit end
 
-		if(istype(M,/mob/living/carbon/human))
+		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
 			var/obj/item/organ/I = H.internal_organs_by_name["brain"]
 			if(!I) // No brain organ, so the borer moves in and replaces it permanently.
