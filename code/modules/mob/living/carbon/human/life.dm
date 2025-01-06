@@ -401,22 +401,7 @@
 
 	if(stat != DEAD) //CHOMPadd: Until I find where nutrion heal code is anyway
 		if((mRegen in mutations))
-			// Outpost 21 edit begin - Regen now heals IB
-			var/heal = rand(0.2,1.3)
-			if(prob(50))
-				for(var/obj/item/organ/external/O in bad_external_organs)
-					for(var/datum/wound/W in O.wounds)
-						if(W.bleeding())
-							W.damage = max(W.damage - heal, 0)
-							if(W.damage <= 0)
-								O.wounds -= W
-						if(W.internal)
-							W.damage = max(W.damage - heal, 0)
-							if(W.damage <= 0)
-								O.wounds -= W
-			else
-				heal_organ_damage(heal,heal)
-			// Outpost 21 edit end
+			heal_organ_damage(0.2,0.2)
 
 	/* Traitgenes edit - replaced by trait's handle_environment()
 	// DNA2 - Gene processing.
