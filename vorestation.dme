@@ -5316,6 +5316,7 @@
 #include "modular_outpost\code\modules\clothing\gloves\telekinetic.dm"
 #include "modular_outpost\code\modules\clothing\suits\miscellaneous.dm"
 #include "modular_outpost\code\modules\clothing\under\xenos\vox.dm"
+#include "modular_outpost\code\modules\economy\retail_scanner.dm"
 #include "modular_outpost\code\modules\economy\vending_machines.dm"
 #include "modular_outpost\code\modules\emotes\definitions\audible_custom.dm"
 #include "modular_outpost\code\modules\emotes\definitions\audible_scream.dm"

@@ -111,7 +111,7 @@ SUBSYSTEM_DEF(supply)
 						var/obj/item/stack/P = A
 						var/datum/material/mat = P.get_material()
 						if(mat?.supply_conversion_value)
-							EC.contents[EC.contents.len]["value"] = P.get_amount() * mat.supply_conversion_value
+							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was P.get_amount() * mat.supply_conversion_value
 						EC.contents[EC.contents.len]["quantity"] = P.get_amount()
 						EC.value += EC.contents[EC.contents.len]["value"]
 
@@ -119,21 +119,21 @@ SUBSYSTEM_DEF(supply)
 					//Sell spacebucks
 					if(istype(A, /obj/item/spacecash))
 						var/obj/item/spacecash/cashmoney = A
-						EC.contents[EC.contents.len]["value"] = (cashmoney.worth * points_per_money) * cash_tax // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
+						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was (cashmoney.worth * points_per_money) * cash_tax // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
 					// CHOMPAdd Start - Sell salvage
 					if(istype(A, /obj/item/salvage))
-						var/obj/item/salvage/salvagedStuff = A
-						EC.contents[EC.contents.len]["value"] = salvagedStuff.worth
+						//var/obj/item/salvage/salvagedStuff = A
+						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was salvagedStuff.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 					// CHOMPAdd End
 
 					// Outpost 21 edit begin - Selling slime cores
 					if(istype(A, /obj/item/slime_extract))
-						var/obj/item/slime_extract/slime_stuff = A
-						EC.contents[EC.contents.len]["value"] = slime_stuff.supply_conversion_value
+						//var/obj/item/slime_extract/slime_stuff = A
+						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was slime_stuff.supply_conversion_value
 						EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
@@ -149,7 +149,7 @@ SUBSYSTEM_DEF(supply)
 								"error" = "Error: Product was damaged on arrival. Payment rendered null under terms of agreement."
 							)
 						else
-							EC.contents[EC.contents.len]["value"] = organ_stuff.supply_conversion_value
+							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was organ_stuff.supply_conversion_value
 							EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
@@ -165,7 +165,7 @@ SUBSYSTEM_DEF(supply)
 								"error" = "Error: Tainted product in batch. Was opened, contaminated, or was not full. Payment rendered null under terms of agreement."
 							)
 						else
-							EC.contents[EC.contents.len]["value"] = 5
+							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was 5
 							EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
@@ -185,9 +185,10 @@ SUBSYSTEM_DEF(supply)
 						var/actually_trying_bonus = FALSE
 						for(var/datum/reagent/R in tank.reagents.reagent_list)
 							// Update export values
+							var/reagent_value = get_reagent_sale_value(R)
 							EC.contents[++EC.contents.len] = list(
 								"object" = "\proper[R.name]",
-								"value" = FLOOR(R.volume, 1) * R.supply_conversion_value,
+								"value" = reagent_value,
 								"quantity" = FLOOR(R.volume, 1)
 							)
 							EC.value += EC.contents[EC.contents.len]["value"]
@@ -199,11 +200,11 @@ SUBSYSTEM_DEF(supply)
 								if(isnull(GLOB.refined_chems_sold[R.industrial_use]))
 									var/list/data = list()
 									data["units"] = FLOOR(R.volume, 1)
-									data["value"] = FLOOR(R.volume, 1) * R.supply_conversion_value
+									data["value"] = reagent_value
 									GLOB.refined_chems_sold[R.industrial_use] = data
 								else
 									GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
-									GLOB.refined_chems_sold[R.industrial_use]["value"] += FLOOR(R.volume, 1) * R.supply_conversion_value
+									GLOB.refined_chems_sold[R.industrial_use]["value"] += reagent_value
 
 						if(actually_trying_bonus)
 							base_value += 5 // Discount on next tank bonus
@@ -497,3 +498,45 @@ SUBSYSTEM_DEF(supply)
 	var/ordered_at							// Date and time the order was requested at
 	var/approved_at							// Date and time the order was approved at
 	var/status								// [Requested, Accepted, Denied, Shipped]
+
+//Outpost 21 edit begin - Selling more objects, scanning and Amazonk UI
+/datum/controller/subsystem/supply/proc/get_item_sale_value(var/obj/item/A)
+	// cargo slip
+	if(istype(A,/obj/item/paper/manifest))
+		return points_per_slip
+	// Sell phoron and platinum
+	if(istype(A, /obj/item/stack))
+		var/obj/item/stack/P = A
+		var/datum/material/mat = P.get_material()
+		if(mat?.supply_conversion_value)
+			return P.get_amount() * mat.supply_conversion_value;
+		return 0
+	//Sell spacebucks
+	if(istype(A, /obj/item/spacecash))
+		var/obj/item/spacecash/cashmoney = A
+		return (cashmoney.worth * points_per_money) * cash_tax // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
+	// Sell salvage
+	if(istype(A, /obj/item/salvage))
+		var/obj/item/salvage/salvagedStuff = A
+		return salvagedStuff.worth
+	// Selling slime cores
+	if(istype(A, /obj/item/slime_extract))
+		var/obj/item/slime_extract/slime_stuff = A
+		return slime_stuff.supply_conversion_value
+	//  Selling organs
+	if(istype(A, /obj/item/organ/internal))
+		var/obj/item/organ/internal/organ_stuff = A
+		if(organ_stuff.health != initial(organ_stuff.health))
+			return 0
+		return organ_stuff.supply_conversion_value
+	// Selling vaccines
+	if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
+		return 5
+	return 0
+
+/datum/controller/subsystem/supply/proc/get_reagent_sale_value(var/datum/reagent/R)
+	return FLOOR(R.volume, 1) * R.supply_conversion_value
+
+/datum/controller/subsystem/supply/proc/points_to_cash(var/val)
+	return FLOOR((val / points_per_money) / cash_tax, 1) // Undoes taxes, 500T == 500T when scanned
+//Outpost 21 edit end
