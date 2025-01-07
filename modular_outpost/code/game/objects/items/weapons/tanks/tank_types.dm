@@ -49,23 +49,6 @@
  * Full size tanks
  */
 
-// Co2
-/obj/item/tank/carbon_dioxide
-	name = "carbon dioxide tank"
-	desc = "A tank of carbon dioxide."
-	icon_state = "oxygen_f"
-	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
-
-/obj/item/tank/carbon_dioxide/Initialize()
-	. = ..()
-	src.air_contents.adjust_gas(GAS_CO2, (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
-
-/obj/item/tank/carbon_dioxide/examine(mob/user)
-	. = ..()
-	if(loc == user && (air_contents.gas[GAS_CO2] < 10))
-		. += span_danger("The meter on \the [src] indicates you are almost out of carbon dioxide!")
-		//playsound(user, 'sound/effects/alert.ogg', 50, 1)
-
 // Methane
 /obj/item/tank/methane
 	name = "methane tank"
