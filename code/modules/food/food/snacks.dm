@@ -1473,7 +1473,7 @@
 	nutriment_desc = list("bun" = 2, "clown shoe" = 3)
 	bitesize = 2
 
-// Outpost 21 edit begin - honkwork infection
+// CHOMPedit begin - honkwork infection
 /obj/item/reagent_containers/food/snacks/clownburger/Initialize()
 	. = ..()
 	reagents.add_reagent("protein", 2) // needed to call On_Consume()... Is this actually an issue?
@@ -1483,7 +1483,7 @@
 		var/mob/living/carbon/human/H = user
 		H.malignant_organ_spawn( /obj/item/organ/internal/malignant/parasite/honker )
 	. = ..()
-// Outpost 21 edit end
+// CHOMPedit end
 
 /obj/item/reagent_containers/food/snacks/mimeburger
 	name = JOB_MIME + " Burger"

@@ -296,7 +296,7 @@
 		dat += "<br>"
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		// Outpost 21 edit begin - malignant organs
+		//CHOMPedit begin - malignant organs
 		for(var/obj/item/organ/internal/io in H.internal_organs)
 			if(istype(io,/obj/item/organ/internal/appendix))
 				var/obj/item/organ/internal/appendix/a = io
@@ -318,7 +318,7 @@
 				else
 					dat += span_warning("Anatomical irregularities detected in subject.")
 					dat += "<br>"
-		// Outpost 21 edit end
+		//CHOMPedit end
 		// Outpost 21 edit begin - Addictions
 		for(var/addic in H.addiction_counters)
 			if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
@@ -331,6 +331,17 @@
 					dat += "<br>"
 					break
 		// Outpost 21 edit end
+		for(var/obj/item/organ/internal/appendix/a in H.internal_organs)
+			var/severity = ""
+			if(a.inflamed > 3)
+				severity = "Severe"
+			else if(a.inflamed > 2)
+				severity = "Moderate"
+			else if(a.inflamed >= 1)
+				severity = "Mild"
+			if(severity)
+				dat += span_warning("[severity] inflammation detected in subject [a.name].")
+				dat += "<br>"
 		if(HUSK in H.mutations)
 			dat += span_danger("Anatomical structure lost, resuscitation not possible!")
 			dat += "<br>"

@@ -552,7 +552,7 @@
 			else
 				dat += "<td>[e.name]</td><td>-</td><td>-</td><td>Not Found</td>"
 			dat += "</tr>"
-		var/hasMalignants = "" // Outpost 21 edit - malignant organs
+		var/hasMalignants = "" //CHOMPedit - malignant organs
 		for(var/obj/item/organ/i in occupant.internal_organs)
 			var/mech = ""
 			var/i_dead = ""
@@ -584,11 +584,11 @@
 				if(A.inflamed)
 					infection = "Inflammation detected!"
 
-			// Outpost 21 edit begin - malignant organs
+			// CHOMPedit begin - malignant organs
 			if(istype(i, /obj/item/organ/internal/malignant))
 				var/obj/item/organ/internal/ORG = occupant.organs_by_name[i.parent_organ]
 				hasMalignants += span_red(" -[ORG.name]") + "<BR>"
-			// Outpost 21 edit end
+			// CHOMPedit end
 
 			dat += "<tr>"
 			dat += "<td>[i.name]</td><td>N/A</td><td>[i.damage]</td><td>[infection]:[mech][i_dead]</td><td></td>"
@@ -598,10 +598,10 @@
 			dat += span_red("Cataracts detected.") + "<BR>"
 		if(occupant.disabilities & NEARSIGHTED)
 			dat += span_red("Retinal misalignment detected.") + "<BR>"
-		// Outpost 21 edit begin - malignant organs
+		//CHOMPedit begin - malignant organs
 		if(hasMalignants != "")
 			dat += span_red("Unknown anatomy detected!") + "<BR>[hasMalignants]"
-		// Outpost 21 edit end
+		//CHOMPedit end
 		// Outpost 21 edit begin - addictions
 		if(has_withdrawl != "")
 			dat += span_red("Experiencing chemical withdrawal!") + "<BR>[has_withdrawl]"

@@ -410,7 +410,7 @@
 		user.balloon_alert(user, "There is a [o_a][O] already!") // CHOMPEdit // Outpost 21 edit - Use organ name directly
 		return SURGERY_FAILURE
 
-	// Outpost 21 addition begin - Malignant organs
+	// CHOMPadd begin - Malignant organs
 	if(O && istype(O,/obj/item/organ/internal/malignant))
 		// malignant organs use a whitelist for allowed locations, and may be placed anywhere in it, not just one organ slot!
 		var/obj/item/organ/internal/malignant/ML = O
@@ -420,8 +420,9 @@
 		else
 			to_chat(user, "<span class='warning'>\The [O] won't fit in \the [affected.name].</span>")
 			return SURGERY_FAILURE
-	// Outpost 21 addition end
-	else if(O && affected.organ_tag == O.parent_organ)
+	// CHOMPadd end
+
+	if(O && affected.organ_tag == O.parent_organ)
 		organ_compatible = 1
 
 	else

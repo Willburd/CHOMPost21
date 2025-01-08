@@ -525,11 +525,11 @@
 					to_chat(src, span_warning("You feel horribly ill."))
 					AdjustWeakened(3)
 				if(prob(5) && internal_organs.len)
-					// Outpost 21 edit begin - organ mutations
+					// CHOMPedit begin - organ mutations
 					if(prob(2))
 						// random organ time!
 						random_malignant_organ(TRUE,FALSE,prob(40))
-					// Outpost 21 edit end
+					// CHOMPedit end
 					else
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
 						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
@@ -562,11 +562,10 @@
 					to_chat(src, span_critical("Your entire body feels like it's on fire!"))
 					adjustHalLoss(5)
 				if(prob(10) && internal_organs.len)
-					// Outpost 21 edit begin - organ mutations
 					if(prob(2))
-						// random organ time!
+						// CHOMPedit begin - organ mutations
 						random_malignant_organ(TRUE,FALSE,prob(60))
-					// Outpost 21 edit end
+					// CHOMPedit end
 					else
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
 						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage)
@@ -599,11 +598,11 @@
 					to_chat(src, span_danger("Your hand won't respond properly, you drop what you're holding!"))
 					drop_item()
 				if(internal_organs.len)
-					// Outpost 21 edit begin - organ mutations
+					// CHOMPedit begin - organ mutations
 					if(prob(2))
 						// random organ time!
 						random_malignant_organ(prob(40),FALSE,TRUE)
-					// Outpost 21 edit end
+					// CHOMPedit end
 					else
 						I = pick(internal_organs) //Internal organ damage...Not good. Not good at all.
 						if(istype(I)) I.add_autopsy_data("Radiation Induced Cancerous Growth", damage * species.radiation_mod * RADIATION_SPEED_COEFFICIENT)
