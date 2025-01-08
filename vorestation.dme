@@ -5346,7 +5346,6 @@
 #include "modular_outpost\code\modules\events\security_advisement.dm"
 #include "modular_outpost\code\modules\events\septic_explosion.dm"
 #include "modular_outpost\code\modules\events\spacemoss.dm"
-#include "modular_outpost\code\modules\events\spontaneous_malignant_organ.dm"
 #include "modular_outpost\code\modules\events\weeping_statue.dm"
 #include "modular_outpost\code\modules\food\recipe.dm"
 #include "modular_outpost\code\modules\food\food\snacks.dm"
