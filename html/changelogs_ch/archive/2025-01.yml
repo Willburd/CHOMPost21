@@ -66,6 +66,9 @@
 2025-01-08:
   Aroliacue:
   - bugfix: Fixed exosuit fighters having an additional 'stomp' stepsound.
+  Asher-42:
+  - rscadd: protean borg (dullahan)
+  - rscadd: dullahan command sprite thats job locked to protean / command only.
   Kashargul:
   - bugfix: lingering fire now caps out at the fire max temp
   aKromatopzia:
