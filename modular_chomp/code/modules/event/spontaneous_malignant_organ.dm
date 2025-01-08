@@ -8,13 +8,13 @@
 			continue
 		if(H.species.virus_immune)
 			continue
-		/*
+		// outpost 21 edit begin - Use our restriction logic
 		if(!(A.z in using_map.event_levels))
 			continue
 		//Not needed for us
 		if(H.job == JOB_STOWAWAY && prob(90)) // stowaways only have a 10% chance to proc
 			continue
-		*/
+		// outpost 21 edit end
 		if(H.client && H.random_malignant_organ(TRUE,TRUE,prob(20)))
 			break
 
