@@ -203,7 +203,8 @@
 				return
 			if(istype(target, /obj/item/implantcase/chem))
 				return
-			// Outpost 21 edit begin - Engineered organ training
+
+			// CHOMPedit begin - Engineered organ training
 			if(istype(target, /obj/item/organ/internal/malignant/engineered/lattice))
 				var/datum/reagent/R = pick(reagents.reagent_list)
 				if(R)
@@ -214,7 +215,8 @@
 					mode = SYRINGE_DRAW
 					update_icon()
 				return
-			// Outpost 21 edit end
+			// CHOMPedit end
+
 			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit
 				to_chat(user, span_notice("You cannot directly fill this object."))
 				return

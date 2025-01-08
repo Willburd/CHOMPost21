@@ -4,7 +4,7 @@
 /obj/item/organ/internal
 	var/dead_icon // Icon to use when the organ has died.
 
-	var/supply_conversion_value = 0 // Outpost 21 edit - Selling engineered organs
+	var/supply_conversion_value = 0 //CHOMPedit Selling Engineered Organs
 
 /obj/item/organ/internal/die()
 	..()

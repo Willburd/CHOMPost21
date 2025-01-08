@@ -8,7 +8,7 @@
 #define OXY_DAMAGE 0x80
 
 #define HUSKED_BODY 0x100
-#define WEIRD_ORGANS 0x200
+#define WEIRD_ORGANS 0x200 //CHOMPedit malignant
 
 // Outpost 21 addition begin
 /datum/category_item/catalogue/technology/medical_kiosk
@@ -147,10 +147,11 @@
 			problems |= SERIOUS_INTERNAL_DAMAGE
 		if(I.status & ORGAN_BLEEDING)
 			problems |= INTERNAL_BLEEDING
-		// Outpost 21 edit begin- malignants
+		//CHOMPedit begin- malignants
 		if(istype(I,/obj/item/organ/internal/malignant))
 			problems |= WEIRD_ORGANS
-		// Outpost 21 edit end
+		//CHOMPedit end
+
 	if(HUSK in user.mutations)
 		problems |= HUSKED_BODY
 	if(user.getToxLoss() > 0)
@@ -185,10 +186,10 @@
 		problem_text += "<br>" + span_warning("Exposure to toxic materials detected - induce vomiting if you have consumed anything recently.")
 	if(problems & OXY_DAMAGE)
 		problem_text += "<br>" + span_warning("Blood/air perfusion level is below acceptable norms - use concentrated oxygen if necessary.")
-	// Outpost 21 addition begin - malignant organs
+	//CHOMPedit begin malignants
 	if(problems & WEIRD_ORGANS)
 		problem_text += "<br>" + span_warning("Anatomical irregularities detected - Please see a medical professional.")
-	// Outpost 21 addition end
+	//CHOMPedit end
 	if(problems & HUSKED_BODY)
 		problem_text += "<br>" + span_danger("Anatomical structure lost, resuscitation not possible!")
 
@@ -312,4 +313,4 @@
 #undef OXY_DAMAGE
 
 #undef HUSKED_BODY
-#undef WEIRD_ORGANS // Outpost 21 edit - malignants
+#undef WEIRD_ORGANS // CHOMPedit - malignants

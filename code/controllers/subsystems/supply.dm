@@ -137,21 +137,21 @@ SUBSYSTEM_DEF(supply)
 						EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
-					// Outpost 21 edit begin - Selling organs
+					// CHOMPedit begin - Selling engineered organs
 					if(istype(A, /obj/item/organ/internal))
 						var/obj/item/organ/internal/organ_stuff = A
 						if(!istype(CR,/obj/structure/closet/crate/freezer))
 							EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport. Payment rendered null under terms of agreement."
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
 							)
 						else if(organ_stuff.health != initial(organ_stuff.health) )
 							EC.contents = list(
-								"error" = "Error: Product was damaged on arrival. Payment rendered null under terms of agreement."
+								"error" = "Error: Product was damaged on arrival."
 							)
 						else
 							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was organ_stuff.supply_conversion_value
 							EC.value += EC.contents[EC.contents.len]["value"]
-					// Outpost 21 edit end
+					// CHOMPedit end
 
 					// Outpost 21 edit begin - Selling vaccines
 					if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))

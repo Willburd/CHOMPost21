@@ -1,7 +1,7 @@
 // malignant organs! Develops randomly from radiation exposure and events!
 /obj/item/organ/internal/malignant
 	organ_tag = "malignant" // gets a random number after, to allow multiple organs!
-	icon = 'modular_outpost/icons/obj/surgery.dmi'
+	icon = 'modular_chomp/icons/obj/surgery_op.dmi'
 	var/validBPspawns = list(BP_GROIN, BP_TORSO, BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG) // copy of BP_ALL
 	var/surgeryAllowedSites = list(BP_GROIN, BP_TORSO, BP_HEAD, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_LEG, BP_R_LEG) // everything except engineered uses a BP_ALL copy
 
@@ -452,7 +452,7 @@
 
 	if(prob(6))
 		thalers += stage
-		supply_conversion_value = initial(supply_conversion_value) + ((thalers * SSsupply.points_per_money) * SSsupply.cash_tax)
+		supply_conversion_value = initial(supply_conversion_value) + ((thalers * SSsupply.points_per_money))
 
 	if(prob(2))
 		var/obj/item/organ/O = owner.organs_by_name[parent_organ]
@@ -495,7 +495,7 @@
 
 /obj/item/organ/internal/malignant/tumor/moneyorgan/proc/pop()
 	if(owner)
-		owner.gib()
+		owner.gib() //Kaboom!
 
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
 
