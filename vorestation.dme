@@ -5398,7 +5398,6 @@
 #include "modular_outpost\code\modules\mob\new_player\sprite_accessories_extra.dm"
 #include "modular_outpost\code\modules\multiz\misc.dm"
 #include "modular_outpost\code\modules\multiz\turf.dm"
-#include "modular_outpost\code\modules\organs\internal\malignant\malignant.dm"
 #include "modular_outpost\code\modules\pda\core_apps.dm"
 #include "modular_outpost\code\modules\persistence\noticeboard.dm"
 #include "modular_outpost\code\modules\player_tips\player_tips_list.dm"
