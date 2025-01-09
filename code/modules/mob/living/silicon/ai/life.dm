@@ -157,7 +157,7 @@
 							theAPC = null
 
 	// Outpost 21 edit begin - AI can hear ambiences
-	if(client && !(client.prefs.ambience_freq == 0))	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them, and do not have repeating ambience disabled.
+	if(client)	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them, and do not have repeating ambience disabled.
 		handle_ambience()
 	// Outpost 21 edit end
 
@@ -186,10 +186,13 @@
 
 // Outpost 21 edit begin - Allow AI to hear ambiences
 /mob/living/silicon/ai/handle_ambience(var/forced) // If you're in an ambient area and have not moved out of it for x time as configured per-client, and do not have it disabled, we're going to play ambience again to you, to help break up the silence.
+	var/pref = read_preference(/datum/preference/numeric/ambience_freq)
+	if(!pref)
+		return
 	var/atom/sourcmob = src
 	if(holo && istype(holo.masters[src],/obj/effect/overlay/aiholo/))
 		sourcmob = holo.masters[src]
-	if(world.time >= (lastareachange + client.prefs.ambience_freq MINUTES) || forced) // Every 5 minutes (by default, set per-client), we're going to run a 35% chance (by default, also set per-client) to play ambience.
+	if(world.time >= (lastareachange + pref MINUTES)) // Every 5 minutes (by default, set per-client), we're going to run a 35% chance (by default, also set per-client) to play ambience.
 		var/area/A = get_area(sourcmob.loc)
 		if(A)
 			lastareachange = world.time // This will refresh the last area change to prevent this call happening LITERALLY every life tick.
