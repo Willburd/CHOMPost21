@@ -60,7 +60,7 @@ var/list/spawntypes = list()
 /datum/spawnpoint/gateway/New()
 	..()
 	turfs = latejoin_gateway
-*/__detect_rust_g
+*/
 /* VOREStation Edit
 /datum/spawnpoint/elevator
 	display_name = "Elevator"
