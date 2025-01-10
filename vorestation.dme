@@ -5342,7 +5342,7 @@
 #include "modular_outpost\code\modules\events\disposal_malfunction.dm"
 #include "modular_outpost\code\modules\events\earthquake.dm"
 #include "modular_outpost\code\modules\events\electrical_fire.dm"
-#include "modular_outpost\code\modules\events\event_container.dm"
+#include "modular_outpost\code\modules\events\event_container_op.dm"
 #include "modular_outpost\code\modules\events\ghost_manifest.dm"
 #include "modular_outpost\code\modules\events\horde_infestation.dm"
 #include "modular_outpost\code\modules\events\jil_infestation.dm"
