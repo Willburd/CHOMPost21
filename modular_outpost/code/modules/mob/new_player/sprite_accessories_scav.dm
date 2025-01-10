@@ -9,14 +9,14 @@
 ***********************************/
 
 /datum/sprite_accessory/tail/yinglet_tail
-	icon = 'icons/mob/scav/tail.dmi'
+	icon = 'modular_outpost/icons/mob/scav/tail.dmi'
 	name = "Yinglet Tail"
 	icon_state = "tail_yinglet_s"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/tail/yinglet_tail_female
-	icon = 'icons/mob/scav/tail.dmi'
+	icon = 'modular_outpost/icons/mob/scav/tail.dmi'
 	name = "Yinglet Tail Female"
 	icon_state = "tail_yinglet_s"
 	do_colouration = 1
@@ -24,7 +24,7 @@
 	extra_overlay = "tail_yinglet_female"
 
 /datum/sprite_accessory/tail/yinglet_tail_male
-	icon = 'icons/mob/scav/tail.dmi'
+	icon = 'modular_outpost/icons/mob/scav/tail.dmi'
 	name = "Yinglet Tail Male"
 	icon_state = "tail_yinglet_s"
 	do_colouration = 1
@@ -33,7 +33,7 @@
 
 
 /datum/sprite_accessory/marking/yinglet_longtooth
-	icon = 'icons/mob/scav/markings.dmi'
+	icon = 'modular_outpost/icons/mob/scav/markings.dmi'
 	name = "Yinglet Long Shelltooth"
 	icon_state = "longtooth"
 	do_colouration = 1
@@ -41,7 +41,7 @@
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/marking/yinglet_shelltooth
-	icon = 'icons/mob/scav/markings.dmi'
+	icon = 'modular_outpost/icons/mob/scav/markings.dmi'
 	name = "Yinglet Shelltooth"
 	icon_state = "shelltooth"
 	do_colouration = 1
@@ -49,7 +49,7 @@
 	body_parts = list(BP_HEAD)
 
 /datum/sprite_accessory/ears/yinglet_short_ears
-	icon = 'icons/mob/scav/markings.dmi'
+	icon = 'modular_outpost/icons/mob/scav/markings.dmi'
 	name = "Yinglet Short Ears"
 	icon_state = "shortears"
 	desc = ""
@@ -57,7 +57,7 @@
 	color_blend_mode = ICON_MULTIPLY
 
 /datum/sprite_accessory/ears/yinglet_long_ears
-	icon = 'icons/mob/scav/markings.dmi'
+	icon = 'modular_outpost/icons/mob/scav/markings.dmi'
 	name = "Yinglet Long Ears"
 	icon_state = "longears"
 	desc = ""
@@ -66,14 +66,14 @@
 
 
 /datum/sprite_accessory/marking/yinglet_front_belly
-	icon = 'icons/mob/scav/markings.dmi'
+	icon = 'modular_outpost/icons/mob/scav/markings.dmi'
 	name = "Yinglet Belly Fluff"
 	icon_state = "frontfluff"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_TORSO)
 
 /datum/sprite_accessory/marking/yinglet_front_chest
-	icon = 'icons/mob/scav/markings.dmi'
+	icon = 'modular_outpost/icons/mob/scav/markings.dmi'
 	name = "Yinglet Chest Fluff"
 	icon_state = "torsofront"
 	color_blend_mode = ICON_MULTIPLY
