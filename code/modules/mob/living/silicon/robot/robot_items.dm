@@ -119,7 +119,7 @@
 		return
 	if(istype(target,/obj/item))
 		var/obj/item/I = target
-		if(do_after(src, 5 SECONDS * I.w_class))
+		if(do_after(user, 5 SECONDS * I.w_class))
 			for(var/mob/M in viewers())
 				M.show_message(span_notice("[user] sweeps \the [src] over \the [I]."), 1)
 			flick("[initial(icon_state)]-scan", src)
