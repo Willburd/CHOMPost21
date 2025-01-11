@@ -39,10 +39,13 @@
 
 	// Assess reagents
 	var/reagent_value = 0
-	if(!isnull(AM.reagents))
-		if(AM.reagents.reagent_list.len > 0)
-			for(var/datum/reagent/R in AM.reagents.reagent_list)
-				reagent_value += SSsupply.get_reagent_sale_value(R)
+	if(!istype(AM,/obj/item/reagent_containers/food)) // Ignore food reagents
+		if(!isnull(AM.reagents))
+			if(AM.reagents.reagent_list.len > 0)
+				for(var/datum/reagent/R in AM.reagents.reagent_list)
+					reagent_value += SSsupply.get_reagent_sale_value(R)
+
+	// Handle output
 	if(value == 0 && reagent_value == 0)
 		to_chat(user,span_danger("-It's worth nothing."))
 	else
@@ -55,7 +58,7 @@
 			to_chat(user,span_warning("-This product must be transported in a full cargo tug tanker with minimal cross contamination."))
 
 	// Supply notes
-	if(istype(AM,/obj/item/organ) || istype(AM,/obj/item/reagent_containers/glass/bottle/vaccine))
+	if(istype(AM,/obj/item/organ) || istype(AM,/obj/item/reagent_containers/glass/bottle/vaccine) || istype(AM,/obj/item/reagent_containers/food))
 		to_chat(user,span_warning("-This product must be sold in a freezer"))
 	else if(value > 0)
 		to_chat(user,span_warning("-This product must be sold in a crate"))

@@ -31,7 +31,7 @@
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(next_offer)), offer_time) //It seems like only the /hidden type actually makes use of this...
 
-/obj/item/uplink/proc/get_item_cost(var/item_type, var/item_cost) // Outpost 21 edit - Removed ancient retail system (made a proc in uplink instead of inherited)
+/obj/item/uplink/get_item_cost(var/item_type, var/item_cost)
 	return (discount_item && (item_type == discount_item)) ? max(1, round(item_cost*discount_amount)) : item_cost
 
 /obj/item/uplink/proc/next_offer()

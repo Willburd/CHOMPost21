@@ -142,7 +142,7 @@ SUBSYSTEM_DEF(supply)
 						var/obj/item/organ/internal/organ_stuff = A
 						if(!istype(CR,/obj/structure/closet/crate/freezer))
 							EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve them for transport."
 							)
 						else if(organ_stuff.health != initial(organ_stuff.health) )
 							EC.contents = list(
@@ -158,7 +158,7 @@ SUBSYSTEM_DEF(supply)
 						var/obj/item/reagent_containers/glass/bottle/vaccine/sale_bottle = A
 						if(!istype(CR,/obj/structure/closet/crate/freezer))
 							EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve them for transport."
 							)
 						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount( REAGENT_ID_VACCINE) < sale_bottle.volume)
 							EC.contents = list(
@@ -166,6 +166,18 @@ SUBSYSTEM_DEF(supply)
 							)
 						else
 							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was 5
+							EC.value += EC.contents[EC.contents.len]["value"]
+					// Outpost 21 edit end
+
+					// Outpost 21 edit begin - Selling food
+					if(istype(A, /obj/item/reagent_containers/food))
+						if(!istype(CR,/obj/structure/closet/crate/freezer))
+							EC.contents = list(
+								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve them for transport."
+							)
+						else
+							//var/obj/item/reagent_containers/food/food_stuff = A
+							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A)
 							EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
@@ -532,6 +544,14 @@ SUBSYSTEM_DEF(supply)
 	// Selling vaccines
 	if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
 		return 5
+	// Selling food
+	if(istype(A, /obj/item/reagent_containers/food))
+		var/obj/item/reagent_containers/food/food_stuff = A
+		if(istype(A,/obj/item/reagent_containers/food/snacks))
+			var/obj/item/reagent_containers/food/snacks/S = food_stuff
+			if(S.bitecount > 0) // no nibbling
+				return 0
+		return food_stuff.price_tag // Converts old price system into supply point cost
 	return 0
 
 /datum/controller/subsystem/supply/proc/get_reagent_sale_value(var/datum/reagent/R)

@@ -168,7 +168,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 						"Coating" = R.coating,
 						"Appliance" = R.appliance,
 						"Allergens" = 0,
-						"Spoiler" = R.spoiler
+						"Spoiler" = R.spoiler,
+						"Price" = res.price_tag
 						)
 			qdel(res)
 		else
@@ -422,7 +423,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body += "<b>Hardness: [M.hardness]</b><br>"
 	body += "<b>Weight: [M.weight]</b><br>"
 	var/stack_size = 50
-	body += "<b>Cargo Points: [M.supply_conversion_value] per sheet, [M.supply_conversion_value * stack_size] per stack of [stack_size]</b><br>"
+	body += "<b>Supply Points: [M.supply_conversion_value] per sheet, [M.supply_conversion_value * stack_size] per stack of [stack_size]</b><br>"
 	var/value = M.supply_conversion_value * SSsupply.points_per_money
 	value = FLOOR(value * 100,1) / 100 // Truncate decimals
 	if(value > 0)
@@ -612,7 +613,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	var/tank_size = 5000
 	if(R.industrial_use)
 		body  += "<b>Industrial Use: </b>[R.industrial_use]<br>"
-	body += "<b>Cargo Points: [R.supply_conversion_value] per unit, [R.supply_conversion_value * tank_size] per [tank_size] tank</b><br>"
+	body += "<b>Supply Points: [R.supply_conversion_value] per unit, [R.supply_conversion_value * tank_size] per [tank_size] tank</b><br>"
 	var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money
 	value = FLOOR(value * 100,1) / 100 // Truncate decimals
 	if(value > 0)
@@ -842,6 +843,13 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		body  += "<b>Description: </b>[recipe["Desc"]]<br>"
 	if(length(recipe["Flavor"]) > 0)
 		body += "<b>Flavor: </b>[recipe["Flavor"]]<br>"
+	if(recipe["Price"] > 0)
+		var/value = recipe["Price"]
+		body += "<b>Supply Points: </b>[value]<br>"
+		// convert to cash
+		value *= SSsupply.points_per_money
+		value = FLOOR(value * 100,1) / 100 // Truncate decimals
+		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"]</b><br>"
 	body += allergen_assemble(recipe["Allergens"])
 	body += "<br>"
 	if(recipe["Appliance"])

@@ -25,15 +25,25 @@
 		cant_open = 1
 
 /obj/item/reagent_containers/food/drinks/on_reagent_change()
-	/* Outpost 21 edit - Ancient retail system removed
 	if (reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()
 		if(R.price_tag)
 			price_tag = R.price_tag
 		else
 			price_tag = null
-	*/
+	// Outpost 21 edit begin - Empty drinks have no value
+	else
+		price_tag = null
+	// Outpost 21 edit end
 	return
+
+// Outpost 21 edit begin - Open drink cans don't have any value
+/obj/item/reagent_containers/food/drinks/cans/on_reagent_change()
+	if(flags & OPENCONTAINER)
+		price_tag = null
+		return
+	. = ..()
+// Outpost 21 edit end
 
 /obj/item/reagent_containers/food/drinks/Destroy()
 	if(food_inserted_micros)
@@ -139,6 +149,7 @@
 		GLOB.cans_opened_roundstat++
 		to_chat(user, span_notice("You open [src] with an audible pop!"))
 		flags |= OPENCONTAINER
+		price_tag = null // Outpost 21 edit - Open drink cans don't have any value
 	else
 		to_chat(user, span_warning("...wait a second, this one doesn't have a ring pull. It's not a <b>can</b>, it's a <b>can't!</b>"))
 		name = "\improper can't of [initial(name)]"	//don't update the name until they try to open it

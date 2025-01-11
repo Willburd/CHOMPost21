@@ -47,12 +47,10 @@
 			center_of_mass_x = 16 //CHOMPEdit
 			center_of_mass_y= 10 //CHOMPEdit
 
-		/* Outpost 21 edit - Ancient retail system removed
 		if(R.price_tag)
 			price_tag = R.price_tag
 		else
 			price_tag = null
-		*/
 	else
 		if(type == /obj/item/reagent_containers/food/drinks/metaglass/metapint)
 			icon_state = "pglass_empty"
