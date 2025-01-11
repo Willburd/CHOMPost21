@@ -28,8 +28,8 @@
 	priority = 1
 	allowed_tools = list(
 		/obj/item/surgical/FixOVein = 100,
-		/obj/item/stack/cable_coil = 40,
-		/obj/item/assembly/mousetrap = 5)
+		/obj/item/stack/cable_coil = 90,
+		/obj/item/assembly/mousetrap = 25) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 80
 	max_duration = 100
@@ -66,9 +66,9 @@
 	priority = 3 //Do this instead of expanding the skull cavity
 	allowed_tools = list(
 		/obj/item/surgical/surgicaldrill = 100,
-		/obj/item/melee/changeling/arm_blade = 15,
-		/obj/item/pickaxe = 5
-	)
+		/obj/item/melee/changeling/arm_blade = 95,
+		/obj/item/pickaxe = 45
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_SCREWDRIVER = 75)
 
@@ -113,7 +113,7 @@
 	priority = 3 //Do this instead of picking around for implants.
 	allowed_tools = list(
 		/obj/item/surgical/hemostat = 100,
-		/obj/item/melee/changeling/claw = 40) //Surprisingly, claws are kind of okay at picking things out.
+		/obj/item/melee/changeling/claw = 70) //Surprisingly, claws are kind of okay at picking things out. // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_WIRECUTTER = 60)
 
@@ -156,9 +156,9 @@
 	priority = 1 //Do this after IB.
 	allowed_tools = list(
 		/obj/item/surgical/FixOVein = 100,
-		/obj/item/stack/nanopaste = 50,
-		/obj/item/stack/cable_coil = 40,
-		/obj/item/assembly/mousetrap = 5)
+		/obj/item/stack/nanopaste = 90,
+		/obj/item/stack/cable_coil = 60,
+		/obj/item/assembly/mousetrap = 25) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 100
 	max_duration = 100 //CHOMPedit
@@ -200,8 +200,8 @@
 	priority = 3 //Do this instead of fixing bones.
 	allowed_tools = list(
 		/obj/item/surgical/bonegel = 100,
-		/obj/item/stack/nanopaste = 50,
-		/obj/item/tape_roll = 5)
+		/obj/item/stack/nanopaste = 90,
+		/obj/item/tape_roll = 25) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 100
 	max_duration = 100 //CHOMPedit
@@ -242,7 +242,7 @@
 	priority = 3 //Do this instead of searching for objects in the skull.
 	allowed_tools = list(
 		/obj/item/surgical/hemostat = 100,
-		/obj/item/melee/changeling/claw = 20) //Claws. Good for digging, not so much for moving.
+		/obj/item/melee/changeling/claw = 60) //Claws. Good for digging, not so much for moving. // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_WIRECUTTER = 60)
 

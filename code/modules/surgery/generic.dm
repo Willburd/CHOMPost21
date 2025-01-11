@@ -32,9 +32,9 @@
 	surgery_name = "Create Incision"
 	allowed_tools = list(
 		/obj/item/surgical/scalpel = 100,		\
-		/obj/item/material/knife = 75,	\
-		/obj/item/material/shard = 50, 		\
-	)
+		/obj/item/material/knife = 95,	\
+		/obj/item/material/shard = 80, 		\
+	) // Outpost 21 edit - Buffing ghetto surgery
 	req_open = 0
 
 	min_duration = 40 //CHOMPedit
@@ -82,8 +82,8 @@
 		/obj/item/surgical/scalpel/laser3 = 100, \
 		/obj/item/surgical/scalpel/laser2 = 100, \
 		/obj/item/surgical/scalpel/laser1 = 100, \
-		/obj/item/melee/energy/sword = 5
-	)
+		/obj/item/melee/energy/sword = 75
+	) // Outpost 21 edit - Buffing ghetto surgery
 	priority = 2
 	req_open = 0
 	min_duration = 40 //CHOMPedit
@@ -194,9 +194,9 @@
 	surgery_name = "Clamp Bleeders"
 	allowed_tools = list(
 		/obj/item/surgical/hemostat = 100,	\
-		/obj/item/stack/cable_coil = 75, 	\
-		/obj/item/assembly/mousetrap = 20
-	)
+		/obj/item/stack/cable_coil = 95, 	\
+		/obj/item/assembly/mousetrap = 60
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit
@@ -237,8 +237,8 @@
 	surgery_name = "Retract Skin"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100,	\
-		/obj/item/material/kitchen/utensil/fork = 50
-	)
+		/obj/item/material/kitchen/utensil/fork = 90
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_CROWBAR = 75)
 
@@ -318,10 +318,10 @@
 	surgery_name = "Cauterize Incision"
 	allowed_tools = list(
 		/obj/item/surgical/cautery = 100,			\
-		/obj/item/clothing/mask/smokable/cigarette = 75,	\
-		/obj/item/flame/lighter = 50,			\
-		/obj/item/weldingtool = 25
-	)
+		/obj/item/clothing/mask/smokable/cigarette = 95,	\
+		/obj/item/flame/lighter = 75,			\
+		/obj/item/weldingtool = 60
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 30 //CHOMPedit
 	max_duration = 50 //CHOMPedit
@@ -363,8 +363,8 @@
 	surgery_name = "Amputate Limb"
 	allowed_tools = list(
 		/obj/item/surgical/circular_saw = 100, \
-		/obj/item/material/knife/machete/hatchet = 75
-	)
+		/obj/item/material/knife/machete/hatchet = 95
+	) // Outpost 21 edit - Buffing ghetto surgery
 	req_open = 0
 
 	min_duration = 100 //CHOMPedit

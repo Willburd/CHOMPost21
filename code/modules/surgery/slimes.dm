@@ -16,9 +16,9 @@
 	surgery_name = "Cut Flesh"
 	allowed_tools = list(
 	/obj/item/surgical/scalpel = 100,		\
-	/obj/item/material/knife = 75,	\
-	/obj/item/material/shard = 50, 		\
-	)
+	/obj/item/material/knife = 95,	\
+	/obj/item/material/shard = 60, 		\
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 30
 	max_duration = 50
@@ -45,9 +45,9 @@
 	surgery_name = "Cut Innards"
 	allowed_tools = list(
 	/obj/item/surgical/scalpel = 100,		\
-	/obj/item/material/knife = 75,	\
-	/obj/item/material/shard = 50, 		\
-	)
+	/obj/item/material/knife = 95,	\
+	/obj/item/material/shard = 60, 		\
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 30
 	max_duration = 50
@@ -74,8 +74,8 @@
 	surgery_name = "Remove Core"
 	allowed_tools = list(
 	/obj/item/surgical/circular_saw = 100, \
-	/obj/item/material/knife/machete/hatchet = 75
-	)
+	/obj/item/material/knife/machete/hatchet = 65
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 50
 	max_duration = 70

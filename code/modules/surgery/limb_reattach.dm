@@ -93,9 +93,9 @@
 	surgery_name = "Connect Limb"
 	allowed_tools = list(
 	/obj/item/surgical/hemostat = 100,	\
-	/obj/item/stack/cable_coil = 75, 	\
-	/obj/item/assembly/mousetrap = 20
-	)
+	/obj/item/stack/cable_coil = 95, 	\
+	/obj/item/assembly/mousetrap = 60
+	) // Outpost 21 edit - Buffing ghetto surgery
 	can_infect = 1
 
 	min_duration = 70 //CHOMPedit Keeping this one on the longer side

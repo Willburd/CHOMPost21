@@ -12,8 +12,8 @@
 	priority = 2
 	allowed_tools = list(
 	/obj/item/surgical/FixOVein = 100, \
-	/obj/item/stack/cable_coil = 75
-	)
+	/obj/item/stack/cable_coil = 95
+	) // Outpost 21 edit - Buffing ghetto surgery
 	can_infect = 1
 	blood_level = 1
 
@@ -69,9 +69,9 @@
 	priority = 2
 	allowed_tools = list(
 		/obj/item/surgical/scalpel = 100,        \
-		/obj/item/material/knife = 75,    \
-		/obj/item/material/shard = 50,         \
-	)
+		/obj/item/material/knife = 95,    \
+		/obj/item/material/shard = 70,         \
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	can_infect = 1
 	blood_level = 1
@@ -122,11 +122,11 @@
 	priority = 2
 	allowed_tools = list(
 		/obj/item/reagent_containers/dropper = 100,
-		/obj/item/reagent_containers/glass/bottle = 75,
-		/obj/item/reagent_containers/glass/beaker = 75,
-		/obj/item/reagent_containers/spray = 50,
+		/obj/item/reagent_containers/glass/bottle = 95,
+		/obj/item/reagent_containers/glass/beaker = 95,
+		/obj/item/reagent_containers/spray = 70,
 		/obj/item/reagent_containers/glass/bucket = 50,
-	)
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	can_infect = 0
 	blood_level = 0
@@ -310,9 +310,9 @@
 	surgery_name = "Relocate Flesh"
 	allowed_tools = list(
 		/obj/item/surgical/hemostat = 100,	\
-		/obj/item/stack/cable_coil = 75, 	\
-		/obj/item/assembly/mousetrap = 20
-	)
+		/obj/item/stack/cable_coil = 95, 	\
+		/obj/item/assembly/mousetrap = 50
+	) // Outpost 21 edit - Buffing ghetto surgery
 	min_duration = 60 //CHOMPedit
 	max_duration = 60 //CHOMPedit
 
@@ -346,8 +346,8 @@
 	surgery_name = "Finish Structure"
 	allowed_tools = list(
 		/obj/item/surgical/bioregen = 100, \
-		/obj/item/surgical/FixOVein = 30
-	)
+		/obj/item/surgical/FixOVein = 80
+	) // Outpost 21 edit - Buffing ghetto surgery
 	min_duration = 60 //CHOMPedit
 	max_duration = 60 //CHOMPedit
 

@@ -27,9 +27,9 @@
 	surgery_name = "Cut Face"
 	allowed_tools = list(
 	/obj/item/surgical/scalpel = 100,		\
-	/obj/item/material/knife = 75,	\
-	/obj/item/material/shard = 50, 		\
-	)
+	/obj/item/material/knife = 95,	\
+	/obj/item/material/shard = 70, 		\
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 50 //CHOMPedit
 	max_duration = 50 //CHOMPedit
@@ -65,9 +65,9 @@
 	surgery_name = "Mend Vocal Cords"
 	allowed_tools = list(
 	/obj/item/surgical/hemostat = 100, 	\
-	/obj/item/stack/cable_coil = 75, 	\
-	/obj/item/assembly/mousetrap = 10	//I don't know. Don't ask me. But I'm leaving it because hilarity.
-	)
+	/obj/item/stack/cable_coil = 95, 	\
+	/obj/item/assembly/mousetrap = 50	//I don't know. Don't ask me. But I'm leaving it because hilarity.
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 50 //CHOMPedit
 	max_duration = 50 //CHOMPedit
@@ -101,8 +101,8 @@
 	surgery_name = "Fix Face"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100, 	\
-		/obj/item/material/kitchen/utensil/fork = 75
-	)
+		/obj/item/material/kitchen/utensil/fork = 95
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_CROWBAR = 55)
 
@@ -139,10 +139,10 @@
 	surgery_name = "Cauterize Face"
 	allowed_tools = list(
 	/obj/item/surgical/cautery = 100,			\
-	/obj/item/clothing/mask/smokable/cigarette = 75,	\
-	/obj/item/flame/lighter = 50,			\
-	/obj/item/weldingtool = 25
-	)
+	/obj/item/clothing/mask/smokable/cigarette = 95,	\
+	/obj/item/flame/lighter = 85,			\
+	/obj/item/weldingtool = 65
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 50 //CHOMPedit
 	max_duration = 50 //CHOMPedit

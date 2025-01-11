@@ -76,8 +76,8 @@
 	surgery_name = "Open Hatch"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100,
-		/obj/item/material/kitchen/utensil = 50
-	)
+		/obj/item/material/kitchen/utensil = 80
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_CROWBAR = 100)
 
@@ -117,8 +117,8 @@
 	surgery_name = "Close Hatch"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100,
-		/obj/item/material/kitchen/utensil = 50
-	)
+		/obj/item/material/kitchen/utensil = 80
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_CROWBAR = 100)
 
@@ -159,8 +159,8 @@
 	surgery_name = "Repair Robotic Brute"
 	allowed_tools = list(
 		/obj/item/weldingtool = 100,
-		/obj/item/pickaxe/plasmacutter = 50
-	)
+		/obj/item/pickaxe/plasmacutter = 80
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	min_duration = 50
 	max_duration = 60
@@ -264,8 +264,8 @@
 	surgery_name = "Fix Robotic Organ"
 	allowed_tools = list(
 	/obj/item/stack/nanopaste = 100,		\
-	/obj/item/surgical/bonegel = 30, 		\
-	)
+	/obj/item/surgical/bonegel = 60, 		\
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	allowed_procs = list(IS_SCREWDRIVER = 100)
 

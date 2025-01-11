@@ -94,10 +94,10 @@
 	surgery_name = "Repair Burns"
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/ointment = 100,
-	/obj/item/stack/medical/ointment = 50,
-	/obj/item/tape_roll = 30,
-	/obj/item/taperoll = 10
-	)
+	/obj/item/stack/medical/ointment = 90,
+	/obj/item/tape_roll = 80,
+	/obj/item/taperoll = 30
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	priority = 3
 
@@ -164,10 +164,10 @@
 	surgery_name = "Repair Brute"
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/bruise_pack = 100,
-	/obj/item/stack/medical/bruise_pack = 50,
-	/obj/item/tape_roll = 40,
-	/obj/item/taperoll = 10
-	)
+	/obj/item/stack/medical/bruise_pack = 90,
+	/obj/item/tape_roll = 80,
+	/obj/item/taperoll = 30
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	priority = 3
 
