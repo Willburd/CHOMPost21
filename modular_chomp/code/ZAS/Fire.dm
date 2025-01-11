@@ -1,22 +1,15 @@
 #define FIRE_MAX_TEMP 20000
 
 /turf/proc/lingering_fire(fl)
-	return
-
-// Outpost 21 edit begin - typechecks are now more sane overloads
-/turf/space/lingering_fire(fl)
-	return
+	return FALSE
 
 /turf/simulated/floor/water/lingering_fire(fl)
-	return
+	return FALSE
 
 /turf/simulated/floor/flesh/lingering_fire(fl)
-	return
-// Outpost 21 edit end
+	return FALSE
 
 /turf/simulated/lingering_fire(fl)
-	// Outpost 21 edit - Removed typechecks
-
 	if(istype(src, /turf/simulated/open))
 		var/turf/below = GetBelow(src)
 		if(below)
