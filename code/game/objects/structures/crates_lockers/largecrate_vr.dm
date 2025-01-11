@@ -50,7 +50,7 @@
 						/mob/living/simple_mob/vore/wolf,
 						/mob/living/simple_mob/animal/space/bear;0.5,
 						/mob/living/simple_mob/animal/space/carp,
-						/mob/living/simple_mob/vore/aggressive/mimic,
+						///mob/living/simple_mob/vore/aggressive/mimic, // Outpost 21 edit - disabled due to non-functional
 						/mob/living/simple_mob/vore/aggressive/rat,
 						/mob/living/simple_mob/vore/aggressive/rat/tame,
 						/mob/living/simple_mob/vore/aggressive/rat/labrat, //CHOMPEdit
