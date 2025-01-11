@@ -68,7 +68,7 @@
 /datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
 	display_name = "ESHUI Captaincy Medal"
 	path = /obj/item/clothing/accessory/medal/gold/captain/eshui
-	ckeywhitelist = list("seagha")
+	ckeywhitelist = list("seagha","remthebold")
 	character_name = list("Khrutch Yizhnera","Trashfire")
 
 /datum/gear/fluff/ESHUI_whiteheart
