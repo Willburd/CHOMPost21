@@ -110,7 +110,7 @@
 /obj/effect/landmark/hostile_xenobio/Initialize()
 	. = ..()
 
-	if(prob(30))
+	if(prob(20))
 		return // likely to be empty, so xenobio doesn't need to clear it out any time they want to do stuff
 
 	if(!isturf(src.loc))
