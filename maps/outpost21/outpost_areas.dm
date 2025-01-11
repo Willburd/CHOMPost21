@@ -1025,13 +1025,13 @@
 	name = "\improper Facility Tunnels"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = TUNNEL_ENCLOSED
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/mine/unexplored/muriki/cave
 	name = "\improper Muriki Caverns"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = TUNNEL_ENCLOSED
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 
 //Subdivided areas because holy crap zas hates our map.
 //Basement. Dept.
