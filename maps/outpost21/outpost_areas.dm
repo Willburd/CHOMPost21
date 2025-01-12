@@ -1408,6 +1408,22 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = TRUE
 
+/area/maintenance/damaged_resleeverA
+	name = "\improper Collapsed Structure"
+	base_turf = /turf/simulated/open/force_indoor
+	icon_state = "maint_research_shuttle"
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	requires_power = FALSE
+	haunted = TRUE
+
+/area/maintenance/damaged_resleeverB
+	name = "\improper Damaged Structure"
+	base_turf = /turf/simulated/open/force_indoor
+	icon_state = "maint_research_shuttle"
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	requires_power = FALSE
+	haunted = TRUE
+
 /area/maintenance/wastedisposalnear
 	name = "\improper Near Waste Disposal Maintenance"
 	base_turf = /turf/simulated/mineral/floor/muriki
@@ -2367,7 +2383,7 @@
 	base_turf = /turf/simulated/floor/flesh
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
@@ -2380,10 +2396,11 @@
 	base_turf = /turf/simulated/floor/weird_things/dark
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SPACE
 	ambience = AMBIENCE_FOREBODING
 	music = 'sound/ambience/ambisin1.ogg'
+	haunted = TRUE
 
 /area/virtual_reality/lighting // virtual reality, but cooler
 	dynamic_lighting = 1 // literally the only change, I just wanted neat lights for the hazard course.
