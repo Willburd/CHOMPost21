@@ -474,7 +474,7 @@
 		infect_chance = 0
 	infect_chance += (targets.len-1)*5    //Extra 5% per extra target, outpost 21 edit - 10% to 5%
 	if(targets.len > 1 && prob(infect_chance)) // Outpost 21 edit - Using it on the same person is the same as normal code
-		log_and_message_admins("[loc] infected [target]'s [eo.name] with \the [src].")
+		log_and_message_admins("[loc] infected [target]'s [eo.name] with \the [src].", usr)
 		infect_limb(eo)
 
 	//75% chance to spread a virus if we have one
