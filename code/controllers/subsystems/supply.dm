@@ -181,6 +181,13 @@ SUBSYSTEM_DEF(supply)
 							EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
+					// Outpost 21 edit begin - Selling research samples
+					if(istype(A, /obj/item/research_sample))
+						//var/obj/item/research_sample/sample_stuff = A
+						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A)
+						EC.value += EC.contents[EC.contents.len]["value"]
+					// Outpost 21 edit end
+
 			//Outpost 21 edit begin - Sell reagent tanks
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
 				var/obj/vehicle/train/trolly_tank/tank = MA
@@ -552,6 +559,13 @@ SUBSYSTEM_DEF(supply)
 			if(S.bitecount > 0) // no nibbling
 				return 0
 		return food_stuff.price_tag // Converts old price system into supply point cost
+	// Selling research samples
+	if(istype(A, /obj/item/research_sample))
+		var/obj/item/research_sample/sample_stuff = A
+		var/level = 5
+		for(var/tech in sample_stuff.valid_techs)
+			level += sample_stuff.origin_tech["[tech]"] * 5
+		return level
 	return 0
 
 /datum/controller/subsystem/supply/proc/get_reagent_sale_value(var/datum/reagent/R)
