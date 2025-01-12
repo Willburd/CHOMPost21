@@ -5346,6 +5346,7 @@
 #include "modular_outpost\code\modules\events\ghost_manifest.dm"
 #include "modular_outpost\code\modules\events\horde_infestation.dm"
 #include "modular_outpost\code\modules\events\jil_infestation.dm"
+#include "modular_outpost\code\modules\events\light_flicker.dm"
 #include "modular_outpost\code\modules\events\phone_spiders.dm"
 #include "modular_outpost\code\modules\events\psychic_screach.dm"
 #include "modular_outpost\code\modules\events\redspacefissure.dm"

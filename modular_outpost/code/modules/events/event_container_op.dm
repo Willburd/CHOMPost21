@@ -15,6 +15,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Canister Leak",		/datum/event/canister_leak,		10, 	list(DEPARTMENT_ENGINEERING = 5)	, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Space Dust",		/datum/event/dust,	 			0, 		list(DEPARTMENT_ENGINEERING = 1)	, FALSE, 0, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Economic News",		/datum/event/economic_event,	90),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Light Flicker",		/datum/event/light_flicker,		10),
 
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Hacker",		/datum/event/money_hacker, 		0, 		list(DEPARTMENT_ANY = 1)		, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Money Lotto",		/datum/event/money_lotto, 		0, 		list(DEPARTMENT_ANY = 1)		, TRUE),
