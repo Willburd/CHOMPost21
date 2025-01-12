@@ -238,7 +238,7 @@
 					prob(3);/obj/item/storage/box/donkpockets,
 					prob(3);/obj/item/storage/box/mousetraps,
 					prob(3);/obj/item/storage/wallet,
-					prob(3);/obj/item/research_sample/common, // Outpost 21 edit - Science rebalance, research samples more accessible
+					prob(3);/obj/item/research_sample/uncommon, // Outpost 21 edit - Science rebalance, research samples more accessible
 					prob(2);/obj/item/clothing/glasses/meson/prescription,
 					prob(2);/obj/item/clothing/gloves/fyellow,
 					prob(2);/obj/item/clothing/gloves/sterile/latex,
@@ -267,7 +267,7 @@
 					prob(2);/obj/item/toy/tennis/cyan,
 					prob(2);/obj/item/toy/tennis/blue,
 					prob(2);/obj/item/toy/tennis/purple,
-					prob(1);/obj/item/research_sample/uncommon, // Outpost 21 edit - Science rebalance, research samples more accessible
+					prob(1);/obj/item/research_sample/rare, // Outpost 21 edit - Science rebalance, research samples more accessible
 					prob(1);/obj/item/toy/baseball,
 					prob(1);/obj/item/storage/box/brainzsnax,
 					prob(1);/obj/item/storage/box/brainzsnax/red,
