@@ -2146,7 +2146,7 @@
 
 //
 //-----------------------------------------------------------------------
-//Offworld
+//Asteroid yard
 
 /area/offworld/asteroidyard/station/
 	sound_env = SMALL_ENCLOSED
@@ -2268,6 +2268,27 @@
 
 //
 //-----------------------------------------------------------------------
+//Confinement beam
+/area/offworld/confinementbeam/station
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_MAINTENANCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/access_shaft
+	name = "\improper Confinement Beam Access Shaft"
+	icon_state = "red"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+
+/area/offworld/confinementbeam/station/dockingbay
+	name = "\improper Confinement Beam Docking Arm"
+	icon_state = "decontamination"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+
+//
+//-----------------------------------------------------------------------
 //Shuttles
 /area/shuttle/trawler
 	name = "\improper Mining Trawler"
@@ -2343,6 +2364,14 @@
 /area/shuttle/skipjack
 	name = "\improper Vox Vessel"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+
+// Confinement beam shuttle
+/area/shuttle/beamtransit
+	name = "\improper Engineering Ferry"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+
 
 //
 // Vehicle interiors ---------------------------------------------------------------------

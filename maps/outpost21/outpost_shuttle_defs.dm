@@ -59,7 +59,7 @@
 // Tramshuttle
 /datum/shuttle/autodock/multi/tram
 	name = "Station Tram"
-	warmup_time = 10
+	warmup_time = 5
 	shuttle_area = /area/shuttle/tram
 	docking_controller_tag = "Tram"
 	current_location = "tram_shed"
@@ -324,6 +324,76 @@
 	base_turf = /turf/simulated/floor
 	base_area = /area/offworld/asteroidyard/station/dockingbay
 
+/obj/effect/shuttle_landmark/premade/trawler/prospector
+	name = "Prospector (Trawler Dock)"
+	landmark_tag = "prospector_docks_trawler"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
+
+//////////////////////////////////////////////////////////////
+// Engineering Ferry
+/datum/shuttle/autodock/multi/beamtransit
+	name = "Engineering Ferry"
+	warmup_time = 5
+	move_time = 120
+	shuttle_area = /area/shuttle/beamtransit
+	current_location = "beam_base"
+	landmark_transition = "beam_space"
+	docking_controller_tag = "beam_ferry_controller"
+	announcer = "Automated Traffic Control"
+	arrival_message = "Attention.  The engineering ferry is approaching the outpost."
+	departure_message = "Attention.  The engineering ferry is now leaving the outpost."
+	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+
+	destination_tags = list(
+		"beam_base",
+		"beam_sat"
+	)
+
+/obj/effect/shuttle_landmark/premade/beamtransit/base
+	name = "ES Outpost 21 (Engineering Dock)"
+	landmark_tag = "beam_base"
+	docking_controller = "beam_base_controller"
+	base_turf = /turf/simulated/floor/plating/external/muriki
+	base_area = /area/muriki/grounds/engi
+
+/obj/effect/shuttle_landmark/premade/beamtransit/transit
+	name = "Deep Space"
+	landmark_tag = "beam_space"
+
+/obj/effect/shuttle_landmark/premade/beamtransit/beam_sat
+	name = "ES 21-4 Confinement Beam Platform"
+	landmark_tag = "beam_sat"
+	docking_controller = "beam_sat_controller"
+	base_area = /area/space
+	base_turf = /turf/space
+
+//////////////////////////////////////////////////////////////
+// Generic landings
+/obj/effect/shuttle_landmark/premade/generic/arrivals
+	name = "ES Outpost 21 (Near Arrivals)"
+	landmark_tag = "outpost_landing_pad"
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_area = /area/muriki/grounds/shutt
+
+/obj/effect/shuttle_landmark/premade/generic/engineering
+	name = "ES Outpost 21 (Near Engineering)"
+	landmark_tag = "outpost_engineering_pad"
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_area = /area/mine/explored/muriki/surface
+
+/obj/effect/shuttle_landmark/premade/generic/prospector_port
+	name = "Prospector (Far-Port Dock)"
+	landmark_tag = "prospector_public_port"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
+
+/obj/effect/shuttle_landmark/premade/generic/prospector_starboard
+	name = "Prospector (Far-Starboard Dock)"
+	landmark_tag = "prospector_public_starboard"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard // TODO
+
 /obj/effect/shuttle_landmark/premade/generic/beltmine
 	name = "Reclaimation Yard (Civilian Dock)"
 	landmark_tag = "orbitalyard_civ"
@@ -354,35 +424,8 @@
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
 
-/obj/effect/shuttle_landmark/premade/trawler/prospector
-	name = "Prospector (Trawler Dock)"
-	landmark_tag = "prospector_docks_trawler"
+/obj/effect/shuttle_landmark/premade/generic/confinementbeam
+	name = "Confinement Beam (Secondary Dock)"
+	landmark_tag = "confinementbeam_civ"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
-
-
-//////////////////////////////////////////////////////////////
-// Generic landings
-/obj/effect/shuttle_landmark/premade/generic/arrivals
-	name = "ES Outpost 21 (Near Arrivals)"
-	landmark_tag = "outpost_landing_pad"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
-	base_area = /area/muriki/grounds/shutt
-
-/obj/effect/shuttle_landmark/premade/generic/engineering
-	name = "ES Outpost 21 (Near Engineering)"
-	landmark_tag = "outpost_engineering_pad"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
-	base_area = /area/mine/explored/muriki/surface
-
-/obj/effect/shuttle_landmark/premade/generic/prospector_port
-	name = "Prospector (Far-Port Dock)"
-	landmark_tag = "prospector_public_port"
-	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
-
-/obj/effect/shuttle_landmark/premade/generic/prospector_starboard
-	name = "Prospector (Far-Starboard Dock)"
-	landmark_tag = "prospector_public_starboard"
-	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space

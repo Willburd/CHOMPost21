@@ -6,7 +6,10 @@
 #define Z_LEVEL_OUTPOST_CENTCOM						5
 #define Z_LEVEL_OUTPOST_MISC 						6
 #define Z_LEVEL_OUTPOST_ASTEROID 					7
+//#define Z_LEVEL_OUTPOST_PROSPECTOR 				8
+//#define Z_LEVEL_OUTPOST_SURVEY	 				9
 #define Z_LEVEL_OUTPOST_VR		 					8
+#define Z_LEVEL_OUTPOST_CONFINEMENTBEAM				9
 //Ensure these stay updated with map and z-level changes - Ignus
 /datum/map/outpost
 	name = "Outpost 21"
@@ -75,7 +78,7 @@
 	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage", "On-Site Dorms")
 	default_skybox = /datum/skybox_settings/outpost21
-	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID)
+	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID,Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
 	unit_test_exempt_areas = list()
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
@@ -222,7 +225,8 @@
 			Z_LEVEL_OUTPOST_BASEMENT,
 			Z_LEVEL_OUTPOST_SURFACE,
 			Z_LEVEL_OUTPOST_UPPER,
-			Z_LEVEL_OUTPOST_ASTEROID
+			Z_LEVEL_OUTPOST_ASTEROID,
+			Z_LEVEL_OUTPOST_CONFINEMENTBEAM
 		)
 
 	ai_shell_restricted = TRUE
@@ -231,7 +235,8 @@
 		Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
-		Z_LEVEL_OUTPOST_UPPER
+		Z_LEVEL_OUTPOST_UPPER,
+		Z_LEVEL_OUTPOST_CONFINEMENTBEAM
 		)
 
 	station_uses_common_ore_only = TRUE
@@ -352,6 +357,47 @@
 	return list(Z_LEVEL_OUTPOST_ASTEROID)
 
 
+
+
+
+
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam
+	initial_generic_waypoints = list("confinementbeam_civ")
+	name = "Confinement Beam Platform"
+	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-04
+[i]Class[/i]: Confinement Beam
+[i]Transponder[/i]: Transmitting (ENG), ESHUI IFF
+[b]Notice[/b]: ESHUI Base, authorized personnel only"}
+	map_z = list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+	extra_z_levels = list()
+
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = FALSE)
+
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Uncrossed(var/atom/movable/AM)
+	. = ..()
+	announce_atc(AM,going = TRUE)
+
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
+	//For landables, we need to see if their shuttle is cloaked
+	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
+		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
+		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
+		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			atc.msg(message)
+
+	//For ships, it's safe to assume they're big enough to not be sneaky
+	else if(istype(AM, /obj/effect/overmap/visitable/ship))
+		atc.msg(message)
+
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/get_space_zlevels()
+	return list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+
+
+
+
 // Skybox Settings
 /datum/skybox_settings/outpost21
 	icon_state = "dyable"
@@ -417,13 +463,19 @@
 /datum/map_z_level/outpost/asteroid_mine
 	z = Z_LEVEL_OUTPOST_ASTEROID
 	name = "Asteroid"
-	transit_chance = 100 // temp just loop through space
+	transit_chance = 40
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN
 
-/datum/map_z_level/outpost/misc
+/datum/map_z_level/outpost/vr
 	z = Z_LEVEL_OUTPOST_VR
 	name = "Virtual"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
+
+/datum/map_z_level/outpost/confinementbeam
+	z = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+	name = "Confinementbeam"
+	transit_chance = 40
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_STATION|MAP_LEVEL_CONSOLES|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_VORESPAWN
 
 
 //Unit test stuff.

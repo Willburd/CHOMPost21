@@ -18,6 +18,11 @@
 	listening_level = Z_LEVEL_OUTPOST_UPPER
 	autolinkers = list("s_relay")
 
+/obj/machinery/telecomms/relay/preset/outpost/confinementbeam
+	id = "Confinement Platform Relay"
+	listening_level = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+	autolinkers = list("c_relay")
+
 /obj/machinery/telecomms/hub/preset/outpost
 	id = "Hub"
 	network = "tcommsat"
