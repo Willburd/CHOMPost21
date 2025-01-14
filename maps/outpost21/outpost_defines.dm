@@ -158,7 +158,9 @@
 										/area/engineering/gravgen,
 										/area/muriki/septic,
 										/area/medical/voxlab/airgap,
-										/area/rnd/xenobiology/lost)
+										/area/rnd/xenobiology/lost,
+										/area/maintenance/damaged_resleeverA,
+										/area/maintenance/damaged_resleeverB)
 	unit_test_exempt_from_apc = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
 										/area/muriki/processor/gland/airmix,
@@ -208,7 +210,9 @@
 										// Actual unit test exceptions
 										/area/muriki/lowerelev,
 										/area/muriki/lowerevac,
-										/area/muriki/crystal)
+										/area/muriki/crystal,
+										/area/maintenance/damaged_resleeverA,
+										/area/maintenance/damaged_resleeverB)
 
 	planet_datums_to_make = list(/datum/planet/muriki)
 
