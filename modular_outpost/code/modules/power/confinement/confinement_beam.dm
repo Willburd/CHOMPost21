@@ -203,3 +203,33 @@ OL|IL|OL
 	A.energy = data.power_level
 	if(pos == loc) // Only the middle lens transmits
 		A.confinement_data = WEAKREF(data)
+
+
+
+// The actual particle beam effects
+/obj/effect/accelerated_particle/confinment_beam
+	icon_state = "particle3"
+	var/datum/weakref/confinement_data = null
+	movement_range = 500
+	energy = 0
+
+/obj/effect/accelerated_particle/confinment_beam/Moved(atom/old_loc, direction, forced, movetime)
+	. = ..()
+	// Check if we should transmit to the target zlevel
+	if(!confinement_data)
+		return
+	var/datum/confinement_pulse_data/data = confinement_data.resolve()
+	if(!data)
+		return
+	if(movement_range <= 0)
+		return
+	var/at_edge = FALSE
+	if(dir == NORTH || dir == SOUTH)
+		if(y == 0 || y == world.maxy-1)
+			at_edge = TRUE
+	if(dir == EAST || dir == WEST)
+		if(x == 0 || x == world.maxx-1)
+			at_edge = TRUE
+	if(at_edge)
+		data.transmit_beam_to_z()
+		movement_range = 0 // Lets make sure we don't have any recursive/double-sending accidents
