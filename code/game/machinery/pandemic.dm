@@ -14,6 +14,12 @@
 	var/allow_strains = TRUE // Outpost 21 edit - Split viro machines
 	var/allow_antibodies = FALSE // Outpost 21 edit - Split viro machines
 
+// PanDEMIC Bottle
+/obj/item/reagent_containers/glass/bottle/vaccine
+	icon_state = "bottle10"
+	possible_transfer_amounts = (list(5, 10, 15))
+	volume = 15
+
 /obj/machinery/computer/pandemic/Initialize(mapload)
 	. = ..()
 	update_icon()
@@ -69,17 +75,18 @@
 		return
 	icon_state = "pandemic[(beaker)?"1":"0"][!(stat & NOPOWER) ? "" : "_nopower"]"
 
-/obj/machinery/computer/pandemic/proc/create_culture(name, bottle_type = "culture", cooldown = 50)
-	// Outpost 21 edit begin - Use unique vaccine bottle for cargo resale
+
+/obj/machinery/computer/pandemic/proc/create_culture(name, bottle_type = "culture", cooldown = 50, vaccine = FALSE)
+
 	var/obj/item/reagent_containers/glass/bottle/B
-	if(istype(src,/obj/machinery/computer/pandemic/isolator))
+	if(vaccine)
 		B = new /obj/item/reagent_containers/glass/bottle/vaccine(loc)
-		B.name = "[name] [bottle_type] vessel"
+		B.name = "[name] vaccine"
 	else
 		B = new(loc)
 		B.icon_state = "bottle10"
 		B.name = "[name] [bottle_type] bottle"
-	// Outpost 21 edit end
+
 	B.pixel_x = rand(-3, 3)
 	B.pixel_y = rand(-3, 3)
 	replicator_cooldown(cooldown)
@@ -155,15 +162,14 @@
 				atom_say("Unable to synthesize requested antibody.")
 				return
 
-			var/obj/item/reagent_containers/glass/bottle/B = create_culture(vaccine_name, REAGENT_ID_VACCINE, 200)
+			var/obj/item/reagent_containers/glass/bottle/vaccine/B = create_culture(vaccine_name, REAGENT_ID_VACCINE, 200, TRUE)
 			B.reagents.add_reagent(REAGENT_ID_VACCINE, 15, list(vaccine_type))
-
-			// Outpost 21 edit begin - Consume the blood so it's not endlessly farmable
+			
 			if(beaker && beaker.reagents && length(beaker.reagents.reagent_list))
-				beaker.reagents.remove_reagent( REAGENT_ID_BLOOD, 5)
+				beaker.reagents.remove_reagent(REAGENT_ID_BLOOD, 5)
 				if(!length(beaker.reagents.reagent_list))
-					update_tgui_static_data(ui.user) // finished beaker!
-			// Outpost 21 edit end
+					update_tgui_static_data(ui.user)
+
 		if("eject_beaker")
 			eject_beaker()
 			update_tgui_static_data(ui.user)
@@ -385,17 +391,17 @@
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
 		eject_beaker()
 		return
-	if(istype(I, /obj/item/reagent_containers/glass) && I.is_open_container())
+	if(istype(I, /obj/item/reagent_containers/glass) && I.is_open_container() || istype(I, /obj/item/reagent_containers/syringe))
 		if(stat & (NOPOWER|BROKEN))
 			return
 		if(beaker)
-			to_chat(user, span_warning("A beaker is already loaded into the machine!"))
+			to_chat(user, span_warning("A [beaker] is already loaded into the machine!"))
 			return
 
 		user.drop_item()
 		beaker = I
 		beaker.loc = src
-		to_chat(user, span_notice("You add the beaker to the machine."))
+		to_chat(user, span_notice("You add \the [I] to the machine."))
 		update_tgui_static_data(user)
 		icon_state = "pandemic1"
 	else
