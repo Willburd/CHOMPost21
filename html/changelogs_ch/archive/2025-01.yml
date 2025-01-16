@@ -133,3 +133,19 @@
   - bugfix: sheet snatcher being able to have larger than the capacity would allow
       stacks inserted when being close to full and getting a new type
   - bugfix: missing overrides in some robot guns
+2025-01-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runtimes when spam upgrading griders
+  - bugfix: micros stuck to bare feet breaking magboots
+  - bugfix: Rejuvenante not updating a destroyed robot sprite
+  - rscadd: Added ACE Security outfit (undersuit + armour) for security; undersuit
+      is available in loadout uniform selector, full outfit available in officer and
+      warden lockers
+  - bugfix: an issue where the crafting ui could get stuck in a busy state if closed
+      during crafting
+  Kashargul:
+  - bugfix: an issue where crawling could reset table passing continuously
+  tacoguy7765093:
+  - rscdel: Lots of bloat worth of bullet chambers have been removed
+  - rscdel: Ammo simplification, back to calibers.
+  - qol: Caliber simplification.
