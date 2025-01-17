@@ -436,7 +436,7 @@
 "uV" = (/obj/structure/transit_tube,/turf/simulated/floor/reinforced/airless,/area/space)
 "uW" = (/obj/structure/cable/orange{d2 = 4; icon_state = "0-4"},/turf/simulated/floor/plating,/area/space)
 "uX" = (/obj/structure/bed/chair/bay/chair/padded/black,/turf/simulated/floor/tiled/milspec,/area/space)
-"uY" = (/obj/machinery/shield_diffuser,/obj/machinery/door/airlock/glass_external{frequency = s; icon_state = "door_locked"; id_tag = "prospector_LX"; locked = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/space)
+"uY" = (/obj/machinery/shield_diffuser,/obj/machinery/door/airlock/glass_external{frequency = 1380; icon_state = "door_locked"; id_tag = "prospector_LX"; locked = 1},/turf/simulated/floor/tiled/techfloor/grid,/area/space)
 "uZ" = (/obj/machinery/computer/pandemic,/turf/simulated/floor/tiled/old_cargo/gray,/area/space)
 "vb" = (/obj/structure/closet/wardrobe/science_white,/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/sci,/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/sci,/obj/item/clothing/suit/storage/teshari/cloak/jobs/sci,/obj/item/clothing/suit/storage/teshari/cloak/jobs/sci,/obj/item/clothing/under/teshari/smock/science,/obj/item/clothing/under/teshari/smock/science,/obj/item/clothing/under/teshari/undercoat/jobs/sci,/obj/item/clothing/under/teshari/undercoat/jobs/sci,/obj/item/clothing/shoes/footwraps,/obj/item/clothing/shoes/footwraps,/obj/item/clothing/shoes/footwraps,/obj/item/clothing/accessory/armband/science,/obj/item/clothing/accessory/armband/science,/turf/simulated/floor/tiled/techfloor/grid,/area/space)
 "vf" = (/obj/machinery/door/firedoor/multi_tile/glass,/turf/simulated/floor/tiled/techfloor/grid,/area/space)
