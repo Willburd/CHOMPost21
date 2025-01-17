@@ -696,13 +696,13 @@
 
 /datum/gear/uniform/voxcasual
 	display_name = "casual wear (Vox)"
-	path = /obj/item/clothing/under/vox/vox_casual
+	path = /obj/item/clothing/under/vox/vox_casual/station // Outpost 21 edit - use station version of casualwear so it has suit sensors and no alien webbing
 	sort_category = "Xenowear"
 	whitelisted = "Vox"
 
 /datum/gear/uniform/voxrobes
 	display_name = "comfy robes (Vox)"
-	path = /obj/item/clothing/under/vox/vox_robes
+	path = /obj/item/clothing/under/vox/vox_robes/station // Outpost 21 edit - use station version of casualwear so it has suit sensors and no alien webbing
 	sort_category = "Xenowear"
 	whitelisted = "Vox"
 

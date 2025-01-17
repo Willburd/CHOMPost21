@@ -202,12 +202,12 @@
 /datum/gear/eyes/arglasses/sci
 	display_name = "AR-Research glasses"
 	path = /obj/item/clothing/glasses/omnihud/rnd
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST,JOB_ROBOTICIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST) // ,JOB_ROBOTICIST) Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/eyes/arglasses/eng
 	display_name = "AR-Engineering glasses"
 	path = /obj/item/clothing/glasses/omnihud/eng
-	allowed_roles = list(JOB_ENGINEER,JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN)
+	allowed_roles = list(JOB_ENGINEER,JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ROBOTICIST) // Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/eyes/arglasses/med
 	display_name = "AR-Medical glasses"
