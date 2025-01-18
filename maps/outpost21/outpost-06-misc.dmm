@@ -847,7 +847,7 @@
 "PN" = (/turf/space/transit/south,/area/space)
 "PO" = (/obj/structure/bed/chair{dir = 4},/turf/simulated/shuttle/floor/darkred,/area/shuttle/trade/centcom)
 "PQ" = (/obj/structure/table/standard,/obj/item/storage/box/glasses/square,/turf/simulated/shuttle/floor/darkred,/area/shuttle/trade/centcom)
-"PR" = (/obj/structure/bed/chair{dir = 8},/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_x = 32},/turf/simulated/shuttle/floor/darkred,/area/shuttle/trade/centcom)
+"PR" = (/obj/structure/bed/chair{dir = 8},/obj/machinery/computer/security/telescreen/entertainment{pixel_x = 32},/turf/simulated/shuttle/floor/darkred,/area/shuttle/trade/centcom)
 "PS" = (/obj/structure/table/steel_reinforced,/obj/item/inflatable_duck,/turf/simulated/shuttle/floor/black,/area/shuttle/trade/centcom)
 "PV" = (/obj/item/radio/intercom/raider{dir = 1; pixel_y = 32},/obj/structure/table/alien/blue,/obj/item/storage/firstaid/fire,/obj/item/storage/firstaid/toxin,/obj/item/storage/firstaid/adv,/turf/simulated/shuttle/floor/alien/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
 "Qa" = (/obj/structure/table/steel_reinforced,/obj/item/stack/material/mhydrogen,/obj/item/stack/material/diamond,/obj/item/stack/material/sandstone,/turf/simulated/shuttle/floor/black,/area/shuttle/trade/centcom)
