@@ -3250,7 +3250,7 @@
 "bnn" = (/obj/structure/table/standard,/obj/machinery/microwave,/obj/effect/floor_decal/spline/fancy/wood,/turf/simulated/floor/wood,/area/crew_quarters/sleep/Dorm_1)
 "bno" = (/obj/structure/table/standard,/obj/machinery/light,/obj/effect/floor_decal/spline/fancy/wood,/obj/item/storage/box/donkpockets/pizza,/turf/simulated/floor/wood,/area/crew_quarters/sleep/Dorm_1)
 "bnp" = (/obj/structure/bed/chair/comfy/beige{dir = 4},/obj/effect/floor_decal/spline/fancy/wood,/obj/item/latexballon/whoopee,/obj/effect/landmark{name = "JoinLateDorm"},/turf/simulated/floor/wood,/area/crew_quarters/sleep/Dorm_1)
-"bnq" = (/obj/structure/table/standard,/obj/machinery/computer/security/telescreen/entertainment{icon_state = "frame"; pixel_y = -32},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/obj/effect/floor_decal/spline/fancy/wood,/obj/item/material/ashtray/plastic,/turf/simulated/floor/wood,/area/crew_quarters/sleep/Dorm_1)
+"bnq" = (/obj/structure/table/standard,/obj/machinery/computer/security/telescreen/entertainment{pixel_y = -32},/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/obj/effect/floor_decal/spline/fancy/wood,/obj/item/material/ashtray/plastic,/turf/simulated/floor/wood,/area/crew_quarters/sleep/Dorm_1)
 "bnr" = (/obj/structure/bed/chair/comfy/beige{dir = 8},/obj/effect/floor_decal/spline/fancy/wood{dir = 6},/obj/effect/landmark{name = "JoinLateDorm"},/turf/simulated/floor/wood,/area/crew_quarters/sleep/Dorm_1)
 "bns" = (/turf/simulated/floor/plating,/area/engineering/trammaint)
 "bnt" = (/obj/machinery/light{dir = 1},/turf/simulated/floor/plating,/area/engineering/trammaint)
