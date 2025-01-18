@@ -437,7 +437,7 @@
 "tV" = (/obj/item/weldingtool,/obj/machinery/light{dir = 8},/turf/simulated/shuttle/floor/darkred,/area/shuttle/mercenary)
 "tW" = (/obj/structure/sign/securearea{name = "\improper CAUTION"; pixel_x = 32},/obj/machinery/light{dir = 4},/obj/structure/mopbucket,/turf/simulated/shuttle/floor/darkred,/area/shuttle/mercenary)
 "ua" = (/obj/effect/step_trigger/thrower{affect_ghosts = 1; direction = 4; name = "thrower_escapeshuttletop(right)"; tiles = 0},/turf/space/transit/north,/area/space)
-"ud" = (/obj/machinery/telecomms/allinone{intercept = 1},/obj/machinery/door/window/northright{name = "Telecoms Mainframe"; req_access = list(150)},/turf/simulated/shuttle/floor/darkred,/area/shuttle/mercenary)
+"ud" = (/obj/machinery/door/window/northright{name = "Telecoms Mainframe"; req_access = list(150)},/turf/simulated/shuttle/floor/darkred,/area/shuttle/mercenary)
 "ue" = (/obj/machinery/door/blast/regular{id = "syndieshutters_telebay"; name = "Outer Airlock"},/turf/simulated/shuttle/plating,/area/shuttle/mercenary)
 "uf" = (/obj/item/soap/rainbow_soap,/turf/simulated/floor/carpet/geo,/area/planet/clown)
 "ul" = (/obj/structure/bed/chair/hammock_kbraid_n,/turf/simulated/shuttle/floor/alienplating/blue{oxygen = 0; phoron = 21.8366},/area/shuttle/skipjack)
