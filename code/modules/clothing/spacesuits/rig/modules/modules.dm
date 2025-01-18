@@ -12,7 +12,7 @@
 	name = "hardsuit upgrade"
 	desc = "It looks pretty sciency."
 	icon = 'icons/obj/rig_modules.dmi'
-	icon_state = "module"
+	icon_state = "generic" // Outpost 21 edit - CI wants this fixed
 	matter = list(MAT_STEEL = 20000, MAT_PLASTIC = 30000, MAT_GLASS = 5000)
 
 	var/damage = 0
