@@ -180,3 +180,15 @@
 2025-01-17:
   CHOMPStation2StaffMirrorBot:
   - bugfix: runtime flood
+2025-01-18:
+  Asher-42:
+  - rscadd: adds import export button to radial hud for colors and part selection.
+  - bugfix: code rehaul
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added silver and white jackboots to loadouts
+  - bugfix: Fixed the traditional kimono being unselectable
+  - refactor: Cleaned up _vr files for loadouts
+  Kashargul:
+  - bugfix: light handling going missing after area changes
+  Mitryll:
+  - rscadd: Added yip, squeal and tailthump emotes
