@@ -708,7 +708,7 @@
 /obj/item/organ/internal/malignant/engineered/chemorgan
 	name = "chem organ DO NOT USE THIS"
 	var/chemid = null
-	var/deg_chance = 2
+	var/deg_chance = 0 // Outpost 21 edit - Disable degrading engineered organs
 	var/deg_intensity = 1
 	var/side_effect_multiplier = 1
 
@@ -747,7 +747,7 @@
 	name = "tramoketic gland"
 	icon_state = "chem_tramadol"
 	chemid = REAGENT_ID_TRAMADOL
-	deg_chance = 3
+	//deg_chance = 3 // Outpost 21 edit - Disable degrading engineered organs
 	deg_intensity = 2
 	side_effect_multiplier = 1
 
@@ -780,7 +780,7 @@
 	name = "dexalic gland"
 	icon_state = "chem_dexa"
 	chemid = REAGENT_ID_DEXALIN
-	deg_chance = 5
+	// deg_chance = 5 // Outpost 21 edit - Disable degrading engineered organs
 	deg_intensity = 1
 	side_effect_multiplier = 2
 
@@ -803,6 +803,6 @@
 	name = "euphorian"
 	icon_state = "chem_bliss"
 	chemid = REAGENT_ID_BLISS
-	deg_chance = 5
+	deg_chance = 2 // Outpost 21 edit - Disable degrading engineered organs
 	deg_intensity = 3
 	side_effect_multiplier = 2
