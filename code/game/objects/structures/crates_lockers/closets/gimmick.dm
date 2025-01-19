@@ -81,6 +81,7 @@
 	name = "alien container"
 	desc = "Contains secrets of the universe."
 	icon = 'icons/obj/closets/abductor.dmi'
+	icon_state = "closed_unlocked"
 	anchored = TRUE
 	closet_appearance = null // special icons
 
@@ -88,6 +89,7 @@
 	name = "tent"
 	desc = "An old fashioned tent that can easily fit a couple of people."
 	icon = 'icons/obj/closets/tent.dmi'
+	icon_state = "closed_unlocked" // Outpost 21 edit - tweaked to not be broken
 	closet_appearance = null
 	anchored = 1
 	open_sound = 'sound/effects/rustle3.ogg'
