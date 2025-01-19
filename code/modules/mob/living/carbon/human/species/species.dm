@@ -256,6 +256,7 @@
 	var/phoron_contact_mod = 1								// Affects skin contact poisoning from phoron
 	var/enzyme_contact_mod = 1								// Multiplies probability of enzyme damage rolls... basically only used by the enzyme immunity trait(outpost 21)
 	var/drippy = FALSE										// If we're drippy!
+	var/ambulant_blood = FALSE								// Force changeling blood effects
 	// Outpost 21 addition end
 
 	var/rarity_value = 1									// Relative rarity/collector value for this species.
