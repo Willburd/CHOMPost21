@@ -304,7 +304,7 @@
 	color = "#8040FF"
 	scannable = 1
 	//YW ADDITIONS START
-	overdose = REAGENTS_OVERDOSE * 4 //120 overdose
+	overdose = REAGENTS_OVERDOSE * 8 //240 overdose // Outpost 21 edit - raised overdose
 /datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
 	..()
 	M.druggy = max(M.druggy, 5)
