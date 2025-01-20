@@ -261,17 +261,9 @@ var/list/organ_cache = list()
 	// immunosuppressant that changes transplant data to make it match.
 	if(dna && can_reject)
 		if(!rejecting)
-			// Outpost 21 edit begin - Organ rejection drugs actually work
-			if(owner && (owner.bloodstr.get_reagent_amount(REAGENT_ID_IMMUNOSUPRIZINE) > 0 || owner.bloodstr.get_reagent_amount(REAGENT_ID_MALISHQUALEM)))
-				rejecting = 0
-			// Outpost 21 edit end
-			else if(blood_incompatible(dna.b_type, owner.dna.b_type, species.name, owner.species.name)) //VOREStation Edit - Process species by name.
+			if(blood_incompatible(dna.b_type, owner.dna.b_type, species.name, owner.species.name)) //VOREStation Edit - Process species by name.
 				rejecting = 1
 		else
-			// Outpost 21 edit begin - Organ rejection drugs actually work
-			if(owner && (owner.bloodstr.get_reagent_amount(REAGENT_ID_IMMUNOSUPRIZINE) > 0 || owner.bloodstr.get_reagent_amount(REAGENT_ID_MALISHQUALEM)))
-				rejecting = 0
-			// Outpost 21 edit end
 			rejecting++ //Rejection severity increases over time.
 			if(rejecting % 10 == 0) //Only fire every ten rejection ticks.
 				switch(rejecting)

@@ -46,6 +46,7 @@
 		"outpost_nanomap_z2.png"			= 'icons/_nanomaps/outpost_nanomap_z01.png',
 		"outpost_nanomap_z3.png"			= 'icons/_nanomaps/outpost_nanomap_z02.png',
 		"outpost_nanomap_z4.png"			= 'icons/_nanomaps/outpost_nanomap_z03.png',
-		"outpost_nanomap_z7.png"			= 'icons/_nanomaps/outpost_nanomap_z07.png'
+		"outpost_nanomap_z7.png"			= 'icons/_nanomaps/outpost_nanomap_z07.png',
+		"outpost_nanomap_z9.png"			= 'icons/_nanomaps/outpost_nanomap_z11.png'
 		// Outpost 21 edit end
 	)

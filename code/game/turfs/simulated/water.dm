@@ -3,7 +3,7 @@
 	name = "shallow water"
 	desc = "A body of water.  It seems shallow enough to walk through, if needed."
 	icon = 'icons/turf/outdoors.dmi'
-	icon_state = "seashallow" // So it shows up in the map editor as water.
+	icon_state = "sand" // So it shows up in the map editor as water. // Outpost 21 edit - CI wants this fixed
 	var/water_icon = 'icons/turf/outdoors.dmi'
 	var/water_state = "water_shallow"
 	var/under_state = "rock"

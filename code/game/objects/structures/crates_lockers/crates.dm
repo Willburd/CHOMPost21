@@ -391,6 +391,7 @@
 	desc = "A large bin."
 	closet_appearance = null
 	icon = 'icons/obj/closets/largebin.dmi'
+	icon_state = ""
 
 /obj/structure/closet/crate/radiation
 	name = "radioactive gear crate"
@@ -779,6 +780,7 @@
 	name = "mining cart"
 	desc = "A mining car. This one doesn't work on rails, and has to be dragged."
 	icon = 'modular_outpost/icons/obj/closets/miningcar.dmi' // Outpost 21 edit - tweaked to not be broken
+	icon_state = "closed_unlocked" // Outpost 21 edit - tweaked to not be broken
 	closet_appearance = null
 	open_sound = 'sound/effects/wooden_closet_open.ogg'
 	close_sound = 'sound/effects/wooden_closet_close.ogg'

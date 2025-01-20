@@ -27,6 +27,7 @@ var/list/preferences_datums = list()
 	var/backbag = 2						//backpack type
 	var/pdachoice = 1					//PDA type
 	//var/shoe_hater = FALSE				//RS ADD - if true, will spawn with no shoes //CHOMPRemove, remove RS No shoes
+	var/no_jacket = FALSE				//if true, will not spawn with outfit's jacket/outer layer
 	var/h_style = "Bald"				//Hair type
 	var/grad_style = "none"				//Gradient style
 	var/f_style = "Shaved"				//Face hair type
@@ -434,7 +435,8 @@ var/list/preferences_datums = list()
 		error("Player picked [choice] slot to copy to, but that wasn't one we sent.")
 		return
 
-	if(tgui_alert(user, "Are you sure you want to override slot [slotnum], [choice]'s savedata?", "Confirm Override", list("No", "Yes")) == "Yes")
+	var/list/rep_data = savefile.get_entry("character[default_slot]", list())
+	if(tgui_alert(user, "Are you sure you want to override the character \"[choice]\" in slot [slotnum], this will completely replace their savedata with \"[rep_data["real_name"]]\"'s from slot [default_slot]. Are you sure? This cannot be undone.", "Confirm Override", list("No", "Yes")) == "Yes")
 		overwrite_character(slotnum)
 		sanitize_preferences()
 		save_character()

@@ -40,7 +40,7 @@
 			C.pry = !C.pry
 			if(C.pry)
 				C.tool_qualities = list(TOOL_CROWBAR)
-				to_chat(usr,span_notice("You will no longer use your [C] to open doors or dismantle floors."))
+				to_chat(usr,span_warning("Your [C] will now open doors and dismantle floors."))
 			else
 				C.tool_qualities = list()
-				to_chat(usr,span_warning("Your [C] will now open doors and dismantle floors."))
+				to_chat(usr,span_notice("You will no longer use your [C] to open doors or dismantle floors."))

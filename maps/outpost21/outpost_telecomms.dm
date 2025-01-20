@@ -21,14 +21,14 @@
 /obj/machinery/telecomms/relay/preset/outpost/confinementbeam
 	id = "Confinement Platform Relay"
 	listening_level = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
-	autolinkers = list("c_relay")
+	autolinkers = list("k_relay")
 
 /obj/machinery/telecomms/hub/preset/outpost
 	id = "Hub"
 	network = "tcommsat"
-	autolinkers = list("hub", "relay", "c_relay", "s_relay", "m_relay", "r_relay", "science", "medical",
+	autolinkers = list("hub", "relay", "c_relay", "l_relay", "m_relay", "s_relay", "k_relay", "r_relay", "science", "medical",
 	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay","explorer", "unused" ,
-	"receiverA", "broadcasterA", "l_relay", "res_relay") //VOREStation Edit - Added "hb_relay"
+	"receiverA", "broadcasterA")
 
 /obj/machinery/telecomms/receiver/preset_right/outpost
 	id = "outpost_rx"
