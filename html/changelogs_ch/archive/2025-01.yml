@@ -215,3 +215,6 @@
   - bugfix: a bug that could cause runtimes if a non human tried to enter VR
   NickBelmont:
   - maptweak: Added a box of gene disks to the XenobotanySetup outsider shelter.
+2025-01-20:
+  Kashargul:
+  - bugfix: honkhounds losing EAL on module selection after a reset
