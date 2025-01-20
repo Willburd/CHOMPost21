@@ -57,11 +57,10 @@
 		fire_narrow_beam(focus_data)
 
 /obj/structure/confinement_beam_generator/focus/process()
-	// If in a valid state, attempt to pulse the beam's machinery
+	// If in a valid state, attempt to cool the device using a heat exchanger on either side
 	if(!is_valid_state())
 		return
 
-	// Attempt to cool the device using a heat exchanger on either side
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXA = locate() in get_step(src,turn(dir,90))
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXB = locate() in get_step(src,turn(dir,-90))
 	var/transfer_ratio = 0.5 // Assume both exchangers
