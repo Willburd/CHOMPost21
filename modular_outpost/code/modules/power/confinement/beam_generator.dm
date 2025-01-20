@@ -1,8 +1,8 @@
 /obj/structure/confinement_beam_generator/gen
 	name = "Confinement Beam Generator"
 	desc = "Fires a condensed, narrow-band beam of confined energy."
-	icon_state = "fuel_chamber"
-	base_icon = "fuel_chamber"
+	icon_state = "gen"
+	base_icon = "gen"
 
 /obj/structure/confinement_beam_generator/gen/pulse(var/datum/weakref/WF)
 	var/datum/confinement_pulse_data/data = WF.resolve()
@@ -23,3 +23,13 @@
 		F.pulse(WF)
 	else
 		fire_narrow_beam(data)
+
+/obj/structure/confinement_beam_generator/gen/update_parts_icons()
+	..() // Update self
+	for(var/D in list(90,-90)) // Update inductors
+		var/obj/structure/confinement_beam_generator/inductor/I = locate() in get_step(src,turn(dir,D))
+		if(I)
+			I.update_parts_icons()
+	var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(src,dir) // Update focus
+	if(F)
+		F.update_parts_icons()

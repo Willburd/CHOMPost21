@@ -21,6 +21,13 @@
 	if(!is_valid_state())
 		return
 
+	if(!has_power())
+		if(icon_state == "control_box_p") // powered, now wants unpowered
+			update_parts_icons()
+		return
+	if(icon_state == "control_box_c") // unpowered, now wants powered
+		update_parts_icons()
+
 	if(found_dir == 0)
 		for(var/d in cardinal)
 			var/obj/structure/confinement_beam_generator/gen/G = locate() in get_step(src,d)
@@ -33,3 +40,9 @@
 			return
 		data.dir = found_dir
 		G.pulse(WEAKREF(data))
+
+/obj/structure/confinement_beam_generator/control_box/update_parts_icons()
+	..() // Update self
+	var/obj/structure/confinement_beam_generator/gen/G = locate() in get_step(src,dir) // Update generator
+	if(G)
+		G.update_parts_icons()

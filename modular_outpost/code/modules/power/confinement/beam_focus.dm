@@ -6,8 +6,8 @@
 /obj/structure/confinement_beam_generator/focus
 	name = "Confinement Beam Focus"
 	desc = "Refracts a narrow-band confinement beam using a complex assembly of super-conducting energy fields."
-	icon_state = "power_box"
-	base_icon = "power_box"
+	icon_state = "focus"
+	base_icon = "focus"
 
 	var/minimum_power = 30000 // Same as an emitter
 	var/internal_heat = T0C
@@ -48,6 +48,7 @@
 	focus_data.target_z = data.target_z
 
 	// forward to next device, or fire a narrow-band beam
+	flick("focus_h",src)
 	internal_heat += focus_data.power_level / BEAM_HEAT_DIVISOR // Apply heat
 	var/obj/structure/confinement_beam_generator/lens/inner_lens/L = locate() in get_step(src,dir)
 	if(L && L.is_valid_state())
@@ -107,6 +108,12 @@
 			health = 100
 		return
 	. = ..()
+
+/obj/structure/confinement_beam_generator/focus/update_parts_icons()
+	..() // Update self
+	var/obj/structure/confinement_beam_generator/lens/inner_lens/L = locate() in get_step(src,dir) // Update lens
+	if(L)
+		L.update_parts_icons()
 
 #undef BEAM_HEAT_DIVISOR
 #undef OFFSET_RAND_MAX

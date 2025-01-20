@@ -70,7 +70,7 @@ OL|IL|OL
 /obj/structure/confinement_beam_generator
 	name = "Confinement Beam Generator"
 	desc = "Part of a Confinement Beam Generator."
-	icon = 'icons/obj/machines/particle_accelerator2.dmi'
+	icon = 'modular_outpost/icons/obj/machines/confinement_beam.dmi'
 	icon_state = "none"
 	anchored = FALSE
 	density = TRUE
@@ -122,14 +122,27 @@ OL|IL|OL
 			return
 	. = ..()
 
+/obj/structure/confinement_beam_generator/proc/has_power()
+	var/turf/T = get_turf(src)
+	var/area/A = get_area(src)
+	return !((!A.power_equip && A.requires_power == 1) || istype(T, /turf/space))
+
+/obj/structure/confinement_beam_generator/proc/update_parts_icons()
+	update_icon()
+
 /obj/structure/confinement_beam_generator/update_icon()
 	switch(construction_state)
-		if(0,1)
-			icon_state="[base_icon]"
+		if(0)
+			icon_state="[base_icon]"	// Free
+		if(1)
+			icon_state="[base_icon]_a"	// Anchored
 		if(2)
-			icon_state="[base_icon]w"
+			icon_state="[base_icon]_w"	// Wired with panel open
 		if(3)
-			icon_state="[base_icon]p"
+			if(!has_power())
+				icon_state="[base_icon]_c"	// Panel closed
+			else
+				icon_state="[base_icon]_p"	// Panel closed and powered
 	return
 
 /obj/structure/confinement_beam_generator/proc/process_tool_hit(var/obj/item/O, var/mob/user)

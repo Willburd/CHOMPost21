@@ -1,8 +1,8 @@
 /obj/structure/confinement_beam_generator/inductor
 	name = "Confinement Beam Inductor"
 	desc = "Feeds electrical power into the beam generator."
-	icon_state = "end_cap"
-	base_icon = "end_cap"
+	icon_state = "inductor"
+	base_icon = "inductor"
 	var/draw_rate = 0.95 // Use up this percent of the surplus power in the grid
 	var/minimum_power = 1000
 
