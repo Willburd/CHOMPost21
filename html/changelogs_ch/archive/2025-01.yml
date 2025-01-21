@@ -232,3 +232,5 @@
   - bugfix: more 516 browser windows
   Drathek:
   - bugfix: Fixed escape pod UI saying ERROR instead of CLOSED for its hatch
+  Kashargul:
+  - bugfix: some invisible icons
