@@ -69,10 +69,13 @@
 
 	true_name = "[pick("Primary","Secondary","Tertiary","Quaternary")] [rand(1000,9999)]"
 
-	if(!roundstart && antag)
-		addtimer(CALLBACK(src,PROC_REF(request_player)), 0) // Outpost 21 edit - Experimental - Remove sleep()
+	. = ..()
 
-	return ..()
+	if(!roundstart && antag)
+		return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/mob/living/simple_mob/animal/borer/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	request_player()
 
 /mob/living/simple_mob/animal/borer/handle_special()
 	docile_counter-- // Outpost 21 edit - borer fixes

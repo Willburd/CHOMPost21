@@ -150,7 +150,7 @@
 		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
 		phaseanim.dir = dir
 		alpha = 0
-		INVOKE_ASYNC(src, PROC_REF(custom_emote), 1, "phases in!") // Outpost 21 edit - Experimental - Remove sleep()
+		addtimer(CALLBACK(src,PROC_REF(custom_emote), 1, "phases in!"), 0) // Outpost 21 edit - Experimental - Remove sleep()
 		addtimer(CALLBACK(src,PROC_REF(phase_in_finish_phase),T,original_canmove),5) // Outpost 21 edit - Experimental - Remove sleep()
 // !!! Only call as timer from above !!!
 /mob/living/carbon/human/proc/phase_in_finish_phase(var/turf/T,var/original_canmove) // Outpost 21 edit - Experimental - Remove sleep()
