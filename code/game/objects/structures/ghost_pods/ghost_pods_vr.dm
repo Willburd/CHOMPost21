@@ -55,4 +55,7 @@
 /obj/structure/ghost_pod/ghost_activated/Initialize(var/mapload)
 	. = ..()
 	if(!mapload)
-		INVOKE_ASYNC(src, PROC_REF(ghostpod_startup), spawn_active) // Outpost 21 edit - Experimental - Remove sleep()
+		return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/obj/structure/ghost_pod/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	ghostpod_startup(spawn_active)

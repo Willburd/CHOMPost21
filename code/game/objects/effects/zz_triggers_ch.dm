@@ -86,6 +86,9 @@
 		message_admins("TRIGGER ERROR: trig_targets STILL EMPTY AFTER CALLED update_trig_targets()")
 
 /obj/effect/ctrigger/Initialize(mapload)
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/obj/effect/ctrigger/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
 	if(trig_target_paths.len)
-		INVOKE_ASYNC(src, PROC_REF(update_trig_targets)) // Outpost 21 edit - Experimental - Remove sleep()
+		update_trig_targets()

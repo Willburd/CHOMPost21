@@ -112,6 +112,9 @@
 		icon_state = "portal1"
 
 /obj/effect/simple_portal/linked/Initialize()
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/obj/effect/simple_portal/linked/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
 	if(portal_id)
-		INVOKE_ASYNC(src, PROC_REF(link_portal)) // Outpost 21 edit - Experimental - Remove sleep()
+		link_portal()

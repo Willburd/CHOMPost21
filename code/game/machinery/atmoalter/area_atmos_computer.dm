@@ -15,8 +15,11 @@
 	var/zone = "This computer is working on a wireless range, the range is currently limited to "
 
 /obj/machinery/computer/area_atmos/Initialize()
-	. = ..()
-	INVOKE_ASYNC(src, PROC_REF(scanscrubbers)) // Outpost 21 edit - Experimental - Remove sleep()
+	..()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/obj/machinery/computer/area_atmos/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	scanscrubbers()
 
 /obj/machinery/computer/area_atmos/attack_ai(var/mob/user as mob)
 	return src.attack_hand(user)

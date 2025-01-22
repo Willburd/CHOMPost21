@@ -108,7 +108,7 @@
 
 /mob/living/carbon/human/proc/phase_in(var/turf/T)
 	if(ability_flags & AB_PHASE_SHIFTED)
-		var/datum/species/shadekin/SK = species
+		// var/datum/species/shadekin/SK = species
 
 		// pre-change
 		forceMove(T)
@@ -155,6 +155,7 @@
 // !!! Only call as timer from above !!!
 /mob/living/carbon/human/proc/phase_in_finish_phase(var/turf/T,var/original_canmove) // Outpost 21 edit - Experimental - Remove sleep()
 	var/datum/species/shadekin/SK = species
+
 	canmove = original_canmove
 	alpha = initial(alpha)
 	remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)

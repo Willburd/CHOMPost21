@@ -7,8 +7,11 @@
 	return
 
 /turf/space/transit/Initialize()
-	. = ..()
-	INVOKE_ASYNC(src, PROC_REF(toggle_transit), reverse_dir[pushdirection]) // Outpost 21 edit - Experimental - Remove sleep()
+	..()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/turf/space/transit/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	toggle_transit(reverse_dir[pushdirection])
 
 //------------------------
 

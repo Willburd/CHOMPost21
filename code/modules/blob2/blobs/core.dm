@@ -101,10 +101,14 @@ var/list/blob_cores = list()
 	START_PROCESSING(SSobj, src)
 	update_icon() //so it atleast appears
 	if(!placed && !overmind)
-		INVOKE_ASYNC(src, PROC_REF(create_overmind), new_overmind) // Outpost 21 edit - Experimental - Remove sleep()
+		addtimer(CALLBACK(src,PROC_REF(create_overmind), new_overmind), 0) // Outpost 21 edit - Experimental - Remove sleep()
 	//if(overmind)
 	//	update_icon()
 	point_rate = new_rate
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/turf/space/transit/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	toggle_transit(reverse_dir[pushdirection])
 
 /obj/structure/blob/core/Destroy()
 	var/turf/T = get_turf(src)

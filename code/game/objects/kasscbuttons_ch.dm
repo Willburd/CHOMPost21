@@ -85,9 +85,11 @@
 		message_admins("TRIGGER ERROR: trig_targets STILL EMPTY AFTER CALLED update_trig_targets()")
 
 /obj/kbutton/Initialize(mapload)
-	. = ..()
-	INVOKE_ASYNC(src, PROC_REF(update_trig_targets)) // Outpost 21 edit - Experimental - Remove sleep()
-	return
+	..()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/obj/kbutton/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	update_trig_targets()
 
 /obj/kbutton/single_use
 	name = "single use button"

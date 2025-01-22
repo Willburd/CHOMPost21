@@ -771,7 +771,7 @@
 	mob_radio.frequency = PUB_FREQ
 	mob_radio.ks2type = /obj/item/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/heads/captain(mob_radio)
-	INVOKE_ASYNC(mob_radio, TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1) // Outpost 21 edit - Experimental - Remove sleep()
+	addtimer(CALLBACK(mob_radio,TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1), 0) // Outpost 21 edit - Experimental - Remove sleep()
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
@@ -857,7 +857,7 @@
 	mob_radio.syndie = 1
 	mob_radio.ks2type = /obj/item/encryptionkey/syndicate
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/syndicate(mob_radio)
-	INVOKE_ASYNC(mob_radio, TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1) // Outpost 21 edit - Experimental - Remove sleep()
+	addtimer(CALLBACK(mob_radio,TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1), 0) // Outpost 21 edit - Experimental - Remove sleep()
 	myid.access |= get_all_station_access()
 
 //ERT catslug
@@ -901,7 +901,7 @@
 	mob_radio.centComm = 1
 	mob_radio.ks2type = /obj/item/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/ert(mob_radio)
-	INVOKE_ASYNC(mob_radio, TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1) // Outpost 21 edit - Experimental - Remove sleep()
+	addtimer(CALLBACK(mob_radio,TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1), 0) // Outpost 21 edit - Experimental - Remove sleep()
 	myid.access |= get_all_station_access()
 
 //Pilot Catslug
