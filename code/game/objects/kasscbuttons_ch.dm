@@ -86,7 +86,7 @@
 
 /obj/kbutton/Initialize(mapload)
 	. = ..()
-	update_trig_targets()
+	INVOKE_ASYNC(src, PROC_REF(update_trig_targets)) // Outpost 21 edit - Experimental - Remove sleep()
 	return
 
 /obj/kbutton/single_use

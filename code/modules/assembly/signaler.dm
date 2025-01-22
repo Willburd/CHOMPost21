@@ -19,7 +19,7 @@
 
 /obj/item/assembly/signaler/Initialize()
 	. = ..()
-	set_frequency(frequency)
+	INVOKE_ASYNC(src, PROC_REF(set_frequency), frequency) // Outpost 21 edit - Experimental - Remove sleep()
 
 /obj/item/assembly/signaler/activate()
 	if(!process_cooldown())

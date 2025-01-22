@@ -16,7 +16,7 @@
 
 /obj/machinery/computer/area_atmos/Initialize()
 	. = ..()
-	scanscrubbers()
+	INVOKE_ASYNC(src, PROC_REF(scanscrubbers)) // Outpost 21 edit - Experimental - Remove sleep()
 
 /obj/machinery/computer/area_atmos/attack_ai(var/mob/user as mob)
 	return src.attack_hand(user)

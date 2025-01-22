@@ -101,9 +101,9 @@ var/list/blob_cores = list()
 	START_PROCESSING(SSobj, src)
 	update_icon() //so it atleast appears
 	if(!placed && !overmind)
-		create_overmind(new_overmind)
-	if(overmind)
-		update_icon()
+		INVOKE_ASYNC(src, PROC_REF(create_overmind), new_overmind) // Outpost 21 edit - Experimental - Remove sleep()
+	//if(overmind)
+	//	update_icon()
 	point_rate = new_rate
 
 /obj/structure/blob/core/Destroy()

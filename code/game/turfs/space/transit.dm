@@ -8,7 +8,7 @@
 
 /turf/space/transit/Initialize()
 	. = ..()
-	toggle_transit(reverse_dir[pushdirection])
+	INVOKE_ASYNC(src, PROC_REF(toggle_transit), reverse_dir[pushdirection]) // Outpost 21 edit - Experimental - Remove sleep()
 
 //------------------------
 

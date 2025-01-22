@@ -150,57 +150,60 @@
 		phaseanim.adjust_scale(src.size_multiplier, src.size_multiplier)
 		phaseanim.dir = dir
 		alpha = 0
-		custom_emote(1,"phases in!")
-		sleep(5) //The duration of the TP animation
-		canmove = original_canmove
-		alpha = initial(alpha)
-		remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
-		remove_modifiers_of_type(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
+		INVOKE_ASYNC(src, PROC_REF(custom_emote), 1, "phases in!") // Outpost 21 edit - Experimental - Remove sleep()
+		addtimer(CALLBACK(src,PROC_REF(phase_in_finish_phase),T,original_canmove),5) // Outpost 21 edit - Experimental - Remove sleep()
+// !!! Only call as timer from above !!!
+/mob/living/carbon/human/proc/phase_in_finish_phase(var/turf/T,var/original_canmove) // Outpost 21 edit - Experimental - Remove sleep()
+	var/datum/species/shadekin/SK = species
+	canmove = original_canmove
+	alpha = initial(alpha)
+	remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)
+	remove_modifiers_of_type(/datum/modifier/shadekin_phase) //CHOMPEdit - Shadekin probably shouldn't be hit while phasing
 
-		//Potential phase-in vore
-		if(can_be_drop_pred || can_be_drop_prey) //Toggleable in vore panel
-			var/list/potentials = living_mobs(0)
-			if(potentials.len)
-				var/mob/living/target = pick(potentials)
-				if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
-					target.forceMove(vore_selected)
-					to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
-					to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))
-				else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
-					forceMove(target.vore_selected)
-					to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
-					to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!"))
+	//Potential phase-in vore
+	if(can_be_drop_pred || can_be_drop_prey) //Toggleable in vore panel
+		var/list/potentials = living_mobs(0)
+		if(potentials.len)
+			var/mob/living/target = pick(potentials)
+			if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
+				target.forceMove(vore_selected)
+				to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
+				to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))
+			else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
+				forceMove(target.vore_selected)
+				to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
+				to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!"))
 
-		ability_flags &= ~AB_PHASE_SHIFTING
+	ability_flags &= ~AB_PHASE_SHIFTING
 
-		//Affect nearby lights
-		var/destroy_lights = 0
+	//Affect nearby lights
+	var/destroy_lights = 0
 
-		//CHOMPEdit start - Add back light destruction
-		if(SK.get_shadekin_eyecolor(src) == RED_EYES)
-			destroy_lights = 80
-		else if(SK.get_shadekin_eyecolor(src) == PURPLE_EYES)
-			destroy_lights = 25
+	//CHOMPEdit start - Add back light destruction
+	if(SK.get_shadekin_eyecolor(src) == RED_EYES)
+		destroy_lights = 80
+	else if(SK.get_shadekin_eyecolor(src) == PURPLE_EYES)
+		destroy_lights = 25
+	//CHOMPEdit end
+
+	//CHOMPEdit start - Add gentle phasing
+	if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
+		for(var/obj/machinery/light/L in machines)
+			if(L.z != z || get_dist(src,L) > 4)
+				continue
+			L.flicker(1)
+		src.Stun(1)
+	else
 		//CHOMPEdit end
+		for(var/obj/machinery/light/L in machines)
+			if(L.z != z || get_dist(src,L) > 10)
+				continue
 
-		//CHOMPEdit start - Add gentle phasing
-		if(SK.phase_gentle) // gentle case: No light destruction. Flicker in 4 tile radius once.
-			for(var/obj/machinery/light/L in machines)
-				if(L.z != z || get_dist(src,L) > 4)
-					continue
-				L.flicker(1)
-			src.Stun(1)
-		else
-			//CHOMPEdit end
-			for(var/obj/machinery/light/L in machines)
-				if(L.z != z || get_dist(src,L) > 10)
-					continue
-
-				if(prob(destroy_lights))
-					spawn(rand(5,25))
-						L.broken()
-				else
-					L.flicker(10)
+			if(prob(destroy_lights))
+				spawn(rand(5,25))
+					L.broken()
+			else
+				L.flicker(10)
 
 /mob/living/carbon/human/proc/phase_out(var/turf/T)
 	if(!(ability_flags & AB_PHASE_SHIFTED))

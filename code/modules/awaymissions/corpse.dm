@@ -32,7 +32,7 @@
 
 /obj/effect/landmark/corpse/Initialize()
 	..()
-	createCorpse()
+	INVOKE_ASYNC(src, PROC_REF(createCorpse)) // Outpost 21 edit - Experimental - Remove sleep()
 	return INITIALIZE_HINT_QDEL
 
 /obj/effect/landmark/corpse/proc/createCorpse() //Creates a mob and checks for gear in each slot before attempting to equip it.

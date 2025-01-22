@@ -111,7 +111,7 @@
 		equip_to_slot_or_del(W, slot_wear_id)
 
 	if(generate_dead)
-		death()
+		INVOKE_ASYNC(src, PROC_REF(death)) // Outpost 21 edit - Experimental - Remove sleep()
 
 /*
  * Subtypes.

@@ -70,7 +70,7 @@
 	true_name = "[pick("Primary","Secondary","Tertiary","Quaternary")] [rand(1000,9999)]"
 
 	if(!roundstart && antag)
-		request_player()
+		INVOKE_ASYNC(src, PROC_REF(request_player)) // Outpost 21 edit - Experimental - Remove sleep()
 
 	return ..()
 

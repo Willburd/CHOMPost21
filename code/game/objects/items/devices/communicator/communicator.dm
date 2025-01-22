@@ -366,9 +366,9 @@ var/global/list/obj/item/communicator/all_communicators = list()
 	. = ..()
 	exonet = new(src)
 	if(client)
-		exonet.make_address("communicator-[src.client]-[src.client.prefs.real_name]")
+		INVOKE_ASYNC(exonet, TYPE_PROC_REF(/datum/exonet_protocol,make_address),"communicator-[src.client]-[src.client.prefs.real_name]") // Outpost 21 edit - Experimental - Remove sleep()
 	else
-		exonet.make_address("communicator-[key]-[src.real_name]")
+		INVOKE_ASYNC(exonet, TYPE_PROC_REF(/datum/exonet_protocol,make_address),"communicator-[key]-[src.real_name]") // Outpost 21 edit - Experimental - Remove sleep()
 
 // Proc: Destroy()
 // Parameters: None

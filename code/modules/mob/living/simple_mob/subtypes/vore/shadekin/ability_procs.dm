@@ -56,41 +56,43 @@
 
 		//Cosmetics mostly
 		flick("tp_in",src)
-		custom_emote(1,"phases in!")
-		sleep(5) //The duration of the TP animation
-		canmove = original_canmove
+		INVOKE_ASYNC(src, PROC_REF(custom_emote), 1, "phases in!") // Outpost 21 edit - Experimental - Remove sleep()
+		addtimer(CALLBACK(src,PROC_REF(phase_in_finish_phase),T,original_canmove),5) // Outpost 21 edit - Experimental - Remove sleep()
+// !!! Only call as timer from above !!!
+/mob/living/simple_mob/shadekin/proc/phase_in_finish_phase(var/turf/T,var/original_canmove) // Outpost 21 edit - Experimental - Remove sleep()
+	canmove = original_canmove
 
-		//Potential phase-in vore
-		if(can_be_drop_pred) //Toggleable in vore panel
-			var/list/potentials = living_mobs(0)
-			if(potentials.len)
-				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
-					target.forceMove(vore_selected)
-					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
+	//Potential phase-in vore
+	if(can_be_drop_pred) //Toggleable in vore panel
+		var/list/potentials = living_mobs(0)
+		if(potentials.len)
+			var/mob/living/target = pick(potentials)
+			if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+				target.forceMove(vore_selected)
+				to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 
-		// Do this after the potential vore, so we get the belly
-		update_icon()
+	// Do this after the potential vore, so we get the belly
+	update_icon()
 
-		/* CHOMPEdit, comment out and handle in custom proc
-		//Affect nearby lights
-		var/destroy_lights = 0
-		if(eye_state == RED_EYES)
-			destroy_lights = 80
-		if(eye_state == PURPLE_EYES)
-			destroy_lights = 25
+	/* CHOMPEdit, comment out and handle in custom proc
+	//Affect nearby lights
+	var/destroy_lights = 0
+	if(eye_state == RED_EYES)
+		destroy_lights = 80
+	if(eye_state == PURPLE_EYES)
+		destroy_lights = 25
 
-		for(var/obj/machinery/light/L in machines)
-			if(L.z != z || get_dist(src,L) > 10)
-				continue
+	for(var/obj/machinery/light/L in machines)
+		if(L.z != z || get_dist(src,L) > 10)
+			continue
 
-			if(prob(destroy_lights))
-				spawn(rand(5,25))
-					L.broken()
-			else
-				L.flicker(10)
-		*/
-		handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
+		if(prob(destroy_lights))
+			spawn(rand(5,25))
+				L.broken()
+		else
+			L.flicker(10)
+	*/
+	handle_phasein_flicker() // CHOMPEdit, special handle for phase-in light flicker
 
 /mob/living/simple_mob/shadekin/proc/phase_out(var/turf/T)
 	if(!(ability_flags & AB_PHASE_SHIFTED))

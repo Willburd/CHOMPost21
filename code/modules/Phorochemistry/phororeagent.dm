@@ -650,33 +650,34 @@ var/induromol_code = rand(1, 50)
 		var/datum/effect/effect/system/foam_spread/soapfoam = new()
 		soapfoam.set_up(12, T, cleaner, 0)
 		soapfoam.start()
-		sleep(50)
-		var/list/soaps = typesof(/obj/item/soap)// - /obj/item/soap/fluff/azare_siraj_1
-		var/soap_type = pick(soaps)
-		var/obj/item/soap/S = new soap_type()
-		S.loc = T
-		if(volume >= 50)
-			volume -= 50
-			var/list/tiles = list()
-			if(istype(locate(T.x + 1, T.y, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x + 1, T.y, T.z))
-			if(istype(locate(T.x - 1, T.y, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x - 1, T.y, T.z))
-			if(istype(locate(T.x, T.y + 1, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x, T.y + 1, T.z))
-			if(istype(locate(T.x, T.y - 1, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x, T.y - 1, T.z))
-
-			while(tiles.len > 0 && volume >= 0)
-				soap_type = pick(soaps)
-				S = new soap_type()
-				var/turf/location = pick(tiles)
-				tiles.Remove(location)
-				S.loc = location
-				volume -= 20
-
+		addtimer(CALLBACK(src,PROC_REF(spawn_soap),T,volume),50) // Outpost 21 edit - Experimental - Remove sleep()
 	else
 		usr << span_notice("The solution does not appear to have enough mass to react.")
+
+/datum/reagent/phororeagent/sapoformator/proc/spawn_soap(var/turf/T, var/volume) // Outpost 21 edit - Experimental - Remove sleep()
+	var/list/soaps = typesof(/obj/item/soap)// - /obj/item/soap/fluff/azare_siraj_1
+	var/soap_type = pick(soaps)
+	var/obj/item/soap/S = new soap_type()
+	S.loc = T
+	if(volume >= 50)
+		volume -= 50
+		var/list/tiles = list()
+		if(istype(locate(T.x + 1, T.y, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x + 1, T.y, T.z))
+		if(istype(locate(T.x - 1, T.y, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x - 1, T.y, T.z))
+		if(istype(locate(T.x, T.y + 1, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x, T.y + 1, T.z))
+		if(istype(locate(T.x, T.y - 1, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x, T.y - 1, T.z))
+
+		while(tiles.len > 0 && volume >= 0)
+			soap_type = pick(soaps)
+			S = new soap_type()
+			var/turf/location = pick(tiles)
+			tiles.Remove(location)
+			S.loc = location
+			volume -= 20
 
 /datum/reagent/phororeagent/rad_x
 	id = REAGENT_ID_RADX

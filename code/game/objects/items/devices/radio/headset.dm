@@ -28,7 +28,7 @@
 		keyslot1 = new ks1type(src)
 	if(ks2type)
 		keyslot2 = new ks2type(src)
-	recalculateChannels(1)
+	INVOKE_ASYNC(src, PROC_REF(recalculateChannels), 1) // Outpost 21 edit - Experimental - Remove sleep()
 
 /obj/item/radio/headset/Destroy()
 	qdel(keyslot1)

@@ -71,12 +71,13 @@
 	if(isliving(M)) // Outpost 21 edit - Ice runtime fix
 		if((M.weakened && prob(10)) || (M.m_intent == "walk" && prob(95))) // Outpost 21 edit - Ice changes
 			return ..()
-		sleep(1 * world.tick_lag)
-		if(istype(M, /mob/living))
-			if(M.weakened == 0)
-				to_chat(M, span_warning("You slide across the ice!"))
-			M.SetWeakened(3) // Outpost 21 edit - Ice changes
-			step(M,M.dir)
+		addtimer(CALLBACK(src,PROC_REF(cause_slip),M), 1 * world.tick_lag) // Outpost 21 edit - Experimental - Remove sleep()
+// !!! Only call as timer from above !!!
+/turf/simulated/floor/outdoors/ice/proc/cause_slip(var/mob/living/M) // Outpost 21 edit - Experimental - Remove sleep()
+	if(M.weakened == 0)
+		to_chat(M, span_warning("You slide across the ice!"))
+	M.SetWeakened(3) // Outpost 21 edit - Ice changes
+	step(M,M.dir)
 
 // Ice that is used for, say, areas floating on water or similar.
 /turf/simulated/floor/outdoors/shelfice

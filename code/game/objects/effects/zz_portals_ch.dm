@@ -43,7 +43,7 @@
 	icon_state = "portal1"
 	var/obj/effect/simple_portal/linked/linked_portal
 	var/portal_id
-	
+
 /obj/effect/simple_portal/linked/handle_teleport(atom/movable/AM)
 	destination = null
 	update_icon()
@@ -69,7 +69,7 @@
 					if(valid_destination(destination))
 						break
 	. = ..()
-		
+
 /obj/effect/simple_portal/linked/proc/valid_destination(var/turf/dest,var/atom/movable/AM)
 	if(!dest)
 		return FALSE
@@ -114,4 +114,4 @@
 /obj/effect/simple_portal/linked/Initialize()
 	. = ..()
 	if(portal_id)
-		link_portal()
+		INVOKE_ASYNC(src, PROC_REF(link_portal)) // Outpost 21 edit - Experimental - Remove sleep()
