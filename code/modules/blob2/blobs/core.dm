@@ -102,8 +102,8 @@ var/list/blob_cores = list()
 	update_icon() //so it atleast appears
 	if(!placed && !overmind)
 		addtimer(CALLBACK(src,PROC_REF(create_overmind), new_overmind), 0) // Outpost 21 edit - Experimental - Remove sleep()
-	//if(overmind)
-	//	update_icon()
+	if(overmind)
+		update_icon()
 	point_rate = new_rate
 
 /obj/structure/blob/core/Destroy()
