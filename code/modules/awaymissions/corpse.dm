@@ -32,8 +32,11 @@
 
 /obj/effect/landmark/corpse/Initialize()
 	..()
-	addtimer(CALLBACK(src,PROC_REF(createCorpse)), 0) // Outpost 21 edit - Experimental - Remove sleep()
-	return INITIALIZE_HINT_QDEL
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/obj/effect/landmark/corpse/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	createCorpse()
+	qdel(src)
 
 /obj/effect/landmark/corpse/proc/createCorpse() //Creates a mob and checks for gear in each slot before attempting to equip it.
 	var/mob/living/carbon/human/M = new /mob/living/carbon/human (src.loc)
