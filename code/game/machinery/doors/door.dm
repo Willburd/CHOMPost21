@@ -382,7 +382,7 @@
 				playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 	return
 
-
+// Outpost 21 edit begin - Experimental - Removed sleep() from doors
 /obj/machinery/door/proc/open(var/forced = 0)
 	if(!can_open(forced))
 		return
@@ -391,10 +391,14 @@
 	do_animate("opening")
 	icon_state = "door0"
 	set_opacity(0)
-	sleep(anim_length_before_density)
+	addtimer(CALLBACK(src, PROC_REF(open__internalsetdensity),forced), anim_length_before_density)
+
+/obj/machinery/door/proc/open__internalsetdensity(var/forced = 0)
 	src.density = FALSE
 	update_nearby_tiles()
-	sleep(anim_length_before_finalize)
+	addtimer(CALLBACK(src, PROC_REF(open__internalfinish),forced), anim_length_before_finalize)
+
+/obj/machinery/door/proc/open__internalfinish(var/forced = 0)
 	src.layer = open_layer
 	explosion_resistance = 0
 	update_icon()
@@ -402,16 +406,16 @@
 	operating = 0
 
 	// Outpost 21 edit begin - Trigger claymores if doors open
-	spawn(5)
-		var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
-		if(las)
-			las.Trigger(src)
+	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
+	if(las)
+		addtimer(CALLBACK(las, TYPE_PROC_REF(/obj/effect/step_trigger/claymore_laser,Trigger), src), 5)
 	// Outpost 21 edit end
 
 	if(autoclose)
 		autoclose_in(next_close_wait())
 
 	return 1
+// Outpost 21 edit end
 
 /obj/machinery/door/proc/next_close_wait()
 	// Outpost 21 edit begin - Large temp difs mean faster closing
@@ -434,6 +438,7 @@
 	return (normalspeed ? open_speed : 5)
 	// Outpost 21 edit end
 
+// Outpost 21 edit begin - Experimental - Removed sleep() from doors
 /obj/machinery/door/proc/close(var/forced = 0)
 	if(!can_close(forced))
 		return
@@ -441,12 +446,16 @@
 
 	close_door_at = 0
 	do_animate("closing")
-	sleep(anim_length_before_density)
+	addtimer(CALLBACK(src, PROC_REF(close__internalsetdensity),forced), anim_length_before_density)
+
+/obj/machinery/door/proc/close__internalsetdensity(var/forced = 0)
 	src.density = TRUE
 	explosion_resistance = initial(explosion_resistance)
 	src.layer = closed_layer
 	update_nearby_tiles()
-	sleep(anim_length_before_finalize)
+	addtimer(CALLBACK(src, PROC_REF(close__internalfinish),forced), anim_length_before_finalize)
+
+/obj/machinery/door/proc/close__internalfinish(var/forced = 0)
 	update_icon()
 	if(visible && !glass)
 		set_opacity(1)	//caaaaarn!
@@ -460,10 +469,11 @@
 	// Outpost 21 edit begin - Same as fire above, but for claymores
 	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
 	if(las)
-		las.Trigger(src)
+		addtimer(CALLBACK(las, TYPE_PROC_REF(/obj/effect/step_trigger/claymore_laser,Trigger), src), 1)
 	// Outpost 21 edit end
 
 	return 1
+// Outpost 21 edit end
 
 /obj/machinery/door/proc/requiresID()
 	return 1
