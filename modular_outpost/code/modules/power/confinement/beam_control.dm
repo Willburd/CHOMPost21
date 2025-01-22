@@ -8,11 +8,16 @@
 	var/has_gen = FALSE
 	var/pulse_enabled = FALSE
 	var/calibration_lock = FALSE
+	var/last_temp = 0
+	var/last_max = 0
+	var/last_watt = "0W" // string of wattage
 
 /obj/structure/confinement_beam_generator/control_box/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 	data = new()
+	data.origin_machine = WEAKREF(src)
+	check_focus_temp() // Sets initial temps
 
 /obj/structure/confinement_beam_generator/control_box/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -22,6 +27,8 @@
 /obj/structure/confinement_beam_generator/control_box/process()
 	// If in a valid state, attempt to pulse the beam's machinery
 	has_gen = FALSE
+	last_temp = LERP(last_temp, T20C, 0.1) // Drain temp slowly in UI
+	last_watt = LERP(last_watt, 0, 0.1) // Drain wattage slowly in UI
 	if(!is_valid_state())
 		calibration_lock = FALSE
 		pulse_enabled = FALSE
@@ -50,6 +57,32 @@
 			data.dir = found_dir
 			G.pulse(WEAKREF(data))
 		has_gen = TRUE
+
+/obj/structure/confinement_beam_generator/control_box/proc/check_focus_temp(var/temp = T20C,var/max = T0C + 9000, var/watt = 0)
+	last_temp = temp
+	last_max = max
+
+	var/units = ""
+	// 10kW and less - Watts
+	if(watt < 10000)
+		units = "W"
+	// 10MW and less - KiloWatts
+	else if(watt < 10000000)
+		units = "kW"
+		watt = (round(watt/100) / 10)
+	// More than 10MW - MegaWatts
+	else if(watt < 10000000000)
+		units = "MW"
+		watt = (round(watt/10000) / 100)
+	// More than 100MW - GigaWatts
+	else
+		units = "GW"
+		watt = (round(watt/100000) / 1000)
+
+	if (units == "W")
+		last_watt = "[watt] W"
+	else
+		last_watt = "[watt] [units]"
 
 /obj/structure/confinement_beam_generator/control_box/update_parts_icons()
 	..() // Update self
@@ -81,16 +114,33 @@
 
 /obj/structure/confinement_beam_generator/control_box/tgui_data(mob/user)
 	// this is the data which will be sent to the ui
-	var/data[0]
+	var/tgui_data[0]
 
-	data = list(
+	tgui_data = list(
 		"has_gen" = has_gen,
 		"pulse_enable" = pulse_enabled,
 		"calibrating" = calibration_lock,
 		"target_z" = data.target_z,
+		"target_list" = list(),
+		"last_temp" = last_temp,
+		"max_temp" = last_max,
+		"last_watt" = last_watt
 	)
 
-	return data
+	for(var/obj/structure/confinement_beam_generator/collector/C in GLOB.confinement_beam_collectors)
+		var/turf/T = get_turf(C)
+		if(T && C.is_valid_state())
+			tgui_data["target_list"] += list( // appending lists would merge it if this wasn't a nested list
+				list(
+					"id" = "[T.x],[T.y],[T.z]",
+					"x" = T.x,
+					"y" = T.y,
+					"z" = T.z,
+					"z_str" = using_map.get_zlevel_name(T.z)
+				)
+			)
+
+	return tgui_data
 
 /obj/structure/confinement_beam_generator/control_box/tgui_act(action, params, datum/tgui/ui)
 	if(..())
@@ -109,11 +159,12 @@
 			return TRUE
 
 		if("set_z")
+			var/get_id = params["id"]
 			calibration_lock = TRUE
 			pulse_enabled = FALSE
 			data.target_z = 1
 			addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 3 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
 			return TRUE
 
-/obj/structure/confinement_beam_generator/proc/finish_calibrate()
+/obj/structure/confinement_beam_generator/control_box/proc/finish_calibrate()
 	calibration_lock = FALSE

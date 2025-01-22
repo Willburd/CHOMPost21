@@ -5,4 +5,7 @@ export type Data = {
   pulse_enable: BooleanLike;
   calibrating: BooleanLike;
   target_z: number;
+  last_temp: number;
+  max_temp: number;
+  last_watt: string;
 };

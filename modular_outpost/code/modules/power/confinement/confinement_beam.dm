@@ -59,6 +59,7 @@ OL|IL|OL
 	var/deviation_y = 0
 	var/dir = NORTH
 	var/target_z = -1
+	var/datum/weakref/origin_machine = null
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_z()
 	if(target_z == -1 || power_level == 0)

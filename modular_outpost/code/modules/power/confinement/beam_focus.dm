@@ -5,7 +5,7 @@
 
 /obj/structure/confinement_beam_generator/focus
 	name = "Confinement Beam Focus"
-	desc = "Refracts a narrow-band confinement beam using a complex assembly of super-conducting energy fields. Interacts with the beams fired from the generation chamber or from a lens."
+	desc = "Refracts a narrow-band confinement beam using a complex assembly of super-conducting energy fields. Interacts with the beams fired from the generation chamber or from a lens. Requires adjacent heat exchange pipes for cooling."
 	icon_state = "focus"
 	base_icon = "focus"
 
@@ -46,6 +46,7 @@
 	focus_data.deviation_y = data.deviation_y + dev_offset_y * dam
 	focus_data.dir = data.dir
 	focus_data.target_z = data.target_z
+	focus_data.origin_machine = WEAKREF(src)
 
 	// forward to next device, or fire a narrow-band beam
 	flick("focus_h",src)
@@ -56,9 +57,17 @@
 	else
 		fire_narrow_beam(focus_data)
 
+	// forward heat back to computer
+	var/obj/structure/confinement_beam_generator/control_box/CB = data.origin_machine?.resolve()
+	if(CB && istype(CB,/obj/structure/confinement_beam_generator/control_box))
+		CB.check_focus_temp(internal_heat,damage_temp,data.power_level)
+
 /obj/structure/confinement_beam_generator/focus/process()
 	// If in a valid state, attempt to cool the device using a heat exchanger on either side
 	if(!is_valid_state())
+		return
+
+	if(internal_heat <= 0)
 		return
 
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXA = locate() in get_step(src,turn(dir,90))

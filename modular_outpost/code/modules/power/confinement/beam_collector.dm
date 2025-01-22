@@ -8,10 +8,10 @@ GLOBAL_LIST_INIT(confinement_beam_collectors, list())
 
 /obj/structure/confinement_beam_generator/collector/Initialize(mapload)
 	. = ..()
-	confinement_beam_collectors += src
+	GLOB.confinement_beam_collectors += src
 
 /obj/structure/confinement_beam_generator/collector/Destroy()
-	confinement_beam_collectors -= src
+	GLOB.confinement_beam_collectors -= src
 	. = ..()
 
 // Only needs anchors
