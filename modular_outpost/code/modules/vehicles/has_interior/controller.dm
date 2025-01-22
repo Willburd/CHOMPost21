@@ -201,11 +201,11 @@
 				dir = cached_dir // hold direction...
 
 		// break things we run over, IS A WIDE BOY
-		INVOKE_ASYNC(src, PROC_REF(smash_at_loc), checkm)
+		addtimer(CALLBACK(src,PROC_REF(smash_at_loc), checkm), 0)
 		if(!could_move) crush_mobs_at_loc(checkm)
-		INVOKE_ASYNC(src, PROC_REF(smash_at_loc), checka) // and at --
+		addtimer(CALLBACK(src,PROC_REF(smash_at_loc), checka), 0) // and at --
 		if(!could_move) crush_mobs_at_loc(checka)
-		INVOKE_ASYNC(src, PROC_REF(smash_at_loc), checkb) // -- each side
+		addtimer(CALLBACK(src,PROC_REF(smash_at_loc), checkb), 0) // -- each side
 		if(!could_move) crush_mobs_at_loc(checkb)
 
 		// UNRELENTING VIOLENCE
