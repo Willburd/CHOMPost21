@@ -1,11 +1,11 @@
 /obj/structure/confinement_beam_generator/gen
 	name = "Confinement Beam Generator"
-	desc = "Fires a condensed, narrow-band beam of confined energy."
+	desc = "Fires a condensed, narrow-band beam of confined energy. Takes energy from adjacent inductors, and fires a beam into the focusing chamber."
 	icon_state = "gen"
 	base_icon = "gen"
 
 /obj/structure/confinement_beam_generator/gen/pulse(var/datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF.resolve()
+	var/datum/confinement_pulse_data/data = WF?.resolve()
 	if(!data)
 		return
 	if(data.dir != dir) // must be facing same direction as incoming direction

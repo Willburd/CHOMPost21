@@ -217,6 +217,14 @@ OL|IL|OL
 	if(pos == loc) // Only the middle lens transmits
 		A.confinement_data = WEAKREF(data)
 
+/obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
+	var/turf/T = get_turf(src)
+	if(!T)
+		return -1
+	while(HasAbove(T.z))
+		T = GetAbove(T)
+	return T.z
+
 
 
 // The actual particle beam effects
@@ -229,9 +237,7 @@ OL|IL|OL
 /obj/effect/accelerated_particle/confinment_beam/Moved(atom/old_loc, direction, forced, movetime)
 	. = ..()
 	// Check if we should transmit to the target zlevel
-	if(!confinement_data)
-		return
-	var/datum/confinement_pulse_data/data = confinement_data.resolve()
+	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 	if(!data)
 		return
 	if(movement_range <= 0)

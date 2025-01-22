@@ -5,7 +5,7 @@
 
 /obj/structure/confinement_beam_generator/focus
 	name = "Confinement Beam Focus"
-	desc = "Refracts a narrow-band confinement beam using a complex assembly of super-conducting energy fields."
+	desc = "Refracts a narrow-band confinement beam using a complex assembly of super-conducting energy fields. Interacts with the beams fired from the generation chamber or from a lens."
 	icon_state = "focus"
 	base_icon = "focus"
 
@@ -33,7 +33,7 @@
 	qdel(focus_data)
 
 /obj/structure/confinement_beam_generator/focus/pulse(var/datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF.resolve()
+	var/datum/confinement_pulse_data/data = WF?.resolve()
 	if(!data)
 		return
 	if(data.power_level < minimum_power)

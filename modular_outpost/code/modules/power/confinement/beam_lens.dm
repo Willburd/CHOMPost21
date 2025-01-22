@@ -1,6 +1,6 @@
 /obj/structure/confinement_beam_generator/lens
 	name = "Confinement Beam Lens"
-	desc = "Focuses confined energy beams from narrow-band to wide-band. Requires anchors on both sides for support."
+	desc = "Focuses confined energy beams from narrow-band to wide-band. Requires anchors on both sides for support, and must face correctly in order to function."
 
 // Only needs anchors
 /obj/structure/confinement_beam_generator/lens/process_tool_hit(var/obj/item/O, var/mob/user)
@@ -34,10 +34,7 @@
 	if(istype(O,/obj/effect/accelerated_particle/confinment_beam))
 		// The wideband beams will always be qdelled!
 		var/obj/effect/accelerated_particle/confinment_beam/CB = O
-		if(!CB.confinement_data)
-			qdel(O)
-			return
-		var/datum/confinement_pulse_data/data = CB.confinement_data.resolve()
+		var/datum/confinement_pulse_data/data = CB.confinement_data?.resolve()
 		if(!data)
 			qdel(O)
 			return
@@ -55,7 +52,7 @@
 	base_icon = "lens_center"
 
 /obj/structure/confinement_beam_generator/lens/inner_lens/is_valid_state()
-	/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(src,dir) // Must be facing the focus
+	var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(src,dir) // Must be facing the focus
 	if(!F)
 		return FALSE
 	for(var/D in list(90,-90))
@@ -68,7 +65,7 @@
 	. = ..()
 
 /obj/structure/confinement_beam_generator/lens/inner_lens/pulse(datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF.resolve()
+	var/datum/confinement_pulse_data/data = WF?.resolve()
 	if(!data)
 		return
 	for(var/atom/pos in list( loc, get_step(src,turn(dir,90)), get_step(src,turn(dir,-90))))
@@ -83,6 +80,6 @@
 
 /obj/structure/confinement_beam_generator/lens/outer_lens
 	name = "Confinement Beam Lens Anchor"
-	desc = "Supports a confinement beam lense."
+	desc = "Supports a confinement beam lens."
 	icon_state = "lens_edge"
 	base_icon = "lens_edge"

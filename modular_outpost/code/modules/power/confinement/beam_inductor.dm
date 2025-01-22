@@ -1,6 +1,6 @@
 /obj/structure/confinement_beam_generator/inductor
 	name = "Confinement Beam Inductor"
-	desc = "Feeds electrical power into the beam generator."
+	desc = "Feeds electrical power into the beam generator. Must be directly wired to a power network."
 	icon_state = "inductor"
 	base_icon = "inductor"
 	var/draw_rate = 0.95 // Use up this percent of the surplus power in the grid
@@ -20,3 +20,14 @@
 		return
 
 	return C.powernet.draw_power(power_draw)
+
+// Pulsed by beam_collector
+/obj/structure/confinement_beam_generator/inductor/pulse(datum/weakref/WF)
+	var/datum/confinement_pulse_data/data = WF?.resolve()
+	if(!data)
+		return
+	var/turf/T = get_turf(src)
+	var/obj/structure/cable/C = T.get_cable_node() //check if we have a node cable on the machine turf, the first found is picked
+	if(!C || !C.powernet)
+		return
+	C.powernet.newavail += data.power_level * 0.23 // Need four of these for near full gain
