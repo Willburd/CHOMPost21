@@ -363,12 +363,15 @@ var/global/list/obj/item/communicator/all_communicators = list()
 // Parameters: None
 // Description: Gives ghosts an exonet address based on their key and ghost name.
 /mob/observer/dead/Initialize()
-	. = ..()
+	..()
 	exonet = new(src)
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/mob/observer/dead/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
 	if(client)
-		INVOKE_ASYNC(exonet, TYPE_PROC_REF(/datum/exonet_protocol,make_address),"communicator-[src.client]-[src.client.prefs.real_name]") // Outpost 21 edit - Experimental - Remove sleep()
+		exonet.make_address("communicator-[client]-[client.prefs.real_name]")
 	else
-		INVOKE_ASYNC(exonet, TYPE_PROC_REF(/datum/exonet_protocol,make_address),"communicator-[key]-[src.real_name]") // Outpost 21 edit - Experimental - Remove sleep()
+		exonet.make_address("communicator-[key]-[real_name]")
 
 // Proc: Destroy()
 // Parameters: None
