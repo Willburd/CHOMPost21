@@ -71,7 +71,7 @@
 	if(isliving(M)) // Outpost 21 edit - Ice runtime fix
 		if((M.weakened && prob(10)) || (M.m_intent == "walk" && prob(95))) // Outpost 21 edit - Ice changes
 			return ..()
-		addtimer(CALLBACK(src,PROC_REF(cause_slip),M), 1 * world.tick_lag) // Outpost 21 edit - Experimental - Remove sleep()
+		addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/simulated/floor/outdoors/ice,cause_slip),M), 1 * world.tick_lag, TIMER_DELETE_ME) // Outpost 21 edit - Experimental - Remove sleep()
 // !!! Only call as timer from above !!!
 /turf/simulated/floor/outdoors/ice/proc/cause_slip(var/mob/living/M) // Outpost 21 edit - Experimental - Remove sleep()
 	if(M.weakened == 0)

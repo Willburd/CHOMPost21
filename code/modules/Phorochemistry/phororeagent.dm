@@ -650,7 +650,7 @@ var/induromol_code = rand(1, 50)
 		var/datum/effect/effect/system/foam_spread/soapfoam = new()
 		soapfoam.set_up(12, T, cleaner, 0)
 		soapfoam.start()
-		addtimer(CALLBACK(src,PROC_REF(spawn_soap),T,volume),50) // Outpost 21 edit - Experimental - Remove sleep()
+		addtimer(CALLBACK(src,PROC_REF(spawn_soap),T,volume),5 SECONDS, TIMER_DELETE_ME) // Outpost 21 edit - Experimental - Remove sleep()
 	else
 		usr << span_notice("The solution does not appear to have enough mass to react.")
 

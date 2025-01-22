@@ -21,13 +21,16 @@
 	drop_sound = 'sound/items/drop/component.ogg'
 	pickup_sound = 'sound/items/pickup/component.ogg'
 
-/obj/item/radio/headset/New()
+/obj/item/radio/headset/New() // TODO - Radios need to be moved to Init()
 	..()
 	internal_channels.Cut()
 	if(ks1type)
 		keyslot1 = new ks1type(src)
 	if(ks2type)
 		keyslot2 = new ks2type(src)
+
+/obj/item/radio/headset/Initialize()
+	..()
 	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
 
 /obj/item/radio/headset/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
