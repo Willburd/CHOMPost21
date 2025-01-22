@@ -5,9 +5,11 @@
     icon_state = "door1"
 
 /obj/machinery/door/flesh/Initialize(mapload)
-    // randomize openclose
-    close_door_at = world.time + next_close_wait()
-    . = ..()
+	// randomize openclose
+	. = ..()
+	#ifndef UNIT_TEST
+	addtimer(CALLBACK(src,PROC_REF(handle_living)),next_close_wait())
+	#endif
 
 /obj/machinery/door/flesh/inoperable(var/additional_flags = 0)
     // always works
@@ -18,6 +20,7 @@
 
 /obj/machinery/door/flesh/bullet_act(var/obj/item/projectile/Proj)
     // no damage
+    src.health = src.maxhealth
 
 /obj/machinery/door/flesh/hitby(AM as mob|obj, var/speed=5)
     // no damage
@@ -31,36 +34,31 @@
 
 /obj/machinery/door/flesh/emp_act(severity)
     // immune to
+    src.health = src.maxhealth
 
 /obj/machinery/door/flesh/ex_act(severity)
     // immune to
+    src.health = src.maxhealth
 
 /obj/machinery/door/flesh/blob_act()
     // even you bob
+    src.health = src.maxhealth
 
 /obj/machinery/door/flesh/requiresID()
     return FALSE
 
-/obj/machinery/door/flesh/examine(mob/user)
-    src.health = src.maxhealth // force heal, never show status
-    . = ..()
-
 /obj/machinery/door/flesh/next_close_wait()
-	return rand(200,5000)
+	return rand(5,60) SECONDS
+
+/obj/machinery/door/flesh/proc/handle_living()
+	if(!src.density)
+		INVOKE_ASYNC(src, PROC_REF(close))
+	else
+		INVOKE_ASYNC(src, PROC_REF(open))
+	addtimer(CALLBACK(src, PROC_REF(handle_living)), next_close_wait())
 
 /obj/machinery/door/flesh/process()
-	#ifndef UNIT_TEST
-	if(close_door_at >= 0 && world.time >= close_door_at)
-		close_door_at = -1 // wait till ready
-		if(!src.density)
-			spawn(0)
-				close()
-				close_door_at = world.time + next_close_wait()
-		else
-			spawn(0)
-				open()
-				close_door_at = world.time + next_close_wait()
-	#endif
+	return PROCESS_KILL // not needed, we handle fleshdoors with timers
 
 /obj/machinery/door/flesh/update_icon(var/update_neighbors)
 	cut_overlays()
