@@ -105,10 +105,6 @@ var/list/blob_cores = list()
 	//if(overmind)
 	//	update_icon()
 	point_rate = new_rate
-	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
-
-/turf/space/transit/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
-	toggle_transit(reverse_dir[pushdirection])
 
 /obj/structure/blob/core/Destroy()
 	var/turf/T = get_turf(src)

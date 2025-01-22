@@ -18,8 +18,11 @@
 	var/deadman = FALSE //CHOMPAdd
 
 /obj/item/assembly/signaler/Initialize()
-	. = ..()
-	INVOKE_ASYNC(src, PROC_REF(set_frequency), frequency) // Outpost 21 edit - Experimental - Remove sleep()
+	..()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/obj/item/assembly/signaler/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
+	set_frequency(frequency)
 
 /obj/item/assembly/signaler/activate()
 	if(!process_cooldown())

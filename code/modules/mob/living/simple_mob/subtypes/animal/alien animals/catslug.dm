@@ -766,12 +766,15 @@
 	item_state = "capslug"
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/capslug/Initialize() 		//This is such an awful proc, but if someone wants it better they're welcome to have a go at it.
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/capslug/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = PUB_FREQ
 	mob_radio.ks2type = /obj/item/encryptionkey/heads/captain 		//Might not be able to speak, but the catslug can listen.
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/heads/captain(mob_radio)
-	addtimer(CALLBACK(mob_radio,TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1), 0) // Outpost 21 edit - Experimental - Remove sleep()
+	mob_radio.recalculateChannels(1)
 
 //=============================================================================
 //Admin-spawn only catslugs below - Expect overpowered things & silliness below
@@ -851,14 +854,17 @@
 	player_msg = "You are in the employ of a criminal syndicate hostile to corporate interests. Follow the Mercenary or Commando's orders and assist them in their goals by any means available."
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug/Initialize()
-	. = ..()
+	..()
+	myid.access |= get_all_station_access()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/syndislug/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = SYND_FREQ
 	mob_radio.syndie = 1
 	mob_radio.ks2type = /obj/item/encryptionkey/syndicate
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/syndicate(mob_radio)
-	addtimer(CALLBACK(mob_radio,TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1), 0) // Outpost 21 edit - Experimental - Remove sleep()
-	myid.access |= get_all_station_access()
+	mob_radio.recalculateChannels(1)
 
 //ERT catslug
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug
@@ -895,14 +901,17 @@
 	Think through your actions and make the roleplay immersive! <b>Please remember all rules aside from those without explicit exceptions apply to the ERT.</b>"
 
 /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug/Initialize()
-	. = ..()
+	..()
+	myid.access |= get_all_station_access()
+	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
+
+/mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug/responseslug/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
 	mob_radio = new /obj/item/radio/headset/mob_headset(src)
 	mob_radio.frequency = ERT_FREQ
 	mob_radio.centComm = 1
 	mob_radio.ks2type = /obj/item/encryptionkey/ert
 	mob_radio.keyslot2 = new /obj/item/encryptionkey/ert(mob_radio)
-	addtimer(CALLBACK(mob_radio,TYPE_PROC_REF(/obj/item/radio/headset/mob_headset,recalculateChannels), 1), 0) // Outpost 21 edit - Experimental - Remove sleep()
-	myid.access |= get_all_station_access()
+	mob_radio.recalculateChannels(1)
 
 //Pilot Catslug
 
