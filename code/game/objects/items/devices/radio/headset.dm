@@ -28,12 +28,6 @@
 		keyslot1 = new ks1type(src)
 	if(ks2type)
 		keyslot2 = new ks2type(src)
-
-/obj/item/radio/headset/Initialize()
-	..()
-	return INITIALIZE_HINT_LATELOAD // Outpost 21 edit - Experimental - Remove sleep()
-
-/obj/item/radio/headset/LateInitialize() // Outpost 21 edit - Experimental - Remove sleep()
 	recalculateChannels(1)
 
 /obj/item/radio/headset/Destroy()
@@ -188,20 +182,21 @@
 		if(keyslot2.syndie)
 			src.syndie = 1
 
+	if(!radio_controller)
+		addtimer(CALLBACK(src,PROC_REF(handle_finalize_recalculatechannels),setDescription),3 SECONDS) // Outpost 21 edit - Experimental - Remove sleep()
+	else
+		addtimer(CALLBACK(src,PROC_REF(handle_finalize_recalculatechannels),setDescription),0 SECONDS) // Outpost 21 edit - Experimental - Remove sleep()
+// !!! Only call as timer from above !!!
+/obj/item/radio/headset/proc/handle_finalize_recalculatechannels(var/setDescription = 0)
+	if(!radio_controller)
+		src.name = "broken radio headset"
+		return
 
 	for (var/ch_name in channels)
-		if(!radio_controller)
-			sleep(30) // Waiting for the radio_controller to be created.
-		if(!radio_controller)
-			src.name = "broken radio headset"
-			return
-
 		secure_radio_connections[ch_name] = radio_controller.add_object(src, radiochannels[ch_name],  RADIO_CHAT)
 
 	if(setDescription)
 		setupRadioDescription()
-
-	return
 
 /obj/item/radio/headset/proc/setupRadioDescription()
 	var/radio_text = ""
