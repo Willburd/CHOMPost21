@@ -73,7 +73,7 @@
 			return ..()
 		addtimer(CALLBACK(src,TYPE_PROC_REF(/turf/simulated/floor/outdoors/ice,cause_slip),M), 1 * world.tick_lag, TIMER_DELETE_ME) // Outpost 21 edit - Experimental - Remove sleep()
 // !!! Only call as timer from above !!!
-/turf/simulated/floor/outdoors/ice/proc/cause_slip(var/mob/living/M) // Outpost 21 edit - Experimental - Remove sleep()
+/turf/simulated/floor/outdoors/ice/cause_slip(var/mob/living/M) // Outpost 21 edit - Experimental - Remove sleep()
 	if(M.weakened == 0)
 		to_chat(M, span_warning("You slide across the ice!"))
 	M.SetWeakened(3) // Outpost 21 edit - Ice changes
