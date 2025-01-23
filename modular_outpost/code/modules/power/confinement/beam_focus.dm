@@ -3,6 +3,7 @@
 #define HEAT_OUTPUT_COEF 0.92 // Heat transfer to gas, the total heat is always removed from the focus, but the heat transfered to the gas is multiplied by this.
 #define OFFSET_RAND_MAX 250
 #define MAXHP 100
+#define EXPLODEHEAT T0C + 100000 // Instead of stacking heat forever it'll just explode at this temp
 
 /obj/structure/confinement_beam_generator/focus
 	name = "Confinement Beam Focus"
@@ -93,9 +94,10 @@
 		EXB.network.update = 1
 
 	// Damage and eventually explode
-	if((internal_heat * HEAT_OUTPUT_COEF) >= damage_temp && prob(30) && health > 0)
+	var/true_heat = (internal_heat * HEAT_OUTPUT_COEF)
+	if((true_heat >= damage_temp && prob(30) && health > 0) || true_heat >= EXPLODEHEAT)
 		health -= 1
-		if(health == 0)
+		if(health == 0 || true_heat >= EXPLODEHEAT)
 			explosion(get_turf(src),2,3,5,7)
 			qdel(src)
 		else if(prob(20))
@@ -137,3 +139,4 @@
 #undef YIELD_MULTIPLIER
 #undef HEAT_OUTPUT_COEF
 #undef MAXHP
+#undef EXPLODEHEAT
