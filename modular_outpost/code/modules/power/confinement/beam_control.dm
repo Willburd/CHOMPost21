@@ -26,6 +26,10 @@
 	check_focus_data() // Sets initial temps
 
 /obj/structure/confinement_beam_generator/control_box/Destroy()
+	has_gen = FALSE
+	calibration_lock = FALSE
+	pulse_enabled = FALSE
+	SStgui.close_uis(src)
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 	qdel(data)
@@ -59,6 +63,7 @@
 		if(!G || !G.is_valid_state())
 			found_dir = 0
 			pulse_enabled = FALSE // cancel beam automatically if generator was removed
+			SStgui.try_update_ui(user, src, ui)
 			return
 		has_gen = TRUE
 		// Ready to fire?
@@ -107,6 +112,7 @@
 		has_gen = FALSE
 		calibration_lock = FALSE
 		pulse_enabled = FALSE
+		SStgui.close_uis(src)
 
 /obj/structure/confinement_beam_generator/control_box/attack_hand(user as mob)
 	if(..())
