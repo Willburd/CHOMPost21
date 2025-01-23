@@ -70,10 +70,8 @@ OL|IL|OL
 		return
 	var/obj/structure/confinement_beam_generator/collector/C = locate() in T // Update generator
 	if(C) // Charge a collector if present
-		to_world("UPDATED BEAM : [power_level] - [target_x], [target_y], [target_z]")
 		C.pulse(WEAKREF(src))
 	else // Fire a DEATHBEAM
-		to_world("CUTTING LASER : [power_level] - [target_x], [target_y], [target_z]")
 
 /obj/structure/confinement_beam_generator
 	name = "Confinement Beam Generator"
