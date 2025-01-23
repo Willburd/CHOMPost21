@@ -17,7 +17,7 @@
 		if(I && I.is_valid_state())
 			total_power += I.get_network_power()
 	// Pass the power to the focus, otherwise fire a beam
-	data.power_level = total_power
+	data.power_level = total_power * data.t_rate
 	var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(src,data.dir)
 	if(F && F.is_valid_state())
 		F.pulse(WF)

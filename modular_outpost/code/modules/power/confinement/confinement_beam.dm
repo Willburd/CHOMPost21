@@ -55,18 +55,25 @@ OL|IL|OL
 
 /datum/confinement_pulse_data
 	var/power_level = 1
-	var/deviation_x = 0
-	var/deviation_y = 0
+	var/target_x = 0
+	var/target_y = 0
 	var/dir = NORTH
 	var/target_z = -1
+	var/t_rate = 1 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_z()
 	if(target_z == -1 || power_level == 0)
 		return
-	to_world("UPDATED BEAM : [power_level] - [deviation_x], [deviation_y], [target_z]")
-
-
+	var/turf/T = locate(target_x,target_y,target_z)
+	if(!T)
+		return
+	var/obj/structure/confinement_beam_generator/collector/C = locate() in T // Update generator
+	if(C) // Charge a collector if present
+		to_world("UPDATED BEAM : [power_level] - [target_x], [target_y], [target_z]")
+		C.pulse(WEAKREF(src))
+	else // Fire a DEATHBEAM
+		to_world("CUTTING LASER : [power_level] - [target_x], [target_y], [target_z]")
 
 /obj/structure/confinement_beam_generator
 	name = "Confinement Beam Generator"
@@ -240,6 +247,9 @@ OL|IL|OL
 	// Check if we should transmit to the target zlevel
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 	if(!data)
+		return
+	if(!(data.target_z in using_map.confinement_beam_z_levels))
+		movement_range = 0 // -1 or an invalid Z
 		return
 	if(movement_range <= 0)
 		return

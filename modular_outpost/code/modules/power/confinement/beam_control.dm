@@ -1,3 +1,6 @@
+#define NOTARG "No Target"
+#define NOWATT "0 W"
+
 /obj/structure/confinement_beam_generator/control_box
 	name = "Confinement Control Console"
 	desc = "Controls the confinement beam's power output and destination. Controls the output of a beam generator next to it."
@@ -10,14 +13,17 @@
 	var/calibration_lock = FALSE
 	var/last_temp = 0
 	var/last_max = 0
-	var/last_watt = "0W" // string of wattage
+	var/last_watt = NOWATT // string of wattage
+	var/current_target = NOTARG
+	var/last_health = 0
+	var/max_health = 0
 
 /obj/structure/confinement_beam_generator/control_box/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 	data = new()
 	data.origin_machine = WEAKREF(src)
-	check_focus_temp() // Sets initial temps
+	check_focus_data() // Sets initial temps
 
 /obj/structure/confinement_beam_generator/control_box/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -27,8 +33,10 @@
 /obj/structure/confinement_beam_generator/control_box/process()
 	// If in a valid state, attempt to pulse the beam's machinery
 	has_gen = FALSE
-	last_temp = LERP(last_temp, T20C, 0.1) // Drain temp slowly in UI
-	last_watt = LERP(last_watt, 0, 0.1) // Drain wattage slowly in UI
+	var/turf/T = get_turf(src)
+	var/datum/gas_mixture/A = T.return_air()
+	last_temp = LERP(last_temp, A.temperature, 0.05) // Drain temp in UI
+	last_watt = NOWATT
 	if(!is_valid_state())
 		calibration_lock = FALSE
 		pulse_enabled = FALSE
@@ -52,16 +60,22 @@
 			found_dir = 0
 			pulse_enabled = FALSE // cancel beam automatically if generator was removed
 			return
+		has_gen = TRUE
 		// Ready to fire?
 		if(pulse_enabled && data.target_z != -1)
 			data.dir = found_dir
 			G.pulse(WEAKREF(data))
-		has_gen = TRUE
 
-/obj/structure/confinement_beam_generator/control_box/proc/check_focus_temp(var/temp = T20C,var/max = T0C + 9000, var/watt = 0)
+/obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, var/mhealth = 100)
 	last_temp = temp
 	last_max = max
 
+	last_health = health
+	max_health = mhealth
+
+	last_watt = val_to_watts(watt)
+
+/obj/structure/confinement_beam_generator/control_box/proc/val_to_watts(var/watt)
 	var/units = ""
 	// 10kW and less - Watts
 	if(watt < 10000)
@@ -71,18 +85,14 @@
 		units = "kW"
 		watt = (round(watt/100) / 10)
 	// More than 10MW - MegaWatts
-	else if(watt < 10000000000)
+	else
 		units = "MW"
 		watt = (round(watt/10000) / 100)
-	// More than 100MW - GigaWatts
-	else
-		units = "GW"
-		watt = (round(watt/100000) / 1000)
 
 	if (units == "W")
-		last_watt = "[watt] W"
+		return "[watt] W"
 	else
-		last_watt = "[watt] [units]"
+		return "[watt] [units]"
 
 /obj/structure/confinement_beam_generator/control_box/update_parts_icons()
 	..() // Update self
@@ -124,7 +134,11 @@
 		"target_list" = list(),
 		"last_temp" = last_temp,
 		"max_temp" = last_max,
-		"last_watt" = last_watt
+		"last_watt" = last_watt,
+		"current_target" = current_target,
+		"last_health" = last_health,
+		"max_health" = max_health,
+		"t_rate" = data.t_rate * 100
 	)
 
 	for(var/obj/structure/confinement_beam_generator/collector/C in GLOB.confinement_beam_collectors)
@@ -132,15 +146,22 @@
 		if(T && C.is_valid_state())
 			tgui_data["target_list"] += list( // appending lists would merge it if this wasn't a nested list
 				list(
-					"id" = "[T.x],[T.y],[T.z]",
+					"id" = format_z_id(C),
 					"x" = T.x,
 					"y" = T.y,
 					"z" = T.z,
-					"z_str" = using_map.get_zlevel_name(T.z)
+					"enb" = (T.z in using_map.confinement_beam_z_levels)
 				)
 			)
 
 	return tgui_data
+
+/obj/structure/confinement_beam_generator/control_box/proc/format_z_id(var/obj/structure/confinement_beam_generator/collector/C)
+	var/turf/T = get_turf(C)
+	if(T && C.is_valid_state())
+		var/area/A = get_area(T)
+		return "[A.name] - [T.x], [T.y], [using_map.get_zlevel_name(T.z)]"
+	return null
 
 /obj/structure/confinement_beam_generator/control_box/tgui_act(action, params, datum/tgui/ui)
 	if(..())
@@ -155,16 +176,58 @@
 		if("toggle_beam")
 			pulse_enabled = !pulse_enabled
 			calibration_lock = TRUE
+			if(!pulse_enabled)
+				current_target = NOTARG
+				data.target_x = 0
+				data.target_y = 0
+				data.target_z = -1
 			addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
 			return TRUE
 
 		if("set_z")
 			var/get_id = params["id"]
-			calibration_lock = TRUE
-			pulse_enabled = FALSE
-			data.target_z = 1
-			addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 3 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+			var/get_x = params["x"]
+			var/get_y = params["y"]
+			var/get_z = params["z"]
+			if(get_id == "")
+				if(data.target_z != -1)
+					current_target = NOTARG
+					calibration_lock = TRUE
+					pulse_enabled = FALSE
+					data.target_x = 0
+					data.target_y = 0
+					data.target_z = -1
+					addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+					return TRUE
+				return FALSE
+			// check for data validity by scanning the list for a matching id
+			for(var/obj/structure/confinement_beam_generator/collector/C in GLOB.confinement_beam_collectors)
+				var/turf/T = get_turf(C)
+				if(get_x == T.x && get_y == T.y && get_z == T.z && C.is_valid_state()) // is valid gen?
+					if(!(T.z in using_map.confinement_beam_z_levels))
+						admin_notice("[ui.user] - possible hrefhacks. Passed [get_id] while button was disabled. Beam z destination is forbidden by map datum.")
+						return
+					current_target = format_z_id(C)
+					calibration_lock = TRUE
+					pulse_enabled = FALSE
+					data.target_x = T.x
+					data.target_y = T.y
+					data.target_z = T.z
+					addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 3 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+					return TRUE
+			return FALSE
+
+		if("transmission_rate")
+			var/get_val = params["value"]
+			get_val = CLAMP(get_val,0,100)
+			data.t_rate = get_val / 100
 			return TRUE
+
+		else
+			return FALSE
 
 /obj/structure/confinement_beam_generator/control_box/proc/finish_calibrate()
 	calibration_lock = FALSE
+
+#undef NOTARG
+#undef NOWATT
