@@ -67,7 +67,6 @@ OL|IL|OL
 	var/target_z = -1
 	var/t_rate = 1 // Only used in generator
 	var/datum/weakref/origin_machine = null
-	var/beam_wander_threshold = 0.1
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_z()
 	if(target_z == -1 || power_level == 0)
@@ -104,6 +103,7 @@ OL|IL|OL
 	var/construction_state = 0
 
 	// For focus and inductors
+	var/beam_wander_threshold = 0.1
 	var/dev_offset_x = 0
 	var/dev_offset_y = 0
 	var/internal_heat = T0C
