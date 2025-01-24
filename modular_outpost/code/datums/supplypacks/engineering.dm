@@ -52,3 +52,19 @@
 	containername = "Confinement Beam Lens crate"
 	access = list(access_ce)
 	one_access = TRUE
+
+/datum/supply_pack/eng/engine/confinement_beam_collector
+	name = "Confinement Beam Collector crate"
+	desc = "All the parts needed to set up a confinement beam collector. Requires Chief Engineer access."
+	cost = 90
+	contains = list(
+			/obj/structure/confinement_beam_generator/collector,
+			/obj/structure/confinement_beam_generator/inductor,
+			/obj/structure/confinement_beam_generator/inductor,
+			/obj/structure/confinement_beam_generator/inductor,
+			/obj/structure/confinement_beam_generator/inductor,
+			)
+	containertype = /obj/structure/closet/crate/secure/einstein
+	containername = "Confinement Beam Collector crate"
+	access = list(access_ce)
+	one_access = TRUE

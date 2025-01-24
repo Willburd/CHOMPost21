@@ -53,10 +53,16 @@ OL|IL|OL
 // Check modular_outpost\code\modules\power\confinement\beam_control.dm for initial datum creation.
 // Check modular_outpost\code\modules\power\confinement\beam_focus.dm for how the datum copy happens.
 
+#define EXPLODEHEAT T0C + 100000 // Instead of stacking heat forever it'll just explode at this temp
+#define OFFSET_RAND_MAX 250
+
 /datum/confinement_pulse_data
 	var/power_level = 1
 	var/target_x = 0
 	var/target_y = 0
+	// Drifting targeting
+	var/current_x = -1
+	var/current_y = -1
 	var/dir = NORTH
 	var/target_z = -1
 	var/t_rate = 1 // Only used in generator
@@ -65,13 +71,26 @@ OL|IL|OL
 /datum/confinement_pulse_data/proc/transmit_beam_to_z()
 	if(target_z == -1 || power_level == 0)
 		return
-	var/turf/T = locate(target_x,target_y,target_z)
-	if(!T)
+	// Move beam location slowly toward target instead of instantly
+	if(current_x == -1)
+		current_x = target_x
+	if(current_y == -1)
+		current_y = target_y
+	if(prob(40))
+		if(round(target_x,1) < round(current_x,1))
+			current_x--
+		if(round(target_x,1) > round(current_x,1))
+			current_x++
+		if(round(target_y,1) < round(current_y,1))
+			current_y--
+		if(round(target_y,1) > round(current_y,1))
+			current_y++
+	// Make sure the Z levels above an allowed level are ALSO allowed! It fires from the highest level it can reach!
+	var/turf/T = locate(current_x,current_y,target_z)
+	if(!T || !(T.z in using_map.confinement_beam_z_levels))
 		return
-	var/obj/structure/confinement_beam_generator/collector/C = locate() in T // Update generator
-	if(C) // Charge a collector if present
-		C.pulse(WEAKREF(src))
-	else // Fire a DEATHBEAM
+	var/obj/effect/confinment_beam_incoming/I = new /obj/effect/confinment_beam_incoming(T)
+	I.confinement_data = WEAKREF(src)
 
 /obj/structure/confinement_beam_generator
 	name = "Confinement Beam Generator"
@@ -82,6 +101,16 @@ OL|IL|OL
 	density = TRUE
 	var/base_icon = "" // icon_state for each machine
 	var/construction_state = 0
+
+	// For focus and inductors
+	var/dev_offset_x = 0
+	var/dev_offset_y = 0
+	var/internal_heat = T0C
+	var/max_hp = 100
+	var/health = 100
+	var/damage_temp = T0C + 1400
+	var/damage_alert = FALSE
+	var/critical_alert = FALSE
 
 /obj/structure/confinement_beam_generator/Destroy()
 	construction_state = 0
@@ -216,12 +245,18 @@ OL|IL|OL
 	B.firer = src
 	B.fire(dir2angle(data.dir))
 
-/obj/structure/confinement_beam_generator/proc/fire_wide_beam(var/turf/pos, var/datum/confinement_pulse_data/data)
-	var/obj/effect/accelerated_particle/confinment_beam/A = new /obj/effect/accelerated_particle/confinment_beam(pos, data.dir)
+/obj/structure/confinement_beam_generator/proc/fire_wide_beam(var/turf/pos,var/datum/weakref/WF,var/pass_data = TRUE)
+	var/datum/confinement_pulse_data/data = WF?.resolve()
+	if(!data)
+		return
+	var/obj/effect/confinment_beam/A = new /obj/effect/confinment_beam(pos, data.dir)
 	A.set_dir( data.dir)
-	A.energy = data.power_level
-	if(pos == loc) // Only the middle lens transmits
-		A.confinement_data = WEAKREF(data)
+	if(pass_data) // Only the middle lens transmits
+		A.confinement_data = WF
+	// additional sparkles
+	if(prob(50))
+		var/obj/effect/confinment_beam/field/AW = new /obj/effect/confinment_beam/field(pos, data.dir)
+		AW.set_dir( data.dir)
 
 /obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
 	var/turf/T = get_turf(src)
@@ -231,33 +266,61 @@ OL|IL|OL
 		T = GetAbove(T)
 	return T.z
 
-
-
-// The actual particle beam effects
-/obj/effect/accelerated_particle/confinment_beam
-	icon_state = "particle3"
-	var/datum/weakref/confinement_data = null
-	movement_range = 500
-	energy = 0
-
-/obj/effect/accelerated_particle/confinment_beam/Moved(atom/old_loc, direction, forced, movetime)
-	. = ..()
-	// Check if we should transmit to the target zlevel
-	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-	if(!data)
+/obj/structure/confinement_beam_generator/proc/exchange_heat(var/transfer_coefficient)
+	// Alter deviation of beam
+	if(prob(10))
+		dev_offset_x = rand(-OFFSET_RAND_MAX,OFFSET_RAND_MAX)
+		dev_offset_y = rand(-OFFSET_RAND_MAX,OFFSET_RAND_MAX)
+	// Heat transfer to gas, the total heat is always removed from the focus, but the heat transfered to the gas is multiplied by transfer_coefficient.
+	if(internal_heat <= 0)
 		return
-	if(!(data.target_z in using_map.confinement_beam_z_levels))
-		movement_range = 0 // -1 or an invalid Z
-		return
-	if(movement_range <= 0)
-		return
-	var/at_edge = FALSE
-	if(dir == NORTH || dir == SOUTH)
-		if(y == 0 || y == world.maxy-1)
-			at_edge = TRUE
-	if(dir == EAST || dir == WEST)
-		if(x == 0 || x == world.maxx-1)
-			at_edge = TRUE
-	if(at_edge)
-		data.transmit_beam_to_z()
-		movement_range = 0 // Lets make sure we don't have any recursive/double-sending accidents
+	var/obj/machinery/atmospherics/unary/heat_exchanger/EXA = locate() in get_step(src,turn(dir,90))
+	var/obj/machinery/atmospherics/unary/heat_exchanger/EXB = locate() in get_step(src,turn(dir,-90))
+	var/transfer_ratio = 0.5 // Assume both exchangers
+	if(!EXA || !EXA.network || EXA.air_contents.heat_capacity() <= 0 || !EXA.air_contents.total_moles || EXA.air_contents.temperature > internal_heat * transfer_coefficient)
+		EXA = null
+		transfer_ratio = 1 // Only one exchanger
+	if(!EXB || !EXB.network || EXB.air_contents.heat_capacity() <= 0 || !EXB.air_contents.total_moles || EXB.air_contents.temperature > internal_heat * transfer_coefficient)
+		EXB = null
+		transfer_ratio = 1 // Only one exchanger
+	// Exchange internal heat directly to the gas! If two exchangers, split it evenly, otherwise dump it all into one.
+	if(EXA)
+		EXA.air_contents.add_thermal_energy( EXA.air_contents.get_thermal_energy_change( EXA.air_contents.temperature + (internal_heat * transfer_ratio * transfer_coefficient)) )
+		EXA.network.update = 1
+	if(EXB)
+		EXB.air_contents.add_thermal_energy( EXB.air_contents.get_thermal_energy_change( EXB.air_contents.temperature + (internal_heat * transfer_ratio * transfer_coefficient)) )
+		EXB.network.update = 1
+
+	// Damage and eventually explode
+	var/turf/T = get_turf(src)
+	var/true_heat = (internal_heat * transfer_coefficient)
+	if((true_heat >= damage_temp && prob(30) && health > 0) || true_heat >= EXPLODEHEAT)
+		health -= 1
+		if(!damage_alert)
+			damage_alert = TRUE
+			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", "Engineering")
+			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) emergency engineering announcement.")
+
+		var/dam = 1 - (health / max_hp)
+		if(dam > 0.05 && !critical_alert)
+			critical_alert = TRUE
+			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! BEAM IS MOBILE!", "Confinement Beam Monitor")
+			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) CRITICAL engineering announcement.")
+
+		if(health == 5)
+			global_announcer.autosay("DANGER: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" SUPER CRITICAL!", "Confinement Beam Monitor")
+			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) SELF DESTRUCTING engineering announcement.")
+
+		if(health == 0 || true_heat >= EXPLODEHEAT)
+			explosion(get_turf(src),2,3,5,7)
+			qdel(src)
+
+	// If heat exchange was successful then clear the current heat, the limiter should be the gas itself.
+	if(EXA || EXB)
+		var/datum/gas_mixture/A = T.return_air()
+		internal_heat = A.temperature // Reset to ambient for next cycle
+		if(internal_heat < 0)
+			internal_heat = 0
+
+#undef EXPLODEHEAT
+#undef OFFSET_RAND_MAX

@@ -63,7 +63,7 @@
 		if(!G || !G.is_valid_state())
 			found_dir = 0
 			pulse_enabled = FALSE // cancel beam automatically if generator was removed
-			SStgui.try_update_ui(user, src, ui)
+			SStgui.update_uis(src)
 			return
 		has_gen = TRUE
 		// Ready to fire?
@@ -108,11 +108,13 @@
 /obj/structure/confinement_beam_generator/control_box/process_tool_hit(var/obj/item/O, var/mob/user)
 	. = ..()
 	// force deactivate some stuff
+	has_gen = FALSE
+	calibration_lock = FALSE
+	pulse_enabled = FALSE
 	if(construction_state != 3)
-		has_gen = FALSE
-		calibration_lock = FALSE
-		pulse_enabled = FALSE
 		SStgui.close_uis(src)
+	else // construction should instantly check for generator
+		process()
 
 /obj/structure/confinement_beam_generator/control_box/attack_hand(user as mob)
 	if(..())
@@ -156,11 +158,15 @@
 					"x" = T.x,
 					"y" = T.y,
 					"z" = T.z,
-					"enb" = (T.z in using_map.confinement_beam_z_levels)
+					"enb" = validate_turf(T)
 				)
 			)
 
 	return tgui_data
+
+/obj/structure/confinement_beam_generator/control_box/proc/validate_turf(var/turf/T)
+	var/area/A = get_area(T)
+	return (T.z in using_map.confinement_beam_z_levels) && !istype(A,/area/shuttle) && !istype(A,/area/turbolift)
 
 /obj/structure/confinement_beam_generator/control_box/proc/format_z_id(var/obj/structure/confinement_beam_generator/collector/C)
 	var/turf/T = get_turf(C)
@@ -184,9 +190,13 @@
 			calibration_lock = TRUE
 			if(!pulse_enabled)
 				current_target = NOTARG
+				// Reset Targeting
 				data.target_x = 0
 				data.target_y = 0
 				data.target_z = -1
+				// Reset aim
+				data.current_x = -1
+				data.current_y = -1
 			addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
 			return TRUE
 
@@ -200,9 +210,13 @@
 					current_target = NOTARG
 					calibration_lock = TRUE
 					pulse_enabled = FALSE
+					// Reset Targeting
 					data.target_x = 0
 					data.target_y = 0
 					data.target_z = -1
+					// Reset aim
+					data.current_x = -1
+					data.current_y = -1
 					addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
 					return TRUE
 				return FALSE
@@ -210,15 +224,19 @@
 			for(var/obj/structure/confinement_beam_generator/collector/C in GLOB.confinement_beam_collectors)
 				var/turf/T = get_turf(C)
 				if(get_x == T.x && get_y == T.y && get_z == T.z && C.is_valid_state()) // is valid gen?
-					if(!(T.z in using_map.confinement_beam_z_levels))
+					if(!validate_turf(T))
 						admin_notice("[ui.user] - possible hrefhacks. Passed [get_id] while button was disabled. Beam z destination is forbidden by map datum.")
 						return
 					current_target = format_z_id(C)
 					calibration_lock = TRUE
 					pulse_enabled = FALSE
+					// Reset Targeting
 					data.target_x = T.x
 					data.target_y = T.y
-					data.target_z = T.z
+					data.target_z = C.find_highest_z() // fire from above to it!
+					// Reset aim
+					data.current_x = -1
+					data.current_y = -1
 					addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 3 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
 					return TRUE
 			return FALSE
