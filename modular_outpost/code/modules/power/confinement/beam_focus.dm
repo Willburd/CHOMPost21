@@ -31,7 +31,7 @@
 	// copy it!
 	var/dam = 1 - (health / max_hp)
 	focus_data.power_level = data.power_level * YIELD_MULTIPLIER // increase yield per each lense
-	if(dam > 0.05) // damaged enough
+	if(dam > beam_wander_threshold) // damaged enough
 		focus_data.target_x = data.target_x + (dev_offset_x * dam)
 		focus_data.target_y = data.target_y + (dev_offset_y * dam)
 	else

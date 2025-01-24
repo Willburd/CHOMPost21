@@ -67,6 +67,7 @@ OL|IL|OL
 	var/target_z = -1
 	var/t_rate = 1 // Only used in generator
 	var/datum/weakref/origin_machine = null
+	var/beam_wander_threshold = 0.1
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_z()
 	if(target_z == -1 || power_level == 0)
@@ -305,7 +306,7 @@ OL|IL|OL
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) emergency engineering announcement.")
 
 		var/dam = 1 - (health / max_hp)
-		if(warns && dam > 0.05 && !critical_alert)
+		if(warns && dam > beam_wander_threshold && !critical_alert)
 			critical_alert = TRUE
 			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! BEAM IS MOBILE!", "Confinement Beam Monitor")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) CRITICAL engineering announcement.")

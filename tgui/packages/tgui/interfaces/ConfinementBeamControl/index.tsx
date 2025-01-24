@@ -1,10 +1,10 @@
 import { useBackend } from '../../backend';
 import {
   Button,
+  Knob,
   LabeledList,
   ProgressBar,
   Section,
-  Knob,
 } from '../../components';
 import { Window } from '../../layouts';
 import { Calibrating } from './Calibrating';
@@ -102,14 +102,19 @@ export const ConfinementBeamControl = (props) => {
               Release Target
             </Button>
             <LabeledList>
-              {target_list.map((dat, i) => (
-                <LabeledList.Item label={dat.id}>
+              {target_list.map((value, key) => (
+                <LabeledList.Item key={key} label={value.id}>
                   <Button.Confirm
                     disabled={
-                      calibrating || !has_gen || !dat.enb || target_z !== -1
+                      calibrating || !has_gen || !value.enb || target_z !== -1
                     }
                     onClick={() =>
-                      act('set_z', { id: dat.id, x: dat.x, y: dat.y, z: dat.z })
+                      act('set_z', {
+                        id: value.id,
+                        x: value.x,
+                        y: value.y,
+                        z: value.z,
+                      })
                     }
                   >
                     Set
