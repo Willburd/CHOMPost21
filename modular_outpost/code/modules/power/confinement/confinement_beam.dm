@@ -292,22 +292,25 @@ OL|IL|OL
 		EXB.network.update = 1
 
 	// Damage and eventually explode
+	var/warns = FALSE
+	if(istype(src,/obj/structure/confinement_beam_generator/focus))
+		warns = TRUE
 	var/turf/T = get_turf(src)
 	var/true_heat = (internal_heat * transfer_coefficient)
 	if((true_heat >= damage_temp && prob(30) && health > 0) || true_heat >= EXPLODEHEAT)
 		health -= 1
-		if(!damage_alert)
+		if(warns && !damage_alert)
 			damage_alert = TRUE
 			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", "Engineering")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) emergency engineering announcement.")
 
 		var/dam = 1 - (health / max_hp)
-		if(dam > 0.05 && !critical_alert)
+		if(warns && dam > 0.05 && !critical_alert)
 			critical_alert = TRUE
 			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! BEAM IS MOBILE!", "Confinement Beam Monitor")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) CRITICAL engineering announcement.")
 
-		if(health == 5)
+		if(warns && health == 5)
 			global_announcer.autosay("DANGER: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" SUPER CRITICAL!", "Confinement Beam Monitor")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) SELF DESTRUCTING engineering announcement.")
 

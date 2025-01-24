@@ -12,12 +12,14 @@
 		return
 	// Get the status of the inductors, and if they have any power to give us
 	var/total_power = 0
+	var/datum/powernet/scan_network = null
 	for(var/D in list(90,-90))
 		var/obj/structure/confinement_beam_generator/inductor/I = locate() in get_step(src,turn(data.dir,D))
 		if(I && I.is_valid_state())
-			total_power += I.get_network_power()
+			scan_network = I.get_cable_network(scan_network) // prevent double dipping
+			total_power += I.get_network_power(scan_network, data.t_rate)
 	// Pass the power to the focus, otherwise fire a beam
-	data.power_level = total_power * data.t_rate
+	data.power_level = total_power
 	var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(src,data.dir)
 	if(F && F.is_valid_state())
 		F.pulse(WF)

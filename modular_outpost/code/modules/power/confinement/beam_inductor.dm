@@ -5,7 +5,6 @@
 	desc = "Feeds electrical power into the beam generator. Must be directly wired to a power network. Also used to extract energy from a beam collector, requires adjacent heat exchange pipe for cooling if used with a collector."
 	icon_state = "inductor"
 	base_icon = "inductor"
-	var/draw_rate = 0.95 // Use up this percent of the surplus power in the grid
 	var/minimum_power = 1000
 
 /obj/structure/confinement_beam_generator/inductor/Initialize(mapload)
@@ -22,20 +21,24 @@
 		return
 	exchange_heat(0.32 )
 
-/obj/structure/confinement_beam_generator/inductor/proc/get_network_power()
+/obj/structure/confinement_beam_generator/inductor/proc/get_cable_network(var/datum/powernet/prev_network)
 	if(!is_valid_state())
-		return
-
+		return null
 	var/turf/T = get_turf(src)
 	var/obj/structure/cable/C = T.get_cable_node() //check if we have a node cable on the machine turf, the first found is picked
 	if(!C || !C.powernet)
-		return
+		return null
+	if(prev_network && C.powernet == prev_network) // Has already drawn from this network
+		return null
+	return C.powernet
 
-	var/power_draw = C.powernet.last_surplus() * draw_rate
+/obj/structure/confinement_beam_generator/inductor/proc/get_network_power(var/datum/powernet/draw_network, var/draw_rate)
+	if(!draw_network)
+		return 0
+	var/power_draw = draw_network.last_surplus() * draw_rate
 	if(power_draw < minimum_power)
-		return
-
-	return C.powernet.draw_power(power_draw)
+		return 0
+	return draw_network.draw_power(power_draw)
 
 // Pulsed by beam_collector
 /obj/structure/confinement_beam_generator/inductor/pulse(datum/weakref/WF)
