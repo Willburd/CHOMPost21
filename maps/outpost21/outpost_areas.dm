@@ -2163,7 +2163,7 @@
 	ambience = AMBIENCE_SPACE
 
 /area/offworld/asteroidyard/external/get_gravity()
-	return 0
+	return FALSE
 
 /area/offworld/asteroidyard/external/yardzone
 	icon_state = "construction"
@@ -2286,6 +2286,18 @@
 	ambience = AMBIENCE_HANGAR
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/offworld/confinementbeam/exterior
+	name = "\improper Confinement Beam Exterior"
+	icon_state = "red2"
+	sound_env = SPACE
+	ambience = AMBIENCE_OUTPOST21_SPACE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	flags = AREA_BLOCK_GHOST_SIGHT
+	has_gravity = FALSE
+	base_turf = /turf/space
+
+/area/offworld/confinementbeam/exterior/get_gravity()
+	return FALSE
 
 //
 //-----------------------------------------------------------------------

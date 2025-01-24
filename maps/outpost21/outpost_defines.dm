@@ -150,6 +150,7 @@
 										// The asteroid yard's exterior does not need scrubbers and vents
 										/area/offworld/asteroidyard/external,
 										/area/offworld/asteroidyard/external/yardzone,
+										/area/offworld/confinementbeam/exterior,
 										// Actual unit test exceptions
 										/area/comms,
 										/area/muriki/tramstation/waste,
