@@ -11,7 +11,10 @@
 		T.demote_to = mytype
 
 // This proc removes the topmost layer.
-/turf/simulated/floor/outdoors/proc/demote()
+/turf/proc/demote() // Outpost 21 edit - Resolves a timer runtime if a turf demotes after changing type
+	return
+
+/turf/simulated/floor/outdoors/demote()
 	if(!demote_to)
 		return // Cannot demote further.
 
