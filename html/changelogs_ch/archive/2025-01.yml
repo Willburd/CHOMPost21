@@ -239,3 +239,7 @@
   - rscadd: smallchubbybelly-l_hand and -r_hand
   - image: improvements to hippo_upperjaw-head, hippo_lowerjaw-head, bovine_snout-head,
       bovine_nose-head
+2025-01-24:
+  CHOMPStation2StaffMirrorBot:
+  - balance: adjusted the concussion maul for better power efficiency and slightly
+      faster attack cooldown, and added a detailed info-desc
