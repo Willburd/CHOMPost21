@@ -61,7 +61,8 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Jil Pack",					/datum/event/jil_infestation,			3, 		list(DEPARTMENT_ENGINEERING = 1,DEPARTMENT_SECURITY = 1)	, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Phone Spiders",			/datum/event/phone_spiders,				5,		list(DEPARTMENT_SECURITY = 3)								, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Moss",				/datum/event/spacemoss, 				8,		list(JOB_BOTANIST = 2)										, FALSE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			2,		list(DEPARTMENT_ENGINEERING = 3)							, FALSE)
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			2,		list(DEPARTMENT_ENGINEERING = 3)							, FALSE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Random Borg Laws",			/datum/event/law_reset,					1, 		list(DEPARTMENT_ENGINEERING = 1, DEPARTMENT_SECURITY = 1)	, TRUE, min_jobs = list(JOB_CYBORG = 1)),
 	)
 	add_disabled_events(list(
 	))
@@ -92,6 +93,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Fire",		/datum/event/electrical_fire				,5	, list(DEPARTMENT_ENGINEERING = 3,JOB_CYBORG = 3)							, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Security Advisement",	/datum/event/security_drill					,5	, list(DEPARTMENT_SECURITY = 3,JOB_CYBORG = 1) 								, FALSE, min_jobs = list(DEPARTMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Septic Explosion",	/datum/event/septic_explosion				,1	, list(DEPARTMENT_ENGINEERING = 1) 											, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,1	, list(DEPARTMENT_ENGINEERING = 1, DEPARTMENT_SECURITY = 1)					, FALSE, min_jobs = list(JOB_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "All Is Clean",		/datum/event/allisclean						,0  , list()																	, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Engineering",	/datum/event/bluespace_shelling/engineering	,0	, list()																	, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Science",		/datum/event/bluespace_shelling/science		,0	, list()																	, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
