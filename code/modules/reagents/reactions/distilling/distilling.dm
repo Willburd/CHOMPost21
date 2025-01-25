@@ -187,6 +187,7 @@
 	temp_range = list(T0C + 90, T0C + 150) // Outpost 21 edit - range changed for bunsen burner
 
 // Unique
+/* Outpost 21 edit - Disabled making brutejuice, it's exclusively a xenobio reward now
 /decl/chemical_reaction/distilling/berserkjuice
 	name = "Distilling Brute Juice"
 	id = "distill_brutejuice"
@@ -204,6 +205,7 @@
 		var/turf/T = get_turf(holder.my_atom)
 		explosion(T, -1, rand(-1, 1), rand(1,2), rand(3,5))
 	return
+*/
 
 /decl/chemical_reaction/distilling/cryogel
 	name = "Distilling Cryogellatin"
