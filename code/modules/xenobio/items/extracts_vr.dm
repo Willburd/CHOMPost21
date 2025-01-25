@@ -1410,7 +1410,7 @@
 	id = "m_ruby_brute_juice"
 	result = REAGENT_ID_BERSERKMED
 	required_reagents = list(REAGENT_ID_WATER = 5)
-	result_amount = 30
+	result_amount = 20 // Outpost 21 edit - Reduced from 30
 	required = /obj/item/slime_extract/ruby
 
 
