@@ -38,14 +38,14 @@
 /datum/gear/fluff/ESHUI_bronzemedal
 	display_name = "ESHUI Meritorious Defense Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/sol/eshui
-	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy")
-	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti")
+	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","Lowpowermia")
+	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita")
 
 /datum/gear/fluff/ESHUI_medalval
 	display_name = "ESHUI Medal of Valor"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sol/eshui
-	ckeywhitelist = list("darklord92","remthebold")
-	character_name = list("Tesum Shari","Trashfire")
+	ckeywhitelist = list("darklord92","remthebold","ozydev","astraether")
+	character_name = list("Tesum Shari","Trashfire","Cracker","Astra Ether")
 
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
@@ -56,14 +56,14 @@
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
-	ckeywhitelist = list("ozydev","synxplushy")
-	character_name = list("Raine Rattlewag","Cracker","Zeeshi")
+	ckeywhitelist = list("ozydev","synxplushy","remthebold","Cameron653")
+	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova")
 
 /datum/gear/fluff/ESHUI_rankpin
 	display_name = "ESHUI Officer's Qualification Pin"
 	path = /obj/item/clothing/accessory/solgov/specialty/officer/eshui
-	ckeywhitelist = list("remthebold","seagha","nadyr")
-	character_name = list("Schale","Aiektaaknell","Janik Vam","Zeeshi","Ed'Reith Foley", "Taaa")
+	ckeywhitelist = list("remthebold","seagha","nadyr","ozydev")
+	character_name = list("Schale","Aiektaaknell","Janik Vam","Zeeshi","Ed'Reith Foley", "Taaa","Cracker")
 
 /datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
 	display_name = "ESHUI Captaincy Medal"
@@ -74,11 +74,11 @@
 /datum/gear/fluff/ESHUI_whiteheart
 	display_name = "ESHUI Medical Action Award"
 	path = /obj/item/clothing/accessory/medal/solgov/heart/eshui
-	ckeywhitelist = list("seagha")
-	character_name = list("Schale")
+	ckeywhitelist = list("seagha","darklord92","LumiTheFox")
+	character_name = list("Schale","Qdel","Nach Uligo")
 
 /datum/gear/fluff/ESHUI_servemed
-	display_name = "ESHUI ESHUI Service Medal"
+	display_name = "ESHUI Service Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/gold/sun/eshui
 	ckeywhitelist = list("seagha")
 	character_name = list("Aiektaaknell")
@@ -87,8 +87,8 @@
 	display_name = "ESHUI Half-Melted Medal of Heroism"
 	path = /obj/item/clothing/accessory/medal/gold/heroismmelted/eshui
 	description = "An extremely rare golden medal awarded only by high ranking officials. To receive such a medal is the highest honor and as such, very few exist... this one looks charred and half melted."
-	ckeywhitelist = list("nadyr")
-	character_name = list("Taaa")
+	ckeywhitelist = list("nadyr","remthebold")
+	character_name = list("Taaa","Trashfire")
 
 //  0-9 CKEYS
 
@@ -165,6 +165,12 @@
 //  Q CKEYS
 
 //  R CKEYS
+/datum/gear/fluff/trashfire_coffee
+	display_name = "Trashfire's Coffee Mug"
+	path = /obj/item/reagent_containers/food/drinks/bluespace_coffee
+	description = "Dreamt up in a strange feverish dream, this coffee cup seems to have been heavily modified with a variety of unlikely parts and wires, and never seems to run out of coffee. Truly the differance between madmen and genius is success."
+	ckeywhitelist = list("remthebold")
+	character_name = list("Trashfire")
 
 //  S CKEYS
 

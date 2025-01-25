@@ -88,8 +88,13 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	if(player_has_activated)
 		bordom_counter--
 	if(bordom_counter <= 0)
-		// Could be any landmark, this is just good for our own map - Outpost 21
 		bordom_counter = rand(4 MINUTES,8 MINUTES)
+		// release from stasis
+		if(istype(loc,/obj/structure/stasis_cage))
+			var/obj/structure/stasis_cage/C = loc
+			C.release()
+			return
+		// Could be any landmark, this is just good for our own map - Outpost 21
 		var/list/jump_list = list()
 		for(var/obj/effect/landmark/R in landmarks_list)
 			if(R.name == "redexit")
