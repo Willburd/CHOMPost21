@@ -38,7 +38,7 @@
 /datum/gear/fluff/ESHUI_bronzemedal
 	display_name = "ESHUI Meritorious Defense Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/sol/eshui
-	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","Lowpowermia")
+	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia")
 	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita")
 
 /datum/gear/fluff/ESHUI_medalval
@@ -56,7 +56,7 @@
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
-	ckeywhitelist = list("ozydev","synxplushy","remthebold","Cameron653")
+	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653")
 	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova")
 
 /datum/gear/fluff/ESHUI_rankpin
@@ -74,7 +74,7 @@
 /datum/gear/fluff/ESHUI_whiteheart
 	display_name = "ESHUI Medical Action Award"
 	path = /obj/item/clothing/accessory/medal/solgov/heart/eshui
-	ckeywhitelist = list("seagha","darklord92","LumiTheFox")
+	ckeywhitelist = list("seagha","darklord92","lumithefox")
 	character_name = list("Schale","Qdel","Nach Uligo")
 
 /datum/gear/fluff/ESHUI_servemed
