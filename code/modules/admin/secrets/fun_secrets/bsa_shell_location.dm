@@ -12,7 +12,7 @@
 			return
 		// For every round fired!
 		max_rounds = rounds
-		var/cur_delay = rand(7 SECONDS, 11 SECONDS)
+		var/cur_delay = rand(3 SECONDS, 8 SECONDS)
 		while(rounds > 0)
 			var/x = tgui_input_text( user, "coord X:", "X Coord for shot [max_rounds - rounds]")
 			x = text2num(x)
@@ -39,12 +39,27 @@
 		global_announcer.autosay(message, "Central Command Fire Control", "Command")
 		message = "Reloading, preparing additional artillery strike."
 		global_announcer.autosay(message, "Central Command Fire Control", "Common")
-	addtimer(CALLBACK(src, PROC_REF(shelling), x, y, z), rand(2 SECONDS, 3 SECONDS), TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(shelling), x, y, z), rand(4 SECONDS, 6 SECONDS), TIMER_DELETE_ME)
 
 /datum/admin_secret_item/fun_secret/shell_location/proc/shelling(var/x,var/y,var/z)
 	var/turf/T = locate(x,y,z)
-	if(T)
-		explosion( T, 3, 5, 7, 5)
+	if(!T)
+		return
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	s.set_up(2, 1, T)
+	s.start()
+	var/obj/structure/ship_munition/disperser_charge/C = new /obj/structure/ship_munition/disperser_charge/explosive(T)
+	addtimer(CALLBACK(src, PROC_REF(detonate), WEAKREF(C)), rand(1,5), TIMER_DELETE_ME)
+
+/datum/admin_secret_item/fun_secret/shell_location/proc/detonate(var/datum/weakref/WF)
+	var/obj/structure/ship_munition/disperser_charge/C = WF?.resolve()
+	if(!C)
+		return
+	var/turf/T = get_turf(C)
+	qdel(C)
+	if(!T)
+		return
+	explosion( T, 3, 5, 7, 5)
 
 /datum/admin_secret_item/fun_secret/shell_location/proc/finish_message()
 	global_announcer.autosay("Cease Fire. All clear, all clear. Assess affect for reengagement.", "Central Command Fire Control", "Common")
