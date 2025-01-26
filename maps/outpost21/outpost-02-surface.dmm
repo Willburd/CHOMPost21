@@ -7609,7 +7609,7 @@
 "wRV" = (/obj/effect/floor_decal/corner/red{dir = 10},/turf/simulated/floor/tiled,/area/security/brig/lowobservation)
 "wRY" = (/obj/effect/floor_decal/borderfloor{dir = 10},/obj/effect/floor_decal/corner/orange/border{dir = 10},/obj/effect/landmark/holiday_event_spawn,/turf/simulated/floor/tiled/dark,/area/maintenance/disposal)
 "wSa" = (/obj/effect/mine/frag,/obj/item/strangerock,/turf/simulated/floor/plating,/area/mine/unexplored/muriki/mountaineast)
-"wSq" = (/obj/item/radio/intercom{dir = 1; name = "Station Intercom (General)"; pixel_y = 21},/obj/machinery/iv_drip,/obj/effect/floor_decal/corner/blue/border{dir = 1},/obj/item/reagent_containers/blood/prelabeled/OMinus,/turf/simulated/floor/tiled/milspec/sterile,/area/medical/surgery)
+"wSq" = (/obj/item/radio/intercom{dir = 1; name = "Station Intercom (General)"; pixel_y = 21},/obj/effect/floor_decal/corner/blue/border{dir = 1},/obj/machinery/oxygen_pump/mobile/stabilizer,/turf/simulated/floor/tiled/milspec/sterile,/area/medical/surgery)
 "wSs" = (/obj/structure/cable/orange{d1 = 2; d2 = 5; icon_state = "2-5"},/turf/simulated/floor/tiled/dark,/area/security/tactical)
 "wSx" = (/obj/machinery/disposal,/obj/effect/floor_decal/spline/fancy/wood{dir = 10},/obj/structure/disposalpipe/trunk{dir = 1},/obj/item/radio/intercom{dir = 8; name = "Station Intercom (General)"; pixel_x = -21},/turf/simulated/floor/wood,/area/crew_quarters/medbreak)
 "wSy" = (/obj/machinery/light{dir = 4},/obj/structure/sign/department/cargo_dock{pixel_x = 30},/turf/simulated/open,/area/quartermaster/office)
