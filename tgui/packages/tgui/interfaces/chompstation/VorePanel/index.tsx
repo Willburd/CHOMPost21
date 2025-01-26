@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useBackend } from 'tgui/backend';
-import { Button, Flex, Icon, NoticeBox, Tabs } from 'tgui/components';
 import { Window } from 'tgui/layouts';
-import { Stack } from 'tgui-core/components';
+import { Button, Icon, NoticeBox, Stack, Tabs } from 'tgui-core/components';
 
 import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
@@ -44,7 +43,7 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *   liq_rec, liq_giv,
  *
  * To VoreUserPreferences return
- *         <Flex.Item basis="49%">
+ *         <Stack.Item basis="49%">
  *        <Button
  *          onClick={() => act("toggle_liq_rec")}
  *          icon={liq_rec ? "toggle-on" : "toggle-off"}
@@ -56,8 +55,8 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *          >
  *            {liq_rec ? "Receiving Liquids Allowed" : "Do Not Allow Receiving Liquids"}
  *          </Button>
- *      </Flex.Item>
- *      <Flex.Item basis="49%">
+ *      </Stack.Item>
+ *      <Stack.Item basis="49%">
  *        <Button
  *          onClick={() => act("toggle_liq_giv")}
  *          icon={liq_giv ? "toggle-on" : "toggle-off"}
@@ -69,11 +68,11 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  *          >
  *            {liq_giv ? "Taking Liquids Allowed" : "Do Not Allow Taking Liquids"}
  *          </Button>
- *      </Flex.Item>
+ *      </Stack.Item>
  *
  * NEW EDITS 2/25/21: COLORED BELLY OVERLAYS
  * LINE 5:
- *import { Box, Button, ByondUi, Flex, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
+ *import { Box, Button, ByondUi, Stack, Collapsible, Icon, LabeledList, NoticeBox, Section, Tabs } from "../components";
  *
  * LINE 172 - <Window width={700} height={800} resizable>
  *
@@ -81,14 +80,14 @@ import { VoreUserPreferences } from './VoreUserPreferences';
  * mapRef,
  *
  * LINE 604 - <Section title="Belly Fullscreens Preview and Coloring">
- *           <Flex direction="row">
+ *           <Stack direction="row">
  *             <Box backgroundColor={belly_fullscreen_color} width="20px" height="20px" />
  *             <Button
  *               icon="eye-dropper"
  *               onClick={() => act("set_attribute", { attribute: "b_fullscreen_color", val: null })}>
  *               Select Color
  *             </Button>
- *           </Flex>
+ *           </Stack>
  *           <ByondUi
  *             style={{
  *               width: '200px',
@@ -211,14 +210,14 @@ export const VorePanel = () => {
           <Stack.Item>
             {(unsaved_changes && (
               <NoticeBox danger>
-                <Flex>
-                  <Flex.Item basis="90%">Warning: Unsaved Changes!</Flex.Item>
-                  <Flex.Item>
+                <Stack>
+                  <Stack.Item basis="90%">Warning: Unsaved Changes!</Stack.Item>
+                  <Stack.Item>
                     <Button icon="save" onClick={() => act('saveprefs')}>
                       Save Prefs
                     </Button>
-                  </Flex.Item>
-                  <Flex.Item>
+                  </Stack.Item>
+                  <Stack.Item>
                     <Button
                       icon="download"
                       onClick={() => {
@@ -228,8 +227,8 @@ export const VorePanel = () => {
                     >
                       Save Prefs & Export Selected Belly
                     </Button>
-                  </Flex.Item>
-                </Flex>
+                  </Stack.Item>
+                </Stack>
               </NoticeBox>
             )) ||
               ''}

@@ -1,5 +1,6 @@
-import { useBackend } from '../../backend';
-import { Box, Divider, Section } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Divider, Section } from 'tgui-core/components';
+
 import { MenuPageChanger } from './MenuParts';
 import { Data } from './types';
 

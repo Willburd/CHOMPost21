@@ -1,12 +1,13 @@
-import { useBackend } from '../../backend';
+import { useBackend } from 'tgui/backend';
+import { Window } from 'tgui/layouts';
 import {
   Button,
   Knob,
   LabeledList,
   ProgressBar,
   Section,
-} from '../../components';
-import { Window } from '../../layouts';
+} from 'tgui-core/components';
+
 import { Calibrating } from './Calibrating';
 import { NoGen } from './NoGen';
 import { Data } from './types';

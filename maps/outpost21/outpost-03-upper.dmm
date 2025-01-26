@@ -711,7 +711,7 @@
 "djC" = (/turf/simulated/floor/outdoors/snow/roofing/muriki,/area/muriki/rooftop/civilian)
 "dkj" = (/obj/item/coin/gold,/obj/item/coin/gold,/obj/item/coin/gold,/obj/item/card/id/gold/captain/spare/fakespare,/turf/simulated/floor/indoorrocks/muriki{icon_state = "rock_grey"},/area/muriki/crystal)
 "dkl" = (/obj/machinery/atmospherics/unary/vent_pump/on{dir = 1},/turf/simulated/floor/tiled,/area/quartermaster/cargrecycle)
-"dkE" = (/obj/structure/railing,/obj/structure/railing{dir = 4},/obj/machinery/power/tesla_coil/pre_mapped,/obj/structure/cable/yellow{d2 = 8; dir = 4},/turf/simulated/floor/outdoors/snow/roofing/muriki,/area/muriki/rooftop/security)
+"dkE" = (/obj/structure/railing,/obj/structure/railing{dir = 4},/obj/machinery/power/tesla_coil/pre_mapped,/obj/structure/cable/yellow{d2 = 8; icon_state = "0-8"},/turf/simulated/floor/outdoors/snow/roofing/muriki,/area/muriki/rooftop/security)
 "dkR" = (/obj/structure/railing{dir = 1},/obj/machinery/power/grounding_rod/pre_mapped,/turf/simulated/floor/outdoors/snow/roofing/muriki,/area/muriki/rooftop/civilian)
 "dlj" = (/obj/structure/table/glass,/obj/machinery/firealarm{dir = 8; pixel_x = -26},/obj/item/paper_bin,/obj/item/pen,/obj/effect/floor_decal/corner/blue/full{dir = 8},/obj/item/coin/silver,/turf/simulated/floor/tiled/white,/area/medical/patient_c)
 "dlr" = (/obj/effect/floor_decal/corner/purple/full{dir = 8},/obj/machinery/alarm{dir = 4; pixel_x = -26},/obj/machinery/disposal,/obj/structure/disposalpipe/trunk,/turf/simulated/floor/tiled/white,/area/rnd/research/phoronics/clean)
