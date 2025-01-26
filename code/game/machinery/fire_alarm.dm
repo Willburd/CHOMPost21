@@ -228,12 +228,13 @@ FIRE ALARM
 	if(!(working))
 		return
 	var/area/area = get_area(src)
+	if(!firewarn && !alarms_hidden) // Outpost 21 edit engineering announce
+		global_announcer.autosay( "Tripped [area]", "Fire Alarm Monitor", "Engineering")
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
 		FA.soundloop.start() // CHOMPEdit: Soundloop
 		FA.firewarn = TRUE // CHOMPEdit: Soundloop Fix
 	update_icon()
-	global_announcer.autosay( "Tripped [area]", "Fire Alarm Monitor", "Engineering") // Outpost 21 edit engineering announce
 	// playsound(src, 'sound/machines/airalarm.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS) // CHOMPEdit: Disable as per soundloop
 	if(user)
 		log_game("[user] triggered a fire alarm at [COORD(src)]")

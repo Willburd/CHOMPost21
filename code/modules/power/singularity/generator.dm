@@ -20,6 +20,15 @@
 /obj/machinery/the_singularitygen/process()
 	var/turf/T = get_turf(src)
 	if(src.energy >= 200)
+		// Outpost 21 edit begin - Prevent atmo griefing
+		if(T && creation_type == /obj/singularity && SSplanets.z_to_planet.len >= T.z)
+			var/datum/planet/P = SSplanets.z_to_planet[T.z]
+			if(P)
+				admin_notice(span_danger("Singularity generation attempted on planet [P.name]"))
+				src.energy = 0
+				visible_message("[src] flashes and refuses to generate a singularity while on [P.name]!")
+				return
+		// Outpost 21 edit end - Prevent atmo griefing
 		new creation_type(T, 50)
 		if(src) qdel(src)
 

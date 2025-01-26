@@ -64,6 +64,7 @@
 							NETWORK_PRISON,
 							NETWORK_SECURITY,
 							NETWORK_INTERROGATION,
+							NETWORK_TELECOM,
 							NETWORK_OUTSIDE
 							)
 	secondary_networks = list(

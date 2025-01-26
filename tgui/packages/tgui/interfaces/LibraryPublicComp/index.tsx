@@ -1,7 +1,7 @@
+import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
-import { Flex } from 'tgui-core/components';
+import { Stack } from 'tgui-core/components';
 
-import { useBackend } from '../../backend';
 import { LibraryMainMenu } from './Menu';
 import { MenuArcane } from './MenuArcane';
 import { MenuArchiveDownload } from './MenuArchiveDownload';
@@ -21,14 +21,14 @@ export const LibraryPublicComp = (props) => {
   return (
     <Window width={710} height={720}>
       <Window.Content>
-        <Flex>
-          <Flex.Item basis="33%">
+        <Stack>
+          <Stack.Item basis="33%">
             <LibraryMainMenu />
-          </Flex.Item>
-          <Flex.Item basis="66%">
+          </Stack.Item>
+          <Stack.Item basis="66%">
             <MenuPage />
-          </Flex.Item>
-        </Flex>
+          </Stack.Item>
+        </Stack>
       </Window.Content>
     </Window>
   );

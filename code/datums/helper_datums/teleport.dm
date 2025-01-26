@@ -3,7 +3,8 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 /obj/item/storage/pouch/holding,
 /obj/item/storage/belt/utility/holding,
 /obj/item/storage/belt/medical/holding,
-/obj/item/clothing/accessory/storage/bluespace // Outpost 21 edit - missing bluespace item
+/obj/item/clothing/accessory/storage/bluespace, // Outpost 21 edit - missing bluespace item
+/obj/item/storage/bag/ore/holding, // Outpost 21 edit - missing bluespace item
 )
 
 //wrapper
