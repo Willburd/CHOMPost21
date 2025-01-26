@@ -228,7 +228,7 @@ FIRE ALARM
 	if(!(working))
 		return
 	var/area/area = get_area(src)
-	if(!FA.firewarn && !alarms_hidden) // Outpost 21 edit engineering announce
+	if(!firewarn && !alarms_hidden) // Outpost 21 edit engineering announce
 		global_announcer.autosay( "Tripped [area]", "Fire Alarm Monitor", "Engineering")
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
