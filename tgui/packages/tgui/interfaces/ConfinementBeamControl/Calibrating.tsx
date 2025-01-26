@@ -1,4 +1,4 @@
-import { Box, Dimmer, Icon } from '../../components';
+import { Box, Dimmer, Icon } from 'tgui-core/components';
 
 export const Calibrating = () => {
   return (
@@ -7,9 +7,9 @@ export const Calibrating = () => {
       <br />
       <Box color="average">
         <h1>
-          <Icon name="radiation" />
+          <Icon name="atom" />
           &nbsp;Calibrating Beam&nbsp;
-          <Icon name="radiation" />
+          <Icon name="atom" />
         </h1>
       </Box>
     </Dimmer>

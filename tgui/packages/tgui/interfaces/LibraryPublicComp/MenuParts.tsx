@@ -1,5 +1,6 @@
-import { useBackend } from '../../backend';
-import { Box, Button } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Box, Button } from 'tgui-core/components';
+
 import { Data } from './types';
 
 export const MenuPageChanger = (props) => {

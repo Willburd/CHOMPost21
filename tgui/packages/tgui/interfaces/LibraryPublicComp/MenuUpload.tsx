@@ -1,5 +1,6 @@
-import { useBackend } from '../../backend';
-import { Button, Divider, Section } from '../../components';
+import { useBackend } from 'tgui/backend';
+import { Button, Divider, Section } from 'tgui-core/components';
+
 import { Data } from './types';
 
 export const MenuUpload = (props) => {
