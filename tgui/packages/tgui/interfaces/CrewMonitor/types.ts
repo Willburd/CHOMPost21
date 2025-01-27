@@ -5,6 +5,7 @@ export type Data = {
   isAI: BooleanLike;
   map_levels: number[];
   crewmembers: crewmember[];
+  ymult: number; // Outpost 21 edit - Wide map support
 };
 
 export type crewmember = {
