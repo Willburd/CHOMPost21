@@ -84,9 +84,11 @@
 	hud_state = "taser"
 	//Damage will be handled on the MOB side, to prevent window shattering.
 
+/* Outpost 21 edit - Removed duplicate def
 /obj/item/projectile/energy/electrode/strong
 	agony = 55
 	hud_state = "taser"
+*/
 
 /obj/item/projectile/energy/electrode/stunshot
 	name = "stunshot"
@@ -316,7 +318,8 @@
 */
 
 /obj/item/projectile/energy/electrode/strong
-	agony = 70
+	agony = 100 // Outpost 21 edit - Stun revolver from 70 to 100 agony damage
+	speed = 2.2 // Outpost 21 edit - Slower projectile for stun revolver
 	hud_state = "taser"
 
 /obj/item/projectile/energy
