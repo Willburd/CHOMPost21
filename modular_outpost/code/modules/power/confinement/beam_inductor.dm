@@ -5,7 +5,7 @@
 	desc = "Feeds electrical power into the beam generator. Must be directly wired to a power network. Also used to extract energy from a beam collector, requires adjacent heat exchange pipe for cooling if used with a collector."
 	icon_state = "inductor"
 	base_icon = "inductor"
-	var/minimum_power = 1000
+	VAR_PRIVATE/minimum_power = 1000
 
 /obj/structure/confinement_beam_generator/inductor/Initialize(mapload)
 	. = ..()

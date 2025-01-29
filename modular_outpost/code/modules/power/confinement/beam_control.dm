@@ -6,17 +6,17 @@
 	desc = "Controls the confinement beam's power output and destination. Controls the output of a beam generator next to it."
 	icon_state = "control_box"
 	base_icon = "control_box"
-	var/found_dir = 0
-	var/datum/confinement_pulse_data/data
-	var/has_gen = FALSE
-	var/pulse_enabled = FALSE
-	var/calibration_lock = FALSE
-	var/last_temp = 0
-	var/last_max = 0
-	var/last_watt = NOWATT // string of wattage
-	var/current_target = NOTARG
-	var/last_health = 0
-	var/max_health = 0
+	VAR_PRIVATE/found_dir = 0
+	VAR_PRIVATE/datum/confinement_pulse_data/data
+	VAR_PRIVATE/has_gen = FALSE
+	VAR_PRIVATE/pulse_enabled = FALSE
+	VAR_PRIVATE/calibration_lock = FALSE
+	VAR_PRIVATE/last_temp = 0
+	VAR_PRIVATE/last_max = 0
+	VAR_PRIVATE/last_watt = NOWATT // string of wattage
+	VAR_PRIVATE/current_target = NOTARG
+	VAR_PRIVATE/last_health = 0
+	VAR_PRIVATE/max_health = 0
 
 /obj/structure/confinement_beam_generator/control_box/Initialize(mapload)
 	. = ..()

@@ -7,8 +7,8 @@
 	icon_state = "focus"
 	base_icon = "focus"
 
-	var/minimum_power = 30000 // Same as an emitter
-	var/datum/confinement_pulse_data/focus_data // Because each focus results in a modified beam...
+	VAR_PRIVATE/minimum_power = 30000 // Same as an emitter
+	VAR_PRIVATE/datum/confinement_pulse_data/focus_data // Because each focus results in a modified beam...
 
 /obj/structure/confinement_beam_generator/focus/Initialize(mapload)
 	. = ..()
