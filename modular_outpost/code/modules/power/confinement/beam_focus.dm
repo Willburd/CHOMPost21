@@ -1,4 +1,4 @@
-#define BEAM_HEAT_DIVISOR 3000 // Must be very high, or you can hook the hotline up to a thermal generator and scavenge more energy than you put in!
+#define BEAM_HEAT_DIVISOR 30000 // Must be very high, or you can hook the hotline up to a thermal generator and scavenge more energy than you put in!
 #define YIELD_MULTIPLIER 1.068 // Energy is multiplied by this every time a pulse passes through a focus.
 
 /obj/structure/confinement_beam_generator/focus

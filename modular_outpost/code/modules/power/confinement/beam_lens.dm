@@ -31,6 +31,9 @@
 
 /obj/structure/confinement_beam_generator/lens/Crossed(O)
 	. = ..()
+	if(istype(O,/obj/effect/confinment_beam/field))
+		qdel(O)
+		return
 	if(istype(O,/obj/effect/confinment_beam))
 		// The wideband beams will always be qdelled!
 		var/obj/effect/confinment_beam/CB = O
@@ -45,6 +48,8 @@
 				F.pulse(CB.confinement_data)
 			else
 				fire_narrow_beam(data)
+		CB.movement_range = 0
+		CB.confinement_data = null
 		qdel(O)
 
 /obj/structure/confinement_beam_generator/lens/inner_lens

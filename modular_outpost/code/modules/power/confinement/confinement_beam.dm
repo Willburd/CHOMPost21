@@ -277,21 +277,17 @@ OL|IL|OL
 		return
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXA = locate() in get_step(src,turn(dir,90))
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXB = locate() in get_step(src,turn(dir,-90))
-	var/transfer_ratio = 0.5 // Assume both exchangers
-	if(!EXA || !EXA.network || EXA.air_contents.heat_capacity() <= 0 || !EXA.air_contents.total_moles || EXA.air_contents.temperature > internal_heat * transfer_coefficient)
+	if(!EXA || !EXA.network || EXA.air_contents.heat_capacity() <= 0 || !EXA.air_contents.total_moles)
 		EXA = null
-		transfer_ratio = 1 // Only one exchanger
-	if(!EXB || !EXB.network || EXB.air_contents.heat_capacity() <= 0 || !EXB.air_contents.total_moles || EXB.air_contents.temperature > internal_heat * transfer_coefficient)
+	if(!EXB || !EXB.network || EXB.air_contents.heat_capacity() <= 0 || !EXB.air_contents.total_moles)
 		EXB = null
-		transfer_ratio = 1 // Only one exchanger
 	// Exchange internal heat directly to the gas! If two exchangers, split it evenly, otherwise dump it all into one.
-	if(EXA)
-		EXA.air_contents.add_thermal_energy( EXA.air_contents.get_thermal_energy_change( EXA.air_contents.temperature + (internal_heat * transfer_ratio * transfer_coefficient)) )
-		EXA.network.update = 1
-	if(EXB)
-		EXB.air_contents.add_thermal_energy( EXB.air_contents.get_thermal_energy_change( EXB.air_contents.temperature + (internal_heat * transfer_ratio * transfer_coefficient)) )
-		EXB.network.update = 1
-
+	if(prob(50))
+		use_exchanger(EXA,transfer_coefficient)
+		use_exchanger(EXB,transfer_coefficient)
+	else
+		use_exchanger(EXB,transfer_coefficient)
+		use_exchanger(EXA,transfer_coefficient)
 	// Damage and eventually explode
 	var/warns = FALSE
 	if(istype(src,/obj/structure/confinement_beam_generator/focus))
@@ -319,12 +315,16 @@ OL|IL|OL
 			explosion(get_turf(src),2,3,5,7)
 			qdel(src)
 
-	// If heat exchange was successful then clear the current heat, the limiter should be the gas itself.
-	if(EXA || EXB)
-		var/datum/gas_mixture/A = T.return_air()
-		internal_heat = A.temperature // Reset to ambient for next cycle
-		if(internal_heat < 0)
-			internal_heat = 0
+/obj/structure/confinement_beam_generator/proc/use_exchanger(var/obj/machinery/atmospherics/unary/heat_exchanger/EXA,var/transfer_coefficient)
+	if(!EXA)
+		return
+	var/transfer_amount = internal_heat - EXA.air_contents.temperature
+	if(transfer_amount > 0)
+		EXA.air_contents.add_thermal_energy( EXA.air_contents.get_thermal_energy_change( EXA.air_contents.temperature + (transfer_amount * transfer_coefficient)))
+		EXA.network.update = 1
+		internal_heat -= transfer_amount
+	if(internal_heat < 0)
+		internal_heat = 0
 
 #undef EXPLODEHEAT
 #undef OFFSET_RAND_MAX

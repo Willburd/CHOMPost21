@@ -33,7 +33,7 @@
 		var/mob/living/L = A
 		if(L.is_incorporeal())
 			return
-		var/shock_damage = min(rand(90,140),rand(40,100))
+		var/shock_damage = min(rand(90,140),rand(40,200))
 		L.electrocute_act(shock_damage, src, 1, BP_TORSO)
 		var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 		if(data && data.power_level > 100000 && prob(CLAMP(data.power_level / 1000000,0,100)))

@@ -1,4 +1,4 @@
-#define BEAM_HEAT_DIVISOR 100000
+#define BEAM_HEAT_DIVISOR 50000
 
 /obj/structure/confinement_beam_generator/inductor
 	name = "Confinement Beam Inductor"
