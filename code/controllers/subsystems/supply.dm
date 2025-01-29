@@ -13,6 +13,8 @@ SUBSYSTEM_DEF(supply)
 	var/points_per_slip = 2
 	var/points_per_money = 8 // Outpost 21 edit - changed from 0.02 to 8, matches cargopoint vendor. Taxes cash exports to avoid exploits. // 1 point for $50
 	var/cash_tax = 0.05 //  Outpost 21 edit - Amount REMAINING after taxing. We have higher money conversion so exports are more valuable, and taxes on raw cash export
+	var/watts_sold = 0 // Outpost 21 edit - selling excess power
+	var/points_per_watt = 10 MEGAWATTS // Outpost 21 edit - amount of watts needed to get a supply point
 	//control
 	var/ordernum = 0						// Start at zero, it's per-shift tracking
 	var/list/shoppinglist = list()			// Approved orders

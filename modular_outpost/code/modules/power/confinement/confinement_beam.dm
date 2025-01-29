@@ -64,7 +64,7 @@ OL|IL|OL
 	var/current_x = -1
 	var/current_y = -1
 	var/dir = NORTH
-	var/target_z = -1
+	var/target_z = -1 // Beam to no level
 	var/t_rate = 1 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
@@ -85,12 +85,56 @@ OL|IL|OL
 			current_y--
 		if(round(target_y,1) > round(current_y,1))
 			current_y++
+	if(target_z == 0) // BEAM TO CENTCOM
+		transmit_beam_to_centcom()
+		return
 	// Make sure the Z levels above an allowed level are ALSO allowed! It fires from the highest level it can reach!
 	var/turf/T = locate(current_x,current_y,target_z)
 	if(!T || !(T.z in using_map.confinement_beam_z_levels))
 		return
 	var/obj/effect/confinment_beam_incoming/I = new /obj/effect/confinment_beam_incoming(T)
 	I.confinement_data = WEAKREF(src)
+
+/datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
+	if(current_x != current_x || current_y != current_y)
+		return // Stop making mistakes
+	var/org_wattage = SSsupply.watts_sold
+	SSsupply.watts_sold += power_level * 0.92 // Sell to centcom
+	var/new_wattage = SSsupply.watts_sold
+
+	// Get points
+	if(FLOOR(org_wattage / SSsupply.points_per_watt,1) != FLOOR(new_wattage / SSsupply.points_per_watt,1))
+		SSsupply.points += 1
+
+	// Give rewards/notices
+	if(check_sold_wattage(100 MEGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("100 total Megawatts of excess power sold!", "Confinement Beam Monitor", "Engineering")
+		SSsupply.points += 25
+	if(check_sold_wattage(500 MEGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("500 total Megawatts of excess power sold!", "Confinement Beam Monitor", "Engineering")
+		SSsupply.points += 50
+	if(check_sold_wattage(1 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("1 total gigawatt of excess power sold!", "Confinement Beam Monitor", "Engineering")
+		SSsupply.points += 100
+	if(check_sold_wattage(100 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("100 total gigawatt of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		SSsupply.points += 200
+	if(check_sold_wattage(500 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("What are you doing? 500 total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		SSsupply.points += 300
+	if(check_sold_wattage(1000 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("Holy shit. 1000 total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		SSsupply.points += 500
+	if(check_sold_wattage(1000000 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("HOW!? 1 million total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		SSsupply.points += 1000
+
+/datum/confinement_pulse_data/proc/check_sold_wattage(var/threshold,var/org_wattage,var/new_wattage)
+	if(new_wattage >= threshold && org_wattage < threshold)
+		return TRUE
+	return FALSE
+
+
 
 /obj/structure/confinement_beam_generator
 	name = "Confinement Beam Generator"

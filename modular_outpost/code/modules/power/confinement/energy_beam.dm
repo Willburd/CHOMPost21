@@ -53,9 +53,10 @@
 	make_effects()
 	// Check if we should transmit to the target zlevel
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-	if(data)
+	if(data && data.target_z != 0) // 0 sends to centcom
 		if(!(data.target_z in using_map.confinement_beam_z_levels))
 			movement_range = 0 // -1 or an invalid Z
+			qdel(src)
 			return
 	var/at_edge = FALSE
 	if(dir == NORTH || dir == SOUTH)
