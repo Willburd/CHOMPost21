@@ -156,6 +156,7 @@
 				prob(2);/obj/item/material/butterfly/switchblade,
 				prob(2);/obj/item/clothing/accessory/knuckledusters,
 				prob(2);/obj/item/reagent_containers/syringe/drugs,
+				prob(2);/obj/item/reagent_containers/glass/beaker/wheymax, // outpost 21 WHEYMAXING
 				prob(1);/obj/item/material/knife/tacknife,
 				prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 				prob(1);/obj/item/beartrap,

@@ -305,6 +305,7 @@
 	var/path = pick(prob(6);/obj/item/storage/pill_bottle/paracetamol,
 					prob(4);/obj/item/storage/pill_bottle/happy,
 					prob(4);/obj/item/storage/pill_bottle/zoom,
+					prob(4);/obj/item/reagent_containers/glass/beaker/wheymax, // outpost 21 WHEYMAXING
 					prob(4);/obj/item/seeds/ambrosiavulgarisseed,
 					// prob(4);/obj/item/gun/energy/sizegun, // outpost 21 no easy sizeguns
 					// prob(4);/obj/item/slow_sizegun, // outpost 21 no easy sizeguns
