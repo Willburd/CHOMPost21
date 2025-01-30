@@ -443,19 +443,15 @@
 
 				// Outpost 21 edit begin - make computers merge with others beside it when constructed!
 				B.update_icon()
-				var/left = turn(B.dir, 90)
-				var/right = turn(B.dir, -90)
-				var/turf/L = get_step(B, left)
-				var/turf/R = get_step(B, right)
-				var/obj/machinery/computer/LC = locate() in L
-				var/obj/machinery/computer/RC = locate() in R
+				var/obj/machinery/computer/LC = locate() in get_step(B, turn(B.dir, 90))
+				var/obj/machinery/computer/RC = locate() in get_step(B, turn(B.dir, -90))
 				if(LC)
 					LC.update_icon()
 				if(RC)
-					LC.update_icon()
+					RC.update_icon()
 				// Outpost 21 edit end
-				
-				
+
+
 				qdel(src)
 				return
 
