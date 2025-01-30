@@ -9,8 +9,8 @@
 	idle_power_usage = 5
 	active_power_usage = 50
 	circuit = /obj/item/circuitboard/industrial_reagent_pump
-	var/filter_side = -1 // L
-	var/filter_reagent_id = ""
+	VAR_PROTECTED/filter_side = -1 // L
+	VAR_PRIVATE/filter_reagent_id = ""
 
 	possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60)
 	default_max_vol = 60 // smoll to match pipes
@@ -69,7 +69,11 @@
 /obj/machinery/reagent_refinery/filter/attack_hand(mob/user)
 	set_filter()
 
+/obj/machinery/reagent_refinery/filter/proc/get_filter_side()
+	return filter_side
+
 /obj/machinery/reagent_refinery/filter/verb/set_filter()
+	PRIVATE_PROC(TRUE)
 	set name = "Set Filter Chemical"
 	set category = "Object"
 	set src in view(1)
@@ -123,6 +127,7 @@
 	update_icon()
 
 /obj/machinery/reagent_refinery/filter/verb/flip_filter()
+	PRIVATE_PROC(TRUE)
 	set name = "Flip Filter Direction"
 	set category = "Object"
 	set src in view(1)

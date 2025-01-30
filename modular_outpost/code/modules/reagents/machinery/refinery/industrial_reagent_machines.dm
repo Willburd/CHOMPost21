@@ -1,7 +1,7 @@
 /obj/machinery/reagent_refinery
-	var/default_max_vol = 120
-	var/amount_per_transfer_from_this = 120
-	var/possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60,80,100,120)
+	VAR_PROTECTED/default_max_vol = 120
+	VAR_PROTECTED/amount_per_transfer_from_this = 120
+	VAR_PROTECTED/possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60,80,100,120)
 
 /obj/machinery/reagent_refinery/Initialize(mapload)
 	. = ..()
@@ -66,6 +66,7 @@
 
 
 /obj/machinery/reagent_refinery/verb/set_APTFT() //set amount_per_transfer_from_this
+	PROTECTED_PROC(TRUE)
 	set name = "Set transfer amount"
 	set category = "Object"
 	set src in view(1)
@@ -89,6 +90,7 @@
 	return amount
 
 /obj/machinery/reagent_refinery/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target, var/source_forward_dir, var/filter_id = "")
+	PROTECTED_PROC(TRUE)
 	if(RT.total_volume <= 0 || !anchored || !target.anchored)
 		return 0
 	if(active_power_usage > 0 && !can_use_power_oneoff(active_power_usage))

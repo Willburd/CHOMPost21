@@ -10,7 +10,7 @@
 	active_power_usage = 0
 	circuit = /obj/item/circuitboard/industrial_reagent_hub
 	default_max_vol = 0
-	var/wait_delay = 4 SECONDS
+	VAR_PRIVATE/wait_delay = 4 SECONDS
 
 /obj/machinery/reagent_refinery/hub/Initialize()
 	. = ..()
@@ -52,7 +52,7 @@
 			if(istype(other,/obj/machinery/reagent_refinery/filter))
 				var/obj/machinery/reagent_refinery/filter/filt = other
 				var/check_dir = 0
-				if(filt.filter_side == 1)
+				if(filt.get_filter_side() == 1)
 					check_dir = turn(filt.dir, 270)
 				else
 					check_dir = turn(filt.dir, 90)

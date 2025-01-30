@@ -9,11 +9,11 @@
 	idle_power_usage = 5
 	active_power_usage = 500
 	circuit = /obj/item/circuitboard/industrial_reagent_furnace
-	var/filter_side = -1 // L
-	var/filter_reagent_id = ""
+	VAR_PROTECTED/filter_side = -1 // L
+	VAR_PRIVATE/filter_reagent_id = ""
 
 	default_max_vol = 60
-	var/obj/item/reagent_containers/beaker = null // Safer than retooling all of reagent code to support a second reagent var inside this one object
+	VAR_PRIVATE/obj/item/reagent_containers/beaker = null // Safer than retooling all of reagent code to support a second reagent var inside this one object
 
 /obj/machinery/reagent_refinery/furnace/alt
 	filter_side = 1 // R
@@ -138,6 +138,7 @@
 	set_filter()
 
 /obj/machinery/reagent_refinery/furnace/verb/set_filter()
+	PRIVATE_PROC(TRUE)
 	set name = "Set Sintering Chemical"
 	set category = "Object"
 	set src in view(1)
