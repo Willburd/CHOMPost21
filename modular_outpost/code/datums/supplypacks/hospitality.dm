@@ -9,7 +9,6 @@
 	containername = "Hookah crate"
 
 /datum/supply_pack/randomised/hospitality/wheymax
-	num_contained = 1
 	contains = list(
 			/obj/item/reagent_containers/glass/beaker/wheymax,
 			/obj/item/reagent_containers/glass/beaker/wheymax,
