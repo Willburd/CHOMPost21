@@ -76,8 +76,7 @@
 					if(force_canister || (RL.volume >= 500 && !force_bottle))
 						CD = new /obj/item/reagent_containers/chem_canister(src)
 						var/obj/item/reagent_containers/chem_canister/CHEM = CD
-						CHEM.setLabel(RL.name)
-						CHEM.loaded_reagent = RL.id
+						CHEM.set_canister(RL.name,RL.id)
 					else if(RL.volume > 0)
 						CD = new /obj/item/reagent_containers/glass/bottle(src)
 						CD.name = "[RL.name] bottle"
