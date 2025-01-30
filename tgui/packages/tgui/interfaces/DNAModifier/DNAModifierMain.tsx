@@ -2,15 +2,15 @@ import { useBackend } from 'tgui/backend';
 import {
   Box,
   Button,
+  Flex,
   Icon,
   Knob,
   LabeledList,
   Section,
-  Stack,
   Tabs,
 } from 'tgui-core/components';
-import { BooleanLike } from 'tgui-core/react';
 
+// import { BooleanLike } from 'tgui-core/react';
 import { operations, rejuvenatorsDoses } from './constants';
 import { DNAModifierBlocks } from './DNAModifierBlocks';
 import { DNAModifierMainBuffers } from './DNAModifierMainBuffers';

@@ -1,5 +1,6 @@
+/* eslint react/no-danger: "off" */
 import { useBackend } from '../backend';
-import { Box, Button, NoticeBox, LabeledList, Section } from '../components';
+import { Box, Button, LabeledList, NoticeBox, Section } from '../components';
 import { Window } from '../layouts';
 
 export const PublicLibrary = (props, context) => {
@@ -48,7 +49,10 @@ export const PublicLibrary = (props, context) => {
               </Section>
               <Section title={searchmode}>
                 {search.map((Key) => (
-                  <Button onClick={() => act('search', { data: Key })}>
+                  <Button
+                    key={key}
+                    onClick={() => act('search', { data: Key })}
+                  >
                     {Key}
                   </Button>
                 ))}
