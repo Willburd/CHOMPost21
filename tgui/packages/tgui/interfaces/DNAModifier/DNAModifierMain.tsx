@@ -1,4 +1,4 @@
-import { useBackend } from '../../backend';
+import { useBackend } from 'tgui/backend';
 import {
   Box,
   Button,
@@ -8,7 +8,9 @@ import {
   LabeledList,
   Section,
   Tabs,
-} from '../../components';
+} from 'tgui-core/components';
+
+// import { BooleanLike } from 'tgui-core/react';
 import { operations, rejuvenatorsDoses } from './constants';
 import { DNAModifierBlocks } from './DNAModifierBlocks';
 import { DNAModifierMainBuffers } from './DNAModifierMainBuffers';
@@ -23,25 +25,25 @@ export const DNAModifierMain = (props /* : {isDNAInvalid: BooleanLike} */) => {
   if (!hasOccupant) {
     return (
       <Section flexGrow>
-        <Flex height="100%">
-          <Flex.Item grow="1" align="center" textAlign="center" color="label">
+        <Stack height="100%">
+          <Stack.Item grow align="center" textAlign="center" color="label">
             <Icon name="user-slash" mb="0.5rem" size={5} />
             <br />
             No occupant in DNA modifier.
-          </Flex.Item>
-        </Flex>
+          </Stack.Item>
+        </Stack>
       </Section>
     );
   } else if (props.isDNAInvalid) {
     return (
       <Section flexGrow>
-        <Flex height="100%">
-          <Flex.Item grow="1" align="center" textAlign="center" color="label">
+        <Stack height="100%">
+          <Stack.Item grow align="center" textAlign="center" color="label">
             <Icon name="user-slash" mb="0.5rem" size={5} />
             <br />
             No operation possible on this subject.
-          </Flex.Item>
-        </Flex>
+          </Stack.Item>
+        </Stack>
       </Section>
     );
   }
