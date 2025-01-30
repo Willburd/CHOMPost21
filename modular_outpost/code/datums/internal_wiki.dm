@@ -11,37 +11,71 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	return TRUE
 
 /datum/internal_wiki/main
-	var/list/pages = list()
+	VAR_PRIVATE/list/pages = list()
 
-	var/list/ores = list()
-	var/list/materials = list()
-	var/list/smashers = list()
+	VAR_PRIVATE/list/ores = list()
+	VAR_PRIVATE/list/materials = list()
+	VAR_PRIVATE/list/smashers = list()
 
-	var/list/foodreact = list()
-	var/list/drinkreact = list()
-	var/list/phororeact = list()
-	var/list/chemreact = list()
-	var/list/botseeds = list()
+	VAR_PRIVATE/list/foodreact = list()
+	VAR_PRIVATE/list/drinkreact = list()
+	VAR_PRIVATE/list/phororeact = list()
+	VAR_PRIVATE/list/chemreact = list()
+	VAR_PRIVATE/list/botseeds = list()
 
-	var/list/foodrecipe = list()
-	var/list/drinkrecipe = list()
+	VAR_PRIVATE/list/foodrecipe = list()
+	VAR_PRIVATE/list/drinkrecipe = list()
 
-	var/list/spoilerore = list()
-	var/list/spoilermat = list()
-	var/list/spoilersmasher = list()
-	var/list/spoilerreact = list()
-	var/list/spoilerbotseeds = list()
+	VAR_PRIVATE/list/spoilerore = list()
+	VAR_PRIVATE/list/spoilermat = list()
+	VAR_PRIVATE/list/spoilersmasher = list()
+	VAR_PRIVATE/list/spoilerreact = list()
+	VAR_PRIVATE/list/spoilerbotseeds = list()
 
-	var/list/catalogs = list()
+	VAR_PRIVATE/list/catalogs = list()
 
-	var/list/searchcache_ore = list()
-	var/list/searchcache_material = list()
-	var/list/searchcache_smasher = list()
-	var/list/searchcache_foodrecipe = list()
-	var/list/searchcache_drinkrecipe = list()
-	var/list/searchcache_chemreact = list()
-	var/list/searchcache_catalogs = list()
-	var/list/searchcache_botseeds = list()
+	VAR_PRIVATE/list/searchcache_ore = list()
+	VAR_PRIVATE/list/searchcache_material = list()
+	VAR_PRIVATE/list/searchcache_smasher = list()
+	VAR_PRIVATE/list/searchcache_foodrecipe = list()
+	VAR_PRIVATE/list/searchcache_drinkrecipe = list()
+	VAR_PRIVATE/list/searchcache_chemreact = list()
+	VAR_PRIVATE/list/searchcache_catalogs = list()
+	VAR_PRIVATE/list/searchcache_botseeds = list()
+
+/datum/internal_wiki/main/proc/get_page_food(var/search)
+	return foodrecipe[search]
+/datum/internal_wiki/main/proc/get_page_drink(var/search)
+	return drinkrecipe[search]
+/datum/internal_wiki/main/proc/get_page_chem(var/search)
+	return chemreact[search]
+/datum/internal_wiki/main/proc/get_page_seed(var/search)
+	return botseeds[search]
+/datum/internal_wiki/main/proc/get_page_catalog(var/search)
+	return catalogs[search]
+/datum/internal_wiki/main/proc/get_page_material(var/search)
+	return materials[search]
+/datum/internal_wiki/main/proc/get_page_particle(var/search)
+	return smashers[search]
+/datum/internal_wiki/main/proc/get_page_ore(var/search)
+	return ores[search]
+
+/datum/internal_wiki/main/proc/get_searchcache_food(var/appliance)
+	return searchcache_foodrecipe[appliance]
+/datum/internal_wiki/main/proc/get_searchcache_drink()
+	return searchcache_drinkrecipe
+/datum/internal_wiki/main/proc/get_searchcache_chem()
+	return searchcache_chemreact
+/datum/internal_wiki/main/proc/get_searchcache_seed()
+	return searchcache_botseeds
+/datum/internal_wiki/main/proc/get_searchcache_catalog()
+	return searchcache_catalogs
+/datum/internal_wiki/main/proc/get_searchcache_material()
+	return searchcache_material
+/datum/internal_wiki/main/proc/get_searchcache_particle()
+	return searchcache_smasher
+/datum/internal_wiki/main/proc/get_searchcache_ore()
+	return searchcache_ore
 
 /datum/internal_wiki/main/proc/init_wiki_data()
 	if(pages.len)
@@ -52,6 +86,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	log_world("Initialized Wiki Pages: [pages.len]")
 
 /datum/internal_wiki/main/proc/init_mining_data()
+	PRIVATE_PROC(TRUE)
 	// assemble ore wiki
 	for(var/N in GLOB.ore_data)
 		var/ore/OR = GLOB.ore_data[N]
@@ -343,6 +378,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			pages.Add(P)
 
 /datum/internal_wiki/main/proc/allow_reagent(var/reagent)
+	PRIVATE_PROC(TRUE)
 	// This is used to filter out some of the base reagent types, such as "drink", without putting spoiler tags on base types...
 	if(!reagent || reagent == "")
 		return FALSE
@@ -802,6 +838,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		body += "<b>Mix: </b>UNKNOWN<br>"
 
 /datum/internal_wiki/page/proc/allergen_assemble(var/allergens)
+	PRIVATE_PROC(TRUE)
 	var/body = ""
 	if(allergens > 0)
 		body += "<b>Allergens: </b><br>"

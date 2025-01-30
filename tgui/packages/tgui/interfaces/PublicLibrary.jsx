@@ -56,7 +56,7 @@ export const PublicLibrary = (props, context) => {
               <Section title={searchmode}>
                 {search.map((Key) => (
                   <Button
-                    key={key}
+                    key={Key}
                     onClick={() => act('search', { data: Key })}
                   >
                     {Key}
