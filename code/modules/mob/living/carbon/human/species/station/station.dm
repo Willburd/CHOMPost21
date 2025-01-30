@@ -710,7 +710,7 @@
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
 		// Don't overfeed, just make them full without going over.
-		if((H.get_nutrition() + light_amount) < initial(H.get_nutrition()))
+		if((H.get_nutrition() + light_amount) < H.max_nutrition)
 			H.adjust_nutrition(light_amount)
 		H.shock_stage -= light_amount
 
