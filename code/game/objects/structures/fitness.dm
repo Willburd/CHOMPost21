@@ -15,7 +15,7 @@
 	if(!istype(user))
 		..()
 		return
-	if(user.nutrition < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
+	if(user.get_nutrition() < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
 		to_chat(user, span_warning("You need more energy to use the punching bag. Go eat something."))
 	else if(user.weight < 70) // CHOMPAdd Begin Add weight loss to old fitness equipment
 		to_chat(user, span_notice("You're too skinny to risk losing any more weight!")) // CHOMPAdd End
@@ -49,7 +49,7 @@
 	if(user.loc != src.loc)
 		to_chat(user, span_warning("You must be on the weight machine to use it."))
 		return
-	if(user.nutrition < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
+	if(user.get_nutrition() < 70) //CHOMPEdit Set minimum nutrition to be the same as in fitness_machines_vr.dm
 		to_chat(user, span_warning("You need more energy to lift weights. Go eat something."))
 		return
 	if(user.weight < 70) //CHOMPAdd Begin Add weight loss to old fitness equipment

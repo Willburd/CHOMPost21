@@ -245,7 +245,7 @@
 		var/slab_name = grindable.name
 		var/slab_count = grindable.meat_amount
 		var/slab_type = grindable.meat_type ? grindable.meat_type : /obj/item/reagent_containers/food/snacks/meat
-		var/slab_nutrition = grindable.nutrition / 15
+		var/slab_nutrition = grindable.get_nutrition() / 15
 
 		// extra loot from butchery!
 		byproducts += grindable?.butchery_loot?.Copy()

@@ -87,7 +87,7 @@
 
 	//While regenerating
 	if(H.revive_ready == REVIVING_NOW || H.revive_ready == REVIVING_DONE)
-		H.stunned = 5 // CHOMPEdit - Crawling is a thing now
+		H.SetStunned(5) // CHOMPEdit - Crawling is a thing now
 		H.canmove = 0
 		H.does_not_breathe = TRUE
 		var/regen_sounds = H.regen_sounds
@@ -129,7 +129,7 @@
 		laststress = B.laststress
 
 	//Low-ish nutrition has messages and can eventually cause feralness
-	var/hunger = max(0, 150 - H.nutrition)
+	var/hunger = max(0, 150 - H.get_nutrition())
 
 	//pain makes feralness a thing
 	var/shock = 0.75*H.traumatic_shock
@@ -162,8 +162,8 @@
 			feral = currentstress //update the local var
 
 		//they didn't go feral, give 'em a chance of hunger messages
-		else if(H.nutrition <= 200 && prob(0.5))
-			switch(H.nutrition)
+		else if(H.get_nutrition() <= 200 && prob(0.5))
+			switch(H.get_nutrition())
 				if(150 to 200)
 					to_chat(H,span_info("You feel rather hungry. It might be a good idea to find some some food..."))
 				if(100 to 150)
@@ -290,7 +290,7 @@
 	// If they're hurt, chance of snapping.
 	else if(cause == "shock")
 		//If the majority of their shock is due to halloss, give them a different message (3x multiplier on check as halloss is 2x - meaning t_s must be at least 3x for other damage sources to be the greater part)
-		if(3*H.halloss >= H.traumatic_shock)
+		if(3*H.getHalLoss() >= H.traumatic_shock)
 			to_chat(H,span_danger("<big>The pain! It stings! Got to get away! Your instincts take over, urging you to flee, to hide, to go to ground, get away from here...</big>"))
 			log_and_message_admins("has gone feral due to halloss.", H)
 

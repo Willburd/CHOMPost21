@@ -12,7 +12,7 @@
 	var/weightloss_power = 1
 
 /obj/machinery/fitness/attack_hand(mob/living/user)
-	if(user.nutrition < 70)
+	if(user.get_nutrition() < 70)
 		to_chat(user, span_notice("You need more energy to workout with the [src]!"))
 
 	else if(user.weight < 70)

@@ -627,11 +627,11 @@
 					I.alpha = custom_ingested_alpha
 					I.pixel_y = -450 + ((450 / max(max_ingested, 1)) * min(max_ingested, ingested.total_volume))
 					F.add_overlay(I)
-			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.get_nutrition() > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val + extra_mush
+				var/total_mush_content = owner.get_nutrition() + LAZYLEN(contents) * item_mush_val + extra_mush
 				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
@@ -685,11 +685,11 @@
 					I.alpha = custom_ingested_alpha
 					I.pixel_y = -450 + (450 / max(max_ingested, 1) * max(min(max_ingested, ingested.total_volume), 1))
 					F.add_overlay(I)
-			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.nutrition > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
+			if(show_liquids && L.liquidbelly_visuals && mush_overlay && (owner.get_nutrition() > 0 || max_mush == 0 || min_mush > 0 || (LAZYLEN(contents) * item_mush_val) > 0))
 				I = image('modular_chomp/icons/mob/vore_fullscreens/bubbles.dmi', "mush")
 				I.color = mush_color
 				I.alpha = mush_alpha
-				var/total_mush_content = owner.nutrition + LAZYLEN(contents) * item_mush_val + extra_mush
+				var/total_mush_content = owner.get_nutrition() + LAZYLEN(contents) * item_mush_val + extra_mush
 				I.pixel_y = -450 + (450 / max(max_mush, 1) * max(min(max_mush, total_mush_content), 1))
 				if(I.pixel_y < -450 + (450 / 100 * min_mush))
 					I.pixel_y = -450 + (450 / 100 * min_mush)
@@ -915,7 +915,7 @@
 		if(isliving(AM))
 			var/mob/living/L = AM
 			if(L.stat)
-				L.SetSleeping(min(L.sleeping,20))
+				L.SetSleeping(min(L.GetSleeping(),20))
 			if(L.absorbed && !include_absorbed)
 				continue
 		count += release_specific_contents(AM, silent = TRUE)
@@ -1005,7 +1005,7 @@
 	if(isliving(M))
 		var/mob/living/ML = M
 		if(ML.stat)
-			ML.SetSleeping(min(ML.sleeping,20))
+			ML.SetSleeping(min(ML.GetSleeping(),20))
 
 	//Clean up our own business
 	if(!ishuman(owner))

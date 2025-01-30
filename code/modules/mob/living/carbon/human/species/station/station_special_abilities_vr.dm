@@ -922,7 +922,7 @@
 	if(C.incapacitated(INCAPACITATION_ALL))
 		to_chat(src, "You cannot fly in this state!")
 		return
-	if(C.nutrition < 25 && !C.flying) //Don't have any food in you?" You can't fly.
+	if(C.get_nutrition() < 25 && !C.flying) //Don't have any food in you?" You can't fly.
 		to_chat(C, span_notice("You lack the nutrition to fly."))
 		return
 
@@ -960,7 +960,7 @@
 	if(C.incapacitated(INCAPACITATION_ALL))
 		to_chat(src, "You cannot hover in your current state!")
 		return
-	if(C.nutrition < 50 && !C.flying) //Don't have any food in you?" You can't hover, since it takes up 25 nutrition. And it's not 25 since we don't want them to immediately fall.
+	if(C.get_nutrition() < 50 && !C.flying) //Don't have any food in you?" You can't hover, since it takes up 25 nutrition. And it's not 25 since we don't want them to immediately fall.
 		to_chat(C, span_notice("You lack the nutrition to fly."))
 		return
 	if(C.anchored)

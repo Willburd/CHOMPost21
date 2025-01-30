@@ -32,7 +32,7 @@
 				var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 				s.set_up(5, 1, src)
 				s.start()
-				if(usr.stunned)
+				if(usr.GetStunned())
 					return 2
 
 	playsound(src, open_sound, 50, 1, -3)

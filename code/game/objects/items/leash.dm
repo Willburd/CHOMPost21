@@ -122,7 +122,7 @@
 	sleep(3) //This way running normally won't just yank the pet to the ground.
 	if(!leash_master || !leash_pet) //Just to stop error messages. Break the loop early if something removed the master
 		return
-	if(get_dist(leash_pet, leash_master) > 3 && !leash_pet.stunned)
+	if(get_dist(leash_pet, leash_master) > 3 && !leash_pet.GetStunned())
 		leash_pet.visible_message(
 			span_warning("[leash_pet] is pulled to the ground by their leash!"),
 			span_warning("You are pulled to the ground by your leash!")

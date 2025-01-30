@@ -369,7 +369,7 @@
 		owner_adjust_nutrition((nutrition_percent / 100) * compensation * 4.5 * personal_nutrition_modifier * pred_digestion_efficiency) //CHOMPedit end
 
 /obj/belly/proc/steal_nutrition(mob/living/L)
-	if(L.nutrition <= 110)
+	if(L.get_nutrition() <= 110)
 		if(drainmode == DR_SLEEP && ishuman(L)) //Slowly put prey to sleep
 			if(L.tiredness <= 105)
 				L.tiredness = (L.tiredness + 6)
@@ -383,9 +383,9 @@
 			if(L.weight > 70)
 				L.weight -= (0.01 * L.weight_loss)
 				owner.weight += (0.01 * L.weight_loss) //intentionally dependant on the prey's weight loss ratio rather than the preds weight gain to keep them in pace with one another.
-	if(L.nutrition >= 100)
-		var/oldnutrition = (L.nutrition * 0.05)
-		L.nutrition = (L.nutrition * 0.95)
+	if(L.get_nutrition() >= 100)
+		var/oldnutrition = (L.get_nutrition() * 0.05)
+		L.set_nutrition(L.get_nutrition() * 0.95)
 		if(show_liquids && reagent_mode_flags & DM_FLAG_REAGENTSDRAIN && reagents.total_volume < reagents.maximum_volume)   //CHOMPedit: draining reagent production //Added to this proc now since it's used for draining
 			owner_adjust_nutrition(oldnutrition * 0.75) //keeping the price static, due to how much nutrition can flunctuate
 			GenerateBellyReagents_absorbing() //Dont need unique proc so far

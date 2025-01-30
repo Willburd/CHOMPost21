@@ -138,7 +138,7 @@
 	return
 
 /obj/item/mmi/relaymove(var/mob/user, var/direction)
-	if(user.stat || user.stunned)
+	if(user.stat || user.GetStunned())
 		return
 	var/obj/item/rig/rig = src.get_rig()
 	if(rig)

@@ -605,7 +605,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host
-		nutri_value = H.nutrition
+		nutri_value = H.get_nutrition()
 	data["abilities"] = list (
 		"nutrition" = nutri_value,
 		"current_size" = host.size_multiplier,
@@ -1111,7 +1111,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 			if(istype(host, /mob/living))
 				var/mob/living/H = host
-				if(H.nutrition >= VORE_RESIZE_COST)
+				if(H.get_nutrition() >= VORE_RESIZE_COST)
 					H.adjust_nutrition(-VORE_RESIZE_COST)
 					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
@@ -1552,7 +1552,7 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 					host.vore_selected.release_specific_contents(T, TRUE)
 					if(istype(body_backup, /mob/living/simple_mob))
 						var/mob/living/simple_mob/sm = body_backup
-						if(sm.icon_rest && sm.resting)
+						if(sm.icon_rest && sm.GetResting())
 							sm.icon_state = sm.icon_rest
 						else
 							sm.icon_state = sm.icon_living
@@ -1701,8 +1701,8 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 						return
 					if(isliving(user))
 						var/mob/living/l = user
-						l.adjust_nutrition(ourtarget.nutrition)
-						var/n = 0 - ourtarget.nutrition
+						l.adjust_nutrition(ourtarget.get_nutrition())
+						var/n = 0 - ourtarget.get_nutrition()
 						ourtarget.adjust_nutrition(n)
 					b.absorb_living(ourtarget)
 				if("Knockout")
@@ -1726,13 +1726,13 @@ var/global/list/belly_colorable_only_fullscreens = list("a_synth_flesh_mono",
 			if(H.blinded)
 				condition += "blinded"
 				condition_consequences += "hear emotes"
-			if(H.paralysis)
+			if(H.GetParalyse())
 				if(condition)
 					condition += " and "
 					condition_consequences += " or "
 				condition += "paralysed"
 				condition_consequences += "make emotes"
-			if(H.sleeping)
+			if(H.GetSleeping())
 				if(condition)
 					condition += " and "
 					condition_consequences += " or "

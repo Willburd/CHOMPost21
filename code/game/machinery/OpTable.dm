@@ -86,7 +86,7 @@
 	if(C.pulledby)
 		C.pulledby.stop_pulling()
 	// Outpost 21 edit end
-	C.resting = 1
+	C.SetResting(1)
 	C.loc = src.loc
 	for(var/obj/O in src)
 		O.loc = src.loc

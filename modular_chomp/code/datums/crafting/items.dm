@@ -293,7 +293,7 @@
 	return ..()
 
 /obj/item/clothing/gloves/toxinregen/process()
-	if(!wearer || wearer.isSynthetic() || wearer.stat == DEAD || wearer.nutrition <= 10)
+	if(!wearer || wearer.isSynthetic() || wearer.stat == DEAD || wearer.get_nutrition() <= 10)
 		return
 	if(wearer.getToxLoss())
 		wearer.adjustToxLoss(-0.5)

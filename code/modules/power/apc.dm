@@ -569,7 +569,7 @@ GLOBAL_LIST_EMPTY(apcs)
 					var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 					s.set_up(5, 1, src)
 					s.start()
-					if(user.stunned)
+					if(user.GetStunned())
 						return
 				C.use(10)
 				user.visible_message(\
@@ -591,7 +591,7 @@ GLOBAL_LIST_EMPTY(apcs)
 					var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 					s.set_up(5, 1, src)
 					s.start()
-					if(user.stunned)
+					if(user.GetStunned())
 						return
 				new /obj/item/stack/cable_coil(loc,10)
 				to_chat(user, span_notice("You cut the cables and dismantle the power terminal."))

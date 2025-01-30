@@ -302,19 +302,19 @@
 	if(isliving(src))
 		var/mob/living/L = src //VOREStation Edit Start. Flight on mobs.
 		if(L.flying) //Some other checks are done in the wings_toggle proc
-			if(L.nutrition > 0.5)
+			if(L.get_nutrition() > 0.5)
 				L.adjust_nutrition(-0.5) //You use up -0.5 nutrition per TILE and tick of flying above open spaces. If people wanna flap their wings in the hallways, shouldn't penalize them for it.
 			if(L.incapacitated(INCAPACITATION_ALL))
 				L.stop_flying()
 				//Just here to see if the person is KO'd, stunned, etc. If so, it'll move onto can_fall.
-			else if(L.nutrition < 300 && L.nutrition > 299.4) //290 would be risky, as metabolism could mess it up. Let's do 289.
+			else if(L.get_nutrition() < 300 && L.get_nutrition() > 299.4) //290 would be risky, as metabolism could mess it up. Let's do 289.
 				to_chat(L, span_danger("You are starting to get fatigued... You probably have a good minute left in the air, if that. Even less if you continue to fly around! You should get to the ground soon!")) //Ticks are, on average, 3 seconds. So this would most likely be 90 seconds, but lets just say 60.
 				L.adjust_nutrition(-0.5)
 				return
-			else if(L.nutrition < 100 && L.nutrition > 99.4)
+			else if(L.get_nutrition() < 100 && L.get_nutrition() > 99.4)
 				to_chat(L, span_danger("You're seriously fatigued! You need to get to the ground immediately and eat before you fall!"))
 				return
-			else if(L.nutrition < 10) //Should have listened to the warnings!
+			else if(L.get_nutrition() < 10) //Should have listened to the warnings!
 				to_chat(L, span_danger("You lack the strength to keep yourself up in the air..."))
 				L.stop_flying()
 			else

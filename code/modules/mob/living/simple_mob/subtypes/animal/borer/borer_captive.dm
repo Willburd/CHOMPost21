@@ -48,7 +48,7 @@
 		to_chat(H, span_danger("You begin doggedly resisting the parasite's control (this will take approximately sixty seconds)."))
 		to_chat(B.host, span_danger("You feel the captive mind of [src] begin to resist your control."))
 
-		spawn(rand(200,250)+B.host.brainloss)
+		spawn(rand(200,250)+B.host.getBrainLoss())
 			if(!B || !B.controlling) return
 
 			B.host.adjustBrainLoss(rand(0.1,0.5))

@@ -291,7 +291,7 @@
 
 /obj/item/entrepreneur/dumbbell/attack_self(var/mob/user)
 	var/mob/living/M = user
-	if(M.nutrition <= 100)
+	if(M.get_nutrition() <= 100)
 		to_chat(user, span_notice("You are too hungry to exercise right now."))
 		return 0
 	if(!do_after(user, 3 SECONDS, src, exclusive = TASK_USER_EXCLUSIVE))

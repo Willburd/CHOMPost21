@@ -48,7 +48,7 @@
 	C.visible_message(span_warning("[user] has analyzed [C]'s vitals!"))
 
 	user.show_message(span_notice("Analyzing Results for [C]:"))
-	user.show_message(span_notice("    Overall Status: [C.stat > 1 ? "dead" : "[C.health - C.halloss]% healthy"]"), 1)
+	user.show_message(span_notice("    Overall Status: [C.stat > 1 ? "dead" : "[C.health - C.getHalLoss()]% healthy"]"), 1)
 	user.show_message(span_notice("    Damage Specifics:") + " [(C.getOxyLoss() > 50) ? span_warning(C.getOxyLoss()) : C.getOxyLoss()]-\
 									[(C.getToxLoss() > 50) ? span_warning("[C.getToxLoss()]") : C.getToxLoss()]-\
 									[(C.getFireLoss() > 50) ? span_warning("[C.getFireLoss()]") : C.getFireLoss()]-\

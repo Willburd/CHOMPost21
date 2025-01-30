@@ -87,7 +87,7 @@
 	spawn_flags = IC_SPAWN_RESEARCH
 
 /obj/item/integrated_circuit/passive/power/metabolic_siphon/proc/test_validity(var/mob/living/carbon/human/host)
-	if(!host || host.isSynthetic() || host.stat == DEAD || host.nutrition <= 10)
+	if(!host || host.isSynthetic() || host.stat == DEAD || host.get_nutrition() <= 10)
 		return FALSE // Robots and dead people don't have a metabolism.
 	return TRUE
 
@@ -99,7 +99,7 @@
 			host = implant_assembly.implant.imp_in
 	if(host && test_validity(host))
 		assembly.give_power(10)
-		host.nutrition = max(host.nutrition - DEFAULT_HUNGER_FACTOR, 0)
+		host.set_nutrition( max(host.get_nutrition() - DEFAULT_HUNGER_FACTOR, 0))
 
 /obj/item/integrated_circuit/passive/power/metabolic_siphon/synthetic
 	name = "internal energy siphon"
@@ -110,7 +110,7 @@
 	spawn_flags = IC_SPAWN_RESEARCH
 
 /obj/item/integrated_circuit/passive/power/metabolic_siphon/synthetic/test_validity(var/mob/living/carbon/human/host)
-	if(!host || !host.isSynthetic() || host.stat == DEAD || host.nutrition <= 10)
+	if(!host || !host.isSynthetic() || host.stat == DEAD || host.get_nutrition() <= 10)
 		return FALSE // This time we don't want a metabolism.
 	return TRUE
 

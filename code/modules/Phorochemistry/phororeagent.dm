@@ -245,7 +245,7 @@ var/induromol_code = rand(1, 50)
 						if (istype(location, /turf/simulated))
 							location.add_vomit_floor(H, 1)
 
-						H.nutrition -= 40
+						H.adjust_nutrition(-40)
 						H.adjustToxLoss(-3)
 						spawn(350)	//wait 35 seconds before next volley
 							H.lastpuke = 0
@@ -289,7 +289,7 @@ var/induromol_code = rand(1, 50)
 						if (istype(location, /turf/simulated))
 							location.add_vomit_floor(H, 1)
 
-						H.nutrition -= 40
+						H.adjust_nutrition(-40)
 						H.adjustToxLoss(-3)
 						spawn(350)	//wait 35 seconds before next volley
 							H.lastpuke = 0
@@ -381,7 +381,7 @@ var/induromol_code = rand(1, 50)
 	metabolism = 2 * REM
 
 /datum/reagent/phororeagent/doloran/on_mob_life(var/mob/living/M as mob, var/alien)
-	M.halloss = 100
+	M.setHalLoss(100)
 	M.stuttering = 10
 
 	if(ishuman(M))
@@ -445,7 +445,7 @@ var/induromol_code = rand(1, 50)
 
 /datum/reagent/phororeagent/mortemol/on_mob_life(var/mob/living/M as mob, var/alien)
 	if(data[1])
-		M.halloss = 100
+		M.setHalLoss(100)
 		M.stuttering = 1
 
 	return ..()
@@ -552,7 +552,7 @@ var/induromol_code = rand(1, 50)
 				if (istype(location, /turf/simulated))
 					location.add_vomit_floor(src, 1)
 
-				H.nutrition -= 40
+				H.adjust_nutrition(-40)
 
 			for(var/datum/reagent/R in M.reagents.reagent_list)
 				if(R.id == src.id)
@@ -1018,7 +1018,7 @@ var/induromol_code = rand(1, 50)
 					eyes.take_damage(50)
 					H << span_boldwarning("The gas stings your eyes like you have never felt before!")
 		else if(!issilicon(L))
-			L.eye_blind = 500
+			L.SetBlinded(500)
 
 	if(mob_affected)
 		src = null

@@ -936,7 +936,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	faction = baby.faction
 	affinity = baby.affinity
 	affection_factor = baby.affection_factor
-	nutrition = baby.nutrition
+	set_nutrition(baby.get_nutrition())
 	allergen_preference = baby.allergen_preference
 	allergen_unpreference = baby.allergen_unpreference
 	color = baby.color
@@ -1050,7 +1050,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 
 /datum/ai_holder/simple_mob/teppi/handle_wander_movement()
 	var/mob/living/simple_mob/vore/alienanimals/teppi/tepholder = holder
-	if(tepholder.resting)
+	if(tepholder.GetResting())
 		if(prob(5))
 			tepholder.lay_down()
 		return
@@ -1092,12 +1092,12 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		holder.IMove(T)
 
 /datum/ai_holder/simple_mob/teppi/handle_idle_speaking()
-	if(holder.resting)
+	if(holder.GetResting())
 		return
 	..()
 
 /datum/ai_holder/simple_mob/teppi/baby/handle_idle_speaking()
-	if(holder.resting)
+	if(holder.GetResting())
 		return
 	..()
 

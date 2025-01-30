@@ -23,11 +23,11 @@
 	for(var/potential_color in S.slime_mutation)
 		var/mob/living/simple_mob/slime/xenobio/slime = potential_color
 		mutations.Add(initial(slime.slime_color))
-	user.show_message("Potental to mutate into [english_list(mutations)] colors.<br>Extract potential: [S.cores]<br>Nutrition: [S.nutrition]/[S.max_nutrition]")
+	user.show_message("Potental to mutate into [english_list(mutations)] colors.<br>Extract potential: [S.cores]<br>Nutrition: [S.get_nutrition()]/[S.max_nutrition]")
 
-	if (S.nutrition < S.get_starve_nutrition())
+	if (S.get_nutrition() < S.get_starve_nutrition())
 		user.show_message(span_warning("Warning: Subject is starving!"))
-	else if (S.nutrition < S.get_hunger_nutrition())
+	else if (S.get_nutrition() < S.get_hunger_nutrition())
 		user.show_message(span_warning("Warning: Subject is hungry."))
 	user.show_message("Electric change strength: [S.power_charge]")
 

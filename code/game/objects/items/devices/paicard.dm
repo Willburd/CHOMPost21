@@ -40,7 +40,7 @@ GLOBAL_LIST_BOILERPLATE(all_pai_cards, /obj/item/paicard)
 	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/paicard/relaymove(var/mob/user, var/direction)
-	if(user.stat || user.stunned)
+	if(user.stat || user.GetStunned())
 		return
 	var/obj/item/rig/rig = src.get_rig()
 	if(istype(rig))

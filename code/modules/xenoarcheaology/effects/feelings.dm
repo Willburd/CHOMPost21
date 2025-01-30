@@ -104,7 +104,7 @@
 			if(prob(50))
 				H.dizziness += rand(3,5)
 				if(feeling_type == CANNIBAL_FEELING)
-					H.nutrition = H.nutrition / 1.5
+					H.set_nutrition(H.get_nutrition() / 1.5)
 
 /datum/artifact_effect/feelings/DoEffectAura()
 	var/atom/holder = get_master_holder()
@@ -120,7 +120,7 @@
 				if(prob(10))
 					H.dizziness += rand(3,5)
 					if(feeling_type == CANNIBAL_FEELING)
-						H.nutrition = H.nutrition / 2
+						H.set_nutrition(H.get_nutrition() / 2)
 		return 1
 
 /datum/artifact_effect/feelings/DoEffectPulse()
@@ -139,7 +139,7 @@
 			else if(prob(25))
 				H.dizziness += rand(5,15)
 				if(feeling_type == CANNIBAL_FEELING)
-					H.nutrition = H.nutrition / 4
+					H.set_nutrition(H.get_nutrition() / 4)
 		return 1
 
 #undef GOOD_FEELING

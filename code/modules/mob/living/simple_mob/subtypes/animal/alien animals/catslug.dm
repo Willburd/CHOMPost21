@@ -299,12 +299,12 @@
 	update_icon()
 
 /datum/ai_holder/simple_mob/melee/evasive/catslug/proc/consider_awakening()
-	if(holder.resting)
+	if(holder.GetResting())
 		holder.lay_down()
 		go_wake()
 
 /datum/ai_holder/simple_mob/melee/evasive/catslug/handle_wander_movement()
-	if(holder.client || holder.resting)
+	if(holder.client || holder.GetResting())
 		return
 	else if(prob(0.5))
 		holder.lay_down()

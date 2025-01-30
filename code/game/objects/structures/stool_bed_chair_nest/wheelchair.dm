@@ -61,14 +61,14 @@
 
 /obj/structure/bed/chair/wheelchair/relaymove(mob/user, direction)
 	// Redundant check?
-	if(user.stat || user.stunned || user.weakened || user.paralysis || user.lying || user.restrained())
+	if(user.stat || user.GetStunned() || user.GetWeakened() || user.GetParalyse() || user.lying || user.restrained())
 		if(user==pulling)
 			pulling = null
 			user.pulledby = null
 			to_chat(user, span_warning("You lost your grip!"))
 		return
 	if(has_buckled_mobs() && pulling && (user in buckled_mobs))
-		if(pulling.stat || pulling.stunned || pulling.weakened || pulling.paralysis || pulling.lying || pulling.restrained())
+		if(pulling.stat || pulling.GetStunned() || pulling.GetWeakened() || pulling.GetParalyse() || pulling.lying || pulling.restrained())
 			pulling.pulledby = null
 			pulling = null
 	if(user.pulling && (user == pulling))

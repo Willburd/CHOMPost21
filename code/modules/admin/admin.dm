@@ -1456,7 +1456,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	var/msg
 
 	if(check_rights(R_ADMIN|R_MOD|R_EVENT))
-		if (H.paralysis == 0)
+		if (H.GetParalyse() == 0)
 			H.SetParalysis(8000)
 			msg = "has paralyzed [key_name(H)]."
 			log_and_message_admins(msg)

@@ -1217,7 +1217,7 @@
 				add_attack_logs(src,M,"Thrown via grab to [end_T.x],[end_T.y],[end_T.z]")
 			if(ishuman(M))
 				var/mob/living/carbon/human/N = M
-				if((N.health + N.halloss) < CONFIG_GET(number/health_threshold_crit) || N.stat == DEAD)
+				if((N.health + N.getHalLoss()) < CONFIG_GET(number/health_threshold_crit) || N.stat == DEAD)
 					N.adjustBruteLoss(rand(10,30))
 			src.drop_from_inventory(G)
 
@@ -1320,6 +1320,12 @@
 
 /mob/living/proc/adjust_nutrition(amount)
 	nutrition = between(0, nutrition + amount, max_nutrition)
+
+/mob/living/proc/set_nutrition(amount) // This should be replaced by above, but some stuff sets the var to a value instead of +/-ing it.
+	nutrition = between(0, amount, max_nutrition)
+
+/mob/living/proc/get_nutrition()
+	return nutrition
 
 /mob/living/vv_get_header()
 	. = ..()

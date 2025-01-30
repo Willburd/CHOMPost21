@@ -37,7 +37,7 @@ Bonus
 			else
 				to_chat(M, span_userdanger(pick("You feel tremendously weak!", "Your body trembles as exhaustion creeps over you.")))
 				M.Weaken(20)
-				if(M.weakened > 60 && !M.stat)
+				if(M.GetWeakened() > 60 && !M.stat)
 					M.visible_message(span_warning("[M] faints!"), span_userdanger("You swoon and faint..."))
 					M.AdjustSleeping(10)
 	return

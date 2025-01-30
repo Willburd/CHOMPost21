@@ -138,9 +138,9 @@
 		health = getMaxHealth()
 
 	//Grab any other interesting values
-	confused = humanform.confused
+	confused = humanform.GetConfused()
 	radiation = humanform.radiation
-	paralysis = humanform.paralysis
+	paralysis = humanform.GetParalyse()
 
 	//Update our hud if we have one
 	if(healths)
@@ -402,7 +402,7 @@
 	blob.transforming = FALSE
 	blob.name = name
 	blob.real_name = real_name
-	blob.nutrition = nutrition
+	blob.set_nutrition(nutrition)
 	blob.color = rgb(r_skin, g_skin, b_skin)
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
 	if(radiation > 0)
@@ -498,7 +498,7 @@
 	blob.drop_hat()
 	drop_from_inventory(hat) // Hat me baby
 	equip_to_slot_if_possible(hat, slot_head)
-	nutrition = blob.nutrition // food good
+	set_nutrition( blob.get_nutrition()) // food good
 
 
 	temporary_form = null

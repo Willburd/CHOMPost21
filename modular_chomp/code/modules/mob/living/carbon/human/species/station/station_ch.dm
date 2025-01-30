@@ -172,7 +172,7 @@
 /datum/species/xenomorph_hybrid/proc/regenerate(var/mob/living/carbon/human/H)
 	var/heal_rate = weeds_heal_rate
 	var/mend_prob = 5 // Much lower than regular xenos.
-	if (!H.resting)
+	if (!H.GetResting())
 		heal_rate = 0 // No passive health regen without resting.
 		mend_prob = 0 // No passive health regen without resting.
 

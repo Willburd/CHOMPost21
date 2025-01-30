@@ -52,13 +52,13 @@
 /datum/ai_holder/simple_mob/passive/possum/handle_special_strategical()
 	. = ..()
 	if(holder?.stat != DEAD && !holder.ckey && isturf(holder.loc))
-		if(holder.resting && world.time < play_dead_until)
+		if(holder.GetResting() && world.time < play_dead_until)
 			return
 
-		var/last_resting = holder.resting
+		var/last_resting = holder.GetResting()
 		var/last_angery = is_angry
-		holder.resting = (holder.stat == UNCONSCIOUS)
-		if(!holder.resting)
+		holder.SetResting(holder.stat == UNCONSCIOUS)
+		if(!holder.GetResting())
 			wander = initial(wander)
 			speak_chance = initial(speak_chance)
 			holder.set_stat(CONSCIOUS)
@@ -69,7 +69,7 @@
 			holder.set_stat(UNCONSCIOUS)
 			is_angry = FALSE
 
-		if(last_resting != holder.resting || last_angery != is_angry)
+		if(last_resting != holder.GetResting() || last_angery != is_angry)
 			holder.update_icon()
 
 /datum/ai_holder/simple_mob/passive/possum/poppy

@@ -177,7 +177,7 @@
 	if(alien == IS_SLIME)
 		M.make_jittery(4) //Hyperactive fluid pumping results in unstable 'skeleton', resulting in vibration.
 		if(dose >= 5)
-			M.nutrition = (M.nutrition - (removed * 2)) //Sadly this movement starts burning food in higher doses.
+			M.set_nutrition(M.get_nutrition() - (removed * 2)) //Sadly this movement starts burning food in higher doses.
 	..()
 	if(prob(5))
 		M.emote(pick("twitch", "blink_r", "shiver", "weh", "weh", "weh")) // weh - Jack
@@ -230,7 +230,7 @@
 			else
 				M.Weaken(2)
 		else
-			M.sleeping = max(M.sleeping, 20)
+			M.SetSleeping(max(M.GetSleeping(), 20))
 		M.drowsyness = max(M.drowsyness, 60)
 
 /datum/reagent/ethanol/flapper

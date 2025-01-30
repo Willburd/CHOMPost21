@@ -189,7 +189,7 @@
 	if(user != load)
 		return 0
   // Start CHOMPStation Edit
-	if(user.paralysis || user.sleeping)
+	if(user.GetParalyse() || user.GetSleeping())
 		return 0
   // End CHOMPStation Edit
 	if(is_train_head())

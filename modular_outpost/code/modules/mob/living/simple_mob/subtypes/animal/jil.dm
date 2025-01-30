@@ -595,7 +595,7 @@
 			update_forbidden_list()
 
 		// not holding something, get greedier, find way to target
-		if(!holder.get_active_hand() && holder.health >= 5 && holder.sleeping <= 0)
+		if(!holder.get_active_hand() && holder.health >= 5 && holder.GetSleeping() <= 0)
 			// oops, target is held by something else...
 			if(target && !istype(target.loc,/turf))
 				// lose target...
@@ -628,7 +628,7 @@
 
 			// return home
 			max_home_distance = hoard_distance-1
-			if(get_dist(holder, home_turf) <= max_home_distance || holder.sleeping > 0)
+			if(get_dist(holder, home_turf) <= max_home_distance || holder.GetSleeping() > 0)
 				// drop item off at nest
 				if(holder.get_active_hand())
 					last_search = world.time
@@ -638,9 +638,9 @@
 						unreachable_locs -= last_pickup_turf // remove from list, far enough to forget
 						last_pickup_turf = null // clear last pickup, we freaked out
 
-				if(holder.sleeping > 0 || holder.health < 5 || prob(15))
+				if(holder.GetSleeping() > 0 || holder.health < 5 || prob(15))
 					var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
-					if(J.sleeping <= 0)
+					if(J.GetSleeping() <= 0)
 						J.Sleeping( 30 + rand(50))
 					holder.update_icon()
 
@@ -653,7 +653,7 @@
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)
 		var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
 		J.SetSleeping(0)
-		J.resting = FALSE
+		J.SetResting(0)
 		J.lying = FALSE
 		J.update_icon()
 

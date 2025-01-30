@@ -163,7 +163,7 @@
 	..()
 
 /obj/item/aicard/relaymove(var/mob/user, var/direction)
-	if(user.stat || user.stunned)
+	if(user.stat || user.GetStunned())
 		return
 	var/obj/item/rig/rig = src.get_rig()
 	if(istype(rig))
@@ -176,7 +176,7 @@
 	to_chat(AI, "Your power has been disabled!")
 	while(AI && AI.stat != DEAD)
 		// This is absolutely evil and I love it.
-		if(AI.deployed_shell && prob(AI.oxyloss)) //You feel it creeping? Eventually will reach 100, resulting in the second half of the AI's remaining life being lonely.
+		if(AI.deployed_shell && prob(AI.getOxyLoss())) //You feel it creeping? Eventually will reach 100, resulting in the second half of the AI's remaining life being lonely.
 			AI.disconnect_shell("Disconnecting from remote shell due to insufficent power.")
 		AI.adjustOxyLoss(2)
 		AI.updatehealth()

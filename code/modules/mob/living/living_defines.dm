@@ -10,15 +10,15 @@
 	var/hud_updateflag = 0
 
 	//Damage related vars, NOTE: THESE SHOULD ONLY BE MODIFIED BY PROCS
-	var/bruteloss = 0.0	//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)
-	var/oxyloss = 0.0	//Oxygen depravation damage (no air in lungs)
-	var/toxloss = 0.0	//Toxic damage caused by being poisoned or radiated
-	var/fireloss = 0.0	//Burn damage caused by being way too hot, too cold or burnt.
-	var/cloneloss = 0	//Damage caused by being cloned or ejected from the cloner early. slimes also deal cloneloss damage to victims
-	var/brainloss = 0	//Thought-scrambly damage caused by someone hitting you in the head with a bible or being infected with brainrot.
-	var/halloss = 0		//Hallucination damage. 'Fake' damage obtained through hallucinating or the holodeck. Sleeping should cause it to wear off.
+	VAR_PROTECTED/bruteloss = 0.0	//Brutal damage caused by brute force (punching, being clubbed by a toolbox ect... this also accounts for pressure damage)
+	VAR_PROTECTED/oxyloss = 0.0	//Oxygen depravation damage (no air in lungs)
+	VAR_PROTECTED/toxloss = 0.0	//Toxic damage caused by being poisoned or radiated
+	VAR_PROTECTED/fireloss = 0.0	//Burn damage caused by being way too hot, too cold or burnt.
+	VAR_PROTECTED/cloneloss = 0	//Damage caused by being cloned or ejected from the cloner early. slimes also deal cloneloss damage to victims
+	VAR_PROTECTED/brainloss = 0	//Thought-scrambly damage caused by someone hitting you in the head with a bible or being infected with brainrot.
+	VAR_PROTECTED/halloss = 0		//Hallucination damage. 'Fake' damage obtained through hallucinating or the holodeck. Sleeping should cause it to wear off.
 
-	var/nutrition = 400
+	VAR_PROTECTED/nutrition = 400
 	var/max_nutrition = MAX_NUTRITION
 
 	var/hallucination = 0 //Directly affects how long a mob will hallucinate for

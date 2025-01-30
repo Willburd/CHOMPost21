@@ -158,7 +158,7 @@
 	if(!(M.species.allergens & allergen_type) && !(M.isSynthetic()))	//assuming it doesn't cause a horrible reaction, we get the nutrition effects - VOREStation Edit (added synth check)
 		M.adjust_nutrition(nutriment_factor * removed)
 
-	if(M.isSynthetic() && M.nutrition < 500 && M.species.robo_ethanol_proc)
+	if(M.isSynthetic() && M.get_nutrition() < 500 && M.species.robo_ethanol_proc)
 		M.adjust_nutrition(round(max(0,ep_base_power - strength) * removed)/ep_final_mod)	//the stronger it is, the more juice you gain
 
 	var/effective_dose = dose
@@ -253,7 +253,7 @@
 
 /datum/reagent/lithium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
+		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.GetResting()) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(cardinal))
 		if(prob(5))
 			M.emote(pick("twitch", "drool", "moan"))
@@ -268,7 +268,7 @@
 
 /datum/reagent/mercury/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
-		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
+		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.GetResting()) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(cardinal))
 		if(prob(5))
 			M.emote(pick("twitch", "drool", "moan"))

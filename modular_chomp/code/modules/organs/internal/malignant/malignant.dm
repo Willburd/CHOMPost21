@@ -120,7 +120,7 @@
 /obj/item/organ/internal/malignant/parasite/proc/feed()
 	// perform actions based on the parasite
 	if(feedmodmax > 0)
-		if(owner.nutrition > 0)
+		if(owner.get_nutrition() > 0)
 			owner.adjust_nutrition(-rand(growth * feedmodmin, growth * feedmodmax))
 		else
 			owner.remove_blood(1 + rand( growth * feedmodmin, growth * feedmodmax))
@@ -622,7 +622,7 @@
 		if(owner.radiation > 20)
 			growth++
 			owner.adjust_nutrition(-rand(1,3))
-		if(owner.nutrition > 20)
+		if(owner.get_nutrition() > 20)
 			if(growth > growth_trigger)
 				// spawn new organ, delete us
 				var/newpath = get_mutation_result(chem_target)
@@ -640,7 +640,7 @@
 
 	else if(!prepared)
 		owner.adjust_nutrition(-rand(1,3))
-		if(owner.nutrition > 20)
+		if(owner.get_nutrition() > 20)
 			growth++
 		if(growth > growth_trigger)
 			name = "proto-organ"

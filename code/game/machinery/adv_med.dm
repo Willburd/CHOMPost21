@@ -220,8 +220,8 @@
 		occupantData["radLoss"] = H.radiation
 		occupantData["cloneLoss"] = H.getCloneLoss()
 		occupantData["brainLoss"] = H.getBrainLoss()
-		occupantData["paralysis"] = H.paralysis
-		occupantData["paralysisSeconds"] = round(H.paralysis / 4)
+		occupantData["paralysis"] = H.GetParalyse()
+		occupantData["paralysisSeconds"] = round(H.GetParalyse() / 4)
 		occupantData["bodyTempC"] = H.bodytemperature-T0C
 		occupantData["bodyTempF"] = (((H.bodytemperature-T0C) * 1.8) + 32)
 
@@ -453,7 +453,7 @@
 		damage_string = "\tApprox. Brain Damage %: [occupant.getBrainLoss()]"
 		dat += (occupant.getBrainLoss() < 1 ? span_blue(damage_string) : span_red(damage_string)) + "<br>"
 
-		dat += "Paralysis Summary %: [occupant.paralysis] ([round(occupant.paralysis / 4)] seconds left!)<br>"
+		dat += "Paralysis Summary %: [occupant.GetParalyse()] ([round(occupant.GetParalyse() / 4)] seconds left!)<br>"
 		dat += "Body Temperature: [occupant.bodytemperature-T0C]&deg;C ([occupant.bodytemperature*1.8-459.67]&deg;F)<br>"
 
 		dat += "<hr>"

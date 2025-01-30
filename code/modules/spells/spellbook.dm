@@ -311,7 +311,7 @@
 /obj/item/spellbook/oneuse/smoke/recoil(mob/living/user as mob)
 	..()
 	to_chat(user, span_warning("Your stomach rumbles..."))
-	if(user.nutrition)
+	if(user.get_nutrition())
 		user.adjust_nutrition(-200)
 
 /obj/item/spellbook/oneuse/blind

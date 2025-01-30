@@ -175,21 +175,21 @@
 	var/target_loc = target.loc
 	var/msg
 	for (var/mob/V in viewers(user))
-		if(target == user && !user.stat && !user.weakened && !user.stunned && !user.paralysis)
+		if(target == user && !user.stat && !user.GetWeakened() && !user.GetStunned() && !user.GetParalyse())
 			V.show_message("[user] starts climbing into the disposal.", 3)
-		if(target != user && !user.restrained() && !user.stat && !user.weakened && !user.stunned && !user.paralysis)
+		if(target != user && !user.restrained() && !user.stat && !user.GetWeakened() && !user.GetStunned() && !user.GetParalyse())
 			if(target.anchored) return
 			V.show_message("[user] starts stuffing [target.name] into the disposal.", 3)
 	if(!do_after(user, 20))
 		return
 	if(target_loc != target.loc)
 		return
-	if(target == user && !user.stat && !user.weakened && !user.stunned && !user.paralysis)	// if drop self, then climbed in
+	if(target == user && !user.stat && !user.GetWeakened() && !user.GetStunned() && !user.GetParalyse())	// if drop self, then climbed in
 											// must be awake, not stunned or whatever
 		msg = "[user.name] climbs into the [src]."
 		to_chat(user, "You climb into the [src].")
 		log_and_message_admins("climbed into disposals!", user)
-	else if(target != user && !user.restrained() && !user.stat && !user.weakened && !user.stunned && !user.paralysis)
+	else if(target != user && !user.restrained() && !user.stat && !user.GetWeakened() && !user.GetStunned() && !user.GetParalyse())
 		msg = "[user.name] stuffs [target.name] into the [src]!"
 		to_chat(user, "You stuff [target.name] into the [src]!")
 

@@ -563,8 +563,8 @@
 // Called in life() when the mob has no client.
 /datum/species/proc/handle_npc(var/mob/living/carbon/human/H)
 	if(H.stat == CONSCIOUS && H.ai_holder)
-		if(H.resting)
-			H.resting = FALSE
+		if(H.GetResting())
+			H.SetResting(FALSE)
 			H.update_canmove()
 	return
 

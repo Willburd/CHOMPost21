@@ -105,8 +105,8 @@
 			if (!isnull(H.overlays_standing[i]))
 				add_overlay(H.overlays_standing[i])
 
-	initial_sleep = H.sleeping
-	initial_blind = H.eye_blind
+	initial_sleep = H.GetSleeping()
+	initial_blind = H.GetBlinded()
 	initial_is_shifted = H.is_shifted
 	transform = H.transform
 	layer = H.layer

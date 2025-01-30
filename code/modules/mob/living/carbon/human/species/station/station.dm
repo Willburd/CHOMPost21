@@ -710,7 +710,7 @@
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
 		// Don't overfeed, just make them full without going over.
-		if((H.nutrition + light_amount) < initial(H.nutrition))
+		if((H.get_nutrition() + light_amount) < initial(H.get_nutrition()))
 			H.adjust_nutrition(light_amount)
 		H.shock_stage -= light_amount
 
@@ -721,7 +721,7 @@
 			H.adjustOxyLoss(-(light_amount))
 			//TODO: heal wounds, heal broken limbs.
 
-	else if(H.nutrition < 200)
+	else if(H.get_nutrition() < 200)
 		H.take_overall_damage(2,0)
 
 		//traumatic_shock is updated every tick, incrementing that is pointless - shock_stage is the counter.

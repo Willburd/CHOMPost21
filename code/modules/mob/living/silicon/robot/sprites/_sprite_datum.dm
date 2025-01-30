@@ -38,7 +38,7 @@
 	return (sprite_flags & flag_to_check)
 
 /datum/robot_sprite/proc/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
-	if(ourborg.resting) //Don't do ANY of the overlay code if we're resting. It just won't look right!
+	if(ourborg.GetResting()) //Don't do ANY of the overlay code if we're resting. It just won't look right!
 		return
 	if(sprite_flag_check(ROBOT_HAS_SHIELD_SPEED_SPRITE))
 		if(ourborg.has_active_type(/obj/item/borg/combat/shield) && ourborg.has_active_type(/obj/item/borg/combat/mobility))
@@ -123,19 +123,19 @@
 			return "[get_belly_overlay(ourborg, size, b_class)]-rest"
 
 /datum/robot_sprite/proc/get_eyes_overlay(var/mob/living/silicon/robot/ourborg)
-	if(!(ourborg.resting && has_rest_sprites))
+	if(!(ourborg.GetResting() && has_rest_sprites))
 		return "[sprite_icon_state]-eyes"
 	else
 		return
 
 /datum/robot_sprite/proc/get_eye_light_overlay(var/mob/living/silicon/robot/ourborg)
-	if(!(ourborg.resting && has_rest_sprites))
+	if(!(ourborg.GetResting() && has_rest_sprites))
 		return "[sprite_icon_state]-lights"
 	else
 		return
 
 /datum/robot_sprite/proc/get_robotdecal_overlay(var/mob/living/silicon/robot/ourborg)
-	if(!(ourborg.resting && has_robotdecal_sprites))
+	if(!(ourborg.GetResting() && has_robotdecal_sprites))
 		return "[sprite_icon_state]-decals"
 	else
 		return

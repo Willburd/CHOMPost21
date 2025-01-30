@@ -92,8 +92,8 @@
 	else if(ispAI(occupant))
 		var/mob/living/silicon/pai/P = occupant
 
-		if(P.nutrition < 400)
-			P.nutrition = min(P.nutrition+10, 400)
+		if(P.get_nutrition() < 400)
+			P.set_nutrition( min(P.get_nutrition()+10, 400))
 			cell.use(7000/450*10)
 	//VOREStation Add End
 
@@ -112,8 +112,8 @@
 				H.adjustBrainLoss(-(rand(1,3)))
 
 			// Also recharge their internal battery.
-			if(H.isSynthetic() && H.nutrition < 500) //VOREStation Edit
-				H.nutrition = min(H.nutrition+(10*(1-min(H.species.synthetic_food_coeff, 0.9))), 500) //VOREStation Edit
+			if(H.isSynthetic() && H.get_nutrition() < 500) //VOREStation Edit
+				H.set_nutrition( min(H.get_nutrition()+(10*(1-min(H.species.synthetic_food_coeff, 0.9))), 500)) //VOREStation Edit
 				cell.use(7000/450*10)
 
 			// And clear up radiation

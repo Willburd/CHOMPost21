@@ -47,10 +47,10 @@
 					to_chat(usr, span_notice("You are currently <b>calm and collected.</b>"))
 				if(H.feral > 0)
 					var/feral_passing = TRUE
-					if(H.traumatic_shock > min(60, H.nutrition/10))
+					if(H.traumatic_shock > min(60, H.get_nutrition()/10))
 						to_chat(usr, span_warning("Your pain prevents you from regaining focus."))
 						feral_passing = FALSE
-					if(H.feral + H.nutrition < 150)
+					if(H.feral + H.get_nutrition() < 150)
 						to_chat(usr, span_warning("Your hunger prevents you from regaining focus."))
 						feral_passing = FALSE
 					if(H.jitteriness >= 100)
@@ -73,7 +73,7 @@
 						else
 							to_chat(usr, span_notice("You are slowly calming down... But safety of darkness is much preferred."))
 				else
-					if(H.nutrition < 150)
+					if(H.get_nutrition() < 150)
 						to_chat(usr, span_warning("Your hunger is slowly making you unstable."))
 		if("Reconstructing Form") // Allow Viewing Reconstruction Timer + Hatching for 'chimera
 			var/mob/living/carbon/human/H = usr

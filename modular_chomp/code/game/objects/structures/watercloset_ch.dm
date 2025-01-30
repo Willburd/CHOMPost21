@@ -34,7 +34,7 @@
 			if(istype(I) && !I.anchored)
 				bowl_contents += I
 		for(var/mob/living/L in loc.contents)
-			if((L.resting || L.lying) && !L.buckled)
+			if((L.GetResting() || L.lying) && !L.buckled)
 				bowl_contents += L
 		if(bowl_contents.len)
 			user.visible_message(span_notice("[user] flushes the [lowertext(name)]."), span_notice("You flush the [lowertext(name)]."))

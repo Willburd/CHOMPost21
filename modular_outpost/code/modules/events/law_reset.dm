@@ -54,7 +54,7 @@
 
 		to_chat(S, "<span class='warning'>Your integrated sensors detect an anomaly. Your systems will be impacted as you begin a partial restart.</span>")
 		var/ionbug = rand(3, 9)
-		S.confused += ionbug
+		S.AdjustConfused(ionbug)
 		S.eye_blurry += (ionbug - 1)
 
 		var/path = pick(laws)

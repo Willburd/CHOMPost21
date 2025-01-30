@@ -169,15 +169,15 @@
 	if(istype(user,/mob/living/carbon/alien/diona))
 		var/mob/living/carbon/alien/diona/nymph = user
 
-		if(nymph.stat == DEAD || nymph.paralysis || nymph.weakened || nymph.stunned || nymph.restrained())
+		if(nymph.stat == DEAD || nymph.GetParalyse() || nymph.GetWeakened() || nymph.GetStunned() || nymph.restrained())
 			return
 
 		if(weedlevel > 0)
 			nymph.reagents.add_reagent(REAGENT_ID_GLUCOSE, weedlevel)
 			weedlevel = 0
 			nymph.visible_message(span_notice(span_bold("[nymph]") + " begins rooting through [src], ripping out weeds and eating them noisily."),span_notice("You begin rooting through [src], ripping out weeds and eating them noisily."))
-		else if(nymph.nutrition > 100 && nutrilevel < 10)
-			nymph.nutrition -= ((10-nutrilevel)*5)
+		else if(nymph.get_nutrition() > 100 && nutrilevel < 10)
+			nymph.adjust_nutrition( -((10-nutrilevel)*5))
 			nutrilevel = 10
 			nymph.visible_message(span_notice(span_bold("[nymph]") + " secretes a trickle of green liquid, refilling [src]."),span_notice("You secrete a trickle of green liquid, refilling [src]."))
 		else

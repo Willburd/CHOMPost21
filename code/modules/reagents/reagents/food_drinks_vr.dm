@@ -99,7 +99,7 @@
 					M.adjust_nutrition(alt_nutriment_factor * removed)
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
-			if(H.feral > 0 && H.nutrition > 150 && H.traumatic_shock < 20 && H.jitteriness < 100) //Same check as feral triggers to stop them immediately re-feralling
+			if(H.feral > 0 && H.get_nutrition() > 150 && H.traumatic_shock < 20 && H.jitteriness < 100) //Same check as feral triggers to stop them immediately re-feralling
 				H.feral -= removed * 3 // should calm them down quick, provided they're actually in a state to STAY calm.
 				if (H.feral <=0) //check if they're unferalled
 					H.feral = 0
@@ -453,16 +453,16 @@
 				if(IS_SKRELL)
 					M.adjustToxLoss(0.25 * removed)  //Equivalent to half as much protein, since it's half protein.
 				if(IS_TESHARI)
-					M.nutrition += (alt_nutriment_factor * 1.2 * removed) //Give them the same nutrition they would get from protein.
+					M.adjust_nutrition(alt_nutriment_factor * 1.2 * removed) //Give them the same nutrition they would get from protein.
 				if(IS_UNATHI)
-					M.nutrition += (alt_nutriment_factor * 1.125 * removed) //Give them the same nutrition they would get from protein.
+					M.adjust_nutrition(alt_nutriment_factor * 1.125 * removed) //Give them the same nutrition they would get from protein.
 					//Takes into account the 0.5 factor for all nutriment which is applied on top of the 2.25 factor for protein.
 				//Chimera don't need their own case here since their factors for nutriment and protein cancel out.
 				else
-					M.nutrition += (alt_nutriment_factor * removed)
+					M.adjust_nutrition(alt_nutriment_factor * removed)
 		if(ishuman(M))
 			var/mob/living/carbon/human/H = M
-			if(H.feral > 0 && H.nutrition > 100 && H.traumatic_shock < min(60, H.nutrition/10) && H.jitteriness < 100) // same check as feral triggers to stop them immediately re-feralling
+			if(H.feral > 0 && H.get_nutrition() > 100 && H.traumatic_shock < min(60, H.get_nutrition()/10) && H.jitteriness < 100) // same check as feral triggers to stop them immediately re-feralling
 				H.feral -= removed * 3 // should calm them down quick, provided they're actually in a state to STAY calm.
 				if (H.feral <=0) //check if they're unferalled
 					H.feral = 0
@@ -475,7 +475,7 @@
 		M.adjustToxLoss(removed)  //Equivalent to half as much protein, since it's half protein.
 	if(M.species.organic_food_coeff)
 		if(alien == IS_SLIME || alien == IS_CHIMERA) //slimes and chimera can get nutrition from injected nutriment and protein
-			M.nutrition += (alt_nutriment_factor * removed)
+			M.adjust_nutrition(alt_nutriment_factor * removed)
 
 //////////////////////Bepis Drinks (04/29/2021)//////////////////////
 
@@ -552,7 +552,7 @@
 
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		if(H.feral > 0 && H.nutrition > 150 && H.traumatic_shock < 20 && H.jitteriness < 100) //Same check as feral triggers to stop them immediately re-feralling
+		if(H.feral > 0 && H.get_nutrition() > 150 && H.traumatic_shock < 20 && H.jitteriness < 100) //Same check as feral triggers to stop them immediately re-feralling
 			H.feral -= removed * 3 //Should calm them down quick, provided they're actually in a state to STAY calm.
 			if(H.feral <=0) //Check if they're unferalled
 				H.feral = 0

@@ -354,8 +354,8 @@
 		dat += (patient.getFireLoss() < 60 ? span_gray(burn) : span_red(burn))
 		dat += "<BR>"
 
-		if(round(patient.paralysis / 4) >= 1)
-			dat += text("<HR>Patient paralyzed for: []<BR>", round(patient.paralysis / 4) >= 1 ? "[round(patient.paralysis / 4)] seconds" : "None")
+		if(round(patient.GetParalyse() / 4) >= 1)
+			dat += text("<HR>Patient paralyzed for: []<BR>", round(patient.GetParalyse() / 4) >= 1 ? "[round(patient.GetParalyse() / 4)] seconds" : "None")
 		if(patient.getBrainLoss())
 			dat += "<div class='line'>" + span_orange("Significant brain damage detected.") + "</div><br>"
 		if(patient.getCloneLoss())
@@ -607,7 +607,7 @@
 				var/actual_brute = T.getBruteLoss() - old_brute
 				var/actual_burn = T.getFireLoss() - old_burn
 				var/damage_gain = actual_brute + actual_burn
-				hound.nutrition += 2.5 * damage_gain //drain(-25 * damage_gain) //25*total loss as with voreorgan stats.//CHOMPEdit
+				hound.adjust_nutrition(2.5 * damage_gain) //drain(-25 * damage_gain) //25*total loss as with voreorgan stats.//CHOMPEdit
 				//CHOMPAdd Start
 				if(water)
 					water.add_charge(damage_gain)
@@ -719,13 +719,13 @@
 									wood.add_charge(total_material)
 					//CHOMPEdit Start
 					if(is_trash)
-						hound.nutrition += digested
+						hound.adjust_nutrition(digested)
 					else
-						hound.nutrition += 5 * digested //drain(-50 * digested)
+						hound.adjust_nutrition(5 * digested) //drain(-50 * digested)
 					//CHOMPEdit End
 			else if(istype(target,/obj/effect/decal/remains))
 				qdel(target)
-				hound.nutrition += 10 //drain(-100) //CHOMPEdit
+				hound.adjust_nutrition(10) //drain(-100) //CHOMPEdit
 			else
 				items_preserved |= target
 		update_patient()

@@ -118,7 +118,7 @@
 	var/mob/living/carbon/human/H = owner
 	if(!(aiming_with in owner) || (istype(H) && !H.item_is_in_hands(aiming_with)))
 		to_chat(owner, span_warning("You must keep hold of your weapon!"))
-	else if(owner.eye_blind)
+	else if(owner.GetBlinded())
 		to_chat(owner, span_warning("You are blind and cannot see your target!"))
 	else if(!aiming_at || !istype(aiming_at.loc, /turf))
 		to_chat(owner, span_warning("You have lost sight of your target!"))

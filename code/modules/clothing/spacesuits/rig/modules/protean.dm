@@ -54,9 +54,9 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 			deactivate(1)
 		else
 			P = P?:humanform
-			if((H.nutrition >= 100) && (P.nutrition <= 5000))
-				H.nutrition -= 10
-				P.nutrition += 10
+			if((H.get_nutrition() >= 100) && (P.get_nutrition() <= 5000))
+				H.adjust_nutrition(-10)
+				P.adjust_nutrition(10)
 
 //This rig module allows a worn Protean to toggle and configure its armor settings.
 /obj/item/rig_module/protean/armor
