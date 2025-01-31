@@ -6,16 +6,14 @@
 	anchored = TRUE
 	density = TRUE
 	movement_type = UNSTOPPABLE // for bumps to trigger
+	VAR_PRIVATE/anti_spam = 0
+	VAR_PRIVATE/movement_range = 500
 	var/datum/weakref/confinement_data = null
-	var/anti_spam = 0
-	var/movetotarget = 1
-	var/movement_range = 500
 
 /obj/effect/confinment_beam/New(loc, dir = 2)
 	src.loc = loc
 	src.set_dir(dir)
-	spawn(0)
-		move(1)
+	addtimer(CALLBACK(src, PROC_REF(move), 1), 0, TIMER_DELETE_ME)
 
 /obj/effect/confinment_beam/Bump(atom/A)
 	if(isobserver(A))
@@ -33,7 +31,7 @@
 		var/mob/living/L = A
 		if(L.is_incorporeal())
 			return
-		var/shock_damage = min(rand(90,140),rand(40,100))
+		var/shock_damage = min(rand(90,140),rand(40,200))
 		L.electrocute_act(shock_damage, src, 1, BP_TORSO)
 		var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 		if(data && data.power_level > 100000 && prob(CLAMP(data.power_level / 1000000,0,100)))
@@ -50,12 +48,14 @@
 	return
 
 /obj/effect/confinment_beam/proc/move(var/lag)
+	PROTECTED_PROC(TRUE)
 	make_effects()
 	// Check if we should transmit to the target zlevel
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-	if(data)
+	if(data && data.target_z != 0) // 0 sends to centcom
 		if(!(data.target_z in using_map.confinement_beam_z_levels))
 			movement_range = 0 // -1 or an invalid Z
+			qdel(src)
 			return
 	var/at_edge = FALSE
 	if(dir == NORTH || dir == SOUTH)
@@ -76,10 +76,15 @@
 	if(movement_range <= 0)
 		qdel(src)
 		return
-	spawn(lag)
-		move(lag)
+	addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)
+
+/obj/effect/confinment_beam/Destroy()
+	movement_range = 0
+	confinement_data = null
+	. = ..()
 
 /obj/effect/confinment_beam/proc/make_effects()
+	PROTECTED_PROC(TRUE)
 	anti_spam--
 	if(anti_spam <= 0)
 		if(prob(30))
@@ -106,8 +111,7 @@
 		icon = 'icons/obj/machines/shielding_vr.dmi'
 		icon_state = "shieldsparkles"
 	movement_range = rand(5,9)
-	spawn(0)
-		move(rand(2,5))
+	addtimer(CALLBACK(src, PROC_REF(move), rand(2,5)), 0, TIMER_DELETE_ME)
 
 /obj/effect/confinment_beam/field/Bump(atom/A)
 	if(isobserver(A))
@@ -157,8 +161,7 @@
 
 /obj/effect/confinment_beam_incoming/New(loc)
 	src.loc = loc
-	spawn(1)
-		move(1)
+	addtimer(CALLBACK(src, PROC_REF(move), 1), 1, TIMER_DELETE_ME)
 
 /obj/effect/confinment_beam_incoming/Bump(atom/A)
 	if(isobserver(A))
@@ -189,6 +192,7 @@
 	return
 
 /obj/effect/confinment_beam_incoming/proc/move(var/lag)
+	PRIVATE_PROC(TRUE)
 	var/turf/T = get_turf(src)
 	if(T)
 		var/atom/A = pick(T.contents)
@@ -221,5 +225,4 @@
 			qdel(src)
 			return
 		src.loc = get_step(src,DOWN)
-		spawn(lag)
-			move(lag)
+		addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)

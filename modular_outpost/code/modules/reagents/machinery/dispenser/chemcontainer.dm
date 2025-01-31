@@ -17,19 +17,19 @@
 	possible_transfer_amounts = list(CARTRIDGE_VOLUME_LARGE)
 	unacidable = TRUE
 
-	var/loaded_reagent = null
-	var/label = ""
+	VAR_PROTECTED/loaded_reagent = null
+	VAR_PRIVATE/label = ""
 
 /obj/item/reagent_containers/chem_canister/Initialize()
 	. = ..()
 	if(loaded_reagent)
-		reagents.add_reagent(loaded_reagent, volume)
 		var/datum/reagent/R = SSchemistry.chemical_reagents[loaded_reagent]
-		setLabel(R.name)
+		if(R) // Sanity check the reagent
+			set_canister(R.name,R.id)
+			reagents.add_reagent(R.id, volume)
 	// Can't be set on these
 	src.verbs -= /obj/item/reagent_containers/verb/set_APTFT
-	spawn(1)
-		update_icon()
+	update_icon()
 
 /obj/item/reagent_containers/chem_canister/examine(mob/user)
 	. = ..()
@@ -38,7 +38,12 @@
 	else
 		. += "It contains [reagents.total_volume] units of liquid."
 
+/obj/item/reagent_containers/chem_canister/proc/set_canister(var/labl,var/reagent_id)
+	setLabel(labl)
+	loaded_reagent = reagent_id
+
 /obj/item/reagent_containers/chem_canister/proc/setLabel(L)
+	PRIVATE_PROC(TRUE)
 	if(L)
 		label = L
 		name = "[initial(name)] - '[L]'"

@@ -31,6 +31,9 @@
 
 /obj/structure/confinement_beam_generator/lens/Crossed(O)
 	. = ..()
+	if(istype(O,/obj/effect/confinment_beam/field))
+		qdel(O)
+		return
 	if(istype(O,/obj/effect/confinment_beam))
 		// The wideband beams will always be qdelled!
 		var/obj/effect/confinment_beam/CB = O

@@ -1,3 +1,9 @@
+// Outpost 21 edit - Only being able to print ammo boxes is the most counterproductive idea i've ever encountered in a "rebalance"
+// Renabling both of these to have printable magazines returned to the lathe:
+// code\datums\autolathe\arms.dm
+// code\datums\autolathe\arms_vr.dm
+//
+
 /datum/category_item/autolathe/arms/syringegun_ammo
 	name = "syringe gun cartridge"
 	path =/obj/item/syringe_cartridge

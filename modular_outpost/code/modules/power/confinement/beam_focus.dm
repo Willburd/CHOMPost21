@@ -1,4 +1,4 @@
-#define BEAM_HEAT_DIVISOR 3000 // Must be very high, or you can hook the hotline up to a thermal generator and scavenge more energy than you put in!
+#define BEAM_HEAT_DIVISOR 30000 // Must be very high, or you can hook the hotline up to a thermal generator and scavenge more energy than you put in!
 #define YIELD_MULTIPLIER 1.068 // Energy is multiplied by this every time a pulse passes through a focus.
 
 /obj/structure/confinement_beam_generator/focus
@@ -7,8 +7,8 @@
 	icon_state = "focus"
 	base_icon = "focus"
 
-	var/minimum_power = 30000 // Same as an emitter
-	var/datum/confinement_pulse_data/focus_data // Because each focus results in a modified beam...
+	VAR_PRIVATE/minimum_power = 30000 // Same as an emitter
+	VAR_PRIVATE/datum/confinement_pulse_data/focus_data // Because each focus results in a modified beam...
 
 /obj/structure/confinement_beam_generator/focus/Initialize(mapload)
 	. = ..()

@@ -10,12 +10,12 @@
 	active_power_usage = 500
 	circuit = /obj/item/circuitboard/industrial_reagent_reactor
 	default_max_vol = 2500
-	var/obj/machinery/portable_atmospherics/canister/internal_tank
-	var/toggle_mode = 0 // 0 = intake and boil, 1 = output
-	var/next_mode_toggle = 0
+	VAR_PRIVATE/obj/machinery/portable_atmospherics/canister/internal_tank
+	VAR_PRIVATE/toggle_mode = 0 // 0 = intake and boil, 1 = output
+	VAR_PRIVATE/next_mode_toggle = 0
 
-	var/dis_time = 30
-	var/drain_time = 10
+	VAR_PRIVATE/dis_time = 30
+	VAR_PRIVATE/drain_time = 10
 
 /obj/machinery/reagent_refinery/reactor/Initialize()
 	. = ..()
@@ -83,7 +83,7 @@
 				if(istype(other,/obj/machinery/reagent_refinery/filter))
 					var/obj/machinery/reagent_refinery/filter/filt = other
 					var/check_dir = 0
-					if(filt.filter_side == 1)
+					if(filt.get_filter_side() == 1)
 						check_dir = turn(filt.dir, 270)
 					else
 						check_dir = turn(filt.dir, 90)

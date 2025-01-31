@@ -64,7 +64,7 @@ OL|IL|OL
 	var/current_x = -1
 	var/current_y = -1
 	var/dir = NORTH
-	var/target_z = -1
+	var/target_z = -1 // Beam to no level
 	var/t_rate = 1 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
@@ -85,12 +85,65 @@ OL|IL|OL
 			current_y--
 		if(round(target_y,1) > round(current_y,1))
 			current_y++
+	if(target_z == 0) // BEAM TO CENTCOM
+		transmit_beam_to_centcom()
+		return
 	// Make sure the Z levels above an allowed level are ALSO allowed! It fires from the highest level it can reach!
 	var/turf/T = locate(current_x,current_y,target_z)
 	if(!T || !(T.z in using_map.confinement_beam_z_levels))
 		return
 	var/obj/effect/confinment_beam_incoming/I = new /obj/effect/confinment_beam_incoming(T)
 	I.confinement_data = WEAKREF(src)
+
+/datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
+	PRIVATE_PROC(TRUE)
+	if(current_x != current_x || current_y != current_y)
+		return // Stop making mistakes
+	var/org_wattage = SSsupply.watts_sold
+	SSsupply.watts_sold += power_level * 0.92 // Sell to centcom
+	var/new_wattage = SSsupply.watts_sold
+
+	// Get points
+	if(FLOOR(org_wattage / SSsupply.points_per_watt,1) != FLOOR(new_wattage / SSsupply.points_per_watt,1))
+		SSsupply.points += 1
+
+	// Give rewards/notices
+	if(check_sold_wattage(100 MEGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("100 total Megawatts of excess power sold!", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
+		global_announcer.autosay("PTL bounty reached. 25 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += 25
+	if(check_sold_wattage(500 MEGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("500 total Megawatts of excess power sold!", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
+		global_announcer.autosay("PTL bounty reached. 50 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += 50
+	if(check_sold_wattage(1 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("1 total gigawatt of excess power sold!", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
+		global_announcer.autosay("PTL bounty reached. 100 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += 100
+	if(check_sold_wattage(100 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("100 total gigawatt of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		global_announcer.autosay("PTL bounty reached. 200 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += 200
+	if(check_sold_wattage(500 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("What are you doing? 500 total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		global_announcer.autosay("PTL bounty reached. 300 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += 300
+	if(check_sold_wattage(1000 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("Holy shit. 1000 total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		global_announcer.autosay("PTL bounty reached. 500 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += 500
+	if(check_sold_wattage(1000000 GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("HOW!? 1 million total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
+		global_announcer.autosay("PTL bounty reached. 1000 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += 1000
+
+/datum/confinement_pulse_data/proc/check_sold_wattage(var/threshold,var/org_wattage,var/new_wattage)
+	PRIVATE_PROC(TRUE)
+	if(new_wattage >= threshold && org_wattage < threshold)
+		return TRUE
+	return FALSE
+
+
 
 /obj/structure/confinement_beam_generator
 	name = "Confinement Beam Generator"
@@ -100,18 +153,18 @@ OL|IL|OL
 	anchored = FALSE
 	density = TRUE
 	var/base_icon = "" // icon_state for each machine
-	var/construction_state = 0
+	VAR_PROTECTED/construction_state = 0
 
 	// For focus and inductors
-	var/beam_wander_threshold = 0.1
-	var/dev_offset_x = 0
-	var/dev_offset_y = 0
-	var/internal_heat = T0C
-	var/max_hp = 100
-	var/health = 100
-	var/damage_temp = T0C + 1400
-	var/damage_alert = FALSE
-	var/critical_alert = FALSE
+	VAR_PROTECTED/beam_wander_threshold = 0.1
+	VAR_PROTECTED/dev_offset_x = 0
+	VAR_PROTECTED/dev_offset_y = 0
+	VAR_PROTECTED/internal_heat = T0C
+	VAR_PROTECTED/max_hp = 100
+	VAR_PROTECTED/health = 100
+	VAR_PROTECTED/damage_temp = T0C + 1400
+	VAR_PROTECTED/damage_alert = FALSE
+	VAR_PROTECTED/critical_alert = FALSE
 
 /obj/structure/confinement_beam_generator/Destroy()
 	construction_state = 0
@@ -159,6 +212,7 @@ OL|IL|OL
 	. = ..()
 
 /obj/structure/confinement_beam_generator/proc/has_power()
+	PROTECTED_PROC(TRUE)
 	var/turf/T = get_turf(src)
 	var/area/A = get_area(src)
 	return !((!A.power_equip && A.requires_power == 1) || istype(T, /turf/space))
@@ -182,6 +236,7 @@ OL|IL|OL
 	return
 
 /obj/structure/confinement_beam_generator/proc/process_tool_hit(var/obj/item/O, var/mob/user)
+	PROTECTED_PROC(TRUE)
 	if(!(O) || !(user))
 		return FALSE
 	if(!ismob(user) || !isobj(O))
@@ -236,6 +291,7 @@ OL|IL|OL
 	return
 
 /obj/structure/confinement_beam_generator/proc/fire_narrow_beam(var/datum/confinement_pulse_data/data)
+	PROTECTED_PROC(TRUE)
 	playsound(src, 'sound/weapons/emitter.ogg', 25, 1)
 	if(prob(35))
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -247,6 +303,7 @@ OL|IL|OL
 	B.fire(dir2angle(data.dir))
 
 /obj/structure/confinement_beam_generator/proc/fire_wide_beam(var/turf/pos,var/datum/weakref/WF,var/pass_data = TRUE)
+	PROTECTED_PROC(TRUE)
 	var/datum/confinement_pulse_data/data = WF?.resolve()
 	if(!data)
 		return
@@ -260,6 +317,7 @@ OL|IL|OL
 		AW.set_dir( data.dir)
 
 /obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
+	PROTECTED_PROC(TRUE)
 	var/turf/T = get_turf(src)
 	if(!T)
 		return -1
@@ -268,6 +326,7 @@ OL|IL|OL
 	return T.z
 
 /obj/structure/confinement_beam_generator/proc/exchange_heat(var/transfer_coefficient)
+	PROTECTED_PROC(TRUE)
 	// Alter deviation of beam
 	if(prob(10))
 		dev_offset_x = rand(-OFFSET_RAND_MAX,OFFSET_RAND_MAX)
@@ -277,21 +336,17 @@ OL|IL|OL
 		return
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXA = locate() in get_step(src,turn(dir,90))
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXB = locate() in get_step(src,turn(dir,-90))
-	var/transfer_ratio = 0.5 // Assume both exchangers
-	if(!EXA || !EXA.network || EXA.air_contents.heat_capacity() <= 0 || !EXA.air_contents.total_moles || EXA.air_contents.temperature > internal_heat * transfer_coefficient)
+	if(!EXA || !EXA.network || EXA.air_contents.heat_capacity() <= 0 || !EXA.air_contents.total_moles)
 		EXA = null
-		transfer_ratio = 1 // Only one exchanger
-	if(!EXB || !EXB.network || EXB.air_contents.heat_capacity() <= 0 || !EXB.air_contents.total_moles || EXB.air_contents.temperature > internal_heat * transfer_coefficient)
+	if(!EXB || !EXB.network || EXB.air_contents.heat_capacity() <= 0 || !EXB.air_contents.total_moles)
 		EXB = null
-		transfer_ratio = 1 // Only one exchanger
 	// Exchange internal heat directly to the gas! If two exchangers, split it evenly, otherwise dump it all into one.
-	if(EXA)
-		EXA.air_contents.add_thermal_energy( EXA.air_contents.get_thermal_energy_change( EXA.air_contents.temperature + (internal_heat * transfer_ratio * transfer_coefficient)) )
-		EXA.network.update = 1
-	if(EXB)
-		EXB.air_contents.add_thermal_energy( EXB.air_contents.get_thermal_energy_change( EXB.air_contents.temperature + (internal_heat * transfer_ratio * transfer_coefficient)) )
-		EXB.network.update = 1
-
+	if(prob(50))
+		use_exchanger(EXA,transfer_coefficient)
+		use_exchanger(EXB,transfer_coefficient)
+	else
+		use_exchanger(EXB,transfer_coefficient)
+		use_exchanger(EXA,transfer_coefficient)
 	// Damage and eventually explode
 	var/warns = FALSE
 	if(istype(src,/obj/structure/confinement_beam_generator/focus))
@@ -302,7 +357,7 @@ OL|IL|OL
 		health -= 1
 		if(warns && !damage_alert)
 			damage_alert = TRUE
-			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", "Engineering")
+			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) emergency engineering announcement.")
 
 		var/dam = 1 - (health / max_hp)
@@ -319,12 +374,17 @@ OL|IL|OL
 			explosion(get_turf(src),2,3,5,7)
 			qdel(src)
 
-	// If heat exchange was successful then clear the current heat, the limiter should be the gas itself.
-	if(EXA || EXB)
-		var/datum/gas_mixture/A = T.return_air()
-		internal_heat = A.temperature // Reset to ambient for next cycle
-		if(internal_heat < 0)
-			internal_heat = 0
+/obj/structure/confinement_beam_generator/proc/use_exchanger(var/obj/machinery/atmospherics/unary/heat_exchanger/EXA,var/transfer_coefficient)
+	PRIVATE_PROC(TRUE)
+	if(!EXA)
+		return
+	var/transfer_amount = internal_heat - EXA.air_contents.temperature
+	if(transfer_amount > 0)
+		EXA.air_contents.add_thermal_energy( EXA.air_contents.get_thermal_energy_change( EXA.air_contents.temperature + (transfer_amount * transfer_coefficient)))
+		EXA.network.update = 1
+		internal_heat -= transfer_amount
+	if(internal_heat < 0)
+		internal_heat = 0
 
 #undef EXPLODEHEAT
 #undef OFFSET_RAND_MAX

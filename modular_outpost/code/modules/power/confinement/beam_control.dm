@@ -6,17 +6,17 @@
 	desc = "Controls the confinement beam's power output and destination. Controls the output of a beam generator next to it."
 	icon_state = "control_box"
 	base_icon = "control_box"
-	var/found_dir = 0
-	var/datum/confinement_pulse_data/data
-	var/has_gen = FALSE
-	var/pulse_enabled = FALSE
-	var/calibration_lock = FALSE
-	var/last_temp = 0
-	var/last_max = 0
-	var/last_watt = NOWATT // string of wattage
-	var/current_target = NOTARG
-	var/last_health = 0
-	var/max_health = 0
+	VAR_PRIVATE/found_dir = 0
+	VAR_PRIVATE/datum/confinement_pulse_data/data
+	VAR_PRIVATE/has_gen = FALSE
+	VAR_PRIVATE/pulse_enabled = FALSE
+	VAR_PRIVATE/calibration_lock = FALSE
+	VAR_PRIVATE/last_temp = 0
+	VAR_PRIVATE/last_max = 0
+	VAR_PRIVATE/last_watt = NOWATT // string of wattage
+	VAR_PRIVATE/current_target = NOTARG
+	VAR_PRIVATE/last_health = 0
+	VAR_PRIVATE/max_health = 0
 
 /obj/structure/confinement_beam_generator/control_box/Initialize(mapload)
 	. = ..()
@@ -149,6 +149,17 @@
 		"t_rate" = data.t_rate * 100
 	)
 
+	// Target centcomm
+	tgui_data["target_list"] += list( // appending lists would merge it if this wasn't a nested list
+		list(
+			"id" = "Central Command PTL Reciever - 672, 821, Central Command",
+			"x" = 4,
+			"y" = 4,
+			"z" = 0,
+			"enb" = TRUE
+		)
+	)
+	// Target all others
 	for(var/obj/structure/confinement_beam_generator/collector/C in GLOB.confinement_beam_collectors)
 		var/turf/T = get_turf(C)
 		if(T && C.is_valid_state())
@@ -205,7 +216,7 @@
 			var/get_x = params["x"]
 			var/get_y = params["y"]
 			var/get_z = params["z"]
-			if(get_id == "")
+			if(get_id == "") // Release target
 				if(data.target_z != -1)
 					current_target = NOTARG
 					calibration_lock = TRUE
@@ -220,6 +231,19 @@
 					addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
 					return TRUE
 				return FALSE
+			if(get_z == 0) // Target centcom
+				current_target = get_id
+				calibration_lock = TRUE
+				pulse_enabled = FALSE
+				// Reset Targeting
+				data.target_x = 500
+				data.target_y = 500
+				data.target_z = 0
+				// Reset aim
+				data.current_x = -1
+				data.current_y = -1
+				addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 3 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+				return TRUE
 			// check for data validity by scanning the list for a matching id
 			for(var/obj/structure/confinement_beam_generator/collector/C in GLOB.confinement_beam_collectors)
 				var/turf/T = get_turf(C)

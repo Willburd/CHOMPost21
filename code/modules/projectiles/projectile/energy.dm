@@ -70,7 +70,7 @@
 	..() //initial flash
 
 	//residual illumination
-	new /obj/effect/effect/smoke/illumination(src.loc, rand(190,240) SECONDS, range=8, power=3, color=light_colour) //same lighting power as flare
+	new /obj/effect/effect/smoke/illumination(loc, rand(190,240) SECONDS, 8, 3, light_colour) //same lighting power as flare
 
 /obj/item/projectile/energy/electrode
 	name = "electrode"
@@ -84,9 +84,11 @@
 	hud_state = "taser"
 	//Damage will be handled on the MOB side, to prevent window shattering.
 
+/* Outpost 21 edit - Removed duplicate def
 /obj/item/projectile/energy/electrode/strong
 	agony = 55
 	hud_state = "taser"
+*/
 
 /obj/item/projectile/energy/electrode/stunshot
 	name = "stunshot"
@@ -316,7 +318,8 @@
 */
 
 /obj/item/projectile/energy/electrode/strong
-	agony = 70
+	agony = 100 // Outpost 21 edit - Stun revolver from 70 to 100 agony damage
+	speed = 2.2 // Outpost 21 edit - Slower projectile for stun revolver
 	hud_state = "taser"
 
 /obj/item/projectile/energy

@@ -84,6 +84,7 @@
 
 // Forward to the beaker directly instead of copypasting code
 /obj/machinery/reagentgrinder/industrial/verb/set_APTFT()
+	PRIVATE_PROC(TRUE)
 	set name = "Set transfer amount"
 	set category = "Object"
 	set src in view(1)

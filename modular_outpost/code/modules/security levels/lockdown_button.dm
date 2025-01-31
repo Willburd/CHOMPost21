@@ -10,9 +10,9 @@
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON
-	var/unlocked = FALSE
-	var/list/linked_lockdowns = list("Example Name" = "blast_tag")
-	var/list/linked_jokes = list("Example Name" = "Joke here.")
+	VAR_PRIVATE/unlocked = FALSE
+	VAR_PRIVATE/list/linked_lockdowns = list("Example Name" = "blast_tag")
+	VAR_PRIVATE/list/linked_jokes = list("Example Name" = "Joke here.")
 
 /obj/machinery/lockdown_console/attack_ai(mob/user as mob)
 	attack_hand(user)
@@ -110,6 +110,7 @@
 	return
 
 /obj/machinery/lockdown_console/proc/trigger_event(var/event)
+	PRIVATE_PROC(TRUE)
 	var/counter = 0
 	for(var/link in linked_lockdowns)
 		counter += 1

@@ -400,7 +400,7 @@
 	fire_sound = 'sound/weapons/Taser.ogg'
 	nodamage = 1
 	taser_effect = 1
-	agony = 35
+	agony = 40 // Outpost 21 edit - raised agony from 35 to 40
 	damage_type = HALLOSS
 	light_color = "#FFFFFF"
 	hitsound = 'sound/weapons/zapbang.ogg'
