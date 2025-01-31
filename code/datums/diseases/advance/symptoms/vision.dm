@@ -46,6 +46,6 @@ Bonus
 					if(eyes.damage >= 10)
 						M.disabilities |= NEARSIGHTED
 						if(prob(eyes.damage - 10 + 1))
-							if(!M.eye_blind)
+							if(!M.GetBlinded())
 								to_chat(M, span_userdanger("You go blind!"))
 								M.Blind(20)

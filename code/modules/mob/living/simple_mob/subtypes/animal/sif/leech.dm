@@ -480,7 +480,7 @@
 	if(isliving(A))
 		var/mob/living/L = A
 		if(ishuman(L) && !L.isSynthetic())
-			if(L.incapacitated() || (L.stat && L.stat != DEAD) || L.resting || L.paralysis)
+			if(L.incapacitated() || (L.stat && L.stat != DEAD) || L.GetResting() || L.GetParalyse())
 				holder.a_intent = I_GRAB		// Infesting time.
 			else
 				holder.a_intent = I_DISARM	// They're standing up! Try to drop or stun them.

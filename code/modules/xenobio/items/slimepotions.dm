@@ -95,7 +95,7 @@
 			return ..()
 
 		S.pacify()
-		S.nutrition = 700
+		S.set_nutrition(700)
 		to_chat(M, span_warning("You absorb the agent and feel your intense desire to feed melt away."))
 		to_chat(user, span_notice("You feed the slime the agent, removing its hunger and calming it."))
 

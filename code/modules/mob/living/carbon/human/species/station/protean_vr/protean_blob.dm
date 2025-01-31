@@ -214,7 +214,7 @@
 	if((stat < DEAD) && (health <= 0))
 		humanform.death()
 
-	nutrition = humanform.nutrition
+	nutrition = humanform.get_nutrition()
 
 	//Overhealth
 	if(health > getMaxHealth())

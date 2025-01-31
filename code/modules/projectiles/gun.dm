@@ -458,7 +458,7 @@
 				else if((nerd.species.lightweight || nerd.species.lightweight_light) && one_handed_penalty >= 30 && recoil_mode > 0)
 					var/old_dir = nerd.dir
 					// Laying down stops this
-					if(!nerd.resting)
+					if(!nerd.GetResting())
 						nerd.Weaken(1*recoil_mode)
 						step_away(nerd, get_step(nerd,nerd.dir))
 						to_chat(nerd, span_danger("\The [src]'s recoil knocks you over!"))

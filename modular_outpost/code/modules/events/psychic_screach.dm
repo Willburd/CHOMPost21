@@ -42,7 +42,7 @@
 				// fwump
 				to_chat(H, "<span class='warning'>Your integrated sensors detect an anomaly. Your systems will be impacted as you begin a partial restart.</span>")
 				var/ionbug = rand(3, 9)
-				H.confused += ionbug
+				H.AdjustConfused(ionbug)
 				H.eye_blurry += (ionbug - 1)
 			else
 				// nosebleed
@@ -55,7 +55,7 @@
 			var/mob/living/silicon/S = L
 			to_chat(S, "<span class='warning'>Your integrated sensors detect an anomaly. Your systems will be impacted as you begin a partial restart.</span>")
 			var/ionbug = rand(3, 9)
-			S.confused += ionbug
+			S.AdjustConfused(ionbug)
 			S.eye_blurry += (ionbug - 1)
 			if(isAI(L)) // not an AI event
 				continue

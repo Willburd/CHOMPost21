@@ -398,7 +398,7 @@
 	max_duration = 40 //CHOMPedit
 
 /datum/surgery_step/internal/detoxify/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	return ..() && target_zone == BP_TORSO && (target.toxloss > 25 || target.oxyloss > 25)
+	return ..() && target_zone == BP_TORSO && (target.getToxLoss() > 25 || target.getOxyLoss() > 25)
 
 /datum/surgery_step/internal/detoxify/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	user.visible_message(span_notice("[user] begins to pull toxins from, and restore oxygen to [target]'s musculature and organs with \the [tool]."), \
@@ -410,9 +410,9 @@
 	user.visible_message(span_notice("[user] finishes pulling toxins from, and restoring oxygen to [target]'s musculature and organs with \the [tool]."), \
 	span_notice("You finish pulling toxins from, and restoring oxygen to [target]'s musculature and organs with \the [tool]."))
 	user.balloon_alert_visible("Finishes pulling toxins and restoring oxygen to [target]'s organs", "Pulled toxins from and restored oxygen to the organs") // CHOMPEdit
-	if(target.toxloss>25)
+	if(target.getToxLoss()>25)
 		target.adjustToxLoss(-20)
-	if(target.oxyloss>25)
+	if(target.getOxyLoss()>25)
 		target.adjustOxyLoss(-20)
 	..()
 

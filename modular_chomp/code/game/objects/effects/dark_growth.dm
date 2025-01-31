@@ -41,7 +41,7 @@
 	if(istype(O, /mob/living/carbon/human))
 		var/mob/living/carbon/human/L = O
 		if(istype(L.species, /datum/species/crew_shadekin))
-			L.halloss += 5
+			L.adjustHalLoss(5)
 			if(prob(50))
 				to_chat(L, span_danger("The more you move through this darkness, the more you can feel a throbbing, shooting ache in your bones."))
 			if(prob(5))

@@ -37,7 +37,7 @@
 			continue
 		if(L.stat != CONSCIOUS)
 			continue
-		if(L.resting)
+		if(L.GetResting())
 			continue
 		L.Confuse(8)
 		L.make_dizzy(10)

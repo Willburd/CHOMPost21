@@ -314,7 +314,7 @@ Class Procs:
 
 			if(temp_apc && temp_apc.terminal && temp_apc.terminal.powernet)
 				temp_apc.terminal.powernet.trigger_warning()
-		if(user.stunned)
+		if(user.GetStunned())
 			return 1
 	return 0
 
@@ -637,7 +637,7 @@ Class Procs:
 	if (user.restrained() || user.buckled)
 		to_chat(user, span_notice("You need your hands and legs free for this."))
 		return 0
-	if (user.stat || user.paralysis || user.sleeping || user.lying || user.weakened)
+	if (user.stat || user.GetParalyse() || user.GetSleeping() || user.lying || user.GetWeakened())
 		return 0
 	if (isAI(user))
 		to_chat(user, span_notice("You need hands for this."))

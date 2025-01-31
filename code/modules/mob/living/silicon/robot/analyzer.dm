@@ -54,7 +54,7 @@
 			if(mode)
 				var/BU = M.getFireLoss() > 50 	? 	span_bold("[M.getFireLoss()]") 		: M.getFireLoss()
 				var/BR = M.getBruteLoss() > 50 	? 	span_bold("[M.getBruteLoss()]") 	: M.getBruteLoss()
-				user.show_message(span_blue("Analyzing Results for [M]:\n\t Overall Status: [M.stat > 1 ? "fully disabled" : "[M.health - M.halloss]% functional"]"))
+				user.show_message(span_blue("Analyzing Results for [M]:\n\t Overall Status: [M.stat > 1 ? "fully disabled" : "[M.health - M.getHalLoss()]% functional"]"))
 				user.show_message("\t Key: [span_orange("Electronics")]/[span_red("Brute")]", 1)
 				user.show_message("\t Damage Specifics: [span_orange("[BU]")] - [span_red("[BR]")]")
 				if(M.tod && M.stat == DEAD)

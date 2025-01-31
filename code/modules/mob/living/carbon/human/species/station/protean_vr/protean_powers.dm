@@ -353,7 +353,7 @@
 					S.OurRig.Moved()
 					P.has_hands = 1
 				else	//We're not in our own RIG
-					if(P.stat || P.resting && !forced)
+					if(P.stat || P.GetResting() && !forced)
 						to_chat(P,span_warning("You can only do this while not stunned."))
 					else
 						if(P.l_hand)

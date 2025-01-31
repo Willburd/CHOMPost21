@@ -58,7 +58,7 @@
 			if(prob(1))
 				to_chat(affected_mob, span_danger("You feel sick."))
 			if(prob(5))
-				if(affected_mob.nutrition > 10)
+				if(affected_mob.get_nutrition() > 10)
 					affected_mob.emote("vomit")
 				else
 					to_chat(affected_mob, span_danger("Your stomach lurches painfully"))

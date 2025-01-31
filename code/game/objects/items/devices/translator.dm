@@ -48,7 +48,7 @@
 		return
 
 	var/mob/living/L = loc
-	if(visual && ((L.sdisabilities & BLIND) || L.eye_blind))
+	if(visual && ((L.sdisabilities & BLIND) || L.GetBlinded()))
 		return
 	if(audio && ((L.sdisabilities & DEAF) || L.ear_deaf))
 		return
@@ -109,7 +109,7 @@
 		return
 
 	var/mob/living/L = loc
-	if(visual && ((L.sdisabilities & BLIND) || L.eye_blind))
+	if(visual && ((L.sdisabilities & BLIND) || L.GetBlinded()))
 		return
 	if(audio && ((L.sdisabilities & DEAF) || L.ear_deaf))
 		return

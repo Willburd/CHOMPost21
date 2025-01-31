@@ -392,9 +392,9 @@
 	if(cool_rotations <= 0)
 		cool_rotations = 0.5
 	cool_rotations = default_power_gen / cool_rotations
-	switch(runner.nutrition)
+	switch(runner.get_nutrition())
 		if(1000 to INFINITY)	//VERY WELL FED, ZOOM!!!!
-			cool_rotations *= (runner.nutrition * 0.001)
+			cool_rotations *= (runner.get_nutrition() * 0.001)
 		if(500 to 1000)	//Well fed!
 			cool_rotations = cool_rotations
 		if(400 to 500)
@@ -411,7 +411,7 @@
 	if(part_mult > 1)
 		cool_rotations += (cool_rotations * (part_mult - 1)) / 4
 	power_gen = cool_rotations
-	runner.nutrition -= nutrition_drain
+	runner.adjust_nutrition(-nutrition_drain)
 
 /obj/machinery/power/rtg/reg/emp_act(severity)
 	return

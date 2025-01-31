@@ -132,7 +132,7 @@
 		if(owner.restrained())
 			return FALSE
 	if(check_flags & AB_CHECK_STUNNED)
-		if(owner.stunned)
+		if(owner.GetStunned())
 			return FALSE
 	if(check_flags & AB_CHECK_LYING)
 		if(owner.lying)

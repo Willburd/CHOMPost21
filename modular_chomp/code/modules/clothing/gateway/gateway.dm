@@ -103,7 +103,7 @@
 /obj/item/clothing/gloves/stamina/process()
 	if(!wearer || wearer.isSynthetic() || wearer.stat == DEAD)
 		return // Robots and dead people don't have a metabolism.
-	wearer.nutrition = max(wearer.nutrition + 8, 0)
+	wearer.set_nutrition(max(wearer.get_nutrition() + 8, 0))
 
 /obj/item/clothing/suit/armor/buffvest
 	name = "candy armor"

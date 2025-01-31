@@ -136,7 +136,7 @@ var/eggs = 0
 	if(do_after(src, 300)) //Thrirty seconds.
 		if(choice == "Make a Egg")
 			src.show_message(span_warning("You feel your belly bulging a bit, you made an egg!"))
-			C.nutrition -=150
+			C.adjust_nutrition(-150)
 			eggs += 1
 			return 0
 		else if(choice == "Make a Egg" && eggs > 5)

@@ -121,9 +121,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	if(!L.absorbable || L.absorbed)
 		return null
 
-	var/old_nutrition = L.nutrition
+	var/old_nutrition = L.get_nutrition()
 	B.steal_nutrition(L)
-	if(L.nutrition < 100)
+	if(L.get_nutrition() < 100)
 		B.absorb_living(L)
 		if(B.show_liquids && B.reagent_mode_flags & DM_FLAG_REAGENTSABSORB && B.reagents.total_volume < B.reagents.maximum_volume) //CHOMPedit: absorption reagent production
 			B.GenerateBellyReagents_absorbed() //CHOMPedit end: A bonus for pred, I know for a fact prey is usually at zero nutrition when absorption finally happens
@@ -136,7 +136,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	id = DM_UNABSORB
 
 /datum/digest_mode/unabsorb/process_mob(obj/belly/B, mob/living/L)
-	if(L.absorbed && B.owner.nutrition >= 100)
+	if(L.absorbed && B.owner.get_nutrition() >= 100)
 		B.owner.adjust_nutrition(-100)
 		B.unabsorb_living(L)
 		return list("to_update" = TRUE)
@@ -146,7 +146,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	noise_chance = 10
 
 /datum/digest_mode/drain/process_mob(obj/belly/B, mob/living/L)
-	var/old_nutrition = L.nutrition
+	var/old_nutrition = L.get_nutrition()
 	B.steal_nutrition(L)
 	consider_healthbar(L, old_nutrition, B.owner)
 
@@ -195,7 +195,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 	if(L.stat == DEAD || !L.permit_healbelly) //CHOMPEdit healpref check
 		return null // Can't heal the dead with healbelly
 	var/mob/living/carbon/human/H = L
-	if(B.owner.nutrition > 90 && H.isSynthetic())
+	if(B.owner.get_nutrition() > 90 && H.isSynthetic())
 		for(var/obj/item/organ/external/E in H.organs) //Needed for healing prosthetics
 			var/obj/item/organ/external/O = E
 			if(O.brute_dam > 0 || O.burn_dam > 0) //Making sure healing continues until fixed.
@@ -210,7 +210,7 @@ GLOBAL_LIST_INIT(digest_modes, list())
 				B.owner.adjust_nutrition(-1)  // Normal cost per old functionality
 				if(B.health_impacts_size)
 					B.owner.update_fullness()
-	if(B.owner.nutrition > 90 && (L.health < L.maxHealth) && !H.isSynthetic())
+	if(B.owner.get_nutrition() > 90 && (L.health < L.maxHealth) && !H.isSynthetic())
 		L.adjustBruteLoss(-2.5)
 		L.adjustFireLoss(-2.5)
 		L.adjustToxLoss(-5)
@@ -219,9 +219,9 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		B.owner.adjust_nutrition(-2)
 		if(B.health_impacts_size)
 			B.owner.update_fullness()
-		if(L.nutrition <= 400)
+		if(L.get_nutrition() <= 400)
 			L.adjust_nutrition(1)
-	else if(B.owner.nutrition > 90 && (L.nutrition <= 400))
+	else if(B.owner.get_nutrition() > 90 && (L.get_nutrition() <= 400))
 		B.owner.adjust_nutrition(-1)
 		L.adjust_nutrition(1)
 	if(L.stat != oldstat)
@@ -462,11 +462,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
 		L.chat_healthbar(L)
 
 /datum/digest_mode/absorb/consider_healthbar(mob/living/L, old_nutrition, mob/living/reciever)
-	if(old_nutrition <= L.nutrition)
+	if(old_nutrition <= L.get_nutrition())
 		return
 
 	var/old_percent = ((old_nutrition - 100) / 500) * 100
-	var/new_percent = ((L.nutrition - 100) / 500) * 100
+	var/new_percent = ((L.get_nutrition() - 100) / 500) * 100
 	var/lets_announce = FALSE
 	if(new_percent <= 95 && old_percent > 95)
 		lets_announce = TRUE
@@ -485,11 +485,11 @@ GLOBAL_LIST_INIT(digest_modes, list())
 
 /datum/digest_mode/drain/consider_healthbar(mob/living/L, old_nutrition, mob/living/reciever)
 
-	if(old_nutrition <= L.nutrition)
+	if(old_nutrition <= L.get_nutrition())
 		return
 
 	var/old_percent = ((old_nutrition - 100) / 500) * 100
-	var/new_percent = ((L.nutrition - 100) / 500) * 100
+	var/new_percent = ((L.get_nutrition() - 100) / 500) * 100
 
 	var/lets_announce = FALSE
 	if(new_percent <= 95 && old_percent > 95)

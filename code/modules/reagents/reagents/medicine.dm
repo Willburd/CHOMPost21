@@ -644,9 +644,9 @@
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.25
-		if(M.brainloss >= 10)
+		if(M.getBrainLoss() >= 10)
 			M.Weaken(5)
-		if(dose >= 10 && M.paralysis < 40)
+		if(dose >= 10 && M.GetParalyse() < 40)
 			M.AdjustParalysis(1) //Messing with the core with a simple chemical probably isn't the best idea.
 	M.adjustBrainLoss(-8 * removed * chem_effective) //VOREStation Edit
 	M.add_chemical_effect(CE_PAINKILLER, 10 * chem_effective * M.species.chem_strength_pain)
@@ -848,7 +848,7 @@
 		if(M.reagents.has_reagent(REAGENT_ID_HEPANEPHRODAXON) || M.reagents.has_reagent(REAGENT_ID_PERIDAXON))
 			if(prob(10))
 				H.vomit(1)
-			else if(H.nutrition > 30)
+			else if(H.get_nutrition() > 30)
 				M.adjust_nutrition(-removed * 30)
 		else
 			H.adjustToxLoss(-10 * removed) // Carthatoline based, considering cost.
@@ -1224,7 +1224,7 @@
 		M.Confuse(7)
 		M.adjustFireLoss(removed * 2)
 		M.adjustToxLoss(removed * 2)
-		if(dose >= 5 && M.toxloss >= 10) //It all starts going wrong.
+		if(dose >= 5 && M.getToxLoss() >= 10) //It all starts going wrong.
 			M.adjustBruteLoss(removed * 3)
 			M.eye_blurry = min(20, max(0, M.eye_blurry + 10))
 			if(prob(25))
@@ -1233,13 +1233,13 @@
 				M.Stun(2)
 				spawn(30)
 					M.Weaken(2)
-		if(dose >= 10 || M.toxloss >= 25) //Internal skeletal tubes are rupturing, allowing the chemical to breach them.
+		if(dose >= 10 || M.getToxLoss() >= 25) //Internal skeletal tubes are rupturing, allowing the chemical to breach them.
 			M.adjustToxLoss(removed * 4)
 			M.make_jittery(5)
-		if(dose >= 20 || M.toxloss >= 60) //Core disentigration, cellular mass begins treating itself as an enemy, while maintaining regeneration. Slime-cancer.
+		if(dose >= 20 || M.getToxLoss() >= 60) //Core disentigration, cellular mass begins treating itself as an enemy, while maintaining regeneration. Slime-cancer.
 			M.adjustBrainLoss(2 * removed)
 			M.adjust_nutrition(-20)
-		if(M.bruteloss >= 60 && M.toxloss >= 60 && M.brainloss >= 30) //Total Structural Failure. Limbs start splattering.
+		if(M.getBruteLoss() >= 60 && M.getToxLoss() >= 60 && M.getBrainLoss() >= 30) //Total Structural Failure. Limbs start splattering.
 			var/obj/item/organ/external/O = pick(H.organs)
 			if(prob(20) && !istype(O, /obj/item/organ/external/chest/unbreakable/slime) && !istype(O, /obj/item/organ/external/groin/unbreakable/slime))
 				to_chat(M, span_critical("You feel your [O] begin to dissolve, before it sloughs from your body."))

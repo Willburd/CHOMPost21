@@ -142,7 +142,7 @@
 			locked = !locked
 			. = TRUE
 		if("toggle_piece")
-			if(ishuman(ui.user) && (ui.user.stat || ui.user.stunned || ui.user.lying))
+			if(ishuman(ui.user) && (ui.user.stat || ui.user.GetStunned() || ui.user.lying))
 				return FALSE
 			toggle_piece(params["piece"], ui.user)
 			. = TRUE

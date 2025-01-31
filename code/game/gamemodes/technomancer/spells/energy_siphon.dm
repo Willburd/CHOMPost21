@@ -119,9 +119,9 @@
 			// Let's drain from FBPs.  Note that it is possible for the caster to drain themselves if they are an FBP and desperate.
 			if(H.isSynthetic())
 				var/nutrition_to_steal = flow_remaining * 0.025 // Should steal about 25 nutrition per second by default.
-				var/old_nutrition = H.nutrition
-				H.nutrition = max(H.nutrition - nutrition_to_steal, 0)
-				var/nutrition_delta = old_nutrition - H.nutrition
+				var/old_nutrition = H.get_nutrition()
+				H.set_nutrition( max(H.get_nutrition() - nutrition_to_steal, 0))
+				var/nutrition_delta = old_nutrition - H.get_nutrition()
 				charge_to_give += nutrition_delta * SIPHON_FBP_TO_ENERGY
 				flow_remaining = flow_remaining - nutrition_to_steal / 0.025
 			// Let's steal some energy from another Technomancer.

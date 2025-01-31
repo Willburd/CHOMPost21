@@ -1488,7 +1488,7 @@
 			var/mob/living/carbon/human/H = L
 			if(!H.pl_suit_protected())
 				return TRUE
-			if(H.resting && !H.pl_head_protected())
+			if(H.GetResting() && !H.pl_head_protected())
 				return TRUE
 		else return TRUE
 
@@ -1502,7 +1502,7 @@
 			linked_mob = s.parent	//dogge
 
 	if(linked_mob)	//Please for the love of all that is good, make all this mob shit its own proc, future me
-		damage += clamp(((500 - linked_mob.nutrition) / 100), 1 , 5)
+		damage += clamp(((500 - linked_mob.get_nutrition()) / 100), 1 , 5)
 	var/list/stuff = list()
 	for(var/thing in src)
 		if(can_digest(thing))
@@ -1527,7 +1527,7 @@
 					continue
 				H.drop_from_inventory(W)
 			if(linked_mob)
-				var/how_much = H.mob_size + H.nutrition
+				var/how_much = H.mob_size + H.get_nutrition()
 				if(!H.ckey)
 					how_much = how_much / 10	//Braindead mobs are worth less
 				linked_mob.adjust_nutrition(how_much)
@@ -1552,7 +1552,7 @@
 			L.unacidable = TRUE	//Don't touch this one again, we're gonna delete it in a second
 			L.release_vore_contents()
 			if(linked_mob)
-				var/how_much = L.mob_size + L.nutrition
+				var/how_much = L.mob_size + L.get_nutrition()
 				if(!L.ckey)
 					how_much = how_much / 10	//Braindead mobs are worth less
 				linked_mob.adjust_nutrition(how_much)

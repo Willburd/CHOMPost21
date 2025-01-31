@@ -67,7 +67,7 @@
 	to_chat(src, span_notice("We have absorbed [T]!"))
 	src.visible_message(span_danger("[src] sucks the fluids from [T]!"))
 	to_chat(T, span_danger("You have been absorbed by the changeling!"))
-	adjust_nutrition(T.nutrition)
+	adjust_nutrition(T.get_nutrition())
 	changeling.chem_charges += 10
 	if(changeling.readapts <= 0)
 		changeling.readapts = 0 //SANITYYYYYY

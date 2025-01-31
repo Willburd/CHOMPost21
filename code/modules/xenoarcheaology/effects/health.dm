@@ -51,9 +51,9 @@
 				C.adjustBrainLoss(rand(1,5) * weakness)
 				C.apply_effect(25 * weakness, IRRADIATE)
 				C.adjust_nutrition(-50 * weakness)
-				C.nutrition -= min(50 * weakness, C.nutrition)
+				C.set_nutrition(-min(50 * weakness, C.get_nutrition()))
 				C.make_dizzy(6 * weakness)
-				C.weakened += 6 * weakness
+				C.SetWeakened(6 * weakness)
 			return 1
 
 /datum/artifact_effect/health/DoEffectAura()

@@ -249,7 +249,7 @@
 		//specific vehicle move delays are set in code\modules\vehicles\vehicle.dm
 		my_mob.next_move = world.time
 		//drunk driving
-		if(my_mob.confused && prob(20)) //vehicles tend to keep moving in the same direction
+		if(my_mob.GetConfused() && prob(20)) //vehicles tend to keep moving in the same direction
 			direct = turn(direct, pick(90, -90))
 		if(ismob(my_mob.buckled))
 			var/mob/M = my_mob.buckled
@@ -272,7 +272,7 @@
 				if((!l_hand || l_hand.is_stump()) && (!r_hand || r_hand.is_stump()))
 					return // No hands to drive your chair? Tough luck!
 			//drunk wheelchair driving
-			else if(my_mob.confused)
+			else if(my_mob.GetConfused())
 				switch(my_mob.m_intent)
 					if(I_RUN)
 						if(prob(50))
@@ -287,7 +287,7 @@
 	var/pre_move_loc = loc
 
 	// Confused direction randomization
-	if(my_mob.confused)
+	if(my_mob.GetConfused())
 		switch(my_mob.m_intent)
 			if(I_RUN)
 				if(prob(75))

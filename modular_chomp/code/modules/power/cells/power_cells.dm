@@ -223,7 +223,7 @@
 	if(!used && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.isSynthetic())
-			if(H.nutrition <= amount)
+			if(H.get_nutrition() <= amount)
 				use(user,H)
 			else
 				to_chat(user,span_warning("The difference in potential is too great. [user == M ? "You have" : "[H] has"] too much charge to use such a small battery."))

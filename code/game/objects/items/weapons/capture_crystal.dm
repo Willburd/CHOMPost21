@@ -293,16 +293,16 @@
 		capture_chance *= 0.9
 	else
 		capture_chance = 0
-	if(M.weakened)			//Haha you fall down
+	if(M.GetWeakened())			//Haha you fall down
 		capture_chance += 0.1
 		effect_count += 1
-	if(M.stunned)			//What's the matter???
+	if(M.GetStunned())			//What's the matter???
 		capture_chance += 0.1
 		effect_count += 1
 	if(M.on_fire)			//AAAAAAAA
 		capture_chance += 0.1
 		effect_count += 1
-	if(M.paralysis)			//Oh noooo
+	if(M.GetParalyse())			//Oh noooo
 		capture_chance += 0.1
 		effect_count += 1
 	if(M.ai_holder.stance == STANCE_IDLE)	//SNEAK ATTACK???

@@ -126,7 +126,7 @@
 /datum/species/xenos/proc/regenerate(var/mob/living/carbon/human/H)
 	var/heal_rate = weeds_heal_rate
 	var/mend_prob = 10
-	if (!H.resting)
+	if (!H.GetResting())
 		heal_rate = weeds_heal_rate / 3
 		mend_prob = 1
 

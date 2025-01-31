@@ -374,7 +374,7 @@
 			vent_found = null
 		return
 
-	if(holder.sleeping > 0)
+	if(holder.GetSleeping() > 0)
 		return
 
 	// try stalking along with player chus
@@ -439,7 +439,7 @@
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)
 		var/mob/living/simple_mob/vore/alienanimals/chu/C = holder
 		C.SetSleeping(0)
-		C.resting = FALSE
+		C.SetResting(0)
 		C.lying = FALSE
 		C.update_icons()
 

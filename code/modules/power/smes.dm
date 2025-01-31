@@ -369,7 +369,7 @@ GLOBAL_LIST_EMPTY(smeses)
 						s.set_up(5, 1, src)
 						s.start()
 						building_terminal = FALSE
-						if(user.stunned)
+						if(user.GetStunned())
 							return FALSE
 					new /obj/item/stack/cable_coil(loc,10)
 					user.visible_message(\

@@ -178,9 +178,9 @@
 			charging = null
 			//pcard.damage_random_component()//CHOMPEDIT: Punishing PAI for charging too soon seems kinda annoying
 			update_icon()
-		else if(pcard.pai.bruteloss)
+		else if(pcard.pai.getBruteLoss())
 			pcard.pai.adjustBruteLoss(-5)
-		else if(pcard.pai.fireloss)
+		else if(pcard.pai.getFireLoss())
 			pcard.pai.adjustFireLoss(-5)
 		else
 			charging = null

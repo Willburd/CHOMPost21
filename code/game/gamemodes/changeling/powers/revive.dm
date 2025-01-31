@@ -73,7 +73,7 @@
 			SJ.dropped(H)
 			H.wear_suit = null
 
-	C.halloss = 0
+	C.setHalLoss(0)
 	C.shock_stage = 0 //Pain
 	to_chat(C, span_notice("We have regenerated."))
 	C.update_canmove()

@@ -207,13 +207,13 @@
 	// Each Life() tick, you gain/lose weight proportional to your metabolism, and lose species.hunger_factor nutrition
 	var/weight_per_nutrition = C.metabolism / C.species.hunger_factor
 
-	if(C.nutrition > MIN_NUTRITION_TO_GAIN && C.weight < MAX_MOB_WEIGHT && C.weight_gain)
+	if(C.get_nutrition() > MIN_NUTRITION_TO_GAIN && C.weight < MAX_MOB_WEIGHT && C.weight_gain)
 		// Weight Gain!
-		var/gain = (C.nutrition - MIN_NUTRITION_TO_GAIN) * weight_per_nutrition * C.weight_gain/100
+		var/gain = (C.get_nutrition() - MIN_NUTRITION_TO_GAIN) * weight_per_nutrition * C.weight_gain/100
 		C.weight = min(MAX_MOB_WEIGHT, C.weight + gain)
-	else if(C.nutrition <= MAX_NUTRITION_TO_LOSE && C.weight > MIN_MOB_WEIGHT && C.weight_loss)
+	else if(C.get_nutrition() <= MAX_NUTRITION_TO_LOSE && C.weight > MIN_MOB_WEIGHT && C.weight_loss)
 		// Weight Loss!
-		var/loss = (MAX_NUTRITION_TO_LOSE - C.nutrition) * weight_per_nutrition * C.weight_loss/100
+		var/loss = (MAX_NUTRITION_TO_LOSE - C.get_nutrition()) * weight_per_nutrition * C.weight_loss/100
 		C.weight = max(MIN_MOB_WEIGHT, C.weight - loss)
 
 /**

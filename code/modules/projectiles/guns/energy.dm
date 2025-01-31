@@ -90,12 +90,12 @@
 						H = O.owner
 
 				if(istype(H))
-					var/start_nutrition = H.nutrition
+					var/start_nutrition = H.get_nutrition()
 					var/end_nutrition = 0
 
 					H.adjust_nutrition(-rechargeamt / 15)
 
-					end_nutrition = H.nutrition
+					end_nutrition = H.get_nutrition()
 
 					if(start_nutrition - max(0, end_nutrition) < rechargeamt / 15)
 

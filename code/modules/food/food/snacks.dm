@@ -144,7 +144,7 @@
 		var/swallow_whole = FALSE
 		var/obj/belly/belly_target				// These are surprise tools that will help us later
 
-		var/fullness = M.nutrition + (M.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) * 25)
+		var/fullness = M.get_nutrition() + (M.reagents.get_reagent_amount(REAGENT_ID_NUTRIMENT) * 25)
 		if(M == user)								//If you're eating it yourself
 			if(ishuman(M))
 				var/mob/living/carbon/human/H = M

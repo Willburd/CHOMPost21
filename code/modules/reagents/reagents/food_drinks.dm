@@ -659,7 +659,7 @@
 // Outpost 21 edit begin - WAFER THIN
 /datum/reagent/nutriment/mint/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	. = ..()
-	if(M.nutrition >= (M.max_nutrition * 0.98))
+	if(M.get_nutrition() >= (M.max_nutrition * 0.98))
 		M.max_nutrition = M.max_nutrition * 0.975 // prevent spam, they're doomed anyway
 		M.Stun(2)
 		M.emote("belch")
@@ -1015,7 +1015,7 @@
 		M.bodytemperature = min(310, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 	if(issmall(M)) removed *= 2 //CHOMP Station addition Small bodymass, more effect from lower volume.
 	if(M.species.organic_food_coeff) //CHOMPStation addition. If this is set to 0, they don't get nutrition from food.
-		M.nutrition += nutriment_factor * removed //CHOMPStation addition For hunger and fatness
+		M.adjust_nutrition(nutriment_factor * removed) //CHOMPStation addition For hunger and fatness
 	/* VOREStation Removal
 	if(alien == IS_SLIME && water_based)
 		M.adjustToxLoss(removed * 2)
@@ -2506,7 +2506,7 @@
 	M.adjustToxLoss(-2 * removed)
 	if(M.dizziness)
 		M.dizziness = max(0, M.dizziness - 15)
-	if(M.confused)
+	if(M.GetConfused())
 		M.Confuse(-5)
 
 /datum/reagent/drink/dry_ramen
@@ -4302,7 +4302,7 @@
 			drug_strength = drug_strength * 0.8
 
 		M.druggy = max(M.druggy, drug_strength)
-		if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained() && !M.resting && !M.resting) // Outpost 21 edit - Resting stops drug movement
+		if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained() && !M.GetResting())
 			step(M, pick(cardinal))
 
 /datum/reagent/ethanol/sakebomb

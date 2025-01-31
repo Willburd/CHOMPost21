@@ -85,7 +85,7 @@
 			else
 				Bu.assblasted()
 				C.AdjustWeakened(10)
-				C.halloss = 30
+				C.setHalLoss(30)
 				C.emote("scream")
 				deathmessage = " and explodes their butt off"
 	// Propel!

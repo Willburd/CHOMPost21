@@ -171,7 +171,7 @@
 	for(var/obj/item/organ/external/bp in H.organs)
 		bp.bandage()
 		bp.disinfect()
-	H.nutrition = 0
+	H.set_nutrition(0)
 	H.invisibility = INVISIBILITY_SHADEKIN
 	BITRESET(H.hud_updateflag, HEALTH_HUD)
 	BITRESET(H.hud_updateflag, STATUS_HUD)
@@ -230,9 +230,9 @@
 /datum/modifier/dark_respite/tick()
 	if(istype(src.holder, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = src.holder
-		if(H.nutrition)
+		if(H.get_nutrition())
 			H.add_chemical_effect(CE_BLOODRESTORE, 5)
-			H.nutrition = max(H.nutrition - 5, 0)
+			H.set_nutrition(max(H.get_nutrition() - 5, 0))
 
 		if(istype(get_area(H), /area/shadekin))
 			if(!src.pain_immunity)
@@ -346,9 +346,9 @@
 			dark_gains = energy_light
 		//CHOMPEdit begin - Energy <-> nutrition conversion
 		if(nutrition_energy_conversion && get_energy(H) == 100 && dark_gains > 0)
-			H.nutrition += dark_gains * 5 * nutrition_conversion_scaling
-		else if(nutrition_energy_conversion && get_energy(H) < 50 && H.nutrition > 500)
-			H.nutrition -= nutrition_conversion_scaling * 50
+			H.adjust_nutrition(dark_gains * 5 * nutrition_conversion_scaling)
+		else if(nutrition_energy_conversion && get_energy(H) < 50 && H.get_nutrition() > 500)
+			H.adjust_nutrition(-(nutrition_conversion_scaling * 50))
 			dark_gains += nutrition_conversion_scaling
 		//CHOMPEdit end
 

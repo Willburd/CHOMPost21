@@ -261,8 +261,8 @@
 	..()
 	if(istype(H, /mob/living/carbon/human))//ChompEDIT - fix a runtime
 		hume = H
-		charge = H.nutrition
-		maxcharge = initial(H.nutrition)
+		charge = H.get_nutrition()
+		maxcharge = MAX_NUTRITION // Was initial(H.nutrition), this is a very weird one to replace...
 
 	QDEL_IN(src, 20 SECONDS)
 

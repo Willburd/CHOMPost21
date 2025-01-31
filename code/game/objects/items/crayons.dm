@@ -126,7 +126,7 @@
 /obj/item/pen/crayon/attack(mob/living/M as mob, mob/living/user as mob)
 	if(M == user)
 		to_chat(user, "You take a bite of the crayon and swallow it.")
-		user.nutrition += 1
+		user.adjust_nutrition(1)
 		user.reagents.add_reagent(REAGENT_ID_CRAYONDUST,min(5,uses)/3)
 		if(uses)
 			uses -= 5
@@ -212,7 +212,7 @@
 /obj/item/pen/crayon/marker/attack(mob/living/M as mob, mob/living/user as mob)
 	if(M == user)
 		to_chat(user, "You take a bite of the marker and swallow it.")
-		user.nutrition += 1
+		user.adjust_nutrition(1)
 		user.reagents.add_reagent(REAGENT_ID_MARKERINK,6)
 		if(uses)
 			uses -= 5

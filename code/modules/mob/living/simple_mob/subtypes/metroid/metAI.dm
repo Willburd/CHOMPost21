@@ -25,7 +25,7 @@
 // Hit the correct verbs to keep the metroid species going.
 /datum/ai_holder/simple_mob/juvenile_metroid/proc/evolve_and_reproduce()
 	var/mob/living/simple_mob/metroid/juvenile/my_juvenile = holder
-	if(my_juvenile.nutrition >= my_juvenile.evo_point)
+	if(my_juvenile.get_nutrition() >= my_juvenile.evo_point)
 		// Press the correct verb when we can.
 		my_juvenile.evolve() // Turns our holder into an adult metroid.
 

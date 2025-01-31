@@ -88,7 +88,7 @@
 	if(!usr.checkClickCooldown())
 		return
 
-	if(usr.stat || usr.restrained() || usr.stunned || usr.lying)
+	if(usr.stat || usr.restrained() || usr.GetStunned() || usr.lying)
 		return 1
 
 	if(!(owner in usr))
@@ -118,7 +118,7 @@
 /obj/screen/storage/Click()
 	if(!usr.checkClickCooldown())
 		return 1
-	if(usr.stat || usr.paralysis || usr.stunned || usr.weakened)
+	if(usr.stat || usr.GetParalyse() || usr.GetStunned() || usr.GetWeakened())
 		return 1
 	if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech
 		return 1
@@ -327,7 +327,7 @@
 		if("internal")
 			if(iscarbon(usr))
 				var/mob/living/carbon/C = usr
-				if(!C.stat && !C.stunned && !C.paralysis && !C.restrained())
+				if(!C.stat && !C.GetStunned() && !C.GetParalyse() && !C.restrained())
 					if(C.internal)
 						C.internal = null
 						to_chat(C, span_notice("No longer running on internals."))
@@ -632,7 +632,7 @@
 	// We don't even know if it's a middle click
 	if(!usr.checkClickCooldown())
 		return 1
-	if(usr.stat || usr.paralysis || usr.stunned || usr.weakened)
+	if(usr.stat || usr.GetParalyse() || usr.GetStunned() || usr.GetWeakened())
 		return 1
 	if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech
 		return 1
@@ -922,7 +922,7 @@
 /obj/screen/mapper/powbutton/Click()
 	if(!usr.checkClickCooldown())
 		return TRUE
-	if(usr.stat || usr.paralysis || usr.stunned || usr.weakened)
+	if(usr.stat || usr.GetParalyse() || usr.GetStunned() || usr.GetWeakened())
 		return TRUE
 	if(istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech
 		return TRUE
@@ -940,7 +940,7 @@
 /obj/screen/mapper/mapbutton/Click()
 	if(!usr.checkClickCooldown())
 		return TRUE
-	if(usr.stat || usr.paralysis || usr.stunned || usr.weakened)
+	if(usr.stat || usr.GetParalyse() || usr.GetStunned() || usr.GetWeakened())
 		return TRUE
 	if(istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech
 		return TRUE

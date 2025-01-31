@@ -784,6 +784,9 @@
 		update_canmove()	//updates lying, canmove and icons
 	return
 
+/mob/proc/GetStunned()
+	return stunned
+
 /mob/proc/AdjustStunned(amount)
 	if(status_flags & CANSTUN)
 		stunned = max(stunned + amount,0)
@@ -803,6 +806,9 @@
 		update_canmove()	//can you guess what this does yet?
 	return
 
+/mob/proc/GetWeakened()
+	return weakened
+
 /mob/proc/AdjustWeakened(amount)
 	if(status_flags & CANWEAKEN)
 		weakened = max(weakened + amount,0)
@@ -820,6 +826,9 @@
 		paralysis = max(amount,0)
 	return
 
+/mob/proc/GetParalyse()
+	return paralysis
+
 /mob/proc/AdjustParalysis(amount)
 	if(status_flags & CANPARALYSE)
 		paralysis = max(paralysis + amount,0)
@@ -834,6 +843,9 @@
 	sleeping = max(amount,0)
 	return
 
+/mob/proc/GetSleeping(amount)
+	return sleeping
+
 /mob/proc/AdjustSleeping(amount)
 	sleeping = max(sleeping + amount,0)
 	return
@@ -846,6 +858,9 @@
 	confused = max(amount,0)
 	return
 
+/mob/proc/GetConfused(amount)
+	return confused
+
 /mob/proc/AdjustConfused(amount)
 	confused = max(confused + amount,0)
 	return
@@ -857,6 +872,9 @@
 /mob/proc/SetBlinded(amount)
 	eye_blind = max(amount,0)
 	return
+
+/mob/proc/GetBlinded(amount)
+	return eye_blind
 
 /mob/proc/AdjustBlinded(amount)
 	eye_blind = max(eye_blind + amount,0)
@@ -872,6 +890,9 @@
 	resting = max(amount,0)
 	update_canmove()
 	return
+
+/mob/proc/GetResting(amount)
+	return resting
 
 /mob/proc/AdjustResting(amount)
 	resting = max(resting + amount,0)

@@ -172,7 +172,7 @@
 		if(O_EYES)
 			if(announce)
 				assailant.visible_message(span_warning("[assailant] covers [affecting]'s eyes!"))
-			if(affecting.eye_blind < 3)
+			if(affecting.GetBlinded() < 3)
 				affecting.Blind(3)
 		if(BP_HEAD)
 			if(force_down)
@@ -376,7 +376,7 @@
 		if(GRAB_NECK)
 			grab_name = "headlock"
 			//If the you move when grabbing someone then it's easier for them to break free. Same if the affected mob is immune to stun.
-			if(world.time - assailant.l_move_time < 30 || !affecting.stunned)
+			if(world.time - assailant.l_move_time < 30 || !affecting.GetStunned())
 				break_strength++
 			break_chance_table = list(3, 18, 45, 100)
 

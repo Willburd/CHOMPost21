@@ -60,22 +60,22 @@
 	// Traitgenes edit end
 
 /datum/trait/negative/low_blood_sugar/handle_environment_special(var/mob/living/carbon/human/H)
-	if(H.nutrition > 200)	//Sanity check because stupid bugs >:v
+	if(H.get_nutrition() > 200)	//Sanity check because stupid bugs >:v
 		return
-	if((H.nutrition < 200) && prob(5))
-		if(H.nutrition > 100)
+	if((H.get_nutrition() < 200) && prob(5))
+		if(H.get_nutrition() > 100)
 			to_chat(H,span_warning("You start to feel noticeably weak as your stomach rumbles, begging for more food. Maybe you should eat something to keep your blood sugar up"))
-		else if(H.nutrition > 50)
+		else if(H.get_nutrition() > 50)
 			to_chat(H,span_warning("You begin to feel rather weak, and your stomach rumbles loudly. You feel lightheaded and it's getting harder to think. You really need to eat something."))
-		else if(H.nutrition > 25)
+		else if(H.get_nutrition() > 25)
 			to_chat(H,span_danger("You're feeling very weak and lightheaded, and your stomach continously rumbles at you. You really need to eat something!"))
 		else
 			to_chat(H,span_critical("You're feeling extremely weak and lightheaded. You feel as though you might pass out any moment and your stomach is screaming for food by now! You should really find something to eat!"))
-	if((H.nutrition < 100) && prob(10))
+	if((H.get_nutrition() < 100) && prob(10))
 		H.Confuse(10)
-	if((H.nutrition < 50) && prob(25))
+	if((H.get_nutrition() < 50) && prob(25))
 		H.hallucination = max(30,H.hallucination+8)
-	if((H.nutrition < 25) && prob(5))
+	if((H.get_nutrition() < 25) && prob(5))
 		H.drowsyness = max(100,H.drowsyness+30)
 
 /datum/trait/negative/blindness

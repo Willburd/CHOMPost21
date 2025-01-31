@@ -212,11 +212,11 @@
 
 	var/light_amount = fullysealed ? H.getlightlevel() : H.getlightlevel()/5 // if they're covered, they're not going to get much light on them.
 
-	if(co2buff && !H.toxloss && light_amount >= 0.1) //if there's enough light and CO2 and you're not poisoned, heal. Note if you're wearing a sealed suit your heal rate will suck.
+	if(co2buff && !H.getToxLoss() && light_amount >= 0.1) //if there's enough light and CO2 and you're not poisoned, heal. Note if you're wearing a sealed suit your heal rate will suck.
 		H.adjustBruteLoss(-(light_amount * co2buff * 2)) //at a full partial pressure of CO2 and full light, you'll only heal half as fast as diona.
 		H.adjustFireLoss(-(light_amount * co2buff)) //this won't let you tank environmental damage from fire. MAYBE cold until your body temp drops.
 
-	if(H.nutrition < (200 + 400*co2buff)) //if no CO2, a fully lit tile gives them 1/tick up to 200. With CO2, potentially up to 600.
+	if(H.get_nutrition() < (200 + 400*co2buff)) //if no CO2, a fully lit tile gives them 1/tick up to 200. With CO2, potentially up to 600.
 		H.adjust_nutrition(light_amount*(1+co2buff*5))
 
 	// Too much poison in the air.
@@ -366,7 +366,7 @@
 	if(parent && generated_reagents && organ_owner) //Is it in the chest/an organ, has reagents, and is 'activated'
 		before_gen = reagents.total_volume
 		if(reagents.total_volume < reagents.maximum_volume)
-			if(organ_owner.nutrition >= gen_cost)
+			if(organ_owner.get_nutrition() >= gen_cost)
 				do_generation()
 
 	if(reagents)

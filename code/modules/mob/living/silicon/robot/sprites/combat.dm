@@ -102,7 +102,7 @@
 	sprite_flags = ROBOT_HAS_GUN_SPRITE | ROBOT_HAS_SHIELD_SPRITE
 /datum/robot_sprite/dogborg/tall/combat/derg/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
 	..()
-	if(ourborg.resting)
+	if(ourborg.GetResting())
 		return
 	if(ourborg.has_active_type(/obj/item/borg/combat/mobility))
 		ourborg.add_overlay("[sprite_icon_state]-roll")

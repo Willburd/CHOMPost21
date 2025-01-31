@@ -136,7 +136,7 @@ the artifact triggers the rage.
 			to_chat(L, span_warning("You feel strange for a moment, but it passes."))
 			return FALSE // Happy trees aren't affected by blood rages.
 
-	if(L.nutrition < nutrition_cost)
+	if(L.get_nutrition() < nutrition_cost)
 		if(!suppress_failure)
 			to_chat(L, span_warning("You are too hungry to berserk."))
 		return FALSE // Too hungry to enrage.

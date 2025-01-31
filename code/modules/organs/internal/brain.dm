@@ -270,7 +270,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	H.ooc_notes_style = brainmob.ooc_notes_style
 	//CHOMPEdit End
 
-	H.nutrition = 260 //Enough to try to regenerate ONCE.
+	H.set_nutrition(260) //Enough to try to regenerate ONCE.
 	H.adjustBruteLoss(40)
 	H.adjustFireLoss(40)
 	H.Paralyse(4)

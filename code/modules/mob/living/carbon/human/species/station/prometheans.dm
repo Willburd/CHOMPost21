@@ -276,9 +276,9 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 			var/strain_negation = 0		// How much agony is being prevented by the
 
-			if(H.nutrition <= 150)		// This is when the icon goes red
+			if(H.get_nutrition() <= 150)		// This is when the icon goes red
 				starve_mod = 0.75
-				if(H.nutrition <= 50)	// Severe starvation. Damage repaired beyond this point will cause a stunlock if untreated.
+				if(H.get_nutrition() <= 50)	// Severe starvation. Damage repaired beyond this point will cause a stunlock if untreated.
 					starve_mod = 0.5
 
 			var/to_pay = 0

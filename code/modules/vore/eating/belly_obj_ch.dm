@@ -132,7 +132,7 @@
 			else
 				gen_interval++
 		else
-			if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
+			if(owner.get_nutrition() >= gen_cost && gen_interval >= gen_time)
 				GenerateBellyReagents()
 				gen_interval = 0
 			else
@@ -173,7 +173,7 @@
 		if(!R.use_direct_power(gen_cost*10, 200))
 			return
 	else
-		owner.nutrition -= gen_cost
+		owner.adjust_nutrition(-gen_cost)
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent])
 	if(count_liquid_for_sprite)
@@ -587,7 +587,7 @@
 /obj/item/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target)
 	if(isliving(target))
 		var/mob/living/L = target
-		L.nutrition += stored_nutrition
+		L.adjust_nutrition(stored_nutrition)
 		stored_nutrition = 0
 		qdel(src)
 		return

@@ -102,7 +102,7 @@
 
 	//Checking if there's any point trying to climb
 	var/turf/above_wall = GetAbove(src)
-	if(L.nutrition <= nutrition_cost)
+	if(L.get_nutrition() <= nutrition_cost)
 		to_chat(L, span_warning("You [L.isSynthetic() ? "lack the energy" : "are too hungry"] for such strenous activities!"))
 		return
 	if(!above_wall) //No multiZ
@@ -182,10 +182,10 @@
 		if(climbing_delay_min > 1.0)
 			climb_time += 2.5 SECONDS
 
-	if(L.nutrition >= 100 && L.nutrition <= 200)
+	if(L.get_nutrition() >= 100 && L.get_nutrition() <= 200)
 		to_chat(L, span_notice("Climbing while [L.isSynthetic() ? "low on power" : "hungry"] slows you down"))
 		climb_time += 1 SECONDS
-	else if(L.nutrition >= nutrition_cost && L.nutrition < 100)
+	else if(L.get_nutrition() >= nutrition_cost && L.get_nutrition() < 100)
 		to_chat(L, span_danger("You [L.isSynthetic() ? "lack enough power" : "are too hungry"] to climb safely!"))
 		climb_time +=3 SECONDS
 		if(fall_chance < 30)

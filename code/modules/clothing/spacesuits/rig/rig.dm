@@ -691,7 +691,7 @@
 	if((!istype(wearer) || (!wearer.back == src && !wearer.belt == src)) && !forced)
 		return
 
-	if((usr == wearer && (usr.stat||usr.paralysis||usr.stunned)) && !forced) // If the usr isn't wearing the suit it's probably an AI.
+	if((usr == wearer && (usr.stat||usr.GetParalyse()||usr.GetStunned())) && !forced) // If the usr isn't wearing the suit it's probably an AI.
 		return
 
 	var/obj/item/check_slot
@@ -818,7 +818,7 @@
 /obj/item/rig/proc/shock(mob/user)
 	if (electrocute_mob(user, cell, src)) //electrocute_mob() handles removing charge from the cell, no need to do that here.
 		spark_system.start()
-		if(user.stunned)
+		if(user.GetStunned())
 			return 1
 	return 0
 
@@ -918,7 +918,7 @@
 	if(!ai_can_move_suit(user, check_user_module = 1))
 		return
 	wearer.lay_down()
-	to_chat(user, span_notice("\The [wearer] is now [wearer.resting ? "resting" : "getting up"]."))
+	to_chat(user, span_notice("\The [wearer] is now [wearer.GetResting() ? "resting" : "getting up"]."))
 
 /obj/item/rig/proc/forced_move(var/direction, var/mob/user, var/ai_moving = TRUE)
 

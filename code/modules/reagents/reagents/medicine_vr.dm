@@ -10,7 +10,7 @@
 /datum/reagent/adranol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
-	if(M.confused)
+	if(M.GetConfused())
 		M.Confuse(-8*removed)
 	if(M.eye_blurry)
 		M.eye_blurry = max(M.eye_blurry - 25*removed, 0)
@@ -44,7 +44,7 @@
 			H.AdjustWeakened(5) //Fall onto the floor for a few moments.
 			H.Confuse(15) //Be unable to walk correctly for a bit longer.
 		if(prob(1))
-			if(H.losebreath <= 1 && H.oxyloss <= 20) //Let's not suffocate them to the point that they pass out.
+			if(H.losebreath <= 1 && H.getOxyLoss() <= 20) //Let's not suffocate them to the point that they pass out.
 				to_chat(H,span_warning("You feel a sharp stabbing pain in your chest and quickly realize that your lungs have stopped functioning!")) //Let's scare them a bit.
 				H.losebreath = 10
 				H.adjustOxyLoss(5)

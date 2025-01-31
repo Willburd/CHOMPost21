@@ -112,7 +112,7 @@
 				B.owner = ourmob
 				M.vore_organs -= B
 				ourmob.vore_organs += B
-			ourmob.nutrition = M.nutrition
+			ourmob.set_nutrition(M.get_nutrition())
 			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 		ourmob.ckey = M.ckey
@@ -177,7 +177,7 @@
 				B.owner = new_mob
 				M.vore_organs -= B
 				new_mob.vore_organs += B
-			new_mob.nutrition = M.nutrition //CHOMPAdd
+			new_mob.set_nutrition(M.get_nutrition()) //CHOMPAdd
 			// M.soulgem.transfer_self(new_mob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 			new_mob.ckey = M.ckey
@@ -412,7 +412,7 @@
 				B.owner = ourmob
 				M.vore_organs -= B
 				ourmob.vore_organs += B
-			ourmob.nutrition = M.nutrition
+			ourmob.set_nutrition(M.get_nutrition())
 			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 		ourmob.ckey = M.ckey
 

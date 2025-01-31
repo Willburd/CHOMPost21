@@ -69,11 +69,11 @@
 
 /turf/simulated/floor/outdoors/ice/Entered(var/mob/living/M)
 	if(isliving(M)) // Outpost 21 edit - Ice runtime fix
-		if((M.weakened && prob(10)) || (M.m_intent == "walk" && prob(95))) // Outpost 21 edit - Ice changes
+		if((M.GetWeakened() && prob(10)) || (M.m_intent == "walk" && prob(95))) // Outpost 21 edit - Ice changes
 			return ..()
 		sleep(1 * world.tick_lag)
 		if(istype(M, /mob/living))
-			if(M.weakened == 0)
+			if(M.GetWeakened() == 0)
 				to_chat(M, span_warning("You slide across the ice!"))
 			M.SetWeakened(3) // Outpost 21 edit - Ice changes
 			step(M,M.dir)

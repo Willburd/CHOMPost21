@@ -343,7 +343,7 @@ var/list/possible_cable_coil_colours = list(
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
-		if(user.stunned)
+		if(user.GetStunned())
 			return 1
 	return 0
 
@@ -716,7 +716,7 @@ var/list/possible_cable_coil_colours = list(
 	set category = "Object"
 	var/mob/M = usr
 
-	if(ishuman(M) && !M.restrained() && !M.stat && !M.paralysis && ! M.stunned)
+	if(ishuman(M) && !M.restrained() && !M.stat && !M.GetParalyse() && ! M.GetStunned())
 		if(!istype(usr.loc,/turf)) return
 		if(src.amount <= 14)
 			to_chat(usr, span_warning("You need at least 15 lengths to make restraints!"))

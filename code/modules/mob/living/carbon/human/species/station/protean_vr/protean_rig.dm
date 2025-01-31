@@ -31,7 +31,7 @@
 	var/can_assimilate_rig = TRUE // CHOMPEdit
 
 /obj/item/rig/protean/relaymove(mob/user, var/direction)
-	if(user.stat || user.stunned)
+	if(user.stat || user.GetStunned())
 		return
 	forced_move(direction, user, 0)
 
@@ -413,7 +413,7 @@
 
 /obj/item/rig/protean/force_rest(var/mob/user)
 	wearer.lay_down()
-	to_chat(user, span_notice("\The [wearer] is now [wearer.resting ? "resting" : "getting up"]."))
+	to_chat(user, span_notice("\The [wearer] is now [wearer.GetResting() ? "resting" : "getting up"]."))
 
 /obj/item/cell/protean
 	name = "Protean power cell"
@@ -438,9 +438,9 @@
 /obj/item/cell/protean/process()
 	var/C = charge
 	if(charger)
-		if((world.time >= last_use + charge_delay) && charger.nutrition > 100)
+		if((world.time >= last_use + charge_delay) && charger.get_nutrition() > 100)
 			give(charge_amount)
-			charger.nutrition -= ((1/200)*(charge - C))	//Take nutrition relative to charge. Change the 1/200 if you want to alter the nutrition to charge ratio
+			charger.adjust_nutrition(-((1/200)*(charge - C)))	//Take nutrition relative to charge. Change the 1/200 if you want to alter the nutrition to charge ratio
 	else
 		return PROCESS_KILL
 

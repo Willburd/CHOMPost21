@@ -336,7 +336,7 @@
 	var/sickness_duration = rand(20,30) MINUTES
 
 	// apply state
-	new_character.confused = max(new_character.confused, confuse_amount)
+	new_character.SetConfused(max(new_character.GetConfused(), confuse_amount))
 	new_character.eye_blurry = max(new_character.eye_blurry, blur_amount)
 	new_character.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
 
@@ -346,7 +346,7 @@
 		new_character.adjustToxLoss( rand(0,12))
 		new_character.adjustFireLoss( rand(0,8), FALSE)
 		new_character.adjustCloneLoss( rand(0,6))
-	new_character.sleeping = rand(4,6)
+	new_character.SetSleeping(rand(4,6))
 	new_character.Life() // Force lifetick for instant effect
 
 	// Visuals and release
