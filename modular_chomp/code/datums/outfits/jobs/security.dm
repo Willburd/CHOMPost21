@@ -6,7 +6,7 @@
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	glasses = /obj/item/clothing/glasses/sunglasses/medhud
-	l_hand = /obj/item/storage/firstaid/adv
+	l_hand = /obj/item/storage/firstaid/regular // Outpost 21 edit - chomp uses adv, we use standard
 	r_pocket = /obj/item/flashlight/pen
 	backpack = /obj/item/storage/backpack/medic
 	backpack_contents = null
