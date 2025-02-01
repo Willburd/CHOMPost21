@@ -116,6 +116,11 @@
 	else // construction should instantly check for generator
 		process()
 
+/obj/structure/confinement_beam_generator/control_box/attack_ai(mob/user)
+	if(..())
+		return
+	tgui_interact(user)
+
 /obj/structure/confinement_beam_generator/control_box/attack_hand(user as mob)
 	if(..())
 		return
@@ -152,7 +157,7 @@
 	// Target centcomm
 	tgui_data["target_list"] += list( // appending lists would merge it if this wasn't a nested list
 		list(
-			"id" = "Central Command PTL Reciever - 672, 821, Central Command",
+			"id" = "[using_map.company_name] PTL Electricity Export Satellite - 672, 821, 98",
 			"x" = 4,
 			"y" = 4,
 			"z" = 0,
