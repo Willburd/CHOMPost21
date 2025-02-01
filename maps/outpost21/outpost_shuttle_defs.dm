@@ -335,7 +335,7 @@
 /datum/shuttle/autodock/multi/beamtransit
 	name = "Engineering Ferry"
 	warmup_time = 5
-	move_time = 120
+	move_time = 90
 	shuttle_area = /area/shuttle/beamtransit
 	current_location = "beam_base"
 	landmark_transition = "beam_space"
