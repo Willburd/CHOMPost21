@@ -71,7 +71,7 @@
 	playsound(src, 'sound/weapons/targeton.ogg', 50, 1)
 	user.update_mob_action_buttons()
 
-/obj/item/gun/projectile/shotgun/compact/verb/verb_toggle_stock(mob/user as mob)
+/obj/item/gun/projectile/shotgun/compact/verb/verb_toggle_stock()
 	set category = "Object"
 	set name = "Toggle stock"
 	set src in usr
@@ -86,13 +86,13 @@
 
 /* Outpost 21 edit - Having this makes the gun literally non-functional, cannot rack the shell.
 /obj/item/gun/projectile/shotgun/compact/attack_self(mob/user as mob)
-	if(issilicon(usr))
+	if(issilicon(user))
 		return
 
-	if (isliving(usr))
+	if (isliving(user))
 		toggle_stock()
 	else
-		to_chat(usr, span_notice("You cannot do this in your current state."))
+		to_chat(user, span_notice("You cannot do this in your current state."))
 */
 
 /obj/item/gun/projectile/shotgun/compact/ui_action_click(mob/unused_user, actiontype)

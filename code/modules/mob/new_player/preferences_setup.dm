@@ -304,7 +304,7 @@
 
 	return highJob
 
-/datum/preferences/proc/get_valid_hairstyles()
+/datum/preferences/proc/get_valid_hairstyles(mob/user)
 	var/list/valid_hairstyles = list()
 	for(var/hairstyle in hair_styles_list)
 		var/datum/sprite_accessory/S = hair_styles_list[hairstyle]
@@ -312,7 +312,7 @@
 			continue
 		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
 			continue
-		if((!S.ckeys_allowed) || (usr.ckey in S.ckeys_allowed)) //VOREStation Edit, allows ckey locked hairstyles.
+		if((!S.ckeys_allowed) || (user.ckey in S.ckeys_allowed)) //VOREStation Edit, allows ckey locked hairstyles.
 			valid_hairstyles[S.name] = hairstyle //VOREStation Edit, allows ckey locked hairstyles.
 
 		//valid_hairstyles[hairstyle] = hair_styles_list[hairstyle] //VOREStation Edit. Replaced by above.
