@@ -59,10 +59,20 @@
 // Body design console
 /datum/tgui_module/appearance_changer/body_designer
 	name ="Appearance Editor (Body Designer)"
-	flags = APPEARANCE_ALL
-	customize_usr = TRUE
+	flags = APPEARANCE_GENDER|APPEARANCE_SKIN|APPEARANCE_EYE_COLOR|APPEARANCE_ALL_HAIR
 
 /datum/tgui_module/appearance_changer/body_designer/tgui_status(mob/user, datum/tgui_state/state)
-	//if(!owner.transforming)
-	//	return STATUS_CLOSE
+	if(!istype(host,/obj/machinery/computer/transhuman/designer))
+		return STATUS_CLOSE
+	var/obj/machinery/computer/transhuman/designer/D = host
+	if(!D.get_active_record())
+		return STATUS_CLOSE
 	return ..()
+
+/datum/tgui_module/appearance_changer/body_designer/tgui_close(mob/user)
+	var/obj/machinery/computer/transhuman/designer/D = host
+	if(istype(D,/obj/machinery/computer/transhuman/designer))
+		if(D.get_mannequin())
+			D.send_mob_images(new /datum/transhuman/body_record(D.get_mannequin(), FALSE, FALSE))
+		SStgui.update_uis(D) // Force update UI so bodyrecord redraws image
+	. = ..()

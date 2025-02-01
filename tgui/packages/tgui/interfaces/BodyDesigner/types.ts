@@ -26,38 +26,7 @@ export type activeBodyRecord = {
   gender: string;
   synthetic: string;
   locked: BooleanLike;
-  scale: string;
   booc: string;
-  digitigrade: BooleanLike;
-  styles: {
-    Ears: colourableStyle;
-    Horns: colourableStyle;
-    Tail: colourableStyle;
-    Wing: colourableStyle;
-    Hair: simpleStyle;
-    Facial: simpleStyle;
-    Eyes: colourStyle;
-    'Body Color': colourStyle;
-    Bodytype: { styleHref: string; style: string };
-  };
-  markings: { name: Record<string, { on: BooleanLike; color: string }> }; // Record entries match BP regions
-  scale_appearance: string;
-  offset_override: string;
-  species_sound: string;
-  weight: string;
-  blood_type: string;
-  blood_color: string;
-  blood_reagents: string;
-  flavors: {
-    general: string;
-    head: string;
-    face: string;
-    eyes: string;
-    arms: string;
-    hands: string;
-    legs: string;
-    feet: string;
-  };
 };
 
 type colourableStyle = {
