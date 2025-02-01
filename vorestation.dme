@@ -4347,7 +4347,7 @@
 #include "code\modules\resleeving\autoresleever.dm"
 #include "code\modules\resleeving\circuitboards.dm"
 #include "code\modules\resleeving\computers.dm"
-#include "code\modules\resleeving\designer.dm"
+#include "code\modules\resleeving\designer_op.dm"
 #include "code\modules\resleeving\documents.dm"
 #include "code\modules\resleeving\implant.dm"
 #include "code\modules\resleeving\implant_ch.dm"

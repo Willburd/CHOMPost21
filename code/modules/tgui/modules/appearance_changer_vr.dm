@@ -55,3 +55,14 @@
 	if(!owner.transforming)
 		return STATUS_CLOSE
 	return ..()
+
+// Body design console
+/datum/tgui_module/appearance_changer/body_designer
+	name ="Appearance Editor (Body Designer)"
+	flags = APPEARANCE_ALL
+	customize_usr = TRUE
+
+/datum/tgui_module/appearance_changer/body_designer/tgui_status(mob/user, datum/tgui_state/state)
+	//if(!owner.transforming)
+	//	return STATUS_CLOSE
+	return ..()
