@@ -93,11 +93,12 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 	//VOREStation Add End
 
 	// outpost 21 add begin - supply points for selling power
-	if(SSsupply.watts_sold > 0)
+	if(SSsupply.watts_sold >= 1 GIGAWATTS)
 		var/points = FLOOR(SSsupply.watts_sold / SSsupply.points_per_watt,1)
 		var/end_dols = points * SSsupply.points_per_money
 		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
-		valid_stats_list.Add("[SSsupply.watts_sold] watts of power were sold! For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
+		var/end_watts = FLOOR(SSsupply.watts_sold / 1 GIGAWATTS,1) // Truncate decimals
+		valid_stats_list.Add("[end_watts] gigawatt[end_watts > 1 ? "s" : ""] of power were sold! For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
 	// outpost 21 add end
 
 	// outpost 21 add begin - supply points for chem sales!

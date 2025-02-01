@@ -108,34 +108,31 @@ OL|IL|OL
 		SSsupply.points += 1
 
 	// Give rewards/notices
-	if(check_sold_wattage(100 MEGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("100 total Megawatts of excess power sold!", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
-		global_announcer.autosay("PTL bounty reached. 25 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
-		SSsupply.points += 25
-	if(check_sold_wattage(500 MEGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("500 total Megawatts of excess power sold!", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
-		global_announcer.autosay("PTL bounty reached. 50 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
-		SSsupply.points += 50
-	if(check_sold_wattage(1 GIGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("1 total gigawatt of excess power sold!", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
-		global_announcer.autosay("PTL bounty reached. 100 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
-		SSsupply.points += 100
-	if(check_sold_wattage(100 GIGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("100 total gigawatt of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
-		global_announcer.autosay("PTL bounty reached. 200 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
-		SSsupply.points += 200
-	if(check_sold_wattage(500 GIGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("What are you doing? 500 total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
-		global_announcer.autosay("PTL bounty reached. 300 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
-		SSsupply.points += 300
-	if(check_sold_wattage(1000 GIGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("Holy shit. 1000 total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
-		global_announcer.autosay("PTL bounty reached. 500 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
-		SSsupply.points += 500
-	if(check_sold_wattage(1000000 GIGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("HOW!? 1 million total gigawatts of excess power sold!", "Confinement Beam Monitor", "Confinement Beam Monitor")
-		global_announcer.autosay("PTL bounty reached. 1000 Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
-		SSsupply.points += 1000
+	power_sold_message(""					 ,  0.5,	 25,org_wattage,new_wattage)
+	power_sold_message(""					 ,    1,	 25,org_wattage,new_wattage)
+	power_sold_message(""					 ,    5,     50,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 10,     50,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 15,     50,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 20,     50,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 25,     50,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 50,    100,org_wattage,new_wattage)
+	power_sold_message("What are you doing? ",  100,    200,org_wattage,new_wattage)
+	power_sold_message(""					 ,  200,    200,org_wattage,new_wattage)
+	power_sold_message(""					 ,  300,    200,org_wattage,new_wattage)
+	power_sold_message(""					 ,  400,    200,org_wattage,new_wattage)
+	power_sold_message("Holy shit. "		 ,  500,    500,org_wattage,new_wattage)
+	power_sold_message("HOW!? "				 , 1000,   1000,org_wattage,new_wattage)
+	power_sold_message(""				 	 , 2000,   1000,org_wattage,new_wattage)
+	power_sold_message(""				 	 , 3000,   1000,org_wattage,new_wattage)
+	power_sold_message(""				 	 , 4000,   1000,org_wattage,new_wattage)
+	power_sold_message("OH MY GOD WE'RE DOOMED! ", 5000, 1000,org_wattage,new_wattage)
+	power_sold_message("Congrats on winning. ", 10000,   1000,org_wattage,new_wattage)
+
+/datum/confinement_pulse_data/proc/power_sold_message(var/pre_message,var/gigawatts,var/credits,var/org_wattage,var/new_wattage)
+	if(check_sold_wattage(gigawatts GIGAWATTS,org_wattage,new_wattage))
+		global_announcer.autosay("[pre_message][gigawatts] total gigawatt[gigawatts != 1 ? "s" : ""] of excess power sold!", "Confinement Beam Monitor", pre_message == "" ? DEPARTMENT_ENGINEERING : null)
+		global_announcer.autosay("PTL bounty reached. [credits] Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		SSsupply.points += credits
 
 /datum/confinement_pulse_data/proc/check_sold_wattage(var/threshold,var/org_wattage,var/new_wattage)
 	PRIVATE_PROC(TRUE)

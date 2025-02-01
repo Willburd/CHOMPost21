@@ -231,7 +231,7 @@
 		return
 
 	var/injectsize = 10
-	var/chem = tgui_input_list(usr	, "Select a chemical to secrete."
+	var/chem = tgui_input_list(src	, "Select a chemical to secrete."
 									, "Chemicals", list("Repair Brain Tissue (alkysine)"
 									,"Repair Body (bicaridine)"
 									,"Make Drunk (ethanol)"
@@ -408,7 +408,7 @@
 	set desc = "Send a jolt of electricity through your host, reviving them."
 
 	if(stat != 2)
-		to_chat(usr, "Your host is already alive.")
+		to_chat(src, "Your host is already alive.")
 		return
 
 	remove_verb(src, /mob/living/carbon/human/proc/jumpstart)

@@ -30,7 +30,7 @@
 	name = OUTFIT_JOB_NAME(JOB_MEDICAL_DOCTOR)
 	uniform = /obj/item/clothing/under/rank/medical
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
-	l_hand = /obj/item/storage/firstaid // Outpost 21 revert, chomp uses adv, we use standard
+	l_hand = /obj/item/storage/firstaid/regular // Outpost 21 revert, chomp uses adv, we use standard
 	r_pocket = /obj/item/flashlight/pen
 	id_type = /obj/item/card/id/medical
 
@@ -88,8 +88,8 @@
 
 	// CHOMPAdd Start - Geneticists get their cool headset
 	headset = /obj/item/radio/headset/headset_med // Outpost 21 edit - We use only medical headset here.
-	headset_alt = /obj/item/radio/headset/headset_med // Outpost 21 edit - We use only medical headset here.
-	headset_earbud = /obj/item/radio/headset/headset_med // Outpost 21 edit - We use only medical headset here.
+	headset_alt = /obj/item/radio/headset/alt/headset_med // Outpost 21 edit - We use only medical headset here.
+	headset_earbud = /obj/item/radio/headset/earbud/headset_med // Outpost 21 edit - We use only medical headset here.
 	// CHOMPAdd End
 
 /decl/hierarchy/outfit/job/medical/psychiatrist

@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - bugfix: "Tritium no longer acts as slime jelly"
+  - code_imp: "add cable dir maptest"
