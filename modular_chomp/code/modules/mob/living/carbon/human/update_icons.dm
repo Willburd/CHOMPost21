@@ -50,7 +50,7 @@
 		*/
 		custom_species = Dummy.custom_species
 		var/list/traits = dna.species_traits.Copy()
-		dna = Dummy.dna.Clone()
+		qdel_swap(dna, Dummy.dna.Clone())
 		dna.species_traits.Cut()
 		dna.species_traits = traits.Copy()
 		UpdateAppearance()

@@ -129,10 +129,11 @@
 	// -- End mode specific stuff
 
 	if(!R.dna)
-		H.dna = new /datum/dna()
+		qdel_swap(H.dna, new /datum/dna())
 		H.dna.real_name = H.real_name
 	else
-		H.dna = R.dna
+		qdel_swap(H.dna, R.dna)
+
 	H.UpdateAppearance()
 	H.sync_dna_traits(FALSE) // Traitgenes edit - Sync traits to genetics if needed
 	H.sync_organ_dna()

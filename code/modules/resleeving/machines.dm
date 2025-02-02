@@ -85,7 +85,7 @@
 	H.real_name = R.dna.real_name
 
 	//Apply DNA
-	H.dna = R.dna.Clone()
+	qdel_swap(H.dna, R.dna.Clone())
 	H.original_player = current_project.ckey
 
 	//Apply genetic modifiers
@@ -361,7 +361,7 @@
 	H.real_name = R.dna.real_name
 
 	//Apply DNA
-	H.dna = R.dna.Clone()
+	qdel_swap(H.dna, R.dna.Clone())
 	H.original_player = current_project.ckey
 
 	// Outpost 21 begin edit - Apply digi to synths
