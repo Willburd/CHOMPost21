@@ -52,7 +52,7 @@
 
 	vore_default_mode = DM_HOLD
 	vore_active = TRUE
-	//vore_standing_too = TRUE // horrifying, disabled due to excessively OP chus
+	vore_standing_too = TRUE
 	vore_capacity = 2
 	vore_pounce_chance = 20
 
