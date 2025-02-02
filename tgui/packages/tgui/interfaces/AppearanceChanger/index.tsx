@@ -3,6 +3,7 @@ import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
   Box,
+  Button,
   ByondUi,
   LabeledList,
   Section,
@@ -26,6 +27,8 @@ import {
   AppearanceChangerFacialHair,
   AppearanceChangerHair,
 } from './AppearanceChangerHairs';
+import { BodyDesignerBodyRecords } from './BodyDesignerBodyRecords';
+import { BodyDesignerHeader } from './BodyDesignerHeader';
 import { Data } from './types';
 
 export const AppearanceChanger = (props) => {
@@ -51,6 +54,7 @@ export const AppearanceChanger = (props) => {
     change_hair,
     change_facial_hair,
     mapRef,
+    is_design_console,
   } = data;
 
   const { title } = config;
@@ -130,7 +134,14 @@ export const AppearanceChanger = (props) => {
 
   return (
     <Window width={700} height={650} title={decodeHtmlEntities(title)}>
+      (is_design_console && !selected_a_record ? (
       <Window.Content>
+        <BodyDesignerHeader />
+        <BodyDesignerBodyRecords />
+      </Window.Content>
+      ) : (
+      <Window.Content>
+        {is_design_console ? <BodyDesignerHeader /> : ''}
         <Section title="Reflection">
           <Stack>
             <Stack.Item grow>
@@ -187,6 +198,8 @@ export const AppearanceChanger = (props) => {
                   {wing_style ? capitalize(wing_style) : 'Not Set'}
                 </LabeledList.Item>
               </LabeledList>
+              <br />
+              <Button onClick={() => act('rotate_view')}>Rotate Preview</Button>
             </Stack.Item>
             <Stack.Item>
               <ByondUi
@@ -260,6 +273,7 @@ export const AppearanceChanger = (props) => {
         </Tabs>
         <Box height="43%">{tab[tabIndex]}</Box>
       </Window.Content>
+      ))
     </Window>
   );
 };

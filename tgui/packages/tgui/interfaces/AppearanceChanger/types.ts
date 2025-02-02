@@ -50,6 +50,26 @@ export type Data = {
   hair_styles: { hairstyle: string }[];
   ear_secondary_style: string;
   ear_secondary_colors: string[];
+  // Outpost 21 edit begin - Body designer update
+  is_design_console: BooleanLike; // If we have disk access
+  selected_a_record: BooleanLike; // If we're past record selection
+  stock_bodyrecords: string[];
+  bodyrecords: string[];
+  species_name: string;
+  size_scale: number;
+  synthetic: BooleanLike;
+  scale_appearance: BooleanLike;
+  offset_override: BooleanLike;
+  weight: number;
+  digitigrade: BooleanLike;
+  blood_reagent: string;
+  blood_color: string;
+  species_sound: string;
+  // species_sounds_gendered: BooleanLike;
+  // species_sounds_female: string;
+  // species_sounds_male: string;
+  flavor_text: flavors;
+  // Outpost 21 edit end
 };
 
 type genders = { gender_name: string; gender_key: string }[];
@@ -62,3 +82,17 @@ export type styles = {
 };
 
 export type species = { specimen: string };
+
+// Outpost 21 edit begin - Body designer update
+export type flavors = {
+  general: string;
+  head: string;
+  face: string;
+  eyes: string;
+  torso: string;
+  arms: string;
+  hands: string;
+  legs: string;
+  feet: string;
+};
+// Outpost 21 edit end

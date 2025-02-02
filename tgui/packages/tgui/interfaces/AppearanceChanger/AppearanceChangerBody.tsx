@@ -1,6 +1,14 @@
 import { sortBy } from 'common/collections';
 import { useBackend } from 'tgui/backend';
-import { Button, LabeledList, Section, Stack } from 'tgui-core/components';
+import {
+  Box,
+  Button,
+  ColorBox,
+  LabeledList,
+  Section,
+  Stack,
+} from 'tgui-core/components';
+import { capitalize } from 'tgui-core/string';
 
 import { Data, species, styles } from './types';
 
@@ -10,19 +18,97 @@ export const AppearanceChangerSpecies = (props) => {
 
   const sortedSpecies = sortBy(species || [], (val: species) => val.specimen);
 
+  // Outpost 21 edit begin - Body designer update
   return (
-    <Section title="Species" fill scrollable>
-      {sortedSpecies.map((spec) => (
-        <Button
-          key={spec.specimen}
-          selected={specimen === spec.specimen}
-          onClick={() => act('race', { race: spec.specimen })}
-        >
-          {spec.specimen}
-        </Button>
-      ))}
+    <Section title="Unique Identifiers" fill scrollable>
+      <Section title="Species">
+        {sortedSpecies.map((spec) => (
+          <Button
+            key={spec.specimen}
+            selected={specimen === spec.specimen}
+            onClick={() => act('race', { race: spec.specimen })}
+          >
+            {spec.specimen}
+          </Button>
+        ))}
+      </Section>
+      <Section title="DNA">
+        <LabeledList>
+          <LabeledList.Item label="Species Name">
+            <Button icon="pen" onClick={() => act('race_name')}>
+              {data.species_name ? data.species_name : specimen}
+            </Button>
+          </LabeledList.Item>
+          <LabeledList.Item label="Blood Reagent">
+            <Button icon="pen" onClick={() => act('blood_reagent')}>
+              {data.blood_reagent}
+            </Button>
+          </LabeledList.Item>
+          <LabeledList.Item label="Blood Color">
+            <Button icon="pen" onClick={() => act('blood_color')}>
+              {data.blood_color}
+            </Button>
+            <ColorBox color={data.blood_color} mr={1} />
+          </LabeledList.Item>
+          <LabeledList.Item label="Digitigrade">
+            <Button icon="pen" onClick={() => act('digitigrade')}>
+              {data.digitigrade ? 'Yes' : 'No'}
+            </Button>
+          </LabeledList.Item>
+          <LabeledList.Item label="Species Sound">
+            <Button icon="pen" onClick={() => act('species_sound')}>
+              {data.species_sound}
+            </Button>
+          </LabeledList.Item>
+        </LabeledList>
+      </Section>
+      <Section title="Sizing">
+        <LabeledList.Item label="Scale">
+          <Button icon="pen" onClick={() => act('size_scale')}>
+            {data.size_scale}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="Scale Appearance">
+          <Button icon="pen" onClick={() => act('scale_appearance')}>
+            {data.scale_appearance}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="Scale Offset">
+          <Button icon="pen" onClick={() => act('offset_override')}>
+            {data.offset_override}
+          </Button>
+        </LabeledList.Item>
+        <LabeledList.Item label="Weight">
+          <Button icon="pen" onClick={() => act('weight')}>
+            {data.weight}
+          </Button>
+        </LabeledList.Item>
+      </Section>
+      <Section title="Flavor Text">
+        <LabeledList>
+          {Object.keys(data.flavor_text).map((key) => (
+            <LabeledList.Item key={key} label={capitalize(key)}>
+              <Button
+                icon="pen"
+                onClick={() =>
+                  act('flavor_text', {
+                    target: key,
+                  })
+                }
+              >
+                Edit
+              </Button>
+              <br />
+              <Box preserveWhitespace style={{ wordBreak: 'break-all' }}>
+                {data.flavor_text[key]}
+              </Box>
+            </LabeledList.Item>
+          ))}
+        </LabeledList>
+      </Section>
     </Section>
   );
+  // Outpost 21 edit end
 };
 
 export const AppearanceChangerGender = (props) => {

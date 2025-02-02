@@ -7,7 +7,6 @@ import {
   Section,
   Stack,
 } from 'tgui-core/components';
-import { capitalize } from 'tgui-core/string';
 
 import { activeBodyRecord } from './types';
 
@@ -47,53 +46,20 @@ export const BodyDesignerSpecificRecord = (props: {
       </Section>
       <Stack.Item>
         <Stack>
-          <Stack.Item basis="48%">
+          <Stack.Item>
             <Section title="General">
               <LabeledList>
                 <LabeledList.Item label="Name">
                   <Button
                     icon="pen"
-                    disabled={activeBodyRecord.locked === 1}
-                    onClick={() =>
-                      act('edit_tag', {
-                        target_href: 'rename',
-                        target_value: 1,
-                      })
+                    disabled={
+                      activeBodyRecord.locked === 1 ||
+                      activeBodyRecord.synthetic === 'Yes'
                     }
+                    onClick={() => act('name')}
                   >
                     {activeBodyRecord.real_name}
                   </Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Species">
-                  <Button
-                    icon="pen"
-                    disabled={activeBodyRecord.locked === 1}
-                    onClick={() =>
-                      act('edit_tag', {
-                        target_href: 'custom_species',
-                        target_value: 1,
-                      })
-                    }
-                  >
-                    {activeBodyRecord.speciesname}
-                  </Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Bio. Sex">
-                  <Button
-                    icon="pen"
-                    disabled={activeBodyRecord.locked === 1}
-                    onClick={() =>
-                      act('edit_tag', {
-                        target_href: 'bio_gender',
-                        target_value: 1,
-                      })
-                    }
-                  >
-                    {capitalize(activeBodyRecord.gender)}
-                  </Button>
-                </LabeledList.Item>
-                <LabeledList.Item label="Synthetic">
-                  {activeBodyRecord.synthetic}
                 </LabeledList.Item>
                 <LabeledList.Item label="Mind Compat">
                   {activeBodyRecord.locked ? 'Low' : 'High'}
@@ -106,11 +72,17 @@ export const BodyDesignerSpecificRecord = (props: {
                     View OOC Notes
                   </Button>
                 </LabeledList.Item>
+                <LabeledList.Item label="Synthetic">
+                  {activeBodyRecord.synthetic}
+                </LabeledList.Item>
                 <LabeledList.Item label="Unique Identifiers">
                   <Button
                     ml={1}
                     icon="dna"
-                    disabled={activeBodyRecord.locked === 1}
+                    disabled={
+                      activeBodyRecord.locked === 1 ||
+                      activeBodyRecord.synthetic === 'Yes'
+                    }
                     onClick={() => act('edit_body')}
                   >
                     Customize Sleeve
