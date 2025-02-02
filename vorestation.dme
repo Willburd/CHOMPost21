@@ -5185,6 +5185,7 @@
 #include "modular_chomp\maps\southern_cross\loadout\loadout_suit.dm"
 #include "modular_chomp\maps\southern_cross\loadout\loadout_uniform.dm"
 #include "modular_chomp\maps\southern_cross\loadout\loadout_vr.dm"
+#include "modular_outpost\code\testing.dm"
 #include "modular_outpost\code\_helpers\atmospherics.dm"
 #include "modular_outpost\code\_helpers\global_lists.dm"
 #include "modular_outpost\code\_onclick\hud\alert.dm"
