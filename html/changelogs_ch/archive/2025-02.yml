@@ -5,3 +5,10 @@
   - bugfix: Crew monitor now filters and shows vitals properly
   - code_imp: converts more usr to user / src
   - bugfix: Tritium no longer acts as slime jelly
+2025-02-02:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added warnings for people on clients 516.1652 to 1654 that they should
+      use another version.
+  - code_imp: add cable dir maptest
+  - bugfix: nearby computers merge their icons
+  - bugfix: Fixed Teshari pattern ears being missing from the ears selection.
