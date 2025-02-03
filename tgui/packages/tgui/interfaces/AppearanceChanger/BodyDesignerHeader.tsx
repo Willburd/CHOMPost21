@@ -10,7 +10,7 @@ export const BodyDesignerHeader = (props) => {
     <Box>
       <Button
         icon="arrow-left"
-        disable={!selected_a_record}
+        disabled={!selected_a_record}
         onClick={() => act('back_to_library')}
       >
         Back

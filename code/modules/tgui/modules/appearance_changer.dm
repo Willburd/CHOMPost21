@@ -86,8 +86,9 @@
 
 	// Outpost 21 edit begin - Body designer update
 	var/obj/machinery/computer/transhuman/designer/DC = null
+	var/datum/tgui_module/appearance_changer/body_designer/BD = null
 	if(istype(src,/datum/tgui_module/appearance_changer/body_designer))
-		var/datum/tgui_module/appearance_changer/body_designer/BD = src
+		BD = src
 		DC = BD.linked_body_design_console?.resolve()
 	// Outpost 21 edit end
 
@@ -471,7 +472,7 @@
 			var/datum/transhuman/body_record/BR = locate(params["view_brec"])
 			if(BR && istype(BR.mydna))
 				if(DC.allowed(ui.user) || BR.ckey == ui.user.ckey)
-					owner = DC.create_body(BR)
+					owner = BD.create_body(BR)
 					owner.resleeve_lock = BR.locked
 					DC.selected_record = TRUE
 			return TRUE
@@ -494,9 +495,9 @@
 			if(!DC.disk)
 				return FALSE
 			if(DC.disk.stored && can_change(owner, APPEARANCE_RACE))
-				qdel(owner)
-				owner = DC.create_body(DC.disk.stored)
+				owner = BD.create_body(DC.disk.stored)
 				DC.selected_record = TRUE
+				to_chat(ui.user,span_notice("\The [owner]'s bodyrecord was loaded from the disk."))
 			return TRUE
 
 		if("savetodisk")
@@ -517,6 +518,7 @@
 				// Create it from the mob
 				if(DC.disk.stored)
 					qdel_null(DC.disk.stored)
+				to_chat(ui.user,span_notice("\The [owner]'s bodyrecord was saved to the disk."))
 				DC.disk.stored = new /datum/transhuman/body_record(owner, FALSE, FALSE) // Saves a COPY!
 				DC.disk.stored.locked = FALSE // remove lock
 				DC.disk.name = "[initial(DC.disk.name)] ([owner.real_name])"
@@ -525,13 +527,13 @@
 			if(!DC.disk)
 				return FALSE
 			if(can_change(owner, APPEARANCE_RACE))
-				DC.disk.forceMove(get_turf(src))
+				to_chat(ui.user,span_notice("You eject the disk."))
+				DC.disk.forceMove(get_turf(DC))
 				DC.disk = null
 				return TRUE
 		if("back_to_library")
 			if(can_change(owner, APPEARANCE_RACE))
-				qdel(owner)
-				owner = DC.make_fake_owner()
+				owner = BD.make_fake_owner()
 				DC.selected_record = FALSE
 				return TRUE
 		// Outpost 21 edit end
@@ -615,15 +617,15 @@
 		data["selected_a_record"] = DC.selected_record
 		if(!DC.selected_record)
 			// Load all records on station that can be printed
-			var/bodyrecords_list_ui[0]
+			var/list/bodyrecords_list_ui = list()
 			for(var/N in DC.our_db.body_scans)
 				var/datum/transhuman/body_record/BR = DC.our_db.body_scans[N]
-				var/datum/species/S = GLOB.all_species[BR.speciesname]
+				var/datum/species/S = GLOB.all_species[BR.mydna.dna.species]
 				if((S.spawn_flags & (SPECIES_IS_WHITELISTED|SPECIES_CAN_JOIN)) != SPECIES_CAN_JOIN) continue
 				bodyrecords_list_ui[++bodyrecords_list_ui.len] = list("name" = N, "recref" = "\ref[BR]")
 			data["character_records"] = bodyrecords_list_ui
 			// Load all stock records printable
-			var/stock_bodyrecords_list_ui[0]
+			var/list/stock_bodyrecords_list_ui = list()
 			for (var/N in GLOB.all_species)
 				var/datum/species/S = GLOB.all_species[N]
 				if((S.spawn_flags & (SPECIES_IS_WHITELISTED|SPECIES_CAN_JOIN)) != SPECIES_CAN_JOIN) continue

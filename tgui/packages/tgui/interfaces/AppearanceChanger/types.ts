@@ -53,6 +53,9 @@ export type Data = {
   // Outpost 21 edit begin - Body designer update
   is_design_console: BooleanLike; // If we have disk access
   selected_a_record: BooleanLike; // If we're past record selection
+  character_records: bodyrecord[];
+  stock_records: string[];
+  disk: BooleanLike;
   stock_bodyrecords: string[];
   bodyrecords: string[];
   species_name: string;
@@ -84,6 +87,8 @@ export type styles = {
 export type species = { specimen: string };
 
 // Outpost 21 edit begin - Body designer update
+export type bodyrecord = { name: string; recref: string };
+
 export type flavors = {
   general: string;
   head: string;
