@@ -37,7 +37,7 @@
 				N.identifying_gender = M.gender
 
 		mob_belly_transfer(M)
-		M.soulgem.transfer_self(src) //CHOMPAdd Soulcatcher
+		// M.soulgem.transfer_self(src) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
 
 		nutrition = M.nutrition
 		src.ckey = M.ckey
@@ -123,7 +123,7 @@
 
 	if(ishuman(src))
 		for(var/obj/item/W in src)
-			if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
+			if(istype(W, /obj/item/implant/backup)) // || istype(W, /obj/item/nif)) Outpost 21 edit - Nife removal
 				continue
 			src.drop_from_inventory(W)
 
