@@ -70,6 +70,9 @@
 
 /datum/tgui_module/appearance_changer/body_designer/Destroy()
 	qdel_null(designer_mob)
+	var/obj/machinery/computer/transhuman/designer/DC = linked_body_design_console?.resolve()
+	if(DC)
+		DC.selected_record = FALSE
 	. = ..()
 
 /datum/tgui_module/appearance_changer/body_designer/proc/make_fake_owner()
