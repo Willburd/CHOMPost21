@@ -96,7 +96,9 @@
 		if("race")
 			if(can_change(owner, APPEARANCE_RACE) && (params["race"] in valid_species))
 				if(owner.change_species(params["race"]))
+					owner.species.base_species = null // Outpost 21 edit - Reset base icon
 					if(params["race"] == "Custom Species")
+						owner.species.base_species = SPECIES_HUMAN // Outpost 21 edit - Reset base icon
 						owner.custom_species = sanitize(tgui_input_text(ui.user, "Input custom species name:",
 							"Custom Species Name", null, MAX_NAME_LEN), MAX_NAME_LEN)
 					cut_data()
@@ -390,8 +392,18 @@
 			if(can_change(owner, APPEARANCE_RACE)) // new name can be empty, it uses base species if so
 				owner.custom_species = new_name
 				return TRUE
+		if("base_icon")
+			if(owner.species.selects_bodytype >= SELECTS_BODYTYPE_CUSTOM)
+				var/new_species = tgui_input_list(src, "Please select basic shape.", "Body Shape", list(owner.species.vanity_base_fit)|owner.species.get_valid_shapeshifter_forms())
+				if(new_species && can_change(owner, APPEARANCE_RACE))
+					owner.species.base_species = new_species
+				changed_hook(APPEARANCECHANGER_CHANGED_RACE)
+			else
+				owner.species.base_species = null
+				changed_hook(APPEARANCECHANGER_CHANGED_RACE)
+			return TRUE
 		if("blood_reagent")
-			var/new_blood_reagents = tgui_input_list(ui.user, "Choose your character's blood restoration reagent:", "Character Preference", valid_bloodreagents)
+			var/new_blood_reagents = tgui_input_list(ui.user, "Please select blood restoration reagent:", "Character Preference", valid_bloodreagents)
 			if(new_blood_reagents && can_change(owner, APPEARANCE_RACE))
 				owner.species.blood_reagents = new_blood_reagents
 				changed_hook(APPEARANCECHANGER_CHANGED_RACE)
@@ -404,10 +416,8 @@
 				changed_hook(APPEARANCECHANGER_CHANGED_RACE)
 				return TRUE
 		if("weight")
-			var/new_weight = tgui_input_number(ui.user, "Choose your character's relative body weight.\n\
-			This measurement should be set relative to a normal 5'10'' person's body and not the actual size of your character.\n\
-			If you set your weight to 500 because you're a naga or have metal implants then complain that you're a blob I\n\
-			swear to god I will find you and I will punch you for not reading these directions!\n\
+			var/new_weight = tgui_input_number(ui.user, "Choose tbe character's relative body weight.\n\
+			This measurement should be set relative to a normal 5'10'' person's body and not the actual size of the character.\n\
 			([WEIGHT_MIN]-[WEIGHT_MAX])", "Character Preference", null, WEIGHT_MAX, WEIGHT_MIN, round_value=FALSE)
 			if(new_weight && can_change(owner, APPEARANCE_RACE))
 				var/unit_of_measurement = tgui_alert(ui.user, "Is that number in pounds (lb) or kilograms (kg)?", "Confirmation", list("Pounds", "Kilograms"))
@@ -420,7 +430,7 @@
 					changed_hook(APPEARANCECHANGER_CHANGED_RACE)
 					return TRUE
 		if("size_scale")
-			var/new_size = tgui_input_number(ui.user, "Choose your character's size, ranging from [RESIZE_MINIMUM * 100]% to [RESIZE_MAXIMUM * 100]%", "Set Size", null, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100)
+			var/new_size = tgui_input_number(ui.user, "Choose size, ranging from [RESIZE_MINIMUM * 100]% to [RESIZE_MAXIMUM * 100]%", "Set Size", null, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100)
 			if(new_size && ISINRANGE(new_size,RESIZE_MINIMUM * 100,RESIZE_MAXIMUM * 100) && can_change(owner, APPEARANCE_RACE))
 				owner.size_multiplier = new_size / 100
 				owner.update_transform(TRUE)
@@ -447,7 +457,7 @@
 				return TRUE
 		if("species_sound")
 			var/list/possible_species_sound_types = species_sound_map
-			var/choice = tgui_input_list(ui.user, "Which set of sounds would you like to use for this sleeve's species sounds? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
+			var/choice = tgui_input_list(ui.user, "Which set of sounds would you like to use? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
 			if(choice && can_change(owner, APPEARANCE_RACE))
 				owner.species.species_sounds = choice
 				return TRUE
@@ -457,17 +467,18 @@
 				if(select_key in owner.flavor_texts)
 					switch(select_key)
 						if("general")
-							var/msg = strip_html_simple(tgui_input_text(ui.user,"Give a general description of your character. This will be shown regardless of clothings. Put in a single space to make blank.","Flavor Text",html_decode(owner.flavor_texts[select_key]), multiline = TRUE, prevent_enter = TRUE))
+							var/msg = strip_html_simple(tgui_input_text(ui.user,"Give a general description of the character. This will be shown regardless of clothings. Put in a single space to make blank.","Flavor Text",html_decode(owner.flavor_texts[select_key]), multiline = TRUE, prevent_enter = TRUE))
 							if(can_change(owner, APPEARANCE_RACE)) // allows empty to wipe flavor
 								owner.flavor_texts[select_key] = msg
 								return TRUE
 						else
-							var/msg = strip_html_simple(tgui_input_text(ui.user,"Set the flavor text for your [select_key]. Put in a single space to make blank.","Flavor Text",html_decode(owner.flavor_texts[select_key]), multiline = TRUE, prevent_enter = TRUE))
+							var/msg = strip_html_simple(tgui_input_text(ui.user,"Set the flavor text for their [select_key]. Put in a single space to make blank.","Flavor Text",html_decode(owner.flavor_texts[select_key]), multiline = TRUE, prevent_enter = TRUE))
 							if(can_change(owner, APPEARANCE_RACE)) // allows empty to wipe flavor
 								owner.flavor_texts[select_key] = msg
 								return TRUE
-
+		// ***********************************
 		// Body designer UI
+		// ***********************************
 		if("view_brec")
 			var/datum/transhuman/body_record/BR = locate(params["view_brec"])
 			if(BR && istype(BR.mydna))
@@ -476,7 +487,6 @@
 					owner.resleeve_lock = BR.locked
 					DC.selected_record = TRUE
 			return TRUE
-
 		if("view_stock_brec")
 			var/datum/species/S = GLOB.all_species[params["view_stock_brec"]]
 			if(S && (S.spawn_flags & (SPECIES_IS_WHITELISTED|SPECIES_CAN_JOIN)) == SPECIES_CAN_JOIN)
@@ -490,7 +500,6 @@
 				owner.custom_species = "Custom Sleeve" // Custom name
 				DC.selected_record = TRUE
 			return TRUE
-
 		if("loadfromdisk")
 			if(!DC.disk)
 				return FALSE
@@ -499,7 +508,6 @@
 				DC.selected_record = TRUE
 				to_chat(ui.user,span_notice("\The [owner]'s bodyrecord was loaded from the disk."))
 			return TRUE
-
 		if("savetodisk")
 			if(!DC.selected_record)
 				return FALSE
@@ -621,7 +629,7 @@
 			for(var/N in DC.our_db.body_scans)
 				var/datum/transhuman/body_record/BR = DC.our_db.body_scans[N]
 				var/datum/species/S = GLOB.all_species[BR.mydna.dna.species]
-				if((S.spawn_flags & (SPECIES_IS_WHITELISTED|SPECIES_CAN_JOIN)) != SPECIES_CAN_JOIN) continue
+				if((S.spawn_flags & (SPECIES_IS_WHITELISTED|SPECIES_CAN_JOIN)) != SPECIES_CAN_JOIN || BR.synthetic) continue
 				bodyrecords_list_ui[++bodyrecords_list_ui.len] = list("name" = N, "recref" = "\ref[BR]")
 			data["character_records"] = bodyrecords_list_ui
 			// Load all stock records printable
@@ -631,10 +639,18 @@
 				if((S.spawn_flags & (SPECIES_IS_WHITELISTED|SPECIES_CAN_JOIN)) != SPECIES_CAN_JOIN) continue
 				stock_bodyrecords_list_ui += N
 			data["stock_records"] = stock_bodyrecords_list_ui
+			data["change_race"] = can_change(owner, APPEARANCE_RACE)
+			data["change_gender"] = can_change(owner, APPEARANCE_GENDER)
+			data["change_hair"] = can_change(owner, APPEARANCE_HAIR)
+			data["change_eye_color"] = can_change(owner, APPEARANCE_EYE_COLOR)
+			data["change_hair_color"] = can_change(owner, APPEARANCE_HAIR_COLOR)
+			data["change_facial_hair_color"] = can_change(owner, APPEARANCE_FACIAL_HAIR_COLOR)
 			// Drop out early, as we have nothing to edit, and are on the BR menu for the designer
 			return data
 	// species/body
 	data["species_name"] = owner.custom_species
+	data["use_custom_icon"] = (owner.species.selects_bodytype >= SELECTS_BODYTYPE_CUSTOM)
+	data["base_icon"] = owner.species.base_species
 	data["synthetic"] = owner.synthetic ? "Yes" : "No"
 	data["size_scale"] = player_size_name(owner.size_multiplier)
 	data["scale_appearance"] = owner.dna.scale_appearance ? "Fuzzy" : "Sharp"

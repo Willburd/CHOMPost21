@@ -59,6 +59,8 @@ export type Data = {
   stock_bodyrecords: string[];
   bodyrecords: string[];
   species_name: string;
+  use_custom_icon: BooleanLike;
+  base_icon: string;
   size_scale: number;
   synthetic: BooleanLike;
   scale_appearance: BooleanLike;
