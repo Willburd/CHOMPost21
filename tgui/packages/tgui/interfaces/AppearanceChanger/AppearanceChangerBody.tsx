@@ -196,7 +196,7 @@ export const AppearanceChangerEars = (props) => {
               <Button
                 key={ear.instance}
                 onClick={() => act('ear_secondary', { ref: ear.instance })}
-                selected={ear.name === ear_style}
+                selected={ear.name === data.ear_secondary_style}
               >
                 {ear.name}
               </Button>
