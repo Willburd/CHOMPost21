@@ -1,4 +1,3 @@
-import { sortBy } from 'common/collections';
 import { useBackend } from 'tgui/backend';
 import {
   Box,
@@ -10,13 +9,15 @@ import {
 } from 'tgui-core/components';
 import { capitalize } from 'tgui-core/string';
 
-import { Data, species, styles } from './types';
+import { Data, species } from './types';
 
 export const AppearanceChangerSpecies = (props) => {
   const { act, data } = useBackend<Data>();
   const { species, specimen } = data;
 
-  const sortedSpecies = sortBy(species || [], (val: species) => val.specimen);
+  const sortedSpecies = (species || []).sort((a: species, b: species) =>
+    a.specimen.localeCompare(b.specimen),
+  );
 
   // Outpost 21 edit begin - Body designer update
   return (
@@ -160,6 +161,10 @@ export const AppearanceChangerEars = (props) => {
 
   const { ear_style, ear_styles } = data;
 
+  ear_styles.sort((a, b) =>
+    a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
+  );
+
   return (
     <Stack vertical fill>
       <Stack.Item grow>
@@ -170,17 +175,15 @@ export const AppearanceChangerEars = (props) => {
           >
             -- Not Set --
           </Button>
-          {sortBy(ear_styles, (e: styles) => e.name.toLowerCase()).map(
-            (ear) => (
-              <Button
-                key={ear.instance}
-                onClick={() => act('ear', { ref: ear.instance })}
-                selected={ear.name === ear_style}
-              >
-                {ear.name}
-              </Button>
-            ),
-          )}
+          {ear_styles.map((ear) => (
+            <Button
+              key={ear.instance}
+              onClick={() => act('ear', { ref: ear.instance })}
+              selected={ear.name === ear_style}
+            >
+              {ear.name}
+            </Button>
+          ))}
         </Section>
       </Stack.Item>
       <Stack.Item grow>
@@ -191,17 +194,15 @@ export const AppearanceChangerEars = (props) => {
           >
             -- Not Set --
           </Button>
-          {sortBy(ear_styles, (e: styles) => e.name.toLowerCase()).map(
-            (ear) => (
-              <Button
-                key={ear.instance}
-                onClick={() => act('ear_secondary', { ref: ear.instance })}
-                selected={ear.name === data.ear_secondary_style}
-              >
-                {ear.name}
-              </Button>
-            ),
-          )}
+          {ear_styles.map((ear) => (
+            <Button
+              key={ear.instance}
+              onClick={() => act('ear_secondary', { ref: ear.instance })}
+              selected={ear.name === data.ear_secondary_style}
+            >
+              {ear.name}
+            </Button>
+          ))}
         </Section>
       </Stack.Item>
     </Stack>
@@ -213,6 +214,10 @@ export const AppearanceChangerTails = (props) => {
 
   const { tail_style, tail_styles } = data;
 
+  tail_styles.sort((a, b) =>
+    a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
+  );
+
   return (
     <Section title="Tails" fill scrollable>
       <Button
@@ -221,7 +226,7 @@ export const AppearanceChangerTails = (props) => {
       >
         -- Not Set --
       </Button>
-      {sortBy(tail_styles, (e: styles) => e.name.toLowerCase()).map((tail) => (
+      {tail_styles.map((tail) => (
         <Button
           key={tail.instance}
           onClick={() => act('tail', { ref: tail.instance })}
@@ -238,6 +243,9 @@ export const AppearanceChangerWings = (props) => {
   const { act, data } = useBackend<Data>();
 
   const { wing_style, wing_styles } = data;
+  wing_styles.sort((a, b) =>
+    a.name.toLowerCase().localeCompare(b.name.toLowerCase()),
+  );
 
   return (
     <Section title="Wings" fill scrollable>
@@ -247,7 +255,7 @@ export const AppearanceChangerWings = (props) => {
       >
         -- Not Set --
       </Button>
-      {sortBy(wing_styles, (e: styles) => e.name.toLowerCase()).map((wing) => (
+      {wing_styles.map((wing) => (
         <Button
           key={wing.instance}
           onClick={() => act('wing', { ref: wing.instance })}
