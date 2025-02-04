@@ -60,7 +60,8 @@
 		designer_gui = new(src, null)
 		designer_gui.linked_body_design_console = WEAKREF(src)
 	if(!designer_gui.owner)
-		designer_gui.owner = designer_gui.make_fake_owner()
+		designer_gui.make_fake_owner()
+		selected_record = FALSE
 	designer_gui.tgui_interact(user)
 
 // Disk for manually moving body records between the designer and sleever console etc.
