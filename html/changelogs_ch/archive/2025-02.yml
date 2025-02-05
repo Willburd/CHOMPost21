@@ -97,3 +97,7 @@
   CHOMPStation2StaffMirrorBot:
   - qol: robot gun sprites will only show if any of the guns is actually in the activated
       slot
+  - bugfix: rdconsole static data updates for all users again
+  Cameron-The-Raven:
+  - image: adjusts some icons to equal their virgo equivalent. Nothing front-facing,
+      all backend.
