@@ -104,6 +104,15 @@ var/datum/planet/muriki/planet_muriki = null
 	if(planet_muriki)
 		return planet_muriki.current_time
 
+/datum/weather/muriki/proc/wet_plating(var/chance)
+	if(holder.our_planet.planet_floors.len && prob(chance))
+		var/i = rand(3,9)
+		while(i-- > 0)
+			var/turf/T = pick(holder.our_planet.planet_floors)
+			if((istype(T,/turf/simulated/floor/plating) || istype(T,/turf/simulated/floor/outpost_roof)) && T.is_outdoors())
+				var/turf/simulated/floor/F = T
+				F.wet_floor(1)
+
 //Weather definitions
 /datum/weather_holder/muriki
 	temperature = 293.15 // 20c
@@ -347,6 +356,10 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_rain/process_effects()
 	..()
+
+	// Make plating wet and slippery
+	wet_plating(30)
+
 	// Fill chem vats
 	if(prob(10))
 		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
@@ -451,6 +464,10 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_storm/process_effects()
 	..()
+
+	// Make plating wet and slippery
+	wet_plating(60)
+
 	// Fill chem vats
 	if(prob(20))
 		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
@@ -549,6 +566,10 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/downpour/process_effects()
 	..()
+
+	// Make plating wet and slippery
+	wet_plating(70)
+
 	// Fill chem vats
 	if(prob(25))
 		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
@@ -632,6 +653,10 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/downpourfatal/process_effects()
 	..()
+
+	// Make plating wet and slippery
+	wet_plating(60)
+
 	// Fill chem vats
 	if(prob(45))
 		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
