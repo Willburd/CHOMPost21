@@ -5,11 +5,12 @@
 	var/failed = 0
 
 	var/list/collection = list()
-	for(var/datum/sprite_accessory/A as anything in subtypesof(/datum/sprite_accessory))
+	for(var/SP in subtypesof(/datum/sprite_accessory))
+		var/datum/sprite_accessory/A = new SP()
 		if(!A.name)
 			log_unit_test("[A] - [A.type]: Cosmetic - Missing name.")
 			failed = 1
-		if(A.display_name == DEVELOPER_WARNING_NAME)
+		if(A.name == DEVELOPER_WARNING_NAME)
 			continue
 		if(collection[A.name])
 			log_unit_test("[A] - [A.type]: Cosmetic - Name defined twice. Original def [collection[A.name]]")
@@ -19,6 +20,7 @@
 		if(!A.icon_state)
 			log_unit_test("[A] - [A.type]: Cosmetic - Has no icon_state.")
 			failed = 1
+		qdel(A)
 
 	if(failed)
 		fail("One or more /datum/sprite_accessory definitions had invalid names, icon_states, or names were reused definitions")
