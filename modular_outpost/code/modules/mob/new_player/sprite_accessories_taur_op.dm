@@ -1,4 +1,4 @@
-/datum/sprite_accessory/tail/taur/longtail/op_qaavos
+/datum/sprite_accessory/tail/longtail/op_qaavos
 	name = "Qaavos Tail"
 	icon = 'modular_outpost/icons/mob/vore/Tails64x32_op.dmi'
 	icon_state = "qaavos_tail"
