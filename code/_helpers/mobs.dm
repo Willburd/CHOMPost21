@@ -252,7 +252,7 @@ Proc for attack log creation, because really why not
 			. = FALSE
 			break
 
-		if(user.zone_sel && target_zone && user.zone_sel.selecting != target_zone) // Outpost 21 addition - autodoc sanity check
+		if(user.zone_sel && target_zone && user.zone_sel?.selecting != target_zone) // Outpost 21 addition - autodoc sanity check
 			. = FALSE
 			break
 

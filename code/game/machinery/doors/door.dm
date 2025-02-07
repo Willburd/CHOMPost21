@@ -165,7 +165,7 @@
 	return !density // Block airflow unless density = FALSE
 
 /obj/machinery/door/proc/bumpopen(mob/user as mob)
-	if(!user)	return // CHOMPedit - Check if the mob is even valid before proceeding
+	if(!user)	return
 	if(operating)	return
 	if(user.last_airflow > world.time - vsc.airflow_delay) //Fakkit
 		return
@@ -382,7 +382,6 @@
 				playsound(src, 'sound/machines/buzz-two.ogg', 50, 0)
 	return
 
-// Outpost 21 edit begin - Experimental - Removed sleep() from doors
 /obj/machinery/door/proc/open(var/forced = 0)
 	if(!can_open(forced))
 		return
@@ -391,14 +390,18 @@
 	do_animate("opening")
 	icon_state = "door0"
 	set_opacity(0)
-	addtimer(CALLBACK(src, PROC_REF(open__internalsetdensity),forced), anim_length_before_density)
+	addtimer(CALLBACK(src, PROC_REF(open_internalsetdensity),forced), anim_length_before_density)
 
-/obj/machinery/door/proc/open__internalsetdensity(var/forced = 0)
+/obj/machinery/door/proc/open_internalsetdensity(var/forced = 0)
+	PRIVATE_PROC(TRUE) //do not touch this or BYOND will devour you
+	SHOULD_NOT_OVERRIDE(TRUE)
 	src.density = FALSE
 	update_nearby_tiles()
-	addtimer(CALLBACK(src, PROC_REF(open__internalfinish),forced), anim_length_before_finalize)
+	addtimer(CALLBACK(src, PROC_REF(open_internalfinish),forced), anim_length_before_finalize)
 
-/obj/machinery/door/proc/open__internalfinish(var/forced = 0)
+/obj/machinery/door/proc/open_internalfinish(var/forced = 0)
+	PRIVATE_PROC(TRUE) //do not touch this or BYOND will devour you
+	SHOULD_NOT_OVERRIDE(TRUE)
 	src.layer = open_layer
 	explosion_resistance = 0
 	update_icon()
@@ -415,10 +418,8 @@
 		autoclose_in(next_close_wait())
 
 	return 1
-// Outpost 21 edit end
 
 /obj/machinery/door/proc/next_close_wait()
-	// Outpost 21 edit begin - Large temp difs mean faster closing
 	var/lowest_temp = T20C
 	var/highest_temp = T0C
 	for(var/D in cardinal)
@@ -436,7 +437,6 @@
 	if(abs(highest_temp - lowest_temp) >= 5)
 		open_speed = 15
 	return (normalspeed ? open_speed : 5)
-	// Outpost 21 edit end
 
 // Outpost 21 edit begin - Experimental - Removed sleep() from doors
 /obj/machinery/door/proc/close(var/forced = 0)
@@ -446,16 +446,20 @@
 
 	close_door_at = 0
 	do_animate("closing")
-	addtimer(CALLBACK(src, PROC_REF(close__internalsetdensity),forced), anim_length_before_density)
+	addtimer(CALLBACK(src, PROC_REF(close_internalsetdensity),forced), anim_length_before_density)
 
-/obj/machinery/door/proc/close__internalsetdensity(var/forced = 0)
+/obj/machinery/door/proc/close_internalsetdensity(var/forced = 0)
+	PRIVATE_PROC(TRUE) //do not touch this or BYOND will devour you
+	SHOULD_NOT_OVERRIDE(TRUE)
 	src.density = TRUE
 	explosion_resistance = initial(explosion_resistance)
 	src.layer = closed_layer
 	update_nearby_tiles()
-	addtimer(CALLBACK(src, PROC_REF(close__internalfinish),forced), anim_length_before_finalize)
+	addtimer(CALLBACK(src, PROC_REF(close_internalfinish),forced), anim_length_before_finalize)
 
-/obj/machinery/door/proc/close__internalfinish(var/forced = 0)
+/obj/machinery/door/proc/close_internalfinish(var/forced = 0)
+	PRIVATE_PROC(TRUE) //do not touch this or BYOND will devour you
+	SHOULD_NOT_OVERRIDE(TRUE)
 	update_icon()
 	if(visible && !glass)
 		set_opacity(1)	//caaaaarn!

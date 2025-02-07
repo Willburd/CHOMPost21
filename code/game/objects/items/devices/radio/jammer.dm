@@ -34,7 +34,8 @@ var/global/list/active_radio_jammers = list()
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
-/obj/item/radio_jammer/New()
+/obj/item/radio_jammer/Initialize()
+	. = ..()
 	power_source = new(src)
 
 /obj/item/radio_jammer/Initialize()
