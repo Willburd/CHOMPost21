@@ -60,33 +60,76 @@
 
 
 /datum/unit_test/chemical_reactions_shall_use_and_produce_valid_reagents
-	name = "RECIPES: Chemical Reactions shall use and produce valid reagents"
+	name = "REAGENTS: Chemical Reactions shall use and produce valid reagents"
 
 /datum/unit_test/chemical_reactions_shall_use_and_produce_valid_reagents/start_test()
 	var/failed = FALSE
-	for(var/decl/chemical_reaction/R in subtypesof(/decl/chemical_reaction))
-		failed = FALSE
+	var/list/collection_name = list()
+	var/list/collection_id = list()
 
-		//if(!ISINTEGER(our_amount))
-		//	log_unit_test("[R]: Recipes - result_quantity must be an integer.")
-		//	failed = TRUE
+	for(var/decl/chemical_reaction/R in subtypesof(/decl/chemical_reaction))
+		var/decl/chemical_reaction/CR = new R()
+
+		if(!CR.name)
+			log_unit_test("[CR]: Reagents - chemical reaction had invalid name.")
+			failed = TRUE
+
+		if(!CR.id)
+			log_unit_test("[CR]: Reagents - chemical reaction had invalid id.")
+			failed = TRUE
+
+		if(CR.name in collection_name)
+			log_unit_test("[CR]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
+			failed = TRUE
+		collection_name[CR.name] = R
+
+		if(CR.id in collection_id)
+			log_unit_test("[CR]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
+			failed = TRUE
+		collection_id[CR.id] = R
+
+		if(CR.required_reagents)
+			for(var/RR in CR.required_reagent)
+				if(!SSchemistry.chemical_reagents[RR])
+					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					failed = TRUE
+
+		if(CR.catalysts)
+			for(var/RR in CR.catalysts)
+				if(!SSchemistry.catalysts[RR])
+					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					failed = TRUE
+
+		if(CR.inhibitors)
+			for(var/RR in CR.inhibitors)
+				if(!SSchemistry.inhibitors[RR])
+					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					failed = TRUE
+
+		if(CR.result)
+			if(!SSchemistry.chemical_reagents[CR.result])
+				log_unit_test("[CR]: Reagents - chemical reaction had invalid result reagent ID \"[CR.result]\".")
+				failed = TRUE
+
+		qdel(R)
 
 	if(failed)
-		fail("One or more /datum/recipe subtypes had invalid results or result_quantity definitions.")
+		fail("One or more /decl/chemical_reaction subtypes had invalid results or components.")
 	else
-		pass("All /datum/recipe subtypes had correct settings.")
+		pass("All /decl/chemical_reaction subtypes had correct settings.")
 	return TRUE
 
 
 
 /datum/unit_test/prefilled_reagent_containers_shall_have_valid_reagents
-	name = "RECIPES: Prefilled reagent containers shall have valid reagents"
+	name = "REAGENTS: Prefilled reagent containers shall have valid reagents"
 
 /datum/unit_test/prefilled_reagent_containers_shall_have_valid_reagents/start_test()
 	var/failed = FALSE
 
+	var/turf/spawn_turf = locate(0,0,1)
 	for(var/RC in subtypesof(/obj/item/reagent_containers/glass))
-		var/obj/item/reagent_containers/glass/R = new RC()
+		var/obj/item/reagent_containers/glass/R = new RC(spawn_turf)
 
 		if(R.prefill && R.prefill.len)
 			for(var/ID in R.prefill)
