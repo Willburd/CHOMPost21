@@ -85,8 +85,8 @@
 /datum/unit_test/prefilled_reagent_containers_shall_have_valid_reagents/start_test()
 	var/failed = FALSE
 
-	for(var/obj/item/reagent_containers/RC in subtypesof(/obj/item/reagent_containers))
-		var/obj/item/reagent_containers/R = new R()
+	for(var/RC in subtypesof(/obj/item/reagent_containers/glass))
+		var/obj/item/reagent_containers/glass/R = new R()
 
 		if(R.prefill && R.prefill.len)
 			for(var/ID in R.prefill)
