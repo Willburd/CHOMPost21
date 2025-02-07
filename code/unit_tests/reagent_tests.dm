@@ -81,7 +81,7 @@
 			failed = TRUE
 
 		if(CR.id in collection_id)
-			log_unit_test("[CR.type]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
+			log_unit_test("[CR.type]: Reagents - chemical reaction id \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
 			failed = TRUE
 		else
 			collection_id[CR.id] = CR.type
