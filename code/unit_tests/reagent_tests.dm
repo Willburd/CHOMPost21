@@ -86,7 +86,7 @@
 	var/failed = FALSE
 
 	for(var/RC in subtypesof(/obj/item/reagent_containers/glass))
-		var/obj/item/reagent_containers/glass/R = new R()
+		var/obj/item/reagent_containers/glass/R = new RC()
 
 		if(R.prefill && R.prefill.len)
 			for(var/ID in R.prefill)
