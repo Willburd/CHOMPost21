@@ -25,9 +25,13 @@
 		/obj/item/gun/projectile/pirate, //CHOMP Add
 		/obj/item/gun/projectile/dartgun,
 		// /obj/item/clothing/gloves/black/bloodletter, Outpost 21 edit - Nif removal
-		/obj/item/gun/energy/mouseray/metamorphosis
+		/obj/item/gun/energy/mouseray/metamorphosis,
+		/obj/item/organ/internal/augment/armmounted/shoulder/blade, // Outpost 21 edit - New loot
+		/obj/item/organ/internal/augment/armmounted/shoulder/surge, // Outpost 21 edit - New loot
+		/obj/item/organ/internal/augment/bioaugment/thermalshades, // Outpost 21 edit - New loot
+		/obj/item/organ/internal/augment/armmounted/hand/sword, // Outpost 21 edit - New loot
+		/obj/item/organ/internal/augment/armmounted/dartbow // Outpost 21 edit - New loot
 		)
-
 	var/global/list/allocated_gamma = list()
 
 /obj/structure/trash_pile/Initialize()
@@ -348,7 +352,11 @@
 					prob(1);/obj/item/clothing/gloves/bluespace,
 					prob(1);/obj/item/gun/energy/mouseray,
 					prob(1);/obj/item/clothing/accessory/collar/shock/bluespace/modified,
-					prob(1);/obj/item/gun/energy/sizegun/backfire)
+					prob(1);/obj/item/gun/energy/sizegun/backfire,
+					prob(1);/obj/item/deadringer, // Outpost 21 edit - New loot
+					prob(1);/obj/item/organ/internal/augment/armmounted/shoulder/multiple, // Outpost 21 edit - New loot
+					prob(1);/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical // Outpost 21 edit - New loot
+					)
 
 	var/obj/item/I = new path()
 	return I
