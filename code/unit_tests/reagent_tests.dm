@@ -37,21 +37,21 @@
 		var/datum/reagent/R = new Rpath()
 
 		if(R.name == DEVELOPER_WARNING_CHEM_ID)
-			log_unit_test("[R]: Reagents - reagent name not set.")
+			log_unit_test("[Rpath]: Reagents - reagent name not set.")
 			failed = TRUE
 
 		if(collection_name[R.name])
-			log_unit_test("[R]: Reagents - reagent name \"[R.name]\" is not unique, used first in [collection_name[R.name]].")
+			log_unit_test("[Rpath]: Reagents - reagent name \"[R.name]\" is not unique, used first in [collection_name[R.name]].")
 			failed = TRUE
 		collection_name[R.name] = R.type
 
 		if(collection_id[R.id])
-			log_unit_test("[R]: Reagents - reagent ID \"[R.id]\" is not unique, used first in [collection_id[R.id]].")
+			log_unit_test("[Rpath]: Reagents - reagent ID \"[R.id]\" is not unique, used first in [collection_id[R.id]].")
 			failed = TRUE
 		collection_id[R.id] = R.type
 
 		if(R.description == DEVELOPER_WARNING_CHEM_DESC)
-			log_unit_test("[R]: Reagents - reagent description unset.")
+			log_unit_test("[Rpath]: Reagents - reagent description unset.")
 			failed = TRUE
 
 		qdel(R)
@@ -67,51 +67,49 @@
 	var/list/collection_name = list()
 	var/list/collection_id = list()
 
-	for(var/decl/chemical_reaction/R in subtypesof(/decl/chemical_reaction))
-		var/decl/chemical_reaction/CR = new R()
+	for(var/R in SSchemistry.chemical_reactions)
+		var/decl/chemical_reaction/CR = SSchemistry.chemical_reactions[R]
 
 		if(!CR.name)
-			log_unit_test("[CR]: Reagents - chemical reaction had invalid name.")
+			log_unit_test("[R]: Reagents - chemical reaction had invalid name.")
 			failed = TRUE
 
 		if(!CR.id)
-			log_unit_test("[CR]: Reagents - chemical reaction had invalid id.")
+			log_unit_test("[R]: Reagents - chemical reaction had invalid id.")
 			failed = TRUE
 
 		if(CR.name in collection_name)
-			log_unit_test("[CR]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
+			log_unit_test("[R]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
 			failed = TRUE
 		collection_name[CR.name] = R
 
 		if(CR.id in collection_id)
-			log_unit_test("[CR]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
+			log_unit_test("[R]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
 			failed = TRUE
 		collection_id[CR.id] = R
 
 		if(CR.required_reagents)
 			for(var/RR in CR.required_reagents)
 				if(!SSchemistry.chemical_reagents[RR])
-					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					log_unit_test("[R]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.catalysts)
 			for(var/RR in CR.catalysts)
 				if(!SSchemistry.chemical_reagents[RR])
-					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					log_unit_test("[R]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.inhibitors)
 			for(var/RR in CR.inhibitors)
 				if(!SSchemistry.chemical_reagents[RR])
-					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					log_unit_test("[R]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.result)
 			if(!SSchemistry.chemical_reagents[CR.result])
-				log_unit_test("[CR]: Reagents - chemical reaction had invalid result reagent ID \"[CR.result]\".")
+				log_unit_test("[R]: Reagents - chemical reaction had invalid result reagent ID \"[CR.result]\".")
 				failed = TRUE
-
-		qdel(R)
 
 	if(failed)
 		fail("One or more /decl/chemical_reaction subtypes had invalid results or components.")
@@ -127,9 +125,9 @@
 /datum/unit_test/prefilled_reagent_containers_shall_have_valid_reagents/start_test()
 	var/failed = FALSE
 
-	var/turf/spawn_turf = locate(0,0,1)
+	var/obj/container = new /obj
 	for(var/RC in subtypesof(/obj/item/reagent_containers/glass))
-		var/obj/item/reagent_containers/glass/R = new RC(spawn_turf)
+		var/obj/item/reagent_containers/glass/R = new RC(container)
 
 		if(R.prefill && R.prefill.len)
 			for(var/ID in R.prefill)
@@ -138,6 +136,7 @@
 					failed = TRUE
 
 		qdel(R)
+	qdel(container)
 
 	if(failed)
 		fail("One or more /obj/item/reagent_containers had an invalid prefill reagent.")
