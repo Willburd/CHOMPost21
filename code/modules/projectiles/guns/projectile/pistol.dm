@@ -41,7 +41,7 @@
 	var/mob/M = usr
 	if(!M.mind)	return 0
 	var/job = M.mind.assigned_role
-	if(job != JOB_DETECTIVE && job != JOB_SECURITY_OFFICER && job != JOB_WARDEN  && job != JOB_HEAD_OF_SECURITY )
+	if(/*job != JOB_DETECTIVE &&*/ job != JOB_SECURITY_OFFICER && job != JOB_WARDEN  && job != JOB_HEAD_OF_SECURITY ) // Outpost 21 edit - Detective is officer now
 		to_chat(M, span_notice("You don't feel cool enough to name this gun, chump."))
 		return 0
 

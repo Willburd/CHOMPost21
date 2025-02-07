@@ -548,7 +548,7 @@
 		JOB_ENTERTAINER = "itg_green",
 		JOB_LIBRARIAN = "itg_green",
 		JOB_WARDEN = "itg_red",
-		JOB_DETECTIVE = "itg_red",
+		//JOB_DETECTIVE = "itg_red", // Outpost 21 edit - Detective is officer now
 		JOB_SECURITY_OFFICER = "itg_red",
 		JOB_TALON_GUARD = "itg_red",
 		JOB_ROBOTICIST = "itg_purple",

@@ -1,7 +1,7 @@
 /datum/gear/uniform/job_sec/flightsuit
 	display_name = "security flight suit"
 	path = /obj/item/clothing/under/sec_flight_suit
-	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
+	allowed_roles = list(JOB_WARDEN, /*JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD) // Outpost 21 edit - Detective is officer now
 
 
 // Trekie things
@@ -9,31 +9,31 @@
 /datum/gear/uniform/job_trek/sec/tos
 	display_name = "TOS uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec
-	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
+	allowed_roles = list(JOB_WARDEN, /* JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD) // Outpost 21 edit - Detective is officer now
 
 //TNG
 /datum/gear/uniform/job_trek/sec/tng
 	display_name = "TNG uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/next
-	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
+	allowed_roles = list(JOB_WARDEN, /* JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD) // Outpost 21 edit - Detective is officer now
 
 //VOY
 /datum/gear/uniform/job_trek/sec/voy
 	display_name = "VOY uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/voy
-	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
+	allowed_roles = list(JOB_WARDEN, /* JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD) // Outpost 21 edit - Detective is officer now
 
 //DS9
 /datum/gear/uniform/job_trek/sec/ds9
 	display_name = "DS9 uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/ds9
-	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
+	allowed_roles = list(JOB_WARDEN, /* JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD) // Outpost 21 edit - Detective is officer now
 
 //ENT
 /datum/gear/uniform/job_trek/sec/ent
 	display_name = "ENT uniform, sec"
 	path = /obj/item/clothing/under/rank/trek/sec/ent
-	allowed_roles = list(JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD)
+	allowed_roles = list(JOB_WARDEN, /* JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_BLUESHIELD_GUARD) // Outpost 21 edit - Detective is officer now
 
 
 //Nullsuits (Zero Suits)
@@ -49,7 +49,7 @@
 /datum/gear/uniform/job_nullsuit/sec
 	display_name = "nullsuit, sec"
 	path = /obj/item/clothing/under/rank/nullsuit/sec
-	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, /*JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/uniform/job_nullsuit/sec/hos
 	display_name = "nullsuit, head of security"

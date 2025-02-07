@@ -128,9 +128,10 @@
 	rank = JOB_SECURITY_OFFICER
 
 /obj/item/card/id/security/detective
-	name = JOB_DETECTIVE + "'s ID"
+	name = JOB_ALT_DETECTIVE + "'s ID" // Outpost 21 edit - Detective is officer now
 	initial_sprite_stack = list("base-stamp", "top-red", "stamp-n", "stripe-brown")
-	rank = JOB_DETECTIVE
+	rank = JOB_SECURITY_OFFICER // Outpost 21 edit - Detective is officer now
+
 
 /obj/item/card/id/security/warden
 	name = JOB_WARDEN + "'s ID"

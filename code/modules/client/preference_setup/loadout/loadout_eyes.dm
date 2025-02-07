@@ -71,7 +71,7 @@
 	display_name = "Security HUD selector"
 	description = "Select from a range of Security HUD eyepieces that can display the ID status and security records of people in line of sight."
 	path = /obj/item/clothing/glasses/hud/security
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN, JOB_DETECTIVE, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/eyes/security/New()
 	..()
@@ -147,7 +147,7 @@
 	display_name = "functional sunglasses selector"
 	description = "Select from a range of polarized sunglasses that can block flashes whilst still looking classy."
 	path = /obj/item/clothing/glasses/sunglasses
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_QUARTERMASTER,JOB_INTERNAL_AFFAIRS_AGENT,JOB_DETECTIVE,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_QUARTERMASTER,JOB_INTERNAL_AFFAIRS_AGENT, /*JOB_DETECTIVE,*/ JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/eyes/sun/New()
 	..()
@@ -197,7 +197,7 @@
 /datum/gear/eyes/arglasses/sec
 	display_name = "AR-Security glasses"
 	path = /obj/item/clothing/glasses/omnihud/sec
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE)
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN /*,JOB_DETECTIVE*/) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/eyes/arglasses/sci
 	display_name = "AR-Research glasses"

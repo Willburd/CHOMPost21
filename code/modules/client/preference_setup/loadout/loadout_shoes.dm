@@ -214,7 +214,7 @@
 /datum/gear/shoes/boots/winter/security
 	display_name = "security winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/security
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/shoes/boots/winter/science
 	display_name = "science winter boots"

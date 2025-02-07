@@ -139,7 +139,7 @@ var/list/civilian_positions = list(
 var/list/security_positions = list(
 	JOB_HEAD_OF_SECURITY,
 	JOB_WARDEN,
-	JOB_DETECTIVE,
+	//JOB_DETECTIVE, // Outpost 21 edit - Detective is officer now
 	JOB_SECURITY_OFFICER
 )
 

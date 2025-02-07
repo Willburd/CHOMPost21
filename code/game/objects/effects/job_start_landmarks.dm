@@ -10,8 +10,10 @@
 	name = JOB_HEAD_OF_SECURITY
 /obj/effect/landmark/start/warden
 	name = JOB_WARDEN
+/* Outpost 21 edit - Detective is officer now
 /obj/effect/landmark/start/detective
 	name = JOB_DETECTIVE
+*/
 /obj/effect/landmark/start/security
 	name = JOB_SECURITY_OFFICER
 /obj/effect/landmark/start/ce

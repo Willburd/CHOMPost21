@@ -384,7 +384,7 @@
 /datum/gear/head/sec_hat_selector
 	display_name = "Security - Basic Headwear"
 	description = "Select from a range of hats available to all Security personnel."
-	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 	path = /obj/item/clothing/head/soft/sec/corp
 
 /datum/gear/head/sec_hat_selector/New()
@@ -477,7 +477,7 @@
 /datum/gear/head/detective_alt
 	display_name = "cyberscope headgear, detective"
 	path = /obj/item/clothing/head/helmet/detective_alt
-	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_DETECTIVE)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY /*, JOB_DETECTIVE*/) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/head/bearpelt
 	display_name = "animal pelt selection"

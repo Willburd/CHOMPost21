@@ -537,7 +537,7 @@
 	icon_state = "lithiumflask"
 
 /obj/item/reagent_containers/food/drinks/flask/detflask
-	name = "\improper " + JOB_DETECTIVE + "'s flask"
+	name = "\improper " + JOB_ALT_DETECTIVE + "'s flask" // Outpost 21 edit - Detective is officer now
 	desc = "A metal flask with a leather band and golden badge belonging to the detective."
 	icon_state = "detflask"
 	volume = 60
