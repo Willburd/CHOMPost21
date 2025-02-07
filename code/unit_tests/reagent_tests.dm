@@ -67,30 +67,28 @@
 	var/list/collection_name = list()
 	var/list/collection_id = list()
 
-	for(var/R in SSchemistry.chemical_reactions)
-		var/decl/chemical_reaction/CR = SSchemistry.chemical_reactions[R]
-
+	for(var/decl/chemical_reaction/CR in SSchemistry.chemical_reactions)
 		if(!CR)
-			log_unit_test("[R]: Reagents - chemical reaction was null.")
+			log_unit_test("[CR.type]: Reagents - chemical reaction was null.")
 			failed = TRUE
 			continue
 
 		if(!CR.name)
-			log_unit_test("[R]: Reagents - chemical reaction had invalid name.")
+			log_unit_test("[CR.type]: Reagents - chemical reaction had invalid name.")
 			failed = TRUE
 
 		if(!CR.id)
-			log_unit_test("[R]: Reagents - chemical reaction had invalid id.")
+			log_unit_test("[CR.type]: Reagents - chemical reaction had invalid id.")
 			failed = TRUE
 
 		if(CR.name in collection_name)
-			log_unit_test("[R]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
+			log_unit_test("[CR.type]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
 			failed = TRUE
 		else
 			collection_name[CR.name] = R
 
 		if(CR.id in collection_id)
-			log_unit_test("[R]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
+			log_unit_test("[CR.type]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
 			failed = TRUE
 		else
 			collection_id[CR.id] = R
@@ -98,24 +96,24 @@
 		if(CR.required_reagents)
 			for(var/RR in CR.required_reagents)
 				if(!SSchemistry.chemical_reagents[RR])
-					log_unit_test("[R]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					log_unit_test("[CR.type]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.catalysts)
 			for(var/RR in CR.catalysts)
 				if(!SSchemistry.chemical_reagents[RR])
-					log_unit_test("[R]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					log_unit_test("[CR.type]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.inhibitors)
 			for(var/RR in CR.inhibitors)
 				if(!SSchemistry.chemical_reagents[RR])
-					log_unit_test("[R]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
+					log_unit_test("[CR.type]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.result)
 			if(!SSchemistry.chemical_reagents[CR.result])
-				log_unit_test("[R]: Reagents - chemical reaction had invalid result reagent ID \"[CR.result]\".")
+				log_unit_test("[CR.type]: Reagents - chemical reaction had invalid result reagent ID \"[CR.result]\".")
 				failed = TRUE
 
 	if(failed)
