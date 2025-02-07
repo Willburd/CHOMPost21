@@ -55,8 +55,6 @@
 	spoiler = TRUE
 /datum/reagent/glamour_scaling
 	spoiler = TRUE
-/datum/reagent/amorphorovir
-	spoiler = TRUE
 
 // Food/drink
 /datum/recipe/chaosdonut

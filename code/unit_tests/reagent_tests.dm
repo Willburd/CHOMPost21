@@ -9,6 +9,8 @@
 	var/list/exclusions = list()
 	exclusions.Add(/datum/reagent)
 	exclusions.Add(/datum/reagent/drink)
+	exclusions.Add(/datum/reagent/medicine)
+	exclusions.Add(/datum/reagent/boron)
 	exclusions.Add(/datum/reagent/ethanol)
 	exclusions.Add(/datum/reagent/ethanol/wine)
 
@@ -55,6 +57,8 @@
 		qdel(R)
 	return failed
 
+
+
 /datum/unit_test/chemical_reactions_shall_use_and_produce_valid_reagents
 	name = "RECIPES: Chemical Reactions shall use and produce valid reagents"
 
@@ -71,4 +75,29 @@
 		fail("One or more /datum/recipe subtypes had invalid results or result_quantity definitions.")
 	else
 		pass("All /datum/recipe subtypes had correct settings.")
+	return TRUE
+
+
+
+/datum/unit_test/prefilled_reagent_containers_shall_have_valid_reagents
+	name = "RECIPES: Prefilled reagent containers shall have valid reagents"
+
+/datum/unit_test/prefilled_reagent_containers_shall_have_valid_reagents/start_test()
+	var/failed = FALSE
+
+	for(var/obj/item/reagent_containers/RC in subtypesof(/obj/item/reagent_containers))
+		var/obj/item/reagent_containers/R = new R()
+
+		if(R.prefill && R.prefill.len)
+			for(var/ID in R.prefill)
+				if(!SSchemistry.chemical_reagents[ID])
+					log_unit_test("[RC]: Reagents - reagent prefill had invalid reagent ID \"[ID]\".")
+					failed = TRUE
+
+		qdel(R)
+
+	if(failed)
+		fail("One or more /obj/item/reagent_containers had an invalid prefill reagent.")
+	else
+		pass("All /obj/item/reagent_containers containers had valid prefill reagents.")
 	return TRUE

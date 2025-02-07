@@ -942,10 +942,6 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
 	industrial_use = EXPORT_REASON_MEDSCI
 
-/datum/reagent/amorphorovir
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
 /datum/reagent/drugs/rainbow_toxin
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_RECDRUG
