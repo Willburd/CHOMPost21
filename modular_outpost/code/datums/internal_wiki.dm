@@ -382,7 +382,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	// This is used to filter out some of the base reagent types, such as "drink", without putting spoiler tags on base types...
 	if(!reagent || reagent == "")
 		return FALSE
-	if(reagent == "reagent")
+	if(reagent == DEVELOPER_WARNING_CHEM_ID)
 		return FALSE
 	if(reagent == "drugs")
 		return FALSE

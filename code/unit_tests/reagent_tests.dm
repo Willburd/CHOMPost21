@@ -4,11 +4,37 @@
 /datum/unit_test/reagent_shall_have_unique_name_and_id/start_test()
 	var/failed = FALSE
 
+
+	// These are base types, there is no way to tell that they are illegal to check/use
+	var/exclusions = list()
+	exclusions.Add(/datum/reagent)
+	exclusions.Add(/datum/reagent/drink)
+	exclusions.Add(/datum/reagent/ethanol)
+	exclusions.Add(/datum/reagent/ethanol/wine)
+
+	failed = check_reagent_datums(exclusions)
+
+	if(failed)
+		fail("One or more /datum/reagent subtypes had invalid definitions.")
+	else
+		pass("All /datum/reagent subtypes had correct settings.")
+	return TRUE
+
+/datum/unit_test/reagent_shall_have_unique_name_and_id/proc/check_reagent_datums(var/list/subtype_removal)
+	var/failed = FALSE
+
 	var/collection_name = list()
 	var/collection_id = list()
-	for(var/Rpath in subtypesof(/datum/reagent))
+
+	// Remove excluded types
+	var/list/type_list = subtypesof(/datum/reagent)
+	for(var/S in subtype_removal)
+		type_list -= S
+
+	for(var/Rpath in type_list)
 		var/datum/reagent/R = new Rpath()
-		if(!R.name)
+
+		if(R.name == DEVELOPER_WARNING_CHEM_ID)
 			log_unit_test("[R]: Reagents - reagent name not set.")
 			failed = TRUE
 
@@ -22,12 +48,27 @@
 			failed = TRUE
 		collection_id[R.id] = R.type
 
-		if(R.description == "A non-descript chemical.")
+		if(R.description == DEVELOPER_WARNING_CHEM_DESC)
 			log_unit_test("[R]: Reagents - reagent description unset.")
 			failed = TRUE
 
+		qdel(R)
+	return failed
+
+/datum/unit_test/chemical_reactions_shall_use_and_produce_valid_reagents
+	name = "RECIPES: Chemical Reactions shall use and produce valid reagents"
+
+/datum/unit_test/chemical_reactions_shall_use_and_produce_valid_reagents/start_test()
+	var/failed = FALSE
+	for(var/decl/chemical_reaction/R in subtypesof(/decl/chemical_reaction))
+		failed = FALSE
+
+		//if(!ISINTEGER(our_amount))
+		//	log_unit_test("[R]: Recipes - result_quantity must be an integer.")
+		//	failed = TRUE
+
 	if(failed)
-		fail("One or more /datum/reagent subtypes had invalid definitions.")
+		fail("One or more /datum/recipe subtypes had invalid results or result_quantity definitions.")
 	else
-		pass("All /datum/reagent subtypes had correct settings.")
+		pass("All /datum/recipe subtypes had correct settings.")
 	return TRUE
