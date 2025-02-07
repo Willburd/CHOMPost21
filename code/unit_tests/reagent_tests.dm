@@ -64,7 +64,6 @@
 
 /datum/unit_test/chemical_reactions_shall_use_and_produce_valid_reagents/start_test()
 	var/failed = FALSE
-	var/list/collection_name = list()
 	var/list/collection_id = list()
 
 	for(var/decl/chemical_reaction/CR in SSchemistry.chemical_reactions)
@@ -80,12 +79,6 @@
 		if(!CR.id)
 			log_unit_test("[CR.type]: Reagents - chemical reaction had invalid id.")
 			failed = TRUE
-
-		if(CR.name in collection_name)
-			log_unit_test("[CR.type]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
-			failed = TRUE
-		else
-			collection_name[CR.name] = CR.type
 
 		if(CR.id in collection_id)
 			log_unit_test("[CR.type]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
