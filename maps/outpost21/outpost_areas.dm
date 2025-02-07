@@ -2295,6 +2295,7 @@
 	flags = AREA_BLOCK_GHOST_SIGHT
 	has_gravity = FALSE
 	base_turf = /turf/space
+	dynamic_lighting = FALSE // Respect space
 
 /area/offworld/confinementbeam/exterior/get_gravity()
 	return FALSE
