@@ -1,7 +1,7 @@
 /datum/gear/eyes/arglasses/sec
 	display_name = "AR-S Security glasses"
 	path = /obj/item/clothing/glasses/omnihud/sec
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT)
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN /*,JOB_DETECTIVE*/ ,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/eyes/arglasses/eng
 	display_name = "AR-E Engineering glasses"

@@ -7,7 +7,7 @@ var/list/dreams = list(
 	"a blue light","an abandoned laboratory","NanoTrasen","mercenaries","blood","healing","power","respect",
 	"riches","space","a crash","happiness","pride","a fall","water","flames","ice","melons","flying","the eggs","money",
 	"the " + JOB_HEAD_OF_PERSONNEL,"the " + JOB_HEAD_OF_SECURITY,"the " + JOB_CHIEF_ENGINEER,"the " + JOB_RESEARCH_DIRECTOR,"the " + JOB_CHIEF_MEDICAL_OFFICER,
-	"the " + JOB_DETECTIVE,"the " + JOB_WARDEN,"an " + JOB_INTERNAL_AFFAIRS_AGENT,"an " + JOB_ENGINEER,"the " + JOB_JANITOR,"the " + JOB_ATMOSPHERIC_TECHNICIAN,
+	"the " + JOB_ALT_DETECTIVE,"the " + JOB_WARDEN,"an " + JOB_INTERNAL_AFFAIRS_AGENT,"an " + JOB_ENGINEER,"the " + JOB_JANITOR,"the " + JOB_ATMOSPHERIC_TECHNICIAN,
 	"the " +JOB_QUARTERMASTER,"a " + JOB_CARGO_TECHNICIAN,"the " + JOB_BOTANIST,"a " + JOB_SHAFT_MINER,"the " + JOB_ALT_PSYCHOLOGIST,"the " + JOB_CHEMIST,"a " + JOB_GENETICIST,
 	"the " + JOB_ALT_VIROLOGIST,"the " + JOB_ROBOTICIST,"the " + JOB_CHEF,"the " + JOB_BARTENDER,"the " + JOB_CHAPLAIN,"the " + JOB_LIBRARIAN,"a mouse","an ERT member",
 	"a beach","the holodeck","a smoky room","a voice","the cold","a mouse","an operating table","the bar","the rain","a Skrell",
@@ -20,7 +20,7 @@ var/list/dreams = list(
 	"slimey surroundings","a sexy squirrel","licking their lips","a gaping maw","an unlikely predator","sinking inside",
 	"vulpine assets","more dakka","churning guts","pools of fluid","an exceptional grip","mawing in faces","gaping throat",
 	"swallowed whole","a fox","a wolf","a cat","a tiger","a dog","a taur","a xenochimera"
-	)
+	) // Outpost 21 edit - Detective is officer now
 
 /mob/living/carbon/proc/dream()
 	dreaming = 1

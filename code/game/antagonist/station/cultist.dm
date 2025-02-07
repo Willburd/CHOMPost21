@@ -13,7 +13,7 @@ var/datum/antagonist/cultist/cult
 	bantype = "cultist"
 	restricted_jobs = list(JOB_CHAPLAIN)
 	avoid_silicons = TRUE
-	protected_jobs = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_INTERNAL_AFFAIRS_AGENT, JOB_HEAD_OF_SECURITY, JOB_SITE_MANAGER)
+	protected_jobs = list(JOB_SECURITY_OFFICER, JOB_WARDEN, /*JOB_DETECTIVE,*/ JOB_INTERNAL_AFFAIRS_AGENT, JOB_HEAD_OF_SECURITY, JOB_SITE_MANAGER) // Outpost 21 edit - Detective is officer now
 	roundstart_restricted = list(JOB_INTERNAL_AFFAIRS_AGENT, JOB_HEAD_OF_SECURITY, JOB_SITE_MANAGER)
 	role_type = BE_CULTIST
 	feedback_tag = "cult_objective"

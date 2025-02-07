@@ -32,7 +32,7 @@
 	pda_type = /obj/item/pda/warden
 
 /decl/hierarchy/outfit/job/security/detective
-	name = OUTFIT_JOB_NAME(JOB_DETECTIVE)
+	name = OUTFIT_JOB_NAME(JOB_ALT_DETECTIVE) // Outpost 21 edit - Detective is officer now
 	head = /obj/item/clothing/head/det
 	uniform = /obj/item/clothing/under/det
 	suit = /obj/item/clothing/suit/storage/det_trench

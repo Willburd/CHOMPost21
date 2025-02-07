@@ -214,7 +214,7 @@
 /datum/gear/uniform/dept/undercoat/security
 	display_name = "security undercoat (Teshari)"
 	path = /obj/item/clothing/under/teshari/undercoat/jobs/sec
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, /*JOB_DETECTIVE,*/ JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/uniform/dept/undercoat/service
 	display_name = "service undercoat (Teshari)"
@@ -371,7 +371,7 @@
 /datum/gear/suit/dept/cloak/security
 	display_name = "security cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/sec
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, /*JOB_DETECTIVE,*/ JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/suit/dept/cloak/security/New()
 	..()

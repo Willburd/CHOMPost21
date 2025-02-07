@@ -395,8 +395,8 @@
 	toysay = "Arf!"
 
 /obj/item/toy/figure/detective
-	name = JOB_DETECTIVE + " action figure"
-	desc = "A \"Space Life\" brand " + JOB_DETECTIVE + " action figure."
+	name = JOB_ALT_DETECTIVE + " action figure" // Outpost 21 edit - Detective is officer now
+	desc = "A \"Space Life\" brand " + JOB_ALT_DETECTIVE + " action figure." // Outpost 21 edit - Detective is officer now
 	icon_state = "detective"
 	toysay = "This airlock has grey jumpsuit and insulated glove fibers on it."
 

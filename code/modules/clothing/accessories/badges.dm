@@ -153,7 +153,7 @@
 
 /obj/item/clothing/accessory/badge/holo/detective
 	name = "detective's holobadge"
-	desc = "An immaculately polished gold security badge on leather. Labeled '" + JOB_DETECTIVE + ".'"
+	desc = "An immaculately polished gold security badge on leather. Labeled '" + JOB_ALT_DETECTIVE + ".'" // Outpost 21 edit - Detective is officer now
 	icon_state = "marshalbadge"
 	slot_flags = SLOT_TIE | SLOT_BELT
 

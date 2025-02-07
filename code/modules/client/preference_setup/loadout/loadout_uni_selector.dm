@@ -195,7 +195,7 @@
 /datum/gear/uniform/security_selector
 	display_name = "Security - Basic Uniforms"
 	description = "Select from a range of outfits available to all Security personnel."
-	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_SECURITY_OFFICER,JOB_TALON_GUARD)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_SECURITY_OFFICER,JOB_TALON_GUARD) // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 	path = /obj/item/clothing/under/rank/security/corp
 	sort_category = "Uniforms"
@@ -262,9 +262,9 @@
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(selector_uniforms))
 
 /datum/gear/uniform/security_detective_selector
-	display_name = "Security - " + JOB_DETECTIVE + "'s Uniforms"
+	display_name = "Security - " + JOB_ALT_DETECTIVE + "'s Uniforms" // Outpost 21 edit - Detective is officer now
 	description = "Select from a range of outfits available to all Detectives."
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 	path = /obj/item/clothing/under/det/corporate
 	sort_category = "Uniforms"

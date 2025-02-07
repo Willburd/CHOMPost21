@@ -104,3 +104,11 @@
 2025-02-06:
   Kashargul:
   - bugfix: buttons not properly aligned in the vorepanel settings
+2025-02-07:
+  Diana:
+  - code_imp: fixes taur sprites from breaking. Made from _vr and _ch files into just
+      normal .dmi files
+  - code_imp: Clears some duplicate code up
+  tacoguy7765093:
+  - bugfix: Oversight research datum added to outsider console to prevent core RND
+      being printed from it.

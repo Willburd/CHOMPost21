@@ -324,11 +324,13 @@
 	#define JOB_ALT_ARMORY_SUPERINTENDENT "Armory Superintendent"
 	#define JOB_ALT_MASTERATARMS "Master-at-Arms"
 
+/* Outpost 21 edit - Detective is officer now
 #define JOB_DETECTIVE "Detective"
 	// Detective alt titles
 	#define JOB_ALT_INVESTIGATOR "Investigator"
 	#define JOB_ALT_SECURITY_INSPECTOR "Security Inspector"
 	#define JOB_ALT_FORENSIC_TECHNICIAN "Forensic Technician"
+*/
 
 #define JOB_SECURITY_OFFICER "Security Officer"
 	// Security Officer alt titles
@@ -337,6 +339,10 @@
 	#define JOB_ALT_SECURITY_DEPUTY "Security Deputy"
 	#define JOB_ALT_JUNIOR_OFFICER "Junior Officer"
 	#define JOB_ALT_SECURITY_CONTRACTOR "Security Contractor"
+	#define JOB_ALT_DETECTIVE "Detective"
+	#define JOB_ALT_INVESTIGATOR "Investigator"
+	#define JOB_ALT_SECURITY_INSPECTOR "Security Inspector"
+	#define JOB_ALT_FORENSIC_TECHNICIAN "Forensic Technician"
 
 // CHOMPAdd
 #define JOB_BRIG_PHYSICIAN "Brig Physician"

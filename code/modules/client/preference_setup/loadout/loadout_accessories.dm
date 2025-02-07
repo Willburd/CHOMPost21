@@ -77,7 +77,7 @@
 	display_name = "holster selection"
 	description = "Select from a number of general-purpose handgun holsters, or a baton lanyard."
 	path = /obj/item/clothing/accessory/holster
-	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_TALON_CAPTAIN,JOB_TALON_GUARD,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_HEAD_OF_SECURITY /*,JOB_DETECTIVE*/ ,JOB_TALON_CAPTAIN,JOB_TALON_GUARD,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/accessory/holster/New()
 	..()
@@ -335,7 +335,7 @@
 /datum/gear/accessory/badge
 	display_name = "sheriff badge (Security)"
 	path = /obj/item/clothing/accessory/badge/holo/sheriff
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_DETECTIVE,JOB_HEAD_OF_SECURITY,JOB_WARDEN)
+	allowed_roles = list(JOB_SECURITY_OFFICER /*,JOB_DETECTIVE*/ ,JOB_HEAD_OF_SECURITY,JOB_WARDEN) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/accessory/corpbadge
 	display_name = "investigator holobadge (IAA)"
@@ -577,4 +577,3 @@ Talon pin
 /datum/gear/accessory/bunny_tail/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
-

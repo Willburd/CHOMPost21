@@ -64,7 +64,7 @@
 
 	var/mob/M = usr
 	if(!M.mind)	return 0
-	if(!M.mind.assigned_role == JOB_DETECTIVE)
+	if(!M.mind.assigned_role == JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 		to_chat(M, span_notice("You don't feel cool enough to name this gun, chump."))
 		return 0
 
@@ -87,12 +87,12 @@
 /obj/item/gun/projectile/revolver/detective45/verb/rename_gun()
 	set name = "Name Gun"
 	set category = "Object"
-	set desc = "Rename your gun. If you're the " + JOB_DETECTIVE  + "."
+	set desc = "Rename your gun. If you're the " + JOB_ALT_DETECTIVE  + "." // Outpost 21 edit - Detective is officer now
 
 	var/mob/M = usr
 	if(!M.mind)	return 0
 	var/job = M.mind.assigned_role
-	if(job != JOB_DETECTIVE)
+	if(job != JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 		to_chat(M, span_notice("You don't feel cool enough to name this gun, chump."))
 		return 0
 

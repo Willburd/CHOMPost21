@@ -89,7 +89,7 @@ var/savefile/Banlistjob
 	if(rank == RANK_SECURITY)
 		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_HEAD_OF_SECURITY)
 		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_WARDEN)
-		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_DETECTIVE)
+		//AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_DETECTIVE) // Outpost 21 edit - Detective is officer now
 		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_SECURITY_OFFICER)
 		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_CYBORG)
 		return 1
@@ -147,7 +147,7 @@ var/savefile/Banlistjob
 		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_AI)
 		return 1
 	if(rank == RANK_DETECTIVE_HOS)
-		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_DETECTIVE)
+		//AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_DETECTIVE) // Outpost 21 edit - Detective is officer now
 		AddBanjob(ckey, computerid, reason, bannedby, temp, minutes, JOB_HEAD_OF_SECURITY)
 		return 1
 	if(rank == RANK_VIROLOGIST_RD_CMO)
