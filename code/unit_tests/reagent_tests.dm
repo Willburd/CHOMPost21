@@ -89,20 +89,20 @@
 		collection_id[CR.id] = R
 
 		if(CR.required_reagents)
-			for(var/RR in CR.required_reagent)
+			for(var/RR in CR.required_reagents)
 				if(!SSchemistry.chemical_reagents[RR])
 					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.catalysts)
 			for(var/RR in CR.catalysts)
-				if(!SSchemistry.catalysts[RR])
+				if(!SSchemistry.chemical_reagents[RR])
 					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
 		if(CR.inhibitors)
 			for(var/RR in CR.inhibitors)
-				if(!SSchemistry.inhibitors[RR])
+				if(!SSchemistry.chemical_reagents[RR])
 					log_unit_test("[CR]: Reagents - chemical reaction had invalid required reagent ID \"[RR]\".")
 					failed = TRUE
 
