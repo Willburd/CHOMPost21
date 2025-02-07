@@ -85,13 +85,13 @@
 			log_unit_test("[CR.type]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
 			failed = TRUE
 		else
-			collection_name[CR.name] = R
+			collection_name[CR.name] = CR.type
 
 		if(CR.id in collection_id)
 			log_unit_test("[CR.type]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
 			failed = TRUE
 		else
-			collection_id[CR.id] = R
+			collection_id[CR.id] = CR.type
 
 		if(CR.required_reagents)
 			for(var/RR in CR.required_reagents)
