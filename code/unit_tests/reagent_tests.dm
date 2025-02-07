@@ -70,6 +70,11 @@
 	for(var/R in SSchemistry.chemical_reactions)
 		var/decl/chemical_reaction/CR = SSchemistry.chemical_reactions[R]
 
+		if(!CR)
+			log_unit_test("[R]: Reagents - chemical reaction was null.")
+			failed = TRUE
+			continue
+
 		if(!CR.name)
 			log_unit_test("[R]: Reagents - chemical reaction had invalid name.")
 			failed = TRUE
@@ -81,12 +86,14 @@
 		if(CR.name in collection_name)
 			log_unit_test("[R]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_name[CR.name]].")
 			failed = TRUE
-		collection_name[CR.name] = R
+		else
+			collection_name[CR.name] = R
 
 		if(CR.id in collection_id)
 			log_unit_test("[R]: Reagents - chemical reaction name \"[CR.name]\" is not unique, used first in [collection_id[CR.id]].")
 			failed = TRUE
-		collection_id[CR.id] = R
+		else
+			collection_id[CR.id] = R
 
 		if(CR.required_reagents)
 			for(var/RR in CR.required_reagents)
