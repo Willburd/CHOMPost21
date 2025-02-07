@@ -956,16 +956,33 @@
 								if(!L || L.is_broken())
 									blood_vomit = 1
 
-					Stun(5)
-					src.visible_message(span_warning("[src] throws up!"),span_warning("You throw up!"))
-					playsound(src, 'sound/effects/splat.ogg', 50, 1)
+					// Outpost 21 edit - Check for vomiting into some objects
+					var/obj/vomit_goal = get_active_hand()
+					if(!istype(vomit_goal,/obj/item/reagent_containers/glass/bucket))
+						vomit_goal = check_vomit_goal()
 
-					var/turf/simulated/T = get_turf(src)	//TODO: Make add_blood_floor remove blood from human mobs
-					if(istype(T))
-						if(blood_vomit)
-							T.add_blood_floor(src)
-						else
-							T.add_vomit_floor(src, 1)
+					if(!vomit_goal)
+						Stun(5)
+						src.visible_message(span_warning("[src] throws up!"),span_warning("You throw up!"))
+						playsound(src, 'sound/effects/splat.ogg', 50, 1)
+						var/turf/simulated/T = get_turf(src)	//TODO: Make add_blood_floor remove blood from human mobs
+						if(istype(T))
+							if(blood_vomit)
+								T.add_blood_floor(src)
+							else
+								T.add_vomit_floor(src, 1)
+					else
+						Stun(2)
+						src.visible_message(span_warning("[src] throws up into \the [vomit_goal]!"),span_warning("You throw up into \the [vomit_goal]!"))
+						playsound(src, 'sound/effects/splat.ogg', 20, 1)
+						if(istype(vomit_goal,/obj/item/reagent_containers/glass/bucket))
+							var/obj/item/organ/internal/stomach/S = organs_by_name[O_STOMACH]
+							var/obj/item/reagent_containers/glass/bucket/puke_bucket = vomit_goal
+							if(S && S.acidtype)
+								puke_bucket.reagents.add_reagent(S.acidtype,rand(3,6))
+							else
+								puke_bucket.reagents.add_reagent(REAGENT_ID_TOXIN,rand(3,6))
+					// Outpost 21 edit end
 
 					if(blood_vomit)
 						if(getBruteLoss() < 50)
@@ -976,6 +993,22 @@
 
 		spawn(350)
 			lastpuke = 0
+
+/mob/living/proc/check_vomit_goal()
+	PRIVATE_PROC(TRUE)
+	var/obj_list = list(/obj/machinery/disposal,/obj/structure/toilet,/obj/structure/sink,/obj/structure/urinal)
+	for(var/type in obj_list)
+		// check standing on
+		var/turf/T = get_turf(src)
+		var/obj/O = locate(type) in T
+		if(O)
+			return O
+		// check ahead of us
+		T = get_turf(get_step(T,dir))
+		O = locate(type) in T
+		if(O && O.Adjacent(src))
+			return O
+	return null
 
 /mob/living/update_canmove()
 	if(!resting && cannot_stand() && can_stand_overridden())
