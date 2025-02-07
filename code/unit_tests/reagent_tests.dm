@@ -6,7 +6,7 @@
 
 
 	// These are base types, there is no way to tell that they are illegal to check/use
-	var/exclusions = list()
+	var/list/exclusions = list()
 	exclusions.Add(/datum/reagent)
 	exclusions.Add(/datum/reagent/drink)
 	exclusions.Add(/datum/reagent/ethanol)
