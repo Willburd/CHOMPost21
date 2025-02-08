@@ -123,6 +123,7 @@
 2025-02-08:
   CHOMPStation2StaffMirrorBot:
   - rscdel: Removed old things that should have been removed a long time ago
+  - code_imp: Non-Contagious GBS now has CAN_NOT_SPREAD
   - rscadd: Adds a new spont vore interaction to buckling to an already occupied seat
   - code_imp: repalces center of mass list with x and y vars
   - code_imp: fixes a general destroy issue and some init hints
