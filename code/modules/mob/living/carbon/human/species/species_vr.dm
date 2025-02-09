@@ -108,7 +108,6 @@
 
 	if(H.dna && reset_dna)
 		H.dna.ready_dna(H)
-
 	handle_base_eyes(H, custom_base)
 
 	return new_copy
