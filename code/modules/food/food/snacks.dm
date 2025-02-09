@@ -2028,6 +2028,7 @@
 
 	var/wrapped = 0
 	var/monkey_type = "Monkey"
+	var/is_soaked = FALSE // Outpost 21 edit - Soaking monkeycube boxes with water, prevent timer spam
 
 /obj/item/reagent_containers/food/snacks/monkeycube/Initialize()
 	. = ..()
@@ -2067,13 +2068,15 @@
 	return
 
 /obj/item/reagent_containers/food/snacks/monkeycube/On_Consume(var/mob/M)
-	/*CHOMPEdit Start - Remove chest bursting, add vore
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.visible_message(span_warning("A screeching creature bursts out of [M]'s chest!"))
 		var/obj/item/organ/external/organ = H.get_organ(BP_TORSO)
 		organ.take_damage(50, 0, 0, "Animal escaping the ribcage")
-	*/
+
+	// Outpost 21 edit begin - Remove chomp vore, keep chest bursting
+	Expand()
+	/*
 	var/mob/living/Prey = Expand()
 
 	if(!isliving(M))
@@ -2083,10 +2086,22 @@
 	if(Pred.can_be_drop_pred && Pred.food_vore && Pred.vore_selected)
 		Prey.forceMove(Pred.vore_selected)
 	//CHOMPEdit End
+	*/ // Outpost 21 edit end
 
 /obj/item/reagent_containers/food/snacks/monkeycube/on_reagent_change()
 	if(reagents.has_reagent(REAGENT_ID_WATER))
 		Expand()
+
+// Outpost 21 edit begin - Soaking monkeycube boxes with water
+/obj/item/reagent_containers/food/snacks/monkeycube/proc/soaked()
+	addtimer(CALLBACK(src, PROC_REF(Expand)), rand(2,5) SECONDS, TIMER_DELETE_ME)
+
+/obj/item/reagent_containers/food/snacks/monkeycube/Moved(atom/old_loc, direction, forced, movetime)
+	. = ..()
+	if(!is_soaked && istype(loc,/turf/simulated/floor/water))
+		soaked()
+		is_soaked = TRUE
+// Outpost 21 edit end
 
 /obj/item/reagent_containers/food/snacks/monkeycube/wrapped
 	desc = "Still wrapped in some paper."

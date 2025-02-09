@@ -254,6 +254,15 @@
 
 		M.clean_blood()
 
+	// Outpost 21 edit begin - splash monkey cubes
+	if(istype(O,/obj/item/storage/box/monkeycubes))
+		var/obj/item/storage/box/monkeycubes/M = O
+		M.soaked()
+	if(istype(O,/obj/item/reagent_containers/food/snacks/monkeycube/wrapped))
+		var/obj/item/reagent_containers/food/snacks/monkeycube/C = O
+		C.soaked()
+	// Outpost 21 edit end
+
 	reagents.splash(O, 10, min_spill = 0, max_spill = 0)
 
 /obj/machinery/shower/process()

@@ -309,6 +309,21 @@
 	can_hold = list(/obj/item/reagent_containers/food/snacks/monkeycube)
 	starts_with = list(/obj/item/reagent_containers/food/snacks/monkeycube/wrapped = 4)
 
+// Outpost 21 edit begin - Soaking monkey cubes
+/obj/item/storage/box/monkeycubes/proc/soaked()
+	for(var/A in contents)
+		var/obj/item/reagent_containers/food/snacks/monkeycube/C = A
+		if(istype(A,/obj/item/reagent_containers/food/snacks/monkeycube/wrapped))
+			C.soaked()
+		else if(istype(A,/obj/item/reagent_containers/food/snacks/monkeycube))
+			C.Expand()
+
+/obj/item/storage/box/monkeycubes/Moved(atom/old_loc, direction, forced, movetime)
+	. = ..()
+	if(istype(loc,/turf/simulated/floor/water))
+		soaked()
+// Outpost 21 edit end
+
 /obj/item/storage/box/monkeycubes/farwacubes
 	name = "farwa cube box"
 	desc = "Drymate brand farwa cubes, shipped from Meralar. Just add water!"
