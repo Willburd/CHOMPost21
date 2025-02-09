@@ -77,6 +77,8 @@
 		to_chat(src, span_warning("You cannot infest someone who is already infested!"))
 		return
 
+	var/entering_timer = 30 // Outpost 21 edit begin - borer fixes
+	var/protected = FALSE  // Outpost 21 edit begin - borer fixes
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 
@@ -89,13 +91,18 @@
 			return
 
 		if(H.check_head_coverage())
-			to_chat(src, span_warning("You cannot get through that host's protective gear."))
-			return
+			to_chat(src, span_warning("You begin to eat through \the [H]'s protection or find another way inside.")) // Outpost 21 edit begin - borer fixes
+			entering_timer = 55 // Outpost 21 edit begin - borer fixes
+			protected = TRUE  // Outpost 21 edit begin - borer fixes
+			// return
 
-	to_chat(M, "Something slimy begins probing at the opening of your ear canal...")
+	if(!protected) // Outpost 21 edit begin - borer fixes
+		to_chat(M, "Something slimy begins probing at the opening of your ear canal...")
+	else
+		to_chat(M, "Something slimy begins trying to find a way past your protective gear...") // Outpost 21 edit begin - borer fixes
 	to_chat(src, span_warning("You slither up [M] and begin probing at their ear canal..."))
 
-	if(!do_after(src,30))
+	if(!do_after(src,entering_timer)) // Outpost 21 edit begin - borer fixes
 		to_chat(src, span_warning("As [M] moves away, you are dislodged and fall to the ground."))
 		return
 
@@ -226,20 +233,24 @@
 		return
 
 	// Outpost 21 edit begin - borer fixes
-	if(chemicals < 50)
+	var/chems_used = 50
+	if(chemicals < chems_used)
 		to_chat(src,  span_warning("You don't have enough chemicals!"))
 		return
 
 	var/injectsize = 10
-	var/chem = tgui_input_list(src	, "Select a chemical to secrete."
-									, "Chemicals", list("Repair Brain Tissue (alkysine)"
-									,"Repair Body (bicaridine)"
-									,"Make Drunk (ethanol)"
-									,"Cure Drunk (ethylredoxrazine)"
-									,"Enhance Speed (hyperzine)"
-									,"Pain Killer (tramadol)"
-									,"Euphoric High (bliss)"
-									,"Stablize Mind (citalopram)"
+	var/chem = tgui_input_list(src	,"Select a chemical to secrete."
+									,"Chemicals", list(
+									"Repair Brain Tissue (alkysine)",
+									"Repair Body (bicaridine)",
+									"Make Drunk (ethanol)",
+									"Cure Drunk (ethylredoxrazine)",
+									"Enhance Speed (hyperzine)",
+									"Pain Killer (tramadol)",
+									"Euphoric High (bliss)",
+									"Stablize Mind (citalopram)",
+									"Cure Infection (spaceacillin)",
+									"Revive Dead Host"
 								))
 	switch(chem) // scan for simplified name
 		if("Repair Brain Tissue (alkysine)")
@@ -260,6 +271,27 @@
 			injectsize = 5
 		if("Stablize Mind (citalopram)")
 			chem = REAGENT_ID_CITALOPRAM
+		if("Cure Infection (spaceacillin)")
+			chem = REAGENT_ID_SPACEACILLIN
+		if("Revive Dead Host")
+			if(chemicals < chems_used || !host || controlling || !src || stat) //Sanity check.
+				return
+			if(host.stat != DEAD)
+				to_chat(src, span_bolddanger("Your host must be dead!"))
+				return
+			to_chat(src, span_bolddanger("You squirt an intense mix of chemicals from your reservoirs into [host]'s bloodstream."))
+			// This is meant to be a bit silly, cause borers don't have much options otherwise
+			host.setHalLoss(0)
+			host.setOxyLoss(0)
+			host.adjustBruteLoss(-20)
+			host.adjustFireLoss(-20)
+			host.adjust_nutrition(-200)
+			host.jumpstart() // defib time
+			host.reagents.add_reagent(REAGENT_BICARIDINE, 5)
+			host.reagents.add_reagent(REAGENT_KELOTANE, 5)
+			host.reagents.add_reagent(REAGENT_ID_TRAMADOL, 5)
+			host.reagents.add_reagent(REAGENT_ID_ALKYSINE, 5)
+			chemicals -= chems_used
 		else
 			if(chem)
 				// why did this happen?
@@ -267,12 +299,12 @@
 				chem = null
 	// Outpost 21 edit end
 
-	if(!chem || chemicals < 50 || !host || controlling || !src || stat) //Sanity check.
+	if(!chem || chemicals < chems_used || !host || controlling || !src || stat) //Sanity check.
 		return
 
 	to_chat(src, span_bolddanger("You squirt a measure of [chem] from your reservoirs into [host]'s bloodstream."))
 	host.reagents.add_reagent(chem, injectsize) // Outpost 21 edit - borer fixes
-	chemicals -= 50
+	chemicals -= chems_used
 
 /mob/living/simple_mob/animal/borer/verb/dominate_victim()
 	set category = "Abilities.Borer"
@@ -410,6 +442,12 @@
 	if(stat != 2)
 		to_chat(src, "Your host is already alive.")
 		return
+
+	// Outpost 21 edit begin - borer fixes
+	if(HUSK in mutations)
+		to_chat(src, "Your host is too destroyed to revive.")
+		return
+	// Outpost 21 edit end
 
 	remove_verb(src, /mob/living/carbon/human/proc/jumpstart)
 	visible_message(span_warning("With a hideous, rattling moan, [src] shudders back to life!"))
