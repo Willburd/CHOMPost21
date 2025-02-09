@@ -1081,7 +1081,7 @@
 		owner.dna.digitigrade = R.dna.digitigrade // ensure cloned DNA is set appropriately from record??? for some reason it doesn't get set right despite the override to datum/dna/Clone()
 	//Update appearance, remake icons
 	owner.UpdateAppearance()
-	//owner.sync_dna_traits(FALSE) //Needs trait genetics first
+	owner.sync_dna_traits(FALSE) //Needs trait genetics first
 	owner.sync_organ_dna()
 	owner.dna.blood_reagents = R.dna.blood_reagents
 	owner.dna.blood_color = R.dna.blood_color
