@@ -75,7 +75,7 @@ GLOBAL_LIST_EMPTY(smeses)
 	return smes_amt / SMESRATE
 
 /obj/machinery/power/smes/Initialize()
-	. = ..()
+	..()
 	GLOB.smeses += src
 	add_nearby_terminals()
 	soundloop = new(list(src), FALSE) // CHOMPEdit: hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
@@ -89,6 +89,10 @@ GLOBAL_LIST_EMPTY(smeses)
 		connect_to_network()
 	if(!should_be_mapped)
 		warning("Non-buildable or Non-magical SMES at [src.x]X [src.y]Y [src.z]Z")
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/power/smes/LateInitialize()
+	handle_mapped_upgrades()
 
 /obj/machinery/power/smes/Destroy()
 	for(var/obj/machinery/power/terminal/T in terminals)

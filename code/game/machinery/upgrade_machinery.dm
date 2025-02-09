@@ -1,12 +1,7 @@
-// Handles automagically upgrades to machines based on components placed on a machine during map init
-/obj/machinery/Initialize(var/mapload)
-	. = ..()
-	// Handles automagically upgrades to machines based on components placed on a machine during map init
-	if(mapload)
-		addtimer(CALLBACK(src, PROC_REF(handle_mapped_upgrades)), 100, TIMER_DELETE_ME)
 // This is meant to be overridden per machine
 /obj/machinery/proc/handle_mapped_upgrades()
 	return
+
 // Each machine is a special snowflake... sadly.
 /obj/machinery/power/smes/buildable/handle_mapped_upgrades()
 	if(QDELETED(src) || !isturf(loc))

@@ -94,11 +94,15 @@
 	var/irradiate = TRUE // RTGs irradiate surroundings, but only when panel is open.
 
 /obj/machinery/power/rtg/Initialize()
-	. = ..()
+	..()
 	if(ispath(circuit))
 		circuit = new circuit(src)
 	default_apply_parts()
 	connect_to_network()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/power/rtg/LateInitialize()
+	handle_mapped_upgrades()
 
 /obj/machinery/power/rtg/process()
 	..()
