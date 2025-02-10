@@ -233,5 +233,6 @@
       are in the replicated dish.
 2025-02-10:
   CHOMPStation2StaffMirrorBot:
+  - bugfix: firedoors checking the processing before being closed
   - rscadd: Footstep Element
   - code_imp: Upated DCS
