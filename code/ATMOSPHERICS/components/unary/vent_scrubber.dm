@@ -170,11 +170,11 @@
 
 		power_draw = pump_gas(src, environment, air_contents, transfer_moles, power_rating)
 
-	if(scrubbing && power_draw < 0 && controller_iteration > 10)	//99% of all scrubbers
+	if(scrubbing && power_draw < 0 && Master.iteration > 10)	//99% of all scrubbers
 		//Fucking hibernate because you ain't doing shit.
 		// Outpost 21 edit begin - Don't sleep
 		hibernate = 1
-		addtimer(VARSET_CALLBACK(src, hibernate, 0), rand(10 SECONDS,20 SECONDS)) //hibernate randomly
+		addtimer(VARSET_CALLBACK(src, hibernate, 0), rand(10 SECONDS,20 SECONDS), TIMER_DELETE_ME) //hibernate randomly
 		// Outpost 21 edit end
 
 
@@ -272,13 +272,11 @@
 		return
 
 	if(signal.data["status"] != null)
-		spawn(2)
-			broadcast_status()
+		addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME) // Outpost 21 edit - Don't sleep
 		return //do not update_icon
 
 //			log_admin("DEBUG \[[world.timeofday]\]: vent_scrubber/receive_signal: unknown command \"[signal.data["command"]]\"\n[signal.debug_print()]")
-	spawn(2)
-		broadcast_status()
+	addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME) // Outpost 21 edit - Don't sleep
 	update_icon()
 	return
 
