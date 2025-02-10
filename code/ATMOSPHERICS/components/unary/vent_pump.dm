@@ -239,7 +239,7 @@
 			//Fucking hibernate because you ain't doing shit.
 			// Outpost 21 edit begin - Don't sleep
 			hibernate = 1
-			addtimer(VARSET_CALLBACK(src, hibernate, 0), rand(10 SECONDS,20 SECONDS)) //hibernate randomly
+			addtimer(VARSET_CALLBACK(src, hibernate, 0), rand(10 SECONDS,20 SECONDS), TIMER_DELETE_ME) //hibernate randomly
 			// Outpost 21 edit end
 
 
@@ -381,11 +381,11 @@
 		return
 
 	if(signal.data["status"] != null)
-		addtimer(VARSET_CALLBACK(src, broadcast_status), 2) // Outpost 21 edit - Don't sleep
+		addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME) // Outpost 21 edit - Don't sleep
 		return //do not update_icon
 
 		//log_admin("DEBUG \[[world.timeofday]\]: vent_pump/receive_signal: unknown command \"[signal.data["command"]]\"\n[signal.debug_print()]")
-	addtimer(VARSET_CALLBACK(src, broadcast_status), 2) // Outpost 21 edit - Don't sleep
+	addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME) // Outpost 21 edit - Don't sleep
 	update_icon()
 	return
 
