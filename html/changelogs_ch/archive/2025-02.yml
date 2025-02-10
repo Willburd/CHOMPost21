@@ -231,3 +231,7 @@
   gameaddict07:
   - bugfix: The food replicator now costs nutriment based on how many units of reagents
       are in the replicated dish.
+2025-02-10:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Footstep Element
+  - code_imp: Upated DCS
