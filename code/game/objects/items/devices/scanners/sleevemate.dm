@@ -24,6 +24,8 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	var/ooc_notes_dislikes = null
 	var/ooc_notes_style = FALSE
 
+	var/emagged = FALSE // Outpost 21 edit - Emagged sleevemate
+
 	// Resleeving database this machine interacts with. Blank for default database
 	// Needs a matching /datum/transcore_db with key defined in code
 	var/db_key
@@ -228,6 +230,16 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 		usr.visible_message("[usr] begins scanning [target]'s mind.",span_notice("You begin scanning [target]'s mind."))
 		if(do_after(usr,8 SECONDS,target))
+			// Outpost 21 edit begin - Emagged sleevemate
+			if(emagged)
+				if(target.mind && target.mind.name in our_db.backed_up)
+					var/datum/transhuman/mind_record/MR = our_db.backed_up[target.mind.name]
+					our_db.removed_mind(MR)
+					to_chat(usr,span_notice("Corrupted mind backup uploaded!"))
+				else
+					to_chat(usr,span_notice("Mind record not found!"))
+				return
+			// Outpost 21 edit end
 			our_db.m_backup(target.mind, null /* Outpost 21 edit - Nif removal: nif */,one_time = TRUE)
 			to_chat(usr,span_notice("Mind backed up!"))
 		else
@@ -347,7 +359,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 
 /obj/item/sleevemate/emag_act(var/remaining_charges, var/mob/user)
 	//CHOMPEdit Start
-	var/list/choices = list("Body Snatcher","Mind Binder")
+	var/list/choices = list("Body Snatcher","Mind Binder","Corruptor") // Outpost 21 edit - Emagged sleevemate
 	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)
 	if(!choice || !(choice in choices)) return
 	//CHOMPEdit End
@@ -356,6 +368,11 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 	spark_system.set_up(5, 0, src.loc)
 	spark_system.start()
 	playsound(src, "sparks", 50, 1)
+	// Outpost 21 edit begin - Emagged sleevemate
+	if(choice == "Corruptor")
+		emagged = TRUE
+		return TRUE
+	// Outpost 21 edit end
 	if(isliving(src.loc))
 		var/mob/living/L = src.loc
 		L.unEquip(src)
