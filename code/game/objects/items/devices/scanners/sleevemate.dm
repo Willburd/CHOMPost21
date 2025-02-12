@@ -232,7 +232,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		if(do_after(usr,8 SECONDS,target))
 			// Outpost 21 edit begin - Emagged sleevemate
 			if(emagged)
-				if(target.mind && target.mind.name in our_db.backed_up)
+				if(target.mind && (target.mind.name in our_db.backed_up))
 					var/datum/transhuman/mind_record/MR = our_db.backed_up[target.mind.name]
 					our_db.removed_mind(MR)
 					to_chat(usr,span_notice("Corrupted mind backup uploaded!"))
