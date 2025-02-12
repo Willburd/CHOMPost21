@@ -78,12 +78,19 @@
 			return
 		user.visible_message("[user] starts to repair \the [src].", "You start to repair \the [src].")
 		playsound(src, WT.usesound, 50, 1)
-		if(do_after(user,25 * W.toolspeed))
+		if(health == max_hp)
+			to_chat(user, span_notice("\The [src] does not need any repairs."))
+		else if(do_after(user,25 * W.toolspeed))
 			if(!src || !user || !WT.remove_fuel(5, user)) return
 			to_chat(user, span_notice("You repair \the [src]."))
 			health = max_hp
 			damage_alert = FALSE
 			critical_alert = FALSE
+			internal_heat = T20C // hacky, but prevents some issues
+			for(var/obj/structure/confinement_beam_generator/control_box/B in orange(2,get_turf(src)))
+				if(istype(B) && B.is_valid_state())
+					B.check_focus_data(internal_heat,damage_temp,0,max_hp,max_hp)
+					B.pulse()
 		return
 	. = ..()
 

@@ -153,7 +153,7 @@ OL|IL|OL
 	VAR_PROTECTED/construction_state = 0
 
 	// For focus and inductors
-	VAR_PROTECTED/beam_wander_threshold = 0.1
+	VAR_PROTECTED/beam_wander_threshold = 0.2
 	VAR_PROTECTED/dev_offset_x = 0
 	VAR_PROTECTED/dev_offset_y = 0
 	VAR_PROTECTED/internal_heat = T0C
@@ -284,7 +284,7 @@ OL|IL|OL
 /obj/structure/confinement_beam_generator/proc/is_valid_state()
 	return get_turf(src) && construction_state == 3
 
-/obj/structure/confinement_beam_generator/proc/pulse(var/datum/weakref/WF,var/dir)
+/obj/structure/confinement_beam_generator/proc/pulse(var/datum/weakref/WF)
 	return
 
 /obj/structure/confinement_beam_generator/proc/fire_narrow_beam(var/datum/confinement_pulse_data/data)

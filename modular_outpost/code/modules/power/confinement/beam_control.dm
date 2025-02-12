@@ -35,6 +35,9 @@
 	qdel(data)
 
 /obj/structure/confinement_beam_generator/control_box/process()
+	pulse(null,dir) // Pulse ourselves, as we start the chain...
+
+/obj/structure/confinement_beam_generator/control_box/pulse(var/datum/weakref/WF)
 	// If in a valid state, attempt to pulse the beam's machinery
 	has_gen = FALSE
 	var/turf/T = get_turf(src)
@@ -53,12 +56,13 @@
 	if(icon_state == "control_box_c") // unpowered, now wants powered
 		update_parts_icons()
 
-	if(found_dir == 0)
+	if(!found_dir)
 		for(var/d in cardinal)
 			var/obj/structure/confinement_beam_generator/gen/G = locate() in get_step(src,d)
 			if(G)
 				found_dir = d
-	else
+
+	if(found_dir)
 		var/obj/structure/confinement_beam_generator/gen/G = locate() in get_step(src,found_dir)
 		if(!G || !G.is_valid_state())
 			found_dir = 0
