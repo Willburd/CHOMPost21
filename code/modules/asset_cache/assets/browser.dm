@@ -3,6 +3,7 @@
 		"search.js" = 'html/search.js',
 		"panels.css" = 'html/panels.css',
 		"loading.gif" = 'html/images/loading.gif',
+		"eslogo.png" = 'html/images/eslogo.png', // Outpost 21 edit - Missing asset
 		"ntlogo.png" = 'html/images/ntlogo.png',
 		"sglogo.png" = 'html/images/sglogo.png',
 		"talisman.png" = 'html/images/talisman.png',
