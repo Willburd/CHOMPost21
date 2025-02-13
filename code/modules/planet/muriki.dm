@@ -1089,6 +1089,8 @@ MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/techfloor/grid)
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/tiled/dark)
 MURIKI_TURF_CREATE(/turf/simulated/floor/maglev) // for outdoor track, use normal ones indoors
 MURIKI_TURF_CREATE_UN(/turf/simulated/floor/indoorrocks)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/grass/forest)
+MURIKI_TURF_CREATE(/turf/simulated/floor/outdoors/grass/heavy)
 // for shuttles
 MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/black)
 MURIKI_TURF_CREATE(/turf/simulated/shuttle/floor/white)
