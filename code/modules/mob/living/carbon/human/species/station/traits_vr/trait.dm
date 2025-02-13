@@ -11,11 +11,16 @@
 	var/list/excludes				// Store a list of paths of traits to exclude, but done automatically if they change the same vars.
 	var/can_take = ORGANICS|SYNTHETICS	// Can freaking synths use those.
 	var/list/banned_species			// A list of species that can't take this trait
-	var/list/allowed_species		// VORESTATION EDIT:chomp port. A list of species that CAN take this trait, use this if only a few species can use it. -shark
-	var/custom_only = FALSE			// Trait only available for custom species	// Outpost 21 edit - Allow traits on most species regardless of custom
+	var/list/allowed_species		// A list of species that CAN take this trait, use this if only a few species can use it. -shark
+	var/custom_only = TRUE			// Trait only available for custom species
 	var/varchange_type = TRAIT_VARCHANGE_ALWAYS_OVERRIDE	//Mostly used for non-custom species.
 	var/has_preferences //if set, should be a list of the preferences for this trait in the format: list("identifier/name of var to edit" = list(typeofpref, "text to display in prefs", TRAIT_NO_VAREDIT_TARGET/TRAIT_VAREDIT_TARGET_SPECIES/etc, (optional: default value)), etc) typeofpref should follow the defines in _traits.dm (eg. TRAIT_PREF_TYPE_BOOLEAN)
-	// Traitgenes edit - Traits can toggle mutations and disabilities
+	var/special_env = FALSE
+
+
+
+
+	// Traitgenes Traits can toggle mutations and disabilities
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// IMPORTANT - in 99% of situations you should NOT need to edit gene code when adding a new traitgene. Genes only handle the on/off state of traits, traits control the changes and behaviors!
@@ -25,7 +30,7 @@
 	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 	var/is_genetrait = FALSE // When their trait's datum is init, it will be added to the library of genes a carbon can be mutated to have or not have
-	var/activity_bounds = DNA_DEFAULT_BOUNDS // Activation requirement for trait to turn on/off. Dna is automatically configured for this when first spawned
+	var/list/activity_bounds = DNA_DEFAULT_BOUNDS // Activation requirement for trait to turn on/off. Dna is automatically configured for this when first spawned
 	var/hidden = FALSE  // If a trait does not show on the list, only useful for genetics only traits that cannot be taken at character creation
 	var/mutation = 0 	// Mutation to give (or 0)
 	var/disability = 0 	// Disability to give (or 0)
@@ -35,16 +40,15 @@
 	var/list/primitive_expression_messages=list() // Monkey's custom emote when they have this gene!
 
 	var/datum/gene/trait/linked_gene = null // Internal use, do not assign.
-	// Traitgenes edit end
+
+
+
 
 //Proc can be overridden lower to include special changes, make sure to call up though for the vars changes
-/datum/trait/proc/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null) //VOREStation edit: trait_prefs is a list in the format: list(identifier = value, etc)
+/datum/trait/proc/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
-			//CHOMPEdit removal
-			//if((category == TRAIT_TYPE_POSITIVE && ((varchange_type == TRAIT_VARCHANGE_LESS_BETTER && var_changes[V] > S.vars[V]) || (varchange_type == TRAIT_VARCHANGE_MORE_BETTER && var_changes[V] < S.vars[V]))) || (category == TRAIT_TYPE_NEGATIVE && ((varchange_type == TRAIT_VARCHANGE_LESS_BETTER && var_changes[V] < S.vars[V]) || (varchange_type == TRAIT_VARCHANGE_MORE_BETTER && var_changes[V] > S.vars[V]))))
-			//	continue
 			S.vars[V] = var_changes[V]
 	if (trait_prefs)
 		for (var/trait in trait_prefs)
@@ -55,7 +59,7 @@
 					S.vars[trait] = trait_prefs[trait]
 				if(TRAIT_VAREDIT_TARGET_MOB)
 					H.vars[trait] = trait_prefs[trait]
-	// Traitgenes edit - Traits can toggle mutations and disabilities
+	// Traitgenes Traits can toggle mutations and disabilities
 	if(mutation)
 		if(!(mutation in H.mutations))
 			H.mutations.Add(mutation)
@@ -63,11 +67,12 @@
 		H.disabilities |= disability // bitflag
 	if(sdisability)
 		H.sdisabilities |= sdisability // bitflag
-	// Traitgenes edit end
 	add_verb(H, /mob/living/carbon/human/proc/trait_tutorial)
+	if(special_env)
+		S.env_traits += src
 	return
 
-// Traitgenes edit begin - Disabling traits, genes can be turned off after all!
+// Traitgenes Disabling traits, genes can be turned off after all!
 /datum/trait/proc/unapply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
@@ -88,6 +93,8 @@
 		H.disabilities &= ~disability // bitflag
 	if(sdisability)
 		H.sdisabilities &= ~sdisability // bitflag
+	if(special_env)
+		S.env_traits -= src
 	return
 
 /datum/trait/proc/send_message(var/mob/living/carbon/human/H, var/enabled)
@@ -122,7 +129,6 @@
 			P.vars[V] = initial(P.vars[V])
 	return
 
-//VOREStation edit: trait preferences
 /datum/trait/proc/get_default_prefs()
 	if (!LAZYLEN(has_preferences))
 		return null
@@ -151,3 +157,6 @@
 	if (length(input) <= 0)
 		return default_value_for_pref(pref)
 	return input
+
+/datum/trait/proc/handle_environment_special(var/mob/living/carbon/human/H)
+	return

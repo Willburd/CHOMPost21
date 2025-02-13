@@ -85,44 +85,6 @@
 	if(!(/mob/living/carbon/human/proc/remotesay in S.inherent_verbs))
 		remove_verb(H, /mob/living/carbon/human/proc/remotesay)
 
-/* Too out of date to port, only handles old UI values, can't do markings or other cosmetics... replace with promie verbs?
-/datum/trait/positive/superpower_morph
-	name = "Morph"
-	desc = "It's morphing time!"
-	cost = 5
-	custom_only = FALSE
-
-	is_genetrait = TRUE
-	hidden = TRUE // Cannot start with superpowers
-
-	mutation = mMorph
-	activity_bounds = DNA_HARDER_BOUNDS
-	activation_message="Your skin feels strange."
-
-/datum/trait/positive/superpower_morph/apply(datum/species/S, mob/living/carbon/human/H)
-	. = ..()
-	add_verb(H, /mob/living/carbon/human/proc/morph)
-
-/datum/trait/positive/superpower_morph/unapply(datum/species/S, mob/living/carbon/human/H)
-	. = ..()
-	if(!(/mob/living/carbon/human/proc/morph in S.inherent_verbs))
-		remove_verb(H, /mob/living/carbon/human/proc/morph)
-*/
-
-/* Replaced by /datum/trait/neutral/coldadapt
-/datum/trait/positive/superpower_cold_resist
-	name = "Cold Resistance"
-	desc = "Gain resistance to the cold."
-	cost = 5
-	custom_only = FALSE
-
-	is_genetrait = TRUE
-	hidden = TRUE // Cannot start with superpowers
-
-	mutation = COLD_RESISTANCE
-	activation_message="Your body is filled with warmth."
-*/
-
 /datum/trait/positive/superpower_noprints
 	name = "No Prints"
 	desc = "Your hands leave no fingerprints behind."
@@ -136,35 +98,8 @@
 	activation_message="Your fingers feel numb."
 	primitive_expression_messages=list("flexes its digits.")
 
-/* Replaced by /datum/trait/positive/nonconductive_plus (technically nerfed!)
-/datum/trait/positive/superpower_noshock
-	name = "Shock Immunity"
-	desc = "You become immune to shocks."
-	cost = 5
-	custom_only = FALSE
 
-	is_genetrait = TRUE
-	hidden = TRUE // Cannot start with superpowers
-
-	mutation = mShock
-	activation_message="Your skin feels strange."
-*/
-
-/* Replaced by /datum/trait/positive/table_passer
-/datum/trait/positive/superpower_midget
-	name = "Midget"
-	desc = "You become immune to shocks."
-	cost = 5
-	custom_only = FALSE
-
-	is_genetrait = TRUE
-	hidden = TRUE // Cannot start with superpowers
-
-	mutation = mSmallsize
-	activation_message="Your skin feels rubbery."
-*/
-
-/datum/trait/positive/superpower_xray
+/datum/trait/positive/superpower_xray //This is effectively thermals.
 	name = "X-Ray Vision"
 	desc = "You can see through walls."
 	cost = 5
@@ -180,7 +115,7 @@
 
 /datum/trait/positive/superpower_tk
 	name = "Telekenesis"
-	desc = "You can see through walls."
+	desc = "You can move objects with your mind."
 	cost = 5
 	custom_only = FALSE
 
@@ -224,32 +159,10 @@
 		if(H.dna)
 			H.dna.SetSEState(linked_gene.block, FALSE, FALSE) // Turn this thing off or so help me--
 			domutcheck(H,null,MUTCHK_FORCED)
+			H.UpdateAppearance()
 		H.mutations.Remove(HULK)
 		H.Weaken(3)
 		H.emote("collapse")
-
-/datum/trait/positive/superpower_superfart
-	name = "Super Fart"
-	desc = "Sin beyond mortal comprehension, this could only be the geneticist's fault."
-	cost = 6
-	custom_only = FALSE
-
-	is_genetrait = TRUE
-	activity_bounds = DNA_HARD_BOUNDS
-	hidden = TRUE // Cannot start with superpowers
-
-	activation_message="You feel incredible pressure inside of you."
-	deactivation_message="The pressure inside of you vanishes."
-	primitive_expression_messages=list("toots.")
-
-/datum/trait/positive/superpower_superfart/apply(datum/species/S, mob/living/carbon/human/H)
-	. = ..()
-	add_verb(H, /mob/living/proc/super_fart)
-
-/datum/trait/positive/superpower_superfart/unapply(datum/species/S, mob/living/carbon/human/H)
-	. = ..()
-	if(!(/mob/living/proc/super_fart in S.inherent_verbs))
-		remove_verb(H, /mob/living/proc/super_fart)
 
 /datum/trait/positive/superpower_flashproof
 	name = "Flash Resistance"
@@ -263,3 +176,30 @@
 
 	mutation = FLASHPROOF
 	activation_message="Your eyes feel more robust, how nifty..."
+
+/datum/trait/positive/superpower_morph
+	name = "Morph"
+	desc = "Allows complex bodily transformations."
+	cost = 5
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	activity_bounds = DNA_HARDER_BOUNDS
+	hidden = TRUE // Cannot start with superpowers
+
+	activation_message="You feel more fluid."
+	primitive_expression_messages=list("twitches and distorts.")
+
+/datum/trait/positive/superpower_morph/apply(datum/species/S, mob/living/carbon/human/H)
+	. = ..()
+	add_verb(H, /mob/living/carbon/human/proc/shapeshfit_form)
+
+/datum/trait/positive/superpower_morph/unapply(datum/species/S, mob/living/carbon/human/H)
+	. = ..()
+	remove_verb(H, /mob/living/carbon/human/proc/shapeshfit_form)
+
+/mob/living/carbon/human/proc/shapeshfit_form()
+	set name = "Transform Shape"
+	set category = "Abilities.Superpower"
+	var/datum/tgui_module/appearance_changer/superpower/V = new(src, src)
+	V.tgui_interact(src)

@@ -396,7 +396,6 @@
 				"scarred stump" = 0
 				)
 
-		// Outpost 21 edit begin - Acidic limb melting
 		if(DROPLIMB_ACID)
 			damage_type = BURN
 			stages = list(
@@ -405,7 +404,6 @@
 				"deformed stump" = damage_amt*0.5,
 				"scarred stump" = 0
 				)
-		// Outpost 21 edit end
 
 	..(damage_amt)
 

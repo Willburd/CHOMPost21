@@ -1,15 +1,4 @@
-/**
-* Gene Datum
-*
-* domutcheck was getting pretty hairy.  This is the solution.
-*
-* All genes are stored in a global variable to cut down on memory
-* usage.
-*
-* @author N3X15 <nexisentertainment@gmail.com>
-*/
-
-/datum/gene // Traitgenes edit - Removed /dna/ from path... WHY WAS THIS A SUBTYPE OF DNA!? It's taking a huge struct and making 50 of them at startup, growing with every new var and list stuffed in /datum/dna - Willbird
+/datum/gene // Traitgenes Removed /dna/ from path... WHY WAS THIS A SUBTYPE OF DNA!? It's taking a huge struct and making 50 of them at startup, growing with every new var and list stuffed in /datum/dna - Willbird
 	// Display name
 	var/name="BASE GENE"
 
@@ -45,86 +34,6 @@
 */
 /datum/gene/proc/deactivate(var/mob/M, var/connected, var/mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return
-
-// This section inspired by goone's bioEffects.
-
-/* Traitgenes edit - Disabled due to no maintenance or calls
-/**
-* Called in each life() tick.
-*/
-/datum/gene/proc/OnMobLife(var/mob/M) // Traitgenes edit - Removed /dna/ from path
-	return
-
-/**
-* Called when the mob dies
-*/
-/datum/gene/proc/OnMobDeath(var/mob/M) // Traitgenes edit - Removed /dna/ from path
-	return
-
-/**
-* Called when the mob says shit
-*/
-/datum/gene/proc/OnSay(var/mob/M, var/message) // Traitgenes edit - Removed /dna/ from path
-	return message
-
-/**
-* Called after the mob runs update_icons.
-*
-* @params M The subject.
-* @params g Gender (m or f)
-* @params fat Fat? (0 or 1)
-*/
-/datum/gene/proc/OnDrawUnderlays(var/mob/M, var/g, var/fat) // Traitgenes edit - Removed /dna/ from path
-	return 0
-*/
-
-/* Traitgenes edit - Not needed anymore, only traitgenes.
-/////////////////////
-// BASIC GENES
-//
-// These just chuck in a mutation and display a message.
-//
-// Gene is activated:
-//  1. If mutation already exists in mob
-//  2. If the probability roll succeeds
-//  3. Activation is forced (done in domutcheck)
-/////////////////////
-
-
-/datum/gene/basic // Traitgenes edit - Removed /dna/ from path
-	name="BASIC GENE"
-
-	// Mutation to give
-	var/mutation=0
-
-	// Activation probability
-	var/activation_prob=45
-
-	// Possible activation messages
-	var/list/activation_messages=list()
-
-	// Possible deactivation messages
-	var/list/deactivation_messages=list()
-
-/datum/gene/basic/can_activate(var/mob/M,var/flags) // Traitgenes edit - Removed /dna/ from path
-	if(flags & MUTCHK_FORCED)
-		return 1
-	// Probability check
-	return probinj(activation_prob,(flags&MUTCHK_FORCED))
-
-/datum/gene/basic/activate(var/mob/M) // Traitgenes edit - Removed /dna/ from path
-	M.mutations.Add(mutation)
-	if(activation_messages.len)
-		var/msg = pick(activation_messages)
-		to_chat(M, span_notice("[msg]"))
-
-/datum/gene/basic/deactivate(var/mob/M) // Traitgenes edit - Removed /dna/ from path
-	M.mutations.Remove(mutation)
-	if(deactivation_messages.len)
-		var/msg = pick(deactivation_messages)
-		to_chat(M, span_warning("[msg]"))
-*/
-
 
 // Traitgenes edit - Genes are linked to traits now. Because no one bothered to maintain genes, and instead jumped through two different trait systems to avoid them. So here we are. - Willbird
 /////////////////////

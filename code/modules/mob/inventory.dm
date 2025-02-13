@@ -147,13 +147,11 @@ var/list/slot_equipment_priority = list( \
 // If canremove or other conditions need to be checked then use unEquip instead.
 
 /mob/proc/drop_from_inventory(var/obj/item/W, var/atom/target)
-	// outpost 21 edit begin - dropping anything while traveling in disposals, keeps it in the same disposal packet
 	if(!W)
 		return FALSE
-	if(isnull(target) && istype( src.loc,/obj/structure/disposalholder)) // outpost 21 edit - dropping anything while traveling in disposals, keeps it in the same disposal packet
+	if(isnull(target) && istype( src.loc,/obj/structure/disposalholder))
 		return remove_from_mob(W, src.loc)
 	return remove_from_mob(W, target)
-	// outpost 21 edit end
 
 //Drops the item in our left hand
 /mob/proc/drop_l_hand(var/atom/Target)

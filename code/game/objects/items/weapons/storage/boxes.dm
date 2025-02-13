@@ -150,18 +150,12 @@
 	name = "box of DNA injectors"
 	desc = "This box contains injectors it seems."
 	icon_state = "dna"
-	// Traitgenes edit begin - New injector loot
+	// Traitgenes New injector loot
 	starts_with = list(
 		/obj/item/dnainjector/random_good_labeled = 2,
 		/obj/item/dnainjector/random_neutral_labeled = 2,
 		/obj/item/dnainjector/random_labeled = 2
 	)
-	/*
-	starts_with = list(
-		/obj/item/dnainjector/h2m = 3,
-		/obj/item/dnainjector/m2h = 3
-	)
-	*/ // Traitgenes edit end
 
 /obj/item/storage/box/flashbangs
 	name = "box of flashbangs (WARNING)"
@@ -233,8 +227,8 @@
 
 /obj/item/storage/box/flare
 	name = "box of flares"
-	desc = "A box containing 14 flares." // CHOMPedit: More flares.
-	starts_with = list(/obj/item/flashlight/flare = 14) // CHOMPedit: More flares.
+	desc = "A box containing 14 flares."
+	starts_with = list(/obj/item/flashlight/flare = 14)
 
 /obj/item/storage/box/trackimp
 	name = "boxed tracking implant kit"

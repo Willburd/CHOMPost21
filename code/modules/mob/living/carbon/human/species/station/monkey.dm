@@ -60,7 +60,7 @@
 /datum/species/monkey/handle_npc(var/mob/living/carbon/human/H)
 	if(H.stat != CONSCIOUS)
 		return
-	// Traitgenes edit begin - Monkeys perform emotes based on their traits
+	// Traitgenes Monkeys perform emotes based on their traits
 	if(H.canmove && isturf(H.loc) && !H.pulledby) //won't move if being pulled
 		if(prob(33))
 			step(H, pick(cardinal))
@@ -87,23 +87,24 @@
 					targs.Add(X)
 				if(targs.len)
 					H.LaserEyes(pick(targs))
+	// Outpost 21 edit begin - Superfart
 		if(prob(3) && H.dna)
 			var/datum/gene/trait/G = GLOB.trait_to_dna_genes[/datum/trait/positive/superpower_superfart]
 			if(G && H.dna.GetSEState(G.block))
 				H.super_fart()
-	// Traitgenes edit end
+	// Outpost 21 edit end
 
 	..()
 
 /datum/species/monkey/get_random_name()
 	return "[lowertext(name)] ([rand(100,999)])"
 
-/datum/species/monkey/handle_post_spawn(var/mob/living/carbon/human/H)//CHOMPadd begin
+/datum/species/monkey/handle_post_spawn(var/mob/living/carbon/human/H)
 	if(!H.ckey)
 		H.can_be_drop_prey = TRUE
 		H.digest_leave_remains = 1
 		H.low_priority = TRUE
-	return ..()//CHOMPadd end
+	return ..()
 
 /datum/species/monkey/tajaran
 	name = SPECIES_MONKEY_TAJ
