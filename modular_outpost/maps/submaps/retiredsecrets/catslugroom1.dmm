@@ -1,0 +1,11 @@
+"a" = (/turf/simulated/wall,/area/space)
+"p" = (/obj/machinery/door/airlock/maintenance/int,/turf/simulated/floor/plating/muriki,/area/space)
+"v" = (/obj/random/plushielarge,/turf/simulated/floor/plating/muriki,/area/space)
+"O" = (/turf/simulated/floor/plating/muriki,/area/space)
+"Y" = (/mob/living/simple_mob/vore/alienanimals/catslug,/turf/simulated/floor/plating/muriki,/area/space)
+
+(1,1,1) = {"
+aaaaa
+avOYa
+aaapa
+"}

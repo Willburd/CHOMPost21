@@ -1,0 +1,25 @@
+"a" = (/turf/simulated/wall,/area/space)
+"c" = (/turf/simulated/mineral/alt/muriki,/area/space)
+"d" = (/obj/structure/target_stake,/obj/item/target/alien,/turf/simulated/floor/plating/muriki,/area/space)
+"i" = (/obj/structure/loot_pile/mecha/marauder,/turf/simulated/floor/tiled/muriki/muriki,/area/space)
+"k" = (/mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,/turf/simulated/floor/plating/muriki,/area/space)
+"o" = (/obj/effect/auto_crayon{icon_state = "uboa"},/turf/simulated/wall,/area/space)
+"p" = (/obj/effect/landmark/dangerous_situation,/turf/simulated/floor/plating/muriki,/area/space)
+"s" = (/obj/structure/table/steel_reinforced,/turf/simulated/floor/plating/muriki,/area/space)
+"u" = (/obj/structure/table/steel_reinforced,/turf/simulated/floor/tiled/muriki/muriki,/area/space)
+"w" = (/turf/simulated/floor/plating/muriki,/area/space)
+"z" = (/obj/structure/table/steel_reinforced,/obj/item/gun/launcher/crossbow/bow/hardlight,/turf/simulated/floor/tiled/muriki/muriki,/area/space)
+"E" = (/turf/simulated/mineral/alt/ignore_cavegen,/area/space)
+"G" = (/obj/structure/target_stake,/obj/item/target,/turf/simulated/floor/plating/muriki,/area/space)
+"M" = (/obj/structure/target_stake,/obj/item/target/syndicate,/turf/simulated/floor/tiled/muriki/muriki,/area/space)
+"N" = (/turf/simulated/floor/tiled/muriki/muriki,/area/space)
+
+(1,1,1) = {"
+EEEaaaaaaaEE
+EENNuNwkwGEE
+EENpuwNNwdwE
+aiwkzwwwwdwE
+EwwwswwwNMwE
+akwNswwwNMca
+EoNEaaaaaaaa
+"}

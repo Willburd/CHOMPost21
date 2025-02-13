@@ -1,0 +1,36 @@
+"a" = (/turf/simulated/wall,/area/space)
+"c" = (/obj/structure/cult/talisman,/obj/item/flame/candle/everburn,/turf/simulated/floor/cult,/area/space)
+"d" = (/obj/item/clothing/under/punpun,/turf/simulated/floor/cult,/area/space)
+"g" = (/obj/machinery/door/airlock/hatch,/turf/simulated/floor/wood,/area/space)
+"i" = (/obj/item/clothing/under/punpun,/obj/item/clothing/under/punpun,/obj/item/clothing/under/punpun,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/cult,/area/space)
+"j" = (/obj/effect/auto_crayon{icon_state = "rune1"},/turf/simulated/floor/plating/muriki,/area/space)
+"l" = (/turf/simulated/floor/wood,/area/space)
+"n" = (/obj/effect/decal/cleanable/blood,/obj/structure/cult/talisman,/obj/item/material/knife/ritual{name = "The Punpun-isher"},/turf/simulated/floor/cult,/area/space)
+"p" = (/turf/simulated/floor/cult,/area/space)
+"r" = (/obj/effect/decal/cleanable/blood,/obj/structure/kitchenspike,/turf/simulated/floor/cult,/area/space)
+"v" = (/obj/item/clothing/under/punpun,/obj/item/clothing/under/punpun,/obj/effect/decal/cleanable/blood/gibs,/turf/simulated/floor/cult,/area/space)
+"x" = (/obj/structure/kitchenspike,/turf/simulated/floor/cult,/area/space)
+"C" = (/obj/effect/decal/cleanable/blood,/turf/simulated/floor/cult,/area/space)
+"G" = (/obj/effect/decal/cleanable/blood/gibs,/turf/simulated/floor/cult,/area/space)
+"H" = (/obj/effect/decal/cleanable/blood,/obj/structure/table/woodentable,/obj/item/flame/candle/candelabra/everburn,/turf/simulated/floor/cult,/area/space)
+"J" = (/obj/structure/simple_door/cult,/turf/simulated/floor/wood,/area/space)
+"K" = (/obj/effect/decal/cleanable/blood/gibs,/obj/structure/kitchenspike,/turf/simulated/floor/cult,/area/space)
+"M" = (/obj/item/clothing/under/punpun,/obj/effect/decal/cleanable/blood/gibs,/obj/effect/decal/cleanable/blood/gibs,/turf/simulated/floor/cult,/area/space)
+"Q" = (/obj/item/clothing/under/punpun,/obj/effect/decal/cleanable/blood/gibs,/turf/simulated/floor/cult,/area/space)
+"S" = (/obj/item/clothing/under/punpun,/obj/effect/decal/cleanable/blood,/turf/simulated/floor/cult,/area/space)
+"T" = (/turf/simulated/mineral/alt/muriki,/area/space)
+"X" = (/obj/structure/table/woodentable,/obj/item/flame/candle/candelabra/everburn,/turf/simulated/floor/cult,/area/space)
+
+(1,1,1) = {"
+TTTajTTTT
+TTTagaTTT
+TTTalaTTT
+TTTalaTTT
+aaaaJaaaa
+aHdCGpGXa
+arvGpMdxa
+aKpppiQxa
+axSpGCCxa
+aXCcncpXa
+aaaaaaaaa
+"}
