@@ -320,8 +320,10 @@ But for now, for what it's been used for, it works.
 		H.forceMove(Mtarget.loc)
 	var/obj/locker = new /obj/structure/closet/secure_closet/mind(target.loc, mind_target = H.mind)
 	for(var/obj/item/W in H)
+		/* Outpost 21 edit - Nif removal
 		if(istype(W, /obj/item/implant/backup || istype(W, /obj/item/nif)))
 			continue
+		*/
 		if(H.drop_from_inventory(W))
 			W.forceMove(locker)
 

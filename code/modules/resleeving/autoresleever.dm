@@ -180,6 +180,7 @@
 		new_character.dna.ResetUIFrom(new_character)
 		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 		new_character.sync_organ_dna()
+	new_character.sync_addictions() // Outpost 21 addition - Handle all of these in one place, as we do a lot more!
 	new_character.initialize_vessel()
 	if(ghost.mind)
 		ghost.mind.transfer_to(new_character)
@@ -258,7 +259,7 @@
 	// Outpost 21 edit end
 
 	if(!new_character.dna)
-		CRASH("[new_character] just came out of an autosleever and has no DNA! Species: [new_character.species] as mob: [new_character.type]. NIF Status: [new_character.nif]")
+		CRASH("[new_character] just came out of an autosleever and has no DNA! Species: [new_character.species] as mob: [new_character.type].") // Outpost 21 edit - Nif removal, was:  NIF Status: [new_character.nif]")
 
 	if(spawn_slots == -1)
 		return

@@ -89,7 +89,7 @@
 					H.LaserEyes(pick(targs))
 	// Outpost 21 edit begin - Superfart
 		if(prob(3) && H.dna)
-			var/datum/gene/trait/G = GLOB.trait_to_dna_genes[/datum/trait/positive/superpower_superfart]
+			var/datum/gene/trait/G = get_gene_from_trait(/datum/trait/positive/superpower_superfart)
 			if(G && H.dna.GetSEState(G.block))
 				H.super_fart()
 	// Outpost 21 edit end
