@@ -1,6 +1,3 @@
-/mob/living/carbon/human
-	var/gutdeathpressure = 0 // for superfart and gibbing
-
 /mob/living/carbon/human/proc/equip_disability_items()
 	//Gives glasses to the vision impaired
 	if(disabilities & NEARSIGHTED)

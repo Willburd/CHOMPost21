@@ -46,7 +46,7 @@ export const BodyRecordModal = (props: { data: ActiveBodyRecordData }) => {
           >
             {synthetic ? 'Build' : 'Grow'}
           </Button>
-          {/* Traitgenes edit begin - create a dna injector based off the BR currently selected, to allow normal doctors to reset someone's SEs */}
+          {/* Traitgenes create a dna injector based off the BR currently selected, to allow normal doctors to reset someone's SEs */}
           {!synthetic ? (
             <Button
               icon="syringe"
@@ -61,7 +61,6 @@ export const BodyRecordModal = (props: { data: ActiveBodyRecordData }) => {
           ) : (
             ''
           )}
-          {/* Traitgenes edit end */}
         </LabeledList.Item>
         <LabeledList.Item label="OOC Notes" verticalAlign="top">
           <Box height={10} mt={1} ml={1} mr={1}>

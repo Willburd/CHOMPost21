@@ -467,7 +467,7 @@
 		src.forceMove(card)
 		card.forceMove(B)
 
-	if(istype( src.loc,/obj/structure/disposalholder)) // outpost 21 edit - dropping anything while traveling in disposals, keeps it in the same disposal packet
+	if(istype( src.loc,/obj/structure/disposalholder))
 		var/obj/structure/disposalholder/hold = loc
 		src.loc = card
 		card.loc = hold

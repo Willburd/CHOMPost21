@@ -68,7 +68,7 @@ Please do not abuse this ability.
 		return
 
 	// Are we cool with this prey spawning in at all?
-	var/answer = tgui_alert(src, "[potential_prey.prefs.real_name] wants to spawn in one of your bellies. Do you accept?", "Inbelly Spawning", list("Yes", "No")) //CHOMPEdit - hides ckey
+	var/answer = tgui_alert(src, "[potential_prey.prefs.real_name] wants to spawn in one of your bellies. Do you accept?", "Inbelly Spawning", list("Yes", "No"))
 	if(answer != "Yes")
 		to_chat(potential_prey, span_notice("Your request was turned down."))
 		return
@@ -144,8 +144,10 @@ Please do not abuse this ability.
 	prey.prefs.copy_to(new_character)
 	if(new_character.dna)
 		new_character.dna.ResetUIFrom(new_character)
-		new_character.sync_dna_traits(TRUE) // Traitgenes edit - Sync traits to genetics if needed
+		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 		new_character.sync_organ_dna()
+	new_character.sync_addictions() // Outpost 21 addition - Handle all of these in one place, as we do a lot more!
+	new_character.initialize_vessel()
 	new_character.key = player_key
 	if(new_character.mind)
 		var/datum/antagonist/antag_data = get_antag_data(new_character.mind.special_role)

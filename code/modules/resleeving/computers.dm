@@ -8,6 +8,7 @@
 	icon_keyboard = "med_key"
 	icon_screen = "dna"
 	light_color = "#315ab4"
+	bubble_icon = "medical"
 	circuit = /obj/item/circuitboard/resleeving_control
 	req_access = list(access_heads) //Only used for record deletion right now.
 	var/list/pods = null //Linked grower pods.
@@ -461,17 +462,19 @@
 				I.desc = "Resequences structural enzymes to match the body record this was created from."
 				I.buf = active_br.mydna.copy()
 				I.buf.types = DNA2_BUF_SE
-				spawn(20 SECONDS)
-					I.forceMove(loc)
-					gene_sequencing = FALSE
-					set_temp("Injector dispensed...")
-					visible_message(span_notice("\The [src] ejects \the [I]."))
-					playsound(src, 'sound/machines/ding.ogg', 50, 1)
+				atom_say("Beginning injector synthesis.")
+				addtimer(CALLBACK(src, PROC_REF(dispense_injector), I), 10 SECONDS, TIMER_DELETE_ME)
 			. = TRUE
-		// Traitgenes edit end
 		if("cleartemp")
 			temp = null
 			. = TRUE
+
+/obj/machinery/computer/transhuman/resleeving/proc/dispense_injector(var/obj/item/dnainjector/I)
+	I.forceMove(loc)
+	gene_sequencing = FALSE
+	set_temp("Injector dispensed...")
+	visible_message(span_notice("\The [src] ejects \the [I]."))
+	playsound(src, 'sound/machines/ding.ogg', 50, 1)
 
 // In here because only relevant to computer
 /obj/item/cmo_disk_holder

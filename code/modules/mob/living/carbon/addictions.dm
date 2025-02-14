@@ -8,25 +8,19 @@
 	var/list/addictions = list() // contains currently addicted chems
 	var/list/addiction_counters = list() // contains ID sorted counters
 
-/mob/living/carbon/proc/sync_disabilites_and_addictions(var/datum/preferences/prefs)
-	// addictions
-	if(prefs.addictions & ADDICT_NICOTINE)
-		addict_to_reagent(REAGENT_ID_NICOTINE)
-	if(prefs.addictions & ADDICT_PAINKILLER)
-		addict_to_reagent(REAGENT_ID_TRAMADOL)
-	if(prefs.addictions & ADDICT_BLISS)
-		addict_to_reagent(REAGENT_ID_BLISS)
-	if(prefs.addictions & ADDICT_OXY)
-		addict_to_reagent(REAGENT_ID_OXYCODONE)
-	if(prefs.addictions & ADDICT_HYPER)
-		addict_to_reagent(REAGENT_ID_HYPERZINE)
-	if(prefs.addictions & ADDICT_ALCOHOL)
-		addict_to_reagent(REAGENT_ID_ETHANOL)
-	if(prefs.addictions & ADDICT_SUSTENANCE)
-		addict_to_reagent(REAGENT_ID_ASUSTENANCE)
-	if(prefs.addictions & ADDICT_COFFEE)
-		addict_to_reagent(REAGENT_ID_COFFEE)
-
+/mob/living/carbon/proc/sync_addictions()
+	SHOULD_NOT_OVERRIDE(TRUE)
+	if(!species)
+		return
+	if(!species.traits)
+		return
+	for(var/TR in species.traits)
+		var/datum/trait/T = all_traits[TR]
+		if(!T)
+			continue
+		if(!T.addiction)
+			continue
+		addict_to_reagent(T.addiction)
 
 /mob/living/proc/handle_addictions()
 	// Empty so it can be overridden

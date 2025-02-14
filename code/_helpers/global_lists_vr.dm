@@ -579,9 +579,8 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 		traits_costs[path] = cost
 		all_traits[path] = instance
 
-	// Traitgenes edit begin - Initilize trait genes
+	// Traitgenes Initilize trait genes
 	setupgenetics(all_traits)
-	// Traitgenes edit end
 
 	// Shakey shakey shake
 	sortTim(all_traits, GLOBAL_PROC_REF(cmp_trait_datums_name), associative = TRUE)
@@ -590,7 +589,7 @@ var/global/list/remainless_species = list(SPECIES_PROMETHEAN,
 	for(var/traitpath in all_traits)
 		var/datum/trait/T = all_traits[traitpath]
 		var/category = T.category
-		if(!T.hidden) // Traitgenes edit - forbid hidden traits from showing, done to hide genetics only traits
+		if(!T.hidden) // Traitgenes forbid hidden traits from showing, done to hide genetics only traits
 			switch(category)
 				if(-INFINITY to -0.1)
 					negative_traits[traitpath] = T

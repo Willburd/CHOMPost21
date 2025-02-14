@@ -100,11 +100,9 @@ var/list/channel_to_radio_key = new
 		if(S.speaking && (S.speaking.flags & NO_STUTTER || S.speaking.flags & SIGNLANG))
 			continue
 
-		// Outpost 21 edit begin - moved to disabilities
-		if(disabilities & CENSORED) // wingdings) Outpost 21 edit - moved to disabilities
-			S.message = censor_swears(S.message) // Outpost 21 edit - Googlybonkers
+		if(disabilities & CENSORED)
+			S.message = censor_swears(S.message) // Googlybonkers
 			. = 1
-		// Outpost 21 edit end
 
 		if((HULK in mutations) && health >= 25 && length(S.message))
 			S.message = "[uppertext(S.message)]!!!"
@@ -119,19 +117,16 @@ var/list/channel_to_radio_key = new
 			S.message = stutter(S.message)
 			verb = pick("stammers","stutters")
 			. = 1
-		//VOREStation Edit Start
 		if(muffled)
 			verb = pick("muffles")
 			whispering = 1
 			. = 1
-		//VOREStation Edit End
-		//YW Edit start
-		if(disabilities & WINGDINGS) // wingdings) Outpost 21 edit - moved to disabilities
-			verb = pick("gibbers","gabbers","gahoos","gazonks") // Outpost 21 edit - Yeah lets just be stupid
-			S.message = Gibberish(S.message, 100) // Outpost 21 edit - Googlybonkers
+
+		if(disabilities & WINGDINGS)
+			verb = pick("gibbers","gabbers","gahoos","gazonks") // Yeah lets just be stupid
+			S.message = Gibberish(S.message, 100) // Googlybonkers
 			S.message = span_wingdings((S.message))
 			. = 1
-		//YW Edit End
 
 	message_data[1] = message_pieces
 	message_data[2] = verb
