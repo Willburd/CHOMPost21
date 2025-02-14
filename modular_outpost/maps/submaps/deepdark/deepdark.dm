@@ -32,6 +32,8 @@
 #include "lava_B.dmm"
 #include "biohazard_A.dmm"
 #include "crashed_ufo.dmm"
+#include "rock_field_A.dmm"
+#include "rock_field_B.dmm"
 #include "alien_ruin_A.dmm"
 #include "cat_slug_A.dmm"
 #include "garden_A.dmm"
@@ -163,6 +165,22 @@
 	mappath = "modular_outpost/maps/submaps/deepdark/lava_B.dmm"
 	allow_duplicates = TRUE
 	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/rock_field_A
+	name = "Rock Field A"
+	desc = "Rock Field."
+	mappath = "modular_outpost/maps/submaps/deepdark/rock_field_A.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/rock_field_B
+	name = "Rock Field B"
+	desc = "Rock Field."
+	mappath = "modular_outpost/maps/submaps/deepdark/rock_field_B.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 20
 	cost = 15
 
 //////////////////////////////////////////////////////////////
