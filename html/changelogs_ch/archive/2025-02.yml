@@ -262,3 +262,7 @@
 2025-02-13:
   tacoguy7765093:
   - maptweak: Map stability fixes.
+2025-02-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: belly sprites not properly working in some cases
+  - bugfix: Micro cameras will now properly reset when micros are dropped
