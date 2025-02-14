@@ -90,24 +90,28 @@
 	name = "Burn Weakness, Minor"
 	desc = "Increases damage from burn damage sources by 15%"
 	cost = -1
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 	var_changes = list("burn_mod" = 1.15)
 
 /datum/trait/negative/burn_weak
 	name = "Burn Weakness"
 	desc = "Increases damage from burn damage sources by 20%"
 	cost = -2
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 	var_changes = list("burn_mod" = 1.2)
 
 /datum/trait/negative/burn_weak_plus
 	name = "Burn Weakness, Major"
 	desc = "Increases damage from burn damage sources by 50%"
 	cost = -3
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 	var_changes = list("burn_mod" = 1.5)
 
 /datum/trait/negative/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%"
 	cost = -2 //CHOMPEdit
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
 
 /datum/trait/negative/conductive_plus
@@ -138,6 +142,7 @@
 	name = "Hollow Bones/Aluminum Alloy"
 	desc = "Your bones and robot limbs are much easier to break."
 	cost = -3 // increased due to medical intervention needed.
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 /datum/trait/negative/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -178,6 +183,7 @@
 
 	activation_message="You feel like breathing is more difficult..."
 	primitive_expression_messages=list("gasps")
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 /datum/trait/negative/breathes/phoron
 	name = "Phoron Breather"
@@ -327,6 +333,7 @@
 	var/escalation_speed = 0.8
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/lonely/major)
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -452,6 +459,7 @@
 	var/escalation_speed = 0.8
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/lonely/major,/datum/trait/negative/agoraphobia)
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 /datum/trait/negative/lonely/major
 	name = "Major loneliness vulnerability"
@@ -463,6 +471,7 @@
 	only_people = TRUE
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/agoraphobia)
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -610,6 +619,7 @@
 	cost = -2
 	var_changes = list("chem_strength_heal" = 0.8)
 	can_take = ORGANICS
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 /datum/trait/negative/reduced_biocompat
 	name = "Reduced Biocompatibility"
@@ -617,6 +627,7 @@
 	cost = -4
 	var_changes = list("chem_strength_heal" = 0.6)
 	can_take = ORGANICS
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 /datum/trait/negative/reduced_biocompat_extreme
 	name = "Reduced Biocompatibility, Major"
@@ -624,6 +635,7 @@
 	cost = -8
 	var_changes = list("chem_strength_heal" = 0.3)
 	can_take = ORGANICS
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 	//Traitgenes
 	is_genetrait = TRUE

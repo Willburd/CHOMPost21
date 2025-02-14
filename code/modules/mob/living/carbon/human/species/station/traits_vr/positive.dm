@@ -6,6 +6,7 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
 //	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
 //	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
@@ -52,12 +53,14 @@
 	desc = "Decreases your susceptibility to electric shocks by 25%."
 	cost = 2
 	var_changes = list("siemens_coefficient" = 0.75)
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 /datum/trait/positive/nonconductive_plus
 	name = "Non-Conductive, Major"
 	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3
 	var_changes = list("siemens_coefficient" = 0.5)
+	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
 
 	is_genetrait = TRUE
 
