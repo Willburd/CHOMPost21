@@ -39,6 +39,10 @@
 #include "range_A.dmm"
 #include "rat_A.dmm"
 #include "ritual_A.dmm"
+#include "maint_A.dmm"
+#include "maint_B.dmm"
+#include "maint_C.dmm"
+#include "maint_D.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -368,6 +372,38 @@
 	mappath = "modular_outpost/maps/submaps/deepdark/crashed_ufo.dmm"
 	allow_duplicates = FALSE
 	discard_prob = 75
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/maint_A
+	name = "maint A"
+	desc = "Maintenance tunnel."
+	mappath = "modular_outpost/maps/submaps/deepdark/maint_A.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 15
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/maint_B
+	name = "maint B"
+	desc = "Maintenance tunnel."
+	mappath = "modular_outpost/maps/submaps/deepdark/maint_B.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 15
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/maint_C
+	name = "maint C"
+	desc = "Maintenance tunnel."
+	mappath = "modular_outpost/maps/submaps/deepdark/maint_C.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 15
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/maint_D
+	name = "maint D"
+	desc = "Maintenance tunnel."
+	mappath = "modular_outpost/maps/submaps/deepdark/maint_D.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 15
 	cost = 20
 
 //////////////////////////////////////////////////////////////
