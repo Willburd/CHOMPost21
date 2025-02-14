@@ -129,6 +129,7 @@
 /datum/trait/positive/endurance_high
 	cost = 3
 	excludes = list(/datum/trait/positive/endurance_very_high, /datum/trait/positive/endurance_extremely_high) // CHOMPEdit: Increased Endurance.
+	custom_only = FALSE
 	// excludes = list(/datum/trait/positive/brute_resist, /datum/trait/positive/minor_brute_resist, /datum/trait/positive/minor_burn_resist, /datum/trait/positive/burn_resist)
 	// Tankiness at the cost of severe downsides should be allowed - we have a large number of negatives that hurt hard, but you can't take many positives.
 
