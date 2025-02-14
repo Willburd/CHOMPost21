@@ -41,15 +41,15 @@ var/datum/planet/muriki/planet_muriki = null
 			low_brightness = 0.2
 			low_color = "#660000"
 
-			high_brightness = 0.5
+			high_brightness = 0.25
 			high_color = "#4D0000"
 			min = 0
 
 		if(0.40 to 0.50) // Twilight
-			low_brightness = 0.6
+			low_brightness = 0.5
 			low_color = "#66004D"
 
-			high_brightness = 0.8
+			high_brightness = 0.6
 			high_color = "#CC3300"
 			min = 0.40
 
@@ -62,10 +62,10 @@ var/datum/planet/muriki/planet_muriki = null
 			min = 0.50
 
 		if(0.70 to 1.00) // Noon
-			low_brightness = 0.9
+			low_brightness = 0.85
 			low_color = "#CC3300"
 
-			high_brightness = 1.0
+			high_brightness = 0.9
 			high_color = "#FF9933"
 			min = 0.70
 
@@ -95,6 +95,17 @@ var/datum/planet/muriki/planet_muriki = null
 		var/new_b = LERP(low_b, high_b, interpolate_weight)
 
 		new_color = rgb(new_r, new_g, new_b)
+
+	// Seasonal adjust
+	switch(GLOB.world_time_season)
+		if("spring")
+			new_brightness *= 0.9
+		if("summer")
+			new_brightness *= 1
+		if("autumn")
+			new_brightness *= 0.9
+		if("winter")
+			new_brightness *= 0.8
 
 	spawn(1)
 		update_sun_deferred(new_brightness, new_color)
