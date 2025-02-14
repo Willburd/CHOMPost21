@@ -32,6 +32,13 @@
 #include "lava_B.dmm"
 #include "biohazard_A.dmm"
 #include "crashed_ufo.dmm"
+#include "alien_ruin_A.dmm"
+#include "cat_slug_A.dmm"
+#include "garden_A.dmm"
+#include "garden_B.dmm"
+#include "range_A.dmm"
+#include "rat_A.dmm"
+#include "ritual_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -147,6 +154,65 @@
 	desc = "Random lava."
 	mappath = "modular_outpost/maps/submaps/deepdark/lava_B.dmm"
 	allow_duplicates = TRUE
+	discard_prob = 60
+	cost = 15
+
+//////////////////////////////////////////////////////////////
+// Retired secrets
+
+/datum/map_template/outpost21/muriki/caves_deepdark/alien_ruin_A
+	name = "Alien Ruin A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/alien_ruin_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/cat_slug_A
+	name = "Cat Slug A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/cat_slug_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/garden_A
+	name = "Garden A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/garden_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/garden_B
+	name = "Garden B"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/garden_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/range_A
+	name = "Range A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/range_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/rat_A
+	name = "Rat A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/rat_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ritual_A
+	name = "Ritual A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/ritual_A.dmm"
+	allow_duplicates = FALSE
 	discard_prob = 60
 	cost = 15
 
@@ -301,7 +367,7 @@
 	desc = "Crashed ufo."
 	mappath = "modular_outpost/maps/submaps/deepdark/crashed_ufo.dmm"
 	allow_duplicates = FALSE
-	discard_prob = 55
+	discard_prob = 75
 	cost = 20
 
 //////////////////////////////////////////////////////////////

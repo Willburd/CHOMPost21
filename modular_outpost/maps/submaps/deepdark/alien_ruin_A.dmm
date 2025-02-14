@@ -1,0 +1,214 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall/lead,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/obj/structure/prop/dominator/green,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"n" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"u" = (
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/obj/structure/prop/machine/alien_tank,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"D" = (
+/obj/machinery/door/airlock/science,
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"E" = (
+/obj/structure/prop/dominator/orange,
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"I" = (
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/obj/structure/table/standard,
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"N" = (
+/obj/structure/salvageable/console{
+	dir = 4;
+	pixel_x = -5
+	},
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"Q" = (
+/obj/structure/prop/poicanister,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/turf/template_noop,
+/area/template_noop)
+"T" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/loot_pile/mecha/phazon,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"X" = (
+/obj/machinery/cell_charger,
+/obj/structure/table/standard,
+/obj/random/mega_nukies,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+"}
+(2,1,1) = {"
+R
+R
+a
+a
+a
+a
+a
+a
+a
+R
+"}
+(3,1,1) = {"
+R
+R
+a
+E
+W
+T
+N
+Q
+a
+R
+"}
+(4,1,1) = {"
+R
+R
+a
+w
+I
+I
+I
+p
+D
+R
+"}
+(5,1,1) = {"
+R
+R
+a
+w
+W
+I
+I
+K
+a
+R
+"}
+(6,1,1) = {"
+R
+R
+a
+m
+u
+P
+n
+X
+a
+R
+"}
+(7,1,1) = {"
+R
+R
+a
+a
+a
+a
+a
+a
+a
+R
+"}
+(8,1,1) = {"
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+"}
+(9,1,1) = {"
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+"}

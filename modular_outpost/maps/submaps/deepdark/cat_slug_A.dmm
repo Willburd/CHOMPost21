@@ -1,0 +1,72 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"u" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"v" = (
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/mob/living/simple_mob/vore/alienanimals/catslug,
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/obj/random/plushielarge,
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"X" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+X
+X
+X
+a
+"}
+(3,1,1) = {"
+a
+X
+R
+X
+a
+"}
+(4,1,1) = {"
+a
+X
+v
+X
+a
+"}
+(5,1,1) = {"
+a
+X
+K
+u
+a
+"}
+(6,1,1) = {"
+a
+X
+X
+X
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+"}

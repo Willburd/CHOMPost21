@@ -1,0 +1,133 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"j" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/material/minihoe,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/obj/item/material/minihoe,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"r" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/turf/simulated/mineral/alt/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/obj/item/seeds/random,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"M" = (
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/random/cutout,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+w
+w
+H
+M
+w
+w
+w
+a
+"}
+(3,1,1) = {"
+a
+w
+r
+m
+M
+x
+M
+w
+a
+"}
+(4,1,1) = {"
+a
+w
+U
+M
+M
+t
+M
+M
+a
+"}
+(5,1,1) = {"
+a
+w
+w
+M
+M
+j
+M
+t
+a
+"}
+(6,1,1) = {"
+a
+w
+w
+w
+M
+M
+M
+w
+a
+"}
+(7,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
