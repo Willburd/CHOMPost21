@@ -43,6 +43,10 @@
 #include "maint_B.dmm"
 #include "maint_C.dmm"
 #include "maint_D.dmm"
+#include "cliff_A.dmm"
+#include "cliff_B.dmm"
+#include "cliff_C.dmm"
+#include "cliff_D.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -404,6 +408,38 @@
 	mappath = "modular_outpost/maps/submaps/deepdark/maint_D.dmm"
 	allow_duplicates = TRUE
 	discard_prob = 15
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/cliff_A
+	name = "cliff A"
+	desc = "Cliffs."
+	mappath = "modular_outpost/maps/submaps/deepdark/cliff_A.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 35
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/cliff_B
+	name = "cliff B"
+	desc = "Cliffs."
+	mappath = "modular_outpost/maps/submaps/deepdark/cliff_B.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 35
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/cliff_C
+	name = "cliff C"
+	desc = "Cliffs."
+	mappath = "modular_outpost/maps/submaps/deepdark/cliff_C.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 35
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/cliff_D
+	name = "cliff D"
+	desc = "Cliffs."
+	mappath = "modular_outpost/maps/submaps/deepdark/cliff_D.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 35
 	cost = 20
 
 //////////////////////////////////////////////////////////////
