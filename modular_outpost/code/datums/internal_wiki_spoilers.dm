@@ -265,7 +265,7 @@
 	is_drink = TRUE
 /datum/reagent/ethanol/syndicatebomb
 	is_drink = TRUE
-/datum/reagent/ethanol/tequillasunrise
+/datum/reagent/ethanol/tequila_sunrise
 	is_drink = TRUE
 /datum/reagent/ethanol/threemileisland
 	is_drink = TRUE
