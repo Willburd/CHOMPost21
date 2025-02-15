@@ -951,6 +951,8 @@ var/induromol_code = rand(1, 50)
 		H.vomit()
 */
 /datum/reagent/phororeagent/gaseous
+	name = REAGENT_DEVELOPER_WARNING
+	id = REAGENT_ID_DEVELOPER_WARNING
 	reagent_state = GAS
 
 /datum/reagent/phororeagent/gaseous/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)

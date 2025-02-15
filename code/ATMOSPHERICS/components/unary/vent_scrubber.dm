@@ -175,8 +175,6 @@
 		// Outpost 21 edit begin - Don't sleep
 		hibernate = 1
 		addtimer(VARSET_CALLBACK(src, hibernate, 0), rand(10 SECONDS,20 SECONDS), TIMER_DELETE_ME) //hibernate randomly
-		// Outpost 21 edit end
-
 
 	if (power_draw >= 0)
 		last_power_draw = power_draw
@@ -272,11 +270,11 @@
 		return
 
 	if(signal.data["status"] != null)
-		addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME) // Outpost 21 edit - Don't sleep
+		addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME)
 		return //do not update_icon
 
 //			log_admin("DEBUG \[[world.timeofday]\]: vent_scrubber/receive_signal: unknown command \"[signal.data["command"]]\"\n[signal.debug_print()]")
-	addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME) // Outpost 21 edit - Don't sleep
+	addtimer(CALLBACK(src, PROC_REF(broadcast_status)), 2, TIMER_DELETE_ME)
 	update_icon()
 	return
 

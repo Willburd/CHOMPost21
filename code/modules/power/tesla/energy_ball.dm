@@ -39,8 +39,8 @@
 	return
 
 /obj/singularity/energy_ball/Destroy()
-	if(orbiting && istype(orbiting.parent, /obj/singularity/energy_ball)) //CHOMPEdit
-		var/obj/singularity/energy_ball/EB = orbiting.parent //CHOMPEdit
+	if(orbiting && istype(orbiting.parent, /obj/singularity/energy_ball))
+		var/obj/singularity/energy_ball/EB = orbiting.parent
 		EB.orbiting_balls -= src
 
 	for(var/obj/singularity/energy_ball/EB as anything in orbiting_balls)
@@ -149,8 +149,8 @@
 
 	. = ..()
 /obj/singularity/energy_ball/stop_orbit()
-	if (orbiting && istype(orbiting.parent, /obj/singularity/energy_ball)) //CHOMPEdit
-		var/obj/singularity/energy_ball/orbitingball = orbiting.parent //CHOMPEdit
+	if (orbiting && istype(orbiting.parent, /obj/singularity/energy_ball))
+		var/obj/singularity/energy_ball/orbitingball = orbiting.parent
 		orbitingball.orbiting_balls -= src
 		orbitingball.dissipate_strength = orbitingball.orbiting_balls.len + 1
 	..()

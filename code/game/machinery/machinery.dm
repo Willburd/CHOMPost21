@@ -134,7 +134,7 @@ Class Procs:
 	if(ispath(circuit))
 		circuit = new circuit(src)
 
-/obj/machinery/Initialize(var/mapload)
+/obj/machinery/Initialize(mapload)
 	. = ..()
 	SSmachines.all_machines += src
 	if(ispath(circuit))
