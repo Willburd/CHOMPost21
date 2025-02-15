@@ -6,7 +6,7 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
 //	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
 //	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
@@ -53,14 +53,14 @@
 	desc = "Decreases your susceptibility to electric shocks by 25%."
 	cost = 2
 	var_changes = list("siemens_coefficient" = 0.75)
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/positive/nonconductive_plus
 	name = "Non-Conductive, Major"
 	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3
 	var_changes = list("siemens_coefficient" = 0.5)
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 	is_genetrait = TRUE
 
@@ -115,7 +115,7 @@
 	desc = "Adds 20% resistance to brute damage sources." //CHOMP Edit
 	cost = 2 //CHOMP Edit
 	var_changes = list("brute_mod" = 0.8) //CHOMP Edit
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 	//excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 /datum/trait/positive/minor_burn_resist
@@ -123,14 +123,14 @@
 	desc = "Adds 10% resistance to burn damage sources." //CHOMP Edit
 	cost = 1 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.9) //CHOMP Edit
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/positive/burn_resist
 	name = "Burn Resist"
 	desc = "Adds 20% resistance to burn damage sources." //CHOMP Edit
 	cost = 2 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.8) //CHOMP Edit
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 
@@ -176,7 +176,7 @@
 	name = "Antiseptic Saliva"
 	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
 	cost = 1
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/positive/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -195,7 +195,7 @@
 	desc = "You are able to move unhindered on snow."
 	cost = 1
 	var_changes = list("snow_movement" = -2)
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/positive/weaver
 	name = "Weaver"
@@ -342,7 +342,7 @@
 	desc = "You move over or under tables with ease of a Teshari."
 	cost = 2
 
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 	// Traitgenes Replacement for /datum/trait/positive/superpower_midget, made into a genetrait
 	is_genetrait = TRUE
@@ -377,21 +377,21 @@
 	desc = "You are generally more resistant to radiation, and it dissipates faster from your body."
 	cost = 1
 	var_changes = list("radiation_mod" = 0.65, "rad_removal_mod" = 3.5, "rad_levels" = list("safe" = 70, "danger_1" = 150, "danger_2" = 450, "danger_3" = 600, "danger_4" = 2250))
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/positive/rad_resistance_extreme
 	name = "Radiation Resistance, Major"
 	desc = "You are much more resistant to radiation, and it dissipates much faster from your body."
 	cost = 2
 	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = list("safe" = 150, "danger_1" = 300, "danger_2" = 600, "danger_3" = 1000, "danger_4" = 3000))
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/positive/rad_immune
 	name = "Radiation Immunity"
 	desc = "For whatever reason, be it a more dense build or some quirk of your genetic code, your body is completely immune to radiation."
 	cost = 3
 	var_changes = list("radiation_mod" = 0.0, "rad_removal_mod" = 10, "rad_levels" = list("safe" = 10000, "danger_1" = 10001, "danger_2" = 10002, "danger_3" = 10003, "danger_4" = 10004))
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 	// Traitgenes
 	is_genetrait = TRUE

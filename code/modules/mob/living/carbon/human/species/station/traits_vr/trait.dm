@@ -12,7 +12,7 @@
 	var/can_take = ORGANICS|SYNTHETICS	// Can freaking synths use those.
 	var/list/banned_species			// A list of species that can't take this trait
 	var/list/allowed_species		// A list of species that CAN take this trait, use this if only a few species can use it. -shark
-	var/custom_only = TRUE			// Trait only available for custom species
+	var/custom_only = FALSE			// Trait only available for custom species // Outpost 21 edit - Anyone can take this trait
 	var/varchange_type = TRAIT_VARCHANGE_ALWAYS_OVERRIDE	//Mostly used for non-custom species.
 	var/has_preferences //if set, should be a list of the preferences for this trait in the format: list("identifier/name of var to edit" = list(typeofpref, "text to display in prefs", TRAIT_NO_VAREDIT_TARGET/TRAIT_VAREDIT_TARGET_SPECIES/etc, (optional: default value)), etc) typeofpref should follow the defines in _traits.dm (eg. TRAIT_PREF_TYPE_BOOLEAN)
 	var/special_env = FALSE

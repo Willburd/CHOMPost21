@@ -90,28 +90,28 @@
 	name = "Burn Weakness, Minor"
 	desc = "Increases damage from burn damage sources by 15%"
 	cost = -1
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 	var_changes = list("burn_mod" = 1.15)
 
 /datum/trait/negative/burn_weak
 	name = "Burn Weakness"
 	desc = "Increases damage from burn damage sources by 20%"
 	cost = -2
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 	var_changes = list("burn_mod" = 1.2)
 
 /datum/trait/negative/burn_weak_plus
 	name = "Burn Weakness, Major"
 	desc = "Increases damage from burn damage sources by 50%"
 	cost = -3
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 	var_changes = list("burn_mod" = 1.5)
 
 /datum/trait/negative/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%"
 	cost = -2 //CHOMPEdit
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
 
 /datum/trait/negative/conductive_plus
@@ -142,7 +142,7 @@
 	name = "Hollow Bones/Aluminum Alloy"
 	desc = "Your bones and robot limbs are much easier to break."
 	cost = -3 // increased due to medical intervention needed.
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/negative/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -183,7 +183,7 @@
 
 	activation_message="You feel like breathing is more difficult..."
 	primitive_expression_messages=list("gasps")
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/negative/breathes/phoron
 	name = "Phoron Breather"
@@ -252,6 +252,7 @@
 	excludes = list(/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
 
+
 /datum/trait/negative/less_blood_extreme
 	name = "Low Blood Volume, Extreme"
 	desc = "You have 60% less blood volume compared to most species, making you much more prone to blood loss issues."
@@ -260,11 +261,13 @@
 	excludes = list(/datum/trait/negative/less_blood)
 	can_take = ORGANICS
 
+
 /datum/trait/negative/extreme_slowdown
 	name = "Slowdown, Extreme"
 	desc = "You move EXTREMELY slower than baseline"
 	cost = -8
 	var_changes = list("slowdown" = 4.0)
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -278,6 +281,7 @@
 	desc = "If you let your nutrition get too low, you will start to experience adverse affects including hallucinations, unconsciousness, and weakness"
 	cost = -1
 	special_env = TRUE
+
 
 	// Traitgenes Made into a gene trait
 	is_genetrait = TRUE
@@ -333,7 +337,7 @@
 	var/escalation_speed = 0.8
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/lonely/major)
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -459,7 +463,7 @@
 	var/escalation_speed = 0.8
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/lonely/major,/datum/trait/negative/agoraphobia)
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/negative/lonely/major
 	name = "Major loneliness vulnerability"
@@ -471,7 +475,7 @@
 	only_people = TRUE
 	special_env = TRUE
 	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/agoraphobia)
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -599,6 +603,7 @@
 	cost = -12 // Similar to Very Low Endurance, this straight up will require you NEVER getting in a fight. This is extremely crippling. I salute the madlad that takes this.
 	var_changes = list("total_health" = 25)
 
+
 /datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.setMaxHealth(S.total_health)
@@ -608,6 +613,7 @@
 	desc = "Your body is very fragile. Reduces your maximum hitpoints to 25. Beware sneezes. You require only 50 damage in total to die, compared to 200 normally. You will go into crit after losing 25 HP, compared to crit at 100 HP."
 	cost = -12 // Similar to Very Low Endurance, this straight up will require you NEVER getting in a fight. This is extremely crippling. I salute the madlad that takes this.
 	var_changes = list("total_health" = 25)
+
 
 /datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -619,7 +625,7 @@
 	cost = -2
 	var_changes = list("chem_strength_heal" = 0.8)
 	can_take = ORGANICS
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/negative/reduced_biocompat
 	name = "Reduced Biocompatibility"
@@ -627,7 +633,7 @@
 	cost = -4
 	var_changes = list("chem_strength_heal" = 0.6)
 	can_take = ORGANICS
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 /datum/trait/negative/reduced_biocompat_extreme
 	name = "Reduced Biocompatibility, Major"
@@ -635,7 +641,7 @@
 	cost = -8
 	var_changes = list("chem_strength_heal" = 0.3)
 	can_take = ORGANICS
-	custom_only = FALSE // Outpost 21 edit - Anyone can take this trait
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -651,11 +657,13 @@
 	cost = -1
 	var_changes = list("flash_mod" = 1.5)
 
+
 /datum/trait/negative/light_sensitivity_plus
 	name = "Photosensitivity, Major"
 	desc = "You have trouble dealing with sudden flashes of light, taking quite a long time for you to be able to recover. The effects of flashes from cameras and security equipment leave you stunned for some time. 100% (2x) stun duration from flashes."
 	cost = -2
 	var_changes = list("flash_mod" = 2.0)
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -687,11 +695,13 @@
 	cost = -2
 	var_changes = list("pain_mod" = 1.2)
 
+
 /datum/trait/negative/pain_intolerance_advanced
 	name = "Pain Intolerance, Major"
 	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
 	cost = -3
 	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit.
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -705,6 +715,7 @@
 	desc = "Your biochemistry is a little delicate, rendering you more susceptible to both deadly toxins and the more subtle ones. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well. Toxin damages and knockout drugs are 25% stronger on you."
 	cost = -1
 	var_changes = list("chem_strength_tox" = 1.25)
+
 
 	//Traitgenes
 	is_genetrait = TRUE
