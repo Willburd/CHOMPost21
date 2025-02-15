@@ -3263,7 +3263,7 @@
 
 	allergen_type = ALLERGEN_FRUIT //Made from orange juice
 
-/datum/reagent/ethanol/tequila
+/datum/reagent/ethanol/tequilla
 	name = REAGENT_TEQUILA
 	id = REAGENT_ID_TEQUILA
 	description = "A strong and mildly flavored, Mexican produced spirit. Feeling thirsty hombre?"
@@ -4162,7 +4162,7 @@
 
 	allergen_type = ALLERGEN_GRAINS|ALLERGEN_STIMULANT //Made from beer(grain) and whiskeycola(whiskey(grain) and cola(caffeine))
 
-/datum/reagent/ethanol/tequila_sunrise
+/datum/reagent/ethanol/tequilla_sunrise
 	name = REAGENT_TEQUILASUNRISE
 	id = REAGENT_ID_TEQUILASUNRISE
 	description = "Tequila and orange juice. Much like a Screwdriver, only Mexican~."

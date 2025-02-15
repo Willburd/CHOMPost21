@@ -265,7 +265,7 @@
 	is_drink = TRUE
 /datum/reagent/ethanol/syndicatebomb
 	is_drink = TRUE
-/datum/reagent/ethanol/tequila_sunrise
+/datum/reagent/ethanol/tequilla_sunrise
 	is_drink = TRUE
 /datum/reagent/ethanol/threemileisland
 	is_drink = TRUE
@@ -319,7 +319,7 @@
 	is_drink = TRUE
 /datum/reagent/ethanol/godsake
 	is_drink = TRUE
-/datum/reagent/ethanol/tequila
+/datum/reagent/ethanol/tequilla
 	is_drink = TRUE
 /datum/reagent/ethanol/godka
 	is_drink = TRUE
@@ -329,7 +329,7 @@
 	is_drink = TRUE
 /datum/reagent/ethanol/mead
 	is_drink = TRUE
-/datum/reagent/ethanol/tequila_sunrise
+/datum/reagent/ethanol/tequilla_sunrise
 	is_drink = TRUE
 /datum/reagent/ethanol/unathiliquor
 	is_drink = TRUE

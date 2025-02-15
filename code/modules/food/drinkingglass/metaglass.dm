@@ -310,7 +310,7 @@ Drinks Data
 	glass_center_of_mass_x = 16
 	glass_center_of_mass_y = 12
 
-/datum/reagent/ethanol/tequila
+/datum/reagent/ethanol/tequilla
 	glass_icon_state = "tequillaglass" //Yes. It's typo'd in the .dmi file. Deal with it or fix it.
 	glass_center_of_mass_x = 16
 	glass_center_of_mass_y = 12
@@ -588,7 +588,7 @@ Drinks Data
 	glass_center_of_mass_x = 16
 	glass_center_of_mass_y = 4
 
-/datum/reagent/ethanol/tequila_sunrise
+/datum/reagent/ethanol/tequilla_sunrise
 	glass_icon_state = "tequillasunriseglass" //Yes. It's typo'd in the .dmi file. Deal with it or fix it.
 
 /datum/reagent/ethanol/threemileisland
