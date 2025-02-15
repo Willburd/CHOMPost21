@@ -101,7 +101,7 @@
 					M.dna.SetSEValue(block,src.GetValue())
 				uses--
 				// Traitgenes edit - Moved gene checks to after side effects
-				if(prob(5))
+				if(has_radiation && prob(5))
 					trigger_side_effect(M)
 			// Traitgenes edit begin - Do gene updates here, and more comprehensively
 			if(ishuman(M))
