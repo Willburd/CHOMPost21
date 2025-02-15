@@ -465,7 +465,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/rum
 	price_tag = 15
 
-/obj/item/reagent_containers/food/drinks/bottle/tequila
+/obj/item/reagent_containers/food/drinks/bottle/tequilla
 	price_tag = 15
 
 /obj/item/reagent_containers/food/drinks/bottle/vodka
