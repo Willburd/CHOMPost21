@@ -266,3 +266,7 @@
   CHOMPStation2StaffMirrorBot:
   - bugfix: belly sprites not properly working in some cases
   - bugfix: Micro cameras will now properly reset when micros are dropped
+2025-02-15:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: moves the dependencies to 516.1655
+  - code_imp: tgui 516
