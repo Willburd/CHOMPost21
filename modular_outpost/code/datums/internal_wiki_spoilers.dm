@@ -329,7 +329,7 @@
 	is_drink = TRUE
 /datum/reagent/ethanol/mead
 	is_drink = TRUE
-/datum/reagent/ethanol/tequilla_sunrise
+/datum/reagent/ethanol/tequila_sunrise
 	is_drink = TRUE
 /datum/reagent/ethanol/unathiliquor
 	is_drink = TRUE
