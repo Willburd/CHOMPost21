@@ -139,6 +139,12 @@
 		for(var/datum/multilingual_say_piece/S in message_data[1])
 			S.message = speedboost_initial.Replace(S.message, "")
 			S.message = speedboost_main.Replace(S.message, "")
+		// SUPER SPECIAL wingdings behavior
+		if(disabilities & WINGDINGS)
+			message_data[2] = pick("zoggles","zibbles","zahoos","wehees") // Yeah lets just be stupid
+			for(var/datum/multilingual_say_piece/S in message_data[1])
+				S.message = Gibberish(S.message, 100) // Googlybonkers
+				S.message = span_wingdings((S.message))
 		. = 1
 	else
 		. = ..(message_data)
