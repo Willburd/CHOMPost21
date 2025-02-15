@@ -70,7 +70,7 @@
 	glass_center_of_mass_x = 16
 	glass_center_of_mass_y = 7
 
-/datum/reagent/toxin/bluetrain
+/datum/reagent/ethanol/bluetrain
 	glass_icon_state = "bluetrain"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
 	glass_center_of_mass_x = 16
