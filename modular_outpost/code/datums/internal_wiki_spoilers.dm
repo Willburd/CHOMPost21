@@ -323,7 +323,7 @@
 	is_drink = TRUE
 /datum/reagent/ethanol/godka
 	is_drink = TRUE
-/datum/reagent/ethanol/changelingsting
+/datum/reagent/ethanol/changeling_sting
 	is_drink = TRUE
 /datum/reagent/ethanol/martini
 	is_drink = TRUE
