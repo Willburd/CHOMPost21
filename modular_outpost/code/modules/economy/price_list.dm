@@ -204,7 +204,7 @@
 /datum/reagent/ethanol/booger
 	price_tag = 4
 
-/datum/reagent/ethanol/brave_bull
+/datum/reagent/ethanol/coffee/brave_bull
 	price_tag = 4
 
 /datum/reagent/ethanol/changeling_sting

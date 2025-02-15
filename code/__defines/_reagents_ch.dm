@@ -112,6 +112,7 @@
 #define REAGENT_ID_HACHI "hachi"
 #define REAGENT_FRESHTEA "Green tea"
 #define REAGENT_ID_FRESHTEA "freshtea"
+#define REAGENT_FRESHTEAGREEN "Floral tea"
 #define REAGENT_ID_FRESHTEAGREEN "freshteagreen"
 #define REAGENT_TEAMUSH "Tea mush"
 #define REAGENT_ID_TEAMUSH "teamush"
