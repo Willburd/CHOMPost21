@@ -223,7 +223,7 @@
 	color = "#BF80BF"
 	high_message_list = list("You feel focused.", "Your attention is undivided.")
 	sober_message_list = list("It becomes harder to focus...", "You feel distractible.")
-	metabolism = REM
+	metabolism = REM * 0.124 // outpost 21 edit - require less a round
 
 /datum/reagent/drugs/citalopram
 	name = REAGENT_CITALOPRAM

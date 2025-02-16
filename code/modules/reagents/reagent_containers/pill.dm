@@ -210,13 +210,13 @@
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/methylphenidate
-	name = REAGENT_METHYLPHENIDATE + " (15u)"
+	name = REAGENT_METHYLPHENIDATE + " (3u)" // Outpost 21 edit - severely lowered doseage
 	desc = "Improves the ability to concentrate."
 	icon_state = "pill2"
 
 /obj/item/reagent_containers/pill/methylphenidate/Initialize()
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_METHYLPHENIDATE, 15)
+	reagents.add_reagent(REAGENT_ID_METHYLPHENIDATE, 3) // Outpost 21 edit - severely lowered doseage
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/citalopram
