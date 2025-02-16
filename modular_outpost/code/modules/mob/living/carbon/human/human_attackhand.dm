@@ -27,6 +27,9 @@
 		if(HUSK in mutations)
 			visible_message(span_danger("\The [src]'s body crunches and snaps. It's too desiccated to resuscitate!"))
 			return // Handle husked, cure it before you can revive
+		if(!can_defib)
+			visible_message(span_danger("\The [src]'s neck shifts and cracks, there might be something more critical that is broken!"))
+			return // Handle broken neck/no attached brain
 
 		// allow revive chance
 		var/mob/observer/dead/ghost = get_ghost()
