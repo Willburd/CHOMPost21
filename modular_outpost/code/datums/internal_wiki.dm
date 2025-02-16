@@ -646,6 +646,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 /datum/internal_wiki/page/proc/chemical_assemble(var/datum/reagent/R)
 	title = R.name
 	body  = "<b>Description: </b>[R.description]<br>"
+	if(R.id in addictives)
+		body  += "<b>DANGER, [R.id in fast_addictives ? "highly " : ""]addictive.</b><br>"
 	var/tank_size = 5000
 	if(R.industrial_use)
 		body  += "<b>Industrial Use: </b>[R.industrial_use]<br>"

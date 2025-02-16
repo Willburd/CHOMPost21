@@ -51,6 +51,8 @@
 				if(!R.name)
 					continue
 				to_chat(user, span_notice( "Contains [R.volume]u of <b>[R.name]</b>.<br>[R.description]<br><br>"))
+				if(R.id in addictives)
+					to_chat(user, span_notice("<b>DANGER, [R.id in fast_addictives ? "highly " : ""]addictive.</b><br>"))
 				var/list/products = SSchemistry.chemical_reactions_by_product[R.id]
 				if(products != null && products.len > 0)
 					var/segment = 1
