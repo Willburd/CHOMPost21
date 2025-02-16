@@ -152,8 +152,6 @@
 		new /obj/item/implantcase/backup(src)
 	new /obj/item/implanter(src)
 
-/*
 /obj/item/implant/backup/full
 	name = "backup implant"
 	desc = "A normal wireless cortical stack with neutrino and QE transmission for constant-stream consciousness upload."
-*/

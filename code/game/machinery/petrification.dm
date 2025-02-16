@@ -118,8 +118,8 @@
 	var/datum/component/gargoyle/comp = statue.GetComponent(/datum/component/gargoyle)
 	if (no_clothes)
 		for(var/obj/item/W in statue)
-			if(istype(W, /obj/item/implant/backup)) // Outpost 21 edit - Nif removal: || istype(W, /obj/item/nif))
-				continue
+			// if(istype(W, /obj/item/implant/backup)) || istype(W, /obj/item/nif)) Outpost 21 edit - Remove backup implants, nif removal
+			//	continue
 			statue.drop_from_inventory(W)
 
 	var/obj/structure/gargoyle/G = new(T, statue, idt, mat, adj, tnt, can_unpetrify, no_clothes)

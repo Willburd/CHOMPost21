@@ -83,8 +83,8 @@
 						else if(isliving(thing))
 							var/mob/living/L = thing
 							for(var/obj/item/W in L)
-								if(istype(W, /obj/item/implant/backup)/* || istype(W, /obj/item/nif) */)	//VOREStation Edit - There's basically no reason to remove either of these
-									continue	//VOREStation Edit
+								//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // Outpost 21 edit - Remove backup implants, nif removal
+								//	continue
 								L.drop_from_inventory(W)
 							new /obj/effect/decal/cleanable/ash(L.loc) // Turn it to ashes!
 							L.visible_message( span_warning("[L] turned to ash in the heat of the incinerator!"))

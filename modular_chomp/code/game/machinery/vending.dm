@@ -75,8 +75,8 @@
 				/obj/item/flashlight = 10,
 				/obj/item/storage/backpack/parachute = 5,
 				/obj/item/storage/box/flare = 5,
-				/obj/item/storage/box/cdeathalarm_kit = 1,
-				/obj/item/storage/box/backup_kit = 1
+				/obj/item/storage/box/cdeathalarm_kit = 1
+				// /obj/item/storage/box/backup_kit = 1 // Outpost 21 edit - Backup removal
 				)
 
 /obj/machinery/vending/exploration_pilot

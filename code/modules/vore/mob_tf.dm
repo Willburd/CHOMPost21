@@ -123,8 +123,8 @@
 
 	if(ishuman(src))
 		for(var/obj/item/W in src)
-			if(istype(W, /obj/item/implant/backup)) // || istype(W, /obj/item/nif)) Outpost 21 edit - Nife removal
-				continue
+			//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) Outpost 21 edit - Outpost 21 edit - Remove backup implants, Nif removal
+			//	continue
 			src.drop_from_inventory(W)
 
 	// CHOMPEdit Start

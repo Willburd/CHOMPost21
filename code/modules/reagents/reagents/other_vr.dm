@@ -13,6 +13,7 @@
 		if(H.species.name != "Promethean")
 			to_chat(M, span_danger("Your flesh rapidly mutates!"))
 
+			/* Outpost 21 edit - Remove backup implants
 			var/list/backup_implants = list()
 			for(var/obj/item/organ/I in H.organs)
 				for(var/obj/item/implant/backup/BI in I.contents)
@@ -20,15 +21,18 @@
 			if(backup_implants.len)
 				for(var/obj/item/implant/backup/BI in backup_implants)
 					BI.forceMove(src)
+			*/
 
 			H.set_species("Promethean")
 			H.shapeshifter_set_colour("#05FF9B") //They can still change their color.
 
+			/* Outpost 21 edit - Remove backup implants
 			if(backup_implants.len)
 				var/obj/item/organ/external/torso = H.get_organ(BP_TORSO)
 				for(var/obj/item/implant/backup/BI in backup_implants)
 					BI.forceMove(torso)
 					torso.implants += BI
+			*/
 
 /* Outpost 21 edit - Nif removal
 /datum/reagent/nif_repair_nanites

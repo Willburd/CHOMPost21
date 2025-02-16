@@ -587,7 +587,7 @@
 				return
 
 			for(var/obj/item/W in Tar)
-				/* Outpost 21 edit - Nif removal
+				/* Outpost 21 edit - Nif removal, Remove backup implants
 				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))	//VOREStation Edit - There's basically no reason to remove either of these
 					continue	//VOREStation Edit
 				*/

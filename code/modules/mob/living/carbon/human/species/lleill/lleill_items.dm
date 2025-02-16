@@ -406,8 +406,8 @@
 		ourmob.Life(1)
 		if(ishuman(M))
 			for(var/obj/item/W in M)
-				if(istype(W, /obj/item/implant/backup)) // || istype(W, /obj/item/nif)) Outpost 21 edit - Nif removal
-					continue
+				//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) Outpost 21 edit - Remove backup implants, nif removal
+				//	continue
 				M.drop_from_inventory(W)
 
 		qdel(target)

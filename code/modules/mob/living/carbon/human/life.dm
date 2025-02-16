@@ -71,9 +71,9 @@
 		handle_medical_side_effects()
 
 		handle_heartbeat()
-		
+
 		// handle_nif() // Outpost 21 edit - Nif removal
-		
+
 		if(phobias)
 			handle_phobias()
 		if(!client)
@@ -349,7 +349,7 @@
 				spawn(6)
 					emote(pick("belch"))
 					gib()
-					
+
 	if (disabilities & TOURETTES)
 		if ((prob(1) && prob(2) && paralysis <= 1))
 			Stun(10)
@@ -2477,6 +2477,7 @@
 
 		holder.icon_state = "hudblank"
 
+		/* Outpost 21 edit - Remove backup implants
 		for(var/obj/item/organ/external/E in organs)
 			for(var/obj/item/implant/I in E.implants)
 				if(I.implanted && istype(I,/obj/item/implant/backup))
@@ -2487,6 +2488,7 @@
 						holder.icon_state = "hud_backup_nobody"
 					else
 						holder.icon_state = "hud_backup_norm"
+		*/
 		if(block_hud)
 			holder.icon_state = "hudblank"
 		apply_hud(BACKUP_HUD, holder)

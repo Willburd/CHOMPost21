@@ -115,8 +115,8 @@
 		ourmob.Life(1)
 		if(ishuman(M))
 			for(var/obj/item/W in M)
-				if(istype(W, /obj/item/implant/backup)) // Outpost 21 edit - Nif removal: || istype(W, /obj/item/nif))
-					continue
+				//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // Outpost 21 edit - Remove backup implants, nif removal
+				//	continue
 				M.drop_from_inventory(W)
 
 		if(M.tf_form == ourmob)
@@ -217,8 +217,8 @@
 
 		if(ishuman(M))
 			for(var/obj/item/W in M)
-				if(istype(W, /obj/item/implant/backup)) // Outpost 21 edit - Nif removal: || istype(W, /obj/item/nif))
-					continue
+				//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // Outpost 21 edit - Remove backup implants, nif removal
+				//	continue
 				M.drop_from_inventory(W)
 
 		if(M.tf_form == ourmob)

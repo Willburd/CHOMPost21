@@ -41,9 +41,10 @@ SUBSYSTEM_DEF(transcore)
 /datum/controller/subsystem/transcore/fire(resumed = 0)
 	var/timer = TICK_USAGE
 
-	INTERNAL_PROCESS_STEP(SSTRANSCORE_IMPLANTS,TRUE,process_implants,cost_implants,SSTRANSCORE_BACKUPS)
+	// INTERNAL_PROCESS_STEP(SSTRANSCORE_IMPLANTS,TRUE,process_implants,cost_implants,SSTRANSCORE_BACKUPS) Outpost 21 edit - Remove backup implants
 	INTERNAL_PROCESS_STEP(SSTRANSCORE_BACKUPS,FALSE,process_backups,cost_backups,SSTRANSCORE_IMPLANTS)
 
+/* Outpost 21 edit - Remove backup implants
 /datum/controller/subsystem/transcore/proc/process_implants(resumed = 0)
 	if (!resumed)
 		// Create a flat list of every implant in every db with a value of the db they're in
@@ -84,6 +85,7 @@ SUBSYSTEM_DEF(transcore)
 
 		if(MC_TICK_CHECK)
 			return
+*/
 
 /datum/controller/subsystem/transcore/proc/process_backups(resumed = 0)
 	if (!resumed)
@@ -138,7 +140,7 @@ SUBSYSTEM_DEF(transcore)
 	else
 		msg += "DFM:[default_db.backed_up.len]|"
 		msg += "DFB:[default_db.body_scans.len]|"
-		msg += "DFI:[default_db.implants.len]"
+		// msg += "DFI:[default_db.implants.len]" // Outpost 21 edit - Remove backup implants
 	msg += "} "
 	return ..()
 
@@ -215,7 +217,7 @@ SUBSYSTEM_DEF(transcore)
 	var/list/datum/transhuman/mind_record/backed_up = list()	// All known mind records, indexed by MR.mindname/mind.name
 	var/list/datum/transhuman/mind_record/has_left = list()		// Why do we even have this?
 	var/list/datum/transhuman/body_record/body_scans = list()	// All known body records, indexed by BR.mydna.name
-	var/list/obj/item/implant/backup/implants = list()	// All OPERATING implants that are being ticked
+	// var/list/obj/item/implant/backup/implants = list()	// All OPERATING implants that are being ticked // Outpost 21 edit - Remove backup implants
 
 	var/core_dumped = FALSE
 	var/key // Key for this DB

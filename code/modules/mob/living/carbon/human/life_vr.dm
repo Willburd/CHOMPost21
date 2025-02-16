@@ -40,6 +40,7 @@
 
 		holder.icon_state = "hudblank"
 
+		/* Outpost 21 edit - Remove backup implants
 		for(var/obj/item/organ/external/E in organs)
 			for(var/obj/item/implant/I in E.implants)
 				if(I.implanted && istype(I,/obj/item/implant/backup))
@@ -50,6 +51,7 @@
 						holder.icon_state = "hud_backup_nobody"
 					else
 						holder.icon_state = "hud_backup_norm"
+		*/
 		if(block_hud)
 			holder.icon_state = "hudblank"
 		apply_hud(BACKUP_HUD, holder)

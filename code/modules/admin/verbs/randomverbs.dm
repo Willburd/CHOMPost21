@@ -9,8 +9,8 @@
 		return
 
 	for(var/obj/item/W in M)
-		if(istype(W, /obj/item/implant/backup)) // Outpost 21 edit - Nif removal: || istype(W, /obj/item/nif))	//There's basically no reason to remove either of these
-			continue
+		//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))	//There's basically no reason to remove either of these // Outpost 21 edit - Remove backup implants, nif removal
+		//	continue
 		M.drop_from_inventory(W)
 
 	log_admin("[key_name(usr)] made [key_name(M)] drop everything!")

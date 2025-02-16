@@ -333,8 +333,10 @@
 /obj/item/implant/adrenalin
 	origin_tech = list(TECH_COMBAT = 4, TECH_BIO = 4)
 
+/* Outpost 21 edit - Remove backup implants
 /obj/item/implant/backup
 	origin_tech = list(TECH_ILLEGAL = 3, TECH_BIO = 3)
+*/
 
 // * Slimes *
 // ****************

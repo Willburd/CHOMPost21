@@ -228,7 +228,7 @@
 		ourmob.Life(1)
 		if(ishuman(M))
 			for(var/obj/item/W in M)
-				/* Outpost 21 edit - Nif removal
+				/* Outpost 21 edit - Remove backup implant, Nif removal
 				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
 					continue
 				*/
