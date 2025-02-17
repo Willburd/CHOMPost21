@@ -21,6 +21,7 @@
 	status_flags = CANPUSH
 	pass_flags = PASSTABLE
 	movement_cooldown = 1.5
+	mob_size = MOB_TINY // Outpost 21 edit - borer fixes, no landmines for you
 
 	universal_understand = TRUE
 	can_be_antagged = TRUE
