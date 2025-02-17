@@ -32,8 +32,8 @@ note dizziness decrements automatically in the mob's Life() proc.
 	while(dizziness > 100)
 		if(client)
 			var/amplitude = dizziness*(sin(dizziness * 0.044 * world.time) + 1) / 70
-			client.pixel_x = amplitude * sin(0.008 * dizziness * world.time)
-			client.pixel_y = amplitude * cos(0.008 * dizziness * world.time)
+			client.pixel_x = amplitude * sin(0.008 * dizziness * world.time) * ALCOHOLIC_DIZZY_MULTIPLIER // Outpost 21 edit - Booze code
+			client.pixel_y = amplitude * cos(0.008 * dizziness * world.time) * ALCOHOLIC_DIZZY_MULTIPLIER // Outpost 21 edit - Booze code
 
 		sleep(1)
 	//endwhile - reset the pixel offsets to zero

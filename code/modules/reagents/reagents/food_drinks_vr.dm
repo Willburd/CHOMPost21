@@ -192,9 +192,9 @@
 
 	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
 		if(dose * strength >= strength) // Early warning
-			M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
+			M.make_dizzy(24 * ALCOHOLIC_EFFECT_MULTIPLIER) // Intentionally higher than normal to compensate for it's previous effects. // Outpost 21 edit - Booze code
 		if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
-			M.slurring = max(M.slurring, 30)
+			M.slurring = max(M.slurring, 30 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
 /datum/reagent/ethanol/bulldog
 	name = REAGENT_BULLDOG

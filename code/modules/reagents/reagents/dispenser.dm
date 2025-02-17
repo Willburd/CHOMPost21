@@ -88,7 +88,7 @@
 	color = "#404030"
 	cup_prefix = "alcoholic"
 
-	ingest_met = REM * 2
+	ingest_met = REM * 2 * ALCOHOLIC_EFFECT_MULTIPLIER
 
 	var/nutriment_factor = 0
 	var/strength = 10 // This is, essentially, units between stages - the lower, the stronger. Less fine tuning, more clarity.
@@ -123,23 +123,23 @@
 		var/effective_dose = dose * strength_mod * (1 + volume/60) //drinking a LOT will make you go down faster
 
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol)) // Early warning
-			M.make_dizzy(18) // It is decreased at the speed of 3 per tick
+			M.make_dizzy(18 * ALCOHOLIC_EFFECT_MULTIPLIER) // It is decreased at the speed of 3 per tick // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 2) // Slurring
-			M.slurring = max(M.slurring, 90)
+			M.slurring = max(M.slurring, 90 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 3) // Confusion - walking in random directions
 			M.Confuse(60)
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 4) // Blurry vision
-			M.eye_blurry = max(M.eye_blurry, 30)
+			M.eye_blurry = max(M.eye_blurry, 30 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 5) // Drowsyness - periodically falling asleep
-			M.drowsyness = max(M.drowsyness, 60)
+			M.drowsyness = max(M.drowsyness, 60 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 6) // Toxic dose
 			M.add_chemical_effect(CE_ALCOHOL_TOXIC, toxicity*3)
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 7) // Pass out
-			M.Paralyse(60)
-			M.Sleeping(90)
+			M.Paralyse(60 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
+			M.Sleeping(90 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
 		if(druggy != 0)
-			M.druggy = max(M.druggy, druggy*3)
+			M.druggy = max(M.druggy, druggy*3 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
 		if(adj_temp > 0 && M.bodytemperature < targ_temp) // 310 is the normal bodytemp. 310.055
 			M.bodytemperature = min(targ_temp, M.bodytemperature + (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
@@ -147,7 +147,7 @@
 			M.bodytemperature = min(targ_temp, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 
 		if(halluci)
-			M.hallucination = max(M.hallucination, halluci*3)
+			M.hallucination = max(M.hallucination, halluci*3 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
 /datum/reagent/ethanol/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	var/ep_base_power = 60	//base nutrition gain for ethanol-processing synthetics, reduced by alcohol strength
