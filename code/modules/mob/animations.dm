@@ -51,7 +51,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 
 	jitteriness = min(1000, jitteriness + amount)	// store what will be new value
 													// clamped to max 1000
-	if(jitteriness > 100 && !is_jittery)
+	if(jitteriness > 10 && !is_jittery) // Outpost 21 edit - lowered jittery threshold
 		spawn(0)
 			jittery_process()
 
@@ -61,7 +61,7 @@ note dizziness decrements automatically in the mob's Life() proc.
 	//var/old_x = pixel_x
 	//var/old_y = pixel_y
 	is_jittery = 1
-	while(jitteriness > 100)
+	while(jitteriness > 10) // Outpost 21 edit - lowered jittery threshold
 //		var/amplitude = jitteriness*(sin(jitteriness * 0.044 * world.time) + 1) / 70
 //		pixel_x = amplitude * sin(0.008 * jitteriness * world.time)
 //		pixel_y = amplitude * cos(0.008 * jitteriness * world.time)

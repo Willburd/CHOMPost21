@@ -239,6 +239,10 @@
 	..()
 
 	M.fear = max((M.fear - 3),0)
+	// Outpost 21 edit begin - calm anxiety
+	M.jitteriness = max((M.jitteriness - 2),0)
+	M.stuttering = max((M.stuttering - 2),0)
+	// Outpost 21 edit end
 
 /datum/reagent/drugs/paroxetine
 	name = REAGENT_PAROXETINE
@@ -254,6 +258,10 @@
 	..()
 
 	M.fear = max((M.fear - 6),0)
+	// Outpost 21 edit begin - calm anxiety
+	M.jitteriness = max((M.jitteriness - 2),0)
+	M.stuttering = max((M.stuttering - 2),0)
+	// Outpost 21 edit end
 	if(prob(5) && prob_proc == TRUE)
 		to_chat(M, span_warning("Everything feels out of control..."))
 		M.hallucination += 200
@@ -268,3 +276,12 @@
 	high_message_list = list("You feel sluggish...", "You feel calm and collected.")
 	sober_message_list = list("You feel so much more antsy...", "Your concentration wavers.")
 	metabolism = REM * 0.02 // outpost 21 edit - require less a round
+
+// Outpost 21 edit begin - calm anxiety
+/datum/reagent/drugs/qerr_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+
+	M.fear = max((M.fear - 3),0)
+	M.jitteriness = max((M.jitteriness - 2),0)
+	M.stuttering = max((M.stuttering - 2),0)
+// Outpost 21 edit end
