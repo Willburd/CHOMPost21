@@ -4,14 +4,32 @@
 	icon_state = "sterile"
 
 /obj/item/storage/box/bloodpacks/Initialize()
-		. = ..()
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
+	. = ..()
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+
+// Outpost 21 edit begin - Actual blood packs
+/obj/item/storage/box/bloodpacks_full
+	name = "blood bags"
+	desc = "This box contains loaded blood packs."
+	icon_state = "sterile"
+
+/obj/item/storage/box/bloodpacks_full/Initialize()
+	. = ..()
+	new /obj/item/reagent_containers/blood/APlus(src)
+	new /obj/item/reagent_containers/blood/AMinus(src)
+	new /obj/item/reagent_containers/blood/BPlus(src)
+	new /obj/item/reagent_containers/blood/BMinus(src)
+	new /obj/item/reagent_containers/blood/OPlus(src)
+	new /obj/item/reagent_containers/blood/OMinus(src)
+	new /obj/item/reagent_containers/blood/synthblood(src)
+
+// Outpost 21 edit end
 
 /obj/item/reagent_containers/blood
 	name = "IV pack"
