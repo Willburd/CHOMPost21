@@ -871,8 +871,8 @@
 	mouse_opacity = 0
 	var/obj/screen/movable/mapper_holder/parent
 
-/obj/screen/mapper/New()
-	..()
+/obj/screen/mapper/Initialize(mapload)
+	. = ..()
 	parent = loc
 
 /obj/screen/mapper/Destroy()
