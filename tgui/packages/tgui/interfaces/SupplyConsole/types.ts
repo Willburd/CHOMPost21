@@ -11,6 +11,8 @@ export type Data = {
   modal: modalData;
   supply_packs: supplyPack[];
   categories: string[];
+  price_mod: BooleanLike; // Outpost 21 edit - Points or thalers
+  cash_points: number; // Outpost 21 edit - Points or thalers
 };
 
 export type modalData = {

@@ -15,6 +15,7 @@
 	var/active_category = null
 	var/menu_tab = 0
 	var/list/expanded_packs = list()
+	var/price_mode = FALSE // Show in supply points(TRUE) or thalers(FALSE)
 
 // Supply control console
 /obj/machinery/computer/supplycomp/control
@@ -156,6 +157,8 @@
 	data["receipts"] = receipts
 	data["contraband"] = can_order_contraband || (authorization & SUP_CONTRABAND)
 	data["modal"] = tgui_modal_data(src)
+	data["price_mod"] = price_mode // Outpost 21 edit - Points or thalers
+	data["cash_points"] = SSsupply.points_per_money // Outpost 21 edit - Points or thalers
 	return data
 
 /obj/machinery/computer/supplycomp/tgui_static_data(mob/user)
@@ -484,7 +487,11 @@
 				if("force_shuttle")
 					shuttle.force_launch(src)
 			. = TRUE
-
+		// Outpost 21 edit begin - Points or thalers
+		if("change_cash_mode")
+			price_mode = !price_mode
+			. = TRUE
+		// Outpost 21 edit end
 	add_fingerprint(ui.user)
 
 /obj/machinery/computer/supplycomp/proc/post_signal(var/command)

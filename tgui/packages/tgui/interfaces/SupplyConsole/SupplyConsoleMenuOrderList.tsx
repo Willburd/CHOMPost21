@@ -6,7 +6,7 @@ import type { Data } from './types';
 export const SupplyConsoleMenuOrderList = (props) => {
   const { act, data } = useBackend<Data>();
   const { mode } = props;
-  const { orders, order_auth, supply_points } = data;
+  const { orders, order_auth, supply_points, cash_points } = data; // Outpost 21 edit - Points or thalers
 
   const displayedOrders = orders.filter(
     (val) => val.status === mode || mode === 'All',
@@ -75,7 +75,7 @@ export const SupplyConsoleMenuOrderList = (props) => {
                     )
                   }
                 >
-                  {field.entry}
+                  {field.field === "Cost" ? (field.entry + "(" + (order.cost * cash_points) + "₮)") : field.entry}
                 </LabeledList.Item>
               ) : (
                 ''
