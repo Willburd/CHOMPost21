@@ -57,17 +57,15 @@ export const SupplyConsoleShuttleStatus = (props) => {
   return (
     <Section>
       <LabeledList>
-        <LabeledList.Item label="Reserve">
-          {' '}
-          {/* Outpost 21 edit - Points or thalers */}
-          <AnimatedNumber
-            value={supply_points * (price_mod ? 1 : cash_points)}
-          />
+        <LabeledList.Item label="Reserve"> {/* Outpost 21 edit - Points or thalers */}
+          <AnimatedNumber value={supply_points * (price_mod ? 1 : cash_points)} />
           <Button
-            tooltip={price_mod ? 'Supply Points' : 'Thalers'}
-            onClick={() => act('change_cash_mode')}
-          >
-            {price_mod === 1 ? 'SP' : '₮'}
+            tooltip={price_mod ? "Supply Points" : "Thalers"}
+            onClick={() =>
+              act('change_cash_mode')
+            }
+            >
+              {price_mod === 1 ? "SP" : "₮"}
           </Button>
         </LabeledList.Item>
       </LabeledList>

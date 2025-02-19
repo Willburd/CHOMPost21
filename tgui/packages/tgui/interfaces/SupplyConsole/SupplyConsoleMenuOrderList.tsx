@@ -75,9 +75,7 @@ export const SupplyConsoleMenuOrderList = (props) => {
                     )
                   }
                 >
-                  {field.field === 'Cost'
-                    ? field.entry + '(' + order.cost * cash_points + '₮)'
-                    : field.entry}
+                  {field.field === "Cost" ? (field.entry + "(" + (order.cost * cash_points) + "₮)") : field.entry}
                 </LabeledList.Item>
               ) : (
                 ''
