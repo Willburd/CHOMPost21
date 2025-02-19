@@ -253,10 +253,12 @@
 	var/spell = /spell/targeted/projectile/magic_missile //just a placeholder to avoid runtimes if someone spawned the generic
 	var/spellname = "sandbox"
 	var/used = 0
+	icon = 'icons/obj/library.dmi'
 	name = "spellbook of "
 	uses = 1
 	max_uses = 1
 	desc = "This template spellbook was never meant for the eyes of man..."
+	origin_tech = list(TECH_ARCANE = 1)
 
 /obj/item/spellbook/oneuse/Initialize(mapload)
 	. = ..()
