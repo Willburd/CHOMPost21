@@ -1,0 +1,715 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/turf/simulated/floor/cult,
+/area/submap/outpost21/dark_wizard_den)
+"c" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"e" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"f" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/pill_bottle/dice,
+/obj/item/storage/pill_bottle/dice,
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"g" = (
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"h" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"j" = (
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lamp/clown{
+	pixel_y = 15;
+	pixel_x = -7
+	},
+/obj/item/toy/figure/wizard,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"k" = (
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"l" = (
+/obj/structure/sign/painting/away_areas{
+	pixel_x = 32
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"m" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"n" = (
+/turf/simulated/wall/cult,
+/area/submap/outpost21/dark_wizard_den)
+"o" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"p" = (
+/obj/structure/sign/painting/away_areas{
+	pixel_x = -32
+	},
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"q" = (
+/obj/structure/bookcase{
+	name = "bookcase (Fiction)"
+	},
+/obj/item/spellbook/oneuse/horsemask,
+/obj/item/spellbook/oneuse/blind,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"r" = (
+/obj/machinery/computer/security/wooden_tv,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"s" = (
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"t" = (
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"u" = (
+/obj/structure/table/woodentable,
+/obj/item/deck/holder,
+/obj/item/deck/cards,
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"v" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"w" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/dicecup,
+/obj/item/threadneedle,
+/obj/item/storage/dicecup,
+/obj/item/storage/dicecup,
+/obj/item/storage/dicecup,
+/obj/item/storage/dicecup,
+/obj/item/storage/dicecup,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
+/obj/item/storage/pill_bottle/dice_nerd,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"x" = (
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lamp/green{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/obj/structure/sign/painting/away_areas{
+	pixel_x = -32
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"y" = (
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lamp/green{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"A" = (
+/obj/structure/table/woodentable,
+/obj/item/paper_bin{
+	pixel_y = 3
+	},
+/obj/item/pen/invisible,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"B" = (
+/obj/structure/bed/chair/wood/wings,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"C" = (
+/obj/structure/bookcase{
+	name = "bookcase (Fiction)"
+	},
+/obj/item/spellbook/oneuse/forcewall,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"D" = (
+/obj/structure/flora/pottedplant/flower,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"E" = (
+/obj/structure/flora/pottedplant/crystal,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"F" = (
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"G" = (
+/obj/structure/bookcase{
+	name = "bookcase (Fiction)"
+	},
+/obj/structure/sign/painting/away_areas{
+	pixel_x = -32
+	},
+/obj/item/spellbook/oneuse/fireball,
+/obj/item/spellbook/oneuse/smoke,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"H" = (
+/obj/effect/rune,
+/obj/machinery/artifact,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"I" = (
+/obj/structure/fireplace{
+	density = 0
+	},
+/turf/simulated/floor/cult,
+/area/submap/outpost21/dark_wizard_den)
+"J" = (
+/obj/structure/sign/painting/away_areas{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"L" = (
+/obj/structure/flora/pottedplant/large,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"M" = (
+/obj/structure/flora/pottedplant/smalltree,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"N" = (
+/turf/template_noop,
+/area/submap/outpost21/dark_wizard_den)
+"O" = (
+/obj/structure/flora/pottedplant/subterranean,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"P" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"Q" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"R" = (
+/obj/structure/flora/pottedplant/smalltree,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"S" = (
+/obj/structure/table/woodentable,
+/obj/item/deck/cah,
+/obj/item/deck/cah/black,
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"T" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/rddouble,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"U" = (
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/submap/outpost21/dark_wizard_den)
+"V" = (
+/obj/structure/sign/painting/away_areas{
+	pixel_y = 32
+	},
+/obj/structure/sign/painting/away_areas{
+	pixel_x = 32
+	},
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lamp/green{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"W" = (
+/obj/structure/sign/painting/away_areas{
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/blue2,
+/area/submap/outpost21/dark_wizard_den)
+"X" = (
+/obj/structure/sign/painting/away_areas{
+	pixel_y = 32
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+"Y" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/dark_wizard_den)
+"Z" = (
+/obj/structure/bookcase{
+	name = "bookcase (Fiction)"
+	},
+/obj/item/spellbook/oneuse/knock,
+/obj/item/spellbook/oneuse/charge,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/dark_wizard_den)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+c
+c
+c
+c
+c
+c
+c
+c
+U
+U
+U
+U
+U
+c
+c
+c
+c
+c
+a
+"}
+(3,1,1) = {"
+a
+c
+c
+N
+N
+N
+n
+n
+n
+n
+n
+n
+n
+U
+U
+U
+N
+c
+c
+a
+"}
+(4,1,1) = {"
+a
+c
+c
+N
+n
+n
+n
+F
+E
+y
+w
+A
+n
+n
+n
+U
+U
+U
+k
+a
+"}
+(5,1,1) = {"
+a
+c
+N
+n
+n
+s
+F
+s
+g
+g
+e
+F
+s
+p
+n
+n
+U
+n
+k
+a
+"}
+(6,1,1) = {"
+a
+N
+N
+n
+X
+v
+s
+s
+g
+g
+g
+s
+H
+s
+y
+n
+U
+U
+U
+a
+"}
+(7,1,1) = {"
+a
+N
+N
+n
+Y
+F
+s
+s
+g
+g
+g
+s
+F
+s
+o
+n
+U
+U
+N
+a
+"}
+(8,1,1) = {"
+a
+N
+n
+n
+Y
+v
+s
+n
+n
+n
+n
+n
+s
+F
+s
+n
+n
+U
+N
+a
+"}
+(9,1,1) = {"
+a
+N
+n
+x
+h
+g
+g
+n
+O
+G
+q
+n
+W
+g
+g
+M
+n
+U
+N
+a
+"}
+(10,1,1) = {"
+a
+N
+n
+J
+e
+g
+g
+Q
+s
+s
+F
+n
+g
+g
+g
+F
+Q
+U
+U
+a
+"}
+(11,1,1) = {"
+a
+N
+n
+L
+g
+g
+g
+n
+V
+C
+Z
+n
+W
+g
+g
+R
+n
+U
+U
+a
+"}
+(12,1,1) = {"
+a
+N
+n
+n
+r
+F
+P
+n
+n
+n
+n
+n
+s
+s
+F
+n
+n
+U
+N
+a
+"}
+(13,1,1) = {"
+a
+c
+N
+n
+I
+F
+s
+s
+m
+m
+m
+F
+F
+s
+t
+n
+U
+U
+N
+a
+"}
+(14,1,1) = {"
+a
+c
+N
+n
+b
+F
+s
+B
+f
+S
+u
+v
+s
+F
+j
+n
+U
+U
+k
+a
+"}
+(15,1,1) = {"
+a
+c
+N
+n
+n
+l
+s
+s
+e
+e
+e
+s
+l
+T
+n
+n
+U
+n
+k
+a
+"}
+(16,1,1) = {"
+a
+c
+c
+N
+n
+n
+n
+D
+s
+s
+s
+y
+n
+n
+n
+U
+U
+k
+k
+a
+"}
+(17,1,1) = {"
+a
+c
+c
+N
+N
+N
+n
+n
+n
+n
+n
+n
+n
+U
+U
+U
+N
+c
+c
+a
+"}
+(18,1,1) = {"
+a
+c
+c
+c
+c
+N
+N
+N
+N
+N
+U
+U
+U
+U
+c
+c
+c
+c
+c
+a
+"}
+(19,1,1) = {"
+a
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+c
+a
+"}
+(20,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

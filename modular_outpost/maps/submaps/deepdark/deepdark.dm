@@ -49,6 +49,7 @@
 #include "cliff_B.dmm"
 #include "cliff_C.dmm"
 #include "cliff_D.dmm"
+#include "wizard_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -182,7 +183,6 @@
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 15
-
 //////////////////////////////////////////////////////////////
 // Retired secrets
 
@@ -393,7 +393,7 @@
 	desc = "Crashed ufo."
 	mappath = "modular_outpost/maps/submaps/deepdark/crashed_ufo.dmm"
 	allow_duplicates = FALSE
-	discard_prob = 75
+	discard_prob = 80
 	cost = 20
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/maint_A
@@ -459,6 +459,15 @@
 	allow_duplicates = TRUE
 	discard_prob = 35
 	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/wizard_A
+	name = "Wizard A"
+	desc = "Wizard house."
+	mappath = "modular_outpost/maps/submaps/deepdark/wizard_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 80
+	cost = 15
+
 
 //////////////////////////////////////////////////////////////
 // Area definitions
@@ -535,6 +544,18 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OTHERWORLDLY
+	haunted = TRUE
+
+/area/submap/outpost21/dark_wizard_den
+	name = "\improper Stale Donut"
+	icon_state = "red2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	sound_env = SOUND_ENVIRONMENT_LIVINGROOM
+	ambience = AMBIENCE_FOREBODING
+	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
+	always_unpowered = FALSE
+	requires_power = FALSE
 
 //////////////////////////////////////////////////////////////
 // Liminal area specialty controllers
