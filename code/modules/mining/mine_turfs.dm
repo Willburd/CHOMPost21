@@ -657,7 +657,7 @@ var/list/mining_overlay_cache = list()
 			M.flash_eyes()
 			if(prob(50))
 				M.Stun(5)
-			M.make_jittery(1000) //SHAKY
+			M.make_jittery(200) //SHAKY // Outpost 21 edit - Xenochi balance, 1000 to 200 jitters
 		if(prob(25))
 			excavate_find(prob(25), finds[1])
 	else if(rand(1,500) == 1)
