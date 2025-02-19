@@ -17,7 +17,7 @@
 			T.amount = winner_sum
 			T.date = current_date_string
 			T.time = stationtime2text()
-			T.source_terminal = "Sif TCD Terminal #[rand(111,333)]"
+			T.source_terminal = "Muriki TCD Terminal #[rand(111,333)]" // Outpost 21 edit - Muriki and not Sif
 			D.transaction_log.Add(T)
 
 			deposit_success = 1
