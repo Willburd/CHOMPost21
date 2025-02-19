@@ -5,7 +5,7 @@ import type { Data, modalData } from './types';
 
 export const viewCrateContents = (modal: modalData) => {
   const { act, data } = useBackend<Data>();
-  const { supply_points } = data;
+  const { supply_points, price_mod, cash_points } = data; // Outpost 21 edit - Points or thalers
   const { name, cost, desc, manifest, ref, random } = modal.args;
   return (
     <Section
@@ -19,7 +19,9 @@ export const viewCrateContents = (modal: modalData) => {
           disabled={cost > supply_points}
           onClick={() => act('request_crate', { ref: ref })}
         >
-          {'Buy - ' + cost + ' points'}
+          {'Buy - ' +
+            cost * (price_mod ? 1 : cash_points) +
+            (price_mod === 1 ? ' points' : '₮')}
         </Button>
       }
     >
