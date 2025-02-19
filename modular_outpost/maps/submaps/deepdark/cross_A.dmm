@@ -247,7 +247,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "mu" = (
-/turf/space,
+/turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
 "nn" = (
 /obj/structure/bed/chair/wheelchair,
@@ -1186,7 +1186,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "Xv" = (
-/turf/space,
+/turf/template_noop,
 /area/template_noop)
 "Xz" = (
 /obj/structure/table/standard,

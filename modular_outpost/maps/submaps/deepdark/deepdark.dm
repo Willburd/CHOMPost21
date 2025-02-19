@@ -44,6 +44,7 @@
 #include "range_A.dmm"
 #include "rat_A.dmm"
 #include "ritual_A.dmm"
+#include "xenolab_A.dmm"
 #include "maint_A.dmm"
 #include "maint_B.dmm"
 #include "maint_C.dmm"
@@ -215,7 +216,7 @@
 	discard_prob = 60
 	cost = 15
 
-/datum/map_template/outpost21/muriki/caves_deepdark/garden_B
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/garden_B
 	name = "Garden B"
 	desc = "Old Secret."
 	mappath = "modular_outpost/maps/submaps/deepdark/garden_B.dmm"
@@ -243,6 +244,14 @@
 	name = "Ritual A"
 	desc = "Old Secret."
 	mappath = "modular_outpost/maps/submaps/deepdark/ritual_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/xenolab_A
+	name = "Xenolab A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/xenolab_A.dmm"
 	allow_duplicates = FALSE
 	discard_prob = 60
 	cost = 15

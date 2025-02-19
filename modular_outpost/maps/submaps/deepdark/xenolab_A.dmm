@@ -1,0 +1,957 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"b" = (
+/obj/effect/landmark/hostile_xenobio,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"c" = (
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"d" = (
+/obj/structure/foamedmetal,
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/rnd/xenobiology/lost)
+"e" = (
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"f" = (
+/obj/structure/disposaloutlet,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"g" = (
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"h" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"i" = (
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"j" = (
+/turf/simulated/mineral/alt/muriki,
+/area/rnd/xenobiology/lost)
+"k" = (
+/obj/structure/barricade,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"l" = (
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"m" = (
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"n" = (
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"o" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"p" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"q" = (
+/turf/template_noop,
+/area/template_noop)
+"r" = (
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic,
+/obj/structure/grille/broken,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"s" = (
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic,
+/obj/structure/grille,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"t" = (
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"u" = (
+/obj/machinery/door/window,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"v" = (
+/turf/simulated/mineral/alt/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"w" = (
+/mob/living/simple_mob/animal/space/carp/puffer,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"x" = (
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic,
+/obj/structure/grille,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"y" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"z" = (
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"A" = (
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"C" = (
+/obj/structure/barricade,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"D" = (
+/obj/structure/disposaloutlet{
+	dir = 1
+	},
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"E" = (
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"F" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"G" = (
+/obj/structure/closet/crate/mimic/cointoss,
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"H" = (
+/obj/structure/foamedmetal,
+/turf/simulated/mineral/alt/muriki,
+/area/rnd/xenobiology/lost)
+"I" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"J" = (
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"K" = (
+/turf/simulated/wall/r_wall,
+/area/rnd/xenobiology/lost)
+"L" = (
+/obj/effect/landmark/dangerous_situation,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"M" = (
+/mob/living/simple_mob/animal/space/carp/large/huge,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"N" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"O" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"Q" = (
+/obj/effect/landmark/hostile_xenobio,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"R" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"S" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 30
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"T" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"U" = (
+/obj/effect/landmark/dangerous_situation,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/rnd/xenobiology/lost)
+"W" = (
+/obj/effect/landmark/loot_spawn/low,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"X" = (
+/obj/random/cutout,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"Y" = (
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic,
+/obj/structure/grille,
+/obj/item/material/shard/shrapnel,
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+"Z" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating/muriki,
+/area/rnd/xenobiology/lost)
+
+(1,1,1) = {"
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+"}
+(2,1,1) = {"
+q
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+q
+"}
+(3,1,1) = {"
+q
+I
+I
+I
+I
+I
+I
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+I
+I
+I
+I
+q
+"}
+(4,1,1) = {"
+q
+I
+I
+I
+I
+O
+O
+O
+O
+O
+O
+O
+O
+a
+a
+O
+O
+O
+O
+O
+O
+O
+I
+I
+q
+"}
+(5,1,1) = {"
+q
+I
+I
+O
+O
+O
+O
+O
+O
+O
+O
+K
+j
+j
+K
+O
+O
+O
+O
+O
+O
+O
+O
+I
+q
+"}
+(6,1,1) = {"
+q
+I
+O
+O
+O
+O
+O
+O
+a
+a
+a
+K
+o
+E
+K
+O
+O
+O
+O
+O
+a
+a
+O
+O
+q
+"}
+(7,1,1) = {"
+q
+I
+O
+O
+a
+a
+a
+a
+a
+a
+a
+K
+C
+C
+K
+O
+O
+O
+a
+a
+a
+a
+a
+a
+q
+"}
+(8,1,1) = {"
+q
+I
+a
+K
+K
+K
+K
+K
+K
+K
+K
+K
+N
+N
+K
+K
+K
+K
+K
+K
+K
+K
+K
+O
+q
+"}
+(9,1,1) = {"
+q
+I
+a
+K
+R
+W
+z
+K
+f
+y
+z
+K
+E
+c
+K
+Q
+z
+D
+K
+f
+X
+z
+K
+O
+q
+"}
+(10,1,1) = {"
+q
+I
+a
+K
+z
+y
+z
+K
+Z
+z
+y
+K
+E
+E
+K
+z
+Q
+z
+K
+Q
+z
+z
+K
+a
+q
+"}
+(11,1,1) = {"
+q
+I
+a
+K
+w
+z
+z
+K
+z
+M
+z
+K
+E
+X
+K
+z
+z
+z
+K
+z
+t
+Q
+K
+a
+q
+"}
+(12,1,1) = {"
+q
+I
+a
+K
+P
+u
+g
+K
+Y
+u
+s
+K
+E
+E
+K
+g
+u
+m
+K
+x
+l
+r
+K
+a
+q
+"}
+(13,1,1) = {"
+q
+v
+a
+h
+F
+F
+E
+E
+A
+E
+E
+K
+E
+E
+K
+E
+E
+A
+E
+A
+J
+E
+K
+a
+q
+"}
+(14,1,1) = {"
+q
+v
+a
+h
+F
+F
+E
+E
+E
+E
+E
+C
+i
+z
+C
+E
+E
+E
+E
+E
+E
+E
+K
+a
+q
+"}
+(15,1,1) = {"
+q
+v
+a
+H
+F
+F
+L
+E
+E
+E
+E
+k
+E
+T
+E
+E
+E
+E
+E
+z
+E
+z
+K
+a
+q
+"}
+(16,1,1) = {"
+q
+v
+a
+K
+F
+E
+E
+E
+E
+n
+E
+E
+U
+p
+N
+E
+Q
+E
+E
+E
+b
+F
+K
+O
+q
+"}
+(17,1,1) = {"
+q
+I
+O
+K
+E
+z
+E
+E
+E
+E
+E
+K
+S
+e
+K
+E
+E
+E
+E
+E
+h
+F
+K
+O
+q
+"}
+(18,1,1) = {"
+q
+I
+O
+K
+K
+j
+E
+A
+E
+E
+E
+K
+A
+G
+K
+E
+E
+z
+F
+F
+F
+F
+K
+O
+q
+"}
+(19,1,1) = {"
+q
+I
+O
+j
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+K
+d
+d
+d
+a
+a
+q
+"}
+(20,1,1) = {"
+q
+I
+I
+O
+O
+O
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+v
+q
+"}
+(21,1,1) = {"
+q
+I
+I
+I
+O
+O
+O
+O
+O
+O
+O
+O
+a
+a
+a
+a
+O
+O
+O
+O
+O
+a
+a
+I
+q
+"}
+(22,1,1) = {"
+q
+I
+I
+I
+I
+I
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+O
+I
+I
+I
+q
+"}
+(23,1,1) = {"
+q
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+q
+"}
+(24,1,1) = {"
+q
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+I
+q
+"}
+(25,1,1) = {"
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+q
+"}
