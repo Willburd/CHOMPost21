@@ -5412,6 +5412,7 @@
 #include "modular_outpost\code\modules\reagents\reagents\medicine.dm"
 #include "modular_outpost\code\modules\recycling\disposal.dm"
 #include "modular_outpost\code\modules\research\origin_tech_overrides.dm"
+#include "modular_outpost\code\modules\research\designs\misc.dm"
 #include "modular_outpost\code\modules\research\designs\weapons.dm"
 #include "modular_outpost\code\modules\research\designs\circuits\circuits.dm"
 #include "modular_outpost\code\modules\resleeving\machines.dm"
