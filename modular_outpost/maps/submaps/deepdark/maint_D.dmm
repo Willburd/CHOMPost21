@@ -2,6 +2,11 @@
 "a" = (
 /turf/template_noop,
 /area/mine/unexplored/muriki/cave/deepdark)
+"h" = (
+/obj/machinery/trailblazer/yellow,
+/obj/machinery/trailblazer/yellow,
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
 "k" = (
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/cave/deepdark)
@@ -24,6 +29,10 @@
 /area/mine/explored/muriki/cave/deepdark)
 "v" = (
 /obj/structure/trash_pile,
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/obj/random/maintenance,
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "A" = (
@@ -354,7 +363,7 @@ V
 V
 a
 a
-a
+h
 a
 a
 a
@@ -485,7 +494,7 @@ a
 a
 a
 a
-k
+T
 k
 m
 a
@@ -710,7 +719,7 @@ a
 a
 m
 n
-k
+x
 k
 k
 L
@@ -755,7 +764,7 @@ k
 k
 k
 k
-k
+x
 m
 a
 a
@@ -796,7 +805,7 @@ m
 m
 v
 v
-k
+x
 k
 m
 a

@@ -1,0 +1,754 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aj" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_B)
+"as" = (
+/obj/structure/table,
+/obj/machinery/light_construct{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/submap/outpost21/yawn_B)
+"aN" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"aZ" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"dE" = (
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"eK" = (
+/obj/structure/table,
+/turf/simulated/floor/carpet,
+/area/submap/outpost21/yawn_B)
+"gu" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"gK" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"jQ" = (
+/obj/structure/closet,
+/obj/random/maintenance/research,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"jV" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"lC" = (
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_B)
+"lK" = (
+/obj/item/stack/tile/wood{
+	amount = 10
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"mQ" = (
+/obj/structure/table/woodentable,
+/obj/item/stack/tile/carpet,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/tool,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"oz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"oL" = (
+/turf/space,
+/area/submap/outpost21/yawn_B)
+"oS" = (
+/obj/machinery/light_construct,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/yawn_B)
+"qk" = (
+/obj/item/stack/tile/wood{
+	amount = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"qu" = (
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/yawn_B)
+"sI" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"sY" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"uF" = (
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"vn" = (
+/turf/space,
+/area/template_noop)
+"wu" = (
+/turf/simulated/wall,
+/area/submap/outpost21/yawn_B)
+"wv" = (
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/submap/outpost21/yawn_B)
+"ww" = (
+/obj/item/stack/material/wood{
+	amount = 10
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/yawn_B)
+"wG" = (
+/obj/structure/table/woodentable,
+/obj/item/stack/material/wood{
+	amount = 10
+	},
+/obj/item/stack/tile/carpet,
+/obj/random/drinkbottle,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"xc" = (
+/obj/structure/table/woodentable,
+/obj/item/toy/plushie/vox{
+	name = "Iggy"
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"zz" = (
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bo" = (
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Ce" = (
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"CT" = (
+/obj/structure/table,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"Du" = (
+/obj/structure/bed/chair/comfy/beige,
+/obj/item/stack/tile/carpet,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"ET" = (
+/obj/structure/bed/chair/comfy/beige,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet,
+/area/submap/outpost21/yawn_B)
+"FA" = (
+/obj/structure/table/woodentable,
+/obj/item/stack/tile/carpet,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"FK" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/steel,
+/obj/random/maintenance/engineering,
+/obj/random/tech_supply,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Gu" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"GB" = (
+/obj/structure/table/rack,
+/obj/random/maintenance/research,
+/obj/random/maintenance/engineering,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Iz" = (
+/turf/space,
+/area/mine/explored/muriki/cave/deepdark)
+"JE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/steel,
+/obj/random/maintenance/engineering,
+/obj/item/stack/cable_coil/random,
+/obj/random/tool,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Kt" = (
+/obj/machinery/light_construct{
+	dir = 1
+	},
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/yawn_B)
+"KF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Lj" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 1;
+	icon_state = "comfychair_preview"
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/carpet,
+/area/submap/outpost21/yawn_B)
+"Ne" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"PH" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"Qk" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Rz" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 1;
+	icon_state = "comfychair_preview"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Sc" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Sj" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"TR" = (
+/obj/structure/bed/chair/comfy/beige{
+	dir = 1;
+	icon_state = "comfychair_preview"
+	},
+/turf/simulated/floor/carpet,
+/area/submap/outpost21/yawn_B)
+"UA" = (
+/obj/structure/sign/directions/evac{
+	dir = 8
+	},
+/turf/simulated/wall,
+/area/submap/outpost21/yawn_B)
+"VN" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/paper{
+	info = "Through familiar halls and metal walls, we see those lost to time. Sights and sounds, and time rewound, we cannot go back to then. Though shape and form do not change, the memories grow yonder. Kept and seen by only those who brought them to each other. Soon only forgetful shadows remain and time that heals the pain. Know that we do not forget why it weighs upon our souls.";
+	name = "Some kind of note"
+	},
+/turf/simulated/floor/carpet,
+/area/submap/outpost21/yawn_B)
+"Wq" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"XA" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood/broken,
+/area/submap/outpost21/yawn_B)
+"XF" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/crate,
+/obj/random/maintenance/engineering,
+/obj/random/tool,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"XW" = (
+/obj/structure/table/woodentable,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"Yk" = (
+/obj/structure/table/woodentable,
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light_construct{
+	dir = 4
+	},
+/obj/item/toy/plushie/tinytin/sec,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"YA" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+"YV" = (
+/obj/effect/decal/cleanable/cobweb{
+	icon_state = "cobweb2"
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_B)
+"Zb" = (
+/obj/structure/bed/chair/comfy/beige,
+/turf/simulated/floor/carpet,
+/area/submap/outpost21/yawn_B)
+"ZJ" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_B)
+
+(1,1,1) = {"
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+"}
+(2,1,1) = {"
+vn
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+vn
+"}
+(3,1,1) = {"
+vn
+Iz
+Iz
+Iz
+Iz
+zz
+zz
+Ne
+gu
+Ne
+Ne
+Ne
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+vn
+"}
+(4,1,1) = {"
+vn
+Iz
+Iz
+Iz
+zz
+zz
+uF
+uF
+uF
+uF
+uF
+Ne
+Ne
+Ne
+zz
+zz
+Iz
+Iz
+Iz
+vn
+"}
+(5,1,1) = {"
+vn
+Iz
+Ne
+zz
+wv
+wu
+YA
+wu
+wu
+wu
+wu
+wu
+wu
+wu
+wu
+wu
+wv
+Iz
+Iz
+vn
+"}
+(6,1,1) = {"
+vn
+Iz
+Ne
+Ne
+wu
+ZJ
+aN
+XF
+GB
+jQ
+Gu
+FK
+wu
+wG
+Ce
+Gu
+wu
+Iz
+Iz
+vn
+"}
+(7,1,1) = {"
+vn
+Iz
+Ne
+Ne
+wu
+KF
+Gu
+Gu
+Bo
+Gu
+aN
+JE
+wu
+sY
+Sc
+Ce
+wv
+Ne
+Iz
+vn
+"}
+(8,1,1) = {"
+vn
+Iz
+Ne
+Ne
+wu
+wu
+wu
+wu
+sI
+wu
+wu
+wu
+wu
+gK
+XW
+Gu
+wu
+Ne
+Ne
+vn
+"}
+(9,1,1) = {"
+vn
+Iz
+Ne
+Ne
+wu
+Zb
+FA
+Lj
+jV
+Du
+as
+Rz
+dE
+jV
+lK
+Gu
+wu
+Ne
+Ne
+vn
+"}
+(10,1,1) = {"
+vn
+Iz
+Ne
+uF
+wu
+Kt
+jV
+XA
+Qk
+Ce
+dE
+dE
+Gu
+jV
+Wq
+oS
+wu
+uF
+zz
+vn
+"}
+(11,1,1) = {"
+vn
+zz
+zz
+uF
+wu
+Ce
+Gu
+jV
+dE
+dE
+Ce
+jV
+qu
+Ce
+jV
+Ce
+UA
+uF
+zz
+vn
+"}
+(12,1,1) = {"
+vn
+zz
+uF
+uF
+wu
+Ce
+jV
+Ce
+Ce
+YV
+wu
+Ce
+Ce
+Ce
+Gu
+Ce
+aj
+uF
+zz
+vn
+"}
+(13,1,1) = {"
+vn
+zz
+uF
+uF
+aj
+Ce
+Ce
+dE
+Gu
+qk
+Ce
+PH
+ww
+jV
+Ce
+Ce
+wv
+zz
+zz
+vn
+"}
+(14,1,1) = {"
+vn
+zz
+uF
+Ne
+wu
+Ce
+Ce
+Ce
+jV
+jV
+Ce
+oz
+dE
+Ce
+Ce
+Ce
+wu
+zz
+Iz
+vn
+"}
+(15,1,1) = {"
+vn
+zz
+Ne
+Ne
+wu
+wu
+wu
+aZ
+qu
+Zb
+eK
+TR
+jV
+aZ
+wu
+wu
+wu
+Iz
+Iz
+vn
+"}
+(16,1,1) = {"
+vn
+Iz
+Iz
+Ne
+zz
+wv
+wu
+mQ
+dE
+ET
+VN
+TR
+Ce
+CT
+wu
+wv
+zz
+Iz
+Iz
+vn
+"}
+(17,1,1) = {"
+vn
+Iz
+Iz
+Iz
+Iz
+lC
+wu
+wu
+wu
+Sj
+Yk
+xc
+wv
+wv
+wu
+oL
+Iz
+Iz
+Iz
+vn
+"}
+(18,1,1) = {"
+vn
+Iz
+Iz
+Iz
+Iz
+Iz
+uF
+uF
+zz
+zz
+zz
+zz
+zz
+zz
+Ne
+Iz
+Iz
+Iz
+Iz
+vn
+"}
+(19,1,1) = {"
+vn
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Iz
+Ne
+Ne
+Ne
+Ne
+Ne
+Iz
+Iz
+Iz
+Iz
+vn
+"}
+(20,1,1) = {"
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+vn
+"}

@@ -1,0 +1,1670 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ak" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 3";
+	name = "Cell 3 Locker"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"aS" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"bE" = (
+/obj/machinery/chem_master/condimaster,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"bI" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"bW" = (
+/obj/structure/table/marble,
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "kitchen";
+	layer = 3.1;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"bX" = (
+/obj/machinery/appliance/cooker/oven,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"cg" = (
+/obj/structure/closet/secure_closet/bar,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"cw" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"cA" = (
+/obj/machinery/appliance/cooker/fryer,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"cB" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"cC" = (
+/obj/machinery/door/airlock{
+	name = "Bar Backroom";
+	req_access = list(25)
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"cZ" = (
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"ds" = (
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "bar";
+	layer = 3.1;
+	name = "Bar Shutters"
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"dC" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/outpost21/yawn_A)
+"ew" = (
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"eH" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"fe" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"fR" = (
+/obj/structure/musician/piano{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"fX" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"gf" = (
+/obj/machinery/door/window/southleft{
+	dir = 4;
+	name = "Bar";
+	req_access = list(25)
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"gI" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"hx" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/head/that{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "bar";
+	name = "Bar Shutters";
+	pixel_x = -26
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"hB" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"hM" = (
+/obj/structure/closet/secure_closet/brig{
+	id = "Cell 2";
+	name = "Cell 2 Locker"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"hN" = (
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yawn_A)
+"in" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"iM" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"jQ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"jR" = (
+/obj/structure/railing{
+	flags = null
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"kF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 2 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "visitsec";
+	name = "Visitation Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"ll" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"lt" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 1;
+	name = "Bar"
+	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"mg" = (
+/obj/structure/bed/chair/comfy/black,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"mJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 2 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"mY" = (
+/obj/machinery/door/firedoor/glass/hidden,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yawn_A)
+"nh" = (
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"nk" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 2 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "visitsec";
+	name = "Visitation Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"nu" = (
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	pixel_y = 32
+	},
+/obj/structure/table/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"oc" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Bar Maintenance";
+	req_access = list(25)
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"oE" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"pb" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"ph" = (
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"pj" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"qo" = (
+/obj/structure/table/marble,
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "kitchen";
+	layer = 3.1;
+	name = "Kitchen Shutters"
+	},
+/obj/machinery/door/window/westright{
+	req_access = list(28)
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"rl" = (
+/obj/structure/closet/gmcloset{
+	icon_state = "black";
+	name = "formal wardrobe"
+	},
+/obj/item/glass_jar,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"ry" = (
+/obj/structure/table/gamblingtable,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"rJ" = (
+/obj/structure/bed/padded,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"sc" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"sI" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 1 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"sZ" = (
+/turf/simulated/wall,
+/area/submap/outpost21/yawn_A)
+"tw" = (
+/obj/machinery/disposal,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"ue" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"uh" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"uo" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"uB" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"uI" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	flags = null
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"vJ" = (
+/obj/machinery/door/airlock/maintenance{
+	name = "Kitchen Maintenance";
+	req_access = list(28)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/submap/outpost21/yawn_A)
+"xf" = (
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"xh" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"xI" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"xV" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/machinery/door/airlock/glass{
+	name = "Kitchen";
+	req_access = list(28)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"yh" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 3 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "visitsec";
+	name = "Visitation Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"yj" = (
+/turf/simulated/flesh,
+/area/submap/outpost21/yawn_A)
+"ym" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/yawn_A)
+"ys" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"zP" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light/small,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"Ao" = (
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"Av" = (
+/turf/template_noop,
+/area/template_noop)
+"AY" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"Bs" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"BB" = (
+/obj/machinery/vending/boozeomat,
+/turf/simulated/wall,
+/area/submap/outpost21/yawn_A)
+"BI" = (
+/obj/machinery/door/firedoor/glass/hidden,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"Cg" = (
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Cy" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"CN" = (
+/obj/machinery/atm,
+/turf/simulated/wall,
+/area/submap/outpost21/yawn_A)
+"Db" = (
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"DZ" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/sink/kitchen{
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"FZ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 3 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"Ge" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"Gj" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"He" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -4;
+	pixel_y = 30
+	},
+/obj/machinery/appliance/cooker/grill,
+/obj/machinery/button/remote/blast_door{
+	id = "kitchen";
+	name = "Kitchen shutters";
+	pixel_x = 8;
+	pixel_y = 25
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"HN" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"HP" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"HR" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/item/clothing/head/cakehat,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"Ik" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 2 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "visitsec";
+	name = "Visitation Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"Is" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/submap/outpost21/yawn_A)
+"Ix" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"IJ" = (
+/turf/simulated/floor/tiled/freezer,
+/area/submap/outpost21/yawn_A)
+"Jb" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"Jh" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"JV" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/outpost21/yawn_A)
+"KL" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 1 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"Lb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 3 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "visitsec";
+	name = "Visitation Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"Lx" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"LC" = (
+/obj/structure/table/woodentable,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"LU" = (
+/obj/machinery/status_display,
+/turf/simulated/wall,
+/area/submap/outpost21/yawn_A)
+"Mg" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/outpost21/yawn_A)
+"No" = (
+/obj/machinery/door/blast/shutters{
+	id = "kitchen2";
+	layer = 3.1;
+	name = "Kitchen Shutters"
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"Ns" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"ND" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"Oj" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"Ok" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/sign/securearea{
+	desc = "Under the painting a plaque reads: 'While the meat grinder may not have spared you, fear not. Not one part of you has gone to waste... You were delicious.'";
+	icon_state = "monkey_painting";
+	name = "Mr. Deempisi portrait";
+	pixel_x = 28;
+	pixel_y = 4
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"Oo" = (
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	pixel_y = 32
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"Ox" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"OD" = (
+/obj/structure/bed/chair/wood/wings{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"OR" = (
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"PE" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/yawn_A)
+"PR" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"PY" = (
+/obj/structure/bed/chair/wood/wings,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"QD" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/yawn_A)
+"QU" = (
+/obj/machinery/holosign/bar{
+	id = "barsign"
+	},
+/turf/simulated/wall,
+/area/submap/outpost21/yawn_A)
+"Rk" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"Ru" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/lino,
+/area/submap/outpost21/yawn_A)
+"Rw" = (
+/obj/structure/closet/secure_closet/freezer/kitchen,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/button/remote/blast_door{
+	id = "kitchen2";
+	name = "Kitchen shutters";
+	pixel_x = 8;
+	pixel_y = 25
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"Sz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"To" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"TD" = (
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"TP" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"UD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "Cell 3 Blastdoor";
+	name = "Security Blast Door";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	icon_state = "shutter0";
+	id = "visitsec";
+	name = "Visitation Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"UJ" = (
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/floor,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/carpet,
+/obj/structure/closet{
+	name = "bar decoration supplies"
+	},
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"UZ" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/foodcart,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"Vx" = (
+/obj/machinery/door/airlock{
+	name = "Unisex Restrooms"
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/freezer,
+/area/submap/outpost21/yawn_A)
+"Xj" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/vending/dinnerware{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"Xp" = (
+/obj/machinery/door/airlock/maintenance{
+	req_access = list(12)
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor,
+/area/submap/outpost21/yawn_A)
+"Xt" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"Xx" = (
+/obj/structure/table/woodentable,
+/obj/machinery/reagentgrinder,
+/turf/simulated/floor/wood,
+/area/submap/outpost21/yawn_A)
+"XB" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"XJ" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"XL" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"XZ" = (
+/obj/machinery/appliance/mixer/cereal,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+"YK" = (
+/turf/simulated/floor,
+/area/submap/outpost21/yawn_A)
+"YL" = (
+/obj/machinery/holosign/bar{
+	id = "barsign"
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/yawn_A)
+"Ze" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yawn_A)
+"ZN" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yawn_A)
+"ZQ" = (
+/obj/machinery/appliance/mixer/candy,
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/yawn_A)
+
+(1,1,1) = {"
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+"}
+(2,1,1) = {"
+Av
+Ox
+Ox
+Ox
+ew
+ew
+ew
+XJ
+Lx
+XJ
+Lx
+XJ
+ew
+XJ
+ew
+ew
+ew
+XJ
+Lx
+XJ
+Ox
+Ox
+Ox
+Ox
+Av
+"}
+(3,1,1) = {"
+Av
+Ox
+Ox
+Ox
+XJ
+Lx
+ym
+ym
+YK
+ym
+nh
+ym
+sZ
+sZ
+dC
+sZ
+sZ
+ym
+Cg
+XJ
+XJ
+Ox
+Ox
+Ox
+Av
+"}
+(4,1,1) = {"
+Av
+Ox
+Ox
+Ox
+yj
+ph
+nh
+Ze
+Ze
+nh
+cB
+nh
+Xp
+IJ
+JV
+IJ
+Mg
+ym
+ph
+ph
+iM
+Ox
+Ox
+Ox
+Av
+"}
+(5,1,1) = {"
+Av
+Ox
+Ox
+Ox
+sZ
+nh
+sZ
+sZ
+oc
+sZ
+sZ
+nh
+sZ
+Is
+Is
+JV
+ym
+ym
+ym
+xI
+sZ
+XJ
+Ox
+Ox
+Av
+"}
+(6,1,1) = {"
+Av
+Ox
+Ox
+ew
+sZ
+nh
+sZ
+UJ
+xf
+Xx
+sZ
+sZ
+sZ
+sZ
+sZ
+Vx
+CN
+sZ
+ym
+ph
+yj
+XJ
+XJ
+Ox
+Av
+"}
+(7,1,1) = {"
+Av
+Ox
+ew
+ew
+sZ
+nh
+sZ
+Xt
+ph
+bE
+sZ
+hx
+Cy
+LU
+tw
+xf
+in
+in
+ym
+ph
+yj
+yj
+XJ
+ew
+Av
+"}
+(8,1,1) = {"
+Av
+Ox
+ew
+Cg
+sZ
+Ze
+sZ
+cg
+QD
+ph
+cC
+cZ
+cZ
+ds
+Jb
+Ns
+Oj
+zP
+ym
+ph
+yj
+yj
+XJ
+ew
+Av
+"}
+(9,1,1) = {"
+Av
+ew
+ew
+Cg
+sZ
+nh
+sZ
+rl
+Ok
+LC
+BB
+cZ
+cZ
+ds
+Rk
+xf
+oE
+oE
+ym
+KL
+sI
+yj
+XJ
+ew
+Av
+"}
+(10,1,1) = {"
+Av
+ew
+Cg
+Cg
+xI
+XL
+sZ
+sZ
+sZ
+sZ
+sZ
+uB
+OR
+ds
+Rk
+xf
+Ns
+in
+xI
+ph
+ph
+yj
+XJ
+ew
+Av
+"}
+(11,1,1) = {"
+Av
+ew
+Cg
+sZ
+sZ
+vJ
+sZ
+ue
+DZ
+Jh
+sZ
+Oo
+cZ
+ds
+Rk
+xf
+mg
+zP
+ym
+ph
+ph
+yj
+ew
+ew
+Av
+"}
+(12,1,1) = {"
+Av
+ew
+fX
+sZ
+pj
+eH
+sZ
+ue
+eH
+Gj
+sZ
+nu
+gf
+ds
+Rk
+xf
+xf
+Ge
+ym
+ph
+ph
+yj
+ew
+Ox
+Av
+"}
+(13,1,1) = {"
+Av
+ew
+Cg
+sZ
+Rw
+eH
+XZ
+ZQ
+eH
+Xj
+sZ
+HP
+Ru
+Ru
+jQ
+xf
+ph
+ym
+ym
+sZ
+xI
+yj
+XJ
+Ox
+Av
+"}
+(14,1,1) = {"
+Av
+ew
+Cg
+No
+eH
+eH
+eH
+uh
+eH
+eH
+bW
+uo
+ph
+ph
+xf
+OD
+OD
+kF
+hM
+To
+ph
+ph
+Lx
+Ox
+Av
+"}
+(15,1,1) = {"
+Av
+ew
+ew
+No
+eH
+eH
+fe
+Gj
+eH
+eH
+bW
+ys
+ph
+xf
+PY
+ry
+TD
+nk
+ZN
+ph
+ph
+ph
+XJ
+Ox
+Av
+"}
+(16,1,1) = {"
+Av
+Ox
+ew
+sZ
+jR
+XB
+eH
+eH
+eH
+eH
+bW
+PR
+xf
+xf
+PY
+TD
+TD
+Ik
+rJ
+hB
+mJ
+yj
+XJ
+Ox
+Av
+"}
+(17,1,1) = {"
+Av
+ew
+ew
+sZ
+uI
+eH
+gI
+HR
+eH
+fe
+sZ
+Oj
+ll
+xf
+xf
+cw
+cw
+ym
+xI
+sZ
+sZ
+yj
+Ox
+Ox
+Av
+"}
+(18,1,1) = {"
+Av
+ew
+Cg
+sZ
+eH
+eH
+sZ
+He
+eH
+fe
+TP
+fR
+xf
+Ns
+xf
+OD
+OD
+yh
+ak
+To
+FZ
+XJ
+Ox
+Ox
+Av
+"}
+(19,1,1) = {"
+Av
+ew
+Cg
+yj
+eH
+pb
+sZ
+cA
+eH
+HN
+TP
+xf
+Ns
+xf
+ph
+Oj
+zP
+Lb
+ZN
+ph
+xI
+Ox
+Ox
+Ox
+Av
+"}
+(20,1,1) = {"
+Av
+ew
+XJ
+yj
+uh
+UZ
+sZ
+bX
+eH
+eH
+xV
+Db
+xf
+xf
+xf
+cw
+cw
+UD
+rJ
+hB
+FZ
+XJ
+Ox
+Ox
+Av
+"}
+(21,1,1) = {"
+Av
+ew
+iM
+sZ
+sZ
+sZ
+sZ
+TP
+nh
+qo
+QU
+TP
+TP
+xf
+lt
+TP
+TP
+YL
+ym
+xI
+ym
+XJ
+Ox
+Ox
+Av
+"}
+(22,1,1) = {"
+Av
+Ox
+Lx
+Cg
+ph
+ph
+sc
+Ao
+BI
+aS
+Ao
+Ao
+aS
+Ao
+Ao
+ND
+Sz
+bI
+TP
+PE
+ph
+XJ
+Ox
+Ox
+Av
+"}
+(23,1,1) = {"
+Av
+Ox
+XJ
+XJ
+ph
+ph
+ph
+Bs
+mY
+Ao
+Ix
+yj
+yj
+ph
+Ao
+hN
+ph
+AY
+TP
+xh
+ph
+XJ
+Ox
+Ox
+Av
+"}
+(24,1,1) = {"
+Av
+Ox
+Ox
+XJ
+XJ
+iM
+iM
+iM
+iM
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Lx
+XJ
+XJ
+XJ
+XJ
+Lx
+XJ
+XJ
+Ox
+Av
+"}
+(25,1,1) = {"
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+Av
+"}

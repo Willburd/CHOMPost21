@@ -1,0 +1,1925 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aj" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ap" = (
+/turf/simulated/floor/tiled/steel,
+/area/submap/outpost21/cross_A)
+"au" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"aA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"aX" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"bc" = (
+/obj/machinery/computer/crew,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ce" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ci" = (
+/obj/machinery/chemical_dispenser/full,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"cP" = (
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cross_A)
+"dm" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"dw" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cross_A)
+"dJ" = (
+/obj/machinery/mech_recharger,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"eG" = (
+/obj/structure/table/standard,
+/obj/random/medical,
+/obj/effect/floor_decal/corner/paleblue/full,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"eI" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cross_A)
+"fa" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"fc" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ff" = (
+/obj/effect/floor_decal/corner/pink/full{
+	dir = 4
+	},
+/obj/structure/sink{
+	dir = 4;
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"fj" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/structure/fireaxecabinet{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/outpost21/cross_A)
+"fr" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/structure/sign/nosmoking_1{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"gk" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 10
+	},
+/obj/structure/closet/secure_closet/paramedic,
+/obj/random/medical,
+/obj/random/medical,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"gn" = (
+/obj/effect/floor_decal/corner/paleblue,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"gR" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"hh" = (
+/obj/structure/bed/chair/office/dark,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ih" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"iq" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"jm" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"jC" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cross_A)
+"kh" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"kw" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	id_tag = "MedbayFoyerPort";
+	req_access = list(5)
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/corner/pink{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ky" = (
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cross_A)
+"kL" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"lS" = (
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"lU" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/outpost21/cross_A)
+"mf" = (
+/obj/structure/table/steel,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"mu" = (
+/turf/space,
+/area/mine/explored/muriki/cave/deepdark)
+"nn" = (
+/obj/structure/bed/chair/wheelchair,
+/obj/effect/floor_decal/corner/paleblue,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"nC" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"nH" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/westright{
+	name = "EVA Suit Storage";
+	req_access = newlist();
+	req_one_access = list(5,18)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cross_A)
+"nL" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ob" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ou" = (
+/obj/machinery/photocopier,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"oA" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 1
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cross_A)
+"oI" = (
+/obj/structure/table/standard,
+/obj/machinery/door/window/eastright{
+	base_state = "left";
+	dir = 8;
+	icon_state = "left";
+	name = "Medical Reception";
+	req_access = list(5)
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"pj" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "chemwindow";
+	name = "Chemistry Window Shutters";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"pm" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"pr" = (
+/obj/structure/closet/secure_closet/medical3,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"px" = (
+/obj/machinery/door/airlock/medical{
+	id_tag = "surgery_observation";
+	name = "Observation Room";
+	req_access = newlist()
+	},
+/obj/machinery/holosign/surgery,
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"pE" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"pH" = (
+/obj/machinery/light,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cross_A)
+"qi" = (
+/obj/structure/closet/secure_closet/chemical,
+/obj/effect/floor_decal/corner/beige,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"qA" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"qD" = (
+/obj/structure/table/standard,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/item/clothing/glasses/hud/health,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"qR" = (
+/obj/machinery/vending/wallmed1{
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"sz" = (
+/turf/simulated/floor,
+/area/submap/outpost21/cross_A)
+"sF" = (
+/obj/item/roller,
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/roller{
+	pixel_y = 16
+	},
+/obj/structure/table/glass,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"tz" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"tH" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medbay Equipment";
+	req_access = list(5)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"tW" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"uE" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_medical{
+	name = "Medbay Equipment";
+	req_access = list(5)
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"vs" = (
+/obj/structure/table/standard,
+/obj/item/roller,
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/roller{
+	pixel_y = 16
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"vy" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"vU" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/table/rack,
+/obj/machinery/door/window/westleft{
+	name = "EVA Suit Storage";
+	req_access = list(5)
+	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/medical,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/medical,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cross_A)
+"wG" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/cross_A)
+"xd" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"xO" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"yx" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/steel,
+/area/submap/outpost21/cross_A)
+"zc" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 9
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"zt" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"zE" = (
+/obj/structure/sign/nosmoking_1,
+/turf/simulated/wall,
+/area/submap/outpost21/cross_A)
+"Ai" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Aq" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ax" = (
+/turf/simulated/wall,
+/area/submap/outpost21/cross_A)
+"Az" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"AE" = (
+/obj/machinery/door/airlock/multi_tile/glass{
+	autoclose = 1;
+	dir = 2;
+	id_tag = "MedbayFoyer";
+	req_access = list(5)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"AY" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/beige/full,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Bg" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Bv" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"BK" = (
+/obj/structure/bed/chair/wheelchair,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"BQ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"BR" = (
+/obj/machinery/chemical_dispenser/full,
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ca" = (
+/obj/structure/closet/wardrobe/chemistry_white,
+/obj/effect/floor_decal/corner/beige/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Cd" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Cp" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/corner/pink{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Cu" = (
+/obj/structure/closet/secure_closet/medical1,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"CJ" = (
+/turf/simulated/flesh,
+/area/submap/outpost21/cross_A)
+"Da" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Dy" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"DV" = (
+/obj/effect/floor_decal/corner/paleblue/full,
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-10"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Eg" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ep" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "chemcounter";
+	name = "Pharmacy Counter Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"EL" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"EW" = (
+/obj/structure/bed/chair/office/light{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Fc" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Fv" = (
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/item/stack/material/phoron,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ga" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 6
+	},
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Hk" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope,
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"HK" = (
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/submap/outpost21/cross_A)
+"Iq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4;
+	icon_state = "warning"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/outpost21/cross_A)
+"IM" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"IS" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 2
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Jc" = (
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Jg" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/machinery/door/window/westright{
+	name = "EVA Suit Storage";
+	req_access = list(5)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cross_A)
+"JJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"Kh" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 6
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ko" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"Kv" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"KF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "chemwindow";
+	name = "Chemistry Window Shutters";
+	opacity = 0
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"KJ" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/obj/structure/sink{
+	dir = 8;
+	icon_state = "sink";
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"KM" = (
+/obj/structure/closet/secure_closet/paramedic,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/random/medical,
+/obj/random/medical,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Lk" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 9
+	},
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-10"
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"MC" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"MG" = (
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Nu" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cross_A)
+"NR" = (
+/obj/structure/closet/secure_closet/medical1,
+/obj/effect/floor_decal/corner/beige{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ol" = (
+/obj/structure/sign/redcross{
+	desc = "The Star of Life, a symbol of Medical Aid.";
+	icon_state = "lifestar";
+	name = "Medbay"
+	},
+/turf/simulated/wall,
+/area/submap/outpost21/cross_A)
+"Op" = (
+/obj/machinery/chem_master,
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ot" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"OM" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"OW" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -27
+	},
+/obj/effect/floor_decal/corner/beige/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Pj" = (
+/obj/machinery/iv_drip,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Po" = (
+/obj/structure/table/standard,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"PO" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ql" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"QF" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"QG" = (
+/obj/machinery/door/window/southright{
+	name = "Medical Reception";
+	req_access = list(5)
+	},
+/obj/structure/noticeboard{
+	pixel_x = 32;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Ru" = (
+/obj/structure/reagent_dispensers/water_cooler/full,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"TP" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"TT" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"TW" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/computer/med_data/laptop,
+/obj/effect/floor_decal/corner/paleblue/full,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"UM" = (
+/obj/structure/filingcabinet/chestdrawer{
+	name = "Medical Forms"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"UP" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Vl" = (
+/obj/structure/closet/secure_closet/medical3,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Vm" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 5
+	},
+/obj/structure/sink{
+	dir = 2;
+	icon_state = "sink";
+	pixel_x = 0;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Vp" = (
+/obj/structure/filingcabinet/medical{
+	desc = "A large cabinet with hard copy medical records.";
+	name = "Medical Records"
+	},
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 25
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Vz" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"VC" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/submap/outpost21/cross_A)
+"VD" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"VP" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"WQ" = (
+/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"WW" = (
+/obj/structure/table/rack,
+/obj/item/roller,
+/obj/item/roller,
+/obj/item/roller,
+/obj/structure/sign/poster{
+	pixel_x = 0;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Xc" = (
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Xf" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/southright{
+	name = "Chemistry Desk";
+	req_access = list(33)
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/window/northright{
+	name = "Chemistry Desk"
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "chemcounter";
+	name = "Pharmacy Counter Shutters";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Xk" = (
+/obj/structure/sign/chemistry,
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/cross_A)
+"Xm" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Chemistry Laboratory";
+	req_access = list(33)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"Xv" = (
+/turf/space,
+/area/template_noop)
+"Xz" = (
+/obj/structure/table/standard,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/computer/med_data/laptop,
+/obj/machinery/status_display{
+	density = 0;
+	layer = 4;
+	pixel_x = 0;
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"XQ" = (
+/obj/structure/table/reinforced,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
+/obj/effect/floor_decal/corner/beige{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"XT" = (
+/obj/effect/floor_decal/corner/pink{
+	dir = 10
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"YX" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cross_A)
+"ZJ" = (
+/obj/machinery/computer/med_data,
+/obj/effect/floor_decal/corner/pink/full,
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+"ZN" = (
+/obj/machinery/vending/medical,
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/submap/outpost21/cross_A)
+
+(1,1,1) = {"
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+"}
+(2,1,1) = {"
+Xv
+mu
+mu
+MC
+MC
+MC
+MC
+MC
+WQ
+WQ
+WQ
+WQ
+MC
+MC
+MC
+aX
+MC
+MC
+MC
+mu
+mu
+mu
+mu
+mu
+Xv
+"}
+(3,1,1) = {"
+Xv
+WQ
+WQ
+MC
+Jc
+Jc
+Jc
+CJ
+HK
+HK
+HK
+CJ
+MC
+Jc
+Jc
+Jc
+Jc
+MC
+MC
+MC
+mu
+mu
+mu
+mu
+Xv
+"}
+(4,1,1) = {"
+Xv
+WQ
+WQ
+WQ
+Jc
+cP
+Ax
+Ax
+eI
+dw
+eI
+Ax
+Ax
+Jc
+Jc
+Jc
+Jc
+xd
+xd
+xd
+xd
+xd
+MC
+MC
+Xv
+"}
+(5,1,1) = {"
+Xv
+WQ
+Jc
+Jc
+Jc
+cP
+cP
+dm
+ky
+ky
+Nu
+dm
+cP
+Jc
+Jc
+Jc
+Jc
+aX
+Jc
+Jc
+Jc
+aX
+Jc
+MC
+Xv
+"}
+(6,1,1) = {"
+Xv
+WQ
+Ax
+Ax
+IM
+Ko
+Ax
+Ol
+VD
+Aq
+VD
+Ol
+Ax
+IM
+Ko
+wG
+wG
+wG
+wG
+wG
+wG
+wG
+Jc
+MC
+Xv
+"}
+(7,1,1) = {"
+Xv
+WQ
+cP
+Ax
+Lk
+Dy
+fr
+ih
+MG
+MG
+MG
+qA
+fr
+Dy
+DV
+Xk
+OW
+Fv
+Op
+BR
+AY
+KF
+Jc
+MC
+Xv
+"}
+(8,1,1) = {"
+Xv
+aX
+cP
+px
+MG
+MG
+MG
+MG
+tz
+MG
+MG
+MG
+MG
+MG
+fc
+Xf
+MG
+MG
+aj
+hh
+QF
+pj
+Jc
+MC
+Xv
+"}
+(9,1,1) = {"
+Xv
+MC
+cP
+Ax
+sF
+EL
+MG
+Da
+MG
+Da
+Da
+zt
+tz
+MG
+fc
+Ep
+UP
+tz
+lS
+kL
+XQ
+wG
+Jc
+MC
+Xv
+"}
+(10,1,1) = {"
+Xv
+MC
+Ax
+Ax
+Xz
+Bg
+oI
+Bg
+oI
+Bg
+TW
+jm
+MG
+tz
+fa
+wG
+TT
+MG
+MG
+hh
+QF
+KF
+Jc
+MC
+Xv
+"}
+(11,1,1) = {"
+Xv
+MC
+ZJ
+Ax
+ou
+MG
+nL
+bc
+EW
+MG
+Ai
+jm
+MG
+MG
+ce
+wG
+Vm
+aj
+TP
+ci
+QF
+pj
+Jc
+MC
+Xv
+"}
+(12,1,1) = {"
+Xv
+WQ
+Pj
+Ax
+UM
+MG
+tz
+MG
+MG
+MG
+PO
+jm
+MG
+MG
+iq
+wG
+kh
+MG
+MG
+pE
+Xc
+wG
+Jc
+aX
+Xv
+"}
+(13,1,1) = {"
+Xv
+WQ
+XT
+Ax
+Vp
+Da
+zt
+MG
+IS
+Kv
+QG
+MG
+MG
+MG
+Ru
+wG
+OM
+MG
+qi
+NR
+Ca
+wG
+MC
+MC
+Xv
+"}
+(14,1,1) = {"
+Xv
+WQ
+qR
+Ax
+Ax
+Ax
+Ax
+tH
+Vz
+JJ
+Ax
+vy
+AE
+dm
+Ax
+wG
+aA
+Xm
+Vz
+YX
+JJ
+wG
+Ax
+MC
+Xv
+"}
+(15,1,1) = {"
+Xv
+MC
+ff
+Ax
+Hk
+vs
+KJ
+MG
+xO
+eG
+VP
+Az
+BQ
+Fc
+Ax
+KM
+gk
+tz
+ob
+mf
+MG
+Cu
+Ax
+Ol
+Xv
+"}
+(16,1,1) = {"
+Xv
+MC
+Ax
+Ax
+qD
+MG
+MG
+MG
+tz
+Bv
+gR
+Eg
+tz
+MG
+kw
+Cd
+Cd
+MG
+Cd
+Cd
+zc
+Cd
+kw
+jC
+Xv
+"}
+(17,1,1) = {"
+Xv
+WQ
+au
+Ax
+pm
+MG
+Ql
+Ql
+MG
+MG
+tH
+MG
+MG
+tz
+Cp
+Ga
+tW
+Kh
+tW
+tW
+tW
+tW
+Cp
+jC
+Xv
+"}
+(18,1,1) = {"
+Xv
+WQ
+oA
+VP
+pm
+tz
+Ql
+Ql
+MG
+nC
+VP
+zt
+MG
+gn
+zE
+sz
+VC
+lU
+MG
+tz
+MG
+WW
+Ax
+Ol
+Xv
+"}
+(19,1,1) = {"
+Xv
+WQ
+pH
+gR
+pr
+MG
+aj
+MG
+MG
+Po
+Ot
+jm
+tz
+fc
+dm
+dJ
+ap
+yx
+MG
+MG
+MG
+Ax
+Ax
+MC
+Xv
+"}
+(20,1,1) = {"
+Xv
+WQ
+cP
+Ax
+Vl
+zt
+MG
+nn
+BK
+ZN
+gR
+jm
+MG
+fc
+Ax
+sz
+Iq
+fj
+Jg
+vU
+nH
+Ax
+MC
+MC
+Xv
+"}
+(21,1,1) = {"
+Xv
+WQ
+HK
+Ax
+Vz
+JJ
+uE
+Ax
+Vz
+JJ
+Ax
+cP
+cP
+cP
+Ax
+Ax
+Ax
+Ax
+Ax
+CJ
+CJ
+CJ
+MC
+mu
+Xv
+"}
+(22,1,1) = {"
+Xv
+mu
+WQ
+MC
+MC
+Jc
+cP
+cP
+cP
+cP
+cP
+cP
+cP
+CJ
+MC
+MC
+MC
+MC
+MC
+MC
+mu
+mu
+mu
+mu
+Xv
+"}
+(23,1,1) = {"
+Xv
+mu
+mu
+MC
+MC
+MC
+MC
+MC
+Jc
+Jc
+Jc
+MC
+MC
+MC
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+Xv
+"}
+(24,1,1) = {"
+Xv
+mu
+mu
+mu
+mu
+mu
+mu
+MC
+MC
+aX
+MC
+MC
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+mu
+Xv
+"}
+(25,1,1) = {"
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+Xv
+"}

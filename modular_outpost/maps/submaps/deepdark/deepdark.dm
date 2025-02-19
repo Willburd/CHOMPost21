@@ -26,6 +26,9 @@
 #include "redspace_A.dmm"
 #include "redspace_B.dmm"
 #include "redspace_C.dmm"
+#include "yawn_A.dmm"
+#include "yawn_B.dmm"
+#include "cross_A.dmm"
 #include "statue_A.dmm"
 #include "hole_A.dmm"
 #include "lava_A.dmm"
@@ -45,6 +48,8 @@
 #include "maint_B.dmm"
 #include "maint_C.dmm"
 #include "maint_D.dmm"
+#include "maint_E.dmm"
+#include "maint_F.dmm"
 #include "cliff_A.dmm"
 #include "cliff_B.dmm"
 #include "cliff_C.dmm"
@@ -364,6 +369,30 @@
 	discard_prob = 50
 	cost = 30
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/yawn_A
+	name = "Yawn A"
+	desc = "Random redspace leak."
+	mappath = "modular_outpost/maps/submaps/deepdark/yawn_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/yawn_B
+	name = "Yawn B"
+	desc = "Random redspace leak."
+	mappath = "modular_outpost/maps/submaps/deepdark/yawn_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/cross_A
+	name = "Cross A"
+	desc = "Random redspace leak."
+	mappath = "modular_outpost/maps/submaps/deepdark/cross_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 30
+
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/statue_A
 	name = "statue A"
 	desc = "Random statue."
@@ -400,7 +429,7 @@
 	name = "maint A"
 	desc = "Maintenance tunnel."
 	mappath = "modular_outpost/maps/submaps/deepdark/maint_A.dmm"
-	allow_duplicates = TRUE
+	allow_duplicates = FALSE
 	discard_prob = 15
 	cost = 20
 
@@ -408,7 +437,7 @@
 	name = "maint B"
 	desc = "Maintenance tunnel."
 	mappath = "modular_outpost/maps/submaps/deepdark/maint_B.dmm"
-	allow_duplicates = TRUE
+	allow_duplicates = FALSE
 	discard_prob = 15
 	cost = 20
 
@@ -416,7 +445,7 @@
 	name = "maint C"
 	desc = "Maintenance tunnel."
 	mappath = "modular_outpost/maps/submaps/deepdark/maint_C.dmm"
-	allow_duplicates = TRUE
+	allow_duplicates = FALSE
 	discard_prob = 15
 	cost = 20
 
@@ -424,7 +453,23 @@
 	name = "maint D"
 	desc = "Maintenance tunnel."
 	mappath = "modular_outpost/maps/submaps/deepdark/maint_D.dmm"
-	allow_duplicates = TRUE
+	allow_duplicates = FALSE
+	discard_prob = 15
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/maint_E
+	name = "maint E"
+	desc = "Maintenance tunnel."
+	mappath = "modular_outpost/maps/submaps/deepdark/maint_E.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 15
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/maint_F
+	name = "maint F"
+	desc = "Maintenance tunnel."
+	mappath = "modular_outpost/maps/submaps/deepdark/maint_F.dmm"
+	allow_duplicates = FALSE
 	discard_prob = 15
 	cost = 20
 
@@ -534,6 +579,33 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
+	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
+
+/area/submap/outpost21/yawn_A
+	name = "\improper We See"
+	icon_state = "red2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
+	ambience = AMBIENCE_GENERIC
+	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
+
+/area/submap/outpost21/yawn_B
+	name = "\improper We Remember"
+	icon_state = "red2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	sound_env = SOUND_ENVIRONMENT_STONEROOM
+	ambience = AMBIENCE_EXPOUTPOST
+	base_turf = /turf/simulated/mineral/floor/muriki
+	haunted = TRUE
+
+/area/submap/outpost21/cross_A
+	name = "\improper We Are Found"
+	icon_state = "red2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	sound_env = SOUND_ENVIRONMENT_BATHROOM
+	ambience = AMBIENCE_ARRIVALS
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
 
