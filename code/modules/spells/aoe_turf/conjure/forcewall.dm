@@ -33,7 +33,7 @@
 	opacity = 0
 	density = TRUE
 	unacidable = TRUE
-	invisibility = 101
+	// invisibility = 101 // Outpost 21 edit - Invis forcewall is mime only
 
 /obj/effect/forcefield/bullet_act(var/obj/item/projectile/Proj, var/def_zone)
 	var/turf/T = get_turf(src.loc)
@@ -46,6 +46,7 @@
 	icon_state = "empty"
 	name = "invisible wall"
 	desc = "You have a bad feeling about this."
+	invisibility = 101 // Outpost 21 edit - Invis forcewall is mime only
 
 /obj/effect/forcefield/cultify()
 	new /obj/effect/forcefield/cult(get_turf(src))
