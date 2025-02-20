@@ -129,13 +129,6 @@
 	var/lock_difficulty = 1	//multiplier to picking/bypassing time
 	var/keysound = 'sound/items/toolbelt_equip.ogg'
 
-	// Outpost 21 edit begin - picking fence gates
-	var/lock_type = "simple"	//string matched to "pick_type" on /obj/item/lockpick
-	var/can_pick = TRUE	//can it be picked/bypassed?
-	var/lock_difficulty = 2	//multiplier to picking/bypassing time
-	var/keysound = 'sound/items/toolbelt_equip.ogg'
-	// Outpost 21 edit end
-
 /obj/structure/fence/door/Initialize()
 	update_door_status()
 	return ..()
