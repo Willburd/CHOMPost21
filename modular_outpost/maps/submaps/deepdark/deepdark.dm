@@ -642,8 +642,11 @@
 	name = "\improper Abandoned Xenobiology Lab"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "blue"
+	sound_env = SOUND_ENVIRONMENT_ARENA
+	ambience = AMBIENCE_GENERIC
 	use_emergency_overlay = FALSE
 	flags = AREA_BLOCK_GHOST_SIGHT
+	haunted = TRUE
 
 //////////////////////////////////////////////////////////////
 // Liminal area specialty controllers
