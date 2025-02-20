@@ -638,6 +638,13 @@
 	always_unpowered = FALSE
 	requires_power = FALSE
 
+/area/rnd/xenobiology/lost // ported secret
+	name = "\improper Abandoned Xenobiology Lab"
+	base_turf = /turf/simulated/mineral/floor/muriki
+	icon_state = "blue"
+	use_emergency_overlay = FALSE
+	flags = AREA_BLOCK_GHOST_SIGHT
+
 //////////////////////////////////////////////////////////////
 // Liminal area specialty controllers
 /obj/effect/map_effect/interval/liminal_B_controller
