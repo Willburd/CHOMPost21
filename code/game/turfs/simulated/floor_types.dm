@@ -1,5 +1,6 @@
 /turf/simulated/floor/diona
 	name = "biomass flooring"
+	icon = 'icons/turf/floors.dmi'
 	icon_state = "diona"
 
 /turf/simulated/floor/diona/attackby()
