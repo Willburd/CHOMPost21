@@ -69,6 +69,7 @@
 	return ..()
 
 /obj/structure/fence/attackby(obj/item/W, mob/user)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(W.has_tool_quality(TOOL_WIRECUTTER))
 		if(!cuttable)
 			to_chat(user, span_warning("This section of the fence can't be cut."))
@@ -122,6 +123,11 @@
 	cuttable = FALSE
 	var/open = FALSE
 	var/locked = FALSE
+	var/lock_id = null	//does the door have an associated key?
+	var/lock_type = "simple"	//string matched to "pick_type" on /obj/item/lockpick
+	var/can_pick = TRUE	//can it be picked/bypassed?
+	var/lock_difficulty = 1	//multiplier to picking/bypassing time
+	var/keysound = 'sound/items/toolbelt_equip.ogg'
 
 	// Outpost 21 edit begin - picking fence gates
 	var/lock_type = "simple"	//string matched to "pick_type" on /obj/item/lockpick
@@ -151,9 +157,21 @@
 
 	return TRUE
 
-// Outpost 21 edit begin - picking fence gates
-/obj/structure/fence/door/attackby(obj/item/W, mob/user)
-	if(istype(W,/obj/item/lockpick))
+/obj/structure/fence/door/attackby(obj/item/W as obj, mob/user as mob)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(istype(W,/obj/item/simple_key))
+		var/obj/item/simple_key/key = W
+		if(open)
+			to_chat(user,span_notice("\The [src] must be closed in order for you to lock it."))
+		else if(key.key_id != src.lock_id)
+			to_chat(user,span_warning("The [key] doesn't fit \the [src]'s lock!"))
+		else if(key.key_id == src.lock_id)
+			visible_message(span_notice("[user] [key.keyverb] \the [key] and [locked ? "unlocks" : "locks"] \the [src]."))
+			locked = !locked
+			playsound(src, keysound,100, 1)
+		return
+	// Outpost 21 edit begin - picking fence gates
+	else if(istype(W,/obj/item/lockpick))
 		var/obj/item/lockpick/L = W
 		if(!locked)
 			to_chat(user, span_notice("\The [src] isn't locked."))
@@ -171,8 +189,10 @@
 				to_chat(user, span_notice("Success!"))
 				locked = FALSE
 		return
-	. = ..()
-// Outpost 21 edit end
+	// Outpost 21 edit end
+	else
+		attack_hand(user)
+	return
 
 // Outpost 21 edit begin - Allow borgs to open fences
 /obj/structure/fence/door/attack_ai(mob/user as mob)
