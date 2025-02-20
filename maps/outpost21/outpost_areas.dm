@@ -1909,13 +1909,6 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
-/area/rnd/xenobiology/lost
-	name = "\improper Abandoned Xenobiology Lab"
-	base_turf = /turf/simulated/mineral/floor/muriki
-	icon_state = "blue"
-	use_emergency_overlay = FALSE
-	flags = AREA_BLOCK_GHOST_SIGHT
-
 /area/rnd/xenobiology/burn
 	name = "\improper Xenobiology Threat Supression"
 	base_turf = /turf/simulated/mineral/floor/muriki
