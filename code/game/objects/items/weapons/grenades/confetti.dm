@@ -21,7 +21,6 @@
 
 /obj/item/grenade/confetti/detonate() //Find a good confetti firework or pop sound effect later
 	playsound(src.loc, 'sound/effects/snap.ogg', 50, 1, -3)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	src.confetti_spread.set_up(10, 0, usr.loc)
 	spawn(0)
 		for(var/i = 1 to confetti_strength)

@@ -227,12 +227,10 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	//We throw a laser but it doesnt have to hit for meteor to explode
 	var/obj/item/projectile/beam/coildefense/coil = new(get_turf(src))
 	playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
-	SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 	use_power_oneoff(idle_power_usage * 10)
 	coil.launch_projectile(target = M.loc, user = src) // CHOMPEdit: Changing "beam" var to "coil" for the new coilgun type point defense turrets (to match the coilgun sprite and sfx names)
 	spawn(10)
 		playsound(src, fire_sounds, 75, 1, 40, pressure_affected = FALSE, ignore_walls = TRUE) // CHOMPEdit: Pew
-		SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 
 /obj/machinery/pointdefense/process()
 	..()
@@ -317,7 +315,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 		return FALSE
 
 	playsound(src, 'sound/weapons/flash.ogg', 100, 0)
-	SSmotiontracker.ping(src,70) // Outpost 21 edit - Motion tracker subsystem
 	//update_use_power(USE_POWER_IDLE)
 	active = TRUE
 	update_icon()
@@ -327,7 +324,6 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	if(!active)
 		return FALSE
 	playsound(src, 'sound/machines/apc_nopower.ogg', 50, 0)
-	SSmotiontracker.ping(src,70) // Outpost 21 edit - Motion tracker subsystem
 	//update_use_power(USE_POWER_OFF)
 	active = FALSE
 	update_icon()

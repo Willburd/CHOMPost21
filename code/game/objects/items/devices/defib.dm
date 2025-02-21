@@ -238,7 +238,6 @@
 
 			make_announcement("beeps, \"Unit is re-energized.\"", "notice")
 			playsound(src, 'sound/machines/defib_ready.ogg', 50, 0)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 /obj/item/shockpaddles/update_held_icon()
 	var/mob/living/M = loc
@@ -410,7 +409,6 @@
 	if(error)
 		make_announcement(error, "warning")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		return
 
 	if(check_blood_level(H))
@@ -424,7 +422,6 @@
 	if(!checked_use(chargecost))
 		make_announcement("buzzes, \"Insufficient charge.\"", "warning")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		return
 
 	H.visible_message(span_warning("\The [H]'s body convulses a bit."))
@@ -436,7 +433,6 @@
 	if(error)
 		make_announcement(error, "warning")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		return
 
 	H.apply_damage(burn_damage_amt, BURN, BP_TORSO)

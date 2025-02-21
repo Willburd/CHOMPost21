@@ -121,7 +121,6 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	user.break_cloak()
 	if(hitsound)
 		playsound(src, hitsound, 50, 1, -1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 
 	var/power = force
 	for(var/datum/modifier/M in user.modifiers)

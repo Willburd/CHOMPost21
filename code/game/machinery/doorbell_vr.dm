@@ -21,7 +21,6 @@
 		return
 	use_power(active_power_usage)
 	playsound(src, chime_sound, 75)
-	SSmotiontracker.ping(src,90) // Outpost 21 edit - Motion tracker subsystem
 	icon_state = "dbchime-active"
 	set_light(2, 0.5, "#33FF33")
 	visible_message("\The [src]'s light flashes.")

@@ -21,7 +21,6 @@
 
 /obj/item/latexballon/whoopee/proc/poot()
 	playsound(src, 'modular_outpost/sound/effects/poot.ogg', 100, 1)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	loc.assume_air(air_contents)
 	air_contents = null
 	icon_state = "whoopee"

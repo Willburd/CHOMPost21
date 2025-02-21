@@ -870,7 +870,6 @@
 	if(result && Move(result))
 		if(stomp_sound)
 			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
-			SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
 		handle_equipment_movement()
 	if(strafing)	//Also for strafing
@@ -883,7 +882,6 @@
 	if(result && Move(result))
 		if(stomp_sound)
 			playsound(src, reps ? stomp_sound : stomp_sound_2,50,0) // CHOMPedit: 1-2 step sequence.
-			SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 			reps = (reps+1)%2 // CHOMPedit: 1-2 step sequence.
 		handle_equipment_movement()
 	return result

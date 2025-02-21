@@ -69,7 +69,6 @@
 	..()
 	if(on)
 		playsound(src, 'sound/weapons/chainsaw_attack.ogg',40,1)
-		SSmotiontracker.ping(src,90) // Outpost 21 edit - Motion tracker subsystem
 	if(A && on)
 		if(get_fuel() > 0)
 			reagents.remove_reagent(REAGENT_ID_FUEL, 1)

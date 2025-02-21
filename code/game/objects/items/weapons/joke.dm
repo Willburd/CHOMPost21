@@ -11,7 +11,6 @@
 /obj/item/squishhammer/attack(mob/M as mob, mob/user as mob)
 	var/is_squished = M.tf_scale_x || M.tf_scale_y
 	playsound(src, 'sound/items/hooh.ogg', 50, 1)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	if(!is_squished)
 		M.SetTransform(null, (M.size_multiplier * 1.2), (M.size_multiplier * 0.5))
 	else

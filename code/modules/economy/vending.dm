@@ -667,7 +667,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 		if(R.get_product(get_turf(src)))
 			visible_message(span_infoplain(span_bold("\The [src]") + " clunks as it vends an additional item."))
 	playsound(src, "sound/[vending_sound]", 100, 1, 1)
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 
 	GLOB.items_sold_shift_roundstat++
 

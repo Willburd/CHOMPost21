@@ -200,7 +200,6 @@
 
 					LM.Weaken(5)
 					playsound(src, get_sfx("punch"), 50, 1)
-					SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 					pouncing = 0
 			src.Move(T)
 
@@ -210,7 +209,6 @@
 			update_icon()
 			src.Weaken(5)
 			playsound(src, get_sfx("punch"), 50, 1)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		else
 			//if we arrived, and weren't blocked, and are STILL pouncing, see if we landed on any living things that didn't block us that ISN't ourselves lmfao.
 			if(pouncing)
@@ -219,7 +217,6 @@
 						var/mob/living/LM = M
 						LM.Weaken(5)
 						playsound(src, get_sfx("punch"), 50, 1)
-						SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 						pouncing = 0
 			update_icon()
 
@@ -349,5 +346,4 @@
 			M.adjustBruteLoss(damage)
 		to_chat(M, span_userdanger("You're thrown back by [src]!"))
 		playsound(src, get_sfx("punch"), 50, 1)
-		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	AM.throw_at(throwtarget, maxthrow, 3, src)

@@ -283,7 +283,6 @@
 	triggerCameraAlarm()
 	update_icon()
 	update_coverage()
-	SSmotiontracker.ping(src,90) // Outpost 21 edit - Motion tracker subsystem
 
 	//sparks
 	var/datum/effect/effect/system/spark_spread/spark_system = new /datum/effect/effect/system/spark_spread()

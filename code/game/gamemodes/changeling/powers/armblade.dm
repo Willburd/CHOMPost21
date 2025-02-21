@@ -80,7 +80,6 @@
 	span_notice("We assimilate the weapon back into our body."),
 	span_warningplain("You hear organic matter ripping and tearing!"))
 	playsound(src, 'sound/effects/blobattack.ogg', 30, 1)
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	spawn(1)
 		if(src)
 			qdel(src)
@@ -111,12 +110,10 @@
 	if(default_parry_check(user, attacker, damage_source) && prob(defend_chance))
 		user.visible_message(span_danger("\The [user] parries [attack_text] with \the [src]!"))
 		playsound(src, 'sound/weapons/slash.ogg', 50, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		return 1
 	if(unique_parry_check(user, attacker, damage_source) && prob(projectile_parry_chance))
 		user.visible_message(span_danger("\The [user] deflects [attack_text] with \the [src]!"))
 		playsound(src, 'sound/weapons/slash.ogg', 50, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		return 1
 
 	return 0

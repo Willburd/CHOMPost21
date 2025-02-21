@@ -3,7 +3,6 @@
 /proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
 	var/multi_z_scalar = CONFIG_GET(number/multi_z_explosion_scalar)
 	spawn(0)
-		SSmotiontracker.ping(epicenter) // Outpost 21 edit - Motion tracker subsystem
 		var/start = world.timeofday
 		// Outpost 21 edit begin - Handle eaten explosives in bellies
 		while(isbelly(epicenter)) // Lets assume recursive prey has happened...

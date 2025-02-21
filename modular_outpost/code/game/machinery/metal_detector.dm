@@ -28,7 +28,6 @@
 	set_light(3) // ON!
 	visible_message("<span class='warning'>[src] flashes green. No threatening objects detected!</span>")
 	playsound(src, 'sound/machines/defib_success.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	return
 
 /obj/machinery/metal_detector/proc/yellow_alert()
@@ -39,7 +38,6 @@
 	set_light(3) // ON!
 	visible_message("<span class='warning'>[src] flashes yellow. Potentially suspicious object detected!</span>")
 	playsound(src, 'sound/machines/defib_safetyOff.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	return
 
 /obj/machinery/metal_detector/proc/red_alert()
@@ -50,7 +48,6 @@
 	set_light(3) // ON!
 	visible_message("<span class='warning'>[src] flashes red in a panic. Highly dangerous object detected!</span>")
 	playsound(src, 'sound/machines/defib_failed.ogg', 25, 0, 4, volume_channel = VOLUME_CHANNEL_ALARMS)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	return
 
 /obj/machinery/metal_detector/process()

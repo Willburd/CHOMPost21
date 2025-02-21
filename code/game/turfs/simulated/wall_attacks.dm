@@ -56,7 +56,6 @@
 	if(isanimal(user))
 		var/mob/living/simple_mob/S = user
 		playsound(src, S.attack_sound, 75, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		if(!(S.melee_damage_upper >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2))
 			to_chat(user, span_notice("You bounce against the wall."))
 			return FALSE
@@ -72,7 +71,6 @@
 	if(isanimal(user))
 		var/mob/living/simple_mob/S = user
 		playsound(src, S.attack_sound, 75, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	spawn(1)
 		dismantle_wall(1)
 
@@ -90,7 +88,6 @@
 		if(!material.wall_touch_special(src, user))
 			to_chat(user, span_notice("You push the wall, but nothing happens."))
 			playsound(src, 'sound/weapons/Genhit.ogg', 25, 1)
-			SSmotiontracker.ping(src,5) // Outpost 21 edit - Motion tracker subsystem
 	else
 		toggle_open(user)
 	return 0

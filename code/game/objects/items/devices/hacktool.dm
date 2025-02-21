@@ -36,7 +36,6 @@
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		in_hack_mode = !in_hack_mode
 		playsound(src, W.usesound, 50, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	else
 		..()
 

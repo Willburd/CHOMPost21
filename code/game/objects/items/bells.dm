@@ -90,7 +90,6 @@
 	else
 		playsound(src, 'sound/effects/deskbell.ogg', 50, 1)
 		to_chat(user,span_notice("You gracefully ring [src]."))
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 /obj/item/deskbell/proc/check_ability(mob/user)
 	if (ishuman(user))

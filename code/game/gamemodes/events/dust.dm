@@ -97,7 +97,6 @@ The "dust" will damage the hull of the station causin minor hull breaches.
 				shake_camera(M, 3, 1)
 	if (A)
 		playsound(src, 'sound/effects/meteorimpact.ogg', 40, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 
 		if(ismob(A))
 			A.ex_act(strength)//This should work for now I guess

@@ -532,8 +532,6 @@
 	// Outpost 21 edit end
 		GLOB.disposals_flush_shift_roundstat++
 
-	SSmotiontracker.ping(src,50) // Outpost 21 edit - Motion tracker subsystem
-
 	H.init(src, air_contents)	// copy the contents of disposer to holder
 	air_contents = new(PRESSURE_TANK_VOLUME)	// new empty gas resv.
 
@@ -748,7 +746,6 @@
 			var/turf/T = get_turf(src)
 			if(T)
 				playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
-				SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 				var/message = pick(
 					prob(90);"* clunk *",
 					prob(90);"* thud *",

@@ -876,7 +876,6 @@ About the new airlock wires panel:
 			if(density && src.arePowerSystemsOn())
 				flick("door_deny", src)
 				playsound(src, denied_sound, 50, 0, 3)
-				SSmotiontracker.ping(src,70) // Outpost 21 edit - Motion tracker subsystem
 	return
 
 /obj/machinery/door/airlock/attack_ai(mob/user as mob)
@@ -1024,7 +1023,6 @@ About the new airlock wires panel:
 		if(icon_state == "door_closed" && arePowerSystemsOn())
 			flick("door_deny", src)
 		playsound(src, knock_hammer_sound, 50, 0, 3)
-		SSmotiontracker.ping(src,70) // Outpost 21 edit - Motion tracker subsystem
 	else if(user.a_intent == I_GRAB) //Hold door open
 		hold_open = user
 		visible_message(span_info("[user] begins holding \the [src] open."), span_info("Someone has started holding \the [src] open."))
@@ -1042,12 +1040,10 @@ About the new airlock wires panel:
 		if(icon_state == "door_closed")
 			flick("door_deny", src)
 		playsound(src, knock_sound, 50, 0, 3)
-		SSmotiontracker.ping(src,30) // Outpost 21 edit - Motion tracker subsystem
 	else
 		visible_message(span_info("[user] knocks on \the [src]."), span_info("Someone knocks on \the [src]."))
 		add_fingerprint(user)
 		playsound(src, knock_unpowered_sound, 50, 0, 3)
-		SSmotiontracker.ping(src,90) // Outpost 21 edit - Motion tracker subsystem
 	return
 
 /obj/machinery/door/airlock/tgui_act(action, params, datum/tgui/ui)
@@ -1544,7 +1540,6 @@ About the new airlock wires panel:
 
 	src.locked = 1
 	playsound(src, bolt_down_sound, 30, 0, 3, volume_channel = VOLUME_CHANNEL_DOORS)
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	for(var/mob/M in range(1,src))
 		M.show_message("You hear a click from the bottom of the door.", 2)
 	update_icon()
@@ -1559,7 +1554,6 @@ About the new airlock wires panel:
 
 	src.locked = 0
 	playsound(src, bolt_up_sound, 30, 0, 3, volume_channel = VOLUME_CHANNEL_DOORS)
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	for(var/mob/M in range(1,src))
 		M.show_message("You hear a click from the bottom of the door.", 2)
 	update_icon()

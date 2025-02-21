@@ -6,7 +6,6 @@
 /obj/effect/effect/sparks/Initialize()
 	. = ..()
 	playsound(src, "sounds/items/confetti.ogg ", 100, 1)
-	SSmotiontracker.ping(src,60) // Outpost 21 edit - Motion tracker subsystem
 
 /datum/effect/effect/system/confetti_spread
 	var/total_sparks = 0 // To stop it being spammed and lagging!

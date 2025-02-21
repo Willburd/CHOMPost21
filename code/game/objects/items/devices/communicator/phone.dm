@@ -162,7 +162,6 @@
 
 	if(ringer)
 		playsound(src, 'sound/machines/twobeep.ogg', 50, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		for (var/mob/O in hearers(2, loc))
 			O.show_message(text("[icon2html(src,O.client)] *beep*"))
 

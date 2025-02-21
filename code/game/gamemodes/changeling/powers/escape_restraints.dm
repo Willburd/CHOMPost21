@@ -29,7 +29,6 @@
 
 	to_chat(C,span_notice("We contort our extremities and slip our cuffs."))
 	playsound(src, 'sound/effects/blobattack.ogg', 30, 1)
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	if(C.handcuffed)
 		var/obj/item/W = C.handcuffed
 		C.handcuffed = null

@@ -193,7 +193,6 @@
 	// YAYYYYY
 	playsound(src, 'sound/items/confetti.ogg', 75, 1)
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	new /obj/effect/decal/cleanable/confetti(loc)
 	visible_message("\The [src.name] detonates!")
 	spawn(0)
@@ -218,7 +217,6 @@
 	s.start()
 	playsound(src, 'sound/items/confetti.ogg', 75, 1)
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	// candy
 	var/count = rand(20,30)
 	while(count-- > 0)

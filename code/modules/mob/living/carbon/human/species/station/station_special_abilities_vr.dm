@@ -1401,7 +1401,6 @@
 				originator.visible_message(span_warning("\The [originator] trips over their self and falls flat on their face!"), \
 								span_warning("You trip over yourself and fall flat on your face!") )
 				playsound(originator, "punch", 25, 1, -1)
-				SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			return
 		else
 			hit_object.throw_at(firer, throw_range, hit_object.throw_speed, firer)
@@ -1412,7 +1411,6 @@
 			originator.visible_message(span_warning("\The [originator] trips over their self and falls flat on their face!"), \
 							span_warning("You trip over yourself and fall flat on your face!") )
 			playsound(originator, "punch", 25, 1, -1)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			return
 		else
 			return

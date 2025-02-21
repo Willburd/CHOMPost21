@@ -565,7 +565,6 @@
 					span_danger("You fall off and hit \the [landing]!"), \
 					"You hear something slam into \the [landing].")
 			playsound(src, "punch", 25, 1, -1)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 		// Because wounds heal rather quickly, 10 (the default for this proc) should be enough to discourage jumping off but not be enough to ruin you, at least for the first time.
 		// Hits 10 times, because apparently targeting individual limbs lets certain species survive the fall from atmosphere
@@ -669,7 +668,6 @@
 					span_danger("You fall off and hit \the [landing]!"), \
 					"You hear something slam into \the [landing].")
 			playsound(src, "punch", 25, 1, -1)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 	// And now to hurt the mech.
 	if(!planetary)

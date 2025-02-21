@@ -130,7 +130,6 @@
 /obj/structure/simple_door/proc/Open()
 	isSwitchingStates = 1
 	playsound(src, material.dooropen_noise, 100, 1)
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	flick("[material.door_icon_base]opening",src)
 	sleep(10)
 	density = FALSE
@@ -143,7 +142,6 @@
 /obj/structure/simple_door/proc/Close()
 	isSwitchingStates = 1
 	playsound(src, material.dooropen_noise, 100, 1)
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	flick("[material.door_icon_base]closing",src)
 	sleep(10)
 	density = TRUE

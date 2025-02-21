@@ -116,7 +116,6 @@
 		winner.visible_message(span_bold("\The [winner]") + " has a whole load of cash fall at their feet!")
 
 	playsound(user, 'sound/effects/snap.ogg', 50, 1)
-	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	user.drop_item(src)
 	new /obj/random/toy(spawnloc)
 	new /obj/item/clothing/head/paper_crown(spawnloc)

@@ -43,7 +43,6 @@
 	shattered = 1
 	icon_state = "mirror_broke"
 	playsound(src, "shatter", 70, 1)
-	SSmotiontracker.ping(src,90) // Outpost 21 edit - Motion tracker subsystem
 	desc = "Oh no, seven years of bad luck!"
 
 
@@ -97,7 +96,6 @@
 
 	if(shattered && glass)
 		playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, 1)
-		SSmotiontracker.ping(src,90) // Outpost 21 edit - Motion tracker subsystem
 		return
 
 	if(prob(I.force * 2))
@@ -107,14 +105,12 @@
 	else
 		visible_message(span_warning("[user] hits [src] with [I]!"))
 		playsound(src, 'sound/effects/Glasshit.ogg', 70, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 
 /obj/structure/mirror/attack_generic(var/mob/user, var/damage)
 
 	user.do_attack_animation(src)
 	if(shattered && glass)
 		playsound(src, 'sound/effects/hit_on_shattered_glass.ogg', 70, 1)
-		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		return 0
 
 	if(damage)

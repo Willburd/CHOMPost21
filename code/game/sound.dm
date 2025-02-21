@@ -41,6 +41,7 @@
 			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
 				continue
 
+			SSmotiontracker.ping(source,vol)
 			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
 
 		// Outpost 21 addition begin - holograms can hear things

@@ -446,7 +446,6 @@
 		return FALSE
 
 	playsound(src, 'sound/effects/bamf.ogg', 75, 1)
-	SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 
 	add_modifier(/datum/modifier/shadekin/create_shade,20 SECONDS)
 	shadekin_adjust_energy(-ability_cost)
@@ -555,7 +554,6 @@
 	src.visible_message(span_notice("[src] begins pulling dark energies around themselves."))
 	if(do_after(src, 600)) //60 seconds
 		playsound(src, 'sound/effects/phasein.ogg', 100, 1)
-		SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 		src.visible_message(span_notice("[src] finishes pulling dark energies around themselves, creating a portal."))
 
 		log_and_message_admins("[key_name_admin(src)] created a tunnel to the dark at [get_area(T)]!")

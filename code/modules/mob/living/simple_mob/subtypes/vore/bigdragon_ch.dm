@@ -793,7 +793,6 @@ I think I covered everything.
 				M.adjustBruteLoss(20)
 			to_chat(M, span_userdanger("You're thrown back by [src]!"))
 			playsound(src, get_sfx("punch"), 50, 1)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		AM.throw_at(throwtarget, maxthrow, 3, src)
 
 /mob/living/simple_mob/vore/bigdragon/proc/chargestart(var/atom/A)

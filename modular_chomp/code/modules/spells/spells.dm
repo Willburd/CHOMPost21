@@ -100,7 +100,6 @@
 		log_attack("has casted [src] at \the [hit_atom].")
 		if(fire_sound)
 			playsound(src, fire_sound, 75, 1)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		return 1
 	return 0
 

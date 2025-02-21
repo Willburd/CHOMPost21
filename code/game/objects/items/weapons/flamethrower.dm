@@ -83,7 +83,6 @@
 			// TODO - port this to it's own projectile so the damage can be balanced better?
 			var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon/flamethrower(get_turf(src))
 			playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
-			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 			// configure to be less broken! We're only a flamethrower, not a dragon!
 			P.submunition_spread_max = 30 + round(80*thrower_spew_percent())

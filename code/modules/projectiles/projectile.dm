@@ -153,7 +153,6 @@
 	if(istype(loc, /obj/item/ammo_casing))
 		my_case = loc
 	. = ..()
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 
 /obj/item/projectile/proc/Range()
 	range--
@@ -481,7 +480,6 @@
 			my_case.BB = null
 		my_case = null
 
-	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	return ..()
 
 /obj/item/projectile/proc/cleanup_beam_segments()

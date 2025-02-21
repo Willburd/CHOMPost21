@@ -108,7 +108,6 @@
 		src.last_use = world.time
 
 		playsound(src, 'sound/effects/extinguish.ogg', 75, 1, -3)
-		SSmotiontracker.ping(src,70) // Outpost 21 edit - Motion tracker subsystem
 
 		var/direction = get_dir(src,target)
 

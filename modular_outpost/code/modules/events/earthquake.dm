@@ -43,7 +43,6 @@
 		L.make_dizzy(10)
 		L.Weaken(4)
 		playsound(L, "punch", 60, 1)
-		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		shake_camera(L, 4, 1)
 		// sound
 		if(L.client && (L.ear_deaf <= 0 || !L.ear_deaf))
