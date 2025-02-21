@@ -9,9 +9,7 @@ SUBSYSTEM_DEF(motiontracker)
 	var/all_pings_this_tick = 0			// Total pings for stats regardless of turf spam check
 
 /datum/controller/subsystem/motiontracker/stat_entry(msg)
-	if(_listen_lookup)
-		var/list/track_list = _listen_lookup[COMSIG_MOVABLE_MOTIONTRACKER]
-		msg = "L: [track_list ? track_list.len : 0] | P: [all_pings_this_tick] | T: [used_this_tick.len]"
+	msg = "L: TODO | P: [all_pings_this_tick] | T: [used_this_tick.len]"
 	return ..()
 
 /datum/controller/subsystem/motiontracker/fire(resumed = 0)
