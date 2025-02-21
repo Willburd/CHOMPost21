@@ -29,7 +29,7 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	var/atom/echo_source = RW?.resolve()
-	var/scan_pos = src
+	var/atom/scan_pos = src
 	if(!isturf(loc))
 		scan_pos = loc
 	if(!echo_source || get_dist(scan_pos,echo_source) > SSmotiontracker.max_range || scan_pos.z != echo_source.z)
