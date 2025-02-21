@@ -239,8 +239,6 @@
 //Called after a successful Move(). By this point, we've already moved
 /atom/movable/proc/Moved(atom/old_loc, direction, forced = FALSE, movetime)
 	SEND_SIGNAL(src, COMSIG_MOVABLE_MOVED, old_loc, direction, forced, movetime)
-	if(!forced && movetime) // Outpost 21 edit - Motion tracker subsystem
-		SSmotiontracker?.ping(get_turf(src))
 	// Handle any buckled mobs on this movable
 	if(has_buckled_mobs())
 		handle_buckled_mob_movement(old_loc, direction, movetime)

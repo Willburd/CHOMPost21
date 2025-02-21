@@ -603,6 +603,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	update_following()
+	if(!forced) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker?.ping(get_turf(src))
 
 /mob/Life()
 	// to catch teleports etc which directly set loc

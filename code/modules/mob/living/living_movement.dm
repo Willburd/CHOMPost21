@@ -286,6 +286,8 @@ default behaviour is:
 /mob/living/Moved(var/atom/oldloc, direct, forced, movetime)
 	. = ..()
 	handle_footstep(loc)
+	if(!forced && movetime) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker?.ping(get_turf(src))
 	// Begin VOREstation edit
 	if(is_shifted)
 		is_shifted = FALSE
