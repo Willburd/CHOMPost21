@@ -269,6 +269,8 @@
 	/* #define HEARING_RADIO_FREQ 5
 	#define HEARING_SPANS 6
 	#define HEARING_MESSAGE_MODE 7 */
+///from /datum/controller/subsystem/motion_tracker/notice() (/turf/echo_loc)
+#define COMSIG_MOVABLE_MOTIONTRACKER "move_motiontracker"
 
 ///called when the movable is added to a disposal holder object for disposal movement: (obj/structure/disposalholder/holder, obj/machinery/disposal/source)
 #define COMSIG_MOVABLE_DISPOSING "movable_disposing"
