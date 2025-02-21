@@ -18,6 +18,7 @@
 #include "lost_ship_B.dmm"
 #include "container_C.dmm"
 #include "alienship_A.dmm"
+#include "diona_A.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -162,6 +163,13 @@
 	discard_prob = 55
 	cost = 80
 
+/datum/map_template/outpost21/space/orbitalyard_huge/diona_A
+	name = "Diona Vessel"
+	desc = "An organic mass"
+	mappath = "modular_outpost/maps/submaps/orbitalyard/diona_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 55
+	cost = 80
 
 //////////////////////////////////////////////////////////////
 // Area definitions
