@@ -406,6 +406,7 @@
 #include "code\controllers\subsystems\mapping.dm"
 #include "code\controllers\subsystems\media_tracks.dm"
 #include "code\controllers\subsystems\mobs.dm"
+#include "code\controllers\subsystems\motion_tracker.dm"
 #include "code\controllers\subsystems\nightshift.dm"
 #include "code\controllers\subsystems\overlays_ch.dm"
 #include "code\controllers\subsystems\overmap_renamer_vr.dm"

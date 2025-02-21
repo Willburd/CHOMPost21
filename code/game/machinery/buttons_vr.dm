@@ -1,6 +1,7 @@
 /obj/machinery/button/attack_hand(obj/item/W, mob/user as mob)
 	if(..()) return 1
 	playsound(src, 'sound/machines/button.ogg', 100, 1)
+	SSmotiontracker.ping(get_turf(src),10) // Outpost 21 edit - Motion tracker subsystem
 
 /obj/machinery/button/windowtint/multitint
 	name = "tint control"

@@ -47,6 +47,7 @@
 		if(!aimloc || aimloc == curloc || (locs && (aimloc in locs)))
 			break
 		playsound(src, fire_sound, fire_volume, 1)
+		SSmotiontracker.ping(get_turf(src),80) // Outpost 21 edit - Motion tracker subsystem
 		projectiles--
 		var/turf/projectile_turf
 		if(chassis.locs && chassis.locs.len)	// Multi tile.

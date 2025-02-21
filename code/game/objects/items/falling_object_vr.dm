@@ -51,6 +51,7 @@
 		shake_camera(M, 2, 2)
 
 	playsound(src, 'sound/effects/meteorimpact.ogg', 50, 1)
+	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 	density = initial(density)
 	opacity = initial(opacity)
 	plane = initial(plane)

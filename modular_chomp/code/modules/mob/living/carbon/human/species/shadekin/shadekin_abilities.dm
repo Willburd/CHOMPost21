@@ -89,6 +89,7 @@
 	if(!(ability_flags & AB_PHASE_SHIFTED))
 		shadekin_adjust_energy(-ability_cost)
 	playsound(src, 'sound/effects/stealthoff.ogg', 75, 1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 
 	if(!T.CanPass(src,T) || loc != T)
 		to_chat(src,span_warning("You can't use that here!"))

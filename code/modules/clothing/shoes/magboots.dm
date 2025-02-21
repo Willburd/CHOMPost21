@@ -40,6 +40,7 @@
 		force = 5
 		if(icon_base) icon_state = "[icon_base]1"
 		playsound(src, 'sound/effects/magnetclamp.ogg', 20)
+		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 		to_chat(user, "You enable the mag-pulse traction system.")
 	user.update_inv_shoes()	//so our mob-overlays update
 	user.update_mob_action_buttons()

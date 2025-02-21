@@ -17,6 +17,7 @@
 		return 0
 
 	playsound(src, 'sound/effects/bang.ogg', 30, 1, 30)
+	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 	chassis.occupant_message(span_warning("You emit a high-pitched noise from the mech."))
 	for(var/mob/living/carbon/M in ohearers(6, chassis))
 		if(ishuman(M))

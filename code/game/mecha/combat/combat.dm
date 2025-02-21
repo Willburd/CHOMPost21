@@ -44,6 +44,7 @@
 		var/mob/living/M = T
 		if(src.occupant.a_intent == I_HURT || istype(src.occupant, /mob/living/carbon/brain)) //Brains cannot change intents; Exo-piloting brains lack any form of physical feedback for control, limiting the ability to 'play nice'.
 			playsound(src, 'sound/weapons/heavysmash.ogg', 50, 1)
+			SSmotiontracker.ping(get_turf(src),80) // Outpost 21 edit - Motion tracker subsystem
 			if(damtype == "brute")
 				step_away(M,src,15)
 			/*
@@ -116,6 +117,7 @@
 				src.occupant_message("You hit [T].")
 				src.visible_message(span_bolddanger("[src.name] hits [T]"))
 				playsound(src, 'sound/weapons/heavysmash.ogg', 50, 1)
+				SSmotiontracker.ping(get_turf(src),80) // Outpost 21 edit - Motion tracker subsystem
 
 				if(istype(T, /obj/structure/girder))
 					T:take_damage(force * 3) //Girders have 200 health by default. Steel, non-reinforced walls take four punches, girders take (with this value-mod) two, girders took five without.

@@ -241,6 +241,7 @@
 		occupant_message("<B><FONT COLOR=red SIZE=+2>COLLISION ALERT!</B></FONT>")
 		take_damage(20, "brute")
 		playsound(src, 'sound/mecha/fighter/fighter_collision.ogg', 50)
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 
 ////////////// Gunpod //////////////
 

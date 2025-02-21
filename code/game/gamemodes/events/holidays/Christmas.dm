@@ -50,6 +50,7 @@
 		other_half.icon_state = "cracker2"
 		target.put_in_active_hand(other_half)
 		playsound(src, 'sound/effects/snap.ogg', 50, 1)
+		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 		return 1
 	return ..()
 

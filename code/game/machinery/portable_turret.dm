@@ -784,6 +784,7 @@
 	flick_holder.layer = layer + 0.1
 	flick("popup_[turret_type]", flick_holder)
 	playsound(src, 'sound/machines/turrets/turret_deploy.ogg', 100, 1)
+	SSmotiontracker.ping(get_turf(src),70) // Outpost 21 edit - Motion tracker subsystem
 	sleep(10)
 	qdel(flick_holder)
 
@@ -807,6 +808,7 @@
 	flick_holder.layer = layer + 0.1
 	flick("popdown_[turret_type]", flick_holder)
 	playsound(src, 'sound/machines/turrets/turret_retract.ogg', 100, 1)
+	SSmotiontracker.ping(get_turf(src),70) // Outpost 21 edit - Motion tracker subsystem
 	sleep(10)
 	qdel(flick_holder)
 
@@ -828,6 +830,7 @@
 			popUp()				//pop the turret up if it's not already up.
 			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
 			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
+			SSmotiontracker.ping(get_turf(src),70) // Outpost 21 edit - Motion tracker subsystem
 			spawn()
 				shootAt(target)
 			return TRUE
@@ -854,9 +857,11 @@
 	if(emagged || lethal)
 		A = new lethal_projectile(loc)
 		playsound(src, lethal_shot_sound, 75, 1)
+		SSmotiontracker.ping(get_turf(src),70) // Outpost 21 edit - Motion tracker subsystem
 	else
 		A = new projectile(loc)
 		playsound(src, shot_sound, 75, 1)
+		SSmotiontracker.ping(get_turf(src),70) // Outpost 21 edit - Motion tracker subsystem
 
 	var/power_mult = 1
 	if(emagged)

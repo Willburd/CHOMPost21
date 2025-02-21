@@ -76,6 +76,7 @@
 	var/turf/T = get_turf(hit_atom)
 	if(selected_sound && pay_energy(200))
 		playsound(src, selected_sound, 80, 1, -1)
+		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 		adjust_instability(1)
 		// Air Horn time.
 		if(selected_sound == 'sound/items/AirHorn.ogg' && pay_energy(3800))

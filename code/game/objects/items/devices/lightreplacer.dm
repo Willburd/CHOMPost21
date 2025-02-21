@@ -94,6 +94,7 @@
 			qdel(L)
 		if(new_bulbs != 0)
 			playsound(src, 'sound/machines/ding.ogg', 50, 1)
+			SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 		to_chat(user, "You insert \the [L.name] into \the [src.name]. You have [uses] light\s remaining.")
 		return
 
@@ -184,6 +185,7 @@
 				if(new_bulbs != 0)
 					to_chat(U, span_notice("\The [src] has fabricated a new bulb from the broken bulbs it has stored. It now has [uses] uses."))
 					playsound(src, 'sound/machines/ding.ogg', 50, 1)
+					SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 				target.status = LIGHT_EMPTY
 				target.installed_light = null //Remove the light!
 				target.update()

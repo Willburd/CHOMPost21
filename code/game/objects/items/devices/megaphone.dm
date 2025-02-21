@@ -140,6 +140,7 @@
 			if(broadcast_size >= 11)
 				var/turf/T = get_turf(user)
 				playsound(src, 'sound/items/AirHorn.ogg', 100, 1)
+				SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 				for(var/mob/living/carbon/M in oviewers(4, T))
 					if(M.get_ear_protection() >= 2)
 						continue

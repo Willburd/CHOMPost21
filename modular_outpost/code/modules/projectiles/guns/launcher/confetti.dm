@@ -34,6 +34,7 @@
 /obj/item/gun/launcher/confetti_cannon/pie/consume_next_projectile()
 	if(chambered)
 		playsound(src, 'sound/items/confetti.ogg', 75, 1)
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 	return chambered
 
 
@@ -61,4 +62,5 @@
 			var/obj/item/reagent_containers/food/snacks/pie/I = new(src)
 			pies.Add(I)
 			playsound(src, 'sound/machines/ding.ogg', 50, 1)
+			SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 			visible_message("ding")

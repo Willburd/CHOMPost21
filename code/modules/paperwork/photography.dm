@@ -301,6 +301,7 @@ var/global/photo_count = 0
 	captureimage(target, user, flag)
 
 	playsound(src, pick('sound/items/polaroid1.ogg', 'sound/items/polaroid2.ogg'), 75, 1, -3)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 
 	pictures_left--
 	desc = "A polaroid camera. It has [pictures_left] photos left."

@@ -85,6 +85,7 @@
 /obj/machinery/door/blast/proc/force_open()
 	src.operating = 1
 	playsound(src, open_sound, 100, 1)
+	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 	flick(icon_state_opening, src)
 	src.density = FALSE
 	update_nearby_tiles()
@@ -104,6 +105,7 @@
 
 	src.operating = 1
 	playsound(src, close_sound, 100, 1)
+	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 	src.layer = closed_layer
 	flick(icon_state_closing, src)
 	src.density = TRUE
@@ -180,6 +182,7 @@
 				else
 					user.visible_message(span_danger("\The [user] forcefully strikes \the [src] with \the [W]!"))
 					playsound(src, hitsound, 100, 1)
+					SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 					take_damage(W.force*0.35) //it's a blast door, it should take a while. -Luke
 				return
 
@@ -210,6 +213,7 @@
 			else
 				user.visible_message(span_danger("\The [user] forcefully strikes \the [src] with \the [W]!"))
 				playsound(src, hitsound, 100, 1)
+				SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 				take_damage(W.force*0.15) //If the item isn't a weapon, let's make this take longer than usual to break it down.
 			return
 
@@ -224,12 +228,14 @@
 				visible_message(span_alium("\The [user] begins forcing \the [src] open!"))
 				if(do_after(user, 15 SECONDS,src))
 					playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1)
+					SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 					visible_message(span_danger("\The [user] forces \the [src] open!"))
 					force_open(1)
 			else
 				visible_message(span_alium("\The [user] begins forcing \the [src] closed!"))
 				if(do_after(user, 5 SECONDS,src))
 					playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1)
+					SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 					visible_message(span_danger("\The [user] forces \the [src] closed!"))
 					force_close(1)
 		else

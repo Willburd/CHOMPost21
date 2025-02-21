@@ -260,6 +260,7 @@ var/list/_slime_default_emotes = list(
 /mob/living/simple_mob/slime/proc/squish()
 	playsound(src, 'sound/effects/slime_squish.ogg', 50, 0)
 	visible_message(span_infoplain(span_bold("\The [src]") + " squishes!"))
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 
 /decl/mob_organ_names/slime
 	hit_zones = list("cytoplasmic membrane")

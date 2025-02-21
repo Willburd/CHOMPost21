@@ -55,10 +55,12 @@
 	if(trap)
 		trigger_trap(M)
 		visible_message("\The [src.name] flashes as it is triggered!")
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 
 	else
 		explosion(loc, 0, 2, 3, 4) //land mines are dangerous, folks.
 		visible_message("\The [src.name] detonates!")
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 
 	qdel(s)
 	qdel(src)
@@ -333,9 +335,11 @@
 	user.visible_message("[user] starts priming \the [src.name].", "You start priming \the [src.name]. Hold still!")
 	if(do_after(user, 10 SECONDS))
 		playsound(src, 'sound/weapons/armbomb.ogg', 75, 1, -3)
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 		prime(user)
 	else
 		visible_message("[user] triggers \the [src.name]!", "You accidentally trigger \the [src.name]!")
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 		prime(user, TRUE)
 	return
 

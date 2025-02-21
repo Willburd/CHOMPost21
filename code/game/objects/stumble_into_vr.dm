@@ -1,5 +1,6 @@
 /atom/proc/stumble_into(mob/living/M)
 	playsound(src, "punch", 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] [pick("ran", "slammed")] into \the [src]!"))
 	to_chat(M, span_warning("You just [pick("ran", "slammed")] into \the [src]!"))
 	M.apply_damage(5, BRUTE)
@@ -14,6 +15,7 @@
 		playsound(src, material.tableslam_noise, 25, 1, -1)
 	else
 		playsound(src, 'sound/weapons/tablehit1.ogg', 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] flopped onto \the [src]!"))
 	M.apply_damage(5, BRUTE)
 	M.Weaken(2)
@@ -22,6 +24,7 @@
 
 /obj/machinery/disposal/stumble_into(mob/living/M)
 	playsound(src, 'sound/effects/clang.ogg', 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] [pick("tripped", "stumbled")] into \the [src]!"))
 	log_and_message_admins("stumbled into \the [src]", M)
 	if(M.client)
@@ -35,12 +38,14 @@
 
 /obj/structure/inflatable/stumble_into(mob/living/M)
 	playsound(src, "sound/effects/Glasshit.ogg", 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] [pick("ran", "slammed")] into \the [src]!"))
 	M.Weaken(1)
 	M.stop_flying()
 
 /obj/structure/kitchenspike/stumble_into(mob/living/M)
 	playsound(src, "sound/weapons/pierce.ogg", 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] [pick("ran", "slammed")] into the spikes on \the [src]!"))
 	M.apply_damage(15, BRUTE, sharp = TRUE)
 	M.Weaken(5)
@@ -48,6 +53,7 @@
 
 /obj/structure/m_tray/stumble_into(mob/living/M)
 	playsound(src, 'sound/weapons/tablehit1.ogg', 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] flopped onto \the [src]!"))
 	M.apply_damage(5, BRUTE)
 	M.Weaken(2)
@@ -56,6 +62,7 @@
 
 /obj/structure/c_tray/stumble_into(mob/living/M)
 	playsound(src, 'sound/weapons/tablehit1.ogg', 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] flopped onto \the [src]!"))
 	M.apply_damage(5, BRUTE)
 	M.Weaken(2)
@@ -74,6 +81,7 @@
 	if(occupied)
 		return ..()
 	playsound(src, 'sound/misc/slip.ogg', 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] [pick("tripped", "stumbled")] over \the [src]!"))
 	M.Weaken(2)
 	M.stop_flying()
@@ -103,6 +111,7 @@
 	if((stat & (NOPOWER|BROKEN)) || !istype(M, /mob/living/carbon) || occupant || M.abiotic() || !node)
 		return ..()
 	playsound(src, 'sound/effects/Glasshit.ogg', 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] [pick("tripped", "stumbled")] into \the [src]!"))
 	M.apply_damage(5, BRUTE)
 	M.Weaken(2)
@@ -127,6 +136,7 @@
 	if(!ishuman(M) || !isopen || !ispowered || isbroken || OCCUPANT || HELMET || SUIT)
 		return ..()
 	playsound(src, 'sound/effects/clang.ogg', 25, 1, -1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	visible_message(span_warning("[M] [pick("tripped", "stumbled")] into \the [src]!"))
 	if(M.client)
 		M.client.perspective = EYE_PERSPECTIVE

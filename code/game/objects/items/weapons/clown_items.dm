@@ -75,6 +75,7 @@
 	if(spam_flag == 0)
 		spam_flag = 1
 		playsound(src, honk_sound, 50, 1)
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
 		src.add_fingerprint(user)
 		spawn(20)
 			spam_flag = 0
@@ -85,3 +86,4 @@
 		return
 	if(isliving(AM))
 		playsound(src, honk_sound, 50, 1)
+		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem

@@ -34,6 +34,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 
 /obj/structure/blob/Destroy()
 	playsound(src, 'sound/effects/splat.ogg', 50, 1) //Expand() is no longer broken, no check necessary.
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	GLOB.all_blobs -= src
 	overmind = null
 	return ..()
@@ -160,6 +161,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 	if(istype(T, /turf/space) && !(locate(/obj/structure/lattice) in T) && prob(80))
 		make_blob = FALSE
 		playsound(src, 'sound/effects/splat.ogg', 50, 1) //Let's give some feedback that we DID try to spawn in space, since players are used to it
+		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 
 	consume_tile() //hit the tile we're in, making sure there are no border objects blocking us
 
@@ -235,6 +237,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 /obj/structure/blob/attack_generic(var/mob/user, var/damage, var/attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	user.do_attack_animation(src)
 	if(overmind)
 		damage *= overmind.blob_type.brute_multiplier
@@ -340,8 +343,10 @@ GLOBAL_LIST_EMPTY(all_blobs)
 
 			if(damage > 0)
 				playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
+				SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 			else
 				playsound(src, 'sound/weapons/tap.ogg', 50, 1)
+				SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	if(overmind)
 		damage = overmind.blob_type.on_received_damage(src, damage, W.damtype, user)
 	adjust_integrity(-damage)

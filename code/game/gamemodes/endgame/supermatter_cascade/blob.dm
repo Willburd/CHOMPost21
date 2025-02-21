@@ -83,6 +83,7 @@
 		span_warning("You hear an unearthly noise."))
 
 	playsound(src, 'sound/effects/supermatter.ogg', 50, 1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 
 	Consume(user)
 
@@ -92,6 +93,7 @@
 		span_warning("Everything suddenly goes silent."))
 
 	playsound(src, 'sound/effects/supermatter.ogg', 50, 1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 
 	user.drop_from_inventory(W)
 	Consume(W)
@@ -109,6 +111,7 @@
 		span_warning("You hear a loud crack as you are washed with a wave of heat."))
 
 	playsound(src, 'sound/effects/supermatter.ogg', 50, 1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 
 	Consume(AM)
 

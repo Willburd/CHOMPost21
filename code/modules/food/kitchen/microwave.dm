@@ -512,6 +512,7 @@
 
 /obj/machinery/microwave/proc/muck_start()
 	playsound(src, 'sound/effects/splat.ogg', 50, 1) // Play a splat sound
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	src.icon_state = "mwbloody1" // Make it look dirty!!
 
 /obj/machinery/microwave/proc/muck_finish()

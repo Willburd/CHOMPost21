@@ -781,6 +781,7 @@
 /obj/item/toy/russian_revolver/trick_revolver/post_shot(user)
 	to_chat(user, span_danger("[src] did look pretty dodgy!"))
 	playsound(src, 'sound/items/confetti.ogg', 50, 1)
+	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 	var/datum/effect/effect/system/confetti_spread/s = new /datum/effect/effect/system/confetti_spread
 	s.set_up(5, 1, src)
 	s.start()
@@ -858,6 +859,7 @@
 			C.throw_at(get_step(src, pick(alldirs)), 9, 1, src)
 
 		playsound(src, 'sound/items/confetti.ogg', 50, 0)
+		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 		icon_state = "tastybread_popped"
 		popped = 1
 		user.Stun(1)
@@ -891,6 +893,7 @@
 				C.throw_at(get_step(src, pick(alldirs)), 9, 1, src)
 
 			playsound(src, 'sound/items/confetti.ogg', 50, 0)
+			SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 			icon_state = "tastybread_popped"
 			popped = 1
 			user.Stun(1)

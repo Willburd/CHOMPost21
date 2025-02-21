@@ -230,6 +230,7 @@
 		occupant.gib()
 		occupant = null
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
+		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 		operating = 0
 		if(LAZYLEN(byproducts))
 			for(var/path in byproducts)
