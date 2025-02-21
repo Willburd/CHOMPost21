@@ -3,13 +3,21 @@ SUBSYSTEM_DEF(motiontracker)
 	priority = FIRE_PRIORITY_MOTIONTRACKER
 	wait = 2 SECOND
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
+	flags = SS_NO_INIT
 	var/min_range = 2
 	var/max_range = 8
 	var/list/used_this_tick = list() 	// Turfs used, to reduce spam
 	var/all_pings_this_tick = 0			// Total pings for stats regardless of turf spam check
 
 /datum/controller/subsystem/motiontracker/stat_entry(msg)
-	msg = "L: TODO | P: [all_pings_this_tick] | T: [used_this_tick.len]"
+	var/count = 0
+	if(_listen_lookup)
+		var/list/track_list = _listen_lookup[COMSIG_MOVABLE_MOTIONTRACKER]
+		if(islist(track_list))
+			count = track_list.len
+		else
+			count = 1 // listen_lookup optimizes single entries into just returning the only thing
+	msg = "L: [count] | P: [all_pings_this_tick] | T: [used_this_tick.len]"
 	return ..()
 
 /datum/controller/subsystem/motiontracker/fire(resumed = 0)
