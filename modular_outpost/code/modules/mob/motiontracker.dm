@@ -31,11 +31,13 @@
 		return
 	if(!client || echo_source == src) // Not ours
 		return
-	var/rand_limit = 10
+	var/rand_limit = 12
 	var/turf/root = get_turf(src)
 	var/xx = (T.x - root.x) * 32 // px offsets
 	var/yy = (T.y - root.y) * 32 // px offsets
-	var/image/currentimage = image('icons/effects/effects.dmi',root,"shuttle_warning",OBFUSCATION_LAYER,xx + rand(-rand_limit,rand_limit),yy + rand(-rand_limit,rand_limit))
+	xx += rand(-rand_limit,rand_limit)
+	yy += rand(-rand_limit,rand_limit)
+	var/image/currentimage = image('icons/effects/effects.dmi',root,"shuttle_warning",OBFUSCATION_LAYER, pixel_x = xx, pixel_y = yy)
 	currentimage.plane = PLANE_FULLSCREEN
 	src << currentimage
 	QDEL_IN(currentimage, 2 SECONDS)
