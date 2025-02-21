@@ -31,6 +31,8 @@
 		return
 	if(!client || echo_source == src) // Not ours
 		return
+	if(T.get_lumcount() >= 0.20 && can_see(src, T, 7)) // cheaper than oviewers
+		return // we already see it
 	var/rand_limit = 12
 	var/turf/root = get_turf(src)
 	var/xx = (T.x - root.x) * 32 // px offsets
