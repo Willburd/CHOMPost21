@@ -27,7 +27,7 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	var/atom/echo_source = RW?.resolve()
-	if(!echo_source || get_dist(src,echo_source) > 8 || get_dist(src,echo_source) < 2 || src.z != echo_source.z)
+	if(!echo_source || get_dist(src,echo_source) > SSmotiontracker.max_range  || get_dist(src,echo_source) < SSmotiontracker.min_range  || src.z != echo_source.z)
 		return
 	if(!client || echo_source == src) // Not ours
 		return

@@ -1,6 +1,8 @@
 SUBSYSTEM_DEF(motiontracker)
 	name = "Motion Tracker"
 	flags = SS_NO_FIRE
+	var/min_range = 3
+	var/max_range = 8
 
 /datum/controller/subsystem/motiontracker/stat_entry(msg)
 	msg = ""
