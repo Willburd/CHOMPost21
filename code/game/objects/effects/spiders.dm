@@ -269,6 +269,7 @@
 				walk_to(src, target_atom, 5)
 				if(prob(25))
 					src.visible_message(span_notice("\The [src] skitters[pick(" away"," around","")]."))
+				SSmotiontracker.ping(src,10) // Outpost 21 edit - Motion tracker subsystem
 		else if(amount_grown < 75 && prob(5))
 			//vent crawl!
 			for(var/obj/machinery/atmospherics/unary/vent_pump/v in view(7,src))
