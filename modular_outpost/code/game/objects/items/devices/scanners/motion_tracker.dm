@@ -32,7 +32,7 @@
 	var/scan_pos = src
 	if(!isturf(loc))
 		scan_pos = loc
-	if(!echo_source || get_dist(scan_pos,echo_source) > SSmotiontracker.max_range || src.z != echo_source.z)
+	if(!echo_source || get_dist(scan_pos,echo_source) > SSmotiontracker.max_range || scan_pos.z != echo_source.z)
 		return
 	flick("pinondirect",src)
 
