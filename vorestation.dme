@@ -5236,6 +5236,7 @@
 #include "modular_outpost\code\game\objects\items\devices\claymore.dm"
 #include "modular_outpost\code\game\objects\items\devices\laserdesignator.dm"
 #include "modular_outpost\code\game\objects\items\devices\radio\radio.dm"
+#include "modular_outpost\code\game\objects\items\devices\scanners\motion_tracker.dm"
 #include "modular_outpost\code\game\objects\items\toys\toys.dm"
 #include "modular_outpost\code\game\objects\items\weapons\AI_modules.dm"
 #include "modular_outpost\code\game\objects\items\weapons\lasertagknife.dm"

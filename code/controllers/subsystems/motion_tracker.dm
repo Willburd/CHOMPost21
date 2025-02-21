@@ -1,6 +1,6 @@
 SUBSYSTEM_DEF(motiontracker)
 	name = "Motion Tracker"
-	flags = SS_NO_TICK_CHECK
+	flags = SS_NO_FIRE
 
 /datum/controller/subsystem/motiontracker/stat_entry(msg)
 	msg = ""
@@ -15,7 +15,7 @@ SUBSYSTEM_DEF(motiontracker)
 		return
 	if(!prob(hear_chance))
 		return
-	if(hear_chance <= 30)
+	if(hear_chance <= 40)
 		T = get_step(T,pick(cardinal))
 		if(!T) // incase...
 			return

@@ -44,6 +44,7 @@
 				user.next_play_vent = world.time+30
 				var/turf/T = get_turf(src)
 				playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
+				SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
 				var/message = pick(
 					prob(90);"* clunk *",
 					prob(90);"* thud *",
