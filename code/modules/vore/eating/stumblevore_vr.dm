@@ -40,7 +40,7 @@
 		return
 	// Outpost 21 edit end
 	playsound(src, "punch", 25, 1, -1)
-	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	M.Weaken(4)
 	M.stop_flying()
 	if(CanStumbleVore(M))

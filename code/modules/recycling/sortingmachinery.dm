@@ -451,7 +451,7 @@
 
 	sleep(10)
 	playsound(src, 'sound/machines/disposalflush.ogg', 50, 0, 0)
-	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	sleep(5) // wait for animation to finish
 
 	H.init(src)	// copy the contents of disposer to holder

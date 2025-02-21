@@ -196,6 +196,7 @@ var/global/list/emotes_by_key
 		else
 			playsound(user.loc, sound_to_play, use_sound["vol"], sound_vary, extrarange = use_sound["exr"], frequency = null, preference = sound_preferences, volume_channel = use_sound["volchannel"]) //VOREStation Add - Preference // CHOMPEdit: volume channel + range
 		//CHOMPEdit End - Previous line used to be outside an if/else before the edit.
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 /decl/emote/proc/mob_can_use(var/mob/user)
 	return istype(user) && user.stat != DEAD && (type in user.get_available_emotes())

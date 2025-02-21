@@ -187,6 +187,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 			playsound(L, "rustle", 25, 1)
 			return
 
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		playsound(L, "punch", 70, 1)
 		shake_camera(L, 1, 1)
 

@@ -532,7 +532,7 @@
 	// Outpost 21 edit end
 		GLOB.disposals_flush_shift_roundstat++
 
-	SSmotiontracker.ping(get_turf(src),50) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,50) // Outpost 21 edit - Motion tracker subsystem
 
 	H.init(src, air_contents)	// copy the contents of disposer to holder
 	air_contents = new(PRESSURE_TANK_VOLUME)	// new empty gas resv.

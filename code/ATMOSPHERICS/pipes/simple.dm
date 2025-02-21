@@ -79,7 +79,7 @@
 /obj/machinery/atmospherics/pipe/simple/proc/burst()
 	src.visible_message(span_danger("\The [src] bursts!"));
 	playsound(src, 'sound/effects/bang.ogg', 25, 1)
-	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	var/datum/effect/effect/system/smoke_spread/smoke = new
 	smoke.set_up(1,0, src.loc, 0)
 	smoke.start()

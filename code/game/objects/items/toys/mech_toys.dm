@@ -325,7 +325,7 @@
 					else //just attack
 						SpinAnimation(5, 0)
 						playsound(src, 'sound/mecha/mechstep.ogg', 30, TRUE)
-						SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+						SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 						attacker.combat_health--
 						src_controller.visible_message(span_danger(" [src] smashes [attacker]! "), \
 										span_danger(" You smash [src] into [attacker]! "), \

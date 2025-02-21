@@ -58,7 +58,7 @@
 		occupant = M
 		update_icon() //icon_state = "body_scanner_1" //VOREStation Edit - Health display for consoles with light and such.
 		playsound(src, 'sound/machines/medbayscanner1.ogg', 50) // Beepboop you're being scanned. <3
-		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		add_fingerprint(user)
 		qdel(G)
 		SStgui.update_uis(src)
@@ -104,7 +104,7 @@
 	occupant = O
 	update_icon() //icon_state = "body_scanner_1" //VOREStation Edit - Health display for consoles with light and such.
 	playsound(src, 'sound/machines/medbayscanner1.ogg', 50) // Beepboop you're being scanned. <3
-	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	add_fingerprint(user)
 	SStgui.update_uis(src)
 
@@ -379,7 +379,7 @@
 			var/atom/target = console ? console : src
 			visible_message(span_notice("[target] rattles and prints out a sheet of paper."))
 			playsound(src, 'sound/machines/printer.ogg', 50, 1)
-			SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+			SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 			var/obj/item/paper/P = new /obj/item/paper(get_turf(target))
 			var/name = occupant ? occupant.name : "Unknown"
 			P.info = "<CENTER>" + span_bold("Body Scan - [name]") + "</CENTER><BR>"

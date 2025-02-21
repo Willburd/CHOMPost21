@@ -168,6 +168,7 @@
 				var/turf/STurf = get_turf(target)
 				spawn(2)
 					playsound(STurf, 'sound/effects/snap.ogg', 60, 1)
+					SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 				target.visible_message(span_critical("\The [src] yanks \the [target] towards \the [user]!"))
 				target.throw_at(get_turf(get_step(user,get_dir(user,target))), 2, 1, src)
 
@@ -214,6 +215,7 @@
 /obj/item/material/whip/attack_self(mob/user)
 	user.visible_message(span_warning("\The [user] cracks \the [src]!"))
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 
 /obj/item/material/knife/machete/hatchet/stone

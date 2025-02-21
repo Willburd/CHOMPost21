@@ -157,11 +157,11 @@
 			message = "FUCK YOUR CUNT YOU SHIT EATING COCKSUCKER MAN EAT A DONG FUCKING ASS RAMMING SHIT FUCK EAT PENISES IN YOUR FUCK FACE AND SHIT OUT ABORTIONS OF FUCK AND DO SHIT IN YOUR ASS YOU COCK FUCK SHIT MONKEY FUCK ASS WANKER FROM THE DEPTHS OF SHIT."
 			usr.visible_message(span_infoplain("[usr]'s Compli-o-Nator: " + span_red(span_huge(span_bold("[message]")))))
 			playsound(src, 'sound/voice/binsult.ogg', 50, 0, 4) //Future sound channel = something like SFX
-			SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			cooldown = world.time
 			return
 
 		usr.visible_message(span_infoplain("[usr]'s Compli-o-Nator: " + span_red(span_huge(span_bold("[message]")))))
 		playsound(src, "sound/voice/complionator/[key].ogg", 50, 0, 4) //future sound channel = something like SFX
-		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		cooldown = world.time

@@ -30,6 +30,7 @@
 		if(L.mob_size <= MOB_MEDIUM)
 			visible_message(span_danger("\The [src] sends \the [L] flying with their mechanized fist!"))
 			playsound(src, "punch", 50, 1)
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			L.Weaken(weaken_amount)
 			var/throw_dir = get_dir(src, L)
 			var/throw_dist = L.incapacitated(INCAPACITATION_DISABLED) ? 4 : 1
@@ -38,3 +39,4 @@
 			to_chat(L, span_warning("\The [src] punches you with incredible force, but you remain in place."))
 			visible_message(span_danger("\The [src] slams it's mechanized fist into \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.
 			playsound(src, "punch", 50, 1) // CHOMPEdit: Mechpunch visible/audible feedback for *resisting* the punch.
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem

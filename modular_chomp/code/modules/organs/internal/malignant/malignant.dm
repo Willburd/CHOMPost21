@@ -333,12 +333,14 @@
 		// SURPRISE!
 		playsound(owner, 'sound/items/confetti.ogg', 75, 1)
 		playsound(src, 'sound/effects/snap.ogg', 50, 1)
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		owner.gib()
 		T = owner.loc
 	else
 		// only the organ pops!
 		playsound(src, 'sound/items/confetti.ogg', 75, 1)
 		playsound(src, 'sound/effects/snap.ogg', 50, 1)
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 	// YAYYYYY
 	if(!turf_clear(T))
@@ -498,6 +500,7 @@
 		owner.gib() //Kaboom!
 
 	playsound(src, 'sound/effects/snap.ogg', 50, 1)
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 	// place a ton of money at location, then delete organ!
 	while(thalers > 1000)

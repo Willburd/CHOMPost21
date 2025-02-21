@@ -27,7 +27,7 @@
 	if (!air_contents)
 		return
 	playsound(src, 'sound/weapons/Gunshot_old.ogg', 100, 1)
-	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	icon_state = "latexballon_bursted"
 	item_state = "lgloves"
 	loc.assume_air(air_contents)

@@ -749,6 +749,7 @@
 		if(!(user.has_organ(zone))) // If they somehow don't have a head.
 			zone = "chest"
 		playsound(src, 'sound/effects/snap.ogg', 50, 1)
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		user.visible_message(span_danger("[src] goes off!"))
 		shake_camera(user, 2, 1)
 		user.Stun(1)
@@ -781,7 +782,7 @@
 /obj/item/toy/russian_revolver/trick_revolver/post_shot(user)
 	to_chat(user, span_danger("[src] did look pretty dodgy!"))
 	playsound(src, 'sound/items/confetti.ogg', 50, 1)
-	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	var/datum/effect/effect/system/confetti_spread/s = new /datum/effect/effect/system/confetti_spread
 	s.set_up(5, 1, src)
 	s.start()
@@ -859,7 +860,7 @@
 			C.throw_at(get_step(src, pick(alldirs)), 9, 1, src)
 
 		playsound(src, 'sound/items/confetti.ogg', 50, 0)
-		SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 		icon_state = "tastybread_popped"
 		popped = 1
 		user.Stun(1)
@@ -893,7 +894,7 @@
 				C.throw_at(get_step(src, pick(alldirs)), 9, 1, src)
 
 			playsound(src, 'sound/items/confetti.ogg', 50, 0)
-			SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+			SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 			icon_state = "tastybread_popped"
 			popped = 1
 			user.Stun(1)
@@ -1098,6 +1099,7 @@
 	if(icon_state == "partypopper")
 		user.visible_message(span_notice("[user] pulls on the string, releasing a burst of confetti!"), span_notice("You pull on the string, releasing a burst of confetti!"))
 		playsound(src, 'sound/effects/snap.ogg', 50, TRUE)
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		var/datum/effect/effect/system/confetti_spread/s = new /datum/effect/effect/system/confetti_spread
 		s.set_up(5, 1, src)
 		s.start()

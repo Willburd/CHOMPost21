@@ -44,7 +44,7 @@
 		if(depth == 0)
 			//log_debug("Creating resonance at the target spot.")
 			playsound(src,'sound/weapons/resonator_fire.ogg',50,1)
-			SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			new /obj/effect/resonance(T, WEAKREF(creator), burst_time)
 			fields++
 			depth++
@@ -85,7 +85,7 @@
 
 	else
 		playsound(src,'sound/weapons/resonator_fire.ogg',50,1)
-		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		new /obj/effect/resonance(T, WEAKREF(creator), burst_time)
 		fieldsactive++
 		spawn(burst_time)
@@ -136,7 +136,7 @@
 	if(!T)
 		return
 	playsound(src, 'sound/weapons/resonator_blast.ogg', 50, 1)
-	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	// Make the collapsing effect
 	new /obj/effect/temp_visual/resonance_crush(T)
 

@@ -105,7 +105,7 @@ steam.start() -- spawns the effect
 /obj/effect/effect/sparks/Initialize()
 	. = ..()
 	playsound(src, "sparks", 100, 1)
-	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	var/turf/T = src.loc
 	if (istype(T, /turf))
 		T.hotspot_expose(1000,100)

@@ -243,6 +243,7 @@
 		if(L.mob_size <= MOB_MEDIUM)
 			visible_message(span_danger("\The [src] sends \the [L] flying with the impact!"))
 			playsound(src, "punch", 50, 1)
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			L.Weaken(1)
 			var/throwdir = get_dir(src, L)
 			L.throw_at(get_edge_target_turf(L, throwdir), 3, 1, src)
@@ -250,6 +251,7 @@
 			to_chat(L, span_warning("\The [src] hits you with incredible force, but you remain in place."))
 			visible_message(span_danger("\The [src] hits \the [L] with incredible force, to no visible effect!")) // CHOMPEdit: Visible/audible feedback for *resisting* the slam.
 			playsound(src, "punch", 50, 1)
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 /mob/living/simple_mob/vore/candy/yellowcabold //Speeds folks
 	name = "gummy kobold"

@@ -145,7 +145,7 @@
 		P.old_style_target(A)
 		P.fire()
 		playsound(src, 'sound/weapons/alien_spitacid.ogg', 25, 0)
-		SSmotiontracker.ping(get_turf(src),80) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 
 /mob/living/carbon/human/proc/corrosive_acid(O as obj|turf in oview(1)) //If they right click to corrode, an error will flash if its an invalid target./N
 	set name = "Corrosive Acid (200)"

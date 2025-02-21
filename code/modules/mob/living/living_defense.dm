@@ -380,6 +380,7 @@
 	src.take_organ_damage(speed * 5)	// used to be 5 * speed. That's a default of 25 and I dont see anything ever changing the "speed" value. //CHOMPEdit, no. We keep the damage values, no reduction to 12
 	//src.Weaken(3)				// That is absurdly high so im just setting it to a flat 12 with a bit of stun ontop. //Stun is too dangerous
 	playsound(src, get_sfx("punch"), 50) //ouch sound
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 /mob/living/proc/near_wall(var/direction,var/distance=1)
 	var/turf/T = get_step(get_turf(src),direction)

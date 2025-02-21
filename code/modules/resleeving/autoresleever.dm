@@ -325,7 +325,7 @@
 
 	playsound(src, 'sound/machines/medbayscanner1.ogg', 50, 0) // Make it clear the ID was processed and it's waiting
 	visible_message("\The [src] flashes 'Record found, preparing to resleeve [D.registered_name]!'")
-	SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	spawn(100) // needs big delay time to make sure the host is dead if stayed in brain
 		// solve the ghost from mind refs
 		var/mob/ghost

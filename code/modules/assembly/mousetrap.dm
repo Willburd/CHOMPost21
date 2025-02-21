@@ -51,6 +51,7 @@
 			J.splat()
 	// Outpost 21 edit end
 	playsound(target, 'sound/effects/snap.ogg', 50, 1)
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	layer = MOB_LAYER - 0.2
 	armed = 0
 	update_icon()

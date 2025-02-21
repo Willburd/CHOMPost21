@@ -34,7 +34,7 @@
 			return
 
 		playsound(src, 'sound/effects/extinguish.ogg', 75, 1, -3)
-		SSmotiontracker.ping(get_turf(src),80) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 
 		var/direction = get_dir(chassis,target)
 

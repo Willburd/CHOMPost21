@@ -50,7 +50,7 @@ var/list/floor_light_cache = list()
 		if(!isnull(damaged) && !(stat & BROKEN))
 			visible_message(span_danger("\The [user] smashes \the [src]!"))
 			playsound(src, "shatter", 70, 1)
-			SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			stat |= BROKEN
 		else
 			visible_message(span_danger("\The [user] attacks \the [src]!"))

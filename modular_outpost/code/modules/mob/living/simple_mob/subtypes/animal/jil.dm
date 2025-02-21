@@ -140,7 +140,7 @@
 /mob/living/simple_mob/vore/alienanimals/jil/death()
 	layer = MOB_LAYER
 	playsound(src, 'sound/effects/mouse_squeak_loud.ogg', 35, 1)
-	SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 	if(client)
 		client.time_died_as_mouse = world.time
 	..()

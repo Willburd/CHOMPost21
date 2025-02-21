@@ -474,11 +474,11 @@ var/list/mining_overlay_cache = list()
 			if(S.status != 0) //We're on. This isn't just a == 1 in case someone adds some weird functionality in the future to give it multiple states.
 				user.visible_message(span_warning("\The [src] discharges with a thunderous, hair-raising crackle!"))
 				playsound(src, 'sound/weapons/resonator_blast.ogg', 100, 1, -1)
-				SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+				SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 			else
 				user.visible_message(span_warning("\The [src] plows into the rock with a thunk, smashing it to pieces."))
 				playsound(src, get_sfx("pickaxe"), 35, 1, -1) //Weak. Not on. Just as good as a normal pick.
-				SSmotiontracker.ping(get_turf(src)) // Outpost 21 edit - Motion tracker subsystem
+				SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 
 			if(newDepth >= 200) // This means the rock is mined out fully
 				if(S.destroy_artefacts)

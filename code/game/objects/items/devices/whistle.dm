@@ -37,12 +37,12 @@
 
 	if(isnull(insults))
 		playsound(src, 'sound/voice/halt.ogg', 100, 1, vary = 0)
-		SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		user.audible_message(span_warning("[user]'s [name] rasps, \"[use_message]\""), span_warning("\The [user] holds up \the [name]."), runemessage = "\[TTS Voice\] [use_message]")
 	else
 		if(insults > 0)
 			playsound(src, 'sound/voice/binsult.ogg', 100, 1, vary = 0)
-			SSmotiontracker.ping(get_turf(src),100) // Outpost 21 edit - Motion tracker subsystem
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			// Yes, it used to show the transcription of the sound clip. That was a) inaccurate b) immature as shit.
 			user.audible_message(span_warning("[user]'s [name] gurgles something indecipherable and deeply offensive."), span_warning("\The [user] holds up \the [name]."), runemessage = "\[TTS Voice\] #&@&^%(*")
 			insults--

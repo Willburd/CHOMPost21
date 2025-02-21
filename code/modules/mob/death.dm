@@ -85,7 +85,7 @@
 		src.visible_message(span_infoplain(span_bold("\The [src.name]") + " [deathmessage]"))
 
 	set_stat(DEAD)
-	SSmotiontracker.ping(get_turf(src),80) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 
 	update_canmove()
 

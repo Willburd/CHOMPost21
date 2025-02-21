@@ -24,6 +24,7 @@
 			user.setClickCooldown(user.get_attack_speed())
 			flick("[icon_state]_hit", src)
 			playsound(src, 'sound/effects/woodhit.ogg', 25, 1, -1)
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			user.do_attack_animation(src)
 			user.adjust_nutrition(-10) //CHOMPEdit Set nutrition drain to be the same as in fitness_machines_vr.dm
 			user.weight -= 0.25 * weightloss_power * (0.01 * user.weight_loss)
@@ -61,10 +62,12 @@
 	else
 		fitness_being_used = 1
 		playsound(src, 'sound/effects/weightlifter.ogg', 50, 1)
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		user.set_dir(SOUTH)
 		flick("[icon_state]_[weight]", src)
 		if(do_after(user, 30 + (weight * 10))) //CHOMPEdit Set timer to be similar to the machines in fitness_machines_vr.dm
 			playsound(src, 'sound/effects/weightdrop.ogg', 25, 1)
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			user.adjust_nutrition(weight * -10)
 			var/weightloss_enhanced = weightloss_power * (weight * 0.5)
 			user.weight -= 0.25 * weightloss_enhanced * (0.01 * user.weight_loss)

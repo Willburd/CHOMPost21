@@ -386,6 +386,7 @@
 		return
 	operating = 1
 
+	SSmotiontracker.ping(src,50) // Outpost 21 edit - Motion tracker subsystem
 	do_animate("opening")
 	icon_state = "door0"
 	set_opacity(0)
@@ -444,6 +445,7 @@
 	operating = 1
 
 	close_door_at = 0
+	SSmotiontracker.ping(src,50) // Outpost 21 edit - Motion tracker subsystem
 	do_animate("closing")
 	addtimer(CALLBACK(src, PROC_REF(close_internalsetdensity),forced), anim_length_before_density)
 

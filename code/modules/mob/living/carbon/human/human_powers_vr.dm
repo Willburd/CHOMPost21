@@ -229,6 +229,7 @@
 		if(!hand_games_check(player1,player2))
 			return
 		playsound(player1, 'sound/effects/snap.ogg', 30, 1)
+		SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 		if(competition == player1)
 			player1.visible_message(span_notice("[player1] manages to slap [player2]'s hand before they can react!"))
 		else

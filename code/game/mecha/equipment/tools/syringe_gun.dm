@@ -68,7 +68,7 @@
 	S.icon = 'icons/obj/chemical.dmi'
 	S.icon_state = "syringeproj"
 	playsound(src, 'sound/items/syringeproj.ogg', 50, 1)
-	SSmotiontracker.ping(get_turf(src),80) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,80) // Outpost 21 edit - Motion tracker subsystem
 	log_message("Launched [S] from [src], targeting [target].")
 	spawn(-1)
 		src = null //if src is deleted, still process the syringe

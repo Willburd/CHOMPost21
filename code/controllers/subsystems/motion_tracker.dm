@@ -9,13 +9,14 @@ SUBSYSTEM_DEF(motiontracker)
 /datum/controller/subsystem/motiontracker/fire(resumed = 0)
 	return
 
-/datum/controller/subsystem/motiontracker/proc/ping(var/turf/T, var/hear_chance = 30)
+/datum/controller/subsystem/motiontracker/proc/ping(var/atom/source, var/hear_chance = 30)
+	var/turf/T = get_turf(source)
 	if(!isturf(T)) // ONLY call from turfs
 		return
 	if(!prob(hear_chance))
 		return
 	if(hear_chance <= 30)
-		T = get_step(T.pick(cardinal))
+		T = get_step(T,pick(cardinal))
 		if(!T) // incase...
 			return
-	SEND_SIGNAL(src, COMSIG_MOVABLE_MOTIONTRACKER, T)
+	SEND_SIGNAL(src, COMSIG_MOVABLE_MOTIONTRACKER, WEAKREF(source), T)

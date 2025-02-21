@@ -287,7 +287,7 @@ default behaviour is:
 	. = ..()
 	handle_footstep(loc)
 	if(!forced && movetime) // Outpost 21 edit - Motion tracker subsystem
-		SSmotiontracker?.ping(get_turf(src))
+		SSmotiontracker?.ping(src)
 	// Begin VOREstation edit
 	if(is_shifted)
 		is_shifted = FALSE

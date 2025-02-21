@@ -66,7 +66,7 @@
 	area.lightswitch = on
 	area.update_icon()
 	playsound(src, 'sound/machines/button.ogg', 100, 1, 0) // VOREStation Edit
-	SSmotiontracker.ping(get_turf(src),20) // Outpost 21 edit - Motion tracker subsystem
+	SSmotiontracker.ping(src,20) // Outpost 21 edit - Motion tracker subsystem
 
 	for(var/obj/machinery/light_switch/L in area)
 		L.on = on

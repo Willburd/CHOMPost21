@@ -63,6 +63,7 @@
 			pred.Weaken(8)
 			prey.Weaken(8)
 			playsound(src, "punch", 25, 1, -1)
+			SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 			var/tdamage
 			for(var/i = 1 to 5)			//Twice as less damage because cushioned fall, but both get damaged.
 				tdamage = rand(0, 5)

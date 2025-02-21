@@ -165,6 +165,7 @@
 		damage += 5
 
 	playsound(target, "punch", 25, 1, -1)
+	SSmotiontracker.ping(src,100) // Outpost 21 edit - Motion tracker subsystem
 
 	target.visible_message(span_bolddanger("[user] has punched [target]!"))
 
