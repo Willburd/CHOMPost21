@@ -112,8 +112,9 @@ def main(args):
         # ChompEDIT START
         if not args.maps:
             if "modular_outpost/maps/submaps/retiredsecrets/ported" in map_filename: # Outpost 21 edit, ignore our archive
+                print(yellow("SKIPPED"))
                 continue
-            if "modular_outpost/maps/" not in map_filename: # Outpost 21 edit
+            if "modular_outpost/maps/" not in map_filename and "maps/outpost21/" not in map_filename : # Outpost 21 edit
                 if "modular_chomp/maps/" not in map_filename:
                     print(yellow("SKIPPED"))
                     continue
