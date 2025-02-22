@@ -1,12 +1,52 @@
-"a" = (/turf/template_noop,/area/template_noop)
-"g" = (/obj/machinery/trailblazer/yellow,/turf/simulated/mineral/floor/ignore_cavegen/muriki,/area/mine/explored/muriki/cave/deepdark)
-"R" = (/turf/simulated/floor/outdoors/sidewalk/muriki{icon_state = "slab"},/area/mine/explored/muriki/cave/deepdark)
-"W" = (/turf/simulated/mineral/floor/ignore_cavegen/muriki,/area/mine/explored/muriki/cave/deepdark)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"g" = (
+/obj/machinery/trailblazer/yellow,
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"
-aaaaa
-aWRWa
-aWgRa
-aRWWa
-aaaaa
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+W
+W
+R
+a
+"}
+(3,1,1) = {"
+a
+R
+g
+W
+a
+"}
+(4,1,1) = {"
+a
+W
+R
+W
+a
+"}
+(5,1,1) = {"
+a
+a
+a
+a
+a
 "}
