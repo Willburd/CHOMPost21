@@ -133,8 +133,6 @@
 /area/submap/outpost21/structure_generic/lostshipb)
 "fS" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -327,8 +325,6 @@
 	pixel_y = -2
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -441,8 +437,6 @@
 /area/submap/outpost21/structure_generic/lostshipb)
 "vl" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,

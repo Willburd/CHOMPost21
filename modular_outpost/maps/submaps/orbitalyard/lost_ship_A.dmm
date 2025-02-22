@@ -528,8 +528,6 @@
 /area/submap/outpost21/structure_generic/lostshipa)
 "nW" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/light,
@@ -1038,7 +1036,6 @@
 "Dn" = (
 /obj/machinery/power/rtg/kugelblitz,
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -1442,7 +1439,6 @@
 	pixel_x = -28
 	},
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/light_switch/breaker{
@@ -1603,8 +1599,6 @@
 /area/submap/outpost21/structure_generic/lostshipa)
 "QO" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -1760,8 +1754,6 @@
 /area/submap/outpost21/structure_generic/lostshipa)
 "We" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
