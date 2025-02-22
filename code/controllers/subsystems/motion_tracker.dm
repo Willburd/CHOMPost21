@@ -8,6 +8,8 @@ SUBSYSTEM_DEF(motiontracker)
 	var/max_range = 8
 	var/all_pings_round = 0
 	var/list/queued_echo_turfs = list()
+	var/list/currentrun = list()
+	var/list/expended_echos = list()
 
 /datum/controller/subsystem/motiontracker/stat_entry(msg)
 	var/count = 0
@@ -21,13 +23,12 @@ SUBSYSTEM_DEF(motiontracker)
 	return ..()
 
 /datum/controller/subsystem/motiontracker/fire(resumed = 0)
-	if(resumed)
-		return
-	for(var/key in queued_echo_turfs)
-		var/list/data = queued_echo_turfs[key]
-		queued_echo_turfs[key] = null
-		if(!data)
-			continue
+	if(!resumed)
+		src.currentrun = queued_echo_turfs.Copy()
+		expended_echos.Cut()
+	while(currentrun.len)
+		var/key = currentrun[1] // Because using an index into an associative array gets the key at that index... I hate you byond.
+		var/list/data = currentrun[key]
 		var/datum/weakref/AF = data[1]
 		var/datum/weakref/RF = data[2]
 		var/turf/At = AF?.resolve()
@@ -36,12 +37,16 @@ SUBSYSTEM_DEF(motiontracker)
 		if(!Rt || !At || !count)
 			continue
 		while(count-- > 0)
-			// Place at root turf from signal responder, and align to the final turf location
+			// Place at root turf offset from signal responder's turf using px offsets. So it will show up over visblocking.
 			var/obj/effect/abstract/motion_echo/E = new /obj/effect/abstract/motion_echo(Rt)
-			E.pixel_x += (At.x - Rt.x) * 32 // px offsets
-			E.pixel_y += (At.y - Rt.y) * 32 // px offsets
-
-	queued_echo_turfs.Cut()
+			E.pixel_x += (At.x - Rt.x) * 32
+			E.pixel_y += (At.y - Rt.y) * 32
+		currentrun.Remove(key)
+		expended_echos[key] = data
+		if(MC_TICK_CHECK)
+			return
+	// Removed used keys, incase the current queue grew while we were processing this one
+	queued_echo_turfs -= expended_echos
 
 // We get this from anything in the world that would cause a motion tracker ping
 // From sounds to motions, to mob attacks. This then sends a signal to anyone listening.
