@@ -179,6 +179,7 @@ What is the naming convention for planes or layers?
 #define PLANE_AUGMENTED			40 //Augmented-reality plane
 #define PLANE_SOULCATCHER		41 //Soulcatcher
 
+
 //Fullscreen overlays under inventory
 #define PLANE_FULLSCREEN		90 //Blindness, mesons, druggy, etc
 	#define OBFUSCATION_LAYER	5 //Where images covering the view for eyes are put
@@ -186,6 +187,8 @@ What is the naming convention for planes or layers?
 	#define DAMAGE_LAYER		18.1
 	#define BLIND_LAYER			18.2
 	#define CRIT_LAYER			18.3
+
+#define PLANE_MOTIONTRACKER		91 // Outpost 21 edit - Motion tracker subsystem, Stuff seen when mob has vibration sensing or a motion tracker
 
 //Client UI HUD stuff
 #define PLANE_HOLOMAP_FRAME		92

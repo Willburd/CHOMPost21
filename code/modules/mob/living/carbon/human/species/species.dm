@@ -147,6 +147,8 @@
 	var/emp_stun_mod = 		1			// Multiplier to all EMP disorient/etc. sustained by the mob, if it's EMP-sensitive
 	var/vision_flags = SEE_SELF							// Same flags as glasses.
 
+	var/has_vibration_sense = FALSE 	// Outpost 21 edit - Motion tracker subsystem
+
 	// Death vars.
 	var/meat_type = /obj/item/reagent_containers/food/snacks/meat/human
 	var/remains_type = /obj/effect/decal/remains/xeno
@@ -261,7 +263,7 @@
 	var/pixel_offset_y = 0									// Used for offsetting 64x64 and up icons.
 	var/rad_levels = NORMAL_RADIATION_RESISTANCE		//For handle_mutations_and_radiation
 	var/rad_removal_mod = 1
-	
+
 	// Outpost 21 addition begin
 	var/phoron_contact_mod = 1								// Affects skin contact poisoning from phoron
 	var/enzyme_contact_mod = 1								// Multiplies probability of enzyme damage rolls... basically only used by the enzyme immunity trait(outpost 21)

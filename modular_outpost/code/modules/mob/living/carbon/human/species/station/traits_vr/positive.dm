@@ -30,3 +30,24 @@
 	var_changes = list("breath_type" = GAS_O2, "poison_type" = GAS_PHORON, "ideal_air_type" = /datum/gas_mixture/belly_air)
 	cost = 5
 	allowed_species = list(SPECIES_VOX)
+
+/datum/trait/positive/vibration_sense
+	name = "Vibration Sense"
+	desc = "Allows you to sense subtle vibrations nearby, even if the source cannot be seen."
+	cost = 2
+	var_changes = list("has_vibration_sense" = TRUE)
+
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your ears ring, and hear everything..."
+	// Traitgenes edit end
+
+/datum/trait/positive/vibration_sense/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	H.motiontracker_subscribe()
+
+/datum/trait/positive/vibration_sense/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	H.motiontracker_unsubscribe()

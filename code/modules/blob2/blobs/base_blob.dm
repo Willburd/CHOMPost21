@@ -235,6 +235,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 /obj/structure/blob/attack_generic(var/mob/user, var/damage, var/attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
+	SSmotiontracker.ping(src) // Outpost 21 edit - Motion tracker subsystem
 	user.do_attack_animation(src)
 	if(overmind)
 		damage *= overmind.blob_type.brute_multiplier

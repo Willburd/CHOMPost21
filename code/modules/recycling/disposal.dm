@@ -532,7 +532,6 @@
 	// Outpost 21 edit end
 		GLOB.disposals_flush_shift_roundstat++
 
-
 	H.init(src, air_contents)	// copy the contents of disposer to holder
 	air_contents = new(PRESSURE_TANK_VOLUME)	// new empty gas resv.
 

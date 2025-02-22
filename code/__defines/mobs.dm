@@ -483,7 +483,9 @@
 
 #define VIS_SOULCATCHER		35 // CHOMPAdd
 
-#define VIS_COUNT			35 //Must be highest number from above. // CHOMPEdit
+#define VIS_MOTIONTRACKER	36 // Outpost 21 edit - Motion tracker subsystem
+
+#define VIS_COUNT			36 //Must be highest number from above. // CHOMPEdit
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100
