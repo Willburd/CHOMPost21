@@ -3,6 +3,14 @@
 	icon = 'icons/obj/power.dmi'
 	icon_state = "wire"
 
+// Outpost 21 edit begin - Placing heavy cables. These don't support Z levels anyway
+/obj/item/stack/cable_coil/heavyduty/turf_place(turf/simulated/F, mob/user)
+	if(istype(F, /turf/simulated/open))
+		to_chat(user, "\The [src] isn't flexible enough to do this!")
+		return
+	. = ..()
+// Outpost 21 edit end
+
 /obj/structure/cable/heavyduty
 	icon = 'icons/obj/power_cond_heavy.dmi'
 	name = "large power cable"
@@ -18,9 +26,35 @@
 		return
 
 	if(W.has_tool_quality(TOOL_WIRECUTTER))
-		to_chat(user, span_blue("These cables are too tough to be cut with those [W.name]."))
+		to_chat(user, span_blue("These cables are too tough to be cut with \the [W.name]."))
 		return
-	else if(istype(W, /obj/item/stack/cable_coil))
+	// Outpost 21 edit begin - Placing heavy cables. Cutting it with welder!
+	else if(W.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weldingtool/WT = W.get_welder()
+		if(!WT.remove_fuel(0, user))
+			to_chat(user, "The welding tool must be on to complete this task.")
+			return
+
+		playsound(src, WT.usesound, 50, 1)
+		if(do_after(user, 20 * WT.toolspeed))
+			var/obj/item/stack/cable_coil/heavyduty/CC
+			if(src.d1)	// 0-X cables are 1 unit, X-X cables are 2 units long
+				CC = new/obj/item/stack/cable_coil/heavyduty(T, 2, color)
+			else
+				CC = new/obj/item/stack/cable_coil/heavyduty(T, 1, color)
+
+			src.add_fingerprint(user)
+			src.transfer_fingerprints_to(CC)
+			for(var/mob/O in viewers(src, null))
+				O.show_message(span_warning("[user] cuts the cable."), 1)
+
+			if(broken)
+				unfray()
+
+			qdel(src)
+		return
+	// Outpost 21 edit end
+	else if(!istype(W, /obj/item/stack/cable_coil/heavyduty)) // Outpost 21 edit begin - Placing heavy cables. Make it actually useful
 		to_chat(user, span_blue("You will need heavier cables to connect to these."))
 		return
 	else
