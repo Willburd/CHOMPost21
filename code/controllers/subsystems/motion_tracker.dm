@@ -34,13 +34,12 @@ SUBSYSTEM_DEF(motiontracker)
 		var/turf/At = AF?.resolve()
 		var/turf/Rt = RF?.resolve()
 		var/count = data[3]
-		if(!Rt || !At || !count)
-			continue
-		while(count-- > 0)
-			// Place at root turf offset from signal responder's turf using px offsets. So it will show up over visblocking.
-			var/obj/effect/abstract/motion_echo/E = new /obj/effect/abstract/motion_echo(Rt)
-			E.pixel_x += (At.x - Rt.x) * 32
-			E.pixel_y += (At.y - Rt.y) * 32
+		if(Rt && At && count)
+			while(count-- > 0)
+				// Place at root turf offset from signal responder's turf using px offsets. So it will show up over visblocking.
+				var/obj/effect/abstract/motion_echo/E = new /obj/effect/abstract/motion_echo(Rt)
+				E.pixel_x += (At.x - Rt.x) * 32
+				E.pixel_y += (At.y - Rt.y) * 32
 		currentrun.Remove(key)
 		expended_echos[key] = data
 		if(MC_TICK_CHECK)
