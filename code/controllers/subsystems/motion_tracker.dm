@@ -1,13 +1,13 @@
 SUBSYSTEM_DEF(motiontracker)
 	name = "Motion Tracker"
 	priority = FIRE_PRIORITY_MOTIONTRACKER
-	wait = 2 SECOND
+	wait = 1 SECOND
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 	flags = SS_NO_INIT
 	var/min_range = 2
 	var/max_range = 8
-	var/list/used_this_tick = list() 	// Turfs used, to reduce spam
-	var/all_pings_this_tick = 0			// Total pings for stats regardless of turf spam check
+	var/all_pings_round = 0
+	var/list/queued_echo_turfs = list()
 
 /datum/controller/subsystem/motiontracker/stat_entry(msg)
 	var/count = 0
@@ -17,14 +17,34 @@ SUBSYSTEM_DEF(motiontracker)
 			count = track_list.len
 		else
 			count = 1 // listen_lookup optimizes single entries into just returning the only thing
-	msg = "L: [count] | P: [all_pings_this_tick] | T: [used_this_tick.len]"
+	msg = "L: [count] | Q: [queued_echo_turfs.len] | A: [all_pings_round]"
 	return ..()
 
 /datum/controller/subsystem/motiontracker/fire(resumed = 0)
-	if(!resumed)
-		used_this_tick.Cut()
-		all_pings_this_tick = 0
+	if(resumed)
+		return
+	for(var/key in queued_echo_turfs)
+		var/list/data = queued_echo_turfs[key]
+		queued_echo_turfs[key] = null
+		if(!data)
+			continue
+		var/datum/weakref/AF = data[1]
+		var/datum/weakref/RF = data[2]
+		var/turf/At = AF?.resolve()
+		var/turf/Rt = RF?.resolve()
+		var/count = data[3]
+		if(!Rt || !At || !count)
+			continue
+		while(count-- > 0)
+			// Place at root turf from signal responder, and align to the final turf location
+			var/obj/effect/abstract/motion_echo/E = new /obj/effect/abstract/motion_echo(Rt)
+			E.pixel_x += (At.x - Rt.x) * 32 // px offsets
+			E.pixel_y += (At.y - Rt.y) * 32 // px offsets
 
+	queued_echo_turfs.Cut()
+
+// We get this from anything in the world that would cause a motion tracker ping
+// From sounds to motions, to mob attacks. This then sends a signal to anyone listening.
 /datum/controller/subsystem/motiontracker/proc/ping(var/atom/source, var/hear_chance = 30)
 	var/turf/T = get_turf(source)
 	if(!isturf(T)) // ONLY call from turfs
@@ -35,8 +55,35 @@ SUBSYSTEM_DEF(motiontracker)
 		T = get_step(T,pick(cardinal))
 		if(!T) // incase...
 			return
-	all_pings_this_tick++
-	if(used_this_tick["[REF(T)]"] && hear_chance < 60) // Reduce spam of same tile events
+	// Echo time, we have a turf
+	if(queued_echo_turfs[REF(T)]) // Already echoing
 		return
-	used_this_tick["[REF(T)]"] = TRUE
+	all_pings_round++
 	SEND_SIGNAL(src, COMSIG_MOVABLE_MOTIONTRACKER, WEAKREF(source), T)
+
+// We get this back from anything that handles the signal, and queues up a turf to draw the echo on
+// The logic is in the SIGNAL HANDLER for if it does anything at all with the signal instead of assuming
+// everything wants effects drawn, for example the motion tracker item just flicks() and doesn't call this.
+/datum/controller/subsystem/motiontracker/proc/queue_echo(var/turf/Rt,var/turf/At,var/echo_count = 1)
+	if(!Rt || !At)
+		return
+	var/rfe = REF(At)
+	if(!queued_echo_turfs[rfe]) // We only care about the final turf, not the root turf for duping
+		queued_echo_turfs[rfe] = list(WEAKREF(At),WEAKREF(Rt),echo_count)
+
+// Echo that spawns on turfs
+/obj/effect/abstract/motion_echo
+	name = ""
+	icon =  'icons/effects/effects.dmi'
+	icon_state = "shuttle_warning"
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+	appearance_flags = (RESET_COLOR|PIXEL_SCALE|KEEP_APART)
+	plane = PLANE_MOTIONTRACKER
+	layer = OBFUSCATION_LAYER
+
+/obj/effect/abstract/motion_echo/Initialize(mapload)
+	. = ..()
+	var/rand_limit = 12
+	pixel_x += rand(-rand_limit,rand_limit)
+	pixel_y += rand(-rand_limit,rand_limit)
+	QDEL_IN(src, 2 SECONDS)

@@ -9,11 +9,13 @@
 	if(!is_motion_tracking)
 		is_motion_tracking = TRUE
 		RegisterSignal(SSmotiontracker, COMSIG_MOVABLE_MOTIONTRACKER, PROC_REF(handle_motion_tracking))
+		recalculate_vis()
 
 /mob/proc/motiontracker_unsubscribe()
 	if(is_motion_tracking)
 		is_motion_tracking = FALSE
 		UnregisterSignal(SSmotiontracker, COMSIG_MOVABLE_MOTIONTRACKER)
+		recalculate_vis()
 
 /mob/living/carbon/human/motiontracker_unsubscribe()
 	// Block unsub if our species has vibration senses
@@ -35,13 +37,7 @@
 		return
 	if(T.get_lumcount() >= 0.20 && can_see(src, T, 7)) // cheaper than oviewers
 		return // we already see it
-	var/rand_limit = 12
-	var/turf/root = get_turf(src)
-	var/xx = (T.x - root.x) * 32 // px offsets
-	var/yy = (T.y - root.y) * 32 // px offsets
-	xx += rand(-rand_limit,rand_limit)
-	yy += rand(-rand_limit,rand_limit)
-	var/image/currentimage = image('icons/effects/effects.dmi',root,"shuttle_warning",OBFUSCATION_LAYER, pixel_x = xx, pixel_y = yy)
-	currentimage.plane = PLANE_FULLSCREEN
-	src << currentimage
-	QDEL_IN(currentimage, 2 SECONDS)
+	var/echos = 1
+	if(prob(30))
+		echos = rand(1,3)
+	SSmotiontracker.queue_echo(get_turf(src),T,echos)

@@ -1596,6 +1596,7 @@ GLOBAL_REAL_VAR(list/stack_trace_storage)
 	. += new /obj/screen/plane_master{plane = PLANE_MESONS} 			//Meson-specific things like open ceilings.
 	. += new /obj/screen/plane_master{plane = PLANE_BUILDMODE}			//Things that only show up while in build mode
 	. += new /obj/screen/plane_master{plane = PLANE_JANHUD}
+	. += new /obj/screen/plane_master{plane = PLANE_MOTIONTRACKER}		// Outpost 21 edit - Motion tracker subsystem, Motion tracker subscribers see echos with this
 
 	// Real tangible stuff planes
 	. += new /obj/screen/plane_master/main{plane = TURF_PLANE}

@@ -217,6 +217,9 @@
 	//CHOMPAdd End
 	*/
 
+	if(has_motiontracking()) // Outpost 21 edit - Motion tracker subsystem
+		compiled_vis += VIS_MOTIONTRACKER
+
 	if(!compiled_vis.len && !vis_enabled.len)
 		return //Nothin' doin'.
 
