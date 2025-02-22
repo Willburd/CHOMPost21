@@ -111,9 +111,10 @@ def main(args):
 
         # ChompEDIT START
         if not args.maps:
-            if "modular_chomp/maps/" not in map_filename:
-                print(yellow("SKIPPED"))
-                continue
+            if "modular_outpost/maps/" not in map_filename: # Outpost 21 edit
+                if "modular_chomp/maps/" not in map_filename:
+                    print(yellow("SKIPPED"))
+                    continue
         # ChompEDIT END
 
         success = True
