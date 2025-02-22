@@ -171,12 +171,10 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -672,7 +670,6 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -2868,8 +2865,6 @@
 /area/shuttle/mercenary)
 "pq" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -3630,8 +3625,6 @@
 /area/planet/clown)
 "rI" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/table/alien/blue,
@@ -4121,8 +4114,6 @@
 /area/shuttle/mercenary)
 "tu" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/porta_turret/alien{
@@ -4699,8 +4690,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alien/blue{
@@ -4737,8 +4726,6 @@
 /area/wizard_station)
 "wk" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -4748,8 +4735,6 @@
 /area/shuttle/skipjack)
 "wn" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5175,8 +5160,6 @@
 /area/wizard_station)
 "xV" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alien/blue{
@@ -5198,8 +5181,6 @@
 /area/shuttle/skipjack)
 "ya" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5209,8 +5190,6 @@
 /area/syndicate_mothership)
 "yc" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5385,8 +5364,6 @@
 /area/planet/clown)
 "yI" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5408,16 +5385,13 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5428,11 +5402,9 @@
 "yL" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5442,13 +5414,9 @@
 /area/shuttle/skipjack)
 "yN" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5478,13 +5446,9 @@
 /area/wizard_station)
 "yU" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5494,8 +5458,6 @@
 /area/shuttle/skipjack)
 "yW" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alien/blue{
@@ -5513,8 +5475,6 @@
 "zd" = (
 /obj/machinery/door/airlock/alien/blue,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5531,8 +5491,6 @@
 /area/wizard_station)
 "zj" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5578,11 +5536,9 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5626,11 +5582,9 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6027,13 +5981,9 @@
 /area/shuttle/skipjack)
 "AZ" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6053,8 +6003,6 @@
 	name = "Bridge"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alien{
@@ -6064,13 +6012,9 @@
 /area/shuttle/skipjack)
 "Bd" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6089,8 +6033,6 @@
 /area/planet/clown)
 "Bf" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6213,7 +6155,6 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan,
@@ -6457,13 +6398,9 @@
 /area/shuttle/skipjack)
 "Dv" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -6657,7 +6594,6 @@
 	locked = 0
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -6675,8 +6611,6 @@
 "Fj" = (
 /obj/machinery/door/airlock/alien/blue,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6750,7 +6684,6 @@
 	pixel_y = 32
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/item/storage/backpack/dufflebag/syndie/med,
@@ -6782,8 +6715,6 @@
 /area/alien)
 "Gr" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6984,7 +6915,6 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -8169,8 +8099,6 @@
 /area/wizard_station)
 "Qy" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/bed/chair/bay/comfy/captain{
@@ -9173,15 +9101,12 @@
 /area/planet/clown)
 "WF" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/emitter/antique{
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
