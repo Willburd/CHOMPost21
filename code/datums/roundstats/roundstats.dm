@@ -116,9 +116,9 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 				dols = FLOOR(dols * 100,1) / 100 // Truncate decimals
 				valid_stats_list.Add("[ GLOB.refined_chems_sold[D]["units"] ]u of [ D ], for [ GLOB.refined_chems_sold[D]["value"] ] points! A total of [dols] [dols > 1 ? "thalers" : "thaler"]")
 
-	var/end_dols = points * SSsupply.points_per_money
-	end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
-	valid_stats_list.Add("For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
+		var/end_dols = points * SSsupply.points_per_money
+		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
+		valid_stats_list.Add("For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
 	// outpost 21 add end
 
 	if(LAZYLEN(valid_stats_list))
