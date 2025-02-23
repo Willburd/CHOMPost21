@@ -54,7 +54,7 @@
 			qdel(src)
 		return
 	// Outpost 21 edit end
-	else if(!istype(W, /obj/item/stack/cable_coil/heavyduty)) // Outpost 21 edit begin - Placing heavy cables. Make it actually useful
+	else if(istype(W, /obj/item/stack/cable_coil) && !istype(W, /obj/item/stack/cable_coil/heavyduty)) // Outpost 21 edit begin - Placing heavy cables. Make it actually useful
 		to_chat(user, span_blue("You will need heavier cables to connect to these."))
 		return
 	else
