@@ -76,6 +76,7 @@
 			G.pulse(WEAKREF(data))
 
 /obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, var/mhealth = 100)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	last_temp = temp
 	last_max = max
 
@@ -85,6 +86,8 @@
 	last_watt = val_to_watts(watt)
 
 /obj/structure/confinement_beam_generator/control_box/proc/val_to_watts(var/watt)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
 	var/units = ""
 	// 10kW and less - Watts
 	if(watt < 10000)
@@ -162,8 +165,8 @@
 	tgui_data["target_list"] += list( // appending lists would merge it if this wasn't a nested list
 		list(
 			"id" = "[using_map.company_name] PTL Electricity Export Satellite - 672, 821, 98",
-			"x" = 4,
-			"y" = 4,
+			"x" = 1,
+			"y" = 1,
 			"z" = 0,
 			"enb" = TRUE
 		)
@@ -185,10 +188,14 @@
 	return tgui_data
 
 /obj/structure/confinement_beam_generator/control_box/proc/validate_turf(var/turf/T)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
 	var/area/A = get_area(T)
 	return (T.z in using_map.confinement_beam_z_levels) && !istype(A,/area/shuttle) && !istype(A,/area/turbolift)
 
 /obj/structure/confinement_beam_generator/control_box/proc/format_z_id(var/obj/structure/confinement_beam_generator/collector/C)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
 	var/turf/T = get_turf(C)
 	if(T && C.is_valid_state())
 		var/area/A = get_area(T)
@@ -210,14 +217,8 @@
 			calibration_lock = TRUE
 			if(!pulse_enabled)
 				current_target = NOTARG
-				// Reset Targeting
-				data.target_x = 0
-				data.target_y = 0
-				data.target_z = -1
-				// Reset aim
-				data.current_x = -1
-				data.current_y = -1
-			addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+				disable_beam_target()
+			addtimer(VARSET_CALLBACK(src, calibration_lock, FALSE), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
 			return TRUE
 
 		if("set_z")
@@ -228,30 +229,14 @@
 			if(get_id == "") // Release target
 				if(data.target_z != -1)
 					current_target = NOTARG
-					calibration_lock = TRUE
-					pulse_enabled = FALSE
-					// Reset Targeting
-					data.target_x = 0
-					data.target_y = 0
-					data.target_z = -1
-					// Reset aim
-					data.current_x = -1
-					data.current_y = -1
-					addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+					disable_beam_target()
+					calibration_lock()
 					return TRUE
 				return FALSE
 			if(get_z == 0) // Target centcom
 				current_target = get_id
-				calibration_lock = TRUE
-				pulse_enabled = FALSE
-				// Reset Targeting
-				data.target_x = 500
-				data.target_y = 500
-				data.target_z = 0
-				// Reset aim
-				data.current_x = -1
-				data.current_y = -1
-				addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 3 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+				set_new_target( -1, -1, 0)
+				calibration_lock()
 				return TRUE
 			// check for data validity by scanning the list for a matching id
 			for(var/obj/structure/confinement_beam_generator/collector/C in GLOB.confinement_beam_collectors)
@@ -261,16 +246,8 @@
 						admin_notice("[ui.user] - possible hrefhacks. Passed [get_id] while button was disabled. Beam z destination is forbidden by map datum.")
 						return
 					current_target = format_z_id(C)
-					calibration_lock = TRUE
-					pulse_enabled = FALSE
-					// Reset Targeting
-					data.target_x = T.x
-					data.target_y = T.y
-					data.target_z = C.find_highest_z() // fire from above to it!
-					// Reset aim
-					data.current_x = -1
-					data.current_y = -1
-					addtimer(CALLBACK(src, PROC_REF(finish_calibrate)), 3 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+					set_new_target( T.x, T.y, C.find_highest_z()) // fire from above to it!
+					calibration_lock()
 					return TRUE
 			return FALSE
 
@@ -280,11 +257,29 @@
 			data.t_rate = get_val / 100
 			return TRUE
 
-		else
-			return FALSE
+	return FALSE
 
-/obj/structure/confinement_beam_generator/control_box/proc/finish_calibrate()
-	calibration_lock = FALSE
+
+/obj/structure/confinement_beam_generator/control_box/proc/calibration_lock()
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+	calibration_lock = TRUE
+	pulse_enabled = FALSE
+	addtimer(VARSET_CALLBACK(src, calibration_lock, FALSE), 1 SECONDS, TIMER_DELETE_ME) // Prevent procspamming
+
+/obj/structure/confinement_beam_generator/control_box/proc/disable_beam_target()
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+	set_new_target(0,0,-1)
+
+/obj/structure/confinement_beam_generator/control_box/proc/set_new_target(var/x,var/y,var/z)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+	data.target_x = x
+	data.target_y = y
+	data.target_z = z
+	data.current_x = data.target_x
+	data.current_y = data.target_y
 
 #undef NOTARG
 #undef NOWATT

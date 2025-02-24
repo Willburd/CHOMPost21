@@ -29,27 +29,6 @@
 /obj/structure/confinement_beam_generator/lens/update_icon() // Doesn't change state
 	return
 
-/obj/structure/confinement_beam_generator/lens/Crossed(O)
-	. = ..()
-	if(istype(O,/obj/effect/confinment_beam/field))
-		qdel(O)
-		return
-	if(istype(O,/obj/effect/confinment_beam))
-		// The wideband beams will always be qdelled!
-		var/obj/effect/confinment_beam/CB = O
-		var/datum/confinement_pulse_data/data = CB.confinement_data?.resolve()
-		if(!data)
-			qdel(O)
-			return
-		// transmit beam to focus, must be the middle lens, and the beam transmitted from the prior middle lens
-		if(istype(src,/obj/structure/confinement_beam_generator/lens/inner_lens) && is_valid_state())
-			var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(src,data.dir)
-			if(F)
-				F.pulse(CB.confinement_data)
-			else
-				fire_narrow_beam(data)
-		qdel(O)
-
 /obj/structure/confinement_beam_generator/lens/inner_lens
 	icon_state = "lens_center"
 	base_icon = "lens_center"
@@ -72,11 +51,7 @@
 	if(!data)
 		return
 	// Prevent procspamming
-	addtimer(CALLBACK(src, PROC_REF(fire_wide_beam), loc, WF, TRUE), 0, TIMER_DELETE_ME) // Only this one sends energy
-	addtimer(CALLBACK(src, PROC_REF(fire_wide_beam), loc, WF, FALSE), rand(0.5,2) SECONDS, TIMER_DELETE_ME)
-	for(var/atom/pos in list( get_step(src,turn(dir,90)), get_step(src,turn(dir,-90))))
-		addtimer(CALLBACK(src, PROC_REF(fire_wide_beam), pos, WF, FALSE), 0, TIMER_DELETE_ME)
-		addtimer(CALLBACK(src, PROC_REF(fire_wide_beam), pos, WF, FALSE), rand(0.5,2) SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(fire_wide_beam), loc, WF), 0, TIMER_DELETE_ME) // Only this one sends energy
 
 /obj/structure/confinement_beam_generator/focus/update_parts_icons()
 	..() // Update self

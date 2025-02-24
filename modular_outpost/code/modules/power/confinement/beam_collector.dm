@@ -2,7 +2,7 @@ GLOBAL_LIST_INIT(confinement_beam_collectors, list())
 
 /obj/structure/confinement_beam_generator/collector
 	name = "Confinement Beam Collector"
-	desc = "Final reciever for wide-band confinement beam. Must be aligned manually from orbit. Transfers energy into surrounding inductors."
+	desc = "Final reciever for wide-band confinement beams. Must be aligned manually from orbit. Transfers energy into surrounding inductors."
 	icon_state = "collector"
 	base_icon = "collector"
 

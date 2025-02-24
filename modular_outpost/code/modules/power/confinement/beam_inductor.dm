@@ -22,6 +22,7 @@
 	exchange_heat(0.32 )
 
 /obj/structure/confinement_beam_generator/inductor/proc/get_cable_network(var/datum/powernet/prev_network)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!is_valid_state())
 		return null
 	var/turf/T = get_turf(src)
@@ -33,6 +34,7 @@
 	return C.powernet
 
 /obj/structure/confinement_beam_generator/inductor/proc/get_network_power(var/datum/powernet/draw_network, var/draw_rate)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!draw_network)
 		return 0
 	var/power_draw = draw_network.last_surplus() * draw_rate
