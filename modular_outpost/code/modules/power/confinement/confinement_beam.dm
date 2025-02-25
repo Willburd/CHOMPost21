@@ -68,17 +68,26 @@ OL|IL|OL
 	var/t_rate = 0.75 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
+/datum/confinement_pulse_data/proc/clone_from(var/datum/confinement_pulse_data/source)
+	power_level	 	= source.power_level
+	target_x 		= source.target_x
+	target_y 		= source.target_y
+	current_x 		= source.current_x
+	current_y 		= source.current_y
+	dir 			= source.dir
+	target_z 		= source.target_z
+	t_rate	 		= source.t_rate
+	origin_machine 	= source.origin_machine
+
 /datum/confinement_pulse_data/proc/transmit_beam_to_z()
 	SHOULD_NOT_OVERRIDE(TRUE)
-	// instant set beam to new position if -1
 	if(target_z == -1 || power_level == 0)
 		return
 	// BEAM TO CENTCOM
 	if(target_z == 0)
 		transmit_beam_to_centcom()
 		return
-	// Shouldn't happen, but prevent the laser from cutting the map in half getting back to collector
-	if(target_x < 0 || target_y < 0)
+	if(target_x <= 0 || target_y <= 0)
 		return
 	// Move beam location slowly toward target instead of instantly
 	if(prob(40))
@@ -90,7 +99,7 @@ OL|IL|OL
 			current_y--
 		if(round(target_y,1) > round(current_y,1))
 			current_y++
-	// Make sure the Z levels above an allowed level are ALSO allowed! It fires from the highest level it can reach!
+	// Make sure the Z levels above an allowed zlevel are ALSO flagged as allowed! It fires from the highest level it can reach!
 	current_x = CLAMP(current_x, 1, world.maxx)
 	current_y = CLAMP(current_y, 1, world.maxy)
 	var/turf/T = locate(current_x,current_y,target_z)

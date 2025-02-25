@@ -28,18 +28,14 @@
 	if(data.power_level < minimum_power)
 		return
 
-	// copy it!
+	// Clone and update data
+	focus_data.clone_from(data)
+	focus_data.origin_machine = WEAKREF(src)
 	var/dam = 1 - (health / max_hp)
 	focus_data.power_level = data.power_level * YIELD_MULTIPLIER // increase yield per each lense
 	if(dam > beam_wander_threshold) // damaged enough
 		focus_data.target_x = data.target_x + (dev_offset_x * dam)
 		focus_data.target_y = data.target_y + (dev_offset_y * dam)
-	else
-		focus_data.target_x = data.target_x
-		focus_data.target_y = data.target_y
-	focus_data.dir = data.dir
-	focus_data.target_z = data.target_z
-	focus_data.origin_machine = WEAKREF(src)
 
 	// forward to next device, or fire a narrow-band beam
 	flick("focus_h",src)
