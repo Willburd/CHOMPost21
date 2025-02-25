@@ -2359,14 +2359,14 @@
 	ambience = AMBIENCE_ATMOS
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/offworld/confinementbeam/station/backup_power
+/area/offworld/confinementbeam/station/power_distribution
 	name = "\improper Confinement Beam Power Distribution"
 	icon_state = "orange"
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_SUBSTATION
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/offworld/confinementbeam/station/backup_power
+/area/offworld/confinementbeam/station/beam_emitter
 	name = "\improper Confinement Beam Emitter Control"
 	icon_state = "shuttle2"
 	sound_env = LARGE_ENCLOSED
