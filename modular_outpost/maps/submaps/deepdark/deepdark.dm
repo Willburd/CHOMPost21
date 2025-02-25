@@ -56,6 +56,7 @@
 #include "cliff_C.dmm"
 #include "cliff_D.dmm"
 #include "wizard_A.dmm"
+#include "tram_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -518,6 +519,14 @@
 	name = "Wizard A"
 	desc = "Wizard house."
 	mappath = "modular_outpost/maps/submaps/deepdark/wizard_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 80
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/tram_A
+	name = "Tram A"
+	desc = "Unknown Tram."
+	mappath = "modular_outpost/maps/submaps/deepdark/tram_A.dmm"
 	allow_duplicates = FALSE
 	discard_prob = 80
 	cost = 15

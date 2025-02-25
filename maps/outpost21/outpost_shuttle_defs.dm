@@ -347,7 +347,6 @@
 /obj/effect/shuttle_landmark/premade/trawler/confinementbeam
 	name = "Confinement Beam (Trawler Dock)"
 	landmark_tag = "confinementbeam_trawler"
-	docking_controller = "beam_sat_trawler_controller"
 	base_turf = /turf/space
 	base_area = /area/offworld/confinementbeam/exterior
 
@@ -388,6 +387,40 @@
 	docking_controller = "beam_sat_controller"
 	base_area = /area/offworld/confinementbeam/exterior
 	base_turf = /turf/simulated/floor/airless
+
+
+//////////////////////////////////////////////////////////////
+// Tram to redspace
+/datum/shuttle/autodock/multi/underdark
+	name = "Unknown Tram"
+	warmup_time = 5
+	shuttle_area = /area/shuttle/darktransit
+	current_location = "dark_hell"
+	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+
+	destination_tags = list(
+		"dark_start",
+		"dark_hell",
+		"dark_end"
+	)
+
+/obj/effect/shuttle_landmark/premade/underdark/start
+	name = "Station Platform"
+	landmark_tag = "dark_start"
+	base_area = /area/mine/explored/muriki/cave/deepdark
+	base_turf = /turf/simulated/floor/plating/muriki
+
+/obj/effect/shuttle_landmark/premade/underdark/end
+	name = "End Of The Line"
+	landmark_tag = "dark_end"
+	base_area = /area/mine/explored/muriki/cave/deepdark
+	base_turf = /turf/simulated/floor/plating/muriki
+
+/obj/effect/shuttle_landmark/premade/underdark/hell
+	name = "Somewhere Else"
+	landmark_tag = "dark_hell"
+	base_area = /area/specialty/redspace
+	base_turf = /turf/simulated/floor/flesh
 
 //////////////////////////////////////////////////////////////
 // Generic landings
