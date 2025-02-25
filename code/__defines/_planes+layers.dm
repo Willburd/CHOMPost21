@@ -179,7 +179,6 @@ What is the naming convention for planes or layers?
 #define PLANE_AUGMENTED			40 //Augmented-reality plane
 #define PLANE_SOULCATCHER		41 //Soulcatcher
 
-
 //Fullscreen overlays under inventory
 #define PLANE_FULLSCREEN		90 //Blindness, mesons, druggy, etc
 	#define OBFUSCATION_LAYER	5 //Where images covering the view for eyes are put

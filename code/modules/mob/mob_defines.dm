@@ -245,4 +245,6 @@
 	var/list/resistances
 
 	var/custom_footstep = FOOTSTEP_MOB_SHOE
+	VAR_PRIVATE/is_motion_tracking = FALSE // Prevent multiple unsubs and resubs, also used to check if the vis layer is enabled, use has_motiontracking() to get externally.
+	VAR_PRIVATE/wants_to_see_motion_echos = TRUE
 	var/vent_crawl_time = 45 // Outpost 21 addition - vent crawling speed can be defined per mob
