@@ -2304,7 +2304,21 @@
 	return FALSE
 
 /area/offworld/confinementbeam/station/storage
-	name = "\improper Confinement Beam Storage"
+	name = "\improper Confinement Beam Primary Storage"
+	icon_state = "tcomsatlob"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/port_equipment
+	name = "\improper Confinement Beam Engine Equipment Port"
+	icon_state = "tcomsatlob"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/starboard_equipment
+	name = "\improper Confinement Beam Engine Equipment Starboard"
 	icon_state = "tcomsatlob"
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_GENERIC
@@ -2339,7 +2353,14 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/offworld/confinementbeam/station/hallway
-	name = "\improper Confinement Beam Crew Conduit"
+	name = "\improper Confinement Beam Crew Conduit Aft"
+	icon_state = "blue"
+	sound_env = SOUND_ENVIRONMENT_HALLWAY
+	ambience = AMBIENCE_MAINTENANCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/hallway_alt
+	name = "\improper Confinement Beam Crew Conduit Fore"
 	icon_state = "blue"
 	sound_env = SOUND_ENVIRONMENT_HALLWAY
 	ambience = AMBIENCE_MAINTENANCE
