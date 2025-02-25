@@ -273,6 +273,11 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	base_turf = /turf/space
 
+/area/muriki/bathroom/ai_download
+	name = "\improper AI Download Chamber"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/open/force_indoor
+
 //
 // Medical ---------------------------------------------------------
 //
