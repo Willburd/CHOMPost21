@@ -228,10 +228,6 @@
 /turf/simulated/floor/plating/muriki,
 /area/rnd/xenobiology/lost)
 "S" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 30
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
