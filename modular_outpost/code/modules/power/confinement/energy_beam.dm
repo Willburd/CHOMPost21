@@ -1,149 +1,50 @@
-/obj/effect/confinment_beam
+/obj/item/projectile/beam/confinement
 	name = "Confinement Beam"
 	desc = "A concentrated beam of energy, behaving more like matter than light."
-	icon = 'icons/obj/machines/particle_accelerator2.dmi'
-	icon_state = "particle3"
-	anchored = TRUE
-	density = TRUE
-	movement_type = UNSTOPPABLE // for bumps to trigger
-	VAR_PRIVATE/anti_spam = 0
-	VAR_PRIVATE/movement_range = 500
+	icon_state = "heavylaser"
+	//fire_sound = 'sound/weapons/emitter.ogg'
+	damage = 300
+	light_color = "#00CC33"
+	excavation_amount = 300
+	hud_state = "laser_overcharge"
+	range = 1000 // MUST hit the edge of map
+
+	muzzle_type = /obj/effect/projectile/muzzle/emitter
+	tracer_type = /obj/effect/projectile/tracer/emitter
+	impact_type = /obj/effect/projectile/impact/emitter
+
 	var/datum/weakref/confinement_data = null
 
-/obj/effect/confinment_beam/New(loc, dir = 2)
-	src.loc = loc
-	src.set_dir(dir)
-	addtimer(CALLBACK(src, PROC_REF(move), 1), 0, TIMER_DELETE_ME)
-
-/obj/effect/confinment_beam/Bump(atom/A)
-	if(isobserver(A))
-		return
-	if(istype(A,/obj/effect))
-		return
-
-	if(ismovable(A))
-		var/atom/movable/AM = A
-		if(!AM.anchored)
-			var/atom/target = get_edge_target_turf(AM, pick(alldirs))
-			AM.throw_at(target, rand(100,150), 4)
-
-	if(isliving(A))
-		var/mob/living/L = A
-		if(L.is_incorporeal())
-			return
-		var/shock_damage = min(rand(90,140),rand(40,200))
-		L.electrocute_act(shock_damage, src, 1, BP_TORSO)
-		var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-		if(data && data.power_level > 100000 && prob(CLAMP(data.power_level / 1000000,0,100)))
-			L.gib()
-
-/obj/effect/confinment_beam/Bumped(atom/A)
-	if(ismob(A))
-		Bump(A)
-
-/obj/effect/confinment_beam/ex_act(severity)
-	qdel(src)
-
-/obj/effect/confinment_beam/singularity_act()
-	return
-
-/obj/effect/confinment_beam/proc/move(var/lag)
-	PROTECTED_PROC(TRUE)
-	make_effects()
-	// Check if we should transmit to the target zlevel
+/obj/item/projectile/beam/confinement/on_hit(atom/target, blocked, def_zone)
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-	if(data && data.target_z != 0) // 0 sends to centcom
-		if(!(data.target_z in using_map.confinement_beam_z_levels))
-			movement_range = 0 // -1 or an invalid Z
-			qdel(src)
-			return
-	var/at_edge = FALSE
-	if(dir == NORTH || dir == SOUTH)
-		if(y == 0 || y == world.maxy-1)
-			at_edge = TRUE
-	if(dir == EAST || dir == WEST)
-		if(x == 0 || x == world.maxx-1)
-			at_edge = TRUE
-	if(at_edge)
-		if(data)
-			data.transmit_beam_to_z()
-		qdel(src)
-		return
-	// Move toward direction
-	if(!step(src,dir))
-		src.loc = get_step(src,dir)
-	movement_range--
-	if(movement_range <= 0)
-		qdel(src)
-		return
-	addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)
-
-/obj/effect/confinment_beam/Destroy()
-	movement_range = 0
-	confinement_data = null
+	if(data) // Send a pulse to the zlevel this is targetted at
+		if(data.dir == target.dir && istype(target,/obj/structure/confinement_beam_generator/lens/inner_lens))
+			var/obj/structure/confinement_beam_generator/lens/inner_lens/L = target
+			if(L.is_valid_state())
+				var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(L,data.dir)
+				if(F)
+					F.pulse(confinement_data)
+				else
+					L.fire_narrow_beam(data)
 	. = ..()
 
-/obj/effect/confinment_beam/proc/make_effects()
-	PROTECTED_PROC(TRUE)
-	anti_spam--
-	if(anti_spam <= 0)
-		if(prob(30))
-			// make field effects
-			anti_spam = rand(5,10)
-			var/obj/effect/confinment_beam/field/A = new /obj/effect/confinment_beam/field(loc, dir)
-			A.set_dir( dir)
-
-
-
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-// Fancy sparkles
-/obj/effect/confinment_beam/field
-	name = "Confinement Field"
-	desc = "Particles rotated on an imaginary bluespace axis, probably not good to touch."
-	icon = 'icons/obj/machines/particle_accelerator.dmi'
-	icon_state = "particle"
-
-/obj/effect/confinment_beam/field/New(loc, dir = 2)
-	src.loc = loc
-	src.set_dir(dir)
-	if(prob(20))
-		icon = 'icons/obj/machines/shielding_vr.dmi'
-		icon_state = "shieldsparkles"
-	movement_range = rand(5,9)
-	addtimer(CALLBACK(src, PROC_REF(move), rand(2,5)), 0, TIMER_DELETE_ME)
-
-/obj/effect/confinment_beam/field/Bump(atom/A)
-	if(isobserver(A))
-		return
-	if(istype(A,/obj/effect))
-		return
-	if(A.is_incorporeal())
-		return
-
-	if(ismovable(A))
-		var/atom/movable/AM = A
-		if(!AM.anchored)
-			var/atom/target = get_edge_target_turf(AM, pick(alldirs))
-			AM.throw_at(target, rand(10,15), 2)
-
+/obj/item/projectile/beam/confinement/on_range()
+	var/turf/T = trajectory.return_turf()
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-	if(!data)
-		return
-
-	if(isliving(A))
-		var/mob/living/L = A
-		if(data.power_level >= 1000)
-			var/damage = log(1.1,data.power_level)
-			damage = damage - (log(1.1,damage)*1.5)
-			L.electrocute_act(damage, src, 1, BP_TORSO)
-	if(data.power_level > 0)
-		A.ex_act(rand(1,3))
-
-/obj/effect/confinment_beam/field/make_effects()
-	return
-
-
+	if(data) // Send a pulse to the zlevel this is targetted at
+		var/send = FALSE
+		switch(data.dir)
+			if(NORTH)
+				send = (T.y == (world.maxy-1))
+			if(SOUTH)
+				send = (T.y == 2)
+			if(EAST)
+				send = (T.x == (world.maxx-1))
+			if(WEST)
+				send = (T.x == 2)
+		if(send)
+			data.transmit_beam_to_z()
+	. = ..()
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////

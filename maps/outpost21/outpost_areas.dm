@@ -268,6 +268,16 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	base_turf = /turf/simulated/open/force_indoor
 
+/area/muriki/bathroom/confinement_beam
+	name = "\improper Orbital Bombardment Chamber"
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	base_turf = /turf/space
+
+/area/muriki/bathroom/ai_download
+	name = "\improper AI Download Chamber"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/open/force_indoor
+
 //
 // Medical ---------------------------------------------------------
 //
@@ -2266,6 +2276,7 @@
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/space
 
 /area/offworld/confinementbeam/station/access_shaft
 	name = "\improper Confinement Beam Access Shaft"
@@ -2287,11 +2298,122 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	flags = AREA_BLOCK_GHOST_SIGHT
 	has_gravity = FALSE
-	base_turf = /turf/space
 	dynamic_lighting = FALSE // Respect space
 
 /area/offworld/confinementbeam/exterior/get_gravity()
 	return FALSE
+
+/area/offworld/confinementbeam/station/storage
+	name = "\improper Confinement Beam Primary Storage"
+	icon_state = "tcomsatlob"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/port_equipment
+	name = "\improper Confinement Beam Engine Equipment Port"
+	icon_state = "tcomsatlob"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/starboard_equipment
+	name = "\improper Confinement Beam Engine Equipment Starboard"
+	icon_state = "tcomsatlob"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/port_airlock
+	name = "\improper Confinement Beam Port Airlock"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/starboard_airlock
+	name = "\improper Confinement Beam Starboard Airlock"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/trawler_airlock
+	name = "\improper Confinement Beam Trawler Airlock"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/solar_control
+	name = "\improper Confinement Beam Solar Control"
+	icon_state = "dark128"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/hallway
+	name = "\improper Confinement Beam Crew Conduit Aft"
+	icon_state = "blue"
+	sound_env = SOUND_ENVIRONMENT_HALLWAY
+	ambience = AMBIENCE_MAINTENANCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/hallway_alt
+	name = "\improper Confinement Beam Crew Conduit Fore"
+	icon_state = "blue"
+	sound_env = SOUND_ENVIRONMENT_HALLWAY
+	ambience = AMBIENCE_MAINTENANCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/backup_power
+	name = "\improper Confinement Beam Auxilary Power"
+	icon_state = "orange"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/medical_treatment
+	name = "\improper Confinement Beam Medical Station"
+	icon_state = "green"
+	sound_env = SOUND_ENVIRONMENT_STONEROOM
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/offworld/confinementbeam/station/atmos
+	name = "\improper Confinement Beam Atmospherics"
+	icon_state = "blue"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ATMOS
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/power_distribution
+	name = "\improper Confinement Beam Power Distribution"
+	icon_state = "orange"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/beam_emitter
+	name = "\improper Confinement Beam Emitter Control"
+	icon_state = "shuttle2"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/port_observation
+	name = "\improper Confinement Beam Port Observation"
+	icon_state = "blue"
+	sound_env = SMALL_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/starboard_observation
+	name = "\improper Confinement Beam Starboard Observation"
+	icon_state = "blue"
+	sound_env = SMALL_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 //
 //-----------------------------------------------------------------------
@@ -2307,14 +2429,14 @@
 	name = "\improper Medevac Shuttle"
 	icon_state = "shuttle2"
 	requires_power = 1
-	base_turf = /turf/simulated/floor
+	base_turf = /turf/simulated/floor/plating
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/shuttle/security
 	name = "\improper Security Shuttle"
 	icon_state = "shuttle2"
 	requires_power = 1
-	base_turf = /turf/simulated/floor
+	base_turf = /turf/simulated/floor/plating
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
 //
@@ -2324,7 +2446,7 @@
 	name = "\improper Station Tram"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "shuttlegrn"
-	base_turf = /turf/simulated/floor
+	base_turf = /turf/simulated/floor/plating
 	use_emergency_overlay = TRUE
 
 /area/muriki/tramstation
@@ -2366,23 +2488,33 @@
 /area/shuttle/mercenary
 	name = "\improper Mercenary Vessel"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/plating
 
 /area/shuttle/skipjack
 	name = "\improper Vox Vessel"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/plating
 
 
 // Confinement beam shuttle
 /area/shuttle/beamtransit
 	name = "\improper Engineering Ferry"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/plating/external/muriki
 
+
+// Underdark tram
+/area/shuttle/darktransit
+	name = "\improper Unknown Tram"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/flesh
+	haunted = TRUE
 
 
 //
 // Vehicle interiors ---------------------------------------------------------------------
 //
-/area/vehicle_interior/
+/area/vehicle_interior
 	sound_env = SMALL_ENCLOSED
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	requires_power = FALSE

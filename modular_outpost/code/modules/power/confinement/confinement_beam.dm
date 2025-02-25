@@ -65,17 +65,31 @@ OL|IL|OL
 	var/current_y = -1
 	var/dir = NORTH
 	var/target_z = -1 // Beam to no level
-	var/t_rate = 1 // Only used in generator
+	var/t_rate = 0.75 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
+/datum/confinement_pulse_data/proc/clone_from(var/datum/confinement_pulse_data/source)
+	power_level	 	= source.power_level
+	target_x 		= source.target_x
+	target_y 		= source.target_y
+	current_x 		= source.current_x
+	current_y 		= source.current_y
+	dir 			= source.dir
+	target_z 		= source.target_z
+	t_rate	 		= source.t_rate
+	origin_machine 	= source.origin_machine
+
 /datum/confinement_pulse_data/proc/transmit_beam_to_z()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(target_z == -1 || power_level == 0)
 		return
+	// BEAM TO CENTCOM
+	if(target_z == 0)
+		transmit_beam_to_centcom()
+		return
+	if(target_x <= 0 || target_y <= 0)
+		return
 	// Move beam location slowly toward target instead of instantly
-	if(current_x == -1)
-		current_x = target_x
-	if(current_y == -1)
-		current_y = target_y
 	if(prob(40))
 		if(round(target_x,1) < round(current_x,1))
 			current_x--
@@ -85,10 +99,9 @@ OL|IL|OL
 			current_y--
 		if(round(target_y,1) > round(current_y,1))
 			current_y++
-	if(target_z == 0) // BEAM TO CENTCOM
-		transmit_beam_to_centcom()
-		return
-	// Make sure the Z levels above an allowed level are ALSO allowed! It fires from the highest level it can reach!
+	// Make sure the Z levels above an allowed zlevel are ALSO flagged as allowed! It fires from the highest level it can reach!
+	current_x = CLAMP(current_x, 1, world.maxx)
+	current_y = CLAMP(current_y, 1, world.maxy)
 	var/turf/T = locate(current_x,current_y,target_z)
 	if(!T || !(T.z in using_map.confinement_beam_z_levels))
 		return
@@ -96,6 +109,7 @@ OL|IL|OL
 	I.confinement_data = WEAKREF(src)
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(current_x != current_x || current_y != current_y)
 		return // Stop making mistakes
@@ -108,18 +122,18 @@ OL|IL|OL
 		SSsupply.points += 1
 
 	// Give rewards/notices
-	power_sold_message(""					 ,  0.5,	 25,org_wattage,new_wattage)
-	power_sold_message(""					 ,    1,	 25,org_wattage,new_wattage)
-	power_sold_message(""					 ,    5,     50,org_wattage,new_wattage)
-	power_sold_message(""					 ,	 10,     50,org_wattage,new_wattage)
-	power_sold_message(""					 ,	 15,     50,org_wattage,new_wattage)
+	power_sold_message(""					 ,  0.5,	 15,org_wattage,new_wattage)
+	power_sold_message(""					 ,    1,	 15,org_wattage,new_wattage)
+	power_sold_message(""					 ,    5,     25,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 10,     25,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 15,     25,org_wattage,new_wattage)
 	power_sold_message(""					 ,	 20,     50,org_wattage,new_wattage)
 	power_sold_message(""					 ,	 25,     50,org_wattage,new_wattage)
 	power_sold_message(""					 ,	 50,    100,org_wattage,new_wattage)
 	power_sold_message("What are you doing? ",  100,    200,org_wattage,new_wattage)
 	power_sold_message(""					 ,  200,    200,org_wattage,new_wattage)
-	power_sold_message(""					 ,  300,    200,org_wattage,new_wattage)
-	power_sold_message(""					 ,  400,    200,org_wattage,new_wattage)
+	power_sold_message(""					 ,  300,    300,org_wattage,new_wattage)
+	power_sold_message(""					 ,  400,    400,org_wattage,new_wattage)
 	power_sold_message("Holy shit. "		 ,  500,    500,org_wattage,new_wattage)
 	power_sold_message("HOW!? "				 , 1000,   1000,org_wattage,new_wattage)
 	power_sold_message(""				 	 , 2000,   1000,org_wattage,new_wattage)
@@ -129,12 +143,15 @@ OL|IL|OL
 	power_sold_message("Congrats on winning. ", 10000,   1000,org_wattage,new_wattage)
 
 /datum/confinement_pulse_data/proc/power_sold_message(var/pre_message,var/gigawatts,var/credits,var/org_wattage,var/new_wattage)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
 	if(check_sold_wattage(gigawatts GIGAWATTS,org_wattage,new_wattage))
 		global_announcer.autosay("[pre_message][gigawatts] total gigawatt[gigawatts != 1 ? "s" : ""] of excess power sold!", "Confinement Beam Monitor", pre_message == "" ? DEPARTMENT_ENGINEERING : null)
 		global_announcer.autosay("PTL bounty reached. [credits] Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
 		SSsupply.points += credits
 
 /datum/confinement_pulse_data/proc/check_sold_wattage(var/threshold,var/org_wattage,var/new_wattage)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(new_wattage >= threshold && org_wattage < threshold)
 		return TRUE
@@ -209,6 +226,7 @@ OL|IL|OL
 	. = ..()
 
 /obj/structure/confinement_beam_generator/proc/has_power()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
 	var/turf/T = get_turf(src)
 	var/area/A = get_area(src)
@@ -288,7 +306,7 @@ OL|IL|OL
 	return
 
 /obj/structure/confinement_beam_generator/proc/fire_narrow_beam(var/datum/confinement_pulse_data/data)
-	PROTECTED_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	playsound(src, 'sound/weapons/emitter.ogg', 25, 1)
 	if(prob(35))
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
@@ -299,21 +317,31 @@ OL|IL|OL
 	B.firer = src
 	B.fire(dir2angle(data.dir))
 
-/obj/structure/confinement_beam_generator/proc/fire_wide_beam(var/turf/pos,var/datum/weakref/WF,var/pass_data = TRUE)
+/obj/structure/confinement_beam_generator/proc/fire_wide_beam(var/turf/pos,var/datum/weakref/WF)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
 	var/datum/confinement_pulse_data/data = WF?.resolve()
 	if(!data)
 		return
-	var/obj/effect/confinment_beam/A = new /obj/effect/confinment_beam(pos, data.dir)
-	A.set_dir( data.dir)
-	if(pass_data) // Only the middle lens transmits
-		A.confinement_data = WF
-	// additional sparkles
-	if(prob(50))
-		var/obj/effect/confinment_beam/field/AW = new /obj/effect/confinment_beam/field(pos, data.dir)
-		AW.set_dir( data.dir)
+	var/turf/start = get_turf(src)
+	var/obj/item/projectile/beam/confinement/B = new(start)
+	B.firer = src
+	B.confinement_data = WF
+	// needs to call on_range() which only happens on the end of the beam... on a turf... so if it's outside the map it does nothing
+	// Yes this is aiming one turf closer than edge of map, if I don't do this then it goes off the edge and never calls on_range()
+	switch(data.dir)
+		if(NORTH)
+			B.range = (world.maxy - start.y)-1
+		if(SOUTH)
+			B.range = start.y - 2
+		if(EAST)
+			B.range = (world.maxx - start.x)-1
+		if(WEST)
+			B.range = start.x - 2
+	B.fire(dir2angle(data.dir))
 
 /obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
 	var/turf/T = get_turf(src)
 	if(!T)
@@ -323,6 +351,7 @@ OL|IL|OL
 	return T.z
 
 /obj/structure/confinement_beam_generator/proc/exchange_heat(var/transfer_coefficient)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
 	// Alter deviation of beam
 	if(prob(10))
@@ -372,6 +401,7 @@ OL|IL|OL
 			qdel(src)
 
 /obj/structure/confinement_beam_generator/proc/use_exchanger(var/obj/machinery/atmospherics/unary/heat_exchanger/EXA,var/transfer_coefficient)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(!EXA)
 		return

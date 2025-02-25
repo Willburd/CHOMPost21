@@ -113,7 +113,7 @@
 	dropInto(airlock)
 	anchored = TRUE
 	// place brace on layer above door
-	plane = airlock.plane
+	plane = airlock.plane + 1
 	layer = airlock.layer + 0.1
 	// update icon
 	if(airlk.locs.len > 1) // multi-tile handling

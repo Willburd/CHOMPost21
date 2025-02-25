@@ -242,10 +242,11 @@
 		)
 
 	confinement_beam_z_levels = list(
-		Z_LEVEL_OUTPOST_DEEPDARK,
+		// Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
-		Z_LEVEL_OUTPOST_UPPER
+		Z_LEVEL_OUTPOST_UPPER,
+		Z_LEVEL_OUTPOST_ASTEROID
 	)
 
 	station_uses_common_ore_only = TRUE
@@ -379,6 +380,7 @@
 [b]Notice[/b]: ESHUI Base, authorized personnel only"}
 	map_z = list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
 	extra_z_levels = list()
+	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security"), "Medical Rescue" = list("confinementbeam_medical"))
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
 	. = ..()
