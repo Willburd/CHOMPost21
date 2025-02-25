@@ -268,6 +268,11 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	base_turf = /turf/simulated/open/force_indoor
 
+/area/muriki/bathroom/confinement_beam
+	name = "\improper Orbital Bombardment Chamber"
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	base_turf = /turf/space
+
 //
 // Medical ---------------------------------------------------------
 //
@@ -2266,6 +2271,7 @@
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/space
 
 /area/offworld/confinementbeam/station/access_shaft
 	name = "\improper Confinement Beam Access Shaft"
@@ -2287,11 +2293,94 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	flags = AREA_BLOCK_GHOST_SIGHT
 	has_gravity = FALSE
-	base_turf = /turf/space
 	dynamic_lighting = FALSE // Respect space
 
 /area/offworld/confinementbeam/exterior/get_gravity()
 	return FALSE
+
+/area/offworld/confinementbeam/station/storage
+	name = "\improper Confinement Beam Storage"
+	icon_state = "tcomsatlob"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/port_airlock
+	name = "\improper Confinement Beam Port Airlock"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/starboard_airlock
+	name = "\improper Confinement Beam Starboard Airlock"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/trawler_airlock
+	name = "\improper Confinement Beam Trawler Airlock"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/solar_control
+	name = "\improper Confinement Beam Solar Control"
+	icon_state = "dark128"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/backup_power
+	name = "\improper Confinement Beam Auxilary Power"
+	icon_state = "orange"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/medical_treatment
+	name = "\improper Confinement Beam Medical Station"
+	icon_state = "green"
+	sound_env = SOUND_ENVIRONMENT_STONEROOM
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/offworld/confinementbeam/station/atmos
+	name = "\improper Confinement Beam Atmospherics"
+	icon_state = "blue"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ATMOS
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/backup_power
+	name = "\improper Confinement Beam Power Distribution"
+	icon_state = "orange"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/backup_power
+	name = "\improper Confinement Beam Emitter Control"
+	icon_state = "shuttle2"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/port_observation
+	name = "\improper Confinement Beam Port Observation"
+	icon_state = "blue"
+	sound_env = SMALL_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/starboard_observation
+	name = "\improper Confinement Beam Starboard Observation"
+	icon_state = "blue"
+	sound_env = SMALL_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 //
 //-----------------------------------------------------------------------
