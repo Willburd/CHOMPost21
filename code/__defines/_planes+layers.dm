@@ -188,8 +188,6 @@ What is the naming convention for planes or layers?
 	#define BLIND_LAYER			18.2
 	#define CRIT_LAYER			18.3
 
-#define PLANE_MOTIONTRACKER		91 // Outpost 21 edit - Motion tracker subsystem, Stuff seen when mob has vibration sensing or a motion tracker
-
 //Client UI HUD stuff
 #define PLANE_HOLOMAP_FRAME		92
 #define PLANE_HOLOMAP			93 // Holomap rendered here

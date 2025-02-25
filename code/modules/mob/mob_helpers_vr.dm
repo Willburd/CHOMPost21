@@ -20,15 +20,6 @@
 			plane_holder.set_vis(VIS_CH_VANTAG,FALSE)
 			vis_enabled -= VIS_CH_VANTAG
 
-	if(has_motiontracking()) // Outpost 21 edit - Motion tracker subsystem
-		if(!(VIS_MOTIONTRACKER in vis_enabled))
-			plane_holder.set_vis(VIS_MOTIONTRACKER,TRUE)
-			vis_enabled += VIS_MOTIONTRACKER
-	else
-		if(VIS_MOTIONTRACKER in vis_enabled)
-			plane_holder.set_vis(VIS_MOTIONTRACKER,FALSE)
-			vis_enabled -= VIS_MOTIONTRACKER
-
 	/* Outpost 21 edit - Nif removal
 	//CHOMPAdd Start Soulcatcher
 	if(soulgem?.flag_check(SOULGEM_SEE_SR_SOULS))

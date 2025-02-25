@@ -6,7 +6,6 @@
 	plane_masters[VIS_CH_VANTAG] 		= new /obj/screen/plane_master{plane = PLANE_CH_VANTAG}				//Vore Antags
 	plane_masters[VIS_CH_STOMACH] 		= new /obj/screen/plane_master{plane = PLANE_CH_STOMACH}				//Stomach
 	plane_masters[VIS_SOULCATCHER] 		= new /obj/screen/plane_master{plane = PLANE_SOULCATCHER}				//CHOMPAdd Soulcatcher
-	plane_masters[VIS_MOTIONTRACKER]	= new /obj/screen/plane_master{plane = PLANE_MOTIONTRACKER} 		// Outpost 21 edit - Motion tracker subsystem, Motion tracker subscribers see echos with this
 
 	plane_masters[VIS_AUGMENTED]		= new /obj/screen/plane_master/augmented(M = my_mob)				//Augmented reality
 	..()
