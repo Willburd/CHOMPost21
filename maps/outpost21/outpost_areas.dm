@@ -2338,6 +2338,13 @@
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/offworld/confinementbeam/station/hallway
+	name = "\improper Confinement Beam Crew Conduit"
+	icon_state = "blue"
+	sound_env = SOUND_ENVIRONMENT_HALLWAY
+	ambience = AMBIENCE_MAINTENANCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/offworld/confinementbeam/station/backup_power
 	name = "\improper Confinement Beam Auxilary Power"
 	icon_state = "orange"
