@@ -2429,14 +2429,14 @@
 	name = "\improper Medevac Shuttle"
 	icon_state = "shuttle2"
 	requires_power = 1
-	base_turf = /turf/simulated/floor
+	base_turf = /turf/simulated/floor/plating
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/shuttle/security
 	name = "\improper Security Shuttle"
 	icon_state = "shuttle2"
 	requires_power = 1
-	base_turf = /turf/simulated/floor
+	base_turf = /turf/simulated/floor/plating
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
 //
@@ -2446,7 +2446,7 @@
 	name = "\improper Station Tram"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "shuttlegrn"
-	base_turf = /turf/simulated/floor
+	base_turf = /turf/simulated/floor/plating
 	use_emergency_overlay = TRUE
 
 /area/muriki/tramstation
@@ -2488,16 +2488,19 @@
 /area/shuttle/mercenary
 	name = "\improper Mercenary Vessel"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/plating
 
 /area/shuttle/skipjack
 	name = "\improper Vox Vessel"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/plating
 
 
 // Confinement beam shuttle
 /area/shuttle/beamtransit
 	name = "\improper Engineering Ferry"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/plating/external/muriki
 
 
 

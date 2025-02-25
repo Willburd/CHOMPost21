@@ -380,6 +380,7 @@
 [b]Notice[/b]: ESHUI Base, authorized personnel only"}
 	map_z = list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
 	extra_z_levels = list()
+	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security"), "Medical Rescue" = list("confinementbeam_medical"))
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
 	. = ..()

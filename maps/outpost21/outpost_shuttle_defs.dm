@@ -278,6 +278,13 @@
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard // TODO
 
+/obj/effect/shuttle_landmark/premade/medical/confinementbeam
+	name = "Confinement Beam (Medical Dock)"
+	landmark_tag = "confinementbeam_medical"
+	docking_controller = "beam_sat_medical_controller"
+	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
+
 //////////////////////////////////////////////////////////////
 // Security shuttle
 /datum/shuttle/autodock/overmap/security
@@ -300,6 +307,13 @@
 	landmark_tag = "prospector_docks_security"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard // TODO
+
+/obj/effect/shuttle_landmark/premade/security/confinementbeam
+	name = "Confinement Beam (Security Dock)"
+	landmark_tag = "confinementbeam_security"
+	docking_controller = "beam_sat_security_controller"
+	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
 
 //////////////////////////////////////////////////////////////
 // Trawler Shuttle
@@ -329,6 +343,13 @@
 	landmark_tag = "prospector_docks_trawler"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard // TODO
+
+/obj/effect/shuttle_landmark/premade/trawler/confinementbeam
+	name = "Confinement Beam (Trawler Dock)"
+	landmark_tag = "confinementbeam_trawler"
+	docking_controller = "beam_sat_trawler_controller"
+	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
 
 //////////////////////////////////////////////////////////////
 // Engineering Ferry
@@ -365,8 +386,8 @@
 	name = "ES 21-4 Confinement Beam Platform"
 	landmark_tag = "beam_sat"
 	docking_controller = "beam_sat_controller"
-	base_area = /area/space
-	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
+	base_turf = /turf/simulated/floor/airless
 
 //////////////////////////////////////////////////////////////
 // Generic landings
@@ -423,9 +444,3 @@
 	landmark_tag = "orbitalyard_west"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
-
-/obj/effect/shuttle_landmark/premade/generic/confinementbeam
-	name = "Confinement Beam (Secondary Dock)"
-	landmark_tag = "confinementbeam_civ"
-	base_turf = /turf/space
-	base_area = /area/space
