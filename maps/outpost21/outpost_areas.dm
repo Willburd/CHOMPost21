@@ -786,8 +786,8 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	sound_env = TUNNEL_ENCLOSED
 	ambience = AMBIENCE_HIGHSEC
-	base_turf = /turf/space
 	use_emergency_overlay = TRUE
+	base_turf = /turf/simulated/mineral/floor/vacuum
 
 /area/ai_sat/core_external
 	name = "\improper AI Satellite External Core"
@@ -3033,29 +3033,29 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/open/force_indoor
 
+/area/ai
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/mineral/floor/vacuum
+	use_emergency_overlay = TRUE
+
 /area/ai_upload
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/mineral/floor/vacuum
 	use_emergency_overlay = TRUE
 
 /area/ai_upload_foyer
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/mineral/floor/vacuum
 	use_emergency_overlay = TRUE
 
 /area/ai_server_room
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open/force_indoor
-	use_emergency_overlay = TRUE
-
-/area/ai
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/mineral/floor/vacuum
 	use_emergency_overlay = TRUE
 
 /area/ai_cyborg_station
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/mineral/floor/vacuum
 	use_emergency_overlay = TRUE
 
 /area/security/tactical

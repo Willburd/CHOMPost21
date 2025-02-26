@@ -334,7 +334,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "aZ" = (
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_equipment)
@@ -690,6 +689,13 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1380;
+	pixel_y = 7;
+	pixel_x = -22;
+	dir = 4
+	},
+/obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
 "bY" = (
@@ -705,7 +711,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/ai_sat/access_shaft)
+/area/ai_sat/fore_airlock)
 "bZ" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -904,6 +910,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
 "cE" = (
@@ -1726,7 +1733,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/ai_sat/access_shaft)
+/area/ai_sat/fore_airlock)
 "fl" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
@@ -3377,6 +3384,10 @@
 /obj/machinery/power/tracker{
 	id = "aiorbitsolar"
 	},
+/obj/structure/cable/yellow{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/solarpanel/airless,
 /area/ai_sat/power_control)
 "kC" = (
@@ -3510,7 +3521,7 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
 "kW" = (
-/obj/effect/fancy_shuttle/medbus,
+/obj/effect/shuttle_landmark/premade/security/aisat_security,
 /turf/space,
 /area/offworld/confinementbeam/exterior)
 "kY" = (
@@ -4717,6 +4728,12 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	pixel_x = -25;
+	pixel_y = -10
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/docking_wing)
 "ox" = (
@@ -5999,6 +6016,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "aisat_security_controller";
+	pixel_y = 30;
+	tag_door = "ai_sat_sec_door"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "sF" = (
@@ -7059,6 +7082,15 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
+"wl" = (
+/obj/structure/lattice,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "wm" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -7539,7 +7571,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/ai_sat/access_shaft)
+/area/ai_sat/docking_wing)
 "yd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -8021,8 +8053,15 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
+/obj/machinery/airlock_sensor/airlock_interior{
+	dir = 4;
+	pixel_x = -22;
+	frequency = 1380;
+	pixel_y = -7
+	},
+/obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/dark,
-/area/ai_sat/access_shaft)
+/area/ai_sat/docking_wing)
 "zr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -9946,6 +9985,27 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
 	},
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1380;
+	pixel_y = -8;
+	pixel_x = -22;
+	dir = 4
+	},
+/obj/machinery/airlock_sensor/airlock_exterior{
+	frequency = 1380;
+	dir = 4;
+	pixel_x = -21;
+	pixel_y = 6
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller{
+	dir = 4;
+	frequency = 1380;
+	id_tag = "ai_solarlock";
+	pixel_x = -29;
+	pixel_y = 6
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
 "FN" = (
@@ -11256,7 +11316,8 @@
 	dir = 8;
 	name = "west bump";
 	pixel_x = -26;
-	nightshift_setting = 3
+	nightshift_setting = 3;
+	is_critical = 1
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled,
@@ -11519,12 +11580,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/atmos)
 "Ko" = (
-/obj/effect/fancy_shuttle/secbus{
-	dir = 1;
-	fancy_shuttle_tag = "sec"
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	locked = 1
 	},
-/turf/space,
-/area/space)
+/obj/effect/map_helper/airlock/door/ext_door,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai_sat/docking_wing)
 "Kq" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -12816,12 +12879,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "OD" = (
-/obj/effect/fancy_shuttle/secbus{
-	dir = 1;
-	fancy_shuttle_tag = "sec"
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	locked = 1
 	},
-/turf/space,
-/area/offworld/confinementbeam/exterior)
+/obj/effect/map_helper/airlock/door/int_door,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai_sat/docking_wing)
 "OG" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -13940,6 +14005,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
 "Sm" = (
@@ -14009,7 +14075,7 @@
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1380;
 	icon_state = "door_locked";
-	id_tag = "beam_sat_med_door";
+	id_tag = "ai_sat_sec_door";
 	locked = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -14608,6 +14674,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
 "Ux" = (
@@ -14897,11 +14964,9 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super/critical{
 	dir = 4;
-	name = "east bump";
-	pixel_x = 26;
-	nightshift_setting = 3
+	pixel_x = 26
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -14944,6 +15009,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/docking_wing)
 "Vw" = (
@@ -27605,7 +27671,7 @@ ps
 Ns
 IG
 zq
-ov
+OD
 bX
 Is
 FL
@@ -27771,7 +27837,7 @@ Vu
 cC
 Sl
 Uw
-ov
+Ko
 zH
 IV
 Po
@@ -29060,14 +29126,14 @@ Ns
 sE
 Kk
 Ns
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Ko
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 rc
 rc
 yn
@@ -29222,14 +29288,14 @@ Ns
 Sz
 Sz
 Ns
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 rc
 rc
@@ -29377,25 +29443,25 @@ su
 su
 Po
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 rc
-rc
+wl
 yn
 bH
 lx
@@ -29539,21 +29605,21 @@ su
 rW
 Po
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+kW
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 rc
@@ -29700,22 +29766,22 @@ Oq
 Oq
 rW
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 rc
@@ -29862,22 +29928,22 @@ Oq
 Oq
 rW
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 rc
@@ -30024,22 +30090,22 @@ Oq
 Po
 rW
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 rc
@@ -30186,22 +30252,22 @@ Pp
 Po
 rW
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 rc
@@ -30348,22 +30414,22 @@ Pp
 Po
 rW
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 rc
@@ -30518,14 +30584,14 @@ Po
 Po
 Po
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 yl
 yl
@@ -30680,14 +30746,14 @@ Po
 Po
 Po
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Po
+Po
+Po
+Po
+Po
+Po
+Po
+Po
 Po
 Po
 Po
@@ -41895,7 +41961,7 @@ KP
 Tz
 Tz
 Po
-kW
+Po
 Po
 Po
 Po
@@ -41929,7 +41995,7 @@ Po
 Po
 Po
 Po
-OD
+Po
 Po
 rc
 Po
