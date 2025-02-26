@@ -7082,15 +7082,6 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
-"wl" = (
-/obj/structure/lattice,
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/space,
-/area/offworld/confinementbeam/exterior)
 "wm" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -11586,6 +11577,11 @@
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
+/obj/structure/cable/orange{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/docking_wing)
 "Kq" = (
@@ -29461,7 +29457,7 @@ Po
 Po
 Po
 rc
-wl
+rc
 yn
 bH
 lx
