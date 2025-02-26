@@ -781,6 +781,49 @@
 	base_turf = /turf/simulated/open/force_indoor
 	use_emergency_overlay = TRUE
 
+//AI sat
+/area/ai_sat
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	sound_env = TUNNEL_ENCLOSED
+	ambience = AMBIENCE_HIGHSEC
+	base_turf = /turf/space
+	use_emergency_overlay = TRUE
+
+/area/ai_sat/core_external
+	name = "\improper AI Satellite External Core"
+
+/area/ai_sat/docking_wing
+	name = "\improper AI Satellite Docking Wing"
+
+/area/ai_sat/docking_wing
+	name = "\improper AI Satellite Fore Airlock"
+	sound_env = SMALL_ENCLOSED
+
+/area/ai_sat/docking_wing
+	name = "\improper AI Satellite Solar Airlock"
+	sound_env = SMALL_ENCLOSED
+
+/area/ai_sat/storage
+	name = "\improper AI Satellite Secure Storage"
+
+/area/ai_sat/access_shaft
+	name = "\improper AI Satellite Access Shaft"
+
+/area/ai_sat/observation
+	name = "\improper AI Satellite Observation Deck"
+	sound_env = SMALL_ENCLOSED
+
+/area/ai_sat/atmos
+	name = "\improper AI Satellite Atmospherics"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_MAINTENANCE
+
+/area/ai_sat/power_control
+	name = "\improper AI Satellite Power Control"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
 
 //
 // Elevator -------------------------------------------------------
