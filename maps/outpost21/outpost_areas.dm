@@ -795,11 +795,11 @@
 /area/ai_sat/docking_wing
 	name = "\improper AI Satellite Docking Wing"
 
-/area/ai_sat/docking_wing
+/area/ai_sat/fore_airlock
 	name = "\improper AI Satellite Fore Airlock"
 	sound_env = SMALL_ENCLOSED
 
-/area/ai_sat/docking_wing
+/area/ai_sat/solar_airlock
 	name = "\improper AI Satellite Solar Airlock"
 	sound_env = SMALL_ENCLOSED
 
