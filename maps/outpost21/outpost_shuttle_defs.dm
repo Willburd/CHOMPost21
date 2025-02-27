@@ -388,9 +388,15 @@
 	base_area = /area/offworld/confinementbeam/exterior
 	base_turf = /turf/simulated/floor/airless
 
-
 //////////////////////////////////////////////////////////////
 // Tram to redspace
+// Other stations in in modular_outpost\maps\submaps\deepdark\deepdark.dm due to POI checks
+/area/shuttle/darktransit
+	name = "\improper Unknown Tram"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/flesh
+	haunted = TRUE
+
 /datum/shuttle/autodock/multi/underdark
 	name = "Unknown Tram"
 	warmup_time = 5
@@ -404,23 +410,12 @@
 		"dark_end"
 	)
 
-/obj/effect/shuttle_landmark/premade/underdark/start
-	name = "Station Platform"
-	landmark_tag = "dark_start"
-	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki
-
-/obj/effect/shuttle_landmark/premade/underdark/end
-	name = "End Of The Line"
-	landmark_tag = "dark_end"
-	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki
-
 /obj/effect/shuttle_landmark/premade/underdark/hell
 	name = "Somewhere Else"
 	landmark_tag = "dark_hell"
 	base_area = /area/specialty/redspace
 	base_turf = /turf/simulated/floor/flesh
+
 
 //////////////////////////////////////////////////////////////
 // Generic landings
