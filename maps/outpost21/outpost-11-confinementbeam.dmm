@@ -1754,7 +1754,7 @@
 	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "fn" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/corner/orange/full{
@@ -2240,6 +2240,10 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
+"gV" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/offworld/confinementbeam/station/access_shaft)
 "gW" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -3106,7 +3110,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/wall/rshull,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "jC" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3977,7 +3981,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "md" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -5046,7 +5050,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "pw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5219,7 +5223,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "qc" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5811,7 +5815,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "rW" = (
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -7694,7 +7698,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "yx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -7723,7 +7727,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "yB" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular{
@@ -8453,7 +8457,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "AE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -8699,7 +8703,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "Bs" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -9372,7 +9376,7 @@
 	},
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "DF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -10390,7 +10394,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "He" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -10711,7 +10715,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "HY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
@@ -11376,7 +11380,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "JF" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /turf/simulated/floor/plating,
@@ -11475,6 +11479,9 @@
 /obj/machinery/computer/med_data/laptop,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
+"JW" = (
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/access_shaft)
 "JX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -12421,7 +12428,7 @@
 	pixel_y = -8
 	},
 /turf/simulated/wall/rshull,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "Ne" = (
 /obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/plating,
@@ -12792,7 +12799,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "Oo" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -13283,7 +13290,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "PU" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -14145,7 +14152,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "SI" = (
 /obj/machinery/access_button/airlock_interior{
 	frequency = 1380;
@@ -14699,7 +14706,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "UA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -14719,7 +14726,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/dockingbay)
+/area/offworld/confinementbeam/station/access_shaft)
 "UE" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/cyan{
@@ -40992,7 +40999,7 @@ Qf
 vk
 GK
 uB
-WL
+JW
 Uy
 mc
 PT
@@ -41154,13 +41161,13 @@ vM
 mO
 Tz
 Tz
-Bx
+rH
 jB
-oS
+gV
 JD
-oS
+gV
 Nc
-Bx
+rH
 Li
 Li
 fX
