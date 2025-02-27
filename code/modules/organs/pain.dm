@@ -39,7 +39,7 @@
 			last_pain_message = message
 			to_chat(src,message)
 			// CHOMPAdd: Emote in pain for custom pain, too
-			if(prob(power / 10) && !isbelly(loc)) // No pain noises inside bellies.
+			if(prob(power / 10) && !isbelly(loc) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // No pain noises inside bellies. // Outpost 21 edit - Hide automatic pain scream
 				emote("pain")
 			// CHOMPAdd End
 
@@ -49,7 +49,7 @@
 		next_pain_time = world.time + (100 - power)
 		multilimb_pain_time = world.time + (100 - power)
 		// CHOMPAdd: Emote in pain for custom pain, too
-		if(prob(power / 10) && !isbelly(loc)) // No pain noises inside bellies.
+		if(prob(power / 10) && !isbelly(loc) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // No pain noises inside bellies. // Outpost 21 edit - Hide automatic pain scream
 			emote("pain")
 		// CHOMPAdd End
 
