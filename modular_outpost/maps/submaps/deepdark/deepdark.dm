@@ -722,26 +722,7 @@
 					H.adjustHalLoss(-9)
 
 //////////////////////////////////////////////////////////////
-// Tram to redspace
-/area/shuttle/darktransit
-	name = "\improper Unknown Tram"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	base_turf = /turf/simulated/floor/flesh
-	haunted = TRUE
-
-/datum/shuttle/autodock/multi/underdark
-	name = "Unknown Tram"
-	warmup_time = 5
-	shuttle_area = /area/shuttle/darktransit
-	current_location = "dark_hell"
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
-
-	destination_tags = list(
-		"dark_start",
-		"dark_hell",
-		"dark_end"
-	)
-
+// Tram to redspace (stations)
 /obj/effect/shuttle_landmark/premade/underdark/start
 	name = "Station Platform"
 	landmark_tag = "dark_start"
@@ -753,9 +734,3 @@
 	landmark_tag = "dark_end"
 	base_area = /area/mine/explored/muriki/cave/deepdark
 	base_turf = /turf/simulated/floor/plating/muriki
-
-/obj/effect/shuttle_landmark/premade/underdark/hell
-	name = "Somewhere Else"
-	landmark_tag = "dark_hell"
-	base_area = /area/specialty/redspace
-	base_turf = /turf/simulated/floor/flesh
