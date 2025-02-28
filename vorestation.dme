@@ -5097,7 +5097,6 @@
 #include "modular_chomp\code\modules\planet\sif.dm"
 #include "modular_chomp\code\modules\planet\tyr.dm"
 #include "modular_chomp\code\modules\planet\smokestar\turf.dm"
-#include "modular_chomp\code\modules\point\point.dm"
 #include "modular_chomp\code\modules\power\cells\device_cells.dm"
 #include "modular_chomp\code\modules\power\cells\esoteric_cells.dm"
 #include "modular_chomp\code\modules\power\cells\power_cells.dm"
