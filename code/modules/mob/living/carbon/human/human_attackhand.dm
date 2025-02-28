@@ -105,9 +105,9 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!has_hands) //This is here so if you WANT to do special code for 'if we don't have hands, do stuff' it can be done here!
 		return FALSE
-	if (istype(H) && attempt_to_scoop(H))
+	if (istype(H) && attempt_to_scoop(H) && !on_fire) // Outpost 21 edit, on fire check
 		return FALSE;
-	if(istype(H) && health < CONFIG_GET(number/health_threshold_crit))
+	if(istype(H) && (health < CONFIG_GET(number/health_threshold_crit) || stat == DEAD) && !on_fire) // Outpost 21 edit, on fire check, allow cpr if dead and under critical health
 		if(!H.check_has_mouth())
 			to_chat(H, span_danger("You don't have a mouth, you cannot perform CPR!"))
 			return FALSE
@@ -135,10 +135,13 @@
 		H.visible_message(span_danger("\The [H] performs CPR on \the [src]!"))
 		to_chat(H, span_warning("Repeat at least every 7 seconds."))
 
+		perform_cpr(H) // Outpost 21 edit begin - We do our own cpr thing
+		/*
 		if(istype(H) && health > CONFIG_GET(number/health_threshold_dead))
 			adjustOxyLoss(-(min(getOxyLoss(), 5)))
 			updatehealth()
 			to_chat(src, span_notice("You feel a breath of fresh air enter your lungs. It feels good."))
+		*/ // Outpost 21 edit end
 
 	else if(!(M == src && apply_pressure(M, M.zone_sel.selecting)))
 		help_shake_act(M)
