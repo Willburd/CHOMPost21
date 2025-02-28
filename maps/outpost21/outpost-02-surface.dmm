@@ -4297,6 +4297,7 @@
 	pixel_y = -26
 	},
 /obj/structure/cable/green,
+/obj/machinery/metal_detector,
 /turf/simulated/floor/plating,
 /area/security/mechent)
 "agj" = (
@@ -18888,6 +18889,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/metal_detector,
 /turf/simulated/floor/plating,
 /area/security/mechent)
 "dGx" = (

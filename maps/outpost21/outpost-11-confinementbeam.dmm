@@ -15494,6 +15494,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/structure/sign/kiddieplaque{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "Xe" = (
