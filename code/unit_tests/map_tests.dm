@@ -211,3 +211,34 @@
 		pass("No active edges.")
 
 	return 1
+
+
+/datum/unit_test/ladder_test
+	name = "MAP: Ladder Test"
+
+/datum/unit_test/ladder_test/start_test()
+	var/failed = FALSE
+
+	for(var/obj/structure/ladder/L in world)
+		var/turf/T = get_turf(L)
+		if(!T)
+			log_unit_test("[L.x].[L.y].[L.z]: Map - Ladder on invalid turf")
+			failed = TRUE
+			continue
+		if(L.allowed_directions & UP)
+			if(!L.target_up)
+				log_unit_test("[T.x].[T.y].[T.z]: Map - Ladder allows upward movement, but had no ladder above it")
+				failed = TRUE
+		if(L.allowed_directions & DOWN)
+			if(!L.target_down)
+				log_unit_test("[T.x].[T.y].[T.z]: Map - Ladder allows downward movement, but had no ladder beneath it")
+				failed = TRUE
+		if(T.density)
+			log_unit_test("[L.x].[L.y].[L.z]: Map - Ladder is inside a wall")
+			failed = TRUE
+
+	if(failed)
+		fail("Ladders were incorrectly placed, or missing connections.")
+	else
+		pass("All ladders were correctly placed and had connections.")
+	return failed

@@ -8088,8 +8088,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/security)
 "any" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/computer/shuttle_control/multi{
+	dir = 8;
+	shuttle_tag = "Engineering Ferry"
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/beamtransit)
@@ -12376,8 +12380,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/security/range)
 "bAW" = (
-/obj/machinery/computer/shuttle_control/multi{
-	shuttle_tag = "Engineering Ferry"
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft/light,
 /area/shuttle/beamtransit)
@@ -17950,6 +17957,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
+"dmy" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/beamtransit)
 "dmN" = (
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
@@ -18908,7 +18918,6 @@
 /obj/effect/floor_decal/industrial/loading{
 	dir = 4
 	},
-/obj/machinery/light,
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/beamtransit)
 "dDv" = (
@@ -29076,6 +29085,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"gTa" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Tesla Core Northeast";
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/muriki,
+/area/muriki/grounds/engi)
 "gTb" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 4
@@ -30038,6 +30054,16 @@
 "hgu" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/cargopub)
+"hgC" = (
+/obj/machinery/trailblazer/yellow,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/muriki,
+/area/muriki/grounds/engi)
 "hgD" = (
 /obj/structure/sign/botany{
 	icon_state = "restroom";
@@ -33723,6 +33749,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/brig/drunk)
+"ifl" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/beamtransit)
 "ifp" = (
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -44388,11 +44418,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
 "lkT" = (
-/obj/structure/bed/chair/bay/shuttle{
+/obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/shuttle/beamtransit)
+/turf/simulated/floor/plating/snow/muriki,
+/area/muriki/grounds/engi)
 "lle" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -46086,8 +46116,7 @@
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
 "lIv" = (
-/obj/effect/fancy_shuttle/lifeboat1{
-	dir = 1;
+/obj/effect/fancy_shuttle/delivery{
 	fancy_shuttle_tag = "eng"
 	},
 /turf/simulated/wall/fancy_shuttle{
@@ -50099,6 +50128,25 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
+"mUs" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/structure/closet/walllocker/medical/north,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/toxin,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/light,
+/area/shuttle/beamtransit)
 "mUF" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -62515,16 +62563,9 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
 "qIv" = (
-/obj/structure/closet/walllocker/medical/north{
-	pixel_x = -32;
-	pixel_y = 0;
-	dir = 8
-	},
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/toxin,
-/turf/simulated/shuttle/floor/voidcraft/light,
-/area/shuttle/beamtransit)
+/obj/machinery/trailblazer/yellow,
+/turf/simulated/floor/plating/snow/muriki,
+/area/muriki/grounds/engi)
 "qIC" = (
 /obj/structure/fence/corner{
 	dir = 8
@@ -72381,11 +72422,6 @@
 "tJC" = (
 /turf/simulated/floor/flesh/muriki,
 /area/muriki/processor/gland/phoron)
-"tJI" = (
-/turf/simulated/wall/fancy_shuttle/window{
-	fancy_shuttle_tag = "eng"
-	},
-/area/shuttle/beamtransit)
 "tJJ" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Virology North";
@@ -80664,16 +80700,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
 "waN" = (
-/obj/structure/handrail{
-	dir = 4
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21;
-	listening = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/beamtransit)
 "wbf" = (
 /obj/effect/floor_decal/borderfloor{
@@ -84092,6 +84122,9 @@
 /area/maintenance/wastedisposal)
 "wXH" = (
 /obj/machinery/light,
+/obj/structure/handrail{
+	dir = 4
+	},
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -30;
@@ -113557,18 +113590,18 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
-qvB
-qvB
-qvB
+hgC
+lkT
+gTa
 qvB
 mtX
+mtX
 qvB
+mtX
+mtX
 qvB
 buE
-buE
+qIv
 nCK
 nZM
 oEA
@@ -113719,15 +113752,15 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
 bri
-cso
+buE
 cso
 cso
 nen
+nen
 cso
+nen
+nen
 cso
 lIv
 buE
@@ -113881,15 +113914,15 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
 bri
-tJI
-qIv
-waN
-cou
+buE
+cso
+mUs
+gie
+gie
 pfb
+gie
+cou
 wXH
 cso
 buE
@@ -114043,15 +114076,15 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
 bri
-tJI
+buE
+cso
+gie
+bAW
 bAW
 any
-lkT
-lkT
+bAW
+bAW
 gie
 cso
 buE
@@ -114205,11 +114238,11 @@ khd
 khd
 khd
 khd
-rzX
-khd
-khd
 bri
-tJI
+buE
+cso
+dCZ
+udM
 udM
 udM
 udM
@@ -114367,16 +114400,16 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
 bri
+buE
 cso
-cso
-cso
-cso
-cso
-cso
+dmy
+udM
+udM
+udM
+udM
+udM
+dmy
 cso
 qKR
 khd
@@ -114529,18 +114562,18 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
-ctg
-dIh
-dIh
-dIh
-dIh
-dIh
-dIh
-dIh
-deS
+bri
+buE
+cso
+waN
+udM
+udM
+udM
+udM
+udM
+ifl
+cso
+qKR
 khd
 khd
 khd
@@ -114691,18 +114724,18 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
+bri
+buE
+cso
+cso
+cso
+cso
+cso
+cso
+cso
+cso
+cso
+qKR
 khd
 khd
 khd
@@ -114853,18 +114886,18 @@ khd
 khd
 khd
 khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
-khd
+ctg
+dIh
+dIh
+dIh
+dIh
+dIh
+dIh
+dIh
+dIh
+dIh
+dIh
+deS
 rzX
 khd
 khd
@@ -116154,7 +116187,7 @@ khd
 khd
 khd
 khd
-khd
+rzX
 khd
 khd
 khd

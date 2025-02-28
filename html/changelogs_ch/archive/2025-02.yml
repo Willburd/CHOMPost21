@@ -475,3 +475,16 @@
       oriented. Power should flow now
   - maptweak: Tweaked security doors to have correct access levels. Main areas will
       now be Security instead of Security equipment.
+2025-02-26:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: disabled some testing logs by default (now require -DTESTING to be set
+      while compiling)
+  - rscadd: Vampiric crew now have a source of nutrition in the loadout under the
+      Utility tab!
+2025-02-27:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed a few lines of code so that the code is compileable in OpenDream
+  FluffMedic:
+  - maptweak: portal puzzle is a bit better, wierd plants are back, other minor things
+  Kashargul:
+  - bugfix: soul captured mobs can now use subtle and whisper
