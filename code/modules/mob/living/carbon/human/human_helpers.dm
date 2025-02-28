@@ -196,19 +196,15 @@
 				compiled_vis |= V.enables_planes
 
 	/* Outpost 21 edit - Nif removal
-	//VOREStation Add - NIF Support
 	if(nif)
 		compiled_vis |= nif.planes_visible()
 	//event hud
 	*/
 	if(vantag_hud)
 		compiled_vis |= VIS_CH_VANTAG
-	//VOREStation Add End
 
-	//Vore Stomach addition start. This goes here.
 	if(stomach_vision)
 		compiled_vis += VIS_CH_STOMACH
-	//Vore Stomach addition end
 
 	/* Outpost 21 edit - Nif removal
 	//CHOMPAdd Start Soulcatcher
