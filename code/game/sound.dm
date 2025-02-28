@@ -92,6 +92,9 @@
 			if(V.interior_helm != null && vol > 0)
 				playsound(V.interior_helm,soundin, vol * 0.5 * (1 - (distance / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
 		// Outpost 21 addition end
+		
+		SSmotiontracker.ping(source,vol) // Nearly everything pings this, the quieter the less likely
+
 
 /mob/proc/check_sound_preference(list/preference)
 	if(!islist(preference))
