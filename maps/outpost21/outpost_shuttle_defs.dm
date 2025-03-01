@@ -199,7 +199,8 @@
 		"skipjack_base",
 		"skipjack_station_mount",
 		"skipjack_yard_west",
-		"skipjack_yard_east"
+		"skipjack_yard_east",
+		"skipjack_beam_east"
 	)
 
 /obj/effect/shuttle_landmark/premade/skipjack/base
@@ -215,14 +216,26 @@
 /obj/effect/shuttle_landmark/premade/skipjack/station_ne
 	name = "ES Outpost 21 (Mountains)"
 	landmark_tag = "skipjack_station_mount"
+	base_area = /area/muriki/skyline/north
+	base_turf = /turf/simulated/open/muriki
 
 /obj/effect/shuttle_landmark/premade/skipjack/station_nw
 	name = "Reclaimation Yard (West)"
 	landmark_tag = "skipjack_yard_west"
+	base_area = /area/space
+	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/premade/skipjack/station_se
 	name = "Reclaimation Yard (East)"
 	landmark_tag = "skipjack_yard_east"
+	base_area = /area/space
+	base_turf = /turf/space
+
+/obj/effect/shuttle_landmark/premade/skipjack/beam_ne
+	name = "Confinement Beam (East)"
+	landmark_tag = "skipjack_beam_east"
+	base_area = /area/space
+	base_turf = /turf/space
 
 //////////////////////////////////////////////////////////////
 // ERT Shuttle
@@ -395,9 +408,15 @@
 	base_area = /area/offworld/confinementbeam/exterior
 	base_turf = /turf/simulated/floor/airless
 
-
 //////////////////////////////////////////////////////////////
 // Tram to redspace
+// Other stations in in modular_outpost\maps\submaps\deepdark\deepdark.dm due to POI checks
+/area/shuttle/darktransit
+	name = "\improper Unknown Tram"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/flesh
+	haunted = TRUE
+
 /datum/shuttle/autodock/multi/underdark
 	name = "Unknown Tram"
 	warmup_time = 5
@@ -411,23 +430,12 @@
 		"dark_end"
 	)
 
-/obj/effect/shuttle_landmark/premade/underdark/start
-	name = "Station Platform"
-	landmark_tag = "dark_start"
-	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki
-
-/obj/effect/shuttle_landmark/premade/underdark/end
-	name = "End Of The Line"
-	landmark_tag = "dark_end"
-	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki
-
 /obj/effect/shuttle_landmark/premade/underdark/hell
 	name = "Somewhere Else"
 	landmark_tag = "dark_hell"
 	base_area = /area/specialty/redspace
 	base_turf = /turf/simulated/floor/flesh
+
 
 //////////////////////////////////////////////////////////////
 // Generic landings

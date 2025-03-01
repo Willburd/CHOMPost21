@@ -2078,7 +2078,7 @@
 		if (prob(5))
 			if(traumatic_shock >= 80)
 				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
-				if(prob(20) && !isbelly(loc))
+				if(prob(20) && !isbelly(loc) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
 					emote("pain")
 			Weaken(20)
 
@@ -2086,14 +2086,14 @@
 		if (prob(2))
 			if(traumatic_shock >= 80)
 				to_chat(src, span_danger("[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!"))
-				if(prob(40) && !isbelly(loc))
+				if(prob(40) && !isbelly(loc) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
 					emote("pain")
 			Paralyse(5)
 
 	if(shock_stage == 150)
 		if(!isbelly(loc))
 			custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!")
-			if(prob(60))
+			if(prob(60) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
 				emote("pain")
 		Weaken(20)
 

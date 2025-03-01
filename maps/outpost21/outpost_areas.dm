@@ -2546,14 +2546,6 @@
 	base_turf = /turf/simulated/floor/plating/external/muriki
 
 
-// Underdark tram
-/area/shuttle/darktransit
-	name = "\improper Unknown Tram"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	base_turf = /turf/simulated/floor/flesh
-	haunted = TRUE
-
-
 //
 // Vehicle interiors ---------------------------------------------------------------------
 //
