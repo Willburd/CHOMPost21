@@ -663,7 +663,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -1522,7 +1521,6 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -5374,7 +5372,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -5416,7 +5413,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -5437,7 +5433,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -6143,7 +6138,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -10506,19 +10500,6 @@
 /obj/machinery/telecomms/broadcaster/preset_cent,
 /turf/unsimulated/floor/steel,
 /area/centcom/command)
-"fiW" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "fjd" = (
 /obj/vehicle/train/trolley{
 	dir = 1
@@ -11286,7 +11267,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -14358,11 +14338,10 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
-	dir = 8
+	dir = 4
 	},
+/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "gZK" = (
@@ -14675,7 +14654,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -21215,7 +21193,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -21342,7 +21319,6 @@
 "knP" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -21687,7 +21663,6 @@
 "kvB" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -24539,7 +24514,6 @@
 "mbW" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -31215,7 +31189,6 @@
 "pOr" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -32716,21 +32689,6 @@
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
-"qIu" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "qIx" = (
 /obj/structure/sink{
 	dir = 1
@@ -33562,7 +33520,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -33899,7 +33856,6 @@
 "rmD" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -34120,7 +34076,6 @@
 "rrH" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -34570,7 +34525,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -35597,7 +35551,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -37198,16 +37151,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/living)
-"tag" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/material/shard,
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "taA" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -44713,7 +44656,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -45202,7 +45144,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -106033,7 +105974,7 @@ iJl
 pyC
 pyC
 ssM
-gZD
+eif
 ylH
 ylH
 ylH
@@ -106195,7 +106136,7 @@ pyC
 qyS
 ayu
 vtN
-fRk
+xJV
 ylH
 ylH
 ylH
@@ -106357,7 +106298,7 @@ wzD
 qyS
 pyC
 ssM
-aNi
+gZD
 ylH
 ylH
 ylH
@@ -106692,7 +106633,7 @@ ylH
 ylH
 ylH
 ylH
-gZD
+eif
 myJ
 vYr
 vYr
@@ -106854,7 +106795,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 hKi
 jXW
@@ -107016,7 +106957,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 nAh
 hKi
 hKi
@@ -107178,7 +107119,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 lFc
 hKi
 hKi
@@ -107340,7 +107281,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 hKi
 hKi
@@ -107502,7 +107443,7 @@ ylH
 ylH
 ylH
 ylH
-aNi
+gZD
 myJ
 vYr
 vYr
@@ -109135,11 +109076,11 @@ ylH
 ylH
 ylH
 bQe
-qIu
+xKk
 knP
 wnE
-tag
-fiW
+eih
+vhb
 bQe
 ylH
 ylH
