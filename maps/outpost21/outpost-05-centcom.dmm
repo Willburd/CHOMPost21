@@ -1562,7 +1562,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "aNo" = (
@@ -6610,16 +6609,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood,
-/area/specialty/redspace)
-"dpd" = (
-/obj/item/wheelchair/motor/small,
-/obj/item/wheelchair/motor/small,
-/obj/item/wheelchair/motor/small,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "dpv" = (
 /obj/effect/floor_decal/corner/black/full{
@@ -12018,16 +12007,6 @@
 /obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled/milspec,
 /area/centcom/specops)
-"fRk" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "fRG" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/security{
@@ -14332,18 +14311,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/specops)
-"gZD" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "gZK" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Special Operations";
@@ -17866,19 +17833,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
-"iDJ" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "iEe" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/radio/intercom{
@@ -20650,22 +20604,6 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/command)
-"jUr" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "jUz" = (
 /obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/warning{
@@ -23774,7 +23712,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/grille,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
 	icon_state = "shutter2_0";
@@ -34272,7 +34209,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
 	icon_state = "shutter2_0";
@@ -42819,7 +42755,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
 	icon_state = "shutter2_0";
@@ -87083,7 +87018,7 @@ epa
 epa
 epa
 bQe
-jUr
+tdE
 bQe
 bQe
 bQe
@@ -87882,7 +87817,7 @@ ylH
 ylH
 ylH
 ylH
-iDJ
+eif
 dBI
 dTO
 dTO
@@ -88044,7 +87979,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 gGN
 dTO
 btE
@@ -88052,10 +87987,10 @@ cst
 cst
 cst
 cst
-jUr
+tdE
 cst
 cst
-jUr
+tdE
 cst
 bQe
 prd
@@ -88206,7 +88141,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 xbY
 dTO
 aVM
@@ -94801,7 +94736,7 @@ ylH
 ylH
 bQe
 epa
-dpd
+epa
 cst
 cQe
 nYN
@@ -106298,7 +106233,7 @@ wzD
 qyS
 pyC
 ssM
-gZD
+aNi
 ylH
 ylH
 ylH
@@ -107443,7 +107378,7 @@ ylH
 ylH
 ylH
 ylH
-gZD
+aNi
 myJ
 vYr
 vYr
