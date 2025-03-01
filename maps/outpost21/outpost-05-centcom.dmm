@@ -2981,7 +2981,6 @@
 /obj/item/toy/plushie/pillow/blue,
 /obj/item/bedsheet/pillow/black,
 /obj/item/bedsheet/pillow/green,
-/obj/structure/bed/pillowpile,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "bwr" = (
@@ -23026,7 +23025,6 @@
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "lkY" = (
-/obj/structure/table/steel,
 /obj/item/storage/bag/circuits/basic,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 4
@@ -24890,16 +24888,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/milspec,
-/area/specialty/redspace)
-"mtO" = (
-/obj/item/electronic_assembly/large{
-	pixel_y = 6
-	},
-/obj/effect/floor_decal/milspec/color/emerald/half{
-	dir = 4
-	},
-/obj/structure/table/steel,
-/turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "muQ" = (
 /obj/effect/floor_decal/borderfloor{
@@ -28990,6 +28978,16 @@
 	},
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled/old_cargo/white,
+/area/specialty/redspace)
+"oEP" = (
+/obj/item/electronic_assembly/large{
+	pixel_y = 6
+	},
+/obj/effect/floor_decal/milspec/color/emerald/half{
+	dir = 4
+	},
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "oEU" = (
 /obj/structure/grille,
@@ -106375,10 +106373,10 @@ iuH
 gbD
 qlV
 xaB
-mtO
+oEP
 lkY
 xaB
-mtO
+oEP
 iDv
 tIi
 bQe
