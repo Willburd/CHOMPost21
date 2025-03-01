@@ -41274,11 +41274,6 @@
 "bzU" = (
 /turf/simulated/wall,
 /area/maintenance/secelevbasement)
-"bzV" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/ladder/up,
-/turf/simulated/wall/r_wall,
-/area/security/tankstore)
 "bzW" = (
 /obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -119279,7 +119274,7 @@ sLj
 sLj
 sLj
 sLj
-bzV
+xFf
 bGf
 bCq
 bDs

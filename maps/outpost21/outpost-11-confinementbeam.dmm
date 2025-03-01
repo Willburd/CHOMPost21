@@ -408,7 +408,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/offworld/confinementbeam/station/port_airlock)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "bl" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1683,7 +1683,7 @@
 	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "fn" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/corner/orange/full{
@@ -2147,7 +2147,7 @@
 "gV" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "gW" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -2963,7 +2963,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/wall/rshull,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "jC" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -3785,7 +3785,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "md" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -4801,7 +4801,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "pw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4959,7 +4959,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "qc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5229,12 +5229,6 @@
 /obj/structure/lattice,
 /turf/space,
 /area/offworld/confinementbeam/exterior)
-"rd" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/starboard_airlock)
 "re" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -5512,7 +5506,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "rW" = (
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -6243,7 +6237,7 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/port_airlock)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "uC" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/corner/orange/full{
@@ -7324,7 +7318,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "yx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -7351,7 +7345,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "yB" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular{
@@ -8062,7 +8056,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "AE" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -8294,7 +8288,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "Bs" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -8939,7 +8933,7 @@
 	},
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "DF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -9064,7 +9058,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/offworld/confinementbeam/station/starboard_airlock)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "Eh" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -9912,7 +9906,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "He" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -10218,7 +10212,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "HY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
@@ -10863,7 +10857,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "JF" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
 /turf/simulated/floor/plating,
@@ -10959,9 +10953,6 @@
 /obj/machinery/computer/med_data/laptop,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
-"JW" = (
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
 "JX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -11839,7 +11830,7 @@
 	pixel_y = -8
 	},
 /turf/simulated/wall/rshull,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "Ne" = (
 /obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/plating,
@@ -12658,7 +12649,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "PU" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -13523,7 +13514,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "SI" = (
 /obj/machinery/access_button/airlock_interior{
 	frequency = 1380;
@@ -14039,7 +14030,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "UA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -14055,7 +14046,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/trawler_airlock)
 "UE" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/cyan{
@@ -39949,7 +39940,7 @@ UC
 HW
 Hd
 fm
-rd
+uB
 LR
 YJ
 mr
@@ -40266,14 +40257,14 @@ Qf
 vk
 GK
 uB
-JW
+Ez
 Uy
 mc
 PT
 mc
 qb
 pv
-rd
+uB
 kE
 mf
 Yu
@@ -40427,15 +40418,15 @@ vM
 vM
 mO
 Tz
-Tz
-rH
+qv
+qv
 jB
 gV
 JD
 gV
 Nc
-rH
-Li
+qv
+qv
 Li
 fX
 hI
