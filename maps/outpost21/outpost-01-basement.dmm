@@ -53259,10 +53259,6 @@
 	icon_state = "white"
 	},
 /area/maintenance/oldbridge)
-"gZk" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
-/area/mine/unexplored/muriki/cave/sec)
 "gZy" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -60685,10 +60681,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/waste)
-"lTv" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
-/area/mine/unexplored/muriki/cave/east)
 "lUm" = (
 /obj/structure/closet/radiation,
 /obj/item/geiger/wall/south,
@@ -72094,10 +72086,6 @@
 	outdoors = 0
 	},
 /area/mine/explored/muriki/river/end)
-"tqX" = (
-/mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/heavy/muriki,
-/area/mine/unexplored/muriki/cave/sec)
 "trm" = (
 /obj/effect/floor_decal/corner/red/border,
 /obj/machinery/bluespace_denier,
@@ -122867,7 +122855,7 @@ ykL
 glX
 oFI
 oFI
-gZk
+eMW
 aYY
 aYY
 aYY
@@ -122879,7 +122867,7 @@ tzH
 oFI
 aYY
 aYY
-tqX
+euW
 aYY
 aYY
 aYY
@@ -123362,7 +123350,7 @@ euW
 oFI
 oFI
 oFI
-gZk
+eMW
 oFI
 oFI
 oFI
@@ -125950,7 +125938,7 @@ sOU
 mpL
 dHT
 dHT
-lTv
+vOK
 dHT
 dHT
 dHT
@@ -127094,7 +127082,7 @@ dHT
 dHT
 dHT
 dHT
-lTv
+vOK
 dHT
 dHT
 dHT
@@ -129029,7 +129017,7 @@ kkl
 kkl
 dHT
 dHT
-lTv
+vOK
 kkl
 dHT
 dHT
@@ -131144,7 +131132,7 @@ dHT
 dHT
 kkl
 dHT
-lTv
+vOK
 dHT
 bws
 bws
@@ -131454,7 +131442,7 @@ dHT
 dHT
 dHT
 dHT
-lTv
+vOK
 dHT
 kkl
 kkl
