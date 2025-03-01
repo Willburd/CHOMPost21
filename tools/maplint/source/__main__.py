@@ -111,6 +111,9 @@ def main(args):
 
         # ChompEDIT START
         if not args.maps:
+            if "scratchmap.dmm" not in map_filename: # Outpost 21 edit, ignore scratchmaps
+                print(yellow("SKIPPED"))
+                continue
             if "modular_outpost/maps/submaps/retiredsecrets/ported" in map_filename: # Outpost 21 edit, ignore our archive
                 print(yellow("SKIPPED"))
                 continue
