@@ -131,6 +131,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
+	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
@@ -591,6 +592,7 @@ var/list/admin_verbs_event_manager = list(
 	/* Outpost 21 edit - Nif removal
 	/client/proc/add_hidden_area,
 	/client/proc/remove_hidden_area,
+	/client/proc/hide_motion_tracker_feedback,
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	*/
