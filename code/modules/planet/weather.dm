@@ -36,7 +36,7 @@
 
 /datum/weather_holder/proc/remove_from_turf(turf/T)
 	if(!(visuals in T.vis_contents))
-		warning("Was asked to remove weather from [T.x], [T.y], [T.z] despite it not having us in it's vis contents")
+		//warning("Was asked to remove weather from [T.x], [T.y], [T.z] despite it not having us in it's vis contents") // Outpost 21 edit - Cripples explosion performance, disabled this logging
 		return
 	T.vis_contents -= visuals
 	T.vis_contents -= special_visuals
