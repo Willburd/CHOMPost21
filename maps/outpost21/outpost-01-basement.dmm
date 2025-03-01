@@ -54896,10 +54896,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
-"ihS" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil/invisible,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
-/area/mine/unexplored/muriki/cave/sec)
 "iiv" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/water/acidic/indoor/muriki,
@@ -67848,10 +67844,6 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/cave/west)
-"qIQ" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil/invisible,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
-/area/mine/unexplored/muriki/cave/east)
 "qIZ" = (
 /obj/item/clothing/head/cone,
 /turf/simulated/floor/plating/muriki,
@@ -69147,10 +69139,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/refinery/tugstorage)
-"rsW" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil/invisible,
-/turf/simulated/floor/outdoors/grass/heavy/muriki,
-/area/mine/unexplored/muriki/cave/east)
 "rtA" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/plating/muriki,
@@ -122396,7 +122384,7 @@ aYY
 aYY
 oFI
 oFI
-ihS
+kcg
 oFI
 oFI
 glX
@@ -123675,7 +123663,7 @@ qKL
 qKL
 glX
 oFI
-ihS
+kcg
 glX
 oFI
 oFI
@@ -124979,7 +124967,7 @@ dHT
 iZA
 kkl
 kkl
-rsW
+jEq
 dHT
 dHT
 dHT
@@ -124991,7 +124979,7 @@ dHT
 dHT
 jEq
 kkl
-rsW
+jEq
 kkl
 kkl
 mpL
@@ -126927,7 +126915,7 @@ dHT
 dHT
 dHT
 kkl
-qIQ
+pmy
 dHT
 dHT
 dHT
@@ -129043,7 +129031,7 @@ kkl
 uPv
 kkl
 kkl
-qIQ
+pmy
 dHT
 mpL
 ihb
@@ -130973,7 +130961,7 @@ kkl
 kkl
 dHT
 dHT
-qIQ
+pmy
 dHT
 mpL
 dHT
@@ -131304,7 +131292,7 @@ dHT
 dHT
 dHT
 kkl
-rsW
+jEq
 dHT
 dHT
 dHT
@@ -132101,7 +132089,7 @@ mpL
 bws
 dHT
 dHT
-qIQ
+pmy
 dHT
 dHT
 dHT
