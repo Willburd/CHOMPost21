@@ -1,8 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aa" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -18,7 +16,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -47,8 +44,6 @@
 	req_one_access = list(16,52,56)
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -87,8 +82,6 @@
 "al" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -105,8 +98,6 @@
 /area/offworld/confinementbeam/exterior)
 "at" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -154,8 +145,6 @@
 /area/offworld/confinementbeam/station/port_observation)
 "az" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -200,18 +189,12 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "aL" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
@@ -235,8 +218,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "aN" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -301,8 +282,6 @@
 "aV" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -369,8 +348,6 @@
 /area/offworld/confinementbeam/station/starboard_observation)
 "be" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -405,8 +382,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -429,8 +404,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -438,8 +411,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "bl" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -473,8 +444,6 @@
 /area/ai_server_room)
 "bp" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_wall,
@@ -486,7 +455,6 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/machinery/camera/network/command{
@@ -540,7 +508,6 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/orange/full{
@@ -569,8 +536,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -619,8 +584,6 @@
 "bJ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -703,8 +666,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/orange/border{
@@ -744,8 +705,6 @@
 "ce" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -755,13 +714,9 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
@@ -783,8 +738,6 @@
 /area/offworld/confinementbeam/station/trawler_airlock)
 "ch" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -797,8 +750,6 @@
 /area/ai_upload)
 "cj" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -829,8 +780,6 @@
 /area/offworld/confinementbeam/station/dockingbay)
 "cu" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -860,7 +809,6 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/button/remote/blast_door{
@@ -871,7 +819,6 @@
 	req_one_access = list(16,56)
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
@@ -906,8 +853,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -915,8 +860,6 @@
 /area/ai_sat/docking_wing)
 "cE" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -1002,8 +945,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -1020,8 +961,6 @@
 	name = "AI core maintenance hatch"
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1191,8 +1130,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/greengrid,
@@ -1225,8 +1162,6 @@
 "dH" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -1264,8 +1199,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "dL" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -1279,18 +1212,12 @@
 /area/ai_upload_foyer)
 "dN" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -1304,7 +1231,6 @@
 	is_critical = 1
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/greengrid,
@@ -1321,8 +1247,6 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -1417,8 +1341,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/window/reinforced/full,
@@ -1434,15 +1356,9 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "el" = (
-/obj/effect/floor_decal/corner/orange/full{
-	dir = 4
-	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/starboard_equipment)
+/mob/living/simple_mob/animal/space/bats,
+/turf/simulated/mineral/floor/vacuum,
+/area/space)
 "em" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
@@ -1489,8 +1405,6 @@
 /area/offworld/confinementbeam/station/port_observation)
 "ey" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1713,8 +1627,6 @@
 	},
 /obj/machinery/door/airlock/glass_engineering,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -1774,8 +1686,6 @@
 /area/ai_upload)
 "fr" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -1784,8 +1694,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/window/reinforced/full,
@@ -1833,7 +1741,6 @@
 "fx" = (
 /obj/machinery/power/tesla_coil/collector,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/airless,
@@ -1895,21 +1802,15 @@
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
 "fJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/clothing/head/welding,
@@ -1993,14 +1894,10 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "fY" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/machinery/power/emitter{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/starboard_equipment)
+/mob/living/simple_mob/animal/space/bats,
+/mob/living/simple_mob/animal/space/bats,
+/turf/simulated/mineral/floor/vacuum,
+/area/space)
 "fZ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -2012,8 +1909,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "gb" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2059,11 +1954,9 @@
 "gr" = (
 /obj/structure/grille,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/airless,
@@ -2076,8 +1969,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2099,13 +1990,9 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment,
@@ -2151,8 +2038,6 @@
 /area/offworld/confinementbeam/station/port_equipment)
 "gF" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -2196,8 +2081,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -2217,7 +2100,6 @@
 /area/offworld/confinementbeam/station/port_equipment)
 "gR" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar{
@@ -2246,8 +2128,6 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "gW" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/map_helper/airlock/button/int_button,
@@ -2266,7 +2146,6 @@
 	pixel_y = 26
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -2313,8 +2192,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "hd" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -2332,8 +2209,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "hm" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -2363,8 +2238,6 @@
 /area/offworld/confinementbeam/exterior)
 "hq" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -2390,16 +2263,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "hv" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/orange/border,
@@ -2426,8 +2295,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -2457,13 +2324,9 @@
 /area/offworld/confinementbeam/exterior)
 "hD" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/access_button/airlock_exterior{
@@ -2489,8 +2352,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -2531,16 +2392,12 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "hL" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2555,19 +2412,15 @@
 /turf/space,
 /area/offworld/confinementbeam/exterior)
 "hN" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/atmos)
+/mob/living/simple_mob/animal/space/bear,
+/turf/simulated/mineral/floor/vacuum,
+/area/space)
 "hO" = (
 /obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "hP" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -2623,8 +2476,6 @@
 /area/muriki/bathroom/confinement_beam)
 "hW" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/stand_clear/red,
@@ -2769,8 +2620,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "iv" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -2800,8 +2649,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/orange/border{
@@ -2821,8 +2668,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "iE" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2978,13 +2823,9 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "jk" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -3014,8 +2855,6 @@
 /area/offworld/confinementbeam/station/atmos)
 "jn" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
@@ -3023,8 +2862,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "jp" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
@@ -3045,18 +2882,12 @@
 /area/ai_sat/atmos)
 "ju" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
@@ -3072,8 +2903,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/item/aiModule/eshui_standard,
@@ -3084,8 +2913,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -3199,8 +3026,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3211,8 +3036,6 @@
 /area/offworld/confinementbeam/station/storage)
 "kb" = (
 /obj/structure/cable/orange{
-	d1 = 6;
-	d2 = 9;
 	icon_state = "6-9"
 	},
 /turf/simulated/floor/tiled,
@@ -3246,7 +3069,6 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/airless,
@@ -3284,8 +3106,6 @@
 "kq" = (
 /obj/machinery/power/tesla_coil/collector,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
@@ -3347,8 +3167,6 @@
 	pixel_x = -26
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -3359,8 +3177,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "kz" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light{
@@ -3378,8 +3194,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -3389,7 +3203,6 @@
 	id = "aiorbitsolar"
 	},
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/solarpanel/airless,
@@ -3414,8 +3227,6 @@
 /area/offworld/confinementbeam/station/starboard_airlock)
 "kF" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 9;
 	icon_state = "2-9"
 	},
 /turf/simulated/floor/airless,
@@ -3440,13 +3251,9 @@
 /area/offworld/confinementbeam/station/port_observation)
 "kJ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/railing/grey{
@@ -3459,13 +3266,9 @@
 /area/offworld/confinementbeam/station/hallway)
 "kL" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3492,8 +3295,6 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "kR" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated/dark,
@@ -3536,8 +3337,6 @@
 /area/offworld/confinementbeam/station/starboard_observation)
 "kZ" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/orange/border,
@@ -3587,8 +3386,6 @@
 "ld" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3618,8 +3415,6 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "li" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/railing/grey{
@@ -3631,11 +3426,7 @@
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
 "lk" = (
-/obj/effect/floor_decal/corner/orange/full{
-	dir = 4
-	},
-/obj/structure/dispenser/phoron,
-/turf/simulated/floor/tiled/milspec,
+/turf/space,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "ll" = (
 /obj/machinery/power/tesla_coil,
@@ -3656,13 +3447,9 @@
 /area/offworld/confinementbeam/exterior)
 "ln" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
@@ -3703,8 +3490,6 @@
 "lr" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -3817,8 +3602,6 @@
 /area/offworld/confinementbeam/exterior)
 "lF" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 6;
 	icon_state = "1-6"
 	},
 /obj/effect/floor_decal/industrial/stand_clear/red{
@@ -3828,8 +3611,6 @@
 /area/offworld/confinementbeam/exterior)
 "lG" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -3860,8 +3641,6 @@
 /area/offworld/confinementbeam/station/hallway)
 "lL" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/railing/grey{
@@ -3888,8 +3667,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "lQ" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -3924,18 +3701,12 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "lV" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/power/sensor{
@@ -3984,13 +3755,9 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "md" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
@@ -4011,11 +3778,9 @@
 "mk" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
@@ -4029,8 +3794,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -4164,7 +3927,6 @@
 	id = "aiorbitsolar"
 	},
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/light/small{
@@ -4178,7 +3940,6 @@
 	},
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless,
@@ -4195,8 +3956,6 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "mH" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/greengrid,
@@ -4260,24 +4019,18 @@
 /area/offworld/confinementbeam/station/hallway_alt)
 "mR" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
 "mY" = (
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/grille,
@@ -4336,8 +4089,6 @@
 "ni" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -4387,7 +4138,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "nr" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan,
@@ -4469,8 +4219,6 @@
 /area/ai_sat/access_shaft)
 "nG" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -4502,8 +4250,6 @@
 /area/ai_sat/access_shaft)
 "nK" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -4514,8 +4260,6 @@
 "nL" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -4585,8 +4329,6 @@
 /area/ai)
 "nW" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -4599,8 +4341,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -4819,8 +4559,6 @@
 /area/offworld/confinementbeam/station/trawler_airlock)
 "oL" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/greengrid,
@@ -4832,13 +4570,9 @@
 /area/offworld/confinementbeam/station/hallway)
 "oP" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/railing/grey{
@@ -4849,11 +4583,9 @@
 "oR" = (
 /obj/structure/grille,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/airless,
@@ -4916,16 +4648,12 @@
 	icon_state = "6-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 6;
 	icon_state = "1-6"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "ph" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -4945,8 +4673,6 @@
 /area/offworld/confinementbeam/station/solar_control)
 "pj" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 9;
 	icon_state = "2-9"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -4960,8 +4686,7 @@
 "pm" = (
 /obj/machinery/shield_gen/external,
 /obj/structure/cable/green{
-	icon_state = "0-8";
-	d2 = 8
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
@@ -4972,8 +4697,6 @@
 "pp" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -4985,8 +4708,6 @@
 /area/muriki/bathroom/confinement_beam)
 "pr" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5006,7 +4727,6 @@
 /area/offworld/confinementbeam/station/hallway)
 "ps" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
@@ -5014,18 +4734,12 @@
 /area/ai_sat/access_shaft)
 "pu" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/catwalk_plated/dark,
@@ -5068,8 +4782,6 @@
 "pz" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -5089,8 +4801,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -5106,8 +4816,6 @@
 /area/muriki/bathroom/confinement_beam)
 "pG" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5117,8 +4825,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -5226,8 +4932,6 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "qc" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5241,13 +4945,9 @@
 /area/offworld/confinementbeam/station/hallway_alt)
 "qd" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -5280,8 +4980,6 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "qf" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/flasher{
@@ -5305,8 +5003,6 @@
 /area/offworld/confinementbeam/exterior)
 "qk" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -5317,11 +5013,9 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "ql" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/grille,
@@ -5352,8 +5046,6 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -5363,8 +5055,6 @@
 /area/ai_sat/access_shaft)
 "qu" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -5378,8 +5068,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -5417,16 +5105,12 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "qH" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -5441,8 +5125,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "qJ" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -5528,18 +5210,12 @@
 /area/offworld/confinementbeam/station/port_equipment)
 "rh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
@@ -5569,8 +5245,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -5580,18 +5254,12 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "rm" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
@@ -5604,8 +5272,6 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "ro" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -5649,8 +5315,6 @@
 /area/ai_sat/fore_airlock)
 "ry" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -5689,7 +5353,6 @@
 "rC" = (
 /obj/structure/confinement_beam_generator/inductor,
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
@@ -5750,8 +5413,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "rQ" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -5779,16 +5440,12 @@
 	dir = 6
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "rS" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5809,8 +5466,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -5837,8 +5492,6 @@
 /area/offworld/confinementbeam/exterior)
 "sa" = (
 /obj/structure/cable/orange{
-	d1 = 6;
-	d2 = 8;
 	icon_state = "6-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -5922,14 +5575,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
-"sk" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "1-10"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
 "sl" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/wood,
@@ -5956,12 +5601,8 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "sr" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/effect/floor_decal/corner/orange/full{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/atmos)
+/turf/simulated/mineral/floor/vacuum,
+/area/space)
 "st" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -5973,8 +5614,6 @@
 /area/ai_sat/core_external)
 "sx" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -6048,8 +5687,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "sN" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -6096,18 +5733,12 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "sU" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
@@ -6119,8 +5750,6 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -6138,8 +5767,7 @@
 	outputting = 1
 	},
 /obj/structure/cable/green{
-	icon_state = "0-8";
-	d2 = 8
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/solar_control)
@@ -6148,8 +5776,6 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6170,8 +5796,6 @@
 /area/offworld/confinementbeam/station/trawler_airlock)
 "ta" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/hologram/holopad,
@@ -6192,10 +5816,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "tf" = (
-/obj/machinery/power/rad_collector,
-/obj/effect/floor_decal/corner/orange,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/starboard_equipment)
+/turf/space,
+/area/offworld/confinementbeam/station/beam_emitter)
 "th" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6236,7 +5858,6 @@
 /area/offworld/confinementbeam/station/port_observation)
 "to" = (
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/camera/network/command{
@@ -6264,13 +5885,9 @@
 /area/offworld/confinementbeam/station/starboard_observation)
 "tt" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/railing/grey{
@@ -6280,8 +5897,6 @@
 /area/offworld/confinementbeam/exterior)
 "tw" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -6370,16 +5985,12 @@
 /area/offworld/confinementbeam/station/storage)
 "tP" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -6429,8 +6040,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "ud" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -6463,8 +6072,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "um" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/orange/border,
@@ -6547,8 +6154,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "uz" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/airlock_sensor/airlock_interior{
@@ -6596,13 +6201,9 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -6625,13 +6226,9 @@
 "uR" = (
 /obj/machinery/light,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
@@ -6641,8 +6238,6 @@
 /area/ai)
 "uS" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -6688,8 +6283,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6725,8 +6318,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "vh" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -6750,12 +6341,9 @@
 	name_tag = "AI Subgrid"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/greengrid,
@@ -6795,8 +6383,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -6818,8 +6404,6 @@
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -6867,12 +6451,9 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/white/full,
@@ -6927,8 +6508,6 @@
 /area/muriki/bathroom/confinement_beam)
 "vK" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -6986,8 +6565,6 @@
 "vV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -7093,8 +6670,6 @@
 /area/ai_upload)
 "wn" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -7125,8 +6700,6 @@
 /area/offworld/confinementbeam/station/hallway)
 "wq" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7204,8 +6777,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "wM" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
@@ -7220,8 +6791,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -7229,8 +6798,6 @@
 "wQ" = (
 /obj/machinery/ai_slipper,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7382,8 +6949,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "xr" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7415,8 +6980,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/flasher{
@@ -7437,16 +7000,12 @@
 /area/muriki/bathroom/confinement_beam)
 "xz" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
 "xD" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -7473,8 +7032,6 @@
 /area/offworld/confinementbeam/station/hallway_alt)
 "xK" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7561,8 +7118,6 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -7602,16 +7157,12 @@
 /area/offworld/confinementbeam/station/storage)
 "yh" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "5-10"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "yi" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -7721,8 +7272,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -7765,8 +7314,6 @@
 /area/offworld/confinementbeam/station/port_equipment)
 "yG" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "6-9"
 	},
 /turf/simulated/floor/airless,
@@ -7786,8 +7333,6 @@
 /area/ai_upload)
 "yI" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -7815,8 +7360,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -7891,8 +7434,6 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -7901,8 +7442,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/window/reinforced/full,
@@ -7980,7 +7519,6 @@
 "zd" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/grille,
@@ -8068,8 +7606,6 @@
 /area/offworld/confinementbeam/station/starboard_observation)
 "zs" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -8140,8 +7676,6 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "zH" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
@@ -8152,8 +7686,6 @@
 	req_one_access = list(5,10,11,18,19)
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8256,8 +7788,6 @@
 /area/ai)
 "Ab" = (
 /obj/structure/cable/green{
-	d1 = 5;
-	d2 = 10;
 	icon_state = "5-10"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8291,12 +7821,9 @@
 /area/ai_upload)
 "Ah" = (
 /obj/structure/cable/yellow{
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -8312,8 +7839,6 @@
 /area/offworld/confinementbeam/exterior)
 "Aj" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8349,16 +7874,13 @@
 "Ap" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/airless,
@@ -8400,8 +7922,6 @@
 	dir = 9
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -8421,8 +7941,6 @@
 /area/offworld/confinementbeam/station/storage)
 "Az" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8498,8 +8016,6 @@
 /area/offworld/confinementbeam/station/storage)
 "AL" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
@@ -8548,8 +8064,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "AS" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -8580,8 +8094,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "AV" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/access_button/airlock_interior{
@@ -8602,8 +8114,6 @@
 	dir = 5
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8624,8 +8134,6 @@
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Bb" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8636,8 +8144,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -8697,8 +8203,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -8730,7 +8234,6 @@
 "Bz" = (
 /obj/structure/grille,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless,
@@ -8774,7 +8277,6 @@
 	},
 /obj/machinery/power/rtg/advanced,
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/item/radio/intercom/locked/ai_private{
@@ -8790,13 +8292,9 @@
 /area/offworld/confinementbeam/exterior)
 "BK" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
@@ -8878,8 +8376,6 @@
 "Cb" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -8892,8 +8388,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -8926,8 +8420,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -9016,8 +8508,6 @@
 "CA" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/wall/r_wall,
@@ -9034,8 +8524,6 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "CC" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9096,8 +8584,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9106,8 +8592,6 @@
 /area/ai_sat/access_shaft)
 "CK" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -9117,8 +8601,6 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "CL" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -9141,8 +8623,6 @@
 /area/offworld/confinementbeam/station/port_equipment)
 "CM" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -9167,8 +8647,6 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "CV" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9232,8 +8710,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -9258,8 +8734,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "Dh" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -9370,8 +8844,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/junction,
@@ -9403,12 +8875,9 @@
 "DM" = (
 /obj/machinery/power/tesla_coil/collector,
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -9457,8 +8926,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -9493,8 +8960,6 @@
 /area/ai)
 "Ed" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -9504,8 +8969,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -9556,12 +9019,8 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/ai_upload)
 "Es" = (
-/obj/machinery/power/rad_collector,
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/starboard_equipment)
+/turf/simulated/mineral/alt,
+/area/offworld/confinementbeam/exterior)
 "Eu" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Power - PTL";
@@ -9575,7 +9034,6 @@
 	outputting = 1
 	},
 /obj/structure/cable/orange{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless,
@@ -9591,13 +9049,9 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "Ew" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
@@ -9632,8 +9086,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "ED" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/greengrid,
@@ -9742,13 +9194,6 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/ai)
-"Fe" = (
-/obj/structure/cable/yellow{
-	d2 = 8;
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
 "Ff" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -9762,8 +9207,6 @@
 	req_one_access = list(5,10,11,18,19)
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -9776,8 +9219,6 @@
 /area/offworld/confinementbeam/station/backup_power)
 "Fj" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/greengrid,
@@ -9793,8 +9234,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "Fl" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9838,8 +9277,6 @@
 	name_tag = "PTL Platform Solar"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/access_button/airlock_interior{
@@ -9859,8 +9296,6 @@
 /area/ai_upload_foyer)
 "Ft" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -10030,13 +9465,9 @@
 /area/ai)
 "FS" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/button/remote/airlock{
@@ -10052,8 +9483,6 @@
 /area/ai_upload)
 "FT" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10079,16 +9508,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "FX" = (
 /obj/structure/cable/green{
-	icon_state = "0-8";
-	d2 = 8
+	icon_state = "0-8"
 	},
 /obj/machinery/power/apc{
 	dir = 4;
@@ -10180,8 +9606,6 @@
 "Go" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -10250,8 +9674,6 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 9;
 	icon_state = "4-9"
 	},
 /obj/structure/disposalpipe/segment{
@@ -10283,8 +9705,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "GL" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -10328,8 +9748,7 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
-	icon_state = "0-8";
-	d2 = 8
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
@@ -10346,8 +9765,6 @@
 /area/ai_sat/power_control)
 "GX" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/industrial/warning,
@@ -10400,8 +9817,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -10470,8 +9885,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -10488,7 +9901,6 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/disposalpipe/segment{
@@ -10499,13 +9911,9 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "Hw" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -10518,15 +9926,12 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/greengrid,
 /area/ai)
 "HA" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/machinery/light{
@@ -10544,8 +9949,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
@@ -10637,7 +10040,6 @@
 "HO" = (
 /obj/machinery/power/smes/buildable,
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/item/smes_coil/super_capacity,
@@ -10682,8 +10084,6 @@
 /area/ai_sat/access_shaft)
 "HT" = (
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -10721,13 +10121,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "Ia" = (
-/obj/effect/floor_decal/corner/orange,
-/turf/simulated/floor/tiled/milspec,
+/turf/space,
 /area/offworld/confinementbeam/station/atmos)
 "Ib" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
@@ -10756,8 +10153,6 @@
 "Ie" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -10849,7 +10244,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -10869,8 +10263,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/disposal,
@@ -10878,8 +10270,6 @@
 	dir = 1
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -10889,8 +10279,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "Iy" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -10912,8 +10300,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "IC" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/computer/rcon{
@@ -11001,18 +10387,12 @@
 /area/offworld/confinementbeam/station/hallway)
 "IN" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -11085,16 +10465,12 @@
 "IV" = (
 /obj/structure/railing/grey,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/docking_wing)
 "IW" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11143,8 +10519,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/segment{
@@ -11262,8 +10636,6 @@
 /area/ai_upload)
 "Js" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11307,14 +10679,13 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
-/obj/machinery/power/apc{
+/obj/structure/cable/green,
+/obj/machinery/power/apc/super/critical{
 	dir = 8;
-	name = "west bump";
 	pixel_x = -26;
 	nightshift_setting = 3;
-	is_critical = 1
+	name = "west bump"
 	},
-/obj/structure/cable/green,
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Jw" = (
@@ -11372,8 +10743,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -11429,15 +10798,12 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/fore_airlock)
 "JL" = (
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan,
@@ -11490,8 +10856,6 @@
 /area/ai)
 "Kb" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -11557,8 +10921,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -11585,8 +10947,6 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -11627,16 +10987,12 @@
 "Kw" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Ky" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -11654,24 +11010,18 @@
 /area/offworld/confinementbeam/station/atmos)
 "KC" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
 "KD" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -11691,12 +11041,9 @@
 /area/offworld/confinementbeam/exterior)
 "KG" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/power/apc{
@@ -11749,8 +11096,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11764,7 +11109,6 @@
 "KJ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
@@ -11810,8 +11154,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -11834,8 +11176,6 @@
 /area/offworld/confinementbeam/station/dockingbay)
 "KS" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -11844,8 +11184,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "KU" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -11913,8 +11251,6 @@
 	req_one_access = list(5,10,11,18,19)
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -11953,8 +11289,6 @@
 "Lp" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -11972,8 +11306,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/greengrid,
@@ -11984,8 +11316,6 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -12005,8 +11335,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -12027,8 +11355,6 @@
 /area/ai_sat/atmos)
 "LE" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/engineering_outpost{
@@ -12121,16 +11447,12 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "LX" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/light{
 	dir = 8
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
@@ -12171,13 +11493,9 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "Mk" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
@@ -12231,8 +11549,6 @@
 /area/offworld/confinementbeam/station/dockingbay)
 "Mu" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 9;
 	icon_state = "2-9"
 	},
 /obj/effect/floor_decal/industrial/rad_floor/red,
@@ -12275,7 +11591,6 @@
 "MD" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
@@ -12283,8 +11598,6 @@
 /area/ai_sat/access_shaft)
 "MF" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12301,14 +11614,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
-"MI" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "2-5"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
 "MM" = (
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
@@ -12353,8 +11658,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -12382,14 +11685,6 @@
 /obj/structure/lattice,
 /obj/item/weldingtool,
 /turf/space,
-/area/offworld/confinementbeam/exterior)
-"MW" = (
-/obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "MY" = (
 /obj/machinery/power/tesla_coil,
@@ -12546,11 +11841,9 @@
 /area/offworld/confinementbeam/station/hallway)
 "Np" = (
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/grille,
@@ -12581,13 +11874,9 @@
 /area/offworld/confinementbeam/station/hallway)
 "Nv" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -12611,8 +11900,6 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "NG" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -12625,8 +11912,6 @@
 	dir = 1
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -12638,12 +11923,8 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/atmos)
 "NK" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/atmos)
+/turf/simulated/mineral/alt,
+/area/space)
 "NM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -12687,8 +11968,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "NX" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -12705,8 +11984,6 @@
 "NY" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -12788,14 +12065,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -12898,8 +12171,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -12911,13 +12182,10 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "OK" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	icon_state = "0-8";
-	d2 = 8
+	icon_state = "0-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -12940,16 +12208,12 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
 "ON" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
@@ -13064,11 +12328,9 @@
 /area/offworld/confinementbeam/exterior)
 "Ph" = (
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/structure/grille,
@@ -13132,8 +12394,6 @@
 /area/ai_upload)
 "Pr" = (
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
@@ -13147,18 +12407,12 @@
 /area/offworld/confinementbeam/station/storage)
 "Pw" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/effect/catwalk_plated/dark,
@@ -13178,8 +12432,6 @@
 	dir = 9
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -13192,8 +12444,6 @@
 /area/offworld/confinementbeam/exterior)
 "PD" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/greengrid,
@@ -13255,8 +12505,6 @@
 "PR" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/greengrid,
@@ -13282,8 +12530,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -13328,13 +12574,9 @@
 /area/offworld/confinementbeam/station/port_observation)
 "Qa" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/machinery/power/sensor{
@@ -13367,8 +12609,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -13429,13 +12669,9 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -13470,8 +12706,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "Qx" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -13497,8 +12731,6 @@
 	},
 /obj/structure/railing/grey,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -13645,8 +12877,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -13661,8 +12891,6 @@
 /area/ai)
 "Rd" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -13742,8 +12970,6 @@
 "Rx" = (
 /obj/structure/railing/grey,
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
@@ -13872,8 +13098,6 @@
 	dir = 6
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -13902,13 +13126,9 @@
 /area/offworld/confinementbeam/station/trawler_airlock)
 "RV" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
@@ -13924,18 +13144,12 @@
 /area/offworld/confinementbeam/station/atmos)
 "RY" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 6;
 	icon_state = "1-6"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 10;
 	icon_state = "1-10"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
@@ -13999,13 +13213,9 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -14036,8 +13246,6 @@
 /area/offworld/confinementbeam/exterior)
 "Sr" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -14058,8 +13266,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
@@ -14112,8 +13318,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -14132,13 +13336,9 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/junction{
@@ -14146,8 +13346,6 @@
 	icon_state = "pipe-j2"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/hologram/holopad,
@@ -14207,18 +13405,12 @@
 /area/offworld/confinementbeam/station/atmos)
 "SS" = (
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
@@ -14244,8 +13436,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -14261,8 +13451,6 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -14306,18 +13494,12 @@
 /area/offworld/confinementbeam/exterior)
 "Ti" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/catwalk_plated/dark,
@@ -14345,8 +13527,6 @@
 /area/offworld/confinementbeam/station/storage)
 "Tm" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14376,12 +13556,6 @@
 /obj/structure/transit_tube,
 /turf/space,
 /area/offworld/confinementbeam/exterior)
-"Tr" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/atmos)
 "Tt" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -14411,8 +13585,6 @@
 /area/offworld/confinementbeam/station/storage)
 "TD" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -14464,8 +13636,6 @@
 /area/offworld/confinementbeam/exterior)
 "TS" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -14475,7 +13645,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/machinery/camera/network/engineering_outpost{
@@ -14496,13 +13665,9 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "TX" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/railing/grey{
@@ -14530,16 +13695,12 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "Ud" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -14613,8 +13774,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "Um" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -14673,8 +13832,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -14712,8 +13869,6 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 9;
 	icon_state = "4-9"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -14721,8 +13876,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "UC" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -14730,8 +13883,6 @@
 "UE" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -14741,13 +13892,9 @@
 /area/ai_upload)
 "UF" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/corner/orange,
@@ -14779,8 +13926,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -14805,13 +13950,9 @@
 /area/ai)
 "UO" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
@@ -14954,7 +14095,6 @@
 /area/offworld/confinementbeam/station/storage)
 "Vl" = (
 /obj/structure/cable/yellow{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/solar{
@@ -14995,8 +14135,6 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "Vt" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -15008,8 +14146,6 @@
 	locked = 1
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/map_helper/airlock/door/int_door,
@@ -15032,8 +14168,6 @@
 /area/ai_sat/docking_wing)
 "VF" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -15129,13 +14263,9 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "VU" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -15169,7 +14299,6 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -15202,8 +14331,6 @@
 /area/offworld/confinementbeam/station/storage)
 "Wc" = (
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -15235,8 +14362,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -15255,8 +14380,6 @@
 "Wm" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15292,8 +14415,6 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "Wt" = (
 /obj/structure/cable/green{
-	d1 = 5;
-	d2 = 8;
 	icon_state = "5-8"
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -15310,8 +14431,6 @@
 /area/space)
 "Ww" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_engineering{
@@ -15333,8 +14452,6 @@
 /area/ai_upload)
 "WB" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -15389,8 +14506,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
@@ -15410,8 +14525,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/white/bordercorner{
@@ -15427,16 +14540,12 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "WP" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -15451,26 +14560,18 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "WS" = (
 /obj/structure/cable/orange{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/greengrid,
 /area/ai)
 "WT" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
@@ -15484,8 +14585,6 @@
 /area/offworld/confinementbeam/station/storage)
 "WX" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -15554,8 +14653,6 @@
 "Xj" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 5;
-	d2 = 10;
 	icon_state = "5-10"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -15593,8 +14690,6 @@
 /area/ai_sat/docking_wing)
 "Xp" = (
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
@@ -15643,7 +14738,6 @@
 /area/ai_upload)
 "XA" = (
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
@@ -15651,8 +14745,6 @@
 /area/ai)
 "XD" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -15698,8 +14790,6 @@
 /area/offworld/confinementbeam/station/solar_control)
 "XI" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -15797,13 +14887,9 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/disposalpipe/segment{
@@ -15840,8 +14926,6 @@
 "Yc" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -15857,7 +14941,6 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -15884,8 +14967,6 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -15900,15 +14981,12 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/orange{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "Yj" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -15919,8 +14997,6 @@
 /area/ai_server_room)
 "Yl" = (
 /obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
@@ -15928,8 +15004,6 @@
 /area/offworld/confinementbeam/station/hallway)
 "Yq" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central6{
@@ -15983,8 +15057,6 @@
 "YA" = (
 /obj/machinery/power/tesla_coil/collector,
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/yellow{
@@ -16150,8 +15222,6 @@
 "Ze" = (
 /obj/machinery/ai_slipper,
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -16186,8 +15256,6 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "Zk" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central6{
@@ -16228,8 +15296,6 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "Zu" = (
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/light_switch/breaker{
@@ -16243,8 +15309,6 @@
 	dir = 5
 	},
 /obj/structure/cable/yellow{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/engineering_outpost{
@@ -16264,7 +15328,6 @@
 	pixel_y = 26
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/corner/white{
@@ -16376,8 +15439,6 @@
 "ZP" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -16394,8 +15455,6 @@
 	req_one_access = list(16,52,56)
 	},
 /obj/structure/cable/orange{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -18412,12 +17471,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -18575,11 +17634,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -18736,13 +17795,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -18898,13 +17957,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -19060,13 +18119,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -19222,12 +18281,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -19386,9 +18445,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -19975,10 +19034,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -20135,14 +19194,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -20294,16 +19353,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -20454,17 +19513,17 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -20613,20 +19672,20 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -20773,21 +19832,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -20916,6 +19975,8 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -20933,22 +19994,20 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21076,6 +20135,11 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21093,23 +20157,18 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21234,6 +20293,14 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21257,18 +20324,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21395,15 +20454,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21557,16 +20616,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21720,14 +20779,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -21882,15 +20941,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -22048,11 +21107,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -22210,12 +21269,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -22374,11 +21433,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -22540,7 +21599,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -24198,8 +23257,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -24337,6 +23396,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24354,17 +23416,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24498,6 +23557,10 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24511,23 +23574,19 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24659,6 +23718,11 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24670,27 +23734,22 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24821,6 +23880,10 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24832,30 +23895,26 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24983,6 +24042,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -24995,30 +24057,27 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -25160,29 +24219,29 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -25322,29 +24381,29 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -25484,29 +24543,29 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -25646,30 +24705,30 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -25808,30 +24867,30 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -25970,31 +25029,31 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -26132,32 +25191,32 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -26294,32 +25353,32 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -26456,31 +25515,31 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -26619,30 +25678,30 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -26782,28 +25841,28 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -26945,27 +26004,27 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -27108,25 +26167,25 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -27271,23 +26330,23 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -27434,19 +26493,19 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -27598,12 +26657,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -27761,9 +26820,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -31505,9 +30564,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -31666,12 +30725,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -31828,12 +30887,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -31991,11 +31050,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -32153,10 +31212,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -32315,10 +31374,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -32338,7 +31397,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -32477,9 +31536,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -32500,10 +31559,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -32664,9 +31723,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -32841,9 +31900,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -33005,11 +32064,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Po
+NK
+NK
+NK
+NK
+Es
 Po
 Po
 Po
@@ -33168,10 +32227,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Po
+NK
+NK
+NK
+Es
 Po
 Po
 Po
@@ -33331,11 +32390,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Po
-Po
-Po
+NK
+NK
+Es
+Es
+Es
 Po
 Po
 Po
@@ -33494,11 +32553,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Po
-Po
-Po
-Po
+NK
+Es
+Es
+Es
+Es
 Po
 Po
 Po
@@ -33658,9 +32717,9 @@ Pp
 Pp
 Pp
 Po
-Po
-Po
-Po
+Es
+Es
+Es
 Po
 Po
 Po
@@ -33820,9 +32879,9 @@ Pp
 Pp
 Pp
 Po
-Po
-Po
-Po
+Es
+Es
+Es
 Po
 Po
 Po
@@ -35263,9 +34322,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -35386,9 +34445,9 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
+Es
+Es
+NK
 Pp
 Pp
 Pp
@@ -35424,11 +34483,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -35548,9 +34607,9 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
+Es
+Es
+NK
 Pp
 Pp
 Pp
@@ -35587,10 +34646,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -35604,8 +34663,8 @@ Pp
 Po
 Po
 Po
-Po
-Po
+Es
+Es
 Po
 Po
 Po
@@ -35710,11 +34769,11 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -35749,10 +34808,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -35766,8 +34825,8 @@ Pp
 Po
 Po
 Po
-Po
-Po
+Es
+Es
 Po
 Po
 Po
@@ -35872,11 +34931,11 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -35911,10 +34970,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -36034,11 +35093,11 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -36074,8 +35133,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -36197,9 +35256,9 @@ Po
 Po
 Po
 Po
-Po
-Pp
-Pp
+Es
+NK
+NK
 Pp
 Pp
 Pp
@@ -36237,7 +35296,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -36360,7 +35419,7 @@ Po
 Po
 Po
 Po
-Pp
+NK
 Pp
 Pp
 Pp
@@ -37374,7 +36433,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -37535,7 +36594,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -38944,8 +38003,8 @@ Po
 Po
 Po
 Po
-Po
-Po
+Es
+Es
 Po
 Po
 Po
@@ -39105,10 +38164,10 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
+Es
+Es
+Es
+Es
 Po
 Po
 Po
@@ -39267,10 +38326,10 @@ Po
 Po
 Po
 Po
+Es
 Po
-Po
-Po
-Po
+Es
+Es
 Po
 Po
 Po
@@ -39460,6 +38519,7 @@ EI
 EI
 Pp
 Pp
+NK
 Pp
 Pp
 Pp
@@ -39483,8 +38543,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -39622,6 +38681,7 @@ EI
 EI
 Pp
 Pp
+NK
 Pp
 Pp
 Pp
@@ -39642,14 +38702,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -39784,6 +38843,8 @@ EI
 EI
 Pp
 Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -39803,15 +38864,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -39946,6 +39005,7 @@ EI
 EI
 Pp
 Pp
+NK
 Pp
 Pp
 Pp
@@ -39966,15 +39026,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -40129,14 +39188,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -40291,15 +39350,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -40454,14 +39513,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -40610,20 +39669,20 @@ Pp
 Pp
 Pp
 Pp
+NK
 Pp
 Pp
 Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -40772,6 +39831,7 @@ Pp
 Pp
 Pp
 Pp
+NK
 Pp
 Pp
 Pp
@@ -40779,13 +39839,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -40933,21 +39992,21 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41095,6 +40154,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41102,14 +40164,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41257,6 +40316,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41264,14 +40326,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41387,8 +40446,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -41419,6 +40478,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41426,13 +40488,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41548,9 +40607,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41581,6 +40640,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41588,12 +40650,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41709,10 +40768,10 @@ Po
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41743,19 +40802,19 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41867,14 +40926,14 @@ Po
 Po
 Po
 Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -41905,10 +40964,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42028,14 +41087,14 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42190,14 +41249,14 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42235,8 +41294,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -42351,15 +41410,15 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42397,9 +41456,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42514,13 +41573,13 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42559,9 +41618,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42676,12 +41735,12 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -42722,7 +41781,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -42838,12 +41897,12 @@ Po
 Po
 Po
 Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -43003,8 +42062,8 @@ Po
 Po
 Po
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -45913,8 +44972,8 @@ Po
 Po
 Po
 Po
-Po
-Po
+Es
+Es
 Po
 Po
 Po
@@ -46075,9 +45134,9 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
+Es
+Es
+Es
 Po
 Po
 Pp
@@ -46238,7 +45297,7 @@ Po
 Po
 Po
 Po
-Po
+Es
 Po
 Po
 Po
@@ -46454,9 +45513,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -46615,13 +45674,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Po
 Po
 Po
@@ -46777,14 +45836,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Po
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+Es
 Po
 Po
 Po
@@ -46940,13 +45999,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Po
+NK
+NK
+NK
+NK
+NK
+NK
+Es
 Po
 Po
 Po
@@ -47104,12 +46163,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Po
-Po
+NK
+NK
+NK
+NK
+Es
+Es
 Po
 Po
 Po
@@ -47266,12 +46325,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Po
-Po
+NK
+NK
+NK
+NK
+Es
+Es
 Po
 Po
 Po
@@ -47429,11 +46488,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Po
-Po
+NK
+NK
+NK
+Es
+Es
 Po
 Po
 Po
@@ -47591,11 +46650,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Po
-Po
+NK
+NK
+NK
+Es
+Es
 Po
 Po
 Po
@@ -47754,8 +46813,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Po
 Po
 Po
@@ -48158,7 +47217,7 @@ Po
 Po
 Po
 Po
-MI
+SG
 UO
 UO
 UO
@@ -48955,7 +48014,7 @@ ud
 ud
 ud
 ud
-sk
+tj
 jC
 se
 rY
@@ -48964,8 +48023,8 @@ fK
 en
 rW
 kF
-MW
-MW
+ud
+ud
 BK
 rW
 Po
@@ -49321,12 +48380,12 @@ Po
 Po
 Po
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -49482,13 +48541,13 @@ Po
 Po
 Po
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -49643,15 +48702,15 @@ Po
 Po
 Po
 Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -49783,7 +48842,7 @@ Ah
 Ah
 Ah
 Ah
-Fe
+Ib
 rW
 Po
 Po
@@ -49805,15 +48864,15 @@ Po
 Po
 Po
 Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -49968,14 +49027,14 @@ Po
 Po
 Po
 Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -50132,12 +49191,12 @@ Po
 Po
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -50295,11 +49354,11 @@ Po
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -50459,9 +49518,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -50571,7 +49630,7 @@ er
 iM
 rF
 ZC
-el
+lk
 Iv
 rc
 Po
@@ -50622,8 +49681,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -50733,7 +49792,7 @@ Lw
 Lw
 Iv
 Iv
-Iv
+lk
 Iv
 Iv
 Ad
@@ -50895,7 +49954,7 @@ lI
 Oj
 Fk
 Jw
-Es
+lk
 qI
 oI
 Xv
@@ -51057,7 +50116,7 @@ iC
 Ik
 uP
 VS
-VS
+lk
 kp
 Zo
 Xv
@@ -51219,7 +50278,7 @@ kA
 ES
 UV
 VS
-tf
+lk
 WC
 Nj
 Xv
@@ -51381,7 +50440,7 @@ vV
 MH
 uP
 jc
-fY
+lk
 Iv
 Iv
 Vd
@@ -51467,12 +50526,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -51626,16 +50685,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -51705,7 +50764,7 @@ kv
 kv
 kv
 kv
-kv
+Ia
 kv
 Po
 Xv
@@ -51787,18 +50846,18 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -51867,7 +50926,7 @@ hU
 YX
 pN
 Bm
-Iz
+Ia
 kv
 Po
 Xv
@@ -51947,21 +51006,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -52029,7 +51088,7 @@ Kn
 sC
 Xr
 Vc
-hN
+Ia
 kv
 kv
 Xv
@@ -52108,23 +51167,23 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -52191,7 +51250,7 @@ cU
 sS
 sS
 ca
-Tr
+Ia
 Jg
 uW
 Xv
@@ -52270,22 +51329,22 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -52353,7 +51412,7 @@ RX
 Iz
 ca
 ca
-ca
+Ia
 Qo
 SR
 Xv
@@ -52432,23 +51491,23 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -52597,20 +51656,20 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+sr
+sr
+sr
+sr
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -52677,7 +51736,7 @@ SD
 ca
 xi
 KB
-NK
+Ia
 kv
 kv
 Vd
@@ -52759,21 +51818,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+sr
+sr
+sr
+sr
+hN
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -52839,7 +51898,7 @@ Cv
 ca
 pL
 jm
-sr
+Ia
 kv
 Po
 Xv
@@ -52922,20 +51981,20 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+sr
+sr
+sr
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -53001,7 +52060,7 @@ kv
 Qg
 kv
 kv
-kv
+Ia
 kv
 Po
 Xv
@@ -53086,18 +52145,18 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+sr
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -53163,7 +52222,7 @@ AT
 rI
 RC
 Xi
-NM
+tf
 xa
 xa
 OA
@@ -53249,16 +52308,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -53325,7 +52384,7 @@ MM
 MM
 MM
 LW
-GB
+tf
 Po
 Po
 Po
@@ -53411,15 +52470,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -53487,7 +52546,7 @@ Nr
 EB
 sR
 Xi
-FK
+tf
 xa
 xa
 xa
@@ -53574,14 +52633,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -53649,7 +52708,7 @@ vH
 ZJ
 wD
 Af
-Af
+tf
 Po
 Po
 Po
@@ -53737,12 +52796,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -53811,7 +52870,7 @@ VO
 GT
 IB
 ya
-rc
+Po
 Po
 Po
 Po
@@ -53973,7 +53032,7 @@ sJ
 BR
 BV
 FU
-rc
+Po
 rc
 Po
 Po
@@ -54482,7 +53541,7 @@ Po
 Po
 Po
 Po
-Po
+Es
 Po
 Po
 Po
@@ -54645,9 +53704,9 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
+Es
+Es
+Es
 Po
 Po
 Po
@@ -54807,10 +53866,10 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
+Es
+Es
+Es
+Es
 Po
 Po
 Po
@@ -54970,9 +54029,9 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
+Es
+Es
+Es
 Po
 Po
 Po
@@ -55132,9 +54191,9 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
+Es
+Es
+Es
 Po
 Po
 Po
@@ -55295,8 +54354,8 @@ Po
 Po
 Po
 Po
-Po
-Po
+Es
+Es
 Po
 Po
 Po
@@ -55431,7 +54490,7 @@ Po
 Po
 yl
 yl
-yl
+Po
 yl
 Po
 Po
@@ -56605,11 +55664,11 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
+Es
+Es
+Es
+Es
+Es
 Pp
 Pp
 Pp
@@ -56764,17 +55823,17 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -56924,20 +55983,20 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -57085,21 +56144,21 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -57246,23 +56305,23 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -57407,24 +56466,24 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -57568,26 +56627,26 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -57729,27 +56788,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -57891,27 +56950,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -58053,27 +57112,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -58215,27 +57274,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -58377,27 +57436,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -58539,27 +57598,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -58701,27 +57760,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -58864,27 +57923,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -59026,27 +58085,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -59188,27 +58247,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+Es
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -59350,27 +58409,27 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -59513,26 +58572,26 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -59675,26 +58734,26 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -59837,25 +58896,25 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -59999,24 +59058,24 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -60163,21 +59222,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -60325,21 +59384,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -60488,18 +59547,18 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -60651,17 +59710,17 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -60814,14 +59873,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -61375,10 +60434,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -61536,11 +60595,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -61698,11 +60757,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -61861,11 +60920,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62019,16 +61078,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62180,6 +61239,17 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62240,20 +61310,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62344,6 +61403,16 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62402,23 +61471,13 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -62507,6 +61566,16 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62563,24 +61632,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62669,6 +61728,18 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62723,28 +61794,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62832,6 +61891,18 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62885,28 +61956,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -62994,6 +62053,19 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63046,29 +62118,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+el
+fY
+el
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63157,6 +62216,18 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63210,27 +62281,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+sr
+el
+el
+fY
+sr
+NK
+NK
 Pp
 Pp
 Pp
@@ -63319,6 +62378,17 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63373,26 +62443,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+sr
+el
+el
+el
+sr
+NK
+NK
 Pp
 Pp
 Pp
@@ -63483,6 +62542,16 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63536,25 +62605,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63646,6 +62705,15 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63700,22 +62768,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63812,6 +62871,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63869,14 +62931,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -63974,6 +63033,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -64031,15 +63093,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -64197,10 +63256,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -67019,12 +66078,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -67181,14 +66240,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -67346,13 +66405,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -67511,11 +66570,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -67674,11 +66733,11 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -67837,10 +66896,10 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -68000,9 +67059,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -68163,8 +67222,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -68326,7 +67385,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -68488,6 +67547,7 @@ Pp
 Pp
 Pp
 Pp
+NK
 Pp
 Pp
 Pp
@@ -68564,14 +67624,13 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -68727,15 +67786,15 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -68887,19 +67946,19 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -69049,21 +68108,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -69210,26 +68269,26 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -69372,27 +68431,27 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -69534,28 +68593,28 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -69696,29 +68755,29 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -69857,31 +68916,31 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -70019,32 +69078,32 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -70181,32 +69240,32 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -70342,33 +69401,33 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -70504,34 +69563,34 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -70665,35 +69724,35 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -70826,36 +69885,36 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -70989,34 +70048,34 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71153,32 +70212,32 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71264,6 +70323,9 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71313,34 +70375,31 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71424,6 +70483,13 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71472,36 +70538,29 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71585,6 +70644,15 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71633,37 +70701,28 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71745,6 +70804,17 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71794,37 +70864,26 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71907,6 +70966,18 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -71955,38 +71026,26 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72069,6 +71128,19 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72118,36 +71190,23 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72231,6 +71290,19 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72281,35 +71353,22 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72393,6 +71452,19 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72444,33 +71516,20 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72555,6 +71614,20 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72605,33 +71678,19 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72717,6 +71776,19 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72770,29 +71842,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72879,6 +71938,20 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -72932,28 +72005,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -73042,18 +72101,18 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -73207,16 +72266,16 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -73369,14 +72428,14 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -73531,12 +72590,12 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -73694,9 +72753,9 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -74217,7 +73276,7 @@ Pp
 Pp
 Pp
 Pp
-Pp
+NK
 Pp
 Pp
 Pp
@@ -74374,13 +73433,13 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+sr
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
@@ -74535,15 +73594,15 @@ Pp
 Pp
 Pp
 Pp
+NK
+NK
+NK
+sr
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -74696,19 +73755,19 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -74857,21 +73916,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -75018,22 +74077,22 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -75181,21 +74240,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -75343,21 +74402,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -75505,21 +74564,21 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -75669,17 +74728,17 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+NK
+NK
+NK
+sr
+sr
+sr
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -75834,14 +74893,14 @@ Pp
 Pp
 Pp
 Pp
+sr
 Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
-Pp
+sr
+NK
+NK
+NK
+NK
+NK
 Pp
 Pp
 Pp
@@ -76001,8 +75060,8 @@ Pp
 Pp
 Pp
 Pp
-Pp
-Pp
+NK
+NK
 Pp
 Pp
 Pp
