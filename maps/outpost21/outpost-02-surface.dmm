@@ -62671,9 +62671,7 @@
 /obj/item/stack/medical/splint,
 /obj/item/stack/medical/splint,
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "rPJ" = (
 /obj/machinery/appliance/cooker/fryer,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,

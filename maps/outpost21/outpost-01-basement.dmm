@@ -46117,9 +46117,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "cbX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
