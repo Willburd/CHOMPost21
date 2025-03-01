@@ -48983,13 +48983,9 @@
 /area/mine/explored/muriki/cave/civ/south_access)
 "enS" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/floor,
@@ -60536,8 +60532,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/structure/extinguisher_cabinet/old{
@@ -64396,8 +64390,6 @@
 /area/engineering/coreproctunnel)
 "omG" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /obj/machinery/light{
@@ -69609,8 +69601,6 @@
 /area/mine/unexplored/muriki/cave/sec)
 "rBo" = (
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/floor,
@@ -74879,7 +74869,6 @@
 /area/maintenance/spine/civ)
 "vaN" = (
 /obj/structure/cable{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/machinery/power/port_gen/pacman/mrs,
@@ -79472,8 +79461,6 @@
 	dir = 4
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
