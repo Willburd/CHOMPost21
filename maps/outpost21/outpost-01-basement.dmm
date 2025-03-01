@@ -977,9 +977,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
-"aco" = (
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "acq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1594,10 +1591,6 @@
 "adC" = (
 /turf/simulated/mineral/alt/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
-"adD" = (
-/obj/random/cutout,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "adE" = (
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
@@ -2057,9 +2050,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
 "aeA" = (
@@ -2068,9 +2058,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
-"aeB" = (
-/turf/simulated/wall,
-/area/rnd/xenobiology/lost)
 "aeC" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -2084,9 +2071,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
-"aeD" = (
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "aeE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 1
@@ -7229,9 +7213,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aok" = (
-/mob/living/simple_mob/animal/space/carp/large/huge,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/cave/sec)
 "aom" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -9628,18 +9614,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
-"asC" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
-"asD" = (
-/obj/structure/closet/crate/mimic/cointoss,
-/obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "asE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -13731,10 +13705,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
-"aAa" = (
-/obj/structure/foamedmetal,
-/turf/simulated/mineral/alt/muriki,
-/area/rnd/xenobiology/lost)
 "aAb" = (
 /obj/machinery/vending/robotics{
 	dir = 1
@@ -17800,9 +17770,9 @@
 	},
 /area/muriki/processor/hall)
 "aIg" = (
-/obj/structure/foamedmetal,
+/obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/area/maintenance/spine/civ)
 "aIh" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -18332,10 +18302,6 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/rnd/research/exp_prep)
-"aJg" = (
-/obj/structure/foamedmetal,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "aJh" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -33226,6 +33192,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/mob/living/simple_mob/animal/passive/snake/python,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
 "blK" = (
@@ -45259,8 +45226,8 @@
 /area/maintenance/incinerator)
 "bTt" = (
 /obj/item/assembly/mousetrap/armed,
-/turf/simulated/mineral/floor/muriki{
-	ignore_mapgen = 1
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
 	},
 /area/mine/explored/muriki/cave/civ/south_access)
 "bTz" = (
@@ -45384,12 +45351,6 @@
 /obj/item/trash/chipbasket,
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/river/south)
-"bXI" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "bYe" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -45674,17 +45635,6 @@
 /obj/item/handcuffs/legcuffs/fuzzy,
 /turf/simulated/floor/wood/alt/parquet/broken,
 /area/maintenance/civ/east)
-"chp" = (
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic,
-/obj/structure/grille,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "chq" = (
 /obj/machinery/door/airlock/glass_research{
 	name = "Particle and Nanite Lab"
@@ -47698,12 +47648,6 @@
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/water/acidic/indoor/muriki,
 /area/mine/unexplored/muriki/cave/sci)
-"dCo" = (
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "dCx" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced/full,
@@ -48151,10 +48095,6 @@
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/sec)
-"dNZ" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
-/area/rnd/xenobiology/lost)
 "dOb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -48501,19 +48441,18 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
 "dYm" = (
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/window/basic{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/window/basic{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/structure/window/basic,
-/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/snake/python,
 /turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/area/maintenance/sec)
 "dYA" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -49991,10 +49930,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/scilower)
-"eUZ" = (
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "eVv" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -52801,10 +52736,6 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/eng)
-"gKY" = (
-/mob/living/simple_mob/animal/space/carp/large,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "gLb" = (
 /obj/machinery/medical_kiosk,
 /obj/effect/floor_decal/borderfloor{
@@ -53675,10 +53606,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/wastedisposalnear)
-"hlX" = (
-/obj/structure/disposaloutlet,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "hmG" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/muriki{
@@ -54344,9 +54271,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
-"hNC" = (
-/turf/simulated/wall/r_wall,
-/area/rnd/xenobiology/lost)
 "hNI" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -54762,10 +54686,6 @@
 /obj/item/material/ashtray/glass,
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/breakroom)
-"hZU" = (
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "iav" = (
 /obj/effect/landmark/hostile_xenobio,
 /turf/simulated/floor/outdoors/mud/muriki{
@@ -54885,10 +54805,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
-"iex" = (
-/obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "ieU" = (
 /obj/structure/micro_tunnel{
 	dir = 1;
@@ -55340,19 +55256,11 @@
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/west)
 "iuk" = (
-/obj/structure/window/basic{
-	dir = 4
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
 	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/grille,
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/area/mine/unexplored/muriki/cave/sec)
 "iuo" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/structure/disposalpipe/segment,
@@ -55479,13 +55387,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
-"iyX" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
-	},
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "iza" = (
 /obj/effect/floor_decal/corner_kafel/blue/diagonal,
 /obj/structure/table/marble,
@@ -56115,8 +56016,8 @@
 /area/maintenance/spine/eng)
 "iYT" = (
 /obj/random/cutout,
-/turf/simulated/mineral/floor/muriki{
-	ignore_mapgen = 1
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
 	},
 /area/mine/explored/muriki/cave/civ/south_access)
 "iZa" = (
@@ -58599,10 +58500,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
-"kAn" = (
-/obj/effect/landmark/hostile_xenobio,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "kAv" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "autosleever";
@@ -58642,10 +58539,6 @@
 /obj/random/contraband,
 /turf/simulated/floor/outdoors/grass/forest/muriki,
 /area/mine/unexplored/muriki/cave/sec)
-"kCx" = (
-/obj/structure/barricade,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "kDE" = (
 /turf/simulated/mineral/floor/muriki{
 	ignore_mapgen = 1
@@ -58686,10 +58579,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
-"kEo" = (
-/obj/machinery/door/window,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "kED" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
@@ -59585,9 +59474,13 @@
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/river/east)
 "llt" = (
-/obj/effect/landmark/hostile_xenobio,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/mob/living/simple_mob/animal/passive/snake/python,
 /turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/area/maintenance/med)
 "llu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -61477,10 +61370,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"mtQ" = (
-/obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "muv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -61558,26 +61447,12 @@
 "mww" = (
 /turf/simulated/floor/tiled,
 /area/maintenance/cargo)
-"mwD" = (
-/mob/living/simple_mob/animal/space/carp/puffer,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "mwV" = (
 /obj/structure/prop/machine/random_radio,
 /obj/structure/table/reinforced,
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
-"mxQ" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 30
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "mxY" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced/full,
@@ -62842,9 +62717,6 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
-"nrl" = (
-/turf/simulated/mineral/alt/muriki,
-/area/rnd/xenobiology/lost)
 "nrt" = (
 /obj/structure/window/reinforced,
 /obj/machinery/transhuman/autoresleever,
@@ -62996,8 +62868,8 @@
 /area/mine/unexplored/muriki/cave/west)
 "nvo" = (
 /obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/mineral/floor/muriki{
-	ignore_mapgen = 1
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
 	},
 /area/mine/explored/muriki/cave/civ/south_access)
 "nvw" = (
@@ -63661,10 +63533,6 @@
 /obj/item/trash/waffles,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/atmos_control)
-"nQd" = (
-/obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "nQs" = (
 /obj/effect/landmark{
 	name = "blobstart"
@@ -64485,10 +64353,6 @@
 /obj/item/trash/meatration,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/atmos_control)
-"ora" = (
-/obj/effect/landmark/dangerous_situation,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "orn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -65251,10 +65115,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
-"oUF" = (
-/obj/structure/barricade,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "oUN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -66205,11 +66065,6 @@
 /obj/item/storage/box/matches,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"pzT" = (
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "pAq" = (
 /turf/simulated/floor/outdoors/mud/muriki{
 	outdoors = 0
@@ -67816,10 +67671,6 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
-"qEo" = (
-/obj/item/material/shard/shrapnel,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "qEz" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -68090,11 +67941,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "qMi" = (
-/obj/structure/disposaloutlet{
-	dir = 1
-	},
+/mob/living/simple_mob/animal/passive/snake/python,
 /turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/area/maintenance/spine/civ)
 "qMl" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -68977,10 +68826,6 @@
 /obj/structure/foamedmetal,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
-"riq" = (
-/obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "riB" = (
 /obj/random/maintenance/engineering,
 /obj/structure/disposalpipe/segment{
@@ -69630,15 +69475,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/refinery/tugstorage)
 "rDa" = (
-/obj/structure/window/basic{
-	dir = 4
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
 	},
-/obj/structure/window/basic,
-/obj/structure/grille/broken,
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/area/mine/unexplored/muriki/cave/sec)
 "rDe" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -70162,18 +70003,13 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
 "rVC" = (
-/obj/structure/window/basic{
-	dir = 4
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
+/mob/living/simple_mob/animal/passive/snake/python,
 /turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
+/area/maintenance/wastedisposalnear)
 "rVG" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -74499,10 +74335,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
-"uMm" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
 "uMp" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water/acidic/deep/muriki,
@@ -74608,9 +74440,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "uPE" = (
-/obj/structure/foamedmetal,
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
-/area/rnd/xenobiology/lost)
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/xenobiology/xenobioh)
 "uPV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -75386,10 +75220,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
-"vrK" = (
-/obj/effect/landmark/dangerous_situation,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "vsi" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -75660,20 +75490,6 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/cave/sci)
-"vzX" = (
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "vAF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -75743,9 +75559,11 @@
 /turf/simulated/floor/reinforced/oxygen,
 /area/engineering/atmos)
 "vBZ" = (
-/obj/machinery/disposal,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/rnd/xenobiology/lost)
+/obj/effect/landmark/vermin,
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/cave/sec)
 "vCr" = (
 /obj/structure/bed/chair/bay/chair{
 	dir = 1
@@ -77271,8 +77089,8 @@
 /area/maintenance/oldbridge)
 "wDP" = (
 /obj/effect/mine/claymore,
-/turf/simulated/mineral/floor/muriki{
-	ignore_mapgen = 1
+/turf/simulated/floor/outdoors/mud/muriki{
+	outdoors = 0
 	},
 /area/mine/unexplored/muriki/cave/sec)
 "wDT" = (
@@ -77659,19 +77477,6 @@
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"wRZ" = (
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/window/basic,
-/obj/structure/grille,
-/obj/item/material/shard/shrapnel,
-/obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "wSq" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -77764,12 +77569,6 @@
 /obj/item/flame/lighter/zippo/gold,
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
-"wUy" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "wUz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -78436,10 +78235,6 @@
 	can_open = 1
 	},
 /area/muriki/crew/arcade/lasertag)
-"xuy" = (
-/mob/living/simple_mob/animal/space/carp,
-/turf/simulated/floor/plating/muriki,
-/area/rnd/xenobiology/lost)
 "xuz" = (
 /obj/item/trash/chipbasket,
 /turf/simulated/floor/plating/muriki,
@@ -89207,7 +89002,7 @@ kMh
 seb
 kMh
 byK
-bjm
+rVC
 mSn
 qEG
 byK
@@ -109770,8 +109565,8 @@ aUF
 aUF
 aUF
 aUF
-ykL
-ykL
+rhP
+rhP
 rPd
 rPd
 aUF
@@ -109933,10 +109728,10 @@ lZy
 evI
 lKT
 lZy
-ykL
+rhP
 lZy
 lZy
-ykL
+rhP
 rjJ
 aUF
 qKL
@@ -110095,9 +109890,9 @@ aUF
 aUF
 aUF
 aUF
-nlJ
-ykL
-dir
+rDa
+rhP
+aok
 aUF
 aUF
 qKL
@@ -110250,7 +110045,7 @@ bhW
 bhW
 qKL
 rPd
-ykL
+rhP
 rPd
 rPd
 rPd
@@ -110259,8 +110054,8 @@ rPd
 rPd
 rPd
 rPd
-ykL
-ykL
+rhP
+rhP
 aUF
 yjM
 aUF
@@ -110420,8 +110215,8 @@ rPd
 rPd
 rPd
 rPd
-ykL
-ykL
+rhP
+rhP
 ykL
 aUF
 hwH
@@ -110745,7 +110540,7 @@ rPd
 rPd
 qKL
 qKL
-ykL
+rhP
 nlJ
 ykL
 qKL
@@ -110907,7 +110702,7 @@ qKL
 qKL
 qKL
 qKL
-ykL
+rhP
 ykL
 ykL
 qKL
@@ -111069,8 +110864,8 @@ qKL
 qKL
 qKL
 qKL
-ykL
-iOp
+rhP
+vBZ
 ykL
 nsC
 aUF
@@ -111402,8 +111197,8 @@ ykL
 qKL
 ykL
 ykL
-ykL
-ykL
+rhP
+rhP
 qKL
 qKL
 qKL
@@ -111565,8 +111360,8 @@ qKL
 ykL
 ykL
 iOp
-ykL
-ykL
+rhP
+rhP
 qKL
 qKL
 qKL
@@ -111727,8 +111522,8 @@ ykL
 ykL
 qKL
 qKL
-ykL
-ykL
+rhP
+rhP
 qKL
 qKL
 ykL
@@ -111890,8 +111685,8 @@ qKL
 qKL
 qKL
 wDP
-ykL
-ykL
+rhP
+rhP
 ykL
 ykL
 nlJ
@@ -112052,10 +111847,10 @@ qKL
 qKL
 qKL
 qKL
+dav
+iuk
 ykL
-eAr
-ykL
-ykL
+dav
 qKL
 ykL
 ykL
@@ -112214,8 +112009,8 @@ qKL
 qKL
 qKL
 qKL
-ykL
-ykL
+dav
+dav
 qKL
 qKL
 qKL
@@ -118340,7 +118135,7 @@ olM
 olM
 bir
 bhW
-bjr
+dYm
 bhW
 grq
 bki
@@ -125088,7 +124883,7 @@ pmN
 pmN
 aXx
 bDj
-qRl
+llt
 aPF
 aXx
 bDj
@@ -125801,13 +125596,13 @@ fJt
 aKP
 aKP
 ocR
-ocR
-ocR
-ocR
-ocR
-ocR
-ocR
-ocR
+bpo
+bpo
+bpo
+bpo
+bpo
+bpo
+bpo
 ocR
 ocR
 ocR
@@ -125961,14 +125756,14 @@ aKP
 aKP
 mDr
 aKP
-axL
+aIg
 bpo
 bpo
-bpo
-bpo
-bpo
-bpo
-bpo
+bql
+bql
+bql
+bql
+bql
 bpo
 bpo
 ocR
@@ -126612,11 +126407,11 @@ aOI
 tAi
 bpo
 bpo
-bpo
-bpo
-bpo
-bpo
-bpo
+bql
+bql
+bql
+bql
+bql
 bpo
 bpo
 vka
@@ -126773,13 +126568,13 @@ mDr
 aKP
 yjk
 aKP
-axL
-axL
-axL
-uCh
-axL
-vka
-vka
+bpo
+bpo
+bpo
+bpo
+bpo
+bpo
+bpo
 bAS
 uIN
 bAS
@@ -126937,7 +126732,7 @@ gGW
 xST
 xST
 rYR
-xST
+uCh
 xST
 aKP
 fhY
@@ -127895,7 +127690,7 @@ aYs
 aYs
 aXU
 cEF
-xST
+qMi
 dac
 lxL
 lxL
@@ -133102,7 +132897,7 @@ uzI
 enG
 uzI
 uzI
-uzI
+qsB
 mgU
 mgU
 mgU
@@ -133264,7 +133059,7 @@ bvb
 bvZ
 uzI
 uzI
-uzI
+qsB
 mgU
 mgU
 mgU
@@ -133426,7 +133221,7 @@ fVV
 cVi
 uzI
 uzI
-uzI
+qsB
 iYT
 mgU
 mgU
@@ -134074,7 +133869,7 @@ bvf
 bwd
 bsG
 mgU
-uzI
+qsB
 uzI
 uzI
 mgU
@@ -134235,7 +134030,7 @@ bsG
 bvg
 bwe
 bsG
-uzI
+qsB
 tGG
 tGG
 uzI
@@ -134397,7 +134192,7 @@ bsG
 bvh
 bwf
 bsG
-uzI
+qsB
 tGG
 uzI
 uzI
@@ -138676,8 +138471,8 @@ acm
 acR
 adq
 abi
-aeA
-afs
+uPE
+abH
 aak
 jfw
 iLO
@@ -138837,10 +138632,10 @@ abM
 acn
 acS
 adr
-hNC
-aeB
-aeB
-dNZ
+abi
+aeA
+afs
+aak
 iLO
 iLO
 aaf
@@ -138999,10 +138794,10 @@ eBg
 eBg
 eBg
 eBg
-dNZ
-asC
-uMm
-dNZ
+eBg
+aak
+aak
+aak
 iLO
 iLO
 iLO
@@ -139160,19 +138955,19 @@ pmN
 pmN
 pmN
 pmN
-jfw
-hNC
-oUF
-oUF
-hNC
-iLO
-iLO
-iLO
-iLO
-iLO
-iLO
-iLO
-iLO
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 iLO
 iLO
 iLO
@@ -139315,26 +139110,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-iyX
-iyX
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 iLO
 iLO
 iLO
@@ -139477,26 +139272,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-xuy
-mtQ
-aco
-hNC
-hlX
-gKY
-aco
-hNC
-aeD
-hZU
-hNC
-llt
-aco
-qMi
-hNC
-hlX
-adD
-aco
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 iLO
 iLO
 iLO
@@ -139639,26 +139434,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-aco
-gKY
-aco
-hNC
-nQd
-aco
-gKY
-hNC
-aeD
-aeD
-hNC
-aco
-llt
-aco
-hNC
-llt
-aco
-aco
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 iLO
 iLO
 iLO
@@ -139801,26 +139596,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-mwD
-aco
-aco
-hNC
-aco
-aok
-aco
-hNC
-aeD
-adD
-hNC
-aco
-aco
-aco
-hNC
-aco
-iex
-llt
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 iLO
 iLO
 iLO
@@ -139963,26 +139758,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-iuk
-kEo
-vzX
-hNC
-wRZ
-kEo
-chp
-hNC
-aeD
-aeD
-hNC
-vzX
-kEo
-rVC
-hNC
-dYm
-pzT
-rDa
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 iLO
 iLO
 iLO
@@ -140125,26 +139920,26 @@ pmN
 pmN
 pmN
 pmN
-aIg
-aJg
-aJg
-aeD
-aeD
-vBZ
-aeD
-aeD
-hNC
-aeD
-aeD
-hNC
-aeD
-aeD
-vBZ
-aeD
-vBZ
-qEo
-aeD
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 iLO
 iLO
 iLO
@@ -140287,26 +140082,26 @@ pmN
 pmN
 pmN
 pmN
-aIg
-aJg
-aJg
-aeD
-aeD
-aeD
-aeD
-aeD
-oUF
-riq
-aco
-oUF
-aeD
-aeD
-aeD
-aeD
-aeD
-aeD
-aeD
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 pmN
 pmN
 pmN
@@ -140449,26 +140244,26 @@ pmN
 pmN
 pmN
 pmN
-aAa
-aJg
-aJg
-vrK
-aeD
-aeD
-aeD
-aeD
-kCx
-aeD
-wUy
-aeD
-aeD
-aeD
-aeD
-aeD
-aco
-aeD
-aco
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 pmN
 pmN
 pmN
@@ -140611,26 +140406,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-aJg
-aeD
-aeD
-aeD
-aeD
-eUZ
-aeD
-aeD
-ora
-bXI
-iyX
-aeD
-llt
-aeD
-aeD
-aeD
-kAn
-aJg
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 pmN
 pmN
 pmN
@@ -140773,26 +140568,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-aeD
-aco
-aeD
-aeD
-aeD
-aeD
-aeD
-hNC
-mxQ
-dCo
-hNC
-aeD
-aeD
-aeD
-aeD
-aeD
-aIg
-aJg
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 pmN
 pmN
 pmN
@@ -140935,26 +140730,26 @@ pmN
 pmN
 pmN
 pmN
-hNC
-hNC
-nrl
-aeD
-vBZ
-aeD
-aeD
-aeD
-hNC
-vBZ
-asD
-hNC
-aeD
-aeD
-aco
-aJg
-aJg
-aJg
-aJg
-hNC
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 pmN
 pmN
 pmN
@@ -141097,25 +140892,25 @@ pmN
 pmN
 pmN
 pmN
-nrl
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-hNC
-uPE
-uPE
-uPE
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
+pmN
 pmN
 pmN
 iLO

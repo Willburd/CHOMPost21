@@ -13634,6 +13634,10 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/virology)
+"cjj" = (
+/mob/living/simple_mob/vore/slug,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/yard)
 "cjn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -18416,6 +18420,10 @@
 	},
 /turf/simulated/floor/outdoors/mud/muriki,
 /area/muriki/grounds/engi)
+"dMI" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/sci)
 "dMP" = (
 /obj/structure/sign/warning/emergence{
 	desc = "A truly terrfying sign warning of some severe emergency.";
@@ -24040,6 +24048,10 @@
 "fHN" = (
 /turf/simulated/floor/outdoors/mud/muriki,
 /area/muriki/grounds/civ)
+"fIb" = (
+/mob/living/simple_mob/vore/scel/purple,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/mine/unexplored/muriki/valleyeast)
 "fIe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -24599,6 +24611,10 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
+"fRg" = (
+/mob/living/simple_mob/vore/scel/blue,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/mine/unexplored/muriki/valleywest)
 "fRi" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
@@ -25444,6 +25460,10 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/engineering_hallway)
+"ghh" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/shutt)
 "ghE" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -28074,6 +28094,10 @@
 	outdoors = 0
 	},
 /area/muriki/grounds/civ)
+"hbJ" = (
+/mob/living/simple_mob/vore/scel/green,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/med)
 "hcb" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -29936,6 +29960,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
+"hDf" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/civ)
 "hDo" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled,
@@ -30747,6 +30775,11 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/civ)
+"hOf" = (
+/obj/structure/prop/rock/small/alt,
+/obj/random/landmine,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/sec)
 "hOr" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -30913,6 +30946,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
+"hQr" = (
+/mob/living/simple_mob/vore/slug,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/waste)
 "hQu" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -31786,6 +31823,10 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/crew_quarters/bar)
+"icO" = (
+/mob/living/simple_mob/vore/slug,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/terraform)
 "icR" = (
 /obj/machinery/door/airlock/medical{
 	autoclose = 0;
@@ -34650,6 +34691,10 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
+"iWO" = (
+/mob/living/simple_mob/vore/slug,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/engi)
 "iWR" = (
 /turf/simulated/floor/plating,
 /area/security/mechent)
@@ -36837,6 +36882,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
+"jEb" = (
+/mob/living/simple_mob/vore/slug,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/mine/explored/muriki/mountainnorth)
 "jEh" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -46863,6 +46912,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
+"mGn" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/mine/explored/muriki/mountainnorth)
 "mGo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 4
@@ -56977,6 +57030,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
+"pXe" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/engi)
 "pXq" = (
 /obj/structure/sign/department/telecoms,
 /turf/simulated/wall/tgmc/darkwall,
@@ -61168,6 +61225,10 @@
 /obj/item/gps/medical,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
+"roA" = (
+/mob/living/simple_mob/vore/hippo,
+/turf/simulated/floor/water/acidic/muriki,
+/area/mine/unexplored/muriki/valleywest)
 "roG" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/sec,
@@ -62699,6 +62760,10 @@
 	icon_state = "monotile"
 	},
 /area/quartermaster/foyer)
+"rPX" = (
+/mob/living/simple_mob/vore/alienanimals/teppi,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/mine/explored/muriki/mountaineast)
 "rQa" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -68394,6 +68459,10 @@
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/mine/explored/muriki/valley)
+"tFL" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/terraform)
 "tFQ" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 1
@@ -68588,6 +68657,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
+"tHP" = (
+/mob/living/simple_mob/vore/scel/blue,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/mine/unexplored/muriki/valleyeast)
 "tHY" = (
 /obj/effect/floor_decal/corner/blue/full,
 /obj/structure/sign/warning/acid{
@@ -74832,6 +74905,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
+"vBy" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
 "vBX" = (
 /obj/machinery/mining/drill,
 /obj/effect/floor_decal/corner/paleblue/full{
@@ -76299,6 +76378,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
+"vYZ" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/yard)
 "vZk" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/light{
@@ -79444,6 +79527,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
+"wUb" = (
+/mob/living/simple_mob/vore/slug,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/engi)
 "wUl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
@@ -81474,6 +81561,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/otherlab)
+"xCk" = (
+/mob/living/simple_mob/vore/slug,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/mine/explored/muriki/mountainnorth)
 "xCq" = (
 /obj/structure/lattice,
 /obj/effect/catwalk_plated/dark,
@@ -85090,7 +85181,7 @@ wvS
 wvS
 wvS
 mOD
-mOD
+icO
 mOD
 fqQ
 fqQ
@@ -86605,7 +86696,7 @@ tNm
 esT
 esT
 esT
-esT
+roA
 esT
 esT
 esT
@@ -87904,7 +87995,7 @@ ajs
 ajs
 ajs
 tNm
-esT
+roA
 esT
 esT
 esT
@@ -88718,7 +88809,7 @@ dQB
 esT
 esT
 esT
-esT
+roA
 esT
 esT
 esT
@@ -89041,7 +89132,7 @@ dQB
 dQB
 esT
 esT
-esT
+roA
 esT
 esT
 esT
@@ -89205,7 +89296,7 @@ hkv
 hkv
 qUt
 esT
-esT
+roA
 esT
 esT
 esT
@@ -93664,7 +93755,7 @@ fqQ
 fqQ
 fqQ
 fqQ
-fqQ
+tFL
 fqQ
 kHn
 kHn
@@ -94864,7 +94955,7 @@ tMf
 tMf
 tMf
 tMf
-tMf
+hQr
 tMf
 ulF
 tMf
@@ -97748,7 +97839,7 @@ vrd
 vrd
 vrd
 vrd
-vrd
+cjj
 ajT
 ajT
 ajT
@@ -100382,7 +100473,7 @@ ajs
 ajs
 ajs
 ajs
-ajs
+fRg
 ajs
 ajs
 ajs
@@ -101759,7 +101850,7 @@ khd
 khd
 khd
 khd
-khd
+pXe
 khd
 khd
 khd
@@ -103662,7 +103753,7 @@ utS
 utS
 tNd
 utS
-utS
+iWO
 utS
 utS
 qEG
@@ -108773,7 +108864,7 @@ wUu
 wUu
 cdt
 vrd
-vrd
+vYZ
 vrd
 ajT
 iYO
@@ -112250,7 +112341,7 @@ khd
 khd
 khd
 khd
-khd
+wUb
 khd
 khd
 khd
@@ -113791,7 +113882,7 @@ ajT
 vrd
 vrd
 vrd
-vrd
+cjj
 ajT
 ajT
 ajT
@@ -115587,7 +115678,7 @@ trT
 trT
 trT
 scC
-scC
+trT
 trT
 trT
 trT
@@ -115911,7 +116002,7 @@ trT
 trT
 trT
 trT
-trT
+scC
 trT
 trT
 trT
@@ -116217,7 +116308,7 @@ trT
 trT
 trT
 trT
-trT
+nje
 trT
 trT
 trT
@@ -116309,7 +116400,7 @@ hAe
 hAe
 hAe
 hAe
-hAe
+xCk
 hAe
 hAe
 hAe
@@ -116394,7 +116485,7 @@ trT
 trT
 trT
 trT
-kjo
+hOf
 trT
 trT
 trT
@@ -123389,7 +123480,7 @@ aju
 aju
 aju
 nZU
-aju
+fIb
 aju
 aju
 aju
@@ -126676,7 +126767,7 @@ rrj
 hAe
 hAe
 tmZ
-tmZ
+hbJ
 tmZ
 tmZ
 ybq
@@ -128286,7 +128377,7 @@ lRv
 hAe
 hAe
 qsu
-hAe
+xCk
 hAe
 hAe
 hdk
@@ -130255,7 +130346,7 @@ wMK
 wMK
 wMK
 wMK
-wMK
+dMI
 wMK
 wMK
 wMK
@@ -130994,7 +131085,7 @@ sVx
 sVx
 sVx
 sVx
-sVx
+ghh
 mAK
 fKh
 trr
@@ -132056,7 +132147,7 @@ cEY
 hHK
 cEY
 cEY
-fHN
+hDf
 fHN
 fHN
 ybW
@@ -133226,7 +133317,7 @@ fHN
 fHN
 fHN
 fHN
-fHN
+hDf
 ltL
 ltL
 ltL
@@ -133735,7 +133826,7 @@ mAK
 aju
 aju
 aju
-aju
+tHP
 aju
 kzA
 aiR
@@ -135569,7 +135660,7 @@ aiO
 hAe
 hAe
 hOy
-hOy
+mGn
 hOy
 hOy
 utB
@@ -138639,7 +138730,7 @@ hAe
 hAe
 hAe
 hOy
-hOy
+jEb
 hOy
 hOy
 ucG
@@ -139310,7 +139401,7 @@ rqI
 rqI
 rqI
 rqI
-rqI
+uyX
 iRb
 rqI
 rqI
@@ -141105,7 +141196,7 @@ aBN
 rqI
 rqI
 rqI
-rqI
+rPX
 rqI
 rqI
 rqI
@@ -141266,7 +141357,7 @@ rqI
 xNa
 rqI
 rqI
-rqI
+rPX
 rqI
 xNa
 xNa
@@ -141383,7 +141474,7 @@ aiP
 aiP
 aiP
 dMj
-vjj
+dMj
 aiP
 aiP
 aiP
@@ -143495,7 +143586,7 @@ aiP
 dMj
 dMj
 dMj
-dMj
+kfk
 dMj
 dMj
 dMj
@@ -143658,7 +143749,7 @@ aiP
 dMj
 dMj
 dMj
-kfk
+dMj
 dMj
 dMj
 dMj
@@ -143821,7 +143912,7 @@ dMj
 aiP
 dMj
 dMj
-dMj
+kfk
 dMj
 dMj
 aiP
@@ -143958,7 +144049,7 @@ xnn
 rqI
 rqI
 rqI
-rqI
+uyX
 rqI
 rqI
 rqI
@@ -143981,7 +144072,7 @@ aiP
 dMj
 dMj
 aiP
-kfk
+dMj
 dMj
 dMj
 dMj
@@ -144837,7 +144928,7 @@ fhs
 fhs
 fhs
 fhs
-fhs
+vBy
 fhs
 fhs
 fhs

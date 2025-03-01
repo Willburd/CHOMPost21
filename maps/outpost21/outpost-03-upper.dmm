@@ -276,10 +276,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "abm" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "abn" = (
@@ -567,6 +569,8 @@
 /obj/machinery/door/airlock/glass_security{
 	name = "Security Firing Range"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/brig/lowobservation)
 "aia" = (
@@ -1857,12 +1861,12 @@
 /area/comms)
 "aOp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+	dir = 9
 	},
-/turf/simulated/floor/boxing/gym,
+/turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "aPg" = (
 /obj/structure/disposalpipe/segment{
@@ -4698,6 +4702,8 @@
 	pixel_x = 27;
 	pixel_y = 28
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "cgK" = (
@@ -6924,6 +6930,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
+"dov" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/item/stack/material/stick,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "doA" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -12175,6 +12188,12 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "fZx" = (
@@ -12334,6 +12353,11 @@
 	color = "#999999"
 	},
 /area/chapel/main)
+"gcY" = (
+/obj/machinery/light/flamp/noshade,
+/obj/item/stack/material/stick,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "gdb" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -12497,6 +12521,13 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/hallway/muriki/civup)
+"gif" = (
+/obj/item/stack/material/stick,
+/obj/item/stack/material/stick,
+/obj/item/stack/material/stick,
+/obj/item/stack/material/stick,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "giD" = (
 /obj/machinery/exonet_node{
 	anchored = 1
@@ -12886,6 +12917,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"gqm" = (
+/obj/structure/railing,
+/obj/item/stack/material/stick,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "gqx" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -15830,17 +15866,14 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
 "hTF" = (
-/obj/structure/railing/grey{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/boxing/gym,
-/area/security/brig/lowobservation)
+/turf/simulated/floor/tiled,
+/area/security/range)
 "hUj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -16123,6 +16156,8 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "ibW" = (
@@ -18259,6 +18294,11 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
+"jfu" = (
+/obj/item/stack/material/stick,
+/obj/item/stack/material/stick,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "jfO" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 4
@@ -24342,6 +24382,12 @@
 	},
 /turf/simulated/wall/plastitanium,
 /area/rnd/research/phoronics/burn)
+"mhQ" = (
+/mob/living/simple_mob/vore/gryphon{
+	dir = 8
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "miW" = (
 /obj/structure/cable/orange{
 	icon_state = "1-6"
@@ -26706,6 +26752,12 @@
 	},
 /obj/structure/table/standard,
 /obj/item/healthanalyzer/guide,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "nrf" = (
@@ -32087,6 +32139,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora2)
+"qgm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/lowobservation)
 "qgn" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -35061,17 +35122,9 @@
 	},
 /area/mine/unexplored/muriki/mountaintopeast)
 "rFi" = (
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/boxing/gym,
-/area/security/brig/lowobservation)
+/obj/item/stack/material/stick,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "rFE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -37100,11 +37153,11 @@
 	},
 /area/djstation)
 "sIA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
@@ -38625,11 +38678,11 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
@@ -44950,6 +45003,8 @@
 	pixel_x = 27;
 	pixel_y = -29
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/security/range)
 "wyN" = (
@@ -83334,7 +83389,7 @@ fjV
 fOa
 jaK
 fbH
-oVJ
+qgm
 hto
 sIA
 tAn
@@ -83496,9 +83551,9 @@ eIa
 sTj
 jaK
 bDv
-oVJ
+qgm
 cFF
-rFi
+kdx
 kdx
 kdx
 kdx
@@ -83658,9 +83713,9 @@ cGg
 fJj
 bQt
 svJ
-oVJ
+qgm
 gyX
-aOp
+pfq
 pfq
 pfq
 pfq
@@ -83820,9 +83875,9 @@ mCQ
 wiN
 dbe
 fbH
-oVJ
+qgm
 gyX
-aOp
+pfq
 pfq
 pfq
 pfq
@@ -83982,9 +84037,9 @@ mCQ
 wiN
 dbe
 fbH
-oVJ
+qgm
 gyX
-aOp
+pfq
 pfq
 pfq
 pfq
@@ -84140,13 +84195,13 @@ bFL
 aAN
 pNH
 tQs
-mCQ
+hTF
 wyM
 ahQ
 cgJ
-oVJ
-gyX
 aOp
+gyX
+pfq
 pfq
 pfq
 pfq
@@ -84308,7 +84363,7 @@ dYG
 ueq
 oVJ
 pmS
-hTF
+foG
 foG
 foG
 foG
@@ -93387,8 +93442,8 @@ kQc
 vmp
 tcz
 goV
-goV
-oio
+rFi
+gqm
 sAt
 sAt
 sAt
@@ -93548,10 +93603,10 @@ esJ
 kQc
 vmp
 tcz
-goV
-goV
-goV
-bdd
+rFi
+jfu
+gif
+dov
 azs
 sAt
 sAt
@@ -93710,10 +93765,10 @@ esJ
 kQc
 vmp
 tcz
-goV
-goV
-goV
-goV
+rFi
+mhQ
+rFi
+rFi
 oio
 sAt
 sAt
@@ -93873,9 +93928,9 @@ kQc
 vmp
 bEK
 fkB
-goV
-goV
-wmD
+rFi
+rFi
+gcY
 oio
 sAt
 sAt
@@ -94035,8 +94090,8 @@ kQc
 vmp
 tcz
 goV
-goV
-goV
+rFi
+rFi
 abS
 oio
 sAt
