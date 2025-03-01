@@ -663,7 +663,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -1522,7 +1521,6 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -1564,7 +1562,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "aNo" = (
@@ -2984,7 +2981,6 @@
 /obj/item/toy/plushie/pillow/blue,
 /obj/item/bedsheet/pillow/black,
 /obj/item/bedsheet/pillow/green,
-/obj/structure/bed/pillowpile,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "bwr" = (
@@ -5374,7 +5370,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -5416,7 +5411,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -5437,7 +5431,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -6143,7 +6136,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -6616,16 +6608,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood,
-/area/specialty/redspace)
-"dpd" = (
-/obj/item/wheelchair/motor/small,
-/obj/item/wheelchair/motor/small,
-/obj/item/wheelchair/motor/small,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "dpv" = (
 /obj/effect/floor_decal/corner/black/full{
@@ -9557,7 +9539,6 @@
 "eKN" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -10506,19 +10487,6 @@
 /obj/machinery/telecomms/broadcaster/preset_cent,
 /turf/unsimulated/floor/steel,
 /area/centcom/command)
-"fiW" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "fjd" = (
 /obj/vehicle/train/trolley{
 	dir = 1
@@ -11286,7 +11254,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -11545,7 +11512,6 @@
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/toy/plushie/pillow/red,
 /obj/item/bedsheet/pillow/red,
-/obj/structure/bed/pillowpile/black,
 /obj/random/plushie,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
@@ -11715,7 +11681,6 @@
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "fJS" = (
-/obj/structure/table/steel,
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -30
@@ -11726,6 +11691,7 @@
 /obj/item/gps/science,
 /obj/item/gps/science,
 /obj/item/gps/science,
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "fJU" = (
@@ -12038,16 +12004,6 @@
 /obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled/milspec,
 /area/centcom/specops)
-"fRk" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "fRG" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/security{
@@ -14352,19 +14308,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/specops)
-"gZD" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "gZK" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Special Operations";
@@ -14675,7 +14618,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -17888,19 +17830,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
-"iDJ" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "iEe" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/radio/intercom{
@@ -19579,7 +19508,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "jph" = (
-/obj/structure/table/steel,
 /obj/item/shield_diffuser,
 /obj/item/stack/material/glass{
 	amount = 50;
@@ -19594,6 +19522,7 @@
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 8
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "jps" = (
@@ -20672,22 +20601,6 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/command)
-"jUr" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "jUz" = (
 /obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/warning{
@@ -21215,7 +21128,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -21342,7 +21254,6 @@
 "knP" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -21687,7 +21598,6 @@
 "kvB" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -21782,7 +21692,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
 "kxs" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 10
 	},
@@ -21795,6 +21704,7 @@
 	pixel_x = -21
 	},
 /obj/machinery/recharger,
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "kxL" = (
@@ -23115,12 +23025,11 @@
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "lkY" = (
-/obj/structure/table/steel,
-/obj/structure/table/steel,
 /obj/item/storage/bag/circuits/basic,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 4
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "lld" = (
@@ -23799,7 +23708,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/grille,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
 	icon_state = "shutter2_0";
@@ -24539,7 +24447,6 @@
 "mbW" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 4;
@@ -24982,17 +24889,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
-"mtO" = (
-/obj/structure/table/steel,
-/obj/structure/table/steel,
-/obj/item/electronic_assembly/large{
-	pixel_y = 6
-	},
-/obj/effect/floor_decal/milspec/color/emerald/half{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/specialty/redspace)
 "muQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -25139,7 +25035,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "mAB" = (
-/obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -29085,13 +28980,13 @@
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/specialty/redspace)
 "oEP" = (
-/obj/structure/table/steel,
 /obj/item/electronic_assembly/large{
 	pixel_y = 6
 	},
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 4
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "oEU" = (
@@ -31216,7 +31111,6 @@
 "pOr" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -31937,7 +31831,6 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "qlV" = (
-/obj/structure/table/steel,
 /obj/item/storage/bag/circuits/basic,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 5
@@ -31946,6 +31839,7 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "qmb" = (
@@ -32716,21 +32610,6 @@
 	},
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/simulated/floor/tiled/techfloor,
-/area/specialty/redspace)
-"qIu" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
 /area/specialty/redspace)
 "qIx" = (
 /obj/structure/sink{
@@ -33563,7 +33442,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -33900,7 +33778,6 @@
 "rmD" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -34121,7 +33998,6 @@
 "rrH" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -34318,7 +34194,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
 	icon_state = "shutter2_0";
@@ -34571,7 +34446,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -35147,13 +35021,13 @@
 	},
 /area/centcom/command)
 "rSH" = (
-/obj/structure/table/steel,
 /obj/item/integrated_electronics/debugger{
 	pixel_x = -5
 	},
 /obj/item/integrated_electronics/wirer{
 	pixel_x = 5
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "rSN" = (
@@ -35598,7 +35472,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -37199,16 +37072,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/living)
-"tag" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/material/shard,
-/turf/simulated/floor/plating,
-/area/specialty/redspace)
 "taA" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -40867,7 +40730,6 @@
 /obj/item/toy/plushie/pillow,
 /obj/item/toy/plushie/pillow/green,
 /obj/item/toy/plushie/pillow/red,
-/obj/structure/bed/pillowpile/orange,
 /obj/random/plushie,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
@@ -40910,12 +40772,8 @@
 /area/specialty/redspace)
 "vhb" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -42619,10 +42477,10 @@
 	},
 /area/centcom/security)
 "wdm" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 8
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "wdo" = (
@@ -42881,7 +42739,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
 	icon_state = "shutter2_0";
@@ -43875,7 +43732,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -44071,8 +43927,8 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/centcom)
 "wPh" = (
-/obj/structure/table/steel,
 /obj/item/tool/crowbar/brass,
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "wPq" = (
@@ -44528,11 +44384,11 @@
 /turf/simulated/floor/carpet,
 /area/specialty/redspace)
 "xaB" = (
-/obj/structure/table/steel,
 /obj/item/integrated_circuit_printer,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 4
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "xaF" = (
@@ -44719,7 +44575,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -45208,7 +45063,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -45832,6 +45686,20 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/specialty/redspace)
+"xKk" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "xKF" = (
@@ -87134,7 +87002,7 @@ epa
 epa
 epa
 bQe
-jUr
+tdE
 bQe
 bQe
 bQe
@@ -87933,7 +87801,7 @@ ylH
 ylH
 ylH
 ylH
-iDJ
+eif
 dBI
 dTO
 dTO
@@ -88095,7 +87963,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 gGN
 dTO
 btE
@@ -88103,10 +87971,10 @@ cst
 cst
 cst
 cst
-jUr
+tdE
 cst
 cst
-jUr
+tdE
 cst
 bQe
 prd
@@ -88257,7 +88125,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 xbY
 dTO
 aVM
@@ -94852,7 +94720,7 @@ ylH
 ylH
 bQe
 epa
-dpd
+epa
 cst
 cQe
 nYN
@@ -99550,7 +99418,7 @@ epa
 epa
 epa
 ylH
-vhb
+tdE
 ulP
 cRm
 cRm
@@ -99875,8 +99743,8 @@ ylH
 ylH
 epa
 bQe
-qIu
-fiW
+xKk
+vhb
 bQe
 bQe
 epa
@@ -100371,7 +100239,7 @@ ylH
 ylH
 ylH
 ylH
-iDJ
+eif
 myJ
 vYr
 oNT
@@ -100533,7 +100401,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 xqy
 oNT
@@ -100695,7 +100563,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 vYr
 oNT
@@ -100857,7 +100725,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 rsw
 oNT
@@ -101019,7 +100887,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 vYr
 oNT
@@ -101829,11 +101697,11 @@ ylH
 ylH
 ylH
 ylH
-gZD
+eif
 myJ
 vYr
 oNT
-gZD
+eif
 ylH
 ylH
 epa
@@ -102643,7 +102511,7 @@ gON
 tdY
 vYr
 oNT
-vhb
+tdE
 ylH
 epa
 epa
@@ -102807,7 +102675,7 @@ vYr
 jjp
 bQe
 bQe
-vhb
+tdE
 det
 bQe
 bQe
@@ -106025,7 +105893,7 @@ iJl
 pyC
 pyC
 ssM
-gZD
+eif
 ylH
 ylH
 ylH
@@ -106187,7 +106055,7 @@ pyC
 qyS
 ayu
 vtN
-fRk
+xJV
 ylH
 ylH
 ylH
@@ -106508,7 +106376,7 @@ xaB
 oEP
 lkY
 xaB
-mtO
+oEP
 iDv
 tIi
 bQe
@@ -106684,7 +106552,7 @@ ylH
 ylH
 ylH
 ylH
-gZD
+eif
 myJ
 vYr
 vYr
@@ -106846,7 +106714,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 hKi
 jXW
@@ -107008,7 +106876,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 nAh
 hKi
 hKi
@@ -107170,7 +107038,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 lFc
 hKi
 hKi
@@ -107332,7 +107200,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 hKi
 hKi
@@ -109127,11 +108995,11 @@ ylH
 ylH
 ylH
 bQe
-qIu
+xKk
 knP
 wnE
-tag
-fiW
+eih
+vhb
 bQe
 ylH
 ylH

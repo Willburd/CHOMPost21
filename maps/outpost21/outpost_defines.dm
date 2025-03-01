@@ -152,6 +152,8 @@
 										/area/offworld/asteroidyard/external,
 										/area/offworld/asteroidyard/external/yardzone,
 										/area/offworld/confinementbeam/exterior,
+										/area/ai_sat/core_external,
+										/area/ai_sat/power_control,
 										// Actual unit test exceptions
 										/area/comms,
 										/area/muriki/tramstation/waste,
@@ -380,7 +382,7 @@
 [b]Notice[/b]: ESHUI Base, authorized personnel only"}
 	map_z = list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
 	extra_z_levels = list()
-	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security"), "Medical Rescue" = list("confinementbeam_medical"))
+	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Medical Rescue" = list("confinementbeam_medical"))
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
 	. = ..()

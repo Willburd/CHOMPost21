@@ -328,6 +328,13 @@
 	base_turf = /turf/space
 	base_area = /area/offworld/confinementbeam/exterior
 
+/obj/effect/shuttle_landmark/premade/security/aisat_security
+	name = "AI Satellite (Security Dock)"
+	landmark_tag = "aisat_security"
+	docking_controller = "aisat_security_controller"
+	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
+
 //////////////////////////////////////////////////////////////
 // Trawler Shuttle
 /datum/shuttle/autodock/overmap/trawler
