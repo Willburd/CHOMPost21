@@ -1196,9 +1196,7 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/portable_atmospherics/powered/pump/huge,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "acM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/cable/green{
@@ -1294,9 +1292,7 @@
 /area/rnd/xenobiology/xenobiohstore)
 "acT" = (
 /turf/simulated/wall/r_wall,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "acU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1525,17 +1521,13 @@
 /area/rnd/xenobiology/xenobiohstore)
 "ads" = (
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "adt" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "adu" = (
 /turf/simulated/wall,
 /area/maintenance/atmos_control)
@@ -1692,17 +1684,13 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "adO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "adP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/maintenance/engi{
@@ -1711,9 +1699,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "adQ" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 10
@@ -1740,17 +1726,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "adS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "adT" = (
 /turf/simulated/floor/bluegrid/airless,
 /area/medical/voxlab/airgap)
@@ -2110,9 +2092,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aeF" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
@@ -2120,9 +2100,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aeG" = (
 /turf/simulated/wall/r_wall,
 /area/medical/voxlab/recov)
@@ -2438,77 +2416,55 @@
 "aft" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afu" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afv" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Atmo Tank - Carbon Dioxide"
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afw" = (
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afx" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afy" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Atmo Tank - Phoron"
 	},
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afz" = (
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afA" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/n20,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afB" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Atmo Tank - Nitrous Oxide"
 	},
 /turf/simulated/floor/reinforced/n20,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afC" = (
 /turf/simulated/floor/reinforced/n20,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afD" = (
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "afE" = (
 /obj/structure/sign/nosmoking_1,
 /turf/simulated/wall/r_wall,
@@ -3031,36 +2987,26 @@
 	name = "Vox Lab Supply"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "agx" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "agy" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	id_tag = "tox_sensor"
 	},
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "agz" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "agA" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /turf/simulated/floor/reinforced/n20,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "agB" = (
 /obj/machinery/vending/wallmed1{
 	name = "NanoMed Wall";
@@ -3482,9 +3428,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ahj" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	external_pressure_bound = 0;
@@ -3501,18 +3445,14 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ahk" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	id_tag = "co2_sensor"
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ahl" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	external_pressure_bound = 0;
@@ -3529,9 +3469,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ahm" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	external_pressure_bound = 0;
@@ -3548,18 +3486,14 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/n20,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ahn" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	id_tag = "n2o_sensor"
 	},
 /turf/simulated/floor/reinforced/n20,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aho" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	external_pressure_bound = 0;
@@ -3576,18 +3510,14 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ahp" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	id_tag = "voxviro_sensor"
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ahq" = (
 /turf/simulated/wall/r_wall,
 /area/medical/voxlab/surgery)
@@ -3951,9 +3881,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aic" = (
 /obj/machinery/light{
 	dir = 4
@@ -3967,9 +3895,7 @@
 	tag_west_con = 0.79
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aid" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -3990,9 +3916,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aie" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4008,9 +3932,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aif" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4030,9 +3952,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aig" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4053,9 +3973,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aih" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4072,9 +3990,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aii" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4094,9 +4010,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aij" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4116,9 +4030,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aik" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4138,9 +4050,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ail" = (
 /obj/structure/sign/nosmoking_1,
 /turf/simulated/wall/r_wall,
@@ -4644,27 +4554,21 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 5
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajc" = (
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -4672,18 +4576,14 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aje" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
@@ -4691,76 +4591,56 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajh" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aji" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
 	name = "Phoron to Voxmix"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 9
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajm" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajn" = (
 /obj/machinery/light/small,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -4769,9 +4649,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ajq" = (
 /obj/structure/sink{
 	dir = 8;
@@ -5299,9 +5177,7 @@
 "ako" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "akp" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5318,9 +5194,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_co2,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "akq" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5342,9 +5216,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "akr" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5363,9 +5235,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aks" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5382,9 +5252,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_plasma,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "akt" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5401,9 +5269,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_n2o,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aku" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Atmospherics";
@@ -5418,9 +5284,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "akv" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5440,9 +5304,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "akw" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -5462,9 +5324,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "akx" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/atmos_control)
@@ -6148,76 +6008,56 @@
 	name = "Nitrogen to Voxmix"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alP" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alQ" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alR" = (
 /obj/machinery/atmospherics/binary/pump,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alS" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alU" = (
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alV" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	name = "Virology Air Outlet"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alW" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alX" = (
 /obj/machinery/atmospherics/unary/freezer,
 /obj/machinery/atmospherics/unary/freezer,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "alY" = (
 /turf/simulated/wall,
 /area/maintenance/cave)
@@ -6732,18 +6572,14 @@
 /area/mine/unexplored/muriki/cave/sci)
 "ana" = (
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anb" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	id_tag = "n2_sensor"
 	},
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anc" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -6752,9 +6588,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "and" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -6778,9 +6612,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ane" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -6788,9 +6620,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anf" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -6815,18 +6645,14 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ang" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anh" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	power_rating = 1000;
@@ -6836,49 +6662,37 @@
 	tag_west = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ani" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anj" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ank" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anl" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ann" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
@@ -6888,18 +6702,14 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ano" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -6911,9 +6721,7 @@
 	c_tag = "ATM - Atmospherics East Acess"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anq" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -6923,23 +6731,17 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anr" = (
 /obj/machinery/portable_atmospherics/canister/methane,
 /turf/simulated/floor/reinforced/methane,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ans" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ant" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -6949,9 +6751,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -6966,9 +6766,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "anv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -7761,15 +7559,11 @@
 	dir = 4
 	},
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoP" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoQ" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -7790,9 +7584,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoR" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -7812,34 +7604,26 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_n2,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoT" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoV" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	power_rating = 1000;
@@ -7848,9 +7632,7 @@
 	tag_west = 2
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoW" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	power_rating = 1000;
@@ -7859,9 +7641,7 @@
 	tag_west = 2
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -7876,17 +7656,13 @@
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aoZ" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "apa" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -8575,9 +8351,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqg" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -8599,18 +8373,14 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqi" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -8632,55 +8402,41 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqj" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aql" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqn" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aqq" = (
 /turf/simulated/wall/r_wall,
 /area/medical/voxlab/lobby)
@@ -9113,23 +8869,17 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "arl" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "arm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "arn" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave{
 	nitrogen = 140;
@@ -9162,21 +8912,15 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible/purple,
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "arr" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ars" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "art" = (
 /obj/effect/floor_decal/corner/black/full{
 	dir = 8
@@ -9671,25 +9415,19 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ash" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "asi" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "asj" = (
 /obj/effect/map_effect/interval/burnpit,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -9726,16 +9464,12 @@
 "asl" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "asm" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "asn" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /obj/machinery/atmospherics/portables_connector{
@@ -9743,18 +9477,14 @@
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aso" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 4;
 	initialize_directions = 11
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "asp" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1441;
@@ -9762,9 +9492,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "asq" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 9
@@ -10298,74 +10026,56 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ato" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "atp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "atq" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "atr" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	tag_south = 2;
 	tag_west = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ats" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 10
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "att" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "atu" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/manifold/visible/red,
 /obj/machinery/portable_atmospherics/powered/pump/huge,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "atv" = (
 /obj/structure/sign/signnew/canisters,
 /turf/simulated/wall/r_wall,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "atw" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 4
@@ -10878,9 +10588,7 @@
 /area/engineering/coreproctunnel)
 "aun" = (
 /turf/simulated/floor/reinforced/oxygen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "auo" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -10889,36 +10597,28 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/oxygen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aup" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "auq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aur" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aus" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	power_rating = 1000;
@@ -10927,9 +10627,7 @@
 	tag_west = 3
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aut" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/milspec,
@@ -10937,26 +10635,20 @@
 "auu" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "auv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "auw" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aux" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -10964,9 +10656,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "auy" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -10975,15 +10665,11 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "auz" = (
 /obj/machinery/portable_atmospherics/canister/nitrous_oxide,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "auA" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 4
@@ -11617,24 +11303,18 @@
 	dir = 4
 	},
 /turf/simulated/floor/reinforced/oxygen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avC" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/reinforced/oxygen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avD" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	id_tag = "o2_sensor"
 	},
 /turf/simulated/floor/reinforced/oxygen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avE" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -11652,9 +11332,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avF" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -11674,39 +11352,29 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_o2,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 9
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avI" = (
 /obj/structure/fireaxecabinet{
 	pixel_x = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avJ" = (
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avK" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	external_pressure_bound = 0;
@@ -11723,9 +11391,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/methane,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avL" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/camera/network/engineering{
@@ -11733,9 +11399,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "avM" = (
 /obj/structure/closet/crate/bin,
 /obj/effect/floor_decal/corner/black/full,
@@ -12298,9 +11962,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/oxygen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awC" = (
 /obj/machinery/atmospherics/omni/mixer{
 	active_power_usage = 1000;
@@ -12312,37 +11974,27 @@
 	tag_west_con = 0.21
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awD" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	name = "Waste to Core Processing"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awE" = (
 /obj/effect/landmark{
 	name = "bluespacerift"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awG" = (
 /turf/simulated/floor/reinforced/methane,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awH" = (
 /obj/machinery/atmospherics/unary/freezer{
 	dir = 4;
@@ -12350,24 +12002,18 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awI" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/purple,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awJ" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "awK" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/purple{
@@ -12722,36 +12368,28 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axr" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 4
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/structure/closet/hydrant{
@@ -12762,9 +12400,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axt" = (
 /obj/machinery/atmospherics/unary/heater{
 	dir = 4;
@@ -12772,17 +12408,13 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axu" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axv" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
 	power_rating = 1000;
@@ -12791,24 +12423,18 @@
 	tag_west = 2
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axw" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axx" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "axy" = (
 /obj/structure/cable/orange{
 	icon_state = "2-4"
@@ -13328,9 +12954,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayu" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -13354,48 +12978,36 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_waste,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayw" = (
 /obj/structure/frame,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayx" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayy" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -13406,9 +13018,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ayB" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
@@ -13821,18 +13431,14 @@
 "azt" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "azu" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "azv" = (
 /obj/structure/railing{
 	dir = 4
@@ -13841,17 +13447,13 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "azw" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "azx" = (
 /obj/effect/map_effect/interval/burnpit,
 /obj/machinery/air_sensor{
@@ -14220,9 +13822,7 @@
 /area/rnd/xenobiology)
 "aAj" = (
 /turf/simulated/floor/reinforced/airmix,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAk" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -14231,9 +13831,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airmix,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAl" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -14257,18 +13855,14 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAn" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -14293,43 +13887,33 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAo" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAq" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAr" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAs" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -14337,9 +13921,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -14370,9 +13952,7 @@
 	},
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAv" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/sign/warning/fire{
@@ -14394,9 +13974,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aAw" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -14991,15 +14569,11 @@
 	dir = 4
 	},
 /turf/simulated/floor/reinforced/airmix,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aBt" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/reinforced/airmix,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aBu" = (
 /obj/machinery/air_sensor{
 	frequency = 1443;
@@ -15007,9 +14581,7 @@
 	output = 7
 	},
 /turf/simulated/floor/reinforced/airmix,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aBv" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -15029,18 +14601,14 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_air,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aBw" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aBx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/floor_decal/industrial/warning{
@@ -15048,9 +14616,7 @@
 	},
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aBy" = (
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/blast/regular{
@@ -15071,9 +14637,7 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aBA" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/atmos/monitoring)
@@ -15462,9 +15026,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airmix,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCB" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -15486,9 +15048,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCC" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -15510,58 +15070,44 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCD" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 4;
 	name = "Air Out"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCE" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCF" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCJ" = (
 /obj/machinery/computer/atmos_alert,
 /obj/effect/floor_decal/corner/black/full{
@@ -15585,9 +15131,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aCM" = (
 /obj/machinery/requests_console{
 	department = "Atmospherics";
@@ -16127,18 +15671,14 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aDM" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aDN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/floor_decal/industrial/warning{
@@ -16146,9 +15686,7 @@
 	},
 /obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aDO" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 9
@@ -16165,9 +15703,7 @@
 "aDQ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aDR" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -16582,9 +16118,7 @@
 	req_access = list(24)
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aEP" = (
 /obj/structure/table/standard,
 /obj/item/clothing/glasses/welding,
@@ -16599,9 +16133,7 @@
 	},
 /obj/item/analyzer,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aEQ" = (
 /obj/structure/table/standard,
 /obj/item/clothing/ears/earmuffs,
@@ -16612,18 +16144,14 @@
 /obj/item/t_scanner,
 /obj/item/pipe_painter,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aER" = (
 /obj/machinery/atmospherics/tvalve/digital/bypass{
 	dir = 1;
 	name = "Waste to Core Processing"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aES" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -16632,18 +16160,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aET" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aEU" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 9
@@ -16657,9 +16181,7 @@
 	name = "Waste Loop"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aEV" = (
 /obj/item/pipe_dispenser,
 /obj/structure/table/standard{
@@ -17007,33 +16529,25 @@
 /obj/machinery/portable_atmospherics/canister/empty,
 /obj/machinery/light,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFG" = (
 /obj/effect/landmark/start{
 	name = "Atmospheric Technician"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFH" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
@@ -17044,18 +16558,14 @@
 	name = "Mixed Air Tank Out"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFK" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -17074,9 +16584,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFL" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -17120,9 +16628,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aFP" = (
 /obj/machinery/button/remote/blast_door{
 	id = "atmoslockdown";
@@ -17529,9 +17035,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGC" = (
 /obj/structure/table/standard,
 /obj/item/stack/material/glass{
@@ -17548,18 +17052,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGD" = (
 /obj/structure/table/standard,
 /obj/machinery/cell_charger,
 /obj/item/tool/wrench/pipe,
 /obj/item/tool/wrench/pipe,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGE" = (
 /obj/structure/disposalpipe/trunk,
 /obj/effect/floor_decal/industrial/warning/full,
@@ -17567,21 +17067,15 @@
 	name = "disposal mail destination(Atmospherics)"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGF" = (
 /obj/machinery/atmospherics/unary/freezer,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGG" = (
 /obj/machinery/light,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGH" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -17593,9 +17087,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -17608,9 +17100,7 @@
 	pixel_y = -30
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aGJ" = (
 /turf/simulated/wall,
 /area/engineering/atmos/monitoring)
@@ -17983,15 +17473,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aHx" = (
 /obj/structure/sign/atmosplaque,
 /turf/simulated/wall/r_wall,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aHy" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -18013,9 +17499,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aHz" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -18035,9 +17519,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aHA" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -18057,9 +17539,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aHB" = (
 /obj/structure/sign/warning/compressed_gas,
 /turf/simulated/wall,
@@ -18461,51 +17941,39 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aIr" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	name = "Air to Supply"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aIs" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
 	name = "Scrubber to Waste"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aIt" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1;
 	name = "Supply Dump"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aIu" = (
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aIv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aIw" = (
 /turf/simulated/wall,
 /area/engineering/atmoshall)
@@ -18952,23 +18420,17 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aJn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aJo" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aJp" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -18988,9 +18450,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aJq" = (
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -19432,9 +18892,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aKo" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
@@ -19442,9 +18900,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aKp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/effect/floor_decal/industrial/warning{
@@ -19456,17 +18912,13 @@
 	name = "Waste Loop"
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aKq" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aKr" = (
 /obj/machinery/pipedispenser/disposal,
 /obj/effect/floor_decal/industrial/warning{
@@ -19478,9 +18930,7 @@
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aKs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -19516,9 +18966,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aKu" = (
 /obj/machinery/light{
 	dir = 8
@@ -19901,48 +19349,36 @@
 	pixel_x = -3
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aLl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aLm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/visible/supply{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aLn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aLo" = (
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aLp" = (
 /obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aLq" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
@@ -19950,9 +19386,7 @@
 	output = 63
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aLr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -20503,17 +19937,13 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aMr" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aMs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -20522,37 +19952,27 @@
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aMt" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aMu" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aMv" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aMw" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "Atmospherics Tank - Mix";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aMx" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -20961,18 +20381,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aNi" = (
 /obj/structure/closet/emcloset,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aNj" = (
 /obj/machinery/light_switch{
 	pixel_x = 26;
@@ -20988,32 +20404,24 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aNk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
 /obj/structure/closet/firecloset/full/atmos,
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aNl" = (
 /obj/structure/closet/firecloset/full/atmos,
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aNm" = (
 /obj/effect/landmark{
 	name = "lightsout"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aNn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -22858,9 +22266,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aQB" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -22903,9 +22309,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aQF" = (
 /turf/simulated/floor/plating,
 /area/maintenance/med)
@@ -23245,9 +22649,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "aRo" = (
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
@@ -28231,9 +27633,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "bbc" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/randomized,
 /turf/simulated/floor/plating,
@@ -30800,9 +30200,7 @@
 	name = "vinestart"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "bfB" = (
 /obj/structure/table/glass,
 /obj/effect/floor_decal/borderfloor{
@@ -37162,9 +36560,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "btb" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -40965,9 +40361,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "bzp" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -43051,9 +42445,7 @@
 /area/maintenance/wastedisposalnear)
 "bDx" = (
 /turf/simulated/wall,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "bDy" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -45280,9 +44672,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "bHP" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -46088,9 +45478,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "cbo" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -46646,9 +46034,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "cuq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -47308,9 +46694,7 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "cSA" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/wood/alt,
@@ -47770,9 +47154,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "djx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass{
@@ -48986,9 +48368,7 @@
 	tag_south_con = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "dUU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 6
@@ -52196,9 +51576,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "fRu" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -52870,9 +52248,7 @@
 "gpr" = (
 /obj/machinery/portable_atmospherics/powered/scrubber,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "gpu" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -53226,9 +52602,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "gDC" = (
 /obj/machinery/vending/engineering{
 	dir = 8;
@@ -53469,9 +52843,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "gMk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -54742,9 +54114,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "hCu" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/mud/muriki{
@@ -54848,9 +54218,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "hGG" = (
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/mineral/floor/muriki{
@@ -55272,9 +54640,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "hWn" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/muriki{
 	dir = 5
@@ -55670,9 +55036,7 @@
 	c_tag = "ATM - Atmospherics Northeast"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ijx" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/mud/muriki{
@@ -56268,9 +55632,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_ch4,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "iEL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -56318,9 +55680,7 @@
 	icon_state = "bio-danger"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "iGx" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
@@ -57108,9 +56468,7 @@
 	sensors = list("voxviro_sensor" = "Tank")
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "jhY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -57127,9 +56485,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "jic" = (
 /obj/structure/table/glass,
 /obj/item/material/ashtray/plastic,
@@ -58858,9 +58214,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/methane,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "kpX" = (
 /obj/item/spacecasinocash/c1000,
 /obj/item/spacecasinocash/c1000,
@@ -60027,9 +59381,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ldg" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -60282,9 +59634,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "lnb" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -60620,9 +59970,7 @@
 	sensors = list("methane_sensor" = "Tank")
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "lvs" = (
 /obj/effect/floor_decal/corner_kafel/blue/diagonal,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -60635,9 +59983,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/n20,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "lvM" = (
 /obj/random/maintenance/security,
 /obj/random/unidentified_medicine,
@@ -61184,9 +60530,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "lNc" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -61336,9 +60680,7 @@
 /obj/machinery/light,
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "lQS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -61960,9 +61302,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "mkx" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular{
@@ -62400,9 +61740,7 @@
 	name = "Distribution Loop"
 	},
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "mBL" = (
 /obj/item/seeds/reishimycelium,
 /obj/structure/cable/green{
@@ -64432,9 +63770,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "nSQ" = (
 /obj/structure/railing{
 	dir = 1
@@ -64595,9 +63931,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "nYE" = (
 /obj/random/trash,
 /turf/simulated/floor,
@@ -65926,9 +65260,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/airmix,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "oUt" = (
 /obj/effect/auto_crayon{
 	icon_state = "down"
@@ -66797,9 +66129,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "pyi" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/cosmos,
@@ -67769,9 +67099,7 @@
 	},
 /obj/structure/frame,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "qeG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/tiled,
@@ -68115,9 +67443,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "qoQ" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating/muriki,
@@ -68393,9 +67719,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "qzy" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -69121,9 +68445,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "qWP" = (
 /obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/carpet/gaycarpet,
@@ -69943,9 +69265,7 @@
 	id_tag = "methane_sensor"
 	},
 /turf/simulated/floor/reinforced/methane,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "rqT" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/kafel_full,
@@ -71055,9 +70375,7 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/portable_atmospherics/powered/scrubber/huge,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "sbt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -72235,9 +71553,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/cee,
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "sKB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -72434,9 +71750,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/nitrogen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "sSe" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 4
@@ -72711,9 +72025,7 @@
 "tdK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "tdP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -72796,9 +72108,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/phoron,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "tgj" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -73329,9 +72639,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "tDg" = (
 /obj/structure/table/glass,
 /obj/item/tape_roll,
@@ -73374,9 +72682,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/methane,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "tEA" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/landmark/step_trap,
@@ -73624,9 +72930,7 @@
 "tKa" = (
 /obj/item/radio/beacon,
 /turf/simulated/floor/tiled,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "tKw" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/black/border,
@@ -74121,9 +73425,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "uaO" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/gold{
@@ -74690,9 +73992,7 @@
 	c_tag = "ENG - Atmo Tank - Vox Viro Isolation"
 	},
 /turf/simulated/floor/reinforced/airless,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "utY" = (
 /turf/simulated/floor/water/acidic/deep,
 /area/mine/explored/muriki/river/north)
@@ -76465,9 +75765,7 @@
 	use_power = 1
 	},
 /turf/simulated/floor/reinforced/oxygen,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "vBZ" = (
 /obj/machinery/disposal,
 /turf/simulated/floor/tiled/dark/muriki,
@@ -77903,9 +77201,7 @@
 "wBk" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "wBE" = (
 /obj/effect/auto_crayon{
 	icon_state = "down"
@@ -78365,9 +77661,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "wRb" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -78388,9 +77682,7 @@
 	},
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "wRZ" = (
 /obj/structure/window/basic{
 	dir = 4
@@ -78928,9 +78220,7 @@
 	c_tag = "ENG - Atmo Tank - Methane"
 	},
 /turf/simulated/floor/reinforced/methane,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "xms" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/muriki,
@@ -79250,9 +78540,7 @@
 "xyR" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "xzT" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -79677,9 +78965,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "xLm" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/deathdrop/waterfall/muriki,
@@ -80044,9 +79330,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "xVd" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -80427,9 +79711,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/engineering/atmos{
-	name = "\improper Pulmonary Atmospherics"
-	})
+/area/engineering/atmos)
 "ygr" = (
 /obj/random/outcrop,
 /obj/effect/step_trigger/dephase_shadekin,

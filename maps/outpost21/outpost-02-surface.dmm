@@ -4395,9 +4395,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "agE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -4406,9 +4404,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "agF" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -4417,9 +4413,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "agG" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "First-Aid Station";
@@ -4429,9 +4423,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel_grid,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "agH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -45193,9 +45185,7 @@
 "meJ" = (
 /obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "meN" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/medical,
@@ -62768,9 +62758,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "rQH" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Cargo Southwest"
@@ -62837,9 +62825,7 @@
 	},
 /obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "rSp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -63306,9 +63292,7 @@
 	},
 /obj/item/storage/firstaid/fire,
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "rZH" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/condiment/small/saltshaker{
@@ -64818,9 +64802,7 @@
 	pixel_x = 22
 	},
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "syM" = (
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/machinery/chem_master,
@@ -66681,9 +66663,7 @@
 	name = "FirstAid"
 	},
 /turf/simulated/floor/plating,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "tbW" = (
 /obj/machinery/computer/secure_data{
 	dir = 8;
@@ -66735,9 +66715,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "tco" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -74369,9 +74347,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "vvf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -77807,9 +77783,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "wtF" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -79157,9 +79131,7 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/medical/first_aid_station{
-	name = "\improper Engineering First-Aid"
-	})
+/area/medical/first_aid_station)
 "wQL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
