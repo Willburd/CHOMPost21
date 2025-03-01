@@ -824,6 +824,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_SUBSTATION
+	base_turf = /turf/space
 
 //
 // Elevator -------------------------------------------------------
