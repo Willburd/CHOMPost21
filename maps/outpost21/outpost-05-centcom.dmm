@@ -9540,7 +9540,6 @@
 "eKN" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -11514,7 +11513,6 @@
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/toy/plushie/pillow/red,
 /obj/item/bedsheet/pillow/red,
-/obj/structure/bed/pillowpile/black,
 /obj/random/plushie,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
@@ -11684,7 +11682,6 @@
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "fJS" = (
-/obj/structure/table/steel,
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -30
@@ -11695,6 +11692,7 @@
 /obj/item/gps/science,
 /obj/item/gps/science,
 /obj/item/gps/science,
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "fJU" = (
@@ -19511,7 +19509,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "jph" = (
-/obj/structure/table/steel,
 /obj/item/shield_diffuser,
 /obj/item/stack/material/glass{
 	amount = 50;
@@ -19526,6 +19523,7 @@
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 8
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "jps" = (
@@ -21695,7 +21693,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
 "kxs" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 10
 	},
@@ -21708,6 +21705,7 @@
 	pixel_x = -21
 	},
 /obj/machinery/recharger,
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "kxL" = (
@@ -23029,11 +23027,11 @@
 /area/specialty/redspace)
 "lkY" = (
 /obj/structure/table/steel,
-/obj/structure/table/steel,
 /obj/item/storage/bag/circuits/basic,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 4
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "lld" = (
@@ -24894,14 +24892,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "mtO" = (
-/obj/structure/table/steel,
-/obj/structure/table/steel,
 /obj/item/electronic_assembly/large{
 	pixel_y = 6
 	},
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 4
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "muQ" = (
@@ -28994,16 +28991,6 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/specialty/redspace)
-"oEP" = (
-/obj/structure/table/steel,
-/obj/item/electronic_assembly/large{
-	pixel_y = 6
-	},
-/obj/effect/floor_decal/milspec/color/emerald/half{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/specialty/redspace)
 "oEU" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -31846,7 +31833,6 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "qlV" = (
-/obj/structure/table/steel,
 /obj/item/storage/bag/circuits/basic,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 5
@@ -31855,6 +31841,7 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "qmb" = (
@@ -35036,13 +35023,13 @@
 	},
 /area/centcom/command)
 "rSH" = (
-/obj/structure/table/steel,
 /obj/item/integrated_electronics/debugger{
 	pixel_x = -5
 	},
 /obj/item/integrated_electronics/wirer{
 	pixel_x = 5
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "rSN" = (
@@ -40745,7 +40732,6 @@
 /obj/item/toy/plushie/pillow,
 /obj/item/toy/plushie/pillow/green,
 /obj/item/toy/plushie/pillow/red,
-/obj/structure/bed/pillowpile/orange,
 /obj/random/plushie,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
@@ -42493,10 +42479,10 @@
 	},
 /area/centcom/security)
 "wdm" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 8
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "wdo" = (
@@ -43943,8 +43929,8 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/centcom)
 "wPh" = (
-/obj/structure/table/steel,
 /obj/item/tool/crowbar/brass,
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "wPq" = (
@@ -44400,11 +44386,11 @@
 /turf/simulated/floor/carpet,
 /area/specialty/redspace)
 "xaB" = (
-/obj/structure/table/steel,
 /obj/item/integrated_circuit_printer,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 4
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "xaF" = (
@@ -106389,7 +106375,7 @@ iuH
 gbD
 qlV
 xaB
-oEP
+mtO
 lkY
 xaB
 mtO
