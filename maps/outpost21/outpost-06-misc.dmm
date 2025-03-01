@@ -1756,15 +1756,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
-"kj" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/mercenary)
 "km" = (
 /obj/structure/closet,
 /turf/simulated/shuttle/floor/darkred,
@@ -25566,7 +25557,7 @@ hl
 hl
 fR
 jE
-kj
+jE
 jE
 jE
 hl

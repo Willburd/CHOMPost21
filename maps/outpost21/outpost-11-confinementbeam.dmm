@@ -889,10 +889,6 @@
 	c_tag = "PTL - Primary Power Routing";
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "PTL - Primary Power Routing";
-	dir = 4
-	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "cI" = (
@@ -3679,11 +3675,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
-"lN" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/space,
 /area/offworld/confinementbeam/exterior)
 "lP" = (
 /obj/effect/floor_decal/corner/orange{
@@ -54305,7 +54296,7 @@ Po
 Po
 Po
 rc
-lN
+rc
 Af
 Af
 eu

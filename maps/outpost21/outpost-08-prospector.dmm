@@ -6941,12 +6941,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/space)
-"RW" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/obj/structure/grille/rustic,
-/turf/space,
-/area/space)
 "RY" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
@@ -34764,9 +34758,9 @@ by
 uO
 Pp
 Pp
-RW
-RW
-RW
+Pi
+Pi
+Pi
 Pp
 Pp
 Pp
@@ -34926,9 +34920,9 @@ by
 OW
 Pp
 Pp
-RW
+Pi
 tt
-RW
+Pi
 Pp
 Pp
 Pp
@@ -35088,9 +35082,9 @@ by
 OW
 Pp
 Pp
-RW
+Pi
 qx
-RW
+Pi
 Pp
 Pp
 Pp

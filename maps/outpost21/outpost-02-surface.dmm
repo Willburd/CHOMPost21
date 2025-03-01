@@ -10342,6 +10342,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
+"bgZ" = (
+/obj/item/wheelchair/motor/small,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
 "bhs" = (
 /obj/structure/table/glass,
 /obj/item/storage/box/monkeycubes,
@@ -10953,7 +10957,6 @@
 "bre" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -13814,6 +13817,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/bed/chair/wheelchair,
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
 "cmJ" = (
@@ -20023,7 +20027,6 @@
 "eqe" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
@@ -26240,8 +26243,8 @@
 	},
 /area/quartermaster/storage)
 "guO" = (
-/obj/structure/table/standard,
 /obj/item/assembly/igniter,
+/obj/structure/table/standard,
 /turf/simulated/floor/reinforced,
 /area/rnd/otherlab)
 "guX" = (
@@ -35689,8 +35692,6 @@
 /turf/simulated/wall/durasteel,
 /area/muriki/processor)
 "jmD" = (
-/obj/structure/table/reinforced,
-/obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
@@ -35702,6 +35703,7 @@
 	pixel_x = -28;
 	pixel_y = -4
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "jmP" = (
@@ -38451,6 +38453,16 @@
 /obj/structure/ore_box,
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
+"kby" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/structure/bed/chair/wheelchair,
+/turf/simulated/floor/tiled/white,
+/area/medical/reception)
 "kbI" = (
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -48677,11 +48689,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
 "nmn" = (
-/obj/structure/bed/chair/wheelchair,
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/structure/bed/chair/wheelchair/smallmotor,
+/obj/structure/bed/chair/wheelchair,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "nmx" = (
@@ -49092,6 +49103,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/structure/bed/chair/wheelchair,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "nsQ" = (
@@ -58042,8 +58054,6 @@
 /turf/simulated/floor/outdoors/rocks/muriki,
 /area/muriki/grounds/terraform)
 "qqC" = (
-/obj/structure/table/standard,
-/obj/structure/table/standard,
 /obj/item/stack/cable_coil,
 /obj/item/multitool,
 /obj/machinery/cell_charger,
@@ -58055,6 +58065,7 @@
 	charge = 100;
 	maxcharge = 15000
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/reinforced,
 /area/rnd/otherlab)
 "qqG" = (
@@ -58353,6 +58364,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 5
 	},
+/obj/structure/bed/chair/wheelchair,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "quL" = (
@@ -61429,7 +61441,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
 "rts" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
@@ -61443,6 +61454,7 @@
 	pixel_x = -33;
 	listening = 1
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "rtv" = (
@@ -62494,13 +62506,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/disposal)
 "rML" = (
-/obj/item/wheelchair/motor/small,
-/obj/item/wheelchair/motor/small,
-/obj/item/wheelchair/motor/small,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/bed/chair/wheelchair,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
 "rMS" = (
@@ -65470,8 +65477,6 @@
 	pixel_y = 3;
 	req_access = list(2)
 	},
-/obj/structure/table/reinforced,
-/obj/structure/table/steel,
 /obj/machinery/button/remote/blast_door{
 	id = "security_lockdown";
 	name = "Security Lockdown";
@@ -65483,6 +65488,7 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "sJm" = (
@@ -66399,6 +66405,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/bed/chair/wheelchair,
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
 "sXy" = (
@@ -122471,8 +122478,8 @@ pyE
 leU
 kNy
 hAj
-sPE
-sPE
+bgZ
+bgZ
 ozu
 sPE
 wKG
@@ -127190,7 +127197,7 @@ tFU
 fQD
 pSX
 hFc
-hWV
+kby
 odT
 omv
 wbf
