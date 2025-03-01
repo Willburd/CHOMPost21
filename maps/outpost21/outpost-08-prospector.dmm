@@ -326,8 +326,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/grille/rustic,
@@ -1441,8 +1439,6 @@
 	icon_state = "1-8"
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -1470,8 +1466,6 @@
 /area/space)
 "jN" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -2225,8 +2219,6 @@
 /area/space)
 "oD" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -3331,7 +3323,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/space)
 "vF" = (
@@ -3823,12 +3814,8 @@
 /turf/simulated/floor/plating,
 /area/space)
 "yt" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
+/obj/structure/bed/chair/wheelchair/smallmotor,
+/turf/simulated/floor/tiled/steel,
 /area/space)
 "yy" = (
 /obj/machinery/disposal,
@@ -5154,8 +5141,6 @@
 	dir = 1
 	},
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -5816,8 +5801,6 @@
 "KH" = (
 /obj/structure/railing,
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
@@ -6494,8 +6477,6 @@
 /area/space)
 "ON" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable{
@@ -6620,7 +6601,6 @@
 /area/space)
 "Pz" = (
 /obj/structure/bed/chair/wheelchair,
-/obj/structure/bed/chair/wheelchair/smallmotor,
 /turf/simulated/floor/tiled/steel,
 /area/space)
 "PE" = (
@@ -6823,8 +6803,6 @@
 /area/space)
 "QW" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/railing{
@@ -7914,7 +7892,6 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
-/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/space)
 "WX" = (
@@ -8282,8 +8259,6 @@
 /area/space)
 "ZF" = (
 /obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/railing,
@@ -34790,7 +34765,7 @@ uO
 Pp
 Pp
 RW
-Pi
+RW
 RW
 Pp
 Pp
@@ -34951,9 +34926,9 @@ by
 OW
 Pp
 Pp
-Pi
+RW
 tt
-Pi
+RW
 Pp
 Pp
 Pp
@@ -35113,9 +35088,9 @@ by
 OW
 Pp
 Pp
-Pi
+RW
 qx
-Pi
+RW
 Pp
 Pp
 Pp
@@ -56168,7 +56143,7 @@ lD
 lD
 lD
 lD
-lD
+yt
 wj
 qU
 qs
@@ -59089,7 +59064,7 @@ id
 lk
 Gd
 Hc
-yt
+Lm
 RG
 HU
 RG
@@ -59251,7 +59226,7 @@ id
 id
 Oz
 Wr
-yt
+Lm
 RG
 rn
 QE
