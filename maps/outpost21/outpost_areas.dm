@@ -1850,6 +1850,7 @@
 /area/security/kennels
 	name = "\improper Security Kennels"
 	icon_state = "red2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT // Lets avoid the bowls stacking for the otties
 	base_turf = /turf/simulated/open/force_indoor
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
