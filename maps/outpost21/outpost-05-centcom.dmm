@@ -25139,7 +25139,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "mAB" = (
-/obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
@@ -40910,12 +40909,8 @@
 /area/specialty/redspace)
 "vhb" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -43875,7 +43870,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -45832,6 +45826,20 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/plating,
+/area/specialty/redspace)
+"xKk" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "xKF" = (
@@ -99550,7 +99558,7 @@ epa
 epa
 epa
 ylH
-vhb
+tdE
 ulP
 cRm
 cRm
@@ -99875,8 +99883,8 @@ ylH
 ylH
 epa
 bQe
-qIu
-fiW
+xKk
+vhb
 bQe
 bQe
 epa
@@ -100371,7 +100379,7 @@ ylH
 ylH
 ylH
 ylH
-iDJ
+eif
 myJ
 vYr
 oNT
@@ -100533,7 +100541,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 xqy
 oNT
@@ -100695,7 +100703,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 vYr
 oNT
@@ -100857,7 +100865,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 rsw
 oNT
@@ -101019,7 +101027,7 @@ ylH
 ylH
 ylH
 ylH
-fRk
+xJV
 myJ
 vYr
 oNT
@@ -101829,11 +101837,11 @@ ylH
 ylH
 ylH
 ylH
-gZD
+eif
 myJ
 vYr
 oNT
-gZD
+eif
 ylH
 ylH
 epa
@@ -102643,7 +102651,7 @@ gON
 tdY
 vYr
 oNT
-vhb
+tdE
 ylH
 epa
 epa
@@ -102807,7 +102815,7 @@ vYr
 jjp
 bQe
 bQe
-vhb
+tdE
 det
 bQe
 bQe
