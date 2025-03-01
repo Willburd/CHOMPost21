@@ -60,6 +60,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 /datum/internal_wiki/main/proc/get_page_ore(var/search)
 	return ores[search]
 
+/datum/internal_wiki/main/proc/get_appliances()
+	return list("Simple","Microwave","Fryer","Oven","Grill","Candy Maker","Cereal Maker")
 /datum/internal_wiki/main/proc/get_searchcache_food(var/appliance)
 	return searchcache_foodrecipe[appliance]
 /datum/internal_wiki/main/proc/get_searchcache_drink()

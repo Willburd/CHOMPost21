@@ -43,7 +43,7 @@
 		ui.open()
 
 /obj/machinery/librarywikicomp/tgui_data(mob/user)
-	var/data[0]
+	var/data = list()
 	if(GLOB.game_wiki)
 		if(!crash)
 			// search page
@@ -51,32 +51,42 @@
 			data["searchmode"] = searchmode
 			data["ad_string1"] = current_ad1
 			data["ad_string2"] = current_ad2
-			// get searches
-			data["search"] = list()
 			data["appliance"] = appliance
-			if(searchmode == "Food Recipes")
-				if(appliance)
-					data["search"] = GLOB.game_wiki.get_searchcache_food(appliance)
+			// get searches
+			switch(searchmode)
+				if("Food Recipes")
+					if(appliance)
+						data["search"] = GLOB.game_wiki.get_searchcache_food(appliance)
+					else
+						var/list/options = list()
+						for(var/app in GLOB.game_wiki.get_appliances())
+							if(!isnull(GLOB.game_wiki.get_searchcache_food("[app]")))
+								options.Add("[app]")
+						data["search"] = options
+
+				if("Drink Recipes")
+					data["search"] = GLOB.game_wiki.get_searchcache_drink()
+
+				if("Chemistry")
+					data["search"] = GLOB.game_wiki.get_searchcache_chem()
+
+				if("Botany")
+					data["search"] = GLOB.game_wiki.get_searchcache_seed()
+
+				if("Catalogs")
+					data["search"] = GLOB.game_wiki.get_searchcache_catalog()
+
+				if("Materials")
+					data["search"] = GLOB.game_wiki.get_searchcache_material()
+
+				if("Particle Physics")
+					data["search"] = GLOB.game_wiki.get_searchcache_particle()
+
+				if("Ores")
+					data["search"] = GLOB.game_wiki.get_searchcache_ore()
+
 				else
-					var/list/options = list()
-					for(var/app in list("Simple","Microwave","Fryer","Oven","Grill","Candy Maker","Cereal Maker"))
-						if(!isnull(GLOB.game_wiki.get_searchcache_food("[app]")))
-							options.Add("[app]")
-					data["search"] = options
-			if(searchmode == "Drink Recipes")
-				data["search"] = GLOB.game_wiki.get_searchcache_drink()
-			if(searchmode == "Chemistry")
-				data["search"] = GLOB.game_wiki.get_searchcache_chem()
-			if(searchmode == "Botany")
-				data["search"] = GLOB.game_wiki.get_searchcache_seed()
-			if(searchmode == "Catalogs")
-				data["search"] = GLOB.game_wiki.get_searchcache_catalog()
-			if(searchmode == "Materials")
-				data["search"] = GLOB.game_wiki.get_searchcache_material()
-			if(searchmode == "Particle Physics")
-				data["search"] = GLOB.game_wiki.get_searchcache_particle()
-			if(searchmode == "Ores")
-				data["search"] = GLOB.game_wiki.get_searchcache_ore()
+					data["search"] = list()
 
 			// display message
 			data["title"] = doc_title
@@ -103,15 +113,9 @@
 		if("closesearch")
 			if(!crash)
 				searchmode = null
-				doc_title = "Click a search entry!"
-				doc_body = ""
-			. = TRUE
-
-		if("closeappliance")
-			if(!crash)
-				doc_title = "Click a search entry!"
-				doc_body = ""
 				appliance = null
+				doc_title = "Click a search entry!"
+				doc_body = ""
 			. = TRUE
 
 		if("foodsearch")

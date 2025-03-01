@@ -36,15 +36,9 @@ export const PublicLibrary = (props, context) => {
         <Section title="Bingle Search">
           {(!!searchmode && (
             <Section>
-              {(!!appliance && (
-                <Button icon="arrow-left" onClick={() => act('closeappliance')}>
-                  Back
-                </Button>
-              )) || (
-                <Button icon="arrow-left" onClick={() => act('closesearch')}>
-                  Back
-                </Button>
-              )}
+              <Button icon="arrow-left" onClick={() => act('closesearch')}>
+                Back
+              </Button>
               {!!print && (
                 <Button icon="print" onClick={() => act('print')}>
                   Print
