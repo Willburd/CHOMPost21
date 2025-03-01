@@ -46,9 +46,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ah" = (
 /obj/machinery/mech_recharger,
 /turf/unsimulated/floor{
@@ -171,12 +169,10 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -332,18 +328,14 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "bT" = (
 /obj/machinery/computer/station_alert,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "bZ" = (
 /turf/simulated/floor/lava,
 /area/specialty/hell)
@@ -364,9 +356,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "cw" = (
 /obj/machinery/crystalexperimenter,
 /turf/unsimulated/floor{
@@ -393,9 +383,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "cH" = (
 /obj/structure/lattice,
 /obj/structure/grille,
@@ -422,9 +410,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "dj" = (
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp{
@@ -498,9 +484,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "dO" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/rddouble,
@@ -531,9 +515,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ea" = (
 /obj/effect/landmark{
 	name = "Syndicate-Spawn"
@@ -672,7 +654,6 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -771,9 +752,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "fD" = (
 /obj/effect/landmark/start/clown,
 /turf/simulated/floor/carpet/geo,
@@ -804,9 +783,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "fO" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -935,9 +912,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "gi" = (
 /obj/machinery/transhuman/resleever/abductor{
 	dir = 1
@@ -1149,9 +1124,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "hx" = (
 /obj/machinery/photocopier,
 /turf/unsimulated/floor{
@@ -1236,9 +1209,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "hL" = (
 /obj/item/gun/magic/firestaff/vrwizard/lighting,
 /obj/structure/table/steel_reinforced,
@@ -1326,9 +1297,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "hY" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire,
 /turf/simulated/floor/lava,
@@ -1341,9 +1310,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "id" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -1387,9 +1354,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "it" = (
 /obj/machinery/computer/message_monitor{
 	dir = 8;
@@ -1519,9 +1484,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "jb" = (
 /obj/structure/table/alien,
 /obj/item/toy/desk/fan,
@@ -1529,9 +1492,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "jc" = (
 /obj/machinery/door/window/northright{
 	name = "Flight Deck";
@@ -1590,9 +1551,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "jo" = (
 /obj/machinery/shower{
 	pixel_y = 32
@@ -2354,9 +2313,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "np" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
@@ -2453,9 +2410,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "nF" = (
 /obj/item/gun/magic/firestaff/vrwizard/fire,
 /obj/structure/table/steel_reinforced,
@@ -2576,9 +2531,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "nW" = (
 /obj/structure/table/rack,
 /obj/item/clothing/accessory/storage/white_vest,
@@ -2802,9 +2755,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ph" = (
 /obj/structure/table/standard,
 /obj/item/material/knife{
@@ -2868,8 +2819,6 @@
 /area/shuttle/mercenary)
 "pq" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -2913,18 +2862,14 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pu" = (
 /obj/structure/table/alien,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pv" = (
 /obj/structure/table/rack/steel,
 /obj/structure/window/phoronreinforced{
@@ -2939,9 +2884,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "py" = (
 /obj/structure/table/alien/blue,
 /turf/simulated/floor/carpet/gaycarpet,
@@ -2964,18 +2907,14 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pE" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pH" = (
 /obj/structure/sink{
 	pixel_y = 16
@@ -2988,9 +2927,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pK" = (
 /obj/structure/sink{
 	pixel_y = 16
@@ -3002,9 +2939,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -3029,9 +2964,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pS" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/carpet/turcarpet,
@@ -3052,9 +2985,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "pX" = (
 /obj/structure/table/rack/steel,
 /obj/machinery/door/window/northright,
@@ -3070,9 +3001,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qb" = (
 /obj/machinery/door/window/northright,
 /obj/structure/window/phoronreinforced{
@@ -3086,9 +3015,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qd" = (
 /obj/structure/table/rack/steel,
 /obj/machinery/door/window/northright,
@@ -3119,9 +3046,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qe" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/lava,
@@ -3162,9 +3087,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qn" = (
 /obj/structure/closet{
 	name = "custodial"
@@ -3203,9 +3126,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qs" = (
 /obj/machinery/door/window{
 	dir = 8;
@@ -3243,9 +3164,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qA" = (
 /obj/structure/bed/chair/bay/comfy/teal,
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -3268,18 +3187,14 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qG" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qH" = (
 /obj/item/soap/syndie,
 /obj/structure/table/alien,
@@ -3287,9 +3202,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "qM" = (
 /obj/structure/simple_door{
 	name = "THE FABLUTORIUM"
@@ -3473,9 +3386,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "rs" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -3518,9 +3429,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "rw" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -3569,9 +3478,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "rD" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -3612,9 +3519,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "rF" = (
 /obj/structure/table/rack,
 /obj/item/suit_cooling_unit,
@@ -3630,8 +3535,6 @@
 /area/planet/clown)
 "rI" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/table/alien/blue,
@@ -3670,9 +3573,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "rL" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -3792,14 +3693,10 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sl" = (
 /turf/simulated/mineral,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sm" = (
 /obj/structure/table/rack/steel,
 /obj/item/card/emag,
@@ -3816,9 +3713,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sn" = (
 /obj/item/farmbot_arm_assembly,
 /turf/unsimulated/floor{
@@ -3839,9 +3734,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sr" = (
 /obj/machinery/shower{
 	dir = 1;
@@ -3855,9 +3748,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ss" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -3893,9 +3784,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sz" = (
 /obj/effect/step_trigger/lost_in_space/bluespace,
 /turf/space/bluespace,
@@ -3979,9 +3868,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sP" = (
 /obj/item/rig/vox/civilian,
 /obj/item/rig/vox/civilian,
@@ -3997,9 +3884,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sR" = (
 /obj/item/rig/vox/stealth,
 /obj/item/rig/vox/stealth,
@@ -4015,9 +3900,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sU" = (
 /obj/item/spacecash/c500,
 /obj/item/spacecash/c500,
@@ -4060,9 +3943,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "sZ" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-24"
@@ -4121,8 +4002,6 @@
 /area/shuttle/mercenary)
 "tu" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/porta_turret/alien{
@@ -4144,9 +4023,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ty" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -4171,9 +4048,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "tM" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4307,45 +4182,35 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uo" = (
 /obj/machinery/door/airlock/alien/public,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "up" = (
 /obj/structure/closet/alien,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uq" = (
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ur" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "us" = (
 /obj/item/clothing/shoes/sandal/marisa{
 	desc = "A set of fancy shoes that are as functional as they are comfortable.";
@@ -4369,9 +4234,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uu" = (
 /obj/machinery/vending/magivend,
 /turf/unsimulated/floor{
@@ -4393,18 +4256,14 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uA" = (
 /obj/structure/dispenser/phoron,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uF" = (
 /obj/machinery/crystal,
 /turf/unsimulated/floor{
@@ -4421,28 +4280,20 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uI" = (
 /obj/structure/lattice,
 /obj/structure/railing/grey{
 	dir = 8
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uJ" = (
 /turf/simulated/shuttle/plating/airless,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uK" = (
 /turf/simulated/shuttle/wall/alien/hard_corner,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uM" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -4455,9 +4306,7 @@
 	dir = 4
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "uQ" = (
 /obj/structure/sink{
 	dir = 4;
@@ -4493,9 +4342,7 @@
 "va" = (
 /obj/structure/lattice,
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "vc" = (
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
@@ -4699,8 +4546,6 @@
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alien/blue{
@@ -4737,8 +4582,6 @@
 /area/wizard_station)
 "wk" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -4748,8 +4591,6 @@
 /area/shuttle/skipjack)
 "wn" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -4854,9 +4695,7 @@
 /area/shuttle/skipjack)
 "wR" = (
 /turf/simulated/shuttle/wall/alien,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "wS" = (
 /obj/machinery/chem_master,
 /obj/structure/table/alien,
@@ -4902,17 +4741,13 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "wZ" = (
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "xa" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -5175,8 +5010,6 @@
 /area/wizard_station)
 "xV" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alien/blue{
@@ -5198,8 +5031,6 @@
 /area/shuttle/skipjack)
 "ya" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5209,8 +5040,6 @@
 /area/syndicate_mothership)
 "yc" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5258,9 +5087,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ym" = (
 /obj/machinery/door/airlock/angled_bay/ascent{
 	name = "THE PRANKENPORTER"
@@ -5385,8 +5212,6 @@
 /area/planet/clown)
 "yI" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5408,16 +5233,13 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5428,11 +5250,9 @@
 "yL" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5442,13 +5262,9 @@
 /area/shuttle/skipjack)
 "yN" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5478,13 +5294,9 @@
 /area/wizard_station)
 "yU" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 8;
 	icon_state = "2-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5494,8 +5306,6 @@
 /area/shuttle/skipjack)
 "yW" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alien/blue{
@@ -5513,8 +5323,6 @@
 "zd" = (
 /obj/machinery/door/airlock/alien/blue,
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5531,8 +5339,6 @@
 /area/wizard_station)
 "zj" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -5578,11 +5384,9 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -5626,11 +5430,9 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6027,13 +5829,9 @@
 /area/shuttle/skipjack)
 "AZ" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6053,8 +5851,6 @@
 	name = "Bridge"
 	},
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /turf/simulated/shuttle/floor/alien{
@@ -6064,13 +5860,9 @@
 /area/shuttle/skipjack)
 "Bd" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6089,8 +5881,6 @@
 /area/planet/clown)
 "Bf" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
 	icon_state = "1-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6132,9 +5922,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Bk" = (
 /obj/structure/table/marble,
 /obj/machinery/light{
@@ -6213,7 +6001,6 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /obj/structure/cable/cyan,
@@ -6457,13 +6244,9 @@
 /area/shuttle/skipjack)
 "Dv" = (
 /obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
 	icon_state = "2-4"
 	},
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
 	icon_state = "1-4"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -6497,9 +6280,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "DQ" = (
 /obj/machinery/sleep_console{
 	dir = 4
@@ -6538,9 +6319,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Ec" = (
 /obj/structure/table/alien/blue,
 /obj/machinery/light,
@@ -6657,7 +6436,6 @@
 	locked = 0
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/plating/airless,
@@ -6675,8 +6453,6 @@
 "Fj" = (
 /obj/machinery/door/airlock/alien/blue,
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6750,7 +6526,6 @@
 	pixel_y = 32
 	},
 /obj/structure/cable/cyan{
-	d2 = 2;
 	icon_state = "0-2"
 	},
 /obj/item/storage/backpack/dufflebag/syndie/med,
@@ -6782,8 +6557,6 @@
 /area/alien)
 "Gr" = (
 /obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -6984,7 +6757,6 @@
 	name = "Skipjack Blast Shielding"
 	},
 /obj/structure/cable/cyan{
-	d2 = 4;
 	icon_state = "0-4"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -7002,9 +6774,7 @@
 	},
 /obj/machinery/porta_turret/alien/destroyed,
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Iv" = (
 /obj/item/slime_extract/rainbow,
 /obj/item/slime_extract/rainbow,
@@ -7045,9 +6815,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Jk" = (
 /turf/unsimulated/wall,
 /area/prison/solitary)
@@ -7089,9 +6857,7 @@
 /area/wizard_station)
 "JR" = (
 /turf/simulated/shuttle/wall,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "JT" = (
 /obj/structure/undies_wardrobe,
 /turf/unsimulated/floor{
@@ -7112,54 +6878,40 @@
 	dir = 1
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "JW" = (
 /turf/simulated/shuttle/wall/hard_corner,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "JX" = (
 /obj/structure/table/standard,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "JY" = (
 /obj/structure/closet/wardrobe/pink,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "JZ" = (
 /obj/structure/closet/wardrobe/white,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Kc" = (
 /obj/structure/closet/wardrobe/green,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Kd" = (
 /turf/unsimulated/floor{
 	dir = 1;
 	icon_state = "vault"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Ke" = (
 /obj/effect/landmark/start{
 	name = "wizard"
@@ -7216,41 +6968,31 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Ks" = (
 /obj/structure/closet/wardrobe/black,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Ky" = (
 /obj/structure/closet/wardrobe/pjs,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "KB" = (
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "KH" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/mirror,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "KI" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/mask/balaclava/tactical,
@@ -7258,41 +7000,31 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "KK" = (
 /obj/structure/undies_wardrobe,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "KL" = (
 /obj/structure/closet/wardrobe/yellow,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "KM" = (
 /obj/structure/closet/wardrobe/suit,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "KO" = (
 /obj/item/stool/padded,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "KR" = (
 /obj/structure/simple_door{
 	name = "THE FLAVORIUM"
@@ -7311,16 +7043,12 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "KX" = (
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "Lc" = (
 /obj/item/paper,
 /turf/simulated/floor/indoorrocks,
@@ -7340,9 +7068,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Le" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -7353,33 +7079,25 @@
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "Lm" = (
 /obj/item/stool/padded,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Ln" = (
 /obj/structure/closet/wardrobe/mixed,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Lo" = (
 /obj/structure/closet/wardrobe/xenos,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Lp" = (
 /obj/structure/bed/chair/modern_chair{
 	dir = 4
@@ -7393,9 +7111,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Ls" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -7405,9 +7121,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "Lt" = (
 /obj/machinery/door/blast/shutters{
 	dir = 8;
@@ -7418,9 +7132,7 @@
 	dir = 1;
 	icon_state = "vault"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "LP" = (
 /obj/structure/toilet{
 	dir = 4
@@ -7428,9 +7140,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "LR" = (
 /obj/machinery/door/airlock/silver{
 	name = "Toilet"
@@ -7438,9 +7148,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "LS" = (
 /obj/machinery/photocopier/faxmachine,
 /turf/simulated/floor/indoorrocks,
@@ -7498,9 +7206,7 @@
 	dir = 8
 	},
 /turf/simulated/shuttle/plating,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "Ml" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	req_access = list(160)
@@ -7508,40 +7214,25 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
-"Mm" = (
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "MD" = (
 /obj/machinery/computer/teleporter,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "ME" = (
 /obj/machinery/teleport/station,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "MG" = (
 /obj/machinery/teleport/hub,
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
 	},
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "MI" = (
 /obj/structure/sink{
 	dir = 8;
@@ -7554,9 +7245,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "MJ" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -7565,27 +7254,21 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "MK" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "MM" = (
 /obj/structure/table/standard,
 /obj/item/soap/deluxe,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "MN" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4
@@ -7600,9 +7283,7 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "MT" = (
 /obj/structure/table/alien,
 /turf/simulated/floor/carpet/geo,
@@ -7616,9 +7297,7 @@
 	dir = 1;
 	icon_state = "vault"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "Nj" = (
 /obj/item/robot_parts/robot_component/camera,
 /obj/item/robot_parts/robot_component/binary_communication_device,
@@ -7632,9 +7311,7 @@
 	icon_state = "propulsion_l"
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "Nq" = (
 /obj/structure/table/alien,
 /obj/item/toy/figure/clown,
@@ -7643,17 +7320,13 @@
 "Nr" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "Nu" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_r"
 	},
 /turf/space,
-/area/syndicate_mothership{
-	name = "\improper Ninja Base"
-	})
+/area/syndicate_mothership)
 "ND" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
@@ -7665,9 +7338,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "NL" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -7678,9 +7349,7 @@
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
+/area/syndicate_mothership)
 "NO" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -8169,8 +7838,6 @@
 /area/wizard_station)
 "Qy" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/structure/bed/chair/bay/comfy/captain{
@@ -8946,11 +8613,6 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"Vi" = (
-/turf/unsimulated/wall,
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
 "Vr" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -9173,15 +8835,12 @@
 /area/planet/clown)
 "WF" = (
 /obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
 	icon_state = "4-8"
 	},
 /obj/machinery/power/emitter/antique{
 	dir = 4
 	},
 /obj/structure/cable/cyan{
-	d2 = 8;
 	icon_state = "0-8"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -9278,13 +8937,6 @@
 /obj/item/gun/projectile/revolver/mateba,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"WZ" = (
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
 "Xb" = (
 /obj/structure/table/marble,
 /obj/item/toy/figure/mime,
@@ -9675,11 +9327,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"YN" = (
-/turf/unsimulated/wall,
-/area/syndicate_mothership{
-	name = "\improper Trader Base"
-	})
 "YO" = (
 /obj/effect/landmark{
 	name = "endgame_exit"
@@ -9702,9 +9349,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "YU" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
@@ -9739,9 +9384,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "Zc" = (
 /obj/structure/table/glass,
 /obj/machinery/computer/security/telescreen/entertainment{
@@ -9851,9 +9494,7 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/syndicate_mothership{
-	name = "\improper Raider Base"
-	})
+/area/syndicate_mothership)
 "ZP" = (
 /obj/item/bananapeel,
 /obj/item/bikehorn/rubberducky,
@@ -10064,7 +9705,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 sl
 uK
 wR
@@ -10226,7 +9867,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 sl
 wR
 ZL
@@ -10388,7 +10029,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 sl
 wR
 yk
@@ -10550,7 +10191,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 wR
 wR
 wY
@@ -10712,7 +10353,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 wR
 Zb
 wZ
@@ -10874,7 +10515,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 wR
 sx
 wZ
@@ -11036,7 +10677,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 wR
 wR
 uK
@@ -11198,7 +10839,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 sl
 wR
 fN
@@ -11360,7 +11001,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 sl
 wR
 pu
@@ -11522,7 +11163,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 sl
 wR
 pu
@@ -11684,7 +11325,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 sl
 wR
 hv
@@ -11846,7 +11487,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 sl
 uK
 uK
@@ -12008,7 +11649,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -12170,7 +11811,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -12332,7 +11973,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -12494,7 +12135,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -12656,7 +12297,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -12818,7 +12459,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -12980,7 +12621,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -13142,7 +12783,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 sl
 sl
 wR
@@ -13304,7 +12945,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 wR
 wR
 wR
@@ -13466,7 +13107,7 @@ Jk
 qf
 Jk
 Tc
-Vi
+yb
 wR
 bR
 wZ
@@ -13628,7 +13269,7 @@ Jk
 ql
 Jk
 Tc
-Vi
+yb
 wR
 bT
 fC
@@ -13790,7 +13431,7 @@ Jk
 Jk
 Jk
 Tc
-Vi
+yb
 wR
 ch
 wZ
@@ -13952,7 +13593,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 cG
 wZ
@@ -14114,7 +13755,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 wR
 wR
@@ -14276,7 +13917,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 dg
 pu
@@ -14438,7 +14079,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 pu
 wZ
@@ -14600,7 +14241,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 Ea
 wZ
@@ -14762,7 +14403,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 dG
 wZ
@@ -14924,7 +14565,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 dY
 wZ
@@ -15086,7 +14727,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 pu
 pu
@@ -15248,7 +14889,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 wR
 wR
 wR
@@ -15410,7 +15051,7 @@ mN
 mN
 mN
 Tc
-Vi
+yb
 sl
 sl
 sl
@@ -27278,16 +26919,16 @@ mN
 mN
 mN
 mN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
 mN
 mN
 mN
@@ -27440,16 +27081,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 JX
 JX
 JX
-YN
+yb
 LP
-YN
+yb
 MI
 MI
-YN
+yb
 mN
 mN
 mN
@@ -27602,16 +27243,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 JY
 KB
 KB
-YN
+yb
 LR
-YN
-Mm
-Mm
-YN
+yb
+hc
+hc
+yb
 mN
 mN
 mN
@@ -27764,16 +27405,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 JZ
 KB
 KB
 KB
 KB
 Ml
-Mm
+hc
 MM
-YN
+yb
 mN
 mN
 mN
@@ -27926,16 +27567,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 Kc
 KB
 Lm
 Lm
 KB
-Mm
-Mm
+hc
+hc
 MP
-YN
+yb
 mN
 mN
 mN
@@ -28088,16 +27729,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 Kr
 KB
 KB
 KB
 KB
-YN
-Mm
-Mm
-YN
+yb
+hc
+hc
+yb
 mN
 mN
 mN
@@ -28250,16 +27891,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 Ks
 KL
 Ln
 KB
 KB
-YN
+yb
 MJ
 MJ
-YN
+yb
 mN
 mN
 mN
@@ -28412,16 +28053,16 @@ mN
 mN
 mN
 mN
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
 KB
 KB
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
 mN
 mN
 mN
@@ -28574,7 +28215,7 @@ mN
 mN
 mN
 mN
-YN
+yb
 Ky
 KM
 Lo
@@ -28583,7 +28224,7 @@ KB
 KB
 KB
 KB
-YN
+yb
 mN
 mN
 mN
@@ -28736,19 +28377,19 @@ mN
 mN
 mN
 mN
-YN
+yb
 KB
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
+sg
+sg
+sg
+sg
+sg
+sg
 KB
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
 Ao
 Sw
 Ao
@@ -28898,14 +28539,14 @@ mN
 mN
 mN
 mN
-YN
+yb
 KB
-WZ
+sg
 Lq
 Lq
 Lq
 Lq
-WZ
+sg
 KB
 KB
 KB
@@ -29060,14 +28701,14 @@ mN
 mN
 mN
 mN
-YN
+yb
 KB
-WZ
+sg
 Lq
 Lq
 Lq
 Lq
-WZ
+sg
 KB
 KB
 ND
@@ -29222,19 +28863,19 @@ mN
 mN
 mN
 mN
-YN
+yb
 KB
 KO
 KO
-WZ
-WZ
+sg
+sg
 KO
 KO
 KB
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
 Ao
 Sw
 Ao
@@ -29384,7 +29025,7 @@ mN
 mN
 mN
 mN
-YN
+yb
 KB
 KB
 KB
@@ -29393,7 +29034,7 @@ KB
 KB
 KB
 KB
-YN
+yb
 mN
 mN
 mN
@@ -29546,16 +29187,16 @@ mN
 mN
 mN
 mN
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
 Lt
 Lt
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
 mN
 mN
 mN
@@ -29708,16 +29349,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 Ni
 Kd
-WZ
-WZ
-WZ
-WZ
+sg
+sg
+sg
+sg
 Kd
 Ni
-YN
+yb
 mN
 mN
 mN
@@ -29870,16 +29511,16 @@ mN
 mN
 mN
 mN
-YN
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-YN
+yb
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+yb
 mN
 mN
 mN
@@ -30032,16 +29673,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 Ni
 Kd
-WZ
-WZ
-WZ
-WZ
+sg
+sg
+sg
+sg
 Ni
 Ni
-YN
+yb
 mN
 mN
 mN
@@ -30194,16 +29835,16 @@ mN
 mN
 mN
 mN
-YN
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-YN
+yb
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+yb
 mN
 mN
 mN
@@ -30356,16 +29997,16 @@ mN
 mN
 mN
 mN
-YN
+yb
 Ni
 Kd
-WZ
-WZ
-WZ
-WZ
+sg
+sg
+sg
+sg
 Kd
 Ni
-YN
+yb
 mN
 mN
 mN
@@ -30518,16 +30159,16 @@ mN
 mN
 mN
 mN
-YN
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-WZ
-YN
+yb
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+yb
 mN
 mN
 mN
@@ -30680,16 +30321,16 @@ mN
 mN
 mN
 mN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
-YN
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
 mN
 mN
 mN
