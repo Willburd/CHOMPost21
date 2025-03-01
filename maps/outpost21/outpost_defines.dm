@@ -152,6 +152,8 @@
 										/area/offworld/asteroidyard/external,
 										/area/offworld/asteroidyard/external/yardzone,
 										/area/offworld/confinementbeam/exterior,
+										/area/ai_sat/core_external,
+										/area/ai_sat/power_control,
 										// Actual unit test exceptions
 										/area/comms,
 										/area/muriki/tramstation/waste,

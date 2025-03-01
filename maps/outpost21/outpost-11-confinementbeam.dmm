@@ -3835,9 +3835,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "mm" = (
@@ -4258,9 +4255,6 @@
 /obj/structure/transit_tube_pod,
 /obj/structure/transit_tube/station{
 	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
@@ -6530,14 +6524,9 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 26;
-	nightshift_setting = 3
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
@@ -13049,9 +13038,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
 "Rk" = (
@@ -13542,9 +13528,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
@@ -15334,9 +15317,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "YQ" = (

@@ -10761,7 +10761,7 @@
 	dir = 1
 	},
 /turf/simulated/wall/r_wall,
-/area/maintenance/kennel)
+/area/maintenance/security_port)
 "bnu" = (
 /obj/structure/table/rack,
 /obj/machinery/door/window/westright{
@@ -24536,7 +24536,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/kennel)
+/area/maintenance/security_port)
 "fPK" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -25004,7 +25004,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/kennel)
+/area/maintenance/security_port)
 "fZu" = (
 /obj/structure/fence{
 	dir = 1
@@ -33808,9 +33808,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
-"iHE" = (
-/turf/simulated/wall/r_wall,
-/area/maintenance/kennel)
 "iHH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -119471,7 +119468,7 @@ kHn
 kHn
 cHU
 eBd
-iHE
+gQG
 fPD
 uAD
 sZd
@@ -119633,7 +119630,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 uAD
 bvn
@@ -119795,7 +119792,7 @@ kHn
 kHn
 cHU
 akd
-iHE
+gQG
 fZn
 uAD
 gKE
@@ -119957,7 +119954,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 uAD
 jAt
@@ -120119,7 +120116,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 uAD
 bAu
@@ -120281,7 +120278,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 uAD
 ffv
@@ -120443,7 +120440,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 uAD
 lsB
@@ -120605,7 +120602,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 uAD
 eEt
@@ -120767,7 +120764,7 @@ kHn
 kHn
 cHU
 lBQ
-iHE
+gQG
 fZn
 uAD
 uAD
@@ -120929,7 +120926,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 myz
 jHb
@@ -121091,7 +121088,7 @@ cdt
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 myz
 uuQ
@@ -121253,7 +121250,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 myz
 cqO
@@ -121415,7 +121412,7 @@ kHn
 kHn
 cHU
 kHn
-iHE
+gQG
 fZn
 myz
 aDD
@@ -121577,7 +121574,7 @@ kHn
 akd
 cHU
 cYF
-iHE
+gQG
 fZn
 myz
 oBV
@@ -121738,8 +121735,8 @@ kHn
 kHn
 cHU
 hNr
-iHE
-iHE
+gQG
+gQG
 bnn
 myz
 myz
