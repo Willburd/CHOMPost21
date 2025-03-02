@@ -712,7 +712,7 @@
 /area/engineering/refinery/lab
 	name = "\improper Chemical Refinery Lab"
 	icon_state = "primarystorage"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_ATMOS
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
