@@ -23115,6 +23115,10 @@
 	pixel_y = -24
 	},
 /obj/effect/floor_decal/corner/white/full,
+/obj/machinery/camera/network/civilian{
+	c_tag = "BNK - Bunker Emergency Control";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/crew/bunker)
 "aSw" = (
@@ -44445,6 +44449,9 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Med Tram Station Lower"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
 "bHk" = (
@@ -45189,6 +45196,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Autosleever Lobby";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/mine/explored/muriki/cave/med/resleever_exit)
@@ -63994,6 +64005,15 @@
 	outdoors = 0
 	},
 /area/mine/explored/muriki/cave/sci/east_access)
+"oet" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/railing,
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Autosleever Exit";
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/med/resleever_exit)
 "oez" = (
 /obj/structure/closet/crate/mimic/cointoss,
 /obj/random/contraband,
@@ -73797,6 +73817,16 @@
 "utY" = (
 /turf/simulated/floor/water/acidic/deep,
 /area/mine/explored/muriki/river/north)
+"uur" = (
+/obj/machinery/atmospherics/pipe/tank/air/full{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "BNK - Bunker Power";
+	dir = 1
+	},
+/turf/simulated/floor/plating/muriki,
+/area/muriki/crew/bunker)
 "uuy" = (
 /obj/machinery/smartfridge/drying_rack,
 /turf/simulated/floor/plating,
@@ -74890,6 +74920,10 @@
 /obj/item/healthanalyzer/advanced{
 	pixel_x = -16;
 	pixel_y = -4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "BNK - Bunker Medical";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/muriki/crew/bunker)
@@ -124718,7 +124752,7 @@ uCi
 uCi
 gOQ
 pLj
-dRR
+oet
 hOv
 orQ
 gLr
@@ -140125,7 +140159,7 @@ nyE
 xTO
 phs
 wFu
-juW
+uur
 xTO
 vZJ
 cYZ

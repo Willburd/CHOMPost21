@@ -8767,14 +8767,11 @@
 	dir = 1;
 	pixel_y = 28
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "aJU" = (
@@ -22272,10 +22269,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	name = "Forensics";
-	sortType = "Forensics"
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
@@ -25716,9 +25712,12 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
 "glu" = (
-/obj/structure/snowman/spider,
+/obj/machinery/camera/network/outside{
+	dir = 4;
+	c_tag = "EXT - Main Elevator East"
+	},
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
-/area/muriki/grounds/waste)
+/area/muriki/grounds/civ)
 "glx" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
@@ -38210,17 +38209,17 @@
 /turf/simulated/floor/outdoors/mud/muriki,
 /area/muriki/grounds/shutt)
 "jYp" = (
-/obj/structure/table/reinforced,
-/obj/item/hand_labeler,
-/obj/item/hand_labeler,
 /obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(Forensics)"
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
@@ -40818,6 +40817,10 @@
 /area/security/kennels)
 "kMq" = (
 /obj/structure/reagent_dispensers/watertank,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
 "kMt" = (
@@ -54876,9 +54879,18 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_smes)
 "pnr" = (
-/obj/structure/snowman/spider,
-/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
-/area/muriki/grounds/sci)
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Evidence lockup";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/security/evidence_storage)
 "pnw" = (
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/glass/beaker/large,
@@ -57576,9 +57588,6 @@
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -58647,6 +58656,16 @@
 "qxi" = (
 /turf/simulated/floor/water/blood/muriki,
 /area/muriki/processor/hall/waterway_upper)
+"qxj" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Ground floor stairwell";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
 "qxk" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -60974,15 +60993,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medbay)
 "rjA" = (
-/obj/machinery/disposal/mail_reciever{
-	name = "disposal mail destination(Forensics)"
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/structure/table/reinforced,
+/obj/item/hand_labeler,
+/obj/item/hand_labeler,
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "rjI" = (
@@ -61235,6 +61251,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/security_port)
 "roV" = (
@@ -62400,6 +62417,14 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
+"rHX" = (
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 1;
+	name = "Forensics";
+	sortType = "Forensics"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/security_port)
 "rIv" = (
 /obj/machinery/button/remote/blast_door{
 	id = "warehouse";
@@ -65466,6 +65491,16 @@
 "sIi" = (
 /turf/simulated/floor/flesh/muriki,
 /area/muriki/processor/pools/crop)
+"sIn" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	dir = 8;
+	c_tag = "ENG - Short-range Shuttle"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/beamtransit)
 "sIr" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/railing{
@@ -71656,10 +71691,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "uBM" = (
-/obj/structure/table/reinforced,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -72986,6 +73017,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
+"uYp" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/wall/r_wall,
+/area/maintenance/security_port)
 "uYz" = (
 /obj/structure/railing{
 	dir = 8
@@ -76013,6 +76048,9 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Evidence Hall Main"
+	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "vUe" = (
@@ -81591,6 +81629,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
+"xCy" = (
+/obj/machinery/camera/network/outside{
+	dir = 1;
+	c_tag = "EXT - Main Elevator North"
+	},
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/civ)
 "xDe" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -82997,6 +83042,12 @@
 	dir = 8
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Evidence lockup"
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Evidence lockup"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "ybG" = (
@@ -91709,7 +91760,7 @@ fcb
 wlY
 sbr
 bGw
-glu
+tMf
 tMf
 tMf
 haj
@@ -109758,7 +109809,7 @@ buE
 buE
 gie
 acc
-acc
+sIn
 acc
 waN
 udM
@@ -118569,7 +118620,7 @@ fZx
 mih
 bDi
 sFq
-sFq
+pnr
 pVx
 lET
 dfb
@@ -118892,8 +118943,8 @@ gQG
 juN
 liK
 kMq
-vEh
-gQG
+vZN
+uYp
 aJy
 oWA
 oWA
@@ -119053,7 +119104,7 @@ kHn
 gQG
 aSh
 vZN
-vZN
+rHX
 gxk
 oLE
 qho
@@ -121012,7 +121063,7 @@ huL
 fBg
 knd
 nNi
-ewZ
+qxj
 akW
 akX
 akX
@@ -131305,7 +131356,7 @@ fQG
 fQG
 fQG
 cRA
-pnr
+fQG
 mbh
 apf
 wPy
@@ -131501,7 +131552,7 @@ cEY
 cEY
 fHN
 fHN
-fHN
+xCy
 ybW
 lLo
 mug
@@ -132809,7 +132860,7 @@ ltL
 ltL
 ltL
 ltL
-ltL
+glu
 ltL
 ltL
 ltL
