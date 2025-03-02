@@ -2329,6 +2329,13 @@
 	},
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/disposal)
+"baQ" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Engineering Teleporter North";
+	dir = 1
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/engineering)
 "baW" = (
 /obj/machinery/camera/network/cargo{
 	c_tag = "CRG - Mint"
@@ -31915,6 +31922,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/library_conference_room)
+"pZR" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Engineering Teleporter South"
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/engineering)
 "qap" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -33257,6 +33270,13 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
+"qFT" = (
+/obj/machinery/computer/shuttle_control/multi{
+	shuttle_tag = "Engineering Ferry";
+	dir = 4
+	},
+/turf/simulated/floor/glass/reinforced,
+/area/crew_quarters/heads/chief)
 "qGk" = (
 /obj/structure/railing{
 	dir = 8
@@ -39987,6 +40007,14 @@
 	},
 /turf/simulated/floor,
 /area/muriki/rooftop/engineering)
+"tXR" = (
+/obj/effect/floor_decal/milspec/color/red/half,
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Firing Range SouthWest";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/security/range)
 "tXU" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -43521,6 +43549,13 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/secmedbridge)
+"vIk" = (
+/obj/machinery/camera/network/security{
+	dir = 4;
+	c_tag = "SEC - Shuttle Dock"
+	},
+/turf/simulated/floor/plating,
+/area/security/hangar)
 "vIt" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -43965,6 +44000,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/patient_a)
+"vVz" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Upper Stairwell";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/hallway/secondary/engineering_hallway)
 "vVG" = (
 /obj/machinery/scale,
 /obj/machinery/light,
@@ -67613,7 +67661,7 @@ uDM
 uDM
 uDM
 uDM
-uDM
+baQ
 rEM
 rxP
 vxM
@@ -68112,7 +68160,7 @@ cNf
 bJF
 eDo
 rEM
-uDM
+pZR
 eXH
 mqh
 mqh
@@ -70370,7 +70418,7 @@ vsm
 dTw
 pLP
 qKu
-uCf
+vVz
 ufL
 ufL
 krn
@@ -71499,8 +71547,8 @@ oao
 xRS
 hYz
 aXE
+qFT
 orL
-imu
 imu
 wGB
 xgc
@@ -82738,7 +82786,7 @@ qvA
 kIO
 kIO
 kIO
-ecs
+tXR
 hjo
 goV
 goV
@@ -88730,7 +88778,7 @@ ffv
 bzI
 qGP
 pbB
-erP
+vIk
 erP
 erP
 erP
