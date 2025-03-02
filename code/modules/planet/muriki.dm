@@ -1059,20 +1059,19 @@ var/datum/planet/muriki/planet_muriki = null
 				applied_damage = TRUE
 			else
 				var/obj/item/rig/R = H.back
-				if(istype(H.back,/obj/item/rig) && R.suit_is_deployed())
-					// rig snowflake check
-				else if(protection.permeability_coefficient > min_permeability) // leaky protection
-					to_chat(L, "<span class='danger'>The acidic pool leaks through \The [protection], and is digesting your [L.get_bodypart_name(pick_zone)]!</span>")
-					L.apply_damage( 1.1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
-					org.wounds +=  new /datum/wound/cut/small(4)
-					applied_damage = TRUE
-				else
-					var/liquidbreach = H.get_pressure_weakness( 0) // spacesuit are watertight
-					if(liquidbreach > 0) // unprotected!
-						to_chat(L, "<span class='danger'>The acidic pool splashes into \The [protection], and is digesting your [L.get_bodypart_name(pick_zone)]!</span>")
-						L.apply_damage( 1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
+				if(!(istype(H.back,/obj/item/rig) && R.suit_is_deployed())) // rig snowflake check
+					if(protection.permeability_coefficient > min_permeability) // leaky protection
+						to_chat(L, "<span class='danger'>The acidic pool leaks through \The [protection], and is digesting your [L.get_bodypart_name(pick_zone)]!</span>")
+						L.apply_damage( 1.1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
 						org.wounds +=  new /datum/wound/cut/small(4)
 						applied_damage = TRUE
+					else
+						var/liquidbreach = H.get_pressure_weakness( 0) // spacesuit are watertight
+						if(liquidbreach > 0) // unprotected!
+							to_chat(L, "<span class='danger'>The acidic pool splashes into \The [protection], and is digesting your [L.get_bodypart_name(pick_zone)]!</span>")
+							L.apply_damage( 1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
+							org.wounds +=  new /datum/wound/cut/small(4)
+							applied_damage = TRUE
 
 	if(applied_damage && ((org.damage >= 10 && prob(5)) || (org.damage >= 30 && prob(15)) || org.damage >= 80))
 		if(!(pick_zone == BP_GROIN || pick_zone == BP_TORSO))

@@ -179,7 +179,6 @@ GLOBAL_LIST_EMPTY(vending_products)
 					malfunction()
 					return
 				return
-		else
 	return
 
 /obj/machinery/vending/emag_act(var/remaining_charges, var/mob/user)
@@ -823,7 +822,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 	if(!target)
 		return 0
 
-	if(target.is_incorporeal()) // CHOMPADD - Don't shoot at things that aren't there.
+	if(target.is_incorporeal()) // Don't shoot at things that aren't there.
 		return 0
 
 	for(var/datum/stored_item/vending_product/R in shuffle(product_records))

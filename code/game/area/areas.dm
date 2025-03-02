@@ -116,10 +116,8 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 		else
 			atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level)
 
-	//Outpost 21 edit begin -Check if running without a master alarm working in the area
-	if(master_air_alarm && master_air_alarm.shorted)
-		// blanket allow any actions if the master is shorted
-	else
+	//Outpost 21 edit begin - Check if running without a master alarm working in the area
+	if(!(master_air_alarm && master_air_alarm.shorted))
 		//Check all the alarms before lowering atmosalm. Raising is perfectly fine.
 		for (var/obj/machinery/alarm/AA in src)
 			if (!(AA.stat & (NOPOWER|BROKEN)) && !AA.shorted && AA.report_danger_level)
@@ -450,7 +448,7 @@ var/list/mob/living/forced_ambiance_list = new
 			return // Being buckled to something solid keeps you in place.
 		if(istype(H.shoes, /obj/item/clothing/shoes/magboots) && (H.shoes.item_flags & NOSLIP))
 			return
-		if(H.incorporeal_move) // VOREstation edit - Phaseshifted beings should not be affected by gravity
+		if(H.is_incorporeal()) // VOREstation edit - Phaseshifted beings should not be affected by gravity
 			return
 		if(H.species.can_zero_g_move || H.species.can_space_freemove)
 			return
@@ -563,7 +561,7 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 
 // RS Port #658 Start
 /area/proc/check_phase_shift(var/mob/ourmob)
-	if(!flag_check(AREA_BLOCK_PHASE_SHIFT) || !ourmob.incorporeal_move)
+	if(!flag_check(AREA_BLOCK_PHASE_SHIFT) || !ourmob.is_incorporeal())
 		return
 	if(!isliving(ourmob))
 		return

@@ -169,12 +169,12 @@
 
 /mob/living/simple_mob/vore/alienanimals/jil/update_icon()
 	..()
-	if(stat == DEAD)
+	if(stat != DEAD)
 		// leave icon as is, set by death
-	else if(lying || resting || sleeping > 0)
-		icon_state = icon_rest
-	else
-		icon_state = icon_living
+		if(lying || resting || sleeping > 0)
+			icon_state = icon_rest
+		else
+			icon_state = icon_living
 
 /mob/living/simple_mob/vore/alienanimals/jil/Life()
 	. = ..()

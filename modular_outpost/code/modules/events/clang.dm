@@ -85,29 +85,28 @@
 /obj/effect/immovablerod/Bump(atom/clong)
 	//to_world("Rod CLANG [clong] : [clong.x].[clong.y].[clong.z]")
 
-	if(istype(clong, /turf/simulated/shuttle)) //Skip shuttles without actually deleting the rod
+	if(!istype(clong, /turf/simulated/shuttle)) //Skip shuttles without actually deleting the rod
+		if (istype(clong, /turf) && !istype(clong, /turf/unsimulated))
+			if(clong.density)
+				clong.ex_act(2)
+				for (var/mob/O in hearers(src, null))
+					O.show_message("CLANG", 2)
+				if(prob(25))
+					//to_world("Rod BOOM")
+					explosion(clong, 1, 2, 4) // really spice it up
 
-	else if (istype(clong, /turf) && !istype(clong, /turf/unsimulated))
-		if(clong.density)
-			clong.ex_act(2)
-			for (var/mob/O in hearers(src, null))
-				O.show_message("CLANG", 2)
-			if(prob(25))
-				//to_world("Rod BOOM")
-				explosion(clong, 1, 2, 4) // really spice it up
+		else if (istype(clong, /obj))
+			if(clong.density)
+				clong.ex_act(2)
+				for (var/mob/O in hearers(src, null))
+					O.show_message("CLANG", 2)
 
-	else if (istype(clong, /obj))
-		if(clong.density)
-			clong.ex_act(2)
-			for (var/mob/O in hearers(src, null))
-				O.show_message("CLANG", 2)
+		else if (istype(clong, /mob))
+			if(clong.density || prob(10))
+				clong.ex_act(2)
 
-	else if (istype(clong, /mob))
-		if(clong.density || prob(10))
-			clong.ex_act(2)
-
-	else
-		qdel(src)
+		else
+			qdel(src)
 
 	if(despawn_loc != null && (src.x == despawn_loc.x && src.y == despawn_loc.y))
 		//to_world("ENDED ROD PATH")

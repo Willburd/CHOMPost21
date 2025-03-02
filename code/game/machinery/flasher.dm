@@ -109,7 +109,6 @@
 		flash()
 	..(severity)
 
-// CHOMPEdit Start
 /obj/machinery/flasher/portable/HasProximity(turf/T, datum/weakref/WF, oldloc)
 	SIGNAL_HANDLER
 	if(isnull(WF))
@@ -119,7 +118,6 @@
 	if(isnull(AM))
 		log_debug("DEBUG: HasProximity called without reference on [src].")
 		return
-// CHOMPEdit End
 	if(disable || !anchored || (last_flash && world.time < last_flash + 150))
 		return
 

@@ -649,7 +649,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	title = R.name
 	body  = "<b>Description: </b>[R.description]<br>"
 	if(R.id in addictives)
-		body  += "<b>DANGER, [R.id in fast_addictives ? "highly " : ""]addictive.</b><br>"
+		body  += "<b>DANGER, [(R.id in fast_addictives) ? "highly " : ""]addictive.</b><br>"
 	var/tank_size = 5000
 	if(R.industrial_use)
 		body  += "<b>Industrial Use: </b>[R.industrial_use]<br>"
