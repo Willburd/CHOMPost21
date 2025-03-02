@@ -202,6 +202,7 @@
 	var/datum/looping_sound/indoor_sounds = null
 	var/outdoor_sounds_type = null
 	var/indoor_sounds_type = null
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT // Stop clicking snow/rain
 
 /datum/weather/New()
 	if(outdoor_sounds_type)
