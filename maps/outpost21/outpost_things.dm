@@ -363,7 +363,7 @@
 /obj/machinery/door/airlock/glass_external/freezable/update_icon()
 	..()
 	if(frozen)
-		overlays += image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock")
+		add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"))
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()

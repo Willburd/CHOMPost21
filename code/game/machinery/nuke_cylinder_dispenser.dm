@@ -69,16 +69,16 @@
 		add_fingerprint(usr)
 
 /obj/machinery/nuke_cylinder_dispenser/update_icon()
-	overlays.Cut()
+	cut_overlays()
 	if(contents.len)
-		overlays += "rods_[contents.len]"
+		add_overlay("rods_[contents.len]")
 	if(!open)
-		overlays += "hatch"
+		add_overlay("hatch")
 	if(powered())
 		if(locked)
-			overlays += "red_light"
+			add_overlay("red_light")
 		else
-			overlays += "green_light"
+			add_overlay("green_light")
 
 
 

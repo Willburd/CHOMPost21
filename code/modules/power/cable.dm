@@ -182,18 +182,18 @@ var/list/possible_cable_coil_colours = list(
 	icon_state = "[d1]-[d2]"
 	alpha = invisibility ? 127 : 255
 	// Outpost 21 edit begin - broken wire trap
-	overlays.Cut()
+	cut_overlays()
 	if(broken && !invisibility)
 		var/image/broke = image('icons/obj/power_cond_damaged.dmi', src, "[d1]-[d2]")
 		broke.appearance_flags = (RESET_COLOR|PIXEL_SCALE|KEEP_APART)
 		broke.plane = OBJ_PLANE
 		broke.layer = HIDING_LAYER // Above things for SAFETY
-		overlays += broke
+		add_overlay(broke)
 		var/image/spark = image('icons/obj/power_cond_damaged.dmi', src, "spark")
 		spark.appearance_flags = (RESET_COLOR|PIXEL_SCALE|RESET_ALPHA|KEEP_APART)
 		spark.plane = OBJ_PLANE
 		spark.layer = UNDER_JUNK_LAYER-0.001 // Spark above most things
-		overlays += spark
+		add_overlay(spark)
 	// Outpost 21 edit end
 
 // Outpost 21 edit begin - broken wire trap
