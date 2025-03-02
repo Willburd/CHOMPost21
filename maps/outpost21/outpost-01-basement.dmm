@@ -19466,6 +19466,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aLy" = (
@@ -45183,7 +45186,7 @@
 	dir = 4;
 	name = "east bump";
 	pixel_x = 26;
-	nightshift_setting = 3;
+	nightshift_setting = 2;
 	pixel_y = 4
 	},
 /obj/structure/cable/green,
@@ -47249,6 +47252,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/tankstorage)
 "djL" = (
@@ -48159,6 +48163,10 @@
 "dLt" = (
 /turf/simulated/mineral/alt/ignore_mapgen/muriki,
 /area/maintenance/atmos_control)
+"dLU" = (
+/obj/machinery/light/floortube,
+/turf/simulated/floor/plating,
+/area/engineering/refinery/main)
 "dLY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -49044,11 +49052,11 @@
 /turf/simulated/wall,
 /area/maintenance/spine/civ)
 "eoH" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/light,
 /obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
@@ -49391,9 +49399,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -49401,6 +49406,7 @@
 	pixel_y = -30;
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/tankstorage)
 "ezF" = (
@@ -51561,17 +51567,17 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/mine/unexplored/muriki/mountainbasenorth)
 "fLH" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/machinery/pump{
 	anchored = 1
 	},
-/obj/structure/railing/grey{
+/obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/railing/grey{
+	dir = 4
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/engineering/refinery/pump_station)
@@ -57142,6 +57148,22 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"jxX" = (
+/obj/vehicle/train/trolly_tank{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 26;
+	nightshift_setting = 2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/refinery/tugstorage)
 "jyc" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -66131,6 +66153,9 @@
 	dir = 1
 	},
 /obj/effect/catwalk_plated/white,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/refinery/tugstorage)
 "ppc" = (
@@ -67391,9 +67416,6 @@
 /area/maintenance/spine/civ)
 "qfH" = (
 /obj/effect/floor_decal/industrial/warning/dust,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
@@ -67406,6 +67428,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/tankstorage)
 "qfJ" = (
@@ -68309,6 +68332,7 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/tankstorage)
 "qKL" = (
@@ -70520,10 +70544,10 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
 "rWO" = (
-/obj/structure/window/reinforced{
+/obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/structure/railing/grey{
+/obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
@@ -71897,6 +71921,9 @@
 /area/rnd/hallway/lowmain)
 "sNN" = (
 /obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
 "sNP" = (
@@ -116461,7 +116488,7 @@ eUo
 fDP
 fDP
 fDP
-fDP
+dLU
 fDP
 fDP
 wSY
@@ -117271,7 +117298,7 @@ kMK
 fDP
 rsR
 fDP
-fDP
+dLU
 fDP
 fDP
 fDP
@@ -119213,7 +119240,7 @@ aGc
 aGU
 wnH
 cQl
-aJx
+jxX
 sNN
 aLx
 ppa
