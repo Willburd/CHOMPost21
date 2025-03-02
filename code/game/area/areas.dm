@@ -116,10 +116,8 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 		else
 			atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level)
 
-	//Outpost 21 edit begin -Check if running without a master alarm working in the area
-	if(master_air_alarm && master_air_alarm.shorted)
-		// blanket allow any actions if the master is shorted
-	else
+	//Outpost 21 edit begin - Check if running without a master alarm working in the area
+	if(!(master_air_alarm && master_air_alarm.shorted))
 		//Check all the alarms before lowering atmosalm. Raising is perfectly fine.
 		for (var/obj/machinery/alarm/AA in src)
 			if (!(AA.stat & (NOPOWER|BROKEN)) && !AA.shorted && AA.report_danger_level)
