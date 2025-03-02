@@ -166,7 +166,7 @@
 // Regular sprites
 
 /datum/robot_sprite/surgical
-	module_type = "Crisis"
+	module_type = "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical.dmi'
 
 /datum/robot_sprite/surgical/toiletbot
@@ -209,7 +209,7 @@
 // Wide/dogborg sprites
 
 /datum/robot_sprite/dogborg/surgical
-	module_type = "Crisis"
+	module_type = "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical_wide.dmi'
 
 /datum/robot_sprite/dogborg/surgical/do_equipment_glamour(var/obj/item/robot_module/module)
@@ -248,7 +248,7 @@
 // Tall sprites
 //CHOMPNote -- many of the lines in this is overriden in modular
 /datum/robot_sprite/dogborg/tall/surgical
-	module_type = "Crisis"
+	module_type = "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical_large.dmi'
 
 /datum/robot_sprite/dogborg/tall/surgical/do_equipment_glamour(var/obj/item/robot_module/module)
