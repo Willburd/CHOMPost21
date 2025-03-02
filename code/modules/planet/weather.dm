@@ -202,7 +202,6 @@
 	var/datum/looping_sound/indoor_sounds = null
 	var/outdoor_sounds_type = null
 	var/indoor_sounds_type = null
-	mouse_opacity = MOUSE_OPACITY_TRANSPARENT // Stop clicking snow/rain
 
 /datum/weather/New()
 	if(outdoor_sounds_type)
@@ -287,6 +286,7 @@
 	icon = 'icons/effects/weather.dmi'
 	mouse_opacity = 0
 	plane = PLANE_PLANETLIGHTING
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT // Stop clicking snow/rain
 
 // This is for special effects for specific types of weather, such as lightning flashes in a storm.
 // It's a seperate object to allow the use of flick().
