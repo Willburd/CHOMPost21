@@ -231,6 +231,12 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 26;
+	nightshift_setting = 2
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/rnd/xenobiology/lost)
 "T" = (

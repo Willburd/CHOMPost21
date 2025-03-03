@@ -55989,6 +55989,7 @@
 /obj/item/stack/hose,
 /obj/item/stack/hose,
 /obj/item/stack/hose,
+/obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
 "iPl" = (
@@ -57848,6 +57849,8 @@
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
+/obj/item/tool/screwdriver,
+/obj/item/tool/crowbar,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
 "jYI" = (
@@ -66666,6 +66669,7 @@
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
+/obj/item/reagent_scanner,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
 "pGs" = (
@@ -75520,6 +75524,10 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
+"vlF" = (
+/obj/item/reagent_scanner,
+/turf/simulated/floor/plating,
+/area/engineering/refinery/main)
 "vlR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -76440,9 +76448,6 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/coffee_shop)
 "vNP" = (
-/obj/structure/table/steel,
-/obj/item/tool/crowbar,
-/obj/item/tool/screwdriver,
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
@@ -76461,6 +76466,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 32
 	},
+/obj/machinery/chemical_analyzer_pro,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
 "vOj" = (
@@ -116003,7 +116009,7 @@ fDP
 fDP
 gRy
 fDP
-fDP
+vlF
 qQW
 rKp
 rKp
