@@ -51436,14 +51436,14 @@
 	name = "Medbay Emergency Lockdown Control";
 	pixel_x = 6;
 	pixel_y = 8;
-	req_one_access = list(19,40)
+	req_one_access = list(5,19,40)
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "refine_lock";
 	name = "Refinery Lockdown";
 	pixel_x = 6;
 	pixel_y = -4;
-	req_one_access = list(19,56)
+	req_one_access = list(5,19,40,10)
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
