@@ -27,4 +27,4 @@
 #define LATHE_SERVICE			0x10
 #define LATHE_SECURITY			0x20
 #define LATHE_PUBLIC			0x40
-#define LATHE_ALL 				0xFFFF
+#define LATHE_ALL 				(~0)
