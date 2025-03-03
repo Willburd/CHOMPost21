@@ -16678,39 +16678,8 @@
 /turf/simulated/floor/plating,
 /area/muriki/atmos/voxdump)
 "aFU" = (
-/obj/structure/closet/crate,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/gear,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
-/obj/item/stock_parts/motor,
 /obj/structure/catwalk,
+/obj/item/frame,
 /turf/simulated/floor,
 /area/engineering/refinery/tankstorage)
 "aFV" = (
@@ -50082,6 +50051,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/item/frame,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/tankstorage)
 "eRD" = (
@@ -69843,7 +69813,9 @@
 /turf/simulated/mineral/alt/ignore_mapgen,
 /area/maintenance/research)
 "rsR" = (
+/obj/structure/closet/crate,
 /obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
 "rtw" = (
@@ -77995,6 +77967,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
 /obj/item/geiger/wall/west,
+/obj/item/frame,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/tankstorage)
 "wCP" = (
@@ -117690,7 +117663,7 @@ aFS
 ydY
 kMK
 fDP
-rsR
+fDP
 fDP
 dLU
 fDP
@@ -117853,7 +117826,7 @@ axA
 peE
 fDP
 fDP
-fDP
+rsR
 fDP
 fDP
 gpu
