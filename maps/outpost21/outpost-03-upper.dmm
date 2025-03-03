@@ -5113,7 +5113,7 @@
 "cnZ" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Medical Substation and Backup Generator";
-	req_one_access = list(11,24,5)
+	req_one_access = list(11,24,5,10)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -14029,7 +14029,7 @@
 	},
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Medical Substation and Backup Generator";
-	req_one_access = list(11,24,5)
+	req_one_access = list(11,24,5,10)
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
@@ -21916,7 +21916,6 @@
 /area/muriki/rooftop/cargo)
 "kQw" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance/medical,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -21928,6 +21927,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int{
+	req_one_access = list(11,24,5,10)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medicelev)
@@ -22345,7 +22347,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list(11,24,5);
+	req_one_access = list(11,24,5,10);
 	name = "Vox-Viro Substation"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -34502,7 +34504,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/muriki/elevator/mediupper)
+/area/maintenance/medicelev)
 "rna" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -35974,7 +35976,7 @@
 /area/hydroponics/gibber)
 "sbu" = (
 /obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list(5);
+	req_one_access = list(11,24,5,10);
 	name = "Medical Backup Generator"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -45650,7 +45652,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list(5)
+	req_one_access = list(11,24,5,10)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/medical)
