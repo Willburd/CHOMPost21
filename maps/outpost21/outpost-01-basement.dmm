@@ -58033,6 +58033,7 @@
 	},
 /obj/item/tool/screwdriver,
 /obj/item/tool/crowbar,
+/obj/item/retail_scanner,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
 "jYI" = (
