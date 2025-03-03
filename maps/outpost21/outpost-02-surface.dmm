@@ -51417,7 +51417,7 @@
 	desc = "A remote control switch for the medbay foyer.";
 	id = "MedbayFoyer";
 	name = "Medbay Doors Control";
-	pixel_x = -1;
+	pixel_x = -7;
 	pixel_y = -4
 	},
 /obj/structure/window/reinforced,
@@ -51437,6 +51437,13 @@
 	pixel_x = 6;
 	pixel_y = 8;
 	req_one_access = list(19,40)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "refine_lock";
+	name = "Refinery Lockdown";
+	pixel_x = 6;
+	pixel_y = -4;
+	req_one_access = list(19,56)
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -78680,7 +78687,7 @@
 /obj/machinery/button/remote/blast_door{
 	id = "englockdown";
 	name = "Engineering Lockdown";
-	pixel_x = -10;
+	pixel_x = -5;
 	pixel_y = -5;
 	req_one_access = list(19,56)
 	},
@@ -78688,14 +78695,7 @@
 	id = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	pixel_y = -5;
-	pixel_x = -2;
-	req_one_access = list(19,56)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	pixel_x = 6;
-	pixel_y = -5;
+	pixel_x = 4;
 	req_one_access = list(19,56)
 	},
 /turf/simulated/floor/tiled/milspec,

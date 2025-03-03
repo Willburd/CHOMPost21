@@ -19489,8 +19489,21 @@
 /turf/simulated/floor/plating,
 /area/medical/mail)
 "aLA" = (
-/turf/simulated/wall/r_wall,
-/area/medical/mail)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Chemical Refinery Access"
+	},
+/obj/structure/sign/department/chem{
+	name = "REFINERY TUG ACCESS";
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/tug)
 "aLB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -20115,7 +20128,11 @@
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 2
 	},
-/turf/simulated/floor/tiled/old_cargo/white,
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
 "aMG" = (
 /obj/structure/disposalpipe/segment{
@@ -20484,9 +20501,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/multi_tile/metal/mait{
-	name = "Chemical Refinery";
-	dir = 2
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	req_one_access = list(5,45,52,10)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tankstorage)
@@ -22728,9 +22745,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -22738,8 +22752,9 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "aRx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -22762,12 +22777,12 @@
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/engineering/coreproctunnel)
 "aRy" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_y = -30;
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
+	},
+/obj/structure/sign/department/cargo{
+	pixel_y = -32;
+	name = "TUG TUNNEL ACCESS"
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -25576,6 +25591,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWO" = (
@@ -27022,6 +27040,9 @@
 /obj/structure/cable/heavyduty,
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
+	},
+/obj/structure/railing{
+	dir = 4
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
@@ -29298,15 +29319,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /obj/structure/railing{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/structure/sign/department/cargo{
+	name = "TUG TUNNEL ACCESS";
+	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
@@ -35587,6 +35608,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
 	},
+/obj/structure/cable/orange{
+	icon_state = "0-9"
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
 "bqX" = (
@@ -38858,6 +38882,7 @@
 /obj/structure/sign/warning/incinerator{
 	pixel_x = 32
 	},
+/obj/structure/barricade,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
 "bwC" = (
@@ -41659,12 +41684,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/random/cutout,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "bCd" = (
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposalnear)
@@ -43431,14 +43454,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "bFx" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+/obj/structure/railing{
+	dir = 4
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
@@ -43989,8 +44009,12 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/medicelevbasement)
 "bGq" = (
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 4
@@ -45074,6 +45098,12 @@
 "bLa" = (
 /turf/simulated/wall,
 /area/muriki/crew/bunker)
+"bLp" = (
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "bLT" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -45238,9 +45268,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/multi_tile/metal/mait{
-	name = "Chemical Refinery";
-	dir = 2
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	req_one_access = list(5,45,52,10)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tankstorage)
@@ -45292,6 +45322,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposalnear)
+"bST" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "bTe" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Particle Lab Entry Hall"
@@ -46949,6 +46994,24 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
+"dak" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/medicelevbasement)
 "das" = (
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/muriki,
@@ -47160,7 +47223,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "dgV" = (
 /obj/effect/auto_crayon,
 /turf/simulated/wall,
@@ -47694,11 +47757,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "dAv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -49059,6 +49120,14 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "refine_lock";
+	name = "Refinery Lockdown";
+	opacity = 0
+	},
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/engineering/refinery/pump_station)
 "eoO" = (
@@ -49837,7 +49906,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "eMH" = (
 /obj/machinery/vr_sleeper{
 	dir = 1
@@ -49924,6 +49993,13 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/atmos_control)
+"ePv" = (
+/obj/structure/cable/orange{
+	icon_state = "4-9"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "ePP" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/mineral/floor/muriki{
@@ -51552,6 +51628,13 @@
 /obj/item/clothing/head/cone,
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/med)
+"fKW" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/med)
 "fLc" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/border_only,
@@ -51578,6 +51661,14 @@
 	},
 /obj/structure/railing/grey{
 	dir = 4
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "refine_lock";
+	name = "Refinery Lockdown";
+	opacity = 0
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/engineering/refinery/pump_station)
@@ -52013,6 +52104,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
+"gcm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/spine/civ)
 "gcz" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -52022,6 +52123,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"gdp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/medicelevbasement)
 "gdq" = (
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 4
@@ -52120,7 +52233,11 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
 "ghs" = (
-/turf/simulated/floor/tiled/old_cargo/white,
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
 "ghC" = (
 /obj/structure/sink{
@@ -52482,17 +52599,8 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 26;
-	nightshift_setting = 2
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "gsT" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/maintenance/cave)
@@ -54431,18 +54539,21 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
 "hJY" = (
+/obj/structure/cable/heavyduty,
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 1;
+	icon_state = "pipe-c"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "hLs" = (
@@ -54823,6 +54934,16 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
+"hWL" = (
+/obj/structure/cable/orange{
+	icon_state = "6-8"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "hXE" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -55773,6 +55894,13 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
+"iGo" = (
+/obj/random/trash,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "iGv" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -55861,6 +55989,18 @@
 /obj/structure/fence/door,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/waste)
+"iIa" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/sign/department/chem{
+	name = "REFINERY";
+	pixel_x = -32
+	},
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Chemical Refinery Access"
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/medical/medbay2)
 "iIb" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_mud/indoor/muriki{
 	dir = 9
@@ -56063,6 +56203,19 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled,
 /area/maintenance/med)
+"iQL" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/random/maintenance/medical,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "iQS" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -57868,11 +58021,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown"
 	},
-/turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/medicelevbasement)
 "jZT" = (
 /obj/effect/auto_crayon{
 	icon_state = "guy"
@@ -58736,6 +58890,14 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/bunker)
+"kxZ" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/plating,
+/area/engineering/refinery/main)
 "kyf" = (
 /obj/structure/cable/heavyduty,
 /obj/structure/cable/heavyduty{
@@ -59693,6 +59855,22 @@
 /obj/item/pen/crayon/marker/blue,
 /turf/simulated/floor/plating/muriki,
 /area/engineering/coreproctunnel)
+"lhn" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "lhr" = (
 /obj/structure/trash_pile,
 /turf/simulated/mineral/floor/muriki{
@@ -61205,6 +61383,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
+"maK" = (
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "maU" = (
 /obj/random/trash,
 /turf/simulated/floor/plating/muriki,
@@ -61396,14 +61580,13 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
 "mgP" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/sign/warning/incinerator{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "mgU" = (
 /turf/simulated/mineral/alt/ignore_mapgen/muriki,
@@ -61516,7 +61699,7 @@
 /obj/item/assembly/mousetrap/armed,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "mkJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -61667,6 +61850,13 @@
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
+"mrz" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "mrD" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/deep/indoor/muriki,
@@ -61685,6 +61875,13 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/river/end)
+"mtr" = (
+/obj/structure/trash_pile,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "mtt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -62414,7 +62611,7 @@
 	},
 /obj/item/clothing/suit/caution,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/tug)
 "mQU" = (
 /obj/structure/toilet{
 	dir = 8
@@ -62681,6 +62878,12 @@
 "mWT" = (
 /turf/simulated/floor/flesh/muriki,
 /area/muriki/processor/hall/waterway_low)
+"mWV" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "mXl" = (
 /turf/simulated/wall,
 /area/maintenance/civ/closet)
@@ -62844,6 +63047,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/railing{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
@@ -63950,17 +64157,13 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/catwalk_plated/techmaint,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
-	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelevbasement)
 "nSt" = (
@@ -65529,6 +65732,21 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
+"oXN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/medical/medbay2)
 "oXO" = (
 /obj/structure/closet/firecloset/full/atmos,
 /turf/simulated/floor/plating,
@@ -66604,12 +66822,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/random/trash,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "pFo" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -66792,7 +67007,7 @@
 /obj/machinery/door/airlock/maintenance/medical,
 /obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
-/area/engineering/refinery/tankstorage)
+/area/maintenance/medicelevbasement)
 "pKZ" = (
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/river/end)
@@ -67538,6 +67753,16 @@
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/waste)
+"qiF" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "qiI" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -67577,6 +67802,17 @@
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/med)
+"qkk" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 26
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "qkp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -67610,6 +67846,10 @@
 /obj/item/tool/wrench/pipe,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
+"qkJ" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "qlc" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -68206,7 +68446,7 @@
 /obj/random/trash,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "qHA" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -68300,7 +68540,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/tug)
 "qKe" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -69035,20 +69275,10 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/civ/bunker)
 "rdF" = (
-/obj/structure/cable/heavyduty,
-/obj/structure/cable/heavyduty{
-	icon_state = "0-4"
+/obj/structure/railing{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
+/obj/random/maintenance/medical,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "rdH" = (
@@ -69436,10 +69666,9 @@
 /area/mine/unexplored/muriki/mountainbasenorth)
 "rnM" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/maintenance/engi,
+/obj/machinery/door/airlock/glass_engineering,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "rnV" = (
 /obj/effect/decal/cleanable/blood/oil/streak,
 /obj/structure/door_assembly/door_assembly_mai,
@@ -70039,6 +70268,9 @@
 	icon_state = "1-2"
 	},
 /obj/random/trash,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "rFY" = (
@@ -70546,13 +70778,21 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "rWO" = (
 /obj/structure/railing/grey{
 	dir = 4
 	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 2;
+	icon_state = "shutter0";
+	id = "refine_lock";
+	name = "Refinery Lockdown";
+	opacity = 0
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/engineering/refinery/pump_station)
@@ -70879,17 +71119,22 @@
 /area/maintenance/civ/bunker)
 "seU" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+	dir = 10
 	},
 /obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+	icon_state = "0-8"
 	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "sff" = (
@@ -71175,6 +71420,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/eng)
+"snD" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "snE" = (
 /turf/simulated/floor/gas_crack/phoron,
 /area/maintenance/spine/eng)
@@ -71517,6 +71774,21 @@
 "sxJ" = (
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/cargo)
+"syu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/medicelevbasement)
 "syw" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -71703,6 +71975,9 @@
 /area/maintenance/med)
 "sEh" = (
 /obj/random/cutout,
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "sED" = (
@@ -72683,27 +72958,6 @@
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/river/north)
 "tsD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
-"tsI" = (
-/obj/effect/floor_decal/corner_kafel/blue/diagonal,
-/obj/machinery/food_replicator,
-/obj/structure/table/marble,
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/crew/bunker)
-"tsK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
@@ -72713,15 +72967,33 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
+"tsI" = (
+/obj/effect/floor_decal/corner_kafel/blue/diagonal,
+/obj/machinery/food_replicator,
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/crew/bunker)
+"tsK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/medicelevbasement)
 "ttg" = (
 /obj/machinery/conveyor{
 	dir = 8;
@@ -73927,7 +74199,6 @@
 /area/medical/robotics)
 "ufZ" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/railing,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -73937,12 +74208,8 @@
 	name = "Refinery Lockdown";
 	opacity = 0
 	},
-/obj/structure/sign/department/chem{
-	name = "REFINERY";
-	pixel_x = -32
-	},
-/turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/medicelevbasement)
 "ugO" = (
 /turf/simulated/floor/water/blood/muriki,
 /area/muriki/processor)
@@ -73978,8 +74245,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/sign/warning/incinerator{
-	pixel_y = 32
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
@@ -74222,6 +74489,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "upO" = (
@@ -74312,6 +74582,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
+"usO" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "usQ" = (
 /obj/random/maintenance/misc,
 /obj/structure/disposalpipe/segment{
@@ -74457,6 +74731,13 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/south_access)
+"uzM" = (
+/obj/random/trash,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "uzN" = (
 /obj/structure/table/woodentable,
 /obj/item/bone/skull,
@@ -75840,6 +76121,13 @@
 /obj/machinery/porta_turret/ai_defense,
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/muriki/processor/hall)
+"vvf" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/spine/civ)
 "vvg" = (
 /obj/effect/landmark{
 	name = "spiderspawn"
@@ -76198,7 +76486,7 @@
 /area/maintenance/spine/eng)
 "vHl" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/maintenance/int,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "vHo" = (
@@ -76305,6 +76593,13 @@
 "vJp" = (
 /turf/simulated/mineral/alt/muriki,
 /area/mine/unexplored/muriki/cave/west)
+"vJw" = (
+/obj/structure/cable/orange{
+	icon_state = "6-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "vJB" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
@@ -76447,6 +76742,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/coffee_shop)
+"vNJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2;
+	req_one_access = list(5,45,52)
+	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/medical/medbay2)
 "vNP" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -76618,6 +76926,16 @@
 /obj/item/storage/rollingpapers/blunt,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/maintenance/cargo)
+"vWo" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/medicelevbasement)
 "vWv" = (
 /obj/structure/prop/rock/waterflat,
 /turf/simulated/floor/water/acidic/deep/indoor/muriki,
@@ -77228,6 +77546,9 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "wqm" = (
@@ -77463,6 +77784,9 @@
 	icon_state = "1-2"
 	},
 /obj/random/trash,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "wwZ" = (
@@ -77505,7 +77829,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "wxT" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
@@ -78619,7 +78943,7 @@
 	},
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "xog" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/muriki,
 /area/muriki/processor/pools/eastfund)
@@ -78697,12 +79021,22 @@
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "xqG" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/door/airlock/glass_medical,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/old_cargo/white,
+/turf/simulated/floor/plating,
 /area/medical/medbay2)
 "xqQ" = (
 /obj/structure/bed/padded,
@@ -79105,6 +79439,9 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "xDN" = (
@@ -79143,11 +79480,8 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-4"
-	},
 /turf/simulated/floor/plating/muriki,
-/area/maintenance/med)
+/area/maintenance/medicelevbasement)
 "xEl" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -79284,9 +79618,6 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
 "xHX" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
@@ -79880,8 +80211,13 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
 "xYa" = (
-/turf/simulated/wall/r_wall,
-/area/engineering/refinery/tankstorage)
+/obj/structure/sign/department/cargo{
+	name = "TUG TUNNEL ACCESS";
+	pixel_x = -32;
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
 "xYg" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/muriki{
 	dir = 6
@@ -79973,6 +80309,10 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/random/maintenance/misc,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "xZY" = (
@@ -80099,6 +80439,13 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
+"yeg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/medicelevbasement)
 "yew" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -80140,8 +80487,9 @@
 	dir = 2
 	},
 /obj/machinery/door/airlock/multi_tile/metal/mait{
-	name = "Pump Station";
-	dir = 2
+	name = "Chemical Refinery";
+	dir = 2;
+	req_one_access = list(5,10)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/pump_station)
@@ -116175,10 +116523,10 @@ fDP
 qQW
 qQW
 qQW
-ydY
-aPF
+aao
+aXN
 mQe
-aPF
+aXN
 bcm
 bcm
 bcm
@@ -116334,13 +116682,13 @@ fDP
 fDP
 fDP
 fDP
-fDP
+kxZ
 hfN
 piA
-ydY
-rRX
+aao
+iNB
 qJQ
-rRX
+iNB
 bcm
 bcm
 bcm
@@ -116499,30 +116847,30 @@ fDP
 fDP
 wSY
 aRy
-ydY
-aPF
+aTQ
+aKA
 xnX
-aPF
-aXN
+aKA
+aKA
+bcm
 aXN
 aXN
 aXN
 bcm
 bcm
+aXN
+aXN
 bcm
-aXN
-aXN
-aXN
-aXN
+bcm
 xms
 aXN
 aXN
 aXN
-bcm
 aXN
 bcm
-iNB
-hLs
+aXN
+aXN
+mVT
 iiA
 iNB
 bcm
@@ -116665,25 +117013,25 @@ rnM
 ufZ
 eMw
 tsK
-mgP
-sTJ
+aKA
+mWV
 bFx
 rdF
 aXN
-bcm
-bcm
+xms
+aXN
 aXN
 xZS
 wwX
-sTJ
-sTJ
-sTJ
+snD
+snD
+snD
 rFn
-sTJ
+iQL
 aZW
 aXN
-bcm
-iNB
+aXN
+rdO
 hLs
 iiA
 iNB
@@ -116823,30 +117171,30 @@ fDP
 fDP
 fDP
 rPI
-ydY
-ydY
+aTQ
+aTQ
 dgU
 tsD
-aXN
-aXN
-aXN
+vWo
+qiF
+qiF
 hJY
-aXN
-xms
-aXN
-aXN
-hJY
-aXN
-bcm
-bcm
-bcm
-bcm
-bcm
+usO
+usO
+usO
+usO
+lhn
+usO
+usO
+usO
+usO
+usO
+usO
 seU
-aXN
-aXN
-iNB
-hLs
+qiF
+aLA
+sTJ
+pFR
 noM
 iNB
 bcm
@@ -116986,10 +117334,10 @@ fDP
 fDP
 lgS
 wEC
-ydY
+aTQ
 mkC
-tsD
-aXN
+dak
+aKA
 aXN
 sEh
 xDH
@@ -117003,12 +117351,12 @@ aXN
 aXN
 aXN
 aXN
+mtr
+oQa
+uzM
 aXN
-hsH
-sTJ
-mgP
-sTJ
-pFR
+rdO
+bST
 hDK
 iNB
 bcm
@@ -117148,10 +117496,10 @@ qkB
 fDP
 oSs
 rXY
-ydY
+aTQ
 dgU
 rWL
-gTT
+aTQ
 gTT
 gTT
 gTT
@@ -117164,10 +117512,10 @@ gTT
 bcN
 bcN
 bcN
-aXN
-aXN
 aXN
 bcm
+aXN
+aXN
 aXN
 aXN
 uie
@@ -117310,10 +117658,10 @@ fDP
 fDP
 oSs
 bWd
-ydY
+aTQ
 dgU
-tsD
-gTT
+syu
+aTQ
 gTT
 gTT
 gTT
@@ -117327,8 +117675,8 @@ cpz
 cpz
 cpz
 aXN
-aXN
-aXN
+bcm
+bcm
 bcm
 iNB
 xHX
@@ -117471,11 +117819,11 @@ fDP
 gpu
 gpu
 gRf
-ydY
-ydY
+aTQ
+aTQ
 qHw
-tsD
-gTT
+syu
+aTQ
 gTT
 xvt
 qlc
@@ -117633,11 +117981,11 @@ fDP
 gpu
 gpu
 jlN
-ydY
-bDj
+aTQ
+yeg
 wxS
-tsD
-gTT
+syu
+aTQ
 gTT
 aXO
 aSe
@@ -117795,11 +118143,11 @@ fDP
 fDP
 gRy
 mrr
-ydY
+aTQ
 pEW
-aPF
+aKA
 dAl
-gTT
+aTQ
 gTT
 cjc
 nZW
@@ -117957,11 +118305,11 @@ piB
 aFa
 bQe
 pmX
-ydY
+aTQ
 gsK
 xEh
-bGp
-gTT
+gdp
+aTQ
 gTT
 gpp
 sdW
@@ -118119,11 +118467,11 @@ bRH
 plp
 plp
 plp
-xYa
-xYa
+aTQ
+aTQ
 jZs
 bGp
-gTT
+aTQ
 gTT
 wEw
 wNT
@@ -118285,7 +118633,7 @@ eRn
 pKJ
 aRw
 bCc
-gTT
+aTQ
 gTT
 dhi
 ivq
@@ -118303,7 +118651,7 @@ bcm
 bcm
 aXN
 aXN
-xwl
+mgP
 hqu
 eJd
 wgy
@@ -118444,10 +118792,10 @@ qus
 eJJ
 aFU
 ets
-xYa
+aKA
 nSs
 aKA
-gTT
+aTQ
 gTT
 tWB
 aYR
@@ -118606,9 +118954,9 @@ plp
 xvn
 plp
 chx
-xYa
+aKA
 rPj
-aTQ
+aKA
 aTQ
 aTQ
 aTQ
@@ -118768,7 +119116,7 @@ plp
 jGn
 kxF
 pcx
-aLA
+aKA
 aNq
 bbI
 bbI
@@ -118930,7 +119278,7 @@ cQl
 aNY
 gmM
 aLz
-aLA
+aKA
 pPU
 pPU
 aSM
@@ -120075,7 +120423,7 @@ aUy
 rki
 gEv
 aWc
-aXP
+iIa
 byA
 rZd
 saQ
@@ -120547,8 +120895,8 @@ aII
 aII
 aII
 aNw
-aOd
-aPc
+oXN
+vNJ
 aPD
 aPD
 aPD
@@ -120572,7 +120920,7 @@ gRH
 baV
 xJv
 xJv
-qMR
+xYa
 gsT
 vcE
 aIC
@@ -125880,8 +126228,8 @@ izu
 iAI
 qRl
 aPF
+qkk
 aPF
-aXx
 aXx
 qGq
 qGq
@@ -126040,12 +126388,12 @@ pmN
 aPF
 fty
 aPF
-nXt
-nXt
-nXt
-nXt
-nXt
-sbg
+aXx
+aPF
+maK
+iGo
+bLp
+rRX
 qGq
 gDT
 bSE
@@ -126204,10 +126552,10 @@ xty
 aeV
 rZL
 nXt
-nXt
-nXt
-nXt
-sbg
+aPF
+aPF
+fKW
+aPF
 qGq
 aNF
 pJK
@@ -126366,10 +126714,10 @@ xty
 xty
 aeV
 eXJ
-nXt
-nXt
-nXt
-sbg
+aXx
+aPF
+vJw
+qkJ
 qGq
 jeL
 iGX
@@ -126528,10 +126876,10 @@ xty
 xty
 xty
 aeV
-nXt
-nXt
-nXt
-sbg
+aXx
+aXx
+qkJ
+ePv
 aKP
 aOo
 aKP
@@ -126691,11 +127039,11 @@ xty
 xty
 aeV
 nXt
-nXt
-sbg
-sbg
-soK
-aOn
+aPF
+mrz
+hWL
+vvf
+gcm
 soK
 axL
 aKP
@@ -126853,9 +127201,9 @@ xty
 xty
 nXt
 sbg
-sbg
-sbg
-sbg
+aXx
+nDM
+nDM
 bqW
 aOr
 ghJ

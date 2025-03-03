@@ -3,7 +3,7 @@
 	head = /obj/item/clothing/head/hardhat
 	uniform = /obj/item/clothing/under/rank/engineer
 	belt = /obj/item/storage/belt/utility/chemtech
-	id_type = /obj/item/card/id/engineering
+	id_type = /obj/item/card/id/engineering/chemical
 	pda_type = /obj/item/pda
 	r_pocket = null // no tray
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/yellow

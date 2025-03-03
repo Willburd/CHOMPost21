@@ -3736,6 +3736,12 @@
 	pixel_x = 5;
 	pixel_y = -6
 	},
+/obj/machinery/button/remote/blast_door{
+	id = "refine_lock";
+	name = "Refinery Lockdown";
+	pixel_x = 4;
+	pixel_y = 6
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "bKF" = (
@@ -4280,20 +4286,14 @@
 /obj/machinery/button/remote/blast_door{
 	id = "englockdown";
 	name = "Engineering Lockdown";
-	pixel_x = -10;
+	pixel_x = -5;
 	pixel_y = -8
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "atmoslockdown";
 	name = "Atmospherics Lockdown";
 	pixel_y = -8;
-	pixel_x = -2
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	pixel_x = 6;
-	pixel_y = -8
+	pixel_x = 3
 	},
 /obj/item/material/ashtray/glass{
 	pixel_x = 2;
