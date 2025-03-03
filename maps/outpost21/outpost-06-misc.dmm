@@ -2894,6 +2894,7 @@
 /obj/item/melee/energy/sword/purple,
 /obj/item/melee/energy/sword/purple,
 /obj/item/melee/energy/sword/purple,
+/obj/item/rig/vox/stealth,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -3861,16 +3862,15 @@
 	},
 /area/syndicate_mothership)
 "sP" = (
-/obj/item/rig/vox/civilian,
-/obj/item/rig/vox/civilian,
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
 /obj/structure/table/rack/steel,
-/obj/item/rig/vox/civilian,
 /obj/machinery/door/window/northright{
 	name = "Simple rigs"
 	},
+/obj/item/rig/vox/carapace,
+/obj/item/rig/vox/carapace,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -6493,8 +6493,18 @@
 /turf/unsimulated/wall,
 /area/alien)
 "FO" = (
-/turf/space,
-/area/shuttle/skipjack)
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/table/rack/steel,
+/obj/machinery/door/window/northright{
+	name = "Simple rigs"
+	},
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "FS" = (
 /obj/structure/bed/chair/modern_chair{
 	dir = 8
@@ -6598,6 +6608,14 @@
 	icon_state = "dark"
 	},
 /area/alien)
+"GJ" = (
+/obj/structure/table/alien,
+/obj/item/rig/vox/engineering,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "GK" = (
 /obj/machinery/door/airlock/hatch,
 /turf/unsimulated/floor{
@@ -7204,6 +7222,14 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"Mx" = (
+/obj/structure/table/alien,
+/obj/item/rig/vox/security,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
 	},
 /area/syndicate_mothership)
 "MD" = (
@@ -8769,11 +8795,6 @@
 /obj/item/clothing/head/pin/flower/blue,
 /obj/item/clothing/head/pin/flower/orange,
 /obj/item/clothing/head/pin/flower/pink,
-/obj/item/clothing/head/justice,
-/obj/item/clothing/head/justice/blue,
-/obj/item/clothing/head/justice/green,
-/obj/item/clothing/head/justice/pink,
-/obj/item/clothing/head/justice/yellow,
 /obj/item/clothing/head/philosopher_wig,
 /obj/item/clothing/head/plaguedoctorhat,
 /obj/item/clothing/head/xenos,
@@ -10995,7 +11016,7 @@ Tc
 yb
 sl
 wR
-pu
+GJ
 wZ
 wZ
 wR
@@ -11021,10 +11042,10 @@ Dl
 DE
 DE
 Ff
-FO
-FO
-FO
-FO
+Vs
+Vs
+Vs
+Vs
 Ff
 Bm
 Bm
@@ -11157,7 +11178,7 @@ Tc
 yb
 sl
 wR
-pu
+Mx
 wZ
 wZ
 wR
@@ -12299,7 +12320,7 @@ wZ
 qm
 rK
 wZ
-sP
+FO
 wR
 mN
 mN
