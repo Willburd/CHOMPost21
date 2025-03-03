@@ -83045,9 +83045,6 @@
 /obj/machinery/camera/network/security{
 	c_tag = "SEC - Evidence lockup"
 	},
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Evidence lockup"
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "ybG" = (
