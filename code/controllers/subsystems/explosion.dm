@@ -16,13 +16,13 @@ SUBSYSTEM_DEF(explosions)
 
 /datum/controller/subsystem/explosions/stat_entry(msg)
 	var/meme = ""
-	switch(resolving_explosions)
+	switch(resolving_explosions.len)
 		if(0 to 10000) meme = "- HEAVY LOAD"
 		if(10000 to 15000) meme = "- HEAVY LOAD"
 		if(15000 to 20000) meme = "- EXTREME LOAD"
 		if(20000 to 25000) meme = "- I STILL FUNCTION"
 		if(25000 to 30000) meme = "- WANNA BET?"
-		if(30000 to INFINITY) meme = "- CALL /abort() TO FORCE"
+		if(30000 to INFINITY) meme = "- CALL /abort() TO FORCE END"
 	msg = "E: [explosion_signals.len] | P: [pending_explosions.len] | R: [resolving_explosions.len] | CR : [currentrun.len] | CS : [currentsignals.len] - [resolve_explosions ? "RESOLVING" : currentrun.len ? "PREPARING" : "IDLING"] [meme]"
 	return ..()
 
@@ -108,7 +108,7 @@ SUBSYSTEM_DEF(explosions)
 			var/turf/T = get_step(epicenter, direction)
 			if(!T)
 				continue
-			if(spread_power > max_explosion_range)
+			if(spread_power > (max_explosion_range * 2))
 				// Nothing will block us above this strength. Treat it like a radial explosion
 				spread_power -= 3 // Superblasts are primarily at center of explosion
 			else
@@ -162,8 +162,6 @@ SUBSYSTEM_DEF(explosions)
 	resolve_explosions = FALSE
 
 /datum/controller/subsystem/explosions/proc/abort()
-	if(resolve_explosions)
-		return
 	if(!currentrun.len)
 		return
 	// Removes all entries except the top most, so we enter resolution phase properly, need at least one entry to do so...
