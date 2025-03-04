@@ -2,7 +2,7 @@ SUBSYSTEM_DEF(explosions)
 	name = "Explosions"
 	priority = FIRE_PRIORITY_EXPLOSIONS
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
-	wait = 1 SECONDS // When this runs, it RUNS
+	wait = 5 SECONDS
 
 	VAR_PRIVATE/resolve_explosions = FALSE
 	VAR_PRIVATE/list/currentrun = null
@@ -13,6 +13,18 @@ SUBSYSTEM_DEF(explosions)
 
 /datum/controller/subsystem/explosions/Initialize()
 	return SS_INIT_SUCCESS
+
+/datum/controller/subsystem/explosions/stat_entry(msg)
+	var/meme = ""
+	switch(resolving_explosions)
+		if(0 to 10000) meme = "- HEAVY LOAD"
+		if(10000 to 15000) meme = "- HEAVY LOAD"
+		if(15000 to 20000) meme = "- EXTREME LOAD"
+		if(20000 to 25000) meme = "- I STILL FUNCTION"
+		if(25000 to 30000) meme = "- WANNA BET?"
+		if(30000 to INFINITY) meme = "- CALL /abort() TO FORCE"
+	msg = "E: [explosion_signals.len] | P: [pending_explosions.len] | R: [resolving_explosions.len] | CR : [currentrun.len] | CS : [currentsignals.len] - [resolve_explosions ? "RESOLVING" : currentrun.len ? "PREPARING" : "IDLING"] [meme]"
+	return ..()
 
 /datum/controller/subsystem/explosions/fire(resumed)
 	// Build both queues. The first one gets the explosion power in each turf
@@ -28,6 +40,9 @@ SUBSYSTEM_DEF(explosions)
 			if(currentrun.len > 0)
 				to_world("EXPLOSIONS STARTED")
 	if(currentrun.len == 0) // Nothing to do
+		if(!resolve_explosions) // Wait till we're in use!
+			to_world("EARLY SUSPEND")
+			suspend()
 		return
 
 	while(currentrun.len)
@@ -45,7 +60,7 @@ SUBSYSTEM_DEF(explosions)
 		if(MC_TICK_CHECK)
 			return
 
-	// Final resolution for current run. Toggles between sense, and explosion modes. Sends signals to dopplers. Rebuilds powernets
+	// Final resolution for current run. Toggles between setup, and explosion modes. Sends signals to dopplers. Rebuilds powernets
 	if(!resolve_explosions)
 		// enter explosion mode!
 		start_resolve()
@@ -74,9 +89,14 @@ SUBSYSTEM_DEF(explosions)
 		SSmachines.makepowernets()
 		defer_powernet_rebuild = FALSE
 
-	// return to sensing mode
+	// return to setup mode
 	resolving_explosions.Cut()
 	end_resolve()
+
+	// we've finished. Pause if we have no more work to do.
+	if(!pending_explosions.len)
+		to_world("END SUSPEND")
+		suspend()
 
 /datum/controller/subsystem/explosions/proc/fire_prepare_explosions(var/list/data)
 	var/pwr = data[4]
@@ -88,6 +108,8 @@ SUBSYSTEM_DEF(explosions)
 	if(spread_power > 0)
 		for(var/direction in cardinal)
 			var/turf/T = get_step(epicenter, direction)
+			if(!T)
+				continue
 			for(var/obj/O in T)
 				if(O.explosion_resistance)
 					spread_power -= O.explosion_resistance
@@ -126,6 +148,17 @@ SUBSYSTEM_DEF(explosions)
 	to_world("EXPLOSIONS FINISHED")
 	resolve_explosions = FALSE
 
+/datum/controller/subsystem/explosions/proc/abort()
+	if(resolve_explosions)
+		return
+	if(!currentrun.len)
+		return
+	// Removes all entries except the top most, so we enter resolution phase properly, need at least one entry to do so...
+	var/key = currentrun[1]
+	var/data = currentrun[key]
+	currentrun.Cut()
+	currentrun[key] = data
+
 // INTERNAL explosion proc, meant for GROWING a currently processing blast.
 /datum/controller/subsystem/explosions/proc/append_currentrun(var/x0,var/y0,var/z0,var/pwr)
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -161,6 +194,10 @@ SUBSYSTEM_DEF(explosions)
 			dat[4] = pwr
 	// send signals to dopplers
 	explosion_signals.Add(list( list(x0,y0,z0,devastation_range,heavy_impact_range,light_impact_range,world.time) )) // append a list in a list. Needed so that the data list doesn't get merged into the list of datalists
+	// BOINK! Time to wake up sleeping beauty!
+	if(!can_fire)
+		wake()
+		fire(FALSE) // waking from sleep, we are absolutely not resuming, and INSTAND feedback to players is required here.
 
 // Collect prepared explosions for BLAST PROCESSING
 /datum/controller/subsystem/explosions/proc/finalize_explosion(var/x0,var/y0,var/z0,var/pwr)
