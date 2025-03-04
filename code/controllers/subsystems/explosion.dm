@@ -17,9 +17,9 @@ SUBSYSTEM_DEF(explosions)
 /datum/controller/subsystem/explosions/stat_entry(msg)
 	var/meme = ""
 	switch(resolving_explosions.len)
-		if(0 to 10000) meme = "- HEAVY LOAD"
-		if(10000 to 15000) meme = "- EXTREME LOAD"
-		if(15000 to 20000) meme = "- OH NO"
+		if(0 to 10000) meme = ""
+		if(10000 to 15000) meme = "- HEAVY LOAD"
+		if(15000 to 20000) meme = "- EXTREME LOAD"
 		if(20000 to 25000) meme = "- I STILL FUNCTION"
 		if(25000 to 30000) meme = "- WANNA BET?"
 		if(30000 to INFINITY) meme = "- CALL /abort() TO FORCE END"
