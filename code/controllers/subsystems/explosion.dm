@@ -107,6 +107,7 @@ SUBSYSTEM_DEF(explosions)
 				continue
 			var/turf/T = get_step(epicenter, direction)
 			if(!T)
+				spread_power -= 5 // Stop following edge of map walls
 				continue
 			if(spread_power > (max_explosion_range * 2))
 				// Nothing will block us above this strength. Treat it like a radial explosion
