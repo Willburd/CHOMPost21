@@ -260,7 +260,7 @@
 		/obj/item/storage/fancy/cigar/havana,
 		/obj/item/card/emag_broken,
 		/obj/item/sleevemate,
-		/obj/item/disk/nifsoft/compliance,
+		/obj/item/implanter/compliance, // Outpost 21 edit Moved from disk to implanter - /obj/item/disk/nifsoft/compliance
 		/obj/item/seeds/ambrosiadeusseed,
 		/obj/item/seeds/ambrosiavulgarisseed,
 		/obj/item/bodysnatcher)
