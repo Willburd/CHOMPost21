@@ -2,7 +2,7 @@ SUBSYSTEM_DEF(explosions)
 	name = "Explosions"
 	priority = FIRE_PRIORITY_EXPLOSIONS
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
-	wait = 5 SECONDS
+	wait = 0.5 SECONDS
 
 	VAR_PRIVATE/resolve_explosions = FALSE
 	VAR_PRIVATE/list/currentrun = null
@@ -33,18 +33,16 @@ SUBSYSTEM_DEF(explosions)
 		if(resolve_explosions && !currentrun.len)
 			end_resolve()
 		if(!resolve_explosions)
+			// Setup the explosion buffer!
 			currentrun = pending_explosions.Copy()
 			currentsignals = explosion_signals.Copy()
 			pending_explosions.Cut()
 			explosion_signals.Cut()
-			if(currentrun.len > 0)
-				to_world("EXPLOSIONS STARTED")
-	if(currentrun.len == 0) // Nothing to do
-		if(!resolve_explosions) // Wait till we're in use!
-			to_world("EARLY SUSPEND")
-			suspend()
+	if(currentrun.len == 0 && !resolve_explosions) // Wait till we're useful if we have nothing to do!
+		suspend()
 		return
 
+	// The heavy lifting part...
 	while(currentrun.len)
 		// Lets handle list management here instead of in each proc
 		// get the first key of the current run, use the key to get the
@@ -55,22 +53,23 @@ SUBSYSTEM_DEF(explosions)
 		else
 			fire_prepare_explosions(currentrun[key])
 		currentrun.Remove(key)
-		if(currentrun.len == 0) // Move on to final resolution
-			break
+
+		// Check if we move on to final resolution
+		if(currentrun.len == 0)
+			if(!resolve_explosions)
+				start_resolve()
+				currentrun = resolving_explosions.Copy()
+				resolving_explosions.Cut()
+				return
+			break // In resolution mode, break into final res ahead
+
 		if(MC_TICK_CHECK)
 			return
 
-	// Final resolution for current run. Toggles between setup, and explosion modes. Sends signals to dopplers. Rebuilds powernets
-	if(!resolve_explosions)
-		// enter explosion mode!
-		start_resolve()
-		currentrun = resolving_explosions.Copy()
-		currentsignals.Cut()
-		return
-
+	// !!!Final resolution!!!
+	// Toggles between setup, and explosion modes. Sends signals to dopplers. Rebuilds powernets
 	// We've handled the actual explosions, it's time to wrap up everything else.
 	// send signals to all machines scanning for them
-	to_world("EXPLOSIONS ON FINAL RESOLUTION")
 	for(var/list/time_dat in currentsignals)
 		var/x0 	= time_dat[1]
 		var/y0 	= time_dat[2]
@@ -83,23 +82,20 @@ SUBSYSTEM_DEF(explosions)
 			var/obj/machinery/doppler_array/Array = doppler_arrays[i]
 			if(Array)
 				Array.sense_explosion(x0,y0,z0,devastation_range,heavy_impact_range,light_impact_range, tim - world.time)
+	currentsignals.Cut()
 
-	// finished, if requested we rebuild powernets
-	if(defer_powernet_rebuild)
-		SSmachines.makepowernets()
-		defer_powernet_rebuild = FALSE
-
-	// return to setup mode
-	resolving_explosions.Cut()
+	// return to setup mode... Unless...
 	end_resolve()
-
-	// we've finished. Pause if we have no more work to do.
 	if(!pending_explosions.len)
-		to_world("END SUSPEND")
-		suspend()
+		suspend() // we've finished. Pause if we have no more work to do.
+		// If requested we rebuild powernets.
+		if(defer_powernet_rebuild)
+			INVOKE_ASYNC(SSmachines, TYPE_PROC_REF(/datum/controller/subsystem/machines,makepowernets))
+			defer_powernet_rebuild = FALSE
 
 /datum/controller/subsystem/explosions/proc/fire_prepare_explosions(var/list/data)
 	var/pwr = data[4]
+	var/our_dir = data[5]
 	if(pwr <= 0)
 		return
 	//This step handles the gathering of turfs which will be ex_act() -ed in the next step. It also ensures each turf gets the maximum possible amount of power dealt to it.
@@ -107,16 +103,35 @@ SUBSYSTEM_DEF(explosions)
 	var/spread_power = pwr - epicenter.explosion_resistance //This is the amount of power that will be spread to the tile in the direction of the blast
 	if(spread_power > 0)
 		for(var/direction in cardinal)
+			if(our_dir && our_dir == reverse_dir[direction]) // Don't go backwards
+				continue
 			var/turf/T = get_step(epicenter, direction)
 			if(!T)
 				continue
-			for(var/obj/O in T)
-				if(O.explosion_resistance)
-					spread_power -= O.explosion_resistance
-				if(spread_power <= 0)
-					break
-			append_currentrun(T.x,T.y,T.z, spread_power) // spread out, replaces old recursive explosions code
-	// Build the final explosion list
+			if(spread_power > max_explosion_range)
+				// Nothing will block us above this strength. Treat it like a radial explosion
+				spread_power -= 5 // Superblasts are primarily at center of explosion
+			else
+				// Act like old recursive explosions at this powerlevel
+				for(var/obj/O in T)
+					if(O.explosion_resistance)
+						spread_power -= O.explosion_resistance
+					if(spread_power <= 0)
+						break
+			// Make a new blast in the direction we're attempting to propogate if we have enough power!
+			append_currentrun(T.x,T.y,T.z,spread_power,direction)
+
+			// Make these feel a little more flashy
+			if(spread_power > 3 && spread_power < max_explosion_range && prob(6)) // bombs above maxcap are probably badmins, lets not make 10000 effects
+				if(prob(30))
+					var/datum/effect/effect/system/smoke_spread/S = new/datum/effect/effect/system/smoke_spread()
+					S.set_up(2,0,epicenter,direction)
+					S.start()
+				else
+					var/datum/effect/system/expl_particles/P = new/datum/effect/system/expl_particles()
+					P.set_up(2,epicenter,direction)
+					P.start()
+	// Build the final explosion list, will be processed when we get to final resolution
 	finalize_explosion(data[1],data[2],data[3],pwr)
 
 /datum/controller/subsystem/explosions/proc/fire_resolve_explosions(var/list/data)
@@ -139,13 +154,11 @@ SUBSYSTEM_DEF(explosions)
 /datum/controller/subsystem/explosions/proc/start_resolve()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
-	to_world("EXPLOSIONS RESOLVING")
 	resolve_explosions = TRUE
 
 /datum/controller/subsystem/explosions/proc/end_resolve()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
-	to_world("EXPLOSIONS FINISHED")
 	resolve_explosions = FALSE
 
 /datum/controller/subsystem/explosions/proc/abort()
@@ -160,7 +173,7 @@ SUBSYSTEM_DEF(explosions)
 	currentrun[key] = data
 
 // INTERNAL explosion proc, meant for GROWING a currently processing blast.
-/datum/controller/subsystem/explosions/proc/append_currentrun(var/x0,var/y0,var/z0,var/pwr)
+/datum/controller/subsystem/explosions/proc/append_currentrun(var/x0,var/y0,var/z0,var/pwr,var/direction)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(pwr <= 0)
@@ -171,14 +184,15 @@ SUBSYSTEM_DEF(explosions)
 	if(final_data)
 		final_power = final_data[4]
 	// If there is already a stronger explosion calculated there, then we don't need to bother
-	if(pwr < final_power)
+	if(pwr <= final_power)
 		return
 	// Update data at position for next run. Floodfill until the current_run is empty of new explosions!
 	var/list/dat = currentrun["[x0].[y0].[z0]"]
 	if(isnull(dat))
-		currentrun["[x0].[y0].[z0]"] = list(x0,y0,z0,pwr)
+		currentrun["[x0].[y0].[z0]"] = list(x0,y0,z0,pwr,direction)
 	else
-		dat[4] = pwr
+		if(dat[4] < pwr)
+			dat[4] = pwr
 
 // Queue explosion event, call this from explosion() ONLY
 /datum/controller/subsystem/explosions/proc/append_explosion(var/x0,var/y0,var/z0,var/pwr,var/devastation_range,var/heavy_impact_range,var/light_impact_range,var/flash_range)
@@ -188,7 +202,7 @@ SUBSYSTEM_DEF(explosions)
 	// actual explosion. Do not allow multiple, just take the highest power explosion hitting that turf
 	var/list/dat = pending_explosions["[x0].[y0].[z0]"]
 	if(isnull(dat))
-		pending_explosions["[x0].[y0].[z0]"] = list(x0,y0,z0,pwr)
+		pending_explosions["[x0].[y0].[z0]"] = list(x0,y0,z0,pwr,0)
 	else
 		if(dat[4] < pwr)
 			dat[4] = pwr
