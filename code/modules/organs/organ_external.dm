@@ -957,18 +957,6 @@ Note that amputating the affected organ does in fact remove the infection from t
 				span_danger("\The [owner]'s [src.name] explodes[gore]!"),\
 				span_bolddanger("Your [src.name] explodes[gore]!"),\
 				span_danger("You hear the [gore_sound]."))
-		// Outpost 21 edit begin - Acidic limb melting
-		if(DROPLIMB_ACID)
-			if(cannot_gib)
-				return
-			var/gore = "[(robotic >= ORGAN_ROBOT) ? "": " in gush of gore"]"
-			var/gore_sound = "[(status >= ORGAN_ROBOT) ? "sizzling sound of melting metal" : "sickening drips of melting flesh"]"
-			owner.visible_message(
-				span_danger("\The [owner]'s [src.name] sloughs off[gore]!"),\
-				span_bolddanger("<b>Your [src.name] sloughs off of your body[gore]!</b>"),\
-				span_danger("You hear the [gore_sound]."))
-		// Outpost 21 edit end
-
 		if(DROPLIMB_ACID)
 			if(cannot_gib)
 				return
