@@ -110,7 +110,7 @@ SUBSYSTEM_DEF(explosions)
 				continue
 			if(spread_power > max_explosion_range)
 				// Nothing will block us above this strength. Treat it like a radial explosion
-				spread_power -= 5 // Superblasts are primarily at center of explosion
+				spread_power -= 3 // Superblasts are primarily at center of explosion
 			else
 				// Act like old recursive explosions at this powerlevel
 				for(var/obj/O in T)
