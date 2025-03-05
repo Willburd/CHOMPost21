@@ -50,18 +50,6 @@
 	description = "Exhibits strange electromagnetic properties"
 	color = "#5D505E"
 
-/datum/reagent/obscuritol/initial_reaction(var/obj/item/reagent_containers/container, var/turf/T, var/volume, var/message)
-	var/obj/machinery/light/L
-	for(var/obj/machinery/light/light in orange(3, T))
-		if(light.status != 2) //LIGHT_BROKEN
-			L = light
-			break
-	if(L)
-		L.broken()
-	for(var/obj/machinery/light/light in orange(6, T))
-		light.flicker(rand(5, 10))
-	return "Abnormal electromagnetic pulses detected, machinery recalibrated."
-
 /datum/reagent/obscuritol/touch_turf(var/turf/T, var/volume) //-round(-x) = Ceiling(x)
 	for(var/obj/machinery/light/light in orange(-round(-1 * (volume / 10)), T))
 		light.broken()

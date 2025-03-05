@@ -16,6 +16,15 @@
 	temp_range = list(T0C + 60, T0C + 320)
 	result_amount = 1
 
+/decl/chemical_reaction/distilling/obscuritol/on_reaction(datum/reagents/holder, created_volume)
+	. = ..()
+	if(holder && holder.my_atom)
+		var/turf/T = get_turf(holder.my_atom)
+		for(var/obj/machinery/light/light in orange(6, T))
+			light.flicker(rand(5, 10))
+			if(prob(2))
+				light.broken()
+
 /decl/chemical_reaction/distilling/oxyphoromin
 	name = "Distilling Oxyphoromin"
 	id = "distill_oxyphoromin"
