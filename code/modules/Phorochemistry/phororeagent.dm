@@ -630,53 +630,52 @@ var/induromol_code = rand(1, 50)
 			O.clean_blood()
 
 /datum/reagent/phororeagent/sapoformator/touch_turf(var/turf/T, var/volume)
-	if(src.holder)
-		if(istype(src.holder.my_atom, /obj/effect/effect/water/chempuff))
+	if(holder)
+		if(istype(holder.my_atom, /obj/effect/effect/water/chempuff))
 			if(istype(T, /turf/simulated))
 				var/turf/simulated/S = T
 				S.dirt = 0
 			T.clean_blood()
 			for(var/obj/effect/decal/cleanable/C in T.contents)
-				src.reaction_obj(C, volume)
+				reaction_obj(C, volume)
 				del(C)
+		if(volume >= 25)
+			holder.my_atom.visible_message("The solution begins to fizzle.")
+			playsound(T, 'sound/effects/bamf.ogg', 50, 1)
+			var/datum/reagents/cleaner = new()
+			cleaner.my_atom = T
+			cleaner.add_reagent(REAGENT_ID_CLEANER, 10)
+			var/datum/effect/effect/system/foam_spread/soapfoam = new()
+			soapfoam.set_up(12, T, cleaner, 0)
+			soapfoam.start()
+			addtimer(CALLBACK(src, PROC_REF(slipinate), T), 50, TIMER_DELETE_ME)
+		else
+			holder.my_atom.visible_message("The solution sputters.")
 
-	src = null
-	if(volume >= 25)
-		usr << span_notice("The solution begins to fizzle.")
-		playsound(T, 'sound/effects/bamf.ogg', 50, 1)
-		var/datum/reagents/cleaner = new()
-		cleaner.my_atom = T
-		cleaner.add_reagent(REAGENT_ID_CLEANER, 10)
-		var/datum/effect/effect/system/foam_spread/soapfoam = new()
-		soapfoam.set_up(12, T, cleaner, 0)
-		soapfoam.start()
-		sleep(50)
-		var/list/soaps = typesof(/obj/item/soap)// - /obj/item/soap/fluff/azare_siraj_1
-		var/soap_type = pick(soaps)
-		var/obj/item/soap/S = new soap_type()
-		S.loc = T
-		if(volume >= 50)
-			volume -= 50
-			var/list/tiles = list()
-			if(istype(locate(T.x + 1, T.y, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x + 1, T.y, T.z))
-			if(istype(locate(T.x - 1, T.y, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x - 1, T.y, T.z))
-			if(istype(locate(T.x, T.y + 1, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x, T.y + 1, T.z))
-			if(istype(locate(T.x, T.y - 1, T.z), /turf/simulated/floor))
-				tiles.Add(locate(T.x, T.y - 1, T.z))
+/datum/reagent/phororeagent/sapoformator/proc/slipinate(var/turf/T)
+	var/list/soaps = typesof(/obj/item/soap)// - /obj/item/soap/fluff/azare_siraj_1
+	var/soap_type = pick(soaps)
+	var/obj/item/soap/S = new soap_type()
+	S.loc = T
+	if(volume >= 50)
+		volume -= 50
+		var/list/tiles = list()
+		if(istype(locate(T.x + 1, T.y, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x + 1, T.y, T.z))
+		if(istype(locate(T.x - 1, T.y, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x - 1, T.y, T.z))
+		if(istype(locate(T.x, T.y + 1, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x, T.y + 1, T.z))
+		if(istype(locate(T.x, T.y - 1, T.z), /turf/simulated/floor))
+			tiles.Add(locate(T.x, T.y - 1, T.z))
 
-			while(tiles.len > 0 && volume >= 0)
-				soap_type = pick(soaps)
-				S = new soap_type()
-				var/turf/location = pick(tiles)
-				tiles.Remove(location)
-				S.loc = location
-				volume -= 20
-
-	else
-		usr << span_notice("The solution does not appear to have enough mass to react.")
+		while(tiles.len > 0 && volume >= 0)
+			soap_type = pick(soaps)
+			S = new soap_type()
+			var/turf/location = pick(tiles)
+			tiles.Remove(location)
+			S.loc = location
+			volume -= 20
 
 /datum/reagent/phororeagent/rad_x
 	id = REAGENT_ID_RADX

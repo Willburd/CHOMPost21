@@ -14,9 +14,15 @@
 	//Simple variable to prevent me from doing attack_hand in both this and the child computer
 	var/zone = "This computer is working on a wireless range, the range is currently limited to "
 
+// Outpost 21 edit begin - Temp no sleep init
 /obj/machinery/computer/area_atmos/Initialize()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/machinery/computer/area_atmos/LateInitialize()
 	. = ..()
 	scanscrubbers()
+// Outpost 21 edit end
 
 /obj/machinery/computer/area_atmos/attack_ai(var/mob/user as mob)
 	return src.attack_hand(user)
