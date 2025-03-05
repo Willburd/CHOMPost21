@@ -1876,6 +1876,11 @@
 			if(!isnull(M.vision_flags))
 				sight |= M.vision_flags
 
+		// Outpost 21 edit begin - nocturnol
+		if(species.reagent_tag != IS_DIONA && see_in_dark < 8 && bloodstr.has_reagent(REAGENT_ID_NOCTURNOL))
+			see_in_dark = 8
+		// Outpost 21 edit end
+
 		/* Outpost 21 edit - Nif removal
 		if(!glasses_processed && nif)
 			var/datum/nifsoft/vision_soft
