@@ -5334,6 +5334,7 @@
 #include "modular_outpost\code\modules\persistence\noticeboard.dm"
 #include "modular_outpost\code\modules\phorochemistry\beakers.dm"
 #include "modular_outpost\code\modules\phorochemistry\bunsen_burner.dm"
+#include "modular_outpost\code\modules\phorochemistry\lockers.dm"
 #include "modular_outpost\code\modules\phorochemistry\reactions.dm"
 #include "modular_outpost\code\modules\phorochemistry\reagents.dm"
 #include "modular_outpost\code\modules\player_tips\player_tips_list.dm"

@@ -42837,8 +42837,6 @@
 /turf/simulated/floor/outdoors/rocks/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "lvu" = (
-/obj/item/phoronics_telepad,
-/obj/item/phoronics_telepad,
 /obj/structure/closet/crate/science,
 /obj/item/bluespace_crystal/artificial,
 /obj/item/bluespace_crystal,
