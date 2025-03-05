@@ -1000,9 +1000,7 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/muriki/grounds/isAlwaysIndoors()
-	return FALSE // Outside
+	outdoors = TRUE
 
 /area/muriki/grounds/graveyard
 	name = "\improper Facility Graveyard"
@@ -1330,9 +1328,7 @@
 	icon_state = "dark"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
-
-/area/muriki/skyline/isAlwaysIndoors()
-	return FALSE // Outside
+	outdoors = TRUE
 
 /area/muriki/skyline/east
 	name = "\improper Eastern Facility Airspace"
@@ -1737,9 +1733,7 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 	base_turf = /turf/simulated/open
-
-/area/muriki/rooftop/isAlwaysIndoors()
-	return FALSE // Outside
+	outdoors = TRUE
 
 /area/muriki/rooftop/engineering
 	name = "\improper Engineering Roof"
