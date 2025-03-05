@@ -171,9 +171,9 @@
 	if(!message_given)
 		to_chat(M, "You don't feel very good...")
 		message_given = TRUE
-		addtimer(CALLBACK(src, PROC_REF(expulse)), 20, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(expulse),M), 20, TIMER_DELETE_ME)
 
-/datum/reagent/expulsicol/proc/expulse()
+/datum/reagent/expulsicol/proc/expulse(var/mob/living/carbon/M)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.visible_message(span_warning("[H] throws up!"),span_warning("You throw up!"))
@@ -186,12 +186,12 @@
 		H.AdjustWeakened(30)
 		H.AdjustStunned(15)
 
-		for(var/datum/reagent/R in H.ingested)
+		for(var/datum/reagent/R in H.ingested.reagent_list)
 			if(R.id == id)
 				continue
 			H.ingested.remove_reagent(R.id, R.volume)
 
-		for(var/datum/reagent/R in H.bloodstr)
+		for(var/datum/reagent/R in H.bloodstr.reagent_list)
 			if(R.id == id)
 				continue
 			H.bloodstr.remove_reagent(R.id, R.volume)
