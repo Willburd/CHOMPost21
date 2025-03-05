@@ -3466,7 +3466,7 @@
 /area/maintenance/substation/engineering)
 "afi" = (
 /obj/effect/shuttle_landmark/premade/escape/station{
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 	},
 /turf/simulated/open,
 /area/engineering/gravgen)
