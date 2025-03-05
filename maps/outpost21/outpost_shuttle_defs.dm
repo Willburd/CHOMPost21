@@ -84,24 +84,24 @@
 	name = "Tram Station - Waste and Maintenance"
 	landmark_tag = "tram_waste"
 	base_area = /area/muriki/tramstation/waste
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/premade/tram/transit
 	name = "Tram Station - Transit"
 	landmark_tag = "tram_transit"
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/premade/tram/eng
 	name = "Tram Station - Engineering Cargo"
 	landmark_tag = "tram_eng"
 	base_area = /area/muriki/tramstation/cargeng
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/premade/tram/civ
 	name = "Tram Station - Civilian"
 	landmark_tag = "tram_civ"
 	base_area = /area/muriki/tramstation/civ
-	base_turf = /turf/simulated/open/force_indoor
+	base_turf = /turf/simulated/open
 
 
 //////////////////////////////////////////////////////////////

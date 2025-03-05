@@ -578,7 +578,7 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 // RS Port #658 End
 
 /area/proc/isAlwaysIndoors()
-	return FALSE
+	return !outdoors
 
 /area/shuttle/isAlwaysIndoors()
 	return TRUE

@@ -51,7 +51,7 @@
 	var/old_dynamic_lumcount = dynamic_lumcount
 	var/oldtype = src.type
 	var/old_density = src.density
-	var/was_open = istype(src,/turf/simulated/open) && !istype(src,/turf/simulated/open/force_indoor) // Outpost 21 edit - forced indoors
+	var/was_open = istype(src,/turf/simulated/open)
 	var/datum/sunlight_handler/old_shandler
 	var/turf/simulated/simself = src
 	if(istype(simself) && simself.shandler)
@@ -141,7 +141,7 @@
 			if(SUNLIGHT_ONLY_SHADE)
 				vis_contents += sim_self.shandler.pshandler.vis_shade
 
-	var/is_open = istype(W,/turf/simulated/open) && !istype(W,/turf/simulated/open/force_indoor) // Outpost 21 edit - forced indoors
+	var/is_open = istype(W,/turf/simulated/open)
 
 	propogate_sunlight_changes(oldtype, old_density, W)
 	var/turf/simulated/cur_turf = src

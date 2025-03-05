@@ -9488,7 +9488,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 1
 	},
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/maintenance/substation/medical)
 "eBJ" = (
 /obj/machinery/disposal,
@@ -14639,7 +14639,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/security/range)
 "hnM" = (
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/medical/stairwell)
 "hox" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -18828,7 +18828,7 @@
 /obj/structure/cable/green{
 	icon_state = "32-8"
 	},
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/maintenance/substation/medical)
 "jtV" = (
 /obj/structure/disposalpipe/segment{
@@ -34749,7 +34749,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/maintenance/substation/research)
 "ruA" = (
 /obj/machinery/biogenerator,
@@ -35425,7 +35425,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/rnd/hallway/upper)
 "rML" = (
 /obj/structure/disposalpipe/segment{
@@ -36761,7 +36761,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/rnd/hallway/upper)
 "suX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
@@ -37122,7 +37122,7 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/damaged_resleeverA)
 "sGL" = (
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/rnd/hallway/upper)
 "sHk" = (
 /obj/item/beartrap{
@@ -44236,7 +44236,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/turf/simulated/open/force_indoor,
+/turf/simulated/open,
 /area/rnd/hallway/upper)
 "waY" = (
 /obj/structure/cable/yellow{
