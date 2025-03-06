@@ -76041,6 +76041,9 @@
 	},
 /obj/machinery/light/small,
 /obj/machinery/chemical_analyzer_pro,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "vjf" = (
@@ -78801,6 +78804,9 @@
 	dir = 5
 	},
 /obj/machinery/hologram/holopad,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "wTe" = (
@@ -80477,6 +80483,34 @@
 /obj/item/stack/material/glass/reinforced,
 /obj/structure/closet/crate,
 /obj/structure/catwalk,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
+/obj/item/stack/material/plastic,
 /turf/simulated/floor,
 /area/engineering/refinery/tankstorage)
 "xVp" = (
@@ -119153,7 +119187,7 @@ axz
 aFX
 aGP
 axz
-oEC
+xVh
 oEC
 oEC
 bPU
@@ -119315,7 +119349,7 @@ axz
 aFY
 aGQ
 axz
-xVh
+oEC
 oEC
 vwz
 qKH
