@@ -9,7 +9,6 @@
 	board_type = new /datum/frame/frame_types/machine
 	origin_tech = list(TECH_DATA = 1)
 	req_components = list(
-							/obj/item/cell/high = 1, // Outpost 21 edit - This couldn't spawn it's own cell, because it's not a component part!
 							/obj/item/stock_parts/matter_bin = 2,
 							/obj/item/cell = 1,
 							/obj/item/stock_parts/motor = 2,
