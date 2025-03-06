@@ -1,0 +1,20 @@
+[
+	{
+	"title": "Outpost-21 Approves PTL Station. Dated: Feb 28, 2569",
+	"body": "<p>Following positive approval from station engineers, and positive results of power sold to neighboring outpost 19, local outpost-21 has been given the green light on their Power Transfer Laser (PTL) Station; a new engine design designed to be better at teaching engineers their daily operations, safer operations, greatly enhanced power output, and engineer creativity in engine design experimentation. Engineers assure crew that targeting errors causing the beam to slice through the station have been corrected.</p><br><p>The temporary orbital station will be scrapped, and E-Shui officials would like to give thanks to the hard working shipbreakers for finding a sufficient vessel to house the new station, the former SGSV 'Lightshiner', found derelict after a meteor pierced the hull and detonated fuel lines, starting a fire that ultimately doomed the ship. Construction crews led by Chief Engineers Taaa and Aiektaaknell have been hard at work tearing down, rebuilding, and redesigning the vessel to house the new, permanent PTL platform.</p><br><p>In addition, due to structural reworks of the surface facility's security departments, and security concerns of its location, the AI core will also be located in geosynchronous orbit above Muriki, nearby to the new PTL station. Security personnel hope this change will allow for better enhanced security after a plot for AI hijack was foiled by A-Shift security forces.</p><br><p>In other news, Spring has come to Outpost-21 once more, and we would like to remind crew to be aware of the change of weather, and take adequate protections when venturing on EVA operations.</p>",
+	"author": "Karawkkiki",
+	"message_type": "News Article"
+	},
+	{
+	"title": "New Engine To Be Tested At Outpost 21. Dated: Jan 24, 2569.",
+	"body": "<p>Local Outpost-21 is set to receive a test version of a new source of transferring energy. Utilized on other stations on a smaller scale, the new setup will be a Power-Transfer Laser (PTL) design. This will allow much larger and more efficient engines to be utilized, even ones currently not authorized on planetary usage such as the supermatter or singularity engines. The laser will be set up on a close-range geosync station, where the engines will produce power, and will be transferred into the PTL to be fired down on the planet to ensure power output is reliable.</p><br><p>Currently, a test-design of the platform is accessible to station engineers via a shuttle parked nearby. Upon final approval of the engine, the orbital station will be reworked, finalized, and have access for the Mining Trawler, Medical, and Security shuttles, in addition to the engineering short-range shuttle.</p><br><p>While the collector array is not yet finalized in location, engineers can order one from Cargo, however, E-Shui command would like to remind engineers to take special caution when aligning the collector and emitter array on the orbital station, to avoid any accidental incineration of station property and crew.</p>",
+	"author": "Karawkkiki",
+	"message_type": "News Article"
+	},
+	{
+	"title": "Automated Archival Notice",
+	"body": "<p>Scheduled network sync complete. Records have been archived. Proceeding with regular operations. Happy Earth new years from E-SHUI.</p>",
+	"author": "ES-Net-Test",
+	"message_type": "System Test"
+	}
+]
