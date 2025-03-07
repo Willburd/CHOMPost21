@@ -20,7 +20,7 @@
 	VAR_PRIVATE/current_ad1 = ""
 	VAR_PRIVATE/current_ad2 = ""
 
-/obj/machinery/librarywikicomp/Initialize()
+/obj/machinery/librarywikicomp/Initialize(mapload)
 	. = ..()
 	current_ad1 = get_ad()
 	current_ad2 = get_ad()

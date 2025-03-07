@@ -179,7 +179,7 @@
 	var/start_x = 0
 	var/start_y = 0
 
-/obj/effect/badbody_controller/Initialize()
+/obj/effect/badbody_controller/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 	start_x = loc.loc.x

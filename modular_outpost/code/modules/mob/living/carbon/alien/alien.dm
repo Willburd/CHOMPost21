@@ -1,7 +1,7 @@
 /mob/living/carbon/alien
 	var/randomize_name = TRUE
 
-/mob/living/carbon/alien/Initialize()
+/mob/living/carbon/alien/Initialize(mapload)
 	. = ..()
 	if(randomize_name)
 		name = "[initial(name)] ([instance_num])"

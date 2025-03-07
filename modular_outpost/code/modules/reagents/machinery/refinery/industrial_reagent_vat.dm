@@ -16,7 +16,7 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 	buckle_lying = TRUE
 	default_max_vol = 2500
 
-/obj/machinery/reagent_refinery/vat/Initialize()
+/obj/machinery/reagent_refinery/vat/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

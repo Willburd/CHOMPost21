@@ -15,7 +15,7 @@
 	var/obj/structure/bed/chair/vehicle_interior_seat/paired_seat = null
 	var/controls_weapon_index = 0 // if above 0, controls weapons in interior_controller.internal_weapon_list
 
-/obj/machinery/computer/vehicle_interior_console/Initialize()
+/obj/machinery/computer/vehicle_interior_console/Initialize(mapload)
 	. = ..()
 
 /obj/machinery/computer/vehicle_interior_console/Destroy()

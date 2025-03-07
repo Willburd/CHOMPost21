@@ -16,7 +16,7 @@
 	icon_state = "bottle-5"
 	item_state = "bottle-5"
 
-/obj/item/reagent_containers/glass/beaker/wheymax/Initialize()
+/obj/item/reagent_containers/glass/beaker/wheymax/Initialize(mapload)
 	prefill = list(REAGENT_ID_PROTEINPOWDER = 20, REAGENT_ID_SUGAR = 10) // 4/6ths nutriment, 1/6th sugar, 1/6th flavor
 	var/name_pick
 	switch(rand(1,8))

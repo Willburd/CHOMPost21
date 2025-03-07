@@ -13,7 +13,7 @@ var/global/list/fixed_teleporters = list()
 	var/destination_tag = "SendToTag" // checks for the above tag and links to it. Does not auto-link back, technically allows for chaining multiple teleports together.
 	var/obj/structure/fixed_teleporter/cached_destination
 
-/obj/structure/fixed_teleporter/Initialize()
+/obj/structure/fixed_teleporter/Initialize(mapload)
 	. = ..()
 	global.fixed_teleporters += src
 	// Link the teleporters AFTER we've got them all

@@ -249,7 +249,7 @@
 	var/ammo_path = /obj/item/tank_shell
 	var/loaded = FALSE
 
-/obj/machinery/ammo_loader/Initialize()
+/obj/machinery/ammo_loader/Initialize(mapload)
 	. = ..()
 	update_icon()
 

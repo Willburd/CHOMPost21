@@ -19,7 +19,7 @@
 	filter_side = 1 // R
 	icon_state = "furnace_r"
 
-/obj/machinery/reagent_refinery/furnace/Initialize()
+/obj/machinery/reagent_refinery/furnace/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

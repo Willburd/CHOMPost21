@@ -10,7 +10,7 @@
 	active_power_usage = 300
 	circuit = /obj/item/circuitboard/industrial_reagent_grinder
 
-/obj/machinery/reagentgrinder/industrial/Initialize()
+/obj/machinery/reagentgrinder/industrial/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

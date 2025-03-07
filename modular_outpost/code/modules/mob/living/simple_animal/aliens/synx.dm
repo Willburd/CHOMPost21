@@ -11,7 +11,7 @@
 	vore_bump_chance = 50 //Don't go running through them all the time //Upped from 10 to 50, because people keep feeding him, so he's getting bold~
 	vore_escape_chance = 10
 
-/mob/living/simple_mob/animal/synx/ai/pet/grins/Initialize()
+/mob/living/simple_mob/animal/synx/ai/pet/grins/Initialize(mapload)
 	//Configure speaker list for their name
 	voices = list(name)
 	//Configure design
@@ -38,7 +38,7 @@
 	//Vore Section
 	vore_capacity = 2
 
-/mob/living/simple_mob/animal/synx/ai/pet/diablo/Initialize()
+/mob/living/simple_mob/animal/synx/ai/pet/diablo/Initialize(mapload)
 	//Configure design
 	randomized_design = FALSE
 	body = "Normal"

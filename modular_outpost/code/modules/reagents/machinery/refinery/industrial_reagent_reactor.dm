@@ -17,7 +17,7 @@
 	VAR_PRIVATE/dis_time = 30
 	VAR_PRIVATE/drain_time = 10
 
-/obj/machinery/reagent_refinery/reactor/Initialize()
+/obj/machinery/reagent_refinery/reactor/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

@@ -118,7 +118,7 @@
 	icon_splat = "jil_big_splat"
 	icon_rest = "jil_big_sleep"
 
-/mob/living/simple_mob/vore/alienanimals/jil/Initialize()
+/mob/living/simple_mob/vore/alienanimals/jil/Initialize(mapload)
 	. = ..()
 
 	verbs += /mob/living/proc/ventcrawl

@@ -5,7 +5,7 @@
 	var/roof_type // roof placed over tile
 	invisibility = 101 // nope cant see this
 
-/obj/effect/auto_roof/Initialize()
+/obj/effect/auto_roof/Initialize(mapload)
 	var/turf/T = get_turf(src)
 	T.outdoors = OUTDOORS_NO
 	if (!T || !roof_type)

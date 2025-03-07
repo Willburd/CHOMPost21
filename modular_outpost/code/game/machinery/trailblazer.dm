@@ -13,7 +13,7 @@
 	anchored = TRUE
 	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
 
-/obj/machinery/trailblazer/Initialize()
+/obj/machinery/trailblazer/Initialize(mapload)
 	randomize_color()
 	return ..()
 

@@ -16,7 +16,7 @@
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER
 
-/obj/machinery/metal_detector/Initialize()
+/obj/machinery/metal_detector/Initialize(mapload)
 	. = ..()
 	default_apply_parts()
 

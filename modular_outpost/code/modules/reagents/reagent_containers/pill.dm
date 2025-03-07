@@ -3,7 +3,7 @@
 	desc = "Stabilizes the mind greatly, but has a chance of adverse effects. Medicate cautiously."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/paroxetine/Initialize()
+/obj/item/reagent_containers/pill/paroxetine/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PAROXETINE, 5)
 
@@ -12,7 +12,7 @@
 	desc = "Used in the treatment of schizophrenia, Alzheimer's disease, and dementia. Medicate cautiously."
 	icon_state = "pill2"
 
-/obj/item/reagent_containers/pill/lithium/Initialize()
+/obj/item/reagent_containers/pill/lithium/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_LITHIUM, 5)
 
@@ -21,7 +21,7 @@
 	desc = "Zoooom!"
 	icon_state = "pill4"
 
-/obj/item/reagent_containers/pill/zoom_old/Initialize()
+/obj/item/reagent_containers/pill/zoom_old/Initialize(mapload)
 	. = ..()
 	if(prob(10))
 		reagents.add_reagent(REAGENT_ID_EXPIREDMEDICINE, 5)

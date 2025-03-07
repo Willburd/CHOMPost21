@@ -19,7 +19,7 @@
 /obj/structure/noticeboard/bridge
 	name = "Command notice board"
 
-/obj/structure/noticeboard/bridge/Initialize()
+/obj/structure/noticeboard/bridge/Initialize(mapload)
 	. = ..()
 
 
@@ -27,7 +27,7 @@
 	name = "Cargo notice board"
 	icon_state = "nboard04"
 
-/obj/structure/noticeboard/cargo/Initialize()
+/obj/structure/noticeboard/cargo/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: STOP GETTING CAUGHT","<br>B shift, this one's for you: you're not supposed to be stealing from other departments, drop the cargonia shit. Or at least stop getting CAUGHT.",list(/obj/item/stamp/qm))
 	ADD_NOTICE("Staff Notice: Sell your stuff","<br>You have a vending machine in the front. Cargo points aren't free anymore, sell the stuff you 'find', use the thalers from it to get cargo points directly.",list(/obj/item/stamp/qm))
@@ -40,7 +40,7 @@
 	name = "engineering notice board"
 	icon_state = "nboard02"
 
-/obj/structure/noticeboard/engineering/Initialize()
+/obj/structure/noticeboard/engineering/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: Wires","<br>I don't know who needs to hear this, but you can recolor wire sets with a multitool, and fix frayed wires with ducttape. <br>Oh also, you can pick up your cut wires quicker by just shuffling around the bundle first, then scooping up the whole thing.",null)
 	ADD_NOTICE("Staff Notice: Fireaxe","<br>I don't know who, but don't let me find out. Stop stealing the damn fireaxe out of atmospherics. It is there EXCLUSIVELY for emergencies, such as needing to smash windows to vent a fire. If I find it missing or blood-soaked again, I will find out who you are, and we're gunna have words.",list(/obj/item/stamp/ce))
@@ -50,7 +50,7 @@
 /obj/structure/noticeboard/exploration
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/exploration/Initialize()
+/obj/structure/noticeboard/exploration/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: Mining Trawler","<br>The mining trawler is a big beast of a ship meant for taking up to the orbital rec-yard, or other derelicts. <br>Don't hog the damn thing. Take Science with you so they can gather artifacts, take Sec because some of those wrecks are active, that kind of thing. <br>There's a role for everyone up there. Don't be selfish.",list(/obj/item/stamp/qm))
 	. = ..()
@@ -60,7 +60,7 @@
 	name = "Janitorial notice board"
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/janitor/Initialize()
+/obj/structure/noticeboard/janitor/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: Cleaning","<br>Yo, departments have to keep themselves clean. Help if you wanna, but you don't gotta. Just keep the civilian areas nice and slick. <br>Also, if you're from another station, we answer to the QM here, not the HoP. So, make friends, bring them trash to recycle, that kinda thing. <br>Cargo IS your department to clean, though.",null)
 	. = ..()
@@ -69,7 +69,7 @@
 /obj/structure/noticeboard/library
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/library/Initialize()
+/obj/structure/noticeboard/library/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Bingle","<br>Our libary has received a computer with authorized Bingle usage! Use it to research anything and everything, it's a very handy wiki, and always up to date.<br> If the computer crashes just give it a wack, it's old tech.",null)
 	. = ..()
@@ -79,7 +79,7 @@
 	name = "medical notice board"
 	icon_state = "nboard04"
 
-/obj/structure/noticeboard/medical/Initialize()
+/obj/structure/noticeboard/medical/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: Engineered Organs","<br>We got our bioprinter updated with the new model, this'll let you grow organ lattices. <br>Keep them in a fed patient until they're a proto-organ, take them out, inject them with meds; it should respond well, put them back in and irradiate them.<br> Central loves these, so hit up cargo for extras you grow!",list(/obj/item/stamp/cmo))
 	ADD_NOTICE("Staff Notice: In-depth checks","<br>Remember to check the body scan THOROUGHLY! Check for additional organs, and check breathing types if the cause of ailments isn't obvious. Not everything is in big flashing red text, do your jobs!",null)
@@ -92,7 +92,7 @@
 	name = "Phoronics lab notice board"
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/phoronics/Initialize()
+/obj/structure/noticeboard/phoronics/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: Phoronics","<br>Use caution in phoronics. We're looking at getting explosion-reactive crystals ordered in, and getting central to accept explosives for cargo payment. Be safe when experimenting. <br> For now, mining loves bomb-mining, just make sure they only off them OFF-WORLD.",list(/obj/item/stamp/rd))
 	. = ..()
@@ -102,7 +102,7 @@
 	name = "Research notice board"
 	icon_state = "nboard01"
 
-/obj/structure/noticeboard/research/Initialize()
+/obj/structure/noticeboard/research/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: Long Term Storage","<br>The material storage in the RnD is emptied every shift, if you want to save your materials for the next shift, go downstairs into long-term storage. Put them in there!",list(/obj/item/stamp/rd))
 	. = ..()
@@ -112,7 +112,7 @@
 	name = "Security notice board"
 	icon_state = "nboard03"
 
-/obj/structure/noticeboard/security/Initialize()
+/obj/structure/noticeboard/security/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Staff Notice: Armored Asset Vehicles","<br>Security forces, in the red armory you'll find a ladder. That ladder takes you to the garage. Use that to store impounded vehicles <br>There's two armored vehicles down there, the tank and APC. Keys are in HoS office and Warden's office respectively, use them however you see fit on code red. Ask a senior if you need driving lessons.",list(/obj/item/stamp/hos))
 	ADD_NOTICE("Memo: SoP","<br>Review your SoP, found in your PDA. E-Shui is starting to crack down on this, understand we're different than NT. Make sure crew are aware; IGNORANCE IS NOT AN EXCUSE!",list(/obj/item/stamp/hos))
@@ -124,7 +124,7 @@
 	name = "Forgotten notice board"
 	icon_state = "nboard05"
 
-/obj/structure/noticeboard/stowaway/Initialize()
+/obj/structure/noticeboard/stowaway/Initialize(mapload)
 	var/obj/item/paper/P
 	ADD_NOTICE("Drawing: Traps","<br>On the paper is a crudely drawn image of a raptor-like creature. They appear to be kneeling down and inspecting in front of them. <br>In front of them is a small box with a laser coming from it, a bear trap, and a frayed wire sparking angrily. The raptor appears to be drawing an 'X' on the floor",null)
 	ADD_NOTICE("Drawing: Walls","<br>On the paper is a crudely drawn image of a raptor-like creature. The creature appears to be drawing an arrow on the ground, pointing towards a section of wall they're pushing back into place. The wall section appears to be dislodged somehow.",null)

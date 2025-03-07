@@ -42,7 +42,7 @@
 	desc = "Pies for EVERYONE! It bakes more, so you'll never run out!"
 	var/charge_counter = 0
 
-/obj/item/gun/launcher/confetti_cannon/pie/super/Initialize()
+/obj/item/gun/launcher/confetti_cannon/pie/super/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 	while(pies.len < max_confetti)

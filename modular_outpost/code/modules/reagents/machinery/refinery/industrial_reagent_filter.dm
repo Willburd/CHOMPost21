@@ -19,7 +19,7 @@
 	filter_side = 1 // R
 	icon_state = "filter_r"
 
-/obj/machinery/reagent_refinery/filter/Initialize()
+/obj/machinery/reagent_refinery/filter/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

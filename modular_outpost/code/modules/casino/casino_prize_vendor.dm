@@ -1,7 +1,7 @@
 
 #define CASINO_PRIZE(n, o, r, p, l) n = new /datum/data/casino_prize(n, o, r, p, l)
 
-/obj/machinery/casino_prize_dispenser/outpost/Initialize()
+/obj/machinery/casino_prize_dispenser/outpost/Initialize(mapload)
 	. = ..()
 
 	item_list = list()
