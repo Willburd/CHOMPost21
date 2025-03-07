@@ -5,7 +5,7 @@
 	canister_color = "purple"
 	can_label = 0
 
-/obj/machinery/portable_atmospherics/canister/nitrophoric_oxide/Initialize()
+/obj/machinery/portable_atmospherics/canister/nitrophoric_oxide/Initialize(mapload)
 	..()
 	var/list/air_mix = StandardAirMix()
 	src.air_contents.adjust_multi(GAS_PHORON, air_mix[GAS_O2], GAS_N2O, air_mix[GAS_N2])
@@ -20,7 +20,7 @@
 	canister_color = "green"
 	can_label = 0
 
-/obj/machinery/portable_atmospherics/canister/methane/Initialize()
+/obj/machinery/portable_atmospherics/canister/methane/Initialize(mapload)
 	..()
 
 	src.air_contents.adjust_gas(GAS_CH4, MolesForPressure())

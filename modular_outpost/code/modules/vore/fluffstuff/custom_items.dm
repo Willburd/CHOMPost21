@@ -225,7 +225,7 @@
 	unique = 1   // 0 - Normal book, 1 - Should not be treated as normal book, unable to be copied, unable to be modified
 	var/ledge = list()
 
-/obj/item/book/ledger/Initialize()
+/obj/item/book/ledger/Initialize(mapload)
 	. = ..()
 	dat = {"<html>
 			<head>

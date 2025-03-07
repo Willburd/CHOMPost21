@@ -11,7 +11,7 @@
 	circuit = /obj/item/circuitboard/industrial_reagent_pipe
 	default_max_vol = 60 // smoll
 
-/obj/machinery/reagent_refinery/pipe/Initialize()
+/obj/machinery/reagent_refinery/pipe/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

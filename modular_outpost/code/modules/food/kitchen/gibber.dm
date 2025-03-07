@@ -28,7 +28,7 @@
 /obj/machinery/gibber/autogibber
 	var/turf/input_plate
 
-/obj/machinery/gibber/autogibber/Initialize()
+/obj/machinery/gibber/autogibber/Initialize(mapload)
 	. = ..()
 	add_overlay("grjam") // Outpost 21 edit - overlay runtime fix
 	// outpost 21 edit - add gibber from above detection

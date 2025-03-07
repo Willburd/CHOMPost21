@@ -80,7 +80,7 @@
 		"Blood" = "#FFFFFF"
 	)
 
-/mob/living/simple_mob/vore/alienanimals/chu/Initialize()
+/mob/living/simple_mob/vore/alienanimals/chu/Initialize(mapload)
 	. = ..()
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide

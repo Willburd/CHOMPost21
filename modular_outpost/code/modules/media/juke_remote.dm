@@ -1,7 +1,8 @@
 /obj/item/juke_remote
 	var/area/autolinkareajuke_onspawn = null // mostly for the radiohost
 
-/obj/item/juke_remote/Initialize()
+/obj/item/juke_remote/Initialize(mapload)
+	..()
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/item/juke_remote/LateInitialize()
@@ -15,4 +16,4 @@
 				name = "\improper BoomTown cordless micro speaker"
 				icon = 'modular_outpost/icons/obj/device.dmi' // Use smaller icon. kinda hacky, but I'd rather not make this a whole new object.
 				break
-	return ..()
+	return

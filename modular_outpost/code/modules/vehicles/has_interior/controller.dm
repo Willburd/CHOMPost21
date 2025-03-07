@@ -93,7 +93,7 @@
 		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
 	interior_vehicle_list += src
 
-/obj/vehicle/has_interior/controller/Initialize()
+/obj/vehicle/has_interior/controller/Initialize(mapload)
 	// find interior entrypos
 	for(var/area/A)
 		if(istype( A, interior_area))

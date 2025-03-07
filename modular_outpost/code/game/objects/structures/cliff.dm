@@ -44,13 +44,13 @@ two tiles on initialization, and which way a cliff is facing may change during m
 /obj/structure/cliff/corner
 	icon_state = "planner-corner"
 
-/obj/structure/cliff/corner/Initialize()
+/obj/structure/cliff/corner/Initialize(mapload)
 	icon_state = "cliff-corner"
 	. = INITIALIZE_HINT_LATELOAD
 	register_dangerous_to_step()
 	update_icon()
 
-/obj/structure/cliff/Initialize()
+/obj/structure/cliff/Initialize(mapload)
 	icon_state = "cliff"
 	. = INITIALIZE_HINT_LATELOAD
 	register_dangerous_to_step()
@@ -256,7 +256,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	plane = TURF_PLANE
 	var/fadedir = NORTH // direction originally placed in
 
-/obj/structure/cliff_end/Initialize()
+/obj/structure/cliff_end/Initialize(mapload)
 	icon_state = "cliff-end"
 	. = INITIALIZE_HINT_LATELOAD
 	fadedir = dir

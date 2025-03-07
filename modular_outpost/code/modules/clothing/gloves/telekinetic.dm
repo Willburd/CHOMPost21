@@ -7,7 +7,7 @@
 
 	origin_tech = list(TECH_ENGINEERING = 4, TECH_BLUESPACE = 4)
 
-/obj/item/clothing/gloves/telekinetic/Initialize()
+/obj/item/clothing/gloves/telekinetic/Initialize(mapload)
 	. = ..()
 	cell = new(src)
 

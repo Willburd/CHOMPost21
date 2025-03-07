@@ -23,7 +23,7 @@
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
 
-/obj/effect/landmark/redspacemonsterspawn/Initialize()
+/obj/effect/landmark/redspacemonsterspawn/Initialize(mapload)
 	. = ..()
 
 	if(prob(80))
@@ -113,7 +113,7 @@
 /obj/effect/landmark/hostile_xenobio
 	name = "dangerous xeno spawner"
 
-/obj/effect/landmark/hostile_xenobio/Initialize()
+/obj/effect/landmark/hostile_xenobio/Initialize(mapload)
 	. = ..()
 
 	if(prob(20))
@@ -180,7 +180,7 @@
 /obj/effect/landmark/dangerous_situation
 	name = "dangerous situation spawner"
 
-/obj/effect/landmark/dangerous_situation/Initialize()
+/obj/effect/landmark/dangerous_situation/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD
 
@@ -228,7 +228,7 @@
 /obj/effect/landmark/step_trap
 	name = "step trap spawner"
 
-/obj/effect/landmark/step_trap/Initialize()
+/obj/effect/landmark/step_trap/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD
 

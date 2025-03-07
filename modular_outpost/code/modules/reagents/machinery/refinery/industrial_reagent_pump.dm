@@ -10,7 +10,7 @@
 	active_power_usage = 50
 	circuit = /obj/item/circuitboard/industrial_reagent_pump
 
-/obj/machinery/reagent_refinery/pump/Initialize()
+/obj/machinery/reagent_refinery/pump/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

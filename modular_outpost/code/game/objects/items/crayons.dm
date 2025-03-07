@@ -7,7 +7,7 @@
 	var/colour = null
 	var/shadeColour = null
 
-/obj/effect/auto_crayon/Initialize()
+/obj/effect/auto_crayon/Initialize(mapload)
 	. = ..()
 	if(colour == null)
 		switch(rand(1,6))

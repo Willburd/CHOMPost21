@@ -17,7 +17,7 @@
 	timeleft = 60.0 * 10 // default (10 mins)
 	var/self_destruct_cutoff = 60 * 5 //Seconds (5 mins)
 
-/obj/machinery/nuclearbomb/station/Initialize()
+/obj/machinery/nuclearbomb/station/Initialize(mapload)
 	. = ..()
 	verbs -= /obj/machinery/nuclearbomb/verb/make_deployable
 	for(var/turf/simulated/floor/T in get_area(src))

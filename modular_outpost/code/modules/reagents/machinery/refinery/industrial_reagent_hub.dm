@@ -12,7 +12,7 @@
 	default_max_vol = 0
 	VAR_PRIVATE/wait_delay = 4 SECONDS
 
-/obj/machinery/reagent_refinery/hub/Initialize()
+/obj/machinery/reagent_refinery/hub/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

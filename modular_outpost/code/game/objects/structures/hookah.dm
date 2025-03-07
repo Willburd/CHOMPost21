@@ -12,7 +12,7 @@
 
 	var/mob/living/occupant // micro abuse
 
-/obj/structure/hookah/Initialize()
+/obj/structure/hookah/Initialize(mapload)
 	. = ..()
 	create_reagents(120)
 	flags |= OPENCONTAINER

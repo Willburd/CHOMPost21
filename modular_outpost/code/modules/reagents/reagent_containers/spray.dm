@@ -8,6 +8,6 @@
 	possible_transfer_amounts = null
 	volume = 250
 
-/obj/item/reagent_containers/spray/xenowatergun/Initialize()
+/obj/item/reagent_containers/spray/xenowatergun/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_WATER, 250)

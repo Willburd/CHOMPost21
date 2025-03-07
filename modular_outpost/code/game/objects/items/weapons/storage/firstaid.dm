@@ -43,7 +43,7 @@
 	name = "Syringe (phoron stim)"
 	desc = "\[WARNING\] Contains raw phoron. Intended only for vox crewmembers."
 
-/obj/item/reagent_containers/syringe/voxkit/Initialize()
+/obj/item/reagent_containers/syringe/voxkit/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("phoron", 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped

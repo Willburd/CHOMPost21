@@ -9,7 +9,7 @@
 
 	var/working = FALSE
 
-/obj/machinery/smart_centrifuge/Initialize()
+/obj/machinery/smart_centrifuge/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

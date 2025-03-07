@@ -26,7 +26,7 @@
 					"Jilly-bean" = /mob/living/simple_mob/vore/alienanimals/jil/bean,
 					"Miros" = /mob/living/simple_mob/vore/alienanimals/catslug/custom/spaceslug)
 
-/obj/item/storage/box/monkeycubes/pets/Initialize()
+/obj/item/storage/box/monkeycubes/pets/Initialize(mapload)
 	. = ..()
 	// spawn each pet in the box
 	var/first = TRUE

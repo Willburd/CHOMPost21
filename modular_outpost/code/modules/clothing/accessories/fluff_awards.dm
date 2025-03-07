@@ -96,7 +96,7 @@ badges
 	badge_string = "E-Shui Central Command"
 	slot_flags = SLOT_MASK | SLOT_TIE
 
-/obj/item/clothing/accessory/badge/solgov/tags/eshui/Initialize()
+/obj/item/clothing/accessory/badge/solgov/tags/eshui/Initialize(mapload)
 	. = ..()
 	var/mob/living/carbon/human/H
 	H = get_holder_of_type(src, /mob/living/carbon/human)

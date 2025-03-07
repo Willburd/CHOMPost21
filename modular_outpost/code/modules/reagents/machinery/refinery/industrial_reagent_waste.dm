@@ -14,7 +14,7 @@
 	buckle_lying = TRUE
 	default_max_vol = 5000
 
-/obj/machinery/reagent_refinery/waste_processor/Initialize()
+/obj/machinery/reagent_refinery/waste_processor/Initialize(mapload)
 	. = ..()
 	// TODO - Remove this bit once machines are converted to Initialize
 	if(ispath(circuit))

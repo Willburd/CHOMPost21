@@ -9,7 +9,7 @@
 	gauge_cap = 3
 	gauge_icon = "indicator_bigtank"
 
-/obj/item/tank/phoroanesthetic/Initialize()
+/obj/item/tank/phoroanesthetic/Initialize(mapload)
 	. = ..()
 
 	air_contents.gas[GAS_PHORON] = (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C) * O2STANDARD
@@ -28,7 +28,7 @@
 	icon_state = "emergency_tst"
 	gauge_icon = "indicator_emergency"
 
-/obj/item/tank/emergency/carbon_dioxide/Initialize()
+/obj/item/tank/emergency/carbon_dioxide/Initialize(mapload)
 	. = ..()
 	src.air_contents.adjust_gas(GAS_CO2, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
@@ -40,7 +40,7 @@
 	gauge_icon = "indicator_emergency"
 	gauge_cap = 3
 
-/obj/item/tank/emergency/methane/Initialize()
+/obj/item/tank/emergency/methane/Initialize(mapload)
 	. = ..()
 	src.air_contents.adjust_gas(GAS_CH4, (10*ONE_ATMOSPHERE)*volume/(R_IDEAL_GAS_EQUATION*T20C))
 
@@ -57,7 +57,7 @@
 	icon_state = "methane"
 	distribute_pressure = ONE_ATMOSPHERE*O2STANDARD
 
-/obj/item/tank/methane/Initialize()
+/obj/item/tank/methane/Initialize(mapload)
 	. = ..()
 	src.air_contents.adjust_gas(GAS_CH4, (3*ONE_ATMOSPHERE)*70/(R_IDEAL_GAS_EQUATION*T20C))
 

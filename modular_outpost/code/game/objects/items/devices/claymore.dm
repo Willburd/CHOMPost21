@@ -15,7 +15,7 @@
 	var/list/lasers = list()
 	var/timerid
 
-/obj/effect/mine/claymore/Initialize()
+/obj/effect/mine/claymore/Initialize(mapload)
 	. = ..()
 	timerid = addtimer(CALLBACK(src, PROC_REF(setup_laserline)), 3 SECONDS, TIMER_STOPPABLE)
 
@@ -95,7 +95,7 @@
 	layer = ABOVE_JUNK_LAYER
 	var/datum/weakref/owner
 
-/obj/effect/step_trigger/claymore_laser/Initialize()
+/obj/effect/step_trigger/claymore_laser/Initialize(mapload)
 	. = ..()
 	update_icon()
 

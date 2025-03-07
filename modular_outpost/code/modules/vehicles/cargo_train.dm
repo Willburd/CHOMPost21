@@ -15,7 +15,7 @@
 	var/obj/item/hose_connector/input/active/InputSocketC
 	var/obj/item/hose_connector/output/active/OutputSocket
 
-/obj/vehicle/train/trolly_tank/Initialize()
+/obj/vehicle/train/trolly_tank/Initialize(mapload)
 	. = ..()
 	create_reagents(5000)
 	update_icon()

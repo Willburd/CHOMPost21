@@ -20,7 +20,7 @@
 	VAR_PROTECTED/loaded_reagent = null
 	VAR_PRIVATE/label = ""
 
-/obj/item/reagent_containers/chem_canister/Initialize()
+/obj/item/reagent_containers/chem_canister/Initialize(mapload)
 	. = ..()
 	if(loaded_reagent)
 		var/datum/reagent/R = SSchemistry.chemical_reagents[loaded_reagent]
