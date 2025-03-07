@@ -262,7 +262,7 @@
 	var/pixel_offset_y = 0									// Used for offsetting 64x64 and up icons.
 	var/rad_levels = NORMAL_RADIATION_RESISTANCE		//For handle_mutations_and_radiation
 	var/rad_removal_mod = 1
-	
+
 	// Outpost 21 addition begin
 	var/phoron_contact_mod = 1								// Affects skin contact poisoning from phoron
 	var/enzyme_contact_mod = 1								// Multiplies probability of enzyme damage rolls... basically only used by the enzyme immunity trait(outpost 21)
@@ -634,6 +634,11 @@
 		var/turf/landing = get_turf(hit_atom)
 		if(!istype(landing))
 			return FALSE
+
+		// Outpost 21 edit begin - Deadly falling z levels
+		if(landing.z in using_map.deadly_fall_levels)
+			return FALSE
+		// Outpost 21 edit end
 
 		if(!silent)
 			to_chat(H, span_notice("You manage to lower impact of the fall and land safely."))
