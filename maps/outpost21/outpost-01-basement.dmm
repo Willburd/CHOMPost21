@@ -1062,7 +1062,14 @@
 /obj/random/material/refined,
 /obj/random/material/refined,
 /obj/random/material/refined,
-/turf/simulated/floor/plating,
+/obj/item/paper{
+	info = "Stop stealing from my stash, you thieving fuck!";
+	name = "Note from someone"
+	},
+/turf/simulated/floor/plating{
+	nitrogen = 0;
+	nitrous_oxide = 82.1472
+	},
 /area/rnd/research/longtermstorage)
 "acz" = (
 /obj/machinery/power/apc{
@@ -1535,21 +1542,20 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/research/longtermstorage)
 "adx" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/turf/simulated/floor/plating{
+	nitrogen = 0;
+	nitrous_oxide = 82.1472
 	},
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/turf/simulated/floor/plating,
 /area/rnd/research/longtermstorage)
 "ady" = (
 /obj/structure/cable/green{
@@ -3654,6 +3660,11 @@
 	},
 /area/muriki/bathroom/vox)
 "ahB" = (
+/obj/item/lego{
+	pixel_x = -4;
+	pixel_y = -5;
+	name = "Lego"
+	},
 /turf/simulated/wall/r_wall{
 	can_open = 1
 	},
@@ -6757,7 +6768,7 @@
 	name = "Medbay Emergency Lockdown"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/med)
 "anw" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
@@ -9327,7 +9338,8 @@
 /area/rnd/research/medical)
 "arZ" = (
 /obj/machinery/medical_kiosk{
-	pixel_y = 2
+	pixel_y = 2;
+	can_dispense = 1
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
@@ -15206,7 +15218,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Bronchioloal Atmospherics";
-	req_access = list(24)
+	req_one_access = list(10,24)
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -15746,7 +15758,8 @@
 /obj/effect/floor_decal/techfloor/orange,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/atmos/voxdump)
@@ -16209,7 +16222,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Bronchioloal Atmospherics";
-	req_one_access = list(5,52)
+	req_one_access = list(10,52)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
@@ -16221,6 +16234,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -16673,7 +16692,7 @@
 /area/engineering/refinery/main)
 "aFU" = (
 /obj/structure/catwalk,
-/obj/item/frame,
+/obj/machinery/pipedispenser,
 /turf/simulated/floor,
 /area/engineering/refinery/tankstorage)
 "aFV" = (
@@ -16686,6 +16705,10 @@
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/firealarm{
 	pixel_y = 26
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
@@ -17138,7 +17161,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small{
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/muriki,
@@ -18484,7 +18513,7 @@
 /area/muriki/bathroom/atmospherics)
 "aJx" = (
 /obj/vehicle/train/trolly_tank{
-	dir = 1
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
@@ -18506,7 +18535,7 @@
 	},
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Bronchioloal Atmospherics";
-	req_one_access = list(5,52)
+	req_one_access = list(5,10,52)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19400,16 +19429,13 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/atmospherics)
 "aLv" = (
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 4;
-	icon_state = "shutter0";
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	opacity = 0
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor/muriki,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aLw" = (
 /obj/effect/floor_decal/corner/orange{
@@ -19417,9 +19443,6 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
@@ -19437,9 +19460,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aLy" = (
@@ -19452,9 +19472,6 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
@@ -20020,22 +20037,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 4;
-	icon_state = "shutter0";
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	opacity = 0
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/muriki,
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/blue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aMC" = (
 /obj/structure/cable/green{
@@ -20103,14 +20115,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/multi_tile{
-	dir = 2
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
 	},
-/obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/corner/orange,
+/turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aMG" = (
 /obj/structure/disposalpipe/segment{
@@ -20235,8 +20244,9 @@
 "aMQ" = (
 /obj/structure/table/steel,
 /obj/item/storage/box/syringegun,
-/obj/item/gun/launcher/syringe,
 /obj/machinery/light,
+/obj/item/storage/box/syringegun,
+/obj/item/gun/launcher/syringe,
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
 "aMR" = (
@@ -20484,6 +20494,7 @@
 	name = "Refinery";
 	req_one_access = list(5,10)
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tankstorage)
 "aNq" = (
@@ -20503,7 +20514,8 @@
 /area/maintenance/medicelevbasement)
 "aNr" = (
 /obj/machinery/door/airlock/medical{
-	name = "Medical Mass Disposal"
+	name = "Medical Mailing Room";
+	req_one_access = list(5,10)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
@@ -31123,7 +31135,9 @@
 /turf/simulated/floor/plating,
 /area/muriki/crew/dormaid)
 "bht" = (
-/obj/machinery/medical_kiosk,
+/obj/machinery/medical_kiosk{
+	can_dispense = 1
+	},
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
 	},
@@ -41337,7 +41351,8 @@
 	dir = 10
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
@@ -45219,6 +45234,15 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "bQI" = (
@@ -45269,6 +45293,7 @@
 	name = "Refinery";
 	req_one_access = list(5,10)
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tankstorage)
 "bRS" = (
@@ -45460,7 +45485,15 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/machinery/light/small,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "bWL" = (
@@ -45571,9 +45604,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -45940,6 +45970,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
+"cmR" = (
+/obj/effect/catwalk_plated/dark,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/med)
 "cmT" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/deep/indoor/muriki,
@@ -46087,6 +46127,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
@@ -46397,10 +46440,13 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
 "cCT" = (
+/obj/machinery/vending/tool,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 1
 	},
-/obj/machinery/vending/tool,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "cCW" = (
@@ -46595,6 +46641,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "cJm" = (
@@ -46690,20 +46742,17 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/waste)
 "cMG" = (
-/obj/item/radio/intercom/department/medbay{
-	dir = 4;
-	pixel_x = 21
+/obj/machinery/vending/wallmed1{
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
 	},
 /obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
-	pixel_x = 32
-	},
-/obj/machinery/vending/wallmed1{
-	pixel_y = -32
-	},
-/obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 1
+	pixel_x = 26
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
@@ -46844,6 +46893,10 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
+"cQP" = (
+/obj/random/trash,
+/turf/simulated/floor,
+/area/maintenance/eng)
 "cRo" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -48750,6 +48803,12 @@
 /obj/structure/closet/radiation,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"eaw" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor,
+/area/maintenance/med)
 "eaW" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -48959,7 +49018,8 @@
 /area/mine/explored/muriki/river/end)
 "eha" = (
 /obj/machinery/medical_kiosk{
-	pixel_y = 2
+	pixel_y = 2;
+	can_dispense = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
@@ -49206,13 +49266,11 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	opacity = 0
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 8;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/engineering/refinery/pump_station)
@@ -50043,9 +50101,6 @@
 	c_tag = "MED - Delivery";
 	dir = 8
 	},
-/obj/machinery/conveyor_switch/oneway{
-	id = "medtrash"
-	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -50055,6 +50110,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "medtrash"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/mail)
@@ -50202,9 +50260,6 @@
 "eUo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 9
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engrefinery)
@@ -50443,7 +50498,7 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "fbq" = (
-/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/maintenance/tug)
 "fbA" = (
@@ -50464,6 +50519,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/server)
+"fbP" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/obj/random/trash,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/eng)
 "fbQ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -51204,10 +51267,7 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
 "fvk" = (
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/structure/handrail,
+/obj/structure/toilet,
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 26
@@ -51216,6 +51276,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
 	pixel_y = 30
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engrefinery)
@@ -51382,6 +51445,12 @@
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/white,
 /area/constructionsite/medical)
+"fBA" = (
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/waste)
 "fBP" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -51769,13 +51838,11 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	opacity = 0
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 8;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/engineering/refinery/pump_station)
@@ -52084,6 +52151,24 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/trammaint)
+"fYr" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark/muriki,
+/area/engineering/refinery/main)
 "fYy" = (
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary{
 	active_power_usage = 500;
@@ -52348,11 +52433,13 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
 "ghs" = (
-/obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "ghC" = (
 /obj/structure/sink{
@@ -52906,6 +52993,7 @@
 	},
 /obj/effect/floor_decal/corner/purple/full,
 /obj/structure/table/steel,
+/obj/item/core_sampler,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "gAe" = (
@@ -53407,7 +53495,8 @@
 	dir = 4
 	},
 /obj/machinery/vending/wallmed1{
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -53415,6 +53504,12 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Refinery South'";
 	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -53814,6 +53909,22 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
+"hcG" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/blue,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/engineering/refinery/main)
 "hcN" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
@@ -53921,6 +54032,9 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
@@ -54097,13 +54211,19 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "hnv" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/effect/floor_decal/industrial/warning{
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/maintenance/tug)
 "hnx" = (
@@ -54349,6 +54469,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/sec)
+"hwC" = (
+/obj/effect/mine/claymore{
+	dir = 1
+	},
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/waste)
 "hwD" = (
 /turf/simulated/open,
 /area/mine/unexplored/muriki/cave/sci)
@@ -54889,7 +55015,7 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
 "hTb" = (
-/obj/effect/floor_decal/industrial/warning/corner{
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/muriki,
@@ -55568,6 +55694,10 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/eng)
+"ipt" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor,
+/area/maintenance/med)
 "ipC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -55725,6 +55855,12 @@
 /obj/item/trash/hakarl,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
+"isP" = (
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/waste)
 "itk" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -56249,7 +56385,8 @@
 "iOX" = (
 /obj/item/geiger/wall/west,
 /obj/machinery/vending/wallmed1{
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /obj/vehicle/train/trolly_tank{
 	dir = 2
@@ -56306,6 +56443,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/alarm{
 	pixel_y = 26
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -56498,6 +56641,15 @@
 	temperature = 321.5
 	},
 /area/muriki/processor/hall)
+"iXk" = (
+/obj/effect/catwalk_plated/dark,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki{
+	outdoors = 1
+	},
+/area/mine/explored/muriki/river/north)
 "iYc" = (
 /turf/simulated/floor/wood,
 /area/quartermaster/breakroom)
@@ -57026,6 +57178,12 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "jme" = (
@@ -57444,7 +57602,7 @@
 /area/maintenance/oldbridge)
 "jxX" = (
 /obj/vehicle/train/trolly_tank{
-	dir = 1
+	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
@@ -57691,6 +57849,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "jHy" = (
@@ -57779,6 +57943,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
+"jKG" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "medding";
+	name = "Medical Dinger";
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark/muriki,
+/area/engineering/refinery/main)
 "jLo" = (
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/dark,
@@ -58312,7 +58493,9 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
 "kdU" = (
-/obj/machinery/medical_kiosk,
+/obj/machinery/medical_kiosk{
+	can_dispense = 1
+	},
 /obj/effect/floor_decal/corner/black/full{
 	dir = 8
 	},
@@ -58468,7 +58651,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small{
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/muriki,
@@ -59425,6 +59614,12 @@
 	c_tag = "MED - Refinery West'";
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "kMP" = (
@@ -59759,6 +59954,7 @@
 	name = "refinery train tug"
 	},
 /obj/item/geiger/wall/west,
+/obj/item/tool/crowbar/red,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
 "kYa" = (
@@ -59834,6 +60030,10 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/mineral/alt/muriki,
 /area/mine/unexplored/muriki/mountainbase)
+"lbn" = (
+/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+/turf/simulated/floor,
+/area/maintenance/eng)
 "lbA" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -59944,6 +60144,11 @@
 	},
 /turf/unsimulated/wall/planetary/muriki,
 /area/mine/unexplored/muriki/cave/east)
+"lgf" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/random/trash,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/eng)
 "lgs" = (
 /obj/effect/zone_divider,
 /turf/simulated/mineral/floor/muriki{
@@ -59976,6 +60181,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -61077,9 +61288,6 @@
 /area/muriki/processor/hall)
 "lOf" = (
 /obj/random/trash,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/maintenance/tug)
 "lOq" = (
@@ -61114,6 +61322,11 @@
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
+"lOM" = (
+/obj/effect/floor_decal/rust,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/maintenance/eng)
 "lOQ" = (
 /obj/structure/railing{
 	dir = 1
@@ -61938,6 +62151,13 @@
 "mpL" = (
 /turf/simulated/mineral/alt/ignore_cavegen/muriki,
 /area/mine/unexplored/muriki/cave/east)
+"mpX" = (
+/obj/effect/mine/frag{
+	camo_net = 1
+	},
+/obj/item/multitool,
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/waste)
 "mqM" = (
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -61993,6 +62213,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -63220,6 +63446,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Refinery North'"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -64633,6 +64865,16 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/warning/incinerator{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "ocf" = (
@@ -65205,6 +65447,11 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = 26
+	},
 /turf/simulated/floor,
 /area/engineering/refinery/pump_station)
 "oud" = (
@@ -65337,6 +65584,12 @@
 /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/eng)
+"oyd" = (
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/plating/muriki{
+	outdoors = 1
+	},
+/area/mine/explored/muriki/river/north)
 "oyn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 6
@@ -65995,7 +66248,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/maintenance/tug)
 "oZt" = (
@@ -66275,6 +66528,12 @@
 	pixel_y = 30
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "pgr" = (
@@ -66368,6 +66627,12 @@
 	},
 /obj/item/geiger/wall/west,
 /obj/effect/landmark/holiday_event_spawn,
+/obj/effect/floor_decal/corner/blue,
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "piB" = (
@@ -66491,9 +66756,6 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -66501,11 +66763,20 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner_techfloor_grid,
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
 /obj/item/geiger/wall/south,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_techfloor_grid,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "pnh" = (
@@ -66718,7 +66989,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/effect/catwalk_plated/dark,
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -67230,6 +67501,8 @@
 /obj/machinery/door/airlock/maintenance/medical{
 	req_one_access = list(5,10)
 	},
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medicelevbasement)
 "pKZ" = (
@@ -67353,6 +67626,12 @@
 	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "pOn" = (
@@ -67668,11 +67947,16 @@
 "pZf" = (
 /obj/machinery/door/firedoor/glass,
 /obj/item/airlock_brace,
-/obj/machinery/door/airlock/maintenance/medical,
+/obj/machinery/door/airlock/maintenance/medical{
+	req_one_access = list(5,10)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown"
+	},
+/turf/simulated/floor/tiled/techfloor/muriki,
 /area/muriki/bathroom/engrefinery)
 "pZA" = (
 /obj/machinery/light{
@@ -68230,11 +68514,18 @@
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 8
 	},
-/obj/machinery/light/small,
 /obj/structure/sign/nosmoking_1{
 	pixel_y = -32
 	},
-/obj/machinery/pipedispenser,
+/obj/machinery/partslathe,
+/obj/effect/floor_decal/corner/blue/full,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner_techfloor_grid{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "qpp" = (
@@ -68383,7 +68674,7 @@
 "qus" = (
 /obj/structure/catwalk,
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Refinery Tank Storage'";
+	c_tag = "MED - Refinery Aux Storage'";
 	dir = 8
 	},
 /turf/simulated/floor/plating/muriki,
@@ -68795,6 +69086,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engrefinery)
 "qJQ" = (
@@ -69715,6 +70007,9 @@
 /obj/effect/landmark/dangerous_situation,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/atmos_control)
+"rgI" = (
+/turf/simulated/floor,
+/area/maintenance/med)
 "rhd" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -69917,6 +70212,10 @@
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
+"rnu" = (
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor,
+/area/maintenance/med)
 "rnv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -69932,8 +70231,8 @@
 /area/mine/unexplored/muriki/mountainbasenorth)
 "rnM" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/glass_engineering{
-	name = "Tug Tunnel Access";
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/medical{
 	req_one_access = list(5,10)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -70090,6 +70389,9 @@
 	dir = 4
 	},
 /obj/structure/railing,
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "rsi" = (
@@ -70124,6 +70426,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -70441,6 +70749,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
+/obj/item/tape_roll,
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "rBM" = (
@@ -70474,9 +70783,6 @@
 /turf/simulated/floor/water/acidic/deep/muriki,
 /area/muriki/processor/gland/airmix)
 "rCV" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/eng)
@@ -70877,6 +71183,12 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "rPO" = (
@@ -71039,6 +71351,11 @@
 	can_open = 1
 	},
 /area/engineering/coreproctunnel)
+"rVV" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/trash_pile,
+/turf/simulated/floor,
+/area/maintenance/eng)
 "rWh" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
@@ -71081,13 +71398,11 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	opacity = 0
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 8;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/engineering/refinery/pump_station)
@@ -71128,6 +71443,12 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -71187,11 +71508,11 @@
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/civ/south_access)
 "saL" = (
-/obj/effect/floor_decal/industrial/warning/dust,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Refinery Tug Storage'";
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
 "saQ" = (
@@ -71701,14 +72022,7 @@
 /turf/simulated/floor,
 /area/security/tankstore)
 "snp" = (
-/obj/machinery/door/airlock/maintenance/engi,
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/eng)
 "snD" = (
@@ -72045,15 +72359,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/med)
@@ -72518,13 +72823,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "sNN" = (
-/obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/start/engineer{
 	name = "Chemical Engineer"
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
 "sNP" = (
@@ -72795,6 +73100,12 @@
 	name = "Station Intercom (General)";
 	pixel_x = 32
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "sXl" = (
@@ -72971,7 +73282,8 @@
 /obj/machinery/alarm/alarms_hidden{
 	pixel_y = 32
 	},
-/obj/item/tape_roll,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "teD" = (
@@ -73165,6 +73477,10 @@
 "tlb" = (
 /turf/simulated/wall/r_wall,
 /area/mine/unexplored/muriki/mountainbasenorth)
+"tln" = (
+/obj/effect/mine/claymore,
+/turf/simulated/floor,
+/area/maintenance/med)
 "tlS" = (
 /obj/structure/loot_pile/mecha/ripley,
 /obj/effect/floor_decal/industrial/warning,
@@ -73202,11 +73518,14 @@
 /turf/simulated/floor/water/acidic/deep/muriki,
 /area/mine/explored/muriki/river/north)
 "tqg" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/effect/catwalk_plated/dark,
+/obj/structure/railing{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/maintenance/eng)
+/turf/simulated/floor/plating/muriki{
+	outdoors = 1
+	},
+/area/mine/explored/muriki/river/north)
 "tqy" = (
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/sci/east_access)
@@ -73926,6 +74245,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "tNw" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tankstorage)
 "tNB" = (
@@ -74363,8 +74683,7 @@
 /area/maintenance/wastedisposalnear)
 "ubT" = (
 /obj/effect/landmark/step_trap,
-/obj/machinery/door/airlock/maintenance/engi,
-/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/eng)
 "ucd" = (
@@ -74412,7 +74731,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "udm" = (
-/obj/effect/floor_decal/industrial/warning/dust,
 /obj/item/radio/intercom/department/medbay{
 	dir = 8;
 	pixel_x = -21
@@ -74422,6 +74740,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -32
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
 "udn" = (
@@ -74513,13 +74832,9 @@
 "ufZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	opacity = 0
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medicelevbasement)
@@ -75384,14 +75699,17 @@
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/civ)
 "uJJ" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Refinery Tug Storage";
+/obj/effect/catwalk_plated/dark,
+/obj/structure/sign/warning/acid{
+	pixel_x = 32
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
+/turf/simulated/floor,
 /area/maintenance/eng)
 "uJO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -75810,7 +76128,8 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/port_gen/pacman/mrs,
+/obj/machinery/power/port_gen/pacman/super,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "vbg" = (
@@ -75996,6 +76315,10 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"vhO" = (
+/obj/effect/mine/claymore,
+/turf/simulated/floor/plating/muriki,
+/area/mine/explored/muriki/cave/waste)
 "vif" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -76036,12 +76359,15 @@
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
 "viX" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/machinery/light/small,
 /obj/machinery/chemical_analyzer_pro,
 /obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/muriki,
@@ -76135,7 +76461,11 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/machinery/partslathe,
+/obj/machinery/smart_centrifuge,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "vlR" = (
@@ -76463,6 +76793,10 @@
 	},
 /turf/simulated/floor/water/acidic/indoor/muriki,
 /area/maintenance/eng)
+"vwh" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/eng)
 "vwt" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -76736,7 +77070,7 @@
 	},
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Bronchioloal Atmospherics";
-	req_one_access = list(5,52)
+	req_one_access = list(5,10,52)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
@@ -77831,12 +78165,17 @@
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "wmH" = (
-/obj/machinery/light/small{
-	dir = 1
+/obj/structure/sign/warning/acid{
+	pixel_x = 32
 	},
-/obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/tiled/techmaint,
-/area/maintenance/eng)
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/med)
 "wnj" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/black/border,
@@ -78214,9 +78553,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "wzA" = (
@@ -78410,6 +78746,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/blue/full,
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "wER" = (
@@ -78461,6 +78801,15 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -79000,9 +79349,6 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/med)
 "xbd" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
@@ -79237,6 +79583,9 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/muriki,
@@ -79578,6 +79927,7 @@
 	health = 25;
 	name = "Reinforced Grille"
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/tankstorage)
 "xvt" = (
@@ -84560,9 +84910,9 @@ efJ
 efJ
 efJ
 efJ
-qSi
-qSi
-qSi
+nSV
+dPi
+nSV
 qSi
 qSi
 qSi
@@ -84721,11 +85071,11 @@ kDE
 kDE
 efJ
 qSi
-qSi
-qSi
-qSi
-qSi
-qSi
+nSV
+nSV
+isP
+nSV
+nSV
 qSi
 qSi
 qSi
@@ -84883,11 +85233,11 @@ kDE
 kDE
 efJ
 qSi
-qSi
-qSi
-qSi
-qSi
-qSi
+dPi
+hwC
+mpX
+vhO
+dPi
 qSi
 qSi
 qSi
@@ -85045,11 +85395,11 @@ kDE
 kDE
 efJ
 qSi
-qSi
-qSi
-qSi
-qSi
-qSi
+nSV
+nSV
+fBA
+nSV
+nSV
 qSi
 qSi
 qSi
@@ -85208,9 +85558,9 @@ efJ
 efJ
 qSi
 qSi
-qSi
-qSi
-qSi
+nSV
+dPi
+nSV
 qSi
 qSi
 qSi
@@ -110615,7 +110965,7 @@ sGO
 eFc
 sGO
 eFc
-uJJ
+eFc
 eFc
 xbd
 aQt
@@ -110772,7 +111122,7 @@ wuC
 aQt
 rpu
 aQt
-wBL
+lgf
 cRG
 cRG
 rWz
@@ -110781,7 +111131,7 @@ cRG
 cRG
 cRG
 cRG
-rWz
+rVV
 aQt
 wuC
 wuC
@@ -110941,8 +111291,8 @@ cRG
 sCc
 cRG
 rWz
-rWz
-rWz
+lOM
+lOM
 cRG
 aQt
 wuC
@@ -111259,10 +111609,10 @@ oxL
 aQt
 aQt
 wBL
-cRG
+cQP
 cRG
 rWz
-cRG
+lbn
 rWz
 sCc
 cRG
@@ -111590,7 +111940,7 @@ cRG
 sCc
 cRG
 rWz
-cRG
+cQP
 rWz
 aQt
 wuC
@@ -111753,7 +112103,7 @@ rWz
 rWz
 rWz
 cRG
-cRG
+rII
 aQt
 wuC
 wuC
@@ -111906,7 +112256,7 @@ aQt
 wuC
 aQt
 aQt
-wmH
+wBL
 cRG
 cRG
 cRG
@@ -112067,12 +112417,12 @@ oUN
 aQt
 wuC
 aQt
-iQu
+vwh
 oie
 vBa
 jCI
 jCI
-vBa
+fbP
 jCI
 vBa
 vBa
@@ -112235,7 +112585,7 @@ iQu
 oQZ
 iQu
 iQu
-tqg
+iQu
 cRG
 iQu
 wQt
@@ -113995,11 +114345,11 @@ iRI
 aPF
 fbj
 aPF
+aPF
+aPF
+aPF
 aXx
-aXx
-aXx
-aXx
-aXx
+aPF
 aXx
 tts
 tts
@@ -114157,21 +114507,21 @@ iRI
 aPF
 fbj
 aPF
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
+tln
+rgI
+ipt
+eaw
+aPF
+aPF
 aXx
 tts
 tts
 tts
-wuC
-wuC
 wuC
 wuC
 aQt
+rII
+cRG
 cRG
 xck
 oUN
@@ -114319,21 +114669,21 @@ tAn
 aPF
 iqa
 aPF
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-tts
-tIC
-tts
-tts
-wuC
-wuC
-wuC
+aPF
+rgI
+aPF
+rgI
+rgI
+wmH
+cmR
+iXk
+tqg
+oyd
+tqg
+uJJ
+cRG
 aQt
+cRG
 aQt
 aQt
 jPw
@@ -114481,22 +114831,22 @@ aHk
 aPF
 fbj
 aPF
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
+rnu
+rgI
+rgI
+aPF
+aPF
+aPF
 aXx
 aXx
 tts
 tIC
 tts
-wuC
-wuC
-wuC
-wuC
-wuC
+aQt
+cRG
+cRG
+cRG
+aQt
 aQt
 oUN
 aQt
@@ -114645,7 +114995,7 @@ fbj
 aPF
 aXx
 aPF
-aPF
+rgI
 aPF
 aPF
 rRX
@@ -114656,9 +115006,9 @@ tIC
 tts
 tts
 wuC
-wuC
-wuC
-wuC
+aQt
+aQt
+aQt
 aQt
 oUN
 aQt
@@ -117081,7 +117431,7 @@ fDP
 fDP
 tMm
 csG
-fDP
+dLU
 fDP
 fDP
 fDP
@@ -117243,14 +117593,14 @@ fDP
 fDP
 fDP
 fDP
-dLU
 fDP
 fDP
 fDP
 fDP
-dLU
 fDP
-sMe
+fDP
+fDP
+jKG
 aTQ
 aTQ
 xnX
@@ -117561,8 +117911,8 @@ aPF
 lEt
 mkJ
 kfc
-koT
 wBb
+koT
 pum
 aFQ
 sze
@@ -117732,7 +118082,7 @@ fDP
 fDP
 fDP
 fDP
-fDP
+dLU
 fDP
 fDP
 fDP
@@ -118060,7 +118410,7 @@ pVi
 fDP
 fDP
 fDP
-oSs
+hcG
 bWd
 aTQ
 dgU
@@ -118703,7 +119053,7 @@ obL
 sXa
 rtw
 kjC
-mKZ
+fYr
 mKZ
 piB
 aFa
@@ -119528,7 +119878,7 @@ bbI
 bbI
 aTR
 aUs
-aKA
+aTQ
 aUT
 aUr
 gTT
@@ -120005,7 +120355,7 @@ ppa
 aNr
 jUm
 eOJ
-pcx
+aLz
 aQw
 aRz
 aRz

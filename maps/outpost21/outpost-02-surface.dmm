@@ -2453,9 +2453,10 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adC" = (
@@ -2584,9 +2585,6 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/trawler)
 "adK" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/machinery/power/terminal,
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -2600,6 +2598,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adL" = (
@@ -11907,14 +11906,13 @@
 /area/quartermaster/mining/firstaid)
 "bGx" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
 /obj/machinery/camera/network/substations{
 	dir = 1
 	},
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/comgen)
 "bGU" = (
@@ -17070,8 +17068,20 @@
 /area/crew_quarters/medbreak)
 "drd" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/motiontracker,
+/obj/item/motiontracker,
+/obj/item/motiontracker,
+/obj/structure/table/rack,
 /obj/structure/window/reinforced{
-	dir = 1
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	name = "Detection Tools";
+	req_access = list(2);
+	dir = 2
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
@@ -19696,7 +19706,8 @@
 /area/muriki/bathroom/sanitorium)
 "ekd" = (
 /obj/machinery/medical_kiosk{
-	pixel_y = 2
+	pixel_y = 2;
+	can_dispense = 1
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -24158,6 +24169,10 @@
 	id_tag = "boomboxinner";
 	name = "Euthanizer Core";
 	req_one_access = list(53,52)
+	},
+/obj/item/lego{
+	pixel_x = -6;
+	name = "The Last Lego of Defense"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/processor/euth)
@@ -34972,7 +34987,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/step_trigger/dephase_shadekin,
 /obj/machinery/door/airlock/security{
 	name = "Green Armory";
 	req_one_access = list(1,19)
@@ -51408,13 +51422,6 @@
 	pixel_x = 6;
 	pixel_y = 8;
 	req_one_access = list(5,19,40)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	pixel_x = 6;
-	pixel_y = -4;
-	req_one_access = list(5,19,40,10)
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -68156,7 +68163,8 @@
 /area/muriki/processor/pools/crop)
 "tAf" = (
 /obj/machinery/medical_kiosk{
-	pixel_y = 2
+	pixel_y = 2;
+	can_dispense = 1
 	},
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -70600,7 +70608,8 @@
 /area/crew_quarters/heads/hos)
 "uls" = (
 /obj/machinery/medical_kiosk{
-	pixel_y = 2
+	pixel_y = 2;
+	can_dispense = 1
 	},
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -70772,7 +70781,8 @@
 	dir = 4
 	},
 /obj/machinery/medical_kiosk{
-	pixel_y = 2
+	pixel_y = 2;
+	can_dispense = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
@@ -74415,7 +74425,8 @@
 /area/muriki/bathroom/security)
 "vvd" = (
 /obj/machinery/medical_kiosk{
-	pixel_y = 2
+	pixel_y = 2;
+	can_dispense = 1
 	},
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -74571,10 +74582,8 @@
 /turf/simulated/open,
 /area/quartermaster/foyer)
 "vxU" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green,
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/comgen)
 "vya" = (
@@ -83583,11 +83592,16 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/machinery/recharger,
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
 /obj/structure/table/steel,
 /obj/machinery/camera/network/cargo{
 	c_tag = "CRG - Delivery Office";
 	name = "security camera"
+	},
+/obj/item/mail_scanner{
+	pixel_x = 12
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)

@@ -826,12 +826,14 @@
 /area/library_office)
 "aow" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
 /obj/machinery/camera/network/security{
 	c_tag = "SEC - Backup Generator";
 	dir = 4
 	},
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "aox" = (
@@ -1969,6 +1971,16 @@
 "aRE" = (
 /turf/simulated/wall,
 /area/hydroponics/gibber)
+"aRH" = (
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Backup Generator"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor/muriki,
+/area/maintenance/substation/phoronics)
 "aRN" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/substation/virology)
@@ -2576,6 +2588,13 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/security)
+"bgI" = (
+/obj/machinery/power/port_gen/pacman/super,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/phoronics)
 "bgL" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -2783,9 +2802,12 @@
 /area/engineering/gravgen)
 "bne" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating/muriki,
 /area/djstation)
 "bnk" = (
@@ -3112,6 +3134,9 @@
 "bwG" = (
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
@@ -3735,12 +3760,6 @@
 	id = "cmo_office";
 	pixel_x = 5;
 	pixel_y = -6
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "refine_lock";
-	name = "Refinery Lockdown";
-	pixel_x = 4;
-	pixel_y = 6
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
@@ -5172,12 +5191,10 @@
 /turf/simulated/floor,
 /area/rnd/misc_lab)
 "crP" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/plating/muriki,
 /area/djstation)
 "crZ" = (
@@ -5849,6 +5866,12 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/muriki/processor/pools/eastfund)
+"cKH" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/phoronics)
 "cLf" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -6176,6 +6199,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/item/paper{
+	name = "Note from Central";
+	info = "This is EMERGENCY uranium fuel, for EMERGENCIES. In the GENERATOR. Your lack of materials for R&D is not an emergency, contact cargo."
 	},
 /turf/simulated/floor,
 /area/muriki/rooftop/scigen)
@@ -6505,12 +6532,10 @@
 	},
 /area/muriki/crystal)
 "dcO" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor,
 /area/muriki/rooftop/civgen)
 "dcT" = (
@@ -9022,12 +9047,10 @@
 /turf/simulated/floor/plating,
 /area/rnd/misc_lab)
 "epO" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "epT" = (
@@ -10694,10 +10717,14 @@
 /area/medical/resleeving)
 "fhr" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "fhu" = (
@@ -13486,17 +13513,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "gMd" = (
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
 /obj/structure/table/rack,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor,
 /area/muriki/rooftop/civgen)
 "gME" = (
@@ -15056,11 +15081,11 @@
 	c_tag = "SEC - Shuttle Engine";
 	dir = 1
 	},
-/obj/machinery/power/port_gen/pacman/mrs,
-/obj/fiftyspawner/tritium,
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
+/obj/fiftyspawner/uranium,
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/security)
 "hAx" = (
@@ -18701,7 +18726,9 @@
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/disposal)
 "jqQ" = (
-/obj/machinery/door/airlock/maintenance/rnd,
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Backup Generator"
+	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/substation/phoronics)
@@ -20298,15 +20325,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "kdQ" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor,
 /area/muriki/rooftop/civgen)
 "kdU" = (
@@ -21504,12 +21529,10 @@
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/medical)
 "kFk" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "kFx" = (
@@ -22464,15 +22487,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
 "ljd" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/machinery/light/small{
 	dir = 8
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "ljo" = (
@@ -24166,13 +24187,14 @@
 /area/maintenance/cargoupper)
 "mcz" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor,
 /area/muriki/rooftop/scigen)
 "mcZ" = (
@@ -24633,6 +24655,12 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet,
 /area/library)
+"moV" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/turf/simulated/floor,
+/area/maintenance/substation/phoronics)
 "mpg" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -24844,9 +24872,6 @@
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
 "mtY" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
@@ -24856,6 +24881,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/cargen)
 "mui" = (
@@ -26450,15 +26476,13 @@
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "nih" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Backup Generator"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor,
 /area/muriki/rooftop/scigen)
 "niv" = (
@@ -28636,6 +28660,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
+"orb" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/phoronics)
 "orh" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -30032,11 +30062,12 @@
 /obj/machinery/power/terminal{
 	dir = 8
 	},
-/obj/machinery/power/port_gen/pacman/mrs,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/fiftyspawner/tritium,
+/obj/machinery/power/port_gen/pacman/super,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/medical)
 "oZb" = (
@@ -30502,11 +30533,6 @@
 /area/mine/unexplored/muriki/mountaintopeast)
 "pkY" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -30515,6 +30541,11 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/cargen)
 "plg" = (
@@ -33203,12 +33234,10 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor,
 /area/muriki/rooftop/scigen)
 "qEK" = (
@@ -34084,7 +34113,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance/engi{
-	req_one_access = list(8,47,52)
+	req_one_access = list(8,10,47,52)
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/rnd/research/phoronics/gasstore)
@@ -35886,6 +35915,9 @@
 "rZE" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
@@ -38260,12 +38292,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "tht" = (
-/obj/machinery/power/port_gen/pacman/mrs{
-	anchored = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "thD" = (
@@ -39912,8 +39942,10 @@
 /area/muriki/crystal)
 "tVY" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "tWf" = (
@@ -44029,14 +44061,13 @@
 /area/medical/exam_room)
 "vVM" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "vVO" = (
@@ -44608,15 +44639,14 @@
 /area/tcommsat/powercontrol)
 "wlq" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
-/obj/fiftyspawner/tritium,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Backup Generators";
 	dir = 8
 	},
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "wlx" = (
@@ -100507,11 +100537,11 @@ ovc
 ovc
 ovc
 iII
-ndp
-iII
+cKH
+orb
 bwG
-jqQ
-ndp
+aRH
+orb
 rZE
 nux
 iII
@@ -100669,8 +100699,8 @@ ovc
 ovc
 ovc
 iII
+bgI
 ndp
-iII
 ndp
 iII
 gCl
@@ -100831,9 +100861,9 @@ ovc
 ovc
 ovc
 iII
+moV
 ndp
-iII
-jqQ
+ndp
 iII
 qFO
 kLq

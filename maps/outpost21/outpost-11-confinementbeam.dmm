@@ -10733,6 +10733,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
+/obj/machinery/medical_kiosk{
+	can_dispense = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "IN" = (
