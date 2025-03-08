@@ -1771,36 +1771,42 @@
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	icon_state = "blue"
+	outdoors = FALSE
 
 /area/muriki/rooftop/scigen
 	name = "\improper Research Backup Generator"
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	icon_state = "blue"
+	outdoors = FALSE
 
 /area/muriki/rooftop/civgen
 	name = "\improper Civilian Backup Generator"
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	icon_state = "blue"
+	outdoors = FALSE
 
 /area/muriki/rooftop/secgen
 	name = "\improper Security Backup Generator"
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "blue"
+	outdoors = FALSE
 
 /area/muriki/rooftop/comgen
 	name = "\improper Command Backup Generator"
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "blue"
+	outdoors = FALSE
 
 /area/muriki/rooftop/cargen
 	name = "\improper Cargo Backup Generator"
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	icon_state = "blue"
+	outdoors = FALSE
 
 //
 // Security-----------------------------------------------------------------------

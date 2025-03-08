@@ -74583,7 +74583,9 @@
 /area/quartermaster/foyer)
 "vxU" = (
 /obj/structure/cable/green,
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/comgen)
 "vya" = (

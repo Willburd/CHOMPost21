@@ -17,7 +17,7 @@
 
 /obj/vehicle/train/trolly_tank/Initialize(mapload)
 	. = ..()
-	create_reagents(5000)
+	create_reagents(CARGOTANKER_VOLUME)
 	update_icon()
 	InputSocketA = new(src)
 	InputSocketB = new(src)
@@ -154,7 +154,7 @@
 	if(reagents && reagents.total_volume > 0)
 		var/percent = (reagents.total_volume / reagents.maximum_volume) * 100
 		switch(percent)
-			if(0 to 10)			percent = 10
+			if(5 to 10)			percent = 10
 			if(10 to 20) 		percent = 20
 			if(20 to 30) 		percent = 30
 			if(30 to 40) 		percent = 40

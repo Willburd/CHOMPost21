@@ -1,15 +1,15 @@
 #define SHEET_TO_REAGENT_EQUIVILENT *(1/REAGENTS_PER_SHEET) // 0.05 normally 1/20
 
-// Use these, unless it had a sheet analog to match,    VAL * 0.05 * 5000 = per full tank points
-#define EXPORT_VALUE_NO 0.1 SHEET_TO_REAGENT_EQUIVILENT			// 25 per tank
-#define EXPORT_VALUE_UNWANTED 0.24 SHEET_TO_REAGENT_EQUIVILENT	// 60 per tank
-#define EXPORT_VALUE_COMMON 1 SHEET_TO_REAGENT_EQUIVILENT		// 250 per tank
-#define EXPORT_VALUE_RARE 2 SHEET_TO_REAGENT_EQUIVILENT			// 500 per tank
-#define EXPORT_VALUE_PROCESSED 3 SHEET_TO_REAGENT_EQUIVILENT	// 750 per tank
-#define EXPORT_VALUE_HIGHREFINED 4 SHEET_TO_REAGENT_EQUIVILENT	// 1000 per tank
-#define EXPORT_VALUE_MASSINDUSTRY 8 SHEET_TO_REAGENT_EQUIVILENT	// 2000 per tank
-#define EXPORT_VALUE_PEAK 16 SHEET_TO_REAGENT_EQUIVILENT		// 4000 per tank
-#define EXPORT_VALUE_GODTIER 20 SHEET_TO_REAGENT_EQUIVILENT		// 5000 per tank
+// Use these, unless it had a sheet analog to match,    VAL * 0.05 * 2000 = per full tank points
+#define EXPORT_VALUE_NO 0.1 SHEET_TO_REAGENT_EQUIVILENT			// 10 per tank
+#define EXPORT_VALUE_UNWANTED 0.5 SHEET_TO_REAGENT_EQUIVILENT	// 50 per tank
+#define EXPORT_VALUE_COMMON 1 SHEET_TO_REAGENT_EQUIVILENT		// 100 per tank
+#define EXPORT_VALUE_RARE 2 SHEET_TO_REAGENT_EQUIVILENT			// 200 per tank
+#define EXPORT_VALUE_PROCESSED 3 SHEET_TO_REAGENT_EQUIVILENT	// 300 per tank
+#define EXPORT_VALUE_HIGHREFINED 4 SHEET_TO_REAGENT_EQUIVILENT	// 400 per tank
+#define EXPORT_VALUE_MASSINDUSTRY 8 SHEET_TO_REAGENT_EQUIVILENT	// 800 per tank
+#define EXPORT_VALUE_PEAK 16 SHEET_TO_REAGENT_EQUIVILENT		// 1600 per tank
+#define EXPORT_VALUE_GODTIER 20 SHEET_TO_REAGENT_EQUIVILENT		// 2000 per tank
 
 // Use these or you'll get weird endround lists
 #define EXPORT_REASON_BIOHAZARD "unwanted biohazards"
@@ -173,6 +173,10 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_INDUSTRY
 
 // code\modules\reagents\reagents\drugs.dm
+/datum/reagent/drugs
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_ILLDRUG
+
 /datum/reagent/drugs/bliss
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = EXPORT_REASON_ILLDRUG
@@ -307,6 +311,10 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_DRUG
 */
+
+/datum/reagent/gelatin
+	supply_conversion_value = EXPORT_VALUE_UNWANTED
+	industrial_use = EXPORT_REASON_FOOD
 
 // code\modules\reagents\reagents\medicine_op.dm
 /datum/reagent/hemocyanin
@@ -547,6 +555,10 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/modapplying/vatstabilizer
 	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
 	industrial_use = EXPORT_REASON_PHORON
+
+/datum/reagent/modapplying
+	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
+	industrial_use = EXPORT_REASON_WEAPONS
 
 // code\modules\reagents\reagents\other_ch.dm
 /datum/reagent/liquidspideregg
@@ -904,6 +916,10 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	supply_conversion_value = EXPORT_VALUE_NO
 	industrial_use = EXPORT_REASON_BIOHAZARD
 
+/datum/reagent/salmonella
+	supply_conversion_value = EXPORT_VALUE_NO
+	industrial_use = EXPORT_REASON_BIOHAZARD
+
 // code\modules\reagents\reagents\vore_ch.dm
 /datum/reagent/aphrodisiac
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
@@ -1227,6 +1243,84 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/glamour_scaling
 	supply_conversion_value = EXPORT_VALUE_RARE
 	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/glamour_transparent
+	supply_conversion_value = EXPORT_VALUE_RARE
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/glamour_twinkling
+	supply_conversion_value = EXPORT_VALUE_RARE
+	industrial_use = EXPORT_REASON_MATSCI
+
+// code\modules\mob\living\carbon\human\species\station\station_special_abilities_ch.dm
+/datum/reagent/succubi_aphrodisiac
+	supply_conversion_value = EXPORT_VALUE_PROCESSED
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/succubi_numbing
+	supply_conversion_value = EXPORT_VALUE_PROCESSED
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/succubi_paralize
+	supply_conversion_value = EXPORT_VALUE_PROCESSED
+	industrial_use = EXPORT_REASON_MATSCI
+
+// code\modules\reagents\reagents\virology.dm
+/datum/reagent/vaccine
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MEDSCI
+
+/datum/reagent/medicine/adranol/adranolvirusfood
+	supply_conversion_value = EXPORT_VALUE_NO
+	industrial_use = EXPORT_REASON_BIOHAZARD
+
+// modular_chomp\code\modules\reagents\reagents\food_drinks.dm
+/datum/reagent/infusedarachnidslammer
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_FOOD
+
+/datum/reagent/infusedarachnidslammer/enragedarachnidslammer
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_DRUG
+
+/datum/reagent/blondiemix
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_FOOD
+
+// modular_chomp\code\modules\reagents\reagents\medicine.dm
+/datum/reagent/change_drug
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MEDSCI
+
+// modular_outpost\code\modules\phorochemistry\reagents.dm
+/datum/reagent/sapoformator
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/obscuritol
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/oxyphoromin
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/extreme_mutagen
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/genedrazine
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/expulsicol
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
+/datum/reagent/nocturnol
+	supply_conversion_value = EXPORT_VALUE_COMMON
+	industrial_use = EXPORT_REASON_MATSCI
+
 
 #undef EXPORT_REASON_BIOHAZARD
 #undef EXPORT_REASON_RAW

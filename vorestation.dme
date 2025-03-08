@@ -135,6 +135,7 @@
 #include "code\__defines\qdel.dm"
 #include "code\__defines\radio.dm"
 #include "code\__defines\recipe.dm"
+#include "code\__defines\refinery.dm"
 #include "code\__defines\request_console.dm"
 #include "code\__defines\research.dm"
 #include "code\__defines\robot.dm"

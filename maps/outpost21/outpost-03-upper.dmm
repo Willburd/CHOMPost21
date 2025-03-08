@@ -2589,9 +2589,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/security)
 "bgI" = (
-/obj/machinery/power/port_gen/pacman/super,
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
@@ -5194,7 +5196,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/plating/muriki,
 /area/djstation)
 "crZ" = (
@@ -6535,7 +6539,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor,
 /area/muriki/rooftop/civgen)
 "dcT" = (
@@ -9050,7 +9056,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "epT" = (
@@ -15085,7 +15093,9 @@
 	icon_state = "0-8"
 	},
 /obj/fiftyspawner/uranium,
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/security)
 "hAx" = (
@@ -20331,7 +20341,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor,
 /area/muriki/rooftop/civgen)
 "kdU" = (
@@ -21532,7 +21544,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "kFx" = (
@@ -22493,7 +22507,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "ljo" = (
@@ -24881,7 +24897,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/cargen)
 "mui" = (
@@ -26482,7 +26500,9 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Backup Generator"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor,
 /area/muriki/rooftop/scigen)
 "niv" = (
@@ -30065,9 +30085,11 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/port_gen/pacman/super,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/medical)
 "oZb" = (
@@ -33237,7 +33259,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor,
 /area/muriki/rooftop/scigen)
 "qEK" = (
@@ -38295,7 +38319,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/port_gen/pacman/super,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "thD" = (

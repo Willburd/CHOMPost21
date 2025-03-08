@@ -486,7 +486,7 @@
 	id = REAGENT_ID_SODIUMCHLORIDE
 	result = REAGENT_ID_SODIUMCHLORIDE
 	required_reagents = list(REAGENT_ID_SODIUM = 1, REAGENT_ID_CHLORINE = 1)
-	inhibitors = list(REAGENT_ID_TITANIUM) // Outpost 21 edit - titanium dioxide refinement uses a similar formula
+	inhibitors = list(REAGENT_ID_COPPER) // Outpost 21 edit - titanium dioxide refinement uses a similar formula
 	result_amount = 2
 
 /decl/chemical_reaction/instant/condensedcapsaicin

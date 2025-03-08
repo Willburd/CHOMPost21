@@ -50193,11 +50193,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "eRn" = (
-/obj/structure/disposalpipe/junction/yjunction{
-	dir = 4
-	},
 /obj/structure/catwalk,
 /obj/item/frame,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/refinery/tankstorage)
 "eRD" = (

@@ -187,7 +187,7 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki
 	name = "muriki base"
-	temp_high = 313.15	// 40c
+	temp_high = 293.15 // 20c
 	temp_low = 288.15	// 15c
 
 /datum/weather/muriki/clear
