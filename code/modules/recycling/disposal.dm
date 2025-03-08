@@ -743,17 +743,19 @@
 
 		// outpost 21 edit begin - disposal clunking
 		// make noises to spook people lots, the teshari love it!
-		if(prob(40) && prob(noiseprob)) // double probability helps push this down in rarity
+		if(prob(40)) // double probability helps push this down in rarity
 			var/turf/T = get_turf(src)
-			if(T)
-				playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
-				var/message = pick(
-					prob(90);"* clunk *",
-					prob(90);"* thud *",
-					prob(90);"* clatter *",
-					prob(1);"* <span style='font-size:2em'>ඞ</span> *"
-				)
-				T.runechat_message(message)
+			SSmotiontracker.ping(T,40) // Teshari rattler
+			if(prob(noiseprob))
+				if(T)
+					playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
+					var/message = pick(
+						prob(90);"* clunk *",
+						prob(90);"* thud *",
+						prob(90);"* clatter *",
+						prob(1);"* <span style='font-size:2em'>ඞ</span> *"
+					)
+					T.runechat_message(message)
 		// outpost 21 edit end
 
 		//
