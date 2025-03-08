@@ -208,16 +208,16 @@ SUBSYSTEM_DEF(supply)
 			else if(istype(MA, /obj/vehicle/train/trolly_tank))
 				var/obj/vehicle/train/trolly_tank/tank = MA
 				if(tank && tank.reagents && tank.reagents.reagent_list.len > 0)
-					if(tank.reagents.total_volume < 4000)
+					var/min_tank = (CARGOTANKER_VOLUME - 100)
+					if(tank.reagents.total_volume < min_tank)
 						EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send full tanks only (minimum 4000 units). Payment rendered null under terms of agreement."
+								"error" = "Error: Product was improperly packaged. Send full tanks only (minimum [min_tank] units). Payment rendered null under terms of agreement."
 							)
 					else if(tank.reagents.reagent_list.len >= 3)
 						EC.contents = list(
 								"error" = "Error: Product was improperly refined. Send purified mixtures only (too many chemicals in tank). Payment rendered null under terms of agreement."
 							)
 					else
-						var/actually_trying_bonus = FALSE
 						for(var/datum/reagent/R in tank.reagents.reagent_list)
 							// Update export values
 							var/reagent_value = get_reagent_sale_value(R)
@@ -228,8 +228,6 @@ SUBSYSTEM_DEF(supply)
 							)
 							EC.value += EC.contents[EC.contents.len]["value"]
 
-							if(R.volume >= 2000)
-								actually_trying_bonus = TRUE // Send at least 2000u of a chem for a discount on the tank
 							if(R.industrial_use)
 								// Update end round data
 								if(isnull(GLOB.refined_chems_sold[R.industrial_use]))
@@ -240,9 +238,6 @@ SUBSYSTEM_DEF(supply)
 								else
 									GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
 									GLOB.refined_chems_sold[R.industrial_use]["value"] += reagent_value
-
-						if(actually_trying_bonus)
-							base_value += 5 // Discount on next tank bonus
 				else
 					EC.contents = list(
 							"error" = "Error: Product was improperly packaged. Nothing found in chemical tanker. Payment rendered null under terms of agreement."

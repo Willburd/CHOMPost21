@@ -12,7 +12,7 @@
 	// Chemical bath funtimes!
 	can_buckle = TRUE
 	buckle_lying = TRUE
-	default_max_vol = 5000
+	default_max_vol = CARGOTANKER_VOLUME
 
 /obj/machinery/reagent_refinery/waste_processor/Initialize(mapload)
 	. = ..()

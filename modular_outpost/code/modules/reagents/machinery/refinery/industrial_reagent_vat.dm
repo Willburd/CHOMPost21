@@ -14,7 +14,7 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 	// Chemical bath funtimes!
 	can_buckle = TRUE
 	buckle_lying = TRUE
-	default_max_vol = 2500
+	default_max_vol = REAGENT_VAT_VOLUME
 
 /obj/machinery/reagent_refinery/vat/Initialize(mapload)
 	. = ..()
