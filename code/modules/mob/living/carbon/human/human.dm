@@ -1015,6 +1015,8 @@
 			continue
 		if(h == src) // Traitgenes edit - Don't target self
 			continue
+		if(istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit - forbid autodoc
+			continue
 		if(!((temp_turf.z in using_map.station_levels) || current.z == temp_turf.z) || h.stat!=CONSCIOUS) // Needs to be on station or same z to perform telepathy
 			continue
 		creatures += h

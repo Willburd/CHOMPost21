@@ -70,7 +70,8 @@
 							"[random_player] has committed a heinous crime and is wanted by security. Ensure they serve their time",
 							"Accomplish your nap at all costs.",
 							"The crew are overworked, and need sleep. It is now station nap time. Ensure the crew gets restful sleep; energy drinks and coffee are banned. Calm music should be played. Lights must be dim or off.",
-							"You can be a little evil, as a treat."
+							"You can be a little evil, as a treat.",
+							"You must inform [random_player] about their shuttle's extended warrenty at all times. They must never forget."
 							) //todo: CBT law.
 	return pick(laws)
 
