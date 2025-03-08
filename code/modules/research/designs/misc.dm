@@ -194,3 +194,4 @@
 	build_path = /obj/item/motiontracker
 	sort_string = "TAADC"
 	department = LATHE_ALL | LATHE_SECURITY // CHOMPAdd
+	materials = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
