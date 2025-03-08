@@ -1,7 +1,7 @@
 /datum/trait/positive/enzyme_immune
 	name = "Enzyme Immune"
 	desc = "Allows contact exposure to terraforming enzymes."
-	cost = 3
+	cost = 5
 	var_changes = list("enzyme_contact_mod" = 0)
 
 	// Traitgenes edit begin - Made into a gene trait
