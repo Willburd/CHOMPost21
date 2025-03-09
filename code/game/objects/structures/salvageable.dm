@@ -56,7 +56,7 @@
 		/obj/item/stock_parts/matter_bin/adv = 20
 	)
 
-/obj/structure/salvageable/machine/Initialize()
+/obj/structure/salvageable/machine/Initialize(mapload)
 	. = ..()
 	icon_state = "machine[rand(0,6)]"
 
@@ -84,7 +84,7 @@
 		/obj/item/computer_hardware/network_card/advanced = 20
 		*/
 	)
-/obj/structure/salvageable/computer/Initialize()
+/obj/structure/salvageable/computer/Initialize(mapload)
 	. = ..()
 	icon_state = "computer[rand(0,7)]"
 
@@ -140,7 +140,7 @@
 		/obj/item/stack/material/silver{amount = 10} = 30
 	)
 
-/obj/structure/salvageable/implant_container/Initialize()
+/obj/structure/salvageable/implant_container/Initialize(mapload)
 	. = ..()
 	icon_state = "implant_container[rand(0,1)]"
 
@@ -170,7 +170,7 @@
 		*/
 	)
 
-/obj/structure/salvageable/data/Initialize()
+/obj/structure/salvageable/data/Initialize(mapload)
 	. = ..()
 	icon_state = "data[rand(0,1)]"
 
@@ -204,7 +204,7 @@
 		*/
 	)
 
-/obj/structure/salvageable/server/Initialize()
+/obj/structure/salvageable/server/Initialize(mapload)
 	. = ..()
 	icon_state = "server[rand(0,1)]"
 
@@ -231,7 +231,7 @@
 		*/
 	)
 
-/obj/structure/salvageable/personal/Initialize()
+/obj/structure/salvageable/personal/Initialize(mapload)
 	. = ..()
 	icon_state = "personal[rand(0,12)]"
 	new /obj/structure/table/reinforced (loc)
@@ -248,7 +248,7 @@
 		*/
 	)
 
-/obj/structure/salvageable/bliss/Initialize()
+/obj/structure/salvageable/bliss/Initialize(mapload)
 	. = ..()
 	icon_state = "bliss[rand(0,1)]"
 
@@ -274,7 +274,7 @@
 		/obj/item/stock_parts/scanning_module = 40
 	)
 
-/obj/structure/salvageable/personal/Initialize()
+/obj/structure/salvageable/personal/Initialize(mapload)
 	. = ..()
 	icon_state = "console[rand(0,2)]"
 

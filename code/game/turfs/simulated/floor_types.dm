@@ -226,7 +226,7 @@
 	light_on = TRUE
 	block_tele = TRUE
 
-/turf/simulated/shuttle/floor/alien/Initialize()
+/turf/simulated/shuttle/floor/alien/Initialize(mapload)
 	. = ..()
 	icon_state = "alienpod[rand(1, 9)]"
 	update_light()
@@ -255,7 +255,7 @@
 	takes_underlays = 1
 	blocks_air = 1 //I'd make these unsimulated but it just fucks with so much stuff so many other places.
 
-/turf/simulated/shuttle/plating/carry/Initialize()
+/turf/simulated/shuttle/plating/carry/Initialize(mapload)
 	. = ..()
 	icon_state = "carry_ingame"
 
@@ -266,7 +266,7 @@
 	takes_underlays = 1
 	blocks_air = 1
 
-/turf/simulated/shuttle/plating/airless/carry/Initialize()
+/turf/simulated/shuttle/plating/airless/carry/Initialize(mapload)
 	. = ..()
 	icon_state = "carry_ingame"
 

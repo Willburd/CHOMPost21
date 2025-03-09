@@ -28,7 +28,7 @@
 	..()
 	miniball = is_miniball
 
-/obj/singularity/energy_ball/Initialize()
+/obj/singularity/energy_ball/Initialize(mapload)
 	. = ..()
 	/* Outpost 21 edit - Tesla lag reduction
 	if(!miniball)

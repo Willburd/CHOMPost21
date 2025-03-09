@@ -19,7 +19,7 @@
 	/// Yims
 	food_can_insert_micro = TRUE
 
-/obj/item/reagent_containers/food/drinks/Initialize()
+/obj/item/reagent_containers/food/drinks/Initialize(mapload)
 	. = ..()
 	if (prob(cant_chance))
 		cant_open = 1
@@ -264,7 +264,7 @@
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
-/obj/item/reagent_containers/food/drinks/milk/Initialize()
+/obj/item/reagent_containers/food/drinks/milk/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_MILK, 50)
 
@@ -279,7 +279,7 @@
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
-/obj/item/reagent_containers/food/drinks/soymilk/Initialize()
+/obj/item/reagent_containers/food/drinks/soymilk/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SOYMILK, 50)
 
@@ -295,7 +295,7 @@
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
-/obj/item/reagent_containers/food/drinks/smallmilk/Initialize()
+/obj/item/reagent_containers/food/drinks/smallmilk/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_MILK, 30)
 
@@ -311,7 +311,7 @@
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
-/obj/item/reagent_containers/food/drinks/smallchocmilk/Initialize()
+/obj/item/reagent_containers/food/drinks/smallchocmilk/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CHOCOLATEMILK, 30)
 
@@ -326,7 +326,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/coffee/Initialize()
+/obj/item/reagent_containers/food/drinks/coffee/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_COFFEE, 30)
 
@@ -342,7 +342,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/tea/Initialize()
+/obj/item/reagent_containers/food/drinks/tea/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_TEA, 30)
 
@@ -358,7 +358,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/decaf_tea/Initialize()
+/obj/item/reagent_containers/food/drinks/decaf_tea/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_TEADECAF, 30)
 
@@ -368,7 +368,7 @@
 	icon_state = "ice"
 	center_of_mass_x = 15
 	center_of_mass_y = 10
-/obj/item/reagent_containers/food/drinks/ice/Initialize()
+/obj/item/reagent_containers/food/drinks/ice/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_ICE, 30)
 
@@ -384,7 +384,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/h_chocolate/Initialize()
+/obj/item/reagent_containers/food/drinks/h_chocolate/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_HOTCOCO, 30)
 
@@ -400,7 +400,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/greentea/Initialize()
+/obj/item/reagent_containers/food/drinks/greentea/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_GREENTEA, 30)
 
@@ -416,7 +416,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/chaitea/Initialize()
+/obj/item/reagent_containers/food/drinks/chaitea/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CHAITEA, 30)
 
@@ -432,7 +432,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/decaf/Initialize()
+/obj/item/reagent_containers/food/drinks/decaf/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_DECAF, 30)
 
@@ -447,7 +447,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/dry_ramen/Initialize()
+/obj/item/reagent_containers/food/drinks/dry_ramen/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_DRYRAMEN, 30)
 
@@ -462,7 +462,7 @@
 	drop_sound = 'sound/items/drop/papercup.ogg'
 	pickup_sound = 'sound/items/pickup/papercup.ogg'
 
-/obj/item/reagent_containers/food/drinks/sillycup/Initialize()
+/obj/item/reagent_containers/food/drinks/sillycup/Initialize(mapload)
 	. = ..()
 
 /obj/item/reagent_containers/food/drinks/sillycup/on_reagent_change()

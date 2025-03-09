@@ -3,7 +3,7 @@
 	desc = "This box contains blood packs."
 	icon_state = "sterile"
 
-/obj/item/storage/box/bloodpacks/Initialize()
+/obj/item/storage/box/bloodpacks/Initialize(mapload)
 	. = ..()
 	new /obj/item/reagent_containers/blood/empty(src)
 	new /obj/item/reagent_containers/blood/empty(src)
@@ -19,7 +19,7 @@
 	desc = "This box contains loaded blood packs."
 	icon_state = "sterile"
 
-/obj/item/storage/box/bloodpacks_full/Initialize()
+/obj/item/storage/box/bloodpacks_full/Initialize(mapload)
 	. = ..()
 	new /obj/item/reagent_containers/blood/APlus(src)
 	new /obj/item/reagent_containers/blood/AMinus(src)
@@ -28,7 +28,6 @@
 	new /obj/item/reagent_containers/blood/OPlus(src)
 	new /obj/item/reagent_containers/blood/OMinus(src)
 	new /obj/item/reagent_containers/blood/synthblood(src)
-
 // Outpost 21 edit end
 
 /obj/item/reagent_containers/blood
@@ -47,7 +46,7 @@
 	var/blood_type = null
 	var/reag_id = REAGENT_ID_BLOOD
 
-/obj/item/reagent_containers/blood/Initialize()
+/obj/item/reagent_containers/blood/Initialize(mapload)
 	. = ..()
 	base_name = name
 	base_desc = desc
@@ -132,6 +131,6 @@
 	name = "Ration BloodPack"
 	desc = "A standard issue BloodPack Ration given to crew that require blood to be sustained!"
 
-/obj/item/reagent_containers/blood/random_bloodsucker/Initialize()
+/obj/item/reagent_containers/blood/random_bloodsucker/Initialize(mapload)
 	blood_type = pick("A+", "A-", "B+", "B-", "O-", "O+", "AB+", "AB-")
 	. = ..()
