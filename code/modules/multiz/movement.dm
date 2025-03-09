@@ -440,9 +440,20 @@
 
 	// Detect if we made a silent landing.
 	var/atom/A = find_fall_target(oldloc, landing)
-	if(special_fall_handle(A) || !A || !A.check_impact(src))
+	if(!A || !A.check_impact(src))
+		return
+	// Outpost 21 edit begin - Deadly falling z levels
+	if(landing.z in using_map.deadly_fall_levels && landing.z != oldloc.z)
+		to_chat(src,span_danger("You tumble through the air falling an extreme distance![prob(2) ? " Giving you enough time to think about the consequences of your actions!" : " This is going to hurt..."]"))
+		fall_impact(A, 25, 50)
+		if(bruteloss >= 150)
+			visible_message(span_danger("SPLORCH!"), span_danger("SPLORCH!"), "SPLORCH!")
+			gib()
+		return
+	if(special_fall_handle(A))
 		return
 	fall_impact(A)
+	// Outpost 21 edit end
 
 /atom/movable/proc/special_fall_handle(var/atom/A)
 	return FALSE
@@ -540,13 +551,6 @@
 	var/safe_fall = FALSE
 	if(src.softfall || (isanimal(src) && src.mob_size <= MOB_SMALL))
 		safe_fall = TRUE
-	// Outpost 21 edit begin - Deadly falling z levels
-	if(landing.z in using_map.deadly_fall_levels)
-		safe_fall = FALSE
-		damage_max *= 3
-		damage_min = damage_max * 0.5
-		to_chat(src,span_danger("You tumble through the air falling an extreme distance![prob(2) ? " Giving you enough time to think about the consequences of your actions!" : " This is going to hurt..."]"))
-	// Outpost 21 edit end
 	if(planetary && src.CanParachute())
 		if(!silent)
 			visible_message(span_warning("\The [src] glides in from above and lands on \the [landing]!"), \
@@ -579,12 +583,6 @@
 			adjustBruteLoss(rand(damage_min, damage_max))
 		Weaken(4)
 		updatehealth()
-		// Outpost 21 edit begin - Deadly falling z levels
-		if(landing.z in using_map.deadly_fall_levels)
-			if(bruteloss >= 150)
-				visible_message(span_danger("SPLORCH!"), span_danger("SPLORCH!"), "SPLORCH!")
-				gib()
-		// Outpost 21 edit end
 
 /mob/living/carbon/human/fall_impact(atom/hit_atom, damage_min, damage_max, silent, planetary)
 	if(!species?.handle_falling(src, hit_atom, damage_min, damage_max, silent, planetary))

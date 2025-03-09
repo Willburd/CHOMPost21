@@ -635,11 +635,6 @@
 		if(!istype(landing))
 			return FALSE
 
-		// Outpost 21 edit begin - Deadly falling z levels
-		if(landing.z in using_map.deadly_fall_levels)
-			return FALSE
-		// Outpost 21 edit end
-
 		if(!silent)
 			to_chat(H, span_notice("You manage to lower impact of the fall and land safely."))
 			landing.visible_message(span_infoplain(span_bold("\The [H]") + " lowers down from above, landing safely."))
