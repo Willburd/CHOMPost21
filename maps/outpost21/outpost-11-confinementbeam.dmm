@@ -3,6 +3,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
 "ab" = (
@@ -125,9 +126,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "ay" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	dir = 8
 	},
@@ -138,6 +136,9 @@
 	pixel_y = 27
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
 "az" = (
@@ -240,7 +241,8 @@
 /area/offworld/confinementbeam/exterior)
 "aQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1380;
+	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -307,10 +309,12 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "aZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "ba" = (
@@ -382,6 +386,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "bi" = (
@@ -404,6 +409,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "bl" = (
@@ -879,6 +885,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
 "cG" = (
@@ -950,14 +959,18 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/confinement_beam)
 "cX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	locked = 1
 	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/starboard_airlock)
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/confinementbeam/station/port_airlock)
 "cY" = (
 /obj/machinery/door/airlock/vault/bolted{
 	id_tag = "ai_main_door";
@@ -1097,11 +1110,20 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
 "dr" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/uranium,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "du" = (
@@ -1268,6 +1290,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "dS" = (
@@ -1280,7 +1303,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "dT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/firealarm{
 	dir = 4;
@@ -1372,6 +1394,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "el" = (
@@ -1403,11 +1428,11 @@
 /turf/space,
 /area/offworld/confinementbeam/exterior)
 "er" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/starboard_equipment)
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/port_airlock)
 "es" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating,
@@ -1416,9 +1441,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "ev" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
@@ -1439,10 +1461,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "eD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
-	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -1474,6 +1496,7 @@
 	pixel_x = 11
 	},
 /obj/effect/map_helper/airlock/button/int_button,
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
 "eG" = (
@@ -1549,9 +1572,6 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
 "eO" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -1584,12 +1604,18 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
 "eS" = (
-/obj/effect/floor_decal/corner/orange/full,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/starboard_equipment)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/hallway_alt)
 "eU" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/ext_door,
@@ -1603,9 +1629,6 @@
 	dir = 8;
 	pixel_x = -10;
 	pixel_y = -25
-	},
-/obj/machinery/atmospheric_field_generator{
-	field_type = /obj/structure/atmospheric_retention_field/underdoors
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
@@ -1641,17 +1664,17 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
 "fb" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
+/obj/structure/window/reinforced{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightorange/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/port_airlock)
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
 "fi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -1680,6 +1703,9 @@
 /area/ai_sat/fore_airlock)
 "fl" = (
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "fm" = (
@@ -1736,6 +1762,9 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -1803,17 +1832,13 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "fE" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightorange/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/port_airlock)
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/dockingbay)
 "fG" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -1958,6 +1983,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "gd" = (
@@ -1971,6 +1997,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/starboard_observation)
 "gf" = (
@@ -1981,6 +2008,20 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
+"gh" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/confinementbeam/station/hallway)
 "gi" = (
 /obj/machinery/atmospherics/unary/heat_exchanger,
 /turf/simulated/floor/plating,
@@ -2058,6 +2099,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "gC" = (
@@ -2090,8 +2132,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	dir = 1
+	frequency = 1380
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -2120,8 +2161,6 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
 "gH" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
@@ -2142,6 +2181,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
@@ -2197,6 +2239,7 @@
 	dir = 8;
 	pixel_x = 22
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "gX" = (
@@ -2257,14 +2300,13 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "he" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
 /obj/machinery/light_switch/breaker{
 	pixel_y = 32
 	},
+/obj/machinery/power/port_gen/pacman/super,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "hm" = (
@@ -2274,6 +2316,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/greengrid,
 /area/ai)
+"hn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/port_airlock)
 "ho" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -2325,6 +2373,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "hv" = (
@@ -2345,8 +2394,11 @@
 	dir = 4
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "hw" = (
 /obj/effect/shuttle_landmark/premade/beamtransit/beam_sat,
 /turf/simulated/floor/airless,
@@ -2358,7 +2410,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "hy" = (
@@ -2366,8 +2418,7 @@
 /area/offworld/confinementbeam/station/backup_power)
 "hz" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	dir = 1
+	frequency = 1380
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -2453,6 +2504,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "hL" = (
@@ -2501,7 +2555,7 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "hR" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -2571,7 +2625,8 @@
 /area/offworld/confinementbeam/station/hallway)
 "hZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1380;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_airlock)
@@ -2657,27 +2712,22 @@
 /turf/space,
 /area/offworld/confinementbeam/exterior)
 "it" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	locked = 1
 	},
-/obj/effect/floor_decal/corner/lightorange/border{
-	dir = 9
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/port_airlock)
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/confinementbeam/station/starboard_equipment)
 "iu" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector,
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/lightorange/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/port_airlock)
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/dockingbay)
 "iv" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -2726,7 +2776,7 @@
 /area/muriki/bathroom/confinement_beam)
 "iC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
+	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
@@ -2845,8 +2895,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "ja" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -2991,10 +3044,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "jz" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
@@ -3123,7 +3172,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "kf" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -3264,9 +3312,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
 "kA" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -3299,7 +3344,6 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "kF" = (
@@ -3385,6 +3429,9 @@
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "kS" = (
@@ -3447,8 +3494,11 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "lb" = (
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -3471,6 +3521,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/solar_control)
 "le" = (
@@ -3507,13 +3558,9 @@
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
 "lk" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "ll" = (
@@ -3554,9 +3601,6 @@
 /turf/simulated/wall/rshull,
 /area/offworld/confinementbeam/station/port_airlock)
 "lp" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -3644,7 +3688,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_airlock)
 "lB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -3675,9 +3718,6 @@
 	frequency = 1380;
 	icon_state = "door_locked";
 	locked = 1
-	},
-/obj/machinery/atmospheric_field_generator{
-	field_type = /obj/structure/atmospheric_retention_field/underdoors
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
@@ -3716,6 +3756,9 @@
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "lJ" = (
@@ -3743,9 +3786,6 @@
 "lP" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_equipment)
@@ -3906,8 +3946,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
 "mo" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -4005,7 +4043,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "mD" = (
@@ -4209,7 +4246,6 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "nn" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -4425,6 +4461,17 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_observation)
+"nU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/starboard_airlock)
 "nV" = (
 /obj/machinery/camera/network/command{
 	c_tag = "AI - Rec Room Port";
@@ -4453,6 +4500,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
@@ -4653,6 +4703,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
 "oH" = (
@@ -4696,6 +4747,7 @@
 "oN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
 "oP" = (
@@ -4766,6 +4818,11 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "pf" = (
@@ -4812,6 +4869,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-9"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
 "pl" = (
@@ -4836,6 +4896,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/port_equipment)
 "pq" = (
@@ -4858,6 +4919,9 @@
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Main Hall Fore";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -4948,14 +5012,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "pI" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -4989,7 +5051,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "pN" = (
@@ -5072,9 +5134,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/effect/catwalk_plated/dark,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -5085,8 +5144,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "qe" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -5230,7 +5290,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "qH" = (
@@ -5387,6 +5449,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
 "rm" = (
@@ -5477,7 +5542,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "rz" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -5517,10 +5582,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Fore Starboard Eng EVA";
 	dir = 8
@@ -5587,7 +5648,7 @@
 	field_type = /obj/structure/atmospheric_retention_field/underdoors
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "rR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -5597,6 +5658,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
@@ -5625,6 +5689,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "rW" = (
@@ -5737,9 +5802,6 @@
 /turf/simulated/wall,
 /area/offworld/confinementbeam/station/storage)
 "sn" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
@@ -5778,6 +5840,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
 "sz" = (
@@ -5796,6 +5861,9 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "sB" = (
 /obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
 "sC" = (
@@ -5863,7 +5931,7 @@
 	field_type = /obj/structure/atmospheric_retention_field/underdoors
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "sO" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -5972,8 +6040,6 @@
 /turf/space,
 /area/offworld/confinementbeam/exterior)
 "te" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
@@ -6004,6 +6070,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
 "tj" = (
@@ -6128,6 +6197,18 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"tJ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
 "tK" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/orange/border,
@@ -6259,8 +6340,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "un" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -6269,8 +6353,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "uo" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -6352,6 +6434,9 @@
 	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
 "uA" = (
@@ -6449,7 +6534,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "uT" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -6495,9 +6580,6 @@
 /turf/simulated/floor/wood,
 /area/ai)
 "vf" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -6525,6 +6607,9 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
@@ -6746,7 +6831,7 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "vM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -6784,7 +6869,6 @@
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
 "vV" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -6806,12 +6890,10 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/solar_control)
 "vY" = (
-/obj/machinery/power/rtg/reg{
-	name = "d-type cardio-kinetic rotary electric generator"
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/rtg/reg/c,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
 "vZ" = (
@@ -6834,9 +6916,6 @@
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
 "wc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	dir = 8
 	},
@@ -6848,6 +6927,9 @@
 	pixel_y = -24
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_observation)
 "wd" = (
@@ -6919,7 +7001,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "wp" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
@@ -7019,6 +7101,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "wM" = (
@@ -7091,9 +7174,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "wY" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -7389,9 +7469,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "yg" = (
@@ -7416,6 +7493,9 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -7519,6 +7599,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "yB" = (
@@ -7603,6 +7684,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
@@ -7806,8 +7890,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	dir = 4
+	frequency = 1380
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -7826,7 +7909,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "zq" = (
@@ -7876,7 +7959,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "zt" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -7958,6 +8041,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway)
 "zL" = (
@@ -8007,9 +8093,6 @@
 	frequency = 1380;
 	icon_state = "door_locked";
 	locked = 1
-	},
-/obj/machinery/atmospheric_field_generator{
-	field_type = /obj/structure/atmospheric_retention_field/underdoors
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
@@ -8150,11 +8233,10 @@
 /turf/simulated/floor/airless,
 /area/ai)
 "Ar" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/tank/air,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "At" = (
@@ -8253,8 +8335,12 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "AG" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -8330,9 +8416,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
-	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Solar Control"
 	},
@@ -8373,6 +8456,9 @@
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "AW" = (
@@ -8416,6 +8502,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "Bd" = (
@@ -8476,6 +8563,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Bs" = (
@@ -8661,6 +8749,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -8892,9 +8983,6 @@
 	pixel_x = -10;
 	pixel_y = -25
 	},
-/obj/machinery/atmospheric_field_generator{
-	field_type = /obj/structure/atmospheric_retention_field/underdoors
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
 "CM" = (
@@ -9006,6 +9094,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Df" = (
@@ -9049,10 +9138,6 @@
 /area/offworld/confinementbeam/station/hallway)
 "Dk" = (
 /obj/effect/floor_decal/corner/orange/full,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
 "Dm" = (
@@ -9105,7 +9190,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "Dy" = (
 /obj/effect/floor_decal/industrial/caution/yellow,
 /turf/simulated/floor/tiled/techmaint,
@@ -9142,6 +9227,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/junction,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "DF" = (
@@ -9268,7 +9354,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Eh" = (
@@ -9425,18 +9511,13 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
 "EL" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/tank/air,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "EN" = (
@@ -9449,14 +9530,13 @@
 /turf/simulated/floor/airless,
 /area/ai_sat/access_shaft)
 "EQ" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/empty,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/tank/air,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "ES" = (
@@ -9579,10 +9659,8 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "Fo" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "Fq" = (
 /obj/machinery/power/sensor{
@@ -9831,6 +9909,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "FX" = (
@@ -9911,7 +9990,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "Gi" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -9966,6 +10045,9 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
 /obj/effect/floor_decal/industrial/loading{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -10052,6 +10134,9 @@
 	dir = 4
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
 "GM" = (
@@ -10223,6 +10308,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "Ht" = (
@@ -10621,6 +10707,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "Iv" = (
@@ -10833,6 +10922,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -11065,9 +11157,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "JA" = (
@@ -11104,6 +11193,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -11224,6 +11316,11 @@
 /area/offworld/confinementbeam/station/port_equipment)
 "Kf" = (
 /obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1380;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "Kg" = (
@@ -11354,6 +11451,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "Kz" = (
@@ -11363,6 +11463,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
+"KA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/port_airlock)
 "KB" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/milspec,
@@ -11389,6 +11495,9 @@
 	frequency = 1380;
 	icon_state = "door_locked";
 	locked = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
@@ -11430,7 +11539,7 @@
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "KH" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -11478,8 +11587,7 @@
 /area/ai)
 "KM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	dir = 1
+	frequency = 1380
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -11506,6 +11614,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
@@ -11536,9 +11647,6 @@
 "KU" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
@@ -11890,6 +11998,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
 "Mp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
 "Mr" = (
@@ -11922,10 +12033,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "My" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
@@ -12064,6 +12171,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
 "Nc" = (
@@ -12165,6 +12273,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -12312,6 +12423,9 @@
 /obj/effect/floor_decal/industrial/loading{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "NR" = (
@@ -12341,6 +12455,9 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -12433,13 +12550,14 @@
 /turf/simulated/floor/plating,
 /area/ai_sat/atmos)
 "Oo" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/lightorange/bordercorner,
-/turf/simulated/floor/tiled/techmaint,
-/area/offworld/confinementbeam/station/starboard_airlock)
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
 "Oq" = (
 /turf/simulated/mineral/alt/ignore_cavegen,
 /area/ai_sat/core_external)
@@ -12453,7 +12571,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "Ot" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1380
@@ -12494,6 +12612,9 @@
 	pixel_x = -8
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
 "OA" = (
@@ -12560,6 +12681,7 @@
 	pixel_x = 30;
 	pixel_y = 28
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
 "OM" = (
@@ -12581,6 +12703,7 @@
 	dir = 8
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
 "OO" = (
@@ -12673,8 +12796,7 @@
 /area/ai)
 "Pf" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
-	dir = 1
+	frequency = 1380
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -12696,10 +12818,6 @@
 /turf/simulated/floor/airless,
 /area/ai_sat/access_shaft)
 "Pj" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -12724,6 +12842,7 @@
 	pixel_x = -25;
 	pixel_y = 28
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_observation)
 "Po" = (
@@ -12780,6 +12899,9 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "Px" = (
@@ -12814,7 +12936,6 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 8
 	},
-/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "PH" = (
@@ -12895,6 +13016,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "PU" = (
@@ -12920,10 +13044,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "PY" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -13120,6 +13240,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "QI" = (
@@ -13219,8 +13340,12 @@
 /obj/effect/floor_decal/corner/orange/bordercee{
 	dir = 1
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway)
 "QZ" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/machinery/meter{
@@ -13303,9 +13428,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Rl" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -13422,9 +13544,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "RI" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
@@ -13500,6 +13619,9 @@
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
 "RU" = (
@@ -13605,7 +13727,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "Sl" = (
@@ -13676,7 +13797,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
-/obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "Sy" = (
@@ -13757,6 +13878,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "SI" = (
@@ -13849,6 +13973,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
 "Ta" = (
@@ -13872,10 +13999,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "Td" = (
-/obj/machinery/portable_atmospherics/canister/air/airlock,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
@@ -13920,6 +14043,9 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8;
 	icon_state = "pipe-j2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
@@ -14000,6 +14126,9 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -14114,6 +14243,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "Ud" = (
@@ -14204,6 +14336,9 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
@@ -14502,7 +14637,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "Vj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/milspec,
@@ -14555,6 +14690,7 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
 "Vt" = (
@@ -14705,6 +14841,9 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -14882,6 +15021,14 @@
 /obj/effect/floor_decal/corner/lightorange/bordercorner,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_airlock)
+"Wz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/confinementbeam/station/port_airlock)
 "WA" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -14927,11 +15074,15 @@
 	pixel_x = -25;
 	pixel_y = -28
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
 "WH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_observation)
 "WI" = (
@@ -14951,9 +15102,11 @@
 	icon_state = "pipe-c"
 	},
 /obj/item/radio/beacon,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "WL" = (
+/obj/machinery/atmospherics/pipe/vent/high_volume,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "WM" = (
@@ -14996,7 +15149,7 @@
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/offworld/confinementbeam/station/access_shaft)
+/area/offworld/confinementbeam/station/hallway_alt)
 "WS" = (
 /obj/structure/cable/orange{
 	icon_state = "2-8"
@@ -15119,6 +15272,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/port_observation)
 "Xn" = (
@@ -15237,8 +15391,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
@@ -15308,7 +15462,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "XR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -15317,6 +15470,14 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
+"XT" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/confinementbeam/station/starboard_airlock)
 "XU" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/ext_door,
@@ -15350,6 +15511,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Ya" = (
@@ -15399,6 +15561,9 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
@@ -15466,9 +15631,6 @@
 /turf/simulated/wall/r_wall,
 /area/ai_upload)
 "Yr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6
-	},
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
@@ -15602,9 +15764,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "YQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/milspec,
@@ -15651,15 +15810,9 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "Za" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 8
-	},
-/obj/item/radio/beacon,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/starboard_airlock)
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/confinementbeam/station/starboard_equipment)
 "Zb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -15828,10 +15981,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -15887,10 +16036,6 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
 "ZN" = (
@@ -15912,10 +16057,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "ZQ" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
+/obj/machinery/atmospherics/binary/pump/on,
+/turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "ZS" = (
 /obj/machinery/door/airlock/highsecurity{
@@ -38240,8 +38383,8 @@ rW
 rW
 rW
 Tz
-it
-fb
+mo
+rP
 sc
 Oz
 PJ
@@ -38567,7 +38710,7 @@ Tz
 PJ
 PJ
 DV
-DV
+cX
 PJ
 vy
 oh
@@ -38891,8 +39034,8 @@ Tz
 Wg
 of
 of
-of
-of
+KA
+hn
 of
 fN
 PJ
@@ -39054,7 +39197,7 @@ ru
 rf
 LC
 of
-of
+er
 of
 EX
 PJ
@@ -39216,7 +39359,7 @@ Mz
 of
 of
 MT
-of
+er
 of
 EX
 PJ
@@ -39238,7 +39381,7 @@ Ba
 QZ
 HY
 KQ
-PV
+Fo
 ko
 hK
 oc
@@ -39378,7 +39521,7 @@ ru
 VP
 LC
 of
-of
+er
 of
 EX
 PJ
@@ -39400,8 +39543,8 @@ sY
 hX
 vq
 UZ
-PV
-yN
+iu
+fE
 gB
 Rb
 LB
@@ -39540,7 +39683,7 @@ bi
 of
 of
 of
-of
+er
 of
 EX
 PJ
@@ -39702,7 +39845,7 @@ TV
 of
 of
 of
-of
+er
 of
 fN
 PJ
@@ -39864,7 +40007,7 @@ iQ
 of
 of
 of
-of
+er
 of
 fZ
 PJ
@@ -40026,7 +40169,7 @@ HQ
 of
 of
 of
-of
+er
 of
 EX
 PJ
@@ -40188,7 +40331,7 @@ nH
 of
 of
 of
-of
+er
 TN
 Ev
 AN
@@ -40210,12 +40353,12 @@ uB
 LR
 YJ
 mr
-Za
+oF
 mB
 qG
 PF
 Si
-Za
+oF
 Gz
 oF
 Ra
@@ -40370,7 +40513,7 @@ rU
 Bq
 Ee
 zp
-cX
+zp
 Hs
 hx
 WK
@@ -40378,7 +40521,7 @@ pG
 pM
 pM
 Sv
-SE
+nU
 SE
 wP
 EH
@@ -40674,7 +40817,7 @@ PJ
 YY
 PJ
 OI
-OI
+Wz
 Zs
 YY
 Tz
@@ -40702,7 +40845,7 @@ Li
 Li
 Bd
 bb
-lw
+XT
 lw
 IU
 Bd
@@ -40995,8 +41138,8 @@ Po
 Po
 Po
 Tz
-iu
-fE
+uo
+Ja
 Pf
 Mp
 nQ
@@ -41028,7 +41171,7 @@ Gg
 SY
 fl
 hZ
-Oo
+Wx
 Pj
 Li
 Po
@@ -47490,11 +47633,11 @@ UK
 yS
 UK
 UK
-rH
+kK
 iZ
-cE
+sx
 QX
-rH
+kK
 nu
 nu
 XU
@@ -47653,9 +47796,9 @@ rW
 rW
 rW
 ET
-pf
+fH
 um
-pf
+fH
 ET
 rW
 rW
@@ -47815,9 +47958,9 @@ rW
 rW
 rW
 rW
-YI
+EJ
 um
-YI
+EJ
 rW
 rW
 rW
@@ -47977,9 +48120,9 @@ rW
 rW
 rW
 rW
-YI
+EJ
 um
-YI
+EJ
 rW
 rW
 rW
@@ -48139,9 +48282,9 @@ rW
 rW
 rW
 rW
-Mc
+Cn
 hv
-Mc
+Cn
 rW
 rW
 rW
@@ -48299,13 +48442,13 @@ Kv
 rW
 rW
 Qi
-rH
+kK
 Gh
-rH
+kK
 kZ
-rH
+kK
 Vh
-rH
+Cs
 Ct
 rW
 rW
@@ -48463,7 +48606,7 @@ ud
 md
 sN
 vK
-WP
+gh
 qd
 WP
 hP
@@ -48623,13 +48766,13 @@ Kv
 rW
 rW
 LE
-rH
+kK
 Gh
-rH
+kK
 KG
-rH
+Cs
 Vh
-rH
+Cs
 IF
 rW
 rW
@@ -48787,9 +48930,9 @@ rW
 qu
 rW
 rW
-pf
+tJ
 zs
-pf
+tJ
 rW
 rW
 rW
@@ -49111,9 +49254,9 @@ jC
 qu
 rW
 rW
-YI
+Oo
 uS
-YI
+Oo
 rW
 rW
 rW
@@ -49273,9 +49416,9 @@ jC
 qu
 rW
 lg
-Mc
+fb
 zs
-Mc
+fb
 lg
 rW
 rW
@@ -49434,11 +49577,11 @@ Vn
 ZU
 qu
 rW
-rH
+Cs
 Or
 ry
 AE
-rH
+Cs
 rW
 rW
 rW
@@ -49926,11 +50069,11 @@ Ud
 in
 Iv
 IT
-ky
+Za
 aZ
 yf
 lP
-eS
+OS
 Iv
 rc
 rc
@@ -50088,7 +50231,7 @@ xK
 ku
 Iv
 np
-er
+ky
 iM
 rF
 ZC
@@ -50250,7 +50393,7 @@ xK
 PS
 Iv
 Iv
-Lw
+it
 Lw
 Iv
 Iv
@@ -50570,7 +50713,7 @@ re
 pj
 pp
 aa
-Aj
+eS
 eD
 dZ
 OC
