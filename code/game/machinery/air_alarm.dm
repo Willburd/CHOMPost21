@@ -23,12 +23,36 @@
 //all air alarms in area are connected via magic
 //Outpost 21 - Unfortunately not, they use freq 1439, and if you ever change it you will break everything
 /area
-	var/obj/machinery/alarm/master_air_alarm
+	var/datum/weakref/master_air_alarm // The air alarm currently managing the others in the area, settings changes go to this one and propogate
 	var/list/air_vent_names = list()
 	var/list/air_scrub_names = list()
 	var/list/air_vent_info = list()
 	var/list/air_scrub_info = list()
-	var/list/air_alarms = list() // Outpost 21 edit - Multiple alarms in one area
+	var/list/air_alarms = list()
+
+// Outpost 21 addition begin - Multiple alarms in one area
+/area/proc/elect_master_air_alarm(var/exclude_self = FALSE)
+	// loop through all sensors to update the area's sensor list as well
+	master_air_alarm = null
+	var/list/checks = list()
+	for(var/obj/machinery/alarm/AA in air_alarms)
+		if(!(AA.stat & (NOPOWER|BROKEN)))
+			checks += AA
+
+	if(checks.len)
+		var/obj/machinery/alarm/new_mast = pick(checks)
+		master_air_alarm = WEAKREF(new_mast)
+		for(var/obj/machinery/alarm/AA in checks)
+			update_icon()
+		return TRUE
+	else
+		return FALSE
+
+/area/proc/master_air_alarm_is_operating()
+	var/obj/machinery/alarm/AM = master_air_alarm?.resolve()
+	return AM && !(AM.stat & (NOPOWER | BROKEN))
+// Outpost 21 addition end
+
 
 /obj/machinery/alarm
 	name = "alarm"
@@ -101,7 +125,7 @@
 	alarms_hidden = TRUE
 
 /obj/machinery/alarm/angled
-	icon = 'icons/obj/wall_machines_angled.dmi' // Outpost 21 todo - Make the angled machines have the new lights too!
+	icon = 'modular_outpost/icons/obj/wall_machines_angled.dmi'
 
 /obj/machinery/alarm/angled/hidden
 	alarms_hidden = TRUE
@@ -110,38 +134,37 @@
 	pixel_x = (dir & 3) ? 0 : (dir == 4 ? -21 : 21)
 	pixel_y = (dir & 3) ? (dir == 1 ? -18 : 20) : 0
 
-/obj/machinery/alarm/server/Initialize(mapload)
+// Outpost 21 addition begin - Multiple alarms in one area
+/obj/machinery/alarm/Initialize(mapload)
 	. = ..()
-	req_access = list(access_rd, access_atmospherics, access_engine_equip)
-	TLV[GAS_O2] =			list(-1.0, -1.0,-1.0,-1.0) // Partial pressure, kpa
-	TLV[GAS_CO2] = list(-1.0, -1.0,   5,  10) // Partial pressure, kpa
-	TLV[GAS_PHORON] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
-	TLV[GAS_CH4] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa // Outpost 21 edit - Methane
-	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
-	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.40,ONE_ATMOSPHERE*1.60) /* kpa */
-	TLV["temperature"] =	list(20, 40, 140, 160) // K
-	target_temperature = 90
+	update_area()
+	set_frequency(frequency)
+	if(!pixel_x && !pixel_y)
+		offset_airalarm()
+	if(!wires)
+		wires = new(src)
+	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
+	alarm_area.air_alarms += src
+	if(!alarm_area.master_air_alarm_is_operating()) // select master alarm
+		alarm_area.elect_master_air_alarm()
+	set_initial_TLV()
+// Outpost 21 addition end
 
 /obj/machinery/alarm/Destroy()
 	unregister_radio(src, frequency)
 	qdel(wires)
 	wires = null
-	if(alarm_area && alarm_area.master_air_alarm == src)
-		alarm_area.master_air_alarm = null
-		elect_master(exclude_self = TRUE)
+	alarm_area.air_alarms -= src
+	if(alarm_area.master_air_alarm?.resolve() == src)
+		alarm_area.elect_master_air_alarm(TRUE)
 	QDEL_NULL(soundloop)  // CHOMPEdit: Looping Alarms
-	return ..()
+	. = ..()
 
 /obj/machinery/alarm/proc/offset_airalarm()
 	pixel_x = (dir & 3) ? 0 : (dir == 4 ? -26 : 26)
 	pixel_y = (dir & 3) ? (dir == 1 ? -26 : 26) : 0
 
-/obj/machinery/alarm/proc/first_run()
-	update_area() // Outpost 21 edit - Multiple alarms in one area
-
-	if(!wires)
-		wires = new(src)
-
+/obj/machinery/alarm/proc/set_initial_TLV()
 	// breathable air according to human/Life()
 	TLV[GAS_O2] =			list(16, 19, 135, 140) // Partial pressure, kpa
 	TLV[GAS_N2] =		list(0, 0, 135, 140) // Partial pressure, kpa
@@ -152,43 +175,13 @@
 	TLV["pressure"] =		list(ONE_ATMOSPHERE * 0.80, ONE_ATMOSPHERE * 0.90, ONE_ATMOSPHERE * 1.10, ONE_ATMOSPHERE * 1.20) /* kpa */
 	TLV["temperature"] =	list(T0C - 36, T0C - 10, T0C + 40, T0C + 66) // K // Outpost 21 edit - lowered coldness range
 
-	// Outpost 21 addition begin - Multiple alarms in one area
-	if(!master_is_operating()) // select master alarm
-		elect_master()
-
-	// Mappers messed up, and have alarms with different frequencies in areas.
-	// This outright does not work, does nothing special, and makes any alarms on other freqs braindead.
-	// 1437 for atmospherics/fire alerts
-	// 1439 for air pumps, air scrubbers, atmo control
-	// Never change this on the alarm unless you want to break every alarm in their radio circuit.
-	// I'm CLEANING it here, to ensure even if mappers break it, it will fix itself instead, and if they code dig they will know why. Hello by the way~
-	frequency = 1439
-	alarm_frequency = 1437
-	set_frequency(frequency)
-	// Outpost 21 addition end
-
 /obj/machinery/alarm/proc/update_area()
 	alarm_area = get_area(src)
 	area_uid = "\ref[alarm_area]"
 	if(name == "alarm")
 		name = "[alarm_area.name] Air Alarm \[[rand(9999)]\]" // random number id to help with players locating alarms, cosmetic
 
-/obj/machinery/alarm/Initialize(mapload)
-	. = ..()
-	set_frequency(frequency)
-	if(!master_is_operating())
-		elect_master()
-	if(!pixel_x && !pixel_y)
-		offset_airalarm()
-	first_run()
-	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
-
 /obj/machinery/alarm/proc/scan_atmo()
-	// Outpost 21 addition begin - Multiple alarms in one area
-	if(alarm_area.master_air_alarm.shorted)
-		return
-	// Outpost 21 addition end
-
 	var/turf/simulated/location = src.loc
 	if(!istype(location))	return//returns if loc is not simulated
 
@@ -213,10 +206,10 @@
 		mode = AALARM_MODE_FILL
 		apply_mode()
 
-	if(alarm_area?.atmosalm || danger_level > 0)  // CHOMPEdit: Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
+	if(alarm_area.atmosalm || danger_level > 0)  // CHOMPEdit: Looping Alarms (Trigger Decompression alarm here, on detection of any breach in the area)
 		soundloop.start()  // CHOMPEdit: Looping Alarms
 		atmoswarn = TRUE // CHOMPEdit: Looping Alarms
-	else if(danger_level == 0 && alarm_area?.atmosalm == 0)  // CHOMPEdit: Looping Alarms (Cancel Decompression alarm here)
+	else if(danger_level == 0 && alarm_area.atmosalm == 0)  // CHOMPEdit: Looping Alarms (Cancel Decompression alarm here)
 		soundloop.stop()  // CHOMPEdit: Looping Alarms
 		atmoswarn = FALSE // CHOMPEdit: Looping Alarms
 
@@ -232,23 +225,18 @@
 		if(RCON_YES)
 			remote_control = 1
 
+// Outpost 21 addition begin - Multiple alarms in one area
 /obj/machinery/alarm/process()
-	// Outpost 21 addition begin - Multiple alarms in one area
 	if(!alarm_area)
 		return
-	if(!alarm_area.master_air_alarm)
-		elect_master()
-	if((stat & (NOPOWER|BROKEN)) || shorted)
+	var/obj/machinery/alarm/MA = alarm_area.master_air_alarm?.resolve()
+	if(!MA)
+		alarm_area.elect_master_air_alarm()
+		MA = alarm_area.master_air_alarm?.resolve() // try again
+	if(!MA || (stat & (NOPOWER|BROKEN)) || shorted || MA.shorted)
 		return
-	if(src != alarm_area.master_air_alarm || alarm_area.master_air_alarm.shorted)
-		// only master scans! disable scans if in headless mode!
-		return
-
-	// if master is working at all, update all sensors!
-	for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
-		AA.scan_atmo()
-	return
-	// Outpost 21 addition end
+	scan_atmo()
+// Outpost 21 addition end
 
 /obj/machinery/alarm/proc/handle_heating_cooling(var/datum/gas_mixture/environment)
 	DECLARE_TLV_VALUES
@@ -356,42 +344,7 @@
 
 	return 0
 
-/obj/machinery/alarm/proc/master_is_operating()
-	return alarm_area && alarm_area.master_air_alarm && !(alarm_area.master_air_alarm.stat & (NOPOWER | BROKEN))
-
-/obj/machinery/alarm/proc/elect_master(exclude_self = FALSE)
-	// Outpost 21 addition begin - Multiple alarms in one area
-	if(!alarm_area)
-		return
-
-	// loop through all sensors to update the area's sensor list as well
-	alarm_area.master_air_alarm = null
-	alarm_area.air_alarms = list()
-	for(var/obj/machinery/alarm/AA in alarm_area)
-		alarm_area.air_alarms += AA
-		if(exclude_self && AA == src)
-			continue
-		if(!alarm_area.master_air_alarm && !(AA.stat & (NOPOWER|BROKEN)))
-			alarm_area.master_air_alarm = AA
-
-	if(alarm_area.master_air_alarm)
-		// new master found!
-		alarm_area.master_air_alarm.update_icon() // ensure all alarms update icon with new master
-		return 1
-	else
-		// failed to find new master
-		return 0
-	// Outpost 21 addition end
-
 /obj/machinery/alarm/update_icon()
-	// Outpost 21 addition begin - Multiple alarms in one area
-	if(alarm_area && alarm_area.master_air_alarm == src) // only master
-		// update icons of all other air alarms when master is updated
-		for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
-			if(AA != alarm_area.master_air_alarm) // we're already doing this... No recursion please!
-				AA.update_icon()
-	// Outpost 21 addition end
-
 	// start actual update!
 	cut_overlays()
 
@@ -408,27 +361,26 @@
 
 	// sub light!
 	// Outpost 21 addition begin - Multiple alarms in one area
-	if(alarm_area.master_air_alarm == src)
+	var/obj/machinery/alarm/MA = alarm_area.master_air_alarm?.resolve()
+	if(MA == src)
 		// master mode
 		add_overlay(mutable_appearance(icon, "alarm_Mmode"))
 		add_overlay(emissive_appearance(icon, "alarm_Mmode"))
-	else
-		if(!alarm_area.master_air_alarm || alarm_area.master_air_alarm.shorted)
-			// master is out! don't show display!
-			icon_state = "alarmp"
-			add_overlay(mutable_appearance(icon, "alarm_Xmode"))
-			add_overlay(emissive_appearance(icon, "alarm_Xmode"))
-			set_light(0)
-			set_light_on(FALSE)
-			return
-		else
-			// passive light on
-			add_overlay(mutable_appearance(icon, "alarm_Pmode"))
-			add_overlay(emissive_appearance(icon, "alarm_Pmode"))
+	if(!MA || MA.shorted)
+		// master is out! don't show display!
+		icon_state = "alarmp"
+		add_overlay(mutable_appearance(icon, "alarm_Xmode"))
+		add_overlay(emissive_appearance(icon, "alarm_Xmode"))
+		set_light(0)
+		set_light_on(FALSE)
+		return
+	// passive light on
+	add_overlay(mutable_appearance(icon, "alarm_Pmode"))
+	add_overlay(emissive_appearance(icon, "alarm_Pmode"))
 	// Outpost 21 addition end
 
 	var/icon_level = danger_level
-	if(alarm_area?.atmosalm)
+	if(alarm_area.atmosalm)
 		icon_level = max(icon_level, 1)	//if there's an atmos alarm but everything is okay locally, no need to go past yellow
 
 	var/new_color = null
@@ -436,7 +388,7 @@
 		if(0)
 			icon_state = "alarm_0"
 			// Outpost 21 addition begin - Multiple alarms in one area
-			if(alarm_area.master_air_alarm == src)
+			if(alarm_area.master_air_alarm?.resolve() == src)
 				add_overlay(mutable_appearance(icon, "alarm_ov0"))
 				add_overlay(emissive_appearance(icon, "alarm_ov0"))
 				new_color = "#03A728"
@@ -463,12 +415,6 @@
 /obj/machinery/alarm/receive_signal(datum/signal/signal)
 	if(stat & (NOPOWER|BROKEN))
 		return
-	if(alarm_area.master_air_alarm != src)
-		if(master_is_operating())
-			return
-		elect_master()
-		if(alarm_area.master_air_alarm != src)
-			return
 	if(!signal || signal.encryption)
 		return
 	var/id_tag = signal.data["tag"]
@@ -536,9 +482,8 @@
 
 /obj/machinery/alarm/proc/apply_mode()
 	// Outpost 21 addition begin - Multiple alarms in one area
-	if(alarm_area)
-		for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
-			AA.mode = mode //propagate mode to other air alarms in the area
+	for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+		AA.mode = mode //propagate mode to other air alarms in the area
 	// Outpost 21 addition end
 
 	switch(mode)
@@ -575,8 +520,10 @@
 /obj/machinery/alarm/proc/apply_danger_level(var/new_danger_level)
 	if(report_danger_level && alarm_area.atmosalert(new_danger_level, src))
 		post_alert(new_danger_level)
-
-	update_icon()
+	// Outpost 21 addition begin - Multiple alarms in one area
+	for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+		update_icon()
+	// Outpost 21 addition end
 
 /obj/machinery/alarm/proc/post_alert(alert_level)
 	var/datum/radio_frequency/frequency = radio_controller.return_frequency(alarm_frequency)
@@ -777,9 +724,8 @@
 				rcon_setting = RCON_YES
 
 		// Outpost 21 addition begin - Multiple alarms in one area
-		if(alarm_area)
-			for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
-				AA.rcon_setting = rcon_setting
+		for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+			AA.rcon_setting = rcon_setting
 		// Outpost 21 addition end
 		return TRUE
 
@@ -793,11 +739,8 @@
 				to_chat(ui.user, "Temperature must be between [min_temperature]C and [max_temperature]C")
 			else
 				// Outpost 21 addition begin - Multiple alarms in one area
-				if(alarm_area)
-					for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
-						AA.target_temperature = input_temperature + T0C
-				else
-					target_temperature = input_temperature + T0C
+				for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+					AA.target_temperature = input_temperature + T0C
 				// Outpost 21 addition end
 		return TRUE
 
@@ -873,7 +816,10 @@
 		if("reset")
 			atmos_reset()
 			. = TRUE
-	update_icon()
+	// Outpost 21 addition begin - Multiple alarms in one area
+	for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+		update_icon()
+	// Outpost 21 addition end
 
 // This big ol' mess just ensures that TLV always makes sense. If you set the max value below the min value,
 // it'll automatically update all the other values to keep it sane.
@@ -915,7 +861,10 @@
 /obj/machinery/alarm/proc/atmos_reset()
 	if(alarm_area.atmosalert(0, src))
 		apply_danger_level(0)
-	update_icon()
+	// Outpost 21 addition begin - Multiple alarms in one area
+	for(var/obj/machinery/alarm/AA in alarm_area.air_alarms)
+		update_icon()
+	// Outpost 21 addition end
 
 /obj/machinery/alarm/attackby(obj/item/W as obj, mob/user)
 	add_fingerprint(user)
@@ -957,21 +906,32 @@
 			soundloop.start()
 		// CHOMPEdit End
 
-// VOREStation Edit Start
+/obj/machinery/alarm/server/Initialize(mapload)
+	. = ..()
+	req_access = list(access_rd, access_atmospherics, access_engine_equip)
+	TLV[GAS_O2] =			list(-1.0, -1.0,-1.0,-1.0) // Partial pressure, kpa
+	TLV[GAS_CO2] = list(-1.0, -1.0,   5,  10) // Partial pressure, kpa
+	TLV[GAS_PHORON] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
+	TLV[GAS_CH4] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa // Outpost 21 edit - Methane
+	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
+	TLV["pressure"] =		list(0,ONE_ATMOSPHERE*0.10,ONE_ATMOSPHERE*1.40,ONE_ATMOSPHERE*1.60) /* kpa */
+	TLV["temperature"] =	list(20, 40, 140, 160) // K
+	target_temperature = 90
+
 /obj/machinery/alarm/freezer
 	target_temperature = T0C - 13.15 // Chilly freezer room
 
-/obj/machinery/alarm/freezer/first_run()
+/obj/machinery/alarm/freezer/set_initial_TLV()
 	. = ..()
 
 	TLV["temperature"] =	list(T0C - 40, T0C - 20, T0C + 40, T0C + 66) // K, Lower Temperature for Freezer Air Alarms (This is because TLV is hardcoded to be generated on first_run, and therefore the only way to modify this without changing TLV generation)
 
-// VOREStation Edit End, CHOMPEdit START
+// CHOMPEdit START
 /obj/machinery/alarm/sifwilderness
 	breach_detection = 0
 	report_danger_level = 0
 
-/obj/machinery/alarm/sifwilderness/first_run()
+/obj/machinery/alarm/sifwilderness/set_initial_TLV()
 	. = ..()
 
 	TLV[GAS_O2] =			list(16, 17, 135, 140)

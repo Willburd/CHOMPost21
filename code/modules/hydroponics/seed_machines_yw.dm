@@ -31,9 +31,9 @@
 	. = ..()
 	for(var/R in SSchemistry.chemical_reagents)
 		testlist.Add(R)
-		var/datum/reagent/current = SSchemistry.chemical_reagents[R]
 		/*CHOMP Edit: Remove Phorochem code
-			if(istype(current, /datum/reagent/phororeagent)) //phorochems are banned from this process, obviously
+		var/datum/reagent/current = SSchemistry.chemical_reagents[R]
+		if(istype(current, /datum/reagent/phororeagent)) //phorochems are banned from this process, obviously
 			continue
 		*/
 		allowed_reagents.Add(R)
