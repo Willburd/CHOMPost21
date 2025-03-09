@@ -59,7 +59,7 @@
 	enzyme_affect = FALSE // Outpost 21 edit
 	shock_resist = 1 // Outpost 21 edit - Don't zap on wires
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize()
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
 	. = ..()
 	if(!voremob_loaded)
 		voremob_loaded = TRUE

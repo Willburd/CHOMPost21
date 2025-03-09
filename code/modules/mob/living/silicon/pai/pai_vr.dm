@@ -71,7 +71,7 @@
 	vore_capacity = 1
 	vore_capacity_ex = list("stomach" = 1)
 
-/mob/living/silicon/pai/Initialize()
+/mob/living/silicon/pai/Initialize(mapload)
 	. = ..()
 
 	add_verb(src, /mob/proc/dominate_predator)

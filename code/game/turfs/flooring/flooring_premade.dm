@@ -338,7 +338,7 @@
 	nitrous_oxide = ATMOSTANK_NITROUSOXIDE // Outpost 21 edit - allow default n2o amounts
 
 /* Outpost 21 edit - replaced with single line above!
-/turf/simulated/floor/reinforced/n20/Initialize()
+/turf/simulated/floor/reinforced/n20/Initialize(mapload)
 	. = ..()
 	if(!air) make_air()
 	air.adjust_gas(GAS_N2O, ATMOSTANK_NITROUSOXIDE)

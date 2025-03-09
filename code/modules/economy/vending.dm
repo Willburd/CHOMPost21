@@ -82,7 +82,7 @@
 
 	var/forced_icon_path = null // Outpost 21 edit - Cargovendi can be loaded with any item, but icons for them don't exist on tgui side unless they're vendable... So just force an icon instead.
 
-/obj/machinery/vending/Initialize()
+/obj/machinery/vending/Initialize(mapload)
 	. = ..()
 	wires = new(src)
 	if(product_slogans)

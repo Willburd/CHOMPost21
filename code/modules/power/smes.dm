@@ -74,8 +74,8 @@ GLOBAL_LIST_EMPTY(smeses)
 	charge -= smes_amt
 	return smes_amt / SMESRATE
 
-/obj/machinery/power/smes/Initialize()
-	..()
+/obj/machinery/power/smes/Initialize(mapload)
+	. = ..()
 	GLOB.smeses += src
 	add_nearby_terminals()
 	soundloop = new(list(src), FALSE) // CHOMPEdit: hmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm

@@ -115,8 +115,8 @@
 	var/randomized_design = TRUE // Outpost 21 edit - use set cosmetics
 	glow_range = 1 // Outpost 21 edit - Glow is off by default, but collar turns it on! Any synx can have one due to set style! Smaller range than 4
 
-/mob/living/simple_mob/animal/synx/Initialize()
-	..()
+/mob/living/simple_mob/animal/synx/Initialize(mapload)
+	. = ..()
 	icon_state = "synx_living" // Outpost 21 edit - give synx a map icon, reset it here as this uses a layering system instead
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(randomized_design)

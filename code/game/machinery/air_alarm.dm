@@ -122,13 +122,6 @@
 	TLV["temperature"] =	list(20, 40, 140, 160) // K
 	target_temperature = 90
 
-/obj/machinery/alarm/Initialize(mapload)
-	. = ..()
-	if(!pixel_x && !pixel_y)
-		offset_airalarm()
-	first_run()
-	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
-
 /obj/machinery/alarm/Destroy()
 	unregister_radio(src, frequency)
 	qdel(wires)
@@ -179,6 +172,16 @@
 	area_uid = "\ref[alarm_area]"
 	if(name == "alarm")
 		name = "[alarm_area.name] Air Alarm \[[rand(9999)]\]" // random number id to help with players locating alarms, cosmetic
+
+/obj/machinery/alarm/Initialize(mapload)
+	. = ..()
+	set_frequency(frequency)
+	if(!master_is_operating())
+		elect_master()
+	if(!pixel_x && !pixel_y)
+		offset_airalarm()
+	first_run()
+	soundloop = new(list(src), FALSE)  // CHOMPEdit: Looping Alarms
 
 /obj/machinery/alarm/proc/scan_atmo()
 	// Outpost 21 addition begin - Multiple alarms in one area

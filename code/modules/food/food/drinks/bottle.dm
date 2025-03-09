@@ -16,7 +16,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/on_reagent_change() return // To suppress price updating. Bottles have their own price tags.
 
-/obj/item/reagent_containers/food/drinks/bottle/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/Initialize(mapload)
 	. = ..()
 	if(isGlass)
 		unacidable = TRUE
@@ -232,7 +232,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 4
 
-/obj/item/reagent_containers/food/drinks/bottle/gin/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/gin/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_GIN, 100)
 
@@ -243,7 +243,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/whiskey/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/whiskey/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_WHISKEY, 100)
 
@@ -254,7 +254,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SPECIALWHISKEY, 100)
 
@@ -265,7 +265,7 @@
 	center_of_mass_x = 17
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/vodka/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/vodka/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_VODKA, 100)
 
@@ -276,7 +276,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/tequilla/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/tequilla/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_TEQUILA, 100)
 
@@ -287,7 +287,7 @@
 	center_of_mass_x = 17
 	center_of_mass_y = 5
 
-/obj/item/reagent_containers/food/drinks/bottle/bottleofnothing/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/bottleofnothing/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_NOTHING, 100)
 
@@ -298,7 +298,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/patron/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/patron/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PATRON, 100)
 
@@ -309,7 +309,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 8
 
-/obj/item/reagent_containers/food/drinks/bottle/rum/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/rum/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_RUM, 100)
 
@@ -320,7 +320,7 @@
 	center_of_mass_x = 17
 	center_of_mass_y = 10
 
-/obj/item/reagent_containers/food/drinks/bottle/holywater/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/holywater/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_HOLYWATER, 100)
 
@@ -331,7 +331,7 @@
 	center_of_mass_x = 17
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/vermouth/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/vermouth/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_VERMOUTH, 100)
 
@@ -342,7 +342,7 @@
 	center_of_mass_x = 17
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/kahlua/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/kahlua/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_KAHLUA, 100)
 
@@ -353,7 +353,7 @@
 	center_of_mass_x = 15
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/goldschlager/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/goldschlager/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_GOLDSCHLAGER, 100)
 
@@ -364,7 +364,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/cognac/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/cognac/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_COGNAC, 100)
 
@@ -375,7 +375,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/absinthe/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/absinthe/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_ABSINTHE, 100)
 
@@ -386,7 +386,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/melonliquor/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/melonliquor/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_MELONLIQUOR, 100)
 
@@ -397,7 +397,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/bluecuracao/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/bluecuracao/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_BLUECURACAO, 100)
 
@@ -408,7 +408,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_UNATHILIQUOR, 100)
 
@@ -419,7 +419,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/peppermintschnapps/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/peppermintschnapps/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SCHNAPPSPEP, 100)
 
@@ -430,7 +430,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/peachschnapps/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/peachschnapps/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SCHNAPPSPEA, 100)
 
@@ -441,7 +441,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/lemonadeschnapps/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/lemonadeschnapps/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SCHNAPPSLEM, 100)
 
@@ -452,7 +452,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/jager/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/jager/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_JAGER, 100)
 
@@ -465,7 +465,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 4
 
-/obj/item/reagent_containers/food/drinks/bottle/wine/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/wine/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_REDWINE, 100)
 
@@ -476,7 +476,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 4
 
-/obj/item/reagent_containers/food/drinks/bottle/whitewine/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/whitewine/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_WHITEWINE, 100)
 
@@ -487,7 +487,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 4
 
-/obj/item/reagent_containers/food/drinks/bottle/carnoth/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/carnoth/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CARNOTH, 100)
 
@@ -498,7 +498,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 4
 
-/obj/item/reagent_containers/food/drinks/bottle/pwine/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/pwine/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PWINE, 100)
 
@@ -509,7 +509,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/champagne/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/champagne/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CHAMPAGNE, 100)
 
@@ -520,7 +520,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/sake/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/sake/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SAKE, 100)
 
@@ -533,7 +533,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/cola/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/cola/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_COLA, 100)
 
@@ -544,7 +544,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/decaf_cola/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/decaf_cola/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_DECAFCOLA, 100)
 
@@ -555,7 +555,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/space_up/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/space_up/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SPACEUP, 100)
 
@@ -566,7 +566,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/space_mountain_wind/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SPACEMOUNTAINWIND, 100)
 
@@ -577,7 +577,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/dr_gibb/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/dr_gibb/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_DRGIBB, 100)
 
@@ -590,7 +590,7 @@
 	center_of_mass_y = 7
 	isGlass = 0
 
-/obj/item/reagent_containers/food/drinks/bottle/orangejuice/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/orangejuice/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_ORANGEJUICE, 100)
 
@@ -603,7 +603,7 @@
 	center_of_mass_y = 7
 	isGlass = 0
 
-/obj/item/reagent_containers/food/drinks/bottle/applejuice/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/applejuice/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_APPLEJUICE, 100)
 
@@ -616,7 +616,7 @@
 	center_of_mass_y = 9
 	isGlass = 0
 
-/obj/item/reagent_containers/food/drinks/bottle/milk/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/milk/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_MILK, 100)
 
@@ -629,7 +629,7 @@
 	center_of_mass_y = 8
 	isGlass = 0
 
-/obj/item/reagent_containers/food/drinks/bottle/cream/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/cream/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CREAM, 100)
 
@@ -642,7 +642,7 @@
 	center_of_mass_y = 8
 	isGlass = 0
 
-/obj/item/reagent_containers/food/drinks/bottle/tomatojuice/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/tomatojuice/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_TOMATOJUICE, 100)
 
@@ -655,7 +655,7 @@
 	center_of_mass_y = 8
 	isGlass = 0
 
-/obj/item/reagent_containers/food/drinks/bottle/limejuice/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/limejuice/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_LIMEJUICE, 100)
 
@@ -668,7 +668,7 @@
 	center_of_mass_y = 8
 	isGlass = 0
 
-/obj/item/reagent_containers/food/drinks/bottle/lemonjuice/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/lemonjuice/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_LEMONJUICE, 100)
 
@@ -679,7 +679,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/grenadine/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/grenadine/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_GRENADINE, 100)
 
@@ -690,7 +690,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/grapejuice/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/grapejuice/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_GRAPEJUICE, 100)
 
@@ -710,7 +710,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 12
 
-/obj/item/reagent_containers/food/drinks/bottle/small/beer/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_BEER, 50)
 
@@ -732,7 +732,7 @@
 	description_fluff = "Lite-Speed is Spacer Beer's light brand, and despite being widely considered inferior in every regard, it's still pretty cheap. The lower alcohol content also appeals to some Skrell, for whom full-strength beer is too strong."
 	icon_state = "beerlite"
 
-/obj/item/reagent_containers/food/drinks/bottle/small/litebeer/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/litebeer/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_LITEBEER, 50)
 
@@ -743,7 +743,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 12
 
-/obj/item/reagent_containers/food/drinks/bottle/small/cider/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/cider/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_CIDER, 50)
 
@@ -755,7 +755,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 10
 
-/obj/item/reagent_containers/food/drinks/bottle/small/ale/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/ale/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_ALE, 50)
 
@@ -765,7 +765,7 @@
 	description_fluff = "Named for one of history's most infamous pirates, Qar’raqel, who ruled over Natuna before suffering a mysterious fate. This ale is brewed on Sif by a small company... Owned by Centauri Provisions."
 	icon_state = "alebottle2"
 
-/obj/item/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/ale/hushedwhisper/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_ALE, 50)
 
@@ -778,7 +778,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/small/cola/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/cola/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_COLA, 50)
 
@@ -789,7 +789,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/small/space_up/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/space_up/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SPACEUP, 50)
 
@@ -800,7 +800,7 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/small/space_mountain_wind/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/space_mountain_wind/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_SPACEMOUNTAINWIND, 50)
 
@@ -811,6 +811,6 @@
 	center_of_mass_x = 16
 	center_of_mass_y = 6
 
-/obj/item/reagent_containers/food/drinks/bottle/small/dr_gibb/Initialize()
+/obj/item/reagent_containers/food/drinks/bottle/small/dr_gibb/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_DRGIBB, 50)

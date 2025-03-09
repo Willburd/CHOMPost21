@@ -20,7 +20,6 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/computer/area_atmos/LateInitialize()
-	. = ..()
 	scanscrubbers()
 // Outpost 21 edit end
 

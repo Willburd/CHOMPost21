@@ -50,7 +50,7 @@
 	/// This determines if the kiosk can dispense or not. Edit the below line to FALSE if you don't want them to do such.
 	var/can_dispense = FALSE // Outpost 21 edit - By default we do not dispense medical aid
 
-/obj/machinery/medical_kiosk/Initialize()
+/obj/machinery/medical_kiosk/Initialize(mapload)
 	. = ..()
 	our_db = SStranscore.db_by_key(db_key)
 	// Outpost 21 edit begin - Missing circuit board on deconstruct, but will eventually be removed on machine recode
