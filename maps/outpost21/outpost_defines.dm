@@ -134,6 +134,8 @@
 										/area/muriki/rooftop/civilian,
 										/area/muriki/rooftop/medical,
 										/area/muriki/rooftop/science,
+										/area/muriki/rooftop/security,
+										/area/muriki/rooftop/engineering,
 										// The elevators don't need scrubbers and vents
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
