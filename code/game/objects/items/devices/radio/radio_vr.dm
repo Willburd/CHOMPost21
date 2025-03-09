@@ -4,7 +4,7 @@
 	adhoc_fallback = TRUE
 
 // Outpost 21 edit begin - Track these if they exist
-/obj/item/radio/phone/Initialize()
+/obj/item/radio/phone/Initialize(mapload)
 	. = ..()
 	phones_on_station.Add(src)
 

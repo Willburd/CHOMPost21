@@ -15,7 +15,7 @@
 	var/zone = "This computer is working on a wireless range, the range is currently limited to "
 
 // Outpost 21 edit begin - Temp no sleep init
-/obj/machinery/computer/area_atmos/Initialize()
+/obj/machinery/computer/area_atmos/Initialize(mapload)
 	..()
 	return INITIALIZE_HINT_LATELOAD
 

@@ -1676,7 +1676,7 @@
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_FUNGI, 2) // Outpost 21 edit - mushroom allergy
 
-/obj/item/reagent_containers/food/snacks/plump_pie/Initialize()
+/obj/item/reagent_containers/food/snacks/plump_pie/Initialize(mapload)
 	. = ..()
 	if(prob(10))
 		name = "exceptional plump pie"
@@ -3602,7 +3602,7 @@
 	w_class = ITEMSIZE_TINY
 	nutriment_amt = 1
 
-/obj/item/reagent_containers/food/snacks/cracker/Initialize()
+/obj/item/reagent_containers/food/snacks/cracker/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 
@@ -4648,7 +4648,7 @@
 	nutriment_amt = 2
 	nutriment_desc = list("salt" = 3)
 
-/obj/item/reagent_containers/food/snacks/roastedsunflower/Initialize()
+/obj/item/reagent_containers/food/snacks/roastedsunflower/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 
@@ -4663,7 +4663,7 @@
 	nutriment_amt = 2
 	nutriment_desc = list("salt" = 3)
 
-/obj/item/reagent_containers/food/snacks/roastedpeanuts/Initialize()
+/obj/item/reagent_containers/food/snacks/roastedpeanuts/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 
@@ -4764,7 +4764,7 @@
 	nutriment_desc = list(PLANT_MUSHROOMS = 5, "salt" = 5)
 	bitesize = 3
 
-/obj/item/reagent_containers/food/snacks/skrellsnacks/Initialize()
+/obj/item/reagent_containers/food/snacks/skrellsnacks/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 	reagents.add_reagent(REAGENT_ID_FUNGI, 1) // Outpost 21 edit - mushroom allergy
@@ -6887,7 +6887,7 @@
 	nutriment_desc = list("salt" = 1, "chips" = 2)
 	bitesize = 1
 
-/obj/item/reagent_containers/food/snacks/chips/Initialize()
+/obj/item/reagent_containers/food/snacks/chips/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 
@@ -6939,7 +6939,7 @@
 	nutriment_desc = list(PLANT_MUSHROOMS = 5, "salt" = 5)
 	bitesize = 3
 
-/obj/item/reagent_containers/food/snacks/skrellsnacks/Initialize()
+/obj/item/reagent_containers/food/snacks/skrellsnacks/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 	reagents.add_reagent(REAGENT_ID_FUNGI, 1) // Outpost 21 edit - mushroom allergy
@@ -7165,7 +7165,7 @@
 	nutriment_amt = 5
 	bitesize = 2
 
-/obj/item/reagent_containers/food/snacks/triton/Initialize()
+/obj/item/reagent_containers/food/snacks/triton/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 10) // Outpost 21 edit - salt allergy
 
@@ -7182,7 +7182,7 @@
 	nutriment_amt = 5
 	bitesize = 2
 
-/obj/item/reagent_containers/food/snacks/saturn/Initialize()
+/obj/item/reagent_containers/food/snacks/saturn/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 
@@ -7303,7 +7303,7 @@
 	nutriment_amt = 4
 	bitesize = 1
 
-/obj/item/reagent_containers/food/snacks/hakarl/Initialize()
+/obj/item/reagent_containers/food/snacks/hakarl/Initialize(mapload)
 	.=..()
 	reagents.add_reagent("sodiumchloride", 1) // Outpost 21 edit - salt allergy
 

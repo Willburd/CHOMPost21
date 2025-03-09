@@ -517,7 +517,7 @@
 	icon_state = "nuclearbomb0"
 
 // Outpost 21 edit begin - Change the booze!
-/obj/structure/reagent_dispensers/beerkeg/fakenuke/Initialize()
+/obj/structure/reagent_dispensers/beerkeg/fakenuke/Initialize(mapload)
 	. = ..()
 	reagents.clear_reagents()
 	reagents.add_reagent(REAGENT_ID_UNATHILIQUOR,1000) // the HARD shit

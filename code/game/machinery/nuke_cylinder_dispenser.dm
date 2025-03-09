@@ -10,7 +10,7 @@
 	var/locked = TRUE
 	var/open = FALSE
 
-/obj/machinery/nuke_cylinder_dispenser/Initialize()
+/obj/machinery/nuke_cylinder_dispenser/Initialize(mapload)
 	. = ..()
 	for(var/i in 1 to 6)
 		new /obj/item/nuclear_cylinder(src)
