@@ -117,7 +117,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "aam" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -186,7 +186,7 @@
 "aaw" = (
 /obj/random/cutout,
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/storage/tech)
 "aax" = (
 /obj/random/cutout,
 /turf/simulated/floor/plating,
@@ -1273,7 +1273,7 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /turf/simulated/open,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "aAh" = (
 /obj/machinery/computer/ship/sensors,
 /turf/simulated/floor/tiled/techfloor,
@@ -2841,7 +2841,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "bos" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
@@ -4460,7 +4460,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "bZV" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -6983,7 +6983,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "doP" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -7100,7 +7100,7 @@
 /obj/random/flashlight,
 /obj/random/flashlight,
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "dsm" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -7197,7 +7197,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "duf" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -8589,7 +8589,7 @@
 	name_tag = "Engineering Solars Subgrid"
 	},
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "edu" = (
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green{
@@ -9559,7 +9559,7 @@
 "eDj" = (
 /obj/structure/lattice,
 /turf/simulated/open,
-/area/muriki/rooftop/engineering)
+/area/storage/tech)
 "eDo" = (
 /obj/structure/dispenser{
 	phorontanks = 0
@@ -9690,14 +9690,17 @@
 /area/maintenance/substation/arrivals)
 "eEg" = (
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/storage/tech)
 "eEs" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_one_access = list(10)
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "eEB" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -9970,8 +9973,11 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "eLM" = (
 /obj/structure/cable/green,
 /obj/machinery/power/apc{
@@ -10678,7 +10684,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "fep" = (
 /obj/structure/railing{
 	dir = 4
@@ -10802,7 +10808,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "fjA" = (
 /obj/structure/urinal{
 	pixel_y = 32
@@ -11449,7 +11455,7 @@
 /area/maintenance/secelev)
 "fCc" = (
 /turf/simulated/wall/r_wall,
-/area/muriki/rooftop/engineering)
+/area/storage/tech)
 "fCW" = (
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/plating,
@@ -11747,7 +11753,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "fNo" = (
 /obj/structure/railing{
 	dir = 1
@@ -12888,14 +12894,11 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "gpM" = (
 /obj/machinery/computer/message_monitor,
 /obj/item/paper/monitorkey,
@@ -13380,18 +13383,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -26
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "gGj" = (
 /obj/structure/table/standard,
 /obj/item/stack/medical/splint,
@@ -14088,7 +14084,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/mine/unexplored/muriki/mountaintopnorth)
+/area/maintenance/substation/phoronics)
 "gZe" = (
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled/old_tile,
@@ -15327,7 +15323,7 @@
 /obj/item/melee/umbrella/random,
 /obj/item/melee/umbrella/random,
 /turf/simulated/floor/tiled/steel_grid,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "hHY" = (
 /obj/structure/table/rack,
 /obj/item/storage/briefcase/inflatable{
@@ -15583,7 +15579,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "hNb" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16923,7 +16919,7 @@
 	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "iyX" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/portables_connector{
@@ -18385,7 +18381,7 @@
 	},
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "jhF" = (
 /obj/structure/lattice,
 /obj/structure/railing{
@@ -18439,7 +18435,7 @@
 /obj/machinery/door/airlock/maintenance/rnd,
 /obj/item/airlock_brace,
 /turf/simulated/floor,
-/area/mine/unexplored/muriki/mountaintopnorth)
+/area/maintenance/substation/phoronics)
 "jjF" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -19140,7 +19136,7 @@
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "jAm" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -19288,7 +19284,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "jFC" = (
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32
@@ -21446,6 +21442,9 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
+"kDC" = (
+/turf/simulated/mineral/alt/muriki,
+/area/maintenance/substation/phoronics)
 "kDG" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -24311,12 +24310,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/steel_grid,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "mfm" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -24867,7 +24863,7 @@
 	},
 /obj/structure/cable/orange,
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "msS" = (
 /turf/simulated/mineral/alt/ignore_mapgen/muriki,
 /area/rnd/research/phoronics/bombrange)
@@ -25024,7 +25020,7 @@
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled/steel_grid,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "myN" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -26277,7 +26273,7 @@
 "ndx" = (
 /obj/item/book/tome/imbued,
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/storage/tech)
 "ndL" = (
 /obj/structure/bed/chair/comfy/black,
 /obj/effect/landmark/redspaceexit,
@@ -27404,7 +27400,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "nIK" = (
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/techfloor/grid/muriki,
@@ -28397,17 +28393,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/arrivals)
 "ojM" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 26
-	},
 /obj/structure/dispenser/oxygen,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "ojQ" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Hydroponics Southeast Roof";
@@ -30798,7 +30786,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "pqX" = (
 /obj/structure/table/standard,
 /obj/item/storage/toolbox/mechanical,
@@ -33437,8 +33425,17 @@
 /turf/simulated/floor/wood,
 /area/rnd/rdoffice)
 "qJv" = (
-/turf/simulated/floor,
-/area/mine/unexplored/muriki/mountaintopnorth)
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 26;
+	nightshift_setting = 3
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/engineering)
 "qJw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -34130,7 +34127,7 @@
 	},
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "rbW" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
@@ -34240,7 +34237,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "reT" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -34265,7 +34262,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "rfo" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/flesh/muriki,
@@ -35549,8 +35546,11 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "rOq" = (
 /obj/structure/table/standard,
 /obj/item/roller,
@@ -35591,7 +35591,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/rooftop/engineering)
+/area/maintenance/engineering)
 "rPu" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -35717,6 +35717,19 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/grass,
 /area/library)
+"rSd" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 26
+	},
+/turf/simulated/floor/plating/external/muriki{
+	outdoors = 0
+	},
+/area/muriki/rooftop/security)
 "rSR" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -35824,6 +35837,9 @@
 "rWp" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating/external/muriki{
 	outdoors = 0
@@ -39587,11 +39603,8 @@
 "tLK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "tMg" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/rooftop/secgen)
@@ -40059,14 +40072,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/gravgen)
 "tXG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor,
-/area/muriki/rooftop/engineering)
+/turf/simulated/wall/r_wall,
+/area/rnd/entry_aux)
 "tXR" = (
 /obj/effect/floor_decal/milspec/color/red/half,
 /obj/machinery/camera/network/security{
@@ -40967,11 +40974,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "utF" = (
 /obj/structure/sign/nosmoking_2{
 	pixel_x = -32
@@ -42525,6 +42529,16 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
+"viv" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/external/muriki,
+/area/muriki/rooftop/engineering)
 "viO" = (
 /obj/structure/table/woodentable,
 /obj/random/thermalponcho,
@@ -44331,7 +44345,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "wbO" = (
 /obj/effect/floor_decal/chapel{
 	dir = 4
@@ -45371,7 +45385,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "wHb" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable/green{
@@ -48147,7 +48161,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/muriki/rooftop/security)
+/area/muriki/rooftop/secgen)
 "ygb" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -68692,8 +68706,8 @@ uDM
 uDM
 uKp
 uDM
-uDM
-vtE
+qJv
+viv
 uDM
 uDM
 pcN
@@ -68850,14 +68864,14 @@ uDM
 uDM
 uDM
 uDM
-fCc
-fCc
-fCc
-fCc
-fCc
+cWT
+cWT
+cWT
+cWT
+cWT
 eEs
-fCc
-fCc
+cWT
+cWT
 uDM
 hEc
 hEc
@@ -69012,14 +69026,14 @@ drT
 uDM
 uDM
 uDM
-fCc
-fCc
+cWT
+cWT
 bnr
 doA
 rOQ
 eLk
 fdk
-fCc
+cWT
 iNb
 ybr
 ybr
@@ -69174,7 +69188,7 @@ kxr
 qEV
 uDM
 uDM
-fCc
+cWT
 aAd
 bZR
 edc
@@ -69336,14 +69350,14 @@ kxr
 qEV
 uDM
 uDM
-fCc
-fCc
+cWT
+cWT
 aal
 fNd
-tXG
+rYH
 drX
 gFY
-fCc
+cWT
 ucX
 hEc
 hEc
@@ -69498,7 +69512,7 @@ kxr
 qEV
 uDM
 uDM
-fCc
+cWT
 cWT
 ePO
 ePO
@@ -88520,7 +88534,7 @@ ojM
 hHX
 myn
 rff
-xtQ
+rSd
 pUc
 goV
 sgW
@@ -100287,11 +100301,11 @@ sQd
 ncJ
 oXD
 weI
-thK
-icX
-icX
-icX
-icX
+tXG
+tXG
+tXG
+tXG
+tXG
 fao
 jGC
 pyX
@@ -101373,10 +101387,10 @@ ovc
 ovc
 ovc
 ovc
-koB
-ovc
+iII
+kDC
 gYS
-koB
+iII
 pXM
 pXM
 pXM
@@ -101535,10 +101549,10 @@ ovc
 ovc
 ovc
 ovc
-koB
-qJv
-qJv
-koB
+iII
+ndp
+ndp
+iII
 pXM
 pXM
 pXM
@@ -101697,10 +101711,10 @@ ovc
 ovc
 ovc
 ovc
-koB
+iII
 jjq
-koB
-koB
+iII
+iII
 pXM
 amZ
 kxr
