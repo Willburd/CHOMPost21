@@ -446,9 +446,11 @@
 	if(landing.z in using_map.deadly_fall_levels && landing.z != oldloc.z)
 		to_chat(src,span_danger("You tumble through the air falling an extreme distance![prob(2) ? " Giving you enough time to think about the consequences of your actions!" : " This is going to hurt..."]"))
 		fall_impact(A, 25, 50)
-		if(bruteloss >= 150)
-			visible_message(span_danger("SPLORCH!"), span_danger("SPLORCH!"), "SPLORCH!")
-			gib()
+		if(ismob(src))
+			var/mob/M = src
+			if(M.bruteloss >= 150)
+				visible_message(span_danger("SPLORCH!"), span_danger("SPLORCH!"), "SPLORCH!")
+				M.gib()
 		return
 	if(special_fall_handle(A))
 		return
