@@ -44,7 +44,7 @@
 				H.adjustHalLoss(-9)
 				if(H.client)
 					var/wake = tgui_alert(H, "You don't remember how you got here, but somehow you're waking up in \the [get_area(H)]. Everything you experienced in the other world feels like a hazy and unfortunate dream. Did someone spike your drink?...", "What happened?", list("Wake Up"))
-					if(H.Sleeping <= 15 && wake == "Wake Up")
+					if(H.sleeping <= 15 && wake == "Wake Up")
 						H.AdjustSleeping(-15)
 			return
 		else
