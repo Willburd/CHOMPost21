@@ -53,7 +53,7 @@
 					continue
 				final_message += span_notice("Contains " + span_info("[R.volume]u") + " of " + span_bold(span_underline("[R.name]")) + ".<br>[R.description]<br><br>")
 				if(R.id in addictives)
-					final_message += span_boldnotice(span_red("DANGER") + ", [(R.id in fast_addictives) ? "highly " : ""]addictive.)") + "<br>"
+					final_message += span_boldnotice(span_red("DANGER") + ", [(R.id in fast_addictives) ? "highly " : ""]addictive.") + "<br>"
 				var/list/products = SSchemistry.chemical_reactions_by_product[R.id]
 				if(products != null && products.len > 0)
 					var/segment = 1
