@@ -167,10 +167,28 @@
 					final_message += pump_results
 					final_message += "<br>"
 
-		// Last, unseal it if it's an autoinjector.
-		if(istype(I,/obj/item/reagent_containers/hypospray/autoinjector/biginjector) && !(I.flags & OPENCONTAINER))
-			I.flags |= OPENCONTAINER
-			final_message += "Sample container unsealed.<br>"
+				var/makes_result = ""
+				var/list/instant_by_reagent = SSchemistry.instant_reactions_by_reagent["[R.id]"]
+				if(instant_by_reagent && instant_by_reagent.len)
+					for(var/i = 1, i <= instant_by_reagent.len, i++)
+						var/decl/chemical_reaction/OR = instant_by_reagent[i]
+						if(istype(OR,/decl/chemical_reaction/instant/slime)) // very bloated and meant to be a mystery
+							continue
+						if(!OR.spoiler)
+							makes_result += " -[span_info(OR.name)]<br>"
+
+				var/list/distilled_by_reagent = SSchemistry.distilled_reactions_by_reagent["[R.id]"]
+				if(distilled_by_reagent && distilled_by_reagent.len)
+					for(var/i = 1, i <= distilled_by_reagent.len, i++)
+						var/decl/chemical_reaction/OR = distilled_by_reagent[i]
+						if(!OR.spoiler)
+							makes_result += " -[span_info(OR.name)]<br>"
+
+				if(makes_result != "")
+					final_message += span_underline("Can Be Used To Produce: <br>")
+					final_message += makes_result
+					final_message += "<br>"
+
 		final_message += "Scanning of \the [I] complete."
 
 		to_chat(user, span_notice(final_message))

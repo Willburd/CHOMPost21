@@ -43242,8 +43242,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/woodentable,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/machinery/chemical_analyzer_pro{
+	name = "barmaster 40k"
+	},
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "lAi" = (
@@ -45840,6 +45841,8 @@
 /area/medical/chemistry)
 "moG" = (
 /obj/structure/table/woodentable,
+/obj/item/retail_scanner,
+/obj/item/retail_scanner,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "moI" = (
