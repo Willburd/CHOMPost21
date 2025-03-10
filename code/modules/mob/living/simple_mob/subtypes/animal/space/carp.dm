@@ -90,7 +90,6 @@
 	var/static/list/carp_colors_rare = list(\
 	"silver" = "#fdfbf3", \
 	)
-
 	can_be_drop_prey = FALSE //CHOMP Add
 
 /mob/living/simple_mob/animal/space/carp/Initialize(mapload)
@@ -243,7 +242,7 @@
 	B.name = "stomach"
 	B.desc = "You've been swallowed whole and alive by a massive white carp! The stomach around you is oppressively tight, squeezing and grinding wrinkled walls across your body, making it hard to make any movement at all. The chamber is flooded with fluids that completely overwhelm you."
 	B.mode_flags = DM_FLAG_THICKBELLY
-//	B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
+	//B.belly_fullscreen = "yet_another_tumby" //Chompedit - Belly Fullscreen change
 	B.digest_brute = 2
 	B.digest_burn = 2
 	B.digest_oxy = 1
