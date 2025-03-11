@@ -174,7 +174,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 /obj/machinery/librarycomp/tgui_data(mob/user)
 	var/data[0]
-	data["admin_mode"] = (user.client?.holder?.rights & R_ADMIN)
+	data["admin_mode"] = check_rights_for(user.client, (R_ADMIN|R_MOD))
 	data["is_public"] = FALSE
 	data["screenstate"] = screenstate
 	data["emagged"] = emagged
@@ -465,7 +465,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 			. = TRUE
 
 		if("protect_external")
-			if(usr.client?.holder?.rights & R_ADMIN)
+			if(check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				playsound(src, "keyboard", 40)
 				var/get_id = params["protect_external"]
 				var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
