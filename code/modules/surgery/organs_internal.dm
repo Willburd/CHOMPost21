@@ -242,7 +242,6 @@
 
 /datum/surgery_step/internal/detatch_organ/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	var/obj/item/organ/internal/removing = target.internal_organs_by_name[target.op_stage.current_organ] // Outpost 21 edit - Use organ's name
 
 	user.visible_message(span_filter_notice("[user] starts to separate [target]'s [target.op_stage.current_organ] with \the [tool]."), \
 	span_filter_notice("You start to separate [target]'s [target.op_stage.current_organ] with \the [tool].") )
