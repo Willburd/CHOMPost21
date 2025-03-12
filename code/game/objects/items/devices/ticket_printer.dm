@@ -32,9 +32,32 @@
 	if(!details)
 		return
 
+ 	// Outpost 21 edit begin - Show orders on citation
+	var/orders
+	var/new_order = tgui_input_list(user, "Select penalty:", "Penalty", list("Notice", "Community Service", "Fine", "IAA"))
+	switch(new_order)
+		if("Community Service")
+			var/list/dps = station_departments.Copy()
+			dps += list("Janitorial","Kitchen","Library","Mining")
+			var/dept = tgui_input_list(user, "Select department:", "Department", dps)
+			if(!dept)
+				dept = "ordered"
+			var/time = tgui_input_number(user,"Enter community service minutes","Community Service",30,120)
+			if(time)
+				orders = "Report to the [dept] department for [time] minutes of community service."
+		if("Fine")
+			var/fine = tgui_input_number(user,"Enter thaler value of fine","Thaler Fine",10,5000)
+			if(fine)
+				orders = "Report to security lobby for one time payment of [fine] thaler fine, or to serve time in the brig."
+		if("IAA")
+			orders = "Speak with an on-shift IAA or your local representative at Central Command after the shift to resolve this issue."
+	if(!orders)
+		orders = "See your local representative at Central Command after the shift is over to resolve this issue."
+	// Outpost 21 edit end
+
 	var/turf/our_turf = get_turf(user)
 
-	var/final = "<head><style>body {font-family: Verdana; background-color: #C1BDA3;}</style></head><center><h3>Nanotrasen Security Citation</h3><hr>This security citation has been issued to <br><big>[capitalize(ticket_name)]</big></center><b>Reason</b>:<br><i>[details]</i><hr><center><small>See your local representative at Central Command after the shift is over to resolve this issue.</small><br><img src = eslogo.png></center>" // Outpost 21 edit - use ES logo
+	var/final = "<head><style>body {font-family: Verdana; background-color: #C1BDA3;}</style></head><center><h3>[using_map.company_name] Security Citation</h3><hr>This security citation has been issued to <br><big>[capitalize(ticket_name)]</big></center><b>Reason</b>:<br><i>[details]</i><hr><center><small>[orders]</small><br><img src = https://raw.githubusercontent.com/Willburd/CHOMPost21/master/html/images/eslogo.png></center>" // Outpost 21 edit - use ES logo, citation enhancements
 
 	var/obj/item/paper/sec_ticket/p = new /obj/item/paper/sec_ticket(our_turf)
 
