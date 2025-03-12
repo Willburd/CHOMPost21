@@ -391,10 +391,10 @@
 			if(istype(A, /mob/living/carbon))
 				count += 1
 				var/mob/living/carbon/C = A
-				if((C.hallucination > 20 && prob(5)) || (AR && AR.haunted))
+				if((C.hallucination > 20 && prob(5)) || (AR && AR.haunted) || (prob(10) && SShaunting.station_is_haunted()))
 					halucinateTarget = C
 
-		if((count == 1 && istype(halucinateTarget,/mob/living/carbon)) || (AR && AR.haunted))
+		if((count == 1 && istype(halucinateTarget,/mob/living/carbon)) || (AR && AR.haunted) || (prob(10) && SShaunting.station_is_haunted()))
 			// halucination replies
 			var/text = halu_text(halucinateTarget)
 			balloon_alert_visible(text)

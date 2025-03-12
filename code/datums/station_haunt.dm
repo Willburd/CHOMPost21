@@ -310,9 +310,10 @@
 			A.lock()
 
 /datum/station_haunt/lock_doors/fire()
-	if(!targ_area)
+	if(world.time > (start_time + dur))
 		end()
-	if(world.time > start_time + dur)
+		return
+	if(!targ_area)
 		end()
 
 /datum/station_haunt/lock_doors/end()
@@ -440,6 +441,7 @@
 	var/mob/living/M = SShaunting.get_player_target()
 	if(isliving(M))
 		M.visible_message(span_warning("something shoves \the [M] to the ground!"))
+		playsound(M, get_sfx("punch"), 50, 1)
 		M.Stun(8)
 		M.Weaken(5)
 	end()
@@ -457,24 +459,29 @@
 	dur = rand(1,3) MINUTES
 
 /datum/station_haunt/vent_crawler/fire()
+	if(world.time > (start_time + dur))
+		end()
+		return
 	var/mob/M = SShaunting.get_player_target()
 	var/turf/check_T = get_turf(M)
-	if(check_T)
-		if(prob(20))
-			var/obj/machinery/atmospherics/unary/P = locate() in orange(4,check_T)
-			var/turf/T = get_turf(P)
-			SSmotiontracker.ping(T,40) // Teshari rattler
-			playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
-			var/message = pick(
-				prob(90);"* clunk *",
-				prob(90);"* thud *",
-				prob(90);"* clatter *",
-				prob(1);"* " + span_giganteus("ඞ") + " *"
-			)
-			T.runechat_message(message)
-		if(world.time < start_time + dur)
+	if(!check_T)
+		return
+	if(prob(5))
+		var/obj/machinery/atmospherics/P = locate() in orange(3,check_T)
+		if(!P)
 			return
-	end()
+		var/turf/T = get_turf(P)
+		if(!T)
+			return
+		SSmotiontracker.ping(T,40) // Teshari rattler
+		playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
+		var/message = pick(
+			prob(90);"* clunk *",
+			prob(90);"* thud *",
+			prob(90);"* clatter *",
+			prob(1);"* " + span_giganteus("ඞ") + " *"
+		)
+		T.runechat_message(message)
 
 
 // bleeding
@@ -486,17 +493,17 @@
 /datum/station_haunt/bleeding/New()
 	. = ..()
 	start_time = world.time
-	dur = rand(0.5,1) MINUTES
+	dur = rand(10,60) SECONDS
 
 /datum/station_haunt/bleeding/fire()
+	if(world.time > (start_time + dur))
+		end()
+		return
 	if(prob(60))
 		var/mob/living/carbon/human/H = SShaunting.get_player_target()
 		if(ishuman(H) && !H.isSynthetic())
 			H.drip(1)
 			H.adjustHalLoss(1)
-	if(world.time < (start_time + dur))
-		return
-	end()
 
 
 // blood rain
@@ -515,6 +522,9 @@
 		to_chat(target_mob,span_danger("Something starts to drip from above."))
 
 /datum/station_haunt/blood_rain/fire()
+	if(world.time > (start_time + dur))
+		end()
+		return
 	if(!target_mob || QDELING(target_mob))
 		end()
 		return
@@ -526,22 +536,15 @@
 		var/xx = rand(1,4) * (prob(50) ? 1 : -1)
 		var/yy = rand(1,4) * (prob(50) ? 1 : -1)
 		var/turf/simulated/floor/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
-		if(T)
+		if(istype(T,/turf/simulated/floor))
 			target_mob.adjustHalLoss(0.25)
 			target_mob.hallucination += 0.05
 			blood_splatter(T,target_mob)
-	if(world.time < (start_time + dur))
-		return
-	end()
-
 
 
 //////////////////////////////////////////////////////////////////////////////////////
 // HAUNTING ENITIES, Things that go bump in the night!
 //////////////////////////////////////////////////////////////////////////////////////
-
-
-// blood rain
 /datum/station_haunt/entity_spawn
 	name = "Entity"
 	var/datum/weakref/entity = null
@@ -599,11 +602,14 @@
 /datum/haunting_entity/proc/validate_existance()
 	if(!loc)
 		return FALSE
-	if(!target_mob?.resolve())
+	if(!get_target())
 		return FALSE
-	if(world.time >= (start_time + dur))
+	if(world.time > (start_time + dur))
 		return FALSE
 	return TRUE
+
+/datum/haunting_entity/proc/get_target()
+	return target_mob?.resolve()
 
 /datum/haunting_entity/process()
 	return

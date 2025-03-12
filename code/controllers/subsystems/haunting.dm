@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 50
+#define MODE_SIZE 100
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -207,6 +207,9 @@ SUBSYSTEM_DEF(haunting)
 		if(world_mode < MODE_CALM)
 			world_mode = MODE_CALM
 		return
+
+/datum/controller/subsystem/haunting/proc/station_is_haunted()
+	return world_mode >= MODE_SUPERSPOOKY
 
 /datum/controller/subsystem/haunting/proc/start_haunt(var/forced = FALSE)
 	if(!forced)
