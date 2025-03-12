@@ -340,7 +340,8 @@
 	if(target.op_stage.current_organ)
 		user.visible_message(span_notice("[user] has removed [target]'s [target.op_stage.current_organ] with \the [tool]."), \
 		span_notice("You have removed [target]'s [target.op_stage.current_organ] with \the [tool]."))
-		user.balloon_alert_visible("removes [target]'s [target.op_stage.current_organ]", 
+		user.balloon_alert_visible("removes [target]'s [target.op_stage.current_organ]", "Removed \the [target.op_stage.current_organ]")
+
 		var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
 		if(O && istype(O))
 			O.removed(user)
