@@ -22106,7 +22106,7 @@
 /obj/machinery/door/window/brigdoor/northleft,
 /obj/effect/floor_decal/corner/red/borderfull,
 /obj/machinery/door/firedoor/glass,
-/obj/item/toy/plushie/tinytin/sec{
+/obj/item/toy/plushie/tinytin_sec{
 	pixel_x = 9
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -40695,7 +40695,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
 "veR" = (
-/obj/item/toy/plushie/tinytin/sec,
+/obj/item/toy/plushie/tinytin_sec,
 /obj/structure/table/alien/blue,
 /turf/simulated/floor/wood{
 	oxygen = 0;

@@ -289,7 +289,7 @@
 /obj/machinery/light_construct{
 	dir = 4
 	},
-/obj/item/toy/plushie/tinytin/sec,
+/obj/item/toy/plushie/tinytin_sec,
 /turf/simulated/floor/wood,
 /area/submap/outpost21/yawn_B)
 "YA" = (
