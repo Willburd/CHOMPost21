@@ -71,7 +71,6 @@
 
 /datum/station_haunt/screaming_vents/init()
 	var/area/targ_area = SShaunting.get_haunt_area()
-	var/mob/P = SShaunting.get_player_target()
 	if(targ_area)
 		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
 			if(prob(15))
@@ -432,5 +431,5 @@
 /datum/station_haunt/hallucinate/fire()
 	var/mob/living/M = SShaunting.get_player_target()
 	if(isliving(M))
-		M.hallucinate += 10
+		M.hallucination += 10
 	end()
