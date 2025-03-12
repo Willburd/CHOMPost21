@@ -564,7 +564,7 @@
 
 	if (src.anchored)
 		// to_chat(usr, "It is anchored in place!")
-		balloon_alert(usr, "It is anchored in place!") // CHOMPEdit - Changed to balloon alert
+		balloon_alert(usr, "it is anchored in place!") // CHOMPEdit - Changed to balloon alert
 		return 0
 
 	src.set_dir(turn(src.dir, 90))
