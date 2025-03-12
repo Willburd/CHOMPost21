@@ -22419,7 +22419,7 @@
 	pixel_x = 6;
 	pixel_y = 14
 	},
-/obj/item/toy/plushie/squid/green,
+/obj/item/toy/plushie/squid,
 /turf/simulated/floor/wood{
 	oxygen = 0;
 	phoron = 21.8366
