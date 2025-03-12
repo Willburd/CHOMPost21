@@ -34,7 +34,7 @@
 
  	// Outpost 21 edit begin - Show orders on citation
 	var/orders
-	var/new_order = tgui_input_list(user, "Select penalty:", "Penalty", list("Notice", "Community Service", "Fine", "IAA"))
+	var/new_order = tgui_input_list(user, "Select penalty:", "Penalty", list("Notice", "Community Service", "Fine", "IAA", "Littering"))
 	switch(new_order)
 		if("Community Service")
 			var/list/dps = station_departments.Copy()
@@ -51,6 +51,8 @@
 				orders = "Report to security lobby for one time payment of [fine] thaler fine, or to serve time in the brig."
 		if("IAA")
 			orders = "Speak with an on-shift IAA or your local representative at Central Command after the shift to resolve this issue."
+		if("Littering")
+			orders = "Pick that up."
 	if(!orders)
 		orders = "See your local representative at Central Command after the shift is over to resolve this issue."
 	// Outpost 21 edit end
