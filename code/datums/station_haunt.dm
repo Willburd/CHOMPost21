@@ -551,7 +551,7 @@
 	var/list/ent_list = subtypesof(/datum/haunting_entity)
 	if(!ent_list.len)
 		return
-	var/ent = pick()
+	var/ent = pick(ent_list)
 	entity = WEAKREF(new ent())
 
 /datum/station_haunt/entity_spawn/fire()
