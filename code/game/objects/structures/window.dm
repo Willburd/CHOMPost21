@@ -190,6 +190,7 @@
 	if(user.Adjacent(src))
 		user.visible_message(span_notice("Unseen hands knock on [src]."))
 		playsound(src, 'sound/effects/Glasshit.ogg', 50, 1)
+		SSmotiontracker.ping(src,100)
 	else
 		. = ..()
 // Outpost 21 edit end

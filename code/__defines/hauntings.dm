@@ -1,0 +1,5 @@
+#define HAUNTING_RESLEEVE "resleeve"
+#define HAUNTING_FLICKERS "flickers"
+#define HAUNTING_BLOOD "blood"
+#define HAUNTING_DEATH "death"
+#define HAUNTING_GHOSTS "ghosts"

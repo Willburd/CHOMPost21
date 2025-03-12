@@ -222,6 +222,8 @@ var/global/photo_count = 0
 			if(!istype(A,/mob/observer/dead))
 				if(A.invisibility) continue
 				if(A.plane > 0 && !(A.plane in picture_planes)) continue
+			else
+				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
 			atoms.Add(A)
 			// Outpost 21 edit end
 

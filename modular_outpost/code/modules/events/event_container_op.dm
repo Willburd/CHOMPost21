@@ -9,7 +9,6 @@
 	available_events = list(
 		// Severity level, event name, even type, base weight, role weights, one shot, min weight, max weight. Last two only used if set and non-zero
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Nothing",			/datum/event/nothing,			10),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Light Flicker",		/datum/event/light_flicker,		12),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",		/datum/event/apc_damage,		6, 		list(DEPARTMENT_ENGINEERING = 2)	, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",/datum/event/brand_intelligence,2, 		list(DEPARTMENT_ENGINEERING = 2)	, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Camera Damage",		/datum/event/camera_damage,		10, 	list(DEPARTMENT_ENGINEERING = 1)	, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),

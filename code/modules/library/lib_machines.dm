@@ -475,6 +475,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 		if("arcane_checkout")
 			playsound(src, "keyboard", 40)
 			new /obj/item/book/tome(src.loc)
+			SShaunting.intense_world_haunt() // Outpost 21 edit - IT DA SPOOKY STATION!
 			var/datum/gender/T = gender_datums[usr.get_visible_gender()]
 			to_chat(usr, span_warning("Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it."))
 			usr.visible_message(span_infoplain(span_bold("\The [usr]") + " stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older."), 2)

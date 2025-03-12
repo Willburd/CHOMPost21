@@ -253,6 +253,7 @@
 				nif.durability = record.nif_durability
 		*/
 
+	SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION!
 	// Outpost 21 edit begin - release turf behaviors
 	if(releaseturf)
 		outpost_post_sleeve(idscan,new_character,spawnloc)

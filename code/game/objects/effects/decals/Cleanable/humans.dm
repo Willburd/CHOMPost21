@@ -65,6 +65,7 @@ var/global/list/image/splatter_cache=list()
 	. = ..()
 	if(!mapload)
 		addtimer(CALLBACK(src, PROC_REF(dry)), DRYING_TIME * (amount+1))
+		SShaunting.influence(HAUNTING_BLOOD) // Outpost 21 edit - IT DA SPOOKY STATION!
 //VOREstation edit end
 
 /obj/effect/decal/cleanable/blood/update_icon()
@@ -188,6 +189,7 @@ var/global/list/image/splatter_cache=list()
 /obj/effect/decal/cleanable/blood/drip/Initialize(mapload)
 	. = ..()
 	drips |= icon_state
+	SShaunting.influence(HAUNTING_GHOSTS) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 /obj/effect/decal/cleanable/blood/writing
 	icon_state = "tracks"

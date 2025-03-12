@@ -762,6 +762,7 @@ var/global/list/light_type_cache = list()
 
 /obj/machinery/light/proc/flicker(var/amount = rand(10, 20))
 	if(flickering) return
+	SShaunting.influence(HAUNTING_FLICKERS) // Outpost 21 edit - IT DA SPOOKY STATION!
 	if(on && status == LIGHT_OK)
 		flickering = 1
 		do_flicker(amount)

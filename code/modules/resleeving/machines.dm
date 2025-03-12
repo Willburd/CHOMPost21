@@ -688,6 +688,7 @@
 	if(original_occupant)
 		occupant = original_occupant
 
+	SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION!
 	playsound(src, 'sound/machines/medbayscanner1.ogg', 100, 1) // Play our sound at the end of the mind injection!
 	return 1
 

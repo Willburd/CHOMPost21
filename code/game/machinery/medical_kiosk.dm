@@ -42,7 +42,7 @@
 
 	var/msgcooldown = 0 // Outpost 21 edit
 	catalogue_data = list(/datum/category_item/catalogue/technology/medical_kiosk) // Outpost 21 edit - data for tutorial
-	
+
 	//These are the variables that control 'When we were
 	var/last_dispensed
 	var/dispense_cooldown = 1 MINUTE //If abused, this can be decreased. The machine gives chems and supplies that are easily and readily available, barring tramadol. If someone intentionally breaks their arm to rob the machines of their tramadol to fuel their addiction, that's a gameplay feature.
@@ -399,6 +399,8 @@
 			var/text = halu_text(halucinateTarget)
 			balloon_alert_visible(text)
 			visible_message("\The [src] says [text]")
+			if(!AR || !AR.haunted) // don't let redspace spam all around
+				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
 			msgcooldown = 60 SECONDS
 		else
 			// tease people to backup
