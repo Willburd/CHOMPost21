@@ -1,78 +1,3 @@
-/datum/controller/subsystem/haunting
-	var/static/list/hauntings = list(
-		MODE_CALM = list(
-			/datum/station_haunt/light_flicker,
-			/datum/station_haunt/lights_off,
-			/datum/station_haunt/watching_me,
-			/datum/station_haunt/chills
-			),
-		MODE_CONCERN = list(
-			/datum/station_haunt/light_flicker,
-			/datum/station_haunt/lights_off,
-			/datum/station_haunt/watching_me,
-			/datum/station_haunt/chills,
-			/datum/station_haunt/whispering_vents,
-			/datum/station_haunt/heard_name,
-			/datum/station_haunt/tesh_rush,
-			/datum/station_haunt/distant_scream
-			),
-		MODE_UNNERVING = list(
-			/datum/station_haunt/light_flicker,
-			/datum/station_haunt/ghost_write,
-			/datum/station_haunt/lights_off,
-			/datum/station_haunt/banging_windows,
-			/datum/station_haunt/watching_me,
-			/datum/station_haunt/vent_bugs,
-			/datum/station_haunt/whispering_vents,
-			/datum/station_haunt/heard_name,
-			/datum/station_haunt/lock_doors,
-			/datum/station_haunt/tesh_rush,
-			/datum/station_haunt/distant_scream
-			),
-		MODE_SPOOKY = list(
-			/datum/station_haunt/light_flicker,
-			/datum/station_haunt/ghost_write,
-			/datum/station_haunt/haunt_area,
-			/datum/station_haunt/screaming_vents,
-			/datum/station_haunt/banging_windows,
-			/datum/station_haunt/vent_bugs,
-			/datum/station_haunt/whispering_vents,
-			/datum/station_haunt/heard_name,
-			/datum/station_haunt/light_smash,
-			/datum/station_haunt/trip_apc,
-			/datum/station_haunt/lock_doors,
-			/datum/station_haunt/tesh_rush
-			),
-		MODE_SCARY = list(
-			/datum/station_haunt/ghost_write,
-			/datum/station_haunt/haunt_area,
-			/datum/station_haunt/screaming_vents,
-			/datum/station_haunt/banging_windows,
-			/datum/station_haunt/watching_me,
-			/datum/station_haunt/chills,
-			/datum/station_haunt/vent_bugs,
-			/datum/station_haunt/smashing_windows,
-			/datum/station_haunt/heard_name,
-			/datum/station_haunt/light_smash,
-			/datum/station_haunt/trip_apc,
-			/datum/station_haunt/lock_doors,
-			/datum/station_haunt/tesh_rush
-			),
-		MODE_SUPERSPOOKY = list(
-			/datum/station_haunt/ghost_write,
-			/datum/station_haunt/screaming_vents,
-			/datum/station_haunt/banging_windows,
-			/datum/station_haunt/watching_me,
-			/datum/station_haunt/chills,
-			/datum/station_haunt/smashing_windows,
-			/datum/station_haunt/heard_name,
-			/datum/station_haunt/light_smash,
-			/datum/station_haunt/trip_apc,
-			/datum/station_haunt/lock_doors,
-			/datum/station_haunt/tesh_rush
-			)
-	)
-
 //////////////////////////////////////////////////////////////////////////////////////
 // HAUNTING DATUMS, Major spooky event time!
 //////////////////////////////////////////////////////////////////////////////////////
@@ -132,8 +57,11 @@
 	if(!targ_area)
 		end()
 	if(world.time > start_time + dur)
-		targ_area.haunted = FALSE
 		end()
+
+/datum/station_haunt/haunt_area/end()
+	targ_area.haunted = FALSE
+	. = ..()
 
 
 // Vents scream at someone
@@ -387,9 +315,12 @@
 	if(!targ_area)
 		end()
 	if(world.time > start_time + dur)
-		for(var/obj/machinery/door/airlock/A in targ_area)
-			A.unlock()
 		end()
+
+/datum/station_haunt/lock_doors/end()
+	for(var/obj/machinery/door/airlock/A in targ_area)
+		A.unlock()
+	. = ..()
 
 
 // Rush at tesh with motion pings
@@ -425,9 +356,9 @@
 	else
 		d = EAST
 	if(goal_turf.y < current_turf.y)
-		d += NORTH
-	else
 		d += SOUTH
+	else
+		d += NORTH
 	if(d)
 		SSmotiontracker.ping(100)
 		SSmotiontracker.ping(60)

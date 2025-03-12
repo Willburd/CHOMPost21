@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 10
+#define MODE_SIZE 30
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -14,6 +14,7 @@ SUBSYSTEM_DEF(haunting)
 	VAR_PRIVATE/haunt_score = MODE_SIZE / 2
 	VAR_PRIVATE/world_mode = MODE_CALM
 	init_order = INIT_ORDER_HAUNTING
+	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
 	var/list/current_influences = list()
 	var/static/list/influences = list(
@@ -24,11 +25,84 @@ SUBSYSTEM_DEF(haunting)
 		HAUNTING_GHOSTS		=  1.5
 	)
 
+	VAR_PRIVATE/next_haunt_time = 0
 	VAR_PRIVATE/last_event = ""
 	VAR_PRIVATE/datum/weakref/current_player_target = null
 	var/datum/station_haunt/current_haunt = null
+	var/list/hauntings = list()
 
 /datum/controller/subsystem/haunting/Initialize()
+	hauntings["[MODE_CALM]"] = list(
+		/datum/station_haunt/light_flicker,
+		/datum/station_haunt/lights_off,
+		/datum/station_haunt/watching_me,
+		/datum/station_haunt/chills
+		)
+	hauntings["[MODE_CONCERN]"] = list(
+		/datum/station_haunt/light_flicker,
+		/datum/station_haunt/lights_off,
+		/datum/station_haunt/watching_me,
+		/datum/station_haunt/chills,
+		/datum/station_haunt/whispering_vents,
+		/datum/station_haunt/heard_name,
+		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/distant_scream
+		)
+	hauntings["[MODE_UNNERVING]"] = list(
+		/datum/station_haunt/light_flicker,
+		/datum/station_haunt/ghost_write,
+		/datum/station_haunt/lights_off,
+		/datum/station_haunt/banging_windows,
+		/datum/station_haunt/watching_me,
+		/datum/station_haunt/vent_bugs,
+		/datum/station_haunt/whispering_vents,
+		/datum/station_haunt/heard_name,
+		/datum/station_haunt/lock_doors,
+		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/distant_scream
+		)
+	hauntings["[MODE_SPOOKY]"] = list(
+		/datum/station_haunt/light_flicker,
+		/datum/station_haunt/ghost_write,
+		/datum/station_haunt/haunt_area,
+		/datum/station_haunt/screaming_vents,
+		/datum/station_haunt/banging_windows,
+		/datum/station_haunt/vent_bugs,
+		/datum/station_haunt/whispering_vents,
+		/datum/station_haunt/heard_name,
+		/datum/station_haunt/light_smash,
+		/datum/station_haunt/trip_apc,
+		/datum/station_haunt/lock_doors,
+		/datum/station_haunt/tesh_rush
+		)
+	hauntings["[MODE_SCARY]"] = list(
+		/datum/station_haunt/ghost_write,
+		/datum/station_haunt/haunt_area,
+		/datum/station_haunt/screaming_vents,
+		/datum/station_haunt/banging_windows,
+		/datum/station_haunt/watching_me,
+		/datum/station_haunt/chills,
+		/datum/station_haunt/vent_bugs,
+		/datum/station_haunt/smashing_windows,
+		/datum/station_haunt/heard_name,
+		/datum/station_haunt/light_smash,
+		/datum/station_haunt/trip_apc,
+		/datum/station_haunt/lock_doors,
+		/datum/station_haunt/tesh_rush
+		)
+	hauntings["[MODE_SUPERSPOOKY]"] = list(
+		/datum/station_haunt/ghost_write,
+		/datum/station_haunt/screaming_vents,
+		/datum/station_haunt/banging_windows,
+		/datum/station_haunt/watching_me,
+		/datum/station_haunt/chills,
+		/datum/station_haunt/smashing_windows,
+		/datum/station_haunt/heard_name,
+		/datum/station_haunt/light_smash,
+		/datum/station_haunt/trip_apc,
+		/datum/station_haunt/lock_doors,
+		/datum/station_haunt/tesh_rush
+		)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
@@ -88,8 +162,9 @@ SUBSYSTEM_DEF(haunting)
 		if(!current_influences[key])
 			continue
 		new_score += current_influences[key] * influences[key] // number counter * multiplier of event spookyness
+	current_influences.Cut()
 	haunt_score += new_score
-	haunt_score += rand(-0.01,0.01)
+	haunt_score += rand(-0.001,0.001)
 
 	// Change mode
 	if(haunt_score >= MODE_SIZE)
@@ -106,21 +181,30 @@ SUBSYSTEM_DEF(haunting)
 		return
 
 /datum/controller/subsystem/haunting/proc/start_haunt(var/forced = FALSE)
-	if(!isnull(current_haunt))
-		return
-	if(!prob(2) && !forced)
-		return
+	if(!forced)
+		if(!isnull(current_haunt))
+			return
+		if(world.time < next_haunt_time)
+			return
+		next_haunt_time = world.time + (rand(0.25,1.75) MINUTES)
+		if(prob(99))
+			return
+	else
+		if(!isnull(current_haunt))
+			current_haunt.end()
 	// swapping players
 	switch(world_mode)
 		// Idly mess with players
 		if(MODE_CALM)
-			if(prob(80))
+			if(prob(90))
 				clear_player_target()
 		if(MODE_CONCERN)
-			if(prob(30))
+			if(prob(60))
 				clear_player_target()
 		// Rarely allow spikes of activity
 		if(MODE_UNNERVING)
+			if(prob(5))
+				clear_player_target()
 			if(prob(1))
 				intense_world_haunt()
 			if(prob(1))
@@ -129,22 +213,20 @@ SUBSYSTEM_DEF(haunting)
 				intense_world_haunt()
 		// Past here we try to clear the haunting state
 		if(MODE_SCARY)
-			if(prob(5))
+			if(prob(10))
 				clear_player_target()
-			if(prob(2))
+			if(prob(5))
 				reset_world_haunt()
 				return
 		if(MODE_SUPERSPOOKY)
 			if(prob(20))
 				clear_player_target()
-			if(prob(5))
+			if(prob(15))
 				reset_world_haunt()
 				return
 	if(isnull(current_player_target?.resolve()))
 		return
-	var/list/haunts = hauntings[world_mode]
-	if(!haunts.len)
-		return
+	var/list/haunts = hauntings["[world_mode]"]
 	set_haunting(pick(haunts))
 
 /datum/controller/subsystem/haunting/proc/perform_haunt()
