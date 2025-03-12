@@ -113,6 +113,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/admin_teleport,	//CHOMPEdit
 	/client/proc/setckey, //YW add - readds SetCkey proc
 	/client/proc/debug_global_variables,
+	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
 	/client/proc/hide_motion_tracker_feedback
 	)
 
@@ -519,6 +520,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
 	/client/proc/debug_global_variables,
+	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
 	/client/proc/hide_motion_tracker_feedback
 )
 

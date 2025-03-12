@@ -11,7 +11,10 @@
 			/datum/station_haunt/lights_off,
 			/datum/station_haunt/watching_me,
 			/datum/station_haunt/chills,
-			/datum/station_haunt/whispering_vents
+			/datum/station_haunt/whispering_vents,
+			/datum/station_haunt/heard_name,
+			/datum/station_haunt/tesh_rush,
+			/datum/station_haunt/distant_scream
 			),
 		MODE_UNNERVING = list(
 			/datum/station_haunt/light_flicker,
@@ -20,7 +23,11 @@
 			/datum/station_haunt/banging_windows,
 			/datum/station_haunt/watching_me,
 			/datum/station_haunt/vent_bugs,
-			/datum/station_haunt/whispering_vents
+			/datum/station_haunt/whispering_vents,
+			/datum/station_haunt/heard_name,
+			/datum/station_haunt/lock_doors,
+			/datum/station_haunt/tesh_rush,
+			/datum/station_haunt/distant_scream
 			),
 		MODE_SPOOKY = list(
 			/datum/station_haunt/light_flicker,
@@ -29,7 +36,12 @@
 			/datum/station_haunt/screaming_vents,
 			/datum/station_haunt/banging_windows,
 			/datum/station_haunt/vent_bugs,
-			/datum/station_haunt/whispering_vents
+			/datum/station_haunt/whispering_vents,
+			/datum/station_haunt/heard_name,
+			/datum/station_haunt/light_smash,
+			/datum/station_haunt/trip_apc,
+			/datum/station_haunt/lock_doors,
+			/datum/station_haunt/tesh_rush
 			),
 		MODE_SCARY = list(
 			/datum/station_haunt/ghost_write,
@@ -39,7 +51,12 @@
 			/datum/station_haunt/watching_me,
 			/datum/station_haunt/chills,
 			/datum/station_haunt/vent_bugs,
-			/datum/station_haunt/smashing_windows
+			/datum/station_haunt/smashing_windows,
+			/datum/station_haunt/heard_name,
+			/datum/station_haunt/light_smash,
+			/datum/station_haunt/trip_apc,
+			/datum/station_haunt/lock_doors,
+			/datum/station_haunt/tesh_rush
 			),
 		MODE_SUPERSPOOKY = list(
 			/datum/station_haunt/ghost_write,
@@ -47,7 +64,12 @@
 			/datum/station_haunt/banging_windows,
 			/datum/station_haunt/watching_me,
 			/datum/station_haunt/chills,
-			/datum/station_haunt/smashing_windows
+			/datum/station_haunt/smashing_windows,
+			/datum/station_haunt/heard_name,
+			/datum/station_haunt/light_smash,
+			/datum/station_haunt/trip_apc,
+			/datum/station_haunt/lock_doors,
+			/datum/station_haunt/tesh_rush
 			)
 	)
 
@@ -97,14 +119,14 @@
 	name = "Haunt Area"
 	var/start_time = 0
 	var/dur = 5 MINUTES
-	var/area/targ_area
+	var/area/targ_area = null
 
 /datum/station_haunt/haunt_area/init()
 	start_time = world.time
 	dur = rand(5,10) MINUTES
 	targ_area = SShaunting.get_haunt_area()
 	if(targ_area && !targ_area.haunted)
-		targ_area.haunted
+		targ_area.haunted = TRUE
 
 /datum/station_haunt/haunt_area/fire()
 	if(!targ_area)
@@ -122,16 +144,16 @@
 
 /datum/station_haunt/screaming_vents/init()
 	var/area/targ_area = SShaunting.get_haunt_area()
-	var/mob/P = SShaunting.current_player_target?.resolve()
+	var/mob/P = SShaunting.get_player_target()
 	if(!isnull(P))
 		player_scream = P.real_name
 	if(targ_area)
-		for(var/obj/machinery/atmospherics/unary/vent_scrubber/S in targ_area)
+		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
 			if(prob(15))
-				vents.Add(WEAKREF(S))
-		for(var/obj/machinery/atmospherics/unary/vent_pump/P in targ_area)
+				vents.Add(WEAKREF(SB))
+		for(var/obj/machinery/atmospherics/unary/vent_pump/PU in targ_area)
 			if(prob(15))
-				vents.Add(WEAKREF(P))
+				vents.Add(WEAKREF(PU))
 
 /datum/station_haunt/screaming_vents/fire()
 	if(!vents.len)
@@ -143,7 +165,6 @@
 	if(M)
 		M.visible_message(pick(list("Shriek!","Scream!","Wail!",player_scream)))
 		SSmotiontracker.ping(M,100)
-
 
 
 // Oh nosferatu~
@@ -160,7 +181,6 @@
 			break
 	if(prob(40))
 		end()
-
 
 
 // Window banging
@@ -188,17 +208,15 @@
 		SSmotiontracker.ping(M,100)
 
 
-
 // Watcher
 /datum/station_haunt/watching_me
 	name = "Watching Me"
 
 /datum/station_haunt/watching_me/fire()
-	var/mob/M = SShaunting.current_player_target?.resolve()
-	if(M && M.client)
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
 		to_chat(M,span_cult("You feel like you are being watched."))
 	end()
-
 
 
 // Chills
@@ -206,8 +224,8 @@
 	name = "Chills"
 
 /datum/station_haunt/chills/fire()
-	var/mob/M = SShaunting.current_player_target?.resolve()
-	if(M && M.client)
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
 		to_chat(M,span_cult("You feel a chill run down your spine."))
 	end()
 
@@ -220,12 +238,12 @@
 /datum/station_haunt/vent_bugs/init()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	if(targ_area)
-		for(var/obj/machinery/atmospherics/unary/vent_scrubber/S in targ_area)
+		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
 			if(prob(15))
-				vents.Add(WEAKREF(S))
-		for(var/obj/machinery/atmospherics/unary/vent_pump/P in targ_area)
+				vents.Add(WEAKREF(SB))
+		for(var/obj/machinery/atmospherics/unary/vent_pump/PU in targ_area)
 			if(prob(15))
-				vents.Add(WEAKREF(P))
+				vents.Add(WEAKREF(PU))
 
 /datum/station_haunt/vent_bugs/fire()
 	if(!vents.len)
@@ -278,7 +296,6 @@
 			playsound(M, 'sound/effects/Glasshit.ogg', 50, 1)
 
 
-
 // Vents whispers
 /datum/station_haunt/whispering_vents
 	name = "Whispering Vents"
@@ -287,16 +304,16 @@
 
 /datum/station_haunt/whispering_vents/init()
 	var/area/targ_area = SShaunting.get_haunt_area()
-	var/mob/P = SShaunting.current_player_target?.resolve()
+	var/mob/P = SShaunting.get_player_target()
 	if(!isnull(P))
 		player_voice = P.real_name
 	if(targ_area)
-		for(var/obj/machinery/atmospherics/unary/vent_scrubber/S in targ_area)
+		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
 			if(prob(15))
-				vents.Add(WEAKREF(S))
-		for(var/obj/machinery/atmospherics/unary/vent_pump/P in targ_area)
+				vents.Add(WEAKREF(SB))
+		for(var/obj/machinery/atmospherics/unary/vent_pump/PU in targ_area)
 			if(prob(15))
-				vents.Add(WEAKREF(P))
+				vents.Add(WEAKREF(PU))
 
 /datum/station_haunt/whispering_vents/fire()
 	if(!vents.len)
@@ -308,3 +325,129 @@
 	if(M)
 		M.visible_message(pick(list("Follow us...","We need you...","Down here...",player_voice)))
 		SSmotiontracker.ping(M,50)
+
+
+// Heard own name said
+/datum/station_haunt/heard_name
+	name = "Heard Name"
+
+/datum/station_haunt/heard_name/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		to_chat(M,span_cult("[M]..."))
+	end()
+
+
+// Smash somelights
+/datum/station_haunt/light_smash
+	name = "Light Smash"
+
+/datum/station_haunt/light_smash/fire()
+	var/area/targ_area = SShaunting.get_haunt_area()
+	if(targ_area)
+		for(var/obj/machinery/light/L in targ_area)
+			if(prob(25))
+				L.broken()
+			else
+				L.flicker(12)
+	end()
+
+
+// Turn off APC
+/datum/station_haunt/trip_apc
+	name = "Trip Apc"
+
+/datum/station_haunt/trip_apc/fire()
+	var/area/targ_area = SShaunting.get_haunt_area()
+	if(targ_area)
+		if(targ_area.apc)
+			targ_area.apc.locked = FALSE
+			targ_area.apc.toggle_breaker()
+			targ_area.apc.visible_message("clicks","clicks")
+			SSmotiontracker.ping(targ_area.apc,100)
+	end()
+
+
+// Lock doors
+/datum/station_haunt/lock_doors
+	name = "Lock Doors In Area"
+	var/start_time = 0
+	var/dur = 1 MINUTES
+	var/area/targ_area
+
+/datum/station_haunt/lock_doors/init()
+	start_time = world.time
+	dur = rand(1,3) MINUTES
+	targ_area = SShaunting.get_haunt_area()
+	if(targ_area && !targ_area.haunted)
+		for(var/obj/machinery/door/airlock/A in targ_area)
+			A.lock()
+
+/datum/station_haunt/lock_doors/fire()
+	if(!targ_area)
+		end()
+	if(world.time > start_time + dur)
+		for(var/obj/machinery/door/airlock/A in targ_area)
+			A.unlock()
+		end()
+
+
+// Rush at tesh with motion pings
+/datum/station_haunt/tesh_rush
+	name = "Tesh Rush"
+	var/turf/goal_turf = null
+	var/turf/current_turf = null
+
+/datum/station_haunt/tesh_rush/init()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		goal_turf = get_turf(M)
+		var/xx = rand(5,10) * (prob(50) ? 1 : -1)
+		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
+		current_turf = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+
+/datum/station_haunt/tesh_rush/fire()
+	if(prob(40))
+		step_at()
+	if(prob(40))
+		step_at()
+	if(prob(10))
+		step_at()
+	if(!current_turf)
+		end()
+
+/datum/station_haunt/tesh_rush/proc/step_at()
+	if(!current_turf || goal_turf == current_turf)
+		end()
+	var/d = 0
+	if(goal_turf.x < current_turf.x)
+		d = WEST
+	else
+		d = EAST
+	if(goal_turf.y < current_turf.y)
+		d += NORTH
+	else
+		d += SOUTH
+	if(d)
+		SSmotiontracker.ping(100)
+		SSmotiontracker.ping(60)
+		SSmotiontracker.ping(20)
+		current_turf = get_step(current_turf,d)
+	else
+		current_turf = null
+
+
+// Distant scream
+/datum/station_haunt/distant_scream
+	name = "Far Scream"
+
+/datum/station_haunt/distant_scream/init()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/goal_turf = get_turf(M)
+		var/xx = rand(5,10) * (prob(50) ? 1 : -1)
+		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
+		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(T)
+			var/screm = pick(list('sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
+			M.playsound_local(T, sound(screm), vol = 0.4)

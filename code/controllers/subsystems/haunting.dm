@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(haunting)
 	)
 
 	VAR_PRIVATE/last_event = ""
-	var/datum/weakref/current_player_target = null
+	VAR_PRIVATE/datum/weakref/current_player_target = null
 	var/datum/station_haunt/current_haunt = null
 
 /datum/controller/subsystem/haunting/Initialize()
@@ -54,12 +54,21 @@ SUBSYSTEM_DEF(haunting)
 	if(!global.player_list.len)
 		return
 	var/mob/potential = pick(global.player_list)
+	if(isAI(potential))
+		return
 	if(potential.away_from_keyboard)
 		return
 	current_player_target = WEAKREF(potential)
 
 /datum/controller/subsystem/haunting/proc/clear_player_target()
 	current_player_target = null
+
+/datum/controller/subsystem/haunting/proc/get_player_target()
+	var/mob/M = current_player_target?.resolve()
+	if(M.away_from_keyboard || !M.client)
+		clear_player_target()
+		return null
+	return M
 
 /datum/controller/subsystem/haunting/proc/get_haunt_area()
 	var/area/targ_area = pick(subtypesof(/area))
@@ -96,8 +105,10 @@ SUBSYSTEM_DEF(haunting)
 			world_mode = MODE_CALM
 		return
 
-/datum/controller/subsystem/haunting/proc/start_haunt()
-	if(!prob(2) || !isnull(current_haunt))
+/datum/controller/subsystem/haunting/proc/start_haunt(var/forced = FALSE)
+	if(!isnull(current_haunt))
+		return
+	if(!prob(2) && !forced)
 		return
 	// swapping players
 	switch(world_mode)
@@ -134,10 +145,7 @@ SUBSYSTEM_DEF(haunting)
 	var/list/haunts = hauntings[world_mode]
 	if(!haunts.len)
 		return
-	var/chosen_haunt = pick(haunts)
-	current_haunt = new chosen_haunt()
-	current_haunt.init()
-	last_event = current_haunt.name
+	set_haunting(pick(haunts))
 
 /datum/controller/subsystem/haunting/proc/perform_haunt()
 	if(isnull(current_haunt))
@@ -150,6 +158,19 @@ SUBSYSTEM_DEF(haunting)
 	if(isnull(current_influences[type]))
 		current_influences[type] = 0
 	current_influences[type] += 1
+
+/datum/controller/subsystem/haunting/proc/set_haunting(var/path)
+	// has to handle a verb input too...
+	if(!path)
+		return
+	if(current_haunt)
+		return
+	var/list/all_haunt = subtypesof(/datum/station_haunt)
+	if(!(path in all_haunt))
+		return
+	current_haunt = new path()
+	current_haunt.init()
+	last_event = current_haunt.name
 
 #undef MODE_CALM
 #undef MODE_CONCERN

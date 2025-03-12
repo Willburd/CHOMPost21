@@ -571,6 +571,17 @@
 	SSmotiontracker.hide_all = !SSmotiontracker.hide_all
 	log_admin("[key_name(usr)] changed the motion echo visibility to [SSmotiontracker.hide_all ? "hidden" : "visible"].")
 
+/client/proc/test_haunting_controller()
+	set name = "Test Station Haunting"
+	set desc = "Selects a haunting subsystem event to begin."
+	set category = "Admin.Events"
+
+	if(!check_rights(R_ADMIN|R_EVENT))
+		return
+	var/list/all_haunt = subtypesof(/datum/station_haunt)
+	SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
+
+
 /client/proc/adminorbit()
 	set category = "Fun.Event Kit"
 	set name = "Orbit Things"
