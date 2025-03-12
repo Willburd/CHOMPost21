@@ -4,9 +4,6 @@
 /datum/station_haunt
 	var/name = "BAD EVENT"
 
-/datum/station_haunt/proc/init()
-	return
-
 /datum/station_haunt/proc/fire()
 	return
 
@@ -46,7 +43,8 @@
 	var/dur = 5 MINUTES
 	var/area/targ_area = null
 
-/datum/station_haunt/haunt_area/init()
+/datum/station_haunt/haunt_area/New()
+	. = ..()
 	start_time = world.time
 	dur = rand(5,10) MINUTES
 	targ_area = SShaunting.get_haunt_area()
@@ -69,7 +67,8 @@
 	name = "Screaming Vents"
 	var/list/vents = list()
 
-/datum/station_haunt/screaming_vents/init()
+/datum/station_haunt/screaming_vents/New()
+	. = ..()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	if(targ_area)
 		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
@@ -95,8 +94,6 @@
 /datum/station_haunt/lights_off
 	name = "Light Switch"
 
-/datum/station_haunt/lights_off/init()
-
 /datum/station_haunt/lights_off/fire()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	if(targ_area)
@@ -112,7 +109,8 @@
 	name = "Banging Windows"
 	var/list/windows = list()
 
-/datum/station_haunt/banging_windows/init()
+/datum/station_haunt/banging_windows/New()
+	. = ..()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	if(targ_area)
 		for(var/obj/structure/window/W in targ_area)
@@ -159,7 +157,8 @@
 	name = "Buggy Vents"
 	var/list/vents = list()
 
-/datum/station_haunt/vent_bugs/init()
+/datum/station_haunt/vent_bugs/New()
+	. = ..()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	if(targ_area)
 		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
@@ -197,7 +196,8 @@
 	name = "Smashing Windows"
 	var/list/windows = list()
 
-/datum/station_haunt/smashing_windows/init()
+/datum/station_haunt/smashing_windows/New()
+	. = ..()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	if(targ_area)
 		for(var/obj/structure/window/W in targ_area)
@@ -226,7 +226,8 @@
 	var/player_voice = "hello..."
 	var/list/vents = list()
 
-/datum/station_haunt/whispering_vents/init()
+/datum/station_haunt/whispering_vents/New()
+	. = ..()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	var/mob/P = SShaunting.get_player_target()
 	if(!isnull(P))
@@ -299,7 +300,8 @@
 	var/dur = 1 MINUTES
 	var/area/targ_area
 
-/datum/station_haunt/lock_doors/init()
+/datum/station_haunt/lock_doors/New()
+	. = ..()
 	start_time = world.time
 	dur = rand(1,3) MINUTES
 	targ_area = SShaunting.get_haunt_area()
@@ -325,7 +327,8 @@
 	var/turf/goal_turf = null
 	var/turf/current_turf = null
 
-/datum/station_haunt/tesh_rush/init()
+/datum/station_haunt/tesh_rush/New()
+	. = ..()
 	var/mob/M = SShaunting.get_player_target()
 	if(M)
 		goal_turf = get_turf(M)
@@ -339,7 +342,6 @@
 		step_at()
 	if(prob(10))
 		step_at()
-	var/mob/M = SShaunting.get_player_target()
 	if(!current_turf)
 		end()
 
@@ -437,7 +439,171 @@
 /datum/station_haunt/knock_down/fire()
 	var/mob/living/M = SShaunting.get_player_target()
 	if(isliving(M))
-		visible_message(span_warning("something shoves \the [M] to the ground!"))
+		M.visible_message(span_warning("something shoves \the [M] to the ground!"))
 		M.Stun(8)
 		M.Weaken(5)
 	end()
+
+
+// Bang nearby vents
+/datum/station_haunt/vent_crawler
+	name = "Vent Crawler"
+	var/start_time = 0
+	var/dur = 1 MINUTES
+
+/datum/station_haunt/vent_crawler/New()
+	. = ..()
+	start_time = world.time
+	dur = rand(1,3) MINUTES
+
+/datum/station_haunt/vent_crawler/fire()
+	var/mob/M = SShaunting.get_player_target()
+	var/turf/check_T = get_turf(M)
+	if(check_T)
+		if(prob(20))
+			var/obj/machinery/atmospherics/unary/P = locate() in orange(4,check_T)
+			var/turf/T = get_turf(P)
+			SSmotiontracker.ping(T,40) // Teshari rattler
+			playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
+			var/message = pick(
+				prob(90);"* clunk *",
+				prob(90);"* thud *",
+				prob(90);"* clatter *",
+				prob(1);"* " + span_giganteus("ඞ") + " *"
+			)
+			T.runechat_message(message)
+		if(world.time < start_time + dur)
+			return
+	end()
+
+
+// bleeding
+/datum/station_haunt/bleeding
+	name = "Bleeding"
+	var/start_time = 0
+	var/dur = 1 MINUTES
+
+/datum/station_haunt/bleeding/New()
+	. = ..()
+	start_time = world.time
+	dur = rand(0.5,1) MINUTES
+
+/datum/station_haunt/bleeding/fire()
+	if(prob(60))
+		var/mob/living/carbon/human/H = SShaunting.get_player_target()
+		if(ishuman(H) && !H.isSynthetic())
+			H.drip(1)
+			H.adjustHalLoss(1)
+	if(world.time < (start_time + dur))
+		return
+	end()
+
+
+// blood rain
+/datum/station_haunt/blood_rain
+	name = "Blood Rain"
+	var/start_time = 0
+	var/dur = 2 SECONDS
+	var/mob/living/carbon/human/target_mob = null
+
+/datum/station_haunt/blood_rain/New()
+	. = ..()
+	start_time = world.time
+	dur = rand(1,3) SECONDS
+	target_mob = SShaunting.get_player_target()
+	if(target_mob)
+		to_chat(target_mob,span_danger("Something starts to drip from above."))
+
+/datum/station_haunt/blood_rain/fire()
+	if(!target_mob || QDELING(target_mob))
+		end()
+		return
+	if(!ishuman(target_mob) || target_mob.isSynthetic())
+		end()
+		return
+	for(var/i = 0 to rand(3,5))
+		var/turf/goal_turf = get_turf(target_mob)
+		var/xx = rand(1,4) * (prob(50) ? 1 : -1)
+		var/yy = rand(1,4) * (prob(50) ? 1 : -1)
+		var/turf/simulated/floor/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(T)
+			target_mob.adjustHalLoss(0.25)
+			target_mob.hallucination += 0.05
+			blood_splatter(T,target_mob)
+	if(world.time < (start_time + dur))
+		return
+	end()
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// HAUNTING ENITIES, Things that go bump in the night!
+//////////////////////////////////////////////////////////////////////////////////////
+
+
+// blood rain
+/datum/station_haunt/entity_spawn
+	name = "Entity"
+	var/datum/weakref/entity = null
+
+/datum/station_haunt/entity_spawn/New()
+	. = ..()
+	var/list/ent_list = subtypesof(/datum/haunting_entity)
+	if(!ent_list.len)
+		return
+	var/ent = pick()
+	entity = WEAKREF(new ent())
+
+/datum/station_haunt/entity_spawn/fire()
+	if(entity?.resolve()) // Still active
+		return
+	end()
+
+/datum/station_haunt/entity_spawn/end()
+	SShaunting.reset_world_haunt() // Tension release
+	. = ..()
+
+// Entities are datums that are added to the process() loop and persue a targetted player
+// Causing general havok and panic while they break things or cause distress through some means
+// Entities are expected to despawn after a set amount of time, so they release control of the haunting subsystem
+// Entities are NOT MOBS,they cannot be killed, they are ENVIRONMENTAL beasts, your choices are to run or die
+/datum/haunting_entity
+	var/name = "BAD ENTITY"
+	var/start_time = 0
+	var/dur = 1 MINUTE
+	var/datum/weakref/target_mob = null
+	var/atom/loc = null
+
+/datum/haunting_entity/New()
+	. = ..()
+	START_PROCESSING(SSfastprocess, src)
+	var/mob/targeting_actual = SShaunting.get_player_target()
+	if(!targeting_actual)
+		qdel(src)
+		return
+	var/turf/goal_turf = get_turf(targeting_actual)
+	var/xx = rand(8,20) * (prob(50) ? 1 : -1)
+	var/yy = rand(8,20) * (prob(50) ? 1 : -1)
+	var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+	if(!T)
+		qdel(src)
+		return
+	// We're prepped and ready
+	target_mob = WEAKREF(targeting_actual)
+	loc = T
+
+/datum/haunting_entity/Destroy(force)
+	STOP_PROCESSING(SSfastprocess, src)
+	. = ..()
+
+/datum/haunting_entity/proc/validate_existance()
+	if(!loc)
+		return FALSE
+	if(!target_mob?.resolve())
+		return FALSE
+	if(world.time >= (start_time + dur))
+		return FALSE
+	return TRUE
+
+/datum/haunting_entity/process()
+	return

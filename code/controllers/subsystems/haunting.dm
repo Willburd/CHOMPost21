@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 30
+#define MODE_SIZE 50
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -36,21 +36,17 @@ SUBSYSTEM_DEF(haunting)
 	hauntings["[MODE_CALM]"] = list(
 		/datum/station_haunt/light_flicker,
 		/datum/station_haunt/watching_me,
-		/datum/station_haunt/chills,
-		/datum/station_haunt/throw_item
+		/datum/station_haunt/chills
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
 		/datum/station_haunt/lights_off,
 		/datum/station_haunt/watching_me,
 		/datum/station_haunt/chills,
-		/datum/station_haunt/whispering_vents,
-		/datum/station_haunt/heard_name,
-		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/distant_scream,
 		/datum/station_haunt/open_nearby_door,
-		/datum/station_haunt/throw_item,
-		/datum/station_haunt/hallucinate
+		/datum/station_haunt/hallucinate,
+		/datum/station_haunt/vent_crawler
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -68,7 +64,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/heavy_breath,
 		/datum/station_haunt/throw_item,
 		/datum/station_haunt/hallucinate,
-		/datum/station_haunt/knock_down
+		/datum/station_haunt/knock_down,
+		/datum/station_haunt/vent_crawler,
+		/datum/station_haunt/bleeding
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -86,7 +84,10 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/heavy_breath,
 		/datum/station_haunt/hallucinate,
-		/datum/station_haunt/knock_down
+		/datum/station_haunt/knock_down,
+		/datum/station_haunt/bleeding,
+		/datum/station_haunt/blood_rain,
+		/datum/station_haunt/entity_spawn
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -104,23 +105,31 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/hallucinate,
-		/datum/station_haunt/knock_down
+		/datum/station_haunt/knock_down,
+		/datum/station_haunt/vent_crawler,
+		/datum/station_haunt/bleeding,
+		/datum/station_haunt/blood_rain,
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/entity_spawn
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
 		/datum/station_haunt/screaming_vents,
 		/datum/station_haunt/banging_windows,
-		/datum/station_haunt/watching_me,
-		/datum/station_haunt/chills,
 		/datum/station_haunt/smashing_windows,
-		/datum/station_haunt/heard_name,
 		/datum/station_haunt/light_smash,
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
-		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/throw_item,
-		/datum/station_haunt/knock_down
+		/datum/station_haunt/knock_down,
+		/datum/station_haunt/bleeding,
+		/datum/station_haunt/blood_rain,
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/entity_spawn
 		)
 
 	next_haunt_time = world.time + (rand(15,30) MINUTES) // No instant ghosts
@@ -282,7 +291,6 @@ SUBSYSTEM_DEF(haunting)
 	if(!(path in all_haunt))
 		return
 	current_haunt = new path()
-	current_haunt.init()
 	last_event = current_haunt.name
 
 #undef MODE_CALM
