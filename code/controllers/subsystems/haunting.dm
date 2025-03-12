@@ -37,6 +37,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/light_flicker,
 		/datum/station_haunt/watching_me,
 		/datum/station_haunt/chills,
+		/datum/station_haunt/throw_item
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -47,7 +48,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/heard_name,
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/distant_scream,
-		/datum/station_haunt/open_nearby_door
+		/datum/station_haunt/open_nearby_door,
+		/datum/station_haunt/throw_item,
+		/datum/station_haunt/hallucinate
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -62,7 +65,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/distant_scream,
 		/datum/station_haunt/open_nearby_door,
-		/datum/station_haunt/heavy_breath
+		/datum/station_haunt/heavy_breath,
+		/datum/station_haunt/throw_item,
+		/datum/station_haunt/hallucinate
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -78,7 +83,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/open_nearby_door,
-		/datum/station_haunt/heavy_breath
+		/datum/station_haunt/heavy_breath,
+		/datum/station_haunt/hallucinate
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -94,7 +100,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
-		/datum/station_haunt/open_nearby_door
+		/datum/station_haunt/open_nearby_door,
+		/datum/station_haunt/hallucinate
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -108,8 +115,11 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
-		/datum/station_haunt/open_nearby_door
+		/datum/station_haunt/open_nearby_door,
+		/datum/station_haunt/throw_item
 		)
+
+	next_haunt_time = world.time + (rand(15,30) MINUTES) // No instant ghosts
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
@@ -135,9 +145,7 @@ SUBSYSTEM_DEF(haunting)
 	if(!global.player_list.len)
 		return
 	var/mob/potential = pick(global.player_list)
-	if(isAI(potential))
-		return
-	if(potential.away_from_keyboard)
+	if(potential.away_from_keyboard || isAI(potential) || potential.is_incorporeal())
 		return
 	current_player_target = WEAKREF(potential)
 
@@ -146,7 +154,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_player_target()
 	var/mob/M = current_player_target?.resolve()
-	if(M.away_from_keyboard || !M.client)
+	if(M.away_from_keyboard || !M.client || M.is_incorporeal())
 		clear_player_target()
 		return null
 	return M
@@ -231,9 +239,21 @@ SUBSYSTEM_DEF(haunting)
 			if(prob(15))
 				reset_world_haunt()
 				return
-	if(isnull(current_player_target?.resolve()))
+	var/mob/M = current_player_target?.resolve()
+	if(isnull(M))
 		return
-	var/list/haunts = hauntings["[world_mode]"]
+	// Players in the dark are treated worse
+	var/bonus = world_mode
+	var/turf/T = get_turf(M)
+	if(T.get_lumcount() < 0.2)
+		bonus += 1
+	else
+		// players in the light sometimes get a free pass even this late
+		if(prob(5) && !forced)
+			return
+	if(bonus > MODE_SUPERSPOOKY)
+		bonus = MODE_SUPERSPOOKY
+	var/list/haunts = hauntings["[bonus]"]
 	set_haunting(pick(haunts))
 
 /datum/controller/subsystem/haunting/proc/perform_haunt()

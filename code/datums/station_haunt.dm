@@ -67,14 +67,11 @@
 // Vents scream at someone
 /datum/station_haunt/screaming_vents
 	name = "Screaming Vents"
-	var/player_scream = "Scree!"
 	var/list/vents = list()
 
 /datum/station_haunt/screaming_vents/init()
 	var/area/targ_area = SShaunting.get_haunt_area()
 	var/mob/P = SShaunting.get_player_target()
-	if(!isnull(P))
-		player_scream = P.real_name
 	if(targ_area)
 		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
 			if(prob(15))
@@ -91,7 +88,7 @@
 	vents -= W
 	var/obj/machinery/M = W?.resolve()
 	if(M)
-		M.visible_message("\The [M] [pick(list("Shrieks!","Screams!","Wails!",player_scream))]")
+		M.visible_message("\The [M] [pick(list("Shrieks!","Screams!","Wails!"))]")
 		SSmotiontracker.ping(M,100)
 
 
@@ -338,8 +335,7 @@
 		current_turf = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 
 /datum/station_haunt/tesh_rush/fire()
-	if(prob(40))
-		step_at()
+	step_at()
 	if(prob(40))
 		step_at()
 	if(prob(10))
@@ -381,7 +377,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
-			M.playsound_local(T, sound(screm), vol = 0.4)
+			M.playsound_local(T, screm, vol = 0.4)
 	end()
 
 
@@ -393,7 +389,7 @@
 	var/mob/M = SShaunting.get_player_target()
 	if(M)
 		var/turf/T = get_turf(M)
-		var/obj/machinery/door/airlock/A in orange(5,T)
+		var/obj/machinery/door/airlock/A = locate() in orange(5,T)
 		A.open()
 	end()
 
@@ -411,5 +407,30 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/goonstation/spooky/Meatzone_BreathingSlow.ogg','sound/goonstation/spooky/Meatzone_BreathingFast.ogg'))
-			M.playsound_local(T, sound(screm), vol = 0.02)
+			M.playsound_local(T, screm, vol = 0.02)
+	end()
+
+
+// small item thrown
+/datum/station_haunt/throw_item
+	name = "Throw Item"
+
+/datum/station_haunt/throw_item/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+		var/obj/item/I = locate() in orange(6,T)
+		if(I.anchored == FALSE && isturf(I.loc))
+			I.throw_at(M,5,5,null,TRUE)
+	end()
+
+
+// small item thrown
+/datum/station_haunt/hallucinate
+	name = "Hallucinate"
+
+/datum/station_haunt/hallucinate/fire()
+	var/mob/living/M = SShaunting.get_player_target()
+	if(isliving(M))
+		M.hallucinate += 10
 	end()
