@@ -16,27 +16,27 @@ SUBSYSTEM_DEF(haunting)
 	init_order = INIT_ORDER_HAUNTING
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
-	var/list/current_influences = list()
-	var/static/list/influences = list(
+	VAR_PRIVATE/list/current_influences = list()
+	VAR_PRIVATE/static/list/influences = list(
 		HAUNTING_RESLEEVE 	= -0.4,
-		HAUNTING_FLICKERS 	=  0.1,
+		HAUNTING_COMFORT 	= -0.1,
+		HAUNTING_UNSETTLE 	=  0.1,
 		HAUNTING_BLOOD 		=  0.2,
-		HAUNTING_DEATH		=  1.0,
-		HAUNTING_GHOSTS		=  1.5
+		HAUNTING_DEATH		=  0.6,
+		HAUNTING_GHOSTS		=  0.9
 	)
 
 	VAR_PRIVATE/next_haunt_time = 0
 	VAR_PRIVATE/last_event = ""
 	VAR_PRIVATE/datum/weakref/current_player_target = null
+	VAR_PRIVATE/list/hauntings = list()
 	var/datum/station_haunt/current_haunt = null
-	var/list/hauntings = list()
 
 /datum/controller/subsystem/haunting/Initialize()
 	hauntings["[MODE_CALM]"] = list(
 		/datum/station_haunt/light_flicker,
-		/datum/station_haunt/lights_off,
 		/datum/station_haunt/watching_me,
-		/datum/station_haunt/chills
+		/datum/station_haunt/chills,
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -46,7 +46,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/whispering_vents,
 		/datum/station_haunt/heard_name,
 		/datum/station_haunt/tesh_rush,
-		/datum/station_haunt/distant_scream
+		/datum/station_haunt/distant_scream,
+		/datum/station_haunt/open_nearby_door
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -59,7 +60,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/heard_name,
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
-		/datum/station_haunt/distant_scream
+		/datum/station_haunt/distant_scream,
+		/datum/station_haunt/open_nearby_door,
+		/datum/station_haunt/heavy_breath
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -73,7 +76,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/light_smash,
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
-		/datum/station_haunt/tesh_rush
+		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/open_nearby_door,
+		/datum/station_haunt/heavy_breath
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -88,7 +93,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/light_smash,
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
-		/datum/station_haunt/tesh_rush
+		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/open_nearby_door
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -101,12 +107,13 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/light_smash,
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
-		/datum/station_haunt/tesh_rush
+		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/open_nearby_door
 		)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Who: [current_player_target?.resolve()] | Event: [last_event]"
+	msg = "Score: [haunt_score] | Mode: [world_mode] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()

@@ -656,6 +656,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			speak(vend_reply)
 			last_reply = world.time
 
+	SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION!
 	use_power(vend_power_usage)	//actuators and stuff
 	flick("[icon_state]-vend",src)
 	addtimer(CALLBACK(src, PROC_REF(delayed_vend), R, user), vend_delay)

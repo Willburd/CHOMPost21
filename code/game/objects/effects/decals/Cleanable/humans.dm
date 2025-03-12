@@ -189,7 +189,6 @@ var/global/list/image/splatter_cache=list()
 /obj/effect/decal/cleanable/blood/drip/Initialize(mapload)
 	. = ..()
 	drips |= icon_state
-	SShaunting.influence(HAUNTING_GHOSTS) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 /obj/effect/decal/cleanable/blood/writing
 	icon_state = "tracks"

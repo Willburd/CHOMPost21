@@ -79,6 +79,7 @@
 
 	if(!reagents.total_volume)
 		M.balloon_alert_visible("Finishes eating \the [src].","Finished eating \the [src].") // CHOMPEdit - Balloon alert
+		SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 		M.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 

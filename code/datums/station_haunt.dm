@@ -91,7 +91,7 @@
 	vents -= W
 	var/obj/machinery/M = W?.resolve()
 	if(M)
-		M.visible_message(pick(list("Shriek!","Scream!","Wail!",player_scream)))
+		M.visible_message("\The [M] [pick(list("Shrieks!","Screams!","Wails!",player_scream))]")
 		SSmotiontracker.ping(M,100)
 
 
@@ -131,7 +131,7 @@
 	windows -= W
 	var/obj/structure/window/M = W.resolve()
 	if(M)
-		M.visible_message(span_notice("Unseen hands knock on [src]."))
+		M.visible_message(span_notice("Unseen hands knock on \the [M]."))
 		playsound(M, 'sound/effects/Glasshit.ogg', 50, 1)
 		SSmotiontracker.ping(M,100)
 
@@ -167,10 +167,10 @@
 	var/area/targ_area = SShaunting.get_haunt_area()
 	if(targ_area)
 		for(var/obj/machinery/atmospherics/unary/vent_scrubber/SB in targ_area)
-			if(prob(15))
+			if(prob(25))
 				vents.Add(WEAKREF(SB))
 		for(var/obj/machinery/atmospherics/unary/vent_pump/PU in targ_area)
-			if(prob(15))
+			if(prob(25))
 				vents.Add(WEAKREF(PU))
 
 /datum/station_haunt/vent_bugs/fire()
@@ -220,7 +220,7 @@
 		if(prob(30))
 			M.shatter(TRUE)
 		else
-			M.visible_message(span_notice("Unseen hands slam on [src]."))
+			M.visible_message(span_notice("Unseen hands slam on \The [M]."))
 			playsound(M, 'sound/effects/Glasshit.ogg', 50, 1)
 
 
@@ -251,7 +251,7 @@
 	vents -= W
 	var/obj/machinery/M = W?.resolve()
 	if(M)
-		M.visible_message(pick(list("Follow us...","We need you...","Down here...",player_voice)))
+		M.visible_message("\The [M] whispers, [pick(list("Follow us...","We need you...","Down here...",player_voice))]")
 		SSmotiontracker.ping(M,50)
 
 
@@ -372,7 +372,7 @@
 /datum/station_haunt/distant_scream
 	name = "Far Scream"
 
-/datum/station_haunt/distant_scream/init()
+/datum/station_haunt/distant_scream/fire()
 	var/mob/M = SShaunting.get_player_target()
 	if(M)
 		var/turf/goal_turf = get_turf(M)
@@ -382,3 +382,34 @@
 		if(T)
 			var/screm = pick(list('sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
 			M.playsound_local(T, sound(screm), vol = 0.4)
+	end()
+
+
+// open nearby door
+/datum/station_haunt/open_nearby_door
+	name = "Open Nearby Door"
+
+/datum/station_haunt/open_nearby_door/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+		var/obj/machinery/door/airlock/A in orange(5,T)
+		A.open()
+	end()
+
+
+// heavy breathing, quiet
+/datum/station_haunt/heavy_breath
+	name = "Heavy Breathing"
+
+/datum/station_haunt/heavy_breath/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/goal_turf = get_turf(M)
+		var/xx = rand(5,10) * (prob(50) ? 1 : -1)
+		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
+		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(T)
+			var/screm = pick(list('sound/goonstation/spooky/Meatzone_BreathingSlow.ogg','sound/goonstation/spooky/Meatzone_BreathingFast.ogg'))
+			M.playsound_local(T, sound(screm), vol = 0.02)
+	end()
