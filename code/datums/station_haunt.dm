@@ -339,28 +339,23 @@
 		step_at()
 	if(prob(10))
 		step_at()
+	var/mob/M = SShaunting.get_player_target()
 	if(!current_turf)
 		end()
 
 /datum/station_haunt/tesh_rush/proc/step_at()
 	if(!current_turf || goal_turf == current_turf)
+		current_turf = null
 		end()
-	var/d = 0
-	if(goal_turf.x < current_turf.x)
-		d = WEST
-	else
-		d = EAST
-	if(goal_turf.y < current_turf.y)
-		d += SOUTH
-	else
-		d += NORTH
+	var/d = get_dir(current_turf,goal_turf)
 	if(d)
-		SSmotiontracker.ping(100)
-		SSmotiontracker.ping(60)
-		SSmotiontracker.ping(20)
+		SSmotiontracker.ping(current_turf,100)
+		SSmotiontracker.ping(current_turf,60)
+		SSmotiontracker.ping(current_turf,20)
 		current_turf = get_step(current_turf,d)
 	else
 		current_turf = null
+		end()
 
 
 // Distant scream
@@ -376,7 +371,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
-			M.playsound_local(T, screm, vol = 0.4)
+			M.playsound_local(T, screm, 20)
 	end()
 
 
@@ -406,7 +401,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/goonstation/spooky/Meatzone_BreathingSlow.ogg','sound/goonstation/spooky/Meatzone_BreathingFast.ogg'))
-			M.playsound_local(T, screm, vol = 0.02)
+			M.playsound_local(T, screm, 15)
 	end()
 
 
@@ -432,4 +427,17 @@
 	var/mob/living/M = SShaunting.get_player_target()
 	if(isliving(M))
 		M.hallucination += 10
+	end()
+
+
+// knock down
+/datum/station_haunt/knock_down
+	name = "Knock Down"
+
+/datum/station_haunt/knock_down/fire()
+	var/mob/living/M = SShaunting.get_player_target()
+	if(isliving(M))
+		visible_message(span_warning("something shoves \the [M] to the ground!"))
+		M.Stun(8)
+		M.Weaken(5)
 	end()

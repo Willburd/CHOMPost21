@@ -67,7 +67,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/heavy_breath,
 		/datum/station_haunt/throw_item,
-		/datum/station_haunt/hallucinate
+		/datum/station_haunt/hallucinate,
+		/datum/station_haunt/knock_down
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -84,7 +85,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/heavy_breath,
-		/datum/station_haunt/hallucinate
+		/datum/station_haunt/hallucinate,
+		/datum/station_haunt/knock_down
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -101,7 +103,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/open_nearby_door,
-		/datum/station_haunt/hallucinate
+		/datum/station_haunt/hallucinate,
+		/datum/station_haunt/knock_down
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -116,7 +119,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/open_nearby_door,
-		/datum/station_haunt/throw_item
+		/datum/station_haunt/throw_item,
+		/datum/station_haunt/knock_down
 		)
 
 	next_haunt_time = world.time + (rand(15,30) MINUTES) // No instant ghosts
