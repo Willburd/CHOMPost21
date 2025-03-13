@@ -61,12 +61,6 @@
 /obj/random/tool,
 /turf/simulated/floor/wood,
 /area/submap/outpost21/yawn_B)
-"oz" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/decal/cleanable/dirt,
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/submap/outpost21/yawn_B)
 "oL" = (
 /turf/template_noop,
 /area/submap/outpost21/yawn_B)
@@ -610,7 +604,7 @@ Ce
 jV
 jV
 Ce
-oz
+Wq
 dE
 Ce
 Ce

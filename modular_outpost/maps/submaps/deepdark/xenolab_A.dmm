@@ -234,7 +234,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26;
+	pixel_y = 24;
 	nightshift_setting = 2
 	},
 /turf/simulated/floor/tiled/dark/muriki,

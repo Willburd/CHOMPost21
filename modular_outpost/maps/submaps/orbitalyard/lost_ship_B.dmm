@@ -216,7 +216,7 @@
 "lt" = (
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 32
+	pixel_x = 24
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
