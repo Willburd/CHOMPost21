@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 60
+#define MODE_SIZE 80
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
