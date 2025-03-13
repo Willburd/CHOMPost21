@@ -114,6 +114,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/setckey, //YW add - readds SetCkey proc
 	/client/proc/debug_global_variables,
 	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
+	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/hide_motion_tracker_feedback
 	)
 
@@ -521,6 +522,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/modify_server_news,
 	/client/proc/debug_global_variables,
 	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
+	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/hide_motion_tracker_feedback
 )
 
