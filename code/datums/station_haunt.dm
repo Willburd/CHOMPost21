@@ -18,10 +18,14 @@
 
 /datum/station_haunt/light_flicker/fire()
 	var/area/targ_area = SShaunting.get_haunt_area()
+	var/max_lights = rand(2,7)
 	if(targ_area)
 		for(var/obj/machinery/light/L in targ_area)
-			if(prob(15))
+			if(prob(25))
 				L.flicker(rand(10,20))
+				max_lights--
+			if(max_lights <= 0)
+				break
 	end()
 
 
@@ -100,8 +104,7 @@
 		for(var/obj/machinery/light_switch/L in targ_area)
 			L.attack_hand(null) // boop
 			break
-	if(prob(40))
-		end()
+	end()
 
 
 // Window banging
@@ -404,7 +407,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/goonstation/spooky/Meatzone_BreathingSlow.ogg','sound/goonstation/spooky/Meatzone_BreathingFast.ogg'))
-			M.playsound_local(T, screm, 15)
+			M.playsound_local(T, screm, 25)
 	end()
 
 
