@@ -209,7 +209,7 @@
 /obj/structure/table/rack,
 /obj/machinery/alarm/alarms_hidden{
 	dir = 8;
-	pixel_x = 32
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/milspec/raised/airless,
 /area/submap/outpost21/structure_generic/lostshipb)
