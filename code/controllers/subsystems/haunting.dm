@@ -296,6 +296,8 @@ SUBSYSTEM_DEF(haunting)
 	current_haunt = new path()
 	last_event = current_haunt.name
 
+#undef MODE_SIZE
+
 #undef MODE_CALM
 #undef MODE_CONCERN
 #undef MODE_UNNERVING

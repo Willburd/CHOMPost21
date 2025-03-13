@@ -6047,7 +6047,7 @@
 	icon_state = "1-8"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/item/toy/plushie/tinytin/sec{
+/obj/item/toy/plushie/tinytin_sec{
 	pixel_x = 9
 	},
 /turf/simulated/floor/tiled/techmaint,
