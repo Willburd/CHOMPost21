@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 100
+#define MODE_SIZE 60
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -21,9 +21,9 @@ SUBSYSTEM_DEF(haunting)
 		HAUNTING_RESLEEVE 	= -0.4,
 		HAUNTING_COMFORT 	= -0.1,
 		HAUNTING_UNSETTLE 	=  0.1,
-		HAUNTING_BLOOD 		=  0.2,
-		HAUNTING_DEATH		=  0.6,
-		HAUNTING_GHOSTS		=  0.9
+		HAUNTING_BLOOD 		=  0.3,
+		HAUNTING_GHOSTS		=  0.9,
+		HAUNTING_DEATH		=  1.2
 	)
 
 	VAR_PRIVATE/new_score = 0
