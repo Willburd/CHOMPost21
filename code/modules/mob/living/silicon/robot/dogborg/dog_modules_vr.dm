@@ -405,7 +405,7 @@
 	name = "pounce"
 	icon = 'icons/mob/dogborg_vr.dmi'
 	icon_state = "pounce"
-	desc = "Leap at your target to momentarily stun them."
+	desc = "Leap at your target to momentarily stun them. Select, and activate module to choose from a list of targets within range"
 	force = 0
 	throwforce = 0
 	var/bluespace = FALSE
