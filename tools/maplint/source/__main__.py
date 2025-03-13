@@ -115,7 +115,7 @@ def main(args):
                 print(yellow("SKIPPED"))
                 continue
             if "modular_outpost/maps/" not in map_filename and "maps/outpost21/" not in map_filename : # Outpost 21 edit
-                # print(yellow("SKIPPED"))
+                print(yellow("SKIPPED"))
                 continue
         # ChompEDIT END
 

@@ -2664,10 +2664,6 @@
 /obj/item/tool/screwdriver,
 /obj/item/stack/cable_coil/yellow,
 /obj/structure/table/rack/shelf,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Particle Lab Storage";
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 4
 	},
@@ -3070,10 +3066,6 @@
 	},
 /area/medical/voxlab/recov)
 "agE" = (
-/obj/machinery/door/airlock/medical{
-	name = "Vox Patient Recovery";
-	req_one_access = null
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -3086,6 +3078,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/glass_medical/polarized{
+	name = "Vox Patient Recovery";
+	id_tag = "voxrecov_wintint"
 	},
 /turf/simulated/floor/tiled/old_cargo/white{
 	oxygen = 0;
@@ -4062,10 +4058,6 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 26
-	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Vox Surgery";
-	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
@@ -5342,6 +5334,10 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Vox Surgery";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white{
 	oxygen = 0;
 	phoron = 21.8366
@@ -5679,6 +5675,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "SCI - Xenoarch Northeast";
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "ali" = (
@@ -5819,9 +5819,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -5840,6 +5837,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/research/isolation_hall)
@@ -7254,6 +7254,10 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/camera/network/research{
+	dir = 8;
+	c_tag = "SCI - Lower Hall Server"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "aoq" = (
@@ -8031,10 +8035,6 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/heater,
-/obj/machinery/camera/network/research_outpost{
-	c_tag = "SCI - Xenoarch Northeast";
-	dir = 4
-	},
 /obj/machinery/doorbell_chime{
 	id_tag = "sciding";
 	name = "Research Call";
@@ -8754,7 +8754,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/machinery/light,
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4;
 	c_tag = "SCI - Xenobiology Entrance"
@@ -8771,6 +8770,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/muriki/research/isolation_hall)
 "ard" = (
@@ -12458,14 +12458,12 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/medical/voxlab/airgap)
 "axD" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Bronchioloal Atmo Airgap";
@@ -14097,9 +14095,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/railing,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Bronchioloal Atmo Northeast"
 	},
@@ -14744,6 +14739,9 @@
 "aBS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/visible/supply{
+	dir = 4
+	},
+/obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -21291,9 +21289,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "COM - Judge's Office"
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
@@ -21306,6 +21301,9 @@
 /obj/item/clothing/head/turban,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "COM - Judge's Office"
 	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
@@ -35504,12 +35502,12 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/simulated/floor/tiled/white,
-/area/security/brig/isolate)
-"bqP" = (
 /obj/machinery/camera/network/security{
 	c_tag = "SEC - Solitary Confinement 1"
 	},
+/turf/simulated/floor/tiled/white,
+/area/security/brig/isolate)
+"bqP" = (
 /obj/structure/cryofeed,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -35524,9 +35522,6 @@
 /turf/simulated/floor/tiled/white,
 /area/security/brig/isolate)
 "bqQ" = (
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Solitary Confinement 2"
-	},
 /obj/structure/cryofeed{
 	dir = 4
 	},
@@ -35548,6 +35543,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
+	},
+/obj/machinery/camera/network/security{
+	c_tag = "SEC - Solitary Confinement 2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/brig/isolate)
@@ -43260,9 +43258,6 @@
 	pixel_y = 26
 	},
 /obj/machinery/floodlight,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/machinery/light_switch{
 	pixel_x = -12;
 	pixel_y = 30
@@ -43308,6 +43303,9 @@
 /obj/item/reagent_containers/chem_canister/iron{
 	pixel_x = 7;
 	pixel_y = -2
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/chem_storage)
@@ -43358,9 +43356,6 @@
 /obj/item/reagent_containers/chem_canister/calcium{
 	pixel_x = 7;
 	pixel_y = -2
-	},
-/obj/machinery/light{
-	dir = 4
 	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Chemical Storage";
@@ -50260,6 +50255,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 9
 	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for exiting the auto resleever's room.";
+	dir = 8;
+	id = "refrest";
+	name = "Auto Resleever Exit";
+	pixel_x = 24;
+	pixel_y = -7
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engrefinery)
 "eUE" = (
@@ -51227,13 +51230,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "fuM" = (
-/obj/machinery/button/remote/blast_door{
-	dir = 8;
-	id = "refrest";
-	name = "Door lock";
-	pixel_x = 29;
-	pixel_y = 24
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24;
@@ -62492,6 +62488,9 @@
 	pixel_x = 7;
 	pixel_y = -2
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/chem_storage)
 "mBK" = (
@@ -68654,6 +68653,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Particle Lab Storage";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/longtermstorage)
 "qtF" = (
@@ -69656,10 +69659,6 @@
 	},
 /obj/machinery/light{
 	dir = 4
-	},
-/obj/machinery/camera/network/research{
-	dir = 8;
-	c_tag = "SCI - Lower Hall Server"
 	},
 /obj/item/geiger/wall/east,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
