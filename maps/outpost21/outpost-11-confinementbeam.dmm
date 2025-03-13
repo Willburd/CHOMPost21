@@ -454,7 +454,7 @@
 "bq" = (
 /obj/machinery/power/apc/super/critical{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
@@ -507,7 +507,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -821,7 +821,7 @@
 /obj/machinery/power/apc/critical{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
@@ -924,7 +924,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/airless,
@@ -2246,7 +2246,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
@@ -2904,7 +2904,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
@@ -3086,7 +3086,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
@@ -3189,7 +3189,7 @@
 "kh" = (
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/orange{
@@ -3961,7 +3961,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3;
 	pixel_y = 4
 	},
@@ -3979,7 +3979,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -26
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
@@ -4048,7 +4048,7 @@
 "mD" = (
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
@@ -5094,7 +5094,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -6586,7 +6586,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -6727,7 +6727,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
@@ -8726,7 +8726,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26;
+	pixel_y = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/plating,
@@ -9057,7 +9057,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -9199,7 +9199,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -9327,7 +9327,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -9919,7 +9919,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/effect/floor_decal/corner/orange/full{
@@ -10164,7 +10164,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26;
+	pixel_y = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -10684,7 +10684,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	is_critical = 1;
 	nightshift_setting = 3
 	},
@@ -11132,7 +11132,7 @@
 /obj/structure/cable/green,
 /obj/machinery/power/apc/super/critical{
 	dir = 8;
-	pixel_x = -26;
+	pixel_x = -24;
 	nightshift_setting = 3;
 	name = "west bump"
 	},
@@ -12674,7 +12674,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/machinery/light_switch/breaker{
@@ -14668,7 +14668,7 @@
 	},
 /obj/machinery/power/apc/super/critical{
 	dir = 4;
-	pixel_x = 26
+	pixel_x = 24
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -15055,7 +15055,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
@@ -15209,7 +15209,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -15595,7 +15595,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	is_critical = 1;
 	nightshift_setting = 3
 	},
@@ -15946,7 +15946,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
