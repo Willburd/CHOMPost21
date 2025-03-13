@@ -554,7 +554,7 @@
 
 /datum/station_haunt/entity_spawn/New()
 	. = ..()
-	var/list/ent_list = subtypesof(/datum/haunting_entity)
+	var/list/ent_list = subtypesof(/datum/haunting_entity) - SShaunting.used_haunt_entities // Don't allow repeats
 	if(!ent_list.len)
 		return
 	var/ent = pick(ent_list)
@@ -579,10 +579,13 @@
 	var/dur = 1 MINUTE
 	var/datum/weakref/target_mob = null
 	var/atom/loc = null
+	var/use_only_once = TRUE
 
 /datum/haunting_entity/New()
 	. = ..()
 	START_PROCESSING(SSfastprocess, src)
+	if(use_only_once)
+		SShaunting.used_haunt_entities.Add(type)
 	var/mob/targeting_actual = SShaunting.get_player_target()
 	if(!targeting_actual)
 		qdel(src)

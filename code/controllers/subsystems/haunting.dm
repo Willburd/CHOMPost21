@@ -33,6 +33,8 @@ SUBSYSTEM_DEF(haunting)
 	VAR_PRIVATE/list/hauntings = list()
 	var/datum/station_haunt/current_haunt = null
 
+	var/list/used_haunt_entities = list()
+
 /datum/controller/subsystem/haunting/Initialize()
 	hauntings["[MODE_CALM]"] = list(
 		/datum/station_haunt/light_flicker,
