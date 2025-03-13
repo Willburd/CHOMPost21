@@ -545,6 +545,27 @@
 			blood_splatter(T,target_mob)
 
 
+// launch a shuttle to a random destination
+/datum/station_haunt/shuttle_move
+	name = "Shuttle Move"
+
+/datum/station_haunt/shuttle_move/fire()
+	var/list/viable_shuttles = list()
+	for(var/key in SSshuttles.shuttles)
+		var/datum/shuttle/autodock/multi/check = SSshuttles.shuttles[key]
+		if(istype(check,/datum/shuttle/autodock/multi))
+			if(!check.can_be_haunted)
+				continue
+			viable_shuttles.Add(check)
+	if(viable_shuttles.len)
+		var/datum/shuttle/autodock/multi/end_shuttle = pick(viable_shuttles)
+		if(end_shuttle.destinations_cache.len)
+			var/dest_key = pick(end_shuttle.destinations_cache)
+			end_shuttle.set_destination(dest_key, null)
+			end_shuttle.launch(null)
+	end()
+
+
 //////////////////////////////////////////////////////////////////////////////////////
 // HAUNTING ENITIES, Things that go bump in the night!
 //////////////////////////////////////////////////////////////////////////////////////

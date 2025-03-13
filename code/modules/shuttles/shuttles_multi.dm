@@ -8,6 +8,7 @@
 
 	var/cloaked = FALSE
 	var/can_cloak = FALSE
+	var/can_be_haunted = FALSE // Outpost 21 edit - IT DA SPOOKY STATION!
 
 	var/at_origin = 1
 	var/cooldown = 20
