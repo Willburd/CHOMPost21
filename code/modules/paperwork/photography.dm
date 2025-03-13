@@ -266,6 +266,7 @@ var/global/photo_count = 0
 			// hide observers that are not ghosts
 			var/mob/observer/dead/G = S;
 			if(!G.is_dead()) continue
+			if(!G.timeofdeath) continue // Hide Aghosts
 			// add ghost description
 			if(!mob_detail)
 				mob_detail = "You can see a faded [G] on the photo."
