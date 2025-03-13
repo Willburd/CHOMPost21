@@ -9,6 +9,21 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/crew_quarters/cafeteria)
+"aac" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Firing Range Impact";
+	dir = 1;
+	network = list("Research","Miscellaneous Reseach")
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/research/testingrange)
 "aad" = (
 /turf/unsimulated/wall/planetary/muriki,
 /area/muriki/processor)
@@ -6301,9 +6316,6 @@
 	name = "Research Call";
 	pixel_x = 30
 	},
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - RnD Pickup";
 	dir = 8
@@ -9465,6 +9477,10 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/orange,
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Terraformer Power";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid/muriki,
 /area/muriki/grounds/terraform)
 "aUE" = (
@@ -16973,6 +16989,9 @@
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -22
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
@@ -44878,7 +44897,6 @@
 	req_one_access = list(19,30)
 	},
 /obj/effect/floor_decal/milspec/color/purple/half,
-/obj/machinery/light,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "mau" = (
@@ -49023,6 +49041,7 @@
 	dir = 6
 	},
 /obj/machinery/r_n_d/destructive_analyzer,
+/obj/machinery/light,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "nqW" = (
@@ -50212,9 +50231,6 @@
 	},
 /area/muriki/grounds/shutt)
 "nHm" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/machinery/camera/network/engineering{
 	dir = 4;
 	c_tag = "ENG - Tesla Chamber West Airlock"
@@ -50290,6 +50306,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_airlock)
@@ -50895,9 +50914,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/cybstorage)
 "nVX" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -52892,6 +52908,9 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_airlock)
@@ -64164,7 +64183,7 @@
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -28;
-	pixel_y = 24
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/hardsuitstore)
@@ -69756,10 +69775,6 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-2"
-	},
-/obj/machinery/camera/network/outside{
-	c_tag = "EXT - Terraformer Power";
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid/muriki,
 /area/muriki/grounds/terraform)
@@ -75684,22 +75699,6 @@
 	},
 /turf/simulated/wall,
 /area/medical/sleeper)
-"vPe" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/milspec/color/purple/half,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/light,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Firing Range Impact";
-	dir = 1;
-	network = list("Research","Miscellaneous Reseach")
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/rnd/research/testingrange)
 "vPm" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Drone Fabrication";
@@ -136501,7 +136500,7 @@ fiw
 lZU
 fiw
 lZU
-dwk
+aac
 hjE
 dhN
 dNp
@@ -136663,7 +136662,7 @@ fiw
 fiw
 fiw
 fiw
-vPe
+jnk
 fjo
 fjo
 fjo

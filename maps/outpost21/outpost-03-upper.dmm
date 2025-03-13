@@ -6,6 +6,16 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
+"aab" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/camera/network/research/xenobio{
+	c_tag = "SCI - Phoronics Impact Blast"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/rnd/research/phoronics/bombrange)
 "aac" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -677,7 +687,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/machinery/light,
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Upper Hall NE";
 	dir = 1
@@ -1912,6 +1921,10 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Upper Smokebreak";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/rnd/hallway/upper)
 "aQa" = (
@@ -2408,10 +2421,6 @@
 	dir = 10
 	},
 /obj/machinery/light,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Chemlab";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "bbY" = (
@@ -5790,6 +5799,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/janiupstairs)
 "cHD" = (
@@ -7296,7 +7306,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/machinery/light,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Hydro Janitor Closet";
 	dir = 8
@@ -8005,9 +8014,6 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/publicgarden)
 "dPy" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/camera/motion/telecom{
 	c_tag = "TCM - Telecomms Interior Access";
 	dir = 8
@@ -17860,6 +17866,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Chemlab";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "iUx" = (
@@ -22933,10 +22943,6 @@
 /obj/structure/handrail{
 	dir = 4
 	},
-/obj/machinery/camera/network/research/xenobio{
-	c_tag = "SCI - Phoronics Impact Blast";
-	dir = 8
-	},
 /turf/simulated/floor/plating/muriki,
 /area/rnd/research/phoronics/bombrange)
 "ltH" = (
@@ -25244,10 +25250,6 @@
 "mDJ" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/light,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Upper Smokebreak";
-	dir = 1
-	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
@@ -30473,7 +30475,6 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 1
 	},
-/obj/machinery/light/small,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Chapel Confession"
 	},
@@ -41969,6 +41970,7 @@
 	tag_secure = 1
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
 "uQa" = (
@@ -44021,11 +44023,6 @@
 /obj/structure/closet/firecloset,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
-	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Upper Entry";
-	dir = 8;
-	network = list("Research","Miscellaneous Reseach")
 	},
 /obj/machinery/alarm{
 	dir = 8;
@@ -48309,6 +48306,11 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 26
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Upper Entry";
+	dir = 8;
+	network = list("Research","Miscellaneous Reseach")
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/entry_aux)
@@ -92319,7 +92321,7 @@ ovc
 ovc
 tRP
 tRP
-jUL
+aab
 tRP
 tRP
 ovc
@@ -99639,7 +99641,7 @@ mNz
 nhf
 jbc
 bxM
-kdO
+xci
 dSK
 dSK
 nDB

@@ -45227,8 +45227,7 @@
 	dir = 4;
 	name = "east bump";
 	pixel_x = 24;
-	nightshift_setting = 2;
-	
+	nightshift_setting = 2
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{

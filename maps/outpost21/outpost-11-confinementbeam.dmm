@@ -4326,10 +4326,6 @@
 	pixel_y = 26
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/camera/motion/command{
-	c_tag = "AI - Entry Lobby (Motion)";
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
@@ -9169,6 +9165,10 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
+/obj/machinery/camera/motion/command{
+	c_tag = "AI - Entry Lobby (Motion)";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "Dt" = (
@@ -9743,6 +9743,7 @@
 	pixel_x = -9
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/dockingbay)
 "FE" = (
@@ -11009,9 +11010,6 @@
 	pixel_y = 25;
 	req_access = list(16)
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/camera/xray/command{
 	c_tag = "AI - Core"
 	},
@@ -12262,6 +12260,7 @@
 	pixel_x = -32;
 	pixel_y = -32
 	},
+/obj/machinery/light,
 /turf/simulated/floor/greengrid,
 /area/ai)
 "Nl" = (
@@ -14308,9 +14307,6 @@
 	frequency = 1380;
 	pixel_y = -22;
 	pixel_x = 9
-	},
-/obj/machinery/light/small{
-	dir = 1
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Trawler Personnel Airlock"
