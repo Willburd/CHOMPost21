@@ -45228,7 +45228,7 @@
 	name = "east bump";
 	pixel_x = 24;
 	nightshift_setting = 2;
-	pixel_y = 4
+	
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -70158,7 +70158,7 @@
 /obj/structure/table/steel,
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26
+	pixel_y = -24
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/milspec/color/orange/half,
@@ -79368,7 +79368,7 @@
 /area/hallway/muriki/bunkerhall)
 "xcg" = (
 /obj/machinery/power/apc/alarms_hidden{
-	pixel_y = -32;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable,

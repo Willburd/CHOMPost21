@@ -6524,7 +6524,7 @@
 "Ga" = (
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 1;
-	pixel_y = 32
+	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-2"

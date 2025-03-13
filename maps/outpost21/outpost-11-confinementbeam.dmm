@@ -3962,8 +3962,7 @@
 	dir = 4;
 	name = "east bump";
 	pixel_x = 24;
-	nightshift_setting = 3;
-	pixel_y = 4
+	nightshift_setting = 3
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
