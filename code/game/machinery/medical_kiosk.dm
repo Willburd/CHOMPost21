@@ -401,6 +401,7 @@
 			visible_message("\The [src] says [text]")
 			if(!AR || !AR.haunted) // don't let redspace spam all around
 				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
+				SShaunting.get_world_haunt_attention(halucinateTarget,40)
 			msgcooldown = 60 SECONDS
 		else
 			// tease people to backup

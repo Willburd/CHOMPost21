@@ -5,6 +5,7 @@
 	if(istype(src,/mob/living/silicon/robot/ai_shell) || istype(src,/mob/living/silicon/robot/drone))
 		return
 	if(assign_law) // we add a timer to callback this proc with assign_law as true, instead of having two haunting procs
+		SShaunting.influence(HAUNTING_GHOSTS)
 		to_chat(src, "<span class='danger'>You have detected a change in your laws information:</span>")
 		var/law = generate_screech_law()
 		add_ion_law(law)
@@ -17,6 +18,9 @@
 	var/area/A = get_area(src)
 	if(prob(99) || !A || !A.haunted)
 		return
+	if(A.haunted && client && !away_from_keyboard && prob(2))
+		SShaunting.influence(HAUNTING_GHOSTS)
+		SShaunting.get_world_haunt_attention(src,20)
 	// Make it unclear that the area CAUSED it by delaying it a significant amount of time
 	addtimer(CALLBACK(src, PROC_REF(update_haunt), TRUE), rand(5 MINUTES, 25 MINUTES), TIMER_DELETE_ME)
 	haunted = TRUE

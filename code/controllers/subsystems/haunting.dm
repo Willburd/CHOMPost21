@@ -26,6 +26,7 @@ SUBSYSTEM_DEF(haunting)
 		HAUNTING_GHOSTS		=  0.9
 	)
 
+	VAR_PRIVATE/new_score = 0
 	VAR_PRIVATE/next_haunt_time = 0
 	VAR_PRIVATE/last_event = ""
 	VAR_PRIVATE/datum/weakref/current_player_target = null
@@ -136,7 +137,7 @@ SUBSYSTEM_DEF(haunting)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"]"
+	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()
@@ -172,6 +173,16 @@ SUBSYSTEM_DEF(haunting)
 		return null
 	return M
 
+/datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
+	if(M.away_from_keyboard || !M.client || M.is_incorporeal())
+		return
+	if(!isnull(current_haunt)) // not during another event
+		return
+	if(!prob(notice_chance)) // we're probably gonna call it with a prob() anyway
+		return
+	clear_player_target()
+	current_player_target = WEAKREF(M)
+
 /datum/controller/subsystem/haunting/proc/get_haunt_area()
 	var/area/targ_area = pick(subtypesof(/area))
 	var/mob/targ = current_player_target?.resolve()
@@ -185,14 +196,13 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/weigh_haunting()
 	// Accumulated haunts
-	var/new_score = 0
+	new_score = rand(-0.005,0.001)
 	for(var/key in influences)
 		if(!current_influences[key])
 			continue
 		new_score += current_influences[key] * influences[key] // number counter * multiplier of event spookyness
 	current_influences.Cut()
 	haunt_score += new_score
-	haunt_score += rand(-0.001,0.001)
 
 	// Change mode
 	if(haunt_score >= MODE_SIZE)
@@ -217,8 +227,8 @@ SUBSYSTEM_DEF(haunting)
 			return
 		if(world.time < next_haunt_time)
 			return
-		next_haunt_time = world.time + (rand(0.25,1.75) MINUTES)
-		if(prob(99))
+		next_haunt_time = world.time + (rand(40,600) SECONDS)
+		if(prob(92))
 			return
 	else
 		if(!isnull(current_haunt))
@@ -229,9 +239,13 @@ SUBSYSTEM_DEF(haunting)
 		if(MODE_CALM)
 			if(prob(90))
 				clear_player_target()
+				last_event = "SEARCH"
+				return
 		if(MODE_CONCERN)
 			if(prob(60))
 				clear_player_target()
+				last_event = "SEARCH"
+				return
 		// Rarely allow spikes of activity
 		if(MODE_UNNERVING)
 			if(prob(5))
@@ -246,14 +260,20 @@ SUBSYSTEM_DEF(haunting)
 		if(MODE_SCARY)
 			if(prob(10))
 				clear_player_target()
+				last_event = "SEARCH"
+				return
 			if(prob(5))
 				reset_world_haunt()
+				last_event = "RESET"
 				return
 		if(MODE_SUPERSPOOKY)
 			if(prob(20))
 				clear_player_target()
+				last_event = "SEARCH"
+				return
 			if(prob(15))
 				reset_world_haunt()
+				last_event = "RESET"
 				return
 	var/mob/M = current_player_target?.resolve()
 	if(isnull(M))
@@ -266,6 +286,7 @@ SUBSYSTEM_DEF(haunting)
 	else
 		// players in the light sometimes get a free pass even this late
 		if(prob(5) && !forced)
+			last_event = "SKIP"
 			return
 	if(bonus > MODE_SUPERSPOOKY)
 		bonus = MODE_SUPERSPOOKY

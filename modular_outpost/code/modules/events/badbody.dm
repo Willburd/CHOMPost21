@@ -221,6 +221,7 @@
 		// Spooky everyone!
 		if(world.time >= next_spooky)
 			next_spooky = do_a_spooky(body)
+			SShaunting.influence(HAUNTING_GHOSTS)
 		// Time to spook medical
 		if(world.time >= next_speak)
 			next_speak = world.time + rand(1000,7000)
@@ -244,6 +245,7 @@
 			body.stuttering = 0
 		body.say(speak, whispering = TRUE)
 		body.stat = old_stat
+		SShaunting.influence(HAUNTING_GHOSTS)
 		// End hacky
 
 

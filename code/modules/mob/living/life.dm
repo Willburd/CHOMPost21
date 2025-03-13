@@ -46,6 +46,17 @@
 				to_chat(src, span_notice("You have been automatically un-marked as AFK."))
 				away_from_keyboard = FALSE
 
+			// Outpost 21 edit begin - IT DA SPOOKY STATION!
+			if(prob(2) && !away_from_keyboard)
+				var/area/A = get_area(src)
+				if(A.haunted)
+					SShaunting.influence(HAUNTING_GHOSTS)
+					SShaunting.get_world_haunt_attention(src,20)
+				var/turf/T = get_turf(T)
+				if(T && T.get_lumcount() < 0.25) // the dark isn't your friend
+					SShaunting.get_world_haunt_attention(src,40)
+			// Outpost 21 edit end
+
 	//Chemicals in the body, this is moved over here so that blood can be added after death
 	handle_chemicals_in_body()
 
