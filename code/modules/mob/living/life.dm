@@ -52,7 +52,7 @@
 				if(A.haunted)
 					SShaunting.influence(HAUNTING_GHOSTS)
 					SShaunting.get_world_haunt_attention(src,20)
-				var/turf/T = get_turf(T)
+				var/turf/T = get_turf(src)
 				if(T && T.get_lumcount() < 0.25) // the dark isn't your friend
 					SShaunting.get_world_haunt_attention(src,40)
 			// Outpost 21 edit end
