@@ -32,6 +32,7 @@ SUBSYSTEM_DEF(haunting)
 	VAR_PRIVATE/datum/weakref/current_player_target = null
 	VAR_PRIVATE/list/hauntings = list()
 	var/datum/station_haunt/current_haunt = null
+	var/total_haunts = 0
 
 	var/list/used_haunt_entities = list()
 
@@ -142,7 +143,7 @@ SUBSYSTEM_DEF(haunting)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"]"
+	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()
@@ -327,6 +328,7 @@ SUBSYSTEM_DEF(haunting)
 		return
 	current_haunt = new path()
 	last_event = current_haunt.name
+	total_haunts++
 
 #undef MODE_SIZE
 
