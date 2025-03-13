@@ -12,6 +12,10 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"ac" = (
+/obj/item/tool/wrench/pipe,
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "ad" = (
 /obj/structure/confinement_beam_generator/inductor{
 	dir = 1
@@ -3542,6 +3546,9 @@
 "lh" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
@@ -8852,7 +8859,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Cz" = (
@@ -10077,6 +10084,9 @@
 "GC" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
@@ -12314,7 +12324,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible{
+/obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -15054,6 +15064,9 @@
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
 "WE" = (
@@ -53465,7 +53478,7 @@ aN
 eu
 eu
 eu
-eu
+ac
 VO
 GT
 IB
