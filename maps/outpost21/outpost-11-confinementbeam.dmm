@@ -12,6 +12,10 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"ac" = (
+/obj/item/tool/wrench/pipe,
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "ad" = (
 /obj/structure/confinement_beam_generator/inductor{
 	dir = 1
@@ -454,7 +458,7 @@
 "bq" = (
 /obj/machinery/power/apc/super/critical{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
@@ -507,7 +511,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -821,7 +825,7 @@
 /obj/machinery/power/apc/critical{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
@@ -924,7 +928,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/airless,
@@ -2246,7 +2250,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
@@ -2904,7 +2908,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
@@ -3086,7 +3090,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
@@ -3189,7 +3193,7 @@
 "kh" = (
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/orange{
@@ -3542,6 +3546,9 @@
 "lh" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
@@ -3961,9 +3968,8 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
-	nightshift_setting = 3;
-	pixel_y = 4
+	pixel_x = 24;
+	nightshift_setting = 3
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
@@ -3979,7 +3985,7 @@
 	},
 /obj/machinery/alarm{
 	dir = 4;
-	pixel_x = -26
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
@@ -4048,7 +4054,7 @@
 "mD" = (
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
@@ -4327,10 +4333,6 @@
 	pixel_y = 26
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/camera/motion/command{
-	c_tag = "AI - Entry Lobby (Motion)";
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
@@ -5094,7 +5096,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -6586,7 +6588,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -6727,7 +6729,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/cyan{
@@ -8726,7 +8728,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26;
+	pixel_y = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/plating,
@@ -8857,7 +8859,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Cz" = (
@@ -9057,7 +9059,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -9170,6 +9172,10 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
+/obj/machinery/camera/motion/command{
+	c_tag = "AI - Entry Lobby (Motion)";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "Dt" = (
@@ -9199,7 +9205,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -9327,7 +9333,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/effect/floor_decal/corner/orange{
@@ -9744,6 +9750,7 @@
 	pixel_x = -9
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/dockingbay)
 "FE" = (
@@ -9919,7 +9926,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/effect/floor_decal/corner/orange/full{
@@ -10078,6 +10085,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
 "GD" = (
@@ -10164,7 +10174,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26;
+	pixel_y = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green{
@@ -10684,7 +10694,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	is_critical = 1;
 	nightshift_setting = 3
 	},
@@ -11010,9 +11020,6 @@
 	pixel_y = 25;
 	req_access = list(16)
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/camera/xray/command{
 	c_tag = "AI - Core"
 	},
@@ -11132,7 +11139,7 @@
 /obj/structure/cable/green,
 /obj/machinery/power/apc/super/critical{
 	dir = 8;
-	pixel_x = -26;
+	pixel_x = -24;
 	nightshift_setting = 3;
 	name = "west bump"
 	},
@@ -12263,6 +12270,7 @@
 	pixel_x = -32;
 	pixel_y = -32
 	},
+/obj/machinery/light,
 /turf/simulated/floor/greengrid,
 /area/ai)
 "Nl" = (
@@ -12316,7 +12324,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible{
+/obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -12674,7 +12682,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/machinery/light_switch/breaker{
@@ -14310,9 +14318,6 @@
 	pixel_y = -22;
 	pixel_x = 9
 	},
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Trawler Personnel Airlock"
 	},
@@ -14668,7 +14673,7 @@
 	},
 /obj/machinery/power/apc/super/critical{
 	dir = 4;
-	pixel_x = 26
+	pixel_x = 24
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -15055,10 +15060,13 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/green,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
 "WE" = (
@@ -15209,7 +15217,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26;
+	pixel_x = 24;
 	nightshift_setting = 3
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -15595,7 +15603,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26;
+	pixel_x = -24;
 	is_critical = 1;
 	nightshift_setting = 3
 	},
@@ -15946,7 +15954,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -53470,7 +53478,7 @@ aN
 eu
 eu
 eu
-eu
+ac
 VO
 GT
 IB

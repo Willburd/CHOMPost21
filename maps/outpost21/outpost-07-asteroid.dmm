@@ -178,7 +178,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26
+	pixel_x = 24
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
@@ -552,7 +552,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26
+	pixel_x = 24
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/airless,
@@ -989,7 +989,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
@@ -1908,7 +1908,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/brown{
@@ -2412,7 +2412,7 @@
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
-	pixel_x = -26
+	pixel_x = -24
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
@@ -3499,7 +3499,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26
+	pixel_x = 24
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
@@ -4154,7 +4154,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
@@ -4253,7 +4253,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 1
@@ -5587,7 +5587,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -7350,7 +7350,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 26
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/engineering)
@@ -7686,7 +7686,7 @@
 	},
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -26
+	pixel_y = -24
 	},
 /obj/structure/cable/orange,
 /obj/machinery/light{
@@ -8060,7 +8060,7 @@
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
-	pixel_x = 26
+	pixel_x = 24
 	},
 /obj/structure/bed/chair/backed_red{
 	dir = 8
