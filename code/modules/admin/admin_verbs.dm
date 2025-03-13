@@ -600,7 +600,7 @@
 	if(!CK)
 		return
 	var/client/spawn_client = checks[CK]
-	var/datum/event/badbody/env = new()
+	var/datum/event/badbody/env = new(external_use = TRUE) // The fact someone already coded a fix as external_use is a godsend
 	var/turf/T = get_turf(usr.loc)
 	if(!T)
 		return
