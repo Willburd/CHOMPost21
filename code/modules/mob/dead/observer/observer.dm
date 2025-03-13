@@ -842,6 +842,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		W.message = message
 		W.add_hiddenprint(src)
 		W.visible_message(span_filter_notice(span_red("Invisible fingers crudely paint something in blood on [T]...")))
+		SShaunting.influence(HAUNTING_GHOSTS) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 /mob/observer/dead/_pointed(atom/pointed_at)
 	if(!..())
@@ -854,6 +855,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	// Allows them to use the 'toggle_visibility' verb add_verb(src, /mob/observer/dead/verb/toggle_visibility)
 	// Allows them to use the 'ghost  whisper' verb add_verb(src, /mob/observer/dead/verb/ghost_whisper)
 	to_chat(src, span_filter_notice(span_purple("As you are now in the realm of the living, you can whisper to the living with the " + span_bold("Spectral Whisper") + " verb, inside the IC tab.")))
+	SShaunting.influence(HAUNTING_GHOSTS) // Outpost 21 edit - IT DA SPOOKY STATION!
 	if(!user)
 		visible_message(span_deadsay("The ghost of \the [src] is dragged back in to our plane of reality!"))
 		toggle_ghost_visibility(TRUE)
