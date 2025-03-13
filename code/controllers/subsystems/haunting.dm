@@ -228,7 +228,13 @@ SUBSYSTEM_DEF(haunting)
 		if(world.time < next_haunt_time)
 			return
 		next_haunt_time = world.time + (rand(40,600) SECONDS)
-		if(prob(92))
+		var/skip_prob = 85
+		if(world_mode >= MODE_UNNERVING)
+			skip_prob = 70
+		if(world_mode >= MODE_SUPERSPOOKY)
+			skip_prob = 65
+		if(prob(skip_prob))
+			last_event = "SKIP"
 			return
 	else
 		if(!isnull(current_haunt))
@@ -237,12 +243,12 @@ SUBSYSTEM_DEF(haunting)
 	switch(world_mode)
 		// Idly mess with players
 		if(MODE_CALM)
-			if(prob(90))
+			if(prob(30))
 				clear_player_target()
 				last_event = "SEARCH"
 				return
 		if(MODE_CONCERN)
-			if(prob(60))
+			if(prob(10))
 				clear_player_target()
 				last_event = "SEARCH"
 				return
@@ -267,7 +273,7 @@ SUBSYSTEM_DEF(haunting)
 				last_event = "RESET"
 				return
 		if(MODE_SUPERSPOOKY)
-			if(prob(20))
+			if(prob(5))
 				clear_player_target()
 				last_event = "SEARCH"
 				return
