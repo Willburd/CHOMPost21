@@ -571,6 +571,7 @@
 	SSmotiontracker.hide_all = !SSmotiontracker.hide_all
 	log_admin("[key_name(usr)] changed the motion echo visibility to [SSmotiontracker.hide_all ? "hidden" : "visible"].")
 
+// Outpost 21 edit begin - IT DA SPOOKY STATION!
 /client/proc/test_haunting_controller()
 	set name = "Test Station Haunting"
 	set desc = "Selects a haunting subsystem event to begin."
@@ -580,6 +581,38 @@
 		return
 	var/list/all_haunt = subtypesof(/datum/station_haunt)
 	SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
+// Outpost 21 edit end
+
+// Outpost 21 edit begin - spawning badbodies
+/client/proc/spawn_bad_body()
+	set name = "Spawn Badbody"
+	set desc = "Spawns a badbody haunting from a selectable list of the current crew."
+	set category = "Admin.Events"
+
+	if(!check_rights(R_ADMIN|R_EVENT))
+		return
+
+	var/list/checks = list()
+	for(var/client/C in GLOB.clients)
+		if(C)
+			checks["[C.ckey]"] = C
+	var/CK = tgui_input_list(usr,"Choose a client to spawn a body from","Bad body spawn",checks)
+	if(!CK)
+		return
+	var/client/spawn_client = checks[CK]
+	var/datum/event/badbody/env = new()
+	var/turf/T = get_turf(usr.loc)
+	if(!T)
+		return
+
+	var/mob/living/carbon/human/badbody = env.spawn_body(spawn_client,T)
+	spawn(1)
+		env.set_items(badbody)
+		env.harm_body(badbody)
+		new /obj/effect/badbody_controller(badbody)
+		log_debug("successfully spawned badbody [badbody.real_name] at [T.x] [T.y] [T.z].")
+		qdel(env)
+// Outpost 21 edit end
 
 
 /client/proc/adminorbit()
