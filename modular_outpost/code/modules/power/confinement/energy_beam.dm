@@ -139,7 +139,8 @@
 	light_color = "#ff8000"
 
 /obj/effect/projectile/tracer/laser_confinement
-	icon_state = "beam_heavy"
+	icon = 'modular_outpost/icons/obj/projectiles.dmi'
+	icon_state = "confinement"
 	light_range = 5
 	light_power = 1
 	light_color = "#ff8000"
