@@ -47,7 +47,7 @@
 			var/area_good = 1
 			var/bad_msg = "--------------- [A.name]([A.type])"
 
-			// Outpost 21 edit begin - Scan for areas with extra APCs
+			// Scan for areas with extra APCs
 			if(!(A.type in exempt_from_apc))
 				if(isnull(A.apc))
 					log_unit_test("[bad_msg] lacks an APC. (X[A.x]|Y[A.y]) - Z[A.z])")
@@ -62,7 +62,6 @@
 						area_good = 0
 						for(var/obj/machinery/power/P in apc_list)
 							log_unit_test("[bad_msg] has too many APCs. (X[P.x]|Y[P.y]) - Z[P.z])")
-			// Outpost 21 edit end
 
 			if(!A.air_scrub_info.len && !(A.type in exempt_from_atmos))
 				log_unit_test("[bad_msg] lacks an Air scrubber. (X[A.x]|Y[A.y]) - (Z[A.z])")
@@ -211,7 +210,6 @@
 		pass("No active edges.")
 
 	return 1
-
 
 /datum/unit_test/ladder_test
 	name = "MAP: Ladder Test"
