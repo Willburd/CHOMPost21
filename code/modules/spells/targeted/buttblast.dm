@@ -12,11 +12,16 @@
 			to_chat(usr,"<span class='notice'>Try as you might, [target] has no butt to smite!</span>")
 			return
 		Bu.assblasted(usr)
-		var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
-		sparks.set_up(5, 0, target)
-		sparks.attach(target.loc)
-		sparks.start()
-		playsound(target, 'sound/effects/tape.ogg', 50)
+		target.Weaken(10)
+		var/turf/T = get_turf(target)
+		new /obj/effect/decal/cleanable/confetti(T)
+		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+		triggered = 1
+		s.set_up(3, 1, T)
+		s.start()
+		// YAYYYYY
+		playsound(T, 'sound/items/confetti.ogg', 75, 1)
+		playsound(T, 'sound/effects/snap.ogg', 50, 1)
 		to_chat(target,"<span class='danger'>Your butt blasts off!</span>")
 		to_chat(usr,"<span class='warning'>You blast [target]'s butt off!</span>")
 	return
