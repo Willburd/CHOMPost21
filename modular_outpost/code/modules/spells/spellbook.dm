@@ -9,7 +9,14 @@
 	to_chat(user, span_warning("You're knocked down!"))
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		user.Weaken(20)
+		H.Weaken(20)
+		new /obj/effect/decal/cleanable/confetti(get_turf(H))
 		var/obj/item/organ/internal/butt/Bu = locate() in H.internal_organs
 		if(Bu)
 			Bu.assblasted(user)
+			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+			s.set_up(3, 1, H)
+			s.start()
+			// YAYYYYY
+			playsound(H, 'sound/items/confetti.ogg', 75, 1)
+			playsound(H, 'sound/effects/snap.ogg', 50, 1)
