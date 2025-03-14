@@ -537,10 +537,10 @@
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(tasted == src) //CHOMPEdit Start
 		visible_message(span_vwarning("[src] licks themself!"),span_notice("You lick yourself. You taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
-		balloon_alert_visible("Licks themself!", "Tastes like [tasted.get_taste_message()]")
+		balloon_alert_visible("licks themself!", "tastes like [tasted.get_taste_message()]")
 	else
 		visible_message(span_vwarning("[src] licks [tasted]!"),span_notice("You lick [tasted]. They taste rather like [tasted.get_taste_message()]."),span_infoplain(span_bold("Slurp!")))
-		balloon_alert_visible("Licks [tasted]!", "Tastes like [tasted.get_taste_message()]")
+		balloon_alert_visible("licks [tasted]!", "tastes like [tasted.get_taste_message()]")
 		//CHOMPEdit End
 
 
@@ -582,10 +582,10 @@
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(smelled == src) //CHOMPEdit Start
 		visible_message(span_vwarning("[src] smells themself!"),span_notice("You smell yourself. You smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
-		balloon_alert_visible("Smells themself!", "Smells like [smelled.get_smell_message()]")
+		balloon_alert_visible("smells themself!", "smells like [smelled.get_smell_message()]")
 	else
 		visible_message(span_vwarning("[src] smells [smelled]!"),span_notice("You smell [smelled]. They smell like [smelled.get_smell_message()]."),span_infoplain(span_bold("Sniff!")))
-		balloon_alert_visible("Smells [smelled]!", "Smells like [smelled.get_smell_message()]")
+		balloon_alert_visible("smells [smelled]!", "smells like [smelled.get_smell_message()]")
 		//CHOMPEdit End
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
@@ -1187,7 +1187,7 @@
 	if(custom_link)
 		. += "Custom link: " + span_linkify("[custom_link]")
 	if(ooc_notes)
-		. += "OOC Notes: <a href='byond://?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='byond://?src=\ref[src];print_ooc_notes_to_chat=1'>\[Print\]</a>"
+		. += "OOC Notes: <a href='byond://?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='byond://?src=\ref[src];print_ooc_notes_chat=1'>\[Print\]</a>"
 	. += "<a href='byond://?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a>"
 
 
@@ -1198,27 +1198,27 @@
 		do_examine_ooc(usr)
 	if(href_list["edit_ooc_notes"])
 		if(usr == src)
-			set_metainfo_panel(usr) //ChompEDIT - usr arg
+			set_metainfo_panel(usr)
 	if(href_list["edit_ooc_note_likes"])
 		if(usr == src)
-			set_metainfo_likes(usr) //ChompEDIT - usr arg
+			set_metainfo_likes(usr)
 	if(href_list["edit_ooc_note_dislikes"])
 		if(usr == src)
-			set_metainfo_dislikes(usr) //ChompEDIT - usr arg
+			set_metainfo_dislikes(usr)
 	if(href_list["save_ooc_panel"])
 		if(usr == src)
-			save_ooc_panel(usr) //ChompEDIT - usr arg
-	if(href_list["print_ooc_notes_to_chat"])
-		print_ooc_notes_to_chat(usr) //ChompEDIT - usr arg
+			save_ooc_panel(usr)
+	if(href_list["print_ooc_notes_chat"])
+		print_ooc_notes_chat(usr)
 	//CHOMPEdit Start
 	if(href_list["edit_ooc_note_favs"])
 		if(usr == src)
-			set_metainfo_favs(usr) //ChompEDIT - usr arg
+			set_metainfo_favs(usr)
 	if(href_list["edit_ooc_note_maybes"])
 		if(usr == src)
-			set_metainfo_maybes(usr) //ChompEDIT - usr arg
+			set_metainfo_maybes(usr)
 	if(href_list["set_metainfo_ooc_style"])
-		set_metainfo_ooc_style(usr) //ChompEDIT - usr arg
+		set_metainfo_ooc_style(usr)
 	//CHOMPEdit End
 	if(href_list["save_private_notes"])
 		if(usr == src)

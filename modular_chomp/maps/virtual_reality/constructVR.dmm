@@ -3727,7 +3727,7 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/vr/powered/mall/dorms/dorms5)
 "dha" = (
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /turf/simulated/floor/cult,
 /area/vr/powered/cult)
 "dhl" = (
@@ -4761,7 +4761,6 @@
 /obj/random/junk,
 /obj/random/junk,
 /obj/random/junk,
-/obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/rack/shelf/steel,
 /obj/item/material/knife/butch,
@@ -24074,7 +24073,7 @@
 	desc = "Eldritch carved locker.";
 	name = "rockformed locker"
 	},
-/obj/item/toy/plushie/susred,
+/obj/item/toy/plushie/sus,
 /turf/simulated/floor/wood,
 /area/vr/powered/cult)
 "tqL" = (

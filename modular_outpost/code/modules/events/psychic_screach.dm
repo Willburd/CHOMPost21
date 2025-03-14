@@ -12,6 +12,11 @@
 	// SCARY
 	Sound( 'sound/goonstation/spooky/Meatzone_Howl.ogg', affecting_z)
 	Sound( 'sound/goonstation/spooky/Station_SpookyAtmosphere2.ogg', affecting_z)
+	SShaunting.intense_world_haunt()
+	if(prob(60))
+		SShaunting.intense_world_haunt()
+	if(prob(20))
+		SShaunting.intense_world_haunt()
 
 	// Break telecoms for a bit
 	for(var/obj/machinery/telecomms/T in telecomms_list)

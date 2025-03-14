@@ -256,7 +256,7 @@
 	status = 1
 	return
 
-/obj/item/flamethrower/full/Initialize()
+/obj/item/flamethrower/full/Initialize(mapload)
 	. = ..()
 	update_icon() // Outpost 21 edit - overlay runtime fix
 

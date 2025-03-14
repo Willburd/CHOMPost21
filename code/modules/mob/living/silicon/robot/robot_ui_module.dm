@@ -43,7 +43,7 @@
 			// CHOMPAdd Start, shell blacklist and crisis mode for shells
 			modules.Remove(GLOB.shell_module_blacklist)
 			// Outpost 21 edit begin - Admins always have ERT access
-			if(usr.client && usr.client.holder && usr.client.holder.rights & R_ADMIN)
+			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				modules |= emergency_module_types
 			// Outpost 21 edit end
 			else if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
@@ -53,7 +53,7 @@
 		else
 			modules.Add(robot_module_types)
 			// Outpost 21 edit begin - Admins always have ERT access
-			if(usr.client && usr.client.holder && usr.client.holder.rights & R_ADMIN)
+			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				modules |= emergency_module_types
 			// Outpost 21 edit end
 			else if(R.crisis || security_level >= SEC_LEVEL_RED || R.crisis_override)

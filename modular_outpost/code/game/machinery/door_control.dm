@@ -21,7 +21,7 @@
 	return
 
 /obj/machinery/button/remote/admin_only/allowed(mob/M)
-	return M && M.client && M.client.holder && M.client.holder.rights & R_ADMIN
+	return M && M.client && M.client.holder && check_rights_for(M.client, R_ADMIN)
 
 /obj/machinery/button/remote/admin_only/Adjacent(atom/neighbor)
 	if(!istype(neighbor,/mob) || !allowed(neighbor))

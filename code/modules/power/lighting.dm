@@ -609,6 +609,7 @@ var/global/list/light_type_cache = list()
 	installed_light = L
 	L.loc = src //Move it into the socket!
 
+	SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION!
 	on = powered() && !turned_off() // Outpost 21 edit - Do not instantly turn on lights if the area lightswitch is already off
 	update()
 
@@ -621,6 +622,7 @@ var/global/list/light_type_cache = list()
 
 /obj/machinery/light/proc/remove_bulb()
 	//. = new light_type(src.loc, src)
+	SShaunting.influence(HAUNTING_UNSETTLE) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 	switchcount = 0
 	installed_light = null
@@ -762,6 +764,7 @@ var/global/list/light_type_cache = list()
 
 /obj/machinery/light/proc/flicker(var/amount = rand(10, 20))
 	if(flickering) return
+	SShaunting.influence(HAUNTING_UNSETTLE) // Outpost 21 edit - IT DA SPOOKY STATION!
 	if(on && status == LIGHT_OK)
 		flickering = 1
 		do_flicker(amount)

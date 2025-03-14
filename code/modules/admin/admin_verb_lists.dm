@@ -3,7 +3,7 @@ var/list/admin_verbs_default = list(
 	/datum/admins/proc/show_player_panel,	//shows an interface for individual players, with various links (links require additional flags,
 	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels,
 	/client/proc/player_panel,
-	/client/proc/deadmin_self,			//destroys our own admin datum so we can play as a regular player,
+	/client/proc/deadmin,			//destroys our own admin datum so we can play as a regular player,
 	/client/proc/hide_verbs,			//hides all our adminverbs,
 	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs,
 	/client/proc/debug_variables,		//allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify,
@@ -113,6 +113,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/admin_teleport,	//CHOMPEdit
 	/client/proc/setckey, //YW add - readds SetCkey proc
 	/client/proc/debug_global_variables,
+	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
+	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/hide_motion_tracker_feedback
 	)
 
@@ -273,7 +275,7 @@ var/list/admin_verbs_rejuv = list(
 
 //verbs which can be hidden - needs work
 var/list/admin_verbs_hideable = list(
-	/client/proc/deadmin_self,
+	/client/proc/deadmin,
 //	/client/proc/deadchat,
 	/datum/admins/proc/show_traitor_panel,
 	/datum/admins/proc/toggleenter,
@@ -519,6 +521,8 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_random_events,
 	/client/proc/modify_server_news,
 	/client/proc/debug_global_variables,
+	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
+	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/hide_motion_tracker_feedback
 )
 

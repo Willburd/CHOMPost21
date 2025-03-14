@@ -48,6 +48,7 @@
 #define BLIND 0x1
 #define MUTE  0x2
 #define DEAF  0x4
+#define SPINE 0x8
 
 /* Traitgenes (Blocks have finally been retired, huzzah!
 // The way blocks are handled badly needs a rewrite, this is horrible.
@@ -156,9 +157,10 @@ var/SMALLSIZEBLOCK     = 0
 #define DNA_UI_WING3_B     57 // VOREStation snippet end.
 #define DNA_UI_LENGTH      57 // VOREStation Edit - Needs to match the highest number above.
 
-#define DNA_SE_LENGTH 90 // Traitgenes (Expanded from 49 to 84, there have been a considerable expansion of genes.
+#define DNA_SE_LENGTH 96 // Traitgenes (Expanded from 49 to 84, there have been a considerable expansion of genes.
 // This leaves room for future expansion. This can be arbitrarily raised without worry if genes start to get crowded.
 // Should have more than 10 empty genes after setup. - Willbird)
+// Outpost 21 edit, increased to 96
 
 //DNA modifiers
 // Buffer datatype flags.

@@ -89,7 +89,7 @@
 
 	var/client/ghost_client = ghost.client
 
-	if(!is_alien_whitelisted(ghost, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
+	if(!is_alien_whitelisted(ghost.client, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
 		to_chat(ghost, span_warning("You are not whitelisted to spawn as this species!"))
 		return
 
@@ -253,6 +253,7 @@
 				nif.durability = record.nif_durability
 		*/
 
+	SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION!
 	// Outpost 21 edit begin - release turf behaviors
 	if(releaseturf)
 		outpost_post_sleeve(idscan,new_character,spawnloc)

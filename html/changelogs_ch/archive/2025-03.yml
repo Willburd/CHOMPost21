@@ -202,3 +202,108 @@
   - rscadd: Strong rat variant
   Kashargul:
   - code_imp: cleans up some ini issues
+2025-03-09:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: fix initialize for grep checks
+  - qol: Synthfabs no longer apply massive damage when unupgraded.
+  zeskorion:
+  - rscadd: YR3 Enviroshell prosthetic, which is usable for xenochimerae. a colorable
+      version is also added.
+2025-03-10:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: finishes up typescript
+  - bugfix: Shield capacitors now only take power from wires when anchored to the
+      ground.
+  Caramelion:
+  - rscadd: Different colourations for carps
+  - bugfix: Fixed attacking resetting pixelshift position to 0, 0 after the animation
+  - qol: Allows various mobs to create swarms
+  - code_imp: Added Swarm component
+  - code_imp: Added connect_loc_behalf component
+  Diana:
+  - bugfix: Guns now have their fire_delays fixed. No more rapidfire RPGs.
+  - qol: Phoron bore gets to keep it's unintentional attack-speed buff. (Mining is
+      in need of QoL changes, so let this be at least one of them.)
+  Will:
+  - rscadd: Adds a new trait 'Lumbar Impairment' which makes you incapable of utilizing
+      your legs.
+2025-03-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed jungle and fantasy redgates having cave walls generate where they
+      shouldn't.
+  Diana:
+  - bugfix: myelamine properly clots your external wounds
+  - balance: myelamine now applies an up-front heal for bleeding wounds when clotting
+      them.
+  - qol: myelamine now ACTUALLY heals internal wounds if you take a 10u dose of it.
+      No more 'I took 10u and it had 0.1 damage remaining and I bled out 10 minutes
+      later'
+  - spellcheck: myelamine has an updated description, informing you that it doesn't
+      heal JUST internal wounds, but it also heals external wounds.
+  - spellcheck: myelamine now accurately tells you via the chemmaster that it clots
+      MORE than just internal hemorrhages. It additionally tells you the ideal dose
+      for wound healing.
+  Kashargul:
+  - bugfix: blood issues in VR
+2025-03-12:
+  CHOMPStation2StaffMirrorBot:
+  - qol: admin ranks are now datums
+  - admin: admin ranks can be now made out of multiple ranks
+  - server: updates to the database schema and configuration examples
+  - code_imp: end of file new line fix for grep
+  Guti:
+  - bugfix: Fixed swarm mobs becoming walls on death
+  - code_imp: Slightly changed projectile code to check for lying down mobs instead
+      of their density
+  Kashargul:
+  - code_imp: fixes some issues in the random poi init
+  Will & Diana:
+  - rscadd: Adds a nevrean plush with two variants, normal and security.
+  - qol: Goes through and gives plushies speech bubbles pertaining to what they are.
+  - bugfix: Fixes it so plushies now properly speak.
+  - qol: Makes it so any interaction with plushies will play their phrase, NOT just
+      disarm-intenting them (This was never made clear that disarm intent makes them
+      speak.)
+  - code_imp: Gets rid of a few non-existent base paths by converting one of the paths
+      into the base one. (plushy/therapy & plushies/squid)
+  - bugfix: Fixes the toaster from having the sus plushie sound.
+  - code_imp: Changed some timers that were calling a proc that just set a var to
+      false. Instead, we now use a varset_callback timer there.
+2025-03-13:
+  Ace:
+  - maptweak: Thor map updated
+  - config: Thor terrain is now configured to spawn appropriate mobs instead of just
+      placeholder tindalos.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed dullahans being in between two tiles
+  - code_imp: changes the falling turf effect to turfs directly
+  Hunter-Dovetail:
+  - rscadd: scaled_belly-r_leg, scaled_belly-l_leg, chubbybelly_small-r_leg, chubbybelly_small-l_leg
+  - bugfix: hippo_upperjaw-head, hippo_lowerjaw-head, scaled_belly-groin
+2025-03-14:
+  Ace:
+  - maptweak: Temporarily deletes the security taurs from Thor.
+  - bugfix: Thor terrains did not actually use the randomized fauna made for it.
+  - rscadd: Added cave lamias
+  - rscadd: Added cave spiders to replace space bees in the mines
+  - balance: Changed the list of what mobs appear in caves
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: tgui core to 1.8.2
+  - config: the example now has the correct flags for the BUILD and SOUND permissions
+  - bugfix: Fixed mantraps voring people who step on them when they're dead.
+  - image: modified the head states of DSI nevreans
+  - image: modified the torso states of DSI tesh and regular tesh
+  - rscadd: AI law modules will show the laws they apply when examined
+  - code_imp: fixes some runtimes
+  Diana:
+  - rscadd: Medical kiosk now informs you how to cure Dizziness and Jitteryness
+  Guti:
+  - image: Fixed mailman's hat
+  - maptweak: Added a couple of mail scanners and mail bags to all the maps
+  Kashargul:
+  - code_imp: more banned map types
+  Will:
+  - code_imp: adds some more map tests
+  tacoguy7765093:
+  - maptweak: Removed pointless ladder in explo shelter.
+  - maptweak: Soluna Nexus duplicate APCs removed.

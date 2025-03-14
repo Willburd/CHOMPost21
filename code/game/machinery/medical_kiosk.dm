@@ -42,7 +42,7 @@
 
 	var/msgcooldown = 0 // Outpost 21 edit
 	catalogue_data = list(/datum/category_item/catalogue/technology/medical_kiosk) // Outpost 21 edit - data for tutorial
-	
+
 	//These are the variables that control 'When we were
 	var/last_dispensed
 	var/dispense_cooldown = 1 MINUTE //If abused, this can be decreased. The machine gives chems and supplies that are easily and readily available, barring tramadol. If someone intentionally breaks their arm to rob the machines of their tramadol to fuel their addiction, that's a gameplay feature.
@@ -50,7 +50,7 @@
 	/// This determines if the kiosk can dispense or not. Edit the below line to FALSE if you don't want them to do such.
 	var/can_dispense = FALSE // Outpost 21 edit - By default we do not dispense medical aid
 
-/obj/machinery/medical_kiosk/Initialize()
+/obj/machinery/medical_kiosk/Initialize(mapload)
 	. = ..()
 	our_db = SStranscore.db_by_key(db_key)
 	// Outpost 21 edit begin - Missing circuit board on deconstruct, but will eventually be removed on machine recode
@@ -211,12 +211,14 @@
 		var/minor_problems = ""
 		if(user.hallucination)
 			minor_problems += "<br>" + span_warning("Brain activity suggesting severe mental inhibitions detected - medical assistance recommended.")
-		if(user.drowsyness || user.dizziness || user.sleeping)
+		if(user.drowsyness || user.sleeping)
 			minor_problems += "<br>" + span_warning("Mild mental inhibitions detected - drinking coffee can improve symptoms and stimulate nervous system.")
 		if(is_drunk)
 			minor_problems += "<br>" + span_warning("Ethanol intoxication detected - suggest close observation to alleviate risk of injury.")
-		if(user.getHalLoss() > 0)
-			minor_problems += "<br>" + span_warning("Mild concussion detected - advising bed rest until feeling better. No other anatomical issues detected.")
+		if(user.getHalLoss())
+			minor_problems += "<br>" + span_warning("Mild concussion detected - advising bed rest until feeling better.")
+		if(user.jitteriness || user.dizziness)
+			minor_problems += "<br>" + span_warning("Neurological symptoms detected - advising bed rest until feeling better.") //Resting fixes dizziness and jitteryness!
 		else
 			minor_problems += "<br>" + span_notice("No anatomical issues detected.")
 			return minor_problems
@@ -391,14 +393,17 @@
 			if(istype(A, /mob/living/carbon))
 				count += 1
 				var/mob/living/carbon/C = A
-				if((C.hallucination > 20 && prob(5)) || (AR && AR.haunted))
+				if((C.hallucination > 20 && prob(5)) || (AR && AR.haunted) || (prob(10) && SShaunting.station_is_haunted()))
 					halucinateTarget = C
 
-		if((count == 1 && istype(halucinateTarget,/mob/living/carbon)) || (AR && AR.haunted))
+		if((count == 1 && istype(halucinateTarget,/mob/living/carbon)) || (AR && AR.haunted) || (prob(10) && SShaunting.station_is_haunted()))
 			// halucination replies
 			var/text = halu_text(halucinateTarget)
 			balloon_alert_visible(text)
 			visible_message("\The [src] says [text]")
+			if(!AR || !AR.haunted) // don't let redspace spam all around
+				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
+				SShaunting.get_world_haunt_attention(halucinateTarget,40)
 			msgcooldown = 60 SECONDS
 		else
 			// tease people to backup

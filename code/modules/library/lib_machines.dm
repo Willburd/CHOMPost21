@@ -174,7 +174,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 /obj/machinery/librarycomp/tgui_data(mob/user)
 	var/data[0]
-	data["admin_mode"] = (user.client?.holder?.rights & R_ADMIN)
+	data["admin_mode"] = check_rights_for(user.client, (R_ADMIN|R_MOD))
 	data["is_public"] = FALSE
 	data["screenstate"] = screenstate
 	data["emagged"] = emagged
@@ -465,7 +465,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 			. = TRUE
 
 		if("protect_external")
-			if(usr.client?.holder?.rights & R_ADMIN)
+			if(check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				playsound(src, "keyboard", 40)
 				var/get_id = params["protect_external"]
 				var/datum/persistent/library_books/SSBooks = SSpersistence.persistence_datums[/datum/persistent/library_books]
@@ -475,6 +475,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 		if("arcane_checkout")
 			playsound(src, "keyboard", 40)
 			new /obj/item/book/tome(src.loc)
+			SShaunting.intense_world_haunt() // Outpost 21 edit - IT DA SPOOKY STATION!
 			var/datum/gender/T = gender_datums[usr.get_visible_gender()]
 			to_chat(usr, span_warning("Your sanity barely endures the seconds spent in the vault's browsing window. The only thing to remind you of this when you stop browsing is a dusty old tome sitting on the desk. You don't really remember printing it."))
 			usr.visible_message(span_infoplain(span_bold("\The [usr]") + " stares at the blank screen for a few moments, [T.his] expression frozen in fear. When [T.he] finally awakens from it, [T.he] looks a lot older."), 2)

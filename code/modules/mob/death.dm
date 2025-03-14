@@ -86,6 +86,7 @@
 
 	set_stat(DEAD)
 	SSmotiontracker.ping(src,80)
+	SShaunting.influence(HAUNTING_DEATH) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 	update_canmove()
 

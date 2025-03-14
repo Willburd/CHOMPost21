@@ -13,7 +13,7 @@
 	var/invert_delay_cycle = 2
 	var/lastphase = -1
 
-/obj/machinery/elevator_warning/Initialize()
+/obj/machinery/elevator_warning/Initialize(mapload)
 	. = ..()
 	activate()
 
@@ -37,7 +37,7 @@
 						icon_state = "base_on_low"
 						return // no light change!
 
-				if(!light_on) 
+				if(!light_on)
 					set_light(3) // ON!
 					icon_state = "base_on_high"
 				else

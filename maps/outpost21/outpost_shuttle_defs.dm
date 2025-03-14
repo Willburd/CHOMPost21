@@ -64,6 +64,7 @@
 	docking_controller_tag = "Tram"
 	current_location = "tram_shed"
 	bluespace = FALSE // don't smoosh shadekin
+	can_be_haunted = TRUE
 //	landmark_transition = "tram_transit"
 	ceiling_type = /turf/simulated/shuttle/floor/white
 
@@ -384,6 +385,7 @@
 	arrival_message = "Attention.  The engineering ferry is approaching the outpost."
 	departure_message = "Attention.  The engineering ferry is now leaving the outpost."
 	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	can_be_haunted = TRUE
 
 	destination_tags = list(
 		"beam_base",
@@ -423,6 +425,7 @@
 	shuttle_area = /area/shuttle/darktransit
 	current_location = "dark_hell"
 	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	can_be_haunted = TRUE
 
 	destination_tags = list(
 		"dark_start",

@@ -222,6 +222,8 @@ var/global/photo_count = 0
 			if(!istype(A,/mob/observer/dead))
 				if(A.invisibility) continue
 				if(A.plane > 0 && !(A.plane in picture_planes)) continue
+			else
+				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
 			atoms.Add(A)
 			// Outpost 21 edit end
 
@@ -264,6 +266,7 @@ var/global/photo_count = 0
 			// hide observers that are not ghosts
 			var/mob/observer/dead/G = S;
 			if(!G.is_dead()) continue
+			if(!G.timeofdeath) continue // Hide Aghosts
 			// add ghost description
 			if(!mob_detail)
 				mob_detail = "You can see a faded [G] on the photo."

@@ -736,7 +736,7 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 8;
-	pixel_x = -25
+	pixel_x = -24
 	},
 /obj/structure/cable{
 	icon_state = "0-2"
@@ -4565,7 +4565,7 @@
 /area/space)
 "Dg" = (
 /obj/machinery/power/apc/alarms_hidden{
-	pixel_y = -25;
+	pixel_y = -24;
 	nightshift_setting = 3
 	},
 /obj/structure/cable/yellow{
@@ -7268,8 +7268,7 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 1;
-	pixel_y = 25;
-	pixel_x = -1
+	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
 /area/space)

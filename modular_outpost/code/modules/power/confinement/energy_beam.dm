@@ -1,17 +1,18 @@
 /obj/item/projectile/beam/confinement
 	name = "Confinement Beam"
 	desc = "A concentrated beam of energy, behaving more like matter than light."
-	icon_state = "heavylaser"
-	//fire_sound = 'sound/weapons/emitter.ogg'
+	icon_state = "confinement"
+	icon = 'modular_outpost/icons/obj/projectiles.dmi'
+	fire_sound = 'sound/weapons/emitter2.ogg'
 	damage = 300
-	light_color = "#00CC33"
+	light_color = "#da420a"
 	excavation_amount = 300
 	hud_state = "laser_overcharge"
 	range = 1000 // MUST hit the edge of map
 
-	muzzle_type = /obj/effect/projectile/muzzle/emitter
-	tracer_type = /obj/effect/projectile/tracer/emitter
-	impact_type = /obj/effect/projectile/impact/emitter
+	muzzle_type = /obj/effect/projectile/muzzle/laser_confinement
+	tracer_type = /obj/effect/projectile/tracer/laser_confinement
+	impact_type = /obj/effect/projectile/impact/laser_confinement
 
 	var/datum/weakref/confinement_data = null
 
@@ -127,3 +128,25 @@
 			return
 		src.loc = get_step(src,DOWN)
 		addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)
+
+
+
+
+/obj/effect/projectile/muzzle/laser_confinement
+	icon_state = "muzzle_beam_heavy"
+	light_range = 5
+	light_power = 1
+	light_color = "#ff8000"
+
+/obj/effect/projectile/tracer/laser_confinement
+	icon = 'modular_outpost/icons/obj/projectiles.dmi'
+	icon_state = "confinement"
+	light_range = 5
+	light_power = 1
+	light_color = "#ff8000"
+
+/obj/effect/projectile/impact/laser_confinement
+	icon_state = "impact_laser"
+	light_range = 5
+	light_power = 0.5
+	light_color = "#ff8000"

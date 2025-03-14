@@ -18,7 +18,7 @@
 	var/otherarea = null
 	var/image/overlay
 
-/obj/machinery/light_switch/Initialize()
+/obj/machinery/light_switch/Initialize(mapload)
 	. = ..()
 
 	area = get_area(src)

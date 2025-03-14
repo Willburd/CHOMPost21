@@ -65,6 +65,7 @@ var/global/list/image/splatter_cache=list()
 	. = ..()
 	if(!mapload)
 		addtimer(CALLBACK(src, PROC_REF(dry)), DRYING_TIME * (amount+1))
+		SShaunting.influence(HAUNTING_BLOOD) // Outpost 21 edit - IT DA SPOOKY STATION!
 //VOREstation edit end
 
 /obj/effect/decal/cleanable/blood/update_icon()
@@ -281,12 +282,12 @@ var/global/list/image/splatter_cache=list()
 	var/dry = 0 // Keeps the lag down
 	var/sampled = FALSE
 
-/obj/effect/decal/cleanable/mucus/Initialize()
+/obj/effect/decal/cleanable/mucus/mapped/Initialize(mapload)
 	. = ..()
 	VARSET_IN(src, dry, TRUE, DRYING_TIME * 2)
 
 //This version should be used for admin spawns and pre-mapped virus vectors (e.g. in PoIs), this version does not dry
-/obj/effect/decal/cleanable/mucus/mapped/Initialize()
+/obj/effect/decal/cleanable/mucus/mapped/Initialize(mapload)
 	. = ..()
 	viruses |= new /datum/disease/advance
 

@@ -40,6 +40,18 @@ var/global/list/total_extraction_beacons = list()
 	if(!beacon)
 		to_chat(user, "[src] is not linked to a beacon, and cannot be used.")
 		return
+	// Outpost 21 edit begin - No escaping redspace
+	var/atom/warp_goal = beacon
+	var/area/user_area = get_area(user)
+	var/turf/user_turf = get_turf(user)
+	if(user_area.haunted && !(user_turf.z in using_map.station_levels)) // can somewhat reliably assume redspace
+		var/list/redlist = list()
+		for(var/obj/effect/landmark/R in landmarks_list)
+			if(R.name == "redentrance")
+				redlist += R
+		if(redlist.len > 0)
+			warp_goal = pick(redlist)
+	// Outpost 21 edit end
 	if(!can_use_indoors)
 		var/turf/T = get_turf(A)
 		if(T && !T.is_outdoors())
@@ -111,7 +123,7 @@ var/global/list/total_extraction_beacons = list()
 				L.drowsyness = 0
 			sleep(30)
 			var/list/flooring_near_beacon = list()
-			for(var/turf/simulated/floor/floor in orange(1, beacon))
+			for(var/turf/simulated/floor/floor in orange(1, warp_goal)) // Outpost 21 edit - No escaping redspace
 				flooring_near_beacon += floor
 			holder_obj.forceMove(pick(flooring_near_beacon))
 			animate(holder_obj, pixel_z = 10, time = 50)
@@ -158,7 +170,7 @@ var/global/list/total_extraction_beacons = list()
 	density = FALSE
 	var/beacon_network = "station"
 
-/obj/structure/extraction_point/Initialize()
+/obj/structure/extraction_point/Initialize(mapload)
 	. = ..()
 	name += " ([rand(100,999)]) ([get_area_name(src, TRUE)])"
 	global.total_extraction_beacons += src

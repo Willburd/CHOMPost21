@@ -146,12 +146,15 @@
 
 /datum/wound/proc/bandage()
 	bandaged = 1
+	SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 /datum/wound/proc/salve()
 	salved = 1
+	SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 /datum/wound/proc/disinfect()
 	disinfected = 1
+	SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION!
 
 // heal the given amount of damage, and if the given amount of damage was more
 // than what needed to be healed, return how much heal was left

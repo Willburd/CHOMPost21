@@ -1,7 +1,7 @@
 /obj/machinery/alarm/voxbox
 	trace_gas = list(GAS_N2O) //list of other gases that this air alarm is able to detect
 
-/obj/machinery/alarm/voxbox/first_run()
+/obj/machinery/alarm/voxbox/set_initial_TLV()
 	. = ..()
 	TLV[GAS_O2] =			list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
 	TLV[GAS_N2] =			list(0, 0, 135, 140) // Partial pressure, kpa

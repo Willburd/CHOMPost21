@@ -16,41 +16,6 @@
 /obj/item/toy/plushie/jil/proc/cooldownreset()
 	cooldown = 0
 
-/obj/item/toy/plushie/tinytin
-	name = "tiny tin plushie"
-	desc = "A tiny fluffy nevrean plush with the label 'Tiny-Tin.' Press his belly to hear a sound!"
-	icon = 'modular_outpost/icons/obj/toy.dmi'
-	icon_state = "plushie_tin"
-	var/cooldown = 0
-
-/obj/item/toy/plushie/tinytin/attack_self(mob/user as mob)
-	if(!cooldown)
-		playsound(user, 'sound/voice/peep.ogg', 30, 0)
-		src.visible_message(span_danger("Peep peep!"))
-		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
-	return ..()
-
-/obj/item/toy/plushie/tinytin/proc/cooldownreset()
-	cooldown = 0
-
-
-/obj/item/toy/plushie/tinytin/sec
-	name = "officer tiny tin plushie"
-	desc = "Officer Tiny-Tin, now with rooty-tooty-shooty action! Press his belly to hear a sound!"
-	icon = 'modular_outpost/icons/obj/toy.dmi'
-	icon_state = "plushie_tinsec"
-
-
-/obj/item/toy/plushie/tinytin/sec/attack_self(mob/user as mob)
-	if(!cooldown)
-		playsound(user, 'modular_outpost/sound/misc/tinytin_fuckedup.ogg', 85, 0)
-		src.visible_message(span_danger("That means you fucked up!"))
-		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
-	return ..()
-
-
 /obj/item/toy/plushie/chu
 	name = "Chu plushie"
 	desc = "With a smile like that, who wouldn't be their friend!"
