@@ -15,7 +15,6 @@
 		if(Bu)
 			Bu.assblasted(user)
 			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-			triggered = 1
 			s.set_up(3, 1, H)
 			s.start()
 			// YAYYYYY

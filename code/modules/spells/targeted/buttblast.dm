@@ -16,7 +16,6 @@
 		var/turf/T = get_turf(target)
 		new /obj/effect/decal/cleanable/confetti(T)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-		triggered = 1
 		s.set_up(3, 1, T)
 		s.start()
 		// YAYYYYY
