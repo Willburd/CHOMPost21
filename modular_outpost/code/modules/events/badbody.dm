@@ -192,6 +192,7 @@
 	if(body && !isnull(body.client))
 		body.UnsetSpecialVoice()
 	if(!body || !istype(body,/mob/living/carbon/human/) || !isnull(body.client))
+		SShaunting.reset_world_haunt() // Clean out for now
 		qdel(src)
 		return PROCESS_KILL
 
