@@ -519,7 +519,7 @@
 /datum/station_haunt/blood_rain/New()
 	. = ..()
 	start_time = world.time
-	dur = rand(1,3) SECONDS
+	dur = rand(6,10) SECONDS
 	target_mob = SShaunting.get_player_target()
 	if(target_mob)
 		to_chat(target_mob,span_danger("Something starts to drip from above."))
@@ -565,6 +565,99 @@
 			end_shuttle.launch(null)
 	end()
 
+
+// lurker
+/datum/station_haunt/lurker
+	name = "Lurking Spirit"
+	var/start_time = 0
+	var/dur = 1 MINUTES
+	var/mob/observer/dead/ghost = null
+	var/visible_chance = 0
+	var/spawn_fire = FALSE
+	var/has_burned_floor = FALSE
+	var/use_player_chance = 90
+
+/datum/station_haunt/lurker/can_appear
+	visible_chance = 2
+	use_player_chance = 70
+
+/datum/station_haunt/lurker/will_appear
+	visible_chance = 70
+	use_player_chance = 50
+
+/datum/station_haunt/lurker/pyromanic
+	visible_chance = 20
+	use_player_chance = 40
+	spawn_fire = TRUE
+
+/datum/station_haunt/lurker/New()
+	. = ..()
+	start_time = world.time
+	dur = rand(1,3) MINUTES
+	var/mob/M = null
+	if(prob(use_player_chance))
+		// spawn a player ghost
+		M = SShaunting.get_random_player()
+		if(!ishuman(M) || M.isSynthetic())
+			return
+		ghost = new(M)
+		ghost.name = M.dna.real_name
+		ghost.desc = "?"
+	else
+		// spawn a custom demon
+		var/list/demons = list(
+			/mob/living/simple_mob/clowns/big/normal,
+			/mob/living/simple_mob/clowns/big/cluwne,
+			/mob/living/simple_mob/shadekin/red/dark,
+			/mob/living/simple_mob/vore/demon,
+			/mob/living/simple_mob/vore/demon/wendigo,
+			/mob/living/simple_mob/vore/demon/engorge
+		)
+		var/path = pick(demons)
+		M = new path(null)
+		ghost = new(M)
+		ghost.name = M.name
+		ghost.desc = "?"
+		qdel(M)
+
+/datum/station_haunt/lurker/fire()
+	if(world.time > (start_time + dur))
+		end()
+		return
+	if(!ghost || QDELING(ghost))
+		end()
+		return
+	var/mob/living/carbon/human/target_mob = SShaunting.get_player_target()
+	if(!target_mob)
+		end()
+		return
+	// Follow player
+	var/turf/T1 = get_turf(ghost)
+	var/turf/T2 = get_turf(target_mob)
+	if(T1.Distance(T2) >= 6)
+		var/turf/goal_turf = get_turf(target_mob)
+		var/xx = rand(3,5) * (prob(50) ? 1 : -1)
+		var/yy = rand(3,5) * (prob(50) ? 1 : -1)
+		var/turf/simulated/floor/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(T)
+			ghost.forceMove(T)
+	ghost.dir = get_dir(T1,T2)
+	// Say things
+	if(prob(2))
+		if(!has_burned_floor)
+			T1.visible_message(pick(list("[target_mob]...","Scream!","Shriek!")))
+		else
+			T1.visible_message(pick(list("[target_mob]!","Burn!","Die!")))
+	if(ghost.is_manifest && prob(3) && spawn_fire && !has_burned_floor)
+		T1.lingering_fire(0.25)
+		has_burned_floor = TRUE
+		dur -= rand(10,20) SECONDS
+	if(!ghost.is_manifest && prob(visible_chance))
+		ghost.manifest(null)
+
+/datum/station_haunt/lurker/end()
+	qdel(ghost)
+	. = ..()
 
 //////////////////////////////////////////////////////////////////////////////////////
 // HAUNTING ENITIES, Things that go bump in the night!

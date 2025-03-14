@@ -40,7 +40,8 @@ SUBSYSTEM_DEF(haunting)
 	hauntings["[MODE_CALM]"] = list(
 		/datum/station_haunt/light_flicker,
 		/datum/station_haunt/watching_me,
-		/datum/station_haunt/chills
+		/datum/station_haunt/chills,
+		/datum/station_haunt/lurker
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -51,7 +52,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/hallucinate,
 		/datum/station_haunt/vent_crawler,
-		/datum/station_haunt/shuttle_move
+		/datum/station_haunt/shuttle_move,
+		/datum/station_haunt/lurker
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -72,7 +74,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/knock_down,
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/bleeding,
-		/datum/station_haunt/shuttle_move
+		/datum/station_haunt/shuttle_move,
+		/datum/station_haunt/lurker/can_appear
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -94,7 +97,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/bleeding,
 		/datum/station_haunt/blood_rain,
 		/datum/station_haunt/entity_spawn,
-		/datum/station_haunt/shuttle_move
+		/datum/station_haunt/shuttle_move,
+		/datum/station_haunt/lurker/can_appear
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -116,6 +120,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/bleeding,
 		/datum/station_haunt/blood_rain,
+		/datum/station_haunt/lurker/can_appear,
+		/datum/station_haunt/lurker/pyromanic,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn
 		)
@@ -132,6 +138,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/knock_down,
 		/datum/station_haunt/bleeding,
 		/datum/station_haunt/blood_rain,
+		/datum/station_haunt/lurker/will_appear,
+		/datum/station_haunt/lurker/pyromanic,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
@@ -162,9 +170,9 @@ SUBSYSTEM_DEF(haunting)
 	haunt_score = 0
 
 /datum/controller/subsystem/haunting/proc/find_player_target()
-	if(!global.player_list.len)
+	var/mob/potential = get_random_player()
+	if(!potential)
 		return
-	var/mob/potential = pick(global.player_list)
 	if(potential.away_from_keyboard || isAI(potential) || potential.is_incorporeal())
 		return
 	current_player_target = WEAKREF(potential)
@@ -178,6 +186,11 @@ SUBSYSTEM_DEF(haunting)
 		clear_player_target()
 		return null
 	return M
+
+/datum/controller/subsystem/haunting/proc/get_random_player()
+	if(!global.player_list.len)
+		return null
+	return pick(global.player_list)
 
 /datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
 	if(M.away_from_keyboard || !M.client || M.is_incorporeal())
