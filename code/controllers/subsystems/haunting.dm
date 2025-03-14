@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 80
+#define MODE_SIZE 300
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -215,7 +215,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/weigh_haunting()
 	// Accumulated haunts
-	new_score = rand(-0.005,0.001)
+	new_score = rand(-0.09,0.05)
 	for(var/key in influences)
 		if(!current_influences[key])
 			continue
