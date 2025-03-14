@@ -28,12 +28,12 @@
 	body = 	"When on board any station, there are expectations that come with crew jobs based on their role, and their experience. These are the expectations from corporate E-Shui's standards and viewings, and a crewmember may have greater, or lesser, expectations held upon them by their chief of staff. \
 			<hr/><b>All Crew</b><hr/> \
 			E-Shui's motto is \"Safety Third\" while this motto may sound hazardous or confusing, this does not mean safety comes third in any numbered list. It should instead be a state of mind enforced by all crew. If safety is first, no risks are taken and no tasks are completed. Rescuing crew from a hazardous situation, repairing damages, operating the station, and all other tasks are all innately hazardous, so if safety is first, the task cannot be completed. There is a risk in all things, therefore safety cannot be first. Nobody on the station is responsible for your safety, you are responsible for your own safety. Medical is only in charge of fixing you after you failed to account for your own safety needs appropriately. \
-
+			<br/>\
 			<hr/><b>Command:</b><hr/> \
 			The command team is generally required to stay on station at all times. They are not to embark on 'away missions', 'expeditions', 'maintenance diving' or other risky activities that take them away from the station. Doing so is considered a misuse of their time, and an unjustifiable risk to their position and rank. \
 			<br/><br/><b>The Captain</b> is responsible for maintaining order on the station, delegating tasks to the heads of staff, and ensuring communication between the heads of staff is appropriate. The Captain is not to perform duties of any department other than command on station, even in a crisis. Their role is to maintain order, and trust their heads of staff to run the station as necessary, and to fill in any missing gaps as necessary. EX: if there is no Head of Security, during a crisis the captain is expected to act as the HoS. \
 			<br/><br/><b>The Command Secretary</b> (Formerly known as Head of Personnel, also called Executive Officer) is a flexible position. Acting as a liaison and final word when there's an argument between heads of staff, having near final say on SoP direction and interpretation, acting judge on the station, and resolving inter-department conflicts with staff. They can change crewmember IDs as necessary and are responsible for maintaining and verifying employment records of staff. With a captain present they can be tasked to act in their stead to carry out tasks for the function of the station while the captain operates in filling in another head's position. \
-
+			<br/>\
 			<hr/><b>Medical:</b><hr/> \
 			Medical staff are expected to assist the station crew in staying alive, filling prescriptions, noting medical records, and resleeving the crew too far gone, or already deceased. They are expected to have an understanding of medical Triage, and at bare minimum basic treatment knowledge. They are expected to understand that the resleever is expensive and is a last resort on treatment, not a lazy cure-all, and the legality of using it. \
 			It is noted to remember that triage is in order of injury, not order of command. The captain with a papercut is a lower priority than a station guest missing a leg. \
@@ -44,7 +44,7 @@
 			<br/><br/><b>Geneticists</b> are expected to have a moderate understanding of triage and patient treatment, and a thorough understanding of alien biology. Their job entails researching genetic conditions, curing ailments, and providing 'enhancements' to crew. But in the event of a crisis, they are expected to provide at least minor aid to medical operations and crew.\
 			<br/><br/><b>Virologists</b> are expected to have a thorough understanding of contamination and germ theory, and a moderate understanding of patient care. Their job entails curing ailments and diseases, and understanding micro-fauna. In a crisis, they are expected to provide at least minor aid to medical operations, but outbreaks and sanitization will take priority.\
 			<br/><br/><b>Chemists</b> are expected to have a moderate understanding of patient care, and a thorough understanding of alien biochemistry and medication usage. Their job is to supply the medical department with necessary medications, fill any patient prescriptions needed, and provide general aid to medical operations. They are not required to help with mass casualty care.\
-
+			<br/>\
 			<hr/><b>Security:</b><hr/> \
 			Security is expected to have a thorough understanding of corporate law, crew rights, and condition codes. They are expected to have a moderate understanding of weapon usage, but a thorough understanding of nonlethally subduing suspects. Their role on the station is to maintain order and peace. Enforce station safety, and act as the guiding arm in a crisis to ensure as many crew survive as possible, and threats are dealt with with the least amount of force necessary. Security should protect, in order: The Terraformer, The Station, Any Sensitive Information, The Station crew, The Station AI, Any Guests. \
 			<br/><br/><b>The Head of Security</b> is expected to have a thorough understanding of corporate law, and strong leadership skills. They are required to be able to operate any weapon in the green and blue armories, most weapons in the Red armory, proper armor choice, and are required to know how to drive a tank. They are responsible for leading security, issuing weapon permits to non-security crew as needed. \
@@ -52,24 +52,24 @@
 			<br/><br/><b>Security Officers</b> are the arm of the warden and head of security. They are expected to patrol the station, maintain vigilance, and ensure station order. They are expected to have a moderate understanding of corporate law, and capability in nonlethal target subduing. They are required to know how to operate a stun baton and tazer. \
 			<br/><br/><b>Detectives</b> are in charge of analyzing crime scenes and legal issues, operating as the lawyer for the station. They listen to the Head of Security and Warden to prepare cases, and help ensure station security follows SoP. They are not expected to enforce station law, make arrests, or subdue criminals. They are expected to have a moderate to thorough understanding of their tools for crime scene analysis, a thorough understanding of corporate law, and a moderate understanding of their firearm. \
 			<br/><br/><b>Security Medics</b> follow standard chain of command, with CMO being a higher priority than HoS. They report to security for operational tasks and primary duties, and additionally report to medical for supplies and treatment equipment. They are expected to assist in keeping officers alive above all other patients, and are not authorized to make arrests aside from medical arrests. They are expected to have decent knowledge of hand to hand combat.\
-
+			<br/>\
 			<br/><hr/><b>Engineering:</b><hr/> \
 			Engineering crew is expected to be able to repair any damaged section of the station, start the main engine, operate the backup incinerator, and operate the solar backup array. They are expected to know the locations of backup generators, and know safety precautions with live wires, and basic understanding of atmospherics. \
 			<br/><br/><b>The Chief Engineer</b> is expected to have deep understanding of every aspect of engineering, as well as leadership skills. They are expected to be able to manage critical repairs during an orange-level event. They are expected to understand proper RCON management, and the power requirements of every department, and the prioritizing of which departments are in need of repairs first should multiple departments get damaged. They are expected to have deep understanding of hazardous atmospheric conditions, and terraformer safety. \
 			<br/><br/><b>Engineers</b> are expected to have a good understanding of construction, repairs, safety in hazardous atmospheres, and repairs to most station infrastructure. They are expected to know proper safety with live wires, and operation of the station's power sources. They are not expected to have a deep understanding of atmospherics. \
 			<br/><br/><b>Atmospheric Technicians</b> are expected to have a thorough understanding of the station's atmospherics supply, power draw, gas mixing. They are expected to understand safe procedures for operating within the Terraformer, and how to operate in environments with exceedingly hazardous atmospheric conditions. They are not expected to have a deep understanding of engine power supply operations, and are expected to have only a moderate understanding of station repair. \
-
+			<br/>\
 			<hr/><b>Research:</b><hr/> \
 			Research is expected to improve and increase the station's capabilities by finding improvement and lackluster capability in the station's various tools and departments. \
 			<br/><b>The Research Director</b> is expected to have a deep understanding of at least half of the sub-sections of research; R&D, Xenoflora, Xenobiology, Xenoarcheology, Phoronics, Hazardous Xenobiology, Bluespace Telescience, Particle Acceleration and Creation, and extra-planetary exploration. They are expected to be able to lead researchers, focus them, and handle any research-created events. They are not expected to lead in any Moderate or Higher level events on station, except when other heads of staff are absent or deceased. \
 			<br/><b>Researchers</b> are expected to know at least one area of research, and to perform the tasks of that job as it requires. They are expected to serve the station first, and their own research aims second. They are expected to follow command orders during a crisis, and to avoid station damage whenever possible. \
-
+			<br/>\
 			<hr/><b>Cargo:</b><hr/> \
 			Cargo is responsible for supplying the station with various supplies to continue operations and morale. From ordered supplies from E-shui main, or from mined resources from the reclamation yard. \
 			<br/><b>The Quartermaster</b> leads cargo, they are expected to have a thorough understanding of all of cargo's departments: Mining, and Freight. While under most stations they fall under the head of personnel, under E-shui law they are classified as a head of staff themselves, though the lowest head in the chain of command. They are responsible for the productivity of cargo, and to assist in any areas cargo is lacking. \
 			<br/><b>Miners</b> are expected to know proper EVA procedures, operation in a null-G and vacuum. They are expected to know how to operate all mining equipment, and how to fly the supplied mining trawler to access the reclamation yard. They are expected to know efficient operation of the ore processor for common materials. \
 			<br/><b>Cargo Technicians</b> are expected to know the ordering procedures of the station, and have at least a moderate understanding of department required goods to prevent waste and misuse of controlled cargo. They are expected to know the station layout for manual delivery, and operation of the disposal mail system. They are expected to know the location of the incinerator for trash disposal. \
-
+			<br/>\
 			<hr/><b>Civilian:</b><hr/> \
 			<br/>Civilian departments are expected to have general understanding of their chosen task, and their expectations during various condition codes, and to have a basic understanding of the chain of command. But are not expected to perform any extravagant tasks, or expected to have any extravagant knowledge. \
 			<br/><b>Chefs, Bartenders, and Botanists</b> are expected to provide the nourishment for the crew. While each one is specialized to their individual task, be it serving drinks, cooking food, or growing ingredients, they are expected to have a minimal understanding of the other areas of their shared department, and to have a moderate understanding of their specialized profession. \
@@ -77,7 +77,7 @@
 			<br/><b>Janitors</b> are expected to maintain the cleanliness of the station, and to have a moderate understanding of the station layout. Signage must be placed near floors prior to mopping. It is recommended to know at least one language spoken commonly on station. \
 			<br/><b>Librarians</b> are expected to keep the library stocked with appropriate books, and to assist any off-station journalists. They are expected to have a thorough understanding of the station's layout and to give tours to new members of the station. They are required to be able to read and write legibly. \
 			<br/><b>Interns and Station Guests</b> are expected to understand the environmental hazards of the station. \
-
+			<br/>\
 			<hr/><b>Station AI and Synthetics:</b><hr/> \
 			The Station AI is bound to its laws, and to the crew. It is the lowest on the chain of command, and cannot give orders. It is to aid the crew with door access in any way they deem necessary for their station operations, according to their chain of command, corporate law, and station condition code. \
 			<br/><b>Synthetics</b> to include any mobile artificial intelligence, cyborgs, 'dogborgs' and other such machines, are under the service of the station AI, and their own laws, to be synced with station AI's law on arrival. They act as mobile door openers, and follow the specialized functionality of their chasis. They are not expected to serve any function beyond their specialization, and opening doors as needed by crew, according to the crew's chain of command and station condition code."
@@ -155,15 +155,18 @@
 			To conserve station resources, equipment should be returned to the department in appropriate storage locations immediately when it is no longer required for the task. Failure to return equipment is considered theft of station property. \
 			Condition codes are separated into Low Level, Moderate Level, and Severe. These severities define legal recourse for disobeying orders under specific levels and provide a guide for understanding severity of the situation. \
 			<hr/><b><center>Low Level Threats.</center></b> \
+			<br/>\
 			<center><b>Green:</b></center> \
 			Security must declare the reason for an arrest to the suspect, along with the reason for the arrest. Security may not use force until suspects are fleeing, or openly hostile. Every attempt to peacefully subdue a suspect must be made by security personnel. Security may only use nonlethals, such as tazers, batons, rubber bullets, and pepper spray. No non-security crew may attempt \"civilian arrests.\" Security may not access the Blue or Red armory. Security may not place barricades, use door braces, or otherwise impede access to the station.<br/> \
 			All security personnel and heads of staff must have suit sensors on full (Tracking). All medical staff must have sensors on Vitals. No other crew are requried to have suit sensors on any setting, but are encouraged to have them on at least Binary sensors.<br/> \
 			Department crew are not to wear hardsuits, soft suits, or rigs unless actively venturing outside, or into hazardous atmospheric conditions. Crew wearing aforementioned equipment without reason is in violation of 'Misuse of Company Equipment', and subject to search and seizure. Any crew wearing any hardsuits, rigs, or soft suits should be questioned by security, but not immediately arrested. \
+			<br/>\
 			<center><b>Yellow:</b></center> \
 			Security does not have to announce, or give reason for an arrest until after incarceration. Security may only use force as necessary to subdue existing threats. Security may use any resources found within the Green Armory as needed, to include door bracing suspected areas. Braces must be removed after the situation is resolved. Non-security crew may attempt \"civilian arrests\" with nonlethal force only, and only for suspects in a department they are not a part of, and only while the arresting crew member is a part of that department. The Warden or the Head of Security may temporarily \"deputize\" crew members to assist in security matters, counting them as security personnel for the duration of the threat. Security may not access the Blue or Red armory. \
 			Department crew are not to wear hardsuits, soft suits, or rigs without approval from security to aid in the current station threat. Crew wearing hardsuits, softsuits, or rigs under code Yellow without approval are to be stopped and questioned, as it is considered suspicious activity. Security should verify that if a Hardsuit or Rig does not match department with the crew wearing it, security should immediately arrest and charge the suspect with confirmed theft of station equipment. \
 			Non-security crew are not to wear body armor under any circumstance. \
 			<hr/><b><center>Moderate Level Threats.</center></b> \
+			<br/>\
 			<center><b>Blue:</b></center> \
 			Security does not have to announce arrests, and does not have to provide reasoning until after the situation is resolved. Security is allowed to use any equipment located in the Blue armory to subdue the station threat. Departments are encouraged to lock down to mitigate access to station threats, unless remaining open is required by security to subdue the station threat. All departments except command must obey security orders. \
 			Hardsuits, and rigs are not to be worn by any station crew except security, and approved medical staff for paramedic reasons. Soft suits are authorized to be worn at medical or security discretion. All other crew wearing aforementioned gear or armor, are to be immediately counted as a threat to the station and neutralized. \
@@ -171,15 +174,18 @@
 			<center><b>Violet:</b></center> \
 			Security operates as though under condition Blue. Medical staff is considered station authority, The Chief Medical Officer takes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by medical staff. Triage facilities must be established in a safe area, decided by medical staff. Security is to aid in evacuating crew to safe Triage locations and ensuring compliance with medical crew with all necessary force warranting a code Blue event. \
 			Hardsuits and rigs are recommended to be worn by medical staff. And are not to be worn by any other station crew without approval from medical command. Soft suits are authorized to be worn by crew at medical discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned. \
+			<br/>\
 			<center><b>Orange:</b></center> \
 			Security operates as though under condition Blue. Engineering staff is considered to be station authority, the Chief Engineer assumes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by engineering staff. All non-engineering crew are to report to a designated safe area to avoid further damage, risk of injury, or impedance of repair operations. \
 			Hardsuits, and rigs are recommended to be worn by engineering staff. And are not to be worn by any other station crew without approval from engineering command. Soft suits are authorized to be worn by crew at medical or engineering discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned. \
 			<hr/><b><center>Severe Level Threats.</center></b> \
+			<br/>\
 			<center><b>Red:</b></center> \
 			Security is authorized immediate lethal force to any threat to the station or terraformer, and should not make arrests. Security is authorized any equipment in the Red Armory. Equipment must be returned at the end of the Red-level event. All departments must lock down unless security access, or evacuation, is needed in to or out of the department. All crew must muster to a safe Triage location decided by Medical and Security, and shelter in place until the event has passed, or evacuation is initiated.<br/> \
 			All crew are required to have suit sensors on full.<br/> \
 			Hard suits and Rigs are not to be worn by non-security crew unless authorized. Soft suits are to be handed out and worn at medical or security discretion. Non-authorized crew wearing a hard suit or a rig are shoot-on-sight.<br/> \
 			Non-security crew wearing body armor of any kind are to be considered part of the direct threat to the station and shot on sight.  \
+			<br/>\
 			<center><b>Delta:</b></center> \
 			Security is authorized immediate lethal force to any threat to evacuation efforts. Medical is to oversee evacuation efforts. All other crew are to proceed to muster locations or evacuation points immediately. Failure to obey any order from Security or Medical is considered a threat to crew survival, and is to be met with Red-Level force to neutralize the threat to crew survival. \
 			Hard suits and rigs are not to be worn by non-security crew unless previously authorized. Soft suits are to be worn by all crew as necessary to make it to evacuation points. \
@@ -190,13 +196,21 @@
 	author = "E-Shui Official"
 	body = 	"Through either the natures of a frontier world, crew death, crew departure, or otherwise, you will invariably not have a fully staffed crew. This is where the Chain of Command comes into play, everyone has a boss, and almost everyone has someone under them. Knowing who your boss is at any given moment is critical. \
 			<br/>From the top, the head authority is Central Command, you will rarely engage with CC directly, things have gone horribly wrong if so. CC reports to E-Shui Main. \
+			<br/>\
 			<br/>The Captain of the station, sometimes called the Colony Director, is the highest authority on the station. However, there is an exception for the CMO being a higher authority for determining the health of the captain.\
+			<br/>\
 			<br/>The Chief Medical Officer is the second highest command of the station, following the lack of a CD, the CMO is responsible for the safety and wellfare of the entire station. \
+			<br/>\
 			<br/>Following the CMO is the Head of Security, who is responsible for the security of the station. Depending on alert status, the HoS may take authority over the CMO. \
+			<br/>\
 			<br/>Following HoS is the Chief Engineer, who is responsible for the maintenance and function of all station functions, as well as assembling evacuation points, and assisting in recovery efforts as needed. \
+			<br/>\
 			<br/>Following the CE is the Research Director, who is in charge of the research wing. \
+			<br/>\
 			<br/>Following the RD is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain. \
+			<br/>\
 			<br/>Following the QM is the Command Secretary (Formerly known as Head of Personnel, sometimes called the Executive Officer), while technically the lowest head, they can operate just below the captain during a crisis if delegated to. \
+			<br/>\
 			<hr/>In the unlikely event where there is no head authority on the station, individuals of each department take charge based on seniority and experience, as follows. \
 			<br/>Command Secretary, Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests. \
 			<br/>The lowest ranking in the chain of command is the station AI. The station AI has no authority, and can never give orders to any non-synthetic crew, regardless of its laws. Synthetic crew and cyborgs fall under the station AI."
@@ -204,133 +218,144 @@
 /datum/sop_entry/stationlaw
 	title = "Station Law"
 	author = "E-Shui Official"
-	body = 	 "Station law is the regulations all E-Shui crew abide by upon enlistment of service. Crew should be made aware of any changes to station law, and should familiarize themselves with station law. Guests visiting E-Shui station are also to be held under E-Shui law, and are not exempt from behaviors. Ignorance is not an excuse for crew or guests on board any E-Shui station.\
+	body =	"Station law is the regulations all E-Shui crew abide by upon enlistment of service. Crew should be made aware of any changes to station law, and should familiarize themselves with station law. Guests visiting E-Shui station are also to be held under E-Shui law, and are not exempt from behaviors. Ignorance is not an excuse for crew or guests on board any E-Shui station.\
 			<br/>Station law is divided into crimes, and severity. It is up to current security or station judge to decide on the severity of the charge.\
 			<br/>If a crew member is arrested for a crime, they have the right to request a station lawyer, IAA, or centcom associate to act as legal council. Should the case be desired to be brought to a trial, a station lawyer, IAA, centcom associate, or any head of department except for the head of security is authorized to act as the station judge as a neutral third party to mediate the discourse and evidence presented against the accused.\
-			<br/>If a crew member wishes to have a trial, they are to be held in security custody until such a trial can be delivered. However, their stay in security custody must be counted as part of their sentence. Should their stay in custody meet or exceed the time required for the accused crime: they are to be released, and have the crime added to their record for future review by E-Shui corporate lawyers.\
-			<br/>E-Shui station guests are not authorized legal council, and are not authorized the option of a trial, except when approved by on-station judges.\
+			<br/>If a crew member wishes to have a trial, they are to be held in security custody until such a trial can be delivered. However, their stay in security custody must be counted as part of their sentence. Should their stay in custody meet or exceed the time required for the accused crime: they are to be released, and have the crime added to their record for future review by E-Shui corporate lawyers. \
 			<hr/> \
 			<center><b>Severities</center></b> \
-			<br/>Every crime must be classified under a severity. The severity relates to the intensity and risk that the crime possessed to crew and station, or the damage that the crime caused to crew and station. Any Felony where the sentence has the potential of becoming an Execution Without Resleeve must be held at an E-Shui authorized court. The trial must be observed and decided upon by an odd-numbered jury of no less than 5.\
-			<br/>In the event a suspect is being charged with multiple times, the sentence in the brig is recommended to be the additive time of every crime the suspect is found guilty of. However, the exact time of any sentence is left to the interpretation of the security commander, or a station judge.\
-			<br/><b>Misdemeanors:</b> Any crime that caused minor injury to other crew, or posed no to minor risk to the station and crew. Minimum sentence: None.\
-			<br/><b>Infractions:</b> Any crime that caused moderate injury to other crew, or posed moderate risk to the station and crew. Minimum sentence: 30 minutes brig time, 500 Thalers. Additive to minimum sentence of the accused crime.\
-			<br/><b>Felonies:</b> Any crime that caused serious injury or death to other crew, or posed severe risk to the station and crew. Minimum sentence: Hold Until Transfer.\
+			<br/>Every crime must be classified under a severity. The severity relates to the intensity and risk that the crime possessed to crew and station, or the damage that the crime caused to crew and station. Any Felony where the sentence has the potential of becoming an Execution Without Resleeve must be held at an E-Shui authorized court. The trial must be observed and decided upon by an odd-numbered jury of no less than 5. \
+			<br/>In the event a suspect is being charged with multiple times, the sentence in the brig is recommended to be the additive time of every crime the suspect is found guilty of. However, the exact time of any sentence is left to the interpretation of the security commander, or a station judge. \
+			<br/>Misdemeanors: Any crime that caused minor injury to other crew, or posed no to minor risk to the station and crew. Minimum sentence: None. \
+			<br/>Infractions: Any crime that caused moderate injury to other crew, or posed moderate risk to the station and crew. Minimum sentence: 30 minutes brig time, 500 Thalers. Additive to minimum sentence of the accused crime. \
+			<br/>Felonies: Any crime that caused serious injury or death to other crew, or posed severe risk to the station and crew. Minimum sentence: Hold Until Transfer. Tracking implant. \
 			<hr/> \
 			<center><b>Charges</center></b> \
-			<br/>For Misdemeanors or Infractions, if there is a victim of the crime they are allowed to not press charges. In this situation, security cannot arrest, detain, or otherwise punish the accused crew member for the alleged crime, and the crime is not to be entered into any records. For crimes that affect the station itself security and command are the assumed victims.\
-			<br/>For Felonious crimes, the accused crew member must be arrested and charged, regardless of any victims pressing or not pressing charges, except in the case of Willful Peril, when it can be demonstrated beyond shadow of doubt. Felonies assume the victim to be central command, and E-Shui.\
+			<br/>For Misdemeanors or Infractions, if there is a victim of the crime they are allowed to not press charges. In this situation, security cannot arrest, detain, or otherwise punish the accused crew member for the alleged crime, and the crime is not to be entered into any records. For crimes that affect the station itself security and command are the assumed victims. \
+			<br/>For Felonious crimes, the accused crew member must be arrested and charged, regardless of any victims pressing or not pressing charges, except in the case of Willful Peril, when it can be demonstrated beyond shadow of doubt. Felonies assume the victim to be central command, and E-Shui. \
 			<hr/> \
 			<center><b>Exceptions</center></b> \
-			<br/><b>Willful Peril:</b> Any crime or event where the victim is aware of the danger, and risk posed, is a 'Victim of Willful Peril'. In such a situation, the suspect cannot be charged with any crime for any; death, dismemberment, or injury that occurs to the victim. Examples include: Allowing oneself to be consumed by a predator, allowing oneself to partake in risky experiments in research, allowing oneself to work in a hazardous location while understanding the hazards present.\
-			<br/><b>Self Defense:</b> A crew member is authorized any force necessary to protect the lives of themselves, the crew they are responsible for, and their station, up until the threat is subdued. E-Shui castle doctrine states that one's own department is their castle, and must be protected.\
+			<br/>Willful Peril: Any crime or event where the victim is aware of the danger, and risk posed, is a 'Victim of Willful Peril'. In such a situation, the suspect cannot be charged with any crime for any; death, dismemberment, or injury that occurs to the victim. Examples include: Allowing oneself to be consumed by a predator, allowing oneself to partake in risky experiments in research, allowing oneself to work in a hazardous location while understanding the hazards present. \
+			<br/>\
+			<br/>Self Defense: A crew member is authorized any force necessary to protect the lives of themselves, crew they are responsible for, and their station, up until the threat is subdued. E-Shui castle doctrine states that one's own department is their castle, and must be protected. \
+			<br/>\
+			<br/>Security officers, and heads acting in the place of, are allowed to substitute brig time or fines with a period of community service; no less than double that of the time they would otherwise serve in the brig, and no less than 30 minutes, with an end duration befitting that of the crime and severity. The officer and victims of the crime are allowed to decide the manner that of which the community service will be enacted. \
+			<br/>\
+			<br/>Individuals on a community service period must have suit sensors on maximum. \
+			<br/>\
+			<br/>Felonies may not have brig time replaced with community service, and must remain HuT. \
 			<hr/> \
-			<center><b>Secure areas:</center></b> \
-			<br/>The following areas are defined as Secure Areas due to the innate hazard they present. Any incident of trespassing in these areas is an automatic felony and should be treated as a red-level threat:\
-			<br/>The Terraformer, the Vault, the AI Chamber, Telecommunications, the Armory, the Brig.\
+			<center><b>Secure areas</center></b> \
+			<br/>These areas are defined as Secure Areas due to the innate hazard they present. Any incident of trespassing in these areas is an automatic felony: The Terraformer, the Vault, the AI Chamber, Telecommunications, the Armory, the Brig. Trespassing in a secure area is grounds to consider the individual an automatic red-level threat, and is to be responded to with all necessary force to subdue the threat. \
 			<hr/> \
-			<center><b>Statutes:</center></b> \
-			<br/><b>Animal Cruelty:</b> To inflict unnecessary suffering or harm upon animals with malicious intent. To include harassing or killing non-hazardous wildlife. <b>Minimum sentence:</b> 5 minutes brig, or 550 Thalers.\
+			<center><b>Confinement</center></b> \
+			<br/>Upon being processed by security and sentenced to a brig stay. A crew member is to have their clothing and all equipment removed from them. Upon being put into the brig, they must be supplied with shoes, clothing, a PDA, and any required medications. These items must not be the ones seized from them, with the exception of medications after reviewing contents. Their items must be returned to them upon their release from custody. Detained crew are entitled to medical examination upon request.\
+			<br/>Security officers are allowed Internal Confinement methods, also known as 'belly brigging', provided they have passed the appropriate 'internal confinement' exam (see related document) in lieu of any brig time or detention methods, to include initial arrest conditions. Security officers must have their grade reflected in their employment records for the method to be authorized. Security officers with a valid grade are encouraged to utilize this method with 'flighty' prisoners.\
+			<br/>All individuals charged with a felony, or any other 'hold until transfer' crime, are authorized to be 'bellybrigged' even by individuals not certified. Prisoners must be mind-scanned post arrest, and prior to any injury occurring. Individuals are authorized to be digested, presumed they are resleeved immediately upon an IAA, head of staff, or centcom representative for their trial, and may not be resleeved without security present to re-confine for the trial. Medical staff that knowingly resleeve individuals in such long-term confinement methods will be liable for the escape, or actions of the charged individual and may be charged under station SoP. \
+			<hr/> \
+			<center><b>Infractions</center></b> \
 			<br/>\
-			<br/><b>Assault:</b> To use or threaten physical force against someone, without intent to kill or seriously injure. <b>Minimum sentence:</b> 10 minutes brig, 1000 Thalers\
+			<br/>Animal Cruelty: To inflict unnecessary suffering or harm upon animals with malicious intent. To include harassing or killing non-hazardous wildlife. Minimum sentence: 5 minutes, or 550 Thalers. \
 			<br/>\
-			<br/><b>Assault With a Deadly Weapon:</b> To use or threaten physical force against someone with usage of a deadly weapon. Biting is considered a deadly weapon. <b>Minimum sentence:</b> 30 minutes brig, 1500 Thalers.\
+			<br/>Assault: To use or threaten physical force against someone, without intent to kill or seriously injure. Minimum sentence: 10 minutes brig, 1000 Thalers \
 			<br/>\
-			<br/><b>Battery:</b> To have unwanted, intentional, physical contact, even where the contact is nonviolent. <b>Minimum sentence:</b> 350 Thalers.\
+			<br/>Assault With a Deadly Weapon: To use or threaten physical force against someone with usage of a deadly weapon. Biting is considered a deadly weapon. Minimum sentence: 30 minutes, 1500 Thalers. \
 			<br/>\
-			<br/><b>Bribery:</b> To attempt to convince security or command to waive punishment or grant freedoms, through the usage of money or favors. <b>Minimum charge:</b> 30 minutes brig, 300 Thalers.\
+			<br/>Attempted Murder: To attempt, with intent, to kill another crewmember but fail in the efforts to do so. Minimum sentence: 2000 thalers, trial required. \
 			<br/>\
-			<br/><b>Coercion:</b> To force another crew member, through blackmail, force, or other methods, to commit crimes in your stead. <b>Minimum sentence:</b> 20 minutes brig, 300 Thalers, plus the charges of the coerced crimes.\
+			<br/>Battery: To have unwanted, intentional, physical contact, even where the contact is nonviolent. Minimum sentence: 350 Thalers. \
 			<br/>\
-			<br/><b>Conspiracy:</b> To collaborate, but not directly assist, another individual who acts against the station or crew in violent or destructive manners. <b>Minimum sentence:</b> 30 minutes brig, 700 Thalers.\
+			<br/>Bribery: To attempt to convince security or command to waive punishment or grant freedoms, through the usage of money or favors. Minimum charge: 30 minutes brig, 300 Thalers. \
 			<br/>\
-			<br/><b>Contraband:</b> To be in possession of contraband that could pose a threat to the crew or station. <b>Minimum sentence:</b> Immediate search and seizure, 200 Thalers.\
+			<br/>Coercion: To force another crew member, through blackmail, force, or other methods, to commit crimes in your stead. Minimum sentence: 20 minutes brig, 300 Thalers, in addition to the charges of the coerced crimes. \
 			<br/>\
-			<br/><b>Dereliction of Duty:</b> Deliberate or accidental failure to perform an obligation of one's profession without a valid excuse. <b>Minimum sentence:</b> 15 minutes brig, 1200 Thaler fine. If Felonious: Permanent Demotion.\
+			<br/>Conspiracy: To collaborate, but not directly assist, another individual who acts against the station or crew in violent or destructive manners. Minimum sentence: 30 minutes brig, 700 Thalers. \
 			<br/>\
-			<br/><b>Disrespect to the Dead:</b> To abuse bodies of dead or previously dead employees, or to prevent the resleeving of a deceased crew member. <b>Minimum sentence:</b> 10 minutes brig, or 1000 Thalers.\
+			<br/>Contraband: To be in possession of contraband that could pose a threat to the crew or station. Minimum sentence: Immediate search and seizure, 200 Thalers. \
 			<br/>\
-			<br/><b>Disturbing the Peace:</b> Engaging in public erotic acts, nudity without permit, excessive yelling for no reason, hazardously throwing items, minor harassment, etc. <b>Minimum sentence:</b> 3 minutes brig, or 300 Thalers.\
+			<br/>Dereliction of Duty: Deliberate or accidental failure to perform an obligation of one's profession without a valid excuse. Minimum sentence: 15 minutes brig, 1200 Thaler fine. If Felonious: Permanent Demotion. \
 			<br/>\
-			<br/><b>Escape from Confinement:</b> To escape from confinement as someone who was serving a sentence or awaiting a court judgment. <b>Minimum sentence:</b> Re-capture, re-application of any previous crimes, 30 minutes brig. If escaping from a felony, lethal force is authorized.\
+			<br/>Disrespect to the Dead: To abuse bodies of dead or previously dead employees, or to prevent the resleeving of a deceased crew member. Minimum sentence: 10 minutes brig, or 1000 Thalers. \
 			<br/>\
-			<br/><b>Exceeding Official Powers:</b> To act outside of what is allowed by the chain of command. <b>Minimum sentence:</b> 30 minutes brig.\
+			<br/>Disturbing the Peace: Engaging in public erotic acts, nudity without permit, excessive yelling for no reason, hazardously throwing items, minor harassment, etc. Minimum sentence: 3 minutes brig, or 300 Thalers. \
 			<br/>\
-			<br/><b>Excessive Use of Force:</b> To use noticeably more than the required force to subdue a suspect or threat. <b>Minimum sentence:</b> 10 minutes brig, 550 Thalers, potential demotion.\
+			<br/>Escape from Confinement: To escape from confinement as someone who was serving a sentence or awaiting a court judgment. Minimum sentence: Re-capture, re-application of any previous crimes, 30 minutes brig. If escaping from a felony, lethal force is authorized. \
 			<br/>\
-			<br/><b>Failure to Execute an Order:</b> To ignore or disregard a lawful order from a superior. <b>Minimum sentence:</b> 5 minutes brig, 250 Thalers.\
+			<br/>Exceeding Official Powers: To act outside of what is allowed by the chain of command. Minimum sentence: 30 minutes brig. \
 			<br/>\
-			<br/><b>Failure to Obey Safety Protocol:</b> To willfully ignore safety measures keeping crew out of a crisis zone. <b>Minimum sentence:</b> 10 minutes brig starting after the crisis is resolved, 600 Thalers.\
+			<br/>Excessive Use of Force: To use noticeably more than the required force to subdue a suspect or threat. Minimum sentence: 10 minutes brig, 550 Thalers, potential demotion. \
 			<br/>\
-			<br/><b>Forgery:</b> To falsify official documents or orders. <b>Minimum sentence:</b> Immediate search. 5 minutes brig, or 500 Thalers.\
+			<br/>Failure to Execute an Order: To ignore or disregard a lawful order from a superior. Minimum sentence: 5 minutes brig, 250 Thalers. \
 			<br/>\
-			<br/><b>Grand Theft:</b> To steal multiple items that either becomes felonious, or exceeds 2000 Thalers in value. <b>Minimum sentence:</b> Immediate search and seizure. Hold until transfer.\
+			<br/>Failure to Obey Safety Protocol: To willfully ignore safety measures keeping crew out of a crisis zone. Minimum sentence: 10 minutes brig starting after the crisis is resolved, 600 Thalers. \
 			<br/>\
-			<br/><b>Harassment:</b> To persistently insult, stalk, ridicule, or otherwise bring undue stress upon another crew member. <b>Minimum sentence:</b> 5 minutes brig, 450 Thalers. Security should ensure to append any additional charges of Sexual Harassment, Slander, or other appropriate crimes on the nature of the harassment.\
+			<br/>Forgery: To falsify official documents or orders. Minimum sentence: Immediate search. 5 minutes brig, or 500 Thalers. \
 			<br/>\
-			<br/><b>Illegal Detention:</b> To arrest, brig, or punish a crew member without proper cause or reason. <b>Minimum sentence:</b> 30 minutes brig, demotion.\
+			<br/>Grand Theft: To steal multiple items that either becomes felonious, or exceeds 2000 Thalers in value. Minimum sentence: Immediate search and seizure. Hold until transfer. \
 			<br/>\
-			<br/><b>Illegal parking:</b> To park a vehicle in such a way that it becomes a nuisance or hazard to crew movement. <b>Minimum sentence:</b> Immediate impound of the vehicle, 500 Thalers. Vehicle cannot be returned from impound until the fine is paid.\
+			<br/>Harassment: To persistently insult, stalk, ridicule, or otherwise bring undue stress upon another crew member. Minimum sentence: 5 minutes brig, 450 Thalers. Security should ensure to append any additional charges of Sexual Harassment, Slander, or other appropriate crimes on the nature of the harassment. \
 			<br/>\
-			<br/><b>Kidnapping:</b> To forcibly imprison, detain, or restrict movement of a crew member, when NOT acting in a lawful security or medical manner. <b>Minimum sentence:</b> 1 hour brig, 1000 Thalers.\
+			<br/>Illegal Detention: To arrest, brig, or punish a crew member without proper cause or reason. Minimum sentence: 30 minutes brig, demotion. \
 			<br/>\
-			<br/><b>Littering:</b> To negligently leave trash, gibs, spills, or other bits of waste around the station. Or failing to restart a malfunctioning disposal outlet.  Minimum sentence:  5 minutes brig, or 200 Thalers and appropriate community service.\
+			<br/>Illegal parking: To park a vehicle in such a way that it becomes a nuisance or hazard to crew movement. Minimum sentence: Immediate impound of the vehicle, 500 Thalers. Vehicle cannot be returned from impound until the fine is paid. \
 			<br/>\
-			<br/><b>Manslaughter:</b> To accidentally kill a crew member, often through negligence, without malice or forethought. <b>Minimum sentence:</b> 1 hour brig, 2000 Thalers. Trial required.\
+			<br/>Kidnapping: To forcibly imprison, detain, or restrict movement of a crew member, when NOT acting in a lawful security manner. Minimum sentence: 1 hour brig, 2000 Thalers. \
 			<br/>\
-			<br/><b>Medical Malpractice:</b> To deviate from medical standards by neglect or omission, in a way that causes injury or death to a patient. <b>Minimum sentence:</b> 2 hours brig, 1500 Thalers.\
+			<br/>Littering:  To negligently leave trash, gibs, spills, or other bits of waste around the station. Or failing to restart a malfunctioning disposal outlet.  Minimum sentence:  5 minutes brig, or 200 Thalers and appropriate community service. \
 			<br/>\
-			<br/><b>Mistreatment of Prisoners:</b> To intentionally act, or cause an act, that puts a non-hostile prisoner's well-being in danger. <b>Minimum sentence:</b> 20 minutes brig.\
+			<br/>Manslaughter: To accidentally kill a crew member, often through negligence, without malice or forethought. Minimum sentence: 1 hour brig, 2000 Thalers. Trial required. \
 			<br/>\
-			<br/><b>Misuse of public radio:</b> To continually broadcast unimportant, untrue, or insignificant messages on public comms, or to continually speak in a non-standard language on public comms. <b>Minimum sentence:</b> Warning, 150 Thalers.\
+			<br/>Mistreatment of Prisoners To intentionally act, or cause an act, that puts a non-hostile prisoner's well-being in danger. Minimum sentence: 20 minutes brig. \
 			<br/>\
-			<br/><b>Murder:</b> To intentionally kill a crew member with premeditated intent. <b>Minimum Sentence:</b> Hold Until Transfer. Trial required.\
+			<br/>Misuse of public radio: To continually broadcast unimportant, untrue, or insignificant messages on public comms, or to continually speak in a non-standard language on public comms. Minimum sentence: Warning, 150 Thalers. \
 			<br/>\
-			<br/><b>Negligence:</b> To fail to perform a job to a safe standard, or create a dangerous situation by lack of proper precautions. <b>Minimum sentence:</b> 200 Thalers.\
+			<br/>Murder: To intentionally kill a crew member with premeditated intent. Minimum Sentence: Hold Until Transfer. Trial required. \
 			<br/>\
-			<br/><b>Obstruction of Duty:</b> To negatively interfere with the duties of the crew. <b>Minimum sentence:</b> Warning, 200 Thalers. (See also: Sabotage)\
+			<br/>Negligence: To fail to perform a job to a safe standard, or create a dangerous situation by lack of proper precautions. Minimum sentence: 200 Thalers. \
 			<br/>\
-			<br/><b>Operating Under the Influence:</b> To operate heavy machinery, vehicles, or sensitive/dangerous equipment while under the influence of drugs or alcohol. <b>Minimum sentence:</b> Indefinite hold until sobriety, 400 Thalers. Security must review any additional consequences of the operation to verify other charges.\
+			<br/>Obstruction of Duty: To negatively interfere with the duties of the crew. Minimum sentence: Warning, 200 Thalers. (See also: Sabotage) \
 			<br/>\
-			<br/><b>Organizing a Breakout:</b> To attempt, or succeed, in freeing criminals from the brig or other holding areas. <b>Minimum sentence:</b> 30 minutes brig.\
+			<br/>Operating Under the Influence: To operate heavy machinery, vehicles, or sensitive/dangerous equipment while under the influence of drugs or alcohol. Minimum sentence: Indefinite hold until sobriety, 400 Thalers. Security must review any additional consequences of the operation to verify other charges. \
 			<br/>\
-			<br/><b>Piracy:</b> To rob a visiting vessel of goods, and/or injure its crew while aboard said vessel. <b>Minimum sentence:</b> Hold Until Transfer. Central Command Tribunal required.\
+			<br/>Organizing a Breakout: To attempt, or succeed, in freeing criminals from the brig or other holding areas. Minimum sentence: 30 minutes brig. \
 			<br/>\
-			<br/><b>Resisting Arrest:</b> To not cooperate with an officer who attempts a lawful arrest, or to evade search. <b>Minimum sentence:</b> 10 minutes brig.\
+			<br/>Piracy: To rob a visiting vessel of goods, and/or injure its crew while aboard said vessel. Minimum sentence: Hold Until Transfer. Central Command Tribunal required. \
 			<br/>\
-			<br/><b>Rubbernecking:</b> Arriving at the scene of an emergency with no other intention than to observe. <b>Minimum sentence:</b> Forceful removal as a code-yellow threat, indefinite hold until the crisis is resolved.\
+			<br/>Resisting Arrest: To not cooperate with an officer who attempts a lawful arrest, or to evade search. Minimum sentence: 10 minutes brig. \
 			<br/>\
-			<br/><b>Terrorism:</b> To engage in acts of violence or destruction, aimed to cause fear to further one's political, religious, or ideological cause. <b>Minimum sentence:</b> Hold Until Transfer.\
+			<br/>Rubbernecking: Arriving at the scene of an emergency with no other intention than to observe. Minimum sentence: Forceful removal as a code-yellow threat, indefinite hold until the crisis is resolved. \
 			<br/>\
-			<br/><b>Theft:</b> To take items from areas one does not have access to, or to take items belonging to others or the station. <b>Minimum sentence:</b> Immediate search, seizure of any illicit items, 5 minutes brig.\
+			<br/>Terrorism: To engage in acts of violence or destruction, aimed to cause fear to further one's political, religious, or ideological cause. Minimum sentence: Hold Until Transfer. \
 			<br/>\
-			<br/><b>Trespassing:</b> To be in an area which a person does not have access to, without permission from those that have access. Or: to be located near a department that has asked you to leave the area. <b>Minimum sentence:</b> 3 minutes brig, or 300 Thalers. Borgs are not exempt from trespassing. Though they have station access, they must have a reason for their presence.\
+			<br/>Theft: To take items from areas one does not have access to, or to take items belonging to others or the station. Minimum sentence: Immediate search, seizure of any illicit items, 5 minutes brig. \
 			<br/>\
-			<br/><b>Sabotage:</b> To hinder the efforts of the crew of station with malicious intent. <b>Minimum sentence:</b> 1 hour brig, 3000 Thaler fine.\
+			<br/>Trespassing: To be in an area which a person does not have access to, without permission from those that have access. Or: to be located near a department that has asked you to leave the area. Minimum sentence: 10 minutes brig, or 300 Thalers. Borgs are not exempt from trespassing. Though they have station access, they must have a reason for their presence. \
 			<br/>\
-			<br/><b>Sedition/Mutiny:</b> To incite rebellion, or rally against the chain of command. <b>Minimum sentence:</b> Felony. Lethal force authorized.\
+			<br/>Sabotage: To hinder the efforts of the crew of station with malicious intent. Minimum sentence: 1 hour brig, 3000 Thaler fine. \
 			<br/>\
-			<br/><b>Suspicious Conduct:</b> To possess a suspiciously large skill set not indicated in records, inquiry about sensitive areas or topics, attempts of impersonation, attempting to conceal identity, possessing equipment not related to a current job or department, etc. <b>Minimum sentence:</b> Immediate search, indefinite hold until investigations are complete, 1000 Thaler fine.\
+			<br/>Sedition/Mutiny: To incite rebellion, or rally against the chain of command. Minimum sentence: Felony. Lethal force authorized. \
 			<br/>\
-			<br/><b>Sexual Assault:</b> To assault, or attempt to assault, another crew member sexually. <b>Minimum sentence:</b> Infraction. 2 hours brig, 2700 Thalers, demotion.\
+			<br/>Suspicious Conduct: To possess a suspiciously large skill set not indicated in records, inquiry about sensitive areas or topics, attempts of impersonation, attempting to conceal identity, possessing equipment not related to a current job or department, etc. Minimum sentence: Immediate search, indefinite hold until investigations are complete, 1000 Thaler fine. \
 			<br/>\
-			<br/><b>Sexual Harassment:</b> To make unwanted sexual advances or obscene remarks towards another employee. <b>Minimum Sentence:</b> 10 minutes brig, OR 650 Thalers.\
+			<br/>Sexual Assault: To assault, or attempt to assault, another crew member sexually. Minimum sentence: Infraction. 2 hours brig, 2700 Thalers, demotion. \
 			<br/>\
-			<br/><b>Slander:</b> To spread false rumors in order to damage another crew member's reputation. <b>Minimum sentence:</b> 5 minutes brig, or 450 Thaler fine.\
+			<br/>Sexual Harassment: To make unwanted sexual advances or obscene remarks towards another employee. Minimum Sentence: 10 minutes brig, OR 650 Thalers. \
 			<br/>\
-			<br/><b>Suicide Attempt:</b> To attempt, or threaten with intent, to commit suicide. <b>Minimum sentence:</b> Indefinite hold in solitary confinement until a psychiatric review is able to be performed.\
+			<br/>Slander: To spread false rumors in order to damage another crew member's reputation. Minimum sentence: 5 minutes brig, or 450 Thaler fine. \
 			<br/>\
-			<br/><b>Unlawful Modification of Cyborg/AI laws:</b> To modify the laws of a Cyborg or artificial intelligence without: need, proper access, or authority. <b>Minimum sentence:</b> 20 minutes, 1400 Thaler fine. Security should apply any trespassing charges as necessary.\
+			<br/>Suicide Attempt:  To attempt, or threaten with intent, to commit suicide.  Minimum sentence:  Indefinite hold in solitary confinement until a psychiatric review is able to be performed. \
 			<br/>\
-			<br/><b>Wrongful Execution:</b> To execute a crew member that was later found to be innocent. <b>Minimum charge:</b> Hold Until Tribunal.\
+			<br/>Unlawful Modification of Cyborg/AI laws:  To modify the laws of a Cyborg or artificial intelligence without: need, proper access, or authority.  Minimum sentence:  20 minutes, 1400 Thaler fine. Security should apply any trespassing charges as necessary. \
 			<br/>\
-			<br/><b>Vandalism:</b> To deliberately damage or deface the station without malicious intent, to include damage or defacement to robots. <b>Minimum sentence:</b> 10 minutes brig, or 400 Thalers and appropriate community service.\
+			<br/>Wrongful Execution:  To execute a crew member that was later found to be innocent.  Minimum charge:  Hold Until Tribunal. \
 			<br/>\
-			<br/><b>Violation of Employee Rights:</b> To deliberately deny an employee rights outlined in the Employee Rights SoP. <b>Minimum sentence:</b> Warning, 100 Thalers.\
+			<br/>Vandalism:  To deliberately damage or deface the station without malicious intent, to include damage or defacement to robots.  Minimum sentence:  10 minutes brig, or 400 Thalers and appropriate community service. \
 			<br/>\
-			<br/><b>Violation of Employee Privacy:</b> To conduct illegal searches and seizures, covertly surveying crew or conducting prolonged camera observation, or a breach of patient confidentiality. <b>Minimum sentence:</b> 30 minutes. All evidence gathered illegally is null.\
+			<br/>Violation of Employee Rights:  To deliberately deny an employee rights outlined in the Employee Rights SoP.  Minimum sentence:  Warning, 100 Thalers. \
 			<br/>\
-			<br/><b>Violation of Injunction:</b> To violate the terms of any injunction made by security staff, command staff, or any other legal authority. <b>Minimum sentence:</b> 10 minutes brig, 400 Thalers."
+			<br/>Violation of Employee Privacy:  To conduct illegal searches and seizures, covertly surveying crew or conducting prolonged camera observation, or a breach of patient confidentiality.  Minimum sentence:  30 minutes. All evidence gathered illegally is null. \
+			<br/>\
+			<br/>Violation of Injunction:  To violate the terms of any injunction made by security staff, command staff, or any other legal authority.  Minimum sentence:  10 minutes brig, 400 Thalers."
 
 
 /datum/sop_entry/contraband
@@ -344,22 +369,35 @@
 			<br/>Officers are required to perform their best judgment in situations in accordance with the guidelines set in SoP documents 'Station Law' and 'Crew Expectations', and must remain in compliance with SolGov Law.\
 			<br/> \
 			<br/>1. Controlled substances without prescription: To include, but not limited to: Painkillers, 'Bliss', Neurotoxins, Reischi, Ambrosia Vulgaris, Drug-imitating Slime, Mindbreaker Toxin, Redeemer's Brew, or any other substance that is addictive, or significantly impairs ones judgment beyond reasonability.\
+			<br/>\
 			<br/>2. False Identification: Possessing a second ID, a faked ID, a weapon permit not signed by the captain, head of security, head of personnel, warden, or central command, or other forms of altering one's identification beyond what is authorized by central command.\
+			<br/>\
 			<br/>3. ID cards with elevated access: Any ID card that has access elevated beyond the standard requirement for that individual's role or position.\
+			<br/>\
 			<br/>4. Lethal weaponry: Any weapon capable of lethality is only authorized for the captain, and security in a red-level event or higher. No weapon permits authorize lethal weaponry. This includes, but is not limited to: Knives, pistols with lethal ammo, laser weaponry with lethal toggles, crossbows, flamethrowers, RPGs, landmines, beartraps, lethal payload grenades, explosives, or any other weapon or device capable of causing severe damage to station or crew.\
+			<br/>\
 			<br/>5. Non-lethal weaponry without a permit: Any other weaponry; stun batons, firearms with rubber or flash rounds, non-lethal payload grenades, laser weaponry without a lethal toggle without a signed matching permit. Only permits signed from the Captain, HoP, HoS, Warden, or central command are authorized.\
 			<br/>  5a. All command staff are authorized one of either: flash, non-lethal laser pistol, or pepperspray.\
+			<br/>\
 			<br/>6. Combative armor: To include improvised armor, padded armors, modified RIGs, or any other device or augmentation meant to elevate one's survival against security forces.\
 			<br/>  6a. Security is authorized any equipment provided in green, blue, or red armories dependent on station alert level, with respect to excessive gear usage.\
+			<br/>\
 			<br/>7. RIGs, Hardsuits, or other EVA gear without appropriate usage. Civilian departments are never authorized any form of hard suit, and only authorized soft suits in an emergency. All other departments are only authorized hard suits while actively using them for their intended purpose, and must be returned to the department when not in use.\
+			<br/>\
 			<br/>8. Holsters are only authorized for security, mining, and command staff.\
+			<br/>\
 			<br/>9. Spying devices: such as camera bugs, radio bugs, unauthorized radio channel access, or other devices to allow an individual to see or hear into areas they otherwise would not have access to.\
+			<br/>\
 			<br/>10. Size-altering chemicals and devices: Such as micro/macrocillin, size guns, bluespace jumpsuits, implants, or any other device that allows one to significantly change one's size, when not being used to restore an individual to a previous, standard biological size.\
+			<br/>\
 			<br/>11. Unauthorized nudity permits: Any usage of a nudity permit with exposed private parts, shaved fur, or any other disqualifying factor from normal authorized usage of a nudity permit.\
+			<br/>\
 			<br/>12. Subversion devices: Such as Cryptographic sequencers (Also called emags), subspace jammers, chameleon kits, spy kits, Electronic Warfare RIG packages, Telekinetic devices, bluespace harpoons, bluespace telecrystals, magic-capable equipment, spellbooks, handheld teleporters, living blob spores, level-7 biohazard plant seeds, or any other equivalent devices or tools intended for subterfuge or hostile actions against the station or its crew.\
 			<br/>  12a. The bluespace harpoon is only authorized by the chief engineer, or research director for usage in their department.\
+			<br/>\
 			<br/>13. Toolbelts and engineering tools: Are only authorized for engineering staff, or researchers while inside of research.\
 			<br/>  13a. Paramedics are authorized a maintenance jack for removing braces or opening unpowered doors in a life-saving emergency.\
+			<br/>\
 			<br/>14. Mind-altering implants: To include compliance and loyalty implants, NIFs, backup implants, or any other device that is capable of removing or altering one's mind or agency."
 
 /datum/sop_entry/authequip
