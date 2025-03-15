@@ -61,7 +61,7 @@
 				var/can_fork = TRUE
 				if(ishuman(scan))
 					var/mob/living/carbon/human/HU = scan
-					if(HU.species && HU.species.flags & NO_SCAN)
+					if(HU.species && HU.species.flags & NO_SLEEVE)
 						can_fork = FALSE
 				str += " ordered the temporary detainment and questioning of \the [scan], due to "
 				if(can_fork)
