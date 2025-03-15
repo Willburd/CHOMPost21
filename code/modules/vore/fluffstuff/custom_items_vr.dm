@@ -1496,6 +1496,7 @@ End CHOMP Removal*/
 	nano_printer = new/obj/item/computer_hardware/nano_printer(src)
 	battery_module = new/obj/item/computer_hardware/battery_module(src)
 	battery_module.charge_to_full()
+*/
 
 //Stobarico - Kyu Comet
 /obj/item/instrument/piano_synth/fluff/kyutar
