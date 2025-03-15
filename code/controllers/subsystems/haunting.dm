@@ -182,7 +182,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_player_target()
 	var/mob/M = current_player_target?.resolve()
-	if(M.away_from_keyboard || !M.client || M.is_incorporeal())
+	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal())
 		clear_player_target()
 		return null
 	return M
@@ -193,7 +193,7 @@ SUBSYSTEM_DEF(haunting)
 	return pick(global.player_list)
 
 /datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
-	if(M.away_from_keyboard || !M.client || M.is_incorporeal())
+	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal())
 		return
 	if(!isnull(current_haunt)) // not during another event
 		return
