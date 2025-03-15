@@ -1003,6 +1003,7 @@ var/global/datum/controller/occupations/job_master
 			return // If successful end here, otherwise fail over to standard spawning
 	// Outpost 21 edit end
 	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
+		SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION! Comforting new crew!
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
 			.["msg"] = spawnpos.msg
