@@ -8,18 +8,26 @@
 	always_run = TRUE
 	interval_lower_bound = 15 SECONDS
 	interval_upper_bound = 30 SECONDS
-	var/list/redexitlist = list()
 
+	var/static/list/redexitlist = list()
+
+/obj/effect/map_effect/interval/redspaceexitcontroller/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/map_effect/interval/redspaceexitcontroller/LateInitialize()
+	// Lets only do this once
+	redexitlist.Cut()
+	for(var/obj/effect/landmark/R in landmarks_list)
+		if(R.name == "redentrance")
+			redexitlist += get_turf(R)
+	. = ..()
 
 /obj/effect/map_effect/interval/redspaceexitcontroller/trigger()
-	if(redexitlist.len == 0)
-		// Lets only do this once
-		for(var/obj/effect/landmark/R in landmarks_list)
-			if(R.name == "redentrance")
-				redexitlist += R
 	// Pick a random portal location, or spawn one at this controller as a fallback
 	if(redexitlist.len > 0)
-		var/obj/effect/landmark/L = pick(redexitlist)
-		create_redspace_wormhole( src.loc, L.loc, TRUE, 15 SECONDS, 45 SECONDS)
+		var/turf/L = pick(redexitlist)
+		create_redspace_wormhole( L, L, TRUE, 15 SECONDS, 45 SECONDS)
 	else
-		create_redspace_wormhole( src.loc, src.loc, TRUE, 20, 30) // short portal time shows something is wrong.
+		var/turf/T = get_turf(src)
+		create_redspace_wormhole( T, T, TRUE, 20, 30) // short portal time shows something is wrong.
