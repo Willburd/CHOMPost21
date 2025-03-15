@@ -150,7 +150,6 @@
 						seed.seed.traits["[TRAIT_PLANT_COLOUR]"] = newcolor
 					if(1)
 						seed.seed.traits["[TRAIT_PRODUCT_COLOUR]"] = newcolor
-					else
 			else
 				visible_message("[icon2html(src,viewers(src))] Error: Invalid input detected.")
 			. = TRUE
