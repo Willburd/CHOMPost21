@@ -9,8 +9,20 @@ import {
   Section,
 } from 'tgui-core/components';
 
-export const PublicLibrary = (props, context) => {
-  const { act, data } = useBackend(context);
+type Data = {
+  errorText: string;
+  searchmode: string;
+  search: string[];
+  title: string;
+  body: string;
+  ad_string1: string;
+  ad_string2: string;
+  print: string;
+  appliance: string;
+};
+
+export const PublicLibrary = (props) => {
+  const { act, data } = useBackend<Data>();
   const {
     errorText,
     searchmode,
@@ -24,13 +36,11 @@ export const PublicLibrary = (props, context) => {
   } = data;
 
   return (
-    <Window width={900} height={600} resizable>
+    <Window width={900} height={600}>
       <Window.Content>
         {errorText && (
           <NoticeBox warning>
-            <Box display="inline-block" verticalAlign="middle">
-              {errorText}
-            </Box>
+            <Box verticalAlign="middle">{errorText}</Box>
           </NoticeBox>
         )}
         <Section title="Bingle Search">
