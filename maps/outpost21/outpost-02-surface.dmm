@@ -50247,6 +50247,11 @@
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
 	},
+/obj/structure/table/rack,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_airlock)
 "nHx" = (
@@ -50928,6 +50933,11 @@
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
 	},
+/obj/structure/table/rack,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_airlock)
 "nVY" = (
