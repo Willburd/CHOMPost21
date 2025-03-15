@@ -227,11 +227,14 @@
 	if(location)
 		location.hotspot_expose(700, 5)
 
-	if(burn_time <= 0)
-		STOP_PROCESSING(SSobj, src)
-		new /obj/effect/decal/cleanable/ash(location)
-		qdel(src)
-		return
+		// Outpost 21 edit begin - Lingering fires (Also tabbed this into the location check, as it uses location?)
+		if(burn_time <= 0)
+			STOP_PROCESSING(SSobj, src)
+			new /obj/effect/decal/cleanable/ash(location)
+			location.lingering_fire(0.2)
+			qdel(src)
+			return
+		// Outpost 21 edit end
 
 	reagents.remove_reagent(REAGENT_ID_FUEL, reagents.maximum_volume/25)
 	for(var/datum/reagent/ethanol/R in reagents.reagent_list)
