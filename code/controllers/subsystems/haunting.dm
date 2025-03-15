@@ -246,7 +246,7 @@ SUBSYSTEM_DEF(haunting)
 			return
 		if(world.time < next_haunt_time)
 			return
-		next_haunt_time = world.time + (rand(40,600) SECONDS)
+		next_haunt_time = world.time + (rand(40,300) SECONDS)
 		var/skip_prob = 80
 		if(world_mode >= MODE_UNNERVING)
 			skip_prob = 75
