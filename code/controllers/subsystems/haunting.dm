@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 250
+#define MODE_SIZE 300
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -18,12 +18,12 @@ SUBSYSTEM_DEF(haunting)
 
 	VAR_PRIVATE/list/current_influences = list()
 	VAR_PRIVATE/static/list/influences = list(
-		HAUNTING_RESLEEVE 	= -0.4,
-		HAUNTING_COMFORT 	= -0.1,
-		HAUNTING_UNSETTLE 	=  0.1,
-		HAUNTING_BLOOD 		=  0.3,
-		HAUNTING_GHOSTS		=  0.9,
-		HAUNTING_DEATH		=  1.2
+		HAUNTING_RESLEEVE 	= -0.9,
+		HAUNTING_COMFORT 	= -0.05,
+		HAUNTING_UNSETTLE 	=  0.05,
+		HAUNTING_BLOOD 		=  0.2,
+		HAUNTING_GHOSTS		=  0.5,
+		HAUNTING_DEATH		=  0.9
 	)
 
 	VAR_PRIVATE/new_score = 0
@@ -219,7 +219,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/weigh_haunting()
 	// Accumulated haunts
-	new_score = rand(-0.09,0.05)
+	new_score = rand(-0.02,0.005)
 	for(var/key in influences)
 		if(!current_influences[key])
 			continue
@@ -312,6 +312,8 @@ SUBSYSTEM_DEF(haunting)
 	// Players in the dark are treated worse
 	var/bonus = world_mode
 	var/turf/T = get_turf(M)
+	if(!T)
+		return
 	if(T.get_lumcount() < 0.2)
 		bonus += 1
 	else

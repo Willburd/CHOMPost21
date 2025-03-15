@@ -365,6 +365,7 @@
 	// Reset values.
 	harvest = 0
 	lastproduce = age
+	SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION! - Botanist comfort gardening
 
 	if(!seed.get_trait(TRAIT_HARVEST_REPEAT))
 		yield_mod = 0

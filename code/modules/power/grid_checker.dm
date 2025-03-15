@@ -68,6 +68,7 @@
 		when Engineering can manually resolve the issue.", //CHOMPEdit
 		"Critical Power Failure",
 		new_sound = 'sound/AI/poweroff.ogg')
+		SShaunting.influence(HAUNTING_GHOSTS) // Outpost 21 edit - IT DA SPOOKY STATION!
 	power_failing = TRUE
 	if(powernet)
 		for(var/obj/machinery/power/terminal/T in powernet.nodes) // APCs that are "downstream" of the powernet.
