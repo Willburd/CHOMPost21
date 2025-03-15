@@ -76126,8 +76126,10 @@
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/port_gen/pacman/super,
 /obj/fiftyspawner/uranium,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "vbg" = (

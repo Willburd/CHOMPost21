@@ -352,6 +352,7 @@
 	},
 /obj/structure/table/alien,
 /obj/item/deadringer,
+/obj/item/deadringer,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -364,6 +365,14 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"cy" = (
+/obj/structure/table/alien,
+/obj/machinery/chem_master/condimaster,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "cF" = (
 /obj/machinery/computer/power_monitor,
 /obj/machinery/status_display{
@@ -378,6 +387,8 @@
 "cG" = (
 /obj/structure/table/alien,
 /obj/item/card/id/syndicate/station_access,
+/obj/item/perfect_tele/alien,
+/obj/item/perfect_tele/alien,
 /obj/item/perfect_tele/alien,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
@@ -403,6 +414,15 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"db" = (
+/obj/structure/prop/alien/computer{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/alien/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/shuttle/skipjack)
 "dg" = (
 /obj/structure/table/alien,
 /obj/item/juke_remote,
@@ -2871,6 +2891,9 @@
 	dir = 4
 	},
 /obj/item/inducer/syndicate,
+/obj/item/cell/void,
+/obj/item/cell/void,
+/obj/item/cell/void,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -3050,6 +3073,13 @@
 	name = "plating"
 	},
 /area/prison/solitary)
+"qh" = (
+/obj/machinery/computer/ship/engines/abductor,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/shuttle/skipjack)
 "ql" = (
 /obj/effect/landmark{
 	name = "prisonwarp"
@@ -3369,11 +3399,15 @@
 /obj/item/radio/headset/raider,
 /obj/item/radio/headset/raider,
 /obj/item/radio/headset/raider,
-/obj/item/universal_translator/ear,
-/obj/item/universal_translator/ear,
-/obj/item/universal_translator/ear,
-/obj/item/universal_translator/ear,
-/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear{
+	pixel_x = 10
+	},
+/obj/item/universal_translator/ear{
+	pixel_x = 10
+	},
+/obj/item/universal_translator/ear{
+	pixel_x = 10
+	},
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -3458,14 +3492,14 @@
 	dir = 4
 	},
 /obj/machinery/door/window/southleft,
-/obj/item/clothing/glasses/night/vox,
-/obj/item/clothing/glasses/night/vox,
-/obj/item/clothing/glasses/night/vox,
-/obj/item/clothing/glasses/night/vox,
-/obj/item/clothing/glasses/night/vox,
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
+/obj/item/storage/box/syndie_kit/imp_aug,
+/obj/item/storage/box/syndie_kit/imp_aug,
+/obj/item/storage/box/syndie_kit/imp_aug,
+/obj/item/storage/box/syndie_kit/imp_aug,
+/obj/item/storage/box/syndie_kit/imp_aug,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -3614,6 +3648,13 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/mercenary)
+"rS" = (
+/obj/machinery/appliance/cooker/grill,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "rT" = (
 /obj/effect/landmark/start/mime,
 /turf/simulated/floor/carpet/blucarpet,
@@ -5246,6 +5287,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
+/obj/machinery/power/rtg/abductor/built,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -5432,10 +5474,10 @@
 	},
 /area/shuttle/skipjack)
 "zv" = (
-/obj/machinery/computer/security/abductor{
+/obj/structure/prop/alien/computer/hybrid{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/alien/blue{
+/turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -5451,7 +5493,7 @@
 	req_access = null;
 	req_one_access = list(300)
 	},
-/turf/simulated/shuttle/floor/alien/blue{
+/turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -5761,7 +5803,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "AL" = (
-/obj/machinery/computer/ship/engines/abductor{
+/obj/structure/prop/alien/computer/camera/flipped{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/alien/blue{
@@ -6733,10 +6775,10 @@
 	},
 /area/wizard_station)
 "Ih" = (
-/obj/machinery/computer/ship/sensors/abductor{
+/obj/structure/prop/alien/computer/camera{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/alien/blue{
+/turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -8295,6 +8337,13 @@
 	opacity = 1
 	},
 /area/beach)
+"Th" = (
+/obj/machinery/appliance/cooker/oven,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "Ti" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/stock_parts/matter_bin/omni,
@@ -8630,6 +8679,13 @@
 /obj/item/storage/toolbox/mechanical,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"Vj" = (
+/obj/machinery/appliance/cooker/fryer,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "Vr" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -10563,7 +10619,7 @@ mN
 mN
 mN
 Bm
-AY
+qh
 AY
 Bm
 Bm
@@ -12022,7 +12078,7 @@ Vs
 zu
 zN
 At
-yo
+db
 yo
 AY
 AY
@@ -13932,7 +13988,7 @@ Tc
 yb
 wR
 dg
-pu
+dY
 jm
 wZ
 wZ
@@ -14258,8 +14314,8 @@ wR
 Ea
 wZ
 wZ
-wZ
-wZ
+Vj
+rS
 wZ
 wZ
 wZ
@@ -14421,7 +14477,7 @@ dG
 wZ
 wZ
 wZ
-wZ
+Th
 wZ
 wZ
 wZ
@@ -14579,7 +14635,7 @@ mN
 Tc
 yb
 wR
-dY
+pu
 wZ
 wZ
 wZ
@@ -14741,7 +14797,7 @@ mN
 Tc
 yb
 wR
-pu
+cy
 pu
 pu
 nE
