@@ -173,6 +173,8 @@ SUBSYSTEM_DEF(haunting)
 	var/mob/potential = get_random_player()
 	if(!potential)
 		return
+	if(isnewplayer(potential))
+		return
 	if(potential.away_from_keyboard || isAI(potential) || potential.is_incorporeal())
 		return
 	current_player_target = WEAKREF(potential)
@@ -193,6 +195,8 @@ SUBSYSTEM_DEF(haunting)
 	return pick(global.player_list)
 
 /datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
+	if(isnewplayer(M))
+		return
 	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal())
 		return
 	if(!isnull(current_haunt)) // not during another event

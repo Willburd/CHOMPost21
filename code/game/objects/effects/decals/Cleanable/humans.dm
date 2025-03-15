@@ -65,7 +65,8 @@ var/global/list/image/splatter_cache=list()
 	. = ..()
 	if(!mapload)
 		addtimer(CALLBACK(src, PROC_REF(dry)), DRYING_TIME * (amount+1))
-		SShaunting.influence(HAUNTING_BLOOD) // Outpost 21 edit - IT DA SPOOKY STATION!
+		if(!istype(src,/obj/effect/decal/cleanable/blood/drip)) // don't consider drippy as horror
+			SShaunting.influence(HAUNTING_BLOOD) // Outpost 21 edit - IT DA SPOOKY STATION!
 //VOREstation edit end
 
 /obj/effect/decal/cleanable/blood/update_icon()
@@ -173,8 +174,8 @@ var/global/list/image/splatter_cache=list()
 				user.ContractDisease(D)
 
 /obj/effect/decal/cleanable/blood/splatter
-        random_icon_states = list("mgibbl1", "mgibbl2", "mgibbl3", "mgibbl4", "mgibbl5")
-        amount = 2
+		random_icon_states = list("mgibbl1", "mgibbl2", "mgibbl3", "mgibbl4", "mgibbl5")
+		amount = 2
 
 /obj/effect/decal/cleanable/blood/drip
 	name = "drips of blood"

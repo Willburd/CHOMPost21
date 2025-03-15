@@ -130,9 +130,9 @@
 		EQUIPMENT("UAV - Recon Skimmer",		/obj/item/uav,												40),
 		*/
 	//CHOMPedit Start
-	    EQUIPMENT("Mining-Grade PSG",			/obj/item/personal_shield_generator/belt/mining/loaded,		100),
-	    EQUIPMENT("Security-Grade PSG",			/obj/item/personal_shield_generator/belt/security/loaded,	200),
-	    EQUIPMENT("PSG Variant-P",			    /obj/item/personal_shield_generator/belt/parry,	            250),
+		EQUIPMENT("Mining-Grade PSG",			/obj/item/personal_shield_generator/belt/mining/loaded,		100),
+		EQUIPMENT("Security-Grade PSG",			/obj/item/personal_shield_generator/belt/security/loaded,	200),
+		EQUIPMENT("PSG Variant-P",			    /obj/item/personal_shield_generator/belt/parry,	            250),
 	//CHOMPedit End
 	)
 	//VOREStation Edit End
