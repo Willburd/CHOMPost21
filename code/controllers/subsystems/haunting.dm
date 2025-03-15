@@ -312,6 +312,8 @@ SUBSYSTEM_DEF(haunting)
 	// Players in the dark are treated worse
 	var/bonus = world_mode
 	var/turf/T = get_turf(M)
+	if(!T)
+		return
 	if(T.get_lumcount() < 0.2)
 		bonus += 1
 	else
