@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 80
+#define MODE_SIZE 250
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -173,6 +173,8 @@ SUBSYSTEM_DEF(haunting)
 	var/mob/potential = get_random_player()
 	if(!potential)
 		return
+	if(isnewplayer(potential))
+		return
 	if(potential.away_from_keyboard || isAI(potential) || potential.is_incorporeal())
 		return
 	current_player_target = WEAKREF(potential)
@@ -182,7 +184,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_player_target()
 	var/mob/M = current_player_target?.resolve()
-	if(M.away_from_keyboard || !M.client || M.is_incorporeal())
+	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal())
 		clear_player_target()
 		return null
 	return M
@@ -193,7 +195,9 @@ SUBSYSTEM_DEF(haunting)
 	return pick(global.player_list)
 
 /datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
-	if(M.away_from_keyboard || !M.client || M.is_incorporeal())
+	if(isnewplayer(M))
+		return
+	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal())
 		return
 	if(!isnull(current_haunt)) // not during another event
 		return
@@ -215,7 +219,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/weigh_haunting()
 	// Accumulated haunts
-	new_score = rand(-0.005,0.001)
+	new_score = rand(-0.09,0.05)
 	for(var/key in influences)
 		if(!current_influences[key])
 			continue
@@ -246,12 +250,12 @@ SUBSYSTEM_DEF(haunting)
 			return
 		if(world.time < next_haunt_time)
 			return
-		next_haunt_time = world.time + (rand(40,600) SECONDS)
-		var/skip_prob = 75
+		next_haunt_time = world.time + (rand(40,300) SECONDS)
+		var/skip_prob = 80
 		if(world_mode >= MODE_UNNERVING)
-			skip_prob = 65
+			skip_prob = 75
 		if(world_mode >= MODE_SUPERSPOOKY)
-			skip_prob = 55
+			skip_prob = 65
 		if(prob(skip_prob))
 			last_event = "SKIP"
 			return
@@ -275,6 +279,8 @@ SUBSYSTEM_DEF(haunting)
 		if(MODE_UNNERVING)
 			if(prob(5))
 				clear_player_target()
+				last_event = "SEARCH"
+				return
 			if(prob(1))
 				intense_world_haunt()
 			if(prob(1))

@@ -603,6 +603,7 @@
 		ghost = new(M)
 		ghost.name = M.dna.real_name
 		ghost.desc = "?"
+		ghost.timeofdeath = world.time
 	else
 		// spawn a custom demon
 		var/list/demons = list(
@@ -618,6 +619,7 @@
 		ghost = new(M)
 		ghost.name = M.name
 		ghost.desc = "?"
+		ghost.timeofdeath = world.time
 		qdel(M)
 
 /datum/station_haunt/lurker/fire()

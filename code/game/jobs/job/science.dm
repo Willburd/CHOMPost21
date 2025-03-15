@@ -16,15 +16,15 @@
 	req_admin_notify = 1
 	economic_modifier = 15
 	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter,
-			            access_research, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-			            access_explorer, access_pathfinder, access_xenobotany, access_maint_tunnels) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added access_maint_tunnels
+						access_tox_storage, access_teleporter,
+						access_research, access_xenobiology, access_ai_upload, access_tech_storage,
+						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
+						access_explorer, access_pathfinder, access_xenobotany, access_maint_tunnels) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added access_maint_tunnels
 	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-			            access_tox_storage, access_teleporter,
-			            access_research, access_xenobiology, access_ai_upload, access_tech_storage,
-			            access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-			            access_explorer, access_pathfinder, access_xenobotany, access_maint_tunnels) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added access_maint_tunnels
+						access_tox_storage, access_teleporter,
+						access_research, access_xenobiology, access_ai_upload, access_tech_storage,
+						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
+						access_explorer, access_pathfinder, access_xenobotany, access_maint_tunnels) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added access_maint_tunnels
 	alt_titles = list(JOB_ALT_RESEARCH_SUPERVISOR = /datum/alt_title/research_supervisor, JOB_ALT_RESEARCH_MANAGER = /datum/alt_title/research_manager,
 						JOB_ALT_HEAD_OF_DEVELOPMENT = /datum/alt_title/head_of_development,JOB_ALT_HEAD_SCIENTIST = /datum/alt_title/head_scientist)
 
