@@ -1014,8 +1014,9 @@
 	},
 /obj/machinery/hologram/holopad,
 /obj/structure/extinguisher_cabinet{
-	pixel_x = -27;
-	pixel_y = 1
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
@@ -11956,7 +11957,9 @@
 "Mj" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/structure/extinguisher_cabinet{
-	pixel_x = 25
+	pixel_x = 31;
+	dir = 8;
+	pixel_y = -6
 	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
