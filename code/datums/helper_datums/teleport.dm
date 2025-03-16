@@ -7,8 +7,7 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 /obj/item/clothing/accessory/storage/bluespace,
 /obj/item/storage/bag/ore/holding,
 /obj/item/clothing/gloves/bluespace,
-/obj/item/clothing/under/hyperfiber/bluespace,
-/obj/item/bluespace_harpoon
+/obj/item/clothing/under/hyperfiber/bluespace
 // Outpost 21 edit end
 )
 
