@@ -3,6 +3,7 @@
 	// Outpost 21 edit begin - Rarely call the artillery for secure areas
 	if(prob(4) || (org_type2 == "pirate") && prob(12))
 		return /datum/atc_chatter/outpost_artillery
+	// Outpost 21 edit end
 	if((org_type == "government" || org_type == "neutral" || org_type == "military" || org_type == "corporate" || org_type == "system defense" || org_type == "spacer") && org_type2 == "pirate") //this is ugly but when I tried to do it with !='s it fired for pirate-v-pirate, still not sure why. might as well stick it up here so it takes priority over other combos.
 		return /datum/atc_chatter/distress
 	if(org_type == "corporate") //corporate-specific subset for the slogan event. despite the relatively high weight it was still quite rare in tests.
