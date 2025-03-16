@@ -5498,6 +5498,27 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"zz" = (
+/obj/structure/table/alien,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/flame/lighter/zippo/red{
+	pixel_x = 11
+	},
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "zC" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/snacks/cosmicbrowniesslice,
@@ -14799,7 +14820,7 @@ yb
 wR
 cy
 pu
-pu
+zz
 nE
 pE
 pN

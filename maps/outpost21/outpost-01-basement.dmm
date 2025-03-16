@@ -45474,6 +45474,12 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "bWd" = (
@@ -46099,6 +46105,10 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
+"cqk" = (
+/obj/effect/floor_decal/borderfloor,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "cqV" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -47784,6 +47794,11 @@
 /obj/random/trash,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/waste)
+"dwP" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "dwT" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -48108,11 +48123,6 @@
 "dGr" = (
 /turf/simulated/floor/tiled,
 /area/maintenance/med)
-"dGz" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "dGA" = (
 /obj/structure/catwalk,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -48261,12 +48271,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/civ/bunker)
-"dIT" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "dJo" = (
 /turf/simulated/floor/outdoors/mud/muriki{
 	outdoors = 0
@@ -49017,15 +49021,6 @@
 /obj/effect/floor_decal/corner/purple/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
-"efz" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "efJ" = (
 /turf/simulated/mineral/alt/muriki,
 /area/mine/unexplored/muriki/cave/terra)
@@ -49954,17 +49949,6 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountainbasenorth)
-"eIo" = (
-/obj/structure/table/reinforced,
-/obj/random/maintenance/medical,
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "eIw" = (
 /obj/effect/mist,
 /turf/simulated/floor/water/acidic/deep/indoor/muriki,
@@ -50263,6 +50247,14 @@
 	},
 /turf/simulated/floor/flesh/muriki,
 /area/muriki/processor/hall)
+"eRP" = (
+/obj/effect/landmark/step_trap,
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/floor_decal/milspec/color/silver/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
 "eRY" = (
 /obj/effect/auto_crayon{
 	icon_state = "revolution"
@@ -52415,12 +52407,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
-"gdW" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "geo" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
@@ -53102,15 +53088,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/damaged_resleeverB)
-"gDt" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "gDw" = (
 /obj/machinery/computer/general_air_control/large_tank_control{
 	input_tag = "co2_in";
@@ -53769,6 +53746,20 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
+"gWu" = (
+/obj/effect/auto_crayon{
+	icon_state = "down"
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "gWz" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/structure/cable/green{
@@ -55591,15 +55582,6 @@
 "iiA" = (
 /turf/simulated/floor/water/acidic/indoor/muriki,
 /area/maintenance/tug)
-"iiI" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 5
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "iiP" = (
 /obj/structure/table/gamblingtable,
 /obj/structure/casino_table/blackjack_m,
@@ -56380,6 +56362,12 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
+"iJx" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "iJL" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance/int,
@@ -57492,16 +57480,15 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "jqK" = (
-/obj/machinery/light/flicker,
 /obj/structure/cryofeed,
-/obj/machinery/computer/cryopod{
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
+	},
+/obj/structure/window/basic{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
@@ -58129,6 +58116,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
+"jNP" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/orange/bordercorner,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "jNU" = (
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
@@ -59043,6 +59035,15 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
+"kqt" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "kqu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -59139,10 +59140,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
-"ksk" = (
-/obj/effect/floor_decal/borderfloor,
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "ksG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -60255,11 +60252,6 @@
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/lowmain)
-"leO" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/blue/border,
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "leR" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
@@ -61988,6 +61980,12 @@
 	dir = 8
 	},
 /area/mine/explored/muriki/river/end)
+"mdx" = (
+/obj/effect/floor_decal/milspec/color/silver/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
 "mdA" = (
 /obj/item/strangerock,
 /turf/simulated/mineral/floor/ignore_mapgen/cave{
@@ -62407,6 +62405,11 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"mtM" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "muv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -62670,12 +62673,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
-"mBM" = (
-/obj/effect/floor_decal/milspec/color/silver/half{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/maintenance/oldbridge)
 "mCe" = (
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating/muriki,
@@ -63015,8 +63012,12 @@
 "mMv" = (
 /obj/structure/table/reinforced,
 /obj/random/maintenance/medical,
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/blue/border,
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 6
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "mMA" = (
@@ -64698,20 +64699,6 @@
 	carbon_dioxide = 0
 	},
 /area/mine/unexplored/muriki/cave/terra)
-"nSr" = (
-/obj/effect/auto_crayon{
-	icon_state = "down"
-	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "nSs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -64949,12 +64936,6 @@
 "nZz" = (
 /turf/simulated/floor/plating,
 /area/maintenance/civ/closet)
-"nZH" = (
-/obj/effect/floor_decal/milspec/color/silver/corner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/maintenance/oldbridge)
 "nZO" = (
 /obj/effect/landmark/hostile_xenobio,
 /turf/simulated/mineral/floor/muriki{
@@ -64981,12 +64962,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
-"oaf" = (
-/obj/effect/floor_decal/milspec/color/silver/half{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/maintenance/oldbridge)
 "oaw" = (
 /obj/structure/sign/warning/ionizing,
 /turf/simulated/wall/durasteel,
@@ -66217,6 +66192,15 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/eng)
+"oRc" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "oRo" = (
 /obj/effect/auto_crayon{
 	icon_state = "x"
@@ -67890,14 +67874,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
-"pQG" = (
-/obj/effect/landmark/step_trap,
-/obj/effect/step_trigger/dephase_shadekin,
-/obj/effect/floor_decal/milspec/color/silver/half{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/maintenance/oldbridge)
 "pQH" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -68027,12 +68003,6 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/eng)
-"pUp" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "pVe" = (
 /obj/machinery/door/airlock/maintenance/int{
 	name = "Tug Tunnel"
@@ -68067,6 +68037,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"pVH" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "pWo" = (
 /obj/structure/table/standard,
 /obj/item/juke_remote{
@@ -68659,15 +68635,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/river/north)
-"qnu" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "qnD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -69565,6 +69532,15 @@
 "qSi" = (
 /turf/simulated/mineral/alt/muriki,
 /area/mine/explored/muriki/cave/waste)
+"qSo" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "qSF" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating/muriki,
@@ -70303,14 +70279,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
-"rjt" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/blue/border,
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "rjB" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
@@ -70628,6 +70596,12 @@
 "rsl" = (
 /turf/simulated/mineral/alt/ignore_mapgen,
 /area/maintenance/research)
+"rsF" = (
+/obj/effect/floor_decal/milspec/color/silver/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
 "rsR" = (
 /obj/structure/closet/crate,
 /obj/fiftyspawner/steel,
@@ -70752,11 +70726,6 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/sec)
-"rvL" = (
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/orange/bordercorner,
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "rvV" = (
 /obj/effect/landmark{
 	name = "spiderspawn"
@@ -71213,6 +71182,12 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor,
 /area/maintenance/eng)
+"rJa" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "rJg" = (
 /turf/simulated/wall,
 /area/muriki/crew/casino)
@@ -71280,6 +71255,7 @@
 	name = "badbody"
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "rNj" = (
@@ -71584,6 +71560,15 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor,
 /area/maintenance/eng)
+"rWc" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "rWh" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
@@ -71680,6 +71665,12 @@
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
+"rYo" = (
+/obj/effect/floor_decal/milspec/color/silver/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
 "rYy" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -72676,11 +72667,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/casino)
-"szS" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "szY" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
@@ -73396,19 +73382,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
-"sYP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "sZz" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -73528,6 +73501,15 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/waste)
+"tdB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "tdK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -73648,10 +73630,6 @@
 /obj/effect/decal/remains/xeno,
 /turf/simulated/deathdrop/waterfall/muriki,
 /area/mine/explored/muriki/river/end)
-"tgI" = (
-/obj/effect/floor_decal/milspec/color/silver/half,
-/turf/simulated/floor/tiled/milspec,
-/area/maintenance/oldbridge)
 "thk" = (
 /obj/structure/disposalpipe/segment,
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
@@ -74715,6 +74693,19 @@
 /obj/effect/floor_decal/techfloor/orange,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
+"tTP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "tUp" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -76407,6 +76398,14 @@
 "uZZ" = (
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/terra)
+"vap" = (
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "var" = (
 /obj/effect/auto_crayon{
 	icon_state = "x"
@@ -77070,6 +77069,23 @@
 /obj/structure/cable/heavyduty,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
+"vuC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "vuL" = (
 /obj/machinery/porta_turret/ai_defense,
 /turf/simulated/floor/tiled/techfloor/muriki,
@@ -77274,6 +77290,11 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/cave/sci)
+"vAv" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/orange/border,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "vAF" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/muriki,
@@ -77854,6 +77875,13 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/cargo)
+"vSa" = (
+/obj/structure/table/reinforced,
+/obj/random/maintenance/medical,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "vSb" = (
 /turf/simulated/mineral/alt/ignore_cavegen/muriki,
 /area/mine/unexplored/muriki/mountainbase)
@@ -77936,6 +77964,12 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
+	},
+/obj/machinery/computer/cryopod{
+	pixel_x = -32
+	},
+/obj/machinery/light/flicker{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
@@ -78089,7 +78123,6 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/firedoor_assembly,
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "vZV" = (
@@ -80289,6 +80322,10 @@
 "xxz" = (
 /turf/simulated/wall,
 /area/muriki/bathroom/engrefinery)
+"xxJ" = (
+/obj/effect/floor_decal/milspec/color/silver/half,
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
 "xxR" = (
 /obj/effect/auto_crayon{
 	icon_state = "uboa"
@@ -80315,23 +80352,6 @@
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"xyT" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "xze" = (
 /obj/random/mouseray,
 /turf/simulated/floor/plating/muriki,
@@ -81454,15 +81474,6 @@
 	name = "reinforced floor"
 	},
 /area/maintenance/incinerator)
-"yaL" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "ybE" = (
 /obj/structure/flora/pottedplant/aquatic,
 /turf/simulated/floor/tiled/freezer,
@@ -86871,14 +86882,14 @@ sNP
 oJk
 sIX
 iVB
-yaL
+tdB
 sHx
-ksk
+cqk
 iVB
 kmN
 uoh
 uoh
-ksk
+cqk
 mBu
 qSi
 aAO
@@ -87035,12 +87046,12 @@ viT
 iVB
 tXL
 kZt
-szS
+dwP
 iVB
 hfq
 rBM
 rBM
-ksk
+cqk
 haL
 aAO
 aAO
@@ -87195,14 +87206,14 @@ lIe
 pSA
 exi
 iVB
-yaL
+tdB
 pVp
-sYP
+tTP
 tkR
 uYP
 oUt
 uoh
-nSr
+gWu
 plz
 xHb
 uGe
@@ -87359,7 +87370,7 @@ kKa
 iVB
 rBM
 kZt
-szS
+dwP
 iVB
 vNc
 rBM
@@ -87519,14 +87530,14 @@ dnA
 lDK
 kKa
 ijJ
-pUp
+pVH
 kZt
-szS
+dwP
 iVB
 kmN
 bMi
 rBM
-ksk
+cqk
 fgQ
 qSi
 qSi
@@ -87681,7 +87692,7 @@ rDE
 wAL
 nJT
 iVB
-yaL
+tdB
 kZt
 kLj
 iBE
@@ -87843,7 +87854,7 @@ uUo
 yjN
 gAG
 iBE
-yaL
+tdB
 kZt
 luC
 iBE
@@ -87994,11 +88005,11 @@ axj
 iHJ
 ehk
 xJd
-pQG
+eRP
 fSf
 uoh
 eFK
-tgI
+xxJ
 lwL
 iBE
 iBE
@@ -88160,14 +88171,14 @@ wXs
 fZL
 uoh
 bMi
-nZH
+rYo
 fiW
 hyR
 cHk
 wDd
-qnu
-qnu
-dIT
+kqt
+kqt
+iJx
 kZt
 bPV
 iVB
@@ -88331,7 +88342,7 @@ jKE
 jKE
 wfA
 sYM
-dGz
+vAv
 iVB
 jvX
 nsH
@@ -88487,13 +88498,13 @@ eFK
 uoh
 dqN
 hyR
-pUp
+pVH
 gsw
-rvL
-gDt
-gDt
+jNP
+oRc
+oRc
 kjZ
-efz
+rWc
 iVB
 fdT
 vJP
@@ -88647,7 +88658,7 @@ eFK
 uoh
 vim
 eFK
-tgI
+xxJ
 iBE
 rxA
 gsw
@@ -88809,11 +88820,11 @@ eFK
 eFK
 eFK
 eFK
-tgI
+xxJ
 ijj
 uoh
 gsw
-szS
+dwP
 iVB
 vyZ
 eDg
@@ -88968,10 +88979,10 @@ aad
 xJd
 vIB
 pZA
-mBM
+mdx
 hhr
-mBM
-oaf
+mdx
+rsF
 hyR
 eqc
 lLv
@@ -89136,8 +89147,8 @@ iBE
 iBE
 iBE
 uWH
-xyT
-gdW
+vuC
+rJa
 iVB
 isD
 eBp
@@ -90098,7 +90109,7 @@ xJd
 kGE
 pfE
 iuT
-rjt
+vap
 iVB
 nws
 lRF
@@ -90422,7 +90433,7 @@ dlv
 iKq
 uoh
 rBM
-leO
+mtM
 iBE
 iBE
 qdi
@@ -90744,9 +90755,9 @@ fYz
 fYz
 fOC
 gHA
-iiI
+qSo
 uoh
-mMv
+vSa
 iBE
 xSk
 fAL
@@ -90907,8 +90918,8 @@ fVT
 wZz
 fOC
 gHA
-iiI
-eIo
+qSo
+mMv
 iBE
 tDz
 iiY

@@ -1635,6 +1635,7 @@
 	pixel_x = -10;
 	pixel_y = -25
 	},
+/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "eV" = (
@@ -1796,8 +1797,8 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/ai_upload)
 "fv" = (
-/obj/machinery/portable_atmospherics/canister/phoron/cold,
 /obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "fw" = (
@@ -6474,6 +6475,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
+"uJ" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/atmos)
 "uM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -7861,7 +7866,7 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/canister/phoron/cold,
+/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/atmos)
 "zg" = (
@@ -8094,6 +8099,7 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
+/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "zT" = (
@@ -8713,10 +8719,10 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "BV" = (
-/obj/machinery/portable_atmospherics/canister/phoron/cold,
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
+/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Ca" = (
@@ -11002,7 +11008,7 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "Jg" = (
 /obj/effect/floor_decal/corner/orange/full,
-/obj/machinery/portable_atmospherics/canister/phoron/cold,
+/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/atmos)
 "Jh" = (
@@ -13179,7 +13185,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/portable_atmospherics/canister/phoron/cold,
+/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/atmos)
 "Qs" = (
@@ -52026,7 +52032,7 @@ RX
 Iz
 ca
 ca
-ca
+uJ
 Qo
 SR
 Xv
