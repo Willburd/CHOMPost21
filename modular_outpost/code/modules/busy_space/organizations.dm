@@ -20,12 +20,20 @@
 	slogans = list(
 			"Eshui Atmospherics - Breathing new life into the universe.",
 			"Eshui Atmospherics - When you need a breath of fresh air.",
-			"Eshui Atmospherics - We're inside you, with every breath of fresh air."
+			"Eshui Atmospherics - We're inside you, with every breath of fresh air.",
+			"Eshui Atmospherics - Making better worlds."
 			)
 	ship_prefixes = list("ESU" = "a general operations", "ESX" = "a hauling", "ESH" = "a bulk transport", "ESR" = "a resupply")
 	//martian mountains
 	append_ship_names = TRUE
 	added_ship_names = list(
+			"Prospector 8",
+			"Prospector 9",
+			"Prospector 10",
+			"Prospector 11",
+			"Prospector 12",
+			"Prospector 14",
+			"Prospector 25",
 			"Kdel",
 			"Albumin",
 			"Globulin",
