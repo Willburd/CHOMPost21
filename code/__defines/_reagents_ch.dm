@@ -37,8 +37,6 @@
 #define REAGENT_ID_APHRODISIAC "aphrodisiac"
 #define REAGENT_SORBITOL "Sorbitol"
 #define REAGENT_ID_SORBITOL "sorbitol"
-#define REAGENT_CONCENTRATEDRADIUM "Concentrated Radium"
-#define REAGENT_ID_CONCENTRATEDRADIUM "concentrated_radium"
 /* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_CLARIDYL "Claridyl Natural Remedy"
 #define REAGENT_ID_CLARIDYL "claridyl"
