@@ -278,8 +278,6 @@
 
 
 // Toxins
-#define REAGENT_DIETSTOMACID "Diluted digestive acid"
-#define REAGENT_ID_DIETSTOMACID "diet_stomacid"
 #define REAGENT_DEATHBLOOD "Irradiating Blood"
 #define REAGENT_ID_DEATHBLOOD "deathblood"
 #define REAGENT_LIQUIDFIRE "Liquid Fire"

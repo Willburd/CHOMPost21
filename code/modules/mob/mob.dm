@@ -15,7 +15,8 @@
 		spellremove(src)
 	if(!istype(src,/mob/observer))
 		ghostize()
-	// QDEL_NULL(soulgem) //CHOMPAdd // Outpost 21 edit - Nif removal
+	// QDEL_NULL(soulgem) //Soulcatcher // Outpost 21 edit - Nif removal
+	QDEL_NULL(dna)
 	QDEL_NULL(plane_holder)
 	QDEL_NULL(hud_used)
 	for(var/key in alerts) //clear out alerts

@@ -68,7 +68,7 @@
 		/obj/item/holder,
 		/obj/machinery/camera,
 		/obj/belly,
-		///obj/soulgem, // CHOMPAdd  // Outpost 21 edit - Nif removal
+		// /obj/soulgem, // Outpost 21 edit - Nif removal
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/material,
@@ -117,6 +117,8 @@
 
 /mob/living/simple_mob/vore/alienanimals/catslug/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	. = ..()
 	var/obj/belly/B = vore_selected
