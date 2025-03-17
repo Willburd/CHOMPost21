@@ -11,9 +11,6 @@
 
 /obj/machinery/smart_centrifuge/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	create_reagents(5000)
 	flags |= OPENCONTAINER
 	default_apply_parts()

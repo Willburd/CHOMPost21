@@ -19,9 +19,6 @@
 
 /obj/machinery/reagent_refinery/reactor/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 	internal_tank = new /obj/machinery/portable_atmospherics/canister/empty()
 	update_gas_network()

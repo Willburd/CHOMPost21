@@ -12,9 +12,6 @@
 
 /obj/machinery/reagentgrinder/industrial/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	// custom amounts to match reagent vat machines
 	beaker.possible_transfer_amounts = list(0,1,2,5,10,15,20,25,30,40,60,80,100,120)
 	// remove these

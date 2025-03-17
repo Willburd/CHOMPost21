@@ -14,9 +14,6 @@
 
 /obj/machinery/reagent_refinery/hub/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 	// Update neighbours and self for state
 	update_neighbours()
