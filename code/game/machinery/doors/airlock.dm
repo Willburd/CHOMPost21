@@ -1605,9 +1605,9 @@ About the new airlock wires panel:
 		wires = new/datum/wires/airlock(src)
 
 	// Outpost 21 edit begin - Door braces attach automatically when placed on a door in mapper
-	var/obj/item/airlock_brace/A = locate(/obj/item/airlock_brace) in loc
-	if(!brace && A)
-		A.lock_brace(src)
+	var/obj/item/airlock_brace/B = locate(/obj/item/airlock_brace) in loc
+	if(!brace && B)
+		B.lock_brace(src)
 	// Outpost 21 edit end
 
 	. = ..()
