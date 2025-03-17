@@ -207,12 +207,10 @@
 		compiled_vis += VIS_CH_STOMACH
 
 	/* Outpost 21 edit - Nif removal
-	//CHOMPAdd Start Soulcatcher
 	if(soulgem?.flag_check(SOULGEM_SEE_SR_SOULS))
 		compiled_vis += VIS_SOULCATCHER
-	//CHOMPAdd End
 	*/
-
+	
 	if(!compiled_vis.len && !vis_enabled.len)
 		return //Nothin' doin'.
 

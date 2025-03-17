@@ -510,7 +510,7 @@
 		B.forceMove(src)
 		B.owner = src
 
-	// soulgem.owner = src //CHOMPAdd // Outpost 21 edit - Nif removal
+	// soulgem.owner = src // Outpost 21 edit - Nif removal
 
 	//vore_organs.Cut()
 

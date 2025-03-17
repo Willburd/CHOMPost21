@@ -507,7 +507,7 @@
 			B.owner = blob
 		vore_organs.Cut()
 
-		// soulgem.owner = blob // CHOMPAdd // Outpost 21 edit - Nif removal
+		// soulgem.owner = blob // Outpost 21 edit - Nif removal
 
 		//We can still speak our languages!
 		blob.languages = languages.Copy()
@@ -619,7 +619,7 @@
 			B.owner = src
 		languages = blob.languages.Copy()
 
-		// soulgem.owner = src // CHOMPAdd // Outpost 21 edit - Nif removal
+		// soulgem.owner = src // Outpost 21 edit - Nif removal
 
 		Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 

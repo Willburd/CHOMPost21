@@ -9,16 +9,10 @@
 	idle_power_usage = 0
 	active_power_usage = 200
 	circuit = /obj/item/circuitboard/industrial_reagent_waste_processor
-	// Chemical bath funtimes!
-	can_buckle = TRUE
-	buckle_lying = TRUE
 	default_max_vol = CARGOTANKER_VOLUME
 
 /obj/machinery/reagent_refinery/waste_processor/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT

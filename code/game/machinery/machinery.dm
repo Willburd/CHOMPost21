@@ -127,15 +127,10 @@ Class Procs:
 	var/climb_delay = 3.5 SECONDS
 	// Outpost 21 edit end
 
-/obj/machinery/New(l, d=0)
-	..()
+/obj/machinery/Initialize(mapload, d=0)
+	. = ..()
 	if(isnum(d))
 		set_dir(d)
-	if(ispath(circuit))
-		circuit = new circuit(src)
-
-/obj/machinery/Initialize(mapload)
-	. = ..()
 	SSmachines.all_machines += src
 	if(ispath(circuit))
 		circuit = new circuit(src)
