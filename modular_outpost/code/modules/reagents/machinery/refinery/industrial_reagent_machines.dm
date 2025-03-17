@@ -13,15 +13,28 @@
 	update_neighbours()
 	update_icon()
 
+/obj/machinery/reagent_refinery/dismantle()
+	reagent_flush()
+	. = ..()
+
 /obj/machinery/reagent_refinery/Destroy()
-	if(reagents.reagent_list.len && reagents.total_volume > 30)
+	reagent_flush()
+	. = ..()
+
+/obj/machinery/reagent_refinery/proc/reagent_flush()
+	if(reagents && reagents.total_volume > 30)
 		visible_message(span_danger("\The [src] splashes everywhere as it is disassembled!"))
 		reagents.splash_area(get_turf(src),2)
-	. = ..()
 
 /obj/machinery/reagent_refinery/Moved(atom/old_loc, direction, forced)
 	. = ..()
 	update_icon()
+
+/obj/machinery/reagent_refinery/Bump(atom/A)
+	var/old_dir = dir
+	. = ..()
+	if(dir != old_dir)
+		update_icon()
 
 /obj/machinery/reagent_refinery/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.has_tool_quality(TOOL_WRENCH))

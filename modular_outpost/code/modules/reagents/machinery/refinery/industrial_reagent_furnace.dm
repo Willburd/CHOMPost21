@@ -126,7 +126,7 @@
 		var/image/filling = image(icon, loc, "[icon_state]_r",dir = dir)
 		filling.color = reagents.get_color()
 		add_overlay(filling)
-	else if(beaker.reagents && beaker.reagents.total_volume > 0)
+	else if(beaker && beaker.reagents && beaker.reagents.total_volume > 0)
 		var/image/filling = image(icon, loc, "[icon_state]_r",dir = dir)
 		filling.color = beaker.reagents.get_color()
 		add_overlay(filling)
