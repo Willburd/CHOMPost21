@@ -368,12 +368,20 @@
 	..()
 	if(volume >= 5)
 		T.holy = 1
+		SShaunting.influence(HAUNTING_BLESSING) // Significant push, to avoid punishing mechanics
 		// Outpost 21 edit begin - consecrate ground!
+		for(var/card in alldirs) // spread it out more...
+			var/turf/TR = get_step(src,card)
+			if(TR)
+				TR.holy = 1
 		var/area/A = get_area(T)
-		if(A && A.haunted)
-			if(!(T.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
-				T.visible_message("\The [A] was consecrate!")
-				A.haunted = FALSE
+		if(A && A.haunted && !(T.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
+			if(prob(10)) // ANGY MODE
+				SShaunting.intense_world_haunt()
+			else
+				SShaunting.reduce_world_haunt()
+			T.visible_message("\The [A] was consecrate!")
+			A.haunted = FALSE
 		// Outpost 21 edit end
 	return
 
