@@ -40,7 +40,6 @@ var/list/all_maps = list()
 	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to.
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
 	var/static/list/below_blocked_levels = list()// List of levels where mapping or other similar devices might work fully
-	var/static/list/deadly_fall_levels = list()// List of levels where mapping or other similar devices might work fully
 	// End Static Lists
 
 	// Z-levels available to various consoles, such as the crew monitor. Defaults to station_levels if unset.
@@ -87,6 +86,7 @@ var/list/all_maps = list()
 	// Outpost 21 edit begin - custom zlevel lists
 	var/static/list/event_levels = list() // Events happen on these levels, even if not part of station!
 	var/static/list/forced_airmix_levels = list() // z-levels where airmix slowly resets if outdoors, prevents saturating the atmosphere
+	var/static/list/deadly_fall_levels = list() // List of levels where mapping or other similar devices might work fully
 	// Outpost 21 edit end
 
 	var/station_name  = "BAD Station"
