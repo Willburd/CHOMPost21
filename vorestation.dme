@@ -4777,7 +4777,6 @@
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
-#include "maps\outpost21\outpost_21.dm"
 #include "maps\redgate\facility_items.dm"
 #include "maps\redgate\fantasy_items.dm"
 #include "maps\redgate\falls\atoll_decals.dm"
@@ -4788,6 +4787,7 @@
 #include "maps\submaps\engine_submaps_op\engine.dm"
 #include "maps\submaps\engine_submaps_op\engine_areas.dm"
 #include "maps\submaps\engine_submaps_op\outpost21\_engine_submaps.dm"
+#include "maps\~map_system\_map_selection.dm"
 #include "maps\~map_system\maps.dm"
 #include "maps\~map_system\maps_op.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
@@ -5425,4 +5425,5 @@
 #include "modular_outpost\maps\submaps\cargoyard\cargoyard.dm"
 #include "modular_outpost\maps\submaps\deepdark\deepdark.dm"
 #include "modular_outpost\maps\submaps\orbitalyard\orbitalyard.dm"
+#include "modular_outpost\maps\~map_system\_map_selection.dm"
 // END_INCLUDE
