@@ -1,7 +1,6 @@
 /datum/turbolift
 	music = list('modular_outpost/sound/music/elevator2.ogg')
 
-
 //OTHER AKA: Everything else. --------------------------------------
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window

@@ -1,11 +1,5 @@
 // This file is meant ONLY for hyper specialized items and triggers used by the Outpost21 map.
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
-
-/obj/effect/landmark/map_data/muriki
-    height = 4
-
-//OBJECTS -------------------------------------------------------
-//TODO: Move this to the same file with all the other windows. It shouldn't be in here.
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST
 	icon_state = "fwindow"
