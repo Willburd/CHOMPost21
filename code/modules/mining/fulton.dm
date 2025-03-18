@@ -44,7 +44,7 @@ var/global/list/total_extraction_beacons = list()
 	var/atom/warp_goal = beacon
 	var/area/user_area = get_area(user)
 	var/turf/user_turf = get_turf(user)
-	if(user_area.haunted && !(user_turf.z in using_map.station_levels)) // can somewhat reliably assume redspace
+	if(user_area.haunted && (user_turf.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
 		var/list/redlist = list()
 		for(var/obj/effect/landmark/R in landmarks_list)
 			if(R.name == "redentrance")

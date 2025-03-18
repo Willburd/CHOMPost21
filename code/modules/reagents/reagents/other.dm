@@ -368,6 +368,13 @@
 	..()
 	if(volume >= 5)
 		T.holy = 1
+		// Outpost 21 edit begin - consecrate ground!
+		var/area/A = get_area(T)
+		if(A && A.haunted)
+			if(!(T.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
+				T.visible_message("\The [A] was consecrate!")
+				A.haunted = FALSE
+		// Outpost 21 edit end
 	return
 
 /datum/reagent/ammonia
