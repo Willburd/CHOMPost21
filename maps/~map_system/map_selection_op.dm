@@ -17,5 +17,5 @@
 
 // Outpost 21
 #ifdef USE_MAP_OUTPOST21
-#include "../outpost_21/outpost_21.dm"
+#include "../../modular_outpost/maps/outpost_21/outpost_21.dm"
 #endif
