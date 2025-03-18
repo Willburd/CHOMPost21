@@ -13,7 +13,7 @@
 	#include "outpost-11-confinementbeam.dmm"
 
 	#include "outpost_defines.dm"
-	#include "outpost_areas.dm"
+	#include "outpost_elevator.dm"
 	#include "outpost_turfs.dm"
 	#include "outpost_shuttle_defs.dm"
 	#include "outpost_shuttles.dm"

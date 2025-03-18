@@ -291,7 +291,6 @@
 		Z_LEVEL_OUTPOST_UPPER
 	)
 
-
 // Overmap represetation of muriki
 /obj/effect/overmap/visitable/sector/muriki
 	name = "Muriki"
