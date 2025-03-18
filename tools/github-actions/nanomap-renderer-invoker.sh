@@ -8,7 +8,7 @@ mapdirs=(
 #Put a define file to include. One per line matching mapdirs.
 #If the same define is reused it will be batched if in sequence.
 mapdefines=(
-	"maps/outpost21/outpost_defines.dm"
+	"modular_outpost/maps/outpost_21/outpost_21.dm"
 )
 dme="vorestation.dme"
 
