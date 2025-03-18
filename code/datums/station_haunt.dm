@@ -381,6 +381,23 @@
 	end()
 
 
+// Distant alarm
+/datum/station_haunt/distant_alarm
+	name = "Far Alarm"
+
+/datum/station_haunt/distant_alarm/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/goal_turf = get_turf(M)
+		var/xx = rand(8,14) * (prob(50) ? 1 : -1)
+		var/yy = rand(8,14) * (prob(50) ? 1 : -1)
+		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(T)
+			var/screm = pick(list('sound/effects/alarms/fire_alarm/fire_alarm_mid.ogg','sound/effects/alarms/decon_alarm.ogg','sound/effects/alarms/engineering_alarm.ogg','sound/effects/alarms/crit_alarm.ogg','sound/effects/alarms/causality_alarm.ogg'))
+			M.playsound_local(T, screm, 20)
+	end()
+
+
 // open nearby door
 /datum/station_haunt/open_nearby_door
 	name = "Open Nearby Door"
@@ -390,7 +407,29 @@
 	if(M)
 		var/turf/T = get_turf(M)
 		var/obj/machinery/door/airlock/A = locate() in orange(5,T)
-		A.open()
+		if(A)
+			A.open()
+	end()
+
+
+// change status display
+/datum/station_haunt/change_nearby_display
+	name = "Change Nearby Display"
+
+/datum/station_haunt/change_nearby_display/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+
+		var/obj/machinery/status_display/A = locate() in orange(8,T)
+		if(A)
+			A.mode = A.STATUS_DISPLAY_MESSAGE
+			A.visible_message("clicks","clicks")
+
+			var/list/mess = list("HATE YOU","WE SEE YOU","IN OUR FLESH","CURSES UPON YOU","[M]","[M]...","[M]!","NO ESCAPE","FOLLOW DOWN")
+			A.message1 = pick(mess)
+			A.message2 = pick(mess)
+			A.update_display(A.message1, A.message2)
 	end()
 
 
