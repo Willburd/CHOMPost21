@@ -4788,7 +4788,6 @@
 #include "maps\submaps\engine_submaps_op\engine_areas.dm"
 #include "maps\submaps\engine_submaps_op\outpost21\_engine_submaps.dm"
 #include "maps\~map_system\maps.dm"
-#include "maps\~map_system\maps_op.dm"
 #include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
 #include "modular_chomp\code\__defines\_planes+layers.dm"
@@ -5165,6 +5164,7 @@
 #include "modular_chomp\maps\southern_cross\loadout\loadout_suit.dm"
 #include "modular_chomp\maps\southern_cross\loadout\loadout_uniform.dm"
 #include "modular_chomp\maps\southern_cross\loadout\loadout_vr.dm"
+#include "modular_chomp\maps\~map_system\maps_vr.dm"
 #include "modular_outpost\code\_helpers\atmospherics.dm"
 #include "modular_outpost\code\_helpers\global_lists.dm"
 #include "modular_outpost\code\_onclick\hud\alert.dm"
@@ -5425,4 +5425,5 @@
 #include "modular_outpost\maps\submaps\deepdark\deepdark.dm"
 #include "modular_outpost\maps\submaps\orbitalyard\orbitalyard.dm"
 #include "modular_outpost\maps\~map_system\_map_selection.dm"
+#include "modular_outpost\maps\~map_system\maps.dm"
 // END_INCLUDE
