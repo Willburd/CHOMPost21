@@ -50,7 +50,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/watching_me,
 		/datum/station_haunt/chills,
 		/datum/station_haunt/distant_scream,
-		/datum/station_haunt/distant_alarm
+		/datum/station_haunt/distant_alarm,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/hallucinate,
 		/datum/station_haunt/vent_crawler,
