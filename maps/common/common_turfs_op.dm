@@ -1,6 +1,10 @@
 //Simulated
 /turf/simulated/open/muriki
 	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
+/turf/simulated/open/muriki/New()
+	..()
+	if(outdoors)
+		SSplanets.addTurf(src)
 
 /turf/simulated/open
 	dynamic_lighting = 1 //I don't care if there's no true multiz lighting, this looks so much nicer it's not even funny -KK (from turf_yw)
@@ -12,6 +16,14 @@
 	icon_state = "rock"
 	edge_blending_priority = 1
 
+/turf/simulated/mineral/vacuum
+	oxygen = 0
+	nitrogen = 0
+	temperature	= TCMB
+/turf/simulated/mineral/floor/vacuum
+	oxygen = 0
+	nitrogen = 0
+	temperature	= TCMB
 /turf/simulated/floor/shuttle/black
 	icon = 'icons/turf/shuttle_white.dmi'
 	icon_state = "floor_black"
@@ -78,6 +90,9 @@
 		UpdateMineral()
 	update_icon()
 
+/turf/unsimulated/mineral/muriki
+	blocks_air = TRUE
+
 /turf/unsimulated/mineral/muriki/basalt
 	icon = 'modular_chomp/icons/turf/thor.dmi'
 	icon_state = "deeprock-solid"
@@ -92,6 +107,14 @@
 	icon = 'icons/turf/flooring/tiles_vr.dmi'
 	icon_state = "steel"
 
+/turf/unsimulated/wall
+	blocks_air = 1
+
+/turf/unsimulated/wall/planetary
+	blocks_air = 0
+
+
+// Some turfs to make floors look better in centcom tram station.
 /turf/unsimulated/floor/techfloor_grid
 	name = "floor"
 	icon = 'icons/turf/flooring/techfloor.dmi'
@@ -103,9 +126,28 @@
 	icon = 'icons/turf/flooring/maglevs.dmi'
 	icon_state = "maglevup"
 
+/turf/unsimulated/wall/transit
+	icon = 'icons/turf/transit_vr.dmi'
+
+/turf/unsimulated/floor/transit
+	icon = 'icons/turf/transit_vr.dmi'
+
+/obj/effect/floor_decal/transit/orange
+	icon = 'icons/turf/transit_vr.dmi'
+	icon_state = "transit_techfloororange_edges"
+
+/obj/effect/transit/light
+	icon = 'icons/turf/transit_128.dmi'
+	icon_state = "tube1-2"
+
+
 // Bluespace jump turf!
 /turf/space/bluespace
 	name = "bluespace"
+	icon = 'icons/turf/space_vr.dmi'
+	icon_state = "bluespace"
+/turf/space/bluespace/Initialize()
+	..()
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
 

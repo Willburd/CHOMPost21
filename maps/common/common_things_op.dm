@@ -1,5 +1,10 @@
 // This file is meant ONLY for hyper specialized items and triggers used by the Outpost21 map.
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
+/obj/structure/window/reinforced/polarized/full
+	dir = SOUTHWEST
+	icon_state = "fwindow"
+	maxhealth = 80
+
 /obj/machinery/smartfridge/produce/plantvator
 	name = "\improper Smart plantavator - Upper"
 	desc = "A refrigerated storage unit for Food and plant storage. With a nice set of hydraulic racks to move items up and down."
@@ -25,10 +30,12 @@
 //"Red" Armory Door
 /obj/machinery/door/airlock/multi_tile/metal/red
 	name = "Red Armory"
+	//color = ""
 
 /obj/machinery/door/airlock/multi_tile/metal/red/allowed(mob/user)
 	if(get_security_level() in list("green","blue","yellow",/*"violet","orange"*/)) //OP edit: Violet and Orange alert levels are same status as red.
 		return FALSE
+
 	return ..(user)
 
 /obj/machinery/door/airlock/highsecurity/red
@@ -39,8 +46,20 @@
 /obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
 	if(get_security_level() in list("green","yellow"))
 		return FALSE
+
 	return ..(user)
 
+//Again, need to be moved to a higher level in the code. These shouldn't be here, these aren't map-specific
+/obj/structure/closet/secure_closet/guncabinet/excursion
+	name = "expedition weaponry cabinet"
+	req_one_access = list(access_explorer,access_brig)
+
+/obj/structure/closet/secure_closet/guncabinet/excursion/New()
+	..()
+	for(var/i = 1 to 4)
+		new /obj/item/gun/energy/locked/frontier(src)
+	for(var/i = 1 to 4)
+		new /obj/item/gun/energy/locked/frontier/holdout(src)
 
 //Taken from YW, why is this not in the dance pole's file itself? Redundant code, or just their mappers dumb? TODO: Fix.
 /obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -82,6 +101,28 @@
 	else
 		return ..()
 
+// Just incase? I can't see these being used much.
+// Invisible object that blocks z transfer to/from its turf and the turf above.
+/obj/effect/ceiling
+	invisibility = 101 // nope cant see this
+	anchored = 1
+	can_atmos_pass = ATMOS_PASS_PROC
+
+/obj/effect/ceiling/CanZASPass(turf/T, is_zone)
+	if(T == GetAbove(src))
+		return FALSE // Keep your air up there, buddy
+	return TRUE
+
+/obj/effect/ceiling/CanPass(atom/movable/mover, turf/target)
+	if(target == GetAbove(src))
+		return FALSE
+	return TRUE
+
+/obj/effect/ceiling/Uncross(atom/movable/mover, turf/target)
+	if(target == GetAbove(src))
+		return FALSE
+	return TRUE
+
 
 //I know this should be somewhere else but I can't think of where to put it right now. I'll move it later. Todo
 /obj/item/paper/armorguide
@@ -109,6 +150,8 @@
 	icon = 'modular_outpost/icons/obj/stationobjs.dmi'
 	icon_state = "enzyme"
 	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
+
+
 
 
 //Freezable Airlock Door
