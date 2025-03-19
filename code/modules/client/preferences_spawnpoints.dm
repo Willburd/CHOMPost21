@@ -43,16 +43,17 @@ var/list/spawntypes = list()
 /datum/spawnpoint/proc/get_spawn_position()
 	return get_turf(pick(turfs))
 
-/* Outpost 21 edit - Only use ours
 /datum/spawnpoint/arrivals
 	display_name = "Arrivals Shuttle"
-	msg = "will arrive to the station shortly by shuttle"
-	disallow_job = list(JOB_OUTSIDER) //CHOMPEdit add
+	// msg = "will arrive to the station shortly by shuttle"
+	msg = "has arrived on station by shuttle" // Outpost 21 edit
+	disallow_job = list(JOB_STOWAWAY) //CHOMPEdit add // Outpost 21 edit
 
 /datum/spawnpoint/arrivals/New()
 	..()
 	turfs = latejoin
 
+/* Outpost 21 edit - Only use ours
 /datum/spawnpoint/gateway
 	display_name = "Gateway"
 	msg = "has completed translation from offsite gateway"

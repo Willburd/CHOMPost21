@@ -1,7 +1,3 @@
-// ### Preset machines  ###
-
-
-// #### Relays ####
 // Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
 /obj/machinery/telecomms/relay/preset/outpost/basement
 	id = "Basement Relay"
@@ -69,53 +65,3 @@
 /obj/item/multitool/outpost_buffered/Initialize()
 	. = ..()
 	buffer = locate(/obj/machinery/telecomms/hub/preset/outpost)
-
-
-/*
-// wip attempt at asteroid telecoms
-
-// Asteroid reclamation yard tcomms, uniquely configured, barebones as hell
-/obj/machinery/telecomms/relay/preset/asteroid
-	id = "Reclamation Yard Relay"
-	network = "tcommsat"
-	listening_level = Z_LEVEL_OUTPOST_ASTEROID
-	autolinkers = list("y_relay")
-
-/obj/machinery/telecomms/hub/preset/asteroid
-	id = "Hub"
-	network = "tcommsat"
-	autolinkers = list("y_hub", "y_relay", "receiverA", "broadcasterA", "y_common") // bare minimum
-
-/obj/machinery/telecomms/receiver/preset_right/asteroid
-	id = "reclamation_rx"
-	network = "tcommsat"
-	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ)
-
-/obj/machinery/telecomms/broadcaster/preset_right/asteroid
-	id = "reclamation_tx"
-	network = "tcommsat"
-
-/obj/machinery/telecomms/bus/preset/asteroid
-	id = "Bus"
-	network = "tcommsat"
-	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ)
-	autolinkers = list("y_processor", "y_common")
-
-/obj/machinery/telecomms/processor/preset/asteroid
-	id = "Processor"
-	network = "tcommsat"
-	autolinkers = list("y_processor") // processors are sort of isolated; they don't need backward links
-
-/obj/machinery/telecomms/server/presets/asteroid
-	network = "tcommsat"
-	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ)
-	autolinkers = list("y_common")
-
-/obj/item/multitool/asteroid_buffered
-	name = "pre-linked multitool (reclamation-yard hub)"
-	desc = "This multitool has already been linked to the reclamation-yard telecomms hub and can be used to configure one (1) relay."
-
-/obj/item/multitool/asteroid_buffered/Initialize()
-	. = ..()
-	buffer = locate(/obj/machinery/telecomms/hub/preset/asteroid)
-*/

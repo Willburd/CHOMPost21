@@ -265,6 +265,28 @@
 
 //////////////////////////////////////////////////////////////
 // Medical shuttle
+/obj/effect/overmap/visitable/ship/landable/medical
+	name = "Medical Rescue"
+	desc = "A modified search and rescue spacecraft. No man left behind."
+	vessel_mass = 2500
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Medical Rescue"
+	known = TRUE // we own this lol
+
+/obj/machinery/computer/shuttle_control/explore/medical
+	name = "short jump console"
+	shuttle_tag = "Medical Rescue"
+	req_one_access = list(access_medical)
+
+/area/shuttle/medical
+	name = "\improper Medevac Shuttle"
+	icon_state = "shuttle2"
+	requires_power = 1
+	base_turf = /turf/simulated/floor/plating
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+
+// Docks
 /datum/shuttle/autodock/overmap/medical
 	name = "Medical Rescue"
 	warmup_time = 0
@@ -301,6 +323,29 @@
 
 //////////////////////////////////////////////////////////////
 // Security shuttle
+/obj/effect/overmap/visitable/ship/landable/security
+	name = "Security Carrier"
+	desc = "A modified search and \"rescue\" spacecraft. No one can hide."
+	vessel_mass = 2500
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Security Carrier"
+	known = TRUE // we own this lol
+	fore_dir = SOUTH
+
+/obj/machinery/computer/shuttle_control/explore/security
+	name = "short jump console"
+	shuttle_tag = "Security Carrier"
+	req_one_access = list(access_security)
+
+/area/shuttle/security
+	name = "\improper Security Shuttle"
+	icon_state = "shuttle2"
+	requires_power = 1
+	base_turf = /turf/simulated/floor/plating
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+
+// Docks
 /datum/shuttle/autodock/overmap/security
 	name = "Security Carrier"
 	warmup_time = 0
@@ -338,6 +383,29 @@
 
 //////////////////////////////////////////////////////////////
 // Trawler Shuttle
+/obj/effect/overmap/visitable/ship/landable/trawler
+	name = "Mining Trawler"
+	desc = "A hefty beast for making the station rich. Supposedly in compliance."
+	vessel_mass = 3500
+	vessel_size = SHIP_SIZE_SMALL
+	shuttle = "Mining Trawler"
+	known = TRUE // we own this lol
+	fore_dir = EAST
+
+/obj/machinery/computer/shuttle_control/explore/trawler
+	name = "short jump console"
+	shuttle_tag = "Mining Trawler"
+	req_one_access = list(access_mining)
+
+/area/shuttle/trawler
+	name = "\improper Mining Trawler"
+	icon_state = "shuttle2"
+	requires_power = 1
+	base_turf = /turf/simulated/floor/plating/external/muriki
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+
+
+// Docks
 /datum/shuttle/autodock/overmap/trawler
 	name = "Mining Trawler"
 	warmup_time = 0
@@ -373,6 +441,11 @@
 
 //////////////////////////////////////////////////////////////
 // Engineering Ferry
+/area/shuttle/beamtransit
+	name = "\improper Engineering Ferry"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/floor/plating/external/muriki
+
 /datum/shuttle/autodock/multi/beamtransit
 	name = "Engineering Ferry"
 	warmup_time = 5
@@ -439,6 +512,18 @@
 	base_area = /area/specialty/redspace
 	base_turf = /turf/simulated/floor/flesh
 
+/obj/effect/shuttle_landmark/premade/underdark/start
+	name = "Station Platform"
+	landmark_tag = "dark_start"
+	base_area = /area/mine/explored/muriki/cave/deepdark
+	base_turf = /turf/simulated/floor/plating/muriki
+
+/obj/effect/shuttle_landmark/premade/underdark/end
+	name = "End Of The Line"
+	landmark_tag = "dark_end"
+	base_area = /area/mine/explored/muriki/cave/deepdark
+	base_turf = /turf/simulated/floor/plating/muriki
+
 
 //////////////////////////////////////////////////////////////
 // Generic landings
@@ -495,3 +580,62 @@
 	landmark_tag = "orbitalyard_west"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+
+
+
+// ELEVATORS --------------------------------------------------------
+/obj/turbolift_map_holder/muriki/medevator
+	icon = 'icons/obj/turbolift_preview_3x3.dmi'
+	depth = 3
+	lift_size_x = 3
+	lift_size_y = 3
+	dir = EAST
+	name = "Medbay Elevator map placeholder"
+
+	areas_to_use = list(
+		/area/turbolift/medibasement,
+		/area/turbolift/medical,
+		/area/turbolift/mediupper,
+		)
+
+/obj/turbolift_map_holder/muriki/secevator
+	icon = 'icons/obj/turbolift_preview_3x3.dmi'
+	depth = 3
+	lift_size_x = 3
+	lift_size_y = 3
+	dir = NORTH
+	name = "Security Elevator map placeholder"
+
+	areas_to_use = list(
+		/area/turbolift/secbase,
+		/area/turbolift/secmain,
+		/area/turbolift/secupper,
+		)
+
+/obj/turbolift_map_holder/muriki/civevator
+	icon = 'icons/obj/turbolift_preview_3x3.dmi'
+	depth = 3
+	lift_size_x = 3
+	lift_size_y = 3
+	dir = SOUTH
+	name = "Civilian Elevator map placeholder"
+
+	areas_to_use = list(
+		/area/turbolift/civbase,
+		/area/turbolift/civmain,
+		/area/turbolift/civupper,
+		)
+
+/obj/turbolift_map_holder/muriki/scievator
+	icon = 'icons/obj/turbolift_preview_3x3.dmi'
+	depth = 3
+	lift_size_x = 3
+	lift_size_y = 3
+	dir = SOUTH
+	name = "Science Elevator map placeholder"
+
+	areas_to_use = list(
+		/area/turbolift/scibase,
+		/area/turbolift/scimain,
+		/area/turbolift/sciupper,
+		)

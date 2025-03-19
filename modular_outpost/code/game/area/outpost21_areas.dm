@@ -2470,30 +2470,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 //
-//-----------------------------------------------------------------------
-//Shuttles
-/area/shuttle/trawler
-	name = "\improper Mining Trawler"
-	icon_state = "shuttle2"
-	requires_power = 1
-	base_turf = /turf/simulated/floor/plating/external/muriki
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-
-/area/shuttle/medical
-	name = "\improper Medevac Shuttle"
-	icon_state = "shuttle2"
-	requires_power = 1
-	base_turf = /turf/simulated/floor/plating
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/shuttle/security
-	name = "\improper Security Shuttle"
-	icon_state = "shuttle2"
-	requires_power = 1
-	base_turf = /turf/simulated/floor/plating
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-
-//
 // Tramline --------------------------------------------------
 //
 /area/shuttle/tram
@@ -2548,13 +2524,6 @@
 	name = "\improper Vox Vessel"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	base_turf = /turf/simulated/floor/plating
-
-
-// Confinement beam shuttle
-/area/shuttle/beamtransit
-	name = "\improper Engineering Ferry"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	base_turf = /turf/simulated/floor/plating/external/muriki
 
 
 //

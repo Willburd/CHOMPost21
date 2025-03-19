@@ -1,8 +1,5 @@
 // This file is meant ONLY for hyper specialized items and triggers used by the Outpost21 map.
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
-
-//OBJECTS -------------------------------------------------------
-//TODO: Move this to the same file with all the other windows. It shouldn't be in here.
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST
 	icon_state = "fwindow"
@@ -80,75 +77,6 @@
 	// icon_state = "syndicam" // Outpost 21 edit - CI wants this fixed
 	network = list(NETWORK_EXPLORATION)
 	circuit = null
-// ELEVATORS --------------------------------------------------------
-//These actually DO belong here.
-
-/obj/turbolift_map_holder/muriki/medevator
-	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	depth = 3
-	lift_size_x = 3
-	lift_size_y = 3
-	dir = EAST
-	name = "Medbay Elevator map placeholder"
-
-	areas_to_use = list(
-		/area/turbolift/medibasement,
-		/area/turbolift/medical,
-		/area/turbolift/mediupper,
-		)
-
-/obj/turbolift_map_holder/muriki/secevator
-	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	depth = 3
-	lift_size_x = 3
-	lift_size_y = 3
-	dir = NORTH
-	name = "Security Elevator map placeholder"
-
-	areas_to_use = list(
-		/area/turbolift/secbase,
-		/area/turbolift/secmain,
-		/area/turbolift/secupper,
-		)
-
-/obj/turbolift_map_holder/muriki/civevator
-	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	depth = 3
-	lift_size_x = 3
-	lift_size_y = 3
-	dir = SOUTH
-	name = "Civilian Elevator map placeholder"
-
-	areas_to_use = list(
-		/area/turbolift/civbase,
-		/area/turbolift/civmain,
-		/area/turbolift/civupper,
-		)
-
-/obj/turbolift_map_holder/muriki/scievator
-	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	depth = 3
-	lift_size_x = 3
-	lift_size_y = 3
-	dir = SOUTH
-	name = "Science Elevator map placeholder"
-
-	areas_to_use = list(
-		/area/turbolift/scibase,
-		/area/turbolift/scimain,
-		/area/turbolift/sciupper,
-		)
-
-
-//DATUMS -------------------------------------------------------------
-/datum/turbolift
-	music = list('modular_outpost/sound/music/elevator2.ogg')
-
-
-//EFFECTS AND TRIGGERS -----------------------------------------
-/obj/effect/landmark/map_data/muriki
-    height = 4 //Height marker. Provides the map with knowledge of how many z levels connecting below.
-
 
 //These 'lost in space' ones should be moved to a higher level file, not map specific. Taken from YW
 /obj/effect/step_trigger/lost_in_space
@@ -194,64 +122,6 @@
 	if(target == GetAbove(src))
 		return FALSE
 	return TRUE
-
-
-//OTHER AKA: Everything else. --------------------------------------
-// ### Wall Machines On Full Windows ###
-// To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
-// OP edit: This should be moved >:V put it in the window file or something.
-/obj/item/radio/intercom
-	layer = ABOVE_WINDOW_LAYER
-/obj/item/storage/secure/safe
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/airlock_sensor
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/alarm
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/button
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/access_button
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/computer/guestpass
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/computer/security/telescreen
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/door_timer
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/embedded_controller
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/firealarm
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/flasher
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/keycard_auth
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/light_switch
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/mineral/processing_unit_console
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/mineral/stacking_unit_console
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/newscaster
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/power/apc
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/requests_console
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/status_display
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/vending/wallmed1
-	layer = ABOVE_WINDOW_LAYER
-/obj/machinery/vending/wallmed2
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/closet/fireaxecabinet
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/extinguisher_cabinet
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/mirror
-	layer = ABOVE_WINDOW_LAYER
-/obj/structure/noticeboard
-	layer = ABOVE_WINDOW_LAYER
 
 
 //I know this should be somewhere else but I can't think of where to put it right now. I'll move it later. Todo

@@ -60,6 +60,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
+"aah" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2
+	},
+/obj/machinery/door/firedoor/multi_tile/glass{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/arriveelev)
 "aai" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5622,6 +5637,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/effect/landmark{
+	name = "JoinLate"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -14768,7 +14786,12 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/engi)
 "cDR" = (
-/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/multi_tile/glass{
+	dir = 2
+	},
+/obj/machinery/door/firedoor/multi_tile/glass{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/arriveelev)
 "cDU" = (
@@ -15981,6 +16004,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/landmark{
+	name = "JoinLate"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "cWT" = (
@@ -16259,7 +16285,6 @@
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "ddd" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -25475,6 +25500,9 @@
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/effect/landmark{
+	name = "JoinLate"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "gha" = (
@@ -27524,6 +27552,9 @@
 "gSr" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/landmark{
+	name = "JoinLate"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "gSt" = (
@@ -35719,6 +35750,9 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/effect/landmark{
+	name = "JoinLate"
+	},
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
 "jmh" = (
@@ -38376,7 +38410,7 @@
 	dir = 4
 	},
 /obj/effect/landmark{
-	name = "JoinLate"
+	name = "JoinLateElevator"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
@@ -38627,7 +38661,7 @@
 	dir = 4
 	},
 /obj/effect/landmark{
-	name = "JoinLate"
+	name = "JoinLateElevator"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
@@ -51137,6 +51171,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/muriki/arriveproc)
 "nZM" = (
@@ -53676,7 +53711,7 @@
 	dir = 10
 	},
 /obj/effect/landmark{
-	name = "JoinLate"
+	name = "JoinLateElevator"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
@@ -57890,7 +57925,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "qlD" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -61602,6 +61636,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/shuttles/right,
+/obj/effect/landmark{
+	name = "JoinLate"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "ruz" = (
@@ -67049,7 +67086,7 @@
 	dir = 8
 	},
 /obj/effect/landmark{
-	name = "JoinLate"
+	name = "JoinLateElevator"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
@@ -68820,6 +68857,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/muriki/arriveproc)
 "tKI" = (
@@ -72191,6 +72229,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark{
+	name = "JoinLate"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "uLx" = (
@@ -73419,6 +73460,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/effect/landmark{
+	name = "JoinLate"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "vfh" = (
@@ -73866,6 +73910,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/landmark{
+	name = "JoinLate"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
@@ -82249,7 +82296,7 @@
 	dir = 8
 	},
 /obj/effect/landmark{
-	name = "JoinLate"
+	name = "JoinLateElevator"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
@@ -129611,7 +129658,7 @@ iek
 vPn
 vFS
 ddd
-qlD
+aah
 gzw
 gzw
 uEB

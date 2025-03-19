@@ -28,7 +28,8 @@
 	icon = 'icons/turf/shuttle_white.dmi'
 	icon_state = "floor_black"
 
-	//This proc is responsible for ore generation on surface turfs
+
+//This proc is responsible for ore generation on surface turfs
 /turf/simulated/mineral/muriki/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return
@@ -112,6 +113,7 @@
 /turf/unsimulated/wall/planetary
 	blocks_air = 0
 
+
 // Some turfs to make floors look better in centcom tram station.
 /turf/unsimulated/floor/techfloor_grid
 	name = "floor"
@@ -138,6 +140,7 @@
 	icon = 'icons/turf/transit_128.dmi'
 	icon_state = "tube1-2"
 
+
 // Bluespace jump turf!
 /turf/space/bluespace
 	name = "bluespace"
@@ -148,54 +151,6 @@
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
 
-// Desert jump turf!
-/turf/space/sandyscroll
-	name = "sand transit"
-	icon = 'icons/turf/transit_vr.dmi'
-	icon_state = "desert_ns"
-/turf/space/sandyscroll/New()
-	..()
-	icon_state = "desert_ns"
-
-//Sky stuff!
-// A simple turf to fake the appearance of flying.
-/turf/simulated/sky/muriki
-	color = "#E0FFFF"
-
-/turf/simulated/sky/muriki/Initialize()
-	SSplanets.addTurf(src)
-	set_light(2, 2, "#E0FFFF")
-
-/turf/simulated/sky/muriki/north
-	dir = NORTH
-/turf/simulated/sky/muriki/south
-	dir = SOUTH
-/turf/simulated/sky/muriki/east
-	dir = EAST
-/turf/simulated/sky/muriki/west
-	dir = WEST
-
-/turf/simulated/sky/muriki/moving
-	icon_state = "sky_fast"
-/turf/simulated/sky/muriki/moving/north
-	dir = NORTH
-/turf/simulated/sky/muriki/moving/south
-	dir = SOUTH
-/turf/simulated/sky/muriki/moving/east
-	dir = EAST
-/turf/simulated/sky/muriki/moving/west
-	dir = WEST
-
-/turf/simulated/sky/snowscroll
-	name = "snow transit"
-	icon = 'icons/turf/transit_yw.dmi'
-	icon_state = "snow_ns"
-
-/turf/simulated/sky/snowscroll/Initialize()
-	SSplanets.addTurf(src)
-	set_light(2, 2, "#E0FFFF")
-
-// TRAM USE  - TODO: Compare with existing maglev tracks on the virgo maps. I sense redundant code. Also needs to be moved to a higher level.
 // The tram's electrified maglev tracks
 /turf/simulated/floor/maglev
 	name = "maglev track"
@@ -216,9 +171,11 @@
 		return
 	if(isliving(AM) && prob(80))
 		track_zap(AM)
+
 /turf/simulated/floor/maglev/attack_hand(var/mob/user)
 	if(prob(95))
 		track_zap(user)
+
 /turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)
 	if (!istype(user)) return
 	if (user.is_incorporeal()) return
