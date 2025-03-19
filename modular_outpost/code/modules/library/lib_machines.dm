@@ -44,7 +44,7 @@
 
 /obj/machinery/librarywikicomp/tgui_data(mob/user)
 	var/data = list()
-	if(GLOB.game_wiki)
+	if(SSinternal_wiki)
 		if(!crash)
 			// search page
 			data["errorText"] = ""
@@ -56,34 +56,34 @@
 			switch(searchmode)
 				if("Food Recipes")
 					if(appliance)
-						data["search"] = GLOB.game_wiki.get_searchcache_food(appliance)
+						data["search"] = SSinternal_wiki.get_searchcache_food(appliance)
 					else
 						var/list/options = list()
-						for(var/app in GLOB.game_wiki.get_appliances())
-							if(!isnull(GLOB.game_wiki.get_searchcache_food("[app]")))
+						for(var/app in SSinternal_wiki.get_appliances())
+							if(!isnull(SSinternal_wiki.get_searchcache_food("[app]")))
 								options.Add("[app]")
 						data["search"] = options
 
 				if("Drink Recipes")
-					data["search"] = GLOB.game_wiki.get_searchcache_drink()
+					data["search"] = SSinternal_wiki.get_searchcache_drink()
 
 				if("Chemistry")
-					data["search"] = GLOB.game_wiki.get_searchcache_chem()
+					data["search"] = SSinternal_wiki.get_searchcache_chem()
 
 				if("Botany")
-					data["search"] = GLOB.game_wiki.get_searchcache_seed()
+					data["search"] = SSinternal_wiki.get_searchcache_seed()
 
 				if("Catalogs")
-					data["search"] = GLOB.game_wiki.get_searchcache_catalog()
+					data["search"] = SSinternal_wiki.get_searchcache_catalog()
 
 				if("Materials")
-					data["search"] = GLOB.game_wiki.get_searchcache_material()
+					data["search"] = SSinternal_wiki.get_searchcache_material()
 
 				if("Particle Physics")
-					data["search"] = GLOB.game_wiki.get_searchcache_particle()
+					data["search"] = SSinternal_wiki.get_searchcache_particle()
 
 				if("Ores")
-					data["search"] = GLOB.game_wiki.get_searchcache_ore()
+					data["search"] = SSinternal_wiki.get_searchcache_ore()
 
 				else
 					data["search"] = list()
@@ -190,21 +190,21 @@
 						appliance = params["data"] // have not selected it yet
 						setpage = FALSE
 					else
-						P = GLOB.game_wiki.get_page_food(search)
+						P = SSinternal_wiki.get_page_food(search)
 				if(searchmode == "Drink Recipes")
-					P = GLOB.game_wiki.get_page_drink(search)
+					P = SSinternal_wiki.get_page_drink(search)
 				if(searchmode == "Chemistry")
-					P = GLOB.game_wiki.get_page_chem(search)
+					P = SSinternal_wiki.get_page_chem(search)
 				if(searchmode == "Botany")
-					P = GLOB.game_wiki.get_page_seed(search)
+					P = SSinternal_wiki.get_page_seed(search)
 				if(searchmode == "Catalogs")
-					P = GLOB.game_wiki.get_page_catalog(search)
+					P = SSinternal_wiki.get_page_catalog(search)
 				if(searchmode == "Materials")
-					P = GLOB.game_wiki.get_page_material(search)
+					P = SSinternal_wiki.get_page_material(search)
 				if(searchmode == "Particle Physics")
-					P = GLOB.game_wiki.get_page_particle(search)
+					P = SSinternal_wiki.get_page_particle(search)
 				if(searchmode == "Ores")
-					P = GLOB.game_wiki.get_page_ore(search)
+					P = SSinternal_wiki.get_page_ore(search)
 
 				if(setpage)
 					if(P)

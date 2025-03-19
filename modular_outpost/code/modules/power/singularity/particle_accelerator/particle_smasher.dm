@@ -1,6 +1,3 @@
-/datum/particle_smasher_recipe
-	var/spoiler = FALSE // If the recipe appears in the ingame wiki
-
 /datum/particle_smasher_recipe/platinum_lead
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
