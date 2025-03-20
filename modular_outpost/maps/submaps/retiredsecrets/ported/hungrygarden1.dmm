@@ -1,28 +1,242 @@
-"a" = (/turf/simulated/mineral/alt/ignore_cavegen/muriki,/area/space)
-"c" = (/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"i" = (/obj/item/storage/firstaid/bonemed,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"m" = (/obj/item/dnainjector/random_verygood_labeled,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"o" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"s" = (/obj/item/dnainjector/random,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"u" = (/turf/simulated/mineral/alt/muriki,/area/space)
-"v" = (/obj/machinery/portable_atmospherics/hydroponics/soil,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"x" = (/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"z" = (/mob/living/simple_mob/vore/pitcher_plant,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"H" = (/obj/structure/closet/crate/mimic/cointoss,/obj/random/contraband,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"J" = (/mob/living/simple_mob/vore/pitcher,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"Y" = (/obj/item/bone,/obj/item/bone,/obj/item/bone,/obj/item/bone/skull/unknown,/turf/simulated/floor/outdoors/grass/forest,/area/space)
-"Z" = (/mob/living/simple_mob/vore/mantrap,/turf/simulated/floor/outdoors/grass/forest,/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/ignore_cavegen/muriki,
+/area/space)
+"c" = (
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"i" = (
+/obj/item/storage/firstaid/bonemed,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"m" = (
+/obj/item/dnainjector/random_verygood_labeled,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"o" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"s" = (
+/obj/item/dnainjector/random,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"u" = (
+/turf/simulated/mineral/alt/muriki,
+/area/space)
+"v" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"x" = (
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"z" = (
+/mob/living/simple_mob/vore/pitcher_plant,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"H" = (
+/obj/structure/closet/crate/mimic/cointoss,
+/obj/random/contraband,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"J" = (
+/mob/living/simple_mob/vore/pitcher,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"Y" = (
+/obj/item/bone,
+/obj/item/bone,
+/obj/item/bone,
+/obj/item/bone/skull/unknown,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
+"Z" = (
+/mob/living/simple_mob/vore/mantrap,
+/turf/simulated/floor/outdoors/grass/forest,
+/area/space)
 
 (1,1,1) = {"
-uuuuuuuuuuuuuc
-uuavxxxxaaaauu
-uaaxxaaxxxJaau
-uasZxxxxZxxxau
-uxxxxaoxxxxxiu
-uxJxxxxYvxxxvu
-uxxxxZxmxxzxvu
-uaxaxxxxxxxxxu
-uavxxxaxxxxHau
-uaaaaxxzaxaaau
-uuuuuuuuuuuuuc
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+"}
+(2,1,1) = {"
+u
+u
+a
+a
+x
+x
+x
+a
+a
+a
+u
+"}
+(3,1,1) = {"
+u
+a
+a
+s
+x
+J
+x
+x
+v
+a
+u
+"}
+(4,1,1) = {"
+u
+v
+x
+Z
+x
+x
+x
+a
+x
+a
+u
+"}
+(5,1,1) = {"
+u
+x
+x
+x
+x
+x
+x
+x
+x
+a
+u
+"}
+(6,1,1) = {"
+u
+x
+a
+x
+a
+x
+Z
+x
+x
+x
+u
+"}
+(7,1,1) = {"
+u
+x
+a
+x
+o
+x
+x
+x
+a
+x
+u
+"}
+(8,1,1) = {"
+u
+x
+x
+x
+x
+Y
+m
+x
+x
+z
+u
+"}
+(9,1,1) = {"
+u
+a
+x
+Z
+x
+v
+x
+x
+x
+a
+u
+"}
+(10,1,1) = {"
+u
+a
+x
+x
+x
+x
+x
+x
+x
+x
+u
+"}
+(11,1,1) = {"
+u
+a
+J
+x
+x
+x
+z
+x
+x
+a
+u
+"}
+(12,1,1) = {"
+u
+a
+a
+x
+x
+x
+x
+x
+H
+a
+u
+"}
+(13,1,1) = {"
+u
+u
+a
+a
+i
+v
+v
+x
+a
+a
+u
+"}
+(14,1,1) = {"
+c
+u
+u
+u
+u
+u
+u
+u
+u
+u
+c
 "}

@@ -1,19 +1,99 @@
-"a" = (/obj/machinery/portable_atmospherics/canister/nitrogen,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"b" = (/obj/machinery/portable_atmospherics/hydroponics/soil,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"d" = (/obj/effect/landmark/vermin,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"f" = (/obj/machinery/portable_atmospherics/canister/air,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"k" = (/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"o" = (/obj/item/seeds/random,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"q" = (/obj/random/cutout,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"R" = (/obj/item/material/minihoe,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"S" = (/turf/simulated/mineral/alt/muriki,/area/space)
-"T" = (/obj/machinery/portable_atmospherics/hydroponics/soil,/obj/item/material/minihoe,/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"b" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"d" = (
+/obj/effect/landmark/vermin,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"f" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"k" = (
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"o" = (
+/obj/item/seeds/random,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"q" = (
+/obj/random/cutout,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"R" = (
+/obj/item/material/minihoe,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"S" = (
+/turf/simulated/mineral/alt/muriki,
+/area/space)
+"T" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/material/minihoe,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 
 (1,1,1) = {"
-SfqSS
-aRkkS
-kkdkk
-SobTk
-Skkkk
-SSkbk
+S
+a
+k
+S
+S
+S
+"}
+(2,1,1) = {"
+f
+R
+k
+o
+k
+S
+"}
+(3,1,1) = {"
+q
+k
+d
+b
+k
+k
+"}
+(4,1,1) = {"
+S
+k
+k
+T
+k
+b
+"}
+(5,1,1) = {"
+S
+S
+k
+k
+k
+k
 "}
