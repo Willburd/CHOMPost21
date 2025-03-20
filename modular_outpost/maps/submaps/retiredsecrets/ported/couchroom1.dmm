@@ -1,23 +1,134 @@
-"a" = (/turf/simulated/mineral/alt/muriki,/area/space)
-"d" = (/obj/item/trash/snacktray,/turf/simulated/floor/plating,/area/space)
-"n" = (/turf/simulated/floor/plating,/area/space)
-"o" = (/obj/structure/bed/chair/sofa/orange,/turf/simulated/floor/plating,/area/space)
-"q" = (/obj/item/trash/small_bowl,/turf/simulated/floor/plating,/area/space)
-"t" = (/turf/simulated/mineral/floor/muriki{ignore_mapgen = 1},/area/space)
-"E" = (/obj/structure/bed/chair/sofa/left/orange,/turf/simulated/floor/plating,/area/space)
-"F" = (/obj/effect/auto_crayon{icon_state = "x"},/turf/simulated/floor/plating,/area/space)
-"L" = (/obj/machinery/door/airlock/maintenance_hatch,/obj/effect/mine/frag,/turf/simulated/floor/plating,/area/space)
-"M" = (/obj/structure/bed/chair/sofa/right/orange,/obj/effect/mine/n2o,/obj/item/trash/pretzel,/turf/simulated/floor/plating,/area/space)
-"P" = (/turf/simulated/wall,/area/space)
-"Q" = (/obj/item/assembly/mousetrap/armed,/turf/simulated/floor/plating,/area/space)
-"T" = (/obj/effect/landmark/loot_spawn,/turf/simulated/floor/plating,/area/space)
-"V" = (/obj/effect/mine/n2o,/obj/item/trash/snacktray,/turf/simulated/floor/plating,/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/muriki,
+/area/space)
+"d" = (
+/obj/item/trash/snacktray,
+/turf/simulated/floor/plating,
+/area/space)
+"n" = (
+/turf/simulated/floor/plating,
+/area/space)
+"o" = (
+/obj/structure/bed/chair/sofa/orange,
+/turf/simulated/floor/plating,
+/area/space)
+"q" = (
+/obj/item/trash/small_bowl,
+/turf/simulated/floor/plating,
+/area/space)
+"t" = (
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"E" = (
+/obj/structure/bed/chair/sofa/left/orange,
+/turf/simulated/floor/plating,
+/area/space)
+"F" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"L" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/obj/effect/mine/frag,
+/turf/simulated/floor/plating,
+/area/space)
+"M" = (
+/obj/structure/bed/chair/sofa/right/orange,
+/obj/effect/mine/n2o,
+/obj/item/trash/pretzel,
+/turf/simulated/floor/plating,
+/area/space)
+"P" = (
+/turf/simulated/wall,
+/area/space)
+"Q" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating,
+/area/space)
+"T" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating,
+/area/space)
+"V" = (
+/obj/effect/mine/n2o,
+/obj/item/trash/snacktray,
+/turf/simulated/floor/plating,
+/area/space)
 
 (1,1,1) = {"
-aaaPPPPPa
-aaaPMoEPP
-atPPQnTnP
-nnFLnqQnP
-anPPdnnVP
-aaaPPPPPP
+a
+a
+a
+n
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+t
+n
+n
+a
+"}
+(3,1,1) = {"
+a
+a
+P
+F
+P
+a
+"}
+(4,1,1) = {"
+P
+P
+P
+L
+P
+P
+"}
+(5,1,1) = {"
+P
+M
+Q
+n
+d
+P
+"}
+(6,1,1) = {"
+P
+o
+n
+q
+n
+P
+"}
+(7,1,1) = {"
+P
+E
+T
+Q
+n
+P
+"}
+(8,1,1) = {"
+P
+P
+n
+n
+V
+P
+"}
+(9,1,1) = {"
+a
+P
+P
+P
+P
+P
 "}
