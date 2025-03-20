@@ -302,6 +302,15 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
+"aaF" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/red,
+/obj/machinery/meter{
+	frequency = 1443;
+	id = "wloop_atm_meter";
+	name = "Waste Loop"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aaG" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 9
@@ -469,6 +478,32 @@
 /obj/effect/floor_decal/corner/purple/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
+"aaV" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
+"aaW" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
+"aaX" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "aaY" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -619,6 +654,22 @@
 /obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"abq" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
+"abr" = (
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "abs" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -684,6 +735,22 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/lowmain)
+"abx" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
+"aby" = (
+/obj/machinery/atmospherics/pipe/simple/visible/purple,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "abz" = (
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4;
@@ -805,6 +872,35 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
+"abN" = (
+/obj/machinery/atmospherics/binary/pump,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"abO" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
+"abP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/atmos)
+"abQ" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/atmos)
 "abR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -838,6 +934,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"abU" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "abV" = (
 /obj/machinery/vending/wallmed1/public{
 	pixel_y = 32
@@ -853,6 +955,15 @@
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
+"abX" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/purple,
+/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "abY" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/muriki/elevator/scibase)
@@ -869,6 +980,26 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
+"aca" = (
+/obj/machinery/atmospherics/omni/atmos_filter{
+	tag_south = 2;
+	tag_west = 1
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/atmos)
+"acb" = (
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/atmos)
 "acc" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced,
@@ -977,6 +1108,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
+"aco" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
+"acp" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "acq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -1051,6 +1191,24 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway/hazard)
+"acw" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"acx" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 4;
+	initialize_directions = 11
+	},
+/obj/machinery/meter{
+	frequency = 1443;
+	id = "wloop_atm_meter";
+	name = "Waste Loop"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "acy" = (
 /obj/random/material/refined,
 /obj/random/material/refined,
@@ -1082,6 +1240,24 @@
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
+"acA" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/atmos)
+"acB" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/purple{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"acC" = (
+/obj/structure/reagent_dispensers/foam,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "acD" = (
 /obj/machinery/door/blast/regular{
 	id = "xbiocellchange"
@@ -1309,6 +1485,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/isolation_b)
+"acW" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/foam,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "acX" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -1324,6 +1507,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"acY" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "acZ" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "sciding";
@@ -1597,6 +1792,12 @@
 "adC" = (
 /turf/simulated/mineral/alt/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
+"adD" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "adE" = (
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
@@ -1847,12 +2048,24 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
 /area/server)
+"aee" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "aef" = (
 /obj/machinery/door/airlock/glass_command{
 	name = "Emergency Alerts"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/bunker)
+"aeg" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
 "aeh" = (
 /obj/machinery/light{
 	dir = 8
@@ -8406,16 +8619,9 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aqk" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow{
-	dir = 5
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
-"aql" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow,
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "aqm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
@@ -8904,11 +9110,6 @@
 	name = "reinforced floor"
 	},
 /area/maintenance/incinerator)
-"arq" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible/purple,
-/obj/machinery/meter,
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "arr" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/plating,
@@ -10036,14 +10237,19 @@
 	tag_south = 2;
 	tag_west = 1
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "ats" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 10
 	},
-/obj/machinery/meter,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "att" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -11342,18 +11548,25 @@
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 9
 	},
-/obj/machinery/meter,
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "avH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "avI" = (
 /obj/structure/fireaxecabinet{
 	pixel_x = 32
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/purple,
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "avJ" = (
@@ -11970,7 +12183,7 @@
 /obj/effect/landmark{
 	name = "bluespacerift"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "awF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
@@ -12376,7 +12589,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "axs" = (
-/obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/structure/closet/hydrant{
 	pixel_x = 32
 	},
@@ -12398,7 +12610,11 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "axv" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
@@ -14578,13 +14794,6 @@
 /obj/structure/sign/atmos_air,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"aBw" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "aBx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/floor_decal/industrial/warning{
@@ -15085,7 +15294,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/meter,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "aCJ" = (
 /obj/machinery/computer/atmos_alert,
@@ -16155,11 +16366,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/meter{
-	frequency = 1443;
-	id = "wloop_atm_meter";
-	name = "Waste Loop"
-	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aEV" = (
@@ -16617,8 +16823,8 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "aFO" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -20448,7 +20654,7 @@
 /obj/effect/landmark{
 	name = "lightsout"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "aNn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -30249,7 +30455,7 @@
 /obj/effect/landmark{
 	name = "vinestart"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "bfB" = (
 /obj/structure/table/glass,
@@ -48649,7 +48855,10 @@
 	tag_south = 0.5;
 	tag_south_con = 1
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos)
 "dUU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -54803,7 +55012,7 @@
 /obj/machinery/light/floortube{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "hGG" = (
 /obj/item/assembly/mousetrap/armed,
@@ -60179,7 +60388,12 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "ldg" = (
 /obj/machinery/light/small{
@@ -78935,10 +79149,6 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
-"wBk" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red,
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "wBE" = (
 /obj/effect/auto_crayon{
 	icon_state = "down"
@@ -80348,10 +80558,6 @@
 "xyA" = (
 /turf/simulated/floor/water/acidic/indoor/muriki,
 /area/mine/explored/muriki/cave/cargo)
-"xyR" = (
-/obj/structure/reagent_dispensers/foam,
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "xze" = (
 /obj/random/mouseray,
 /turf/simulated/floor/plating/muriki,
@@ -101915,7 +102121,7 @@ axp
 ayv
 azt
 aAp
-ads
+arl
 aCE
 aDM
 aEQ
@@ -102390,18 +102596,18 @@ acT
 alS
 ank
 cbl
-aqk
+ato
+aft
+aqn
 ads
-aqm
-atq
-atq
-atq
+acW
+acC
 ads
 atq
 atq
 azv
 anm
-aBw
+anm
 aCH
 aCH
 aER
@@ -102552,20 +102758,20 @@ akq
 alR
 anl
 ani
-aql
-aft
-aqn
-ash
-aqk
-ash
-aqk
-ash
-aqk
-ash
-aqk
-ash
-aqk
-ads
+aqm
+adD
+acY
+abO
+abx
+abx
+abx
+abO
+abx
+abx
+abx
+abO
+abx
+aaV
 aES
 ani
 aGF
@@ -102715,17 +102921,17 @@ alR
 ahi
 aur
 aqn
-arl
+aee
+aca
+abP
 atr
-aqo
+aco
+aca
+abP
 atr
-aqo
-atr
-aqo
-atr
-aqo
-atr
-aqo
+aco
+aca
+abP
 atr
 aqk
 aES
@@ -102874,23 +103080,23 @@ aih
 ajj
 aks
 qoE
-ads
+arl
 ani
 aqm
-ads
+aee
+acb
+abQ
 aCI
-ads
+acp
+acb
+acA
 aCI
-ads
+acp
+acb
+abQ
 aCI
-ads
-aCI
-ads
-aCI
-ads
-aCI
-aqm
-aES
+aaW
+ani
 ani
 aGG
 aHx
@@ -103039,7 +103245,7 @@ alT
 anm
 aoV
 aqm
-ads
+aee
 ats
 dUh
 avG
@@ -103047,12 +103253,12 @@ awE
 ats
 dUh
 avG
-ads
+acp
 ats
 dUh
 avG
-aqj
-ani
+aaX
+aaF
 aFI
 att
 aHy
@@ -103201,20 +103407,20 @@ alU
 ads
 ani
 aqm
-ads
-ads
-aCI
+aee
+acp
+abU
 hFy
-xyR
-xyR
-aCI
+acp
+acp
+abU
 aNm
-arl
+acp
 hFy
-aCI
+abU
 bfA
-ank
-wBk
+abq
+aES
 asm
 att
 aHz
@@ -103363,20 +103569,20 @@ bzo
 anl
 ani
 aqm
-ads
-ads
+aeg
+aFF
 lbF
-avH
-avH
-avH
+aby
+aby
+aby
 axu
-avH
-avH
-avH
-ayz
-ads
-ads
-ani
+aby
+aby
+aby
+abX
+aby
+abr
+aES
 arm
 jhY
 aie
@@ -103527,16 +103733,16 @@ anj
 aqn
 asm
 att
-arq
-alR
+auu
+acw
 avI
 axs
-avH
-avH
-avH
-avH
-avH
-avH
+acw
+acw
+acw
+ads
+auv
+abN
 avH
 aET
 aFJ
@@ -104178,7 +104384,7 @@ ads
 auv
 alR
 awI
-axu
+acB
 ayx
 azw
 ads
@@ -104334,7 +104540,7 @@ akr
 alR
 ahi
 aur
-aqn
+aqo
 asn
 sbq
 auw
@@ -104494,15 +104700,15 @@ aie
 ajm
 iEz
 lvq
-ads
+arl
 ani
-aqj
-aqj
-aqj
-aqj
 ads
+aqj
+aqj
+aqj
+arl
 auv
-axu
+acB
 ayz
 ani
 ads
@@ -104660,13 +104866,13 @@ anm
 axv
 aFO
 aso
+acx
 aso
-aso
 anm
 anm
 anm
 anm
-aso
+acx
 anm
 aCL
 rFY

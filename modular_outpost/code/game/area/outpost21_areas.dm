@@ -3062,6 +3062,7 @@
 	base_turf = /turf/simulated/open
 
 /area/engineering/atmos
+	name = "\improper Pulmonary Atmospherics"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/mineral/floor/muriki
 
