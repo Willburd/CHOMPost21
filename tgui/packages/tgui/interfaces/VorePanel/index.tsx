@@ -256,7 +256,7 @@ export const VorePanel = () => {
 			        Outpost 21 edit end */}
               <Tabs.Tab
                 selected={tabIndex === 1}
-                onClick={() => setTabIndex(2)}
+                onClick={() => setTabIndex(1)}
               >
                 Preferences
                 <Icon name="user-cog" ml={0.5} />
