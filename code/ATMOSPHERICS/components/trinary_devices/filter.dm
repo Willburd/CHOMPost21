@@ -110,14 +110,6 @@
 		last_power_draw = power_draw
 		use_power(power_draw)
 
-	// Outpost 21 edit begin - mapspawn filters actually have their overlays
-	if(!initial_icon_updated)
-		// so mapspawn filters actually have their overlays
-		initial_icon_updated = TRUE
-		spawn(50) // sometimes first update isn't enough, wait a bit longer
-			update_icon()
-	// Outpost 21 edit end
-
 	return 1
 
 /obj/machinery/atmospherics/trinary/atmos_filter/attack_hand(user) // -- TLE
@@ -129,45 +121,6 @@
 		return
 
 	tgui_interact(user)
-
-	// var/dat
-	// var/current_filter_type
-	// switch(filter_type)
-	// 	if(0)
-	// 		current_filter_type = "Phoron"
-	// 	if(1)
-	// 		current_filter_type = "Oxygen"
-	// 	if(2)
-	// 		current_filter_type = "Nitrogen"
-	// 	if(3)
-	// 		current_filter_type = "Carbon Dioxide"
-	// 	if(4)
-	// 		current_filter_type = "Nitrous Oxide"
-	// 	if(-1)
-	// 		current_filter_type = "Nothing"
-	// 	else
-	// 		current_filter_type = "ERROR - Report this bug to the admin, please!"
-
-	// dat += {"
-	// 		<b>Power: </b><a href='byond://?src=\ref[src];power=1'>[use_power?"On":"Off"]</a><br>
-	// 		<b>Filtering: </b>[current_filter_type]<br><HR>
-	// 		<h4>Set Filter Type:</h4>
-	// 		<A href='byond://?src=\ref[src];filterset=0'>Phoron</A><BR>
-	// 		<A href='byond://?src=\ref[src];filterset=1'>Oxygen</A><BR>
-	// 		<A href='byond://?src=\ref[src];filterset=2'>Nitrogen</A><BR>
-	// 		<A href='byond://?src=\ref[src];filterset=3'>Carbon Dioxide</A><BR>
-	// 		<A href='byond://?src=\ref[src];filterset=4'>Nitrous Oxide</A><BR>
-	// 		<A href='byond://?src=\ref[src];filterset=-1'>Nothing</A><BR>
-	// 		<HR>
-	// 		<B>Set Flow Rate Limit:</B>
-	// 		[src.set_flow_rate]L/s | <a href='byond://?src=\ref[src];set_flow_rate=1'>Change</a><BR>
-	// 		<B>Flow rate: </B>[round(last_flow_rate, 0.1)]L/s
-	// 		"}
-
-	// user << browse("<html><HEAD><TITLE>[src.name] control</TITLE></HEAD><TT>[dat]</TT></html>", "window=atmos_filter")
-	// onclose(user, "atmos_filter")
-
-
 
 /obj/machinery/atmospherics/trinary/atmos_filter/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
