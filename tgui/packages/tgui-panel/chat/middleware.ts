@@ -57,19 +57,19 @@ const saveChatToStorage = async (store: Store<number, Action<string>>) => {
     const messages = chatRenderer.messages
       .slice(fromIndex)
       .map((message) => serializeMessage(message));
-    storage.set('chat-messages', messages);
-    storage.set(
+    // storage.set('chat-messages', messages);
+    /* storage.set(
       'chat-messages-archive',
       chatRenderer.archivedMessages.map((message) => serializeMessage(message)),
-    );
+    );*/ // Outpost 21 TODO - chat to database, this is a hack job
   } // FIXME: Better chat history
 };
 
 const loadChatFromStorage = async (store: Store<number, Action<string>>) => {
   const [state, messages, archivedMessages] = await Promise.all([
     storage.get('chat-state'),
-    storage.get('chat-messages'),
-    storage.get('chat-messages-archive'), // FIXME: Better chat history
+    // storage.get('chat-messages'), // Outpost 21 TODO - chat to database, this is a hack job
+    // storage.get('chat-messages-archive'), // FIXME: Better chat history
   ]);
   // Discard incompatible versions
   if (state && state.version <= 4) {
