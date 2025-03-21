@@ -740,29 +740,3 @@
 
 /datum/seed/xenomorph
 	spoiler = TRUE
-
-
-/datum/reagent/water/liquid_belly
-	spoiler = TRUE
-/datum/reagent/drink/milk/liquid_belly
-	spoiler = TRUE
-/datum/reagent/drink/milk/cream/liquid_belly
-	spoiler = TRUE
-/datum/reagent/nutriment/honey/liquid_belly
-	spoiler = TRUE
-/datum/reagent/nutriment/cherryjelly/liquid_belly
-	spoiler = TRUE
-/datum/reagent/acid/digestive/liquid_belly
-	spoiler = TRUE
-/datum/reagent/acid/diet_digestive/liquid_belly
-	spoiler = TRUE
-/datum/reagent/space_cleaner/liquid_belly
-	spoiler = TRUE
-/datum/reagent/lube/liquid_belly
-	spoiler = TRUE
-/datum/reagent/nutriment/biomass/liquid_belly
-	spoiler = TRUE
-/datum/reagent/radium/concentrated/liquid_belly
-	spoiler = TRUE
-/datum/reagent/tricordrazine/liquid_belly
-	spoiler = TRUE
