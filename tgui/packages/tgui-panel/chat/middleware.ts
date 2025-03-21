@@ -68,8 +68,8 @@ const saveChatToStorage = async (store: Store<number, Action<string>>) => {
 const loadChatFromStorage = async (store: Store<number, Action<string>>) => {
   const [state, messages, archivedMessages] = await Promise.all([
     storage.get('chat-state'),
-    // storage.get('chat-messages'), // Outpost 21 TODO - chat to database, this is a hack job
-    // storage.get('chat-messages-archive'), // FIXME: Better chat history
+    null, // storage.get('chat-messages'), // Outpost 21 TODO - chat to database, this is a hack job
+    null, // storage.get('chat-messages-archive'), // FIXME: Better chat history
   ]);
   // Discard incompatible versions
   if (state && state.version <= 4) {
