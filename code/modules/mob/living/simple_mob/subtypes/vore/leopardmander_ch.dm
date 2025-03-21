@@ -90,6 +90,8 @@
 /mob/living/simple_mob/vore/leopardmander/init_vore()
 	if(!voremob_loaded)
 		return
+	if(LAZYLEN(vore_organs))
+		return
 	.=..()
 	var/obj/belly/B = new /obj/belly(src)
 	B.affects_vore_sprites = TRUE
@@ -190,6 +192,8 @@
 
 /mob/living/simple_mob/vore/leopardmander/exotic/init_vore()
 	if(!voremob_loaded)
+		return
+	if(LAZYLEN(vore_organs))
 		return
 	//.=..() //Dont need this, it just spawns the parent's guts
 	var/obj/belly/B = new /obj/belly(src)

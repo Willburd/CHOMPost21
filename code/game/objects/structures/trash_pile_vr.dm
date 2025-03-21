@@ -11,9 +11,11 @@
 
 	var/obj/structure/mob_spawner/mouse_nest/mouse_nest = null
 
+	// Must total to 100
 	var/chance_alpha	= 79	// Alpha list is junk items and normal random stuff.
-	var/chance_beta		= 20	// Beta list is actually maybe some useful illegal items. If it's not alpha or gamma, it's beta.
+	var/chance_beta		= 19	// Beta list is actually maybe some useful illegal items. If it's not alpha or gamma, it's beta.
 	var/chance_gamma	= 1		// Gamma list is unique items only, and will only spawn one of each. This is a sub-chance of beta chance.
+	var/chance_theta 	= 1		// Outpost 21 edit - Theta list may only spawn one item from it the entire round
 
 	//These are types that can only spawn once, and then will be removed from this list.
 	//Alpha and beta lists are in their respective procs.
@@ -32,15 +34,21 @@
 		/obj/item/organ/internal/augment/bioaugment/thermalshades,
 		/obj/item/organ/internal/augment/armmounted/hand/sword,
 		/obj/item/organ/internal/augment/armmounted/dartbow,
+	 	// Outpost 21 edit end
+		)
+	var/global/list/allocated_gamma = list()
+
+	// Outpost 21 edit begin - New loot
+	var/global/list/unique_theta = list(
 		/obj/item/spellbook/oneuse/blind,
 		/obj/item/spellbook/oneuse/charge,
 		/obj/item/spellbook/oneuse/fireball,
 		/obj/item/spellbook/oneuse/forcewall,
 		/obj/item/spellbook/oneuse/horsemask,
 		/obj/item/spellbook/oneuse/knock
-	 	// Outpost 21 edit end
 		)
-	var/global/list/allocated_gamma = list()
+	var/static/spawned_theta = FALSE
+	// Outpost 21 edit end
 
 /obj/structure/trash_pile/Initialize(mapload)
 	. = ..()
@@ -170,6 +178,13 @@
 					I = produce_beta_item()
 				else if(luck <= chance_alpha+chance_beta+chance_gamma)
 					I = produce_gamma_item()
+				// Outpost 21 edit begin - New loot
+				else if(luck <= chance_alpha+chance_beta+chance_gamma+chance_theta)
+					if(!spawned_theta)
+						I = produce_theta_item()
+					else
+						I = produce_beta_item()
+				// Outpost 21 edit end
 
 				//VOREstation edit - Randomized map objects were put in loot piles, so handle them...
 				if(istype(I,/obj/random))
@@ -388,6 +403,14 @@
 		return I
 	else
 		return produce_beta_item()
+
+// Outpost 21 edit begin - New loot
+/obj/structure/trash_pile/proc/produce_theta_item()
+	var/path = pick(unique_theta)
+	if(path)
+		spawned_theta = TRUE
+		return new path()
+// Outpost 21 edit end
 
 /obj/structure/mob_spawner/mouse_nest
 	name = "trash"

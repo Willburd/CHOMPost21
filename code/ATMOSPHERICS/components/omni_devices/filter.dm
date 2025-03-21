@@ -90,13 +90,6 @@
 			if(P.network)
 				P.network.update = 1
 
-	// Outpost 21 edit begin - mapspawn filters actually have their overlays
-	if(!initial_icon_updated)
-		initial_icon_updated = TRUE
-		spawn(50) // sometimes first update isn't enough, wait a bit longer
-			update_icon()
-	// Outpost 21 edit end
-
 	return 1
 
 /obj/machinery/atmospherics/omni/atmos_filter/tgui_interact(mob/user,datum/tgui/ui = null)

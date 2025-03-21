@@ -1,4 +1,3 @@
-
 var/datum/map/using_map = new USING_MAP_DATUM
 var/list/all_maps = list()
 
@@ -37,10 +36,9 @@ var/list/all_maps = list()
 	var/static/list/secret_levels = list() // Z-levels that (non-admin) ghosts can't get to
 	var/static/list/hidden_levels = list() // Z-levels who's contents are hidden, but not forbidden (gateways)
 	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
-	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
+	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to.
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
 	var/static/list/below_blocked_levels = list()// List of levels where mapping or other similar devices might work fully
-	var/static/list/deadly_fall_levels = list()// List of levels where mapping or other similar devices might work fully
 	// End Static Lists
 
 	// Z-levels available to various consoles, such as the crew monitor. Defaults to station_levels if unset.
@@ -84,6 +82,12 @@ var/list/all_maps = list()
 	var/list/mining_outpost_z = list()
 	//VOREStation Addition End
 
+	// Outpost 21 edit begin - custom zlevel lists
+	var/static/list/event_levels = list() // Events happen on these levels, even if not part of station!
+	var/static/list/forced_airmix_levels = list() // z-levels where airmix slowly resets if outdoors, prevents saturating the atmosphere
+	var/static/list/deadly_fall_levels = list() // List of levels where mapping or other similar devices might work fully
+	// Outpost 21 edit end
+
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
 	var/dock_name	 = "THE PirateBay"
@@ -112,9 +116,9 @@ var/list/all_maps = list()
 	var/allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
 
 	// VOREStation Edit - Persistence!
-	var/datum/spawnpoint/spawnpoint_died = /datum/spawnpoint/cryo // Outpost 21 edit - changed from /datum/spawnpoint/arrivals 		// Used if you end the round dead.
-	var/datum/spawnpoint/spawnpoint_left = /datum/spawnpoint/elevator // Outpost 21 edit - changed from /datum/spawnpoint/arrivals 	// Used of you end the round at centcom.
-	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/dorm // Outpost 21 edit - changed from /datum/spawnpoint/cryo 	 	// Used if you end the round on the station.
+	var/datum/spawnpoint/spawnpoint_died = /datum/spawnpoint/arrivals 		// Used if you end the round dead.
+	var/datum/spawnpoint/spawnpoint_left = /datum/spawnpoint/arrivals 	// Used of you end the round at centcom.
+	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	 	// Used if you end the round on the station.
 	// VOREStation Edit End
 
 	var/use_overmap = 0		  // If overmap should be used (including overmap space travel override)
@@ -342,7 +346,7 @@ var/list/all_maps = list()
 	if(flags & MAP_LEVEL_PLAYER) map.player_levels += z
 	if(flags & MAP_LEVEL_SEALED) map.sealed_levels += z
 	if(flags & MAP_LEVEL_XENOARCH_EXEMPT) map.xenoarch_exempt_levels += z
-	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z //CHOMPedit: I stg stop forgetting CHOMPedit comments
+	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z
 	if(flags & MAP_LEVEL_PERSIST) map.persist_levels += z
 	if(flags & MAP_LEVEL_EMPTY)
 		if(!map.empty_levels) map.empty_levels = list()

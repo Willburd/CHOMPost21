@@ -720,17 +720,3 @@
 					H.AdjustSleeping(15)
 					H.AdjustWeakened(3)
 					H.adjustHalLoss(-9)
-
-//////////////////////////////////////////////////////////////
-// Tram to redspace (stations)
-/obj/effect/shuttle_landmark/premade/underdark/start
-	name = "Station Platform"
-	landmark_tag = "dark_start"
-	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki
-
-/obj/effect/shuttle_landmark/premade/underdark/end
-	name = "End Of The Line"
-	landmark_tag = "dark_end"
-	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki

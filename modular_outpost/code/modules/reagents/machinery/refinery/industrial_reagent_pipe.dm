@@ -13,9 +13,6 @@
 
 /obj/machinery/reagent_refinery/pipe/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT

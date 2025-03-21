@@ -1,32 +1,204 @@
-"a" = (/turf/simulated/wall,/area/space)
-"b" = (/obj/item/bone,/turf/simulated/floor/wood/sif/broken,/area/space)
-"c" = (/obj/item/bone/ribs,/turf/simulated/floor/wood/sif,/area/space)
-"h" = (/mob/living/simple_mob/vore/aggressive/rat{desc = "In what passes for a hierarchy among verminous rodents, this one is king, and oh lord is he chunky."; health = 350; name = "Kritch"},/turf/simulated/floor/wood/sif,/area/space)
-"k" = (/obj/item/storage/box/injectors{pixel_x = -5; pixel_y = 1},/turf/simulated/floor/wood/sif,/area/space)
-"l" = (/obj/item/bone/skull/tajaran,/turf/simulated/floor/wood/sif/broken,/area/space)
-"n" = (/turf/simulated/wall{can_open = 1},/area/space)
-"r" = (/obj/structure/loot_pile/mecha/ripley/random_sprite,/turf/simulated/floor/wood/sif,/area/space)
-"t" = (/obj/effect/auto_crayon{icon_state = "x"},/turf/simulated/floor/plating/muriki,/area/space)
-"v" = (/obj/effect/landmark/loot_spawn,/turf/simulated/floor/wood/sif,/area/space)
-"x" = (/turf/simulated/mineral/alt/ignore_cavegen,/area/space)
-"z" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/wood/sif,/area/space)
-"B" = (/obj/item/bone/skull/unathi,/turf/simulated/floor/wood/sif,/area/space)
-"C" = (/obj/item/bone/arm,/turf/simulated/floor/wood/sif,/area/space)
-"G" = (/obj/structure/loot_pile/surface/bones,/turf/simulated/floor/wood/sif/broken,/area/space)
-"I" = (/obj/item/bone/skull/unknown,/turf/simulated/floor/wood/sif,/area/space)
-"L" = (/turf/simulated/floor/wood/sif,/area/space)
-"M" = (/obj/effect/auto_crayon{icon_state = "up"},/turf/simulated/floor/plating/muriki,/area/space)
-"S" = (/obj/structure/loot_pile/mecha/gygax/dark,/turf/simulated/floor/wood/sif,/area/space)
-"Y" = (/turf/simulated/floor/wood/sif/broken,/area/space)
-"Z" = (/obj/item/bone/skull,/turf/simulated/floor/wood/sif/broken,/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall,
+/area/space)
+"b" = (
+/obj/item/bone,
+/turf/simulated/floor/wood/sif/broken,
+/area/space)
+"c" = (
+/obj/item/bone/ribs,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"h" = (
+/mob/living/simple_mob/vore/aggressive/rat{
+	desc = "In what passes for a hierarchy among verminous rodents, this one is king, and oh lord is he chunky.";
+	health = 350;
+	name = "Kritch"
+	},
+/turf/simulated/floor/wood/sif,
+/area/space)
+"k" = (
+/obj/item/storage/box/injectors{
+	pixel_x = -5;
+	pixel_y = 1
+	},
+/turf/simulated/floor/wood/sif,
+/area/space)
+"l" = (
+/obj/item/bone/skull/tajaran,
+/turf/simulated/floor/wood/sif/broken,
+/area/space)
+"n" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/space)
+"r" = (
+/obj/structure/loot_pile/mecha/ripley/random_sprite,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"t" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/space)
+"v" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"x" = (
+/turf/simulated/mineral/alt/ignore_cavegen,
+/area/space)
+"z" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"B" = (
+/obj/item/bone/skull/unathi,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"C" = (
+/obj/item/bone/arm,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"G" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/wood/sif/broken,
+/area/space)
+"I" = (
+/obj/item/bone/skull/unknown,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"L" = (
+/turf/simulated/floor/wood/sif,
+/area/space)
+"M" = (
+/obj/effect/auto_crayon{
+	icon_state = "up"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/space)
+"S" = (
+/obj/structure/loot_pile/mecha/gygax/dark,
+/turf/simulated/floor/wood/sif,
+/area/space)
+"Y" = (
+/turf/simulated/floor/wood/sif/broken,
+/area/space)
+"Z" = (
+/obj/item/bone/skull,
+/turf/simulated/floor/wood/sif/broken,
+/area/space)
 
 (1,1,1) = {"
-aaaaaaaaaaa
-aYrkLLLSvLa
-aYLLLYCYLLa
-aLILzhBZYLa
-aLYbYLLcGLa
-aYLLLlLYLLa
-aannaaaaaaa
-xxtMxxxxxxx
+a
+a
+a
+a
+a
+a
+a
+x
+"}
+(2,1,1) = {"
+a
+Y
+Y
+L
+L
+Y
+a
+x
+"}
+(3,1,1) = {"
+a
+r
+L
+I
+Y
+L
+n
+t
+"}
+(4,1,1) = {"
+a
+k
+L
+L
+b
+L
+n
+M
+"}
+(5,1,1) = {"
+a
+L
+L
+z
+Y
+L
+a
+x
+"}
+(6,1,1) = {"
+a
+L
+Y
+h
+L
+l
+a
+x
+"}
+(7,1,1) = {"
+a
+L
+C
+B
+L
+L
+a
+x
+"}
+(8,1,1) = {"
+a
+S
+Y
+Z
+c
+Y
+a
+x
+"}
+(9,1,1) = {"
+a
+v
+L
+Y
+G
+L
+a
+x
+"}
+(10,1,1) = {"
+a
+L
+L
+L
+L
+L
+a
+x
+"}
+(11,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+x
 "}

@@ -18,9 +18,6 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 
 /obj/machinery/reagent_refinery/vat/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 	vats_to_rain_into.Add(src)
 	// Can't be set on these

@@ -1569,9 +1569,7 @@ About the new airlock wires panel:
 		return 0
 	return ..(M)
 
-/obj/machinery/door/airlock/New(var/newloc, var/obj/structure/door_assembly/assembly=null)
-	..()
-
+/obj/machinery/door/airlock/Initialize(mapload, var/obj/structure/door_assembly/assembly=null)
 	//if assembly is given, create the new door from the assembly
 	if (assembly && istype(assembly))
 		assembly_type = assembly.type
@@ -1598,7 +1596,7 @@ About the new airlock wires panel:
 		set_dir(assembly.dir)
 
 	//wires
-	var/turf/T = get_turf(newloc)
+	var/turf/T = get_turf(src)
 	if(T && (T.z in using_map.admin_levels))
 		secured_wires = 1
 	if (secured_wires)
@@ -1606,19 +1604,23 @@ About the new airlock wires panel:
 	else
 		wires = new/datum/wires/airlock(src)
 
-/obj/machinery/door/airlock/Initialize(mapload)
+	// Outpost 21 edit begin - Door braces attach automatically when placed on a door in mapper
+	var/obj/item/airlock_brace/B = locate(/obj/item/airlock_brace) in loc
+	if(!brace && B)
+		B.lock_brace(src)
+	// Outpost 21 edit end
+
+	. = ..()
+
 	if(src.closeOtherId != null)
 		for (var/obj/machinery/door/airlock/A in machines)
 			if(A.closeOtherId == src.closeOtherId && A != src)
 				src.closeOther = A
 				break
 	name = "\improper [name]"
-	// Outpost 21 edit begin - Door braces attach automatically when placed on a door in mapper
-	var/obj/item/airlock_brace/A = locate(/obj/item/airlock_brace) in loc
-	if(!brace && A)
-		A.lock_brace(src)
-	// Outpost 21 edit end
-	. = ..()
+	if(frequency)
+		set_frequency(frequency)
+	update_icon()
 
 /obj/machinery/door/airlock/Destroy()
 	qdel(wires)

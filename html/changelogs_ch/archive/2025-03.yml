@@ -345,3 +345,92 @@
       but winter coat won't.
   - code_imp: Pockets have been completely reworked to not use randomly defined lists
       everywhere. They are now consolidated.
+2025-03-16:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: All suits no longer have a 'toggle hood' button even if they have no hood
+      to toggle.
+  - bugfix: robot sprites broken by goo borgs
+  Diana:
+  - bugfix: Plushies will no longer lose their loadout name
+  - bugfix: Plushies will speak in their given name in the chat properly.
+  - bugfix: Xenoarch organs no longer have the possibility of being rejected.
+  Will:
+  - rscadd: Adds a positive trait that allows you to have your genetics unable to
+      be scrambled.
+  - rscadd: 'Adds three new negative traits: One Life, Unsleeveable, and Unreviveable.'
+  - rscadd: If you have NO_DNA or NO_RESLEEVE(your genetics is trashed), slimes find
+      you unappealing!
+  - code_imp: NO_DNA and NO_RESLEEVE are now separated.
+  - bugfix: Traits will no longer wipe innate species traits
+  - code_imp: ATC is now a subsystem
+  Will & Diana:
+  - bugfix: Dullahans (among others) have proper offsets now
+  - code_imp: Unit test forces coders to comply with proper offsetting of borg sprites
+2025-03-17:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new bluespace sheet snatcher of holding that can be created by
+      science (cheaper and easier than other "of holding" items). This allows it to
+      carry up to 5000 sheets. It can also be bought from the mining vendor for 1000
+      points.
+  - balance: Changed the normal sheet snatcher to hold 500 (previously 300), and the
+      borg version to hold 700 (previously 500).
+  - rscadd: You can now adjust the transparency of your wings in the character editor
+      and related.
+  - code_imp: finishes machines new to init
+  - bugfix: The various character transparency additions are properly added to character
+      DNA now.
+  - code_imp: fix admin vote
+  - rscadd: liquid bellies
+  - rscadd: all chomp belly overlays
+  - rscadd: soul catcher for generic usage by every mob
+  - rscadd: more transfer, processing and other belly options
+  - bugfix: bellies no longer update every life tick
+  - qol: reworked the entire vore panel preference section
+  - qol: rework vorespwan to also be autoamted / used as direct spawn point
+  Diana:
+  - code_imp: Emotes work a bit differently on the backend.
+  - bugfix: immunosuprizine is no longer the strongest poison in the game. It will
+      no longer do 1245 damage per unit to people you hit with it.
+2025-03-19:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new trait called "Reflexive biting" that causes you to bite the
+      hand of anyone who either pats you on the head or boops you on the nose. This
+      deals one point of damage to the hand committing said offense. This also includes
+      a verb in Abilities to toggle this off and on.
+  - rscadd: Added a personal space bubble trait that takes of priority over the biting
+      trait, which dodges all attempts at hugging, booping, patting, licking, sniffing
+      or hand shaking. This can also be toggled on and off.
+  Kashargul:
+  - bugfix: reverts the emote sounds to the chomp ones
+  - code_imp: enable grep on modular chomp
+2025-03-20:
+  Ace:
+  - rscadd: Lamias now have unique belly text!
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed personal space trait applying nothing and reactive biting applying
+      both effects.
+  - code_imp: enables more grep checks
+  - bugfix: an exploit to detect invisible entities
+  - rscadd: The belly visibility pref is now a client one, so you don't need to adjust
+      it on a per-character basis anymore.
+  Cerami:
+  - rscadd: reindeer mob, with festive variant
+  - rscadd: Lion mob, with toggle for lioness sprite
+  Diana:
+  - rscadd: Artifacts now have a coinflip's chance of spawning active when unearthed
+      (EXCLUDING gas artifacts)
+  - qol: Artifacts are always visible at any depth now.
+  - qol: Artifacts no longer apply a Z wide spawn, it will only apply effects for
+      those within a small range.
+  - bugfix: Artifacts that have a TOUCH EFFECT but not a TOUCH TRIGGER can now be
+      ACTIVATED and you can have the effect happen to you by bumping into it, having
+      it bump into you, or touching it without gloves
+  Drathek:
+  - code_imp: Added multivar support to hook installers
+  - maptweak: Synchronized maps folder with virgo
+  - rscdel: Archived a few maps that are not present on virgo
+  Kash, Diana:
+  - bugfix: some protean rig issues
+  - bugfix: Your DNA will no longer randomly eat itself under certain circumstances
+  - bugfix: Protean rigs no longer delete theirselves
+  - bugfix: Protean rigs no longer delete clothing blocking their deployment

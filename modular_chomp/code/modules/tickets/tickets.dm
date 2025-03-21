@@ -571,7 +571,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 		return
 
 	if(handler == key_name(usr, FALSE, TRUE))
-		to_chat(span_red("You are already handling this ticket."))
+		to_chat(usr, span_red("You are already handling this ticket."))
 		return
 
 	var/msg = span_red("Your AdminHelp is being handled by [key_name(usr,FALSE,FALSE)] please be patient.")
@@ -701,7 +701,7 @@ GLOBAL_DATUM_INIT(tickets, /datum/tickets, new)
 	. = list("total" = list(), "noflags" = list(), "afk" = list(), "stealth" = list(), "present" = list())
 	for(var/client/X in GLOB.admins)
 		.["total"] += X
-		if(requiredflags != 0 && !check_rights(X, requiredflags))
+		if(requiredflags != 0 && !check_rights_for(X, requiredflags))
 			.["noflags"] += X
 		else if(X.is_afk())
 			.["afk"] += X

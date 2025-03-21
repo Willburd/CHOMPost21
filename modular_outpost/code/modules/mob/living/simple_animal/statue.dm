@@ -117,6 +117,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		if(do_after(user, 15, src))
 			if(banishable)
 				visible_message("<span class='warning'>[src] crumbles into dust!</span>")
+				SShaunting.reset_world_haunt()
 				gib()
 			else
 				visible_message("<span class='warning'>[src] is too strong to be banished!</span>")

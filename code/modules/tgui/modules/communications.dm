@@ -33,14 +33,13 @@
 
 	var/datum/announcement/priority/crew_announcement
 
-	var/datum/lore/atc_controller/ATC
+	var/datum/weakref/ATC
 
 	var/list/req_access = list()
 	var/obj/machinery/computer/communications/comm_console = null // Outpost 21 edit - use the comm's console access
 
 /datum/tgui_module/communications/New(host)
 	. = ..()
-	ATC = atc
 	crew_announcement = new()
 	crew_announcement.newscast = TRUE
 
@@ -103,7 +102,7 @@
 	data["authenticated"] =data["is_ai"] ? COMM_AUTHENTICATION_MIN : is_authenticated(user, 0)
 	// Outpost 21 edit end
 	data["authmax"] = data["authenticated"] == COMM_AUTHENTICATION_MAX ? TRUE : FALSE
-	data["atcsquelch"] = ATC.squelched
+	data["atcsquelch"] = SSatc.is_squelched()
 	data["boss_short"] = using_map.boss_short
 
 	data["stat_display"] =  list(
@@ -315,7 +314,7 @@
 			setMenuState(ui.user, COMM_SCREEN_MESSAGES)
 
 		if("toggleatc")
-			ATC.squelched = !ATC.squelched
+			SSatc.reroute_traffic(yes = !SSatc.is_squelched(), silent = TRUE)
 
 		if("delmessage")
 			var/datum/comm_message_listener/l = obtain_message_listener()

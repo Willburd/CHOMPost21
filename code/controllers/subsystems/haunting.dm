@@ -6,18 +6,19 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 300
+#define MODE_SIZE 280
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
 	wait = 0.8 SECONDS
-	VAR_PRIVATE/haunt_score = MODE_SIZE / 2
+	VAR_PRIVATE/haunt_score = 0
 	VAR_PRIVATE/world_mode = MODE_CALM
 	init_order = INIT_ORDER_HAUNTING
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
 	VAR_PRIVATE/list/current_influences = list()
 	VAR_PRIVATE/static/list/influences = list(
+		HAUNTING_BLESSING	= -2,
 		HAUNTING_RESLEEVE 	= -0.9,
 		HAUNTING_COMFORT 	= -0.05,
 		HAUNTING_UNSETTLE 	=  0.05,
@@ -41,7 +42,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/light_flicker,
 		/datum/station_haunt/watching_me,
 		/datum/station_haunt/chills,
-		/datum/station_haunt/lurker
+		/datum/station_haunt/lurker,
+		/datum/station_haunt/distant_alarm
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -49,11 +51,13 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/watching_me,
 		/datum/station_haunt/chills,
 		/datum/station_haunt/distant_scream,
+		/datum/station_haunt/distant_alarm,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/hallucinate,
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/shuttle_move,
-		/datum/station_haunt/lurker
+		/datum/station_haunt/lurker,
+		/datum/station_haunt/change_nearby_display
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -67,6 +71,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
 		/datum/station_haunt/distant_scream,
+		/datum/station_haunt/distant_alarm,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/heavy_breath,
 		/datum/station_haunt/throw_item,
@@ -75,7 +80,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/bleeding,
 		/datum/station_haunt/shuttle_move,
-		/datum/station_haunt/lurker/can_appear
+		/datum/station_haunt/lurker/can_appear,
+		/datum/station_haunt/change_nearby_display
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -98,7 +104,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/blood_rain,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/shuttle_move,
-		/datum/station_haunt/lurker/can_appear
+		/datum/station_haunt/lurker/can_appear,
+		/datum/station_haunt/change_nearby_display
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -140,6 +147,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/blood_rain,
 		/datum/station_haunt/lurker/will_appear,
 		/datum/station_haunt/lurker/pyromanic,
+		/datum/station_haunt/distant_alarm,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
@@ -161,9 +169,16 @@ SUBSYSTEM_DEF(haunting)
 	perform_haunt()
 
 /datum/controller/subsystem/haunting/proc/intense_world_haunt()
+	haunt_score = MODE_SIZE / 2
 	world_mode += 1
 	if(world_mode > MODE_SUPERSPOOKY)
 		world_mode = MODE_SUPERSPOOKY
+
+/datum/controller/subsystem/haunting/proc/reduce_world_haunt()
+	haunt_score = MODE_SIZE / 2
+	world_mode -= 1
+	if(world_mode < MODE_CALM)
+		world_mode = MODE_CALM
 
 /datum/controller/subsystem/haunting/proc/reset_world_haunt()
 	world_mode = MODE_CALM
@@ -184,7 +199,11 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_player_target()
 	var/mob/M = current_player_target?.resolve()
-	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal())
+	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal() || istype(M.loc,/obj/belly))
+		clear_player_target()
+		return null
+	var/turf/T = get_turf(M) // check for holy turf!
+	if(!T || T.holy)
 		clear_player_target()
 		return null
 	return M
@@ -229,16 +248,10 @@ SUBSYSTEM_DEF(haunting)
 
 	// Change mode
 	if(haunt_score >= MODE_SIZE)
-		world_mode += 1
-		haunt_score = MODE_SIZE / 2
-		if(world_mode > MODE_SUPERSPOOKY)
-			world_mode = MODE_SUPERSPOOKY
+		intense_world_haunt()
 		return
 	if(haunt_score <= 0)
-		world_mode -= 1
-		haunt_score = MODE_SIZE / 2
-		if(world_mode < MODE_CALM)
-			world_mode = MODE_CALM
+		reduce_world_haunt()
 		return
 
 /datum/controller/subsystem/haunting/proc/station_is_haunted()
@@ -312,7 +325,9 @@ SUBSYSTEM_DEF(haunting)
 	// Players in the dark are treated worse
 	var/bonus = world_mode
 	var/turf/T = get_turf(M)
-	if(!T)
+	if(!T || T.holy) // Check for holy turfs too
+		clear_player_target()
+		last_event = "BLOCKED"
 		return
 	if(T.get_lumcount() < 0.2)
 		bonus += 1

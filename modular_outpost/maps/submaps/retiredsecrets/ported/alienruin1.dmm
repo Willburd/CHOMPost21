@@ -1,26 +1,157 @@
-"a" = (/turf/simulated/wall/lead,/area/space)
-"d" = (/obj/structure/prop/poicanister,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"k" = (/obj/structure/prop/dominator/green,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"o" = (/obj/item/trash/skrellsnax,/turf/simulated/floor/plating{nitrous_oxide = 72.314},/area/space)
-"q" = (/obj/structure/prop/machine/alien_tank,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"s" = (/obj/item/trash/skrellsnax,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"u" = (/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"v" = (/obj/machinery/door/airlock/science,/turf/simulated/floor/plating/muriki,/area/space)
-"y" = (/obj/structure/prop/dominator/orange,/turf/simulated/floor/plating{nitrous_oxide = 72.314},/area/space)
-"I" = (/obj/structure/salvageable/console{dir = 4; pixel_x = -5},/turf/simulated/floor/plating{nitrous_oxide = 72.314},/area/space)
-"J" = (/turf/simulated/floor/plating{nitrous_oxide = 72.314},/area/space)
-"N" = (/obj/effect/landmark/loot_spawn,/turf/simulated/floor/plating{nitrous_oxide = 72.314},/area/space)
-"R" = (/obj/machinery/cell_charger,/obj/structure/table/standard,/obj/random/mega_nukies,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"W" = (/obj/structure/table/standard,/obj/item/trash/skrellsnax,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"Y" = (/obj/machinery/light{dir = 8},/obj/structure/loot_pile/mecha/phazon,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
-"Z" = (/obj/machinery/light{dir = 4},/obj/item/trash/skrellsnax,/turf/simulated/floor/tiled{nitrous_oxide = 72.314},/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall/lead,
+/area/space)
+"d" = (
+/obj/structure/prop/poicanister,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"k" = (
+/obj/structure/prop/dominator/green,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"o" = (
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"q" = (
+/obj/structure/prop/machine/alien_tank,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"s" = (
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"u" = (
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"v" = (
+/obj/machinery/door/airlock/science,
+/turf/simulated/floor/plating/muriki,
+/area/space)
+"y" = (
+/obj/structure/prop/dominator/orange,
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"I" = (
+/obj/structure/salvageable/console{
+	dir = 4;
+	pixel_x = -5
+	},
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"J" = (
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"N" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/plating{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"R" = (
+/obj/machinery/cell_charger,
+/obj/structure/table/standard,
+/obj/random/mega_nukies,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"W" = (
+/obj/structure/table/standard,
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"Y" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/loot_pile/mecha/phazon,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
+"Z" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/trash/skrellsnax,
+/turf/simulated/floor/tiled{
+	nitrous_oxide = 72.314
+	},
+/area/space)
 
 (1,1,1) = {"
-aaaaaa
-ayqqka
-asJsua
-aYJJZa
-aIJJNa
-adoWRa
-aavaaa
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+y
+s
+Y
+I
+d
+a
+"}
+(3,1,1) = {"
+a
+q
+J
+J
+J
+o
+v
+"}
+(4,1,1) = {"
+a
+q
+s
+J
+J
+W
+a
+"}
+(5,1,1) = {"
+a
+k
+u
+Z
+N
+R
+a
+"}
+(6,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
 "}

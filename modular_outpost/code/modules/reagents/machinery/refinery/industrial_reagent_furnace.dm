@@ -21,9 +21,6 @@
 
 /obj/machinery/reagent_refinery/furnace/Initialize(mapload)
 	. = ..()
-	// TODO - Remove this bit once machines are converted to Initialize
-	if(ispath(circuit))
-		circuit = new circuit(src)
 	default_apply_parts()
 	beaker = new /obj/item/reagent_containers/glass/beaker/bluespace(src) // Get it all out as fast as possible
 	// Can't be set on these
@@ -129,7 +126,7 @@
 		var/image/filling = image(icon, loc, "[icon_state]_r",dir = dir)
 		filling.color = reagents.get_color()
 		add_overlay(filling)
-	else if(beaker.reagents && beaker.reagents.total_volume > 0)
+	else if(beaker && beaker.reagents && beaker.reagents.total_volume > 0)
 		var/image/filling = image(icon, loc, "[icon_state]_r",dir = dir)
 		filling.color = beaker.reagents.get_color()
 		add_overlay(filling)

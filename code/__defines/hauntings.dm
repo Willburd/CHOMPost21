@@ -1,3 +1,4 @@
+#define HAUNTING_BLESSING "blessing"
 #define HAUNTING_RESLEEVE "resleeve"
 #define HAUNTING_COMFORT "comfort"
 #define HAUNTING_UNSETTLE "unsettle"

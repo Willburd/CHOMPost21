@@ -1,11 +1,45 @@
-"a" = (/turf/simulated/wall,/area/space)
-"p" = (/obj/machinery/door/airlock/maintenance/int,/turf/simulated/floor/plating/muriki,/area/space)
-"v" = (/obj/random/plushielarge,/turf/simulated/floor/plating/muriki,/area/space)
-"O" = (/turf/simulated/floor/plating/muriki,/area/space)
-"Y" = (/mob/living/simple_mob/vore/alienanimals/catslug,/turf/simulated/floor/plating/muriki,/area/space)
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall,
+/area/space)
+"p" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/plating/muriki,
+/area/space)
+"v" = (
+/obj/random/plushielarge,
+/turf/simulated/floor/plating/muriki,
+/area/space)
+"O" = (
+/turf/simulated/floor/plating/muriki,
+/area/space)
+"Y" = (
+/mob/living/simple_mob/vore/alienanimals/catslug,
+/turf/simulated/floor/plating/muriki,
+/area/space)
 
 (1,1,1) = {"
-aaaaa
-avOYa
-aaapa
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+v
+a
+"}
+(3,1,1) = {"
+a
+O
+a
+"}
+(4,1,1) = {"
+a
+Y
+p
+"}
+(5,1,1) = {"
+a
+a
+a
 "}
