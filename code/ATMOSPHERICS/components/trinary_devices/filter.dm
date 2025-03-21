@@ -110,14 +110,6 @@
 		last_power_draw = power_draw
 		use_power(power_draw)
 
-	// Outpost 21 edit begin - mapspawn filters actually have their overlays
-	if(!initial_icon_updated)
-		// so mapspawn filters actually have their overlays
-		initial_icon_updated = TRUE
-		spawn(50) // sometimes first update isn't enough, wait a bit longer
-			update_icon()
-	// Outpost 21 edit end
-
 	return 1
 
 /obj/machinery/atmospherics/trinary/atmos_filter/attack_hand(user) // -- TLE
