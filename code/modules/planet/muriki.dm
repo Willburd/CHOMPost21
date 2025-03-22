@@ -746,6 +746,8 @@ var/datum/planet/muriki/planet_muriki = null
 	timer_low_bound = 2
 	timer_high_bound = 5
 	effect_message = "<span class='warning'>The hail smacks into you!</span>"
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
+	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
 	transition_chances = list(
 		WEATHER_RAIN = 20,
