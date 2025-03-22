@@ -1,36 +1,28 @@
 /*
 	This is a self assembled wiki for chemical reagents, food recipies,
 	and other information that should be assembled from game files.
-	Instead of being shoved in an outdated wiki that no one updates.
 */
 
-GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
+SUBSYSTEM_DEF(internal_wiki)
+	name = "Wiki"
+	wait = 1
+	init_order = INIT_ORDER_WIKI
+	flags = SS_NO_FIRE
 
-/hook/roundstart/proc/create_ingame_wiki()
-	GLOB.game_wiki.init_wiki_data()
-	return TRUE
-
-/datum/internal_wiki/main
 	VAR_PRIVATE/list/pages = list()
 
 	VAR_PRIVATE/list/ores = list()
 	VAR_PRIVATE/list/materials = list()
 	VAR_PRIVATE/list/smashers = list()
 
+	VAR_PRIVATE/list/appliance_list = list("Simple","Microwave","Fryer","Oven","Grill","Candy Maker","Cereal Maker")
 	VAR_PRIVATE/list/foodreact = list()
 	VAR_PRIVATE/list/drinkreact = list()
-	VAR_PRIVATE/list/phororeact = list()
 	VAR_PRIVATE/list/chemreact = list()
 	VAR_PRIVATE/list/botseeds = list()
 
 	VAR_PRIVATE/list/foodrecipe = list()
 	VAR_PRIVATE/list/drinkrecipe = list()
-
-	VAR_PRIVATE/list/spoilerore = list()
-	VAR_PRIVATE/list/spoilermat = list()
-	VAR_PRIVATE/list/spoilersmasher = list()
-	VAR_PRIVATE/list/spoilerreact = list()
-	VAR_PRIVATE/list/spoilerbotseeds = list()
 
 	VAR_PRIVATE/list/catalogs = list()
 
@@ -43,74 +35,74 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	VAR_PRIVATE/list/searchcache_catalogs = list()
 	VAR_PRIVATE/list/searchcache_botseeds = list()
 
-/datum/internal_wiki/main/proc/get_page_food(var/search)
-	return foodrecipe[search]
-/datum/internal_wiki/main/proc/get_page_drink(var/search)
-	return drinkrecipe[search]
-/datum/internal_wiki/main/proc/get_page_chem(var/search)
-	return chemreact[search]
-/datum/internal_wiki/main/proc/get_page_seed(var/search)
-	return botseeds[search]
-/datum/internal_wiki/main/proc/get_page_catalog(var/search)
-	return catalogs[search]
-/datum/internal_wiki/main/proc/get_page_material(var/search)
-	return materials[search]
-/datum/internal_wiki/main/proc/get_page_particle(var/search)
-	return smashers[search]
-/datum/internal_wiki/main/proc/get_page_ore(var/search)
-	return ores[search]
+/datum/controller/subsystem/internal_wiki/stat_entry(msg)
+	msg = "P: [pages.len] | O: [ores.len] | M: [materials.len] | S: [smashers.len] | F: [foodrecipe.len]  | D: [drinkrecipe.len]  | C: [chemreact.len]  | B: [botseeds.len] "
+	return ..()
 
-/datum/internal_wiki/main/proc/get_appliances()
-	return list("Simple","Microwave","Fryer","Oven","Grill","Candy Maker","Cereal Maker")
-/datum/internal_wiki/main/proc/get_searchcache_food(var/appliance)
-	return searchcache_foodrecipe[appliance]
-/datum/internal_wiki/main/proc/get_searchcache_drink()
-	return searchcache_drinkrecipe
-/datum/internal_wiki/main/proc/get_searchcache_chem()
-	return searchcache_chemreact
-/datum/internal_wiki/main/proc/get_searchcache_seed()
-	return searchcache_botseeds
-/datum/internal_wiki/main/proc/get_searchcache_catalog()
-	return searchcache_catalogs
-/datum/internal_wiki/main/proc/get_searchcache_material()
-	return searchcache_material
-/datum/internal_wiki/main/proc/get_searchcache_particle()
-	return searchcache_smasher
-/datum/internal_wiki/main/proc/get_searchcache_ore()
-	return searchcache_ore
-
-/datum/internal_wiki/main/proc/init_wiki_data()
-	if(pages.len)
-		return // already init
+/datum/controller/subsystem/internal_wiki/Initialize()
 	init_mining_data()
 	init_kitchen_data()
 	init_lore_data()
-	log_world("Initialized Wiki Pages: [pages.len]")
+	return SS_INIT_SUCCESS
 
-/datum/internal_wiki/main/proc/init_mining_data()
+
+/datum/controller/subsystem/internal_wiki/proc/get_page_food(var/search)
+	return foodrecipe[search]
+/datum/controller/subsystem/internal_wiki/proc/get_page_drink(var/search)
+	return drinkrecipe[search]
+/datum/controller/subsystem/internal_wiki/proc/get_page_chem(var/search)
+	return chemreact[search]
+/datum/controller/subsystem/internal_wiki/proc/get_page_seed(var/search)
+	return botseeds[search]
+/datum/controller/subsystem/internal_wiki/proc/get_page_catalog(var/search)
+	return catalogs[search]
+/datum/controller/subsystem/internal_wiki/proc/get_page_material(var/search)
+	return materials[search]
+/datum/controller/subsystem/internal_wiki/proc/get_page_particle(var/search)
+	return smashers[search]
+/datum/controller/subsystem/internal_wiki/proc/get_page_ore(var/search)
+	return ores[search]
+
+/datum/controller/subsystem/internal_wiki/proc/get_appliances()
+	return appliance_list
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_food(var/appliance)
+	return searchcache_foodrecipe[appliance]
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_drink()
+	return searchcache_drinkrecipe
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_chem()
+	return searchcache_chemreact
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_seed()
+	return searchcache_botseeds
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_catalog()
+	return searchcache_catalogs
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_material()
+	return searchcache_material
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_particle()
+	return searchcache_smasher
+/datum/controller/subsystem/internal_wiki/proc/get_searchcache_ore()
+	return searchcache_ore
+
+/datum/controller/subsystem/internal_wiki/proc/init_mining_data()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
+
 	// assemble ore wiki
 	for(var/N in GLOB.ore_data)
 		var/ore/OR = GLOB.ore_data[N]
 		var/datum/internal_wiki/page/P = new()
 		P.ore_assemble(OR)
-		if(!OR.spoiler)
-			ores["[OR.display_name]"] = P
-			searchcache_ore.Add("[OR.display_name]")
-		else
-			spoilerore["[OR.display_name]"] = P
+		ores["[OR.display_name]"] = P
+		searchcache_ore.Add("[OR.display_name]")
 		pages.Add(P)
 
 	// assemble material wiki
 	for(var/mat in name_to_material)
 		var/datum/material/M = name_to_material[mat]
 		var/datum/internal_wiki/page/P = new()
+		var/id = "[M.display_name]"
 		P.material_assemble(M)
-		if(!M.spoiler)
-			materials["[M.display_name]"] = P
-			searchcache_material.Add("[M.display_name]")
-		else
-			spoilermat["[M.display_name]"] = P
+		materials[id] = P
+		searchcache_material.Add(id)
 		pages.Add(P)
 
 	// assemble particle smasher wiki
@@ -119,55 +111,46 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		smasher_recip += new D
 	for(var/datum/particle_smasher_recipe/R in smasher_recip)
 		var/datum/internal_wiki/page/P = new()
-
-		var/obj/item/res = new R.result;
-		P.smasher_assemble(R,res.name)
-		if(!R.spoiler)
-			smashers["[res.name]"] = P
-			searchcache_smasher.Add("[res.name]")
-		else
-			spoilersmasher["[res.name]"] = P
-		qdel(res)
-		pages.Add(P)
+		var/res_path = new R.result;
+		var/res_name = initial(res_path:name)
+		if(res_name)
+			var/id = "[res_name]"
+			P.smasher_assemble(R,res_name)
+			smashers[id] = P
+			searchcache_smasher.Add(id)
+			pages.Add(P)
 
 	// assemble chemical reactions wiki
 	for(var/reagent in SSchemistry.chemical_reagents)
 		if(allow_reagent(reagent))
 			var/datum/internal_wiki/page/P = new()
 			var/datum/reagent/R = SSchemistry.chemical_reagents[reagent]
-			if(!R.spoiler)
-				if(R.is_food)
-					P.food_assemble(R)
-					foodreact["[R.name]"] = P
-				if(R.is_drink)
-					P.drink_assemble(R)
-					drinkreact["[R.name]"] = P
-				if(R.is_phoro)
-					P.chemical_assemble(R)
-					phororeact["[R.name]"] = P
-				if(!R.is_food && !R.is_drink && !R.is_phoro)
-					P.chemical_assemble(R)
-					searchcache_chemreact.Add("[R.name]")
-					chemreact["[R.name]"] = P
+			var/id = "[R.name]"
+			if(R.is_food)
+				P.food_assemble(R)
+				foodreact[id] = P
+			else if(R.is_drink)
+				P.drink_assemble(R)
+				drinkreact[id] = P
 			else
 				P.chemical_assemble(R)
-				spoilerreact["[R.name]"] = P
+				searchcache_chemreact.Add(id)
+				chemreact[id] = P
 			pages.Add(P)
 
-/datum/internal_wiki/main/proc/init_kitchen_data()
+/datum/controller/subsystem/internal_wiki/proc/init_kitchen_data()
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+
 	// seeds and plants
 	for(var/SN in SSplants.seeds)
 		var/datum/seed/S = SSplants.seeds[SN]
 		if(S && S.roundstart && !S.mysterious)
 			var/datum/internal_wiki/page/P = new()
-			if(!S.spoiler)
-				P.seed_assemble(S)
-				searchcache_botseeds.Add("[S.display_name]")
-				botseeds["[S.display_name]"] = P
-				pages.Add(P)
-			else
-				P.seed_assemble(S)
-				spoilerbotseeds["[S.display_name]"] = P
+			P.seed_assemble(S)
+			searchcache_botseeds.Add("[S.display_name]")
+			botseeds["[S.display_name]"] = P
+			pages.Add(P)
 
 	// this is basically a clone of code\modules\food\recipe_dump.dm
 	// drinks
@@ -182,8 +165,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 									"Flavor" = "[Rd.taste_description]",
 									"ResAmt" = CR.result_amount,
 									"Reagents" = CR.required_reagents ? CR.required_reagents.Copy() : list(),
-									"Catalysts" = CR.catalysts ? CR.catalysts.Copy() : list(),
-									"Spoiler" = CR.spoiler)
+									"Catalysts" = CR.catalysts ? CR.catalysts.Copy() : list())
 		else
 			log_runtime(EXCEPTION("Invalid reagent result id: [CR.result] in instant drink reaction id: [CR.id]"))
 	// Build the kitchen recipe lists
@@ -192,10 +174,10 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		//Lists don't work with datum-stealing no-instance initial() so we have to.
 		var/datum/recipe/R = new Rp()
 		if(!isnull(R.result))
-			var/obj/res = new R.result()
+			var/res = R.result
 			food_recipes[Rp] = list(
-						"Result" = "[res.name]",
-						"Desc" = "[res.desc]",
+						"Result" = "[initial(res:name)]",
+						"Desc" = "[initial(res:desc)]",
 						"Flavor" = "",
 						"ResAmt" = "1",
 						"Reagents" = R.reagents ? R.reagents.Copy() : list(),
@@ -205,12 +187,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 						"Coating" = R.coating,
 						"Appliance" = R.appliance,
 						"Allergens" = 0,
-						"Spoiler" = R.spoiler,
-						"Price" = res.price_tag
+						"Price" = initial(res:price_tag)
 						)
-			qdel(res)
-		else
-			log_runtime(EXCEPTION("Invalid result object: [R.result] in food recipe type: [Rp]"))
 		qdel(R)
 	// basically condiments, tofu, cheese, soysauce, etc
 	for(var/decl/chemical_reaction/instant/food/CR in SSchemistry.chemical_reactions)
@@ -226,7 +204,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		var/working_ing_list = list()
 		food_recipes[Rp]["has_coatable_items"] = FALSE
 		for(var/I in food_recipes[Rp]["Ingredients"])
-			if(I == /obj/item/holder/mouse) // amazing snowflake runtime fix, initilizing a holder makes it flip out because it's not in a mob.
+			if(I == /obj/item/holder/mouse) // Time for the list of snowflakes
 				if("mouse" in working_ing_list)
 					var/sofar = working_ing_list["mouse"]
 					working_ing_list["mouse"] = sofar+1
@@ -245,16 +223,16 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 				else
 					working_ing_list["micro"] = 1
 			else
-				var/atom/ing = new I()
-				if(istype(ing, /obj/item/reagent_containers/food/snacks)) // only subtypes of this have a coating variable and are checked for it (fruit are a subtype of this, so there's a check for them too later)
+				if(I in typesof(/obj/item/reagent_containers/food/snacks)) // only subtypes of this have a coating variable and are checked for it (fruit are a subtype of this, so there's a check for them too later)
 					food_recipes[Rp]["has_coatable_items"] = TRUE
 
 				//So now we add something like "Bread" = 3
-				if(ing.name in working_ing_list)
-					var/sofar = working_ing_list[ing.name]
-					working_ing_list[ing.name] = sofar+1
+				var/id = initial(I:name)
+				if(id in working_ing_list)
+					var/sofar = working_ing_list[id]
+					working_ing_list[id] = sofar+1
 				else
-					working_ing_list[ing.name] = 1
+					working_ing_list[id] = 1
 
 		if(LAZYLEN(food_recipes[Rp]["Fruit"]))
 			food_recipes[Rp]["has_coatable_items"] = TRUE
@@ -341,7 +319,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 	// assemble output page
 	for(var/Rp in food_recipes)
-		if(food_recipes[Rp] && !food_recipes[Rp]["Spoiler"] && !isnull(food_recipes[Rp]["Result"]))
+		if(food_recipes[Rp] && !isnull(food_recipes[Rp]["Result"]))
 			var/datum/internal_wiki/page/P = new()
 			P.recipe_assemble(food_recipes[Rp])
 			foodrecipe["[P.title]"] = P
@@ -355,14 +333,17 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			FL.Add("[P.title]")
 			pages.Add(P)
 	for(var/Rp in drink_recipes)
-		if(drink_recipes[Rp] && !drink_recipes[Rp]["Spoiler"] && !isnull(drink_recipes[Rp]["Result"]))
+		if(drink_recipes[Rp] && !isnull(drink_recipes[Rp]["Result"]))
 			var/datum/internal_wiki/page/P = new()
 			P.recipe_assemble(drink_recipes[Rp])
 			drinkrecipe["[P.title]"] = P
 			searchcache_drinkrecipe.Add("[P.title]")
 			pages.Add(P)
 
-/datum/internal_wiki/main/proc/init_lore_data()
+/datum/controller/subsystem/internal_wiki/proc/init_lore_data()
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+
 	// assemble low reward catalog entries
 	for(var/datum/category_group/G in GLOB.catalogue_data.categories)
 		for(var/datum/category_item/catalogue/item in G.items)
@@ -379,34 +360,28 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 			searchcache_catalogs.Add("[item.name]")
 			pages.Add(P)
 
-/datum/internal_wiki/main/proc/allow_reagent(var/reagent)
+/datum/controller/subsystem/internal_wiki/proc/allow_reagent(var/reagent_id)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
-	// This is used to filter out some of the base reagent types, such as "drink", without putting spoiler tags on base types...
-	if(!reagent || reagent == "")
-		return FALSE
-	if(reagent == "reagent")
-		return FALSE
-	if(reagent == "drugs")
-		return FALSE
-	if(reagent == "drink")
+
+	// This is used to filter out some of the base reagent types, such as admin only reagents
+	if(!reagent_id || reagent_id == "" || reagent_id == DEVELOPER_WARNING_NAME || reagent_id == REAGENT_ID_ADMINORDRAZINE)
 		return FALSE
 	return TRUE
 
 
-
-
-//////////////////////// PAGES AND THEIR CONSTRUCTION
+////////////////////////////////////////////////////////////////////////////////////////////////
+// PAGES AND THEIR CONSTRUCTION
+////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/internal_wiki/page
 	var/title = ""
 	var/body = ""
 
 /datum/internal_wiki/page/proc/get_data()
-	// this is so we can override these for catalog records viewing
 	return body
 
 /datum/internal_wiki/page/proc/ore_assemble(var/ore/O)
 	title = O.display_name
-	body = ""
 	if(O.smelts_to)
 		var/datum/material/S = get_material_by_name(O.smelts_to)
 		body += "<b>Smelting: [S.display_name]</b><br>"
@@ -603,31 +578,23 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		for(var/MS in S.mutants)
 			var/datum/seed/mut = SSplants.seeds[MS]
 			if(mut)
-				if(!mut.spoiler)
-					body  += "<b>-[mut.display_name]</b><br>"
-				else
-					body  += "<b>-Unknown Strain</b><br>"
+				body  += "<b>-[mut.display_name]</b><br>"
 
 /datum/internal_wiki/page/proc/smasher_assemble(var/datum/particle_smasher_recipe/M, var/resultname)
-	var/obj/item/stack/material/req_mat = null
-	if(M.required_material)
-		req_mat = new M.required_material
+	var/req_mat = M.required_material
 	title = resultname
 	body  = "";
+
 	if(req_mat != null)
-		body += "<b>Target Sheet: [req_mat.name]</b><br>"
+		body += "<b>Target Sheet: [initial(req_mat:name)]</b><br>"
 	if(M.items != null && M.items.len > 0)
 		if( M.items.len == 1)
 			var/Ir = M.items[1]
-			var/obj/item/scanitm = new Ir()
-			body += "<b>Target Item: [scanitm.name]</b><br>"
-			qdel(scanitm)
+			body += "<b>Target Item: [initial(Ir:name)]</b><br>"
 		else
 			body += "<b>Target Item: </b><br>"
 			for(var/Ir in M.items)
-				var/obj/item/scanitm = new Ir()
-				body += "<b>-[scanitm.name]</b><br>"
-				qdel(scanitm)
+				body += "<b>-[initial(Ir:name)]</b><br>"
 	body += "<b>Threshold Energy: [M.required_energy_min] - [M.required_energy_max]</b><br>"
 	body += "<b>Threshold Temp: [M.required_atmos_temp_min]k - [M.required_atmos_temp_max]k | ([M.required_atmos_temp_min - T0C]C - [M.required_atmos_temp_max - T0C]C)</b><br>"
 	if(M.reagents != null && M.reagents.len > 0)
@@ -643,7 +610,6 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	body += "<br>"
 	body += "<b>Results: [resultname]</b><br>"
 	body += "<b>Probability: [M.probability]%</b><br>"
-	qdel(req_mat)
 
 /datum/internal_wiki/page/proc/chemical_assemble(var/datum/reagent/R)
 	title = R.name
@@ -685,8 +651,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 		var/list/display_reactions = list()
 		for(var/decl/chemical_reaction/CR in reaction_list)
-			if(!CR.spoiler)
-				display_reactions.Add(CR)
+			display_reactions.Add(CR)
 		for(var/decl/chemical_reaction/CR in display_reactions)
 			if(display_reactions.len == 1)
 				body += "<b>Potential Chemical breakdown: </b><br>"
@@ -722,8 +687,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 		var/list/display_reactions = list()
 		for(var/decl/chemical_reaction/distilling/CR in distilled_list)
-			if(!CR.spoiler)
-				display_reactions.Add(CR)
+			display_reactions.Add(CR)
 
 		for(var/decl/chemical_reaction/distilling/CR in display_reactions)
 			if(display_reactions.len == 1)
@@ -769,8 +733,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		var/segment = 1
 		var/list/display_reactions = list()
 		for(var/decl/chemical_reaction/CR in reaction_list)
-			if(!CR.spoiler)
-				display_reactions.Add(CR)
+			display_reactions.Add(CR)
 		for(var/decl/chemical_reaction/CR in display_reactions)
 			if(display_reactions.len == 1)
 				body += "<b>Recipe: </b><br>"
@@ -811,8 +774,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		var/segment = 1
 		var/list/display_reactions = list()
 		for(var/decl/chemical_reaction/CR in reaction_list)
-			if(!CR.spoiler)
-				display_reactions.Add(CR)
+			display_reactions.Add(CR)
 		for(var/decl/chemical_reaction/CR in display_reactions)
 			if(display_reactions.len == 1)
 				body += "Mix: <br>"
@@ -843,7 +805,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 
 /datum/internal_wiki/page/proc/allergen_assemble(var/allergens)
 	PRIVATE_PROC(TRUE)
-	var/body = ""
+
 	if(allergens > 0)
 		body += "<b>Allergens: </b><br>"
 		if(allergens & ALLERGEN_MEAT)
@@ -915,8 +877,7 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 		body += "<b>Coating: </b> Must be uncoated<br>"
 	else
 		var/coatingtype = recipe["Coating"]
-		var/datum/reagent/coating = new coatingtype()
-		body += "<b>Coating: </b> [coating.name]<br>"
+		body += "<b>Coating: </b> [initial(coatingtype:name)]<br>"
 
 	//For each fruit... why are they named this when it can be vegis too?
 	var/pretty_fru = ""
@@ -945,10 +906,8 @@ GLOBAL_DATUM_INIT(game_wiki, /datum/internal_wiki/main, new)
 	if(pretty_cat != "")
 		body += "<b>Catalysts: </b> [pretty_cat]<br>"
 
-
-
 /datum/internal_wiki/page/catalog
-	var/datum/category_item/catalogue/catalog_record
+	var/datum/category_item/catalogue/catalog_record = null
 
 /datum/internal_wiki/page/catalog/get_data()
 	return catalog_record.desc

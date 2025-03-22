@@ -59,8 +59,7 @@
 					var/segment = 1
 					var/list/display_reactions = list()
 					for(var/decl/chemical_reaction/CR in products)
-						if(!CR.spoiler)
-							display_reactions.Add(CR)
+						display_reactions.Add(CR)
 					for(var/decl/chemical_reaction/CR in display_reactions)
 						if(display_reactions.len == 1)
 							final_message += span_underline("Potential Chemical breakdown: <br>")
@@ -105,8 +104,7 @@
 
 					var/list/display_reactions = list()
 					for(var/decl/chemical_reaction/distilling/CR in distilled_products)
-						if(!CR.spoiler)
-							display_reactions.Add(CR)
+						display_reactions.Add(CR)
 
 					for(var/decl/chemical_reaction/distilling/CR in display_reactions)
 						if(display_reactions.len == 1)
@@ -174,15 +172,13 @@
 						var/decl/chemical_reaction/OR = instant_by_reagent[i]
 						if(istype(OR,/decl/chemical_reaction/instant/slime)) // very bloated and meant to be a mystery
 							continue
-						if(!OR.spoiler)
-							makes_result += " -[span_info(OR.name)]<br>"
+						makes_result += " -[span_info(OR.name)]<br>"
 
 				var/list/distilled_by_reagent = SSchemistry.distilled_reactions_by_reagent["[R.id]"]
 				if(distilled_by_reagent && distilled_by_reagent.len)
 					for(var/i = 1, i <= distilled_by_reagent.len, i++)
 						var/decl/chemical_reaction/OR = distilled_by_reagent[i]
-						if(!OR.spoiler)
-							makes_result += " -[span_info(OR.name)]<br>"
+						makes_result += " -[span_info(OR.name)]<br>"
 
 				if(makes_result != "")
 					final_message += span_underline("Can Be Used To Produce: <br>")
