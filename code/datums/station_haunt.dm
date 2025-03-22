@@ -433,6 +433,20 @@
 	end()
 
 
+// camera stareing
+/datum/station_haunt/camera_stare
+	name = "Camera Stare"
+
+/datum/station_haunt/camera_stare/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+		var/obj/machinery/camera/A = locate() in orange(8,T)
+		if(A)
+			A.visible_message("\The [A] stops moving, and focuses on \the [M]")
+	end()
+
+
 // heavy breathing, quiet
 /datum/station_haunt/heavy_breath
 	name = "Heavy Breathing"
