@@ -20356,6 +20356,9 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 9
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "evb" = (
@@ -52377,6 +52380,9 @@
 /obj/item/sticky_pad/random{
 	pixel_x = -8;
 	pixel_y = 9
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
@@ -108889,7 +108895,7 @@ oNd
 oNd
 oNd
 hts
-qEG
+pvY
 kRL
 wUu
 wUu
