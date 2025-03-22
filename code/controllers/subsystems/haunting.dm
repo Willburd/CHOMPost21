@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 280
+#define MODE_SIZE 250
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -33,7 +33,8 @@ SUBSYSTEM_DEF(haunting)
 	VAR_PRIVATE/datum/weakref/current_player_target = null
 	VAR_PRIVATE/list/hauntings = list()
 	var/datum/station_haunt/current_haunt = null
-	var/total_haunts = 0
+	var/total_haunts = 0 // ACTUAL haunting count, and not just the list of events fired like prior_haunts is!
+	VAR_PRIVATE/list/prior_haunts = list()
 
 	var/list/used_haunt_entities = list()
 
@@ -43,7 +44,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/watching_me,
 		/datum/station_haunt/chills,
 		/datum/station_haunt/lurker,
-		/datum/station_haunt/distant_alarm
+		/datum/station_haunt/distant_alarm,
+		/datum/station_haunt/camera_stare
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -57,7 +59,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker,
-		/datum/station_haunt/change_nearby_display
+		/datum/station_haunt/change_nearby_display,
+		/datum/station_haunt/camera_stare
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -81,7 +84,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/bleeding,
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
-		/datum/station_haunt/change_nearby_display
+		/datum/station_haunt/change_nearby_display,
+		/datum/station_haunt/camera_stare
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -105,7 +109,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
-		/datum/station_haunt/change_nearby_display
+		/datum/station_haunt/change_nearby_display,
+		/datum/station_haunt/camera_stare
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -130,7 +135,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/lurker/pyromanic,
 		/datum/station_haunt/entity_spawn,
-		/datum/station_haunt/entity_spawn
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/camera_stare
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -148,6 +154,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lurker/will_appear,
 		/datum/station_haunt/lurker/pyromanic,
 		/datum/station_haunt/distant_alarm,
+		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
@@ -159,7 +166,7 @@ SUBSYSTEM_DEF(haunting)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]"
+	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[prior_haunts.len]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()
@@ -270,7 +277,6 @@ SUBSYSTEM_DEF(haunting)
 		if(world_mode >= MODE_SUPERSPOOKY)
 			skip_prob = 65
 		if(prob(skip_prob))
-			last_event = "SKIP"
 			return
 	else
 		if(!isnull(current_haunt))
@@ -281,43 +287,46 @@ SUBSYSTEM_DEF(haunting)
 		if(MODE_CALM)
 			if(prob(30))
 				clear_player_target()
-				last_event = "SEARCH"
+				log_haunting("SEARCH")
 				return
 		if(MODE_CONCERN)
 			if(prob(10))
 				clear_player_target()
-				last_event = "SEARCH"
+				log_haunting("SEARCH")
 				return
 		// Rarely allow spikes of activity
 		if(MODE_UNNERVING)
 			if(prob(5))
 				clear_player_target()
-				last_event = "SEARCH"
+				log_haunting("SEARCH")
 				return
 			if(prob(1))
 				intense_world_haunt()
+				log_haunting("INTENSIFTY")
 			if(prob(1))
 				intense_world_haunt()
+				log_haunting("INTENSIFTY")
 			if(prob(1))
 				intense_world_haunt()
+				log_haunting("INTENSIFTY")
 		// Past here we try to clear the haunting state
 		if(MODE_SCARY)
 			if(prob(10))
 				clear_player_target()
-				last_event = "SEARCH"
+				log_haunting("SEARCH")
 				return
 			if(prob(5))
 				reset_world_haunt()
-				last_event = "RESET"
+				log_haunting("RESET")
 				return
 		if(MODE_SUPERSPOOKY)
 			if(prob(5))
 				clear_player_target()
-				last_event = "SEARCH"
+				log_haunting("SEARCH")
 				return
 			if(prob(15))
 				reset_world_haunt()
-				last_event = "RESET"
+				log_haunting("RESET")
 				return
 	var/mob/M = current_player_target?.resolve()
 	if(isnull(M))
@@ -327,14 +336,14 @@ SUBSYSTEM_DEF(haunting)
 	var/turf/T = get_turf(M)
 	if(!T || T.holy) // Check for holy turfs too
 		clear_player_target()
-		last_event = "BLOCKED"
+		log_haunting("BLOCKED")
 		return
 	if(T.get_lumcount() < 0.2)
 		bonus += 1
 	else
 		// players in the light sometimes get a free pass even this late
 		if(prob(5) && !forced)
-			last_event = "SKIP"
+			log_haunting("SKIP")
 			return
 	if(bonus > MODE_SUPERSPOOKY)
 		bonus = MODE_SUPERSPOOKY
@@ -363,8 +372,17 @@ SUBSYSTEM_DEF(haunting)
 	if(!(path in all_haunt))
 		return
 	current_haunt = new path()
-	last_event = current_haunt.name
+	log_haunting(current_haunt.name)
 	total_haunts++
+
+/datum/controller/subsystem/haunting/proc/log_haunting(var/LE)
+	var/mob/M = current_player_target?.resolve()
+	if(M)
+		prior_haunts.Add("[stationtime2text()] | [world_mode] | \the [M] - [LE]")
+		last_event = "\the [M] - [LE]"
+	else
+		prior_haunts.Add("[stationtime2text()] | [world_mode] | NO TARGET - [LE]")
+		last_event = "NO TARGET - [LE]"
 
 #undef MODE_SIZE
 

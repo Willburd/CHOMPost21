@@ -1635,7 +1635,6 @@
 	pixel_x = -10;
 	pixel_y = -25
 	},
-/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "eV" = (
@@ -3728,7 +3727,6 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
-/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
 "lE" = (
@@ -5649,7 +5647,6 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
-/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/hallway_alt)
 "rR" = (
@@ -5930,7 +5927,6 @@
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/effect/map_helper/airlock/door/ext_door,
-/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/hallway)
 "sO" = (
@@ -8099,7 +8095,6 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
-/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "zT" = (
@@ -8989,7 +8984,6 @@
 	pixel_x = -10;
 	pixel_y = -25
 	},
-/obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
 "CM" = (

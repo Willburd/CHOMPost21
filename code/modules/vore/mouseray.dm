@@ -85,16 +85,14 @@
 	var/mob/living/M = target
 	if(!istype(M))
 		return
-	//CHOMPADDITION: prevent trding bodies that have no mind and are carbon, mianly fixes VR crash
 	if(istype(M,/mob/living/carbon) && !M.mind)
 		return
-	//CHOMPADDITION: prevent trding bodies that have no mind and are carbon, mianly fixes VR crash
 	if(target != firer)	//If you shot yourself, you probably want to be TFed so don't bother with prefs.
 		if(!M.allow_spontaneous_tf && !tf_admin_pref_override)
 			return
-	M.drop_both_hands()	//CHOMPAdd - Drop items in hand before transformation
-	if(M.tf_mob_holder && M.tf_mob_holder.loc == M) //CHOMPEdit - Extra check to account for Mind Binder usage
-		new /obj/effect/effect/teleport_greyscale(M.loc) //CHOMPEdit Start
+	M.drop_both_hands()
+	if(M.tf_mob_holder && M.tf_mob_holder.loc == M)
+		new /obj/effect/effect/teleport_greyscale(M.loc)
 		var/mob/living/ourmob = M.tf_mob_holder
 		if(ourmob.ai_holder)
 			var/datum/ai_holder/our_AI = ourmob.ai_holder
@@ -127,7 +125,7 @@
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
-			qdel(target) //CHOMPEdit End
+			qdel(target)
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -200,7 +198,7 @@
 		var/turf/get_dat_turf = get_turf(target)
 		ourmob.loc = get_dat_turf
 		ourmob.forceMove(get_dat_turf)
-		if(!M.tf_form_ckey) //CHOMPEdit Start
+		if(!M.tf_form_ckey)
 			ourmob.vore_selected = M.vore_selected
 			M.vore_selected = null
 			for(var/obj/belly/B as anything in M.vore_organs)
@@ -229,7 +227,7 @@
 			ourmob.tf_form = M
 			M.forceMove(ourmob)
 		else
-			qdel(target) //CHOMPEdit End
+			qdel(target)
 		firer.visible_message(span_notice("\The [shot_from] boops pleasantly."))
 		return
 	else

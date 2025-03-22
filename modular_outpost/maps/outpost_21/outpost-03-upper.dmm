@@ -16263,9 +16263,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/arrivals)
-"icX" = (
-/turf/simulated/wall/r_wall,
-/area/muriki/rooftop/civilian)
 "idb" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -100470,7 +100467,7 @@ roL
 uOf
 eLN
 thK
-icX
+thK
 djC
 djC
 djC
