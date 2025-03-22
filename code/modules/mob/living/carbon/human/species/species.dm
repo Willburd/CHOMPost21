@@ -376,7 +376,6 @@
 	if(gluttonous)
 		if(!inherent_verbs)
 			inherent_verbs = list()
-		inherent_verbs |= /mob/living/carbon/human/proc/regurgitate
 
 	update_sort_hint()
 

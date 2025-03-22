@@ -98,7 +98,7 @@
 
 	handle_dripping()
 
-	handle_vr_derez() // CHOMPedit
+	handle_vr_derez()
 
 	handle_dripping() // Outpost 21 edit
 

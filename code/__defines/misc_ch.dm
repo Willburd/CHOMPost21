@@ -1,11 +1,3 @@
-//Department defines
-#define DEPARTMENT_NONCREW      "Non crew"
-
-//Job defines
-//#define JOB_OUTSIDER            "Outsider" // Outpost 21 edit - removed job
-//#define JOB_ANOMALY			"Anomaly" // Outpost 21 edit - removed job
-#define JOB_VR	"VR Avatar"
-
 //Material defines
 #define MAT_CARPET				"red carpet"
 #define MAT_CARPET_TEAL			"teal carpet"
