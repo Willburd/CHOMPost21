@@ -564,6 +564,10 @@ var/global/list/light_type_cache = list()
 /obj/machinery/light/proc/seton(var/s)
 	on = (s && status == LIGHT_OK)
 	update()
+	// Outpost 21 edit begin - Flickering spooky lights on lightswitch
+	if(on && prob(2))
+		flicker(15)
+	// Outpost 21 edit end
 
 /obj/machinery/light/get_cell()
 	return cell
