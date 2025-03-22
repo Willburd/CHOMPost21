@@ -590,7 +590,7 @@
 		else if(Void)
 			suit_supply = Void.tank
 
-		if ((!suit_supply && !rig_supply && !contents.Find(internal)) || !((wear_mask && (wear_mask.item_flags & AIRTIGHT)) || (head && (head.item_flags & AIRTIGHT))))
+		if ((!suit_supply && !contents.Find(internal)) || !((wear_mask && (wear_mask.item_flags & AIRTIGHT)) || (head && (head.item_flags & AIRTIGHT))))
 			internal = null
 
 		if(internal)
