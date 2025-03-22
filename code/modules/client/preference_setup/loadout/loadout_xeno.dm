@@ -852,7 +852,7 @@
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_ZADDAT
 	path = /obj/item/clothing/suit/space/void/zaddat/security
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_SECURITY_OFFICER,JOB_WARDEN,JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/suit/zaddat/engineer
 	display_name = "Zaddat engineer shroud"
