@@ -4,11 +4,13 @@
 #define LOC_CHAPEL 2
 #define LOC_LIBRARY 3
 #define LOC_HYDRO 4
-#define LOC_TECH 5
-#define LOC_HANGAR1 6
-#define LOC_HANGAR2 7
-#define LOC_HANGAR3 8
-#define LOC_VAULT 9
+// #define LOC_TECH 5
+// #define LOC_HANGAR1 6
+// #define LOC_HANGAR2 7
+// #define LOC_HANGAR3 8
+// #define LOC_VAULT 9
+#define LOC_MEDICAL 5
+#define LOC_VAULT 6
 
 
 #define VERM_MICE 0
@@ -25,7 +27,7 @@
 
 /datum/event/infestation/start()
 //CHOMP Edit changed for Southern Cross areas
-	location = rand(0,9)
+	location = rand(0,6) // Outpost 21 edit - Use our areas
 	var/list/turf/simulated/floor/turfs = list()
 	var/spawn_area_type
 	switch(location)
@@ -44,6 +46,10 @@
 		if(LOC_HYDRO)
 			spawn_area_type = /area/hydroponics
 			locstring = "hydroponics"
+		if(LOC_MEDICAL)
+			spawn_area_type = /area/medical
+			locstring = "medical"
+		/* Outpost 21 edit - Use our areas
 		if(LOC_TECH)
 			spawn_area_type = /area/storage/tech
 			locstring = "technical storage"
@@ -56,6 +62,7 @@
 		if(LOC_HANGAR3)
 			spawn_area_type = /area/hangar/three
 			locstring = "the hangar deck"
+		*/
 		if(LOC_VAULT)
 			spawn_area_type = /area/security/nuke_storage
 			locstring = "the vault"
@@ -162,10 +169,11 @@
 #undef LOC_CHAPEL
 #undef LOC_LIBRARY
 #undef LOC_HYDRO
-#undef LOC_TECH
-#undef LOC_HANGAR1
-#undef LOC_HANGAR2
-#undef LOC_HANGAR3
+// #undef LOC_TECH
+// #undef LOC_HANGAR1
+// #undef LOC_HANGAR2
+// #undef LOC_HANGAR3
+#undef LOC_MEDICAL
 #undef LOC_VAULT
 
 #undef VERM_MICE
