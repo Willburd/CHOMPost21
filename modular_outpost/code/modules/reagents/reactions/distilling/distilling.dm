@@ -78,6 +78,6 @@
 
 /decl/chemical_reaction/distilling/anti_changeling/on_reaction(var/datum/reagents/holder, var/created_volume)
 	var/datum/reagent/blood/B = holder.get_reagent(REAGENT_ID_BLOOD)
-	if(B.changling_blood_test(holder))
+	if(B && B.changling_blood_test(holder))
 		return
 	. = ..()

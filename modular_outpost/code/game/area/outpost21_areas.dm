@@ -764,6 +764,7 @@
 	music = 'sound/ambience/ambimine.ogg'
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = FALSE
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/engineering/atmos/tank_storage
 	name = "\improper Atmospherics Secure Storage"

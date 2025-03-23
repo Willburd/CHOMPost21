@@ -20,7 +20,7 @@
 	var/list/area/grand_list_of_areas = list()
 	var/list/area/finalareas = list()
 	var/shotdelaytime = 0
-	var/seclevel = SEC_LEVEL_DELTA // it's the entire facility by default, all others give red alert
+	var/seclevel = SEC_LEVEL_RED // it's the entire facility by default, all others give red alert
 
 	// regional impact limits. AKA only hit inside the box
 	var/left_x = 0
