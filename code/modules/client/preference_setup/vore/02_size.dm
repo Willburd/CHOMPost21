@@ -121,10 +121,10 @@
 	if(href_list["size_multiplier"])
 		// Outpost 21 edit begin - use define limits in the character creator screen as well as ingame
 		/*
-		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from 25% to 200%", "Set Size", null, 200, 25)
+		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from 25% to 200%", "Set Size", pref.size_multiplier*100, 200, 25)
 		if (!ISINRANGE(new_size,25,200))
 		*/
-		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from [RESIZE_MINIMUM * 100]% to [RESIZE_MAXIMUM * 100]%", "Set Size", null, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100)
+		var/new_size = tgui_input_number(user, "Choose your character's size, ranging from [RESIZE_MINIMUM * 100]% to [RESIZE_MAXIMUM * 100]%", "Set Size", pref.size_multiplier*100, RESIZE_MAXIMUM * 100, RESIZE_MINIMUM * 100)
 		if (!ISINRANGE(new_size,RESIZE_MINIMUM * 100,RESIZE_MAXIMUM * 100))
 			// Outpost 21 edit end
 			pref.size_multiplier = 1
