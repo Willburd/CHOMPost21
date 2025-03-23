@@ -15,7 +15,7 @@
 		REAGENT_ID_SILVER,
 		REAGENT_ID_PLATINUM,
 		// REAGENT_ID_STEEL,  Outpost21 edit
-		REAGENT_ID_PLASTEEL,
+		// REAGENT_ID_PLASTEEL,  Outpost21 edit
 		REAGENT_ID_HYDROPHORON,
 
 		REAGENT_ID_MACROCILLIN,		 //ban everything that's already banned in seed.dm except nutriment
