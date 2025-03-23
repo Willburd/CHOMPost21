@@ -5,10 +5,10 @@ SUBSYSTEM_DEF(chemistry)
 	init_order = INIT_ORDER_CHEMISTRY
 
 	var/list/chemical_reactions = list()
-	var/list/chemical_reactions_by_product = list() // outpost 21 addition - for chemalynzer improvement
+	var/list/chemical_reactions_by_product = list()
 	var/list/instant_reactions_by_reagent = list()
 	var/list/distilled_reactions_by_reagent = list()
-	var/list/distilled_reactions_by_product = list() // outpost 21 addition - for chemalynzer improvement
+	var/list/distilled_reactions_by_product = list()
 //	var/list/fusion_reactions_by_reagent = list() // TODO: Fusion reactions as chemical reactions
 	var/list/chemical_reagents = list()
 
@@ -47,14 +47,12 @@ SUBSYSTEM_DEF(chemistry)
 			if(istype(D, /decl/chemical_reaction/distilling))
 				add_to = distilled_reactions_by_reagent
 
-			// Outpost 21 addition begin
 			if(istype(D, /decl/chemical_reaction/distilling))
 				LAZYINITLIST(distilled_reactions_by_product[D.result])
 				distilled_reactions_by_product[D.result] += D // for reverse lookup
 			else
 				LAZYINITLIST(chemical_reactions_by_product[D.result])
 				chemical_reactions_by_product[D.result] += D // for reverse lookup
-			// Outpost 21 addition end
 
 			LAZYINITLIST(add_to[reagent_id])
 			add_to[reagent_id] += D

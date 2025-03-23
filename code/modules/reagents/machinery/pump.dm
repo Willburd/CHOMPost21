@@ -9,8 +9,8 @@
 	Can also be used to frack for deeply embedded fluids if used in the\
 	deep fissure often found in gas pockets." // Outpost 21 edit - Fracking explaination
 
-	anchored = 0
-	density = 1
+	anchored = TRUE
+	density = TRUE
 
 	icon = 'icons/obj/machines/reagent.dmi'
 	icon_state = "pump"

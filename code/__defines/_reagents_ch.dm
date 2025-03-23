@@ -62,13 +62,6 @@
 #define REAGENT_ID_ALIZENE "alizene"
 */
 
-// Does not exist?
-/* Outpost 21 edit - They don't now!
-#define REAGENT_ID_SPACEDRUGS "space_drugs"
-#define REAGENT_ID_HOTWATER "hotwater"
-#define REAGENT_ID_BURBON "burbon"
-*/
-
 // Food & Drinks
 #define REAGENT_SNAPS "Akvavit"
 #define REAGENT_ID_SNAPS "snaps"
@@ -158,8 +151,6 @@
 #define REAGENT_ID_MAUNALOA "mauna_loa"
 #define REAGENT_HIVEMINDERASER "Hivemind Eraser"
 #define REAGENT_ID_HIVEMINDERASER "hiveminderaser"
-#define REAGENT_STRAWBERRYLOVEPOTION "Strawberry Love Potion"
-#define REAGENT_ID_STRAWBERRYLOVEPOTION "strawberrylovepotion"
 #define REAGENT_WORMBLOOD "Worm Blood"
 #define REAGENT_ID_WORMBLOOD "wormblood"
 
