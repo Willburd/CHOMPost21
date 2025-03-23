@@ -256,6 +256,11 @@
 		for(var/RR in CR.required_reagents)
 			fake_beaker.reagents.add_reagent(RR, CR.required_reagents[RR] * scale)
 
+	// Outpost 21 edit begin - Check distilling our way
+	if(istype(CR, /decl/chemical_reaction/distilling))
+		fake_beaker.reagents.handle_distilling()
+	// Outpost 21 edit end
+
 	if(fake_beaker.reagents.has_reagent(CR.result))
 		return FALSE // INSTANT SUCCESS!
 
