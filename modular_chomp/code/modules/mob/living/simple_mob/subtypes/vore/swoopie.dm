@@ -171,10 +171,8 @@
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 20
 
-	/* // Outpost 21 edit - Nif removal
 	if(!soulgem)
 		soulgem = new(src)
-	*/
 
 /obj/belly/longneck
 	affects_vore_sprites = TRUE

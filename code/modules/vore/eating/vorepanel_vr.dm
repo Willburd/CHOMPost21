@@ -532,16 +532,13 @@
 		"belly_rub_target" = host.belly_rub_target,
 		"vore_sprite_color" = host.vore_sprite_color,
 		"vore_sprite_multiply" = host.vore_sprite_multiply,
-		/* Outpost 21 edit - Nif removal
 		//Soulcatcher
 		"soulcatcher_allow_capture" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE,
 		"soulcatcher_allow_transfer" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TRANSFER,
 		"soulcatcher_allow_takeover" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER,
 		"soulcatcher_allow_deletion" = (global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION_INSTANT))
-		*/
 	)
 	// Soulcatcher
-	/* // Outpost 21 edit - Nif removal
 	var/list/stored_souls = list()
 	data["soulcatcher"] = null
 	if(host.soulgem)
@@ -566,7 +563,6 @@
 		data["soulcatcher"]["sr_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
 		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
 		data["soulcatcher"]["see_sr_projecting"] = host.soulgem.flag_check(SOULGEM_SEE_SR_SOULS)
-	*/
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host
@@ -1024,7 +1020,6 @@
 				host.client.prefs_vr.no_latejoin_prey_warning_persists = host.no_latejoin_prey_warning_persists
 			unsaved_changes = TRUE
 			return TRUE
-		/*  // Outpost 21 edit - Nif removal
 		//Soulcatcher prefs
 		if("toggle_soulcatcher_allow_capture")
 			host.soulcatcher_pref_flags ^= SOULCATCHER_ALLOW_CAPTURE
@@ -1058,7 +1053,6 @@
 				host.client.prefs_vr.soulcatcher_pref_flags = host.soulcatcher_pref_flags
 			unsaved_changes = TRUE
 			return TRUE
-		*/
 		if("adjust_own_size")
 			var/new_size = text2num(params["new_mob_size"])
 			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
@@ -1068,7 +1062,6 @@
 					H.adjust_nutrition(-VORE_RESIZE_COST)
 					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
-		/* Outpost 21 edit - Nif removal
 		//Soulcatcher functions
 		if("soulcatcher_release_all")
 			host.soulgem.release_mobs()
@@ -1197,7 +1190,6 @@
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, "delete")
 			return TRUE
-		*/
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
@@ -2694,10 +2686,8 @@
 				tgui_alert_async(user,failure_msg,"Error!")
 				return FALSE
 
-			/* Outpost 21 edit - Nif removal
 			if(host.soulgem?.linked_belly == host.vore_selected)
 				host.soulgem.linked_belly = null
-			*/
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]

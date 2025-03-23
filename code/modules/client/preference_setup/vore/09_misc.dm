@@ -60,9 +60,7 @@
 	. += span_bold("Character Directory ERP Tag:") + " <a href='byond://?src=\ref[src];directory_erptag=1'><b>[pref.directory_erptag]</b></a><br>"
 	. += span_bold("Character Directory Advertisement:") + " <a href='byond://?src=\ref[src];directory_ad=1'><b>Set Directory Ad</b></a><br>"
 	. += span_bold("Suit Sensors Preference:") + " <a [pref.sensorpref ? "" : ""] href='byond://?src=\ref[src];toggle_sensor_setting=1'><b>[sensorpreflist[pref.sensorpref]]</b></a><br>"
-	/* Outpost 21 edit - Nif removal
 	. += span_bold("Capture Crystal Preference:") + " <a [pref.capture_crystal ? "class='linkOn'" : ""] href='byond://?src=\ref[src];toggle_capture_crystal=1'><b>[pref.capture_crystal ? "Yes" : "No"]</b></a><br>"
-	*/
 	/* Outpost 21 edit - no backup implants
 	. += span_bold("Spawn With Backup Implant:") + " <a [pref.auto_backup_implant ? "class='linkOn'" : ""] href='byond://?src=\ref[src];toggle_implant=1'><b>[pref.auto_backup_implant ? "Yes" : "No"]</b></a><br>"
 	*/

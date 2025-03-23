@@ -214,10 +214,8 @@
 		return
 
 	AddElement(/datum/element/slosh) // Sloshy element
-	/* Outpost 21 edit - Nif removal
 	if(!soulgem)
 		soulgem = new(src)
-	*/
 
 	// Since they have bellies, add verbs to toggle settings on them.
 	add_verb(src, /mob/living/simple_mob/proc/toggle_digestion)
