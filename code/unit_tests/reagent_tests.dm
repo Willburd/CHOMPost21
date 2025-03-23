@@ -211,8 +211,8 @@
 		else if(istype(CR, /decl/chemical_reaction/distilling))
 			// distilling
 			var/decl/chemical_reaction/distilling/DR = CR
-			var/obj/machinery/portable_atmospherics/powered/reagent_distillery/D = new()
-			D.current_temp = DR.temp_range[1]
+			var/obj/item/reagent_containers/distilling_tester/D = new() // Outpost 21 edit - Use our distilling tester
+			//D.current_temp = DR.temp_range[1]
 			qdel_swap(fake_beaker, D)
 			fake_beaker.reagents.maximum_volume = 5000
 		else
@@ -258,7 +258,8 @@
 
 	// Outpost 21 edit begin - Check distilling our way
 	if(istype(CR, /decl/chemical_reaction/distilling))
-		fake_beaker.reagents.handle_distilling()
+		var/obj/item/reagent_containers/distilling_tester/DD = fake_beaker
+		DD.test_distilling(CR)
 	// Outpost 21 edit end
 
 	if(fake_beaker.reagents.has_reagent(CR.result))
@@ -326,3 +327,29 @@
 	else
 		pass("All grindable sheet or ore entries had valid lists and reagents.")
 	return TRUE
+
+// Used to test distillations on outpost
+/obj/item/reagent_containers/distilling_tester
+	icon_state = "cartridge"
+	var/datum/gas_mixture/GM = new()
+
+/obj/item/reagent_containers/distilling_tester/return_air()
+	return GM
+
+/obj/item/reagent_containers/distilling_tester/proc/test_distilling(var/decl/chemical_reaction/distilling/D)
+	qdel_swap(GM,new())
+	if(D.require_xgm_gas)
+		GM.gas[D.require_xgm_gas] = 100
+	else
+		if(D.rejects_xgm_gas == GAS_N2)
+			GM.gas[GAS_O2] = 100
+		else
+			GM.gas[GAS_N2] = 100
+	if(D.minimum_xgm_pressure)
+		GM.temperature = (D.minimum_xgm_pressure * CELL_VOLUME) / (GM.gas[D.require_xgm_gas] * R_IDEAL_GAS_EQUATION)
+
+	reagents.handle_distilling()
+
+/obj/item/reagent_containers/distilling_tester/Destroy(force, ...)
+	qdel_null(GM)
+	. = ..()
