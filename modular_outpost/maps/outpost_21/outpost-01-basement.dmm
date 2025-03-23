@@ -5370,6 +5370,10 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
+"akf" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "akg" = (
 /obj/machinery/atmospherics/valve{
 	dir = 4
@@ -41732,7 +41736,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/wood/alt/broken,
+/turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "bBw" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -51201,14 +51205,6 @@
 /obj/item/pen/crayon/marker/yellow,
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
-"fmd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
-/turf/simulated/floor/wood/alt/broken,
-/area/maintenance/oldbridge)
 "fmF" = (
 /obj/machinery/cryopod,
 /obj/machinery/computer/cryopod{
@@ -54447,7 +54443,10 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/turf/simulated/floor,
+/obj/effect/floor_decal/milspec/color/silver/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
 "hhQ" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
@@ -63164,15 +63163,6 @@
 "mGE" = (
 /turf/simulated/floor/water/acidic/deep/indoor/muriki,
 /area/mine/explored/muriki/river/south)
-"mHi" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/wood/alt/broken,
-/area/maintenance/oldbridge)
 "mHA" = (
 /obj/effect/landmark/dangerous_situation,
 /turf/simulated/floor/outdoors/mud/muriki{
@@ -74361,7 +74351,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt/broken,
+/turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "tzk" = (
 /obj/structure/cable/heavyduty{
@@ -81180,12 +81170,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/spine/waste)
-"xNF" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 6
-	},
-/turf/simulated/floor/wood/alt/broken,
-/area/maintenance/oldbridge)
 "xOn" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -87210,9 +87194,9 @@ tdB
 kZt
 dwP
 iVB
-kmN
 uoh
-uoh
+rBM
+rBM
 cqk
 mBu
 qSi
@@ -87858,8 +87842,8 @@ tdB
 kZt
 dwP
 iVB
-kmN
-bMi
+uoh
+akf
 rBM
 cqk
 fgQ
@@ -88022,7 +88006,7 @@ agU
 iBE
 kcx
 jew
-uoh
+rBM
 nbb
 yjs
 qSi
@@ -89800,7 +89784,7 @@ lrS
 iBE
 mys
 sNP
-lDK
+sNP
 gNy
 iBE
 hRB
@@ -89951,7 +89935,7 @@ rDH
 iBE
 ezJ
 sNP
-lDK
+sNP
 iBE
 isA
 qpr
@@ -90119,7 +90103,7 @@ hLQ
 nxA
 iBE
 nxr
-mHi
+ksG
 sNP
 iBE
 lwh
@@ -90445,7 +90429,7 @@ loM
 eTc
 qgN
 tHF
-fmd
+loM
 loM
 hAW
 tyt
@@ -90603,7 +90587,7 @@ uUo
 uUo
 vHY
 uyP
-lDK
+sNP
 fMI
 uxd
 jxV
@@ -90615,7 +90599,7 @@ sNP
 xTd
 sNP
 kUm
-xNF
+meS
 iBE
 gYY
 rDP
@@ -91262,7 +91246,7 @@ sNP
 sNP
 iBE
 rMW
-iiY
+uUo
 meS
 yjs
 yjs
