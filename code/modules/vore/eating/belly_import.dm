@@ -4,7 +4,7 @@
 
 
 /datum/vore_look/proc/import_belly(mob/host)
-	var/panel_choice = tgui_input_list(host, "Belly Import", "Pick an option", list(IMPORT_ALL_BELLIES, IMPORT_ONE_BELLY) //, IMPORT_SOULCATCHER)) // Outpost 21 edit - Nif removal
+	var/panel_choice = tgui_input_list(host, "Belly Import", "Pick an option", list(IMPORT_ALL_BELLIES, IMPORT_ONE_BELLY)) //, IMPORT_SOULCATCHER)) // Outpost 21 edit - Nif removal
 	if(!panel_choice) return
 	var/pickOne = FALSE
 	if(panel_choice == IMPORT_ONE_BELLY)
