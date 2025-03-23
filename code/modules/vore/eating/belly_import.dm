@@ -1,10 +1,10 @@
 #define IMPORT_ALL_BELLIES "Import all bellies from VRDB"
 #define IMPORT_ONE_BELLY "Import one belly from VRDB"
-#define IMPORT_SOULCATCHER "Import Soulcatcher from VRDB"
+// #define IMPORT_SOULCATCHER "Import Soulcatcher from VRDB" // Outpost 21 edit - Nif removal
 
 
 /datum/vore_look/proc/import_belly(mob/host)
-	var/panel_choice = tgui_input_list(host, "Belly Import", "Pick an option", list(IMPORT_ALL_BELLIES, IMPORT_ONE_BELLY, IMPORT_SOULCATCHER))
+	var/panel_choice = tgui_input_list(host, "Belly Import", "Pick an option", list(IMPORT_ALL_BELLIES, IMPORT_ONE_BELLY) //, IMPORT_SOULCATCHER)) // Outpost 21 edit - Nif removal
 	if(!panel_choice) return
 	var/pickOne = FALSE
 	if(panel_choice == IMPORT_ONE_BELLY)
@@ -17,6 +17,7 @@
 		tgui_alert_async(host, "The supplied file contains errors: [e]", "Error!")
 		return FALSE
 
+	/* Outpost 21 edit - Nif removal
 	if(panel_choice == IMPORT_SOULCATCHER)
 		if(!islist(input_data["soulcatcher"]))
 			tgui_alert_async(host, "The supplied file was not a valid VRDB >= v0.2 file.", "Error!")
@@ -28,6 +29,7 @@
 			host.updateVRPanel()
 			unsaved_changes = TRUE
 		return return_val
+	*/
 
 	if(islist(input_data["bellies"]))
 		input_data = input_data["bellies"]
@@ -1178,4 +1180,4 @@
 
 #undef IMPORT_ALL_BELLIES
 #undef IMPORT_ONE_BELLY
-#undef IMPORT_SOULCATCHER
+// #undef IMPORT_SOULCATCHER // Outpost 21 edit - Nif removal
