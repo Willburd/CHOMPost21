@@ -67,10 +67,8 @@
 	if(!isnewplayer(src))
 		AddElement(/datum/element/slosh)
 	if(LAZYLEN(vore_organs))
-		/* // Outpost 21 edit - Nif removal
 		if(!soulgem)
 			soulgem = new(src)
-		*/
 		return TRUE
 
 	//We'll load our client's organs if we have one
@@ -95,10 +93,8 @@
 			var/mob/living/carbon/human/H = src
 			if(istype(H.species,/datum/species/monkey))
 				allow_spontaneous_tf = TRUE
-		/* // Outpost 21 edit - Nif removal
 		if(!soulgem)
 			soulgem = new(src)
-		*/
 		return TRUE
 
 /mob/living/init_vore()
@@ -261,7 +257,7 @@
 		serialized += list(B.serialize()) //Can't add a list as an object to another list in Byond. Thanks.
 
 	P.belly_prefs = serialized
-	// P.soulcatcher_prefs = src.soulgem.serialize() // Outpost 21 edit - Nif removal
+	P.soulcatcher_prefs = src.soulgem.serialize()
 	return TRUE
 
 //
@@ -293,7 +289,6 @@
 		else
 			vore_selected = vore_organs[1]
 
-		/* Outpost 21 edit - Nif removal
 		if(soulgem)
 			src.soulgem.release_mobs()
 			QDEL_NULL(soulgem)
@@ -301,7 +296,6 @@
 			soulgem = list_to_object(P.soulcatcher_prefs, src)
 		else
 			soulgem = new(src)
-		*/
 	return TRUE
 
 /mob/proc/load_vore_prefs_from_slot()

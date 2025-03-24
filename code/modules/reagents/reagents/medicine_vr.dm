@@ -227,7 +227,7 @@
 		M.vore_selected = null
 		ourmob.mob_belly_transfer(M)
 
-		// M.soulgem.transfer_self(ourmob) // Soulcatcher // Outpost 21 edit - Nif removal
+		M.soulgem.transfer_self(ourmob) // Soulcatcher
 
 		ourmob.Life(1)
 		if(ishuman(M))

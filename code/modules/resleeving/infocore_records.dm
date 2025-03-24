@@ -51,7 +51,7 @@
 	cryo_at = 0
 
 	//Mental stuff the game doesn't keep mentally
-	if(istype(M)) // Outpost 21 edit - Nif removal: || istype(M,/mob/living/carbon/brain/caught_soul))
+	if(istype(M) || istype(M,/mob/living/carbon/brain/caught_soul))
 		id_gender = M.identifying_gender
 		languages = M.languages.Copy()
 		mind_oocnotes = M.ooc_notes

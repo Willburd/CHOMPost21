@@ -36,7 +36,7 @@
 	// add_verb(src,/mob/proc/nme_vore) // Outpost 21 edit - Nif removal
 	// add_verb(src,/mob/proc/nsay_vore_ch) // Outpost 21 edit - Nif removal
 	// add_verb(src,/mob/proc/nme_vore_ch) // Outpost 21 edit - Nif removal
-	// add_verb(src,/mob/proc/enter_soulcatcher) // Outpost 21 edit - Nif removal
+	add_verb(src,/mob/proc/enter_soulcatcher)
 
 	//VOREStation Add Start
 	if(!voice_sounds_list.len || !voice_sounds_list)

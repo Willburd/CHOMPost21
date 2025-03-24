@@ -225,10 +225,10 @@
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 1000, MAT_PLASTEEL = 10000)
 	build_path = /obj/item/protean_reboot
 	sort_string = "JVAAZ"
+*/
 
 /obj/item/protean_reboot
 	name = "Protean Reboot Programmer"
 	desc = "A small, highly specialized programmer used to form the basis of a Protean swarm. A necessary component in reconstituting a Protean who has lost total body cohesion."
 	icon = 'icons/mob/species/protean/protean.dmi'
 	icon_state = "reboot"
-*/

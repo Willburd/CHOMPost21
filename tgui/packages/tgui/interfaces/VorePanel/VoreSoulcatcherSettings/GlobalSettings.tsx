@@ -47,6 +47,7 @@ export const GlobalSettings = (props: {
         >
           Ext. Vision
         </Button>
+        {/* Outpost 21 edit - Backup implants removed
         <Button
           icon="database"
           tooltip={
@@ -59,6 +60,7 @@ export const GlobalSettings = (props: {
         >
           Mind Backups
         </Button>
+        */}
         <Button
           icon="street-view"
           tooltip={

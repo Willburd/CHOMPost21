@@ -37,7 +37,7 @@
 				N.identifying_gender = M.gender
 
 		mob_belly_transfer(M)
-		// M.soulgem.transfer_self(src) // Soulcatcher // Outpost 21 edit - Nif removal
+		M.soulgem.transfer_self(src) // Soulcatcher
 
 		nutrition = M.nutrition
 		src.ckey = M.ckey
@@ -66,8 +66,8 @@
 	if(!tf_mob_holder)
 		return
 	var/mob/living/ourmob = tf_mob_holder
-	//if(soulgem) //Should always be the case, but...Safety. Done here first	// Outpost 21 edit - Nif removal
-	//	soulgem.transfer_self(ourmob)
+	if(soulgem) //Should always be the case, but...Safety. Done here first
+		soulgem.transfer_self(ourmob)
 	if(ourmob.loc != src)
 		if(isnull(ourmob.loc))
 			to_chat(src,span_notice("You have no body."))
@@ -229,7 +229,7 @@
 					new_mob.vore_organs += B
 				new_mob.nutrition = src.nutrition
 
-				// src.soulgem?.transfer_self(new_mob) // Outpost 21 edit - Nif removal
+				src.soulgem?.transfer_self(new_mob)
 
 			new_mob.ckey = src.ckey
 			if(new_mob.tf_form_ckey)

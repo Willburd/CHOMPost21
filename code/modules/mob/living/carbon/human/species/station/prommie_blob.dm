@@ -436,7 +436,7 @@
 		B.forceMove(blob)
 		B.owner = blob
 
-	// soulgem.owner = blob //CHOMPAdd // Outpost 21 edit - Nif removal
+	soulgem.owner = blob //CHOMPAdd
 
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
@@ -510,7 +510,7 @@
 		B.forceMove(src)
 		B.owner = src
 
-	// soulgem.owner = src // Outpost 21 edit - Nif removal
+	soulgem.owner = src
 
 	//vore_organs.Cut()
 
