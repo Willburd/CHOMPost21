@@ -604,6 +604,7 @@
 	if(message)
 		var/sane_message = sanitize(message)
 		SC.emote_into(sane_message,src)
+*/
 
 ///////////////////
 //Verbs for soulbrains
@@ -615,7 +616,7 @@
 	if(eyeobj)
 		to_chat(src,span_warning("You're already projecting in AR!"))
 		return
-
+	/* Outpost 21 edit - Nif removal
 	if(!(soulcatcher.setting_flags & NIF_SC_PROJECTING))
 		to_chat(src,span_warning("Projecting from this NIF has been disabled!"))
 		return
@@ -625,6 +626,7 @@
 
 	eyeobj = new/mob/observer/eye/ar_soul(src,nif.human)
 	soulcatcher.notify_into("[src] now AR projecting.")
+	*/
 
 /mob/living/carbon/brain/caught_soul/verb/jump_to_owner()
 	set name = "Jump to Owner"
@@ -634,8 +636,9 @@
 	if(!eyeobj)
 		to_chat(src,span_warning("You're not projecting into AR!"))
 		return
-
+	/* Outpost 21 edit - Nif removal
 	eyeobj.forceMove(get_turf(nif))
+	*/
 
 /mob/living/carbon/brain/caught_soul/verb/reenter_soulcatcher()
 	set name = "Re-enter Soulcatcher"
@@ -647,27 +650,32 @@
 		return
 
 	QDEL_NULL(eyeobj)
+	/* Outpost 21 edit - Nif removal
 	soulcatcher.notify_into("[src] ended AR projection.")
+	*/
 
 /mob/living/carbon/brain/caught_soul/verb/nsay_brain(message as text)
 	set name = "NSay"
 	set desc = "Speak into the NIF's Soulcatcher (circumventing AR speaking)."
 	set category = "Soulcatcher"
 
+	/* Outpost 21 edit - Nif removal
 	if(!message)
 		message = tgui_input_text(src, "Type a message to say.","Speak into Soulcatcher")
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.say_into(sane_message,src,null)
+	*/
 
 /mob/living/carbon/brain/caught_soul/verb/nme_brain(message as message)
 	set name = "NMe"
 	set desc = "Emote into the NIF's Soulcatcher (circumventing AR speaking)."
 	set category = "Soulcatcher"
 
+	/* Outpost 21 edit - Nif removal
 	if(!message)
 		message = tgui_input_text(src, "Type an action to perform.","Emote into Soulcatcher")
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.emote_into(sane_message,src,null)
-*/
+	*/

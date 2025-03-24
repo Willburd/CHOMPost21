@@ -81,7 +81,6 @@
 			to_use_custom_name = src.name
 		soulgem.catch_mob(src, to_use_custom_name)
 
-/* Outpost 21 edit - Nif removal
 // Speak to the captured souls within the own soulcatcher
 /mob/proc/nsay_vore(message as message)
 	set name = "NSay Vore"
@@ -214,7 +213,7 @@
 	if(message)
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
-*/
+
 // Allows the captured owner to transfer themselves to valid nearby objects
 /mob/living/carbon/brain/caught_soul/vore/proc/transfer_self()
 	set name = "Transfer Self"
