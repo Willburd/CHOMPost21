@@ -22,8 +22,10 @@
 	if(QDELETED(src))
 		return
 
+	/* Outpost 21 edit - Backup implants removed
 	if(!parent_mob && !transient &&(life_tick % 150 == 0) && gem.setting_flags & NIF_SC_BACKUPS)
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
+	*/
 
 	if(!client)
 		return

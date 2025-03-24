@@ -516,7 +516,7 @@
 				to_use_custom_name = L.name
 			gem.catch_mob(L, to_use_custom_name)
 			return TRUE
-		var/mob/living/carbon/human/HP = B.owner
+		// var/mob/living/carbon/human/HP = B.owner // Outpost 21 edit - Nif removal
 		var/mob/living/carbon/human/H = L
 		if(!istype(H)) return TRUE
 		/* Outpost 21 edit - Nif removal
