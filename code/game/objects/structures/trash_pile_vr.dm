@@ -28,13 +28,13 @@
 		/obj/item/gun/projectile/dartgun,
 		// /obj/item/clothing/gloves/black/bloodletter, Outpost 21 edit - Nif removal
 		/obj/item/gun/energy/mouseray/metamorphosis,
-	 	// Outpost 21 edit begin - New loot
+		// Outpost 21 edit begin - New loot
 		/obj/item/organ/internal/augment/armmounted/shoulder/blade,
 		/obj/item/organ/internal/augment/armmounted/shoulder/surge,
 		/obj/item/organ/internal/augment/bioaugment/thermalshades,
 		/obj/item/organ/internal/augment/armmounted/hand/sword,
 		/obj/item/organ/internal/augment/armmounted/dartbow,
-	 	// Outpost 21 edit end
+		// Outpost 21 edit end
 		)
 	var/global/list/allocated_gamma = list()
 

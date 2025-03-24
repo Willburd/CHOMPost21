@@ -9,7 +9,7 @@
 /obj/item/book/manual/stardust_game/New()
 	..()
 	dat = {"<html>
-	 <head>
+	<head>
 		<style>
 		h1 {font-size: 23px; margin: 15px 0px 5px; text-align: center;}
 		h2 {font-size: 20px; margin: 15px 0px 5px; background-color: #888888;}
