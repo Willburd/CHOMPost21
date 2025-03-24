@@ -213,7 +213,7 @@ using metal and glass, it uses glass and reagents (usually sulphuric acid).
 				var/datum/reagent/REG = SSchemistry.chemical_reagents[C]
 				ret += REG.name
 			else
-			 	// backup
+				// backup
 				ret += C
 			// Outpost 21 edit end
 	return ret

@@ -23,8 +23,8 @@
 	var/bluespace = TRUE // Outpost 21 edit - shuttles that don't gib phased shadekin
 
 	var/defer_initialisation = FALSE //If this this shuttle should be initialised automatically.
-	 								//If set to true, you are responsible for initialzing the shuttle manually.
-	 								//Useful for shuttles that are initialized by map_template loading, or shuttles that are created in-game or not used.
+									//If set to true, you are responsible for initialzing the shuttle manually.
+									//Useful for shuttles that are initialized by map_template loading, or shuttles that are created in-game or not used.
 
 	var/mothershuttle 	//tag of mothershuttle
 	var/motherdock		//tag of mothershuttle landmark, defaults to starting location

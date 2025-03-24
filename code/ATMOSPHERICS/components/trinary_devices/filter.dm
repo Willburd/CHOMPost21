@@ -19,13 +19,13 @@
 
 	/*
 	Filter types:
-	-1: Nothing
-	 0: Phoron: Phoron, Oxygen Agent B
-	 1: Oxygen: Oxygen ONLY
-	 2: Nitrogen: Nitrogen ONLY
-	 3: Carbon Dioxide: Carbon Dioxide ONLY
-	 4: Nitrous Oxide (Formerly called Sleeping Agent) (N2O)
-	 5: Methane: Methane only
+		-1: Nothing
+		0: Phoron: Phoron, Oxygen Agent B
+		1: Oxygen: Oxygen ONLY
+		2: Nitrogen: Nitrogen ONLY
+		3: Carbon Dioxide: Carbon Dioxide ONLY
+		4: Nitrous Oxide (Formerly called Sleeping Agent) (N2O)
+		5: Methane: Methane only
 	*/
 	var/filter_type = -1
 	var/list/filtered_out = list()
