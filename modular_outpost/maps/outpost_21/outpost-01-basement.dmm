@@ -5935,9 +5935,47 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/xenobio_storage)
+"akW" = (
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
 "akX" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/lowmain)
+"akY" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/incinerator)
+"akZ" = (
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
 "ala" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -5948,6 +5986,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/longtermstorage)
+"alb" = (
+/obj/machinery/air_sensor{
+	frequency = 1442;
+	id_tag = "burn_sensor"
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
 "alc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -5992,6 +6041,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/research/exp_prep)
+"alg" = (
+/obj/machinery/compressor{
+	dir = 4;
+	comp_id = "incin";
+	starter = 1
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
 "alh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
@@ -6080,6 +6141,19 @@
 /obj/machinery/portable_atmospherics/canister,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"alr" = (
+/obj/machinery/door/blast/angled{
+	id = "incin";
+	name = "Incinerator Aorta";
+	density = 0;
+	icon_state = "pdoor0"
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
 "als" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/industrial/warning,
@@ -6171,6 +6245,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/research/isolation_hall)
+"alB" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green,
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
 "alC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -6376,6 +6458,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"alX" = (
+/obj/item/analyzer,
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "alY" = (
 /turf/simulated/wall,
 /area/maintenance/cave)
@@ -6486,6 +6572,24 @@
 	phoron = 21.8366
 	},
 /area/medical/voxlab/breakroom)
+"amg" = (
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
 "amh" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow,
@@ -6494,6 +6598,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"ami" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/incinerator)
 "amj" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -6531,6 +6643,24 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"amm" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/maintenance/incinerator)
+"amn" = (
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Backup Generator";
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/steel_grid,
+/area/maintenance/incinerator)
 "amo" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -6540,6 +6670,17 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/plating,
 /area/rnd/hallway/hazard)
+"amp" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/orange/bordercorner,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
 "amq" = (
 /turf/simulated/wall,
 /area/maintenance/research)
@@ -6562,6 +6703,16 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
+"ams" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/orange/border,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
 "amt" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
@@ -6802,6 +6953,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway/xeno)
+"amK" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "amL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/meter,
@@ -6818,6 +6975,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
+"amM" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "amN" = (
 /obj/machinery/computer/rdservercontrol{
 	dir = 1;
@@ -9211,14 +9376,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos/tank_storage)
 "arp" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 8;
-	frequency = 1442;
-	id = "turbine_in";
-	use_power = 1;
-	volume_rate = 700
-	},
 /obj/effect/map_effect/interval/burnpit,
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 9
+	},
 /turf/simulated/floor/reinforced/airless{
 	phoron = 30;
 	oxygen = 70;
@@ -9742,7 +9903,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "asj" = (
-/obj/effect/map_effect/interval/burnpit,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
 	external_pressure_bound = 0;
@@ -13768,18 +13928,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"azx" = (
-/obj/effect/map_effect/interval/burnpit,
-/obj/machinery/air_sensor{
-	frequency = 1442;
-	id_tag = "burn_sensor"
-	},
-/turf/simulated/floor/reinforced/airless{
-	phoron = 30;
-	oxygen = 70;
-	name = "reinforced floor"
-	},
-/area/maintenance/incinerator)
 "azy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -19594,6 +19742,12 @@
 	icon_state = "4-8"
 	},
 /obj/structure/railing,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "aLg" = (
@@ -20174,8 +20328,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -22871,6 +23026,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "aQX" = (
@@ -22880,10 +23038,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/structure/railing,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "aQY" = (
@@ -25303,12 +25459,12 @@
 /obj/machinery/computer/general_air_control/large_tank_control{
 	dir = 4;
 	frequency = 1442;
-	input_tag = "turbine_in";
-	name = "Incinerator Control";
-	output_tag = "turbine_out";
+	input_tag = "recycle_in";
+	name = "Incinerator Recycle Control";
+	output_tag = "burn_out";
+	pixel_x = -6;
 	pressure_setting = 2000;
-	sensors = list("burn_sensor" = "Incinerator Sensor");
-	pixel_x = -6
+	sensors = list("burn_sensor" = "Incinerator Sensor")
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -31979,6 +32135,12 @@
 	icon_state = "4-8"
 	},
 /obj/structure/railing,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bit" = (
@@ -39571,6 +39733,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bxg" = (
@@ -39899,6 +40062,12 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxF" = (
@@ -39913,6 +40082,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxG" = (
@@ -39921,6 +40096,12 @@
 /obj/effect/floor_decal/corner/orange/border,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -39951,9 +40132,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bxL" = (
-/obj/machinery/atmospherics/binary/pump{
-	name = "fuel injection"
-	},
+/obj/machinery/atmospherics/binary/pump/on,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bxM" = (
@@ -40310,6 +40489,8 @@
 /area/muriki/crew/glass)
 "byv" = (
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/trammaint)
 "byw" = (
@@ -40723,6 +40904,8 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bzn" = (
@@ -40776,17 +40959,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/machinery/button/remote/blast_door{
-	dir = 1;
-	id = "burnpit_door";
-	name = "Incinerator Atrium";
-	pixel_y = -30;
-	req_access = newlist();
-	req_one_access = list(52,56);
-	pixel_x = -11
-	},
 /obj/structure/sign/warning/fire{
 	pixel_y = -32
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 1;
+	id = "incincore";
+	name = "DANGER Incinerator Core";
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
@@ -40829,28 +41009,27 @@
 /area/maintenance/incinerator)
 "bzx" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/railing,
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
-	},
 /obj/machinery/camera/network/substations,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "bzy" = (
 /obj/machinery/door/blast/angled{
-	id = "burnpit_door";
+	id = "incincore";
 	name = "Incinerator Atrium"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/reinforced,
 /area/maintenance/incinerator)
 "bzz" = (
-/obj/machinery/door/blast/angled{
-	id = "burnpit_door";
-	name = "Incinerator Atrium"
-	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/door/blast/angled{
+	id = "incincore";
+	name = "Incinerator Atrium"
+	},
 /turf/simulated/floor/reinforced,
 /area/maintenance/incinerator)
 "bzA" = (
@@ -41129,16 +41308,6 @@
 /obj/effect/floor_decal/corner/orange/border,
 /obj/structure/railing{
 	dir = 8
-	},
-/obj/machinery/computer/general_air_control/large_tank_control{
-	dir = 4;
-	frequency = 1442;
-	input_tag = "recycle_in";
-	name = "Incinerator Recycle Control";
-	output_tag = "burn_out";
-	pixel_x = -6;
-	pressure_setting = 2000;
-	sensors = list("burn_sensor" = "Incinerator Sensor")
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -41452,6 +41621,10 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bAO" = (
@@ -41714,7 +41887,9 @@
 /area/engineering/trammaint)
 "bBt" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/railing,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
@@ -41728,6 +41903,9 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -41981,15 +42159,19 @@
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bBZ" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/simulated/floor/plating,
+/obj/machinery/computer/general_air_control/large_tank_control{
+	dir = 1;
+	frequency = 1442;
+	input_tag = "turbine_in";
+	name = "Incinerator Gas Control";
+	output_tag = "turbine_out";
+	pressure_setting = 2000;
+	sensors = list("burn_sensor" = "Incinerator Sensor")
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "bCa" = (
 /obj/random/cutout,
@@ -42171,36 +42353,34 @@
 /turf/simulated/floor/plating/muriki,
 /area/medical/autosleever)
 "bCs" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
+/obj/structure/window/plastitanium,
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 1
 	},
-/obj/machinery/button/ignition{
-	id = "burnpit_igniter";
-	name = "Incinerator Ignition";
-	pixel_x = 28
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
 	},
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
-	target_pressure = 5000;
-	name = "Heat out"
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "bCt" = (
 /obj/effect/map_effect/interval/burnpit,
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
+/obj/machinery/atmospherics/unary/outlet_injector{
 	frequency = 1442;
-	icon_state = "map_vent_in";
-	id_tag = "turbine_out";
-	internal_pressure_bound = 2000;
-	internal_pressure_bound_default = 2000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
-	use_power = 1
+	id = "turbine_in";
+	use_power = 1;
+	volume_rate = 700
 	},
 /turf/simulated/floor/reinforced/airless{
 	phoron = 30;
@@ -42222,22 +42402,28 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "bCw" = (
 /obj/machinery/power/terminal{
 	dir = 8
 	},
 /obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/apc{
+/obj/machinery/power/apc/super/critical{
 	dir = 1;
-	name = "north bump";
-	pixel_y = 24
+	pixel_y = 25
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -42245,19 +42431,34 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/structure/railing,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "bCy" = (
-/obj/machinery/power/generator{
-	anchored = 1;
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
 	dir = 8
 	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
 /obj/structure/cable/yellow,
-/turf/simulated/floor/plating,
+/obj/structure/grille,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "bCz" = (
 /obj/random/cutout,
@@ -42514,7 +42715,13 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "bDa" = (
 /obj/structure/cable/orange{
@@ -42830,10 +43037,25 @@
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposalnear)
 "bDz" = (
-/obj/machinery/atmospherics/binary/circulator{
-	anchored = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 8;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	frequency = 1442;
+	icon_state = "map_vent_in";
+	id_tag = "turbine_out";
+	internal_pressure_bound = 2000;
+	internal_pressure_bound_default = 2000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "bDA" = (
 /obj/machinery/light/small,
@@ -42879,13 +43101,15 @@
 /turf/simulated/wall/r_wall,
 /area/security/tankstore)
 "bDF" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
+/obj/machinery/power/turbine{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/cable/yellow,
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "bDG" = (
 /obj/item/beach_ball/dodgeball,
@@ -45061,28 +45285,31 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/incinerator)
-"bHR" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/blue{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/incinerator)
-"bHS" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	target_pressure = 5000;
-	name = "Recycle in"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
+/area/maintenance/incinerator)
+"bHS" = (
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "bHT" = (
 /obj/random/cutout,
@@ -45120,10 +45347,21 @@
 /turf/simulated/floor/water/acidic/muriki,
 /area/mine/explored/muriki/river/north)
 "bHY" = (
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 10
+/obj/structure/window/plastitanium{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/green,
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "bHZ" = (
 /obj/effect/landmark/redspaceexit,
@@ -45699,8 +45937,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 6
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Turbine Power";
+	name_tag = "Turbine Power"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -45915,11 +46154,10 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
 "bYu" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 1;
-	name = "Oxidizer Injection"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "bZJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -48077,6 +48315,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "duQ" = (
@@ -49041,7 +49282,9 @@
 /area/medical/medbay2)
 "dXr" = (
 /obj/random/maintenance/engineering,
-/obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 6
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "dXK" = (
@@ -54539,11 +54782,16 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "hjL" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
 /obj/machinery/alarm{
 	pixel_y = 26
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
@@ -56012,15 +56260,27 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/civ/east)
 "ilt" = (
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "0-2"
 	},
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - Turbine Power";
-	name_tag = "Turbine Power"
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
 	},
-/obj/structure/cable/yellow,
-/turf/simulated/floor/plating,
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 6
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "ilJ" = (
 /obj/machinery/light/small{
@@ -57357,6 +57617,9 @@
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "jfK" = (
@@ -57417,12 +57680,16 @@
 	},
 /area/mine/unexplored/muriki/cave/sec)
 "jhW" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/item/tool/wrench,
-/obj/structure/sign/warning/compressed_gas{
-	pixel_x = 32
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
@@ -59798,6 +60065,12 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "kDL" = (
@@ -62050,6 +62323,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "lVl" = (
@@ -62232,10 +62508,7 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
 "mbv" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	target_pressure = 15000;
-	name = "Cold loop out"
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "mbH" = (
@@ -62650,6 +62923,12 @@
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "mrb" = (
@@ -62781,6 +63060,9 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
@@ -64196,7 +64478,7 @@
 /area/maintenance/oldbridge)
 "nsJ" = (
 /obj/random/maintenance/misc,
-/obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "nsU" = (
@@ -65847,10 +66129,25 @@
 /turf/simulated/floor/tiled/dark,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "orU" = (
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "orV" = (
 /obj/effect/zone_divider,
@@ -67299,7 +67596,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/casino)
 "poc" = (
-/obj/effect/map_effect/interval/burnpit,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 4
 	},
@@ -70919,6 +71215,9 @@
 /area/muriki/crew/vr_train)
 "rsk" = (
 /obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "rsl" = (
@@ -71336,11 +71635,25 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
 "rDm" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/green{
-	dir = 8
+/obj/structure/window/plastitanium,
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 1
 	},
-/obj/item/analyzer,
-/turf/simulated/floor/plating,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 9
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
 /area/maintenance/incinerator)
 "rDE" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -71453,10 +71766,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
 "rHM" = (
-/obj/random/maintenance/engineering,
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 1;
-	target_pressure = 15000;
+	target_pressure = 10000;
 	name = "Cold loop in"
 	},
 /turf/simulated/floor/plating,
@@ -72135,15 +72447,17 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/spine/civ)
 "sck" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/portable_atmospherics/canister/phoron,
-/turf/simulated/floor/plating,
+/obj/machinery/computer/turbine_computer{
+	dir = 1;
+	id = "incin"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "scm" = (
 /obj/structure/disposalpipe/segment{
@@ -73260,11 +73574,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "sJF" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 1;
-	name = "Coolant injection"
+/obj/random/maintenance/engineering,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "sJR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -73999,6 +74313,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "tiV" = (
@@ -74253,8 +74568,8 @@
 /turf/simulated/floor/plating/muriki,
 /area/engineering/coreproctunnel)
 "tuv" = (
-/obj/effect/map_effect/interval/burnpit,
 /obj/effect/decal/cleanable/ash,
+/obj/effect/map_effect/interval/burnpit,
 /turf/simulated/floor/reinforced/airless{
 	phoron = 30;
 	oxygen = 70;
@@ -76083,6 +76398,9 @@
 	c_tag = "WST - Incinerator Lower Stair";
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "uDz" = (
@@ -76903,7 +77221,16 @@
 	pixel_x = -26;
 	pixel_y = 26
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "vfE" = (
 /obj/effect/landmark/late_antag/synx,
@@ -77129,6 +77456,12 @@
 	req_access = list(11)
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "vmA" = (
@@ -77509,6 +77842,9 @@
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "vyQ" = (
@@ -78815,9 +79151,10 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "wmy" = (
-/obj/machinery/atmospherics/binary/circulator{
-	anchored = 1;
-	dir = 1
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 8;
+	target_pressure = 15000;
+	name = "Heat out"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -81183,14 +81520,11 @@
 /turf/simulated/floor/water/acidic/deep/indoor/muriki,
 /area/muriki/processor/gland/airmix)
 "xOx" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
+/obj/structure/sign/warning/compressed_gas{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
@@ -81796,12 +82130,12 @@
 /turf/simulated/floor/flesh/muriki,
 /area/muriki/processor/hall)
 "ycq" = (
-/obj/effect/map_effect/interval/burnpit,
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	id = "recycle_in";
 	frequency = 1442
 	},
+/obj/effect/map_effect/interval/burnpit,
 /turf/simulated/floor/reinforced/airless{
 	phoron = 30;
 	oxygen = 70;
@@ -83833,9 +84167,9 @@ bmq
 bzl
 bAe
 bAM
-bBs
-bBr
-rsk
+amp
+amn
+ami
 hqj
 bxI
 bxI
@@ -83995,7 +84329,7 @@ byv
 bzm
 bzm
 bAN
-bxX
+ams
 bCY
 mqV
 kDF
@@ -84324,7 +84658,7 @@ byD
 aWj
 vfu
 bCv
-bCZ
+akY
 bCZ
 bHQ
 byK
@@ -84646,9 +84980,9 @@ bwy
 bxI
 bxi
 bCx
-bHY
+alX
 wmy
-bHR
+bdx
 rHM
 rrp
 byK
@@ -84972,7 +85306,7 @@ kJn
 bBt
 rDm
 bDz
-bwz
+akZ
 bYu
 bBZ
 wKn
@@ -85127,8 +85461,8 @@ bcV
 aQX
 bxb
 bwA
-bwA
-bwA
+amK
+amK
 bxe
 byD
 hjL
@@ -85289,13 +85623,13 @@ bwX
 bwZ
 bvc
 bwV
-bwV
+amM
 bxf
 bxI
 byD
 byD
-orU
-byD
+amg
+alg
 orU
 byD
 byD
@@ -85456,8 +85790,8 @@ exv
 bih
 bzq
 bzq
-bDe
 bzq
+alr
 bDe
 bzq
 bzq
@@ -85618,8 +85952,8 @@ byF
 bzs
 bzq
 bBX
-poc
-azx
+akW
+bBX
 poc
 bBX
 bzq
@@ -85779,11 +86113,11 @@ byy
 byG
 bzt
 bzy
-bBX
+akW
 bCt
-bBX
+alB
 arp
-bBX
+akW
 bzq
 byI
 sSi
@@ -85944,7 +86278,7 @@ bzz
 dtP
 asj
 tuv
-bBX
+alb
 soc
 bzq
 byI
@@ -86103,11 +86437,11 @@ byB
 aoX
 bzv
 bzz
-dtP
+amm
 ycq
+akW
 bBX
-bBX
-bBX
+akW
 bzq
 byI
 bDy
@@ -86266,9 +86600,9 @@ bzr
 bzw
 bzq
 bBX
-bBX
+akW
 yaJ
-bBX
+akW
 wNu
 bzq
 byI

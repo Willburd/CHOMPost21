@@ -258,7 +258,7 @@
 	add_avail(lastgen)
 
 	// Weird function but it works. Should be something else...
-	var/newrpm = ((compressor.gas_contained.temperature) * compressor.gas_contained.total_moles)/4
+	var/newrpm = ((compressor.gas_contained.temperature) * compressor.gas_contained.total_moles) * 25 // Outpost 21 edit - Increased power, was / 4
 
 	newrpm = max(0, newrpm)
 
