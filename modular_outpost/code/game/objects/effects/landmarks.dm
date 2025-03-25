@@ -38,7 +38,6 @@
 			/mob/living/simple_mob/animal/synx/ai,
 			/mob/living/simple_mob/vore,
 			/mob/living/simple_mob/vore/alienanimals/chu,
-			/mob/living/simple_mob/animal/synx/scp,
 			/mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
 			/mob/living/simple_mob/vore/vore_hostile/leaper,
 			/mob/living/simple_mob/vore/ashy,
@@ -47,8 +46,8 @@
 			// Cult
 			/mob/living/simple_mob/creature,
 			/mob/living/simple_mob/vore/aggressive/corrupthound,
-			/mob/living/simple_mob/vore/demon/wendigo,
-			/mob/living/simple_mob/vore/demon/engorge,
+			/mob/living/simple_mob/vore/demonAI/wendigo,
+			/mob/living/simple_mob/vore/demonAI/engorge,
 			/mob/living/simple_mob/humanoid/cultist/noodle,
 			/mob/living/simple_mob/humanoid/cultist/tesh,
 			// Candy
