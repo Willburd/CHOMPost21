@@ -68,11 +68,28 @@
 //	landmark_transition = "tram_transit"
 	ceiling_type = /turf/simulated/shuttle/floor/white
 
+	crash_locations = list(
+		"tram_crash_waste",
+		"tram_crash_eng",
+		"tram_crash_med",
+		"tram_crash_civ",
+		"tram_crash_red"
+	)
+	crash_message = "Tram system derailment detected."
+
 	destination_tags = list(
 		"tram_waste",
 		"tram_eng",
 		"tram_civ"
 	)
+
+/datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	// If on highest level of spooky let the tram crash happen
+	if(SShaunting.world_mode >= 5)
+		return prob(1) && prob(10)
+	if(SShaunting.world_mode >= 4)
+		return prob(1) && prob(1)
+	return FALSE
 
 /obj/effect/shuttle_landmark/premade/tram/shed
 	name = "Tram Station - Shed"
@@ -104,6 +121,60 @@
 	base_area = /area/muriki/tramstation/civ
 	base_turf = /turf/simulated/open
 
+/obj/effect/shuttle_landmark/premade/tram/crash_waste
+	name = "Tram Crash - Waste"
+	landmark_tag = "tram_crash_waste"
+	base_area = /area/muriki/grounds/tramlinewest
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_waste/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng
+	name = "Tram Crash - Eng"
+	landmark_tag = "tram_crash_eng"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_med
+	name = "Tram Crash - Med"
+	landmark_tag = "tram_crash_med"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_med/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ
+	name = "Tram Crash - Civ"
+	landmark_tag = "tram_crash_civ"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_red
+	name = "Tram Crash - Red"
+	landmark_tag = "tram_crash_red"
+	base_area = /area/specialty/redspace
+	base_turf = /turf/simulated/floor/flesh
+
+/obj/effect/shuttle_landmark/premade/tram/crash_red/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
 
 //////////////////////////////////////////////////////////////
 // Trade Ship

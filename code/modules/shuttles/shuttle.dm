@@ -139,6 +139,12 @@
 		moving_status = SHUTTLE_INTRANSIT //shouldn't matter but just to be safe
 		on_shuttle_departure(start_location, destination)
 
+		// Outpost 21 edit begin - Crashing the tram
+		if(istype(src,/datum/shuttle/autodock/multi/tram) && should_crash(destination))
+			do_crash(destination)
+			return
+		// Outpost 21 edit end
+
 		attempt_move(destination)
 
 		moving_status = SHUTTLE_IDLE

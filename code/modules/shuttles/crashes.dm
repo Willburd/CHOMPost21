@@ -65,9 +65,13 @@
 	var/list/shuttle_turfs = list()
 	for(var/area/A in shuttle_area)
 		shuttle_turfs += get_area_turfs(A)
-	var/turf/epicenter = pick(shuttle_turfs)
-	var/boomsize = shuttle_turfs.len / 10 // Bigger shuttle = bigger boom
-	explosion(epicenter, 0, boomsize, boomsize*2, boomsize*3)
+	// Outpost 21 edit begin - Better shuttle crashing
+	var/max_boom = shuttle_turfs.len / 16 // Bigger shuttle = bigger boom
+	for(var/i = 1 to max_boom)
+		var/turf/epicenter = pick(shuttle_turfs)
+		var/boomsize = rand(3,6)
+		explosion(epicenter, 0, boomsize / 3, boomsize, boomsize*2)
+	// Outpost 21 edit begin - Better shuttle crashing
 	moving_status = SHUTTLE_CRASHED
 	command_announcement.Announce("[crash_message]", "Shuttle Alert")
 
@@ -77,3 +81,5 @@
 		L.adjustBruteLoss(5)
 		L.adjustBruteLoss(10)
 		L.adjustBruteLoss(15)
+
+	SShaunting.intense_world_haunt() // Outpost 21 edit - It da spooky station!
