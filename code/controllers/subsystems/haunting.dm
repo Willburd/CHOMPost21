@@ -191,6 +191,9 @@ SUBSYSTEM_DEF(haunting)
 	world_mode = MODE_CALM
 	haunt_score = 0
 
+/datum/controller/subsystem/haunting/proc/get_world_haunt()
+	return world_mode
+
 /datum/controller/subsystem/haunting/proc/find_player_target()
 	var/mob/potential = get_random_player()
 	if(!potential)

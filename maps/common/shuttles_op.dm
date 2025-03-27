@@ -85,9 +85,9 @@
 
 /datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
 	// If on highest level of spooky let the tram crash happen
-	if(SShaunting.world_mode >= 5)
+	if(SShaunting.get_world_haunt() >= 5)
 		return prob(1) && prob(10)
-	if(SShaunting.world_mode >= 4)
+	if(SShaunting.get_world_haunt() >= 4)
 		return prob(1) && prob(1)
 	return FALSE
 
