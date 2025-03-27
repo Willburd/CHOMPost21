@@ -143,6 +143,7 @@
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
 
+/* Outpost 21 edit begin - Soulcatch mechanics that are illegal
 // SR projecting mob
 /mob/observer/eye/ar_soul/vore
 	plane = PLANE_SOULCATCHER
@@ -193,6 +194,7 @@
 	QDEL_NULL(eyeobj)
 	gem.notify_holder("[src] ended SR projection.")
 	gem.show_vore_fx(src, TRUE)
+*/
 
 /mob/living/carbon/brain/caught_soul/vore/nsay_brain()
 	set name = "NSay"

@@ -606,6 +606,8 @@
 		SC.emote_into(sane_message,src)
 */
 
+
+/* Outpost 21 edit begin - Soulcatch mechanics that are illegal
 ///////////////////
 //Verbs for soulbrains
 /mob/living/carbon/brain/caught_soul/verb/ar_project()
@@ -653,6 +655,7 @@
 	/* Outpost 21 edit - Nif removal
 	soulcatcher.notify_into("[src] ended AR projection.")
 	*/
+*/
 
 /mob/living/carbon/brain/caught_soul/verb/nsay_brain(message as text)
 	set name = "NSay"

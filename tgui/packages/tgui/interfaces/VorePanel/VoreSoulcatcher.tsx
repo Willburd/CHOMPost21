@@ -9,7 +9,9 @@ import {
 } from 'tgui-core/components';
 
 import { abilities, bellyData, DropdownEntry, soulcatcherData } from './types';
-import { VoreAbilities } from './VoreAbilities';
+{
+  /* import { VoreAbilities } from './VoreAbilities'; Outpost 21 edit - Resizing is massively illegal on outpost */
+}
 import { CatchSettings } from './VoreSoulcatcherSettings/CatchSettings';
 import { GlobalOptions } from './VoreSoulcatcherSettings/GlobalOptions';
 import { GlobalSettings } from './VoreSoulcatcherSettings/GlobalSettings';
@@ -36,7 +38,7 @@ export const VoreSoulcatcher = (props: {
           overlayBellies={getBellies}
         />
       )}
-      <VoreAbilities abilities={abilities} />
+      {/* <VoreAbilities abilities={abilities} /> Outpost 21 edit - Resizing is massively illegal on outpost */}
     </Section>
   );
 };
