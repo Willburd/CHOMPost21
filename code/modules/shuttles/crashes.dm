@@ -5,6 +5,8 @@
 /datum/shuttle
 	var/list/crash_locations = null
 	var/crash_message = "Oops. The shuttle blew up."	// Announcement made when shuttle crashes
+	var/allow_short_crashes = FALSE // Outpost 21 edit - if shuttle can crash doing short jumps
+	var/emagged_crash = FALSE // Outpost 21 edit - Emagging shuttles to crash
 
 /datum/shuttle/New()
 	if(crash_locations)

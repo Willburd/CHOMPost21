@@ -4548,6 +4548,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/entry)
+"agN" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_south,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/yard)
+"agO" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_cargoyard,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/yard)
+"agP" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_north,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/engi)
 "agR" = (
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -97946,7 +97958,7 @@ ajT
 ajT
 ajT
 ajT
-ajT
+agO
 ajT
 ajT
 ajT
@@ -112930,7 +112942,7 @@ khd
 khd
 khd
 khd
-khd
+agP
 khd
 khd
 khd
@@ -114147,7 +114159,7 @@ ajT
 ajT
 ajT
 ajT
-ajT
+agN
 iYO
 ajT
 ajT

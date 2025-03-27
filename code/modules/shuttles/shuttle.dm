@@ -140,7 +140,7 @@
 		on_shuttle_departure(start_location, destination)
 
 		// Outpost 21 edit begin - Crashing the tram
-		if(istype(src,/datum/shuttle/autodock/multi/tram) && should_crash(destination))
+		if(allow_short_crashes && should_crash(destination))
 			do_crash(destination)
 			return
 		// Outpost 21 edit end
