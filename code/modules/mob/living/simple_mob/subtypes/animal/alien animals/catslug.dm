@@ -68,7 +68,7 @@
 		/obj/item/holder,
 		/obj/machinery/camera,
 		/obj/belly,
-		// /obj/soulgem, // Outpost 21 edit - Nif removal
+		/obj/soulgem,
 		/obj/screen,
 		/atom/movable/emissive_blocker,
 		/obj/item/material,

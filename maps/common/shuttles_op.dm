@@ -74,6 +74,27 @@
 		"tram_civ"
 	)
 
+	allow_short_crashes = TRUE
+	crash_locations = list(
+		"tram_crash_waste",
+		"tram_crash_eng",
+		"tram_crash_med",
+		"tram_crash_civ",
+		"tram_crash_red"
+	)
+	crash_message = "Tram system derailment detected."
+
+
+/datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(emagged_crash)
+		return TRUE
+	// If on highest level of spooky let the tram crash happen
+	if(SShaunting.get_world_haunt() >= 5)
+		return prob(1) && prob(10)
+	if(SShaunting.get_world_haunt() >= 4)
+		return prob(1) && prob(1)
+	return FALSE
+
 /obj/effect/shuttle_landmark/premade/tram/shed
 	name = "Tram Station - Shed"
 	landmark_tag = "tram_shed"
@@ -104,6 +125,60 @@
 	base_area = /area/muriki/tramstation/civ
 	base_turf = /turf/simulated/open
 
+/obj/effect/shuttle_landmark/premade/tram/crash_waste
+	name = "Tram Crash - Waste"
+	landmark_tag = "tram_crash_waste"
+	base_area = /area/muriki/grounds/tramlinewest
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_waste/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng
+	name = "Tram Crash - Eng"
+	landmark_tag = "tram_crash_eng"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_med
+	name = "Tram Crash - Med"
+	landmark_tag = "tram_crash_med"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_med/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ
+	name = "Tram Crash - Civ"
+	landmark_tag = "tram_crash_civ"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_red
+	name = "Tram Crash - Red"
+	landmark_tag = "tram_crash_red"
+	base_area = /area/specialty/redspace
+	base_turf = /turf/simulated/floor/flesh
+
+/obj/effect/shuttle_landmark/premade/tram/crash_red/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
 
 //////////////////////////////////////////////////////////////
 // Trade Ship
@@ -285,8 +360,6 @@
 	base_turf = /turf/simulated/floor/plating
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
-
-// Docks
 /datum/shuttle/autodock/overmap/medical
 	name = "Medical Rescue"
 	warmup_time = 0
@@ -295,7 +368,25 @@
 	shuttle_area = list(/area/shuttle/medical)
 	fuel_consumption = 1 //much less, due to being teeny
 	ceiling_type = /turf/simulated/shuttle/floor/white/muriki
+	allow_short_crashes = TRUE
+	crash_locations = list(
+		"crash_cargoyard",
+		"crash_north",
+		"crash_south",
+		"crash_engi_roof",
+		"crash_sec_roof",
+		"crash_garden_roof"
+	)
 
+/datum/shuttle/autodock/overmap/medical/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(emagged_crash)
+		return TRUE
+	// If on highest level of spooky let the tram crash happen
+	if(SShaunting.get_world_haunt() >= 5)
+		return prob(1) && prob(1)
+	return FALSE
+
+// Docks
 /obj/effect/shuttle_landmark/premade/medical/muriki
 	name = "ES Outpost 21 (Medical Dock)"
 	landmark_tag = "outpost_medical_hangar"
@@ -332,6 +423,32 @@
 	known = TRUE // we own this lol
 	fore_dir = SOUTH
 
+/datum/shuttle/autodock/overmap/security
+	name = "Security Carrier"
+	warmup_time = 0
+	current_location = "outpost_security_hangar"
+	docking_controller_tag = "sec_docker"
+	shuttle_area = list(/area/shuttle/security)
+	fuel_consumption = 1 //much less, due to being teeny
+	ceiling_type = /turf/simulated/shuttle/floor/white/muriki
+	allow_short_crashes = TRUE
+	crash_locations = list(
+		"crash_cargoyard",
+		"crash_north",
+		"crash_south",
+		"crash_engi_roof",
+		"crash_sec_roof",
+		"crash_garden_roof"
+	)
+
+/datum/shuttle/autodock/overmap/security/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(emagged_crash)
+		return TRUE
+	// If on highest level of spooky let the tram crash happen
+	if(SShaunting.get_world_haunt() >= 5)
+		return prob(1) && prob(1)
+	return FALSE
+
 /obj/machinery/computer/shuttle_control/explore/security
 	name = "short jump console"
 	shuttle_tag = "Security Carrier"
@@ -346,15 +463,6 @@
 
 
 // Docks
-/datum/shuttle/autodock/overmap/security
-	name = "Security Carrier"
-	warmup_time = 0
-	current_location = "outpost_security_hangar"
-	docking_controller_tag = "sec_docker"
-	shuttle_area = list(/area/shuttle/security)
-	fuel_consumption = 1 //much less, due to being teeny
-	ceiling_type = /turf/simulated/shuttle/floor/white/muriki
-
 /obj/effect/shuttle_landmark/premade/security/muriki
 	name = "ES Outpost 21 (Security Dock)"
 	landmark_tag = "outpost_security_hangar"
@@ -392,6 +500,32 @@
 	known = TRUE // we own this lol
 	fore_dir = EAST
 
+/datum/shuttle/autodock/overmap/trawler
+	name = "Mining Trawler"
+	warmup_time = 0
+	current_location = "outpost_trawler_pad"
+	docking_controller_tag = "trawler_docker"
+	shuttle_area = list(/area/shuttle/trawler)
+	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	fuel_consumption = 2 // chonky
+	allow_short_crashes = TRUE
+	crash_locations = list(
+		"crash_cargoyard",
+		"crash_north",
+		"crash_south",
+		"crash_engi_roof",
+		"crash_sec_roof",
+		"crash_garden_roof"
+	)
+
+/datum/shuttle/autodock/overmap/trawler/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(emagged_crash)
+		return TRUE
+	// If on highest level of spooky let the tram crash happen
+	if(SShaunting.get_world_haunt() >= 5)
+		return prob(1) && prob(1)
+	return FALSE
+
 /obj/machinery/computer/shuttle_control/explore/trawler
 	name = "short jump console"
 	shuttle_tag = "Mining Trawler"
@@ -404,17 +538,7 @@
 	base_turf = /turf/simulated/floor/plating/external/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
-
 // Docks
-/datum/shuttle/autodock/overmap/trawler
-	name = "Mining Trawler"
-	warmup_time = 0
-	current_location = "outpost_trawler_pad"
-	docking_controller_tag = "trawler_docker"
-	shuttle_area = list(/area/shuttle/trawler)
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
-	fuel_consumption = 2 // chonky
-
 /obj/effect/shuttle_landmark/premade/trawler/muriki
 	name = "ES Outpost 21 (Trawler Pad)"
 	landmark_tag = "outpost_trawler_pad"
@@ -464,6 +588,23 @@
 		"beam_base",
 		"beam_sat"
 	)
+
+	crash_locations = list(
+		"crash_cargoyard",
+		"crash_north",
+		"crash_south",
+		"crash_engi_roof",
+		"crash_sec_roof",
+		"crash_garden_roof"
+	)
+
+/datum/shuttle/autodock/multi/beamtransit/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(emagged_crash)
+		return TRUE
+	// If on highest level of spooky let the tram crash happen
+	if(SShaunting.get_world_haunt() >= 5)
+		return prob(1) && prob(1)
+	return FALSE
 
 /obj/effect/shuttle_landmark/premade/beamtransit/base
 	name = "ES Outpost 21 (Engineering Dock)"
@@ -581,7 +722,72 @@
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
 
+// Crash bang boom!
+/obj/effect/shuttle_landmark/premade/generic/crash_cargoyard
+	name = "Crash - Cargo Yard"
+	landmark_tag = "crash_cargoyard"
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_area = /area/muriki/yard
 
+/obj/effect/shuttle_landmark/premade/generic/crash_cargoyard/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_north
+	name = "Crash - North"
+	landmark_tag = "crash_north"
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_area = /area/muriki/grounds/engi
+
+/obj/effect/shuttle_landmark/premade/generic/crash_north/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_south
+	name = "Crash - South"
+	landmark_tag = "crash_south"
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_area = /area/muriki/grounds/sec
+
+/obj/effect/shuttle_landmark/premade/generic/crash_south/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_engiroof
+	name = "Crash - Engineering Roof"
+	landmark_tag = "crash_engi_roof"
+	base_turf = /turf/simulated/open
+	base_area = /area/muriki/rooftop/engineering
+
+/obj/effect/shuttle_landmark/premade/generic/crash_engiroof/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_secroof
+	name = "Crash - Security Roof"
+	landmark_tag = "crash_sec_roof"
+	base_turf = /turf/simulated/open
+	base_area = /area/muriki/rooftop/security
+
+/obj/effect/shuttle_landmark/premade/generic/crash_secroof/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_gardenroof
+	name = "Crash - Garden Roof"
+	landmark_tag = "crash_garden_roof"
+	base_turf = /turf/simulated/open
+	base_area = /area/hydroponics/publicgarden
+
+/obj/effect/shuttle_landmark/premade/generic/crash_gardenroof/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
 
 // ELEVATORS --------------------------------------------------------
 /obj/turbolift_map_holder/muriki/medevator

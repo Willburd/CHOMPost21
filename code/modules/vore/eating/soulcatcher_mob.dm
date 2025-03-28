@@ -22,8 +22,10 @@
 	if(QDELETED(src))
 		return
 
+	/* Outpost 21 edit - Backup implants removed
 	if(!parent_mob && !transient &&(life_tick % 150 == 0) && gem.setting_flags & NIF_SC_BACKUPS)
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
+	*/
 
 	if(!client)
 		return
@@ -141,6 +143,7 @@
 		var/sane_message = sanitize(message)
 		gem.use_emote(sane_message, src)
 
+/* Outpost 21 edit begin - Soulcatch mechanics that are illegal
 // SR projecting mob
 /mob/observer/eye/ar_soul/vore
 	plane = PLANE_SOULCATCHER
@@ -191,6 +194,7 @@
 	QDEL_NULL(eyeobj)
 	gem.notify_holder("[src] ended SR projection.")
 	gem.show_vore_fx(src, TRUE)
+*/
 
 /mob/living/carbon/brain/caught_soul/vore/nsay_brain()
 	set name = "NSay"

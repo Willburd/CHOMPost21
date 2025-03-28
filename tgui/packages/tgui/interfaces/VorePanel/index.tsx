@@ -6,7 +6,7 @@ import { Button, Icon, NoticeBox, Stack, Tabs } from 'tgui-core/components';
 import { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
-/* import { VoreSoulcatcher } from './VoreSoulcatcher'; // Outpost 21 edit - Nif removal */
+import { VoreSoulcatcher } from './VoreSoulcatcher';
 import { VoreUserPreferences } from './VoreUserPreferences';
 
 /**
@@ -180,7 +180,6 @@ export const VorePanel = () => {
       vore_words={vore_words}
     />
   );
-  /* Outpost 21 edit begin - Nif removal
   tabs[1] = (
     <VoreSoulcatcher
       our_bellies={our_bellies}
@@ -189,8 +188,6 @@ export const VorePanel = () => {
     />
   );
   tabs[2] = (
-  */
-  tabs[1] = (
     <VoreUserPreferences
       prefs={prefs}
       selected={selected}
@@ -245,7 +242,6 @@ export const VorePanel = () => {
                 Bellies
                 <Icon name="list" ml={0.5} />
               </Tabs.Tab>
-              {/* Outpost 21 edit begin - Nif removal
               <Tabs.Tab
                 selected={tabIndex === 1}
                 onClick={() => setTabIndex(1)}
@@ -253,10 +249,9 @@ export const VorePanel = () => {
                 Soulcatcher
                 <Icon name="ghost" ml={0.5} />
               </Tabs.Tab>
-			        Outpost 21 edit end */}
               <Tabs.Tab
-                selected={tabIndex === 1}
-                onClick={() => setTabIndex(1)}
+                selected={tabIndex === 2}
+                onClick={() => setTabIndex(2)}
               >
                 Preferences
                 <Icon name="user-cog" ml={0.5} />

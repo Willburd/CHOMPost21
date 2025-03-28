@@ -140,12 +140,34 @@
 	return TRUE
 
 /obj/machinery/computer/shuttle_control/emag_act(var/remaining_charges, var/mob/user)
-	if (!hacked)
-		req_access = list()
-		req_one_access = list()
-		hacked = 1
-		to_chat(user, "You short out the console's ID checking system. It's now available to everyone!")
-		return 1
+	// Outpost 21 edit begin - Crash it or hack it
+	var/choice = tgui_input_list(user,"Hack this console to unlock it or cause the shuttle to crash on its next flight.", "Emagged",list("Hack","Crash"))
+	if(!Adjacent(user))
+		return 0
+	switch(choice)
+		if("Hack")
+			if(hacked)
+				to_chat(user, span_warning("The console is already hacked."))
+				return 0
+			if(!hacked)
+				req_access = list()
+				req_one_access = list()
+				hacked = 1
+				to_chat(user, "You short out the console's ID checking system. It's now available to everyone!")
+				return 1
+		if("Crash")
+			var/datum/shuttle/S = SSshuttles.shuttles[shuttle_tag]
+			if(S.emagged_crash)
+				to_chat(user, span_warning("The shuttle is already rigged to crash."))
+				return 0
+			if(!istype(S))
+				to_chat(user, span_warning("Unable to establish link with the shuttle."))
+				return 0
+			S.emagged_crash = TRUE
+			to_chat(user, "You short out the shuttles's launch systems. It won't last long now...")
+			return 1
+	return 0
+	// Outpost 21 edit end
 
 /obj/machinery/computer/shuttle_control/bullet_act(var/obj/item/projectile/Proj)
 	visible_message("\The [Proj] ricochets off \the [src]!")

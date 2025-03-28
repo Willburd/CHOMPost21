@@ -87,6 +87,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
+"aaj" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/obj/effect/shuttle_landmark/premade/tram/crash_eng,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/tramlinewest)
 "aak" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -2921,6 +2928,10 @@
 /obj/structure/plasticflaps/mining,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
+"aej" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_civ,
+/turf/simulated/floor/water/acidic/muriki,
+/area/muriki/grounds/tramlineeast)
 "aek" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
@@ -3898,6 +3909,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
+"afM" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_waste,
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/tramlinewest)
 "afN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -4131,6 +4146,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
+"agg" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_med,
+/turf/simulated/floor/maglev/muriki{
+	icon_state = "maglevside"
+	},
+/area/muriki/grounds/tramlineeast)
 "agh" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -4527,6 +4548,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/entry)
+"agN" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_south,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/yard)
+"agO" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_cargoyard,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/yard)
+"agP" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_north,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/engi)
 "agR" = (
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -94818,7 +94851,7 @@ vWB
 vWB
 cYb
 lQX
-cYb
+afM
 cYb
 pZl
 hZu
@@ -97925,7 +97958,7 @@ ajT
 ajT
 ajT
 ajT
-ajT
+agO
 ajT
 ajT
 ajT
@@ -100166,7 +100199,7 @@ cYb
 lQX
 cYb
 cYb
-pZl
+aaj
 kHn
 cHU
 kHn
@@ -112909,7 +112942,7 @@ khd
 khd
 khd
 khd
-khd
+agP
 khd
 khd
 khd
@@ -114126,7 +114159,7 @@ ajT
 ajT
 ajT
 ajT
-ajT
+agN
 iYO
 ajT
 ajT
@@ -115391,7 +115424,7 @@ aje
 aje
 aje
 aje
-sHp
+agg
 iDi
 iDi
 aiY
@@ -121387,7 +121420,7 @@ aje
 aje
 sHp
 iDi
-aje
+aej
 nvV
 cEY
 kHn

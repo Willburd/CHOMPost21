@@ -13,6 +13,7 @@
 	// For some reason borg Life() doesn't call ..()
 	handle_modifiers()
 	handle_light()
+	handle_radiation() // outpost 21 addition - radiation and haunting affects vision
 
 	if(client)
 		handle_regular_hud_updates()
@@ -228,7 +229,7 @@
 		sight &= ~SEE_OBJS
 		see_in_dark = 8 			 // see_in_dark means you can FAINTLY see in the dark, humans have a range of 3 or so, tajaran have it at 8
 		see_invisible = SEE_INVISIBLE_LIVING // This is normal vision (25), setting it lower for normal vision means you don't "see" things like darkness since darkness
-							 // has a "invisible" value of 15
+											// has a "invisible" value of 15
 
 	if(plane_holder)
 		plane_holder.set_vis(VIS_FULLBRIGHT,fullbright)
@@ -403,3 +404,18 @@
 		return TRUE
 	else
 		. = ..()
+
+// outpost 21 addition begin - radiation and haunting affects borg vision
+/mob/living/silicon/robot/proc/handle_radiation()
+	var/area/A = get_area(src)
+	if(A && A.haunted) // Force haunting rad vision
+		radiation = 10
+	var/old_rads = radiation
+	radiation -= rand(2,7)
+	if(radiation <= 0)
+		if(old_rads > 0)
+			client.screen -= global_hud.whitense
+		radiation = 0
+	else
+		client.screen |= global_hud.whitense
+// outpost 21 addition end

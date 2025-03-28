@@ -47,6 +47,7 @@ export const GlobalSettings = (props: {
         >
           Ext. Vision
         </Button>
+        {/* Outpost 21 edit - Backup implants removed
         <Button
           icon="database"
           tooltip={
@@ -59,6 +60,8 @@ export const GlobalSettings = (props: {
         >
           Mind Backups
         </Button>
+        */
+        /* Outpost 21 edit - Soulcatch mechanics that are illegal
         <Button
           icon="street-view"
           tooltip={
@@ -85,6 +88,7 @@ export const GlobalSettings = (props: {
         >
           SR Vision
         </Button>
+        */}
         <Button
           icon={show_vore_sfx ? 'circle-play' : 'circle-pause'}
           tooltip={

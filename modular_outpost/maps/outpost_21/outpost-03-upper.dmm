@@ -30,6 +30,19 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/research)
+"aad" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/shuttle_landmark/premade/generic/crash_secroof,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "aae" = (
 /obj/machinery/door/airlock/glass_research{
 	name = "Xenoflora Research";
@@ -38,6 +51,18 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/upper)
+"aaf" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/effect/shuttle_landmark/premade/generic/crash_gardenroof,
+/turf/simulated/floor/grass,
+/area/hydroponics/publicgarden)
+"aag" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/shuttle_landmark/premade/generic/crash_engiroof,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/engineering)
 "aah" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -70342,7 +70367,7 @@ hEc
 hEc
 hEc
 hEc
-sRU
+aag
 hEc
 hEc
 hEc
@@ -91931,7 +91956,7 @@ vmp
 bEK
 kQc
 vmp
-bEK
+aad
 kQc
 vmp
 bEK
@@ -101797,7 +101822,7 @@ lIN
 ciK
 mcj
 dPr
-dPr
+aaf
 dPr
 dPr
 qAy

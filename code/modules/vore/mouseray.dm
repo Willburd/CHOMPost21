@@ -106,7 +106,7 @@
 			M.vore_selected = null
 			ourmob.mob_belly_transfer(M)
 			ourmob.nutrition = M.nutrition
-			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
+			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 
 		ourmob.ckey = M.ckey
 
@@ -208,7 +208,7 @@
 				M.vore_organs -= B
 				ourmob.vore_organs += B
 			ourmob.nutrition = M.nutrition
-			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher // Outpost 21 edit - Nif removal
+			M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher
 		ourmob.ckey = M.ckey
 
 		ourmob.Life(1)

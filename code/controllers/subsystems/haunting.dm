@@ -191,6 +191,9 @@ SUBSYSTEM_DEF(haunting)
 	world_mode = MODE_CALM
 	haunt_score = 0
 
+/datum/controller/subsystem/haunting/proc/get_world_haunt()
+	return world_mode
+
 /datum/controller/subsystem/haunting/proc/find_player_target()
 	var/mob/potential = get_random_player()
 	if(!potential)
@@ -270,12 +273,12 @@ SUBSYSTEM_DEF(haunting)
 			return
 		if(world.time < next_haunt_time)
 			return
-		next_haunt_time = world.time + (rand(40,300) SECONDS)
-		var/skip_prob = 80
+		next_haunt_time = world.time + (rand(40,500) SECONDS)
+		var/skip_prob = 90
 		if(world_mode >= MODE_UNNERVING)
-			skip_prob = 75
+			skip_prob = 85
 		if(world_mode >= MODE_SUPERSPOOKY)
-			skip_prob = 65
+			skip_prob = 75
 		if(prob(skip_prob))
 			return
 	else
