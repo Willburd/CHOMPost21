@@ -13,6 +13,7 @@
 	// For some reason borg Life() doesn't call ..()
 	handle_modifiers()
 	handle_light()
+	handle_radiation() // outpost 21 addition - radiation and haunting affects vision
 
 	if(client)
 		handle_regular_hud_updates()
@@ -403,3 +404,18 @@
 		return TRUE
 	else
 		. = ..()
+
+// outpost 21 addition begin - radiation and haunting affects borg vision
+/mob/living/silicon/robot/proc/handle_radiation()
+	var/area/A = get_area(src)
+	if(A && A.haunted) // Force haunting rad vision
+		radiation = 10
+	var/old_rads = radiation
+	radiation -= rand(2,7)
+	if(radiation <= 0)
+		if(old_rads > 0)
+			client.screen -= global_hud.whitense
+		radiation = 0
+	else
+		client.screen |= global_hud.whitense
+// outpost 21 addition end
