@@ -105,7 +105,9 @@
 	if(!isnull(vore_organs) && vore_organs.len > 0)
 		for(var/obj/belly/B in vore_organs)
 			for(var/mob/living/L in B)
-				if(L.stat <= UNCONSCIOUS)
+				if(L.stat == DEAD)
+					continue
+				if(!L.allow_spontaneous_tf)
 					continue
 				if(issilicon(L) || isrobot(L) || L.isSynthetic())
 					continue
@@ -130,6 +132,10 @@
 
 	if(isnull(foundprey) || isnull(foundbelly))
 		to_chat(src, "<span class='warning'>You must have prey inside you to infest them!</span>")
+		return
+
+	if(!foundprey.allow_spontaneous_tf)
+		to_chat(src, "<span class='warning'>\The [foundprey]'s genetics is too stable to infest.</span>")
 		return
 
 	if(!isliving(foundprey) || (ishuman(foundprey) && foundprey.isSynthetic()) || isrobot(foundprey) || issilicon(foundprey))
