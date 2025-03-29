@@ -754,6 +754,7 @@
 	icon_state = "maint_pumpstation"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	outdoors = FALSE
 
 /area/engineering/coreproctunnel
 	name = "\improper Core Processor Atmo Tunnel"
