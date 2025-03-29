@@ -26,3 +26,8 @@
 	display_name = "Martian Miner Coat"
 	path = /obj/item/clothing/suit/storage/vest/martian_miner/unarmored
 	cost = 1
+
+/datum/gear/suit/roles/medical/neo_med_coat
+	display_name = "neo medical coat"
+	path = /obj/item/clothing/suit/neo_medical_coat
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_PARAMEDIC,JOB_MEDICAL_DOCTOR,JOB_BRIG_PHYSICIAN)
