@@ -422,7 +422,7 @@
 	if(prob(15))
 		return "Cut the bad things inside of you out."
 	if(prob(15))
-		return "Your not alone, it's inside you."
+		return "You're not alone, it's inside you."
 	if(prob(15) && target)
 		return "[target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]."
 	if(prob(15))
