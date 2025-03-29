@@ -1075,9 +1075,11 @@
 		if("soulcatcher_transfer")
 			host.soulgem.transfer_selected()
 			return TRUE
+		/* Outpost 21 edit - Delete souls is is too abusable by antags
 		if("soulcatcher_delete")
 			host.soulgem.delete_selected()
 			return TRUE
+		*/
 		if("soulcatcher_transfer_control")
 			host.soulgem.take_control_selected()
 			return TRUE
@@ -1183,6 +1185,7 @@
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, "transfer")
 			return TRUE
+		/* Outpost 21 edit - Delete souls is is too abusable by antags
 		if("soulcatcher_delete_message")
 			var/message = tgui_input_text(host, "Type what the prey sees when they are deleted. \
 				Limit [MAX_MESSAGE_LEN / 4] chars.", "VR Transfer", html_decode(host.soulgem.delete_message), MAX_MESSAGE_LEN / 4, TRUE, prevent_enter = TRUE)
@@ -1190,6 +1193,7 @@
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, "delete")
 			return TRUE
+		*/
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])

@@ -29,6 +29,7 @@ export const SoulOptions = (props: { taken_over: BooleanLike }) => {
             >
               Transfer
             </Button>
+            {/* Outpost 21 edit - Delete souls is is too abusable by antags
             <Button.Confirm
               icon="skull"
               tooltip="Delete the currently selected soul if preferences align or release it."
@@ -39,6 +40,7 @@ export const SoulOptions = (props: { taken_over: BooleanLike }) => {
             >
               Delete
             </Button.Confirm>
+            */}
           </>
         ) : (
           ''

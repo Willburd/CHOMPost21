@@ -169,9 +169,11 @@ const VoreSoulcatcherSection = (props: {
               <Button onClick={() => act('soulcatcher_release_message')}>
                 Release Message
               </Button>
+              {/* Outpost 21 edit - Delete souls is is too abusable by antags
               <Button onClick={() => act('soulcatcher_delete_message')}>
                 Delete Message
               </Button>
+              */}
             </Box>
           </LabeledList.Item>
         </LabeledList>

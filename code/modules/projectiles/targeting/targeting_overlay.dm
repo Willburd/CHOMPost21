@@ -160,6 +160,11 @@
 	if(target.alpha <= 50)
 		to_chat(owner, span_warning("You cannot aim at something you cannot see."))
 		return
+	// Outpost 21 edit begin - Lets not handle ghosts...
+	if(isobserver(target))
+		to_chat(owner, span_warning("You can't bust this ghost!"))
+		return
+	// Outpost 21 edit end
 
 	if(aiming_at)
 		if(aiming_at == target)
