@@ -55,6 +55,10 @@
 		if (ismob(src.loc))
 			var/mob/living/carbon/human/H = src.loc
 			watchowner = H
+			// Outpost 21 edit begin - Deadringer does nothing in bellies
+			if(isbelly(watchowner.loc))
+				return
+			// Outpost 21 edit end
 			if(H.getBruteLoss() > bruteloss_prev || H.getFireLoss() > fireloss_prev)
 				deathprevent()
 				activated = 0
