@@ -677,7 +677,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	// Outpost 21 edit begin - Lighting superfart
-	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit)
+	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit && !M.weakened)
 		M.super_fart()
 		M.super_fart_flame()
 	// Outpost 21 edit end
@@ -882,7 +882,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	// Outpost 21 edit begin - Lighting superfart
-	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit)
+	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit && !M.weakened)
 		M.super_fart()
 		M.super_fart_flame()
 	// Outpost 21 edit end
@@ -958,7 +958,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	// Outpost 21 edit begin - Lighting superfart
-	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit)
+	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit && !M.weakened)
 		M.super_fart()
 		M.super_fart_flame()
 	// Outpost 21 edit end
@@ -1129,7 +1129,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			else
 				cig.light(span_notice("[user] holds the [name] out for [M], and lights the [cig.name]."))
 	// Outpost 21 edit begin - Lighting superfart
-	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit)
+	else if((/mob/living/proc/super_fart in M.verbs) && M.stat != DEAD && user.zone_sel.selecting == BP_GROIN && lit && !M.weakened)
 		M.super_fart()
 		M.super_fart_flame()
 	// Outpost 21 edit end

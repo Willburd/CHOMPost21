@@ -118,12 +118,19 @@
 	C.visible_message(span_danger("\The [C] unleashes a violent and obnoxious blast from their rear[deathmessage]!"),span_danger("You unleash the horrifying power of your rump!"));
 
 /mob/living/proc/super_fart_flame()
-	if(stat != DEAD)
-		var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
-		playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
-		// configure to be less broken! We're only a flamethrower, not a dragon!
-		P.submunition_spread_max = 40
-		P.submunition_spread_min = 25
-		P.submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 3)
-		// launch!
-		P.launch_projectile( get_step(src,reverse_dir[src.dir]), BP_TORSO, src)
+	if(stat == DEAD)
+		return
+	if(ishuman(src))
+		var/mob/living/carbon/human/H = src
+		var/obj/item/organ/internal/butt/Bu = locate() in H.internal_organs
+		if(!Bu || !Bu.can_super_fart())
+			return
+	Weaken(10)
+	var/obj/item/projectile/P = new /obj/item/projectile/bullet/dragon(get_turf(src))
+	playsound(src, "sound/weapons/Flamer.ogg", 50, 1)
+	// configure to be less broken! We're only a flamethrower, not a dragon!
+	P.submunition_spread_max = 40
+	P.submunition_spread_min = 25
+	P.submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 3)
+	// launch!
+	P.launch_projectile( get_step(src,reverse_dir[src.dir]), BP_TORSO, src)
