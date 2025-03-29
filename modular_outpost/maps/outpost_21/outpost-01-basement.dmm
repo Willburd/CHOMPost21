@@ -7047,12 +7047,34 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
+"amW" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 6
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "amX" = (
 /obj/structure/disposalpipe/broken{
 	dir = 8
 	},
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/sci)
+"amY" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 4;
+	initialize_directions = 11
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
+"amZ" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/green{
+	dir = 8
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "ana" = (
 /turf/simulated/floor/reinforced/nitrogen,
 /area/engineering/atmos)
@@ -40132,7 +40154,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bxL" = (
-/obj/machinery/atmospherics/binary/pump/on,
+/obj/machinery/atmospherics/binary/pump/on{
+	target_pressure = 15000
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bxM" = (
@@ -64479,6 +64503,7 @@
 "nsJ" = (
 /obj/random/maintenance/misc,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "nsU" = (
@@ -84982,7 +85007,7 @@ bxi
 bCx
 alX
 wmy
-bdx
+amW
 rHM
 rrp
 byK
@@ -85137,7 +85162,7 @@ aRf
 aMi
 bap
 byw
-byw
+amY
 bxd
 bxK
 chK
@@ -85299,7 +85324,7 @@ bwX
 aQW
 bxb
 bdx
-bwz
+amZ
 bwz
 bxL
 kJn

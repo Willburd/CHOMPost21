@@ -59131,9 +59131,6 @@
 	},
 /turf/simulated/wall,
 /area/security/lobby)
-"qEG" = (
-/turf/simulated/floor/water/acidic/indoor/muriki,
-/area/muriki/grounds/engi)
 "qEQ" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -110849,7 +110846,7 @@ khd
 khd
 khd
 khd
-qEG
+pvY
 khd
 khd
 khd
@@ -111006,7 +111003,7 @@ khd
 khd
 khd
 khd
-qEG
+pvY
 khd
 khd
 khd

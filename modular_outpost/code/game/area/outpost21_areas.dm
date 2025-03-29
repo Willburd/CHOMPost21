@@ -754,6 +754,7 @@
 	icon_state = "maint_pumpstation"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	outdoors = FALSE
 
 /area/engineering/coreproctunnel
 	name = "\improper Core Processor Atmo Tunnel"
@@ -1354,9 +1355,9 @@
 //Other areas in the caves
 /area/mine/explored/muriki/tuggrave
 	name = "\improper Tug Graveyard"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/open/muriki
 	sound_env = TUNNEL_ENCLOSED
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 
 //Moon riiiiver
@@ -1365,7 +1366,7 @@
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/water/acidic/deep/muriki
 	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	music = 'sound/ambience/ruins/ruins3.ogg'
 
 /area/mine/explored/muriki/river/mouth
