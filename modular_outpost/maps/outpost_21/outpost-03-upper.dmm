@@ -189,6 +189,10 @@
 	},
 /turf/simulated/floor/grass,
 /area/library)
+"aaq" = (
+/obj/structure/sign/warning/fire,
+/turf/simulated/wall/plastitanium,
+/area/rnd/research/phoronics/burn)
 "aas" = (
 /obj/machinery/computer/transhuman/designer{
 	dir = 1
@@ -4439,6 +4443,11 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
 	},
+/obj/machinery/sparker{
+	id = "phoronics_burn_ignite";
+	name = "Burn Chamber Igniter";
+	pixel_x = -26
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
 "bZs" = (
@@ -5952,9 +5961,19 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "cMC" = (
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/structure/sign/warning/fire,
-/turf/simulated/wall/plastitanium,
+/turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
 "cMG" = (
 /turf/simulated/wall,
@@ -17110,6 +17129,12 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/machinery/button/ignition{
+	id = "phoronics_burn_ignite";
+	name = "Burn Chamber Ignition";
+	pixel_x = 9;
+	pixel_y = -38
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "iCq" = (
@@ -17967,6 +17992,11 @@
 /obj/machinery/camera/network/research/xenobio{
 	c_tag = "SCI - Phoronics Impact Burn";
 	dir = 8
+	},
+/obj/machinery/sparker{
+	id = "phoronics_burn_ignite";
+	name = "Burn Chamber Igniter";
+	pixel_x = 28
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
@@ -20380,10 +20410,6 @@
 	},
 /turf/simulated/floor,
 /area/muriki/rooftop/civgen)
-"kdU" = (
-/obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/turf/simulated/wall/plastitanium,
-/area/rnd/research/phoronics/burn)
 "kev" = (
 /obj/machinery/telecomms/server/presets/service,
 /turf/simulated/floor/tiled/dark{
@@ -22517,11 +22543,6 @@
 	dir = 1;
 	frequency = 1441;
 	id = "phoronics_burn_in"
-	},
-/obj/machinery/sparker{
-	id = "phoronics_burn_ignite";
-	name = "Burn Chamber Igniter";
-	pixel_x = 28
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
@@ -25184,11 +25205,6 @@
 	dir = 1;
 	frequency = 1441;
 	id_tag = "phoronics_burn_out"
-	},
-/obj/machinery/sparker{
-	id = "phoronics_burn_ignite";
-	name = "Burn Chamber Igniter";
-	pixel_x = -26
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
@@ -33853,10 +33869,6 @@
 	color = "#999999"
 	},
 /area/chapel/main)
-"qUn" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/wall/plastitanium,
-/area/rnd/research/phoronics/burn)
 "qUu" = (
 /obj/machinery/vending/cigarette{
 	dir = 1;
@@ -34693,14 +34705,15 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/color/cee/red{
 	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/research/phoronics/burn)
@@ -39180,9 +39193,19 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "tBh" = (
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/structure/sign/warning/fire,
-/turf/simulated/wall/plastitanium,
+/turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
 "tBl" = (
 /obj/structure/sign/deck/third,
@@ -43077,12 +43100,6 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
-	},
-/obj/machinery/button/ignition{
-	id = "phoronics_burn_ignite";
-	name = "Burn Chamber Ignition";
-	pixel_x = 9;
-	pixel_y = -26
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -95111,7 +95128,7 @@ uTk
 eKt
 kRV
 kRV
-kRV
+aaq
 kRV
 kRV
 kRV
@@ -95271,7 +95288,7 @@ dxm
 dEi
 hws
 ncX
-qUn
+tBh
 rpD
 tBh
 mBF
@@ -95595,7 +95612,7 @@ qZx
 eXM
 iFP
 vsT
-kdU
+cMC
 bOF
 cMC
 liN
@@ -95759,7 +95776,7 @@ jlq
 iCg
 kRV
 kRV
-kRV
+aaq
 qup
 mgQ
 mhJ
