@@ -188,15 +188,12 @@
 	to_chat(src, "<span class='notice'>You have infested [foundprey]!</span>")
 	to_chat(foundprey, "<span class='danger'>You have been infested by \the [src]!</span>")
 
-	var/allowghost = FALSE
 	var/mob/living/simple_mob/vore/alienanimals/chu/CC = null
 	if(!ishuman(foundprey) || !isnull(T.species.greater_form)) // Kinda hacky monkey check
 		// simple conversion
 		CC = new /mob/living/simple_mob/vore/alienanimals/chu(foundprey.loc)
 		if(!isnull(foundprey.key))
 			CC.key = foundprey.key
-		else
-			allowghost = TRUE
 	else
 		// human infesting
 		CC = T.chuify()
@@ -223,15 +220,6 @@
 		// emote a bit
 		sleep(rand(2,6))
 		CC.emote(pick("choke","gasp"))
-
-		// ghost check
-		if(allowghost && isnull(CC.key))
-			// ghost request
-			var/datum/ghost_query/Q = new /datum/ghost_query/chu()
-			var/list/winner = Q.query()
-			if(winner.len)
-				var/mob/observer/dead/D = winner[1]
-				CC.key = D.key
 
 	else if(!isnull(T))
 		// what happened?
