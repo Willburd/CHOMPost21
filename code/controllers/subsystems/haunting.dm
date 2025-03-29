@@ -327,7 +327,7 @@ SUBSYSTEM_DEF(haunting)
 				clear_player_target()
 				log_haunting("SEARCH")
 				return
-			if(prob(15))
+			if(prob(20))
 				reset_world_haunt()
 				log_haunting("RESET")
 				return
