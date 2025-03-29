@@ -1354,7 +1354,7 @@
 //Other areas in the caves
 /area/mine/explored/muriki/tuggrave
 	name = "\improper Tug Graveyard"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/open/muriki
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
