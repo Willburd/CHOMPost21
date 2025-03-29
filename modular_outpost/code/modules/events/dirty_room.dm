@@ -12,6 +12,9 @@
 	for(var/obj/machinery/M in machines)
 		if(istype(M,/obj/machinery/disposal))
 			var/obj/machinery/disposal/D = M
+			var/turf/T = get_turf(D)
+			if(!T || !(T.z in using_map.station_levels)) // Not centcom!
+				continue
 			if(!(D.stat & BROKEN) && D.mode != 3 && D.anchored)
 				disposals.Add(M)
 	if(!disposals.len)
