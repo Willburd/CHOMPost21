@@ -2,7 +2,7 @@ import { useBackend } from 'tgui/backend';
 import { Box, Button, Divider, Section } from 'tgui-core/components';
 
 import { MenuPageChanger } from './MenuParts';
-import { Data } from './types';
+import type { Data } from './types';
 
 export const MenuCheckedOut = (props) => {
   const { act, data } = useBackend<Data>();

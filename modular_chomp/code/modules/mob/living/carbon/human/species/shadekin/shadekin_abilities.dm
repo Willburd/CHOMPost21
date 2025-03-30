@@ -31,6 +31,7 @@
 		to_chat(src, span_notice("Phasing toggled to Gentle. You won't damage lights, but concentrating on that incurs a short stun."))
 		SK.phase_gentle = 1
 
+/* Outpost 21 edit - We don't have a shadekin hangout to go to
 /datum/power/shadekin/dark_tunneling
 	name = "Dark Tunneling (100) (Once)"
 	desc = "Make a passage to the dark."
@@ -100,6 +101,7 @@
 		shadekin_adjust_energy(-(ability_cost - 10)) //Leaving enough energy to actually activate the portal
 		return TRUE
 	return FALSE
+*/
 
 /datum/power/shadekin/dark_respite
 	name = "Dark Respite (Only in Dark)"

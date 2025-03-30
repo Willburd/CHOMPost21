@@ -17,18 +17,18 @@
 	var/locked = FALSE
 
 /obj/machinery/door/vehicle_interior_hatch/inoperable(var/additional_flags = 0)
-    // always works
-    return FALSE
+	// always works
+	return FALSE
 
 /obj/machinery/door/vehicle_interior_hatch/Bumped(atom/AM)
-    // do nothing
+	// do nothing
 
 /obj/machinery/door/vehicle_interior_hatch/bullet_act(var/obj/item/projectile/Proj)
-    // no damage
+	// no damage
 
 /obj/machinery/door/vehicle_interior_hatch/hitby(AM as mob|obj, var/speed=5)
-    // no damage
-    visible_message( span_danger("[src.name] was hit by [AM], with no visible effect."))
+	// no damage
+	visible_message( span_danger("[src.name] was hit by [AM], with no visible effect."))
 
 /obj/machinery/door/vehicle_interior_hatch/MouseDrop_T(var/atom/movable/C, mob/user as mob)
 	attackby( null, user)
@@ -59,30 +59,30 @@
 
 /obj/machinery/door/vehicle_interior_hatch/emag_act(var/remaining_charges)
 	return
-    // no behavior
+	// no behavior
 
 /obj/machinery/door/vehicle_interior_hatch/emp_act(severity)
 	return
-    // immune to
+	// immune to
 
 /obj/machinery/door/vehicle_interior_hatch/take_damage(damage)
 	return
-    // immune to
+	// immune to
 
 /obj/machinery/door/vehicle_interior_hatch/ex_act(severity)
 	return
-    // immune to
+	// immune to
 
 /obj/machinery/door/vehicle_interior_hatch/blob_act()
 	return
-    // even you bob
+	// even you bob
 
 /obj/machinery/door/vehicle_interior_hatch/requiresID()
-    return FALSE
+	return FALSE
 
 /obj/machinery/door/vehicle_interior_hatch/examine(mob/user)
-    src.health = src.maxhealth // force heal, never show status
-    . = ..()
+	src.health = src.maxhealth // force heal, never show status
+	. = ..()
 
 /obj/machinery/door/vehicle_interior_hatch/process()
 	return PROCESS_KILL

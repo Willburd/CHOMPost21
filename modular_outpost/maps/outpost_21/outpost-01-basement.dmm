@@ -77347,7 +77347,7 @@
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
 "viX" = (
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /obj/structure/railing{
 	dir = 4
 	},

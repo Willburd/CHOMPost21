@@ -4602,7 +4602,7 @@
 /area/comms)
 "ccY" = (
 /obj/structure/window/reinforced,
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
@@ -45309,7 +45309,7 @@
 /area/hallway/secondary/chapel_hallway)
 "wCq" = (
 /obj/structure/table/reinforced,
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "wCD" = (

@@ -32,7 +32,7 @@
 	if(!details)
 		return
 
- 	// Outpost 21 edit begin - Show orders on citation
+	// Outpost 21 edit begin - Show orders on citation
 	var/orders
 	var/new_order = tgui_input_list(user, "Select penalty:", "Penalty", list("Notice", "Community Service", "Fine", "IAA", "Littering"))
 	switch(new_order)

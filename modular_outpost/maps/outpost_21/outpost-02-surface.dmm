@@ -19098,7 +19098,7 @@
 /turf/simulated/open/muriki,
 /area/muriki/processor/gland/airmix)
 "dZi" = (
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
@@ -43343,7 +43343,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/woodentable,
-/obj/machinery/chemical_analyzer_pro{
+/obj/machinery/chemical_analyzer{
 	name = "barmaster 40k"
 	},
 /turf/simulated/floor/lino,

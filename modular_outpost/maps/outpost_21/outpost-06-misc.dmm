@@ -4710,7 +4710,7 @@
 	},
 /area/shuttle/skipjack)
 "wM" = (
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /obj/structure/table/alien,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;

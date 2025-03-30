@@ -28,7 +28,7 @@
 			log_unit_test("[Rpath]: Reagents - Reagent ID must be all lowercase.")
 			failed = TRUE
 
-		if(collection_name[R.name])
+		if(collection_name[R.name] && !(R.wiki_flag & WIKI_SPOILER)) // If wiki hidden it's probably intentional!
 			log_unit_test("[Rpath]: Reagents - WARNING - reagent name \"[R.name]\" is not unique, used first in [collection_name[R.name]]. Is this intentional?")
 		collection_name[R.name] = R.type
 
@@ -210,7 +210,7 @@
 			fake_beaker.reagents.maximum_volume = 5000
 		else if(istype(CR, /decl/chemical_reaction/distilling))
 			// distilling
-			var/decl/chemical_reaction/distilling/DR = CR
+			//var/decl/chemical_reaction/distilling/DR = CR
 			var/obj/item/reagent_containers/distilling_tester/D = new() // Outpost 21 edit - Use our distilling tester
 			//D.current_temp = DR.temp_range[1]
 			qdel_swap(fake_beaker, D)

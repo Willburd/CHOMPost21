@@ -4175,7 +4175,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "AZ" = (
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/space)

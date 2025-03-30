@@ -13,7 +13,7 @@ import { MenuHome } from './MenuHome';
 import { MenuPublicDownload } from './MenuPublicDownload';
 import { MenuPublicStation } from './MenuPublicStation';
 import { MenuUpload } from './MenuUpload';
-import { Data } from './types';
+import type { Data } from './types';
 
 export const LibraryPublicComp = (props) => {
   const { act, data } = useBackend<Data>();
@@ -38,7 +38,7 @@ const MenuPage = (props) => {
   const { act, data } = useBackend<Data>();
   const { screenstate } = data;
 
-  let screen_menu = {
+  const screen_menu = {
     home: <MenuHome />,
     inventory: <MenuArchiveInventory />,
     checkedout: <MenuCheckedOut />,

@@ -1,8 +1,8 @@
 /obj/machinery/door/flesh
-    name = "Valve"
-    desc = "Organic structure that opens on its own."
-    icon = 'modular_outpost/icons/turf/stomach.dmi'
-    icon_state = "door1"
+	name = "Valve"
+	desc = "Organic structure that opens on its own."
+	icon = 'modular_outpost/icons/turf/stomach.dmi'
+	icon_state = "door1"
 
 /obj/machinery/door/flesh/Initialize(mapload)
 	// randomize openclose
@@ -12,40 +12,40 @@
 	#endif
 
 /obj/machinery/door/flesh/inoperable(var/additional_flags = 0)
-    // always works
-    return FALSE
+	// always works
+	return FALSE
 
 /obj/machinery/door/flesh/Bumped(atom/AM)
-    // do nothing
+	// do nothing
 
 /obj/machinery/door/flesh/bullet_act(var/obj/item/projectile/Proj)
-    // no damage
-    src.health = src.maxhealth
+	// no damage
+	src.health = src.maxhealth
 
 /obj/machinery/door/flesh/hitby(AM as mob|obj, var/speed=5)
-    // no damage
-    visible_message(span_danger("[src.name] was hit by [AM], with no visible effect."))
+	// no damage
+	visible_message(span_danger("[src.name] was hit by [AM], with no visible effect."))
 
 /obj/machinery/door/flesh/attackby(obj/item/I as obj, mob/user as mob)
-    // no interaction
+	// no interaction
 
 /obj/machinery/door/flesh/emag_act(var/remaining_charges)
-    // no behavior
+	// no behavior
 
 /obj/machinery/door/flesh/emp_act(severity)
-    // immune to
-    src.health = src.maxhealth
+	// immune to
+	src.health = src.maxhealth
 
 /obj/machinery/door/flesh/ex_act(severity)
-    // immune to
-    src.health = src.maxhealth
+	// immune to
+	src.health = src.maxhealth
 
 /obj/machinery/door/flesh/blob_act()
-    // even you bob
-    src.health = src.maxhealth
+	// even you bob
+	src.health = src.maxhealth
 
 /obj/machinery/door/flesh/requiresID()
-    return FALSE
+	return FALSE
 
 /obj/machinery/door/flesh/next_close_wait()
 	return rand(5,60) SECONDS

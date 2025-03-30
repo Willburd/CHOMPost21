@@ -39963,7 +39963,7 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "uJP" = (
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/specialty/redspace)
 "uKd" = (
