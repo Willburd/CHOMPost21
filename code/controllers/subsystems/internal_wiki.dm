@@ -407,6 +407,17 @@ SUBSYSTEM_DEF(internal_wiki)
 		return allergies
 	return null
 
+// Outpost 21 edit begin - Our chem data
+/datum/controller/subsystem/internal_wiki/proc/assemble_sintering(var/sinter)
+	if(sinter == "FLAG_EXPLODE")
+		return "violent detonation"
+	if(sinter == "FLAG_SMOKE")
+		return "toxic fumes"
+	if(sinter == "FLAG_SPIDERS")
+		return "OH GOD WHY!?"
+	return sinter
+// Outpost 21 edit end
+
 /datum/controller/subsystem/internal_wiki/proc/add_icon(var/list/data, var/ic, var/is, var/col)
 	var/load_data = list()
 	load_data["icon"] = ic // dmi path
@@ -1098,7 +1109,7 @@ SUBSYSTEM_DEF(internal_wiki)
 	var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money
 	value = FLOOR(value * 100,1) / 100 // Truncate decimals
 	data["market_price"] = value
-	data["sintering"] = global.reagent_sheets[R.id]
+	data["sintering"] = SSinternal_wiki.assemble_sintering(global.reagent_sheets[R.id]) // Outpost 21 edit - Our chem data
 	data["overdose"] = R.overdose
 	data["flavor"] = R.taste_description
 	data["allergen"] = SSinternal_wiki.assemble_allergens(R.allergen_type)

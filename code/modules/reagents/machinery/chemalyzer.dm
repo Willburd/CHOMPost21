@@ -85,6 +85,18 @@
 		SSinternal_wiki.add_icon(subdata, initial(beaker_path.icon), initial(beaker_path.icon_state), R.color)
 		// Get internal data
 		subdata["description"] = R.description
+		// Outpost 21 edit begin - Our chem data
+		subdata["addictive"] = 0
+		if(R.id in addictives)
+			subdata["addictive"] = (R.id in fast_addictives) ? 2 : 1
+		subdata["industrial_use"] = R.industrial_use
+		subdata["supply_points"] = R.supply_conversion_value ? R.supply_conversion_value : 0
+		var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money
+		value = FLOOR(value * 100,1) / 100 // Truncate decimals
+		subdata["market_price"] = value
+		subdata["sintering"] = SSinternal_wiki.assemble_sintering(global.reagent_sheets[R.id])
+		subdata["overdose"] = R.overdose
+		// Outpost 21 edit end
 		subdata["flavor"] = R.taste_description
 		subdata["allergen"] = SSinternal_wiki.assemble_allergens(R.allergen_type)
 		subdata["beakerAmount"] = found_reagents[ID]
