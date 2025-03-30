@@ -210,7 +210,7 @@
 			fake_beaker.reagents.maximum_volume = 5000
 		else if(istype(CR, /decl/chemical_reaction/distilling))
 			// distilling
-			var/decl/chemical_reaction/distilling/DR = CR
+			//var/decl/chemical_reaction/distilling/DR = CR
 			var/obj/item/reagent_containers/distilling_tester/D = new() // Outpost 21 edit - Use our distilling tester
 			//D.current_temp = DR.temp_range[1]
 			qdel_swap(fake_beaker, D)
