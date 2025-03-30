@@ -24,7 +24,7 @@ export const LibraryMainMenu = (props) => {
   ];
   let menu_entries_misc = [['Print a Bible', 'bible']];
   if (data.emagged) {
-    let arcane_misc = [['Forbidden Lore Vault', 'arcane']];
+    const arcane_misc = [['Forbidden Lore Vault', 'arcane']];
     menu_entries_misc = [...menu_entries_misc, ...arcane_misc];
   }
 
