@@ -770,6 +770,8 @@ var/datum/planet/muriki/planet_muriki = null
 			var/turf/T = get_turf(L)
 			if(L.stat >= DEAD || !T.is_outdoors())
 				continue // They're indoors or dead, so no need to pelt them with ice.
+			if(L.is_incorporeal())
+				continue // ignore shadekin
 
 			// If they have an open umbrella, it'll guard from hail
 			var/obj/item/melee/umbrella/U = L.get_active_hand()
