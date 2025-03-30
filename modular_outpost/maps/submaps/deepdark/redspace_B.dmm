@@ -648,7 +648,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cave_red_B)
 "wQ" = (
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/submap/outpost21/cave_red_B)
 "wS" = (

@@ -2,6 +2,7 @@ export const WikiPages = [
   'Food Recipes',
   'Drink Recipes',
   'Ores',
+  'Chemistry',
   'Materials',
   'Particle Physics',
   'Botany',
