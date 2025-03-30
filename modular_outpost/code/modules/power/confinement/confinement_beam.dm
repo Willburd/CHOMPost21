@@ -36,7 +36,7 @@ top-down energybeam from the highest zlevel above the target, fired downward.
 
 
 Setup map
-  |BI|
+--|BI|--
 CI|CB|CI
 -:|CF|:-
 OL|IL|OL

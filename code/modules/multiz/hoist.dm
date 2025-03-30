@@ -176,7 +176,7 @@
 // Outpost 21 edit begin - allow silicons
 /obj/structure/hoist/attack_robot(mob/living/user)
 	attack_hand(user)
- // Outpost 21 edit end
+// Outpost 21 edit end
 
 /obj/structure/hoist/attack_hand(mob/living/user)
 	if (!(ishuman(user) || issilicon(user))) // Outpost 21 edit - allow silicons
