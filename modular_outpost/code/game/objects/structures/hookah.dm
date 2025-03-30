@@ -169,7 +169,7 @@
 	if(!owner || QDELETED(owner))
 		qdel(src)
 		return TRUE
- 	// Must be in mob's hand
+	// Must be in mob's hand
 	if(!istype(loc,/mob))
 		qdel(src)
 		return TRUE

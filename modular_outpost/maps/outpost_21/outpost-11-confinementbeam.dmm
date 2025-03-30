@@ -1119,16 +1119,10 @@
 	dir = 1
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "du" = (
@@ -3261,6 +3255,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 6
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "ku" = (
@@ -4091,7 +4086,9 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "mG" = (
-/obj/machinery/power/smes/buildable,
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "PTL_Exterior"
+	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -5978,7 +5975,7 @@
 /area/ai)
 "sW" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - PTL";
+	RCon_tag = "PTL - Solar Backup";
 	charge = 2.5e+007;
 	cur_coils = 4;
 	input_attempt = 1;
@@ -7475,6 +7472,12 @@
 "yg" = (
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/shieldwallgen,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -24;
+	listening = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "yh" = (
@@ -9242,6 +9245,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 9
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "DI" = (
@@ -9417,7 +9421,7 @@
 /area/offworld/confinementbeam/exterior)
 "Eu" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - PTL";
+	RCon_tag = "PTL - AI Solar";
 	charge = 2.5e+007;
 	cur_coils = 4;
 	input_attempt = 1;
@@ -9759,6 +9763,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "FF" = (
@@ -10483,7 +10488,9 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "HO" = (
-/obj/machinery/power/smes/buildable,
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "PTL - Interior"
+	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -11178,11 +11185,11 @@
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Tool Storage Central"
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
+/obj/machinery/r_n_d/circuit_imprinter,
+/obj/structure/reagent_dispensers/acid{
+	pixel_y = 32
 	},
+/obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "JD" = (
@@ -12342,6 +12349,7 @@
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Nu" = (
 /obj/effect/floor_decal/corner/orange/full,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
 "Nv" = (
@@ -14656,6 +14664,7 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "Vl" = (
@@ -14927,6 +14936,7 @@
 /obj/structure/sign/warning/lethal_turrets{
 	pixel_y = 32
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Wh" = (
@@ -15187,6 +15197,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
+"WW" = (
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway)
 "WX" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
@@ -46670,7 +46684,7 @@ eK
 CF
 iG
 UK
-ik
+WW
 Ok
 NX
 qP

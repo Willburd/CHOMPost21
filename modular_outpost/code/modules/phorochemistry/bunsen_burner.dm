@@ -27,7 +27,7 @@
 	toggle()
 
 /obj/machinery/bunsen_burner/attack_ai()
-    return
+	return
 
 /obj/machinery/bunsen_burner/attack_hand(mob/user as mob)
 	if(held_container)

@@ -152,7 +152,7 @@
 	// make a smaller explosion inside
 	explosion(entrance_hatch, 0, 0, 6, 8)
 
-    // disable ex_act destruction, would lead to gamebreaking behaviors
+	// disable ex_act destruction, would lead to gamebreaking behaviors
 	switch(severity)
 		if(3)
 			take_damage(10)

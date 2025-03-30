@@ -5221,6 +5221,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "ajK" = (
@@ -9270,7 +9271,6 @@
 /area/muriki/research/isolation_hall)
 "arc" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/closet/l3closet/scientist/double,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -9279,6 +9279,7 @@
 	pixel_y = -26
 	},
 /obj/machinery/light,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/muriki/research/isolation_hall)
 "ard" = (
@@ -9306,7 +9307,6 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "arf" = (
-/obj/structure/closet,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -9317,6 +9317,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "arg" = (
@@ -22525,6 +22526,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aPV" = (
@@ -25099,14 +25101,14 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
-/obj/structure/table/rack/shelf,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/constructionsite/medical)
 "aVf" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 1
 	},
-/obj/structure/table/rack/shelf,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/constructionsite/medical)
 "aVg" = (
@@ -25641,13 +25643,8 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "aWb" = (
-/obj/machinery/light,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
+/obj/effect/floor_decal/corner/blue/full,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWc" = (
@@ -25685,7 +25682,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_medical{
-	name = "Hazop Hardsuit Storage"
+	name = "Reserve Storage"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -26097,8 +26094,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWO" = (
-/obj/effect/floor_decal/corner/blue/full,
 /obj/structure/closet/emcloset,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWP" = (
@@ -26725,6 +26724,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "aYs" = (
@@ -30196,7 +30196,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
 	},
-/obj/effect/landmark/holiday_event_spawn,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "bew" = (
@@ -37332,7 +37332,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/red{
-	dir = 4
+	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
@@ -41333,6 +41333,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bAg" = (
@@ -46938,19 +46939,11 @@
 /turf/simulated/floor/outdoors/grass/heavy/muriki,
 /area/mine/unexplored/muriki/cave/east)
 "czC" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/black/border{
-	dir = 1
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -8;
-	pixel_y = 30
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 7;
-	pixel_y = 30
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
@@ -48559,6 +48552,14 @@
 	},
 /obj/effect/floor_decal/corner/black/border{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
@@ -52473,9 +52474,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/pump{
-	anchored = 1
-	},
+/obj/machinery/pump,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -53059,6 +53058,12 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/cave/sec)
+"ggB" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/black/border,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/bunkerhall)
 "ggJ" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/plating/muriki,
@@ -59712,6 +59717,7 @@
 	dir = 1;
 	pixel_y = -32
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "kqS" = (
@@ -61108,6 +61114,16 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/atmos)
+"lmO" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
 "lnb" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -66861,6 +66877,16 @@
 	ignore_mapgen = 1
 	},
 /area/maintenance/eng)
+"oRK" = (
+/obj/structure/closet/firecloset/full,
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/bunkerhall)
 "oSs" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -71561,13 +71587,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "rAS" = (
-/obj/effect/floor_decal/borderfloor{
+/obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/black/border{
-	dir = 1
-	},
-/obj/machinery/light{
+/obj/effect/floor_decal/corner/black/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
@@ -73152,6 +73175,7 @@
 /obj/effect/floor_decal/milspec/stripe{
 	dir = 8
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "stx" = (
@@ -77323,7 +77347,7 @@
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
 "viX" = (
-/obj/machinery/chemical_analyzer_pro,
+/obj/machinery/chemical_analyzer,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -77541,6 +77565,16 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
+"voE" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 5
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/bunkerhall)
 "vpl" = (
 /obj/machinery/door/airlock/maintenance/rnd{
 	name = "Science Maintenance"
@@ -77870,6 +77904,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
 "vyQ" = (
@@ -81645,6 +81680,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "xQx" = (
@@ -117067,7 +117103,7 @@ bir
 bir
 bir
 bqN
-brI
+btv
 bud
 buR
 bvP
@@ -117391,7 +117427,7 @@ bir
 bir
 bir
 bqN
-brI
+btv
 buf
 buS
 bvQ
@@ -117553,7 +117589,7 @@ bir
 bir
 bir
 bqN
-brI
+btv
 bug
 buT
 bvR
@@ -117877,7 +117913,7 @@ bir
 bir
 bir
 bqN
-bts
+btv
 bui
 buO
 buO
@@ -118039,7 +118075,7 @@ bir
 hqW
 hqW
 bqN
-brI
+btv
 buj
 buS
 bvQ
@@ -121238,8 +121274,8 @@ aTT
 qCK
 aUW
 azy
+aWd
 aWb
-xSM
 aMW
 bAm
 bAn
@@ -121400,7 +121436,7 @@ aTU
 aUu
 xSM
 aVG
-aWd
+aWc
 aWO
 aMW
 bAT
@@ -122703,7 +122739,7 @@ pQH
 lOX
 mbI
 jRN
-jRN
+lmO
 gRH
 baV
 afY
@@ -138884,7 +138920,7 @@ eFJ
 eFJ
 flC
 pmN
-pmN
+lOq
 lOq
 pIS
 jDI
@@ -139046,8 +139082,8 @@ flC
 eFJ
 eFJ
 pmN
-pmN
 lOq
+oRK
 rAS
 xca
 eYJ
@@ -139208,10 +139244,10 @@ iLO
 flC
 eFJ
 pmN
-pmN
 lOq
+voE
 czC
-tKw
+ggB
 eYJ
 fqc
 foZ
@@ -139370,7 +139406,7 @@ vzW
 flC
 flC
 flC
-pmN
+lOq
 lOq
 kmA
 gpB

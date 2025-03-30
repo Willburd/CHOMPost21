@@ -36,7 +36,7 @@ top-down energybeam from the highest zlevel above the target, fired downward.
 
 
 Setup map
-  |BI|
+--|BI|--
 CI|CB|CI
 -:|CF|:-
 OL|IL|OL
@@ -123,18 +123,18 @@ OL|IL|OL
 
 	// Give rewards/notices
 	power_sold_message(""					 ,  0.5,	 15,org_wattage,new_wattage)
-	power_sold_message(""					 ,    1,	 15,org_wattage,new_wattage)
-	power_sold_message(""					 ,    5,     25,org_wattage,new_wattage)
-	power_sold_message(""					 ,	 10,     25,org_wattage,new_wattage)
-	power_sold_message(""					 ,	 15,     25,org_wattage,new_wattage)
-	power_sold_message(""					 ,	 20,     50,org_wattage,new_wattage)
-	power_sold_message(""					 ,	 25,     50,org_wattage,new_wattage)
-	power_sold_message(""					 ,	 50,    100,org_wattage,new_wattage)
-	power_sold_message("What are you doing? ",  100,    200,org_wattage,new_wattage)
-	power_sold_message(""					 ,  200,    200,org_wattage,new_wattage)
-	power_sold_message(""					 ,  300,    300,org_wattage,new_wattage)
-	power_sold_message(""					 ,  400,    400,org_wattage,new_wattage)
-	power_sold_message("Holy shit. "		 ,  500,    500,org_wattage,new_wattage)
+	power_sold_message(""					 ,	1,	 15,org_wattage,new_wattage)
+	power_sold_message(""					 ,	5,	 25,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 10,	 25,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 15,	 25,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 20,	 50,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 25,	 50,org_wattage,new_wattage)
+	power_sold_message(""					 ,	 50,	100,org_wattage,new_wattage)
+	power_sold_message("What are you doing? ",  100,	200,org_wattage,new_wattage)
+	power_sold_message(""					 ,  200,	200,org_wattage,new_wattage)
+	power_sold_message(""					 ,  300,	300,org_wattage,new_wattage)
+	power_sold_message(""					 ,  400,	400,org_wattage,new_wattage)
+	power_sold_message("Holy shit. "		 ,  500,	500,org_wattage,new_wattage)
 	power_sold_message("HOW!? "				 , 1000,   1000,org_wattage,new_wattage)
 	power_sold_message(""				 	 , 2000,   1000,org_wattage,new_wattage)
 	power_sold_message(""				 	 , 3000,   1000,org_wattage,new_wattage)

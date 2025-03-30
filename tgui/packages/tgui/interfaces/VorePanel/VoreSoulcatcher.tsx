@@ -8,7 +8,12 @@ import {
   Stack,
 } from 'tgui-core/components';
 
-import { abilities, bellyData, DropdownEntry, soulcatcherData } from './types';
+import type {
+  abilities,
+  bellyData,
+  DropdownEntry,
+  soulcatcherData,
+} from './types';
 {
   /* import { VoreAbilities } from './VoreAbilities'; Outpost 21 edit - Resizing is massively illegal on outpost */
 }

@@ -162,7 +162,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		if((!M.shattered )||(!M.glass))
 			cached_watcher = WEAKREF(M) //if it sees the mirror, it sees itself, right?
 			return
- 	// lamps
+	// lamps
 	for(var/obj/item/flashlight/F in nearview)
 		if(F.on)
 			cached_watcher = WEAKREF(F)

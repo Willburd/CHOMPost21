@@ -5,7 +5,7 @@
 	var/ready_to_write = TRUE // Abuse prevention
 
 /datum/persistent/library_books/SetFilename()
-    filename = "data/persistent/[lowertext(using_map.name)]-library_books.json"
+	filename = "data/persistent/[lowertext(using_map.name)]-library_books.json"
 
 /datum/persistent/library_books/Initialize()
 	. = ..()

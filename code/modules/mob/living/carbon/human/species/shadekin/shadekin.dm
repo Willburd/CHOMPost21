@@ -115,7 +115,7 @@
 	var/list/shadekin_abilities = list(/datum/power/shadekin/phase_shift,
 									   /datum/power/shadekin/regenerate_other,
 									   /datum/power/shadekin/create_shade,
-									   /datum/power/shadekin/dark_tunneling, //CHOMPEdit Add - Dark Tunneling
+									//   /datum/power/shadekin/dark_tunneling, //CHOMPEdit Add - Dark Tunneling, Outpost 21 edit - Removal
 									   /datum/power/shadekin/dark_respite, //CHOMPEdit Add - Dark Respite
 									   /datum/power/shadekin/dark_maw) //CHOMPEdit Add - Dark Maw
 	var/list/shadekin_ability_datums = list()

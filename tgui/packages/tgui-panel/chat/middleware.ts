@@ -81,7 +81,7 @@ const loadChatFromStorage = async (store: Store<number, Action<string>>) => {
   // Outpost 21 TODO - chat to database, this is a hack job
   /*
   if (messages) {
-    for (let message of messages) {
+    for (const message of messages) {
       if (message.html) {
         message.html = DOMPurify.sanitize(message.html, {
           FORBID_TAGS: blacklisted_tags,
@@ -99,7 +99,7 @@ const loadChatFromStorage = async (store: Store<number, Action<string>>) => {
     });
   }
   if (archivedMessages) {
-    for (let archivedMessage of archivedMessages as message[]) {
+    for (const archivedMessage of archivedMessages as message[]) {
       if (archivedMessage.html) {
         archivedMessage.html = DOMPurify.sanitize(archivedMessage.html, {
           FORBID_TAGS: blacklisted_tags,
@@ -119,7 +119,7 @@ const loadChatFromStorage = async (store: Store<number, Action<string>>) => {
       settings.exportStart = 0;
       settings.exportEnd = 0;
 
-      for (let message of archivedMessages as message[]) {
+      for (const message of archivedMessages as message[]) {
         const currentId = message.roundId || 0;
         if (currentId !== oldId) {
           const round = currentId;
@@ -196,7 +196,7 @@ const loadChatFromDBStorage = async (
         );
 
         if (messages) {
-          for (let message of messages) {
+          for (const message of messages) {
             if (message.html) {
               message.html = DOMPurify.sanitize(message.html, {
                 FORBID_TAGS: blacklisted_tags,
