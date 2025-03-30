@@ -2664,6 +2664,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adN" = (
@@ -5039,7 +5040,7 @@
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
-/obj/structure/closet/emcloset,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahw" = (
@@ -6340,6 +6341,7 @@
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
 "akJ" = (
@@ -10616,6 +10618,7 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "bkB" = (
@@ -13333,6 +13336,9 @@
 "cbU" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
+/obj/effect/floor_decal/corner/white/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "cch" = (
@@ -16773,6 +16779,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "djK" = (
@@ -17489,6 +17496,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 5
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "dwY" = (
@@ -22904,7 +22912,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "flR" = (
-/obj/structure/closet/emcloset,
 /obj/machinery/light_switch{
 	pixel_x = -12;
 	pixel_y = 24
@@ -22916,6 +22923,7 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "flY" = (
@@ -23144,6 +23152,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "fpE" = (
@@ -26528,6 +26537,9 @@
 /obj/item/paper_bin,
 /obj/item/pen/fountain8,
 /obj/effect/floor_decal/milspec/color/red/half{
+	dir = 4
+	},
+/obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -38330,6 +38342,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "jYy" = (
@@ -44176,6 +44189,7 @@
 	dir = 4;
 	pixel_x = 32
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "lOD" = (
@@ -44240,6 +44254,7 @@
 /obj/structure/sign/painting/public{
 	pixel_x = 30
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "lPD" = (
@@ -47354,6 +47369,7 @@
 /obj/machinery/computer/cryopod{
 	pixel_x = -32
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/cybstorage)
 "mNu" = (
@@ -49385,6 +49401,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/lawoffice)
+"nur" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/bridge)
 "nuD" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Miscellaneous Research"
@@ -49600,10 +49622,10 @@
 /obj/item/geiger/wall{
 	pixel_y = 30
 	},
-/obj/machinery/suit_storage_unit/standard_unit,
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/otherlab)
 "nwO" = (
@@ -53198,6 +53220,7 @@
 	pixel_y = -26
 	},
 /obj/effect/floor_decal/corner/purple/full,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "oHR" = (
@@ -57165,6 +57188,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "pXS" = (
@@ -58276,6 +58300,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "qrv" = (
@@ -60337,6 +60362,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "qVm" = (
@@ -60707,10 +60733,10 @@
 	},
 /area/mine/unexplored/muriki/valleyeast)
 "rdE" = (
-/obj/machinery/floodlight,
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "rdQ" = (
@@ -61893,7 +61919,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/machinery/floodlight,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "rxz" = (
@@ -65670,6 +65696,9 @@
 	dir = 8
 	},
 /obj/structure/table/steel,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "sJm" = (
@@ -66435,7 +66464,7 @@
 /obj/structure/sign/warning/acid{
 	pixel_x = -32
 	},
-/obj/structure/closet/emcloset,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "sVH" = (
@@ -81452,6 +81481,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
+"xze" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "xzm" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -82099,6 +82134,15 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
+"xKW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/bridge)
 "xLS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -82977,6 +83021,7 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "yad" = (
@@ -90511,7 +90556,7 @@ igC
 oYY
 qit
 hcT
-jwV
+xze
 yiH
 viW
 gRv
@@ -129158,7 +129203,7 @@ vFF
 kQX
 kno
 xxJ
-xxJ
+bKq
 dRW
 gDv
 ics
@@ -136013,7 +136058,7 @@ jIc
 kTG
 kTG
 gYH
-omT
+xKW
 iZt
 eom
 rxd
@@ -136174,7 +136219,7 @@ gkm
 hxB
 kTG
 rGg
-iZt
+nur
 omT
 iZt
 eom
