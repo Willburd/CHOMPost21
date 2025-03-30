@@ -1119,16 +1119,10 @@
 	dir = 1
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
-/obj/item/stack/material/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "du" = (
@@ -4091,7 +4085,9 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "mG" = (
-/obj/machinery/power/smes/buildable,
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "PTL_Exterior"
+	},
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
@@ -5978,7 +5974,7 @@
 /area/ai)
 "sW" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - PTL";
+	RCon_tag = "PTL - Solar Backup";
 	charge = 2.5e+007;
 	cur_coils = 4;
 	input_attempt = 1;
@@ -9417,7 +9413,7 @@
 /area/offworld/confinementbeam/exterior)
 "Eu" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - PTL";
+	RCon_tag = "PTL - AI Solar";
 	charge = 2.5e+007;
 	cur_coils = 4;
 	input_attempt = 1;
@@ -10483,7 +10479,9 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "HO" = (
-/obj/machinery/power/smes/buildable,
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "PTL - Interior"
+	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},

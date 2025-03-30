@@ -53328,6 +53328,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
 	},
+/obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/plating/external/muriki,
 /area/engineering/engine_room)
 "oKt" = (
@@ -62916,6 +62917,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 10
 	},
+/obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/plating/external/muriki,
 /area/engineering/engine_room)
 "rQE" = (
