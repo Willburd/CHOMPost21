@@ -2,6 +2,7 @@
 	var/spoiler = FALSE // If the recipe appears in the ingame wiki
 
 /datum/particle_smasher_recipe/platinum_lead
+	display_name = MAT_LEAD + " from " + MAT_PLATINUM
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
 	result = /obj/item/stack/material/lead
@@ -15,6 +16,7 @@
 	probability = 50
 
 /datum/particle_smasher_recipe/uranium_lead
+	display_name = MAT_LEAD + " from " + MAT_URANIUM
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
 	result = /obj/item/stack/material/lead
@@ -28,6 +30,7 @@
 	probability = 70
 
 /datum/particle_smasher_recipe/uranium_platinum
+	display_name = MAT_PLATINUM + " from " + MAT_URANIUM
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
 	result = /obj/item/stack/material/platinum
@@ -41,6 +44,7 @@
 	probability = 30
 
 /datum/particle_smasher_recipe/platinum_uranium
+	display_name = MAT_URANIUM + " from " + MAT_PLATINUM
 	reagents = list(REAGENT_ID_SILICON = 10)
 
 	result = /obj/item/stack/material/uranium
@@ -54,6 +58,7 @@
 	probability = 40
 
 /datum/particle_smasher_recipe/iron_copper
+	display_name = MAT_COPPER + " from " + MAT_IRON
 	reagents = list(REAGENT_ID_LITHIUM = 10)
 
 	result = /obj/item/stack/material/copper
@@ -67,6 +72,7 @@
 	probability = 40
 
 /datum/particle_smasher_recipe/copper_gold
+	display_name = MAT_GOLD + " from " + MAT_COPPER
 	reagents = list(REAGENT_ID_TIN = 10)
 
 	result = /obj/item/stack/material/gold
@@ -80,6 +86,7 @@
 	probability = 40
 
 /datum/particle_smasher_recipe/hydrogen_deuterium
+	display_name = MAT_DEUTERIUM + " from " + MAT_GRAPHITE
 	reagents = list(REAGENT_ID_HYDROGEN = 10)
 
 	result = /obj/item/stack/material/deuterium
@@ -93,6 +100,7 @@
 	probability = 20
 
 /datum/particle_smasher_recipe/carbon_titanium
+	display_name = MAT_TITANIUM + " from " + MAT_GRAPHITE
 	reagents = list(REAGENT_ID_SULFUR = 10)
 
 	result = /obj/item/stack/material/titanium
@@ -106,6 +114,7 @@
 	probability = 40
 
 /datum/particle_smasher_recipe/tritium_mhydrogen
+	display_name = MAT_METALHYDROGEN + " from " + MAT_TRITIUM
 	reagents = list(REAGENT_ID_RADIUM = 300)
 
 	result = /obj/item/stack/material/mhydrogen
@@ -119,6 +128,7 @@
 	probability = 20
 
 /datum/particle_smasher_recipe/osmium_platinum
+	display_name = MAT_PLATINUM + " from " + MAT_OSMIUM
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
 	result = /obj/item/stack/material/platinum
@@ -132,6 +142,7 @@
 	probability = 20
 
 /datum/particle_smasher_recipe/aluminium_iron
+	display_name = MAT_IRON + " from " + MAT_ALUMINIUM
 	reagents = list(REAGENT_ID_ALUMINIUM = 50)
 
 	result = /obj/item/stack/material/iron
@@ -145,6 +156,7 @@
 	probability = 30
 
 /datum/particle_smasher_recipe/lead_silver
+	display_name = MAT_SILVER + " from " + MAT_LEAD
 	reagents = list(REAGENT_ID_RADIUM = 50)
 
 	result = /obj/item/stack/material/silver

@@ -355,7 +355,7 @@
 	probability = 10
 
 /datum/particle_smasher_recipe/osmium_lead
-	display_name = MAT_OSMIUM + " from " + MAT_LEAD
+	display_name = MAT_LEAD + " from " + MAT_OSMIUM
 	reagents = list(REAGENT_ID_TUNGSTEN = 10)
 
 	result = /obj/item/stack/material/lead

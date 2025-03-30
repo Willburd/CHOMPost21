@@ -556,6 +556,7 @@
 	name = "\improper Emergency Bunker"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "cyawhicir"
+	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/hallway/muriki/bunkerhall
 	name = "\improper Bunker Access Hallway"
@@ -1852,6 +1853,7 @@
 	icon_state = "security_sub"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/security/mechent
 	name = "\improper Security Mech Entrance"
@@ -1968,6 +1970,7 @@
 	icon_state = "xeno_f_lab"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/xenobiohstore
 	name = "\improper Hazardous Xenobiology Storage"
@@ -3170,6 +3173,7 @@
 
 /area/security/armoury
 	base_turf = /turf/simulated/open
+	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/security/briefing_room
 	base_turf = /turf/simulated/open
@@ -3179,6 +3183,7 @@
 
 /area/security/nuke_storage
 	base_turf = /turf/simulated/open
+	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/security/range
 	base_turf = /turf/simulated/open
