@@ -19,5 +19,5 @@
 		adjustOxyLoss(-1)
 
 
- 	if(!client)
- 		handle_npc(src)
+	if(!client)
+		handle_npc(src)
