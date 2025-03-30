@@ -10,7 +10,7 @@ import {
 
 import { Calibrating } from './Calibrating';
 import { NoGen } from './NoGen';
-import { Data } from './types';
+import type { Data } from './types';
 
 export const ConfinementBeamControl = (props) => {
   const { act, data } = useBackend<Data>();

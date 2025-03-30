@@ -1,7 +1,7 @@
 import { useBackend } from 'tgui/backend';
 import { Section } from 'tgui-core/components';
 
-import { Data } from './types';
+import type { Data } from './types';
 
 export const MenuHome = (props) => {
   const { act, data } = useBackend<Data>();
