@@ -1,8 +1,8 @@
 /obj/machinery/door/flesh
-    name = "Valve"
-    desc = "Organic structure that opens on its own."
-    icon = 'modular_outpost/icons/turf/stomach.dmi'
-    icon_state = "door1"
+	name = "Valve"
+	desc = "Organic structure that opens on its own."
+	icon = 'modular_outpost/icons/turf/stomach.dmi'
+	icon_state = "door1"
 
 /obj/machinery/door/flesh/Initialize(mapload)
 	// randomize openclose
