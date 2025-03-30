@@ -5438,6 +5438,7 @@
 /obj/structure/sign/warning/nosmoking_2{
 	pixel_x = 32
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
 "cvu" = (
@@ -25798,7 +25799,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/medical/recovlaund)
 "mQf" = (
-/obj/structure/closet/emcloset,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
@@ -25806,6 +25806,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/hangar)
 "mQg" = (
@@ -31814,8 +31815,10 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "pSc" = (
@@ -36976,6 +36979,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
+"swT" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/monotile{
+	color = "#999999"
+	},
+/area/chapel/main)
 "sxh" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -38067,11 +38079,11 @@
 /turf/simulated/floor/plating,
 /area/rnd/research/phoronics/burn)
 "sZc" = (
-/obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/red/full,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "sZq" = (
@@ -40687,6 +40699,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/floor_decal/corner/purple/full,
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "ulB" = (
@@ -47676,6 +47689,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "xMX" = (
@@ -101361,7 +101375,7 @@ aEk
 pAq
 unl
 qDe
-hRG
+swT
 gBy
 aBk
 jbi
