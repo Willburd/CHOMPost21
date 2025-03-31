@@ -1,12 +1,12 @@
 export const WikiPages = [
-  'Food Recipes',
-  'Drink Recipes',
-  'Ores',
-  'Chemistry',
-  'Materials',
-  'Particle Physics',
   'Botany',
   'Catalogs',
+  'Chemistry',
+  'Drink Recipes',
+  'Food Recipes',
+  'Materials',
+  'Ores',
+  'Particle Physics',
 ];
 
 export const wikiAds = [
