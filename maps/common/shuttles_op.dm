@@ -629,7 +629,7 @@
 // Other stations in in modular_outpost\maps\submaps\deepdark\deepdark.dm due to POI checks
 /area/shuttle/darktransit
 	name = "\improper Unknown Tram"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT|AREA_BLOCK_PHASE_SHIFT
 	base_turf = /turf/simulated/floor/flesh
 	haunted = TRUE
 
