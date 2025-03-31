@@ -487,8 +487,10 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		if("Arrivals") //Spawn them at a latejoin spawnpoint
 			if(LAZYLEN(latejoin))
 				spawnloc = pick(latejoin)
+			/* Outpost 21 edit - We don't have latejoin tram
 			else if(LAZYLEN(latejoin_tram))
 				spawnloc = pick(latejoin_tram)
+			*/
 			else
 				to_chat(src, "This map has no latejoin spawnpoint.")
 				return
