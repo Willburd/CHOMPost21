@@ -596,6 +596,8 @@ var/datum/planet/muriki/planet_muriki = null
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
+			if(L.is_incorporeal())
+				continue // ignore shadekin
 
 			// If they have an open umbrella, knock it off, this is more then an umbrella
 			if(ishuman(L))
@@ -683,6 +685,8 @@ var/datum/planet/muriki/planet_muriki = null
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
+			if(L.is_incorporeal())
+				continue // ignore shadekin
 
 			// Knock the umbrella off your hands, aint protecting you c:
 			if(ishuman(L))
