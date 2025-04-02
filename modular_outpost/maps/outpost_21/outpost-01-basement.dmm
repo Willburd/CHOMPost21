@@ -39335,7 +39335,8 @@
 	dir = 1;
 	id = "incinpiperoom";
 	name = "Incinerator Access Ventricle";
-	pixel_y = -30
+	pixel_y = -30;
+	req_one_access = list(52,56)
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
@@ -40594,7 +40595,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "incinpiperoom";
 	name = "Incinerator Access Ventricle";
-	pixel_y = 30
+	pixel_y = 30;
+	req_one_access = list(52,56)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
@@ -40990,7 +40992,8 @@
 	dir = 1;
 	id = "incincore";
 	name = "DANGER Incinerator Core";
-	pixel_y = -30
+	pixel_y = -30;
+	req_one_access = list(52,56)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)

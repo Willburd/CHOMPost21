@@ -88,6 +88,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/fore_airlock)
+"ap" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/substations{
+	c_tag = "AI - Ext Access Tube Central"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "as" = (
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -1079,6 +1086,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
+"dj" = (
+/obj/machinery/camera/network/substations{
+	c_tag = "AI - Ext Access Tube"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "dl" = (
 /obj/effect/floor_decal/industrial/caution/yellow{
 	dir = 1
@@ -1262,6 +1275,21 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
+"dO" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway)
 "dP" = (
 /obj/machinery/power/smes/buildable{
 	charge = 5e+006;
@@ -1296,7 +1324,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -2292,6 +2320,13 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_equipment)
+"hb" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Observation Ext";
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "hd" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -2395,6 +2430,9 @@
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
@@ -3164,6 +3202,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
+"kc" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "ke" = (
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	dir = 8
@@ -3412,6 +3456,12 @@
 /obj/structure/transit_tube_pod,
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
+"kN" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Solar Near Central"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "kQ" = (
 /obj/machinery/power/emitter{
 	dir = 8
@@ -4093,7 +4143,7 @@
 	icon_state = "0-8"
 	},
 /obj/item/smes_coil/super_io,
-/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "mH" = (
@@ -4571,22 +4621,9 @@
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
 "oh" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "oj" = (
 /obj/structure/lattice,
@@ -4761,6 +4798,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
+"oQ" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Fore Nacell";
+	dir = 4
+	},
+/turf/space,
 /area/offworld/confinementbeam/exterior)
 "oR" = (
 /obj/structure/grille,
@@ -5017,6 +5061,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
+"pH" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Sec Dock"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "pI" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -5030,7 +5080,7 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -5212,6 +5262,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
+"qp" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Singulo Fore"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "qr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/blue{
 	dir = 5
@@ -5362,6 +5418,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
+"qV" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Fore Shielding";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "qW" = (
 /obj/machinery/washing_machine,
 /obj/machinery/firealarm{
@@ -5386,12 +5449,8 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
-	},
-/obj/machinery/computer/shuttle_control/multi{
-	shuttle_tag = "Engineering Ferry";
-	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -5817,6 +5876,12 @@
 "sr" = (
 /turf/simulated/mineral/floor/vacuum,
 /area/space)
+"ss" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "st" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -5842,6 +5907,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
+"sy" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port AI Nacell Airlock";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "sz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6046,6 +6118,18 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/atmos)
+"tg" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/storage)
 "th" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6087,6 +6171,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
+"tl" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - AI Access Tube Fore";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "to" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -6224,6 +6315,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/dockingbay)
+"tM" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Viewing"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "tO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
@@ -6502,6 +6599,12 @@
 "uP" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
+"uQ" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "uR" = (
 /obj/machinery/light,
 /obj/structure/cable/cyan{
@@ -6741,10 +6844,12 @@
 /turf/simulated/wall/rshull,
 /area/offworld/confinementbeam/station/solar_control)
 "vu" = (
-/obj/machinery/pipedispenser/disposal,
-/obj/effect/floor_decal/industrial/warning/full,
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/storage)
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Fore Coolers";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "vw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -6762,12 +6867,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
 "vy" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_command{
-	req_one_access = list(19,52,56);
-	name = "Emergency Shuttle Recall"
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "vz" = (
 /obj/structure/table/standard,
@@ -7390,6 +7496,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
+"xP" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Engine Aft Shielding"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "xR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -8116,6 +8228,10 @@
 /obj/structure/railing/grey,
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
+"zV" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "zW" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
@@ -8148,6 +8264,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
+"Ac" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Shuttle Landing";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "Ad" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -8374,6 +8497,13 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
+"AM" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/substations{
+	c_tag = "AI - Ext Access Transition"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "AN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -9410,6 +9540,15 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
+"Eo" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 4
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Coolers Central"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "Ep" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -9562,6 +9701,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
+"EU" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Medbay Ext";
+	dir = 1
+	},
+/turf/space,
 /area/offworld/confinementbeam/exterior)
 "EX" = (
 /obj/effect/floor_decal/borderfloor,
@@ -10098,6 +10244,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
+/obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "GE" = (
@@ -11284,6 +11437,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_airlock)
+"JR" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - AI Access Tube Central";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "JS" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -12036,6 +12197,14 @@
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"Mv" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Solar Aft";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "Mw" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -12092,6 +12261,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
+"MI" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/substations{
+	c_tag = "AI - Ext Access Tube Aft"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "MM" = (
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
@@ -12116,6 +12292,15 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
+"MP" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 6
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Coolers Aft"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "MR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -12154,6 +12339,13 @@
 "MU" = (
 /obj/structure/lattice,
 /obj/item/weldingtool,
+/turf/space,
+/area/offworld/confinementbeam/exterior)
+"MW" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Solar Port Aft"
+	},
 /turf/space,
 /area/offworld/confinementbeam/exterior)
 "MY" = (
@@ -12575,6 +12767,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
+"Op" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Engine Shielding";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "Oq" = (
 /turf/simulated/mineral/alt/ignore_cavegen,
 /area/ai_sat/core_external)
@@ -12613,6 +12812,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
+"Ow" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Fore Nacell";
+	dir = 4
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "Ox" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
@@ -12745,6 +12951,16 @@
 /obj/effect/map_helper/airlock/button/int_button,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_observation)
+"OQ" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Aft Coolers";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "OR" = (
 /obj/machinery/door/airlock{
 	name = "AI Download Chamber";
@@ -13135,6 +13351,14 @@
 /area/offworld/confinementbeam/station/atmos)
 "Qi" = (
 /obj/machinery/light/small,
+/obj/machinery/power/apc/super/critical{
+	name = "south bump";
+	pixel_y = -24;
+	nightshift_setting = 3
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "Qj" = (
@@ -13222,6 +13446,12 @@
 "Qz" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
+"QA" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Prep Aft"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "QC" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -13291,6 +13521,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
+"QO" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Shuttle Landing"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "QP" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -13547,6 +13783,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_airlock)
+"RG" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Fore Shielding"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "RH" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -13785,6 +14027,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
+"So" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Solar Far Aft"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "Sp" = (
 /obj/structure/particle_accelerator/fuel_chamber,
 /turf/simulated/floor/airless,
@@ -13856,6 +14104,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
+"SC" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Coolers Fore"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "SD" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/milspec,
@@ -14172,6 +14426,13 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_server_room)
+"TL" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Med Shuttle Landing";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "TM" = (
 /obj/item/clothing/head/welding,
 /turf/simulated/floor/airless,
@@ -14194,6 +14455,14 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
+"TT" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Solar Tracking";
+	dir = 8
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "TU" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -14368,6 +14637,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_observation)
+"Up" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Prep Ext"
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "Uq" = (
 /obj/structure/confinement_beam_generator/gen{
 	dir = 4
@@ -14678,14 +14953,12 @@
 /turf/simulated/floor/solarpanel/airless,
 /area/offworld/confinementbeam/exterior)
 "Vn" = (
-/obj/structure/cable{
-	icon_state = "0-2"
+/obj/structure/lattice,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Starboard Solar Far Central";
+	dir = 1
 	},
-/obj/machinery/power/apc/super/critical{
-	dir = 4;
-	pixel_x = 24
-	},
-/turf/simulated/floor/airless,
+/turf/space,
 /area/offworld/confinementbeam/exterior)
 "Vo" = (
 /obj/effect/floor_decal/corner/orange{
@@ -14801,6 +15074,9 @@
 "VN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/computer/shuttle_control/multi{
+	shuttle_tag = "Engineering Ferry"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "VO" = (
@@ -14863,6 +15139,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
+"VV" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port Medbay Ext Aft";
+	dir = 1
+	},
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "VW" = (
 /obj/structure/railing/grey,
 /obj/machinery/light/small{
@@ -14984,6 +15267,8 @@
 /obj/machinery/light_switch/breaker{
 	pixel_x = 32
 	},
+/obj/machinery/pipedispenser/disposal,
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
 "Wr" = (
@@ -15856,11 +16141,11 @@
 /area/offworld/confinementbeam/station/hallway)
 "Zd" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Ze" = (
@@ -16109,13 +16394,11 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway)
 "ZU" = (
-/obj/structure/cable{
-	icon_state = "1-4"
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "PTL - Port AI Access Tube";
+	dir = 1
 	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/airless,
+/turf/space,
 /area/offworld/confinementbeam/exterior)
 "ZV" = (
 /obj/machinery/field_generator,
@@ -28665,7 +28948,7 @@ Ns
 Ns
 Ns
 Ns
-rW
+dj
 yn
 bH
 lx
@@ -29967,7 +30250,7 @@ rc
 Po
 Po
 yl
-rc
+MI
 rc
 rc
 zD
@@ -31912,7 +32195,7 @@ Po
 Po
 Po
 yl
-rc
+ap
 rc
 zD
 zD
@@ -33103,7 +33386,7 @@ yl
 yl
 yl
 yl
-Po
+So
 yl
 yl
 yl
@@ -33856,7 +34139,7 @@ Po
 Po
 Po
 yl
-rc
+AM
 rc
 zD
 zD
@@ -34393,7 +34676,7 @@ Po
 Po
 Po
 yl
-rc
+MW
 rc
 rc
 Vl
@@ -34407,7 +34690,7 @@ rm
 lE
 rc
 rc
-rc
+Mv
 yl
 Po
 Po
@@ -35805,7 +36088,7 @@ rc
 zD
 zD
 rc
-rc
+JR
 yl
 Po
 Po
@@ -36825,7 +37108,7 @@ yl
 yl
 yl
 yl
-Po
+kN
 Vl
 rm
 lE
@@ -37277,7 +37560,7 @@ Po
 Po
 Po
 Po
-Po
+sy
 yl
 rc
 Po
@@ -37912,7 +38195,7 @@ To
 To
 Po
 Po
-Po
+tl
 yl
 yl
 Po
@@ -38134,7 +38417,7 @@ lE
 rc
 rc
 rc
-rc
+Vn
 yl
 Po
 Po
@@ -38573,7 +38856,7 @@ wY
 KM
 eF
 PJ
-iQ
+vy
 Zd
 Tz
 Ch
@@ -38896,7 +39179,7 @@ DF
 gk
 QT
 Nl
-gk
+wf
 pK
 EX
 PJ
@@ -39862,7 +40145,7 @@ Po
 Po
 Po
 Po
-Po
+ZU
 Tz
 TV
 of
@@ -41011,7 +41294,7 @@ Po
 Po
 Po
 Po
-Po
+oQ
 rH
 TF
 lh
@@ -41021,7 +41304,7 @@ Wl
 lh
 ol
 rH
-Po
+Ow
 Po
 Po
 Po
@@ -41036,8 +41319,8 @@ lp
 Td
 Li
 Li
-Po
-Po
+rc
+rc
 Vl
 tt
 lE
@@ -41646,7 +41929,7 @@ Po
 Po
 Po
 Po
-Po
+TL
 Tz
 Tz
 ed
@@ -41682,6 +41965,7 @@ Lf
 vb
 Li
 Li
+pH
 Po
 Po
 Po
@@ -41689,8 +41973,7 @@ Po
 Po
 Po
 Po
-Po
-rc
+TT
 Po
 Po
 Po
@@ -42626,7 +42909,7 @@ Po
 Po
 Po
 Po
-Po
+VV
 wg
 wg
 wg
@@ -42644,7 +42927,7 @@ Iq
 Iq
 Iq
 Iq
-Po
+QA
 Po
 Po
 Po
@@ -42768,7 +43051,7 @@ yl
 yl
 yl
 yl
-Po
+xP
 Po
 Po
 Po
@@ -42825,7 +43108,7 @@ Po
 Po
 Po
 Po
-Po
+Op
 yl
 yl
 yl
@@ -44084,7 +44367,7 @@ rW
 Po
 Po
 Po
-Po
+EU
 wg
 CD
 sI
@@ -44104,7 +44387,7 @@ tz
 Xl
 Ay
 Iq
-Po
+Up
 Po
 Po
 Po
@@ -44425,7 +44708,7 @@ Us
 Qb
 gD
 tz
-tz
+tg
 Vk
 vT
 HN
@@ -44588,7 +44871,7 @@ gD
 Qk
 tz
 tz
-vu
+tz
 Wb
 rc
 rc
@@ -45541,7 +45824,7 @@ Po
 rW
 rW
 Po
-Po
+Ac
 BG
 kK
 kK
@@ -45563,7 +45846,7 @@ kK
 kK
 kK
 BG
-Po
+QO
 Po
 rW
 rW
@@ -46549,13 +46832,13 @@ Po
 Po
 Po
 Po
-Po
+rW
 rc
 Po
 Po
 Po
 Po
-Po
+rW
 Po
 Po
 Po
@@ -46873,13 +47156,13 @@ yl
 yl
 yl
 Po
-Po
+rW
 rc
 yl
 yl
 yl
 Po
-Po
+rW
 Po
 Po
 Po
@@ -47319,7 +47602,7 @@ pl
 pR
 rW
 rW
-rW
+hb
 UK
 od
 cB
@@ -47349,7 +47632,7 @@ JJ
 HL
 vj
 nu
-rW
+tM
 rW
 OW
 pl
@@ -48302,10 +48585,10 @@ Po
 Kv
 rW
 rW
-rW
-rW
-rW
-Cn
+uQ
+kc
+kc
+dO
 hv
 Cn
 rW
@@ -49596,8 +49879,8 @@ Po
 Po
 Po
 pc
-Vn
-ZU
+rW
+jC
 qu
 rW
 Cs
@@ -50401,7 +50684,7 @@ Po
 Ad
 TP
 Ad
-TP
+OQ
 MZ
 MZ
 MZ
@@ -50423,7 +50706,7 @@ Iv
 Iv
 Iv
 Iv
-Ad
+MP
 TP
 Ad
 TP
@@ -50599,13 +50882,13 @@ yl
 yl
 yl
 yl
+qp
 Po
 Po
 Po
 Po
 Po
-Po
-Po
+rW
 rc
 Po
 Po
@@ -51719,7 +52002,7 @@ Vc
 uw
 kv
 kv
-Xv
+Eo
 Xv
 Xv
 si
@@ -52670,7 +52953,7 @@ Xv
 Xv
 Xv
 si
-Po
+vu
 yD
 yD
 yD
@@ -52690,7 +52973,7 @@ kv
 kv
 kv
 kv
-Po
+SC
 Xv
 Xv
 Xv
@@ -54131,7 +54414,7 @@ rc
 Po
 Po
 Po
-Po
+qV
 Af
 Af
 cq
@@ -54145,7 +54428,7 @@ Rk
 Av
 Af
 Af
-Po
+RG
 Po
 Po
 Po
@@ -55594,11 +55877,11 @@ Po
 Po
 Po
 Po
-rW
+ss
 cP
 rW
 hp
-rW
+zV
 Po
 Po
 Po
@@ -56408,7 +56691,7 @@ rc
 Po
 Po
 Po
-Po
+rc
 Po
 Po
 Po
@@ -56570,7 +56853,7 @@ Po
 Po
 Po
 Po
-Po
+rc
 Po
 Po
 Po
@@ -56728,11 +57011,11 @@ Po
 Po
 Po
 Po
+rc
 Po
 Po
 Po
-Po
-Po
+rc
 Po
 Po
 Po
@@ -56890,7 +57173,7 @@ Po
 Po
 Po
 Po
-Po
+rc
 Po
 Po
 Po
@@ -57052,9 +57335,9 @@ Po
 Po
 Po
 Po
+rc
 Po
-Po
-Po
+rc
 Po
 Po
 Po
@@ -57215,9 +57498,9 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
+rc
+rW
+rc
 Po
 Po
 Po
@@ -57378,8 +57661,8 @@ Po
 Po
 Po
 Po
-Po
-Po
+rc
+rc
 Po
 Po
 Po

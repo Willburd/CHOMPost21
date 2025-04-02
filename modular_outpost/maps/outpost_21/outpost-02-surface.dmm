@@ -11743,7 +11743,7 @@
 /area/muriki/crewstairwell)
 "bBS" = (
 /obj/machinery/computer/security/engineering{
-	network = list("Telecommunications","Engine","Substations","Engineering","Atmosphere Alarms","Fire Alarms","Power Alarms")
+	network = list("Telecommunications","Engine","Substations","Engineering","Atmosphere Alarms","Fire Alarms","Power Alarms","Engineering_outpost")
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -75789,6 +75789,10 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Autosleever Exit Upper";
+	dir = 4
+	},
 /turf/simulated/open,
 /area/maintenance/medbay_aft)
 "vOA" = (
@@ -81745,7 +81749,7 @@
 "xDs" = (
 /obj/machinery/computer/security/engineering{
 	dir = 1;
-	network = list("Telecommunications","Engine","Substations","Engineering","Atmosphere Alarms","Fire Alarms","Power Alarms")
+	network = list("Telecommunications","Engine","Substations","Engineering","Atmosphere Alarms","Fire Alarms","Power Alarms","Engineering_outpost")
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
