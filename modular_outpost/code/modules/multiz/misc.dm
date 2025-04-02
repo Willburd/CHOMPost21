@@ -14,4 +14,4 @@
 		var/turf/TA = GetAbove(T)
 		if(!istype(TA, roof_type))
 			TA.ChangeTurf(roof_type, TRUE, TRUE, TRUE)
-	del(src)
+	return INITIALIZE_HINT_QDEL

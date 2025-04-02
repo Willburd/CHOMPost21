@@ -147,7 +147,7 @@
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
 /turf/space/bluespace/Initialize()
-	..()
+	. = ..()
 	icon = 'icons/turf/space_vr.dmi'
 	icon_state = "bluespace"
 
