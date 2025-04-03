@@ -303,12 +303,12 @@
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
 "aaF" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red,
 /obj/machinery/meter{
 	frequency = 1443;
 	id = "wloop_atm_meter";
 	name = "Waste Loop"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/visible/red,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aaG" = (
@@ -7761,6 +7761,12 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/hallway/hazard)
+"aoi" = (
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	name = "supply pump"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aoj" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -7780,6 +7786,14 @@
 	outdoors = 0
 	},
 /area/mine/unexplored/muriki/cave/sec)
+"aol" = (
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 1;
+	target_pressure = 15000;
+	name = "emergency vacuum pump"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aom" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -7793,6 +7807,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"aon" = (
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	dir = 1;
+	target_pressure = 15000;
+	name = "scrubber pump"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aoo" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -7807,6 +7829,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
+"aop" = (
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aoq" = (
 /obj/machinery/atmospherics/valve/digital/open,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -15577,9 +15605,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aCD" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	name = "Air Out"
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -17064,17 +17091,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"aFI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10
-	},
-/obj/machinery/meter{
-	frequency = 1443;
-	id = "mair_out_meter";
-	name = "Mixed Air Tank Out"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "aFJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -18458,26 +18474,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"aIr" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	name = "Air to Supply"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
-"aIs" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 1;
-	name = "Scrubber to Waste"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
-"aIt" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 1;
-	name = "Supply Dump"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "aIu" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -19409,23 +19405,22 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aKo" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/simple/visible/supply,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/machinery/meter{
+	frequency = 1443;
+	id = "dloop_atm_meter";
+	name = "Distribution Loop"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aKp" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/meter{
-	frequency = 1443;
-	id = "wloop_atm_meter";
-	name = "Waste Loop"
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aKq" = (
@@ -19878,14 +19873,16 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aLm" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/visible/supply{
-	dir = 1
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aLn" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
@@ -103002,8 +102999,8 @@ aCG
 aCG
 azt
 azt
+aoi
 azt
-aIr
 aJn
 mBK
 aLl
@@ -103163,9 +103160,9 @@ aCH
 aCH
 aER
 aFH
-alW
 aFH
-aIs
+aol
+azt
 aJn
 aKp
 aLm
@@ -103324,10 +103321,10 @@ abO
 abx
 aaV
 aES
-ani
-aGF
-aso
-aIt
+aop
+ank
+aon
+anm
 aJn
 aKo
 aLn
@@ -103486,7 +103483,7 @@ abP
 atr
 aqk
 aES
-ani
+ads
 ads
 ads
 aIu
@@ -103648,7 +103645,7 @@ abQ
 aCI
 aaW
 ani
-ani
+ads
 aGG
 aHx
 acT
@@ -103810,7 +103807,7 @@ dUh
 avG
 aaX
 aaF
-aFI
+anm
 att
 aHy
 acT
