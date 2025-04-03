@@ -7622,6 +7622,11 @@
 /obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"anS" = (
+/obj/random/contraband,
+/obj/structure/closet/crate/mimic/guaranteed,
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposalnear)
 "anT" = (
 /obj/machinery/power/thermoregulator,
 /obj/structure/cable/yellow,
@@ -7660,6 +7665,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"anW" = (
+/obj/machinery/atmospherics/pipe/tank/carbon_dioxide{
+	dir = 8;
+	start_pressure = 0
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "anX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -7690,6 +7702,10 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/oldrd)
+"aob" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/red,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "aoc" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -7703,6 +7719,21 @@
 /obj/structure/disposalpipe/up,
 /turf/simulated/floor/plating,
 /area/maintenance/research/closet)
+"aoe" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
 "aof" = (
 /obj/machinery/light,
 /obj/structure/cable/orange{
@@ -40160,15 +40191,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
-"bxM" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8;
-	name = "Co2 to Tank";
-	target_pressure = 5000
-	},
-/obj/effect/floor_decal/industrial/warning/full,
-/turf/simulated/floor/plating,
-/area/engineering/trammaint)
 "bxN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -40215,6 +40237,9 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxR" = (
@@ -40230,6 +40255,14 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxS" = (
@@ -40242,8 +40275,15 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxT" = (
@@ -42228,8 +42268,11 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/medicelevbasement)
 "bCd" = (
-/turf/simulated/floor/plating,
-/area/maintenance/wastedisposalnear)
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/manifold/visible/red,
+/obj/machinery/meter,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "bCe" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/heavyduty,
@@ -48666,10 +48709,12 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
 "dFo" = (
-/obj/structure/closet/crate/mimic/guaranteed,
-/obj/random/contraband,
-/turf/simulated/floor/plating,
-/area/maintenance/wastedisposalnear)
+/obj/machinery/atmospherics/pipe/tank/carbon_dioxide{
+	dir = 4;
+	start_pressure = 0
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "dFz" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -56839,9 +56884,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/orange/bordercorner,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "iFJ" = (
@@ -68976,8 +69021,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "qeG" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor/tiled,
+/obj/machinery/atmospherics/binary/pump/on{
+	target_pressure = 15000;
+	dir = 1;
+	name = "Incinerator waste gas"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "qeI" = (
 /obj/structure/disposalpipe/segment{
@@ -74254,7 +74304,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "tfL" = (
@@ -77469,11 +77521,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -82197,7 +82246,9 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	id = "recycle_in";
-	frequency = 1442
+	frequency = 1442;
+	use_power = 1;
+	volume_rate = 700
 	},
 /obj/effect/map_effect/interval/burnpit,
 /turf/simulated/floor/reinforced/airless{
@@ -86171,7 +86222,7 @@ bpO
 bww
 bwX
 bxN
-bxM
+bxa
 bxJ
 byy
 byG
@@ -86494,7 +86545,7 @@ bpO
 bpO
 uiB
 wOI
-bxN
+aoe
 bwX
 bBs
 byB
@@ -86819,11 +86870,11 @@ bpO
 bww
 mKv
 bxR
-byI
-byI
-byI
-byI
-byI
+aRQ
+aRQ
+byD
+byD
+byD
 bzq
 bzq
 bzq
@@ -86981,8 +87032,8 @@ bpO
 bww
 llu
 bxS
-byI
-bCd
+dFo
+dFo
 dFo
 byI
 byI
@@ -87143,8 +87194,8 @@ bpO
 bww
 nwK
 vlR
-byI
-vIA
+aob
+aob
 bCd
 byI
 wSE
@@ -87305,9 +87356,9 @@ bpN
 bwv
 qZC
 iEY
-byI
-bCd
-bCd
+anW
+anW
+anW
 mhB
 bBF
 bCe
@@ -87635,7 +87686,7 @@ bAo
 bAX
 bBH
 kMh
-byL
+anS
 byK
 byK
 byK
@@ -87797,7 +87848,7 @@ bAp
 bAY
 bDX
 kMh
-byL
+vIA
 byK
 qRs
 xaF
@@ -87959,7 +88010,7 @@ bAq
 bAZ
 kMh
 kMh
-dyE
+kMh
 byK
 byK
 xMf
