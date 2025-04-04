@@ -150,7 +150,7 @@
 
 /datum/job/mining
 	mail_goodies = list(
-		/obj/item/plastique/seismic/locked = 150,
+		/obj/item/plastique/seismic = 150, // Outpost 21 edit - Unlocked seismic charge
 		/obj/item/stack/marker_beacon/ten = 150,
 		/obj/item/pickaxe/diamond = 125,
 		/obj/item/perfect_tele/one_beacon = 125,
