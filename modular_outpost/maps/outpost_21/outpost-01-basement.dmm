@@ -303,12 +303,12 @@
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
 "aaF" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red,
 /obj/machinery/meter{
 	frequency = 1443;
 	id = "wloop_atm_meter";
 	name = "Waste Loop"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/visible/red,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aaG" = (
@@ -7622,6 +7622,11 @@
 /obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"anS" = (
+/obj/random/contraband,
+/obj/structure/closet/crate/mimic/guaranteed,
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposalnear)
 "anT" = (
 /obj/machinery/power/thermoregulator,
 /obj/structure/cable/yellow,
@@ -7660,6 +7665,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"anW" = (
+/obj/machinery/atmospherics/pipe/tank/carbon_dioxide{
+	dir = 8;
+	start_pressure = 0
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "anX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -7690,6 +7702,10 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/oldrd)
+"aob" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/red,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "aoc" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -7703,6 +7719,21 @@
 /obj/structure/disposalpipe/up,
 /turf/simulated/floor/plating,
 /area/maintenance/research/closet)
+"aoe" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
 "aof" = (
 /obj/machinery/light,
 /obj/structure/cable/orange{
@@ -7730,6 +7761,12 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/hallway/hazard)
+"aoi" = (
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	name = "supply pump"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aoj" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -7749,6 +7786,14 @@
 	outdoors = 0
 	},
 /area/mine/unexplored/muriki/cave/sec)
+"aol" = (
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 1;
+	target_pressure = 15000;
+	name = "emergency vacuum pump"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aom" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -7762,6 +7807,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"aon" = (
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	dir = 1;
+	target_pressure = 15000;
+	name = "scrubber pump"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aoo" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -7776,6 +7829,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
+"aop" = (
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aoq" = (
 /obj/machinery/atmospherics/valve/digital/open,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -15546,9 +15605,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aCD" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	name = "Air Out"
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -17033,17 +17091,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"aFI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10
-	},
-/obj/machinery/meter{
-	frequency = 1443;
-	id = "mair_out_meter";
-	name = "Mixed Air Tank Out"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "aFJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -18427,26 +18474,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
-"aIr" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	name = "Air to Supply"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
-"aIs" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 1;
-	name = "Scrubber to Waste"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
-"aIt" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 1;
-	name = "Supply Dump"
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "aIu" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -19378,23 +19405,22 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aKo" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/simple/visible/supply,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
+/obj/machinery/meter{
+	frequency = 1443;
+	id = "dloop_atm_meter";
+	name = "Distribution Loop"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aKp" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/meter{
-	frequency = 1443;
-	id = "wloop_atm_meter";
-	name = "Waste Loop"
-	},
+/obj/machinery/atmospherics/pipe/simple/visible/supply,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aKq" = (
@@ -19847,14 +19873,16 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aLm" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/visible/supply{
-	dir = 1
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aLn" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
+/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
@@ -39335,7 +39363,8 @@
 	dir = 1;
 	id = "incinpiperoom";
 	name = "Incinerator Access Ventricle";
-	pixel_y = -30
+	pixel_y = -30;
+	req_one_access = list(52,56)
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
@@ -40159,15 +40188,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
-"bxM" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8;
-	name = "Co2 to Tank";
-	target_pressure = 5000
-	},
-/obj/effect/floor_decal/industrial/warning/full,
-/turf/simulated/floor/plating,
-/area/engineering/trammaint)
 "bxN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -40214,6 +40234,9 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxR" = (
@@ -40229,6 +40252,14 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxS" = (
@@ -40241,8 +40272,15 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxT" = (
@@ -40594,7 +40632,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "incinpiperoom";
 	name = "Incinerator Access Ventricle";
-	pixel_y = 30
+	pixel_y = 30;
+	req_one_access = list(52,56)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
@@ -40990,7 +41029,8 @@
 	dir = 1;
 	id = "incincore";
 	name = "DANGER Incinerator Core";
-	pixel_y = -30
+	pixel_y = -30;
+	req_one_access = list(52,56)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
@@ -42225,8 +42265,11 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/medicelevbasement)
 "bCd" = (
-/turf/simulated/floor/plating,
-/area/maintenance/wastedisposalnear)
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/manifold/visible/red,
+/obj/machinery/meter,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "bCe" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/heavyduty,
@@ -48663,10 +48706,12 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
 "dFo" = (
-/obj/structure/closet/crate/mimic/guaranteed,
-/obj/random/contraband,
-/turf/simulated/floor/plating,
-/area/maintenance/wastedisposalnear)
+/obj/machinery/atmospherics/pipe/tank/carbon_dioxide{
+	dir = 4;
+	start_pressure = 0
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "dFz" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -56836,9 +56881,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/orange/bordercorner,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "iFJ" = (
@@ -68973,8 +69018,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "qeG" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor/tiled,
+/obj/machinery/atmospherics/binary/pump/on{
+	target_pressure = 15000;
+	dir = 1;
+	name = "Incinerator waste gas"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "qeI" = (
 /obj/structure/disposalpipe/segment{
@@ -74251,7 +74301,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "tfL" = (
@@ -77466,11 +77518,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/orange/border,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -82194,7 +82243,9 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	id = "recycle_in";
-	frequency = 1442
+	frequency = 1442;
+	use_power = 1;
+	volume_rate = 700
 	},
 /obj/effect/map_effect/interval/burnpit,
 /turf/simulated/floor/reinforced/airless{
@@ -86168,7 +86219,7 @@ bpO
 bww
 bwX
 bxN
-bxM
+bxa
 bxJ
 byy
 byG
@@ -86491,7 +86542,7 @@ bpO
 bpO
 uiB
 wOI
-bxN
+aoe
 bwX
 bBs
 byB
@@ -86816,11 +86867,11 @@ bpO
 bww
 mKv
 bxR
-byI
-byI
-byI
-byI
-byI
+aRQ
+aRQ
+byD
+byD
+byD
 bzq
 bzq
 bzq
@@ -86978,8 +87029,8 @@ bpO
 bww
 llu
 bxS
-byI
-bCd
+dFo
+dFo
 dFo
 byI
 byI
@@ -87140,8 +87191,8 @@ bpO
 bww
 nwK
 vlR
-byI
-vIA
+aob
+aob
 bCd
 byI
 wSE
@@ -87302,9 +87353,9 @@ bpN
 bwv
 qZC
 iEY
-byI
-bCd
-bCd
+anW
+anW
+anW
 mhB
 bBF
 bCe
@@ -87632,7 +87683,7 @@ bAo
 bAX
 bBH
 kMh
-byL
+anS
 byK
 byK
 byK
@@ -87794,7 +87845,7 @@ bAp
 bAY
 bDX
 kMh
-byL
+vIA
 byK
 qRs
 xaF
@@ -87956,7 +88007,7 @@ bAq
 bAZ
 kMh
 kMh
-dyE
+kMh
 byK
 byK
 xMf
@@ -102948,8 +102999,8 @@ aCG
 aCG
 azt
 azt
+aoi
 azt
-aIr
 aJn
 mBK
 aLl
@@ -103109,9 +103160,9 @@ aCH
 aCH
 aER
 aFH
-alW
 aFH
-aIs
+aol
+azt
 aJn
 aKp
 aLm
@@ -103270,10 +103321,10 @@ abO
 abx
 aaV
 aES
-ani
-aGF
-aso
-aIt
+aop
+ank
+aon
+anm
 aJn
 aKo
 aLn
@@ -103432,7 +103483,7 @@ abP
 atr
 aqk
 aES
-ani
+ads
 ads
 ads
 aIu
@@ -103594,7 +103645,7 @@ abQ
 aCI
 aaW
 ani
-ani
+ads
 aGG
 aHx
 acT
@@ -103756,7 +103807,7 @@ dUh
 avG
 aaX
 aaF
-aFI
+anm
 att
 aHy
 acT

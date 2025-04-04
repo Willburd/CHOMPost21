@@ -6,12 +6,13 @@
 	invisibility = 101 // nope cant see this
 
 /obj/effect/auto_roof/Initialize(mapload)
+	..()
 	var/turf/T = get_turf(src)
 	T.outdoors = OUTDOORS_NO
-	if (!T || !roof_type)
-		return
+	if(!T || !roof_type)
+		return INITIALIZE_HINT_QDEL
 	if(HasAbove(T.z))
 		var/turf/TA = GetAbove(T)
 		if(!istype(TA, roof_type))
 			TA.ChangeTurf(roof_type, TRUE, TRUE, TRUE)
-	del(src)
+	return INITIALIZE_HINT_QDEL
