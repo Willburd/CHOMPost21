@@ -21,7 +21,7 @@
 			var/z = tgui_input_text( user, "coord Z:", "Z Coord for shot [max_rounds - rounds]")
 			z = text2num(z)
 			if(x && y && z)
-				addtimer(CALLBACK(src, PROC_REF(announce), x, y, z, max_rounds == rounds), cur_delay, TIMER_DELETE_ME)
+				addtimer(CALLBACK(src, PROC_REF(announce), x, y, z, (max_rounds == rounds)), cur_delay, TIMER_DELETE_ME)
 			cur_delay += rand(12 SECONDS, 16 SECONDS)
 			rounds--
 		// End!

@@ -273,7 +273,7 @@ var/datum/planet/muriki/planet_muriki = null
 			muriki_enzyme_affect_mob(L,2,TRUE,FALSE)
 
 	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && L.z in holder.our_planet.expected_z_levels)
+		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors() || isobserver(L))
 				continue // They're indoors, so no need to rain on them.
@@ -407,7 +407,7 @@ var/datum/planet/muriki/planet_muriki = null
 			muriki_enzyme_affect_mob(L,2,FALSE,FALSE)
 
 	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && L.z in holder.our_planet.expected_z_levels)
+		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors() || isobserver(L))
 				continue // They're indoors, so no need to rain on them.
@@ -515,7 +515,7 @@ var/datum/planet/muriki/planet_muriki = null
 			muriki_enzyme_affect_mob(L,4,FALSE,FALSE)
 
 	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && L.z in holder.our_planet.expected_z_levels)
+		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors() || isobserver(L))
 				continue // They're indoors, so no need to rain on them.
@@ -622,7 +622,7 @@ var/datum/planet/muriki/planet_muriki = null
 			muriki_enzyme_affect_mob(L,4,FALSE,FALSE)
 
 	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && L.z in holder.our_planet.expected_z_levels)
+		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors() || isobserver(L))
 				continue // They're indoors, so no need to rain on them.
@@ -723,7 +723,7 @@ var/datum/planet/muriki/planet_muriki = null
 			muriki_enzyme_affect_mob(L,9,FALSE,FALSE)
 
 	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && L.z in holder.our_planet.expected_z_levels)
+		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
 			var/turf/T = get_turf(L)
 			if(!T.is_outdoors() || isobserver(L))
 				continue // They're indoors, so no need to rain on them.
