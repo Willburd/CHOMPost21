@@ -51,7 +51,7 @@
 								/obj/item/holder,
 								/obj/machinery/camera,
 								/obj/belly,
-								/obj/soulgem, // CHOMPAdd
+								// /obj/soulgem, // CHOMPAdd Outpost 21 edit - Disable soulgems
 								/obj/screen,
 								/atom/movable/emissive_blocker,
 								/obj/item/material,

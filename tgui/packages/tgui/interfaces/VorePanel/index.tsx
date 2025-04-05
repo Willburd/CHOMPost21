@@ -6,7 +6,7 @@ import { Button, Icon, NoticeBox, Stack, Tabs } from 'tgui-core/components';
 import type { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VoreInsidePanel';
-import { VoreSoulcatcher } from './VoreSoulcatcher';
+// import { VoreSoulcatcher } from './VoreSoulcatcher'; Outpost 21 edit - Disable soulgems
 import { VoreUserPreferences } from './VoreUserPreferences';
 
 /**
@@ -180,6 +180,7 @@ export const VorePanel = () => {
       vore_words={vore_words}
     />
   );
+  /* Outpost 21 edit - Disable soulgems
   tabs[1] = (
     <VoreSoulcatcher
       our_bellies={our_bellies}
@@ -187,14 +188,16 @@ export const VorePanel = () => {
       abilities={abilities}
     />
   );
-  tabs[2] = (
-    <VoreUserPreferences
-      prefs={prefs}
-      selected={selected}
-      show_pictures={show_pictures}
-      icon_overflow={icon_overflow}
-    />
-  );
+  */
+  tabs[1] = // Outpost 21 edit - Disable soulgems
+    (
+      <VoreUserPreferences
+        prefs={prefs}
+        selected={selected}
+        show_pictures={show_pictures}
+        icon_overflow={icon_overflow}
+      />
+    );
 
   return (
     <Window width={1000} height={660} theme="abstract">
@@ -242,6 +245,7 @@ export const VorePanel = () => {
                 Bellies
                 <Icon name="list" ml={0.5} />
               </Tabs.Tab>
+              {/* Outpost 21 edit - Disable soulgems
               <Tabs.Tab
                 selected={tabIndex === 1}
                 onClick={() => setTabIndex(1)}
@@ -249,9 +253,10 @@ export const VorePanel = () => {
                 Soulcatcher
                 <Icon name="ghost" ml={0.5} />
               </Tabs.Tab>
+              */}
               <Tabs.Tab
-                selected={tabIndex === 2}
-                onClick={() => setTabIndex(2)}
+                selected={tabIndex === 1} // Outpost 21 edit - Disable soulgems
+                onClick={() => setTabIndex(1)} // Outpost 21 edit - Disable soulgems
               >
                 Preferences
                 <Icon name="user-cog" ml={0.5} />

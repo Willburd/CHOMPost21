@@ -538,6 +538,7 @@
 		"soulcatcher_allow_takeover" = host.soulcatcher_pref_flags & SOULCATCHER_ALLOW_TAKEOVER,
 		"soulcatcher_allow_deletion" = (global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION) + global_flag_check(host.soulcatcher_pref_flags, SOULCATCHER_ALLOW_DELETION_INSTANT))
 	)
+	/* Outpost 21 edit - Disable soulgems
 	// Soulcatcher
 	var/list/stored_souls = list()
 	data["soulcatcher"] = null
@@ -563,6 +564,7 @@
 		data["soulcatcher"]["sr_projecting"] = host.soulgem.flag_check(NIF_SC_PROJECTING)
 		data["soulcatcher"]["show_vore_sfx"] = host.soulgem.flag_check(SOULGEM_SHOW_VORE_SFX)
 		data["soulcatcher"]["see_sr_projecting"] = host.soulgem.flag_check(SOULGEM_SEE_SR_SOULS)
+	*/
 	var/nutri_value = 0
 	if(istype(host, /mob/living))
 		var/mob/living/H = host
@@ -1062,6 +1064,7 @@
 					H.adjust_nutrition(-VORE_RESIZE_COST)
 					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
+		/* Outpost 21 edit - Disable soulgems
 		//Soulcatcher functions
 		if("soulcatcher_release_all")
 			host.soulgem.release_mobs()
@@ -1185,6 +1188,7 @@
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, "transfer")
 			return TRUE
+		*/
 		/* Outpost 21 edit - Delete souls is is too abusable by antags
 		if("soulcatcher_delete_message")
 			var/message = tgui_input_text(host, "Type what the prey sees when they are deleted. \
@@ -2692,8 +2696,10 @@
 				tgui_alert_async(user,failure_msg,"Error!")
 				return FALSE
 
+			/* Outpost 21 edit - Disable soulgems
 			if(host.soulgem?.linked_belly == host.vore_selected)
 				host.soulgem.linked_belly = null
+			*/
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]
