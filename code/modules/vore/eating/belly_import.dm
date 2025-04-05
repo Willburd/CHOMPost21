@@ -17,6 +17,7 @@
 		tgui_alert_async(host, "The supplied file contains errors: [e]", "Error!")
 		return FALSE
 
+	/* Outpost 21 edit - Disable soulgems
 	if(panel_choice == IMPORT_SOULCATCHER)
 		if(!islist(input_data["soulcatcher"]))
 			tgui_alert_async(host, "The supplied file was not a valid VRDB >= v0.2 file.", "Error!")
@@ -28,6 +29,7 @@
 			host.updateVRPanel()
 			unsaved_changes = TRUE
 		return return_val
+	*/
 
 	if(islist(input_data["bellies"]))
 		input_data = input_data["bellies"]
