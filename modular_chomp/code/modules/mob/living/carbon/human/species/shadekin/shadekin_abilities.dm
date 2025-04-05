@@ -110,7 +110,7 @@
 	ability_icon_state = "ling_anatomic_panacea"
 
 /mob/living/carbon/human/proc/dark_respite()
-	set name = "Dark Respite (Only in Dark)"
+	set name = "Dark Respite (Only in the darkness)" // Outpost 21 edit - In DARKNESS not THE dark
 	set desc = "Focus yourself on healing any injuries sustained."
 	set category = "Abilities.Shadekin"
 
@@ -119,7 +119,9 @@
 		to_chat(src, span_warning("Only a shadekin can use that!"))
 		return FALSE
 
-	if(!istype(get_area(src), /area/shadekin))
+	// if(!istype(get_area(src), /area/shadekin)) Outpost 21 edit - In DARKNESS not THE dark
+	var/turf/T = get_turf(src)
+	if(T && T.get_lumcount > 0.01)
 		to_chat(src, span_warning("Can only trigger Dark Respite in the Dark!"))
 		return FALSE
 
