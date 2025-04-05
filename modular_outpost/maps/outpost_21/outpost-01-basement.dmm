@@ -4068,22 +4068,6 @@
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
-"ahR" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating,
-/area/maintenance/tug)
 "ahS" = (
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /turf/simulated/floor/plating,
@@ -8524,6 +8508,9 @@
 "apw" = (
 /turf/simulated/wall,
 /area/rnd/hallway/lowmain)
+"apx" = (
+/turf/simulated/floor/wood,
+/area/maintenance/cargo)
 "apy" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/purple{
@@ -8993,6 +8980,12 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
+"aql" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/cargo)
 "aqm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -9009,6 +9002,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"aqp" = (
+/obj/structure/barricade,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/cargo)
 "aqq" = (
 /turf/simulated/wall/r_wall,
 /area/medical/voxlab/lobby)
@@ -9232,6 +9229,10 @@
 /obj/item/storage/box/cups,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"aqM" = (
+/obj/structure/barricade,
+/turf/simulated/floor/wood,
+/area/maintenance/cargo)
 "aqN" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -9476,6 +9477,9 @@
 	name = "reinforced floor"
 	},
 /area/maintenance/incinerator)
+"arq" = (
+/turf/simulated/floor/wood/alt/panel,
+/area/maintenance/sec)
 "arr" = (
 /obj/machinery/portable_atmospherics/canister/empty,
 /turf/simulated/floor/plating,
@@ -9738,6 +9742,12 @@
 /obj/item/trash/cheesie,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/research)
+"arL" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/maintenance/sec)
 "arM" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
@@ -10196,11 +10206,27 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
+"asC" = (
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/maintenance/spine/civ)
+"asD" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/civ/east)
 "asE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
+"asF" = (
+/obj/random/toolbox,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/spine/civ)
 "asG" = (
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp,
@@ -10332,6 +10358,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"asT" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/spine/civ)
 "asU" = (
 /obj/machinery/light{
 	dir = 1
@@ -10371,6 +10401,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
+"asY" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/spine/civ)
 "asZ" = (
 /obj/structure/table/rack/shelf,
 /obj/item/slime_extract/grey,
@@ -11630,6 +11666,13 @@
 /obj/machinery/portable_atmospherics/canister/methane,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/anomaly)
+"ava" = (
+/obj/machinery/door/airlock/maintenance/int{
+	name = "Tug Tunnel"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/tiled/techfloor/muriki,
+/area/maintenance/tug)
 "avb" = (
 /obj/item/stool/padded,
 /turf/simulated/floor/tiled,
@@ -12224,11 +12267,17 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
+"awb" = (
+/turf/simulated/floor/wood/alt,
+/area/maintenance/eng)
 "awc" = (
 /obj/structure/disposalpipe/segment,
 /obj/item/trash/tray,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
+"awd" = (
+/turf/simulated/floor/wood/alt/broken,
+/area/maintenance/eng)
 "awe" = (
 /obj/machinery/camera/network/research_outpost{
 	c_tag = "SCI - Xenoarch Southeast";
@@ -13610,6 +13659,12 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/waste)
+"ayE" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/maintenance/eng)
 "ayF" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -13725,6 +13780,9 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/research/north)
+"ayR" = (
+/turf/simulated/floor/wood/alt,
+/area/maintenance/med)
 "ayS" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/effect/floor_decal/techfloor/orange{
@@ -13812,6 +13870,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/xeno)
+"azb" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/med)
 "azc" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -65172,11 +65236,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/atmos_control)
-"nIx" = (
-/turf/simulated/floor/outdoors/mud/muriki{
-	outdoors = 0
-	},
-/area/maintenance/civ/closet)
 "nJd" = (
 /mob/living/simple_mob/vore/mantrap,
 /turf/simulated/floor/outdoors/grass/forest/muriki,
@@ -72622,7 +72681,6 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/maintenance/common,
-/obj/effect/landmark/step_trap,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/tug)
 "sdm" = (
@@ -105020,12 +105078,12 @@ bhh
 bge
 mKq
 azz
-mKq
-qdO
-qdO
-qdO
-qdO
-qdO
+bge
+bge
+bge
+bge
+bge
+bge
 qdO
 qdO
 qdO
@@ -105183,12 +105241,12 @@ bge
 mKq
 fHP
 bge
-qdO
-qdO
-qdO
-qdO
-qdO
-qdO
+apx
+apx
+xGk
+apx
+bge
+bge
 qdO
 qdO
 qTe
@@ -105345,12 +105403,12 @@ pge
 bge
 azz
 bge
-qdO
-qdO
-qdO
-qdO
-qdO
-qdO
+xGk
+apx
+apx
+apx
+apx
+bge
 qdO
 qdO
 qTe
@@ -105508,11 +105566,11 @@ bge
 frQ
 bge
 bge
-qdO
-qdO
-qdO
-qdO
-qdO
+apx
+apx
+xGk
+xGk
+bge
 qdO
 qdO
 qTe
@@ -105670,11 +105728,11 @@ bge
 fBP
 lbD
 bge
-qdO
-qdO
-qdO
-qdO
-qdO
+aqM
+apx
+apx
+xGk
+bge
 qdO
 qdO
 qTe
@@ -105831,12 +105889,12 @@ vRL
 shy
 bge
 azz
+lAj
+aqM
+aqp
+aql
+apx
 bge
-qdO
-qdO
-qdO
-qdO
-qdO
 qdO
 qdO
 qdO
@@ -105994,11 +106052,11 @@ aRq
 vRL
 cnK
 bge
-qdO
-qdO
-qdO
-qdO
-qdO
+apx
+aqp
+bge
+bge
+bge
 qdO
 qdO
 qTe
@@ -106156,9 +106214,9 @@ bge
 bge
 bge
 bge
-qTe
-qTe
-qTe
+bge
+bge
+bge
 qdO
 qdO
 qdO
@@ -107559,7 +107617,7 @@ nTz
 fDM
 aQt
 aQt
-wuC
+aQt
 aQt
 aQt
 aQt
@@ -107720,10 +107778,10 @@ aQt
 fIY
 aQt
 aQt
-wuC
-wuC
-wuC
-wuC
+bqE
+awd
+bqE
+aQt
 wuC
 wuC
 wuC
@@ -107881,11 +107939,11 @@ wuC
 aQt
 oUN
 aQt
-wuC
-wuC
-wuC
-wuC
-wuC
+bqE
+awd
+awb
+bqE
+aQt
 wuC
 wuC
 bIl
@@ -108042,12 +108100,12 @@ wuC
 wuC
 aQt
 oUN
+xck
+awb
+awb
+bqE
+awb
 aQt
-wuC
-wuC
-wuC
-wuC
-wuC
 wuC
 bIl
 bIl
@@ -108205,11 +108263,11 @@ aQt
 aQt
 ffu
 aQt
-wuC
-wuC
-wuC
-wuC
-wuC
+awb
+awb
+bqE
+awd
+aQt
 wuC
 bIl
 bIl
@@ -108367,11 +108425,11 @@ aQt
 bKh
 fDM
 aQt
-wuC
-wuC
-wuC
-wuC
-bIl
+bqE
+awd
+bqE
+aQt
+aQt
 bIl
 bIl
 bIl
@@ -108529,10 +108587,10 @@ aQt
 oUN
 aQt
 aQt
-wuC
-wuC
-wuC
-wuC
+ayE
+bqE
+bqE
+aQt
 bIl
 bIl
 cPk
@@ -108691,10 +108749,10 @@ aQt
 fIY
 aQt
 aQt
-wuC
-wuC
-wuC
-wuC
+aQt
+aQt
+aQt
+aQt
 bIl
 bIl
 bIl
@@ -111642,7 +111700,7 @@ mKq
 mKq
 mGE
 mGE
-mGE
+blV
 blV
 orV
 blV
@@ -114401,15 +114459,15 @@ bir
 bir
 bHB
 bir
-qKL
-qKL
+bir
+bir
+bhW
+bhW
+tPH
 bhW
 bhW
 bhW
 bhW
-bhW
-qKL
-qKL
 qKL
 nCX
 ykL
@@ -114563,15 +114621,15 @@ bir
 bir
 uUI
 bhW
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
+bir
+bhW
+bhW
+tJT
+tJT
+tJT
+arq
+arq
+bhW
 qKL
 qKL
 qKL
@@ -114725,15 +114783,15 @@ bir
 bhW
 rvs
 bhW
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
+bir
+bhW
+tJT
+arq
+arq
+arq
+tJT
+arq
+bhW
 qKL
 qKL
 qKL
@@ -114887,15 +114945,15 @@ bir
 bhW
 uUI
 bhW
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
+bir
+bhW
+arq
+arq
+arL
+arq
+tJT
+tJT
+bhW
 qKL
 qKL
 qKL
@@ -115049,15 +115107,15 @@ bhW
 bhW
 uUI
 bhW
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
-qKL
+bir
+bhW
+arq
+tJT
+bhW
+bhW
+bhW
+bhW
+bhW
 qKL
 qKL
 qKL
@@ -115212,10 +115270,10 @@ wUz
 mLi
 bhW
 bir
-bir
-qKL
-qKL
-qKL
+bhW
+bhW
+bhW
+bhW
 qKL
 qKL
 qKL
@@ -121343,7 +121401,7 @@ bAm
 aXN
 bcm
 bcm
-ahR
+baR
 aXN
 iNB
 dzL
@@ -121508,7 +121566,7 @@ aXN
 baR
 iNB
 iNB
-rdO
+qlJ
 rdO
 iNB
 bcm
@@ -121995,7 +122053,7 @@ sol
 aXN
 aXN
 eYd
-eYd
+ava
 aXN
 aXN
 bcm
@@ -122153,7 +122211,7 @@ iAF
 aXN
 bcm
 bcm
-ahR
+baR
 iNB
 aXN
 aYP
@@ -125676,7 +125734,7 @@ fwN
 fwN
 fwN
 aXx
-nDM
+gYh
 nDM
 nDM
 nDM
@@ -125836,7 +125894,7 @@ udI
 fwN
 aXx
 aXx
-gYh
+nDM
 nDM
 nDM
 nDM
@@ -125998,13 +126056,13 @@ udI
 udI
 aXx
 aXx
-nDM
-nDM
-nDM
-aXx
-aXx
-aXx
-aXx
+xaP
+aPF
+aPF
+aPF
+aPF
+aPF
+aPF
 aXx
 aXx
 aXx
@@ -126160,14 +126218,14 @@ udI
 udI
 aXx
 aXx
-nDM
-nDM
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
+xaP
+fty
+rIu
+xaP
+xaP
+xaP
+aPF
+aPF
 aXx
 aXx
 iZa
@@ -126323,13 +126381,13 @@ aXx
 aXx
 aXx
 aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
+aPF
+rIu
+xaP
+ayR
+ayR
+xaP
+aPF
 aXx
 aXx
 bDj
@@ -126485,13 +126543,13 @@ aXx
 aXx
 aXx
 aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
+aPF
+xaP
+ayR
+ayR
+iZa
+xaP
+aPF
 aXx
 sDO
 yfH
@@ -126647,13 +126705,13 @@ aXx
 aXx
 aXx
 aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
-aXx
+aPF
+xaP
+azb
+xaP
+ayR
+ayR
+aPF
 aXx
 nDM
 yfH
@@ -126812,7 +126870,7 @@ aPF
 aPF
 aPF
 aPF
-aPF
+fty
 aPF
 aPF
 aPF
@@ -127192,10 +127250,10 @@ axL
 axL
 axL
 axL
-axL
-axL
-axL
-axL
+asC
+asC
+asC
+asC
 axL
 axL
 axL
@@ -127354,8 +127412,8 @@ axL
 axL
 axL
 axL
-axL
-axL
+xST
+xST
 axL
 axL
 axL
@@ -127513,12 +127571,12 @@ axL
 axL
 axL
 axL
-axL
-axL
-axL
-axL
-axL
-axL
+aKP
+aKP
+aKP
+ddq
+aKP
+aKP
 axL
 axL
 axL
@@ -127675,12 +127733,12 @@ axL
 axL
 axL
 axL
-axL
-axL
-axL
-axL
-axL
-axL
+aKP
+xST
+xST
+xST
+xST
+aKP
 axL
 axL
 axL
@@ -127837,12 +127895,12 @@ aKP
 aKP
 aKP
 axL
-axL
-axL
-axL
-axL
-axL
-axL
+aKP
+xST
+uCh
+xST
+xST
+aKP
 axL
 axL
 axL
@@ -127999,12 +128057,12 @@ erU
 pZM
 rfI
 aKP
-axL
-axL
-axL
-axL
-axL
-axL
+aKP
+xST
+asT
+asF
+xST
+aKP
 axL
 axL
 axL
@@ -128161,12 +128219,12 @@ axL
 axL
 nXg
 sFz
-axL
-axL
-axL
-axL
-axL
-axL
+aKP
+uCh
+xST
+xST
+xST
+aKP
 axL
 axL
 axL
@@ -128324,11 +128382,11 @@ soK
 aKP
 ocf
 aKP
-axL
-axL
-axL
-axL
-axL
+xST
+xST
+aKP
+aKP
+aKP
 axL
 axL
 axL
@@ -128486,9 +128544,9 @@ soK
 aKP
 wgb
 aKP
-axL
-axL
-axL
+xST
+asY
+aKP
 axL
 axL
 axL
@@ -128648,7 +128706,7 @@ xST
 aKP
 cEF
 aKP
-aKP
+ddq
 aKP
 aKP
 axL
@@ -130892,9 +130950,9 @@ xST
 xST
 soK
 aKP
-qaG
-qaG
-qaG
+xST
+xST
+xST
 aXU
 aYs
 aYs
@@ -131054,9 +131112,9 @@ aKP
 xST
 xST
 yjk
-nIx
-nIx
-qaG
+xST
+xST
+xST
 aXU
 aYs
 aYs
@@ -131216,9 +131274,9 @@ aKP
 soK
 aKP
 aKP
-qaG
-nIx
-nIx
+xST
+xST
+xST
 aXU
 aYs
 aYs
@@ -131361,7 +131419,7 @@ nXt
 nXt
 aKP
 gNz
-xST
+asY
 xST
 xST
 aKP
@@ -131375,12 +131433,12 @@ aKP
 aKP
 sbA
 aKP
-rJg
-rJg
-rJg
-qaG
-nIx
-nIx
+aKP
+aKP
+aKP
+xST
+xST
+xST
 aXU
 aXU
 aXU
@@ -131540,10 +131598,10 @@ mFa
 doR
 gdq
 rJg
-qaG
-qaG
-qaG
-qaG
+xST
+xST
+xST
+aKP
 qaG
 qaG
 kwv
@@ -131702,10 +131760,10 @@ joN
 wUn
 pAr
 rJg
-qaG
-qaG
-qaG
-qaG
+xST
+xST
+xST
+aKP
 qaG
 qaG
 kwv
@@ -131864,10 +131922,10 @@ ewc
 wsV
 fIc
 rJg
-kwv
-kwv
-qaG
-qaG
+aKP
+yjk
+aKP
+aKP
 qaG
 qaG
 kwv
@@ -132026,8 +132084,8 @@ joN
 wUn
 paw
 rJg
-kwv
-kwv
+lFl
+lFl
 sXB
 qaG
 qaG
@@ -132188,7 +132246,7 @@ joN
 sSe
 ygY
 rJg
-kwv
+lFl
 kwv
 qaG
 qaG
@@ -139830,10 +139888,10 @@ aXy
 ciO
 fec
 aXy
-nqe
-nqe
-nqe
-nqe
+aXy
+aXy
+aXy
+aXy
 nqe
 nqe
 nqe
@@ -139992,10 +140050,10 @@ nuy
 ciO
 aXy
 aXy
-nqe
-nqe
-nqe
-nqe
+ciO
+ciO
+ciO
+aXy
 nqe
 nqe
 nqe
@@ -140152,12 +140210,12 @@ ciO
 aXy
 nuy
 ciO
+pMa
+ciO
+ciO
+ciO
+ciO
 aXy
-nqe
-nqe
-nqe
-nqe
-nqe
 nqe
 nqe
 nqe
@@ -140315,11 +140373,11 @@ ciO
 aXy
 ciO
 aXy
-nqe
-nqe
-nqe
-nqe
-nqe
+ciO
+ciO
+ciO
+ciO
+aXy
 nqe
 nqe
 nqe
@@ -140478,10 +140536,10 @@ ciO
 omk
 nqe
 aXy
-nqe
-nqe
-nqe
-nqe
+asD
+ciO
+ciO
+aXy
 nqe
 nqe
 nqe
@@ -140643,7 +140701,7 @@ aXy
 aXy
 aXy
 aXy
-syy
+aXy
 syy
 syy
 nqe

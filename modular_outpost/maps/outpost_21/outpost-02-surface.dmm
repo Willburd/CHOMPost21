@@ -6038,6 +6038,12 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
+"ajB" = (
+/obj/structure/prop/war/tgmc_missile_rack/banshee,
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/muriki/grounds/sci)
 "ajC" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/sidewalk/muriki{
@@ -6052,12 +6058,33 @@
 /obj/effect/landmark/event_spawn/dronepod_landing,
 /turf/simulated/floor/outdoors/mud/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"ajF" = (
+/obj/structure/atmopost,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/med)
 "ajG" = (
 /obj/machinery/trailblazer/yellow,
 /turf/simulated/floor/outdoors/sidewalk/muriki{
 	icon_state = "slab"
 	},
 /area/muriki/grounds/engi)
+"ajH" = (
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/muriki/grounds/sci)
+"ajI" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/med)
+"ajJ" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/med)
 "ajK" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -6082,6 +6109,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plating/external/muriki,
 /area/engineering/engine_room)
+"ajN" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/sci)
 "ajO" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -6137,6 +6170,12 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/civilian)
+"ajW" = (
+/obj/structure/fence/door,
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/muriki/grounds/sci)
 "ajX" = (
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -6149,6 +6188,12 @@
 /obj/structure/fence/post,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/tramborder)
+"aka" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/muriki/grounds/sci)
 "akd" = (
 /obj/machinery/trailblazer/red,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -18522,7 +18567,7 @@
 /area/muriki/grounds/engi)
 "dMI" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/sci)
 "dMP" = (
 /obj/structure/sign/warning/emergence{
@@ -129702,7 +129747,7 @@ tmZ
 tmZ
 tmZ
 ybq
-ybq
+ajI
 wjF
 ybq
 ybq
@@ -129864,9 +129909,9 @@ tmZ
 tmZ
 tmZ
 tmZ
-ybq
-ybq
-ybq
+ajI
+tmZ
+tmZ
 ybq
 dRW
 dRW
@@ -130026,9 +130071,9 @@ tmZ
 tmZ
 tmZ
 tmZ
-ybq
-ngx
-ybq
+ajJ
+ajF
+tmZ
 ybq
 ybq
 ybq
@@ -130188,16 +130233,16 @@ fQG
 fQG
 fQG
 fQG
-wMK
-wMK
-wMK
-wMK
-wMK
-wMK
+ajN
+fQG
+fQG
+fQG
+fQG
+fQG
 wMK
 xzL
 wMK
-nVv
+wMK
 nVv
 pVL
 yaH
@@ -130349,18 +130394,18 @@ fQG
 fQG
 fQG
 fQG
+ajH
+ajW
+ajH
+fQG
+fQG
+fQG
+fQG
+fQG
+fQG
 wMK
 wMK
 wMK
-wMK
-wMK
-wMK
-wMK
-wMK
-wMK
-jYh
-wMK
-nVv
 lfk
 uqQ
 wAv
@@ -130512,17 +130557,17 @@ fQG
 fQG
 fQG
 wMK
-wMK
-wMK
-wMK
+aka
+jYh
+fQG
 dMI
+fQG
+fQG
+fQG
+fQG
+fQG
+ajB
 wMK
-wMK
-wMK
-wMK
-wMK
-wMK
-nVv
 lfk
 uqQ
 wAv
@@ -130674,16 +130719,16 @@ fQG
 fQG
 fQG
 wMK
-wMK
+aka
 wMK
 jYa
+fQG
 wMK
-wMK
-wMK
+fQG
 wMK
 nXA
-wMK
-wMK
+fQG
+fQG
 wMK
 lfk
 uqQ
@@ -130845,7 +130890,7 @@ hJG
 hJG
 hJG
 wMK
-wMK
+fQG
 wMK
 hXY
 uqQ
@@ -131007,7 +131052,7 @@ vrx
 fJr
 hJG
 wMK
-wMK
+ajB
 wMK
 mCo
 adX
@@ -131168,8 +131213,8 @@ uYl
 lnd
 xSz
 hJG
-wMK
-wMK
+fQG
+fQG
 wMK
 mCo
 ebT
@@ -131330,7 +131375,7 @@ kXm
 cIi
 hoE
 hJG
-wMK
+fQG
 wMK
 wMK
 mCo
@@ -131492,8 +131537,8 @@ dfg
 mRW
 lLd
 hJG
-wMK
-wMK
+fQG
+ajB
 wMK
 pVL
 uqQ
@@ -131654,7 +131699,7 @@ bkd
 hIf
 tzF
 hJG
-wMK
+fQG
 wMK
 wMK
 lfk
@@ -131817,7 +131862,7 @@ maz
 maz
 bVv
 qnV
-wMK
+fQG
 wMK
 lfk
 tQu
@@ -131979,7 +132024,7 @@ kwx
 xDO
 dII
 wMK
-wMK
+ajB
 wMK
 lfk
 uqQ
@@ -132465,8 +132510,8 @@ jZb
 opw
 bVv
 nVv
+ajB
 wMK
-nVv
 mCo
 kiY
 mOT
@@ -132628,7 +132673,7 @@ qXx
 bVv
 nVv
 nVv
-nVv
+wMK
 mCo
 fkQ
 mOT
