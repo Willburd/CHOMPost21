@@ -11,7 +11,7 @@ var/list/ventcrawl_machinery = list(
 	/obj/item/holder,
 	/obj/machinery/camera,
 	/obj/belly,
-	/obj/soulgem,
+	// /obj/soulgem, Outpost 21 edit - Disable soulgems
 	/obj/screen,
 	/atom/movable/emissive_blocker,
 	/obj/item/rig/protean

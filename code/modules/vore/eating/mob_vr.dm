@@ -69,7 +69,7 @@
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
 
-	var/obj/soulgem/soulgem				// Soulcatcher. Needs to be up-ported sometime.
+	// var/obj/soulgem/soulgem				// Soulcatcher. Needs to be up-ported sometime. Outpost 21 edit - Disable soulgems
 
 	var/receive_reagents = FALSE			//Pref for people to avoid others transfering reagents into them.
 	var/give_reagents = FALSE				//Pref for people to avoid others taking reagents from them.

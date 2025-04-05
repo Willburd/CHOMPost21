@@ -234,7 +234,9 @@
 			H.add_chemical_effect(CE_BLOODRESTORE, 5)
 			H.nutrition = max(H.nutrition - 5, 0)
 
-		if(istype(get_area(H), /area/shadekin))
+		//if(istype(get_area(H), /area/shadekin)) Outpost 21 edit - In DARKNESS not THE dark
+		var/turf/T = get_turf(H)
+		if(T && T.get_lumcount() <= 0.01)
 			if(!src.pain_immunity)
 				src.pain_immunity = 1
 			//Very good healing, but only in the Dark.
