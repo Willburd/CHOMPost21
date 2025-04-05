@@ -8,7 +8,7 @@
 /datum/event_container/mundane/New()
 	available_events = list(
 		// Severity level, event name, even type, base weight, role weights, one shot, min weight, max weight. Last two only used if set and non-zero
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Nothing",			/datum/event/nothing,			10),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Nothing",			/datum/event/nothing,			12),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "APC Damage",		/datum/event/apc_damage,		6, 		list(DEPARTMENT_ENGINEERING = 2)	, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Brand Intelligence",/datum/event/brand_intelligence,2, 		list(DEPARTMENT_ENGINEERING = 2)	, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Camera Damage",		/datum/event/camera_damage,		10, 	list(DEPARTMENT_ENGINEERING = 1)	, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
@@ -24,7 +24,8 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Vermin Infestation",/datum/event/infestation, 		8,		list(JOB_JANITOR = 2)				, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			3,		list(DEPARTMENT_ENGINEERING = 2)	, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disposal Damage",	/datum/event/disposal_damage,	1, 		list(DEPARTMENT_ANY = 1)			, FALSE),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Manifest Spirit",	/datum/event/ghost_manifest,	1, 		list(JOB_CHAPLAIN = 2)				, FALSE)
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Manifest Spirit",	/datum/event/ghost_manifest,	1, 		list(JOB_CHAPLAIN = 2)				, FALSE),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Launch Rocket",		/datum/event/launch_rocket,		2)
 	)
 	add_disabled_events(list(
 	))
