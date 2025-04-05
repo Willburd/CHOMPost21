@@ -116,9 +116,11 @@ var/datum/planet/muriki/planet_muriki = null
 		return planet_muriki.current_time
 
 /datum/weather/muriki/proc/wet_plating(var/chance)
-	if(holder.our_planet.planet_floors.len && prob(chance))
-		var/i = rand(3,9)
+	if(holder.our_planet.planet_floors.len)
+		var/i = rand(6,18)
 		while(i-- > 0)
+			if(!prob(chance))
+				continue
 			var/turf/T = pick(holder.our_planet.planet_floors)
 			if((istype(T,/turf/simulated/floor/plating) || istype(T,/turf/simulated/floor/outpost_roof)) && T.is_outdoors())
 				var/turf/simulated/floor/F = T
