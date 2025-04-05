@@ -80,6 +80,8 @@
 	if(istype(A, /mob/living/carbon) || istype(A, /mob/living/simple_mob))
 		// bootleg move_into_gibber
 		var/mob/victim = A
+		if(victim.is_incorporeal())
+			return
 		victim.loc = src
 		src.occupant = victim
 		src.startgibbing( victim)
