@@ -6956,7 +6956,8 @@
 /area/rnd/hallway/xeno)
 "amK" = (
 /obj/machinery/atmospherics/binary/pump/on{
-	dir = 8
+	dir = 8;
+	target_pressure = 300
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -7982,6 +7983,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/xeno)
+"aoA" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	dir = 8;
+	target_pressure = 400
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "aoB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -39414,7 +39422,8 @@
 "bwA" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8;
-	name = "fuel injection"
+	name = "fuel injection";
+	target_pressure = 400
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -63642,7 +63651,7 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4;
 	name = "Carbon Dioxide Dump";
-	target_pressure = 5000
+	target_pressure = 15000
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
@@ -85573,7 +85582,7 @@ bcV
 aQX
 bxb
 bwA
-amK
+aoA
 amK
 bxe
 byD

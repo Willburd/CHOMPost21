@@ -62,6 +62,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Moss",				/datum/event/spacemoss, 				8,		list(JOB_BOTANIST = 2)										, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			1,		list(DEPARTMENT_ENGINEERING = 3)							, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Random Borg Laws",			/datum/event/law_reset,					1, 		list(DEPARTMENT_ENGINEERING = 1, DEPARTMENT_SECURITY = 1)	, TRUE, min_jobs = list(JOB_CYBORG = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bsa Test",					/datum/event/bsa_test_fire, 			1,		list()														, TRUE),
 	)
 	add_disabled_events(list(
 	))

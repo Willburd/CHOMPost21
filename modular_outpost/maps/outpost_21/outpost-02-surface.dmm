@@ -4561,6 +4561,10 @@
 /obj/effect/shuttle_landmark/premade/generic/crash_north,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/engi)
+"agQ" = (
+/obj/effect/landmark/bsa_target,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/yard)
 "agR" = (
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -5510,6 +5514,10 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/quartermaster/foyer)
+"aik" = (
+/obj/effect/landmark/bsa_target,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/muriki/grounds/engi)
 "ail" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/dust/corner{
@@ -5821,6 +5829,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
+"aiT" = (
+/obj/effect/landmark/bsa_target,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/mine/explored/muriki/mountainnorth)
 "aiU" = (
 /turf/simulated/floor/water/acidic/deep/muriki,
 /area/mine/unexplored/muriki/valleyeast)
@@ -105520,7 +105532,7 @@ hAe
 hAe
 hAe
 hAe
-hAe
+aiT
 hAe
 hAe
 khd
@@ -112609,7 +112621,7 @@ ajT
 ajT
 ajT
 ajT
-ajT
+agQ
 ajT
 ajT
 ajT
@@ -114142,7 +114154,7 @@ khd
 khd
 khd
 khd
-khd
+aik
 khd
 khd
 khd
@@ -116878,7 +116890,7 @@ hAe
 hAe
 hAe
 hAe
-hAe
+aiT
 hAe
 hAe
 hAe

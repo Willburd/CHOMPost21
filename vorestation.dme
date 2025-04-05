@@ -5298,6 +5298,7 @@
 #include "modular_outpost\code\modules\events\badbody.dm"
 #include "modular_outpost\code\modules\events\bluespace_shell_station.dm"
 #include "modular_outpost\code\modules\events\borg_error.dm"
+#include "modular_outpost\code\modules\events\bsa_test_fire.dm"
 #include "modular_outpost\code\modules\events\chu_infestation.dm"
 #include "modular_outpost\code\modules\events\clang.dm"
 #include "modular_outpost\code\modules\events\clune_infestation.dm"
