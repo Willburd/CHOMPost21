@@ -23,11 +23,11 @@
 	var/severity_range = 0
 	switch(severity)
 		if(EVENT_LEVEL_MUNDANE)
-			severity_range = 4
+			severity_range = 2
 		if(EVENT_LEVEL_MODERATE)
-			severity_range = 12
+			severity_range = 6
 		if(EVENT_LEVEL_MAJOR)
-			severity_range = 20
+			severity_range = 7
 
 	// break amount of disposals based on severity
 	while(disposals.len && severity_range-- > 0)
