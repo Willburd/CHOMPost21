@@ -236,7 +236,7 @@
 
 		//if(istype(get_area(H), /area/shadekin)) Outpost 21 edit - In DARKNESS not THE dark
 		var/turf/T = get_turf(H)
-		if(T && T.get_lumcount <= 0.01)
+		if(T && T.get_lumcount() <= 0.01)
 			if(!src.pain_immunity)
 				src.pain_immunity = 1
 			//Very good healing, but only in the Dark.

@@ -121,7 +121,7 @@
 
 	// if(!istype(get_area(src), /area/shadekin)) Outpost 21 edit - In DARKNESS not THE dark
 	var/turf/T = get_turf(src)
-	if(T && T.get_lumcount > 0.01)
+	if(T && T.get_lumcount() > 0.01)
 		to_chat(src, span_warning("Can only trigger Dark Respite in the Dark!"))
 		return FALSE
 
