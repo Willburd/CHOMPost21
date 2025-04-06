@@ -82433,12 +82433,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/pump_station)
-"yfX" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "ygr" = (
 /obj/random/outcrop,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -102563,13 +102557,13 @@ acT
 alP
 ang
 diS
-yfX
+aqm
 aoU
 alR
 atn
 auq
 qWO
-yfX
+aqm
 aqj
 ang
 alP
