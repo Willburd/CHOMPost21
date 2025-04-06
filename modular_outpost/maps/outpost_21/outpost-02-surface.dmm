@@ -6062,23 +6062,6 @@
 	icon_state = "slab"
 	},
 /area/muriki/grounds/engi)
-"ajH" = (
-/turf/simulated/floor/outdoors/sidewalk/muriki{
-	icon_state = "slab"
-	},
-/area/muriki/grounds/sci)
-"ajI" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/mud/muriki,
-/area/muriki/grounds/med)
-"ajJ" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
-/area/muriki/grounds/med)
 "ajK" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -6103,12 +6086,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plating/external/muriki,
 /area/engineering/engine_room)
-"ajN" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
-/area/muriki/grounds/sci)
 "ajO" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -6164,12 +6141,6 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/civilian)
-"ajW" = (
-/obj/structure/fence/door,
-/turf/simulated/floor/outdoors/sidewalk/muriki{
-	icon_state = "slab"
-	},
-/area/muriki/grounds/sci)
 "ajX" = (
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -6182,12 +6153,6 @@
 /obj/structure/fence/post,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/tramborder)
-"aka" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/mud/muriki,
-/area/muriki/grounds/sci)
 "akb" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -50108,7 +50073,7 @@
 	dir = 4;
 	c_tag = "EXT - Civilian Bridge Southwest connection"
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/turf/simulated/floor/outdoors/mud/muriki,
 /area/muriki/grounds/civ)
 "nCl" = (
 /obj/structure/cable/green{
@@ -129826,7 +129791,7 @@ tmZ
 tmZ
 tmZ
 ybq
-ajI
+ybq
 wjF
 ybq
 ybq
@@ -129988,7 +129953,7 @@ tmZ
 tmZ
 tmZ
 tmZ
-ajI
+ybq
 tmZ
 tmZ
 ybq
@@ -130150,7 +130115,7 @@ tmZ
 tmZ
 tmZ
 tmZ
-ajJ
+tmZ
 ajF
 tmZ
 ybq
@@ -130312,7 +130277,7 @@ fQG
 fQG
 fQG
 fQG
-ajN
+fQG
 fQG
 fQG
 fQG
@@ -130473,9 +130438,9 @@ fQG
 fQG
 fQG
 fQG
-ajH
-ajW
-ajH
+fQG
+fQG
+fQG
 fQG
 fQG
 fQG
@@ -130636,7 +130601,7 @@ fQG
 fQG
 fQG
 wMK
-aka
+wMK
 jYh
 fQG
 dMI
@@ -130798,7 +130763,7 @@ fQG
 fQG
 fQG
 wMK
-aka
+wMK
 wMK
 jYa
 fQG
