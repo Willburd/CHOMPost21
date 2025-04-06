@@ -2402,7 +2402,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/structure/closet/secure_closet/cargotech,
+/obj/machinery/vending/wardrobe/cargodrobe,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "bba" = (
@@ -29097,7 +29097,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/structure/closet/secure_closet/cargotech,
+/obj/machinery/vending/wardrobe/janidrobe,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "ozy" = (

@@ -17252,6 +17252,9 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 39
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "aFQ" = (
@@ -17662,6 +17665,8 @@
 /area/engineering/atmos)
 "aGG" = (
 /obj/machinery/light,
+/obj/machinery/recharge_station,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aGH" = (
@@ -20567,10 +20572,6 @@
 "aMt" = (
 /obj/effect/floor_decal/rust,
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled,
-/area/engineering/atmos)
-"aMu" = (
-/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aMv" = (
@@ -40276,6 +40277,7 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 5
 	},
+/obj/machinery/vending/wardrobe/atmosdrobe,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "bxP" = (
@@ -65479,10 +65481,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -103709,7 +103707,7 @@ acT
 acT
 aKr
 aLp
-aMu
+aLo
 aNl
 bvB
 aNT
