@@ -6038,12 +6038,6 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
-"ajB" = (
-/obj/structure/prop/war/tgmc_missile_rack/banshee,
-/turf/simulated/floor/outdoors/sidewalk/muriki{
-	icon_state = "slab"
-	},
-/area/muriki/grounds/sci)
 "ajC" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/sidewalk/muriki{
@@ -130166,7 +130160,7 @@ dRW
 dRW
 dRW
 dRW
-nVv
+wMK
 mCo
 vtM
 wAv
@@ -130323,12 +130317,12 @@ fQG
 fQG
 fQG
 fQG
-fQG
+wMK
 wMK
 xzL
 wMK
 wMK
-nVv
+wMK
 pVL
 yaH
 wcX
@@ -130486,9 +130480,9 @@ fQG
 fQG
 fQG
 fQG
-fQG
-fQG
 wMK
+fQG
+fQG
 wMK
 wMK
 lfk
@@ -130651,7 +130645,7 @@ fQG
 fQG
 fQG
 fQG
-ajB
+fQG
 wMK
 lfk
 uqQ
@@ -131137,7 +131131,7 @@ vrx
 fJr
 hJG
 wMK
-ajB
+wMK
 wMK
 mCo
 adX
@@ -131299,7 +131293,7 @@ lnd
 xSz
 hJG
 fQG
-fQG
+wMK
 wMK
 mCo
 ebT
@@ -131623,7 +131617,7 @@ mRW
 lLd
 hJG
 fQG
-ajB
+wMK
 wMK
 pVL
 uqQ
@@ -131947,7 +131941,7 @@ maz
 maz
 bVv
 qnV
-fQG
+wMK
 wMK
 lfk
 tQu
@@ -132109,7 +132103,7 @@ kwx
 xDO
 dII
 wMK
-ajB
+wMK
 wMK
 lfk
 uqQ
@@ -132595,7 +132589,7 @@ jZb
 opw
 bVv
 nVv
-ajB
+wMK
 wMK
 mCo
 kiY

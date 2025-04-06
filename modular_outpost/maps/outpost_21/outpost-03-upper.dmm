@@ -193,6 +193,13 @@
 /obj/structure/sign/warning/fire,
 /turf/simulated/wall/plastitanium,
 /area/rnd/research/phoronics/burn)
+"aar" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/civilian)
 "aas" = (
 /obj/machinery/computer/transhuman/designer{
 	dir = 1
@@ -306,6 +313,30 @@
 	oxygen = 0
 	},
 /area/muriki/processor/gland/co2)
+"aaJ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/fence/end{
+	dir = 8
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/civilian)
+"aaK" = (
+/obj/structure/prop/war/tgmc_missile_rack/napalm,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/civilian)
+"aaL" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/prop/war/tgmc_missile_rack/napalm,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/civilian)
+"aaM" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/civilian)
 "abc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -94708,7 +94739,7 @@ djC
 djC
 djC
 djC
-hPk
+djC
 lkI
 djC
 xQY
@@ -95359,7 +95390,7 @@ fnS
 fnS
 lkI
 tQE
-djC
+hPk
 djC
 djC
 rsI
@@ -97307,22 +97338,22 @@ rBk
 gjb
 dLW
 djC
+aaM
+djC
+aaK
 djC
 djC
+aaL
 djC
 djC
-djC
-tQE
-djC
+aaK
 djC
 djC
+aaK
 djC
 djC
-djC
-djC
-djC
-djC
-tQE
+aaK
+aar
 goV
 sgW
 oio
@@ -97469,7 +97500,7 @@ rBk
 pzi
 tDp
 tDp
-tDp
+aaJ
 tDp
 tDp
 tDp
@@ -97484,7 +97515,7 @@ tDp
 tDp
 tDp
 tDp
-tDp
+aaJ
 cjs
 sZH
 udt
