@@ -3236,7 +3236,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
-/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
 "agw" = (
@@ -64703,10 +64702,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/bunker)
-"ntQ" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
-/area/muriki/research/isolation_hall)
 "nun" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /obj/structure/disposalpipe/segment,
@@ -72743,6 +72738,7 @@
 	icon_state = "xenobio";
 	name = "\improper HAZARDOUS XENOBIOLOGY"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
 /area/rnd/xenobiology/xenobioh)
 "seQ" = (
@@ -139001,7 +138997,7 @@ aak
 aak
 aak
 aak
-ntQ
+aak
 aly
 amP
 aoD
@@ -139163,7 +139159,7 @@ agn
 aah
 aah
 aah
-ntQ
+aak
 alz
 amQ
 aoE
@@ -139325,7 +139321,7 @@ ago
 aah
 ahU
 mMI
-ntQ
+aak
 alA
 amR
 aoF
@@ -139487,7 +139483,7 @@ agp
 aau
 ahV
 aiV
-ntQ
+aak
 aoy
 amS
 aoG
@@ -139649,7 +139645,7 @@ aak
 aak
 aak
 aak
-ntQ
+aak
 aly
 aly
 aoH
@@ -140780,8 +140776,8 @@ adJ
 aew
 afo
 aak
-aaf
-aaf
+aak
+aak
 seM
 uFM
 aiY
@@ -140941,10 +140937,10 @@ abi
 abi
 aex
 afp
-aak
+aaf
 ahg
 ahZ
-aaf
+aak
 ajX
 akk
 alK
@@ -141106,7 +141102,7 @@ afq
 agv
 ahh
 aia
-aaf
+aak
 aMe
 akl
 alL
@@ -141266,9 +141262,9 @@ aJi
 aez
 afr
 aak
-aaf
-aaf
-aaf
+aak
+aak
+aak
 agZ
 akV
 alM
@@ -141430,7 +141426,7 @@ abH
 aak
 jfw
 iLO
-aaf
+dma
 aiZ
 akn
 alN
@@ -141592,7 +141588,7 @@ afs
 aak
 iLO
 iLO
-aaf
+dma
 dma
 dma
 dma

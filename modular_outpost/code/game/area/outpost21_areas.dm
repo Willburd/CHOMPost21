@@ -1977,6 +1977,7 @@
 	icon_state = "research_storage"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/burn
 	name = "\improper Xenobiology Threat Supression"
