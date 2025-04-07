@@ -10,7 +10,7 @@
 
 	var/list/turfs = list()
 	var/list/mist_list = list()
-	var/datum/looping_sound/showering/soundloop
+	var/datum/looping_sound/weather/rain/soundloop
 
 /obj/effect/map_effect/interval/fire_supression/Initialize(mapload,var/area/our_area)
 	soundloop = new(list(src), FALSE)
@@ -42,7 +42,7 @@
 		return
 	var/obj/effect/mist/fire_suppression/S = new(T)
 	mist_list.Add(S)
-	addtimer(CALLBACK(src, PROC_REF(remove_mist), S), rand(70,120), TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(remove_mist), S), rand(15,22) SECONDS, TIMER_DELETE_ME)
 
 /obj/effect/map_effect/interval/fire_supression/proc/remove_mist(var/obj/effect/mist/fire_suppression/mist = null)
 	PRIVATE_PROC(TRUE)
@@ -61,6 +61,12 @@
 	. = ..()
 	create_reagents(500)
 	START_PROCESSING(SSobj, src)
+	// add ground mist
+	if(prob(70))
+		var/datum/effect/effect/system/effect_system = new /datum/effect/effect/system/smoke_spread/mist()
+		effect_system.attach(src)
+		effect_system.set_up(rand(1,2), 0, loc)
+		effect_system.start()
 
 /obj/effect/mist/fire_suppression/Destroy()
 	STOP_PROCESSING(SSobj, src)
