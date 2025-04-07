@@ -896,6 +896,10 @@
 	},
 /turf/simulated/floor/carpet,
 /area/library_office)
+"anL" = (
+/obj/structure/prop/war/tgmc_missile_rack/keeper,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/science)
 "aow" = (
 /obj/structure/table/rack,
 /obj/machinery/camera/network/security{
@@ -8463,6 +8467,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/orange,
 /turf/simulated/floor/plating,
 /area/hydroponics/garden)
 "dXP" = (
@@ -13466,6 +13471,18 @@
 	},
 /turf/simulated/floor/plating/external/muriki,
 /area/muriki/rooftop/disposal)
+"gFQ" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/hydroponics/publicgarden)
 "gFY" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -13951,6 +13968,12 @@
 /obj/item/sticky_pad/random{
 	pixel_x = -8;
 	pixel_y = 9
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "Xenobiolock";
+	name = "Xenobiology Lockdown";
+	pixel_x = 23;
+	pixel_y = 3
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
@@ -16306,6 +16329,12 @@
 "icp" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/substation/civilian)
+"icu" = (
+/obj/structure/fence/door/locked{
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/science)
 "icv" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
@@ -16753,6 +16782,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/djstation)
+"ioo" = (
+/obj/structure/prop/war/tgmc_missile_rack/napalm,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/engineering)
 "iow" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -17286,6 +17319,15 @@
 	},
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/disposal)
+"iEX" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/hydroponics/publicgarden)
 "iEZ" = (
 /obj/machinery/light_switch{
 	dir = 8;
@@ -17521,6 +17563,10 @@
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/structure/cable/orange,
+/obj/structure/cable/orange{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/hydroponics/garden)
@@ -18848,6 +18894,10 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/research/phoronics/bombrange)
+"jry" = (
+/obj/structure/fence/door/locked,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/engineering)
 "jrK" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "sciding";
@@ -21983,6 +22033,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/rust,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/medical)
+"kOx" = (
+/obj/structure/prop/war/tgmc_missile_rack/napalm,
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/medical)
 "kOI" = (
@@ -25513,6 +25567,18 @@
 	outdoors = 0
 	},
 /area/djstation)
+"mJw" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/hydroponics/publicgarden)
 "mJR" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "engdinger";
@@ -28804,6 +28870,19 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/unsimulated/wall/planetary/muriki,
 /area/muriki/skyline/east)
+"osB" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/orange,
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/hydroponics/publicgarden)
 "osI" = (
 /obj/structure/sink/kitchen{
 	dir = 4;
@@ -36088,6 +36167,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
+"sap" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/orange,
+/turf/simulated/floor/plating,
+/area/hydroponics/publicgarden)
 "saB" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -36672,6 +36761,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
+"snQ" = (
+/obj/structure/prop/war/tgmc_missile_rack/fatty,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
 "snR" = (
 /obj/machinery/conveyor{
 	id = "recycler";
@@ -37208,6 +37301,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/medical/evastore)
+"sFb" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/hydroponics/garden)
 "sFc" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -38189,6 +38297,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/table/rack,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_room)
 "taN" = (
@@ -39554,6 +39665,18 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/security)
+"tHp" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/civilian)
 "tHA" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -47964,6 +48087,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice2)
+"xUL" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/fence,
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/science)
 "xUV" = (
 /obj/structure/bed/chair/bay/chair/padded/purple,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -67985,7 +68115,7 @@ fCc
 uDM
 uDM
 uDM
-uDM
+ioo
 uDM
 bat
 dgT
@@ -68309,7 +68439,7 @@ fCc
 uDM
 uDM
 uDM
-uDM
+ioo
 uDM
 uKp
 uDM
@@ -68633,9 +68763,9 @@ fCc
 uDM
 uDM
 uDM
+ioo
 uDM
-uDM
-uKp
+jry
 uDM
 uDM
 vtE
@@ -69117,7 +69247,7 @@ kxr
 kxr
 drT
 uDM
-uDM
+ioo
 uDM
 cWT
 cWT
@@ -69441,7 +69571,7 @@ kxr
 kxr
 kxr
 qEV
-uDM
+ioo
 uDM
 cWT
 cWT
@@ -69765,7 +69895,7 @@ kxr
 kxr
 kxr
 qEV
-uDM
+ioo
 uDM
 uDM
 cWT
@@ -70413,7 +70543,7 @@ kxr
 kxr
 kxr
 qEV
-uDM
+ioo
 uDM
 uDM
 krn
@@ -82632,10 +82762,10 @@ hjo
 goV
 goV
 goV
+snQ
 goV
 goV
-goV
-goV
+snQ
 goV
 goV
 goV
@@ -82956,10 +83086,10 @@ hjo
 goV
 goV
 goV
+snQ
 goV
 goV
-goV
-goV
+snQ
 goV
 goV
 goV
@@ -87253,10 +87383,10 @@ kEQ
 kEQ
 kEQ
 kEQ
+kOx
 kEQ
 kEQ
-kEQ
-kEQ
+kOx
 kEQ
 kEQ
 kEQ
@@ -87336,7 +87466,7 @@ goV
 goV
 goV
 goV
-abS
+jUJ
 goV
 goV
 qPv
@@ -87660,7 +87790,7 @@ goV
 goV
 goV
 goV
-goV
+qeE
 goV
 goV
 qPv
@@ -88214,7 +88344,7 @@ kxr
 kxr
 jaR
 kEQ
-kEQ
+kOx
 kEQ
 kEQ
 hdl
@@ -88538,7 +88668,7 @@ kxr
 kxr
 jaR
 kCy
-kEQ
+kOx
 kEQ
 kEQ
 kEQ
@@ -88862,7 +88992,7 @@ kxr
 kxr
 jaR
 kEQ
-kEQ
+kOx
 kEQ
 kEQ
 kEQ
@@ -89685,7 +89815,7 @@ pVn
 acx
 kEQ
 kEQ
-kEQ
+kOx
 kEQ
 kEQ
 hJv
@@ -90171,7 +90301,7 @@ epO
 yhc
 kEQ
 kEQ
-kEQ
+kOx
 kEQ
 kEQ
 kEQ
@@ -93911,7 +94041,7 @@ rBk
 jaR
 kEQ
 kEQ
-kEQ
+kOx
 kEQ
 kEQ
 eUb
@@ -99398,7 +99528,7 @@ kxr
 kxr
 kxr
 dhy
-srt
+anL
 glh
 tIl
 iZJ
@@ -100046,7 +100176,7 @@ kxr
 kxr
 kxr
 dhy
-srt
+anL
 izp
 qkd
 bAH
@@ -100369,8 +100499,8 @@ kxr
 kxr
 kxr
 kxr
-dhy
-srt
+xUL
+icu
 pwQ
 vfH
 vfH
@@ -103819,9 +103949,9 @@ djC
 djC
 ojQ
 djC
-djC
+aaK
 kbN
-mYx
+osB
 iKk
 pMB
 pXo
@@ -103983,7 +104113,7 @@ djC
 djC
 djC
 lkI
-pNu
+gFQ
 emQ
 rRJ
 dPr
@@ -104143,10 +104273,10 @@ sNO
 djC
 djC
 djC
-djC
+aaK
 lkI
-pNu
-pNu
+mJw
+sap
 qZR
 wWu
 aky
@@ -104308,8 +104438,8 @@ vFz
 djC
 lkI
 djC
-pNu
-pNu
+mJw
+sap
 exs
 aed
 qRL
@@ -104471,8 +104601,8 @@ djC
 lkI
 djC
 djC
-pNu
-pNu
+mJw
+sap
 dPr
 dBu
 mgU
@@ -104634,7 +104764,7 @@ nnd
 tDp
 tDp
 tDp
-pNu
+iEX
 pNu
 pNu
 pNu
@@ -104777,7 +104907,7 @@ icp
 icp
 uIG
 icp
-iKE
+sFb
 iKE
 iKE
 iKE
@@ -104939,7 +105069,7 @@ ttw
 rIa
 tfA
 ucQ
-ucQ
+tHp
 oby
 oby
 vri
@@ -105103,7 +105233,7 @@ ttw
 ttw
 ttw
 ncC
-djC
+aaK
 djC
 vFz
 mTh
