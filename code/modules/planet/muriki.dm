@@ -115,6 +115,22 @@ var/datum/planet/muriki/planet_muriki = null
 	if(planet_muriki)
 		return planet_muriki.current_time
 
+/datum/weather/muriki
+	var/next_lightning_strike = 0 // world.time when lightning will strike.
+	var/min_lightning_cooldown = 0
+	var/max_lightning_cooldown = 0
+
+/datum/weather/muriki/proc/fill_vats(var/global_chance,var/single_chance,var/amount)
+	if(!prob(global_chance))
+		return
+	for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
+		if(V.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(V)
+			if(!T.is_outdoors())
+				continue
+			if(prob(single_chance))
+				V.reagents.add_reagent(REAGENT_ID_WATER,amount)
+
 /datum/weather/muriki/proc/wet_plating(var/chance)
 	if(holder.our_planet.planet_floors.len)
 		var/i = rand(6,18)
@@ -125,6 +141,15 @@ var/datum/planet/muriki/planet_muriki = null
 			if((istype(T,/turf/simulated/floor/plating) || istype(T,/turf/simulated/floor/outpost_roof)) && T.is_outdoors())
 				var/turf/simulated/floor/F = T
 				F.wet_floor(1)
+
+// This gets called to do lightning periodically.
+// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
+/datum/weather/muriki/proc/handle_lightning()
+	if(world.time < next_lightning_strike)
+		return // It's too soon to strike again.
+	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
+	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
+	lightning_strike(T)
 
 //Weather definitions
 /datum/weather_holder/muriki
@@ -192,6 +217,10 @@ var/datum/planet/muriki/planet_muriki = null
 	temp_high = 293.15 // 20c
 	temp_low = 288.15	// 15c
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// CLEAR SKIES
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/clear
 	name = "clear"
 	temp_high = 283.15 // 10c
@@ -239,15 +268,21 @@ var/datum/planet/muriki/planet_muriki = null
 				)
 	. = ..()
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// DEATH FOG
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/acid_overcast
 	name = "fog"
 	icon_state = "acidfog"
 	wind_high = 1
 	wind_low = 0
 	light_modifier = 0.7
-	effect_message = "<span class='notice'>Acidic mist surrounds you.</span>"
+	effect_message = span_notice("Acidic mist surrounds you.")
 	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is misting, all you can see are corrosive clouds."
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+
 	transition_messages = list(
 		"All you can see is fog.",
 		"Fog cuts off your view.",
@@ -256,30 +291,6 @@ var/datum/planet/muriki/planet_muriki = null
 
 	outdoor_sounds_type = /datum/looping_sound/weather/wind/gentle
 	indoor_sounds_type = /datum/looping_sound/weather/wind/gentle/indoors
-
-/datum/weather/muriki/acid_overcast/process_effects()
-	..()
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-
-			// show transition messages
-			if(show_message)
-				to_chat(L, effect_message)
-
-			// digest living things
-			muriki_enzyme_affect_mob(L,2,TRUE,FALSE)
-
-	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors() || isobserver(L))
-				continue // They're indoors, so no need to rain on them.
-
-			// digest dead things
-			muriki_enzyme_affect_mob(L,3,FALSE,FALSE)
 
 /datum/weather/muriki/acid_overcast/New()
 	switch(GLOB.world_time_season)
@@ -313,6 +324,19 @@ var/datum/planet/muriki/planet_muriki = null
 				)
 	. = ..()
 
+/datum/weather/muriki/acid_overcast/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return
+
+		L.water_act(1)
+		muriki_enzyme_affect_mob(L,2,TRUE,FALSE)
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// DEATH RAIN
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/acid_rain
 	name = "rain"
 	icon_state = "rain"
@@ -321,7 +345,8 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
-	effect_message = "<span class='notice'>Acidic rain falls on you.</span>"
+	effect_message = span_notice("Acidic rain falls on you.")
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
 
 	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is raining."
@@ -369,53 +394,39 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_rain/process_effects()
 	..()
-
-	// Make plating wet and slippery
 	wet_plating(30)
+	fill_vats(10,40,8)
 
-	// Fill chem vats
-	if(prob(10))
-		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
-			if(V.z in holder.our_planet.expected_z_levels)
-				var/turf/T = get_turf(V)
-				if(!T.is_outdoors())
-					continue
-				if(prob(40))
-					V.reagents.add_reagent(REAGENT_ID_WATER,8)
+/datum/weather/muriki/acid_rain/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
 
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-
-			// If they have an open umbrella, it'll guard from rain
+		// If they have an open umbrella, it'll guard from rain
+		if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
 			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
-
-			if(istype(U) && U.open)
+			if(U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
-				continue
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
+				return
+		else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+			var/obj/item/melee/umbrella/U = L.get_inactive_hand()
+			if(U.open)
+				if(show_message)
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
+				return
 
-			// show transition messages
-			if(show_message)
-				to_chat(L, effect_message)
+		if(show_message)
+			to_chat(L, effect_message)
 
-			// digest living things
-			muriki_enzyme_affect_mob(L,2,FALSE,FALSE)
-
-	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors() || isobserver(L))
-				continue // They're indoors, so no need to rain on them.
-
-			// digest dead things
-			muriki_enzyme_affect_mob(L,3,FALSE,FALSE)
+		L.water_act(2)
+		muriki_enzyme_affect_mob(L,2,FALSE,FALSE)
 
 
+/////////////////////////////////////////////////////////////////////////////////////////
+// REALLY DEATH RAIN
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/acid_storm
 	name = "storm"
 	icon_state = "storm"
@@ -425,11 +436,11 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = "<span class='notice'>Acidic rain falls on you.</span>"
+	effect_message = span_notice("Acidic rain falls on you.")
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
 
-	var/next_lightning_strike = 0 // world.time when lightning will strike.
-	var/min_lightning_cooldown = 5 SECONDS
-	var/max_lightning_cooldown = 1 MINUTE
+	min_lightning_cooldown = 5 SECONDS
+	max_lightning_cooldown = 1 MINUTE
 	observed_message = "An intense storm pours down over the region."
 	transition_messages = list(
 		"You feel intense winds hit you as the weather takes a turn for the worst.",
@@ -477,64 +488,57 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_storm/process_effects()
 	..()
-
-	// Make plating wet and slippery
-	wet_plating(60)
-
-	// Fill chem vats
-	if(prob(20))
-		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
-			if(V.z in holder.our_planet.expected_z_levels)
-				var/turf/T = get_turf(V)
-				if(!T.is_outdoors())
-					continue
-				if(prob(40))
-					V.reagents.add_reagent(REAGENT_ID_WATER,16)
-
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors so no need to rain on them.
-
-			// If they have an open umbrella, it'll guard from rain
-			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
-
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
-				continue
-
-			// show transition messages
-			if(show_message)
-				to_chat(L, effect_message)
-
-			// digest living things
-			muriki_enzyme_affect_mob(L,4,FALSE,FALSE)
-
-	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors() || isobserver(L))
-				continue // They're indoors, so no need to rain on them.
-
-			// digest dead things
-			muriki_enzyme_affect_mob(L,5,FALSE,FALSE)
 	handle_lightning()
+	wet_plating(60)
+	fill_vats(20,40,16)
+
+/datum/weather/muriki/acid_storm/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors so no need to rain on them.
+
+		// Lazy wind code
+		if(prob(4))
+			if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = L.get_active_hand()
+				if(U.open)
+					to_chat(L, span_danger("You struggle to keep hold of your umbrella!"))
+					L.Stun(10)
+					playsound(L, 'sound/effects/rustle1.ogg', 100, 1)	// Closest sound I've got to "Umbrella in the wind"
+			else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+				var/obj/item/melee/umbrella/U = L.get_inactive_hand()
+				if(U.open)
+					to_chat(L, span_danger("A gust of wind yanks the umbrella from your hand!"))
+					playsound(L, 'sound/effects/rustle1.ogg', 100, 1)
+					L.drop_from_inventory(U)
+					U.toggle_umbrella()
+					U.throw_at(get_edge_target_turf(U, pick(alldirs)), 8, 1, L)
+
+		// If they have an open umbrella, it'll guard from rain
+		if(istype(L.get_active_hand(), /obj/item/melee/umbrella))
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
+			if(U.open)
+				if(show_message)
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
+				return
+		else if(istype(L.get_inactive_hand(), /obj/item/melee/umbrella))
+			var/obj/item/melee/umbrella/U = L.get_inactive_hand()
+			if(U.open)
+				if(show_message)
+					to_chat(L, span_notice("Rain showers loudly onto your umbrella!"))
+				return
+
+		if(show_message)
+			to_chat(L, effect_message)
+
+		L.water_act(3)
+		muriki_enzyme_affect_mob(L,4,FALSE,FALSE)
 
 
-// This gets called to do lightning periodically.
-// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
-/datum/weather/muriki/acid_storm/proc/handle_lightning()
-	if(world.time < next_lightning_strike)
-		return // It's too soon to strike again.
-	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
-	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
-	if(T.outdoors) // outdoors only
-		lightning_strike(T)
-
+/////////////////////////////////////////////////////////////////////////////////////////
+// DOWNPOUR WARNING
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/downpourwarning
 	name = "early extreme monsoon"
 	light_modifier = 0.4
@@ -551,6 +555,10 @@ var/datum/planet/muriki/planet_muriki = null
 	outdoor_sounds_type = /datum/looping_sound/weather/rainrumble
 	indoor_sounds_type = /datum/looping_sound/weather/rainrumble/indoors
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// ACTUAL DOWNPOUR
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/downpour
 	name = "extreme monsoon"
 	icon_state = "downpour"
@@ -561,10 +569,10 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 2
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is knocking you down!")
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
 
-	var/next_lightning_strike = 0 // world.time when lightning will strike.
-	var/min_lightning_cooldown = 5 SECONDS
-	var/max_lightning_cooldown = 15 SECONDS
+	min_lightning_cooldown = 5 SECONDS
+	max_lightning_cooldown = 15 SECONDS
 
 	transition_chances = list(
 		WEATHER_DOWNPOURFATAL = 95,
@@ -579,68 +587,41 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/downpour/process_effects()
 	..()
-
-	// Make plating wet and slippery
-	wet_plating(70)
-
-	// Fill chem vats
-	if(prob(25))
-		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
-			if(V.z in holder.our_planet.expected_z_levels)
-				var/turf/T = get_turf(V)
-				if(!T.is_outdoors())
-					continue
-				if(prob(50))
-					V.reagents.add_reagent(REAGENT_ID_WATER,25)
-
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-			if(L.is_incorporeal())
-				continue // ignore shadekin
-
-			// If they have an open umbrella, knock it off, this is more then an umbrella
-			if(ishuman(L))
-				var/mob/living/carbon/human/H = L
-				var/obj/item/melee/umbrella/U = L.get_active_hand()
-				if(!istype(U) || !U.open)
-					U = L.get_inactive_hand()
-
-				if(istype(U) && U.open)
-					if(show_message)
-						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
-						H.drop_both_hands()
-
-			L.water_act(2)
-			L.Weaken(3)
-			if(show_message)
-				to_chat(L, effect_message)
-
-			// digest living things
-			muriki_enzyme_affect_mob(L,4,FALSE,FALSE)
-
-	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors() || isobserver(L))
-				continue // They're indoors, so no need to rain on them.
-
-			// digest dead things
-			muriki_enzyme_affect_mob(L,5,FALSE,FALSE)
-
 	handle_lightning()
+	wet_plating(70)
+	fill_vats(25,50,25)
 
-// This gets called to do lightning periodically.
-// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
-/datum/weather/muriki/downpour/proc/handle_lightning()
-	if(world.time < next_lightning_strike)
-		return // It's too soon to strike again.
-	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
-	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
-	lightning_strike(T)
+/datum/weather/muriki/downpour/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
 
+		// If they have an open umbrella, knock it off
+		if(ishuman(L))
+			var/mob/living/carbon/human/H = L
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
+			if(!istype(U) || !U.open)
+				U = L.get_inactive_hand()
+
+			if(istype(U) && U.open)
+				if(show_message)
+					to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+					H.drop_both_hands()
+
+		L.water_act(2)
+		L.Weaken(3)
+
+		if(show_message)
+			to_chat(L, effect_message)
+
+		L.water_act(5)
+		muriki_enzyme_affect_mob(L,4,FALSE,FALSE)
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// MEGADEATH DOWNPOUR
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/downpourfatal
 	name = "fatal monsoon"
 	icon_state = "downpourfatal"
@@ -651,10 +632,10 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 4
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is crushing you!")
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
 
-	var/next_lightning_strike = 0 // world.time when lightning will strike.
-	var/min_lightning_cooldown = 1 SECONDS
-	var/max_lightning_cooldown = 3 SECONDS
+	min_lightning_cooldown = 1 SECONDS
+	max_lightning_cooldown = 3 SECONDS
 
 	transition_chances = list(
 		WEATHER_DOWNPOURFATAL = 65,
@@ -668,80 +649,54 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/downpourfatal/process_effects()
 	..()
-
-	// Make plating wet and slippery
-	wet_plating(60)
-
-	// Fill chem vats
-	if(prob(45))
-		for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
-			if(V.z in holder.our_planet.expected_z_levels)
-				var/turf/T = get_turf(V)
-				if(!T.is_outdoors())
-					continue
-				if(prob(60))
-					V.reagents.add_reagent(REAGENT_ID_WATER,35)
-
-	for(var/mob/living/L as anything in living_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
-			if(L.is_incorporeal())
-				continue // ignore shadekin
-
-			// Knock the umbrella off your hands, aint protecting you c:
-			if(ishuman(L))
-				var/mob/living/carbon/human/H = L
-				var/obj/item/melee/umbrella/U = L.get_active_hand()
-				if(!istype(U) || !U.open)
-					U = L.get_inactive_hand()
-
-				if(istype(U) && U.open)
-					if(show_message)
-						to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
-						H.drop_both_hands()
-
-			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = L.run_armor_check(target_zone, "melee")
-			var/amount_soaked = L.get_armor_soak(target_zone, "melee")
-
-			var/damage = rand(10,30) //Ow
-
-			if(amount_blocked >= 30)
-				continue
-
-			if(amount_soaked >= damage)
-				continue // No need to apply damage.
-
-			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
-			L.Weaken(3)
-			if(show_message)
-				to_chat(L, effect_message)
-
-			// digest living things
-			muriki_enzyme_affect_mob(L,9,FALSE,FALSE)
-
-	for(var/mob/living/L as anything in dead_mob_list)
-		if(L && isturf(L.loc) && (L.z in holder.our_planet.expected_z_levels))
-			var/turf/T = get_turf(L)
-			if(!T.is_outdoors() || isobserver(L))
-				continue // They're indoors, so no need to rain on them.
-
-			// digest dead things
-			muriki_enzyme_affect_mob(L,9,FALSE,FALSE)
-
 	handle_lightning()
+	wet_plating(60)
+	fill_vats(45,60,35)
 
-// This gets called to do lightning periodically.
-// There is a seperate function to do the actual lightning strike, so that badmins can play with it.
-/datum/weather/muriki/downpourfatal/proc/handle_lightning()
-	if(world.time < next_lightning_strike)
-		return // It's too soon to strike again.
-	next_lightning_strike = world.time + rand(min_lightning_cooldown, max_lightning_cooldown)
-	var/turf/T = pick(holder.our_planet.planet_floors) // This has the chance to 'strike' the sky, but that might be a good thing, to scare reckless pilots.
-	lightning_strike(T)
+/datum/weather/muriki/downpourfatal/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to rain on them.
 
+		// If they have an open umbrella, knock it off
+		if(ishuman(L))
+			var/mob/living/carbon/human/H = L
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
+			if(!istype(U) || !U.open)
+				U = L.get_inactive_hand()
+
+			if(istype(U) && U.open)
+				if(show_message)
+					to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
+					H.drop_both_hands()
+
+		var/target_zone = pick(BP_ALL)
+		var/amount_blocked = L.run_armor_check(target_zone, "melee")
+		var/amount_soaked = L.get_armor_soak(target_zone, "melee")
+
+		var/damage = rand(10,30) //Ow
+
+		if(amount_blocked >= 30)
+			return
+
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
+
+		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
+		L.Weaken(3)
+
+		if(show_message)
+			to_chat(L, effect_message)
+
+		// digest living things
+		L.water_act(6)
+		muriki_enzyme_affect_mob(L,9,FALSE,FALSE)
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// HAIL
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/acid_hail
 	name = "hail"
 	icon_state = "hail"
@@ -751,7 +706,8 @@ var/datum/planet/muriki/planet_muriki = null
 	flight_failure_modifier = 15
 	timer_low_bound = 2
 	timer_high_bound = 5
-	effect_message = "<span class='warning'>The hail smacks into you!</span>"
+	effect_message = span_warning("The hail smacks into you!")
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
@@ -769,44 +725,44 @@ var/datum/planet/muriki/planet_muriki = null
 		"An intense chill is felt, and chunks of frozen acid start to fall from the sky, towards you."
 	)
 
-/datum/weather/muriki/acid_hail/process_effects()
-	..()
-	for(var/mob/living/carbon/L as anything in human_mob_list)
-		if(L.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(L)
-			if(L.stat >= DEAD || !T.is_outdoors())
-				continue // They're indoors or dead, so no need to pelt them with ice.
-			if(L.is_incorporeal())
-				continue // ignore shadekin
+/datum/weather/muriki/acid_hail/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors or dead, so no need to pelt them with ice.
 
-			// If they have an open umbrella, it'll guard from hail
-			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
+		// If they have an open umbrella, it'll guard from hail
+		var/obj/item/melee/umbrella/U = L.get_active_hand()
+		if(!istype(U) || !U.open)
+			U = L.get_inactive_hand()
 
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, "<span class='notice'>Hail patters onto your umbrella.</span>")
-				continue
-
-			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = L.run_armor_check(target_zone, "melee")
-			var/amount_soaked = L.get_armor_soak(target_zone, "melee")
-
-			var/damage = rand(1,3)
-
-			if(amount_blocked >= 30)
-				continue // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
-				//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
-
-			if(amount_soaked >= damage)
-				continue // No need to apply damage.
-			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
-
-			// show transition messages
+		if(istype(U) && U.open)
 			if(show_message)
-				to_chat(L, effect_message)
+				to_chat(L, span_notice("Hail patters onto your umbrella."))
+			return
 
+		var/target_zone = pick(BP_ALL)
+		var/amount_blocked = L.run_armor_check(target_zone, "melee")
+		var/amount_soaked = L.get_armor_soak(target_zone, "melee")
+
+		var/damage = rand(1,3)
+
+		if(amount_blocked >= 30)
+			return // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
+			//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
+
+		if(amount_soaked >= damage)
+			return // No need to apply damage.
+		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+
+		// show transition messages
+		if(show_message)
+			to_chat(L, effect_message)
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// SNOW
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/light_snow
 	name = "light snow"
 	icon_state = "snowfall_light"
@@ -871,6 +827,10 @@ var/datum/planet/muriki/planet_muriki = null
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// BLIZZARD
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
@@ -894,7 +854,11 @@ var/datum/planet/muriki/planet_muriki = null
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 
-/datum/weather/muriki/fallout/temp //fixys firework stars
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// FIREWORKS
+/////////////////////////////////////////////////////////////////////////////////////////
+/datum/weather/muriki/fallout/temp //fixs firework stars
 	name = "short-term fallout"
 	timer_low_bound = 1
 	timer_high_bound = 3
@@ -904,7 +868,7 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_STORM = 20
 		)
 
-/datum/weather/muriki/confetti //fixys firework stars
+/datum/weather/muriki/confetti //fixs firework stars
 	name = "confetti"
 	icon_state = "confetti"
 
@@ -920,10 +884,9 @@ var/datum/planet/muriki/planet_muriki = null
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
 
 
-
-
-
+/////////////////////////////////////////////////////////////////////////////////////////
 // Muriki enzymatic rain effects
+/////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/
 	var/enzyme_affect = TRUE
 
@@ -1050,21 +1013,21 @@ var/datum/planet/muriki/planet_muriki = null
 			if(protection == null)
 				// full damage, what are you doing!?
 				to_chat(L, "<span class='danger'>The acidic environment burns your [L.get_bodypart_name(pick_zone)]!</span>")
-				L.apply_damage( 3 * multiplier, BURN, pick_zone)
+				L.apply_damage( 3 * multiplier, BURN, pick_zone, used_weapon = "enzymatic burns")
 				org.wounds +=  new /datum/wound/cut/small(mist ? 5 : 3)
 				applied_damage = TRUE
 
 			else if(protection.permeability_coefficient > min_permeability)
 				// only show the message if the permeability selection actually did any damage at all
 				to_chat(H, "<span class='danger'>The acidic environment leaks through \The [protection], and is burning your [L.get_bodypart_name(pick_zone)]!</span>")
-				L.apply_damage( 2 * (protection.permeability_coefficient * multiplier), BURN, pick_zone)
+				L.apply_damage( 2 * (protection.permeability_coefficient * multiplier), BURN, pick_zone, used_weapon = "enzymatic burns")
 				org.wounds +=  new /datum/wound/cut/small(mist ? 5 : 3)
 				applied_damage = TRUE
 
 		else if(prob(65 * probmod))
 			if(!istype(H) || !protection) // no protection!
 				to_chat(L, "<span class='danger'>The acidic pool is digesting your [L.get_bodypart_name(pick_zone)]!</span>")
-				L.apply_damage( 1.8 * multiplier,  BURN, pick_zone) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
+				L.apply_damage( 1.8 * multiplier,  BURN, pick_zone, used_weapon = "enzymatic burns") // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
 				org.wounds +=  new /datum/wound/cut/small(4)
 				applied_damage = TRUE
 			else
@@ -1072,14 +1035,14 @@ var/datum/planet/muriki/planet_muriki = null
 				if(!(istype(H.back,/obj/item/rig) && R.suit_is_deployed())) // rig snowflake check
 					if(protection.permeability_coefficient > min_permeability) // leaky protection
 						to_chat(L, "<span class='danger'>The acidic pool leaks through \The [protection], and is digesting your [L.get_bodypart_name(pick_zone)]!</span>")
-						L.apply_damage( 1.1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
+						L.apply_damage( 1.1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone, used_weapon = "enzymatic burns") // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
 						org.wounds +=  new /datum/wound/cut/small(4)
 						applied_damage = TRUE
 					else
 						var/liquidbreach = H.get_pressure_weakness( 0) // spacesuit are watertight
 						if(liquidbreach > 0) // unprotected!
 							to_chat(L, "<span class='danger'>The acidic pool splashes into \The [protection], and is digesting your [L.get_bodypart_name(pick_zone)]!</span>")
-							L.apply_damage( 1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone) // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
+							L.apply_damage( 1 * (protection.permeability_coefficient * multiplier),  BURN, pick_zone, used_weapon = "enzymatic burns") // note, water passes the acid depth as the multiplier, 5 or 10 depending on depth!
 							org.wounds +=  new /datum/wound/cut/small(4)
 							applied_damage = TRUE
 
