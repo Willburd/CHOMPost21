@@ -1557,7 +1557,7 @@
 	icon_state = "x"
 	},
 /turf/simulated/floor/plating/muriki,
-/area/tcomfoyer)
+/area/mine/unexplored/muriki/mountaintopeast)
 "awX" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -13018,9 +13018,6 @@
 /obj/item/stack/material/stick,
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
-"giF" = (
-/turf/simulated/floor/plating/muriki,
-/area/tcomfoyer)
 "giH" = (
 /obj/structure/bed/chair/sofa/pew/right{
 	dir = 8
@@ -32617,10 +32614,6 @@
 /obj/structure/prop/war/tgmc_missile_rack/napalm,
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
-"qeJ" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
-/area/djstation)
 "qeO" = (
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Eng Tram Upper West";
@@ -109346,9 +109339,9 @@ luR
 luR
 luR
 luR
-giF
+jVe
 awW
-giF
+jVe
 ueG
 nHi
 owG
@@ -110164,7 +110157,7 @@ cgN
 cgN
 cgN
 cgN
-qeJ
+cgN
 sOd
 lHs
 qIA
@@ -110326,11 +110319,11 @@ tou
 tou
 tou
 xqC
-qeJ
-qeJ
-qeJ
-qeJ
-qeJ
+cgN
+cgN
+cgN
+cgN
+cgN
 qll
 szB
 mxN

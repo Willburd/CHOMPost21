@@ -2742,6 +2742,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
+	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 
 /area/server
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
@@ -3047,7 +3048,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	base_turf = /turf/simulated/open
 
-/area/tcommsat/
+/area/tcommsat
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
@@ -3061,18 +3062,22 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
+	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 
 /area/tcommsat/computer
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
+	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 
 /area/tcommsat/lounge
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
+	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 
 /area/tcommsat/powercontrol
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
+	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 
 /area/engineering/atmos
 	name = "\improper Pulmonary Atmospherics"
