@@ -132,6 +132,10 @@
 /area/muriki/processor/pools/westfund
 	name = "\improper Terraformer Western Fundic Pool"
 
+/area/muriki/processor/depths
+	name = "\improper Core Terraformer Depths"
+	base_turf = /turf/simulated/floor/flesh
+
 //
 //Bathrooms. Each department's has a unique ending name, for humor, and navigation.
 //

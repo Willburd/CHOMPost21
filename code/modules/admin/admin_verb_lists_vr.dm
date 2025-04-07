@@ -132,6 +132,8 @@ var/list/admin_verbs_admin = list(
 	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
 	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
+	/client/proc/make_red_exit, // Outpost 21 edit - Spawn redspace exit command
+	/client/proc/base_all_turfs,
 	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
@@ -590,6 +592,8 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/hide_motion_tracker_feedback,
 	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
 	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
+	/client/proc/make_red_exit, // Outpost 21 edit - Spawn redspace exit command
+	/client/proc/base_all_turfs,
 	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
