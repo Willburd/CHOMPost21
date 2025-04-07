@@ -1222,7 +1222,6 @@
 #include "code\game\machinery\telecomms\logbrowser.dm"
 #include "code\game\machinery\telecomms\machine_interactions.dm"
 #include "code\game\machinery\telecomms\presets.dm"
-#include "code\game\machinery\telecomms\presets_ch.dm"
 #include "code\game\machinery\telecomms\presets_vr.dm"
 #include "code\game\machinery\telecomms\telecomunications.dm"
 #include "code\game\machinery\telecomms\telemonitor.dm"

@@ -169,7 +169,7 @@
 
 /obj/machinery/telecomms/server/presets/common
 	id = "Common Server"
-	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ, BDCM_FREQ) // AI Private and Common // CHOMPEdit
+	freq_listening = list(PUB_FREQ, /*AI_FREQ,*/ ENT_FREQ, BDCM_FREQ) // AI Private and Common // CHOMPEdit // Outpost 21 edit begin - Telecomms modifications
 
 	autolinkers = list("common")
 
@@ -193,7 +193,7 @@
 
 /obj/machinery/telecomms/server/presets/engineering
 	id = "Engineering Server"
-	freq_listening = list(ENG_FREQ)
+	freq_listening = list(ENG_FREQ, AI_FREQ) // Outpost 21 edit begin - Telecomms modifications (AI on engineering)
 	autolinkers = list("engineering")
 
 /obj/machinery/telecomms/server/presets/security
