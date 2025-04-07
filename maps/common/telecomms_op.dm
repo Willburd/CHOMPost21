@@ -1,4 +1,15 @@
-// Telecomms doesn't know about connected z-levels, so we need relays even for the other surface levels.
+// RX/TX
+/////////////////////////////////////////////////////////////////////////////////////////
+/obj/machinery/telecomms/receiver/preset_right/outpost
+	id = "outpost_rx"
+	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, EXP_FREQ)
+
+/obj/machinery/telecomms/broadcaster/preset_right/outpost
+	id = "outpost_tx"
+
+
+// RELAYS
+/////////////////////////////////////////////////////////////////////////////////////////
 /obj/machinery/telecomms/relay/preset/outpost/basement
 	id = "Basement Relay"
 	listening_level = Z_LEVEL_OUTPOST_BASEMENT
@@ -19,27 +30,58 @@
 	listening_level = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
 	autolinkers = list("k_relay")
 
+
+// HUB
+/////////////////////////////////////////////////////////////////////////////////////////
 /obj/machinery/telecomms/hub/preset/outpost
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub", "relay", "c_relay", "l_relay", "m_relay", "s_relay", "k_relay", "r_relay", "science", "medical",
-	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay","explorer", "unused" ,
-	"receiverA", "broadcasterA")
+	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay","explorer", "receiverA", "broadcasterA")
 
-/obj/machinery/telecomms/receiver/preset_right/outpost
-	id = "outpost_rx"
-	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, EXP_FREQ)
 
-/obj/machinery/telecomms/broadcaster/preset_right/outpost
-	id = "outpost_tx"
+// BUS
+/////////////////////////////////////////////////////////////////////////////////////////
+/obj/machinery/telecomms/bus/preset_one/outpost
+	freq_listening = list(SCI_FREQ, MED_FREQ)
+	autolinkers = list("processor1", "science", "medical")
 
 /obj/machinery/telecomms/bus/preset_two/outpost
 	freq_listening = list(SUP_FREQ, SRV_FREQ, EXP_FREQ)
+	autolinkers = list("processor2", "supply", "service", "unused")
 
+/obj/machinery/telecomms/bus/preset_three/outpost
+	freq_listening = list(SEC_FREQ, COMM_FREQ)
+	autolinkers = list("processor3", "security", "command")
+
+/obj/machinery/telecomms/bus/preset_four/outpost
+	freq_listening = list(PUB_FREQ, ENT_FREQ, BDCM_FREQ)
+	autolinkers = list("processor4", "common")
+
+/obj/machinery/telecomms/bus/preset_five/outpost // Unique to us
+	id = "Bus 5"
+	network = "tcommsat"
+	freq_listening = list(ENG_FREQ, AI_FREQ)
+	autolinkers = list("processor5", "engineering")
+
+
+// PROCESSORS
+/////////////////////////////////////////////////////////////////////////////////////////
+/obj/machinery/telecomms/processor/preset_five // Unique to us
+	id = "Processor 5"
+	network = "tcommsat"
+	autolinkers = list("processor5")
+
+
+// SERVERS
+/////////////////////////////////////////////////////////////////////////////////////////
 /obj/machinery/telecomms/server/presets/service/outpost
 	freq_listening = list(SRV_FREQ, EXP_FREQ)
 	autolinkers = list("service", "explorer")
 
+
+// MISC
+/////////////////////////////////////////////////////////////////////////////////////////
 /datum/map/outpost/default_internal_channels()
 	return list(
 		num2text(PUB_FREQ) = list(),

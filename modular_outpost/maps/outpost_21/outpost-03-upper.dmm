@@ -337,6 +337,173 @@
 	},
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/civilian)
+"aaN" = (
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaO" = (
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaP" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaQ" = (
+/obj/machinery/exonet_node{
+	anchored = 1
+	},
+/turf/simulated/floor/redgrid{
+	temperature = 80;
+	nitrogen = 100;
+	oxygen = 0;
+	name = "Exonet Mainframe"
+	},
+/area/comms)
+"aaR" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaS" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
+	nitrogen = 100;
+	temperature = 80
+	},
+/area/comms)
+"aaT" = (
+/obj/machinery/telecomms/bus/preset_five/outpost,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
+	nitrogen = 100;
+	temperature = 80
+	},
+/area/comms)
+"aaU" = (
+/obj/machinery/telecomms/server/presets/engineering,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaV" = (
+/obj/effect/floor_decal/corner/green/border{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red/bordercorner,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaW" = (
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/border,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaX" = (
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaY" = (
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aaZ" = (
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"aba" = (
+/obj/machinery/telecomms/processor/preset_two,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
+	nitrogen = 100;
+	temperature = 80
+	},
+/area/comms)
+"abb" = (
+/obj/machinery/telecomms/bus/preset_two/outpost,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
+	nitrogen = 100;
+	temperature = 80
+	},
+/area/comms)
 "abc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -345,6 +512,107 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
+"abd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abe" = (
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abf" = (
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abg" = (
+/obj/machinery/telecomms/server/presets/supply,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abh" = (
+/obj/machinery/telecomms/server/presets/service/outpost,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abi" = (
+/obj/machinery/telecomms/relay/preset/outpost/basement,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abj" = (
+/obj/machinery/telecomms/relay/preset/outpost/confinementbeam,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abl" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
 "abm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -359,7 +627,47 @@
 /turf/simulated/wall/durasteel,
 /area/muriki/processor)
 "abo" = (
-/obj/machinery/telecomms/relay/preset/telecomms,
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 1;
+	external_pressure_bound = 140;
+	external_pressure_bound_default = 140;
+	icon_state = "map_vent_out";
+	pressure_checks = 0;
+	pressure_checks_default = 0;
+	use_power = 1
+	},
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
+	nitrogen = 100;
+	temperature = 80
+	},
+/area/comms)
+"abp" = (
+/obj/machinery/telecomms/relay/preset/outpost/main,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abq" = (
+/obj/machinery/telecomms/relay/preset/outpost/upper,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"abr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -1041,7 +1349,13 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "asy" = (
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -1243,7 +1557,7 @@
 	icon_state = "x"
 	},
 /turf/simulated/floor/plating/muriki,
-/area/tcomfoyer)
+/area/mine/unexplored/muriki/mountaintopeast)
 "awX" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -1932,8 +2246,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -2075,10 +2389,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/janiupstairs)
 "aSf" = (
-/obj/machinery/telecomms/bus/preset_two/outpost,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/bus/preset_three/outpost,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -3524,7 +3838,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -3617,8 +3931,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/green/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -4628,8 +4944,9 @@
 /turf/simulated/floor/plating,
 /area/chapel/main)
 "cct" = (
-/obj/machinery/telecomms/server/presets/common,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/server/presets/science,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -5007,8 +5324,8 @@
 /obj/machinery/camera/network/telecom{
 	c_tag = "TCM - Telecomms Server Room North"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -5780,8 +6097,9 @@
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
 "cFn" = (
-/obj/machinery/telecomms/server/presets/engineering,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/server/presets/medical,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -6345,9 +6663,18 @@
 /turf/simulated/open,
 /area/muriki/tramstation/cargeng)
 "cUZ" = (
-/obj/machinery/telecomms/relay/preset/outpost/main,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/machinery/telecomms/hub/preset/outpost,
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -6483,10 +6810,18 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
 "cYL" = (
-/obj/machinery/telecomms/receiver/preset_right/outpost,
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/machinery/telecomms/broadcaster/preset_right/outpost,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -6976,8 +7311,9 @@
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
 "dlV" = (
-/obj/machinery/telecomms/bus/preset_four,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/server/presets/security,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -7953,8 +8289,10 @@
 	pixel_x = 25;
 	pixel_y = 22
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -8087,8 +8425,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -8373,7 +8712,13 @@
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "dVj" = (
-/obj/machinery/telecomms/server/presets/unused,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -8700,10 +9045,10 @@
 /turf/simulated/floor/wood,
 /area/library)
 "edQ" = (
-/obj/machinery/telecomms/processor/preset_two,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/processor/preset_three,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -8781,8 +9126,10 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -9753,12 +10100,14 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
 "eEa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -9892,8 +10241,8 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/research/phoronics/breakroom)
 "eGK" = (
-/obj/machinery/telecomms/server/presets/security,
-/turf/simulated/floor/tiled/dark{
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -10750,11 +11099,12 @@
 /turf/simulated/floor/plating,
 /area/muriki/processor)
 "fcW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/pda_multicaster/prebuilt,
+/turf/simulated/floor/redgrid{
+	temperature = 80;
 	nitrogen = 100;
 	oxygen = 0;
-	temperature = 80
+	name = "Exonet Mainframe"
 	},
 /area/comms)
 "fcY" = (
@@ -12668,20 +13018,6 @@
 /obj/item/stack/material/stick,
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
-"giD" = (
-/obj/machinery/exonet_node{
-	anchored = 1
-	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"giF" = (
-/turf/simulated/floor/plating/muriki,
-/area/tcomfoyer)
 "giH" = (
 /obj/structure/bed/chair/sofa/pew/right{
 	dir = 8
@@ -13522,7 +13858,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -15609,8 +15945,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -15925,8 +16261,10 @@
 /area/muriki/bathroom/chapel)
 "hRE" = (
 /obj/machinery/light,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -17084,8 +17422,14 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -17520,11 +17864,11 @@
 /turf/simulated/wall,
 /area/medical/patient_a)
 "iJJ" = (
-/obj/machinery/pda_multicaster/prebuilt,
-/turf/simulated/floor/tiled/dark{
+/turf/simulated/floor/redgrid{
+	temperature = 80;
 	nitrogen = 100;
 	oxygen = 0;
-	temperature = 80
+	name = "Exonet Mainframe"
 	},
 /area/comms)
 "iKk" = (
@@ -18961,7 +19305,12 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/medical)
 "jsD" = (
-/obj/machinery/telecomms/server/presets/command,
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -19452,7 +19801,12 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "jFF" = (
-/obj/machinery/telecomms/server/presets/medical,
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -20320,10 +20674,10 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
 "jZR" = (
-/obj/machinery/telecomms/server/presets/supply,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/processor/preset_one,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -20493,10 +20847,10 @@
 /turf/simulated/floor,
 /area/muriki/rooftop/civgen)
 "kev" = (
-/obj/machinery/telecomms/server/presets/service,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/bus/preset_one,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -21326,8 +21680,9 @@
 	},
 /area/hydroponics/publicgarden)
 "kyz" = (
-/obj/machinery/telecomms/processor/preset_four,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/server/presets/command,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -21425,8 +21780,9 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargrecycle)
 "kAz" = (
-/obj/machinery/telecomms/bus/preset_three,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/server/presets/unused,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -21527,8 +21883,10 @@
 	dir = 4;
 	pixel_x = 26
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -26461,9 +26819,8 @@
 	},
 /area/chapel/main)
 "nej" = (
-/obj/machinery/telecomms/relay/preset/outpost/basement,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/red/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -27216,21 +27573,10 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/chapel)
 "nzr" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
-	icon_state = "map_vent_in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
-	use_power = 1
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -29562,17 +29908,10 @@
 	c_tag = "TCM - Telecomms Server Room South";
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
-	pressure_checks = 0;
-	pressure_checks_default = 0;
-	use_power = 1
+/obj/effect/floor_decal/corner/red/border{
+	dir = 1
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -30144,10 +30483,10 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/phoronics)
 "oWJ" = (
-/obj/machinery/telecomms/bus/preset_one,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/processor/preset_four,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -32275,10 +32614,6 @@
 /obj/structure/prop/war/tgmc_missile_rack/napalm,
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
-"qeJ" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
-/area/djstation)
 "qeO" = (
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Eng Tram Upper West";
@@ -33427,10 +33762,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -33548,14 +33882,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/phoronicsbridge)
-"qIq" = (
-/obj/machinery/telecomms/hub/preset/outpost,
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
 "qIr" = (
 /obj/structure/sign/yessmoking_1{
 	pixel_y = -32
@@ -33767,8 +34093,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "qOM" = (
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -36117,9 +36445,10 @@
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
 "rZI" = (
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/processor/preset_five,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -37123,15 +37452,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
-"sxx" = (
-/obj/machinery/telecomms/relay/preset/outpost/upper,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
 "sxB" = (
 /obj/structure/disposalpipe/segment,
 /obj/item/radio/intercom{
@@ -37800,10 +38120,20 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "sPd" = (
-/obj/machinery/telecomms/broadcaster/preset_right/outpost,
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/machinery/telecomms/receiver/preset_right/outpost,
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 2
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -37864,8 +38194,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical_roof)
 "sQh" = (
-/obj/machinery/telecomms/processor/preset_three,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/server/presets/common,
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -39462,8 +39793,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/green/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -41205,10 +41536,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -41567,8 +41897,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/effect/floor_decal/corner/green/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -42237,9 +42569,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "uRl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue/border,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -42431,10 +42765,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "uXq" = (
-/obj/machinery/telecomms/processor/preset_one,
-/turf/simulated/floor/tiled/dark{
+/obj/machinery/telecomms/bus/preset_four/outpost,
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -43758,15 +44092,6 @@
 /obj/structure/flora/lily1,
 /turf/simulated/floor/water/indoors/beach,
 /area/hydroponics/publicgarden)
-"vGv" = (
-/obj/machinery/telecomms/relay/preset/outpost/confinementbeam,
-/turf/simulated/floor/bluegrid{
-	name = "Mainframe Base";
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
 "vGC" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/tape_roll,
@@ -45392,10 +45717,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "wAo" = (
-/obj/machinery/telecomms/server/presets/science,
-/turf/simulated/floor/tiled/dark{
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -109015,9 +109339,9 @@ luR
 luR
 luR
 luR
-giF
+jVe
 awW
-giF
+jVe
 ueG
 nHi
 owG
@@ -109833,7 +110157,7 @@ cgN
 cgN
 cgN
 cgN
-qeJ
+cgN
 sOd
 lHs
 qIA
@@ -109995,11 +110319,11 @@ tou
 tou
 tou
 xqC
-qeJ
-qeJ
-qeJ
-qeJ
-qeJ
+cgN
+cgN
+cgN
+cgN
+cgN
 qll
 szB
 mxN
@@ -110957,12 +111281,12 @@ xpu
 eKE
 dMo
 efX
-uCH
-uCH
-uCH
+abl
+aaS
+aaS
 utF
-uCH
-uCH
+aaS
+aaS
 bFH
 dMo
 akN
@@ -111119,9 +111443,9 @@ eJf
 kiv
 dMo
 aNU
-rZI
+wAo
 jZR
-rZI
+aba
 edQ
 oWJ
 rZI
@@ -111281,12 +111605,12 @@ uDg
 raU
 dMo
 tEf
-rZI
+wAo
 kev
-rZI
+abb
 aSf
 uXq
-rZI
+aaT
 wAo
 qOM
 akN
@@ -111443,14 +111767,14 @@ hEU
 ooa
 dMo
 izu
-rZI
 dVj
-rZI
+dVj
+abd
 abo
-rZI
-rZI
+aaV
 jFF
-qOM
+jFF
+aaN
 akN
 rNj
 ufK
@@ -111605,12 +111929,12 @@ gaT
 mnq
 saB
 eEa
-fcW
-fcW
-fcW
+abp
+abi
+abe
 sPd
-fcW
-fcW
+aaW
+iJJ
 fcW
 oHs
 akN
@@ -111767,12 +112091,12 @@ gaT
 vrC
 voa
 cjF
-qIq
-giD
-sxx
+eGK
+eGK
+aaP
 cUZ
 nej
-vGv
+iJJ
 iJJ
 hRE
 akN
@@ -111929,13 +112253,13 @@ gaT
 eMa
 sKN
 uRl
-fcW
-fcW
-fcW
+abq
+abj
+abf
 cYL
-fcW
-fcW
-fcW
+aaX
+iJJ
+aaQ
 nzr
 akN
 cDi
@@ -112090,15 +112414,15 @@ vYV
 vCr
 oHA
 aRg
-qOM
-rZI
-rZI
+abr
+abk
+abk
 asy
-qOM
-rZI
-rZI
+aaZ
+aaY
 jsD
-qOM
+jsD
+aaO
 akN
 cDi
 gnv
@@ -112253,14 +112577,14 @@ xpu
 cmX
 dMo
 dPc
-rZI
+eGK
 cct
-rZI
+abg
 dlV
 sQh
-rZI
+aaU
 eGK
-qOM
+aaP
 akN
 rUe
 wkU
@@ -112415,14 +112739,14 @@ xpu
 uPT
 dMo
 hKE
-rZI
+eGK
 cFn
-rZI
+abh
 kyz
 kAz
-rZI
-qOM
-qOM
+eGK
+eGK
+aaP
 akN
 akN
 akN
@@ -112578,12 +112902,12 @@ dPy
 oUd
 dMB
 kCg
-qOM
+eGK
 gHt
 bEg
-qOM
-qOM
-qOM
+eGK
+eGK
+aaR
 dMo
 akN
 eWw

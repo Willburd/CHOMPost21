@@ -85,6 +85,7 @@
 										/area/muriki/processor/hall/waterway_other,
 										/area/muriki/processor/pools/pylorus,
 										/area/muriki/processor/gland/nitrogen,
+										/area/muriki/processor/depths,
 										// Skylines don't need scrubbers and vents
 										/area/muriki/skyline/east,
 										/area/muriki/skyline/south,
@@ -174,6 +175,7 @@
 										/area/muriki/processor/hall/waterway_other,
 										/area/muriki/processor/pools/pylorus,
 										/area/muriki/processor/gland/nitrogen,
+										/area/muriki/processor/depths,
 										// Skylines don't need apcs
 										/area/muriki/skyline/east,
 										/area/muriki/skyline/south,
