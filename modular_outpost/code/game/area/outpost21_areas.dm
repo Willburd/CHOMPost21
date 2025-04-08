@@ -2156,7 +2156,7 @@
 	icon_state = "redwhitri"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	use_emergency_overlay = FALSE
 
 /area/rnd/research/phoronics/med
