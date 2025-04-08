@@ -6038,12 +6038,6 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
-"ajB" = (
-/obj/structure/prop/war/tgmc_missile_rack/banshee,
-/turf/simulated/floor/outdoors/sidewalk/muriki{
-	icon_state = "slab"
-	},
-/area/muriki/grounds/sci)
 "ajC" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/sidewalk/muriki{
@@ -6068,23 +6062,6 @@
 	icon_state = "slab"
 	},
 /area/muriki/grounds/engi)
-"ajH" = (
-/turf/simulated/floor/outdoors/sidewalk/muriki{
-	icon_state = "slab"
-	},
-/area/muriki/grounds/sci)
-"ajI" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/mud/muriki,
-/area/muriki/grounds/med)
-"ajJ" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
-/area/muriki/grounds/med)
 "ajK" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -6109,12 +6086,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plating/external/muriki,
 /area/engineering/engine_room)
-"ajN" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
-/area/muriki/grounds/sci)
 "ajO" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -6170,12 +6141,6 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/civilian)
-"ajW" = (
-/obj/structure/fence/door,
-/turf/simulated/floor/outdoors/sidewalk/muriki{
-	icon_state = "slab"
-	},
-/area/muriki/grounds/sci)
 "ajX" = (
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -6188,16 +6153,42 @@
 /obj/structure/fence/post,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/tramborder)
-"aka" = (
-/obj/structure/fence{
+"akb" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/mud/muriki,
-/area/muriki/grounds/sci)
+/turf/simulated/floor/tiled,
+/area/security/detectives_office)
+"akc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "akd" = (
 /obj/machinery/trailblazer/red,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/tramborder)
+"ake" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "akf" = (
 /obj/structure/fence/corner,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -7171,6 +7162,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
@@ -10394,10 +10388,13 @@
 /area/muriki/grounds/tramborder)
 "bfW" = (
 /obj/structure/table/reinforced,
-/obj/item/hand_labeler,
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/machinery/computer/med_data/laptop{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "bgb" = (
@@ -15840,6 +15837,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "cTq" = (
@@ -18223,6 +18221,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -24795,6 +24796,9 @@
 /obj/item/storage/box/swabs{
 	layer = 5
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "fSb" = (
@@ -30928,6 +30932,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "hNX" = (
@@ -31467,7 +31472,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -31478,6 +31482,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/hallway/security/main)
 "hVq" = (
@@ -39327,6 +39332,9 @@
 "klb" = (
 /obj/effect/floor_decal/corner/red/full,
 /obj/effect/landmark/holiday_event_spawn,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "klc" = (
@@ -39518,7 +39526,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
 /area/hallway/security/armor)
 "koD" = (
 /obj/effect/landmark{
@@ -40891,6 +40900,9 @@
 /obj/item/tape_roll,
 /obj/item/tape_roll,
 /obj/item/tape_roll,
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "kLN" = (
@@ -44135,6 +44147,9 @@
 "lLZ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
@@ -49639,6 +49654,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "nwr" = (
@@ -50055,7 +50073,7 @@
 	dir = 4;
 	c_tag = "EXT - Civilian Bridge Southwest connection"
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/turf/simulated/floor/outdoors/mud/muriki,
 /area/muriki/grounds/civ)
 "nCl" = (
 /obj/structure/cable/green{
@@ -50369,6 +50387,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "nGZ" = (
@@ -53909,6 +53928,10 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "oRo" = (
@@ -57379,6 +57402,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "qaR" = (
@@ -58919,6 +58946,10 @@
 /obj/structure/table/standard,
 /obj/item/storage/box/cdeathalarm_kit,
 /obj/item/storage/box/cdeathalarm_kit,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "qzF" = (
@@ -59178,6 +59209,7 @@
 	pixel_x = -30;
 	pixel_y = -6
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "qEc" = (
@@ -60242,6 +60274,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "qSJ" = (
@@ -65522,13 +65555,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "sFS" = (
-/obj/machinery/washing_machine,
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
+/obj/machinery/vending/wardrobe/secdrobe,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "sGn" = (
@@ -69747,6 +69777,10 @@
 	pixel_x = -30;
 	pixel_y = -6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "tVY" = (
@@ -73003,13 +73037,13 @@
 /turf/simulated/floor/outdoors/rocks/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "uVW" = (
-/obj/machinery/vending/tool,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/vending/wardrobe/engidrobe,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "uWc" = (
@@ -73814,11 +73848,16 @@
 /area/security/armoury)
 "vhR" = (
 /obj/structure/table/reinforced,
-/obj/machinery/computer/med_data/laptop{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
+	},
+/obj/item/hand_labeler,
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -35
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
@@ -74850,6 +74889,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "vyK" = (
@@ -76390,6 +76430,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/security/detectives_office)
 "vXn" = (
@@ -76651,7 +76694,8 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
 /area/security/detectives_office)
 "waa" = (
 /obj/structure/table/marble,
@@ -77705,12 +77749,12 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/hallway/security/main)
@@ -78129,9 +78173,6 @@
 /obj/machinery/light_switch{
 	pixel_x = -5;
 	pixel_y = 30
-	},
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
@@ -82036,6 +82077,9 @@
 	dir = 8
 	},
 /obj/structure/cable/green,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/security/detectives_office)
 "xHl" = (
@@ -119438,7 +119482,7 @@ wRV
 wRV
 mVm
 xwD
-wRV
+akb
 nFl
 mCI
 ppA
@@ -119924,7 +119968,7 @@ fbW
 uAD
 vmL
 sbe
-hMg
+lzd
 wKu
 bwq
 thv
@@ -120086,7 +120130,7 @@ ulp
 jlF
 oDk
 wnj
-hMg
+lzd
 sQM
 boh
 acU
@@ -120247,8 +120291,8 @@ fxv
 iKD
 wOm
 vmL
-wNw
-odq
+ake
+akc
 mou
 khc
 gpc
@@ -129747,7 +129791,7 @@ tmZ
 tmZ
 tmZ
 ybq
-ajI
+ybq
 wjF
 ybq
 ybq
@@ -129909,7 +129953,7 @@ tmZ
 tmZ
 tmZ
 tmZ
-ajI
+ybq
 tmZ
 tmZ
 ybq
@@ -130071,7 +130115,7 @@ tmZ
 tmZ
 tmZ
 tmZ
-ajJ
+tmZ
 ajF
 tmZ
 ybq
@@ -130081,7 +130125,7 @@ dRW
 dRW
 dRW
 dRW
-nVv
+wMK
 mCo
 vtM
 wAv
@@ -130233,17 +130277,17 @@ fQG
 fQG
 fQG
 fQG
-ajN
 fQG
 fQG
 fQG
 fQG
 fQG
+wMK
 wMK
 xzL
 wMK
 wMK
-nVv
+wMK
 pVL
 yaH
 wcX
@@ -130394,9 +130438,7 @@ fQG
 fQG
 fQG
 fQG
-ajH
-ajW
-ajH
+fQG
 fQG
 fQG
 fQG
@@ -130404,6 +130446,8 @@ fQG
 fQG
 fQG
 wMK
+fQG
+fQG
 wMK
 wMK
 lfk
@@ -130557,7 +130601,7 @@ fQG
 fQG
 fQG
 wMK
-aka
+wMK
 jYh
 fQG
 dMI
@@ -130566,7 +130610,7 @@ fQG
 fQG
 fQG
 fQG
-ajB
+fQG
 wMK
 lfk
 uqQ
@@ -130719,7 +130763,7 @@ fQG
 fQG
 fQG
 wMK
-aka
+wMK
 wMK
 jYa
 fQG
@@ -131052,7 +131096,7 @@ vrx
 fJr
 hJG
 wMK
-ajB
+wMK
 wMK
 mCo
 adX
@@ -131214,7 +131258,7 @@ lnd
 xSz
 hJG
 fQG
-fQG
+wMK
 wMK
 mCo
 ebT
@@ -131538,7 +131582,7 @@ mRW
 lLd
 hJG
 fQG
-ajB
+wMK
 wMK
 pVL
 uqQ
@@ -131862,7 +131906,7 @@ maz
 maz
 bVv
 qnV
-fQG
+wMK
 wMK
 lfk
 tQu
@@ -132024,7 +132068,7 @@ kwx
 xDO
 dII
 wMK
-ajB
+wMK
 wMK
 lfk
 uqQ
@@ -132510,7 +132554,7 @@ jZb
 opw
 bVv
 nVv
-ajB
+wMK
 wMK
 mCo
 kiY

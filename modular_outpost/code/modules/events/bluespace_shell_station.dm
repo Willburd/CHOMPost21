@@ -102,16 +102,16 @@
 	left_x = 100
 	bottom_y = 75
 	right_x = 175
-	top_y = 200
+	top_y = 180
 
 /datum/event/bluespace_shelling/science
 	department = HOLOMAP_AREACOLOR_SCIENCE
 	department_name = "research and development department"
 	seclevel = SEC_LEVEL_RED
-	left_x = 220
+	left_x = 290
 	bottom_y = 100
 	right_x = 400
-	top_y = 200
+	top_y = 180
 
 /datum/event/bluespace_shelling/security
 	department = HOLOMAP_AREACOLOR_SECURITY
@@ -123,7 +123,7 @@
 	top_y = 75
 
 /datum/event/bluespace_shelling/medical
-	department = HOLOMAP_AREACOLOR_SECURITY
+	department = HOLOMAP_AREACOLOR_MEDICAL
 	department_name = "medical facility"
 	seclevel = SEC_LEVEL_RED
 	left_x = 175

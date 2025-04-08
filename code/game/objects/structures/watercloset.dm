@@ -292,6 +292,7 @@
 	is_washing = 1
 	var/turf/T = get_turf(src)
 	T.clean(src)
+	reagents.splash(T, 10, min_spill = 0, max_spill = 0) // Outpost 21 edit - Fire suppression sprinklers
 	addtimer(VARSET_CALLBACK(src, is_washing, 0), 100, TIMER_DELETE_ME)
 
 /obj/machinery/shower/proc/process_heat(mob/living/M)

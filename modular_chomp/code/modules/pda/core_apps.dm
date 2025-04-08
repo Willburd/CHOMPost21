@@ -141,7 +141,7 @@
 	return
 
 /datum/data/pda/app/timeclock/proc/isAllowedAreaClockout(mob/user)
-	return (get_area(user).flag_check(AREA_ALLOW_CLOCKOUT) || isbelly(user.loc))
+	return TRUE // (get_area(user).flag_check(AREA_ALLOW_CLOCKOUT) || isbelly(user.loc)) // Outpost 21 edit - Allow anywhere to clock out
 
 /datum/data/pda/app/timeclock/proc/checkCardCooldown(mob/user)
 	if(!pda.id)
