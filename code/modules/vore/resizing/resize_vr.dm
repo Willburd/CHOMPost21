@@ -86,7 +86,7 @@
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
  */
-//#define USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
+#define USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
 /mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!uncapped)
 		#ifdef USE_DIRECT_MULTIPLIERS
@@ -144,7 +144,7 @@
 			animate_aura(src, color = aura_color, offset = aura_offset, anim_duration = aura_anim_duration, loops = aura_loops, grow_to = aura_grow_to)
 	else
 		update_transform() //Lame way
-//#undef USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
+#undef USE_DIRECT_MULTIPLIERS //Uncomment to use old resize calculations.
 /mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!resizable && !ignore_prefs)
 		return 1
