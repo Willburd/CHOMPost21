@@ -156,7 +156,7 @@ SUBSYSTEM_DEF(supply)
 
 					// Outpost 21 edit begin - Selling TTVs
 					if(istype(A, /obj/item/transfer_valve))
-						EC.contents[EC.contents.len]["object"] = "\properTTV Warhead"
+						EC.contents[EC.contents.len]["object"] = "\proper TTV Warhead"
 						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A)
 						EC.value += EC.contents[EC.contents.len]["value"]
 						if(EC.contents[EC.contents.len]["value"] > 0)
