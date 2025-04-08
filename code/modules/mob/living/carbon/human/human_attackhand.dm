@@ -567,7 +567,7 @@
 
 	// Toggle for 'realistic' CPR. Use this if you want a more grim CPR approach that mimicks the damage that CPR can do to someone. This means more extensive internal damage, almost guaranteed rib breakage, etc.
 	// DEFAULT: FALSE
-	var/realistic_cpr = FALSE
+	var/realistic_cpr = TRUE // Outpost 21 edit - CRUNCHY CRUNCHY YAY!
 
 	// brute damage
 	if(prob(3))
@@ -617,7 +617,7 @@
 		emote("gasp")
 		Weaken(rand(10,25))
 		updatehealth()
-		//SShaunting.influence(HAUNTING_RESLEEVE) // Used for the Haunting module downstream. Not implemented upstream.
+		SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION
 
 		// This is measures in `Life()` ticks. E.g. 10 minute defib timer = 300 `Life()` ticks.				// Original math was VERY off. Life() tick occurs every ~2 seconds, not every 2 world.time ticks.
 		var/brain_damage_timer = ((CONFIG_GET(number/defib_timer) MINUTES) / 20) - ((CONFIG_GET(number/defib_braindamage_timer) MINUTES) / 20)

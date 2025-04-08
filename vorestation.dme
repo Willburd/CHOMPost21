@@ -5332,7 +5332,6 @@
 #include "modular_outpost\code\modules\mob\living\living.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\alien\alien.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\human.dm"
-#include "modular_outpost\code\modules\mob\living\carbon\human\human_attackhand.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\life.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\station_special_abilities.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\traits_vr\negative.dm"
