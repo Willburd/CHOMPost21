@@ -92,6 +92,13 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 		valid_stats_list.Add("A total of [GLOB.items_digested_roundstat] items were digested today!")
 	//VOREStation Add End
 
+	// outpost 21 add begin - selling TTVs
+	if(SSsupply.warheads_sold > 0)
+		var/end_dols = SSsupply.warheads_value * SSsupply.points_per_money
+		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
+		valid_stats_list.Add("[SSsupply.warheads_sold] TTV warheads were sold! For a total of: [SSsupply.warheads_value] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
+	// outpost 21 add end
+
 	// outpost 21 add begin - supply points for selling power
 	if(SSsupply.watts_sold >= 1 GIGAWATTS)
 		var/gws = FLOOR(SSsupply.watts_sold / (1 GIGAWATTS),1) // Truncate decimals
