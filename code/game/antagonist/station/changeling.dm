@@ -86,3 +86,11 @@
 		text += "<br>Bought [english_list(ling_datum.purchased_powers_history)]."
 
 	return text
+
+// Outpost 21 edit begin - Changling fixes, removing antag removes their abilities
+/datum/antagonist/changeling/remove_antagonist(datum/mind/player, show_message, implanted)
+	. = ..()
+	if(player.changeling)
+		player.current.remove_changeling_powers()
+		remove_verb(player.current, /datum/changeling/proc/EvolutionMenu)
+// Outpost 21 edit end
