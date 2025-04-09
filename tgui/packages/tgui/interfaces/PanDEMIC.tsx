@@ -19,6 +19,7 @@ type Data = {
   selectedStrainIndex: number;
   strains: Strain[];
   synthesisCooldown: boolean;
+  show_strains: boolean; // Outpost 21 edit - Split viro machines, show strains
 };
 
 type Strain = {
@@ -52,6 +53,38 @@ export const PanDEMIC = () => {
   } = data;
 
   let emptyPlaceholder: React.JSX.Element | null = null;
+
+  /* Outpost 21 edit being - Split viro machines, show antibodies */
+  if (show_strains) {
+    if (!beakerLoaded) {
+      emptyPlaceholder = <>No container loaded.</>;
+    } else if (!beakerContainsBlood) {
+      emptyPlaceholder = <>No virus sample found in the loaded container.</>;
+    } else if (beakerContainsBlood && !beakerContainsVirus) {
+      emptyPlaceholder = <>No disease detected in provided virus sample.</>;
+    }
+
+    return (
+      <Window width={575} height={510}>
+        <Window.Content>
+          <Stack fill vertical>
+            {emptyPlaceholder && !beakerContainsVirus ? (
+              <Section
+                title="Container Information"
+                buttons={<CommonCultureActions />}
+              >
+                <NoticeBox>{emptyPlaceholder}</NoticeBox>
+              </Section>
+            ) : (
+              <CultureInformationSection />
+            )}
+          </Stack>
+        </Window.Content>
+      </Window>
+    );
+  }
+
+  // Isolator antibody menu
   if (!beakerLoaded) {
     emptyPlaceholder = <>No container loaded.</>;
   } else if (!beakerContainsBlood) {
@@ -83,6 +116,7 @@ export const PanDEMIC = () => {
       </Window.Content>
     </Window>
   );
+  /* Outpost 21 edit being - end */
 };
 
 const CommonCultureActions = () => {
