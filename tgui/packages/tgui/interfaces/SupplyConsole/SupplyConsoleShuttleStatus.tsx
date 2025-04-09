@@ -55,7 +55,7 @@ export const SupplyConsoleShuttleStatus = (props) => {
   }
 
   return (
-    <Section>
+    <>
       <LabeledList>
         <LabeledList.Item label="Reserve">
           {' '}
@@ -105,6 +105,6 @@ export const SupplyConsoleShuttleStatus = (props) => {
           )}
         </LabeledList>
       </Section>
-    </Section>
+    </>
   );
 };
