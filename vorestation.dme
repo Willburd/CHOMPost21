@@ -5400,6 +5400,7 @@
 #include "modular_outpost\code\modules\reagents\reagents\dispenser.dm"
 #include "modular_outpost\code\modules\reagents\reagents\food_drinks.dm"
 #include "modular_outpost\code\modules\reagents\reagents\medicine.dm"
+#include "modular_outpost\code\modules\reagents\reagents\reagent_ppe.dm"
 #include "modular_outpost\code\modules\recycling\disposal.dm"
 #include "modular_outpost\code\modules\research\origin_tech_overrides.dm"
 #include "modular_outpost\code\modules\research\designs\misc.dm"

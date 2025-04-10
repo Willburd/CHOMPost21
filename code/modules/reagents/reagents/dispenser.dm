@@ -66,6 +66,8 @@
 	reagent_state = GAS
 	color = "#808080"
 
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_BURNS // Outpost 21 edit - PPE reagents
+
 /datum/reagent/chlorine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.take_organ_damage(1*REM, 0)
 
@@ -222,6 +224,8 @@
 	reagent_state = GAS
 	color = "#808080"
 
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/fluorine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.adjustToxLoss(removed)
 
@@ -235,6 +239,8 @@
 	taste_mult = 0 //no taste
 	reagent_state = GAS
 	color = "#808080"
+
+	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/iron
 	name = REAGENT_IRON
@@ -252,6 +258,8 @@
 	reagent_state = SOLID
 	color = "#808080"
 
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/lithium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
@@ -266,6 +274,8 @@
 	taste_mult = 0 //mercury apparently is tasteless. IDK
 	reagent_state = LIQUID
 	color = "#484848"
+
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/mercury/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -291,6 +301,8 @@
 	reagent_state = GAS
 	color = "#808080"
 
+	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/oxygen/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.species.poison_type == GAS_O2) // outpost 21 edit, changed from alien == IS_VOX to be consistant with poison oxygen behavior
 		M.adjustToxLoss(removed * 3)
@@ -302,6 +314,8 @@
 	taste_description = "vinegar"
 	reagent_state = SOLID
 	color = "#832828"
+
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/potassium
 	name = REAGENT_POTASSIUM
@@ -318,6 +332,8 @@
 	taste_mult = 0	//Apparently radium is tasteless
 	reagent_state = SOLID
 	color = "#C7C7C7"
+
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/radium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(issmall(M)) removed *= 2
@@ -340,6 +356,8 @@
 	reagent_state = SOLID
 	color = "#C7C7C7"
 
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/radium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
@@ -360,6 +378,8 @@
 	var/power = 5
 	var/meltdose = 10 // How much is needed to melt
 	affects_robots = TRUE //CHOMPedit, it's acid! Still eats metal!
+
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/acid/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_GREY) //ywedit
