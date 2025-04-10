@@ -1164,6 +1164,19 @@
 	},
 /turf/simulated/floor/greengrid,
 /area/ai)
+"dB" = (
+/obj/structure/sign/directions/engineering/solars{
+	dir = 8;
+	pixel_y = 5
+	},
+/obj/structure/sign/directions/engineering/reactor{
+	pixel_y = -1
+	},
+/obj/structure/sign/directions/cargo{
+	pixel_y = -7
+	},
+/turf/simulated/wall/r_wall,
+/area/ai_cyborg_station)
 "dC" = (
 /obj/structure/table/standard,
 /obj/item/reagent_containers/glass/beaker/cryoxadone,
@@ -1321,12 +1334,10 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "dS" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 10
-	},
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "dT" = (
@@ -2354,6 +2365,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "ho" = (
@@ -3091,9 +3108,20 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
 "jB" = (
-/obj/structure/sign/directions/evac{
+/obj/structure/sign/directions/ai_core{
 	dir = 1;
-	pixel_y = 8
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/teleporter{
+	dir = 1;
+	pixel_y = 5
+	},
+/obj/structure/sign/directions/engineering/reactor{
+	dir = 4;
+	pixel_y = -1
+	},
+/obj/structure/sign/directions/engineering/solars{
+	pixel_y = -7
 	},
 /turf/simulated/wall/rshull,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -3454,6 +3482,11 @@
 	dir = 4
 	},
 /obj/structure/transit_tube_pod,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
 "kN" = (
@@ -4437,12 +4470,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
 /obj/structure/window/basic,
+/obj/structure/sign/department/ai{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
 "nK" = (
@@ -4621,10 +4652,9 @@
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
 "oh" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/port_airlock)
+/obj/structure/sign/department/cargo_dock,
+/turf/simulated/wall/r_wall,
+/area/offworld/confinementbeam/station/trawler_airlock)
 "oj" = (
 /obj/structure/lattice,
 /obj/structure/confinement_beam_generator/focus{
@@ -5077,11 +5107,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_observation)
 "pK" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 1
+/obj/machinery/door/airlock/glass_command{
+	name = "Teleporter Access"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -5446,13 +5473,8 @@
 /turf/space,
 /area/offworld/confinementbeam/exterior)
 "rd" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/milspec,
+/obj/machinery/teleport/hub,
+/turf/simulated/floor/tiled/dark,
 /area/offworld/confinementbeam/station/port_airlock)
 "re" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6769,6 +6791,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sign/directions/security{
+	dir = 4;
+	pixel_y = 11;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "vm" = (
@@ -6867,13 +6894,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
 "vy" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
+/obj/machinery/teleport/station,
+/turf/simulated/floor/tiled/dark,
 /area/offworld/confinementbeam/station/port_airlock)
 "vz" = (
 /obj/structure/table/standard,
@@ -8540,10 +8562,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
 "AR" = (
-/obj/structure/sign/directions/evac{
-	dir = 8;
-	pixel_y = 6
-	},
+/obj/structure/sign/department/engine,
 /turf/simulated/wall/rshull,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "AS" = (
@@ -11637,6 +11656,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "KB" = (
@@ -12378,11 +12403,12 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
 "Nc" = (
-/obj/structure/sign/directions/evac{
-	pixel_y = -8
+/obj/machinery/computer/teleporter{
+	dir = 2;
+	pixel_y = 3
 	},
-/turf/simulated/wall/rshull,
-/area/offworld/confinementbeam/station/trawler_airlock)
+/turf/simulated/floor/tiled/dark,
+/area/offworld/confinementbeam/station/port_airlock)
 "Ne" = (
 /obj/item/storage/toolbox/electrical,
 /turf/simulated/floor/plating,
@@ -12470,18 +12496,14 @@
 /turf/simulated/floor/greengrid,
 /area/ai)
 "Nl" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Nn" = (
@@ -13701,10 +13723,7 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
 "Ro" = (
-/obj/structure/sign/directions/evac{
-	dir = 8;
-	pixel_y = 6
-	},
+/obj/structure/sign/department/engine,
 /turf/simulated/wall/rshull,
 /area/offworld/confinementbeam/station/port_equipment)
 "Rs" = (
@@ -13805,9 +13824,21 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "RL" = (
-/obj/structure/sign/directions/evac{
+/obj/structure/sign/directions/ai_core{
 	dir = 8;
-	pixel_y = 6
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/engineering/reactor{
+	dir = 4;
+	pixel_y = 5
+	},
+/obj/structure/sign/directions/engineering/solars{
+	dir = 8;
+	pixel_y = -1
+	},
+/obj/structure/sign/directions/teleporter{
+	dir = 8;
+	pixel_y = -7
 	},
 /turf/simulated/wall,
 /area/offworld/confinementbeam/station/storage)
@@ -14148,6 +14179,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
+/obj/item/radio/beacon,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "SI" = (
@@ -16136,12 +16168,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
 "Zd" = (
-/obj/effect/floor_decal/borderfloor,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Ze" = (
@@ -16266,6 +16296,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/sign/department/shield{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
@@ -16401,12 +16434,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "ZW" = (
-/obj/structure/sign/directions/evac{
-	dir = 8;
-	pixel_y = 6
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
 	},
-/turf/simulated/wall/rshull,
-/area/offworld/confinementbeam/station/hallway)
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/port_airlock)
 "ZX" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -28450,7 +28485,7 @@ oJ
 Lo
 Vf
 Vf
-Vf
+dB
 bB
 vQ
 tE
@@ -38691,7 +38726,7 @@ sc
 Oz
 PJ
 rd
-dS
+of
 Tz
 Po
 Po
@@ -39014,8 +39049,8 @@ PJ
 DV
 cX
 PJ
-vy
-oh
+Nc
+of
 PJ
 BD
 GN
@@ -39175,9 +39210,9 @@ DF
 gk
 QT
 Nl
-wf
+PJ
+YY
 pK
-EX
 PJ
 hV
 hV
@@ -39338,7 +39373,7 @@ of
 of
 KA
 hn
-of
+ZW
 fN
 PJ
 BD
@@ -40147,7 +40182,7 @@ TV
 of
 of
 of
-er
+dS
 of
 fN
 PJ
@@ -40483,7 +40518,7 @@ cV
 cV
 sY
 Vb
-nd
+oh
 oK
 Fg
 YO
@@ -41135,7 +41170,7 @@ jB
 gV
 JD
 gV
-Nc
+qv
 qv
 qv
 Li
@@ -45181,7 +45216,7 @@ bV
 bV
 bV
 bV
-ua
+bV
 ng
 TD
 Xk
@@ -47776,7 +47811,7 @@ UK
 kK
 kK
 zK
-ZW
+kK
 kK
 nu
 YM

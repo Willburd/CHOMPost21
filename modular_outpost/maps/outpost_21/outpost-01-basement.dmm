@@ -5247,7 +5247,7 @@
 "ajO" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "ajP" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/muriki,
@@ -22526,11 +22526,8 @@
 /turf/simulated/wall,
 /area/maintenance/med)
 "aPG" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/item/airlock_brace,
-/obj/machinery/door/airlock/maintenance/medical,
-/turf/simulated/floor/tiled/techfloor,
-/area/mine/explored/muriki/cave/med)
+/turf/simulated/wall,
+/area/constructionsite/medical)
 "aPH" = (
 /turf/simulated/wall,
 /area/medical/morgue)
@@ -22992,7 +22989,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "aQH" = (
 /obj/structure/morgue{
 	dir = 2
@@ -23790,13 +23787,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
 "aSt" = (
-/obj/machinery/button/crematorium{
-	id = "medcrem";
-	pixel_x = 32;
-	req_access = null
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
 	},
-/turf/simulated/floor/tiled/dark,
-/area/medical/morgue)
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/chem_storage)
 "aSu" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -24323,6 +24321,12 @@
 /area/medical/morgue)
 "aTq" = (
 /obj/structure/table/steel,
+/obj/machinery/button/crematorium{
+	id = "medcrem";
+	pixel_x = -7;
+	req_access = null;
+	pixel_y = 7
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/morgue)
 "aTr" = (
@@ -24977,6 +24981,9 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/signnew/corrosives{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aUB" = (
@@ -25175,66 +25182,191 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/sign/signnew/explosives{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aUZ" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/basic/full,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aVa" = (
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/corner/blue/full{
-	dir = 8
+/obj/item/reagent_containers/chem_canister/aluminum{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/aluminum{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/calcium{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/calcium{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = 7;
+	pixel_y = -2
 	},
 /obj/structure/table/rack/shelf,
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aVb" = (
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Old Hazop Suit Storage"
+/obj/item/reagent_containers/chem_canister/chlorine{
+	pixel_x = -7;
+	pixel_y = 13
 	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
+/obj/item/reagent_containers/chem_canister/chlorine{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/copper{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/copper{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/ethanol{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/ethanol{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/fluorine{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/fluorine{
+	pixel_x = 7;
+	pixel_y = -2
 	},
 /obj/structure/table/rack/shelf,
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aVc" = (
 /obj/machinery/computer/rdconsole/medical,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Old Hazop Suit Storage"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aVd" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /obj/machinery/r_n_d/protolathe/medical,
 /turf/simulated/floor/tiled/dark,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aVe" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
+/obj/item/reagent_containers/chem_canister/hydrogen{
+	pixel_x = -7;
+	pixel_y = 13
 	},
-/obj/structure/closet/firecloset/full,
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/obj/item/reagent_containers/chem_canister/hydrogen{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/iron{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/iron{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/lithium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/lithium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/mercury{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/mercury{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aVf" = (
-/obj/effect/floor_decal/corner/blue/full{
-	dir = 1
+/obj/structure/sign/signnew/flammables{
+	pixel_x = 32
 	},
-/obj/structure/closet/firecloset/full,
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aVg" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -25621,11 +25753,23 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aVL" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aVM" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "medding";
@@ -25635,11 +25779,17 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aVN" = (
 /turf/simulated/wall/r_wall,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aVO" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -25796,6 +25946,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/sign/signnew/canisters{
+	pixel_y = -32;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWf" = (
@@ -25812,8 +25966,11 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aWg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -25826,17 +25983,29 @@
 	},
 /obj/machinery/light_switch{
 	dir = 4;
-	pixel_x = -28;
-	pixel_y = -28
+	pixel_x = -26;
+	pixel_y = -25
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aWh" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aWi" = (
 /obj/item/radio/intercom/department/medbay{
 	dir = 4;
@@ -25850,8 +26019,14 @@
 	name = "Station Intercom (General)";
 	pixel_x = 32
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aWj" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Power - Incinerator";
@@ -26261,48 +26436,148 @@
 	dir = 1
 	},
 /obj/machinery/light,
-/obj/effect/floor_decal/corner/blue/full,
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aWU" = (
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
+/obj/item/reagent_containers/chem_canister/radium{
+	pixel_x = -7;
+	pixel_y = 13
 	},
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/obj/item/reagent_containers/chem_canister/radium{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sacid{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sacid{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aWV" = (
+/obj/structure/sign/warning/compressed_gas{
+	pixel_y = -32
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/structure/bed/chair/wheelchair,
+/obj/structure/closet/firecloset/full/double,
 /turf/simulated/floor/tiled/dark,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aWW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/structure/bed/chair/wheelchair,
+/obj/structure/closet/radiation,
 /turf/simulated/floor/tiled/dark,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "aWX" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
+/obj/item/reagent_containers/chem_canister/sodium{
+	pixel_x = -7;
+	pixel_y = 13
 	},
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/obj/item/reagent_containers/chem_canister/sodium{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sulfur{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sulfur{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aWY" = (
-/obj/machinery/light,
-/obj/effect/floor_decal/corner/blue/full{
-	dir = 4
+/obj/item/reagent_containers/chem_canister/tungsten{
+	pixel_x = -7;
+	pixel_y = 13
 	},
-/obj/structure/closet/firecloset/full,
-/turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/obj/item/reagent_containers/chem_canister/tungsten{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/machinery/light,
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/chem_storage)
 "aWZ" = (
 /obj/structure/stairs/spawner/west,
 /turf/simulated/floor/tiled/steel,
@@ -41856,7 +42131,7 @@
 	name = "Medbay"
 	},
 /turf/simulated/wall/r_wall,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "bAW" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -43968,63 +44243,25 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "bFl" = (
 /obj/machinery/alarm/freezer{
 	pixel_y = 26
 	},
-/obj/machinery/floodlight,
 /obj/machinery/light_switch{
 	pixel_x = -12;
 	pixel_y = 30
 	},
-/obj/structure/sign/signnew/corrosives{
-	pixel_x = 32
-	},
+/obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/techfloor,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "bFm" = (
-/obj/structure/table/rack,
-/obj/item/reagent_containers/chem_canister/silicon{
-	pixel_x = 7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/carbon{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/hydrogen{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/iron{
-	pixel_x = 7;
-	pixel_y = -2
-	},
-/obj/structure/sign/signnew/explosives{
-	pixel_x = 32
-	},
-/obj/item/reagent_containers/chem_canister/carbon{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/silicon{
-	pixel_x = 7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/hydrogen{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/iron{
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/techfloor,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "bFn" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -44037,7 +44274,7 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/dark,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "bFo" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -44054,54 +44291,18 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "bFp" = (
-/obj/structure/table/rack,
-/obj/item/reagent_containers/chem_canister/phosphorus{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/copper{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/chlorine{
-	pixel_x = 7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/calcium{
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Chemical Storage";
 	dir = 1
 	},
-/obj/item/reagent_containers/chem_canister/chlorine{
-	pixel_x = 7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/phosphorus{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/copper{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/calcium{
-	pixel_x = 7;
-	pixel_y = -2
-	},
-/obj/structure/sign/signnew/flammables{
-	pixel_x = 32
-	},
+/obj/structure/closet/radiation,
 /turf/simulated/floor/tiled/techfloor,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "bFq" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/medical,
-/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/mine/explored/muriki/cave/med)
 "bFr" = (
@@ -47824,7 +48025,7 @@
 	dir = 4
 	},
 /turf/simulated/wall,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "cXn" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/deep/indoor/muriki,
@@ -52238,9 +52439,8 @@
 /turf/simulated/floor/tiled/dark/muriki,
 /area/maintenance/cave)
 "fBz" = (
-/obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/white,
-/area/constructionsite/medical)
+/area/medical/chem_storage)
 "fBA" = (
 /obj/effect/mine/claymore{
 	dir = 4
@@ -56950,6 +57150,10 @@
 	outdoors = 1
 	},
 /area/mine/explored/muriki/river/north)
+"iDX" = (
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/white,
+/area/medical/chem_storage)
 "iEy" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/random/maintenance,
@@ -60013,44 +60217,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/table/rack,
-/obj/item/reagent_containers/chem_canister/sodium{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/sugar{
-	pixel_x = 7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/fluorine{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/radium{
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central6{
 	pixel_x = 32
 	},
-/obj/item/reagent_containers/chem_canister/sugar{
-	pixel_x = 7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/sodium{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/fluorine{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/radium{
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /turf/simulated/floor/tiled/techfloor,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "kwv" = (
 /turf/simulated/mineral/alt/muriki,
 /area/maintenance/civ/closet)
@@ -63410,48 +63581,16 @@
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "mBJ" = (
-/obj/structure/table/rack,
-/obj/item/reagent_containers/chem_canister/nitrogen{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/oxygen{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/ethanol{
-	pixel_x = 7;
-	pixel_y = 13
-	},
 /obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
-/obj/item/reagent_containers/chem_canister/sacid{
-	pixel_x = 7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/ethanol{
-	pixel_x = 7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/nitrogen{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/reagent_containers/chem_canister/oxygen{
-	pixel_x = -7;
-	pixel_y = -2
-	},
-/obj/item/reagent_containers/chem_canister/sacid{
-	pixel_x = 7;
-	pixel_y = -2
-	},
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/techfloor,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "mBK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
 /obj/effect/floor_decal/industrial/warning{
@@ -63876,10 +64015,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "mPb" = (
@@ -69419,7 +69554,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "qmz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -70580,7 +70715,11 @@
 	dir = 1
 	},
 /obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark,
@@ -73186,17 +73325,9 @@
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/waste)
 "spF" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/sign/warning/compressed_gas{
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay2)
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/cave)
 "spR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -74156,17 +74287,8 @@
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "sXl" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/sign/signnew/canisters{
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay2)
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/med)
 "sXB" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -76119,7 +76241,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
-/area/medical/chem_storage)
+/area/constructionsite/medical)
 "unj" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -122865,10 +122987,10 @@ aPD
 aPD
 aPD
 aPD
-aPL
+sXl
 aUb
-aPL
-aUZ
+sXl
+srp
 aUZ
 aWf
 aVN
@@ -123027,9 +123149,9 @@ aRA
 aSh
 aSO
 boH
-aPL
+sXl
 aUc
-aPL
+sXl
 aVa
 aVK
 aWg
@@ -123189,11 +123311,11 @@ aRB
 aSi
 aSi
 aTl
-aPL
+sXl
 aUd
-aPL
+sXl
 aVb
-aVL
+aSt
 aWh
 aWU
 aVN
@@ -123351,11 +123473,11 @@ aRC
 aSj
 aSP
 aTm
-aPL
+sXl
 aUc
-aPL
+sXl
 aVc
-aVL
+iDX
 fBz
 aWV
 aVN
@@ -123513,11 +123635,11 @@ aRD
 aSi
 aSi
 aTn
-aPL
+sXl
 aUc
-aPL
+sXl
 aVd
-aVL
+fBz
 ajO
 aWW
 aVN
@@ -123675,11 +123797,11 @@ aRE
 aSk
 aSk
 bpr
-aPL
+sXl
 aUc
-aPL
+sXl
 aVe
-aVL
+aSt
 aVL
 aWX
 aVN
@@ -123830,16 +123952,16 @@ aLI
 aMN
 aNy
 jtX
+aPc
+aPG
+aPG
+aPG
+aPG
+aPG
+aPG
 sXl
-srp
-srp
-srp
-srp
-srp
-srp
-aPL
 aUc
-aPL
+sXl
 aVf
 aVM
 aWi
@@ -124001,8 +124123,8 @@ bFo
 bFn
 bFq
 aUc
-aPL
-aPL
+sXl
+aVN
 aVN
 aVN
 aVN
@@ -124155,13 +124277,13 @@ aMO
 aNA
 aOi
 aPc
-srp
+aPG
 bFl
 bFm
 kwo
 mBJ
 bFp
-aPL
+sXl
 aUe
 aUB
 aPL
@@ -124316,14 +124438,14 @@ aLL
 aMP
 aNy
 aOj
-spF
-srp
-srp
-srp
+aPc
+aPG
+aPG
+aPG
 cWh
-srp
-srp
-aPL
+aPG
+aPG
+sXl
 aPL
 aUc
 aPL
@@ -124339,7 +124461,7 @@ dGU
 aiy
 aeD
 aeD
-aeD
+spF
 aeD
 aeD
 nyB
@@ -126426,8 +126548,8 @@ aPi
 aPH
 aQS
 aRN
-aSt
-aPG
+aRL
+bFq
 mQa
 phk
 mQa

@@ -725,6 +725,10 @@
 	c_tag = "EXT - Med Roof. Backup Generators";
 	dir = 8
 	},
+/obj/structure/sign/warning/engineering_access{
+	name = "\improper BACKUP GENERATOR";
+	pixel_x = 32
+	},
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/medical)
 "acy" = (
@@ -841,9 +845,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
 "afv" = (
-/obj/structure/sign/nosmoking_2{
-	pixel_x = -32
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/camera/network/medbay{
 	dir = 4;
@@ -851,6 +852,10 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
+	},
+/obj/structure/sign/warning/engineering_access{
+	name = "\improper BACKUP GENERATOR";
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -1764,6 +1769,11 @@
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
+	},
+/obj/structure/sign/warning/engineering_access{
+	name = "\improper BACKUP GENERATOR";
+	pixel_x = 32;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/medical)
@@ -2873,6 +2883,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
+	},
+/obj/structure/sign/warning/engineering_access{
+	name = "\improper BACKUP GENERATOR";
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
@@ -9126,9 +9140,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 2
-	},
+/obj/effect/floor_decal/corner/green/bordercorner,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -9901,11 +9913,6 @@
 /area/maintenance/secelev)
 "ezb" = (
 /obj/effect/floor_decal/rust,
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 28;
-	pixel_y = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 10
 	},
@@ -11248,6 +11255,9 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
+	},
+/obj/structure/sign/warning/high_voltage{
+	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
@@ -13432,6 +13442,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/warning/high_voltage{
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "gro" = (
@@ -14533,6 +14546,9 @@
 /area/maintenance/substation/phoronics)
 "gZe" = (
 /obj/machinery/door/firedoor/glass/hidden,
+/obj/structure/sign/hydro{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/old_tile,
 /area/rnd/hallway/upper)
 "gZh" = (
@@ -14670,6 +14686,9 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
+	},
+/obj/structure/sign/nosmoking_2{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -17505,6 +17524,16 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
+"iBD" = (
+/obj/structure/sign/directions/teleporter{
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/engineering/solars{
+	dir = 4;
+	pixel_y = 5
+	},
+/turf/simulated/wall/r_wall,
+/area/teleporter/engineering)
 "iBK" = (
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/muriki,
 /area/muriki/processor/pools/pylorus)
@@ -25089,11 +25118,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -25105,6 +25129,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
+	},
+/obj/structure/sign/department/sci{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
@@ -29210,6 +29237,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/structure/sign/department/chem{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "osA" = (
@@ -29314,6 +29344,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/gravgen)
+"ouX" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/structure/sign/hydro{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/upper)
 "ovc" = (
 /turf/simulated/mineral/alt/muriki,
 /area/mine/unexplored/muriki/mountaintopnorth)
@@ -30087,6 +30126,17 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
+/area/rnd/hallway/upper)
+"oMC" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/structure/sign/warning/engineering_access{
+	name = "\improper BACKUP GENERATOR";
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/old_tile,
 /area/rnd/hallway/upper)
 "oMK" = (
 /obj/structure/railing/grey{
@@ -31598,6 +31648,10 @@
 "pyX" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -25
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "pzb" = (
@@ -31719,6 +31773,9 @@
 	},
 /obj/machinery/disposal,
 /obj/effect/floor_decal/milspec/hatchmarks,
+/obj/structure/sign/warning/high_voltage{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "pCH" = (
@@ -32653,6 +32710,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargrecycle)
+"qfM" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/sign/warning/engineering_access{
+	name = "\improper BACKUP GENERATOR";
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/upper)
 "qfN" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -38124,9 +38191,7 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 2
-	},
+/obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
@@ -38154,6 +38219,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
+"sPq" = (
+/obj/structure/sign/directions/engineering/solars{
+	dir = 8;
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/teleporter{
+	dir = 8;
+	pixel_y = 5
+	},
+/turf/simulated/wall,
+/area/hallway/secondary/engineering_hallway)
 "sPK" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -45933,11 +46009,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/sign/warning/engineering_access{
+	name = "\improper BACKUP GENERATOR";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
@@ -46508,6 +46585,10 @@
 "wWT" = (
 /obj/structure/railing{
 	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
 	},
 /turf/simulated/open,
 /area/quartermaster/cargupbreak)
@@ -47824,6 +47905,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/sign/hydrostorage{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
@@ -68769,7 +68853,7 @@ uKp
 uDM
 rEM
 vRv
-rEM
+iBD
 rEM
 rEM
 rEM
@@ -70875,7 +70959,7 @@ pIT
 pIT
 pIT
 tAt
-pIT
+sPq
 krn
 krn
 krn
@@ -88427,7 +88511,7 @@ xwr
 qEo
 veA
 hca
-ivW
+qfM
 tMg
 tMg
 tMg
@@ -100195,7 +100279,7 @@ nDB
 nDB
 dSK
 dSK
-xJq
+ouX
 mVd
 gyU
 lVl
@@ -100680,7 +100764,7 @@ gtV
 fzY
 uvN
 lVM
-rAT
+oMC
 rgW
 jxV
 sbv
