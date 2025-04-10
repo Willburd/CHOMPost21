@@ -14,7 +14,7 @@
 	volume = 50
 	var/trash = null
 	var/cant_open = 0
-	var/cant_chance = 0
+	var/cant_chance = 1 // Outpost 21 edit - This is genuinely just kinda funny
 
 	/// Yims
 	food_can_insert_micro = TRUE
