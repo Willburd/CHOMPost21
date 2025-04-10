@@ -849,7 +849,7 @@
 	display_name = "traffic officer's jacket"
 	description = "A high visibility jacket for security personnel inclined to direct vehicles rather than people."
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/neo_police
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE)
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN) // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 
 /datum/gear/suit/jacket_modular
