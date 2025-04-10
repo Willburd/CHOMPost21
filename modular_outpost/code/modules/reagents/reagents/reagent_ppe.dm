@@ -1,7 +1,13 @@
 /datum/reagents/proc/ppe_affect(var/mob/living/user)
+	if(QDELETED(user))
+		return
+	if(QDELETED(my_atom))
+		return
 	if(!isliving(user))
 		return
 	if(!reagent_list.len)
+		return
+	if(!istype(my_atom,/obj/item/reagent_containers/glass)) // Limited to glass for now to avoid milking someone and getting ppe blinded or something
 		return
 	if(prob(90))
 		return
