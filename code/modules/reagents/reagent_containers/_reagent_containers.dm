@@ -64,6 +64,7 @@
 	var/trans = target.reagents.trans_to_obj(src, target:amount_per_transfer_from_this)
 	// to_chat(user, span_notice("You fill [src] with [trans] units of the contents of [target]."))
 	balloon_alert(user, "[trans] units transfered to \the [src]") // CHOMPEdit - Changed to balloon alert
+	target.reagents.ppe_affect(user) // Outpost 21 edit - Check PPE
 	return 1
 
 /obj/item/reagent_containers/proc/standard_splash_mob(var/mob/user, var/mob/target) // This goes into afterattack
@@ -164,6 +165,7 @@
 	var/trans = reagents.trans_to(target, amount_per_transfer_from_this)
 	// to_chat(user, span_notice("You transfer [trans] units of the solution to [target]."))
 	balloon_alert(user, "transfered [trans] units to [target]") // CHOMPEdit - Balloon alerts! They're the future, I tell you.
+	target.reagents.ppe_affect(user) // Outpost 21 edit - Check PPE
 	return 1
 
 /obj/item/reagent_containers/proc/liquid_belly_check()

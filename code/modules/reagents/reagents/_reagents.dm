@@ -46,6 +46,7 @@
 
 	var/from_belly = FALSE
 	var/wiki_flag = 0 // Bitflags for secret/food/drink reagent sorting
+	var/ppe_flags = 0 // Outpost 21 edit - PPE affecting chems
 
 /datum/reagent/proc/remove_self(var/amount) // Shortcut
 	if(holder)

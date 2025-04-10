@@ -15,6 +15,8 @@
 	glass_name = "tomato juice"
 	glass_desc = "Are you sure this is tomato juice?"
 
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/blood/initialize_data(var/newdata)
 	..()
 	if(data && data["blood_colour"])
@@ -238,6 +240,8 @@
 	glass_name = REAGENT_ID_WATER
 	glass_desc = "The father of all refreshments."
 
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/water/touch_turf(var/turf/simulated/T)
 	if(!istype(T))
 		return
@@ -334,6 +338,8 @@
 
 	glass_name = "welder fuel"
 	glass_desc = "Unless you are an industrial tool, this is probably not safe for consumption."
+
+	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_PHORONGAS // Outpost 21 edit - PPE reagents
 
 /datum/reagent/fuel/touch_turf(var/turf/T, var/amount)
 	..()

@@ -12,6 +12,8 @@
 	metabolism = 0.01
 	mrate_static = TRUE
 
+	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
+
 /datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/new_size = clamp((M.size_multiplier + 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
@@ -25,6 +27,8 @@
 	color = "#800080"
 	metabolism = 0.01
 	mrate_static = TRUE
+
+	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/new_size = clamp((M.size_multiplier - 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
@@ -40,6 +44,8 @@
 	color = "#00FFFF"
 	metabolism = 0.01 //One unit will be just enough to bring someone from 200% to 100%
 	mrate_static = TRUE
+
+	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/normalcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.size_multiplier > RESIZE_NORMAL)
@@ -57,6 +63,8 @@
 	color = "#1E90FF"
 	overdose = REAGENTS_OVERDOSE
 
+	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
+
 /datum/reagent/sizeoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.make_dizzy(1)
 	if(!M.confused) M.confused = 1
@@ -73,6 +81,8 @@
 	reagent_state = LIQUID
 	color = "#0E900E"
 	overdose = REAGENTS_OVERDOSE
+
+	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/ickypak/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.make_dizzy(1)
@@ -95,6 +105,8 @@
 	reagent_state = LIQUID
 	color = "#EF77E5"
 	overdose = REAGENTS_OVERDOSE
+
+	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/unsorbitol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.make_dizzy(1)
