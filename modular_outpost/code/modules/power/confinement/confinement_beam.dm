@@ -329,6 +329,7 @@ OL|IL|OL
 	B.confinement_data = WF
 	// needs to call on_range() which only happens on the end of the beam... on a turf... so if it's outside the map it does nothing
 	// Yes this is aiming one turf closer than edge of map, if I don't do this then it goes off the edge and never calls on_range()
+	var/angle = dir2angle(data.dir)
 	switch(data.dir)
 		if(NORTH)
 			B.range = (world.maxy - start.y)-1
@@ -338,7 +339,9 @@ OL|IL|OL
 			B.range = (world.maxx - start.x)-1
 		if(WEST)
 			B.range = start.x - 2
-	B.fire(dir2angle(data.dir))
+	// fire the actual beam
+	B.beam_duration = 3 SECONDS
+	B.fire(angle)
 
 /obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
 	SHOULD_NOT_OVERRIDE(TRUE)

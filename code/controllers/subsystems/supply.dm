@@ -15,6 +15,8 @@ SUBSYSTEM_DEF(supply)
 	var/cash_tax = 0.05 //  Outpost 21 edit - Amount REMAINING after taxing. We have higher money conversion so exports are more valuable, and taxes on raw cash export
 	var/watts_sold = 0 // Outpost 21 edit - selling excess power
 	var/points_per_watt = 10 MEGAWATTS // Outpost 21 edit - amount of watts needed to get a supply point
+	var/warheads_sold = 0 // Outpost 21 edit - selling TTVs
+	var/warheads_value = 0 // Outpost 21 edit - selling TTVs
 	//control
 	var/ordernum = 0						// Start at zero, it's per-shift tracking
 	var/list/shoppinglist = list()			// Approved orders
@@ -148,9 +150,18 @@ SUBSYSTEM_DEF(supply)
 
 					// Outpost 21 edit begin - Selling slime cores
 					if(istype(A, /obj/item/slime_extract))
-						//var/obj/item/slime_extract/slime_stuff = A
-						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was slime_stuff.supply_conversion_value
+						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A)
 						EC.value += EC.contents[EC.contents.len]["value"]
+					// Outpost 21 edit end
+
+					// Outpost 21 edit begin - Selling TTVs
+					if(istype(A, /obj/item/transfer_valve))
+						EC.contents[EC.contents.len]["object"] = "\proper TTV Warhead"
+						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A)
+						EC.value += EC.contents[EC.contents.len]["value"]
+						if(EC.contents[EC.contents.len]["value"] > 0)
+							warheads_sold++
+							warheads_value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
 					// CHOMPedit begin - Selling engineered organs
@@ -168,22 +179,6 @@ SUBSYSTEM_DEF(supply)
 							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was organ_stuff.supply_conversion_value
 							EC.value += EC.contents[EC.contents.len]["value"]
 					// CHOMPedit end
-
-					// Outpost 21 edit begin - Selling vaccines
-					if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
-						var/obj/item/reagent_containers/glass/bottle/vaccine/sale_bottle = A
-						if(!istype(CR,/obj/structure/closet/crate/freezer))
-							EC.contents = list(
-								"error" = "Error: Product was improperly packaged. Send contents in freezer crate to preserve them for transport."
-							)
-						else if(sale_bottle.reagents.reagent_list.len != 1 || sale_bottle.reagents.get_reagent_amount( REAGENT_ID_VACCINE) < sale_bottle.volume)
-							EC.contents = list(
-								"error" = "Error: Tainted product in batch. Was opened, contaminated, or was not full. Payment rendered null under terms of agreement."
-							)
-						else
-							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was 5
-							EC.value += EC.contents[EC.contents.len]["value"]
-					// Outpost 21 edit end
 
 					// Outpost 21 edit begin - Selling food
 					if(istype(A, /obj/item/reagent_containers/food))
@@ -577,6 +572,44 @@ SUBSYSTEM_DEF(supply)
 		for(var/tech in sample_stuff.valid_techs)
 			level += sample_stuff.origin_tech["[tech]"] * 5
 		return level
+	// Selling boomboom
+	if(istype(A, /obj/item/transfer_valve))
+		var/obj/item/transfer_valve/TTV = A
+		if(!TTV.tank_one || !TTV.tank_two)
+			return 0
+		var/datum/gas_mixture/faketank = new()
+		QDEL_IN(faketank,5)
+
+		// Highest pressure in tank 1!
+		var/obj/item/tank/tone = TTV.tank_one
+		var/obj/item/tank/ttwo = TTV.tank_two
+		if(tone.air_contents.return_pressure() < ttwo.air_contents.return_pressure())
+			tone = TTV.tank_two
+			ttwo = TTV.tank_one
+		faketank.volume = tone.air_contents.volume + ttwo.air_contents.volume
+		faketank.copy_from(tone.air_contents)
+		var/faketank_integrity = tone.integrity
+
+		// Perform the explosion
+		faketank.merge(ttwo.air_contents)
+		faketank.react()
+		var/pressure = faketank.return_pressure()
+		if(pressure <= TANK_FRAGMENT_PRESSURE)
+			return 0
+		if(faketank_integrity > 7)
+			return 0
+		faketank.react()
+		faketank.react()
+		faketank.react()
+		pressure = faketank.return_pressure()
+
+		var/strength = (pressure-TANK_FRAGMENT_PRESSURE)/TANK_FRAGMENT_SCALE
+		var/mult = ((faketank.volume/140)**(1/2)) * (faketank.total_moles**(2/3))/((29*0.64) **(2/3)) //Don't ask me what this is, see tanks.dm
+
+		var/dev = round((mult*strength)*0.15)
+		var/heavy = round((mult*strength)*0.35)
+		var/light = round((mult*strength)*0.80)
+		return round(dev + (heavy/2) + (light/3),1)
 	return 0
 
 /datum/controller/subsystem/supply/proc/get_reagent_sale_value(var/datum/reagent/R)

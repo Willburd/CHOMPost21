@@ -23,6 +23,8 @@
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
 
+	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/drugs/affect_blood(mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return

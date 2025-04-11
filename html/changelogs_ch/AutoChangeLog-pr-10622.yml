@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - rscadd: "explo chassis 'bulwark'"
+  - rscadd: "moves eye layer under bellies for borgs"

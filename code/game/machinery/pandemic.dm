@@ -164,7 +164,7 @@
 
 			var/obj/item/reagent_containers/glass/bottle/vaccine/B = create_culture(vaccine_name, REAGENT_ID_VACCINE, 200, TRUE)
 			B.reagents.add_reagent(REAGENT_ID_VACCINE, 15, list(vaccine_type))
-			
+
 			if(beaker && beaker.reagents && length(beaker.reagents.reagent_list))
 				beaker.reagents.remove_reagent(REAGENT_ID_BLOOD, 5)
 				if(!length(beaker.reagents.reagent_list))

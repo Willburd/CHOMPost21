@@ -13,6 +13,8 @@
 	var/strength = 4 // How much damage it deals per unit
 	var/skin_danger = 0.2 // The multiplier for how effective the toxin is when making skin contact.
 
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/poison_strength = strength * M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
@@ -46,6 +48,8 @@
 	color = "#792300"
 	strength = 10
 
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/toxin/amatoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	// Trojan horse. Waits until most of the toxin has gone through the body before dealing the bulk of it in one big strike.
 	if(volume < max_dose * 0.2)
@@ -59,6 +63,8 @@
 	reagent_state = LIQUID
 	color = "#003333"
 	strength = 10
+
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/carpotoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -95,6 +101,8 @@
 	description = "An exceptionally flammable molecule formed from deuterium synthesis."
 	strength = 80
 	var/fire_mult = 30
+
+	ppe_flags = REAGENT_PPE_PHORONGAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/hydrophoron/touch_mob(var/mob/living/L, var/amount)
 	..()
@@ -139,6 +147,8 @@
 	color = "#2CE893"
 	strength = 5
 
+	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/toxin/phoron
 	name = REAGENT_PHORON
 	id = REAGENT_ID_PHORON
@@ -149,6 +159,8 @@
 	strength = 30
 	touch_met = 5
 	skin_danger = 1
+
+	ppe_flags = REAGENT_PPE_PHORONGAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/phoron/touch_mob(var/mob/living/L, var/amount)
 	..()
@@ -189,6 +201,8 @@
 	color = "#CF3600"
 	strength = 15
 	metabolism = REM * 0.5
+
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -319,6 +333,8 @@
 	strength = 3
 	mrate_static = TRUE
 
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/toxin/zombiepowder/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 	if(alien == IS_DIONA)
@@ -344,6 +360,8 @@
 	metabolism = REM * 0.75
 	strength = 2
 	mrate_static = TRUE
+
+	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/lichpowder/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -412,6 +430,8 @@
 	color = "#49002E"
 	strength = 4
 
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/toxin/plantbgone/touch_turf(var/turf/T)
 	..()
 	if(istype(T, /turf/simulated/wall))
@@ -478,6 +498,8 @@
 	power = 10
 	meltdose = 4
 
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/acid/digestive
 	name = REAGENT_STOMACID
 	id = REAGENT_ID_STOMACID
@@ -489,6 +511,8 @@
 	meltdose = 30
 	wiki_flag = WIKI_SPOILER
 
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
 /datum/reagent/acid/diet_digestive
 	name = REAGENT_DIETSTOMACID
 	id = REAGENT_ID_DIETSTOMACID
@@ -499,6 +523,8 @@
 	power = 0.4
 	meltdose = 150
 	wiki_flag = WIKI_SPOILER
+
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/thermite/venom
 	name = REAGENT_THERMITEV
@@ -531,6 +557,8 @@
 	color = "#B31008"
 	filtered_organs = list(O_SPLEEN)
 	wiki_flag = WIKI_SPOILER
+
+	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/condensedcapsaicin/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)

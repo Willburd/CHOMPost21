@@ -18,11 +18,21 @@
 	VAR_PRIVATE/last_health = 0
 	VAR_PRIVATE/max_health = 0
 
+	VAR_PRIVATE/record_size = 25
+	VAR_PRIVATE/list/history
+
 /obj/structure/confinement_beam_generator/control_box/Initialize(mapload)
 	. = ..()
 	START_PROCESSING(SSobj, src)
+
 	data = new()
 	data.origin_machine = WEAKREF(src)
+
+	history = list()
+	history["current"] = list()
+	history["maximum"] = list()
+	history["health"] = list()
+
 	check_focus_data() // Sets initial temps
 
 /obj/structure/confinement_beam_generator/control_box/Destroy()
@@ -36,6 +46,20 @@
 
 /obj/structure/confinement_beam_generator/control_box/process()
 	pulse(null,dir) // Pulse ourselves, as we start the chain...
+
+	// Update graph
+	var/list/temps = history["current"]
+	temps += last_temp
+	if(temps.len > record_size)
+		temps.Cut(1, 2)
+	var/list/maxes = history["maximum"]
+	maxes += last_max
+	if(maxes.len > record_size)
+		maxes.Cut(1, 2)
+	var/list/hps = history["health"]
+	hps += last_health / max_health
+	if(hps.len > record_size)
+		hps.Cut(1, 2)
 
 /obj/structure/confinement_beam_generator/control_box/pulse(var/datum/weakref/WF)
 	// If in a valid state, attempt to pulse the beam's machinery
@@ -128,6 +152,11 @@
 		return
 	tgui_interact(user)
 
+/obj/structure/confinement_beam_generator/control_box/attack_ghost(mob/user)
+	if(is_admin(user))
+		return ..()
+	return
+
 /obj/structure/confinement_beam_generator/control_box/attack_hand(user as mob)
 	if(..())
 		return
@@ -152,6 +181,7 @@
 		"calibrating" = calibration_lock,
 		"target_z" = data.target_z,
 		"target_list" = list(),
+		"history" = history,
 		"last_temp" = last_temp,
 		"max_temp" = last_max,
 		"last_watt" = last_watt,

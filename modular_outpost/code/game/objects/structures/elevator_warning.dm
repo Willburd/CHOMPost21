@@ -1,7 +1,7 @@
 /obj/machinery/elevator_warning
 	name = "elevator warning light"
 	desc = "Flashes when the bunker cargo elevator is in motion!"
-	icon = 'icons/obj/elevator_warning.dmi'
+	icon = 'modular_outpost/icons/obj/elevator_warning.dmi'
 	icon_state = "base_off"
 	light_color = "#eccb0d"
 	anchored = TRUE

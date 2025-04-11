@@ -1,3 +1,4 @@
+import React from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
@@ -51,7 +52,7 @@ export const PanDEMIC = () => {
     show_strains,
   } = data;
 
-  let emptyPlaceholder: JSX.Element | null = null;
+  let emptyPlaceholder: React.JSX.Element | null = null;
 
   /* Outpost 21 edit being - Split viro machines, show antibodies */
   if (show_strains) {

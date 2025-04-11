@@ -10,9 +10,11 @@
 	hud_state = "laser_overcharge"
 	range = 1000 // MUST hit the edge of map
 
-	muzzle_type = /obj/effect/projectile/muzzle/laser_confinement
+	muzzle_type = null // /obj/effect/projectile/muzzle/laser_confinement
 	tracer_type = /obj/effect/projectile/tracer/laser_confinement
-	impact_type = /obj/effect/projectile/impact/laser_confinement
+	impact_type = null // /obj/effect/projectile/impact/laser_confinement
+
+	can_miss = FALSE
 
 	var/datum/weakref/confinement_data = null
 

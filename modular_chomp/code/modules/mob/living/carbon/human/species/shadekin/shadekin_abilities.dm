@@ -104,7 +104,7 @@
 */
 
 /datum/power/shadekin/dark_respite
-	name = "Dark Respite (Only in Dark)"
+	name = "Dark Respite (Only in the darkness)" // Outpost 21 edit - In DARKNESS not THE dark
 	desc = "Focus yourself on healing any injuries sustained."
 	verbpath = /mob/living/carbon/human/proc/dark_respite
 	ability_icon_state = "ling_anatomic_panacea"
@@ -114,6 +114,8 @@
 	set desc = "Focus yourself on healing any injuries sustained."
 	set category = "Abilities.Shadekin"
 
+	var/ability_cost = 25 // Outpost 21 edit - Give dark respite a cost
+
 	var/datum/species/shadekin/SK = species
 	if(!istype(SK))
 		to_chat(src, span_warning("Only a shadekin can use that!"))
@@ -122,7 +124,7 @@
 	// if(!istype(get_area(src), /area/shadekin)) Outpost 21 edit - In DARKNESS not THE dark
 	var/turf/T = get_turf(src)
 	if(T && T.get_lumcount() > 0.01)
-		to_chat(src, span_warning("Can only trigger Dark Respite in the Dark!"))
+		to_chat(src, span_warning("Can only trigger Dark Respite in the darkness!")) // Outpost 21 edit - In DARKNESS not THE dark
 		return FALSE
 
 	if(stat)
@@ -147,6 +149,7 @@
 		return TRUE
 	to_chat(src, span_notice("You start focusing the Dark on healing yourself. (Leave the dark or trigger the ability again to end this.)"))
 	SK.manual_respite = TRUE
+	shadekin_adjust_energy(-ability_cost) // Outpost 21 edit - Give dark respite a cost
 	add_modifier(/datum/modifier/dark_respite)
 	return TRUE
 
