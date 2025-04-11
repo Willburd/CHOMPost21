@@ -364,6 +364,35 @@
 		end()
 
 
+// tesh encircle
+/datum/station_haunt/tesh_encircle
+	name = "Echo Encircle"
+	var/start_time = 0
+	var/dur = 6 SECONDS
+	var/mob/living/carbon/human/target_mob = null
+
+/datum/station_haunt/tesh_encircle/New()
+	. = ..()
+	start_time = world.time
+	dur = rand(6,16) SECONDS
+	target_mob = SShaunting.get_player_target()
+
+/datum/station_haunt/tesh_encircle/fire()
+	if(world.time > (start_time + dur))
+		end()
+		return
+	if(!target_mob || QDELING(target_mob))
+		end()
+		return
+	for(var/i = 0 to rand(1,3))
+		var/turf/goal_turf = get_turf(target_mob)
+		var/xx = rand(1,8) * (prob(50) ? 1 : -1)
+		var/yy = rand(1,8) * (prob(50) ? 1 : -1)
+		var/turf/simulated/floor/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(istype(T))
+			SSmotiontracker.ping(T,80)
+
+
 // Distant scream
 /datum/station_haunt/distant_scream
 	name = "Far Scream"
@@ -377,7 +406,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
-			M.playsound_local(T, screm, 20)
+			M.playsound_local(T, screm, 40)
 	end()
 
 
@@ -394,7 +423,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/effects/alarms/fire_alarm/fire_alarm_mid.ogg','sound/effects/alarms/decon_alarm.ogg','sound/effects/alarms/engineering_alarm.ogg','sound/effects/alarms/crit_alarm.ogg','sound/effects/alarms/causality_alarm.ogg'))
-			M.playsound_local(T, screm, 20)
+			M.playsound_local(T, screm, 40)
 	end()
 
 
@@ -460,7 +489,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			var/screm = pick(list('sound/goonstation/spooky/Meatzone_BreathingSlow.ogg','sound/goonstation/spooky/Meatzone_BreathingFast.ogg'))
-			M.playsound_local(T, screm, 25)
+			M.playsound_local(T, screm, 65)
 	end()
 
 
