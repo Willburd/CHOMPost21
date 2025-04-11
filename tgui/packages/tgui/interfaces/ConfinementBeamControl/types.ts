@@ -5,6 +5,7 @@ export type Data = {
   pulse_enable: BooleanLike;
   calibrating: BooleanLike;
   target_z: number;
+  history: { current: number[]; maximum: number[]; health: number[] };
   last_temp: number;
   max_temp: number;
   last_watt: string;
@@ -16,7 +17,7 @@ export type Data = {
 };
 
 export type BeamTarget = {
-  id: string | null;
+  id: string;
   x: number;
   y: number;
   z: number;

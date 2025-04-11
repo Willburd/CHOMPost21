@@ -9,6 +9,7 @@
 
 	VAR_PRIVATE/minimum_power = 30000 // Same as an emitter
 	VAR_PRIVATE/datum/confinement_pulse_data/focus_data // Because each focus results in a modified beam...
+	VAR_PRIVATE/light_time = -1
 
 /obj/structure/confinement_beam_generator/focus/Initialize(mapload)
 	. = ..()
@@ -43,6 +44,9 @@
 	var/obj/structure/confinement_beam_generator/lens/inner_lens/L = locate() in get_step(src,dir)
 	if(L && L.is_valid_state())
 		L.pulse(WEAKREF(focus_data))
+		if(light_time < 0)
+			set_light(9,2,"#e9a40f",FALSE)
+		light_time = world.time + 3 SECONDS
 	else
 		fire_narrow_beam(focus_data)
 
@@ -52,6 +56,9 @@
 		CB.check_focus_data(internal_heat,damage_temp,data.power_level,health,max_hp)
 
 /obj/structure/confinement_beam_generator/focus/process()
+	if(light_time >= 0 && light_time < world.time)
+		set_light(0,0,0,FALSE)
+		light_time = -1
 	// If in a valid state, attempt to cool the device using a heat exchanger on either side
 	if(!is_valid_state())
 		return

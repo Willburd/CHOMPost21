@@ -146,6 +146,7 @@
 	var/hud_state_empty = "unknown" // The empty state. DON'T USE _FLASH IN THE NAME OF THE EMPTY STATE STRING, THAT IS ADDED BY THE CODE.
 
 	var/obj/item/ammo_casing/my_case = null
+	var/beam_duration = 5 // Duration of effects before qdel
 
 
 /obj/item/projectile/Initialize(mapload)
@@ -497,7 +498,7 @@
 	if(trajectory && beam_index)
 		var/datum/point/pcache = trajectory.copy_to()
 		beam_segments[beam_index] = pcache
-	generate_hitscan_tracers(null, null, impacting)
+	generate_hitscan_tracers(null, beam_duration, impacting)
 
 /obj/item/projectile/proc/generate_hitscan_tracers(cleanup = TRUE, duration = 5, impacting = TRUE)
 	if(!length(beam_segments))
