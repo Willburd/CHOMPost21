@@ -2,12 +2,12 @@ import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
 import {
   Button,
+  Chart,
   Knob,
   LabeledList,
-  Chart,
-  Stack,
   ProgressBar,
   Section,
+  Stack,
 } from 'tgui-core/components';
 
 import { Calibrating } from './Calibrating';
