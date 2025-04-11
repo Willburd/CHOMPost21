@@ -58,7 +58,6 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/hallucinate,
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/shuttle_move,
-		/datum/station_haunt/lurker,
 		/datum/station_haunt/change_nearby_display,
 		/datum/station_haunt/camera_stare
 		)
@@ -73,6 +72,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/heard_name,
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/distant_scream,
 		/datum/station_haunt/distant_alarm,
 		/datum/station_haunt/open_nearby_door,
@@ -100,6 +100,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/heavy_breath,
 		/datum/station_haunt/hallucinate,
@@ -126,6 +127,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/trip_apc,
 		/datum/station_haunt/lock_doors,
 		/datum/station_haunt/tesh_rush,
+		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/open_nearby_door,
 		/datum/station_haunt/hallucinate,
 		/datum/station_haunt/knock_down,
@@ -155,6 +157,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lurker/pyromanic,
 		/datum/station_haunt/distant_alarm,
 		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
@@ -213,7 +216,8 @@ SUBSYSTEM_DEF(haunting)
 		clear_player_target()
 		return null
 	var/turf/T = get_turf(M) // check for holy turf!
-	if(!T || T.holy)
+	var/area/A = get_area(T) // Dorm check
+	if(!T || T.holy || (A.flag_check(AREA_FORBID_EVENTS)))
 		clear_player_target()
 		return null
 	return M
@@ -273,8 +277,8 @@ SUBSYSTEM_DEF(haunting)
 			return
 		if(world.time < next_haunt_time)
 			return
-		next_haunt_time = world.time + (rand(40,500) SECONDS)
-		var/skip_prob = 90
+		next_haunt_time = world.time + (rand(40,400) SECONDS)
+		var/skip_prob = 80
 		if(world_mode >= MODE_UNNERVING)
 			skip_prob = 85
 		if(world_mode >= MODE_SUPERSPOOKY)
