@@ -817,3 +817,11 @@
 
 /datum/haunting_entity/process()
 	return
+
+
+
+// TODO - entity plans:
+// -Wandering light that proclaims you have gazed upon its beauty and then ashes you in 5 minutes after saying your time in this world is limited, blindness counters
+// -Chasing flesh wall for one person to run from, despawns the flesh eventually
+// -Lighting void somewhere that hurts you
+// -Lyrac moving toward you through walls
