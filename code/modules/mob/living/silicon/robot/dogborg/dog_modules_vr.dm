@@ -527,7 +527,7 @@
 	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
 	R = null
 	last_robot_loc = null
-	..()
+	. = ..()
 
 
 /obj/item/reagent_containers/glass/bucket/cyborg
