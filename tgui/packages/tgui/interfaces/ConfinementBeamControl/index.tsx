@@ -137,9 +137,9 @@ export const ConfinementBeamControl = (props) => {
               >
                 Release Target
               </Button>
-              <Stack>
+              <LabeledList>
                 {target_list.map((value) => (
-                  <Stack.Item key={value.id}>
+                  <LabeledList.Item key={value.id} label={value.id}>
                     <Button
                       disabled={
                         calibrating || !has_gen || !value.enb || target_z !== -1
@@ -153,11 +153,11 @@ export const ConfinementBeamControl = (props) => {
                         })
                       }
                     >
-                      {value.id}
+                      Set
                     </Button>
-                  </Stack.Item>
+                  </LabeledList.Item>
                 ))}
-              </Stack>
+              </LabeledList>
             </Section>
           </>
         )}
