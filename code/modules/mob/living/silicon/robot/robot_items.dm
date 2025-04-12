@@ -151,7 +151,7 @@
 /obj/item/card/robot/Destroy()
 	qdel(dummy_card)
 	dummy_card = null
-	..()
+	. = ..()
 
 /obj/item/card/robot/GetID()
 	return dummy_card
@@ -623,7 +623,7 @@
 
 /obj/item/borg/combat/shield/Destroy()
 	STOP_PROCESSING(SSobj, src)
-	..()
+	. = ..()
 
 /obj/item/borg/combat/shield/attack_self(var/mob/living/user)
 	set_shield_level()
