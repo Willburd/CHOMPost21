@@ -340,7 +340,6 @@ OL|IL|OL
 		if(WEST)
 			B.range = start.x - 2
 	// fire the actual beam
-	B.beam_duration = 3 SECONDS
 	B.fire(angle)
 
 /obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
