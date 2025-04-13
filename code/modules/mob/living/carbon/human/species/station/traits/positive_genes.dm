@@ -17,7 +17,7 @@
 	cost = 5
 	custom_only = FALSE
 
-	is_genetrait = TRUE
+	// is_genetrait = TRUE // Outpost 21 edit - Disabled due to balance issues
 	activity_bounds = DNA_HARDER_BOUNDS
 	hidden = TRUE // Cannot start with superpowers
 
