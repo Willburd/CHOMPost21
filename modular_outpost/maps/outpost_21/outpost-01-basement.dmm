@@ -4068,6 +4068,9 @@
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
+"ahR" = (
+/turf/simulated/wall/r_wall,
+/area/muriki/processor/hall/entrance)
 "ahS" = (
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /turf/simulated/floor/plating,
@@ -11907,9 +11910,6 @@
 "avw" = (
 /turf/simulated/flesh,
 /area/muriki/processor/hall)
-"avx" = (
-/turf/simulated/wall/durasteel,
-/area/muriki/processor/hall)
 "avy" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/processor/hall)
@@ -12946,7 +12946,7 @@
 	id = "sensitive_lock"
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "axl" = (
 /obj/machinery/light{
 	dir = 1
@@ -12957,7 +12957,7 @@
 /obj/structure/catwalk,
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "axm" = (
 /obj/machinery/door/blast/regular/open{
 	name = "AI Core Lockdown";
@@ -12972,7 +12972,7 @@
 	req_one_access = list(56)
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "axn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -13526,7 +13526,7 @@
 	id = "sensitive_lock"
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "ayo" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /obj/structure/catwalk,
@@ -13535,7 +13535,7 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "ayp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -13555,7 +13555,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "ayr" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -13568,7 +13568,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "ays" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -13917,6 +13917,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
+"azd" = (
+/turf/simulated/wall,
+/area/muriki/processor/hall/entrance)
 "aze" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
@@ -14057,7 +14060,7 @@
 	name = "Core Maintenance Cavity Access"
 	},
 /turf/simulated/floor/flesh/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "azr" = (
 /obj/machinery/light,
 /obj/machinery/power/apc{
@@ -14068,7 +14071,7 @@
 /obj/structure/catwalk,
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "azs" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -14079,7 +14082,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "azt" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/plating,
@@ -14106,6 +14109,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"azx" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor/flesh/muriki,
+/area/muriki/processor/hall/entrance)
 "azy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -14353,6 +14362,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/xeno)
+"azX" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/muriki/processor/hall/entrance)
 "azY" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
@@ -14376,6 +14394,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
+"aAa" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/muriki,
+/area/muriki/processor/hall/entrance)
 "aAb" = (
 /obj/machinery/vending/robotics{
 	dir = 1
@@ -14851,6 +14879,16 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/muriki,
 /area/muriki/processor/gland/airmix)
+"aAQ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/muriki,
+/area/muriki/processor/hall/entrance)
 "aAR" = (
 /obj/effect/floor_decal/flesh{
 	dir = 8
@@ -14870,12 +14908,19 @@
 /obj/turbolift_map_holder/muriki/scievator,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/elevator/scibase)
+"aAU" = (
+/turf/simulated/floor/flesh/muriki,
+/area/muriki/processor/hall/entrance)
 "aAV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
+"aAW" = (
+/obj/structure/sign/warning/caution,
+/turf/simulated/wall,
+/area/muriki/processor/hall/entrance)
 "aAX" = (
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Lower Main Hall Southeast"
@@ -15235,6 +15280,11 @@
 /obj/structure/sign/atmos_air,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"aBw" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/muriki/processor/hall/entrance)
 "aBx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/floor_decal/industrial/warning{
@@ -15485,6 +15535,9 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
+"aCc" = (
+/turf/simulated/floor/plating/muriki,
+/area/muriki/processor/hall/entrance)
 "aCe" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -23358,7 +23411,7 @@
 /obj/structure/catwalk,
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "aRw" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -23399,7 +23452,7 @@
 	},
 /obj/item/trash/tray,
 /turf/simulated/floor/tiled/techfloor/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "aRy" = (
 /obj/structure/railing{
 	dir = 4
@@ -23697,7 +23750,7 @@
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "aSg" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -31465,7 +31518,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "bgg" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
@@ -45621,7 +45674,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "bHI" = (
 /obj/structure/catwalk,
 /obj/structure/trash_pile,
@@ -49008,7 +49061,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "dDH" = (
 /obj/machinery/artifact_analyser,
 /obj/machinery/light{
@@ -49971,7 +50024,7 @@
 	icon_state = "up"
 	},
 /turf/simulated/wall,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "eep" = (
 /obj/random/cutout,
 /turf/simulated/mineral/floor/muriki{
@@ -56897,7 +56950,7 @@
 "iqz" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "iqB" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -59045,7 +59098,7 @@
 /obj/item/bedsheet/mime,
 /obj/effect/landmark/start/stowaway,
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "jHh" = (
 /obj/effect/landmark{
 	name = "blobstart"
@@ -61441,7 +61494,7 @@
 /obj/item/flame/candle/everburn,
 /obj/item/pen/crayon/marker/blue,
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "lhn" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -66496,7 +66549,7 @@
 /obj/random/maintenance/security,
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "omG" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -68038,7 +68091,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "pmo" = (
 /obj/structure/table/woodentable,
 /obj/item/paper_bin{
@@ -77171,7 +77224,7 @@
 "uHL" = (
 /obj/structure/bed/pillowpile/white,
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "uIw" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -80400,7 +80453,7 @@
 "wER" = (
 /obj/structure/bed/bath,
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "wEY" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -82687,7 +82740,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/plating/muriki,
-/area/engineering/coreproctunnel)
+/area/muriki/processor/hall/entrance)
 "xZI" = (
 /turf/simulated/floor/water/acidic/indoor/muriki,
 /area/maintenance/spine/civ)
@@ -92181,7 +92234,7 @@ avw
 eRD
 hUB
 avw
-avw
+aac
 aac
 ugO
 aac
@@ -92343,7 +92396,7 @@ avw
 avy
 ayk
 avy
-avw
+aac
 aac
 ugO
 ugO
@@ -92505,7 +92558,7 @@ avw
 avw
 ayj
 avw
-avw
+aac
 aac
 aac
 ugO
@@ -92667,7 +92720,7 @@ avw
 avw
 ayj
 avw
-avw
+aac
 aac
 aac
 ugO
@@ -92829,7 +92882,7 @@ avw
 avw
 ayj
 avw
-avw
+aac
 aac
 aac
 aac
@@ -92991,7 +93044,7 @@ avw
 avy
 ayl
 avy
-avw
+aac
 aac
 aac
 aac
@@ -93153,7 +93206,7 @@ avw
 avw
 ayj
 avw
-avw
+aac
 aac
 aad
 aad
@@ -93315,7 +93368,7 @@ avw
 avw
 ayj
 avw
-avw
+aac
 aad
 aad
 aad
@@ -93477,7 +93530,7 @@ avw
 avw
 ayj
 avw
-avx
+aad
 aad
 aad
 aad
@@ -93639,7 +93692,7 @@ avy
 avy
 ayk
 avy
-avx
+aad
 aad
 aad
 aad
@@ -93801,7 +93854,7 @@ vuL
 axj
 ayj
 axj
-avx
+aad
 aad
 aad
 lHb
@@ -93958,12 +94011,12 @@ ugO
 aac
 aac
 aac
-avx
-avx
+aad
+aad
 cmH
 ayj
 azp
-avx
+aad
 aad
 qhb
 lHb
@@ -94120,12 +94173,12 @@ aac
 aac
 aad
 aad
-avx
-avx
-axj
-ayj
+aad
+aad
+aAU
+azx
 azq
-avx
+aad
 iqz
 lHb
 efJ
@@ -94282,12 +94335,12 @@ aad
 aad
 aad
 aad
-avx
-avx
+aad
+aad
 axk
 ayn
 axm
-avy
+ahR
 iqz
 efJ
 efJ
@@ -94444,8 +94497,8 @@ aad
 aad
 aad
 aad
-avx
-avx
+aad
+aad
 axl
 aRv
 azr
@@ -94611,7 +94664,7 @@ iqz
 ayo
 ayq
 azs
-avy
+ahR
 efJ
 efJ
 efJ
@@ -94769,11 +94822,11 @@ aad
 lHb
 lHb
 qhb
-avy
-avy
+ahR
+ahR
 ayr
-avy
-avy
+ahR
+ahR
 efJ
 efJ
 efJ
@@ -94932,9 +94985,9 @@ lHb
 efJ
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -95094,9 +95147,9 @@ efJ
 efJ
 efJ
 efJ
-gKH
+azd
 bHH
-gKH
+azd
 efJ
 efJ
 efJ
@@ -95256,9 +95309,9 @@ efJ
 efJ
 efJ
 efJ
-gKH
+azd
 xZD
-gKH
+azd
 efJ
 efJ
 efJ
@@ -95418,9 +95471,9 @@ efJ
 efJ
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -95580,9 +95633,9 @@ efJ
 efJ
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -95742,9 +95795,9 @@ kwU
 kwU
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -95904,9 +95957,9 @@ nSj
 kwU
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -96066,9 +96119,9 @@ nSj
 kwU
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -96228,9 +96281,9 @@ nSj
 kwU
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -96390,9 +96443,9 @@ kwU
 kwU
 efJ
 efJ
-gKH
+azd
 dDG
-gKH
+azd
 efJ
 efJ
 efJ
@@ -96552,9 +96605,9 @@ kwU
 efJ
 efJ
 efJ
-bFZ
+aAW
 aRx
-gKH
+azd
 efJ
 efJ
 efJ
@@ -96714,9 +96767,9 @@ kwU
 efJ
 efJ
 efJ
-gKH
+azd
 dDG
-gKH
+azd
 efJ
 efJ
 efJ
@@ -96876,9 +96929,9 @@ efJ
 efJ
 efJ
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -97038,9 +97091,9 @@ efJ
 efJ
 efJ
 efJ
-gKH
-kho
-gKH
+azd
+aAa
+azd
 efJ
 efJ
 efJ
@@ -97194,15 +97247,15 @@ kwU
 kwU
 kwU
 kwU
-gKH
-gKH
-gKH
-gKH
-gKH
+azd
+azd
+azd
+azd
+azd
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -97356,15 +97409,15 @@ kwU
 kwU
 kwU
 kwU
-gKH
+azd
 jGG
-okL
+aCc
 wER
-gKH
-gKH
-gKH
-ays
-gKH
+azd
+azd
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -97518,13 +97571,13 @@ efJ
 efJ
 efJ
 efJ
-gKH
+azd
 plX
-okL
-okL
-okL
-rVM
-rVM
+aCc
+aCc
+aCc
+aBw
+aBw
 bgf
 eej
 efJ
@@ -97680,15 +97733,15 @@ efJ
 efJ
 efJ
 efJ
-gKH
+azd
 lhf
-okL
+aCc
 uHL
-gKH
-gKH
-gKH
-ays
-gKH
+azd
+azd
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -97842,15 +97895,15 @@ kwU
 kwU
 kwU
 kwU
-gKH
+azd
 uHL
-okL
+aCc
 omA
-gKH
+azd
 efJ
-gKH
-ays
-gKH
+azd
+azX
+azd
 efJ
 efJ
 efJ
@@ -98004,15 +98057,15 @@ nSj
 nSj
 nSj
 nSj
-gKH
-gKH
-gKH
-gKH
-gKH
+azd
+azd
+azd
+azd
+azd
 efJ
-gKH
+azd
 aSf
-gKH
+azd
 efJ
 efJ
 tts
@@ -98172,9 +98225,9 @@ efJ
 efJ
 efJ
 efJ
-gKH
-vzt
-gKH
+azd
+aAQ
+azd
 tts
 aDm
 tIC
