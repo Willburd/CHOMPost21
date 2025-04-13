@@ -102,7 +102,7 @@
 		/obj/item/dnainjector/random_verygood_labeled,
 		/obj/item/dnainjector/set_trait/nobreathe,
 		/obj/item/dnainjector/set_trait/regenerate,
-		/obj/item/dnainjector/set_trait/remoteview,
+		// /obj/item/dnainjector/set_trait/remoteview, Outpost 21 edit - Disabled due to balance issues
 		/obj/item/dnainjector/set_trait/haste,
 		/obj/item/dnainjector/set_trait/tk,
 		/obj/item/dnainjector/set_trait/xray,
