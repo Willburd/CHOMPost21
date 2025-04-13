@@ -17,6 +17,7 @@
 
 	weapons_equiped = list()
 	weapons_draw_offset = list()
+	move_loop = new /datum/looping_sound/tank_move_loop()
 
 
 /obj/item/key/heavyarmor_medic
