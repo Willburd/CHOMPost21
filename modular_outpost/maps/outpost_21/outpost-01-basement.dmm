@@ -20243,6 +20243,10 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = -3
 	},
+/obj/item/clothing/glasses/hud/janitor,
+/obj/item/clothing/glasses/hud/janitor,
+/obj/item/clothing/glasses/hud/janitor,
+/obj/item/clothing/glasses/hud/janitor,
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
 "aLO" = (
@@ -42635,6 +42639,7 @@
 	},
 /obj/random/cutout,
 /obj/structure/catwalk,
+/obj/structure/cable/heavyduty,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/medicelevbasement)
 "bCd" = (
