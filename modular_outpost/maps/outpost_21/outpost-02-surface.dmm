@@ -30506,8 +30506,14 @@
 	dir = 8
 	},
 /obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = 30
+	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
@@ -36559,6 +36565,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "jue" = (
@@ -39117,11 +39124,6 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)
 "kgm" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 9;
-	pixel_y = -32;
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/vending/cigarette{
 	dir = 1;
@@ -50988,6 +50990,10 @@
 	pixel_x = -6;
 	pixel_y = 30
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "nOz" = (
@@ -53101,9 +53107,6 @@
 /obj/structure/filingcabinet/security{
 	name = "Security Records"
 	},
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
@@ -54924,10 +54927,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "pfF" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
@@ -54937,6 +54936,14 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -80358,6 +80365,14 @@
 /obj/machinery/door/window/brigdoor/southright{
 	name = "Heavy Weapons"
 	},
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/m545saw,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "wYW" = (
