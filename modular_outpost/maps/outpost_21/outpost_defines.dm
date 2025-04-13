@@ -70,6 +70,7 @@
 	unit_test_exempt_areas = list()
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
+										/area/muriki/processor/hall/entrance,
 										/area/muriki/processor/gland/airmix,
 										/area/muriki/processor/gland/space,
 										/area/muriki/processor/hall/waterway_low,
