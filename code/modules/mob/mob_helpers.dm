@@ -182,6 +182,11 @@
 	if(!target.client) //If the target is an NPC, we will always hit (barring extreme circumstances like mobs having modified evasion, handled above). Removes baymiss against mobs.
 		return zone
 
+	// Outpost 21 edit begin - Escape projectile code early if not fired by a mob
+	if(!istype(attacker))
+		return zone
+	// Outpost 21 edit end
+
 	/// Toggle for servers that desire to have players able to miss each other.
 	/// This is if users are subjected to the same RNG hitchance against other players as mobs are.
 	/// By default, this is set to off, as evasion being calculated is (in my eyes) enough for PvP combat.
