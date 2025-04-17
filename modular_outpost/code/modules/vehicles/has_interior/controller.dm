@@ -110,6 +110,8 @@
 							break
 
 						if(C.controls_weapon_index > 0)
+							if(internal_weapons_list.len < C.controls_weapon_index)
+								internal_weapons_list.len = C.controls_weapon_index
 							var/obj/item/vehicle_interior_weapon/W = internal_weapons_list[C.controls_weapon_index]
 							W.weapon_index = C.controls_weapon_index
 							W.control_console = C // link weapon to console
