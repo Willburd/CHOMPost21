@@ -60,8 +60,8 @@
 	desc = "Looks like it would make a great throwing weapon."
 	throwforce = 20
 
-/obj/structure/closet/l3closet/scientist/phoronics/New() //two sets of chemical protection
-	..()
+/obj/structure/closet/l3closet/scientist/phoronics/Initialize(mapload) //two sets of chemical protection
+	. = ..()
 
 	new /obj/item/clothing/suit/bio_suit/scientist( src )
 	new /obj/item/clothing/head/bio_hood/scientist( src )

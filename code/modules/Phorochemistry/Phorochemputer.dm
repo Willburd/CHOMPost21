@@ -21,7 +21,8 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	var/field
 	var/phoron
 
-/obj/machinery/computer/phoronics/New()
+/obj/machinery/computer/phoronics/Initialize(mapload)
+	. = ..()
 	intensity = 1
 	timeLeft = 0
 	timeLeftMax = 0
