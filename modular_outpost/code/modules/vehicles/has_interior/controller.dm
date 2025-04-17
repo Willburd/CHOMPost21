@@ -80,20 +80,6 @@
 // Standard procs
 //-------------------------------------------
 /obj/vehicle/has_interior/controller/Initialize(mapload)
-	. = ..()
-	cell = new /obj/item/cell/high(src)
-	if(haskey)
-		key = new key_type(src)
-	for(var/weapon_type in weapons_equiped)
-		internal_weapons_list.Add(new weapon_type(loc))
-		internal_loaders_list.Add(null)
-	if(has_camera && !camera)
-		camera = new /obj/machinery/camera(src)
-		camera.c_tag = "[name] ([rand(1000,9999)])" // camera bullshit needs unique name
-		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
-	interior_vehicle_list += src
-
-/obj/vehicle/has_interior/controller/Initialize(mapload)
 	// find interior entrypos
 	for(var/area/A)
 		if(istype( A, interior_area))
@@ -144,6 +130,18 @@
 		log_debug("Interior vehicle [name] setting up...")
 
 	. = ..()
+
+	cell = new /obj/item/cell/high(src)
+	if(haskey)
+		key = new key_type(src)
+	for(var/weapon_type in weapons_equiped)
+		internal_weapons_list.Add(new weapon_type(loc))
+		internal_loaders_list.Add(null)
+	if(has_camera && !camera)
+		camera = new /obj/machinery/camera(src)
+		camera.c_tag = "[name] ([rand(1000,9999)])" // camera bullshit needs unique name
+		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
+	interior_vehicle_list += src
 
 /obj/vehicle/has_interior/controller/ex_act(severity)
 	// noise!
