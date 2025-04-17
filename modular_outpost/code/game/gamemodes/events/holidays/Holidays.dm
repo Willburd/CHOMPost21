@@ -3,11 +3,11 @@
 	icon = 'icons/obj/flora/pumpkins.dmi'
 	icon_state = "spawner-jackolantern"
 
-/obj/effect/landmark/holiday_event_spawn/New()
+/obj/effect/landmark/holiday_event_spawn/Initialize(mapload)
+	..()
 	// get time from our own web domain, intentionally fails, we only want the time...
-	Holiday_Event_Spawn_Object(src.loc)
-	del(src)
-
+	Holiday_Event_Spawn_Object(get_turf(src))
+	return INITIALIZE_HINT_QDEL
 
 //////////////////////////////////////////////////////////////////////////////
 // Proc decides what spawns for all the holiday event objects ---------------------------------------------------------

@@ -63,8 +63,8 @@
 	movement_type = UNSTOPPABLE // for bumps to trigger
 	var/datum/weakref/confinement_data = null
 
-/obj/effect/confinment_beam_incoming/New(loc)
-	src.loc = loc
+/obj/effect/confinment_beam_incoming/Initialize(mapload)
+	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(move), 1), 1, TIMER_DELETE_ME)
 
 /obj/effect/confinment_beam_incoming/Bump(atom/A)

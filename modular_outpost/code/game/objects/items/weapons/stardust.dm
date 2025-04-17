@@ -6,8 +6,8 @@
 	author = "Willbird"
 	title = "Stardust Gameplay Handbook"
 
-/obj/item/book/manual/stardust_game/New()
-	..()
+/obj/item/book/manual/stardust_game/Initialize(mapload)
+	. = ..()
 	dat = {"<html>
 	<head>
 		<style>

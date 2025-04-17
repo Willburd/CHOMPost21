@@ -22,18 +22,13 @@
 	var/produced_power
 	var/energy_to_raise = 32
 	var/energy_to_lower = -20
-	plane = PLANE_LIGHTING_ABOVE // Outpost 21 edit - Tesla lag reduction
+	plane = PLANE_LIGHTING_ABOVE // Outpost 21 edit - Tesla appearance tweak
 
-/obj/singularity/energy_ball/New(loc, starting_energy = 50, is_miniball = FALSE)
-	..()
-	miniball = is_miniball
-
-/obj/singularity/energy_ball/Initialize(mapload)
+/obj/singularity/energy_ball/Initialize(mapload, starting_energy = 50, is_miniball = FALSE)
 	. = ..()
-	/* Outpost 21 edit - Tesla lag reduction
+	miniball = is_miniball
 	if(!miniball)
 		set_light(10, 7, "#EEEEFF")
-	*/
 
 /obj/singularity/energy_ball/ex_act(severity, target)
 	return

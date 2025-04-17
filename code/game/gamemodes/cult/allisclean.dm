@@ -16,16 +16,15 @@ var/global/list/allisclean_list = list()
 	movement_type = UNSTOPPABLE // Because allisclean doesn't destroy walls
 	var/list/vents = list()
 
-/obj/singularity/allisclean/New()
-	..()
-	START_PROCESSING(SSobj, src)
+/obj/singularity/allisclean/Initialize(mapload, ...)
+	. = ..()
 	allisclean_list.Add(src)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in SSmachines.all_machines)
 		if(temp_vent.loc.z in using_map.event_levels)
 			var/area/A = get_area(temp_vent)
 			if(!(A.flag_check(AREA_FORBID_EVENTS)))
-				vents += temp_vent
+				vents += WEAKREF(temp_vent)
 
 /obj/singularity/allisclean/Destroy()
 	allisclean_list.Remove(src)
@@ -39,8 +38,9 @@ var/global/list/allisclean_list = list()
 		var/i = 0
 		while(i < 5)
 			i += 1
-			var/obj/machinery/atmospherics/unary/vent_pump/vent = pick(vents)
-			if(!vent.welded)
+			var/datum/weakref/WF = pick(vents)
+			var/obj/machinery/atmospherics/unary/vent_pump/vent = WF?.resolve()
+			if(vent && !vent.welded)
 				var/obj/item/grenade/chem_grenade/cleaner/C = new /obj/item/grenade/chem_grenade/cleaner(vent.loc)
 				C.stage = 2
 				C.detonate( FALSE )

@@ -11,8 +11,8 @@
 	var/padding = "blue"
 	var/obj/machinery/computer/vehicle_interior_console/paired_console = null
 
-/obj/structure/bed/chair/vehicle_interior_seat/New(var/newloc, var/new_material, var/new_padding_material)
-	. = ..(newloc, MAT_STEEL, padding)
+/obj/structure/bed/chair/vehicle_interior_seat/Initialize(mapload, new_material, new_padding_material)
+	. = ..(mapload, MAT_STEEL, new_padding_material)
 
 /obj/structure/bed/chair/vehicle_interior_seat/post_buckle_mob()
 	playsound(src,buckling_sound,75,1)
