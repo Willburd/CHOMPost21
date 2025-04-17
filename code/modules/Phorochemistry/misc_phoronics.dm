@@ -49,9 +49,9 @@
 	desc = "Ovenless Brownies!"
 	filling_color = "#A79459"
 
-/obj/item/reagent_containers/food/snacks/brownies/New()
-		..()
-		reagents.add_reagent(REAGENT_ID_NUTRIMENT, 6)
+/obj/item/reagent_containers/food/snacks/brownies/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 6)
 
 /obj/item/induromol
 	name = "Hardened Induromol"
