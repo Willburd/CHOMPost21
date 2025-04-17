@@ -69,10 +69,18 @@
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_FOREBODING
 	music = 'sound/ambience/ambimine.ogg'
+	requires_power = TRUE
+
 //Hallways... I guess?
 /area/muriki/processor/hall
 	name = "\improper Core Processor Cavities"
 	icon_state = "anohallway"
+
+/area/muriki/processor/hall/entrance
+	name = "\improper Core Processor Access"
+	icon_state = "anohallway"
+	requires_power = TRUE
+	base_turf = /turf/simulated/mineral/floor/muriki
 
 /area/muriki/processor/hall/airmix
 	name = "\improper Terraformer Alveolar duct"
@@ -3108,6 +3116,11 @@
 /area/security/tactical
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	base_turf = /turf/simulated/open
+
+/area/security/surgery
+	name = "\improper Security Operating Theatre"
+	icon_state = "surgery"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT //This WOULD become a filth pit
 
 /area/tcommsat
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND

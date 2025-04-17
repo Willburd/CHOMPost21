@@ -3084,10 +3084,6 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "bjF" = (
-/obj/structure/dogbed{
-	name = "pet bed"
-	},
-/mob/living/simple_mob/animal/synx/ai/pet/grins,
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -3096,9 +3092,6 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
-	},
-/obj/item/digestion_remains/skull/teshari{
-	desc = "A bleached skull. It looks very weakened. Seems like it belonged to a teshari... it smells faintly of oil and capscian"
 	},
 /obj/machinery/airlock_sensor/airlock_interior{
 	frequency = 1381;
@@ -29653,13 +29646,13 @@
 /turf/simulated/floor/tiled,
 /area/security/range)
 "oAr" = (
-/obj/machinery/computer/skills{
-	dir = 8;
-	req_one_access = list(19,41)
-	},
-/obj/structure/table/glass,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/computer/security{
+	dir = 8;
+	pixel_x = 5;
+	network = list("research","xenobio","research_outpost")
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
@@ -29734,6 +29727,13 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/structure/dogbed{
+	name = "pet bed"
+	},
+/mob/living/simple_mob/animal/synx/ai/pet/grins,
+/obj/item/digestion_remains/skull/teshari{
+	desc = "A bleached skull. It looks very weakened. Seems like it belonged to a teshari... it smells faintly of oil and capscian"
 	},
 /turf/simulated/floor/wood,
 /area/rnd/rdoffice)
@@ -36248,6 +36248,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner,
+/mob/living/simple_mob/animal/passive/bird/parrot/poly,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
 "rRJ" = (
@@ -45908,6 +45909,9 @@
 /area/rnd/research/phoronics/bombrange)
 "wEY" = (
 /obj/structure/table/glass,
+/obj/machinery/computer/skills{
+	pixel_y = 4
+	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
 "wFw" = (
@@ -46630,7 +46634,6 @@
 	dir = 1;
 	req_access = list(30)
 	},
-/mob/living/simple_mob/slime/xenobio/rainbow/kendrick,
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
 "wYX" = (

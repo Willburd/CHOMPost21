@@ -48,3 +48,36 @@
 	name = "CH4 warning sign"
 	desc = "WARNING! CH4 flow tube. Ensure the flow is disengaged before working."
 	icon_state = "atmos_ch4"
+
+
+//Direction signs
+/obj/structure/sign/directions/outpost
+	name = "\improper Outpost Sign"
+	icon = 'modular_outpost/icons/obj/decals_directions.dmi'
+	desc = "A direction sign, used on the outpost."
+	icon_state = "direction"
+
+/obj/structure/sign/directions/outpost/robotics
+	name = "\improper Robotics Workshop"
+	desc = "A direction sign, pointing out the way to the Robotics Workshop."
+	icon_state = "direction_robotics"
+
+/obj/structure/sign/directions/outpost/internal_affairs
+	name = "\improper Internal Affairs Office"
+	desc = "A direction sign, pointing out the way to the Internal Affairs Office."
+	icon_state = "direction_intaff"
+
+/obj/structure/sign/directions/outpost/phoronics
+	name = "\improper Phoronics Lab"
+	desc = "A direction sign, pointing out the way to the Phoronics Lab."
+	icon_state = "direction_phoronics"
+
+/obj/structure/sign/directions/outpost/bunker
+	name = "\improper Emergency Bunker"
+	desc = "A direction sign, pointing out the way to the Emergency Bunker."
+	icon_state = "direction_bunker"
+
+/obj/structure/sign/directions/outpost/gen
+	name = "\improper Backup Generator"
+	desc = "A direction sign, pointing out the way to an Emergency Generator."
+	icon_state = "direction_gen"
