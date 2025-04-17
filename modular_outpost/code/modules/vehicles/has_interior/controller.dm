@@ -79,7 +79,7 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/has_interior/controller/New()
+/obj/vehicle/has_interior/controller/Initialize(mapload)
 	. = ..()
 	cell = new /obj/item/cell/high(src)
 	if(haskey)

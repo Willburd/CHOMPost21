@@ -152,6 +152,20 @@
 /obj/effect/shuttle_landmark/premade/skipjack/transit,
 /turf/space/transit/east,
 /area/space)
+"aaC" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/item/toy/plushie/dragon/gold_east,
+/turf/simulated/floor/carpet/turcarpet,
+/area/centcom/living)
+"aaD" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/item/toy/plushie/dragon/green_east,
+/turf/simulated/floor/carpet/blue,
+/area/centcom/living)
 "aaL" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
@@ -7904,6 +7918,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
+/obj/item/toy/plushie/dragon/white_east,
 /turf/simulated/floor/carpet/blue,
 /area/centcom/living)
 "dWE" = (
@@ -23849,15 +23864,8 @@
 /obj/structure/sign/calendar{
 	pixel_y = 32
 	},
-/obj/item/toy/plushie/white_eastdragon{
-	pixel_x = -18
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
-	},
-/obj/item/toy/plushie/gold_eastdragon{
-	pixel_x = -6;
-	pixel_y = 9
 	},
 /obj/item/toy/plushie/jil,
 /turf/simulated/floor/carpet/blue,
@@ -43553,7 +43561,6 @@
 	},
 /obj/item/toy/plushie/pillow/blue,
 /obj/item/toy/plushie/goose,
-/obj/item/toy/plushie/green_eastdragon,
 /obj/item/toy/plushie/blue_fox,
 /obj/item/toy/plushie/teshari/w_yw,
 /obj/item/toy/plushie/teshari,
@@ -44428,7 +44435,6 @@
 	dir = 10
 	},
 /obj/structure/table/wooden_reinforced,
-/obj/item/toy/plushie/green_eastdragon,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/centcom/living)
 "xuS" = (
@@ -54283,7 +54289,7 @@ yaJ
 yaJ
 vVR
 hSs
-obr
+aaD
 uhc
 kSt
 hSs
@@ -54773,7 +54779,7 @@ evP
 uhc
 gpa
 hSs
-bbB
+aaC
 xuo
 rcY
 wDL
