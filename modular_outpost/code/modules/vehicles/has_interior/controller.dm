@@ -80,57 +80,6 @@
 // Standard procs
 //-------------------------------------------
 /obj/vehicle/has_interior/controller/Initialize(mapload)
-	// find interior entrypos
-	for(var/area/A)
-		if(istype( A, interior_area))
-			intarea = A // become reference...
-			for(var/turf/T in intarea.get_contents())
-				if(istype(T))
-					// TODO - make all one typechecking loop instead of 10 lol
-
-					// scan for interior drop location
-					if(istype( locate(/obj/effect/landmark/vehicle_interior/entrypos) in T.contents, /obj/effect/landmark/vehicle_interior/entrypos))
-						entrypos = T
-					// scan for exit door
-					for(var/obj/machinery/door/vehicle_interior_hatch/R in T.contents)
-						R.interior_controller = src // set controller so we can leave this vehicle!
-						entrance_hatch = R
-					// scan for consoles
-					for(var/obj/machinery/computer/vehicle_interior_console/C in T.contents)
-						C.desc = "Used to pilot the [name]. Use ctrl-click to quickly toggle the engine if you're adjacent. Alt-click will grab the keys, if present."
-						C.interior_controller = src
-						if(istype(C,/obj/machinery/computer/vehicle_interior_console/helm))
-							remote_turn_off()		//so engine verbs are correctly set
-							interior_helm = C 		// update vehicle, we found the pilot seat, so we know which console is the drivers!
-
-						for(var/obj/structure/bed/chair/vehicle_interior_seat/S in get_step(C.loc,C.dir))
-							S.paired_console = C
-							C.paired_seat = S
-							C.paired_seat.name = C.name + " Seat"
-							break
-
-						if(C.controls_weapon_index > 0)
-							if(internal_weapons_list.len < C.controls_weapon_index)
-								internal_weapons_list.len = C.controls_weapon_index
-							var/obj/item/vehicle_interior_weapon/W = internal_weapons_list[C.controls_weapon_index]
-							W.weapon_index = C.controls_weapon_index
-							W.control_console = C // link weapon to console
-							// rotate weapon to facing angle of vehicle
-							W.dir = dir
-					// scan for loaders
-					for(var/obj/machinery/ammo_loader/L in T.contents)
-						internal_loaders_list[L.weapon_index] = L
-
-	// set exit pos
-	update_exit_pos()
-	cached_dir = dir
-
-	if(!istype(intarea))
-		log_debug("Interior vehicle [name] was missing a defined area! Could not init...")
-	else
-		// load all interior parts as components of vehicle!
-		log_debug("Interior vehicle [name] setting up...")
-
 	. = ..()
 
 	cell = new /obj/item/cell/high(src)
@@ -144,6 +93,56 @@
 		camera.c_tag = "[name] ([rand(1000,9999)])" // camera bullshit needs unique name
 		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
 	interior_vehicle_list += src
+
+	// find interior entrypos
+	for(var/area/A)
+		if(!istype(A, interior_area))
+			continue
+		intarea = A // become reference...
+		for(var/turf/T in intarea.get_contents())
+			if(!istype(T))
+				continue
+			// scan for interior drop location
+			if(istype( locate(/obj/effect/landmark/vehicle_interior/entrypos) in T.contents, /obj/effect/landmark/vehicle_interior/entrypos))
+				entrypos = T
+			// scan for exit door
+			for(var/obj/machinery/door/vehicle_interior_hatch/R in T.contents)
+				R.interior_controller = src // set controller so we can leave this vehicle!
+				entrance_hatch = R
+			// scan for consoles
+			for(var/obj/machinery/computer/vehicle_interior_console/C in T.contents)
+				C.desc = "Used to pilot the [name]. Use ctrl-click to quickly toggle the engine if you're adjacent. Alt-click will grab the keys, if present."
+				C.interior_controller = src
+				if(istype(C,/obj/machinery/computer/vehicle_interior_console/helm))
+					remote_turn_off()		//so engine verbs are correctly set
+					interior_helm = C 		// update vehicle, we found the pilot seat, so we know which console is the drivers!
+
+				for(var/obj/structure/bed/chair/vehicle_interior_seat/S in get_step(C.loc,C.dir))
+					S.paired_console = C
+					C.paired_seat = S
+					C.paired_seat.name = C.name + " Seat"
+					break
+
+				if(C.controls_weapon_index > 0)
+					var/obj/item/vehicle_interior_weapon/W = internal_weapons_list[C.controls_weapon_index]
+					W.weapon_index = C.controls_weapon_index
+					W.control_console = C // link weapon to console
+					// rotate weapon to facing angle of vehicle
+					W.dir = dir
+
+			// scan for loaders
+			for(var/obj/machinery/ammo_loader/L in T.contents)
+				internal_loaders_list[L.weapon_index] = L
+
+	// set exit pos
+	update_exit_pos()
+	cached_dir = dir
+
+	if(!istype(intarea))
+		log_debug("Interior vehicle [name] was missing a defined area! Could not init...")
+	else
+		// load all interior parts as components of vehicle!
+		log_debug("Interior vehicle [name] setting up...")
 
 /obj/vehicle/has_interior/controller/ex_act(severity)
 	// noise!
