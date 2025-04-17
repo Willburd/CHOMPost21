@@ -13,15 +13,12 @@
 	icon_state = "landmine"
 	mineitemtype = /obj/item/mine/claymore
 	var/list/lasers = list()
-	var/timerid
 
 /obj/effect/mine/claymore/Initialize(mapload)
 	. = ..()
-	timerid = addtimer(CALLBACK(src, PROC_REF(setup_laserline)), 3 SECONDS, TIMER_STOPPABLE)
+	addtimer(CALLBACK(src, PROC_REF(setup_laserline)), 3 SECONDS, TIMER_DELETE_ME)
 
 /obj/effect/mine/claymore/Destroy()
-	if(timerid)
-		deltimer(timerid)
 	for(var/atom/A in lasers)
 		qdel(A) // cleanup lasers
 	lasers.Cut()
@@ -38,8 +35,9 @@
 	if(!O)
 		return
 	var/obj/item/projectile/P = new /obj/item/projectile/bullet/shotgun/buckshot/shell(src)
-	var/target_zone = pick(BP_HEAD, BP_TORSO, BP_GROIN, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
-	P.launch_projectile_from_turf(get_step(get_turf(loc),dir), target_zone, src)
+	P.firer = src
+	P.old_style_target(get_step(get_turf(loc),dir))
+	P.fire()
 	visible_message("\The [src.name] detonates!")
 	spawn(0)
 		qdel(s)
@@ -121,3 +119,44 @@
 	. = list()
 	. += emissive_appearance(icon, icon_state, alpha = 50)
 	add_overlay(.)
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Varients
+//////////////////////////////////////////////////////////////////////////////////////
+
+/obj/item/mine/claymore/donksoft
+	name = "claymore"
+	desc = "A Donksoft brand foam-dart claymore. Front towards enemy."
+	icon = 'modular_outpost/icons/obj/claymore.dmi'
+	icon_state = "claymore"
+	minetype = /obj/effect/mine/claymore/donksoft
+
+/obj/effect/mine/claymore/donksoft
+	name = "claymore"
+	desc = "A directional claymore. Using a infrared sensor to detect targets in a short range in front of it."
+	icon = 'modular_outpost/icons/obj/claymore.dmi'
+	icon_state = "landmine"
+	mineitemtype = /obj/item/mine/claymore/donksoft
+
+/obj/effect/mine/claymore/donksoft/explode(var/mob/living/M)
+	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
+		return
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	var/turf/O = get_turf(src)
+	if(!O)
+		return
+	for(var/i = 1 to 12) // DONKIN TIME
+		var/obj/item/projectile/P = new /obj/item/projectile/bullet/foam_dart(src)
+		P.firer = src
+		P.old_style_target(get_step(get_turf(loc),dir))
+		P.setAngle(P.Angle + rand(-5,5))
+		P.fire()
+	visible_message("\The [src.name] detonates!")
+	spawn(0)
+		qdel(s)
+		qdel(src)
