@@ -205,7 +205,65 @@
 			"goon speak pugg",
 			"goon speak roach",
 			"goon speak skelly",
-			"xeno speak") // CHOMPedit
+			"xeno speak", // CHOMPEnable
+			// Outpost 21 edit begin - Bubber talk sound port. See modular_zubbers\bubbers_attribution.dm
+			"Muted String (Low)",
+			"Muted String (Medium)",
+			"Muted String (High)",
+			"Banjo (Medium)",
+			"Banjo (High)",
+			"Squeaky",
+			"Chittery",
+			"Synthetic (Grunt)",
+			"Synthetic (Normal)",
+			"Windy",
+			"Brassy",
+			"Moff squeak",
+			"Meow",
+			"Chirp",
+			"Caw",
+			"Alphys",
+			"Asgore",
+			"Flowey (normal)",
+			"Flowey (evil)",
+			"Papyrus",
+			"Ralsei",
+			"Sans",
+			"Toriel",
+			"Undyne",
+			"Temmie",
+			"Susie",
+			"Gaster",
+			"Mettaton",
+			"Generic Monster 1",
+			"Generic Monster 2",
+			"Wilson",
+			"Wolfgang",
+			"Woodie",
+			"Wurt",
+			"wx78",
+			"Chittery Alt",
+			"Whistle 1",
+			"Whistle 2",
+			"Caw 2",
+			"Caw 3",
+			"Caw 4",
+			"Ehh 1",
+			"Ehh 2",
+			"Ehh 3",
+			"Ehh 4",
+			"Ehh 5",
+			"Faucet 1",
+			"Faucet 2",
+			"Ribbit",
+			"Hoot",
+			"Tweet",
+			"Dwoop",
+			"Uhm",
+			"Wurtesh",
+			"Chitter2"
+			// Outpost 21 edit end
+			)
 		var/choice = tgui_input_list(user, "Which set of sounds would you like to use for your character's speech sounds?", "Voice Sounds", possible_voice_types)
 		if(!pref.voice_sound)
 			pref.voice_sound = "goon speak 1"	//CHOMPEdit - Defaults voice to a less jarring sound
@@ -264,6 +322,119 @@
 			if("xeno speak")
 				S = sound(pick(xeno_speak_sound))
 //CHOMPedit end.
+			// Outpost 21 edit begin - Bubber talk sound port, See modular_zubbers\bubbers_attribution.dm
+			// I hate this. Why is every element a string and not just the assoc list key... Upstream problems to fix...
+			if("Muted String (Low)")
+				S = sound(pick(bubber_speak_mutedc2))
+			if("Muted String (Medium)")
+				S = sound(pick(bubber_speak_mutedc3))
+			if("Muted String (High)")
+				S = sound(pick(bubber_speak_mutedc4))
+			if("Banjo (Medium)")
+				S = sound(pick(bubber_speak_banjoc3))
+			if("Banjo (High)")
+				S = sound(pick(bubber_speak_banjoc4))
+			if("Squeaky")
+				S = sound(pick(bubber_speak_squeaky))
+			if("Chittery")
+				S = sound(pick(bubber_speak_chitter))
+			if("Synthetic (Grunt)")
+				S = sound(pick(bubber_speak_synthetic_grunt))
+			if("Synthetic (Normal)")
+				S = sound(pick(bubber_speak_synthetic))
+			if("Windy")
+				S = sound(pick(bubber_speak_bullet))
+			if("Brassy",)
+				S = sound(pick(bubber_speak_coggers))
+			if("Moff squeak")
+				S = sound(pick(bubber_speak_moff_short))
+			if("Meow")
+				S = sound(pick(bubber_speak_meow))
+			if("Chirp")
+				S = sound(pick(bubber_speak_chirp))
+			if("Caw")
+				S = sound(pick(bubber_speak_caw))
+			if("Alphys")
+				S = sound(pick(bubber_speak_alphys))
+			if("Asgore")
+				S = sound(pick(bubber_speak_asgore))
+			if("Flowey (normal)")
+				S = sound(pick(bubber_speak_flowey))
+			if("Flowey (evil)")
+				S = sound(pick(bubber_speak_flowey_evil))
+			if("Papyrus")
+				S = sound(pick(bubber_speak_papyrus))
+			if("Ralsei")
+				S = sound(pick(bubber_speak_ralsei))
+			if("Sans")
+				S = sound(pick(bubber_speak_sans))
+			if("Toriel")
+				S = sound(pick(bubber_speak_toriel))
+			if("Undyne")
+				S = sound(pick(bubber_speak_undyne))
+			if("Temmie")
+				S = sound(pick(bubber_speak_temmie))
+			if("Susie")
+				S = sound(pick(bubber_speak_susie))
+			if("Gaster")
+				S = sound(pick(bubber_speak_gaster))
+			if("Mettaton")
+				S = sound(pick(bubber_speak_mettaton))
+			if("Generic Monster 1")
+				S = sound(pick(bubber_speak_gen_monster))
+			if("Generic Monster 1")
+				S = sound(pick(bubber_speak_gen_monster_alt2))
+			if("Wilson")
+				S = sound(pick(bubber_speak_wilson))
+			if("Wolfgang")
+				S = sound(pick(bubber_speak_wolfgang))
+			if("Woodie")
+				S = sound(pick(bubber_speak_woodie))
+			if("Wurt")
+				S = sound(pick(bubber_speak_wurt))
+			if("wx78")
+				S = sound(pick(bubber_speak_wx78))
+			if("Chittery Alt")
+				S = sound(pick(bubber_speak_chitter_alt))
+			if("Whistle 1")
+				S = sound(pick(bubber_speak_whistle))
+			if("Whistle 2")
+				S = sound(pick(bubber_speak_whistle_alt))
+			if("Caw 2")
+				S = sound(pick(bubber_speak_caw_alt))
+			if("Caw 3")
+				S = sound(pick(bubber_speak_caw_alt2))
+			if("Caw 4")
+				S = sound(pick(bubber_speak_caw_alt3))
+			if("Ehh 1")
+				S = sound(pick(bubber_speak_ehh))
+			if("Ehh 2")
+				S = sound(pick(bubber_speak_ehh_alt))
+			if("Ehh 3")
+				S = sound(pick(bubber_speak_ehh_alt2))
+			if("Ehh 4")
+				S = sound(pick(bubber_speak_ehh_alt3))
+			if("Ehh 5")
+				S = sound(pick(bubber_speak_ehh_alt4))
+			if("Faucet 1")
+				S = sound(pick(bubber_speak_faucet))
+			if("Faucet 2")
+				S = sound(pick(bubber_speak_faucet_alt))
+			if("Ribbit")
+				S = sound(pick(bubber_speak_ribbit))
+			if("Hoot")
+				S = sound(pick(bubber_speak_hoot))
+			if("Tweet")
+				S = sound(pick(bubber_speak_tweet))
+			if("Dwoop")
+				S = sound(pick(bubber_speak_dwoop))
+			if("Uhm")
+				S = sound(pick(bubber_speak_uhm))
+			if("Wurtesh")
+				S = sound(pick(bubber_speak_wurtesh))
+			if("Chitter2")
+				S = sound(pick(bubber_speak_chitter2))
+			// Outpost 21 edit end
 		if(S)
 			S.frequency = pick(pref.voice_freq)
 			S.volume = 50
