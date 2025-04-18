@@ -25,7 +25,7 @@ GLOBAL_VAR_INIT(prey_eaten_roundstat, 0)		//VOREStation Edit - Obviously
 GLOBAL_VAR_INIT(prey_absorbed_roundstat, 0)		//VOREStation Edit - Obviously
 GLOBAL_VAR_INIT(prey_digested_roundstat, 0)		//VOREStation Edit - Obviously
 GLOBAL_VAR_INIT(items_digested_roundstat, 0)	//VOREStation Edit - Obviously
-var/global/list/security_printer_tickets = list()	//VOREStation Edit
+GLOBAL_LIST_EMPTY(security_printer_tickets)		//VOREStation Edit
 GLOBAL_VAR_INIT(landmines_stepped_on_roundstat, 0)	//Outpost21 edit - oh boy
 GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 
@@ -66,15 +66,15 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 	// outpost 21 add - end
 
 	//VOREStation add Start - Ticket time!
-	if(security_printer_tickets.len)
-		valid_stats_list.Add(span_danger("[security_printer_tickets.len] unique security tickets were issued today!") + "<br>Examples include:")
+	if(GLOB.security_printer_tickets.len)
+		valid_stats_list.Add(span_danger("[GLOB.security_printer_tickets.len] unique security tickets were issued today!") + "<br>Examples include:")
 		var/good_num = 5
 		var/ourticket
 		while(good_num > 0)
 			ourticket = null
-			if(security_printer_tickets.len)
-				ourticket = pick(security_printer_tickets)
-				security_printer_tickets -= ourticket
+			if(GLOB.security_printer_tickets.len)
+				ourticket = pick(GLOB.security_printer_tickets)
+				GLOB.security_printer_tickets -= ourticket
 				if(ourticket)
 					valid_stats_list.Add(span_bold("-")+"\"[ourticket]\"")
 				good_num--
