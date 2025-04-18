@@ -78,8 +78,8 @@ SUBSYSTEM_DEF(explosions)
 		var/heavy_impact_range 	= time_dat[5]
 		var/light_impact_range 	= time_dat[6]
 		var/tim 				= time_dat[7]
-		for(var/i,i<=doppler_arrays.len,i++)
-			var/obj/machinery/doppler_array/Array = doppler_arrays[i]
+		for(var/i,i<=GLOB.doppler_arrays.len,i++)
+			var/obj/machinery/doppler_array/Array = GLOB.doppler_arrays[i]
 			if(Array)
 				Array.sense_explosion(x0,y0,z0,devastation_range,heavy_impact_range,light_impact_range, tim - world.time)
 	currentsignals.Cut()
