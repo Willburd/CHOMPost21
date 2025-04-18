@@ -2,7 +2,7 @@
 	announceWhen	= 1
 
 /datum/event/security_drill/announce()
-	if(security_level != SEC_LEVEL_GREEN) // If during peace
+	if(GLOB.security_level != SEC_LEVEL_GREEN) // If during peace
 		command_announcement.Announce("A command issued drill schedualed at this hour has been cancelled due to a highened alert level on station.", "Security Advisement")
 		return
 

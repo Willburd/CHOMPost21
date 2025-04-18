@@ -1,4 +1,4 @@
-var/global/list/micro_tunnels = list()
+GLOBAL_LIST_EMPTY(micro_tunnels)
 
 /obj/structure/micro_tunnel
 	name = "mouse hole"
@@ -22,7 +22,7 @@ var/global/list/micro_tunnels = list()
 
 /obj/structure/micro_tunnel/Initialize(mapload)
 	. = ..()
-	micro_tunnels.Add(src)
+	GLOB.micro_tunnels.Add(src)
 	if(name == initial(name))
 		var/area/our_area = get_area(src)
 		name = "[our_area.name] [name]"
@@ -36,11 +36,8 @@ var/global/list/micro_tunnels = list()
 		visible_message(span_warning("\The [thing] tumbles out!"))
 		thing.forceMove(get_turf(src.loc))
 		thing.cancel_camera()
-	// Outpost 21 edit begin - less terrible way of keeping track of micro tunnels
-	micro_tunnels.Remove(src)
-	// Outpost 21 edit end
 
-	micro_tunnels.Remove(src)
+	GLOB.micro_tunnels.Remove(src)
 
 	return ..()
 
@@ -70,7 +67,7 @@ var/global/list/micro_tunnels = list()
 	for(var/datum/planet/P in SSplanets.planets)
 		if(myturf.z in P.expected_z_levels)
 			planet = P
-	for(var/obj/structure/micro_tunnel/t in micro_tunnels)
+	for(var/obj/structure/micro_tunnel/t in GLOB.micro_tunnels)
 		if(t == src)
 			continue
 		if(magic || t.magic)
