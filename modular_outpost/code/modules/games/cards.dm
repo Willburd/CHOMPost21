@@ -5,8 +5,8 @@
 	drop_sound = 'sound/items/drop/paper.ogg'
 	pickup_sound = 'sound/items/pickup/paper.ogg'
 
-/obj/item/deck/cards/blackjack/New()
-	..()
+/obj/item/deck/cards/blackjack/Initialize(mapload)
+	. = ..()
 	// Remove original jokers
 	for(var/datum/playingcard/C in cards)
 		if(C.name == "joker")

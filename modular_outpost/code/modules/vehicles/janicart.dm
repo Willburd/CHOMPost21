@@ -35,8 +35,8 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/train/engine/janicart/New()
-	..()
+/obj/vehicle/train/engine/janicart/Initialize(mapload)
+	. = ..()
 	// apply speed
 	move_delay = 0.5
 	cell = new /obj/item/cell/high(src)

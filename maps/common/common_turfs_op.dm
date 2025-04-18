@@ -1,10 +1,6 @@
 //Simulated
 /turf/simulated/open/muriki
 	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
-/turf/simulated/open/muriki/New()
-	..()
-	if(outdoors)
-		SSplanets.addTurf(src)
 
 /turf/simulated/open
 	dynamic_lighting = 1 //I don't care if there's no true multiz lighting, this looks so much nicer it's not even funny -KK (from turf_yw)

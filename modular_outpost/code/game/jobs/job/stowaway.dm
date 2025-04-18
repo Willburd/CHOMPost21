@@ -26,9 +26,6 @@
 	minimal_access = list()
 	forbid_department_account_access = TRUE
 
-/datum/job/stowaway/New()
-	..()
-
 /datum/job/stowaway/get_access()
 	return list()
 

@@ -46,7 +46,7 @@
 			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				modules |= emergency_module_types
 			// Outpost 21 edit end
-			else if(R.crisis || security_level == SEC_LEVEL_RED || R.crisis_override)
+			else if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= emergency_module_types
 			// CHOMPAdd End
@@ -56,7 +56,7 @@
 			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				modules |= emergency_module_types
 			// Outpost 21 edit end
-			else if(R.crisis || security_level >= SEC_LEVEL_RED || R.crisis_override)
+			else if(R.crisis || GLOB.security_level >= SEC_LEVEL_RED || R.crisis_override)
 				to_chat(R, span_red("Crisis mode active. Combat module available."))
 				modules |= emergency_module_types
 			for(var/module_name in whitelisted_module_types)

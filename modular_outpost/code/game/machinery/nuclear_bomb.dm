@@ -55,7 +55,7 @@
 
 /obj/machinery/nuclearbomb/station/process()
 	if(timing)
-		bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
+		GLOB.bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
 		timeleft--
 		if(timeleft <= self_destruct_cutoff && !announced)
 			// minimum 1 min before no going back!
@@ -177,27 +177,27 @@
 					timing = !(timing)
 					if(timing)
 						if(!safety)
-							bomb_set = 1 //There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
+							GLOB.bomb_set = 1 //There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
 							// notify station
 							if(get_security_level() != "delta")
 								priority_announcement.Announce("Self destruct sequence has been activated. Self-destructing in [timeleft] seconds.", "Self-Destruct Control Computer")
 							set_security_level("delta")
 							update_icon()
 						else
-							bomb_set = 0
+							GLOB.bomb_set = 0
 							update_icon()
 					else
 						if(get_security_level() == "delta")
 							priority_announcement.Announce("Self destruct sequence has been cancelled.", "Self-Destruct Control Computer")
 						set_security_level("red")
-						bomb_set = 0
+						GLOB.bomb_set = 0
 						update_icon()
 				if(href_list["safety"])
-					if(!bomb_set)
+					if(!GLOB.bomb_set)
 						safety = !(safety)
 						if(safety)
 							timing = 0
-							bomb_set = 0
+							GLOB.bomb_set = 0
 						update_icon()
 					else
 						to_chat(usr, span_warning("Cannot enable safety, self destruct is armed."))

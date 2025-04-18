@@ -54,8 +54,8 @@
 	name = "expedition weaponry cabinet"
 	req_one_access = list(access_explorer,access_brig)
 
-/obj/structure/closet/secure_closet/guncabinet/excursion/New()
-	..()
+/obj/structure/closet/secure_closet/guncabinet/excursion/Initialize(mapload)
+	. = ..()
 	for(var/i = 1 to 4)
 		new /obj/item/gun/energy/locked/frontier(src)
 	for(var/i = 1 to 4)
@@ -162,7 +162,8 @@
 	var/deiceTools[0]
 	var/nextWeatherCheck
 
-/obj/machinery/door/airlock/glass_external/freezable/New()
+/obj/machinery/door/airlock/glass_external/freezable/Initialize(mapload, obj/structure/door_assembly/assembly)
+	. = ..()
 	//Associate objects with the number of seconds it would take to de-ice a door.
 	//Most items are either more or less effecient at it.
 	//For items with very specific cases (like welders using fuel, or needing to be on) see attackby().
@@ -175,7 +176,6 @@
 	//This is for preventing "Sierra" syndrome that could result from needing very specific objects.
 	deiceTools[/obj/item/tool] = 10
 	deiceTools[/obj/item] = 12
-	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I, mob/user as mob)
 	//Special cases for tools that need more then just a type check.

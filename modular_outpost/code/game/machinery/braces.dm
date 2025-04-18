@@ -64,8 +64,8 @@
 		. += emissive_appearance(icon, "brace_open_lights")
 	add_overlay(.)
 
-/obj/item/airlock_brace/New()
-	..()
+/obj/item/airlock_brace/Initialize(mapload)
+	. = ..()
 	cur_health = max_health
 
 /obj/item/airlock_brace/Destroy()
