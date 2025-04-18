@@ -50,8 +50,8 @@ OL|IL|OL
 // This is because each focus slightly mutates the datum, the more you have the more mutated
 // it can become if you let the focuses overheat, but the higher beam multiplier you can get!
 
-// Check modular_outpost\code\modules\power\confinement\beam_control.dm for initial datum creation.
-// Check modular_outpost\code\modules\power\confinement\beam_focus.dm for how the datum copy happens.
+// Check beam_control.dm for initial datum creation.
+// Check beam_focus.dm for how the datum copy happens.
 
 #define EXPLODEHEAT T0C + 100000 // Instead of stacking heat forever it'll just explode at this temp
 #define OFFSET_RAND_MAX 250
