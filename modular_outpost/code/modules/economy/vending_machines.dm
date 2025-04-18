@@ -109,7 +109,7 @@
  *  Called after the money has already been taken from the customer.
  */
 /obj/machinery/vending/cargo_resale/credit_purchase(var/target as text)
-	var/datum/money_account/cargo_dept_account = department_accounts[vending_account]
+	var/datum/money_account/cargo_dept_account = GLOB.department_accounts[vending_account]
 	cargo_dept_account.money += currently_vending.price
 
 	var/datum/transaction/T = new()
@@ -117,7 +117,7 @@
 	T.purpose = "Purchase of [currently_vending.item_name]"
 	T.amount = "[currently_vending.price]"
 	T.source_terminal = name
-	T.date = current_date_string
+	T.date = GLOB.current_date_string
 	T.time = stationtime2text()
 	cargo_dept_account.transaction_log.Add(T)
 

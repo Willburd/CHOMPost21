@@ -36,9 +36,6 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 		visible_message(span_warning("\The [thing] tumbles out!"))
 		thing.forceMove(get_turf(src.loc))
 		thing.cancel_camera()
-	// Outpost 21 edit begin - less terrible way of keeping track of micro tunnels
-	micro_tunnels.Remove(src)
-	// Outpost 21 edit end
 
 	GLOB.micro_tunnels.Remove(src)
 
