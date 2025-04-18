@@ -26021,15 +26021,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_medical{
-	name = "Reserve Storage"
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/machinery/door/airlock/medical{
+	name = "Chemical Storage";
+	req_access = list(5)
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/chem_storage)
@@ -44307,12 +44308,11 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/medical{
-	name = "Chemical Storage";
-	req_access = list(5)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/glass_medical{
+	name = "Reserve Storage"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/constructionsite/medical)
 "bFl" = (
