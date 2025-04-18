@@ -1,4 +1,4 @@
-// Assets and code in this folder are Bubberstation, or ports to work with outpost 21
+// Assets and code in this folder are https://github.com/Bubberstation/Bubberstation, or ports to work with outpost 21
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // As per Bubberstation licensing
 // All code files are under GNU AGPL V3

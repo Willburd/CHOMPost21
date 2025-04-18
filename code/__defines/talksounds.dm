@@ -17,7 +17,7 @@ var/list/talk_sound_map = rlist(
 									"goon speak roach",
 									"goon speak skelly",
 									"xeno speak", // CHOMPEnable
-									// Outpost 21 edit begin - Bubber talk sound port. See modular_zubbers\bubbers_attribution.dm
+									// Outpost 21 edit begin - Bubber talk sound port. See bubbers_attribution.dm
 									"Muted String (Low)",
 									"Muted String (Medium)",
 									"Muted String (High)",
@@ -91,7 +91,7 @@ var/list/talk_sound_map = rlist(
 									GLOB.goon_speak_roach_sound,
 									GLOB.goon_speak_skelly_sound,
 									GLOB.xeno_speak_sound, // CHOMPEnable
-									// Outpost 21 edit begin - Bubber talk sound port, See modular_zubbers\bubbers_attribution.dm
+									// Outpost 21 edit begin - Bubber talk sound port, See bubbers_attribution.dm
 									GLOB.bubber_speak_mutedc2,
 									GLOB.bubber_speak_mutedc3,
 									GLOB.bubber_speak_mutedc4,

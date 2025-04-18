@@ -206,7 +206,7 @@
 			"goon speak roach",
 			"goon speak skelly",
 			"xeno speak", // CHOMPEnable
-			// Outpost 21 edit begin - Bubber talk sound port. See modular_zubbers\bubbers_attribution.dm
+			// Outpost 21 edit begin - Bubber talk sound port. See bubbers_attribution.dm
 			"Muted String (Low)",
 			"Muted String (Medium)",
 			"Muted String (High)",
@@ -322,7 +322,7 @@
 			if("xeno speak")
 				S = sound(pick(GLOB.xeno_speak_sound))
 //CHOMPedit end.
-			// Outpost 21 edit begin - Bubber talk sound port, See modular_zubbers\bubbers_attribution.dm
+			// Outpost 21 edit begin - Bubber talk sound port, See bubbers_attribution.dm
 			// I hate this. Why is every element a string and not just the assoc list key... Upstream problems to fix...
 			if("Muted String (Low)")
 				S = sound(pick(GLOB.bubber_speak_mutedc2))
