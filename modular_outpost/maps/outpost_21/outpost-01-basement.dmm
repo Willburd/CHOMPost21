@@ -11850,8 +11850,7 @@
 	id = "xenobio7";
 	name = "Pen 7 Lockdown";
 	pixel_x = 25;
-	pixel_y = 30;
-	req_one_access = list(47)
+	pixel_y = 30
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
