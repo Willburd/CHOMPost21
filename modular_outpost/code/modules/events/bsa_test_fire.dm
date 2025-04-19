@@ -42,7 +42,6 @@
 	if(A)
 		var/cur_delay = rand(1 SECONDS, 4 SECONDS)
 		addtimer(CALLBACK(A, TYPE_PROC_REF(/datum/admin_secret_item/fun_secret/shell_location,announce), xx, yy, zz, TRUE), cur_delay, TIMER_DELETE_ME)
-		addtimer(CALLBACK(A, TYPE_PROC_REF(/datum/admin_secret_item/fun_secret/shell_location,finish_message)), cur_delay, TIMER_DELETE_ME)
 	addtimer(CALLBACK(src, PROC_REF(conclude)), 10 SECONDS, TIMER_DELETE_ME)
 
 /datum/event/bsa_test_fire/proc/conclude()
