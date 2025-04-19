@@ -10544,12 +10544,19 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "ati" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
-/turf/simulated/floor/tiled/white,
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "atj" = (
 /obj/machinery/light_switch{
@@ -11183,6 +11190,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/machinery/shower{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
@@ -11840,8 +11850,7 @@
 	id = "xenobio7";
 	name = "Pen 7 Lockdown";
 	pixel_x = 25;
-	pixel_y = 30;
-	req_one_access = list(47)
+	pixel_y = 30
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -12567,6 +12576,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/machinery/shower{
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
@@ -15681,6 +15693,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/machinery/shower{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "aCz" = (
@@ -16229,6 +16244,9 @@
 	dir = 4
 	},
 /obj/structure/cable/green,
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
 "aDG" = (
@@ -16288,6 +16306,9 @@
 	dir = 4
 	},
 /obj/structure/cable/green,
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
 "aDJ" = (
@@ -45309,6 +45330,9 @@
 	name = "Containment Pen";
 	req_access = list(55)
 	},
+/obj/machinery/shower{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "bGS" = (
@@ -48621,6 +48645,26 @@
 /obj/item/stack/rods,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"dnZ" = (
+/obj/machinery/door/window/brigdoor/eastleft{
+	dir = 8;
+	name = "Containment Pen";
+	req_access = list(55)
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/machinery/shower{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/rnd/xenobiology)
 "doE" = (
 /turf/simulated/floor/reinforced,
 /area/medical/robotics)
@@ -142286,7 +142330,7 @@ iLO
 iLO
 aqc
 avs
-awy
+dnZ
 axh
 aqc
 azn
