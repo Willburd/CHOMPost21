@@ -407,6 +407,9 @@
 
 // outpost 21 addition begin - radiation and haunting affects borg vision
 /mob/living/silicon/robot/proc/handle_radiation()
+	if(!client) // This is purely visual for borgs so we shouldn't bother otherwise
+		radiation = 0
+		return
 	var/area/A = get_area(src)
 	if(A && A.haunted) // Force haunting rad vision
 		radiation = 10
