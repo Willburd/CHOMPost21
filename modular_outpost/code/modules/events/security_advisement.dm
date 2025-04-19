@@ -3,7 +3,7 @@
 
 /datum/event/security_drill/announce()
 	if(GLOB.security_level != SEC_LEVEL_GREEN) // If during peace
-		command_announcement.Announce("A command issued drill schedualed at this hour has been cancelled due to a highened alert level on station.", "Security Advisement")
+		command_announcement.Announce("A command issued drill scheduled at this hour has been cancelled due to a heightened alert level on station.", "Security Advisement")
 		return
 
 	// Basic security drill
