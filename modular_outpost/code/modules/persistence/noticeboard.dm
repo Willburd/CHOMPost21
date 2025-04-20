@@ -70,7 +70,7 @@
 
 /obj/structure/noticeboard/library/Initialize(mapload)
 	var/obj/item/paper/P
-	ADD_NOTICE("Bingle","<br>Our libary has received a computer with authorized Bingle usage! Use it to research anything and everything, it's a very handy wiki, and always up to date.<br> If the computer crashes just give it a wack, it's old tech.",list(/obj/item/stamp/iaa))
+	ADD_NOTICE("Bingle","<br>Our libary has received a computer with authorized Bingle usage! Use it to research anything and everything, it's a very handy wiki, and always up to date.<br> If the computer crashes just give it a wack, it's old tech.",list(/obj/item/stamp/hop))
 	. = ..()
 
 
