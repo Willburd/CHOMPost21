@@ -29494,6 +29494,16 @@
 	c_tag = "CIV - Lasertag Central Storage";
 	dir = 1
 	},
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
+/obj/item/mine/claymore/donksoft,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "bck" = (
@@ -52600,11 +52610,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chem_storage)
 "fBA" = (
-/obj/effect/mine/claymore{
-	dir = 4
+/obj/effect/mine/frag{
+	camo_net = 1
 	},
+/obj/item/multitool,
 /turf/simulated/floor/plating/muriki,
-/area/mine/explored/muriki/cave/waste)
+/area/mine/unexplored/muriki/mountainbase)
 "fBP" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -55692,10 +55703,10 @@
 /area/maintenance/sec)
 "hwC" = (
 /obj/effect/mine/claymore{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/plating/muriki,
-/area/mine/explored/muriki/cave/waste)
+/area/mine/unexplored/muriki/mountainbase)
 "hwD" = (
 /turf/simulated/open,
 /area/mine/unexplored/muriki/cave/sci)
@@ -57098,11 +57109,8 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
 "isP" = (
-/obj/effect/mine/claymore{
-	dir = 8
-	},
-/turf/simulated/floor/plating/muriki,
-/area/mine/explored/muriki/cave/waste)
+/turf/simulated/wall,
+/area/mine/unexplored/muriki/mountainbase)
 "itk" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -63520,12 +63528,9 @@
 /turf/simulated/mineral/alt/ignore_cavegen/muriki,
 /area/mine/unexplored/muriki/cave/east)
 "mpX" = (
-/obj/effect/mine/frag{
-	camo_net = 1
-	},
-/obj/item/multitool,
+/obj/effect/mine/claymore,
 /turf/simulated/floor/plating/muriki,
-/area/mine/explored/muriki/cave/waste)
+/area/mine/unexplored/muriki/mountainbase)
 "mqM" = (
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -77953,9 +77958,11 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/security/surgery)
 "vhO" = (
-/obj/effect/mine/claymore,
+/obj/effect/mine/claymore{
+	dir = 4
+	},
 /turf/simulated/floor/plating/muriki,
-/area/mine/explored/muriki/cave/waste)
+/area/mine/unexplored/muriki/mountainbase)
 "vif" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -81796,6 +81803,12 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/eng)
+"xBP" = (
+/obj/effect/mine/claymore{
+	dir = 1
+	},
+/turf/simulated/floor/plating/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "xBU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -86657,9 +86670,9 @@ efJ
 efJ
 efJ
 efJ
-nSV
-dPi
-nSV
+qSi
+qSi
+qSi
 qSi
 qSi
 qSi
@@ -86818,11 +86831,11 @@ kDE
 kDE
 efJ
 qSi
-nSV
-nSV
-isP
-nSV
-nSV
+qSi
+qSi
+qSi
+qSi
+qSi
 qSi
 qSi
 qSi
@@ -86980,11 +86993,11 @@ kDE
 kDE
 efJ
 qSi
-dPi
-hwC
-mpX
-vhO
-dPi
+qSi
+qSi
+qSi
+qSi
+qSi
 qSi
 qSi
 qSi
@@ -87142,11 +87155,11 @@ kDE
 kDE
 efJ
 qSi
-nSV
-nSV
-fBA
-nSV
-nSV
+qSi
+qSi
+qSi
+qSi
+qSi
 qSi
 qSi
 qSi
@@ -87305,9 +87318,9 @@ efJ
 efJ
 qSi
 qSi
-nSV
-dPi
-nSV
+qSi
+qSi
+qSi
 qSi
 qSi
 qSi
@@ -146300,9 +146313,9 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
-jhm
+oCv
+isP
+oCv
 jhm
 jhm
 jhm
@@ -146461,11 +146474,11 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
-jhm
-jhm
-jhm
+oCv
+oCv
+hwC
+oCv
+oCv
 jhm
 jhm
 jhm
@@ -146623,11 +146636,11 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
-jhm
-jhm
-jhm
+isP
+xBP
+fBA
+mpX
+isP
 jhm
 jhm
 jhm
@@ -146785,11 +146798,11 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
-jhm
-jhm
-jhm
+oCv
+oCv
+vhO
+oCv
+oCv
 jhm
 jhm
 jhm
@@ -146948,9 +146961,9 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
-jhm
+oCv
+isP
+oCv
 jhm
 jhm
 qcp

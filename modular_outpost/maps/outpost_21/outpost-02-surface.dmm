@@ -77508,20 +77508,6 @@
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
-"wfV" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "secding";
-	name = "Security Hail";
-	pixel_y = 32
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/security)
 "wfZ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -128106,7 +128092,7 @@ wOX
 tGV
 hnb
 bfb
-wfV
+pKL
 awl
 aWa
 aWa
