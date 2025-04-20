@@ -734,7 +734,7 @@ var/list/mining_overlay_cache = list()
 		return
 
 	var/mineral_name
-	if(rare_ore && (!(z in using_map.station_levels) || using_map.station_uses_common_ore_only == FALSE))
+	if(rare_ore && (z in using_map.rare_ore_levels))
 		mineral_name = pickweight(using_map.rare_ores)
 	else
 		mineral_name = pickweight(using_map.common_ores)
