@@ -192,17 +192,19 @@
 
 /turf/simulated/floor/water/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	R.add_reagent(REAGENT_ID_WATER, round(volume, 0.1))
+	// Outpost 21 edit - Fluid pump rate tweaks
+	R.add_reagent(REAGENT_ID_WATER, round(volume / 5, 0.1))
 
 	var/datum/gas_mixture/air = return_air() // v
 	if(air.temperature <= T0C) // Uses the current air temp, instead of the turf starting temp
-		R.add_reagent(REAGENT_ID_ICE, round(volume / 2, 0.1))
+		R.add_reagent(REAGENT_ID_ICE, round(volume / 4, 0.1))
 
 	for(var/turf/simulated/mineral/M in orange(5,src)) // Uses the turf as center instead of an unset usr
 		if(M.mineral && prob(40)) // v
-			R.add_reagent(M.mineral.reagent, round(volume / 5, 0.1)) // Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change. Also nerfed amount to 1/5 instead of 1/2
-		else if(prob(10))
-			R.add_reagent("silicate", 0.1) // Outpost 21 edit - Nerfed further by taking up tank with junk sand
+			R.add_reagent(M.mineral.reagent, round(volume, 0.1)) // Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change.
+		else if(prob(5))
+			R.add_reagent("silicate", 0.1)
+	// Outpost 21 edit end
 
 /turf/simulated/floor/water/pool/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
