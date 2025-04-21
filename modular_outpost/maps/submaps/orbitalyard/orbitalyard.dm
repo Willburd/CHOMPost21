@@ -5,11 +5,19 @@
 #include "chunk_A.dmm"
 #include "chunk_B.dmm"
 #include "chunk_C.dmm"
+#include "chunk_D.dmm"
+#include "chunk_E.dmm"
+#include "chunk_F.dmm"
 #include "scaff_A.dmm"
 #include "scaff_B.dmm"
 #include "scaff_C.dmm"
 #include "structure_A.dmm"
 #include "giant_asteroid_A.dmm"
+#include "giant_asteroid_B.dmm"
+#include "giant_asteroid_C.dmm"
+#include "giant_asteroid_D.dmm"
+#include "giant_asteroid_E.dmm"
+#include "giant_asteroid_F.dmm"
 #include "structure_A.dmm"
 #include "platform_A.dmm"
 #include "survpod_a.dmm"
@@ -55,6 +63,26 @@
 	allow_duplicates = TRUE
 	cost = 5
 
+/datum/map_template/outpost21/space/orbitalyard/chunk_D
+	name = "Asteroid Variant D"
+	desc = "Random asteroid."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/chunk_D.dmm"
+	allow_duplicates = TRUE
+	cost = 5
+
+/datum/map_template/outpost21/space/orbitalyard/chunk_E
+	name = "Asteroid Variant E"
+	desc = "Random asteroid."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/chunk_E.dmm"
+	allow_duplicates = TRUE
+	cost = 5
+
+/datum/map_template/outpost21/space/orbitalyard/chunk_F
+	name = "Asteroid Variant F"
+	desc = "Random asteroid."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/chunk_F.dmm"
+	allow_duplicates = TRUE
+	cost = 15
 
 /datum/map_template/outpost21/space/orbitalyard/scaff_A
 	name = "Scaffolding Variant A"
@@ -89,7 +117,7 @@
 	desc = "Abandoned survival pod"
 	mappath = "modular_outpost/maps/submaps/orbitalyard/survpod_a.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 15
+	discard_prob = 65
 	cost = 2
 
 
@@ -116,14 +144,42 @@
 	desc = "Random Giant asteroid."
 	mappath = "modular_outpost/maps/submaps/orbitalyard/giant_asteroid_A.dmm"
 	allow_duplicates = TRUE
-	cost = 40
+	cost = 20
 
 /datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_B
 	name = "Giant Asteroid Variant B"
 	desc = "Random Giant asteroid."
 	mappath = "modular_outpost/maps/submaps/orbitalyard/giant_asteroid_B.dmm"
 	allow_duplicates = FALSE // has secret in it
-	cost = 50
+	cost = 20
+
+/datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_C
+	name = "Giant Asteroid Variant C"
+	desc = "Random Giant asteroid."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/giant_asteroid_C.dmm"
+	allow_duplicates = TRUE
+	cost = 10
+
+/datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_D
+	name = "Giant Asteroid Variant D"
+	desc = "Random Giant asteroid."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/giant_asteroid_D.dmm"
+	allow_duplicates = TRUE
+	cost = 30
+
+/datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_E
+	name = "Giant Asteroid Variant E"
+	desc = "Random Giant asteroid."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/giant_asteroid_E.dmm"
+	allow_duplicates = TRUE
+	cost = 10
+
+/datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_F
+	name = "Giant Asteroid Variant F"
+	desc = "Random Giant asteroid."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/giant_asteroid_F.dmm"
+	allow_duplicates = TRUE
+	cost = 10
 
 /datum/map_template/outpost21/space/orbitalyard_huge/structure_A
 	name = "Structure Variant A"
@@ -179,6 +235,7 @@
 	has_gravity = 0
 	ambience = AMBIENCE_OUTPOST21_SPACE
 	base_turf = /turf/space
+	always_unpowered = TRUE
 
 /area/submap/outpost21/asteroid_generic/get_gravity()
 	return 0
@@ -189,19 +246,24 @@
 	has_gravity = 0
 	ambience = AMBIENCE_OUTPOST21_SPACE
 	base_turf = /turf/space
+	always_unpowered = TRUE
 
 /area/submap/outpost21/structure_generic/get_gravity()
 	return 0
 
 /area/submap/outpost21/structure_generic/lostshipa
 	name = "\improper Abandoned Vessel"
+	always_unpowered = FALSE
 
 /area/submap/outpost21/structure_generic/lostshipb
 	name = "\improper Abandoned Vessel"
+	always_unpowered = FALSE
 
 /area/submap/outpost21/structure_generic/lostpod
 	name = "\improper Lost Survival Pod"
+	always_unpowered = FALSE
 
 /area/submap/outpost21/structure_generic/alienshipa
 	name = "\improper Alien Vessel"
-	requires_power = 0
+	requires_power = FALSE
+	always_unpowered = FALSE

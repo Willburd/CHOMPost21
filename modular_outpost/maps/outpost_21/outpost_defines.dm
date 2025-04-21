@@ -254,7 +254,7 @@
 
 /datum/map/outpost/perform_map_generation()
 	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
-	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 120, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
 
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 150, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 200, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard)

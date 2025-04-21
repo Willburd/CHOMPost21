@@ -12,8 +12,7 @@
 	)
 
 #define AMBIENCE_OUTPOST21_SPACE list(\
-	'sound/ambience/ambispace.ogg',\
-	'sound/music/space.ogg',\
+	'sound/ambience/ambimine.ogg',\
 	'sound/music/traitor.ogg',\
 	'sound/ambience/space/space_serithi.ogg'\
 	)
