@@ -40,6 +40,7 @@ GLOBAL_LIST_EMPTY(latejoin_gateway)
 GLOBAL_LIST_EMPTY(latejoin_elevator)
 GLOBAL_LIST_EMPTY(latejoin_cryo)
 GLOBAL_LIST_EMPTY(latejoin_cyborg)
+GLOBAL_LIST_EMPTY(latejoin_dorm) // Outpost 21 edit - latejoin dorms
 
 GLOBAL_LIST_EMPTY(prisonwarp) // Prisoners go to these
 GLOBAL_LIST_EMPTY(holdingfacility) // Captured people go here
