@@ -1,22 +1,23 @@
 // Or engi-chem won't have fun
 /decl/chemical_reaction/distilling/sugar
-	name = "Distilling Sugar"
+	name = "Crystalizing Sugar"
 	id = "distill_sugar"
 	result = REAGENT_ID_SUGAR
-	required_reagents = list(REAGENT_ID_WATER = 5)
-	catalysts = list(REAGENT_ID_PLANTCOLONY = 1)
+	required_reagents = list(REAGENT_ID_CARBON = 2, REAGENT_ID_WATER = 1)
+	catalysts = list(REAGENT_ID_SUGAR = 1) // Rebuild the crystals!
 	result_amount = 1
 
-	temp_range = list(T20C + 30, T20C + 60)
+	temp_range = list(T0C -10, T0C -5) // crystal growth
 	temp_shift = -1
 
-	require_xgm_gas = GAS_CO2 // PHOTOSYNTHESIS, PHOTOSYNTHESIS, PHOTOSYNTHESIS, PHOTOSYNTHESIS
+	require_xgm_gas = GAS_PHORON
 	rejects_xgm_gas = GAS_O2
 
 /decl/chemical_reaction/distilling/hydrogen
 	name = "Distilling Hydrogen"
 	id = "distill_hydrogen"
 	result = REAGENT_ID_HYDROGEN
+	inhibitors = list(REAGENT_ID_CARBON = 1)
 	required_reagents = list(REAGENT_ID_WATER = 1)
 	result_amount = 2
 

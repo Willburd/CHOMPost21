@@ -274,8 +274,8 @@ SUBSYSTEM_DEF(internal_wiki)
 			assemble_reaction["temp_max"] = CR.temp_range[2]
 			assemble_reaction["xgm_min"] = CR.minimum_xgm_pressure
 			assemble_reaction["xgm_max"] = CR.maximum_xgm_pressure
-			assemble_reaction["require_xgm_gas"] = CR.require_xgm_gas
-			assemble_reaction["rejects_xgm_gas"] = CR.rejects_xgm_gas
+			assemble_reaction["require_xgm_gas"] = CR.require_xgm_gas ? gas_data.name[CR.require_xgm_gas] : null
+			assemble_reaction["rejects_xgm_gas"] = CR.rejects_xgm_gas ? gas_data.name[CR.rejects_xgm_gas] : null
 			var/list/reqs = list()
 			for(var/RQ in CR.required_reagents)
 				var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
