@@ -308,14 +308,14 @@
 		src.visible_message("[src] flashes 'No mind records detected for [D.registered_name]!', and lets out a loud incorrect sounding beep!")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		if((world.time - recordM.last_notification) < 30 MINUTES)
-			global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
+			GLOB.global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
 		return
 
 	if(isnull(recordB) || isnull(recordB.mydna) || isnull(recordB.mydna.dna))
 		src.visible_message("[src] flashes 'No body records for [D.registered_name], or dna was corrupted!', and lets out a loud incorrect sounding beep!")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		if((world.time - recordM.last_notification) < 30 MINUTES)
-			global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
+			GLOB.global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
 		return
 
 	var/datum/species/chosen_species = GLOB.all_species[recordB.mydna.dna.species]
@@ -323,7 +323,7 @@
 		src.visible_message("[src] flashes 'Could not resleeve [D.registered_name]. Invalid species!', and lets out a loud incorrect sounding beep!")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		if((world.time - recordM.last_notification) < 30 MINUTES)
-			global_announcer.autosay("[D.registered_name] was unable to be resleeved by the automatic resleeving system.", "TransCore Oversight", "Medical")
+			GLOB.global_announcer.autosay("[D.registered_name] was unable to be resleeved by the automatic resleeving system.", "TransCore Oversight", "Medical")
 		return
 
 	playsound(src, 'sound/machines/medbayscanner1.ogg', 50, 0) // Make it clear the ID was processed and it's waiting

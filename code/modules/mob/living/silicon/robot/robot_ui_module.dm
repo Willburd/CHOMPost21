@@ -43,8 +43,8 @@
 			// CHOMPAdd Start, shell blacklist and crisis mode for shells
 			modules.Remove(GLOB.shell_module_blacklist)
 			// Outpost 21 edit begin - Admins always have ERT access
-			if(ui.user.client && ui.user.client.holder && check_rights_for(ui.user.client, (R_ADMIN|R_MOD)))
-				modules |= emergency_module_types
+			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
+				modules |= GLOB.emergency_module_types
 			// Outpost 21 edit end
 			else if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
@@ -53,8 +53,8 @@
 		else
 			modules.Add(GLOB.robot_module_types)
 			// Outpost 21 edit begin - Admins always have ERT access
-			if(ui.user.client && ui.user.client.holder && check_rights_for(ui.user.client, (R_ADMIN|R_MOD)))
-				modules |= emergency_module_types
+			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
+				modules |= GLOB.emergency_module_types
 			// Outpost 21 edit end
 			else if(R.crisis || GLOB.security_level >= SEC_LEVEL_RED || R.crisis_override)
 				to_chat(R, span_red("Crisis mode active. Combat module available."))

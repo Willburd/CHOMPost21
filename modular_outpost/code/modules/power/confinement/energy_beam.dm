@@ -78,7 +78,7 @@
 	if(ismovable(A))
 		var/atom/movable/AM = A
 		if(!AM.anchored)
-			var/atom/target = get_edge_target_turf(AM, pick(alldirs))
+			var/atom/target = get_edge_target_turf(AM, pick(GLOB.alldirs))
 			AM.throw_at(target, rand(100,150), 4)
 
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()

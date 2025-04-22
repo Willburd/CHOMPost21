@@ -81,7 +81,7 @@
 		update_parts_icons()
 
 	if(!found_dir)
-		for(var/d in cardinal)
+		for(var/d in GLOB.cardinal)
 			var/obj/structure/confinement_beam_generator/gen/G = locate() in get_step(src,d)
 			if(G)
 				found_dir = d

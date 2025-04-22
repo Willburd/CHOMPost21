@@ -42,7 +42,7 @@
 
 // Outpost 21 hardcoded lockdown and turrets
 /obj/machinery/button/remote/admin_only/trigger()
-	for(var/obj/machinery/door/blast/M in machines)
+	for(var/obj/machinery/door/blast/M in GLOB.machines)
 		if(M.id == id)
 			if(M.density)
 				spawn(0)
@@ -51,7 +51,7 @@
 				spawn(0)
 					M.close()
 
-	for(var/obj/machinery/porta_turret/M in machines)
+	for(var/obj/machinery/porta_turret/M in GLOB.machines)
 		if(get_area(M) == get_area(src))
 			M.enabled = !M.enabled
 			if(M.enabled)

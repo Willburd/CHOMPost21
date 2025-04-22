@@ -133,4 +133,4 @@
 	P.submunition_spread_min = 25
 	P.submunitions = list(/obj/item/projectile/bullet/incendiary/dragonflame = 3)
 	// launch!
-	P.launch_projectile( get_step(src,reverse_dir[src.dir]), BP_TORSO, src)
+	P.launch_projectile( get_step(src,GLOB.reverse_dir[src.dir]), BP_TORSO, src)

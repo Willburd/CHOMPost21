@@ -34,7 +34,7 @@
 	// outpost 21 edit - add gibber from above detection
 	var/obj/machinery/mineral/input/input_obj = locate( /obj/machinery/mineral/input, get_zstep(src, UP))
 	if(!input_obj)
-		for(var/i in cardinal)
+		for(var/i in GLOB.cardinal)
 			input_obj = locate( /obj/machinery/mineral/input, get_step(src.loc, i) )
 			if(input_obj)
 				if(isturf(input_obj.loc))
@@ -367,7 +367,7 @@
 
 /obj/machinery/gibber/proc/updatesleever()
 	var/obj/machinery/transhuman/autoresleever/S
-	for(var/i in cardinal)
+	for(var/i in GLOB.cardinal)
 		S = locate( /obj/machinery/transhuman/autoresleever, get_step(src.loc, i) )
 		if(!isnull(S) && S.anchored)
 			S.link_gibber(src)

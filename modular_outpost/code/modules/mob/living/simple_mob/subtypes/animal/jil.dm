@@ -556,7 +556,7 @@
 			if(fear_run <= 0)
 				fear_run = 10 // screw it
 			return
-		holder.IMove(get_step(holder, pick(alldirs)))
+		holder.IMove(get_step(holder, pick(GLOB.alldirs)))
 	else
 		// rejuvinate nest!
 		if(home_turf_previous)

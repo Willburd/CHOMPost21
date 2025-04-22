@@ -13,7 +13,7 @@
 /datum/event/horde_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 60)
 
-	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines) //Gathering together all possible areas to spawn mobs.
+	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in GLOB.machines) //Gathering together all possible areas to spawn mobs.
 		//CHOMPEdit: Added a couple areas to the exclusion.
 		var/in_area = get_area(temp_vent)
 		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
@@ -45,7 +45,7 @@
 
 /datum/event/horde_infestation/start()
 	if(spawning == SPIDERS)
-		for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in machines)
+		for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in GLOB.machines)
 			//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
 			var/in_area = get_area(temp_vent)
 			if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))

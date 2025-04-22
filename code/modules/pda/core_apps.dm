@@ -76,7 +76,7 @@
 			if(pda.loc == ui.user)
 				// Outpost 21 edit begin - delete question
 				if(!n || n == "")
-					if(tgui_alert(ui.user, "Are you sure you want to delete note [alphabet_uppercase[currentnote]]?", "Confirm Delete", list("Delete", "No")) != "Delete")
+					if(tgui_alert(ui.user, "Are you sure you want to delete note [GLOB.alphabet_upper[currentnote]]?", "Confirm Delete", list("Delete", "No")) != "Delete")
 						return TRUE
 				// Outpost 21 edit end
 				note = adminscrub(n)

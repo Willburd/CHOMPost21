@@ -42,7 +42,7 @@
 		var/obj/structure/confinement_beam_generator/lens/outer_lens/L = locate() in get_step(src,get_dir)
 		if(!L || !L.is_valid_state())
 			return FALSE
-		if(L.dir != reverse_dir[get_dir]) // Must be facing into middle lense
+		if(L.dir != GLOB.reverse_dir[get_dir]) // Must be facing into middle lense
 			return FALSE
 	. = ..()
 

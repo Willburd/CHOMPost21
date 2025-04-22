@@ -14,7 +14,7 @@
 		if(turfs.len) //Pick a turf to spawn at if we can
 		*/
 		//var/turf/simulated/floor/T = pick(turfs) //CHOMPedit end
-		var/turf/simulated/floor/T = pick(vinestart)
+		var/turf/simulated/floor/T = pick(GLOB.vinestart)
 		if(T)
 			var/datum/seed/seed = SSplants.create_random_seed(1)
 			seed.set_trait(TRAIT_SPREAD,2)             // So it will function properly as vines.

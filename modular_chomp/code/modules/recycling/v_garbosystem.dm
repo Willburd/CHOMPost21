@@ -210,7 +210,7 @@
 	var/sump_prev = sump
 	sump = locate(/obj/vehicle/train/trolly_tank) in loc.contents
 	if(!sump)
-		for(var/dir in alldirs)
+		for(var/dir in GLOB.alldirs)
 			sump = locate(/obj/vehicle/train/trolly_tank, get_step(src, dir))
 			if(sump)
 				break

@@ -36,7 +36,7 @@
 /obj/machinery/reagent_refinery/waste_processor/update_icon()
 	cut_overlays()
 	if(anchored)
-		for(var/direction in cardinal)
+		for(var/direction in GLOB.cardinal)
 			var/turf/T = get_step(get_turf(src),direction)
 			var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
 			if(!other) // snowflake grinders...
@@ -53,11 +53,11 @@
 						check_dir = turn(filt.dir, 270)
 					else
 						check_dir = turn(filt.dir, 90)
-					if(check_dir == reverse_dir[direction])
+					if(check_dir == GLOB.reverse_dir[direction])
 						var/image/intake = image(icon, icon_state = "waste_intakes", dir = direction)
 						add_overlay(intake)
 						continue
-				if(other.dir == reverse_dir[direction])
+				if(other.dir == GLOB.reverse_dir[direction])
 					var/image/intake = image(icon, icon_state = "waste_intakes", dir = direction)
 					add_overlay(intake)
 

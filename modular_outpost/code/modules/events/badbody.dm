@@ -281,7 +281,7 @@
 			else if(body.buckled)
 				body.resist()
 			else
-				body.IMove(get_step(body.loc,pick(cardinal)))
+				body.IMove(get_step(body.loc,pick(GLOB.cardinal)))
 			return world.time + rand(100,500)
 		if(4)
 			if(A)

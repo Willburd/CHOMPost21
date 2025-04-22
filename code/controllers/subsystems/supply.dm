@@ -555,7 +555,7 @@ SUBSYSTEM_DEF(supply)
 			return 0
 		return organ_stuff.supply_conversion_value
 	// Selling vaccines
-	if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
+	if(istype(A, /obj/item/reagent_containers/glass/beaker/vial/vaccine))
 		return 5
 	// Selling food
 	if(istype(A, /obj/item/reagent_containers/food))
