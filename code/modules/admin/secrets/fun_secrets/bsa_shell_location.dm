@@ -30,15 +30,15 @@
 /datum/admin_secret_item/fun_secret/shell_location/proc/announce(var/x,var/y,var/z, var/first_shot = TRUE)
 	if(first_shot)
 		var/message = "Requesting a precision artillery strike on coordinates: [x], [y], [z]."
-		global_announcer.autosay(message, "Central Command Fire Control", "Command")
-		global_announcer.autosay(message, "Central Command Fire Control", "Security")
+		GLOB.global_announcer.autosay(message, "Central Command Fire Control", "Command")
+		GLOB.global_announcer.autosay(message, "Central Command Fire Control", "Security")
 		message = "All crew INCOMING: Bluespace Artillery Fire confirmed, precision strike. Stand by."
-		global_announcer.autosay(message, "Central Command Fire Control", "Common")
+		GLOB.global_announcer.autosay(message, "Central Command Fire Control", "Common")
 	else
 		var/message = "Reloading, preparing additional artillery strike on coordinates: [x], [y], [z]."
-		global_announcer.autosay(message, "Central Command Fire Control", "Command")
+		GLOB.global_announcer.autosay(message, "Central Command Fire Control", "Command")
 		message = "Reloading, preparing additional artillery strike."
-		global_announcer.autosay(message, "Central Command Fire Control", "Common")
+		GLOB.global_announcer.autosay(message, "Central Command Fire Control", "Common")
 	addtimer(CALLBACK(src, PROC_REF(shelling), x, y, z), rand(4 SECONDS, 6 SECONDS), TIMER_DELETE_ME)
 
 /datum/admin_secret_item/fun_secret/shell_location/proc/shelling(var/x,var/y,var/z)
@@ -62,4 +62,4 @@
 	explosion( T, 3, 5, 7, 5)
 
 /datum/admin_secret_item/fun_secret/shell_location/proc/finish_message()
-	global_announcer.autosay("Cease Fire. All clear, all clear. Assess affect for reengagement.", "Central Command Fire Control", "Common")
+	GLOB.global_announcer.autosay("Cease Fire. All clear, all clear. Assess affect for reengagement.", "Central Command Fire Control", "Common")

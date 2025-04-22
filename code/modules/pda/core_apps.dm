@@ -65,7 +65,7 @@
 
 /datum/data/pda/app/notekeeper/update_ui(mob/user as mob, list/data)
 	data["note"] = note									// current pda notes
-	data["notename"] = "Note [alphabet_uppercase[currentnote]] : [notetitle]"
+	data["notename"] = "Note [GLOB.alphabet_upper[currentnote]] : [notetitle]"
 
 /datum/data/pda/app/notekeeper/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
@@ -76,7 +76,7 @@
 			if(pda.loc == ui.user)
 				// Outpost 21 edit begin - delete question
 				if(!n || n == "")
-					if(tgui_alert(ui.user, "Are you sure you want to delete note [alphabet_uppercase[currentnote]]?", "Confirm Delete", list("Delete", "No")) != "Delete")
+					if(tgui_alert(ui.user, "Are you sure you want to delete note [GLOB.alphabet_upper[currentnote]]?", "Confirm Delete", list("Delete", "No")) != "Delete")
 						return TRUE
 				// Outpost 21 edit end
 				note = adminscrub(n)
@@ -180,7 +180,7 @@
 		if(istype(I,/obj/item/paper))
 			var/obj/item/paper/P = I
 			if(isnull(P.info) || P.info == "" )
-				var/titlenote = "Note [alphabet_uppercase[currentnote]]"
+				var/titlenote = "Note [GLOB.alphabet_upper[currentnote]]"
 				if(!isnull(notetitle) && notetitle != "")
 					titlenote = notetitle
 				to_chat(user, span_notice("Successfully printed [titlenote]!"))
@@ -212,8 +212,8 @@
 	template = "pda_manifest"
 
 /datum/data/pda/app/manifest/update_ui(mob/user as mob, list/data)
-	if(data_core)
-		data_core.get_manifest_list()
+	if(GLOB.data_core)
+		GLOB.data_core.get_manifest_list()
 	data["manifest"] = GLOB.PDA_Manifest
 
 /datum/data/pda/app/manifest/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)

@@ -64,7 +64,7 @@
 	cut_overlays()
 	. = ..()
 
-	for(var/direction in cardinal)
+	for(var/direction in GLOB.cardinal)
 		var/turf/T = get_step(src,direction)
 		if(istype(T) && !T.density)
 			var/place_dir = turn(direction, 180)

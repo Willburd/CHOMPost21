@@ -15545,8 +15545,19 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/machinery/computer/pandemic/isolator,
-/turf/simulated/floor/tiled/milspec/sterile,
+/mob/living/simple_mob/animal/passive/mouse/white/virology,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/southleft{
+	name = "Rodent Pen";
+	req_one_access = list(39)
+	},
+/obj/structure/dogbed,
+/turf/simulated/floor/tiled/kafel_full,
 /area/medical/virology)
 "cMI" = (
 /obj/structure/closet/crate/medical,
@@ -24575,19 +24586,19 @@
 	name = "Sample Containment";
 	req_one_access = list(39)
 	},
-/obj/item/reagent_containers/glass/bottle/culture/flu{
+/obj/item/reagent_containers/glass/beaker/vial/culture/flu{
 	pixel_y = 8;
 	pixel_x = 6
 	},
-/obj/item/reagent_containers/glass/bottle/culture/flu{
+/obj/item/reagent_containers/glass/beaker/vial/culture/flu{
 	pixel_y = 10;
 	pixel_x = -4
 	},
-/obj/item/reagent_containers/glass/bottle/culture/cold{
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold{
 	pixel_y = 1;
 	pixel_x = -2
 	},
-/obj/item/reagent_containers/glass/bottle/culture/cold{
+/obj/item/reagent_containers/glass/beaker/vial/culture/cold{
 	pixel_y = 1;
 	pixel_x = 7
 	},

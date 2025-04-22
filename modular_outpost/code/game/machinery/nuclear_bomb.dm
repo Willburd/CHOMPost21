@@ -259,19 +259,19 @@
 			if(warningstage < 3)
 				warningstage = 3
 				message = "DANGER! The Terraformer Euthanizer is now armed and ready to fire! Destroy any unauthorized usage of the Terraformer Euthanizer with extreme prejudice immediately! All non-security crew must retreat to minimum safe distance incase of detonation! This is a Delta-Level Hazard!"
-				global_announcer.autosay(message, "Primary System", "Command")
-				global_announcer.autosay(message, "Primary System", "Security")
-				global_announcer.autosay(message, "Primary System", "Common")
+				GLOB.global_announcer.autosay(message, "Primary System", "Command")
+				GLOB.global_announcer.autosay(message, "Primary System", "Security")
+				GLOB.global_announcer.autosay(message, "Primary System", "Common")
 
 	if(yes_code)
 		if(warningstage < 2)
 			warningstage = 2
 			message = "Warning! Terraformer Euthanizer has been armed, detonation is possible. If this is unauthorized, respond with all available force to stop the process immediately! E-Shui law prevents any usage of the Euthanizer that is not in compliance with SolGov Vs N.T. 443-72!"
-			global_announcer.autosay(message, "Primary System", "Command")
-			global_announcer.autosay(message, "Primary System", "Security")
+			GLOB.global_announcer.autosay(message, "Primary System", "Command")
+			GLOB.global_announcer.autosay(message, "Primary System", "Security")
 
 	if(auth || storageopened)
 		if(warningstage < 1)
 			warningstage = 1
 			message = "Warning! Utilization of the Terraformer Euthanizer detected. Respond with all available force to stop the process if this is unauthorized."
-			global_announcer.autosay(message, "Security Subsystem", "Command")
+			GLOB.global_announcer.autosay(message, "Security Subsystem", "Command")

@@ -146,8 +146,8 @@ OL|IL|OL
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(check_sold_wattage(gigawatts GIGAWATTS,org_wattage,new_wattage))
-		global_announcer.autosay("[pre_message][gigawatts] total gigawatt[gigawatts != 1 ? "s" : ""] of excess power sold!", "Confinement Beam Monitor", pre_message == "" ? DEPARTMENT_ENGINEERING : null)
-		global_announcer.autosay("PTL bounty reached. [credits] Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		GLOB.global_announcer.autosay("[pre_message][gigawatts] total gigawatt[gigawatts != 1 ? "s" : ""] of excess power sold!", "Confinement Beam Monitor", pre_message == "" ? DEPARTMENT_ENGINEERING : null)
+		GLOB.global_announcer.autosay("PTL bounty reached. [credits] Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
 		SSsupply.points += credits
 
 /datum/confinement_pulse_data/proc/check_sold_wattage(var/threshold,var/org_wattage,var/new_wattage)
@@ -385,17 +385,17 @@ OL|IL|OL
 		health -= 1
 		if(warns && !damage_alert)
 			damage_alert = TRUE
-			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
+			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) emergency engineering announcement.")
 
 		var/dam = 1 - (health / max_hp)
 		if(warns && dam > beam_wander_threshold && !critical_alert)
 			critical_alert = TRUE
-			global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! BEAM IS MOBILE!", "Confinement Beam Monitor")
+			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! BEAM IS MOBILE!", "Confinement Beam Monitor")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) CRITICAL engineering announcement.")
 
 		if(warns && health == 5)
-			global_announcer.autosay("DANGER: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" SUPER CRITICAL!", "Confinement Beam Monitor")
+			GLOB.global_announcer.autosay("DANGER: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" SUPER CRITICAL!", "Confinement Beam Monitor")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) SELF DESTRUCTING engineering announcement.")
 
 		if(health == 0 || true_heat >= EXPLODEHEAT)

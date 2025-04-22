@@ -5,7 +5,7 @@
 
 // Returns true if news was updated since last seen.
 /client/proc/check_for_new_server_news()
-	if(servernews_hash != prefs.lastnews) //ChompEDIT
+	if(GLOB.servernews_hash != prefs.lastnews) //ChompEDIT
 		return TRUE
 	return FALSE
 
@@ -40,7 +40,7 @@
 
 		if(findtext(new_body,"<script",1,0) ) // Is this needed with santize()?
 			return
-		servernews_hash = md5("[new_title]" + "[new_body]") //ChompADD - update the servernews hash global
+		GLOB.servernews_hash = md5("[new_title]" + "[new_body]") //ChompADD - update the servernews hash global
 		F["title"] << new_title
 		F["body"] << new_body
 		F["author"] << key
@@ -50,8 +50,8 @@
 /client/proc/get_server_news() //ChompEDIT - child of /client/
 	var/savefile/F = new(NEWSFILE)
 	if(F)
-		if(servernews_hash != prefs.lastnews) //ChompADD
-			prefs.lastnews = servernews_hash //ChompADD
+		if(GLOB.servernews_hash != prefs.lastnews) //ChompADD
+			prefs.lastnews = GLOB.servernews_hash //ChompADD
 			SScharacter_setup.queue_preferences_save(prefs) //ChompADD
 		return F
 

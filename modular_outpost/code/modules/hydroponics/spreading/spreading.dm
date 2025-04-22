@@ -1,7 +1,7 @@
 // A weaker, slower, version of spacevines
 /proc/spacemoss_infestation(var/potency_min=10, var/potency_max=40, var/maturation_min=50, var/maturation_max=150)
 	spawn() //to stop the secrets panel hanging
-		var/turf/simulated/floor/T = pick(vinestart)
+		var/turf/simulated/floor/T = pick(GLOB.vinestart)
 		if(T)
 			var/datum/seed/seed = SSplants.create_random_seed(1)
 			seed.set_trait(TRAIT_SPREAD,2)             // So it will function properly as vines.

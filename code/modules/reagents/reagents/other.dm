@@ -373,7 +373,7 @@
 		T.holy = 1
 		SShaunting.influence(HAUNTING_BLESSING) // Significant push, to avoid punishing mechanics
 		// Outpost 21 edit begin - consecrate ground!
-		for(var/card in alldirs) // spread it out more...
+		for(var/card in GLOB.alldirs) // spread it out more...
 			var/turf/TR = get_step(src,card)
 			if(TR)
 				TR.holy = 1

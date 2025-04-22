@@ -5,11 +5,11 @@
 	force_cult = TRUE
 
 /datum/event/dirty_room/start()
-	if(!machines.len)
+	if(!GLOB.machines.len)
 		return
 	// Find a disposal bin and use that for area, or to blow out dirt all around it
 	var/list/disposals = list()
-	for(var/obj/machinery/M in machines)
+	for(var/obj/machinery/M in GLOB.machines)
 		if(istype(M,/obj/machinery/disposal))
 			var/obj/machinery/disposal/D = M
 			var/turf/T = get_turf(D)
@@ -38,7 +38,7 @@
 					var/datum/effect/effect/system/smoke_spread/bad/disposal_dust/smoke = new
 					smoke.set_up(rand(3,6),0, D.loc, 0)
 					smoke.start()
-					for(var/dir in alldirs)
+					for(var/dir in GLOB.alldirs)
 						smoke = new
 						smoke.set_up(rand(1,3),0, D.loc, dir)
 						smoke.start()

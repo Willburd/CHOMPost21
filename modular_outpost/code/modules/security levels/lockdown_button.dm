@@ -122,7 +122,7 @@
 			flick("lockdown_[counter]",src)
 			var/id_door = linked_lockdowns[link]
 			var/is_operating = FALSE
-			for(var/obj/machinery/door/blast/M in machines)
+			for(var/obj/machinery/door/blast/M in GLOB.machines)
 				if(M.id == id_door)
 					last_door = M
 					if(M.operating)

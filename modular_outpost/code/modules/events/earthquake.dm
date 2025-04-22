@@ -9,7 +9,7 @@
 	affecting_z = global.using_map.station_levels
 
 	// Vibe lights
-	for(var/obj/machinery/light/L in machines)
+	for(var/obj/machinery/light/L in GLOB.machines)
 		if(!(L.z in affecting_z))
 			continue
 		if(prob(6))
@@ -26,7 +26,7 @@
 		if(istype(S,/obj/structure/table))
 			if(prob(8))
 				var/obj/structure/table/T = S
-				T.flip(pick(cardinal))
+				T.flip(pick(GLOB.cardinal))
 	// Stun and knock down anyone standing
 	for(var/mob/living/L in living_mob_list)
 		if(!(L.z in affecting_z))

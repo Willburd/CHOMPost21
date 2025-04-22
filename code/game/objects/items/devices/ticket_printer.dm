@@ -37,7 +37,7 @@
 	var/new_order = tgui_input_list(user, "Select penalty:", "Penalty", list("Notice", "Community Service", "Fine", "IAA", "Littering"))
 	switch(new_order)
 		if("Community Service")
-			var/list/dps = station_departments.Copy()
+			var/list/dps = GLOB.station_departments.Copy()
 			dps += list("Janitorial","Kitchen","Library","Mining")
 			var/dept = tgui_input_list(user, "Select department:", "Department", dps)
 			if(!dept)

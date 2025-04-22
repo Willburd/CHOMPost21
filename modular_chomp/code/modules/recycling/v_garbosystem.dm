@@ -17,12 +17,12 @@
 
 /obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
-	for(var/dir in cardinal)
+	for(var/dir in GLOB.cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
 		if(src.crusher)
 			crusher.hand_fed = FALSE
 			break
-	for(var/dir in cardinal)
+	for(var/dir in GLOB.cardinal)
 		src.button = locate(/obj/machinery/button/garbosystem, get_step(src, dir))
 		if(src.button)
 			button.grinder = src
@@ -77,7 +77,7 @@
 						if(!emagged && ishuman(L) && L.mind)
 							playsound(src, 'sound/machines/warning-buzzer.ogg', 50, 0, 0)
 							visible_message(span_warning("POSSIBLE CREW MEMBER DETECTED! EMERGENCY STOP ENGAGED!"))
-							global_announcer.autosay("Possible crew member detected in grinder feed. Emergency Stop Protocols engaged!", "Recycling Grinder Alert", "Supply")
+							GLOB.global_announcer.autosay("Possible crew member detected in grinder feed. Emergency Stop Protocols engaged!", "Recycling Grinder Alert", "Supply")
 							operating = FALSE
 							update()
 							break
@@ -210,7 +210,7 @@
 	var/sump_prev = sump
 	sump = locate(/obj/vehicle/train/trolly_tank) in loc.contents
 	if(!sump)
-		for(var/dir in alldirs)
+		for(var/dir in GLOB.alldirs)
 			sump = locate(/obj/vehicle/train/trolly_tank, get_step(src, dir))
 			if(sump)
 				break

@@ -4317,7 +4317,7 @@
 
 		M.druggy = max(M.druggy, drug_strength)
 		if(prob(10) && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained() && !M.resting && !M.resting) // Outpost 21 edit - Resting stops drug movement
-			step(M, pick(cardinal))
+			step(M, pick(GLOB.cardinal))
 
 /datum/reagent/ethanol/sakebomb
 	name = REAGENT_SAKEBOMB

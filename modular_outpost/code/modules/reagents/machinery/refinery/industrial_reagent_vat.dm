@@ -68,7 +68,7 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 		if(!(stat & (NOPOWER|BROKEN)))
 			var/image/dot = image(icon, icon_state = "vat_dot_[ amount_per_transfer_from_this > 0 ? "on" : "off" ]")
 			add_overlay(dot)
-		for(var/direction in cardinal)
+		for(var/direction in GLOB.cardinal)
 			var/turf/T = get_step(get_turf(src),direction)
 			var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
 			if(!other) // snowflake grinders...
@@ -85,11 +85,11 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 						check_dir = turn(filt.dir, 270)
 					else
 						check_dir = turn(filt.dir, 90)
-					if(check_dir == reverse_dir[direction] && dir != direction)
+					if(check_dir == GLOB.reverse_dir[direction] && dir != direction)
 						var/image/intake = image(icon, icon_state = "vat_intakes", dir = direction)
 						add_overlay(intake)
 						continue
-				if(other.dir == reverse_dir[direction] && dir != direction)
+				if(other.dir == GLOB.reverse_dir[direction] && dir != direction)
 					var/image/intake = image(icon, icon_state = "vat_intakes", dir = direction)
 					add_overlay(intake)
 
@@ -121,7 +121,7 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 
 /obj/machinery/reagent_refinery/vat/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
 	// no back/forth, filters don't use just their forward, they send the side too!
-	if(dir == reverse_dir[source_forward_dir])
+	if(dir == GLOB.reverse_dir[source_forward_dir])
 		return 0
 	. = ..(origin_machine, RT, source_forward_dir, filter_id)
 

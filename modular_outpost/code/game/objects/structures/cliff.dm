@@ -80,13 +80,13 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	if(!((cache_string+"-[upperT.name]") in GLOB.cliff_icon_cache_upper))
 		// upper side
 		var/icon/underlying_ground = icon(upperT.icon, upperT.icon_state, upperT.dir)
-		var/icon/subtract = icon(icon, "cliff-" + (istype(src,/obj/structure/cliff/corner) ? "bottom" : "top") + "-subtract", istype(src,/obj/structure/cliff/corner) ? reverse_dir[dir] : dir)
+		var/icon/subtract = icon(icon, "cliff-" + (istype(src,/obj/structure/cliff/corner) ? "bottom" : "top") + "-subtract", istype(src,/obj/structure/cliff/corner) ? GLOB.reverse_dir[dir] : dir)
 		underlying_ground.Blend(subtract, ICON_SUBTRACT)
 		var/image/final = image(underlying_ground)
 		GLOB.cliff_icon_cache_upper[cache_string+"-[upperT.name]"] = final
 
 	// Check for cliffs under this one
-	var/turf/lowerT = get_step(src, reverse_dir[dir])
+	var/turf/lowerT = get_step(src, GLOB.reverse_dir[dir])
 	if(istype(lowerT))
 		for(var/obj/structure/cliff/C in lowerT.contents)
 			undercliff = C
@@ -98,7 +98,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 		if(!((cache_string+"-[underT.name]") in GLOB.cliff_icon_cache_lower))
 			// lower side
 			var/icon/underlying_ground = icon(underT.icon, underT.icon_state, underT.dir)
-			var/icon/subtract = icon(icon, "cliff-" + (istype(src,/obj/structure/cliff/corner) ? "top" : "bottom") + "-subtract", istype(src,/obj/structure/cliff/corner) ? reverse_dir[dir] : dir)
+			var/icon/subtract = icon(icon, "cliff-" + (istype(src,/obj/structure/cliff/corner) ? "top" : "bottom") + "-subtract", istype(src,/obj/structure/cliff/corner) ? GLOB.reverse_dir[dir] : dir)
 			underlying_ground.Blend(subtract, ICON_SUBTRACT)
 			var/image/final = image(underlying_ground)
 			GLOB.cliff_icon_cache_lower[cache_string+"-[underT.name]"] = final
@@ -149,14 +149,14 @@ two tiles on initialization, and which way a cliff is facing may change during m
 		return FALSE
 
 	var/turf/T = get_turf(L)
-	if(T && get_dir(T, loc) & reverse_dir[dir]) // dir points 'up' the cliff, e.g. cliff pointing NORTH will cause someone to fall if moving SOUTH into it.
+	if(T && get_dir(T, loc) & GLOB.reverse_dir[dir]) // dir points 'up' the cliff, e.g. cliff pointing NORTH will cause someone to fall if moving SOUTH into it.
 		return TRUE
 	return FALSE
 
 /obj/structure/cliff/proc/fall_off_cliff(mob/living/L)
 	if(!istype(L))
 		return FALSE
-	var/turf/T = get_step(src, reverse_dir[dir])
+	var/turf/T = get_step(src, GLOB.reverse_dir[dir])
 	if(istype(T))
 		var/safe_fall = FALSE
 		if(ishuman(L))

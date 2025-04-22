@@ -58,7 +58,7 @@
 			to_chat(user,span_warning("-This product must be transported in a full cargo tug tanker with minimal cross contamination."))
 
 	// Supply notes
-	if(istype(AM,/obj/item/organ) || istype(AM,/obj/item/reagent_containers/glass/bottle/vaccine) || istype(AM,/obj/item/reagent_containers/food))
+	if(istype(AM,/obj/item/organ) || istype(AM,/obj/item/reagent_containers/glass/beaker/vial/vaccine) || istype(AM,/obj/item/reagent_containers/food))
 		to_chat(user,span_warning("-This product must be sold in a freezer"))
 	else if(value > 0)
 		to_chat(user,span_warning("-This product must be sold in a crate"))

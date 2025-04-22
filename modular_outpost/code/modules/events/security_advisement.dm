@@ -11,8 +11,8 @@
 	if(prob(20))
 		str += " advised the enactment of [pick("a rampant wildlife", "a fire", "a hostile boarding", \
 		"a bomb", "an emergent intelligence")] drill with the personnel onboard \the [location_name()]."
-		global_announcer.autosay(str, "Security Advisement", "Command")
-		global_announcer.autosay(str, "Security Advisement", "Security")
+		GLOB.global_announcer.autosay(str, "Security Advisement", "Command")
+		GLOB.global_announcer.autosay(str, "Security Advisement", "Security")
 		return
 
 	// Get all players that are not afk lurking
@@ -83,5 +83,5 @@
 					)
 	str += " Ensure to thoroughly interview the suspect about their activities and whereabouts over the past 48 hours, and fax a report containing interview contents and all identified contraband on their person, before releasing them if no offences were noted."
 
-	global_announcer.autosay(str, "Security Advisement", "Command")
-	global_announcer.autosay(str, "Security Advisement", "Security")
+	GLOB.global_announcer.autosay(str, "Security Advisement", "Command")
+	GLOB.global_announcer.autosay(str, "Security Advisement", "Security")

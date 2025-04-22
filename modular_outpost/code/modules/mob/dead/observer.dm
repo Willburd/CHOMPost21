@@ -21,10 +21,10 @@
 		return
 
 	var/timedifference = world.time - client.time_died_as_mouse
-	if(client.time_died_as_mouse && timedifference <= mouse_respawn_time * 600)
+	if(client.time_died_as_mouse && timedifference <= CONFIG_GET(number/mouse_respawn_time) MINUTES)
 		var/timedifference_text
-		timedifference_text = time2text(mouse_respawn_time * 600 - timedifference,"mm:ss")
-		to_chat(src, "<span class='warning'>You may only spawn again as a jil more than [mouse_respawn_time] minutes after your death. You have [timedifference_text] left.</span>")
+		timedifference_text = time2text(CONFIG_GET(number/mouse_respawn_time) MINUTES - timedifference,"mm:ss")
+		to_chat(src, "<span class='warning'>You may only spawn again as a jil more than [CONFIG_GET(number/mouse_respawn_time)] minutes after your death. You have [timedifference_text] left.</span>")
 		return
 
 	var/response = tgui_alert(src, "Are you -sure- you want to become a jil? You will have no rights or OOC protections.","Are you sure you want to squeek? You will have no rights or OOC protections.",list("Merp!","Nope!")) //CHOMP Edit
@@ -35,7 +35,7 @@
 	var/mob/living/simple_mob/vore/alienanimals/jil/host
 	var/obj/machinery/atmospherics/unary/vent_pump/vent_found
 	var/list/found_vents = list()
-	for(var/obj/machinery/atmospherics/unary/vent_pump/v in machines)
+	for(var/obj/machinery/atmospherics/unary/vent_pump/v in GLOB.machines)
 		if(!v.welded && v.z == T.z && v.network && v.network.normal_members.len > 20)
 			found_vents.Add(v)
 	if(found_vents.len)
@@ -67,7 +67,7 @@
 		// Found location of body
 		var/xx = T.x + rand(-5,5)
 		var/yy = T.y + rand(-5,5)
-		global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan. Their last known GPS location was near [xx], [yy], [ using_map.get_zlevel_name(T.z) ]. The crew is advised to recover their body if possible. They have been verified as deceased by scout drones. No other bio-signature matches detected, resleeving is confirmed legal.", "TransCore Oversight", CHANNEL_COMMON)
+		GLOB.global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan. Their last known GPS location was near [xx], [yy], [ using_map.get_zlevel_name(T.z) ]. The crew is advised to recover their body if possible. They have been verified as deceased by scout drones. No other bio-signature matches detected, resleeving is confirmed legal.", "TransCore Oversight", CHANNEL_COMMON)
 	else
 		// No body found
-		global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan, and cannot be located on the planet's surface. Medical is advised to resleeve them if possible, as scanner drones have been unable to locate their body. A missing persons notice will be forwarded to SolGov authorities if an abduction has occured.", "TransCore Oversight", CHANNEL_COMMON)
+		GLOB.global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan, and cannot be located on the planet's surface. Medical is advised to resleeve them if possible, as scanner drones have been unable to locate their body. A missing persons notice will be forwarded to SolGov authorities if an abduction has occured.", "TransCore Oversight", CHANNEL_COMMON)
