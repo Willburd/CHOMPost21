@@ -459,6 +459,7 @@
 					/obj/item/reagent_containers/glass/bottle/toxin = 4,
 					/obj/item/reagent_containers/syringe/antiviral = 4,
 					/obj/item/reagent_containers/syringe = 12,
+					/obj/item/reagent_containers/hypospray/autoinjector/allergen = 6,
 					/obj/item/healthanalyzer = 5,
 					/obj/item/reagent_containers/glass/beaker = 4,
 					/obj/item/reagent_containers/dropper = 2,
@@ -1272,7 +1273,8 @@
 					/obj/item/gun/projectile/revolver/toy = 5,
 					/obj/item/gun/projectile/revolver/toy/big_iron = 5,
 					/obj/item/gun/projectile/revolver/toy/crossbow = 5,
-					/obj/item/gun/projectile/automatic/toy = 5
+					/obj/item/gun/projectile/automatic/toy = 5,
+					/obj/item/mine/claymore/donksoft = 10 // Outpost 21 edit - Donksoft claymores
 					)
 	contraband = list()
 	prices = list(/obj/item/ammo_magazine/ammo_box/foam = 50,
@@ -1287,7 +1289,8 @@
 					/obj/item/gun/projectile/revolver/toy = 100,
 					/obj/item/gun/projectile/revolver/toy/big_iron = 175,
 					/obj/item/gun/projectile/revolver/toy/crossbow = 75,
-					/obj/item/gun/projectile/automatic/toy = 300)
+					/obj/item/gun/projectile/automatic/toy = 300,
+					/obj/item/mine/claymore/donksoft = 50) // Outpost 21 edit - Donksoft claymores
 	vending_sound = "machines/vending/vending_cans.ogg"
 
 /*
