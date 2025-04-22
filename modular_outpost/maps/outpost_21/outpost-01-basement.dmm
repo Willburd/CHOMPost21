@@ -18184,6 +18184,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "aGP" = (
@@ -20901,6 +20904,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
+/obj/effect/mine/claymore/donksoft{
+	dir = 8
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/medicelevbasement)
 "aMb" = (
@@ -23442,7 +23448,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/muriki,
-/area/maintenance/medicelevbasement)
+/area/engineering/refinery/main)
 "aQv" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/muriki/elevator/medibasement)
@@ -29017,6 +29023,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
+"baQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/wastedisposalnear)
 "baR" = (
 /obj/structure/railing{
 	dir = 4
@@ -29130,7 +29146,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/warning/dust/corner,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "bbb" = (
@@ -29684,17 +29702,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
-"bbO" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/engineering/refinery/main)
-"bbP" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/engineering/refinery/main)
 "bbQ" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
@@ -30046,6 +30053,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/robotics)
+"bcp" = (
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor/plating/muriki,
+/area/mine/unexplored/muriki/cave/cargo)
 "bcq" = (
 /turf/simulated/wall,
 /area/muriki/crew/poollocker)
@@ -30378,6 +30391,15 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
+"bcX" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/obj/effect/mine/claymore/donksoft{
+	dir = 8
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/spine/civ)
 "bcY" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -30587,6 +30609,12 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/cave/terra)
+"bdv" = (
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "bdw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -32279,12 +32307,6 @@
 /obj/item/storage/box/cups,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
-"bgL" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark/muriki,
-/area/engineering/refinery/main)
 "bgM" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/spline/plain{
@@ -34462,48 +34484,16 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
-"bkU" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/engineering/refinery/main)
-"bkV" = (
-/obj/machinery/atmospherics/unary/heater{
-	dir = 8;
-	icon_state = "heater"
-	},
-/obj/effect/floor_decal/industrial/outline/red,
-/turf/simulated/floor/tiled/dark/muriki,
-/area/engineering/refinery/main)
-"bkW" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark/muriki,
-/area/engineering/refinery/main)
 "bkX" = (
 /obj/structure/bed/chair/bay/chair{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/spine/civ)
-"bkY" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark/muriki,
-/area/engineering/refinery/main)
 "bkZ" = (
 /obj/random/soap_common,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
-"bla" = (
-/obj/machinery/atmospherics/unary/freezer{
-	dir = 8;
-	icon_state = "freezer"
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating,
-/area/engineering/refinery/main)
 "blb" = (
 /obj/structure/table/steel,
 /obj/item/material/minihoe,
@@ -34514,6 +34504,17 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
+"blc" = (
+/obj/machinery/portable_atmospherics/canister/empty,
+/turf/simulated/floor/plating,
+/area/engineering/refinery/main)
+"bld" = (
+/obj/machinery/reagent_refinery/reactor,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/refinery/main)
 "ble" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -34762,6 +34763,12 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/muriki,
 /area/maintenance/cargo)
+"blH" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/refinery/main)
 "blI" = (
 /obj/random/trash,
 /turf/simulated/floor/plating/muriki,
@@ -34782,6 +34789,20 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
+"blM" = (
+/obj/machinery/reagent_refinery/hub,
+/turf/simulated/floor/plating,
+/area/engineering/refinery/main)
+"blN" = (
+/obj/effect/mine/claymore,
+/turf/simulated/floor/plating/muriki,
+/area/engineering/coreproctunnel)
+"blO" = (
+/obj/effect/mine/claymore{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/maintenance/med)
 "blQ" = (
 /turf/simulated/wall,
 /area/security/riot_control)
@@ -46688,8 +46709,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/mail)
 "bNo" = (
-/obj/item/frame,
 /obj/machinery/light/floortube,
+/obj/item/frame,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
 "bNE" = (
@@ -48152,6 +48173,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning/dust/corner,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "cJm" = (
@@ -48331,6 +48353,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "cPf" = (
@@ -55664,9 +55687,6 @@
 	dir = 8;
 	pixel_x = -26
 	},
-/obj/machinery/light{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
 "hhr" = (
@@ -61376,7 +61396,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 10
 	},
-/obj/effect/landmark/step_trap,
+/obj/effect/mine/claymore{
+	dir = 8
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
 "kOu" = (
@@ -62729,6 +62751,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "lEN" = (
@@ -67554,6 +67577,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "oHG" = (
@@ -68212,6 +68238,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "peN" = (
@@ -68599,7 +68628,9 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "ppa" = (
@@ -75330,10 +75361,6 @@
 "tlb" = (
 /turf/simulated/wall/r_wall,
 /area/mine/unexplored/muriki/mountainbasenorth)
-"tln" = (
-/obj/effect/mine/claymore,
-/turf/simulated/floor,
-/area/maintenance/med)
 "tlS" = (
 /obj/structure/loot_pile/mecha/ripley,
 /obj/effect/floor_decal/industrial/warning,
@@ -75417,6 +75444,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/mine/claymore,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/cargo)
 "tsy" = (
@@ -77597,6 +77625,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "uKt" = (
@@ -78261,9 +78290,6 @@
 /area/maintenance/oldbridge)
 "viX" = (
 /obj/machinery/chemical_analyzer,
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
@@ -79402,6 +79428,11 @@
 /obj/machinery/recharger{
 	pixel_x = 6
 	},
+/obj/item/cell,
+/obj/item/cell,
+/obj/item/cell,
+/obj/item/cell,
+/obj/item/cell,
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
 "vOj" = (
@@ -81146,9 +81177,6 @@
 	dir = 5
 	},
 /obj/machinery/hologram/holopad,
-/obj/structure/railing{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "wTe" = (
@@ -81581,6 +81609,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark/muriki,
@@ -94336,7 +94367,7 @@ fnL
 kjg
 byK
 bjm
-fnL
+baQ
 byK
 lzo
 byK
@@ -101089,7 +101120,7 @@ bcM
 jPj
 uDC
 aOw
-hRv
+gWL
 gWL
 dcI
 oth
@@ -101251,7 +101282,7 @@ gWL
 hRv
 hRv
 hRv
-hRv
+axM
 gWL
 aOw
 rSI
@@ -101383,7 +101414,7 @@ vmA
 gKH
 okL
 gKH
-okL
+blN
 lqc
 okL
 okL
@@ -101412,9 +101443,9 @@ hRv
 hRv
 hRv
 hRv
-hRv
-hRv
-gWL
+axM
+axM
+axM
 sdC
 fai
 gWL
@@ -101574,7 +101605,7 @@ axM
 axM
 axM
 axM
-hRv
+axM
 hRv
 gWL
 gWL
@@ -105998,7 +106029,7 @@ bge
 qdO
 qdO
 qTe
-sxJ
+bcp
 qTe
 qdO
 qdO
@@ -115645,7 +115676,7 @@ xmL
 wuC
 aQt
 sCc
-cRG
+bdv
 aQt
 wuC
 aQt
@@ -116443,7 +116474,7 @@ iRI
 aPF
 fbj
 aPF
-tln
+rgI
 rgI
 ipt
 eaw
@@ -116769,7 +116800,7 @@ fbj
 aPF
 rnu
 rgI
-rgI
+blO
 aPF
 aPF
 aPF
@@ -119039,9 +119070,9 @@ xze
 aPF
 iPK
 uJT
-bbP
-bbP
-bbO
+fDP
+fDP
+fDP
 fDP
 fDP
 fDP
@@ -119201,10 +119232,10 @@ xaP
 aPF
 pgn
 uJT
-bkW
-bgL
-bbO
 fDP
+oDo
+wtG
+nLJ
 fDP
 aZA
 fDP
@@ -119363,11 +119394,11 @@ aPF
 aPF
 nhl
 lEK
-bkY
-bkU
-bbO
 fDP
-dLU
+fDP
+tMm
+csG
+fDP
 fDP
 fDP
 fDP
@@ -119525,16 +119556,16 @@ aOH
 aPF
 pNK
 cOY
-bla
-bkV
-bbO
 fDP
 fDP
+fDP
+fDP
+dLU
 fDP
 fDP
 fDP
 aZA
-fDP
+dLU
 fDP
 jKG
 aao
@@ -119853,10 +119884,10 @@ pum
 aFQ
 sze
 fDP
-oDo
-wtG
-nLJ
 fDP
+blM
+bld
+tMm
 fDP
 fDP
 fDP
@@ -120016,14 +120047,14 @@ fje
 sze
 fDP
 fDP
-tMm
-csG
-dLU
+fDP
+blH
+blc
 fDP
 fDP
 fDP
 rPI
-qQW
+aao
 aao
 mkC
 dak
@@ -128621,7 +128652,7 @@ xZI
 axL
 axL
 aKP
-cEF
+bcX
 xST
 nBG
 aKP
@@ -128821,7 +128852,7 @@ cDW
 cDW
 qfm
 fng
-xST
+idb
 vka
 ocR
 ocR
