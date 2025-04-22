@@ -56,7 +56,7 @@
 			return
 		M.forceMove(src)
 		occupant = M
-		update_icon() //icon_state = "body_scanner_1" //VOREStation Edit - Health display for consoles with light and such.
+		update_icon()
 		playsound(src, 'sound/machines/medbayscanner1.ogg', 50) // Beepboop you're being scanned. <3
 		add_fingerprint(user)
 		qdel(G)
@@ -75,7 +75,7 @@
 	if(O.anchored)
 		return 0 //mob is anchored???
 	if(get_dist(user, src) > 1 || get_dist(user, O) > 1)
-		return 0 //doesn't use adjacent() to allow for non-cardinal (fuck my life)
+		return 0 //doesn't use adjacent() to allow for non-GLOB.cardinal (fuck my life)
 	if(!ishuman(user) && !isrobot(user))
 		return 0 //not a borg or human
 	if(panel_open)
@@ -101,7 +101,7 @@
 
 	O.forceMove(src)
 	occupant = O
-	update_icon() //icon_state = "body_scanner_1" //VOREStation Edit - Health display for consoles with light and such.
+	update_icon()
 	playsound(src, 'sound/machines/medbayscanner1.ogg', 50) // Beepboop you're being scanned. <3
 	add_fingerprint(user)
 	SStgui.update_uis(src)
@@ -185,7 +185,6 @@
 		var/mob/living/carbon/human/H = occupant
 		occupantData["name"] = H.name
 
-		// Outpost 21 edit addition addition - species display
 		occupantData["species"] = H.species.name
 		if(H.custom_species)
 			if( H.species.name == SPECIES_CUSTOM )
@@ -194,7 +193,6 @@
 			else
 				// Using another species as base, doctors should know this to avoid some meds
 				occupantData["species"] = "[H.custom_species] \[Similar biology to [H.species.name]\]"
-		// Outpost 21 edit addition end
 
 		// Outpost 21 edit begin - Addictions
 		var/has_withdrawl = FALSE
@@ -204,12 +202,12 @@
 				has_withdrawl = TRUE
 				break
 		// Outpost 21 edit end
-
+		
 		occupantData["stat"] = H.stat
 		occupantData["health"] = H.health
 		occupantData["maxHealth"] = H.getMaxHealth()
 
-		occupantData["hasVirus"] = LAZYLEN(H.viruses)
+		occupantData["hasVirus"] = H.IsInfected()
 
 		occupantData["bruteLoss"] = H.getBruteLoss()
 		occupantData["oxyLoss"] = H.getOxyLoss()
@@ -285,7 +283,6 @@
 			for(var/obj/thing in E.implants)
 				var/implantSubData[0]
 				var/obj/item/implant/I = thing
-			//VOREStation Block Edit Start
 				// var/obj/item/nif/N = thing Outpost 21 edit - Nif removal
 				if(istype(I))
 					implantSubData["name"] =  I.name
@@ -297,7 +294,6 @@
 					implantSubData["known"] = istype(N) && N.known_implant
 					implantData.Add(list(implantSubData))
 				*/
-			//VOREStation Block Edit End
 
 			organData["implants"] = implantData
 			organData["implants_len"] = implantData.len
@@ -331,6 +327,16 @@
 		occupantData["extOrgan"] = extOrganData
 
 		var/intOrganData[0]
+		for(var/organ_tag in H.species.has_organ) //Check to see if we are missing any organs
+			var/organData[0]
+			var/obj/item/organ/O = H.species.has_organ[organ_tag]
+			var/name = initial(O.name)
+			organData["name"] = name
+			O = H.internal_organs_by_name[organ_tag]
+			if(!O)
+				organData["missing"] = TRUE
+				intOrganData.Add(list(organData))
+
 		for(var/obj/item/organ/I in H.internal_organs)
 			var/organData[0]
 			organData["name"] = I.name
@@ -395,17 +401,16 @@
 		var/has_withdrawl = "" // Outpost 21 edit - Addictions
 		if(ishuman(occupant))
 			var/mob/living/carbon/human/H = occupant
-			// Outpost 21 edit begin - custom species display
 			var/speciestext = H.species.name
 			if(H.custom_species)
-				if( H.species.name == SPECIES_CUSTOM )
+				if(H.species.name == SPECIES_CUSTOM )
 					// Fully custom species
 					speciestext = "[H.custom_species]"
 					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
 				else
 					speciestext = "[H.custom_species] \[Similar biology to [H.species.name]\]"
 					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
-			// Outpost 21 edit end
+
 			// Outpost 21 edit begin - Addictions
 			for(var/addic in H.addiction_counters)
 				if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
@@ -413,6 +418,7 @@
 					has_withdrawl = R.name
 					break
 			// Outpost 21 edit end
+			
 		var/t1
 		switch(occupant.stat) // obvious, see what their status is
 			if(0)
@@ -425,7 +431,7 @@
 		dat += (occupant.health > (occupant.getMaxHealth() / 2) ? span_blue(health_text) : span_red(health_text))
 		dat += "<br>"
 
-		if(LAZYLEN(occupant.viruses))
+		if(occupant.IsInfected())
 			for(var/datum/disease/D in occupant.GetViruses())
 				if(D.visibility_flags & HIDDEN_SCANNER)
 					continue
@@ -593,6 +599,16 @@
 			dat += "<tr>"
 			dat += "<td>[i.name]</td><td>N/A</td><td>[i.damage]</td><td>[infection]:[mech][i_dead]</td><td></td>"
 			dat += "</tr>"
+		for(var/organ_tag in occupant.species.has_organ) //Check to see if we are missing any organs
+			var/organData[0]
+			var/obj/item/organ/O = occupant.species.has_organ[organ_tag]
+			var/name = initial(O.name)
+			organData["name"] = name
+			O = occupant.internal_organs_by_name[organ_tag]
+			if(!O) // Missing organ
+				dat += "<tr>"
+				dat += "<td>[name]</td><td>N/A</td><td>NA</td><td>MISSING</td><td></td>"
+				dat += "</tr>"
 		dat += "</table>"
 		if(occupant.sdisabilities & BLIND)
 			dat += span_red("Cataracts detected.") + "<BR>"
