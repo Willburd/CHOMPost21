@@ -53,7 +53,7 @@
 			L.visible_message(span_warning("[L] withers rapidly!"), span_danger("The chemical burns you!"))
 
 //////SAP IN UNREFINED FORM////
-
+/* Outpost 21 edit - Removing badly designed chems
 /datum/reagent/toxin/bluesap //This is the first sap. Blue one.
 	name = REAGENT_BLUESAP
 	id = REAGENT_ID_BLUESAP
@@ -171,3 +171,4 @@
 	new /obj/item/reagent_containers/pill/phenethylamine( src )
 	new /obj/item/reagent_containers/pill/phenethylamine( src )
 	new /obj/item/reagent_containers/pill/phenethylamine( src )
+*/
