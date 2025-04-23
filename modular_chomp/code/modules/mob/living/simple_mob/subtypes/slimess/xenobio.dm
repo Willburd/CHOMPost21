@@ -26,7 +26,7 @@
 /decl/chemical_reaction/instant/slime/senseenhancer
 	name = "Slime Sense Enhancer"
 	id = "sepia_sh"
-	result = REAGENT_ID_HYPERZINE // REAGENT_ID_SENSEENHANCER // Outpost 21 edit - Removing badly designed chems
+	result = REAGENT_ID_NOCTURNOL // Outpost 21 edit - Removing badly designed chems
 	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/sepia
@@ -85,7 +85,7 @@
 /decl/chemical_reaction/instant/slime/redspace_fire
 	name = "Slime Living Fire"
 	id = "m_liquid_fire"
-	result = REAGENT_CONDENSEDCAPSAICINV // REAGENT_ID_NEOLIQUIDFIRE // Outpost 21 edit - Removing badly designed chems
+	result = REAGENT_ID_CONDENSEDCAPSAICINV // Outpost 21 edit - Removing badly designed chems
 	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/redspace
@@ -154,14 +154,14 @@
 	name = "Slime Healing Liquid"
 	id = "m_liquid_healing"
 	result = REAGENT_ID_HEALINGNANITES
-	required_reagents = list(REAGENT_ID_NEOLIQUIDFIRE = 5)
+	required_reagents = list(REAGENT_ID_TRICORDRAZINE = 5) // Outpost 21 edit - Removing badly designed chems
 	result_amount = 30
 	required = /obj/item/slime_extract/dark
 
 /decl/chemical_reaction/instant/slime/dark_liquidfire
 	name = "Slime Secert Guard"
 	id = "m_slime_guardian"
-	required_reagents = list(REAGENT_ID_LIQUIDFIRE = 5)
+	required_reagents = list(REAGENT_ID_CONDENSEDCAPSAICIN = 5) // Outpost 21 edit - Removing badly designed chems
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -174,7 +174,7 @@
 /decl/chemical_reaction/instant/slime/dark_deathblood
 	name = "Slime Secert Painite"
 	id = "m_slime_painite"
-	required_reagents = list(REAGENT_ID_DEATHBLOOD = 5)
+	required_reagents = list(REAGENT_ID_RADIUM = 5) // Outpost 21 edit - Removing badly designed chems
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
@@ -185,7 +185,7 @@
 /decl/chemical_reaction/instant/slime/dark_liquidlife
 	name = "Slime Secert Overcharge"
 	id = "m_slime_darkspeed"
-	required_reagents = list(REAGENT_ID_LIQUIDLIFE = 5)
+	required_reagents = list(REAGENT_ID_HYPERZINE = 5) // Outpost 21 edit - Removing badly designed chems
 	result_amount = 1
 	required = /obj/item/slime_extract/dark
 
