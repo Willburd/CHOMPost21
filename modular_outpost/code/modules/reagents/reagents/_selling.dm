@@ -543,9 +543,11 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
 	industrial_use = EXPORT_REASON_FOOD
 
+/* Outpost 21 edit - Removing badly designed chems
 /datum/reagent/earthsblood
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
 	industrial_use = EXPORT_REASON_DRUG
+*/
 
 // code\modules\reagents\reagents\modifiers.dm
 /datum/reagent/modapplying/cryofluid
