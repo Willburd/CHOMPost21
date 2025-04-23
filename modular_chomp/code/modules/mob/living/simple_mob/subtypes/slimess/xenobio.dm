@@ -26,7 +26,7 @@
 /decl/chemical_reaction/instant/slime/senseenhancer
 	name = "Slime Sense Enhancer"
 	id = "sepia_sh"
-	result = REAGENT_ID_SENSEENHANCER
+	result = REAGENT_ID_HYPERZINE // REAGENT_ID_SENSEENHANCER // Outpost 21 edit - Removing badly designed chems
 	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/sepia

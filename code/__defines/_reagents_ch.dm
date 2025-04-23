@@ -158,6 +158,7 @@
 
 
 // Modifiers
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_ENERGYBOOSTER "Energy Booster"
 #define REAGENT_ID_ENERGYBOOSTER "energybooster"
 #define REAGENT_OCEANICCURE "Oceanic Cure"
@@ -168,6 +169,7 @@
 #define REAGENT_ID_SENSEENHANCER "senseenhancer"
 #define REAGENT_HEATNULLIFER "Heat Nullifer"
 #define REAGENT_ID_HEATNULLIFER "heatnullifer"
+*/
 
 
 // Other
