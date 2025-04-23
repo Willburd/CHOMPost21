@@ -8,6 +8,7 @@
 	reagent_state = LIQUID
 	color = "#888888"
 	overdose = 10
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Cannot make it anyway
 
 /datum/reagent/crayon_dust/red
 	name = REAGENT_CRAYONDUSTRED
@@ -57,6 +58,7 @@
 	reagent_state = LIQUID
 	color = "#888888"
 	overdose = 10
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Cannot make it anyway
 
 /datum/reagent/marker_ink/black
 	name = REAGENT_MARKERINKBLACK
@@ -704,6 +706,7 @@
 	reagent_state = LIQUID
 	color = "#b51d05"
 	taste_description = "carpet"
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret plant chem
 
 /datum/reagent/carpet/black
 	name = REAGENT_LIQUIDCARPETB
