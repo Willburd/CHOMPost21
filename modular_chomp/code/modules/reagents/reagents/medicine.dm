@@ -63,6 +63,7 @@
 				M.change_gender(gender_change)
 				M << span_warning("You feel like a new person.") //success
 
+/* Outpost 21 edit - Removing badly designed chems
 //Chemist expansion
 //deathblood
 /datum/reagent/cleansingagent
@@ -429,3 +430,4 @@
 			if(F.wet)
 				F.wet = 0
 	return
+*/

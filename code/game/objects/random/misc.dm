@@ -247,8 +247,8 @@
 				prob(4);/obj/item/storage/firstaid/adv, //VOREStation Edit: 6 to 4
 				prob(8);/obj/item/storage/firstaid/fire,
 				prob(1);/obj/item/denecrotizer/medical, //VOREStation Add,
-				prob(1);/obj/item/storage/firstaid/combat,
-				prob(2);/obj/item/storage/firstaid/experimental) //CHOMPadd
+				prob(1);/obj/item/storage/firstaid/combat)
+				// prob(2);/obj/item/storage/firstaid/experimental) //CHOMPadd // Outpost 21 edit - Removing badly designed chems
 
 /obj/random/contraband
 	name = "Random Illegal Item"

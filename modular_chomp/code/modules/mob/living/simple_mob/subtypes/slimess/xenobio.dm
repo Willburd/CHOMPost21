@@ -85,7 +85,7 @@
 /decl/chemical_reaction/instant/slime/redspace_fire
 	name = "Slime Living Fire"
 	id = "m_liquid_fire"
-	result = REAGENT_ID_NEOLIQUIDFIRE
+	result = REAGENT_CONDENSEDCAPSAICINV // REAGENT_ID_NEOLIQUIDFIRE // Outpost 21 edit - Removing badly designed chems
 	required_reagents = list(REAGENT_ID_PHORON = 5)
 	result_amount = 30
 	required = /obj/item/slime_extract/redspace
