@@ -571,6 +571,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	supply_conversion_value = EXPORT_VALUE_COMMON
 	industrial_use = EXPORT_REASON_MATSCI
 
+/*
 /datum/reagent/toxin/bluesap
 	supply_conversion_value = EXPORT_VALUE_PROCESSED
 	industrial_use = EXPORT_REASON_MEDSCI
@@ -590,6 +591,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/phenethylamine
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_RECDRUG
+*/
 
 // code\modules\reagents\reagents\other_vr.dm
 /datum/reagent/advmutationtoxin
