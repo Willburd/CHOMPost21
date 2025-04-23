@@ -17018,7 +17018,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/item/clothing/head/cone,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "aEN" = (
@@ -21722,8 +21721,14 @@
 /obj/structure/sign/directions/medical/surgery{
 	dir = 1
 	},
-/obj/structure/sign/directions/eva{
-	pixel_y = -6
+/obj/structure/sign/directions/medical/chemlab{
+	dir = 8;
+	pixel_y = 7;
+	name = "\improper Chemical Refinery"
+	},
+/obj/structure/sign/directions/medical/morgue{
+	pixel_y = -6;
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/medical/surgtrain)
@@ -28472,15 +28477,20 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "aZT" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/fence,
-/obj/effect/floor_decal/borderfloor/corner{
+/obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
@@ -29654,13 +29664,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelevbasement)
-"bbJ" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/maintenance/cave)
 "bbK" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -29702,6 +29705,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
+"bbO" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
+"bbP" = (
+/obj/structure/catwalk,
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/tug)
 "bbQ" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet,
@@ -32307,6 +32321,18 @@
 /obj/item/storage/box/cups,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
+"bgL" = (
+/obj/structure/sign/directions/medical/chemlab{
+	dir = 8;
+	pixel_y = -10;
+	name = "\improper Chemical Refinery"
+	},
+/obj/structure/sign/directions/tram{
+	pixel_y = -4;
+	dir = 5
+	},
+/turf/simulated/wall,
+/area/maintenance/tug)
 "bgM" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/spline/plain{
@@ -34484,6 +34510,18 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
+"bkU" = (
+/obj/structure/sign/directions/medical/chemlab{
+	dir = 1;
+	pixel_y = -10;
+	name = "\improper Chemical Refinery"
+	},
+/obj/structure/sign/directions/tram{
+	pixel_y = -4;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/tug)
 "bkX" = (
 /obj/structure/bed/chair/bay/chair{
 	dir = 4
@@ -55151,20 +55189,16 @@
 /turf/simulated/floor/wood/alt/parquet,
 /area/maintenance/civ/east)
 "gRH" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/fence{
-	dir = 4
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
 	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 1
-	},
-/obj/structure/sign/department/chem{
-	name = "REFINERY TUG ACCESS";
-	pixel_x = -32
-	},
+/obj/structure/table/rack,
+/obj/item/storage/box/mousetraps,
+/obj/random/flashlight,
+/obj/random/flashlight,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "gSx" = (
@@ -56268,23 +56302,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
-"hBC" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/effect/catwalk_plated/dark,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/item/assembly/mousetrap/armed,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cave)
 "hCf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/meter,
@@ -62386,11 +62403,6 @@
 /obj/structure/cable/orange,
 /turf/simulated/floor/plating,
 /area/security/tankstore)
-"lto" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/fence/door,
-/turf/simulated/floor/tiled/dark,
-/area/maintenance/cave)
 "ltw" = (
 /turf/simulated/floor/water/acidic/deep/muriki,
 /area/muriki/processor/gland/airmix)
@@ -63814,6 +63826,10 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/catwalk,
+/obj/structure/sign/department/chem{
+	name = "REFINERY TUG ACCESS";
+	pixel_y = 32
+	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
 "mkJ" = (
@@ -65267,6 +65283,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/sign/warning/acid{
+	pixel_x = -32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "nlJ" = (
@@ -67242,16 +67261,6 @@
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/civ)
-"ouQ" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/basic/full,
-/obj/structure/sign/department/chem{
-	name = "REFINERY";
-	pixel_x = -32
-	},
-/turf/simulated/floor/plating,
-/area/medical/medbay4)
 "ovk" = (
 /obj/structure/trash_pile,
 /obj/effect/floor_decal/borderfloor{
@@ -67279,10 +67288,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "ovI" = (
-/obj/item/storage/box/mousetraps,
-/obj/structure/table/rack,
-/obj/random/flashlight,
-/obj/random/flashlight,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
@@ -68201,15 +68206,6 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
-"pdM" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6
-	},
-/obj/structure/fence/end{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/maintenance/cave)
 "pdT" = (
 /obj/effect/auto_crayon{
 	icon_state = "x"
@@ -71766,7 +71762,6 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/engineering/atmoshall)
 "reJ" = (
-/obj/effect/landmark/holiday_event_spawn,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -73625,12 +73620,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
 "seU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
 	},
@@ -73644,8 +73633,13 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
 /obj/structure/catwalk,
-/obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/tug)
@@ -120071,7 +120065,7 @@ aXN
 aXN
 aXN
 aXN
-aXN
+bkU
 mtr
 oQa
 uzM
@@ -122018,7 +122012,7 @@ dDe
 aXN
 aIa
 aFz
-usO
+bbP
 aCq
 rdO
 noM
@@ -123129,7 +123123,7 @@ aJA
 aKB
 aLB
 aMG
-ouQ
+aHJ
 aOa
 aOZ
 aPA
@@ -123475,7 +123469,7 @@ lOX
 iAF
 aXN
 aXN
-aXN
+bgL
 baU
 aXN
 pVe
@@ -123799,7 +123793,7 @@ lOX
 lOX
 lOX
 lOX
-bbJ
+lOX
 baV
 lOX
 lOX
@@ -123961,10 +123955,10 @@ lOX
 lOX
 lOX
 lOX
-lto
+afU
 baV
 lOX
-afU
+lOX
 iAF
 alY
 aIC
@@ -124123,11 +124117,11 @@ vJB
 gqf
 reJ
 ovI
-bbJ
-hBC
+lOX
+baV
 lOX
 lOX
-qMR
+iAF
 alY
 aIC
 aIC
@@ -124285,11 +124279,11 @@ lOX
 lOX
 alY
 aZT
-pdM
+lOX
 baV
 lOX
-qMR
-iAF
+lOX
+bbO
 alY
 alY
 alY
