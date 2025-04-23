@@ -6051,6 +6051,18 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
+"ajB" = (
+/obj/structure/sign/directions/stairs_down{
+	pixel_y = -8;
+	dir = 8
+	},
+/obj/structure/sign/directions/medical/chemlab{
+	dir = 8;
+	pixel_y = -2;
+	name = "\improper Chemical Refinery"
+	},
+/turf/simulated/wall,
+/area/muriki/tramstation/civ)
 "ajC" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/sidewalk/muriki{
@@ -6075,6 +6087,20 @@
 	icon_state = "slab"
 	},
 /area/muriki/grounds/engi)
+"ajH" = (
+/obj/structure/sign/directions/outpost/bunker{
+	pixel_y = 9;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/bar)
+"ajI" = (
+/obj/structure/sign/directions/outpost/bunker{
+	pixel_y = -9;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/substation/civilian)
 "ajK" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -6420,15 +6446,19 @@
 "akK" = (
 /obj/structure/sign/directions/security{
 	dir = 8;
-	pixel_y = -1
-	},
-/obj/structure/sign/directions/science{
-	dir = 8;
-	pixel_y = 5
+	pixel_y = 4
 	},
 /obj/structure/sign/directions/medical{
 	dir = 8;
-	pixel_y = 11
+	pixel_y = 10
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 8;
+	pixel_y = -2
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 4;
+	pixel_y = -8
 	},
 /turf/simulated/wall/r_wall,
 /area/rnd/lab)
@@ -14393,6 +14423,10 @@
 /obj/structure/sign/directions/bridge{
 	pixel_y = 11
 	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 8;
+	pixel_y = -1
+	},
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/heads/hop)
 "csh" = (
@@ -15557,7 +15591,7 @@
 	req_one_access = list(39)
 	},
 /obj/structure/dogbed,
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/wood,
 /area/medical/virology)
 "cMI" = (
 /obj/structure/closet/crate/medical,
@@ -20167,6 +20201,10 @@
 /obj/structure/sign/directions/bridge{
 	dir = 4;
 	pixel_y = -2
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 4;
+	pixel_y = -8
 	},
 /turf/simulated/wall,
 /area/hallway/primary/aft)
@@ -28785,6 +28823,10 @@
 /obj/structure/sign/directions/bar{
 	dir = 4;
 	pixel_y = 10
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 4;
+	pixel_y = 4
 	},
 /turf/simulated/wall,
 /area/muriki/tramstation/civ)
@@ -46449,6 +46491,11 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
+/obj/item/extrapolator,
+/obj/item/extrapolator,
+/obj/item/extrapolator,
+/obj/item/extrapolator,
+/obj/item/extrapolator,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/virology)
 "mtA" = (
@@ -62437,7 +62484,7 @@
 	dir = 9;
 	pixel_y = 11
 	},
-/obj/structure/sign/directions/security/internal_affairs{
+/obj/structure/sign/directions/outpost/internal_affairs{
 	pixel_y = -7
 	},
 /turf/simulated/wall,
@@ -63379,9 +63426,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/sign/poster{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -69528,8 +69572,12 @@
 /turf/simulated/wall/r_wall,
 /area/medical/surgery)
 "tOK" = (
-/obj/structure/sign/directions/security/internal_affairs{
+/obj/structure/sign/directions/outpost/internal_affairs{
 	pixel_y = -7
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	pixel_y = -1;
+	dir = 1
 	},
 /turf/simulated/wall/r_wall,
 /area/security/brig/drunk)
@@ -70708,17 +70756,21 @@
 "ugo" = (
 /obj/structure/sign/directions/evac{
 	dir = 5;
-	pixel_y = 5
+	pixel_y = 7
 	},
 /obj/structure/sign/directions/elevator{
-	pixel_y = -1
+	pixel_y = 1
 	},
 /obj/structure/sign/directions/cryo{
-	pixel_y = 11
+	pixel_y = 13
 	},
 /obj/structure/sign/directions/tram{
 	dir = 8;
-	pixel_y = -7
+	pixel_y = -5
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 1;
+	pixel_y = -11
 	},
 /turf/simulated/wall,
 /area/maintenance/arrivals)
@@ -73157,7 +73209,7 @@
 	dir = 8;
 	pixel_y = -2
 	},
-/obj/structure/sign/directions/science/robotics{
+/obj/structure/sign/directions/outpost/robotics{
 	dir = 8;
 	pixel_y = -8
 	},
@@ -74629,11 +74681,21 @@
 /area/crew_quarters/kitchen)
 "vpz" = (
 /obj/structure/sign/directions/evac{
-	dir = 6
+	dir = 6;
+	pixel_y = -9
 	},
 /obj/structure/sign/directions/tram{
 	dir = 8;
-	pixel_y = -6
+	pixel_y = 3
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 1;
+	pixel_y = 9
+	},
+/obj/structure/sign/directions/medical/chemlab{
+	dir = 8;
+	pixel_y = -3;
+	name = "\improper Chemical Refinery"
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/arrivals)
@@ -74769,6 +74831,10 @@
 /obj/structure/sign/directions/bar{
 	dir = 4;
 	pixel_y = -8
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 4;
+	pixel_y = -2
 	},
 /turf/simulated/wall,
 /area/muriki/tramstation/civ)
@@ -83179,12 +83245,16 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "xUx" = (
-/obj/structure/sign/directions/science/robotics{
+/obj/structure/sign/directions/cargo{
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/outpost/robotics{
 	dir = 10;
 	pixel_y = 5
 	},
-/obj/structure/sign/directions/cargo{
-	pixel_y = 11
+/obj/structure/sign/directions/engineering/atmospherics{
+	dir = 10;
+	pixel_y = -1
 	},
 /turf/simulated/wall,
 /area/muriki/tramstation/cargeng)
@@ -126934,7 +127004,7 @@ owA
 qLE
 rra
 pxW
-gkj
+ajB
 rhE
 rhE
 rhE
@@ -139715,10 +139785,10 @@ wNc
 gkC
 cFZ
 cFZ
-cFZ
+ajI
 lbP
 jek
-iNX
+ajH
 lXX
 rOu
 hxj
