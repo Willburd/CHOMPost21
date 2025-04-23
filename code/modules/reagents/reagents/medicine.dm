@@ -1487,6 +1487,7 @@
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 
+/* Outpost 21 edit - Removing badly designed chems
 /datum/reagent/earthsblood
 	name = REAGENT_EARTHSBLOOD
 	id = REAGENT_ID_EARTHSBLOOD
@@ -1505,3 +1506,4 @@
 	M.druggy = max(M.druggy, 20)
 	M.hallucination = max(M.hallucination, 3)
 	M.adjustBrainLoss(1 * removed) //your life for your mind. The Earthmother's Tithe.
+*/

@@ -11,7 +11,7 @@
 	name = PLANT_SOULFLOWER
 	seed_name = PLANT_SOULFLOWER
 	display_name = PLANT_SOULFLOWER + "s"
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_SOULDEW = list(1,3)) // Outpost 21 edit - Hydroponics chem nerf
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_REZADONE = list(1,3)) // Outpost 21 edit - Hydroponics chem nerf, Removing badly designed chems
 	mutants = null
 
 /datum/seed/flower/sunflower/soulflower/New()
@@ -29,7 +29,7 @@
 	seed_name = PLANT_CHERRYBOMB
 	seed_noun = "pits"
 	display_name = "cherry bomb tree"
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,15), REAGENT_ID_LIQUIDFIRE = list(1,3), REAGENT_ID_CHERRYJELLY = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,15), REAGENT_ID_CONDENSEDCAPSAICIN = list(1,3), REAGENT_ID_CHERRYJELLY = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf, Removing badly designed chems
 
 /datum/seed/cherries/cherrybomb/New()
 	..()
@@ -42,11 +42,11 @@
 	seed_name = PLANT_LIVEWIREORANGE
 	seed_noun = PLANT_LIVEWIREORANGE
 	display_name = "livewire orange tree"
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,15), REAGENT_ID_LIQUIDLIFE = list(1,3), REAGENT_ID_ORANGEJUICE = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,15), REAGENT_ID_SHOCKCHEM = list(1,3), REAGENT_ID_ORANGEJUICE = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf, Removing badly designed chems
 
 /datum/seed/citrus/orange/nuclearorange
 	name = PLANT_NUCLEARORANGE
 	seed_name = PLANT_NUCLEARORANGE
 	seed_noun = PLANT_NUCLEARORANGE
 	display_name = "nuclear orange tree"
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,15), REAGENT_ID_DEATHBLOOD = list(1,3), REAGENT_ID_LEMONJUICE = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,15), REAGENT_ID_RADIUM = list(1,3), REAGENT_ID_LEMONJUICE = list(10,15)) // Outpost 21 edit - Hydroponics chem nerf, Removing badly designed chems

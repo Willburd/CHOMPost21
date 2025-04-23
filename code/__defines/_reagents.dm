@@ -264,9 +264,10 @@
 #define REAGENT_ID_HEALINGNANITES "healing_nanites"
 #define REAGENT_MENTHOL "Menthol"
 #define REAGENT_ID_MENTHOL "menthol"
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_EARTHSBLOOD "Earthsblood"
 #define REAGENT_ID_EARTHSBLOOD "earthsblood"
-
+*/
 
 // Virology
 #define REAGENT_VACCINE "Vaccine"

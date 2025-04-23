@@ -3,6 +3,7 @@
 #define REAGENT_ID_MIASMA "miasma"
 
 // Drugs
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_CLEANSINGAGENT "Cleansing Agent"
 #define REAGENT_ID_CLEANSINGAGENT "cleansingagent"
 #define REAGENT_PURIFYINGAGENT "Purifying Agent"
@@ -33,6 +34,7 @@
 #define REAGENT_ID_PHOENIXBREATH "phoenixbreath"
 #define REAGENT_DRYAGENT "Dry Agent"
 #define REAGENT_ID_DRYAGENT "dryagent"
+*/
 #define REAGENT_APHRODISIAC "Aphrodisiac"
 #define REAGENT_ID_APHRODISIAC "aphrodisiac"
 #define REAGENT_SORBITOL "Sorbitol"
@@ -156,6 +158,7 @@
 
 
 // Modifiers
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_ENERGYBOOSTER "Energy Booster"
 #define REAGENT_ID_ENERGYBOOSTER "energybooster"
 #define REAGENT_OCEANICCURE "Oceanic Cure"
@@ -166,6 +169,7 @@
 #define REAGENT_ID_SENSEENHANCER "senseenhancer"
 #define REAGENT_HEATNULLIFER "Heat Nullifer"
 #define REAGENT_ID_HEATNULLIFER "heatnullifer"
+*/
 
 
 // Other
@@ -267,6 +271,7 @@
 
 
 // Toxins
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_DEATHBLOOD "Irradiating Blood"
 #define REAGENT_ID_DEATHBLOOD "deathblood"
 #define REAGENT_LIQUIDFIRE "Liquid Fire"
@@ -275,6 +280,7 @@
 #define REAGENT_ID_NEOLIQUIDFIRE "neoliquidfire"
 #define REAGENT_LIQUIDLIFE "Liquid Life"
 #define REAGENT_ID_LIQUIDLIFE "liquidlife"
+*/
 
 #define REAGENT_NUMBING_FLUID "Numbing Fluid"
 #define REAGENT_ID_NUMBING_FLUID "succubi_numbing"

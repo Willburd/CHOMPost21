@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Removing badly designed chems
 /obj/item/storage/firstaid/experimental
 	name = "experimental firstaid kit"
 	icon = 'modular_chomp/icons/obj/storage.dmi'
@@ -53,6 +54,7 @@
 	desc = "Contains experimental pills, having application as an anti-toxin."
 	starts_with = list(/obj/item/reagent_containers/pill/purifyingagent = 7)
 	wrapper_color = COLOR_GREEN
+*/
 
 /obj/item/storage/pill_bottle/methylphenidate
 	name = "pill bottle (" + REAGENT_METHYLPHENIDATE + ")"
@@ -79,6 +81,7 @@
 	wrapper_color = COLOR_PINK
 
 //Pills
+/* Outpost 21 edit - Removing badly designed chems
 /obj/item/reagent_containers/pill/neotane
 	name = REAGENT_NEOTANE + " (10u)"
 	desc = "An experimental pill."
@@ -151,6 +154,7 @@
 	reagents.add_reagent(REAGENT_ID_PURIFYINGAGENT, 10)
 
 	color = reagents.get_color()
+*/
 
 /obj/item/reagent_containers/pill/methylphenidate
 	name =  REAGENT_METHYLPHENIDATE + " (10u)"
