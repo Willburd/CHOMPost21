@@ -1006,6 +1006,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_MEDSCI
 
+/*
 /datum/reagent/cleansingagent
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_MEDSCI
@@ -1065,8 +1066,10 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/dryagent
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_INDUSTRY
+*/
 
 // modular_chomp\code\modules\reagents\reagents\modapply.dm
+/*
 /datum/reagent/modapplying/energybooster
 	supply_conversion_value = EXPORT_VALUE_PEAK
 	industrial_use = EXPORT_REASON_MEDSCI
@@ -1086,8 +1089,10 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/modapplying/heatnullifer
 	supply_conversion_value = EXPORT_VALUE_PEAK
 	industrial_use = EXPORT_REASON_MEDSCI
+*/
 
 // modular_chomp\code\modules\reagents\reagents\toxin.dm
+/*
 /datum/reagent/toxin/deathblood
 	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
 	industrial_use = EXPORT_REASON_PRECURSOR
@@ -1103,127 +1108,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 /datum/reagent/toxin/liquidlife
 	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
 	industrial_use = EXPORT_REASON_MATSCI
-
-// code\modules\Phorochemistry\phororeagent.dm
-/datum/reagent/phororeagent/bicordrazine
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_DRUG
-
-/datum/reagent/phororeagent/genedrazine
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_DRUG
-
-/datum/reagent/phororeagent/lacertusol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/love_potion
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_ILLDRUG
-
-/datum/reagent/phororeagent/nasty
-	supply_conversion_value = EXPORT_VALUE_NO
-	industrial_use = EXPORT_REASON_BIOHAZARD
-
-/datum/reagent/phororeagent/babelizine
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/calcisol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/malaxitol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/paralitol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/doloran
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/fulguracin
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/mortemol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/tegoxane
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/expulsicol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/oculusosone
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/destitutionecam
-	supply_conversion_value = EXPORT_VALUE_NO
-	industrial_use = EXPORT_REASON_BIOHAZARD
-
-/datum/reagent/phororeagent/sapoformator
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_CLEAN
-
-/datum/reagent/phororeagent/rad_x
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/caloran
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/the_stuff
-	supply_conversion_value = EXPORT_VALUE_MASSINDUSTRY
-	industrial_use = EXPORT_REASON_ILLDRUG
-
-/datum/reagent/phororeagent/frioline
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/luxitol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MEDSCI
-
-/datum/reagent/phororeagent/liquid_skin
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/energized_phoron
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/induromol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/obscuritol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/tartrate
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_MATSCI
-
-/datum/reagent/phororeagent/oxyphoromin
-	supply_conversion_value = EXPORT_VALUE_PEAK
-	industrial_use = EXPORT_REASON_PHORON
-
-/datum/reagent/phororeagent/gaseous/occaecosone
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
-
-/datum/reagent/phororeagent/gaseous/ignisol
-	supply_conversion_value = EXPORT_VALUE_HIGHREFINED
-	industrial_use = EXPORT_REASON_WEAPONS
+*/
 
 // code\modules\Phorochemistry\misc_phoronics.dm
 /datum/reagent/nitrate
