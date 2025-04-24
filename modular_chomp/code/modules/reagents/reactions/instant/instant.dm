@@ -127,12 +127,14 @@
 	sheet_to_give = /obj/item/stack/material/deuterium
 
 //Injectable toxin reactions
+/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/succubi_paralize
 	name = "paralyzingfluid"
 	id = "paralyzingfluid"
 	result = "succubi_paralize"
 	required_reagents = list(REAGENT_ID_BENZILATE = 1, REAGENT_ID_CRYPTOBIOLIN = 1)
 	result_amount = 2
+*/
 
 /decl/chemical_reaction/instant/numbingenzyme
 	name = "numbingenzyme"
