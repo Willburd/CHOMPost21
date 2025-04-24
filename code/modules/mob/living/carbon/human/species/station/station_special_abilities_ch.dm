@@ -85,6 +85,7 @@ mob/living/carbon/proc/charmed() //TODO
 	metabolism = REM * 0.5
 	color = "#41029B"
 	scannable = 0
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
 /datum/reagent/succubi_numbing/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 
@@ -103,6 +104,7 @@ mob/living/carbon/proc/charmed() //TODO
 	metabolism= REM * 0.5
 	color = "#41029B"
 	scannable = 0
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
 /datum/reagent/succubi_paralize/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //will first keep it like that.  lets see what it changes. if nothing, than I will rework the effect again
 

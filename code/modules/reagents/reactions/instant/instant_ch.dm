@@ -121,6 +121,7 @@
 	sheet_to_give = /obj/item/stack/material/copper
 
 //YW stuff
+/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/benzilate
 	name = "Benzilate"
 	id = REAGENT_ID_BENZILATE
@@ -134,6 +135,7 @@
 	result = REAGENT_ID_PHENETHYLAMINE
 	required_reagents = list(REAGENT_ID_PAROXETINE = 1, REAGENT_ID_BENZILATE = 1)
 	result_amount = 2
+*/
 
 // Xenochem stuff
 /decl/chemical_reaction/instant/xenolazarus // Moved here because upstream axed it and this file cannot conflict
