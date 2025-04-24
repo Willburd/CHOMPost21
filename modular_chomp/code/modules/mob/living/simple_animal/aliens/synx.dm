@@ -286,7 +286,7 @@
 	metabolism = REM * 0.1 //Slow metabolization to try and mimic permanent nerve damage without actually being too cruel to people
 	color = "#FFFFFF"
 	overdose = REAGENTS_OVERDOSE * 4 //But takes a lot to OD
-	wiki_flags = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
 /datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -307,7 +307,7 @@
 	metabolism = REM * 1 //ten times faster for convenience of testers.
 	color = "#00FFFF"
 	overdose = REAGENTS_OVERDOSE * 20 //it's all fake. But having nanomachines move through you is not good at a certain amount.
-	wiki_flags = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
 /datum/reagent/inaprovaline/synxchem/holo/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -330,7 +330,7 @@
 	metabolism = REM * 0.5
 	color = "#FFFFFF"
 	overdose = REAGENTS_OVERDOSE * 200
-	wiki_flags = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
 /datum/reagent/inaprovaline/synxchem/clown/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.adjustToxLoss(0.01)
