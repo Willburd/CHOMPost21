@@ -140,6 +140,7 @@
 	id = REAGENT_ID_KELOTANE
 	result = REAGENT_ID_KELOTANE
 	required_reagents = list(REAGENT_ID_SILICON = 1, REAGENT_ID_CARBON = 1)
+	inhibitors = list(REAGENT_ID_WATER = 1) // Outpost 21 edit - Don't do this directly from the river
 	result_amount = 2
 	log_is_important = 1
 
