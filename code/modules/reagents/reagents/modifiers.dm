@@ -30,6 +30,7 @@
 
 	modifier_to_add = /datum/modifier/cryogelled
 	modifier_duration = 3 SECONDS
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
 
 /datum/reagent/modapplying/cryofluid/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..(M, alien, removed)
@@ -70,3 +71,4 @@
 
 	modifier_to_add = /datum/modifier/clone_stabilizer
 	modifier_duration = 30 SECONDS
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki

@@ -253,6 +253,7 @@
 
 	glass_name = REAGENT_ID_OILSLIDE
 	glass_desc = "Tasty, if you're a synth, not so much for organics."
+	wiki_flag = WIKI_DRINK // Outpost 21 edit - this is a drink!
 
 /datum/reagent/ethanol/sitonmyface
 	name = REAGENT_SITONMYFACE
@@ -518,6 +519,7 @@
 
 	glass_name = "enraged arachnid slammer"
 	glass_desc = "A pint of Enraged Arachnid Slammer. It bubbles and sparkles fiercly as if it was in a berserking state!"
+	wiki_flag = WIKI_DRINK // Outpost 21 edit - This is a drink
 
 /datum/reagent/infusedarachnidslammer/enragedarachnidslammer/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -695,3 +697,4 @@
 	description = "A dry mix for making delicious blondies."
 	reagent_state = SOLID
 	color = "#f3b44e"
+	wiki_flag = WIKI_FOOD // Outpost 21 edit - This is food
