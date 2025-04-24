@@ -3,7 +3,7 @@
 	var/ai_mob_product = 0 //This variable determines whether or not a mob product is meant to be ai-controlled. If set to 0, mob products die without a player to control them.
 
 //////CHOMP PLANTS//////
-
+/* Outpost 21 edit - Removing badly designed chems
 /datum/seed/soybean/sapbean
 	name = PLANT_SAPBEAN
 	seed_name = PLANT_SAPBEAN
@@ -59,6 +59,7 @@
 	set_trait(TRAIT_MATURATION,8)
 	set_trait(TRAIT_POTENCY,10)
 	set_trait(TRAIT_YIELD,2)
+*/
 
 //Commenting out because self_harvesting can be troublesome.
 //  /datum/seed/apple/falling
