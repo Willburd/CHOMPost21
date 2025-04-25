@@ -3404,6 +3404,13 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
+"kD" = (
+/obj/structure/sign/directions/outpost/gen{
+	dir = 8;
+	pixel_y = 10
+	},
+/turf/simulated/wall/rshull,
+/area/offworld/confinementbeam/station/hallway)
 "kE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -13826,19 +13833,19 @@
 "RL" = (
 /obj/structure/sign/directions/ai_core{
 	dir = 8;
-	pixel_y = 11
+	pixel_y = 10
 	},
 /obj/structure/sign/directions/engineering/reactor{
 	dir = 4;
-	pixel_y = 5
+	pixel_y = 4
 	},
 /obj/structure/sign/directions/engineering/solars{
 	dir = 8;
-	pixel_y = -1
+	pixel_y = -2
 	},
 /obj/structure/sign/directions/teleporter{
 	dir = 8;
-	pixel_y = -7
+	pixel_y = -8
 	},
 /turf/simulated/wall,
 /area/offworld/confinementbeam/station/storage)
@@ -45868,7 +45875,7 @@ kK
 ZT
 ft
 ZT
-kK
+kD
 kK
 kK
 kK
