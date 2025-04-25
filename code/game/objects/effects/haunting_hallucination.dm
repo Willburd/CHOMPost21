@@ -38,6 +38,10 @@
 	assign_image_to_client(CW)
 
 /obj/effect/haunting_hallucination/set_dir(newdir)
+	if(!(newdir in GLOB.cardinal))
+		newdir &= ~(EAST|WEST) // Don't allow diagonals, prefer north/south
+		if(!newdir)
+			newdir = SOUTH
 	var/updatesprite = (dir != newdir)
 	. = ..()
 	if(updatesprite)
@@ -48,9 +52,16 @@
 
 /obj/effect/haunting_hallucination/Moved(atom/old_loc, direction, forced, movetime)
 	. = ..()
+	var/turf_move = isturf(loc) && isturf(old_loc)
 	for(var/img in dir_images)
 		var/image/G = dir_images[img]
 		G.loc = loc
+		if(turf_move)
+			var/MT = 0.7 SECONDS
+			G.pixel_x = (old_loc.x - loc.x) * WORLD_ICON_SIZE
+			G.pixel_y = (old_loc.y - loc.y) * WORLD_ICON_SIZE
+			animate(G, pixel_x = 0, time = MT, flags = ANIMATION_PARALLEL)
+			animate(G, pixel_y = 0, time = MT, flags = ANIMATION_PARALLEL)
 
 /obj/effect/haunting_hallucination/Destroy(force)
 	. = ..()
@@ -175,10 +186,7 @@
 	var/mob/living/M = ..()
 
 	if(get_dist(src,M) > 1)
-		var/D = get_dir(src,M)
-		if(D)
-			set_dir(D)
-			Move(get_step(get_turf(src),D),movetime = CONFIG_GET(number/run_speed))
+		step_towards(src,M)
 
 	else if(prob(15))
 		M << sound(pick('sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg'))
@@ -186,9 +194,7 @@
 		M.halloss += 4
 
 	if(prob(15))
-		var/D = get_dir(src,M)
-		if(D)
-			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),movetime = CONFIG_GET(number/run_speed))
+		step_away(src,M)
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -201,12 +207,10 @@
 	var/mob/living/M = ..()
 	set_dir(get_dir(src,M))
 
-	if(get_dist(src,M) < 5 || flee)
+	if(get_dist(src,M) < 6 || flee)
 		flee = TRUE
-		var/D = get_dir(src,M)
-		if(D)
-			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),movetime = CONFIG_GET(number/run_speed))
+		step_away(src,M)
 
-	if(get_dist(src,M) > 10 || (flee && prob(20)))
+	if(get_dist(src,M) > 10 || get_dist(src,M) < 2 || (flee && prob(10)))
 		target = null
 		qdel(src)
