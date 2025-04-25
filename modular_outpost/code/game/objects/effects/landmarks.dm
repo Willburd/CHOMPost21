@@ -180,15 +180,9 @@
 	name = "dangerous situation spawner"
 
 /obj/effect/landmark/dangerous_situation/Initialize(mapload)
-	..()
-	return INITIALIZE_HINT_LATELOAD
-
-/obj/effect/landmark/dangerous_situation/LateInitialize()
 	. = ..()
-
-	if(!isturf(src.loc))
+	if(!isturf(loc))
 		return
-
 	// creates stuff like ruptured gas tanks, and landmines
 	switch(rand(1,4))
 		if(1)
@@ -228,14 +222,12 @@
 	name = "step trap spawner"
 
 /obj/effect/landmark/step_trap/Initialize(mapload)
-	..()
-	return INITIALIZE_HINT_LATELOAD
+	. = ..()
 
-/obj/effect/landmark/step_trap/LateInitialize()
 	if(prob(40))
 		return
 
-	if(!isturf(src.loc))
+	if(!isturf(loc))
 		return
 
 	// creates stuff like ruptured gas tanks, and landmines
