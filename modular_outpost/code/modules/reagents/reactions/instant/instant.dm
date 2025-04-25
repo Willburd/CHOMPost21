@@ -250,3 +250,21 @@
 
 /decl/chemical_reaction/instant/potato_juice_metal_paint/send_data()
 	return "#2e2a21"
+
+// Nukies OMEGA
+/decl/chemical_reaction/instant/nukies_final
+	name = REAGENT_NUKIEFINAL
+	id = REAGENT_ID_NUKIEFINAL
+	result = REAGENT_ID_NUKIEFINAL
+	required_reagents = list(
+		REAGENT_ID_ICE = 1,
+		REAGENT_ID_NUKIESPECIAL = 1,
+		REAGENT_ID_NUKIEMEGASIGHT = 1,
+		REAGENT_ID_NUKIEMEGAHEART = 1,
+		REAGENT_ID_NUKIEMEGASLEEP = 1,
+		REAGENT_ID_NUKIEMEGASHOCK = 1,
+		REAGENT_ID_NUKIEMEGAFAST = 1,
+		REAGENT_ID_NUKIEMEGAHIGH = 1,
+		REAGENT_ID_NUKIEMEGASHRINK = 1,
+		REAGENT_ID_NUKIEMEGAGROWTH = 1)
+	result_amount = 0.1
