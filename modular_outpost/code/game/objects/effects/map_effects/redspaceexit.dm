@@ -21,7 +21,6 @@
 	for(var/obj/effect/landmark/R in landmarks_list)
 		if(R.name == "redentrance")
 			redexitlist += get_turf(R)
-	. = ..()
 
 /obj/effect/map_effect/interval/redspaceexitcontroller/trigger()
 	// Pick a random portal location, or spawn one at this controller as a fallback

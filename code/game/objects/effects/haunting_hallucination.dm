@@ -64,7 +64,9 @@
 		return
 	if(!dir_images.len)
 		return
-	CW.images += dir_images["[dir]"]
+	var/image/I = dir_images["[dir]"]
+	if(I)
+		CW.images += I
 
 /obj/effect/haunting_hallucination/proc/clear_every_clients_images()
 	for(var/datum/weakref/C in clients)
@@ -173,8 +175,10 @@
 	var/mob/living/M = ..()
 
 	if(get_dist(src,M) > 1)
-		set_dir(get_dir(src,M))
-		Move(get_step(get_turf(src),dir))
+		var/D = get_dir(src,M)
+		if(D)
+			set_dir(D)
+			Move(get_step(get_turf(src),D),movetime = CONFIG_GET(number/run_speed))
 
 	else if(prob(15))
 		M << sound(pick('sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg'))
@@ -183,7 +187,8 @@
 
 	if(prob(15))
 		var/D = get_dir(src,M)
-		Move(get_step(get_turf(src), GLOB.reverse_dir[D]))
+		if(D)
+			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),movetime = CONFIG_GET(number/run_speed))
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -199,7 +204,8 @@
 	if(get_dist(src,M) < 5 || flee)
 		flee = TRUE
 		var/D = get_dir(src,M)
-		Move(get_step(get_turf(src), GLOB.reverse_dir[D]))
+		if(D)
+			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),movetime = CONFIG_GET(number/run_speed))
 
 	if(get_dist(src,M) > 10 || (flee && prob(20)))
 		target = null
