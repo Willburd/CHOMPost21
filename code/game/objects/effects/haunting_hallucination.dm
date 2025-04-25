@@ -178,7 +178,7 @@
 		var/D = get_dir(src,M)
 		if(D)
 			set_dir(D)
-			Move(get_step(get_turf(src),D),FALSE,2)
+			Move(get_step(get_turf(src),D),movetime = CONFIG_GET(number/run_speed))
 
 	else if(prob(15))
 		M << sound(pick('sound/weapons/punch1.ogg','sound/weapons/punch2.ogg','sound/weapons/punch3.ogg','sound/weapons/punch4.ogg'))
@@ -188,7 +188,7 @@
 	if(prob(15))
 		var/D = get_dir(src,M)
 		if(D)
-			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),FALSE,2)
+			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),movetime = CONFIG_GET(number/run_speed))
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -205,7 +205,7 @@
 		flee = TRUE
 		var/D = get_dir(src,M)
 		if(D)
-			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),FALSE,2)
+			Move(get_step(get_turf(src), GLOB.reverse_dir[D]),movetime = CONFIG_GET(number/run_speed))
 
 	if(get_dist(src,M) > 10 || (flee && prob(20)))
 		target = null
