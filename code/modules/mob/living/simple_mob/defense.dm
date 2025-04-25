@@ -226,12 +226,13 @@
 		var/armor = run_armor_check(def_zone = null, attack_flag = "energy")
 
 		// Outpost 21 edit begin - Handle simplemob taser damage as stuns with some damage. Instead of treating a high stun time as insane damage.
-		Stun(stun_amount + rand(0, agony_amount/2))
-		Weaken(rand(agony_amount/3,agony_amount/2))
+		var/divisor = 4
+		Stun(stun_amount + rand(0, agony_amount/divisor))
+		Weaken(rand(agony_amount/divisor,agony_amount/(divisor+1)))
 		if(stun_amount)
-			apply_damage(damage = FLOOR( stun_amount / 8, 1), damagetype = BURN, def_zone = null, blocked = armor, blocked = resistance, used_weapon = used_weapon, sharp = FALSE, edge = FALSE)
+			apply_damage(FLOOR( stun_amount / 8, 1), BURN, null, armor, resistance, FALSE, FALSE, used_weapon)
 		if(agony_amount)
-			apply_damage(damage = FLOOR( agony_amount / 8, 1), damagetype = BURN, def_zone = null, blocked = armor, blocked = resistance, used_weapon = used_weapon, sharp = FALSE, edge = FALSE)
+			apply_damage(FLOOR( agony_amount / 8, 1), BURN, null, armor, resistance, FALSE, FALSE, used_weapon)
 		/*
 		if(stun_amount)
 			stunDam += stun_amount * 0.5

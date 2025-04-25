@@ -15,9 +15,6 @@
 		seizuremedcount += 1;
 	if(bloodstr.has_reagent(REAGENT_ID_TRICORDRAZINE,0)) // startrek wiki says so
 		seizuremedcount += 1;
-	if(bloodstr.has_reagent(REAGENT_ID_QUADCORD,0))
-		seizuremedcount += 1;
-		anxietymedcount += 1;
 
 	// lets check for any one of these... Faster than doing each one, as it'll trigger on the first one it finds instead of checking them all every time
 	if( bloodstr.has_reagent(REAGENT_ID_INAPROVALINE,0) || bloodstr.has_reagent(REAGENT_ID_MENTHOL,0) || bloodstr.has_reagent(REAGENT_ID_ADRANOL,0) || bloodstr.has_reagent(REAGENT_ID_IMMUNOSUPRIZINE,0) || bloodstr.has_reagent(REAGENT_ID_MALISHQUALEM,0))

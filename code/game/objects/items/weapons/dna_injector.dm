@@ -110,10 +110,7 @@
 				H.sync_organ_dna()
 			M.regenerate_icons()
 			// Traitgenes edit end
-
-	if (user)
-		user.drop_from_inventory(src)
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(qdel), src)
+	qdel(src)
 	return uses
 
 /obj/item/dnainjector/attack(mob/M as mob, mob/user as mob)

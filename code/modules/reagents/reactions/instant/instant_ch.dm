@@ -65,7 +65,7 @@
 	required_reagents = list(REAGENT_ID_SODIUMCHLORIDE = 1, REAGENT_ID_WATER = 1, REAGENT_ID_SUGAR = 1)
 	result_amount = 1
 ///SAP RECIPES//////
-
+/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.
 	name = REAGENT_MYELAMINE
 	id = REAGENT_ID_MYELAMINE + "sap"
@@ -73,7 +73,6 @@
 	required_reagents = list(REAGENT_ID_BICARIDINE = 1, REAGENT_ID_IRON = 2, REAGENT_ID_KELOTANE = 1, REAGENT_ID_BLUESAP = 1)
 	result_amount = 1
 
-/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/hannoa
 	name = REAGENT_HANNOA
 	id = REAGENT_ID_HANNOA
@@ -87,7 +86,6 @@
 	result = REAGENT_ID_BULLVALENE
 	required_reagents = list(REAGENT_ID_DERMALINE = 1, REAGENT_ID_ORANGESAP = 1, REAGENT_ID_COPPER = 1)
 	result_amount = 1
-*/
 
 /decl/chemical_reaction/instant/nutrient
 	name = REAGENT_NUTRIMENT
@@ -98,7 +96,6 @@
 	result_amount = 3
 
 /////SERAZINE RECIPES//////
-/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/alizene
 	name = REAGENT_ALIZENE
 	id = REAGENT_ID_ALIZENE
@@ -121,6 +118,7 @@
 	sheet_to_give = /obj/item/stack/material/copper
 
 //YW stuff
+/* Outpost 21 edit - Removing badly designed chems
 /decl/chemical_reaction/instant/benzilate
 	name = "Benzilate"
 	id = REAGENT_ID_BENZILATE
@@ -134,6 +132,7 @@
 	result = REAGENT_ID_PHENETHYLAMINE
 	required_reagents = list(REAGENT_ID_PAROXETINE = 1, REAGENT_ID_BENZILATE = 1)
 	result_amount = 2
+*/
 
 // Xenochem stuff
 /decl/chemical_reaction/instant/xenolazarus // Moved here because upstream axed it and this file cannot conflict

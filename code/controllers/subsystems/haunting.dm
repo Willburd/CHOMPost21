@@ -179,25 +179,31 @@ SUBSYSTEM_DEF(haunting)
 	perform_haunt()
 
 /datum/controller/subsystem/haunting/proc/intense_world_haunt()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	haunt_score = MODE_SIZE / 2
 	world_mode += 1
 	if(world_mode > MODE_SUPERSPOOKY)
 		world_mode = MODE_SUPERSPOOKY
 
 /datum/controller/subsystem/haunting/proc/reduce_world_haunt()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	haunt_score = MODE_SIZE / 2
 	world_mode -= 1
 	if(world_mode < MODE_CALM)
 		world_mode = MODE_CALM
 
 /datum/controller/subsystem/haunting/proc/reset_world_haunt()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	world_mode = MODE_CALM
 	haunt_score = 0
 
 /datum/controller/subsystem/haunting/proc/get_world_haunt()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	return world_mode
 
 /datum/controller/subsystem/haunting/proc/find_player_target()
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	var/mob/potential = get_random_player()
 	if(!potential)
 		return
@@ -208,9 +214,11 @@ SUBSYSTEM_DEF(haunting)
 	current_player_target = WEAKREF(potential)
 
 /datum/controller/subsystem/haunting/proc/clear_player_target()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	current_player_target = null
 
 /datum/controller/subsystem/haunting/proc/get_player_target()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	var/mob/M = current_player_target?.resolve()
 	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal() || istype(M.loc,/obj/belly))
 		clear_player_target()
@@ -223,11 +231,13 @@ SUBSYSTEM_DEF(haunting)
 	return M
 
 /datum/controller/subsystem/haunting/proc/get_random_player()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!global.player_list.len)
 		return null
 	return pick(global.player_list)
 
 /datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnewplayer(M))
 		return
 	if(!M || M.away_from_keyboard || !M.client || M.is_incorporeal())
@@ -240,6 +250,7 @@ SUBSYSTEM_DEF(haunting)
 	current_player_target = WEAKREF(M)
 
 /datum/controller/subsystem/haunting/proc/get_haunt_area()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	var/area/targ_area = pick(subtypesof(/area))
 	var/mob/targ = current_player_target?.resolve()
 	if(targ)
@@ -251,6 +262,8 @@ SUBSYSTEM_DEF(haunting)
 	return targ_area
 
 /datum/controller/subsystem/haunting/proc/weigh_haunting()
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	// Accumulated haunts
 	new_score = rand(-0.02,0.005)
 	for(var/key in influences)
@@ -269,9 +282,12 @@ SUBSYSTEM_DEF(haunting)
 		return
 
 /datum/controller/subsystem/haunting/proc/station_is_haunted()
+	SHOULD_NOT_OVERRIDE(TRUE)
 	return world_mode >= MODE_SUPERSPOOKY
 
 /datum/controller/subsystem/haunting/proc/start_haunt(var/forced = FALSE)
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!forced)
 		if(!isnull(current_haunt))
 			return
@@ -358,6 +374,8 @@ SUBSYSTEM_DEF(haunting)
 	set_haunting(pick(haunts))
 
 /datum/controller/subsystem/haunting/proc/perform_haunt()
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnull(current_haunt))
 		start_haunt()
 	if(isnull(current_haunt))
@@ -365,11 +383,13 @@ SUBSYSTEM_DEF(haunting)
 	current_haunt.fire()
 
 /datum/controller/subsystem/haunting/proc/influence(var/type)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnull(current_influences[type]))
 		current_influences[type] = 0
 	current_influences[type] += 1
 
 /datum/controller/subsystem/haunting/proc/set_haunting(var/path)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	// has to handle a verb input too...
 	if(!path)
 		return
@@ -383,6 +403,8 @@ SUBSYSTEM_DEF(haunting)
 	total_haunts++
 
 /datum/controller/subsystem/haunting/proc/log_haunting(var/LE)
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	var/mob/M = current_player_target?.resolve()
 	if(M)
 		prior_haunts.Add("[stationtime2text()] | [world_mode] | \the [M] - [LE]")

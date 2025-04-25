@@ -21,11 +21,11 @@
 	// Break telecoms for a bit
 	for(var/obj/machinery/telecomms/T in telecomms_list)
 		T.emp_act(1)
-	for(var/obj/machinery/exonet_node/N in machines)
+	for(var/obj/machinery/exonet_node/N in GLOB.machines)
 		N.emp_act(1)
 
 	// Vibe lights
-	for(var/obj/machinery/light/L in machines)
+	for(var/obj/machinery/light/L in GLOB.machines)
 		if(prob(10))
 			L.broken()
 		else
@@ -93,7 +93,7 @@
 	else
 		// This sets off a chain of events that lead to the actual grid check (or perhaps worse).
 		// First, the Supermatter engine makes a power spike.
-		for(var/obj/machinery/power/generator/engine in machines)
+		for(var/obj/machinery/power/generator/engine in GLOB.machines)
 			engine.power_spike(80,TRUE,TRUE)
 			break // Just one engine, please.
 

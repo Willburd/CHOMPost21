@@ -3,6 +3,7 @@
 #define REAGENT_ID_MIASMA "miasma"
 
 // Drugs
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_CLEANSINGAGENT "Cleansing Agent"
 #define REAGENT_ID_CLEANSINGAGENT "cleansingagent"
 #define REAGENT_PURIFYINGAGENT "Purifying Agent"
@@ -33,6 +34,7 @@
 #define REAGENT_ID_PHOENIXBREATH "phoenixbreath"
 #define REAGENT_DRYAGENT "Dry Agent"
 #define REAGENT_ID_DRYAGENT "dryagent"
+*/
 #define REAGENT_APHRODISIAC "Aphrodisiac"
 #define REAGENT_ID_APHRODISIAC "aphrodisiac"
 #define REAGENT_SORBITOL "Sorbitol"
@@ -156,6 +158,7 @@
 
 
 // Modifiers
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_ENERGYBOOSTER "Energy Booster"
 #define REAGENT_ID_ENERGYBOOSTER "energybooster"
 #define REAGENT_OCEANICCURE "Oceanic Cure"
@@ -166,15 +169,18 @@
 #define REAGENT_ID_SENSEENHANCER "senseenhancer"
 #define REAGENT_HEATNULLIFER "Heat Nullifer"
 #define REAGENT_ID_HEATNULLIFER "heatnullifer"
+*/
 
 
 // Other
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_PURPLESAP "purplesap"
 #define REAGENT_ID_PURPLESAP "Purple sap"
 #define REAGENT_BLUESAP "Blue Sap"
 #define REAGENT_ID_BLUESAP "bluesap"
 #define REAGENT_ORANGESAP "Orange sap"
 #define REAGENT_ID_ORANGESAP "orangesap"
+*/
 #define REAGENT_NITRATE "Nitrate"
 #define REAGENT_ID_NITRATE "nitrate"
 #define REAGENT_ALUMINUMNITRATE "Aluminum Nitrate"
@@ -187,21 +193,27 @@
 #define REAGENT_ID_BENZILATE "benzilate"
 #define REAGENT_PHENETHYLAMINE "Phenethylamine"
 #define REAGENT_ID_PHENETHYLAMINE "phenethylamine"
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_XEYAKIN_BLOOD "Xeyakin Blood"
 #define REAGENT_ID_XEYAKIN_BLOOD "xeyakinblood"
-
+*/
 
 // Phoronreagents
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_TARTRATE "Chlorified Tartrate"
 #define REAGENT_ID_TARTRATE "tartrate"
 #define REAGENT_BICORDRAZINE "Bicordrazine"
 #define REAGENT_ID_BICORDRAZINE "bicordrazine"
+*/
 #define REAGENT_GENEDRAZINE "Genedrazine"
 #define REAGENT_ID_GENEDRAZINE "genedrazine"
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_LACERTUSOL "Lacertusol"
 #define REAGENT_ID_LACERTUSOL "lacertusol"
+*/
 #define REAGENT_MUTAGENX "Extreme Mutagen"
 #define REAGENT_ID_MUTAGENX "mutagen_x"
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_UNKNOWN "Unanalyzed Reagent"
 #define REAGENT_ID_UNKNOWN "unknown"
 #define REAGENT_AMORAPOTIO "Amorapotio"
@@ -218,20 +230,26 @@
 #define REAGENT_ID_PARALITOL "paralitol"
 #define REAGENT_DOLORAN "Doloran"
 #define REAGENT_ID_DOLORAN "doloran"
+*/
 #define REAGENT_FULGURACIN "Fulguracin"
 #define REAGENT_ID_FULGURACIN "fulguracin"
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_MORTEMOL "Mortemol"
 #define REAGENT_ID_MORTEMOL "mortemol"
 #define REAGENT_TEGOXANE "Tegoxane"
 #define REAGENT_ID_TEGOXANE "tegoxane"
+*/
 #define REAGENT_EXPULSICOL "Expulsicol"
 #define REAGENT_ID_EXPULSICOL "expulsicol"
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_OCULUSOSONE "Oculusosone"
 #define REAGENT_ID_OCULUSOSONE "oculusosone"
 #define REAGENT_DESTITUTIONECAM "Destitutionecam"
 #define REAGENT_ID_DESTITUTIONECAM "destitutionecam"
+*/
 #define REAGENT_SAPOFORMATOR "Sapoformator"
 #define REAGENT_ID_SAPOFORMATOR "sapoformator"
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_RADX "Rad-X"
 #define REAGENT_ID_RADX "rad_x"
 #define REAGENT_CALORAN "Caloran"
@@ -248,10 +266,12 @@
 #define REAGENT_ID_ENERGIZEDPHORON "energized_phoron"
 #define REAGENT_INDUROMOL "Induromol"
 #define REAGENT_ID_INDUROMOL "induromol"
+*/
 #define REAGENT_OBSCURITOL "Obscuritol"
 #define REAGENT_ID_OBSCURITOL "obscuritol"
 #define REAGENT_OXYPHOROMIN "Oxyphoromin"
 #define REAGENT_ID_OXYPHOROMIN "oxyphoromin"
+/*Outpost 21 edit - Removing badly designed chems
 #define REAGENT_LIQUIDBLUESPACE "Liquid Bluespace"
 #define REAGENT_ID_LIQUIDBLUESPACE "liquid_bluespace"
 #define REAGENT_GASEOUSDEATH "Gaseous Death"
@@ -262,11 +282,13 @@
 #define REAGENT_ID_IGNISOL "ignisol"
 #define REAGENT_PHORONICACID "Phoronic acid"
 #define REAGENT_ID_PHORONICACID "phoronic_acid"
+*/
 #define REAGENT_NOCTURNOL "Nocturnal"
 #define REAGENT_ID_NOCTURNOL "nocturnol"
 
 
 // Toxins
+/* Outpost 21 edit - Removing badly designed chems
 #define REAGENT_DEATHBLOOD "Irradiating Blood"
 #define REAGENT_ID_DEATHBLOOD "deathblood"
 #define REAGENT_LIQUIDFIRE "Liquid Fire"
@@ -275,6 +297,7 @@
 #define REAGENT_ID_NEOLIQUIDFIRE "neoliquidfire"
 #define REAGENT_LIQUIDLIFE "Liquid Life"
 #define REAGENT_ID_LIQUIDLIFE "liquidlife"
+*/
 
 #define REAGENT_NUMBING_FLUID "Numbing Fluid"
 #define REAGENT_ID_NUMBING_FLUID "succubi_numbing"

@@ -19,7 +19,7 @@
 	var/starty = 0
 	var/endy = 0
 	var/endx = 0
-	var/startside = pick(cardinal)
+	var/startside = pick(GLOB.cardinal)
 	if(prob(50))
 		startside = pick(list(EAST,WEST)) // Outpost 21 edit - our station is wide
 

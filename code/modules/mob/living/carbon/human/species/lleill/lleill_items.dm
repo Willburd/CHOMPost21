@@ -21,6 +21,7 @@
 	reagent_state = LIQUID
 	color = "#ffffff"
 	scannable = 1
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
 
 /datum/reagent/glamour_transparent/affect_blood(var/mob/living/carbon/target, var/removed)
 	if(!target.cloaked)

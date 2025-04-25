@@ -208,7 +208,6 @@
 
 
 /mob/living/silicon/robot/LateInitialize()
-	. = ..()
 	pick_module()
 	update_icon()
 
@@ -308,7 +307,7 @@
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
 /mob/living/silicon/robot/Destroy()
-	client.screen -= global_hud.whitense // outpost 21 addition - radiation and haunting affects borg vision
+	client.screen -= GLOB.global_hud.whitense // outpost 21 addition - radiation and haunting affects borg vision
 	if(mmi && mind)//Safety for when a cyborg gets dust()ed. Or there is no MMI inside.
 		var/turf/T = get_turf(loc)//To hopefully prevent run time errors.
 		if(T)	mmi.loc = T
@@ -1313,7 +1312,7 @@
 			clear_inherent_laws()
 			laws = new /datum/ai_laws/syndicate_override
 			var/time = time2text(world.realtime,"hh:mm:ss")
-			lawchanges.Add("[time] <B>:</B> [user.name]([user.key]) emagged [name]([key])")
+			GLOB.lawchanges.Add("[time] <B>:</B> [user.name]([user.key]) emagged [name]([key])")
 			var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 			set_zeroth_law("Only [user.real_name] and people [TU.he] designate[TU.s] as being such are operatives.")
 			. = 1

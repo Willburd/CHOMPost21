@@ -5,3 +5,4 @@
 	reagent_state = GAS
 	taste_description = "indescribable"
 	color = "#808000"
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki

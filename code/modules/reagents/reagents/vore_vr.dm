@@ -239,6 +239,7 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	scannable = 0 //YOU ARE NOT SCANNING THE FUNNY PARALYSIS TOXIN. NO. BAD. STAY AWAY.
+	wiki_flag = WIKI_SPOILER
 
 /datum/reagent/paralysis_toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.weakened < 50 || M.stunned <50 ) //Let's not leave them PERMA stuck, after all. //CHOMPedit, stun accounting for crawl
@@ -256,6 +257,7 @@
 	mrate_static = TRUE
 	overdose = 100 //There is no OD. You already are taking the worst of it.
 	scannable = 0 //Let's not have medical mechs able to make an extremely strong 'I hit you you fall down in agony' chem.
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
 /datum/reagent/pain_enzyme/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, -200)

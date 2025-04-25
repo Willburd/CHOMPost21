@@ -334,7 +334,7 @@
 		var/i = 5
 		var/obj/machinery/attemptgoal
 		while(i > 0)
-			attemptgoal = pick(machines)
+			attemptgoal = pick(GLOB.machines)
 			if(istype(attemptgoal,/obj/machinery/atmospherics/unary/vent_pump))
 				break;
 			i--

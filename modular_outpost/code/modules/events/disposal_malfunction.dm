@@ -4,11 +4,11 @@
 	command_announcement.Announce("A sudden drop in the disposal network's pressure has been detected. Verify all disposal units are functioning correctly.", "Structural Alert")
 
 /datum/event/disposal_damage/start()
-	if(!machines.len)
+	if(!GLOB.machines.len)
 		return
 
 	var/list/disposals = list()
-	for(var/obj/machinery/M in machines)
+	for(var/obj/machinery/M in GLOB.machines)
 		if(istype(M,/obj/machinery/disposal))
 			var/obj/machinery/disposal/D = M
 			var/turf/T = get_turf(D)

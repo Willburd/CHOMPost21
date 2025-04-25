@@ -100,7 +100,6 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/power/rtg/LateInitialize()
-	. = ..()
 	// Detect new parts placed by mappers
 	var/list/parts_found = list()
 	for(var/i = 1, i <= loc.contents.len, i++)

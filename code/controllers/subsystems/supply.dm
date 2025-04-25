@@ -127,8 +127,8 @@ SUBSYSTEM_DEF(supply)
 						EC.contents[EC.contents.len]["quantity"] = cashmoney.worth
 						EC.value += EC.contents[EC.contents.len]["value"]
 
-					if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
-						var/obj/item/reagent_containers/glass/bottle/vaccine/sale_bottle = A
+					if(istype(A, /obj/item/reagent_containers/glass/beaker/vial/vaccine))
+						var/obj/item/reagent_containers/glass/beaker/vial/vaccine/sale_bottle = A
 						if(!istype(CR, /obj/structure/closet/crate/freezer))
 							EC.contents = list(
 								"error" = "Error: Product was improperly packaged. Send conents in freezer crate to preserve contents for transport."
@@ -555,7 +555,7 @@ SUBSYSTEM_DEF(supply)
 			return 0
 		return organ_stuff.supply_conversion_value
 	// Selling vaccines
-	if(istype(A, /obj/item/reagent_containers/glass/bottle/vaccine))
+	if(istype(A, /obj/item/reagent_containers/glass/beaker/vial/vaccine))
 		return 5
 	// Selling food
 	if(istype(A, /obj/item/reagent_containers/food))

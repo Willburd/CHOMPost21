@@ -417,8 +417,8 @@
 	radiation -= rand(2,7)
 	if(radiation <= 0)
 		if(old_rads > 0)
-			client.screen -= global_hud.whitense
+			client.screen -= GLOB.global_hud.whitense
 		radiation = 0
 	else
-		client.screen |= global_hud.whitense
+		client.screen |= GLOB.global_hud.whitense
 // outpost 21 addition end

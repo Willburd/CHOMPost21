@@ -158,6 +158,7 @@
 		"billion" = 13,
 		"billion_lower" = 10
 		)
+	reagent = REAGENT_ID_SULFUR // Outpost 21 edit
 
 /ore/marble
 	name = ORE_MARBLE
@@ -200,6 +201,7 @@
 	spread_chance = 10
 	ore = /obj/item/ore/tin
 	scan_icon = "mineral_common"
+	reagent = REAGENT_ID_TIN // Outpost 21 edit
 
 /ore/quartz
 	name = ORE_QUARTZ
@@ -242,6 +244,7 @@
 	spread_chance = 3
 	ore = /obj/item/ore/painite
 	scan_icon = "mineral_rare"
+	reagent = REAGENT_ID_CALCIUM // Outpost 21 edit
 
 /ore/void_opal
 	name = ORE_VOPAL
@@ -251,4 +254,5 @@
 	spread_chance = 1
 	ore = /obj/item/ore/void_opal
 	scan_icon = "mineral_rare"
+	reagent = REAGENT_ID_SILICON // Outpost 21 edit
 // Outpost 21 edit end

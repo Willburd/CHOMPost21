@@ -88,11 +88,11 @@
 			descriptors |= "radioactive"
 		if(reagents.has_reagent(REAGENT_ID_AMATOXIN) || reagents.has_reagent(REAGENT_ID_TOXIN))
 			descriptors |= "poisonous"
-		if(reagents.has_reagent(REAGENT_ID_PSILOCYBIN) || reagents.has_reagent(REAGENT_ID_BLISS) || reagents.has_reagent(REAGENT_ID_EARTHSBLOOD))
+		if(reagents.has_reagent(REAGENT_ID_PSILOCYBIN) || reagents.has_reagent(REAGENT_ID_BLISS)) // || reagents.has_reagent(REAGENT_ID_EARTHSBLOOD)) Outpost 21 edit - Removing badly designed chems
 			descriptors |= "hallucinogenic"
-		if(reagents.has_reagent(REAGENT_ID_BICARIDINE) || reagents.has_reagent(REAGENT_ID_EARTHSBLOOD))
+		if(reagents.has_reagent(REAGENT_ID_BICARIDINE) || reagents.has_reagent(REAGENT_ID_COROPHIZINE)) // || reagents.has_reagent(REAGENT_ID_EARTHSBLOOD)) Outpost 21 edit - Removing badly designed chems
 			descriptors |= "medicinal"
-		if(reagents.has_reagent(REAGENT_ID_GOLD) || reagents.has_reagent(REAGENT_ID_EARTHSBLOOD))
+		if(reagents.has_reagent(REAGENT_ID_GOLD) || reagents.has_reagent(REAGENT_ID_COROPHIZINE)) // || reagents.has_reagent(REAGENT_ID_EARTHSBLOOD)) // Outpost 21 edit - Removing badly designed chems
 			descriptors |= "shiny"
 		if(reagents.has_reagent(REAGENT_ID_LUBE))
 			descriptors |= "slippery"

@@ -243,13 +243,18 @@
 		Z_LEVEL_OUTPOST_ASTEROID
 	)
 
-	station_uses_common_ore_only = TRUE
-	common_ores = list(ORE_MARBLE = 8, ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 15, ORE_URANIUM = 5, ORE_PLATINUM = 6, ORE_HEMATITE = 70, ORE_RUTILE = 15, ORE_CARBON = 70, ORE_DIAMOND = 1, ORE_GOLD = 6, ORE_SILVER = 5, ORE_PHORON = 1, ORE_LEAD = 35, ORE_VOPAL = 1, ORE_VERDANTIUM = 1, ORE_PAINITE = 1)
+	// Zlevels with rare ores
+	rare_ore_levels = list(
+		Z_LEVEL_OUTPOST_ASTEROID,
+		Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+	)
+
+	common_ores = list(ORE_MARBLE = 8, ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 5, ORE_URANIUM = 1, ORE_PLATINUM = 2, ORE_HEMATITE = 10, ORE_RUTILE = 5, ORE_CARBON = 20, ORE_DIAMOND = 1, ORE_GOLD = 3, ORE_SILVER = 2, ORE_PHORON = 0, ORE_LEAD = 15, ORE_VOPAL = 0, ORE_VERDANTIUM = 0, ORE_PAINITE = 0)
 	rare_ores = list(ORE_MARBLE = 5, ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5, ORE_URANIUM = 25, ORE_PLATINUM = 25, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 25, ORE_DIAMOND = 8, ORE_GOLD = 25, ORE_SILVER = 10, ORE_PHORON = 25, ORE_LEAD = 15, ORE_VOPAL = 1, ORE_VERDANTIUM = 3, ORE_PAINITE = 1)
 
 /datum/map/outpost/perform_map_generation()
 	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
-	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 120, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
 
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 150, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 200, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard)

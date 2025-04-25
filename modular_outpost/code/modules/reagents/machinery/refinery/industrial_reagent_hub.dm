@@ -30,7 +30,7 @@
 		return
 
 	var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
-	if(target && target.dir != reverse_dir[dir])
+	if(target && target.dir != GLOB.reverse_dir[dir])
 		var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in loc
 		if(tanker && tanker.reagents.total_volume > 0 && world.time > tanker.l_move_time + wait_delay)
 			// dump reagents to next refinery machine
@@ -53,9 +53,9 @@
 					check_dir = turn(filt.dir, 270)
 				else
 					check_dir = turn(filt.dir, 90)
-				if(check_dir == reverse_dir[dir])
+				if(check_dir == GLOB.reverse_dir[dir])
 					intake = TRUE
-			if(other.dir == reverse_dir[dir])
+			if(other.dir == GLOB.reverse_dir[dir])
 				intake = TRUE
 	// Get main dir pipe
 	if(intake)
@@ -90,7 +90,7 @@
 /obj/machinery/reagent_refinery/hub/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
 	if(istype(origin_machine,/obj/machinery/reagent_refinery/hub)) // Hubs cannot send into other hubs
 		return 0
-	if(dir != reverse_dir[source_forward_dir] ) // The hub must be facing into its source to accept input, unlike others
+	if(dir != GLOB.reverse_dir[source_forward_dir] ) // The hub must be facing into its source to accept input, unlike others
 		return 0
 	var/obj/vehicle/train/trolly_tank/tanker = locate(/obj/vehicle/train/trolly_tank) in get_turf(src)
 	if(!tanker)

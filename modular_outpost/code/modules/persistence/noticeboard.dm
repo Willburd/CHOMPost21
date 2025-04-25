@@ -20,12 +20,13 @@
 	name = "Command notice board"
 
 /obj/structure/noticeboard/bridge/Initialize(mapload)
+	var/obj/item/paper/P
+	ADD_NOTICE("Command Notice: Free Refills","<br>More coffee she says! More coffee! I haven't faxed something in weeks! All I am is a coffee jockey! What is my purpose in life? Captain says TWO FUCKING SCOOPS AND CREAM.",null)
 	. = ..()
 
 
 /obj/structure/noticeboard/cargo
 	name = "Cargo notice board"
-	icon_state = "nboard04"
 
 /obj/structure/noticeboard/cargo/Initialize(mapload)
 	var/obj/item/paper/P
@@ -38,7 +39,6 @@
 
 /obj/structure/noticeboard/engineering
 	name = "engineering notice board"
-	icon_state = "nboard02"
 
 /obj/structure/noticeboard/engineering/Initialize(mapload)
 	var/obj/item/paper/P
@@ -48,7 +48,7 @@
 
 
 /obj/structure/noticeboard/exploration
-	icon_state = "nboard01"
+	name = "awaymission notice board"
 
 /obj/structure/noticeboard/exploration/Initialize(mapload)
 	var/obj/item/paper/P
@@ -58,7 +58,6 @@
 
 /obj/structure/noticeboard/janitor
 	name = "Janitorial notice board"
-	icon_state = "nboard01"
 
 /obj/structure/noticeboard/janitor/Initialize(mapload)
 	var/obj/item/paper/P
@@ -67,17 +66,16 @@
 
 
 /obj/structure/noticeboard/library
-	icon_state = "nboard01"
+	name = "public notice board"
 
 /obj/structure/noticeboard/library/Initialize(mapload)
 	var/obj/item/paper/P
-	ADD_NOTICE("Bingle","<br>Our libary has received a computer with authorized Bingle usage! Use it to research anything and everything, it's a very handy wiki, and always up to date.<br> If the computer crashes just give it a wack, it's old tech.",null)
+	ADD_NOTICE("Bingle","<br>Our libary has received a computer with authorized Bingle usage! Use it to research anything and everything, it's a very handy wiki, and always up to date.<br> If the computer crashes just give it a wack, it's old tech.",list(/obj/item/stamp/hop))
 	. = ..()
 
 
 /obj/structure/noticeboard/medical
 	name = "medical notice board"
-	icon_state = "nboard04"
 
 /obj/structure/noticeboard/medical/Initialize(mapload)
 	var/obj/item/paper/P
@@ -90,7 +88,6 @@
 
 /obj/structure/noticeboard/phoronics
 	name = "Phoronics lab notice board"
-	icon_state = "nboard01"
 
 /obj/structure/noticeboard/phoronics/Initialize(mapload)
 	var/obj/item/paper/P
@@ -100,7 +97,6 @@
 
 /obj/structure/noticeboard/research
 	name = "Research notice board"
-	icon_state = "nboard01"
 
 /obj/structure/noticeboard/research/Initialize(mapload)
 	var/obj/item/paper/P
@@ -108,9 +104,18 @@
 	. = ..()
 
 
+/obj/structure/noticeboard/xenobio
+	name = "Xenobio notice board"
+
+/obj/structure/noticeboard/xenobio/Initialize(mapload)
+	var/obj/item/paper/P
+	ADD_NOTICE("Staff Notice: Slime Revolution","<br>Slimes are smarter than they look, and hold grudges. Don't discipline slimes unless the goopie brats are asking for it!<br>If things get out of hand, get a squirt-gun or fire extinguisher. Water is lethal to slimes! It's why you have showers attached to each pen, and the doors into here. Running on wet floors is a slipping hazard!<br>Cold works even better, but water is cheaper.",list(/obj/item/stamp/rd))
+	ADD_NOTICE("Staff Notice: Kill Switch","<br>If you have a full slime breakout pull the fire alarm. Water kills slimes, and we recently had fire sprinklers installed. Even if you die, by the time someone rescues your body all the slimes should hopefully be dead.",list(/obj/item/stamp/rd))
+	. = ..()
+
+
 /obj/structure/noticeboard/security
 	name = "Security notice board"
-	icon_state = "nboard03"
 
 /obj/structure/noticeboard/security/Initialize(mapload)
 	var/obj/item/paper/P
@@ -122,7 +127,6 @@
 
 /obj/structure/noticeboard/stowaway
 	name = "Forgotten notice board"
-	icon_state = "nboard05"
 
 /obj/structure/noticeboard/stowaway/Initialize(mapload)
 	var/obj/item/paper/P

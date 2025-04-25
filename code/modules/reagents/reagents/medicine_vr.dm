@@ -151,6 +151,7 @@
 	reagent_state = LIQUID
 	color = "#a754de"
 	scannable = 1
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
 	var/tf_type = /mob/living/simple_mob/animal/passive/mouse
 	var/tf_possible_types = list(
 		"mouse" = /mob/living/simple_mob/animal/passive/mouse,
@@ -273,6 +274,7 @@
 	reagent_state = LIQUID
 	color = "#ffffff"
 	scannable = 1
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
 
 /datum/reagent/glamour/affect_blood(var/mob/living/carbon/target, var/removed)
 	add_verb(target, /mob/living/carbon/human/proc/enter_cocoon)

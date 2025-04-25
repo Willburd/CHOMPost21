@@ -4,7 +4,7 @@
 
 /datum/spawnpoint/elevator/New()
 	..()
-	turfs = latejoin_elevator
+	turfs = GLOB.latejoin_elevator
 
 /datum/spawnpoint/cyborg
 	display_name = "Cyborg Storage"
@@ -13,7 +13,7 @@
 
 /datum/spawnpoint/cyborg/New()
 	..()
-	turfs = latejoin_cyborg
+	turfs = GLOB.latejoin_cyborg
 
 /datum/spawnpoint/cryo
 	display_name = "Cryogenic Storage"
@@ -23,9 +23,8 @@
 
 /datum/spawnpoint/cryo/New()
 	..()
-	turfs = latejoin_cryo
+	turfs = GLOB.latejoin_cryo
 
-// Outpost 21 edit begin - latejoin dorms
 /datum/spawnpoint/dorm
 	display_name = "On-Site Dorms"
 	msg = "has clocked in from the on-site dorms"
@@ -34,8 +33,7 @@
 
 /datum/spawnpoint/dorm/New()
 	..()
-	turfs = latejoin_dorm
-// Outpost 21 edit end
+	turfs = GLOB.latejoin_dorm
 
 /datum/spawnpoint/vore
 	display_name = "Vorespawn - Prey"
@@ -52,4 +50,4 @@
 
 /datum/spawnpoint/vore/New()
 	..()
-	turfs = latejoin
+	turfs = GLOB.latejoin

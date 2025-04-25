@@ -11,7 +11,7 @@
 /obj/item/reagent_containers/food/snacks/deathclawmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
-	reagents.add_reagent(REAGENT_ID_DEATHBLOOD, 6)
+	reagents.add_reagent(REAGENT_ID_RADIUM, 6) // REAGENT_ID_DEATHBLOOD // Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/dragonmeat
 	name = "Dragon Meat"
@@ -26,7 +26,7 @@
 /obj/item/reagent_containers/food/snacks/dragonmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
-	reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 6)
+	//reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 6) // Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/phorondragonmeat
 	name = "Phoron Dragon Meat"
@@ -41,7 +41,7 @@
 /obj/item/reagent_containers/food/snacks/phorondragonmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
-	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE, 6)
+	// reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE, 6) // Outpost 21 edit - Removing badly designed chems
 	reagents.add_reagent(REAGENT_ID_PHORON, 3)
 
 /obj/item/reagent_containers/food/snacks/metroidmeat
@@ -57,7 +57,7 @@
 /obj/item/reagent_containers/food/snacks/metroidmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3)
+	// reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3) // Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/meat/raymeat
 	name = "Solar Ray Meat"

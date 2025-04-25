@@ -58,6 +58,8 @@
 
 	allow_mind_transfer = TRUE
 
+	enzyme_affect = FALSE // Outpost 21 edit - Enzyme immune scel
+
 /mob/living/simple_mob/vore/scel/Initialize(mapload)
 	. = ..()
 	if(random_skin)
