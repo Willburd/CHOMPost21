@@ -16,3 +16,6 @@
 #define REAGENT_ID_HEMOCYANIN "hemocyanin"
 #define REAGENT_ASUSTENANCE	"Artificial Sustenance"
 #define REAGENT_ID_ASUSTENANCE "a_sustenance"
+
+#define REAGENT_NUKIEFINAL "Nukie Final"
+#define REAGENT_ID_NUKIEFINAL "nukie_final"

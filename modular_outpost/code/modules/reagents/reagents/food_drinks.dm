@@ -22,3 +22,22 @@
 	if(current_addiction == 0)
 		to_chat(M, "<span class='notice'>You feel your symptoms end, you no longer feel the craving for [name].</span>")
 	return current_addiction
+
+// Omega nukie
+/datum/reagent/drink/coffee/nukie/mega/final_nukie
+	name = REAGENT_NUKIEFINAL
+	id = REAGENT_ID_NUKIEFINAL
+	color = "#14ed39"
+	taste_description = "you're not welcome in this swamp."
+
+/datum/reagent/drink/coffee/nukie/mega/final_nukie/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	if(M.jitteriness < 500)
+		to_chat(M, span_critical("You have a seizure!"))
+		M.Paralyse(10)
+		M.Weaken(10)
+		M.make_jittery(1000)
+		if(!M.lying)
+			M.emote("collapse")
+	..()
+	if(prob(20))
+		M.gib()

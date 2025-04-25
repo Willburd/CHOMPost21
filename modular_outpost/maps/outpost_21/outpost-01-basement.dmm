@@ -1907,10 +1907,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32
-	},
 /obj/item/tape_roll,
 /obj/item/tape_roll,
 /obj/item/tape_roll,
@@ -9390,6 +9386,13 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "Xenobiolock";
+	name = "Xenobiology Lockdown";
+	pixel_x = 28;
+	pixel_y = -4;
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/research/isolation_hall)
@@ -17537,7 +17540,8 @@
 	},
 /obj/machinery/light_switch{
 	pixel_x = 26;
-	pixel_y = -26
+	pixel_y = -26;
+	dir = 8
 	},
 /obj/effect/floor_decal/arrows{
 	dir = 4
@@ -17589,13 +17593,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aFP" = (
-/obj/machinery/button/remote/blast_door{
-	id = "atmoslockdown";
-	name = "Atmospherics Lockdown";
-	pixel_x = 24;
-	req_access = newlist();
-	req_one_access = list(10,24)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -17609,7 +17606,14 @@
 	dir = 6
 	},
 /obj/structure/extinguisher_cabinet{
-	pixel_x = 39
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -18116,7 +18120,8 @@
 "aGL" = (
 /obj/machinery/light_switch{
 	pixel_x = 26;
-	pixel_y = -26
+	pixel_y = -26;
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -25719,6 +25724,12 @@
 	req_one_access = list(19,40,52)
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/button/remote/blast_door{
+	id = "medgaragein";
+	name = "Nurse Bradley's Privacy Shutters";
+	pixel_y = 30;
+	req_one_access = list(20,40)
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/tankstore)
 "aUU" = (
@@ -27418,7 +27429,8 @@
 	name = "Cafe Shutters";
 	id = "coffeeshop";
 	layer = 3.1;
-	can_atmos_pass = 1
+	can_atmos_pass = 1;
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -27429,7 +27441,8 @@
 	name = "Cafe Shutters";
 	id = "coffeeshop";
 	layer = 3.1;
-	can_atmos_pass = 1
+	can_atmos_pass = 1;
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -27439,7 +27452,8 @@
 	name = "Cafe Shutters";
 	id = "coffeeshop";
 	layer = 3.1;
-	can_atmos_pass = 1
+	can_atmos_pass = 1;
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -27450,7 +27464,8 @@
 	name = "Cafe Shutters";
 	id = "coffeeshop";
 	layer = 3.1;
-	can_atmos_pass = 1
+	can_atmos_pass = 1;
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -31256,7 +31271,13 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/pool)
 "beF" = (
-/obj/structure/sign/directions/pool,
+/obj/structure/sign/directions/pool{
+	pixel_y = 3
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_y = 9;
+	dir = 4
+	},
 /turf/simulated/wall,
 /area/crew_quarters/pool)
 "beG" = (
@@ -31888,6 +31909,9 @@
 /obj/item/material/ashtray/plastic,
 /obj/item/towel/random,
 /obj/item/towel/random,
+/obj/structure/sign/painting/public{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "bfQ" = (
@@ -33649,6 +33673,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -39251,6 +39278,11 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
 "buE" = (
@@ -40262,11 +40294,6 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
-	},
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
@@ -41676,13 +41703,6 @@
 	},
 /obj/effect/floor_decal/milspec/stripe{
 	dir = 8
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "medgaragein";
-	name = "Nurse Bradley's Privacy Shutters";
-	pixel_x = -30;
-	pixel_y = 30;
-	req_one_access = list(20,40)
 	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Lower Hall Garage"
@@ -45862,6 +45882,13 @@
 /obj/item/hand_labeler{
 	pixel_y = 5
 	},
+/obj/machinery/button/remote/blast_door{
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	pixel_x = 5;
+	dir = 1;
+	pixel_y = -27
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "bGQ" = (
@@ -48547,8 +48574,7 @@
 	name = "Xenobiology Lockdown";
 	pixel_x = -4;
 	pixel_y = -30;
-	dir = 1;
-	req_one_access = list(52,55)
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/xeno)
@@ -55201,6 +55227,13 @@
 /obj/random/flashlight,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
+"gSf" = (
+/obj/structure/sign/directions/roomnum{
+	pixel_y = 10;
+	dir = 6
+	},
+/turf/simulated/wall,
+/area/crew_quarters/sleep/Dorm_5)
 "gSx" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -61365,7 +61398,8 @@
 	name = "Cafe Shutters";
 	id = "coffeeshop";
 	layer = 3.1;
-	can_atmos_pass = 1
+	can_atmos_pass = 1;
+	dir = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -63055,6 +63089,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
+"lNA" = (
+/obj/structure/sign/directions/roomnum{
+	pixel_y = 10;
+	dir = 8
+	},
+/turf/simulated/wall,
+/area/crew_quarters/sleep/Dorm_4)
 "lNV" = (
 /turf/simulated/open/indoor/muriki,
 /area/muriki/processor/hall)
@@ -67978,6 +68019,13 @@
 /obj/structure/lattice,
 /turf/simulated/open/indoor/muriki,
 /area/muriki/processor)
+"oWD" = (
+/obj/structure/sign/directions/roomnum{
+	pixel_y = 10;
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/crew_quarters/sleep/Dorm_2)
 "oXd" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/indoor/muriki,
@@ -75127,6 +75175,13 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/spine/waste)
+"tdw" = (
+/obj/structure/sign/directions/dorms{
+	pixel_y = 9;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/dormitory)
 "tdB" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -79499,6 +79554,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
+"vQJ" = (
+/obj/structure/sign/directions/roomnum{
+	pixel_y = 10
+	},
+/turf/simulated/wall,
+/area/crew_quarters/sleep/Dorm_1)
 "vQV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -81117,6 +81178,13 @@
 "wRc" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/workshop)
+"wRA" = (
+/obj/structure/sign/directions/roomnum{
+	pixel_y = 10;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/crew_quarters/sleep/Dorm_3)
 "wRD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -83110,6 +83178,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"ycU" = (
+/obj/structure/sign/directions/dorms{
+	pixel_y = 9
+	},
+/turf/simulated/wall,
+/area/hallway/muriki/dorm)
 "ydN" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
@@ -134017,7 +134091,7 @@ bfb
 bhj
 bff
 bhX
-bfb
+aWa
 jic
 bjt
 bkk
@@ -137571,7 +137645,7 @@ djx
 aPR
 bdY
 aRR
-beJ
+ycU
 bfk
 bfB
 bfV
@@ -137747,7 +137821,7 @@ wrV
 bgT
 bjJ
 bky
-bgG
+tdw
 bgG
 bng
 bom
@@ -138403,13 +138477,13 @@ bom
 bom
 bom
 brh
-bom
+oWD
 bsG
 bsG
 bsG
 bsG
 bvk
-bsG
+lNA
 bsG
 bxv
 byq
@@ -139045,19 +139119,19 @@ biY
 biY
 biY
 bmi
-biY
+vQJ
 bon
 bon
 bon
 bon
 brk
-bon
+wRA
 bsH
 bsH
 bsH
 bsH
 bvm
-bsH
+gSf
 bsH
 bxz
 byu
