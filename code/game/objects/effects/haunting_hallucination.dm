@@ -183,7 +183,7 @@
 
 	if(prob(15))
 		var/D = get_dir(src,M)
-		Move(get_step(get_turf(src), GLOB.reverse_direction[D]))
+		Move(get_step(get_turf(src), GLOB.reverse_dir[D]))
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -199,7 +199,7 @@
 	if(get_dist(src,M) < 5 || flee)
 		flee = TRUE
 		var/D = get_dir(src,M)
-		Move(get_step(get_turf(src), GLOB.reverse_direction[D]))
+		Move(get_step(get_turf(src), GLOB.reverse_dir[D]))
 
 	if(get_dist(src,M) > 10 || (flee && prob(20)))
 		target = null
