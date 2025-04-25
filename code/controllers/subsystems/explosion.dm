@@ -124,7 +124,7 @@ SUBSYSTEM_DEF(explosions)
 				if(T)
 					append_currentrun(T.x,T.y,T.z,spread_power,direction,starting_power)
 			// Make these feel a little more flashy
-			if(spread_power > 3 && spread_power < max_explosion_range && prob(6)) // bombs above maxcap are probably badmins, lets not make 10000 effects
+			if(spread_power > 3 && spread_power < GLOB.max_explosion_range && prob(6)) // bombs above maxcap are probably badmins, lets not make 10000 effects
 				if(prob(30))
 					var/datum/effect/effect/system/smoke_spread/S = new/datum/effect/effect/system/smoke_spread()
 					S.set_up(2,0,epicenter,direction)
@@ -213,7 +213,7 @@ SUBSYSTEM_DEF(explosions)
 		pending_explosions["[x0].[y0].[z0]"] = list(x0,y0,z0,pwr,0,max_starting)
 		// outward radiating explosions
 		var/rad_power = pwr - epicenter.explosion_resistance
-		for(var/direction in cardinal)
+		for(var/direction in GLOB.cardinal)
 			var/turf/T = get_step(epicenter, direction)
 			if(T)
 				dat = pending_explosions["[T.x].[T.y].[T.z]"]
