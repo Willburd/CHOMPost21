@@ -232,10 +232,8 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/landmark/step_trap/LateInitialize()
-	. = ..()
-
 	if(prob(40))
-		return;
+		return
 
 	if(!isturf(src.loc))
 		return

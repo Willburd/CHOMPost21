@@ -16,4 +16,3 @@
 				name = "\improper BoomTown cordless micro speaker"
 				icon = 'modular_outpost/icons/obj/device.dmi' // Use smaller icon. kinda hacky, but I'd rather not make this a whole new object.
 				break
-	return
