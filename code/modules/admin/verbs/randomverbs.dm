@@ -519,8 +519,18 @@ Traitors and the like can also be revived with the previous role mostly intact.
 		to_chat(src, "Something went wrong and spawning failed.")
 		return
 
+
+	// Outpost 21 edit begin - Respect admin spawn record choice
+	var/old_body_scan = picked_client.prefs.resleeve_scan
+	var/old_mind_scan = picked_client.prefs.mind_scan
+	if(!records) // Make em false for the copy_to()
+		picked_client.prefs.resleeve_scan = FALSE
+		picked_client.prefs.mind_scan = FALSE
 	//Write the appearance and whatnot out to the character
 	picked_client.prefs.copy_to(new_character)
+	picked_client.prefs.resleeve_scan = old_body_scan
+	picked_client.prefs.mind_scan = old_mind_scan
+	// Outpost 21 edit end
 	if(new_character.dna)
 		new_character.dna.ResetUIFrom(new_character)
 		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed

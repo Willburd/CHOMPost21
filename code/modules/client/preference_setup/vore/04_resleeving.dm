@@ -26,15 +26,19 @@
 
 /datum/category_item/player_setup_item/vore/resleeve/copy_to_mob(var/mob/living/carbon/human/character)
 	if(character && !istype(character,/mob/living/carbon/human/dummy))
+		// Outpost 21 edit begin - Respect admin spawn choices
+		var/want_body_save = pref.resleeve_scan
+		var/want_mind_save = pref.mind_scan
+		// Outpost 21 edit end
 		spawn(50)
 			if(QDELETED(character) || QDELETED(pref))
 				return // They might have been deleted during the wait
 			if(character.job != JOB_STOWAWAY && !character.virtual_reality_mob && !(/mob/living/carbon/human/proc/perform_exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore // Outpost 21 edit - stowaways don't get records by default
-				if(pref.resleeve_scan)
+				if(want_body_save) // Outpost 21 edit - Respect admin spawn choices
 					var/datum/transhuman/body_record/BR = new()
 					BR.init_from_mob(character, pref.resleeve_scan, pref.resleeve_lock)
 					to_chat(character, span_notice("<b>Your body record has been synced with the [using_map.dock_name] database</b>")) // Outpost 21 edit - Notify of record updates
-				if(pref.mind_scan)
+				if(want_mind_save) // Outpost 21 edit - Respect admin spawn choices
 					var/datum/transcore_db/our_db = SStranscore.db_by_key(null)
 					if(our_db)
 						our_db.m_backup(character.mind,null /*Outpost 21 edit - Nif removal: character.nif */,one_time = TRUE) // CHOMPedit end

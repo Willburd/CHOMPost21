@@ -190,7 +190,7 @@
 
 /obj/item/defib_kit/compact/combat
 	name = "combat defibrillator"
-	desc = "A belt-equipped blood-red defibrillator that can be rapidly deployed. Does not have the restrictions or safeties of conventional defibrillators and can revive through space suits."
+	desc = "A belt-equipped blood-red defibrillator that can be rapidly deployed. Does not have the restrictions or safeties of conventional defibrillators." // and can revive through space suits." // Outpost 21 edit - Does not pierce thick clothing
 	paddles = /obj/item/shockpaddles/linked/combat
 
 /obj/item/defib_kit/compact/combat/loaded
@@ -321,10 +321,10 @@
 	return null
 
 /obj/item/shockpaddles/proc/check_contact(mob/living/carbon/human/H)
-	if(!combat)
-		for(var/obj/item/clothing/cloth in list(H.wear_suit, H.w_uniform))
-			if((cloth.body_parts_covered & UPPER_TORSO) && (cloth.item_flags & THICKMATERIAL))
-				return FALSE
+	// if(!combat) // Outpost 21 edit - Does not pierce thick clothing
+	for(var/obj/item/clothing/cloth in list(H.wear_suit, H.w_uniform))
+		if((cloth.body_parts_covered & UPPER_TORSO) && (cloth.item_flags & THICKMATERIAL))
+			return FALSE
 	return TRUE
 
 /obj/item/shockpaddles/proc/check_vital_organs(mob/living/carbon/human/H)
@@ -566,7 +566,7 @@
 
 /obj/item/shockpaddles/robot
 	name = "defibrillator paddles"
-	desc = "A pair of advanced shockpaddles powered by a robot's internal power cell, able to penetrate thick clothing."
+	desc = "A pair of advanced shockpaddles powered by a robot's internal power cell" // , able to penetrate thick clothing." // Outpost 21 edit - Does not pierce thick clothing
 	chargecost = 50
 	combat = 1
 	icon_state = "defibpaddles0"
@@ -585,8 +585,11 @@
 
 /obj/item/shockpaddles/robot/combat
 	name = "combat defibrillator paddles"
-	desc = "A pair of advanced shockpaddles powered by a robot's internal power cell, able to penetrate thick clothing.  This version \
+	// Outpost 21 edit - Does not pierce thick clothing
+	desc = "A pair of advanced shockpaddles powered by a robot's internal power cell. This version \
 	appears to be optimized for combat situations, foregoing the safety inhabitors in favor of a faster charging time."
+	// desc = "A pair of advanced shockpaddles powered by a robot's internal power cell, able to penetrate thick clothing.  This version
+	// appears to be optimized for combat situations, foregoing the safety inhabitors in favor of a faster charging time."
 	safety = 0
 	chargetime = (1 SECONDS)
 

@@ -47,25 +47,6 @@
 	custom_only = FALSE
 	reaction = AG_COUGH
 
-// autohiss
-/datum/trait/neutral/autohiss_yinglet
-	name = "Autohiss (Yinglet)"
-	desc = "You pronounce th's with a lisp"
-	cost = 0
-	var_changes = list(
-	autohiss_basic_map = list(
-			"thi" = list("z"),
-			"shi" = list("z"),
-			"tha" = list("z"),
-			"tho" = list("z")
-		),
-	autohiss_extra_map = list(
-			"the" = list("z"),
-			"so" = list("z")
-		),
-	autohiss_exempt = list())
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_zaddat)
-
 /datum/trait/neutral/depression
 	name = "Depression"
 	desc = "You have depression, and start with medication for it. This trait is purely for roleplay, and has no mechanics."

@@ -3861,13 +3861,6 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "voxrest";
-	name = "Door lock";
-	pixel_x = -29;
-	pixel_y = 7
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -3878,6 +3871,14 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/machinery/button/remote/airlock{
+	id = "voxrest";
+	name = "Door Bolt Control";
+	pixel_x = -26;
+	specialfunctions = 4;
+	dir = 4;
+	pixel_y = 7
 	},
 /turf/simulated/floor/plating{
 	oxygen = 0;
@@ -19996,7 +19997,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aKs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -20500,7 +20501,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aLq" = (
 /obj/machinery/air_sensor{
@@ -55448,7 +55449,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_medical{
 	name = "Security Brig Treatment";
-	req_one_access = list(5,45,52)
+	req_one_access = list(1,5,45,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
