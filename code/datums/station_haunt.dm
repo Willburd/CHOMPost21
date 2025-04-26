@@ -4,6 +4,10 @@
 /datum/station_haunt
 	var/name = "BAD EVENT"
 
+/datum/station_haunt/New()
+	. = ..()
+	SShaunting.log_haunting(name,TRUE)
+
 /datum/station_haunt/proc/fire()
 	return
 

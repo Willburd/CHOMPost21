@@ -371,7 +371,7 @@ SUBSYSTEM_DEF(haunting)
 	if(bonus > MODE_SUPERSPOOKY)
 		bonus = MODE_SUPERSPOOKY
 	var/list/haunts = hauntings["[bonus]"]
-	set_haunting(pick(haunts))
+	set_haunting(pick(haunts),TRUE)
 
 /datum/controller/subsystem/haunting/proc/perform_haunt()
 	PRIVATE_PROC(TRUE)
@@ -399,19 +399,21 @@ SUBSYSTEM_DEF(haunting)
 	if(!(path in all_haunt))
 		return
 	current_haunt = new path()
-	log_haunting(current_haunt.name)
 	total_haunts++
 
-/datum/controller/subsystem/haunting/proc/log_haunting(var/LE)
-	PRIVATE_PROC(TRUE)
+/datum/controller/subsystem/haunting/proc/log_haunting(var/LE,var/notify_admin = FALSE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	var/mob/M = current_player_target?.resolve()
 	if(M)
 		prior_haunts.Add("[stationtime2text()] | [world_mode] | \the [M] - [LE]")
 		last_event = "\the [M] - [LE]"
+		if(notify_admin)
+			message_admins("Haunting: [stationtime2text()] | [world_mode] | \the [M] - [LE]")
 	else
 		prior_haunts.Add("[stationtime2text()] | [world_mode] | NO TARGET - [LE]")
 		last_event = "NO TARGET - [LE]"
+		if(notify_admin)
+			message_admins("Haunting: [stationtime2text()] | [world_mode] | NO TARGET - [LE]")
 
 #undef MODE_SIZE
 
