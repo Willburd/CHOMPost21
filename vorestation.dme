@@ -4803,7 +4803,6 @@
 #include "maps\~map_system\map_selection_op.dm"
 #include "maps\~map_system\maps.dm"
 #include "maps\~map_system\maps_op.dm"
-#include "modular_chomp\code\coalesce_ch.dm"
 #include "modular_chomp\code\global.dm"
 #include "modular_chomp\code\__defines\_planes+layers.dm"
 #include "modular_chomp\code\__defines\text.dm"
