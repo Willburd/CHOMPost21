@@ -1,6 +1,6 @@
 // TSCs
 /datum/lore/organization/tsc/eshui
-	name = "E-Shui incorperated"
+	name = "E-Shui incorporated"
 	short_name = "Eshui "
 	acronym = "ESU"
 	desc = "Eshui, is and old-earth legacy corperation primarily focused on its atmospherics and terraforming divisions. \
