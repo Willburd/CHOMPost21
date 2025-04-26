@@ -463,7 +463,7 @@
 //-------------------------------------------
 /obj/vehicle/has_interior/controller/explode()
 	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
-	playsound(src, 'modular_chomp/sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
+	playsound(src, 'sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	// unbucker riders and camera viewers
 	if(istype(interior_helm,/obj/machinery/computer/vehicle_interior_console))
 		interior_helm.clean_all_viewers()
