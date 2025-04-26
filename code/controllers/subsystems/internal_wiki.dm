@@ -1129,16 +1129,11 @@ SUBSYSTEM_DEF(internal_wiki)
 		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"] per [REAGENTS_PER_SHEET] units  |  [(value*tank_size)] [(value*tank_size) > 1 ? "thalers" : "thaler"] per [tank_size] unit tank</b><br>"
 	if(data["sintering"])
 		var/mat_id = data["sintering"]
-		switch(mat_id)
-			if("FLAG_SMOKE")
-				body += "<b>Sintering Results: COMBUSTION</b><br>"
-			if("FLAG_EXPLODE")
-				body += "<b>Sintering Results: DETONATION</b><br>"
-			if("FLAG_SPIDERS")
-				body += "<b>Sintering Results: DO NOT EVER</b><br>"
-			else
-				var/datum/material/C = get_material_by_name(data["sintering"])
-				body += "<b>Sintering Results: [C.display_name] [C.sheet_plural_name]</b><br>"
+		var/datum/material/C = get_material_by_name(mat_id)
+		if(C)
+			body += "<b>Sintering Results: [C.display_name] [C.sheet_plural_name]</b><br>"
+		else
+			body += "<b>Sintering Results: [mat_id]</b><br>"
 	if(data["overdose"] > 0)
 		body += "<b>Overdose: </b>[data["overdose"]]u<br>"
 	body += "<b>Flavor: </b>[data["flavor"]]<br>"
