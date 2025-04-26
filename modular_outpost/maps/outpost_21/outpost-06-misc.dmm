@@ -551,6 +551,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
+"by" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/administration/centcom)
 "bz" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/milspec/monotile,
@@ -1246,6 +1252,13 @@
 /obj/item/bikehorn/rubberducky,
 /turf/space,
 /area/space)
+"de" = (
+/obj/structure/table/standard,
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "dg" = (
 /obj/structure/table/alien,
 /obj/item/juke_remote,
@@ -1266,6 +1279,14 @@
 	icon_state = "lino"
 	},
 /area/syndicate_mothership)
+"dk" = (
+/obj/machinery/autolathe{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1;
+	name = "Thunderdome Autolathe"
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "dm" = (
 /obj/structure/table/standard,
 /obj/item/radio/headset/alt/syndicate,
@@ -1311,6 +1332,13 @@
 /mob/living/simple_mob/animal/passive/crab/Coffee,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"du" = (
+/obj/structure/bed/chair,
+/obj/effect/landmark{
+	name = "tdomeobserve"
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "dx" = (
 /turf/unsimulated/wall/fakeglass,
 /area/syndicate_mothership)
@@ -1320,6 +1348,13 @@
 	},
 /turf/simulated/floor/carpet/retro,
 /area/planet/clown)
+"dD" = (
+/obj/machinery/door/blast/regular{
+	id = "thunderdomehea";
+	name = "Heavy Supply"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "dG" = (
 /obj/structure/table/alien,
 /obj/machinery/microwave/advanced,
@@ -1328,6 +1363,12 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"dK" = (
+/obj/effect/landmark{
+	name = "tdome1"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "dO" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/rddouble,
@@ -1386,6 +1427,11 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire,
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
+"em" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4
+	},
+/area/tdome/tdomeobserve)
 "et" = (
 /obj/structure/urinal{
 	pixel_y = 32
@@ -1557,6 +1603,9 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"fK" = (
+/turf/space,
+/area/centcom/command)
 "fN" = (
 /obj/item/digestion_remains/skull/vox,
 /obj/structure/table/alien,
@@ -1717,7 +1766,7 @@
 	},
 /area/syndicate_mothership)
 "gm" = (
-/obj/structure/sign/scenery/map/left{
+/obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -1726,7 +1775,7 @@
 	},
 /area/syndicate_mothership)
 "gn" = (
-/obj/structure/sign/scenery/map/right{
+/obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -1762,6 +1811,11 @@
 /obj/item/soap/rainbow_soap,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/planet/clown)
+"gt" = (
+/obj/item/storage/fancy/cigarettes,
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "gu" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/glasses/square{
@@ -1809,6 +1863,16 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gE" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/color/red,
+/obj/item/clothing/shoes/brown,
+/obj/item/clothing/suit/armor/tdome/red,
+/obj/item/clothing/head/helmet/thunderdome,
+/obj/item/melee/baton/loaded,
+/obj/item/melee/energy/sword/red,
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "gH" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
@@ -1835,6 +1899,10 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"gT" = (
+/obj/machinery/computer/communications,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "gX" = (
 /obj/structure/bed/chair/comfy/black,
 /turf/unsimulated/floor{
@@ -1842,6 +1910,10 @@
 	name = "plating"
 	},
 /area/syndicate_mothership)
+"ha" = (
+/obj/machinery/door/airlock/glass,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "hb" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Kitchen";
@@ -2219,6 +2291,21 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iO" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
+"iQ" = (
+/obj/machinery/vending/cigarette,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "iR" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/magboots,
@@ -2229,6 +2316,9 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iU" = (
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "iV" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/shuttle/mercenary)
@@ -2533,6 +2623,15 @@
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
+"ks" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/color/red,
+/obj/item/clothing/shoes/brown,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/gun/energy/laser,
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "kx" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -2604,6 +2703,15 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kK" = (
+/obj/effect/landmark{
+	name = "tdome1"
+	},
+/obj/machinery/camera/network/thunder{
+	invisibility = 101
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "kM" = (
 /obj/structure/crystalholder,
 /turf/unsimulated/floor{
@@ -2641,6 +2749,11 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kT" = (
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
 "kU" = (
 /obj/structure/table/rack,
 /obj/item/flashlight/maglight,
@@ -2698,6 +2811,13 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"lm" = (
+/obj/machinery/computer/shuttle_control{
+	req_access = list(101);
+	shuttle_tag = "Administration"
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "lA" = (
 /obj/structure/sign/poster{
 	pixel_x = -32;
@@ -2902,6 +3022,13 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/mercenary)
+"mt" = (
+/obj/machinery/computer/pod{
+	id = "thunderdomegen";
+	name = "Thunderdome General Supply"
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeadmin)
 "mu" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1331;
@@ -2980,6 +3107,10 @@
 /obj/item/trash/cigbutt,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/mercenary)
+"mS" = (
+/obj/machinery/vending/medical,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "na" = (
 /obj/machinery/door/window{
 	dir = 2;
@@ -3015,6 +3146,10 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"nm" = (
+/obj/machinery/recharge_station,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "no" = (
 /obj/machinery/door/airlock/alien{
 	name = "Remote control"
@@ -3425,6 +3560,13 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/planet/clown)
+"oU" = (
+/obj/machinery/camera/network/thunder{
+	alpha = 0;
+	invisibility = 101
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome)
 "oY" = (
 /obj/machinery/computer/teleporter{
 	dir = 2;
@@ -3432,6 +3574,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/planet/clown)
+"pa" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/color/red,
+/obj/item/clothing/shoes/brown,
+/obj/item/melee/energy/axe,
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
+"pd" = (
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "pe" = (
 /obj/structure/table/rack/steel,
 /obj/structure/window/phoronreinforced{
@@ -3860,6 +4012,11 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"qy" = (
+/turf/unsimulated/wall/fakeglass2{
+	dir = 1
+	},
+/area/tdome/tdomeobserve)
 "qz" = (
 /obj/structure/table/rack/steel,
 /obj/machinery/door/window/northright,
@@ -3991,6 +4148,12 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"qZ" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "ra" = (
 /obj/machinery/light{
 	dir = 4
@@ -4343,6 +4506,17 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"rZ" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1380;
+	icon_state = "door_locked";
+	id_tag = "admin_shuttle_hatch";
+	locked = 1;
+	name = "Shuttle Hatch";
+	req_access = list(13)
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/administration/centcom)
 "sb" = (
 /obj/machinery/door/window/westright{
 	name = "Tool Storage";
@@ -4385,6 +4559,10 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/mercenary)
+"sj" = (
+/obj/item/camera,
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "sk" = (
 /obj/structure/table/rack/steel,
 /obj/structure/window/phoronreinforced{
@@ -4498,6 +4676,13 @@
 /obj/effect/step_trigger/lost_in_space/bluespace,
 /turf/space/bluespace,
 /area/wizard_station)
+"sA" = (
+/obj/machinery/door/airlock/centcom{
+	name = "General Access";
+	req_access = list(101)
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/administration/centcom)
 "sD" = (
 /obj/machinery/door/window{
 	dir = 8;
@@ -4609,6 +4794,14 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"sS" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/bed/padded,
+/obj/item/bedsheet/hos,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "sU" = (
 /obj/item/spacecash/c500,
 /obj/item/spacecash/c500,
@@ -4676,6 +4869,13 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"te" = (
+/obj/machinery/vending/coffee,
+/obj/effect/floor_decal/corner/white/full{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "tg" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility/full,
@@ -4748,6 +4948,13 @@
 	name = "grass"
 	},
 /area/wizard_station)
+"tH" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_l"
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/administration/centcom)
 "tL" = (
 /obj/machinery/vending/foodmeat{
 	dir = 1
@@ -4849,6 +5056,11 @@
 /obj/structure/mopbucket,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"ua" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/surgery,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "ud" = (
 /obj/machinery/door/window/northright{
 	name = "Telecoms Mainframe";
@@ -4947,6 +5159,13 @@
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/planet/clown)
+"uw" = (
+/obj/structure/bookcase,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "ux" = (
 /obj/structure/table/alien/blue,
 /obj/item/tank/vox,
@@ -5028,6 +5247,12 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"uW" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
 "uX" = (
 /obj/item/tool/crowbar,
 /turf/simulated/shuttle/floor/darkred,
@@ -5048,6 +5273,12 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"vg" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
 "vi" = (
 /obj/structure/table/alien/blue,
 /obj/item/reagent_containers/spray/cleaner,
@@ -5109,6 +5340,9 @@
 /obj/item/stack/medical/advanced/bruise_pack,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/mercenary)
+"vz" = (
+/turf/unsimulated/mineral,
+/area/tdome/tdomeadmin)
 "vC" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -5120,6 +5354,16 @@
 /obj/machinery/teleport/station,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"vF" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/color/green,
+/obj/item/clothing/shoes/brown,
+/obj/item/clothing/suit/armor/tdome/green,
+/obj/item/clothing/head/helmet/thunderdome,
+/obj/item/melee/baton/loaded,
+/obj/item/melee/energy/sword/green,
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "vH" = (
 /obj/machinery/teleport/hub,
 /turf/simulated/shuttle/floor/darkred,
@@ -5619,6 +5863,13 @@
 /obj/machinery/teleport/station,
 /turf/simulated/floor/plating,
 /area/planet/clown)
+"xI" = (
+/obj/machinery/flasher{
+	id = "flash";
+	name = "Thunderdome Flash"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome)
 "xJ" = (
 /obj/machinery/computer/arcade/battle{
 	dir = 8;
@@ -6077,6 +6328,13 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"zr" = (
+/obj/machinery/computer/pod{
+	id = "thunderdomeaxe";
+	name = "Thunderdome Axe Supply"
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeadmin)
 "zs" = (
 /obj/machinery/door/airlock/angled_bay/ascent{
 	name = "Silent stepper"
@@ -6319,6 +6577,10 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"Ag" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Ah" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8
@@ -6338,6 +6600,10 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"Ak" = (
+/obj/machinery/door/window/northright,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Ao" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/shuttle/trade/centcom)
@@ -6435,6 +6701,11 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"AG" = (
+/obj/machinery/microwave,
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "AJ" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -6691,6 +6962,15 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"BP" = (
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/obj/effect/landmark{
+	name = "tdome2"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "BQ" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -6815,6 +7095,19 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"Cr" = (
+/obj/structure/dispenser,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
+"Cv" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "Cy" = (
 /obj/machinery/computer/station_alert/all{
 	dir = 1;
@@ -6844,6 +7137,29 @@
 /obj/item/bikehorn,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"CI" = (
+/obj/machinery/igniter,
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome)
+"CS" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless,
+/area/shuttle/administration/centcom)
+"CX" = (
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/item/reagent_containers/food/drinks/cans/cola,
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "De" = (
 /obj/item/clothing/suit/wizrobe/marisa,
 /obj/item/clothing/shoes/sandal/marisa,
@@ -6882,6 +7198,19 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"Dn" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8;
+	icon_state = "propulsion_r"
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/administration/centcom)
+"Du" = (
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Dv" = (
 /obj/structure/cable/cyan{
 	icon_state = "2-4"
@@ -6921,6 +7250,10 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"DP" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "DQ" = (
 /obj/machinery/sleep_console{
 	dir = 4
@@ -6974,6 +7307,19 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"Ek" = (
+/obj/item/multitool,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
+"Ep" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/color/green,
+/obj/item/clothing/shoes/brown,
+/obj/item/melee/energy/axe,
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "Eu" = (
 /obj/machinery/door/window/westright{
 	name = "Storefront";
@@ -7016,11 +7362,23 @@
 "EK" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/wizard_station)
+"EL" = (
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "EM" = (
 /obj/item/survivalcapsule/military,
 /obj/structure/table/standard,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/mercenary)
+"EN" = (
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/obj/effect/landmark{
+	name = "tdome1"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "ES" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -7036,6 +7394,10 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"EV" = (
+/obj/machinery/clonepod,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "EX" = (
 /obj/machinery/power/port_gen/pacman/mrs,
 /turf/unsimulated/floor{
@@ -7057,6 +7419,28 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"Fa" = (
+/obj/item/storage/box/donkpockets{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/box/donkpockets{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/box/donkpockets{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/box/donkpockets{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
 "Fe" = (
 /obj/machinery/computer/transhuman/resleeving/abductor{
 	dir = 8
@@ -7150,12 +7534,26 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"FQ" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "FS" = (
 /obj/structure/bed/chair/modern_chair{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"FY" = (
+/obj/item/storage/toolbox/mechanical,
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "FZ" = (
 /obj/machinery/computer/arcade/orion_trail{
 	dir = 8;
@@ -7196,6 +7594,16 @@
 	icon_state = "fakewindows2"
 	},
 /area/syndicate_mothership)
+"Go" = (
+/obj/structure/bed/chair,
+/obj/effect/landmark{
+	name = "tdomeobserve"
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "Gp" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -7286,6 +7694,13 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"Hf" = (
+/obj/structure/table/standard,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
 "Hg" = (
 /obj/item/flame/lighter/zippo/rainbow,
 /obj/item/pen/crayon/marker/rainbow,
@@ -7299,6 +7714,14 @@
 	icon_state = "bluespace"
 	},
 /area/space)
+"Hr" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 8
+	},
+/area/tdome/tdomeobserve)
+"Hw" = (
+/turf/unsimulated/wall,
+/area/tdome/tdomeadmin)
 "Hy" = (
 /obj/structure/hammock_kbraid_s,
 /obj/structure/dancepole{
@@ -7356,6 +7779,12 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/planet/clown)
+"HU" = (
+/obj/effect/landmark{
+	name = "tdome2"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "HV" = (
 /obj/item/healthanalyzer/scroll,
 /obj/structure/table/standard,
@@ -7377,6 +7806,12 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"Ie" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
 "Ih" = (
 /obj/structure/prop/alien/computer/camera{
 	dir = 4
@@ -7445,6 +7880,9 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"IA" = (
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeadmin)
 "IB" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/lava,
@@ -7470,6 +7908,18 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"Jj" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/flame/lighter/zippo,
+/obj/item/storage/fancy/cigarettes,
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "Jk" = (
 /turf/unsimulated/wall,
 /area/prison/solitary)
@@ -7497,10 +7947,29 @@
 /obj/structure/table/marble,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/trade/centcom)
+"JD" = (
+/obj/machinery/gibber,
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
+"JG" = (
+/obj/machinery/robotic_fabricator,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "JK" = (
 /obj/effect/overmap/bluespace_rift,
 /turf/unsimulated/map,
 /area/overmap)
+"JL" = (
+/obj/machinery/cell_charger,
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
+"JN" = (
+/obj/machinery/chemical_dispenser/ert,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "JQ" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/teleportation_scroll,
@@ -7608,6 +8077,11 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"Kn" = (
+/obj/item/flame/lighter/zippo,
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Ko" = (
 /obj/item/storage/vore_egg/rainbow,
 /obj/item/reagent_containers/food/snacks/egg/rainbow,
@@ -7698,6 +8172,13 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/syndicate_mothership)
+"KV" = (
+/obj/machinery/computer/pod{
+	id = "thunderdome";
+	name = "Thunderdome Blast Door Control"
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeadmin)
 "KX" = (
 /turf/simulated/shuttle/floor{
 	icon_state = "floor_red"
@@ -7766,6 +8247,10 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"Lr" = (
+/obj/machinery/computer/security/telescreen,
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "Ls" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -7787,6 +8272,16 @@
 	icon_state = "vault"
 	},
 /area/syndicate_mothership)
+"LH" = (
+/obj/effect/floor_decal/corner/white/full{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
+"LN" = (
+/obj/machinery/chem_master,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "LP" = (
 /obj/structure/toilet{
 	dir = 4
@@ -7950,6 +8445,9 @@
 /obj/structure/table/alien,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"Nb" = (
+/turf/simulated/shuttle/wall/dark,
+/area/shuttle/administration/centcom)
 "Ni" = (
 /obj/structure/closet/crate,
 /turf/unsimulated/floor{
@@ -7965,6 +8463,13 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"Nm" = (
+/obj/machinery/door/blast/regular{
+	id = "thunderdome";
+	name = "Thunderdome Blast Door"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "Nn" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "propulsion_l"
@@ -7998,6 +8503,12 @@
 	icon_state = "steel"
 	},
 /area/syndicate_mothership)
+"NE" = (
+/obj/machinery/telecomms/allinone/antag{
+	intercept = 1
+	},
+/turf/simulated/shuttle/plating/airless,
+/area/space)
 "NL" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -8131,6 +8642,13 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/trade/centcom)
+"Ov" = (
+/obj/machinery/door/airlock/centcom{
+	name = "General Access";
+	req_access = list(101)
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeadmin)
 "Ow" = (
 /obj/structure/bed/chair,
 /turf/simulated/shuttle/floor/darkred,
@@ -8154,6 +8672,14 @@
 /obj/item/reagent_containers/food/snacks/clownburger,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"OJ" = (
+/obj/machinery/computer/scan_consolenew,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
+"OL" = (
+/obj/effect/floor_decal/corner/white/full,
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "OR" = (
 /obj/structure/table/woodentable,
 /obj/machinery/librarycomp{
@@ -8164,6 +8690,13 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"OU" = (
+/obj/machinery/computer/pod{
+	id = "thunderdomehea";
+	name = "Thunderdome Heavy Supply"
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeadmin)
 "OX" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -8185,6 +8718,11 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/trade/centcom)
+"OY" = (
+/obj/structure/table/reinforced,
+/obj/machinery/librarycomp,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Pb" = (
 /obj/machinery/newscaster{
 	pixel_y = 32
@@ -8222,6 +8760,10 @@
 /obj/machinery/suit_cycler/syndicate,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"Pr" = (
+/obj/structure/table/standard,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Pu" = (
 /obj/machinery/bodyscanner{
 	dir = 8
@@ -8292,6 +8834,15 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"PG" = (
+/obj/effect/landmark{
+	name = "tdome2"
+	},
+/obj/machinery/camera/network/thunder{
+	invisibility = 101
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "PH" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -8360,6 +8911,12 @@
 /obj/item/inflatable_duck,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"PT" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "PV" = (
 /obj/item/radio/intercom/raider{
 	dir = 1;
@@ -8385,6 +8942,10 @@
 /obj/item/pen,
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
+"Qc" = (
+/obj/machinery/vending/snack,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Qe" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/rig/internalaffairs,
@@ -8494,6 +9055,12 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"QN" = (
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "QP" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -8550,6 +9117,12 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"Rn" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Rq" = (
 /obj/machinery/vending/medical{
 	pixel_y = -32;
@@ -8744,6 +9317,10 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/trade/centcom)
+"St" = (
+/obj/machinery/vending/coffee,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Su" = (
 /obj/structure/sink{
 	dir = 8;
@@ -8839,6 +9416,13 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/trade/centcom)
+"SU" = (
+/obj/machinery/door/blast/regular{
+	id = "thunderdomegen";
+	name = "General Supply"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "SV" = (
 /obj/structure/table/marble,
 /obj/machinery/librarywikicomp/personal{
@@ -8984,6 +9568,10 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/trade/centcom)
+"TN" = (
+/obj/item/stool,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "TR" = (
 /obj/machinery/computer/shuttle_control{
 	name = "Beruang control console";
@@ -9308,6 +9896,10 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"VR" = (
+/obj/effect/wingrille_spawn/reinforced/crescent,
+/turf/simulated/shuttle/plating,
+/area/shuttle/administration/centcom)
 "VS" = (
 /obj/item/storage/firstaid/surgery,
 /obj/structure/table/standard,
@@ -9328,6 +9920,10 @@
 	name = "plating"
 	},
 /area/syndicate_mothership)
+"Wa" = (
+/obj/machinery/optable,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Wd" = (
 /obj/machinery/button/remote/blast_door{
 	id = "tradeportshutters";
@@ -9452,6 +10048,13 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"WI" = (
+/obj/machinery/door/blast/regular{
+	id = "thunderdomeaxe";
+	name = "Axe Supply"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "WN" = (
 /obj/item/tool/screwdriver/alien/magic,
 /obj/structure/table/steel_reinforced,
@@ -9536,6 +10139,10 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"Xh" = (
+/obj/machinery/dna_scannernew,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Xj" = (
 /obj/machinery/porta_turret/alien{
 	check_all = 0;
@@ -9549,6 +10156,23 @@
 /obj/structure/bed/chair/comfy/black,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"Xm" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1380;
+	id_tag = "admin_shuttle";
+	pixel_x = -25;
+	req_one_access = list(101);
+	tag_door = "admin_shuttle_hatch"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/administration/centcom)
+"Xo" = (
+/obj/structure/reagent_dispensers/beerkeg,
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "Xp" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/shuttle/floor/darkred,
@@ -9620,6 +10244,13 @@
 	opacity = 1
 	},
 /area/beach)
+"XG" = (
+/obj/machinery/vending/snack,
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "XH" = (
 /obj/machinery/the_singularitygen,
 /turf/unsimulated/floor{
@@ -9657,6 +10288,9 @@
 /obj/item/clothing/under/dress/maid/janitor,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"XJ" = (
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome)
 "XL" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/suit/hgpirate,
@@ -9828,6 +10462,10 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"Ys" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "Yv" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 10
@@ -9856,6 +10494,12 @@
 /obj/item/clothing/gloves/yellow,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"Yz" = (
+/obj/structure/closet/secure_closet/bar,
+/turf/simulated/floor/tiled{
+	icon_state = "white"
+	},
+/area/tdome/tdomeobserve)
 "YA" = (
 /obj/structure/table/marble,
 /obj/item/clothing/mask/gas/mime,
@@ -9888,6 +10532,10 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"YG" = (
+/obj/machinery/vending/boozeomat,
+/turf/simulated/shuttle/wall/dark,
+/area/shuttle/administration/centcom)
 "YO" = (
 /obj/effect/landmark{
 	name = "endgame_exit"
@@ -9911,6 +10559,10 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"YV" = (
+/obj/structure/table/reinforced,
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
 "YX" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/captain,
@@ -9950,6 +10602,13 @@
 /obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"Zh" = (
+/obj/machinery/vending/cigarette,
+/obj/effect/floor_decal/corner/white/full{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/tdome/tdomeobserve)
 "Zi" = (
 /obj/item/reagent_containers/food/snacks/dip,
 /obj/item/reagent_containers/food/snacks/dip/guac,
@@ -10035,6 +10694,24 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"ZH" = (
+/obj/machinery/door/window/northright{
+	dir = 2
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/administration/centcom)
+"ZK" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/color/green,
+/obj/item/clothing/shoes/brown,
+/obj/item/clothing/suit/armor/vest,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/gun/energy/laser,
+/turf/unsimulated/floor/techfloor_grid,
+/area/tdome/tdome1)
 "ZL" = (
 /obj/item/clothing/gloves/vox,
 /obj/item/clothing/shoes/magboots/vox,
@@ -10127,23 +10804,23 @@ Sg
 Sg
 Sg
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
 mN
 mN
 mN
@@ -10289,23 +10966,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+gE
+gE
+gE
+gE
+gE
+iU
+Hw
+vz
+vz
 mN
 mN
 mN
@@ -10451,23 +11128,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Yz
+Yz
+uW
+uW
+Hw
+Hw
+Hw
+SU
+SU
+SU
+SU
+SU
+SU
+Hw
+Hw
+Hw
 mN
 mN
 mN
@@ -10613,23 +11290,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+kT
+kT
+kT
+Fa
+Hw
+pa
+WI
+HU
+HU
+HU
+HU
+HU
+HU
+dD
+ks
+Hw
 mN
 mN
 mN
@@ -10775,23 +11452,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+kT
+kT
+kT
+Hf
+Hw
+pa
+WI
+HU
+BP
+HU
+HU
+BP
+HU
+dD
+ks
+Hw
 mN
 mN
 mN
@@ -10937,23 +11614,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+kT
+kT
+kT
+Hf
+Hw
+pa
+WI
+HU
+HU
+PG
+HU
+HU
+HU
+dD
+ks
+Hw
 mN
 mN
 mN
@@ -11099,23 +11776,23 @@ ai
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+kT
+kT
+kT
+kT
+Hw
+pa
+WI
+HU
+BP
+HU
+HU
+BP
+HU
+dD
+ks
+Hw
 mN
 mN
 mN
@@ -11261,23 +11938,23 @@ ak
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+JD
+JD
+vg
+kT
+Hw
+pa
+WI
+HU
+HU
+HU
+HU
+HU
+HU
+dD
+ks
+Hw
 mN
 mN
 mN
@@ -11423,23 +12100,23 @@ ak
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Hw
+Hw
+Ie
+Hw
+Hw
+Hw
+Nm
+Nm
+Nm
+Nm
+Nm
+Nm
+Hw
+Hw
+Hw
 mN
 mN
 mN
@@ -11585,23 +12262,23 @@ ai
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Zh
+Cv
+pd
+OL
+Hr
+CI
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+CI
+Hw
+vz
 mN
 mN
 mN
@@ -11747,23 +12424,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Jj
+du
+pd
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -11909,23 +12586,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+CX
+du
+Lr
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -12071,23 +12748,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Jj
+du
+sj
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -12233,23 +12910,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Xo
+du
+Lr
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -12395,23 +13072,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+FQ
+du
+pd
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -12557,23 +13234,23 @@ ai
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+FQ
+pd
+pd
+qZ
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -12719,23 +13396,23 @@ ak
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+FQ
+pd
+pd
+qZ
+qy
+XJ
+XJ
+XJ
+xI
+oU
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -12881,23 +13558,23 @@ ak
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+FQ
+pd
+pd
+qZ
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -13043,23 +13720,23 @@ ai
 ai
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+FQ
+du
+pd
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -13205,23 +13882,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Xo
+du
+Lr
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -13367,23 +14044,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+FQ
+du
+sj
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -13529,23 +14206,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Xo
+du
+Lr
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -13691,23 +14368,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+FQ
+pd
+pd
+Go
+qy
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+Hw
+vz
 mN
 mN
 mN
@@ -13853,23 +14530,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+te
+XG
+pd
+LH
+em
+CI
+XJ
+XJ
+XJ
+XJ
+XJ
+XJ
+CI
+Hw
+vz
 mN
 mN
 mN
@@ -14015,23 +14692,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+Hw
+Hw
+Ov
+Hw
+Hw
+Hw
+Nm
+Nm
+Nm
+Nm
+Nm
+Nm
+Hw
+Hw
+Hw
 mN
 mN
 mN
@@ -14177,23 +14854,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+zr
+IA
+IA
+Hw
+Ep
+WI
+dK
+dK
+dK
+dK
+dK
+dK
+dD
+ZK
+Hw
 mN
 mN
 mN
@@ -14339,23 +15016,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+mt
+IA
+IA
+Hw
+Ep
+WI
+dK
+EN
+dK
+dK
+EN
+dK
+dD
+ZK
+Hw
 mN
 mN
 mN
@@ -14501,23 +15178,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+OU
+IA
+IA
+Hw
+Ep
+WI
+dK
+dK
+kK
+dK
+dK
+dK
+dD
+ZK
+Hw
 mN
 mN
 mN
@@ -14663,23 +15340,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+IA
+IA
+IA
+Hw
+Ep
+WI
+dK
+EN
+dK
+dK
+EN
+dK
+dD
+ZK
+Hw
 mN
 mN
 mN
@@ -14825,23 +15502,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+KV
+IA
+IA
+Hw
+Ep
+WI
+dK
+dK
+dK
+dK
+dK
+dK
+dD
+ZK
+Hw
 mN
 mN
 mN
@@ -14987,23 +15664,23 @@ ag
 ag
 ae
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+IA
+IA
+IA
+Hw
+Hw
+Hw
+SU
+SU
+SU
+SU
+SU
+SU
+Hw
+Hw
+Hw
 mN
 mN
 mN
@@ -15149,23 +15826,23 @@ Sg
 Sg
 Sg
 Sg
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Hw
+IA
+IA
+IA
+IA
+IA
+Hw
+vF
+vF
+vF
+vF
+vF
+iU
+Hw
+vz
+vz
 mN
 mN
 mN
@@ -15312,22 +15989,22 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+Hw
+vz
+vz
 mN
 mN
 mN
@@ -46192,25 +46869,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
 mN
 mN
 mN
@@ -46354,25 +47031,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
 mN
 mN
 mN
@@ -46516,25 +47193,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+fK
+fK
+Nb
+tH
+Dn
+Nb
+fK
+Nb
+tH
+Dn
+Nb
+fK
+fK
+fK
+fK
+fK
 mN
 mN
 mN
@@ -46678,25 +47355,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+fK
+Nb
+Nb
+CS
+CS
+Nb
+Nb
+Nb
+CS
+CS
+Nb
+Nb
+fK
+fK
+fK
+fK
 mN
 mN
 mN
@@ -46840,25 +47517,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+Nb
+Nb
+Nb
+Qc
+EL
+EL
+Nb
+EL
+EL
+Wa
+Nb
+Nb
+Nb
+fK
+fK
+fK
 mN
 mN
 mN
@@ -47002,25 +47679,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+YG
+EL
+Ak
+EL
+EL
+EL
+Nb
+EL
+EL
+EL
+ZH
+EL
+Nb
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -47164,25 +47841,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+St
+EL
+YV
+TN
+EL
+EL
+Nb
+EV
+EL
+EL
+ua
+EL
+mS
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -47326,25 +48003,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+iQ
+EL
+Kn
+TN
+EL
+DP
+Nb
+Xh
+EL
+EL
+Pr
+EL
+LN
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -47488,25 +48165,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+AG
+EL
+gt
+TN
+EL
+EL
+Nb
+OJ
+EL
+EL
+iO
+EL
+JN
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -47650,25 +48327,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+Nb
+Nb
+Nb
+Nb
+ha
+Nb
+Nb
+Nb
+ha
+Nb
+Nb
+Nb
+Nb
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -47812,25 +48489,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+rZ
+Xm
+sA
+PT
+EL
+EL
+EL
+PT
+EL
+EL
+EL
+PT
+EL
+EL
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -47974,25 +48651,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+rZ
+by
+sA
+EL
+EL
+EL
+EL
+EL
+EL
+EL
+EL
+Pr
+Pr
+EL
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -48136,25 +48813,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+Nb
+Nb
+ha
+Nb
+Nb
+EL
+Rn
+EL
+Nb
+EL
+Pr
+Pr
+EL
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -48298,25 +48975,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+Ek
+EL
+EL
+Ag
+Nb
+gT
+EL
+lm
+Nb
+EL
+Pr
+Pr
+EL
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -48460,25 +49137,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+FY
+EL
+EL
+Ys
+Nb
+VR
+VR
+VR
+Nb
+EL
+EL
+EL
+EL
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -48622,25 +49299,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+Nb
+de
+EL
+nm
+Nb
+fK
+fK
+fK
+Nb
+Nb
+ha
+Nb
+Nb
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -48784,25 +49461,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+Nb
+Nb
+JL
+EL
+JG
+Nb
+fK
+fK
+fK
+Nb
+EL
+EL
+sS
+Nb
+Nb
+fK
+fK
 mN
 mN
 mN
@@ -48946,25 +49623,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+Nb
+Nb
+Du
+dk
+Nb
+fK
+fK
+fK
+Nb
+OY
+EL
+Nb
+Nb
+fK
+fK
+fK
 mN
 mN
 mN
@@ -49108,25 +49785,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+Nb
+Nb
+QN
+Cr
+Nb
+fK
+fK
+fK
+Nb
+uw
+EL
+Nb
+Nb
+fK
+fK
+fK
 mN
 mN
 mN
@@ -49270,25 +49947,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+fK
+Nb
+Nb
+Nb
+Nb
+fK
+fK
+fK
+Nb
+Nb
+Nb
+Nb
+fK
+fK
+fK
+fK
 mN
 mN
 mN
@@ -49432,25 +50109,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
+fK
 mN
 mN
 mN
@@ -58255,10 +58932,10 @@ TW
 TW
 TW
 Sg
-TW
-TW
-TW
-TW
+Sg
+Sg
+Sg
+Sg
 TW
 TW
 TW
@@ -58417,10 +59094,10 @@ TW
 TW
 TW
 Sg
-TW
-TW
-TW
-TW
+mN
+mN
+mN
+Sg
 TW
 TW
 TW
@@ -58579,10 +59256,10 @@ TW
 TW
 TW
 Sg
-TW
-TW
-TW
-TW
+mN
+NE
+mN
+Sg
 TW
 TW
 TW
@@ -58741,10 +59418,10 @@ TW
 TW
 TW
 Sg
-TW
-TW
-TW
-TW
+mN
+mN
+mN
+Sg
 TW
 TW
 TW
@@ -58903,10 +59580,10 @@ TW
 TW
 TW
 Sg
-TW
-TW
-TW
-TW
+Sg
+Sg
+Sg
+Sg
 TW
 TW
 TW
