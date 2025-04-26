@@ -11,6 +11,7 @@
 	id = REAGENT_ID_INAPROVALINE
 	result = REAGENT_ID_INAPROVALINE
 	required_reagents = list(REAGENT_ID_OXYGEN = 1, REAGENT_ID_CARBON = 1, REAGENT_ID_SUGAR = 1)
+	inhibitors = list(REAGENT_ID_WATER = 1) // Outpost 21 edit - It blocks sugar crystalization otherwise
 	result_amount = 3
 
 /decl/chemical_reaction/instant/dylovene
