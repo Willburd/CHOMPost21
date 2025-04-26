@@ -220,8 +220,6 @@ SUBSYSTEM_DEF(statpanels)
 			continue
 		if(turf_content in overrides)
 			continue
-		if(!(turf_content.plane in target_mob.planes_visible)) // Outpost 21 edit - Hide things that are not in your visible plane
-			continue
 		//if(turf_content.IsObscured())
 			//continue
 		atoms_to_display += turf_content
