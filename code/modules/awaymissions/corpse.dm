@@ -24,8 +24,8 @@
 	var/corpseidaccess = null //This is for access. See access.dm for which jobs give what access. Again, put in quotes. Use "Captain" if you want it to be all access.
 	var/corpseidicon = null //For setting it to be a gold, silver, CentCom etc ID
 	var/species = SPECIES_HUMAN	//defaults to generic-ass humans
-	var/random_species = FALSE	//flip to TRUE to randomize species from the list below
-	var/list/random_species_list = list(SPECIES_HUMAN,SPECIES_TAJARAN,SPECIES_UNATHI,SPECIES_SKRELL)	//preset list that can be overriden downstream. only includes common humanoids for voidsuit compatibility's sake.
+	var/random_species = TRUE	//flip to TRUE to randomize species from the list below // Outpost 21 edit - Use randomized species
+	var/list/random_species_list = list(SPECIES_TAJARAN,SPECIES_UNATHI,SPECIES_SKRELL)	//preset list that can be overriden downstream. only includes common humanoids for voidsuit compatibility's sake. // Outpost 21 edit - Prefer aliens
 	var/mob/living/carbon/human/spawned_corpse = null //The corpse we have just spawned.
 //	var/random_appearance = FALSE	//TODO: make this work
 //	var/cause_of_death = null //TODO: set up a cause-of-death system. needs to support both damage types and actual wound types, so a body can have been bitten/stabbed/clawed/shot/burned/lasered/etc. to death
