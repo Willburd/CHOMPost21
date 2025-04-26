@@ -13540,9 +13540,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/muriki,
 /area/muriki/grounds/shutt)
-"cdt" = (
-/turf/simulated/floor/water/acidic/indoor/muriki,
-/area/muriki/grounds/tramborder)
 "cdE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -65381,7 +65378,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/turf/simulated/floor/water/acidic/indoor/muriki,
+/turf/simulated/floor/water/acidic/muriki,
 /area/muriki/grounds/tramborder)
 "sxG" = (
 /obj/structure/cliff{
@@ -105093,8 +105090,8 @@ qwx
 uMJ
 uMJ
 uMJ
-cdt
-cdt
+cEY
+cEY
 cHU
 hZu
 ajT
@@ -105256,7 +105253,7 @@ gnU
 amd
 uMJ
 uMJ
-cdt
+cEY
 cHU
 cHU
 kHn
@@ -105419,7 +105416,7 @@ prJ
 esm
 uMJ
 uMJ
-cdt
+cEY
 cHU
 cHU
 kHn
@@ -106567,7 +106564,7 @@ fpF
 idX
 qcO
 ydI
-cdt
+cEY
 cHU
 cHU
 kHn
@@ -106729,7 +106726,7 @@ mBI
 alP
 uhk
 ydI
-cdt
+cEY
 pCv
 cHU
 kHn
