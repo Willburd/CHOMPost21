@@ -364,11 +364,19 @@
 	var/result = 0
 	if(!do_after(user, 3 SECONDS, src, exclusive = TASK_USER_EXCLUSIVE))
 		return 0
+	/* Outpost 21 edit begin - Only show actual input
 	if(next_result)
 		result = next_result
 	else
 		result = pick(possible_results)
 	src.visible_message(span_notice("[user] slides the [W] over to [result]!"))
+	*/
+	if(next_result)
+		result = next_result
+		src.visible_message(span_notice("[user] slides the [W] over to [result]!"))
+	else
+		src.visible_message(span_notice("Nothing seems to influence the [W]!"))
+	// Outpost 21 edit end
 	next_result = 0
 
 /obj/item/entrepreneur/spirit_board/AltClick(mob/living/carbon/user)
@@ -383,9 +391,11 @@
 		to_chat(user, span_warning("You cannot interact with this board because you are banned from playing ghost roles."))
 		return
 	next_result = tgui_input_list(user, "What should it land on next?", "Next result", possible_results)
+	/* Outpost 21 edit - Removed failure chance
 	if(!is_admin(user)) //admins can bypass this for event stuff
 		if(prob(25))
 			next_result = 0 //25% chance for the ghost to fail to manipulate the board
+	*/
 
 // Spirit Healer stuff
 
