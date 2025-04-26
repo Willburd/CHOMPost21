@@ -10601,7 +10601,10 @@
 	name = "Containment Blast Doors";
 	opacity = 0
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "atm" = (
 /obj/structure/grille,
@@ -11182,10 +11185,13 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/machinery/shower{
-	dir = 4
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "aul" = (
 /obj/machinery/disposal,
@@ -12573,10 +12579,13 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/machinery/shower{
-	pixel_y = 3
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "awz" = (
 /obj/machinery/door/blast/regular{
@@ -12592,7 +12601,10 @@
 	name = "Containment Pen";
 	req_access = list(55)
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/shower{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "awA" = (
 /obj/machinery/camera/network/research/xenobio{
@@ -14444,7 +14456,10 @@
 	opacity = 0;
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/shower{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "aAf" = (
 /obj/structure/cable/green{
@@ -14490,7 +14505,10 @@
 	opacity = 0;
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/shower{
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "aAj" = (
 /turf/simulated/floor/reinforced/airmix,
@@ -15727,10 +15745,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/machinery/shower{
-	dir = 4
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "aCz" = (
 /obj/machinery/disposal,
@@ -16289,7 +16310,10 @@
 	name = "Containment Blast Doors";
 	opacity = 0
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "aDE" = (
 /obj/structure/grille,
@@ -16351,7 +16375,10 @@
 	name = "Containment Blast Doors";
 	opacity = 0
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "aDH" = (
 /obj/structure/grille,
@@ -16413,7 +16440,10 @@
 	name = "Containment Blast Doors";
 	opacity = 0
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/shower{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "aDK" = (
 /obj/structure/grille,
@@ -45913,10 +45943,13 @@
 	name = "Containment Pen";
 	req_access = list(55)
 	},
-/obj/machinery/shower{
-	dir = 1
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "bGS" = (
 /obj/structure/catwalk,
@@ -49180,26 +49213,6 @@
 /obj/item/stack/rods,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"dnZ" = (
-/obj/machinery/door/window/brigdoor/eastleft{
-	dir = 8;
-	name = "Containment Pen";
-	req_access = list(55)
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/obj/machinery/shower{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology)
 "doE" = (
 /turf/simulated/floor/reinforced,
 /area/medical/robotics)
@@ -142619,7 +142632,7 @@ iLO
 iLO
 aqc
 avs
-dnZ
+awy
 axh
 aqc
 azn
