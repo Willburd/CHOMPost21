@@ -21,7 +21,7 @@
 	move_loop = new /datum/looping_sound/tank_move_loop()
 
 /datum/looping_sound/tank_move_loop
-	mid_sounds = list('modular_chomp/sound/effects/tank_treads.ogg'=1)
+	mid_sounds = list('sound/effects/tank_treads.ogg'=1)
 	mid_length = 1.05 SECONDS
 	volume = 90
 	max_loops = 1

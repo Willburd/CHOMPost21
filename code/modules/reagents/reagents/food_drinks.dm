@@ -823,6 +823,10 @@
 	M.adjustToxLoss(0.5 * removed)
 
 /datum/reagent/capsaicin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+	..()
+	handle_spicy(M, alien, removed)
+
+/datum/reagent/proc/handle_spicy(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
 	if(alien == IS_ALRAUNE) // VOREStation Edit: It wouldn't affect plants that much.
@@ -2546,9 +2550,7 @@
 
 /datum/reagent/drink/hell_ramen/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
-	M.bodytemperature += 10 * TEMPERATURE_DAMAGE_COEFFICIENT
+	handle_spicy(M, alien, removed)
 
 /datum/reagent/drink/sweetsundaeramen
 	name = REAGENT_DESSERTRAMEN
@@ -4542,9 +4544,7 @@
 
 /datum/reagent/ethanol/soemmerfire/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
-		return
-	M.bodytemperature += 10 * TEMPERATURE_DAMAGE_COEFFICIENT
+	handle_spicy(M, alien, removed)
 
 /datum/reagent/ethanol/winebrandy
 	name = REAGENT_WINEBRANDY
