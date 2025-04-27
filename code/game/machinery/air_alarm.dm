@@ -175,6 +175,12 @@
 	if(name == "alarm")
 		name = "[alarm_area.name] Air Alarm \[[rand(9999)]\]" // random number id to help with players locating alarms, cosmetic
 
+// CHOMPAdd Start
+/obj/machinery/alarm/Initialize(mapload)
+	. = ..()
+	soundloop = new(list(src), FALSE)
+// CHOMPAdd ENd
+
 /obj/machinery/alarm/proc/scan_atmo()
 	var/turf/simulated/location = src.loc
 	if(!istype(location))	return//returns if loc is not simulated
