@@ -57,6 +57,7 @@
 #include "cliff_D.dmm"
 #include "wizard_A.dmm"
 #include "tram_A.dmm"
+#include "synthezied_oops.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -190,6 +191,15 @@
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/synthezied_oops
+	name = "Oops"
+	desc = "An unfortunate mistake."
+	mappath = "modular_outpost/maps/submaps/deepdark/synthezied_oops.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 95
+	cost = 15
+
 //////////////////////////////////////////////////////////////
 // Retired secrets
 
