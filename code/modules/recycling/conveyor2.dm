@@ -113,7 +113,7 @@
 		for(var/atom/movable/A in affecting)
 			if(istype(A,/obj/effect/abstract)) // Flashlight's lights are not physical objects
 				continue
-			if(A.is_incorporeal()) // Outpost 21 edit - Stop moving shadekin
+			if(A.is_incorporeal())
 				continue
 			if(!A.anchored)
 				if(A.loc == src.loc) // prevents the object from being affected if it's not currently here.
