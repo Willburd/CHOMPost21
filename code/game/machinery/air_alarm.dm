@@ -121,7 +121,7 @@
 	alarms_hidden = TRUE
 
 /obj/machinery/alarm/angled
-	icon = 'modular_outpost/icons/obj/wall_machines_angled.dmi'
+	icon = 'icons/obj/wall_machines_angled.dmi'
 
 /obj/machinery/alarm/angled/hidden
 	alarms_hidden = TRUE
