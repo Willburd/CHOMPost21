@@ -29710,6 +29710,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelevbasement)
+"bbJ" = (
+/obj/machinery/maint_vendor,
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
 "bbK" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -34580,6 +34584,15 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/tug)
+"bkV" = (
+/obj/machinery/maint_recycler,
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
+"bkW" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/maint_recycler,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/eng)
 "bkX" = (
 /obj/structure/bed/chair/bay/chair{
 	dir = 4
@@ -77865,6 +77878,7 @@
 "uQp" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/floor_decal/rust,
+/obj/machinery/maint_vendor,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/eng)
 "uQR" = (
@@ -89851,7 +89865,7 @@ ehk
 xJd
 wXs
 fZL
-eFK
+bbJ
 ajS
 rYo
 fiW
@@ -90175,7 +90189,7 @@ aad
 xJd
 sHs
 eFK
-eFK
+bkV
 eFK
 eFK
 dqN
@@ -113657,7 +113671,7 @@ aQt
 oxL
 aQt
 aQt
-wBL
+bkW
 cQP
 cRG
 rWz
