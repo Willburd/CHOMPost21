@@ -74,8 +74,8 @@
 /datum/gear/fluff/ESHUI_whiteheart
 	display_name = "ESHUI Medical Action Award"
 	path = /obj/item/clothing/accessory/medal/solgov/heart/eshui
-	ckeywhitelist = list("seagha","darklord92","lumithefox")
-	character_name = list("Schale","Qdel","Nach Uligo")
+	ckeywhitelist = list("seagha","darklord92","lumithefox","Cameron653")
+	character_name = list("Schale","Qdel","Nach Uligo","Tenepu")
 
 /datum/gear/fluff/ESHUI_servemed
 	display_name = "ESHUI Service Medal"
