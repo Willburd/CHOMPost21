@@ -116,14 +116,12 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 		else
 			atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level)
 
-	//Outpost 21 edit begin - Check if running without a master alarm working in the area
-	var/obj/machinery/alarm/AM = master_air_alarm?.resolve()
+	//Check all the alarms before lowering atmosalm. Raising is perfectly fine.
+	var/obj/machinery/alarm/AM = main_air_alarm?.resolve()
 	if(!(AM && AM.shorted))
-		//Check all the alarms before lowering atmosalm. Raising is perfectly fine.
 		for(var/obj/machinery/alarm/AA in src)
-			if (!(AA.stat & (NOPOWER|BROKEN)) && !AA.shorted && AA.report_danger_level)
+			if(!(AA.stat & (NOPOWER|BROKEN)) && !AA.shorted && AA.report_danger_level)
 				danger_level = max(danger_level, AA.danger_level)
-	//Outpost 21 edit end
 
 	if(danger_level != atmosalm)
 		atmosalm = danger_level
