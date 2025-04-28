@@ -416,7 +416,7 @@
 	regenerate_icons()
 
 /obj/screen/ling
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 
 /obj/screen/ling/chems
 	name = "chemical storage"
@@ -433,12 +433,12 @@
 // Outpost 21 edit end
 
 /obj/screen/wizard
-	invisibility = 101
+	invisibility = INVISIBILITY_ABSTRACT
 
 /obj/screen/wizard/instability
 	name = "instability"
 	icon_state = "instability-1"
-	invisibility = 0
+	invisibility = INVISIBILITY_NONE
 
 /obj/screen/wizard/energy
 	name = "energy"

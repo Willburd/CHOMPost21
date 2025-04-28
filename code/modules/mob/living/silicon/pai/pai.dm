@@ -147,7 +147,6 @@
 	var/datum/data/pda/app/messenger/M = pda.find_program(/datum/data/pda/app/messenger)
 	if(M)
 		M.toff = FALSE
-	. = ..()
 
 /mob/living/silicon/pai/Login()
 	..()

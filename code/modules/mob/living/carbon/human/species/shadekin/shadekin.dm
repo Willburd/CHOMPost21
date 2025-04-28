@@ -395,7 +395,7 @@
 		var/l_icon = 0
 		var/e_icon = 0
 
-		H.shadekin_display.invisibility = 0
+		H.shadekin_display.invisibility = INVISIBILITY_NONE
 		// outpost 21 addition begin - lockers are dark and spooky!
 		var/brightness = 1
 		if(istype(H.loc,/obj/structure/closet))
