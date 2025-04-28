@@ -288,11 +288,13 @@
 /mob/living/silicon/pai/UnarmedAttack(atom/A, proximity_flag)
 	. = ..()
 
-	// Outpost 21 edit begin - Allow some really specific PAI interactions, allow pais to do a bit more then just sit around being pointless.
 	if(istype(A,/obj/structure/ladder))
+		// Zmovement already allows these to be used with the verbs anyway
 		var/obj/structure/ladder/L = A
 		L.attack_hand(src)
 		return
+		
+	// Outpost 21 edit begin - Allow some really specific PAI interactions, allow pais to do a bit more then just sit around being pointless.
 	if(A.type in global.pai_accessible_objects) // direct paths not a type-check
 		var/obj/O = A
 		O.attack_hand(src)
