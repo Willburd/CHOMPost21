@@ -3,8 +3,7 @@
 	full_name = "ESHUI Atmospheric Terraforming Outpost 21"
 	path = "outpost"
 
-	lobby_icon = 'icons/misc/OUTPOST21.gif'
-	lobby_screens = list()
+	lobby_screens = list('html/lobby/OUTPOST21.gif')
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
 	default_law_type = /datum/ai_laws/eshui_standard
