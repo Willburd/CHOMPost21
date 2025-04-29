@@ -73,7 +73,7 @@
 
 	var/image/selected_image = null // Used for buildmode AI control stuff.
 
-	var/allow_self_surgery = FALSE	// Used to determine if the mob can perform surgery on itself.
+	var/allow_self_surgery = TRUE	// Used to determine if the mob can perform surgery on itself. // Outpost 21 edit - Allow self surgery by default
 
 
 	var/tail_alt = 0
