@@ -8140,10 +8140,9 @@
 	dir = 5
 	},
 /obj/structure/sink/puddle,
-/obj/machinery/doorbell_chime{
-	id_tag = "kitchending";
-	name = "Kitchen Bell";
-	pixel_y = 32
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
@@ -11262,9 +11261,9 @@
 	dir = 1
 	},
 /obj/machinery/light,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/clean)
@@ -38159,6 +38158,11 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-2"
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "kitchending";
+	name = "Kitchen Bell";
+	pixel_y = 32
 	},
 /turf/simulated/floor/plating,
 /area/hydroponics/garden)
