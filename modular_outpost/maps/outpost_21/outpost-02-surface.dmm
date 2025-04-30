@@ -6113,6 +6113,10 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/substation/civilian)
+"ajJ" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "ajK" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -6137,6 +6141,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/plating/external/muriki,
 /area/engineering/engine_room)
+"ajN" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/muriki,
+/area/mine/unexplored/muriki/mountainnorth)
 "ajO" = (
 /obj/structure/fence/post{
 	dir = 4
@@ -8536,11 +8544,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/vending/engineering{
+/obj/machinery/vending/fishing{
 	dir = 8;
-	pixel_x = 5;
-	req_one_access = list(10,11);
-	req_access = null
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
@@ -14459,10 +14465,8 @@
 /area/security/detectives_office)
 "csG" = (
 /obj/effect/decal/cleanable/cobweb,
-/obj/machinery/smartfridge/sheets/persistent_lossy{
-	description_info = "Materials stored in here will remain for serveral rounds with a slight loss for each round depending on the amounts of materials inside.";
-	name = "\improper long term Smart Sheet Storage"
-	},
+/obj/effect/floor_decal/rust,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
 "ctg" = (
@@ -25133,6 +25137,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "fWM" = (
@@ -48418,9 +48423,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "nad" = (
-/obj/effect/floor_decal/milspec/cargo_arrow{
-	dir = 1
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -66522,9 +66524,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
 "sQa" = (
-/obj/machinery/smartfridge/produce/persistent,
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/lime/full,
+/obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/muriki/crew/kitchenfreezer)
 "sQf" = (
@@ -68450,7 +68452,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "tvs" = (
-/obj/effect/landmark/vermin,
+/obj/effect/recycler_beacon,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/bar)
 "tvK" = (
@@ -77134,12 +77136,13 @@
 /turf/simulated/floor/outdoors/mud/muriki,
 /area/muriki/yard)
 "vZk" = (
-/obj/effect/floor_decal/rust,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/item/geiger/wall/north,
-/obj/machinery/autolathe,
+/obj/effect/floor_decal/milspec/cargo_arrow{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
 "vZy" = (
@@ -121211,7 +121214,7 @@ aiP
 aiP
 aiP
 jnc
-wrH
+ajN
 wrH
 uxQ
 fJS
@@ -127349,7 +127352,7 @@ aiP
 aiP
 aiP
 awI
-wrH
+ajN
 wrH
 wrH
 wrH
@@ -145855,7 +145858,7 @@ rJa
 rJa
 rJa
 giv
-cFv
+ajJ
 cFv
 cFv
 opc

@@ -166,6 +166,36 @@
 /obj/item/toy/plushie/dragon/green_east,
 /turf/simulated/floor/carpet/blue,
 /area/centcom/living)
+"aaE" = (
+/turf/unsimulated/floor/steel,
+/area/space)
+"aaF" = (
+/obj/machinery/maint_vendor,
+/turf/unsimulated/floor{
+	icon_state = "plating";
+	name = "plating"
+	},
+/area/space)
+"aaG" = (
+/turf/unsimulated/floor{
+	icon_state = "plating";
+	name = "plating"
+	},
+/area/space)
+"aaH" = (
+/obj/effect/recycler_beacon,
+/turf/unsimulated/floor{
+	icon_state = "plating";
+	name = "plating"
+	},
+/area/space)
+"aaI" = (
+/obj/machinery/maint_recycler,
+/turf/unsimulated/floor{
+	icon_state = "plating";
+	name = "plating"
+	},
+/area/space)
 "aaL" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
@@ -70378,12 +70408,12 @@ btI
 btI
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -70540,12 +70570,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaI
+aaE
+aaF
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -70702,12 +70732,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -70864,12 +70894,12 @@ hIA
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaI
+aaE
+aaG
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -71026,12 +71056,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -71188,12 +71218,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaI
+aaE
+aaG
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -71350,12 +71380,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -71512,12 +71542,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaI
+aaE
+aaG
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -71674,12 +71704,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -71836,12 +71866,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaI
+aaE
+aaG
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -71998,12 +72028,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -72160,12 +72190,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaG
+aaE
+aaG
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -72322,12 +72352,12 @@ hIA
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -72484,12 +72514,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaH
+aaE
+aaH
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -72646,12 +72676,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+aaE
+aaE
+aaE
+aaE
+aaE
+xoo
 kOg
 kOg
 kOg
@@ -72808,12 +72838,12 @@ ybz
 ybz
 btI
 xoo
-kOg
-kOg
-kOg
-kOg
-kOg
-kOg
+xoo
+xoo
+xoo
+xoo
+xoo
+xoo
 kOg
 kOg
 kOg
