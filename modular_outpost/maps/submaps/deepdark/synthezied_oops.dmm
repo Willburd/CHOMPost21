@@ -1,0 +1,82 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"L" = (
+/obj/item/clothing/suit/space/void/engineering/alt2,
+/obj/item/clothing/head/helmet/space/void/engineering/alt2,
+/obj/item/tank/oxygen,
+/obj/item/bone/ribs,
+/obj/item/bone{
+	pixel_y = -3
+	},
+/obj/item/bone{
+	pixel_y = 2;
+	pixel_x = -7
+	},
+/obj/item/bone{
+	pixel_y = -4;
+	pixel_x = -9
+	},
+/obj/item/bone{
+	pixel_y = -4;
+	pixel_x = -6
+	},
+/obj/item/bone/skull/tajaran{
+	pixel_x = 3;
+	pixel_y = 10
+	},
+/obj/item/clothing/head/beret/engineering{
+	pixel_x = 1;
+	pixel_y = 15
+	},
+/obj/item/clothing/suit/storage/hooded/wintercoat/engineering{
+	pixel_y = 2
+	},
+/obj/item/clothing/shoes/boots/winter/engineering{
+	pixel_x = -9;
+	pixel_y = -12
+	},
+/obj/item/clothing/gloves/fyellow{
+	pixel_x = -4;
+	pixel_y = -5
+	},
+/obj/item/clothing/mask/breath{
+	pixel_x = 5
+	},
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/obj/item/rms,
+/obj/item/stack/material/supermatter,
+/turf/simulated/mineral/floor/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+L
+W
+a
+"}
+(4,1,1) = {"
+a
+a
+a
+a
+"}
