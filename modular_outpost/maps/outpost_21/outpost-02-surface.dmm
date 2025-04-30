@@ -6204,29 +6204,6 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/civilian)
-"ajW" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 10
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 8;
-	pixel_y = -32;
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/mining)
 "ajX" = (
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -30822,6 +30799,12 @@
 /obj/machinery/camera/network/cargo{
 	c_tag = "MNE - Ore Processing"
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21;
+	pixel_x = 3
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/processing)
 "hGb" = (
@@ -32781,6 +32764,11 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "igz" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/cybstorage)
 "igC" = (
@@ -67104,6 +67092,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "sSm" = (
@@ -80974,6 +80966,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "wWX" = (
@@ -91140,7 +91136,7 @@ wjC
 wjC
 yiH
 qAN
-ajW
+vtA
 wUD
 hFP
 drE

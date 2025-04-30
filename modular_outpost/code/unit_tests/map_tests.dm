@@ -32,7 +32,9 @@
 					/area/engineering/eva,
 					/area/engineering/engine_airlock,
 					/area/medical/virologyaccess,
-					/area/engineering/engine_room
+					/area/engineering/engine_room,
+					/area/hydroponics/gibber,
+					/area/rnd/research/roof_eva
 					)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
