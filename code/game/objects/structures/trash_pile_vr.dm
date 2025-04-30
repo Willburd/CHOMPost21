@@ -380,6 +380,7 @@
 					prob(1);/obj/item/clothing/accessory/collar/shock/bluespace/modified,
 					prob(1);/obj/item/gun/energy/sizegun/backfire,
 					prob(1);/obj/item/deadringer, // Outpost 21 edit - New loot
+					prob(1);/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit - New loot
 					prob(1);/obj/item/organ/internal/augment/armmounted/shoulder/multiple, // Outpost 21 edit - New loot
 					prob(1);/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical // Outpost 21 edit - New loot
 					)
