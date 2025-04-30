@@ -344,6 +344,10 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -355,6 +359,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark{
@@ -387,6 +395,10 @@
 "aaR" = (
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 9
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -607,6 +619,10 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 6
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -723,6 +739,55 @@
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/mountaintopnorth)
+"abA" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
+"abB" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
+"abC" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
+"abD" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
+"abE" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
+"abF" = (
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
 "abL" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
@@ -3995,6 +4060,10 @@
 	},
 /obj/effect/floor_decal/corner/green/border{
 	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -31435,6 +31504,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/powercontrol)
 "prL" = (
@@ -35506,6 +35579,10 @@
 /obj/structure/filingcabinet,
 /obj/effect/floor_decal/corner/white{
 	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
@@ -45422,6 +45499,10 @@
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
 "wkU" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "wlq" = (
@@ -95909,7 +95990,7 @@ rsI
 rsI
 qID
 fep
-fep
+abD
 bmS
 qWs
 fep
@@ -95918,7 +95999,7 @@ oFW
 ouV
 rhc
 hQg
-fep
+abC
 fep
 sDq
 rsI
@@ -96554,7 +96635,7 @@ ghI
 djC
 djC
 rsI
-nyi
+abE
 cjO
 cjO
 cjO
@@ -96569,7 +96650,7 @@ cjO
 cjO
 cjO
 cjO
-nyi
+abA
 rsI
 sgW
 oio
@@ -96878,7 +96959,7 @@ rBk
 gjb
 djC
 rsI
-nyi
+abF
 vFG
 vFG
 vFG
@@ -96893,7 +96974,7 @@ vFG
 vFG
 vFG
 vFG
-nyi
+abB
 rsI
 sgW
 oio

@@ -5370,6 +5370,10 @@
 	pixel_y = 32
 	},
 /obj/machinery/recharge_station,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahQ" = (
@@ -6200,6 +6204,29 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/civilian)
+"ajW" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/mining)
 "ajX" = (
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -6212,6 +6239,10 @@
 /obj/structure/fence/post,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/muriki/grounds/tramborder)
+"aka" = (
+/obj/structure/sign/nosmoking_1,
+/turf/simulated/wall/r_wall,
+/area/security/tactical)
 "akb" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -6304,6 +6335,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
+"akp" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/delivery)
 "akq" = (
 /obj/structure/cliff{
 	dir = 4
@@ -6451,6 +6495,20 @@
 /obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
+"akI" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/item/radio/intercom/department/security{
+	pixel_y = -21
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
 "akJ" = (
 /obj/structure/table/standard,
 /obj/item/clothing/ears/earmuffs,
@@ -6482,6 +6540,15 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/rnd/lab)
+"akL" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/tramstation/waste)
 "akM" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "sciding";
@@ -6685,6 +6752,35 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
+"ali" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
+	},
+/turf/simulated/floor/wood,
+/area/security/briefing_room)
+"alj" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/warning/acid{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
 "alk" = (
 /obj/structure/table/standard,
 /obj/item/juke_remote{
@@ -6751,6 +6847,12 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/otherlab)
+"alo" = (
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/open,
+/area/muriki/crewstairwell)
 "alp" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger{
@@ -6772,6 +6874,32 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
+"alq" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
+/obj/item/clothing/gloves/yellow,
+/obj/item/tape_roll,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/engineering/locker_room)
+"alr" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/constructionsite/engineering)
 "als" = (
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6860,6 +6988,13 @@
 /obj/effect/landmark/start/fieldmedic,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
+"alB" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 21
+	},
+/turf/simulated/floor,
+/area/constructionsite/engineering)
 "alC" = (
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/machinery/hologram/holopad,
@@ -6869,6 +7004,12 @@
 /obj/effect/landmark/start/chef,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
+"alD" = (
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor,
+/area/constructionsite/engineering)
 "alE" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -7110,6 +7251,21 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/main)
+"amb" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/green/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_three)
 "amc" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
 	dir = 10
@@ -7177,6 +7333,35 @@
 	},
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
+"ami" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/closet/radiation,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/corepower)
 "amj" = (
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 1
@@ -7559,8 +7744,22 @@
 	},
 /obj/item/tape_roll,
 /obj/item/tape_roll,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 31;
+	dir = 8;
+	pixel_y = -6
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
+"amQ" = (
+/obj/machinery/power/tesla_coil,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/enginestorage)
 "amS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7680,6 +7879,10 @@
 /obj/structure/medical_stand,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
+	},
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
@@ -8548,6 +8751,10 @@
 	dir = 8;
 	pixel_x = 5
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "aAW" = (
@@ -8713,6 +8920,15 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/item/radio/intercom/department/security{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "aDX" = (
@@ -8844,13 +9060,12 @@
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/processing)
@@ -13146,6 +13361,10 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/storage/tech)
 "bWF" = (
@@ -14112,6 +14331,15 @@
 /obj/machinery/camera/network/security{
 	dir = 8;
 	c_tag = "SEC - Mailing Room"
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 4;
+	pixel_x = 33
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
@@ -17506,6 +17734,11 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/kennels)
 "dtH" = (
@@ -17650,6 +17883,9 @@
 	dir = 5
 	},
 /obj/structure/closet/firecloset/full,
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "dwY" = (
@@ -18364,6 +18600,16 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "dIx" = (
@@ -18988,6 +19234,16 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "dSR" = (
@@ -19221,12 +19477,6 @@
 	},
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 9
-	},
-/obj/machinery/doorbell_chime{
-	id_tag = "secding";
-	name = "Security Hail";
-	pixel_x = -32;
-	pixel_y = 33
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /obj/machinery/power/apc{
@@ -22229,6 +22479,11 @@
 	pixel_x = 26;
 	pixel_y = 26
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "eWW" = (
@@ -22598,6 +22853,9 @@
 	dir = 8;
 	pixel_x = -21
 	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/stairwell)
 "fdM" = (
@@ -22922,6 +23180,11 @@
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/danger/full,
 /obj/effect/landmark/free_ai_shell,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/security/mechent)
 "fiU" = (
@@ -23118,6 +23381,10 @@
 	dir = 8
 	},
 /obj/structure/closet/firecloset/full,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "flY" = (
@@ -25069,6 +25336,11 @@
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/arriveproc)
 "fVi" = (
@@ -26500,16 +26772,17 @@
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "gtO" = (
-/obj/machinery/vending/wallmed1{
-	name = "Emergency NanoMed";
-	pixel_y = 32
-	},
 /obj/structure/closet/crate/medical/blood,
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 1
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "medding";
+	name = "Medical Dinger";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
@@ -28602,6 +28875,10 @@
 	pixel_x = -28;
 	pixel_y = 26
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
 "hdu" = (
@@ -29077,6 +29354,10 @@
 	frequency = 1441;
 	name = "Tank Monitor";
 	sensors = list("n2_sensor" = "Nitrogen", "o2_sensor" = "Oxygen", "co2_sensor" = "Carbon Dioxide", "tox_sensor" = "Toxins", "n2o_sensor" = "Nitrous Oxide", "mix_sensor" = "Gas Mix Tank")
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
@@ -30757,6 +31038,11 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "hIQ" = (
@@ -31771,17 +32057,16 @@
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 1
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
-	},
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/item/hoist_kit,
 /obj/structure/table/rack/shelf,
 /obj/item/retail_scanner,
+/obj/item/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
 "hXE" = (
@@ -31891,6 +32176,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
@@ -33224,6 +33512,9 @@
 	},
 /obj/item/clothing/accessory/permit/gun/bar,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/barback)
 "isi" = (
@@ -33959,10 +34250,17 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/machinery/ai_status_display{
-	pixel_x = -32
-	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crewstairwell)
 "iDw" = (
@@ -34887,6 +35185,11 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
+	},
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "iSS" = (
@@ -35237,7 +35540,8 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -36236,7 +36540,8 @@
 /obj/machinery/light,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
@@ -37755,6 +38060,10 @@
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
@@ -41753,6 +42062,10 @@
 	pixel_x = -8;
 	pixel_y = 11
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgery2)
 "kVh" = (
@@ -42460,6 +42773,11 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light,
 /obj/structure/table/standard,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_airlock)
 "liW" = (
@@ -42488,6 +42806,10 @@
 /obj/structure/closet/secure_closet/personal/patient,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_airlock)
@@ -44956,6 +45278,10 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "lUx" = (
@@ -46709,6 +47035,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/bridge)
 "mvV" = (
@@ -47157,6 +47488,9 @@
 /obj/machinery/recharger{
 	pixel_x = -5
 	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "mCR" = (
@@ -47477,6 +47811,10 @@
 	desc = "A classic, external hammer double barrel shotgun. This one has classic oak furniture. Chambered in 12 gauge. Stamped on the side is: 'Property of E-Shui Bar. ESB-0017-8871342. Not for usage outside bar premesis.'"
 	},
 /obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/barback)
 "mIh" = (
@@ -47696,6 +48034,11 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 26
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
@@ -48167,6 +48510,11 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/arriveproc)
@@ -48828,7 +49176,8 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
@@ -49350,6 +49699,11 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
+	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "npf" = (
@@ -49639,6 +49993,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/purple/full,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/mailing)
 "ntb" = (
@@ -50740,6 +51099,11 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "nIk" = (
@@ -51628,6 +51992,11 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
 "oal" = (
@@ -51884,6 +52253,16 @@
 "odT" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "odU" = (
@@ -52098,6 +52477,10 @@
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/medical/laundry)
 "ohQ" = (
@@ -53868,6 +54251,16 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
 "oLE" = (
@@ -53931,6 +54324,10 @@
 	},
 /obj/effect/floor_decal/corner/beige/full{
 	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/arrivejani)
@@ -54078,6 +54475,9 @@
 /obj/machinery/recharge_station,
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
@@ -54255,6 +54655,11 @@
 	},
 /obj/machinery/disposal/mail_reciever{
 	name = "disposal mail destination(Head of Personnel)"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
@@ -54439,6 +54844,15 @@
 "oTU" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
@@ -55056,7 +55470,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light_switch{
 	dir = 4;
-	pixel_x = -28
+	pixel_x = -28;
+	pixel_y = -7
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/enginestorage)
@@ -55338,6 +55758,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/power/tesla_coil/collector,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/enginestorage)
 "pno" = (
@@ -57119,6 +57544,16 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_smes)
 "pTy" = (
@@ -57491,8 +57926,15 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
-/obj/structure/sign/nosmoking_1{
-	pixel_y = -32
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
@@ -57847,6 +58289,10 @@
 "qcT" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
 "qdw" = (
@@ -58224,6 +58670,10 @@
 /obj/item/tool/crowbar,
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
@@ -59315,6 +59765,11 @@
 /obj/machinery/recharge_station,
 /obj/machinery/ai_status_display{
 	pixel_y = 32
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/medbay_emt_bay)
@@ -61259,6 +61714,11 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/hardsuitstore)
 "rfk" = (
@@ -62288,6 +62748,10 @@
 /obj/item/bodybag/cryobag,
 /obj/item/storage/pill_bottle/tramadol,
 /obj/item/storage/pill_bottle/tramadol,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/crew/engyaid)
 "rwx" = (
@@ -62907,6 +63371,10 @@
 /obj/item/storage/laundry_basket,
 /obj/structure/table/glass,
 /obj/effect/floor_decal/corner/blue/full,
+/obj/item/radio/intercom/department/medbay{
+	dir = 8;
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/medical/laundry)
 "rHI" = (
@@ -62924,12 +63392,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/auxstore)
 "rHQ" = (
-/obj/structure/sign/warning/acid{
-	pixel_y = -32
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/structure/closet/emcloset,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "rHR" = (
@@ -63418,6 +63887,11 @@
 	dir = 6
 	},
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "rRs" = (
@@ -63457,6 +63931,10 @@
 	pixel_y = 6
 	},
 /obj/item/storage/firstaid/adv,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/medical/first_aid_station)
 "rSp" = (
@@ -65290,6 +65768,11 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "svN" = (
@@ -66195,6 +66678,10 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgery2)
 "sJP" = (
@@ -66332,6 +66819,10 @@
 /obj/machinery/suit_cycler/mining,
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
@@ -67401,6 +67892,11 @@
 "tda" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/dust,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/tramstation/waste)
 "tdg" = (
@@ -67496,6 +67992,11 @@
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/hos,
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/hos,
 /obj/item/clothing/under/teshari/undercoat/jobs/sec,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "tdI" = (
@@ -67543,6 +68044,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/mining/processing)
@@ -68724,6 +69228,11 @@
 /area/hallway/primary/central_two)
 "tzF" = (
 /obj/machinery/washing_machine,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
 "tzN" = (
@@ -68981,6 +69490,14 @@
 /obj/item/reagent_containers/spray/cleaner{
 	pixel_x = -8;
 	pixel_y = 11
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgery)
@@ -69560,6 +70077,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
 "tNz" = (
@@ -69801,6 +70322,11 @@
 /obj/item/clothing/accessory/armband/science,
 /obj/machinery/alarm{
 	pixel_y = 26
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
@@ -70069,6 +70595,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/stairwell)
 "tUw" = (
@@ -72641,6 +73171,10 @@
 /obj/effect/landmark{
 	name = "JoinLateElevator"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "uHY" = (
@@ -72649,6 +73183,14 @@
 	},
 /obj/effect/floor_decal/corner/red/bordercee,
 /obj/item/flag/eshui,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -7;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/checkpoint2)
 "uIc" = (
@@ -74580,6 +75122,11 @@
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "vmj" = (
@@ -75619,6 +76166,11 @@
 	},
 /obj/item/gun/energy/stunrevolver/vintage,
 /obj/item/clothing/accessory/holster/hip,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
 "vBu" = (
@@ -76315,6 +76867,10 @@
 	dir = 8
 	},
 /obj/machinery/recharge_station,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
+	},
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
 "vMX" = (
@@ -77176,6 +77732,14 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "vZM" = (
@@ -77586,6 +78150,11 @@
 	dir = 1;
 	icon_state = "spline_plain_full"
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/entry)
 "weV" = (
@@ -77744,6 +78313,10 @@
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
@@ -78113,6 +78686,10 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "wlU" = (
@@ -78467,6 +79044,11 @@
 	pixel_x = 30
 	},
 /obj/item/bodybag/cryobag,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/quartermaster/mining/firstaid)
 "wrC" = (
@@ -78491,6 +79073,10 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -79514,6 +80100,11 @@
 /obj/effect/landmark/start{
 	name = "Janitor"
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/arrivejani)
 "wKg" = (
@@ -79778,6 +80369,11 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/muriki/crew/kitchenfreezer)
@@ -80227,7 +80823,8 @@
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 1
 	},
-/obj/machinery/vending/wallmed1/public{
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark,
@@ -80318,6 +80915,11 @@
 	},
 /obj/item/juke_remote{
 	pixel_y = 12
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
 	},
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
@@ -85981,7 +86583,7 @@ tMf
 pNN
 tty
 anQ
-tda
+akL
 aKT
 aGP
 aGP
@@ -89891,7 +90493,7 @@ tLi
 aQw
 oOC
 sSg
-vyE
+wUD
 tdX
 onW
 gLW
@@ -90538,7 +91140,7 @@ wjC
 wjC
 yiH
 qAN
-vtA
+ajW
 wUD
 hFP
 drE
@@ -106196,7 +106798,7 @@ xki
 xRk
 yfg
 hYA
-xRk
+alq
 ngf
 hGb
 ahr
@@ -107374,7 +107976,7 @@ tXC
 tXC
 wuN
 lRG
-hKU
+akp
 dxn
 vRh
 bNe
@@ -108283,7 +108885,7 @@ ghO
 kWn
 kWn
 bEZ
-qtp
+ami
 rVQ
 xcU
 fxa
@@ -108633,7 +109235,7 @@ pWO
 vAT
 uvT
 wsW
-oGR
+alj
 ahm
 iDi
 iDi
@@ -109431,11 +110033,11 @@ wiC
 ucJ
 qMN
 krN
+alD
 oNd
 oNd
 oNd
-oNd
-oNd
+alr
 hts
 uvT
 uVp
@@ -109757,7 +110359,7 @@ amp
 krN
 oNd
 oNd
-oNd
+alB
 oNd
 oNd
 hts
@@ -109903,7 +110505,7 @@ nZM
 voU
 pDQ
 msY
-qzR
+amQ
 pvU
 aok
 rJF
@@ -123252,7 +123854,7 @@ lOh
 nNi
 lNb
 iId
-iId
+aka
 jxM
 grt
 hNA
@@ -124384,7 +124986,7 @@ wOO
 hWJ
 xMw
 jJz
-lOa
+akI
 iId
 bJE
 xty
@@ -125185,7 +125787,7 @@ wNw
 hMg
 wQx
 bLc
-vIa
+ali
 eHx
 vIa
 vIa
@@ -135360,7 +135962,7 @@ tWr
 gVp
 tPj
 okX
-fdm
+alo
 rgI
 aKZ
 uWD
@@ -138265,7 +138867,7 @@ dxD
 ufG
 rVf
 nmA
-iWv
+amb
 cGe
 nmV
 lZj

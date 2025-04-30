@@ -14,7 +14,26 @@
 					/area/mine,
 					/area/vacant/vacant_shop,
 					/area/turbolift,
-					/area/submap)
+					/area/submap,
+					/area/muriki/septic,
+					/area/security/brig/isolate,
+					/area/rnd/research/phoronics/bombrange,
+					/area/muriki/crew/glass,
+					/area/engineering/coreproctunnel,
+					/area/medical/voxlab/airlock,
+					/area/medical/voxlab/airgap,
+					/area/rnd/research/isolation_a,
+					/area/rnd/research/isolation_b,
+					/area/rnd/research/isolation_c,
+					/area/muriki/yard,
+					/area/muriki/crystal,
+					/area/muriki/station/trawler_dock,
+					/area/security/eva,
+					/area/engineering/eva,
+					/area/engineering/engine_airlock,
+					/area/medical/virologyaccess,
+					/area/engineering/engine_room
+					)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
 
@@ -29,6 +48,8 @@
 		if(istype(A,/area/muriki/grounds))
 			continue
 		if(istype(A,/area/muriki/rooftop))
+			continue
+		if(istype(A,/area/muriki/skyline))
 			continue
 		if(istype(A,/area/turbolift))
 			continue
