@@ -449,6 +449,7 @@
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "aaT" = (
@@ -1189,6 +1190,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway/hazard)
 "acw" = (
@@ -1768,6 +1772,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/hallway/hazard)
 "adz" = (
@@ -2109,6 +2116,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
@@ -5254,6 +5265,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "ajJ" = (
@@ -6750,6 +6764,10 @@
 /obj/effect/catwalk_plated/white,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway/hazard)
 "amp" = (
@@ -11865,6 +11883,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/multi_tile,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/hallway/hazard)
 "ave" = (
@@ -15111,9 +15130,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -15121,6 +15137,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
@@ -17648,6 +17668,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "aFz" = (
@@ -18609,6 +18632,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "aHf" = (
@@ -20910,6 +20934,10 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay4)
 "aLC" = (
@@ -21518,9 +21546,6 @@
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aME" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -21529,12 +21554,13 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/corner/orange,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aMF" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -21548,17 +21574,16 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/orange,
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = -32
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/wall{
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "aMG" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -21570,6 +21595,10 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay4)
@@ -22999,6 +23028,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "medding";
+	name = "Medical Dinger";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay2)
@@ -38568,6 +38602,29 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
+"bry" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
+"brz" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "brB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/red/full{
@@ -47747,6 +47804,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/rnd/supermatter)
 "bKh" = (
@@ -52796,6 +52856,13 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "eMW" = (
@@ -54048,6 +54115,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/rnd/supermatter)
 "fwN" = (
@@ -54655,6 +54725,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "fNH" = (
@@ -55220,6 +55297,9 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
@@ -64003,6 +64083,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "lHb" = (
@@ -76049,6 +76132,10 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "sRk" = (
@@ -79899,6 +79986,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "vsy" = (
@@ -80958,6 +81048,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/supermatter)
 "vYG" = (
@@ -81644,6 +81737,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "wtv" = (
@@ -83203,6 +83297,10 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
 "xvm" = (
@@ -83786,6 +83884,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -132331,8 +132432,8 @@ aas
 sRg
 wte
 aaS
-afT
-afT
+brz
+bry
 afT
 akN
 akR
