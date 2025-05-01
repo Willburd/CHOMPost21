@@ -41,6 +41,7 @@
 		/area/security/prison,
 		/area/crew_quarters/recreation_area_hallway,
 		/area/bridge_hallway,
+		/area/bridge/hallway,
 		/area/engineering/aft_hallway,
 		/area/medical/medbay,
 		/area/medical/medbay2,
