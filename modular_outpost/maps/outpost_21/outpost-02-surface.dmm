@@ -8385,6 +8385,25 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"aoe" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay3)
+"aof" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay3)
 "aok" = (
 /obj/machinery/power/grounding_rod,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -129842,7 +129861,7 @@ qSX
 iTd
 dPc
 iwB
-mZb
+aoe
 mQr
 oXP
 qBW
@@ -130004,7 +130023,7 @@ tne
 wkX
 idS
 iwB
-mZb
+aof
 mQr
 udg
 xMm
