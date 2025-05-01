@@ -187,6 +187,12 @@
 		/area/quartermaster/mining/secpi
 	)
 
+	var/list/does_not_have_displays = list(
+		/area/rnd/entry,
+		/area/rnd/entry_aux
+		/area/rnd/research/phoronics
+	)
+
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
 	for(var/area/A in world)
 		if(!(A.z in zs_to_test) || (A.type in exempt_areas))
@@ -258,6 +264,14 @@
 			if(!(locate(/obj/item/geiger/wall) in A.contents))
 				log_unit_test("[A.type] lacks an geiger counter")
 				failures++
+			// Hallways must status displays
+			if(!(A.type in does_not_have_displays))
+				if(!(locate(/obj/machinery/status_display) in A.contents))
+					log_unit_test("[A.type] lacks an status display")
+					failures++
+				if(!(locate(/obj/machinery/ai_status_display) in A.contents))
+					log_unit_test("[A.type] lacks an ai display")
+					failures++
 
 	if(failures)
 		fail("[failures] areas fail outpost 21 buildcode.")
