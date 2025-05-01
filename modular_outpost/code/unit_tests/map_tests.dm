@@ -43,6 +43,9 @@
 			/area/bridge_hallway,
 			/area/engineering/aft_hallway,
 			/area/medical/medbay,
+			/area/medical/medbay2,
+			/area/medical/medbay3,
+			/area/medical/medbay4,
 			/area/medical/surgery_hallway,
 			/area/rnd/xenobiology/hallway,
 			/area/muriki/crewstairwell,
@@ -57,7 +60,11 @@
 			/area/rnd/hallway/hazard,
 			/area/rnd/hallway/staircase,
 			/area/rnd/hallway/phoronicsbridge,
-			/area/rnd/hallway/phoronicsmainhall
+			/area/rnd/hallway/phoronicsmainhall,
+			/area/engineering/atmoshall,
+			/area/engineering/refinery/tugstorage,
+			/area/rnd/stairwell,
+			/area/quartermaster/foyer
 		)
 
 	var/list/does_not_use_lightswitch = list(
@@ -70,7 +77,17 @@
 			/area/security/security_aid_station,
 			/area/engineering/refinery/aid_station,
 			/area/rnd/research/phoronics/med,
-			/area/security/nuke_storage
+			/area/security/nuke_storage,
+			/area/medical/autosleever,
+			/area/security/armoury,
+			/area/muriki/arriveelev,
+			/area/medical/first_aid_station_starboard,
+			/area/medical/first_aid_station,
+			/area/rnd/entry,
+			/area/rnd/entry_aux,
+			/area/rnd/research/medical_roof,
+			/area/rnd/research/roof_eva,
+			/area/engineering/gravgen
 		)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
