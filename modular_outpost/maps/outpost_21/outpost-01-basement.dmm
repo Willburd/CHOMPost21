@@ -8251,6 +8251,9 @@
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 6
 	},
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "aoO" = (
@@ -10413,6 +10416,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "asI" = (
@@ -12490,12 +12497,19 @@
 /obj/item/storage/briefcase/inflatable{
 	pixel_x = -3
 	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "awf" = (
 /obj/machinery/recharge_station,
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
@@ -12516,10 +12530,6 @@
 /obj/structure/table/standard,
 /obj/item/reagent_containers/dropper{
 	pixel_y = -4
-	},
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_y = -32
 	},
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 4
@@ -14522,6 +14532,10 @@
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 8
 	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/xeno)
 "azV" = (
@@ -14531,6 +14545,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/xeno)
@@ -23067,19 +23084,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
-"aPd" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_y = -32
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbay2)
 "aPe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -23955,11 +23959,6 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/morgue)
 "aQK" = (
@@ -24029,6 +24028,11 @@
 /obj/structure/morgue,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "medding";
+	name = "Medical Dinger";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -25286,6 +25290,11 @@
 /obj/item/reagent_containers/blood/synthblood,
 /obj/item/reagent_containers/blood/synthblood,
 /obj/item/reagent_containers/blood/synthblood,
+/obj/machinery/doorbell_chime{
+	id_tag = "medding";
+	name = "Medical Dinger";
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/surgery_storage)
 "aTp" = (
@@ -27464,6 +27473,10 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWP" = (
@@ -27471,6 +27484,9 @@
 	dir = 10
 	},
 /obj/structure/closet/medical,
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWQ" = (
@@ -39025,6 +39041,43 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
+"bsq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
+"bsr" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay2)
+"bss" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay2)
 "bst" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -39238,6 +39291,10 @@
 /obj/item/storage/box/mousetraps,
 /obj/item/storage/box/mousetraps,
 /obj/structure/table/rack,
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
 "bsP" = (
@@ -39257,14 +39314,89 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
+"bsQ" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/lowmain)
+"bsR" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/lowmain)
 "bsS" = (
 /obj/structure/bed/chair/bay{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
+"bsT" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/lowmain)
+"bsU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/xenobiology/hallway)
 "bsX" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Solitary Confinement 1";
@@ -39571,6 +39703,10 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
@@ -70506,11 +70642,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
@@ -121703,7 +121839,7 @@ bqQ
 brD
 bsv
 bqe
-btB
+bsq
 bur
 bqN
 oFm
@@ -125214,7 +125350,7 @@ aLD
 aII
 aII
 aOd
-aPd
+aPc
 aPD
 aTo
 aRA
@@ -126834,7 +126970,7 @@ aIR
 aIR
 aIR
 bDK
-aPc
+bsr
 aPH
 aQI
 aRG
@@ -126996,7 +127132,7 @@ aLN
 aMQ
 aIR
 aOh
-aPc
+bss
 aPH
 aQJ
 aRG
@@ -135081,7 +135217,7 @@ aFn
 iPO
 aqG
 fKk
-kqS
+bsQ
 aCl
 ahC
 ahC
@@ -135230,7 +135366,7 @@ aDw
 aDw
 aDw
 aDw
-pLA
+bsR
 fKk
 ekP
 aDp
@@ -135554,7 +135690,7 @@ iqB
 aFA
 aEC
 aDw
-pLA
+bsT
 fKk
 sPy
 aDp
@@ -142843,7 +142979,7 @@ ydP
 ydP
 bGI
 alI
-ydP
+bsU
 aoN
 aqa
 ahf

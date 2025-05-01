@@ -1139,6 +1139,12 @@
 /obj/item/geiger/wall/north,
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsmainhall)
+"acm" = (
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/simulated/open,
+/area/hydroponics/hallway)
 "acx" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Med Roof. Backup Generators";
@@ -49333,6 +49339,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "xOW" = (
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
 /turf/simulated/open,
 /area/hydroponics/hallway)
 "xPz" = (
@@ -105046,7 +105055,7 @@ gCO
 gCO
 abx
 poG
-xOW
+acm
 xOW
 jNZ
 abU

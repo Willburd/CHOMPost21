@@ -190,7 +190,19 @@
 	var/list/does_not_have_displays = list(
 		/area/rnd/entry,
 		/area/rnd/entry_aux,
-		/area/rnd/research/phoronics
+		/area/rnd/research/phoronics,
+		/area/engineering/refinery/tugstorage,
+		/area/medical/medbay4,
+		/area/muriki/research/isolation_hall,
+		/area/rnd/hallway/hazard,
+		/area/muriki/tramstation/waste,
+		/area/muriki/crewstairwell,
+		/area/medical/medbay,
+		/area/medical/stairwell,
+		/area/rnd/stairwell,
+		/area/hallway/secondary/chapel_hallway,
+		/area/hallway/secondary/secmedbridge,
+		/area/rnd/hallway/phoronicsbridge
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1

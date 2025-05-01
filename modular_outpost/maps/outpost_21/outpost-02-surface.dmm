@@ -8259,6 +8259,17 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/open,
 /area/rnd/stairwell)
+"anV" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/machinery/light,
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "anW" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -8286,6 +8297,46 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/eva)
+"anX" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_one)
+"anY" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
+"anZ" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "aoa" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -8298,6 +8349,42 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
+"aob" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_three)
+"aoc" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
+"aod" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "aok" = (
 /obj/machinery/power/grounding_rod,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -9878,7 +9965,6 @@
 	dir = 8;
 	pixel_x = 5
 	},
-/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "aQw" = (
@@ -11749,6 +11835,10 @@
 /obj/machinery/camera/network/engineering{
 	c_tag = "EVA - Main Hall Break"
 	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "bti" = (
@@ -13521,8 +13611,8 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/machinery/ai_status_display{
-	pixel_y = 32
+/obj/machinery/alarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
@@ -14153,8 +14243,8 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/structure/sign/poster{
-	dir = 8
+/obj/machinery/ai_status_display{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
@@ -15040,10 +15130,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
-"cum" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/r_wall,
-/area/janitor)
 "cux" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
@@ -27069,9 +27155,8 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
+/obj/machinery/ai_status_display{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
@@ -29184,10 +29269,6 @@
 /obj/effect/landmark/event_spawn/dronepod_landing,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/mine/explored/muriki/mountainnorth)
-"hdp" = (
-/obj/machinery/ai_status_display,
-/turf/simulated/wall/r_wall,
-/area/janitor)
 "hdt" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -38674,6 +38755,9 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/beige/border,
 /obj/machinery/light,
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "jNV" = (
@@ -41191,6 +41275,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "kzA" = (
@@ -42010,6 +42098,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -47364,9 +47455,8 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
-/obj/machinery/holoposter{
-	dir = 4;
-	pixel_x = -30
+/obj/machinery/ai_status_display{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/secondary/exit)
@@ -48648,6 +48738,10 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Cargo Tram Southeast";
 	dir = 1
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
@@ -54160,10 +54254,6 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
-	},
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
@@ -60340,9 +60430,8 @@
 	c_tag = "CIV - Primary Escape Elevator South";
 	dir = 4
 	},
-/obj/machinery/holoposter{
-	dir = 4;
-	pixel_x = -30
+/obj/machinery/ai_status_display{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
@@ -64617,7 +64706,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/holoposter{
+/obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel,
@@ -70882,19 +70971,13 @@
 	dir = 8;
 	pixel_x = 5
 	},
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_x = 32
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "tSi" = (
@@ -72145,9 +72228,6 @@
 "uim" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
-	},
-/obj/structure/sign/nosmoking_1{
-	pixel_y = -32
 	},
 /turf/simulated/floor/carpet/blue,
 /area/medical/psych)
@@ -74084,9 +74164,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -26
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
@@ -84665,8 +84745,9 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
 	},
-/obj/structure/sign/painting/public{
-	pixel_x = -32
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
@@ -107595,7 +107676,7 @@ ain
 qtw
 tXP
 mQR
-cum
+pZn
 agS
 bLP
 bLP
@@ -107757,7 +107838,7 @@ aio
 fdj
 tXP
 jNO
-hdp
+pZn
 tMm
 ahb
 kUU
@@ -122513,7 +122594,7 @@ fkw
 uAD
 jYt
 wNw
-ktN
+anV
 sQM
 sQM
 lWL
@@ -125375,9 +125456,9 @@ qdV
 anT
 anR
 pgv
-iug
+aod
 uMW
-bkI
+aoc
 jkM
 ePO
 dgF
@@ -127365,7 +127446,7 @@ wUl
 drr
 gSP
 uJK
-vmL
+anY
 vJP
 hpu
 gFB
@@ -127527,7 +127608,7 @@ wLi
 obr
 obr
 uJK
-pkS
+anZ
 wNw
 cgm
 qQS
@@ -131423,7 +131504,7 @@ ffi
 ilb
 ilb
 qzF
-oCn
+anX
 gta
 jgx
 aiB
@@ -139314,7 +139395,7 @@ aYO
 hcl
 uim
 ufG
-afN
+aob
 afO
 afQ
 cGe
