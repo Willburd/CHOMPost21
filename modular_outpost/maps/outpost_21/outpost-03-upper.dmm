@@ -895,6 +895,27 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
+"abT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics/hallway)
+"abU" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 6
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics/hallway)
 "abX" = (
 /obj/effect/floor_decal/corner/pink{
 	dir = 10
@@ -3348,6 +3369,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "bjS" = (
@@ -4619,12 +4643,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/wood,
 /area/library)
@@ -9305,6 +9329,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "edQ" = (
@@ -9992,6 +10019,10 @@
 	layer = 4;
 	pixel_y = 32
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "euT" = (
@@ -10032,6 +10063,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/library)
@@ -10475,7 +10509,6 @@
 /area/hydroponics/hallway)
 "eFT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -10485,6 +10518,10 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Civilian Second Floor Elevator";
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
@@ -12086,11 +12123,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "fzY" = (
@@ -12353,6 +12391,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
 "fID" = (
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "fJd" = (
@@ -13155,6 +13194,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -16215,7 +16257,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
@@ -16230,6 +16271,10 @@
 	},
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
@@ -26945,6 +26990,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "mWF" = (
@@ -27100,17 +27148,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
-/obj/effect/landmark/holiday_event_spawn,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal,
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "nbP" = (
@@ -28761,6 +28808,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -30647,9 +30697,6 @@
 /obj/item/camera,
 /obj/item/taperecorder,
 /obj/item/clothing/under/suit_jacket/red,
-/obj/structure/sign/painting/library_private{
-	pixel_y = -32
-	},
 /obj/machinery/light/small,
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
@@ -30657,6 +30704,13 @@
 /obj/item/rectape/random,
 /obj/item/rectape/random,
 /obj/item/rectape/random,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/wall{
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/library_office)
 "oPN" = (
@@ -44109,6 +44163,9 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/carpet,
 /area/library_office)
 "vsu" = (
@@ -45713,6 +45770,10 @@
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/carpet,
 /area/library_office)
@@ -104427,7 +104488,7 @@ iGb
 aKl
 aKl
 pgB
-iGb
+abT
 ceM
 uAO
 smU
@@ -104589,7 +104650,7 @@ poG
 xOW
 xOW
 jNZ
-gCO
+abU
 sNz
 eax
 cTv
