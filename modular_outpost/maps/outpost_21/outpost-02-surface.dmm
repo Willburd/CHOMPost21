@@ -65848,10 +65848,6 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
-/obj/machinery/light_switch{
-	pixel_x = 24;
-	pixel_y = 25
-	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "svS" = (
