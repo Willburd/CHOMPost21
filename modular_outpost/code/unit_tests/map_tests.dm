@@ -77,7 +77,22 @@
 			log_unit_test("[A] lacks a fire extinguisher")
 			failures++
 
-
+		// Hallways have some unique properties
+		var/is_hallway = FALSE
+		if(istype(A,/area/hallway))
+			is_hallway = TRUE
+		if(istype(A,/area/muriki/tramstation))
+			is_hallway = TRUE
+		if(!is_hallway)
+			// lightswitches required in rooms
+			if(!(locate(/obj/machinery/light_switch) in A.contents))
+				log_unit_test("[A] lacks an lightswitch")
+				failures++
+		else
+			// lightswitches forbidden in hallways
+			if(!(locate(/obj/machinery/light_switch) in A.contents))
+				log_unit_test("[A] had a lightswitch, but is a hallway")
+				failures++
 
 
 
