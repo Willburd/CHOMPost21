@@ -81,8 +81,7 @@
 		/area/offworld/confinementbeam/station/starboard_airlock,
 		/area/offworld/confinementbeam/station/port_airlock,
 		/area/offworld/confinementbeam/station/hallway,
-		/area/offworld/confinementbeam/station/hallway_alt,
-		/area/offworld/confinementbeam/station/beam_emitter
+		/area/offworld/confinementbeam/station/hallway_alt
 	)
 
 	var/list/does_not_use_lightswitch = list(
