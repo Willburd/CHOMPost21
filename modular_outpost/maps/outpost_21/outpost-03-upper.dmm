@@ -1014,6 +1014,51 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/phoronicsmainhall)
+"acb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/medical/sleevecheck)
+"acc" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
+"acd" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
+"ace" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
 "aci" = (
 /obj/structure/window/reinforced/full{
 	color = "#dd003c"
@@ -11826,6 +11871,7 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/evastore)
 "fnE" = (
@@ -12092,6 +12138,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "fwg" = (
@@ -16281,6 +16328,13 @@
 	pixel_y = -30;
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -35
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/evastore)
 "hIb" = (
@@ -19151,6 +19205,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/medical/evastore)
 "jbl" = (
@@ -20989,6 +21044,7 @@
 	pixel_x = -30;
 	pixel_y = -6
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "jUy" = (
@@ -21081,6 +21137,9 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -22070,6 +22129,9 @@
 	dir = 5
 	},
 /obj/item/geiger/wall/north,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "kuM" = (
@@ -23215,6 +23277,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "kVD" = (
@@ -23449,6 +23512,7 @@
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/medical/evastore)
 "leQ" = (
@@ -24026,6 +24090,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/medical/evastore)
 "ltk" = (
@@ -24664,6 +24729,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/evastore)
 "lKM" = (
@@ -26685,12 +26751,12 @@
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/security)
 "mMA" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -33329,6 +33395,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -22
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/evastore)
 "qeE" = (
@@ -34600,6 +34667,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/medical/evastore)
 "qIg" = (
@@ -92250,7 +92318,7 @@ eIs
 mQT
 heB
 oBg
-hQk
+acd
 hem
 trq
 oNH
@@ -92736,13 +92804,13 @@ aau
 fuz
 aJt
 kIi
-hQk
-hem
-vgu
+ace
+acc
+acb
 jTH
 kVB
 fvI
-vgu
+acb
 fnj
 lKJ
 qHO

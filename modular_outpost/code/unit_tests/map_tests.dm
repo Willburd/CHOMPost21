@@ -254,8 +254,10 @@
 			if((locate(/obj/machinery/light_switch) in A.contents))
 				log_unit_test("[A.type] had a lightswitch, but is a hallway")
 				failures++
-
-
+			// Hallways must have a geiger counter
+			if(!(locate(/obj/item/geiger/wall) in A.contents))
+				log_unit_test("[A.type] lacks an geiger counter")
+				failures++
 
 	if(failures)
 		fail("[failures] areas fail outpost 21 buildcode.")
