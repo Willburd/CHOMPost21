@@ -34,7 +34,10 @@
 		/area/medical/virologyaccess,
 		/area/engineering/engine_room,
 		/area/hydroponics/gibber,
-		/area/rnd/research/roof_eva
+		/area/rnd/research/roof_eva,
+		/area/ai_sat/core_external,
+		/area/offworld/confinementbeam/exterior,
+		/area/ai_sat/power_control
 		)
 
 	var/list/forced_hallway = list(
@@ -69,7 +72,16 @@
 		/area/muriki/research/isolation_hall,
 		/area/medical/stairwell,
 		/area/medical/patient_wing,
-		/area/rnd/research/phoronics
+		/area/rnd/research/phoronics,
+		/area/ai_sat/fore_airlock,
+		/area/ai_sat/access_shaft,
+		/area/ai_sat/docking_wing,
+		/area/offworld/confinementbeam/station/trawler_airlock,
+		/area/offworld/confinementbeam/station/access_shaft,
+		/area/offworld/confinementbeam/station/starboard_airlock,
+		/area/offworld/confinementbeam/station/port_airlock,
+		/area/offworld/confinementbeam/station/hallway,
+		/area/offworld/confinementbeam/station/hallway_alt
 	)
 
 	var/list/does_not_use_lightswitch = list(
@@ -184,7 +196,17 @@
 		/area/quartermaster/mining,
 		/area/quartermaster/mining/prep,
 		/area/quartermaster/mining/expl,
-		/area/quartermaster/mining/secpi
+		/area/quartermaster/mining/secpi,
+		/area/ai_sat/atmos,
+		/area/ai_sat/fore_airlock,
+		/area/ai_sat/access_shaft,
+		/area/ai_sat/docking_wing,
+		/area/ai,
+		/area/ai_upload,
+		/area/ai_cyborg_station,
+		/area/ai_upload_foyer,
+		/area/ai_sat/fore_airlock,
+		/area/ai_server_room
 	)
 
 	var/list/does_not_have_displays = list(
@@ -202,7 +224,10 @@
 		/area/rnd/stairwell,
 		/area/hallway/secondary/chapel_hallway,
 		/area/hallway/secondary/secmedbridge,
-		/area/rnd/hallway/phoronicsbridge
+		/area/rnd/hallway/phoronicsbridge,
+		/area/ai_sat/fore_airlock,
+		/area/ai_sat/access_shaft,
+		/area/ai_sat/docking_wing
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
