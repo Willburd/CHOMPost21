@@ -134,15 +134,15 @@
 
 		// fire alarm
 		if(!(locate(/obj/machinery/firealarm) in A.contents))
-			log_unit_test("[A] lacks a fire alarm")
+			log_unit_test("[A.type] lacks a fire alarm")
 			failures++
 		// radio
 		if(!(locate(/obj/item/radio/intercom) in A.contents))
-			log_unit_test("[A] lacks an intercom")
+			log_unit_test("[A.type] lacks an intercom")
 			failures++
 		// extinguishers
 		if(!(locate(/obj/structure/extinguisher_cabinet) in A.contents))
-			log_unit_test("[A] lacks a fire extinguisher")
+			log_unit_test("[A.type] lacks a fire extinguisher")
 			failures++
 
 		// Hallways have some unique properties
@@ -161,12 +161,12 @@
 			// lightswitches required in rooms
 			if(!(A.type in does_not_use_lightswitch))
 				if(!(locate(/obj/machinery/light_switch) in A.contents))
-					log_unit_test("[A] lacks an lightswitch")
+					log_unit_test("[A.type] lacks an lightswitch")
 					failures++
 		else
 			// lightswitches forbidden in hallways
 			if((locate(/obj/machinery/light_switch) in A.contents))
-				log_unit_test("[A] had a lightswitch, but is a hallway")
+				log_unit_test("[A.type] had a lightswitch, but is a hallway")
 				failures++
 
 
