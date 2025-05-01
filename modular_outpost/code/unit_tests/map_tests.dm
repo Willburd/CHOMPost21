@@ -47,7 +47,17 @@
 			/area/rnd/xenobiology/hallway,
 			/area/muriki/crewstairwell,
 			/area/hydroponics/hallway,
-			/area/hallway/secondary/secmedbridge
+			/area/hallway/secondary/secmedbridge,
+			/area/rnd/hallway,
+			/area/rnd/hallway/main,
+			/area/rnd/hallway/basementstairs,
+			/area/rnd/hallway/upper,
+			/area/rnd/hallway/lowmain,
+			/area/rnd/hallway/xeno,
+			/area/rnd/hallway/hazard,
+			/area/rnd/hallway/staircase,
+			/area/rnd/hallway/phoronicsbridge,
+			/area/rnd/hallway/phoronicsmainhall
 		)
 
 	var/list/does_not_use_lightswitch = list(
