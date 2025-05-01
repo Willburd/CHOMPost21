@@ -2412,10 +2412,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/light_switch{
-	pixel_y = 28;
-	pixel_x = -6
-	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
 "aNg" = (
@@ -3882,6 +3878,11 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/hangar)
@@ -20565,10 +20566,6 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
-	},
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 28
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10

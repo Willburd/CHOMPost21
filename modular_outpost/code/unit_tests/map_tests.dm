@@ -64,7 +64,11 @@
 			/area/engineering/atmoshall,
 			/area/engineering/refinery/tugstorage,
 			/area/rnd/stairwell,
-			/area/quartermaster/foyer
+			/area/quartermaster/foyer,
+			/area/muriki/research/isolation_hall,
+			/area/medical/stairwell,
+			/area/medical/patient_wing,
+			/area/rnd/research/phoronics
 		)
 
 	var/list/does_not_use_lightswitch = list(
@@ -87,7 +91,16 @@
 			/area/rnd/entry_aux,
 			/area/rnd/research/medical_roof,
 			/area/rnd/research/roof_eva,
-			/area/engineering/gravgen
+			/area/engineering/gravgen,
+			/area/security/tactical,
+			/area/rnd/research/medical,
+			/area/tcommsat/computer,
+			/area/tcommsat/lounge,
+			/area/tcommsat/powercontrol,
+			/area/quartermaster/mining/firstaid,
+			/area/muriki/cybstorage,
+			/area/bridge,
+			/area/medical/reception
 		)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
@@ -138,6 +151,9 @@
 			is_hallway = TRUE
 		if(A.type in forced_hallway)
 			is_hallway = TRUE
+		// Some dumb exclusions
+		if(A.type == /area/hallway/secondary/entry/docking_lounge)
+			is_hallway = FALSE
 
 		if(!is_hallway)
 			// lightswitches required in rooms

@@ -6204,6 +6204,17 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/civilian)
+"ajW" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 22
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "ajX" = (
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -7737,6 +7748,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/enginestorage)
+"amR" = (
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "amS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7934,6 +7953,27 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
+"ank" = (
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -26;
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_emt_bay)
+"anl" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light_switch{
+	pixel_x = 20;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "ann" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -8028,6 +8068,11 @@
 "aoS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -18932,8 +18977,8 @@
 /obj/item/grenade/chem_grenade/cleaner,
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_x = 4;
-	pixel_y = -24
+	pixel_x = -8;
+	pixel_y = -25
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -21555,6 +21600,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 25;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -25765,6 +25815,11 @@
 /area/medical/virology)
 "gce" = (
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light_switch{
+	pixel_x = 26;
+	pixel_y = 24;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "gcg" = (
@@ -29921,6 +29976,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 26
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "hso" = (
@@ -31909,13 +31968,13 @@
 /area/hallway/primary/central_one)
 "hUY" = (
 /obj/effect/floor_decal/milspec/color/blue/half,
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 4;
-	pixel_y = -24
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -27;
+	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
@@ -41341,6 +41400,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 23;
+	pixel_y = -24
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "kJr" = (
@@ -43042,6 +43106,11 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 24;
+	pixel_y = -25
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
@@ -47702,6 +47771,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
 	},
+/obj/machinery/light_switch{
+	pixel_x = 24;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
 "mGn" = (
@@ -52133,8 +52206,8 @@
 /obj/effect/floor_decal/milspec/color/blue/half,
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_x = 4;
-	pixel_y = -24
+	pixel_x = -12;
+	pixel_y = -27
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -55434,16 +55507,12 @@
 	dir = 8
 	},
 /obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+	pixel_y = 26
 	},
 /obj/structure/extinguisher_cabinet{
-	pixel_x = -8;
-	pixel_y = 30
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 7;
-	pixel_y = 30
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -56819,6 +56888,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 26;
+	pixel_y = 22;
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -65773,6 +65847,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24;
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
@@ -78296,6 +78374,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
 "wgM" = (
@@ -82799,6 +82882,11 @@
 "xBl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 8
 	},
 /turf/simulated/floor,
 /area/constructionsite/engineering)
@@ -128335,7 +128423,7 @@ imv
 sTm
 iaa
 tBn
-tdq
+anl
 tdq
 tdq
 tdq
@@ -128501,7 +128589,7 @@ sFL
 bXA
 nmn
 nEn
-lEp
+amR
 tYG
 iJc
 agp
@@ -128825,7 +128913,7 @@ wSx
 wkX
 wZN
 ahx
-pCt
+ank
 qRx
 iTd
 dPc
@@ -137105,7 +137193,7 @@ kIS
 cKb
 tpU
 pfF
-rFr
+ajW
 spV
 wDp
 upn

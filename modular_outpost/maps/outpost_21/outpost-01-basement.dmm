@@ -1696,9 +1696,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/purple/half,
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -9;
+	pixel_y = -23
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
@@ -1715,6 +1716,10 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 26
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
@@ -6227,6 +6232,11 @@
 	},
 /obj/structure/catwalk,
 /obj/machinery/light,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -9;
+	pixel_y = -23
+	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
 "alu" = (
@@ -6420,6 +6430,10 @@
 	},
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_y = 28;
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
@@ -16739,6 +16753,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -24;
+	pixel_y = -28
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/atmos/voxdump)
 "aDW" = (
@@ -17823,6 +17842,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/catwalk_plated/dark,
+/obj/machinery/light_switch{
+	pixel_y = 28;
+	pixel_x = -24
+	},
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
 "aFS" = (
@@ -17881,6 +17904,11 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -9;
+	pixel_y = -23
+	},
 /turf/simulated/floor/plating,
 /area/muriki/atmos/voxdump)
 "aFX" = (
@@ -19797,6 +19825,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
@@ -22218,13 +22251,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/bathroom/atmospherics)
 "aNY" = (
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/radio/intercom/department/medbay{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/mail)
 "aNZ" = (
@@ -27858,6 +27892,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 25;
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "aYb" = (
@@ -30352,8 +30391,10 @@
 	c_tag = "ENG - Robotics West";
 	dir = 4
 	},
-/obj/structure/sign/poster{
-	dir = 8
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/robotics)
@@ -36728,6 +36769,11 @@
 /obj/machinery/atmospherics/binary/pump,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 25;
+	pixel_y = -22
 	},
 /turf/simulated/floor,
 /area/security/riot_control)
@@ -49709,6 +49755,11 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/tankstorage)
 "djL" = (
@@ -54492,6 +54543,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
+/obj/structure/sign/nosmoking_1{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
 "fYy" = (
@@ -55449,14 +55503,13 @@
 /turf/simulated/mineral/alt/ignore_mapgen/muriki,
 /area/maintenance/civ/closet)
 "gGA" = (
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/mail)
 "gGH" = (
@@ -55841,9 +55894,6 @@
 /obj/machinery/vending/wallmed1{
 	pixel_y = -32;
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Refinery South'";
@@ -56300,9 +56350,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled/dark/muriki,
@@ -59604,9 +59651,6 @@
 	pixel_y = -32
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/blue{
@@ -60658,6 +60702,10 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/machinery/light_switch{
+	pixel_y = 28;
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/mail)
 "jUr" = (
@@ -61097,9 +61145,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/sign/nosmoking_1{
-	pixel_x = 32
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -62632,9 +62677,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
@@ -64886,10 +64928,6 @@
 /area/maintenance/cave)
 "mzJ" = (
 /obj/structure/catwalk,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -65291,6 +65329,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -67965,7 +68008,7 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28;
-	pixel_y = 26
+	pixel_y = 22
 	},
 /turf/simulated/floor,
 /area/engineering/refinery/pump_station)
@@ -68604,9 +68647,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -71727,6 +71767,11 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = 20
+	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/tankstorage)
 "qKL" = (
@@ -72323,6 +72368,11 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 22
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
@@ -73230,6 +73280,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
 /turf/simulated/floor,
 /area/engineering/refinery/tankstorage)
 "rxv" = (
@@ -73809,12 +73863,6 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
-	},
-/obj/machinery/power/thermoregulator/cryogaia{
-	pixel_y = -32
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -74952,6 +75000,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = 20
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/mail)
@@ -78698,10 +78751,8 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "engdinger";
-	name = "Engineering Dinger";
-	pixel_x = -30
+/obj/structure/sign/poster{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
@@ -80611,6 +80662,11 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = -24
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
 "wbb" = (
@@ -82392,6 +82448,11 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/engineering/refinery/main)
