@@ -37,6 +37,29 @@
 					/area/rnd/research/roof_eva
 					)
 
+	var/list/forced_hallway = list(
+			/area/security/prison,
+			/area/crew_quarters/recreation_area_hallway,
+			/area/bridge_hallway,
+			/area/engineering/aft_hallway,
+			/area/medical/medbay,
+			/area/medical/surgery_hallway,
+			/area/rnd/xenobiology/hallway,
+			/area/muriki/crewstairwell,
+			/area/hydroponics/hallway,
+			/area/hallway/secondary/secmedbridge
+		)
+
+	var/list/does_not_use_lightswitch = list(
+			/area/security/brig,
+			/area/engineering/trammaint,
+			/area/security/surgery,
+			/area/muriki/crew/dormaid,
+			/area/muriki/crew/baraid,
+			/area/muriki/crew/engyaid,
+
+		)
+
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
 
 	for(var/area/A in world)
@@ -83,11 +106,15 @@
 			is_hallway = TRUE
 		if(istype(A,/area/muriki/tramstation))
 			is_hallway = TRUE
+		if(A.type in forced_hallway)
+			is_hallway = TRUE
+
 		if(!is_hallway)
 			// lightswitches required in rooms
-			if(!(locate(/obj/machinery/light_switch) in A.contents))
-				log_unit_test("[A] lacks an lightswitch")
-				failures++
+			if(!(A.type in does_not_use_lightswitch))
+				if(!(locate(/obj/machinery/light_switch) in A.contents))
+					log_unit_test("[A] lacks an lightswitch")
+					failures++
 		else
 			// lightswitches forbidden in hallways
 			if(!(locate(/obj/machinery/light_switch) in A.contents))
