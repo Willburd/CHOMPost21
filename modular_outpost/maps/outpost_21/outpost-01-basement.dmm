@@ -12856,6 +12856,9 @@
 	phoron = 21.8366
 	},
 /area/medical/voxlab/airlock)
+"awQ" = (
+/turf/simulated/wall,
+/area/medical/mail)
 "awR" = (
 /obj/machinery/vending/fitness{
 	dir = 4;
@@ -21916,7 +21919,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/old_cargo/white,
-/area/engineering/refinery/tugstorage)
+/area/medical/mail)
 "aNs" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
@@ -48122,7 +48125,7 @@
 	},
 /obj/structure/plasticflaps/mining,
 /turf/simulated/floor/plating,
-/area/engineering/refinery/tankstorage)
+/area/medical/mail)
 "chI" = (
 /obj/structure/table/reinforced,
 /obj/item/material/butterflyblade,
@@ -51774,7 +51777,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/engineering/refinery/tankstorage)
+/area/medical/mail)
 "etQ" = (
 /obj/machinery/door/blast/regular{
 	id = "mechbay";
@@ -82781,7 +82784,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/engineering/refinery/tankstorage)
+/area/medical/mail)
 "xvt" = (
 /obj/machinery/elevator_warning,
 /obj/effect/floor_decal/techfloor/orange{
@@ -122517,9 +122520,9 @@ oEC
 vwz
 qKH
 eym
-plp
+awQ
 xvn
-plp
+awQ
 chx
 aKA
 rPj
@@ -122679,7 +122682,7 @@ uxB
 aSF
 tNw
 aNp
-plp
+awQ
 jGn
 kxF
 pcx
@@ -122841,7 +122844,7 @@ cQl
 cQl
 aLv
 aMB
-cQl
+awQ
 aNY
 gmM
 aLz
@@ -123003,7 +123006,7 @@ kXW
 udm
 aLw
 qTH
-cQl
+awQ
 gGA
 qcl
 aLz
@@ -123327,10 +123330,10 @@ aJx
 saL
 aLy
 aMC
-cQl
-xSM
-xSM
-xSM
+awQ
+awQ
+awQ
+awQ
 aQw
 aRz
 aRz

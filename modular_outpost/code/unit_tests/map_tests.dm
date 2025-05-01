@@ -81,13 +81,14 @@
 		/area/muriki/crew/engyaid,
 		/area/security/security_aid_station,
 		/area/engineering/refinery/aid_station,
+		/area/medical/first_aid_station_starboard,
+		/area/medical/first_aid_station,
+		/area/quartermaster/mining/firstaid,
 		/area/rnd/research/phoronics/med,
 		/area/security/nuke_storage,
 		/area/medical/autosleever,
 		/area/security/armoury,
 		/area/muriki/arriveelev,
-		/area/medical/first_aid_station_starboard,
-		/area/medical/first_aid_station,
 		/area/rnd/entry,
 		/area/rnd/entry_aux,
 		/area/rnd/research/medical_roof,
@@ -99,12 +100,27 @@
 		/area/tcomfoyer,
 		/area/tcommsat/lounge,
 		/area/tcommsat/powercontrol,
-		/area/quartermaster/mining/firstaid,
 		/area/muriki/cybstorage,
 		/area/bridge,
 		/area/wreck/bridge,
 		/area/medical/reception,
 		/area/comms
+	)
+
+	var/list/does_not_have_disposals = list(
+		/area/security/tankstore,
+		/area/security/brig,
+		/area/engineering/trammaint,
+		/area/security/prison,
+		/area/security/riot_control,
+		/area/muriki/crew/dormaid,
+		/area/muriki/crew/baraid,
+		/area/muriki/crew/engyaid,
+		/area/security/security_aid_station,
+		/area/engineering/refinery/aid_station,
+		/area/medical/first_aid_station_starboard,
+		/area/medical/first_aid_station,
+		/area/quartermaster/mining/firstaid,
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
@@ -145,10 +161,11 @@
 		if(!(locate(/obj/structure/extinguisher_cabinet) in A.contents))
 			log_unit_test("[A.type] lacks a fire extinguisher")
 			failures++
-		// extinguishers
-		if(!(locate(/obj/structure/disposaloutlet) in A.contents))
-			log_unit_test("[A.type] lacks a disposal outlet")
-			failures++
+		// disposals
+		if(!(locate(/obj/machinery/disposal) in A.contents))
+			if(!(A.type in does_not_have_disposals))
+				log_unit_test("[A.type] lacks a disposal bin")
+				failures++
 
 		// Hallways have some unique properties
 		var/is_hallway = FALSE
