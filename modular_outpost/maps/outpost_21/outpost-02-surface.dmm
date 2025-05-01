@@ -3716,6 +3716,7 @@
 	pixel_y = 3
 	},
 /obj/item/storage/box/trackimp,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "afy" = (
@@ -4764,6 +4765,7 @@
 	pixel_x = 30
 	},
 /obj/machinery/light,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -8117,9 +8119,120 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
+"anE" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
+"anF" = (
+/obj/structure/closet/secure_closet/security,
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/mask/gas/sechailer,
+/obj/item/clothing/accessory/bodycam,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/security/security_equiptment_storage)
+"anG" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_one)
+"anH" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/machinery/light,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
+"anI" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
+"anJ" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/beige/border,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
+"anK" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/hallway/secondary/exit)
+"anL" = (
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/open,
+/area/hallway/secondary/entry/docking_lounge)
+"anM" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/open,
+/area/muriki/crewstairwell)
+"anN" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/sign/painting/public{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/medical/medbay3)
+"anO" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/medical_kiosk,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/aft)
+"anP" = (
+/obj/item/geiger/wall/south,
+/turf/simulated/open,
+/area/medical/stairwell)
 "anQ" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/tramstation/waste)
+"anR" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
 "anS" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -8132,6 +8245,20 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/storage/tools)
+"anT" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
+"anU" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/item/geiger/wall/south,
+/turf/simulated/open,
+/area/rnd/stairwell)
 "anW" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -8629,6 +8756,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
 "axF" = (
@@ -9750,6 +9878,7 @@
 	dir = 8;
 	pixel_x = 5
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "aQw" = (
@@ -10680,6 +10809,9 @@
 /area/bridge/meeting_room)
 "bcY" = (
 /obj/structure/closet/emcloset,
+/obj/structure/sign/painting/public{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/cybstorage)
 "bda" = (
@@ -12580,6 +12712,7 @@
 /obj/item/clothing/head/helmet/laserproof,
 /obj/item/clothing/head/helmet/laserproof,
 /obj/item/clothing/head/helmet/laserproof,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "bJY" = (
@@ -13160,6 +13293,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "bRr" = (
@@ -15083,6 +15217,7 @@
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "cym" = (
@@ -15579,6 +15714,7 @@
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/ladder,
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/tramstation/waste)
 "cGy" = (
@@ -16653,6 +16789,9 @@
 /obj/item/clothing/head/chefhat,
 /obj/effect/floor_decal/corner/green/full{
 	dir = 1
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
@@ -18494,6 +18633,7 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "dDx" = (
@@ -23464,6 +23604,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
+/obj/structure/sign/painting/public{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "flr" = (
@@ -23616,6 +23759,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "fmF" = (
@@ -23915,6 +24059,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
 "ftS" = (
@@ -28991,6 +29136,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "hcT" = (
@@ -31077,6 +31223,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "hGk" = (
@@ -37727,6 +37874,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
 "jzX" = (
@@ -39336,6 +39484,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/plating,
 /area/maintenance/bar)
 "jZk" = (
@@ -40169,6 +40318,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "klc" = (
@@ -40581,6 +40731,7 @@
 	dir = 1;
 	c_tag = "SEC - Main Hallway Detective"
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "krf" = (
@@ -43656,6 +43807,7 @@
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 10
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/foyer)
 "lrL" = (
@@ -43807,6 +43959,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
 "ltL" = (
@@ -44166,6 +44319,9 @@
 	},
 /obj/structure/table/wooden_reinforced,
 /obj/item/storage/box/donut,
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "lyM" = (
@@ -46124,6 +46280,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/structure/sign/painting/public{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "mca" = (
@@ -46604,6 +46763,7 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "min" = (
@@ -47315,6 +47475,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/bridge)
 "mvV" = (
@@ -49172,6 +49333,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "ncj" = (
@@ -50264,6 +50426,9 @@
 	dir = 1
 	},
 /obj/structure/bed/chair/wheelchair,
+/obj/structure/sign/painting/public{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "nsQ" = (
@@ -53688,6 +53853,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "oxK" = (
@@ -54459,6 +54625,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "oKM" = (
@@ -57899,9 +58066,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
-/obj/structure/sign/painting/public{
-	pixel_x = -32
-	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "pTA" = (
@@ -58210,6 +58375,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "pWx" = (
@@ -63180,6 +63346,7 @@
 	c_tag = "SEC - Medstation Hallway";
 	dir = 8
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "rxK" = (
@@ -63558,6 +63725,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "rFr" = (
@@ -67817,6 +67985,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "sWN" = (
@@ -68216,6 +68385,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "tcf" = (
@@ -69586,6 +69756,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/light,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "tzF" = (
@@ -72758,6 +72929,7 @@
 /obj/machinery/camera/motion/command{
 	c_tag = "COM - Vault (Motion)"
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "uuS" = (
@@ -73242,6 +73414,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
 "uBP" = (
@@ -74053,6 +74226,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
@@ -77041,6 +77217,7 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "vJP" = (
@@ -79472,6 +79649,9 @@
 	pixel_x = 7;
 	pixel_y = 30
 	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "wrW" = (
@@ -81703,6 +81883,7 @@
 "xbI" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/milspec/color/red/half,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "xbP" = (
@@ -83366,6 +83547,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/central_one)
 "xDs" = (
@@ -106764,7 +106946,7 @@ ahV
 air
 gaf
 rzp
-raP
+anJ
 pZn
 kiM
 myk
@@ -123465,7 +123647,7 @@ myz
 jJH
 gAA
 wNw
-ktN
+anH
 svz
 sGn
 kke
@@ -124443,7 +124625,7 @@ kaP
 xMw
 dTm
 nNi
-rNT
+anE
 iId
 qOa
 rla
@@ -124714,7 +124896,7 @@ wIK
 lzS
 asN
 fNw
-nIL
+anP
 akS
 akU
 akU
@@ -125190,8 +125372,8 @@ oHR
 ehF
 bkI
 qdV
-bkI
-bkI
+anT
+anR
 pgv
 iug
 uMW
@@ -125689,7 +125871,7 @@ kDU
 kDU
 kny
 kny
-gYg
+anN
 vbv
 gYg
 pkd
@@ -127359,7 +127541,7 @@ qzu
 qJP
 pZb
 bMl
-qha
+anF
 fTZ
 aVj
 qHV
@@ -129616,7 +129798,7 @@ bQi
 bQi
 kPb
 bQi
-kpT
+anI
 gLa
 lzd
 iHa
@@ -131207,7 +131389,7 @@ cke
 eAg
 fEV
 cke
-ana
+anK
 clv
 vgj
 pXc
@@ -131245,7 +131427,7 @@ oCn
 gta
 jgx
 aiB
-ilb
+anG
 lsT
 oCn
 ilb
@@ -132664,7 +132846,7 @@ gio
 hTt
 hjh
 xts
-rBG
+anL
 bYO
 lLo
 mug
@@ -135063,7 +135245,7 @@ qVe
 agx
 eTA
 fYt
-fYt
+anU
 czI
 czI
 bZv
@@ -135731,7 +135913,7 @@ vgX
 vgX
 vgX
 hBh
-wAv
+anO
 tSA
 cWO
 uiP
@@ -136552,7 +136734,7 @@ uaL
 utI
 gVp
 tPj
-okX
+anM
 fdm
 rgI
 rgI

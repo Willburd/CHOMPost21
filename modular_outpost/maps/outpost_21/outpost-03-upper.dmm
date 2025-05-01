@@ -1059,6 +1059,32 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"acf" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled,
+/area/hallway/security/upper)
+"acg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/beige/border,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled,
+/area/hallway/muriki/civup)
+"ach" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/upper)
 "aci" = (
 /obj/structure/window/reinforced/full{
 	color = "#dd003c"
@@ -1075,6 +1101,44 @@
 	},
 /turf/simulated/floor/plating,
 /area/chapel/main)
+"acj" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "phoronic_lockdown";
+	name = "Phoronics Lockdown";
+	opacity = 0
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/segment,
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/techfloor,
+/area/rnd/hallway/phoronicsbridge)
+"ack" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/phoronicsmainhall)
+"acl" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/portables_connector,
+/obj/item/geiger/wall/north,
+/turf/simulated/floor,
+/area/rnd/hallway/phoronicsmainhall)
 "acx" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Med Roof. Backup Generators";
@@ -2912,6 +2976,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
 "aWI" = (
@@ -6200,10 +6265,8 @@
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 4
 	},
-/obj/structure/sign/warning/nosmoking_2{
-	pixel_x = 32
-	},
 /obj/structure/closet/firecloset/full,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
 "cvu" = (
@@ -6513,6 +6576,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/phoronicsmainhall)
 "cEN" = (
@@ -9124,9 +9188,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -10203,6 +10264,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/structure/sign/warning/nosmoking_2{
+	pixel_x = 32
 	},
 /turf/simulated/floor/plating,
 /area/rnd/research/phoronics)
@@ -13920,6 +13984,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/structure/sign/warning/nosmoking_2{
+	pixel_x = -32
+	},
 /turf/simulated/floor/plating,
 /area/rnd/research/phoronics)
 "gqC" = (
@@ -14132,6 +14199,9 @@
 /obj/item/radio/intercom/department/security{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/item/geiger/wall/east{
+	pixel_x = 38
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/secmedbridge)
@@ -15051,6 +15121,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/steel,
 /area/rnd/research/phoronics/bombrange)
 "gYS" = (
@@ -15094,13 +15165,11 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/structure/micro_tunnel{
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
 "hag" = (
@@ -17956,6 +18025,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/gasstore)
 "izp" = (
@@ -19011,6 +19081,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "iWm" = (
@@ -20795,6 +20866,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "jNw" = (
@@ -20836,6 +20908,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
 "jOo" = (
@@ -25139,9 +25212,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/vending/wallmed1/public{
-	pixel_y = 32
-	},
 /obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
@@ -27106,6 +27176,7 @@
 /area/hydroponics/publicgarden)
 "mUL" = (
 /obj/machinery/portable_atmospherics/canister,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/steel,
 /area/rnd/research/phoronics/burn)
 "mUP" = (
@@ -31498,9 +31569,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
@@ -31510,6 +31578,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "pej" = (
@@ -37658,13 +37727,11 @@
 /turf/simulated/floor/outpost_roof/muriki,
 /area/muriki/rooftop/medical)
 "sin" = (
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/structure/table/woodentable,
 /obj/item/flame/candle/candelabra{
 	pixel_y = 12
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -40233,6 +40300,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "tsg" = (
@@ -42519,10 +42587,6 @@
 /obj/effect/landmark{
 	name = "nukeitem"
 	},
-/obj/item/geiger/wall{
-	dir = 8;
-	pixel_x = 30
-	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -42532,6 +42596,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/wood,
 /area/rnd/rdoffice)
 "uvN" = (
@@ -43715,8 +43780,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/purple/full,
-/obj/structure/sign/warning/nosmoking_2{
-	pixel_x = -32
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
@@ -45104,6 +45170,9 @@
 /obj/item/radio/intercom/department/medbay{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/item/geiger/wall/east{
+	pixel_x = 38
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/secmedbridge)
@@ -48901,6 +48970,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/chapel_hallway)
 "xGf" = (
@@ -49001,6 +49071,7 @@
 	pixel_x = 30;
 	pixel_y = -4
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "xIm" = (
@@ -90094,7 +90165,7 @@ uqy
 sCi
 bLy
 aYd
-aYd
+acf
 sGc
 mCB
 oZb
@@ -96001,7 +96072,7 @@ ovc
 ovc
 kNy
 sWF
-nYw
+ack
 tSW
 wQH
 kQN
@@ -98588,7 +98659,7 @@ ovc
 ovc
 ovc
 bzn
-hJZ
+acl
 wbT
 blC
 oFY
@@ -99119,7 +99190,7 @@ nDB
 nDB
 dSK
 dSK
-xJq
+ach
 cRM
 kDt
 afd
@@ -100059,7 +100130,7 @@ nNH
 gDy
 uXR
 gqx
-yct
+acj
 cnD
 cjw
 lPA
@@ -100914,7 +100985,7 @@ vCN
 gyU
 cyi
 jsS
-cDp
+acg
 dTq
 mHh
 xjG

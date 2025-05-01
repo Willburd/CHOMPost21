@@ -71,15 +71,13 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "aaq" = (
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "aar" = (
@@ -13546,15 +13544,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
 "aya" = (
-/obj/item/geiger/wall{
-	dir = 1;
-	pixel_y = -30
-	},
 /obj/structure/bed/padded,
 /obj/item/bedsheet/cosmos,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 6
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/oldrd)
 "ayb" = (
@@ -19411,6 +19406,9 @@
 /obj/structure/closet/l3closet/medical,
 /obj/item/clothing/glasses/goggles,
 /obj/item/clothing/glasses/goggles,
+/obj/structure/sign/nosmoking_1{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay4)
 "aIG" = (
@@ -20450,9 +20448,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay4)
 "aKD" = (
-/obj/structure/sign/nosmoking_2{
-	pixel_x = 32
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
@@ -20462,6 +20457,7 @@
 	},
 /obj/structure/dispenser/oxygen,
 /obj/structure/disposalpipe/segment,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay4)
 "aKE" = (
@@ -21469,6 +21465,7 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "aMz" = (
@@ -23969,9 +23966,6 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
@@ -23988,6 +23982,7 @@
 	pixel_x = -7;
 	pixel_y = 3
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/morgue)
 "aQL" = (
@@ -27097,6 +27092,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aWl" = (
@@ -32133,6 +32129,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/muriki/dorm)
 "bfl" = (
@@ -38625,6 +38622,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"brA" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
 "brB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/red/full{
@@ -38981,6 +38988,43 @@
 "bsk" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/security/prison)
+"bsl" = (
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/dark/muriki,
+/area/mine/explored/muriki/cave/civ/south_access)
+"bsm" = (
+/obj/item/stool/padded,
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
+"bsn" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay2)
+"bso" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay2)
+"bsp" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay2)
 "bst" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -39865,6 +39909,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
 "bud" = (
@@ -40209,6 +40254,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
 "but" = (
@@ -44771,11 +44817,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/security/brig)
 "bCL" = (
-/obj/item/geiger/wall{
-	dir = 1;
-	pixel_y = -30
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/monotile,
 /area/security/brig)
 "bCM" = (
@@ -50137,6 +50180,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "dir" = (
@@ -60753,6 +60797,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
 "jEb" = (
@@ -64301,15 +64346,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "lNA" = (
@@ -66501,12 +66544,10 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/structure/bed/chair/bay/chair/padded{
 	dir = 4
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "nkg" = (
@@ -69599,6 +69640,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "pgd" = (
@@ -75467,6 +75509,7 @@
 	dir = 8
 	},
 /obj/machinery/light,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "stx" = (
@@ -77309,9 +77352,6 @@
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
 "tIA" = (
-/obj/item/geiger/wall{
-	pixel_y = 30
-	},
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Robotics Mech Exterior"
 	},
@@ -77321,6 +77361,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "tIC" = (
@@ -78783,13 +78824,10 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 6
 	},
-/obj/item/geiger/wall{
-	dir = 1;
-	pixel_y = -30
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "uDC" = (
@@ -81662,6 +81700,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "wrE" = (
@@ -124857,7 +124896,7 @@ aQz
 bGo
 aPC
 aSN
-aPC
+bsn
 aPC
 aUa
 aUA
@@ -125985,7 +126024,7 @@ aLI
 aMN
 aNy
 jtX
-aPc
+bso
 aPG
 aPG
 aPG
@@ -128577,7 +128616,7 @@ lsZ
 lsZ
 aNE
 aOq
-aPi
+bsp
 aPH
 aQS
 aRN
@@ -135415,7 +135454,7 @@ aWa
 bfP
 eiX
 uBs
-bfb
+bsm
 bhj
 bff
 bhX
@@ -137538,7 +137577,7 @@ bqm
 bGY
 blW
 brL
-myz
+bsl
 xmS
 mNv
 fpy
@@ -139962,7 +140001,7 @@ bfW
 beK
 bmf
 bnj
-bgT
+brA
 wrV
 bgT
 bqx
@@ -139970,7 +140009,7 @@ bri
 bgH
 xQx
 wrV
-bgT
+brA
 buD
 bpY
 bwi
