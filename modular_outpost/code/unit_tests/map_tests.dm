@@ -34,7 +34,10 @@
 		/area/medical/virologyaccess,
 		/area/engineering/engine_room,
 		/area/hydroponics/gibber,
-		/area/rnd/research/roof_eva
+		/area/rnd/research/roof_eva,
+		/area/ai_sat/core_external,
+		/area/offworld/confinementbeam/exterior,
+		/area/ai_sat/power_control
 		)
 
 	var/list/forced_hallway = list(
@@ -198,7 +201,13 @@
 		/area/ai_sat/atmos,
 		/area/ai_sat/fore_airlock,
 		/area/ai_sat/access_shaft,
-		/area/ai_sat/docking_wing
+		/area/ai_sat/docking_wing,
+		/area/ai,
+		/area/ai_upload,
+		/area/ai_cyborg_station,
+		/area/ai_upload_foyer,
+		/area/ai_sat/fore_airlock,
+		/area/ai_server_room
 	)
 
 	var/list/does_not_have_displays = list(
@@ -242,10 +251,6 @@
 		if(istype(A,/area/maintenance))
 			continue
 		if(istype(A,/area/muriki/bathroom))
-			continue
-		if(istype(A,/area/offworld/confinementbeam/exterior))
-			continue
-		if(istype(A,/area/ai_sat/power_control))
 			continue
 		// Validate various room requirements, ON STATION
 		if(!(A.z in using_map.station_levels))
