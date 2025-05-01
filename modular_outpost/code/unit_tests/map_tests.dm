@@ -189,7 +189,7 @@
 
 	var/list/does_not_have_displays = list(
 		/area/rnd/entry,
-		/area/rnd/entry_aux
+		/area/rnd/entry_aux,
 		/area/rnd/research/phoronics
 	)
 
