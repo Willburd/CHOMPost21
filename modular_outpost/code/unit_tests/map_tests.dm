@@ -69,7 +69,17 @@
 		/area/muriki/research/isolation_hall,
 		/area/medical/stairwell,
 		/area/medical/patient_wing,
-		/area/rnd/research/phoronics
+		/area/rnd/research/phoronics,
+		/area/ai_sat/fore_airlock,
+		/area/ai_sat/access_shaft,
+		/area/ai_sat/docking_wing,
+		/area/offworld/confinementbeam/station/trawler_airlock,
+		/area/offworld/confinementbeam/station/access_shaft,
+		/area/offworld/confinementbeam/station/starboard_airlock,
+		/area/offworld/confinementbeam/station/port_airlock,
+		/area/offworld/confinementbeam/station/hallway,
+		/area/offworld/confinementbeam/station/hallway_alt,
+		/area/offworld/confinementbeam/station/beam_emitter
 	)
 
 	var/list/does_not_use_lightswitch = list(
@@ -184,7 +194,11 @@
 		/area/quartermaster/mining,
 		/area/quartermaster/mining/prep,
 		/area/quartermaster/mining/expl,
-		/area/quartermaster/mining/secpi
+		/area/quartermaster/mining/secpi,
+		/area/ai_sat/atmos,
+		/area/ai_sat/fore_airlock,
+		/area/ai_sat/access_shaft,
+		/area/ai_sat/docking_wing
 	)
 
 	var/list/does_not_have_displays = list(
@@ -202,7 +216,10 @@
 		/area/rnd/stairwell,
 		/area/hallway/secondary/chapel_hallway,
 		/area/hallway/secondary/secmedbridge,
-		/area/rnd/hallway/phoronicsbridge
+		/area/rnd/hallway/phoronicsbridge,
+		/area/ai_sat/fore_airlock,
+		/area/ai_sat/access_shaft,
+		/area/ai_sat/docking_wing
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
@@ -225,6 +242,10 @@
 		if(istype(A,/area/maintenance))
 			continue
 		if(istype(A,/area/muriki/bathroom))
+			continue
+		if(istype(A,/area/offworld/confinementbeam/exterior))
+			continue
+		if(istype(A,/area/ai_sat/power_control))
 			continue
 		// Validate various room requirements, ON STATION
 		if(!(A.z in using_map.station_levels))

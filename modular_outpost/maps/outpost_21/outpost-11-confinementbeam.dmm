@@ -25,6 +25,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
+"ae" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/hallway)
 "af" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -88,6 +99,37 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/fore_airlock)
+"am" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/access_shaft)
+"an" = (
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/muriki/bathroom/confinement_beam)
+"ao" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/light,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/port_airlock)
 "ap" = (
 /obj/structure/lattice,
 /obj/machinery/camera/network/substations{
@@ -95,6 +137,36 @@
 	},
 /turf/space,
 /area/offworld/confinementbeam/exterior)
+"aq" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/port_airlock)
+"ar" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = -21;
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
 "as" = (
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -125,6 +197,23 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
+"au" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = -21;
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/ai_upload)
 "av" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -132,6 +221,15 @@
 /obj/machinery/computer/rdconsole/engineering,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
+"aw" = (
+/obj/machinery/atmospherics/pipe/tank/air/full,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21
+	},
+/turf/simulated/floor/plating,
+/area/ai_sat/atmos)
 "ax" = (
 /obj/effect/floor_decal/corner/orange/full,
 /turf/simulated/floor/tiled/milspec,
@@ -187,6 +285,11 @@
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
@@ -796,6 +899,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
@@ -2915,6 +3023,11 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "iR" = (
@@ -3750,6 +3863,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/ai_upload)
 "lw" = (
@@ -4404,6 +4521,11 @@
 	dir = 8
 	},
 /obj/machinery/vending/fitness,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
 "nA" = (
@@ -5257,6 +5379,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "qg" = (
@@ -5342,6 +5469,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/orange{
 	icon_state = "1-4"
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 26;
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/atmos)
@@ -5962,6 +6094,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
 "sC" = (
@@ -6435,6 +6572,11 @@
 	name = "Bluespace Inhibitor";
 	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/greengrid,
 /area/ai)
 "ul" = (
@@ -6574,6 +6716,11 @@
 /obj/machinery/computer/aifixer{
 	dir = 1
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_cyborg_station)
 "uB" = (
@@ -6592,6 +6739,11 @@
 "uD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = -27;
+	dir = 1
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "uJ" = (
@@ -6698,6 +6850,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light_switch{
+	pixel_x = -28;
+	pixel_y = -27;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "vb" = (
@@ -7108,6 +7265,10 @@
 "wm" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "wn" = (
@@ -7537,6 +7698,9 @@
 	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/plating,
 /area/ai_sat/atmos)
@@ -8198,6 +8362,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/machinery/light_switch{
+	pixel_x = -28;
+	pixel_y = 30
+	},
 /turf/simulated/floor/wood,
 /area/ai)
 "zN" = (
@@ -8416,6 +8584,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Ax" = (
@@ -8623,6 +8795,10 @@
 /area/offworld/confinementbeam/station/port_equipment)
 "AW" = (
 /obj/machinery/porta_turret/ai_defense,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "AY" = (
@@ -9275,6 +9451,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light_switch{
+	pixel_x = -28;
+	pixel_y = -27;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "Di" = (
@@ -9707,6 +9888,11 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/tank/air/full,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "ES" = (
@@ -9799,6 +9985,11 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
@@ -10020,6 +10211,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/machinery/light_switch{
+	pixel_x = -28;
+	pixel_y = 30
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
@@ -10633,6 +10828,12 @@
 	c_tag = "AI - Fore Airlock";
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	broadcasting = 1;
+	dir = 8;
+	name = "Common Channel";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/fore_airlock)
 "HL" = (
@@ -10746,6 +10947,11 @@
 /area/offworld/confinementbeam/station/dockingbay)
 "Ia" = (
 /obj/effect/floor_decal/corner/orange/full,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/atmos)
 "Ib" = (
@@ -11968,6 +12174,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	pixel_x = -28;
+	pixel_y = 30
 	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
@@ -13430,6 +13640,11 @@
 	dir = 4
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
 "Qo" = (
@@ -13791,6 +14006,10 @@
 /obj/machinery/camera/network/substations{
 	c_tag = "AI - Solar entry"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
 "RF" = (
@@ -14126,6 +14345,11 @@
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Aft Gas Overflow Storage";
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -15239,6 +15463,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = -21;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "Wg" = (
@@ -15955,6 +16184,10 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "Yk" = (
 /obj/machinery/message_server,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_server_room)
 "Yl" = (
@@ -16379,6 +16612,10 @@
 "ZM" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/solar_control)
@@ -26057,7 +26294,7 @@ Fz
 Fz
 Fz
 AW
-Rd
+ar
 dH
 Fz
 OB
@@ -27509,7 +27746,7 @@ aS
 EA
 bP
 oe
-gZ
+aw
 qr
 cG
 Jr
@@ -27677,7 +27914,7 @@ On
 Jr
 Mj
 US
-MF
+au
 PD
 OZ
 Jr
@@ -39062,7 +39299,7 @@ PJ
 BD
 GN
 kT
-Jy
+an
 lq
 lq
 qv
@@ -39381,7 +39618,7 @@ of
 KA
 hn
 ZW
-fN
+ao
 PJ
 BD
 GN
@@ -40029,7 +40266,7 @@ of
 of
 er
 of
-EX
+aq
 PJ
 cI
 ue
@@ -42468,7 +42705,7 @@ Po
 Po
 Po
 rH
-yo
+am
 Wl
 Wl
 SZ
@@ -46844,7 +47081,7 @@ UK
 UK
 UK
 kK
-zk
+ae
 NX
 CE
 kK
