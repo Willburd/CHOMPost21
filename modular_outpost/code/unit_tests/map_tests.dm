@@ -67,7 +67,10 @@
 			/area/muriki/crew/dormaid,
 			/area/muriki/crew/baraid,
 			/area/muriki/crew/engyaid,
-
+			/area/security/security_aid_station,
+			/area/engineering/refinery/aid_station,
+			/area/rnd/research/phoronics/med,
+			/area/security/nuke_storage
 		)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
@@ -127,7 +130,7 @@
 					failures++
 		else
 			// lightswitches forbidden in hallways
-			if(!(locate(/obj/machinery/light_switch) in A.contents))
+			if((locate(/obj/machinery/light_switch) in A.contents))
 				log_unit_test("[A] had a lightswitch, but is a hallway")
 				failures++
 
