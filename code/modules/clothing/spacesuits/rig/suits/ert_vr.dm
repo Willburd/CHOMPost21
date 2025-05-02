@@ -2,7 +2,8 @@
 	name = "ERT-J suit control module"
 	desc = "A suit worn by the janitorial division of an Emergency Response Team. Has purple highlights. Armoured and space ready."
 	suit_type = "ERT janitor"
-	icon_state = "ert_janitor_rig"
+	icon = 'icons/obj/rig_modules_vr.dmi' // Outpost 21 edit - CI fix
+	icon_state = "ihs_rig" // "ert_janitor_rig" // Outpost 21 edit - CI fix
 
 	initial_modules = list(
 		/obj/item/rig_module/maneuvering_jets,

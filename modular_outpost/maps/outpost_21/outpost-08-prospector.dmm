@@ -5405,10 +5405,6 @@
 	},
 /turf/simulated/floor/tiled/old_cargo/blue,
 /area/space)
-"Ix" = (
-/obj/machinery/computer/pandemic/isolator,
-/turf/simulated/floor/tiled/old_cargo/gray,
-/area/space)
 "IE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
@@ -50458,7 +50454,7 @@ lD
 lD
 lD
 ED
-Ix
+VL
 Ng
 Ng
 Ng
