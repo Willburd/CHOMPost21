@@ -19,3 +19,6 @@
 
 #define REAGENT_NUKIEFINAL "Nukie Final"
 #define REAGENT_ID_NUKIEFINAL "nukie_final"
+
+#define REAGENT_THEDEW "Mountain Wind Crystal Classic"
+#define REAGENT_ID_THEDEW "the_dew_mtw"

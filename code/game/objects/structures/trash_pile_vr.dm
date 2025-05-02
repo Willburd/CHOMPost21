@@ -34,6 +34,7 @@
 		/obj/item/organ/internal/augment/bioaugment/thermalshades,
 		/obj/item/organ/internal/augment/armmounted/hand/sword,
 		/obj/item/organ/internal/augment/armmounted/dartbow,
+		/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit - New loot
 		// Outpost 21 edit end
 		)
 	var/global/list/allocated_gamma = list()
@@ -45,7 +46,8 @@
 		/obj/item/spellbook/oneuse/fireball,
 		/obj/item/spellbook/oneuse/forcewall,
 		/obj/item/spellbook/oneuse/horsemask,
-		/obj/item/spellbook/oneuse/knock
+		/obj/item/spellbook/oneuse/knock,
+		/obj/item/material/twohanded/fireaxe // Outpost 21 edit - New loot
 		)
 	var/static/spawned_theta = FALSE
 	// Outpost 21 edit end
@@ -381,7 +383,8 @@
 					prob(1);/obj/item/gun/energy/sizegun/backfire,
 					prob(1);/obj/item/deadringer, // Outpost 21 edit - New loot
 					prob(1);/obj/item/organ/internal/augment/armmounted/shoulder/multiple, // Outpost 21 edit - New loot
-					prob(1);/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical // Outpost 21 edit - New loot
+					prob(1);/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical, // Outpost 21 edit - New loot
+					prob(1);/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind // Outpost 21 edit - New loot
 					)
 
 	var/obj/item/I = new path()

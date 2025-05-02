@@ -7,6 +7,18 @@
 	prefill = list(REAGENT_ID_ASUSTENANCE = 30)
 
 
+/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind
+	name = "\improper Mountain Wind Crystal Classic"
+	desc = "Mountain Wind Crystal Classic, was the hit soft drink fad in 2231. Last seen on sale in 2285..."
+	description_fluff = "Mountain Wild soda from before the 'space' rebranding centuries ago. This hasn't been seen on shelves for just as long!"
+	icon_state = "space_mountain_wind"
+	center_of_mass_x = 16
+	center_of_mass_y = 8
+
+/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_THEDEW, 30)
+
 
 // Randomized protein powder
 /obj/item/reagent_containers/glass/beaker/wheymax

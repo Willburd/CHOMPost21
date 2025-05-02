@@ -5434,6 +5434,7 @@
 #include "modular_outpost\code\modules\vore\eating\living.dm"
 #include "modular_outpost\code\modules\vore\fluffstuff\custom_items.dm"
 #include "modular_outpost\code\modules\xenobio\items\extracts.dm"
+#include "modular_outpost\code\unit_tests\map_tests.dm"
 #include "modular_outpost\maps\overmap\space_pois\space_pois.dm"
 #include "modular_outpost\maps\submaps\base.dm"
 #include "modular_outpost\maps\submaps\cargoyard\cargoyard.dm"

@@ -258,6 +258,11 @@ var/list/all_maps = list()
 	//Get what sector we're in
 	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
 	if(istype(O))
+		// Outpost 21 edit begin - Remote Station levels
+		if (srcz in station_levels)
+			return station_levels.Copy() | O.map_z.Copy()
+		// Outpost 21 edit end
+
 		//Just the sector we're in
 		if(om_range == -1)
 			return O.map_z.Copy()

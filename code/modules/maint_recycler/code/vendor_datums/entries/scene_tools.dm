@@ -90,13 +90,14 @@
 	ad_message = "Magic!"
 	desc = "Believe it or not, pets freak out when shrunk to the size of a pea! We can't sell these, so you need to buy it instead! I know what you are!"
 	object_type_to_spawn = /obj/item/clothing/accessory/collar/shock/bluespace
+	item_cost = 30 // Outpost 21 edit - Increased price
 	vendor_category = MAINTVENDOR_SCENETOOLS
 
 /datum/maint_recycler_vendor_entry/tf_gun //lets go gambling!
 	name = "MetaMorph Ray"
 	ad_message = "Metamorph-SUS!"
 	desc = "Wow! You wouldn't BELIEVE how many of these things we have! That surplus and the mystery of the exact one you get is up to YOU!"
-	item_cost = 30 //kinda pricy, encourage other sources
+	item_cost = 60 //kinda pricy, encourage other sources // Outpost 21 edit - Increased price
 	object_type_to_spawn = /obj/random/fromList/TFGuns
 	icon_state="tf-gun"
 	vendor_category = MAINTVENDOR_SCENETOOLS
@@ -145,7 +146,7 @@
 	ad_message = "Size Matters!"
 	desc = "Performance issues? Under 5'11? Shoot yourself!"
 	object_type_to_spawn = /obj/item/gun/energy/sizegun
-	item_cost = 30 //kinda pricy, encourage other sources
+	item_cost = 60 //kinda pricy, encourage other sources // Outpost 21 edit - Increased price
 	icon_state = "size_gun"
 	tagline = "Size matters!"
 	vendor_category = MAINTVENDOR_SCENETOOLS
