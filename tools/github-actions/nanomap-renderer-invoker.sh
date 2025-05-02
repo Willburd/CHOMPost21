@@ -3,7 +3,7 @@
 BASEDIR=$PWD
 #Put directories to get maps from here. One per line.
 mapdirs=(
-    "modular_outpost/maps"
+    "modular_outpost/maps/outpost_21"
 )
 #Put a define file to include. One per line matching mapdirs.
 #If the same define is reused it will be batched if in sequence.
