@@ -106,7 +106,7 @@
 /mob/proc/create_hallucination_attacker(var/turf/T = null,var/mob/living/carbon/human/clone = null, var/forced_type = null)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!client)
-		return
+		return null
 
 	if(!clone)
 		// Get a randomized clone from the living mob's list, must be standing
@@ -116,10 +116,10 @@
 				continue
 			possible_clones += H
 		if(!possible_clones.len)
-			return
+			return null
 		clone = pick(possible_clones)
 	if(!clone)
-		return
+		return null
 
 	if(!T)
 		// Get the target's turf, then make some random steps to get away from them, respecting walls
@@ -139,7 +139,7 @@
 		var/list/get_types = subtypesof(/obj/effect/haunting_hallucination/human)
 		forced_type = pick(get_types)
 	// Finally! After a thousand years I'm finally free to conquer EARTH!
-	new forced_type(T,src,clone)
+	return new forced_type(T,src,clone)
 
 /obj/effect/haunting_hallucination/human
 	VAR_PROTECTED/datum/weakref/target = null
