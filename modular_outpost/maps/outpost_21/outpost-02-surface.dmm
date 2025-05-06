@@ -6136,7 +6136,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "ajL" = (
-/obj/structure/fence{
+/obj/structure/fence/electric{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -6153,12 +6153,6 @@
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
-"ajO" = (
-/obj/structure/fence/post{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/mud/muriki,
-/area/engineering/engine_room)
 "ajP" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/mine/explored/muriki/valley)
@@ -8204,6 +8198,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/medbay3)
+"anO" = (
+/obj/structure/fence/electric{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/mud/muriki,
+/area/engineering/engine_room)
 "anP" = (
 /obj/item/geiger/wall/south,
 /turf/simulated/open,
@@ -8391,6 +8391,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
+"aog" = (
+/obj/structure/fence/electric_sign{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/engineering/engine_room)
+"aoh" = (
+/obj/structure/fence/electric_sign,
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/engineering/engine_room)
 "aok" = (
 /obj/machinery/power/grounding_rod,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -26020,7 +26030,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
 "fZu" = (
-/obj/structure/fence{
+/obj/structure/fence/electric{
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -34132,10 +34142,10 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "ivf" = (
-/obj/structure/fence/post{
+/obj/structure/fence/post/electric{
 	dir = 4
 	},
-/turf/simulated/floor/water/acidic/muriki,
+/turf/simulated/floor/outdoors/mud/muriki,
 /area/engineering/engine_room)
 "ivv" = (
 /turf/simulated/wall,
@@ -40012,12 +40022,6 @@
 /obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
-"kfv" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/water/acidic/muriki,
-/area/engineering/engine_room)
 "kfK" = (
 /obj/machinery/door/airlock/glass_command{
 	name = "Bridge";
@@ -45040,7 +45044,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/security/checkpoint2)
 "lHG" = (
-/obj/structure/fence/end{
+/obj/structure/fence/end/electric{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -45155,8 +45159,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sciupper)
 "lJF" = (
-/obj/structure/fence/corner{
-	dir = 1
+/obj/structure/fence/corner/electric{
+	dir = 9
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/engineering/engine_room)
@@ -49106,7 +49110,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "mWu" = (
-/obj/structure/fence{
+/obj/structure/fence/electric_sign{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/mud/muriki,
@@ -59829,7 +59833,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "qrZ" = (
-/obj/structure/fence/corner{
+/obj/structure/fence/corner/electric{
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
@@ -106492,7 +106496,7 @@ pvY
 utS
 utS
 utS
-mWu
+anO
 deb
 deb
 deb
@@ -106653,8 +106657,8 @@ utS
 pvY
 pvY
 utS
-pvY
-ajL
+utS
+mWu
 deb
 deb
 gNn
@@ -106815,10 +106819,10 @@ utS
 pvY
 pvY
 pvY
-pvY
+utS
 ivf
-dLF
-dLF
+deb
+deb
 dLF
 dLF
 deb
@@ -106977,9 +106981,9 @@ utS
 utS
 pvY
 pvY
-pvY
-kfv
-dLF
+utS
+mWu
+deb
 dLF
 dLF
 dLF
@@ -107140,8 +107144,8 @@ utS
 utS
 utS
 utS
-kfv
-dLF
+anO
+deb
 deb
 deb
 deb
@@ -107626,7 +107630,7 @@ pJx
 khd
 khd
 khd
-ajL
+aog
 tWq
 tWq
 deb
@@ -107783,10 +107787,10 @@ khd
 khd
 khd
 lJF
-fZu
+aoh
 qvB
 fZu
-fZu
+aoh
 fZu
 lHG
 tWq
@@ -108106,7 +108110,7 @@ khd
 khd
 khd
 khd
-ajL
+aog
 eEP
 gUH
 gUH
@@ -108430,7 +108434,7 @@ khd
 khd
 khd
 khd
-ajL
+aog
 eEP
 gUH
 gUH
@@ -108592,7 +108596,7 @@ khd
 khd
 khd
 utS
-ajO
+ivf
 gNn
 tWq
 grI
@@ -108754,7 +108758,7 @@ khd
 khd
 utS
 utS
-ajL
+aog
 deb
 tWq
 dbA
@@ -109078,7 +109082,7 @@ utS
 utS
 utS
 utS
-ajL
+aog
 deb
 deb
 nJY
@@ -109402,7 +109406,7 @@ utS
 utS
 utS
 utS
-mWu
+anO
 dLF
 deb
 afd
@@ -109726,7 +109730,7 @@ pvY
 utS
 utS
 utS
-mWu
+anO
 dLF
 deb
 djj
@@ -109888,7 +109892,7 @@ pvY
 utS
 utS
 utS
-ajO
+ivf
 gNn
 deb
 grI
@@ -110212,7 +110216,7 @@ khd
 khd
 utS
 utS
-mWu
+anO
 eEP
 gUH
 gUH
@@ -110374,7 +110378,7 @@ khd
 khd
 khd
 khd
-ajL
+aog
 eAw
 gUH
 gUH
@@ -110698,7 +110702,7 @@ khd
 khd
 khd
 khd
-ajL
+aog
 tWq
 tWq
 tWq
@@ -110862,7 +110866,7 @@ khd
 khd
 qrZ
 fZu
-fZu
+aoh
 fZu
 qvB
 qvB
