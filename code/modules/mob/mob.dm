@@ -14,7 +14,7 @@
 	if(mind && mind.current == src)
 		spellremove(src)
 	if(!istype(src,/mob/observer))
-		ghostize()
+		ghostize(FALSE)
 	// QDEL_NULL(soulgem) //Soulcatcher Outpost 21 edit - Disable soulgems
 	QDEL_NULL(dna)
 	QDEL_NULL(plane_holder)
