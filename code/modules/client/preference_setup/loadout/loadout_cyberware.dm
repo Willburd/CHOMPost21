@@ -9,6 +9,7 @@
 
 /datum/gear/utility/implant/tracking
 	display_name = "implant, tracking"
+	description = "An implant normally given to dangerous criminals. Allows security to track your location." // Outpost 21 edit - desc
 	path = /obj/item/implant/tracking/weak
 	cost = 0
 

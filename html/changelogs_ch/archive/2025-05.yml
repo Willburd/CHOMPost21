@@ -14,3 +14,40 @@
   - bugfix: cuffing runtime flood on invalid targets
   FluffMedic:
   - bugfix: tyr active edges fixed
+2025-05-04:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Wires actually work on things other than airlocks again
+  FluffMedic:
+  - rscadd: Tyr Scientist drops a funny lore disc now
+2025-05-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: player_list ending up with nulls in it
+2025-05-06:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: secborg dullahans resting sprites not head bobbing properly. (misaligned.)
+  - rscadd: Added new variants of knight armours that have lower stats and small slowdown,
+      but can be found around the fantasy redgate instead of the buffed PoI rewards.
+  - maptweak: Replaced the murder fire smoke from the burning building with harmless
+      smoke.
+  Diana:
+  - rscadd: spacomycaze can now upgrade Bruise Packs to advanced bruise packs
+  Will:
+  - bugfix: Bioprinter works again
+2025-05-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Virology access buttons no longer depend on init lag to setup their state
+      correctly.
+  - code_imp: Removed spawn() behavior from airlock program. Added airlock update
+      radio command to setup doors on airlock init.
+  - bugfix: Fixed cave-ins in fantasy dungeon around the dragon
+  - qol: added the ability to pick up floor tiles to the sheet loader gripper that
+      borgs have
+  - bugfix: Fixes throw passing (I didn't even know this was a thing)
+  - bugfix: Fix spacebar throwing
+  - bugfix: Fix appearance changer menu lacking data for species sounds
+  Diana:
+  - rscadd: Optional Big Leggies as a marking. These are hidden underneath clothing.
+  - bugfix: Makes Big Leggies (tail) show back above clothing.
+2025-05-09:
+  tacoguy7765093:
+  - bugfix: Fixed carrier ships not having southern cross's docking codes

@@ -6,6 +6,7 @@
 
 /datum/gear/utility/implant/egg
 	display_name = "Egg implant"
+	description = "Implant that generates eggs within its user. A surprisingly common 'recreational' body mod." // Outpost 21 edit - desc
 	path = /obj/item/implant/reagent_generator/egg
 	cost = 0
 
