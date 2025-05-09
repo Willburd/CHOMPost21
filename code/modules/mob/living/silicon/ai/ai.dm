@@ -683,7 +683,8 @@ var/list/ai_verbs_default = list(
 						"male tesharii",
 						"female tesharii",
 						"male skrell",
-						"female skrell"
+						"female skrell",
+						"synx"	// outpost 21 edit - added synx
 					)
 					input = tgui_input_list(src, "Please select a hologram:", "Hologram Choice", icon_list)
 					if(input)
