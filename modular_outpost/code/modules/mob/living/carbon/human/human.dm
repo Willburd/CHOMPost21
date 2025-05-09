@@ -4,7 +4,7 @@
 		var/equipped = equip_to_slot_or_del(new /obj/item/clothing/glasses/regular(src), slot_glasses)
 		if(equipped != 1)
 			var/obj/item/clothing/glasses/G = glasses
-			G.prescription = 1
+			G.prescription = TRUE
 
 	// store some extra things
 	var/obj/item/storage/Bag
