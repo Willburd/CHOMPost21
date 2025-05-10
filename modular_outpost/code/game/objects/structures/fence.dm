@@ -63,16 +63,18 @@
 /obj/structure/fence/Bumped(AM)
 	. = ..()
 	if(electric && isliving(AM))
-		electrocute(AM)
+		var/mob/living/L = AM
+		if(!L.is_incorporeal())
+			electrocute(L)
 
 /obj/structure/fence/attack_hand(mob/user)
-	if(electric && isliving(user))
+	if(electric && isliving(user) && !user.is_incorporeal())
 		if(electrocute(user))
 			return
 	. = ..()
 
 /obj/structure/fence/attackby(obj/item/W, mob/user)
-	if(electric && isliving(user) && !(W.flags & NOCONDUCT))
+	if(electric && isliving(user) && !user.is_incorporeal() && !(W.flags & NOCONDUCT))
 		if(electrocute(user))
 			return
 	. = ..()
