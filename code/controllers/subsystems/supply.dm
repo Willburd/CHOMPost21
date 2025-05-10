@@ -528,35 +528,35 @@ SUBSYSTEM_DEF(supply)
 /datum/controller/subsystem/supply/proc/get_item_sale_value(var/obj/item/A)
 	// cargo slip
 	if(istype(A,/obj/item/paper/manifest))
-		return points_per_slip
+		return FLOOR(points_per_slip,1)
 	// Sell phoron and platinum
 	if(istype(A, /obj/item/stack))
 		var/obj/item/stack/P = A
 		var/datum/material/mat = P.get_material()
 		if(mat?.supply_conversion_value)
-			return P.get_amount() * mat.supply_conversion_value;
+			return FLOOR(P.get_amount() * mat.supply_conversion_value,1);
 		return 0
 	//Sell spacebucks
 	if(istype(A, /obj/item/spacecash))
 		var/obj/item/spacecash/cashmoney = A
-		return (cashmoney.worth * points_per_money) * cash_tax // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
+		return FLOOR((cashmoney.worth * points_per_money) * cash_tax,1) // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
 	// Sell salvage
 	if(istype(A, /obj/item/salvage))
 		var/obj/item/salvage/salvagedStuff = A
-		return salvagedStuff.worth
+		return FLOOR(salvagedStuff.worth,1)
 	// Selling slime cores
 	if(istype(A, /obj/item/slime_extract))
 		var/obj/item/slime_extract/slime_stuff = A
-		return slime_stuff.supply_conversion_value
+		return FLOOR(slime_stuff.supply_conversion_value,1)
 	//  Selling organs
 	if(istype(A, /obj/item/organ/internal))
 		var/obj/item/organ/internal/organ_stuff = A
 		if(organ_stuff.health != initial(organ_stuff.health))
 			return 0
-		return organ_stuff.supply_conversion_value
+		return FLOOR(organ_stuff.supply_conversion_value,1)
 	// Selling vaccines
 	if(istype(A, /obj/item/reagent_containers/glass/beaker/vial/vaccine))
-		return 5
+		return FLOOR(5,1)
 	// Selling food
 	if(istype(A, /obj/item/reagent_containers/food))
 		var/obj/item/reagent_containers/food/food_stuff = A
@@ -564,14 +564,14 @@ SUBSYSTEM_DEF(supply)
 			var/obj/item/reagent_containers/food/snacks/S = food_stuff
 			if(S.bitecount > 0) // no nibbling
 				return 0
-		return food_stuff.price_tag // Converts old price system into supply point cost
+		return FLOOR(food_stuff.price_tag,1) // Converts old price system into supply point cost
 	// Selling research samples
 	if(istype(A, /obj/item/research_sample))
 		var/obj/item/research_sample/sample_stuff = A
 		var/level = 5
 		for(var/tech in sample_stuff.valid_techs)
 			level += sample_stuff.origin_tech["[tech]"] * 5
-		return level
+		return FLOOR(level,1)
 	// Selling boomboom
 	if(istype(A, /obj/item/transfer_valve))
 		var/obj/item/transfer_valve/TTV = A
@@ -609,11 +609,11 @@ SUBSYSTEM_DEF(supply)
 		var/dev = round((mult*strength)*0.15)
 		var/heavy = round((mult*strength)*0.35)
 		var/light = round((mult*strength)*0.80)
-		return round(dev + (heavy/2) + (light/3),1)
+		return FLOOR(round(dev + (heavy/2) + (light/3),1),1)
 	return 0
 
 /datum/controller/subsystem/supply/proc/get_reagent_sale_value(var/datum/reagent/R)
-	return FLOOR(R.volume, 1) * R.supply_conversion_value
+	return FLOOR(R.volume * R.supply_conversion_value, 1)
 
 /datum/controller/subsystem/supply/proc/points_to_cash(var/val)
 	return FLOOR((val / points_per_money) / cash_tax, 1) // Undoes taxes, 500T == 500T when scanned
