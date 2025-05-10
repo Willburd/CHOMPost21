@@ -733,9 +733,9 @@
 	// Say things
 	if(prob(2))
 		if(!has_burned_floor)
-			T1.visible_message(pick(list("[target_mob]...","Scream!","Shriek!")))
+			T1.visible_message(pick(list("\The [ghost] whispers, [target_mob]...","\The [ghost] Screams!","\The [ghost] Shrieks!")))
 		else
-			T1.visible_message(pick(list("[target_mob]!","Burn!","Die!")))
+			T1.visible_message(pick(list("\The [ghost] screams, [target_mob]!","\The [ghost] screams, Burn!","\The [ghost] screams, Die!")))
 	if(ghost.is_manifest && prob(3) && spawn_fire && !has_burned_floor)
 		T1.lingering_fire(0.25)
 		has_burned_floor = TRUE
