@@ -10,3 +10,8 @@
 	// not actually a gif
 	assets["lobby_bg.gif"] = pick(using_map.lobby_screens)
 	. = ..()
+
+/datum/asset/simple/restart_animation
+	assets = list(
+		"loading" = 'html/lobby/loading.gif'
+	)
