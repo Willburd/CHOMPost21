@@ -2,7 +2,7 @@
 	icon = 'modular_chomp/icons/obj/machines/other.dmi'
 	icon_state = "cronchy_off"
 	name = "garbage grinder"
-	desc = "Mind your fingers. Filter access hatch can be opened with crowbar to release trapped contents within."
+	desc = "Mind your fingers. Filter access hatch can be opened with crowbar to release trapped contents within. It also has a fluid trap that can be drained with a hose into something else." // Outpost 21 edit - internal reagent grinding tank
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	anchored = TRUE
@@ -10,13 +10,17 @@
 	active_power_usage = 100
 	var/operating = FALSE
 	var/obj/machinery/recycling/crusher/crusher //Connects to regular crusher
-	var/obj/vehicle/train/trolly_tank/sump //Reagent trap for extraction and sorting
 	var/obj/machinery/button/garbosystem/button
 	var/list/affecting
 	var/voracity = 5 //How much stuff is swallowed at once.
+	var/obj/item/hose_connector/output/Output = null // Outpost 21 edit begin - internal reagent grinding tank
 
 /obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
+	// Outpost 21 edit begin - internal reagent grinding tank
+	create_reagents(CARGOTANKER_VOLUME * 4)
+	Output = new(src)
+	// Outpost 21 edit end
 	for(var/dir in GLOB.cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
 		if(src.crusher)
@@ -29,9 +33,22 @@
 			break
 	return
 
+// Outpost 21 edit begin - internal reagent grinding tank
+/obj/machinery/v_garbosystem/Destroy()
+	QDEL_NULL(Output)
+	crusher = null
+	button = null
+	. = ..()
+
+/obj/machinery/v_garbosystem/examine(mob/user, infix, suffix)
+	. = ..()
+	. += "The internal fluid tank reads: [reagents.total_volume]/[reagents.maximum_volume]"
+	if(contents.len > 1) // 1 item inside already, the Output!
+		. += "There are items in the filter's trap!"
+// Outpost 21 edit end
+
 /obj/machinery/v_garbosystem/attack_hand(mob/living/user as mob)
 	operating = !operating
-	validate_tank() // Outpost 21 edit - attaching vehicle tanks
 	update()
 
 /obj/machinery/v_garbosystem/attack_ai(mob/user as mob)
@@ -62,6 +79,13 @@
 		return PROCESS_KILL
 	icon_state = "cronchy_active"
 
+	// Outpost 21 edit begin - internal reagent grinding tank
+	if(Output.get_pairing())
+		reagents.trans_to_holder(Output.reagents, Output.reagents.maximum_volume)
+		if(prob(5))
+			visible_message(span_notice("\The [src] gurgles as it pumps fluid."))
+	// Outpost 21 edit end
+
 	affecting = loc.contents - src
 	spawn(1)
 		var/items_taken = 0
@@ -85,7 +109,7 @@
 							playsound(src, 'sound/effects/splat.ogg', 50, 1)
 							L.gib()
 							items_taken++
-							// Outpost 21 addition begin - Sludge production, bodily transfers
+							// Outpost 21 edit begin - internal reagent grinding tank
 							transfer_organic_to_tank(5)
 							if(ishuman(L))
 								// Splorch
@@ -106,11 +130,9 @@
 						A.SpinAnimation(5,3)
 						spawn(15)
 							if(A.loc == loc)
-								// Outpost 21 addition begin - Allow reagent extraction
+								// Outpost 21 edit begin - internal reagent grinding tank
 								if(A.reagents)
 									transfer_reagent_to_tank(A.reagents,1)
-								// Outpost 21 addition end
-								// Outpost 21 addition begin - Ores grind to reagents
 								if(istype(A,/obj/item/ore))
 									transfer_ore_to_tank(A,1)
 								// Outpost 21 addition end
@@ -123,10 +145,10 @@
 						spawn(15)
 							if(A)
 								A.forceMove(src)
-								// Outpost 21 addition begin - Allow reagent extraction
+								// Outpost 21 edit begin - internal reagent grinding tank
 								if(A.reagents)
 									transfer_reagent_to_tank(A.reagents,1)
-								// Outpost 21 addition end
+								// Outpost 21 end
 								if(istype(A, /obj/structure/closet))
 									new /obj/item/stack/material/steel(loc, 2)
 								qdel(A)
@@ -148,75 +170,46 @@
 		if(!operating)
 			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")
 			for(var/atom/movable/A in contents)
-				A.forceMove(loc)
+				if(A != Output) // Outpost 21 edit - internal reagent grinding tank
+					A.forceMove(loc)
 			return
 		else
 			to_chat(user, "Unable to empty filter while the machine is running.")
 	return ..()
 
-// Outpost 21 edit begin - transfering fluids to vehicle tanks
+// Outpost 21 edit begin - internal reagent grinding tank
 /obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(var/datum/reagents/reg,var/multiplier)
-	if(!validate_tank())
-		return
 	var/volume_magic = reg.total_volume * multiplier
 	volume_magic -= rand(2,10) // reagent tax
 	if(volume_magic > 0)
-		reg.trans_to_holder( sump.reagents, volume_magic)
+		reg.trans_to_holder( reagents, volume_magic)
 		transfer_sludge_to_tank(rand(1,5))
-	sump.update_icon()
 
 /obj/machinery/v_garbosystem/proc/transfer_ore_to_tank(var/obj/item/ore/R,var/multiplier)
-	if(!validate_tank())
-		return
 	if(global.ore_reagents[R.type])
 		var/list/ore_components = global.ore_reagents[R.type]
 		if(islist(ore_components))
 			var/amount_to_take = (REAGENTS_PER_ORE/(ore_components.len))
 			for(var/i in ore_components)
-				sump.reagents.add_reagent(i, amount_to_take * multiplier)
+				reagents.add_reagent(i, amount_to_take * multiplier)
 		else
-			sump.reagents.add_reagent(ore_components, REAGENTS_PER_ORE * multiplier)
+			reagents.add_reagent(ore_components, REAGENTS_PER_ORE * multiplier)
 		transfer_sludge_to_tank(rand(1,5))
-	sump.update_icon()
 
 /obj/machinery/v_garbosystem/proc/transfer_organic_to_tank(var/amt)
-	if(!validate_tank())
-		return
 	var/ratioA = FLOOR(amt*0.2,1)
 	var/ratioB = FLOOR(amt*0.8,1)
 	if(ratioA > 0)
-		sump.reagents.add_reagent("protein", ratioA)
+		reagents.add_reagent("protein", ratioA)
 	if(ratioB > 0)
-		sump.reagents.add_reagent("triglyceride", ratioB)
+		reagents.add_reagent("triglyceride", ratioB)
 	if(ratioB > 0 || ratioA > 0)
 		transfer_sludge_to_tank(rand(4,9))
-	sump.update_icon()
 
 /obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(var/amt)
 	if(prob(10) || amt >= 5)
-		sump.reagents.add_reagent("toxin",amt)
+		reagents.add_reagent("toxin",amt)
 		visible_message("\The [src] gurgles.")
-
-/obj/machinery/v_garbosystem/proc/validate_tank()
-	if(!sump)
-		return link_grinder()
-	var/turf/T = loc
-	if(!T.AdjacentQuick(sump))
-		return link_grinder()
-	return TRUE
-
-/obj/machinery/v_garbosystem/proc/link_grinder()
-	// Link to vehicle fluid tanker
-	var/sump_prev = sump
-	sump = locate(/obj/vehicle/train/trolly_tank) in loc.contents
-	if(!sump)
-		for(var/dir in GLOB.alldirs)
-			sump = locate(/obj/vehicle/train/trolly_tank, get_step(src, dir))
-			if(sump)
-				break
-	if(!isnull(sump) && sump_prev != sump)
-		visible_message("\The [src] automatically connects a hose to \the [sump].")
-		return
 // Outpost 21 edit end
 
 /obj/machinery/button/garbosystem
