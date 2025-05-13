@@ -7,8 +7,7 @@
 	. = ..()
 	// reagent control
 	if(default_max_vol > 0)
-		reagents = new/datum/reagents(default_max_vol)
-		reagents.my_atom = src
+		create_reagents(default_max_vol)
 	// Update neighbours and self for state
 	update_neighbours()
 	update_icon()
