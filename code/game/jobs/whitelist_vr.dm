@@ -13,14 +13,20 @@ GLOBAL_LIST_EMPTY(job_whitelist)
 		GLOB.job_whitelist = splittext(text, "\n")
 
 /proc/is_job_whitelisted(mob/M, var/rank)
-	if(!CONFIG_GET(flag/use_jobwhitelist)) // CHOMPedit
-		return 1 // CHOMPedit
+	// Outpost 21 edit being - ERT/Centcom is not public access now
 	var/datum/job/job = job_master.GetJob(rank)
+	var/is_admin_whitelisted = check_rights_for(M.client, R_ADMIN) || check_rights_for(M.client, R_EVENT) || check_rights_for(M.client, R_DEBUG)
+	if(!CONFIG_GET(flag/use_jobwhitelist)) // CHOMPedit
+		if(!is_admin_whitelisted && job.whitelist_only)
+			return 0
+		return 1 // CHOMPedit
+	// Outpost 21 edit end
+	// var/datum/job/job = job_master.GetJob(rank) // Outpost 21 edit - ERT/Centcom is not public access now
 	if(!job.whitelist_only)
 		return 1
 	if(rank == JOB_ALT_VISITOR) //VOREStation Edit - Visitor not Assistant
 		return 1
-	if(check_rights(R_ADMIN, 0) || check_rights(R_DEBUG, 0) || check_rights(R_EVENT, 0)) // CHOMPedit
+	if(is_admin_whitelisted) // CHOMPedit
 		return 1
 	if(!GLOB.job_whitelist)
 		return 0
