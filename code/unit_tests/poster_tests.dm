@@ -3,7 +3,7 @@
 
 /datum/unit_test/posters_shall_have_legal_states/start_test()
 	var/failed = FALSE
-	var/list/all_posters = decls_repository.get_decls_of_type(path)
+	var/list/all_posters = decls_repository.get_decls_of_type(/decl/poster)
 	all_posters -= decls_repository.get_decl(/decl/poster/lewd) // Dumb exclusion for now. This really needs to become a valid poster instead of an illegal made base type
 
 	for(var/decl/poster/D in all_posters)
