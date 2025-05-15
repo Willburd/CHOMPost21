@@ -7,7 +7,7 @@
 
 /obj/item/poster/nanotrasen/Initialize(mapload, var/decl/poster/P = null)
 	if(!ispath(poster_decl) && !ispath(P) && !istype(P))
-		poster_decl = get_poster_decl(/decl/poster/nanotrasen, FALSE)
+		poster_decl = get_poster_decl(/decl/poster/nanotrasen, FALSE, null)
 	return ..()
 
 /obj/structure/sign/poster/nanotrasen // placed wall object
@@ -24,6 +24,8 @@
 
 /// Verb to change a custom poster's design
 /obj/item/poster/custom/verb/select_poster()
+	PRIVATE_PROC(TRUE)
+	SHOULD_NOT_OVERRIDE(TRUE)
 	set name = "Set Poster type"
 	set category = "Object"
 	set desc = "Click to choose a poster to display."
