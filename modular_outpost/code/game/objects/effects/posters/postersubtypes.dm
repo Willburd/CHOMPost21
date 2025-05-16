@@ -13,4 +13,3 @@
 
 /obj/structure/sign/poster/eshui // placed wall object
 	roll_type = /obj/item/poster/eshui
-	poster_decl = /decl/poster/eshui
