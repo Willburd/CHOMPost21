@@ -19,12 +19,7 @@
 			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
 			Bag.contents += perscrip
 
-		if(disabilities & DEPRESSION)
-			var/perscrip = new /obj/item/storage/pill_bottle/paroxetine() // stronger meds for more dangerous cases
-			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
-			Bag.contents += perscrip
-
-		if(disabilities & DEPRESSION || disabilities & NERVOUS || disabilities & EPILEPSY || disabilities & TOURETTES)
+		if(disabilities & DEPRESSION || GetComponent(/datum/component/nervousness_disability) || GetComponent(/datum/component/epilepsy_disability) || GetComponent(/datum/component/tourettes_disability))
 			var/perscrip = new /obj/item/storage/pill_bottle/citalopram() // currently the only reasonable med, also one of the few with an actual pill bottle
 			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
 			Bag.contents += perscrip

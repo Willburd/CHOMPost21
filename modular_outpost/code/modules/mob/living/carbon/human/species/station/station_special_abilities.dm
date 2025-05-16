@@ -22,8 +22,7 @@
 		Bu.structural_integrity = 0
 
 	var/deathmessage = ""
-	C.gutdeathpressure += 1
-	var/range = 5 + C.gutdeathpressure
+	var/range = 5
 	// obnoxious, and eventually fatal
 	playsound(C, 'modular_outpost/sound/effects/poot.ogg', 100, 1)
 	for(var/mob/M in living_mobs(range))
@@ -110,7 +109,7 @@
 		step(src, movementdirection)
 	// lights rattled or bursted
 	for(var/obj/machinery/light/L in orange(10, C))
-		if(prob(C.gutdeathpressure * 2))
+		if(prob(6))
 			spawn(rand(5,25))
 				L.broken()
 		else
