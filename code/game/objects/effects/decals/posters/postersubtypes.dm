@@ -8,7 +8,7 @@
 /obj/item/poster/nanotrasen/Initialize(mapload, var/decl/poster/P = null)
 	if(!ispath(poster_decl) && !ispath(P) && !istype(P))
 		poster_decl = get_poster_decl(/decl/poster/nanotrasen, FALSE, null)
-	return ..()
+	return ..(mapload, poster_decl)
 
 /obj/structure/sign/poster/nanotrasen // placed wall object
 	roll_type = /obj/item/poster/nanotrasen
