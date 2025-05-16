@@ -185,7 +185,7 @@
 		return
 
 	// outpost 21 edit begin - Major disabilities rework
-	handle_outpost_disabilities()
+	handle_outpost_medications()
 	// outpost 21 edit end
 
 	if(isbelly(loc)) //Let's not have you seizing, coughing, or falling apart if you're in a belly.

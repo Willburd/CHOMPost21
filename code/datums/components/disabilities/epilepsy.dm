@@ -15,6 +15,8 @@
 		return
 	if(owner.stat != CONSCIOUS)
 		return
+	if(owner.seizuremedcount) // Outpost 21 edit - Medications calm disabilities
+		return
 	if(owner.transforming)
 		return
 	if((prob(1) && prob(1) && owner.paralysis < 1))

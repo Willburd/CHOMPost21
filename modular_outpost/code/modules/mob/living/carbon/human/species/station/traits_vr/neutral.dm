@@ -17,7 +17,8 @@
 	name = "Allergy: Pollen"
 	desc = "You're highly allergic to pollen and many plants. It's probably best to avoid hydroponics in general. NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
 	cost = 0
-	allergen = ALLERGEN_POLLEN
+	allergen = ALLERGEN_POLLEN // Gee billy...
+	added_component_path = /datum/component/pollen_disability // Why does mom let you have two things?
 
 /datum/trait/neutral/allergy/salt
 	name = "Allergy: Salt"

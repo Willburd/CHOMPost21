@@ -549,6 +549,7 @@
 #include "code\datums\components\disabilities\epilepsy.dm"
 #include "code\datums\components\disabilities\gibbing.dm"
 #include "code\datums\components\disabilities\nervousness.dm"
+#include "code\datums\components\disabilities\pollen.dm"
 #include "code\datums\components\disabilities\rotting.dm"
 #include "code\datums\components\disabilities\tourettes.dm"
 #include "code\datums\components\traits\drippy.dm"
