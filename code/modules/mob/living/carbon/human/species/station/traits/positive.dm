@@ -384,6 +384,11 @@
 	name = "Photosynthesis"
 	desc = "Your body is able to produce nutrition from being in light."
 	cost = 3
+	// Outpost 21 edit begin - PHOTOSYNTHASIS
+	is_genetrait = TRUE
+	activation_message="You feel reinvigorated in the light."
+	primitive_expression_messages = list("stands in the light.")
+	// Outpost 21 edit end
 	can_take = ORGANICS|SYNTHETICS //Synths actually use nutrition, just with a fancy covering.
 	added_component_path = /datum/component/photosynth
 
