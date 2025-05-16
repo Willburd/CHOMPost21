@@ -2821,7 +2821,7 @@
 "lA" = (
 /obj/structure/sign/poster{
 	pixel_x = -32;
-	target_poster_decl_path = /decl/poster/bay_50
+	poster_decl = /decl/poster/bay_50
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)

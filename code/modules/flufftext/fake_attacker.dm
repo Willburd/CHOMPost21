@@ -1,4 +1,4 @@
-/obj/effect/haunting_hallucination
+/obj/effect/fake_attacker // I did want to use /image/client_only but this needs to be somewhat more complex
 	name = ""
 	desc = ""
 	density = FALSE
@@ -7,20 +7,7 @@
 	VAR_PRIVATE/list/clients = list()
 	VAR_PRIVATE/list/image/dir_images = list()
 
-/obj/effect/haunting_hallucination/proc/create_images_from(var/atom/clone)
-	dir_images["[NORTH]"] = image(clone,dir = NORTH)
-	dir_images["[SOUTH]"] = image(clone,dir = SOUTH)
-	dir_images["[EAST]"] = image(clone,dir = EAST)
-	dir_images["[WEST]"] = image(clone,dir = WEST)
-	for(var/img in dir_images)
-		var/image/G = dir_images[img]
-		G.layer = clone.layer
-		G.plane = clone.plane
-		G.appearance_flags = clone.appearance_flags
-		G.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-		G.loc = loc
-
-/obj/effect/haunting_hallucination/process()
+/obj/effect/fake_attacker/process()
 	. = ..()
 	// Passive cleanup
 	for(var/datum/weakref/C in clients)
@@ -30,14 +17,7 @@
 	if(!clients.len)
 		qdel(src)
 
-/obj/effect/haunting_hallucination/proc/append_client(var/datum/weakref/C)
-	var/client/CW = C?.resolve()
-	if(!CW)
-		return
-	clients.Add(C)
-	assign_image_to_client(CW)
-
-/obj/effect/haunting_hallucination/set_dir(newdir)
+/obj/effect/fake_attacker/set_dir(newdir)
 	if(!(newdir in GLOB.cardinal))
 		newdir &= ~(EAST|WEST) // Don't allow diagonals, prefer north/south
 		if(!newdir)
@@ -50,7 +30,7 @@
 			clear_images_from_client(CW)
 			assign_image_to_client(CW)
 
-/obj/effect/haunting_hallucination/Moved(atom/old_loc, direction, forced, movetime)
+/obj/effect/fake_attacker/Moved(atom/old_loc, direction, forced, movetime)
 	. = ..()
 	var/turf_move = isturf(loc) && isturf(old_loc)
 	for(var/img in dir_images)
@@ -63,42 +43,63 @@
 			animate(G, pixel_x = 0, time = MT, flags = ANIMATION_PARALLEL)
 			animate(G, pixel_y = 0, time = MT, flags = ANIMATION_PARALLEL)
 
-/obj/effect/haunting_hallucination/Destroy(force)
+/obj/effect/fake_attacker/Destroy(force)
 	. = ..()
 	clear_every_clients_images()
 	qdel_all_images()
 
-/obj/effect/haunting_hallucination/proc/assign_image_to_client(var/client/CW)
+/obj/effect/fake_attacker/proc/create_images_from(var/atom/clone)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	dir_images["[NORTH]"] = image(clone,dir = NORTH)
+	dir_images["[SOUTH]"] = image(clone,dir = SOUTH)
+	dir_images["[EAST]"] = image(clone,dir = EAST)
+	dir_images["[WEST]"] = image(clone,dir = WEST)
+	for(var/img in dir_images)
+		var/image/G = dir_images[img]
+		G.layer = clone.layer
+		G.plane = clone.plane
+		G.appearance_flags = clone.appearance_flags
+		G.mouse_opacity = MOUSE_OPACITY_TRANSPARENT
+		G.loc = loc
+
+/obj/effect/fake_attacker/proc/append_client(var/client/C)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	clients.Add(WEAKREF(C))
+	assign_image_to_client(C)
+
+/obj/effect/fake_attacker/proc/assign_image_to_client(var/client/C)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
-	if(!CW)
+	if(!C)
 		return
 	if(!dir_images.len)
 		return
 	var/image/I = dir_images["[dir]"]
 	if(I)
-		CW.images += I
+		C.images += I
 
-/obj/effect/haunting_hallucination/proc/clear_every_clients_images()
+/obj/effect/fake_attacker/proc/clear_every_clients_images()
 	for(var/datum/weakref/C in clients)
 		clear_images_from_client(C?.resolve())
 
-/obj/effect/haunting_hallucination/proc/clear_images_from_client(var/client/CW)
+/obj/effect/fake_attacker/proc/clear_images_from_client(var/client/C)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
-	if(!CW)
+	if(!C)
 		return
 	if(!dir_images.len)
 		return
 	for(var/img in dir_images)
-		CW.images -= dir_images[img]
+		C.images -= dir_images[img]
 
-/obj/effect/haunting_hallucination/proc/qdel_all_images()
+/obj/effect/fake_attacker/proc/qdel_all_images()
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	for(var/img in dir_images)
 		qdel_null(dir_images[img])
 	dir_images.Cut()
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Hallucination attackers with AI behaviors
@@ -112,7 +113,9 @@
 		// Get a randomized clone from the living mob's list, must be standing
 		var/list/possible_clones = new/list()
 		for(var/mob/living/carbon/human/H in living_mob_list)
-			if(H.stat || H.lying || istype(H,/mob/living/carbon/human/monkey/auto_doc))
+			if(H.stat || H.lying)
+				continue
+			if(istype(H,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit - Don't use autodocs
 				continue
 			possible_clones += H
 		if(!possible_clones.len)
@@ -136,30 +139,30 @@
 
 	if(!forced_type)
 		// Picking from all available options
-		var/list/get_types = subtypesof(/obj/effect/haunting_hallucination/human)
+		var/list/get_types = subtypesof(/obj/effect/fake_attacker/human)
 		forced_type = pick(get_types)
 	// Finally! After a thousand years I'm finally free to conquer EARTH!
 	return new forced_type(T,src,clone)
 
-/obj/effect/haunting_hallucination/human
+/obj/effect/fake_attacker/human
 	VAR_PROTECTED/datum/weakref/target = null
 	var/requires_hallucinating = TRUE // Mob will qdel if the target is not hallucinating if this is true
 
-/obj/effect/haunting_hallucination/human/Initialize(mapload,var/mob/targeting_mob,var/atom/clone_appearance_from)
+/obj/effect/fake_attacker/human/Initialize(mapload,var/mob/targeting_mob,var/atom/clone_appearance_from)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 	set_target(targeting_mob)
 	create_images_from(clone_appearance_from)
-	append_client(WEAKREF(targeting_mob.client))
+	append_client(targeting_mob.client)
 	name = clone_appearance_from.name
 	// Usually we want to face our target for maximum spooky effect
 	set_dir(get_dir(src,targeting_mob))
 
-/obj/effect/haunting_hallucination/human/Destroy()
+/obj/effect/fake_attacker/human/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
-/obj/effect/haunting_hallucination/human/process()
+/obj/effect/fake_attacker/human/process()
 	// check if valid
 	var/mob/living/M = target?.resolve()
 	if(!M)
@@ -176,13 +179,14 @@
 
 	return M
 
-/obj/effect/haunting_hallucination/human/proc/set_target(var/mob/M)
+/obj/effect/fake_attacker/human/proc/set_target(var/mob/M)
 	target = WEAKREF(M)
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Attacker: Performs hostile shoves and attacks
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/obj/effect/haunting_hallucination/human/attacker/process()
+/obj/effect/fake_attacker/human/attacker/process()
 	var/mob/living/M = ..()
 
 	if(get_dist(src,M) > 1)
@@ -200,10 +204,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Fleeing: Runs away when you get close
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/obj/effect/haunting_hallucination/human/fleeing
+/obj/effect/fake_attacker/human/fleeing
 	VAR_PRIVATE/flee = FALSE
 
-/obj/effect/haunting_hallucination/human/fleeing/process()
+/obj/effect/fake_attacker/human/fleeing/process()
 	var/mob/living/M = ..()
 	set_dir(get_dir(src,M))
 

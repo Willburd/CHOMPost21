@@ -43,11 +43,13 @@
 /decl/poster/vore_15
 	icon_state = "dwposter2"
 	name = "Implanter"
-	desc = "A poster explaining the benefits and function of back-up implanters."
+	// desc = "A poster explaining the benefits and function of back-up implanters."
+	desc = "A poster picturing a backup implant, warning about the illegality of them, and the danger of corrupted or hacked implants." // Outpost 21 edit - Illegal here
 /decl/poster/vore_16
 	icon_state = "dwposter3"
 	name = "Back-up implant"
-	desc = "A poster describing the electronics implanted by back-up implanters."
+	// desc = "A poster describing the electronics implanted by back-up implanters."
+	desc = "A poster picturing a backup implant, warning about the illegality of them, and the danger of corrupted or hacked implants." // Outpost 21 edit - Illegal here
 /decl/poster/vore_17
 	icon_state = "dwposter4"
 	name = "We know"
