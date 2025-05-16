@@ -115,6 +115,8 @@
 		for(var/mob/living/carbon/human/H in living_mob_list)
 			if(H.stat || H.lying)
 				continue
+			if(istype(H,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit - Don't use autodocs
+				continue
 			possible_clones += H
 		if(!possible_clones.len)
 			return null

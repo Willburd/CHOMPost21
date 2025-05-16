@@ -511,14 +511,18 @@
 	end()
 
 
-// small item thrown
+// Spawn a hallucination attacker
 /datum/station_haunt/hallucinate
 	name = "Hallucinate"
 
 /datum/station_haunt/hallucinate/fire()
 	var/mob/living/M = SShaunting.get_player_target()
 	if(isliving(M))
-		M.hallucination += 10
+		M.hallucination += 80
+		// Retry spawning the hallucination attacker until we get one.
+		for(var/i = 0 to 5)
+			if(M.create_hallucination_attacker(forced_type = /obj/effect/fake_attacker/human/attacker))
+				break
 	end()
 
 
