@@ -11,6 +11,7 @@
 	return ..()
 
 /obj/structure/sign/poster/nanotrasen // placed wall object
+	poster_decl = /decl/poster/nanotrasen // UPSTREAM FIX ME
 	roll_type = /obj/item/poster/nanotrasen
 
 
