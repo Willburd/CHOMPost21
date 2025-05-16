@@ -39,3 +39,14 @@
 	desc = "A poster depicting a massive swarm of spiders during an inferno, surrounded by absolute chaos and carnage. The caption reads, \"It doesn't have to get this bad! Inform security of any hostile wildlife as soon as you see it!\""
 	listing_name = "Outpost Wildlife Hazards"
 	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
+
+
+
+
+// NSFW/hidden posters
+/decl/poster/lewd/eshui
+	icon_state="lovechus"
+	name = "Love Chus!"
+	desc = "A poster with a disturbingly grinning rodent like creature with blocky teeth and huge bulging eyes. The original caption has been painted over with the word \"FRIEND!\""
+	listing_name = "Love Chus!"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
