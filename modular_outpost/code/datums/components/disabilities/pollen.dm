@@ -1,9 +1,9 @@
 /datum/component/pollen_disability
 	var/mob/living/carbon/human/owner
-	var/allergy_chance = 10
+	var/allergy_chance = 35
 
 /datum/component/pollen_disability/Initialize()
-	if (!isliving(parent))
+	if (!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
 
 	owner = parent
@@ -37,14 +37,14 @@
 		trigger_allergy()
 		return
 	var/things = list()
-	if(prob(12))
+	if(prob(32))
 		if(!isnull(owner.r_hand))
 			things += owner.r_hand
 		if(!isnull(owner.l_hand))
 			things += owner.l_hand
 	// terrain tests
 	things += owner.loc.contents
-	if(prob(15)) // ranged laggier check
+	if(prob(25)) // ranged laggier check
 		things += orange(2,owner.loc)
 	// scan irritants!
 	for(var/obj/machinery/portable_atmospherics/hydroponics/irritanttray in things)
