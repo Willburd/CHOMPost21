@@ -2,6 +2,8 @@
 	set invisibility = INVISIBILITY_NONE
 	set background = BACKGROUND_ENABLED
 
+	SEND_SIGNAL(src, COMSIG_LIVING_LIFE)
+
 	..()
 
 	if (transforming)
@@ -95,8 +97,6 @@
 	handle_vision()
 
 	handle_tf_holder()
-
-	handle_dripping()
 
 	handle_vr_derez()
 
@@ -217,6 +217,7 @@
 	return confused
 
 /mob/living/proc/handle_disabilities()
+	SEND_SIGNAL(src, COMSIG_HANDLE_DISABILITIES)
 	//Eyes
 	if(sdisabilities & BLIND || stat)	//blindness from disability or unconsciousness doesn't get better on its own
 		SetBlinded(1)
