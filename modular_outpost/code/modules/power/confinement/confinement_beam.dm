@@ -146,8 +146,8 @@ OL|IL|OL
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(check_sold_wattage(gigawatts GIGAWATTS,org_wattage,new_wattage))
-		GLOB.global_announcer.autosay("[pre_message][gigawatts] total gigawatt[gigawatts != 1 ? "s" : ""] of excess power sold!", "Confinement Beam Monitor", pre_message == "" ? DEPARTMENT_ENGINEERING : null)
-		GLOB.global_announcer.autosay("PTL bounty reached. [credits] Points awarded.", "Confinement Beam Monitor", DEPARTMENT_CARGO)
+		GLOB.global_announcer.autosay("[pre_message][gigawatts] total gigawatt[gigawatts != 1 ? "s" : ""] of excess power sold!", "Confinement Beam Monitor", pre_message == "" ? CHANNEL_ENGINEERING : CHANNEL_COMMON)
+		GLOB.global_announcer.autosay("PTL bounty reached, [credits] additional supply points awarded.", "Confinement Beam Monitor", CHANNEL_SUPPLY)
 		SSsupply.points += credits
 
 /datum/confinement_pulse_data/proc/check_sold_wattage(var/threshold,var/org_wattage,var/new_wattage)
