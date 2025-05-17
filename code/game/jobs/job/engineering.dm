@@ -48,9 +48,11 @@
 
 /datum/job/chief_engineer/equip(mob/living/carbon/human/H, alt_title)
 	. = ..()
+	/* Outpost 21 edit - Don't engie wire cheat here
 	ADD_TRAIT(H, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
 	if(H.mind)
 		ADD_TRAIT(H.mind, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
+	*/
 
 /datum/alt_title/head_engineer
 	title = JOB_ALT_HEAD_ENGINEER
@@ -94,9 +96,11 @@
 
 /datum/job/engineer/equip(mob/living/carbon/human/H, alt_title)
 	. = ..()
+	/* Outpost 21 edit - Don't engie wire cheat here
 	ADD_TRAIT(H, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
 	if(H.mind)
 		ADD_TRAIT(H.mind, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
+	*/
 
 // Engineer Alt Titles
 /datum/alt_title/maint_tech

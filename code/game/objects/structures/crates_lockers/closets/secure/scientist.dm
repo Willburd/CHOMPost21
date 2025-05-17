@@ -70,7 +70,8 @@
 		/obj/item/clothing/glasses/science,
 		/obj/item/radio/headset/headset_sci,
 		/obj/item/storage/belt/archaeology,
-		/obj/item/storage/excavation)
+		/obj/item/storage/excavation,
+		/obj/item/storage/sample_container)
 		// /obj/item/pickaxe/excavationdrill) Outpost 21 edit - No roundstart xenodrills
 
 /obj/structure/closet/excavation
