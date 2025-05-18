@@ -1445,6 +1445,8 @@ About the new airlock wires panel:
 	return 1
 
 /mob/living/airlock_crush(var/crush_damage)
+	if(is_incorporeal())
+		return 0
 	. = ..()
 	adjustBruteLoss(crush_damage)
 	SetStunned(5)

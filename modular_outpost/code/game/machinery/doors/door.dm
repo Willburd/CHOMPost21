@@ -52,9 +52,9 @@
 
 /obj/machinery/door/flesh/proc/handle_living()
 	if(!src.density)
-		INVOKE_ASYNC(src, PROC_REF(close))
+		addtimer(CALLBACK(src, PROC_REF(close)), 1)
 	else
-		INVOKE_ASYNC(src, PROC_REF(open))
+		addtimer(CALLBACK(src, PROC_REF(open)), 1)
 	addtimer(CALLBACK(src, PROC_REF(handle_living)), next_close_wait())
 
 /obj/machinery/door/flesh/process()
