@@ -3,10 +3,10 @@ import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
-  LabeledList,
-  Section,
   Dimmer,
   Icon,
+  LabeledList,
+  Section,
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
@@ -50,8 +50,7 @@ export const NukeConsole = (props) => {
             </Box>
           </Dimmer>
         ) : (
-          <>
-            <Section
+          <Section
               title="Nuclear Warhead Control"
               buttons={
                 <Button
@@ -90,7 +89,7 @@ export const NukeConsole = (props) => {
                         {safety ? 'SAFE' : 'ARMED'}
                       </Button>
                     }
-                  ></LabeledList.Item>
+                   />
                 ) : (
                   <LabeledList.Item
                     label="Detonation"
@@ -124,8 +123,7 @@ export const NukeConsole = (props) => {
                   </LabeledList.Item>
                 )}
               </LabeledList>
-            </Section>
-          </>
+          </Section>
         )}
       </Window.Content>
     </Window>
