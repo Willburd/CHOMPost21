@@ -1,6 +1,7 @@
 /datum/job/hos
 	camp_protection = TRUE
 
+// Outpost 21 edit - Renable sec-med
 /datum/job/brigphysician
 	title = JOB_BRIG_PHYSICIAN
 	flag = BRIGPHYS

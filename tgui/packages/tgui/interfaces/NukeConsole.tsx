@@ -3,10 +3,10 @@ import { Window } from 'tgui/layouts';
 import {
   Box,
   Button,
-  LabeledList,
-  Section,
   Dimmer,
   Icon,
+  LabeledList,
+  Section,
 } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
@@ -50,82 +50,80 @@ export const NukeConsole = (props) => {
             </Box>
           </Dimmer>
         ) : (
-          <>
-            <Section
-              title="Nuclear Warhead Control"
-              buttons={
-                <Button
-                  disabled={!auth || !safety || timing}
-                  icon="eject"
-                  onClick={() => act('ejectDisk')}
-                >
-                  Eject Disk
-                </Button>
-              }
-            >
-              <LabeledList>
+          <Section
+            title="Nuclear Warhead Control"
+            buttons={
+              <Button
+                disabled={!auth || !safety || timing}
+                icon="eject"
+                onClick={() => act('ejectDisk')}
+              >
+                Eject Disk
+              </Button>
+            }
+          >
+            <LabeledList>
+              <LabeledList.Item
+                label="Arming Code"
+                color={yes_code ? 'green' : 'red'}
+                buttons={
+                  <Button
+                    disabled={!auth || timing}
+                    onClick={() => act('armingCode')}
+                  >
+                    {yes_code ? 'Disarm' : 'Arm'} Warhead
+                  </Button>
+                }
+              >
+                {code}
+              </LabeledList.Item>
+              {!yes_code ? (
                 <LabeledList.Item
-                  label="Arming Code"
-                  color={yes_code ? 'green' : 'red'}
+                  label="Detonation"
+                  color={safety ? 'green' : 'red'}
                   buttons={
                     <Button
-                      disabled={!auth || timing}
-                      onClick={() => act('armingCode')}
+                      disabled={!auth || !yes_code || timing}
+                      onClick={() => act('safety')}
                     >
-                      {yes_code ? 'Disarm' : 'Arm'} Warhead
+                      {safety ? 'SAFE' : 'ARMED'}
+                    </Button>
+                  }
+                />
+              ) : (
+                <LabeledList.Item
+                  label="Detonation"
+                  color={safety ? 'green' : 'red'}
+                  buttons={
+                    <Button disabled={timing} onClick={() => act('safety')}>
+                      {safety ? 'SAFE' : 'ARMED'}
                     </Button>
                   }
                 >
-                  {code}
-                </LabeledList.Item>
-                {!yes_code ? (
-                  <LabeledList.Item
-                    label="Detonation"
-                    color={safety ? 'green' : 'red'}
-                    buttons={
+                  {timing ? (
+                    <Button disabled={!timing} onClick={() => act('abort')}>
+                      {timeString + ' REMAINING - ABORT?'}
+                    </Button>
+                  ) : (
+                    <>
                       <Button
-                        disabled={!auth || !yes_code || timing}
-                        onClick={() => act('safety')}
+                        disabled={!auth || timing || safety}
+                        onClick={() => act('time')}
                       >
-                        {safety ? 'SAFE' : 'ARMED'}
+                        {start_minutes} Minutes
                       </Button>
-                    }
-                  ></LabeledList.Item>
-                ) : (
-                  <LabeledList.Item
-                    label="Detonation"
-                    color={safety ? 'green' : 'red'}
-                    buttons={
-                      <Button disabled={timing} onClick={() => act('safety')}>
-                        {safety ? 'SAFE' : 'ARMED'}
+                      <Button
+                        disabled={!auth || timing || safety}
+                        onClick={() => act('timer')}
+                      >
+                        Begin Countdown
                       </Button>
-                    }
-                  >
-                    {timing ? (
-                      <Button disabled={!timing} onClick={() => act('abort')}>
-                        {timeString + ' REMAINING - ABORT?'}
-                      </Button>
-                    ) : (
-                      <>
-                        <Button
-                          disabled={!auth || timing || safety}
-                          onClick={() => act('time')}
-                        >
-                          {start_minutes} Minutes
-                        </Button>
-                        <Button
-                          disabled={!auth || timing || safety}
-                          onClick={() => act('timer')}
-                        >
-                          Begin Countdown
-                        </Button>
-                      </>
-                    )}
-                  </LabeledList.Item>
-                )}
-              </LabeledList>
-            </Section>
-          </>
+                    </>
+                  )}
+                </LabeledList.Item>
+              )}
+            </LabeledList>
+          </Section>
         )}
       </Window.Content>
     </Window>
