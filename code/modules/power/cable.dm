@@ -212,7 +212,6 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		unsense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
 
 /obj/structure/cable/HasProximity(turf/T, datum/weakref/WF, old_loc)
-	SIGNAL_HANDLER
 	if(!broken) // if this somehow happens
 		unfray()
 		return

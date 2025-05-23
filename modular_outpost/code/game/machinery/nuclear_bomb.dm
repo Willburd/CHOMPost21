@@ -13,9 +13,13 @@
 	var/last_turf_state
 	var/warningstage = 0
 
-	var/announced = 0
-	timeleft = 60.0 * 10 // default (10 mins)
+	var/announced = FALSE
+	var/countdown_start_minutes = 10 // default (10 mins)
 	var/self_destruct_cutoff = 60 * 5 //Seconds (5 mins)
+
+	var/countdown_timer = null
+	var/cache_full_time = 0 // This is agonizing, but the value you put in should be retained
+	var/exploding = FALSE
 
 /obj/machinery/nuclearbomb/station/Initialize(mapload)
 	. = ..()
@@ -45,35 +49,132 @@
 	else
 		error("No nuclear landmarks defined")
 
+/obj/machinery/nuclearbomb/station/Destroy()
+	flash_tiles.Cut()
+	. = ..()
+
+/obj/machinery/nuclearbomb/station/attack_hand(mob/user as mob)
+	if(!user.IsAdvancedToolUser())
+		return
+	add_fingerprint(user)
+	user.set_machine(src)
+	tgui_interact(user)
+
+/obj/machinery/nuclearbomb/station/tgui_interact(mob/user, datum/tgui/ui)
+	if(stat & (BROKEN|NOPOWER))
+		return
+
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "NukeConsole", name)
+		ui.open()
+
 /obj/machinery/nuclearbomb/station/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.is_wrench())
 		return
+	if(istype(O, /obj/item/disk/nuclear))
+		insert_disk(O, user)
+		return
+	. = ..()
 
-/obj/machinery/nuclearbomb/station/Destroy()
-	flash_tiles.Cut()
-	return ..()
+/obj/machinery/nuclearbomb/station/proc/insert_disk(var/obj/item/disk/nuclear/O, mob/user as mob)
+	user.drop_item(src)
+	auth = O
+	radiowarn( FALSE, FALSE)
+
+/obj/machinery/nuclearbomb/station/proc/eject_disk()
+	if(!auth)
+		return
+	auth.forceMove(get_turf(src))
+	yes_code = 0
+	auth = null
+
+/obj/machinery/nuclearbomb/station/proc/safety_toggle(mob/user as mob)
+	if(exploding)
+		return
+	if(!GLOB.bomb_set)
+		safety = !(safety)
+		if(safety)
+			abort_timer()
+		update_icon()
+	else
+		to_chat(user, span_warning("Cannot enable safety, self destruct is armed."))
+
+/obj/machinery/nuclearbomb/station/proc/start_timer(mob/user as mob)
+	if(exploding)
+		return
+	if(safety)
+		to_chat(user, span_warning("The safety is still on."))
+		return
+	if(has_timer())
+		return
+	for(var/inserter in inserters)
+		var/obj/machinery/self_destruct/sd = inserter
+		if(!sd || !sd.armed)
+			to_chat(user, span_warning("An inserter has not been armed or is damaged."))
+			return
+	GLOB.bomb_set = 1 //There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
+	// notify station
+	if(get_security_level() != SEC_LEVEL_DELTA)
+		priority_announcement.Announce("Self destruct sequence has been activated. Self-destructing in [timeleft] seconds.", "Self-Destruct Control Computer")
+	set_security_level(SEC_LEVEL_DELTA)
+	if(countdown_timer)
+		deltimer(countdown_timer, SStimer)
+	countdown_timer = addtimer(CALLBACK(src, PROC_REF(explode)), countdown_start_minutes MINUTES, TIMER_DELETE_ME|TIMER_STOPPABLE)
+	cache_full_time = timeleft(countdown_timer, SStimer) // we need to do this for dumb reasons
+	update_icon()
+	announced = FALSE
+
+/obj/machinery/nuclearbomb/station/proc/abort_timer()
+	if(exploding)
+		return
+	if(!has_timer())
+		return
+	if(get_security_level() == SEC_LEVEL_DELTA)
+		priority_announcement.Announce("Self destruct sequence has been cancelled.", "Self-Destruct Control Computer")
+		set_security_level(SEC_LEVEL_RED)
+	if(has_timer())
+		deltimer(countdown_timer, SStimer)
+		countdown_timer = null
+	GLOB.bomb_set = 0
+	update_icon()
 
 /obj/machinery/nuclearbomb/station/process()
-	if(timing)
+	if(has_timer())
 		GLOB.bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
-		timeleft--
-		if(timeleft <= self_destruct_cutoff && !announced)
-			// minimum 1 min before no going back!
+		if(countdown_too_far_gone() && !announced)
 			priority_announcement.Announce("The self-destruct sequence has reached terminal countdown, abort systems have been disabled.", "Self-Destruct Control Computer")
-			announced = 1
-		if(timeleft <= 0)
-			explode()
-		for(var/mob/M in viewers(1, src))
-			if((M.client && M.machine == src))
-				attack_hand(M)
-	return
+			announced = TRUE
+	return 0
+
+/obj/machinery/nuclearbomb/station/proc/has_timer()
+	return exploding || countdown_timer
+
+/obj/machinery/nuclearbomb/station/proc/get_time_remaining()
+	if(exploding)
+		return 0
+	var/remaining = (countdown_start_minutes MINUTES) / (1 SECOND) // deci to seconds
+	if(has_timer())
+		remaining = timeleft(countdown_timer, SStimer) SECONDS
+	return remaining
+
+/// This is ugly. But without doing this the input time of Xminutes jumps up to show the real time it would take with server lag factored in... 10 mins to 13 for example
+/obj/machinery/nuclearbomb/station/proc/get_compensating_time()
+	if(exploding)
+		return (countdown_start_minutes MINUTES) / (1 SECOND) // deci to seconds
+	if(!cache_full_time)
+		return (countdown_start_minutes MINUTES) / (1 SECOND) // deci to seconds
+	return ((countdown_start_minutes MINUTES) * (get_time_remaining() / cache_full_time)) / (1 SECOND) // Solve the percent of the alarm remaining and solve off of the start minutes
+
+/obj/machinery/nuclearbomb/station/proc/countdown_too_far_gone()
+	return exploding || (get_compensating_time() <= self_destruct_cutoff)
 
 /obj/machinery/nuclearbomb/station/update_icon()
 	var/target_icon_state
-	if(timing == -1)
+	if(exploding)
 		target_icon_state = "rcircuitanim"
 		icon_state = "exploding"
-	else if(timing)
+	else if(has_timer())
 		target_icon_state = "rcircuitanim"
 		icon_state = "urgent"
 	else if(!safety)
@@ -92,131 +193,89 @@
 			T.icon_state = target_icon_state
 		last_turf_state = target_icon_state
 
+/obj/machinery/nuclearbomb/station/tgui_act(action, params, datum/tgui/ui)
+	if(..())
+		return TRUE
+	if(!ui.user.canmove || ui.user.stat || ui.user.restrained())
+		return FALSE
 
-/obj/machinery/nuclearbomb/station/attack_hand(mob/user as mob)
-	if(!user.IsAdvancedToolUser())
-		return
+	add_fingerprint(ui.user)
+	if(countdown_too_far_gone())
+		to_chat(ui.user, span_warning("The self-destruct sequence has reached terminal countdown, system has been disabled."))
+		return FALSE
 
-	user.set_machine(src)
-	var/dat = text("<TT><B>Nuclear Fission Explosive</B><BR>\nAuth. Disk: <A href='byond://?src=\ref[];auth=1'>[]</A><HR>", src, (auth ? "++++++++++" : "----------"))
-	if(auth)
-		if(yes_code)
-			dat += text("\n<B>Status</B>: []-[]<BR>\n<B>Timer</B>: []<BR>\n<BR>\nTimer: [] <A href='byond://?src=\ref[];timer=1'>Toggle</A><BR>\nTime: <A href='byond://?src=\ref[];time=-10'>-</A> <A href='byond://?src=\ref[];time=-1'>-</A> [] <A href='byond://?src=\ref[];time=1'>+</A> <A href='byond://?src=\ref[];time=10'>+</A><BR>\n<BR>\nSafety: [] <A href='byond://?src=\ref[];safety=1'>Toggle</A><BR>\n", (timing ? "Func/Set" : "Functional"), (safety ? "Safe" : "Engaged"), timeleft, (timing ? "On" : "Off"), src, src, src, timeleft, src, src, (safety ? "On" : "Off"), src)
-		else
-			dat += text("\n<B>Status</B>: Auth. S2-[]<BR>\n<B>Timer</B>: []<BR>\n<BR>\nTimer: [] Toggle<BR>\nTime: - - [] + +<BR>\n<BR>\n[] Safety: Toggle<BR>\n", (safety ? "Safe" : "Engaged"), timeleft, (timing ? "On" : "Off"), timeleft, (safety ? "On" : "Off"))
-	else
-		if(timing)
-			dat += text("\n<B>Status</B>: Set-[]<BR>\n<B>Timer</B>: []<BR>\n<BR>\nTimer: [] Toggle<BR>\nTime: - - [] + +<BR>\n<BR>\nSafety: [] Toggle<BR>\n", (safety ? "Safe" : "Engaged"), timeleft, (timing ? "On" : "Off"), timeleft, (safety ? "On" : "Off"))
-		else
-			dat += text("\n<B>Status</B>: Auth. S1-[]<BR>\n<B>Timer</B>: []<BR>\n<BR>\nTimer: [] Toggle<BR>\nTime: - - [] + +<BR>\n<BR>\nSafety: [] Toggle<BR>\n", (safety ? "Safe" : "Engaged"), timeleft, (timing ? "On" : "Off"), timeleft, (safety ? "On" : "Off"))
-	var/message = "AUTH"
-	if(auth)
-		message = text("[]", code)
-		if(yes_code)
-			message = "*****"
-	dat += text("<HR>\n>[]<BR>\n<A href='byond://?src=\ref[];type=1'>1</A>-<A href='byond://?src=\ref[];type=2'>2</A>-<A href='byond://?src=\ref[];type=3'>3</A><BR>\n<A href='byond://?src=\ref[];type=4'>4</A>-<A href='byond://?src=\ref[];type=5'>5</A>-<A href='byond://?src=\ref[];type=6'>6</A><BR>\n<A href='byond://?src=\ref[];type=7'>7</A>-<A href='byond://?src=\ref[];type=8'>8</A>-<A href='byond://?src=\ref[];type=9'>9</A><BR>\n<A href='byond://?src=\ref[];type=R'>R</A>-<A href='byond://?src=\ref[];type=0'>0</A>-<A href='byond://?src=\ref[];type=E'>E</A><BR>\n</TT>", message, src, src, src, src, src, src, src, src, src, src, src, src)
-	user << browse(dat, "window=nuclearbomb;size=300x400")
-	onclose(user, "nuclearbomb")
-	return
-
-/obj/machinery/nuclearbomb/station/Topic(href, href_list)
-	if(!usr.canmove || usr.stat || usr.restrained())
-		return
-	if(timeleft <= self_destruct_cutoff)
-		to_chat(usr, span_warning("The self-destruct sequence has reached terminal countdown, system has been disabled."))
-		return
-	if((usr.contents.Find(src) || (in_range(src, usr) && istype(src.loc, /turf))))
-		usr.set_machine(src)
-		if(href_list["auth"])
+	update_icon()
+	switch(action)
+		if("ejectDisk")
 			if(auth)
-				auth.loc = src.loc
-				yes_code = 0
-				auth = null
-			else
-				var/obj/item/I = usr.get_active_hand()
-				if(istype(I, /obj/item/disk/nuclear))
-					usr.drop_item()
-					I.loc = src
-					auth = I
-					radiowarn( FALSE, FALSE)
-		if(auth)
-			if(href_list["type"])
-				if(href_list["type"] == "E")
+				eject_disk()
+				return TRUE
+
+		if("armingCode")
+			if(auth)
+				if(yes_code)
+					code = "DISARMED"
+					yes_code = FALSE
+					safety = TRUE
+					update_icon()
+					return TRUE
+
+				var/max_code = 99999
+				var/new_code = tgui_input_number(ui.user,"Enter arming code","Arming Code", 0, max_code,0)
+				if(new_code)
+					code = "[between(0, new_code, max_code)]"
+
 					if(code == r_code)
-						yes_code = 1
+						yes_code = TRUE
 						radiowarn( FALSE, FALSE)
-						code = null
 					else
 						code = "ERROR"
-				else
-					if(href_list["type"] == "R")
-						yes_code = 0
-						code = null
-					else
-						code += text("[]", href_list["type"])
-						if(length(code) > 5)
-							code = "ERROR"
-			if(yes_code)
-				if(href_list["time"])
-					var/time = text2num(href_list["time"])
-					timeleft += time
-					timeleft = min(max(round(timeleft), 60 * 10), 60 * 30) // different min timer( 10 min, 30 min )
-				if(href_list["timer"])
-					if(timing == -1.0)
-						return
-					if(safety)
-						to_chat(usr, span_warning("The safety is still on."))
-						timing = FALSE
-						return
-					for(var/inserter in inserters)
-						var/obj/machinery/self_destruct/sd = inserter
-						if(!sd || !sd.armed)
-							to_chat(usr, span_warning("An inserter has not been armed or is damaged."))
-							timing = FALSE
-							return
-					timing = !(timing)
-					if(timing)
-						if(!safety)
-							GLOB.bomb_set = 1 //There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
-							// notify station
-							if(get_security_level() != "delta")
-								priority_announcement.Announce("Self destruct sequence has been activated. Self-destructing in [timeleft] seconds.", "Self-Destruct Control Computer")
-							set_security_level("delta")
-							update_icon()
-						else
-							GLOB.bomb_set = 0
-							update_icon()
-					else
-						if(get_security_level() == "delta")
-							priority_announcement.Announce("Self destruct sequence has been cancelled.", "Self-Destruct Control Computer")
-						set_security_level("red")
-						GLOB.bomb_set = 0
-						update_icon()
-				if(href_list["safety"])
-					if(!GLOB.bomb_set)
-						safety = !(safety)
-						if(safety)
-							timing = 0
-							GLOB.bomb_set = 0
-						update_icon()
-					else
-						to_chat(usr, span_warning("Cannot enable safety, self destruct is armed."))
+					return TRUE
 
-		add_fingerprint(usr)
-		for(var/mob/M in viewers(1, src))
-			if((M.client && M.machine == src))
-				attack_hand(M)
-	else
-		usr << browse(null, "window=nuclearbomb")
-		return
-	return
+		if("time")
+			if(auth && yes_code)
+				var/min_time = 10
+				var/max_time = 30
+				var/new_time = tgui_input_number(ui.user,"Enter minutes until detonation","Set Timer", 0, max_time, min_time)
+				countdown_start_minutes = between(min_time, new_time, max_time) // different min timer( 10 min, 30 min )
+				return TRUE
+
+		if("timer")
+			if(!has_timer() && auth && yes_code)
+				start_timer(ui.user)
+				return TRUE
+
+		if("abort")
+			if(has_timer())
+				abort_timer()
+				return TRUE
+
+		if("safety")
+			if(auth && yes_code)
+				safety_toggle(ui.user)
+				return TRUE
+
+/obj/machinery/nuclearbomb/station/tgui_data(mob/user)
+	// this is the data which will be sent to the ui
+	var/list/data = list(
+		"auth" = !isnull(auth),
+		"code" = code,
+		"yes_code" = yes_code,
+		"safety" = safety,
+		"timeleft" = get_compensating_time(),
+		"timing" = has_timer(),
+		"critical" = countdown_too_far_gone(),
+		"start_minutes" = countdown_start_minutes
+	)
+
+	return data
 
 /obj/machinery/nuclearbomb/station/explode()
 	update_icon()
-	if(safety)
-		timing = 0
+	if(!has_timer() || safety || !auth || !yes_code)
+		abort_timer()
 		return
-	timing = -1.0
+	exploding = TRUE
 	yes_code = 0
 	safety = 1
 	world << sound('sound/machines/Alarm.ogg') // force sound!
@@ -231,7 +290,7 @@
 		ticker.station_explosion_cinematic(FALSE,null)
 		if(ticker.mode)
 			ticker.mode.explosion_in_progress = 0
-			to_world("<B>The station was destoyed by the nuclear blast!</B>")
+			to_world("<B>The station was destroyed by the nuclear blast!</B>")
 
 			ticker.mode.station_was_nuked = FALSE
 			if(!ticker.mode.check_finished())//If the mode does not deal with the nuke going off so just reboot because everyone is stuck as is
@@ -259,19 +318,19 @@
 			if(warningstage < 3)
 				warningstage = 3
 				message = "DANGER! The Terraformer Euthanizer is now armed and ready to fire! Destroy any unauthorized usage of the Terraformer Euthanizer with extreme prejudice immediately! All non-security crew must retreat to minimum safe distance incase of detonation! This is a Delta-Level Hazard!"
-				GLOB.global_announcer.autosay(message, "Primary System", "Command")
-				GLOB.global_announcer.autosay(message, "Primary System", "Security")
-				GLOB.global_announcer.autosay(message, "Primary System", "Common")
+				GLOB.global_announcer.autosay(message, "Primary System", CHANNEL_COMMAND)
+				GLOB.global_announcer.autosay(message, "Primary System", CHANNEL_SECURITY)
+				GLOB.global_announcer.autosay(message, "Primary System", CHANNEL_COMMON)
 
 	if(yes_code)
 		if(warningstage < 2)
 			warningstage = 2
 			message = "Warning! Terraformer Euthanizer has been armed, detonation is possible. If this is unauthorized, respond with all available force to stop the process immediately! E-Shui law prevents any usage of the Euthanizer that is not in compliance with SolGov Vs N.T. 443-72!"
-			GLOB.global_announcer.autosay(message, "Primary System", "Command")
-			GLOB.global_announcer.autosay(message, "Primary System", "Security")
+			GLOB.global_announcer.autosay(message, "Primary System", CHANNEL_COMMAND)
+			GLOB.global_announcer.autosay(message, "Primary System", CHANNEL_SECURITY)
 
 	if(auth || storageopened)
 		if(warningstage < 1)
 			warningstage = 1
 			message = "Warning! Utilization of the Terraformer Euthanizer detected. Respond with all available force to stop the process if this is unauthorized."
-			GLOB.global_announcer.autosay(message, "Security Subsystem", "Command")
+			GLOB.global_announcer.autosay(message, "Security Subsystem", CHANNEL_COMMAND)
