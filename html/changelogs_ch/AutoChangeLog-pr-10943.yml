@@ -1,4 +1,4 @@
 author: "CHOMPStation2StaffMirrorBot"
 delete-after: True
 changes:
-  - image: "Fox taurs now have belly sprites."
+  - bugfix: "Capsaicin no longer causes toxin damage when eaten"
