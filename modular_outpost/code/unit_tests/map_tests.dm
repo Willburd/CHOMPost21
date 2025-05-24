@@ -85,38 +85,11 @@
 	)
 
 	var/list/does_not_use_lightswitch = list(
-		/area/security/brig,
-		/area/engineering/trammaint,
-		/area/security/surgery,
-		/area/muriki/crew/dormaid,
-		/area/muriki/crew/baraid,
-		/area/muriki/crew/engyaid,
-		/area/security/security_aid_station,
-		/area/engineering/refinery/aid_station,
-		/area/medical/first_aid_station_starboard,
-		/area/medical/first_aid_station,
-		/area/quartermaster/mining/firstaid,
-		/area/rnd/research/phoronics/med,
-		/area/security/nuke_storage,
-		/area/medical/autosleever,
-		/area/security/armoury,
 		/area/muriki/arriveelev,
 		/area/rnd/entry,
 		/area/rnd/entry_aux,
-		/area/rnd/research/medical_roof,
 		/area/rnd/research/roof_eva,
-		/area/engineering/gravgen,
-		/area/security/tactical,
-		/area/rnd/research/medical,
-		/area/tcommsat/computer,
-		/area/tcomfoyer,
-		/area/tcommsat/lounge,
-		/area/tcommsat/powercontrol,
 		/area/muriki/cybstorage,
-		/area/bridge,
-		/area/wreck/bridge,
-		/area/medical/reception,
-		/area/comms
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -230,6 +203,43 @@
 		/area/ai_sat/docking_wing
 	)
 
+	// Lights always on, but not a hallway
+	var/list/priority_work_area = list(
+		// Medical stations
+		/area/quartermaster/mining/firstaid,
+		/area/rnd/research/phoronics/med,
+		/area/rnd/research/medical,
+		/area/rnd/research/medical_roof,
+		/area/muriki/crew/dormaid,
+		/area/muriki/crew/baraid,
+		/area/muriki/crew/engyaid,
+		/area/security/security_aid_station,
+		/area/engineering/refinery/aid_station,
+		/area/medical/first_aid_station_starboard,
+		/area/medical/first_aid_station,
+		// Tcomms
+		/area/comms,
+		/area/tcommsat/computer,
+		/area/tcomfoyer,
+		/area/tcommsat/lounge,
+		/area/tcommsat/powercontrol,
+		// Armory
+		/area/security/armoury,
+		/area/security/tactical,
+		/area/security/nuke_storage,
+		/area/security/brig,
+		/area/security/surgery,
+		// Medical
+		/area/medical/autosleever,
+		/area/medical/reception,
+		/area/muriki/tramstation,
+		// Others
+		/area/engineering/trammaint,
+		/area/engineering/gravgen,
+		/area/bridge,
+		/area/wreck/bridge,
+	)
+
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
 	for(var/area/A in world)
 		if(!(A.z in zs_to_test) || (A.type in exempt_areas))
@@ -278,15 +288,19 @@
 		var/is_hallway = FALSE
 		if(istype(A,/area/hallway))
 			is_hallway = TRUE
-		if(istype(A,/area/muriki/tramstation))
-			is_hallway = TRUE
 		if(A.type in forced_hallway)
 			is_hallway = TRUE
 		// Some dumb exclusions
 		if(A.type == /area/hallway/secondary/entry/docking_lounge)
 			is_hallway = FALSE
 
-		if(!is_hallway)
+		if(A.type in priority_work_area)
+			// lightswitches forbidden in priority work areas
+			if((locate(/obj/machinery/light_switch) in A.contents))
+				log_unit_test("[A.type] had a lightswitch, but is a priority work area")
+				failures++
+
+		else if(!is_hallway)
 			// lightswitches required in rooms
 			if(!(A.type in does_not_use_lightswitch))
 				if(!(locate(/obj/machinery/light_switch) in A.contents))
