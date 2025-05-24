@@ -190,7 +190,6 @@
 		/area/medical/medbay4,
 		/area/muriki/research/isolation_hall,
 		/area/rnd/hallway/hazard,
-		/area/muriki/tramstation/waste,
 		/area/muriki/crewstairwell,
 		/area/medical/medbay,
 		/area/medical/stairwell,
@@ -234,10 +233,12 @@
 		/area/medical/reception,
 		/area/muriki/tramstation,
 		// Others
+		/area/muriki/tramstation/civ,
+		/area/muriki/tramstation/cargeng,
 		/area/engineering/trammaint,
+		/area/muriki/tramstation/waste,
 		/area/engineering/gravgen,
-		/area/bridge,
-		/area/wreck/bridge,
+		/area/wreck/bridge
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
