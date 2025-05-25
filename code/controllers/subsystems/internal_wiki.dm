@@ -274,8 +274,8 @@ SUBSYSTEM_DEF(internal_wiki)
 			assemble_reaction["temp_max"] = CR.temp_range[2]
 			assemble_reaction["xgm_min"] = CR.minimum_xgm_pressure
 			assemble_reaction["xgm_max"] = CR.maximum_xgm_pressure
-			assemble_reaction["require_xgm_gas"] = CR.require_xgm_gas ? gas_data.name[CR.require_xgm_gas] : null
-			assemble_reaction["rejects_xgm_gas"] = CR.rejects_xgm_gas ? gas_data.name[CR.rejects_xgm_gas] : null
+			assemble_reaction["require_xgm_gas"] = CR.require_xgm_gas ? GLOB.gas_data.name[CR.require_xgm_gas] : null
+			assemble_reaction["rejects_xgm_gas"] = CR.rejects_xgm_gas ? GLOB.gas_data.name[CR.rejects_xgm_gas] : null
 			var/list/reqs = list()
 			for(var/RQ in CR.required_reagents)
 				var/decl/chemical_reaction/r_RQ = SSchemistry.chemical_reagents[RQ]
@@ -962,14 +962,14 @@ SUBSYSTEM_DEF(internal_wiki)
 	if(S.consume_gasses && S.consume_gasses.len > 0)
 		var/list/consumed = list()
 		for(var/CG in S.consume_gasses)
-			consumed["[gas_data.name[CG]]"] = S.consume_gasses[CG]
+			consumed["[GLOB.gas_data.name[CG]]"] = S.consume_gasses[CG]
 		data["gas_consumed"] = consumed
 
 	data["gas_exuded"] = null
 	if(S.exude_gasses && S.exude_gasses.len > 0)
 		var/list/exude = list()
 		for(var/EG in S.exude_gasses)
-			exude["[gas_data.name[EG]]"] = S.exude_gasses[EG]
+			exude["[GLOB.gas_data.name[EG]]"] = S.exude_gasses[EG]
 		data["gas_exuded"] = exude
 
 	data["mutations"] = null
