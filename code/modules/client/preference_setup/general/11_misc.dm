@@ -29,7 +29,7 @@
 	pref.directory_ad			= save_data["directory_ad"]
 	pref.sensorpref				= save_data["sensorpref"]
 	pref.capture_crystal		= save_data["capture_crystal"]
-	pref.auto_backup_implant	= save_data["auto_backup_implant"]
+	//pref.auto_backup_implant	= save_data["auto_backup_implant"] Outpost 21 edit - no backup implants
 	pref.borg_petting			= save_data["borg_petting"]
 	pref.resleeve_lock			= save_data["resleeve_lock"]
 	pref.resleeve_scan			= save_data["resleeve_scan"]
@@ -55,7 +55,7 @@
 	save_data["directory_ad"]			= pref.directory_ad
 	save_data["sensorpref"]				= pref.sensorpref
 	save_data["capture_crystal"]		= pref.capture_crystal
-	save_data["auto_backup_implant"]	= pref.auto_backup_implant
+	//save_data["auto_backup_implant"]	= pref.auto_backup_implant Outpost 21 edit - no backup implants
 	save_data["borg_petting"]			= pref.borg_petting
 	save_data["resleeve_lock"]			= pref.resleeve_lock
 	save_data["resleeve_scan"]			= pref.resleeve_scan
@@ -93,14 +93,19 @@
 		character.vantag_pref = pref.vantag_preference
 		BITSET(character.hud_updateflag, VANTAG_HUD)
 
+		// Outpost 21 edit begin - Respect admin spawn choices
+		var/want_body_save = pref.resleeve_scan
+		var/want_mind_save = pref.mind_scan
+		// Outpost 21 edit end
+
 		spawn(50)
 			if(QDELETED(character) || QDELETED(pref))
 				return // They might have been deleted during the wait
 			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/perform_exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore
-				if(pref.resleeve_scan)
+				if(want_body_save) // Outpost 21 edit - Respect admin spawn choices
 					var/datum/transhuman/body_record/BR = new()
 					BR.init_from_mob(character, pref.resleeve_scan, pref.resleeve_lock)
-				if(pref.mind_scan)
+				if(want_mind_save) // Outpost 21 edit - Respect admin spawn choices
 					var/datum/transcore_db/our_db = SStranscore.db_by_key(null)
 					if(our_db)
 						our_db.m_backup(character.mind,character.nif,one_time = TRUE)
