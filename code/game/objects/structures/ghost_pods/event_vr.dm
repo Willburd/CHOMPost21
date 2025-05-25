@@ -138,6 +138,7 @@
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce
 	announce_prob = 0
 
+/* Outpost 21 edit - Role disabled here
 /obj/structure/ghost_pod/ghost_activated/morphspawn
 	name = "weird goo"
 	desc = "A pile of weird gunk... Wait, is it actually moving?"
@@ -303,3 +304,4 @@
 		return
 
 	create_occupant(user)
+*/

@@ -212,7 +212,7 @@ var/global/list/valid_ringtones = list()
 			return TOPIC_REFRESH
 
 		if("set_ringtone")
-			var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", valid_ringtones + "Other", pref.ringtone)
+			var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", device_ringtones + "Other", pref.ringtone) // Outpost 21 edit - use global ringtone list
 			if(!choice)
 				return TOPIC_NOACTION
 			if(choice == "Other")
@@ -222,8 +222,8 @@ var/global/list/valid_ringtones = list()
 			else
 				pref.ringtone = choice
 			return TOPIC_REFRESH
-			
-		
+
+
 		// Outpost 21 edit begin - testing ringtones
 		if("test_ringtone")
 			var/S = 'sound/machines/twobeep.ogg'

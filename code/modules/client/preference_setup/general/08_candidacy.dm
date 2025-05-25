@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Use ours
 var/global/list/special_roles = list( //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 // Change these to 0 if the equivalent mode is disabled for whatever reason!
@@ -31,11 +32,8 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"cursed sword" = 1,									// 21
 	"Ship Survivor" = 1,								// 22
 	//VOREStation Add End
-	//Outpost 21 Add
-	"zombie" = 1,										// 22
-	"deep hunger" = 1,									// 23
-	//Outpost 21 Add End
 )
+*/
 
 /datum/category_item/player_setup_item/general/candidacy
 	name = "Candidacy"

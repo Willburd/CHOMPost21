@@ -21,6 +21,7 @@
 #define SEC_LEVEL_RED   5
 #define SEC_LEVEL_DELTA 6
 
+/* Outpost 21 edit - Use ours
 #define BE_TRAITOR    0x1
 #define BE_OPERATIVE  0x2
 #define BE_CHANGELING 0x4
@@ -83,7 +84,7 @@ var/list/be_special_flags = list(
 	"Zombie"          	= BE_ZOMBIE
 	// outpost 21 addition end
 )
-
+*/
 
 // Antagonist datum flags.
 #define ANTAG_OVERRIDE_JOB        0x1 // Assigned job is set to MODE when spawning.
