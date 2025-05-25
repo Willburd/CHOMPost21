@@ -8418,11 +8418,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -25;
-	pixel_y = 24
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "apf" = (
@@ -9035,7 +9030,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
 "aAo" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -9316,7 +9311,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
 "aEg" = (
 /obj/structure/cliff{
@@ -10017,7 +10012,7 @@
 /area/muriki/grounds/engi)
 "aRq" = (
 /obj/machinery/body_scanconsole,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
 "aRy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21996,11 +21991,6 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 25;
-	pixel_y = -24
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "eGD" = (
@@ -26219,11 +26209,6 @@
 /area/medical/virology)
 "gce" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/light_switch{
-	pixel_x = 26;
-	pixel_y = 24;
-	dir = 8
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
 "gcg" = (
@@ -26863,7 +26848,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
 "gok" = (
 /obj/effect/landmark/event_spawn/maintpred,
@@ -38159,7 +38144,7 @@
 /area/hallway/secondary/engineering_hallway)
 "jED" = (
 /obj/machinery/bodyscanner,
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
 "jEG" = (
 /obj/structure/closet/emcloset,
@@ -40868,7 +40853,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
 "krH" = (
 /obj/machinery/door/airlock/angled_tgmc,
@@ -54692,7 +54677,7 @@
 /obj/machinery/body_scanconsole{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
 "oKL" = (
 /obj/structure/closet/secure_closet{
@@ -57417,11 +57402,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
-	},
-/obj/machinery/light_switch{
-	pixel_x = 26;
-	pixel_y = 22;
-	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
@@ -63406,6 +63386,11 @@
 /area/hallway/secondary/engineering_hallway)
 "rxp" = (
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 25;
+	pixel_y = -27
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "rxv" = (
@@ -63973,6 +63958,11 @@
 "rHg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -26;
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)

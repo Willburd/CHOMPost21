@@ -229,6 +229,7 @@
 		/area/security/brig,
 		/area/security/surgery,
 		// Medical
+		/area/medical/sleeper,
 		/area/medical/autosleever,
 		/area/medical/reception,
 		/area/muriki/tramstation,
