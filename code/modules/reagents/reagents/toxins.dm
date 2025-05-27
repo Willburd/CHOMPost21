@@ -146,8 +146,23 @@
 	description = "A liquifying toxin produced by giant spiders."
 	color = "#2CE893"
 	strength = 5
-
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
+/datum/reagent/toxin/warningtoxin
+	name = REAGENT_WARNINGTOXIN
+	id = REAGENT_ID_WARNINGTOXIN
+	description = "A weaker toxin produced by giant spiders applied only in warning bites, known to slow a people down a lot."
+	color = "#2CE893"
+	strength = 1
+	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+
+/datum/reagent/toxin/warningtoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	var/poison_strength = strength * M.species.chem_strength_tox
+	if(strength && alien != IS_DIONA)
+		M.adjustToxLoss(poison_strength * removed)
+		M.druggy = max(M.druggy, 10)
+		M.make_jittery(5)
+		M.add_chemical_effect(CE_SLOWDOWN, 5)
 
 /datum/reagent/toxin/phoron
 	name = REAGENT_PHORON
