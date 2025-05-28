@@ -268,6 +268,9 @@
 #define REAGENT_EARTHSBLOOD "Earthsblood"
 #define REAGENT_ID_EARTHSBLOOD "earthsblood"
 */
+#define REAGENT_ASUSTENANCE	"Artificial Sustenance"
+#define REAGENT_ID_ASUSTENANCE "a_sustenance"
+
 
 // Virology
 #define REAGENT_VACCINE "Vaccine"

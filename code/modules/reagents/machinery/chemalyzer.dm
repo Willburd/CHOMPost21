@@ -85,10 +85,10 @@
 		SSinternal_wiki.add_icon(subdata, initial(beaker_path.icon), initial(beaker_path.icon_state), R.color)
 		// Get internal data
 		subdata["description"] = R.description
-		// Outpost 21 edit begin - Our chem data
 		subdata["addictive"] = 0
-		if(R.id in addictives)
-			subdata["addictive"] = (R.id in fast_addictives) ? 2 : 1
+		if(R.id in get_addictive_reagents(ADDICT_ALL))
+			subdata["addictive"] = TRUE
+		// Outpost 21 edit begin - Our chem data
 		subdata["industrial_use"] = R.industrial_use
 		subdata["supply_points"] = R.supply_conversion_value ? R.supply_conversion_value : 0
 		var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money

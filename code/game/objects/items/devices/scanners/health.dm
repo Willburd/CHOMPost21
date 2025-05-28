@@ -325,18 +325,29 @@
 					dat += span_warning("Anatomical irregularities detected in subject.")
 					dat += "<br>"
 		//CHOMPedit end
-		// Outpost 21 edit begin - Addictions
-		for(var/addic in H.addiction_counters)
-			if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
+		// Addictions
+		if(H.get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE) > 0)
+			dat += span_warning("Biologically unstable, requires [REAGENT_ASUSTENANCE] to function properly.")
+			dat += "<br>"
+		for(var/addic in H.get_all_addictions())
+			if(H.get_addiction_to_reagent(addic) > 0 && (advscan >= 2 || H.get_addiction_to_reagent(addic) <= 120)) // high enough scanner upgrade detects addiction even if not almost withdrawling
 				var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
-				if(advscan >= 2)
-					dat += span_warning("Chemical dependance detected: [R.name].")
-					dat += "<br>"
+				if(R.id == REAGENT_ID_ASUSTENANCE)
+					continue
+				if(advscan >= 1)
+					// Shows multiple
+					if(advscan >= 2 && H.get_addiction_to_reagent(addic) <= 80)
+						dat += span_warning("Experiencing withdrawls from [R.name], [REAGENT_INAPROVALINE] treatment recomended.")
+						dat += "<br>"
+					else
+						dat += span_warning("Chemical dependance detected: [R.name].")
+						dat += "<br>"
 				else
+					// Shows single
 					dat += span_warning("Chemical dependance detected.")
 					dat += "<br>"
 					break
-		// Outpost 21 edit end
+		// Appendix
 		for(var/obj/item/organ/internal/appendix/a in H.internal_organs)
 			var/severity = ""
 			if(a.inflamed > 3)

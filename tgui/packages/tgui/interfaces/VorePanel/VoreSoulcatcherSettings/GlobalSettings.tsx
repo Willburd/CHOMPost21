@@ -3,6 +3,7 @@ import { Button, LabeledList, Stack } from 'tgui-core/components';
 import type { BooleanLike } from 'tgui-core/react';
 
 export const GlobalSettings = (props: {
+  editMode: boolean;
   ext_hearing: BooleanLike;
   ext_vision: BooleanLike;
   mind_backups: BooleanLike;
@@ -13,6 +14,7 @@ export const GlobalSettings = (props: {
   const { act } = useBackend();
 
   const {
+    editMode,
     ext_hearing,
     ext_vision,
     mind_backups,
@@ -26,6 +28,7 @@ export const GlobalSettings = (props: {
       <Stack>
         <Stack.Item>
           <Button
+            disabled={!editMode}
             icon={ext_hearing ? 'ear-listen' : 'ear-deaf'}
             tooltip={
               (ext_hearing ? 'Allow' : 'Disallow') +
@@ -40,6 +43,7 @@ export const GlobalSettings = (props: {
         </Stack.Item>
         <Stack.Item>
           <Button
+            disabled={!editMode}
             icon={ext_vision ? 'eye' : 'eye-slash'}
             tooltip={
               (ext_vision ? 'Allow' : 'Disallow') +
@@ -55,6 +59,7 @@ export const GlobalSettings = (props: {
         {/* Outpost 21 edit - Backup implants removed
         <Stack.Item>
           <Button
+            disabled={!editMode}
             icon="database"
             tooltip={
               (mind_backups ? 'Allow' : 'Disallow') +
@@ -71,6 +76,7 @@ export const GlobalSettings = (props: {
         /* Outpost 21 edit - Soulcatch mechanics that are illegal
         <Stack.Item>
           <Button
+            disabled={!editMode}
             icon="street-view"
             tooltip={
               (sr_projecting ? 'Allow' : 'Disallow') +
@@ -85,6 +91,7 @@ export const GlobalSettings = (props: {
         </Stack.Item>
         <Stack.Item>
           <Button
+            disabled={!editMode}
             icon="eye-low-vision"
             tooltip={
               (see_sr_projecting ? 'Enable' : 'Disable') +
@@ -102,6 +109,7 @@ export const GlobalSettings = (props: {
         */}
         <Stack.Item>
           <Button
+            disabled={!editMode}
             icon={show_vore_sfx ? 'circle-play' : 'circle-pause'}
             tooltip={
               (show_vore_sfx ? 'Show' : 'Hide') +
