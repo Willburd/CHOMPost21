@@ -39,7 +39,7 @@ export const PublicLibrary = (props) => {
     <Window width={900} height={600}>
       <Window.Content>
         {errorText && (
-          <NoticeBox warning>
+          <NoticeBox danger>
             <Box verticalAlign="middle">{errorText}</Box>
           </NoticeBox>
         )}
