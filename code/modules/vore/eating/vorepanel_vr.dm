@@ -4,9 +4,9 @@
 
 #define STATION_PREF_NAME "Chomp" // CHOMPEdit
 #define VORE_BELLY_TAB 0
-#define SOULCATCHER_TAB 1
-#define GENERAL_TAB 2
-#define PREFERENCE_TAB 3
+// #define SOULCATCHER_TAB 1 // Outpost 21 edit - Disable soulgems
+#define GENERAL_TAB 1 // Outpost 21 edit - Disable soulgems
+#define PREFERENCE_TAB 2 // Outpost 21 edit - Disable soulgems
 
 /mob
 	var/datum/vore_look/vorePanel
@@ -154,11 +154,13 @@
 		// Selected belly data. TODO, split this into sub data per tab, we don't need all of this at once, ever!
 		data["selected"] = get_selected_data(host)
 
+	/* Outpost 21 edit - Disable soulgems
 	if(active_tab == SOULCATCHER_TAB)
 		// Soulcatcher and abilities
 		data["our_bellies"] = get_vorebellies(host, FALSE)
 		data["soulcatcher"] = get_soulcatcher_data(host)
 		data["abilities"] = get_ability_data(host)
+	*/
 
 	if(active_tab == PREFERENCE_TAB)
 		// Preference data, we only ever need that when we go to the pref page!
@@ -814,12 +816,14 @@
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, SC_TRANSFERE_MESSAGE)
 			return TRUE
+		/* Outpost 21 edit - Delete souls is is too abusable by antags
 		if(SC_DELETE_MESSAGE)
 			var/message = params["val"]
 			if(message)
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, SC_DELETE_MESSAGE)
 			return TRUE
+		*/
 		*/
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
@@ -1332,6 +1336,6 @@
 
 #undef STATION_PREF_NAME
 #undef VORE_BELLY_TAB
-#undef SOULCATCHER_TAB
+// #undef SOULCATCHER_TAB
 #undef PREFERENCE_TAB
 #undef GENERAL_TAB

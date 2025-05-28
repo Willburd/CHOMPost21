@@ -1102,7 +1102,6 @@ SUBSYSTEM_DEF(internal_wiki)
 	data["addictive"] = 0
 	if(R.id in get_addictive_reagents(ADDICT_ALL))
 		data["addictive"] = TRUE
-	/* Downstream features
 	data["industrial_use"] = R.industrial_use
 	data["supply_points"] = R.supply_conversion_value ? R.supply_conversion_value : 0
 	var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money
@@ -1119,7 +1118,6 @@ SUBSYSTEM_DEF(internal_wiki)
 	body += "<b>Description: </b>[data["description"]]<br>"
 	if(data["addictive"])
 		body += "<b>DANGER, addictive.</b><br>"
-	/* Downstream features
 	if(data["industrial_use"])
 		body  += "<b>Industrial Use: </b>[data["industrial_use"]]<br>"
 	var/tank_size = CARGOTANKER_VOLUME

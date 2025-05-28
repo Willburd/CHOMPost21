@@ -866,8 +866,10 @@
 				tgui_alert_async(user,failure_msg,"Error!")
 				return FALSE
 
+			/* Outpost 21 edit - Disable soulgems
 			if(host.soulgem?.linked_belly == host.vore_selected)
 				host.soulgem.linked_belly = null
+			*/
 
 			qdel(host.vore_selected)
 			host.vore_selected = host.vore_organs[1]

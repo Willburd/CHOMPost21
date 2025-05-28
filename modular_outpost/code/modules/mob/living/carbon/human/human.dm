@@ -37,7 +37,7 @@
 			Bag.contents += perscrip
 
 		// Sustinance addiction... They REALLY need this one, so make sure they get it...
-		if(addiction_counters[REAGENT_ID_ASUSTENANCE] && addiction_counters[REAGENT_ID_ASUSTENANCE] > 0)
+		if(get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE) > 0)
 			var/obj/item/reagent_containers/glass/beaker/vial/perscrip = new /obj/item/reagent_containers/glass/beaker/vial/sustenance()
 			perscrip.flags ^= OPENCONTAINER // Close the container
 			to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
