@@ -594,6 +594,8 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/make_red_exit, // Outpost 21 edit - Spawn redspace exit command
 	// /client/proc/base_all_turfs,
+	/client/proc/modify_event_collector,
+	/client/proc/induce_malfunction,
 	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_nif, //CHOMPStation Add,
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
