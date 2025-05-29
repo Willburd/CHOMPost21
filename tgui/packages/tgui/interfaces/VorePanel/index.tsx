@@ -4,10 +4,11 @@ import { Window } from 'tgui/layouts';
 import { Button, Icon, NoticeBox, Stack, Tabs } from 'tgui-core/components';
 
 import type { Data } from './types';
-import { VoreBellySelectionAndCustomization } from './VoreBellySelectionAndCustomization';
-import { VoreInsidePanel } from './VoreInsidePanel';
-// import { VoreSoulcatcher } from './VoreSoulcatcher'; Outpost 21 edit - Disable soulgems
-import { VoreUserPreferences } from './VoreUserPreferences';
+import { VoreBellySelectionAndCustomization } from './VorePanelMainTabs/VoreBellySelectionAndCustomization';
+import { VoreInsidePanel } from './VorePanelMainTabs/VoreInsidePanel';
+// import { VoreSoulcatcher } from './VorePanelMainTabs/VoreSoulcatcher'; Outpost 21 edit - Disable soulgems
+import { VoreUserGeneral } from './VorePanelMainTabs/VoreUserGeneral';
+import { VoreUserPreferences } from './VorePanelMainTabs/VoreUserPreferences';
 
 /**
  * There are three main sections to this UI.
@@ -153,6 +154,8 @@ export const VorePanel = () => {
   const { act, data } = useBackend<Data>();
 
   const {
+    active_tab,
+    active_vore_tab,
     inside,
     our_bellies,
     selected,
@@ -164,43 +167,56 @@ export const VorePanel = () => {
     host_mobtype,
     unsaved_changes,
     vore_words,
+    general_pref_data,
   } = data;
 
-  const [tabIndex, setTabIndex] = useState(0);
+  const [editMode, setEditMode] = useState(false);
 
-  const tabs: React.JSX.Element[] = [];
+  const tabs: (React.JSX.Element | null | undefined)[] = [];
 
-  tabs[0] = (
+  tabs[0] = our_bellies && selected && host_mobtype && (
     <VoreBellySelectionAndCustomization
+      activeVoreTab={active_vore_tab}
       our_bellies={our_bellies}
       selected={selected}
       show_pictures={show_pictures}
       host_mobtype={host_mobtype}
       icon_overflow={icon_overflow}
       vore_words={vore_words}
+      toggleEditMode={setEditMode}
+      editMode={editMode}
     />
   );
   /* Outpost 21 edit - Disable soulgems
-  tabs[1] = (
+  tabs[1] = our_bellies && soulcatcher && abilities && (
     <VoreSoulcatcher
       our_bellies={our_bellies}
       soulcatcher={soulcatcher}
       abilities={abilities}
+      toggleEditMode={setEditMode}
+      editMode={editMode}
     />
   );
   */
-  tabs[1] = // Outpost 21 edit - Disable soulgems
-    (
-      <VoreUserPreferences
-        prefs={prefs}
-        selected={selected}
-        show_pictures={show_pictures}
-        icon_overflow={icon_overflow}
+  tabs[1] = general_pref_data &&
+    our_bellies && ( // Outpost 21 edit - Disable soulgems
+      <VoreUserGeneral
+        general_pref_data={general_pref_data}
+        our_bellies={our_bellies}
+        editMode={editMode}
+        toggleEditMode={setEditMode}
       />
     );
+  tabs[2] = prefs && ( // Outpost 21 edit - Disable soulgems
+    <VoreUserPreferences
+      prefs={prefs}
+      show_pictures={show_pictures}
+      icon_overflow={icon_overflow}
+    />
+  );
 
   return (
-    <Window width={1000} height={660} theme="abstract">
+    <Window width={1030} height={760} theme="abstract">
       <Window.Content>
         <Stack fill vertical>
           <Stack.Item>
@@ -239,31 +255,38 @@ export const VorePanel = () => {
           <Stack.Item>
             <Tabs>
               <Tabs.Tab
-                selected={tabIndex === 0}
-                onClick={() => setTabIndex(0)}
+                selected={active_tab === 0}
+                onClick={() => act('change_tab', { tab: 0 })}
               >
                 Bellies
                 <Icon name="list" ml={0.5} />
               </Tabs.Tab>
-              {/* Outpost 21 edit - Disable soulgems
+              {/* // Outpost 21 edit - Disable soulgems
               <Tabs.Tab
-                selected={tabIndex === 1}
-                onClick={() => setTabIndex(1)}
+                selected={active_tab === 1}
+                onClick={() => act('change_tab', { tab: 1 })}
               >
                 Soulcatcher
                 <Icon name="ghost" ml={0.5} />
               </Tabs.Tab>
               */}
               <Tabs.Tab
-                selected={tabIndex === 1} // Outpost 21 edit - Disable soulgems
-                onClick={() => setTabIndex(1)} // Outpost 21 edit - Disable soulgems
+                selected={active_tab === 1} // Outpost 21 edit - Disable soulgems
+                onClick={() => act('change_tab', { tab: 1 })} // Outpost 21 edit - Disable soulgems
+              >
+                General
+                <Icon name="user-circle" ml={0.5} />
+              </Tabs.Tab>
+              <Tabs.Tab
+                selected={active_tab === 2} // Outpost 21 edit - Disable soulgems
+                onClick={() => act('change_tab', { tab: 2 })} // Outpost 21 edit - Disable soulgems
               >
                 Preferences
                 <Icon name="user-cog" ml={0.5} />
               </Tabs.Tab>
             </Tabs>
           </Stack.Item>
-          <Stack.Item grow>{tabs[tabIndex] || 'Error'}</Stack.Item>
+          <Stack.Item grow>{tabs[active_tab] || 'Error'}</Stack.Item>
         </Stack>
       </Window.Content>
     </Window>
