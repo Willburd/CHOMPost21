@@ -6,7 +6,7 @@ import { Button, Icon, NoticeBox, Stack, Tabs } from 'tgui-core/components';
 import type { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VorePanelMainTabs/VoreBellySelectionAndCustomization';
 import { VoreInsidePanel } from './VorePanelMainTabs/VoreInsidePanel';
-// import { VoreSoulcatcher } from './VorePanelMainTabs/VoreSoulcatcher'; Outpost 21 edit - Disable soulgems
+import { VoreSoulcatcher } from './VorePanelMainTabs/VoreSoulcatcher';
 import { VoreUserGeneral } from './VorePanelMainTabs/VoreUserGeneral';
 import { VoreUserPreferences } from './VorePanelMainTabs/VoreUserPreferences';
 
@@ -156,6 +156,7 @@ export const VorePanel = () => {
   const {
     active_tab,
     active_vore_tab,
+    persist_edit_mode,
     inside,
     our_bellies,
     selected,
@@ -170,7 +171,7 @@ export const VorePanel = () => {
     general_pref_data,
   } = data;
 
-  const [editMode, setEditMode] = useState(false);
+  const [editMode, setEditMode] = useState(!!persist_edit_mode);
 
   const tabs: (React.JSX.Element | null | undefined)[] = [];
 
@@ -185,9 +186,9 @@ export const VorePanel = () => {
       vore_words={vore_words}
       toggleEditMode={setEditMode}
       editMode={editMode}
+      persist_edit_mode={persist_edit_mode}
     />
   );
-  /* Outpost 21 edit - Disable soulgems
   tabs[1] = our_bellies && soulcatcher && abilities && (
     <VoreSoulcatcher
       our_bellies={our_bellies}
@@ -195,19 +196,19 @@ export const VorePanel = () => {
       abilities={abilities}
       toggleEditMode={setEditMode}
       editMode={editMode}
+      persist_edit_mode={persist_edit_mode}
     />
   );
-  */
-  tabs[1] = general_pref_data &&
-    our_bellies && ( // Outpost 21 edit - Disable soulgems
-      <VoreUserGeneral
-        general_pref_data={general_pref_data}
-        our_bellies={our_bellies}
-        editMode={editMode}
-        toggleEditMode={setEditMode}
-      />
-    );
-  tabs[2] = prefs && ( // Outpost 21 edit - Disable soulgems
+  tabs[2] = general_pref_data && our_bellies && (
+    <VoreUserGeneral
+      general_pref_data={general_pref_data}
+      our_bellies={our_bellies}
+      editMode={editMode}
+      toggleEditMode={setEditMode}
+      persist_edit_mode={persist_edit_mode}
+    />
+  );
+  tabs[3] = prefs && (
     <VoreUserPreferences
       prefs={prefs}
       show_pictures={show_pictures}
@@ -261,7 +262,6 @@ export const VorePanel = () => {
                 Bellies
                 <Icon name="list" ml={0.5} />
               </Tabs.Tab>
-              {/* // Outpost 21 edit - Disable soulgems
               <Tabs.Tab
                 selected={active_tab === 1}
                 onClick={() => act('change_tab', { tab: 1 })}
@@ -269,17 +269,16 @@ export const VorePanel = () => {
                 Soulcatcher
                 <Icon name="ghost" ml={0.5} />
               </Tabs.Tab>
-              */}
               <Tabs.Tab
-                selected={active_tab === 1} // Outpost 21 edit - Disable soulgems
-                onClick={() => act('change_tab', { tab: 1 })} // Outpost 21 edit - Disable soulgems
+                selected={active_tab === 2}
+                onClick={() => act('change_tab', { tab: 2 })}
               >
                 General
                 <Icon name="user-circle" ml={0.5} />
               </Tabs.Tab>
               <Tabs.Tab
-                selected={active_tab === 2} // Outpost 21 edit - Disable soulgems
-                onClick={() => act('change_tab', { tab: 2 })} // Outpost 21 edit - Disable soulgems
+                selected={active_tab === 3}
+                onClick={() => act('change_tab', { tab: 3 })}
               >
                 Preferences
                 <Icon name="user-cog" ml={0.5} />
