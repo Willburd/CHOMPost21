@@ -95,11 +95,6 @@
 		var/want_body_save = pref.resleeve_scan
 		var/want_mind_save = pref.mind_scan
 
-		// Outpost 21 edit begin - Respect admin spawn choices
-		var/want_body_save = pref.resleeve_scan
-		var/want_mind_save = pref.mind_scan
-		// Outpost 21 edit end
-
 		spawn(50)
 			if(QDELETED(character) || QDELETED(pref))
 				return // They might have been deleted during the wait
