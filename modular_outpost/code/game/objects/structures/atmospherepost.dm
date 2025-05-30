@@ -18,5 +18,5 @@
 	. += "[round(environment.temperature-T0C,0.1)]&deg;C([round(environment.temperature,0.1)]K) "
 	if(total_moles)
 		for(var/g in environment.gas)
-			. += "[gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]% "
+			. += "[GLOB.gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]% "
 	. += "[round(pressure,0.1)] kPa"

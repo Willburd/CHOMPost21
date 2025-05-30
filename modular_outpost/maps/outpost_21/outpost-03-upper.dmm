@@ -19638,6 +19638,10 @@
 	pixel_x = 30;
 	pixel_y = -4
 	},
+/obj/item/gene_scanner,
+/obj/item/gene_scanner,
+/obj/item/gene_scanner,
+/obj/item/gene_scanner,
 /turf/simulated/floor/wmarble,
 /area/medical/genetics)
 "jkL" = (

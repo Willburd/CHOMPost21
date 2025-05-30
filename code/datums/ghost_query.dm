@@ -184,6 +184,7 @@
 	check_bans = list(JOB_AI, JOB_CYBORG)
 	cutoff_number = 1
 
+/* Outpost 21 edit - Role disabled here
 /datum/ghost_query/lost_passenger
 	role_name = "Lost Passenger"
 	question = "A person suspended in cryosleep has been discovered by a crewmember \
@@ -219,3 +220,4 @@
 	You MUST NOT use your station character!!!"
 	be_special_flag = BE_SURVIVOR
 	cutoff_number = 1
+*/

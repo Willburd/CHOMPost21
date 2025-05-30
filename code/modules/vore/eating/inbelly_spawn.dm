@@ -146,7 +146,7 @@ Please do not abuse this ability.
 		new_character.dna.ResetUIFrom(new_character)
 		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
 		new_character.sync_organ_dna()
-	new_character.sync_addictions() // Outpost 21 addition - Handle all of these in one place, as we do a lot more!
+	new_character.sync_addictions()
 	new_character.initialize_vessel()
 	new_character.key = player_key
 	if(new_character.mind)

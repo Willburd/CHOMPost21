@@ -196,13 +196,13 @@
 
 		// Outpost 21 edit begin - Addictions
 		var/has_withdrawl = FALSE
-		for(var/addic in H.addiction_counters)
-			if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
+		for(var/addic in H.get_all_addictions())
+			if(H.get_addiction_to_reagent(addic) > 0 && H.get_addiction_to_reagent(addic) < 80)
 				//var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
 				has_withdrawl = TRUE
 				break
 		// Outpost 21 edit end
-		
+
 		occupantData["stat"] = H.stat
 		occupantData["health"] = H.health
 		occupantData["maxHealth"] = H.getMaxHealth()
@@ -412,13 +412,13 @@
 					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
 
 			// Outpost 21 edit begin - Addictions
-			for(var/addic in H.addiction_counters)
-				if(H.addiction_counters[addic] > 0 && H.addiction_counters[addic] < 80)
+			for(var/addic in H.get_all_addictions())
+				if(H.get_addiction_to_reagent(addic) > 0 && H.get_addiction_to_reagent(addic) < 80)
 					var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
 					has_withdrawl = R.name
 					break
 			// Outpost 21 edit end
-			
+
 		var/t1
 		switch(occupant.stat) // obvious, see what their status is
 			if(0)

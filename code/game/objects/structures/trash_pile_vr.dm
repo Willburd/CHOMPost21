@@ -359,7 +359,7 @@
 					prob(2);/obj/item/storage/box/monkeycubes, // Outpost 21 edit - Monkey cube fun for borers
 					prob(2);/obj/item/storage/box/monkeycubes/pets/A, // Outpost 21 edit - Pet boxes
 					prob(2);/obj/item/storage/box/monkeycubes/pets/B, // Outpost 21 edit - Pet boxes
-					prob(2);/obj/item/reagent_containers/glass/beaker/vial/sustenance, // Outpost 21 edit - Lost artificial sustinance vials
+					prob(2);/obj/item/reagent_containers/glass/beaker/vial/sustenance,
 					prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 					// prob(1);/obj/item/nif/bad, Outpost 21 edit - Nif removal
 					prob(1);/obj/item/radio_jammer,

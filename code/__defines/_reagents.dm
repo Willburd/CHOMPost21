@@ -268,6 +268,9 @@
 #define REAGENT_EARTHSBLOOD "Earthsblood"
 #define REAGENT_ID_EARTHSBLOOD "earthsblood"
 */
+#define REAGENT_ASUSTENANCE	"Artificial Sustenance"
+#define REAGENT_ID_ASUSTENANCE "a_sustenance"
+
 
 // Virology
 #define REAGENT_VACCINE "Vaccine"
@@ -572,6 +575,8 @@
 #define REAGENT_ID_NUKIEMEGASHRINK "nukie_mega_shrink"
 #define REAGENT_NUKIEMEGAGROWTH "Nukie Mega Growth"
 #define REAGENT_ID_NUKIEMEGAGROWTH "nukie_mega_growth"
+#define REAGENT_NUKIEONE "Nukie One"
+#define REAGENT_ID_NUKIEONE "nukie_one"
 #define REAGENT_COATING "coating"
 #define REAGENT_ID_COATING "coating"
 #define REAGENT_BATTER "batter mix"
@@ -1257,6 +1262,8 @@
 #define REAGENT_ID_PHORON "phoron"
 #define REAGENT_SPIDERTOXIN "Spidertoxin"
 #define REAGENT_ID_SPIDERTOXIN "spidertoxin"
+#define REAGENT_WARNINGTOXIN "Warningtoxin"
+#define REAGENT_ID_WARNINGTOXIN "warningtoxin"
 #define REAGENT_LEAD "Lead"
 #define REAGENT_ID_LEAD "lead"
 #define REAGENT_PLASTICIDE "Plasticide"

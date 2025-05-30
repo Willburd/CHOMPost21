@@ -138,6 +138,7 @@
 /obj/structure/ghost_pod/ghost_activated/maintpred/no_announce
 	announce_prob = 0
 
+/* Outpost 21 edit - Role disabled here
 /obj/structure/ghost_pod/ghost_activated/morphspawn
 	name = "weird goo"
 	desc = "A pile of weird gunk... Wait, is it actually moving?"
@@ -244,6 +245,7 @@
 	M.client.prefs.copy_to(new_character)
 	new_character.dna.ResetUIFrom(new_character)
 	new_character.sync_organ_dna()
+	new_character.sync_addictions()
 	new_character.key = M.key
 	new_character.mind.loaded_from_ckey = picked_ckey
 	new_character.mind.loaded_from_slot = picked_slot
@@ -303,3 +305,4 @@
 		return
 
 	create_occupant(user)
+*/
