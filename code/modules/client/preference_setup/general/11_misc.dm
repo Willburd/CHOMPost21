@@ -92,6 +92,8 @@
 	if(character && !istype(character,/mob/living/carbon/human/dummy))
 		character.vantag_pref = pref.vantag_preference
 		BITSET(character.hud_updateflag, VANTAG_HUD)
+		var/want_body_save = pref.resleeve_scan
+		var/want_mind_save = pref.mind_scan
 
 		// Outpost 21 edit begin - Respect admin spawn choices
 		var/want_body_save = pref.resleeve_scan
@@ -102,10 +104,10 @@
 			if(QDELETED(character) || QDELETED(pref))
 				return // They might have been deleted during the wait
 			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/perform_exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore
-				if(want_body_save) // Outpost 21 edit - Respect admin spawn choices
+				if(want_body_save)
 					var/datum/transhuman/body_record/BR = new()
-					BR.init_from_mob(character, pref.resleeve_scan, pref.resleeve_lock)
-				if(want_mind_save) // Outpost 21 edit - Respect admin spawn choices
+					BR.init_from_mob(character, TRUE, pref.resleeve_lock)
+				if(want_mind_save)
 					var/datum/transcore_db/our_db = SStranscore.db_by_key(null)
 					if(our_db)
 						our_db.m_backup(character.mind,null/*character.nif*/,one_time = TRUE) // Outpost 21 edit - Nif removal
