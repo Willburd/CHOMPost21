@@ -72,6 +72,8 @@
 	VAR_PROTECTED/exclusive_mail_goodies = FALSE	  // If this job's mail goodies compete with generic goodies.
 	VAR_PROTECTED/mail_color = "#FFF"
 
+	var/list/symptoms // A list of symptoms that this job might have when we roll a dormant diseas.
+
 /datum/job/New()
 	. = ..()
 	// Outpost 21 edit begin - We allow the whole department to use the bank account
