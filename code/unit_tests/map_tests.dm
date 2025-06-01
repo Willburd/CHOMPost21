@@ -240,3 +240,24 @@
 	else
 		pass("All ladders were correctly placed and had connections.")
 	return failed
+
+/datum/unit_test/micro_tunnel_test
+	name = "MAP: Micro Tunnel Test"
+
+/datum/unit_test/micro_tunnel_test/start_test()
+	var/failed = FALSE
+
+	var/list/seen_areas = list()
+	for(var/obj/structure/micro_tunnel/H in world)
+		var/area/A = get_turf(H)
+		if(A.type in seen_areas)
+			log_unit_test("[H.x].[H.y].[H.z]: Map - [A] had more than one micro tunnel") // Micro tunnels have a list of areas by name, only a single tunnel can show up in the list per area.
+			failed = TRUE
+			continue
+		seen_areas.Add(A.type)
+
+	if(failed)
+		fail("Multiple micro tunnels detected in a single area.")
+	else
+		pass("All micro tunnels have exclusive areas areas.")
+	return failed
