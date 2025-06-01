@@ -6107,6 +6107,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/research/exp_prep)
+"alg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/micro_tunnel{
+	dir = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/plating/muriki,
+/area/maintenance/spine/eng)
 "alh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
@@ -77038,18 +77049,6 @@
 /obj/machinery/vending/fitness,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
-"tCy" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/sec)
 "tCD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -79152,14 +79151,6 @@
 /obj/item/clothing/head/cone,
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
-"uTp" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
-/turf/simulated/floor/tiled/dark,
-/area/maintenance/tug)
 "uTQ" = (
 /turf/simulated/mineral/floor/muriki{
 	ignore_mapgen = 1
@@ -104096,7 +104087,7 @@ jUc
 fBY
 cfR
 jgd
-rif
+alg
 gWL
 gWL
 gWL
@@ -105233,7 +105224,7 @@ aHq
 aHq
 kDL
 wrE
-uTp
+drJ
 aXN
 bgQ
 bgQ
@@ -126324,7 +126315,7 @@ bir
 brJ
 bla
 rkw
-tCy
+bsD
 brJ
 qKL
 qKL

@@ -1145,14 +1145,6 @@
 	},
 /turf/simulated/open,
 /area/hydroponics/hallway)
-"acn" = (
-/obj/machinery/atmospherics/pipe/simple/visible/blue,
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/wastedisposal)
 "aco" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -52661,7 +52653,7 @@ raP
 gZh
 qTd
 dAD
-acn
+dAD
 npi
 cKj
 tFt
