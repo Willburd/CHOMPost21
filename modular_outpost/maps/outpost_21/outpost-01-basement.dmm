@@ -47949,10 +47949,6 @@
 "bMf" = (
 /obj/random/maintenance/security,
 /obj/random/maintenance/security,
-/obj/structure/micro_tunnel{
-	dir = 1;
-	pixel_y = 32
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
 "bMi" = (
@@ -53071,13 +53067,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cave)
-"eQN" = (
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/cargo)
 "eRn" = (
 /obj/structure/catwalk,
 /obj/item/frame,
@@ -56250,32 +56239,6 @@
 	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/med)
-"gMu" = (
-/obj/structure/toilet{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/obj/structure/handrail{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 1
-	},
-/turf/simulated/floor/tiled{
-	icon_state = "white"
-	},
-/area/maintenance/oldbridge)
 "gNg" = (
 /obj/random/maintenance,
 /turf/simulated/floor/plating/muriki,
@@ -57453,6 +57416,10 @@
 "hvz" = (
 /obj/structure/bed/chair/bay/chair{
 	dir = 1
+	},
+/obj/structure/micro_tunnel{
+	dir = 4;
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/sec)
@@ -63745,14 +63712,6 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
-"luT" = (
-/obj/item/clothing/head/cone,
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/floor/plating/muriki,
-/area/maintenance/tug)
 "lvq" = (
 /obj/effect/floor_decal/industrial/warning/cee,
 /obj/machinery/computer/general_air_control/large_tank_control{
@@ -65356,6 +65315,9 @@
 "mtM" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "muv" = (
@@ -70900,9 +70862,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/oldbridge)
 "pRl" = (
@@ -75260,10 +75219,6 @@
 	dir = 1
 	},
 /obj/effect/landmark/vermin,
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
 /turf/simulated/floor/tiled/dark/muriki,
 /area/mine/explored/muriki/cave/waste)
 "snl" = (
@@ -76364,12 +76319,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
-"sYh" = (
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
-/turf/simulated/floor/plating/muriki,
-/area/mine/explored/muriki/cave/civ/south_access)
 "sYr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -82962,10 +82911,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/structure/micro_tunnel{
-	dir = 1;
-	pixel_y = 32
-	},
 /turf/simulated/floor/plating/muriki,
 /area/maintenance/sec)
 "xhW" = (
@@ -83447,19 +83392,6 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountainbasenorth)
-"xBD" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/micro_tunnel{
-	dir = 1;
-	pixel_y = 32
-	},
-/turf/simulated/floor/plating/muriki,
-/area/maintenance/sec)
 "xBE" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -93153,7 +93085,7 @@ hiP
 wCh
 iVl
 qIJ
-gMu
+wVj
 yjs
 qSi
 qSi
@@ -109027,7 +108959,7 @@ eLM
 aYP
 htk
 bnc
-eQN
+bhB
 qrr
 bHt
 bge
@@ -115982,7 +115914,7 @@ hnv
 rdO
 rdO
 jYw
-luT
+ccL
 jZh
 aXN
 dSV
@@ -124439,7 +124371,7 @@ arN
 arN
 dAv
 brJ
-xBD
+ezI
 hqW
 sLj
 sLj
@@ -136753,7 +136685,7 @@ dbU
 cxR
 cxR
 cxR
-sYh
+cxR
 xkU
 hEs
 dKC

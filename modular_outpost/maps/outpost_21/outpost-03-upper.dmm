@@ -1145,6 +1145,53 @@
 	},
 /turf/simulated/open,
 /area/hydroponics/hallway)
+"acn" = (
+/obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/structure/micro_tunnel{
+	dir = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"aco" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/quartermaster/mining/expl)
+"acp" = (
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating/external/muriki{
+	outdoors = 0
+	},
+/area/muriki/rooftop/disposal)
+"acq" = (
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/security)
+"acr" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/outpost_roof/muriki,
+/area/muriki/rooftop/medical)
 "acx" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Med Roof. Backup Generators";
@@ -3232,12 +3279,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
-"bbu" = (
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/gravgen)
 "bbH" = (
 /obj/structure/table/reinforced,
 /obj/machinery/reagentgrinder,
@@ -22716,10 +22757,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -39692,9 +39729,6 @@
 	dir = 8
 	},
 /obj/structure/flora/ausbushes/lavendergrass,
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
 /turf/simulated/floor/grass,
 /area/library)
 "ter" = (
@@ -52627,7 +52661,7 @@ raP
 gZh
 qTd
 dAD
-dAD
+acn
 npi
 cKj
 tFt
@@ -57646,7 +57680,7 @@ kDr
 kDr
 xVj
 eTl
-oHI
+aco
 ncS
 ncS
 ncS
@@ -58448,7 +58482,7 @@ qQa
 qQa
 sUH
 uaD
-nLv
+acp
 cUt
 qlP
 fVm
@@ -84833,7 +84867,7 @@ rBk
 rBk
 rBk
 aCm
-goV
+acq
 hjo
 dJW
 kIO
@@ -91775,7 +91809,7 @@ kCy
 kEQ
 sII
 hJv
-kCy
+acr
 ave
 fJX
 oHy
@@ -91796,7 +91830,7 @@ oHy
 iKs
 sXP
 wVW
-bbu
+mfx
 fci
 erP
 fkU
