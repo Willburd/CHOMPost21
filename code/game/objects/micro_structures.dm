@@ -105,6 +105,23 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 		tunnel_interact(user)
 		return ..()
 
+// Outpost 21 edit begin - Welding mouse holes
+/obj/structure/micro_tunnel/attackby(obj/item/I, mob/user)
+	if(I.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weldingtool/WT = I.get_welder()
+		if(!WT.isOn())
+			return
+		if(WT.get_fuel() < 5) //uses up 5 fuel.
+			to_chat(user, span_notice("You need more fuel to complete this task."))
+			return
+		playsound(src, WT.usesound, 50, 1)
+		if(do_after(user, 5 SECONDS))
+			visible_message("\The [user] welds \the [src] shut.")
+			qdel(src)
+			return
+	. = ..()
+// Outpost 21 edit end
+
 /obj/structure/micro_tunnel/proc/tunnel_interact(mob/living/user)
 	if(!isliving(user))
 		return
