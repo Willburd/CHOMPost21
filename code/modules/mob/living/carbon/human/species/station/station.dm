@@ -90,7 +90,6 @@
 	health_hud_intensity = 2.5
 	chem_strength_alcohol = 1.25
 	throwforce_absorb_threshold = 10
-	digi_allowed = TRUE
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	min_age = 18
@@ -229,7 +228,6 @@
 	species_language = LANGUAGE_SIIK
 	health_hud_intensity = 2.5
 	chem_strength_alcohol = 0.75
-	digi_allowed = TRUE
 	agility = 90
 	can_climb = TRUE
 	climbing_delay = 1.00 //Cats are good climbers.
@@ -759,7 +757,6 @@
 	species_language = LANGUAGE_SAGARU
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 110
@@ -830,7 +827,6 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 	min_age = 18
 	max_age = 80
-	digi_allowed = TRUE
 
 	blurb = "The Akula are a species of amphibious humanoids like the Skrell, but have an appearance very similar to that of a shark. \
 	They were first discovered as a primitive race of underwater dwelling tribal creatures by the Skrell. At first they were not believed \
@@ -883,7 +879,6 @@
 		/mob/living/carbon/human/proc/tie_hair)
 	min_age = 18
 	max_age = 80
-	digi_allowed = TRUE
 
 	blurb = "Nevreans are a race of avian and dinosaur-like creatures living on Tal. They belong to a group of races that hails from Eltus, \
 	in the Vilous system. Unlike sergals whom they share a star system with, their species is a very peaceful one. They possess remarkable \
@@ -926,7 +921,6 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/proc/shred_limb,
 		/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80
@@ -981,7 +975,6 @@
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	wikilink="https://wiki.vore-station.net/Backstory#Vulpkanin"
 
@@ -1068,7 +1061,6 @@
 	color_mult = 1
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/flying_vore_toggle,/mob/living/proc/start_wings_hovering,/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 19 //not a typo, Rapala consider adult age to be 19
 	max_age = 80
@@ -1319,7 +1311,6 @@
 	taken to calling these creatures 'Shadekin', and the name has generally stuck and spread. "		//TODO: Something more fitting for black-eyes
 	wikilink = "https://wiki.vore-station.net/Shadekin"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/shadekin)
-	digi_allowed = TRUE
 
 	language = LANGUAGE_SHADEKIN
 	name_language = LANGUAGE_SHADEKIN
@@ -1426,7 +1417,6 @@
 	name_language = LANGUAGE_TERMINUS
 	species_language = LANGUAGE_TERMINUS
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds,/mob/living/proc/shred_limb,/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80
@@ -1458,7 +1448,6 @@
 	darksight = 4 //Better hunters in the dark.
 	hunger_factor = 0.1 //In exchange, they get hungry a tad faster.
 	num_alternate_languages = 3
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80
@@ -1498,7 +1487,6 @@
 	name_language = null
 	color_mult = 1
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
-	digi_allowed = TRUE
 
 	min_age = 18
 	max_age = 80
@@ -1559,7 +1547,6 @@
 	brute_mod = 0.8		//20% brute damage reduction
 	burn_mod =  1.15	//15% burn damage increase. They're spiders. Aerosol can+lighter = dead spiders.
 	throwforce_absorb_threshold = 10
-	digi_allowed = TRUE
 
 	num_alternate_languages = 3
 	species_language = LANGUAGE_VESPINAE
@@ -1702,7 +1689,6 @@
 	burn_mod =  1.15	//As vulnerable to burn as a Tajara.
 	base_species = "Xenochimera"
 	selects_bodytype = SELECTS_BODYTYPE_CUSTOM
-	digi_allowed = TRUE
 	has_vibration_sense = TRUE
 
 	num_alternate_languages = 3
@@ -1817,7 +1803,6 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/proc/toggle_sparkles, /mob/living/proc/healing_rainbows, /mob/living/carbon/human/proc/play_dead)
 	min_age = 18
 	max_age = 21
-	digi_allowed = FALSE //No time for making rainbow legs for the meme, sorry!
 
 	pass_flags = PASSTABLE
 

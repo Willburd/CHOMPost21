@@ -6153,6 +6153,15 @@
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
+"ajO" = (
+/obj/structure/micro_tunnel{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/outdoors/sidewalk/muriki{
+	icon_state = "slab"
+	},
+/area/muriki/grounds/waste)
 "ajP" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/mine/explored/muriki/valley)
@@ -8401,6 +8410,21 @@
 /obj/structure/fence/electric_sign,
 /turf/simulated/floor/outdoors/newdirt_nograss/muriki,
 /area/engineering/engine_room)
+"aoi" = (
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/sci)
+"aoj" = (
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/muriki,
+/area/mine/explored/muriki/mountainnorth)
 "aok" = (
 /obj/machinery/power/grounding_rod,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -52492,13 +52516,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
-"nZw" = (
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/floor/plating/muriki,
-/area/mine/unexplored/muriki/mountainnorth)
 "nZx" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -59227,15 +59244,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
-"qjq" = (
-/obj/structure/micro_tunnel{
-	dir = 8;
-	pixel_x = -32
-	},
-/turf/simulated/mineral/floor/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountainnorth)
 "qju" = (
 /obj/item/mining_scanner,
 /obj/structure/table/rack,
@@ -87761,7 +87769,7 @@ tMf
 tMf
 hRQ
 pNN
-pNN
+ajO
 anQ
 aKT
 aGP
@@ -109207,7 +109215,7 @@ jnc
 jnc
 jnc
 ekA
-hAe
+aoj
 hAe
 tqc
 wdK
@@ -122995,7 +123003,7 @@ aiP
 aiP
 dMj
 dMj
-qjq
+dMj
 dMj
 dMj
 dMj
@@ -128163,7 +128171,7 @@ aiP
 aiP
 aiP
 aiP
-nZw
+wrH
 wrH
 dMj
 dMj
@@ -136286,7 +136294,7 @@ tDO
 tDO
 tjQ
 tDO
-tDO
+aoi
 hjE
 hjE
 cHb
@@ -146830,7 +146838,7 @@ rJa
 rJa
 rJa
 fhs
-dcc
+fhs
 fhs
 hdI
 fhs
