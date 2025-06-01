@@ -249,7 +249,7 @@
 
 	var/list/seen_areas = list()
 	for(var/obj/structure/micro_tunnel/H in world)
-		var/area/A = get_turf(H)
+		var/area/A = get_area(H)
 		if(A.type in seen_areas)
 			log_unit_test("[H.x].[H.y].[H.z]: Map - [A] had more than one micro tunnel") // Micro tunnels have a list of areas by name, only a single tunnel can show up in the list per area.
 			failed = TRUE
