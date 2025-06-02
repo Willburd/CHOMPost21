@@ -229,6 +229,7 @@
 */
 /* Outpost 21 edit - Nif removal
 /proc/persist_nif_data(mob/living/carbon/human/H)
+	SIGNAL_HANDLER
 	if(!istype(H))
 		stack_trace("Persist (NIF): Given a nonhuman: [H]")
 		return
