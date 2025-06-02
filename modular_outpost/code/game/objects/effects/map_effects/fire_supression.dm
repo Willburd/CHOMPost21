@@ -84,7 +84,7 @@
 		if(M.touching)
 			var/remove_amount = M.touching.maximum_volume * M.reagent_permeability() //take off your suit first
 			M.touching.remove_any(remove_amount)
-	M.wash(CLEAN_SCRUB)
+	O.wash(CLEAN_SCRUB)
 
 	if(istype(O,/obj/item/storage/box/monkeycubes))
 		var/obj/item/storage/box/monkeycubes/M = O

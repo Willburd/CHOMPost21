@@ -262,7 +262,7 @@
 			var/remove_amount = M.touching.maximum_volume * M.reagent_permeability() //take off your suit first
 			M.touching.remove_any(remove_amount)
 
-	M.wash(CLEAN_SCRUB) // Outpost 21 edit - We can clean mobs just fine here
+	O.wash(CLEAN_SCRUB) // Outpost 21 edit - We can clean mobs just fine here
 
 	// Outpost 21 edit begin - splash monkey cubes
 	if(istype(O,/obj/item/storage/box/monkeycubes))
