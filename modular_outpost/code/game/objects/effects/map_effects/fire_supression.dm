@@ -72,7 +72,7 @@
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
 
-/obj/effect/mist/fire_suppression/proc/wash(atom/movable/O as obj|mob)
+/obj/effect/mist/fire_suppression/proc/do_wash(atom/movable/O as obj|mob)
 	if(isliving(O))
 		var/mob/living/L = O
 		L.ExtinguishMob()
@@ -84,7 +84,7 @@
 		if(M.touching)
 			var/remove_amount = M.touching.maximum_volume * M.reagent_permeability() //take off your suit first
 			M.touching.remove_any(remove_amount)
-		M.clean_blood()
+	M.wash(CLEAN_SCRUB)
 
 	if(istype(O,/obj/item/storage/box/monkeycubes))
 		var/obj/item/storage/box/monkeycubes/M = O
@@ -97,12 +97,12 @@
 
 /obj/effect/mist/fire_suppression/proc/wash_floor()
 	var/turf/T = get_turf(src)
-	T.clean(src)
+	T.wash(CLEAN_SCRUB)
 	reagents.splash(T, 10, min_spill = 0, max_spill = 0)
 
 /obj/effect/mist/fire_suppression/process()
 	for(var/atom/movable/AM in loc)
 		if(AM.simulated)
-			wash(AM)
+			do_wash(AM)
 	wash_floor()
 	reagents.add_reagent(REAGENT_ID_WATER, reagents.get_free_space())
