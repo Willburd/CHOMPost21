@@ -13,7 +13,7 @@
 		if(istype(A,/mob/))
 			var/mob/M = A
 			if (M.loc == loc)
-				wash(M)
+				wash(CLEAN_SCRUB)
 				process_heat(M)
 		for (var/atom/movable/G in src.loc)
-			G.clean_blood()
+			G.wash(CLEAN_SCRUB)

@@ -116,7 +116,6 @@
 	// nothing latchs to this!
 	return 0
 
-// VOREStation Edit Start - Overlay stuff for the chair-like effect
 /obj/vehicle/train/engine/janicart/update_icon()
 	..()
 	cut_overlays()
@@ -129,14 +128,13 @@
 /obj/vehicle/train/engine/janicart/set_dir()
 	..()
 	update_icon()
-// VOREStation Edit End - Overlay stuff for the chair-like effect
 
 /obj/vehicle/train/engine/janicart/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(scrubbing)
 		if(reagents.has_reagent(REAGENT_ID_WATER, 1) || reagents.has_reagent(REAGENT_ID_CLEANER, 1))
 			var/turf/tile = loc
-			tile.clean_blood()
+			tile.wash(CLEAN_SCRUB)
 			if(istype(tile, /turf/simulated))
 				var/turf/simulated/T = tile
 				T.dirt = 0
@@ -146,20 +144,8 @@
 				else if(ishuman(A))
 					var/mob/living/carbon/human/cleaned_human = A
 					if(cleaned_human.lying)
-						if(cleaned_human.head)
-							cleaned_human.head.clean_blood()
-							cleaned_human.update_inv_head(0)
-						if(cleaned_human.wear_suit)
-							cleaned_human.wear_suit.clean_blood()
-							cleaned_human.update_inv_wear_suit(0)
-						else if(cleaned_human.w_uniform)
-							cleaned_human.w_uniform.clean_blood()
-							cleaned_human.update_inv_w_uniform(0)
-						if(cleaned_human.shoes)
-							cleaned_human.shoes.clean_blood()
-							cleaned_human.update_inv_shoes(0)
-						cleaned_human.clean_blood(1)
-						to_chat(cleaned_human, "<span class='warning'>\The [callme] cleans your face!</span>")
+						cleaned_human.wash(CLEAN_SCRUB)
+						to_chat(cleaned_human, span_warning("\The [callme] cleans your face!"))
 			reagents.trans_to_turf(tile, 1, 10)	//10 is the multiplier for the reaction effect. probably needed to wet the floor properly.
 		else
 			scrubbing = FALSE
