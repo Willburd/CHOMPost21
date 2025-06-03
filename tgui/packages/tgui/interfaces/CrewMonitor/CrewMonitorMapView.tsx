@@ -26,6 +26,7 @@ export const CrewMonitorMapView = (props: {
               x={cm.x}
               /* Outpost 21 edit begin - Wide map support */
               y={cm.y * data.ymult}
+              mapxscale={1 - data.ymult}
               /* Outpost 21 edit end */
               zoom={props.zoom}
               icon="circle"

@@ -39,6 +39,7 @@ type State = {
   originX: number;
   originY: number;
   zoom: number;
+  mapxscale: number; // Outpost 21 edit - Wide map support
 };
 
 export class NanoMap extends Component<Props, State> {
@@ -177,14 +178,14 @@ export class NanoMap extends Component<Props, State> {
 
   render() {
     const { config } = useBackend();
-    const { dragging, offsetX, offsetY, zoom = 1 } = this.state;
-    const { children } = this.props;
+    const { dragging, offsetX, offsetY, zoom = 1, mapxscale } = this.state;
+    const { children } = this.props; // Outpost 21 edit - Wide map support
 
     const mapUrl = resolveAsset('minimap_' + config.mapZLevel + '.png');
     // (x * zoom), x Needs to be double the turf- map size. (for virgo, 140x140)
     const mapSize = this.props.zoomScale * zoom + 'px';
     const newStyle: {} = {
-      width: mapSize,
+      width: mapSize * mapxscale, // Outpost 21 edit - Wide map support
       height: mapSize,
       'margin-top': offsetY + 'px',
       'margin-left': offsetX + 'px',
