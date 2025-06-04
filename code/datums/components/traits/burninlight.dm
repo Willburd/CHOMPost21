@@ -28,10 +28,14 @@
 	if(owner.inStasisNow())
 		return
 
+	// outpost 21 addition begin - lockers are dark and spooky!
 	var/light_amount = 0 //how much light there is in the place, affects damage
-	if(isturf(owner.loc)) //else, there's considered to be no light
+	if(istype(owner.loc,/obj/structure/closet))
+		light_amount = 0 // it's dark in here!
+	else if(isturf(owner.loc)) //else, there's considered to be no light
 		var/turf/T = owner.loc
 		light_amount = T.get_lumcount(0,1)
+	// outpost 21 addition end
 
 	// Apply damage if beyond the minimum light threshold, actually makes zaddat SLIGHTLY more forgiving!
 	if(light_amount > 0 && light_amount > threshold) // Checks light_amount, as threshold of 0 can pass 0s to the damage procs otherwise.
