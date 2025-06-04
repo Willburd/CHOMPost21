@@ -12,14 +12,18 @@
 // the modifier, but if you're in one of these areas, you'll keep the modifier until you leave.
 var/static/list/redspace_areas = list (
 	/area/redspace_abduction,
-	/area/redgate
+	/area/redgate,
+	// Outpost 21 edit begin - Curses upon ye
+	/area/specialty/redspace,
+	/area/specialty/thedarkplace,
+	// Outpost 21 edit end
 )
 
 /datum/modifier/redspace_drain
 	name = "redspace warp"
 	desc = "Your body is being slowly sapped of it's lifeforce, being used to fuel this hellish nightmare of a place."
 
-	on_created_text = span_cult("You feel your body slowly being drained and warped")
+	// on_created_text = span_cult("You feel your body slowly being drained and warped") // Outpost 21 edit - insidious
 	on_expired_text = span_notice("Your body feels more normal.")
 
 	stacks = MODIFIER_STACK_EXTEND
@@ -28,13 +32,13 @@ var/static/list/redspace_areas = list (
 	var/mob/living/carbon/human/unfortunate_soul //The human target of our modifier.
 
 /datum/modifier/redspace_drain/can_apply(mob/living/L, suppress_output = TRUE)
-	if(ishuman(L) && !L.isSynthetic() && L.lastarea && is_type_in_list(L.lastarea, redspace_areas))
+	if(ishuman(L) && !L.isSynthetic() && L.lastarea && (is_type_in_list(L.lastarea, redspace_areas) || L.lastarea.haunted)) // Outpost 21 edit - Haunted areas don't remove it either
 		return TRUE
 	return FALSE
 
 /datum/modifier/redspace_drain/on_applied()
 	unfortunate_soul = holder
-	to_chat(unfortunate_soul, span_cult("You feel as if your lifeforce is slowly being rended from your body."))
+	// to_chat(unfortunate_soul, span_cult("You feel as if your lifeforce is slowly being rended from your body.")) // Outpost 21 edit - insidious
 	return
 
 /datum/modifier/redspace_drain/on_expire()
@@ -44,21 +48,35 @@ var/static/list/redspace_areas = list (
 	if(unfortunate_soul.stat == DEAD) //Only care if we're dead.
 		handle_corpse()
 		var/obj/effect/landmark/drop_point
-		drop_point = pick(GLOB.latejoin) //Can be changed to whatever exit list you want. By default, uses GLOB.latejoin
+		// Outpost 21 edit begin - Use our landmarks
+		var/list/redexitlist = list()
+		for(var/obj/effect/landmark/R in landmarks_list)
+			if(R.name == "redexit")
+				redexitlist += R
+		if(!redexitlist.len)
+			drop_point = pick(GLOB.latejoin) //Can be changed to whatever exit list you want. By default, uses GLOB.latejoin
+		else
+			drop_point = pick(redexitlist)
 		if(drop_point)
 			unfortunate_soul.forceMove(get_turf(drop_point))
 			unfortunate_soul.maxHealth = max(50, unfortunate_soul.maxHealth) //If they died, send them back with 50 maxHealth or their current maxHealth. Whatever's higher. We're evil, but not mean.
 		else
 			message_admins("Redspace Drain expired, but no drop point was found, leaving [unfortunate_soul] in limbo. This is a bug. Please report it with this info: redspace_drain/on_expire")
+		// Outpost 21 edit end
 	unfortunate_soul = null
 
 /datum/modifier/redspace_drain/proc/handle_corpse()
+	// Outpost 21 edit begin - Badbody controller
+	var/turf/T = get_turf(unfortunate_soul)
+	new /obj/effect/badbody_controller(unfortunate_soul)
+	log_debug("successfully spawned badbody [unfortunate_soul.real_name] at [T.x] [T.y] [T.z].")
+	// Outpost 21 edit end
 	return //Specialty stuff to do to a corpse other than teleport them.
 
 /datum/modifier/redspace_drain/check_if_valid() //We don't call parent. This doesn't wear off without set conditions.
 	if(holder.stat == DEAD)
 		expire(silent = TRUE)
-	else if(holder.lastarea && !is_type_in_list(holder.lastarea, redspace_areas))
+	else if(holder.lastarea && !is_type_in_list(holder.lastarea, redspace_areas) && !holder.lastarea.haunted) // Outpost 21 edit - Haunted areas don't remove it either
 		expire(silent = TRUE)
 
 /datum/modifier/redspace_drain/tick()
