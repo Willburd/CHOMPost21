@@ -191,7 +191,7 @@
 	if(on)
 		soundloop.start()
 		if (M.loc == loc)
-			wash(CLEAN_SCRUB)
+			do_wash(M)
 			process_heat(M)
 		for (var/atom/movable/G in src.loc)
 			G.wash(CLEAN_SCRUB)
@@ -262,7 +262,7 @@
 			var/remove_amount = M.touching.maximum_volume * M.reagent_permeability() //take off your suit first
 			M.touching.remove_any(remove_amount)
 
-	O.wash(CLEAN_SCRUB) // Outpost 21 edit - We can clean mobs just fine here
+	O.wash(CLEAN_SCRUB)
 
 	// Outpost 21 edit begin - splash monkey cubes
 	if(istype(O,/obj/item/storage/box/monkeycubes))
@@ -272,7 +272,7 @@
 		var/obj/item/reagent_containers/food/snacks/monkeycube/C = O
 		C.soaked()
 	// Outpost 21 edit end
-
+	
 	reagents.splash(O, 10, min_spill = 0, max_spill = 0)
 
 /obj/machinery/shower/process()
