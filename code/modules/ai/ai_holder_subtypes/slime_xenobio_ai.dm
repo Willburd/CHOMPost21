@@ -254,6 +254,17 @@
 					return
 				my_slime.squish()
 
+		// Outpost 21 edit begin - Check friendship
+		if(findtext(message, "friend"))
+			if(my_slime.untamable)
+				delayed_say("Grrr...", speaker)
+			else if(prob(resentment * 20))
+				delayed_say(pick("Evil...", "Tyrant...","Hate..."), speaker)
+			else if(discipline > 0)
+				delayed_say(pick("...","Bad...","Hit..."), speaker)
+			else if(my_slime.harmless || obedience > 5)
+				delayed_say(pick("Friend!","Friend...","Yes...","Yay...","Kobbyfriend!"), speaker)
+		// Outpost 21 edit end
 
 		// Stop request.
 		if(findtext(message, "stop") || findtext(message, "halt") || findtext(message, "cease"))
