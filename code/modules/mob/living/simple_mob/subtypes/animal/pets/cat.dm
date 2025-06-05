@@ -146,6 +146,16 @@ var/list/_cat_default_emotes = list(
 	holder_type = /obj/item/holder/cat/runtime
 	makes_dirt = 0 //Vorestation Edit
 
+// Outpost 21 edit begin - Runtime error handler
+/mob/living/simple_mob/animal/passive/cat/runtime/Initialize(mapload)
+	. = ..()
+	GLOB.runtimes_in_world.Add(src)
+
+/mob/living/simple_mob/animal/passive/cat/runtime/Destroy()
+	GLOB.runtimes_in_world.Remove(src)
+	. = ..()
+// Outpost 21 edit end
+
 /mob/living/simple_mob/animal/passive/cat/kitten
 	name = "kitten"
 	desc = "D'aaawwww!"

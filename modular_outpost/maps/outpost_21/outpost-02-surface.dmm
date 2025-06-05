@@ -59681,6 +59681,8 @@
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/mob/living/simple_mob/animal/passive/cat/runtime,
+/obj/structure/dogbed,
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "qqU" = (
