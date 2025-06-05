@@ -615,7 +615,7 @@
 	spawn(1)
 		env.set_items(badbody)
 		env.harm_body(badbody)
-		new /obj/effect/badbody_controller(badbody)
+		badbody.AddComponent(/datum/component/badbody)
 		log_debug("successfully spawned badbody [badbody.real_name] at [T.x] [T.y] [T.z].")
 		qdel(env)
 // Outpost 21 edit end

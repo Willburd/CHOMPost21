@@ -1,11 +1,9 @@
 import type { BooleanLike } from 'tgui-core/react';
 
 export type Data = {
-  zoomScale: number;
   isAI: BooleanLike;
   map_levels: number[];
   crewmembers: crewmember[];
-  ymult: number; // Outpost 21 edit - Wide map support
 };
 
 export type crewmember = {

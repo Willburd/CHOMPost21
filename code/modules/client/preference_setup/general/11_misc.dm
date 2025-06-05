@@ -96,7 +96,7 @@
 		var/want_mind_save = pref.mind_scan
 
 		spawn(50)
-			if(QDELETED(character) || QDELETED(pref))
+			if(QDELETED(character) || QDELETED(pref) || character.GetComponent(/datum/component/badbody)) // Outpost 21 edit - Disable if badbody
 				return // They might have been deleted during the wait
 			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/perform_exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore
 				if(want_body_save)

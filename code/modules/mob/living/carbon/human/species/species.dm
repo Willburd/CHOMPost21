@@ -201,7 +201,6 @@
 	var/warning_low_pressure = WARNING_LOW_PRESSURE			// Low pressure warning.
 	var/hazard_low_pressure = HAZARD_LOW_PRESSURE			// Dangerously low pressure.
 	var/safe_pressure = ONE_ATMOSPHERE
-	var/light_dam											// If set, mob will be damaged in light over this value and heal in light below its negative.
 	var/minimum_breath_pressure = 16						// Minimum required pressure for breath, in kPa
 
 
@@ -273,10 +272,11 @@
 		O_LUNGS =		/obj/item/organ/internal/lungs,
 		O_VOICE = 		/obj/item/organ/internal/voicebox,
 		O_LIVER =		/obj/item/organ/internal/liver,
-		O_KIDNEYS =	/obj/item/organ/internal/kidneys,
+		O_KIDNEYS =		/obj/item/organ/internal/kidneys,
 		O_BRAIN =		/obj/item/organ/internal/brain,
-		O_APPENDIX = /obj/item/organ/internal/appendix,
-		O_EYES =		 /obj/item/organ/internal/eyes,
+		O_APPENDIX =	/obj/item/organ/internal/appendix,
+		O_SPLEEN =		/obj/item/organ/internal/spleen,
+		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
 		O_INTESTINE =	/obj/item/organ/internal/intestine,
 		// Outpost 21 edit - butt
