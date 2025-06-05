@@ -533,6 +533,7 @@
 #include "code\datums\autolathe\tools.dm"
 #include "code\datums\autolathe\tools_vr.dm"
 #include "code\datums\components\_component.dm"
+#include "code\datums\components\badbody.dm"
 #include "code\datums\components\connect_containers_ch.dm"
 #include "code\datums\components\connect_loc_behalf.dm"
 #include "code\datums\components\connect_mob_behalf.dm"
