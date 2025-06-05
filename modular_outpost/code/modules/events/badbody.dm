@@ -51,9 +51,9 @@
 		var/mob/living/carbon/human/badbody = spawn_body(C,spot)
 		if(!isnull(badbody))
 			spawn(1)
-				set_items(badbody)
-				harm_body(badbody)
-				badbody.AddComponent(/datum/component/badbody)
+				var/datum/component/badbody/B = badbody.AddComponent(/datum/component/badbody)
+				B.harm_body()
+				B.set_items()
 				log_debug("successfully spawned badbody [badbody.real_name] at [spot.x] [spot.y] [spot.z].")
 			bodies--
 			if(in_morgue)
@@ -104,67 +104,9 @@
 		if(chosen_language)
 			if(is_lang_whitelisted(picked_client,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
 				new_character.add_language(lang)
-	job_master.EquipRank(new_character, JOB_STOWAWAY, 1, FALSE)
+	// job_master.EquipRank(new_character, JOB_STOWAWAY, 1, FALSE) // This has outplayed it's use... Not really that good?
 
 	//A redraw for good measure
 	new_character.regenerate_icons()
 	new_character.update_transform() //VOREStation Edit
 	return new_character
-
-/datum/event/badbody/proc/set_items(var/mob/living/carbon/human/badbody)
-	// Strip body of some stuff
-	var/obj/item/find_id = locate(/obj/item/card/id) in badbody.contents
-	if(find_id)
-		badbody.drop_from_inventory(find_id)
-		qdel(find_id)
-	for(var/obj/item/clothing/C in badbody.contents)
-		if(prob(30))
-			badbody.drop_from_inventory(C)
-			qdel(C)
-	// Plant gps...
-	var/obj/item/gps/G = new /obj/item/gps(badbody.loc)
-	G.gps_tag = pick("SOS","ERROR","BAD NAME","OUT OF RANGE","BAD SIGNAL","CHECK NAME","CHECK SIGNAL","TEST MODE ACTIVE",badbody.real_name)
-	G.tracking = TRUE
-	G.name = "global positioning system ([G.gps_tag])"
-	G.update_holder()
-	G.update_icon()
-	G.attack_hand(badbody) // yoink
-
-/datum/event/badbody/proc/harm_body(var/mob/living/carbon/human/badbody)
-	// Always break these
-	var/obj/item/organ/external/left_leg = badbody.get_organ(BP_L_LEG)
-	left_leg?.fracture()
-	var/obj/item/organ/external/right_leg = badbody.get_organ(BP_R_LEG)
-	right_leg?.fracture()
-	// so they can't scream!
-	badbody.stat = DEAD
-	badbody.SetSpecialVoice("Unknown")
-	// Brainrot
-	var/obj/item/organ/internal/brain/B = badbody.internal_organs_by_name[O_BRAIN]
-	if(!isnull(B))
-		B.removed(null)
-		qdel(B)
-	// Damage organs
-	for(var/org in badbody.organs_by_name)
-		var/obj/item/organ/internal/O = badbody.internal_organs_by_name[org]
-		if(istype(O,/obj/item/organ/internal))
-			if(prob(5))
-				O.removed(null)
-				qdel(O)
-			else
-				O.take_damage(rand(20,200),TRUE)
-	// Mess em up
-	var/emergency = 500
-	while(badbody.health > rand(-1500,-200) && emergency-- > 0)
-		if(badbody.status_flags & GODMODE)
-			badbody.status_flags ^= GODMODE
-		var/pick_zone = ran_zone()
-		var/obj/item/organ/external/org = badbody.get_organ(pick_zone)
-		if(org)
-			badbody.apply_damage( rand(85,150), pick( TOX, OXY, BURN, ELECTROCUTE), pick_zone)
-			org.wounds +=  new /datum/wound/cut/small(4)
-			if(((org.damage >= 10 && prob(2)) || (org.damage >= 30 && prob(5)) || org.damage >= 80))
-				if(!(pick_zone == BP_GROIN || pick_zone == BP_TORSO || pick_zone == BP_HEAD))
-					if(!istype( badbody.loc, /obj/structure/morgue))
-						org.droplimb(TRUE, DROPLIMB_ACID)
-		badbody.updatehealth()

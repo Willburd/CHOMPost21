@@ -14,6 +14,8 @@
 	body = parent
 	start_x = body.loc.x
 	start_y = body.loc.y
+	body.SetSpecialVoice("Unknown") // Hide voice at first
+	body.stat = DEAD
 	RegisterSignal(body, COMSIG_LIVING_LIFE, PROC_REF(process_component))
 
 /datum/component/badbody/Destroy(force = FALSE)
@@ -24,12 +26,11 @@
 /datum/component/badbody/proc/process_component()
 	if(QDELETED(src))
 		return
-	if(!isnull(body.client))
+	if(body.stat != DEAD)
 		SShaunting.reset_world_haunt() // Clean out for now
+		body.UnsetSpecialVoice()
 		qdel(src)
 		return
-	if(!isnull(body.client))
-		body.UnsetSpecialVoice()
 
 	var/speak = ""
 	if(!long_delay_mode)
@@ -148,3 +149,58 @@
 			if(prob(10))
 				body.UnsetSpecialVoice()
 			return world.time + rand(700,1200)
+
+/datum/component/badbody/proc/set_items()
+	// Strip body of some stuff
+	var/obj/item/find_id = locate(/obj/item/card/id) in body.contents
+	if(find_id)
+		body.drop_from_inventory(find_id)
+		qdel(find_id)
+	for(var/obj/item/clothing/C in body.contents)
+		if(prob(30))
+			body.drop_from_inventory(C)
+			qdel(C)
+	// Plant gps...
+	var/obj/item/gps/G = new /obj/item/gps(body.loc)
+	G.gps_tag = pick("SOS","ERROR","BAD NAME","OUT OF RANGE","BAD SIGNAL","CHECK NAME","CHECK SIGNAL","TEST MODE ACTIVE",body.real_name)
+	G.tracking = TRUE
+	G.name = "global positioning system ([G.gps_tag])"
+	G.update_holder()
+	G.update_icon()
+	G.attack_hand(body) // yoink
+
+/datum/component/badbody/proc/harm_body()
+	// Always break these
+	var/obj/item/organ/external/left_leg = body.get_organ(BP_L_LEG)
+	left_leg?.fracture()
+	var/obj/item/organ/external/right_leg = body.get_organ(BP_R_LEG)
+	right_leg?.fracture()
+	// Brainrot
+	var/obj/item/organ/internal/brain/B = body.internal_organs_by_name[O_BRAIN]
+	if(!isnull(B))
+		B.removed(null)
+		qdel(B)
+	// Damage organs
+	for(var/org in body.organs_by_name)
+		var/obj/item/organ/internal/O = body.internal_organs_by_name[org]
+		if(istype(O,/obj/item/organ/internal))
+			if(prob(5))
+				O.removed(null)
+				qdel(O)
+			else
+				O.take_damage(rand(20,200),TRUE)
+	// Mess em up
+	var/emergency = 500
+	while(body.health > rand(-1500,-200) && emergency-- > 0)
+		if(body.status_flags & GODMODE)
+			body.status_flags ^= GODMODE
+		var/pick_zone = ran_zone()
+		var/obj/item/organ/external/org = body.get_organ(pick_zone)
+		if(org)
+			body.apply_damage( rand(85,150), pick( TOX, OXY, BURN, ELECTROCUTE), pick_zone)
+			org.wounds +=  new /datum/wound/cut/small(4)
+			if(((org.damage >= 10 && prob(2)) || (org.damage >= 30 && prob(5)) || org.damage >= 80))
+				if(!(pick_zone == BP_GROIN || pick_zone == BP_TORSO || pick_zone == BP_HEAD))
+					if(!istype( body.loc, /obj/structure/morgue))
+						org.droplimb(TRUE, DROPLIMB_ACID)
+		body.updatehealth()
