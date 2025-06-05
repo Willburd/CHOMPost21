@@ -5326,6 +5326,7 @@
 #include "modular_outpost\code\modules\emotes\definitions\audible_scream.dm"
 #include "modular_outpost\code\modules\emotes\definitions\visible.dm"
 #include "modular_outpost\code\modules\emotes\definitions\visible_animated.dm"
+#include "modular_outpost\code\modules\error_handler\error_handler.dm"
 #include "modular_outpost\code\modules\events\allisclean.dm"
 #include "modular_outpost\code\modules\events\badbody.dm"
 #include "modular_outpost\code\modules\events\bluespace_shell_station.dm"
