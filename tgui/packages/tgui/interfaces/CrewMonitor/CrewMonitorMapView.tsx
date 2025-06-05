@@ -11,11 +11,11 @@ export const CrewMonitorMapView = (props: {
 }) => {
   const { config, data } = useBackend<Data>();
 
-  const { zoomScale, crewmembers } = data;
+  const { crewmembers } = data;
 
   return (
     <Box height="526px" mb="0.5rem" overflow="hidden">
-      <NanoMap zoomScale={zoomScale} onZoom={(v: number) => props.onZoom(v)}>
+      <NanoMap onZoom={(v: number) => props.onZoom(v)}>
         {crewmembers
           .filter(
             (x) => x.sensor_type === 3 && ~~x.realZ === ~~config.mapZLevel,
@@ -24,10 +24,7 @@ export const CrewMonitorMapView = (props: {
             <NanoMap.Marker
               key={cm.ref}
               x={cm.x}
-              /* Outpost 21 edit begin - Wide map support */
-              y={cm.y * data.ymult}
-              mapxscale={1 - data.ymult}
-              /* Outpost 21 edit end */
+              y={cm.y}
               zoom={props.zoom}
               icon="circle"
               tooltip={cm.name + ' (' + cm.assignment + ')'}
