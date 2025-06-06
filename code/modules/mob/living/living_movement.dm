@@ -239,7 +239,8 @@ default behaviour is:
 		MB.runOver(src)
 
 	if(istype(AM, /obj/vehicle))
-		if(buckled != AM) // Outpost 21 edit - don't run ourselves over, needed for going down stairs!
+		if(!istype(buckled, /obj/vehicle)) // Don't run ourselves over, needed for going down stairs in vehicles!
+			// Checks if we are riding a vehicle instead of our buckled vehicle, so that our trailers don't flatten us either!
 			var/obj/vehicle/V = AM
 			V.RunOver(src)
 
