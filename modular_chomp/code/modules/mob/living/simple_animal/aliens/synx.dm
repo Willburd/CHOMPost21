@@ -117,7 +117,6 @@
 
 /mob/living/simple_mob/animal/synx/Initialize(mapload)
 	. = ..()
-	icon_state = "synx_living" // Outpost 21 edit - give synx a map icon, reset it here as this uses a layering system instead
 	src.adjust_nutrition(src.max_nutrition)
 	build_icons(randomized_design)
 	voremob_loaded = 1
@@ -638,6 +637,7 @@
 		icon_state = "synx_dead"
 		plane = MOB_LAYER
 		return
+	icon_state = "synx_living" // Outpost 21 edit - give synx a map icon, reset it here as this uses a layering system instead
 	if(random)
 		var/list/bodycolors = list("#FFFFFF")
 		body = pick(body_styles)

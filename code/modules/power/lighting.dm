@@ -614,7 +614,7 @@ var/global/list/light_type_cache = list()
 	L.loc = src //Move it into the socket!
 
 	SShaunting.influence(HAUNTING_COMFORT) // Outpost 21 edit - IT DA SPOOKY STATION!
-	on = powered() && !turned_off() // Outpost 21 edit - Do not instantly turn on lights if the area lightswitch is already off
+	on = powered() && !turned_off() // Do not instantly turn on lights if the area lightswitch is off
 	update()
 
 	if(on && rigged)

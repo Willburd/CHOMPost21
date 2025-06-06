@@ -1,0 +1,71 @@
+2025-06-01:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Crew Monitor & Alarm Map UIs now use a derivative of the Holomap instead
+      of a weird custom mix of handmade icons.
+  - admin: VV now has a dark mode (toggleable in game prefs)
+  - admin: VV now uses getFlatIcon to get a better preview (also toggleable in game
+      prefs)
+  - admin: VV now supports previews for /images
+  Diana:
+  - bugfix: Markings will no longer make your limbs invisible if toggled off
+  Guti:
+  - rscadd: Added the ability for virologists to falter their diseases
+  - rscadd: Added dormant diseases, that some crewmembers might carry.
+  - rscadd: Added three new chemicals for higher level symptoms.
+  - rscadd: Old syringes and old syringe boxes, which may include include diseases.
+  - balance: Buffed the chance of mice having diseases on them.
+2025-06-03:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: genescanner tool now has a proper description
+  - bugfix: Holomaps/Nanomaps no longer show POI walls
+  - bugfix: lights do not ignore light switch state when a bulb is inserted
+  - image: Fixed taj belly markings missing their groins.
+  - bugfix: macrophages escape chance is now properly set to 20%
+  - balance: Unathi no longer pass out from sugar, they just get knocked over.
+  Diana:
+  - code_imp: Less random lagspikes during the middle of the round.
+  FluffMedic:
+  - qol: Cyber shuttle has full glass walls
+  Guti:
+  - refactor: Refactored soap
+  - refactor: Refactored washing machine code to get rid of sleeps
+  - rscadd: You can eat soap now
+  - rscadd: Clean component
+  - code_imp: Replaced clean(), clean_blood(), and clean_contamination() with wash()
+  Verkister:
+  - bugfix: Fixed unlinked digestive juice turfs not damaging humanmobs.
+2025-06-04:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed showers not washing atoms in it's space
+  - rscadd: Added a small amount of weaken to spider warning bites to knock people
+      over.
+  - rscadd: Added a new variable to mobs that can prevent them from being pulled when
+      alive, currently only applies to the spiders.
+  - bugfix: Fixed an issue where spiders would sometimes try to inject poison where
+      they couldn't and runtime.
+  - rscadd: Multishock integration
+  - rscadd: Photodegeneration genetrait, cannot be selected from round start
+  - bugfix: Drippy trait will no longer drop drips into the cryopod when a human with
+      it is in the pod
+  - refactor: inStasisNow() has a base proc on mob, for ease of component compatibility
+      between simple and human mobs
+  - refactor: Moved species/shadow and zaddat light-based damage code to a component
+  Diana:
+  - bugfix: You now lose nutrition passively again
+2025-06-05:
+  Diana:
+  - rscadd: Your spleen has been rescued from the Skrell. (Everyone now has a spleen,
+      not JUST skrell)
+  - bugfix: Worm meat can now properly be cut into
+  - bugfix: Organs now properly show their names when you're interacting with them
+      surgically.
+  - qol: Surgery steps don't have randomness anymore. Surgery steps also lowered
+  - qol: You can shove dead organs in bodies. Still a bad idea, but can be combined
+      with the patient stabilizer to some success.
+  - code_imp: Adds a spooky modifier with some special stuff to go along with it.
+      Not obtainable outside of admins.
+  - bugfix: Puking with a broken liver now properly makes you vomit the correct blood
+      color
+  Guti:
+  - bugfix: Fixed wash() proc to delete cleanable decals
+  - bugfix: Fixed mops and soaps not making the floor wet

@@ -617,13 +617,12 @@
 
 	var/mob/living/carbon/human/badbody = env.spawn_body(spawn_client,T)
 	spawn(1)
-		env.set_items(badbody)
-		env.harm_body(badbody)
-		new /obj/effect/badbody_controller(badbody)
+		var/datum/component/badbody/B = badbody.AddComponent(/datum/component/badbody)
+		B.harm_body()
+		B.set_items()
 		log_debug("successfully spawned badbody [badbody.real_name] at [T.x] [T.y] [T.z].")
 		qdel(env)
 // Outpost 21 edit end
-
 
 /client/proc/adminorbit()
 	set category = "Fun.Event Kit"

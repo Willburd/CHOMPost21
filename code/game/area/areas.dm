@@ -397,6 +397,13 @@ var/list/mob/living/forced_ambiance_list = new
 		L.disable_spoiler_vision()
 	check_phase_shift(M)	//RS Port #658
 
+	// Outpost 21 edit begin - Constant horror!
+	if(ishuman(L))
+		var/mob/living/carbon/human/H = L
+		if(is_type_in_list(src, redspace_areas) || (haunted && prob(4) && !H.job == JOB_STOWAWAY)) // Stowaways spawn in haunted areas, lets not screw em/metagame
+			H.add_modifier(/datum/modifier/redspace_drain)
+	// Outpost 21 edit end
+
 /area/proc/play_ambience(var/mob/living/L, initial = TRUE)
 	// Ambience goes down here -- make sure to list each area seperately for ease of adding things in later, thanks! Note: areas adjacent to each other should have the same sounds to prevent cutoff when possible.- LastyScratch
 	if(!L?.read_preference(/datum/preference/toggle/play_ambience))

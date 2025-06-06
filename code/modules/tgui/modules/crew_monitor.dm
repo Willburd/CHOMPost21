@@ -3,8 +3,9 @@
 	tgui_id = "CrewMonitor"
 
 /datum/tgui_module/crew_monitor/ui_assets(mob/user)
-	. = ..()
-	. += get_asset_datum(/datum/asset/simple/nanomaps)
+	return list(
+		get_asset_datum(/datum/asset/simple/holo_nanomap),
+	)
 
 /datum/tgui_module/crew_monitor/tgui_act(action, params, datum/tgui/ui)
 	if(..())
@@ -32,7 +33,7 @@
 
 /datum/tgui_module/crew_monitor/tgui_interact(mob/user, datum/tgui/ui = null)
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_visible_map_levels(z, TRUE)  //CHOMPEdit
+	var/list/map_levels = using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE)
 
 	if(!map_levels.len)
 		to_chat(user, span_warning("The crew monitor doesn't seem like it'll work here."))
@@ -46,18 +47,13 @@
 		ui.autoupdate = TRUE
 		ui.open()
 
-/datum/tgui_module/crew_monitor/tgui_static_data(mob/user)
-	. = ..()
-	.["ymult"] = world.maxx / world.maxy // Outpost 21 edit
-	.["zoomScale"] = world.maxx * 2 // + world.maxy // Outpost 21 edit, forced map squareness
-
 /datum/tgui_module/crew_monitor/tgui_data(mob/user)
 	var/data[0]
 
 	data["isAI"] = isAI(user)
 
 	var/z = get_z(user)
-	var/list/map_levels = uniqueList(using_map.get_visible_map_levels(z, TRUE))  //CHOMPEdit
+	var/list/map_levels = uniqueList(using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE))
 	data["map_levels"] = map_levels
 
 	var/list/crewmembers = list()

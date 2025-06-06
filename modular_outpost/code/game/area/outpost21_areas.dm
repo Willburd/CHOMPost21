@@ -1272,7 +1272,7 @@
 	sound_env = TUNNEL_ENCLOSED
 
 /area/mine/unexplored/muriki/mountainbase
-	name = "\improper Muriki Easstern Mountain Caverns"
+	name = "\improper Muriki Eastern Mountain Caverns"
 	icon_state = "east"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = TUNNEL_ENCLOSED

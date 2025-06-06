@@ -30,6 +30,7 @@ GLOBAL_VAR_INIT(total_runtimes_skipped, 0)
 	if(!GLOB.error_last_seen) // A runtime is occurring too early in start-up initialization
 		return ..()
 
+	outpost_trigger_runtime()
 
 	var/erroruid = "[e.file][e.line]"
 	var/last_seen = GLOB.error_last_seen[erroruid]
