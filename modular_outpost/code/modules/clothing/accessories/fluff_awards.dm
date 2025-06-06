@@ -108,7 +108,7 @@ badges
 	if(!istype(H))
 		return
 	var/religion = "Unset"
-	desc = "[initial(desc)]\nName: [H.real_name] ([H.get_species()])\nReligion: [religion]\nBlood type: [H.b_type]"
+	desc = "[initial(desc)]\nName: [H.real_name] ([H.get_species()])\nReligion: [religion]\nBlood type: [H.dna.b_type]"
 
 /obj/item/clothing/accessory/badge/solgov/representative/eshui
 	name = "representative's badge"

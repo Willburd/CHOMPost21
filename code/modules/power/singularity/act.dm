@@ -74,8 +74,8 @@
 		return
 
 	var/prints = ""
-	if(src.fingerprintshidden)
-		prints = ", all touchers : " + src.fingerprintshidden
+	if(forensic_data?.get_hiddenprints())
+		prints = ", all touchers : " + forensic_data?.get_hiddenprints()
 
 	SetUniversalState(/datum/universal_state/supermatter_cascade)
 
@@ -87,8 +87,8 @@
 			new /turf/unsimulated/wall/supermatter(T)
 	// Outpost 21 edit end
 
-	log_admin("New super singularity made by eating a SM crystal [prints]. Last touched by [src.fingerprintslast].")
-	message_admins("New super singularity made by eating a SM crystal [prints]. Last touched by [src.fingerprintslast].")
+	log_admin("New super singularity made by eating a SM crystal [prints]. Last touched by [forensic_data?.get_lastprint()].")
+	message_admins("New super singularity made by eating a SM crystal [prints]. Last touched by [forensic_data?.get_lastprint()].")
 	qdel(src)
 	return 50000
 

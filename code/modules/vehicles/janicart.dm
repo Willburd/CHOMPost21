@@ -1,11 +1,11 @@
 /datum/category_item/catalogue/technology/janicart
-	name = "Cargo Train Tug"
-	desc = "A standard issue cargo tug, meant for hauling obscene amounts of crates when the mail system won't suffice. Note: only licensed cargo crew are authorized to drive this vehicle."
+	name = "Zoomboni Janipro"
+	desc = "A ridable station cleaning cart. A janitorial luxury afforded only to the most affluent supply departments back in the early 2100s. Comes with fuzzy dice on the key fob. Welcome back old friend."
 	value = CATALOGUER_REWARD_TRIVIAL
 
 /obj/vehicle/train/engine/janicart
 	name = "janicart"
-	icon = 'modular_outpost/icons/obj/vehicles.dmi'
+	desc = "A ridable station cleaning cart. Has a large water tank to feed its floor scrubbers, the opening is big enough to fit a mop through to wet it. It also has a hook to hang a trashbag from. You're riding in style now!"
 	icon_state = "pussywagon"
 	on = 0
 	powered = 1
@@ -19,7 +19,7 @@
 	var/scrubbing = FALSE //Floor cleaning enabled
 	var/amount_per_transfer_from_this = 5 //shit I dunno, adding this so syringes stop runtime erroring. --NeoFite
 	var/obj/item/storage/bag/trash/mybag	= null
-	var/callme = "pimpin' ride"	//how do people refer to it?
+	var/callme = "janitor cart" //how do people refer to it?
 
 	key_type = /obj/item/key/janicart
 
@@ -43,48 +43,36 @@
 	key = new key_type(src)
 	turn_off()	//so engine verbs are correctly set
 	create_reagents(600)
+	update_icon()
+	verbs -= /obj/vehicle/train/verb/unlatch_v // Nothing to unlatch
 
-	var/image/I = new(icon = 'modular_outpost/icons/obj/vehicles.dmi', icon_state = "pussywagon_overlay", layer = src.layer + 0.2) //over mobs
-	add_overlay(I)
+	if(prob(20))
+		callme = pick(list("pimpin' ride","thang","pussy wagon","janihound deflector","raunchy love mobile","sanitation stallion","magic carpet","crime mobile","get away car"))
 
 /obj/vehicle/train/engine/janicart/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/mop))
 		if(reagents.total_volume > 1)
 			reagents.trans_to_obj(W, 2)
-			to_chat(user, "<span class='notice'>You wet [W] in the [callme].</span>")
+			to_chat(user, span_notice("You wet \the [W] in the [callme]."))
 			playsound(src, 'sound/effects/slosh.ogg', 25, 1)
 		else
-			to_chat(user, "<span class='notice'>This [callme] is out of water!</span>")
-	else if(istype(W, /obj/item/storage/bag/trash))
-		to_chat(user, "<span class='notice'>You hook the trashbag onto the [callme].</span>")
+			to_chat(user, span_notice("This [callme] is out of water!"))
+		return
+	if(istype(W, /obj/item/storage/bag/trash))
+		to_chat(user, span_notice("You hook the trashbag onto the [callme]."))
 		user.drop_item()
-		W.loc = src
+		W.forceMove(src)
 		mybag = W
-	..()
+		return
+	. = ..()
 
 /obj/vehicle/train/engine/janicart/attack_hand(mob/user)
 	if(mybag)
-		mybag.loc = get_turf(user)
+		mybag.forceMove(get_turf(user))
 		user.put_in_hands(mybag)
 		mybag = null
-	else
-		..()
-
-/obj/vehicle/train/engine/janicart/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
-	..()
-	update_stats()
-
-/obj/vehicle/train/engine/janicart/remove_cell(var/mob/living/carbon/human/H)
-	..()
-	update_stats()
-
-/obj/vehicle/train/engine/janicart/Bump(atom/Obstacle)
-	var/obj/machinery/door/D = Obstacle
-	var/mob/living/carbon/human/H = load
-	if(istype(D) && istype(H))
-		D.Bumped(H)		//a little hacky, but hey, it works, and respects access rights
-
-	..()
+		return
+	. = ..()
 
 //-------------------------------------------
 // Interaction procs
@@ -108,47 +96,38 @@
 
 	scrubbing = !scrubbing
 	if (scrubbing)
-		to_chat(usr, "You turn \the [callme]'s brushes on.")
+		to_chat(usr, span_notice("You turn the [callme]'s brushes on."))
 	else
-		to_chat(usr, "You turn \the [callme]'s brushes off.")
+		to_chat(usr, span_notice("You turn the [callme]'s brushes off."))
 
 /obj/vehicle/train/engine/janicart/latch(obj/vehicle/train/T, mob/user)
-	// nothing latchs to this!
-	return 0
+	return // nothing latchs to this!
 
 /obj/vehicle/train/engine/janicart/update_icon()
 	..()
 	cut_overlays()
 	if(!open)
-		var/image/O = image(icon = 'modular_outpost/icons/obj/vehicles.dmi', icon_state = "pussywagon_overlay", dir = src.dir)
+		var/image/O = image(icon = 'icons/obj/vehicles_vr.dmi', icon_state = "pussywagon_overlay", dir = src.dir)
 		O.layer = FLY_LAYER
 		O.plane = MOB_PLANE
 		add_overlay(O)
 
-/obj/vehicle/train/engine/janicart/set_dir()
-	..()
-	update_icon()
-
 /obj/vehicle/train/engine/janicart/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
+	var/turf/tile = get_turf(src)
 	if(scrubbing)
-		if(reagents.has_reagent(REAGENT_ID_WATER, 1) || reagents.has_reagent(REAGENT_ID_CLEANER, 1))
-			var/turf/tile = loc
-			tile.wash(CLEAN_SCRUB)
-			if(istype(tile, /turf/simulated))
-				var/turf/simulated/T = tile
-				T.dirt = 0
-			for(var/A in tile)
-				if(istype(A,/obj/effect/rune) || istype(A,/obj/effect/decal/cleanable) || istype(A,/obj/effect/overlay))
-					qdel(A)
-				else if(ishuman(A))
-					var/mob/living/carbon/human/cleaned_human = A
-					if(cleaned_human.lying)
-						cleaned_human.wash(CLEAN_SCRUB)
-						to_chat(cleaned_human, span_warning("\The [callme] cleans your face!"))
+		if(tile && reagents.total_volume > 0)
+			if(reagents.has_reagent(REAGENT_ID_WATER) || reagents.has_reagent(REAGENT_ID_CLEANER))
+				tile.wash(CLEAN_SCRUB)
+			for(var/atom/movable/AM in tile.contents)
+				if(istype(AM, /mob/living))
+					var/mob/living/L = AM
+					if(L.is_incorporeal() || L.buckled == src) // Don't scrub shadekin our our rider
+						continue
+					reagents.splash(L,5) // only 5u so it's not gamebreaking
 			reagents.trans_to_turf(tile, 1, 10)	//10 is the multiplier for the reaction effect. probably needed to wet the floor properly.
 		else
 			scrubbing = FALSE
 			if(ishuman(load))
 				var/mob/living/carbon/human/D = load
-				to_chat(D, "\The [callme]'s brushes turn off, as it runs out of cleaner.")
+				to_chat(D, span_notice("The [callme]'s brushes turn off, as it runs out of cleaner."))
