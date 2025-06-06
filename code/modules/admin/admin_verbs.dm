@@ -788,13 +788,8 @@ ADMIN_VERB(modify_shift_end, (R_ADMIN|R_EVENT|R_SERVER), "Modify Shift End", "Mo
 	transfer_controller.modify_hard_end(user)
 
 // Outpost 21 edit begin - Spawn redspace exit command
-/client/proc/make_red_exit()
-	set name = "Make Redspace Exit Portal"
-	set desc = "Allows players to escape from redspace. Spawns at your location"
-	set category = "Admin.Events"
 
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
+ADMIN_VERB(make_red_exit, (R_ADMIN|R_EVENT), "Make Redspace Exit Portal", "Allows players to escape from redspace. Spawns at your location.", "Admin.Events")
 	var/turf/epicenter = mob.loc
 	if(!epicenter)
 		return
@@ -802,13 +797,7 @@ ADMIN_VERB(modify_shift_end, (R_ADMIN|R_EVENT|R_SERVER), "Modify Shift End", "Mo
 // Outpost 21 edit end
 
 /* Outpost 21 edit - DO NOT USE THIS UNLESS TESTING
-/client/proc/base_all_turfs()
-	set name = "All Turf To Base"
-	set desc = "OH GOD NO."
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
+ADMIN_VERB(base_all_turfs, (R_ADMIN|R_EVENT), "All Turf To Base", "OH GOD NO.", "Admin.Events")
 	for(var/turf/T in world)
 		var/turf/nw = get_base_turf_by_area(T)
 		if(istype(nw,/turf/simulated/open) && (!HasBelow(T.z) || T.z == 1))
