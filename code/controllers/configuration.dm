@@ -198,7 +198,6 @@ var/list/gamemode_cache = list()
 
 	var/static/simultaneous_pm_warning_timeout = 100
 
-	var/static/use_recursive_explosions //Defines whether the server uses recursive or circular explosions.
 	var/static/multi_z_explosion_scalar = 0.5 //Multiplier for how much weaker explosions are on neighboring z levels.
 
 	var/static/assistant_maint = 0 //Do assistants get maint access?
@@ -384,9 +383,6 @@ var/list/gamemode_cache = list()
 
 				if ("jobs_have_minimal_access")
 					config.jobs_have_minimal_access = 1
-
-				if ("use_recursive_explosions")
-					use_recursive_explosions = 1
 
 				if ("multi_z_explosion_scalar")
 					multi_z_explosion_scalar = text2num(value)
