@@ -94,6 +94,10 @@
 		BITSET(character.hud_updateflag, VANTAG_HUD)
 		var/want_body_save = pref.resleeve_scan
 		var/want_mind_save = pref.mind_scan
+		var/datum/job/J = SSjob.get_job(character.job)
+		if(J && J.offmap_spawn)
+			want_body_save = FALSE
+			want_mind_save = FALSE
 
 		spawn(50)
 			if(QDELETED(character) || QDELETED(pref) || character.GetComponent(/datum/component/badbody)) // Outpost 21 edit - Disable if badbody
