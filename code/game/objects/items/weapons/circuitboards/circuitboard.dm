@@ -19,7 +19,8 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
 /obj/item/circuitboard/Destroy()
-	QDEL_NULL(board_type)
+	if(isobject(board_type))
+		QDEL_NULL(board_type)
 	return ..()
 
 //Called when the circuitboard is used to contruct a new machine.

@@ -287,7 +287,6 @@ var/list/mob_hat_cache = list()
 
 //DRONE LIFE/DEATH
 
-//For some goddamn reason robots have this hardcoded. Redefining it for our fragile friends here.
 /mob/living/silicon/robot/drone/getMaxHealth()
 	return maxHealth
 
