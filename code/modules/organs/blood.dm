@@ -289,6 +289,9 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	for(var/datum/disease/D in GetSpreadableViruses())
 		B.data["viruses"] |= D.Copy()
 
+	for(var/datum/disease/D in GetDormantDiseases())
+		B.data["viruses"] |= D.Copy()
+
 	if(!B.data["resistances"])
 		B.data["resistances"] = list()
 
