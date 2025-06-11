@@ -47,23 +47,6 @@
 			if(istype(H.internal,/obj/item/tank) && H.internals)
 				H.internals.icon_state = "internal1"
 
-	// Traitgenes edit begin - Moved breathing equipment to AFTER the genes set it
-	//Give breathing equipment if needed
-	if(current_project.breath_type != null && current_project.breath_type != GAS_O2)
-		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
-		var/obj/item/tank/tankpath
-		if(current_project.breath_type == GAS_PHORON)
-			tankpath = /obj/item/tank/vox
-		else
-			tankpath = text2path("/obj/item/tank/" + current_project.breath_type)
-
-		if(tankpath)
-			H.equip_to_slot_or_del(new tankpath(H), slot_back)
-			H.internal = H.back
-			if(istype(H.internal,/obj/item/tank) && H.internals)
-				H.internals.icon_state = "internal1"
-	// Traitgenes edit end
-
 	//Apply damage
 	set_occupant(H)
 	H.adjustCloneLoss((H.getMaxHealth() - (H.getMaxHealth()))*-0.75)
