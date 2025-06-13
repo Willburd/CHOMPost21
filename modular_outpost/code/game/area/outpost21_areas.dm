@@ -425,6 +425,7 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_JANITOR
+	color_grading = COLORTINT_DIM
 
 /area/muriki/janiextra
 	name = "\improper Overflow Janitorial Closet"
@@ -433,6 +434,7 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_JANITOR
+	color_grading = COLORTINT_DIM
 
 /area/muriki/janiupstairs
 	name = "\improper Hydroponics Janitorial Closet"
@@ -441,6 +443,7 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_JANITOR
+	color_grading = COLORTINT_DIM
 
 /area/muriki/cybstorage
 	name = "\improper Cyborg Storage"
@@ -576,12 +579,14 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/muriki
 	flags = RAD_SHIELDED | AREA_FIRE_SUPRESSION
+	color_grading = COLORTINT_DIM
 
 /area/muriki/crew/civmail
 	name = "\improper Civilian Mail Room"
 	icon_state = "orablasqu"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_CIV
+	color_grading = COLORTINT_DIM
 
 /area/library_office
 	name = "\improper Librarian Office"
@@ -601,6 +606,7 @@
 	base_turf = /turf/simulated/mineral/floor/muriki
 	icon_state = "cyawhicir"
 	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
+	color_grading = COLORTINT_DIM
 
 /area/hallway/muriki/bunkerhall
 	name = "\improper Bunker Access Hallway"
@@ -612,6 +618,7 @@
 /area/maintenance/roof_tube_access
 	name = "Civilian Roof Access"
 	base_turf = /turf/simulated/open
+	color_grading = COLORTINT_DIM
 
 //Hallways-------
 /area/muriki/crewstairwell
@@ -1248,11 +1255,13 @@
 	name = "\improper Medical Cavern Access West"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "bluenew"
+	color_grading = COLORTINT_DIM
 /area/mine/explored/muriki/cave/med/resleever_exit
 	name = "\improper Medical Automatic Resleeving Access"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "bluenew"
 	use_emergency_overlay = TRUE
+	color_grading = COLORTINT_DIM
 
 /area/mine/explored/muriki/cave/civ/south_access
 	name = "\improper Civilian Cavern Access South"
@@ -1266,10 +1275,12 @@
 /area/maintenance/civ/closet
 	name = "\improper Civilian Maintenance Closet"
 	sound_env = TUNNEL_ENCLOSED
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/civ/bunker
 	name = "\improper Bunker Maintenance"
 	sound_env = TUNNEL_ENCLOSED
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/civ/north
 	name = "\improper North Civilian Maintenance"
@@ -1603,6 +1614,7 @@
 	name = "\improper Gravity Generator Maintenance"
 	base_turf = /turf/simulated/open
 	icon_state = "blue"
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/oldbridge
 	name = "\improper Abandoned Bridge"
@@ -1612,32 +1624,38 @@
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	broken_light_chance = 85
 	haunted = TRUE
+	color_grading = COLORTINT_DIM
 
 //Cavern maintenance
 /area/maintenance/cave
 	name = "\improper Facility Lower Maintenance"
 	icon_state = "dark128"
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/spine
 	name = "\improper Maintenance Spine"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "orawhisqu"
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/spine/civ
 	name = "\improper Maintenance Spine Civilian"
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/spine/eng
 	name = "\improper Maintenance Spine Engineering"
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/spine/waste
 	name = "\improper Maintenance Spine Waste"
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/tug
 	name = "\improper Maintenance Tug Tunnel"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "deckmaint1"
 	use_emergency_overlay = TRUE
+	color_grading = COLORTINT_DIM
 
 //
 // Medical ------------------------------------------------------------
@@ -3309,10 +3327,11 @@
 	base_turf = /turf/simulated/open
 
 /area/maintenance/arrivals
-	base_turf = /turf/simulated/open
+	base_turf = /turf/simulated/opens
 
 /area/maintenance/medbay_aft
 	base_turf = /turf/simulated/open
+	color_grading = COLORTINT_DIM
 
 /area/maintenance/medbay_fore
 	base_turf = /turf/simulated/open

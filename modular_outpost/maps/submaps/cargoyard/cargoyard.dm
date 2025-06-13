@@ -165,3 +165,4 @@
 	music = 'sound/ambience/ambiatm1.ogg'
 	ambience = AMBIENCE_FOREBODING
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	color_grading = COLORTINT_DARK
