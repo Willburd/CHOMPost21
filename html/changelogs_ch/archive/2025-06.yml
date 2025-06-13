@@ -97,3 +97,74 @@
   - maptweak: Added janicart and keys for it to each station map. This is just in
       the existing room on SD and RP. On the tether, there is a small garage on the
       side of the janitors office now, because I thought that would be cute!
+2025-06-08:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added custom links to the character directory.
+  - bugfix: Fake attackers crashing MC with invalid turfs
+  - bugfix: cleaning applies description to desc, not to name!
+  - bugfix: Circuit boards no longer bad-del
+  - rscadd: AIs can now open their multicam views in completely separate windows and
+      maintain them while switching back to main view.
+  - bugfix: Camera consoles work more consistently.
+  - rscadd: Glitch-out effect to AI holograms when stuff passes through them
+  - bugfix: fixed mobs that qdel on death, causing crashes when crushed by doors and
+      dying.
+  - bugfix: Phased shadekin can no longer be lit on fire by atmofires
+  - bugfix: Phased shadekin can no longer be run over by vehicles
+  - bugfix: maintenance drone HP calculations
+  - bugfix: borgs don't try to leave suit fibres on fingerprint checks
+  - qol: The chat now supports TTS for chosen message types, filtered the same way
+      that chat tabs are filtered. This is an accessibility feature.
+  - bugfix: Fixed runtime on vampire xenoartifact's blood sucking effect
+2025-06-09:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: phased shadekin no longer prevent airlocks from closing
+  - bugfix: phased shadekin are no longer crushed by dangerous airlocks closing
+  - rscadd: Dormant diseases may now be acquired via blood samples
+  - qol: Allowed virus immune species to get dormant diseases, as well as access to
+      Disease Carrier trait
+  - balance: The extrapolator may find any disease with no regards of it's stealth
+  - code_imp: added GetDormantDiseases proc
+  Diana:
+  - bugfix: Plat and gold can be put in prosfabs again
+  - balance: Spooky modifier was tested and had some balance adjustments
+  FluffMedic:
+  - bugfix: properly removes a nonfunctioning attack from the E-janus
+  - bugfix: The hivebot tower summoning the wrong mobs
+  - bugfix: wrong pilot for E-janus
+  - qol: Added more feedback to the E-Janus's armor gimmick.
+2025-06-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed dormant diseases showing up in Medical scanners
+  - bugfix: some vorepanel message toggles in the general tab
+  - bugfix: game panel inaccessible to devs / event managers
+  FluffMedic:
+  - rscadd: 2 new sif POIs based off a past event
+2025-06-12:
+  Diana, Will, Kash:
+  - qol: Prometheans now use an appearance changer instead of 100 specialty verbs!
+  - qol: Cocoon trait can now change more things about you!
+  - qol: TF methods using the apperance changer allow you to load slots.
+  - bugfix: missing ooc notes added to body record for transfer
+  - bugfix: clonepods do not break listener code when releasing occupants
+  - bugfix: clonepod computer does not spin right around baby when interacted with
+  - bugfix: body redesign UI preview aligned correctly and no longer tiny
+  - bugfix: species/copy_vars no longer takes centuries validating known good data
+  - qol: anyone adding new dna vars no longer needs to worry about the dna cloning
+      proc.
+  - balance: FBP Xenochimera regenerate their robolimbs back
+  - balance: Organic Xenochimera drop their robolimbs, allowing them to slap them
+      back on post-revival
+  - code_imp: added BLACKLISTED_COPY_VARS macro, for safely iterating or filtering
+      atom.vars
+  - code_imp: added COMSIG_HUMAN_DNA_FINALIZED signal. Sent when a human mob is fully
+      init with all dna and species vars applied.
+  - code_imp: hair gradients use dnaUIs instead of separate vars
+  - refactor: massive rework to dna, bodyrecords and dna2record datums to handle copying
+      vars, and applying them to their owner mob more gracefully
+  - refactor: all dna related machines that resleeve humans, except the autosleever,
+      use a unified proc to ensure no loss of data.
+  - refactor: Xenochimera no longer use admin procs to heal, and use an internal body
+      record datum.
+  FluffMedic:
+  - bugfix: carrier being disconnected from medical sensors

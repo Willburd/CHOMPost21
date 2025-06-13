@@ -19,7 +19,7 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
 /obj/item/circuitboard/Destroy()
-	if(isobject(board_type))
+	if(isobject(board_type)) // Some boards use text instead of an instance...
 		QDEL_NULL(board_type)
 	return ..()
 

@@ -551,6 +551,7 @@
 	always_unpowered = TRUE
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
+	color_grading = COLORTINT_DARK
 /area/mine/unexplored/muriki/cave/deepdark
 	name = "\improper Muriki Underground"
 	sound_env = TUNNEL_ENCLOSED
@@ -558,6 +559,7 @@
 	always_unpowered = TRUE
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
+	color_grading = COLORTINT_DARK
 
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
@@ -567,6 +569,7 @@
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_OMEN
 
 /area/submap/outpost21/cave_liminal_B
 	name = "\improper GET OUT"
@@ -579,6 +582,7 @@
 	ambience = AMBIENCE_MAINTENANCE
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_WARM
 
 /area/submap/outpost21/cave_liminal_B/get_name()
 	return show_name
@@ -591,6 +595,7 @@
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_MEAT
 
 /area/submap/outpost21/cave_red_B
 	name = "\improper Inside Us"
@@ -600,6 +605,7 @@
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_MEAT
 
 /area/submap/outpost21/cave_red_C
 	name = "\improper Touch Our Skin"
@@ -609,6 +615,7 @@
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_MEAT
 
 /area/submap/outpost21/yawn_A
 	name = "\improper We See"
@@ -618,6 +625,7 @@
 	ambience = AMBIENCE_GENERIC
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_MEAT
 
 /area/submap/outpost21/yawn_B
 	name = "\improper We Remember"
@@ -627,6 +635,7 @@
 	ambience = AMBIENCE_EXPOUTPOST
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_WARM
 
 /area/submap/outpost21/cross_A
 	name = "\improper We Are Found"
@@ -636,6 +645,7 @@
 	ambience = AMBIENCE_ARRIVALS
 	base_turf = /turf/simulated/mineral/floor/muriki
 	haunted = TRUE
+	color_grading = COLORTINT_WARM
 
 /area/submap/outpost21/crashed_ufo
 	name = "\improper Unknown"
@@ -645,6 +655,7 @@
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OTHERWORLDLY
 	haunted = TRUE
+	color_grading = COLORTINT_OMEN
 
 /area/submap/outpost21/dark_wizard_den
 	name = "\improper Stale Donut"
@@ -656,6 +667,7 @@
 	haunted = TRUE
 	always_unpowered = FALSE
 	requires_power = FALSE
+	color_grading = COLORTINT_COZY
 
 /area/rnd/xenobiology/lost // ported secret
 	name = "\improper Abandoned Xenobiology Lab"
@@ -666,6 +678,7 @@
 	use_emergency_overlay = FALSE
 	flags = AREA_BLOCK_GHOST_SIGHT
 	haunted = TRUE
+	color_grading = COLORTINT_DARK
 
 //////////////////////////////////////////////////////////////
 // Liminal area specialty controllers
