@@ -235,6 +235,7 @@ var/datum/planet/muriki/planet_muriki = null
 		"The weather is calm."
 		)
 	sky_visible = TRUE
+	color_grading = COLORTINT_COZY
 
 /datum/weather/muriki/clear/New()
 	switch(GLOB.world_time_season)
@@ -291,6 +292,7 @@ var/datum/planet/muriki/planet_muriki = null
 
 	outdoor_sounds_type = /datum/looping_sound/weather/wind/gentle
 	indoor_sounds_type = /datum/looping_sound/weather/wind/gentle/indoors
+	color_grading = COLORTINT_WARM
 
 /datum/weather/muriki/acid_overcast/New()
 	switch(GLOB.world_time_season)
@@ -355,6 +357,7 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rain
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
+	color_grading = COLORTINT_DIM
 
 /datum/weather/muriki/acid_rain/New()
 	switch(GLOB.world_time_season)
@@ -451,6 +454,7 @@ var/datum/planet/muriki/planet_muriki = null
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
 	transition_chances = list() // See New() for seasonal transitions
+	color_grading = COLORTINT_DARK
 
 /datum/weather/muriki/acid_storm/New()
 	switch(GLOB.world_time_season)
@@ -554,6 +558,7 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rainrumble
 	indoor_sounds_type = /datum/looping_sound/weather/rainrumble/indoors
+	color_grading = COLORTINT_DARK
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -584,6 +589,7 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/rainheavy
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
+	color_grading = COLORTINT_DARK
 
 /datum/weather/muriki/downpour/process_effects()
 	..()
@@ -646,6 +652,7 @@ var/datum/planet/muriki/planet_muriki = null
 	//No transition message, supposed to be the 'actual' rain
 	outdoor_sounds_type = /datum/looping_sound/weather/rainextreme
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
+	color_grading = COLORTINT_DARK
 
 /datum/weather/muriki/downpourfatal/process_effects()
 	..()
@@ -724,6 +731,7 @@ var/datum/planet/muriki/planet_muriki = null
 		"It begins to hail.",
 		"An intense chill is felt, and chunks of frozen acid start to fall from the sky, towards you."
 	)
+	color_grading = COLORTINT_CHILL
 
 /datum/weather/muriki/acid_hail/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
@@ -777,6 +785,7 @@ var/datum/planet/muriki/planet_muriki = null
 		"Small snowflakes begin to fall from above.",
 		"It begins to snow lightly.",
 		)
+	color_grading = COLORTINT_CHILL
 
 /datum/weather/muriki/light_snow/New()
 	switch(GLOB.world_time_season)
@@ -826,6 +835,7 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
+	color_grading = COLORTINT_COLD
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -853,6 +863,7 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
+	color_grading = COLORTINT_COLD
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -867,6 +878,7 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_RAIN = 50,
 		WEATHER_STORM = 20
 		)
+	color_grading = COLORTINT_MEAT
 
 /datum/weather/muriki/confetti //fixs firework stars
 	name = "confetti"
@@ -882,6 +894,7 @@ var/datum/planet/muriki/planet_muriki = null
 		"Suddenly, colorful confetti starts raining from the sky."
 	)
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
+	color_grading = COLORTINT_OMEN
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
