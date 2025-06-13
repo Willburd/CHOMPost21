@@ -1636,26 +1636,21 @@
 	name = "\improper Maintenance Spine"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "orawhisqu"
-	color_grading = COLORTINT_DIM
 
 /area/maintenance/spine/civ
 	name = "\improper Maintenance Spine Civilian"
-	color_grading = COLORTINT_DIM
 
 /area/maintenance/spine/eng
 	name = "\improper Maintenance Spine Engineering"
-	color_grading = COLORTINT_DIM
 
 /area/maintenance/spine/waste
 	name = "\improper Maintenance Spine Waste"
-	color_grading = COLORTINT_DIM
 
 /area/maintenance/tug
 	name = "\improper Maintenance Tug Tunnel"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "deckmaint1"
 	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_DIM
 
 //
 // Medical ------------------------------------------------------------
