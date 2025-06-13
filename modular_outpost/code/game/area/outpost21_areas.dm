@@ -3327,7 +3327,7 @@
 	base_turf = /turf/simulated/open
 
 /area/maintenance/arrivals
-	base_turf = /turf/simulated/opens
+	base_turf = /turf/simulated/open
 
 /area/maintenance/medbay_aft
 	base_turf = /turf/simulated/open
