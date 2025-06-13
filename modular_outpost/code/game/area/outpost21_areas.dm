@@ -159,7 +159,7 @@
 	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_FIRE_SUPRESSION
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open
-	color_grading = COLORTINT_COLD
+	color_grading = COLORTINT_CHILL
 
 /area/muriki/bathroom/atmospherics
 	name = "\improper Atmospherics Latrine"
@@ -704,7 +704,7 @@
 	icon_state = "red2"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
-	color_grading = COLORTINT_COLD
+	color_grading = COLORTINT_CHILL
 
 //
 // Engineering -----------------------------------------------------
@@ -1694,7 +1694,7 @@
 	icon_state = "locker"
 	base_turf = /turf/simulated/mineral/floor/muriki
 	sound_env = SMALL_ENCLOSED
-	color_grading = COLORTINT_COLD
+	color_grading = COLORTINT_CHILL
 
 /area/medical/locker
 	name = "\improper Medical Locker Room"
@@ -3098,6 +3098,7 @@
 /area/medical/virology
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = AREA_FIRE_SUPRESSION
+	color_grading = COLORTINT_CHILL
 
 /area/medical/biostorage
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -3137,6 +3138,7 @@
 /area/medical/surgery_storage
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/mineral/floor/muriki
+	color_grading = COLORTINT_CHILL
 
 /area/medical/medbay4
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
