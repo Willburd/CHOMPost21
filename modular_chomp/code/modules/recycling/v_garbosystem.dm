@@ -13,13 +13,12 @@
 	var/obj/machinery/button/garbosystem/button
 	var/list/affecting
 	var/voracity = 5 //How much stuff is swallowed at once.
-	var/obj/item/hose_connector/output/Output = null // Outpost 21 edit begin - internal reagent grinding tank
 
 /obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
 	// Outpost 21 edit begin - internal reagent grinding tank
 	create_reagents(CARGOTANKER_VOLUME * 4)
-	Output = new(src)
+	AddComponent(/datum/component/hose_connector/output)
 	// Outpost 21 edit end
 	for(var/dir in GLOB.cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
@@ -35,7 +34,6 @@
 
 // Outpost 21 edit begin - internal reagent grinding tank
 /obj/machinery/v_garbosystem/Destroy()
-	QDEL_NULL(Output)
 	crusher = null
 	button = null
 	. = ..()
@@ -78,13 +76,6 @@
 		icon_state = "cronchy_off"
 		return PROCESS_KILL
 	icon_state = "cronchy_active"
-
-	// Outpost 21 edit begin - internal reagent grinding tank
-	if(Output.get_pairing())
-		reagents.trans_to_holder(Output.reagents, Output.reagents.maximum_volume)
-		if(prob(5))
-			visible_message(span_notice("\The [src] gurgles as it pumps fluid."))
-	// Outpost 21 edit end
 
 	affecting = loc.contents - src
 	spawn(1)
@@ -170,8 +161,7 @@
 		if(!operating)
 			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")
 			for(var/atom/movable/A in contents)
-				if(A != Output) // Outpost 21 edit - internal reagent grinding tank
-					A.forceMove(loc)
+				A.forceMove(loc)
 			return
 		else
 			to_chat(user, "Unable to empty filter while the machine is running.")
