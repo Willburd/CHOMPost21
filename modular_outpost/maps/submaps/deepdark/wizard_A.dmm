@@ -37,7 +37,7 @@
 /turf/simulated/floor/wood,
 /area/submap/outpost21/dark_wizard_den)
 "k" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "l" = (
 /obj/structure/sign/painting/away_areas{
@@ -231,7 +231,7 @@
 /turf/simulated/floor/wood,
 /area/submap/outpost21/dark_wizard_den)
 "U" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/submap/outpost21/dark_wizard_den)
 "V" = (
 /obj/structure/sign/painting/away_areas{

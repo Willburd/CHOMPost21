@@ -4,15 +4,15 @@
 /area/template_noop)
 "g" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "R" = (
-/turf/simulated/floor/outdoors/sidewalk/muriki{
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "W" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

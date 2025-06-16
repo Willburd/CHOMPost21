@@ -3,7 +3,7 @@
 /turf/template_noop,
 /area/template_noop)
 "w" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "J" = (
 /turf/template_noop,

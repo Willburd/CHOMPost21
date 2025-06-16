@@ -3,17 +3,17 @@
 /turf/simulated/wall,
 /area/mine/explored/muriki/cave/deepdark)
 "e" = (
-/turf/simulated/floor/tiled/techfloor/muriki,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "i" = (
 /obj/structure/table/rack/shelf/steel,
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "o" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor/muriki,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
 /turf/template_noop,
@@ -23,17 +23,17 @@
 /area/mine/explored/muriki/cave/deepdark)
 "N" = (
 /obj/machinery/door/airlock/highsecurity,
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "U" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "V" = (
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Z" = (
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

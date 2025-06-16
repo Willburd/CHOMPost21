@@ -309,7 +309,7 @@
 	z = Z_LEVEL_OUTPOST_DEEPDARK
 	name = "Deepdark"
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN|MAP_LEVEL_EXTREMEFALL
-	base_turf = /turf/simulated/mineral/muriki
+	base_turf = /turf/simulated/mineral/turfpack/muriki
 	holomap_offset_x = OUTPOST21_HOLOMAP_MARGIN_X
 	holomap_offset_y = OUTPOST21_HOLOMAP_MARGIN_Y + (OUTPOST21_MAP_SIZEY * 20) - 32 // hidden
 	holomap_legend_x = 140

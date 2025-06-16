@@ -750,7 +750,7 @@
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "HK" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/submap/outpost21/cross_A)
 "Iq" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1133,7 +1133,7 @@
 /turf/simulated/floor/plating,
 /area/submap/outpost21/cross_A)
 "WQ" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "WW" = (
 /obj/structure/table/rack,

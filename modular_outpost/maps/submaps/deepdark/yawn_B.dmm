@@ -99,7 +99,7 @@
 /turf/simulated/wall,
 /area/submap/outpost21/yawn_B)
 "wv" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/submap/outpost21/yawn_B)
 "ww" = (
 /obj/item/stack/material/wood{
@@ -125,7 +125,7 @@
 /turf/simulated/floor/wood,
 /area/submap/outpost21/yawn_B)
 "zz" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Bo" = (
 /obj/item/clothing/head/cone,

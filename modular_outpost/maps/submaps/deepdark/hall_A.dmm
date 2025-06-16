@@ -6,7 +6,7 @@
 /turf/template_noop,
 /area/template_noop)
 "B" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 
 (1,1,1) = {"

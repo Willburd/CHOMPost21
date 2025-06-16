@@ -6,10 +6,10 @@
 /area/mine/unexplored/muriki/cave/deepdark)
 "c" = (
 /obj/effect/shuttle_landmark/premade/underdark/start,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "d" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "g" = (
 /obj/effect/catwalk_plated,
@@ -18,13 +18,13 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "i" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "j" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "k" = (
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
 /turf/simulated/floor/maglev{
@@ -33,7 +33,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "r" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (
 /turf/template_noop,
@@ -43,7 +43,7 @@
 /area/mine/unexplored/muriki/cave/deepdark)
 "I" = (
 /obj/effect/shuttle_landmark/premade/underdark/end,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "L" = (
 /turf/template_noop,

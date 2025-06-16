@@ -6,53 +6,53 @@
 /obj/structure/bed/chair/sofa/right/orange,
 /obj/effect/mine/n2o,
 /obj/item/trash/pretzel,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "n" = (
 /obj/effect/auto_crayon{
 	icon_state = "x"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "v" = (
 /obj/item/trash/snacktray,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "z" = (
 /obj/item/assembly/mousetrap/armed,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "C" = (
 /obj/item/trash/small_bowl,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "D" = (
 /obj/machinery/door/airlock/maintenance_hatch,
 /obj/effect/mine/frag,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
 /obj/effect/mine/n2o,
 /obj/item/trash/snacktray,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "H" = (
 /obj/structure/bed/chair/sofa/left/orange,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "O" = (
 /turf/simulated/wall,
 /area/mine/explored/muriki/cave/deepdark)
 "T" = (
 /obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "X" = (
 /obj/structure/bed/chair/sofa/orange,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

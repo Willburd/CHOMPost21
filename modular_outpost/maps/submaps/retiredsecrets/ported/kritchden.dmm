@@ -42,7 +42,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "x"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
 "v" = (
 /obj/effect/landmark/loot_spawn,
@@ -78,7 +78,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "up"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
 "S" = (
 /obj/structure/loot_pile/mecha/gygax/dark,

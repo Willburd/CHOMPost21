@@ -4,17 +4,17 @@
 /area/template_noop)
 "g" = (
 /obj/structure/table/steel_reinforced,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "h" = (
 /obj/structure/target_stake,
 /obj/item/target,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "l" = (
 /obj/structure/target_stake,
 /obj/item/target/syndicate,
-/turf/simulated/floor/tiled/muriki/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "m" = (
 /obj/effect/auto_crayon{
@@ -25,10 +25,10 @@
 "n" = (
 /obj/structure/target_stake,
 /obj/item/target/alien,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (
 /turf/simulated/mineral/alt/ignore_cavegen,
@@ -36,29 +36,29 @@
 "x" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/gun/launcher/crossbow/bow/hardlight,
-/turf/simulated/floor/tiled/muriki/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "G" = (
-/turf/simulated/floor/tiled/muriki/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
 /obj/structure/loot_pile/mecha/marauder,
-/turf/simulated/floor/tiled/muriki/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "K" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "R" = (
 /obj/effect/landmark/dangerous_situation,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "V" = (
 /obj/structure/table/steel_reinforced,
-/turf/simulated/floor/tiled/muriki/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "W" = (
 /turf/simulated/wall,

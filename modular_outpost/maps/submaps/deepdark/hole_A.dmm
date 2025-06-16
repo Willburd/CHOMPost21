@@ -3,10 +3,10 @@
 /turf/template_noop,
 /area/template_noop)
 "t" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "K" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "M" = (
 /obj/item/paper/card/heart{
@@ -14,7 +14,7 @@
 	desc = "A paper card with a heart on the cover.";
 	info = "Go home friend! Happy home go in hole! Home in hole! Hole is happy home!"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "R" = (
 /turf/template_noop,

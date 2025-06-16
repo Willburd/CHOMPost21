@@ -567,7 +567,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
 
@@ -580,7 +580,7 @@
 	requires_power = FALSE
 	sound_env = SOUND_ENVIRONMENT_AUDITORIUM
 	ambience = AMBIENCE_MAINTENANCE
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_WARM
 
@@ -593,7 +593,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -603,7 +603,7 @@
 	icon_state = "red2"
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -613,7 +613,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -623,7 +623,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	ambience = AMBIENCE_GENERIC
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -633,7 +633,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_EXPOUTPOST
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_WARM
 
@@ -643,7 +643,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	ambience = AMBIENCE_ARRIVALS
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_WARM
 
@@ -651,7 +651,7 @@
 	name = "\improper Unknown"
 	requires_power = FALSE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OTHERWORLDLY
 	haunted = TRUE
@@ -663,7 +663,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_LIVINGROOM
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	always_unpowered = FALSE
 	requires_power = FALSE
@@ -671,7 +671,7 @@
 
 /area/rnd/xenobiology/lost // ported secret
 	name = "\improper Abandoned Xenobiology Lab"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	sound_env = SOUND_ENVIRONMENT_ARENA
 	ambience = AMBIENCE_GENERIC

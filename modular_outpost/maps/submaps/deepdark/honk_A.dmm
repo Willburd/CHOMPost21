@@ -4,7 +4,7 @@
 /area/template_noop)
 "b" = (
 /mob/living/simple_mob/clowns/flesh,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "c" = (
 /obj/item/clothing/shoes/clown_shoes,
@@ -17,7 +17,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "f" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "g" = (
 /mob/living/simple_mob/clowns/big/c_shift/anormal,
@@ -29,11 +29,11 @@
 /area/mine/explored/muriki/cave/deepdark)
 "i" = (
 /mob/living/simple_mob/clowns/flesh,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "j" = (
 /mob/living/simple_mob/clowns/big/c_shift/anormal,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "k" = (
 /mob/living/simple_mob/clowns/big/mutant,
@@ -91,7 +91,7 @@
 /turf/simulated/floor/carpet/purple,
 /area/mine/explored/muriki/cave/deepdark)
 "w" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "y" = (
 /obj/item/clothing/shoes/clown_shoes,
@@ -155,7 +155,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "M" = (
 /obj/item/flashlight/lamp/clown,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "N" = (
 /mob/living/simple_mob/clowns/big/thicc,
@@ -185,7 +185,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "T" = (
 /mob/living/simple_mob/clowns/big/c_shift/anormal,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "U" = (
 /obj/item/clothing/mask/gas/clown_hat,
@@ -201,7 +201,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "X" = (
 /obj/item/clothing/shoes/clown_shoes,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Y" = (
 /obj/item/clothing/mask/gas/clown_hat,
@@ -210,7 +210,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "Z" = (
 /mob/living/simple_mob/clowns/big/chlown,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

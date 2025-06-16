@@ -26,7 +26,7 @@
 
 
 //This proc is responsible for ore generation on surface turfs
-/turf/simulated/mineral/muriki/make_ore(var/rare_ore)
+/turf/simulated/mineral/turfpack/muriki/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 
@@ -65,7 +65,7 @@
 		UpdateMineral()
 	update_icon()
 
-/turf/simulated/mineral/muriki/rich/make_ore(var/rare_ore)
+/turf/simulated/mineral/rich/turfpack/muriki/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name

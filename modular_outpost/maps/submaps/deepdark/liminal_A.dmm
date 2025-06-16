@@ -91,7 +91,7 @@
 /turf/simulated/wall,
 /area/submap/outpost21/cave_liminal_A)
 "T" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "Y" = (
 /obj/structure/table/rack/shelf/wood,

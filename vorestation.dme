@@ -5471,5 +5471,6 @@
 #include "modular_outpost\maps\submaps\cargoyard\cargoyard.dm"
 #include "modular_outpost\maps\submaps\deepdark\deepdark.dm"
 #include "modular_outpost\maps\submaps\orbitalyard\orbitalyard.dm"
+#include "modular_outpost\maps\~turfpacks\turfpacks.dm"
 #include "modular_zubbers\code\modules\blooper\voice\bark_list.dm"
 // END_INCLUDE

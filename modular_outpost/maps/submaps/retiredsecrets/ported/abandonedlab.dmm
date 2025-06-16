@@ -1,39 +1,39 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "b" = (
 /obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "d" = (
 /obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "e" = (
 /turf/template_noop,
 /area/template_noop)
 "f" = (
 /obj/machinery/door/window,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "g" = (
 /mob/living/simple_mob/animal/space/carp/puffer,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "i" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "j" = (
 /obj/effect/landmark/dangerous_situation,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "k" = (
 /obj/machinery/disposal,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "l" = (
 /obj/structure/window/basic{
@@ -43,7 +43,7 @@
 /obj/structure/grille/broken,
 /obj/item/material/shard/shrapnel,
 /obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "m" = (
 /obj/structure/window/basic{
@@ -57,23 +57,23 @@
 	},
 /obj/structure/window/basic,
 /obj/structure/grille,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "n" = (
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "o" = (
 /obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "q" = (
 /obj/effect/landmark/hostile_xenobio,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "r" = (
 /mob/living/simple_mob/animal/space/carp,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "s" = (
 /obj/structure/window/basic{
@@ -86,7 +86,7 @@
 /obj/item/material/shard/shrapnel,
 /obj/item/material/shard/shrapnel,
 /obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "t" = (
 /obj/structure/window/basic{
@@ -100,11 +100,11 @@
 	dir = 1
 	},
 /obj/structure/grille,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "u" = (
 /obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "v" = (
 /obj/structure/window/basic{
@@ -117,24 +117,24 @@
 /obj/structure/grille,
 /obj/item/material/shard/shrapnel,
 /obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "w" = (
 /obj/structure/barricade,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "x" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "y" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "z" = (
 /obj/structure/disposaloutlet,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "B" = (
 /turf/simulated/wall/r_wall,
@@ -144,12 +144,12 @@
 	anchored = 1;
 	deployed = 1
 	},
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "D" = (
 /obj/item/material/shard/shrapnel,
 /obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "F" = (
 /obj/structure/window/basic{
@@ -163,7 +163,7 @@
 /obj/item/material/shard/shrapnel,
 /obj/item/material/shard/shrapnel,
 /obj/item/material/shard/shrapnel,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "G" = (
 /obj/machinery/power/apc/alarms_hidden{
@@ -173,26 +173,26 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "H" = (
 /obj/structure/closet/crate/mimic/cointoss,
 /obj/effect/landmark/loot_spawn/low,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "I" = (
 /mob/living/simple_mob/animal/space/carp/large,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "J" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "K" = (
 /obj/effect/landmark/hostile_xenobio,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "L" = (
 /obj/structure/window/basic{
@@ -203,23 +203,23 @@
 	},
 /obj/structure/window/basic,
 /obj/structure/grille,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "M" = (
 /obj/effect/landmark/dangerous_situation,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "O" = (
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "P" = (
 /obj/random/cutout,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "R" = (
 /mob/living/simple_mob/animal/space/carp/large/huge,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "S" = (
 /obj/structure/foamedmetal,
@@ -232,15 +232,15 @@
 /obj/structure/disposaloutlet{
 	dir = 1
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "X" = (
 /obj/item/material/shard/shrapnel,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 "Z" = (
 /obj/structure/barricade,
-/turf/simulated/floor/tiled/dark/muriki,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/rnd/xenobiology/lost)
 
 (1,1,1) = {"

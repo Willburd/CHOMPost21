@@ -1,9 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/alt/ignore_cavegen/muriki,
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/space)
 "c" = (
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/floor/plating/external/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)
@@ -24,7 +24,7 @@
 /turf/simulated/floor/outdoors/grass/forest,
 /area/space)
 "u" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/space)
 "v" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,

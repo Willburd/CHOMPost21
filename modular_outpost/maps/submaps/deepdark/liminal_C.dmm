@@ -6,32 +6,32 @@
 /obj/effect/landmark/redspaceexit,
 /obj/structure/bed,
 /obj/item/bedsheet/blue,
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "m" = (
 /obj/structure/table/sifwooden_reinforced,
 /obj/item/flashlight/lamp/green{
 	pixel_y = 14
 	},
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "u" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "y" = (
 /obj/structure/table/rack/shelf/wood,
 /obj/random/maintenance,
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "G" = (
 /turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
 "N" = (
 /obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/techfloor/muriki,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "P" = (
 /turf/simulated/wall,
@@ -40,7 +40,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

@@ -10,7 +10,7 @@
 	landmark_station = "escape_station"
 	landmark_transition = "escape_transit"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/escape/centcom
 	name = "ESCC Bunker"
@@ -42,7 +42,7 @@
 	landmark_station = "supply_station"
 	docking_controller_tag = "supply_shuttle"
 	flags = SHUTTLE_FLAGS_PROCESS|SHUTTLE_FLAGS_SUPPLY
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/supply/centcom
 	name = "ESCC Bunker"
@@ -129,7 +129,7 @@
 	name = "Tram Crash - Waste"
 	landmark_tag = "tram_crash_waste"
 	base_area = /area/muriki/grounds/tramlinewest
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/tram/crash_waste/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -140,7 +140,7 @@
 	name = "Tram Crash - Eng"
 	landmark_tag = "tram_crash_eng"
 	base_area = /area/muriki/grounds/tramlineeast
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/tram/crash_eng/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -151,7 +151,7 @@
 	name = "Tram Crash - Med"
 	landmark_tag = "tram_crash_med"
 	base_area = /area/muriki/grounds/tramlineeast
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/tram/crash_med/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -162,7 +162,7 @@
 	name = "Tram Crash - Civ"
 	landmark_tag = "tram_crash_civ"
 	base_area = /area/muriki/grounds/tramlineeast
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/tram/crash_civ/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -190,7 +190,7 @@
 	landmark_offsite = "trade_away"
 	landmark_station = "trade_station"
 	docking_controller_tag = "trade_shuttle"
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/trade/away
 	name = "Deep Space"
@@ -219,7 +219,7 @@
 	announcer = "Automated Traffic Control"
 	arrival_message = "Attention.  A vessel is approaching the colony."
 	departure_message = "Attention.  A vessel is now leaving from the colony."
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
 	destination_tags = list(
 		"mercenary_base",
@@ -269,7 +269,7 @@
 	announcer = "Automated Traffic Control"
 	arrival_message = "Attention.  Unidentified object approaching the colony."
 	departure_message = "Attention.  Unidentified object exiting local space.  Unidentified object expected to escape Muriki gravity well with current velocity."
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
 	destination_tags = list(
 		"skipjack_base",
@@ -323,7 +323,7 @@
 	landmark_station = "specops_cc"
 	landmark_offsite = "specops_station"
 	docking_controller_tag = "specops_shuttle_port"
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/specops/centcom
 	name = "ESCC Bunker"
@@ -367,7 +367,7 @@
 	docking_controller_tag = "med_docker"
 	shuttle_area = list(/area/shuttle/medical)
 	fuel_consumption = 1 //much less, due to being teeny
-	ceiling_type = /turf/simulated/shuttle/floor/white/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/white/turfpack/muriki
 	allow_short_crashes = TRUE
 	crash_locations = list(
 		"crash_cargoyard",
@@ -430,7 +430,7 @@
 	docking_controller_tag = "sec_docker"
 	shuttle_area = list(/area/shuttle/security)
 	fuel_consumption = 1 //much less, due to being teeny
-	ceiling_type = /turf/simulated/shuttle/floor/white/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/white/turfpack/muriki
 	allow_short_crashes = TRUE
 	crash_locations = list(
 		"crash_cargoyard",
@@ -506,7 +506,7 @@
 	current_location = "outpost_trawler_pad"
 	docking_controller_tag = "trawler_docker"
 	shuttle_area = list(/area/shuttle/trawler)
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 	fuel_consumption = 2 // chonky
 	allow_short_crashes = TRUE
 	crash_locations = list(
@@ -535,14 +535,14 @@
 	name = "\improper Mining Trawler"
 	icon_state = "shuttle2"
 	requires_power = 1
-	base_turf = /turf/simulated/floor/plating/external/muriki
+	base_turf = /turf/simulated/floor/plating/external/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 // Docks
 /obj/effect/shuttle_landmark/premade/trawler/muriki
 	name = "ES Outpost 21 (Trawler Pad)"
 	landmark_tag = "outpost_trawler_pad"
-	base_turf = /turf/simulated/floor/plating/external/muriki
+	base_turf = /turf/simulated/floor/plating/external/turfpack/muriki
 	base_area = /area/muriki/station/trawler_dock
 
 /obj/effect/shuttle_landmark/premade/trawler/beltmine
@@ -568,7 +568,7 @@
 /area/shuttle/beamtransit
 	name = "\improper Engineering Ferry"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	base_turf = /turf/simulated/floor/plating/external/muriki
+	base_turf = /turf/simulated/floor/plating/external/turfpack/muriki
 
 /datum/shuttle/autodock/multi/beamtransit
 	name = "Engineering Ferry"
@@ -581,7 +581,7 @@
 	announcer = "Automated Traffic Control"
 	arrival_message = "Attention.  The engineering ferry is approaching the outpost."
 	departure_message = "Attention.  The engineering ferry is now leaving the outpost."
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 	can_be_haunted = TRUE
 
 	destination_tags = list(
@@ -610,7 +610,7 @@
 	name = "ES Outpost 21 (Engineering Dock)"
 	landmark_tag = "beam_base"
 	docking_controller = "beam_base_controller"
-	base_turf = /turf/simulated/floor/plating/external/muriki
+	base_turf = /turf/simulated/floor/plating/external/turfpack/muriki
 	base_area = /area/muriki/grounds/engi
 
 /obj/effect/shuttle_landmark/premade/beamtransit/transit
@@ -638,7 +638,7 @@
 	warmup_time = 5
 	shuttle_area = /area/shuttle/darktransit
 	current_location = "dark_hell"
-	ceiling_type = /turf/simulated/shuttle/floor/black/muriki
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 	can_be_haunted = TRUE
 
 	destination_tags = list(
@@ -657,13 +657,13 @@
 	name = "Station Platform"
 	landmark_tag = "dark_start"
 	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki
+	base_turf = /turf/simulated/floor/plating/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/underdark/end
 	name = "End Of The Line"
 	landmark_tag = "dark_end"
 	base_area = /area/mine/explored/muriki/cave/deepdark
-	base_turf = /turf/simulated/floor/plating/muriki
+	base_turf = /turf/simulated/floor/plating/turfpack/muriki
 
 
 //////////////////////////////////////////////////////////////
@@ -671,13 +671,13 @@
 /obj/effect/shuttle_landmark/premade/generic/arrivals
 	name = "ES Outpost 21 (Near Arrivals)"
 	landmark_tag = "outpost_landing_pad"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/grounds/shutt
 
 /obj/effect/shuttle_landmark/premade/generic/engineering
 	name = "ES Outpost 21 (Near Engineering)"
 	landmark_tag = "outpost_engineering_pad"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/mine/explored/muriki/surface
 
 /obj/effect/shuttle_landmark/premade/generic/prospector_port
@@ -726,7 +726,7 @@
 /obj/effect/shuttle_landmark/premade/generic/crash_cargoyard
 	name = "Crash - Cargo Yard"
 	landmark_tag = "crash_cargoyard"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/yard
 
 /obj/effect/shuttle_landmark/premade/generic/crash_cargoyard/is_valid(var/datum/shuttle/shuttle)
@@ -737,7 +737,7 @@
 /obj/effect/shuttle_landmark/premade/generic/crash_north
 	name = "Crash - North"
 	landmark_tag = "crash_north"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/grounds/engi
 
 /obj/effect/shuttle_landmark/premade/generic/crash_north/is_valid(var/datum/shuttle/shuttle)
@@ -748,7 +748,7 @@
 /obj/effect/shuttle_landmark/premade/generic/crash_south
 	name = "Crash - South"
 	landmark_tag = "crash_south"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/grounds/sec
 
 /obj/effect/shuttle_landmark/premade/generic/crash_south/is_valid(var/datum/shuttle/shuttle)
