@@ -1,17 +1,3 @@
-//Outpost map defs
-#define Z_LEVEL_OUTPOST_DEEPDARK					1
-#define Z_LEVEL_OUTPOST_BASEMENT					2
-#define Z_LEVEL_OUTPOST_SURFACE						3
-#define Z_LEVEL_OUTPOST_UPPER						4
-#define Z_LEVEL_OUTPOST_CENTCOM						5
-#define Z_LEVEL_OUTPOST_MISC 						6
-#define Z_LEVEL_OUTPOST_ASTEROID 					7
-//efine Z_LEVEL_OUTPOST_PROSPECTOR 					8
-//efine Z_LEVEL_OUTPOST_SURVEY	 					9
-#define Z_LEVEL_OUTPOST_VR		 					8
-#define Z_LEVEL_OUTPOST_CONFINEMENTBEAM				9
-//Ensure these stay updated with map and z-level changes - Ignus
-
 /obj/effect/landmark/map_data/muriki
     height = 4
 
