@@ -482,11 +482,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	base_turf = /turf/simulated/open
 
-/area/security/surgery
-	name = "\improper Security Operating Theatre"
-	icon_state = "surgery"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT //This WOULD become a filth pit
-
 /area/tcommsat
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
