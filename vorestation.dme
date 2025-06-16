@@ -5470,9 +5470,6 @@
 #include "modular_outpost\maps\submaps\cargoyard\cargoyard.dm"
 #include "modular_outpost\maps\submaps\deepdark\deepdark.dm"
 #include "modular_outpost\maps\submaps\orbitalyard\orbitalyard.dm"
-#include "modular_outpost\maps\1~map_system\_map_selection.dm"
-#include "modular_outpost\maps\1~map_system\maps.dm"
-#include "modular_outpost\maps\1~map_system\maps_op.dm"
 #include "modular_outpost\maps\~turfpacks\turfpacks.dm"
 #include "modular_zubbers\code\modules\blooper\voice\bark_list.dm"
 // END_INCLUDE
