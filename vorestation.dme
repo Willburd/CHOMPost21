@@ -5201,6 +5201,7 @@
 #include "modular_chomp\maps\southern_cross\loadout\loadout_suit.dm"
 #include "modular_chomp\maps\southern_cross\loadout\loadout_uniform.dm"
 #include "modular_chomp\maps\southern_cross\loadout\loadout_vr.dm"
+#include "modular_chomp\maps\~turfpacks\turfpacks.dm"
 #include "modular_outpost\code\_helpers\atmospherics.dm"
 #include "modular_outpost\code\_helpers\global_lists.dm"
 #include "modular_outpost\code\_onclick\hud\alert.dm"
@@ -5304,6 +5305,7 @@
 #include "modular_outpost\code\game\turfs\simulated\water.dm"
 #include "modular_outpost\code\game\turfs\unsimulated\floor.dm"
 #include "modular_outpost\code\game\turfs\unsimulated\wall\planetary.dm"
+#include "modular_outpost\code\game\turfs\~turfpacks\turfpacks.dm"
 #include "modular_outpost\code\modules\ai\ai_holder_pathfinding.dm"
 #include "modular_outpost\code\modules\busy_space\chatter_artillery.dm"
 #include "modular_outpost\code\modules\busy_space\organizations.dm"
@@ -5470,6 +5472,5 @@
 #include "modular_outpost\maps\~map_system\_map_selection.dm"
 #include "modular_outpost\maps\~map_system\maps.dm"
 #include "modular_outpost\maps\~map_system\maps_op.dm"
-#include "modular_outpost\maps\~turfpacks\turfpacks.dm"
 #include "modular_zubbers\code\modules\blooper\voice\bark_list.dm"
 // END_INCLUDE
