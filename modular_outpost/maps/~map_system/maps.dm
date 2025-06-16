@@ -36,7 +36,7 @@ var/list/all_maps = list()
 	var/static/list/secret_levels = list() // Z-levels that (non-admin) ghosts can't get to
 	var/static/list/hidden_levels = list() // Z-levels who's contents are hidden, but not forbidden (gateways)
 	var/static/list/empty_levels = list()   // Empty Z-levels that may be used for various things
-	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to.
+	var/static/list/vorespawn_levels = list() //Z-levels where players are allowed to vore latejoin to. //CHOMPedit: the number of missing chompedits is giving me an aneurysm
 	var/static/list/mappable_levels = list()// List of levels where mapping or other similar devices might work fully
 	var/static/list/below_blocked_levels = list()// List of levels where mapping or other similar devices might work fully
 	// End Static Lists
@@ -59,11 +59,11 @@ var/list/all_maps = list()
 	var/list/lateload_redgate = list() //VOREStation Add - The same thing as gateway, but safe-ish
 
 	var/list/allowed_jobs = list() //Job datums to use.
-								//Works a lot better so if we get to a point where three-ish maps are used
-								//We don't have to C&P ones that are only common between two of them
-								//That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
-								//Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
-								//This is probably a lot longer explanation than it needs to be.
+							   	//Works a lot better so if we get to a point where three-ish maps are used
+							   	//We don't have to C&P ones that are only common between two of them
+							   	//That doesn't mean we have to include them with the rest of the jobs though, especially for map specific ones.
+							   	//Also including them lets us override already created jobs, letting us keep the datums to a minimum mostly.
+							   	//This is probably a lot longer explanation than it needs to be.
 
 	var/list/holomap_smoosh		// List of lists of zlevels to smoosh into single icons
 	var/list/holomap_offset_x = list()
@@ -81,6 +81,12 @@ var/list/all_maps = list()
 	var/list/mining_station_z = list()
 	var/list/mining_outpost_z = list()
 	//VOREStation Addition End
+
+	// Outpost 21 edit begin - custom zlevel lists
+	var/static/list/event_levels = list() // Events happen on these levels, even if not part of station!
+	var/static/list/forced_airmix_levels = list() // z-levels where airmix slowly resets if outdoors, prevents saturating the atmosphere
+	var/static/list/deadly_fall_levels = list() // List of levels where mapping or other similar devices might work fully
+	// Outpost 21 edit end
 
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
@@ -110,9 +116,9 @@ var/list/all_maps = list()
 	var/allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
 
 	// VOREStation Edit - Persistence!
-	var/datum/spawnpoint/spawnpoint_died = /datum/spawnpoint/arrivals 		// Used if you end the round dead.
+	var/datum/spawnpoint/spawnpoint_died = /datum/spawnpoint/arrivals 	// Used if you end the round dead.
 	var/datum/spawnpoint/spawnpoint_left = /datum/spawnpoint/arrivals 	// Used of you end the round at centcom.
-	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	 	// Used if you end the round on the station.
+	var/datum/spawnpoint/spawnpoint_stayed = /datum/spawnpoint/cryo 	// Used if you end the round on the station.
 	// VOREStation Edit End
 
 	var/use_overmap = 0		  // If overmap should be used (including overmap space travel override)
@@ -122,7 +128,7 @@ var/list/all_maps = list()
 
 	var/datum/skybox_settings/default_skybox // What skybox do we use if a zlevel doesn't have a custom one? Provide a type.
 
-	var/list/lobby_screens = list('html/lobby/mockingjay00.webp')                 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
+	var/list/lobby_screens = list('modular_chomp/html/lobby/chompstation.webp')				 // The list of lobby screen to pick() from. If left unset the first icon state is always selected.
 
 	var/default_law_type = /datum/ai_laws/nanotrasen // The default lawset use by synth units, if not overriden by their laws var.
 
@@ -137,6 +143,12 @@ var/list/all_maps = list()
 
 	var/list/planet_datums_to_make = list() // Types of `/datum/planet`s that will be instantiated by SSPlanets.
 
+	// Outpost 21 edit begin - Custom ores per map
+	var/list/rare_ore_levels = list()
+	var/common_ores = list(ORE_MARBLE = 3,/* ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 15*/, ORE_URANIUM = 10, ORE_PLATINUM = 10, ORE_HEMATITE = 70, ORE_RUTILE = 15, ORE_CARBON = 70, ORE_DIAMOND = 2, ORE_GOLD = 10, ORE_SILVER = 10, ORE_PHORON = 20, ORE_LEAD = 3,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 1/*, ORE_PAINITE = 1*/)
+	var/rare_ores = list(ORE_MARBLE = 5,/* ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5*/, ORE_URANIUM = 15, ORE_PLATINUM = 20, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 15, ORE_DIAMOND = 3, ORE_GOLD = 15, ORE_SILVER = 15, ORE_PHORON = 25, ORE_LEAD = 5,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 2/*, ORE_PAINITE = 1*/)
+	// Outpost 21 edit end
+
 /datum/map/New()
 	..()
 	if(zlevel_datum_type)
@@ -150,6 +162,10 @@ var/list/all_maps = list()
 		persist_levels = station_levels.Copy()
 	if(!mappable_levels?.len)
 		mappable_levels = station_levels.Copy()
+	// Outpost 21 edit begin - Event levels auto-fill as station levels if non exist
+	if(!event_levels?.len)
+		event_levels = station_levels.Copy()
+	// Outpost 21 edit end
 	if(!allowed_jobs || !allowed_jobs.len)
 		allowed_jobs = subtypesof(/datum/job)
 	if(default_skybox) //Type was specified
@@ -187,7 +203,7 @@ var/list/all_maps = list()
 
 // Boolean for if we should use SSnightshift night hours
 /datum/map/proc/get_nightshift()
-	return get_night(1) //Defaults to z1, customize however you want on your own maps
+	return get_night(3) //Defaults to z1, customize however you want on your own maps - Outpost 21 edit - Use surface map on 3
 
 /datum/map/proc/setup_map()
 	return
@@ -242,6 +258,11 @@ var/list/all_maps = list()
 	//Get what sector we're in
 	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
 	if(istype(O))
+		// Outpost 21 edit begin - Remote Station levels
+		if (srcz in station_levels)
+			return station_levels.Copy() | O.map_z.Copy()
+		// Outpost 21 edit end
+
 		//Just the sector we're in
 		if(om_range == -1)
 			return O.map_z.Copy()
@@ -327,7 +348,7 @@ var/list/all_maps = list()
 	if(flags & MAP_LEVEL_PLAYER) map.player_levels += z
 	if(flags & MAP_LEVEL_SEALED) map.sealed_levels += z
 	if(flags & MAP_LEVEL_XENOARCH_EXEMPT) map.xenoarch_exempt_levels += z
-	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z
+	if(flags & MAP_LEVEL_VORESPAWN) map.vorespawn_levels += z //CHOMPedit: I stg stop forgetting CHOMPedit comments
 	if(flags & MAP_LEVEL_PERSIST) map.persist_levels += z
 	if(flags & MAP_LEVEL_EMPTY)
 		if(!map.empty_levels) map.empty_levels = list()
@@ -338,15 +359,18 @@ var/list/all_maps = list()
 	if(flags & MAP_LEVEL_BELOW_BLOCKED)
 		if (!map.below_blocked_levels) map.below_blocked_levels = list()
 		map.below_blocked_levels += z
-	if(flags & MAP_LEVEL_EXTREMEFALL)
-		if (!map.deadly_fall_levels) map.deadly_fall_levels = list()
-		map.deadly_fall_levels += z
 	if(base_turf)
 		map.base_turf_by_z["[z]"] = base_turf
 	if(transit_chance)
 		map.accessible_z_levels["[z]"] = transit_chance
 	if(flags & MAP_LEVEL_MAPPABLE)
 		map.mappable_levels |= z
+	// Outpost 21 edit begin - Event levels and auto-clear
+	if(flags & MAP_LEVEL_EVENTS)
+		map.event_levels += z
+	if(flags & MAP_LEVEL_AIRMIX_CLEANS)
+		map.forced_airmix_levels += z
+	// Outpost 21 edit end
 	// Holomaps
 	// Auto-center the map if needed (Guess based on maxx/maxy)
 	if (holomap_offset_x < 0)
