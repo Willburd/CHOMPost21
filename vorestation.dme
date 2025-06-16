@@ -4828,6 +4828,7 @@
 #include "interface\fonts\pixellari.dm"
 #include "interface\fonts\tiny_unicode.dm"
 #include "interface\fonts\vcr_osd_mono.dm"
+#include "maps\common\common_areas_op.dm"
 #include "maps\common\common_defines_op.dm"
 #include "maps\common\common_things_op.dm"
 #include "maps\common\common_turfs_op.dm"
