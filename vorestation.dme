@@ -5229,7 +5229,6 @@
 #include "modular_outpost\code\datums\supplypacks\supply.dm"
 #include "modular_outpost\code\defines\gases.dm"
 #include "modular_outpost\code\game\area\areas.dm"
-#include "modular_outpost\code\game\area\outpost21_areas.dm"
 #include "modular_outpost\code\game\gamemodes\objective.dm"
 #include "modular_outpost\code\game\gamemodes\events\power_failure.dm"
 #include "modular_outpost\code\game\gamemodes\events\wormholes.dm"

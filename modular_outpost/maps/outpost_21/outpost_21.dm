@@ -12,6 +12,7 @@
 	#include "outpost-10-vr.dmm"
 	#include "outpost-11-confinementbeam.dmm"
 	#include "outpost_defines.dm"
+	#include "outpost_areas.dm"
 	#include "outpost_jobs.dm"
 	#include "outpost_things.dm"
 	#include "job/outfits.dm"
