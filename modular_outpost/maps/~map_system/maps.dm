@@ -201,6 +201,10 @@ var/list/all_maps = list()
 	else
 		return FALSE
 
+// Boolean for if we should use SSnightshift night hours
+/datum/map/proc/get_nightshift()
+	return get_night(3) //Defaults to z1, customize however you want on your own maps - Outpost 21 edit - Use surface map on 3
+
 /datum/map/proc/setup_map()
 	return
 
