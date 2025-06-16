@@ -5462,7 +5462,6 @@
 #include "modular_outpost\maps\~map_system\maps_op.dm"
 #include "modular_outpost\maps\~map_system\_map_selection.dm"
 #include "modular_outpost\maps\common\common_areas.dm"
-#include "modular_outpost\maps\common\common_defines.dm"
 #include "modular_outpost\maps\common\common_things.dm"
 #include "modular_outpost\maps\common\common_turfs.dm"
 #include "modular_outpost\maps\common\shuttles.dm"
