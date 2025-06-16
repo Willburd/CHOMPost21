@@ -3,7 +3,7 @@
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/space)
 "c" = (
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)

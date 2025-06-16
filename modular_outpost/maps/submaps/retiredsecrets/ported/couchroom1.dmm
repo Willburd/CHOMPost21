@@ -18,7 +18,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "t" = (
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)
