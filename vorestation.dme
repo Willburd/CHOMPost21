@@ -5286,7 +5286,6 @@
 #include "modular_outpost\code\game\objects\structures\cliff.dm"
 #include "modular_outpost\code\game\objects\structures\elevator_warning.dm"
 #include "modular_outpost\code\game\objects\structures\extinguisher.dm"
-#include "modular_outpost\code\game\objects\structures\fence.dm"
 #include "modular_outpost\code\game\objects\structures\fitness.dm"
 #include "modular_outpost\code\game\objects\structures\hookah.dm"
 #include "modular_outpost\code\game\objects\structures\residential_teleporter.dm"
