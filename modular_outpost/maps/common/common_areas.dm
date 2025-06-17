@@ -666,6 +666,13 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
+/area/security/secmail
+	name = "\improper Security Mail Room"
+	icon_state = "orablasqu"
+	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	color_grading = COLORTINT_DIM
+
 //Hydro-------
 /area/hydroponics
 	base_turf = /turf/simulated/open

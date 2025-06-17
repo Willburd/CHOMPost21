@@ -268,13 +268,6 @@
 	base_turf = /turf/simulated/open
 	flags = AREA_FIRE_SUPRESSION
 
-/area/security/secmail
-	name = "\improper Security Mail Room"
-	icon_state = "orablasqu"
-	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-	color_grading = COLORTINT_DIM
-
 /area/constructionsite/medical
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	use_emergency_overlay = TRUE
