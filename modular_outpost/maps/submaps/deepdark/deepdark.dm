@@ -57,6 +57,7 @@
 #include "cliff_D.dmm"
 #include "wizard_A.dmm"
 #include "tram_A.dmm"
+#include "foundation_A.dmm"
 #include "synthezied_oops.dmm"
 #endif
 
@@ -541,6 +542,13 @@
 	discard_prob = 80
 	cost = 15
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/foundation_A
+	name = "Facility Foundation A"
+	desc = "Foundation structure for outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/foundation_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 25
 
 //////////////////////////////////////////////////////////////
 // Area definitions
@@ -743,3 +751,6 @@
 					H.AdjustSleeping(15)
 					H.AdjustWeakened(3)
 					H.adjustHalLoss(-9)
+
+/turf/simulated/deathdrop/foundation
+	death_message = "You fall into the darkness, the huge tension cables that secure the foundations of the outpost to the rock beneath it battering your body before you slam into the machinery beneath. There is nothing left of you except the bloody dent in the tensioning equipment."
