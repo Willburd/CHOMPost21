@@ -11,37 +11,37 @@
 "afT" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/cliff,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
 "auj" = (
 /obj/structure/prop/rock/small/alt,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "bEP" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
-/turf/simulated/floor/water/acidic/muriki,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/processor/depths)
 "bHg" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "bPH" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "cjI" = (
 /obj/item/broken_device/random,
 /obj/item/circuitboard/broken,
 /obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -49,7 +49,7 @@
 /turf/simulated/deathdrop/elevator_shaft,
 /area/muriki/lowerelev)
 "cpg" = (
-/turf/simulated/floor/water/acidic/muriki,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/processor/depths)
 "cvk" = (
 /obj/structure/sign/department/bridge,
@@ -57,7 +57,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "cBR" = (
 /obj/structure/cliff_end,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -71,7 +71,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "daR" = (
 /obj/vehicle/train/trolley,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -79,17 +79,17 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "drj" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "dKt" = (
 /obj/structure/cliff{
 	dir = 8
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -97,13 +97,13 @@
 /obj/structure/cliff/corner{
 	dir = 6
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "dQa" = (
 /obj/structure/cliff,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -111,15 +111,15 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "fdT" = (
 /obj/machinery/door/flesh,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
 "fnZ" = (
 /obj/item/circuitboard/broken,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -127,35 +127,35 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "fuP" = (
 /obj/effect/mist,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
 "fMG" = (
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/cave/deepdark)
 "fXl" = (
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "gvh" = (
 /turf/simulated/wall/plastitanium,
 /area/muriki/lowerelev)
 "gNY" = (
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "gTI" = (
 /obj/effect/mist,
-/turf/simulated/floor/water/digestive_enzymes/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/depths)
 "hfs" = (
 /obj/structure/prop/rock/flat,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -164,7 +164,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "jpR" = (
 /obj/random/maintenance/misc,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -172,13 +172,13 @@
 /obj/structure/cliff{
 	dir = 10
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "jTU" = (
 /obj/structure/ladder/up,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -186,7 +186,7 @@
 /obj/structure/cliff/corner{
 	dir = 5
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -196,13 +196,13 @@
 /area/mine/explored/muriki/cave/deepdark)
 "loP" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "mck" = (
 /obj/structure/cliff_end{
 	dir = 8
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -210,7 +210,7 @@
 /obj/effect/landmark{
 	name = "badbody"
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -221,7 +221,7 @@
 /obj/structure/cliff_end{
 	dir = 1
 	},
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "nbH" = (
 /obj/effect/step_trigger/dephase_shadekin,
@@ -231,13 +231,13 @@
 /obj/structure/cliff{
 	dir = 9
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "nzp" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -245,13 +245,13 @@
 /obj/structure/cliff_end{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "nHj" = (
 /obj/random/outcrop,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -259,13 +259,13 @@
 /obj/structure/cliff{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "onp" = (
 /obj/effect/landmark/hostile_xenobio,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/cave/deepdark)
@@ -273,7 +273,7 @@
 /obj/structure/cliff/corner{
 	dir = 5
 	},
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "oKr" = (
 /turf/simulated/wall/plastitanium,
@@ -282,7 +282,7 @@
 /obj/structure/cliff{
 	dir = 6
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -290,39 +290,39 @@
 /obj/structure/cliff/corner{
 	dir = 10
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "plJ" = (
 /obj/structure/prop/rock/sharp,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "pvd" = (
-/turf/simulated/floor/water/blood/muriki,
+/turf/simulated/floor/water/blood/turfpack/muriki,
 /area/muriki/processor/depths)
 "pDE" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/item/circuitboard/broken,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "pPA" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
 "qiY" = (
 /obj/random/maintenance/cargo,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "qyX" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -330,7 +330,7 @@
 /obj/structure/cliff/corner{
 	dir = 9
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -338,14 +338,14 @@
 /obj/structure/cliff{
 	dir = 5
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "rzp" = (
 /obj/structure/prop/rock/small/alt,
 /obj/structure/ladder/up,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -353,7 +353,7 @@
 /obj/structure/cliff{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -361,19 +361,19 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "sAI" = (
 /obj/item/broken_device/random,
 /obj/structure/ladder/up,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "sDB" = (
 /obj/random/maintenance/cargo,
 /obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -389,30 +389,30 @@
 	pixel_y = 16
 	},
 /obj/structure/table/steel_reinforced,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "tcm" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
-/turf/simulated/floor/water/digestive_enzymes/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/depths)
 "tPQ" = (
 /obj/structure/table/rack/shelf,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "tRR" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "tSP" = (
 /obj/structure/ladder/up,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "tWu" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "utN" = (
 /obj/item/broken_device/random,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -421,36 +421,36 @@
 	req_one_access = null
 	},
 /obj/item/airlock_brace,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "uXm" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "vxF" = (
 /obj/structure/outcrop/silver,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "vDd" = (
-/turf/simulated/floor/water/digestive_enzymes/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/depths)
 "vEI" = (
 /obj/structure/prop/rock/small,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "vTq" = (
 /obj/machinery/door/airlock/maintenance_hatch,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "wqD" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "wRI" = (
 /obj/structure/prop/rock/round,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -461,15 +461,15 @@
 /obj/effect/landmark{
 	name = "badbody"
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/cave/deepdark)
 "xTo" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "xVp" = (
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
 
 (1,1,1) = {"

@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/space)
 "d" = (
 /obj/item/trash/snacktray,
@@ -18,7 +18,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "t" = (
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)

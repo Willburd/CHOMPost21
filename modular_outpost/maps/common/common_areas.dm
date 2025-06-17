@@ -39,7 +39,7 @@
 //
 /area/engineering/atmoshall
 	name = "\improper Atmospherics Hallway"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "atmos"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	color_grading = COLORTINT_DIM
@@ -48,7 +48,7 @@
 	name = "\improper Hazardous Gas Filtration Substation"
 	icon_state = "yelblacir"
 	ambience = AMBIENCE_ATMOS
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/substation/atmos
@@ -85,7 +85,7 @@
 	name = "\improper Core Processor Access"
 	icon_state = "anohallway"
 	requires_power = TRUE
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/muriki/processor/hall/airmix
 	name = "\improper Terraformer Alveolar duct"
@@ -163,7 +163,7 @@
 
 /area/muriki/bathroom/atmospherics
 	name = "\improper Atmospherics Latrine"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/muriki/bathroom/bar
@@ -194,7 +194,7 @@
 
 /area/muriki/bathroom/cargolower
 	name = "\improper Lower Cargo Bog"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/muriki/bathroom/chapel
@@ -205,12 +205,12 @@
 
 /area/muriki/bathroom/courthouse
 	name = "\improper Dreadbox"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/muriki/bathroom/dorm
 	name = "\improper Pool Restroom"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/bathroom/engineering
@@ -226,7 +226,7 @@
 /area/muriki/bathroom/engrefinery
 	name = "\improper Moonshiner"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	color_grading = COLORTINT_DARK
 
 /area/muriki/bathroom/kitchen
@@ -256,7 +256,7 @@
 
 /area/muriki/bathroom/scilower
 	name = "\improper Science Lavoratory"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/muriki/bathroom/security
@@ -271,7 +271,7 @@
 
 /area/muriki/bathroom/vox
 	name = "\improper Vomit Closet"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/muriki/bathroom/virology
@@ -281,7 +281,7 @@
 
 /area/muriki/bathroom/casino
 	name = "\improper Casino Royal Flush"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/bathroom/phoronics
@@ -318,7 +318,7 @@
 //
 /area/quartermaster/breakroom
 	name = "\improper Cargo Break Room"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "orawhicir"
 	sound_env = SMALL_SOFTFLOOR
 	flags = AREA_FIRE_SUPRESSION
@@ -373,18 +373,18 @@
 
 /area/muriki/septic
 	name = "\improper Septic Tank"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "green"
 	color_grading = COLORTINT_DARK
 
 /area/muriki/yard
 	name = "\improper The Yard"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "yelwhicir"
 
 /area/muriki/station/trawler_dock
 	name = "\improper Mining trawler Landing Pad"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "orablasqu"
 
 /area/maintenance/cargoupper
@@ -462,21 +462,21 @@
 
 /area/muriki/crew/arcade
 	name = "\improper Arcade"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/casino
 	name = "\improper Casino and Smoke Lounge"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/casinostore
 	name = "\improper Casino Storage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "orawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
@@ -490,20 +490,20 @@
 
 /area/muriki/crew/arcade/lasertag
 	name = "\improper Laser Tag Arena"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "purwhitri"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/crew/arcade/lasertagstore
 	name = "\improper Laser Tag Storage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "purwhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_DIM
 
 /area/muriki/crew/sauna1
 	name = "\improper Sauna Room One"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "bluewnew"
 	sound_env = SMALL_SOFTFLOOR
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -511,7 +511,7 @@
 
 /area/muriki/crew/sauna2
 	name = "\improper Sauna Room Two"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "bluewnew"
 	sound_env = SMALL_SOFTFLOOR
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -519,14 +519,14 @@
 
 /area/muriki/crew/poollocker
 	name = "\improper Pool Showers"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "locker"
 	sound_env = MEDIUM_SOFTFLOOR
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/crew/judge
 	name = "\improper Judge's Office"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "bluenew"
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -535,14 +535,14 @@
 /area/muriki/crew/glass
 	name = "\improper Dorm Dayroom"
 	icon_state = "recreation_area"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/dormaid
 	name = "\improper Dorm First Aid Station"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "medbay2"
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -573,11 +573,11 @@
 
 /area/muriki/crew/vr_train
 	name = "\improper Virtual Reality Training"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blublatri"
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = RAD_SHIELDED | AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
@@ -603,14 +603,14 @@
 
 /area/muriki/crew/bunker
 	name = "\improper Emergency Bunker"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
 	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/hallway/muriki/bunkerhall
 	name = "\improper Bunker Access Hallway"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
 	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
@@ -636,7 +636,7 @@
 
 /area/hallway/muriki/dorm
 	name = "\improper Dorm Hallway"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "bluewnew"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 	flags = AREA_FIRE_SUPRESSION
@@ -665,6 +665,13 @@
 	icon_state = "blue"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
+
+/area/security/secmail
+	name = "\improper Security Mail Room"
+	icon_state = "orablasqu"
+	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	color_grading = COLORTINT_DIM
 
 //Hydro-------
 /area/hydroponics
@@ -715,7 +722,7 @@
 
 /area/engineering/trammaint
 	name = "\improper Tram Maintenance Room"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "engineering"
 	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
@@ -741,7 +748,7 @@
 /area/engineering/refinery/main
 	name = "\improper Chemical Refinery"
 	icon_state = "primarystorage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	flags = AREA_FIRE_SUPRESSION
@@ -750,13 +757,13 @@
 	name = "\improper Refinery Medical Station"
 	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FIRE_SUPRESSION
 
 /area/engineering/refinery/tankstorage
 	name = "\improper Chemical Refinery Tank Storage"
 	icon_state = "eva"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
@@ -764,7 +771,7 @@
 	name = "\improper Chemical Refinery Generator"
 	icon_state = "darkred"
 	sound_env = SMALL_ENCLOSED
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/engineering/refinery/observation
@@ -777,7 +784,7 @@
 /area/engineering/refinery/lab
 	name = "\improper Chemical Refinery Lab"
 	icon_state = "primarystorage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_ATMOS
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
@@ -785,14 +792,14 @@
 /area/engineering/refinery/tugstorage
 	name = "\improper Chemical Refinery Tug Storage"
 	icon_state = "auxstorage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/engineering/refinery/pump_station
 	name = "\improper Chemical Refinery Pump Station"
 	icon_state = "maint_pumpstation"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
@@ -823,7 +830,7 @@
 
 /area/engineering/coreproctunnel
 	name = "\improper Core Processor Atmo Tunnel"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "darkred"
 	sound_env = TUNNEL_ENCLOSED
 	ambience = AMBIENCE_FOREBODING
@@ -907,7 +914,7 @@
 
 /area/muriki/elevator/secbase
 	name = "Security Sublevel 1"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/muriki/elevator/secmain
 	name = "Security First Floor"
@@ -919,7 +926,7 @@
 	base_turf = /turf/simulated/open
 /area/muriki/elevator/medibasement
 	name = "Medbay Sublevel 1"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/muriki/elevator/medical
 	name = "Medbay First Floor"
@@ -931,7 +938,7 @@
 	base_turf = /turf/simulated/open
 /area/muriki/elevator/civbase
 	name = "Civilian Sublevel 1"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/muriki/elevator/civmain
 	name = "Civilian First Floor"
@@ -943,7 +950,7 @@
 	base_turf = /turf/simulated/open
 /area/muriki/elevator/scibase
 	name = "Science Sublevel 1"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/muriki/elevator/scimain
 	name = "Science First Floor"
@@ -1069,7 +1076,7 @@
 /area/muriki/grounds //Non dangerous variant, for inside the fence
 	name = "\improper Facility Grounds"
 	icon_state = "dark"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
@@ -1077,88 +1084,88 @@
 
 /area/muriki/grounds/graveyard
 	name = "\improper Facility Graveyard"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "outside1"
 
 /area/muriki/grounds/terraform
 	name = "\improper Facility Terraformer Base"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "outside2"
 
 /area/muriki/grounds/engi
 	name = "\improper Facility Near Engineering"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "orablatri"
 
 /area/muriki/grounds/waste
 	name = "\improper Facility Near Waste Management"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "orablatri"
 
 /area/muriki/grounds/sec
 	name = "\improper Facility Near Security"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "redblatri"
 
 /area/muriki/grounds/med
 	name = "\improper Facility Near Medical"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "cyablatri"
 
 /area/muriki/grounds/shutt
 	name = "\improper Facility Shuttle Pads"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "deck1"
 
 /area/muriki/grounds/civ
 	name = "\improper Facility Near Civilian Structure"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "bluwhitri"
 
 /area/muriki/grounds/sci
 	name = "\improper Facility Near Science"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "purblatri"
 
 /area/muriki/grounds/tramborder
 	name = "\improper Tram Line Edge"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "redwhicir"
 
 /area/muriki/grounds/tramlineeast
 	name = "\improper Eastern Tram Line"
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 	icon_state = "redblasqu"
 
 /area/muriki/grounds/tramlinewest
 	name = "\improper Western Tram Line"
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 	icon_state = "redblatri"
 
 //Mine variants for mob spawns.
 /area/mine/explored/muriki/surface
 	name = "\improper Facility Grounds"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	music = 'sound/ambience/ambiatm1.ogg'
 
 /area/mine/unexplored/muriki/surface
 	name = "\improper Facility Grounds"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 
 /area/mine/explored/muriki/cave
 	name = "\improper Facility Tunnels"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
 
 /area/mine/unexplored/muriki/cave
 	name = "\improper Muriki Caverns"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
@@ -1166,15 +1173,15 @@
 //Subdivided areas because holy crap zas hates our map.
 //Basement. Dept.
 /area/mine/explored/muriki
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 /area/mine/unexplored/muriki
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/mine/explored/muriki/cave/eng
 	name = "\improper Facility Engineering Tunnels"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "orange"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 /area/mine/unexplored/muriki/cave/eng
 	name = "\improper Muriki Caverns Near Engineering"
 	sound_env = TUNNEL_ENCLOSED
@@ -1320,31 +1327,31 @@
 /area/mine/explored/muriki/mountainbase
 	name = "\improper Facility Mountain Caves"
 	icon_state = "center"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
 
 /area/mine/unexplored/muriki/mountainbase
 	name = "\improper Muriki Eastern Mountain Caverns"
 	icon_state = "east"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
 
 /area/mine/unexplored/muriki/mountainbasenorth
 	name = "\improper Muriki Northern Mountain Caverns"
 	icon_state = "north"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
 
 //------second floor------
 /area/mine/explored/muriki/mountainnorth
 	name = "\improper North Facility Mountainside"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "north"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 
 /area/mine/explored/muriki/mountaineast
 	name = "\improper Eastern Facility Mountainside"
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "east"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 
@@ -1365,13 +1372,13 @@
 
 /area/mine/unexplored/muriki/valleyeast
 	name = "\improper Muriki Lower Valley"
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 	icon_state = "east"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 
 /area/mine/unexplored/muriki/valleywest
 	name = "\improper Muriki Lower Valley"
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 	icon_state = "west"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 
@@ -1442,7 +1449,7 @@
 /area/mine/explored/muriki/river
 	name = "\improper Muriki River"
 	icon_state = "blue2"
-	base_turf = /turf/simulated/floor/water/acidic/deep/muriki
+	base_turf = /turf/simulated/floor/water/acidic/deep/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	music = 'sound/ambience/ruins/ruins3.ogg'
@@ -1470,7 +1477,7 @@
 // Maintenance ------------------------------------------------------------
 //
 /area/maintenance
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_GHOST_SIGHT
 	color_grading = COLORTINT_DARK
 
@@ -1499,7 +1506,7 @@
 
 /area/maintenance/medicelevbasement
 	name = "\improper Medical Elevator Maintenance Foundation"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "maint_medbay"
 
 /area/maintenance/secelev
@@ -1509,7 +1516,7 @@
 
 /area/maintenance/secelevbasement
 	name = "\improper Security Elevator Maintenance Foundation"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "pmaint"
 
 /area/maintenance/scielev
@@ -1566,44 +1573,44 @@
 
 /area/maintenance/wastedisposalnear
 	name = "\improper Near Waste Disposal Maintenance"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "maint_medbay"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/wastenear
 	name = "\improper Near Waste Maintenance"
 	icon_state = "blue"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/sec
 	name = "\improper Near Security Maintenance"
 	icon_state = "blue"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/med
 	name = "\improper Near Medical Maintenance"
 	icon_state = "bluenew"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/sci
 	name = "\improper Near Science Maintenance"
 	icon_state = "purple"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/civ
 	name = "\improper Civilian Pool Maintenance"
 	icon_state = "maintcentral"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/eng
 	name = "\improper Near Engineering Maintenance"
 	icon_state = "maint_engineering"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/bridge
 	name = "\improper Bridge Maintenance"
 	icon_state = "bluenew"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/kennel
 	name = "\improper Kennels Maintenance"
@@ -1618,7 +1625,7 @@
 
 /area/maintenance/oldbridge
 	name = "\improper Abandoned Bridge"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "bridge"
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
@@ -1680,14 +1687,14 @@
 /area/medical/mail
 	name = "\improper Medical Mailing Room"
 	icon_state = "quartdelivery"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_SOFTFLOOR
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/medical/chem_storage
 	name = "\improper Medical Chemical Storage"
 	icon_state = "locker"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	color_grading = COLORTINT_CHILL
 
@@ -1704,7 +1711,7 @@
 
 /area/medical/evastore
 	name = "\improper Medical Hazop And Hardsuit Storage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "locker"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1720,7 +1727,7 @@
 
 /area/medical/surgtrain
 	name = "\improper Medical Surgery Training Theater"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "medbay4"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1736,7 +1743,7 @@
 	icon_state = "purple"
 	sound_env = SMALL_ENCLOSED
 	flags = AREA_FORBID_EVENTS|AREA_FIRE_SUPRESSION
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	ambience = list(AMBIENCE_OTHERWORLDLY, AMBIENCE_OUTPOST)
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1792,14 +1799,14 @@
 
 /area/medical/tankstore
 	name = "\improper Nurse Bradley's Office"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	color_grading = COLORTINT_DIM
 
 /area/medical/autosleever
 	name = "\improper Automated Resleever"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1885,7 +1892,7 @@
 /area/muriki/rooftop/secgen
 	name = "\improper Security Backup Generator"
 	sound_env = SMALL_ENCLOSED
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
@@ -1893,7 +1900,7 @@
 /area/muriki/rooftop/comgen
 	name = "\improper Command Backup Generator"
 	sound_env = SMALL_ENCLOSED
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
@@ -1915,7 +1922,7 @@
 
 /area/security/brig/low
 	name = "\improper Security Low Security Brig"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "brig"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	flags = AREA_FIRE_SUPRESSION
@@ -1942,7 +1949,7 @@
 
 /area/security/brig/isolate
 	name = "\improper Security Solitary Confinement"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "brig"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	flags = AREA_FIRE_SUPRESSION
@@ -1951,7 +1958,7 @@
 /area/security/tankstore
 	name = "\improper Security Heavy Armor Storage"
 	icon_state = "security_sub"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 	color_grading = COLORTINT_DIM
@@ -1990,6 +1997,11 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
+/area/security/surgery
+	name = "\improper Security Operating Theatre"
+	icon_state = "surgery"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT //This WOULD become a filth pit
+
 //
 // Science-----------------------------------------------------------------------
 //
@@ -2003,7 +2015,7 @@
 
 /area/constructionsite/science2
 	name = "\improper Research Construction Site"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "construction"
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	use_emergency_overlay = TRUE
@@ -2063,7 +2075,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/xenobiology
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	flags = AREA_FIRE_SUPRESSION
 
@@ -2076,87 +2088,87 @@
 /area/rnd/xenobiology/xenobioh
 	name = "\improper Hazardous Xenobiology Lab"
 	icon_state = "xeno_f_lab"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
 
 /area/rnd/xenobiology/xenobiohstore
 	name = "\improper Hazardous Xenobiology Storage"
 	icon_state = "research_storage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
 
 /area/rnd/xenobiology/burn
 	name = "\improper Xenobiology Threat Supression"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "red2"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/research/atmosia
 	name = "\improper Sphenoidal Atmospherics"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/analysis
 	name = "\improper Research Sample Analysis"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/anomaly
 	name = "\improper Anomalous Materials Lab"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/medical
 	name = "\improper Xenolab First aid"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/research/isolation_a
 	name = "\improper Research Isolation 1"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/isolation_b
 	name = "\improper Research Isolation 2"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/isolation_c
 	name = "\improper Research Isolation 3"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/longtermstorage
 	name = "\improper Xenolab Long-Term Storage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	color_grading = COLORTINT_DARK
 
 /area/rnd/research/anomaly_storage
 	name = "\improper Xenolab Anomalous Storage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/anomaly_analysis
 	name = "\improper Xenolab Anomaly Analysis"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/exp_prep
 	name = "\improper Xenolab Expedition Preperation"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/xenobio_storage
 	name = "\improper Xenolab Storage"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	color_grading = COLORTINT_DIM
 
@@ -2168,13 +2180,13 @@
 
 /area/rnd/research/oldrd
 	name = "\improper Synthetic Surgery"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/laundry
 	name = "\improper Xenolab Laundry"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/breakroom
@@ -2281,7 +2293,7 @@
 
 /area/rnd/hallway/basementstairs
 	name = "\improper Primary Research Server Access"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "purple"
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
@@ -2294,19 +2306,19 @@
 /area/rnd/hallway/lowmain
 	name = "\improper Lower Main Research hallway"
 	icon_state = "hallC"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/hallway/xeno
 	name = "\improper Xenoarch hallway"
 	icon_state = "hallC"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/hallway/hazard
 	name = "\improper Hazardous Research hallway"
 	icon_state = "hallC"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/hallway/staircase
@@ -2329,7 +2341,7 @@
 
 /area/muriki/research/isolation_hall
 	name = "Research Isolation Hall"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	use_emergency_overlay = TRUE
 
@@ -2763,658 +2775,3 @@
 	requires_power = FALSE
 	dynamic_lighting = 0
 	color_grading = COLORTINT_OMEN
-
-//
-// Outpost holomap modifications, or base turf fixes ONLY. !!!OVERRIDES!!! ---------------------------------------------------------------------
-//
-/area/centcom // lets NOT
-	flags = RAD_SHIELDED|AREA_FLAG_IS_NOT_PERSISTENT|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_BLOCK_GHOST_SIGHT|AREA_FORBID_EVENTS
-
-/area/mine/unexplored
-	flags = AREA_BLOCK_GHOST_SIGHT
-
-/area/supply/station
-	base_turf = /turf/simulated/floor/outdoors/mud/muriki
-
-/area/rnd/supermatter
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/constructionsite/science
-	base_turf = /turf/simulated/mineral/floor/muriki
-	use_emergency_overlay = TRUE
-
-/area/maintenance/disposal
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-
-/area/engineering/engine_room
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/engineering/mail
-	name = "\improper Engineering Mailing Room"
-	icon_state = "quartdelivery"
-	base_turf = /turf/simulated/mineral/floor/muriki
-	sound_env = SMALL_SOFTFLOOR
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-
-/area/maintenance/incinerator
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_DIM
-
-/area/maintenance/substation/mining
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/open
-
-/area/maintenance/tool_storage
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_NONE
-
-/area/hallway/secondary/entry/docking_lounge
-	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
-	base_turf = /turf/simulated/open
-	color_grading = COLORTINT_WARM
-
-/area/hallway/secondary/engineering_hallway
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/open
-
-/area/bridge
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-
-/area/bridge_hallway
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-
-/area/bridge/hallway
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-
-/area/bridge/meeting_room
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/captain
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/heads/hop
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/heads/hor
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/heads/chief
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/heads/hos
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/heads/cmo
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/courtroom
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/recreation_area_hallway
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/hallway/secondary/construction
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/crew_quarters/recreation_area
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/mint
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-
-/area/comms
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
-	color_grading = COLORTINT_COLD
-
-/area/server
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	base_turf = /turf/simulated/mineral/floor/muriki
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_COLD
-
-/area/crew_quarters
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-
-/area/crew_quarters/sleep/engi_wash
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/open
-
-/area/crew_quarters/sleep/cryo
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-
-/area/crew_quarters/sleep/elevator
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-
-/area/crew_quarters/locker
-	base_turf = /turf/simulated/mineral/floor/muriki
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-
-/area/crew_quarters/locker/locker_toilet
-	base_turf = /turf/simulated/mineral/floor/muriki
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-
-/area/crew_quarters/fitness
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/crew_quarters/pool
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/crew_quarters/sleep/Dorm_1
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/sleep/Dorm_2
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/sleep/Dorm_3
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/sleep/Dorm_4
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/sleep/Dorm_5
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/cafeteria
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-
-/area/crew_quarters/coffee_shop
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/crew_quarters/kitchen
-	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-
-/area/crew_quarters/bar
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_WARM
-
-/area/library
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_WARM
-
-/area/library_conference_room
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_WARM
-
-/area/chapel
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_WARM
-
-/area/lawoffice
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-
-/area/security/prison
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-
-/area/security/brig
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_DIM
-
-/area/security/security_aid_station
-	name = "\improper Security Medical Station"
-	icon_state = "medbay2"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-
-/area/security/secmail
-	name = "\improper Security Mail Room"
-	icon_state = "orablasqu"
-	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-	color_grading = COLORTINT_DIM
-
-/area/constructionsite/medical
-	base_turf = /turf/simulated/mineral/floor/muriki
-	use_emergency_overlay = TRUE
-
-/area/medical/medbay
-	name = "\improper Medbay Hallway - Stairwell"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/medbay2
-	name = "\improper Medbay Hallway - Basement"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/medbay3
-	name = "\improper Medbay Hallway - Primary"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/medbay4
-	name = "\improper Medbay Hallway - Vox"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
-
-/area/medical/psych
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	color_grading = COLORTINT_WARM
-
-/area/crew_quarters/medbreak
-	name = "\improper Medical Break Room"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
-
-/area/crew_quarters/medical_restroom
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/patients_rooms
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/ward
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/patient_wing
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/cmostore
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/robotics
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/medical/virology
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_CHILL
-
-/area/medical/biostorage
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/medical/medbay2
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/medical/virologyaccess
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/morgue
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/mineral/floor/muriki
-	color_grading = COLORTINT_COLD
-
-/area/medical/chemistry
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
-
-/area/medical/surgery
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/surgery2
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/surgeryobs
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/surgeryprep
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/surgery_hallway
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/surgery_storage
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/mineral/floor/muriki
-	color_grading = COLORTINT_CHILL
-
-/area/medical/medbay4
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/medical/cryo
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/exam_room
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/genetics
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
-
-/area/medical/genetics_cloning
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-
-/area/medical/first_aid_station_starboard
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/medical/first_aid_station
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-
-/area/storage/tools
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-
-/area/engineering/drone_fabrication
-	base_turf = /turf/simulated/open
-	color_grading = COLORTINT_DARK
-
-/area/janitor/
-	holomap_color = HOLOMAP_AREACOLOR_JANITOR
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_DIM
-
-/area/djstation
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_WARM
-
-/area/rnd/rdoffice
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
-
-/area/hydroponics
-	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
-	base_turf = /turf/simulated/open
-
-/area/hydroponics/cafegarden
-	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
-	base_turf = /turf/simulated/open
-
-/area/hydroponics/garden
-	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
-	base_turf = /turf/simulated/open
-
-/area/quartermaster
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_DIM
-
-/area/quartermaster/foyer
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
-
-/area/quartermaster/qm
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-
-/area/construction/solars
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/open
-
-/area/construction/solarscontrol
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/open
-
-/area/ai
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/mineral/floor/vacuum
-	use_emergency_overlay = TRUE
-
-/area/ai_upload
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/mineral/floor/vacuum
-	use_emergency_overlay = TRUE
-
-/area/ai_upload_foyer
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/mineral/floor/vacuum
-	use_emergency_overlay = TRUE
-
-/area/ai_server_room
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/mineral/floor/vacuum
-	use_emergency_overlay = TRUE
-
-/area/ai_cyborg_station
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/mineral/floor/vacuum
-	use_emergency_overlay = TRUE
-
-/area/security/tactical
-	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-	base_turf = /turf/simulated/open
-
-/area/security/surgery
-	name = "\improper Security Operating Theatre"
-	icon_state = "surgery"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT //This WOULD become a filth pit
-
-/area/tcommsat
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-
-/area/tcomsat
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-
-/area/tcomfoyer
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	use_emergency_overlay = TRUE
-	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
-
-/area/tcommsat/computer
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
-
-/area/tcommsat/lounge
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
-
-/area/tcommsat/powercontrol
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/open
-	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
-
-/area/engineering/atmos
-	name = "\improper Pulmonary Atmospherics"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
-	color_grading = COLORTINT_DIM
-
-/area/engineering/atmos/monitoring
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
-	color_grading = COLORTINT_DIM
-
-/area/constructionsite/atmospherics
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
-	use_emergency_overlay = TRUE
-	color_grading = COLORTINT_DIM
-
-/area/engineering/atmos/storage
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/maintenance/substation/engineering
-	base_turf = /turf/simulated/open
-
-/area/maintenance/engineering
-	base_turf = /turf/simulated/open
-
-/area/maintenance/engi_engine
-	base_turf = /turf/simulated/open
-
-/area/maintenance/cargo
-	base_turf = /turf/simulated/mineral/floor/muriki
-
-/area/maintenance/substation/cargo
-	base_turf = /turf/simulated/open
-
-/area/maintenance/substation/security
-	base_turf = /turf/simulated/open
-
-/area/maintenance/arrivals
-	base_turf = /turf/simulated/open
-
-/area/maintenance/medbay_aft
-	base_turf = /turf/simulated/open
-	color_grading = COLORTINT_DIM
-
-/area/maintenance/medbay_fore
-	base_turf = /turf/simulated/open
-
-/area/maintenance/substation/medical
-	base_turf = /turf/simulated/open
-
-/area/rnd/xenobiology/xenoflora_storage
-	base_turf = /turf/simulated/open
-
-/area/rnd/xenobiology/xenoflora
-	base_turf = /turf/simulated/open
-
-/area/maintenance/substation/research
-	base_turf = /turf/simulated/open
-
-/area/maintenance/substation/civilian
-	base_turf = /turf/simulated/open
-
-/area/maintenance/substation/command
-	base_turf = /turf/simulated/open
-
-/area/maintenance/substation/virology
-	base_turf = /turf/simulated/open
-
-/area/maintenance/security_port
-	base_turf = /turf/simulated/open
-
-/area/maintenance/security_starboard
-	base_turf = /turf/simulated/open
-
-/area/maintenance/bar
-	base_turf = /turf/simulated/open
-
-/area/medical/sleeper
-	flags = 0 //Makes it FILTHY again
-	base_turf = /turf/simulated/open
-
-/area/rnd/workshop
-	name = "\improper Circuitry Lab"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/simulated/mineral/floor/muriki
-	color_grading = COLORTINT_DIM
-
-/area/security/vacantoffice
-	base_turf = /turf/simulated/open
-
-/area/security/vacantoffice2
-	base_turf = /turf/simulated/open
-
-/area/security/lobby
-	base_turf = /turf/simulated/open
-
-/area/security/interrogation
-	base_turf = /turf/simulated/open
-
-/area/security/checkpoint2
-	base_turf = /turf/simulated/open
-
-/area/security/evidence_storage
-	base_turf = /turf/simulated/open
-
-/area/security/security_equiptment_storage
-	base_turf = /turf/simulated/open
-
-/area/security/armoury
-	base_turf = /turf/simulated/open
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_DIM
-
-/area/security/briefing_room
-	base_turf = /turf/simulated/open
-	color_grading = COLORTINT_WARM
-
-/area/security/detectives_office
-	base_turf = /turf/simulated/open
-
-/area/security/nuke_storage
-	base_turf = /turf/simulated/open
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_DARK
-
-/area/security/range
-	base_turf = /turf/simulated/open
-
-/area/security/riot_control
-	base_turf = /turf/simulated/mineral/floor/muriki
-	flags = AREA_FIRE_SUPRESSION
-	color_grading = COLORTINT_DARK

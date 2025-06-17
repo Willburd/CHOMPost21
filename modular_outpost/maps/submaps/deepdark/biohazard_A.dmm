@@ -9,18 +9,18 @@
 /turf/simulated/wall/durasteel,
 /area/mine/explored/muriki/cave/deepdark)
 "n" = (
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "y" = (
 /obj/structure/sign/signnew/biohazard,
 /turf/simulated/wall/durasteel,
 /area/mine/explored/muriki/cave/deepdark)
 "B" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
 /obj/machinery/door/flesh,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "T" = (
 /turf/simulated/flesh,

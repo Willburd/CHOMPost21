@@ -1,14 +1,14 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "c" = (
 /obj/random/mob/synx,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "e" = (
 /obj/machinery/door/flesh,
-/turf/simulated/floor/flesh/muriki,
+/turf/simulated/floor/flesh/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "h" = (
 /turf/template_noop,

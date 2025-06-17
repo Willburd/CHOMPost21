@@ -39,7 +39,7 @@
 /area/space)
 "v" = (
 /obj/machinery/door/airlock/science,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
 "y" = (
 /obj/structure/prop/dominator/orange,

@@ -4,29 +4,29 @@
 /area/mine/unexplored/muriki/cave/deepdark)
 "m" = (
 /obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "t" = (
 /turf/template_noop,
 /area/template_noop)
 "B" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "H" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Q" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "S" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "V" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "X" = (
 /turf/simulated/wall,

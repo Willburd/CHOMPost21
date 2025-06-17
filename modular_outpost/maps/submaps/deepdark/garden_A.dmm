@@ -4,59 +4,59 @@
 /area/template_noop)
 "e" = (
 /obj/structure/loot_pile/surface/bones,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "i" = (
 /obj/item/dnainjector/random_verygood_labeled,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "k" = (
 /turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
 "n" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "t" = (
 /mob/living/simple_mob/vore/mantrap,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "z" = (
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "H" = (
 /mob/living/simple_mob/vore/pitcher_plant,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
 /obj/item/storage/firstaid/bonemed,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "N" = (
 /mob/living/simple_mob/vore/pitcher,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "P" = (
 /obj/structure/closet/crate/mimic/cointoss,
 /obj/random/contraband,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "R" = (
 /obj/item/bone,
 /obj/item/bone,
 /obj/item/bone,
 /obj/item/bone/skull/unknown,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Y" = (
-/turf/simulated/mineral/alt/ignore_cavegen/muriki,
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Z" = (
 /obj/item/dnainjector/random,
-/turf/simulated/floor/outdoors/grass/forest/muriki,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

@@ -4,7 +4,7 @@
 /area/template_noop)
 "U" = (
 /obj/effect/landmark/step_trap,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

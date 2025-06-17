@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "d" = (
 /turf/template_noop,
@@ -9,7 +9,7 @@
 /turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
 "S" = (
-/turf/simulated/floor/lava/muriki,
+/turf/simulated/floor/lava/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

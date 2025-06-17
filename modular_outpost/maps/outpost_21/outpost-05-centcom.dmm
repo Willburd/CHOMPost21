@@ -10004,7 +10004,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/water/acidic/indoor/muriki,
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/specialty/redspace)
 "eXa" = (
 /obj/effect/floor_decal/corner/purple,

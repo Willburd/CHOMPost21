@@ -20,7 +20,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "rune1"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "n" = (
 /obj/item/clothing/under/punpun,
@@ -93,7 +93,7 @@
 /turf/simulated/floor/cult,
 /area/mine/explored/muriki/cave/deepdark)
 "W" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "X" = (
 /obj/item/clothing/under/punpun,

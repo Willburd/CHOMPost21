@@ -6,13 +6,13 @@
 /obj/effect/landmark/loot_spawn/low,
 /obj/effect/landmark/loot_spawn/low,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "i" = (
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -22,14 +22,14 @@
 /obj/random/potion_ingredient,
 /obj/structure/closet/crate,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "m" = (
 /obj/random/junk,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -38,7 +38,7 @@
 /obj/random/pizzabox,
 /obj/structure/closet/crate,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -46,7 +46,7 @@
 /obj/structure/closet/crate,
 /obj/random/medical,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -55,7 +55,7 @@
 /obj/random/maintenance/medical,
 /obj/structure/closet/crate,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -65,7 +65,7 @@
 	name = "Cargo Container"
 	},
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -80,14 +80,14 @@
 /obj/random/material/refined,
 /obj/structure/closet/crate,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "E" = (
 /obj/random/crate,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -97,7 +97,7 @@
 /obj/random/nukies_can_legal,
 /obj/structure/closet/crate,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -106,7 +106,7 @@
 /area/template_noop)
 "S" = (
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/wall/bay/steel,
 /area/submap/outpost21/yard_cargocontainer)
