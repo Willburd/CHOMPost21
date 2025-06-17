@@ -1329,58 +1329,62 @@
 	icon_state = "center"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
+	outdoors = FALSE
 
 /area/mine/unexplored/muriki/mountainbase
 	name = "\improper Muriki Eastern Mountain Caverns"
 	icon_state = "east"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
+	outdoors = FALSE
 
 /area/mine/unexplored/muriki/mountainbasenorth
 	name = "\improper Muriki Northern Mountain Caverns"
 	icon_state = "north"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
+	outdoors = FALSE
 
 //------second floor------
+/area/mine/unexplored/muriki/mountainnorth
+	name = "\improper Muriki Northern Mountain Caverns"
+	icon_state = "north"
+	sound_env = TUNNEL_ENCLOSED
+	outdoors = FALSE
+/area/mine/unexplored/muriki/mountaineast
+	name = "\improper Muriki Eastern Mountain Caverns"
+	icon_state = "east"
+	sound_env = TUNNEL_ENCLOSED
+	outdoors = FALSE
 /area/mine/explored/muriki/mountainnorth
 	name = "\improper North Facility Mountainside"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "north"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
-
+	outdoors = TRUE
 /area/mine/explored/muriki/mountaineast
 	name = "\improper Eastern Facility Mountainside"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "east"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
-
-/area/mine/unexplored/muriki/mountainnorth
-	name = "\improper Muriki Northern Mountain Caverns"
-	icon_state = "north"
-	sound_env = TUNNEL_ENCLOSED
-
-/area/mine/unexplored/muriki/mountaineast
-	name = "\improper Muriki Eastern Mountain Caverns"
-	icon_state = "east"
-	sound_env = TUNNEL_ENCLOSED
-
+	outdoors = TRUE
 /area/mine/explored/muriki/valley
 	name = "\improper Valley Edge"
 	icon_state = "center"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
-
+	outdoors = TRUE
 /area/mine/unexplored/muriki/valleyeast
 	name = "\improper Muriki Lower Valley"
 	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 	icon_state = "east"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
-
+	outdoors = TRUE
 /area/mine/unexplored/muriki/valleywest
 	name = "\improper Muriki Lower Valley"
 	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 	icon_state = "west"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
+	outdoors = TRUE
 
 //-------third floor--------
 /area/mine/explored/muriki/mountaintopnorth
@@ -1397,16 +1401,17 @@
 	name = "\improper Muriki Northern Mountaintop Caverns"
 	icon_state = "north"
 	sound_env = TUNNEL_ENCLOSED
-
+	outdoors = FALSE
 /area/mine/unexplored/muriki/mountaintopeast
 	name = "\improper Muriki Eastern Mountaintop Caverns"
 	icon_state = "east"
 	sound_env = TUNNEL_ENCLOSED
-
+	outdoors = FALSE
 /area/muriki/crystal
 	name = "\improper Muriki Crystal Den"
 	icon_state = "bluwhicir"
 	sound_env = TUNNEL_ENCLOSED
+	outdoors = FALSE
 
 //Skyline
 /area/muriki/skyline

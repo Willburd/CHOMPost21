@@ -9491,12 +9491,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"aIc" = (
-/obj/structure/cliff{
-	dir = 9
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/river/hole)
 "aIj" = (
 /obj/machinery/door/window/southright{
 	dir = 1;
@@ -12547,12 +12541,6 @@
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"bDe" = (
-/obj/structure/cliff{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
 "bDi" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -17314,12 +17302,6 @@
 "dfb" = (
 /turf/simulated/wall,
 /area/security/evidence_storage)
-"dfd" = (
-/obj/structure/cliff/corner{
-	dir = 5
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/valley)
 "dfg" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -72271,12 +72253,6 @@
 	},
 /turf/simulated/wall,
 /area/hallway/primary/central_three)
-"uiJ" = (
-/obj/structure/cliff/corner{
-	dir = 6
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
 "uiM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -101794,7 +101770,7 @@ lve
 qvv
 lve
 xsK
-aIc
+qvv
 jnX
 jnX
 jnX
@@ -102436,7 +102412,7 @@ lve
 xsK
 qvv
 lve
-aIc
+qvv
 jnX
 jnX
 jnX
@@ -106279,7 +106255,7 @@ ajT
 ajT
 akB
 aky
-dfd
+jBf
 cuF
 dQB
 ajs
@@ -145488,13 +145464,13 @@ rqI
 rqI
 mPz
 wia
-bDe
-bDe
-bDe
-bDe
-bDe
-bDe
-uiJ
+wia
+wia
+wia
+wia
+wia
+wia
+fZG
 gEJ
 "}
 (370,1,1) = {"
