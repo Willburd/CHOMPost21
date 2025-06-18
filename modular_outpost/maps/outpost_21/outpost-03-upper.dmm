@@ -338,14 +338,11 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/civilian)
 "aaN" = (
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red/bordercorner{
-	dir = 4
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark{
@@ -355,14 +352,11 @@
 	},
 /area/comms)
 "aaO" = (
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/bordercorner{
-	dir = 1
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark{
@@ -433,73 +427,6 @@
 	temperature = 80
 	},
 /area/comms)
-"aaV" = (
-/obj/effect/floor_decal/corner/green/border{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/red/bordercorner,
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"aaW" = (
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red/border,
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"aaX" = (
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red/border,
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"aaY" = (
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/red/bordercorner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"aaZ" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	external_pressure_bound = 0;
-	external_pressure_bound_default = 0;
-	icon_state = "map_vent_in";
-	initialize_directions = 1;
-	internal_pressure_bound = 4000;
-	internal_pressure_bound_default = 4000;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
-	pump_direction = 0;
-	use_power = 1
-	},
-/turf/simulated/floor/bluegrid{
-	name = "Broadcast Mainframe";
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
 "aba" = (
 /obj/machinery/telecomms/processor/preset_two,
 /turf/simulated/floor/greengrid/nitrogen{
@@ -524,44 +451,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
-"abd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/effect/floor_decal/corner/green/border{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"abe" = (
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"abf" = (
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
 "abg" = (
 /obj/machinery/telecomms/server/presets/supply,
 /turf/simulated/floor/bluegrid{
@@ -581,31 +470,27 @@
 	},
 /area/comms)
 "abi" = (
-/obj/machinery/telecomms/relay/preset/outpost/basement,
-/turf/simulated/floor/bluegrid{
-	name = "Broadcast Mainframe";
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
 "abj" = (
-/obj/machinery/telecomms/relay/preset/outpost/confinementbeam,
-/turf/simulated/floor/bluegrid{
-	name = "Broadcast Mainframe";
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
-"abk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/effect/floor_decal/corner/paleblue/border{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/paleblue/border{
+/obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -642,48 +527,38 @@
 /obj/effect/auto_crayon,
 /turf/simulated/wall/durasteel,
 /area/muriki/processor)
-"abo" = (
-/obj/machinery/atmospherics/unary/vent_pump{
-	dir = 1;
-	external_pressure_bound = 140;
-	external_pressure_bound_default = 140;
-	icon_state = "map_vent_out";
-	pressure_checks = 0;
-	pressure_checks_default = 0;
-	use_power = 1
-	},
-/turf/simulated/floor/greengrid/nitrogen{
-	name = "Receiver Mainframe";
-	nitrogen = 100;
-	temperature = 80
-	},
-/area/comms)
 "abp" = (
-/obj/machinery/telecomms/relay/preset/outpost/main,
-/turf/simulated/floor/bluegrid{
-	name = "Broadcast Mainframe";
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/bordercorner,
+/obj/machinery/atmospherics/pipe/manifold/hidden/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
 "abq" = (
-/obj/machinery/telecomms/relay/preset/outpost/upper,
-/turf/simulated/floor/bluegrid{
-	name = "Broadcast Mainframe";
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/black{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
 "abr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 8
-	},
+/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -1243,6 +1118,85 @@
 	fancy_shuttle_tag = "medi"
 	},
 /area/shuttle/medical)
+"acz" = (
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"acA" = (
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"acB" = (
+/obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"acC" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"acD" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/paleblue/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/turf/simulated/floor/tiled/dark{
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/comms)
+"acE" = (
+/obj/machinery/telecomms/relay/preset/outpost,
+/turf/simulated/floor/redgrid{
+	temperature = 80;
+	nitrogen = 100;
+	oxygen = 0;
+	name = "Exonet Mainframe"
+	},
+/area/comms)
 "acI" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -1871,20 +1825,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
-"asy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
 "asK" = (
 /obj/effect/landmark{
 	name = "blobstart"
@@ -5884,7 +5824,6 @@
 /obj/machinery/camera/network/telecom{
 	c_tag = "TCM - Telecomms Server Room North"
 	},
-/obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -7243,20 +7182,11 @@
 /area/muriki/tramstation/cargeng)
 "cUZ" = (
 /obj/machinery/telecomms/hub/preset/outpost,
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
-/turf/simulated/floor/tiled/dark{
+/turf/simulated/floor/redgrid{
+	temperature = 80;
 	nitrogen = 100;
 	oxygen = 0;
-	temperature = 80
+	name = "Exonet Mainframe"
 	},
 /area/comms)
 "cVj" = (
@@ -7394,12 +7324,13 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
+/obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner{
+/obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -9293,20 +9224,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
-"dVj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black,
-/obj/effect/floor_decal/corner/green/border{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark{
-	nitrogen = 100;
-	oxygen = 0;
-	temperature = 80
-	},
-/area/comms)
 "dVk" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 1
@@ -10691,10 +10608,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 9
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
 	},
-/obj/effect/floor_decal/corner/paleblue/border,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -16966,9 +16883,6 @@
 /area/muriki/bathroom/chapel)
 "hRE" = (
 /obj/machinery/light,
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -18138,13 +18052,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/green/bordercorner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/effect/floor_decal/corner/green/border,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -20078,13 +19986,21 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/medical)
 "jsD" = (
-/obj/effect/floor_decal/corner/paleblue/border{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
 	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark{
+/turf/simulated/floor/bluegrid{
+	name = "Broadcast Mainframe";
 	nitrogen = 100;
 	oxygen = 0;
 	temperature = 80
@@ -20593,15 +20509,18 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "jFF" = (
-/obj/effect/floor_decal/corner/green/border{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 4;
+	external_pressure_bound = 140;
+	external_pressure_bound_default = 140;
+	icon_state = "map_vent_out";
+	pressure_checks = 0;
+	pressure_checks_default = 0;
+	use_power = 1
 	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark{
+/turf/simulated/floor/greengrid/nitrogen{
+	name = "Receiver Mainframe";
 	nitrogen = 100;
-	oxygen = 0;
 	temperature = 80
 	},
 /area/comms)
@@ -30793,7 +30712,7 @@
 	c_tag = "TCM - Telecomms Server Room South";
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/red/border{
+/obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark{
@@ -39121,13 +39040,14 @@
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/green/bordercorner{
+/obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/red/bordercorner,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -43628,10 +43548,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "uRl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/black{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/paleblue/border,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
 	oxygen = 0;
@@ -112950,12 +112868,12 @@ hEU
 ooa
 dMo
 izu
-dVj
-dVj
-abd
-abo
-aaV
 jFF
+wAo
+wAo
+wAo
+wAo
+wAo
 jFF
 aaN
 akN
@@ -113114,11 +113032,11 @@ saB
 eEa
 abp
 abi
-abe
+acC
 sPd
-aaW
-iJJ
-fcW
+acC
+acC
+acA
 oHs
 akN
 jYn
@@ -113274,13 +113192,13 @@ gaT
 vrC
 voa
 cjF
-eGK
-eGK
-aaP
-cUZ
 nej
+acE
 iJJ
-iJJ
+cUZ
+fcW
+aaQ
+nzr
 hRE
 akN
 cDi
@@ -113438,12 +113356,12 @@ sKN
 uRl
 abq
 abj
-abf
+acD
 cYL
-aaX
-iJJ
-aaQ
-nzr
+acD
+acD
+acB
+acz
 akN
 cDi
 xDx
@@ -113598,12 +113516,12 @@ vCr
 oHA
 aRg
 abr
-abk
-abk
-asy
-aaZ
-aaY
 jsD
+eGK
+eGK
+eGK
+eGK
+eGK
 jsD
 aaO
 akN

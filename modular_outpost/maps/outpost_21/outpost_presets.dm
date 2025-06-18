@@ -10,25 +10,15 @@
 
 // RELAYS
 /////////////////////////////////////////////////////////////////////////////////////////
-/obj/machinery/telecomms/relay/preset/outpost/basement
-	id = "Basement Relay"
-	listening_level = Z_LEVEL_OUTPOST_BASEMENT
-	autolinkers = list("l_relay")
-
-/obj/machinery/telecomms/relay/preset/outpost/main
-	id = "Main Complex Relay"
+/obj/machinery/telecomms/relay/preset/outpost
+	id = "Station Relay"
 	listening_level = Z_LEVEL_OUTPOST_SURFACE
-	autolinkers = list("m_relay")
-
-/obj/machinery/telecomms/relay/preset/outpost/upper
-	id = "Upper Floors Relay"
-	listening_level = Z_LEVEL_OUTPOST_UPPER
-	autolinkers = list("s_relay")
+	autolinkers = list("station_relay")
 
 /obj/machinery/telecomms/relay/preset/outpost/confinementbeam
-	id = "Confinement Platform Relay"
+	id = "AI Platform Relay"
 	listening_level = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
-	autolinkers = list("k_relay")
+	autolinkers = list("ai_relay")
 
 
 // HUB
@@ -36,8 +26,11 @@
 /obj/machinery/telecomms/hub/preset/outpost
 	id = "Hub"
 	network = "tcommsat"
-	autolinkers = list("hub", "relay", "c_relay", "l_relay", "m_relay", "s_relay", "k_relay", "r_relay", "science", "medical",
-	"supply", "service", "common", "command", "engineering", "security", "unused", "hb_relay","explorer", "receiverA", "broadcasterA")
+	autolinkers = list("hub",
+						"station_relay",
+						"ai_relay",
+						"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused","explorer",
+						"receiverA", "broadcasterA")
 
 
 // BUS
