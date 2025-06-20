@@ -60,7 +60,7 @@ GLOBAL_LIST_INIT(item_vore_blacklist, list(
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/disk/nuclear,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz,
-		/obj/item/airlock_brace) // Outpost 21 edit - doorbraces too)
+		/obj/item/airlock_brace)) // Outpost 21 edit - doorbraces too
 
 //Classic Vore sounds
 GLOBAL_LIST_INIT(classic_vore_sounds, list(
@@ -1105,7 +1105,7 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/area/submap/event,
 	/area/submap/casino_event,
 	/area/virtual_reality // Outpost 21 edit
-	))
+	)))
 
 //GRIPPERS!!!
 #define BASIC_GRIPPER \
@@ -1153,7 +1153,6 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/storage/pill_bottle, \
 	/obj/item/reagent_containers/pill, \
 	/obj/item/reagent_containers/blood, \
-	/obj/item/nif, \
 	/obj/item/stack/material/phoron, \
 	/obj/item/tank/anesthetic, \
 	/obj/item/disk/body_record
@@ -1208,7 +1207,6 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/capture_crystal, \
 	/obj/item/clothing, \
 	/obj/item/implanter, \
-	/obj/item/disk/nifsoft/compliance, \
 	/obj/item/handcuffs, \
 	/obj/item/toy, \
 	/obj/item/petrifier, \
@@ -1217,15 +1215,13 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/spacecasinocash
 
 #define ORGAN_GRIPPER \
-	/obj/item/organ, \
-	/obj/item/nif
+	/obj/item/organ
 
 #define ROBOTICS_ORGAN_GRIPPER \
 	/obj/item/organ/external, \
 	/obj/item/organ/internal/brain, \
 	/obj/item/organ/internal/cell, \
-	/obj/item/organ/internal/eyes/robot, \
-	/obj/item/nif
+	/obj/item/organ/internal/eyes/robot
 
 #define EXOSUIT_GRIPPER \
 	/obj/item/mecha_parts/part, \
