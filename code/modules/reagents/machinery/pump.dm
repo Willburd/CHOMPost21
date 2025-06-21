@@ -19,7 +19,6 @@
 	active_power_usage = 200 * CELLRATE
 
 	var/obj/item/cell/cell = null
-	var/obj/item/hose_connector/output/Output = null
 	var/reagents_per_cycle = 5 // severe nerf to unupgraded speed
 	var/on = 0
 	var/unlocked = 0
@@ -30,14 +29,13 @@
 	. = ..()
 	default_apply_parts()
 
-	Output = new(src)
+	AddComponent(/datum/component/hose_connector/output)
 
 	RefreshParts()
 	update_icon()
 
 /obj/machinery/pump/Destroy()
 	QDEL_NULL(cell)
-	QDEL_NULL(Output)
 	. = ..()
 
 /obj/machinery/pump/RefreshParts()
@@ -95,11 +93,7 @@
 	T.pump_reagents(reagents, reagents_per_cycle)
 	update_icon()
 
-	if(Output.get_pairing())
-		reagents.trans_to_holder(Output.reagents, Output.reagents.maximum_volume)
-		if(prob(5))
-			visible_message(span_notice("\The [src] gurgles as it pumps fluid."))
-
+	SEND_SIGNAL(src, COMSIG_HOSE_FORCEPUMP)
 
 // Sets the power state, if possible.
 // Returns TRUE/FALSE on power state changing

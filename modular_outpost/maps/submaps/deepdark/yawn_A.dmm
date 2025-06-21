@@ -95,7 +95,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/submap/outpost21/yawn_A)
 "ew" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "eH" = (
 /obj/effect/floor_decal/corner/grey/diagonal,

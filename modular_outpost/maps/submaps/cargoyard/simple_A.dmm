@@ -5,35 +5,35 @@
 "d" = (
 /obj/random/maintenance,
 /obj/random/maintenance,
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "g" = (
-/turf/simulated/floor/outdoors/sidewalk/muriki{
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
 	},
 /area/submap/outpost21/yard_generic)
 "h" = (
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "m" = (
 /obj/random/firstaid,
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "A" = (
 /obj/random/flashlight,
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "D" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "G" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "M" = (
 /obj/random/maintenance,
-/turf/simulated/floor/outdoors/mud/muriki,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "N" = (
 /turf/template_noop,

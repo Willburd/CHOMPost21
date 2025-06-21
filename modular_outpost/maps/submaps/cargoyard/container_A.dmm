@@ -5,7 +5,7 @@
 "e" = (
 /obj/effect/landmark/vermin,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -14,7 +14,7 @@
 	name = "Cargo Container"
 	},
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -22,7 +22,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /obj/random/contraband,
 /turf/simulated/floor/plating,
@@ -38,7 +38,7 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -46,7 +46,7 @@
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -55,7 +55,7 @@
 /obj/random/maintenance,
 /obj/random/junk,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -70,14 +70,14 @@
 /obj/random/maintenance,
 /obj/random/junk,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /obj/random/contraband,
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "L" = (
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/wall/bay/steel,
 /area/submap/outpost21/yard_cargocontainer)
@@ -87,13 +87,13 @@
 "V" = (
 /obj/random/junk,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "Y" = (
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)

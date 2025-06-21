@@ -33,7 +33,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "D" = (
 /obj/machinery/door/airlock/science,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "E" = (
 /obj/structure/prop/dominator/orange,

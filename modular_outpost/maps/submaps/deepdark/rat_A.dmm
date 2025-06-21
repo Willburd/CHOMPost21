@@ -22,7 +22,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "up"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "k" = (
 /obj/item/storage/box/injectors{
@@ -73,7 +73,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "x"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "T" = (
 /obj/structure/loot_pile/mecha/gygax/dark,

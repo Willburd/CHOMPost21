@@ -1,60 +1,60 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "b" = (
 /obj/structure/cliff{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "c" = (
 /obj/structure/cliff_end{
 	dir = 8
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "e" = (
 /obj/structure/cliff_end,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "f" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "g" = (
 /obj/structure/cliff{
 	dir = 6
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "h" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "l" = (
 /obj/structure/cliff,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "o" = (
 /obj/structure/cliff{
 	dir = 5
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
 /obj/effect/landmark/step_trap,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "u" = (
 /obj/structure/cliff{
 	dir = 9
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "v" = (
 /obj/structure/cliff/corner{
 	dir = 5
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "w" = (
 /turf/template_noop,
@@ -66,65 +66,65 @@
 /obj/structure/cliff_end{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "D" = (
 /obj/structure/cliff{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "E" = (
 /obj/structure/cliff{
 	dir = 8
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
 /obj/structure/cliff/corner{
 	dir = 9
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "G" = (
 /obj/structure/cliff{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
 /obj/structure/cliff{
 	dir = 10
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "K" = (
 /obj/structure/cliff_end{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "M" = (
 /obj/structure/cliff_end,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "O" = (
 /obj/structure/cliff/corner{
 	dir = 6
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "P" = (
 /turf/template_noop,
 /area/mine/unexplored/muriki/cave/deepdark)
 "V" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "Z" = (
 /obj/structure/cliff/corner{
 	dir = 10
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

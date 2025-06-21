@@ -82,12 +82,6 @@ var/list/all_maps = list()
 	var/list/mining_outpost_z = list()
 	//VOREStation Addition End
 
-	// Outpost 21 edit begin - custom zlevel lists
-	var/static/list/event_levels = list() // Events happen on these levels, even if not part of station!
-	var/static/list/forced_airmix_levels = list() // z-levels where airmix slowly resets if outdoors, prevents saturating the atmosphere
-	var/static/list/deadly_fall_levels = list() // List of levels where mapping or other similar devices might work fully
-	// Outpost 21 edit end
-
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
 	var/dock_name	 = "THE PirateBay"
@@ -143,12 +137,6 @@ var/list/all_maps = list()
 
 	var/list/planet_datums_to_make = list() // Types of `/datum/planet`s that will be instantiated by SSPlanets.
 
-	// Outpost 21 edit begin - Custom ores per map
-	var/list/rare_ore_levels = list()
-	var/common_ores = list(ORE_MARBLE = 3,/* ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 15*/, ORE_URANIUM = 10, ORE_PLATINUM = 10, ORE_HEMATITE = 70, ORE_RUTILE = 15, ORE_CARBON = 70, ORE_DIAMOND = 2, ORE_GOLD = 10, ORE_SILVER = 10, ORE_PHORON = 20, ORE_LEAD = 3,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 1/*, ORE_PAINITE = 1*/)
-	var/rare_ores = list(ORE_MARBLE = 5,/* ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5*/, ORE_URANIUM = 15, ORE_PLATINUM = 20, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 15, ORE_DIAMOND = 3, ORE_GOLD = 15, ORE_SILVER = 15, ORE_PHORON = 25, ORE_LEAD = 5,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 2/*, ORE_PAINITE = 1*/)
-	// Outpost 21 edit end
-
 /datum/map/New()
 	..()
 	if(zlevel_datum_type)
@@ -162,10 +150,6 @@ var/list/all_maps = list()
 		persist_levels = station_levels.Copy()
 	if(!mappable_levels?.len)
 		mappable_levels = station_levels.Copy()
-	// Outpost 21 edit begin - Event levels auto-fill as station levels if non exist
-	if(!event_levels?.len)
-		event_levels = station_levels.Copy()
-	// Outpost 21 edit end
 	if(!allowed_jobs || !allowed_jobs.len)
 		allowed_jobs = subtypesof(/datum/job)
 	if(default_skybox) //Type was specified
@@ -203,7 +187,7 @@ var/list/all_maps = list()
 
 // Boolean for if we should use SSnightshift night hours
 /datum/map/proc/get_nightshift()
-	return get_night(3) //Defaults to z1, customize however you want on your own maps - Outpost 21 edit - Use surface map on 3
+	return get_night(1) //Defaults to z1, customize however you want on your own maps
 
 /datum/map/proc/setup_map()
 	return
@@ -258,11 +242,6 @@ var/list/all_maps = list()
 	//Get what sector we're in
 	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
 	if(istype(O))
-		// Outpost 21 edit begin - Remote Station levels
-		if (srcz in station_levels)
-			return station_levels.Copy() | O.map_z.Copy()
-		// Outpost 21 edit end
-
 		//Just the sector we're in
 		if(om_range == -1)
 			return O.map_z.Copy()
@@ -368,12 +347,6 @@ var/list/all_maps = list()
 		map.accessible_z_levels["[z]"] = transit_chance
 	if(flags & MAP_LEVEL_MAPPABLE)
 		map.mappable_levels |= z
-	// Outpost 21 edit begin - Event levels and auto-clear
-	if(flags & MAP_LEVEL_EVENTS)
-		map.event_levels += z
-	if(flags & MAP_LEVEL_AIRMIX_CLEANS)
-		map.forced_airmix_levels += z
-	// Outpost 21 edit end
 	// Holomaps
 	// Auto-center the map if needed (Guess based on maxx/maxy)
 	if (holomap_offset_x < 0)

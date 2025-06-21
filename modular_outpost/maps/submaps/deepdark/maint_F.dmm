@@ -10,113 +10,113 @@
 /area/mine/explored/muriki/cave/deepdark)
 "n" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "p" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "q" = (
 /obj/effect/mine/claymore{
 	dir = 1
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (
 /obj/random/maintenance,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "t" = (
 /obj/machinery/door/airlock/maintenance/int,
-/turf/simulated/floor/tiled/techfloor/muriki,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "x" = (
 /obj/random/plushielarge,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "z" = (
 /obj/random/flashlight,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "A" = (
 /turf/template_noop,
 /area/template_noop)
 "B" = (
 /obj/random/mainttoyloot/nofail,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "C" = (
 /obj/random/trash,
 /obj/structure/barricade,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "D" = (
 /obj/structure/barricade,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "E" = (
 /obj/random/cutout,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "F" = (
 /obj/random/firstaid,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "G" = (
 /obj/random/trash,
 /obj/random/cutout,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "H" = (
 /obj/structure/trash_pile,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "I" = (
 /obj/random/contraband/nofail,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
 /obj/random/maintenance,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "L" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "M" = (
 /turf/template_noop,
 /area/mine/unexplored/muriki/cave/deepdark)
 "N" = (
 /obj/structure/trash_pile,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "O" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "P" = (
 /obj/random/trash,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Q" = (
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "S" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "T" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "W" = (
 /obj/effect/mine/claymore{
 	dir = 4
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Y" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Z" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"

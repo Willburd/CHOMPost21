@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "L" = (
 /obj/item/clothing/suit/space/void/engineering/alt2,
@@ -44,14 +44,14 @@
 /obj/item/clothing/mask/breath{
 	pixel_x = 5
 	},
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "W" = (
 /obj/item/rms,
 /obj/item/stack/material/supermatter,
-/turf/simulated/mineral/floor/muriki{
+/turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)

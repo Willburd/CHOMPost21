@@ -12,7 +12,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "f" = (
 /obj/structure/table/marble,
-/turf/simulated/floor/outdoors/sidewalk/muriki{
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -40,7 +40,7 @@
 /obj/structure/prop/statue/angel{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/sidewalk/muriki{
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -53,7 +53,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "I" = (
 /obj/structure/prop/statue,
-/turf/simulated/floor/outdoors/sidewalk/muriki{
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -71,12 +71,12 @@
 /obj/structure/prop/statue/angel{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/sidewalk/muriki{
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "V" = (
-/turf/simulated/floor/outdoors/sidewalk/muriki{
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
 	},
 /area/mine/explored/muriki/cave/deepdark)

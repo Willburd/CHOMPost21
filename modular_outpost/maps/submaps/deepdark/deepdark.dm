@@ -57,6 +57,7 @@
 #include "cliff_D.dmm"
 #include "wizard_A.dmm"
 #include "tram_A.dmm"
+#include "foundation_A.dmm"
 #include "synthezied_oops.dmm"
 #endif
 
@@ -541,6 +542,13 @@
 	discard_prob = 80
 	cost = 15
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/foundation_A
+	name = "Facility Foundation A"
+	desc = "Foundation structure for outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/foundation_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 25
 
 //////////////////////////////////////////////////////////////
 // Area definitions
@@ -567,7 +575,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
 
@@ -580,7 +588,7 @@
 	requires_power = FALSE
 	sound_env = SOUND_ENVIRONMENT_AUDITORIUM
 	ambience = AMBIENCE_MAINTENANCE
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_WARM
 
@@ -593,7 +601,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -603,7 +611,7 @@
 	icon_state = "red2"
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -613,7 +621,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -623,7 +631,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	ambience = AMBIENCE_GENERIC
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
 
@@ -633,7 +641,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_EXPOUTPOST
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_WARM
 
@@ -643,7 +651,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	ambience = AMBIENCE_ARRIVALS
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_WARM
 
@@ -651,7 +659,7 @@
 	name = "\improper Unknown"
 	requires_power = FALSE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OTHERWORLDLY
 	haunted = TRUE
@@ -663,7 +671,7 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_LIVINGROOM
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	always_unpowered = FALSE
 	requires_power = FALSE
@@ -671,7 +679,7 @@
 
 /area/rnd/xenobiology/lost // ported secret
 	name = "\improper Abandoned Xenobiology Lab"
-	base_turf = /turf/simulated/mineral/floor/muriki
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	sound_env = SOUND_ENVIRONMENT_ARENA
 	ambience = AMBIENCE_GENERIC
@@ -743,3 +751,6 @@
 					H.AdjustSleeping(15)
 					H.AdjustWeakened(3)
 					H.adjustHalLoss(-9)
+
+/turf/simulated/deathdrop/foundation
+	death_message = "You fall into the darkness, the huge tension cables that secure the foundations of the outpost to the rock beneath it battering your body before you slam into the machinery beneath. There is nothing left of you except the bloody dent in the tensioning equipment."

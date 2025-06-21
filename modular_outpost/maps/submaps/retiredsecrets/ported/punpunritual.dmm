@@ -26,7 +26,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "rune1"
 	},
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
 "l" = (
 /turf/simulated/floor/wood,
@@ -97,7 +97,7 @@
 /turf/simulated/floor/cult,
 /area/space)
 "T" = (
-/turf/simulated/mineral/alt/muriki,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/space)
 "X" = (
 /obj/structure/table/woodentable,

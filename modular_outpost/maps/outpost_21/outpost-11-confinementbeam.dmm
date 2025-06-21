@@ -776,6 +776,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_server_room)
 "bF" = (
@@ -9420,11 +9423,8 @@
 	dir = 8;
 	pixel_x = 26
 	},
-/obj/effect/floor_decal/corner/white/full{
-	dir = 4
-	},
-/obj/effect/landmark/holiday_event_spawn,
-/turf/simulated/floor/tiled/milspec/raised,
+/obj/machinery/telecomms/relay/preset/outpost/confinementbeam,
+/turf/simulated/floor/greengrid,
 /area/ai_server_room)
 "Cp" = (
 /obj/machinery/ion_engine{
@@ -15775,6 +15775,9 @@
 /obj/item/radio/intercom/department/security{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_server_room)

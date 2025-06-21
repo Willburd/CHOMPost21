@@ -184,11 +184,11 @@
 		var/list/potentials = living_mobs(0)
 		if(potentials.len)
 			var/mob/living/target = pick(potentials)
-			if(can_be_drop_pred && istype(target) && target.devourable && target.can_be_drop_prey && target.phase_vore && vore_selected && phase_vore)
+			if(can_be_drop_pred && istype(target) && target.devourable /*&& target.can_be_drop_prey*/ && target.phase_vore && vore_selected && phase_vore) // Outpost 21 edit - Allow phasepreds even if spontvore is disabled
 				target.forceMove(vore_selected)
 				to_chat(target, span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!"))
 				to_chat(src, span_vwarning("You phase around [target], [vore_selected.vore_verb]ing them into your [vore_selected.name]!"))
-			else if(can_be_drop_prey && istype(target) && devourable && target.can_be_drop_pred && target.phase_vore && target.vore_selected && phase_vore)
+			else if(can_be_drop_prey && istype(target) && devourable /*&& target.can_be_drop_pred*/ && target.phase_vore && target.vore_selected && phase_vore) // Outpost 21 edit - Allow phaseprey even if spontvore is disabled
 				forceMove(target.vore_selected)
 				to_chat(target, span_vwarning("\The [src] phases into you, [target.vore_selected.vore_verb]ing them into your [target.vore_selected.name]!"))
 				to_chat(src, span_vwarning("You phase into [target], having them [target.vore_selected.vore_verb] you into their [target.vore_selected.name]!")) //CHOMPEdit End - Dropprey and phasevore checks.

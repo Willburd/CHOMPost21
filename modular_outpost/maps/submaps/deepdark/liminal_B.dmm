@@ -40,7 +40,7 @@
 /obj/structure/fence/wood{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "ih" = (
 /obj/structure/bed/chair/oldsofa/right{
@@ -90,7 +90,7 @@
 /area/submap/outpost21/cave_liminal_B)
 "nD" = (
 /obj/structure/fence/wood/corner,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "oq" = (
 /obj/item/flashlight/lamp/green{
@@ -132,7 +132,7 @@
 /obj/structure/fence/wood{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "uv" = (
 /obj/structure/table/wooden_reinforced,
@@ -215,7 +215,7 @@
 /obj/structure/fence/wood/end{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Gw" = (
 /obj/machinery/light/small{
@@ -268,11 +268,11 @@
 /turf/simulated/floor/wood/alt,
 /area/submap/outpost21/cave_liminal_B)
 "IC" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "IT" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "JF" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -341,7 +341,7 @@
 /turf/simulated/floor/carpet/tealcarpet,
 /area/submap/outpost21/cave_liminal_B)
 "Sj" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Ts" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{

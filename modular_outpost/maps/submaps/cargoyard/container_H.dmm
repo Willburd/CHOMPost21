@@ -1,7 +1,7 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/wall/bay/steel,
 /area/submap/outpost21/yard_cargocontainer)
@@ -18,7 +18,7 @@
 /obj/random/material/refined,
 /obj/random/material/refined,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -32,7 +32,7 @@
 	anchored = 0
 	},
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -43,7 +43,7 @@
 /obj/random/maintenance/misc,
 /obj/random/maintenance/morestuff,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -63,7 +63,7 @@
 /obj/random/material/precious,
 /obj/random/material/precious,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
@@ -73,20 +73,20 @@
 	name = "Cargo Container"
 	},
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "H" = (
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "R" = (
 /obj/random/cutout,
 /obj/effect/auto_roof{
-	roof_type = /turf/simulated/floor/muriki
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)

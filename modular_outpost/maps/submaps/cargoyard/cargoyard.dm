@@ -156,7 +156,7 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 
 /area/submap/outpost21/yard_cargocontainer
 	name = "\improper Inside Cargo Container"
@@ -164,5 +164,5 @@
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	music = 'sound/ambience/ambiatm1.ogg'
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	color_grading = COLORTINT_DARK

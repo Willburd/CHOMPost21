@@ -1,35 +1,35 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 "f" = (
 /turf/template_noop,
 /area/template_noop)
 "k" = (
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "l" = (
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "o" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "r" = (
 /turf/template_noop,
 /area/mine/unexplored/muriki/cave/deepdark)
 "x" = (
 /obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/ignore_cavegen/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "y" = (
 /turf/simulated/wall,
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
 /obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/plating/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "X" = (
-/turf/simulated/mineral/alt/ignore_mapgen/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/deepdark)
 
 (1,1,1) = {"
