@@ -183,9 +183,11 @@
 // Cliff climbing requires climbing gear.
 /datum/element/climbable/cliff/do_climb(obj/climbed_thing, mob/living/user, delay_time)
 	// Special snowflake handling, because north facing cliffs require half the time
-	var/obj/structure/cliff/C = climbed_thing
-	//if(C.is_double_cliff) // Outpost 21 edit - We lack double cliffs
+	// Outpost 21 edit begin - We lack double cliffs
+	// var/obj/structure/cliff/C = climbed_thing
+	//if(C.is_double_cliff)
 	//	delay_time /= 2
+	// Outpost 21 edit end
 	. = ..(climbed_thing, user, delay_time)
 
 /datum/element/climbable/cliff/can_climb(var/obj/climbed_thing, var/mob/living/user, post_climb_check=0)
