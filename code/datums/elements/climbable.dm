@@ -1,4 +1,4 @@
-///Climbable element. Allows climbing an object using mousedrag or a verb
+[⚠️ Suspicious Content] ///Climbable element. Allows climbing an object using mousedrag or a verb
 /datum/element/climbable
 	element_flags = ELEMENT_DETACH_ON_HOST_DESTROY|ELEMENT_BESPOKE
 	argument_hash_start_idx = 2
@@ -111,16 +111,15 @@
 	return 1
 
 /// Shakes an object, called from movement so it needs to be cleaned up a bit!
-/datum/element/climbable/proc/move_shaken(var/obj/climbed_thing, var/mob/user)
+/datum/element/climbable/proc/move_shaken(obj/climbed_thing, atom/oldloc, direction, forced, list/old_locs, momentum_change)
 	SIGNAL_HANDLER
-	shaken(climbed_thing, null)
+	if(!forced) // Don't perform this if going up stairs
+		shaken(climbed_thing, null)
 
 /// Shakes an object, if anyone is climbing it, causes them to fall off it.
 /datum/element/climbable/proc/shaken(var/obj/climbed_thing, var/mob/user)
 	SIGNAL_HANDLER
 	var/list/climbers = LAZYACCESS(current_climbers, climbed_thing)
-	for(var/i in climbers)
-
 	// You cannot shake yourself
 	if(user) // Crates pass null on open because no user
 		if(!LAZYLEN(climbers) || (user in climbers))
@@ -136,6 +135,8 @@
 		if(M.is_incorporeal())
 			continue
 		if(M.lying) //No spamming this on people.
+			continue
+		if(M.pulling == climbed_thing) // Pulling stuff up stairs can get weird
 			continue
 
 		M.Weaken(3)
