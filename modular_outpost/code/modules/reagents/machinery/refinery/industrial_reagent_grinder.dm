@@ -20,6 +20,7 @@
 	// Update neighbours and self for state
 	update_neighbours()
 	update_icon()
+	AddElement(/datum/element/climbable)
 
 /obj/machinery/reagentgrinder/industrial/update_icon()
 	overlays.Cut()

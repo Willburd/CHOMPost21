@@ -114,21 +114,5 @@
 		use_power_oneoff(active_power_usage)
 	return transfered
 
-// Climbing is kinda critical for these
-/obj/machinery/reagent_refinery/verb/climb_on()
-	set name = "Climb structure"
-	set desc = "Climbs onto a structure."
-	set category = "Object"
-	set src in oview(1)
-
-	do_climb(usr)
-
-/obj/machinery/reagent_refinery/MouseDrop_T(mob/target, mob/user)
-	var/mob/living/H = user
-	if(istype(H) && can_climb(H) && target == user)
-		do_climb(target)
-	else
-		return ..()
-
 /obj/machinery/reagent_refinery/on_reagent_change(changetype)
 	update_icon()
