@@ -184,19 +184,23 @@
 /datum/element/climbable/cliff/do_climb(obj/climbed_thing, mob/living/user, delay_time)
 	// Special snowflake handling, because north facing cliffs require half the time
 	var/obj/structure/cliff/C = climbed_thing
-	if(C.is_double_cliff)
-		delay_time /= 2
+	//if(C.is_double_cliff) // Outpost 21 edit - We lack double cliffs
+	//	delay_time /= 2
 	. = ..(climbed_thing, user, delay_time)
 
 /datum/element/climbable/cliff/can_climb(var/obj/climbed_thing, var/mob/living/user, post_climb_check=0)
+	// Outpost 21 edit begin - Cliff always climbable
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/clothing/shoes/shoes = H.shoes
+		climb_delay = 8 SECONDS
 		if(shoes && shoes.rock_climbing)
-			return ..() // Do the other checks too.
+			climb_delay = 3.5 SECONDS
+	return ..() // Do the other checks too.
 
-	to_chat(user, span_warning("\The [climbed_thing] is too steep to climb unassisted."))
-	return FALSE
+	//to_chat(user, span_warning("\The [climbed_thing] is too steep to climb unassisted."))
+	//return FALSE
+	// Outpost 21 edit end
 
 
 // Breaks if climbed while unanchored, railings.
