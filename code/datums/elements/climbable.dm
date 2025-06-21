@@ -1,4 +1,4 @@
-[⚠️ Suspicious Content] ///Climbable element. Allows climbing an object using mousedrag or a verb
+///Climbable element. Allows climbing an object using mousedrag or a verb
 /datum/element/climbable
 	element_flags = ELEMENT_DETACH_ON_HOST_DESTROY|ELEMENT_BESPOKE
 	argument_hash_start_idx = 2
