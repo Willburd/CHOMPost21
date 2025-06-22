@@ -33,8 +33,6 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	anchored = TRUE
 	density = TRUE
 	opacity = FALSE
-	climbable = TRUE
-	climb_delay = 1 SECOND // Ignore this, is set in the actual climb check based on your boots
 	unacidable = TRUE
 	block_turf_edges = TRUE // Don't want turf edges popping up from the cliff edge.
 	plane = TURF_PLANE
@@ -49,6 +47,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	icon_state = "cliff-corner"
 	register_dangerous_to_step()
 	update_icon()
+	AddElement(/datum/element/climbable/cliff)
 
 /obj/structure/cliff/Initialize(mapload)
 	. = ..()
@@ -209,21 +208,6 @@ two tiles on initialization, and which way a cliff is facing may change during m
 			sleep(5)
 			bottom_cliff.fall_off_cliff(L)
 
-/obj/structure/cliff/can_climb(mob/living/user, post_climb_check = FALSE)
-	// Cliff climbing requires climbing gear.
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		var/obj/item/clothing/shoes/shoes = H.shoes
-		if(shoes && shoes.rock_climbing)
-			climb_delay = 8 SECONDS
-			return ..() // Do the other checks too.
-		else
-			climb_delay = 25 SECONDS
-			return ..() // Do the other checks too.
-
-	to_chat(user, span_warning( "\The [src] is too steep to climb."))
-	return FALSE
-
 // This tells AI mobs to not be dumb and step off cliffs willingly.
 /obj/structure/cliff/is_safe_to_step(mob/living/L)
 	if(should_fall(L))
@@ -250,7 +234,6 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	anchored = TRUE
 	density = FALSE
 	opacity = FALSE
-	climbable = FALSE
 	unacidable = TRUE
 	block_turf_edges = FALSE
 	plane = TURF_PLANE
