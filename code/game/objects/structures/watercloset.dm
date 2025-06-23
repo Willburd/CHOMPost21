@@ -510,6 +510,11 @@
 	anchored = TRUE
 	var/busy = 0 	//Something's being washed at the moment
 
+/obj/structure/sink/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/hose_connector/endless_source/water)
+	AddComponent(/datum/component/hose_connector/endless_drain)
+
 /obj/structure/sink/MouseDrop_T(var/obj/thing, var/mob/user) // Outpost 21 edit - obj/item/thing -> obj/item
 	..()
 	// Outpost 21 edit begin - snowflake handling for draining hookah
