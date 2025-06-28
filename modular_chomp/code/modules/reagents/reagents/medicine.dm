@@ -114,7 +114,7 @@
 	taste_mult = 3
 	reagent_state = LIQUID
 	color = "#BF0000"
-	overdose = REAGENTS_OVERDOSE
+	overdose = REAGENTS_OVERDOSE * 0.2
 	overdose_mod = 1.25
 	scannable = 1
 
@@ -124,6 +124,7 @@
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(6 * removed * chem_effective * chem_effective, -2 * removed) // Outpost 21 edit - Chem update rebalance, Reduced from 6 to 8, -1 to -2
+		// M.adjustFireLoss(1 * removed)
 
 /datum/reagent/burncard/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -180,7 +181,7 @@
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#FF6600"
-	overdose = REAGENTS_OVERDOSE
+	overdose = REAGENTS_OVERDOSE * 0.2
 	scannable = 1
 
 /datum/reagent/neotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -190,6 +191,7 @@
 		M.adjustBruteLoss(3 * removed)
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(-2 * removed, 8 * removed * chem_effective * chem_effective) // Outpost 21 edit - Chem update rebalance, Reduced from -1 to -2, 6 to 8
+		// M.adjustBruteLoss(1 * removed)
 
 /datum/reagent/bloodsealer
 	name = REAGENT_BLOODSEALER
@@ -300,20 +302,7 @@
 		// Outpost 21 edit end
 
 //tier 2
-/datum/reagent/juggernog
-	name = REAGENT_JUGGERNOG
-	id = REAGENT_ID_JUGGERNOG
-	description = "An experimental drug that toughens the body to blows and knockdown"
-	taste_description = "bitterness"
-	reagent_state = LIQUID
-	color = "#660066"
-	scannable = 1
-	overdose = REAGENTS_OVERDOSE * 0.25
 
-/datum/reagent/juggernog/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	M.AdjustParalysis(-1)
-	M.AdjustStunned(-1)
-	M.AdjustWeakened(-1)
 
 /datum/reagent/curea
 	name = REAGENT_CUREA
@@ -335,6 +324,10 @@
 	M.remove_a_modifier_of_type(/datum/modifier/deep_wounds)
 	M.remove_a_modifier_of_type(/datum/modifier/hivebot_weaken)
 	M.remove_a_modifier_of_type(/datum/modifier/fire)
+	M.remove_a_modifier_of_type(/datum/modifier/berserk_exhaustion)
+	M.remove_a_modifier_of_type(/datum/modifier/entangled)
+	M.remove_a_modifier_of_type(/datum/modifier/wizfire)
+	M.remove_a_modifier_of_type(/datum/modifier/wizpoison)
 
 //tier 3
 /datum/reagent/modapplying/liquidhealer
