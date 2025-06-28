@@ -122,6 +122,7 @@
 	ADD_NOTICE("Staff Notice: Armored Asset Vehicles","<br>Security forces, in the red armory you'll find a ladder. That ladder takes you to the garage. Use that to store impounded vehicles <br>There's two armored vehicles down there, the tank and APC. Keys are in HoS office and Warden's office respectively, use them however you see fit on code red. Ask a senior if you need driving lessons.",list(/obj/item/stamp/hos))
 	ADD_NOTICE("Memo: SoP","<br>Review your SoP, found in your PDA. E-Shui is starting to crack down on this, understand we're different than NT. Make sure crew are aware; IGNORANCE IS NOT AN EXCUSE!",list(/obj/item/stamp/hos))
 	ADD_NOTICE("Staff Notice: Document Your Arrests!","<br>Document your arrests, stop letting crew run around with empty records and no evidence you had to slap their wrist, especially for severe things! <br>This is on you, if they don't get permanent records, so do your jobs.",list(/obj/item/stamp/ward))
+	ADD_NOTICE("Memo: Shadekin","<br>We know about the shadekin lurking around recently, and got the eggheads in central to come up with something for em. You'll find some new grenades in the armory.",list(/obj/item/stamp/hos))
 	. = ..()
 
 
