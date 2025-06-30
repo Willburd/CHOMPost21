@@ -727,6 +727,7 @@
 	..()
 
 
+
 /datum/species/sergal
 	name = SPECIES_SERGAL
 	name_plural = "Sergals"
