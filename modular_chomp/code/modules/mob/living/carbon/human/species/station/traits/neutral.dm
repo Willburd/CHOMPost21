@@ -38,6 +38,7 @@
 		if(H.reagents.has_reagent(reagent))
 			H.adjust_nutrition(H.reagents.get_reagent_amount(reagent))
 			H.reagents.del_reagent(reagent)
+	/* Outpost 21 edit - Nif removal
 	if(H.nif)
 		var/obj/item/nif/implant = H.nif
 		implant.wear(5)
@@ -47,3 +48,4 @@
 			qdel_null(implant)
 			H.adjust_nutrition(100)
 			to_chat(H, span_critical("Your NIF lets out one last sputter as it finally gives out"))
+	*/

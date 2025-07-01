@@ -738,6 +738,7 @@
 
 	SSrobot_sprites.reload_test_sprites()
 
+/* Outpost 21 edit - Nif removal
 ADMIN_VERB(quick_nif, R_ADMIN, "Quick NIF", "Spawns a NIF into someone in quick-implant mode.", "Fun.Add Nif")
 	var/input_NIF
 	var/mob/living/carbon/human/H = tgui_input_list(user, "Pick a mob with a player","Quick NIF", player_list)
@@ -781,3 +782,4 @@ ADMIN_VERB(quick_nif, R_ADMIN, "Quick NIF", "Spawns a NIF into someone in quick-
 
 	log_and_message_admins("Quick NIF'd [H.real_name] with a [input_NIF].", user)
 	feedback_add_details("admin_verb","QNIF") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+*/
