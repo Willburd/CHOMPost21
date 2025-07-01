@@ -82,7 +82,6 @@ var/list/admin_verbs_admin = list(
 	/client/proc/view_chemical_reaction_logs,
 	/client/proc/makepAI,
 	/datum/admins/proc/paralyze_mob,
-	/client/proc/fixatmos,
 	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	*/

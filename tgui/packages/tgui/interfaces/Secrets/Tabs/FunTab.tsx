@@ -93,6 +93,18 @@ export const FunTab = (props) => {
               recharge SMESs
             </Button>
           </Stack.Item>
+          {/* Outpost 21 edit begin - Outpost admin fun */}
+          <Stack.Item>
+            <Button
+              icon="plug"
+              lineHeight={lineHeightNormal}
+              width={buttonWidthNormal}
+              onClick={() => act('drainpower')}
+            >
+              drain SMESs
+            </Button>
+          </Stack.Item>
+          {/* Outpost 21 edit end */}
         </Stack>
       </Stack.Item>
       <Stack.Item>
@@ -137,6 +149,18 @@ export const FunTab = (props) => {
               THERE CAN ONLY BE-
             </Button>
           </Stack.Item>
+          {/* Outpost 21 edit begin - Outpost admin fun */}
+          <Stack.Item>
+            <Button
+              icon="rocket"
+              lineHeight={lineHeightNormal}
+              width={buttonWidthNormal}
+              onClick={() => act('bsafire')}
+            >
+              BSA strike location
+            </Button>
+          </Stack.Item>
+          {/* Outpost 21 edit end */}
         </Stack>
       </Stack.Item>
       <Stack.Item>
