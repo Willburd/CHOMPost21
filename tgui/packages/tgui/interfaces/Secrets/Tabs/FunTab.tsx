@@ -93,18 +93,6 @@ export const FunTab = (props) => {
               recharge SMESs
             </Button>
           </Stack.Item>
-          {/* Outpost 21 edit begin - Outpost admin fun */}
-          <Stack.Item>
-            <Button
-              icon="plug"
-              lineHeight={lineHeightNormal}
-              width={buttonWidthNormal}
-              onClick={() => act('drainpower')}
-            >
-              drain SMESs
-            </Button>
-          </Stack.Item>
-          {/* Outpost 21 edit end */}
         </Stack>
       </Stack.Item>
       <Stack.Item>
@@ -149,18 +137,6 @@ export const FunTab = (props) => {
               THERE CAN ONLY BE-
             </Button>
           </Stack.Item>
-          {/* Outpost 21 edit begin - Outpost admin fun */}
-          <Stack.Item>
-            <Button
-              icon="rocket"
-              lineHeight={lineHeightNormal}
-              width={buttonWidthNormal}
-              onClick={() => act('bsafire')}
-            >
-              BSA strike location
-            </Button>
-          </Stack.Item>
-          {/* Outpost 21 edit end */}
         </Stack>
       </Stack.Item>
       <Stack.Item>
@@ -372,6 +348,51 @@ export const FunTab = (props) => {
           </Stack.Item>
         </Stack>
       </Stack.Item>
+      {/* Outpost 21 edit begin - Outpost admin fun */}
+      <Stack.Item>
+        <Stack fill>
+          <Stack.Item>
+            <Button
+              icon="plug"
+              lineHeight={lineHeightNormal}
+              width={buttonWidthNormal}
+              onClick={() => act('drainpower')}
+            >
+              drain SMESs
+            </Button>
+          </Stack.Item>
+          <Stack.Item>
+            <Button
+              icon="rocket"
+              lineHeight={lineHeightNormal}
+              width={buttonWidthNormal}
+              onClick={() => act('bsafire')}
+            >
+              BSA strike location
+            </Button>
+          </Stack.Item>
+          <Stack.Item>
+            {/*
+            <Button
+              icon="meteor"
+              lineHeight={lineHeightNormal}
+              width={buttonWidthNormal}
+              onClick={() => act('events')}
+            >
+              Summon Events
+            </Button>
+            */}
+            <NoticeBox
+              mb={-0.5}
+              width={buttonWidthNormal}
+              height={lineHeightNormal}
+            >
+              Your admin button here, coder!
+            </NoticeBox>
+          </Stack.Item>
+        </Stack>
+      </Stack.Item>
+      {/* Outpost 21 edit end */}
     </Stack>
   );
 };
