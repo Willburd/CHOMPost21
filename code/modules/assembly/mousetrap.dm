@@ -96,7 +96,7 @@
 				triggered(H)
 				H.visible_message(span_warning("[H] accidentally steps on [src]."), \
 								  span_warning("You accidentally step on [src]"))
-		if(ismouse(AM))
+		if(ismouse(AM) || istype(AM,/mob/living/simple_mob/vore/alienanimals/jil)) // Outpost 21 edit begin - Jils get snapped too
 			triggered(AM)
 	..()
 

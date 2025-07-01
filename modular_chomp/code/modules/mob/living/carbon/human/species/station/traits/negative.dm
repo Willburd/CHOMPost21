@@ -83,3 +83,15 @@
 
 	activation_message="Your chest hurts..."
 	// Traitgenes edit end
+
+/datum/trait/negative/synth_pain
+	name = "Obligate Pain Simulation"
+	desc = "Due to a structural flaw, hard-coding, or other inherent weakness, your body can feel pain, and you can't turn it off."
+	cost = -4
+	custom_only = FALSE
+	can_take = SYNTHETICS
+	excludes = list(/datum/trait/neutral/synth_cosmetic_pain)
+
+/datum/trait/negative/synth_pain/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	H.synth_cosmetic_pain = TRUE
+	. = ..()

@@ -38,11 +38,9 @@
 	addtimer(CALLBACK(src, PROC_REF(test_fire)), 1 MINUTE, TIMER_DELETE_ME)
 
 /datum/event/bsa_test_fire/proc/test_fire()
-	var/datum/admin_secret_item/fun_secret/shell_location/A = locate() in admin_secrets.items
-	if(A)
-		var/cur_delay = rand(1 SECONDS, 4 SECONDS)
-		addtimer(CALLBACK(A, TYPE_PROC_REF(/datum/admin_secret_item/fun_secret/shell_location,announce), xx, yy, zz, TRUE), cur_delay, TIMER_DELETE_ME)
-	addtimer(CALLBACK(src, PROC_REF(conclude)), 10 SECONDS, TIMER_DELETE_ME)
+	var/datum/bsa_shell_controller/BSA = new /datum/bsa_shell_controller
+	BSA.random_setup(xx, yy, zz)
+	addtimer(CALLBACK(src, PROC_REF(conclude)), 20 SECONDS, TIMER_DELETE_ME)
 
 /datum/event/bsa_test_fire/proc/conclude()
 	command_announcement.Announce("Test-fire has concluded, impact confirmed. Adjusting aim by [rand(2,6)] degrees. Test-fire of bluespace artillery successful. Please have a safe and productive shift.", "Announcement")
