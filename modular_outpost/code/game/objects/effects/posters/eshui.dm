@@ -40,6 +40,33 @@
 	listing_name = "Outpost Wildlife Hazards"
 	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
 
+/decl/poster/eshui/outpost_slimes
+	icon_state="slimes"
+	name = "Breed Slimes Carefully!"
+	desc = "A poster depicting a wave of rainbow and amber slimes. Something seems to have gone terribly wrong..."
+	listing_name = "Breed Slimes Carefully!"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
+
+/decl/poster/eshui/outpost_fruit
+	icon_state="fruit"
+	name = "Gushy Fruiters!"
+	desc = "Everyone's favourite carcinogenic fruit snack, now with all three million and forty six artificial flavors that you can't remember! Contains extra Red76,12,32,12,32, and 19!"
+	listing_name = "Gushy Fruiters!"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
+
+/decl/poster/eshui/outpost_foodimp
+	icon_state="mealsquid"
+	name = "Food Imp"
+	desc = "For when you crave a meal that has feelings!"
+	listing_name = "Food Imp"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
+
+/decl/poster/eshui/outpost_borgwatch
+	icon_state="bigborg"
+	name = "Big Borg Is Watching"
+	desc = "The AI knows what you've done!"
+	listing_name = "Big Borg Is Watching"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
 
 
 
