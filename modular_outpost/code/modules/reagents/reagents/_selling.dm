@@ -684,7 +684,7 @@ GLOBAL_LIST_EMPTY(refined_chems_sold)
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/lye
-	supply_conversion_value = EXPORT_VALUE_UNCOMMON
+	supply_conversion_value = EXPORT_VALUE_COMMON
 	industrial_use = EXPORT_REASON_PRECURSOR
 
 /datum/reagent/fluorosurfactant
