@@ -1897,7 +1897,7 @@
 /area/muriki/rooftop/secgen
 	name = "\improper Security Backup Generator"
 	sound_env = SMALL_ENCLOSED
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
