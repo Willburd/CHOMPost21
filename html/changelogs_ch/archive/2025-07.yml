@@ -1,0 +1,14 @@
+2025-07-02:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed virus databases breaking in Medical Computers
+  TheCaramelion:
+  - bugfix: Fixed Teshari being too healthy
+  - bugfix: Fixed Teshari being too brittle/flammable
+  - bugfix: Fixed Teshari holder sprites
+2025-07-03:
+  Reo:
+  - qol: soap can be wetted to instantly clean tiles as it used to work.
+  - balance: Balances soap so that it's not terrible again. (removed the durability
+      mechanic)
+  Tost:
+  - bugfix: Emergency lights no longer blow up on activation.
