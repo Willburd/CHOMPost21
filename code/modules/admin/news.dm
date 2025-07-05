@@ -136,7 +136,7 @@
 	text = replacetext(text, "<img src =\ref['html/images/eslogo.png']>", "\[eslogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/ntlogo.png']>", "\[ntlogo\]") // Not sure if these would get used but why not
 	text = replacetext(text, "<img src =\ref['html/images/sglogo.png']>", "\[sglogo\]")
-	text = replacetext(text, "<img src =\ref['html/images/trlogo.png']>", "\[trlogo\]")
+	text = replacetext(text, "<img src =\ref['html/images/trader.png']>", "\[trlogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/pclogo.png']>", "\[pclogo\]")
 	// Outpost 21 edit end - Extended logos
 	return text
