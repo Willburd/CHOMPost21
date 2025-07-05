@@ -923,7 +923,7 @@ var/datum/planet/muriki/planet_muriki = null
 	var/probmod = 1
 	var/mob/living/carbon/human/H = L
 	if(istype(H))
-		if(H.mind && H.mind.changeling)
+		if(is_changeling(H))
 			return
 		if(H.species)
 			probmod = H.species.enzyme_contact_mod
