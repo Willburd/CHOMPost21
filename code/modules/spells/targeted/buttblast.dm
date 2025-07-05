@@ -3,6 +3,7 @@
 	desc = "Blasts the booty off of your target."
 	invocation = "PHUK BYUK KER"
 	invocation_type = SpI_SHOUT
+	hud_state = "wiz_butt"
 
 /spell/targeted/buttblast/cast(list/targets)
 	..()

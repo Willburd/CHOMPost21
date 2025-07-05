@@ -51,7 +51,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 				B.data["species"] = "synthetic"
 
 			// Outpost 21 edit begin - changling blood effects
-			B.data["changeling"] = (!isnull(mind) && !isnull(mind.changeling)) || species?.ambulant_blood
+			B.data["changeling"] = (!isnull(mind) && is_changeling(mind)) || species?.ambulant_blood
 			// Outpost 21 edit end
 
 			B.color = B.data["blood_colour"]
@@ -301,7 +301,7 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	B.data["blood_type"] = copytext(src.dna.b_type,1,0)
 
 	// Outpost 21 edit blood - changling blood effects
-	B.data["changeling"] = (!isnull(mind) && !isnull(mind.changeling)) || species?.ambulant_blood
+	B.data["changeling"] = (!isnull(mind) && is_changeling(mind)) || species?.ambulant_blood
 	// Outpost 21 edit end
 
 	// Putting this here due to return shenanigans.
@@ -379,9 +379,10 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 		if(!our)
 			log_debug("Failed to re-initialize blood datums on [src]!")
 			return
-
-
-	if(blood_incompatible(injected.data["blood_type"],our.data["blood_type"],injected.data["species"],our.data["species"]) )
+	if(is_changeling(src)) //Changelings don't reject blood!
+		vessel.add_reagent(REAGENT_ID_BLOOD, amount, injected.data)
+		vessel.update_total()
+	else if(blood_incompatible(injected.data["blood_type"],our.data["blood_type"],injected.data["species"],our.data["species"]) )
 		reagents.add_reagent(REAGENT_ID_TOXIN,amount * 0.5)
 		reagents.update_total()
 	else
