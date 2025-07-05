@@ -88,9 +88,14 @@
 	text = replacetext(text, "\[/grid\]", "</td></tr></table>")
 	text = replacetext(text, "\[row\]", "</td><tr>")
 	text = replacetext(text, "\[cell\]", "<td>")
-	text = replacetext(text, "\[logo\]", "<img src = eslogo.png>") // outpost 21 addition
-	text = replacetext(text, "\[ntlogo\]", "<img src = ntlogo.png>") // Not sure if these would get used but why not
-	text = replacetext(text, "\[sglogo\]", "<img src = sglogo.png>")
+	// outpost 21 begin - extended logos
+	text = replacetext(text, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
+	text = replacetext(text, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+	text = replacetext(text, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>") // Not sure if these would get used but why not
+	text = replacetext(text, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
+	text = replacetext(text, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
+	text = replacetext(text, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>")
+	// outpost 21 end
 	return text
 
 // This is used when reading text that went through paper_markup2html(), to reverse it so that edits don't need to replace everything once more to avoid sanitization.
@@ -126,9 +131,14 @@
 	text = replacetext(text, "</td></tr></table>", "\[/grid\]")
 	text = replacetext(text, "</td><tr>", "\[row\]")
 	text = replacetext(text, "<td>", "\[cell\]")
-	text = replacetext(text, "<img src = eslogo.png>", "\[logo\]") // Outpost 21 edit - use our own logo
-	text = replacetext(text, "<img src = ntlogo.png>", "\[ntlogo\]") // Not sure if these would get used but why not
-	text = replacetext(text, "<img src = sglogo.png>", "\[sglogo\]")
+	// Outpost 21 edit begin - Extended logos
+	text = replacetext(text, "<img src =\ref['html/images/eslogo.png']>", "\[logo\]")
+	text = replacetext(text, "<img src =\ref['html/images/eslogo.png']>", "\[eslogo\]")
+	text = replacetext(text, "<img src =\ref['html/images/ntlogo.png']>", "\[ntlogo\]") // Not sure if these would get used but why not
+	text = replacetext(text, "<img src =\ref['html/images/sglogo.png']>", "\[sglogo\]")
+	text = replacetext(text, "<img src =\ref['html/images/trader.png']>", "\[trlogo\]")
+	text = replacetext(text, "<img src =\ref['html/images/pclogo.png']>", "\[pclogo\]")
+	// Outpost 21 edit end - Extended logos
 	return text
 
 #undef NEWSFILE
