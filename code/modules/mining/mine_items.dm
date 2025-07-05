@@ -256,7 +256,7 @@
 	var/obj/item/stack/flag/F = locate() in get_turf(src)
 
 	var/turf/T = get_turf(src)
-	if(!T || T.is_space()) // || !istype(T,/turf/simulated/mineral)) outpost 21 edit - flags stand anywhere valid
+	if(!T || T.is_space()) // || !ismineralturf(T)) outpost 21 edit - flags stand anywhere valid
 		to_chat(user, "The flag won't stand up in this terrain.")
 		return
 

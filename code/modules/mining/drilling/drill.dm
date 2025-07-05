@@ -160,7 +160,7 @@
 		return
 
 	//Drill through the flooring, if any.
-	if(istype(get_turf(src), /turf/simulated/mineral))
+	if(ismineralturf(get_turf(src)))
 		var/turf/simulated/mineral/M = get_turf(src)
 		M.GetDrilled()
 	// Outpost 21 edit begin -extract gasses!

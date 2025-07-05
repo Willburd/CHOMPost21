@@ -357,15 +357,16 @@
 		t = replacetext(t, "\[grid\]", "<table>")
 		t = replacetext(t, "\[/grid\]", "</td></tr></table>")
 		t = replacetext(t, "\[row\]", "</td><tr>")
-		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
+		t = replacetext(t, "\[/row\]", "")
 		t = replacetext(t, "\[cell\]", "<td>")
-		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
+		t = replacetext(t, "\[/cell\]", "")
 		// Outpost 21 edit begin - use our logo
-		t = replacetext(t, "\[logo\]", "<img src = https://raw.githubusercontent.com/Willburd/CHOMPost21/master/html/images/eslogo.png>")
-		t = replacetext(t, "\[redlogo\]", "<img src = https://raw.githubusercontent.com/Willburd/CHOMPost21/master/html/images/redntlogo.png>")
-		t = replacetext(t, "\[sglogo\]", "<img src = https://raw.githubusercontent.com/Willburd/CHOMPost21/master/html/images/sglogo.png>")
-		t = replacetext(t, "\[ntlogo\]", "<img src = https://raw.githubusercontent.com/Willburd/CHOMPost21/master/html/images/ntlogo.png>")
-		t = replacetext(t, "\[pclogo\]", "<img src = https://raw.githubusercontent.com/Willburd/CHOMPost21/master/html/images/pclogo.png>")
+		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
+		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+		t = replacetext(t, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>")
+		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
+		t = replacetext(t, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
+		t = replacetext(t, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>") // Not available on virgo // CHOMPEnable
 		// Outpost 21 edit end
 
 		t = "<font face=\"[deffont]\" color=[P ? P.colour : "black"]>[t]</font>"
@@ -380,10 +381,11 @@
 		t = replacetext(t, "\[/table\]", "")
 		t = replacetext(t, "\[row\]", "")
 		t = replacetext(t, "\[cell\]", "")
-		t = replacetext(t, "\[/cell\]", "") //CHOMPEDIT: nuking closing statements for cells.
-		t = replacetext(t, "\[/row\]", "") //CHOMPEDIT: nuking closing statements for rows.
+		t = replacetext(t, "\[/cell\]", "")
+		t = replacetext(t, "\[/row\]", "")
 		// Outpost 21 edit begin - handle the other logos and ours too
 		t = replacetext(t, "\[logo\]", "")
+		t = replacetext(t, "\[eslogo\]", "")
 		t = replacetext(t, "\[ntlogo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 		t = replacetext(t, "\[trlogo\]", "")
