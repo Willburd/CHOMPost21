@@ -478,7 +478,7 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 	t = replacetext(t, "<tr>", "\[row\]")
 	t = replacetext(t, "<td>", "\[cell\]")
 	// Outpost 21 edit begin - logos edited
-	t = replacetext(t, "<img src =ref['html/images/eslogo.png>", "\[logo\]")
+	t = replacetext(t, "<img src=\ref['html/images/eslogo.png']>", "\[logo\]")
 	t = replacetext(t, "<img src=\ref['html/images/redntlogo.png']>", "\[redlogo\]")
 	t = replacetext(t, "<img src=\ref['html/images/sglogo.png']>", "\[sglogo\]")
 	t = replacetext(t, "<img src=\ref['html/images/ntlogo.png']>", "\[ntlogo\]")
