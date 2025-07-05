@@ -434,7 +434,11 @@
 // Outpost 21 edit end
 
 /obj/item/stack/attackby(obj/item/W as obj, mob/user as mob)
-	if (istype(W, /obj/item/stack))
+	if(istype(W, /obj/item/gripper))
+		var/obj/item/gripper/G = W
+		G.consolidate_stacks(src)
+
+	else if(istype(W, /obj/item/stack))
 		var/obj/item/stack/S = W
 		src.transfer_to(S)
 

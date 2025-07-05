@@ -59,7 +59,7 @@
 
 	var/turf/our_turf = get_turf(user)
 
-	var/final = "<head><style>body {font-family: Verdana; background-color: #C1BDA3;}</style></head><center><h3>[using_map.company_name] Security Citation</h3><hr>This security citation has been issued to <br><big>[capitalize(ticket_name)]</big></center><b>Reason</b>:<br><i>[details]</i><hr><center><small>[orders]</small><br><img src = https://raw.githubusercontent.com/Willburd/CHOMPost21/master/html/images/eslogo.png></center>" // Outpost 21 edit - use ES logo, citation enhancements
+	var/final = "<head><style>body {font-family: Verdana; background-color: #C1BDA3;}</style></head><center><h3>Nanotrasen Security Citation</h3><hr>This security citation has been issued to <br><big>[capitalize(ticket_name)]</big></center><b>Reason</b>:<br><i>[details]</i><hr><center><small>See your local representative at Central Command after the shift is over to resolve this issue.</small><br><img src=\ref['html/images/ntlogo.png']></center>" // Outpost 21 edit - use ES logo, citation 
 
 	var/obj/item/paper/sec_ticket/p = new /obj/item/paper/sec_ticket(our_turf)
 
