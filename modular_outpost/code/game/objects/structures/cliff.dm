@@ -39,21 +39,23 @@ two tiles on initialization, and which way a cliff is facing may change during m
 
 	var/uphill_penalty = 30 // Odds of a projectile not making it up the cliff.
 
+/obj/structure/cliff/Initialize(mapload)
+	..()
+	icon_state = "cliff"
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/cliff/LateInitialize()
+	register_dangerous_to_step()
+	AddElement(/datum/element/climbable/cliff)
+	update_icon()
+
 /obj/structure/cliff/corner
 	icon_state = "planner-corner"
 
 /obj/structure/cliff/corner/Initialize(mapload)
-	. = ..()
+	..()
 	icon_state = "cliff-corner"
-	register_dangerous_to_step()
-	update_icon()
-	AddElement(/datum/element/climbable/cliff)
-
-/obj/structure/cliff/Initialize(mapload)
-	. = ..()
-	icon_state = "cliff"
-	register_dangerous_to_step()
-	update_icon()
+	return INITIALIZE_HINT_LATELOAD
 
 /obj/structure/cliff/Destroy()
 	unregister_dangerous_to_step()
