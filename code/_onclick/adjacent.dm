@@ -75,7 +75,7 @@ Quick adjacency (to turf):
 	* Must be on a turf
 	* In the case of a multiple-tile object, all valid locations are checked for adjacency.
 
-	Note: Multiple-tile objects are created when the bound_width and bound_height are creater than the tile size.
+	Note: Multiple-tile objects are created when the bound_width_ISSUEHERE and bound_height_ISSUEHERE are creater than the tile size.
 	This is not used in stock /tg/station currently.
 */
 /atom/movable/Adjacent(var/atom/neighbor)

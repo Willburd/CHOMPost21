@@ -6,7 +6,7 @@
 	if(!locs || !locs.len)
 		return TRUE
 
-	if(bound_height > 32 || bound_width > 32)
+	if(bound_height_ISSUEHERE > 32 || bound_width_ISSUEHERE > 32)
 		var/safe_move = TRUE
 		var/list/checked_turfs = list()
 		for(var/turf/T in locs)

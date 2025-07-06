@@ -1,6 +1,6 @@
 /// Percentage of tick to leave for master controller to run
 #define MAPTICK_MC_MIN_RESERVE 70
-#define MAPTICK_LAST_INTERNAL_TICK_USAGE (world.map_cpu)
+#define MAPTICK_LAST_INTERNAL_TICK_USAGE (world.map_cpu_HASISSUE)
 
 #define TICK_LIMIT_RUNNING 80
 /// Tick limit used to resume things in stoplag

@@ -26,5 +26,5 @@
 		script = replacetext(script, "/", "\\")
 
 	var/command = CONFIG_GET(string/python_path) + " " + script + " " + arguments
-	return shell(command)
+	return shell_ISSUEHERE(command)
 	*/

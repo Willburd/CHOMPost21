@@ -415,26 +415,26 @@
 
 /obj/machinery/door/blast/multi_tile/four_tile_ver_sec
 	icon = 'icons/obj/doors/1x4blast_vert_sec.dmi'
-	bound_height = 128
+	bound_height_ISSUEHERE = 128
 	width = 4
 	dir = NORTH
 	autoclose = TRUE
 
 /obj/machinery/door/blast/multi_tile/four_tile_ver
 	icon = 'icons/obj/doors/1x4blast_vert.dmi'
-	bound_height = 128
+	bound_height_ISSUEHERE = 128
 	width = 4
 	dir = NORTH
 
 /obj/machinery/door/blast/multi_tile/three_tile_ver
 	icon = 'icons/obj/doors/1x3blast_vert.dmi'
-	bound_height = 96
+	bound_height_ISSUEHERE = 96
 	width = 3
 	dir = NORTH
 
 /obj/machinery/door/blast/multi_tile/two_tile_ver
 	icon = 'icons/obj/doors/1x2blast_vert.dmi'
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 	width = 2
 	dir = NORTH
 
@@ -445,26 +445,26 @@
 
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec
 	icon = 'icons/obj/doors/1x4blast_hor_sec.dmi'
-	bound_width = 128
+	bound_width_ISSUEHERE = 128
 	width = 4
 	dir = EAST
 	autoclose = TRUE
 
 /obj/machinery/door/blast/multi_tile/four_tile_hor
 	icon = 'icons/obj/doors/1x4blast_hor.dmi'
-	bound_width = 128
+	bound_width_ISSUEHERE = 128
 	width = 4
 	dir = EAST
 
 /obj/machinery/door/blast/multi_tile/three_tile_hor
 	icon = 'icons/obj/doors/1x3blast_hor.dmi'
-	bound_width = 96
+	bound_width_ISSUEHERE = 96
 	width = 3
 	dir = EAST
 
 /obj/machinery/door/blast/multi_tile/two_tile_hor
 	icon = 'icons/obj/doors/1x2blast_hor.dmi'
-	bound_width = 64
+	bound_width_ISSUEHERE = 64
 	width = 2
 	dir = EAST
 

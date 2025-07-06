@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "unknown"
 	plane = PLANE_LIGHTING_ABOVE //In case we color them
-	luminosity = 0
+	luminosity_ISSUEHERE = 0
 	mouse_opacity = 0
 	var/lightswitch = 1
 
@@ -60,7 +60,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 
 /area/Initialize(mapload)
 	. = ..()
-	luminosity = !(dynamic_lighting)
+	luminosity_ISSUEHERE = !(dynamic_lighting)
 	icon_state = ""
 	return INITIALIZE_HINT_LATELOAD // Areas tradiationally are initialized AFTER other atoms.
 

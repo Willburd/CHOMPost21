@@ -8,7 +8,7 @@ GLOBAL_LIST_EMPTY(holoposters)
 	use_power = 1
 	idle_power_usage = 80
 	power_channel = ENVIRON
-	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
+	vis_flags_ISSUEHERE = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 	var/icon_forced = FALSE
 	var/examine_addon = "It appears to be powered off."
 	var/mytimer

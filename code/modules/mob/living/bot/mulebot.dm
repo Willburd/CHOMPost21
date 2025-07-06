@@ -47,9 +47,9 @@
 	else
 		homeName = "Unset"
 
-	suffix = num2text(++amount) // Starts from 1
+	suffix_ISSUEHERE = num2text(++amount) // Starts from 1
 
-	name = "Mulebot #[suffix]"
+	name = "Mulebot #[suffix_ISSUEHERE]"
 
 /mob/living/bot/mulebot/MouseDrop_T(var/atom/movable/C, var/mob/user)
 	if(user.stat)
@@ -66,12 +66,12 @@
 /mob/living/bot/mulebot/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
 	if(!ui)
-		ui = new(user, src, "MuleBot", "Mulebot [suffix ? "([suffix])" : ""]")
+		ui = new(user, src, "MuleBot", "Mulebot [suffix_ISSUEHERE ? "([suffix_ISSUEHERE])" : ""]")
 		ui.open()
 
 /mob/living/bot/mulebot/tgui_data(mob/user)
 	var/list/data = ..()
-	data["suffix"] = suffix
+	data["suffix"] = suffix_ISSUEHERE
 	data["power"] = on
 	data["issillicon"] = issilicon(user)
 	data["load"] = load
@@ -116,7 +116,7 @@
 			var/new_dest
 			var/list/beaconlist = GetBeaconList()
 			if(beaconlist.len)
-				new_dest = tgui_input_list(ui.user, "Select new home tag", "Mulebot [suffix ? "([suffix])" : ""]", beaconlist)
+				new_dest = tgui_input_list(ui.user, "Select new home tag", "Mulebot [suffix_ISSUEHERE ? "([suffix_ISSUEHERE])" : ""]", beaconlist)
 			else
 				tgui_alert_async(ui.user, "No destination beacons available.")
 			if(new_dest)
@@ -154,7 +154,7 @@
 			var/new_dest
 			var/list/beaconlist = GetBeaconList()
 			if(beaconlist.len)
-				new_dest = tgui_input_list(user, "Select new destination tag", "Mulebot [suffix ? "([suffix])" : ""]", beaconlist)
+				new_dest = tgui_input_list(user, "Select new destination tag", "Mulebot [suffix_ISSUEHERE ? "([suffix_ISSUEHERE])" : ""]", beaconlist)
 			else
 				tgui_alert_async(user, "No destination beacons available.")
 			if(new_dest)

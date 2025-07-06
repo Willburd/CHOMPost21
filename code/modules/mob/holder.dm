@@ -76,8 +76,8 @@ var/list/holder_mob_icon_cache = list()
 	ASSERT(ismob(held))
 	. = ..()
 	held_mob = held
-	original_vis_flags = held.vis_flags
-	held.vis_flags = VIS_INHERIT_ID|VIS_INHERIT_LAYER|VIS_INHERIT_PLANE
+	original_vis_flags = held.vis_flags_ISSUEHERE
+	held.vis_flags_ISSUEHERE = VIS_INHERIT_ID|VIS_INHERIT_LAYER|VIS_INHERIT_PLANE
 	vis_contents += held
 	name = held.name
 	original_transform = held.transform
@@ -87,7 +87,7 @@ var/list/holder_mob_icon_cache = list()
 	if(thing == held_mob)
 		held_mob.transform = original_transform
 		held_mob.update_transform() //VOREStation edit
-		held_mob.vis_flags = original_vis_flags
+		held_mob.vis_flags_ISSUEHERE = original_vis_flags
 		held_mob = null
 	..()
 
@@ -110,7 +110,7 @@ var/list/holder_mob_icon_cache = list()
 	if (held_mob.loc == src || isnull(held_mob.loc))
 		held_mob.transform = original_transform
 		held_mob.update_transform()
-		held_mob.vis_flags = original_vis_flags
+		held_mob.vis_flags_ISSUEHERE = original_vis_flags
 		held_mob.reset_view(null)
 		held_mob.forceMove(get_turf(src))
 		held_mob = null

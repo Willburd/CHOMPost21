@@ -16,7 +16,7 @@ SUBSYSTEM_DEF(server_maint)
 	var/cleanup_ticker = 0
 
 /*/datum/controller/subsystem/server_maint/PreInit()
-	world.hub_password = "" *///quickly! before the hubbies see us.
+	world.hub_password_HASISSUE = "" *///quickly! before the hubbies see us.
 
 /datum/controller/subsystem/server_maint/Initialize()
 	if (fexists("tmp/"))
@@ -81,7 +81,7 @@ SUBSYSTEM_DEF(server_maint)
 				QDEL_IN(C, 1) //to ensure they get our message before getting disconnected
 				continue*/
 
-		if (!(!C || world.time - C.connection_time < PING_BUFFER_TIME || C.inactivity >= (wait-1)))
+		if (!(!C || world.time - C.connection_time < PING_BUFFER_TIME || C.inactivity_ISSUEHERE >= (wait-1)))
 			winset(C, null, "command=.update_ping+[num2text(world.time+world.tick_lag*TICK_USAGE_REAL/100, 32)]")
 
 		if (MC_TICK_CHECK) //one day, when ss13 has 1000 people per server, you guys are gonna be glad I added this tick check

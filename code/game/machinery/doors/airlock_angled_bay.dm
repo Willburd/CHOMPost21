@@ -248,7 +248,7 @@
 	var/icon/final = icon('icons/effects/effects.dmi', "nothing")
 	if(width > 1)
 		var/pixel_width = world.icon_size * width
-		final.Crop(1,1,pixel_width,pixel_width)
+		final.Crop_ISSUEHERE(1,1,pixel_width,pixel_width)
 	final.Insert(door_closed, "door_closed")
 	final.Insert(door_open, "door_open")
 	final.Insert(door_locked, "door_locked")
@@ -457,11 +457,11 @@
 
 /obj/machinery/door/airlock/angled_bay/double/proc/SetBounds()
 	if(dir & 3) // weird, but their icons are 'backwards' so whatever
-		bound_width = width * world.icon_size
-		bound_height = world.icon_size
+		bound_width_ISSUEHERE = width * world.icon_size
+		bound_height_ISSUEHERE = world.icon_size
 	else
-		bound_width = world.icon_size
-		bound_height = width * world.icon_size
+		bound_width_ISSUEHERE = world.icon_size
+		bound_height_ISSUEHERE = width * world.icon_size
 
 #undef FILL_NONE
 #undef FILL_METAL

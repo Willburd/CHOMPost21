@@ -391,7 +391,7 @@
 			item_overlay.icon = src.icon
 			item_overlay.icon_state = "hepme" //the creature deserves its horrible end
 
-		item_overlay.vis_flags = VIS_INHERIT_ID //gotta reapply
+		item_overlay.vis_flags_ISSUEHERE = VIS_INHERIT_ID //gotta reapply
 		item_overlay.appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PASS_MOUSE
 
 		item_overlay.plane = src.plane

@@ -95,7 +95,7 @@
 		//cropped by a transparent box of length-N pixel size
 		if(N+32>length)
 			var/icon/II = new(icon, icon_state)
-			II.DrawBox(null,1,(length-N),32,32)
+			II.DrawBox_ISSUEHERE(null,1,(length-N),32,32)
 			X.icon = II
 		else
 			X.icon = base_icon

@@ -217,5 +217,5 @@
 	desc = "Remains of some unfortunate shuttlecraft. Completely unrepairable."
 	icon = 'icons/mecha/mecha64x64.dmi'
 	icon_state = "shuttle_standard-broken"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64

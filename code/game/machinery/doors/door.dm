@@ -63,11 +63,11 @@
 
 	if(width > 1)
 		if(dir in list(EAST, WEST))
-			bound_width = width * world.icon_size
-			bound_height = world.icon_size
+			bound_width_ISSUEHERE = width * world.icon_size
+			bound_height_ISSUEHERE = world.icon_size
 		else
-			bound_width = world.icon_size
-			bound_height = width * world.icon_size
+			bound_width_ISSUEHERE = world.icon_size
+			bound_height_ISSUEHERE = width * world.icon_size
 
 	health = maxhealth
 	update_icon()
@@ -507,11 +507,11 @@
 	. = ..()
 	if(width > 1)
 		if(dir in list(EAST, WEST))
-			bound_width = width * world.icon_size
-			bound_height = world.icon_size
+			bound_width_ISSUEHERE = width * world.icon_size
+			bound_height_ISSUEHERE = world.icon_size
 		else
-			bound_width = world.icon_size
-			bound_height = width * world.icon_size
+			bound_width_ISSUEHERE = world.icon_size
+			bound_height_ISSUEHERE = width * world.icon_size
 
 	update_nearby_tiles()
 

@@ -237,8 +237,8 @@
 			W.loc = src
 
 			var/icon/test = getFlatIcon(W)
-			test.Shift(NORTH,1)
-			test.Shift(EAST,6)
+			test.Shift_ISSUEHERE(NORTH,1)
+			test.Shift_ISSUEHERE(EAST,6)
 			add_overlay(test)
 
 	return ..()

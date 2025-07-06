@@ -386,14 +386,14 @@
 
 /obj/structure/hull_corner/long_vert
 	icon = 'icons/turf/wall_masks32x64.dmi'
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/structure/hull_corner/long_vert/get_dirs_to_test()
 	return list(dir, turn(dir,90), turn(dir,-90))
 
 /obj/structure/hull_corner/long_horiz
 	icon = 'icons/turf/wall_masks64x32.dmi'
-	bound_width = 64
+	bound_width_ISSUEHERE = 64
 
 /obj/structure/hull_corner/long_horiz/get_dirs_to_test()
 	return list(dir, turn(dir,90), turn(dir,-90))

@@ -11,7 +11,7 @@
 	maxhealth = 400
 	deflect_chance = 30
 	max_temperature = 20000 //A ship meant to travel the void
-	infra_luminosity = 3
+	infra_luminosity_ISSUEHERE = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/hades
 	internal_damage_threshold = 40
 	force = 10

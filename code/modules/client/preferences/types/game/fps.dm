@@ -10,7 +10,7 @@
 	return -1
 
 /datum/preference/numeric/fps/apply_to_client(client/client, value)
-	client.fps = (value < 0) ? RECOMMENDED_FPS : value
+	client.fps_ISSUEHERE = (value < 0) ? RECOMMENDED_FPS : value
 
 /datum/preference/numeric/fps/compile_constant_data()
 	var/list/data = ..()

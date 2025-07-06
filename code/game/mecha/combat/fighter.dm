@@ -21,7 +21,7 @@
 	health = 400
 	maxhealth = 400
 
-	infra_luminosity = 6
+	infra_luminosity_ISSUEHERE = 6
 
 	opacity = FALSE
 
@@ -31,8 +31,8 @@
 	stomp_sound_2 = 'sound/mecha/fighter/engine_mid_fighter_move.ogg' // CHOMPedit: Fix for additional move sound on Chomp mecha.
 	swivel_sound = 'sound/mecha/fighter/engine_mid_boost_01.ogg'
 
-	bound_height = 64
-	bound_width = 64
+	bound_height_ISSUEHERE = 64
+	bound_width_ISSUEHERE = 64
 
 	max_hull_equip = 2
 	max_weapon_equip = 2
@@ -311,8 +311,8 @@
 	desc = "Remains of some unfortunate gunpod. Completely unrepairable."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "gunpod-broken"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 /datum/category_item/catalogue/technology/gunpod
 	name = "Voidcraft - Gunpod"
@@ -348,8 +348,8 @@
 	desc = "Remains of some unfortunate fighter. Completely unrepairable."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "baron-broken"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 /datum/category_item/catalogue/technology/baron
 	name = "Voidcraft - Baron"
@@ -385,8 +385,8 @@
 	desc = "Remains of some unfortunate fighter. Completely unrepairable."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "scoralis-broken"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 /datum/category_item/catalogue/technology/scoralis
 	name = "Voidcraft - Scoralis"
@@ -422,8 +422,8 @@
 	desc = "Remains of some unfortunate fighter. Completely unrepairable."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "allure-broken"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 /datum/category_item/catalogue/technology/allure
 	name = "Voidcraft - Allure"
@@ -459,8 +459,8 @@
 	desc = "Remains of some unfortunate fighter. Completely unrepairable."
 	icon = 'icons/mecha/fighters64x64.dmi'
 	icon_state = "pinnace-broken"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 /datum/category_item/catalogue/technology/pinnace
 	name = "Voidcraft - Pinnace"

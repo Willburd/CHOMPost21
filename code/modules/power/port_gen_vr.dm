@@ -314,8 +314,8 @@
 	desc = "A power source harnessing a small black hole."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "bigdice"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 	power_gen = 30000
 	irradiate = FALSE // Green energy!
 	can_buckle = FALSE
@@ -484,8 +484,8 @@
 			However, due to its construction and size it is nearly impossible to break apart. It still can be moved if need be with special tools."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "alteviangen"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 	anchored = TRUE
 	power_gen = 250000
 

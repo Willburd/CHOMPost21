@@ -21,7 +21,7 @@
 		if(!isliving(player)) continue //We only care for living players
 		var/mob/living/L = player
 		players += 1
-		if(L.client.inactivity > INACTIVITY_CAP)
+		if(L.client.inactivity_ISSUEHERE > INACTIVITY_CAP)
 			inactives += 1
 			continue //Anyone who hasn't done anything in 15 minutes is likely too busy
 		var/area_name = get_area_name(L)
@@ -37,10 +37,10 @@
 
 
 		for(var/mob/living/L in area_players)
-			message += "[L.name] ([L.key]) at ([L.x];[L.y]) has been inactive for [round(L.client.inactivity / (60 SECONDS))] minutes. \n"
+			message += "[L.name] ([L.key]) at ([L.x];[L.y]) has been inactive for [round(L.client.inactivity_ISSUEHERE / (60 SECONDS))] minutes. \n"
 
 
-	message += "#### Over all, there are [players] eligible players, of which [inactives] were hidden due to inactivity.  ####"
+	message += "#### Over all, there are [players] eligible players, of which [inactives] were hidden due to inactivity_ISSUEHERE.  ####"
 	to_chat(usr, span_notice(message))
 
 #undef INACTIVITY_CAP

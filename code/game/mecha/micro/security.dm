@@ -1,14 +1,14 @@
 /obj/mecha/micro/sec/moved_inside(var/mob/living/carbon/human/H as mob)
 	if(..())
 		if(H.client)
-			H.client.mouse_pointer_icon = file("icons/mecha/mecha_mouse.dmi")
+			H.client.mouse_pointer_icon_ISSUEHERE = file("icons/mecha/mecha_mouse.dmi")
 		return 1
 	else
 		return 0
 
 /obj/mecha/micro/sec/go_out()
 	if(src.occupant && src.occupant.client)
-		src.occupant.client.mouse_pointer_icon = initial(src.occupant.client.mouse_pointer_icon)
+		src.occupant.client.mouse_pointer_icon_ISSUEHERE = initial(src.occupant.client.mouse_pointer_icon_ISSUEHERE)
 	..()
 	return
 
@@ -23,7 +23,7 @@
 	step_energy_drain = 4 // less efficient than base micromech, but still a micromech.
 	deflect_chance = 10
 	max_temperature = 15000
-	infra_luminosity = 6
+	infra_luminosity_ISSUEHERE = 6
 	wreckage = /obj/effect/decal/mecha_wreckage/micro/sec/polecat
 	internal_damage_threshold = 35
 	max_equip = 3

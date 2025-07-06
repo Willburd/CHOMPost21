@@ -116,7 +116,7 @@
 /obj/effect/overlay/vis
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	anchored = TRUE
-	vis_flags = VIS_INHERIT_DIR
+	vis_flags_ISSUEHERE = VIS_INHERIT_DIR
 	///When detected to be unused it gets set to world.time, after a while it gets removed
 	var/unused = 0
 	///overlays which go unused for this amount of time get cleaned up
@@ -143,7 +143,7 @@
 	appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	alpha = 0
-	vis_flags = NONE
+	vis_flags_ISSUEHERE = NONE
 	blocks_emissive = FALSE
 
 /obj/effect/overlay/light_visible/Destroy(force)
@@ -159,7 +159,7 @@
 	plane = PLANE_O_LIGHTING_VISUAL
 	appearance_flags = RESET_COLOR | RESET_ALPHA | RESET_TRANSFORM
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	vis_flags = NONE
+	vis_flags_ISSUEHERE = NONE
 	alpha = 110
 	blocks_emissive = FALSE
 
@@ -187,5 +187,5 @@
 	anchored = TRUE
 	plane = FLOAT_PLANE
 	layer = FLOAT_LAYER
-	vis_flags = VIS_INHERIT_ID
+	vis_flags_ISSUEHERE = VIS_INHERIT_ID
 	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PIXEL_SCALE

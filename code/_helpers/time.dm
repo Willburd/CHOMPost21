@@ -125,7 +125,7 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 
 //Increases delay as the server gets more overloaded,
 //as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
-#define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)
+#define DELTA_CALC max(((max(TICK_USAGE, world.cpu_HASISSUE) / 100) * max(Master.sleep_delta-1,1)), 1)
 
 //returns the number of ticks slept
 /proc/stoplag(initial_delay)

@@ -206,9 +206,9 @@
 		highest = affected_dynamic_lights[i]
 	if(highest == affecting_dynamic_lumi)
 		return
-	luminosity -= affecting_dynamic_lumi
+	luminosity_ISSUEHERE -= affecting_dynamic_lumi
 	affecting_dynamic_lumi = highest
-	luminosity += affecting_dynamic_lumi
+	luminosity_ISSUEHERE += affecting_dynamic_lumi
 
 
 ///Helper to change several lighting overlay settings.

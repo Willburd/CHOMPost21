@@ -287,7 +287,7 @@ when portals are shortly lived, or when portals are made to be obvious with spec
 
 	var/in_vis_contents = FALSE
 	for(var/obj/effect/map_effect/portal/P as anything in other_master.portal_lines + other_master)
-		if(P in true_turf.vis_locs)
+		if(P in true_turf.vis_locs_ISSUEHERE)
 			in_vis_contents = TRUE
 			break
 

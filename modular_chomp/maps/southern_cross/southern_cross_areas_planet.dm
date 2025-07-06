@@ -98,7 +98,7 @@
 /area/surface/outside/wilderness/skylands/empty
 	name = "Sky"
 	icon_state = "red"
-	luminosity = 1
+	luminosity_ISSUEHERE = 1
 */
 
 

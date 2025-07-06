@@ -53,7 +53,7 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 	src.user = username
 	src.password = password_handler
 	src.default_cursor = cursor_handler
-	_db_con = _dm_db_new_con()
+	_db_con = _dm_db_new_con_ISSUEHERE()
 
 /DBConnection/proc/Connect(dbi_handler=src.dbi,user_handler=src.user,password_handler=src.password,cursor_handler)
 	if(!CONFIG_GET(flag/sql_enabled))
@@ -61,18 +61,18 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 	if(!src) return 0
 	cursor_handler = src.default_cursor
 	if(!cursor_handler) cursor_handler = Default_Cursor
-	return _dm_db_connect(_db_con,dbi_handler,user_handler,password_handler,cursor_handler,null)
+	return _dm_db_connect_ISSUEHERE(_db_con,dbi_handler,user_handler,password_handler,cursor_handler,null)
 
-/DBConnection/proc/Disconnect() return _dm_db_close(_db_con)
+/DBConnection/proc/Disconnect() return _dm_db_close_ISSUEHERE(_db_con)
 
 /DBConnection/proc/IsConnected()
 	if(!CONFIG_GET(flag/sql_enabled)) return 0
-	var/success = _dm_db_is_connected(_db_con)
+	var/success = _dm_db_is_connected_ISSUEHERE(_db_con)
 	return success
 
-/DBConnection/proc/Quote(str) return _dm_db_quote(_db_con,str)
+/DBConnection/proc/Quote(str) return _dm_db_quote_ISSUEHERE(_db_con,str)
 
-/DBConnection/proc/ErrorMsg() return _dm_db_error_msg(_db_con)
+/DBConnection/proc/ErrorMsg() return _dm_db_error_msg_ISSUEHERE(_db_con)
 /DBConnection/proc/SelectDB(database_name,dbi)
 	if(IsConnected()) Disconnect()
 	//return Connect("[dbi?"[dbi]":"dbi:mysql:[database_name]:[DB_SERVER]:[DB_PORT]"]",user,password)
@@ -84,7 +84,7 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 	if(sql_query) src.sql = sql_query
 	if(connection_handler) src.db_connection = connection_handler
 	if(cursor_handler) src.default_cursor = cursor_handler
-	_db_query = _dm_db_new_query()
+	_db_query = _dm_db_new_query_ISSUEHERE()
 	return ..()
 
 
@@ -102,19 +102,19 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 
 /datum/db_query/proc/Execute(sql_query=src.sql,cursor_handler=default_cursor)
 	Close()
-	return _dm_db_execute(_db_query,sql_query,db_connection._db_con,cursor_handler,null)
+	return _dm_db_execute_ISSUEHERE(_db_query,sql_query,db_connection._db_con,cursor_handler,null)
 
-/datum/db_query/proc/NextRow() return _dm_db_next_row(_db_query,item,conversions)
+/datum/db_query/proc/NextRow() return _dm_db_next_row_ISSUEHERE(_db_query,item,conversions)
 
-/datum/db_query/proc/RowsAffected() return _dm_db_rows_affected(_db_query)
+/datum/db_query/proc/RowsAffected() return _dm_db_rows_affected_ISSUEHERE(_db_query)
 
-/datum/db_query/proc/RowCount() return _dm_db_row_count(_db_query)
+/datum/db_query/proc/RowCount() return _dm_db_row_count_ISSUEHERE(_db_query)
 
-/datum/db_query/proc/ErrorMsg() return _dm_db_error_msg(_db_query)
+/datum/db_query/proc/ErrorMsg() return _dm_db_error_msg_ISSUEHERE(_db_query)
 
 /datum/db_query/proc/Columns()
 	if(!columns)
-		columns = _dm_db_columns(_db_query,/DBColumn)
+		columns = _dm_db_columns_ISSUEHERE(_db_query,/DBColumn)
 	return columns
 
 /datum/db_query/proc/GetRowData()
@@ -132,7 +132,7 @@ var/DB_PORT = 3306 // This is the port your MySQL server is running on (3306 is 
 	item.len = 0
 	columns = null
 	conversions = null
-	return _dm_db_close(_db_query)
+	return _dm_db_close_ISSUEHERE(_db_query)
 
 /datum/db_query/proc/Quote(str)
 	return db_connection.Quote(str)

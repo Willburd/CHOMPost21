@@ -12,7 +12,7 @@
 	create_reagents(500)
 
 /obj/effect/effect/smoke/chem/Destroy()
-	walk(src, 0) // Because we might have called walk_to, we must stop the walk loop or BYOND keeps an internal reference to us forever.
+	walk(src, 0) // Because we might have called walk_to_ISSUEHERE, we must stop the walk loop or BYOND keeps an internal reference to us forever.
 	return ..()
 
 /obj/effect/effect/smoke/chem/transparent
@@ -179,7 +179,7 @@
 	smoke.set_dir(pick(GLOB.cardinal))
 	smoke.pixel_x = -32 + rand(-8, 8)
 	smoke.pixel_y = -32 + rand(-8, 8)
-	walk_to(smoke, T)
+	walk_to_ISSUEHERE(smoke, T)
 	if(initial(smoke.opacity))
 		smoke.set_opacity(1)		//switching opacity on after the smoke has spawned, and then
 	var/lifespan = 150 + rand(0, 20)

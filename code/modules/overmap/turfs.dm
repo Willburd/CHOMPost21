@@ -11,7 +11,7 @@ GLOBAL_LIST_EMPTY(map_sectors)
 	icon = 'icons/turf/space.dmi'
 	icon_state = "map"
 	alpha = 200
-	vis_flags = VIS_INHERIT_ID // disable VIS_INHERIT_PLANE
+	vis_flags_ISSUEHERE = VIS_INHERIT_ID // disable VIS_INHERIT_PLANE
 
 /turf/unsimulated/map/edge
 	opacity = 1

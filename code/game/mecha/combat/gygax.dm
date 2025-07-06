@@ -9,7 +9,7 @@
 	maxhealth = 250			//Don't forget to update the /old variant if  you change this number.
 	deflect_chance = 15
 	max_temperature = 25000
-	infra_luminosity = 6
+	infra_luminosity_ISSUEHERE = 6
 	wreckage = /obj/effect/decal/mecha_wreckage/gygax
 	internal_damage_threshold = 35
 	max_equip = 3

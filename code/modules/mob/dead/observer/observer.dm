@@ -2,7 +2,7 @@
 	name = "observer"
 	desc = "This shouldn't appear"
 	density = FALSE
-	vis_flags = NONE
+	vis_flags_ISSUEHERE = NONE
 	var/mob/living/body_backup = null //add reforming
 
 /mob/observer/dead

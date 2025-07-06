@@ -164,7 +164,7 @@
 
 /obj/structure/gargoyle/examine_icon()
 	var/icon/examine_icon = icon(icon=src.icon, icon_state=src.icon_state, dir=SOUTH, frame=1, moving=0)
-	examine_icon.MapColors(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0))
+	examine_icon.MapColors_ISSUEHERE(rgb(77,77,77), rgb(150,150,150), rgb(28,28,28), rgb(0,0,0))
 	return examine_icon
 
 /obj/structure/gargoyle/get_description_info()

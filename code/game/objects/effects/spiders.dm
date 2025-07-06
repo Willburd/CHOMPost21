@@ -47,7 +47,7 @@
 		visible_message(span_warning("\The [user] tries to stomp on \the [src], but misses!"))
 		var/list/nearby = oview(2, src)
 		if(length(nearby))
-			walk_to(src, pick(nearby), 2)
+			walk_to_ISSUEHERE(src, pick(nearby), 2)
 			return
 	visible_message(span_warning("\The [user] stomps \the [src] dead!"))
 	die()
@@ -180,7 +180,7 @@
 	get_light_and_color(parent)
 
 /obj/effect/spider/spiderling/Destroy()
-	walk(src, 0) // Because we might have called walk_to, we must stop the walk loop or BYOND keeps an internal reference to us forever.
+	walk(src, 0) // Because we might have called walk_to_ISSUEHERE, we must stop the walk loop or BYOND keeps an internal reference to us forever.
 	STOP_PROCESSING(SSobj, src)
 	return ..()
 
@@ -264,7 +264,7 @@
 			var/list/nearby = trange(5, src) - loc
 			if(nearby.len)
 				var/target_atom = pick(nearby)
-				walk_to(src, target_atom, 5)
+				walk_to_ISSUEHERE(src, target_atom, 5)
 				if(prob(25))
 					src.visible_message(span_notice("\The [src] skitters[pick(" away"," around","")]."))
 				SSmotiontracker.ping(src,10)
@@ -273,7 +273,7 @@
 			for(var/obj/machinery/atmospherics/unary/vent_pump/v in view(7,src))
 				if(!v.welded)
 					entry_vent = v
-					walk_to(src, entry_vent, 5)
+					walk_to_ISSUEHERE(src, entry_vent, 5)
 					break
 		if(amount_grown >= 100)
 			var/spawn_type = pick(grow_as)

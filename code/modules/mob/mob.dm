@@ -1271,7 +1271,7 @@
 			openToolTip(usr, src, params, title = get_nametag_name(usr), content = get_nametag_desc(usr))
 	. = ..()
 
-/mob/MouseDown()
+/mob/MouseDown_ISSUEHERE()
 	closeToolTip(usr) //No reason not to, really
 	. = ..()
 
@@ -1317,7 +1317,7 @@ GLOBAL_LIST_EMPTY_TYPED(living_players_by_zlevel, /list)
 
 /mob/get_cloaked_selfimage()
 	var/icon/selficon = getCompoundIcon(src)
-	selficon.MapColors(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White
+	selficon.MapColors_ISSUEHERE(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White
 	var/image/selfimage = image(selficon)
 	selfimage.color = "#0000FF"
 	selfimage.alpha = 100

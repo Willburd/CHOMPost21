@@ -88,7 +88,7 @@
 			var/active = 0
 			// Only players with the job assigned and AFK for less than 10 minutes count as active
 			for(var/mob/M in player_list)
-				if(M.mind?.assigned_role == job.title && M.client?.inactivity <= 10 MINUTES)
+				if(M.mind?.assigned_role == job.title && M.client?.inactivity_ISSUEHERE <= 10 MINUTES)
 					active++
 
 			// Figure out departments

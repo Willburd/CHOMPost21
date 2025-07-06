@@ -60,11 +60,11 @@
 
 /proc/hear(var/range, var/atom/source)
 
-	var/lum = source.luminosity
-	source.luminosity = 6
+	var/lum = source.luminosity_ISSUEHERE
+	source.luminosity_ISSUEHERE = 6
 
 	var/list/heard = view(range, source)
-	source.luminosity = lum
+	source.luminosity_ISSUEHERE = lum
 
 	return heard
 
@@ -410,7 +410,7 @@
 	var/i = 0
 	while(candidates.len <= 0 && i < 5)
 		for(var/mob/observer/dead/G in player_list)
-			if(((G.client.inactivity/10)/60) <= buffer + i) // the most active players are more likely to become an alien
+			if(((G.client.inactivity_ISSUEHERE/10)/60) <= buffer + i) // the most active players are more likely to become an alien
 				if(!(G.mind && G.mind.current && G.mind.current.stat != DEAD))
 					candidates += G.key
 		i++
@@ -425,7 +425,7 @@
 	while(candidates.len <= 0 && i < 5)
 		for(var/mob/observer/dead/G in player_list)
 			if(G.client.prefs.be_special & BE_ALIEN)
-				if(((G.client.inactivity/10)/60) <= ALIEN_SELECT_AFK_BUFFER + i) // the most active players are more likely to become an alien
+				if(((G.client.inactivity_ISSUEHERE/10)/60) <= ALIEN_SELECT_AFK_BUFFER + i) // the most active players are more likely to become an alien
 					if(!(G.mind && G.mind.current && G.mind.current.stat != DEAD))
 						candidates += G.key
 		i++

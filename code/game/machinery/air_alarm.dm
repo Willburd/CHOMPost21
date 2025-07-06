@@ -56,7 +56,7 @@
 	icon = 'icons/obj/monitors_vr.dmi'
 	icon_state = "alarm_0"
 	layer = ABOVE_WINDOW_LAYER
-	vis_flags = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
+	vis_flags_ISSUEHERE = VIS_HIDE // They have an emissive that looks bad in openspace due to their wall-mounted nature
 	anchored = TRUE
 	unacidable = TRUE
 	use_power = USE_POWER_IDLE

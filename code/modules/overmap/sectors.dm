@@ -235,7 +235,7 @@
 
 	..()
 
-/obj/effect/overmap/visitable/MouseDown()
+/obj/effect/overmap/visitable/MouseDown_ISSUEHERE()
 	closeToolTip(usr) //No reason not to, really
 
 	..()

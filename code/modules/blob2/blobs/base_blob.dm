@@ -5,7 +5,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 	icon = 'icons/mob/blob.dmi'
 	desc = "A thick wall of writhing tendrils."
 	light_range = 2
-	density = FALSE // This is false because blob mob AI's walk_to() proc appears to never attempt to move onto dense objects even if allowed by CanPass().
+	density = FALSE // This is false because blob mob AI's walk_to_ISSUEHERE() proc appears to never attempt to move onto dense objects even if allowed by CanPass().
 	opacity = FALSE
 	anchored = TRUE
 	layer = MOB_LAYER + 0.1

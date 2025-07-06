@@ -11,7 +11,7 @@
 	var/icon/icon_file = all_ui_styles[value]
 
 	var/icon/icon = icon(icon_file, "r_hand_inactive")
-	icon.Crop(1, 1, ICON_SIZE_X * 2, ICON_SIZE_Y)
+	icon.Crop_ISSUEHERE(1, 1, ICON_SIZE_X * 2, ICON_SIZE_Y)
 	icon.Blend(icon(icon_file, "l_hand_inactive"), ICON_OVERLAY, ICON_SIZE_X)
 
 	return icon

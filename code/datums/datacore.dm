@@ -53,7 +53,7 @@
 		if(OOC)
 			var/active = 0
 			for(var/mob/M in player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+				if(M.real_name == name && M.client && M.client.inactivity_ISSUEHERE <= 10 MINUTES)
 					active = 1
 					break
 			isactive[name] = active ? "Active" : "Inactive"
@@ -100,7 +100,7 @@
 
 			var/active = 0
 			for(var/mob/M in player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+				if(M.real_name == name && M.client && M.client.inactivity_ISSUEHERE <= 10 MINUTES)
 					active = 1
 					break
 			isactive[name] = active ? "Active" : "Inactive"

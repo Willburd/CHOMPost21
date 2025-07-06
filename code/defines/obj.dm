@@ -141,7 +141,7 @@ GLOBAL_LIST_INIT(acting_rank_prefixes, list("acting", "temporary", "interim", "p
 	desc = "A plaque commerating the building efforts of the sleepiest outpost in the sector, Yawn Wider."
 	density = 0
 
-/obj/item/mouse_drag_pointer = MOUSE_ACTIVE_POINTER
+/obj/item/mouse_drag_pointer_ISSUEHERE = MOUSE_ACTIVE_POINTER
 
 /obj/item/beach_ball
 	icon = 'icons/misc/beach.dmi'

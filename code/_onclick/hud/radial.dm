@@ -6,7 +6,7 @@ GLOBAL_LIST_EMPTY(radial_menus)
 /obj/screen/radial
 	icon = 'icons/mob/radial.dmi'
 	plane = PLANE_PLAYER_HUD_ABOVE
-	vis_flags = VIS_INHERIT_PLANE
+	vis_flags_ISSUEHERE = VIS_INHERIT_PLANE
 	var/click_on_hover = FALSE
 	var/datum/radial_menu/parent
 

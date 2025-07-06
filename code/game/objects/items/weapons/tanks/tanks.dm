@@ -353,8 +353,8 @@ var/list/global/tank_gauge_cache = list()
 		add_overlay("bomb_assembly")
 		if(src.proxyassembly.assembly)
 			var/icon/test = getFlatIcon(src.proxyassembly.assembly)
-			test.Shift(SOUTH,1)
-			test.Shift(WEST,3)
+			test.Shift_ISSUEHERE(SOUTH,1)
+			test.Shift_ISSUEHERE(WEST,3)
 			add_overlay(test)
 
 

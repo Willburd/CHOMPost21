@@ -139,21 +139,21 @@
 
 /obj/structure/door_assembly/multi_tile/Initialize(mapload)
 	if(dir in list(EAST, WEST))
-		bound_width = width * world.icon_size
-		bound_height = world.icon_size
+		bound_width_ISSUEHERE = width * world.icon_size
+		bound_height_ISSUEHERE = world.icon_size
 	else
-		bound_width = world.icon_size
-		bound_height = width * world.icon_size
+		bound_width_ISSUEHERE = world.icon_size
+		bound_height_ISSUEHERE = width * world.icon_size
 	. = ..()
 
 /obj/structure/door_assembly/multi_tile/Moved(atom/old_loc, direction, forced = FALSE)
 	. = ..()
 	if(dir in list(EAST, WEST))
-		bound_width = width * world.icon_size
-		bound_height = world.icon_size
+		bound_width_ISSUEHERE = width * world.icon_size
+		bound_height_ISSUEHERE = world.icon_size
 	else
-		bound_width = world.icon_size
-		bound_height = width * world.icon_size
+		bound_width_ISSUEHERE = world.icon_size
+		bound_height_ISSUEHERE = width * world.icon_size
 
 /obj/structure/door_assembly/proc/rename_door(mob/living/user)
 	var/t = sanitizeSafe(tgui_input_text(user, "Enter the name for the [base_name].", src.name, src.created_name, MAX_NAME_LEN), MAX_NAME_LEN)

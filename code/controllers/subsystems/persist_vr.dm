@@ -34,7 +34,7 @@ SUBSYSTEM_DEF(persist)
 	while (currentrun.len)
 		var/mob/M = currentrun[currentrun.len]
 		currentrun.len--
-		if (QDELETED(M) || !istype(M) || !M.mind || !M.client || TICKS2DS(M.client.inactivity) > wait)
+		if (QDELETED(M) || !istype(M) || !M.mind || !M.client || TICKS2DS(M.client.inactivity_ISSUEHERE) > wait)
 			continue
 
 		// Try and detect job and department of mob

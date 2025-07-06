@@ -3,7 +3,7 @@
 	/* Unreachable with above VOREStation Edit
 	if (CONFIG_GET(flag/use_irc_bot)) // CHOMPEdit
 		if (CONFIG_GET(flag/use_node_bot)) // CHOMPEdit
-			shell("node bridge.js -h \"[CONFIG_GET(string/irc_bot_host)]\" -p \"[CONFIG_GET(number/irc_bot_port)]\" -c \"[channel]\" -m \"[escape_shell_arg(msg)]\"") // CHOMPEdit
+			shell_ISSUEHERE("node bridge.js -h \"[CONFIG_GET(string/irc_bot_host)]\" -p \"[CONFIG_GET(number/irc_bot_port)]\" -c \"[channel]\" -m \"[escape_shell_arg(msg)]\"") // CHOMPEdit
 		else
 			if (CONFIG_GET(string/irc_bot_host)) // CHOMPEdit
 				if(CONFIG_GET(flag/irc_bot_export)) // CHOMPEdit

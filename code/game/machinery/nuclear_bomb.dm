@@ -412,7 +412,7 @@ GLOBAL_VAR(bomb_set)
 					blackbox.save_all_data_to_sql()
 				sleep(300)
 				log_game("Rebooting due to nuclear detonation")
-				world.Reboot()
+				world.Reboot_HASISSUE()
 				return
 	return
 

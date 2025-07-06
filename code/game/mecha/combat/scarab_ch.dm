@@ -11,7 +11,7 @@
 	maxhealth = 250
 	deflect_chance = 10
 	max_temperature = 20000
-	infra_luminosity = 6
+	infra_luminosity_ISSUEHERE = 6
 
 	wreckage = /obj/effect/decal/mecha_wreckage/scarab
 

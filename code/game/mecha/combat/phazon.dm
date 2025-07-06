@@ -10,7 +10,7 @@
 	maxhealth = 250		//Don't forget to update the /old variant if  you change this number.  //Chompedit, increased health.
 	deflect_chance = 30
 	max_temperature = 25000
-	infra_luminosity = 3
+	infra_luminosity_ISSUEHERE = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/phazon
 	add_req_access = 1
 	//operation_req_access = list()
@@ -95,7 +95,7 @@
 	deflect_chance = 30
 	inherent_damage_absorption = list("brute"=0.6,"fire"=0.7,"bullet"=0.7,"laser"=0.9,"energy"=0.7,"bomb"=0.5)
 	max_temperature = 10000
-	infra_luminosity = 3
+	infra_luminosity_ISSUEHERE = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/janus
 	internal_damage_threshold = 25
 	force = 20

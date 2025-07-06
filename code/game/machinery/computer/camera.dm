@@ -103,7 +103,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	pinboard.icon = icon
 	pinboard.icon_state = "pinboard"
 	pinboard.layer = 0.1
-	pinboard.vis_flags = VIS_UNDERLAY|VIS_INHERIT_ID|VIS_INHERIT_PLANE
+	pinboard.vis_flags_ISSUEHERE = VIS_UNDERLAY|VIS_INHERIT_ID|VIS_INHERIT_PLANE
 	pinboard.appearance_flags = KEEP_TOGETHER
 	pinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
 	vis_contents += pinboard
@@ -226,7 +226,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	bpinboard.icon = icon
 	bpinboard.icon_state = "pinboard"
 	bpinboard.layer = 0.1
-	bpinboard.vis_flags = VIS_UNDERLAY|VIS_INHERIT_ID|VIS_INHERIT_PLANE
+	bpinboard.vis_flags_ISSUEHERE = VIS_UNDERLAY|VIS_INHERIT_ID|VIS_INHERIT_PLANE
 	bpinboard.appearance_flags = KEEP_TOGETHER
 	bpinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
 	vis_contents += bpinboard

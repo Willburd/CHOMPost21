@@ -162,7 +162,7 @@
 			//I honestly didn't believe byond could do it
 			if(event_handler != null)
 				event_handler.HandleEvent(TGS_EVENT_PORT_SWAP, new_port)
-			if(!world.OpenPort(new_port))
+			if(!world.OpenPort_HASISSUE(new_port))
 				return "Port change failed!"
 			return
 		if(TGS4_TOPIC_CHANGE_REBOOT_MODE)
@@ -186,7 +186,7 @@
 	//we need some port open at this point to facilitate return communication
 	if(!world.port)
 		requesting_new_port = TRUE
-		if(!world.OpenPort(0)) //open any port
+		if(!world.OpenPort_HASISSUE(0)) //open any port
 			TGS_ERROR_LOG("Unable to open random port to retrieve new port![TGS4_PORT_CRITFAIL_MESSAGE]")
 			TerminateWorld()
 
@@ -203,7 +203,7 @@
 			TGS_ERROR_LOG("Malformed new port json ([json_encode(new_port_json)])![TGS4_PORT_CRITFAIL_MESSAGE]")
 			TerminateWorld()
 
-		if(new_port != world.port && !world.OpenPort(new_port))
+		if(new_port != world.port && !world.OpenPort_HASISSUE(new_port))
 			TGS_ERROR_LOG("Unable to open port [new_port]![TGS4_PORT_CRITFAIL_MESSAGE]")
 			TerminateWorld()
 		requesting_new_port = FALSE
@@ -241,7 +241,7 @@
 		//to byond 0 means any port and "none" means close vOv
 		port = "none"
 
-	if(!world.OpenPort(port))
+	if(!world.OpenPort_HASISSUE(port))
 		TGS_ERROR_LOG("Unable to set port to [port]!")
 
 /datum/tgs_api/v4/InstanceName()

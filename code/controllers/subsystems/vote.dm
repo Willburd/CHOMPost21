@@ -189,7 +189,7 @@ SUBSYSTEM_DEF(vote)
 			blackbox.save_all_data_to_sql()
 		sleep(50)
 		log_game("Rebooting due to restart vote")
-		world.Reboot()
+		world.Reboot_HASISSUE()
 
 /datum/controller/subsystem/vote/proc/submit_vote(ckey, newVote)
 	if(mode)

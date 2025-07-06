@@ -1,11 +1,11 @@
-SUBSYSTEM_DEF(inactivity)
+SUBSYSTEM_DEF(inactivity_ISSUEHERE)
 	name = "Inactivity"
 	wait = 1 MINUTE
 	flags = SS_NO_INIT | SS_BACKGROUND
 	var/tmp/list/client_list
 	var/number_kicked = 0
 
-/datum/controller/subsystem/inactivity/fire(resumed = FALSE)
+/datum/controller/subsystem/inactivity_ISSUEHERE/fire(resumed = FALSE)
 	if (!CONFIG_GET(number/kick_inactive))
 		can_fire = FALSE
 		return
@@ -56,10 +56,10 @@ SUBSYSTEM_DEF(inactivity)
 		if (MC_TICK_CHECK)
 			return
 
-/datum/controller/subsystem/inactivity/stat_entry(msg)
+/datum/controller/subsystem/inactivity_ISSUEHERE/stat_entry(msg)
 	msg = "Kicked: [number_kicked]"
 	return ..()
 
-/datum/controller/subsystem/inactivity/proc/can_kick(var/client/C)
+/datum/controller/subsystem/inactivity_ISSUEHERE/proc/can_kick(var/client/C)
 	if(C.holder) return FALSE //VOREStation Add - Don't kick admins.
 	return TRUE

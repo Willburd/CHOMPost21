@@ -131,7 +131,7 @@
 /obj/mecha/combat/moved_inside(var/mob/living/carbon/human/H as mob)
 	if(..())
 		if(H.client)
-			H.client.mouse_pointer_icon = file("icons/mecha/mecha_mouse.dmi")
+			H.client.mouse_pointer_icon_ISSUEHERE = file("icons/mecha/mecha_mouse.dmi")
 		return 1
 	else
 		return 0
@@ -139,14 +139,14 @@
 /obj/mecha/combat/mmi_moved_inside(var/obj/item/mmi/mmi_as_oc as obj,mob/user as mob)
 	if(..())
 		if(occupant.client)
-			occupant.client.mouse_pointer_icon = file("icons/mecha/mecha_mouse.dmi")
+			occupant.client.mouse_pointer_icon_ISSUEHERE = file("icons/mecha/mecha_mouse.dmi")
 		return 1
 	else
 		return 0
 
 /obj/mecha/combat/go_out()
 	if(src.occupant && src.occupant.client)
-		src.occupant.client.mouse_pointer_icon = initial(src.occupant.client.mouse_pointer_icon)
+		src.occupant.client.mouse_pointer_icon_ISSUEHERE = initial(src.occupant.client.mouse_pointer_icon_ISSUEHERE)
 	..()
 	return
 

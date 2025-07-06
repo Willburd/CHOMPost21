@@ -7,7 +7,7 @@
 	density = TRUE
 	var/sortTag = null
 	flags = NOBLUDGEON
-	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
+	mouse_drag_pointer_ISSUEHERE = MOUSE_ACTIVE_POINTER
 	var/examtext = null
 	var/nameset = 0
 	var/label_y

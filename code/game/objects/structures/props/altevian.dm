@@ -4,8 +4,8 @@
 			However, due to its construction and size it is nearly impossible to break apart. It still can be moved if need be with special tools. This one appears to be totally wrecked though."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "alteviangenwrecked"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/structure/prop/altevian_jump_drive
 	name = "Prosper-M Stellar Drive"
@@ -13,8 +13,8 @@
 			This drive is commonly seen on their medium sized craft to help with logistical operations."
 	icon = 'icons/obj/props/decor128x128.dmi'
 	icon_state = "altevian_jump_drive"
-	bound_width = 128
-	bound_height = 128
+	bound_width_ISSUEHERE = 128
+	bound_height_ISSUEHERE = 128
 	var/has_misc_overlay = TRUE
 
 /obj/structure/prop/altevian_jump_drive/Initialize(mapload)

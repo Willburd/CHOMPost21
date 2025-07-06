@@ -844,7 +844,7 @@ var/list/ai_verbs_default = list(
 	set desc = "Toggles hologram movement based on moving with your virtual eye."
 
 	hologram_follow = !hologram_follow
-	//VOREStation Add - Required to stop movement because we use walk_to(wards) in hologram.dm
+	//VOREStation Add - Required to stop movement because we use walk_to_ISSUEHERE(wards) in hologram.dm
 	if(holo)
 		var/obj/effect/overlay/aiholo/hologram = holo.masters[src]
 		walk(hologram, 0)

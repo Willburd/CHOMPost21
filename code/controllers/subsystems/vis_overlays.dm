@@ -20,7 +20,7 @@ SUBSYSTEM_DEF(vis_overlays)
 		var/key = current_run[current_run.len]
 		var/obj/effect/overlay/vis/overlay = current_run[key]
 		current_run.len--
-		if(!overlay.unused && !length(overlay.vis_locs))
+		if(!overlay.unused && !length(overlay.vis_locs_ISSUEHERE))
 			overlay.unused = world.time
 		else if(overlay.unused && overlay.unused + overlay.cache_expiration < world.time)
 			vis_overlay_cache -= key
@@ -65,7 +65,7 @@ SUBSYSTEM_DEF(vis_overlays)
 	overlay.dir = dir
 	overlay.alpha = alpha
 	overlay.appearance_flags |= add_appearance_flags
-	overlay.vis_flags |= add_vis_flags
+	overlay.vis_flags_ISSUEHERE |= add_vis_flags
 	return overlay
 
 

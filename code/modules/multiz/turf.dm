@@ -45,7 +45,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	// Outpost 21 edit end
 	plane = OPENSPACE_BACKDROP_PLANE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
-	vis_flags = VIS_INHERIT_ID
+	vis_flags_ISSUEHERE = VIS_INHERIT_ID
 
 /turf/simulated/open
 	name = "open space"

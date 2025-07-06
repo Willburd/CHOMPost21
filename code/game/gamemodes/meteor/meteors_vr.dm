@@ -5,6 +5,6 @@
 		if(!batter.stat && istype(I, /obj/item/material/twohanded/baseballbat))
 			batter.do_attack_animation(src)
 			batter.visible_message("[batter] deflects [src] with [I]]! Home run!", "You deflect [src] with [I]! Home run!")
-			walk_away(src, batter, 100, 1)
+			walk_away_ISSUEHERE(src, batter, 100, 1)
 			return TRUE
 	return

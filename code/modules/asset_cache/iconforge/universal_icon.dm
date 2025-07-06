@@ -122,7 +122,7 @@
 			if(RUSTG_ICONFORGE_SCALE)
 				target.Scale(transform["width"], transform["height"])
 			if(RUSTG_ICONFORGE_CROP)
-				target.Crop(transform["x1"], transform["y1"], transform["x2"], transform["y2"])
+				target.Crop_ISSUEHERE(transform["x1"], transform["y1"], transform["x2"], transform["y2"])
 	return target
 
 /datum/icon_transformer/proc/copy()

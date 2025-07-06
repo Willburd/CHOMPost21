@@ -708,7 +708,7 @@
 	alpha = 0
 
 /obj/screen/setup_preview/bg
-	mouse_over_pointer = MOUSE_HAND_POINTER
+	mouse_over_pointer_ISSUEHERE = MOUSE_HAND_POINTER
 
 /obj/screen/setup_preview/bg/Click(params)
 	pref?.bgstate = next_in_list(pref.bgstate, pref.bgstate_options)
@@ -875,7 +875,7 @@
 	pixel_x = -18
 	pixel_y = -29
 	mouse_opacity = 1
-	vis_flags = VIS_INHERIT_ID
+	vis_flags_ISSUEHERE = VIS_INHERIT_ID
 
 /obj/screen/mapper/powbutton
 	icon = 'icons/effects/gpshud.dmi'

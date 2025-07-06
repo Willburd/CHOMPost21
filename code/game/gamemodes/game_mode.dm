@@ -221,7 +221,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore, SetRoundStart))
 	if(ticker && ticker.mode)
 		feedback_set_details("game_mode","[ticker.mode]")
-	feedback_set_details("server_ip","[world.internet_address]:[world.port]")
+	feedback_set_details("server_ip","[world.internet_address_HASISSUE]:[world.port]")
 	return 1
 
 /datum/game_mode/proc/fail_setup()
@@ -514,7 +514,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 				msg += "[span_bold(L.name)] ([L.ckey]), the [L.job] ([span_yellow(span_bold("Disconnected"))])<br>"
 
 		if(L.ckey && L.client)
-			if(L.client.inactivity >= (ROUNDSTART_LOGOUT_REPORT_TIME / 2))	//Connected, but inactive (alt+tabbed or something)
+			if(L.client.inactivity_ISSUEHERE >= (ROUNDSTART_LOGOUT_REPORT_TIME / 2))	//Connected, but inactive (alt+tabbed or something)
 				msg += "[span_bold(L.name)] ([L.ckey]), the [L.job] ([span_yellow(span_bold("Connected, Inactive"))])<br>"
 				continue //AFK client
 			if(L.stat)

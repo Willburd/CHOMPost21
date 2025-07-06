@@ -88,7 +88,7 @@
 			#ifndef FIND_REF_NO_CHECK_TICK
 			CHECK_TICK
 			#endif
-			if (varname == "vars" || varname == "vis_locs") //Fun fact, vis_locs don't count for references
+			if (varname == "vars" || varname == "vis_locs_ISSUEHERE") //Fun fact, vis_locs_ISSUEHERE don't count for references
 				continue
 			var/variable = vars_list[varname]
 

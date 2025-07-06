@@ -76,7 +76,7 @@ GLOBAL_VAR_INIT(floorIsLava, 0)
 		<a href='byond://?src=\ref[src];[HrefToken()];subtlemessage=\ref[M]'>SM</a> -
 		[admin_jump_link(M, src)]\] <br>
 		"} + span_bold("Mob type:") + {"[M.type]<br>
-		"} + span_bold("Inactivity time:") + {" [M.client ? "[M.client.inactivity/600] minutes" : "Logged out"]<br/><br/>
+		"} + span_bold("Inactivity time:") + {" [M.client ? "[M.client.inactivity_ISSUEHERE/600] minutes" : "Logged out"]<br/><br/>
 		<A href='byond://?src=\ref[src];[HrefToken()];boot2=\ref[M]'>Kick</A> |
 		<A href='byond://?_src_=holder;[HrefToken()];warn=[M.ckey]'>Warn</A> |
 		<A href='byond://?src=\ref[src];[HrefToken()];newban=\ref[M]'>Ban</A> |
@@ -653,7 +653,7 @@ GLOBAL_VAR_INIT(floorIsLava, 0)
 			blackbox.save_all_data_to_sql()
 
 		sleep(50)
-		world.Reboot()
+		world.Reboot_HASISSUE()
 
 
 /datum/admins/proc/announce()
@@ -860,9 +860,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(!check_rights(R_ADMIN))
 		return
 
-	world.visibility = !(world.visibility)
+	world.visibility_HASISSUE = !(world.visibility_HASISSUE)
 	log_admin("[key_name(usr)] toggled hub visibility.")
-	message_admins("[key_name_admin(usr)] toggled hub visibility.  The server is now [world.visibility ? "visible" : "invisible"] ([world.visibility]).", 1)
+	message_admins("[key_name_admin(usr)] toggled hub visibility.  The server is now [world.visibility_HASISSUE ? "visible" : "invisible"] ([world.visibility_HASISSUE]).", 1)
 	feedback_add_details("admin_verb","THUB") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc
 
 /datum/admins/proc/toggletraitorscaling()
@@ -1040,7 +1040,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	if(blackbox)
 		blackbox.save_all_data_to_sql()
 
-	world.Reboot()
+	world.Reboot_HASISSUE()
 
 /datum/admins/proc/unprison(var/mob/M in mob_list)
 	set category = "Admin.Moderation"

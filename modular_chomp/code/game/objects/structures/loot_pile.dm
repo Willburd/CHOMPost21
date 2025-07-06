@@ -8,6 +8,6 @@
 	chance_rare = 0
 	common_loot = list(/obj/item/a_gift/advanced)
 	pixel_x = -32
-	bound_width = 96
-	bound_height = 64
+	bound_width_ISSUEHERE = 96
+	bound_height_ISSUEHERE = 64
 	density = 1

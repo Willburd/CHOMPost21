@@ -109,7 +109,7 @@
 	return client.stop_thinking(channel)
 
 /**
- * Handles the user typing. After a brief period of inactivity,
+ * Handles the user typing. After a brief period of inactivity_ISSUEHERE,
  * signals the client mob to revert to the "thinking" icon.
  */
 /datum/tgui_say/proc/start_typing(channel)

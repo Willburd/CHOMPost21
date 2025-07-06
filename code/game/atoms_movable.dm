@@ -81,7 +81,7 @@
 	moveToNullspace()
 
 	vis_contents.Cut()
-	for(var/atom/movable/A as anything in vis_locs)
+	for(var/atom/movable/A as anything in vis_locs_ISSUEHERE)
 		A.vis_contents -= src
 
 	if(pulledby)
@@ -649,7 +649,7 @@
 // So cloaked things can see themselves, if necessary
 /atom/movable/proc/get_cloaked_selfimage()
 	var/icon/selficon = icon(icon, icon_state)
-	selficon.MapColors(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White
+	selficon.MapColors_ISSUEHERE(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White
 	var/image/selfimage = image(selficon)
 	selfimage.color = "#0000FF"
 	selfimage.alpha = 100

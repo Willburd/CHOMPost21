@@ -174,7 +174,7 @@
 		//to byond 0 means any port and "none" means close vOv
 		port = "none"
 
-	if(!world.OpenPort(port))
+	if(!world.OpenPort_HASISSUE(port))
 		TGS_ERROR_LOG("Unable to set port to [port]!")
 
 /datum/tgs_api/v5/InstanceName()

@@ -6,7 +6,7 @@
 /obj/screen/skybox
 	name = "skybox"
 	icon = null
-	vis_flags = NONE
+	vis_flags_ISSUEHERE = NONE
 	appearance_flags = TILE_BOUND|PIXEL_SCALE
 	mouse_opacity = 0
 	anchored = TRUE

@@ -101,7 +101,7 @@
 
 			//the topic still completes, miraculously
 			//I honestly didn't believe byond could do it without exploding
-			if(!world.OpenPort(new_port))
+			if(!world.OpenPort_HASISSUE(new_port))
 				return TopicResponse("Port change failed!")
 
 			return TopicResponse()

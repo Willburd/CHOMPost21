@@ -230,7 +230,7 @@ var/world_topic_spam_protect_time = world.timeofday
 			var/department = 0
 			var/active = 0	//CHOMPStation Edit Begin
 			for(var/mob/M in player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+				if(M.real_name == name && M.client && M.client.inactivity_ISSUEHERE <= 10 MINUTES)
 					active = 1
 					break
 			var/isactive = active ? "Active" : "Inactive"
@@ -252,7 +252,7 @@ var/world_topic_spam_protect_time = world.timeofday
 
 			var/active = 0	//CHOMPStation Edit Begin
 			for(var/mob/M in player_list)
-				if(M.real_name == name && M.client && M.client.inactivity <= 10 MINUTES)
+				if(M.real_name == name && M.client && M.client.inactivity_ISSUEHERE <= 10 MINUTES)
 					active = 1
 					break
 			var/isactive = active ? "Active" : "Inactive"
@@ -265,13 +265,13 @@ var/world_topic_spam_protect_time = world.timeofday
 
 		// Synthetics don't have actual records, so we will pull them from here.
 		for(var/mob/living/silicon/ai/ai in mob_list)
-			var/isactive = (ai.client && ai.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
+			var/isactive = (ai.client && ai.client.inactivity_ISSUEHERE <= 10 MINUTES) ? "Active" : "Inactive"
 			if(!positions["bot"])
 				positions["bot"] = list()
 			positions["bot"][ai.name] = list("Artificial Intelligence",isactive)
 		for(var/mob/living/silicon/robot/robot in mob_list)
 			// No combat/syndicate cyborgs, no drones, and no AI shells.
-			var/isactive = (robot.client && robot.client.inactivity <= 10 MINUTES) ? "Active" : "Inactive"
+			var/isactive = (robot.client && robot.client.inactivity_ISSUEHERE <= 10 MINUTES) ? "Active" : "Inactive"
 			if(robot.shell)
 				continue
 			if(robot.module && robot.module.hide_on_manifest())
@@ -488,7 +488,7 @@ var/world_topic_spam_protect_time = world.timeofday
 				text2file("[++GLOB.restart_counter]", RESTART_COUNTER_PATH)
 				return FALSE
 
-/world/Reboot(reason = 0, fast_track = FALSE)
+/world/Reboot_HASISSUE(reason = 0, fast_track = FALSE)
 	/*spawn(0)
 		world << sound(pick('sound/AI/newroundsexy.ogg','sound/misc/apcdestroyed.ogg','sound/misc/bangindonk.ogg')) // random end sounds!! - LastyBatsy
 		*/

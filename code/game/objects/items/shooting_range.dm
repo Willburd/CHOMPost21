@@ -90,7 +90,7 @@
 
 	virtualIcon = new(icon, icon_state)
 
-	if( virtualIcon.GetPixel(p_x, p_y) ) // if the located pixel isn't blank (null)
+	if( virtualIcon.GetPixel_ISSUEHERE(p_x, p_y) ) // if the located pixel isn't blank (null)
 
 		hp -= Proj.damage
 		if(hp <= 0)
@@ -136,8 +136,8 @@
 		// draw bullet holes
 		for(var/datum/bullethole/B in bulletholes)
 
-			virtualIcon.DrawBox(null, B.b1x1, B.b1y,  B.b1x2, B.b1y) // horizontal line, left to right
-			virtualIcon.DrawBox(null, B.b2x, B.b2y1,  B.b2x, B.b2y2) // vertical line, top to bottom
+			virtualIcon.DrawBox_ISSUEHERE(null, B.b1x1, B.b1y,  B.b1x2, B.b1y) // horizontal line, left to right
+			virtualIcon.DrawBox_ISSUEHERE(null, B.b2x, B.b2y1,  B.b2x, B.b2y2) // vertical line, top to bottom
 
 		add_overlay(bmark) // add the decal
 

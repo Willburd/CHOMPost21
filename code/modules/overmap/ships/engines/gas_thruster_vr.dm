@@ -9,8 +9,8 @@
 	charge_per_burn = 6000
 	boot_time = 70
 
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/machinery/atmospherics/unary/engine/bigger/atmos_init()
 	if(node)
@@ -44,8 +44,8 @@
 	charge_per_burn = 10000
 	boot_time = 100
 
-	bound_width = 96
-	bound_height = 96
+	bound_width_ISSUEHERE = 96
+	bound_height_ISSUEHERE = 96
 
 /obj/machinery/atmospherics/unary/engine/biggest/burn()
 	. = ..()

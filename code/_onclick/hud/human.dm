@@ -80,8 +80,8 @@
 		var/icon/ico
 
 		ico = new(HUD.ui_style, "black")
-		ico.MapColors(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
-		ico.DrawBox(rgb(255,255,255,1),1,ico.Height()/2,ico.Width()/2,ico.Height())
+		ico.MapColors_ISSUEHERE(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
+		ico.DrawBox_ISSUEHERE(rgb(255,255,255,1),1,ico.Height()/2,ico.Width()/2,ico.Height())
 		using = new /obj/screen()
 		using.name = I_HELP
 		using.icon = ico
@@ -92,8 +92,8 @@
 		HUD.help_intent = using
 
 		ico = new(HUD.ui_style, "black")
-		ico.MapColors(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
-		ico.DrawBox(rgb(255,255,255,1),ico.Width()/2,ico.Height()/2,ico.Width(),ico.Height())
+		ico.MapColors_ISSUEHERE(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
+		ico.DrawBox_ISSUEHERE(rgb(255,255,255,1),ico.Width()/2,ico.Height()/2,ico.Width(),ico.Height())
 		using = new /obj/screen()
 		using.name = I_DISARM
 		using.icon = ico
@@ -104,8 +104,8 @@
 		HUD.disarm_intent = using
 
 		ico = new(HUD.ui_style, "black")
-		ico.MapColors(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
-		ico.DrawBox(rgb(255,255,255,1),ico.Width()/2,1,ico.Width(),ico.Height()/2)
+		ico.MapColors_ISSUEHERE(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
+		ico.DrawBox_ISSUEHERE(rgb(255,255,255,1),ico.Width()/2,1,ico.Width(),ico.Height()/2)
 		using = new /obj/screen()
 		using.name = I_GRAB
 		using.icon = ico
@@ -116,8 +116,8 @@
 		HUD.grab_intent = using
 
 		ico = new(HUD.ui_style, "black")
-		ico.MapColors(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
-		ico.DrawBox(rgb(255,255,255,1),1,1,ico.Width()/2,ico.Height()/2)
+		ico.MapColors_ISSUEHERE(0,0,0,0, 0,0,0,0, 0,0,0,0, 0,0,0,0, -1,-1,-1,-1)
+		ico.DrawBox_ISSUEHERE(rgb(255,255,255,1),1,1,ico.Width()/2,ico.Height()/2)
 		using = new /obj/screen()
 		using.name = I_HURT
 		using.icon = ico

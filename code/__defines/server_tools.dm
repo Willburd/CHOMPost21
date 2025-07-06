@@ -9,7 +9,7 @@
 #define SERVER_TOOLS_ON_NEW ServiceInit()
 //Put this somewhere in /world/Topic(T, Addr, Master, Keys) that is always run before T is modified
 #define SERVER_TOOLS_ON_TOPIC var/service_topic_return = ServiceCommand(params2list(T)); if(service_topic_return) return service_topic_return
-//Put at the beginning of world/Reboot(reason)
+//Put at the beginning of world/Reboot_HASISSUE(reason)
 #define SERVER_TOOLS_ON_REBOOT ServiceReboot()
 
 //Optional callable functions:

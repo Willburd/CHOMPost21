@@ -84,7 +84,7 @@
 		if(blackbox)
 			blackbox.save_all_data_to_sql()
 		sleep(50)
-		world.Reboot()
+		world.Reboot_HASISSUE()
 
 	var/datum/disease2/disease/lethal = new
 	lethal.makerandom(3)

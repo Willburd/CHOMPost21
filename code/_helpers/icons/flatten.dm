@@ -109,7 +109,7 @@
 			self_icon.Blend(rgb(255, 255, 255, A.alpha), ICON_MULTIPLY)
 		if(A.color)
 			if(islist(A.color))
-				self_icon.MapColors(arglist(A.color))
+				self_icon.MapColors_ISSUEHERE(arglist(A.color))
 			else
 				self_icon.Blend(A.color, ICON_MULTIPLY)
 		return self_icon
@@ -222,7 +222,7 @@
 
 		// resize flat to fit if necessary
 		if(flat_size ~! add_size)
-			flat.Crop(
+			flat.Crop_ISSUEHERE(
 				addX1 - flatX1 + 1,
 				addY1 - flatY1 + 1,
 				addX2 - flatX1 + 1,
@@ -236,7 +236,7 @@
 	// apply colors
 	if(A.color)
 		if(islist(A.color))
-			flat.MapColors(arglist(A.color))
+			flat.MapColors_ISSUEHERE(arglist(A.color))
 		else
 			flat.Blend(A.color, ICON_MULTIPLY)
 

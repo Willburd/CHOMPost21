@@ -8,7 +8,7 @@
 	health = 100
 	deflect_chance = 10
 	max_temperature = 15000
-	infra_luminosity = 6
+	infra_luminosity_ISSUEHERE = 6
 	wreckage = /obj/effect/decal/mecha_wreckage/micro/utility/gopher
 	internal_damage_threshold = 35
 	max_micro_utility_equip = 2

@@ -177,13 +177,13 @@ GLOBAL_LIST_EMPTY(limb_icon_cache)
 /obj/item/organ/external/proc/apply_colouration(var/icon/applying)
 
 	if(transparent)
-		applying.MapColors("#4D4D4D","#969696","#1C1C1C", "#000000")
-		applying.SetIntensity(1)
+		applying.MapColors_ISSUEHERE("#4D4D4D","#969696","#1C1C1C", "#000000")
+		applying.SetIntensity_ISSUEHERE(1)
 
 	else if(status & ORGAN_DEAD)
 		icon_cache_key += "_dead"
 		applying.ColorTone(rgb(10,50,0))
-		applying.SetIntensity(0.7)
+		applying.SetIntensity_ISSUEHERE(0.7)
 
 	if(!isnull(s_tone))
 		if(s_tone >= 0)

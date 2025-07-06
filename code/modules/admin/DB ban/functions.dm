@@ -8,7 +8,7 @@
 	if(!SSdbcore.IsConnected())
 		return
 
-	var/serverip = "[world.internet_address]:[world.port]"
+	var/serverip = "[world.internet_address_HASISSUE]:[world.port]"
 	var/bantype_pass = 0
 	var/bantype_str
 	switch(bantype)

@@ -100,8 +100,8 @@
 		for(var/varname in vars_list)
 			var/variable = vars_list[varname]
 			if(islist(variable))
-				//Fun fact, vis_locs don't count for references
-				if(varname == "vars" || (is_atom && (varname == "vis_locs" || varname == "overlays" || varname == "underlays" || varname == "filters" || varname == "verbs" || (is_area && varname == "contents"))))
+				//Fun fact, vis_locs_ISSUEHERE don't count for references
+				if(varname == "vars" || (is_atom && (varname == "vis_locs_ISSUEHERE" || varname == "overlays" || varname == "underlays" || varname == "filters" || varname == "verbs" || (is_area && varname == "contents"))))
 					continue
 				// We do this after the varname check to avoid area contents (reading it incures a world loop's worth of cost)
 				if(!length(variable))

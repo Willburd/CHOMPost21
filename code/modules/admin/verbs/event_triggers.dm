@@ -81,8 +81,8 @@ Eventkit verb to be used to spawn the obj/effect/landmarks defined under code\ga
 				if(other_ckey && GLOB.directory[other_ckey])
 					var/client/C = GLOB.directory[other_ckey]
 					var/mob/M = C.statobj
-					if(M.client && M.client.inactivity < 30 MINUTES)
-						if(tgui_alert(src, "[M] has only been inactive for [M.client.inactivity / (1 MINUTE)] minutes.\n \
+					if(M.client && M.client.inactivity_ISSUEHERE < 30 MINUTES)
+						if(tgui_alert(src, "[M] has only been inactive for [M.client.inactivity_ISSUEHERE / (1 MINUTE)] minutes.\n \
 							If you want to delete their event triggers, ask them in asay or discord to do it themselves or wait 30 minutes. \n \
 							Only proceed if you are absolutely certain.", "Force Delete", list("Confirm", "Cancel")) == "Confirm")
 							for(var/obj/effect/landmark/event_trigger/ET in others_list)
@@ -112,8 +112,8 @@ Eventkit verb to be used to spawn the obj/effect/landmarks defined under code\ga
 					if(other_ckey && GLOB.directory[other_ckey])
 						var/client/C = GLOB.directory[other_ckey]
 						var/mob/M = C.statobj
-						if(M.client && M.client.inactivity < 30 MINUTES)
-							if(tgui_alert(src, "[M] has only been inactive for [M.client.inactivity / (1 MINUTE)] minutes.\n \
+						if(M.client && M.client.inactivity_ISSUEHERE < 30 MINUTES)
+							if(tgui_alert(src, "[M] has only been inactive for [M.client.inactivity_ISSUEHERE / (1 MINUTE)] minutes.\n \
 								If you want to delete their event triggers, ask them in asay or discord to do it themselves or wait 30 minutes. \n \
 								Only proceed if you are absolutely certain.", "Force Delete", list("Confirm", "Cancel")) == "Confirm")
 								ET.delete_me = TRUE

@@ -7,7 +7,7 @@
 	anchored = TRUE
 	density = FALSE
 	layer = ABOVE_WINDOW_LAYER
-	vis_flags = VIS_HIDE
+	vis_flags_ISSUEHERE = VIS_HIDE
 	unacidable = TRUE
 	clicksound = "button"
 	clickvol = 60

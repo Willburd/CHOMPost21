@@ -53,7 +53,7 @@
 
 // Generates the "base" holomap for one z-level, showing only the physical structure of walls and paths.
 /datum/controller/subsystem/holomaps/proc/generateHoloMinimap(var/zLevel = 1)
-	// Sanity checks - Better to generate a helpful error message now than have DrawBox() runtime
+	// Sanity checks - Better to generate a helpful error message now than have DrawBox_ISSUEHERE() runtime
 	var/icon/canvas = icon(HOLOMAP_ICON, "blank")
 	if(world.maxx > canvas.Width())
 		stack_trace("Minimap for z=[zLevel] : world.maxx ([world.maxx]) must be <= [canvas.Width()]")
@@ -65,11 +65,11 @@
 			var/turf/tile = locate(x, y, zLevel)
 			if(tile && tile.loc:holomapAlwaysDraw())
 				if(IS_ROCK(tile))
-					canvas.DrawBox(HOLOMAP_ROCK, x, y)
+					canvas.DrawBox_ISSUEHERE(HOLOMAP_ROCK, x, y)
 				if(IS_OBSTACLE(tile))
-					canvas.DrawBox(HOLOMAP_OBSTACLE, x, y)
+					canvas.DrawBox_ISSUEHERE(HOLOMAP_OBSTACLE, x, y)
 				else if(IS_PATH(tile))
-					canvas.DrawBox(HOLOMAP_PATH, x, y)
+					canvas.DrawBox_ISSUEHERE(HOLOMAP_PATH, x, y)
 		// Check sleeping after each row to avoid *completely* destroying the server
 		CHECK_TICK
 	return canvas
@@ -79,7 +79,7 @@
 // Leshana: I'm guessing this map will get overlayed on top of the base map at runtime? We'll see.
 // Wait, seems we actually blend the area map on top of it right now! Huh.
 /datum/controller/subsystem/holomaps/proc/generateStationMinimap(var/zLevel)
-	// Sanity checks - Better to generate a helpful error message now than have DrawBox() runtime
+	// Sanity checks - Better to generate a helpful error message now than have DrawBox_ISSUEHERE() runtime
 	var/icon/canvas = icon(HOLOMAP_ICON, "blank")
 	if(world.maxx > canvas.Width())
 		stack_trace("Minimap for z=[zLevel] : world.maxx ([world.maxx]) must be <= [canvas.Width()]")
@@ -92,7 +92,7 @@
 			if(tile && tile.loc)
 				var/area/areaToPaint = tile.loc
 				if(areaToPaint.holomap_color)
-					canvas.DrawBox(areaToPaint.holomap_color, x, y)
+					canvas.DrawBox_ISSUEHERE(areaToPaint.holomap_color, x, y)
 
 	// Save this nice area-colored canvas in case we want to layer it or something I guess
 	extraMiniMaps["[HOLOMAP_EXTRA_STATIONMAPAREAS]_[zLevel]"] = canvas

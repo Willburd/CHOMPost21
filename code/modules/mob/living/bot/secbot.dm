@@ -230,7 +230,7 @@
 		UnregisterSignal(target, COMSIG_OBSERVER_MOVED)
 	awaiting_surrender = 0
 	attacked = FALSE
-	walk_to(src, 0)
+	walk_to_ISSUEHERE(src, 0)
 
 /mob/living/bot/secbot/startPatrol()
 	if(!locked) // Stop running away when we set you up

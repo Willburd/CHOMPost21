@@ -299,8 +299,8 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 
 				Cutter.Blend("#000000", ICON_MULTIPLY)	// Make it all black.
 
-				Cutter.SwapColor("#00000000", "#FFFFFFFF")	// Everywhere empty, make white.
-				Cutter.SwapColor("#000000FF", "#00000000")	// Everywhere black, make empty.
+				Cutter.SwapColor_ISSUEHERE("#00000000", "#FFFFFFFF")	// Everywhere empty, make white.
+				Cutter.SwapColor_ISSUEHERE("#000000FF", "#00000000")	// Everywhere black, make empty.
 
 				Cutter.Blend("#000000", ICON_MULTIPLY)	// Black again.
 
@@ -348,13 +348,13 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 				base_icon.ColorTone(husk_color_mod)
 			else if(hulk)
 				var/list/tone = rgb2num(hulk_color_mod)
-				base_icon.MapColors(rgb(tone[1],0,0),rgb(0,tone[2],0),rgb(0,0,tone[3]))
+				base_icon.MapColors_ISSUEHERE(rgb(tone[1],0,0),rgb(0,tone[2],0),rgb(0,0,tone[3]))
 
 		//Handle husk overlay.
 		if(husk && ("overlay_husk" in cached_icon_states(species.icobase)))
 			var/icon/mask = new(base_icon)
 			var/icon/husk_over = new(species.icobase,"overlay_husk")
-			mask.MapColors(0,0,0,1, 0,0,0,1, 0,0,0,1, 0,0,0,1, 0,0,0,0)
+			mask.MapColors_ISSUEHERE(0,0,0,1, 0,0,0,1, 0,0,0,1, 0,0,0,1, 0,0,0,0)
 			husk_over.Blend(mask, ICON_ADD)
 			base_icon.Blend(husk_over, ICON_OVERLAY)
 
@@ -496,7 +496,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 	var/image/em_block_ears
 	if(ears_s)
 		if(ears_s.Height() > face_standing.Height()) // Tol ears
-			face_standing.Crop(1, 1, face_standing.Width(), ears_s.Height())
+			face_standing.Crop_ISSUEHERE(1, 1, face_standing.Width(), ears_s.Height())
 		face_standing.Blend(ears_s, ICON_OVERLAY)
 		// todo: these should be considered separately, but it'd take a slight refactor to how sprite acc's are rendered (or atleast ears)
 		if(ear_style?.em_block || ear_secondary_style?.em_block)

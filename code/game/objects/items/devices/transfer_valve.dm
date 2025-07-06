@@ -135,7 +135,7 @@
 		add_overlay("[tank_one.icon_state]")
 	if(tank_two)
 		var/icon/J = new(icon, icon_state = "[tank_two.icon_state]")
-		J.Shift(WEST, 13)
+		J.Shift_ISSUEHERE(WEST, 13)
 		underlays += J
 	if(attached_device)
 		add_overlay("device")

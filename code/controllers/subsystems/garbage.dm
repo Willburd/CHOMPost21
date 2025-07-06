@@ -188,7 +188,7 @@ SUBSYSTEM_DEF(garbage)
 		var/datum/D = L[GC_QUEUE_ITEM_REF]
 
 		// If that's all we've got, send er off
-		if (refcount(D) == REFS_WE_EXPECT)
+		if (refcount_ISSUEHERE(D) == REFS_WE_EXPECT)
 			++gcedlasttick
 			++totalgcs
 			pass_counts[level]++
@@ -211,7 +211,7 @@ SUBSYSTEM_DEF(garbage)
 				#ifdef REFERENCE_TRACKING
 				// Decides how many refs to look for (potentially)
 				// Based off the remaining and the ones we can account for
-				var/remaining_refs = refcount(D) - REFS_WE_EXPECT
+				var/remaining_refs = refcount_ISSUEHERE(D) - REFS_WE_EXPECT
 				if(reference_find_on_fail[ref(D)])
 					INVOKE_ASYNC(D, TYPE_PROC_REF(/datum,find_references), remaining_refs)
 					ref_searching = TRUE
@@ -226,7 +226,7 @@ SUBSYSTEM_DEF(garbage)
 				var/datum/qdel_item/I = items[type]
 
 				var/message = "## TESTING: GC: -- [ref(D)] | [type] was unable to be GC'd --"
-				message = "[message] (ref count of [refcount(D)])"
+				message = "[message] (ref count of [refcount_ISSUEHERE(D)])"
 				log_world(message)
 
 				/*var/detail = D.dump_harddel_info()

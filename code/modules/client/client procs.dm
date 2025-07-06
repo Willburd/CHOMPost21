@@ -210,7 +210,7 @@
 	return hsrc.Topic(href, href_list)
 
 //This stops files larger than UPLOAD_LIMIT being sent from client to server via input(), client.Import() etc.
-/client/AllowUpload(filename, filelength)
+/client/AllowUpload_ISSUEHERE(filename, filelength)
 	if(filelength > UPLOAD_LIMIT)
 		to_chat(src, span_red("Error: AllowUpload(): File Upload too large. Upload Limit: [UPLOAD_LIMIT/1024]KiB."))
 		return 0
@@ -371,7 +371,7 @@
 	//////////////
 	//DISCONNECT//
 	//////////////
-/client/Del()
+/client/Del_ISSUEHERE()
 	if(!gc_destroyed)
 		gc_destroyed = world.time
 		if (!QDELING(src))
@@ -532,7 +532,7 @@
 		qdel(query_insert)
 
 	//Logging player access
-	var/serverip = "[world.internet_address]:[world.port]"
+	var/serverip = "[world.internet_address_HASISSUE]:[world.port]"
 	var/datum/db_query/query_accesslog = SSdbcore.NewQuery("INSERT INTO `erro_connection_log`(`id`,`datetime`,`serverip`,`ckey`,`ip`,`computerid`) VALUES(null,Now(),'[serverip]','[sql_ckey]','[sql_ip]','[sql_computerid]');")
 	query_accesslog.Execute()
 	qdel(query_accesslog)
@@ -543,7 +543,7 @@
 //checks if a client is afk
 //3000 frames = 5 minutes
 /client/proc/is_afk(duration=3000)
-	if(inactivity > duration)	return inactivity
+	if(inactivity_ISSUEHERE > duration)	return inactivity_ISSUEHERE
 	return 0
 
 //Called when the client performs a drag-and-drop operation.
@@ -554,7 +554,7 @@
 		. = ..()
 
 /client/proc/last_activity_seconds()
-	return inactivity / 10
+	return inactivity_ISSUEHERE / 10
 
 //send resources to the client. It's here in its own proc so we can move it around easiliy if need be
 /client/proc/send_resources()
@@ -703,9 +703,9 @@
 	set name = "Toggle Verbs"
 	set category = "OOC.Client Settings"
 
-	show_verb_panel = !show_verb_panel
+	show_verb_panel_ISSUEHERE = !show_verb_panel_ISSUEHERE
 
-	to_chat(src, "Your verbs are now [show_verb_panel ? "on" : "off. To turn them back on, type 'toggle-verbs' into the command bar."].")
+	to_chat(src, "Your verbs are now [show_verb_panel_ISSUEHERE ? "on" : "off. To turn them back on, type 'toggle-verbs' into the command bar."].")
 *///CHOMPRemove End
 
 /*

@@ -140,9 +140,9 @@
 
 			//to_world("icon: [icon2html(I)]")
 
-			I.DrawBox(colour, rx, ry, rx+1, ry+1)
+			I.DrawBox_ISSUEHERE(colour, rx, ry, rx+1, ry+1)
 
-			I2.DrawBox(colour2, rx, ry, rx+1, ry+1)
+			I2.DrawBox_ISSUEHERE(colour2, rx, ry, rx+1, ry+1)
 
 	user.clearmap()
 
@@ -268,7 +268,7 @@
 
 			//to_world("icon: [icon2html(I)]")
 
-			I.DrawBox(colour, rx, ry, rx, ry)
+			I.DrawBox_ISSUEHERE(colour, rx, ry, rx, ry)
 
 	user.clearmap()
 

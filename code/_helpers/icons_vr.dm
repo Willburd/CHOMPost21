@@ -30,7 +30,7 @@
 	var/list/colors = list()
 	for(var/x_pixel = 1 to I.Width())
 		for(var/y_pixel = 1 to I.Height())
-			var/this_color = I.GetPixel(x_pixel, y_pixel)
+			var/this_color = I.GetPixel_ISSUEHERE(x_pixel, y_pixel)
 			if(this_color)
 				if (ignoreGreyscale && rgb2num(this_color, COLORSPACE_HSV)[2] == 0) //If saturation is 0, must be greyscale
 					continue
@@ -40,6 +40,6 @@
 /proc/empty_Y_space(var/icon/I) //Returns the amount of lines containing only transparent pixels in an icon, starting from the bottom
 	for(var/y_pixel = 1 to I.Height())
 		for(var/x_pixel = 1 to I.Width())
-			if (I.GetPixel(x_pixel, y_pixel))
+			if (I.GetPixel_ISSUEHERE(x_pixel, y_pixel))
 				return y_pixel - 1
 	return null

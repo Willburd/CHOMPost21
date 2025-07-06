@@ -8,7 +8,7 @@
 	anchored = TRUE
 	plane = FLOAT_PLANE
 	layer = FLOAT_LAYER //over the inserted items.
-	vis_flags = VIS_INHERIT_ID
+	vis_flags_ISSUEHERE = VIS_INHERIT_ID
 	appearance_flags = KEEP_TOGETHER | LONG_GLIDE | PASS_MOUSE
 
 

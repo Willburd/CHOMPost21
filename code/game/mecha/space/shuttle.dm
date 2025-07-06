@@ -11,7 +11,7 @@
 	max_temperature = 20000
 	health = 300
 	maxhealth = 300
-	infra_luminosity = 6
+	infra_luminosity_ISSUEHERE = 6
 	wreckage = /obj/effect/decal/mecha_wreckage/shuttlecraft
 	cargo_capacity = 3
 	max_equip = 3
@@ -32,8 +32,8 @@
 	var/image/central_paint_mask
 	var/image/front_paint_mask
 
-	bound_height = 64
-	bound_width = 64
+	bound_height_ISSUEHERE = 64
+	bound_width_ISSUEHERE = 64
 
 	max_hull_equip = 2
 	max_weapon_equip = 1

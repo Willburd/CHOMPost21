@@ -76,7 +76,7 @@
 	if (!lighting_object)
 		return FALSE
 
-	return !(luminosity || dynamic_lumcount)
+	return !(luminosity_ISSUEHERE || dynamic_lumcount)
 
 
 ///Proc to add movable sources of opacity on the turf and let it handle lighting code.
@@ -99,7 +99,7 @@
 	if(((is_outdoors() && !force) || outdoors_adjacent) && (z in fake_sunlight_zs)) //Special exception for fakesun lit tiles
 		return
 
-	luminosity = new_luminosity
+	luminosity_ISSUEHERE = new_luminosity
 
 ///Checks planets and fake_suns to see if our turf should be handled by either
 /turf/proc/check_for_sun()

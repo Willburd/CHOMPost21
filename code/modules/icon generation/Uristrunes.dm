@@ -13,7 +13,7 @@
 	I.Blend(input, ICON_OVERLAY)
 
 	//Discard the image
-	I.MapColors(0,	0,	0,	0, //-\  Ignore
+	I.MapColors_ISSUEHERE(0,	0,	0,	0, //-\  Ignore
 				0,	0,	0,	0, //--> The
 				0,	0,	0,	0, //-/  Colors
 				0,255,	0,	1, //Keep alpha channel, any pixel with non-zero alpha gets max green channel
@@ -23,17 +23,17 @@
 	//Store border's alpha in the blue channel
 	for(var/x = 1, x <= 32, x++)
 		for(var/y = 1, y <= 32, y++)
-			var/p = I.GetPixel(x, y)
+			var/p = I.GetPixel_ISSUEHERE(x, y)
 
 			if(p == null)
-				var/n = I.GetPixel(x, y + 1)
-				var/s = I.GetPixel(x, y - 1)
-				var/e = I.GetPixel(x + 1, y)
-				var/w = I.GetPixel(x - 1, y)
-				var/ne = I.GetPixel(x + 1, y + 1)
-				var/se = I.GetPixel(x + 1, y - 1)
-				var/nw = I.GetPixel(x - 1, y + 1)
-				var/sw = I.GetPixel(x - 1, y - 1)
+				var/n = I.GetPixel_ISSUEHERE(x, y + 1)
+				var/s = I.GetPixel_ISSUEHERE(x, y - 1)
+				var/e = I.GetPixel_ISSUEHERE(x + 1, y)
+				var/w = I.GetPixel_ISSUEHERE(x - 1, y)
+				var/ne = I.GetPixel_ISSUEHERE(x + 1, y + 1)
+				var/se = I.GetPixel_ISSUEHERE(x + 1, y - 1)
+				var/nw = I.GetPixel_ISSUEHERE(x - 1, y + 1)
+				var/sw = I.GetPixel_ISSUEHERE(x - 1, y - 1)
 
 				var/sum_adj = ((n == "#00ff00"? 1 : 0) \
 							+ (s == "#00ff00"? 1 : 0) \
@@ -47,13 +47,13 @@
 
 
 				if(sum_adj)
-					I.DrawBox(rgb(255, 0, 200, 0), x, y)
+					I.DrawBox_ISSUEHERE(rgb(255, 0, 200, 0), x, y)
 
 				else if(sum_diag)
-					I.DrawBox(rgb(255, 0, 100, 0), x, y)
+					I.DrawBox_ISSUEHERE(rgb(255, 0, 100, 0), x, y)
 
 				else
-					I.DrawBox(rgb(0, 0, 0, 0), x, y)
+					I.DrawBox_ISSUEHERE(rgb(0, 0, 0, 0), x, y)
 
 			else if(p != "#00ff00")
 				var/a = 255
@@ -61,10 +61,10 @@
 				if(length(p) == 9) // "#rrggbbaa", we want the aa
 					a = hex2num(copytext(p, 8))
 
-				I.DrawBox(rgb(255 - a, a, 255 - a, a), x, y)
+				I.DrawBox_ISSUEHERE(rgb(255 - a, a, 255 - a, a), x, y)
 
 	//Map the red and green channels to the desired output colors
-	I.MapColors(border_color, fill_color, rgb(0, 0, 0, border_alpha), rgb(0, 0, 0, fill_alpha), "#00000000")
+	I.MapColors_ISSUEHERE(border_color, fill_color, rgb(0, 0, 0, border_alpha), rgb(0, 0, 0, fill_alpha), "#00000000")
 
 	return I
 
@@ -139,7 +139,7 @@
 /proc/inanimate_rune(icon/input, rune_color = "#00000000", border_color = "#c8000000")
 	var/icon/base = create_border_image(input, "#00ff0000", "#ff000000")
 
-	base.MapColors(rune_color, border_color, "#00000000", "#000000ff", "#00000000")
+	base.MapColors_ISSUEHERE(rune_color, border_color, "#00000000", "#000000ff", "#00000000")
 
 	return base
 

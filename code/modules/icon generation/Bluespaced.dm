@@ -7,7 +7,7 @@
 			var/x = round((start[1] * i / dist) + (end[1] * (1 - i / dist)))
 			var/y = round((start[2] * i / dist) + (end[2] * (1 - i / dist)))
 
-			if(I.GetPixel(x, y) != null)
+			if(I.GetPixel_ISSUEHERE(x, y) != null)
 				return list(x, y)
 
 	else
@@ -17,7 +17,7 @@
 			var/x = round((start[1] * i / dist) + (end[1] * (1 - i / dist)))
 			var/y = round((start[2] * i / dist) + (end[2] * (1 - i / dist)))
 
-			if(I.GetPixel(x, y) != null)
+			if(I.GetPixel_ISSUEHERE(x, y) != null)
 				return list(x, y)
 
 	return null
@@ -44,14 +44,14 @@
 		var/x = queue[i][1]
 		var/y = queue[i][2]
 
-		var/list/pixel = bsi_split_colors(I.GetPixel(x, y))
+		var/list/pixel = bsi_split_colors(I.GetPixel_ISSUEHERE(x, y))
 		if(pixel[4] == 0)
 			continue
 
-		var/list/n = (y < I.Height())? bsi_split_colors(I.GetPixel(x, y + 1)) : list(0, 0, 0, 0)
-		var/list/s = (y > 1)? bsi_split_colors(I.GetPixel(x, y - 1)) : list(0, 0, 0, 0)
-		var/list/e = (x < I.Width())? bsi_split_colors(I.GetPixel(x + 1, y)) : list(0, 0, 0, 0)
-		var/list/w = (x > 1)? bsi_split_colors(I.GetPixel(x - 1, y)) : list(0, 0, 0, 0)
+		var/list/n = (y < I.Height())? bsi_split_colors(I.GetPixel_ISSUEHERE(x, y + 1)) : list(0, 0, 0, 0)
+		var/list/s = (y > 1)? bsi_split_colors(I.GetPixel_ISSUEHERE(x, y - 1)) : list(0, 0, 0, 0)
+		var/list/e = (x < I.Width())? bsi_split_colors(I.GetPixel_ISSUEHERE(x + 1, y)) : list(0, 0, 0, 0)
+		var/list/w = (x > 1)? bsi_split_colors(I.GetPixel_ISSUEHERE(x - 1, y)) : list(0, 0, 0, 0)
 
 		var/value = (i == 1)? 16 : max(n[1] - 1, e[1] - 1, s[1] - 1, w[1] - 1)
 
@@ -69,7 +69,7 @@
 
 		var/v2 = 256 - ((16 - value) * (16 - value))
 
-		I.DrawBox(rgb(value, v2, pixel[4] - v2, pixel[4]), x, y)
+		I.DrawBox_ISSUEHERE(rgb(value, v2, pixel[4] - v2, pixel[4]), x, y)
 
 		if(n[4] != 0 && n[1] < value - 1)
 			queue[++queue.len] = list(x, y + 1)
@@ -90,7 +90,7 @@
 /proc/bsi_generate_mask(icon/source, state)
 	var/icon/mask = icon(source, state)
 
-	mask.MapColors(
+	mask.MapColors_ISSUEHERE(
 			0, 0, 0, 0,
 			0, 0, 0, 0,
 			0, 0, 0, 0,
@@ -147,7 +147,7 @@
 		return source
 
 	var/icon/unaffected = icon(mask)
-	unaffected.MapColors(
+	unaffected.MapColors_ISSUEHERE(
 			0, 0, 0, 0,
 			0, 0, 0, 0,
 			0, 0, 0, 1,
@@ -155,7 +155,7 @@
 			255, 255, 255, 0)
 
 	var/icon/temp = icon(source, state) //Mask already contains the original alpha values, avoid squaring them
-	temp.MapColors(
+	temp.MapColors_ISSUEHERE(
 			1, 0, 0, 0,
 			0, 1, 0, 0,
 			0, 0, 1, 0,
@@ -165,7 +165,7 @@
 	unaffected.Blend(temp, ICON_MULTIPLY)
 
 	var/icon/bluespaced = icon(mask)
-	bluespaced.MapColors(
+	bluespaced.MapColors_ISSUEHERE(
 			0, 0, 0, 0,
 			0, 0, 0, 1,
 			0, 0, 0, 0,

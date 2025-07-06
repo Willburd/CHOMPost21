@@ -9,7 +9,7 @@
 //Not tied to the grid, places it's center where the cursor is
 
 /obj/screen/movable
-	mouse_drag_pointer = 'icons/effects/mouse_pointers/screen_drag.dmi'
+	mouse_drag_pointer_ISSUEHERE = 'icons/effects/mouse_pointers/screen_drag.dmi'
 	var/snap2grid = FALSE
 	// TODO: Check if these can safely be deleted
 	var/moved = FALSE

@@ -14,7 +14,7 @@
 	anchored = TRUE						//No pulling around.
 	unacidable = TRUE						//And no deleting hoomans inside
 	layer = MOB_LAYER					//Icon draw layer
-	infra_luminosity = 15				//Byond implementation is bugged.
+	infra_luminosity_ISSUEHERE = 15				//Byond implementation is bugged.
 	var/initial_icon = null				//Mech type for resetting icon. Only used for reskinning kits (see custom items)
 	var/can_move = 1
 	var/mob/living/carbon/occupant = null

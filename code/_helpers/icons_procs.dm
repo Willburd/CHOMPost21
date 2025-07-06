@@ -20,7 +20,7 @@ GLOBAL_DATUM_INIT(my_icon, /icon, new('iconfile.dmi'))
 icon/ChangeOpacity(amount = 1)
 	A very common operation in DM is to try to make an icon more or less transparent. Making an icon more
 	transparent is usually much easier than making it less so, however. This proc basically is a frontend
-	for MapColors() which can change opacity any way you like, in much the same way that SetIntensity()
+	for MapColors_ISSUEHERE() which can change opacity any way you like, in much the same way that SetIntensity_ISSUEHERE()
 	can make an icon lighter or darker. If amount is 0.5, the opacity of the icon will be cut in half.
 	If amount is 2, opacity is doubled and anything more than half-opaque will become fully opaque.
 icon/GrayScale()
@@ -144,7 +144,7 @@ mob
 
 		// Testing dynamic icon overlays
 		var/icon/I = icon('old_or_unused.dmi', icon_state="aqua")
-		I.Shift(NORTH,16,1)
+		I.Shift_ISSUEHERE(NORTH,16,1)
 		add_overlay(I)
 
 		// Testing dynamic image overlays
@@ -615,7 +615,7 @@ world
 		((hi3 >= 65 ? hi3-55 : hi3-48)<<4) | (lo3 >= 65 ? lo3-55 : lo3-48),
 		((hi4 >= 65 ? hi4-55 : hi4-48)<<4) | (lo4 >= 65 ? lo4-55 : lo4-48))
 
-//Interface for using DrawBox() to draw 1 pixel on a coordinate.
+//Interface for using DrawBox_ISSUEHERE() to draw 1 pixel on a coordinate.
 //Returns the same icon specifed in the argument, but with the pixel drawn
 /proc/DrawPixel(icon/I,colour,drawX,drawY)
 	if(!I)
@@ -629,7 +629,7 @@ world
 	if(drawY > Iheight || drawY <= 0)
 		return 0
 
-	I.DrawBox(colour,drawX, drawY)
+	I.DrawBox_ISSUEHERE(colour,drawX, drawY)
 	return I
 
 

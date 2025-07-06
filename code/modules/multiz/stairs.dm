@@ -529,20 +529,20 @@
 // For ease of spawning. While you *can* spawn the base type and set its dir, this is useful for adminbus and a little bit quicker to map in
 /obj/structure/stairs/spawner/north
 	dir = NORTH
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 	//bound_y = -32
 	pixel_y = -32
 
 /obj/structure/stairs/spawner/south
 	dir = SOUTH
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/structure/stairs/spawner/east
 	dir = EAST
-	bound_width = 64
-	//bound_x = -32
-	pixel_x = -32
+	bound_width_ISSUEHERE = 64
+	//bound_x_ISSUEHERE = -32
+	pixel_x_ISSUEHERE = -32
 
 /obj/structure/stairs/spawner/west
 	dir = WEST
-	bound_width = 64
+	bound_width_ISSUEHERE = 64

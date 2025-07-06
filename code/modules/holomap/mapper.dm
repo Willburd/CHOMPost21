@@ -98,8 +98,8 @@
 
 	var/obj/screen/mapper/map/tmp = new()
 	var/icon/canvas = icon(HOLOMAP_ICON, "blank")
-	canvas.Crop(1,1,world.maxx,world.maxy)
-	canvas.DrawBox("#A7BE97",1,1,world.maxx,world.maxy)
+	canvas.Crop_ISSUEHERE(1,1,world.maxx,world.maxy)
+	canvas.DrawBox_ISSUEHERE("#A7BE97",1,1,world.maxx,world.maxy)
 	tmp.icon = icon
 	map_image_cache["bad"] = tmp
 

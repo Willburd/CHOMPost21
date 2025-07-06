@@ -105,7 +105,7 @@
 			if(!v.welded)
 				entry_vent = v
 				audible_message("[src] tries to slither away!")
-				walk_to(src, entry_vent, 1, 5)
+				walk_to_ISSUEHERE(src, entry_vent, 1, 5)
 				escaping = TRUE
 				break
 

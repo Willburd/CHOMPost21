@@ -7,7 +7,7 @@
 	w_class = ITEMSIZE_SMALL
 	drop_sound = 'sound/items/drop/paper.ogg'
 	pickup_sound = 'sound/items/pickup/paper.ogg'
-	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
+	mouse_drag_pointer_ISSUEHERE = MOUSE_ACTIVE_POINTER
 	// Destination tagging for the mail sorter.
 	var/sortTag = 0
 	// Who this mail is for and who can open it.
@@ -316,7 +316,7 @@
 	. = ..()
 	var/list/mail_recipients = list()
 	for(var/mob/living/carbon/human/alive in player_list)
-		if(alive.stat != DEAD && alive.client && alive.client.inactivity <= 10 MINUTES)
+		if(alive.stat != DEAD && alive.client && alive.client.inactivity_ISSUEHERE <= 10 MINUTES)
 			mail_recipients += alive
 	for(var/iterator in 1 to storage_capacity)
 		var/obj/item/mail/new_mail

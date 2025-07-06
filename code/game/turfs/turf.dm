@@ -2,7 +2,7 @@
 	icon = 'icons/turf/floors.dmi'
 	layer = TURF_LAYER
 	plane = TURF_PLANE
-	vis_flags = VIS_INHERIT_ID | VIS_INHERIT_PLANE// Important for interaction with and visualization of openspace.
+	vis_flags_ISSUEHERE = VIS_INHERIT_ID | VIS_INHERIT_PLANE// Important for interaction with and visualization of openspace.
 	level = 1
 	var/holy = 0
 

@@ -99,7 +99,7 @@
 		if (row["ckey"] in our_known_alts)
 			continue
 
-		if (world.IsBanned(row["ckey"], row["address"], row["computer_id"], real_bans_only = TRUE))
+		if (world.IsBanned_HASISSUE((row["ckey"], row["address"], row["computer_id"], real_bans_only = TRUE))
 			found = row
 			break
 

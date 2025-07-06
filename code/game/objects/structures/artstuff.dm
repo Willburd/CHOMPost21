@@ -473,7 +473,7 @@
 	var/h = I.Height() + 1
 	for(var/x in 1 to width)
 		for(var/y in 1 to height)
-			grid[x][y] = I.GetPixel(x,h-y)
+			grid[x][y] = I.GetPixel_ISSUEHERE(x,h-y)
 
 /**
  * Loads a painting from SSpersistence. Called globally by said subsystem when it inits

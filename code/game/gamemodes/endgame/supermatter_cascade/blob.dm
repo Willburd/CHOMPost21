@@ -6,7 +6,7 @@
 	icon = 'icons/turf/space.dmi'
 	icon_state = "bluespace"
 
-	//luminosity = 5
+	//luminosity_ISSUEHERE = 5
 	//l_color="#0066FF"
 	plane = PLANE_LIGHTING_ABOVE
 

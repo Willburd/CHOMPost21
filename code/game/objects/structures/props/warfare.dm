@@ -37,7 +37,7 @@
 	desc = "It seems to be some sort of spacecraft-tier ordinance."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "single"
-	bound_width = 64
+	bound_width_ISSUEHERE = 64
 
 /obj/structure/prop/war/tgmc_missile/double
 	icon_state = "widowmaker"
@@ -64,7 +64,7 @@
 	desc = "Some sort of spacecraft-tier missile weapon."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "rocket_pod"
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/structure/prop/war/tgmc_missile_rack/change_state(state)
 	. = ..()
@@ -103,7 +103,7 @@
 	desc = "Some sort of spacecraft-tier rocket weapon."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "minirocket_pod"
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/structure/prop/war/tgmc_minirockets/change_state(state)
 	. = ..()
@@ -126,7 +126,7 @@
 	desc = "Some sort of spacecraft-tier energy weapon."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "laser_beam"
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/structure/prop/war/tgmc_laser/change_state(state)
 	. = ..()
@@ -149,7 +149,7 @@
 	desc = "Some sort of spacecraft-tier rotary cannon weapon."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "30mm_cannon"
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 
 /obj/structure/prop/war/tgmc_30mm/change_state(state)
 	. = ..()

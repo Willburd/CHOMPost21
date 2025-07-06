@@ -9,7 +9,7 @@
 	maxhealth = 350		//Don't forget to update the /old variant if  you change this number.
 	deflect_chance = 25
 	max_temperature = 60000
-	infra_luminosity = 3
+	infra_luminosity_ISSUEHERE = 3
 	operation_req_access = list(access_cent_specops)
 	wreckage = /obj/effect/decal/mecha_wreckage/marauder
 	add_req_access = 0

@@ -55,7 +55,7 @@
 	position_x = ((loc.x - 1) * WORLD_ICON_SIZE) + (WORLD_ICON_SIZE/2) + pixel_x + 1
 	position_y = ((loc.y - 1) * WORLD_ICON_SIZE) + (WORLD_ICON_SIZE/2) + pixel_y + 1
 	vector = add_vis_overlay("vector", dir = SOUTH, layer = 10, unique = TRUE)
-	vector.vis_flags = (VIS_INHERIT_PLANE|VIS_INHERIT_ID)
+	vector.vis_flags_ISSUEHERE = (VIS_INHERIT_PLANE|VIS_INHERIT_ID)
 
 /obj/effect/overmap/visitable/ship/Destroy()
 	STOP_PROCESSING(SSprocessing, src)

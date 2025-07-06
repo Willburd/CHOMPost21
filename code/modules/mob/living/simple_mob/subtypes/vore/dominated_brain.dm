@@ -97,7 +97,7 @@
 
 /mob/living/dominated_brain/proc/restore_control(ask = TRUE)
 
-	if(ask && disconnect_time || client && ((client.inactivity / 10) / 60 > 10))
+	if(ask && disconnect_time || client && ((client.inactivity_ISSUEHERE / 10) / 60 > 10))
 		if(tgui_alert(src, "Your predator's mind does not seem to be active presently. Releasing control in this state may leave you stuck in whatever state you find yourself in. Are you sure?", "Release Control",list("No","Yes")) != "Yes")
 			return
 	var/mob/living/prey_goes_here

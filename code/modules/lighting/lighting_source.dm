@@ -255,8 +255,8 @@
 	var/list/datum/lighting_corner/corners = list()
 
 	if (source_turf)
-		var/oldlum = source_turf.luminosity
-		source_turf.luminosity = CEILING(light_range, 1)
+		var/oldlum = source_turf.luminosity_ISSUEHERE
+		source_turf.luminosity_ISSUEHERE = CEILING(light_range, 1)
 		for(var/turf/T in get_turfs_in_range())
 			if(IS_OPAQUE_TURF(T))
 				continue
@@ -267,7 +267,7 @@
 			corners[T.lighting_corner_SE] = 0
 			corners[T.lighting_corner_SW] = 0
 			corners[T.lighting_corner_NW] = 0
-		source_turf.luminosity = oldlum
+		source_turf.luminosity_ISSUEHERE = oldlum
 
 	SETUP_CORNERS_CACHE(src)
 

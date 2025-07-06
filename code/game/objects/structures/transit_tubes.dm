@@ -39,7 +39,7 @@
 /obj/structure/transit_tube_pod
 	icon = 'icons/obj/pipes/transit_tube_pod.dmi'
 	icon_state = "pod"
-	animate_movement = FORWARD_STEPS
+	animate_movement_ISSUEHERE = FORWARD_STEPS
 	anchored = TRUE
 	density = TRUE
 	var/moving = 0

@@ -1,7 +1,7 @@
 //----------------------------------------
 //
 //   Return a copy of the provided icon,
-//  after calling MapColors on it. The
+//  after calling MapColors_ISSUEHERE on it. The
 //  color values are linearily interpolated
 //  between the pairs provided, based on
 //  the ratio argument.
@@ -18,7 +18,7 @@
 	var/i = 1 - ratio
 	var/icon/I = icon(input)
 
-	I.MapColors(
+	I.MapColors_ISSUEHERE(
 		(rr1 * r + rr2 * i) / 255.0, (rg1 * r + rg2 * i) / 255.0, (rb1 * r + rb2 * i) / 255.0, (ra1 * r + ra2 * i) / 255.0,
 		(gr1 * r + gr2 * i) / 255.0, (gg1 * r + gg2 * i) / 255.0, (gb1 * r + gb2 * i) / 255.0, (ga1 * r + ga2 * i) / 255.0,
 		(br1 * r + br2 * i) / 255.0, (bg1 * r + bg2 * i) / 255.0, (bb1 * r + bb2 * i) / 255.0, (ba1 * r + ba2 * i) / 255.0,

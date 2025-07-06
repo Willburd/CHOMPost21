@@ -276,7 +276,7 @@ var/global/datum/controller/subsystem/ticker/ticker
 			else if(restart_timeleft <= 0)
 				to_world(span_boldannounce("Restarting world!"))
 				sleep(5)
-				world.Reboot()
+				world.Reboot_HASISSUE()
 			else if (world.time - last_restart_notify >= 1 MINUTE)
 				to_world(span_boldannounce("Restarting in [round(restart_timeleft/600, 1)] minute\s."))
 				last_restart_notify = world.time

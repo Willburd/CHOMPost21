@@ -37,8 +37,8 @@
 /obj/structure/prop/machine/gravygen
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "bigdice"
-	bound_width = 64
-	bound_height = 64
+	bound_width_ISSUEHERE = 64
+	bound_height_ISSUEHERE = 64
 
 // dna vault from /tg/
 /obj/structure/prop/dna_vault
@@ -571,7 +571,7 @@
 	icon = 'icons/obj/props/decor.dmi'
 	icon = 'icons/obj/props/decor32x64.dmi'
 	icon_state = "nt_pod_mappreview"
-	bound_height = 64
+	bound_height_ISSUEHERE = 64
 
 	var/obj/effect/overlay/vis/outside
 	var/obj/effect/overlay/vis/door
@@ -591,7 +591,7 @@
 	mask.icon = icon
 	mask.icon_state = "nt_pod_mask"
 	mask.render_target = "*nt_podmask[REF(src)]"
-	mask.vis_flags = VIS_INHERIT_ID
+	mask.vis_flags_ISSUEHERE = VIS_INHERIT_ID
 	vis_contents += mask
 
 	outside = add_vis_overlay(icon, "nt_pod_over", ABOVE_MOB_LAYER, MOB_PLANE, unique = TRUE)
@@ -608,13 +608,13 @@
 
 /obj/structure/prop/machine/nt_pod/proc/abduct(var/atom/movable/AM)
 	// Save old settings
-	contents_vis_flags = AM.vis_flags
+	contents_vis_flags = AM.vis_flags_ISSUEHERE
 	contents_original_pixel_y = AM.pixel_y
 
 	// Arrange
 	AM.add_filter("podmask", 1, alpha_mask_filter(render_source = "nt_podmask[REF(src)]", flags = MASK_INVERSE))
 	AM.pixel_y = 12
-	AM.vis_flags = VIS_INHERIT_ID|VIS_INHERIT_DIR
+	AM.vis_flags_ISSUEHERE = VIS_INHERIT_ID|VIS_INHERIT_DIR
 	vis_contents += AM
 	if(ismob(AM))
 		var/mob/M = AM
@@ -632,7 +632,7 @@
 	// Cleanup
 	AM.remove_filter("podmask")
 	AM.forceMove(drop_location())
-	AM.vis_flags = contents_vis_flags
+	AM.vis_flags_ISSUEHERE = contents_vis_flags
 	AM.pixel_y = contents_original_pixel_y
 
 /obj/structure/prop/machine/nt_pod/MouseDrop_T(var/atom/movable/AM, var/mob/user)

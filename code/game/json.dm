@@ -78,9 +78,9 @@ var/makejson = 1 //temp
 	var/file = file(dmepath)
 	file << text
 	message_admins("Compiling...")
-	shell("./recompile")
+	shell_ISSUEHERE("./recompile")
 	message_admins("Done")
-	world.Reboot("Switching to [newmap]")
+	world.Reboot_HASISSUE("Switching to [newmap]")
 
 /obj/mapinfo
 	invisibility = INVISIBILITY_ABSTRACT
@@ -97,4 +97,4 @@ var/makejson = 1 //temp
 	switchmap(X,X)
 /proc/send2adminirc(channel,msg)
 	world << channel << " "<< msg
-	shell("python nudge.py '[channel]' [msg]")
+	shell_ISSUEHERE("python nudge.py '[channel]' [msg]")

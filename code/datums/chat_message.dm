@@ -182,7 +182,7 @@ var/list/runechat_image_cache = list()
 
 	var/msgwidth = extra_length ? CHAT_MESSAGE_EXT_WIDTH : CHAT_MESSAGE_WIDTH
 	var/mheight
-	WXH_TO_HEIGHT(owned_by.MeasureText(complete_text, null, msgwidth), mheight)
+	WXH_TO_HEIGHT(owned_by.MeasureText_ISSUEHERE(complete_text, null, msgwidth), mheight)
 
 	if(!VERB_SHOULD_YIELD)
 		return finish_image_generation(msgwidth, mheight, target, owner, complete_text, lifespan)
@@ -449,14 +449,14 @@ var/list/runechat_image_cache = list()
 	return maptext_height
 
 /atom/movable/runechat_x_offset(width, height)
-	return (width - bound_width) * -0.5 + get_oversized_icon_offsets()["x"]
+	return (width - bound_width_ISSUEHERE) * -0.5 + get_oversized_icon_offsets()["x"]
 
 /atom/movable/runechat_y_offset()
 	return ..() + get_oversized_icon_offsets()["y"] * 1.5 // Fix to use 2 if we ever can measure sprites
 
 /* Nothing special
 /mob/runechat_x_offset(width, height)
-	return (width - bound_width) * -0.5
+	return (width - bound_width_ISSUEHERE) * -0.5
 */
 
 /mob/runechat_y_offset()

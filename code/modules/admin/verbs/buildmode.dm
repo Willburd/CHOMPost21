@@ -810,7 +810,7 @@ CHOMP Remove end */
 		return
 	newA = new /area/buildmode
 	newA.dynamic_lighting = FALSE // Without this it's pitch black if you build anywhere but space.
-	newA.luminosity = TRUE // Without this it's pitch black if you build anywhere but space.
+	newA.luminosity_ISSUEHERE = TRUE // Without this it's pitch black if you build anywhere but space.
 	newA.setup(str)
 	newA.has_gravity = oldA.has_gravity
 
@@ -872,7 +872,7 @@ CHOMP Remove end */
 
 /area/buildmode
 	dynamic_lighting = FALSE
-	luminosity = FALSE
+	luminosity_ISSUEHERE = FALSE
 
 #undef BUILDMODE_BASIC
 #undef BUILDMODE_ADVANCED

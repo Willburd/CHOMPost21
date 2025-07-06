@@ -44,7 +44,7 @@
 	mob?.remove_all_indicators()
 
 /**
- * Handles the user typing. After a brief period of inactivity,
+ * Handles the user typing. After a brief period of inactivity_ISSUEHERE,
  * signals the client mob to revert to the "thinking" icon.
  */
 /client/proc/start_typing(channel)
@@ -59,7 +59,7 @@
 	addtimer(CALLBACK(src, PROC_REF(stop_typing), channel), 5 SECONDS, TIMER_UNIQUE | TIMER_OVERRIDE | TIMER_STOPPABLE)
 
 /**
- * Callback to remove the typing indicator after a brief period of inactivity.
+ * Callback to remove the typing indicator after a brief period of inactivity_ISSUEHERE.
  * If the user was typing IC, the thinking indicator is shown.
  */
 /client/proc/stop_typing(channel)

@@ -9,7 +9,7 @@
 	maxhealth = 300			//Don't forget to update the /old variant if  you change this number.
 	deflect_chance = 20
 	max_temperature = 30000
-	infra_luminosity = 8
+	infra_luminosity_ISSUEHERE = 8
 	force = 40
 	wreckage = /obj/effect/decal/mecha_wreckage/durand
 

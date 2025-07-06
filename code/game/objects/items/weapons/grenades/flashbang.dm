@@ -97,7 +97,7 @@
 		to_chat(M, span_danger("Your ears start to ring!"))
 
 /obj/item/grenade/flashbang/Destroy()
-	walk(src, 0) // Because we might have called walk_away, we must stop the walk loop or BYOND keeps an internal reference to us forever.
+	walk(src, 0) // Because we might have called walk_away_ISSUEHERE, we must stop the walk loop or BYOND keeps an internal reference to us forever.
 	return ..()
 
 
@@ -145,7 +145,7 @@
 
 	var/stepdist = rand(1,4)//How far to step
 	var/temploc = src.loc//Saves the current location to know where to step away from
-	walk_away(src,temploc,stepdist)//I must go, my people need me
+	walk_away_ISSUEHERE(src,temploc,stepdist)//I must go, my people need me
 
 	addtimer(CALLBACK(src, PROC_REF(detonate)), rand(15, 60), TIMER_DELETE_ME)
 
@@ -159,6 +159,6 @@
 
 	var/stepdist = rand(1,3)
 	var/temploc = src.loc
-	walk_away(src,temploc,stepdist)
+	walk_away_ISSUEHERE(src,temploc,stepdist)
 
 	addtimer(CALLBACK(src, PROC_REF(detonate)), rand(15, 60), TIMER_DELETE_ME)

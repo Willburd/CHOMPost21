@@ -7,16 +7,16 @@
 
 /icon/proc/BecomeLying()
 	Turn(90)
-	Shift(SOUTH,6)
-	Shift(EAST,1)
+	Shift_ISSUEHERE(SOUTH,6)
+	Shift_ISSUEHERE(EAST,1)
 
 // Multiply all alpha values by this float
 /icon/proc/ChangeOpacity(opacity = 1.0)
-	MapColors(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,opacity, 0,0,0,0)
+	MapColors_ISSUEHERE(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,opacity, 0,0,0,0)
 
 // Convert to grayscale
 /icon/proc/GrayScale()
-	MapColors(0.3,0.3,0.3, 0.59,0.59,0.59, 0.11,0.11,0.11, 0,0,0)
+	MapColors_ISSUEHERE(0.3,0.3,0.3, 0.59,0.59,0.59, 0.11,0.11,0.11, 0,0,0)
 
 /icon/proc/ColorTone(tone)
 	GrayScale()
@@ -27,12 +27,12 @@
 	var/icon/upper = (255-gray) ? new(src) : null
 
 	if(gray)
-		MapColors(255/gray,0,0, 0,255/gray,0, 0,0,255/gray, 0,0,0)
+		MapColors_ISSUEHERE(255/gray,0,0, 0,255/gray,0, 0,0,255/gray, 0,0,0)
 		Blend(tone, ICON_MULTIPLY)
-	else SetIntensity(0)
+	else SetIntensity_ISSUEHERE(0)
 	if(255-gray)
 		upper.Blend(rgb(gray,gray,gray), ICON_SUBTRACT)
-		upper.MapColors((255-TONE[1])/(255-gray),0,0,0, 0,(255-TONE[2])/(255-gray),0,0, 0,0,(255-TONE[3])/(255-gray),0, 0,0,0,0, 0,0,0,1)
+		upper.MapColors_ISSUEHERE((255-TONE[1])/(255-gray),0,0,0, 0,(255-TONE[2])/(255-gray),0,0, 0,0,(255-TONE[3])/(255-gray),0, 0,0,0,0, 0,0,0,1)
 		Blend(upper, ICON_ADD)
 
 // Take the minimum color of two icons; combine transparency as if blending with ICON_ADD
@@ -51,7 +51,7 @@
 		// solid color
 		I = new(src)
 		I.Blend("#000000", ICON_OVERLAY)
-		I.SwapColor("#000000", null)
+		I.SwapColor_ISSUEHERE("#000000", null)
 		I.Blend(icon, ICON_OVERLAY)
 	var/icon/J = new(src)
 	J.Opaque()
@@ -60,14 +60,14 @@
 
 // make this icon fully opaque--transparent pixels become black
 /icon/proc/Opaque(background = "#000000")
-	SwapColor(null, background)
-	MapColors(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,0, 0,0,0,1)
+	SwapColor_ISSUEHERE(null, background)
+	MapColors_ISSUEHERE(1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,0, 0,0,0,1)
 
 // Change a grayscale icon into a white icon where the original color becomes the alpha
 // I.e., black -> transparent, gray -> translucent white, white -> solid white
 /icon/proc/BecomeAlphaMask()
-	SwapColor(null, "#000000ff")	// don't let transparent become gray
-	MapColors(0,0,0,0.3, 0,0,0,0.59, 0,0,0,0.11, 0,0,0,0, 1,1,1,0)
+	SwapColor_ISSUEHERE(null, "#000000ff")	// don't let transparent become gray
+	MapColors_ISSUEHERE(0,0,0,0.3, 0,0,0,0.59, 0,0,0,0.11, 0,0,0,0, 1,1,1,0)
 
 /icon/proc/UseAlphaMask(mask)
 	Opaque()
@@ -239,7 +239,7 @@
 				|| addY2 != flatY2 \
 			)
 				// Resize the flattened icon so the new icon fits
-				flat.Crop(
+				flat.Crop_ISSUEHERE(
 					addX1 - flatX1 + 1,
 					addY1 - flatY1 + 1,
 					addX2 - flatX1 + 1,
@@ -255,7 +255,7 @@
 				// apply parent's color/alpha to the added layers if the layer didn't opt
 				if(apply_color && appearance.color)
 					if(islist(appearance.color))
-						add.MapColors(arglist(appearance.color))
+						add.MapColors_ISSUEHERE(arglist(appearance.color))
 					else
 						add.Blend(appearance.color, ICON_MULTIPLY)
 
@@ -269,7 +269,7 @@
 			// If we didn't apply parent colors individually per layer respecting appearance_flags, then do it just the one time now
 			if(appearance.color)
 				if(islist(appearance.color))
-					flat.MapColors(arglist(appearance.color))
+					flat.MapColors_ISSUEHERE(arglist(appearance.color))
 				else
 					flat.Blend(appearance.color, ICON_MULTIPLY)
 
@@ -291,7 +291,7 @@
 
 		if (appearance.color)
 			if (islist(appearance.color))
-				final_icon.MapColors(arglist(appearance.color))
+				final_icon.MapColors_ISSUEHERE(arglist(appearance.color))
 			else
 				final_icon.Blend(appearance.color, ICON_MULTIPLY)
 
@@ -339,7 +339,7 @@
 	//var/icon/alpha_mask = getFlatIcon(src)//Accurate but SLOW. Not designed for running each tick. Could have other uses I guess.
 	var/icon/alpha_mask = getIconMask(src)//Which is why I created that proc. Also a little slow since it's blending a bunch of icons together but good enough.
 	opacity_icon.AddAlphaMask(alpha_mask)//Likely the main source of lag for this proc. Probably not designed to run each tick.
-	opacity_icon.ChangeOpacity(0.4)//Front end for MapColors so it's fast. 0.5 means half opacity and looks the best in my opinion.
+	opacity_icon.ChangeOpacity(0.4)//Front end for MapColors_ISSUEHERE so it's fast. 0.5 means half opacity and looks the best in my opinion.
 	for(var/i=0,i<5,i++)//And now we add it as overlays. It's faster than creating an icon and then merging it.
 		var/image/I = image("icon" = opacity_icon, "icon_state" = A.icon_state, "layer" = layer+0.8)//So it's above other stuff but below weapons and the like.
 		switch(i)//Now to determine offset so the result is somewhat blurred.
@@ -467,7 +467,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 	else
 		hole = getCompoundIcon(A)
 
-	hole.MapColors(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White.
+	hole.MapColors_ISSUEHERE(0,0,0, 0,0,0, 0,0,0, 1,1,1) //White.
 
 	//Make a bigger version
 	var/icon/grower = new(hole)
@@ -479,7 +479,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 	var/half_diff_height = (end_height-orig_height)*0.5
 
 	//Make icon black
-	grower.SwapColor("#FFFFFF","#000000") //Black.
+	grower.SwapColor_ISSUEHERE("#FFFFFF","#000000") //Black.
 
 	//Scale both icons big so we don't have to deal with low-pixel garbage issues
 	grower.Scale(orig_width*10,orig_height*10)
@@ -489,10 +489,10 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 	grower.Blend(hole,ICON_OVERLAY, x = ((orig_width*10-orig_width*9)*0.5)+1, y = ((orig_height*10-orig_height*9)*0.5)+1)
 
 	//Swap white to zero alpha
-	grower.SwapColor("#FFFFFF","#00000000")
+	grower.SwapColor_ISSUEHERE("#FFFFFF","#00000000")
 
 	//Color it
-	grower.SwapColor("#000000",color)
+	grower.SwapColor_ISSUEHERE("#000000",color)
 
 	//Scale it to final height
 	grower.Scale(end_width,end_height)

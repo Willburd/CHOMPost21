@@ -49,7 +49,7 @@ GLOBAL_LIST_EMPTY(env_messages)
 
 	..()
 
-/obj/effect/env_message/MouseDown()
+/obj/effect/env_message/MouseDown_ISSUEHERE()
 	closeToolTip(usr) //No reason not to, really
 
 	..()

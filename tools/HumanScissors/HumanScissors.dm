@@ -12,10 +12,10 @@ world
 // Make objects move 8 pixels per tick when walking
 //usr << ftp(usr.working,"[usr.outfile].dmi")
 mob
-	step_size = 8
+	step_size_ISSUEHERE = 8
 
 obj
-	step_size = 8
+	step_size_ISSUEHERE = 8
 
 
 

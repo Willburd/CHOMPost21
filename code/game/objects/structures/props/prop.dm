@@ -50,7 +50,7 @@
 	desc = "A finely engraved list on dark stone."
 	icon = 'icons/obj/props/decor64x64.dmi'
 	icon_state = "ship_memorial"
-	bound_width = 64
+	bound_width_ISSUEHERE = 64
 
 /obj/structure/prop/big_skeleton
 	name = "large skeleton"

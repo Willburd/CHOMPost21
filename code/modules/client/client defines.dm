@@ -37,7 +37,7 @@
 		//ADMIN THINGS//
 		////////////////
 	/// hides the byond verb panel as we use our own custom version
-	show_verb_panel = FALSE
+	show_verb_panel_ISSUEHERE = FALSE
 	///Contains admin info. Null if client is not an admin.
 	var/datum/admins/holder = null
 	var/buildmode		= 0
@@ -74,7 +74,7 @@
 		//SECURITY//
 		////////////
 	// comment out the line below when debugging locally to enable the options & messages menu
-	//control_freak = 1
+	//control_freak_ISSUEHERE = 1
 
 	var/received_irc_pm = -99999
 	var/irc_admin			//IRC admin that spoke with them last.
@@ -97,11 +97,11 @@
 	var/list/department_hours = list()	// VOREStation Edit - Track hours of leave accured for each department.
 	var/list/play_hours	= list() // VOREStation Edit - Tracks total playtime hours for each departments.
 
-	preload_rsc = PRELOAD_RSC
+	preload_rsc_ISSUEHERE = PRELOAD_RSC
 
 	var/global/obj/screen/click_catcher/void
 
-	control_freak = 0 //CHOMPedit KSC 1/30/20 - This enables all clientside options for Players.
+	control_freak_ISSUEHERE = 0 //CHOMPedit KSC 1/30/20 - This enables all clientside options for Players.
 	// List of all asset filenames sent to this client by the asset cache, along with their assoicated md5s
 	var/list/sent_assets = list()
 	/// List of all completed blocking send jobs awaiting acknowledgement by send_asset

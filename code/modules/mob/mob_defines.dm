@@ -5,7 +5,7 @@
 	animate_movement = 2
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 	///when this be added to vis_contents of something it inherit something.plane, important for visualisation of mob in openspace.
-	vis_flags = VIS_INHERIT_PLANE
+	vis_flags_ISSUEHERE = VIS_INHERIT_PLANE
 	var/datum/mind/mind
 
 	var/stat = 0 //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
@@ -182,7 +182,7 @@
 //Changlings, but can be used in other modes
 //	var/obj/effect/proc_holder/changpower/list/power_list = list()
 
-	mouse_drag_pointer = MOUSE_ACTIVE_POINTER
+	mouse_drag_pointer_ISSUEHERE = MOUSE_ACTIVE_POINTER
 
 	var/update_icon = 1 //Set to 1 to trigger update_icons() at the next life() call
 

@@ -21,7 +21,7 @@
 	var/icon
 	var/icon_state
 	var/invisibility
-	var/infra_luminosity
+	var/infra_luminosity_ISSUEHERE
 	var/list/filters
 	var/layer
 	var/luminosity
@@ -30,9 +30,9 @@
 	var/maptext_height
 	var/maptext_x
 	var/maptext_y
-	var/mouse_over_pointer
-	var/mouse_drag_pointer
-	var/mouse_drop_pointer
+	var/mouse_over_pointer_ISSUEHERE
+	var/mouse_drag_pointer_ISSUEHERE
+	var/mouse_drag_pointer_ISSUEHERE
 	var/mouse_drop_zone
 	var/mouse_opacity
 	var/name
@@ -50,9 +50,9 @@
 	var/text
 	var/transform
 	var/list/underlays
-	// var/vis_flags
+	// var/vis_flags_ISSUEHERE
 
-//! vis_flags missing even though byond ref says it's there, fuck off why is this possible
+//! vis_flags_ISSUEHERE missing even though byond ref says it's there, fuck off why is this possible
 
 GLOBAL_REAL_VAR(_appearance_var_list) = list(
 	"alpha",
@@ -65,7 +65,7 @@ GLOBAL_REAL_VAR(_appearance_var_list) = list(
 	"icon",
 	"icon_state",
 	"invisibility",
-	"infra_luminosity",
+	"infra_luminosity_ISSUEHERE",
 	"filters",
 	"layer",
 	"luminosity",
@@ -74,9 +74,9 @@ GLOBAL_REAL_VAR(_appearance_var_list) = list(
 	"maptext_height",
 	"maptext_x",
 	"maptext_y",
-	"mouse_over_pointer",
-	"mouse_drag_pointer",
-	"mouse_drop_pointer",
+	"mouse_over_pointer_ISSUEHERE",
+	"mouse_drag_pointer_ISSUEHERE",
+	"mouse_drag_pointer_ISSUEHERE",
 	"mouse_drop_zone",
 	"mouse_opacity",
 	"name",
@@ -94,7 +94,7 @@ GLOBAL_REAL_VAR(_appearance_var_list) = list(
 	"text",
 	"transform",
 	"underlays"
-	// "vis_flags"
+	// "vis_flags_ISSUEHERE"
 )
 
 /proc/__appearance_v_debug(appearance/A, name)
@@ -110,18 +110,18 @@ GLOBAL_REAL_VAR(_appearance_var_list) = list(
 		DEBUG_APPEARANCE_VAR(icon)
 		DEBUG_APPEARANCE_VAR(icon_state)
 		DEBUG_APPEARANCE_VAR(invisibility)
-		DEBUG_APPEARANCE_VAR(infra_luminosity)
+		DEBUG_APPEARANCE_VAR(infra_luminosity_ISSUEHERE)
 		DEBUG_APPEARANCE_VAR(filters)
 		DEBUG_APPEARANCE_VAR(layer)
-		DEBUG_APPEARANCE_VAR(luminosity)
+		DEBUG_APPEARANCE_VAR(luminosity_ISSUEHERE)
 		DEBUG_APPEARANCE_VAR(maptext)
 		DEBUG_APPEARANCE_VAR(maptext_width)
 		DEBUG_APPEARANCE_VAR(maptext_height)
 		DEBUG_APPEARANCE_VAR(maptext_x)
 		DEBUG_APPEARANCE_VAR(maptext_y)
-		DEBUG_APPEARANCE_VAR(mouse_over_pointer)
-		DEBUG_APPEARANCE_VAR(mouse_drag_pointer)
-		DEBUG_APPEARANCE_VAR(mouse_drop_pointer)
+		DEBUG_APPEARANCE_VAR(mouse_over_pointer_ISSUEHERE)
+		DEBUG_APPEARANCE_VAR(mouse_drag_pointer_ISSUEHERE)
+		DEBUG_APPEARANCE_VAR(mouse_drag_pointer_ISSUEHERE)
 		DEBUG_APPEARANCE_VAR(mouse_drop_zone)
 		DEBUG_APPEARANCE_VAR(mouse_opacity)
 		DEBUG_APPEARANCE_VAR(name)
@@ -135,9 +135,9 @@ GLOBAL_REAL_VAR(_appearance_var_list) = list(
 		DEBUG_APPEARANCE_VAR(plane)
 		DEBUG_APPEARANCE_VAR(render_source)
 		DEBUG_APPEARANCE_VAR(render_target)
-		DEBUG_APPEARANCE_VAR(suffix)
+		DEBUG_APPEARANCE_VAR(suffix_ISSUEHERE)
 		DEBUG_APPEARANCE_VAR(text)
 		DEBUG_APPEARANCE_VAR(transform)
 		DEBUG_APPEARANCE_VAR(underlays)
-		// DEBUG_APPEARANCE_VAR(vis_flags)
+		// DEBUG_APPEARANCE_VAR(vis_flags_ISSUEHERE)
 #undef DEBUG_APPEARANCE_VAR

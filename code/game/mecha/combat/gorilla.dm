@@ -12,7 +12,7 @@
 	opacity = 0 // Because there's big tall legs to look through. Also it looks fucky if this is set to 1.
 	deflect_chance = 50
 	max_temperature = 35000 //Just a bit better than the Durand.
-	infra_luminosity = 3
+	infra_luminosity_ISSUEHERE = 3
 	wreckage = /obj/effect/decal/mecha_wreckage/gorilla
 	add_req_access = 0
 	internal_damage_threshold = 25

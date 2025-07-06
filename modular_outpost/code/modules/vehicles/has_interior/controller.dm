@@ -26,10 +26,10 @@
 	var/base_icon = "sec_apc" // for destruction
 
 	// lorge boi
-	bound_width = 96
-	bound_height = 96
-	bound_x = -32
-	bound_y = -32
+	bound_width_ISSUEHERE = 96
+	bound_height_ISSUEHERE = 96
+	bound_x_ISSUEHERE = -32
+	bound_y_ISSUEHERE = -32
 
 	// graphics offset of lorge boi
 	old_x = -64

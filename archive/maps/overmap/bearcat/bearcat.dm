@@ -107,7 +107,7 @@
 
 /area/ship/scrap/shuttle/
 	requires_power = 0
-	luminosity = 1
+	luminosity_ISSUEHERE = 1
 	dynamic_lighting = 0
 
 /area/ship/scrap/shuttle/ingoing

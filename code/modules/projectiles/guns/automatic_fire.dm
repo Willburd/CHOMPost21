@@ -42,7 +42,7 @@
 	return
 
 	//When the player clicks on the target it will disable the autodel and tell the gun to shoot
-/obj/screen/auto_target/MouseDown(location,control,params)
+/obj/screen/auto_target/MouseDown_ISSUEHERE(location,control,params)
 	active += 1//Tell the autodel that we are actually using this now
 	if(gun.shooting == 0)//If we are not shooting start shooting, we need this here or they have to drag to a new turf before it starts shooting, felt weird
 		gun.Fire(loc, usr, params)
@@ -50,7 +50,7 @@
 
 	//Called when they drag the object somewhere else
 	//If its not already shooting (should be though due to the above, but this does let it click at you when it runs dry) then start shooting,
-/obj/screen/auto_target/MouseDrag(over_object,src_location,over_location,src_control,over_control,params)
+/obj/screen/auto_target/MouseDrag_ISSUEHERE(over_object,src_location,over_location,src_control,over_control,params)
 	if(gun.shooting == 0)//If we are not shooting start shooting
 		gun.Fire(loc, usr, params)
 	if(over_location != loc)//This updates the loc to our new location when we drag it to a new turf
@@ -62,8 +62,8 @@
 /obj/screen/auto_target/MouseDrop(over_object,src_location,over_location,src_control,over_control,params)
 	qdel(src)
 	return
-	//This is needed so if they just MouseDown and then let go it will stop shooting, otherwise we stick around till they run out of bullets
-/obj/screen/auto_target/MouseUp(object,location,control,params)
+	//This is needed so if they just MouseDown_ISSUEHERE and then let go it will stop shooting, otherwise we stick around till they run out of bullets
+/obj/screen/auto_target/MouseUp_ISSUEHERE(object,location,control,params)
 	qdel(src)
 	return
 

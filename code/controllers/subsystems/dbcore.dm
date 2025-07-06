@@ -250,8 +250,8 @@ SUBSYSTEM_DEF(dbcore)
 	if(!Connect())
 		return
 	var/datum/db_query/query_round_initialize = SSdbcore.NewQuery(
-		"INSERT INTO [format_table_name("round")] (initialize_datetime, server_ip, server_port) VALUES (Now(), INET_ATON(:internet_address), :port)",
-		list("internet_address" = world.internet_address || "0", "port" = "[world.port]")
+		"INSERT INTO [format_table_name("round")] (initialize_datetime, server_ip, server_port) VALUES (Now(), INET_ATON(:internet_address_HASISSUE), :port)",
+		list("internet_address_HASISSUE" = world.internet_address_HASISSUE || "0", "port" = "[world.port]")
 	)
 	query_round_initialize.Execute(async = FALSE)
 	GLOB.round_id = "[query_round_initialize.last_insert_id]"

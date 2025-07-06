@@ -191,10 +191,10 @@
 	walk_towards(ref, trg, lag)
 
 /proc/_walk_to(ref, trg, min, lag)
-	walk_to(ref, trg, min, lag)
+	walk_to_ISSUEHERE(ref, trg, min, lag)
 
 /proc/_walk_away(ref, trg, max, lag)
-	walk_away(ref, trg, max, lag)
+	walk_away_ISSUEHERE(ref, trg, max, lag)
 
 /proc/_walk_rand(ref, lag)
 	walk_rand(ref, lag)

@@ -2,7 +2,7 @@
 //#define MEM_NO_CHECK_TICK
 #ifdef MEM_NO_CHECK_TICK
 /world
-	loop_checks = 0
+	loop_checks_HASISSUE = 0
 #endif
 /proc/cmp_numeric_desc(a,b)
 	return b - a
@@ -16,7 +16,7 @@
 	var/list/by_variable = list()
 	var/list/list_of_lists = list()
 	var/list/list_count = list()
-	var/list/exclude_vars = list("overlays","underlays","vis_contents","vis_locs","contents","vars","verbs")
+	var/list/exclude_vars = list("overlays","underlays","vis_contents","vis_locs_ISSUEHERE","contents","vars","verbs")
 	world.log << "Counting memory for atoms"
 	var/i = 0
 	var/total_time = 0
@@ -111,21 +111,21 @@
 /proc/prune_list(var/list/list_of_lists)
 	if(!list_of_lists.len) return
 	for(var/list/L in list_of_lists)
-		if(list_of_lists[L] == 1 && refcount(L) < 10) list_of_lists.Remove(list(L))
+		if(list_of_lists[L] == 1 && refcount_ISSUEHERE(L) < 10) list_of_lists.Remove(list(L))
 
 /proc/mem_and_lists(var/datum/thing,var/list/list_of_lists,var/list/list_count,var/list/exclude_vars,var/list/mem_count,var/list/by_variable)
 	mem_count[thing.type] += 24
 	for(var/variable in thing.vars)
 		if(variable == "vars") continue
 		if(islist(thing.vars[variable]))
-			if(!(variable in exclude_vars) && refcount(thing.vars[variable]) > 1 && (thing.vars[variable] in list_of_lists))
+			if(!(variable in exclude_vars) && refcount_ISSUEHERE(thing.vars[variable]) > 1 && (thing.vars[variable] in list_of_lists))
 				if(thing.vars[variable] != initial(thing.vars[variable]))
 					mem_count[thing.type] += 16
 					by_variable[variable] += 16
 				list_of_lists[thing.vars[variable]]++
 				continue
 			if(thing.vars[variable] != initial(thing.vars[variable]))
-				if(!(variable in exclude_vars) && refcount(thing.vars[variable]) > 1) list_of_lists[thing.vars[variable]] = 1
+				if(!(variable in exclude_vars) && refcount_ISSUEHERE(thing.vars[variable]) > 1) list_of_lists[thing.vars[variable]] = 1
 				var/mem_size = list_memory_size(thing.vars[variable],list_of_lists)
 				mem_count[thing.type] += mem_size
 				by_variable[variable] += mem_size
@@ -139,7 +139,7 @@
 
 /proc/list_memory_size(list/L,list/list_of_lists,list/recursed_from)
 	if((L in recursed_from) || LAZYLEN(recursed_from) > 64 || (LAZYLEN(recursed_from) && (L in list_of_lists))) return 0
-	if(LAZYLEN(recursed_from) && refcount(L) > 4)
+	if(LAZYLEN(recursed_from) && refcount_ISSUEHERE(L) > 4)
 		if(L in list_of_lists) list_of_lists[L]++
 		else list_of_lists[L] = 1
 	var/total = 24

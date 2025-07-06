@@ -73,7 +73,7 @@
 			lay_down()
 		if(prob(25)) say("HSSSSS")
 		stop_automated_movement = 1
-		walk_away(src, flee_target, 7, 2)
+		walk_away_ISSUEHERE(src, flee_target, 7, 2)
 
 /mob/living/simple_animal/clockwork/react_to_attack(var/atom/A)
 	if(A == src) return

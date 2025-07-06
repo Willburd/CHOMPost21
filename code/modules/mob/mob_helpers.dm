@@ -570,7 +570,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 
 // Returns true if the mob has a client which has been active in the last given X minutes.
 /mob/proc/is_client_active(var/active = 1)
-	return client && client.inactivity < active MINUTES
+	return client && client.inactivity_ISSUEHERE < active MINUTES
 
 /mob/proc/can_eat()
 	return 1

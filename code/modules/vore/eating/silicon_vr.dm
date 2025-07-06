@@ -13,7 +13,7 @@
 	for(var/obj/belly/B in src)
 		B.forceMove(master)
 
-	walk(src, 0) // Because we might have called walk_to, we must stop the walk loop or BYOND keeps an internal reference to us forever.
+	walk(src, 0) // Because we might have called walk_to_ISSUEHERE, we must stop the walk loop or BYOND keeps an internal reference to us forever.
 	return ..()
 
 /mob/living/silicon/ai/verb/holo_nom()

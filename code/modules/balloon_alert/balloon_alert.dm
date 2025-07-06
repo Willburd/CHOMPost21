@@ -46,18 +46,18 @@
 	if (isbelly(src.loc))
 		return
 
-	var/bound_width = world.icon_size
+	var/bound_width_ISSUEHERE = world.icon_size
 	if (ismovable(src))
 		var/atom/movable/movable_source = src
-		bound_width = movable_source.bound_width
+		bound_width_ISSUEHERE = movable_source.bound_width_ISSUEHERE
 
 	var/image/balloon_alert = image(loc = isturf(src) ? src : get_atom_on_turf(src), layer = ABOVE_MOB_LAYER)
 	balloon_alert.plane = PLANE_RUNECHAT
 	balloon_alert.alpha = 0
 	balloon_alert.appearance_flags = RESET_ALPHA|RESET_COLOR|RESET_TRANSFORM
 	balloon_alert.maptext = MAPTEXT("<span style='text-align: center; -dm-text-outline: 1px #0005'>[text]</span>")
-	balloon_alert.maptext_x = (BALLOON_TEXT_WIDTH - bound_width) * -0.5
-	WXH_TO_HEIGHT(viewer_client?.MeasureText(text, null, BALLOON_TEXT_WIDTH), balloon_alert.maptext_height)
+	balloon_alert.maptext_x = (BALLOON_TEXT_WIDTH - bound_width_ISSUEHERE) * -0.5
+	WXH_TO_HEIGHT(viewer_client?.MeasureText_ISSUEHERE(text, null, BALLOON_TEXT_WIDTH), balloon_alert.maptext_height)
 	balloon_alert.maptext_width = BALLOON_TEXT_WIDTH
 
 	viewer_client?.images += balloon_alert
