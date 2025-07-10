@@ -162,7 +162,7 @@
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
 	// outpost 21 addition begin - lockers are dark and spooky!
-	if(istype(usr.loc,/obj/structure/closet)) // it's dark in here!
+	if(istype(owner.loc,/obj/structure/closet)) // it's dark in here!
 		darkness = 1
 	// outpost 21 addition end
 	var/is_dark = (darkness >= 0.5)
