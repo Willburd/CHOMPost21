@@ -22,7 +22,7 @@
 
 	// Outpost 21 edit begin - In DARKNESS not THE dark
 	var/turf/T = get_turf(src)
-	var/in_darkness = (1 - T.get_lumcount()) < 0.3
+	var/in_darkness = T.get_lumcount() < 0.3
 
 	if(!in_darkness) // iif(!istype(get_area(src), /area/shadekin))
 		to_chat(src, span_warning("It's too bright to use Dark Respite!")) // span_warning("Can only trigger Dark Respite in the Dark!"))
@@ -74,7 +74,7 @@
 
 	// Outpost 21 edit begin - In DARKNESS not THE dark
 	var/turf/T = get_turf(holder)
-	var/in_darkness = (1 - T.get_lumcount()) < 0.3
+	var/in_darkness = T.get_lumcount() < 0.3
 
 	if(in_darkness) // istype(get_area(H), /area/shadekin))
 	// Outpost 21 edit end
