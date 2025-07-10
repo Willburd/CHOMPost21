@@ -77,8 +77,8 @@
 								/datum/power/shadekin/regenerate_other,
 								/datum/power/shadekin/create_shade,
 								/datum/power/shadekin/dark_maw,
-								/datum/power/shadekin/dark_respite,
-								/datum/power/shadekin/dark_tunneling)
+								/datum/power/shadekin/dark_respite)
+								// /datum/power/shadekin/dark_tunneling) // Outpost 21 edit - No using this
 	extended_kin = TRUE
 	drop_items_on_phase = TRUE
 	camera_counts_as_watcher = TRUE
@@ -161,6 +161,10 @@
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
+	// outpost 21 addition begin - lockers are dark and spooky!
+	if(istype(usr.loc,/obj/structure/closet)) // it's dark in here!
+		darkness = 1
+	// outpost 21 addition end
 	var/is_dark = (darkness >= 0.5)
 
 	if(in_phase)

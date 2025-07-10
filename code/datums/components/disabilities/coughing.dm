@@ -1,6 +1,6 @@
 /datum/component/coughing_disability
 	var/mob/living/owner
-	var/cough_chance = 5
+	var/cough_chance = 1 // Outpost 21 edit - Made coughing less obnoxious
 
 /datum/component/coughing_disability/Initialize()
 	if (!isliving(parent))

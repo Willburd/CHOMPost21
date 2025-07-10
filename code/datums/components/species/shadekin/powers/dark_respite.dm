@@ -1,13 +1,13 @@
 //Non-Canon on Virgo. Used downstream.
 
 /datum/power/shadekin/dark_respite
-	name = "Dark Respite (Only in Dark)"
+	name = "Dark Respite (Only in Darkness)" // Outpost 21 edit - in DARKNESS not THE dark
 	desc = "Focus yourself on healing any injuries sustained."
 	verbpath = /mob/living/proc/dark_respite
 	ability_icon_state = "dark_respite"
 
 /mob/living/proc/dark_respite()
-	set name = "Dark Respite (Only in Dark)"
+	set name = "Dark Respite (Only in Darkness)" // Outpost 21 edit - in DARKNESS not THE dark
 	set desc = "Focus yourself on healing any injuries sustained."
 	set category = "Abilities.Shadekin"
 
@@ -20,9 +20,14 @@
 		to_chat(src, span_warning("Can't use that ability in your state!"))
 		return FALSE
 
-	if(!istype(get_area(src), /area/shadekin))
-		to_chat(src, span_warning("Can only trigger Dark Respite in the Dark!"))
+	// Outpost 21 edit begin - In DARKNESS not THE dark
+	var/turf/T = get_turf(src)
+	var/in_darkness = (1 - T.get_lumcount()) < 0.3
+
+	if(!in_darkness) // iif(!istype(get_area(src), /area/shadekin))
+		to_chat(src, span_warning("It's too bright to use Dark Respite!")) // span_warning("Can only trigger Dark Respite in the Dark!"))
 		return FALSE
+	// Outpost 21 edit end
 
 	if(SK.in_dark_respite)
 		to_chat(src, span_warning("You can't use that so soon after an emergency warp!"))
@@ -67,7 +72,12 @@
 		if(H.nutrition)
 			H.add_chemical_effect(CE_BLOODRESTORE, 5)
 
-	if(istype(get_area(H), /area/shadekin))
+	// Outpost 21 edit begin - In DARKNESS not THE dark
+	var/turf/T = get_turf(holder)
+	var/in_darkness = (1 - T.get_lumcount()) < 0.3
+
+	if(in_darkness) // istype(get_area(H), /area/shadekin))
+	// Outpost 21 edit end
 		pain_immunity = TRUE
 		//Very good healing, but only in the Dark.
 		holder.adjustFireLoss((-0.25))
