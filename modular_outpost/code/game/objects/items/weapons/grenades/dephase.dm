@@ -8,8 +8,10 @@
 
 	for(var/mob/M in range(max_range, get_turf(src)))
 		var/mob/living/carbon/human/H = M
-		if(istype(H) && H.get_species() == SPECIES_SHADEKIN && (H.ability_flags & AB_PHASE_SHIFTED))
-			H.attack_dephase(null, src)
+		if(istype(H))
+			var/datum/component/shadekin/SK = H.get_shadekin_component()
+			if(SK && SK.in_phase) //Shadekin
+				SK.attack_dephase(null, src)
 		M << 'sound/effects/EMPulse.ogg'
 
 	new/obj/effect/effect/sparks(src.loc)
