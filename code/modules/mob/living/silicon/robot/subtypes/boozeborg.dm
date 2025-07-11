@@ -148,12 +148,12 @@ What Borgs are available is sadly handled in the above file in the proc
 	options["Grape Soda"] = "The Grapist"
 	options["Demon's Blood"] = "Vampire's Aid"
 	options["Slav Vodka"] = "Vodka Komrade"
-	var/choice = input(M,"Choose your drink!") in options
+	var/choice = tgui_input_list(M,"Choose your drink!", "Choose Drink", options)
 	if(src && choice && !M.stat && in_range(M,src))
 		icontype = options[choice]
 		var/active_sound = 'sound/effects/bubbles.ogg'
 		playsound(src.loc, "[active_sound]", 100, 0, 4)
-		M << "Your Tank now displays [choice]. Drink up and enjoy!"
+		to_chat(M, span_notice("Your Tank now displays [choice]. Drink up and enjoy!"))
 		updateicon()
 		return 1
 

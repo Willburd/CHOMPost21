@@ -9,6 +9,7 @@
 
 /area/supply/station
 	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
+	outdoors = TRUE
 
 /area/rnd/supermatter
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
