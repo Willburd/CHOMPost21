@@ -242,6 +242,9 @@
 	src.modules += new /obj/item/shockpaddles/robot(src)
 	src.modules += new /obj/item/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/reagent_containers/syringe(src)
+	// Outpost 21 edit begin - Additional surgeon modules
+	src.modules += new /obj/item/roller_holder(src)
+	// Outpost 21 edit end
 
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 
@@ -301,10 +304,12 @@
 	src.modules += new /obj/item/reagent_containers/syringe(src)
 	src.modules += new /obj/item/gripper/medical(src)
 	src.modules += new /obj/item/shockpaddles/robot(src)
+	/* Outpost 21 edit - Surgeon and crisis split
 	//Surgeon Modules below
 	src.modules += new /obj/item/robotic_multibelt/medical(src)
 	src.modules += new /obj/item/robotic_multibelt/medical(src)
 	//Surgeon Modules End
+	*/
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
 	src.modules += new /obj/item/holosign_creator/medical(src)
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
