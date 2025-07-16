@@ -77,8 +77,8 @@
 
 	if(ringer)
 		var/S
-		if(ttone in device_ringtones) // Outpost 21 edit - use global ringtone list
-			S = device_ringtones[ttone] // Outpost 21 edit - use global ringtone list
+		if(ttone in GLOB.device_ringtones) // Outpost 21 edit - use global ringtone list
+			S = GLOB.device_ringtones[ttone] // Outpost 21 edit - use global ringtone list
 		else
 			S = 'sound/machines/twobeep.ogg'
 
