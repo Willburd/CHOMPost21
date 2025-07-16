@@ -97,7 +97,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 			return
 		// Could be any landmark, this is just good for our own map - Outpost 21
 		var/list/jump_list = list()
-		for(var/obj/effect/landmark/R in landmarks_list)
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redexit")
 				jump_list += R
 		// Jump to a landmark if noone is looking at it

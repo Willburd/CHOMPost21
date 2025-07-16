@@ -136,7 +136,7 @@
 		return
 	if(ismob(AM)) // No mob bumping YET - Outpost 21 TODO
 		return
-	if(!global.sheet_reagents[AM.type] && !global.ore_reagents[AM.type] && (!AM.reagents || !AM.reagents.total_volume)) // Outpost 21 edit - globalized grinding list
+	if(!GLOB.sheet_reagents[AM.type] && !GLOB.ore_reagents[AM.type] && (!AM.reagents || !AM.reagents.total_volume)) // Outpost 21 edit - globalized grinding list
 		return
 
 	AM.forceMove(src)

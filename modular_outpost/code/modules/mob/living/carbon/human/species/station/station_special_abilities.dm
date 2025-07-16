@@ -46,7 +46,7 @@
 	if(findholybook)
 		var/list/redexitlist = list()
 		var/list/hellexitlist = list()
-		for(var/obj/effect/landmark/R in landmarks_list)
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "hell")
 				hellexitlist += R
 			if(R.name == "redentrance")

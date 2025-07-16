@@ -18,7 +18,7 @@
 /obj/effect/map_effect/interval/redspaceexitcontroller/LateInitialize()
 	// Lets only do this once
 	redexitlist.Cut()
-	for(var/obj/effect/landmark/R in landmarks_list)
+	for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 		if(R.name == "redentrance")
 			redexitlist += get_turf(R)
 

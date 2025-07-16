@@ -10,7 +10,7 @@
 /datum/event/weeping_statue/start()
 	// Jump to a landmark if noone is looking at it
 	var/list/jump_list = list()
-	for(var/obj/effect/landmark/R in landmarks_list)
+	for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 		if(R.name == "redexit")
 			jump_list += R
 	// Try picking randomy spots till we can!

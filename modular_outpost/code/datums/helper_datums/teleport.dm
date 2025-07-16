@@ -23,7 +23,7 @@
 		var/wormhole_min_duration = round((30 SECONDS))
 		var/wormhole_max_duration = round((5 MINUTES))
 		var/list/redexitlist = list()
-		for(var/obj/effect/landmark/R in landmarks_list)
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redexit")
 				redexitlist += R
 		if(prob(1))
