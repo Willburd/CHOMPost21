@@ -77,8 +77,8 @@
 
 	if(ringer)
 		var/S
-		if(ttone in device_ringtones) // Outpost 21 edit - use global ringtone list
-			S = device_ringtones[ttone] // Outpost 21 edit - use global ringtone list
+		if(ttone in GLOB.device_ringtones) // Outpost 21 edit - use global ringtone list
+			S = GLOB.device_ringtones[ttone] // Outpost 21 edit - use global ringtone list
 		else
 			S = 'sound/machines/twobeep.ogg'
 
@@ -128,7 +128,7 @@
 	if (usr != src)
 		return //something is terribly wrong
 
-	for(var/mob/living/L in mob_list) //Simple check so you don't have dead people calling.
+	for(var/mob/living/L in GLOB.mob_list) //Simple check so you don't have dead people calling.
 		if(src.client.prefs.real_name == L.real_name)
 			to_chat(src, span_danger("Your identity is already present in the game world.  Please load in a different character first."))
 			return
@@ -160,7 +160,7 @@
 			to_chat(src, span_notice("You have sent '[text_message]' to [chosen_communicator]."))
 			exonet_messages.Add(span_bold("To [chosen_communicator]:") + "<br>[text_message]")
 			log_pda("(DCOMM: [src]) sent \"[text_message]\" to [chosen_communicator]", src)
-			for(var/mob/M in player_list)
+			for(var/mob/M in GLOB.player_list)
 				if(M.stat == DEAD && M.client?.prefs?.read_preference(/datum/preference/toggle/ghost_ears))
 					if(isnewplayer(M) || M.forbid_seeing_deadchat)
 						continue

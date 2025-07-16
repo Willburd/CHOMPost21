@@ -14,7 +14,7 @@
 
 /datum/event/borglawerror/start()
 	var/list/borglist = list()
-	for(var/mob/living/silicon/L in silicon_mob_list)
+	for(var/mob/living/silicon/L in GLOB.silicon_mob_list)
 		if(!(L.z in affecting_z))
 			continue
 		if(isAI(L)) // not an AI event

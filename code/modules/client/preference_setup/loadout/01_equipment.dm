@@ -33,10 +33,6 @@
 	//save_data["shoe_hater"] 				= pref.shoe_hater //CHOMPRemove, remove RS No shoes
 	save_data["no_jacket"]					= pref.no_jacket
 
-/* Outpost 21 edit begin - Use a global list shared with the communicator AND pda
-var/global/list/valid_ringtones = list()
-*/ // Outpost 21 edit end
-
 // Moved from /datum/preferences/proc/copy_to()
 /datum/category_item/player_setup_item/loadout/equipment/copy_to_mob(var/mob/living/carbon/human/character)
 	character.all_underwear.Cut()
@@ -57,7 +53,7 @@ var/global/list/valid_ringtones = list()
 		pref.headset = 1 //Same as above
 	character.headset = pref.headset
 
-	if(pref.backbag > backbaglist.len || pref.backbag < 1)
+	if(pref.backbag > GLOB.backbaglist.len || pref.backbag < 1)
 		pref.backbag = 2 //Same as above
 	character.backbag = pref.backbag
 
@@ -91,8 +87,8 @@ var/global/list/valid_ringtones = list()
 		if(!(underwear_metadata in pref.all_underwear))
 			pref.all_underwear_metadata -= underwear_metadata
 	pref.headset	= sanitize_integer(pref.headset, 1, GLOB.headsetlist.len, initial(pref.headset))
-	pref.backbag	= sanitize_integer(pref.backbag, 1, backbaglist.len, initial(pref.backbag))
-	pref.pdachoice	= sanitize_integer(pref.pdachoice, 1, pdachoicelist.len, initial(pref.pdachoice))
+	pref.backbag	= sanitize_integer(pref.backbag, 1, GLOB.backbaglist.len, initial(pref.backbag))
+	pref.pdachoice	= sanitize_integer(pref.pdachoice, 1, GLOB.pdachoicelist.len, initial(pref.pdachoice))
 	pref.ringtone	= sanitize(pref.ringtone, 20)
 
 /datum/category_item/player_setup_item/loadout/equipment/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
@@ -119,8 +115,8 @@ var/global/list/valid_ringtones = list()
 	data["underwear"] = underwear_data
 
 	data["headset_type"] = GLOB.headsetlist[pref.headset]
-	data["backpack_type"] = backbaglist[pref.backbag]
-	data["pda_type"] = pdachoicelist[pref.pdachoice]
+	data["backpack_type"] = GLOB.backbaglist[pref.backbag]
+	data["pda_type"] = GLOB.pdachoicelist[pref.pdachoice]
 	data["communicator_visibility"] = pref.communicator_visibility // boolean
 	data["ringtone"] = pref.ringtone
 	// data["shoes"] = !pref.shoe_hater // CHOMPRemove
@@ -136,8 +132,8 @@ var/global/list/valid_ringtones = list()
 	var/list/data = ..()
 
 	data["headsetlist"] = GLOB.headsetlist
-	data["backbaglist"] = backbaglist
-	data["pdachoicelist"] = pdachoicelist
+	data["backbaglist"] = GLOB.backbaglist
+	data["pdachoicelist"] = GLOB.pdachoicelist
 
 	return data
 
@@ -175,14 +171,14 @@ var/global/list/valid_ringtones = list()
 		if("change_backpack")
 			// Takes the JS index
 			var/new_backbag = text2num(params["backbag"]) + 1
-			if(LAZYACCESS(backbaglist, new_backbag))
+			if(LAZYACCESS(GLOB.backbaglist, new_backbag))
 				pref.backbag = new_backbag
 				return TOPIC_REFRESH_UPDATE_PREVIEW
 
 		if("change_pda")
 			// Takes the JS index
 			var/new_pdachoice = text2num(params["pda"]) + 1
-			if(LAZYACCESS(backbaglist, new_pdachoice))
+			if(LAZYACCESS(GLOB.backbaglist, new_pdachoice))
 				pref.pdachoice = new_pdachoice
 				return TOPIC_REFRESH_UPDATE_PREVIEW
 
@@ -212,7 +208,7 @@ var/global/list/valid_ringtones = list()
 			return TOPIC_REFRESH
 
 		if("set_ringtone")
-			var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", device_ringtones + "Other", pref.ringtone) // Outpost 21 edit - use global ringtone list
+			var/choice = tgui_input_list(user, "Please select a ringtone. All of these choices come with an associated preset sound. Alternately, select \"Other\" to specify manually.", "Character Preference", GLOB.device_ringtones + "Other", pref.ringtone) // Outpost 21 edit - use global ringtone list
 			if(!choice)
 				return TOPIC_NOACTION
 			if(choice == "Other")
@@ -227,8 +223,8 @@ var/global/list/valid_ringtones = list()
 		// Outpost 21 edit begin - testing ringtones
 		if("test_ringtone")
 			var/S = 'sound/machines/twobeep.ogg'
-			if(pref.ringtone in device_ringtones)
-				S = device_ringtones[pref.ringtone]
+			if(pref.ringtone in GLOB.device_ringtones)
+				S = GLOB.device_ringtones[pref.ringtone]
 			SEND_SOUND(user.client, S)
 		// Outpost 21 edit end
 

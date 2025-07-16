@@ -33,7 +33,7 @@
 
 	// Scare the crew a bit
 	var/list/borglist = list()
-	for(var/mob/living/L in living_mob_list)
+	for(var/mob/living/L in GLOB.living_mob_list)
 		if(!(L.z in affecting_z))
 			continue
 		if(isAI(L)) // AI is fine
@@ -101,7 +101,7 @@
 	if(!sound)
 		return
 
-	for(var/mob/M in player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(zlevels && !(M.z in zlevels))
 			continue
 		if(!isnewplayer(M) && !isdeaf(M))

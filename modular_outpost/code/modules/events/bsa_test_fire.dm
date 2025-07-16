@@ -13,7 +13,7 @@
 
 /datum/event/bsa_test_fire/proc/locate_target()
 	var/list/options = list()
-	for(var/thing in landmarks_list)
+	for(var/thing in GLOB.landmarks_list)
 		if(istype(thing,/obj/effect/landmark/bsa_target))
 			options.Add(thing)
 	if(!options.len)

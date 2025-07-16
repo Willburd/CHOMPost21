@@ -13,10 +13,10 @@
 	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
-	var/list/listeners = player_list.Copy() + interior_vehicle_list.Copy()
+	var/list/listeners = GLOB.player_list.Copy() + interior_vehicle_list.Copy()
 	// Outpost 21 edit begin - Get holograms from AIs
 	var/list/holo_listeners = list() // sorry for the duped bits of code ahead, but this is somewhat required to have AI holograms listen to game sounds - Willbird
-	for(var/mob/living/silicon/ai/A in player_list)
+	for(var/mob/living/silicon/ai/A in GLOB.player_list)
 		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
 			holo_listeners += A.holo.masters[A]
 	listeners += holo_listeners
@@ -92,7 +92,7 @@
 			if(V.interior_helm != null && vol > 0)
 				playsound(V.interior_helm,soundin, vol * 0.5 * (1 - (distance / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
 		// Outpost 21 addition end
-		
+
 		SSmotiontracker.ping(source,vol) // Nearly everything pings this, the quieter the less likely
 
 
@@ -188,7 +188,7 @@
 
 /proc/sound_to_playing_players(sound, volume = 100, vary)
 	sound = get_sfx(sound)
-	for(var/M in player_list)
+	for(var/M in GLOB.player_list)
 		if(ismob(M) && !isnewplayer(M))
 			var/mob/MO = M
 			MO.playsound_local(get_turf(MO), sound, volume, vary, pressure_affected = FALSE)
@@ -375,7 +375,7 @@
 				soundin = pick(
 					'sound/effects/mech/powerloader_step.ogg',
 					'sound/effects/mech/powerloader_step2.ogg')
-			
+
 			// Outpost 21 edit begin - vehicle crushing
 			if ("vehicle_crush")
 				soundin = pick(
