@@ -11,7 +11,7 @@
 /datum/event/law_reset/start()
 	// Scare the crew a bit
 	var/list/borglist = list()
-	for(var/mob/living/silicon/L in silicon_mob_list)
+	for(var/mob/living/silicon/L in GLOB.silicon_mob_list)
 		if(!(L.z in affecting_z))
 			continue
 		if(!L.client)

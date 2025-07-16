@@ -44,7 +44,7 @@
 	var/turf/user_turf = get_turf(user)
 	if(user_area.haunted && (user_turf.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
 		var/list/redlist = list()
-		for(var/obj/effect/landmark/R in landmarks_list)
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redentrance")
 				redlist += R
 		if(redlist.len > 0)
