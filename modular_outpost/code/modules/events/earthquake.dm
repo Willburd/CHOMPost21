@@ -34,7 +34,7 @@
 				var/obj/structure/table/T = S
 				T.flip(pick(GLOB.cardinal))
 	// Stun and knock down anyone standing
-	for(var/mob/living/L in living_mob_list)
+	for(var/mob/living/L in GLOB.living_mob_list)
 		if(!(L.z in affecting_z))
 			continue
 		if(isAI(L))

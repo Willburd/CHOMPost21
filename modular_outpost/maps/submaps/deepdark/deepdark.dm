@@ -737,7 +737,7 @@
 		if(ismob( A))
 			var/mob/M = A
 			var/list/redexitlist = list()
-			for(var/obj/effect/landmark/R in landmarks_list)
+			for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 				if(R.name == "redexit")
 					redexitlist += R
 
