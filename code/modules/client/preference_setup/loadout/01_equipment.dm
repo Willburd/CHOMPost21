@@ -223,8 +223,8 @@
 		// Outpost 21 edit begin - testing ringtones
 		if("test_ringtone")
 			var/S = 'sound/machines/twobeep.ogg'
-			if(pref.ringtone in device_ringtones)
-				S = device_ringtones[pref.ringtone]
+			if(pref.ringtone in GLOB.device_ringtones)
+				S = GLOB.device_ringtones[pref.ringtone]
 			SEND_SOUND(user.client, S)
 		// Outpost 21 edit end
 
