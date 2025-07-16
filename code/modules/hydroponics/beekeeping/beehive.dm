@@ -275,9 +275,7 @@
 	pass_stack_colors = TRUE
 	supply_conversion_value = 0.5 // Outpost 21 edit - Added supply sell price. This was missing...
 
-var/global/list/datum/stack_recipe/wax_recipes = list( \
-	new/datum/stack_recipe("candle", /obj/item/flame/candle) \
-)
+
 
 /obj/item/bee_pack
 	name = "bee pack"
