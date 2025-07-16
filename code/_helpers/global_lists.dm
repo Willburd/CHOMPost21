@@ -783,13 +783,15 @@ GLOBAL_LIST_INIT(home_system_choices, list(
 	"Ue-Orsi Flotilla",
 	"AH-CV Prosperity",
 	"AH-CV Migrant",
-	"Altevian Colony Ship"
+	"Altevian Colony Ship",
+	"Eshui Residential" // Outpost 21 edit
 	))
 
 GLOBAL_LIST_INIT(faction_choices, list(
 	"Sol Central", // CHOMPAdd
 	"NanoTrasen Incorporated",
 	"Hephaestus Industries",
+	"Eshui Incorporated", // Outpost 21 edit
 	"Vey-Medical",
 	"Zeng-Hu Pharmaceuticals",
 	"Ward-Takahashi GMC",
@@ -1395,6 +1397,13 @@ GLOBAL_LIST_INIT(sheet_reagents, list( //have a number of reagents divisible by 
 	))
 
 GLOBAL_LIST_INIT(ore_reagents, list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
+	/obj/item/ore/copper = list(REAGENT_ID_COPPER),
+	/obj/item/ore/tin = list(REAGENT_ID_TIN),
+	/obj/item/ore/void_opal = list(REAGENT_ID_SILICON,REAGENT_ID_SILICON,REAGENT_ID_OXYGEN,REAGENT_ID_WATER),
+	/obj/item/ore/painite = list(REAGENT_ID_CALCIUM,REAGENT_ID_ALUMINIUM,REAGENT_ID_OXYGEN,REAGENT_ID_OXYGEN),
+	/obj/item/ore/quartz = list(REAGENT_ID_SILICON,REAGENT_ID_OXYGEN),
+	/obj/item/ore/bauxite = list(REAGENT_ID_ALUMINIUM,REAGENT_ID_ALUMINIUM),
+	// Original grinder
 	/obj/item/ore/glass = list(REAGENT_ID_SILICON),
 	/obj/item/ore/iron = list(REAGENT_ID_IRON),
 	/obj/item/ore/coal = list(REAGENT_ID_CARBON),
