@@ -975,7 +975,7 @@ var/global/datum/controller/occupations/job_master
 	if(rank == JOB_STOWAWAY)
 		var/list/safespawns = list();
 		var/list/spawnlist = list();
-		for(var/obj/effect/landmark/start/S in landmarks_list)
+		for(var/obj/effect/landmark/start/S in GLOB.landmarks_list)
 			if(S.name == JOB_STOWAWAY)
 				spawnlist += S
 				var/mob/living/scan = (locate() in view("7x7", S.loc))

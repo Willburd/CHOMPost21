@@ -72,7 +72,7 @@ GLOBAL_LIST_EMPTY(Holiday) //Holidays are lists now, so we can have more than on
 					of worship and sing a song of mourning for all those who have died in service to their kingdoms."
 				// Outpost 21 edit begin - Rest in peace Tin
 				if(11)
-					Holiday["Hug a Friend Day"] = "An unoffical holiday celebrating the joy of companionship and friends. \
+					GLOB.Holiday["Hug a Friend Day"] = "An unoffical holiday celebrating the joy of companionship and friends. \
 					In this cold and uncaring universe, having warmth and meaning to share with others makes life worth living."
 				// Outpost 21 edit end
 				if(14)
