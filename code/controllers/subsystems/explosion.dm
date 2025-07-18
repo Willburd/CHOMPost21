@@ -256,7 +256,7 @@ SUBSYSTEM_DEF(explosions)
 
 /proc/explosion(turf/epicenter, devastation_range, heavy_impact_range, light_impact_range, flash_range, adminlog = 1, z_transfer = UP|DOWN, shaped)
 	// Rarely objects might explode during init... Don't.
-	if(SSticker.current_state == GAME_STATE_INIT)
+	if(SSticker.PreRoundStart())
 		return
 
 	// Lets assume recursive prey has happened...
