@@ -27,7 +27,7 @@ export const viewCrateContents = (modal: modalData) => {
     >
       {desc}
       <Section
-        title={'Contains' + (random ? ' any ' + random + ' of:' : '')}
+        title={`Contains${random ? ` any ${random} of:` : ''}`}
         scrollable
         height="200px"
       >

@@ -128,7 +128,7 @@
 									transfer_ore_to_tank(A,1)
 								// Outpost 21 addition end
 								A.forceMove(src)
-								if(!is_type_in_list(A,item_digestion_blacklist))
+								if(!is_type_in_list(A, GLOB.item_digestion_blacklist))
 									crusher.take_item(A) //Force feed the poor bastard.
 						items_taken++
 					else
@@ -176,8 +176,8 @@
 		transfer_sludge_to_tank(rand(1,5))
 
 /obj/machinery/v_garbosystem/proc/transfer_ore_to_tank(var/obj/item/ore/R,var/multiplier)
-	if(global.ore_reagents[R.type])
-		var/list/ore_components = global.ore_reagents[R.type]
+	if(GLOB.ore_reagents[R.type])
+		var/list/ore_components = GLOB.ore_reagents[R.type]
 		if(islist(ore_components))
 			var/amount_to_take = (REAGENTS_PER_ORE/(ore_components.len))
 			for(var/i in ore_components)

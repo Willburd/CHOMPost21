@@ -50,7 +50,7 @@ var/static/list/redspace_areas = list (
 		var/obj/effect/landmark/drop_point
 		// Outpost 21 edit begin - Use our landmarks
 		var/list/redexitlist = list()
-		for(var/obj/effect/landmark/R in landmarks_list)
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redexit")
 				redexitlist += R
 		if(!redexitlist.len)

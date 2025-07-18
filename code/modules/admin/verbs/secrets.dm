@@ -108,7 +108,7 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 			holder.holder.list_fingerprints()
 
 		if("prison_warp")
-			for(var/mob/living/carbon/human/H in mob_list)
+			for(var/mob/living/carbon/human/H in GLOB.mob_list)
 				var/turf/T = get_turf(H)
 				var/security = 0
 				if((T in using_map.admin_levels) || GLOB.prisonwarped.Find(H))
@@ -244,7 +244,7 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 		if("ghost_mode")
 			var/list/affected_mobs = list()
 			var/list/affected_areas = list()
-			for(var/mob/M in living_mob_list)
+			for(var/mob/M in GLOB.living_mob_list)
 				if(M.stat == CONSCIOUS && !(M in affected_mobs))
 					affected_mobs |= M
 					switch(rand(1,4))
@@ -409,7 +409,7 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 
 		//buttons that are fun for exactly you and nobody else.
 		if("corgie")
-			for(var/mob/living/carbon/human/H in mob_list)
+			for(var/mob/living/carbon/human/H in GLOB.mob_list)
 				spawn(0)
 					H.corgize()
 
@@ -419,7 +419,7 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 			//SSblackbox.record_feedback("nested tally", "admin_secrets_fun_used", 1, list("Monkeyize All Humans"))
 			message_admins("[key_name_admin(holder)] made everyone into monkeys.")
 			log_admin("[key_name_admin(holder)] made everyone into monkeys.")
-			for(var/i in mob_list)
+			for(var/i in GLOB.mob_list)
 				var/mob/living/carbon/human/H = i
 				INVOKE_ASYNC(H, TYPE_PROC_REF(/mob/living/carbon/human, monkeyize))
 
@@ -444,7 +444,7 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 			var/choice = tgui_alert(ui.user, "You sure you want to end the round and summon All Is Clean at your location? Misuse of this could result in removal of flags or hilarity.","WARNING!",list("ALL IS CLEAN", "Cancel"))
 			if(choice == "ALL IS CLEAN")
 				new /obj/singularity/allisclean(get_turf(ui.user))
-				for(var/mob/living/L in player_list)
+				for(var/mob/living/L in GLOB.player_list)
 					L.say("All will be clean.")
 				command_announcement.Announce("Attention [station_name()]. Unidentified energy signals detected on all frequencies, are you seeing these readings-- All will be clean. --What was that!? ", new_sound = 'modular_outpost/sound/misc/allisclean.ogg')
 				log_and_message_admins("has summoned All Is Clean, nothing can escape his scrubbing power.", ui.user)

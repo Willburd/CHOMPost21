@@ -42,3 +42,4 @@ var/datum/controller/transfer_controller/transfer_controller
 
 	shift_hard_end = calculated_end
 	shift_last_vote = calculated_end
+	timerbuffer = calculated_end

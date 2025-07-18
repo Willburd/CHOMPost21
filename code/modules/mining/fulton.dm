@@ -1,5 +1,3 @@
-var/global/list/total_extraction_beacons = list()
-
 /obj/item/extraction_pack
 	name = "bluespace fulton extraction pack" // CHOMPedit
 	desc = "A balloon that can be used to extract equipment or personnel to anywhere a bluespace Fulton Recovery Beacon is. Anything not bolted down can be moved. Link the pack to a beacon by using the pack in hand." // CHOMPedit
@@ -18,7 +16,7 @@ var/global/list/total_extraction_beacons = list()
 
 /obj/item/extraction_pack/attack_self(mob/user)
 	var/list/possible_beacons = list()
-	for(var/obj/structure/extraction_point/EP as anything in global.total_extraction_beacons)
+	for(var/obj/structure/extraction_point/EP as anything in GLOB.total_extraction_beacons)
 		if(EP.beacon_network in beacon_networks)
 			possible_beacons += EP
 
@@ -46,7 +44,7 @@ var/global/list/total_extraction_beacons = list()
 	var/turf/user_turf = get_turf(user)
 	if(user_area.haunted && (user_turf.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
 		var/list/redlist = list()
-		for(var/obj/effect/landmark/R in landmarks_list)
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redentrance")
 				redlist += R
 		if(redlist.len > 0)
@@ -173,10 +171,10 @@ var/global/list/total_extraction_beacons = list()
 /obj/structure/extraction_point/Initialize(mapload)
 	. = ..()
 	name += " ([rand(100,999)]) ([get_area_name(src, TRUE)])"
-	global.total_extraction_beacons += src
+	GLOB.total_extraction_beacons += src
 
 /obj/structure/extraction_point/Destroy()
-	global.total_extraction_beacons -= src
+	GLOB.total_extraction_beacons -= src
 	. = ..()
 
 /obj/effect/extraction_holder

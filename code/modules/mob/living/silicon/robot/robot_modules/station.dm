@@ -1,25 +1,3 @@
-var/global/list/robot_modules = list(
-	"Standard"		= /obj/item/robot_module/robot/standard,
-	"Service" 		= /obj/item/robot_module/robot/clerical/butler,
-	"Clerical" 		= /obj/item/robot_module/robot/clerical/general,
-	"Clown"			= /obj/item/robot_module/robot/clerical/honkborg,
-	"Command"		= /obj/item/robot_module/robot/chound,
-	"Research" 		= /obj/item/robot_module/robot/research,
-	"Miner" 		= /obj/item/robot_module/robot/miner,
-	"Crisis" 		= /obj/item/robot_module/robot/medical/crisis,
-	"Surgeon" 		= /obj/item/robot_module/robot/medical/surgeon, // CHOMPedit: Surgeon module removal. // Split surgery and crisis borgs again
-	"Security" 		= /obj/item/robot_module/robot/security/general,
-	"Combat" 		= /obj/item/robot_module/robot/security/combat,
-	"Exploration"	= /obj/item/robot_module/robot/exploration,
-	"Engineering"	= /obj/item/robot_module/robot/engineering,
-	"Janitor" 		= /obj/item/robot_module/robot/janitor,
-	"Gravekeeper"	= /obj/item/robot_module/robot/gravekeeper,
-	"Lost"			= /obj/item/robot_module/robot/lost,
-	"Protector" 	= /obj/item/robot_module/robot/syndicate/protector,
-	"Mechanist" 	= /obj/item/robot_module/robot/syndicate/mechanist,
-	"Combat Medic"	= /obj/item/robot_module/robot/syndicate/combat_medic
-	)
-
 /obj/item/robot_module
 	name = "robot module"
 	icon = 'icons/obj/module.dmi'
@@ -220,7 +198,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/flash/robot(src)
 	src.modules += new /obj/item/extinguisher(src)
 	src.modules += new /obj/item/tool/crowbar/cyborg(src)
-	src.modules += new /obj/item/tape_roll/cyborg(src) // Outpost 21 addition - Tape roll for our wires
 	src.modules += new /obj/item/melee/robotic/jaws/small(src)
 	src.modules += new /obj/item/gripper/scene(src)
 
@@ -246,11 +223,10 @@ var/global/list/robot_modules = list(
 	pto_type = PTO_MEDICAL
 	supported_upgrades = list(/obj/item/borg/upgrade/restricted/bellycapupgrade)
 
-/* CHOMPedit start: Removal of Surgeon module. *
 //This is a constant back and forth debate. 11 years ago, the 'medical' borg was split into surgery and crisis.
 //Two years ago(?), they were combined into Crisis elsewhere and the idea seems to be well appreciated.
 //However, given this seems as though it will remain a hot topic for as long as SS13 exists, we are going to leave the surgeon module here in the event that we split them. Again.
-*/ // Outpost 21 edit - Split surgery and crisis borgs again
+//This also goes for the sprite datums. It's be a lot of work to 'clear' them of having surgery in their path just to have to split them again in 2-3 years.
 /obj/item/robot_module/robot/medical/surgeon
 	name = "surgeon robot module"
 
@@ -266,7 +242,9 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/shockpaddles/robot(src)
 	src.modules += new /obj/item/reagent_containers/dropper(src) // Allows surgeon borg to fix necrosis
 	src.modules += new /obj/item/reagent_containers/syringe(src)
-	src.modules += new /obj/item/roller_holder(src) // Outpost 21 edit - don't drag bodies
+	// Outpost 21 edit begin - Additional surgeon modules
+	src.modules += new /obj/item/roller_holder(src)
+	// Outpost 21 edit end
 
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 
@@ -274,7 +252,7 @@ var/global/list/robot_modules = list(
 	PS.reagents.add_reagent(REAGENT_ID_PACID, 250)
 	PS.name = "Polyacid spray"
 
-	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(30000) // CHOMPedit: Increased capacity.
+	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000)
 	synths += medicine
 
 	var/obj/item/stack/nanopaste/N = new /obj/item/stack/nanopaste(src)
@@ -291,7 +269,7 @@ var/global/list/robot_modules = list(
 	O.synths = list(medicine)
 	src.modules += N
 	src.modules += B
-	src.modules += O_AUG_SPINE
+	src.modules += O
 
 	src.modules += new /obj/item/dogborg/sleeper/trauma(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
@@ -310,8 +288,6 @@ var/global/list/robot_modules = list(
 		PS.reagents.add_reagent(REAGENT_ID_PACID, 2 * amount)
 
 	..()
-/* Outpost 21 edit - Split surgery and crisis borgs again
-* CHOMPedit end: Removal of Surgeon module. */
 
 /obj/item/robot_module/robot/medical/crisis
 	name = "crisis robot module"
@@ -328,12 +304,12 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/reagent_containers/syringe(src)
 	src.modules += new /obj/item/gripper/medical(src)
 	src.modules += new /obj/item/shockpaddles/robot(src)
-/* Outpost 21 edit - Split surgery and crisis borgs again
+	/* Outpost 21 edit - Surgeon and crisis split
 	//Surgeon Modules below
 	src.modules += new /obj/item/robotic_multibelt/medical(src)
 	src.modules += new /obj/item/robotic_multibelt/medical(src)
 	//Surgeon Modules End
-*/
+	*/
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
 	src.modules += new /obj/item/holosign_creator/medical(src)
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
@@ -559,8 +535,7 @@ var/global/list/robot_modules = list(
 					LANGUAGE_SIIK		= 1,
 					LANGUAGE_SKRELLIAN	= 1,
 					LANGUAGE_ROOTLOCAL	= 0,
-					// Outpost 21 edit - Not for borgs
-					LANGUAGE_GUTTER		= 0,
+					LANGUAGE_GUTTER		= 1,
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_SIGN		= 0,
 					LANGUAGE_BIRDSONG	= 1,
@@ -804,7 +779,6 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/pipe_painter(src)
 	src.modules += new /obj/item/floor_painter(src)
 	src.modules += new /obj/item/pipe_dispenser(src)
-	src.modules += new /obj/item/tape_roll/cyborg(src) // Outpost 21 addition - Tape roll for our wires
 
 	robot.internals = new/obj/item/tank/jetpack/carbondioxide(src)
 	src.modules += robot.internals

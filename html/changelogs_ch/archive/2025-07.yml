@@ -115,3 +115,43 @@
       fit into any clothes at all that aren't skirts.
   - qol: Replaced the funky alt-click turf examine menu with a separate TGUI window
       called the Lootpanel
+2025-07-13:
+  FluffMedic:
+  - bugfix: sif hivebot bosses regained delay for their spinny attack
+2025-07-14:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Alt click menu now lets you middle click
+  - code_imp: font awesome update
+  - bugfix: bellymode absorb messages not being editable
+  - qol: reduces the chance of the chat resizing badly
+  - admin: entity narrate works again
+  - admin: tickets can be answered from discord
+  - bugfix: Proteans can no longer get stuck in a death loop because their posibrain
+      fell out.
+  Diana:
+  - bugfix: Changeling stings fixed, can be used multiple times again.
+  - bugfix: Transformation sting works properly now
+  - bugfix: Extraction sting works properly now
+  - bugfix: Whitelisted items can be selected if you're the shape of that species
+      if not that species exactly.
+  - bugfix: Normal labcoats become teshari sprites when worn by a teshari
+2025-07-15:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: a server crash on high deflect mobs
+  FluffMedic:
+  - rscadd: New environmental hazard to replace lava and zappy clouds, 4 new mobs
+      for tyr, and
+  - balance: Eclipse cryo top has been reworked
+  Guti:
+  - maptweak: Added the maintenance recycler and vendor all around Southern Cross
+  TheGreatKitsune:
+  - bugfix: fixed the admin size gun
+2025-07-16:
+  CHOMPStation2StaffMirrorBot:
+  - qol: active belly settings tabs are now static and no longer scroll out of view
+  - rscadd: Hanner no longer get outed by medical scanners.
+  - bugfix: Removed copying of bloodtype from vanity TF procs, as if the user actually
+      has blood it will cause organ failure.
+  - bugfix: Added secondary ears to copy form ability.
+  - bugfix: fixed the recycler deciding plebeians weren't allowed to use it after
+      someone tried to buy an access locked item.

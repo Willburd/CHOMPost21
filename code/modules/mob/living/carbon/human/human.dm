@@ -52,7 +52,7 @@
 
 	nutrition = rand(200,400)
 
-	human_mob_list |= src
+	GLOB.human_mob_list |= src
 
 	. = ..()
 
@@ -75,16 +75,16 @@
 	var/animal = pick("cow","chicken_brown", "chicken_black", "chicken_white", "chick", "mouse_brown", "mouse_gray", "mouse_white", "lizard", "cat2", "goose", "penguin")
 	var/image/img = image('icons/mob/animal.dmi', src, animal)
 	img.override = TRUE
-	add_alt_appearance("animals", img, displayTo = alt_farmanimals)
+	add_alt_appearance("animals", img, displayTo = GLOB.alt_farmanimals)
 
 /mob/living/carbon/human/Destroy()
-	human_mob_list -= src
+	GLOB.human_mob_list -= src
 	QDEL_NULL_LIST(organs)
 	/*  Outpost 21 edit - Nif removal
 	if(nif)
 		QDEL_NULL(nif)
 	*/
-	alt_farmanimals -= src
+	GLOB.alt_farmanimals -= src
 	worn_clothing.Cut()
 
 	if(stored_blob)
@@ -967,7 +967,7 @@
 		remove_verb(src, /mob/living/carbon/human/proc/remotesay)
 		return
 	var/list/creatures = list()
-	for(var/mob/living/carbon/h in mob_list)
+	for(var/mob/living/carbon/h in GLOB.mob_list)
 		if(h == src || istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit - autodocs hidden
 			continue
 		creatures += h
@@ -982,7 +982,7 @@
 		target.show_message(span_filter_say("[span_blue("You hear a voice that seems to echo around the room: [say]")]"))
 	src.show_message(span_filter_say("[span_blue("You project your mind into [target.real_name]: [say]")]"))
 	log_say("(TPATH to [key_name(target)]) [say]",src)
-	for(var/mob/observer/dead/G in mob_list)
+	for(var/mob/observer/dead/G in GLOB.mob_list)
 		G.show_message(span_filter_say(span_italics("Telepathic message from " + span_bold("[src]") + " to " + span_bold("[target]") + ": [say]")))
 
 /mob/living/carbon/human/proc/remoteobserve()
@@ -1005,7 +1005,7 @@
 	var/list/mob/creatures = list()
 
 	var/turf/current = get_turf(src) // Needs to be on station or same z to perform telepathy
-	for(var/mob/living/carbon/h in mob_list)
+	for(var/mob/living/carbon/h in GLOB.mob_list)
 		var/turf/temp_turf = get_turf(h)
 		if(!istype(temp_turf,/turf/)) // Nullcheck fix
 			continue
@@ -1894,6 +1894,12 @@
 	//VV_DROPDOWN_OPTION(VV_HK_MOD_MUTATIONS, "Add/Remove Mutation")
 	//VV_DROPDOWN_OPTION(VV_HK_MOD_QUIRKS, "Add/Remove Quirks")
 	VV_DROPDOWN_OPTION(VV_HK_SET_SPECIES, "Set Species")
+	VV_DROPDOWN_OPTION(VV_HK_TURN_MONKEY, "Make Monkey")
+	VV_DROPDOWN_OPTION(VV_HK_TURN_ALIEN, "Make Alien")
+	VV_DROPDOWN_OPTION(VK_HK_TURN_SKELETON, "Make Skeleton")
+	VV_DROPDOWN_OPTION(VK_HK_TURN_AI, "Make AI")
+	VV_DROPDOWN_OPTION(VK_HK_TURN_ROBOT, "Make Robot")
+
 	//VV_DROPDOWN_OPTION(VV_HK_PURRBATION, "Toggle Purrbation")
 	//VV_DROPDOWN_OPTION(VV_HK_APPLY_DNA_INFUSION, "Apply DNA Infusion")
 	//VV_DROPDOWN_OPTION(VV_HK_TURN_INTO_MMI, "Turn into MMI")
@@ -1957,11 +1963,92 @@
 	if(href_list[VV_HK_SET_SPECIES])
 		if(!check_rights(R_SPAWN))
 			return
-		var/result = tgui_input_list(usr, "Please choose a new species","Species", sortTim(GLOB.all_species, GLOBAL_PROC_REF(cmp_text_asc)))
+		var/result = tgui_input_list(usr, "Please choose a new species", "Species", sortTim(GLOB.all_species, GLOBAL_PROC_REF(cmp_text_asc)))
 		if(result)
 			var/newtype = GLOB.all_species[result]
 			admin_ticket_log("[key_name_admin(usr)] has modified the bodyparts of [src] to [result]")
 			set_species(newtype)
+
+	if(href_list[VV_HK_TURN_MONKEY])
+		if(!check_rights(R_SPAWN))	return
+
+		var/mob/living/carbon/human/H = src
+		if(!istype(H))
+			to_chat(src, "This can only be done to instances of type /mob/living/carbon/human")
+			return
+
+		if(tgui_alert(src, "Confirm mob type change?","Confirm", list("Transform", "Cancel")) != "Transform")
+			return
+		if(!H)
+			to_chat(src, "Mob doesn't exist anymore")
+			return
+
+		log_admin("[key_name(usr)] attempting to monkeyize [key_name(H)]")
+		message_admins(span_blue("[key_name_admin(usr)] attempting to monkeyize [key_name_admin(H)]"), 1)
+		H.monkeyize()
+
+	if(href_list[VV_HK_TURN_ALIEN])
+		if(!check_rights(R_SPAWN))	return
+
+		var/mob/living/carbon/human/H = src
+		if(!istype(H))
+			to_chat(src, "This can only be done to instances of type /mob/living/carbon/human")
+			return
+
+		if(tgui_alert(src, "Confirm mob type change?","Confirm",list("Transform", "Cancel")) != "Transform")
+			return
+		if(!H)
+			to_chat(src, "Mob doesn't exist anymore")
+			return
+
+		usr.client.cmd_admin_alienize(H)
+
+	if(href_list[VK_HK_TURN_SKELETON])
+		if(!check_rights(R_FUN))
+			return
+
+		var/mob/living/carbon/human/H = src
+		if(!istype(H))
+			to_chat(usr, "This can only be used on instances of type /mob/living/carbon/human")
+			return
+
+		H.ChangeToSkeleton()
+		href_list[VV_HK_DATUM_REFRESH] = "\ref[src]"
+
+
+	if(href_list[VK_HK_TURN_AI])
+		if(!check_rights(R_SPAWN))
+			return
+
+		var/mob/living/carbon/human/H = src
+		if(!istype(H))
+			to_chat(usr, "This can only be done to instances of type /mob/living/carbon/human")
+			return
+
+		if(tgui_alert(usr, "Confirm mob type change?", "Confirm", list("Transform", "Cancel")) != "Transform")
+			return
+		if(!H)
+			to_chat(usr, "Mob doesn't exist anymore")
+			return
+
+		message_admins(span_red("Admin [key_name_admin(usr)] AIized [key_name_admin(H)]!"), 1)
+		log_admin("[key_name(usr)] AIized [key_name(H)]")
+		H.AIize()
+
+	if(href_list[VK_HK_TURN_ROBOT])
+		if(!check_rights(R_SPAWN))	return
+
+		var/mob/living/carbon/human/H = src
+		if(!istype(H))
+			to_chat(src, "This can only be done to instances of type /mob/living/carbon/human")
+			return
+
+		if(tgui_alert(src, "Confirm mob type change?", "Confirm", list("Transform", "Cancel")) != "Transform")	return
+		if(!H)
+			to_chat(src, "Mob doesn't exist anymore")
+			return
+
+		usr.client.cmd_admin_robotize(H)
 
 	/*
 	if(href_list[VV_HK_PURRBATION])

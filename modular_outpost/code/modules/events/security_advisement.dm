@@ -17,7 +17,7 @@
 
 	// Get all players that are not afk lurking
 	var/list/players = list()
-	for(var/mob/living/L in player_list)
+	for(var/mob/living/L in GLOB.player_list)
 		if(L.client.is_afk(15 MINUTES))
 			continue
 		if(isnewplayer(L))

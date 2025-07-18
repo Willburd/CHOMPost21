@@ -288,7 +288,7 @@ This device records all warnings given and teleport events for admin review in c
 	// Outpost 21 edit begin - Teleport redspace chance
 	else if(prob(1))
 		var/list/redlist = list()
-		for(var/obj/effect/landmark/R in landmarks_list)
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redentrance")
 				redlist += R
 		if(redlist.len > 0)

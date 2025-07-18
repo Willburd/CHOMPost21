@@ -232,9 +232,9 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_random_player()
 	SHOULD_NOT_OVERRIDE(TRUE)
-	if(!global.player_list.len)
+	if(!GLOB.player_list.len)
 		return null
-	return pick(global.player_list)
+	return pick(GLOB.player_list)
 
 /datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
 	SHOULD_NOT_OVERRIDE(TRUE)

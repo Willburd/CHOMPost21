@@ -1,5 +1,5 @@
 // global, so that preferences can read it!
-var/global/list/device_ringtones = list("beep" = 'sound/machines/twobeep.ogg',
+GLOBAL_LIST_INIT(device_ringtones, list("beep" = 'sound/machines/twobeep.ogg',
 								"boom" = 'sound/effects/explosionfar.ogg',
 								"slip" = 'sound/misc/slip.ogg',
 								"honk" = 'sound/items/bikehorn.ogg',
@@ -35,4 +35,4 @@ var/global/list/device_ringtones = list("beep" = 'sound/machines/twobeep.ogg',
 								"gnome" = 'sound/items/hooh.ogg',
 								"ratchet"= 'sound/items/Ratchet.ogg',
 								"tether"= 'sound/items/tinytether.ogg'
-								)
+								))

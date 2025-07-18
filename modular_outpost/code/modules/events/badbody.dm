@@ -26,7 +26,7 @@
 			if(M.contents.len == 0)
 				spawn_locations.Add(M)
 	else
-		for(var/obj/effect/landmark/C in landmarks_list)
+		for(var/obj/effect/landmark/C in GLOB.landmarks_list)
 			if(C.name == "badbody" && (C.z in using_map.event_levels))
 				spawn_locations.Add(C.loc)
 

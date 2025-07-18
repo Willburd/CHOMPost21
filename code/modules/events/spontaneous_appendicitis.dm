@@ -1,8 +1,11 @@
 /datum/event/spontaneous_appendicitis/start()
+	// CHOMPAdd Start
 	if(prob(50))
 		kill()
 		return
-	for(var/mob/living/carbon/human/H in shuffle(living_mob_list))
+		
+	// CHOMPAdd End
+	for(var/mob/living/carbon/human/H in shuffle(GLOB.living_mob_list))
 		// Outpost 21 edit begin - restricted event to event levels, and lowered chance for stowaways
 		var/area/A = get_area(H)
 		if(!A)

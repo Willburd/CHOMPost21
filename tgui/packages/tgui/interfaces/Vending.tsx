@@ -167,7 +167,7 @@ export const VendingProducts = (props: {
       </Section>
       {!!coin && (
         <Section
-          title={coin + ' deposited'}
+          title={`${coin} deposited`}
           buttons={
             <Button icon="eject" onClick={() => act('remove_coin')}>
               Eject Coin
