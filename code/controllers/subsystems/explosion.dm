@@ -87,11 +87,7 @@ SUBSYSTEM_DEF(explosions)
 	// return to setup mode... Unless...
 	end_resolve()
 	if(!pending_explosions.len)
-		suspend() // we've finished. Pause if we have no more work to do.
-		// If requested we rebuild powernets.
-		if(defer_powernet_rebuild)
-			INVOKE_ASYNC(SSmachines, TYPE_PROC_REF(/datum/controller/subsystem/machines,makepowernets))
-			defer_powernet_rebuild = FALSE
+		suspend_and_invoke_deferred_subsystems()
 
 /datum/controller/subsystem/explosions/proc/fire_prepare_explosions(var/list/data)
 	var/pwr = data[4]
@@ -164,6 +160,25 @@ SUBSYSTEM_DEF(explosions)
 	PRIVATE_PROC(TRUE)
 	resolve_explosions = FALSE
 
+/datum/controller/subsystem/explosions/proc/wake_and_defer_subsystem_updates(var/defer = FALSE)
+	// waking from sleep, we are absolutely not resuming, and INSTANT feedback to players is required here.
+	if(can_fire) // already awake
+		return
+	wake()
+	next_fire = 0
+	// Save these for AFTER the explosion has resolved
+	if(defer)
+		SSmachines.defer_powernet_rebuild();
+
+/datum/controller/subsystem/explosions/proc/suspend_and_invoke_deferred_subsystems()
+	// Resolve all the stuff we put off for after the explosion resolved
+	// Awaiting the rust powernet rebuild so this can be called normally...
+	INVOKE_ASYNC(SSmachines, TYPE_PROC_REF(/datum/controller/subsystem/machines,release_powernet_defer))
+	// we've finished. Pause because was have no more work to do.
+	if(!can_fire) // already asleep
+		return
+	suspend()
+
 /datum/controller/subsystem/explosions/proc/abort()
 	if(!currentrun.len)
 		return
@@ -225,10 +240,9 @@ SUBSYSTEM_DEF(explosions)
 
 	// send signals to dopplers
 	explosion_signals.Add(list( list(x0,y0,z0,devastation_range,heavy_impact_range,light_impact_range,world.time) )) // append a list in a list. Needed so that the data list doesn't get merged into the list of datalists
+
 	// BOINK! Time to wake up sleeping beauty!
-	if(!can_fire)
-		wake()
-		next_fire = 0 // waking from sleep, we are absolutely not resuming, and INSTANT feedback to players is required here.
+	wake_and_defer_subsystem_updates(devastation_range > 1 || heavy_impact_range > 2) // If significant enough devistation then rebuild!
 
 // Collect prepared explosions for BLAST PROCESSING
 /datum/controller/subsystem/explosions/proc/finalize_explosion(var/x0,var/y0,var/z0,var/pwr,var/max_starting)
@@ -274,16 +288,18 @@ SUBSYSTEM_DEF(explosions)
 	far_dist += heavy_impact_range * 5
 	far_dist += devastation_range * 20
 	var/frequency = get_rand_frequency()
-	for(var/mob/M in player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(M.z == epicenter.z)
 			var/turf/M_turf = get_turf(M)
 			var/dist = get_dist(M_turf, epicenter)
 			// If inside the blast radius + world.view - 2
 			if(dist <= round(max_range + world.view - 2, 1))
 				M.playsound_local(epicenter, get_sfx("explosion"), 100, 1, frequency, falloff = 5) // get_sfx() is so that everyone gets the same sound
-				var/mob/living/mL = M // CHOMPStation Edit: Ear Ringing/Deaf
-				if(isliving(mL)) // CHOMPStation Edit: Fix
-					mL.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+				/* Downstream - Ear Ringing/Deafness
+				//var/mob/living/mL = M
+				//if(isliving(mL))
+				//	mL.deaf_loop.start()
+				*/
 			else if(dist <= far_dist)
 				var/far_volume = CLAMP(far_dist, 30, 50) // Volume is based on explosion size and dist
 				far_volume += (dist <= far_dist * 0.5 ? 50 : 0) // add 50 volume if the mob is pretty close to the explosion
@@ -291,7 +307,7 @@ SUBSYSTEM_DEF(explosions)
 
 	var/close = range(world.view+round(devastation_range,1), epicenter)
 	// to all distanced mobs play a different sound
-	for(var/mob/M in player_list)
+	for(var/mob/M in GLOB.player_list)
 		if(M.z == epicenter.z)
 			if(!(M in close))
 				// check if the mob can hear
@@ -302,10 +318,6 @@ SUBSYSTEM_DEF(explosions)
 	if(adminlog)
 		message_admins("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ([epicenter.x],[epicenter.y],[epicenter.z]) (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[epicenter.x];Y=[epicenter.y];Z=[epicenter.z]'>JMP</a>)")
 		log_game("Explosion with [shaped ? "shaped" : "non-shaped"] size ([devastation_range], [heavy_impact_range], [light_impact_range]) in area [epicenter.loc.name] ")
-
-	// Large enough explosion. For performance reasons, powernets will be rebuilt manually
-	if((devastation_range * 3) + (heavy_impact_range * 2) + light_impact_range > 5)
-		defer_powernet_rebuild = TRUE
 
 	if(heavy_impact_range > 1)
 		var/datum/effect/system/explosion/E = new/datum/effect/system/explosion()
