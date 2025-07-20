@@ -1209,13 +1209,13 @@
 /area/shuttle/trawler)
 "abO" = (
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_sensor";
 	master_tag = "trawler_docker";
 	pixel_y = 28
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_vent"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -1236,7 +1236,7 @@
 /area/shuttle/trawler)
 "abP" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_docker";
 	pixel_y = 26;
 	tag_airpump = "trawler_vent";
@@ -1247,7 +1247,7 @@
 	tag_interior_sensor = "trawler_interior_sensor"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_vent"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -1460,7 +1460,7 @@
 /area/shuttle/beamtransit)
 "acd" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trawler_door_Ro";
 	locked = 1
@@ -1497,7 +1497,7 @@
 /area/shuttle/trawler)
 "acg" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trawler_door_Ri";
 	locked = 1
@@ -1681,7 +1681,7 @@
 /area/shuttle/trawler)
 "acx" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trawler_door_Ro";
 	locked = 1
@@ -1693,7 +1693,7 @@
 /obj/effect/floor_decal/corner/brown/border,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_exterior_sensor";
 	master_tag = "trawler_docker";
 	pixel_x = -10;
@@ -1743,7 +1743,7 @@
 /area/shuttle/trawler)
 "acB" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trawler_door_Ri";
 	locked = 1
@@ -1791,7 +1791,7 @@
 	},
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "trawler_docker";
 	pixel_y = -28;
 	id_tag = "trawler_interior_sensor"
@@ -1962,7 +1962,7 @@
 "acS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_vent"
 	},
 /obj/machinery/light_switch{
@@ -1987,7 +1987,7 @@
 "acT" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_vent"
 	},
 /obj/effect/floor_decal/borderfloorblack{
@@ -2469,7 +2469,7 @@
 /area/shuttle/trawler)
 "adA" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "beam_ferry_dock";
 	locked = 1
@@ -10704,7 +10704,7 @@
 /area/crew_quarters/kitchen)
 "aZZ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "beam_base_controller";
 	pixel_x = 25;
 	tag_door = "beam_ferry_dock"
@@ -10809,7 +10809,7 @@
 "bbA" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trawler_bay_door";
 	locked = 1;
@@ -12397,7 +12397,7 @@
 /area/quartermaster/storage)
 "bAW" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "beam_ferry_controller";
 	pixel_x = -25;
 	req_one_access = list(13,31);
@@ -16958,7 +16958,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/freezable{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cargo_bay_door";
 	locked = 1;
@@ -17376,7 +17376,7 @@
 /area/maintenance/medbay_roof)
 "dgq" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "arrive_dock_controller";
 	pixel_y = 30
 	},
@@ -21665,7 +21665,7 @@
 "eDi" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "trawler_bay_door";
 	locked = 1;
@@ -22415,7 +22415,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/freezable{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cargo_bay_door";
 	locked = 1;
@@ -23438,7 +23438,7 @@
 /area/hallway/secondary/engineering_hallway)
 "ffU" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
@@ -25095,7 +25095,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "escape_dock";
 	name = "docking port controller";
 	pixel_x = 25;
@@ -34507,7 +34507,7 @@
 /area/crew_quarters/cafeteria)
 "iAJ" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
@@ -47898,7 +47898,7 @@
 /area/hallway/primary/aft)
 "mCp" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "engie_dock_controller";
 	pixel_x = -25
 	},
@@ -55882,7 +55882,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "trawler_dock_controller";
 	pixel_y = 30;
 	tag_door = "trawler_bay_door"
@@ -55956,7 +55956,7 @@
 /area/bridge/meeting_room)
 "pfb" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "beam_ferry_door";
 	locked = 1
@@ -58794,7 +58794,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "cargo_bay";
 	name = "cargo bay hatch controller";
 	pixel_x = 30;
@@ -65604,7 +65604,7 @@
 "shM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/freezable{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "cargo_bay_door";
 	locked = 1;
@@ -77682,7 +77682,7 @@
 /area/mine/explored/muriki/river/hole)
 "vQy" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1380;
+	frequency = 1381;
 	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";

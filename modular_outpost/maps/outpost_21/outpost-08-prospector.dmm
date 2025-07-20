@@ -1126,7 +1126,7 @@
 /area/space)
 "hC" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "prospector_secbay_dock_controller";
 	pixel_y = 30;
 	tag_door = "prospector_secbay_dock_door"
@@ -1416,7 +1416,7 @@
 /area/space)
 "jE" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_publicstarboard_door";
 	locked = 1
@@ -1683,7 +1683,7 @@
 /area/space)
 "lc" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_secbay_dock_door";
 	locked = 1
@@ -2492,7 +2492,7 @@
 /area/space)
 "qt" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_medrear_door";
 	locked = 1
@@ -3243,7 +3243,7 @@
 "uY" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_LX";
 	locked = 1
@@ -4500,7 +4500,7 @@
 "CP" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_DX";
 	locked = 1
@@ -4584,7 +4584,7 @@
 "Dm" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_trawler_door";
 	locked = 1
@@ -4830,7 +4830,7 @@
 /area/space)
 "EI" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "prospector_trawler_dock_controller";
 	pixel_y = 30;
 	tag_door = "prospector_trawler_door"
@@ -6611,7 +6611,7 @@
 /area/space)
 "PJ" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_publicport_door";
 	locked = 1
@@ -6823,7 +6823,7 @@
 /area/space)
 "Rf" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "prospector_medbay_dock_controller";
 	pixel_y = 30;
 	tag_door = "prospector_medbay_dock_door"
@@ -7013,7 +7013,7 @@
 /area/space)
 "Sv" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "prospector_publicport_dock_controller";
 	pixel_y = 30;
 	tag_door = "prospector_publicport_door"
@@ -7353,7 +7353,7 @@
 /area/space)
 "Uj" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospector_medbay_dock_door";
 	locked = 1
@@ -7801,7 +7801,7 @@
 "Wt" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "prospectorUX";
 	locked = 1
@@ -8039,7 +8039,7 @@
 /area/space)
 "XZ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "prospector_publicstarboard_dock_controller";
 	pixel_y = 30;
 	tag_door = "prospector_publicstarboard_door"
@@ -8052,7 +8052,7 @@
 /area/space)
 "Yc" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "prospector_medbay_dock_controller";
 	pixel_y = 30;
 	tag_door = "prospector_medbay_dock_door"
