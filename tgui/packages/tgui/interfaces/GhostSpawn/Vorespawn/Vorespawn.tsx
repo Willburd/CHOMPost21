@@ -18,9 +18,13 @@ export const Vorespawn = (props: {
     return { displayText: entry[1].player, value: entry[0] };
   });
 
+  {
+    /* Outpost 21 edit - Nif removal
   const allowSoulcatcher = all_vore_spawns[selectedPlayer]?.soulcatcher;
   const allowSoulcatcherVore =
     all_vore_spawns[selectedPlayer]?.soulcatcher_vore;
+  */
+  }
   const allowBellySpawn = all_vore_spawns[selectedPlayer]?.vorespawn;
 
   const searcher = createSearch(searchText, (element: DropdownEntry) => {
@@ -75,6 +79,7 @@ export const Vorespawn = (props: {
           <Stack.Item grow>
             <Section fill title="Spawn Options">
               <Stack vertical>
+                {/* Outpost 21 edit - Nif removal
                 <Stack.Item>
                   <Stack>
                     <Stack.Item basis="200px">
@@ -113,6 +118,7 @@ export const Vorespawn = (props: {
                     </Stack.Item>
                   </Stack>
                 </Stack.Item>
+                */}
                 <Stack.Item>
                   <Stack>
                     <Stack.Item basis="200px">

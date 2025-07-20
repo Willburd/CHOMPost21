@@ -110,6 +110,7 @@
 
 	user.fake_enter_vr(S)
 
+/* Outpost 21 edit - Nif removal and soulcatcher removal
 /datum/tgui_module/ghost_spawn_menu/proc/soulcatcher_spawn(mob/observer/dead/user, selected_player)
 	var/mob/living/target = locate(selected_player) in GLOB.player_list
 		//Didn't pick anyone or picked a null
@@ -208,7 +209,7 @@
 		user.mind.active = TRUE
 
 		gem.catch_mob(user) //This will result in us being deleted so...
-
+*/
 
 /datum/tgui_module/ghost_spawn_menu/proc/vore_belly_spawn(mob/observer/dead/user, selected_player)
 	var/mob/living/target = locate(selected_player) in GLOB.player_list
@@ -224,6 +225,7 @@
 /datum/tgui_module/ghost_spawn_menu/proc/finish_vore_belly_spawn(mob/observer/dead/user,  mob/living/L)
 	L.inbelly_spawn_prompt(user.client)			// Hand reins over to them
 
+/* Outpost 21 edit - removed corgie spawn
 /datum/tgui_module/ghost_spawn_menu/proc/join_corgi(mob/observer/dead/user)
 	if(jobban_isbanned(user, JOB_GHOSTROLES))
 		to_chat(user, span_danger("You are banned from playing ghost roles and cannot spawn as a corgi."))
@@ -318,6 +320,8 @@
 	announce_ghost_joinleave(user, 0, "They are now a morph.")
 	var/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce/morph = new(get_turf(spawnspot))
 	morph.create_occupant(user)
+*/
+
 
 /datum/tgui_module/ghost_spawn_menu/proc/get_ghost_role_spawn()
 	var/list/possibleSpawnspots = list()
