@@ -1824,7 +1824,7 @@
 	},
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "yardciv_bay_door";
 	locked = 1
@@ -4837,7 +4837,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "yardciv_bay_controller";
 	pixel_y = 30;
 	tag_door = "yardciv_bay_door"
@@ -5523,7 +5523,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "orbyard_trawler_dock_controller";
 	pixel_y = 30
 	},
@@ -6154,7 +6154,7 @@
 "Hj" = (
 /obj/machinery/shield_diffuser,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "yardciv_bay_door";
 	locked = 1
@@ -6628,7 +6628,7 @@
 "Ji" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "med_vent"
 	},
 /obj/machinery/shield_diffuser,
