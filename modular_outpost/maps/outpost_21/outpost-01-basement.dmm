@@ -6313,7 +6313,7 @@
 	dir = 1;
 	external_pressure_bound = 0;
 	external_pressure_bound_default = 0;
-	frequency = 1442;
+	frequency = 1445;
 	icon_state = "map_vent_in";
 	id_tag = "burn_out";
 	internal_pressure_bound = 2000;
@@ -10143,7 +10143,7 @@
 "asj" = (
 /obj/effect/map_effect/interval/burnpit,
 /obj/machinery/air_sensor{
-	frequency = 1442;
+	frequency = 1445;
 	id_tag = "burn_sensor"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
@@ -23054,7 +23054,7 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	id = "recycle_in";
-	frequency = 1442;
+	frequency = 1445;
 	use_power = 1;
 	volume_rate = 700
 	},
@@ -26752,7 +26752,7 @@
 	},
 /obj/machinery/computer/general_air_control/large_tank_control{
 	dir = 4;
-	frequency = 1442;
+	frequency = 1445;
 	input_tag = "recycle_in";
 	name = "Incinerator Recycle Control";
 	output_tag = "burn_out";
