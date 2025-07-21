@@ -116,8 +116,8 @@
 		/obj/item/storage/pill_bottle/happy,
 		/obj/item/storage/pill_bottle/zoom,
 		/obj/item/seeds/ambrosiavulgarisseed,
-		/obj/item/gun/energy/sizegun,
-		/obj/item/slow_sizegun,
+	//	/obj/item/gun/energy/sizegun, // Outpost 21 edit - No easy size guns
+	//	/obj/item/slow_sizegun, // Outpost 21 edit - No easy size guns
 		/obj/item/clothing/accessory/collar/shock/bluespace,
 		/obj/item/cracker,
 		/obj/item/material/butterfly,
@@ -126,25 +126,25 @@
 		/obj/item/clothing/gloves/heavy_engineer,
 		/obj/item/reagent_containers/syringe/drugs,
 		/obj/item/reagent_containers/syringe/old,
-		/obj/item/implanter/sizecontrol,
+//		/obj/item/implanter/sizecontrol, // Outpost 21 edit - No easy size guns
 		/obj/item/handcuffs/fuzzy,
 		/obj/item/handcuffs/legcuffs/fuzzy,
 		/obj/item/storage/box/syndie_kit/spy,
 		/obj/item/grenade/anti_photon,
 		/obj/item/clothing/under/hyperfiber/bluespace,
-		/obj/item/selectable_item/chemistrykit/size,
+//		/obj/item/selectable_item/chemistrykit/size, // Outpost 21 edit - No easy size guns
 		/obj/item/selectable_item/chemistrykit/gender,
 		/obj/item/clothing/gloves/bluespace/emagged,
 		/obj/item/reagent_containers/glass/beaker/vial/sustenance,
 		/obj/item/clothing/suit/storage/vest/heavy/merc,
-		/obj/item/nif/bad,
+//		/obj/item/nif/bad, // Outpost 21 edit - Nif removal
 		/obj/item/radio_jammer,
 		/obj/item/sleevemate,
 		/obj/item/bodysnatcher,
 		/obj/item/mindbinder, // CHOMPAdd
 		/obj/item/beartrap,
 		/obj/item/cell/hyper/empty,
-		/obj/item/disk/nifsoft/compliance,
+//		/obj/item/disk/nifsoft/compliance, // Outpost 21 edit - No easy size guns
 		/obj/item/implanter/compliance,
 		/obj/item/material/knife/tacknife,
 		/obj/item/storage/box/survival/space,
@@ -156,5 +156,5 @@
 		/obj/item/clothing/gloves/bluespace,
 		/obj/item/gun/energy/mouseray,
 		/obj/item/clothing/accessory/collar/shock/bluespace/modified,
-		/obj/item/gun/energy/sizegun/backfire,
+//		/obj/item/gun/energy/sizegun/backfire, // Outpost 21 edit - No easy size guns
 		/obj/item/grenade/spawnergrenade/clustaur) // CHOMPAdd

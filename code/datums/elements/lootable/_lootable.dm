@@ -94,7 +94,7 @@
 			source.visible_message("A raccoon jumps out of the trash!")
 		// Outpost 21 edit begin - 50% possum too!
 		else
-			new /mob/living/simple_mob/animal/passive/opossum(get_turf(source), name)
+			new /mob/living/simple_mob/animal/passive/opossum(get_turf(source))
 			source.visible_message("An opossum jumps out of the trash!")
 		// Outpost 21 edit end
 
