@@ -1,13 +1,3 @@
-GLOBAL_LIST_INIT(allocated_gamma_loot,list())
-GLOBAL_LIST_INIT(unique_gamma_loot,list(\
-		/obj/item/perfect_tele,\
-		/obj/item/bluespace_harpoon,\
-		/obj/item/clothing/glasses/thermal/syndi,\
-		/obj/item/gun/energy/netgun,\
-		/obj/item/gun/projectile/dartgun,\
-		/obj/item/clothing/gloves/black/bloodletter,\
-		/obj/item/gun/energy/mouseray/metamorphosis))
-
 /datum/element/lootable
 	var/chance_nothing = 0			// Unlucky people might need to loot multiple spots to find things.
 	var/chance_uncommon = 10		// Probability of pulling from the uncommon_loot list.
@@ -69,6 +59,12 @@ GLOBAL_LIST_INIT(unique_gamma_loot,list(\
 		loot = produce_gamma_item(source)
 		span = "cult" // Purple and bold.
 
+	// Outpost 21 edit begin - New loot
+	else if(prob(chance_gamma) && !GLOB.spawned_theta)
+		loot = produce_theta_item()
+		span = "cult" // Purple and bold.
+	// Outpost 21 edit end
+
 	else  // Welp.
 		loot = produce_common_item(source)
 
@@ -93,8 +89,14 @@ GLOBAL_LIST_INIT(unique_gamma_loot,list(\
 	to_chat(L, span_info(final_message))
 	var/disturbed_sleep = rand(1,100) //spawning of mobs, for now only the trash panda.
 	if(disturbed_sleep <= wake_chance)
-		new /mob/living/simple_mob/animal/passive/raccoon(get_turf(source))
-		source.visible_message("A raccoon jumps out of the trash!.")
+		if(prob(50))
+			new /mob/living/simple_mob/animal/passive/raccoon(get_turf(source))
+			source.visible_message("A raccoon jumps out of the trash!")
+		// Outpost 21 edit begin - 50% possum too!
+		else
+			new /mob/living/simple_mob/animal/passive/opossum(get_turf(source), name)
+			source.visible_message("An opossum jumps out of the trash!")
+		// Outpost 21 edit end
 
 	// Check if we should delete on depletion
 	if(!loot_depletion)
