@@ -427,7 +427,7 @@ GLOBAL_LIST_INIT(vr_mob_tf_options, list(
 	"Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 	"Seagull" =/mob/living/simple_mob/vore/seagull,
 	"Fox" = /mob/living/simple_mob/animal/passive/fox,
-	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream //CHOMPStation Enable
+	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon,
 	"Shantak" = /mob/living/simple_mob/animal/sif/shantak,
 	"Goose" = /mob/living/simple_mob/animal/space/goose,
 	"Space shark" = /mob/living/simple_mob/animal/space/shark,
@@ -490,7 +490,7 @@ GLOBAL_LIST_INIT(vr_mob_spawner_options, list(
 	"Seagull" =/mob/living/simple_mob/vore/seagull,
 	"Corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 	"Armadillo" = /mob/living/simple_mob/animal/passive/armadillo, //TODO: Port from Downstream //CHOMPStation Enable
-	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon_ch, //TODO: Port from Downstream //CHOMPStation Enable
+	"Racoon" = /mob/living/simple_mob/animal/passive/raccoon,
 	"Goose" = /mob/living/simple_mob/animal/space/goose,
 	"Frog" = /mob/living/simple_mob/vore/aggressive/frog,
 	"Dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
@@ -584,7 +584,7 @@ GLOBAL_LIST_EMPTY(id_card_states)
 GLOBAL_LIST_EMPTY(allocated_gamma)
 GLOBAL_LIST_EMPTY(semirandom_mob_spawner_decisions)
 
-GLOBAL_LIST_INIT(unique_gamma, list(
+GLOBAL_LIST_INIT(unique_gamma_loot, list(
 	/obj/item/perfect_tele,
 	/obj/item/bluespace_harpoon,
 	/obj/item/clothing/glasses/thermal/syndi,
@@ -592,8 +592,17 @@ GLOBAL_LIST_INIT(unique_gamma, list(
 	/obj/item/gun/projectile/pirate, // CHOMPAdd
 	/obj/item/gun/projectile/dartgun,
 	// /obj/item/clothing/gloves/black/bloodletter, // Outpost 21 edit - Removed glove
-	/obj/item/gun/energy/mouseray/metamorphosis
+	/obj/item/gun/energy/mouseray/metamorphosis,
+	// Outpost 21 edit begin - New loot
+	/obj/item/organ/internal/augment/armmounted/shoulder/blade,
+	/obj/item/organ/internal/augment/armmounted/shoulder/surge,
+	/obj/item/organ/internal/augment/bioaugment/thermalshades,
+	/obj/item/organ/internal/augment/armmounted/hand/sword,
+	/obj/item/organ/internal/augment/armmounted/dartbow,
+	/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit - New loot
+	// Outpost 21 edit end
 	))
+GLOBAL_LIST_INIT(allocated_gamma_loot,list())
 
 GLOBAL_LIST_INIT(newscaster_standard_feeds, list(/datum/news_announcement/bluespace_research, /datum/news_announcement/lotus_tree, /datum/news_announcement/random_junk,  /datum/news_announcement/food_riots))
 
