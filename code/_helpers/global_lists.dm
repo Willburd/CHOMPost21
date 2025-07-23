@@ -581,7 +581,7 @@ GLOBAL_LIST_EMPTY(random_maps)
 GLOBAL_LIST_EMPTY(map_count)
 GLOBAL_LIST_EMPTY(narsie_list)
 GLOBAL_LIST_EMPTY(id_card_states)
-GLOBAL_LIST_EMPTY(allocated_gamma)
+GLOBAL_LIST_EMPTY(allocated_gamma_loot)
 GLOBAL_LIST_EMPTY(semirandom_mob_spawner_decisions)
 
 GLOBAL_LIST_INIT(unique_gamma_loot, list(
@@ -602,7 +602,6 @@ GLOBAL_LIST_INIT(unique_gamma_loot, list(
 	/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit - New loot
 	// Outpost 21 edit end
 	))
-GLOBAL_LIST_INIT(allocated_gamma_loot,list())
 
 GLOBAL_LIST_INIT(newscaster_standard_feeds, list(/datum/news_announcement/bluespace_research, /datum/news_announcement/lotus_tree, /datum/news_announcement/random_junk,  /datum/news_announcement/food_riots))
 
@@ -1316,7 +1315,8 @@ GLOBAL_LIST_INIT(robot_modules, list(
 	"Lost"			= /obj/item/robot_module/robot/lost,
 	"Protector" 	= /obj/item/robot_module/robot/syndicate/protector,
 	"Mechanist" 	= /obj/item/robot_module/robot/syndicate/mechanist,
-	"Combat Medic"	= /obj/item/robot_module/robot/syndicate/combat_medic
+	"Combat Medic"	= /obj/item/robot_module/robot/syndicate/combat_medic,
+	"Ninja" 		= /obj/item/robot_module/robot/syndicate/ninja,
 	))
 
 
