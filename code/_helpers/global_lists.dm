@@ -602,7 +602,6 @@ GLOBAL_LIST_INIT(unique_gamma_loot, list(
 	/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit - New loot
 	// Outpost 21 edit end
 	))
-GLOBAL_LIST_INIT(allocated_gamma_loot,list())
 
 GLOBAL_LIST_INIT(newscaster_standard_feeds, list(/datum/news_announcement/bluespace_research, /datum/news_announcement/lotus_tree, /datum/news_announcement/random_junk,  /datum/news_announcement/food_riots))
 
