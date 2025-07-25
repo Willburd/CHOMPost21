@@ -130,19 +130,15 @@ SUBSYSTEM_DEF(supply)
 					//Sell research samples and containers with samples in them
 					if(istype(A, /obj/item/research_sample))
 						var/obj/item/research_sample/sample = A
-						EC.contents[EC.contents.len]["value"] = sample.supply_value
+						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI, was sample.supply_value
 						EC.contents[EC.contents.len]["quantity"] = 1
 						EC.value += EC.contents[EC.contents.len]["value"]
 
 					if(istype(A, /obj/item/storage/sample_container))
 						var/obj/item/storage/sample_container/sample_can = A
-						var/sample_sum = 0
-						var/obj/item/research_sample/stored_sample
-						if(LAZYLEN(sample_can.contents))
-							for(stored_sample in sample_can.contents)
-								sample_sum += stored_sample.supply_value
+						var/sample_sum = get_item_sale_value(A) // Outpost 21 edit - Amazonk UI
 						EC.contents[EC.contents.len]["quantity"] = "[A.contents.len] sample(s) "
-						EC.contents[EC.contents.len]["value"] = sample_sum
+						EC.contents[EC.contents.len]["value"] = sample_sum // Outpost 21 edit - Amazonk UI, was sample_sum
 						EC.value += sample_sum
 
 					//Sell vaccine samples
@@ -209,13 +205,6 @@ SUBSYSTEM_DEF(supply)
 							//var/obj/item/reagent_containers/food/food_stuff = A
 							EC.contents[EC.contents.len]["value"] = get_item_sale_value(A)
 							EC.value += EC.contents[EC.contents.len]["value"]
-					// Outpost 21 edit end
-
-					// Outpost 21 edit begin - Selling research samples
-					if(istype(A, /obj/item/research_sample))
-						//var/obj/item/research_sample/sample_stuff = A
-						EC.contents[EC.contents.len]["value"] = get_item_sale_value(A)
-						EC.value += EC.contents[EC.contents.len]["value"]
 					// Outpost 21 edit end
 
 			//Outpost 21 edit begin - Sell reagent tanks
@@ -629,6 +618,18 @@ SUBSYSTEM_DEF(supply)
 		var/heavy = round((mult*strength)*0.35)
 		var/light = round((mult*strength)*0.80)
 		return FLOOR(round(dev + (heavy/2) + (light/3),1),1)
+	//Sell research samples and containers with samples in them
+	if(istype(A, /obj/item/research_sample))
+		var/obj/item/research_sample/sample = A
+		return sample.supply_value
+	if(istype(A, /obj/item/storage/sample_container))
+		var/obj/item/storage/sample_container/sample_can = A
+		var/sample_sum = 0
+		var/obj/item/research_sample/stored_sample
+		if(LAZYLEN(sample_can.contents))
+			for(stored_sample in sample_can.contents)
+				sample_sum += stored_sample.supply_value
+		return sample_sum
 	return 0
 
 /datum/controller/subsystem/supply/proc/get_reagent_sale_value(var/datum/reagent/R)
