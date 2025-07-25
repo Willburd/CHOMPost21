@@ -5,7 +5,7 @@
 	//Control scan event: soft outcome
 	switch(phase)
 		if(1)
-			SSatc.msg("This is [using_map.starsys_name] Defense Control, [combined_first_name], [callname], your [pick("ship","vessel","starship")] is entering secure airspace without authorization. Turn back or you will be [prob(20) ? "fired upon" : "destroyed"].", "[using_map.starsys_name] Defense Control")
+			SSatc.msg("This is [using_map.starsys_name] Defense Control, [combined_first_name], your [pick("ship","vessel","starship")] is entering secure airspace without authorization. Turn back or you will be [prob(20) ? "fired upon" : "destroyed"].", "[using_map.starsys_name] Defense Control")
 			next()
 		if(2)
 			if(prob(20))
@@ -22,7 +22,7 @@
 			else
 				next()
 		if(4)
-			SSatc.msg("[combined_first_name], [callname], you have not responded and are continuing into secure airspace, final warning. Turn back or you will be [prob(20) ? "fired upon" : "destroyed"].", "[using_map.starsys_name] Defense Control")
+			SSatc.msg("[combined_first_name], you have not responded and are continuing into secure airspace, final warning. Turn back or you will be [prob(20) ? "fired upon" : "destroyed"].", "[using_map.starsys_name] Defense Control")
 			next()
 		if(5)
 			SSatc.msg("[pick(30) ? "Ground" : "Orbital"] artillery, fire at will on [callname].", "[using_map.starsys_name] Defense Control")

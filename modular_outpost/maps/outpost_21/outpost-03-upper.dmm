@@ -2696,7 +2696,7 @@
 "aNF" = (
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "med_docker";
 	pixel_y = -28;
 	id_tag = "med_interior_sensor"
@@ -2921,7 +2921,7 @@
 /area/muriki/skyline/east)
 "aUb" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "sec_dock_controller";
 	pixel_y = 30
 	},
@@ -5140,7 +5140,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "med_door_Ri";
 	locked = 1
@@ -8907,7 +8907,7 @@
 /area/chapel/chapel_morgue)
 "dPb" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "sec_docker";
 	pixel_y = 26;
 	req_one_access = list(1,52);
@@ -8919,14 +8919,14 @@
 	tag_interior_sensor = "sec_interior_sensor"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "sec_sensor";
 	master_tag = "sec_docker";
 	pixel_y = 36
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "sec_vent"
 	},
 /obj/machinery/light_switch{
@@ -10022,14 +10022,14 @@
 /area/rnd/research/phoronics/extrastore)
 "eqo" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "sec_door_Ro";
 	locked = 1
 	},
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "sec_exterior_sensor";
 	master_tag = "sec_docker";
 	pixel_x = -10;
@@ -10520,7 +10520,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "med_vent"
 	},
 /obj/machinery/light,
@@ -12811,7 +12811,7 @@
 /obj/effect/overmap/visitable/ship/landable/security,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "sec_vent"
 	},
 /obj/machinery/light,
@@ -13458,14 +13458,14 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "med_door_Ro";
 	locked = 1
 	},
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 8;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "med_exterior_sensor";
 	master_tag = "med_docker";
 	pixel_x = -10;
@@ -16457,7 +16457,7 @@
 /area/hydroponics/publicgarden)
 "hIJ" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "sec_door_Ro";
 	locked = 1
@@ -19451,7 +19451,7 @@
 /area/maintenance/substation/phoronics)
 "jeS" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "sec_door_Ri";
 	locked = 1
@@ -27649,7 +27649,7 @@
 /area/maintenance/substation/arrivals)
 "ngy" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "med_docker";
 	pixel_y = 26;
 	req_one_access = list(5,52);
@@ -27661,14 +27661,14 @@
 	tag_interior_sensor = "med_interior_sensor"
 	},
 /obj/machinery/airlock_sensor{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "med_sensor";
 	master_tag = "med_docker";
 	pixel_y = 36
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "med_vent"
 	},
 /obj/machinery/light_switch{
@@ -33297,7 +33297,7 @@
 /area/maintenance/medicelev)
 "pZv" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "med_door_Ro";
 	locked = 1
@@ -35830,7 +35830,7 @@
 /area/hallway/secondary/secmedbridge)
 "rjK" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "sec_door_Ri";
 	locked = 1
@@ -42232,7 +42232,7 @@
 	},
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	master_tag = "sec_docker";
 	pixel_y = -28;
 	id_tag = "sec_interior_sensor"
@@ -46327,7 +46327,7 @@
 /area/tcommsat/computer)
 "wmr" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "medbay_dock_controller";
 	pixel_y = 30
 	},
@@ -48877,7 +48877,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "med_door_Ri";
 	locked = 1

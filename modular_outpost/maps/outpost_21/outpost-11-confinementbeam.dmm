@@ -244,7 +244,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 8;
 	pixel_x = 23;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 27
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -264,7 +264,7 @@
 	dir = 4
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -23;
 	pixel_x = -22;
 	dir = 4
@@ -392,7 +392,7 @@
 /area/offworld/confinementbeam/exterior)
 "aQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -498,7 +498,7 @@
 "bd" = (
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -24;
 	pixel_x = 23;
 	dir = 8
@@ -694,7 +694,7 @@
 /area/offworld/confinementbeam/station/starboard_airlock)
 "bx" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -907,7 +907,7 @@
 	dir = 8
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 7;
 	pixel_x = -22;
 	dir = 4;
@@ -1158,7 +1158,7 @@
 /area/offworld/confinementbeam/station/port_observation)
 "cC" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -1261,7 +1261,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -1317,7 +1317,7 @@
 /area/ai_upload_foyer)
 "da" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/borderfloor{
@@ -1813,18 +1813,18 @@
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -24;
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -32;
 	id_tag = "beam_rearlock"
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -22;
 	pixel_x = 11
 	},
@@ -1954,7 +1954,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -2021,7 +2021,7 @@
 "fj" = (
 /obj/machinery/airlock_sensor/airlock_interior{
 	pixel_x = 26;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 29
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -2351,7 +2351,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -2468,7 +2468,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -2570,7 +2570,7 @@
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -24;
 	dir = 8;
 	pixel_x = 22
@@ -2616,14 +2616,14 @@
 /area/ai_sat/atmos)
 "ha" = (
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -24;
 	pixel_x = -22;
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -2771,7 +2771,7 @@
 /area/offworld/confinementbeam/station/backup_power)
 "hz" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -2795,7 +2795,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_x = -24;
 	dir = 1;
 	pixel_y = -23
@@ -2892,18 +2892,18 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 32;
 	id_tag = "beam_engine_mid_starboard";
 	pixel_x = 26
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = 25;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_x = 26
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -2969,7 +2969,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "beam_sat_alt_controller";
 	tag_door = "beam_sat_alt_door";
 	dir = 8;
@@ -2979,7 +2979,7 @@
 /area/offworld/confinementbeam/station/hallway)
 "hZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -3069,7 +3069,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -3176,14 +3176,14 @@
 /area/offworld/confinementbeam/exterior)
 "iM" = (
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -24;
 	dir = 8;
 	pixel_x = 22
 	},
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -3445,7 +3445,7 @@
 /area/offworld/confinementbeam/station/hallway)
 "jI" = (
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 24;
 	dir = 8;
 	pixel_x = 22
@@ -3888,7 +3888,7 @@
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/machinery/airlock_sensor/airlock_interior{
 	pixel_x = 6;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 21
 	},
 /obj/machinery/camera/network/engineering_outpost{
@@ -4057,7 +4057,7 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "lu" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -4093,7 +4093,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -4118,7 +4118,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "beam_sat_sec_door";
 	locked = 1
@@ -4132,7 +4132,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -4557,7 +4557,7 @@
 "mP" = (
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4
 	},
 /obj/item/radio/intercom{
@@ -4698,7 +4698,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -4789,7 +4789,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -5052,12 +5052,12 @@
 /area/offworld/confinementbeam/station/port_observation)
 "ou" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -32;
 	id_tag = "ai_aftlock"
 	},
@@ -5069,7 +5069,7 @@
 /area/ai_sat/fore_airlock)
 "ov" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -5248,7 +5248,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -5283,12 +5283,12 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_x = -24;
 	pixel_y = -9
 	},
@@ -6006,7 +6006,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -6070,7 +6070,7 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "rM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -6090,7 +6090,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -6182,7 +6182,7 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "sc" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner{
@@ -6358,7 +6358,7 @@
 	dir = 8
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "aisat_security_controller";
 	pixel_y = 30;
 	tag_door = "ai_sat_sec_door"
@@ -6391,7 +6391,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -6606,7 +6606,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -6715,7 +6715,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -6946,7 +6946,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 1;
 	pixel_x = -25;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -22
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -7232,7 +7232,7 @@
 /area/offworld/confinementbeam/station/storage)
 "vp" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -7365,10 +7365,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -30;
 	id_tag = "beam_engine_mid_port";
 	pixel_x = -26;
@@ -7376,7 +7376,7 @@
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -23;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_x = -26;
 	dir = 1
 	},
@@ -7475,7 +7475,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 8;
 	pixel_x = 23;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -24
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -7517,7 +7517,7 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "wj" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -8096,7 +8096,7 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "yp" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -8194,12 +8194,12 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -24;
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -32;
 	id_tag = "beam_engine_aft_port"
 	},
@@ -8323,7 +8323,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -8413,7 +8413,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -8469,7 +8469,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -8501,7 +8501,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 4;
 	pixel_x = -22;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -7;
 	req_one_access = list(16,52,56)
 	},
@@ -8673,7 +8673,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -8701,7 +8701,7 @@
 /area/offworld/confinementbeam/exterior)
 "zW" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "beam_sat_controller";
 	tag_door = "beam_sat_door";
 	dir = 8;
@@ -9059,7 +9059,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -24;
 	pixel_x = -22;
 	dir = 4
@@ -9295,7 +9295,7 @@
 /area/offworld/confinementbeam/station/beam_emitter)
 "BP" = (
 /obj/machinery/airlock_sensor/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 8;
 	pixel_x = 26
 	},
@@ -9587,7 +9587,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -9914,7 +9914,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -10323,7 +10323,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_x = -24;
 	pixel_y = 22
 	},
@@ -10350,7 +10350,7 @@
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -10382,16 +10382,16 @@
 "FC" = (
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = 25;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 32;
 	id_tag = "beam_trawlerlock"
 	},
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -22;
 	pixel_x = -9
 	},
@@ -10462,14 +10462,14 @@
 	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -8;
 	pixel_x = -22;
 	dir = 4;
 	req_one_access = list(16,52,56)
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4;
 	pixel_x = -21;
 	pixel_y = 6
@@ -10477,7 +10477,7 @@
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 4;
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "ai_solarlock";
 	pixel_x = -29;
 	pixel_y = 6;
@@ -10865,7 +10865,7 @@
 /area/offworld/confinementbeam/station/power_distribution)
 "GY" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/light/small{
@@ -11104,7 +11104,7 @@
 /area/ai_sat/fore_airlock)
 "HK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -11578,16 +11578,16 @@
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = 25;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 32;
 	id_tag = "beam_engine_fore_starboard"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -11742,7 +11742,7 @@
 	},
 /obj/machinery/airlock_sensor/airlock_interior{
 	pixel_x = -22;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -26;
 	dir = 4
 	},
@@ -11960,7 +11960,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -12020,7 +12020,7 @@
 "Kf" = (
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -12100,7 +12100,7 @@
 /area/offworld/confinementbeam/station/atmos)
 "Ko" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -12201,7 +12201,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -12240,7 +12240,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 1;
 	pixel_x = -6;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -21
 	},
 /obj/machinery/light{
@@ -12296,7 +12296,7 @@
 /area/ai)
 "KM" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -12333,7 +12333,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "beam_sat_medical_controller";
 	pixel_y = -30;
 	tag_door = "beam_sat_med_door";
@@ -12404,7 +12404,7 @@
 	dir = 1
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1380;
+	frequency = 1381;
 	id_tag = "beam_sat_security_controller";
 	pixel_y = 30;
 	tag_door = "beam_sat_sec_door"
@@ -12500,7 +12500,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -12706,7 +12706,7 @@
 /area/offworld/confinementbeam/station/hallway_alt)
 "Mo" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -13109,7 +13109,7 @@
 /area/ai_sat/atmos)
 "ND" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/plating,
@@ -13283,7 +13283,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 4;
 	pixel_x = -23;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -13340,7 +13340,7 @@
 /area/offworld/confinementbeam/station/hallway_alt)
 "Ot" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/techmaint,
@@ -13380,7 +13380,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -22;
 	pixel_x = -8
 	},
@@ -13410,7 +13410,7 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "OD" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -13494,7 +13494,7 @@
 	dir = 4
 	},
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 28;
 	pixel_x = -22;
 	dir = 4
@@ -13530,7 +13530,7 @@
 "OT" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "beam_sat_alt_door";
 	locked = 1
@@ -13582,7 +13582,7 @@
 /area/ai)
 "Pf" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -13812,7 +13812,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "beam_sat_med_door";
 	locked = 1
@@ -14129,7 +14129,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 4;
 	pixel_x = -23;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 24
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -14446,7 +14446,7 @@
 /obj/machinery/airlock_sensor/airlock_interior{
 	dir = 4;
 	pixel_x = -23;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -14563,7 +14563,7 @@
 /area/offworld/confinementbeam/station/starboard_airlock)
 "Sl" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -14653,7 +14653,7 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "ai_sat_sec_door";
 	locked = 1
@@ -14740,7 +14740,7 @@
 /area/offworld/confinementbeam/station/trawler_airlock)
 "SI" = (
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -6;
 	pixel_x = 28
 	},
@@ -14836,7 +14836,7 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "Ta" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -14865,7 +14865,7 @@
 /area/offworld/confinementbeam/station/starboard_airlock)
 "Te" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	id_tag = "beam_sat_door";
 	locked = 1
@@ -15175,13 +15175,13 @@
 /area/offworld/confinementbeam/exterior)
 "Uk" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/button/int_button,
 /obj/machinery/access_button/airlock_interior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -22;
 	pixel_x = 9
 	},
@@ -15255,7 +15255,7 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "Uw" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor{
@@ -15272,7 +15272,7 @@
 /area/ai_sat/docking_wing)
 "Ux" = (
 /obj/machinery/access_button/airlock_exterior{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 6;
 	pixel_x = 28
 	},
@@ -15579,7 +15579,7 @@
 /area/ai_server_room)
 "Vu" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -16048,7 +16048,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -16277,18 +16277,18 @@
 "XH" = (
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -24;
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -32;
 	id_tag = "beam_solar"
 	},
@@ -16359,13 +16359,13 @@
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -24;
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = -32;
 	id_tag = "beam_engine_fore_port"
 	},
@@ -16393,7 +16393,7 @@
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1380;
+	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
 	},
@@ -16477,7 +16477,7 @@
 /area/offworld/confinementbeam/station/solar_control)
 "Yg" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -16653,11 +16653,11 @@
 "YM" = (
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = 25;
-	frequency = 1380
+	frequency = 1381
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
-	frequency = 1380;
+	frequency = 1381;
 	pixel_y = 32;
 	id_tag = "beam_engine_aft_starboard"
 	},
@@ -16696,7 +16696,7 @@
 /area/offworld/confinementbeam/station/port_observation)
 "YU" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1381;
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
