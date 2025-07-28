@@ -4882,7 +4882,6 @@
 #include "modular_chomp\code\datums\elements\lootable\mecha.dm"
 #include "modular_chomp\code\datums\outfits\jobs\command.dm"
 #include "modular_chomp\code\datums\elements\lootable\christmas_present.dm"
-#include "modular_chomp\code\datums\outfits\jobs\noncrew.dm"
 #include "modular_chomp\code\datums\outfits\jobs\security.dm"
 #include "modular_chomp\code\datums\supplypacks\contraband.dm"
 #include "modular_chomp\code\datums\supplypacks\medical.dm"
