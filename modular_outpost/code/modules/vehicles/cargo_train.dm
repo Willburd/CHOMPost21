@@ -1,4 +1,4 @@
-/obj/vehicle/train/trolly_tank
+/obj/vehicle/train/trolley_tank
 	name = "cargo train tanker"
 	desc = "A large, tank made for transporting liquids."
 	icon = 'modular_outpost/icons/obj/vehicles.dmi'
@@ -9,31 +9,30 @@
 	var/obj/item/reagent_containers/glass/stored_container = null
 	paint_color = "#efdd16"
 
-/obj/vehicle/train/trolly_tank/Initialize(mapload)
+/obj/vehicle/train/trolley_tank/Initialize(mapload)
 	. = ..()
 	create_reagents(CARGOTANKER_VOLUME)
 	update_icon()
 	AddComponent(/datum/component/hose_connector/input)
-	AddComponent(/datum/component/hose_connector/input)
-	AddComponent(/datum/component/hose_connector/input)
 	AddComponent(/datum/component/hose_connector/output)
+	AddElement(/datum/element/sellable/trolley_tank)
 
-/obj/vehicle/train/trolly_tank/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
+/obj/vehicle/train/trolley_tank/insert_cell(var/obj/item/cell/C, var/mob/living/carbon/human/H)
 	return
 
-/obj/vehicle/train/trolly_tank/Bump(atom/Obstacle)
+/obj/vehicle/train/trolley_tank/Bump(atom/Obstacle)
 	if(!lead)
 		return //so people can't knock others over by pushing a trolley around
 	..()
 
-/obj/vehicle/train/trolly_tank/load(var/atom/movable/C, var/mob/living/user)
+/obj/vehicle/train/trolley_tank/load(var/atom/movable/C, var/mob/living/user)
 	return FALSE // Cannot load anything onto this
 
-/obj/vehicle/train/trolly_tank/RunOver(var/mob/living/M)
+/obj/vehicle/train/trolley_tank/RunOver(var/mob/living/M)
 	..()
 	attack_log += text("\[[time_stamp()]\] [span_red("ran over [M.name] ([M.ckey])")]")
 
-/obj/vehicle/train/trolly_tank/attackby(obj/item/W, mob/user)
+/obj/vehicle/train/trolley_tank/attackby(obj/item/W, mob/user)
 
 	if(istype(W, /obj/item/multitool))
 		var/new_paint = input(usr, "Please select paint color.", "Paint Color", paint_color) as color|null
@@ -57,7 +56,7 @@
 
 	. = ..()
 
-/obj/vehicle/train/trolly_tank/update_car(var/train_length, var/active_engines)
+/obj/vehicle/train/trolley_tank/update_car(var/train_length, var/active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 
@@ -66,12 +65,12 @@
 	else
 		anchored = TRUE
 
-/obj/vehicle/train/trolly_tank/attack_hand(mob/user)
+/obj/vehicle/train/trolley_tank/attack_hand(mob/user)
 	if(stored_container)
 		unload_container()
 		return
 	. = ..()
-/obj/vehicle/train/trolly_tank/verb/load_container_verb()
+/obj/vehicle/train/trolley_tank/verb/load_container_verb()
 	set name = "Load Container"
 	set category = "Object"
 	set src in oview(1)
@@ -89,7 +88,7 @@
 		M.drop_from_inventory(stored_container,src)
 		visible_message("\The [M] loads \the [stored_container] into \the [src].")
 
-/obj/vehicle/train/trolly_tank/proc/load_container(var/mob/user,var/obj/item/W)
+/obj/vehicle/train/trolley_tank/proc/load_container(var/mob/user,var/obj/item/W)
 	if(stored_container)
 		return
 	if(istype(W,/obj/item/reagent_containers/glass))
@@ -98,10 +97,10 @@
 			user.drop_from_inventory(stored_container,src)
 			visible_message("\The [user] loads \the [stored_container] into \the [src].")
 
-/obj/vehicle/train/trolly_tank/AltClick(mob/user)
+/obj/vehicle/train/trolley_tank/AltClick(mob/user)
 	fill_container()
 
-/obj/vehicle/train/trolly_tank/verb/unload_container()
+/obj/vehicle/train/trolley_tank/verb/unload_container()
 	set name = "Unload Container"
 	set category = "Object"
 	set src in oview(1)
@@ -113,7 +112,7 @@
 		stored_container = null
 		return
 
-/obj/vehicle/train/trolly_tank/verb/fill_container()
+/obj/vehicle/train/trolley_tank/verb/fill_container()
 	set name = "Fill Loaded Container"
 	set category = "Object"
 	set src in oview(1)
@@ -131,11 +130,11 @@
 	to_chat(usr,"You drain \the [src] into the loaded [stored_container].")
 	reagents.trans_to_holder( stored_container.reagents, stored_container.reagents.maximum_volume)
 
-/obj/vehicle/train/trolly_tank/examine(mob/user, infix, suffix)
+/obj/vehicle/train/trolley_tank/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u."
 
-/obj/vehicle/train/trolly_tank/update_icon()
+/obj/vehicle/train/trolley_tank/update_icon()
 	. = ..()
 	cut_overlays()
 	if(reagents && reagents.total_volume > 0)
@@ -158,5 +157,5 @@
 	Bodypaint.color = paint_color
 	add_overlay(Bodypaint)
 
-/obj/vehicle/train/trolly_tank/on_reagent_change(changetype)
+/obj/vehicle/train/trolley_tank/on_reagent_change(changetype)
 	update_icon()

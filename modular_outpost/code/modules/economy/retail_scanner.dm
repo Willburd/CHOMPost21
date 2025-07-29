@@ -1,5 +1,5 @@
 /obj/item/retail_scanner
-	name = "retail scanner"
+	name = "cargo scanner"
 	desc = "Assess the cargo sale value of items."
 	icon = 'icons/obj/device.dmi'
 	icon_state = "retail_idle"
@@ -24,41 +24,26 @@
 	src.pixel_y = 0
 
 /obj/item/retail_scanner/proc/scan_item_price(var/atom/movable/AM,mob/user)
-	to_chat(user,span_boldnotice("\The [src] assesses the supply point value of \the [AM]..."))
+	if(istype(AM,/obj/effect))
+		return 0
+
+	var/final_output = span_boldnotice("\The [src] assesses the supply point value of \the [AM]...\n")
 	playsound(src, 'sound/machines/beep.ogg', 50, 1)
 
 	// Some things cannot be sold
-	if(isliving(AM) || isstructure(AM) || isturf(AM) || istype(AM,/obj/effect))
-		to_chat(user,span_danger("-Cannot be sold."))
+	if(isliving(AM) || isstructure(AM) || isturf(AM))
+		final_output += span_danger("-Cannot be sold.")
+		to_chat(user,final_output)
 		return 0
 
-	// Raw item value
-	var/value = 0
-	if(isitem(AM))
-		value = SSsupply.get_item_sale_value(AM)
+	// Get item value
+	var/value = SEND_SIGNAL(AM,COMSIG_ITEM_SCAN_PROFIT)
+	if(!value)
+		final_output += span_danger("-It's worth nothing.")
+		to_chat(user,final_output)
+		return 0
 
-	// Assess reagents
-	var/reagent_value = 0
-	if(!istype(AM,/obj/item/reagent_containers/food)) // Ignore food reagents
-		if(!isnull(AM.reagents))
-			if(AM.reagents.reagent_list.len > 0)
-				for(var/datum/reagent/R in AM.reagents.reagent_list)
-					reagent_value += SSsupply.get_reagent_sale_value(R)
-
-	// Handle output
-	if(value == 0 && reagent_value == 0)
-		to_chat(user,span_danger("-It's worth nothing."))
-	else
-		if(value > 0)
-			var/price = SSsupply.points_to_cash(value)
-			to_chat(user,span_notice("-It's worth [value] points, or [price] [price > 1 ? "thalers" : "thaler"]"))
-		if(reagent_value > 0)
-			var/price = SSsupply.points_to_cash(reagent_value)
-			to_chat(user,span_notice("-It's chemical contents are worth [reagent_value] points, or [price] [price > 1 ? "thalers" : "thaler"]"))
-			to_chat(user,span_warning("-This product must be transported in a full cargo tug tanker with minimal cross contamination."))
-
-	// Supply notes
-	if(istype(AM,/obj/item/organ) || istype(AM,/obj/item/reagent_containers/glass/beaker/vial/vaccine) || istype(AM,/obj/item/reagent_containers/food))
-		to_chat(user,span_warning("-This product must be sold in a freezer"))
-	else if(value > 0)
-		to_chat(user,span_warning("-This product must be sold in a crate"))
+	var/price = SSsupply.points_to_cash(value)
+	final_output += span_notice("-It can be sold for [value] points, or [price] [price > 1 ? "thalers" : "thaler"]")
+	to_chat(user,final_output)
+	return value

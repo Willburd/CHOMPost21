@@ -5870,7 +5870,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/vehicle/train/trolly_tank,
+/obj/vehicle/train/trolley_tank,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
@@ -6375,7 +6375,7 @@
 /area/space)
 "Op" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/vehicle/train/trolly_tank,
+/obj/vehicle/train/trolley_tank,
 /turf/simulated/floor/tiled/old_cargo/gray,
 /area/space)
 "Or" = (

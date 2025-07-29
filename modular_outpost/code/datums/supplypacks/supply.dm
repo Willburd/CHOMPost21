@@ -1,6 +1,6 @@
 /datum/supply_pack/supply/cargotank
 	name = "Cargo Train Tanker"
-	contains = list(/obj/vehicle/train/trolly_tank)
+	contains = list(/obj/vehicle/train/trolley_tank)
 	cost = 15
 
 /datum/supply_pack/supply/freezer

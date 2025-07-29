@@ -1506,7 +1506,7 @@
 	pixel_y = -20
 	},
 /obj/effect/floor_decal/corner/brown/full,
-/obj/vehicle/train/trolly_tank,
+/obj/vehicle/train/trolley_tank,
 /obj/effect/floor_decal/milspec/box,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargrecycle)
@@ -8186,7 +8186,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
 	},
-/obj/vehicle/train/trolly_tank{
+/obj/vehicle/train/trolley_tank{
 	name = "hydroponics chemical tanker"
 	},
 /obj/machinery/reagent_refinery/hub{
@@ -44533,7 +44533,7 @@
 /turf/simulated/floor/carpet,
 /area/library_office)
 "vsu" = (
-/obj/vehicle/train/trolly_tank{
+/obj/vehicle/train/trolley_tank{
 	dir = 8;
 	name = "xenoflora chemical tanker"
 	},
