@@ -80,7 +80,7 @@
 // Money
 /datum/element/sellable/spacecash/calculate_sell_value(obj/source)
 	var/obj/item/spacecash/cashmoney = source
-	return FLOOR((cashmoney.worth * SSsupply.points_per_money) / SSsupply.cash_tax, 1) // Outpost 21 edit - Undoes taxes, 500T == 500T when scanned
+	return FLOOR((cashmoney.worth * SSsupply.points_per_money) * SSsupply.cash_tax,1) // Outpost 21 edit - We have higher money conversion, but taxes on raw cash export
 
 /datum/element/sellable/spacecash/calculate_sell_quantity(obj/source)
 	var/obj/item/spacecash/cashmoney = source

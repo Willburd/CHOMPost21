@@ -379,3 +379,8 @@ SUBSYSTEM_DEF(supply)
 	var/ordered_at							// Date and time the order was requested at
 	var/approved_at							// Date and time the order was approved at
 	var/status								// [Requested, Accepted, Denied, Shipped]
+
+// Outpost 21 edit begin
+/datum/controller/subsystem/supply/proc/points_to_cash(var/val)
+	return FLOOR((val / points_per_money) / cash_tax, 1) // Undoes taxes, 500T == 500T when scanned
+// Outpost 21 edit end
