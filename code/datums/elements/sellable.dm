@@ -80,7 +80,7 @@
 // Money
 /datum/element/sellable/spacecash/calculate_sell_value(obj/source)
 	var/obj/item/spacecash/cashmoney = source
-	return FLOOR((cashmoney.worth * SSsupply.points_per_money) / cash_tax, 1) // Outpost 21 edit - Undoes taxes, 500T == 500T when scanned
+	return FLOOR((cashmoney.worth * SSsupply.points_per_money) / SSsupply.cash_tax, 1) // Outpost 21 edit - Undoes taxes, 500T == 500T when scanned
 
 /datum/element/sellable/spacecash/calculate_sell_quantity(obj/source)
 	var/obj/item/spacecash/cashmoney = source
@@ -163,17 +163,14 @@
 /datum/element/sellable/food_snack/sell_error(obj/source)
 	if(!istype(source.loc, /obj/structure/closet/crate/freezer))
 		return "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport. Payment rendered null under terms of agreement."
-	var/obj/item/reagent_containers/food/snacks/S = food_stuff
-	if(S.bitecount > 0)
-		return "Error: Product was partially consumed, and is unfit for sale. Payment rendered null under terms of agreement."
+	if(istype(food_stuff,/obj/item/reagent_containers/food/snacks))
+		var/obj/item/reagent_containers/food/snacks/S = food_stuff
+		if(S.bitecount > 0)
+			return "Error: Product was partially consumed, and is unfit for sale. Payment rendered null under terms of agreement."
 	return null
 
 /datum/element/sellable/food_snack/calculate_sell_value(obj/source)
-	var/obj/item/reagent_containers/food/snacks/food_stuff = source
-	if(istype(A,/obj/item/reagent_containers/food/snacks))
-		var/obj/item/reagent_containers/food/snacks/S = food_stuff
-		if(S.bitecount > 0) // no nibbling
-			return 0
+	var/obj/item/reagent_containers/food/food_stuff = source
 	return FLOOR(food_stuff.price_tag,1) // Converts old price system into supply point cost
 
 // Selling TTVs
@@ -224,4 +221,54 @@
 	if(. && EC.contents[EC.contents.len]["value"] > 0)
 		SSsupply.warheads_sold++
 		SSsupply.warheads_value += EC.contents[EC.contents.len]["value"]
+
+
+// Refinery chemical tanks (WIP)
+/datum/element/sellable/trolley_tank
+	sale_info = "This can be sold on the cargo shuttle if filled with a single reagent."
+	needs_crate = FALSE
+
+/datum/element/sellable/trolley_tank/sell_error(obj/source)
+	var/obj/vehicle/train/trolley_tank/tank = source
+	if(!tank.reagents || tank.reagents.reagent_list.len == 0)
+		return "Error: Product was not filled with any reagents to sell. Payment rendered null under terms of agreement."
+	var/min_tank = (CARGOTANKER_VOLUME - 100)
+	if(tank.reagents.total_volume < min_tank)
+		return "Error: Product was improperly packaged. Send full tanks only (minimum [min_tank] units). Payment rendered null under terms of agreement."
+	if(tank.reagents.reagent_list.len > 1)
+		return "Error: Product was improperly refined. Send purified mixtures only (too many reagents in tank). Payment rendered null under terms of agreement."
+	return null
+
+/datum/element/sellable/trolley_tank/calculate_sell_value(obj/source)
+	var/obj/vehicle/train/trolley_tank/tank = source
+
+	// Update export values
+	var/datum/reagent/R = tank.reagents.reagent_list[1]
+	var/reagent_value = FLOOR(R.volume * R.supply_conversion_value, 1)
+
+	return reagent_value
+
+/datum/element/sellable/trolley_tank/calculate_sell_quantity(obj/source)
+	var/obj/vehicle/train/trolley_tank/tank = source
+	if(!tank.reagents || tank.reagents.reagent_list.len == 0)
+		return "0u "
+	var/datum/reagent/R = tank.reagents.reagent_list[1]
+	return "[R.name] [tank.reagents.total_volume]u "
+
+/datum/element/sellable/trolley_tank/sell(obj/source, var/datum/exported_crate/EC, var/in_crate)
+	. = ..()
+	var/obj/vehicle/train/trolley_tank/tank = source
+	if(. && tank.reagents?.reagent_list?.len)
+		// Update end round data, has nothing to do with actual cargo sales
+		var/datum/reagent/R = tank.reagents.reagent_list[1]
+		if(R.industrial_use)
+			if(isnull(GLOB.refined_chems_sold[R.industrial_use]))
+				var/list/data = list()
+				data["units"] = FLOOR(R.volume, 1)
+				data["value"] = reagent_value
+				GLOB.refined_chems_sold[R.industrial_use] = data
+			else
+				GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
+				GLOB.refined_chems_sold[R.industrial_use]["value"] += reagent_value
+
 // Outpost 21 edit end

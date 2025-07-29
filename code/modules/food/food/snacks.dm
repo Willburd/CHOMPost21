@@ -55,7 +55,6 @@
 	. = ..()
 	if(nutriment_amt)
 		reagents.add_reagent(REAGENT_ID_NUTRIMENT,(nutriment_amt*2),nutriment_desc)
-	AddElement(/datum/element/sellable/food_snack)
 
 //Placeholder for effect that trigger on eating that aren't tied to reagents.
 /obj/item/reagent_containers/food/snacks/proc/On_Consume(var/mob/living/M)

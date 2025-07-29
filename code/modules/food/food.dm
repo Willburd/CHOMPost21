@@ -37,6 +37,7 @@
 	if ((center_of_mass_x || center_of_mass_y) && !pixel_x && !pixel_y)
 		src.pixel_x = rand(-6.0, 6) //Randomizes postion
 		src.pixel_y = rand(-6.0, 6)
+	AddElement(/datum/element/sellable/food_snack)
 
 /obj/item/reagent_containers/food/afterattack(atom/A, mob/user, proximity, params)
 	if((center_of_mass_x || center_of_mass_y) && proximity && params && istype(A, /obj/structure/table))
