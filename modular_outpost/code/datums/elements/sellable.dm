@@ -73,12 +73,71 @@
 		SSsupply.warheads_value += EC.contents[EC.contents.len]["value"]
 
 
+// Mech selling
+/datum/element/sellable/mecha
+	needs_crate = FALSE
+	sale_info = "This can be sold on the cargo shuttle. It's condition and parts would greatly affects its price."
 
+/datum/element/sellable/food_snack/sell_error(obj/source)
+	var/check_val = calculate_sell_value(source)
+	if(!check_val)
+		var/obj/mecha/exo = source
+		if((exo.health / exo.maxhealth) < 0.5)
+			return "Error: The unit is too damaged to sell, and will be used as scrap. Payment rendered null under terms of agreement."
+		return "Error: The unit in its current condition has no resale value at all, and will be used as scrap. Payment rendered null under terms of agreement."
+	return null
 
+/datum/element/sellable/mecha/calculate_sell_value(obj/source)
+	var/obj/mecha/exo = source
+	var/amount = exo.health / 10
+	amount += exo.max_temperature / 1000
 
+	// generic bonuses
+	for(var/slot in exo.internal_components)
+		var/obj/item/mecha_parts/component/MC = exo.internal_components[slot]
+		amount += MC.integrity
+		amount += MC.emp_resistance * 10
 
+	// special bonuses
+	if(exo.internal_components[MECH_ACTUATOR])
+		var/obj/item/mecha_parts/component/actuator/MC = exo.internal_components[MECH_ACTUATOR]
+		amount += MC.integrity
+		amount += 20 * MC.strafing_multiplier
 
+	if(exo.internal_components[MECH_ARMOR])
+		var/obj/item/mecha_parts/component/armor/MC = exo.internal_components[MECH_ARMOR]
+		amount += MC.deflect_chance
+		for(var/dam in MC.damage_absorption)
+			amount += MC.damage_absorption[dam] * 10
 
+	if(exo.internal_components[MECH_ELECTRIC])
+		var/obj/item/mecha_parts/component/electrical/MC = exo.internal_components[MECH_ELECTRIC]
+		amount += MC.integrity
+		amount -= 100 * MC.charge_cost_mod
+
+	// Don't bother somehow...
+	if(amount < 0)
+		return 0
+
+	// Special mech multipliers
+	if(istype(exo,/obj/mecha/combat/phazon))
+		amount *= 3
+	else if(istype(exo,/obj/mecha/combat/fighter)) // More niche
+		amount *= 1.15
+	else if(istype(exo,/obj/mecha/medical))
+		amount *= 1.25
+	else if(istype(exo,/obj/mecha/combat))
+		amount *= 1.5
+	else if(istype(exo,/obj/mecha/micro)) // Teeny weenies!
+		amount *= 0.85
+	else
+		amount *= 1
+
+	// Final health scaler
+	amount *= (exo.health / exo.maxhealth)
+	if(amount < 100)
+		return 0
+	return FLOOR(amount,10)
 
 
 
