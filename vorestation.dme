@@ -5234,6 +5234,7 @@
 #include "modular_outpost\code\datums\standard_operating_procedure.dm"
 #include "modular_outpost\code\datums\autolathe\engineering_refinery.dm"
 #include "modular_outpost\code\datums\components\disabilities\pollen.dm"
+#include "modular_outpost\code\datums\elements\sellable.dm"
 #include "modular_outpost\code\datums\elements\lootable\outpost_lootable.dm"
 #include "modular_outpost\code\datums\helper_datums\teleport.dm"
 #include "modular_outpost\code\datums\Outfits\jobs\engineering.dm"
