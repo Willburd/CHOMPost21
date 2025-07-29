@@ -80,7 +80,7 @@
 // Money
 /datum/element/sellable/spacecash/calculate_sell_value(obj/source)
 	var/obj/item/spacecash/cashmoney = source
-	return cashmoney.worth * SSsupply.points_per_money
+	return FLOOR((cashmoney.worth * SSsupply.points_per_money) / cash_tax, 1) // Outpost 21 edit - Undoes taxes, 500T == 500T when scanned
 
 /datum/element/sellable/spacecash/calculate_sell_quantity(obj/source)
 	var/obj/item/spacecash/cashmoney = source
@@ -131,15 +131,97 @@
 	return salvagedStuff.worth
 
 /datum/element/sellable/organ //For selling /obj/item/organ/internal
+	sale_info = "This can be sold on the cargo shuttle if packed in a freezer crate."
+
 /datum/element/sellable/organ/calculate_sell_value(obj/source)
 	var/obj/item/organ/internal/organ_stuff = source
 	return organ_stuff.supply_conversion_value
 
 /datum/element/sellable/organ/sell_error(obj/source)
 	if(!istype(source.loc, /obj/structure/closet/crate/freezer))
-		return "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport."
+		return "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport. Payment rendered null under terms of agreement."
 	var/obj/item/organ/internal/organ_stuff = source
 	if(organ_stuff.health != initial(organ_stuff.health) )
 		return "Error: Product was damaged on arrival."
 	return null
 //CHOMPEdit End
+
+// Outpost 21 edit begin
+
+
+
+
+// Selling slimes
+/datum/element/sellable/slime_extract/calculate_sell_value(obj/source)
+	var/obj/item/slime_extract/slime_stuff = source
+	return FLOOR(slime_stuff.supply_conversion_value,1)
+
+// Selling food
+/datum/element/sellable/food_snack
+	sale_info = "This can be sold on the cargo shuttle if packed in a freezer crate."
+
+/datum/element/sellable/food_snack/sell_error(obj/source)
+	if(!istype(source.loc, /obj/structure/closet/crate/freezer))
+		return "Error: Product was improperly packaged. Send contents in freezer crate to preserve contents for transport. Payment rendered null under terms of agreement."
+	var/obj/item/reagent_containers/food/snacks/S = food_stuff
+	if(S.bitecount > 0)
+		return "Error: Product was partially consumed, and is unfit for sale. Payment rendered null under terms of agreement."
+	return null
+
+/datum/element/sellable/food_snack/calculate_sell_value(obj/source)
+	var/obj/item/reagent_containers/food/snacks/food_stuff = source
+	if(istype(A,/obj/item/reagent_containers/food/snacks))
+		var/obj/item/reagent_containers/food/snacks/S = food_stuff
+		if(S.bitecount > 0) // no nibbling
+			return 0
+	return FLOOR(food_stuff.price_tag,1) // Converts old price system into supply point cost
+
+// Selling TTVs
+/datum/element/sellable/transfer_valve/calculate_sell_value(obj/source)
+	var/obj/item/transfer_valve/TTV = source
+
+	if(!TTV.tank_one || !TTV.tank_two)
+		return 0
+
+	var/datum/gas_mixture/faketank = new()
+	QDEL_IN(faketank,5)
+
+	// Highest pressure in tank 1!
+	var/obj/item/tank/tone = TTV.tank_one
+	var/obj/item/tank/ttwo = TTV.tank_two
+	if(tone.air_contents.return_pressure() < ttwo.air_contents.return_pressure())
+		tone = TTV.tank_two
+		ttwo = TTV.tank_one
+	faketank.volume = tone.air_contents.volume + ttwo.air_contents.volume
+	faketank.copy_from(tone.air_contents)
+	var/faketank_integrity = tone.integrity
+
+	// Perform the explosion
+	faketank.merge(ttwo.air_contents)
+	faketank.react()
+	var/pressure = faketank.return_pressure()
+	if(pressure <= TANK_FRAGMENT_PRESSURE)
+		return 0
+	if(faketank_integrity > 7)
+		return 0
+
+	faketank.react()
+	faketank.react()
+	faketank.react()
+	pressure = faketank.return_pressure()
+
+	var/strength = (pressure-TANK_FRAGMENT_PRESSURE)/TANK_FRAGMENT_SCALE
+	var/mult = ((faketank.volume/140)**(1/2)) * (faketank.total_moles**(2/3))/((29*0.64) **(2/3)) //Don't ask me what this is, see tanks.dm
+
+	var/dev = round((mult*strength)*0.15)
+	var/heavy = round((mult*strength)*0.35)
+	var/light = round((mult*strength)*0.80)
+
+	return FLOOR(round(dev + (heavy/2) + (light/3),1),1)
+
+/datum/element/sellable/transfer_valve/sell(obj/source, var/datum/exported_crate/EC, var/in_crate)
+	. = ..()
+	if(. && EC.contents[EC.contents.len]["value"] > 0)
+		SSsupply.warheads_sold++
+		SSsupply.warheads_value += EC.contents[EC.contents.len]["value"]
+// Outpost 21 edit end
