@@ -140,6 +140,37 @@
 	return FLOOR(amount,10)
 
 
+// Selling GUNZ
+/datum/element/sellable/gun/calculate_sell_value(obj/source)
+	var/amount = 10
+	var/obj/item/gun/G = source
+	var/obj/item/projectile/P = initial(G.projectile_type)
+
+	if(istype(G,/obj/item/gun/projectile))
+		var/obj/item/gun/projectile/PG = G
+		amount += initial(PG.recoil) * 2 // We can assume bigger bang
+		amount += initial(PG.max_shells) * 1.5 // More shots more bang
+
+	if(istype(G,/obj/item/gun/energy))
+		var/obj/item/gun/energy/EG = G
+		amount += initial(EG.charge_cost) / 100 // We can assume bigger bang
+
+	if(P)
+		// Default bullet breakdown
+		amount += initial(P.damage) / 2
+		amount += initial(P.stun)
+		amount += initial(P.weaken)
+		amount += initial(P.paralyze)
+		amount += initial(P.irradiate) / 2
+		amount += initial(P.agony) / 2
+		// Stop trying to sell donksofts
+		if(initial(P.nodamage))
+			amount /= 20
+
+	return FLOOR(amount,5)
+
+
+
 
 
 // Refinery chemical tanks (WIP)
