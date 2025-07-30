@@ -369,7 +369,7 @@
 		if(A.type in shown_areas)
 			continue
 		if(!istype(A.base_turf,/turf/simulated/open))
-			log_unit_test("[O.x].[O.y].[O.z]: Map - Openspace in an area without open space as the default turf")
+			log_unit_test("[O.x].[O.y].[O.z] [A]: Map - Openspace in an area without open space as the default turf")
 			shown_areas.Add(A.type)
 			failed = TRUE
 
