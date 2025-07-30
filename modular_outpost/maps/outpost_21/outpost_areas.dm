@@ -392,6 +392,10 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/open
 
+/area/storage/tech
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/simulated/open
+
 /area/engineering/drone_fabrication
 	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_DARK
