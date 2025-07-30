@@ -5839,6 +5839,12 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
+"aiO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
 "aiP" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
@@ -11576,7 +11582,7 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
+/area/muriki/grounds/sec/garage_entrance)
 "bnG" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -19149,7 +19155,7 @@
 "dKp" = (
 /obj/machinery/trailblazer/red,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
+/area/muriki/grounds/sec/garage_entrance)
 "dKu" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -27319,7 +27325,7 @@
 	dir = 4
 	},
 /turf/simulated/open,
-/area/maintenance/civ)
+/area/mine/explored/muriki/river/hole)
 "gwY" = (
 /obj/structure/railing{
 	dir = 4
@@ -48651,7 +48657,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
+/area/muriki/grounds/sec/garage_entrance)
 "mOD" = (
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/terraform)
@@ -50216,7 +50222,7 @@
 /obj/item/assembly/mousetrap/armed,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/explored/muriki/river/hole)
 "noU" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
@@ -51022,7 +51028,7 @@
 	},
 /obj/structure/lattice,
 /turf/simulated/open/muriki,
-/area/muriki/grounds/civ)
+/area/muriki/arriveproc)
 "nyR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -54096,7 +54102,7 @@
 /area/mine/unexplored/muriki/mountainnorth)
 "oBE" = (
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
+/area/muriki/grounds/sec/garage_entrance)
 "oBL" = (
 /obj/structure/stairs/spawner/north,
 /obj/structure/railing{
@@ -82216,7 +82222,7 @@
 /area/hallway/primary/central_one)
 "xgw" = (
 /turf/simulated/open/muriki,
-/area/muriki/grounds/sec)
+/area/muriki/grounds/sec/garage_entrance)
 "xgD" = (
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -145089,7 +145095,7 @@ rZO
 rZO
 rZO
 rZO
-vFG
+aiO
 rZO
 rJa
 rJa

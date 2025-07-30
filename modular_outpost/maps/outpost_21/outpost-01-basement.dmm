@@ -24337,7 +24337,7 @@
 	dir = 1
 	},
 /turf/simulated/open/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "aRz" = (
 /turf/simulated/floor/tiled/dark,
 /area/muriki/elevator/medibasement)
@@ -47215,6 +47215,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/secbase)
+"bGT" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "bGU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -47508,6 +47511,9 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
+"bHz" = (
+/turf/simulated/wall/r_wall,
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "bHA" = (
 /obj/random/firstaid,
 /obj/structure/table/standard{
@@ -47627,6 +47633,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
+"bHR" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "bHS" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -47860,6 +47869,9 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"bIu" = (
+/turf/simulated/wall/r_wall,
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "bIv" = (
 /obj/random/cutout,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -47908,6 +47920,12 @@
 	oxygen = 0
 	},
 /area/muriki/processor/gland/space)
+"bIB" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "bIC" = (
 /obj/machinery/door/flesh,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -47918,6 +47936,37 @@
 	oxygen = 0
 	},
 /area/muriki/processor/gland/space)
+"bID" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/cave/underdark_pit/central_eng)
+"bIE" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/central_eng)
+"bIF" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
+"bIG" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
+"bIH" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
+"bII" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
+"bIJ" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
+"bIK" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
+"bIL" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -49108,7 +49157,7 @@
 	icon_state = "uboa"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/terra)
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
 "cvF" = (
 /obj/structure/fence/door,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
@@ -49622,7 +49671,7 @@
 	pixel_x = 26
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -49655,7 +49704,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "cNU" = (
 /obj/structure/disposalpipe/segment,
 /obj/item/beartrap{
@@ -51493,7 +51542,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "dSR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -55953,7 +56002,7 @@
 /area/maintenance/tug)
 "gyx" = (
 /turf/simulated/wall/r_wall,
-/area/mine/unexplored/muriki/cave/sci)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
 "gyz" = (
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
@@ -56813,7 +56862,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "gZM" = (
 /obj/structure/cable/orange{
 	icon_state = "2-4"
@@ -57475,7 +57524,7 @@
 /area/mine/unexplored/muriki/mountainbase)
 "hwD" = (
 /turf/simulated/open,
-/area/mine/unexplored/muriki/cave/sci)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
 "hwH" = (
 /obj/structure/barricade,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -59253,7 +59302,7 @@
 	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/terra)
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
 "iJt" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -60598,7 +60647,7 @@
 /area/maintenance/spine/eng)
 "jxf" = (
 /turf/simulated/open,
-/area/mine/unexplored/muriki/cave/eng)
+/area/mine/unexplored/muriki/cave/underdark_pit/central_eng)
 "jxp" = (
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki{
 	dir = 8
@@ -61744,7 +61793,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sci)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
 "kjY" = (
 /obj/machinery/alarm{
 	pixel_y = 26
@@ -62056,7 +62105,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "kqR" = (
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 4
@@ -64064,7 +64113,7 @@
 	},
 /obj/item/hoist_kit,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "lDK" = (
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
@@ -64631,7 +64680,7 @@
 /area/mine/unexplored/muriki/cave/east)
 "lTC" = (
 /turf/simulated/open/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "lUm" = (
 /obj/structure/closet/radiation,
 /obj/item/geiger/wall/south,
@@ -65604,7 +65653,7 @@
 	name = "Emergency Cavern Medical Access"
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "mDi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -65975,7 +66024,7 @@
 "mNg" = (
 /obj/structure/ladder,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/terra)
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
 "mNq" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_mud/indoor/turfpack/muriki{
 	dir = 9
@@ -66021,7 +66070,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "mPm" = (
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/south)
@@ -67051,7 +67100,7 @@
 	},
 /obj/item/airlock_brace,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sci)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
 "nzA" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave{
 	nitrogen = 0;
@@ -67487,7 +67536,7 @@
 	dir = 4
 	},
 /turf/simulated/open/muriki,
-/area/maintenance/tug)
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "nNl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -68540,7 +68589,7 @@
 	},
 /obj/item/airlock_brace,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "otB" = (
 /obj/structure/catwalk,
 /obj/item/geiger/wall/south,
@@ -70962,7 +71011,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sci)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
 "pTy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -77398,7 +77447,7 @@
 /area/hallway/muriki/bunkerhall)
 "tLs" = (
 /turf/simulated/open,
-/area/mine/unexplored/muriki/cave/terra)
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
 "tLF" = (
 /turf/simulated/wall,
 /area/muriki/crew/casinostore)
@@ -78154,7 +78203,7 @@
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/mine/unexplored/muriki/cave/sci)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci)
 "ulh" = (
 /obj/structure/railing{
 	dir = 8
@@ -82161,7 +82210,7 @@
 /area/muriki/crew/bunker)
 "wFJ" = (
 /turf/simulated/open,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "wFT" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
@@ -101112,12 +101161,12 @@ hzt
 bvY
 kwU
 kwU
-efJ
-efJ
-efJ
-efJ
-efJ
-efJ
+bIK
+bIK
+bIK
+bIK
+bIK
+bIK
 kwU
 kwU
 nSj
@@ -101273,14 +101322,14 @@ hzt
 (103,1,1) = {"
 bvY
 kwU
-kwU
-efJ
-efJ
-efJ
-efJ
-efJ
-efJ
-kwU
+bIH
+bIK
+bIK
+bIK
+bIK
+bIK
+bIK
+bIH
 kwU
 kwU
 kwU
@@ -101435,14 +101484,14 @@ hzt
 (104,1,1) = {"
 bvY
 kwU
-efJ
-efJ
+bIK
+bIK
 tLs
 tLs
 tLs
-efJ
-efJ
-kDE
+bIK
+bIK
+bII
 kDE
 kwU
 kwU
@@ -101597,14 +101646,14 @@ hzt
 (105,1,1) = {"
 bvY
 kwU
-efJ
+bIK
 tLs
 tLs
 tLs
 tLs
 tLs
-efJ
-kDE
+bIK
+bII
 mFo
 pXt
 pXt
@@ -101759,14 +101808,14 @@ hzt
 (106,1,1) = {"
 bvY
 kwU
-efJ
+bIK
 tLs
 tLs
 tLs
 tLs
 tLs
-efJ
-kDE
+bIK
+bII
 kDE
 pXt
 pXt
@@ -101921,14 +101970,14 @@ hzt
 (107,1,1) = {"
 bvY
 kwU
-efJ
-efJ
-efJ
-uZZ
+bIK
+bIK
+bIK
+bIL
 iJk
 cvk
 cvk
-kDE
+bII
 kDE
 kDE
 pXt
@@ -102083,14 +102132,14 @@ hzt
 (108,1,1) = {"
 bvY
 kwU
-kwU
-efJ
-efJ
-efJ
+bIH
+bIK
+bIK
+bIK
 mNg
-efJ
-efJ
-pXt
+bIK
+bIK
+bIJ
 kDE
 kDE
 pXt
@@ -102246,12 +102295,12 @@ hzt
 bwa
 dhl
 dhl
-gqd
-gqd
-gqd
-gqd
-gqd
-hax
+bIK
+bIK
+bIK
+bIK
+bIK
+bIJ
 hax
 hax
 kLm
@@ -112312,11 +112361,11 @@ tIC
 tts
 pxx
 pxx
-pxx
-pxx
-pxx
-pxx
-nkE
+bIE
+bIE
+bIE
+bIE
+bID
 nkE
 nkE
 pxx
@@ -112473,13 +112522,13 @@ tts
 tts
 tts
 pxx
-pxx
-pxx
-pxx
-pxx
-pxx
-pxx
-nkE
+bIE
+bIE
+bIE
+bIE
+bIE
+bIE
+bID
 nkE
 pxx
 pxx
@@ -112635,13 +112684,13 @@ tts
 tIC
 tIC
 tts
-pxx
-pxx
-pxx
+bIE
+bIE
+bIE
 jxf
 jxf
-pxx
-nkE
+bIE
+bID
 nkE
 pxx
 pxx
@@ -112797,13 +112846,13 @@ tts
 tts
 tIC
 tts
-pxx
-pxx
+bIE
+bIE
 jxf
 jxf
-pxx
-pxx
-pxx
+bIE
+bIE
+bIE
 nkE
 nkE
 nkE
@@ -112960,12 +113009,12 @@ tts
 tts
 tts
 tts
-pxx
-pxx
-pxx
-pxx
-pxx
-pxx
+bIE
+bIE
+bIE
+bIE
+bIE
+bIE
 pxx
 nkE
 nkE
@@ -113122,11 +113171,11 @@ tts
 tts
 tIC
 tts
-pxx
-pxx
-pxx
-pxx
-pxx
+bIE
+bIE
+bIE
+bIE
+bIE
 pxx
 pxx
 nkE
@@ -120140,11 +120189,11 @@ bHX
 noM
 noM
 bcm
-aao
-aao
-aao
-aao
-aao
+bIu
+bIu
+bIu
+bIu
+bIu
 bcm
 bcm
 bcm
@@ -120302,11 +120351,11 @@ vCT
 noM
 bcm
 bcm
-aao
+bIu
 lTC
 lTC
 lDp
-aao
+bIu
 bcm
 bcm
 bcm
@@ -120464,11 +120513,11 @@ noM
 noM
 bcm
 bcm
-aao
+bIu
 aRy
 nNk
 dSg
-aao
+bIu
 bcm
 bcm
 bcm
@@ -120626,11 +120675,11 @@ noM
 bcm
 bcm
 bcm
-aao
+bIu
 cNR
-kuV
+bIB
 cMG
-aao
+bIu
 bcm
 bcm
 bcm
@@ -120788,11 +120837,11 @@ bcm
 bcm
 bcm
 bcm
-aao
-aao
+bIu
+bIu
 mCZ
-aao
-aao
+bIu
+bIu
 bcm
 bcm
 bcm
@@ -138870,12 +138919,12 @@ gqd
 gqd
 gqd
 gqd
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
+bIF
+bIF
+bIF
 pmN
 pmN
 pmN
@@ -139031,14 +139080,14 @@ gqd
 gqd
 gqd
 gqd
-gqd
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
+bIF
+bIF
+bIF
+bIF
+bIF
 pmN
 pmN
 vzW
@@ -139193,11 +139242,11 @@ gqd
 gqd
 gqd
 gqd
-gqd
-pmN
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
+bIF
+bIF
 hwD
 gyx
 gyx
@@ -139355,10 +139404,10 @@ gqd
 gqd
 gqd
 gqd
-gqd
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
+bIF
 hwD
 hwD
 kjS
@@ -139516,10 +139565,10 @@ gqd
 gqd
 gqd
 gqd
-gqd
-gqd
-pmN
-pmN
+bIF
+bIF
+bIF
+bIF
 hwD
 hwD
 hwD
@@ -139678,10 +139727,10 @@ gqd
 gqd
 gqd
 gqd
-gqd
-gqd
-pmN
-pmN
+bIF
+bIF
+bIF
+bIF
 hwD
 hwD
 hwD
@@ -139840,9 +139889,9 @@ gqd
 gqd
 gqd
 gqd
-gqd
-pmN
-pmN
+bIF
+bIF
+bIF
 hwD
 hwD
 hwD
@@ -140002,9 +140051,9 @@ gqd
 gqd
 gqd
 gqd
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
 hwD
 hwD
 hwD
@@ -140163,9 +140212,9 @@ gqd
 gqd
 gqd
 gqd
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
 hwD
 hwD
 hwD
@@ -140325,16 +140374,16 @@ gqd
 gqd
 gqd
 pmN
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
 hwD
 hwD
 hwD
 hwD
-iLO
-iLO
-iLO
+bIG
+bIG
+bIG
 iLO
 iLO
 iLO
@@ -140487,13 +140536,13 @@ gqd
 gqd
 gqd
 pmN
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
 hwD
 hwD
 hwD
-iLO
+bIG
 aak
 aak
 aak
@@ -140649,13 +140698,13 @@ gqd
 gqd
 gqd
 pmN
-pmN
-pmN
-pmN
-pmN
+bIF
+bIF
+bIF
+bIF
 hwD
-pmN
-iLO
+bIF
+bIG
 aak
 aaY
 iBI
@@ -140812,12 +140861,12 @@ gqd
 gqd
 pmN
 pmN
-iLO
-iLO
-iLO
-iLO
-iLO
-iLO
+bIG
+bIG
+bIG
+bIG
+bIG
+bIG
 aak
 aaZ
 ahU
@@ -146554,10 +146603,10 @@ czQ
 czQ
 czQ
 jhm
-jhm
-jhm
-jhm
-jhm
+bGT
+bGT
+bGT
+bGT
 jhm
 jhm
 jhm
@@ -146714,12 +146763,12 @@ sjL
 sjL
 jhm
 jhm
-jhm
-jhm
-jhm
-oCv
-oCv
-oCv
+bGT
+bGT
+bGT
+bHz
+bHz
+bHz
 jhm
 jhm
 jhm
@@ -146875,13 +146924,13 @@ sjL
 sjL
 sjL
 jhm
-jhm
-jhm
-jhm
+bGT
+bGT
+bGT
 wFJ
-eLr
-jhm
-oCv
+bHR
+bGT
+bHz
 jhm
 jhm
 jhm
@@ -147036,14 +147085,14 @@ jhm
 sjL
 sjL
 sjL
-jhm
-jhm
+bGT
+bGT
 wFJ
 wFJ
 wFJ
 kqP
 gZz
-oCv
+bHz
 eLr
 czQ
 czQ
@@ -147198,13 +147247,13 @@ jhm
 jhm
 jhm
 jhm
-jhm
+bGT
 wFJ
 wFJ
 wFJ
 wFJ
 mPc
-eLr
+bHR
 otw
 eLr
 czQ
@@ -147360,14 +147409,14 @@ jhm
 jhm
 jhm
 jhm
-jhm
+bGT
 wFJ
 wFJ
 wFJ
 wFJ
 wFJ
 kqP
-oCv
+bHz
 jhm
 jhm
 jhm
@@ -147522,14 +147571,14 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
+bGT
+bGT
 wFJ
 wFJ
 wFJ
 wFJ
 kqP
-oCv
+bHz
 jhm
 jhm
 jhm
@@ -147684,14 +147733,14 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
-jhm
+bGT
+bGT
+bGT
 wFJ
 wFJ
-oCv
-oCv
-oCv
+bHz
+bHz
+bHz
 jhm
 jhm
 jhm
@@ -147848,12 +147897,12 @@ jhm
 jhm
 jhm
 jhm
-jhm
-jhm
-jhm
-jhm
-jhm
-jhm
+bGT
+bGT
+bGT
+bGT
+bGT
+bGT
 jhm
 jhm
 jhm

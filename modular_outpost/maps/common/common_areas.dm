@@ -373,7 +373,7 @@
 
 /area/muriki/septic
 	name = "\improper Septic Tank"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open/muriki
 	icon_state = "green"
 	color_grading = COLORTINT_DARK
 
@@ -1107,6 +1107,11 @@
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "redblatri"
 
+/area/muriki/grounds/sec/garage_entrance
+	name = "\improper Security Garage Entrance"
+	icon_state = "cyablatri"
+	base_turf = /turf/simulated/open/muriki
+
 /area/muriki/grounds/med
 	name = "\improper Facility Near Medical"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
@@ -1474,6 +1479,7 @@
 
 /area/mine/explored/muriki/river/hole
 	name = "\improper River Cave-in"
+	base_turf = /turf/simulated/open/muriki
 
 /area/mine/explored/muriki/river/end
 	name = "\improper River Falls"
@@ -1671,7 +1677,7 @@
 	name = "\improper Collapsed Cavern"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "deckmaint1"
-	base_turf = /turf/simulated/open
+	base_turf = /turf/simulated/open/muriki
 	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
@@ -1681,6 +1687,21 @@
 
 /area/mine/unexplored/muriki/cave/underdark_pit/south_civ
 	name = "\improper Southern Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ
+	name = "\improper Eastern Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access
+	name = "\improper Medical Emergency Cavern Access"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/central_eng
+	name = "\improper Engineering Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci
+	name = "\improper North Eastern Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer
+	name = "\improper North West Collapsed Cavern"
 
 //
 // Medical ------------------------------------------------------------
