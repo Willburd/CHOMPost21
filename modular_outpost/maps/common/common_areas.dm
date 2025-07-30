@@ -74,7 +74,7 @@
 	ambience = AMBIENCE_FOREBODING
 	music = 'sound/ambience/ambimine.ogg'
 	requires_power = TRUE
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 //Hallways... I guess?
 /area/muriki/processor/hall
@@ -838,7 +838,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = FALSE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 /area/engineering/atmos/tank_storage
 	name = "\improper Atmospherics Secure Storage"
@@ -1459,7 +1459,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 //Moon riiiiver
 /area/mine/explored/muriki/river
@@ -1686,7 +1686,7 @@
 	base_turf = /turf/simulated/open/muriki
 	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste
 	name = "\improper South West Collapsed Cavern"
@@ -2766,7 +2766,7 @@
 	sound_env = SMALL_ENCLOSED
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 	requires_power = FALSE
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_DIM
 
 
 /area/vehicle_interior/heavyarmor_carrier_A
