@@ -1703,6 +1703,29 @@
 /area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer
 	name = "\improper North West Collapsed Cavern"
 
+/area/mine/unexplored/muriki/cave/shelter
+	name = "\improper Cavern Shelter"
+	icon_state = "deckmaint1"
+	base_turf = /turf/simulated/open/muriki
+	sound_env = SOUND_ENVIRONMENT_BATHROOM
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	color_grading = COLORTINT_DIM
+
+/area/mine/unexplored/muriki/cave/shelter/north_west_far
+	name = "\improper Far North Western Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/north_west
+	name = "\improper North Western Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/north
+	name = "\improper Northern Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/north_east
+	name = "\improper North Eastern Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/east
+	name = "\improper Eastern Cavern Shelter"
+
 //
 // Medical ------------------------------------------------------------
 //

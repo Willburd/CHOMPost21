@@ -16271,7 +16271,7 @@
 "aDi" = (
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
+/area/mine/unexplored/muriki/cave/shelter/north)
 "aDj" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -42844,7 +42844,7 @@
 "byo" = (
 /obj/random/cutout,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/shelter/north_east)
 "byp" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -47967,6 +47967,66 @@
 "bIL" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
+"bIM" = (
+/turf/simulated/wall/r_wall,
+/area/mine/unexplored/muriki/cave/shelter/north_east)
+"bIN" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_east)
+"bIO" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/mine/unexplored/muriki/cave/shelter/north)
+"bIP" = (
+/turf/simulated/wall,
+/area/mine/unexplored/muriki/cave/shelter/north)
+"bIQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north)
+"bIR" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north)
+"bIS" = (
+/obj/random/cutout,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north)
+"bIT" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west)
+"bIU" = (
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west)
+"bIV" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west)
+"bIW" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west)
+"bIX" = (
+/turf/simulated/wall/r_wall,
+/area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"bIY" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"bIZ" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"bJa" = (
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west_far)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -52984,7 +53044,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
+/area/mine/unexplored/muriki/cave/shelter/north)
 "eMb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -57692,7 +57752,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/shelter/north_east)
 "hDX" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -61554,7 +61614,7 @@
 	icon_state = "down"
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/med)
+/area/mine/unexplored/muriki/cave/shelter/north)
 "kcg" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
@@ -68232,7 +68292,7 @@
 /obj/effect/landmark/vermin,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
+/area/mine/unexplored/muriki/cave/shelter/north)
 "ogQ" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Substation - Bunker";
@@ -73802,7 +73862,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbasenorth)
+/area/mine/unexplored/muriki/cave/shelter/north_west_far)
 "ruL" = (
 /obj/structure/fence,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
@@ -75380,7 +75440,7 @@
 "sos" = (
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainbase)
+/area/mine/unexplored/muriki/cave/shelter/north_east)
 "sou" = (
 /obj/random/landmine,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -76781,7 +76841,7 @@
 /area/maintenance/oldbridge)
 "tlb" = (
 /turf/simulated/wall/r_wall,
-/area/mine/unexplored/muriki/mountainbasenorth)
+/area/mine/unexplored/muriki/cave/shelter/north_west)
 "tlS" = (
 /obj/structure/loot_pile/mecha/ripley,
 /obj/effect/floor_decal/industrial/warning,
@@ -79887,7 +79947,7 @@
 "voo" = (
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
+/area/mine/unexplored/muriki/cave/shelter/north)
 "voA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -108288,11 +108348,11 @@ iHE
 (146,1,1) = {"
 bwa
 dhl
-tlb
-tlb
-tlb
-tlb
-tlb
+bIX
+bIX
+bIX
+bIX
+bIX
 gqd
 gqd
 tGX
@@ -108450,11 +108510,11 @@ iHE
 (147,1,1) = {"
 bwa
 dhl
-tlb
-cHX
-cHX
-bou
-tlb
+bIX
+bIZ
+bIZ
+bIY
+bIX
 rKc
 kLm
 kLm
@@ -108612,10 +108672,10 @@ iHE
 (148,1,1) = {"
 bwa
 dhl
-tlb
-oOV
-cHX
-cHX
+bIX
+bJa
+bIZ
+bIZ
 ruA
 kLm
 kLm
@@ -108774,11 +108834,11 @@ iHE
 (149,1,1) = {"
 bwa
 dhl
-tlb
-tlb
-tlb
-tlb
-tlb
+bIX
+bIX
+bIX
+bIX
+bIX
 gqd
 kLm
 gqd
@@ -115422,9 +115482,9 @@ gqd
 gqd
 gqd
 tlb
-cHX
-olD
-cHX
+bIT
+bIV
+bIT
 tlb
 gqd
 gqd
@@ -115584,9 +115644,9 @@ gqd
 gqd
 gqd
 tlb
-cHX
-cHX
-oOV
+bIT
+bIT
+bIU
 tlb
 hax
 hax
@@ -115746,7 +115806,7 @@ gqd
 gqd
 gqd
 tlb
-fcz
+bIW
 tlb
 tlb
 tlb
@@ -121432,11 +121492,11 @@ iRI
 iRI
 aPF
 wfN
-aPF
-aPF
-aPF
+bIP
+bIP
+bIP
 kbP
-mfD
+bIO
 xaP
 mfD
 aQF
@@ -121596,9 +121656,9 @@ aPF
 tQk
 eLW
 ogN
-iAI
-qRl
-aPF
+bIR
+bIQ
+bIP
 aXx
 aPF
 aQF
@@ -121756,11 +121816,11 @@ iRI
 iRI
 aPF
 pfX
-aPF
-bCz
+bIP
+bIS
 voo
 aDi
-aPF
+bIP
 aXx
 aPF
 lgy
@@ -121918,11 +121978,11 @@ iRI
 iRI
 aPF
 fDu
-aPF
-aPF
-aPF
-aPF
-aPF
+bIP
+bIP
+bIP
+bIP
+bIP
 aXx
 aPF
 uuy
@@ -146076,11 +146136,11 @@ pmN
 pmN
 pmN
 pmN
-oCv
-oCv
-oCv
-oCv
-oCv
+bIM
+bIM
+bIM
+bIM
+bIM
 pmN
 pmN
 pmN
@@ -146238,11 +146298,11 @@ pmN
 pmN
 pmN
 pmN
-oCv
-eLr
-eLr
+bIM
+bIN
+bIN
 byo
-oCv
+bIM
 pmN
 pmN
 pmN
@@ -146400,11 +146460,11 @@ iLO
 iLO
 iLO
 pmN
-oCv
-eLr
-eLr
+bIM
+bIN
+bIN
 sos
-oCv
+bIM
 pmN
 pmN
 pmN
@@ -146562,11 +146622,11 @@ iLO
 iLO
 iLO
 pmN
-oCv
+bIM
 hDQ
-oCv
-oCv
-oCv
+bIM
+bIM
+bIM
 czQ
 czQ
 czQ
