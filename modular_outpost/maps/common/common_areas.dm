@@ -1425,6 +1425,7 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 	outdoors = TRUE
+	base_turf = /turf/simulated/open/muriki
 
 /area/muriki/skyline/east
 	name = "\improper Eastern Facility Airspace"
