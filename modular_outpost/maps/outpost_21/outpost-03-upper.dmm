@@ -437,6 +437,18 @@
 "aaX" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"aaY" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
+"aaZ" = (
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/structure/lattice,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/north)
 "aba" = (
 /obj/machinery/telecomms/processor/preset_two,
 /turf/simulated/floor/greengrid/nitrogen{
@@ -461,6 +473,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
+"abd" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/north)
 "abg" = (
 /obj/machinery/telecomms/server/presets/supply,
 /turf/simulated/floor/bluegrid{
@@ -1948,7 +1965,7 @@
 /area/rnd/hallway/phoronicsbridge)
 "avC" = (
 /turf/simulated/open,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/mine/explored/muriki/river/hole)
 "avD" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/water/beach/indoors{
@@ -16458,7 +16475,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/engineering/engine_room)
+/area/muriki/skyline/north)
 "hII" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -18580,19 +18597,6 @@
 /obj/item/target,
 /turf/simulated/floor/tiled/milspec,
 /area/security/range)
-"iKN" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 1;
-	flags = null
-	},
-/obj/structure/lattice,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/open/muriki,
-/area/engineering/engine_room)
 "iKS" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -21073,7 +21077,7 @@
 "jRC" = (
 /obj/structure/lattice,
 /turf/simulated/open/indoor/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopnorth)
+/area/muriki/skyline/north)
 "jRD" = (
 /obj/effect/fancy_shuttle/medbus{
 	fancy_shuttle_tag = "medi"
@@ -21535,17 +21539,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medbay_fore)
-"kdv" = (
-/obj/structure/catwalk,
-/obj/structure/lattice,
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/open/muriki,
-/area/engineering/engine_room)
 "kdx" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -23778,16 +23771,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
-"ljy" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 1;
-	flags = null
-	},
-/obj/structure/lattice,
-/obj/structure/railing,
-/turf/simulated/open/muriki,
-/area/engineering/engine_room)
 "ljM" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -27243,7 +27226,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/engineering/engine_room)
+/area/muriki/skyline/north)
 "mVx" = (
 /obj/structure/railing{
 	dir = 8
@@ -27919,7 +27902,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/engineering/engine_room)
+/area/muriki/skyline/north)
 "nni" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -34163,7 +34146,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/engineering/engine_room)
+/area/muriki/skyline/north)
 "qvh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -40781,7 +40764,7 @@
 	flags = null
 	},
 /turf/simulated/open/muriki,
-/area/engineering/engine_room)
+/area/muriki/skyline/north)
 "tED" = (
 /obj/structure/cable/orange{
 	icon_state = "1-8"
@@ -41164,9 +41147,6 @@
 /obj/structure/sign/warning/nosmoking_2,
 /turf/simulated/wall,
 /area/rnd/research/phoronics)
-"tNa" = (
-/turf/simulated/open/muriki,
-/area/engineering/engine_room)
 "tNc" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -41300,7 +41280,7 @@
 	},
 /obj/structure/railing,
 /turf/simulated/open/muriki,
-/area/engineering/engine_room)
+/area/muriki/skyline/north)
 "tQg" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/glasses/sunglasses,
@@ -46080,19 +46060,6 @@
 "wfF" = (
 /turf/simulated/wall,
 /area/hydroponics/apiary)
-"wfR" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 1;
-	flags = null
-	},
-/obj/structure/lattice,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/open/muriki,
-/area/engineering/engine_room)
 "wfW" = (
 /turf/simulated/wall/durasteel{
 	can_open = 1
@@ -72941,13 +72908,13 @@ kxr
 kxr
 kxr
 qvg
-kdv
-kdv
-kdv
-oao
-kdv
-kdv
-kdv
+owj
+owj
+owj
+abd
+owj
+owj
+owj
 hIF
 oao
 qnY
@@ -73102,15 +73069,15 @@ kxr
 kxr
 kxr
 kxr
-ljy
-tNa
-tNa
-tNa
-ljy
-tNa
-tNa
-tNa
-npb
+kzr
+kxr
+kxr
+kxr
+kzr
+kxr
+kxr
+kxr
+aaZ
 oao
 hiw
 rRH
@@ -73264,15 +73231,15 @@ kxr
 kxr
 kxr
 kxr
-ljy
-tNa
-tNa
-tNa
-wfR
-tNa
-tNa
-tNa
-npb
+kzr
+kxr
+kxr
+kxr
+omL
+kxr
+kxr
+kxr
+aaZ
 oao
 xRS
 hYz
@@ -73426,15 +73393,15 @@ kxr
 kxr
 kxr
 kxr
-ljy
-tNa
-tNa
-tNa
-tNa
-tNa
-tNa
-tNa
-npb
+kzr
+kxr
+kxr
+kxr
+kxr
+kxr
+kxr
+kxr
+aaZ
 oao
 xRS
 jlf
@@ -73588,15 +73555,15 @@ kxr
 sYu
 owj
 owj
-oao
-kdv
+abd
+owj
 tQe
-tNa
-tNa
-tNa
+kxr
+kxr
+kxr
 tEB
-kdv
-oao
+owj
+abd
 oao
 xRS
 aNg
@@ -73750,15 +73717,15 @@ kxr
 kxr
 kxr
 kxr
-ljy
-tNa
-tNa
-tNa
-tNa
-tNa
-tNa
-tNa
-npb
+kzr
+kxr
+kxr
+kxr
+kxr
+kxr
+kxr
+kxr
+aaZ
 oao
 xRS
 oSK
@@ -73912,15 +73879,15 @@ kxr
 kxr
 kxr
 kxr
-ljy
-tNa
-tNa
-tNa
-iKN
-tNa
-tNa
-tNa
-npb
+kzr
+kxr
+kxr
+kxr
+gaL
+kxr
+kxr
+kxr
+aaZ
 oao
 xRS
 dAP
@@ -74074,15 +74041,15 @@ kxr
 kxr
 kxr
 kxr
-ljy
-tNa
-tNa
-tNa
-ljy
-tNa
-tNa
-tNa
-npb
+kzr
+kxr
+kxr
+kxr
+kzr
+kxr
+kxr
+kxr
+aaZ
 oao
 kLH
 bbm
@@ -74237,13 +74204,13 @@ kxr
 kxr
 kxr
 nnh
-kdv
-kdv
-kdv
-oao
-kdv
-kdv
-kdv
+owj
+owj
+owj
+abd
+owj
+owj
+owj
 mVo
 hnj
 qnY
@@ -78742,8 +78709,8 @@ ovc
 ovc
 ovc
 ovc
-hci
-hci
+acw
+acw
 hci
 ovc
 lpq
@@ -78905,7 +78872,7 @@ ovc
 ovc
 ovc
 jRC
-hci
+acw
 ovc
 ovc
 lpq
@@ -112194,7 +112161,7 @@ hIk
 hIk
 avC
 avC
-hIk
+aaY
 hIk
 hIk
 hIk
@@ -112351,7 +112318,7 @@ hIk
 hIk
 hIk
 hIk
-hIk
+aaY
 avC
 avC
 avC
@@ -112837,7 +112804,7 @@ hIk
 hIk
 hIk
 hIk
-hIk
+aaY
 avC
 avC
 avC

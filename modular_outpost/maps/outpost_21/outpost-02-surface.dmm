@@ -11130,7 +11130,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/grounds/tramborder/garage)
 "bfW" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/red/border{
@@ -19123,7 +19123,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramlineeast)
+/area/muriki/grounds/tramborder/garage)
 "dIU" = (
 /obj/effect/landmark{
 	name = "JoinLateElevator"
@@ -36690,7 +36690,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramlineeast)
+/area/muriki/grounds/tramborder/garage)
 "jiT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -41004,7 +41004,7 @@
 "kuZ" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/grounds/tramborder/garage)
 "kvb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -58033,7 +58033,7 @@
 	},
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/grounds/tramborder/garage)
 "pRL" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -61924,7 +61924,7 @@
 /area/muriki/bathroom/sciupper)
 "qXH" = (
 /turf/simulated/open/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/grounds/tramborder/garage)
 "qXP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -69174,7 +69174,7 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/grounds/tramborder/garage)
 "tph" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -79178,7 +79178,7 @@
 	},
 /obj/machinery/trailblazer/blue,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/grounds/tramborder/garage)
 "wkJ" = (
 /obj/structure/toilet{
 	dir = 8

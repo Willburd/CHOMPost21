@@ -1137,6 +1137,11 @@
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "redwhicir"
 
+/area/muriki/grounds/tramborder/garage
+	name = "\improper Medical Garage Entrance"
+	base_turf = /turf/simulated/open/muriki
+	icon_state = "purblatri"
+
 /area/muriki/grounds/tramlineeast
 	name = "\improper Eastern Tram Line"
 	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
