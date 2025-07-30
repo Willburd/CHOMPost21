@@ -15,7 +15,7 @@
 	name = "\improper Arrivals Elevator Shaft"
 	icon_state = "dark128"
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/deathdrop/elevator_shaft
+	base_turf = /turf/simulated/open
 	sound_env = TUNNEL_ENCLOSED
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
@@ -25,7 +25,7 @@
 	name = "\improper Evac Elevator Shaft"
 	icon_state = "dark128"
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/deathdrop/elevator_shaft
+	base_turf = /turf/simulated/open
 	sound_env = TUNNEL_ENCLOSED
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
@@ -1663,6 +1663,24 @@
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "deckmaint1"
 	use_emergency_overlay = TRUE
+
+//
+// Collapsed underdark entrances ------------------------------------------------------------
+//
+/area/mine/unexplored/muriki/cave/underdark_pit
+	name = "\improper Collapsed Cavern"
+	icon = 'icons/turf/areas_vr.dmi'
+	icon_state = "deckmaint1"
+	base_turf = /turf/simulated/open
+	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	color_grading = COLORTINT_DARK
+
+/area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste
+	name = "\improper South West Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/south_civ
+	name = "\improper Southern Collapsed Cavern"
 
 //
 // Medical ------------------------------------------------------------
