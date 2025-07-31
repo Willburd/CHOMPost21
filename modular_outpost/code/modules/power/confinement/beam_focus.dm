@@ -35,9 +35,9 @@
 
 		// Clone and update data
 		focus_data.clone_from(data)
-		focus_data.origin_machine = WEAKREF(src)
 		var/dam = 1 - (health / max_hp)
 		focus_data.power_level = data.power_level * YIELD_MULTIPLIER // increase yield per each lense
+		focus_data.origin_machine = cached_controlbox
 		if(dam > beam_wander_threshold) // damaged enough
 			focus_data.target_x = data.target_x + (dev_offset_x * dam)
 			focus_data.target_y = data.target_y + (dev_offset_y * dam)
@@ -89,7 +89,14 @@
 
 /obj/structure/confinement_beam_generator/focus/examine(mob/user)
 	. = ..()
-	. += span_danger("It is overheating!")
+	if(internal_heat >= damage_temp)
+		. += span_danger("It is overheating!")
+	if(health < 20)
+		. += span_danger("It is severely damaged!")
+	else if(health < 60)
+		. += span_danger("It is heavily damaged!")
+	else if(health < 94)
+		. += span_danger("It is damaged!")
 
 /obj/structure/confinement_beam_generator/focus/ex_act(severity)
 	if(severity == 1)
