@@ -101,13 +101,16 @@
 
 /obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, var/mhealth = 100)
 	SHOULD_NOT_OVERRIDE(TRUE)
-	last_temp = temp
-	last_max = max
+	if(temp >= 0)
+		FLOOR(last_temp = temp,1)
+		last_max = max
 
-	last_health = health
-	max_health = mhealth
+	if(health >= 0)
+		last_health = FLOOR(health,1)
+		max_health = mhealth
 
-	last_watt = val_to_watts(watt)
+	if(watt >= 0)
+		last_watt = val_to_watts(FLOOR(watt,1))
 
 /obj/structure/confinement_beam_generator/control_box/proc/val_to_watts(var/watt)
 	SHOULD_NOT_OVERRIDE(TRUE)

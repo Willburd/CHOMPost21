@@ -170,6 +170,7 @@ OL|IL|OL
 	VAR_PROTECTED/construction_state = 0
 
 	// For focus and inductors
+	VAR_PROTECTED/datum/weakref/cached_controlbox = null
 	VAR_PROTECTED/beam_wander_threshold = 0.2
 	VAR_PROTECTED/dev_offset_x = 0
 	VAR_PROTECTED/dev_offset_y = 0
@@ -211,17 +212,17 @@ OL|IL|OL
 
 	switch(construction_state)
 		if(0)
-			. += "Looks like it's not attached to the flooring."
+			. += span_notice("Looks like it's not attached to the flooring.")
 		if(1)
-			. += "It is missing some cables."
+			. += span_notice("It is missing some cables.")
 		if(2)
-			. += "The panel is open."
+			. += span_notice("The panel is open.")
 		if(3)
-			. += "It is assembled."
+			. += span_notice("It is assembled.")
 
 /obj/structure/confinement_beam_generator/attackby(obj/item/W, mob/user)
 	if(istool(W))
-		if(src.process_tool_hit(W,user))
+		if(process_tool_hit(W,user))
 			return
 	. = ..()
 
@@ -256,43 +257,43 @@ OL|IL|OL
 		return FALSE
 	if(!ismob(user) || !isobj(O))
 		return FALSE
-	var/temp_state = src.construction_state
+	var/temp_state = construction_state
 
-	switch(src.construction_state)
+	switch(construction_state)
 		if(0)
 			if(O.has_tool_quality(TOOL_WRENCH))
 				playsound(src, O.usesound, 75, 1)
-				src.anchored = TRUE
-				user.visible_message("[user.name] secures the [src.name] to the floor.", \
+				anchored = TRUE
+				user.visible_message("[user.name] secures the [name] to the floor.", \
 					"You secure the external bolts.")
 				temp_state++
 		if(1)
 			if(O.has_tool_quality(TOOL_WRENCH))
 				playsound(src, O.usesound, 75, 1)
-				src.anchored = FALSE
-				user.visible_message("[user.name] detaches the [src.name] from the floor.", \
+				anchored = FALSE
+				user.visible_message("[user.name] detaches the [name] from the floor.", \
 					"You remove the external bolts.")
 				temp_state--
 			else if(istype(O, /obj/item/stack/cable_coil))
 				if(O:use(1,user))
-					user.visible_message("[user.name] adds wires to the [src.name].", \
+					user.visible_message("[user.name] adds wires to the [name].", \
 						"You add some wires.")
 					temp_state++
 		if(2)
 			if(O.has_tool_quality(TOOL_WIRECUTTER))//TODO:Shock user if its on?
-				user.visible_message("[user.name] removes some wires from the [src.name].", \
+				user.visible_message("[user.name] removes some wires from the [name].", \
 					"You remove some wires.")
 				temp_state--
 			else if(O.has_tool_quality(TOOL_SCREWDRIVER))
-				user.visible_message("[user.name] closes the [src.name]'s access panel.", \
+				user.visible_message("[user.name] closes the [name]'s access panel.", \
 					"You close the access panel.")
 				temp_state++
 		if(3)
 			if(O.has_tool_quality(TOOL_SCREWDRIVER))
-				user.visible_message("[user.name] opens the [src.name]'s access panel.", \
+				user.visible_message("[user.name] opens the [name]'s access panel.", \
 					"You open the access panel.")
 				temp_state--
-	if(temp_state == src.construction_state)//Nothing changed
+	if(temp_state == construction_state)//Nothing changed
 		return FALSE
 	else
 		construction_state = temp_state
@@ -360,8 +361,6 @@ OL|IL|OL
 		dev_offset_x = rand(-OFFSET_RAND_MAX,OFFSET_RAND_MAX)
 		dev_offset_y = rand(-OFFSET_RAND_MAX,OFFSET_RAND_MAX)
 	// Heat transfer to gas, the total heat is always removed from the focus, but the heat transfered to the gas is multiplied by transfer_coefficient.
-	if(internal_heat <= 0)
-		return
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXA = locate() in get_step(src,turn(dir,90))
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXB = locate() in get_step(src,turn(dir,-90))
 	if(!EXA || !EXA.network || EXA.air_contents.heat_capacity() <= 0 || !EXA.air_contents.total_moles)
@@ -385,13 +384,17 @@ OL|IL|OL
 		health -= 1
 		if(warns && !damage_alert)
 			damage_alert = TRUE
-			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
+			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", CHANNEL_ENGINEERING)
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) emergency engineering announcement.")
 
 		var/dam = 1 - (health / max_hp)
 		if(warns && dam > beam_wander_threshold && !critical_alert)
 			critical_alert = TRUE
-			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! BEAM IS MOBILE!", "Confinement Beam Monitor")
+			var/beam_emitting = FALSE
+			var/obj/structure/confinement_beam_generator/control_box/CB = cached_controlbox?.resolve()
+			if(CB && CB.pulse_enabled)
+				beam_emitting = TRUE
+			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! [beam_emitting ? "BEAM IS MOBILE!" : "Priority warning!"]", "Confinement Beam Monitor")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) CRITICAL engineering announcement.")
 
 		if(warns && health == 5)

@@ -26,7 +26,10 @@
 			if(L.is_valid_state())
 				var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(L,data.dir)
 				if(F)
-					F.pulse(confinement_data)
+					if(F.is_valid_state())
+						F.pulse(confinement_data)
+					else
+						L.fire_narrow_beam(data)
 				else
 					L.fire_narrow_beam(data)
 	. = ..()
