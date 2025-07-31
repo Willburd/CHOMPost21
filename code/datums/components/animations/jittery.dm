@@ -41,7 +41,7 @@ jittery process - wiggles the mob's pixel offset over time
 		return
 
 	// Shakey shakey
-	if(jitteriness > 10) // Outpost 21 edit - lowered jittery threshold
+	if(jitteriness > 100)
 		var/amplitude = min(4, jitteriness / 100)
 		owner.pixel_x = owner.old_x + rand(-amplitude, amplitude)
 		owner.pixel_y = owner.old_y + rand(-amplitude/3, amplitude/3)

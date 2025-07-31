@@ -10,5 +10,5 @@
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		H.Stun(5)
-		if(H.jitteriness < 100)
-			H.make_jittery(115)
+		if(H.get_jittery() < 190)
+			H.make_jittery(215)
