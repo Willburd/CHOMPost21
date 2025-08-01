@@ -28,16 +28,18 @@
 		return
 	var/obj/structure/confinement_beam_generator/control_box/CB = data.origin_machine?.resolve()
 	if(CB)
-		// Update controlbox reference if it exists
-		cached_controlbox = WEAKREF(CB)
-		if(data.power_level < minimum_power)
-			return
-
 		// Clone and update data
 		focus_data.clone_from(data)
+
+		// Update controlbox reference if it exists
+		cached_controlbox = WEAKREF(CB)
+		focus_data.origin_machine = cached_controlbox
+		if(focus_data.power_level < minimum_power)
+			return
+
+		// Deviate beam
 		var/dam = 1 - (health / max_hp)
 		focus_data.power_level = data.power_level * YIELD_MULTIPLIER // increase yield per each lense
-		focus_data.origin_machine = cached_controlbox
 		if(dam > beam_wander_threshold) // damaged enough
 			focus_data.target_x = data.target_x + (dev_offset_x * dam)
 			focus_data.target_y = data.target_y + (dev_offset_y * dam)

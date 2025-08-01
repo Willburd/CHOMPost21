@@ -72,7 +72,7 @@ OL|IL|OL
 	for(var/A in vars - list(BLACKLISTED_COPY_VARS))
 		vars[A] = source.vars[A]
 
-/datum/confinement_pulse_data/proc/transmit_beam_to_z(var/fake_beam,var/datum/confinement_pulse_data/data)
+/datum/confinement_pulse_data/proc/transmit_beam_to_z(var/fake_beam)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(target_z == -1 || power_level == 0)
 		return
@@ -84,7 +84,7 @@ OL|IL|OL
 	if(target_x <= 0 || target_y <= 0)
 		return
 	// Update aim
-	var/obj/structure/confinement_beam_generator/control_box/CB = data.origin_machine?.resolve()
+	var/obj/structure/confinement_beam_generator/control_box/CB = origin_machine?.resolve()
 	if(!CB)
 		return
 	CB.aim_beam(target_x,target_y)
@@ -96,10 +96,10 @@ OL|IL|OL
 	I.confinement_data = WEAKREF(src)
 	I.visual_only = fake_beam
 
-/datum/confinement_pulse_data/proc/transmit_beam_to_centcom(var/datum/confinement_pulse_data/data)
+/datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
-	var/obj/structure/confinement_beam_generator/control_box/CB = data.origin_machine?.resolve()
+	var/obj/structure/confinement_beam_generator/control_box/CB = origin_machine?.resolve()
 	if(!CB || !CB.on_target(target_x,target_y))
 		return // Stop making mistakes
 	var/org_wattage = SSsupply.watts_sold

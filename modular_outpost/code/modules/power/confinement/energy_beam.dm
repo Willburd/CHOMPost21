@@ -52,7 +52,7 @@
 			if(WEST)
 				send = (T.x == 2)
 		if(send)
-			data.transmit_beam_to_z(visual_only,data)
+			data.transmit_beam_to_z(visual_only)
 	. = ..()
 
 
