@@ -85,31 +85,42 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 
 /mob/living/simple_mob/animal/statue/Life()
 	. = ..()
+	// release from stasiscages
+	if(istype(loc,/obj/structure/stasis_cage))
+		if(prob(1))
+			var/obj/structure/stasis_cage/C = loc
+			C.release()
+			if(isturf(loc))
+				if(buckled && istype(buckled, /obj/effect/energy_net))
+					qdel(buckled)
+				bordom_counter = 0
+			else
+				return
+		else
+			return
+	// Handle AI
 	if(player_has_activated)
 		bordom_counter--
 	if(bordom_counter <= 0)
 		bordom_counter = rand(4 MINUTES,8 MINUTES)
-		// release from stasis
-		if(istype(loc,/obj/structure/stasis_cage))
-			if(prob(6))
-				var/obj/structure/stasis_cage/C = loc
-				C.release()
-			return
 		// Could be any landmark, this is just good for our own map - Outpost 21
 		var/list/jump_list = list()
 		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redexit")
 				jump_list += R
+		// Lets make it more fun
+		for(var/obj/machinery/light/L in oview(12, loc))
+			L.flicker(rand(20, 50))
+			if(prob(40))
+				L.broken()
 		// Jump to a landmark if noone is looking at it
 		var/obj/effect/landmark/GOAL = pick(jump_list)
-		var/list/scanlist = oviewers(view_range, GOAL)
-		if(scanlist.len == 0)
-			forceMove(GOAL.loc)
-			// Lets make it more fun
-			for(var/obj/machinery/light/L in oview(12, loc))
-				L.flicker(rand(20, 50))
-				if(prob(40))
-					L.broken()
+		forceMove(GOAL.loc)
+		// Lets make it more fun
+		for(var/obj/machinery/light/L in oview(12, loc))
+			L.flicker(rand(20, 50))
+			if(prob(40))
+				L.broken()
 
 /mob/living/simple_mob/animal/statue/attackby(var/obj/item/O as obj, var/mob/user as mob) //banishing the statue is a risky job
 	if(istype(O, /obj/item/nullrod))
@@ -199,14 +210,14 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 /mob/living/simple_mob/animal/statue/proc/bordom_reset(var/player)
 	if(player)
 		player_has_activated = TRUE
-	bordom_counter = rand(900,2000)
+	bordom_counter = max(rand(500,700),bordom_counter)
 
 /mob/living/simple_mob/animal/statue/proc/check_mob_blind(var/mob/living/M)
 	if(isanimal(M))
-		return M.blinded || (M.eye_blurry && prob(5)) || prob(20) // close enough to blinking for dumb animals
+		return M.blinded || (M.eye_blurry && prob(10)) || prob(20) // close enough to blinking for dumb animals
 	if(M.isSynthetic())
-		return M.blinded || (M.eye_blurry && prob(5))
-	return ((M.sdisabilities & BLIND) || (M.blinded) || (M.eye_blurry && prob(5)))
+		return M.blinded || (M.eye_blurry && prob(15))
+	return ((M.sdisabilities & BLIND) || (M.blinded) || (M.eye_blurry && prob(10)))
 
 /*
 	statue AI
@@ -249,7 +260,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 				if(prob(40 + annoyance) && istype(watching,/obj/structure/mirror))
 					ability_mirrorshmash()
 					lose_target() // stops target lockups
-				else if(prob(30 + annoyance) && istype(watching,/obj/item/flashlight))
+				else if(prob(50 + annoyance) && istype(watching,/obj/item/flashlight))
 					var/obj/item/flashlight/F = watching
 					if(F.on)
 						F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
@@ -257,7 +268,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 						F.on = 0
 						F.update_brightness()
 					lose_target() // stops target lockups
-				else if(prob(30 + annoyance) && istype(watching,/obj/machinery/floodlight))
+				else if(prob(50 + annoyance) && istype(watching,/obj/machinery/floodlight))
 					var/obj/machinery/floodlight/F = watching
 					if(F.on)
 						F.visible_message("<span class='warning'>\The [F] flickers before going dull.</span>")
@@ -278,15 +289,20 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	else if ((annoyance - 2) > 0)
 		annoyance -= 2
 	// punish pulling
-	if(holder.pulledby)
-		blind_target(holder.pulledby,FALSE)
-		holder.pulledby.stop_pulling()
-		holder.pulledby.Stun(4)
-	if(holder.grabbed_by.len > 0)
-		for(var/obj/item/grab/G in holder.grabbed_by)
-			if(G.assailant != holder)
+	if(S.pulledby)
+		var/mob/living/puller = S.pulledby
+		blind_target(puller,FALSE)
+		puller.stop_pulling()
+		puller.Stun(7)
+		if(prob(20))
+			S.attack_target(puller) // Tear into them
+	if(S.grabbed_by.len > 0)
+		for(var/obj/item/grab/G in S.grabbed_by)
+			if(G.assailant != S)
 				blind_target(G.assailant,FALSE)
-				G.assailant.Stun(4)
+				G.assailant.Stun(8)
+				if(prob(20))
+					S.attack_target(G.assailant) // Tear into them
 				qdel(G)
 
 /datum/ai_holder/simple_mob/intentional/statue/can_attack(atom/movable/the_target, vision_required)
@@ -304,8 +320,12 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 /datum/ai_holder/simple_mob/intentional/statue/proc/ability_blind()
 	var/mob/living/simple_mob/animal/statue/S = holder
 	for(var/mob/living/L in oviewers(S.view_range, get_turf(S)))
-		if(prob(90))
-			blind_target(L)
+		blind_target(L)
+		if(S.Adjacent(L))
+			S.attack_target(L) // Tear into them
+	if(annoyance > 500 && prob(20))
+		annoyance -= 200
+		S.bordom_counter = 0 // Zoop
 	return
 
 /datum/ai_holder/simple_mob/intentional/statue/proc/blind_target(var/mob/L,var/show_messages = TRUE)
@@ -317,13 +337,13 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		if(show_messages)
 			to_chat(L, span_cult(pick("Your camera flickers.","Your video feed flashes to static.")))
 		spawn(5)
-			L.eye_blurry += 20
+			L.eye_blurry += 60
 			L.Life() // Hacky but gets instant feedback
 	else
 		if(show_messages)
 			to_chat(L, span_cult(pick("Your eyes feel very heavy.", "You blink suddenly!", "Your eyes close involuntarily!")))
 		spawn(5)
-			L.Blind(2)
+			L.Blind(4)
 			L.Life() // Hacky but gets instant feedback
 
 /datum/ai_holder/simple_mob/intentional/statue/proc/ability_flash()
@@ -332,7 +352,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		get_L = L
 		L.flicker(rand(40, 90))
 		spawn(rand(15,50))
-			if(prob(50 + annoyance))
+			if(prob(70 + annoyance))
 				L.broken()
 	if(get_L)
 		holder.visible_message(span_cult("\The [holder] slowly points at \the [get_L]."))
