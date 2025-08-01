@@ -206,7 +206,16 @@
 			reagentid = REAGENT_ID_TRICORDRAZINE
 			reagentcolor = "#8040FF"
 			is_beneficial = TRUE
-
+		// Outpost 21 edit begin - Spoods
+		if(REAGENT_SPIDEREGG)
+			generated_reagents = list(REAGENT_ID_SPIDEREGG = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_SPIDEREGG)
+			gen_amount = 1
+			gen_cost = 20
+			reagentid = REAGENT_ID_SPIDEREGG
+			reagentcolor = "#efe9e9"
+		// Outpost 21 edit end
 
 /////////////////////// FULLNESS MESSAGES //////////////////////
 
