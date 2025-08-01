@@ -136,8 +136,9 @@
 				T.ex_act(rand(1,3))
 			qdel(src)
 			return
-		src.loc = get_step(src,DOWN)
-		addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)
+		loc = get_step(src,DOWN)
+		if(!QDELETED(src))
+			addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)
 
 /obj/effect/projectile/muzzle/laser_confinement
 	icon_state = "muzzle_beam_heavy"
