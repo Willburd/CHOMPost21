@@ -853,6 +853,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
+/* Outpost 21 edit - Protean removal
 /datum/design_techweb/protean_reboot
 	name = "Protean Reboot Programmer"
 	id = "protean_reboot"
@@ -863,3 +864,4 @@
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_ORGANS_MISC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+*/

@@ -270,6 +270,7 @@
 	prereq_ids = list(TECHWEB_NODE_PARTS_ADV)
 	design_ids = list(
 		"confetti_cannon",
+		"pie_cannon" // Outpost 21 edit - PIE
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_COMMON) //CHOMPEdit End - Adds Confetti Cannon

@@ -294,7 +294,7 @@
 	name = "Phase Pistol"
 	id = "phasepistol"
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun/pistol
+	build_path = /obj/item/gun/energy/locked/phasegun/pistol/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -305,7 +305,7 @@
 	name = "Phase Carbine"
 	id = "phasecarbine"
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun
+	build_path = /obj/item/gun/energy/locked/phasegun/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -316,7 +316,7 @@
 	name = "Phase Rifle"
 	id = "phaserifle"
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 500, MAT_SILVER = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun/rifle
+	build_path = /obj/item/gun/energy/locked/phasegun/rifle/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -327,7 +327,7 @@
 	name = "Phase Cannon"
 	id = "phasecannon"
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_DIAMOND = 750)
-	build_path = /obj/item/gun/energy/locked/phasegun/cannon
+	build_path = /obj/item/gun/energy/locked/phasegun/cannon/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -338,7 +338,7 @@
 	name = "Frontier Phase Pistol"
 	id = "holdout_frontier_phaser"
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 100, MAT_PHORON = 1000)
-	build_path = /obj/item/gun/energy/locked/frontier/holdout
+	build_path = /obj/item/gun/energy/locked/frontier/holdout/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -349,7 +349,7 @@
 	name = "Frontier Phaser"
 	id = "frontier_phaser"
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 2000)
-	build_path = /obj/item/gun/energy/locked/frontier
+	build_path = /obj/item/gun/energy/locked/frontier/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -360,7 +360,7 @@
 	name = "Frontier Phase Carbine"
 	id = "carbine_frontier_phaser"
 	materials = list(MAT_STEEL = 6500, MAT_GLASS = 900, MAT_DURASTEEL = 150, MAT_VERDANTIUM = 200, MAT_PHORON = 4000)
-	build_path = /obj/item/gun/energy/locked/frontier/carbine
+	build_path = /obj/item/gun/energy/locked/frontier/carbine/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -371,7 +371,7 @@
 	name = "Frontier Marksman Phase Rifle"
 	id = "marksman_rifle_frontier_phaser"
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 900, MAT_DURASTEEL = 200, MAT_VERDANTIUM = 250, MAT_PHORON = 2000)
-	build_path = /obj/item/gun/energy/locked/frontier/rifle
+	build_path = /obj/item/gun/energy/locked/frontier/rifle/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -382,7 +382,7 @@
 	name = "Frontier Phase Handbow"
 	id = "handbow_frontier_phaser"
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 1000)
-	build_path = /obj/item/gun/energy/locked/frontier/handbow
+	build_path = /obj/item/gun/energy/locked/frontier/handbow/unlocked // Outpost 21 edit - unlock most explo guns
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS

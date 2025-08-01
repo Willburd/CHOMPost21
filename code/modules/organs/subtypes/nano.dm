@@ -218,9 +218,8 @@
 /obj/item/organ/internal/nano/digest_act(atom/movable/item_storage = null)
 	return FALSE
 
-/* Outpost 21 edit - No protean stuff
+/obj/item/protean_reboot
 	name = "Protean Reboot Programmer"
 	desc = "A small, highly specialized programmer used to form the basis of a Protean swarm. A necessary component in reconstituting a Protean who has lost total body cohesion."
 	icon = 'icons/mob/species/protean/protean.dmi'
 	icon_state = "reboot"
-*/

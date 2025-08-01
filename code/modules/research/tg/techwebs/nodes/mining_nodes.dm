@@ -20,6 +20,7 @@
 		// "titaniumglass",
 		// "plastitanium",
 		// "plastitaniumglass",
+		"retail_scanner", // Outpost 21 edit - Scanner
 	)
 
 /datum/techweb_node/mining
