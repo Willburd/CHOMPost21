@@ -5,6 +5,8 @@
 	icon = 'modular_outpost/icons/obj/projectiles.dmi'
 	fire_sound = 'sound/weapons/emitter2.ogg'
 	damage = 300
+	incendiary = 3
+	flammability = 4
 	light_color = "#da420a"
 	excavation_amount = 300
 	hud_state = "laser_overcharge"
@@ -16,17 +18,21 @@
 
 	can_miss = FALSE
 
+	var/visual_only = TRUE
 	var/datum/weakref/confinement_data = null
 
 /obj/item/projectile/beam/confinement/on_hit(atom/target, blocked, def_zone)
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-	if(data) // Send a pulse to the zlevel this is targetted at
+	if(!visual_only && data) // Forward the beam to the next lens
 		if(data.dir == target.dir && istype(target,/obj/structure/confinement_beam_generator/lens/inner_lens))
 			var/obj/structure/confinement_beam_generator/lens/inner_lens/L = target
 			if(L.is_valid_state())
 				var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(L,data.dir)
 				if(F)
-					F.pulse(confinement_data)
+					if(F.is_valid_state())
+						F.pulse(confinement_data)
+					else
+						L.fire_narrow_beam(data)
 				else
 					L.fire_narrow_beam(data)
 	. = ..()
@@ -46,14 +52,14 @@
 			if(WEST)
 				send = (T.x == 2)
 		if(send)
-			data.transmit_beam_to_z()
+			data.transmit_beam_to_z(visual_only)
 	. = ..()
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 // INCOMING BEAM
 /obj/effect/confinment_beam_incoming
-	name = "Confinement Beam"
+	name = ""
 	desc = "A concentrated beam of energy, behaving more like matter than light."
 	icon = 'icons/obj/machines/particle_accelerator2.dmi'
 	icon_state = "particle3"
@@ -62,6 +68,8 @@
 	density = TRUE
 	movement_type = UNSTOPPABLE // for bumps to trigger
 	var/datum/weakref/confinement_data = null
+	var/visual_only = TRUE
+	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
 /obj/effect/confinment_beam_incoming/Initialize(mapload)
 	. = ..()
@@ -113,13 +121,13 @@
 				var/obj/structure/confinement_beam_generator/collector/C = locate() in beneath
 				if(C && C.is_valid_state())
 					var/datum/confinement_pulse_data/data = confinement_data?.resolve()
-					if(data)
+					if(data && !visual_only)
 						C.pulse(confinement_data)
-					qdel(src)
+					QDEL_IN(src,5)
 					return // picked up by collector
 				else
 					explo = TRUE
-		if(explo)
+		if(explo && !visual_only)
 			playsound(src, 'sound/weapons/emitter.ogg', 25, 1)
 			if(prob(25))
 				explosion(get_turf(A),1,1,3,6)
@@ -130,9 +138,6 @@
 			return
 		src.loc = get_step(src,DOWN)
 		addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)
-
-
-
 
 /obj/effect/projectile/muzzle/laser_confinement
 	icon_state = "muzzle_beam_heavy"

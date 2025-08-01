@@ -55,63 +55,52 @@ OL|IL|OL
 
 #define EXPLODEHEAT T0C + 100000 // Instead of stacking heat forever it'll just explode at this temp
 #define OFFSET_RAND_MAX 250
+#define PROJECTILE_DELAY 4
+#define NUMBER_OF_PROJECTILES 5
 
 /datum/confinement_pulse_data
 	var/power_level = 1
 	var/target_x = 0
 	var/target_y = 0
 	// Drifting targeting
-	var/current_x = -1
-	var/current_y = -1
 	var/dir = NORTH
 	var/target_z = -1 // Beam to no level
 	var/t_rate = 0.75 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
 /datum/confinement_pulse_data/proc/clone_from(var/datum/confinement_pulse_data/source)
-	power_level	 	= source.power_level
-	target_x 		= source.target_x
-	target_y 		= source.target_y
-	current_x 		= source.current_x
-	current_y 		= source.current_y
-	dir 			= source.dir
-	target_z 		= source.target_z
-	t_rate	 		= source.t_rate
-	origin_machine 	= source.origin_machine
+	for(var/A in vars - list(BLACKLISTED_COPY_VARS))
+		vars[A] = source.vars[A]
 
-/datum/confinement_pulse_data/proc/transmit_beam_to_z()
+/datum/confinement_pulse_data/proc/transmit_beam_to_z(var/fake_beam)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(target_z == -1 || power_level == 0)
 		return
 	// BEAM TO CENTCOM
 	if(target_z == 0)
-		transmit_beam_to_centcom()
+		if(!fake_beam)
+			transmit_beam_to_centcom()
 		return
 	if(target_x <= 0 || target_y <= 0)
 		return
-	// Move beam location slowly toward target instead of instantly
-	if(prob(40))
-		if(round(target_x,1) < round(current_x,1))
-			current_x--
-		if(round(target_x,1) > round(current_x,1))
-			current_x++
-		if(round(target_y,1) < round(current_y,1))
-			current_y--
-		if(round(target_y,1) > round(current_y,1))
-			current_y++
-	// Make sure the Z levels above an allowed zlevel are ALSO flagged as allowed! It fires from the highest level it can reach!
-	current_x = CLAMP(current_x, 1, world.maxx)
-	current_y = CLAMP(current_y, 1, world.maxy)
-	var/turf/T = locate(current_x,current_y,target_z)
+	// Update aim
+	var/obj/structure/confinement_beam_generator/control_box/CB = origin_machine?.resolve()
+	if(!CB)
+		return
+	CB.aim_beam(target_x,target_y)
+	// Fire
+	var/turf/T = CB.aim_turf(target_z)
 	if(!T || !(T.z in using_map.confinement_beam_z_levels))
 		return
 	var/obj/effect/confinment_beam_incoming/I = new /obj/effect/confinment_beam_incoming(T)
 	I.confinement_data = WEAKREF(src)
+	I.visual_only = fake_beam
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
-	if(current_x != current_x || current_y != current_y)
+	var/obj/structure/confinement_beam_generator/control_box/CB = origin_machine?.resolve()
+	if(!CB || !CB.on_target(target_x,target_y))
 		return // Stop making mistakes
 	var/org_wattage = SSsupply.watts_sold
 	SSsupply.watts_sold += power_level * 0.92 // Sell to centcom
@@ -170,6 +159,7 @@ OL|IL|OL
 	VAR_PROTECTED/construction_state = 0
 
 	// For focus and inductors
+	VAR_PROTECTED/datum/weakref/cached_controlbox = null
 	VAR_PROTECTED/beam_wander_threshold = 0.2
 	VAR_PROTECTED/dev_offset_x = 0
 	VAR_PROTECTED/dev_offset_y = 0
@@ -211,17 +201,17 @@ OL|IL|OL
 
 	switch(construction_state)
 		if(0)
-			. += "Looks like it's not attached to the flooring."
+			. += span_notice("Looks like it's not attached to the flooring.")
 		if(1)
-			. += "It is missing some cables."
+			. += span_notice("It is missing some cables.")
 		if(2)
-			. += "The panel is open."
+			. += span_notice("The panel is open.")
 		if(3)
-			. += "It is assembled."
+			. += span_notice("It is assembled.")
 
 /obj/structure/confinement_beam_generator/attackby(obj/item/W, mob/user)
 	if(istool(W))
-		if(src.process_tool_hit(W,user))
+		if(process_tool_hit(W,user))
 			return
 	. = ..()
 
@@ -256,43 +246,43 @@ OL|IL|OL
 		return FALSE
 	if(!ismob(user) || !isobj(O))
 		return FALSE
-	var/temp_state = src.construction_state
+	var/temp_state = construction_state
 
-	switch(src.construction_state)
+	switch(construction_state)
 		if(0)
 			if(O.has_tool_quality(TOOL_WRENCH))
 				playsound(src, O.usesound, 75, 1)
-				src.anchored = TRUE
-				user.visible_message("[user.name] secures the [src.name] to the floor.", \
+				anchored = TRUE
+				user.visible_message("[user.name] secures the [name] to the floor.", \
 					"You secure the external bolts.")
 				temp_state++
 		if(1)
 			if(O.has_tool_quality(TOOL_WRENCH))
 				playsound(src, O.usesound, 75, 1)
-				src.anchored = FALSE
-				user.visible_message("[user.name] detaches the [src.name] from the floor.", \
+				anchored = FALSE
+				user.visible_message("[user.name] detaches the [name] from the floor.", \
 					"You remove the external bolts.")
 				temp_state--
 			else if(istype(O, /obj/item/stack/cable_coil))
 				if(O:use(1,user))
-					user.visible_message("[user.name] adds wires to the [src.name].", \
+					user.visible_message("[user.name] adds wires to the [name].", \
 						"You add some wires.")
 					temp_state++
 		if(2)
 			if(O.has_tool_quality(TOOL_WIRECUTTER))//TODO:Shock user if its on?
-				user.visible_message("[user.name] removes some wires from the [src.name].", \
+				user.visible_message("[user.name] removes some wires from the [name].", \
 					"You remove some wires.")
 				temp_state--
 			else if(O.has_tool_quality(TOOL_SCREWDRIVER))
-				user.visible_message("[user.name] closes the [src.name]'s access panel.", \
+				user.visible_message("[user.name] closes the [name]'s access panel.", \
 					"You close the access panel.")
 				temp_state++
 		if(3)
 			if(O.has_tool_quality(TOOL_SCREWDRIVER))
-				user.visible_message("[user.name] opens the [src.name]'s access panel.", \
+				user.visible_message("[user.name] opens the [name]'s access panel.", \
 					"You open the access panel.")
 				temp_state--
-	if(temp_state == src.construction_state)//Nothing changed
+	if(temp_state == construction_state)//Nothing changed
 		return FALSE
 	else
 		construction_state = temp_state
@@ -324,23 +314,38 @@ OL|IL|OL
 	if(!data)
 		return
 	var/turf/start = get_turf(src)
-	var/obj/item/projectile/beam/confinement/B = new(start)
-	B.firer = src
-	B.confinement_data = WF
+	var/damage = round(data.power_level/EMITTER_DAMAGE_POWER_TRANSFER)
 	// needs to call on_range() which only happens on the end of the beam... on a turf... so if it's outside the map it does nothing
 	// Yes this is aiming one turf closer than edge of map, if I don't do this then it goes off the edge and never calls on_range()
+	var/range = 0
 	var/angle = dir2angle(data.dir)
 	switch(data.dir)
 		if(NORTH)
-			B.range = (world.maxy - start.y)-1
+			range = (world.maxy - start.y)-1
 		if(SOUTH)
-			B.range = start.y - 2
+			range = start.y - 2
 		if(EAST)
-			B.range = (world.maxx - start.x)-1
+			range = (world.maxx - start.x)-1
 		if(WEST)
-			B.range = start.x - 2
+			range = start.x - 2
+	if(range)
+		subshot_fire(start,range,angle,damage,WF,NUMBER_OF_PROJECTILES)
+
+/obj/structure/confinement_beam_generator/proc/subshot_fire(var/turf/start,var/range,var/angle,var/damage,var/datum/weakref/WF,var/number_of_shots)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	PRIVATE_PROC(TRUE)
+	var/obj/item/projectile/beam/confinement/B = new(start)
+	B.visual_only = !(number_of_shots == NUMBER_OF_PROJECTILES) // This just controls if it sends data. It's still lethal.
+	B.firer = src
+	B.range = range
+	B.confinement_data = WF
+	B.damage = damage
 	// fire the actual beam
 	B.fire(angle)
+	// Next!
+	number_of_shots -= 1
+	if(number_of_shots > 0)
+		addtimer(CALLBACK(src, PROC_REF(subshot_fire), start,range,angle,damage,WF,number_of_shots), PROJECTILE_DELAY, TIMER_DELETE_ME)
 
 /obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -356,12 +361,10 @@ OL|IL|OL
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
 	// Alter deviation of beam
-	if(prob(10))
+	if(prob(2) || (dev_offset_x == 0 && dev_offset_y == 0))
 		dev_offset_x = rand(-OFFSET_RAND_MAX,OFFSET_RAND_MAX)
 		dev_offset_y = rand(-OFFSET_RAND_MAX,OFFSET_RAND_MAX)
 	// Heat transfer to gas, the total heat is always removed from the focus, but the heat transfered to the gas is multiplied by transfer_coefficient.
-	if(internal_heat <= 0)
-		return
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXA = locate() in get_step(src,turn(dir,90))
 	var/obj/machinery/atmospherics/unary/heat_exchanger/EXB = locate() in get_step(src,turn(dir,-90))
 	if(!EXA || !EXA.network || EXA.air_contents.heat_capacity() <= 0 || !EXA.air_contents.total_moles)
@@ -385,13 +388,17 @@ OL|IL|OL
 		health -= 1
 		if(warns && !damage_alert)
 			damage_alert = TRUE
-			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", DEPARTMENT_ENGINEERING)
+			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" has begun to deform. Urgent repairs are required.", "Confinement Beam Monitor", CHANNEL_ENGINEERING)
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) emergency engineering announcement.")
 
 		var/dam = 1 - (health / max_hp)
 		if(warns && dam > beam_wander_threshold && !critical_alert)
 			critical_alert = TRUE
-			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! BEAM IS MOBILE!", "Confinement Beam Monitor")
+			var/beam_emitting = FALSE
+			var/obj/structure/confinement_beam_generator/control_box/CB = cached_controlbox?.resolve()
+			if(CB && CB.pulse_enabled)
+				beam_emitting = TRUE
+			GLOB.global_announcer.autosay("WARNING: CONFINEMENT BEAM FOCUS AT \"[T.x], [T.y], [using_map.get_zlevel_name(T.z)]\" HAS REACHED CRITICAL DEFORMATION! [beam_emitting ? "BEAM IS MOBILE!" : "Priority warning!"]", "Confinement Beam Monitor")
 			log_game("CONFINEMENT BEAM FOCUS([T.x],[T.y],[T.z]) CRITICAL engineering announcement.")
 
 		if(warns && health == 5)
@@ -417,3 +424,4 @@ OL|IL|OL
 
 #undef EXPLODEHEAT
 #undef OFFSET_RAND_MAX
+#undef NUMBER_OF_PROJECTILES
