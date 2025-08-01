@@ -328,7 +328,7 @@
 		return 1
 
 	// blob grinding
-	if(istype(target, /obj/structure/blob/))
+	if(istype(target, /obj/structure/blob))
 		var/obj/structure/blob/B = target
 		if(has_breaking_speed)
 			B.ex_act(1)
@@ -397,6 +397,17 @@
 				// shakey time
 				shake_cab()
 				return 1
+
+	else if(istype(target,/mob/living/simple_mob/animal/statue))
+		// cab sounds
+		playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
+		shake_cab()
+
+		// Because they'll be at this forever
+		if(has_breaking_speed && prob(5))
+			var/mob/living/simple_mob/animal/statue/S = target
+			S.ash()
+		return 1
 
 	else if(istype(target,/atom/movable))
 		if(istype(target, /obj/structure))
