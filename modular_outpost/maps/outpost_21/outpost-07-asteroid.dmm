@@ -589,7 +589,7 @@
 /area/offworld/asteroidyard/external)
 "br" = (
 /obj/machinery/door/airlock/command{
-	name = "Teleport Access";
+	name = "Telecomms Relay";
 	req_one_access = list(1,5,10,19,31,47,48,52)
 	},
 /obj/structure/cable/orange{
@@ -598,9 +598,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/telecomms)
 "bs" = (
