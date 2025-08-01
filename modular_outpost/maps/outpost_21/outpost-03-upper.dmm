@@ -440,15 +440,6 @@
 "aaY" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
-"aaZ" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 1;
-	flags = null
-	},
-/obj/structure/lattice,
-/turf/simulated/open/muriki,
-/area/muriki/skyline/north)
 "aba" = (
 /obj/machinery/telecomms/processor/preset_two,
 /turf/simulated/floor/greengrid/nitrogen{
@@ -473,11 +464,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
-"abd" = (
+"abe" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/open/muriki,
-/area/muriki/skyline/north)
+/area/engineering/engine_room)
+"abf" = (
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
 "abg" = (
 /obj/machinery/telecomms/server/presets/supply,
 /turf/simulated/floor/bluegrid{
@@ -524,6 +524,16 @@
 	temperature = 80
 	},
 /area/comms)
+"abk" = (
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/structure/lattice,
+/obj/structure/railing,
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
 "abl" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -554,6 +564,19 @@
 /obj/effect/auto_crayon,
 /turf/simulated/wall/durasteel,
 /area/muriki/processor)
+"abo" = (
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/structure/lattice,
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
 "abp" = (
 /obj/effect/floor_decal/corner/green/border{
 	dir = 8
@@ -1224,6 +1247,24 @@
 	name = "Exonet Mainframe"
 	},
 /area/comms)
+"acF" = (
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/structure/lattice,
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
+"acG" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/river/hole)
 "acI" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -4850,7 +4891,7 @@
 	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/engineering/engine_room)
+/area/crew_quarters/heads/chief)
 "bNW" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -16475,7 +16516,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/skyline/north)
+/area/engineering/engine_room)
 "hII" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -17453,7 +17494,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/engineering/engine_room)
+/area/crew_quarters/heads/chief)
 "ife" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
@@ -17941,9 +17982,6 @@
 "iuW" = (
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/muriki/processor/hall/waterway_other)
-"iuX" = (
-/turf/simulated/wall/r_wall,
-/area/engineering/engine_room)
 "ivh" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -20585,7 +20623,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/engineering/engine_room)
+/area/crew_quarters/heads/chief)
 "jHn" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -21077,7 +21115,7 @@
 "jRC" = (
 /obj/structure/lattice,
 /turf/simulated/open/indoor/turfpack/muriki,
-/area/muriki/skyline/north)
+/area/mine/explored/muriki/river/hole)
 "jRD" = (
 /obj/effect/fancy_shuttle/medbus{
 	fancy_shuttle_tag = "medi"
@@ -27226,7 +27264,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/skyline/north)
+/area/engineering/engine_room)
 "mVx" = (
 /obj/structure/railing{
 	dir = 8
@@ -27902,7 +27940,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/skyline/north)
+/area/engineering/engine_room)
 "nni" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -34146,7 +34184,7 @@
 	},
 /obj/machinery/light/floortube,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/skyline/north)
+/area/engineering/engine_room)
 "qvh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -39563,7 +39601,7 @@
 /obj/item/melee/umbrella/random,
 /obj/item/melee/umbrella/random,
 /turf/simulated/floor/tiled/steel_grid,
-/area/engineering/engine_room)
+/area/crew_quarters/heads/chief)
 "taN" = (
 /turf/simulated/wall/fancy_shuttle/low{
 	fancy_shuttle_tag = "sec"
@@ -40764,7 +40802,7 @@
 	flags = null
 	},
 /turf/simulated/open/muriki,
-/area/muriki/skyline/north)
+/area/engineering/engine_room)
 "tED" = (
 /obj/structure/cable/orange{
 	icon_state = "1-8"
@@ -41280,7 +41318,7 @@
 	},
 /obj/structure/railing,
 /turf/simulated/open/muriki,
-/area/muriki/skyline/north)
+/area/engineering/engine_room)
 "tQg" = (
 /obj/structure/table/reinforced,
 /obj/item/clothing/glasses/sunglasses,
@@ -48713,7 +48751,7 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/engineering/engine_room)
+/area/crew_quarters/heads/chief)
 "xAq" = (
 /obj/machinery/atmospherics/tvalve/digital/mirrored/bypass{
 	dir = 4
@@ -72106,10 +72144,10 @@ kxr
 kxr
 kxr
 kxr
-iuX
-iuX
-iuX
-iuX
+qnY
+qnY
+qnY
+qnY
 krn
 vsm
 dTw
@@ -72269,9 +72307,9 @@ kxr
 kxr
 kxr
 bAR
-iuX
-iuX
-iuX
+qnY
+qnY
+qnY
 krn
 cTq
 jKV
@@ -72593,7 +72631,7 @@ kxr
 kxr
 kxr
 npb
-iuX
+qnY
 taM
 jHa
 krn
@@ -72908,13 +72946,13 @@ kxr
 kxr
 kxr
 qvg
-owj
-owj
-owj
-abd
-owj
-owj
-owj
+abe
+abe
+abe
+oao
+abe
+abe
+abe
 hIF
 oao
 qnY
@@ -73069,15 +73107,15 @@ kxr
 kxr
 kxr
 kxr
-kzr
-kxr
-kxr
-kxr
-kzr
-kxr
-kxr
-kxr
-aaZ
+abk
+abf
+abf
+abf
+abk
+abf
+abf
+abf
+npb
 oao
 hiw
 rRH
@@ -73231,15 +73269,15 @@ kxr
 kxr
 kxr
 kxr
-kzr
-kxr
-kxr
-kxr
-omL
-kxr
-kxr
-kxr
-aaZ
+abk
+abf
+abf
+abf
+abo
+abf
+abf
+abf
+npb
 oao
 xRS
 hYz
@@ -73393,15 +73431,15 @@ kxr
 kxr
 kxr
 kxr
-kzr
-kxr
-kxr
-kxr
-kxr
-kxr
-kxr
-kxr
-aaZ
+abk
+abf
+abf
+abf
+abf
+abf
+abf
+abf
+npb
 oao
 xRS
 jlf
@@ -73555,15 +73593,15 @@ kxr
 sYu
 owj
 owj
-abd
-owj
+oao
+abe
 tQe
-kxr
-kxr
-kxr
+abf
+abf
+abf
 tEB
-owj
-abd
+abe
+oao
 oao
 xRS
 aNg
@@ -73717,15 +73755,15 @@ kxr
 kxr
 kxr
 kxr
-kzr
-kxr
-kxr
-kxr
-kxr
-kxr
-kxr
-kxr
-aaZ
+abk
+abf
+abf
+abf
+abf
+abf
+abf
+abf
+npb
 oao
 xRS
 oSK
@@ -73879,15 +73917,15 @@ kxr
 kxr
 kxr
 kxr
-kzr
-kxr
-kxr
-kxr
-gaL
-kxr
-kxr
-kxr
-aaZ
+abk
+abf
+abf
+abf
+acF
+abf
+abf
+abf
+npb
 oao
 xRS
 dAP
@@ -74041,15 +74079,15 @@ kxr
 kxr
 kxr
 kxr
-kzr
-kxr
-kxr
-kxr
-kzr
-kxr
-kxr
-kxr
-aaZ
+abk
+abf
+abf
+abf
+abk
+abf
+abf
+abf
+npb
 oao
 kLH
 bbm
@@ -74204,13 +74242,13 @@ kxr
 kxr
 kxr
 nnh
-owj
-owj
-owj
-abd
-owj
-owj
-owj
+abe
+abe
+abe
+oao
+abe
+abe
+abe
 mVo
 hnj
 qnY
@@ -74537,7 +74575,7 @@ kxr
 kxr
 kxr
 npb
-iuX
+qnY
 uDM
 uDM
 uDM
@@ -74699,7 +74737,7 @@ kxr
 kxr
 kxr
 npb
-iuX
+qnY
 uDM
 uDM
 uDM
@@ -74861,7 +74899,7 @@ kxr
 kxr
 kxr
 npb
-iuX
+qnY
 uDM
 uDM
 uDM
@@ -75023,7 +75061,7 @@ kxr
 kxr
 kxr
 npb
-iuX
+qnY
 uDM
 pcN
 uDM
@@ -75184,8 +75222,8 @@ dgh
 dgh
 dgh
 dgh
-iuX
-iuX
+qnY
+qnY
 uDM
 uDM
 uDM
@@ -78709,8 +78747,8 @@ ovc
 ovc
 ovc
 ovc
-acw
-acw
+acG
+acG
 hci
 ovc
 lpq
@@ -78872,7 +78910,7 @@ ovc
 ovc
 ovc
 jRC
-acw
+acG
 ovc
 ovc
 lpq

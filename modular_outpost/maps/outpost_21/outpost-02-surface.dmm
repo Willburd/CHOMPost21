@@ -8515,6 +8515,9 @@
 	},
 /turf/simulated/open,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"aoD" = (
+/turf/simulated/wall/r_wall,
+/area/engineering/corepower)
 "aoS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -17128,7 +17131,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
-/area/engineering/engine_room)
+/area/engineering/corepower)
 "dcc" = (
 /obj/structure/micro_tunnel{
 	dir = 4;
@@ -27250,9 +27253,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
-"gtU" = (
-/turf/simulated/wall,
-/area/storage/tech)
 "guk" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -30331,7 +30331,7 @@
 "hrD" = (
 /obj/machinery/atmospherics/pipe/vent,
 /turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/engi)
+/area/engineering/engine_room)
 "hrG" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -47648,7 +47648,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
-/area/engineering/engine_room)
+/area/engineering/corepower)
 "mxR" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
 	dir = 10
@@ -47690,7 +47690,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
-/area/engineering/engine_room)
+/area/engineering/corepower)
 "myT" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -51686,7 +51686,7 @@
 "nIV" = (
 /obj/structure/sign/electricshock,
 /turf/simulated/wall/r_wall,
-/area/engineering/engine_room)
+/area/engineering/corepower)
 "nJj" = (
 /mob/living/simple_mob/vore/slug,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -51747,7 +51747,7 @@
 	},
 /obj/structure/cable/yellow,
 /turf/simulated/floor,
-/area/engineering/engine_room)
+/area/engineering/corepower)
 "nJX" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -56919,7 +56919,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor,
-/area/engineering/engine_room)
+/area/engineering/corepower)
 "pyL" = (
 /obj/structure/window/plastitanium{
 	dir = 1
@@ -66120,7 +66120,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor,
-/area/engineering/engine_room)
+/area/engineering/corepower)
 "sro" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -106246,12 +106246,12 @@ deb
 deb
 deb
 qCM
-qCM
-qCM
-gtU
-gtU
-gtU
-gtU
+qJS
+qJS
+tyl
+gjV
+gjV
+gjV
 gjV
 aeV
 qAc
@@ -107542,7 +107542,7 @@ tWq
 deb
 deb
 deb
-qvB
+qJS
 mYe
 izb
 qJS
@@ -107704,11 +107704,11 @@ tWq
 tWq
 deb
 lsL
-qvB
-qvB
-uXy
-uXy
-uXy
+qJS
+qJS
+qJS
+qJS
+qJS
 qJS
 pqF
 pTA
@@ -108355,7 +108355,7 @@ bTU
 sOP
 mwS
 neU
-qvB
+aoD
 ooQ
 oZb
 kWn
@@ -109975,7 +109975,7 @@ bTU
 sOP
 hbn
 qFH
-qvB
+aoD
 otL
 pfv
 pvL
