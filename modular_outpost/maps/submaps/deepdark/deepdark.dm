@@ -559,7 +559,7 @@
 	always_unpowered = TRUE
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 /area/mine/unexplored/muriki/cave/deepdark
 	name = "\improper Muriki Underground"
 	sound_env = TUNNEL_ENCLOSED
@@ -567,7 +567,7 @@
 	always_unpowered = TRUE
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
@@ -686,7 +686,7 @@
 	use_emergency_overlay = FALSE
 	flags = AREA_BLOCK_GHOST_SIGHT
 	haunted = TRUE
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 //////////////////////////////////////////////////////////////
 // Liminal area specialty controllers

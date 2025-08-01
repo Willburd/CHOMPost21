@@ -24,6 +24,8 @@
 	use_emergency_overlay = TRUE
 
 /area/engineering/engine_room
+	outdoors = TRUE
+	base_turf = /turf/simulated/open/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/engineering/mail
@@ -390,6 +392,10 @@
 
 /area/storage/tools
 	holomap_color = HOLOMAP_AREACOLOR_CIV
+	base_turf = /turf/simulated/open
+
+/area/storage/tech
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/open
 
 /area/engineering/drone_fabrication

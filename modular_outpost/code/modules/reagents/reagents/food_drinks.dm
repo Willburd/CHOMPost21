@@ -6,7 +6,7 @@
 	taste_description = "you're not welcome in this swamp."
 
 /datum/reagent/drink/coffee/nukie/mega/final_nukie/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(M.jitteriness < 500)
+	if(M.get_jittery() < 500)
 		to_chat(M, span_critical("You have a seizure!"))
 		M.Paralyse(10)
 		M.Weaken(10)

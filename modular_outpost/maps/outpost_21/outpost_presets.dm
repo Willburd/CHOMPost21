@@ -15,6 +15,11 @@
 	listening_level = Z_LEVEL_OUTPOST_SURFACE
 	autolinkers = list("station_relay")
 
+/obj/machinery/telecomms/relay/preset/outpost/recyard
+	id = "Reclamation Yard Relay"
+	listening_level = Z_LEVEL_OUTPOST_ASTEROID
+	autolinkers = list("roid_relay")
+
 /obj/machinery/telecomms/relay/preset/outpost/confinementbeam
 	id = "AI Platform Relay"
 	listening_level = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
@@ -31,7 +36,7 @@
 	id = "Hub"
 	network = "tcommsat"
 	autolinkers = list("hub",
-						"station_relay", "ai_relay", "prospect_relay",
+						"station_relay", "ai_relay", "prospect_relay", "roid_relay", "c_relay",
 						"science", "medical", "supply", "service", "common", "command", "engineering", "security", "unused","explorer",
 						"receiverA", "broadcasterA")
 

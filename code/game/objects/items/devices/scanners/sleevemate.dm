@@ -237,7 +237,13 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 				return
 			// Outpost 21 edit end
 			our_db.m_backup(target.mind, null /* Outpost 21 edit - Nif removal: nif */,one_time = TRUE)
-			to_chat(usr,span_notice("Mind backed up!"))
+			// Outpost 21 edit begin - Haunted sleevemates
+			var/area/A = get_area(src)
+			if(A && A.haunted && prob(20))
+				to_chat(usr,span_notice(pick(list("Soul stolen!","Error, mind erased!","Error, no mind detected!","Error, no soul detected!","Error, they are not really [target]."))))
+			else
+				to_chat(usr,span_notice("Mind backed up!"))
+			// Outpost 21 edit end
 		else
 			to_chat(usr,span_warning("You must remain close to your target!"))
 
@@ -254,7 +260,13 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		if(do_after(usr,8 SECONDS,target))
 			var/datum/transhuman/body_record/BR = new()
 			BR.init_from_mob(H, TRUE, H.resleeve_lock, database_key = db_key) // Outpost 21 edit - Maintain resleeve_lock
-			to_chat(usr,span_notice("Body scanned!"))
+			// Outpost 21 edit begin - Haunted sleevemates
+			var/area/A = get_area(src)
+			if(A && A.haunted && prob(20))
+				to_chat(usr,span_notice(pick(list("Error, body is corrupt!","Error, the meat rejects us.","Error, this husk is puppeted by another.","Error, body scan erased!","Error, [target]'s body does not exist!"))))
+			else
+				to_chat(usr,span_notice("Body scanned!"))
+			// Outpost 21 edit end
 		else
 			to_chat(usr,span_warning("You must remain close to your target!"))
 

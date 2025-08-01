@@ -5,6 +5,33 @@
 	},
 /turf/space,
 /area/offworld/asteroidyard/external)
+"ab" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_bar)
+"ac" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_bar)
+"ad" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/computer/cryopod{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_bar)
+"ae" = (
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 8
+	},
+/obj/machinery/cryopod{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls_bar)
 "af" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 25
@@ -14,6 +41,28 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/dockingbay)
+"ag" = (
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 4
+	},
+/obj/machinery/cryopod/robot,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls_bar)
+"ah" = (
+/turf/simulated/shuttle/wall,
+/area/shuttle/belter)
+"ai" = (
+/obj/structure/shuttle/window,
+/obj/effect/shuttle_landmark/premade/belter/asteroid_yard,
+/turf/simulated/floor/airless,
+/area/shuttle/belter)
+"aj" = (
+/obj/machinery/computer/shuttle_control/belter{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "ak" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -32,6 +81,25 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/dockingbay)
+"am" = (
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
+"an" = (
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
+"ao" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "ap" = (
 /obj/machinery/power/rtg,
 /obj/structure/cable/orange{
@@ -42,10 +110,50 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/engineering)
+"aq" = (
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
+"ar" = (
+/obj/machinery/door/unpowered/shuttle,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
+/area/shuttle/belter)
+"as" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
+/area/shuttle/belter)
+"at" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
+/area/shuttle/belter)
 "au" = (
 /obj/machinery/teleport/hub,
 /turf/simulated/floor/tiled/dark,
 /area/offworld/asteroidyard/station/teleport)
+"av" = (
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	dir = 8;
+	id_tag = "belter_docking";
+	pixel_x = 26
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/handrail{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
+/area/shuttle/belter)
+"aw" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
+/area/shuttle/belter)
 "ax" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -69,6 +177,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls)
+"ay" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
+/area/shuttle/belter)
 "az" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -89,6 +204,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/dockingbay)
+"aC" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/obj/structure/window/plastitanium,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "aD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -101,10 +223,38 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner,
 /turf/simulated/floor/wood,
 /area/offworld/asteroidyard/station/bar)
+"aE" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 1;
+	icon_state = "propulsion_l"
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/belter)
 "aF" = (
 /obj/machinery/light/small,
 /turf/space,
 /area/offworld/asteroidyard/external)
+"aG" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
+"aH" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
 "aI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -117,6 +267,42 @@
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/medbox)
+"aJ" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
+"aK" = (
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/asteroidyard/external)
+"aL" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
 "aM" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -136,6 +322,86 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/observation)
+"aO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/brown/full,
+/obj/structure/table/standard,
+/obj/machinery/cell_charger,
+/obj/item/paper/rogueminer,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/access_shaft)
+"aP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/machinery/computer/shuttle_control/belter{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/access_shaft)
+"aQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 4
+	},
+/obj/machinery/computer/roguezones{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/access_shaft)
+"aR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/brown{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/access_shaft)
+"aS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/access_shaft)
+"aT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/access_shaft)
+"aU" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/access_shaft)
+"aV" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/tiled/steel_grid,
+/area/offworld/asteroidyard/station/access_shaft)
 "aW" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -166,6 +432,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls)
+"aZ" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/asteroidyard/station/telecomms)
 "ba" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -185,6 +454,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/teleport)
+"bc" = (
+/obj/item/geiger/wall/west,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/bluegrid,
+/area/offworld/asteroidyard/station/telecomms)
 "bd" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -195,12 +472,89 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
+"be" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/telecomms)
+"bf" = (
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/orange,
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/telecomms)
+"bg" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/telecomms)
+"bh" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bi" = (
+/obj/machinery/telecomms/relay/preset/outpost/recyard,
+/turf/simulated/floor/bluegrid,
+/area/offworld/asteroidyard/station/telecomms)
+"bj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/telecomms)
+"bk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/telecomms)
+"bl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 22;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/telecomms)
 "bm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/wall,
 /area/offworld/asteroidyard/station/cave)
+"bn" = (
+/obj/structure/sign/securearea,
+/turf/simulated/wall/r_wall,
+/area/offworld/asteroidyard/station/telecomms)
 "bo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -233,18 +587,80 @@
 /obj/machinery/trailblazer/yellow,
 /turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
+"br" = (
+/obj/machinery/door/airlock/command{
+	name = "Teleport Access";
+	req_one_access = list(1,5,10,19,31,47,48,52)
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/telecomms)
 "bs" = (
 /obj/structure/railing,
 /turf/simulated/mineral/floor/cave{
 	ignore_cavegen = 1
 	},
 /area/offworld/asteroidyard/station/cave)
+"bt" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
 "bu" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
+"bv" = (
+/obj/item/geiger/wall/south,
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bw" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"by" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bz" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
 "bA" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1381;
@@ -285,8 +701,8 @@
 /obj/structure/window/plastitanium{
 	dir = 1
 	},
-/obj/structure/lattice,
-/turf/space,
+/obj/structure/ore_box,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "bO" = (
 /obj/structure/railing{
@@ -694,7 +1110,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
@@ -1026,18 +1442,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/dockingbay)
-"fU" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/turf/simulated/floor/plating,
-/area/offworld/asteroidyard/station/access_shaft)
 "fX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -2125,8 +2529,11 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/corner/brown{
-	dir = 6
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
@@ -2589,6 +2996,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
 "nV" = (
@@ -2936,12 +3346,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/offworld/asteroidyard/station/bar)
-"qk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/wall/r_wall,
-/area/offworld/asteroidyard/station/access_shaft)
 "ql" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -3083,12 +3487,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/brown{
-	dir = 6
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
@@ -4050,14 +4451,17 @@
 /turf/simulated/floor,
 /area/offworld/asteroidyard/station/dockingbay)
 "wt" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8"
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 5
@@ -4697,16 +5101,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/dockingbay)
 "zx" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
+/obj/structure/window/plastitanium{
 	dir = 1
 	},
-/obj/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/brown/border/shifted,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
 "zD" = (
 /obj/structure/table/gamblingtable,
@@ -5447,6 +5846,9 @@
 /obj/structure/sign/warning/vacuum{
 	pixel_y = 32
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/access_shaft)
 "De" = (
@@ -5880,12 +6282,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/offworld/asteroidyard/station/access_shaft)
-"FE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/turf/simulated/wall/r_wall,
 /area/offworld/asteroidyard/station/access_shaft)
 "FG" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -8217,32 +8613,22 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_bar)
-"Rf" = (
-/obj/machinery/airlock_sensor/airlock_exterior{
-	frequency = 1381;
-	id_tag = "orbyard_outsense";
-	pixel_y = 20
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/lattice,
-/turf/space,
-/area/offworld/asteroidyard/external)
 "Rl" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
+/obj/structure/window/plastitanium{
 	dir = 1
 	},
-/obj/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/effect/floor_decal/corner/brown/border/shifted,
+/obj/effect/floor_decal/corner/brown,
+/obj/structure/bed/chair/office/light,
+/obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 24;
+	pixel_y = -5
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
 "Rn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8313,11 +8699,26 @@
 /turf/simulated/floor/solarpanel/airless,
 /area/offworld/asteroidyard/external)
 "RH" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/wall,
-/area/offworld/asteroidyard/external)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
 "RL" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/tiled/kafel_full/beige,
@@ -8637,7 +9038,7 @@
 	dir = 8;
 	pixel_x = -26
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -8790,19 +9191,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
 "Um" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
 "Up" = (
 /obj/machinery/suit_storage_unit/standard_unit,
@@ -8994,7 +9387,7 @@
 	},
 /obj/structure/window/plastitanium,
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
@@ -9025,16 +9418,6 @@
 	},
 /turf/space,
 /area/offworld/asteroidyard/external)
-"VL" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/asteroidyard/station/access_shaft)
 "VR" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -22266,10 +22649,10 @@ MU
 MU
 sH
 lv
-vY
-cu
-cu
-cu
+aZ
+aZ
+aZ
+aZ
 cu
 cu
 cu
@@ -22427,11 +22810,11 @@ YR
 Yi
 AN
 xH
-lu
-vY
-cu
-cu
-cu
+bt
+aZ
+bi
+bc
+aZ
 cu
 cu
 cu
@@ -22589,11 +22972,11 @@ qy
 Vn
 Sv
 zH
-Ug
-vY
-cu
-cu
-cu
+bv
+aZ
+bj
+be
+aZ
 cu
 cu
 cu
@@ -22751,11 +23134,11 @@ AS
 bb
 MU
 HQ
-bp
-vY
-cu
-cu
-cu
+bw
+bn
+bk
+bf
+aZ
 cu
 cu
 cu
@@ -22913,11 +23296,11 @@ wV
 MU
 MU
 wt
-lv
-vY
-cu
-cu
-cu
+bx
+br
+bl
+bg
+aZ
 cu
 cu
 cu
@@ -23075,11 +23458,11 @@ MU
 MU
 MU
 pS
-lv
-vY
-vY
-vY
-vY
+by
+aZ
+aZ
+aZ
+aZ
 vY
 vY
 vY
@@ -23237,10 +23620,10 @@ cu
 vY
 vY
 pS
-lQ
-cs
-cs
-cs
+bz
+bh
+bh
+bh
 TF
 cs
 aY
@@ -26563,9 +26946,9 @@ pR
 RO
 yc
 rR
-rR
-rR
-Yb
+ae
+ac
+ab
 rR
 rR
 rR
@@ -26725,9 +27108,9 @@ qP
 No
 Wd
 rR
-Di
-rR
-rR
+ag
+ad
+ab
 rR
 dk
 dk
@@ -26887,10 +27270,10 @@ NQ
 Ef
 Gc
 rR
-Di
-Di
-Di
-Di
+rR
+rR
+Yb
+rR
 dk
 dk
 dk
@@ -27050,9 +27433,9 @@ xo
 Wd
 rR
 Di
-Di
-Di
-Di
+rR
+rR
+rR
 dk
 dk
 CR
@@ -27214,7 +27597,7 @@ rR
 RP
 RP
 Di
-Di
+RP
 Di
 CR
 CR
@@ -27376,7 +27759,7 @@ oR
 Di
 Di
 Di
-Di
+RP
 Di
 dk
 dk
@@ -27538,7 +27921,7 @@ oR
 Di
 Di
 Di
-Di
+RP
 Di
 Di
 dk
@@ -28479,8 +28862,8 @@ QC
 gh
 xP
 Ld
-Mq
-Mq
+aV
+aV
 rS
 Rd
 IK
@@ -29463,13 +29846,13 @@ Sy
 dk
 dk
 dk
-dk
+CR
 dk
 dk
 CR
 dk
 az
-dk
+CR
 De
 wP
 wP
@@ -29622,19 +30005,19 @@ Ob
 Zi
 cQ
 RN
-dk
-dk
-dk
-dk
-dk
+CR
+CR
 CR
 CR
 CR
 dk
+CR
 dk
 dk
+CR
 dk
 dk
+CR
 dk
 oR
 RP
@@ -29781,13 +30164,9 @@ CR
 CR
 cQ
 dG
-VL
-fU
+dZ
+cQ
 RN
-dk
-dk
-dk
-dk
 dk
 dk
 dk
@@ -29797,6 +30176,10 @@ dk
 dk
 dk
 dk
+CR
+dk
+dk
+CR
 dk
 hM
 CR
@@ -29944,20 +30327,20 @@ CR
 Ou
 nU
 nL
-Rl
+Ou
 RN
 dk
 dk
 dk
+CR
+dk
 dk
 dk
 dk
-CR
-CR
 dk
 CR
-CR
-CR
+dk
+dk
 CR
 fv
 fv
@@ -30106,18 +30489,18 @@ CR
 Sn
 Dd
 qU
-qk
-Cs
+Sn
+aL
+gh
 dk
 dk
+CR
 dk
 dk
+CR
 dk
 dk
-fv
-fv
-fv
-fv
+CR
 dk
 dk
 CR
@@ -30266,24 +30649,24 @@ dk
 dk
 CR
 ev
-ql
-dZ
+aU
+aR
 Um
-Sy
+aO
+aG
 CR
-CR
-CR
+fv
+fv
 dk
 dk
-dk
-CR
-dk
-dk
-CR
-CR
+fv
+fv
+fv
+fv
 CR
 CR
-CR
+fv
+fv
 CR
 CR
 CR
@@ -30429,24 +30812,24 @@ CR
 CR
 cQ
 ql
-dZ
+aS
 zx
-Sy
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-CR
-dk
-dk
+aP
+aH
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
 fv
-fv
-fv
+dk
 CR
 cu
 cu
@@ -30591,23 +30974,23 @@ dk
 CR
 Ou
 ql
-dZ
+aT
 Rl
-Sy
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-CR
-CR
-CR
-CR
-dk
+aQ
+aJ
+tP
+aE
+ah
+ah
+ah
+ar
+ah
+ah
+ah
+ah
+tP
+tP
+FP
 dk
 CR
 cu
@@ -30754,22 +31137,22 @@ CR
 Sn
 Qw
 mz
-qk
+Sn
 RH
-Rf
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-fv
-fv
-fv
+gh
+tP
+aE
+aC
+aw
+as
+an
+am
+am
+am
+ah
+ah
+tP
 CR
-dk
-dk
 dk
 CR
 dk
@@ -30916,25 +31299,25 @@ rA
 Sn
 bA
 er
-FE
+Sn
 Vr
 bJ
-dk
-dk
-dk
-dk
-dk
-dk
-dk
+tP
+aE
+aC
+at
+at
+an
+an
+an
+an
+aj
+ai
+tP
 dk
 dk
 CR
-dk
-dk
-dk
-dk
-CR
-dk
+fv
 CR
 CR
 cu
@@ -31081,22 +31464,22 @@ er
 Sn
 Ti
 bJ
+tP
+aE
+aC
+ay
+av
+an
+aq
+aq
+ao
+ah
+ah
+tP
 dk
 dk
 dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
+fv
 dk
 dk
 dk
@@ -31242,27 +31625,27 @@ Dh
 sx
 Sn
 Co
-bJ
+aK
+tP
+aE
+ah
+ah
+ah
+ar
+ah
+ah
+ah
+ah
+tP
+tP
+dk
+dk
+dk
+fv
 dk
 dk
 dk
 dk
-dk
-dk
-dk
-dk
-dk
-dk
-dk
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
 cu
 cu
 cu
@@ -31405,28 +31788,28 @@ tq
 Sn
 YD
 ON
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+CR
+dk
+dk
+fv
 dk
 dk
 dk
 dk
 dk
 dk
-dk
-dk
-dk
-dk
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
 CR
 dk
 dk
@@ -31561,34 +31944,34 @@ dk
 CR
 dk
 CR
+tP
+tP
+tP
+zr
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+fv
+dk
+CR
+fv
 CR
 CR
-CR
-CR
-CR
-CR
-CR
-CR
-CR
-tg
 dk
 dk
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
+dk
+dk
 CR
 tg
 dk
@@ -31721,37 +32104,37 @@ dk
 dk
 dk
 dk
-dk
+fv
+CR
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+tP
+fv
+tg
+CR
+fv
+fv
+fv
+fv
+CR
+tg
+fv
+fv
 CR
 CR
 CR
-CR
-CR
-CR
-CR
 dk
 dk
 dk
 dk
 dk
 dk
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
+dk
 CR
 dk
 dk
@@ -31883,8 +32266,27 @@ dk
 dk
 dk
 dk
+fv
+fv
+fv
+CR
+CR
+CR
+fv
+fv
+fv
+fv
+fv
 dk
-FP
+dk
+CR
+dk
+dk
+CR
+dk
+dk
+dk
+CR
 dk
 dk
 dk
@@ -31894,26 +32296,7 @@ dk
 dk
 dk
 dk
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
+dk
 CR
 CR
 CR
@@ -32054,29 +32437,29 @@ dk
 dk
 dk
 dk
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+CR
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
+dk
 CR
 CR
 fv

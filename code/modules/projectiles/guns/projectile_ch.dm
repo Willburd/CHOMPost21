@@ -454,9 +454,6 @@
 	. = ..()
 	if(manual_chamber)
 		verbs |= /obj/item/gun/projectile/verb/change_firemode
-
-/obj/item/gun/projectile/Initialize(mapload)
-	. = ..()
 	update_icon() // Outpost 21 edit - overlay runtime fix
 
 /obj/item/gun/projectile/verb/change_firemode()

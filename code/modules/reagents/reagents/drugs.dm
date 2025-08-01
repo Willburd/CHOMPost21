@@ -274,7 +274,7 @@
 
 	M.fear = max((M.fear - 3),0)
 	// Outpost 21 edit begin - calm anxiety
-	M.jitteriness = max((M.jitteriness - 2),0)
+	M.make_jittery(-2)
 	M.stuttering = max((M.stuttering - 2),0)
 	// Outpost 21 edit end
 
@@ -293,7 +293,7 @@
 
 	M.fear = max((M.fear - 6),0)
 	// Outpost 21 edit begin - calm anxiety
-	M.jitteriness = max((M.jitteriness - 2),0)
+	M.make_jittery(-2)
 	M.stuttering = max((M.stuttering - 2),0)
 	// Outpost 21 edit end
 	if(prob(5) && prob_proc == TRUE)
@@ -316,6 +316,6 @@
 	..()
 
 	M.fear = max((M.fear - 3),0)
-	M.jitteriness = max((M.jitteriness - 2),0)
+	M.make_jittery(-2)
 	M.stuttering = max((M.stuttering - 2),0)
 // Outpost 21 edit end

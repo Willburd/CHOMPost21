@@ -1698,6 +1698,10 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/power/breakerbox{
+	name = "Engine Priming Breaker";
+	RCon_tag = "Engine Priming Breaker"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "ej" = (
@@ -6633,6 +6637,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "tx" = (
@@ -10860,6 +10867,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)

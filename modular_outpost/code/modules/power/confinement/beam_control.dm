@@ -9,7 +9,6 @@
 	VAR_PRIVATE/found_dir = 0
 	VAR_PRIVATE/datum/confinement_pulse_data/data
 	VAR_PRIVATE/has_gen = FALSE
-	VAR_PRIVATE/pulse_enabled = FALSE
 	VAR_PRIVATE/calibration_lock = FALSE
 	VAR_PRIVATE/last_temp = 0
 	VAR_PRIVATE/last_max = 0
@@ -20,6 +19,11 @@
 
 	VAR_PRIVATE/record_size = 25
 	VAR_PRIVATE/list/history
+
+	VAR_PRIVATE/current_x = -1
+	VAR_PRIVATE/current_y = -1
+
+	var/pulse_enabled = FALSE
 
 /obj/structure/confinement_beam_generator/control_box/Initialize(mapload)
 	. = ..()
@@ -101,13 +105,16 @@
 
 /obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, var/mhealth = 100)
 	SHOULD_NOT_OVERRIDE(TRUE)
-	last_temp = temp
-	last_max = max
+	if(temp >= 0)
+		FLOOR(last_temp = temp,1)
+		last_max = max
 
-	last_health = health
-	max_health = mhealth
+	if(health >= 0)
+		last_health = FLOOR(health,1)
+		max_health = mhealth
 
-	last_watt = val_to_watts(watt)
+	if(watt >= 0)
+		last_watt = val_to_watts(FLOOR(watt,1))
 
 /obj/structure/confinement_beam_generator/control_box/proc/val_to_watts(var/watt)
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -308,8 +315,33 @@
 	data.target_x = x
 	data.target_y = y
 	data.target_z = z
-	data.current_x = data.target_x
-	data.current_y = data.target_y
+	current_x = data.target_x
+	current_y = data.target_y
+
+/obj/structure/confinement_beam_generator/control_box/proc/aim_beam(var/target_x,var/target_y)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	// Move beam location slowly toward target instead of instantly
+	if(prob(40))
+		if(round(target_x,1) < round(current_x,1))
+			current_x--
+		if(round(target_x,1) > round(current_x,1))
+			current_x++
+		if(round(target_y,1) < round(current_y,1))
+			current_y--
+		if(round(target_y,1) > round(current_y,1))
+			current_y++
+	// Make sure the Z levels above an allowed zlevel are ALSO flagged as allowed! It fires from the highest level it can reach!
+	current_x = CLAMP(current_x, 1, world.maxx)
+	current_y = CLAMP(current_y, 1, world.maxy)
+
+/obj/structure/confinement_beam_generator/control_box/proc/aim_turf(var/at_z)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	var/turf/T = locate(current_x,current_y,at_z)
+	return T
+
+/obj/structure/confinement_beam_generator/control_box/proc/on_target(var/target_x,var/target_y)
+	SHOULD_NOT_OVERRIDE(TRUE)
+	return current_x != target_x || current_y != target_y
 
 #undef NOTARG
 #undef NOWATT

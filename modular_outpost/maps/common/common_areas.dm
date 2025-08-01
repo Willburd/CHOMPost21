@@ -15,7 +15,7 @@
 	name = "\improper Arrivals Elevator Shaft"
 	icon_state = "dark128"
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/deathdrop/elevator_shaft
+	base_turf = /turf/simulated/open
 	sound_env = TUNNEL_ENCLOSED
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
@@ -25,7 +25,7 @@
 	name = "\improper Evac Elevator Shaft"
 	icon_state = "dark128"
 	ambience = AMBIENCE_FOREBODING
-	base_turf = /turf/simulated/deathdrop/elevator_shaft
+	base_turf = /turf/simulated/open
 	sound_env = TUNNEL_ENCLOSED
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
@@ -74,7 +74,7 @@
 	ambience = AMBIENCE_FOREBODING
 	music = 'sound/ambience/ambimine.ogg'
 	requires_power = TRUE
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 //Hallways... I guess?
 /area/muriki/processor/hall
@@ -373,7 +373,7 @@
 
 /area/muriki/septic
 	name = "\improper Septic Tank"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open/muriki
 	icon_state = "green"
 	color_grading = COLORTINT_DARK
 
@@ -838,7 +838,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = FALSE
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 /area/engineering/atmos/tank_storage
 	name = "\improper Atmospherics Secure Storage"
@@ -1107,6 +1107,11 @@
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "redblatri"
 
+/area/muriki/grounds/sec/garage_entrance
+	name = "\improper Security Garage Entrance"
+	icon_state = "cyablatri"
+	base_turf = /turf/simulated/open/muriki
+
 /area/muriki/grounds/med
 	name = "\improper Facility Near Medical"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
@@ -1131,6 +1136,11 @@
 	name = "\improper Tram Line Edge"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "redwhicir"
+
+/area/muriki/grounds/tramborder/garage
+	name = "\improper Medical Garage Entrance"
+	base_turf = /turf/simulated/open/muriki
+	icon_state = "purblatri"
 
 /area/muriki/grounds/tramlineeast
 	name = "\improper Eastern Tram Line"
@@ -1420,6 +1430,7 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 	outdoors = TRUE
+	base_turf = /turf/simulated/open/muriki
 
 /area/muriki/skyline/east
 	name = "\improper Eastern Facility Airspace"
@@ -1448,7 +1459,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_UNDERDARK
 
 //Moon riiiiver
 /area/mine/explored/muriki/river
@@ -1474,6 +1485,7 @@
 
 /area/mine/explored/muriki/river/hole
 	name = "\improper River Cave-in"
+	base_turf = /turf/simulated/open/muriki
 
 /area/mine/explored/muriki/river/end
 	name = "\improper River Falls"
@@ -1663,6 +1675,62 @@
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "deckmaint1"
 	use_emergency_overlay = TRUE
+
+//
+// Collapsed underdark entrances ------------------------------------------------------------
+//
+/area/mine/unexplored/muriki/cave/underdark_pit
+	name = "\improper Collapsed Cavern"
+	icon = 'icons/turf/areas_vr.dmi'
+	icon_state = "deckmaint1"
+	base_turf = /turf/simulated/open/muriki
+	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	color_grading = COLORTINT_UNDERDARK
+
+/area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste
+	name = "\improper South West Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/south_civ
+	name = "\improper Southern Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ
+	name = "\improper Eastern Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/medical_access
+	name = "\improper Medical Emergency Cavern Access"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/central_eng
+	name = "\improper Engineering Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/east_sci
+	name = "\improper North Eastern Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer
+	name = "\improper North West Collapsed Cavern"
+
+/area/mine/unexplored/muriki/cave/shelter
+	name = "\improper Cavern Shelter"
+	icon_state = "deckmaint1"
+	base_turf = /turf/simulated/open/muriki
+	sound_env = SOUND_ENVIRONMENT_BATHROOM
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	color_grading = COLORTINT_DIM
+
+/area/mine/unexplored/muriki/cave/shelter/north_west_far
+	name = "\improper Far North Western Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/north_west
+	name = "\improper North Western Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/north
+	name = "\improper Northern Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/north_east
+	name = "\improper North Eastern Cavern Shelter"
+
+/area/mine/unexplored/muriki/cave/shelter/east
+	name = "\improper Eastern Cavern Shelter"
 
 //
 // Medical ------------------------------------------------------------
@@ -2471,9 +2539,9 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/offworld/asteroidyard/station/telecomms
-	name = "\improper Reclamation Yard Telecomms Satellite"
+	name = "\improper Reclamation Yard Telecomms"
 	icon_state = "tcomsatlob"
-	sound_env = LARGE_ENCLOSED
+	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
@@ -2698,7 +2766,7 @@
 	sound_env = SMALL_ENCLOSED
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 	requires_power = FALSE
-	color_grading = COLORTINT_DARK
+	color_grading = COLORTINT_DIM
 
 
 /area/vehicle_interior/heavyarmor_carrier_A

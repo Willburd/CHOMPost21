@@ -142,6 +142,8 @@
 		verbs -= /obj/item/gun/verb/give_dna
 		verbs -= /obj/item/gun/verb/allow_dna
 
+	AddElement(/datum/element/sellable/gun)
+
 /obj/item/gun/update_twohanding()
 	if(one_handed_penalty)
 		var/mob/living/M = loc

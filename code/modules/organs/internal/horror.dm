@@ -5,6 +5,7 @@
 	decays = FALSE
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 /obj/item/organ/internal/appendix/horror/Initialize(mapload)
 	. = ..()
 	adjust_scale(1.5,1.5)
@@ -25,6 +26,7 @@
 	decays = FALSE
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/eyes/horror/process()
 	..()
@@ -49,6 +51,7 @@
 	decays = FALSE
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/heart/horror/process()
 	..()
@@ -72,6 +75,7 @@
 	var/escaping_attempts = 0
 	var/entering_vent = FALSE
 	var/obj/machinery/atmospherics/unary/vent_pump/entry_vent
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/intestine/horror/process()
 	..()
@@ -116,6 +120,7 @@
 	decays = FALSE
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/kidneys/horror/process()
 	..()
@@ -137,6 +142,7 @@
 	decays = FALSE
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/liver/horror/process()
 	..()
@@ -158,6 +164,7 @@
 	decays = FALSE
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/lungs/horror/process()
 	..()
@@ -178,6 +185,7 @@
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
 	spleen_efficiency = 5
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/spleen/horror/process()
 	..()
@@ -196,6 +204,7 @@
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
 	var/spider_chance = 10 //for admemes
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/stomach/horror/process()
 	..()
@@ -226,6 +235,7 @@
 	will_assist_languages = list(LANGUAGE_DAEMON)
 	var/speak_chance = 25 //25% chance to speak Daemon every 10 ticks
 	var/datum/language/daemon //Storage for demon language so we don't have to constantly set it.
+	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
 
 /obj/item/organ/internal/voicebox/horror/Initialize(mapload)
 	. = ..()
