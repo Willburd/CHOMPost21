@@ -589,7 +589,7 @@
 /area/offworld/asteroidyard/external)
 "br" = (
 /obj/machinery/door/airlock/command{
-	name = "Teleport Access";
+	name = "Telecomms Relay";
 	req_one_access = list(1,5,10,19,31,47,48,52)
 	},
 /obj/structure/cable/orange{
