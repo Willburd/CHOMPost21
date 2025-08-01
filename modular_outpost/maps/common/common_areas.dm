@@ -2539,9 +2539,9 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/offworld/asteroidyard/station/telecomms
-	name = "\improper Reclamation Yard Telecomms Satellite"
+	name = "\improper Reclamation Yard Telecomms"
 	icon_state = "tcomsatlob"
-	sound_env = LARGE_ENCLOSED
+	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 

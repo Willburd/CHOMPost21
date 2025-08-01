@@ -10,7 +10,14 @@
 //efine Z_LEVEL_OUTPOST_SURVEY	 					9
 #define Z_LEVEL_OUTPOST_VR		 					8
 #define Z_LEVEL_OUTPOST_CONFINEMENTBEAM				9
+#define Z_LEVEL_ROGUEMINE_1							10
+#define Z_LEVEL_ROGUEMINE_2							11
 //Ensure these stay updated with map and z-level changes - Ignus
+
+// Lateload Z level names
+#define LATELOAD_Z_ROGUEMINE_1 "Asteroid Belt 1"
+#define LATELOAD_Z_ROGUEMINE_2 "Asteroid Belt 2"
+
 
 /datum/map/outpost
 	name = "Outpost 21"
@@ -228,6 +235,10 @@
 
 	planet_datums_to_make = list(/datum/planet/muriki)
 
+	lateload_z_levels = list(
+		list(LATELOAD_Z_ROGUEMINE_1,LATELOAD_Z_ROGUEMINE_2)
+		)
+
 	overmap_z = Z_LEVEL_OUTPOST_MISC
 	map_levels = list(
 			Z_LEVEL_OUTPOST_DEEPDARK,
@@ -259,8 +270,15 @@
 	// Zlevels with rare ores
 	rare_ore_levels = list(
 		Z_LEVEL_OUTPOST_ASTEROID,
-		Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+		Z_LEVEL_OUTPOST_CONFINEMENTBEAM,
+		Z_LEVEL_ROGUEMINE_1,
+		Z_LEVEL_ROGUEMINE_2
 	)
+
+	belter_docked_z = 		list(Z_LEVEL_OUTPOST_ASTEROID)
+	belter_transit_z =	 	list(Z_LEVEL_OUTPOST_CENTCOM)
+	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
+									Z_LEVEL_ROGUEMINE_2)
 
 	common_ores = list(ORE_MARBLE = 8, ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 5, ORE_URANIUM = 1, ORE_PLATINUM = 2, ORE_HEMATITE = 10, ORE_RUTILE = 5, ORE_CARBON = 20, ORE_DIAMOND = 1, ORE_GOLD = 3, ORE_SILVER = 2, ORE_PHORON = 0, ORE_LEAD = 15, ORE_VOPAL = 0, ORE_VERDANTIUM = 0, ORE_PAINITE = 0)
 	rare_ores = list(ORE_MARBLE = 5, ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5, ORE_URANIUM = 25, ORE_PLATINUM = 25, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 25, ORE_DIAMOND = 8, ORE_GOLD = 25, ORE_SILVER = 10, ORE_PHORON = 25, ORE_LEAD = 15, ORE_VOPAL = 1, ORE_VERDANTIUM = 3, ORE_PAINITE = 1)

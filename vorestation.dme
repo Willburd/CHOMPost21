@@ -5487,7 +5487,6 @@
 #include "modular_outpost\maps\common\shuttles.dm"
 #include "modular_outpost\maps\outpost_21\outpost_21.dm"
 #include "modular_outpost\maps\overmap\space_pois\space_pois.dm"
-#include "modular_outpost\maps\submaps\base.dm"
 #include "modular_outpost\maps\submaps\cargoyard\cargoyard.dm"
 #include "modular_outpost\maps\submaps\deepdark\deepdark.dm"
 #include "modular_outpost\maps\submaps\orbitalyard\orbitalyard.dm"
