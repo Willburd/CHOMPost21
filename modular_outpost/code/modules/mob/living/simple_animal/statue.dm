@@ -45,10 +45,10 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	maxbodytemp = 9000
 
 	movement_cooldown = -1 // Very fast
-	base_attack_cooldown = 1 SECOND
-	harm_intent_damage = 60
-	melee_damage_lower = 50
-	melee_damage_upper = 70
+	base_attack_cooldown = 0.5 SECOND
+	harm_intent_damage = 80
+	melee_damage_lower = 70
+	melee_damage_upper = 90
 	attacktext = "clawed"
 	attack_sound = 'sound/hallucinations/growl1.ogg'
 
