@@ -5495,7 +5495,6 @@
 #include "modular_outpost\code\modules\security levels\lockdown_button.dm"
 #include "modular_outpost\code\modules\spells\spellbook.dm"
 #include "modular_outpost\code\modules\surgery\other.dm"
-#include "modular_outpost\code\modules\vehicles\cargo_train.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\controller.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\heavyarmor_carrier.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\heavyarmor_medic.dm"

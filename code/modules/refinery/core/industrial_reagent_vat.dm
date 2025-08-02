@@ -18,6 +18,13 @@
 	default_apply_parts()
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
+	GLOB.vats_to_rain_into += src // Outpost 21 edit - Rainy vats
+
+// Outpost 21 edit begin - Rainy vats
+/obj/machinery/reagent_refinery/vat/Destroy()
+	GLOB.vats_to_rain_into -= src
+	. = ..()
+// Outpost 21 edit end
 
 /obj/machinery/reagent_refinery/vat/process()
 	if(buckled_mobs && buckled_mobs.len && reagents.total_volume > 0)
