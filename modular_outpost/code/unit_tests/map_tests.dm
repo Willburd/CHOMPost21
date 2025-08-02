@@ -179,7 +179,8 @@
 		/area/ai_cyborg_station,
 		/area/ai_upload_foyer,
 		/area/ai_sat/fore_airlock,
-		/area/ai_server_room
+		/area/ai_server_room,
+		/area/quartermaster/mining/ore_silo
 	)
 
 	var/list/does_not_have_displays = list(
