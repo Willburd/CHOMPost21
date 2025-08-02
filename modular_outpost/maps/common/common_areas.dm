@@ -352,6 +352,13 @@
 	base_turf = /turf/simulated/open
 	flags = AREA_FIRE_SUPRESSION
 
+/area/quartermaster/mining/ore_silo
+	name = "\improper Ore Silo"
+	ambience = AMBIENCE_MAINTENANCE
+	base_turf = /turf/simulated/open
+	flags = AREA_FIRE_SUPRESSION
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
 /area/quartermaster/mining/firstaid
 	name = "\improper Mining First Aid"
 	icon_state = "medbay2"
