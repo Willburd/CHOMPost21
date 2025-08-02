@@ -8518,6 +8518,11 @@
 "aoD" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/corepower)
+"aoE" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/lab)
 "aoS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -16627,10 +16632,10 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 30
 	},
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "cTd" = (
@@ -17528,13 +17533,12 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
 	},
-/obj/machinery/computer/rdconsole/core{
-	dir = 8;
-	pixel_x = 5
-	},
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32
+	},
+/obj/machinery/computer/rdconsole_tg{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -24752,10 +24756,10 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
 	},
-/obj/machinery/r_n_d/protolathe,
 /obj/machinery/ai_status_display{
 	pixel_x = 32
 	},
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "fDX" = (
@@ -29920,10 +29924,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/machinery/computer/rdconsole/cargo{
-	dir = 4;
-	pixel_x = -4
-	},
+/obj/machinery/rnd/production/protolathe/department/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "hlU" = (
@@ -33549,7 +33550,6 @@
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Tool Store"
 	},
-/obj/machinery/computer/rdconsole/engineering,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "ilv" = (
@@ -48955,16 +48955,9 @@
 /obj/item/circuitboard/rdconsole{
 	pixel_y = 2
 	},
-/obj/item/circuitboard/destructive_analyzer,
-/obj/item/circuitboard/protolathe{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/item/circuitboard/rdserver{
-	pixel_x = 6;
-	pixel_y = -4
-	},
 /obj/effect/decal/cleanable/dirt,
+/obj/item/circuitboard/rdconsole,
+/obj/item/circuitboard/rdservercontrol,
 /turf/simulated/floor/tiled/milspec,
 /area/storage/tech)
 "mVa" = (
@@ -50375,8 +50368,8 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 6
 	},
-/obj/machinery/r_n_d/destructive_analyzer,
 /obj/machinery/light,
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "nqW" = (
@@ -56231,7 +56224,6 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
-/obj/machinery/r_n_d/protolathe/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "ply" = (
@@ -75031,7 +75023,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
-/obj/machinery/r_n_d/protolathe/engineering,
+/obj/machinery/rnd/production/protolathe/department/engineering,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "vbI" = (
@@ -136554,7 +136546,7 @@ pbv
 pbv
 pbv
 iss
-pDJ
+aoE
 lru
 akM
 nTO
