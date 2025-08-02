@@ -31188,7 +31188,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
-/obj/machinery/reagentgrinder/industrial{
+/obj/machinery/reagent_refinery/grinder{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -42572,7 +42572,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
 	},
-/obj/machinery/reagentgrinder/industrial,
+/obj/machinery/reagent_refinery/grinder,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "uuD" = (
