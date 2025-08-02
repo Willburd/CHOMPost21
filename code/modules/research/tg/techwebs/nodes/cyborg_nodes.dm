@@ -168,7 +168,7 @@
 	description = "Implants designed to operate seamlessly without active user input, enhancing various physiological functions or providing continuous benefits."
 	prereq_ids = list(TECHWEB_NODE_AUGMENTATION)
 	design_ids = list(
-		"implant_backup",
+		// "implant_backup", // Outpost 21 edit - Backup removal
 		// "skill_station",
 		// "implant_trombone",
 		// "implant_chem",

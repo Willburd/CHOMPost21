@@ -225,6 +225,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL
 
+/* Outpost 21 edit - Nif removal
 /datum/design_techweb/nifrepairtool
 	name = "adv. NIF repair tool"
 	desc = "A tool to repair NIF implants."
@@ -237,7 +238,7 @@
 		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_MEDICAL
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
-
+*/
 
 /datum/design_techweb/mass_spectrometer
 	name = "Mass Spectrometer"

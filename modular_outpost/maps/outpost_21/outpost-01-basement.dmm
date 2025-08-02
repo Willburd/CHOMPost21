@@ -17131,10 +17131,10 @@
 	},
 /obj/structure/table/standard,
 /obj/machinery/recharger{
-	pixel_x = 6
+	pixel_x = -5
 	},
 /obj/machinery/recharger{
-	pixel_x = -5
+	pixel_x = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)

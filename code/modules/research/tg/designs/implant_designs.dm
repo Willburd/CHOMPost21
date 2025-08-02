@@ -1,6 +1,7 @@
 /datum/design_techweb/implant
 	materials = list(MAT_STEEL = 50, MAT_GLASS = 50)
 
+/* Outpost 21 edit - backup removal
 /datum/design_techweb/implant/backup
 	name = "Backup implant"
 	id = "implant_backup"
@@ -12,6 +13,7 @@
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_HEALTH
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
+*/
 
 /datum/design_techweb/implant/sizecontrol
 	name = "Size control implant"
@@ -190,6 +192,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
 
+/* Outpost 21 edit - Nif removal
 /datum/design_techweb/nif
 	name = "nanite implant framework (NIF)"
 	id = "nif"
@@ -213,3 +216,4 @@
 		RND_CATEGORY_CYBERNETICS + RND_SUBCATEGORY_CYBERNETICS_IMPLANTS_MISC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
+*/
