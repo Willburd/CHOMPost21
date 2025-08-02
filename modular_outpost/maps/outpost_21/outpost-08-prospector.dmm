@@ -2886,13 +2886,6 @@
 "sX" = (
 /turf/simulated/floor/tiled/kafel_full/gray,
 /area/space)
-"sZ" = (
-/obj/machinery/r_n_d/circuit_imprinter,
-/obj/structure/reagent_dispensers/acid{
-	pixel_x = 30
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
 "te" = (
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/chemistry,
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/chemistry,
@@ -4121,7 +4114,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/space)
 "AH" = (
-/obj/machinery/r_n_d/destructive_analyzer,
+/obj/machinery/computer/rdconsole_tg{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "AJ" = (
@@ -6276,10 +6271,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/space)
 "Ns" = (
-/obj/machinery/computer/rdconsole/core{
-	dir = 8;
-	pixel_x = 5
-	},
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "Ny" = (
@@ -7514,7 +7506,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "Va" = (
-/obj/machinery/r_n_d/protolathe,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/dark,
 /area/space)
 "Vb" = (
@@ -47047,8 +47039,8 @@ gb
 wj
 CA
 CA
-if
 CA
+if
 Pj
 rs
 Fl
@@ -47207,7 +47199,7 @@ lY
 XP
 TV
 wj
-sZ
+CA
 Va
 Ns
 AH

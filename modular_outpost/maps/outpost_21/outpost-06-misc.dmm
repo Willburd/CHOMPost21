@@ -1469,7 +1469,7 @@
 /turf/unsimulated/beach/coastline,
 /area/beach)
 "eL" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -6571,7 +6571,7 @@
 	},
 /area/shuttle/skipjack)
 "Ad" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -7759,7 +7759,7 @@
 	},
 /area/wizard_station)
 "HM" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"

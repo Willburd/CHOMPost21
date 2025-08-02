@@ -2372,13 +2372,11 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/hazard)
 "aeM" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/dark{
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
 	nitrogen = 500;
 	oxygen = 0;
 	temperature = 80
@@ -12413,27 +12411,6 @@
 /obj/structure/window/reinforced/tinted,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/scilower)
-"awa" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/bed/chair/office/light{
-	dir = 1
-	},
-/obj/effect/landmark/start{
-	name = "Roboticist"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/medical/robotics)
 "awb" = (
 /turf/simulated/floor/wood/alt,
 /area/maintenance/eng)
@@ -12505,7 +12482,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "awi" = (
-/obj/machinery/r_n_d/server/robotics,
+/obj/machinery/rnd/server/master,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -14207,7 +14184,7 @@
 	},
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /turf/simulated/floor/flesh/turfpack/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "azq" = (
 /obj/machinery/door/blast/multi_tile/three_tile_ver{
 	id = "procatmodoor";
@@ -17149,9 +17126,15 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/xenobiology/burn)
 "aEG" = (
-/obj/machinery/computer/rdconsole/robotics,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
+	},
+/obj/structure/table/standard,
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
+/obj/machinery/recharger{
+	pixel_x = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
@@ -17565,7 +17548,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/mine/explored/muriki/cave/sci/east_access)
 "aFq" = (
-/obj/machinery/r_n_d/server/core,
+/obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
 	nitrogen = 500;
@@ -26259,7 +26242,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/chem_storage)
 "aVc" = (
-/obj/machinery/computer/rdconsole/medical,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
@@ -26272,11 +26254,11 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/obj/machinery/r_n_d/protolathe/medical,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
 	pixel_y = 30
 	},
+/obj/machinery/rnd/production/protolathe/department/medical,
 /turf/simulated/floor/tiled/dark,
 /area/medical/chem_storage)
 "aVe" = (
@@ -48027,6 +48009,36 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"bJb" = (
+/obj/effect/landmark/start{
+	name = "Roboticist"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/medical/robotics)
+"bJc" = (
+/turf/simulated/wall/durasteel,
+/area/muriki/processor/hall/entrance)
+"bJd" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/effect/floor_decal/flesh{
+	dir = 1
+	},
+/obj/effect/floor_decal/flesh,
+/turf/simulated/floor{
+	temperature = 321.5
+	},
+/area/muriki/processor/hall/entrance)
+"bJe" = (
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/server)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -48924,7 +48936,7 @@
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mine/claymore,
 /turf/simulated/floor/flesh/turfpack/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "cmL" = (
 /obj/structure/cable/orange{
 	icon_state = "1-8"
@@ -55320,7 +55332,6 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "fZt" = (
@@ -59301,10 +59312,10 @@
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "iHo" = (
-/obj/machinery/mecha_part_fabricator/pros,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "iHy" = (
@@ -72233,13 +72244,13 @@
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/maintenance/spine/civ)
 "qEZ" = (
-/obj/machinery/mecha_part_fabricator,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "qFc" = (
@@ -74042,10 +74053,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
-/obj/structure/reagent_dispensers/acid{
-	pixel_y = 32
-	},
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "rAa" = (
@@ -80193,7 +80201,7 @@
 "vuL" = (
 /obj/machinery/porta_turret/ai_defense,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor/hall/entrance)
 "vvf" = (
 /obj/structure/railing{
 	dir = 4
@@ -95430,11 +95438,11 @@ aac
 aac
 aac
 aac
-avy
-avy
-ayk
-avy
-aad
+ahR
+ahR
+bJd
+ahR
+bJc
 aad
 aad
 aad
@@ -95593,10 +95601,10 @@ aac
 aac
 aNd
 vuL
-axj
-ayj
-axj
-aad
+aAU
+azx
+aAU
+bJc
 aad
 aad
 lHb
@@ -95754,11 +95762,11 @@ aac
 aac
 aac
 aad
-aad
+bJc
 cmH
-ayj
+azx
 azp
-aad
+bJc
 aad
 qhb
 lHb
@@ -95915,12 +95923,12 @@ aac
 aac
 aad
 aad
-aad
-aad
+bJc
+bJc
 aAU
 azx
 azq
-aad
+bJc
 iqz
 lHb
 efJ
@@ -96077,8 +96085,8 @@ aad
 aad
 aad
 aad
-aad
-aad
+bJc
+bJc
 axk
 ayn
 axm
@@ -96239,8 +96247,8 @@ aad
 aad
 aad
 aad
-aad
-aad
+bJc
+bJc
 axl
 aRv
 azr
@@ -106312,8 +106320,8 @@ aRh
 bcC
 auS
 aEG
-awa
-lUx
+lrb
+bJb
 lUx
 aut
 tiV
@@ -134936,7 +134944,7 @@ pmN
 pmN
 aeU
 aeM
-adz
+bJe
 adz
 esW
 guV
