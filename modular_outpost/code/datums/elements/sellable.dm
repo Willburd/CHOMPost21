@@ -121,15 +121,15 @@
 
 	// Special mech multipliers
 	if(istype(exo,/obj/mecha/combat/phazon))
-		amount *= 3
+		amount *= 30
 	else if(istype(exo,/obj/mecha/combat/fighter)) // More niche
-		amount *= 1.15
+		amount *= 11
 	else if(istype(exo,/obj/mecha/medical))
-		amount *= 1.25
+		amount *= 12
 	else if(istype(exo,/obj/mecha/combat))
-		amount *= 1.5
+		amount *= 10
 	else if(istype(exo,/obj/mecha/micro)) // Teeny weenies!
-		amount *= 0.85
+		amount *= 8.5
 	else
 		amount *= 1
 
