@@ -61,7 +61,7 @@
 
 /turf/simulated/floor/gas_crack/oxygen
 	gas_type = list(GAS_O2)
-	oxygen = 500
+	oxygen = 2500 // Outpost 21 edit
 
 /turf/simulated/floor/gas_crack/oxygen/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -74,7 +74,7 @@
 
 /turf/simulated/floor/gas_crack/nitrogen
 	gas_type = list(GAS_N2)
-	nitrogen = 500
+	nitrogen = 2500 // Outpost 21 edit
 
 /turf/simulated/floor/gas_crack/nitrogen/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -86,7 +86,7 @@
 
 /turf/simulated/floor/gas_crack/carbon
 	gas_type = list(GAS_CO2)
-	carbon_dioxide = 500
+	carbon_dioxide = 2500 // Outpost 21 edit
 
 /turf/simulated/floor/gas_crack/carbon/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -98,8 +98,7 @@
 
 /turf/simulated/floor/gas_crack/nitro
 	gas_type = list(GAS_N2O)
-	nitrogen = 250
-	carbon_dioxide = 250
+	nitrous_oxide = 2500 // Outpost 21 edit
 
 /turf/simulated/floor/gas_crack/nitro/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -112,7 +111,7 @@
 
 /turf/simulated/floor/gas_crack/phoron
 	gas_type = list(GAS_PHORON)
-	phoron = 500
+	phoron = 2500 // Outpost 21 edit
 
 /turf/simulated/floor/gas_crack/phoron/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -124,8 +123,8 @@
 
 /turf/simulated/floor/gas_crack/air
 	gas_type = list(GAS_O2,GAS_N2)
-	oxygen = 250
-	nitrogen = 250
+	oxygen = 2500 // Outpost 21 edit
+	nitrogen = 2500 // Outpost 21 edit
 
 /turf/simulated/floor/gas_crack/air/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -138,9 +137,9 @@
 
 
 /turf/simulated/floor/gas_crack/terrible
-	gas_type = list(GAS_CO2,GAS_PHORON,GAS_N2O)
-	carbon_dioxide = 250
-	phoron = 250
+	gas_type = list(GAS_PHORON,GAS_CH4) // Outpost 21 edit
+	methane = 2500 // Outpost 21 edit
+	phoron = 2500 // Outpost 21 edit
 
 /turf/simulated/floor/gas_crack/terrible/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()

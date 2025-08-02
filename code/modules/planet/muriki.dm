@@ -123,7 +123,7 @@ var/datum/planet/muriki/planet_muriki = null
 /datum/weather/muriki/proc/fill_vats(var/global_chance,var/single_chance,var/amount)
 	if(!prob(global_chance))
 		return
-	for(var/obj/machinery/reagent_refinery/vat/V in vats_to_rain_into)
+	for(var/obj/machinery/reagent_refinery/vat/V in GLOB.vats_to_rain_into)
 		if(V.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(V)
 			if(!T.is_outdoors())

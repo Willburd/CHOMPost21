@@ -1623,3 +1623,6 @@ GLOBAL_LIST(chamelion_mask_choices)
 GLOBAL_LIST(chamelion_belt_choices)
 //Accessory
 GLOBAL_LIST(chamelion_accessory_choices)
+
+// Outpost 21 edit - rainy vats
+GLOBAL_LIST_EMPTY(vats_to_rain_into)
