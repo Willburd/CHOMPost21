@@ -1,4 +1,4 @@
-/datum/reagents/proc/handle_distilling() // Outpost 21 edit - this is just a proc instead of a decendant override
+/datum/reagents/distilling/handle_reactions()
 	if(QDELETED(my_atom))
 		return FALSE
 	if(my_atom.flags & NOREACT)

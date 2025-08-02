@@ -115,21 +115,37 @@
 		amount += MC.integrity
 		amount -= 100 * MC.charge_cost_mod
 
+	// Extra equipment
+	for(var/E in exo.hull_equipment)
+		amount += 3
+
+	for(var/E in exo.weapon_equipment)
+		amount += 3
+
+	for(var/E in exo.utility_equipment)
+		amount += 2
+
+	for(var/E in exo.universal_equipment)
+		amount += 1
+
+	for(var/E in exo.special_equipment)
+		amount += 4
+
 	// Don't bother somehow...
 	if(amount < 0)
 		return 0
 
 	// Special mech multipliers
 	if(istype(exo,/obj/mecha/combat/phazon))
-		amount *= 3
+		amount *= 30
 	else if(istype(exo,/obj/mecha/combat/fighter)) // More niche
-		amount *= 1.15
+		amount *= 8
 	else if(istype(exo,/obj/mecha/medical))
-		amount *= 1.25
+		amount *= 11
 	else if(istype(exo,/obj/mecha/combat))
-		amount *= 1.5
+		amount *= 6
 	else if(istype(exo,/obj/mecha/micro)) // Teeny weenies!
-		amount *= 0.85
+		amount *= 3.5
 	else
 		amount *= 1
 
@@ -168,56 +184,3 @@
 			amount /= 20
 
 	return FLOOR(amount,5)
-
-
-
-
-
-// Refinery chemical tanks (WIP)
-/datum/element/sellable/trolley_tank
-	sale_info = "This can be sold on the cargo shuttle if filled with a single reagent."
-	needs_crate = FALSE
-
-/datum/element/sellable/trolley_tank/sell_error(obj/source)
-	var/obj/vehicle/train/trolley_tank/tank = source
-	if(!tank.reagents || tank.reagents.reagent_list.len == 0)
-		return "Error: Product was not filled with any reagents to sell. Payment rendered null under terms of agreement."
-	var/min_tank = (CARGOTANKER_VOLUME - 100)
-	if(tank.reagents.total_volume < min_tank)
-		return "Error: Product was improperly packaged. Send full tanks only (minimum [min_tank] units). Payment rendered null under terms of agreement."
-	if(tank.reagents.reagent_list.len > 1)
-		return "Error: Product was improperly refined. Send purified mixtures only (too many reagents in tank). Payment rendered null under terms of agreement."
-	return null
-
-/datum/element/sellable/trolley_tank/calculate_sell_value(obj/source)
-	var/obj/vehicle/train/trolley_tank/tank = source
-
-	// Update export values
-	var/datum/reagent/R = tank.reagents.reagent_list[1]
-	var/reagent_value = FLOOR(R.volume * R.supply_conversion_value, 1)
-
-	return reagent_value
-
-/datum/element/sellable/trolley_tank/calculate_sell_quantity(obj/source)
-	var/obj/vehicle/train/trolley_tank/tank = source
-	if(!tank.reagents || tank.reagents.reagent_list.len == 0)
-		return "0u "
-	var/datum/reagent/R = tank.reagents.reagent_list[1]
-	return "[R.name] [tank.reagents.total_volume]u "
-
-/datum/element/sellable/trolley_tank/sell(obj/source, var/datum/exported_crate/EC, var/in_crate)
-	. = ..()
-	var/obj/vehicle/train/trolley_tank/tank = source
-	if(. && tank.reagents?.reagent_list?.len)
-		// Update end round data, has nothing to do with actual cargo sales
-		var/datum/reagent/R = tank.reagents.reagent_list[1]
-		var/reagent_value = FLOOR(R.volume * R.supply_conversion_value, 1)
-		if(R.industrial_use)
-			if(isnull(GLOB.refined_chems_sold[R.industrial_use]))
-				var/list/data = list()
-				data["units"] = FLOOR(R.volume, 1)
-				data["value"] = reagent_value
-				GLOB.refined_chems_sold[R.industrial_use] = data
-			else
-				GLOB.refined_chems_sold[R.industrial_use]["units"] += FLOOR(R.volume, 1)
-				GLOB.refined_chems_sold[R.industrial_use]["value"] += reagent_value

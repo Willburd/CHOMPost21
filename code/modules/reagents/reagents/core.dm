@@ -16,6 +16,8 @@
 	glass_desc = "Are you sure this is tomato juice?"
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
 /datum/reagent/blood/initialize_data(var/newdata)
 	..()
@@ -231,6 +233,9 @@
 	color = "#0050F0"
 	mrate_static = TRUE
 
+	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
+
 /datum/reagent/antibodies/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(src.data)
 		M.antibodies |= src.data[REAGENT_ID_ANTIBODIES]
@@ -251,6 +256,8 @@
 	glass_desc = "The father of all refreshments."
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+	supply_conversion_value = REFINERYEXPORT_VALUE_NO
+	industrial_use = REFINERYEXPORT_REASON_RAW
 
 /datum/reagent/water/touch_turf(var/turf/simulated/T)
 	if(!istype(T))
@@ -350,6 +357,8 @@
 	glass_desc = "Unless you are an industrial tool, this is probably not safe for consumption."
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_PHORONGAS // Outpost 21 edit - PPE reagents
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_RAW
 
 /datum/reagent/fuel/touch_turf(var/turf/T, var/amount)
 	..()

@@ -8,6 +8,10 @@
 	var/heat_time = 15
 	var/current_temp = T0C
 
+/obj/machinery/bunsen_burner/Initialize(mapload)
+	. = ..()
+	create_reagents(1,/datum/reagents/distilling)
+
 /obj/machinery/bunsen_burner/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/reagent_containers))
 		if(held_container)
@@ -76,7 +80,13 @@
 				update_icon()
 				return
 
-		held_container.reagents.handle_distilling()
+		// Slosh and toss
+		reagents.maximum_volume = held_container.reagents.maximum_volume
+		held_container.reagents.trans_to_obj(src,held_container.reagents.total_volume)
+		reagents.handle_reactions()
+		reagents.trans_to_obj(held_container,reagents.total_volume)
+		reagents.clear_reagents()
+
 		// Increase temp till ended by 5 degrees
 		current_temp += 10
 

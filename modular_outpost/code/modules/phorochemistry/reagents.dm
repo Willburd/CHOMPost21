@@ -3,6 +3,8 @@
 	name = REAGENT_SAPOFORMATOR
 	description = "Enough units splashed on the ground would appear to have great cleaning effects"
 	color = "#EEE139"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/sapoformator/touch_turf(var/turf/T, var/volume)
 	if(holder && holder.my_atom)
@@ -49,6 +51,8 @@
 	name = REAGENT_OBSCURITOL
 	description = "Exhibits strange electromagnetic properties"
 	color = "#5D505E"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/obscuritol/touch_turf(var/turf/T, var/volume) //-round(-x) = Ceiling(x)
 	for(var/obj/machinery/light/light in orange(-round(-1 * (volume / 10)), T))
@@ -64,6 +68,8 @@
 	color = "#540E5C"
 	metabolism = 5 * REM
 	overdose = 7
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/oxyphoromin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, 600)
@@ -82,6 +88,8 @@
 	description = "Seems as if it would induce instant, random mutations in a living humanoid"
 	color = "#20E7F5"
 	overdose = 10
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/extreme_mutagen/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -123,6 +131,8 @@
 	id = REAGENT_ID_GENEDRAZINE
 	name = REAGENT_GENEDRAZINE
 	description = "Seems as if it would heal very quickly, but at the cost of genetic damage"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/genedrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -152,6 +162,8 @@
 	description = "Structure indicates it could purge living cells of non-essential reagents"
 	color = "#8C4C3E"
 	var/message_given = FALSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
 /datum/reagent/expulsicol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -192,3 +204,5 @@
 	name = REAGENT_NOCTURNOL
 	description = "Reagent bears strong resemblance to enzymes found in feline eyes"
 	color = "#61E34F"
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_WEAPONS

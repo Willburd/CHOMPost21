@@ -531,6 +531,9 @@
 	if(holder.stat == DEAD)
 		return
 
+	if(holder.key)
+		return
+
 	// nothing special if not a hoarder
 	if(!hoard_items)
 		return
@@ -649,6 +652,9 @@
 	return holder.get_active_hand() || fear_run > 0
 
 /datum/ai_holder/simple_mob/intentional/jil/react_to_attack(atom/movable/attacker, ignore_timers = FALSE)
+	if(holder.key)
+		return FALSE
+
 	if(stance == STANCE_SLEEP) // If we're asleep, try waking up if someone's wailing on us.
 		ai_log("react_to_attack() : AI is asleep. Waking up.", AI_LOG_TRACE)
 		var/mob/living/simple_mob/vore/alienanimals/jil/J = holder

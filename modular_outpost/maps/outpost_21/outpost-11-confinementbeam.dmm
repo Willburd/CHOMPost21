@@ -221,7 +221,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/machinery/computer/rdconsole/engineering,
+/obj/machinery/partslathe,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "aw" = (
@@ -6890,7 +6890,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/machinery/r_n_d/protolathe/engineering,
+/obj/machinery/rnd/production/protolathe/department/engineering,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "uw" = (
@@ -11877,11 +11877,7 @@
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Tool Storage Central"
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
-/obj/structure/reagent_dispensers/acid{
-	pixel_y = 32
-	},
-/obj/item/reagent_containers/glass/beaker/sulphuric,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "JD" = (
@@ -16915,16 +16911,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/starboard_equipment)
-"ZD" = (
-/obj/machinery/partslathe,
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/storage)
 "ZF" = (
 /obj/machinery/power/solar{
 	id = "engroofsolar";
@@ -44205,7 +44191,7 @@ aR
 NX
 JS
 bG
-ZD
+Us
 tz
 AJ
 vm

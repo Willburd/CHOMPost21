@@ -31188,7 +31188,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
-/obj/machinery/reagentgrinder/industrial{
+/obj/machinery/reagent_refinery/grinder{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -33192,7 +33192,6 @@
 /obj/effect/floor_decal/corner/beige/full{
 	dir = 8
 	},
-/obj/machinery/r_n_d/protolathe/service,
 /obj/structure/disposalpipe/trunk{
 	dir = 2
 	},
@@ -37530,16 +37529,6 @@
 	color = "#999999"
 	},
 /area/chapel/main)
-"scN" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 5
-	},
-/obj/machinery/r_n_d/protolathe/service,
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/hydro,
-/area/hydroponics/hallway)
 "sde" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -40915,7 +40904,10 @@
 /area/rnd/xenobiology/xenoflora2)
 "tFW" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/computer/rdconsole/service,
+/obj/machinery/rnd/production/protolathe/department/service,
+/obj/effect/floor_decal/corner/lime{
+	dir = 5
+	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
@@ -41285,17 +41277,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/extrastore)
 "tPw" = (
-/obj/machinery/r_n_d/protolathe/security,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
-/area/security/vacantoffice)
-"tPG" = (
-/obj/machinery/computer/rdconsole/security,
-/obj/effect/floor_decal/corner/red{
-	dir = 5
-	},
+/obj/machinery/rnd/production/protolathe/department/security,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "tPL" = (
@@ -42587,7 +42572,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
 	},
-/obj/machinery/reagentgrinder/industrial,
+/obj/machinery/reagent_refinery/grinder,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "uuD" = (
@@ -46169,7 +46154,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/machinery/computer/rdconsole/service,
+/obj/machinery/rnd/production/protolathe/department/service,
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/janiupstairs)
 "wiN" = (
@@ -88238,7 +88223,7 @@ vTx
 wxi
 abS
 bPB
-tPG
+uxs
 tWt
 tWt
 tWt
@@ -104893,7 +104878,7 @@ kKH
 ctN
 vcw
 tHA
-scN
+qmz
 rAc
 spk
 dfv

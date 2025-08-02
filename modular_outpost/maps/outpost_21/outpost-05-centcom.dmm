@@ -5944,7 +5944,6 @@
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "cVC" = (
-/obj/machinery/r_n_d/server/centcom,
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
@@ -13361,7 +13360,7 @@
 /turf/simulated/floor/lino,
 /area/specialty/redspace)
 "gCu" = (
-/obj/machinery/computer/rdconsole/robotics,
+/obj/machinery/computer/rdconsole_tg,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "gCv" = (
@@ -15255,7 +15254,7 @@
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "hxk" = (
-/obj/machinery/mecha_part_fabricator/pros,
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "hxl" = (
@@ -16641,7 +16640,7 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "ieO" = (
-/obj/machinery/mecha_part_fabricator,
+/obj/machinery/mecha_part_fabricator_tg,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "ifn" = (
@@ -20588,7 +20587,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "kfC" = (
-/obj/machinery/r_n_d/circuit_imprinter,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "kfG" = (
@@ -25980,7 +25979,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/specialty/redspace)
 "nth" = (
-/obj/machinery/r_n_d/circuit_imprinter,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 5
 	},
@@ -30696,7 +30694,6 @@
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "pZd" = (
-/obj/machinery/r_n_d/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/item/reagent_containers/dropper{
 	pixel_y = -4
@@ -42280,7 +42277,6 @@
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = -32
 	},
-/obj/machinery/r_n_d/circuit_imprinter,
 /obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 8

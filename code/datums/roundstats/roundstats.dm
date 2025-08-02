@@ -26,9 +26,9 @@ GLOBAL_VAR_INIT(prey_absorbed_roundstat, 0)		//VOREStation Edit - Obviously
 GLOBAL_VAR_INIT(prey_digested_roundstat, 0)		//VOREStation Edit - Obviously
 GLOBAL_VAR_INIT(items_digested_roundstat, 0)	//VOREStation Edit - Obviously
 GLOBAL_LIST_EMPTY(security_printer_tickets)		//VOREStation Edit
+GLOBAL_LIST_EMPTY(refined_chems_sold)
 GLOBAL_VAR_INIT(landmines_stepped_on_roundstat, 0)	//Outpost21 edit - oh boy
 GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
-
 
 /hook/roundend/proc/RoundTrivia()//bazinga
 	var/list/valid_stats_list = list() //This is to be populated with the good shit
@@ -81,7 +81,6 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 			else
 				good_num = 0
 
-	//VOREStation Add Start - Vore stats lets gooooo
 	if(GLOB.prey_eaten_roundstat > 0)
 		valid_stats_list.Add("Individuals were eaten a total of [GLOB.prey_eaten_roundstat] times today!") //CHOMPEdit
 	if(GLOB.prey_digested_roundstat > 0)
@@ -90,25 +89,7 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 		valid_stats_list.Add("A total of [GLOB.prey_absorbed_roundstat] individuals were absorbed today!")
 	if(GLOB.items_digested_roundstat > 0)
 		valid_stats_list.Add("A total of [GLOB.items_digested_roundstat] items were digested today!")
-	//VOREStation Add End
 
-	// outpost 21 add begin - selling TTVs
-	if(SSsupply.warheads_sold > 0)
-		var/end_dols = SSsupply.warheads_value * SSsupply.points_per_money
-		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
-		valid_stats_list.Add("[SSsupply.warheads_sold] TTV warheads were sold! For a total of: [SSsupply.warheads_value] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
-	// outpost 21 add end
-
-	// outpost 21 add begin - supply points for selling power
-	if(SSsupply.watts_sold >= 1 GIGAWATTS)
-		var/gws = FLOOR(SSsupply.watts_sold / (1 GIGAWATTS),1) // Truncate decimals
-		var/points = FLOOR(SSsupply.watts_sold / SSsupply.points_per_watt,1)
-		var/end_dols = points * SSsupply.points_per_money
-		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
-		valid_stats_list.Add("[gws] gigawatt[gws > 1 ? "s" : ""] of power were sold! For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
-	// outpost 21 add end
-
-	// outpost 21 add begin - supply points for chem sales!
 	var/points = 0
 	var/units = 0
 	if(GLOB.refined_chems_sold && GLOB.refined_chems_sold.len > 0)
@@ -121,11 +102,26 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 			if(GLOB.refined_chems_sold[D]["units"] >= 1000) // Don't spam the list
 				var/dols = GLOB.refined_chems_sold[D]["value"] * SSsupply.points_per_money
 				dols = FLOOR(dols * 100,1) / 100 // Truncate decimals
-				valid_stats_list.Add("[ GLOB.refined_chems_sold[D]["units"] ]u of [ D ], for [ GLOB.refined_chems_sold[D]["value"] ] points! A total of [dols] [dols > 1 ? "thalers" : "thaler"]")
+				valid_stats_list.Add("[GLOB.refined_chems_sold[D]["units"]]u of [D], for [GLOB.refined_chems_sold[D]["value"]] points! A total of [dols] [dols > 1 ? "thalers" : "thaler"]")
 
 		var/end_dols = points * SSsupply.points_per_money
 		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
 		valid_stats_list.Add("For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
+
+	// outpost 21 add begin - selling TTVs
+	if(SSsupply.warheads_sold > 0)
+		var/end_dols = SSsupply.warheads_value * SSsupply.points_per_money
+		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
+		valid_stats_list.Add("[SSsupply.warheads_sold] TTV warheads were sold! For a total of: [SSsupply.warheads_value] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
+	// outpost 21 add end
+
+	// outpost 21 add begin - supply points for selling power
+	if(SSsupply.watts_sold >= 1 GIGAWATTS)
+		var/gws = FLOOR(SSsupply.watts_sold / (1 GIGAWATTS),1) // Truncate decimals
+		points = FLOOR(SSsupply.watts_sold / SSsupply.points_per_watt,1)
+		var/end_dols = points * SSsupply.points_per_money
+		end_dols = FLOOR(end_dols * 100,1) / 100 // Truncate decimals
+		valid_stats_list.Add("[gws] gigawatt[gws > 1 ? "s" : ""] of power were sold! For a total of: [points] points, or [end_dols] [end_dols > 1 ? "thalers" : "thaler"]!")
 	// outpost 21 add end
 
 	if(LAZYLEN(valid_stats_list))
