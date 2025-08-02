@@ -115,6 +115,22 @@
 		amount += MC.integrity
 		amount -= 100 * MC.charge_cost_mod
 
+	// Extra equipment
+	for(var/E in exo.hull_equipment)
+		amount += 3
+
+	for(var/E in exo.weapon_equipment)
+		amount += 3
+
+	for(var/E in exo.utility_equipment)
+		amount += 2
+
+	for(var/E in exo.universal_equipment)
+		amount += 1
+
+	for(var/E in exo.special_equipment)
+		amount += 4
+
 	// Don't bother somehow...
 	if(amount < 0)
 		return 0
@@ -123,13 +139,13 @@
 	if(istype(exo,/obj/mecha/combat/phazon))
 		amount *= 30
 	else if(istype(exo,/obj/mecha/combat/fighter)) // More niche
-		amount *= 11
+		amount *= 8
 	else if(istype(exo,/obj/mecha/medical))
-		amount *= 12
+		amount *= 11
 	else if(istype(exo,/obj/mecha/combat))
-		amount *= 10
+		amount *= 6
 	else if(istype(exo,/obj/mecha/micro)) // Teeny weenies!
-		amount *= 8.5
+		amount *= 3.5
 	else
 		amount *= 1
 
