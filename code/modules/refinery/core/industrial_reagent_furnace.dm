@@ -1,7 +1,6 @@
 /obj/machinery/reagent_refinery/furnace
 	name = "Industrial Chemical Furnace"
 	desc = "Extracts specific chemicals, compressing and heating them until they solidify."
-	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
 	icon_state = "furnace_l"
 	density = TRUE
 	anchored = TRUE
@@ -69,10 +68,10 @@
 		var/played_sound = FALSE
 		while(beaker.reagents.total_volume >= REAGENTS_PER_SHEET) // at least enough reagents to bother checking
 			var/datum/reagent/R = beaker.reagents.reagent_list[1]
-			var/mat_id = global.reagent_sheets[R.id]
+			var/mat_id = GLOB.reagent_sheets[R.id]
 			beaker.reagents.remove_reagent(R.id,REAGENTS_PER_SHEET)
 			switch(mat_id)
-				if("FLAG_SMOKE")
+				if(REFINERY_SINTERING_SMOKE)
 					// Smoke em out sometimes
 					if(prob(30))
 						if(!played_sound)
@@ -84,14 +83,14 @@
 						smoke.attach(src)
 						smoke.set_up(10, 0, get_turf(src), 300)
 						smoke.start()
-				if("FLAG_EXPLODE")
+				if(REFINERY_SINTERING_EXPLODE)
 					// Detonate
 					if(!played_sound)
 						visible_message(span_danger("\The [src] catches fire and violently explodes!"))
 						played_sound = TRUE
 					explosion(loc, 0, 1, 2, 4)
 					visible_message("\The [src.name] detonates!")
-				if("FLAG_SPIDERS")
+				if(REFINERY_SINTERING_SPIDERS)
 					// Spawns some spiders
 					if(!played_sound)
 						playsound(src, 'sound/items/fulext_deploy.wav', 40, 1)
@@ -148,16 +147,16 @@
 	var/list/tgui_list = list("Disabled" = "","Bypass" = "-1")
 	for(var/datum/reagent/R in reagents.reagent_list)
 		if(R)
-			var/mat_id = global.reagent_sheets[R.id]
+			var/mat_id = GLOB.reagent_sheets[R.id]
 			if(!mat_id) // No reaction
 				continue
 			var/id_string = "[R.name] - ???"
 			switch(mat_id)
-				if("FLAG_SMOKE")
+				if(REFINERY_SINTERING_SMOKE)
 					id_string = "[R.name] - DANGER"
-				if("FLAG_EXPLODE")
+				if(REFINERY_SINTERING_EXPLODE)
 					id_string = "[R.name] - DANGER"
-				if("FLAG_SPIDERS")
+				if(REFINERY_SINTERING_SPIDERS)
 					id_string = "[R.name] - DANGER"
 				else
 					var/datum/material/C = get_material_by_name(mat_id)
@@ -181,28 +180,6 @@
 		filter_reagent_id = tgui_list[select]
 		beaker.reagents.clear_reagents()
 		update_icon()
-
-/obj/machinery/reagent_refinery/furnace/verb/rotate_clockwise()
-	set name = "Rotate Furnace Clockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 270))
-	update_icon()
-
-/obj/machinery/reagent_refinery/furnace/verb/rotate_counterclockwise()
-	set name = "Rotate Furnace Counterclockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 90))
-	update_icon()
 
 /obj/machinery/reagent_refinery/furnace/verb/flip_furnace()
 	set name = "Flip Furnace Direction"
@@ -231,3 +208,4 @@
 		filter = "sintering [R.name]"
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is currently [filter]."
 	. += "The sintering mold is [ (beaker.reagents.total_volume / REAGENTS_PER_SHEET) * 100 ]% full."
+	tutorial(REFINERY_TUTORIAL_INPUT, .)

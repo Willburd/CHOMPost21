@@ -11,6 +11,8 @@
 	color = "#FFFF00" // rgb: 255, 255, 0
 	metabolism = 0.01
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
@@ -27,6 +29,8 @@
 	color = "#800080"
 	metabolism = 0.01
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
@@ -44,6 +48,8 @@
 	color = "#00FFFF"
 	metabolism = 0.01 //One unit will be just enough to bring someone from 200% to 100%
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
@@ -62,6 +68,8 @@
 	reagent_state = LIQUID
 	color = "#1E90FF"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PEAK
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
@@ -81,6 +89,8 @@
 	reagent_state = LIQUID
 	color = "#0E900E"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
@@ -105,6 +115,8 @@
 	reagent_state = LIQUID
 	color = "#EF77E5"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
@@ -138,12 +150,17 @@
 	description = "A base medical concoction, capable of rapidly altering genetic and physical structure of the body. Requires extra processing to allow for a targeted transformation."
 	reagent_state = LIQUID
 	color = "#AAAAAA"
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
+
 /datum/reagent/androrovir
 	name = REAGENT_ANDROROVIR
 	id = REAGENT_ID_ANDROROVIR
 	description = "A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems to realign the target's gender to be male."
 	reagent_state = LIQUID
 	color = "#00BBFF"
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/androrovir/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!(M.allow_spontaneous_tf))
@@ -165,6 +182,8 @@
 	description = "A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems to realign the target's gender to be female."
 	reagent_state = LIQUID
 	color = "#FF00AA"
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/gynorovir/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!(M.allow_spontaneous_tf))
@@ -186,6 +205,8 @@
 	description = "A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems to realign the target's gender to be mixed."
 	reagent_state = LIQUID
 	color = "#6600FF"
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/androgynorovir/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(!(M.allow_spontaneous_tf))
@@ -239,7 +260,10 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	scannable = 0 //YOU ARE NOT SCANNING THE FUNNY PARALYSIS TOXIN. NO. BAD. STAY AWAY.
+
 	wiki_flag = WIKI_SPOILER
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
 /datum/reagent/paralysis_toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.weakened < 50 || M.stunned <50 ) //Let's not leave them PERMA stuck, after all. //CHOMPedit, stun accounting for crawl
@@ -257,7 +281,10 @@
 	mrate_static = TRUE
 	overdose = 100 //There is no OD. You already are taking the worst of it.
 	scannable = 0 //Let's not have medical mechs able to make an extremely strong 'I hit you you fall down in agony' chem.
+
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
 /datum/reagent/pain_enzyme/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, -200)

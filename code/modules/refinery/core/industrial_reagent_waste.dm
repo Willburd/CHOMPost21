@@ -1,7 +1,6 @@
 /obj/machinery/reagent_refinery/waste_processor
 	name = "Industrial Chemical Waste Processor"
 	desc = "A large chemical processing chamber. Chemicals inside are energized into plasma and collected as raw energy! Unfortunately the process is only 17% efficient, a net loss of power."
-	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
 	icon_state = "waste"
 	density = TRUE
 	anchored = TRUE
@@ -40,8 +39,6 @@
 		for(var/direction in GLOB.cardinal)
 			var/turf/T = get_step(get_turf(src),direction)
 			var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
-			if(!other) // snowflake grinders...
-				other = locate(/obj/machinery/reagentgrinder/industrial) in T
 			if(other && other.anchored)
 				// Waste processors do not connect to anything as outgoing
 				if(istype(other,/obj/machinery/reagent_refinery/waste_processor))
@@ -62,28 +59,6 @@
 					var/image/intake = image(icon, icon_state = "waste_intakes", dir = direction)
 					add_overlay(intake)
 
-/obj/machinery/reagent_refinery/waste_processor/verb/rotate_clockwise()
-	set name = "Rotate Waste Processor Clockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 270))
-	update_icon()
-
-/obj/machinery/reagent_refinery/waste_processor/verb/rotate_counterclockwise()
-	set name = "Rotate Waste Processor Counterclockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 90))
-	update_icon()
-
 /obj/machinery/reagent_refinery/waste_processor/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
 	// Waste tanks accept from all sides
 	. = ..(origin_machine, RT, source_forward_dir, filter_id)
@@ -91,6 +66,7 @@
 /obj/machinery/reagent_refinery/waste_processor/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
+	tutorial(REFINERY_TUTORIAL_ALLIN, .)
 
 /obj/machinery/reagent_refinery/waste_processor/MouseDrop_T(var/atom/movable/C, mob/user as mob)
 	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))

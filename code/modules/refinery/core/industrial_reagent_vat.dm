@@ -1,9 +1,6 @@
-var/global/list/vats_to_rain_into = list() // Faster than checks, and handles all weather datums...
-
 /obj/machinery/reagent_refinery/vat
 	name = "Industrial Chemical Vat"
 	desc = "A large mixing vat for huge quantities of chemicals. Don't fall in!"
-	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
 	icon_state = "vat"
 	density = TRUE
 	anchored = TRUE
@@ -19,13 +16,15 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 /obj/machinery/reagent_refinery/vat/Initialize(mapload)
 	. = ..()
 	default_apply_parts()
-	vats_to_rain_into.Add(src)
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
+	GLOB.vats_to_rain_into += src // Outpost 21 edit - Rainy vats
 
+// Outpost 21 edit begin - Rainy vats
 /obj/machinery/reagent_refinery/vat/Destroy()
+	GLOB.vats_to_rain_into -= src
 	. = ..()
-	vats_to_rain_into.Remove(src)
+// Outpost 21 edit end
 
 /obj/machinery/reagent_refinery/vat/process()
 	if(buckled_mobs && buckled_mobs.len && reagents.total_volume > 0)
@@ -39,13 +38,7 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 	if(stat & (NOPOWER|BROKEN))
 		return
 
-	if (amount_per_transfer_from_this <= 0 || reagents.total_volume <= 0)
-		return
-
-	// dump reagents to next refinery machine
-	var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(loc,dir)
-	if(target)
-		transfer_tank( reagents, target, dir)
+	refinery_transfer()
 
 /obj/machinery/reagent_refinery/vat/update_icon()
 	cut_overlays()
@@ -71,8 +64,6 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 		for(var/direction in GLOB.cardinal)
 			var/turf/T = get_step(get_turf(src),direction)
 			var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
-			if(!other) // snowflake grinders...
-				other = locate(/obj/machinery/reagentgrinder/industrial) in T
 			if(other && other.anchored)
 				// Waste processors do not connect to anything as outgoing
 				if(istype(other,/obj/machinery/reagent_refinery/waste_processor))
@@ -93,31 +84,10 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 					var/image/intake = image(icon, icon_state = "vat_intakes", dir = direction)
 					add_overlay(intake)
 
-/obj/machinery/reagent_refinery/vat/verb/rotate_clockwise()
-	set name = "Rotate Vat Clockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 270))
-	update_icon()
-
-/obj/machinery/reagent_refinery/vat/verb/rotate_counterclockwise()
-	set name = "Rotate Vat Counterclockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 90))
-	update_icon()
-
 /obj/machinery/reagent_refinery/vat/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
+	tutorial(REFINERY_TUTORIAL_SINGLEOUTPUT, .)
 
 /obj/machinery/reagent_refinery/vat/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
 	// no back/forth, filters don't use just their forward, they send the side too!
@@ -144,7 +114,3 @@ var/global/list/vats_to_rain_into = list() // Faster than checks, and handles al
 		update_icon()
 		return
 	. = ..()
-
-// Dragging onto this results in buckling!
-/obj/machinery/reagent_refinery/vat/can_climb(var/mob/living/user, post_climb_check=0)
-	return FALSE

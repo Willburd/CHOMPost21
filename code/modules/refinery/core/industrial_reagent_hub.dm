@@ -1,7 +1,6 @@
 /obj/machinery/reagent_refinery/hub
 	name = "Industrial Chemical Hub"
-	desc = "A platform for loading and unloading cargo tug tankers. Does not require power to fill trolly tanks."
-	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
+	desc = "A platform for loading and unloading cargo tug tankers."
 	icon_state = "hub"
 	density = FALSE
 	anchored = TRUE
@@ -40,8 +39,6 @@
 	cut_overlays()
 	var/turf/T = get_step(get_turf(src),dir)
 	var/obj/machinery/other = locate(/obj/machinery/reagent_refinery) in T
-	if(!other) // snowflake grinders...
-		other = locate(/obj/machinery/reagentgrinder/industrial) in T
 	var/intake = FALSE
 	if(other && other.anchored)// Waste processors do not connect to anything as outgoing
 		if(!istype(other,/obj/machinery/reagent_refinery/waste_processor))
@@ -65,28 +62,6 @@
 		var/image/pipe = image(icon, icon_state = "hub_cons", dir = dir)
 		add_overlay(pipe)
 
-/obj/machinery/reagent_refinery/hub/verb/rotate_clockwise()
-	set name = "Rotate Hub Clockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 270))
-	update_icon()
-
-/obj/machinery/reagent_refinery/hub/verb/rotate_counterclockwise()
-	set name = "Rotate Hub Counterclockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 90))
-	update_icon()
-
 /obj/machinery/reagent_refinery/hub/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
 	if(istype(origin_machine,/obj/machinery/reagent_refinery/hub)) // Hubs cannot send into other hubs
 		return 0
@@ -107,7 +82,4 @@
 /obj/machinery/reagent_refinery/hub/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
-
-// pointless because no density
-/obj/machinery/reagent_refinery/hub/can_climb(var/mob/living/user, post_climb_check=0)
-	return FALSE
+	tutorial(REFINERY_TUTORIAL_HUB|REFINERY_TUTORIAL_NOPOWER, .)

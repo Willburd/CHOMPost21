@@ -12,6 +12,8 @@
 	overdose = REAGENTS_OVERDOSE * 100
 	metabolism = REM * 0.1
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/claridyl/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -64,6 +66,8 @@
 	color = "#00FFBE"
 	overdose = REAGENTS_OVERDOSE * 1
 	metabolism = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/eden/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME || alien == IS_DIONA)
@@ -94,6 +98,8 @@
 	metabolism = 0.05
 	description = "A well respected drug used for treatment of schizophrenia in specific. Stablizes patients experiencing severe hallucinations or chemical highs." // Outpost 21 edit - Tercozalam buff
 	overdose = REAGENTS_OVERDOSE * 2
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 // Outpost 21 edit begin - Tercozalam buff
 /datum/reagent/tercozolam/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -116,6 +122,8 @@
 	overdose = 8
 	scannable = 1
 	metabolism = 0.03
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/hannoa/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -159,6 +167,8 @@
 	overdose = 8 //This many units starts killing you.
 	scannable = 1 // Mechs can scan this ye
 	metabolism = 0.03 //Slow metabolism. This value was plucked out of nowhere. Can be changed.
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/bullvalene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_SLIME || alien == IS_DIONA)
@@ -179,6 +189,8 @@
 	reagent_state = LIQUID
 	color = "#df9898"
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/serazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
@@ -197,6 +209,8 @@
 	color = "#b37979"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/alizene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1

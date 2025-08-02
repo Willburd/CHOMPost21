@@ -1,5 +1,4 @@
 /obj/machinery/reagentgrinder
-
 	name = "All-In-One Grinder"
 	desc = "Grinds stuff into itty bitty bits."
 	icon = 'icons/obj/kitchen.dmi'
@@ -262,70 +261,8 @@
 	// Reset the machine.
 	spawn(60)
 		inuse = 0
-
-	process_contents() // Outpost 21 edit - seperate this out for industrial grinder use
-
-// Outpost 21 edit begin - seperate this out for industrial grinder use
-/obj/machinery/reagentgrinder/proc/process_contents()
-	// Process.
-	var/original_volume = beaker.reagents.total_volume // Outpost 21 edit - keep track of if we gained any reagents
-	for (var/obj/item/O in holdingitems)
-		//CHOMPedit start
-		if(istype(O,/obj/item/stack/material/supermatter))
-			var/regrets = 0
-			for(var/obj/item/stack/material/supermatter/S in holdingitems)
-				regrets += S.get_amount()
-			puny_protons(regrets)
-			return
-		//CHOMPedit end
-
-		var/remaining_volume = beaker.reagents.maximum_volume - beaker.reagents.total_volume
-		if(remaining_volume <= 0)
-			break
-
-		if(GLOB.sheet_reagents[O.type])
-			var/obj/item/stack/stack = O
-			if(istype(stack))
-				var/list/sheet_components = GLOB.sheet_reagents[stack.type]
-				var/amount_to_take = max(0,min(stack.get_amount(),round(remaining_volume/REAGENTS_PER_SHEET)))
-				if(amount_to_take)
-					stack.use(amount_to_take)
-					if(QDELETED(stack))
-						holdingitems -= stack
-					if(islist(sheet_components))
-						amount_to_take = (amount_to_take/(sheet_components.len))
-						for(var/i in sheet_components)
-							beaker.reagents.add_reagent(i, (amount_to_take*REAGENTS_PER_SHEET))
-					else
-						beaker.reagents.add_reagent(sheet_components, (amount_to_take*REAGENTS_PER_SHEET))
-					continue
-
-		if(GLOB.ore_reagents[O.type])
-			var/obj/item/ore/R = O
-			if(istype(R))
-				var/list/ore_components = GLOB.ore_reagents[R.type]
-				if(remaining_volume >= REAGENTS_PER_ORE)
-					holdingitems -= R
-					qdel(R)
-					if(islist(ore_components))
-						var/amount_to_take = (REAGENTS_PER_ORE/(ore_components.len))
-						for(var/i in ore_components)
-							beaker.reagents.add_reagent(i, amount_to_take)
-					else
-						beaker.reagents.add_reagent(ore_components, REAGENTS_PER_ORE)
-					continue
-
-		if(O.reagents)
-			O.reagents.trans_to_obj(beaker, min(O.reagents.total_volume, remaining_volume))
-			if(O.reagents.total_volume == 0)
-				holdingitems -= O
-				qdel(O)
-			if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
-				break
-
-	// if we gained regents then return true
-	return original_volume < beaker.reagents.total_volume // Outpost 21 edit - keep track of if we gained any reagents
-// Outpost 21 edit end
+		
+	grind_items_to_reagents(holdingitems,beaker.reagents)
 
 /obj/machinery/reagentgrinder/proc/replace_beaker(var/mob/living/user, var/obj/item/reagent_containers/new_beaker)
 	if(!user)
@@ -340,25 +277,4 @@
 		beaker = new_beaker
 	update_icon()
 	return TRUE
-// outpost 21 (large)edit end - Yes, that is basically all of the file above us!
 
-// CHOMPedit start: Repurposed coffee grinders and supermatter do not mix.
-/obj/machinery/reagentgrinder/proc/puny_protons(regrets = 0)
-	set_light(0)
-	if(regrets > 0) // If you thought grinding supermatter would end well. Values taken from ex_act() for the supermatter stacks.
-		SSradiation.radiate(get_turf(src), 15 + regrets * 4)
-		explosion(get_turf(src), round(regrets / 12) , round(regrets / 6), round(regrets / 3), round(regrets / 25))
-		qdel(src)
-		return
-
-	else // If you added supermatter but didn't try grinding it, or somehow this is negative.
-		for(var/obj/item/stack/material/supermatter/S in holdingitems)
-			S.loc = src.loc
-			holdingitems -= S
-			regrets += S.get_amount()
-		SSradiation.radiate(get_turf(src), 15 + regrets)
-		visible_message(span_warning("\The [src] glows brightly, bursting into flames and flashing into ash."),\
-		span_warning("You hear an unearthly shriek, burning heat washing over you."))
-		new /obj/effect/decal/cleanable/ash(src.loc)
-		qdel(src)
-// CHOMPedit end

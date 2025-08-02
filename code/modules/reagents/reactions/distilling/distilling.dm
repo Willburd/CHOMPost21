@@ -26,15 +26,17 @@
 	var/list/temp_range = list(T0C, T20C)
 	var/temp_shift = 0 // How much the temperature changes when the reaction occurs.
 
-	// Outpost 21 addition begin - If reaction requires a specific atmosphere in order to distill
 	var/require_xgm_gas = null
 	var/rejects_xgm_gas = null
 	var/maximum_xgm_pressure = null
 	var/minimum_xgm_pressure = null
-	// Outpost 21 addition end
+	var/consumes_xgm_gas = 0 // Mols of gas consumed during reaction
 
 /decl/chemical_reaction/distilling/can_happen(var/datum/reagents/holder)
-	// Outpost 21 addition begin - If reaction requires a specific atmosphere in order to distill
+	if(!istype(holder, /datum/reagents/distilling))
+		return FALSE
+
+	// return_air() will get the current turf for most things unless overriden to use a tank or such!
 	var/datum/gas_mixture/GM = holder.my_atom.return_air()
 	if(require_xgm_gas || rejects_xgm_gas || minimum_xgm_pressure || maximum_xgm_pressure)
 		if(!GM)
@@ -47,39 +49,44 @@
 			return
 		if(maximum_xgm_pressure && GM.return_pressure() > maximum_xgm_pressure)
 			return
-	// Outpost 21 addition end
 
-	// Outpost 21 edit begin - Allow industrial reagent reactor to distill
-	if(istype(holder.my_atom, /obj/machinery/reagent_refinery/reactor))
-		if(!GM)
-			return
-		if(GM.temperature < temp_range[1] || GM.temperature > temp_range[2])
+	// Special distilling conditions must be met, each object has different vars to meet it though.
+	if(istype(holder.my_atom,/obj/distilling_tester))
+		// Unit test needs some special handholding
+		var/obj/distilling_tester/DD = holder.my_atom
+		if(DD.current_temp < temp_range[1] || DD.current_temp > temp_range[2])
 			return FALSE
-	// Outpost 21 edit end
-
-	// Outpost 21 edit begin - Allow bunsen burner to distill
-	if(istype(holder.my_atom, /obj/machinery/portable_atmospherics/powered/reagent_distillery))
+	else if(istype(holder.my_atom,/obj/machinery/portable_atmospherics/powered/reagent_distillery))
 		// Super special temperature check.
 		var/obj/machinery/portable_atmospherics/powered/reagent_distillery/RD = holder.my_atom
 		if(RD.current_temp < temp_range[1] || RD.current_temp > temp_range[2])
 			return FALSE
-
-	if(istype(holder.my_atom.loc, /obj/machinery/bunsen_burner))
-		// Bunsen burner alternative
-		var/obj/machinery/bunsen_burner/B = holder.my_atom.loc
-		if(!B.heating || B.current_temp < temp_range[1] || B.current_temp > temp_range[2])
+	else if(istype(holder.my_atom, /obj/machinery/reagent_refinery/reactor))
+		// Check gas temp for refinery
+		if(!GM || GM.temperature < temp_range[1] || GM.temperature > temp_range[2])
 			return FALSE
-	// Outpost 21 edit end
+
 	return ..()
 
-/*
 /decl/chemical_reaction/distilling/on_reaction(var/datum/reagents/holder, var/created_volume)
-	if(istype(holder.my_atom, /obj/item/reagent_containers/glass/distilling))
-		var/obj/item/reagent_containers/glass/distilling/D = holder.my_atom
-		var/obj/machinery/portable_atmospherics/powered/reagent_distillery/RD = D.Master
-		RD.current_temp += temp_shift
-	return
-*/
+	// Handle gas consumption
+	var/datum/gas_mixture/GM = holder.my_atom.return_air()
+	if(consumes_xgm_gas != 0 && GM)
+		GM.adjust_gas(require_xgm_gas,-consumes_xgm_gas, TRUE)
+
+	// Distilling can change gas temps, handle it here.
+	if(temp_shift != 0)
+		if(istype(holder.my_atom,/obj/distilling_tester))
+			return
+		// Special handling for this
+		if(istype(holder.my_atom,/obj/machinery/portable_atmospherics/powered/reagent_distillery))
+			var/obj/machinery/portable_atmospherics/powered/reagent_distillery/RD = holder.my_atom
+			RD.current_temp += temp_shift
+			return
+		// Change gas temps
+		if(!GM)
+			return
+		GM.add_thermal_energy(temp_shift * 1000)
 
 // Subtypes //
 
@@ -171,7 +178,7 @@
 
 	reaction_rate = HALF_LIFE(30)
 
-	temp_range = list(T0C + 110, T0C + 190) // Outpost 21 edit - range changed for bunsen burner
+	temp_range = list(T20C, T20C + 2)
 
 /decl/chemical_reaction/distilling/ale
 	name = "Distilling Ale"
@@ -184,10 +191,20 @@
 	reaction_rate = HALF_LIFE(30)
 
 	temp_shift = 0.5
-	temp_range = list(T0C + 90, T0C + 150) // Outpost 21 edit - range changed for bunsen burner
+	temp_range = list(T0C + 7, T0C + 13)
+
+/decl/chemical_reaction/distilling/ethanol
+	name = "Distilling Ethanol"
+	id = "distill_ethanol"
+	result = REAGENT_ID_ETHANOL
+	required_reagents = list(REAGENT_ID_NUTRIMENT = 1, REAGENT_ID_WATER = 1, REAGENT_ID_SUGAR = 1)
+	result_amount = 2
+
+	reaction_rate = HALF_LIFE(30)
+
+	temp_range = list(T20C+30, T20C + 40)
 
 // Unique
-/* Outpost 21 edit - Disabled making brutejuice, it's exclusively a xenobio reward now
 /decl/chemical_reaction/distilling/berserkjuice
 	name = "Distilling Brute Juice"
 	id = "distill_brutejuice"
@@ -195,7 +212,7 @@
 	required_reagents = list(REAGENT_ID_BIOMASS = 1, REAGENT_ID_HYPERZINE = 3, REAGENT_ID_SYNAPTIZINE = 2, REAGENT_ID_PHORON = 1)
 	result_amount = 3
 
-	temp_range = list(T0C + 200, T0C + 250) // Outpost 21 edit - range changed for bunsen burner
+	temp_range = list(T0C + 600, T0C + 700)
 	temp_shift = 4
 
 /decl/chemical_reaction/distilling/berserkjuice/on_reaction(var/datum/reagents/holder, var/created_volume)
@@ -205,7 +222,6 @@
 		var/turf/T = get_turf(holder.my_atom)
 		explosion(T, -1, rand(-1, 1), rand(1,2), rand(3,5))
 	return
-*/
 
 /decl/chemical_reaction/distilling/cryogel
 	name = "Distilling Cryogellatin"
@@ -250,4 +266,72 @@
 
 	reaction_rate = HALF_LIFE(20)
 
-	temp_range = list(T0C + 90, T0C + 125) // Outpost 21 edit - range changed for bunsen burner
+	temp_range = list(T0C + 90, T0C + 95)
+
+/decl/chemical_reaction/distilling/hydrogen
+	name = "Distilling Hydrogen"
+	id = "distill_hydrogen"
+	result = REAGENT_ID_HYDROGEN
+	inhibitors = list(REAGENT_ID_CARBON = 1)
+	required_reagents = list(REAGENT_ID_WATER = 1)
+	result_amount = 2
+
+	temp_range = list(T20C + 110, T20C + 290)
+	temp_shift = 3 // It's burning off phoron
+
+	require_xgm_gas = GAS_PHORON
+	rejects_xgm_gas = GAS_O2
+
+/decl/chemical_reaction/distilling/oxygen
+	name = "Distilling Oxygen"
+	id = "distill_oxygen"
+	result = REAGENT_ID_OXYGEN
+	inhibitors = list(REAGENT_ID_CARBON = 1)
+	required_reagents = list(REAGENT_ID_WATER = 1)
+	catalysts = list(REAGENT_ID_PHORON = 1)
+	result_amount = 1
+
+	temp_range = list(T20C + 150, T20C + 320)
+	temp_shift = 3 // It's burning off phoron
+
+	require_xgm_gas = GAS_N2
+	rejects_xgm_gas = GAS_O2
+
+/decl/chemical_reaction/distilling/mineralized_sodium
+	name = "Distilling Sodium"
+	id = "distill_sodium"
+	result = REAGENT_ID_SODIUM
+	required_reagents = list(REAGENT_ID_MINERALIZEDFLUID = 1)
+	result_amount = 1
+
+	temp_range = list(T20C + 600, T20C + 800)
+	temp_shift = -1
+
+	require_xgm_gas = GAS_PHORON
+	rejects_xgm_gas = GAS_O2
+
+/decl/chemical_reaction/distilling/mineralized_carbon
+	name = "Distilling Carbon"
+	id = "distill_carbon"
+	result = REAGENT_ID_CARBON
+	required_reagents = list(REAGENT_ID_MINERALIZEDFLUID = 1)
+	result_amount = 1
+
+	temp_range = list(T20C + 400, T20C + 800)
+	temp_shift = -1
+
+	require_xgm_gas = GAS_O2
+	rejects_xgm_gas = GAS_PHORON
+
+/decl/chemical_reaction/distilling/reduce_salt
+	name = "Distilling Sodium"
+	id = "distill_reduce_tablesalt"
+	result = REAGENT_ID_SODIUM
+	required_reagents = list(REAGENT_ID_SODIUMCHLORIDE = 1)
+	result_amount = 1
+
+	temp_range = list(T20C + 800, T20C + 1000)
+	temp_shift = -1
+
+	require_xgm_gas = GAS_PHORON
+	rejects_xgm_gas = GAS_O2

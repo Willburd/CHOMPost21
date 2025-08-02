@@ -1,7 +1,6 @@
 /obj/machinery/reagent_refinery/pump
 	name = "Industrial Chemical Pump"
-	desc = "Transports large amounts of chemicals between machines."
-	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
+	desc = "Transports large amounts of chemicals between machines, it also has connections for various types of hoses."
 	icon_state = "pump"
 	density = TRUE
 	anchored = TRUE
@@ -16,6 +15,12 @@
 	// Update neighbours and self for state
 	update_neighbours()
 	update_icon()
+
+	AddComponent(/datum/component/hose_connector/input)
+	AddComponent(/datum/component/hose_connector/input)
+	AddComponent(/datum/component/hose_connector/input)
+	AddComponent(/datum/component/hose_connector/output)
+
 	AddElement(/datum/element/climbable)
 
 /obj/machinery/reagent_refinery/pump/process()
@@ -26,13 +31,7 @@
 	if(stat & (NOPOWER|BROKEN))
 		return
 
-	if (amount_per_transfer_from_this <= 0 || reagents.total_volume <= 0)
-		return
-
-	// dump reagents to next refinery machine
-	var/obj/machinery/reagent_refinery/target = locate(/obj/machinery/reagent_refinery) in get_step(get_turf(src),dir)
-	if(target)
-		transfer_tank( reagents, target, dir)
+	refinery_transfer()
 
 /obj/machinery/reagent_refinery/pump/update_icon()
 	cut_overlays()
@@ -44,28 +43,6 @@
 /obj/machinery/reagent_refinery/pump/attack_hand(mob/user)
 	set_APTFT()
 
-/obj/machinery/reagent_refinery/pump/verb/rotate_clockwise()
-	set name = "Rotate Pump Clockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 270))
-	update_icon()
-
-/obj/machinery/reagent_refinery/pump/verb/rotate_counterclockwise()
-	set name = "Rotate Pump Counterclockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 90))
-	update_icon()
-
 /obj/machinery/reagent_refinery/pump/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/filter_id = "")
 	// pumps, furnaces and filters can only be FED in a straight line
 	if(source_forward_dir != dir)
@@ -75,3 +52,4 @@
 /obj/machinery/reagent_refinery/pump/examine(mob/user, infix, suffix)
 	. = ..()
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
+	tutorial(REFINERY_TUTORIAL_INPUT, .)

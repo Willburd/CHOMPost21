@@ -1,7 +1,6 @@
 /obj/machinery/reagent_refinery/filter
 	name = "Industrial Chemical Filter"
-	desc = "Identifies and extracts specific chemicals. The purple marked pipe is the one filtered chemicals flow out of."
-	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
+	desc = "Identifies and extracts specific chemicals."
 	icon_state = "filter_l"
 	density = TRUE
 	anchored = TRUE
@@ -102,28 +101,6 @@
 	if(select && select != "")
 		filter_reagent_id = tgui_list[select]
 
-/obj/machinery/reagent_refinery/filter/verb/rotate_clockwise()
-	set name = "Rotate Filter Clockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 270))
-	update_icon()
-
-/obj/machinery/reagent_refinery/filter/verb/rotate_counterclockwise()
-	set name = "Rotate Filter Counterclockwise"
-	set category = "Object"
-	set src in view(1)
-
-	if (usr.stat || usr.restrained() || anchored)
-		return
-
-	src.set_dir(turn(src.dir, 90))
-	update_icon()
-
 /obj/machinery/reagent_refinery/filter/verb/flip_filter()
 	PRIVATE_PROC(TRUE)
 	set name = "Flip Filter Direction"
@@ -153,3 +130,4 @@
 		var/datum/reagent/R = SSchemistry.chemical_reagents[filter_reagent_id]
 		filter = "filtering [R.name]"
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is currently [filter]. At a rate of [amount_per_transfer_from_this]u."
+	tutorial(REFINERY_TUTORIAL_INPUT|REFINERY_TUTORIAL_FILTER, .)

@@ -311,7 +311,7 @@
 			if(G.siemens_coefficient == 0)	return 0		//to avoid spamming with insulated glvoes on
 
 //Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
-		for(var/datum/reagent/phororeagent/R in M.reagents.reagent_list)
+		for(var/datum/reagent/R in M.reagents.reagent_list) // Outpost 21 edit - Removed phorochem
 			if(R.id == REAGENT_ID_FULGURACIN)
 				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
 				return 0 //no shock for you

@@ -10,6 +10,8 @@
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -31,6 +33,8 @@
 	scannable = 1
 	touch_met = REM * 0.3
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -55,6 +59,8 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.25
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -94,6 +100,8 @@
 	scannable = 1
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -122,6 +130,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.8
 	metabolism = REM * 0.4
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/calciumcarbonate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) // Why would you inject this.
 	if(alien != IS_DIONA)
@@ -140,6 +150,8 @@
 	color = "#FFA800"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -162,6 +174,8 @@
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -184,6 +198,8 @@
 	scannable = 1
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -210,6 +226,8 @@
 	reagent_state = LIQUID
 	color = "#00A000"
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -235,6 +253,8 @@
 	scannable = 1
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 0 // Not used, but it shouldn't deal toxin damage anyways. Carth heals toxins!
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -273,6 +293,8 @@
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 	metabolism = REM * 0.25
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -300,6 +322,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.25
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -325,14 +349,18 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
+	
+	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
+	
 	//YW ADDITIONS START
 	overdose = REAGENTS_OVERDOSE * 8 //240 overdose // Outpost 21 edit - raised overdose
-	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien)
+	
+/datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien) //YW EDIT START
 	..()
 	M.druggy = max(M.druggy, 5)
-	M.Confuse(5)
-	//YW ADDITIONS END
+	M.Confuse(5) //YW EDIT END
 
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
@@ -356,6 +384,8 @@
 	color = "#B060FF"
 	scannable = 1
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -395,6 +425,8 @@
 	metabolism = REM * 0.5
 	mrate_static = TRUE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
@@ -422,6 +454,8 @@
 	metabolism = REM * 0.5
 	mrate_static = TRUE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
@@ -451,6 +485,8 @@
 	mrate_static = TRUE
 	affects_dead = FALSE //Clarifying this here since the original intent was this ONLY works on people that have the bloodpump_corpse modifier.
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/mortiferin/on_mob_life(var/mob/living/carbon/M, var/alien, var/datum/reagents/metabolism/location)
 	. = ..(M, alien, location)
@@ -490,6 +526,8 @@
 	mrate_static = TRUE
 	scannable = 1
 	affects_dead = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
@@ -528,6 +566,8 @@
 	scannable = 1
 	metabolism = 0.02
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -555,6 +595,8 @@
 	scannable = 1
 	metabolism = 0.02
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -581,6 +623,8 @@
 	scannable = 1
 	metabolism = 0.02
 	mrate_static = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -610,6 +654,8 @@
 	metabolism = REM * 0.05
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -641,6 +687,8 @@
 	color = "#FF3300"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 0.25
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_COMSTIM
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -674,6 +722,8 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -699,6 +749,8 @@
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -726,6 +778,8 @@
 	overdose = 10
 	overdose_mod = 1.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -761,6 +815,8 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -796,6 +852,8 @@
 	overdose_mod = 1.5
 	scannable = 1
 	var/repair_strength = 6
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -845,6 +903,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -879,6 +939,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -913,6 +975,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -949,6 +1013,8 @@
 	overdose = 10
 	overdose_mod = 1.75
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -980,6 +1046,8 @@
 	overdose_mod = 1.5
 	scannable = 1
 	metabolism = REM * 0.06
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1037,6 +1105,8 @@
 	overdose = 20
 	overdose_mod = 1.5
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 /datum/reagent/skrellimmuno/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/strength_mod = 0.5 * M.species.chem_strength_heal
@@ -1077,6 +1147,8 @@
 	reagent_state = SOLID
 	color = "#004000"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1112,6 +1184,8 @@
 	reagent_state = SOLID
 	color = "#605048"
 	overdose = REAGENTS_OVERDOSE
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_RECDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1149,6 +1223,8 @@
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1169,6 +1245,8 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 1.25
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1193,6 +1271,8 @@
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 	data = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1224,6 +1304,8 @@
 	overdose_mod = 1.5
 	scannable = 1
 	data = 0
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1295,6 +1377,8 @@
 	scannable = 1
 	data = 0
 	can_overdose_touch = TRUE
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -1341,6 +1425,8 @@
 	reagent_state = LIQUID
 	color = "#C8A5DC"
 	touch_met = 5
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_CLEAN
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_BURNS|REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS // Outpost 21 edit - PPE reagents
 
@@ -1394,6 +1480,8 @@
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
@@ -1420,6 +1508,8 @@
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 2
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
+	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
 /datum/reagent/rezadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -1469,6 +1559,8 @@
 	scannable = 1
 	affects_robots = TRUE
 	wiki_flag = WIKI_SPOILER
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/healing_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.heal_organ_damage(2 * removed, 2 * removed)
@@ -1486,6 +1578,8 @@
 	metabolism = REM * 0.002
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_FOOD
 
 /* Outpost 21 edit - Removing badly designed chems
 /datum/reagent/earthsblood
@@ -1496,6 +1590,8 @@
 	reagent_state = LIQUID
 	color = "#ffb500"
 	overdose = REAGENTS_OVERDOSE * 0.50
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 
 /datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -1520,6 +1616,8 @@
 	overdose = 15
 	overdose_mod = 1.2
 	scannable = 1
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/acid/artificial_sustenance/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	// You need me...

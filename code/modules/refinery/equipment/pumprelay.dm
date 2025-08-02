@@ -1,7 +1,7 @@
 /obj/machinery/pump_relay
 	name = "Pump Relay"
 	desc = "Pumps chemicals long distances using plastic hoses. It has multiple inputs to allow the creation of complex pump networks. Does not require power."
-	icon = 'modular_outpost/icons/obj/machines/refinery_machines.dmi'
+	icon = 'icons/obj/machines/refinery_machines.dmi'
 	icon_state = "pumprelay"
 	density = TRUE
 	anchored = TRUE
