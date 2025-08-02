@@ -55332,7 +55332,6 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
-/obj/item/reagent_containers/glass/beaker/sulphuric,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "fZt" = (
@@ -74053,9 +74052,6 @@
 "rzz" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
-	},
-/obj/structure/reagent_dispensers/acid{
-	pixel_y = 32
 	},
 /obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec,

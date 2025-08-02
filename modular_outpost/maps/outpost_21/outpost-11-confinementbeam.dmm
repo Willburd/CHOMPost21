@@ -11877,10 +11877,6 @@
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "PTL - Tool Storage Central"
 	},
-/obj/structure/reagent_dispensers/acid{
-	pixel_y = 32
-	},
-/obj/item/reagent_containers/glass/beaker/sulphuric,
 /obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)

@@ -16632,9 +16632,6 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
 	},
-/obj/structure/reagent_dispensers/acid{
-	pixel_x = 30
-	},
 /obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -36002,10 +35999,6 @@
 	pixel_x = 21
 	},
 /obj/structure/table/standard,
-/obj/item/reagent_containers/glass/beaker/sulphuric,
-/obj/item/reagent_containers/dropper{
-	pixel_y = -4
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "iYO" = (
@@ -50370,6 +50363,10 @@
 	},
 /obj/machinery/light,
 /obj/structure/table/standard,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "nqW" = (
