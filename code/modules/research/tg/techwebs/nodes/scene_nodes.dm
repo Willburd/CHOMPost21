@@ -14,7 +14,7 @@
 	id = TECHWEB_NODE_SIZEPLAY
 	display_name = "Scale Distortion Technology"
 	description = "Isolating the active components of local Xenoflora and applying them in different ways has resulted in a variety of ways to adjust the scale of living things!"
-	prereq_ids = list(TECHWEB_NODE_SCENE_TOOLS, TECHWEB_NODE_PASSIVE_IMPLANTS)
+	prereq_ids = list(TECHWEB_NODE_SCENE_TOOLS, TECHWEB_NODE_ILLEGAL_SCENETOOLS) // Outpost 21 edit - is illegal
 	design_ids = list(
 		"implant_size",
 		"sizegun",
