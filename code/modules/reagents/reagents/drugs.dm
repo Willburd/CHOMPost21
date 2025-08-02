@@ -24,6 +24,8 @@
 	overdose = REAGENTS_OVERDOSE
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/affect_blood(mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -57,6 +59,8 @@
 	"Colors seem... flatter.",
 	"Everything feels a little dull, now.")
 	wiki_flag = WIKI_SPOILER
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED // bonus
+	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/bliss/affect_blood(mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -101,6 +105,8 @@
 	"Reality seems like a real pain in the ass to deal with right now.",
 	"Things feel really colourless to you all of a sudden.",
 	"You feel the urge to lie down and nap.")
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED // bonus
+	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/ambrosia_extract/affect_blood(mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -133,6 +139,8 @@
 	"Nothing really makes sense right now.",
 	"It feels like you've melded with the world around you...")
 	sober_message_list = list("Everything feels... flat.", "You feel almost TOO grounded in your surroundings.")
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED // bonus
+	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/psilocybin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -186,6 +194,8 @@
 	"Nothing really makes sense right now.",
 	"It feels like you've melded with the world around you...")
 	sober_message_list = list("Everything feels... flat.", "You feel almost TOO grounded in your surroundings.")
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
 /datum/reagent/drugs/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -211,7 +221,10 @@
 	taste_description = "sour staleness"
 	color = "#181818"
 	high_messages = FALSE
+	
 	metabolism = REM * 0.08 // outpost 21 edit - require less a round
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_RECDRUG
 
 /datum/reagent/drugs/nicotine/handle_addiction(var/mob/living/carbon/M, var/alien)
 	// A copy of the base with withdrawl, but with much less effects, such as vomiting.
@@ -257,7 +270,10 @@
 	color = "#BF80BF"
 	high_message_list = list("You feel focused.", "Your attention is undivided.")
 	sober_message_list = list("It becomes harder to focus...", "You feel distractible.")
+
 	metabolism = REM * 0.124 // outpost 21 edit - require less a round
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/drugs/citalopram
 	name = REAGENT_CITALOPRAM
@@ -267,7 +283,10 @@
 	color = "#FF80FF"
 	high_message_list = list("Everything feels a bit more steady.", "Your mind feels stable.")
 	sober_message_list = list("You feel a little tired.", "You feel a little more listless...")
+
 	metabolism = REM * 0.02 // outpost 21 edit - require less a round
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/drugs/citalopram/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -286,7 +305,10 @@
 	color = "#FF80BF"
 	high_message_list = list("Everything feels good, stable.", "You feel grounded.")
 	sober_message_list = list("The stability is gone...", "Everything is much less stable.")
+
 	metabolism = REM * 0.124 // outpost 21 edit - require less a round
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 /datum/reagent/drugs/paroxetine/affect_blood(mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -309,7 +331,10 @@
 	color = "#e6efe3"
 	high_message_list = list("You feel sluggish...", "You feel calm and collected.")
 	sober_message_list = list("You feel so much more antsy...", "Your concentration wavers.")
+	
 	metabolism = REM * 0.02 // outpost 21 edit - require less a round
+	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
+	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 // Outpost 21 edit begin - calm anxiety
 /datum/reagent/drugs/qerr_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)

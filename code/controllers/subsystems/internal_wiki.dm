@@ -427,16 +427,14 @@ SUBSYSTEM_DEF(internal_wiki)
 		return allergies
 	return null
 
-// Outpost 21 edit begin - Our chem data
 /datum/controller/subsystem/internal_wiki/proc/assemble_sintering(var/sinter)
-	if(sinter == "FLAG_EXPLODE")
+	if(sinter == REFINERY_SINTERING_EXPLODE)
 		return "violent detonation"
-	if(sinter == "FLAG_SMOKE")
+	if(sinter == REFINERY_SINTERING_SMOKE)
 		return "toxic fumes"
-	if(sinter == "FLAG_SPIDERS")
+	if(sinter == REFINERY_SINTERING_SPIDERS)
 		return "OH GOD WHY!?"
 	return sinter
-// Outpost 21 edit end
 
 /datum/controller/subsystem/internal_wiki/proc/add_icon(var/list/data, var/ic, var/is, var/col)
 	var/load_data = list()
@@ -1160,7 +1158,7 @@ SUBSYSTEM_DEF(internal_wiki)
 	var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money
 	value = FLOOR(value * 100,1) / 100 // Truncate decimals
 	data["market_price"] = value
-	data["sintering"] = SSinternal_wiki.assemble_sintering(global.reagent_sheets[R.id]) // Outpost 21 edit - Our chem data
+	data["sintering"] = SSinternal_wiki.assemble_sintering(GLOB.reagent_sheets[R.id])
 	data["overdose"] = R.overdose
 	data["flavor"] = R.taste_description
 	data["allergen"] = SSinternal_wiki.assemble_allergens(R.allergen_type)
@@ -1180,11 +1178,17 @@ SUBSYSTEM_DEF(internal_wiki)
 		body += "<b>Market Price: [value] [value > 1 ? "thalers" : "thaler"] per [REAGENTS_PER_SHEET] units  |  [(value*tank_size)] [(value*tank_size) > 1 ? "thalers" : "thaler"] per [tank_size] unit tank</b><br>"
 	if(data["sintering"])
 		var/mat_id = data["sintering"]
-		var/datum/material/C = get_material_by_name(mat_id)
-		if(C)
-			body += "<b>Sintering Results: [C.display_name] [C.sheet_plural_name]</b><br>"
-		else
-			body += "<b>Sintering Results: [mat_id]</b><br>"
+		switch(mat_id)
+			if(REFINERY_SINTERING_SMOKE)
+				body += "<b>Sintering Results: COMBUSTION</b><br>"
+			if(REFINERY_SINTERING_EXPLODE)
+				body += "<b>Sintering Results: DETONATION</b><br>"
+			if(REFINERY_SINTERING_SPIDERS)
+				body += "<b>Sintering Results: DO NOT EVER</b><br>"
+			else
+				var/datum/material/C = get_material_by_name(data["sintering"])
+				if(C)
+					body += "<b>Sintering Results: [C.display_name] [C.sheet_plural_name]</b><br>"
 	if(data["overdose"] > 0)
 		body += "<b>Overdose: </b>[data["overdose"]]u<br>"
 	body += "<b>Flavor: </b>[data["flavor"]]<br>"

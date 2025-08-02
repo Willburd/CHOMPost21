@@ -36,7 +36,7 @@
 		"million" = 704
 		)
 	xarch_source_mineral = REAGENT_ID_POTASSIUM
-	reagent = REAGENT_ID_URANIUM
+	reagent = REAGENT_ID_RADIUM // Otherwise it emp pulses constantly with iron
 
 /ore/hematite
 	name = ORE_HEMATITE
@@ -158,7 +158,7 @@
 		"billion" = 13,
 		"billion_lower" = 10
 		)
-	reagent = REAGENT_ID_SULFUR // Outpost 21 edit
+	reagent = REAGENT_ID_PHOSPHORUS
 
 /ore/marble
 	name = ORE_MARBLE
@@ -180,7 +180,6 @@
 	scan_icon = "mineral_rare"
 	reagent = REAGENT_ID_LEAD
 
-// Outpost 21 edit begin - Restored older ores
 /ore/copper
 	name = ORE_COPPER
 	display_name = ORE_COPPER
@@ -201,7 +200,7 @@
 	spread_chance = 10
 	ore = /obj/item/ore/tin
 	scan_icon = "mineral_common"
-	reagent = REAGENT_ID_TIN // Outpost 21 edit
+	reagent = REAGENT_ID_TIN
 
 /ore/quartz
 	name = ORE_QUARTZ
@@ -211,7 +210,7 @@
 	spread_chance = 5
 	ore = /obj/item/ore/quartz
 	scan_icon = "mineral_common"
-	reagent = REAGENT_ID_SILICON // Outpost 21 edit - Pumps silicon instead of silicate
+	reagent = REAGENT_ID_SILICON
 
 /ore/bauxite
 	name = ORE_BAUXITE
@@ -222,7 +221,6 @@
 	ore = /obj/item/ore/bauxite
 	scan_icon = "mineral_common"
 	reagent = REAGENT_ID_ALUMINIUM
-// Outpost 21 edit end
 
 /ore/rutile
 	name = ORE_RUTILE
@@ -235,7 +233,6 @@
 	scan_icon = "mineral_uncommon"
 	reagent = REAGENT_ID_TITANIUMDIOX
 
-// Outpost 21 edit begin - Restored older ores
 /ore/painite
 	name = ORE_PAINITE
 	display_name = "rough painite"
@@ -244,7 +241,7 @@
 	spread_chance = 3
 	ore = /obj/item/ore/painite
 	scan_icon = "mineral_rare"
-	reagent = REAGENT_ID_CALCIUM // Outpost 21 edit
+	reagent = REAGENT_ID_CALCIUM
 
 /ore/void_opal
 	name = ORE_VOPAL
@@ -254,5 +251,4 @@
 	spread_chance = 1
 	ore = /obj/item/ore/void_opal
 	scan_icon = "mineral_rare"
-	reagent = REAGENT_ID_SILICON // Outpost 21 edit
-// Outpost 21 edit end
+	reagent = REAGENT_ID_SULFUR

@@ -67,14 +67,12 @@ var/list/mining_overlay_cache = list()
 		ORE_VERDANTIUM = /obj/item/ore/verdantium,
 		ORE_MARBLE = /obj/item/ore/marble,
 		ORE_LEAD = /obj/item/ore/lead,
-		// Outpost 21 edit begin - Restored older ores
 		ORE_COPPER = /obj/item/ore/copper,
 		ORE_TIN = /obj/item/ore/tin,
 		ORE_BAUXITE = /obj/item/ore/bauxite,
 		ORE_VOPAL = /obj/item/ore/void_opal,
 		ORE_PAINITE = /obj/item/ore/painite,
 		ORE_QUARTZ = /obj/item/ore/quartz,
-		// Outpost 21 edit end
 		ORE_RUTILE = /obj/item/ore/rutile
 	)
 
@@ -731,7 +729,7 @@ var/list/mining_overlay_cache = list()
 				new /obj/item/stack/material/uranium(src, rand(5,25))
 
 /turf/simulated/mineral/proc/make_ore(var/rare_ore)
-	if(mineral || ignore_mapgen || ignore_oregen) //VOREStation Edit - Makes sense, doesn't it?
+	if(mineral || ignore_mapgen || ignore_oregen)
 		return
 
 	var/mineral_name
