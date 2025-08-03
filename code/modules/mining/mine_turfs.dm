@@ -347,7 +347,7 @@ var/list/mining_overlay_cache = list()
 /turf/simulated/mineral/proc/MineralSpread()
 	if(mineral && mineral.spread)
 		for(var/trydir in GLOB.cardinal)
-			if(prob(mineral.spread_chance))
+			if(prob(mineral.spread_chance) && ((z in using_map.rare_ore_levels) || prob(50)))
 				var/turf/simulated/mineral/target_turf = get_step(src, trydir)
 				if(istype(target_turf) && target_turf.density && !target_turf.mineral)
 					target_turf.mineral = mineral

@@ -68,8 +68,13 @@
 /turf/simulated/mineral/rich/turfpack/muriki/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return
+
+	var/rare_allow_chance = 10
+	if(z in using_map.rare_ore_levels)
+		rare_allow_chance = 100
+
 	var/mineral_name
-	if(rare_ore)
+	if(rare_ore && prob(rare_allow_chance))
 		mineral_name = pickweight(list(
 			ORE_MARBLE = 3,
 			ORE_URANIUM = 10,
@@ -83,16 +88,17 @@
 			ORE_LEAD = 2,
 			ORE_VERDANTIUM = 1))
 	else
-		mineral_name = pickweight(list(
-			ORE_MARBLE = 2,
-			ORE_URANIUM = 5,
-			ORE_PLATINUM = 5,
-			ORE_HEMATITE = 35,
-			ORE_CARBON = 35,
-			ORE_GOLD = 3,
-			ORE_SILVER = 3,
-			ORE_PHORON = 2,
-			ORE_LEAD = 1))
+		if((z in using_map.rare_ore_levels) || prob(20))
+			mineral_name = pickweight(list(
+				ORE_MARBLE = 2,
+				ORE_URANIUM = 5,
+				ORE_PLATINUM = 5,
+				ORE_HEMATITE = 35,
+				ORE_CARBON = 35,
+				ORE_GOLD = 3,
+				ORE_SILVER = 3,
+				ORE_PHORON = 2,
+				ORE_LEAD = 1))
 	if(mineral_name && (mineral_name in GLOB.ore_data))
 		mineral = GLOB.ore_data[mineral_name]
 		UpdateMineral()
