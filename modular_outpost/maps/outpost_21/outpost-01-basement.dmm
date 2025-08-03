@@ -3891,6 +3891,7 @@
 	pixel_x = 26
 	},
 /obj/effect/floor_decal/corner/blue,
+/obj/machinery/oxygen_pump/mobile/anesthetic/vox,
 /turf/simulated/floor/tiled/white{
 	oxygen = 0;
 	phoron = 21.8366
@@ -5800,6 +5801,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
 	},
+/obj/machinery/oxygen_pump/mobile/stabilizer/vox,
 /turf/simulated/floor/tiled/white{
 	oxygen = 0;
 	phoron = 21.8366
@@ -6566,6 +6568,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
 	},
+/obj/machinery/oxygen_pump/mobile/stabilizer/vox,
 /turf/simulated/floor/tiled/white{
 	oxygen = 0;
 	phoron = 21.8366
@@ -48196,6 +48199,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
+"bJo" = (
+/obj/machinery/oxygen_pump/mobile/anesthetic,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/med)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -128833,7 +128840,7 @@ aRL
 bFq
 mQa
 phk
-mQa
+bJo
 aUc
 aPL
 axL

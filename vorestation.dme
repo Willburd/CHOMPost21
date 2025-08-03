@@ -5312,6 +5312,7 @@
 #include "modular_outpost\code\game\machinery\nuclear_bomb.dm"
 #include "modular_outpost\code\game\machinery\oxygen_pump.dm"
 #include "modular_outpost\code\game\machinery\trailblazer.dm"
+#include "modular_outpost\code\game\machinery\vox_pump.dm"
 #include "modular_outpost\code\game\machinery\atmoalter\canister.dm"
 #include "modular_outpost\code\game\machinery\doors\airlock.dm"
 #include "modular_outpost\code\game\machinery\doors\door.dm"
