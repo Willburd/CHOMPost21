@@ -12,9 +12,6 @@
 #define ATMOS_PASS_DENSITY		3	// Blocks air and zones if density = TRUE, allows both if density = FALSE
 #define ATMOS_PASS_PROC			4	// Call CanZASPass() using c_airblock
 
-// Outpost 21 edit begin - Zone limits
-#define ZONE_MAX_SIZE 3000 // Zones merging, that will create a new zone with with more than this many turfs, will never merge even if the connection is direct. Prevents the automated creation of collosal zones on planets
-// Outpost 21 edit end
 #define HAS_VALID_ZONE(T) (T.zone && !T.zone.invalid)
 
 // CHOMPAdd Start
