@@ -239,6 +239,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_MEDICAL)
 
+/* Outpost 21 edit - Protean removal
 /datum/techweb_node/protean
 	id = TECHWEB_NODE_PROTEAN
 	display_name = "Protean Parts"
@@ -250,3 +251,4 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_MEDICAL)
+*/
