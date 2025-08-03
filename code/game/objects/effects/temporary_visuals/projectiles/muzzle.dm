@@ -122,18 +122,9 @@
 	light_power = 1
 	light_color = "#ffffff"
 
-//CHOMPStation add coilgun pointdefense
 /obj/effect/projectile/muzzle/coildefense
-	icon = 'icons/obj/projectiles_muzzle_ch.dmi'
 	icon_state = "muzzle_coildef"
 	light_range = 3
 	light_power = 1
 	light_color = "#FFFFFF"
 //CHOMPStation add end <3
-// Outpost 21 edit begin - laser tag
-/obj/effect/projectile/muzzle/laser_omni_tag
-	icon_state = "muzzle_darkb"
-	light_range = 2
-	light_power = 0.5
-	light_color = "#AA24AF"
-// Outpost 21 edit end

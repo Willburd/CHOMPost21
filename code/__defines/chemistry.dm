@@ -63,6 +63,3 @@ var/list/cheartstopper = list(REAGENT_ID_POTASSIUMCHLORIDE)                     
 #define MAX_UNITS_PER_PATCH 60 // Max amount of units in a patch
 #define MAX_UNITS_PER_BOTTLE 60 // Max amount of units in a bottle (it's volume)
 #define MAX_CUSTOM_NAME_LEN 64 // Max length of a custom pill/condiment/whatever
-
-#define ALCOHOLIC_EFFECT_MULTIPLIER 14 // Outpost 21 edit - Booze lasts LONG here
-#define ALCOHOLIC_DIZZY_MULTIPLIER 1.7 // Outpost 21 edit - Booze wobbles more

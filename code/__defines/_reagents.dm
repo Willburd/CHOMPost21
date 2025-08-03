@@ -1378,18 +1378,3 @@
 #define REAGENT_ID_SLIMEBONEFIXER "slime_bone_fixer"
 #define REAGENT_SLIMEORGANFIXER "Agent C"
 #define REAGENT_ID_SLIMEORGANFIXER "slime_organ_fixer"
-
-// Outpost 21 edit begin - PPE affecting chems
-// into eyes
-#define REAGENT_PPE_GAS 		0x1
-#define REAGENT_PPE_DUST 		0x2
-#define REAGENT_PPE_SQUIRTS		0x4
-#define REAGENT_PPE_PHORONGAS	0x8
-// onto hands or suit
-#define REAGENT_PPE_SPLASH		0x10
-#define REAGENT_PPE_BUBBLES		0x20
-// burns hands
-#define REAGENT_PPE_BURNS		0x40
-#define REAGENT_PPE_FREEZES		0x80
-#define REAGENT_PPE_LAST		0x100
-// Outpost 21 edit end

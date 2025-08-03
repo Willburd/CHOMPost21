@@ -41,10 +41,6 @@
 #define ALLERGEN_EGGS		0x800	// For Skrell eggs allergy
 #define ALLERGEN_STIMULANT	0x1000	// Stimulants are what makes the Tajaran heart go ruh roh - not just coffee!
 #define ALLERGEN_CHOCOLATE	0x2000	// Makes dogs die if they want to?
-// Outpost 21 edit begin - Pollen!
-#define ALLERGEN_POLLEN		0x4000
-#define ALLERGEN_SALT 		0x8000
-// Outpost 21 edit end
 
 // Allergen reactions
 #define AG_PHYS_DMG	0x1	// brute
@@ -57,11 +53,6 @@
 #define AG_BLURRY	0x80	// blurred vision!
 #define AG_SLEEPY	0x100	// fatigue/exhaustion
 #define AG_CONFUSE	0x200	// disorientation
-// Outpost 21 edit begin
-#define AG_GIBBING			0x400	// SPLODE
-#define AG_SNEEZE			0x800	// sneezes
-#define AG_COUGH			0x1000	// coughing
-// Outpost 21 edit end
 
 // Species spawn flags
 #define SPECIES_IS_WHITELISTED      0x1  // Must be whitelisted to play.
