@@ -49,7 +49,7 @@
 			ORE_LEAD = 2,
 			ORE_VERDANTIUM = 1))
 	else
-		if((z in using_map.rare_ore_levels) || prob(60))
+		if((z in using_map.rare_ore_levels) || prob(20))
 			mineral_name = pickweight(list(
 				ORE_MARBLE = 2,
 				ORE_URANIUM = 5,
