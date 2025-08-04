@@ -1038,15 +1038,6 @@ Note that amputating the affected organ does in fact remove the infection from t
 				I.throw_at(get_edge_target_turf(src,pick(GLOB.alldirs)),rand(1,3),5)
 
 			qdel(src)
-		// Outpost 21 edit begin - Acidic limb melting
-		if(DROPLIMB_ACID)
-			appearance_flags &= ~PIXEL_SCALE
-			compile_icon()
-			add_blood(victim)
-			var/matrix/M = matrix()
-			M.Turn(rand(180))
-			src.transform = M
-		// Outpost 21 edit end
 
 		if(DROPLIMB_ACID)
 			appearance_flags &= ~PIXEL_SCALE

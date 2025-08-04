@@ -3,14 +3,6 @@
 	icon = 'icons/obj/power.dmi'
 	icon_state = "wire"
 
-// Outpost 21 edit begin - Placing heavy cables. These don't support Z levels anyway
-/obj/item/stack/cable_coil/heavyduty/turf_place(turf/simulated/F, mob/user)
-	if(istype(F, /turf/simulated/open))
-		to_chat(user, "\The [src] isn't flexible enough to do this!")
-		return
-	. = ..()
-// Outpost 21 edit end
-
 /obj/structure/cable/heavyduty
 	icon = 'icons/obj/power_cond_heavy.dmi'
 	name = "large power cable"

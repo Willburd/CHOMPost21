@@ -121,12 +121,6 @@ Class Procs:
 
 	blocks_emissive = EMISSIVE_BLOCK_GENERIC
 
-	// Outpost 21 edit begin - Climbable machinery, optimally this would be moved to some kind of component instead and the other climbables are refactored
-	var/climbable = TRUE
-	var/list/climbers
-	var/climb_delay = 3.5 SECONDS
-	// Outpost 21 edit end
-
 /obj/machinery/Initialize(mapload, d=0)
 	. = ..()
 	if(isnum(d))
@@ -570,72 +564,3 @@ Class Procs:
 
 /datum/proc/remove_visual(mob/M)
 	return
-
-// Outpost 21 edit begin - Climbing code to all machines, but not the verb and mousedrag code, do that for each one..
-/obj/machinery/proc/can_climb(var/mob/living/user, post_climb_check=0)
-	if (!climbable || !can_touch(user) || (!post_climb_check && (user in climbers)))
-		return 0
-
-	if (!user.Adjacent(src))
-		to_chat(user, span_danger("You can't climb there, the way is blocked."))
-		return 0
-
-	var/obj/occupied = turf_is_crowded()
-	if(occupied)
-		to_chat(user, span_danger("There's \a [occupied] in the way."))
-		return 0
-	return 1
-
-/obj/machinery/proc/turf_is_crowded()
-	var/turf/T = get_turf(src)
-	if(!T || !istype(T))
-		return "empty void"
-	if(T.density)
-		return T
-	for(var/obj/O in T.contents)
-		if(istype(O,/obj/machinery))
-			var/obj/machinery/S = O
-			if(S.climbable) continue
-		if(O && O.density && !(O.flags & ON_BORDER)) //ON_BORDER structures are handled by the Adjacent() check.
-			return O
-	return 0
-
-/obj/machinery/proc/do_climb(var/mob/living/user)
-	if (!can_climb(user))
-		return
-
-	usr.visible_message(span_warning("[user] starts climbing onto \the [src]!"))
-	LAZYDISTINCTADD(climbers, user)
-
-	if(!do_after(user,(issmall(user) ? climb_delay * 0.6 : climb_delay)))
-		LAZYREMOVE(climbers, user)
-		return
-
-	if (!can_climb(user, post_climb_check=1))
-		LAZYREMOVE(climbers, user)
-		return
-
-	usr.forceMove(climb_to(user))
-
-	if (get_turf(user) == get_turf(src))
-		usr.visible_message(span_warning("[user] climbs onto \the [src]!"))
-	LAZYREMOVE(climbers, user)
-
-/obj/machinery/proc/climb_to(var/mob/living/user)
-	return get_turf(src)
-
-/obj/machinery/proc/can_touch(var/mob/user)
-	if (!user)
-		return 0
-	if(!Adjacent(user))
-		return 0
-	if (user.restrained() || user.buckled)
-		to_chat(user, span_notice("You need your hands and legs free for this."))
-		return 0
-	if (user.stat || user.paralysis || user.sleeping || user.lying || user.weakened)
-		return 0
-	if (isAI(user))
-		to_chat(user, span_notice("You need hands for this."))
-		return 0
-	return 1
-// Outpost 21 edit end
