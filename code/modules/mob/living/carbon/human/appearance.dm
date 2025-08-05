@@ -203,14 +203,14 @@
 	for(var/hairstyle in GLOB.hair_styles_list)
 		var/datum/sprite_accessory/S = GLOB.hair_styles_list[hairstyle]
 
+		if(S.name == DEVELOPER_WARNING_NAME)
+			continue
+
 		if(check_gender && gender != NEUTER)
 			if(gender == MALE && S.gender == FEMALE)
 				continue
 			else if(gender == FEMALE && S.gender == MALE)
 				continue
-
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
-			continue
 
 		if(!(use_species in S.species_allowed))
 			continue
@@ -232,14 +232,14 @@
 	for(var/facialhairstyle in GLOB.facial_hair_styles_list)
 		var/datum/sprite_accessory/S = GLOB.facial_hair_styles_list[facialhairstyle]
 
+		if(S.name == DEVELOPER_WARNING_NAME)
+			continue
+
 		if(gender != NEUTER)
 			if(gender == MALE && S.gender == FEMALE)
 				continue
 			else if(gender == FEMALE && S.gender == MALE)
 				continue
-
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
-			continue
 
 		if(!(use_species in S.species_allowed))
 			continue

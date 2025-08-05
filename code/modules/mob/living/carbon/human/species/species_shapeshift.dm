@@ -86,22 +86,22 @@ var/list/wrapped_species_by_ref = list()
 	var/list/valid_gradstyles = GLOB.hair_gradients
 	for(var/hairstyle in GLOB.hair_styles_list)
 		var/datum/sprite_accessory/S = GLOB.hair_styles_list[hairstyle]
+		if(S.name == DEVELOPER_WARNING_NAME)
+			continue
 		if(gender == MALE && S.gender == FEMALE)
 			continue
 		if(gender == FEMALE && S.gender == MALE)
-			continue
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
 			continue
 		if(!(species.get_bodytype(src) in S.species_allowed))
 			continue
 		valid_hairstyles += hairstyle
 	for(var/facialhairstyle in GLOB.facial_hair_styles_list)
 		var/datum/sprite_accessory/S = GLOB.facial_hair_styles_list[facialhairstyle]
+		if(S.name == DEVELOPER_WARNING_NAME)
+			continue
 		if(gender == MALE && S.gender == FEMALE)
 			continue
 		if(gender == FEMALE && S.gender == MALE)
-			continue
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
 			continue
 		if(!(species.get_bodytype(src) in S.species_allowed))
 			continue
