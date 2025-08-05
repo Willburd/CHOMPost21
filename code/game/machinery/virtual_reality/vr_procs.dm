@@ -1,6 +1,6 @@
 // Gross proc which is called on Life() to check for escaped VR mobs. Tried to do this with Exited() on area/vr but ended up being too heavy.
 /mob/living/proc/handle_vr_derez()
-	if(virtual_reality_mob && !istype(get_area(src), /area/virtual_reality)) // Outpost 21 edit
+	if(virtual_reality_mob && !istype(get_area(src), /area/vr))
 		log_debug("[src] escaped virtual reality")
 		visible_message("[src] blinks out of existence.")
 		return_from_vr()

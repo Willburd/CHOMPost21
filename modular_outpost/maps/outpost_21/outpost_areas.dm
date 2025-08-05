@@ -647,3 +647,10 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DARK
+
+/area/virtual_reality
+	name = "DO NOT USE ME. Use /area/vr"
+
+/area/vr
+	name = "Virtual Reality"
+	icon_state = "Virtual_Reality"
