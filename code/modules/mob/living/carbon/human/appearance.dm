@@ -212,9 +212,6 @@
 			else if(gender == FEMALE && S.gender == MALE)
 				continue
 
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
-			continue
-
 		if(!(use_species in S.species_allowed))
 			continue
 
@@ -243,9 +240,6 @@
 				continue
 			else if(gender == FEMALE && S.gender == MALE)
 				continue
-
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
-			continue
 
 		if(!(use_species in S.species_allowed))
 			continue

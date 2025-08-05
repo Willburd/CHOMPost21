@@ -282,8 +282,6 @@
 			continue
 		if(!(species in S.species_allowed) && (!custom_base || !(custom_base in S.species_allowed)))
 			continue
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
-			continue
 		if((!S.ckeys_allowed) || (user.ckey in S.ckeys_allowed))
 			valid_hairstyles[S.name] = hairstyle
 
@@ -298,8 +296,6 @@
 		if(biological_gender == MALE && S.gender == FEMALE)
 			continue
 		if(biological_gender == FEMALE && S.gender == MALE)
-			continue
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
 			continue
 		if(!(species in S.species_allowed) && (!custom_base || !(custom_base in S.species_allowed)))
 			continue
