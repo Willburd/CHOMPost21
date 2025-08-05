@@ -197,11 +197,9 @@
 	if(ismob(loc))
 		var/mob/M = loc
 		to_chat(M, span_notice("Recording stopped."))
-	// Outpost 21 edit begin - Notice when recording stops
-	else
+	else if(isturf(loc)) // If not hidden away in a bag
 		playsound(src, 'sound/machines/click.ogg', 50, 1)
 		visible_message("\The [src] clicks as it stops recording.","click")
-	// Outpost 21 edit end
 
 /obj/item/taperecorder/verb/stop()
 	set name = "Stop"
