@@ -438,7 +438,6 @@
 		open_speed = 15
 	return (normalspeed ? open_speed : 5)
 
-// Outpost 21 edit begin - Experimental - Removed sleep() from doors
 /obj/machinery/door/proc/close(var/forced = 0)
 	if(!can_close(forced))
 		return
