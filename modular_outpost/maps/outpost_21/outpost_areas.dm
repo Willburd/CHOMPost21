@@ -654,3 +654,6 @@
 /area/vr
 	name = "Virtual Reality"
 	icon_state = "Virtual_Reality"
+	dynamic_lighting = 0
+	requires_power = 0
+	flags = AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE | AREA_FLAG_IS_NOT_PERSISTENT
