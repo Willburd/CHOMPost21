@@ -81,10 +81,8 @@
 	if(C.client)
 		C.client.perspective = EYE_PERSPECTIVE
 		C.client.eye = src
-	// Outpost 21 edit begin - puller drops what they were pulling
 	if(C.pulledby)
 		C.pulledby.stop_pulling()
-	// Outpost 21 edit end
 	C.resting = 1
 	C.loc = src.loc
 	for(var/obj/O in src)

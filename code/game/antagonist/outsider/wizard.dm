@@ -101,11 +101,10 @@ var/datum/antagonist/wizard/wizards
 		feedback_set_details("round_end_result","loss - wizard killed")
 		to_world(span_boldannounce(span_large("The [(current_antagonists.len>1)?"[role_text_plural] have":"[role_text] has"] been killed by the crew!")))
 
-// Outpost 21 edit begin - Wizard fixes, removing antag removes their spells
+// Removing antag should remove spells
 /datum/antagonist/wizard/remove_antagonist(datum/mind/player, show_message, implanted)
 	. = ..()
 	player.current.spellremove()
-// Outpost 21 edit end
 
 //To batch-remove wizard spells. Linked to mind.dm.
 /mob/proc/spellremove()
