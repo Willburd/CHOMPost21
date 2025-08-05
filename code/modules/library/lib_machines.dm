@@ -339,12 +339,12 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 		if("editbook")
 			playsound(src, "keyboard", 40)
-			buffer_book = sanitizeSafe(tgui_input_text(usr, "Enter the book's title:"))
+			buffer_book = tgui_input_text(usr, "Enter the book's title:")
 			. = TRUE
 
 		if("editmob")
 			playsound(src, "keyboard", 40)
-			buffer_mob = sanitize(tgui_input_text(usr, "Enter the recipient's name:", null, null, MAX_NAME_LEN), MAX_NAME_LEN)
+			buffer_mob = tgui_input_text(usr, "Enter the recipient's name:", null, null, MAX_NAME_LEN)
 			. = TRUE
 
 		if("checkout")
@@ -401,7 +401,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 		if("setauthor")
 			playsound(src, "keyboard", 40)
-			var/newauthor = sanitize(tgui_input_text(usr, "Enter the author's name: "))
+			var/newauthor = tgui_input_text(usr, "Enter the author's name: ")
 			if(newauthor)
 				scanner.cache.author = newauthor
 			. = TRUE
