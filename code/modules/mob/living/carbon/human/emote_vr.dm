@@ -46,8 +46,7 @@
 	else
 		SpinAnimation(7,1,1)
 
-	// Outpost 21 edit begin - You aren't smart, are you?
-	if(isturf(loc))
+	if(isturf(loc)) // You aren't very smart, are you?
 		for(var/obj/structure/stairs/top/S in loc.contents)
 			S.use_stairs_instant(src)
 			visible_message(span_warning("\The [src] falls down the stairs!"), span_warning("You fall down the stairs!"))
@@ -63,7 +62,7 @@
 					var/obj/item/organ/external/right_leg = get_organ(BP_R_LEG)
 					if(right_leg)
 						right_leg.fracture()
-	// Outpost 21 edit end
+			break // Only fall down the first stairs in the turf... If somehow more than one exists
 
 	spawn(7)
 		density = original_density

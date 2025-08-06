@@ -180,7 +180,7 @@
 			locked = !locked
 			playsound(src, keysound,100, 1)
 		return
-	// Outpost 21 edit begin - picking fence gates
+
 	else if(istype(W,/obj/item/lockpick))
 		var/obj/item/lockpick/L = W
 		if(!locked)
@@ -199,19 +199,16 @@
 				to_chat(user, span_notice("Success!"))
 				locked = FALSE
 		return
-	// Outpost 21 edit end
 	else
 		attack_hand(user)
 	return
 
-// Outpost 21 edit begin - Allow borgs to open fences
 /obj/structure/fence/door/attack_ai(mob/user as mob)
 	if(isAI(user)) //so the AI can't open it
 		return
 	else if(isrobot(user)) //but cyborgs can
 		if(get_dist(user,src) <= 1) //not remotely though
 			return attack_hand(user)
-// Outpost 21 edit end
 
 /obj/structure/fence/door/proc/toggle(mob/user)
 	switch(open)
