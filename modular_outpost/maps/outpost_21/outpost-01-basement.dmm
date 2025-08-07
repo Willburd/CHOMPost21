@@ -18679,6 +18679,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "aHp" = (
@@ -19147,6 +19148,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "aIk" = (
@@ -23733,6 +23735,21 @@
 /obj/item/taperoll/atmos,
 /obj/item/taperoll/engineering,
 /obj/item/taperoll/engineering,
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
 /turf/simulated/floor/plating,
 /area/constructionsite/atmospherics)
 "aQo" = (
@@ -48203,6 +48220,10 @@
 /obj/machinery/oxygen_pump/mobile/anesthetic,
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/med)
+"bJp" = (
+/obj/structure/reagent_dispensers/coolanttank,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/eng)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -67936,6 +67957,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
+/obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "nSQ" = (
@@ -74556,11 +74578,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/spine/eng)
-"rLR" = (
-/obj/random/maintenance/morestuff,
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
 "rMT" = (
 /obj/structure/cable/orange{
@@ -105020,7 +105037,7 @@ bvB
 bvB
 aNT
 bvB
-aOJ
+bJp
 aOJ
 fQy
 bGq
@@ -105182,7 +105199,7 @@ aKm
 bvB
 aNT
 bvB
-rLR
+bJp
 aOJ
 tOB
 bBw

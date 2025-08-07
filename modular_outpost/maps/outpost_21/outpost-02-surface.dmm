@@ -8498,6 +8498,15 @@
 "aoz" = (
 /obj/structure/table/rack,
 /obj/item/extinguisher,
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "aoA" = (
@@ -8523,6 +8532,10 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
+"aoF" = (
+/obj/structure/reagent_dispensers/coolanttank,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
 "aoS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -55618,6 +55631,7 @@
 	name = "Captain's Desk Door";
 	req_access = list(20)
 	},
+/obj/item/gold_star_printer,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "oYM" = (
@@ -68902,6 +68916,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
+/obj/item/gold_star_printer,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hop)
 "tkG" = (
@@ -124390,7 +124405,7 @@ kNy
 mDI
 aoz
 ozu
-sPE
+aoF
 wKG
 wKG
 wKG
@@ -124552,7 +124567,7 @@ hAj
 bgZ
 bgZ
 ozu
-sPE
+aoF
 wKG
 fdx
 whu
