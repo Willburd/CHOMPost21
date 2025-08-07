@@ -193,6 +193,7 @@
 	skin_danger = 1
 	supply_conversion_value = 5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PHORON
+	coolant_modifier = 0.85
 
 	ppe_flags = REAGENT_PPE_PHORONGAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 

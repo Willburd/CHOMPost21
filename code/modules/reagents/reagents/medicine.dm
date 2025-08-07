@@ -1482,6 +1482,7 @@
 	scannable = 1
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
+	coolant_modifier = 0.5 // Okay substitute coolant
 
 	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
