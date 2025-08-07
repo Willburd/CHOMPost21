@@ -73,6 +73,7 @@
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
+	coolant_modifier = 0.15
 
 	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_BURNS // Outpost 21 edit - PPE reagents
 
@@ -119,6 +120,7 @@
 	wiki_flag = WIKI_DRINK
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD
+	coolant_modifier = 1.15
 
 /datum/reagent/ethanol/touch_mob(var/mob/living/L, var/amount)
 	..()
@@ -346,6 +348,7 @@
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
+	coolant_modifier = 0.15
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -385,6 +388,7 @@
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
+	coolant_modifier = 0.25
 
 /datum/reagent/oxygen
 	name = REAGENT_OXYGEN
@@ -395,6 +399,7 @@
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
+	coolant_modifier = 0.25
 
 	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -626,6 +631,7 @@
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
+	coolant_modifier = 0.25
 
 /datum/reagent/sugar
 	name = REAGENT_SUGAR
@@ -642,6 +648,7 @@
 
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_FOOD
+	coolant_modifier = -0.25
 
 /datum/reagent/sugar/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.adjust_nutrition(removed * 3)
@@ -673,6 +680,7 @@
 	color = "#BF8C00"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
+	coolant_modifier = -0.25
 
 /datum/reagent/tungsten
 	name = REAGENT_TUNGSTEN
