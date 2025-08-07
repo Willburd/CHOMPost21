@@ -197,6 +197,7 @@
 		// "ci-thrusters",
 		// "ci-herculean",
 		// "ci-connector",
+		"implant_apc", // Outpost 21 edit - APC connector
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_MEDICAL)
