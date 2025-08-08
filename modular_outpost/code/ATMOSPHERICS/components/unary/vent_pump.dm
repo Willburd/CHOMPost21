@@ -1,4 +1,3 @@
-// Outpost 21 edit - Lower power requirements due to lowpop expectation
 /obj/machinery/atmospherics/unary/vent_pump
 	power_rating = 7500
 

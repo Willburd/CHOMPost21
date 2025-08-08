@@ -1086,7 +1086,7 @@ GLOBAL_LIST_INIT(SPECIALS, list(
 	/area/submap/virgo2,
 	/area/submap/event,
 	/area/submap/casino_event,
-	/area/virtual_reality // Outpost 21 edit
+	/area/vr
 	// /area/derelict //commented out, all hail derelict-rebuilders!
 ))
 
@@ -1109,7 +1109,7 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/area/submap/virgo2,
 	/area/submap/event,
 	/area/submap/casino_event,
-	/area/virtual_reality // Outpost 21 edit
+	/area/vr
 	)))
 
 //GRIPPERS!!!

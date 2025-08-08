@@ -158,7 +158,6 @@
 				printed after an intro ending with: \"Around you, you see...\" to the prey. If you already \
 				have prey, this will be printed to them after \"Your surroundings change to...\". Limit 2048 char.", \
 				"VR Environment", html_decode(inside_flavor), MAX_MESSAGE_LEN*2, TRUE, prevent_enter = TRUE)
-				new_flavor = sanitize(new_flavor, MAX_MESSAGE_LEN*2)
 				inside_flavor = new_flavor
 				nif.notify("Updating VR environment...")
 				for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
@@ -570,7 +569,7 @@
 		to_chat(src,span_warning("You need a loaded mind to use NSay."))
 		return
 	if(!message)
-		message = tgui_input_text(src, "Type a message to say.","Speak into Soulcatcher")
+		message = tgui_input_text(src, "Type a message to say.","Speak into Soulcatcher", encode = FALSE)
 	if(message)
 		var/sane_message = sanitize(message)
 		SC.say_into(sane_message,src)
@@ -601,7 +600,7 @@
 		return
 
 	if(!message)
-		message = tgui_input_text(src, "Type an action to perform.","Emote into Soulcatcher")
+		message = tgui_input_text(src, "Type an action to perform.","Emote into Soulcatcher", encode = FALSE)
 	if(message)
 		var/sane_message = sanitize(message)
 		SC.emote_into(sane_message,src)
@@ -665,7 +664,7 @@
 
 	/* Outpost 21 edit - Nif removal
 	if(!message)
-		message = tgui_input_text(src, "Type a message to say.","Speak into Soulcatcher")
+		message = tgui_input_text(src, "Type a message to say.","Speak into Soulcatcher", encode = FALSE)
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.say_into(sane_message,src,null)
@@ -678,7 +677,7 @@
 
 	/* Outpost 21 edit - Nif removal
 	if(!message)
-		message = tgui_input_text(src, "Type an action to perform.","Emote into Soulcatcher")
+		message = tgui_input_text(src, "Type an action to perform.","Emote into Soulcatcher", encode = FALSE)
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.emote_into(sane_message,src,null)

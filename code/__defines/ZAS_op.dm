@@ -1,0 +1,1 @@
+#define ZONE_MAX_SIZE 3000 // Zones merging, that will create a new zone with with more than this many turfs, will never merge even if the connection is direct. Prevents the automated creation of collosal zones on planets

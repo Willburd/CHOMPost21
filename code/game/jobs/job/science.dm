@@ -30,10 +30,10 @@
 
 	minimum_character_age = 25
 	minimal_player_age = 31 //ChompEDIT
-	min_age_by_species = list(SPECIES_UNATHI = 70, "mechanical" = 10, SPECIES_HUMAN_VATBORN = 14)
+	min_age_by_species = list(SPECIES_UNATHI = 70, FBP_MECHANICAL = 10, SPECIES_HUMAN_VATBORN = 14)
 	ideal_character_age = 50
-	ideal_age_by_species = list(SPECIES_UNATHI = 140, "mechanical" = 20, SPECIES_HUMAN_VATBORN = 20)
-	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, "digital")
+	ideal_age_by_species = list(SPECIES_UNATHI = 140, FBP_MECHANICAL = 20, SPECIES_HUMAN_VATBORN = 20)
+	banned_job_species = list(SPECIES_TESHARI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_ZADDAT, FBP_DIGITAL)
 	disallow_jobhop = TRUE
 	pto_type = PTO_SCIENCE
 	dept_time_required = 60
@@ -80,7 +80,7 @@
 	access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch, access_xenobotany) // Outpost 21 edit - removed robotics
 	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
-	banned_job_species = list("digital")
+	banned_job_species = list(FBP_DIGITAL)
 
 	minimal_player_age = 3
 
@@ -158,7 +158,7 @@
 	economic_modifier = 7
 	access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_hydroponics) // Outpost 21 edit - removed robotics
 	minimal_access = list(access_research, access_xenobiology, access_hydroponics, access_tox_storage)
-	banned_job_species = list("digital")
+	banned_job_species = list(FBP_DIGITAL)
 
 	minimal_player_age = 14
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
@@ -214,7 +214,7 @@
 
 	minimal_player_age = 7
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
-	banned_job_species = list("digital")
+	banned_job_species = list(FBP_DIGITAL)
 
 	outfit_type = /decl/hierarchy/outfit/job/science/roboticist
 	job_description = "A " + JOB_ROBOTICIST + " maintains and repairs the station's synthetics, including crew with prosthetic limbs. \

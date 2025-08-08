@@ -327,10 +327,16 @@
 #define SPECIES_VULPKANIN		"Vulpkanin"
 #define SPECIES_XENOCHIMERA		"Xenochimera"
 #define SPECIES_ZORREN_HIGH		"Zorren"
+#define SPECIES_ZORREN_DARK		"Dark Furred Zorren"
 #define SPECIES_CUSTOM			"Custom Species"
 #define SPECIES_LLEILL			"Lleill"
 #define SPECIES_HANNER			"Hanner"
 #define SPECIES_SPARKLE			"Sparkle Dog"
+
+// FBG types
+#define FBP_ASSISTED		"assisted"
+#define FBP_MECHANICAL		"mechanical"
+#define FBP_DIGITAL			"digital"
 
 // Monkey and alien monkeys.
 #define SPECIES_MONKEY				"Monkey"
@@ -386,6 +392,7 @@
 #define SELECTS_BODYTYPE_FALSE			0
 #define SELECTS_BODYTYPE_CUSTOM			1
 #define SELECTS_BODYTYPE_SHAPESHIFTER	2
+#define SELECTS_BODYTYPE_ZORREN			3
 
 #define MARKING_NONDIGI_ONLY 		(1 << 0)
 #define MARKING_DIGITIGRADE_ONLY 	(1 << 1)
@@ -485,7 +492,9 @@
 
 #define VIS_SOULCATCHER		35
 
-#define VIS_COUNT			35 //Must be highest number from above.
+#define VIS_EVENT_INVIS		36
+
+#define VIS_COUNT			36 //Must be highest number from above.
 
 //Some mob icon layering defines
 #define BODY_LAYER		-100

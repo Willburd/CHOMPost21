@@ -77,7 +77,7 @@
 	M.eye_blurry = min(M.eye_blurry + wound_heal, 250)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
-		for(var/obj/item/organ/external/O in H.bad_external_organs)
+		for(var/obj/item/organ/external/O in H.organs)
 			for(var/datum/wound/W in O.wounds)
 				if(W.bleeding())
 					W.damage = max(W.damage - wound_heal, 0)
@@ -864,7 +864,7 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		var/wound_heal = removed * repair_strength
-		for(var/obj/item/organ/external/O in H.bad_external_organs)
+		for(var/obj/item/organ/external/O in H.organs)
 			for(var/datum/wound/W in O.wounds)
 				if(W.bleeding())
 					W.bandage() //This is the ACTUAL clotting being performed.
@@ -1482,6 +1482,7 @@
 	scannable = 1
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
+	coolant_modifier = 0.5 // Okay substitute coolant
 
 	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 

@@ -2827,20 +2827,20 @@
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
 
-/area/virtual_reality/lighting // virtual reality, but cooler
+/area/vr/lighting // virtual reality, but cooler
 	dynamic_lighting = 1 // literally the only change, I just wanted neat lights for the hazard course.
 
-/area/virtual_reality/requirespower // virtual reality, but for doors that are pried open, and lights that are dead
+/area/vr/requirespower // virtual reality, but for doors that are pried open, and lights that are dead
 	dynamic_lighting = 1
 	requires_power = TRUE
 
-/area/virtual_reality/spacesim // acts like space with lights
+/area/vr/spacesim // acts like space with lights
 	dynamic_lighting = 1
 	always_unpowered = TRUE
 	requires_power = FALSE
 	has_gravity = FALSE
 
-/area/virtual_reality/spacesim/get_gravity()
+/area/vr/spacesim/get_gravity()
 	return 0
 
 /area/specialty/hell

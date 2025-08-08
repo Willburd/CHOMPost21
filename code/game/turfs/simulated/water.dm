@@ -106,10 +106,8 @@
 /turf/simulated/floor/water/Entered(atom/movable/AM, atom/oldloc)
 	if(isliving(AM))
 		var/mob/living/L = AM
-		// Outpost 21 edit - No splishy splashy
-		if(L.is_incorporeal())
+		if(L.hovering || L.flying || L.is_incorporeal())
 			return
-		// Outpost 21 edit end
 		L.update_water()
 		if(L.check_submerged() <= 0)
 			return
@@ -121,10 +119,8 @@
 /turf/simulated/floor/water/Exited(atom/movable/AM, atom/newloc)
 	if(isliving(AM))
 		var/mob/living/L = AM
-		// Outpost 21 edit begin - No splishy splashy
-		if(L.is_incorporeal())
+		if(L.hovering || L.flying || L.is_incorporeal())
 			return
-		// Outpost 21 edit end
 		L.update_water()
 		if(L.check_submerged() <= 0)
 			return
@@ -172,7 +168,7 @@
 /mob/living/proc/check_submerged()
 	if(buckled)
 		return 0
-	if(hovering || flying || is_incorporeal()) // Outpost 21 edit - Added incorperial check
+	if(hovering || flying || is_incorporeal())
 		if(flying)
 			adjust_nutrition(-0.5)
 		return 0

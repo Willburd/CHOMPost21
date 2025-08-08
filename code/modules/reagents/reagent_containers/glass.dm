@@ -152,7 +152,7 @@
 
 /obj/item/reagent_containers/glass/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/pen) || istype(W, /obj/item/flashlight/pen))
-		var/tmp_label = sanitizeSafe(tgui_input_text(user, "Enter a label for [name]", "Label", label_text, MAX_NAME_LEN), MAX_NAME_LEN)
+		var/tmp_label = sanitizeSafe(tgui_input_text(user, "Enter a label for [name]", "Label", label_text, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
 		if(length(tmp_label) > 50)
 			to_chat(user, span_notice("The label can be at most 50 characters long."))
 		else if(length(tmp_label) > 10)
@@ -168,13 +168,7 @@
 	if(W && W.w_class <= w_class && (flags & OPENCONTAINER) && user.a_intent != I_HELP)
 		balloon_alert(user, "[W] dipped into \the [src].")
 		reagents.touch_obj(W, reagents.total_volume)
-	// Outpost 21 edit begin - changeling blood test
-	if(W.is_hot())
-		var/datum/reagent/blood/B = reagents.get_reagent("blood")
-		if(B)
-			balloon_alert(user, "\The [W] burns the blood in \the [src].")
-			B.changling_blood_test(reagents)
-	// Outpost 21 edit end
+	attempt_changeling_test(W,user)
 
 /obj/item/reagent_containers/glass/proc/update_name_label()
 	if(label_text == "")

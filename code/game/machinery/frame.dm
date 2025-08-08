@@ -451,14 +451,6 @@ GLOBAL_LIST(construction_frame_floor)
 					new_machine.pixel_x = pixel_x
 					new_machine.pixel_y = pixel_y
 					qdel(src)
-
-
-					// Outpost 21 edit begin - Refinery machines need to update neighbours
-					if(istype(new_machine,/obj/machinery/reagent_refinery))
-						var/obj/machinery/reagent_refinery/R = new_machine
-						R.update_neighbours()
-						R.update_icon()
-					// Outpost 21 edi end
 					return
 
 			else if(frame_type.frame_class == FRAME_CLASS_ALARM)

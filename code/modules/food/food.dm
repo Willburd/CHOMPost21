@@ -26,7 +26,7 @@
 	if(user.stat == DEAD || !(ishuman(user) || isrobot(user)))
 		to_chat(user, span_warning("You can't cook!"))
 		return
-	var/n_name = sanitizeSafe(tgui_input_text(user, "What would you like to name \the [src]? Leave blank to reset.", "Food Naming", initial(name), MAX_NAME_LEN))
+	var/n_name = sanitizeSafe(tgui_input_text(user, "What would you like to name \the [src]? Leave blank to reset.", "Food Naming", initial(name), MAX_NAME_LEN, encode = FALSE))
 	if(!n_name)
 		n_name = initial(name)
 
@@ -38,6 +38,10 @@
 		src.pixel_x = rand(-6.0, 6) //Randomizes postion
 		src.pixel_y = rand(-6.0, 6)
 	AddElement(/datum/element/sellable/food_snack)
+
+/obj/item/reagent_containers/food/attackby(obj/item/W, mob/user)
+	. = ..()
+	attempt_changeling_test(W,user)
 
 /obj/item/reagent_containers/food/afterattack(atom/A, mob/user, proximity, params)
 	if((center_of_mass_x || center_of_mass_y) && proximity && params && istype(A, /obj/structure/table))

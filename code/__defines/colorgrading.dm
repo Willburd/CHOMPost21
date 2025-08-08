@@ -12,6 +12,3 @@
 #define COLORTINT_OMEN "#f0eaf0"
 #define COLORTINT_DUST "#f7f7f1"
 #define COLORTINT_BADBROKE "#fbebbb"
-
-// Outpost 21 edit - Custom grading
-#define COLORTINT_UNDERDARK "#dbcfcf"

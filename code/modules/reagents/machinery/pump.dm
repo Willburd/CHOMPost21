@@ -1,13 +1,12 @@
 /obj/machinery/pump
 	name = "fluid pump"
-	desc = "A fluid pumping machine. Can extract fluids from water, or be used to frack from deep fissures." // Outpost 21 edit - Fracking explaination
+	desc = "A fluid pumping machine."
 
 	description_info = "A machine that can pump fluid from certain turfs.<br>\
 	Water can be pumped from any body of water. Certain locations or environmental\
-	conditions  can cause different byproducts to be produced.<br>\
+	conditions can cause different byproducts to be produced.<br>\
 	Magma or Lava can be pumped to produce mineralized fluid.<br>\
-	Can also be used to frack for deeply embedded fluids if used in the\
-	deep fissure often found in gas pockets." // Outpost 21 edit - Fracking explaination
+	Deep bore mining drills can create boreholes that can be fracked for fluids."
 
 	anchored = TRUE
 	density = TRUE
@@ -28,6 +27,7 @@
 	create_reagents(200)
 	. = ..()
 	default_apply_parts()
+	cell = default_use_hicell()
 
 	AddComponent(/datum/component/hose_connector/output)
 
@@ -168,7 +168,7 @@
 			to_chat(user, span_notice("There is a power cell already installed."))
 			return FALSE
 		user.drop_from_inventory(W, src)
-		cell = W // Outpost 21 edit - how long were these broken for? The cell placed inside was not actually assigned, so it could never power on. - Willbird
+		cell = W // Link the cell to us
 		to_chat(user, span_notice("You insert the power cell."))
 
 	else
@@ -188,19 +188,15 @@
 
 /turf/simulated/floor/water/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
-	// Outpost 21 edit - Fluid pump rate tweaks
-	R.add_reagent(REAGENT_ID_WATER, round(volume / 5, 0.1))
+	R.add_reagent(REAGENT_ID_WATER, round(volume, 0.1))
 
 	var/datum/gas_mixture/air = return_air() // v
 	if(air.temperature <= T0C) // Uses the current air temp, instead of the turf starting temp
-		R.add_reagent(REAGENT_ID_ICE, round(volume / 4, 0.1))
+		R.add_reagent(REAGENT_ID_ICE, round(volume / 2, 0.1))
 
-	for(var/turf/simulated/mineral/M in orange(5,src)) // Uses the turf as center instead of an unset usr
-		if(M.mineral && prob(40)) // v
-			R.add_reagent(M.mineral.reagent, round(volume, 0.1)) // Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change.
-		else if(prob(5))
-			R.add_reagent("silicate", 0.1)
-	// Outpost 21 edit end
+	for(var/turf/simulated/mineral/M in orange(5,src))
+		if(M.mineral && prob(40) && M.mineral.reagent) // v
+			R.add_reagent(M.mineral.reagent, round(volume / 5, 0.1)) // Was the turf's reagents variable not the R argument, and changed ore_reagent to M.mineral.reagent because of above change. Also nerfed amount to 1/5 instead of 1/2
 
 /turf/simulated/floor/water/pool/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -213,3 +209,26 @@
 /turf/simulated/floor/water/contaminated/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
 	R.add_reagent(REAGENT_ID_VATSTABILIZER, round(volume / 2, 0.1))
+
+/turf/simulated/mineral/pump_reagents(var/datum/reagents/R, var/volume)
+	. = ..()
+	if(density)
+		return
+	if(!sand_dug)
+		return
+	var/turf/simulated/mineral/M = pick(orange(5,src))
+	if(!istype(M))
+		return
+	// Use nearby ores as well
+	if(M.mineral && M.mineral.reagent && prob(40))
+		R.add_reagent(M.mineral.reagent, rand(0,volume / 8))
+	// Pump deep reagents from deepdrill boreholes
+	for(var/metal in GLOB.deepore_fracking_reagents)
+		if(!M.resources[metal])
+			continue
+		var/list/ore_list = GLOB.deepore_fracking_reagents[metal]
+		if(!ore_list || !ore_list.len)
+			continue
+		var/reagent_id = pick(ore_list)
+		if(reagent_id && prob(60))
+			R.add_reagent(reagent_id, rand(0,volume / 6))

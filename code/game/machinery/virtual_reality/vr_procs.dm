@@ -1,6 +1,6 @@
 // Gross proc which is called on Life() to check for escaped VR mobs. Tried to do this with Exited() on area/vr but ended up being too heavy.
 /mob/living/proc/handle_vr_derez()
-	if(virtual_reality_mob && !istype(get_area(src), /area/virtual_reality)) // Outpost 21 edit
+	if(virtual_reality_mob && !istype(get_area(src), /area/vr))
 		log_debug("[src] escaped virtual reality")
 		visible_message("[src] blinks out of existence.")
 		return_from_vr()
@@ -85,6 +85,6 @@
 	avatar.equip_survival_tanks(TRUE) // Outpost 21 edit - so non-oxy breathers don't die horribly
 	log_and_message_admins("[key_name_admin(avatar)] joined virtual reality from the ghost menu.")
 
-	var/newname = sanitize(tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN), MAX_NAME_LEN)
+	var/newname = tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN)
 	if(newname)
 		avatar.real_name = newname

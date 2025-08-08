@@ -1,5 +1,5 @@
 /datum/reagent/blood
-	data = new/list("donor" = null, "viruses" = null, "species" = SPECIES_HUMAN, "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "resistances" = null, "trace_chem" = null, REAGENT_ID_ANTIBODIES = list(), "changeling" = FALSE) // Outpost 21 edit - changling blood effects
+	data = new/list("donor" = null, "viruses" = null, "species" = SPECIES_HUMAN, "blood_DNA" = null, "blood_type" = null, "blood_colour" = "#A10808", "resistances" = null, "trace_chem" = null, REAGENT_ID_ANTIBODIES = list(), "changeling" = FALSE)
 	name = REAGENT_BLOOD
 	id = REAGENT_ID_BLOOD
 	description = "Blood."
@@ -18,6 +18,7 @@
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
+	coolant_modifier = 0.25
 
 /datum/reagent/blood/initialize_data(var/newdata)
 	..()
@@ -112,10 +113,8 @@
 	if(!data || !newdata)
 		return
 
-	// Outpost 21 edit blood - changling blood effects
 	if(newdata["species"] != "synthetic" && (data["changeling"] || newdata["changeling"]))
-		data["changeling"] = TRUE;
-	// Outpost 21 edit end
+		data["changeling"] = TRUE // Spread to other samples as an antag tactic
 
 	if(data["viruses"] || newdata["viruses"])
 		var/list/mix1 = data["viruses"]
@@ -174,13 +173,11 @@
 
 			if(!H.isSynthetic() && data["species"] == "synthetic")	// Remember not to inject oil into your veins, it's bad for you.
 				H.reagents.add_reagent(REAGENT_ID_TOXIN, removed * 1.5)
-
 			return
 
 	M.inject_blood(src, volume * volume_mod)
 	remove_self(volume)
 
-// Outpost 21 edit begin - changeling blood test
 /datum/reagent/blood/proc/changling_blood_test(var/datum/reagents/holder)
 	if(data["changeling"])
 		var/location = get_turf(holder.my_atom)
@@ -192,7 +189,6 @@
 		playsound(holder.my_atom, 'sound/voice/hiss6.ogg', 50, 1)
 		return TRUE
 	return FALSE
-// Outpost 21 edit end
 
 /datum/reagent/blood/proc/get_diseases()
 	. = list()
@@ -207,6 +203,7 @@
 	id = REAGENT_ID_SYNTHBLOOD
 	color = "#999966"
 	volume_mod = 2
+	coolant_modifier = 0.25
 
 /datum/reagent/blood/synthblood/initialize_data(var/newdata)
 	..()
@@ -221,6 +218,7 @@
 	id = REAGENT_ID_SYNTHBLOOD_DILUTE
 	color = "#cacaaf"
 	volume_mod = 1.2
+	coolant_modifier = 0.5
 
 // pure concentrated antibodies
 /datum/reagent/antibodies
@@ -258,6 +256,7 @@
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_RAW
+	coolant_modifier = 1 // Water!
 
 /datum/reagent/water/touch_turf(var/turf/simulated/T)
 	if(!istype(T))
@@ -359,6 +358,7 @@
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_PHORONGAS // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_RAW
+	coolant_modifier = 0.15
 
 /datum/reagent/fuel/touch_turf(var/turf/T, var/amount)
 	..()

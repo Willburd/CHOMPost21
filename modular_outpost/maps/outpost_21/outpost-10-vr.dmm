@@ -5,11 +5,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "ad" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ae" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -22,7 +22,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "af" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -31,12 +31,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "aj" = (
 /obj/structure/flora/rocks2,
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "ak" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -46,22 +46,22 @@
 	pixel_x = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "al" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ap" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ar" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "aC" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -73,7 +73,7 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "aH" = (
 /obj/machinery/light{
 	dir = 8
@@ -85,7 +85,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "aJ" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/suit/omnitag,
@@ -101,24 +101,24 @@
 /obj/item/clothing/suit/omnitag,
 /obj/item/clothing/suit/omnitag,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "aK" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
 /obj/structure/table/darkglass,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "aL" = (
 /obj/machinery/hologram/holo_tutorial/hazard_end,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "aQ" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "aS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -126,7 +126,7 @@
 /obj/structure/table/darkglass,
 /obj/item/clothing/suit/omnitag,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "aU" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -135,7 +135,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "aV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -147,17 +147,17 @@
 /obj/item/storage/backpack/dufflebag/syndie,
 /obj/item/storage/backpack/dufflebag/syndie,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "aW" = (
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "aX" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bb" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1;
@@ -167,11 +167,11 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "bc" = (
 /obj/machinery/hologram/holo_tutorial/hazard_4,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bd" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/borderfloor{
@@ -182,7 +182,7 @@
 	},
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bg" = (
 /obj/structure/table/glass,
 /obj/structure/window/basic{
@@ -201,22 +201,22 @@
 	},
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bq" = (
 /obj/structure/target_stake,
 /obj/item/target/alien,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "bu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bv" = (
 /obj/structure/sign/warning/internals_required,
 /turf/simulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bw" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
@@ -225,7 +225,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "bx" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light{
@@ -242,36 +242,36 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "by" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "bz" = (
 /obj/machinery/door/airlock/angled_bay/standard/glass,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "bA" = (
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "bB" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "bD" = (
 /obj/machinery/hologram/holo_tutorial/intro_1,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "bG" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -280,13 +280,13 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "bN" = (
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bO" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
@@ -298,7 +298,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -310,13 +310,13 @@
 	},
 /obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bS" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bT" = (
 /obj/structure/flora/pottedplant/fern,
 /obj/machinery/light,
@@ -327,7 +327,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "bW" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "VRTut"
@@ -337,14 +337,14 @@
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
-/area/virtual_reality)
+/area/vr)
 "ca" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cb" = (
 /obj/structure/table/woodentable,
 /obj/machinery/bunsen_burner,
@@ -359,32 +359,32 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cd" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cg" = (
 /turf/simulated/floor/tiled/airless,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "ci" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "cj" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ck" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "cl" = (
 /obj/machinery/smartfridge/drying_rack,
 /turf/simulated/floor/grass2,
@@ -399,14 +399,14 @@
 	},
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cp" = (
 /obj/structure/table/standard,
 /obj/item/surgical/scalpel,
 /obj/item/surgical/hemostat,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cr" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -415,21 +415,21 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "ct" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "cx" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cy" = (
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cz" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 6
@@ -438,7 +438,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cB" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/water/indoors,
@@ -448,13 +448,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cD" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "cG" = (
 /obj/machinery/bodyscanner,
 /obj/effect/floor_decal/corner/pink{
@@ -464,14 +464,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cH" = (
 /turf/simulated/floor/airless,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "cI" = (
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cJ" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/kafel_full,
@@ -484,17 +484,17 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "cN" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cO" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cP" = (
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular,
@@ -503,7 +503,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -513,17 +513,17 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cU" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "cW" = (
 /obj/machinery/hologram/holo_tutorial/hazard_3,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "dc" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
@@ -533,11 +533,11 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "dd" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "de" = (
 /obj/structure/urinal{
 	dir = 8;
@@ -545,7 +545,7 @@
 	},
 /obj/structure/window/reinforced/tinted,
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "dm" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -554,20 +554,20 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "do" = (
 /obj/effect/floor_decal/arrow{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "dr" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "ds" = (
 /obj/structure/table/woodentable,
 /obj/machinery/librarywikicomp,
@@ -581,7 +581,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "dt" = (
 /obj/structure/flora/lily1,
 /turf/simulated/floor/water/indoors,
@@ -595,7 +595,7 @@
 /obj/item/storage/firstaid/clotting,
 /obj/machinery/light,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "dC" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -604,7 +604,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "dD" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -620,14 +620,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "dI" = (
 /obj/structure/flora/pottedplant,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "dL" = (
 /obj/structure/foodcart,
 /turf/simulated/floor/tiled/kafel_full,
@@ -639,12 +639,12 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "dN" = (
 /obj/item/storage/firstaid/bonemed,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "dO" = (
 /obj/structure/table/rack,
 /obj/random/flashlight,
@@ -658,11 +658,11 @@
 /obj/random/flashlight,
 /obj/random/flashlight,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "dR" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "dS" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -676,7 +676,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "dY" = (
 /obj/machinery/icecream_vat,
 /turf/simulated/floor/tiled/kafel_full,
@@ -690,17 +690,17 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "eb" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/snacks/spreads/butter,
 /obj/item/material/knife/plastic,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ec" = (
 /obj/random/flashlight,
 /turf/space,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "ed" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
@@ -716,7 +716,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ee" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -761,7 +761,7 @@
 /obj/item/material/whip,
 /obj/item/material/whip,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "eg" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -775,10 +775,10 @@
 /obj/item/storage/box,
 /obj/item/storage/box,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ek" = (
 /turf/simulated/mineral,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "en" = (
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular,
@@ -791,28 +791,28 @@
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "es" = (
 /obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "et" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ev" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "eB" = (
 /obj/machinery/hologram/holo_tutorial/intro_13,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "eC" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "eE" = (
 /obj/machinery/chem_master,
 /obj/effect/floor_decal/borderfloor{
@@ -822,7 +822,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "eL" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -843,7 +843,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fa" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/tiled/kafel_full,
@@ -856,11 +856,11 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "ff" = (
 /mob/living/simple_mob/vore/jelly,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "fi" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/door/blast/shutters{
@@ -899,14 +899,14 @@
 /obj/item/reagent_containers/food/snacks/carpmeat,
 /obj/item/reagent_containers/food/snacks/carpmeat,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fv" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fw" = (
 /obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/pink{
@@ -916,7 +916,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fz" = (
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/corner/blue/border{
@@ -924,13 +924,13 @@
 	},
 /obj/item/reagent_containers/blood/prelabeled/OMinus,
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fA" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fB" = (
 /obj/structure/prop/statue/lion,
 /turf/simulated/floor/beach/sand/desert,
@@ -943,7 +943,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fE" = (
 /turf/space,
 /area/space)
@@ -955,17 +955,17 @@
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "fI" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "fJ" = (
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "fK" = (
 /obj/structure/table/glass,
 /obj/machinery/door/window/eastright{
@@ -982,7 +982,7 @@
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "fN" = (
 /obj/structure/table/glass,
 /obj/machinery/door/window/eastright{
@@ -998,7 +998,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "fQ" = (
 /obj/structure/closet/crate/medical/blood,
 /obj/effect/floor_decal/corner/paleblue{
@@ -1026,7 +1026,7 @@
 /obj/item/reagent_containers/blood/synthblood,
 /obj/item/reagent_containers/blood/synthblood,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "fU" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -1039,21 +1039,21 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "fW" = (
 /obj/structure/flora/pottedplant/fern,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "fX" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /obj/item/gun/launcher/crossbow/bow/hardlight,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "fY" = (
 /obj/structure/table/marble,
 /obj/machinery/microwave,
@@ -1064,27 +1064,27 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "gc" = (
 /obj/structure/sink{
 	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "gh" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gk" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1095,7 +1095,7 @@
 "gn" = (
 /obj/effect/floor_decal/corner_techfloor_grid,
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -1107,21 +1107,21 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "gz" = (
 /obj/machinery/appliance/cooker/oven,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gH" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gI" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1138,15 +1138,15 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gM" = (
 /obj/machinery/door/airlock/angled_bay/standard/glass,
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "gN" = (
 /obj/machinery/hologram/holo_tutorial/intro_5,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "gQ" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1191,7 +1191,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gT" = (
 /obj/item/roller,
 /obj/item/roller{
@@ -1210,22 +1210,22 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gV" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gW" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "gY" = (
 /obj/structure/sign/warning/acid,
 /turf/simulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hc" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -1234,10 +1234,10 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hd" = (
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "he" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -1246,27 +1246,27 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hg" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "hh" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hq" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/suit/omnitag,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "hr" = (
 /turf/simulated/wall/bay/r_wall/green,
-/area/virtual_reality)
+/area/vr)
 "hs" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/fire,
@@ -1278,14 +1278,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hv" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/pink/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hz" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
@@ -1298,25 +1298,25 @@
 /obj/machinery/door/window,
 /obj/item/gun/launcher/spikethrower,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "hC" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hD" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "hG" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "hK" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hN" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -1346,13 +1346,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "hR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hS" = (
 /obj/item/roller,
 /obj/item/roller{
@@ -1366,7 +1366,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hT" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/fire,
@@ -1375,7 +1375,7 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "hZ" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -1384,7 +1384,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ib" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -1399,18 +1399,18 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ic" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "id" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ig" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor{
@@ -1420,13 +1420,13 @@
 	dir = 10
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ih" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "ij" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -1436,17 +1436,17 @@
 /obj/random/flashlight,
 /obj/random/flashlight,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "im" = (
 /obj/random/flashlight,
 /turf/simulated/floor/airless,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "io" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "ir" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -1455,20 +1455,20 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "iu" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "iw" = (
 /obj/item/flag/eshui,
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "ix" = (
 /obj/machinery/optable,
 /obj/machinery/oxygen_pump/anesthetic{
@@ -1481,7 +1481,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "iA" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
@@ -1490,7 +1490,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "iC" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -1499,11 +1499,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "iD" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "iF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -1513,7 +1513,7 @@
 	pixel_x = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "iJ" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -1522,13 +1522,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "iL" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "iM" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -1538,7 +1538,7 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "iN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -1547,7 +1547,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "iO" = (
 /turf/simulated/wall/bay/r_wall/blue,
 /area/space)
@@ -1561,13 +1561,13 @@
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "iV" = (
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "iY" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1586,14 +1586,14 @@
 "jc" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jj" = (
 /obj/machinery/porta_turret/stationary,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jn" = (
 /obj/structure/reagent_dispensers/cookingoil,
 /turf/simulated/floor/tiled/kafel_full,
@@ -1604,21 +1604,21 @@
 "jq" = (
 /obj/structure/sign/warning/airlock,
 /turf/simulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jv" = (
 /obj/machinery/hologram/holo_tutorial/eva_2,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jB" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "jH" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jK" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -1627,7 +1627,7 @@
 /obj/item/storage/firstaid/o2,
 /obj/item/storage/firstaid/o2,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jL" = (
 /obj/machinery/chemical_analyzer,
 /obj/structure/table/woodentable,
@@ -1638,7 +1638,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jR" = (
 /obj/structure/window/basic,
 /obj/structure/window/basic{
@@ -1653,13 +1653,13 @@
 /obj/structure/flora/rocks2,
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jT" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "jV" = (
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/reagent_containers/spray/cleaner,
@@ -1669,32 +1669,32 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ka" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ke" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "kp" = (
 /mob/living/simple_mob/animal/passive/mouse,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "kq" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/grass,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "kr" = (
 /obj/structure/frame,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "kv" = (
 /obj/structure/closet/secure_closet/bar,
 /turf/simulated/floor/wood/sif,
@@ -1715,7 +1715,7 @@
 	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "kC" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1726,7 +1726,7 @@
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "kE" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/kafel_full,
@@ -1743,31 +1743,31 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "kM" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "kP" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "kR" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/structure/filingcabinet,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "kT" = (
 /obj/machinery/hologram/holo_tutorial/intro_4,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "kX" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -1813,7 +1813,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lb" = (
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/full,
@@ -1824,14 +1824,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lh" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "li" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -1847,13 +1847,13 @@
 /obj/random/flashlight,
 /obj/random/flashlight,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "ln" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "lq" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -1874,14 +1874,14 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lx" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lB" = (
 /obj/structure/sink{
 	pixel_y = 16
@@ -1890,13 +1890,13 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lF" = (
 /obj/structure/railing{
 	dir = 4
@@ -1905,13 +1905,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "lN" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/light,
 /obj/machinery/recharge_station,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lO" = (
 /obj/structure/railing{
 	dir = 8
@@ -1920,21 +1920,21 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "lQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "lT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "lW" = (
 /obj/structure/table/glass,
 /obj/structure/window/basic{
@@ -1950,14 +1950,14 @@
 /obj/item/storage/firstaid/surgery,
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "me" = (
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "VRTut"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "mf" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -1969,23 +1969,23 @@
 /obj/structure/table/darkglass,
 /obj/item/gun/energy/lasertag/omni,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "mi" = (
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "mj" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "mm" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "mo" = (
 /obj/structure/reagent_dispensers/beerkeg/fakenuke,
 /turf/simulated/floor/wood/sif,
@@ -1998,11 +1998,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "mt" = (
 /obj/machinery/hologram/holo_tutorial/intro_3,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "mv" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -2011,14 +2011,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "mw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /obj/structure/filingcabinet,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "my" = (
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular{
@@ -2030,13 +2030,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "mB" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "mC" = (
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood/sif,
@@ -2044,7 +2044,7 @@
 "mH" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality)
+/area/vr)
 "mK" = (
 /obj/item/gun/launcher/rocket{
 	pixel_x = -7
@@ -2063,24 +2063,24 @@
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "mM" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "mN" = (
 /obj/effect/floor_decal/arrow,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "mO" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 1;
 	name = "Defendants Chair"
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "mV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -2093,7 +2093,7 @@
 	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "mW" = (
 /obj/structure/bed/chair/bay/chair/padded/black{
 	dir = 4
@@ -2107,20 +2107,20 @@
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nb" = (
 /obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nf" = (
 /obj/structure/table/darkglass,
 /obj/item/toy/tennis/green,
 /obj/item/toy/tennis/red,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ni" = (
 /turf/simulated/wall/bay/r_wall/red,
-/area/virtual_reality)
+/area/vr)
 "nj" = (
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 1
@@ -2137,18 +2137,18 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "np" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nq" = (
 /obj/structure/sign/warning/lethal_turrets,
 /turf/simulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nu" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/blue{
@@ -2159,7 +2159,7 @@
 	pixel_x = -7
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nw" = (
 /obj/structure/table/steel,
 /obj/item/flashlight/lamp/green{
@@ -2168,14 +2168,14 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nA" = (
 /obj/structure/table/standard,
 /obj/item/surgical/retractor,
 /obj/item/surgical/cautery,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nD" = (
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp/green{
@@ -2184,13 +2184,13 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nF" = (
 /obj/structure/table/rack,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/steel,
 /turf/simulated/floor/plating,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nG" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -2215,7 +2215,7 @@
 /obj/item/tool/crowbar,
 /obj/random/toolbox,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nQ" = (
 /obj/structure/curtain/open/shower/medical,
 /obj/structure/window/reinforced/tinted/frosted{
@@ -2225,7 +2225,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "nR" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -2238,7 +2238,7 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "oa" = (
 /obj/machinery/conveyor{
 	dir = 1;
@@ -2246,7 +2246,7 @@
 	},
 /obj/structure/plasticflaps/mining,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "of" = (
 /obj/machinery/light{
 	dir = 4
@@ -2255,13 +2255,13 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "og" = (
 /obj/effect/landmark/virtual_reality{
 	name = "Onboarding Basics"
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "oh" = (
 /obj/structure/window/basic{
 	dir = 4
@@ -2282,7 +2282,7 @@
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ol" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -2291,69 +2291,69 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ov" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "oz" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "oB" = (
 /turf/simulated/mineral/floor/cave,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "oD" = (
 /obj/structure/table/darkglass,
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "oE" = (
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "oK" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "oN" = (
 /obj/machinery/light/small,
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "oR" = (
 /obj/machinery/hologram/holo_tutorial/intro_6,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "oW" = (
 /obj/machinery/iv_drip,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "oX" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /obj/machinery/light/small,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "oZ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "pa" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/drinks/shaker{
@@ -2375,7 +2375,7 @@
 /area/space)
 "pb" = (
 /turf/space,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "pc" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/space)
@@ -2390,7 +2390,7 @@
 /obj/item/tool/crowbar,
 /obj/item/tool/crowbar,
 /turf/simulated/floor/plating,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "pf" = (
 /obj/machinery/sleeper{
 	dir = 8
@@ -2402,7 +2402,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "pm" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -2410,40 +2410,40 @@
 /obj/random/tech_supply,
 /obj/random/tech_supply,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ps" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "pu" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "pz" = (
 /obj/effect/floor_decal/spline/plain,
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "pB" = (
 /obj/structure/target_stake,
 /obj/item/target,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "pE" = (
 /obj/machinery/medical_kiosk{
 	pixel_y = 2
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "pF" = (
 /obj/machinery/hologram/holo_tutorial/intro_18,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "pG" = (
 /obj/machinery/reagentgrinder,
 /obj/structure/table/wooden_reinforced,
@@ -2454,7 +2454,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "pK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -2463,14 +2463,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "pO" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/structure/table/woodentable,
 /obj/item/defib_kit/loaded,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "pQ" = (
 /turf/simulated/wall/bay/r_wall,
 /area/space)
@@ -2486,7 +2486,7 @@
 /obj/item/target/alien,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality)
+/area/vr)
 "pW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -2495,13 +2495,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "pX" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "pY" = (
 /obj/machinery/appliance/cooker/fryer,
 /turf/simulated/floor/tiled/kafel_full,
@@ -2511,34 +2511,34 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "qa" = (
 /obj/structure/mopbucket,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "qb" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "qh" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "qj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ql" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "qm" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -2550,25 +2550,25 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "qp" = (
 /obj/machinery/door/airlock/angled_bay/standard/glass{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/virtual_reality)
+/area/vr)
 "qs" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "qt" = (
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "qv" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -2577,10 +2577,10 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "qz" = (
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "qH" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/tiled/white,
@@ -2588,7 +2588,7 @@
 "qI" = (
 /obj/machinery/hologram/holo_tutorial/eva_3,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "qK" = (
 /obj/structure/bed/chair/bay/chair/padded/black{
 	dir = 1
@@ -2606,7 +2606,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "qN" = (
 /obj/machinery/light{
 	dir = 8
@@ -2615,22 +2615,22 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "qR" = (
 /obj/random/tech_supply,
 /turf/space,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "qS" = (
 /obj/structure/railing/grey,
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "qT" = (
 /obj/structure/closet{
 	anchored = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/virtual_reality)
+/area/vr)
 "qY" = (
 /turf/simulated/floor/tiled,
 /area/space)
@@ -2642,7 +2642,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rb" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
@@ -2651,14 +2651,14 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "re" = (
 /obj/machinery/appliance/cooker/fryer,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rf" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/glass/beaker/large,
@@ -2670,14 +2670,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rh" = (
 /obj/machinery/conveyor{
 	dir = 1;
 	id = "VRTut_side"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "ri" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -2694,14 +2694,14 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rq" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rr" = (
 /obj/structure/toilet{
 	dir = 8
@@ -2710,13 +2710,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rt" = (
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ru" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -2728,7 +2728,7 @@
 /obj/item/storage/backpack/chemistry,
 /obj/item/storage/backpack/chemistry,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "rv" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/borderfloor{
@@ -2741,21 +2741,21 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rw" = (
 /obj/structure/closet/crate/laundry,
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "ry" = (
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "rB" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloorblack/corner,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rE" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -2768,15 +2768,15 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rJ" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rL" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "rP" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
@@ -2785,7 +2785,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "rQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -2795,38 +2795,38 @@
 "rU" = (
 /obj/structure/railing,
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "rY" = (
 /obj/structure/prop/rock,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sb" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "sc" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /mob/living/simple_mob/vore/jelly,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "sf" = (
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/full,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "si" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sk" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -2835,14 +2835,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "sm" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sn" = (
 /obj/structure/plasticflaps,
 /turf/simulated/floor/tiled/techfloor,
@@ -2860,13 +2860,13 @@
 /obj/item/target/alien,
 /obj/item/target/alien,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "st" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -2875,13 +2875,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "sA" = (
 /obj/effect/floor_decal/arrow{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -2894,7 +2894,7 @@
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -2908,7 +2908,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sG" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/soap,
@@ -2919,7 +2919,7 @@
 /obj/item/flashlight,
 /obj/item/flashlight,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sJ" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -2928,13 +2928,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sP" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/material/knife/hook,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sQ" = (
 /obj/machinery/light{
 	dir = 1
@@ -2946,7 +2946,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sR" = (
 /obj/machinery/door/window/southright{
 	name = "bar";
@@ -2969,14 +2969,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "sX" = (
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "sY" = (
 /obj/machinery/chem_master,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "sZ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -2985,11 +2985,11 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ta" = (
 /obj/effect/floor_decal/arrow,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "tc" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
@@ -2998,7 +2998,7 @@
 	id = "VRTut_side"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "td" = (
 /obj/structure/flora/pottedplant/fern,
 /obj/machinery/light{
@@ -3011,21 +3011,21 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tg" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "th" = (
 /obj/machinery/hologram/holo_tutorial/intro_14,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "tj" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "tm" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -3049,22 +3049,22 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tr" = (
 /obj/structure/prop/rock,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tv" = (
 /obj/machinery/hologram/holo_tutorial/intro_19,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "tw" = (
 /obj/machinery/hologram/holo_tutorial/intro_12,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "tz" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -3075,27 +3075,27 @@
 "tB" = (
 /obj/machinery/hologram/holo_tutorial/eva_end,
 /turf/simulated/floor/tiled/airless,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "tE" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tF" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "tH" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "tI" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 10
@@ -3108,20 +3108,20 @@
 /obj/item/storage/box/freezer/red,
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tL" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
 /obj/item/pen,
 /turf/simulated/floor/tiled/techmaint,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tM" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -3131,23 +3131,23 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tO" = (
 /obj/machinery/porta_turret/stationary,
 /obj/machinery/light,
 /turf/simulated/floor/reinforced,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tP" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "tY" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "tZ" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -3162,25 +3162,25 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ub" = (
 /obj/structure/janitorialcart{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uc" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ud" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uf" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/firstaid/adv,
@@ -3188,7 +3188,7 @@
 /obj/item/storage/firstaid/adv,
 /obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "uh" = (
 /obj/machinery/seed_storage/garden,
 /turf/simulated/floor/tiled/kafel_full,
@@ -3203,14 +3203,14 @@
 /obj/item/tool/crowbar,
 /obj/item/tool/crowbar,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uk" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uo" = (
 /obj/structure/railing{
 	dir = 4
@@ -3218,7 +3218,7 @@
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "up" = (
 /obj/effect/floor_decal/corner/blue/full,
 /obj/machinery/vending/wallmed1{
@@ -3229,18 +3229,18 @@
 /obj/machinery/recharger,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uq" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ur" = (
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	pixel_y = 32
 	},
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ut" = (
 /obj/structure/window/basic{
 	dir = 4
@@ -3252,7 +3252,7 @@
 /obj/machinery/light/small,
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ux" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -3261,25 +3261,25 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uF" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uG" = (
 /obj/structure/flora/pottedplant,
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uL" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uM" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
@@ -3290,15 +3290,15 @@
 /obj/item/ammo_magazine/mg42,
 /obj/item/ammo_magazine/mg42,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "uP" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uQ" = (
 /obj/machinery/door/airlock/angled_bay/standard/glass,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "uS" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -3307,7 +3307,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uU" = (
 /obj/structure/table/woodentable,
 /obj/machinery/librarywikicomp,
@@ -3318,7 +3318,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uY" = (
 /obj/structure/closet/crate/medical/blood,
 /obj/effect/floor_decal/corner/paleblue/full{
@@ -3349,16 +3349,16 @@
 /obj/item/reagent_containers/blood/synthblood,
 /obj/item/reagent_containers/blood/synthblood,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "uZ" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vb" = (
 /obj/item/extinguisher,
 /obj/structure/table/rack,
 /turf/simulated/floor/plating,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vc" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
@@ -3367,14 +3367,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "vk" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	pixel_y = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "vl" = (
 /obj/structure/table/rack,
 /obj/fiftyspawner/plasteel,
@@ -3386,19 +3386,19 @@
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/glass,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "vp" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vv" = (
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/reinforced,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vw" = (
 /obj/structure/bed/chair/bar_stool,
 /turf/simulated/floor/wood/sif,
@@ -3408,11 +3408,11 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vC" = (
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vD" = (
 /obj/machinery/airlock_sensor/airlock_exterior{
 	dir = 8;
@@ -3422,7 +3422,7 @@
 	master_tag = "virtual"
 	},
 /turf/space,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "vF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -3432,7 +3432,7 @@
 	pixel_x = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "vK" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light{
@@ -3445,31 +3445,31 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vM" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "vN" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vQ" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "vR" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "vU" = (
 /obj/machinery/gibber,
 /turf/simulated/floor/tiled/kafel_full,
@@ -3484,20 +3484,20 @@
 	dir = 6
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "wc" = (
 /obj/structure/railing,
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "wd" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "we" = (
 /turf/simulated/floor/grass,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -3513,7 +3513,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wg" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -3522,7 +3522,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wm" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -3531,15 +3531,15 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wp" = (
 /obj/structure/frame,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wq" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "wr" = (
 /obj/structure/table/rack,
 /obj/random/flashlight,
@@ -3556,29 +3556,29 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ww" = (
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wx" = (
 /mob/living/simple_mob/vore/jelly,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wy" = (
 /obj/effect/landmark/virtual_reality{
 	name = "Hazard Course"
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wC" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "wJ" = (
 /obj/machinery/hologram/holo_tutorial/intro_20,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "wQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -3586,7 +3586,7 @@
 /obj/structure/table/marble,
 /obj/machinery/chem_master/condimaster,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "wS" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
@@ -3604,7 +3604,7 @@
 /obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "wW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -3656,12 +3656,12 @@
 	name = "jumpsuit"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "wY" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/railing,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "xf" = (
 /obj/machinery/access_button/airlock_interior{
 	frequency = 1381;
@@ -3678,16 +3678,16 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xg" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xj" = (
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xl" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner,
@@ -3699,7 +3699,7 @@
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "xr" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/wmarble,
@@ -3712,15 +3712,15 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "xv" = (
 /turf/simulated/mineral/floor/cave,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xw" = (
 /obj/structure/table/reinforced,
 /obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/techmaint,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xA" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -3729,14 +3729,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xB" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "xC" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -3745,7 +3745,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -3753,32 +3753,32 @@
 /obj/structure/flora/rocks2,
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "xR" = (
 /obj/machinery/vending/cigarette{
 	dir = 8;
 	pixel_x = 8
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xV" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "xW" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "ya" = (
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
@@ -3791,7 +3791,7 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
 /turf/simulated/floor/plating,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yb" = (
 /obj/structure/closet/crate/medical,
 /obj/item/surgical/surgicaldrill,
@@ -3819,7 +3819,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yc" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/borderfloor{
@@ -3827,7 +3827,7 @@
 	},
 /obj/item/flashlight/lamp,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "yg" = (
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 1
@@ -3836,15 +3836,15 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yh" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "yk" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yn" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -3863,14 +3863,14 @@
 "yq" = (
 /mob/living/simple_mob/animal/passive/mouse,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yt" = (
 /turf/unsimulated/wall,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "yx" = (
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "yz" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
@@ -3879,7 +3879,7 @@
 	},
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "yB" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
@@ -3888,13 +3888,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "yC" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "yD" = (
 /turf/simulated/floor/wmarble,
 /area/space)
@@ -3920,7 +3920,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yN" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -3932,14 +3932,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "yO" = (
 /obj/item/flag/eshui,
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "yQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -3948,7 +3948,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "yR" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -3964,7 +3964,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yS" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -3973,7 +3973,7 @@
 "yU" = (
 /obj/machinery/light/small,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "yV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -3985,24 +3985,24 @@
 /obj/item/storage/backpack/dufflebag/emt,
 /obj/item/storage/backpack/dufflebag/emt,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "yW" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "yY" = (
 /obj/structure/urinal{
 	dir = 8;
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "za" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zf" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
@@ -4011,14 +4011,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "zh" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zi" = (
 /obj/item/gun/launcher/grenade,
 /obj/item/gun/launcher/grenade,
@@ -4027,7 +4027,7 @@
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "zl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -4036,20 +4036,20 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zo" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zs" = (
 /obj/structure/window/basic{
 	dir = 8
@@ -4063,7 +4063,7 @@
 "zu" = (
 /obj/machinery/icecream_vat,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -4073,22 +4073,22 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zz" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zA" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/table/steel,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zB" = (
 /obj/vehicle/train/engine,
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "zC" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -4099,7 +4099,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "zH" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 8
@@ -4111,7 +4111,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zI" = (
 /obj/structure/window/basic,
 /obj/structure/window/basic{
@@ -4125,20 +4125,20 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zP" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zQ" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "zR" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -4150,20 +4150,20 @@
 /obj/item/storage/backpack/chameleon/full,
 /obj/item/storage/backpack/chameleon/full,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "zY" = (
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "zZ" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/blue/full,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ad" = (
 /obj/random/tech_supply,
 /turf/simulated/floor/airless,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "An" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water/indoors,
@@ -4171,13 +4171,13 @@
 "As" = (
 /obj/structure/kitchenspike,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "At" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Av" = (
 /obj/machinery/light{
 	dir = 1
@@ -4189,7 +4189,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Aw" = (
 /obj/item/gun/projectile/shotgun/pump/USDF,
 /obj/item/gun/projectile/shotgun/pump/USDF,
@@ -4198,7 +4198,7 @@
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Ax" = (
 /obj/structure/window/basic,
 /obj/structure/flora/lily1,
@@ -4212,7 +4212,7 @@
 	pixel_y = 16
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "AF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -4221,7 +4221,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/virtual_reality)
+/area/vr)
 "AG" = (
 /turf/simulated/floor/wood/sif,
 /area/space)
@@ -4230,28 +4230,28 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "AL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "AR" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "AS" = (
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "AU" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "AV" = (
 /obj/structure/table/rack,
 /obj/random/flashlight,
@@ -4268,7 +4268,7 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Be" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -4277,29 +4277,29 @@
 "Bg" = (
 /obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Bi" = (
 /obj/machinery/door/airlock/angled_bay/standard/glass{
 	dir = 4
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Bk" = (
 /obj/effect/floor_decal/arrow{
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Bm" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Bo" = (
 /obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Bt" = (
 /obj/structure/closet/secure_closet/hydroponics,
 /turf/simulated/floor/tiled/kafel_full,
@@ -4309,7 +4309,7 @@
 /obj/item/toy/tennis/blue,
 /obj/item/toy/tennis/yellow,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Bw" = (
 /obj/structure/window/basic,
 /obj/structure/flora/ausbushes/stalkybush,
@@ -4330,14 +4330,14 @@
 "BB" = (
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "BD" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/chemical_dispenser/biochemistry/full,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "BE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -4360,7 +4360,7 @@
 	},
 /mob/living/simple_mob/animal/passive/mouse,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "BJ" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
@@ -4374,20 +4374,20 @@
 /obj/item/ammo_magazine/m545/practice,
 /obj/item/ammo_magazine/m545/practice,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "BK" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "BM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "BO" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -4396,13 +4396,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "BS" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "BU" = (
 /obj/structure/window/reinforced,
 /obj/structure/grille,
@@ -4421,13 +4421,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Cd" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "Ce" = (
 /obj/structure/table/rack,
 /obj/item/storage/box/lights/mixed,
@@ -4439,7 +4439,7 @@
 /obj/item/tool/crowbar,
 /obj/item/tool/crowbar,
 /turf/simulated/floor/plating,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Cj" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -4448,35 +4448,35 @@
 /obj/random/tech_supply,
 /obj/random/toolbox,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Co" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Ct" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Cx" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Cy" = (
 /obj/effect/floor_decal/arrow{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Cz" = (
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "CA" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -4488,14 +4488,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "CB" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "CC" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -4516,7 +4516,7 @@
 /obj/item/tool/prybar/red,
 /obj/random/flashlight,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "CE" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -4535,7 +4535,7 @@
 	},
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "CL" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/holoposter{
@@ -4543,19 +4543,19 @@
 	pixel_y = -32
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "CM" = (
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/effect/floor_decal/corner/pink/border{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "CN" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/light,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "CO" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -4568,7 +4568,7 @@
 /obj/item/storage/firstaid/o2,
 /obj/item/storage/firstaid/o2,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "CR" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -4598,31 +4598,31 @@
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Db" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/techmaint,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Dd" = (
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "De" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Dh" = (
 /mob/living/simple_mob/animal/passive/cow,
 /turf/simulated/floor/grass,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Dl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Dp" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -4635,14 +4635,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Dt" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Dw" = (
 /obj/structure/window/basic,
 /turf/simulated/floor/water/indoors,
@@ -4650,7 +4650,7 @@
 "DD" = (
 /obj/machinery/vending/boozeomat,
 /turf/simulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "DI" = (
 /obj/structure/table/steel,
 /obj/item/reagent_containers/spray/plantbgone,
@@ -4666,17 +4666,17 @@
 	},
 /obj/item/clothing/suit/omnitag,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "DN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "DP" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "DQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -4685,31 +4685,31 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "DS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "DU" = (
 /obj/machinery/medical_kiosk,
 /turf/simulated/floor/tiled/techmaint,
-/area/virtual_reality)
+/area/vr)
 "DV" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "DY" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Ea" = (
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality)
+/area/vr)
 "Ei" = (
 /obj/structure/table/marble,
 /obj/item/storage/box/donkpockets{
@@ -4717,7 +4717,7 @@
 	pixel_y = 3
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ek" = (
 /obj/machinery/appliance/mixer/candy,
 /turf/simulated/floor/tiled/kafel_full,
@@ -4727,20 +4727,20 @@
 	name = "Weapons Training"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Ep" = (
 /obj/machinery/hologram/holo_tutorial/intro_16,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Eq" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Et" = (
 /obj/random/flashlight,
 /turf/simulated/floor/tiled/airless,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "Ev" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -4755,7 +4755,7 @@
 /area/space)
 "Ex" = (
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Ey" = (
 /obj/structure/bed/chair/bay/chair/padded/black{
 	dir = 8
@@ -4770,11 +4770,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "EC" = (
 /obj/machinery/light,
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ED" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/box/glasses/shake,
@@ -4782,7 +4782,7 @@
 /obj/item/storage/box/glasses/cocktail,
 /obj/item/storage/box/glasses,
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "EG" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -4794,17 +4794,17 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "EI" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/machinery/appliance/mixer/candy,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "EJ" = (
 /turf/simulated/floor/reinforced,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "EK" = (
 /obj/structure/window/reinforced,
 /obj/structure/grille,
@@ -4816,17 +4816,17 @@
 /area/space)
 "EM" = (
 /turf/simulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "EO" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "EP" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "ET" = (
 /obj/structure/table/glass,
 /obj/structure/window/basic,
@@ -4851,7 +4851,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Fc" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -4861,25 +4861,25 @@
 /obj/item/storage/firstaid/combat,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Fg" = (
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Fh" = (
 /mob/living/simple_mob/animal/passive/chicken,
 /turf/simulated/floor/grass,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Fi" = (
 /obj/machinery/hologram/holo_tutorial/intro_11,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Fl" = (
 /obj/structure/closet/secure_closet/medical2,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Fn" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -4934,7 +4934,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Fo" = (
 /turf/simulated/floor,
 /area/space)
@@ -4945,26 +4945,26 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Fr" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Fs" = (
 /obj/structure/table/marble,
 /obj/machinery/reagentgrinder{
 	pixel_y = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Fv" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "FD" = (
 /obj/structure/window/basic{
 	dir = 8
@@ -4983,29 +4983,29 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "FI" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "FJ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "FM" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "FQ" = (
 /obj/structure/sign/securearea,
 /turf/simulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "FR" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 8;
@@ -5015,7 +5015,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "FU" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -5034,7 +5034,7 @@
 	anchored = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Gc" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/borderfloor{
@@ -5044,27 +5044,27 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Gd" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Gg" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Gh" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
 /obj/structure/table/darkglass,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Gj" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 4
@@ -5074,20 +5074,20 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Gk" = (
 /obj/effect/floor_decal/arrow{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Gl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Gp" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -5096,39 +5096,39 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Gv" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Gw" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Gx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Gz" = (
 /obj/structure/closet/secure_closet/freezer/meat,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "GA" = (
 /obj/structure/flora/rocks2,
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "GB" = (
 /obj/machinery/hologram/holo_tutorial/hazard_5,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "GC" = (
 /obj/structure/window/basic{
 	dir = 4
@@ -5155,7 +5155,7 @@
 	pixel_x = -12
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "GI" = (
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular,
@@ -5168,22 +5168,22 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "GR" = (
 /obj/machinery/hologram/holo_tutorial/intro_end,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "GS" = (
 /obj/machinery/hologram/holo_tutorial/hazard_1,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "GT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "GV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -5193,7 +5193,7 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "GW" = (
 /obj/structure/closet/secure_closet/freezer/kitchen{
 	req_access = null
@@ -5209,7 +5209,7 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Hc" = (
 /obj/machinery/access_button/airlock_exterior{
 	frequency = 1381;
@@ -5223,18 +5223,18 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Hf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Hg" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/light,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Hi" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -5243,13 +5243,13 @@
 /obj/random/tech_supply,
 /obj/item/tool/crowbar,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Hl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "Hq" = (
 /obj/random/flashlight,
 /obj/random/flashlight,
@@ -5259,7 +5259,7 @@
 /obj/structure/table/rack,
 /obj/item/extinguisher,
 /turf/simulated/floor/plating,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Hs" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -5272,7 +5272,7 @@
 /obj/item/storage/firstaid/vox,
 /obj/item/storage/firstaid/vox,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Hv" = (
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular{
@@ -5284,22 +5284,22 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Hx" = (
 /obj/effect/floor_decal/industrial/danger/corner,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Hy" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "HB" = (
 /obj/structure/sink{
 	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "HG" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
@@ -5311,7 +5311,7 @@
 	},
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "HH" = (
 /obj/machinery/door/airlock/angled_bay/standard/color/common,
 /obj/machinery/door/firedoor/glass,
@@ -5323,7 +5323,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "HP" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -5336,7 +5336,7 @@
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "HQ" = (
 /obj/machinery/appliance/cooker/grill,
 /turf/simulated/floor/tiled/kafel_full,
@@ -5357,7 +5357,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "HW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -5373,7 +5373,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "HX" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /turf/simulated/floor/grass2,
@@ -5386,7 +5386,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ib" = (
 /turf/simulated/wall/gold,
 /area/space)
@@ -5398,14 +5398,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ii" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Il" = (
 /obj/structure/closet/crate/freezer,
 /obj/effect/floor_decal/corner/paleblue/full,
@@ -5422,25 +5422,25 @@
 /obj/item/reagent_containers/food/snacks/carpmeat,
 /obj/item/reagent_containers/food/snacks/carpmeat,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Io" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Is" = (
 /obj/structure/flora/pottedplant,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Iz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "IA" = (
 /obj/structure/table/marble,
 /obj/item/reagent_containers/food/condiment/small/saltshaker{
@@ -5467,17 +5467,17 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "IC" = (
 /turf/simulated/floor/carpet/turcarpet,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "IJ" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "IK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -5490,7 +5490,7 @@
 	master_tag = "virtual"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "IP" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/blue/border{
@@ -5516,26 +5516,26 @@
 	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "IU" = (
 /obj/machinery/appliance/cooker/grill,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "IX" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Jd" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Jf" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
@@ -5546,13 +5546,13 @@
 "Jh" = (
 /obj/machinery/hologram/holo_tutorial/intro_2,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Jk" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "Jl" = (
 /obj/effect/floor_decal/arrow{
 	dir = 1
@@ -5561,7 +5561,7 @@
 	name = "EVA Basics Course"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Jo" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -5570,7 +5570,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Jp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -5579,26 +5579,26 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Jv" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Jw" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/table/marble,
 /obj/item/material/kitchen/rollingpin,
 /obj/item/material/knife/butch,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "JA" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "JC" = (
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 2
@@ -5611,23 +5611,23 @@
 	},
 /obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "JL" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "JM" = (
 /obj/machinery/porta_turret/stationary,
 /turf/simulated/floor/reinforced,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "JO" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/plating,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "JQ" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -5635,7 +5635,7 @@
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/mop,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "JW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -5644,11 +5644,11 @@
 /obj/machinery/chem_master,
 /obj/machinery/light,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "JY" = (
 /mob/living/simple_mob/creature,
 /turf/simulated/mineral/floor/cave,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "JZ" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -5657,7 +5657,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "Ka" = (
 /obj/structure/flora/ausbushes/brflowers,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -5665,7 +5665,7 @@
 /area/space)
 "Kb" = (
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Ke" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -5681,14 +5681,14 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Kk" = (
 /obj/structure/table/reinforced,
 /obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Kl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -5698,7 +5698,7 @@
 	},
 /obj/structure/bed/chair/backed_red,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Km" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/item/gun/projectile/shotgun/pump/rifle/lever,
@@ -5711,14 +5711,14 @@
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Ko" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Kq" = (
 /obj/machinery/appliance/mixer/cereal,
 /turf/simulated/floor/tiled/kafel_full,
@@ -5733,26 +5733,26 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ks" = (
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Ku" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Kx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "KC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "KD" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -5761,18 +5761,18 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "KE" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "KH" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "KI" = (
 /obj/structure/window/basic{
 	dir = 4
@@ -5797,7 +5797,7 @@
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/firstaid/toxin,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "KQ" = (
 /turf/simulated/floor/beach/sand/desert,
 /area/space)
@@ -5809,18 +5809,18 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "KZ" = (
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "La" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Lb" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/kafel_full,
@@ -5830,11 +5830,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Lg" = (
 /obj/machinery/hologram/holo_tutorial/hazard_2,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Ll" = (
 /obj/structure/bed/chair/bay/chair/padded/blue{
 	dir = 4
@@ -5847,21 +5847,21 @@
 	},
 /obj/effect/floor_decal/arrow,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ln" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Lo" = (
 /obj/structure/sign/yessmoking_1{
 	pixel_x = -32
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Lp" = (
 /obj/item/target,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Lr" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
@@ -5886,20 +5886,20 @@
 	master_tag = "virtual"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Lt" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Lw" = (
 /obj/structure/railing,
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "LC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -5911,11 +5911,11 @@
 	pixel_y = 16
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "LE" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "LF" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/o2,
@@ -5927,32 +5927,32 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "LG" = (
 /obj/structure/lattice,
 /obj/random/tech_supply,
 /turf/space,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "LI" = (
 /obj/structure/table/darkglass,
 /obj/item/toy/tennis/purple,
 /obj/item/toy/tennis/cyan,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "LS" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "LT" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/structure/table/reinforced,
 /obj/machinery/light,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "LW" = (
 /mob/living/simple_mob/animal/passive/mouse,
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "LX" = (
 /turf/simulated/floor/water/indoors,
 /area/space)
@@ -5965,11 +5965,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Me" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Mf" = (
 /obj/structure/window/basic{
 	dir = 4
@@ -5988,19 +5988,19 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Mp" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Mq" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "Mu" = (
 /obj/machinery/door/blast/gate/thin{
 	id = "vr_medlock_ent";
@@ -6016,18 +6016,18 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "MB" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "MG" = (
 /obj/structure/prop/rock/small,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "MI" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -6037,7 +6037,7 @@
 	},
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ML" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -6046,7 +6046,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "MM" = (
 /obj/machinery/media/jukebox,
 /turf/simulated/floor/wood/sif,
@@ -6059,14 +6059,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "MX" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "MY" = (
 /obj/structure/curtain/open/shower/medical,
 /obj/structure/window/reinforced/tinted/frosted{
@@ -6077,13 +6077,13 @@
 	},
 /obj/item/soap/deluxe,
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "MZ" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Na" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -6092,21 +6092,21 @@
 	name = "Simian Slammer"
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Nf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Nh" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Nl" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/loading,
@@ -6115,14 +6115,14 @@
 "Nn" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Ns" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /obj/structure/flora/pottedplant,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Nv" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/cups,
@@ -6137,20 +6137,20 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "NA" = (
 /obj/item/gun/projectile/automatic/mg42,
 /obj/structure/table/rack,
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "NC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ND" = (
 /obj/item/gun/projectile/automatic/l6_saw{
 	pixel_x = -12
@@ -6162,7 +6162,7 @@
 	},
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "NE" = (
 /obj/structure/sign/redcross{
 	desc = "The Star of Life, a symbol of Medical Aid.";
@@ -6177,21 +6177,21 @@
 	},
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "NH" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "NK" = (
 /obj/effect/floor_decal/arrow,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "NL" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "NQ" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -6205,7 +6205,7 @@
 	},
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "NW" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -6214,7 +6214,7 @@
 /obj/item/storage/firstaid/fire,
 /obj/item/storage/firstaid/fire,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "NY" = (
 /obj/structure/window/basic{
 	dir = 8
@@ -6228,7 +6228,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Oa" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -6249,11 +6249,11 @@
 /obj/item/storage/box/syringes,
 /obj/item/storage/box/syringes,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Od" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Oe" = (
 /obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /obj/item/ammo_magazine/ammo_box/b12g/beanbag,
@@ -6276,7 +6276,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Of" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/kafel_full,
@@ -6296,10 +6296,10 @@
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/firstaid/toxin,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Or" = (
 /turf/simulated/wall,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Os" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/wmarble,
@@ -6312,19 +6312,19 @@
 /obj/item/storage/firstaid/vox,
 /obj/item/storage/firstaid/vox,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ou" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Ov" = (
 /obj/structure/flora/pottedplant/fern,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ow" = (
 /obj/structure/table/reinforced,
 /obj/machinery/recharger,
@@ -6332,13 +6332,13 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "OA" = (
 /obj/effect/landmark/virtual_reality{
 	name = "Medical Course"
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "OB" = (
 /obj/structure/table/marble,
 /obj/machinery/chem_master/condimaster,
@@ -6352,23 +6352,23 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "OH" = (
 /obj/machinery/light{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "OP" = (
 /obj/machinery/hologram/holo_tutorial/intro_7,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "OR" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	pixel_y = 1
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "OW" = (
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/wood/sif,
@@ -6379,27 +6379,27 @@
 	},
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "OZ" = (
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Pa" = (
 /obj/machinery/hologram/holo_tutorial/eva_1,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Pd" = (
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Pg" = (
 /turf/simulated/mineral,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Pm" = (
 /obj/item/storage/firstaid/clotting,
 /obj/item/storage/firstaid/clotting,
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Pq" = (
 /obj/item/gun/energy/sniperrifle{
 	pixel_x = -10
@@ -6411,7 +6411,7 @@
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Pr" = (
 /obj/structure/table/rack,
 /obj/structure/window/basic,
@@ -6422,12 +6422,12 @@
 /obj/item/ammo_magazine/m762,
 /obj/item/ammo_magazine/m762,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Ps" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/decal/cleanable/filth,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Pu" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -6435,19 +6435,19 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Py" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PA" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PB" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -6456,7 +6456,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -6470,13 +6470,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PG" = (
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	pixel_y = 32
 	},
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PH" = (
 /obj/structure/table/woodentable,
 /obj/item/storage/box/beakers,
@@ -6504,7 +6504,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PI" = (
 /obj/structure/flora/rocks2,
 /obj/structure/prop/rock/round,
@@ -6512,14 +6512,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PL" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "PO" = (
 /turf/simulated/floor/tiled/red,
-/area/virtual_reality)
+/area/vr)
 "PP" = (
 /obj/structure/sign/chemistry,
 /turf/simulated/wall/bay/r_wall/blue,
@@ -6532,27 +6532,27 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Qb" = (
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Qf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Qg" = (
 /mob/living/simple_mob/vore/jelly,
 /turf/simulated/mineral/floor/cave,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Qh" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Qj" = (
 /obj/machinery/vending/boozeomat,
 /turf/simulated/wall/bay/r_wall,
@@ -6561,14 +6561,14 @@
 /obj/structure/table/reinforced,
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice,
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Qw" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/bordercorner,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Qx" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1;
@@ -6581,7 +6581,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "QB" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
@@ -6600,17 +6600,17 @@
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/mop,
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "QF" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "QJ" = (
 /obj/structure/bed/chair/modern_chair{
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "QO" = (
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled,
@@ -6618,19 +6618,19 @@
 "QP" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "QQ" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Rc" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Rg" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
@@ -6640,11 +6640,11 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Rh" = (
 /obj/machinery/light,
 /turf/simulated/floor/grass,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Rl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -6653,34 +6653,34 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Rm" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
 	},
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Rn" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Rr" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Rt" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ru" = (
 /obj/effect/floor_decal/borderfloorwhite{
 	dir = 4
@@ -6692,7 +6692,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Rv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central2{
 	dir = 1;
@@ -6705,7 +6705,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Rx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -6717,7 +6717,7 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Ry" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -6733,7 +6733,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "RI" = (
 /obj/structure/flora/ausbushes/brflowers,
 /turf/simulated/floor/grass2,
@@ -6747,17 +6747,17 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "RK" = (
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "RL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/structure/closet/secure_closet/freezer/fridge,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "RO" = (
 /obj/machinery/medical_kiosk{
 	pixel_y = 2
@@ -6766,7 +6766,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "RP" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -6779,14 +6779,14 @@
 	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "RQ" = (
 /turf/simulated/floor/tiled/white,
 /area/space)
 "RT" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "RV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -6799,11 +6799,11 @@
 	pixel_x = -12
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "RW" = (
 /obj/machinery/hologram/holo_tutorial/intro_15,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Sb" = (
 /obj/structure/table/darkglass,
 /obj/item/radio/headset,
@@ -6814,7 +6814,7 @@
 	},
 /obj/item/tank/emergency/oxygen/double,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Sc" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "First-Aid Station";
@@ -6822,13 +6822,13 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_grid,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Se" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "Sf" = (
 /obj/machinery/smartfridge/drinks,
 /turf/simulated/wall/bay/r_wall,
@@ -6839,12 +6839,12 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Sl" = (
 /obj/structure/table/reinforced,
 /obj/item/healthanalyzer/phasic,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Ss" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -6853,23 +6853,23 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Sx" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "SD" = (
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "SJ" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "SM" = (
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green{
@@ -6878,15 +6878,15 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "SO" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "SS" = (
 /obj/structure/railing,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "SV" = (
 /obj/machinery/conveyor{
 	dir = 1;
@@ -6894,7 +6894,7 @@
 	},
 /obj/structure/plasticflaps/mining,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "SW" = (
 /obj/machinery/light{
 	dir = 4
@@ -6906,7 +6906,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "SY" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/kafel_full,
@@ -6922,7 +6922,7 @@
 /obj/structure/table/woodentable,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Tb" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "VRTut_basic"
@@ -6931,7 +6931,7 @@
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
-/area/virtual_reality)
+/area/vr)
 "Tc" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood/sif,
@@ -6960,11 +6960,11 @@
 	},
 /obj/structure/filingcabinet,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Tk" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Tl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -6973,7 +6973,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Tn" = (
 /obj/structure/flora/pottedplant/fern,
 /obj/effect/floor_decal/borderfloor{
@@ -6983,14 +6983,14 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "To" = (
 /obj/structure/railing/grey,
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "Tp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -6999,7 +6999,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Tq" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/portable_atmospherics/canister/air/airlock,
@@ -7007,23 +7007,23 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Tr" = (
 /obj/machinery/door/airlock,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Tv" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /obj/structure/flora/pottedplant/fern,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Tx" = (
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Tz" = (
 /obj/structure/table/woodentable,
 /obj/machinery/librarywikicomp,
@@ -7031,7 +7031,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "TA" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -7040,7 +7040,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "TE" = (
 /obj/structure/window/basic,
 /obj/structure/window/basic{
@@ -7059,7 +7059,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "TM" = (
 /turf/unsimulated/wall,
 /area/space)
@@ -7068,18 +7068,18 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "TV" = (
 /obj/structure/railing,
 /obj/structure/trash_pile,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "TZ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "Ua" = (
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	dir = 4;
@@ -7093,7 +7093,7 @@
 	},
 /obj/effect/floor_decal/corner/pink/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ug" = (
 /obj/structure/closet/gmcloset{
 	name = "formal wardrobe"
@@ -7108,7 +7108,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Up" = (
 /obj/structure/flora/lily3,
 /turf/simulated/floor/water/indoors,
@@ -7129,7 +7129,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Ut" = (
 /obj/structure/sink/kitchen{
 	dir = 4;
@@ -7149,18 +7149,18 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Uw" = (
 /obj/structure/lattice,
 /obj/random/flashlight,
 /turf/space,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "Ux" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Uz" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -7169,14 +7169,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "UC" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "UD" = (
 /turf/simulated/floor/tiled/dark,
 /area/space)
@@ -7186,14 +7186,14 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "UG" = (
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "UN" = (
 /obj/effect/floor_decal/arrow,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "UU" = (
 /obj/structure/window/basic,
 /obj/structure/window/basic{
@@ -7205,26 +7205,26 @@
 "UW" = (
 /obj/machinery/vending/dinnerware,
 /turf/simulated/floor/lino,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Vb" = (
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Vc" = (
 /obj/machinery/hologram/holo_tutorial/intro_9,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Vd" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Ve" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Vf" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -7234,7 +7234,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Vh" = (
 /turf/simulated/mineral/ignore_mapgen,
 /area/space)
@@ -7244,12 +7244,12 @@
 	},
 /obj/machinery/recharge_station,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Vo" = (
 /obj/structure/table/darkglass,
 /obj/item/tool/wrench,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Vr" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -7258,7 +7258,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Vs" = (
 /obj/structure/table/wooden_reinforced,
 /obj/machinery/door/blast/shutters{
@@ -7274,7 +7274,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Vy" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -7283,32 +7283,32 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "VA" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "VC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "VD" = (
 /obj/machinery/autolathe{
 	hacked = 1;
 	name = "unlocked autolathe"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "VI" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "VN" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/light,
@@ -7317,7 +7317,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "VO" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -7325,23 +7325,23 @@
 /obj/machinery/appliance/mixer/cereal,
 /obj/machinery/light,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "VQ" = (
 /obj/structure/table/darkglass,
 /obj/item/gun/projectile/shotgun/pump/rifle/lever,
 /obj/item/gun/projectile/shotgun/pump/rifle/lever,
 /obj/item/gun/projectile/shotgun/pump/rifle/lever,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "VS" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "VT" = (
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "VU" = (
 /obj/structure/flora/ausbushes/ppflowers,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -7354,14 +7354,14 @@
 	dir = 1
 	},
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "VZ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Wd" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -7371,7 +7371,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Wl" = (
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/full,
@@ -7382,16 +7382,16 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Wm" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Wp" = (
 /turf/unsimulated/wall,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Wr" = (
 /obj/machinery/organ_printer/flesh/full,
 /obj/item/reagent_containers/glass/bottle/biomass,
@@ -7405,7 +7405,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Wv" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -7418,11 +7418,11 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Wz" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "WA" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -7431,13 +7431,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "WD" = (
 /obj/machinery/door/airlock/angled_bay/standard/glass{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "WE" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -7454,7 +7454,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "WH" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -7472,7 +7472,7 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "WJ" = (
 /obj/structure/bed/chair/bay/chair/padded/black,
 /turf/simulated/floor/wood/sif,
@@ -7489,7 +7489,7 @@
 "WL" = (
 /obj/structure/lattice,
 /turf/space,
-/area/virtual_reality/spacesim)
+/area/vr/spacesim)
 "WP" = (
 /obj/structure/table/standard,
 /obj/item/surgical/bonesetter,
@@ -7500,7 +7500,7 @@
 /obj/item/surgical/surgicaldrill,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "WT" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -7513,7 +7513,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "WU" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -7525,7 +7525,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Xa" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -7534,7 +7534,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Xb" = (
 /obj/machinery/door/window/southright{
 	dir = 8
@@ -7543,37 +7543,37 @@
 /area/space)
 "Xc" = (
 /turf/simulated/floor/tiled/milspec,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Xe" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
 /obj/item/reagent_containers/food/drinks/bottle/orangejuice,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Xg" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Xh" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Xi" = (
 /obj/structure/filingcabinet,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Xm" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Xn" = (
 /obj/machinery/hologram/holo_tutorial/intro_10,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Xp" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -7587,11 +7587,11 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/freezer/cold,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Xr" = (
 /obj/effect/floor_decal/borderfloorblack,
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Xt" = (
 /obj/structure/table/rack,
 /obj/fiftyspawner/plasteel,
@@ -7606,16 +7606,16 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Xw" = (
 /obj/machinery/hologram/holo_tutorial/intro_8,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "Xx" = (
 /obj/structure/target_stake,
 /obj/item/target/syndicate,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "XC" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/o2,
@@ -7624,30 +7624,30 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "XG" = (
 /obj/structure/window/reinforced,
 /turf/simulated/floor/reinforced,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "XK" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/wood/sif,
-/area/virtual_reality)
+/area/vr)
 "XL" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
 /obj/effect/floor_decal/arrow,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "XN" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
 /mob/living/simple_mob/animal/passive/mouse,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "XQ" = (
 /obj/structure/table/darkglass,
 /obj/item/gun/energy/lasertag/omni,
@@ -7663,7 +7663,7 @@
 /obj/item/gun/energy/lasertag/omni,
 /obj/item/gun/energy/lasertag/omni,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "XS" = (
 /obj/structure/window/basic{
 	dir = 4
@@ -7678,11 +7678,11 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "XV" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "XW" = (
 /obj/structure/table/woodentable,
 /obj/item/stack/material/phoron,
@@ -7702,7 +7702,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "XY" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 1
@@ -7711,14 +7711,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Yf" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Yh" = (
 /turf/simulated/floor/water/acidic/deep/indoor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Yi" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -7763,7 +7763,7 @@
 "Yy" = (
 /obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Yz" = (
 /obj/machinery/light{
 	dir = 1
@@ -7775,7 +7775,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YC" = (
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/borderfloor{
@@ -7786,21 +7786,21 @@
 	},
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YD" = (
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "VRTut_basic"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "YF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YJ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -7809,7 +7809,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality)
+/area/vr)
 "YL" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light,
@@ -7821,7 +7821,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YM" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -7837,7 +7837,7 @@
 /obj/item/storage/box/monkeycubes,
 /obj/item/storage/box/monkeycubes,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YO" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -7846,7 +7846,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "YP" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -7856,7 +7856,7 @@
 	},
 /obj/effect/floor_decal/arrow,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YR" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -7869,7 +7869,7 @@
 /obj/item/storage/firstaid/fire,
 /obj/item/storage/firstaid/fire,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YT" = (
 /obj/machinery/autolathe{
 	hacked = 1;
@@ -7879,31 +7879,31 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "YW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YY" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "YZ" = (
 /obj/item/gun/projectile/automatic/serdy/hectate,
 /obj/structure/table/rack,
 /obj/structure/window/basic,
 /obj/machinery/door/window,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Zg" = (
 /obj/machinery/hologram/holo_tutorial/intro_17,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Zh" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -7915,14 +7915,14 @@
 	},
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "Zi" = (
 /obj/structure/bed/chair/backed_red,
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Zk" = (
 /obj/machinery/computer/operating{
 	pixel_y = 2
@@ -7931,7 +7931,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Zl" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/blue{
@@ -7941,7 +7941,7 @@
 /obj/item/stack/medical/splint,
 /obj/item/stack/medical/splint,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Zm" = (
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/wood/sif,
@@ -7951,14 +7951,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/virtual_reality)
+/area/vr)
 "Zr" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Zs" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/light,
@@ -7972,19 +7972,19 @@
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "Zu" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "Zw" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/virtual_reality)
+/area/vr)
 "Zx" = (
 /obj/structure/railing{
 	dir = 8
@@ -7992,7 +7992,7 @@
 /obj/structure/table/rack,
 /obj/item/storage/firstaid/regular,
 /turf/simulated/floor,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ZA" = (
 /obj/structure/sink{
 	dir = 8;
@@ -8002,13 +8002,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ZB" = (
 /obj/machinery/door/window/westright{
 	name = "Range Access"
 	},
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ZC" = (
 /obj/structure/window/basic{
 	dir = 8
@@ -8032,7 +8032,7 @@
 /obj/item/target/syndicate,
 /obj/item/target/syndicate,
 /turf/simulated/floor/tiled,
-/area/virtual_reality)
+/area/vr)
 "ZM" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -8052,7 +8052,7 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/wmarble,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ZR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -8065,15 +8065,15 @@
 "ZT" = (
 /obj/structure/sign/warning/acid,
 /turf/simulated/wall,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 "ZU" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled/white,
-/area/virtual_reality/lighting)
+/area/vr/lighting)
 "ZZ" = (
 /obj/machinery/light/small,
 /turf/simulated/floor,
-/area/virtual_reality/requirespower)
+/area/vr/requirespower)
 
 (1,1,1) = {"
 fE

@@ -66,7 +66,7 @@
 		"riflescope",
 		"motion_tracker",
 		"hunt_trap",
-		"recon_skimmer",
+		// "recon_skimmer", // Outpost 21 edit - temporary removal
 		// "clown_firing_pin",
 		// "pin_testing",
 		// "pin_loyalty",

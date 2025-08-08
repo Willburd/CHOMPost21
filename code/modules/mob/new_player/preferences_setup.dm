@@ -278,9 +278,9 @@
 	var/list/valid_hairstyles = list()
 	for(var/hairstyle in GLOB.hair_styles_list)
 		var/datum/sprite_accessory/S = GLOB.hair_styles_list[hairstyle]
-		if(!(species in S.species_allowed) && (!custom_base || !(custom_base in S.species_allowed)))
+		if(S.name == DEVELOPER_WARNING_NAME)
 			continue
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
+		if(!(species in S.species_allowed) && (!custom_base || !(custom_base in S.species_allowed)))
 			continue
 		if((!S.ckeys_allowed) || (user.ckey in S.ckeys_allowed))
 			valid_hairstyles[S.name] = hairstyle
@@ -291,11 +291,11 @@
 	var/list/valid_facialhairstyles = list()
 	for(var/facialhairstyle in GLOB.facial_hair_styles_list)
 		var/datum/sprite_accessory/S = GLOB.facial_hair_styles_list[facialhairstyle]
+		if(S.name == DEVELOPER_WARNING_NAME)
+			continue
 		if(biological_gender == MALE && S.gender == FEMALE)
 			continue
 		if(biological_gender == FEMALE && S.gender == MALE)
-			continue
-		if(S.name == DEVELOPER_WARNING_NAME) // Outpost 21 edit - Hide forbidden styles and markings
 			continue
 		if(!(species in S.species_allowed) && (!custom_base || !(custom_base in S.species_allowed)))
 			continue

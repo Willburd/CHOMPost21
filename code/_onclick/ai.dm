@@ -63,11 +63,9 @@
 		CtrlClickOn(A)
 		return
 
-	// Outpost 21 edit begin - hologram facing when clicked
 	if(holo && istype(holo.masters[src],/obj/effect/overlay/aiholo))
 		var/curdur = get_dir(get_turf(holo.masters[src]), get_turf(A))
 		holo.masters[src].set_dir(curdur)
-	// Outpost 21 edit end
 
 	if(aiCamera.in_camera_mode)
 		aiCamera.camera_mode_off()

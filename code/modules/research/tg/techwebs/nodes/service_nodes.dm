@@ -128,7 +128,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SERVICE)
 
-
+/* Outpost 21 edit - No modular comms here
 /datum/techweb_node/modular_computers
 	id = TECHWEB_NODE_MODULAR_COMPUTER
 	display_name = "Modular Computers"
@@ -163,6 +163,7 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SERVICE)
+*/
 
 /datum/techweb_node/gaming
 	id = TECHWEB_NODE_GAMING
