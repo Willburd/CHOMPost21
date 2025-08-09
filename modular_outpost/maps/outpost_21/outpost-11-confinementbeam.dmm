@@ -2069,13 +2069,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/atmos)
-"fp" = (
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
-/area/ai_upload)
 "fr" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15942,6 +15935,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "WB" = (
@@ -26967,7 +26964,7 @@ cz
 Qn
 FS
 LZ
-fp
+Xz
 Ag
 hH
 Wk
