@@ -180,14 +180,13 @@
 
 // Walking on maglev tracks will shock you! Horray!
 /turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
-	if(locate(/obj/structure/catwalk) in AM.loc)
-		// safe to walk over!
+	if(locate(/obj/structure/catwalk) in AM.loc) // Outpost 21 edit - safe to walk over!
 		return
-	if(isliving(AM) && prob(80))
+	if(isliving(AM) && !(AM.is_incorporeal()) && prob(50))
 		track_zap(AM)
 
 /turf/simulated/floor/maglev/attack_hand(var/mob/user)
-	if(prob(95))
+	if(prob(75))
 		track_zap(user)
 
 /turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)

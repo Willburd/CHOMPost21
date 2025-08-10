@@ -16275,11 +16275,11 @@
 	pixel_x = -5;
 	pixel_y = 11
 	},
-/obj/item/storage/box/monkeycubes/pets/A{
+/obj/item/storage/box/monkeycubes/pets/outpost_A{
 	pixel_x = 5;
 	pixel_y = 4
 	},
-/obj/item/storage/box/monkeycubes/pets/B{
+/obj/item/storage/box/monkeycubes/pets/outpost_B{
 	pixel_x = -5
 	},
 /obj/effect/floor_decal/borderfloor{

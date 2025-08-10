@@ -1,4 +1,8 @@
 // This file is meant ONLY for hyper specialized items and triggers used by the Outpost21 map.
+// Camera network
+/obj/machinery/camera/network/outside
+	network = list(NETWORK_OUTSIDE)
+
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST

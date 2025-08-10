@@ -9,7 +9,7 @@
 					"Grins" = /mob/living/simple_mob/animal/synx/ai/pet/grins,
 					"Kendrick" = /mob/living/simple_mob/slime/xenobio/rainbow/kendrick)
 
-/obj/item/storage/box/monkeycubes/pets/outpost_A
+/obj/item/storage/box/monkeycubes/pets/outpost_B
 	name = "pet cube box (series B)"
 	desc = "Drymate brand pet cubes, formulated for E-Shui Outpost 21. Just add water!"
 	pet_list = list("Clucky" = /mob/living/simple_mob/animal/passive/chicken/clucky,
