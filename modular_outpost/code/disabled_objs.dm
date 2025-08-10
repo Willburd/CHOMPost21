@@ -99,6 +99,24 @@
 /obj/effect/shuttle_landmark/relicbase/research_undermines
 	BADOBJ
 
+/obj/structure/backup_implanter_ch
+	BADOBJ
+/obj/item/storage/box/backup_kit
+	BADOBJ
+/obj/item/storage/box/nifsofts_medical
+	BADOBJ
+/obj/structure/noticeboard/airlock
+	BADOBJ
+/obj/item/storage/box/nifsofts_engineering
+	BADOBJ
+/obj/item/storage/box/nifsofts_security
+	BADOBJ
 
+/turf/simulated/floor/outdoors/grass/sif/cave
+	BADOBJ
+/turf/simulated/floor/outdoors/grass/sif/valley/edge
+	BADOBJ
+/turf/simulated/floor/outdoors/grass/sif/valley
+	BADOBJ
 
 #undef BADOBJ
