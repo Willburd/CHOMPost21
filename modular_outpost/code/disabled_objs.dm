@@ -1,3 +1,6 @@
+// This contains a list of shuttles and objects from upstream that are explicitly disabled
+// It makes them appear as errors in map, and stops their datums from blocking shuttle init
+
 #define BADOBJ name = "BAD OBJ";icon = 'icons/obj/storage_vr.dmi';icon_state = "";
 #define BADSHUTTLE defer_initialisation = TRUE;
 
