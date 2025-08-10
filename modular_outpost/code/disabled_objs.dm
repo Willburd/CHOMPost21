@@ -8,7 +8,7 @@
 	BADOBJ
 /obj/effect/shuttle_landmark/southern_cross/admin_offsite
 	BADOBJ
-/obj/machinery/computer/shuttle_control/multi/centcomBADOBJ
+/obj/machinery/computer/shuttle_control/multi/centcom
 	BADOBJ
 /obj/effect/shuttle_landmark/southern_cross/transport1_offsite
 	BADOBJ
@@ -97,6 +97,11 @@
 /obj/effect/shuttle_landmark/relicbase/research
 	BADOBJ
 /obj/effect/shuttle_landmark/relicbase/research_undermines
+	BADOBJ
+
+/obj/machinery/computer/shuttle_control/explore/spacebus
+	BADOBJ
+/obj/effect/overmap/visitable/ship/landable/spacebus
 	BADOBJ
 
 /obj/effect/landmark/darkspawn
@@ -260,6 +265,8 @@
 	BADOBJ
 /obj/item/retail_scanner/security
 	BADOBJ
+/obj/item/retail_scanner/cargo
+	BADOBJ
 
 
 
@@ -292,6 +299,8 @@
 	BADOBJ
 /obj/item/storage/box/nifsofts_sizechange
 	BADOBJ
+/obj/item/storage/box/nifsofts_mining
+	BADOBJ
 
 
 
@@ -309,6 +318,7 @@
 	BADOBJ
 /obj/effect/map_helper/no_tele
 	BADOBJ
+
 
 
 #undef BADOBJ
