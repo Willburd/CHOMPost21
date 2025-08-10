@@ -62,6 +62,8 @@
 	BADOBJ
 
 
+/obj/machinery/cash_register
+	BADOBJ
 /obj/machinery/cash_register/command
 	BADOBJ
 /obj/machinery/cash_register/medical
@@ -75,6 +77,10 @@
 /obj/machinery/cash_register/cargo
 	BADOBJ
 /obj/machinery/cash_register/civilian
+	BADOBJ
+
+
+/obj/item/retail_scanner
 	BADOBJ
 /obj/item/retail_scanner/civilian
 	BADOBJ
@@ -97,6 +103,8 @@
 /obj/item/book/manual/standard_operating_procedure
 	BADOBJ
 
+/obj/item/paper/awaygate/snowfield/final_note
+	BADOBJ
 /obj/structure/backup_implanter_ch
 	BADOBJ
 /obj/item/storage/box/backup_kit
