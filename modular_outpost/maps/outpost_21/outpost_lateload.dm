@@ -1,3 +1,4 @@
+
 //////////////////////////////////////////////////////////////////////////////////////
 // Code Shenanigans for lateload maps
 
@@ -20,9 +21,7 @@
 		z = mapZ
 	return ..(map)
 
-//////////////////////////////////////////////////////////////////////////////
-//Central command and Other
-
+//////////////////////////////////////////////////////////////////////////////////////
 // Centcom Z-Level
 /datum/map_z_level/outpost_lateload/centcom
 	name = Z_NAME_OUTPOST_CENTCOM
@@ -47,11 +46,8 @@
 	mappath = "modular_outpost/maps/outpost_21/outpost-misc.dmm"
 	associated_map_datum = /datum/map_z_level/outpost_lateload/misc
 
-
-
 //////////////////////////////////////////////////////////////////////////////
 //Rogue Mines Stuff
-
 /datum/map_template/outpost_lateload/outpost_roguemines1
 	name = Z_NAME_OUTPOST_ROGUEMINE_1
 	desc = "Mining, but rogue. Zone 1"

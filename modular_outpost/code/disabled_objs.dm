@@ -43,8 +43,8 @@
 	BADSHUTTLE
 
 
-
-
+/obj/structure/cliff/automatic
+	BADOBJ
 /obj/effect/landmark/darkspawn
 	BADOBJ
 /obj/machinery/lapvend

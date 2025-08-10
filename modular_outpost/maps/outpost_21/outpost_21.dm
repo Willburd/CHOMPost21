@@ -19,7 +19,7 @@
 		//#include "outpost-09-survey.dmm"
 	#endif
 
-	#include "../submaps/_outpost_submaps.dm"
+	#include "outpost_lateload.dm"
 
 	#define USING_MAP_DATUM /datum/map/outpost
 

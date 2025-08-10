@@ -5628,6 +5628,7 @@
 #include "modular_outpost\maps\common\common_things.dm"
 #include "modular_outpost\maps\common\common_turfs.dm"
 #include "modular_outpost\maps\common\shuttles.dm"
+#include "modular_outpost\maps\outpost_21\outpost_lateload.dm"
 #include "modular_outpost\maps\submaps\base.dm"
 #include "modular_outpost\maps\submaps\cargoyard\cargoyard.dm"
 #include "modular_outpost\maps\submaps\deepdark\deepdark.dm"
