@@ -103,24 +103,6 @@
 	BADOBJ
 
 
-/obj/item/book/manual/command_guide
-	BADOBJ
-/obj/item/book/manual/synthetic_life
-	BADOBJ
-/obj/item/book/manual/chemistry_guide
-	BADOBJ
-/obj/item/book/manual/rotary_electric_generator
-	BADOBJ
-/obj/item/book/manual/standard_operating_procedure
-	BADOBJ
-/obj/item/book/manual/cook_guide
-	BADOBJ
-/obj/item/book/manual/bar_guide
-	BADOBJ
-
-
-/obj/item/paper/awaygate/snowfield/final_note
-	BADOBJ
 /obj/structure/backup_implanter_ch
 	BADOBJ
 /obj/item/storage/box/backup_kit
@@ -150,9 +132,6 @@
 	BADOBJ
 /turf/simulated/floor/outdoors/grass/sif/valley
 	BADOBJ
-/obj/random/turf/lava/sif
-	BADOBJ
-
 
 /obj/effect/map_helper/no_phaseshift
 	BADOBJ
@@ -160,6 +139,11 @@
 	BADOBJ
 /obj/effect/map_helper/no_tele
 	BADOBJ
+/obj/random/turf/lava/sif
+	BADOBJ
+/obj/item/paper/awaygate/snowfield/final_note
+	BADOBJ
+
 
 
 #undef BADSHUTTLE
