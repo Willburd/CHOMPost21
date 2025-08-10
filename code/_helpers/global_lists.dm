@@ -1649,6 +1649,7 @@ GLOBAL_LIST_INIT(suitable_fish_turf_types,  list(
 	/turf/simulated/floor/water
 ))
 
+GLOBAL_LIST_EMPTY(vats_to_rain_into) // Outpost 21 edit - rainy vats
 
 //Chamelion clothing was all stupid so it's done here instead.
 //Jumpsuit
@@ -1670,5 +1671,4 @@ GLOBAL_LIST(chamelion_belt_choices)
 //Accessory
 GLOBAL_LIST(chamelion_accessory_choices)
 
-// Outpost 21 edit - rainy vats
-GLOBAL_LIST_EMPTY(vats_to_rain_into)
+GLOBAL_LIST_INIT(tail_layer_options, list("Lower layer" = TAIL_UPPER_LAYER_LOW , "Default layer" = TAIL_UPPER_LAYER , "Upper layer" = TAIL_UPPER_LAYER_HIGH ))

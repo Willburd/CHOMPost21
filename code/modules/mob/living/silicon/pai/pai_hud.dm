@@ -69,10 +69,8 @@
 		if("ar hud")
 			p.ar_hud()
 
-		// Outpost 21 edit begin - Pai death alarm
 		if("death alarm")
 			p.death_alarm()
-		// Outpost 21 edit end
 
 /obj/screen/pai/pai_fold_display
 	name = "fold/unfold"
@@ -330,16 +328,13 @@
 	using.alpha = ui_alpha
 	other |= using
 
-	// Outpost 21 edit begin - Pai death alarm
 	using = new /obj/screen/pai()
 	using.name = "death alarm"
-	using.icon = 'modular_outpost/icons/mob/pai_hud.dmi'
 	using.base_state = "death_alarm"
 	using.screen_loc = "WEST:6,SOUTH+5:2"
 	using.color = ui_color
 	using.alpha = ui_alpha
 	other |= using
-	// Outpost 21 edit end
 
 	autowhisper_display = new /obj/screen()
 	autowhisper_display.icon = 'icons/mob/screen/minimalist.dmi'
