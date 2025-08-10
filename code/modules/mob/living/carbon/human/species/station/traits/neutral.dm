@@ -642,7 +642,6 @@
 	cost = 0
 	custom_only = FALSE
 	reaction = AG_GIBBING
-	hidden = TRUE // Disabled on virgo for obvious reasons
 
 /datum/trait/neutral/allergy_reaction/sneeze
 	name = "Allergy Reaction: Sneezing"
