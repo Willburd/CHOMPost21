@@ -165,6 +165,18 @@
 	BADOBJ
 /obj/effect/shuttle_landmark/southern_cross/escape_pod8/offsite
 	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod9/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod10/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod11/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod12/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod13/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod14/offsite
+	BADOBJ
 /obj/machinery/computer/shuttle_control/multi/heist
 	BADOBJ
 /obj/machinery/computer/shuttle_control/multi/ert
@@ -185,6 +197,18 @@
 	BADOBJ
 /obj/effect/shuttle_landmark/southern_cross/escape_pod8/station
 	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod9/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod10/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod11/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod12/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod13/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod14/station
+	BADOBJ
 
 /obj/effect/shuttle_landmark/southern_cross/escape_pod1/transit
 	BADOBJ
@@ -201,6 +225,18 @@
 /obj/effect/shuttle_landmark/southern_cross/escape_pod7/transit
 	BADOBJ
 /obj/effect/shuttle_landmark/southern_cross/escape_pod8/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod9/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod10/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod11/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod12/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod13/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod14/transit
 	BADOBJ
 
 /obj/machinery/computer/shuttle_control/explore/ursula
@@ -226,6 +262,9 @@
 /obj/effect/overmap/visitable/ship/landable/echidna
 	BADOBJ
 /obj/machinery/computer/shuttle_control/explore/needle
+	BADOBJ
+
+/obj/structure/old_roboprinter
 	BADOBJ
 
 #undef BADOBJ
