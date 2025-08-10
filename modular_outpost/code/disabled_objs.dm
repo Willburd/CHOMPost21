@@ -5,7 +5,6 @@
 #define BADOBJ name = "BAD OBJ";icon = 'icons/obj/storage_vr.dmi';icon_state = "";
 #define BADSHUTTLE defer_initialisation = TRUE;
 
-#if defined(CITESTING)
 
 /datum/shuttle/autodock/multi/ert
 	BADSHUTTLE
@@ -49,6 +48,7 @@
 	BADSHUTTLE
 
 
+#if defined(CITESTING)
 /obj/structure/ghost_pod/manual/cursedblade
 	BADOBJ
 /obj/structure/ghost_pod/manual/corgi
