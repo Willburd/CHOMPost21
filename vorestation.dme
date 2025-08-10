@@ -5317,6 +5317,7 @@
 #include "modular_chomp\maps\common\common_loadout.dm"
 #include "modular_chomp\maps\common\common_machinery.dm"
 #include "modular_chomp\maps\common\common_munitions.dm"
+#include "modular_chomp\maps\common\common_overmap_shuttles.dm"
 #include "modular_chomp\maps\common\common_presets.dm"
 #include "modular_chomp\maps\common\common_shuttles.dm"
 #include "modular_chomp\maps\common\common_shuttles_crew.dm"
