@@ -269,14 +269,14 @@
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_VODKA, 100)
 
-/obj/item/reagent_containers/food/drinks/bottle/tequilla
+/obj/item/reagent_containers/food/drinks/bottle/tequila
 	name = "Caccavo Guaranteed Quality Tequilla"
 	desc = "Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!"
 	icon_state = "tequilabottle"
 	center_of_mass_x = 16
 	center_of_mass_y = 3
 
-/obj/item/reagent_containers/food/drinks/bottle/tequilla/Initialize(mapload)
+/obj/item/reagent_containers/food/drinks/bottle/tequila/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_TEQUILA, 100)
 

@@ -124,7 +124,8 @@
 	BADOBJ
 /obj/item/storage/box/nifsofts_mining
 	BADOBJ
-
+/obj/item/nif/bad
+	BADOBJ
 
 /turf/simulated/floor/tiled/techmaint/airless
 	BADOBJ

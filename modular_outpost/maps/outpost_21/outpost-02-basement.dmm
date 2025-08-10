@@ -76561,7 +76561,7 @@
 /obj/item/reagent_containers/food/drinks/bottle/sake{
 	pixel_x = 10
 	},
-/obj/item/reagent_containers/food/drinks/bottle/tequilla{
+/obj/item/reagent_containers/food/drinks/bottle/tequila{
 	pixel_x = 16
 	},
 /obj/item/reagent_containers/food/drinks/bottle/vodka{
