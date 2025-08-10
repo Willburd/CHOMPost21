@@ -5361,6 +5361,7 @@
 #include "modular_chomp\maps\overmap\space_pois\space_areas.dm"
 #include "modular_chomp\maps\overmap\space_pois\space_pois.dm"
 #include "modular_chomp\maps\overmap\sectors\common_overmap.dm"
+#include "modular_chomp\maps\relic_base\shuttles\crew_shuttles_ch.dm"
 #include "modular_chomp\maps\southern_cross\southern_cross_events.dm"
 #include "modular_chomp\maps\southern_cross\items\encryptionkey_sc.dm"
 #include "modular_chomp\maps\southern_cross\items\headset_sc.dm"

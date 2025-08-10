@@ -39,7 +39,8 @@
 	BADSHUTTLE
 /datum/shuttle/autodock/overmap/junker
 	BADSHUTTLE
-
+datum/shuttle/autodock/web_shuttle/shuttle3
+	BADSHUTTLE
 
 
 
