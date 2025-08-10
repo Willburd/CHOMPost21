@@ -8,20 +8,18 @@
 	#include "job/outfits.dm"
 
 	#ifndef AWAY_MISSION_TEST //Don't include these for just testing away missions
-		#include "outpost-04-deepdark.dmm"
-		#include "outpost-01-basement.dmm"
-		#include "outpost-02-surface.dmm"
-		#include "outpost-03-upper.dmm"
-		#include "outpost-05-centcom.dmm"
-		#include "outpost-06-misc.dmm"
-		#include "outpost-07-asteroid.dmm"
+		#include "outpost-01-deepdark.dmm"
+		#include "outpost-02-basement.dmm"
+		#include "outpost-03-surface.dmm"
+		#include "outpost-04-upper.dmm"
+		#include "outpost-05-asteroid.dmm"
+		#include "outpost-06-confinementbeam.dmm"
+		#include "outpost-07-vr.dmm"
 		//#include "outpost-08-prospector.dmm"
 		//#include "outpost-09-survey.dmm"
-		#include "outpost-10-vr.dmm"
-		#include "outpost-11-confinementbeam.dmm"
 	#endif
 
-	#include "../submaps/_outpost_submaps.dm"
+	#include "outpost_lateload.dm"
 
 	#define USING_MAP_DATUM /datum/map/outpost
 

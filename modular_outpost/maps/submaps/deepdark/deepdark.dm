@@ -640,7 +640,7 @@
 	icon_state = "red2"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
-	ambience = AMBIENCE_EXPOUTPOST
+	ambience = AMBIENCE_OUTPOST
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_WARM

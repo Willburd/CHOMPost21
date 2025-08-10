@@ -1559,6 +1559,7 @@
 			linked_mob.adjust_nutrition(how_much)
 
 /turf/simulated/floor/flesh/mover
+	icon = 'icons/turf/stomach_vr.dmi' // Outpost 21 edit - Flesh terrain tweaked
 	icon_state = "flesh_floor_mover"
 	var/movechance = 5
 	var/we_process = FALSE

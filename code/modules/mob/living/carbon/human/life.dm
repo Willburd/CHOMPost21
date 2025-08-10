@@ -65,7 +65,7 @@
 
 		handle_pain()
 
-		handle_allergens()
+		SEND_SIGNAL(src,COMSIG_HANDLE_ALLERGENS, chem_effects[CE_ALLERGEN])
 
 		handle_medical_side_effects()
 
@@ -863,69 +863,6 @@
 		suit_exhale_sound = 'sound/effects/mob_effects/suit_breathe_out.ogg'
 
 	playsound_local(get_turf(src), suit_exhale_sound, 100, pressure_affected = FALSE, volume_channel = VOLUME_CHANNEL_AMBIENCE)
-
-/mob/living/carbon/human/proc/handle_allergens()
-	if(chem_effects[CE_ALLERGEN])
-		//first, multiply the basic species-level value by our allergen effect rating, so consuming multiple seperate allergen typess simultaneously hurts more
-		var/damage_severity = species.allergen_damage_severity * chem_effects[CE_ALLERGEN]
-		var/disable_severity = species.allergen_disable_severity * chem_effects[CE_ALLERGEN]
-		if(species.allergen_reaction & AG_PHYS_DMG)
-			adjustBruteLoss(damage_severity)
-		if(species.allergen_reaction & AG_BURN_DMG)
-			adjustFireLoss(damage_severity)
-		if(species.allergen_reaction & AG_TOX_DMG)
-			adjustToxLoss(damage_severity)
-		if(species.allergen_reaction & AG_OXY_DMG)
-			adjustOxyLoss(damage_severity)
-			if(prob(disable_severity/2))
-				emote(pick("cough","gasp","choke"))
-		if(species.allergen_reaction & AG_EMOTE)
-			if(prob(disable_severity/2))
-				emote(pick("pale","shiver","twitch"))
-		if(species.allergen_reaction & AG_PAIN)
-			adjustHalLoss(disable_severity)
-		if(species.allergen_reaction & AG_WEAKEN)
-			Weaken(disable_severity)
-		if(species.allergen_reaction & AG_BLURRY)
-			eye_blurry = max(eye_blurry, disable_severity)
-		if(species.allergen_reaction & AG_SLEEPY)
-			drowsyness = max(drowsyness, disable_severity)
-		if(species.allergen_reaction & AG_CONFUSE)
-			Confuse(disable_severity/4)
-		// outpost 21 addition begin - New allergen reactions!
-		if(species.allergen_reaction & AG_GIBBING)
-			if(prob(disable_severity / 8))
-				spawn(1)
-					emote(pick("whimper","shiver"))
-				spawn(3)
-					emote(pick("whimper","belch","shiver"))
-				spawn(4)
-					emote(pick("whimper","shiver"))
-				spawn(6)
-					emote(pick("belch"))
-					gib()
-			else if(prob(disable_severity))
-				emote(pick("whimper","belch","belch","belch","choke","shiver"))
-				Weaken(disable_severity / 3)
-		if(species.allergen_reaction & AG_SNEEZE)
-			if(prob(disable_severity/3))
-				if(prob(20))
-					to_chat(src, "<span class='warning'>You go to sneeze, but it gets caught in your sinuses!</span>")
-				else if(prob(80))
-					if(prob(30))
-						to_chat(src, "<span class='warning'>You feel like you are about to sneeze!</span>")
-					spawn(5)
-						emote("sneeze")
-						if(prob(23))
-							drop_item()
-		if(species.allergen_reaction & AG_COUGH)
-			if(prob(disable_severity/2))
-				emote(pick("cough","cough","cough","gasp","choke"))
-				if(prob(10))
-					drop_item()
-				if(prob(33))
-					adjustOxyLoss(damage_severity)
-		// outpost 21 addition end
 
 /mob/living/carbon/human/proc/handle_species_components()
 	species.handle_species_components(src)

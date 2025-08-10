@@ -43,6 +43,7 @@
 	icon_state = "atmos"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	color_grading = COLORTINT_DIM
+	lightswitch = 1
 
 /area/muriki/atmos/voxdump
 	name = "\improper Hazardous Gas Filtration Substation"
@@ -365,6 +366,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 1
 
 /area/quartermaster/cargupbreak
 	name = "\improper Cargo Upper Break Room"
@@ -415,6 +417,7 @@
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 0
 
 /area/muriki/arriveproc
 	name = "\improper Arrivals Processing"
@@ -459,6 +462,7 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
+	lightswitch = 0
 
 /area/muriki/crew/
 	name = "\improper Crew Area"
@@ -734,6 +738,7 @@
 	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	color_grading = COLORTINT_DIM
+	lightswitch = 1
 
 /area/engineering/hardsuitstore
 	name = "\improper Engineering Hardsuit Storage"
@@ -773,6 +778,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	lightswitch = 1
 
 /area/engineering/refinery/backup_gen
 	name = "\improper Chemical Refinery Generator"
@@ -802,6 +808,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	lightswitch = 1
 
 /area/engineering/refinery/pump_station
 	name = "\improper Chemical Refinery Pump Station"
@@ -834,6 +841,7 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	outdoors = FALSE
+	lightswitch = 1
 
 /area/engineering/coreproctunnel
 	name = "\improper Core Processor Atmo Tunnel"
@@ -1753,6 +1761,7 @@
 	music = 'sound/ambience/signal.ogg'
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	lightswitch = 1
 
 /area/maintenance/substation/virology
 	name = "Virology Substation"
@@ -1889,6 +1898,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	lightswitch = 1
 
 /area/medical/virology/prep
 	name = "\improper Virology Preperation"
@@ -2081,6 +2091,7 @@
 	name = "\improper Security Operating Theatre"
 	icon_state = "surgery"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT //This WOULD become a filth pit
+	lightswitch = 1
 
 //
 // Science-----------------------------------------------------------------------
@@ -2140,6 +2151,7 @@
 	base_turf = /turf/simulated/open
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	lightswitch = 1
 
 /area/rnd/otherlab
 	name = "\improper RnD Auxillary Laboratory"
@@ -2208,6 +2220,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 1
 
 /area/rnd/research/isolation_a
 	name = "\improper Research Isolation 1"
@@ -2281,6 +2294,7 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 1
 
 /area/rnd/research/roof_eva
 	name = "\improper Research Roof Access"
@@ -2298,6 +2312,7 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 1
 
 /area/rnd/research/phoronics/burn
 	name = "\improper Phoronics Burn Chamber"
@@ -2364,6 +2379,7 @@
 	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	base_turf = /turf/simulated/open
+	lightswitch = 1
 
 /area/rnd/hallway/main
 	name = "\improper Primary Research hallway"

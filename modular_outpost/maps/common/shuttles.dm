@@ -206,7 +206,6 @@
 
 //////////////////////////////////////////////////////////////
 // Mercenary Shuttle
-// Look into fitting this on the Main map- RadiantFlash
 /datum/shuttle/autodock/multi/mercenary
 	name = "Mercenary"
 	warmup_time = 0
