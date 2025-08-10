@@ -267,4 +267,27 @@
 /obj/structure/old_roboprinter
 	BADOBJ
 
+/obj/effect/landmark/event_spawn/morphspawn
+	BADOBJ
+/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce
+	BADOBJ
+/obj/item/retail_scanner/command
+	BADOBJ
+/obj/item/disk/nifsoft/compliance
+	BADOBJ
+/obj/item/retail_scanner/security
+	BADOBJ
+/obj/item/storage/firstaid/experimental
+	BADOBJ
+/obj/structure/noticeboard/toxins
+	BADOBJ
+/turf/simulated/floor/tiled/techmaint/airless
+	BADOBJ
+/obj/item/book/manual/command_guide
+	BADOBJ
+/obj/item/book/manual/synthetic_life
+	BADOBJ
+/obj/item/book/manual/chemistry_guide
+	BADOBJ
+
 #undef BADOBJ
