@@ -43,7 +43,17 @@
 	BADSHUTTLE
 
 
+/obj/structure/ghost_pod/manual/cursedblade
+	BADOBJ
+/obj/structure/ghost_pod/manual/corgi
+	BADOBJ
+
+
 /obj/structure/cliff/automatic
+	BADOBJ
+/obj/structure/cliff/automatic/corner
+	BADOBJ
+/obj/structure/cliff/automatic/ramp
 	BADOBJ
 /obj/effect/landmark/darkspawn
 	BADOBJ
@@ -103,6 +113,11 @@
 	BADOBJ
 /obj/item/book/manual/standard_operating_procedure
 	BADOBJ
+/obj/item/book/manual/cook_guide
+	BADOBJ
+/obj/item/book/manual/bar_guide
+	BADOBJ
+
 
 /obj/item/paper/awaygate/snowfield/final_note
 	BADOBJ
@@ -135,9 +150,13 @@
 	BADOBJ
 /turf/simulated/floor/outdoors/grass/sif/valley
 	BADOBJ
+/obj/random/turf/lava/sif
+	BADOBJ
 
 
 /obj/effect/map_helper/no_phaseshift
+	BADOBJ
+/obj/effect/map_helper/no_phaseshift/area
 	BADOBJ
 /obj/effect/map_helper/no_tele
 	BADOBJ
