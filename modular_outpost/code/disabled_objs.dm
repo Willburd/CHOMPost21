@@ -203,4 +203,29 @@
 /obj/effect/shuttle_landmark/southern_cross/escape_pod8/transit
 	BADOBJ
 
+/obj/machinery/computer/shuttle_control/explore/ursula
+	BADOBJ
+/obj/effect/overmap/visitable/ship/landable/ursula
+	BADOBJ
+/obj/machinery/computer/shuttle_control/web/shuttle3
+	BADOBJ
+/obj/machinery/computer/shuttle_control/explore/baby_mammoth
+	BADOBJ
+/obj/machinery/computer/shuttle_control/explore/echidna
+	BADOBJ
+/obj/machinery/computer/shuttle_control/explore/stargazer
+	BADOBJ
+/obj/effect/overmap/visitable/ship/landable/baby_mammoth
+	BADOBJ
+/obj/item/storage/box/nifsofts_pilot
+	BADOBJ
+/obj/effect/overmap/visitable/ship/landable/needle
+	BADOBJ
+/obj/effect/overmap/visitable/ship/landable/stargazer
+	BADOBJ
+/obj/effect/overmap/visitable/ship/landable/echidna
+	BADOBJ
+/obj/machinery/computer/shuttle_control/explore/needle
+	BADOBJ
+
 #undef BADOBJ
