@@ -169,5 +169,38 @@
 	BADOBJ
 /obj/machinery/computer/shuttle_control/multi/ert
 	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod1/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod2/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod3/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod4/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod5/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod6/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod7/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod8/station
+	BADOBJ
+
+/obj/effect/shuttle_landmark/southern_cross/escape_pod1/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod2/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod3/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod4/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod5/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod6/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod7/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod8/transit
+	BADOBJ
 
 #undef BADOBJ
