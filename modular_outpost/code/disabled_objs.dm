@@ -141,5 +141,33 @@
 /obj/machinery/cash_register/civilian
 	BADOBJ
 
+/obj/effect/landmark/darkspawn
+	BADOBJ
+/obj/machinery/computer/shuttle_control/multi/centcom
+	BADOBJ
+/obj/machinery/lapvend
+	BADOBJ
+/obj/item/retail_scanner/civilian
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod1/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod2/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod3/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod4/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod5/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod6/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod7/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape_pod8/offsite
+	BADOBJ
+/obj/machinery/computer/shuttle_control/multi/heist
+	BADOBJ
+/obj/machinery/computer/shuttle_control/multi/ert
+	BADOBJ
 
 #undef BADOBJ
