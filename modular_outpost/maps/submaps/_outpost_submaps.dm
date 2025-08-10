@@ -21,28 +21,55 @@
 	return ..(map)
 
 //////////////////////////////////////////////////////////////////////////////
+//Central command and Other
+
+// Centcom Z-Level
+/datum/map_z_level/outpost_lateload/centcom
+	name = Z_NAME_OUTPOST_CENTCOM
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
+	base_turf = /turf/simulated/floor/lava
+
+/datum/map_template/outpost_lateload/centcom
+	name = Z_NAME_OUTPOST_CENTCOM
+	name_alias = Z_NAME_ALIAS_CENTCOM
+	mappath = "modular_outpost/maps/outpost_21/outpost-centcom.dmm"
+	associated_map_datum = /datum/map_z_level/outpost_lateload/centcom
+
+
+// Misc Z-level
+/datum/map_z_level/outpost_lateload/misc
+	name = Z_NAME_OUTPOST_MISC
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
+
+/datum/map_template/outpost_lateload/misc
+	name = Z_NAME_OUTPOST_MISC
+	name_alias = Z_NAME_ALIAS_MISC
+	mappath = "modular_outpost/maps/outpost_21/outpost-misc.dmm"
+	associated_map_datum = /datum/map_z_level/outpost_lateload/misc
+
+
+
+//////////////////////////////////////////////////////////////////////////////
 //Rogue Mines Stuff
 
 /datum/map_template/outpost_lateload/outpost_roguemines1
-	name = LATELOAD_Z_ROGUEMINE_1
+	name = Z_NAME_OUTPOST_ROGUEMINE_1
 	desc = "Mining, but rogue. Zone 1"
 	mappath = "modular_outpost/maps/submaps/rogueminer/rogue_mine1.dmm"
 
 	associated_map_datum = /datum/map_z_level/outpost_lateload/roguemines1
 
 /datum/map_z_level/outpost_lateload/roguemines1
-	name = "Belt 1"
+	name = Z_NAME_OUTPOST_ROGUEMINE_1
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
-	z = Z_LEVEL_ROGUEMINE_1
 
 /datum/map_template/outpost_lateload/outpost_roguemines2
-	name = LATELOAD_Z_ROGUEMINE_2
+	name = Z_NAME_OUTPOST_ROGUEMINE_2
 	desc = "Mining, but rogue. Zone 2"
 	mappath = "modular_outpost/maps/submaps/rogueminer/rogue_mine2.dmm"
 
 	associated_map_datum = /datum/map_z_level/outpost_lateload/roguemines2
 
 /datum/map_z_level/outpost_lateload/roguemines2
-	name = "Belt 2"
+	name = Z_NAME_OUTPOST_ROGUEMINE_2
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
-	z = Z_LEVEL_ROGUEMINE_2
