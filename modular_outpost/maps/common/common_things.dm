@@ -149,6 +149,14 @@
 	desc = "A plaque commerating the finalization of the Outpost 21 terraforming station. Site of a future paradise world."
 	density = 0
 
+/obj/structure/showcase/sign/enzyme
+	name = "WARNING: ENZYMATIC ATMOSPHERE"
+	icon = 'modular_outpost/icons/obj/stationobjs.dmi'
+	icon_state = "enzyme"
+	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
+
+
+
 
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
