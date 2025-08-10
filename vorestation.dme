@@ -5559,7 +5559,6 @@
 #include "modular_outpost\code\modules\mob\living\silicon\laws.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\silicon.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\pai\pai.dm"
-#include "modular_outpost\code\modules\mob\living\silicon\pai\software_modules.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\robot.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\dogborg\dog_sleeper.dm"
 #include "modular_outpost\code\modules\mob\living\simple_animal\statue.dm"
