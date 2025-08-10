@@ -734,6 +734,7 @@
 	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	color_grading = COLORTINT_DIM
+	lightswitch = 1
 
 /area/engineering/hardsuitstore
 	name = "\improper Engineering Hardsuit Storage"
