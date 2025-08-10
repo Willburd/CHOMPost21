@@ -417,6 +417,7 @@
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 0
 
 /area/muriki/arriveproc
 	name = "\improper Arrivals Processing"
@@ -461,6 +462,7 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
+	lightswitch = 0
 
 /area/muriki/crew/
 	name = "\improper Crew Area"
@@ -806,6 +808,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	lightswitch = 1
 
 /area/engineering/refinery/pump_station
 	name = "\improper Chemical Refinery Pump Station"
