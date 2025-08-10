@@ -98,12 +98,13 @@
 	BADOBJ
 /obj/effect/shuttle_landmark/relicbase/research_undermines
 	BADOBJ
+/obj/item/paper/awaygate/snowfield/final_note
+	BADOBJ
 
 /obj/machinery/computer/shuttle_control/explore/spacebus
 	BADOBJ
 /obj/effect/overmap/visitable/ship/landable/spacebus
 	BADOBJ
-
 /obj/effect/landmark/darkspawn
 	BADOBJ
 /obj/machinery/computer/shuttle_control/multi/centcom
