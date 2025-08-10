@@ -313,6 +313,11 @@
 				if(!(locate(/obj/machinery/light_switch) in A.contents))
 					log_unit_test("[A.type] lacks an lightswitch")
 					failures++
+			else
+				// Area light must be off
+				if(A.lightswitch)
+					log_unit_test("[A.type] is a room with a lightswitch, but had default lightswitch state as on. Rooms start off on outpost!")
+					failures++
 		else
 			// Area light must be on
 			if(!A.lightswitch)
