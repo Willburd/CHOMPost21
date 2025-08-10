@@ -5,7 +5,7 @@
 /* FOR LIVE SERVER   */
 /*********************/
 
-// #define USE_MAP_OUTPOST21
+#define USE_MAP_OUTPOST21
 
 // Debug
 
