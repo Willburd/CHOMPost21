@@ -51185,7 +51185,7 @@
 /area/maintenance/wastedisposalnear)
 "dCD" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
-/turf/simulated/floor/water/acidic/deep,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/explored/muriki/river/north)
 "dCQ" = (
 /obj/machinery/light/small,
@@ -78747,9 +78747,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/engineering/atmos)
-"utY" = (
-/turf/simulated/floor/water/acidic/deep,
-/area/mine/explored/muriki/river/north)
 "uur" = (
 /obj/machinery/atmospherics/pipe/tank/air/full{
 	dir = 1
@@ -103212,7 +103209,7 @@ gqd
 gqd
 gqd
 gqd
-utY
+aqY
 aqY
 aqY
 bHX
@@ -103374,7 +103371,7 @@ gqd
 gqd
 gqd
 dCD
-utY
+aqY
 aqY
 bHX
 bHX
@@ -103534,10 +103531,10 @@ gqd
 gqd
 gqd
 gqd
-utY
+aqY
 dCD
-utY
-utY
+aqY
+aqY
 bHX
 tOh
 tOh
@@ -103696,9 +103693,9 @@ gqd
 gqd
 gqd
 gqd
-utY
-utY
-utY
+aqY
+aqY
+aqY
 bHX
 pxx
 tOh
