@@ -1,0 +1,104 @@
+#define BADOBJ name = "BAD OBJ";icon = 'icons/obj/storage_vr.dmi';icon_state = "";
+
+/obj/effect/shuttle_landmark/southern_cross/supply_offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/supply_station
+	BADOBJ
+/obj/machinery/computer/shuttle_control/multi/administration
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/admin_offsite
+	BADOBJ
+/obj/machinery/computer/shuttle_control/multi/centcomBADOBJ
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/transport1_offsite
+	BADOBJ
+/obj/machinery/computer/shuttle_control/multi/merchant
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/merchant_offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/arrivals_offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/arrivals_station
+	BADOBJ
+/obj/machinery/computer/shuttle_control/exploration
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/sling_station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/sling_outpost
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/hangar_one
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/baby_mammoth_dock
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/ursula_dock
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/stargazer_dock
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/needle_dock
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/echidna_dock
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/port_dock
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/carrier/starboard_dock
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/escape/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/cryostorage_station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/cryostorage_offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/cryostorage_transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod1/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod2/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod3/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod3/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod3/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod4/station
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod4/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/southern_cross/large_escape_pod4/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/arrivals/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/arrivals/station
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/escape/offsite
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/escape/station
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/escape/transit
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/mining_base
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/mining_undermines
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/research
+	BADOBJ
+/obj/effect/shuttle_landmark/relicbase/research_undermines
+	BADOBJ
+
+
+
+#undef BADOBJ
