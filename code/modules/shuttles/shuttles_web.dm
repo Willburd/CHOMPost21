@@ -161,7 +161,6 @@
 
 /obj/machinery/computer/shuttle_control/web
 	name = "flight computer"
-	icon = 'icons/obj/computer.dmi' // Outpost 21 edit - Missing in dmi
 	icon_state = "flightcomp_center"
 	icon_keyboard = "flight_center_key"
 	icon_screen = "flight_center"
