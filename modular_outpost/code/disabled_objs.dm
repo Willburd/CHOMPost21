@@ -119,4 +119,27 @@
 /turf/simulated/floor/outdoors/grass/sif/valley
 	BADOBJ
 
+
+/obj/machinery/cash_register/command
+	BADOBJ
+
+/obj/machinery/cash_register/medical
+	BADOBJ
+
+/obj/machinery/cash_register/engineering
+	BADOBJ
+
+/obj/machinery/cash_register/science
+	BADOBJ
+
+/obj/machinery/cash_register/security
+	BADOBJ
+
+/obj/machinery/cash_register/cargo
+	BADOBJ
+
+/obj/machinery/cash_register/civilian
+	BADOBJ
+
+
 #undef BADOBJ

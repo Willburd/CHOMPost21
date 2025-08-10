@@ -5375,6 +5375,7 @@
 #include "modular_chomp\maps\submaps\surface_submaps\wilderness\wilderness_areas.dm"
 #include "modular_chomp\maps\~map_system\maps_vr.dm"
 #include "modular_chomp\maps\~turfpacks\turfpacks.dm"
+#include "modular_outpost\code\disabled_objs.dm"
 #include "modular_outpost\code\_helpers\atmospherics.dm"
 #include "modular_outpost\code\_helpers\global_lists.dm"
 #include "modular_outpost\code\_onclick\hud\alert.dm"
