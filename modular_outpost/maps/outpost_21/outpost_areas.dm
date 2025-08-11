@@ -1,5 +1,5 @@
 //
-// Outpost holomap modifications, or base turf fixes ONLY. !!!OVERRIDES!!! ---------------------------------------------------------------------
+// Outpost holomap modifications. !!!OVERRIDES ONLY!!! New areas go in outpost_modular/maps/common/common_areas.dm ---------------------------------------------------------------------
 //
 /area/centcom // lets NOT
 	flags = RAD_SHIELDED|AREA_FLAG_IS_NOT_PERSISTENT|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_BLOCK_GHOST_SIGHT|AREA_FORBID_EVENTS
