@@ -291,7 +291,7 @@
 	display_name = "Augmented Reality Mantle (Sec)"
 	description = "A full-face, partially-obscuring visor. Covers the face and eyes. Has a security-oriented augmented-reality display on the inside, and can be toggled into a corrective vision mode. Flash-resistant."
 	path = /obj/item/clothing/glasses/omnihud/mantle/sec
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN, JOB_DETECTIVE)
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN /*, JOB_DETECTIVE*/) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/eyes/ar_mantle_med
 	display_name = "Augmented Reality Mantle (Med)"
