@@ -15,6 +15,9 @@
 
 /obj/structure/ladder/Initialize(mapload)
 	. = ..()
+	attempt_connection()
+
+/obj/structure/ladder/proc/attempt_connection()
 	// the upper will connect to the lower
 	if(allowed_directions & DOWN) //we only want to do the top one, as it will initialize the ones before it.
 		for(var/obj/structure/ladder/L in GetBelow(src))
@@ -41,7 +44,6 @@
 		return ..()
 
 /obj/structure/ladder/attackby(obj/item/C as obj, mob/user as mob)
-	// Outpost 21 edit begin - Deconstructing ladder
 	if(C.has_tool_quality(TOOL_WELDER))
 		var/obj/item/weldingtool/WT = C.get_welder()
 		if(WT.remove_fuel(0, user))
@@ -56,21 +58,20 @@
 				if(target_up)
 					target_up.visible_message("\The [target_up] deconstructs from below")
 					A = new /obj/structure/ladder_assembly(target_up.loc)
-					A.state = 2 // CONSTRUCTION_WELDED in code\modules\multiz\ladder_assembly_vr.dm
+					A.state = LADDER_CONSTRUCTION_WELDED
 					A.anchored = TRUE
 					qdel(target_up)
 				if(target_down)
 					target_down.visible_message("\The [target_down] deconstructs from above")
 					A = new /obj/structure/ladder_assembly(target_down.loc)
-					A.state = 2 // CONSTRUCTION_WELDED in code\modules\multiz\ladder_assembly_vr.dm
+					A.state = LADDER_CONSTRUCTION_WELDED
 					A.anchored = TRUE
 					qdel(target_down)
 				A = new /obj/structure/ladder_assembly(loc)
-				A.state = 1 // CONSTRUCTION_WRENCHED in code\modules\multiz\ladder_assembly_vr.dm
+				A.state = LADDER_CONSTRUCTION_WRENCHED
 				A.anchored = TRUE
 				qdel(src)
 			return
-	// Outpost 21 edit end
 	attack_hand(user)
 	return
 
@@ -143,10 +144,6 @@
 		climb_modifier = MS.species.climb_mult
 
 	if(do_after(M, (climb_time * climb_modifier), src))
-		// Outpost 21 edit begin - Deconstructing ladder
-		if(QDELETED(target_ladder) || QDELETED(src) || QDELETED(M))
-			return
-		// Outpost 21 edit end
 		var/turf/T = get_turf(target_ladder)
 		for(var/atom/A in T)
 			if(!A.CanPass(M, M.loc, 1.5, 0))
