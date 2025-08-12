@@ -2005,7 +2005,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/phoronicsbridge)
 "avC" = (
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
 "avD" = (
 /obj/structure/flora/log1,
@@ -3673,7 +3673,7 @@
 	dir = 8
 	},
 /obj/structure/catwalk,
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/djstation)
 "bkn" = (
 /obj/structure/sign/directions/evac{
@@ -10374,7 +10374,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/east)
 "exc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -23671,7 +23671,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
 "lgc" = (
 /turf/unsimulated/wall/planetary/muriki,
@@ -32340,7 +32340,7 @@
 	dir = 8
 	},
 /obj/structure/railing,
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/east)
 "pwh" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -46002,7 +46002,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "wdF" = (
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/djstation)
 "wdN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -46123,9 +46123,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
-"whD" = (
-/turf/simulated/open,
-/area/muriki/skyline/east)
 "wid" = (
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
@@ -46714,9 +46711,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
-"wzH" = (
-/turf/simulated/open,
-/area/muriki/skyline/cent)
 "wzJ" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -47166,7 +47160,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
 "wOp" = (
 /turf/simulated/wall/r_wall,
@@ -48067,9 +48061,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/gasstore)
-"xgK" = (
-/turf/simulated/open,
-/area/muriki/skyline/north)
 "xgO" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -67607,12 +67598,12 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -67769,12 +67760,12 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -67931,12 +67922,12 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -68093,12 +68084,12 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -68255,12 +68246,12 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -68417,12 +68408,12 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -68579,12 +68570,12 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -68741,14 +68732,14 @@ rBk
 rBk
 rBk
 rBk
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 rBk
 rBk
 rBk
@@ -77285,7 +77276,7 @@ ovc
 ovc
 ovc
 ovc
-xgK
+kxr
 kxr
 kxr
 kxr
@@ -77447,7 +77438,7 @@ ovc
 ovc
 ovc
 ovc
-xgK
+kxr
 kxr
 kxr
 kxr
@@ -77609,7 +77600,7 @@ ovc
 ovc
 ovc
 ovc
-xgK
+kxr
 kxr
 kxr
 kxr
@@ -77771,7 +77762,7 @@ ovc
 ovc
 ovc
 ovc
-xgK
+kxr
 kxr
 kxr
 kxr
@@ -77933,7 +77924,7 @@ ovc
 ovc
 ovc
 ovc
-xgK
+kxr
 kxr
 kxr
 kxr
@@ -78095,7 +78086,7 @@ ovc
 ovc
 ovc
 ovc
-xgK
+kxr
 kxr
 kxr
 kxr
@@ -83036,7 +83027,7 @@ rBk
 rBk
 rBk
 rBk
-wzH
+rBk
 rBk
 rBk
 rBk
@@ -83198,7 +83189,7 @@ rBk
 rBk
 rBk
 rBk
-wzH
+rBk
 rBk
 rBk
 rBk
@@ -83360,7 +83351,7 @@ rBk
 rBk
 rBk
 rBk
-wzH
+rBk
 rBk
 rBk
 rBk
@@ -83522,7 +83513,7 @@ rBk
 rBk
 rBk
 rBk
-wzH
+rBk
 rBk
 rBk
 rBk
@@ -90467,23 +90458,23 @@ kEQ
 kEQ
 hJv
 xCc
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
-wzH
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
+rBk
 sXP
 gvA
 wVW
@@ -110298,7 +110289,7 @@ uHw
 qJw
 wbs
 hFX
-whD
+qQa
 qQa
 qQa
 qQa
