@@ -107,4 +107,6 @@ jobs:
         run: tools/build/build.sh --ci lint tgui-test
 
       - name: Run Nanomap Checks
-        run: tools/github-actions/nanomap-renderer-invoker.sh --testing
+        run: |
+          chmod -R +x ./tools/github-actions/nanomap-renderer-invoker.sh
+          tools/github-actions/nanomap-renderer-invoker.sh --testing

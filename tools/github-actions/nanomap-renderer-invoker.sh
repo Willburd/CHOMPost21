@@ -1,6 +1,4 @@
 #!/bin/bash
-chmod -R +x ./tools/github-actions
-
 BASEDIR=$PWD
 #Put directories to get maps from here. One per line.
 mapdirs=(
