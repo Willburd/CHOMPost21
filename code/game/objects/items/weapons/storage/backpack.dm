@@ -94,7 +94,7 @@
 		qdel(W)
 		return
 	*/
-	for(var/typ in bluespace_item_types)
+	for(var/typ in GLOB.bluespace_item_types)
 		if(istype(W,typ))
 			bluespace_bag_malfunction(user,src,W)
 			return
@@ -107,7 +107,7 @@
 	if(istype(W, /obj/item/storage/backpack/holding))
 		return FALSE
 	*/
-	for(var/typ in bluespace_item_types)
+	for(var/typ in GLOB.bluespace_item_types)
 		if(istype(W,typ))
 			return FALSE
 	// Outpost 21 edit end

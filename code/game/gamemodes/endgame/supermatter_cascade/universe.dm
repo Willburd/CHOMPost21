@@ -77,11 +77,23 @@ GLOBAL_VAR_INIT(universe_has_ended, 0)
 				C.req_access = list()
 				C.req_one_access = list()
 
-		// Outpost 21 edit begin - Don't end game anymore
-		//spawn(5 MINUTES)
-		//	ticker.station_explosion_cinematic(0,null) // TODO: Custom cinematic
-		//	GLOB.universe_has_ended = 1
-		// Outpost 21 edit end
+		/* Outpost 21 edit begin - Don't end game anymore
+		spawn(5 MINUTES)
+			play_cinematic(/datum/cinematic/nuke/self_destruct) // TODO: Custom cinematic
+
+			// FIXME: Probably a better way
+			for(var/mob/living/M in GLOB.living_mob_list)
+				switch(M.z)
+					if(0)	//inside a crate or something
+						var/turf/T = get_turf(M)
+						if(T && (T.z in using_map.station_levels))				//we don't use M.death(0) because it calls a for(/mob) loop and
+							M.health = 0
+							M.set_stat(DEAD)
+					if(1)	//on a z-level 1 turf.
+						M.health = 0
+						M.set_stat(DEAD)
+			GLOB.universe_has_ended = 1
+		*/
 		return
 
 /datum/universal_state/supermatter_cascade/proc/AreaSet()
