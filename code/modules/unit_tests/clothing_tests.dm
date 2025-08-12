@@ -94,6 +94,7 @@
 		UnregisterSignal(H, COMSIG_UNITTEST_DATA)
 		qdel(H)
 		qdel(mob_storage)
+
 		// We failed the mob check
 		if(signal_failed)
 			failed = TRUE
