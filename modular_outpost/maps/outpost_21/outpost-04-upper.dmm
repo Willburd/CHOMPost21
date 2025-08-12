@@ -4799,7 +4799,7 @@
 	name = "Overlook"
 	},
 /obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/tramstation/waste)
 "bMu" = (
 /obj/structure/disposalpipe/segment,
@@ -108468,7 +108468,7 @@ pEi
 pEi
 hIk
 hIk
-ipH
+pEi
 hIk
 hIk
 hIk
@@ -108624,7 +108624,7 @@ pEi
 pEi
 pEi
 wjo
-ipH
+pEi
 idv
 pEi
 pEi
@@ -109721,7 +109721,7 @@ bMv
 bMv
 bMv
 bMv
-ipH
+pEi
 pEi
 pEi
 pEi

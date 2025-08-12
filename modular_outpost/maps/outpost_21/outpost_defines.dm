@@ -117,6 +117,7 @@
 										/area/muriki/station/trawler_dock,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/sec/garage_entrance,
 										// The roof areas don't need scrubbers and vents
 										/area/muriki/rooftop,
 										/area/muriki/rooftop/disposal,
@@ -203,6 +204,7 @@
 										/area/muriki/station/trawler_dock,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/sec/garage_entrance,
 										// The elevators don't need apcs
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
