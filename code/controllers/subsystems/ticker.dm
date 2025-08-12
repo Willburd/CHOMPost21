@@ -213,7 +213,12 @@ SUBSYSTEM_DEF(ticker)
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart))
 
 	to_chat(world, span_notice(span_bold("Welcome to [station_name()], enjoy your stay!")))
-	world << sound('sound/AI/welcome.ogg') // Skie
+	// Outpost 21 edit - Restore yawn intro
+	if(prob(95))
+		world << sound('sound/AI/welcome.ogg') // Skie
+	else
+		world << sound('sound/AI/yawn/welcome_secret.ogg')
+	// Outpost 21 edit end
 	//SEND_SOUND(world, sound(SSstation.announcer.get_rand_welcome_sound()))
 
 	current_state = GAME_STATE_PLAYING
@@ -245,7 +250,7 @@ SUBSYSTEM_DEF(ticker)
 	// TODO END
 	for(var/obj/effect/landmark/start/S in GLOB.landmarks_list)
 		//Deleting Startpoints but we need the ai point to AI-ize people later
-		if (S.name != "AI")
+		if (S.name != "AI" && S.name != "Stowaway") // Outpost 21 edit - don't clear stowaway points either
 			qdel(S)
 
 	if(CONFIG_GET(flag/sql_enabled))
@@ -386,6 +391,7 @@ SUBSYSTEM_DEF(ticker)
 				UpdateFactionList(player)
 				//equip_custom_items(player)	//VOREStation Removal
 				//player.apply_traits() //VOREStation Removal
+		/* Outpost 21 edit - Remove backups
 		//VOREStation Addition Start
 		if(player.client)
 			if(player.client.prefs.auto_backup_implant)
@@ -394,6 +400,7 @@ SUBSYSTEM_DEF(ticker)
 				if(imp.handle_implant(player,player.zone_sel.selecting))
 					imp.post_implant(player)
 		//VOREStation Addition End
+		*/
 		CHECK_TICK
 	if(captainless)
 		for(var/mob/M in GLOB.player_list)

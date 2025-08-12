@@ -13,7 +13,9 @@ SUBSYSTEM_DEF(haunting)
 	wait = 0.8 SECONDS
 	VAR_PRIVATE/haunt_score = 0
 	VAR_PRIVATE/world_mode = MODE_CALM
-	init_order = INIT_ORDER_HAUNTING
+	dependencies = list(
+		/datum/controller/subsystem/mobs
+	)
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
 
 	VAR_PRIVATE/list/current_influences = list()

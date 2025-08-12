@@ -279,15 +279,16 @@
 	yes_code = 0
 	safety = 1
 	world << sound('sound/machines/Alarm.ogg') // force sound!
-	if(ticker && SSticker.mode)
+	if(SSticker && SSticker.mode)
 		SSticker.mode.explosion_in_progress = 1
 	sleep(100)
 
-	if(ticker)
+	if(SSticker)
 		if(SSticker.mode && SSticker.mode.name == "Mercenary")
 			SSticker.mode:syndies_didnt_escape = TRUE
 			SSticker.mode:nuke_off_station = FALSE
-		SSticker.station_explosion_cinematic(FALSE,null)
+
+		play_cinematic(/datum/cinematic/nuke/self_destruct)
 		if(SSticker.mode)
 			SSticker.mode.explosion_in_progress = 0
 			to_world("<B>The station was destroyed by the nuclear blast!</B>")
