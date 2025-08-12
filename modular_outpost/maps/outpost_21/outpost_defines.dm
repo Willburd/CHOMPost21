@@ -371,48 +371,6 @@
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
 
 
-
-//Unit test stuff.
-
-/datum/unit_test/zas_area_test/supply_centcomm
-	name = "ZAS: Supply Shuttle (CentCom)"
-	area_path = /area/supply/dock
-
-/datum/unit_test/zas_area_test/emergency_shuttle
-	name = "ZAS: Emergency Elevator"
-	area_path = /area/shuttle/escape/centcom
-
-/datum/unit_test/zas_area_test/ai_chamber
-	name = "ZAS: AI Chamber"
-	area_path = /area/ai
-
-/*
-/datum/unit_test/zas_area_test/cargo_maint
-	name = "ZAS: Cargo Maintenance"
-	area_path = /area/maintenance/cargo
-*/
-
-/datum/unit_test/zas_area_test/virology
-	name = "ZAS: Virology"
-	area_path = /area/medical/virology
-
-/datum/unit_test/zas_area_test/xenobio
-	name = "ZAS: Xenobiology"
-	area_path = /area/rnd/xenobiology
-
-/*
-/datum/unit_test/zas_area_test/mining_area
-	name = "ZAS: Mining Area (Vacuum)"
-	area_path = /area/mine/explored
-	expectation = UT_VACUUM
-*/
-
-/datum/unit_test/zas_area_test/cargo_bay
-	name = "ZAS: Cargo Bay"
-	area_path = /area/quartermaster/storage
-
-
-
 /obj/effect/landmark/map_data/muriki
     height = 4
 
