@@ -108,7 +108,7 @@
 /datum/unit_test/chemical_reactions_shall_not_conflict/Run()
 	var/failed = FALSE
 
-	#ifdef UNIT_TEST
+	#ifdef UNIT_TESTS
 	var/list/all_reactions = decls_repository.get_decls_of_subtype(/decl/chemical_reaction)
 	for(var/rtype in all_reactions)
 		var/decl/chemical_reaction/CR = all_reactions[rtype]
@@ -144,7 +144,7 @@
 		RegisterSignal(fake_beaker.reagents, COMSIG_UNITTEST_DATA, PROC_REF(get_signal_data))
 
 		// Check if we failed the test with inhibitors in use, if so we absolutely couldn't make it...
-		// Uncomment the UNIT_TEST section in code\modules\reagents\reactions\_reactions.dm if you require more info
+		// Uncomment the UNIT_TESTS section in code\modules\reagents\reactions\_reactions.dm if you require more info
 		TEST_ASSERT(!perform_reaction(CR), "[CR.type]: Reagents - chemical reaction did not produce \"[CR.result]\". CONTAINS: \"[fake_beaker.reagents.get_reagents()]\"")
 		UnregisterSignal(fake_beaker.reagents, COMSIG_UNITTEST_DATA)
 	qdel_null(fake_beaker)

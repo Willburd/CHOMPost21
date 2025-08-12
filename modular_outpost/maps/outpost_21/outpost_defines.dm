@@ -115,6 +115,8 @@
 										/area/muriki/grounds/tramlineeast,
 										/area/muriki/yard,
 										/area/muriki/station/trawler_dock,
+										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/tramborder/garage,
 										// The roof areas don't need scrubbers and vents
 										/area/muriki/rooftop,
 										/area/muriki/rooftop/disposal,
@@ -158,6 +160,7 @@
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB)
+
 	unit_test_exempt_from_apc = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
 										/area/muriki/processor/gland/airmix,
@@ -198,6 +201,8 @@
 										/area/muriki/grounds/tramlineeast,
 										/area/muriki/yard,
 										/area/muriki/station/trawler_dock,
+										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/tramborder/garage,
 										// The elevators don't need apcs
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
