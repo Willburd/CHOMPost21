@@ -144,7 +144,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "trawler_pd"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aap" = (
 /obj/machinery/shipsensors{
@@ -156,7 +156,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -355,7 +355,7 @@
 /obj/machinery/atmospherics/unary/engine{
 	dir = 4
 	},
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaF" = (
 /obj/structure/shuttle/engine/heater{
@@ -367,7 +367,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -590,7 +590,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -1677,7 +1677,7 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "acx" = (
 /obj/machinery/door/airlock/glass_external{
@@ -2607,7 +2607,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "adJ" = (
 /obj/structure/shuttle/engine/heater{
@@ -2619,7 +2619,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "adK" = (
 /obj/machinery/power/terminal,
@@ -2965,18 +2965,18 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aen" = (
 /obj/machinery/shipsensors,
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/railing,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aeo" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/railing,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aep" = (
 /obj/structure/table/standard,
@@ -2995,7 +2995,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "trawler_pd"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aer" = (
 /obj/structure/disposalpipe/segment{
@@ -3012,14 +3012,14 @@
 	dir = 8
 	},
 /obj/structure/railing,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aet" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aeu" = (
 /turf/unsimulated/wall/planetary/muriki,
