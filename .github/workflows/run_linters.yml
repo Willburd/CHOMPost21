@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-            fetch-depth: 0
+          fetch-depth: 0
       # Caches
       - name: Restore SpacemanDMM cache
         uses: actions/cache@v4
@@ -106,7 +106,5 @@ jobs:
         if: steps.linter-setup.conclusion == 'success' && !cancelled()
         run: tools/build/build.sh --ci lint tgui-test
 
-
       - name: Run Nanomap Checks
-        run: chmod -R +x ./tools/github-actions
         run: tools/github-actions/nanomap-renderer-invoker.sh --testing
