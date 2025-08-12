@@ -108,4 +108,5 @@ jobs:
 
 
       - name: Run Nanomap Checks
+        run: chmod -R +x ./tools/github-actions
         run: tools/github-actions/nanomap-renderer-invoker.sh --testing
