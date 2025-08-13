@@ -37,11 +37,11 @@ GLOBAL_LIST_EMPTY(robot_sprite_sheets)
 	name = "robot_icons_crisis"
 	module_type = "Crisis"
 
-/* Modul not in use
+// Outpost 21 edit begin - Modul IS in use - Split surgery and crisis borgs again
 /datum/asset/spritesheet_batched/robot_icons/surgeon
 	name = "robot_icons_surgeon"
 	module_type = "Surgeon"
-*/
+// Outpost 21 edit end
 
 /datum/asset/spritesheet_batched/robot_icons/security
 	name = "robot_icons_security"
