@@ -21,4 +21,4 @@
 	// end supression
 	if(!fire_supress)
 		return
-	qdel_null(fire_supress)
+	QDEL_NULL(fire_supress)
