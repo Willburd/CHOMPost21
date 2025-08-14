@@ -66,7 +66,6 @@
 #define NETWORK_INTERROGATION "Interrogation"
 #define NETWORK_TELECOM "Telecomms"
 #define NETWORK_TCOMMS "Telecommunications"	//YW ADD: needs to be defined here or it freaks out
-#define NETWORK_OUTSIDE "Outside"		//YW ADD: ditto
 #define NETWORK_SUBSTATIONS "Substations"	//YW ADD: and again
 #define NETWORK_EXPLORATION "Exploration"
 #define NETWORK_XENOBIO "Xenobiology"
@@ -78,6 +77,16 @@
 #define NETWORK_ALARM_FIRE "Fire Alarms"
 #define NETWORK_TALON_HELMETS "TalonHelmets" //VOREStation Add
 #define NETWORK_TALON_SHIP "TalonShip" //VOREStation Add
+
+// CHOMPAdd Start
+#define NETWORK_THIRD_DECK "Third Deck"
+#define NETWORK_SECOND_DECK "Second Deck"
+#define NETWORK_FIRST_DECK "First Deck"
+#define NETWORK_SUPPLY "Supply"
+#define NETWORK_MAIN_OUTPOST "Main Outpost"
+#define NETWORK_CARRIER "Exploration Carrier"
+#define NETWORK_MAINT_DECK "Maintenance Deck"
+// CHHOMPAdd End
 
 // Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.
 var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret", NETWORK_COMMUNICATORS, NETWORK_EXPLORATION)

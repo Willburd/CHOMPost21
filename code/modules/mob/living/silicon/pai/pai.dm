@@ -46,7 +46,8 @@
 	var/obj/item/pda/ai/pai/pda = null
 
 	var/paiHUD = 0			// Toggles whether the AR HUD is active or not
-	var/paiDA = 0			// Outpost 21 edit - Pai death alarm
+
+	var/paiDA = 0			// Death alarm
 
 	var/medical_cannotfind = 0
 	var/datum/data/record/medicalActive1		// Datacore record declarations for record software

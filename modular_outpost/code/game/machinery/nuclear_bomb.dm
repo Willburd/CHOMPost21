@@ -279,21 +279,22 @@
 	yes_code = 0
 	safety = 1
 	world << sound('sound/machines/Alarm.ogg') // force sound!
-	if(ticker && ticker.mode)
-		ticker.mode.explosion_in_progress = 1
+	if(SSticker && SSticker.mode)
+		SSticker.mode.explosion_in_progress = 1
 	sleep(100)
 
-	if(ticker)
-		if(ticker.mode && ticker.mode.name == "Mercenary")
-			ticker.mode:syndies_didnt_escape = TRUE
-			ticker.mode:nuke_off_station = FALSE
-		ticker.station_explosion_cinematic(FALSE,null)
-		if(ticker.mode)
-			ticker.mode.explosion_in_progress = 0
+	if(SSticker)
+		if(SSticker.mode && SSticker.mode.name == "Mercenary")
+			SSticker.mode:syndies_didnt_escape = TRUE
+			SSticker.mode:nuke_off_station = FALSE
+
+		play_cinematic(/datum/cinematic/nuke/self_destruct)
+		if(SSticker.mode)
+			SSticker.mode.explosion_in_progress = 0
 			to_world("<B>The station was destroyed by the nuclear blast!</B>")
 
-			ticker.mode.station_was_nuked = FALSE
-			if(!ticker.mode.check_finished())//If the mode does not deal with the nuke going off so just reboot because everyone is stuck as is
+			SSticker.mode.station_was_nuked = FALSE
+			if(!SSticker.mode.check_finished())//If the mode does not deal with the nuke going off so just reboot because everyone is stuck as is
 				to_world("<B>Resetting in 30 seconds!</B>")
 
 				feedback_set_details("end_error","nuke - unhandled ending")

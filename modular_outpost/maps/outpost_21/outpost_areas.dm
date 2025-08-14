@@ -71,6 +71,7 @@
 /area/bridge/hallway
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
+	lightswitch = 1
 
 /area/bridge/meeting_room
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
@@ -123,6 +124,7 @@
 /area/crew_quarters/recreation_area_hallway
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	lightswitch = 1
 
 /area/hallway/secondary/construction
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -258,11 +260,13 @@
 /area/security/prison
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 1
 
 /area/security/brig
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
+	lightswitch = 1
 
 /area/security/security_aid_station
 	name = "\improper Security Medical Station"
@@ -270,6 +274,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 1
 
 /area/constructionsite/medical
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -278,14 +283,17 @@
 /area/medical/medbay
 	name = "\improper Medbay Hallway - Stairwell"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	lightswitch = 1
 
 /area/medical/medbay2
 	name = "\improper Medbay Hallway - Basement"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	lightswitch = 1
 
 /area/medical/medbay3
 	name = "\improper Medbay Hallway - Primary"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	lightswitch = 1
 
 /area/medical/medbay4
 	name = "\improper Medbay Hallway - Vox"
@@ -312,6 +320,7 @@
 
 /area/medical/patient_wing
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	lightswitch = 1
 
 /area/medical/cmostore
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -368,6 +377,7 @@
 /area/medical/medbay4
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	lightswitch = 1
 
 /area/medical/cryo
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -384,11 +394,13 @@
 
 /area/medical/first_aid_station_starboard
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	lightswitch = 1
 
 /area/medical/first_aid_station
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
 	flags = AREA_FIRE_SUPRESSION
+	lightswitch = 1
 
 /area/storage/tools
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -440,6 +452,7 @@
 /area/quartermaster/foyer
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 	base_turf = /turf/simulated/open
+	lightswitch = 1
 
 /area/quartermaster/qm
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
@@ -481,6 +494,7 @@
 /area/security/tactical
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	base_turf = /turf/simulated/open
+	lightswitch = 1
 
 /area/tcommsat
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
@@ -595,6 +609,7 @@
 /area/medical/sleeper
 	flags = 0 //Makes it FILTHY again
 	base_turf = /turf/simulated/open
+	lightswitch = 1
 
 /area/rnd/workshop
 	name = "\improper Circuitry Lab"
@@ -627,6 +642,7 @@
 	base_turf = /turf/simulated/open
 	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
+	lightswitch = 1
 
 /area/security/briefing_room
 	base_turf = /turf/simulated/open
@@ -639,6 +655,7 @@
 	base_turf = /turf/simulated/open
 	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DARK
+	lightswitch = 1
 
 /area/security/range
 	base_turf = /turf/simulated/open
@@ -657,3 +674,9 @@
 	dynamic_lighting = 0
 	requires_power = 0
 	flags = AREA_ALLOW_LARGE_SIZE | AREA_LIMIT_DARK_RESPITE | AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/rnd/xenobiology/hallway
+	lightswitch = 1
+
+/area/medical/reception
+	lightswitch = 1

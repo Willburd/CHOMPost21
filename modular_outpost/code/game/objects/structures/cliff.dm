@@ -242,7 +242,10 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	var/fadedir = NORTH // direction originally placed in
 
 /obj/structure/cliff_end/Initialize(mapload)
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/structure/cliff_end/LateInitialize()
 	icon_state = "cliff-end"
 	fadedir = dir
 	update_icon()

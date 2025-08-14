@@ -2,9 +2,6 @@
 #define GAS_CH4 "methane"
 
 // Misc
-#define REAGENT_FUNGI "fungal protein"
-#define REAGENT_ID_FUNGI "fungi"
-
 #define REAGENT_HEMOCYANIN	"Hemocyanin"
 #define REAGENT_ID_HEMOCYANIN "hemocyanin"
 

@@ -1,7 +1,6 @@
-/datum/unit_test/apc_area_test
-	name = "MAP: Outpost 21 buildcode"
+/datum/unit_test/build_test_outpost
 
-/datum/unit_test/apc_area_test/start_test()
+/datum/unit_test/build_test_outpost/start_test()
 	var/failures = 0
 
 	var/list/exempt_areas = typesof(/area/space,
@@ -302,6 +301,10 @@
 			if((locate(/obj/machinery/light_switch) in A.contents))
 				log_unit_test("[A.type] had a lightswitch, but is a priority work area")
 				failures++
+			else
+				if(!A.lightswitch)
+					log_unit_test("[A.type] is a priority work area, but had default lightswitch state as off. It can never be turned on!")
+					failures++
 
 		else if(!is_hallway)
 			// lightswitches required in rooms
@@ -309,7 +312,16 @@
 				if(!(locate(/obj/machinery/light_switch) in A.contents))
 					log_unit_test("[A.type] lacks an lightswitch")
 					failures++
+			else
+				// Area light must be off
+				if(A.lightswitch)
+					log_unit_test("[A.type] is a room with a lightswitch, but had default lightswitch state as on. Rooms start off on outpost!")
+					failures++
 		else
+			// Area light must be on
+			if(!A.lightswitch)
+				log_unit_test("[A.type] is a hallway, but had default lightswitch state as off. It can never be turned on!")
+				failures++
 			// lightswitches forbidden in hallways
 			if((locate(/obj/machinery/light_switch) in A.contents))
 				log_unit_test("[A.type] had a lightswitch, but is a hallway")
@@ -327,10 +339,7 @@
 					log_unit_test("[A.type] lacks an ai display")
 					failures++
 
-	if(failures)
-		fail("[failures] areas fail outpost 21 buildcode.")
-	else
-		pass("All areas pass outpost 21 buildcode.")
+	TEST_ASSERT(!failures,"areas fail outpost 21 buildcode.")
 
 	return 1
 

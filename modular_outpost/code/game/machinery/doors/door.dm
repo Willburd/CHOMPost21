@@ -7,7 +7,7 @@
 /obj/machinery/door/flesh/Initialize(mapload)
 	// randomize openclose
 	. = ..()
-	#ifndef UNIT_TEST
+	#ifndef UNIT_TESTS
 	addtimer(CALLBACK(src,PROC_REF(handle_living)),next_close_wait())
 	#endif
 

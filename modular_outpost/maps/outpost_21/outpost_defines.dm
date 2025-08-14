@@ -1,24 +1,3 @@
-//Outpost map defs
-#define Z_LEVEL_OUTPOST_DEEPDARK					1
-#define Z_LEVEL_OUTPOST_BASEMENT					2
-#define Z_LEVEL_OUTPOST_SURFACE						3
-#define Z_LEVEL_OUTPOST_UPPER						4
-#define Z_LEVEL_OUTPOST_CENTCOM						5
-#define Z_LEVEL_OUTPOST_MISC 						6
-#define Z_LEVEL_OUTPOST_ASTEROID 					7
-//efine Z_LEVEL_OUTPOST_PROSPECTOR 					8
-//efine Z_LEVEL_OUTPOST_SURVEY	 					9
-#define Z_LEVEL_OUTPOST_VR		 					8
-#define Z_LEVEL_OUTPOST_CONFINEMENTBEAM				9
-#define Z_LEVEL_ROGUEMINE_1							10
-#define Z_LEVEL_ROGUEMINE_2							11
-//Ensure these stay updated with map and z-level changes - Ignus
-
-// Lateload Z level names
-#define LATELOAD_Z_ROGUEMINE_1 "Asteroid Belt 1"
-#define LATELOAD_Z_ROGUEMINE_2 "Asteroid Belt 2"
-
-
 /datum/map/outpost
 	name = "Outpost 21"
 	full_name = "ESHUI Atmospheric Terraforming Outpost 21"
@@ -136,6 +115,9 @@
 										/area/muriki/grounds/tramlineeast,
 										/area/muriki/yard,
 										/area/muriki/station/trawler_dock,
+										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/sec/garage_entrance,
 										// The roof areas don't need scrubbers and vents
 										/area/muriki/rooftop,
 										/area/muriki/rooftop/disposal,
@@ -179,6 +161,7 @@
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB)
+
 	unit_test_exempt_from_apc = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
 										/area/muriki/processor/gland/airmix,
@@ -219,6 +202,9 @@
 										/area/muriki/grounds/tramlineeast,
 										/area/muriki/yard,
 										/area/muriki/station/trawler_dock,
+										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/tramborder/garage,
+										/area/muriki/grounds/sec/garage_entrance,
 										// The elevators don't need apcs
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
@@ -236,10 +222,12 @@
 	planet_datums_to_make = list(/datum/planet/muriki)
 
 	lateload_z_levels = list(
-		list(LATELOAD_Z_ROGUEMINE_1,LATELOAD_Z_ROGUEMINE_2)
+			list(Z_NAME_OUTPOST_MISC),
+			list(Z_NAME_OUTPOST_CENTCOM),
+			list(Z_NAME_OUTPOST_ROGUEMINE_1,Z_NAME_OUTPOST_ROGUEMINE_2)
 		)
 
-	overmap_z = Z_LEVEL_OUTPOST_MISC
+	overmap_z = Z_NAME_ALIAS_MISC
 	map_levels = list(
 			Z_LEVEL_OUTPOST_DEEPDARK,
 			Z_LEVEL_OUTPOST_BASEMENT,
@@ -251,7 +239,7 @@
 
 	ai_shell_restricted = TRUE
 	ai_shell_allowed_levels = list(
-		Z_LEVEL_OUTPOST_CENTCOM,
+		Z_NAME_ALIAS_CENTCOM,
 		Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
@@ -271,14 +259,14 @@
 	rare_ore_levels = list(
 		Z_LEVEL_OUTPOST_ASTEROID,
 		Z_LEVEL_OUTPOST_CONFINEMENTBEAM,
-		Z_LEVEL_ROGUEMINE_1,
-		Z_LEVEL_ROGUEMINE_2
+		Z_NAME_OUTPOST_ROGUEMINE_1,
+		Z_NAME_OUTPOST_ROGUEMINE_2
 	)
 
 	belter_docked_z = 		list(Z_LEVEL_OUTPOST_ASTEROID)
-	belter_transit_z =	 	list(Z_LEVEL_OUTPOST_CENTCOM)
-	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
-									Z_LEVEL_ROGUEMINE_2)
+	belter_transit_z =	 	list(Z_NAME_ALIAS_CENTCOM)
+	belter_belt_z = 		list(Z_NAME_OUTPOST_ROGUEMINE_1,
+									Z_NAME_OUTPOST_ROGUEMINE_2)
 
 	common_ores = list(ORE_MARBLE = 8, ORE_QUARTZ = 10, ORE_COPPER = 2, ORE_TIN = 2, ORE_BAUXITE = 1, ORE_URANIUM = 0, ORE_PLATINUM = 1, ORE_HEMATITE = 1, ORE_RUTILE = 2, ORE_CARBON = 5, ORE_DIAMOND = 0, ORE_GOLD = 3, ORE_SILVER = 2, ORE_PHORON = 0, ORE_LEAD = 5, ORE_VOPAL = 0, ORE_VERDANTIUM = 0, ORE_PAINITE = 0)
 	rare_ores = list(ORE_MARBLE = 5, ORE_QUARTZ = 15, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 5, ORE_URANIUM = 25, ORE_PLATINUM = 25, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 25, ORE_DIAMOND = 8, ORE_GOLD = 25, ORE_SILVER = 10, ORE_PHORON = 25, ORE_LEAD = 15, ORE_VOPAL = 1, ORE_VERDANTIUM = 3, ORE_PAINITE = 1)
@@ -331,11 +319,6 @@
 #define OUTPOST21_HOLOMAP_MARGIN_X (HOLOMAP_ICON_SIZE - (2*OUTPOST21_MAP_SIZEX))
 #define OUTPOST21_HOLOMAP_MARGIN_Y (HOLOMAP_ICON_SIZE - (2*OUTPOST21_MAP_SIZEY))
 
-/datum/map_z_level/outpost/centcom
-	z = Z_LEVEL_OUTPOST_CENTCOM
-	name = "CentCom"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
-	base_turf = /turf/simulated/floor/lava
 
 /datum/map_z_level/outpost/deepdark
 	z = Z_LEVEL_OUTPOST_DEEPDARK
@@ -377,10 +360,11 @@
 	holomap_legend_x = 140
 	holomap_legend_y = 240
 
-/datum/map_z_level/outpost/misc
-	z = Z_LEVEL_OUTPOST_MISC
-	name = "Misc"
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
+/datum/map_z_level/outpost/confinementbeam
+	z = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+	name = "Confinementbeam"
+	transit_chance = 40
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/outpost/asteroid_mine
 	z = Z_LEVEL_OUTPOST_ASTEROID
@@ -392,52 +376,6 @@
 	z = Z_LEVEL_OUTPOST_VR
 	name = "Virtual"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
-
-/datum/map_z_level/outpost/confinementbeam
-	z = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
-	name = "Confinementbeam"
-	transit_chance = 40
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_VORESPAWN
-
-//Unit test stuff.
-
-/datum/unit_test/zas_area_test/supply_centcomm
-	name = "ZAS: Supply Shuttle (CentCom)"
-	area_path = /area/supply/dock
-
-/datum/unit_test/zas_area_test/emergency_shuttle
-	name = "ZAS: Emergency Elevator"
-	area_path = /area/shuttle/escape/centcom
-
-/datum/unit_test/zas_area_test/ai_chamber
-	name = "ZAS: AI Chamber"
-	area_path = /area/ai
-
-/*
-/datum/unit_test/zas_area_test/cargo_maint
-	name = "ZAS: Cargo Maintenance"
-	area_path = /area/maintenance/cargo
-*/
-
-/datum/unit_test/zas_area_test/virology
-	name = "ZAS: Virology"
-	area_path = /area/medical/virology
-
-/datum/unit_test/zas_area_test/xenobio
-	name = "ZAS: Xenobiology"
-	area_path = /area/rnd/xenobiology
-
-/*
-/datum/unit_test/zas_area_test/mining_area
-	name = "ZAS: Mining Area (Vacuum)"
-	area_path = /area/mine/explored
-	expectation = UT_VACUUM
-*/
-
-/datum/unit_test/zas_area_test/cargo_bay
-	name = "ZAS: Cargo Bay"
-	area_path = /area/quartermaster/storage
-
 
 
 /obj/effect/landmark/map_data/muriki
