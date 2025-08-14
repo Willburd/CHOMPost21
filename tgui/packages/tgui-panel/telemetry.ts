@@ -88,7 +88,6 @@ export const telemetryMiddleware = (store) => {
             telemetry.connections.pop();
           }
         }
-        // Save telemetry
         if (firstMutate || telemetryMutated) {
           firstMutate = false;
           store.dispatch(
@@ -101,8 +100,8 @@ export const telemetryMiddleware = (store) => {
             }),
           );
         }
-        // Save telemetry
-        if (telemetryMutated) {
+          // Save telemetry
+          if (telemetryMutated) {
           logger.debug('saving telemetry to storage', telemetry);
           storage.set('telemetry', telemetry);
         }
