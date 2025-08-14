@@ -188,14 +188,14 @@
 	return
 
 /obj/machinery/auto_doc/Destroy()
-	. = ..()
 	doctor.drop_item(src)
-	doctor.Destroy()
+	qdel(doctor)
 	for(var/obj/item/I in contents)
 		if(istype(I,/obj/item/surgical))
-			I.Destroy()
+			qdel(I)
 		else
 			I.forceMove(loc)
+	. = ..()
 
 /obj/machinery/auto_doc/proc/start_operation(mob/user as mob)
 	// get target surgical zone
