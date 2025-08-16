@@ -26,17 +26,15 @@
 	hud_state = "rocket_thermobaric"
 
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A)
-	if(src.loc)
-		explosion(src.loc, 3, 4, 5, 10)
+	if(isturf(loc))
+		explosion(loc, 3, 4, 5, 10)
 	..(A)
 
-// Outpost 21 edit begin - Blitz fuelrods can now hit mobs properly
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_hit(atom/target, blocked = 0, def_zone)
 	var/mob/living/M = target
 	if(istype(M) && (M.maxHealth<=200) || istype(M,/mob/living/simple_mob/animal/statue)) // Outpost 21 edit - Holy purifying fire
 		M.dust()
-	if(src.loc)
-		explosion(src.loc, 3, 4, 5, 10)
+	if(isturf(loc))
+		explosion(loc, 3, 4, 5, 10)
 	visible_message(span_warning("\The [src] impacts energetically with its target and shatters in a violent explosion!"))
 	..(target, blocked, def_zone)
-// Outpost 21 edit end
