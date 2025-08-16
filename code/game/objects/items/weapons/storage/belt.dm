@@ -720,14 +720,13 @@
 		/obj/item/storage/excavation,
 		/obj/item/anobattery,
 		/obj/item/reagent_containers/hypospray/autoinjector,
-		/obj/item/plastique/seismic/locked,
+		/obj/item/plastique/seismic, // Outpost 21 edit - Unlocked seismic charge
 		/obj/item/gun/magnetic/matfed/phoronbore,
 		/obj/item/storage/bag/sheetsnatcher,
 		/obj/item/melee,
 		/obj/item/kinetic_crusher,
 		/obj/item/mining_scanner,
 		/obj/item/storage/bag/ore,
-		/obj/item/plastique/seismic, // Outpost 21 edit - Unlocked seismic charge
 		/obj/item/storage/sample_container
 		)
 		//Pretty much, if it's in the mining vendor, they should be able to put it on the belt.
