@@ -248,7 +248,7 @@ I think I covered everything.
 	emote_hear = list("chuffs", "rawrs", "wehs", "roars", "scoffs", "yawns")
 	emote_see = list("licks their chops", "stretches", "yawns", "snarls")
 	say_maybe_target = list("Hrmph?")
-//	say_got_target = list("FOOL.", "+INSOLENT+.", "YOU'VE MADE A MISTAKE TODAY.") //Outpost edit: Yes dragons are "smart", and can talk in fantasy, but doesn't the speech feel very out of place to anyone else? Let's just leave this to player controlled ones.
+//	say_got_target = list("FOOL.", "+INSOLENT+.", "YOU'VE MADE A MISTAKE TODAY.") //Outpost 21 edit: Yes dragons are "smart", and can talk in fantasy, but doesn't the speech feel very out of place to anyone else? Let's just leave this to player controlled ones.
 	say_got_target = list("ROAR!", "RHAAGH!")
 
 /datum/category_item/catalogue/fauna/bigdragon
@@ -928,7 +928,7 @@ I think I covered everything.
 	if(faction == FACTION_NEUTRAL)
 		return	//We're already friendly
 	if(enraged || notame)
-//		say("NO FORGIVENESS") //Outpost edit, same as above. Let's keep the speech to player-controlled dergs
+//		say("NO FORGIVENESS") //Outpost 21 edit, same as above. Let's keep the speech to player-controlled dergs
 		say("!snarls loudly, betraying its petty grudge.")
 		return //No talk me I angy
 
@@ -988,7 +988,7 @@ I think I covered everything.
 				"[P.name], you need help."
 				)
 */
-/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(var/mob/P) //Another outpost edit to remove speech
+/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(var/mob/P) //Another outpost 21 edit to remove speech
 	return list(
 				"!grumbles warmly at [P.name]!",
 				"!snorts at [P.name] caringly.",
@@ -1100,7 +1100,7 @@ I think I covered everything.
 	enraged = 1
 	norange = 0
 	faction = FACTION_DRAGON
-//	say("HAVE IT YOUR WAY THEN") //Outpost edit.. can't. stop. me noooooooooow~.. what, don't know that song?
+//	say("HAVE IT YOUR WAY THEN") //Outpost 21 edit.. can't. stop. me noooooooooow~.. what, don't know that song?
 	say("!bellows out a warcry and goes for the attack!")
 	qdel(ai_holder)
 	var/datum/ai_holder/simple_mob/intentional/dragon/D = new /datum/ai_holder/simple_mob/intentional/dragon(src)

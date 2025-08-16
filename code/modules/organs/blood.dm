@@ -298,10 +298,6 @@ var/const/CE_STABLE_THRESHOLD = 0.5
 	B.data["blood_type"] = copytext(src.dna.b_type,1,0)
 	B.data["changeling"] = (!isnull(mind) && is_changeling(mind)) || species?.ambulant_blood
 
-	// Outpost 21 edit blood - changling blood effects
-	B.data["changeling"] = (!isnull(mind) && is_changeling(mind)) || species?.ambulant_blood
-	// Outpost 21 edit end
-
 	// Putting this here due to return shenanigans.
 	if(ishuman(src))
 		var/mob/living/carbon/human/H = src

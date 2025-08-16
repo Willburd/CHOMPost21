@@ -64,7 +64,7 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 
 /datum/lore/atc_controller/proc/shift_ending(var/evac = 0)
 	//CHOMPStation Edit Start TFF 28/12/19 - Shuttle transfer, not Tram.
-	//Outpost edit - We use an elevator.
+	//Outpost 21 edit - We use an elevator.
 	msg("Elevator departing [using_map.dock_name] for [using_map.station_name] for scheduled crew transfer.","ES Central Command") // Outpost 21 edit - backwards
 	sleep(5 SECONDS)
 	msg("Elevator ascent to [using_map.station_name] confirmed. Stand by for scheduled crew transfer.") // Outpost 21 edit - backwards
