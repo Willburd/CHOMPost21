@@ -21,7 +21,7 @@
 	var/endx = 0
 	var/startside = pick(GLOB.cardinal)
 	if(prob(50))
-		startside = pick(list(EAST,WEST)) // Outpost 21 edit - our station is wide
+		startside = pick(list(EAST,WEST))
 
 	// Random pos along an edge with a percent buffer to prevent corner spawns
 	var/wid = world.maxx * 0.05
