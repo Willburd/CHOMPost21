@@ -8,7 +8,9 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 	/obj/item/clothing/accessory/storage/bluespace,
 	/obj/item/storage/bag/ore/holding,
 	/obj/item/clothing/gloves/bluespace,
-	/obj/item/clothing/under/hyperfiber/bluespace
+	/obj/item/clothing/under/hyperfiber/bluespace,
+	/obj/item/reagent_containers/food/drinks/bluespace_coffee,
+	/obj/item/reagent_containers/glass/beaker/bluespace,
 	// Outpost 21 edit end
 ))
 
