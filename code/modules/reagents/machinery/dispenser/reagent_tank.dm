@@ -34,7 +34,7 @@
 
 /obj/structure/reagent_dispensers/examine(mob/user)
 	. = ..()
-	if(get_dist(user, src) <= 2)
+	if(get_dist(user, src) <= 2 && !istype(src,/obj/structure/reagent_dispensers/souppot)) // Outpost 21 edit - Hide soup!
 		. += span_notice("It contains:")
 		if(reagents && reagents.reagent_list.len)
 			for(var/datum/reagent/R in reagents.reagent_list)
