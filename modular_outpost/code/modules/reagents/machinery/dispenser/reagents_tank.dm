@@ -171,8 +171,8 @@
 
 
 /obj/structure/reagent_dispensers/medical_waste_tank
-	name = "medical waste tank"
-	desc = "A large tank for safely storing liquid medical waste."
+	name = "biological waste tank"
+	desc = "A large tank for safely storing liquid biological waste like blood, decaying food, virology medium or expired medication."
 	icon_state = "mwaste"
 	icon = 'modular_outpost/icons/obj/chemical_tanks.dmi'
 	// start open for dumping
