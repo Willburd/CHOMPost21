@@ -20,10 +20,10 @@
 	var/endy = 0
 	var/endx = 0
 	var/startside = pick(GLOB.cardinal)
-	/* //If you have a wide map, enable the below.
+	// Outpost 21 edit begin - Clang wide map
 	if(prob(50))
 		startside = pick(list(EAST,WEST))
-	*/
+	// Outpost 21 edit end
 	/* //If you have a tall map, enable the below.
 	if(prob(50))
 		startside = pick(list(NORTH,SOUTH))
