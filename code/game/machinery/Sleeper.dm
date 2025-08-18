@@ -1,11 +1,11 @@
 /obj/machinery/sleep_console
 	name = "sleeper console"
 	desc = "A control panel to operate a linked sleeper with."
-	icon = 'icons/obj/Cryogenic2_vr.dmi' //VOREStation Edit - Better icon.
+	icon = 'icons/obj/Cryogenic2.dmi'
 	icon_state = "sleeperconsole"
 	var/obj/machinery/sleeper/sleeper
 	anchored = TRUE //About time someone fixed this.
-	density = TRUE //VOREStation Edit - Big console
+	density = TRUE
 	unacidable = TRUE
 	dir = 8
 	use_power = USE_POWER_IDLE
@@ -86,7 +86,7 @@
 /obj/machinery/sleeper
 	name = "sleeper"
 	desc = "A stasis pod with built-in injectors, a dialysis machine, and a limited health scanner."
-	icon = 'icons/obj/Cryogenic2_vr.dmi' //VOREStation Edit - Better icons
+	icon = 'icons/obj/Cryogenic2.dmi'
 	icon_state = "sleeper_0"
 	density = TRUE
 	anchored = TRUE
@@ -118,6 +118,7 @@
 	beaker = new /obj/item/reagent_containers/glass/beaker/large(src)
 	default_apply_parts()
 	update_icon()
+	AddComponent(/datum/component/hose_connector/output/medical_sleeper) // Outpost 21 edit - Experimental sleepers with hose outputs
 
 /obj/machinery/sleeper/Destroy()
 	if(console)

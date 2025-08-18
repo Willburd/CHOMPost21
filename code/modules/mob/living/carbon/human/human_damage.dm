@@ -150,11 +150,11 @@
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.incoming_damage_percent))
-				if(M.energy_based)
+				if(M.energy_based && M.energy_source)
 					M.energy_source.use(M.damage_cost*amount)
 				amount *= M.incoming_damage_percent
 			if(!isnull(M.incoming_brute_damage_percent))
-				if(M.energy_based)
+				if(M.energy_based && M.energy_source)
 					M.energy_source.use(M.damage_cost*amount)
 				amount *= M.incoming_brute_damage_percent
 		/* Outpost 21 edit - Nif removal
@@ -174,11 +174,11 @@
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.incoming_damage_percent))
-				if(M.energy_based)
+				if(M.energy_based && M.energy_source)
 					M.energy_source.use(M.damage_cost*amount)
 				amount *= M.incoming_damage_percent
 			if(!isnull(M.incoming_fire_damage_percent))
-				if(M.energy_based)
+				if(M.energy_based && M.energy_source)
 					M.energy_source.use(M.damage_cost*amount)
 				amount *= M.incoming_fire_damage_percent
 		/* Outpost 21 edit - Nif removal
@@ -200,11 +200,11 @@
 		if(amount > 0)
 			for(var/datum/modifier/M in modifiers)
 				if(!isnull(M.incoming_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*amount)
 					amount *= M.incoming_damage_percent
 				if(!isnull(M.incoming_brute_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*amount)
 					amount *= M.incoming_brute_damage_percent
 			/* Outpost 21 edit - Nif removal
@@ -228,11 +228,11 @@
 		if(amount > 0)
 			for(var/datum/modifier/M in modifiers)
 				if(!isnull(M.incoming_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*amount)
 					amount *= M.incoming_damage_percent
 				if(!isnull(M.incoming_fire_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*amount)
 					amount *= M.incoming_fire_damage_percent
 			/* Outpost 21 edit - Nif removal
@@ -556,37 +556,37 @@ This function restores all organs.
 
 	for(var/datum/modifier/M in modifiers) //MODIFIER STUFF. It's best to do this RIGHT before armor is calculated, so it's done here! This is the 'forcefield' defence.
 		if(damagetype == BRUTE && (!isnull(M.effective_brute_resistance)))
-			if(M.energy_based)
+			if(M.energy_based && M.energy_source)
 				M.energy_source.use(M.damage_cost * damage)
 			damage = damage * M.effective_brute_resistance
 			continue
 		if((damagetype == BURN || damagetype == ELECTROCUTE) && (!isnull(M.effective_fire_resistance)))
-			if(M.energy_based)
+			if(M.energy_based && M.energy_source)
 				M.energy_source.use(M.damage_cost * damage)
 			damage = damage * M.effective_fire_resistance
 			continue
 		if(damagetype == TOX && (!isnull(M.effective_tox_resistance)))
-			if(M.energy_based)
+			if(M.energy_based && M.energy_source)
 				M.energy_source.use(M.damage_cost * damage)
 			damage = damage * M.effective_tox_resistance
 			continue
 		if(damagetype == OXY && (!isnull(M.effective_oxy_resistance)))
-			if(M.energy_based)
+			if(M.energy_based && M.energy_source)
 				M.energy_source.use(M.damage_cost * damage)
 			damage = damage * M.effective_oxy_resistance
 			continue
 		if(damagetype == CLONE && (!isnull(M.effective_clone_resistance)))
-			if(M.energy_based)
+			if(M.energy_based && M.energy_source)
 				M.energy_source.use(M.damage_cost * damage)
 			damage = damage * M.effective_clone_resistance
 			continue
 		if(damagetype == HALLOSS && (!isnull(M.effective_hal_resistance)))
-			if(M.energy_based)
+			if(M.energy_based && M.energy_source)
 				M.energy_source.use(M.damage_cost * damage)
 			damage = damage * M.effective_hal_resistance
 			continue
 		if(damagetype == SEARING && (!isnull(M.effective_fire_resistance) || !isnull(M.effective_brute_resistance)))
-			if(M.energy_based)
+			if(M.energy_based && M.energy_source)
 				M.energy_source.use(M.damage_cost * damage)
 			var/damage_mitigation = 0//Used for dual calculations.
 			if(!isnull(M.effective_fire_resistance))
@@ -641,11 +641,11 @@ This function restores all organs.
 
 			for(var/datum/modifier/M in modifiers)
 				if(!isnull(M.incoming_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*damage)
 					damage *= M.incoming_damage_percent
 				if(!isnull(M.incoming_brute_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*damage)
 					damage *= M.incoming_brute_damage_percent
 
@@ -660,11 +660,11 @@ This function restores all organs.
 
 			for(var/datum/modifier/M in modifiers)
 				if(!isnull(M.incoming_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*damage)
 					damage *= M.incoming_damage_percent
 				if(!isnull(M.incoming_brute_damage_percent))
-					if(M.energy_based)
+					if(M.energy_based && M.energy_source)
 						M.energy_source.use(M.damage_cost*damage)
 					damage *= M.incoming_fire_damage_percent
 

@@ -270,7 +270,7 @@
 	reagents.add_reagent(REAGENT_ID_VODKA, 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/tequila
-	name = "Caccavo Guaranteed Quality Tequilla"
+	name = "Caccavo Guaranteed Quality Tequila"
 	desc = "Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!"
 	icon_state = "tequilabottle"
 	center_of_mass_x = 16

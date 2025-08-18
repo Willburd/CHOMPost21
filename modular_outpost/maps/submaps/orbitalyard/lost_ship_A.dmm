@@ -93,12 +93,7 @@
 /turf/simulated/floor/tiled/kafel_full/green,
 /area/submap/outpost21/structure_generic/lostshipa)
 "db" = (
-/obj/item/backup_implanter,
-/obj/item/backup_implanter,
 /obj/structure/table/reinforced,
-/obj/item/backup_implanter,
-/obj/item/backup_implanter,
-/obj/item/backup_implanter,
 /obj/item/sleevemate,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/submap/outpost21/structure_generic/lostshipa)

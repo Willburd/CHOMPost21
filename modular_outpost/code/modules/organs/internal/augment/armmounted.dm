@@ -6,7 +6,7 @@
 	var/obj/machinery/power/apc/apc = null
 
 	forgiving_class = FALSE
-	target_parent_classes = list(ORGAN_ROBOT)
+	target_parent_classes = list(ORGAN_ROBOT,ORGAN_LIFELIKE,ORGAN_NANOFORM)
 
 /obj/item/organ/internal/augment/armmounted/apc_connector/Destroy()
 	end_charge()
@@ -37,13 +37,14 @@
 		to_chat(H,span_notice("You must be near an APC to connect to."))
 		return
 
+	playsound(H, 'sound/machines/buzzbeep.ogg', 30, 1, 0)
+	H.visible_message(span_warning("A cable extends from [H] and connects to \the [apc]."),span_notice("A cable extends from you and connect to \the [apc]."))
 	if(!H.synthetic) // No.
 		electrocute_mob(H, get_area(apc), apc, 1)
 		H.Stun(10)
 		apc = null
 		return
 
-	H.visible_message(span_warning("A cable extends from [H] and connects to \the [apc]."),span_notice("A cable extends from you and connect to \the [apc]."))
 	START_PROCESSING(SSobj, src)
 
 /obj/item/organ/internal/augment/armmounted/apc_connector/proc/end_charge()
@@ -66,4 +67,5 @@
 
 	to_chat(H,span_warning("APC charger disconnected."))
 	H.visible_message(span_warning("[H]'s cable whips back into their body from \the [apc]."),span_notice("The APC connector cable returns to your body."))
+	playsound(owner, 'sound/machines/click2.ogg', 30, 1, 0)
 	end_charge()

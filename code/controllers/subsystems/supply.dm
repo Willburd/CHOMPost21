@@ -75,7 +75,7 @@ SUBSYSTEM_DEF(supply)
 	for(var/area/subarea in shuttle.shuttle_area)
 		callHook("sell_shuttle", list(subarea));
 		for(var/atom/movable/MA in subarea)
-			if(MA.anchored)
+			if(MA.anchored && !istype(MA,/obj/mecha)) // Outpost 21 edit - Selling mechs
 				continue
 
 			var/datum/exported_crate/EC = new /datum/exported_crate()

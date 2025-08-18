@@ -144,7 +144,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "trawler_pd"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aap" = (
 /obj/machinery/shipsensors{
@@ -156,7 +156,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -355,7 +355,7 @@
 /obj/machinery/atmospherics/unary/engine{
 	dir = 4
 	},
-/turf/simulated/shuttle/plating/airless/carry,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaF" = (
 /obj/structure/shuttle/engine/heater{
@@ -367,7 +367,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -590,7 +590,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aaV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -1677,7 +1677,7 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "acx" = (
 /obj/machinery/door/airlock/glass_external{
@@ -2607,7 +2607,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "adJ" = (
 /obj/structure/shuttle/engine/heater{
@@ -2619,7 +2619,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "adK" = (
 /obj/machinery/power/terminal,
@@ -2965,18 +2965,18 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aen" = (
 /obj/machinery/shipsensors,
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/railing,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aeo" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/railing,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aep" = (
 /obj/structure/table/standard,
@@ -2995,7 +2995,7 @@
 /obj/machinery/pointdefense{
 	id_tag = "trawler_pd"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aer" = (
 /obj/structure/disposalpipe/segment{
@@ -3012,14 +3012,14 @@
 	dir = 8
 	},
 /obj/structure/railing,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aet" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aeu" = (
 /turf/unsimulated/wall/planetary/muriki,
@@ -8484,13 +8484,13 @@
 	dir = 8
 	},
 /obj/structure/railing,
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west)
 "aox" = (
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west)
 "aoy" = (
 /turf/simulated/wall/r_wall,
@@ -8522,7 +8522,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
 "aoD" = (
 /turf/simulated/wall/r_wall,
@@ -8534,6 +8534,14 @@
 /area/rnd/lab)
 "aoF" = (
 /obj/structure/reagent_dispensers/coolanttank,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
+"aoG" = (
+/obj/machinery/door/airlock/angled_tgmc,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"aoH" = (
+/obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "aoS" = (
@@ -8957,7 +8965,7 @@
 "axi" = (
 /obj/machinery/alembic,
 /obj/structure/table/alien,
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "axk" = (
 /obj/effect/floor_decal/borderfloor{
@@ -9321,7 +9329,7 @@
 /turf/simulated/floor/plating,
 /area/rnd/otherlab)
 "aBU" = (
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "aCm" = (
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
@@ -9945,7 +9953,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "aNB" = (
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "aNG" = (
 /obj/structure/cable/green{
@@ -12357,7 +12365,7 @@
 "byA" = (
 /obj/structure/table/darkglass,
 /obj/item/clothing/accessory/medal/solgov/gold/crest/eshui,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "byK" = (
 /obj/effect/floor_decal/industrial/danger{
@@ -13011,6 +13019,7 @@
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
 "bKU" = (
@@ -16503,7 +16512,7 @@
 	dir = 8
 	},
 /obj/structure/railing,
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_east)
 "cOV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -24642,7 +24651,7 @@
 /area/engineering/storage)
 "fCv" = (
 /obj/structure/prop/machine/tgmc_console3,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "fCB" = (
 /obj/structure/railing{
@@ -27384,7 +27393,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 4
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
 "gwY" = (
 /obj/structure/railing{
@@ -28380,7 +28389,7 @@
 /area/security/tactical)
 "gNY" = (
 /obj/structure/prop/transmitter,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "gOI" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -30526,7 +30535,7 @@
 "htF" = (
 /obj/structure/prop/machine/random_radio,
 /obj/structure/table/darkglass,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "htU" = (
 /obj/structure/table/rack,
@@ -34701,7 +34710,7 @@
 /obj/item/potion_base/alkahest{
 	pixel_x = 6
 	},
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "iDn" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -35578,7 +35587,7 @@
 /obj/item/potion_base/ichor{
 	pixel_x = 7
 	},
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "iQj" = (
 /obj/structure/bed/chair/backed_red{
@@ -35950,6 +35959,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/structure/reagent_dispensers/souppot,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "iXt" = (
@@ -37426,7 +37436,7 @@
 /area/crew_quarters/kitchen)
 "jtw" = (
 /obj/structure/prop/machine/nt_cruciforge,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "jtD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -38276,7 +38286,7 @@
 /area/muriki/arriveelev)
 "jFU" = (
 /obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "jGs" = (
 /obj/structure/cable/green{
@@ -39383,7 +39393,7 @@
 /area/mine/explored/muriki/valley)
 "jXc" = (
 /obj/structure/boulder,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "jXs" = (
 /obj/structure/cable/yellow{
@@ -40859,7 +40869,7 @@
 /area/medical/sleeper)
 "krH" = (
 /obj/machinery/door/airlock/angled_tgmc,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "krN" = (
 /turf/simulated/wall,
@@ -41928,7 +41938,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "kKk" = (
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "kKp" = (
 /obj/structure/cable/green{
@@ -42142,7 +42152,7 @@
 /area/rnd/lab)
 "kNw" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "kNy" = (
 /turf/simulated/wall/r_wall,
@@ -46010,9 +46020,6 @@
 /obj/structure/window/reinforced/tinted,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/medical/virologyaccess)
-"lYz" = (
-/turf/simulated/open,
-/area/mine/explored/muriki/river/hole)
 "lZf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -46536,7 +46543,7 @@
 	dir = 8
 	},
 /obj/structure/railing,
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north)
 "mep" = (
 /obj/machinery/conveyor{
@@ -50453,7 +50460,7 @@
 /area/storage/tech)
 "nrO" = (
 /obj/item/strangerock,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "nrT" = (
 /obj/machinery/door/firedoor/glass/hidden{
@@ -50593,7 +50600,7 @@
 	dir = 1
 	},
 /obj/structure/loot_pile/surface/alien/medical,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "nua" = (
 /obj/structure/sign/directions/security/brig{
@@ -51070,7 +51077,6 @@
 /area/rnd/otherlab)
 "nzn" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/r_wall,
@@ -51494,7 +51500,7 @@
 /area/muriki/bathroom/securitypub)
 "nFw" = (
 /obj/structure/prop/machine/nt_biocan,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "nFG" = (
 /obj/structure/sink{
@@ -52276,7 +52282,7 @@
 /area/engineering/eva)
 "nVJ" = (
 /obj/structure/closet/crate/mimic/cointoss,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "nVN" = (
 /obj/structure/cable/green{
@@ -52853,7 +52859,7 @@
 "oeH" = (
 /obj/structure/table/alien,
 /obj/item/potion_base/ichor,
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "oeJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -54899,7 +54905,7 @@
 	dir = 1
 	},
 /obj/item/toy/plushie/bigcat,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "oMP" = (
 /obj/effect/floor_decal/corner/blue{
@@ -55555,7 +55561,7 @@
 /area/muriki/bathroom/medical)
 "oXd" = (
 /obj/machinery/replicator/vore,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "oXh" = (
 /obj/machinery/camera/network/outside{
@@ -56294,7 +56300,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/arrivejani)
 "pnf" = (
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "pni" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -56370,7 +56376,6 @@
 /area/quartermaster/qm)
 "poB" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/durasteel,
@@ -57273,7 +57278,7 @@
 /area/security/brig/drunk)
 "pEA" = (
 /obj/item/bananapeel,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "pEF" = (
 /obj/structure/closet/crate,
@@ -57824,7 +57829,7 @@
 /area/muriki/grounds/waste)
 "pNV" = (
 /obj/structure/simple_door/sifwood,
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "pNX" = (
 /obj/machinery/door/airlock/glass_command{
@@ -64699,7 +64704,7 @@
 /area/mine/explored/muriki/valley)
 "rVD" = (
 /obj/machinery/recharge_station,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "rVQ" = (
 /turf/simulated/wall,
@@ -65462,7 +65467,7 @@
 /area/muriki/bathroom/security)
 "sgc" = (
 /obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sgi" = (
 /obj/effect/floor_decal/borderfloor/corner,
@@ -66588,7 +66593,7 @@
 /area/bridge/meeting_room)
 "sAR" = (
 /obj/machinery/door/airlock/angled_tgmc/maintenance,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sBf" = (
 /obj/structure/disposalpipe/segment{
@@ -66771,7 +66776,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "x"
 	},
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sEN" = (
 /obj/machinery/light{
@@ -67484,7 +67489,7 @@
 /area/security/mechent)
 "sOB" = (
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sOH" = (
 /obj/machinery/camera/network/command{
@@ -68165,7 +68170,7 @@
 /area/mine/unexplored/muriki/mountainnorth)
 "sXQ" = (
 /obj/structure/plushie/drone,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sXT" = (
 /obj/machinery/power/breakerbox/activated{
@@ -71198,9 +71203,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/kennels)
 "tUK" = (
-/turf/simulated/wall/solidrock{
-	desc = "A solid, intimidating rock wall. Incredibly thick."
-	},
+/turf/simulated/wall/solidrock/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "tUT" = (
 /obj/structure/fence/cut/large{
@@ -71810,7 +71813,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
 "ued" = (
 /obj/effect/floor_decal/corner/white/full{
@@ -73585,7 +73588,7 @@
 /area/bridge/hallway)
 "uFs" = (
 /obj/structure/prop/machine/tgmc_console1/starts_on,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "uFE" = (
 /obj/structure/cable/green{
@@ -78050,7 +78053,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north)
 "vWt" = (
 /obj/machinery/elevator_warning{
@@ -78954,7 +78957,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
 "wgY" = (
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "whh" = (
 /obj/structure/grille,
@@ -79250,7 +79253,7 @@
 /area/rnd/hallway/main)
 "wlz" = (
 /obj/structure/ladder_assembly,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "wlD" = (
 /obj/machinery/metal_detector,
@@ -80567,7 +80570,7 @@
 /area/medical/medbay3)
 "wHY" = (
 /obj/structure/outcrop,
-/turf/simulated/mineral/floor/cave,
+/turf/simulated/mineral/floor/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "wId" = (
 /obj/structure/grille,
@@ -80598,7 +80601,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "wIk" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
@@ -80850,7 +80853,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_east)
 "wNc" = (
 /turf/simulated/wall/r_wall,
@@ -81204,7 +81207,7 @@
 "wSa" = (
 /obj/effect/mine/frag,
 /obj/item/strangerock,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "wSq" = (
 /obj/item/radio/intercom{
@@ -83056,7 +83059,7 @@
 /area/shuttle/trawler)
 "xvZ" = (
 /obj/structure/prop/poicanister,
-/turf/simulated/floor/tiled/milspec/raised,
+/turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "xwa" = (
 /obj/structure/cable/green{
@@ -83675,7 +83678,7 @@
 /area/maintenance/disposal)
 "xFl" = (
 /obj/structure/prop/alien/pod,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "xGf" = (
 /obj/structure/cable/green{
@@ -84705,7 +84708,7 @@
 /area/engineering/drone_fabrication)
 "xWt" = (
 /obj/structure/prop/machine/bsb_off,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "xWC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -85038,7 +85041,7 @@
 /obj/item/potion_base/aqua_regia{
 	pixel_x = 10
 	},
-/turf/simulated/floor/tiled/yellow,
+/turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "ycH" = (
 /obj/effect/floor_decal/spline/plain{
@@ -90529,7 +90532,7 @@ cEi
 frJ
 usG
 usG
-tkV
+tmI
 tmI
 tmI
 tmI
@@ -124405,7 +124408,7 @@ kNy
 mDI
 aoz
 ozu
-aoF
+aoH
 wKG
 wKG
 wKG
@@ -147761,8 +147764,8 @@ rJa
 rJa
 rJa
 cCp
-lYz
-lYz
+jnX
+jnX
 cCp
 rJa
 rJa
@@ -147921,11 +147924,11 @@ rJa
 rJa
 rJa
 cCp
-lYz
-lYz
-lYz
-lYz
-lYz
+jnX
+jnX
+jnX
+jnX
+jnX
 rJa
 rJa
 rJa
@@ -148082,12 +148085,12 @@ rJa
 rJa
 rJa
 rJa
-lYz
-lYz
-lYz
-lYz
-lYz
-lYz
+jnX
+jnX
+jnX
+jnX
+jnX
+jnX
 rJa
 rJa
 rJa
@@ -148244,11 +148247,11 @@ rJa
 rJa
 rJa
 rJa
-lYz
-lYz
-lYz
-lYz
-lYz
+jnX
+jnX
+jnX
+jnX
+jnX
 rJa
 rJa
 rJa
@@ -148276,7 +148279,7 @@ fya
 aBU
 sOB
 aBU
-krH
+aoG
 aNB
 wSa
 xHO
@@ -148407,10 +148410,10 @@ rJa
 rJa
 rJa
 cCp
-lYz
-lYz
-lYz
-lYz
+jnX
+jnX
+jnX
+jnX
 rJa
 rJa
 rJa
@@ -148570,8 +148573,8 @@ rJa
 rJa
 rJa
 cCp
-lYz
-lYz
+jnX
+jnX
 cCp
 rJa
 rJa

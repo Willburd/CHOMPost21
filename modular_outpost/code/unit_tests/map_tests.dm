@@ -1,7 +1,6 @@
-/datum/unit_test/apc_area_test
-	name = "MAP: Outpost 21 buildcode"
+/datum/unit_test/build_test_outpost
 
-/datum/unit_test/apc_area_test/start_test()
+/datum/unit_test/build_test_outpost/start_test()
 	var/failures = 0
 
 	var/list/exempt_areas = typesof(/area/space,
@@ -340,10 +339,7 @@
 					log_unit_test("[A.type] lacks an ai display")
 					failures++
 
-	if(failures)
-		fail("[failures] areas fail outpost 21 buildcode.")
-	else
-		pass("All areas pass outpost 21 buildcode.")
+	TEST_ASSERT(!failures,"areas fail outpost 21 buildcode.")
 
 	return 1
 

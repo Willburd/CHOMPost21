@@ -26,9 +26,7 @@
 	var/mimeamt = 0 //How many silence left when infected with mime.exe
 	var/detonate = 1 // Can the PDA be blown up?
 	var/ttone = "beep" //The ringtone!
-	/* Outpost 21 edit begin - use the global list in code\modules\client\preference_setup\preference_setup_op.dm
-	var/list/ttone_sound = list()
-	*/ // Outpost 21 edit end
+
 	var/hidden = 0 // Is the PDA hidden from the PDA list?
 	var/touch_silent = 0 //If 1, no beeps on interacting.
 
@@ -85,8 +83,8 @@
 /obj/item/pda/proc/play_ringtone()
 	var/S
 
-	if(ttone in GLOB.device_ringtones) // Outpost 21 edit - use global ringtone list
-		S = GLOB.device_ringtones[ttone] // Outpost 21 edit - use global ringtone list
+	if(ttone in GLOB.device_ringtones)
+		S = GLOB.device_ringtones[ttone]
 	else
 		S = 'sound/machines/twobeep.ogg'
 	playsound(loc, S, 50, 1)

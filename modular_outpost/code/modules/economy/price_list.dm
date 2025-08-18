@@ -114,7 +114,7 @@
 /datum/reagent/ethanol/rum
 	price_tag = 5
 
-/datum/reagent/ethanol/tequilla
+/datum/reagent/ethanol/tequila
 	price_tag = 5
 
 /datum/reagent/ethanol/thirteenloko
@@ -303,7 +303,7 @@
 /datum/reagent/ethanol/syndicatebomb
 	price_tag = 4
 
-/datum/reagent/ethanol/tequilla_sunrise
+/datum/reagent/ethanol/tequila_sunrise
 	price_tag = 4
 
 /datum/reagent/ethanol/threemileisland

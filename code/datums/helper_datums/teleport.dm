@@ -1,15 +1,18 @@
-var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
-/obj/item/storage/bag/trash/holding,
-/obj/item/storage/pouch/holding,
-/obj/item/storage/belt/utility/holding,
-/obj/item/storage/belt/medical/holding,
-// Outpost 21 edit begin - missing bluespace item
-/obj/item/clothing/accessory/storage/bluespace,
-/obj/item/storage/bag/ore/holding,
-/obj/item/clothing/gloves/bluespace,
-/obj/item/clothing/under/hyperfiber/bluespace
-// Outpost 21 edit end
-)
+GLOBAL_LIST_INIT(bluespace_item_types, list(
+	/obj/item/storage/backpack/holding,
+	/obj/item/storage/bag/trash/holding,
+	/obj/item/storage/pouch/holding,
+	/obj/item/storage/belt/utility/holding,
+	/obj/item/storage/belt/medical/holding,
+	// Outpost 21 edit begin - missing bluespace item
+	/obj/item/clothing/accessory/storage/bluespace,
+	/obj/item/storage/bag/ore/holding,
+	/obj/item/clothing/gloves/bluespace,
+	/obj/item/clothing/under/hyperfiber/bluespace,
+	/obj/item/reagent_containers/food/drinks/bluespace_coffee,
+	/obj/item/reagent_containers/glass/beaker/bluespace,
+	// Outpost 21 edit end
+))
 
 //wrapper
 /proc/do_teleport(ateleatom, adestination, aprecision=0, afteleport=1, aeffectin=null, aeffectout=null, asoundin=null, asoundout=null, local=TRUE, bohsafe=FALSE)
@@ -173,7 +176,7 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 
 	var/list/bluespace_things = newlist()
 
-	for (var/item in bluespace_item_types)
+	for (var/item in GLOB.bluespace_item_types)
 		if (istype(teleatom, item))
 			precision = rand(1, 100)
 		bluespace_things |= teleatom.search_contents_for(item)
@@ -182,7 +185,7 @@ var/bluespace_item_types = newlist(/obj/item/storage/backpack/holding,
 		var/mob/living/L = teleatom
 		if(LAZYLEN(L.buckled_mobs))
 			for(var/mob/rider in L.buckled_mobs)
-				for (var/item in bluespace_item_types)
+				for (var/item in GLOB.bluespace_item_types)
 					bluespace_things |= rider.search_contents_for(item)
 
 	if(bluespace_things.len)

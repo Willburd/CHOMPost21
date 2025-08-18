@@ -29,7 +29,7 @@
 		OT.update()
 
 /obj/effect/map_effect/interval/burnpit/trigger()
-	#ifndef UNIT_TEST
+	#ifndef UNIT_TESTS
 	var/turf/simulated/T = loc
 	if(T)
 		if(T.fire_protection > world.time-30)

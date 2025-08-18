@@ -104,6 +104,7 @@
 		list(Z_NAME_GATEWAY_MADNESS_LAB_CH),
 		list(Z_NAME_GATEWAY_ABANDONED_CITY_CH),
 		list(Z_NAME_GATEWAY_SKYSCRAPER_CH),
+		list(Z_NAME_GATEWAY_HIDDEN_ECLIPSE_CH)
 		)
 
 /datum/map/southern_cross/perform_map_generation()
@@ -111,17 +112,17 @@
 
 	// Cave submaps are first.
 	var/surface_mine_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_MINES]
-	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountains/normal)  //CHOMPEdit bumped up from 60 to 80
-	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountains/deep)  //CHOMPEdit bumped up from 60 to 80
+	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/normal, /datum/map_template/surface/mountain_ch/normal)  //CHOMPEdit bumped up from 60 to 80
+	seed_submaps(list(surface_mine_z), 140, /area/surface/cave/unexplored/deep, /datum/map_template/surface/mountain_ch/deep)  //CHOMPEdit bumped up from 60 to 80
 
 	// Plains to make them less plain.
 	var/surface_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE]
-	seed_submaps(list(surface_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains) // Center area is WIP until map editing settles down.  //CHOMPEdit bumped up from 80 to 140
+	seed_submaps(list(surface_z), 220, /area/surface/outside/plains/normal, /datum/map_template/surface/plains_ch) // Center area is WIP until map editing settles down.  //CHOMPEdit bumped up from 80 to 140
 
 	// Wilderness is next.
 	var/surface_wild_z = GLOB.map_templates_loaded[Z_NAME_ALIAS_SURFACE_WILDS]
-	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness/normal)  //CHOMPEdit bumped up from 60 to 150
-	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness/deep)  //CHOMPEdit bumped up from 60 to 150
+	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/normal, /datum/map_template/surface/wilderness_ch/normal)  //CHOMPEdit bumped up from 60 to 150
+	seed_submaps(list(surface_wild_z), 240, /area/surface/outside/wilderness/deep, /datum/map_template/surface/wilderness_ch/deep)  //CHOMPEdit bumped up from 60 to 150
 	// If Space submaps are made, add a line to make them here as well.
 
 	// Now for the tunnels. (This decides the load order of ore generation and cave generation. Check Random_Map to see % )
@@ -175,13 +176,14 @@
 	z = Z_LEVEL_SC_STATION_MAINTS
 	name = "Maintenance Deck"
 	transit_chance = 15
+	base_turf = /turf/space
 	holomap_offset_x = HOLOMAP_ICON_SIZE - SOUTHERN_CROSS_HOLOMAP_MARGIN_X - SOUTHERN_CROSS_MAP_SIZE - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y //+ SOUTHERN_CROSS_MAP_SIZE*0
 
 /datum/map_z_level/southern_cross/station/station_one
 	z = Z_LEVEL_SC_STATION_ONE
 	name = "Deck 1"
-	base_turf = /turf/space
+	base_turf = /turf/simulated/open
 	transit_chance = 15
 	holomap_offset_x = SOUTHERN_CROSS_HOLOMAP_MARGIN_X - 40
 	holomap_offset_y = SOUTHERN_CROSS_HOLOMAP_MARGIN_Y //+ SOUTHERN_CROSS_MAP_SIZE*0

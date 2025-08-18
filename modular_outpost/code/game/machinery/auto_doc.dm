@@ -60,6 +60,7 @@
 	// setup the good doctor
 	doctor = new(src)
 	doctor.owner_machine = src
+	doctor.AddElement(/datum/element/godmode)
 
 /obj/machinery/auto_doc/proc/create_operations()
 	operations = list()
@@ -130,8 +131,6 @@
 	return linked_table.victim
 
 /obj/machinery/auto_doc/process()
-	if(!(doctor.status_flags & GODMODE))
-		handle_doctor() // force reset doctor
 	if(!use_power || (stat & (NOPOWER|BROKEN)))
 		// fall limp
 		if(operation_active)
@@ -188,14 +187,14 @@
 	return
 
 /obj/machinery/auto_doc/Destroy()
-	. = ..()
 	doctor.drop_item(src)
-	doctor.Destroy()
+	qdel(doctor)
 	for(var/obj/item/I in contents)
 		if(istype(I,/obj/item/surgical))
-			I.Destroy()
+			qdel(I)
 		else
 			I.forceMove(loc)
+	. = ..()
 
 /obj/machinery/auto_doc/proc/start_operation(mob/user as mob)
 	// get target surgical zone
@@ -390,7 +389,6 @@
 	doctor.a_intent = I_HELP
 	doctor.germ_level = 0 // forced clean
 	doctor.species.has_fine_manipulation = TRUE // advanced monkey
-	doctor.status_flags = GODMODE // no other flags
 
 /obj/machinery/auto_doc/update_icon()
 	if(!use_power || (stat & (NOPOWER|BROKEN)))

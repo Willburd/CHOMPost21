@@ -1,0 +1,7883 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ag" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"al" = (
+/obj/structure/table/reinforced,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/wood,
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/rods,
+/obj/fiftyspawner/plastic,
+/obj/fiftyspawner/plastic,
+/obj/item/stack/material/plasteel{
+	amount = 30
+	},
+/obj/structure/closet/walllocker_double/engineering/east{
+	name = "material sheets"
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"aq" = (
+/obj/structure/flora/pottedplant/minitree,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"au" = (
+/obj/item/packageWrap,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"az" = (
+/turf/simulated/floor/airless,
+/area/template_noop)
+"aH" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"aN" = (
+/obj/item/material/shard,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"aO" = (
+/obj/structure/table/standard,
+/obj/item/stack/nanopaste,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"aQ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/double{
+	name = "maintenance access";
+	stripe_color = "#454545"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"aR" = (
+/turf/simulated/floor/tiled/steel_grid/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"aU" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"aV" = (
+/obj/structure/filingcabinet,
+/obj/machinery/light,
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bj" = (
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bs" = (
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bu" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bx" = (
+/obj/structure/closet/emergsuit_wall{
+	dir = 8;
+	pixel_x = -27
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bE" = (
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bH" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bN" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bO" = (
+/obj/structure/closet/secure_closet/quartermaster,
+/obj/item/storage/backpack/dufflebag,
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bR" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"bY" = (
+/obj/machinery/computer/security/engineering{
+	dir = 1
+	},
+/obj/machinery/light/floortube{
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ch" = (
+/obj/machinery/pointdefense{
+	id_tag = "sd_pd"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"ci" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin,
+/obj/item/pen/red,
+/obj/item/pen{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cj" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -27
+	},
+/obj/item/bodybag/cryobag{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/structure/table/reinforced,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cn" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cp" = (
+/obj/structure/table/reinforced,
+/obj/item/gps/engineering{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/gps/engineering{
+	pixel_y = 3
+	},
+/obj/item/gps/engineering{
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cD" = (
+/obj/structure/table/glass,
+/obj/structure/sign/department/operational{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cE" = (
+/obj/machinery/suit_cycler/engineering,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cG" = (
+/obj/random/vendorfood,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cH" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cI" = (
+/obj/structure/table/standard,
+/obj/item/hand_labeler,
+/obj/item/folder/yellow,
+/obj/item/stamp{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cL" = (
+/obj/structure/table/glass,
+/obj/machinery/door/window/southright{
+	dir = 1;
+	req_access = list(5)
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cR" = (
+/obj/item/roller,
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/roller{
+	pixel_y = 16
+	},
+/obj/structure/table/glass,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cU" = (
+/obj/structure/sign/department/cargo{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cV" = (
+/obj/item/stack/rods,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cW" = (
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"cZ" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"df" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dg" = (
+/obj/machinery/alarm/angled,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dh" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/hatch{
+	dir = 4;
+	door_color = "#e6ab22";
+	locked = 1;
+	name = "maintenance access";
+	req_one_access = list(19);
+	stripe_color = "#e6ab22"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dz" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
+/turf/simulated/wall/bay/r_wall/steel,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dB" = (
+/obj/machinery/chem_master,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dI" = (
+/obj/structure/table/reinforced,
+/obj/machinery/photocopier/faxmachine{
+	department = "Engineering"
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dL" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dR" = (
+/obj/structure/table/reinforced,
+/obj/item/roller,
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/roller{
+	pixel_y = 16
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dY" = (
+/obj/machinery/status_display/supply_display{
+	pixel_x = -32
+	},
+/obj/item/folder/yellow,
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"dZ" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ep" = (
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"eu" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ev" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/obj/machinery/door/airlock/angled_bay/hatch{
+	dir = 4;
+	door_color = "#ffffff";
+	name = "Gas Storage";
+	req_one_access = list(5);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ez" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 27
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"eA" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"eB" = (
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"eJ" = (
+/obj/item/stack/rods,
+/turf/space,
+/area/template_noop)
+"eL" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"eN" = (
+/obj/structure/flora/pottedplant/minitree,
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"eX" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	dir = 4;
+	door_color = "#e6ab22";
+	name = "Engineering Hard Storage";
+	req_access = list(11);
+	stripe_color = "#913013"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fa" = (
+/obj/machinery/vending/wardrobe/medidrobe,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fc" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fd" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 27
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 24;
+	pixel_y = 32
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fl" = (
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fx" = (
+/obj/effect/floor_decal/milspec/color/white/corner,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fy" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fF" = (
+/obj/structure/table/rack,
+/obj/structure/bed/chair/wheelchair{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fM" = (
+/obj/structure/lattice,
+/obj/item/stack/rods,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fN" = (
+/obj/structure/table/reinforced,
+/obj/random/powercell,
+/obj/random/tech_supply,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fR" = (
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fU" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner"
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"fX" = (
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"gc" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ge" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light/floortube{
+	dir = 1;
+	pixel_y = -10
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"gj" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/door/window/northright{
+	dir = 2;
+	name = "Cargo Ordering";
+	req_access = list(50)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/monotile/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"gp" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"gz" = (
+/obj/machinery/rnd/production/protolathe/department/medical,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"gQ" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/reinforced/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"gZ" = (
+/obj/structure/table/glass,
+/obj/structure/sign/department/operational{
+	pixel_x = 32
+	},
+/obj/random/medical,
+/obj/random/medical,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hf" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/surgery,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hm" = (
+/turf/simulated/floor/reinforced/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hp" = (
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hq" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/machinery/bodyscanner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ht" = (
+/obj/item/storage/firstaid/fire{
+	pixel_x = 6;
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hy" = (
+/obj/machinery/computer/rcon{
+	dir = 1
+	},
+/obj/machinery/light/floortube{
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hB" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hI" = (
+/obj/item/gun/energy/mouseray/medical,
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hU" = (
+/obj/machinery/status_display/supply_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"hY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/wall/bay/r_wall/steel,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ii" = (
+/obj/machinery/requests_console/preset/engineering{
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"il" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ip" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/hatch{
+	dir = 4;
+	door_color = "#e6ab22";
+	name = "Engineering Substation";
+	req_one_access = list(10);
+	stripe_color = "#e6ab22"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ir" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/brown,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"is" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"it" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"iv" = (
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"iO" = (
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"iP" = (
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"je" = (
+/obj/structure/flora/pottedplant/tall,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jk" = (
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jm" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/obj/machinery/status_display/supply_display{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jo" = (
+/obj/item/stack/material/wood,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jq" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jr" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ju" = (
+/obj/structure/closet/walllocker_double/emergency_engi/south,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jw" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/machinery/door/blast/angled/open{
+	id = "psychshutter";
+	name = "Privacy Shutter"
+	},
+/obj/structure/low_wall/bay/reinforced/white,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jx" = (
+/obj/item/cartridge/quartermaster,
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jz" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jK" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/space,
+/area/template_noop)
+"jP" = (
+/obj/machinery/requests_console/preset/cargo{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jQ" = (
+/obj/structure/table/reinforced,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jY" = (
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"jZ" = (
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/pointdefense{
+	id_tag = "sd_pd"
+	},
+/turf/simulated/floor/airless,
+/area/template_noop)
+"ka" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kg" = (
+/obj/structure/sign/department/chem{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kt" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kw" = (
+/obj/structure/sign/department/cargo{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kx" = (
+/obj/machinery/vending/medical,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kz" = (
+/obj/machinery/power/tracker,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"kJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kS" = (
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kT" = (
+/obj/structure/table/glass,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"kV" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/obj/item/stack/material/phoron,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lg" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ls" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lv" = (
+/obj/structure/table/standard,
+/obj/item/mail_scanner,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ly" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/full,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lA" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/machinery/sleeper{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lD" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lH" = (
+/obj/structure/table/glass,
+/obj/item/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/box/masks,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lT" = (
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/clothing/mask/muzzle,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lV" = (
+/obj/machinery/recharger,
+/obj/item/storage/box/syringegun,
+/obj/item/gun/launcher/syringe,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"lZ" = (
+/obj/machinery/vending/medical,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mf" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ml" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/hatch{
+	door_color = "#e6ab22";
+	name = "Engineering Substation";
+	req_one_access = list(10);
+	stripe_color = "#e6ab22"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"my" = (
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/table/glass,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mA" = (
+/turf/simulated/wall/bay/steel,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mD" = (
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mG" = (
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mK" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	door_color = "#e6ab22";
+	name = "Engineering Workshop";
+	req_one_access = list(11,24);
+	stripe_color = "#913013"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mM" = (
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mN" = (
+/obj/item/tool/screwdriver,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mQ" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mR" = (
+/obj/machinery/firealarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mW" = (
+/turf/simulated/wall/bay/white,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"mZ" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nc" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nd" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nq" = (
+/obj/structure/table/glass,
+/obj/item/flashlight/lamp/green{
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ns" = (
+/obj/structure/noticeboard{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nz" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/dispenser{
+	phorontanks = 0
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nI" = (
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	dir = 8;
+	id = "MedbayFoyer W";
+	name = "Medbay Doors Control";
+	pixel_x = 25
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nL" = (
+/obj/structure/sign/directions/medical{
+	dir = 1;
+	pixel_x = -32;
+	pixel_y = 35
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_x = -32;
+	pixel_y = 41
+	},
+/obj/structure/sign/directions/engineering{
+	pixel_x = -32;
+	pixel_y = 23
+	},
+/obj/structure/sign/directions/cargo{
+	dir = 10;
+	pixel_x = -32;
+	pixel_y = 29
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nR" = (
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"nX" = (
+/obj/structure/bed/chair,
+/obj/machinery/firealarm/angled,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"of" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oh" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oj" = (
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/obj/item/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ok" = (
+/obj/structure/frame,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"op" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"or" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ox" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oy" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/radio/intercom/department/medbay{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oD" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	dir = 4;
+	name = "glass airlock"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oE" = (
+/obj/machinery/atmospherics/unary/engine/bigger{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oH" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/structure/flora/pottedplant/minitree,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oJ" = (
+/obj/structure/table/reinforced,
+/obj/item/radio/off{
+	pixel_y = 6
+	},
+/obj/item/radio/off{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/radio/off{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/radio/off,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"oY" = (
+/obj/machinery/computer/guestpass{
+	dir = 8;
+	pixel_x = 25
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"pd" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"pf" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"pr" = (
+/obj/structure/table/glass,
+/obj/item/paper_bin{
+	pixel_y = 5
+	},
+/obj/item/pen,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"pw" = (
+/obj/item/stack/cable_coil/yellow,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"pB" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"pI" = (
+/obj/machinery/power/solar,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"pK" = (
+/obj/item/storage/firstaid/adv{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"pT" = (
+/obj/structure/table/glass,
+/obj/machinery/recharger,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"pU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qb" = (
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qj" = (
+/obj/structure/closet/crate{
+	name = "Grenade Crate"
+	},
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/tool/screwdriver,
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qo" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 12
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qx" = (
+/obj/structure/lattice,
+/mob/living/simple_mob/animal/space/carp,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qy" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qE" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qM" = (
+/obj/structure/table/reinforced,
+/obj/random/maintenance/clean,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qS" = (
+/obj/structure/lattice,
+/obj/item/stack/material/wood,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"qX" = (
+/obj/structure/sign/department/miner_dock{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/monotile/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"rn" = (
+/obj/effect/floor_decal/milspec/cargo,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"rv" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"rw" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"rM" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"rX" = (
+/obj/structure/table/reinforced,
+/obj/item/tool/crowbar,
+/obj/item/clothing/gloves/black,
+/obj/item/storage/box/lights/mixed,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"se" = (
+/obj/machinery/oxygen_pump/anesthetic,
+/turf/simulated/wall/bay/white,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sf" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sp" = (
+/obj/item/material/shard,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sr" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/color{
+	door_color = "#a6753d";
+	fill_color = "#75736f";
+	name = "Quartermaster";
+	req_access = list(41);
+	stripe_color = "#3b2b1a"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ss" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/full,
+/obj/machinery/firealarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"st" = (
+/obj/structure/table/standard,
+/obj/item/cartridge/quartermaster{
+	pixel_x = -4;
+	pixel_y = 7
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sw" = (
+/obj/structure/sign/directions/evac{
+	dir = 10;
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/milspec/color/orange/corner,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sx" = (
+/obj/item/stack/rods,
+/mob/living/simple_mob/animal/space/carp,
+/turf/space,
+/area/template_noop)
+"sy" = (
+/obj/machinery/door/blast/angled,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sE" = (
+/obj/structure/table/reinforced,
+/obj/machinery/firealarm/angled,
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sK" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sN" = (
+/obj/structure/closet/secure_closet/engineering_electrical/double{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sO" = (
+/obj/machinery/firealarm/angled,
+/obj/item/defib_kit/loaded,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sP" = (
+/obj/item/t_scanner,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sS" = (
+/obj/structure/closet/secure_closet/cargotech,
+/obj/item/stamp/cargo,
+/obj/item/storage/backpack/dufflebag,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"sU" = (
+/obj/machinery/atm{
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"td" = (
+/obj/structure/table/rack,
+/obj/item/roller,
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"te" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/space,
+/area/template_noop)
+"tg" = (
+/obj/structure/table/rack,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance,
+/obj/random/contraband,
+/obj/item/material/shard,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"th" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"tj" = (
+/obj/effect/floor_decal/milspec/color/orange/half,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"tE" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/closet/crate/freezer,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"tG" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"tQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
+/obj/machinery/hologram/holopad,
+/mob/living/simple_mob/animal/space/carp/large/huge,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"tR" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ui" = (
+/turf/simulated/wall/bay/brown,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ul" = (
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ur" = (
+/obj/machinery/vending/wardrobe/engidrobe,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"uC" = (
+/obj/structure/table/reinforced,
+/obj/machinery/alarm/angled,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"uF" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"uL" = (
+/obj/structure/filingcabinet/chestdrawer{
+	name = "Scan Records"
+	},
+/obj/machinery/firealarm/angled,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"uU" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/machinery/door/window/westright{
+	name = "Engineering Reception Desk";
+	req_access = list(10)
+	},
+/obj/item/pen/blue{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/pen/red,
+/turf/simulated/floor/tiled/eris/dark/gray_platform,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"uV" = (
+/obj/machinery/firealarm/angled,
+/obj/item/storage/toolbox/mechanical{
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"uX" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/sign/directions/engineering/atmospherics{
+	dir = 8;
+	pixel_x = -32;
+	pixel_y = -12
+	},
+/obj/structure/sign/directions/cargo{
+	dir = 10;
+	pixel_x = -32
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_x = -32;
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/medical{
+	dir = 1;
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"uY" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vg" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/surgery,
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vi" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vn" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/dropper,
+/obj/machinery/injector_maker{
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vo" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/item/defib_kit/loaded,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vr" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	pixel_x = 32
+	},
+/obj/structure/sign/directions/stairs_up{
+	dir = 1;
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vu" = (
+/obj/random/trash_pile,
+/obj/item/material/shard,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vw" = (
+/obj/structure/lattice,
+/obj/item/material/shard,
+/turf/space,
+/area/template_noop)
+"vx" = (
+/turf/simulated/wall/bay/orange,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vH" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vI" = (
+/obj/structure/table/reinforced,
+/obj/item/floor_painter,
+/obj/item/t_scanner,
+/obj/item/multitool{
+	pixel_x = 5
+	},
+/obj/item/reagent_containers/spray/cleaner,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vN" = (
+/obj/structure/flora/pottedplant/minitree,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vO" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	door_color = "#ffffff";
+	name = "Chemistry";
+	req_access = list(33);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vR" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate/medical,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vS" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"vU" = (
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wa" = (
+/obj/item/sleevemate,
+/obj/structure/table/reinforced,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ww" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wA" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/color{
+	dir = 8;
+	door_color = "#ffffff";
+	name = "Operating Theatre 2";
+	req_access = list(45);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wI" = (
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/clothing/accessory/stethoscope,
+/obj/item/storage/box/syringes{
+	pixel_y = 9
+	},
+/obj/item/storage/box/syringes{
+	pixel_y = 9
+	},
+/obj/random/medical,
+/obj/item/storage/box/beakers{
+	pixel_x = 14;
+	pixel_y = 10
+	},
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wM" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wW" = (
+/obj/structure/table/reinforced,
+/obj/random/toolbox,
+/obj/item/geiger,
+/obj/machinery/alarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wX" = (
+/obj/machinery/recharge_station,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wY" = (
+/obj/item/storage/firstaid/o2{
+	pixel_x = 6;
+	pixel_y = 10
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/obj/item/radio{
+	pixel_x = 4;
+	pixel_y = -4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"wZ" = (
+/mob/living/simple_mob/animal/space/carp,
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 24;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xf" = (
+/obj/structure/sign/redcross,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xi" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/machinery/body_scanconsole{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xk" = (
+/obj/structure/closet/emergsuit_wall{
+	pixel_y = 29
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/steel_grid/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xo" = (
+/obj/structure/table/standard,
+/obj/item/defib_kit/loaded,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the Space from Space Cleaner and written in Surgery. 'Do not remove under punishment of death!!!' is scrawled on the back.";
+	name = "Surgery Cleaner";
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/radio/intercom/department/medbay{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xv" = (
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xF" = (
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xG" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xJ" = (
+/obj/item/cell/device,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xQ" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/westleft{
+	name = "Engineering Reception Desk";
+	req_access = list(10)
+	},
+/obj/item/folder/yellow,
+/turf/simulated/floor/tiled/eris/dark/gray_platform,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xT" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"xX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yb" = (
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yd" = (
+/obj/structure/table/reinforced,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/item/cell/high,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yn" = (
+/obj/machinery/alarm/angled,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yo" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/color{
+	dir = 8;
+	door_color = "#ffffff";
+	name = "Mental Health";
+	req_access = list(64);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yC" = (
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yG" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/machinery/newscaster{
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yH" = (
+/obj/machinery/firealarm/angled,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yI" = (
+/obj/structure/closet/walllocker_double/medical/north,
+/obj/item/storage/box/body_record_disk,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yJ" = (
+/obj/item/storage/firstaid/toxin{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yL" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"yU" = (
+/obj/structure/table/rack,
+/obj/random/contraband,
+/obj/random/maintenance/cargo,
+/obj/random/maintenance/engineering,
+/obj/random/maintenance/engineering,
+/obj/structure/sign/vacuum{
+	pixel_x = 32
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"yV" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zh" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/machinery/door/blast/angled/open{
+	dir = 2;
+	id = "qmwindows";
+	name = "Privacy Shutters"
+	},
+/obj/structure/low_wall/bay/reinforced/brown,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zy" = (
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zC" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/machinery/door/window/northleft{
+	name = "Engineering Hardsuits";
+	req_access = list(11)
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/engineering,
+/obj/item/clothing/suit/space/void/engineering,
+/obj/item/clothing/head/helmet/space/void/engineering,
+/obj/item/clothing/head/helmet/space/void/engineering,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zH" = (
+/obj/structure/closet/emergsuit_wall{
+	dir = 8;
+	pixel_x = -27
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zQ" = (
+/obj/machinery/light,
+/obj/structure/table/reinforced,
+/obj/item/packageWrap,
+/obj/item/hand_labeler,
+/obj/item/tape_roll,
+/obj/item/clipboard,
+/obj/machinery/recharger{
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zR" = (
+/obj/item/megaphone,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zU" = (
+/obj/item/storage/firstaid/adv{
+	name = "human repair kit";
+	pixel_x = -9;
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"zY" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/item/packageWrap,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ad" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/machinery/door/window/northleft{
+	name = "Atmospherics Hardsuits";
+	req_access = list(24)
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/clothing/head/helmet/space/void/atmos,
+/obj/item/clothing/head/helmet/space/void/atmos,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Am" = (
+/obj/structure/sign/directions/science{
+	pixel_x = -32
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/security{
+	pixel_x = -32;
+	pixel_y = 12
+	},
+/obj/structure/sign/directions/stairs_down{
+	pixel_x = -32;
+	pixel_y = 18
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/sign/directions/shuttle_bay{
+	pixel_x = -32;
+	pixel_y = -6
+	},
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Aq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ar" = (
+/obj/machinery/door/firedoor/glass/hidden/steel,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/obj/structure/sign/directions/stairs_down{
+	dir = 1;
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/stairs_up{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Bd" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Bf" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 6
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -24;
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Bg" = (
+/obj/machinery/firealarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Bi" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Bl" = (
+/obj/structure/sign/deck2{
+	pixel_y = 32
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Bo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/medical/north,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/random/medical/lite,
+/obj/random/medical/lite,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Bw" = (
+/obj/structure/closet/walllocker_double/medical/north,
+/obj/item/storage/box/rxglasses{
+	pixel_x = 7;
+	pixel_y = 7
+	},
+/obj/item/storage/box/rxglasses,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"BC" = (
+/obj/machinery/vending/blood,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"BJ" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"BN" = (
+/obj/structure/sign/directions/bar{
+	dir = 1;
+	pixel_x = -32;
+	pixel_y = 15
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"BP" = (
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"BQ" = (
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'RADIOACTIVE AREA'";
+	icon_state = "radiation";
+	name = "\improper RADIOACTIVE AREA"
+	},
+/turf/simulated/wall/bay/r_wall/orange,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"BX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ca" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Cy" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	door_color = "#a6753d";
+	name = "Cargo Office";
+	req_access = list(31);
+	stripe_color = "#3b2b1a"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Cz" = (
+/obj/machinery/firealarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"CH" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 5
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"CI" = (
+/obj/structure/sign/nosmoking_1{
+	pixel_y = -32
+	},
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"CJ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/hatch{
+	door_color = "#ffffff";
+	name = "Gas Storage";
+	req_one_access = list(5,24);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"CM" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"CW" = (
+/obj/machinery/door/airlock/angled_bay/external/glass{
+	dir = 4;
+	frequency = 1379;
+	id_tag = "d2_starmaint_interior";
+	locked = 1;
+	name = "Exterior Airlock"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"CZ" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"De" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/wall/bay/r_wall/steel,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Df" = (
+/obj/machinery/chemical_dispenser/full,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Dm" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Du" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	door_color = "#ffffff";
+	name = "Medbay Storage";
+	req_access = list(5);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Dx" = (
+/obj/machinery/disposal/wall{
+	dir = 8
+	},
+/obj/item/reagent_containers/spray/cleaner,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"DC" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/color{
+	dir = 8;
+	door_color = "#ffffff";
+	name = "Operating Theatre 1";
+	req_access = list(45);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"DJ" = (
+/obj/item/storage/bag/mail,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"DV" = (
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"DW" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ec" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ee" = (
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Eh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 6
+	},
+/turf/simulated/wall/bay/r_wall/steel,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Et" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/item/circuitboard/tesla_coil,
+/obj/item/circuitboard/tesla_coil,
+/obj/structure/closet/walllocker_double/engineering/north,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ex" = (
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ED" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/orange,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"EV" = (
+/obj/machinery/status_display/supply_display{
+	pixel_x = 32
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Fb" = (
+/obj/structure/sign/painting/library_secure{
+	pixel_x = 30
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Fg" = (
+/obj/machinery/door/firedoor/glass/hidden/steel,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Fn" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/vending/wardrobe/cargodrobe,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Fp" = (
+/obj/structure/table/reinforced,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Fz" = (
+/obj/structure/table/reinforced,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"FB" = (
+/obj/structure/lattice,
+/obj/item/stack/rods,
+/turf/space,
+/area/template_noop)
+"FC" = (
+/turf/simulated/floor/plating,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"FD" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/emergency_engi/east,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"FK" = (
+/obj/machinery/atmospherics/unary/cryo_cell,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"FY" = (
+/obj/structure/closet/emergsuit_wall{
+	dir = 8;
+	pixel_x = -27
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Gj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Gl" = (
+/turf/simulated/wall/bay/r_wall/white,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Gm" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Gv" = (
+/turf/space,
+/area/template_noop)
+"GC" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"GD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"GJ" = (
+/obj/structure/table/standard,
+/obj/machinery/cell_charger,
+/obj/item/module/power_control,
+/obj/item/cell{
+	maxcharge = 2000
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"GL" = (
+/obj/structure/table/reinforced,
+/obj/machinery/alarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"GM" = (
+/obj/structure/lattice,
+/obj/item/material/shard,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"GR" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"GT" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/item/storage/bag/mail,
+/obj/item/packageWrap,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"GY" = (
+/obj/item/stack/material/phoron,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Hl" = (
+/obj/machinery/vitals_monitor,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ho" = (
+/obj/effect/floor_decal/milspec/color/white/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Hp" = (
+/obj/item/material/shard,
+/turf/space,
+/area/template_noop)
+"Hq" = (
+/obj/machinery/computer/transhuman/designer{
+	dir = 8
+	},
+/obj/structure/sign/painting/library_secure{
+	pixel_y = 30
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Hr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Hu" = (
+/obj/machinery/hologram/holopad,
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Hz" = (
+/obj/structure/table/reinforced,
+/obj/item/radio{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/radio{
+	pixel_x = 7;
+	pixel_y = 8
+	},
+/obj/machinery/light_switch{
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"HD" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/smartfridge/chemistry,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"HN" = (
+/obj/item/denecrotizer/medical,
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"HY" = (
+/obj/structure/table/standard,
+/obj/item/healthanalyzer,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"HZ" = (
+/obj/structure/sign/deck2{
+	pixel_x = 32
+	},
+/obj/structure/sign/directions/medical/morgue{
+	pixel_x = -32
+	},
+/obj/structure/sign/directions/medical/resleeving{
+	pixel_x = -32;
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/medical/virology{
+	pixel_x = -32;
+	pixel_y = -12
+	},
+/obj/structure/sign/directions/stairs_down{
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ip" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	dir = 4;
+	door_color = "#ffffff";
+	name = "Medbay Foyer";
+	req_access = list(5);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"It" = (
+/obj/effect/floor_decal/steeldecal/steel_decals6,
+/obj/effect/floor_decal/steeldecal/steel_decals6{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Iv" = (
+/obj/machinery/vending/medical,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ix" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Iy" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"IA" = (
+/obj/machinery/vending/engivend,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"IK" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"IM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"IN" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"IR" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jb" = (
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "Jetpack Storage";
+	req_one_access = list(11,24)
+	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/tank/jetpack/carbondioxide,
+/obj/item/tank/jetpack/carbondioxide,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jc" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jd" = (
+/obj/machinery/firealarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Je" = (
+/obj/item/storage/firstaid/o2{
+	pixel_x = 6;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jf" = (
+/obj/item/stack/material/wood,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jn" = (
+/obj/machinery/hologram/holopad,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jr" = (
+/obj/machinery/station_map{
+	pixel_y = 32
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jw" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Jx" = (
+/obj/structure/sign/deck2{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"JB" = (
+/obj/structure/table/glass,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"JH" = (
+/obj/effect/floor_decal/milspec/color/orange/corner,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"JP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"JQ" = (
+/obj/machinery/vending/wardrobe/chemdrobe,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"JR" = (
+/obj/structure/table/glass,
+/obj/machinery/recharger,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"JW" = (
+/obj/structure/sign/department/eng{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ke" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/hatch/engineering{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Kp" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Kr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ku" = (
+/turf/template_noop,
+/area/template_noop)
+"Kx" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/steel,
+/turf/simulated/floor/airless,
+/area/template_noop)
+"Ky" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Kz" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/biochemistry/full,
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"KC" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"KJ" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"KK" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/white,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"KM" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"KV" = (
+/obj/structure/bed/chair,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"KX" = (
+/obj/random/vendordrink,
+/obj/machinery/firealarm/angled,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Lc" = (
+/obj/structure/table/standard,
+/obj/item/pen/red{
+	pixel_x = 2;
+	pixel_y = 6
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "qmwindows";
+	name = "Privacy Shutters";
+	pixel_y = 15
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Lh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Li" = (
+/obj/structure/closet/hydrant{
+	dir = 4;
+	pixel_x = 27
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"LH" = (
+/turf/simulated/wall/bay/r_wall/steel,
+/area/template_noop)
+"LN" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central5{
+	dir = 1;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"LP" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"LQ" = (
+/obj/structure/sign/directions/science{
+	pixel_x = 32
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/security{
+	pixel_x = 32;
+	pixel_y = 12
+	},
+/obj/structure/sign/directions/stairs_down{
+	pixel_x = 32;
+	pixel_y = 18
+	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/sign/directions/shuttle_bay{
+	pixel_x = 32;
+	pixel_y = -6
+	},
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"LT" = (
+/obj/machinery/computer/guestpass{
+	pixel_y = 24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Md" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Mp" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	door_color = "#e6ab22";
+	name = "Engineering Monitoring Room";
+	req_one_access = list(11,24);
+	stripe_color = "#913013"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Mq" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/structure/sign/directions/stairs_up{
+	pixel_x = 32
+	},
+/obj/structure/sign/directions/stairs_down{
+	dir = 1;
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Mt" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/crate/freezer,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Mu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MB" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/storage/belt/utility,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MC" = (
+/obj/machinery/firealarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MD" = (
+/obj/structure/lattice,
+/mob/living/simple_mob/animal/space/carp,
+/turf/space,
+/area/template_noop)
+"MG" = (
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MQ" = (
+/obj/item/reagent_containers/dropper,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MS" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/dropper,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MY" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"MZ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	door_color = "#e6ab22";
+	name = "Engineering EVA Storage";
+	req_one_access = list(11,24);
+	stripe_color = "#913013"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Nf" = (
+/obj/item/radio/headset/headset_med,
+/obj/item/storage/box/syringes,
+/obj/item/storage/fancy/vials,
+/obj/item/storage/fancy/vials,
+/obj/item/storage/box/pillbottles,
+/obj/structure/closet/wardrobe/chemistry_white,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Nh" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Nq" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ny" = (
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"NA" = (
+/obj/item/storage/box/lights/mixed,
+/obj/item/tape_roll,
+/obj/item/storage/belt/utility,
+/obj/item/multitool,
+/obj/fiftyspawner/steel,
+/obj/structure/closet/walllocker_double/cargo/east,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"NC" = (
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/machinery/sleep_console{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"NE" = (
+/obj/structure/closet/secure_closet/medical1,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Oc" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central5{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Oe" = (
+/obj/machinery/door/airlock/angled_bay/external/glass{
+	dir = 4;
+	frequency = 1379;
+	id_tag = "d2_starmaint_exterior";
+	locked = 1;
+	name = "Exterior Airlock"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Of" = (
+/obj/structure/table/standard,
+/obj/machinery/alarm/angled,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Oq" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Or" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/spray/cleaner{
+	desc = "Someone has crossed out the 'Space' from Space Cleaner and written in Chemistry. Scrawled on the back is, 'Okay, whoever filled this with polytrinic acid, it was only funny the first time. It was hard enough replacing the CMO's first cat!'";
+	name = "Chemistry Cleaner"
+	},
+/obj/item/hand_labeler,
+/obj/item/packageWrap,
+/obj/item/mass_spectrometer/adv,
+/obj/item/mass_spectrometer/adv,
+/obj/item/clothing/glasses/science,
+/obj/item/clothing/glasses/science,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ot" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"OA" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"OD" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	dir = 4;
+	door_color = "#e6ab22";
+	name = "Engineering Glass";
+	req_access = list(10);
+	stripe_color = "#913013"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"OP" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"OR" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Pc" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Pj" = (
+/obj/structure/table/glass,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/alarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Pq" = (
+/obj/structure/closet/secure_closet/medical3,
+/obj/item/soap/nanotrasen,
+/obj/item/storage/belt/medical,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Pu" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Pw" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/window/eastright{
+	dir = 8;
+	name = "Chemistry"
+	},
+/obj/machinery/door/window/westleft{
+	dir = 4;
+	name = "Chemistry";
+	req_one_access = list(33)
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Px" = (
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PC" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PJ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/hatch{
+	door_color = "#e6ab22";
+	name = "maintenance access";
+	req_access = list(11,24);
+	stripe_color = "#e6ab22"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PM" = (
+/obj/structure/closet/secure_closet/cargotech,
+/obj/item/stamp/cargo,
+/obj/item/storage/backpack/dufflebag,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PO" = (
+/obj/structure/sign/deck2{
+	pixel_y = 32
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 24
+	},
+/obj/structure/flora/pottedplant/decorative,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PP" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PS" = (
+/obj/structure/table/glass,
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
+	pixel_x = -4
+	},
+/obj/item/reagent_containers/glass/beaker/cryoxadone{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PV" = (
+/obj/structure/table/reinforced,
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/obj/item/healthanalyzer/guide,
+/obj/item/healthanalyzer/guide,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"PY" = (
+/obj/structure/table/standard,
+/obj/item/clipboard,
+/obj/item/stamp/qm,
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Qb" = (
+/obj/structure/bed/chair{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Qm" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Qp" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"QD" = (
+/obj/machinery/newscaster{
+	pixel_x = 29
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"QZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/random/tetheraid,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ra" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Rg" = (
+/obj/structure/closet/walllocker_double/medical/north,
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/storage/belt/medical,
+/obj/item/storage/belt/medical,
+/obj/item/clothing/gloves/sterile/nitrile,
+/obj/item/clothing/gloves/sterile/nitrile,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ri" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/radiation,
+/obj/item/clothing/head/radiation,
+/obj/item/bodybag/cryobag{
+	pixel_x = 1;
+	pixel_y = 1
+	},
+/obj/item/storage/toolbox/emergency{
+	pixel_x = 2;
+	pixel_y = 1
+	},
+/obj/item/storage/box/lights/mixed{
+	pixel_y = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Rn" = (
+/obj/item/stack/cable_coil{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Rv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+	dir = 1
+	},
+/obj/machinery/firealarm/angled,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"RB" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"RD" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/machinery/door/blast/angled/open{
+	dir = 4;
+	id = "qmwindows";
+	name = "Privacy Shutters"
+	},
+/obj/structure/low_wall/bay/reinforced/brown,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"RI" = (
+/obj/structure/table/glass,
+/obj/random/medical{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"RM" = (
+/obj/item/destTagger{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"RO" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sf" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 4;
+	pixel_x = 32;
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/engineering/atmospherics{
+	dir = 10;
+	pixel_x = 32;
+	pixel_y = -12
+	},
+/obj/structure/sign/directions/cargo{
+	dir = 6;
+	pixel_x = 32
+	},
+/obj/structure/sign/directions/medical{
+	dir = 1;
+	pixel_x = 32;
+	pixel_y = 6
+	},
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/steel_grid/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sj" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sq" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	pixel_x = -32
+	},
+/obj/structure/sign/directions/stairs_up{
+	dir = 1;
+	pixel_x = -32;
+	pixel_y = 6
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sr" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sv" = (
+/obj/random/powercell,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sw" = (
+/turf/simulated/wall/bay/r_wall/steel,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sx" = (
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Sy" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"SA" = (
+/obj/machinery/computer/atmoscontrol,
+/obj/machinery/light/floortube{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/machinery/requests_console/preset/engineering{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"SM" = (
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ST" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"SW" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Td" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Te" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Tf" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Th" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Tj" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/item/material/shard,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Tl" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/status_display/supply_display{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Tm" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Tp" = (
+/mob/living/simple_mob/animal/space/carp,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ts" = (
+/obj/structure/sign/department/cargo{
+	pixel_x = 32
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Tt" = (
+/obj/structure/closet/secure_closet/medical2,
+/obj/machinery/firealarm/angled{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Tu" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	dir = 4;
+	door_color = "#a6753d";
+	name = "Cargo Office";
+	req_access = list(31);
+	stripe_color = "#3b2b1a"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"TC" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"TF" = (
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"TM" = (
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"TP" = (
+/obj/machinery/alarm/angled,
+/obj/machinery/recharge_station,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"TX" = (
+/obj/machinery/light/floortube{
+	pixel_y = -4
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"TY" = (
+/obj/machinery/computer/power_monitor{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Uh" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Uj" = (
+/obj/effect/floor_decal/milspec/color/white/half,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Uq" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"UC" = (
+/obj/structure/table/standard,
+/obj/item/healthanalyzer,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"UD" = (
+/obj/machinery/vending/wallmed1{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"UG" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "Engineering Hardsuits";
+	req_one_access = list(11)
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/engineering,
+/obj/item/clothing/suit/space/void/engineering,
+/obj/item/clothing/head/helmet/space/void/engineering,
+/obj/item/clothing/head/helmet/space/void/engineering,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"UH" = (
+/obj/item/cell/device,
+/obj/item/cell/high,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"UL" = (
+/obj/machinery/vending/tool,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"UM" = (
+/obj/structure/lattice,
+/turf/space,
+/area/template_noop)
+"UU" = (
+/obj/machinery/requests_console{
+	department = "Cargo Bay";
+	departmentType = 2;
+	dir = 8;
+	pixel_x = 28
+	},
+/obj/item/cartridge/quartermaster{
+	pixel_x = 6;
+	pixel_y = 5
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Vo" = (
+/obj/machinery/computer/general_air_control{
+	frequency = 1443;
+	level = 3;
+	name = "Distribution and Waste Monitor";
+	sensors = list("dist_main_meter" = "Surface - Distribution Loop", "scrub_main_meter" = "Surface - Scrubbers Loop", "mair_main_meter" = "Surface - Mixed Air Tank", "dist_aux_meter" = "Station - Distribution Loop", "scrub_aux_meter" = "Station - Scrubbers Loop", "mair_aux_meter" = "Station - Mixed Air Tank", "mair_mining_meter" = "Mining Outpost - Mixed Air Tank")
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Vr" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/toxin{
+	pixel_x = -9;
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"VD" = (
+/obj/item/material/shard,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"VF" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/regular,
+/obj/machinery/alarm/angled,
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"VX" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Wa" = (
+/obj/structure/medical_stand,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Wb" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/structure/closet/crate/bin{
+	anchored = 1
+	},
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Wd" = (
+/obj/structure/sign/poster{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"We" = (
+/obj/item/storage/belt/utility,
+/obj/item/storage/toolbox/electrical,
+/turf/simulated/floor/tiled/eris/dark/gray_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Wk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Wr" = (
+/obj/structure/closet/emergsuit_wall{
+	dir = 8;
+	pixel_x = -27
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ws" = (
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ww" = (
+/obj/structure/table/glass,
+/obj/random/medical{
+	pixel_x = -4;
+	pixel_y = 5
+	},
+/obj/machinery/injector_maker{
+	pixel_x = 29
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Wz" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"WC" = (
+/turf/simulated/wall/bay/r_wall/orange,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"WH" = (
+/obj/structure/table/standard,
+/obj/item/clothing/head/soft,
+/obj/item/clothing/head/soft,
+/obj/item/stamp{
+	pixel_x = -3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"WM" = (
+/obj/machinery/computer/operating,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"WN" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/monotile/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"WQ" = (
+/obj/machinery/requests_console/preset/medical{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"WR" = (
+/obj/item/glasses_kit,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xb" = (
+/obj/machinery/computer/atmos_alert,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xc" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/structure/closet/hydrant{
+	dir = 4;
+	pixel_x = 27
+	},
+/mob/living/simple_mob/animal/space/carp,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xd" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xj" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xk" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/angled_bay/double/glass{
+	door_color = "#ffffff";
+	id_tag = "MedbayFoyer W";
+	name = "Medbay Foyer";
+	req_access = list(5);
+	req_one_access = list(5);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xl" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xn" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals5,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xp" = (
+/obj/machinery/disposal/wall{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xt" = (
+/obj/machinery/alarm/angled{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xv" = (
+/obj/random/tetheraid,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Xw" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/orange,
+/turf/simulated/floor,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XD" = (
+/obj/machinery/hologram/holopad,
+/obj/item/stack/material/phoron,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XG" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XL" = (
+/obj/machinery/alarm/angled,
+/obj/machinery/vending/nifsoft_shop,
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XP" = (
+/obj/item/storage/box/pillbottles,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XR" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XT" = (
+/obj/machinery/vending/wardrobe/virodrobe,
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XV" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"XX" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Yf" = (
+/obj/structure/loot_pile/surface/bones,
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Yk" = (
+/obj/structure/medical_stand,
+/turf/simulated/floor/tiled/white/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ym" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Yu" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Yy" = (
+/obj/structure/sign/deck2{
+	pixel_x = -32
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"YC" = (
+/obj/machinery/computer/station_alert,
+/obj/machinery/light/floortube{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"YF" = (
+/obj/effect/floor_decal/steeldecal/steel_decals4{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals4,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"YJ" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"YW" = (
+/obj/structure/table/reinforced,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/obj/fiftyspawner/glass,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Ze" = (
+/obj/structure/filingcabinet/filingcabinet,
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Zl" = (
+/obj/structure/sign/directions/evac{
+	pixel_x = -32;
+	pixel_y = -32
+	},
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"Zp" = (
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/item/cell/high,
+/obj/item/tool/wrench,
+/obj/item/cell/high,
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ZA" = (
+/obj/structure/table/standard,
+/obj/item/folder/yellow,
+/obj/item/stamp/denied{
+	pixel_x = 4;
+	pixel_y = -2
+	},
+/obj/machinery/light/floortube{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/item/stamp/accepted,
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	id = "cargo_desk";
+	name = "Cargo Shutter Control";
+	pixel_x = 24;
+	pixel_y = 24
+	},
+/turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ZE" = (
+/obj/structure/table/reinforced,
+/obj/machinery/alarm/angled,
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ZI" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ZK" = (
+/obj/structure/closet/emcloset,
+/turf/space,
+/area/submap/outpost21/structure_generic/delight_ruins)
+"ZX" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan,
+/obj/machinery/door/airlock/angled_bay/standard/glass{
+	door_color = "#ffffff";
+	name = "Medbay Storage";
+	req_access = list(5);
+	stripe_color = "#5a96bb"
+	},
+/turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
+/area/submap/outpost21/structure_generic/delight_ruins)
+
+(1,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+"}
+(2,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+"}
+(3,1,1) = {"
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+eJ
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+Ku
+"}
+(4,1,1) = {"
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+eJ
+Gv
+Gv
+te
+Gv
+Gv
+Gv
+eJ
+UM
+Hp
+Gv
+Gv
+eJ
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+jK
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(5,1,1) = {"
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+UM
+pB
+Gv
+Hp
+Gv
+Gv
+eJ
+Gv
+az
+Gv
+Gv
+Gv
+Gv
+UM
+Hp
+Gv
+Gv
+Gv
+Gv
+UM
+Gv
+Gv
+Gv
+UM
+Hp
+Gv
+Hp
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(6,1,1) = {"
+Ku
+Gv
+eJ
+eJ
+Gv
+eJ
+UM
+az
+az
+Gv
+eJ
+vU
+cW
+vU
+mD
+cV
+cV
+jz
+vU
+fM
+mD
+vU
+vU
+mD
+mD
+fM
+cW
+cW
+aN
+cW
+mD
+Gv
+vw
+Gv
+eJ
+jK
+Hp
+Gv
+Gv
+eJ
+Gv
+az
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(7,1,1) = {"
+Ku
+Gv
+Gv
+Gv
+az
+vw
+MD
+mD
+mD
+vU
+jo
+vU
+GM
+mD
+mD
+cW
+vU
+aN
+aN
+cW
+mD
+fM
+fM
+vU
+GM
+cW
+vU
+cW
+cW
+cW
+fM
+cW
+UM
+az
+Hp
+Gv
+az
+az
+UM
+Gv
+Gv
+Gv
+eJ
+Gv
+Gv
+az
+Gv
+Gv
+eJ
+Gv
+Gv
+az
+UM
+UM
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(8,1,1) = {"
+Ku
+Gv
+Gv
+eJ
+Gv
+mD
+rv
+jw
+ww
+Jf
+cW
+GM
+cW
+mW
+se
+fM
+cW
+mD
+Yk
+mW
+TP
+yC
+cW
+vU
+jz
+cW
+vU
+cV
+mD
+mD
+mD
+jr
+cW
+mD
+UM
+UM
+UM
+UM
+UM
+tG
+Gv
+Gv
+Gv
+Gv
+az
+az
+yL
+Gv
+az
+az
+UM
+Gv
+az
+az
+ch
+Gv
+jK
+Gv
+Ku
+Ku
+"}
+(9,1,1) = {"
+Ku
+eJ
+Gv
+Gv
+Gv
+mD
+rv
+jw
+mM
+mD
+Jf
+cW
+qS
+mW
+aO
+cW
+mD
+OR
+mG
+mW
+cG
+yC
+mD
+cW
+cW
+Mq
+jq
+cW
+yC
+mD
+mD
+mD
+yC
+Ts
+dZ
+mD
+Oc
+cU
+cW
+IN
+vU
+vU
+mD
+vU
+cV
+UM
+UM
+UM
+UM
+UM
+UM
+UM
+az
+az
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(10,1,1) = {"
+Ku
+Gv
+Gv
+Hp
+fM
+mD
+Nq
+mW
+oj
+mM
+mD
+Fb
+eN
+mW
+xo
+hf
+UC
+xc
+xF
+mW
+mW
+yH
+aR
+vU
+LP
+mA
+GR
+mD
+mD
+mD
+mD
+mD
+mD
+ui
+ui
+ui
+Tu
+ui
+vU
+cW
+mD
+vU
+Tp
+vU
+vU
+vU
+cV
+vU
+mD
+fM
+Sw
+Sw
+Sw
+Sw
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(11,1,1) = {"
+Ku
+UM
+UM
+UM
+mD
+Fg
+Xn
+mW
+mW
+yo
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+DC
+mW
+mW
+mW
+PO
+mf
+LQ
+vU
+mA
+KM
+vr
+Sf
+Jx
+yC
+mD
+rv
+ui
+xk
+ns
+iO
+ui
+cW
+cW
+mD
+cV
+vU
+mD
+vU
+mD
+cW
+mD
+mD
+mD
+Tl
+Wz
+iO
+Sw
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(12,1,1) = {"
+Ku
+Gv
+eJ
+UM
+cW
+yC
+fx
+mW
+vN
+Ee
+BP
+mW
+dR
+PV
+Wa
+lH
+cD
+xG
+JR
+aU
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+Iy
+mD
+mD
+ui
+qX
+mD
+iO
+ui
+mD
+cW
+mD
+vU
+cW
+mD
+IN
+qx
+cW
+cW
+cW
+cW
+Mt
+Qp
+iO
+sy
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(13,1,1) = {"
+Ku
+Gv
+Gv
+vU
+cV
+yC
+Uj
+mW
+dg
+cW
+xT
+Xk
+XX
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+Ee
+RI
+mW
+cj
+Ri
+fF
+GL
+wI
+Ee
+Pq
+mW
+yG
+yC
+mD
+ui
+vU
+vU
+mD
+CZ
+MY
+cW
+mD
+mD
+cW
+vU
+mD
+mD
+cW
+Yu
+Yu
+Yu
+Yu
+Yu
+IK
+sy
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(14,1,1) = {"
+Ku
+Gv
+az
+mD
+mD
+yC
+Uj
+mW
+Hq
+cW
+CH
+eA
+nI
+Uq
+ez
+Ee
+Yf
+Ee
+Ee
+Ee
+RI
+mW
+kx
+Ee
+zU
+bR
+Vr
+Ee
+Pq
+mW
+Wd
+mD
+rv
+ui
+vU
+vU
+ZK
+cW
+mD
+cW
+fM
+cW
+cW
+cW
+eu
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+az
+Gv
+jK
+Gv
+Ku
+Ku
+"}
+(15,1,1) = {"
+Ku
+Gv
+eJ
+jr
+cW
+VD
+Uj
+mW
+mW
+eL
+CI
+mW
+mW
+Ip
+mW
+lZ
+ul
+gc
+ul
+gc
+bu
+Du
+BJ
+pK
+Jn
+Yf
+yJ
+Je
+Pq
+mW
+of
+cZ
+Xn
+ui
+ui
+ui
+ui
+hU
+mD
+mD
+rn
+zY
+Px
+Xo
+eu
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(16,1,1) = {"
+Ku
+Gv
+Gv
+vU
+cW
+mD
+Uj
+KK
+KV
+Ee
+mD
+Pj
+hB
+sf
+mW
+uL
+ul
+xi
+ul
+NC
+ju
+mW
+sO
+gz
+ht
+wY
+HN
+Ee
+Pq
+mW
+RO
+yC
+rv
+mD
+FY
+Px
+ir
+nR
+mD
+Px
+au
+Px
+au
+Ym
+mD
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(17,1,1) = {"
+Ku
+Gv
+Hp
+vU
+fM
+mD
+Uj
+xf
+Ny
+mD
+vU
+cW
+mD
+Uh
+mW
+jk
+ul
+hq
+ul
+lA
+GC
+mW
+mW
+Hz
+qo
+wa
+Ee
+Yf
+Pq
+mW
+yH
+mD
+mD
+mD
+je
+oh
+gj
+Bi
+Px
+ci
+op
+DJ
+rn
+Xo
+mD
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(18,1,1) = {"
+Ku
+Gv
+Gv
+cV
+mD
+IN
+Uj
+aH
+Ee
+cW
+jz
+vU
+pr
+WQ
+mW
+pf
+mN
+uY
+KC
+uY
+ul
+Ee
+mW
+mW
+mW
+mW
+yI
+WR
+Pq
+mW
+LT
+yC
+cW
+vU
+mD
+fy
+ir
+ZA
+Px
+op
+lv
+Px
+rn
+Ym
+mD
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+az
+az
+Gv
+Gv
+Gv
+Ku
+"}
+(19,1,1) = {"
+Ku
+Gv
+Gv
+vU
+vU
+Hu
+Uj
+aH
+Ee
+jr
+mD
+nq
+aU
+Ee
+mW
+my
+ul
+vo
+WN
+cH
+ul
+mD
+HZ
+vU
+vU
+mW
+Bw
+hI
+qj
+mW
+sU
+mD
+vU
+vU
+Px
+fy
+ui
+Ze
+mD
+mD
+TX
+Px
+GT
+Xo
+ge
+gQ
+hm
+hm
+hm
+hm
+hm
+hm
+kt
+sy
+Gv
+ch
+Gv
+Gv
+Gv
+Ku
+"}
+(20,1,1) = {"
+Ku
+Gv
+Gv
+mD
+cW
+yC
+Uj
+aH
+Ee
+mD
+Ee
+JB
+aU
+Ee
+mW
+CM
+Qm
+gc
+Jw
+gc
+ul
+mD
+mW
+mW
+mW
+mW
+Rg
+Ee
+lV
+mW
+eB
+wZ
+vU
+mD
+is
+mQ
+Cy
+nd
+mD
+cW
+Px
+Px
+Px
+Xo
+mD
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+az
+az
+Gv
+Gv
+jK
+Ku
+"}
+(21,1,1) = {"
+Ku
+Gv
+Gv
+cV
+GM
+yC
+Uj
+xf
+nX
+Ee
+Yf
+cL
+Bd
+Uh
+mW
+FK
+hx
+xi
+ul
+zy
+GC
+mW
+mW
+BC
+Td
+RB
+Ee
+Xv
+lT
+mW
+yn
+vU
+cW
+mD
+Px
+kw
+ui
+mZ
+mD
+rn
+rn
+rn
+Px
+Ym
+mD
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+az
+Gv
+Gv
+Gv
+Gv
+Ku
+"}
+(22,1,1) = {"
+Ku
+eJ
+Gv
+vU
+mD
+mD
+Uj
+KK
+dZ
+mD
+Ee
+cR
+MC
+Uq
+mW
+FK
+GD
+hq
+ul
+iP
+ju
+mW
+fa
+Ee
+Ee
+MK
+QZ
+Aq
+Wa
+mW
+dL
+vU
+cW
+jm
+Qb
+Qb
+ir
+jP
+NA
+mR
+iO
+iO
+RM
+Xo
+eu
+hm
+hm
+hm
+hm
+gQ
+hm
+hm
+Xd
+sy
+UM
+Gv
+Gv
+Gv
+Gv
+Ku
+"}
+(23,1,1) = {"
+Ku
+Gv
+Gv
+vU
+vU
+mD
+Uj
+Gl
+Gl
+Pw
+Pw
+Gl
+Gl
+Ip
+mW
+Iv
+ox
+BX
+sg
+BX
+pU
+ZX
+kJ
+xX
+tQ
+td
+mW
+ev
+mW
+mW
+of
+Fg
+mD
+ui
+RD
+RD
+ui
+ui
+ui
+ui
+Fn
+iO
+mD
+Xo
+eu
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+UM
+Gv
+Gv
+Gv
+Gv
+Ku
+"}
+(24,1,1) = {"
+Ku
+Gv
+Gv
+aN
+cV
+yC
+Uj
+Gl
+ss
+KJ
+TM
+MS
+Gl
+kg
+Wr
+Ee
+mD
+mD
+mD
+Yf
+pT
+mW
+JQ
+Hl
+Wk
+Ec
+mW
+Rv
+Lh
+CJ
+LN
+yC
+rv
+zh
+bO
+XR
+dY
+mM
+Bg
+sr
+rw
+mD
+mD
+JP
+eu
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+Xd
+sy
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(25,1,1) = {"
+Ku
+Gv
+UM
+cW
+cW
+yC
+Uj
+KK
+Sj
+GY
+Ee
+tR
+vO
+PP
+Ee
+Yf
+Ee
+mD
+Ee
+Ee
+RI
+mW
+XT
+Ee
+Ee
+Sx
+mW
+xv
+TC
+mW
+qE
+mD
+rv
+zh
+Sy
+Lc
+PY
+zR
+mM
+zh
+WH
+iO
+cW
+Ym
+mD
+vS
+vS
+vS
+vS
+vS
+vS
+vS
+PC
+sy
+UM
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(26,1,1) = {"
+Ku
+Gv
+Gv
+cV
+aN
+yC
+Ho
+KK
+Kz
+kV
+Yf
+GY
+HD
+Li
+iv
+PS
+gZ
+Uq
+kT
+Ww
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+mW
+Iy
+yC
+rv
+zh
+Dm
+mD
+st
+jx
+mD
+zh
+cI
+iO
+iO
+Ym
+cW
+vU
+mD
+wM
+rM
+rM
+wM
+vR
+iO
+sy
+UM
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(27,1,1) = {"
+Ku
+Gv
+Gv
+aN
+cW
+cZ
+aa
+KK
+vn
+Ee
+XD
+Xp
+Gl
+Gl
+mW
+mW
+mW
+wA
+mW
+mW
+mW
+Bl
+XV
+Am
+vU
+mA
+Jc
+Sq
+uX
+Yy
+yC
+yC
+rv
+zh
+cW
+fd
+UU
+mM
+aV
+ui
+VF
+sS
+PM
+Gj
+GJ
+bN
+EV
+wM
+wM
+wM
+cn
+wM
+iO
+Sw
+az
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(28,1,1) = {"
+Ku
+Gv
+Hp
+aN
+IN
+XG
+qy
+Gl
+dB
+YJ
+OA
+MQ
+Sj
+Gl
+oy
+vg
+HY
+Bf
+Wb
+mW
+mW
+Jr
+mD
+vU
+th
+mA
+il
+mD
+mD
+yC
+yC
+VX
+rv
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+ui
+dv
+ui
+ui
+ui
+ui
+ui
+Sw
+Sw
+Sw
+Sw
+Sw
+az
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(29,1,1) = {"
+Ku
+Gv
+Gv
+vU
+mD
+yC
+rv
+KK
+bR
+Df
+Ee
+TM
+ly
+Gl
+Of
+ST
+It
+pd
+yb
+mW
+KX
+yC
+mD
+Ot
+Ot
+Ar
+Ot
+mD
+jr
+yC
+mD
+mD
+JH
+ED
+Pc
+rX
+vI
+wW
+fN
+qM
+vx
+cp
+df
+ka
+jY
+vx
+mD
+mD
+GM
+cV
+cW
+UM
+az
+az
+az
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(30,1,1) = {"
+Ku
+Gv
+eJ
+mD
+cW
+VD
+rv
+KK
+Or
+fU
+fl
+bR
+qb
+Gl
+se
+OP
+WM
+Kr
+Yk
+mW
+wX
+yC
+mD
+mD
+yC
+dh
+yC
+mD
+yC
+yC
+mD
+Tm
+tj
+DV
+fR
+We
+sP
+hp
+Sv
+Zp
+vx
+ZE
+fR
+ka
+fR
+ml
+mD
+uF
+mD
+mD
+IN
+pB
+az
+az
+ch
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(31,1,1) = {"
+Ku
+Gv
+UM
+cW
+cW
+yC
+rv
+KK
+NE
+Ee
+Ee
+Ee
+Nf
+Gl
+aO
+Ky
+ep
+OR
+UD
+mW
+XL
+yC
+yC
+sw
+vH
+yV
+vH
+vH
+JW
+MG
+oY
+YF
+lg
+mD
+or
+Rn
+lD
+MB
+UH
+bE
+vx
+sE
+fR
+ka
+bj
+vx
+vx
+vx
+ip
+Sw
+Sw
+Sw
+az
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(32,1,1) = {"
+Ku
+Gv
+Gv
+sp
+mD
+IN
+rv
+Gl
+uC
+Ee
+aq
+XP
+Fp
+Gl
+xo
+hf
+UC
+tE
+Tt
+mW
+oD
+oD
+oD
+vx
+ED
+uU
+xQ
+ED
+vx
+vx
+vx
+OD
+vx
+vx
+uV
+hp
+bH
+hp
+xJ
+fR
+MZ
+fR
+fR
+Mu
+ag
+ls
+ag
+oM
+fR
+Eh
+mD
+oE
+UM
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(33,1,1) = {"
+Ku
+Gv
+eJ
+vU
+cW
+mD
+rv
+Gl
+Gl
+KK
+KK
+KK
+Gl
+Gl
+mW
+mW
+mW
+mW
+mW
+mW
+Iy
+yC
+rv
+ED
+YC
+fX
+fR
+bY
+vx
+UL
+Cz
+fR
+oJ
+vx
+gp
+hp
+ok
+Gm
+hp
+nc
+vx
+Te
+IM
+fR
+jQ
+cE
+fR
+ka
+zC
+hY
+mD
+mD
+UM
+az
+jK
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(34,1,1) = {"
+Ku
+Gv
+Gv
+vU
+cW
+mD
+Zl
+mD
+Ot
+Ot
+DW
+mD
+Ot
+Xj
+Ot
+Ex
+Ot
+zH
+Ot
+BN
+nL
+fc
+TF
+ED
+Xb
+sK
+fR
+zQ
+vx
+IA
+Tf
+mD
+fR
+mK
+mD
+ii
+Dx
+al
+YW
+vi
+vx
+Kp
+Sr
+SW
+yd
+cE
+fR
+ka
+UG
+hY
+Sw
+Sw
+az
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(35,1,1) = {"
+Ku
+Gv
+Gv
+eJ
+vU
+Tm
+IN
+mD
+mD
+yC
+mD
+yC
+yC
+yC
+yC
+yC
+yC
+yC
+yC
+yC
+yC
+Tm
+oH
+ED
+dI
+fR
+Pu
+fR
+Mp
+fR
+mD
+mD
+sN
+vx
+vx
+WC
+WC
+WC
+WC
+WC
+WC
+WC
+Bo
+fR
+jQ
+Oq
+fR
+Hr
+nE
+dz
+mD
+mD
+az
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(36,1,1) = {"
+Ku
+Ku
+Gv
+Gv
+vU
+Tj
+SM
+mD
+jq
+jq
+Xl
+jq
+QD
+Ws
+jq
+FD
+Oc
+jq
+Xc
+jq
+jq
+IR
+Ca
+vx
+Vo
+ZI
+sK
+jY
+vx
+ur
+mD
+Pu
+mD
+mD
+FB
+vw
+UM
+UM
+UM
+eJ
+mD
+WC
+Et
+fR
+fR
+fR
+fR
+fR
+Ad
+hY
+Sw
+Sw
+az
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(37,1,1) = {"
+Ku
+Ku
+Gv
+eJ
+Gv
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
+Ke
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
+WC
+SA
+SW
+fR
+hy
+vx
+Th
+fR
+mD
+sp
+IN
+az
+UM
+UM
+eJ
+Hp
+Gv
+IN
+BQ
+Ra
+IM
+Fz
+jQ
+fR
+Nh
+Jb
+De
+mD
+oE
+UM
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(38,1,1) = {"
+Ku
+Ku
+Gv
+Gv
+Hp
+az
+az
+az
+mD
+mD
+mD
+aQ
+mD
+mD
+bx
+jr
+mD
+mD
+cW
+vU
+it
+mD
+mD
+PJ
+Xt
+Jd
+fR
+TY
+vx
+bs
+fR
+mD
+mD
+UM
+Hp
+Gv
+UM
+Gv
+Gv
+UM
+mD
+cW
+fM
+cW
+sp
+mD
+fM
+cW
+mD
+Sw
+mD
+mD
+UM
+az
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(39,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+sx
+Gv
+vu
+tg
+DV
+mD
+kS
+mD
+mD
+yU
+mD
+cV
+GM
+GM
+vU
+nz
+WC
+WC
+WC
+eX
+WC
+WC
+Xw
+WC
+cW
+GM
+UM
+Gv
+eJ
+Gv
+az
+az
+FB
+Gv
+Gv
+Gv
+vw
+cW
+cW
+GM
+cW
+fM
+Sw
+Sw
+Sw
+az
+az
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(40,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Hp
+Gv
+Gv
+LH
+Sw
+Sw
+Sw
+Sw
+Sw
+CW
+Sw
+mD
+fM
+MD
+eJ
+UM
+Sw
+Sw
+FC
+Ix
+mD
+cW
+cW
+cW
+Gv
+az
+UM
+az
+Gv
+UM
+Gv
+Gv
+pB
+Gv
+Gv
+Hp
+eJ
+az
+az
+UM
+Gv
+UM
+UM
+UM
+UM
+LH
+jZ
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(41,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+eJ
+Hp
+aN
+cW
+mD
+vU
+Sw
+Md
+Sw
+Sw
+vU
+Gv
+UM
+Hp
+Gv
+UM
+UM
+UM
+UM
+UM
+pB
+az
+Gv
+pB
+UM
+Gv
+UM
+yL
+UM
+Gv
+Gv
+eJ
+Gv
+az
+Gv
+Gv
+Gv
+UM
+pB
+az
+az
+Gv
+az
+LH
+az
+Gv
+Gv
+jK
+Gv
+Gv
+Ku
+Ku
+"}
+(42,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+pw
+UM
+Sw
+Oe
+Sw
+vU
+UM
+UM
+eJ
+Gv
+Gv
+Gv
+Gv
+az
+pB
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+UM
+az
+Gv
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+az
+UM
+Kx
+az
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(43,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+az
+az
+az
+az
+az
+az
+az
+az
+az
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+az
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+UM
+UM
+Gv
+Gv
+Gv
+jK
+Gv
+Gv
+Gv
+Gv
+UM
+UM
+UM
+UM
+UM
+Kx
+az
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+"}
+(44,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+az
+pI
+pI
+pI
+az
+pI
+pI
+pI
+pI
+pI
+Gv
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+jK
+Gv
+Gv
+Gv
+Gv
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+az
+az
+az
+Gv
+Gv
+UM
+Kx
+az
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(45,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+UM
+UM
+UM
+UM
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+jK
+Gv
+UM
+LH
+az
+az
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(46,1,1) = {"
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+kz
+az
+az
+pI
+pI
+pI
+pI
+pI
+pI
+az
+pI
+pI
+pI
+pI
+pI
+Gv
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+LH
+LH
+az
+az
+az
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(47,1,1) = {"
+Ku
+Ku
+Gv
+Gv
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+UM
+UM
+LH
+az
+az
+az
+az
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(48,1,1) = {"
+Ku
+Gv
+Gv
+az
+az
+az
+az
+az
+az
+pI
+pI
+pI
+pI
+pI
+pI
+az
+pI
+pI
+pI
+pI
+pI
+UM
+UM
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+jK
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+az
+UM
+az
+az
+az
+az
+az
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(49,1,1) = {"
+Ku
+Gv
+UM
+UM
+az
+az
+jZ
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+az
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+jK
+UM
+UM
+UM
+UM
+UM
+UM
+az
+az
+az
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(50,1,1) = {"
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+az
+az
+az
+jZ
+az
+az
+az
+az
+az
+az
+UM
+UM
+UM
+UM
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+az
+az
+Gv
+Gv
+az
+az
+az
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(51,1,1) = {"
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+UM
+UM
+UM
+UM
+az
+az
+az
+az
+az
+az
+az
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(52,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+UM
+az
+az
+az
+az
+az
+az
+az
+az
+Gv
+Ku
+Ku
+Ku
+"}
+(53,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+az
+ch
+Gv
+Gv
+Ku
+Ku
+"}
+(54,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(55,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+"}
+(56,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Gv
+Ku
+Ku
+Ku
+Ku
+"}
+(57,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+"}
+(58,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+"}
+(59,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+"}
+(60,1,1) = {"
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+Ku
+"}

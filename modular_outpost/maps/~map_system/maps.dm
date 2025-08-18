@@ -149,6 +149,8 @@ var/list/all_maps = list()
 	var/rare_ores = list(ORE_MARBLE = 5,/* ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5*/, ORE_URANIUM = 15, ORE_PLATINUM = 20, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 15, ORE_DIAMOND = 3, ORE_GOLD = 15, ORE_SILVER = 15, ORE_PHORON = 25, ORE_LEAD = 5,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 2/*, ORE_PAINITE = 1*/)
 	// Outpost 21 edit end
 
+	var/list/skipped_tests = list() // /datum/unit_test's to skip
+
 /datum/map/New()
 	..()
 	if(zlevel_datum_type)
