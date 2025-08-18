@@ -3326,7 +3326,7 @@
 
 	allergen_type = ALLERGEN_FRUIT //Made from orange juice
 
-/datum/reagent/ethanol/tequilla
+/datum/reagent/ethanol/tequila
 	name = REAGENT_TEQUILA
 	id = REAGENT_ID_TEQUILA
 	description = "A strong and mildly flavored, Mexican produced spirit. Feeling thirsty hombre?"
@@ -3334,7 +3334,7 @@
 	color = "#FFFF91"
 	strength = 25
 
-	glass_name = "Tequilla"
+	glass_name = "Tequila"
 	glass_desc = "Now all that's missing is the weird colored shades!"
 
 /datum/reagent/ethanol/thirteenloko
@@ -3740,7 +3740,7 @@
 	strength = 15
 
 	glass_name = REAGENT_BRAVEBULL
-	glass_desc = "Tequilla and coffee liquor, brought together in a mouthwatering mixture. Drink up."
+	glass_desc = "Tequila and coffee liquor, brought together in a mouthwatering mixture. Drink up."
 
 /datum/reagent/ethanol/changeling_sting
 	name = REAGENT_CHANGELINGSTING
@@ -4226,7 +4226,7 @@
 
 	allergen_type = ALLERGEN_GRAINS|ALLERGEN_STIMULANT //Made from beer(grain) and whiskeycola(whiskey(grain) and cola(caffeine))
 
-/datum/reagent/ethanol/tequilla_sunrise
+/datum/reagent/ethanol/tequila_sunrise
 	name = REAGENT_TEQUILASUNRISE
 	id = REAGENT_ID_TEQUILASUNRISE
 	description = "Tequila and orange juice. Much like a Screwdriver, only Mexican~."
@@ -4234,7 +4234,7 @@
 	color = "#FFE48C"
 	strength = 25
 
-	glass_name = "Tequilla Sunrise"
+	glass_name = "Tequila Sunrise"
 	glass_desc = "Oh great, now you feel nostalgic about sunrises back on Earth..."
 
 /datum/reagent/ethanol/threemileisland

@@ -51071,7 +51071,6 @@
 /area/rnd/otherlab)
 "nzn" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/r_wall,
@@ -56371,7 +56370,6 @@
 /area/quartermaster/qm)
 "poB" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/durasteel,

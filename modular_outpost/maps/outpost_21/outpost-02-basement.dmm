@@ -16865,7 +16865,6 @@
 /area/muriki/atmos/voxdump)
 "aEi" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/r_wall,
@@ -59463,7 +59462,6 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/floor/plating,

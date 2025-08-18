@@ -153,7 +153,7 @@
 	glass_icon_state = "manlydorfglass"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
 
-/datum/reagent/ethanol/tequilla_sunrise
+/datum/reagent/ethanol/tequila_sunrise
 	glass_icon_state = "tequilasunriseglass"
 	glass_icon_file = 'modular_chomp/icons/obj/drinks.dmi'
 
