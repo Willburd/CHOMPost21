@@ -8540,6 +8540,10 @@
 /obj/machinery/door/airlock/angled_tgmc,
 /turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
+"aoH" = (
+/obj/structure/reagent_dispensers/medical_waste_tank,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
 "aoS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -13015,6 +13019,7 @@
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
 "bKU" = (
@@ -35954,6 +35959,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/structure/reagent_dispensers/souppot,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "iXt" = (
@@ -124402,7 +124408,7 @@ kNy
 mDI
 aoz
 ozu
-aoF
+aoH
 wKG
 wKG
 wKG

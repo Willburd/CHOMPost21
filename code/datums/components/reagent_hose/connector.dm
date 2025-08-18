@@ -273,3 +273,10 @@
 /datum/component/hose_connector/output/cow/connected_reagents()
 	var/mob/living/simple_mob/animal/passive/cow/C = carrier
 	return C.udder
+
+
+// Outpost 21 edit begin - Experimental sleepers with hose outputs
+/datum/component/hose_connector/output/medical_sleeper/connected_reagents()
+	var/obj/machinery/sleeper/S = carrier
+	return S.beaker?.reagents
+// Outpost 21 edit end

@@ -167,3 +167,18 @@
 	reagents.add_reagent(pick(rotten_reagents),rand(max_vol / 12, max_vol / 6))
 	reagents.add_reagent(pick(rotten_reagents),rand(max_vol / 12, max_vol / 6))
 	reagents.add_reagent(pick(rotten_reagents),rand(max_vol / 12, max_vol / 6))
+
+
+
+/obj/structure/reagent_dispensers/medical_waste_tank
+	name = "medical waste tank"
+	desc = "A large tank for safely storing liquid medical waste."
+	icon_state = "mwaste"
+	icon = 'modular_outpost/icons/obj/chemical_tanks.dmi'
+	// start open for dumping
+	open_top = TRUE
+	flags = OPENCONTAINER
+
+/obj/structure/reagent_dispensers/medical_waste_tank/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/climbable)

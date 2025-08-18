@@ -48223,6 +48223,22 @@
 /obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
+"bJq" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 16;
+	pixel_x = 9
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 12;
+	pixel_x = -7
+	},
+/turf/simulated/floor/wood/alt,
+/area/maintenance/oldbridge)
+"bJr" = (
+/obj/structure/reagent_dispensers/souppot/half,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/oldbridge)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -67694,6 +67710,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 12;
+	pixel_x = -7
+	},
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
 "nKm" = (
@@ -82224,6 +82244,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = -3;
+	pixel_x = -7
+	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "wAT" = (
@@ -90790,8 +90814,8 @@ xJd
 vqa
 jRR
 dnA
-sNP
-kKa
+bJr
+bJq
 ijJ
 tdB
 kZt

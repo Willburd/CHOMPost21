@@ -118,6 +118,7 @@
 	beaker = new /obj/item/reagent_containers/glass/beaker/large(src)
 	default_apply_parts()
 	update_icon()
+	AddComponent(/datum/component/hose_connector/output/medical_sleeper) // Outpost 21 edit - Experimental sleepers with hose outputs
 
 /obj/machinery/sleeper/Destroy()
 	if(console)
