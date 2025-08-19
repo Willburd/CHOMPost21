@@ -72,12 +72,10 @@
 	},
 /area/wizard_station)
 "an" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	dir = 8;
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
+/obj/machinery/door/blast/regular,
+/turf/unsimulated/floor{
+	icon_state = "plating";
+	name = "plating"
 	},
 /area/muriki/tramstation/shed)
 "ao" = (
@@ -153,12 +151,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
-"ay" = (
-/obj/machinery/door/blast/regular{
-	name = "Tram Shed Shutter"
-	},
-/turf/space,
-/area/muriki/tramstation/shed)
 "az" = (
 /obj/effect/overlay/palmtree_l,
 /turf/unsimulated/beach/sand,
@@ -14673,17 +14665,17 @@ ag
 ag
 ai
 ai
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
 ai
 ai
 ag
