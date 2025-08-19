@@ -3,9 +3,7 @@
 /turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
 "d" = (
-/obj/structure/prop/statue/angel{
-	icon = 'icons/obj/statue_ch.dmi';
-	icon_state = "Angel_Female_ch";
+/obj/structure/prop/statue/jumpscare{
 	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -21,17 +19,13 @@
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
-/obj/structure/prop/statue/angel{
-	icon = 'icons/obj/statue_ch.dmi';
-	icon_state = "Angel_Female_ch";
+/obj/structure/prop/statue/jumpscare{
 	dir = 8
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/muriki/cave/deepdark)
 "A" = (
-/obj/structure/prop/statue/angel{
-	icon = 'icons/obj/statue_ch.dmi';
-	icon_state = "Angel_Female_ch";
+/obj/structure/prop/statue/jumpscare{
 	dir = 1
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -45,10 +39,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "G" = (
-/obj/structure/prop/statue/angel{
-	icon = 'icons/obj/statue_ch.dmi';
-	icon_state = "Angel_Female_ch"
-	},
+/obj/structure/prop/statue/jumpscare,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/muriki/cave/deepdark)
 "I" = (
