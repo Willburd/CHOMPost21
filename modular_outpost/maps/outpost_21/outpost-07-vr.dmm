@@ -10,19 +10,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled,
 /area/vr)
-"ae" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
-	},
-/turf/simulated/floor/tiled,
-/area/vr)
 "af" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -159,12 +146,8 @@
 /turf/simulated/floor/tiled,
 /area/vr/lighting)
 "bb" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/vr)
@@ -1027,19 +1010,6 @@
 /obj/item/reagent_containers/blood/synthblood,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/vr/lighting)
-"fU" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
-	},
-/turf/simulated/floor/tiled,
-/area/vr)
 "fW" = (
 /obj/structure/flora/pottedplant/fern,
 /obj/effect/floor_decal/borderfloor{
@@ -5007,12 +4977,8 @@
 /turf/simulated/wall,
 /area/vr/lighting)
 "FR" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 8;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/vr)
@@ -5201,12 +5167,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
 "Hb" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
 /area/vr)
@@ -5301,15 +5263,10 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/vr/lighting)
 "HG" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 4;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
-	},
 /obj/structure/railing/grey,
+/obj/effect/floor_decal/stairs/station{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/vr)
 "HH" = (
@@ -6130,12 +6087,7 @@
 /turf/simulated/floor/tiled/white,
 /area/space)
 "Nw" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
-	},
+/obj/effect/floor_decal/stairs/station,
 /turf/simulated/floor,
 /area/vr/lighting)
 "NA" = (
@@ -6570,15 +6522,11 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/lighting)
 "Qx" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
-	},
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
 /area/vr)
@@ -6694,15 +6642,11 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/lighting)
 "Rv" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
-	},
 /obj/structure/railing{
 	dir = 8
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/wood/sif,
 /area/vr)
@@ -6768,15 +6712,8 @@
 /turf/simulated/floor/tiled/white,
 /area/vr/lighting)
 "RP" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 4;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/vr)
@@ -14755,7 +14692,7 @@ TZ
 YJ
 DN
 DN
-fU
+bb
 kP
 MW
 gb
@@ -15079,7 +15016,7 @@ Hl
 pW
 VC
 VC
-ae
+bb
 oz
 sk
 Kx
