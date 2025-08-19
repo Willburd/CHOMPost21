@@ -23587,17 +23587,16 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "ffU" = (
-/obj/machinery/door/airlock/external{
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 8
+	},
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
 	locked = 1;
 	name = "\improper Emergency Elevator Access";
-	req_access = list(13)
-	},
-/obj/effect/floor_decal/industrial/stand_clear/yellow{
-	dir = 8
+	req_one_access = list(13)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/secondary/exit)
@@ -29921,17 +29920,14 @@
 	pixel_y = -32;
 	dir = 1
 	},
-/obj/item/radio{
-	canhear_range = 7;
-	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	name = "Virology Emergency Phone";
-	pixel_x = -6;
-	pixel_y = -1
-	},
 /obj/effect/floor_decal/corner/black{
 	dir = 10
+	},
+/obj/item/radio/phone/medbay{
+	name = "Virology Emergency Phone";
+	frequency = 1487;
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -34623,17 +34619,16 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cafeteria)
 "iAJ" = (
-/obj/machinery/door/airlock/external{
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
 	locked = 1;
 	name = "\improper Emergency Elevator Access";
-	req_access = list(13)
-	},
-/obj/effect/floor_decal/industrial/stand_clear/yellow{
-	dir = 4
+	req_one_access = list(13)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/secondary/exit)
@@ -77697,14 +77692,13 @@
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "vQy" = (
-/obj/machinery/door/airlock/external{
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
 	locked = 1;
 	name = "\improper Emergency Elevator Access";
-	req_access = list(13)
+	req_one_access = list(13)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/secondary/exit)

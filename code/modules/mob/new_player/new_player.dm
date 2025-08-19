@@ -331,14 +331,14 @@
 			SSticker.minds += character.mind
 			ticker.minds += character.mind
 	*/ //CHOMPEdit End
-	
+
 	// Outpost 21 edit begin - Stowaways behave the same as above!
 	if(rank == JOB_STOWAWAY)
 		log_and_message_admins("has joined the round as non-crew. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			SSticker.minds += character.mind
 	// Outpost 21 edit end
-	
+
 	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
@@ -407,6 +407,7 @@
 	late_choices_dialog.tgui_interact(src)
 
 /mob/new_player/proc/create_character(var/turf/T)
+	SHOULD_NOT_SLEEP(TRUE)
 	spawning = 1
 	close_spawn_windows()
 
