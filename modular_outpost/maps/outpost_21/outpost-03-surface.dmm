@@ -75896,15 +75896,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "vnO" = (
-/obj/item/radio{
-	anchored = 1;
-	canhear_range = 4;
-	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	name = "Break Room Emergency Phone";
-	pixel_y = 9
-	},
 /obj/structure/table/standard,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -75913,6 +75904,12 @@
 	pixel_y = 32
 	},
 /obj/item/toy/plushie/borgplushie/drake/trauma,
+/obj/item/radio/phone/medbay{
+	name = "Break Room Emergency Phone";
+	pixel_x = 6;
+	pixel_y = 8;
+	frequency = 1487
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "vod" = (
