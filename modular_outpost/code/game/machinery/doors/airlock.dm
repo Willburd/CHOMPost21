@@ -11,3 +11,7 @@
 		if(name == D.registered_name)
 			return TRUE
 	return FALSE
+
+/obj/machinery/door/airlock/centcom/nameddorm/vox
+	name = "Residence"
+	icon = 'icons/obj/doors/Dooralien_blue.dmi'

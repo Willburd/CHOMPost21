@@ -5355,7 +5355,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom/nameddorm{
 	name = "Aiek and Kose's Residence";
-	icon = 'icons/obj/doors/Dooralien_blue.dmi';
 	matchnames = list("Aiektaaknell","Kose Ine")
 	},
 /turf/simulated/floor/tiled/dark,
@@ -16192,12 +16191,6 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/specialty/redspace)
-"hSs" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "rgeneric"
-	},
-/area/centcom/living)
 "hSv" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "27"
@@ -20248,7 +20241,6 @@
 "jXH" = (
 /obj/machinery/door/airlock/centcom/nameddorm{
 	name = "Karawkkiki's Room";
-	icon = 'icons/obj/doors/Dooralien_blue.dmi';
 	matchnames = list("Karawkkiki")
 	},
 /turf/simulated/floor/wood{
@@ -20855,13 +20847,11 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/specialty/redspace)
 "koA" = (
-/turf/unsimulated/wall{
+/obj/machinery/door/blast/regular{
 	name = "Ammunition Elevator";
-	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	dir = 8
+	dir = 4
 	},
+/turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "koN" = (
 /obj/effect/floor_decal/corner/orange{
@@ -25364,14 +25354,6 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "ncR" = (
-/obj/item/radio{
-	name = "Break Room Emergency Phone";
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	frequency = 1487;
-	anchored = 1;
-	canhear_range = 4
-	},
 /obj/structure/table/standard,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -31708,9 +31690,7 @@
 "qEZ" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/centcom/nameddorm{
-	icon = 'icons/obj/doors/Dooralien_blue.dmi'
-	},
+/obj/machinery/door/airlock/centcom/nameddorm,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "qFJ" = (
@@ -32216,16 +32196,6 @@
 /obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 8
-	},
-/obj/item/radio{
-	name = "Virology Emergency Phone";
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	pixel_x = -6;
-	pixel_y = 8;
-	frequency = 1487;
-	anchored = 1;
-	canhear_range = 7
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
@@ -33045,7 +33015,6 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom/nameddorm{
 	name = "Ikaya's Residence";
-	icon = 'icons/obj/doors/Dooralien_blue.dmi';
 	matchnames = list("Ikayatachati")
 	},
 /turf/simulated/floor/tiled/dark,
@@ -56379,7 +56348,7 @@ aaw
 jlm
 aad
 vVK
-hSs
+aas
 xAJ
 xxV
 tJx
