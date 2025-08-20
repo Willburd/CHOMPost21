@@ -21,16 +21,16 @@ GLOBAL_VAR_INIT(items_sold_shift_roundstat, 0)
 GLOBAL_VAR_INIT(disposals_flush_shift_roundstat, 0)
 GLOBAL_VAR_INIT(rocks_drilled_roundstat, 0)
 GLOBAL_VAR_INIT(mech_destroyed_roundstat, 0)
-GLOBAL_VAR_INIT(prey_eaten_roundstat, 0)		//VOREStation Edit - Obviously
-GLOBAL_VAR_INIT(prey_absorbed_roundstat, 0)		//VOREStation Edit - Obviously
-GLOBAL_VAR_INIT(prey_digested_roundstat, 0)		//VOREStation Edit - Obviously
-GLOBAL_VAR_INIT(items_digested_roundstat, 0)	//VOREStation Edit - Obviously
-GLOBAL_LIST_EMPTY(security_printer_tickets)		//VOREStation Edit
+GLOBAL_VAR_INIT(prey_eaten_roundstat, 0)
+GLOBAL_VAR_INIT(prey_absorbed_roundstat, 0)
+GLOBAL_VAR_INIT(prey_digested_roundstat, 0)
+GLOBAL_VAR_INIT(items_digested_roundstat, 0)
+GLOBAL_LIST_EMPTY(security_printer_tickets)
 GLOBAL_LIST_EMPTY(refined_chems_sold)
 GLOBAL_VAR_INIT(landmines_stepped_on_roundstat, 0)	//Outpost21 edit - oh boy
 GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 
-/hook/roundend/proc/RoundTrivia()//bazinga
+/datum/controller/subsystem/ticker/proc/RoundTrivia()//bazinga
 	var/list/valid_stats_list = list() //This is to be populated with the good shit
 
 	if(GLOB.lost_limbs_shift_roundstat > 1)
@@ -65,7 +65,6 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 		valid_stats_list.Add("[GLOB.gibber_fellin_roundstat] crew members were sacrificed to the gibber god of hydroponics!")
 	// outpost 21 add - end
 
-	//VOREStation add Start - Ticket time!
 	if(GLOB.security_printer_tickets.len)
 		valid_stats_list.Add(span_danger("[GLOB.security_printer_tickets.len] unique security tickets were issued today!") + "<br>Examples include:")
 		var/good_num = 5
@@ -82,7 +81,7 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 				good_num = 0
 
 	if(GLOB.prey_eaten_roundstat > 0)
-		valid_stats_list.Add("Individuals were eaten a total of [GLOB.prey_eaten_roundstat] times today!") //CHOMPEdit
+		valid_stats_list.Add("Individuals were eaten a total of [GLOB.prey_eaten_roundstat] times today!")
 	if(GLOB.prey_digested_roundstat > 0)
 		valid_stats_list.Add("A total of [GLOB.prey_digested_roundstat] individuals were digested today!")
 	if(GLOB.prey_absorbed_roundstat > 0)
@@ -125,7 +124,7 @@ GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 	// outpost 21 add end
 
 	if(LAZYLEN(valid_stats_list))
-		to_world(span_world("Shift trivia!"))
+		to_chat(world, span_world("Shift trivia!"))
 
 		for(var/body in valid_stats_list)
-			to_world(span_filter_system("[body]"))
+			to_chat(world, span_filter_system("[body]"))
