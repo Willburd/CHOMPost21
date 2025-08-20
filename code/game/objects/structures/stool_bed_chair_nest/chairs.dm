@@ -165,7 +165,7 @@
 	desc = "It's a rounded chair. It looks comfy."
 	icon_state = "roundedchair"
 	base_icon = "roundedchair"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit - These need to be base dmi
+	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - These need to be base dmi
 
 /obj/structure/bed/chair/comfy/rounded/brown/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_LEATHER)
@@ -289,7 +289,6 @@
 /obj/structure/bed/chair/sofa
 	name = "sofa"
 	desc = "It's a sofa. You sit on it. Possibly with someone else."
-	icon = 'icons/obj/sofas.dmi'
 	base_icon = "sofamiddle"
 	icon_state = "sofamiddle"
 	applies_material_colour = 1
@@ -343,7 +342,6 @@
 /obj/structure/bed/chair/sofa/pew
 	name = "pew bench"
 	desc = "If they want you to go to church, why do they make these so uncomfortable?"
-	icon = 'icons/obj/sofas.dmi' // Outpost 21 edit - use this not the override
 	base_icon = "pewmiddle"
 	icon_state = "pewmiddle"
 	applies_material_colour = FALSE
@@ -360,7 +358,6 @@
 /obj/structure/bed/chair/sofa/bench
 	name = "metal bench"
 	desc = "Almost as comfortable as waiting at a bus station for hours on end."
-	icon = 'icons/obj/sofas.dmi' // Outpost 21 edit - use this not the override
 	base_icon = "benchmiddle"
 	icon_state = "benchmiddle"
 	applies_material_colour = FALSE
@@ -398,7 +395,6 @@
 /obj/structure/bed/chair/sofa/corp
 	name = "black leather sofa"
 	desc = "How corporate!"
-	icon = 'icons/obj/sofas.dmi' // Outpost 21 edit - use this not the override
 	base_icon = "corp_sofamiddle"
 	icon_state = "corp_sofamiddle"
 	applies_material_colour = FALSE

@@ -156,7 +156,7 @@
 							sleep(50)
 							theAPC = null
 
-	// Outpost 21 edit begin - AI can hear ambiences
+	// Outpost 21 edit(port) begin - AI can hear ambiences
 	if(client)	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them, and do not have repeating ambience disabled.
 		handle_ambience()
 	// Outpost 21 edit end
@@ -187,7 +187,7 @@
 	..()
 	add_ai_verbs(src)
 
-// Outpost 21 edit begin - Allow AI to hear ambiences
+// Outpost 21 edit(port) begin - Allow AI to hear ambiences
 /mob/living/silicon/ai/handle_ambience(var/forced) // If you're in an ambient area and have not moved out of it for x time as configured per-client, and do not have it disabled, we're going to play ambience again to you, to help break up the silence.
 	var/pref = read_preference(/datum/preference/numeric/ambience_freq)
 	if(!pref)

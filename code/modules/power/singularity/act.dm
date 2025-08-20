@@ -79,7 +79,7 @@
 
 	SetUniversalState(/datum/universal_state/supermatter_cascade)
 
-	// Outpost 21 edit begin - spawn the bluespace void
+	// Outpost 21 edit(port) begin - spawn the bluespace void
 	var/turf/our = get_turf(src)
 	if(our)
 		for(var/level in using_map.event_levels)
@@ -131,8 +131,8 @@
 /mob/new_player/singuloCanEat()
 	return 0
 
-/turf/unsimulated/wall/supermatter/singuloCanEat() // Outpost 21 edit - stop eating bluespace!
+/turf/unsimulated/wall/supermatter/singuloCanEat() // Outpost 21 edit(port) - stop eating bluespace!
 	return 0
 
-/mob/obj/structure/stairs/singuloCanEat() // Outpost 21 edit - stop eating stairs!
+/mob/obj/structure/stairs/singuloCanEat() // Outpost 21 edit(port) - stop eating stairs!
 	return 0

@@ -194,7 +194,7 @@
 				// Using another species as base, doctors should know this to avoid some meds
 				occupantData["species"] = "[H.custom_species] \[Similar biology to [H.species.name]\]"
 
-		// Outpost 21 edit begin - Addictions
+		// Outpost 21 edit(port) begin - Addictions
 		var/has_withdrawl = FALSE
 		for(var/addic in H.get_all_addictions())
 			if(H.get_addiction_to_reagent(addic) > 0 && H.get_addiction_to_reagent(addic) < 80)
@@ -425,7 +425,7 @@
 					speciestext = "[H.custom_species] \[Similar biology to [H.species.name]\]"
 					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
 
-			// Outpost 21 edit begin - Addictions
+			// Outpost 21 edit(port) begin - Addictions
 			for(var/addic in H.get_all_addictions())
 				if(H.get_addiction_to_reagent(addic) > 0 && H.get_addiction_to_reagent(addic) < 80)
 					var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
@@ -639,7 +639,7 @@
 		if(hasMalignants != "")
 			dat += span_red("Unknown anatomy detected!") + "<BR>[hasMalignants]"
 		//CHOMPedit end
-		// Outpost 21 edit begin - addictions
+		// Outpost 21 edit(port) begin - addictions
 		if(has_withdrawl != "")
 			dat += span_red("Experiencing chemical withdrawal!") + "<BR>[has_withdrawl]"
 		// Outpost 21 edit end

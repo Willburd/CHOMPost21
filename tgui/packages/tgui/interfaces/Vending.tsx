@@ -29,8 +29,8 @@ type Data = {
   guestNotice: string;
   userMoney: number;
   user: { name: string; job: string };
-  cargo_configure: BooleanLike; // Outpost 21 edit - Cargo vendor configuring
-  forced_icon_path: string | null; // Outpost 21 edit - Cargo vendor sale icon override
+  cargo_configure: BooleanLike; // Outpost 21 edit(port) - Cargo vendor configuring
+  forced_icon_path: string | null; // Outpost 21 edit(port) - Cargo vendor sale icon override
 };
 
 type product = {
@@ -198,7 +198,7 @@ export const VendingProductsList = (props: { products: product[] }) => {
 
 const VendingRow = (props: { product: product }) => {
   const { act, data } = useBackend<Data>();
-  const { actively_vending, cargo_configure, forced_icon_path } = data; // Outpost 21 edit - Cargo vendor configuring, forced sale icons
+  const { actively_vending, cargo_configure, forced_icon_path } = data; // Outpost 21 edit(port) - Cargo vendor configuring, forced sale icons
   const { product } = props;
   return (
     <Table.Row className="candystripe">
@@ -247,7 +247,7 @@ const VendingRow = (props: { product: product }) => {
             })
           }
         >
-          {/* Outpost 21 edit begin - Cargo vendor configuring */}
+          {/* Outpost 21 edit(port) begin - Cargo vendor configuring */}
           {cargo_configure
             ? 'Set(' + product.price + '₮)'
             : product.price

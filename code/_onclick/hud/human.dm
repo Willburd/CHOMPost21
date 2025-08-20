@@ -410,7 +410,7 @@
 	name = "chemical storage"
 	icon_state = "power_display"
 
-// Outpost 21 edit begin - borer fixes
+// Outpost 21 edit(port) begin - borer fixes
 /obj/screen/borer
 	invisibility = 101
 

@@ -76,7 +76,7 @@
 		return
 	if(!output_dest)
 		return
-	// Outpost 21 edit begin - Windows can be clicked to clean their turf
+	// Outpost 21 edit(port) begin - Windows can be clicked to clean their turf
 	if(istype(target,/obj/structure/window) || istype(target,/obj/structure/grille))
 		target = get_turf(target)
 	// Outpost 21 edit end

@@ -7,7 +7,7 @@
 
 	for(var/obj/machinery/power/smes/S in GLOB.smeses)
 		var/area/current_area = get_area(S)
-		if((current_area.type in skipped_areas) || !(S.z in using_map.event_levels)) // Outpost 21 edit - Use event levels
+		if((current_area.type in skipped_areas) || !(S.z in using_map.event_levels)) // Outpost 21 edit(port) - Use event levels
 			continue
 		S.last_charge			= S.charge
 		S.last_output_attempt	= S.output_attempt

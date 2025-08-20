@@ -95,13 +95,13 @@
 		OX = fake_oxy > 50 			? 	span_bold("[fake_oxy]") 			: fake_oxy
 		dat += span_notice("Analyzing Results for [M]:")
 		dat += "<br>"
-		if(advscan >= 2) // Outpost 21 edit - show custom species
+		if(advscan >= 2) // Outpost 21 edit(port) - show custom species
 			dat += "\tSapient Species: [speciesdata]<br>"
 		dat += span_notice("Overall Status: dead")
 		dat += "<br>"
 	else
 		analyzed_results += "Analyzing Results for [M]:\n\t Overall Status: [M.stat > 1 ? "dead" : "[round((M.health/M.getMaxHealth())*100) ]% healthy"]<br>"
-		if(advscan >= 2) // Outpost 21 edit - show custom species
+		if(advscan >= 2) // Outpost 21 edit(port) - show custom species
 			analyzed_results += "\tSapient Species: [speciesdata]<br>"
 	analyzed_results += "\tKey: [span_cyan("Suffocation")]/[span_green("Toxin")]/[span_orange("Burns")]/[span_red("Brute")]<br>"
 	analyzed_results += "\tDamage Specifics: [span_cyan("[OX]")] - [span_green("[TX]")] - [span_orange("[BU]")] - [span_red("[BR]")]<br>"
@@ -285,7 +285,7 @@
 		dat += "<br>"
 //	if (M.reagents && M.reagents.get_reagent_amount(REAGENT_ID_INAPROVALINE))
 //		user.show_message(span_notice("Bloodstream Analysis located [M.reagents:get_reagent_amount(REAGENT_ID_INAPROVALINE)] units of rejuvenation chemicals."))
-	if (advscan >= 2 && M.has_brain_worms()) // Outpost 21 edit - locked behind phasic to aid borer's painful gameplay
+	if (advscan >= 2 && M.has_brain_worms()) // Outpost 21 edit(port) - locked behind phasic to aid borer's painful gameplay
 		dat += span_warning("Subject suffering from aberrant brain activity. Recommend further scanning.")
 		dat += "<br>"
 	else if (M.getBrainLoss() >= 60 || !M.has_brain())

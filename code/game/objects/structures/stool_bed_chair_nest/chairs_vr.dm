@@ -61,11 +61,11 @@
 	// Strings.
 	desc = initial(desc)
 	if(padding_material)
-		if(!override_name) // Outpost 21 edit - Keep set map names
+		if(!override_name) // Outpost 21 edit(port) - Keep set map names
 			name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
 		desc += " It's made of [material.use_name] and covered with [padding_material.use_name]."
 	else
-		if(!override_name) // Outpost 21 edit - Keep set map names
+		if(!override_name) // Outpost 21 edit(port) - Keep set map names
 			name = "[material.display_name] [initial(name)]"
 		desc += " It's made of [material.use_name]."
 

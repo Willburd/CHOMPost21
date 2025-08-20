@@ -435,7 +435,7 @@
 	return
 
 
-// Outpost 21 edit begin - Help intent only prods instead of bonks
+// Outpost 21 edit(port) begin - Help intent only prods instead of bonks
 /obj/item/stack/attack(mob/living/M as mob, mob/living/user as mob)
 	// prodding on help intent, ignored for borgs and bots because of endless coding stupidity.
 	if(M != user && !issilicon(M) && !isbot(M) && user.a_intent == I_HELP)

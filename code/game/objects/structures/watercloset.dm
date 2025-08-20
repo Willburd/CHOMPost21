@@ -265,7 +265,7 @@
 
 	O.wash(CLEAN_SCRUB)
 
-	// Outpost 21 edit begin - splash monkey cubes
+	// Outpost 21 edit(port) begin - splash monkey cubes
 	if(istype(O,/obj/item/storage/box/monkeycubes))
 		var/obj/item/storage/box/monkeycubes/M = O
 		M.soaked()
@@ -273,7 +273,7 @@
 		var/obj/item/reagent_containers/food/snacks/monkeycube/C = O
 		C.soaked()
 	// Outpost 21 edit end
-	
+
 	reagents.splash(O, 10, min_spill = 0, max_spill = 0)
 
 /obj/machinery/shower/process()
@@ -293,7 +293,7 @@
 	is_washing = 1
 	var/turf/T = get_turf(src)
 	T.wash(CLEAN_SCRUB)
-	reagents.splash(T, 10, min_spill = 0, max_spill = 0) // Outpost 21 edit - Fire suppression sprinklers
+	reagents.splash(T, 10, min_spill = 0, max_spill = 0) // Outpost 21 edit(port) - Fire suppression sprinklers
 	addtimer(VARSET_CALLBACK(src, is_washing, 0), 100, TIMER_DELETE_ME)
 
 /obj/machinery/shower/proc/process_heat(mob/living/M)

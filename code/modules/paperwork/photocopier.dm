@@ -298,7 +298,7 @@
 				temp_img = icon('icons/obj/butts_vr.dmi', "vulp") // placeholder until we get fennec butts.
 			if(SPECIES_AKULA)
 				temp_img = icon('icons/obj/butts_vr.dmi', "xeno") // placeholder until we get proper sharkbutt. AKULA BE THICC ASS SHARKS MMMMMMMMMMMMMMKAY?
-			// Outpost 21 edit begin - New butts by Meek!
+			// Outpost 21 edit(port) begin - New butts by Meek!
 			if(SPECIES_TESHARI)
 				temp_img = icon('modular_outpost/icons/obj/butts.dmi', "tesh")
 			if(SPECIES_SERGAL)

@@ -65,7 +65,7 @@ GLOBAL_LIST_INIT(item_vore_blacklist, list(
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/disk/nuclear,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz,
-		/obj/item/airlock_brace)) // Outpost 21 edit - doorbraces too
+		/obj/item/airlock_brace)) // Outpost 21 edit(port) - doorbraces too
 
 //Classic Vore sounds
 GLOBAL_LIST_INIT(classic_vore_sounds, list(

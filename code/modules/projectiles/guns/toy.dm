@@ -326,7 +326,7 @@
 	icon_state = "redtwo"
 	item_state = "retro"
 
-// Outpost 21 edit begin - Lasertag omni
+// Outpost 21 edit(port) begin - Lasertag omni
 /obj/item/gun/energy/lasertag/omni
 	icon_state = "omnitag"
 	item_state = "omnitag"

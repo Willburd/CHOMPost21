@@ -44,7 +44,7 @@
 			for(var/mob/O in viewers(src, null))
 				O.show_message(span_warning("[user] cuts the cable."), 1)
 
-			if(broken) // Outpost 21 edit - Broken wires
+			if(broken) // Outpost 21 edit(port) - Broken wires
 				unfray()
 
 			qdel(src)

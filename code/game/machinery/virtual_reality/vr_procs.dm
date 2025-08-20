@@ -82,7 +82,7 @@
 	add_verb(avatar,/mob/living/carbon/human/proc/vr_transform_into_mob)
 	add_verb(avatar,/mob/living/proc/set_size)
 	avatar.virtual_reality_mob = TRUE
-	avatar.equip_survival_tanks(TRUE) // Outpost 21 edit - so non-oxy breathers don't die horribly
+	avatar.equip_survival_tanks(TRUE) // Outpost 21 edit(port) - so non-oxy breathers don't die horribly
 	log_and_message_admins("[key_name_admin(avatar)] joined virtual reality from the ghost menu.")
 
 	var/newname = tgui_input_text(avatar, "You are entering virtual reality. Your username is currently [src.name]. Would you like to change it to something else?", "Name change", null, MAX_NAME_LEN)

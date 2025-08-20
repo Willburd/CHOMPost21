@@ -14,7 +14,7 @@ SUBSYSTEM_DEF(persistence)
 	var/list/obj/structure/sign/painting/painting_frames = list()
 	var/list/all_paintings = list()
 	var/list/unpicked_paintings = list()
-	var/list/all_books = list() // Outpost 21 edit - Books to SSpersistence
+	var/list/all_books = list() // Outpost 21 edit(port) - Books to SSpersistence
 
 /datum/controller/subsystem/persistence/Initialize()
 	for(var/datum/persistent/P as anything in subtypesof(/datum/persistent))

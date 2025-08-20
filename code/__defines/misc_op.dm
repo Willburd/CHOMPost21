@@ -6,4 +6,4 @@
 #define JOB_STOWAWAY            "Stowaway"
 
 // area bitflag
-#define AREA_FIRE_SUPRESSION		0x8000	// Outpost 21 edit - Fire sprinklers
+#define AREA_FIRE_SUPRESSION		0x8000	// Outpost 21 edit(port) - Fire sprinklers

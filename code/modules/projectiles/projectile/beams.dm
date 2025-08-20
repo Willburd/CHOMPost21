@@ -236,7 +236,7 @@
 /obj/item/projectile/beam/lasertag/blue/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag) || istype(M.wear_suit, /obj/item/clothing/suit/redtag)) // Outpost 21 edit - Omnitag
+		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag) || istype(M.wear_suit, /obj/item/clothing/suit/redtag)) // Outpost 21 edit(port) - Omnitag
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
 			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
@@ -252,7 +252,7 @@
 /obj/item/projectile/beam/lasertag/blue/multihit/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		// Outpost 21 edit begin - Omnitag
+		// Outpost 21 edit(port) begin - Omnitag
 		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag))
 			var/obj/item/clothing/suit/omnitag/S = M.wear_suit
 			if (S.lasertag_health <= 1)
@@ -282,7 +282,7 @@
 /obj/item/projectile/beam/lasertag/red/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag) || istype(M.wear_suit, /obj/item/clothing/suit/bluetag)) // Outpost 21 edit - Omnitag
+		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag) || istype(M.wear_suit, /obj/item/clothing/suit/bluetag)) // Outpost 21 edit(port) - Omnitag
 			M.Weaken(5)
 			// CHOMPEdit Start - The thing just to drop the ball if hit
 			if(istype(M.l_hand, /obj/item/laserdome_hyperball))
@@ -298,7 +298,7 @@
 /obj/item/projectile/beam/lasertag/red/multihit/on_hit(var/atom/target, var/blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
-		// Outpost 21 edit begin - Omnitag
+		// Outpost 21 edit(port) begin - Omnitag
 		if(istype(M.wear_suit, /obj/item/clothing/suit/omnitag))
 			var/obj/item/clothing/suit/omnitag/S = M.wear_suit
 			if (S.lasertag_health <= 1)
@@ -322,7 +322,7 @@
 
 /obj/item/projectile/beam/lasertag/omni//A laser tag bolt that stuns EVERYONE
 	icon_state = "omnilaser"
-	// light_color = "#00C6FF" // Outpost 21 edit - Use purble
+	// light_color = "#00C6FF" // Outpost 21 edit(port) - Use purble
 	light_color = "#AA24AF"
 	hud_state = "monkey"
 
@@ -343,7 +343,7 @@
 			// CHOMPEdit End
 	return 1
 
-// Outpost 21 edit begin - Multihit omnitag
+// Outpost 21 edit(port) begin - Multihit omnitag
 /obj/item/projectile/beam/lasertag/omni/multhit
 	name = "omni multi-hit lasertag beam"
 

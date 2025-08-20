@@ -98,7 +98,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/weldermes = "USER lights NAME with FLAME"
 	var/ignitermes = "USER lights NAME with FLAME"
 	var/brand
-	var/cigar_counter = 0 // Outpost 21 edit - Cigars dispense reagents over longer periods, using a timer
+	var/cigar_counter = 0 // Outpost 21 edit(port) - Cigars dispense reagents over longer periods, using a timer
 	blood_sprite_state = null //Can't bloody these
 	drop_sound = 'sound/items/cigs_lighters/cig_snuff.ogg'
 
@@ -119,7 +119,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(ishuman(loc))
 			var/mob/living/carbon/human/C = loc
 			if (src == C.wear_mask && C.check_has_mouth()) // if it's in the human/monkey mouth, transfer reagents to the mob
-				// Outpost 21 edit begin - Increase cigar nicotine use time, as they are expected to last much longer
+				// Outpost 21 edit(port) begin - Increase cigar nicotine use time, as they are expected to last much longer
 				if(istype(src,/obj/item/clothing/mask/smokable/cigarette/cigar))
 					// We do this weird order of incrementing the timer so that we can trigger first puff instantly!
 					var/smoke_rate = max_smoketime / 10 // Seemed a good rate based on highest value cigar at 2200 - Willbird
@@ -392,8 +392,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	has become slightly bastardized over the years, overall quality has remained \
 	relatively the same, even if there is a large quantity of 'Havanian' cigars."
 	icon_state = "cigar2"
-	max_smoketime = 2200 // Outpost 21 edit - Addition code can't keep up
-	smoketime = 2200 // Outpost 21 edit - Addition code can't keep up
+	max_smoketime = 2200 // Outpost 21 edit(port) - Addiction code can't keep up
+	smoketime = 2200 // Outpost 21 edit(port) - Addiction code can't keep up
 	chem_volume = 30
 	nicotine_amt = 10
 

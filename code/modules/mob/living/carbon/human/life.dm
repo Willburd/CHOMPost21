@@ -184,7 +184,7 @@
 	if(stat != CONSCIOUS) //Let's not worry about tourettes if you're not conscious.
 		return
 
-	// outpost 21 edit begin - Major disabilities rework
+	// outpost 21 edit(port) begin - Major disabilities rework
 	handle_outpost_medications()
 	// outpost 21 edit end
 
@@ -1157,15 +1157,15 @@
 					if(src.species && src.species.get_bodytype() != "Vox" && src.species.get_bodytype() != "Shadekin" && src.species.phoron_contact_mod > 0)	// Outpost 21 edit - phoron contact mod
 						// This is hacky, I'm so sorry.
 						if(I != l_hand && I != r_hand)	//If the item isn't in your hands, you're probably wearing it. Full damage for you.
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * src.species.phoron_contact_mod  // Outpost 21 edit - phoron contact mod
+							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 						else if(I == l_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
 							var/l_hand_blocked = 0
 							l_hand_blocked = 1-(100-getarmor(BP_L_HAND, "bio"))/100	//This should get a number between 0 and 1
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * l_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit - phoron contact mod
+							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * l_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 						else if(I == r_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
 							var/r_hand_blocked = 0
 							r_hand_blocked = 1-(100-getarmor(BP_R_HAND, "bio"))/100	//This should get a number between 0 and 1
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * r_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit - phoron contact mod
+							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * r_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 			if(total_phoronloss)
 				adjustToxLoss(total_phoronloss)
 
@@ -1664,7 +1664,7 @@
 					if(item.zoom)
 						item.zoom()
 						break
-				// Outpost 21 edit begin - drop vehicle views
+				// Outpost 21 edit(port) begin - drop vehicle views
 				if(istype(buckled,/obj/structure/bed/chair/vehicle_interior_seat))
 					var/obj/structure/bed/chair/vehicle_interior_seat/VC = buckled
 					VC.paired_console.clean_all_viewers()
@@ -1728,7 +1728,7 @@
 			if(!isnull(M.vision_flags))
 				sight |= M.vision_flags
 
-		// Outpost 21 edit begin - nocturnol
+		// Outpost 21 edit(port) begin - nocturnol
 		if(species.reagent_tag != IS_DIONA && see_in_dark < 8 && bloodstr.has_reagent(REAGENT_ID_NOCTURNOL))
 			see_in_dark = 8
 		// Outpost 21 edit end

@@ -2,7 +2,7 @@
 	icon = 'modular_chomp/icons/obj/machines/other.dmi'
 	icon_state = "cronchy_off"
 	name = "garbage grinder"
-	desc = "Mind your fingers. Filter access hatch can be opened with crowbar to release trapped contents within. It also has a fluid trap that can be drained with a hose into something else." // Outpost 21 edit - internal reagent grinding tank
+	desc = "Mind your fingers. Filter access hatch can be opened with crowbar to release trapped contents within. It also has a fluid trap that can be drained with a hose into something else." // Outpost 21 edit(port) - internal reagent grinding tank
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	anchored = TRUE
@@ -16,7 +16,7 @@
 
 /obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
-	// Outpost 21 edit begin - internal reagent grinding tank
+	// Outpost 21 edit(port) begin - internal reagent grinding tank
 	create_reagents(CARGOTANKER_VOLUME * 4)
 	AddComponent(/datum/component/hose_connector/output)
 	// Outpost 21 edit end
@@ -32,7 +32,7 @@
 			break
 	return
 
-// Outpost 21 edit begin - internal reagent grinding tank
+// Outpost 21 edit(port) begin - internal reagent grinding tank
 /obj/machinery/v_garbosystem/Destroy()
 	crusher = null
 	button = null
@@ -100,7 +100,7 @@
 							playsound(src, 'sound/effects/splat.ogg', 50, 1)
 							L.gib()
 							items_taken++
-							// Outpost 21 edit begin - internal reagent grinding tank
+							// Outpost 21 edit(port) begin - internal reagent grinding tank
 							transfer_organic_to_tank(5)
 							if(ishuman(L))
 								// Splorch
@@ -121,7 +121,7 @@
 						A.SpinAnimation(5,3)
 						spawn(15)
 							if(A.loc == loc)
-								// Outpost 21 edit begin - internal reagent grinding tank
+								// Outpost 21 edit(port) begin - internal reagent grinding tank
 								if(A.reagents)
 									transfer_reagent_to_tank(A.reagents,1)
 								if(istype(A,/obj/item/ore))
@@ -136,7 +136,7 @@
 						spawn(15)
 							if(A)
 								A.forceMove(src)
-								// Outpost 21 edit begin - internal reagent grinding tank
+								// Outpost 21 edit(port) begin - internal reagent grinding tank
 								if(A.reagents)
 									transfer_reagent_to_tank(A.reagents,1)
 								// Outpost 21 end
@@ -167,7 +167,7 @@
 			to_chat(user, "Unable to empty filter while the machine is running.")
 	return ..()
 
-// Outpost 21 edit begin - internal reagent grinding tank
+// Outpost 21 edit(port) begin - internal reagent grinding tank
 /obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(var/datum/reagents/reg,var/multiplier)
 	var/volume_magic = reg.total_volume * multiplier
 	volume_magic -= rand(2,10) // reagent tax

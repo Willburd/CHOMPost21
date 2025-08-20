@@ -117,7 +117,7 @@
 				..()
 		else
 			..()
-	/* Outpost 21 edit - This feature doesn't even work
+	/* Outpost 21 edit(port) - This feature doesn't even work
 	else if(istype(W,/obj/item/grab))
 		if((state == 1) && hacked)
 			var/obj/item/grab/G = W

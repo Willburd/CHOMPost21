@@ -38,11 +38,11 @@
 	var/exclusive
 	var/falloff // CHOMPEdit: Add Falloff
 	var/volume_chan
-	var/extends_time // Outpost 21 edit
+	var/extends_time // Outpost 21 edit(port)
 
 	var/timerid
 	var/started
-	var/refreshed // Outpost 21 edit
+	var/refreshed // Outpost 21 edit(port)
 
 /datum/looping_sound/New(list/_output_atoms=list(), start_immediately=FALSE, disable_direct=FALSE)
 	if(!mid_sounds)
@@ -66,7 +66,7 @@
 		return //Chomp runtime
 	if(add_thing)
 		output_atoms |= add_thing
-	// Outpost 21 edit begin - Extending runtime loops
+	// Outpost 21 edit(port) begin - Extending runtime loops
 	if(extends_time && max_loops)
 		refreshed = TRUE
 	// Outpost 21 edit end
@@ -93,7 +93,7 @@
 	started = FALSE
 
 /datum/looping_sound/proc/sound_loop(starttime)
-	// Outpost 21 edit begin - Extending runtime loops
+	// Outpost 21 edit(port) begin - Extending runtime loops
 	if(refreshed)
 		starttime = world.time
 		refreshed = FALSE

@@ -4,7 +4,7 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 	/obj/item/storage/pouch/holding,
 	/obj/item/storage/belt/utility/holding,
 	/obj/item/storage/belt/medical/holding,
-	// Outpost 21 edit begin - missing bluespace item
+	// Outpost 21 edit(port) begin - missing bluespace item
 	/obj/item/clothing/accessory/storage/bluespace,
 	/obj/item/storage/bag/ore/holding,
 	/obj/item/clothing/gloves/bluespace,

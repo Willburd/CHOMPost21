@@ -82,7 +82,7 @@ var/list/all_maps = list()
 	var/list/mining_outpost_z = list()
 	//VOREStation Addition End
 
-	// Outpost 21 edit begin - custom zlevel lists
+	// Outpost 21 edit(port) begin - custom zlevel lists
 	var/static/list/event_levels = list() // Events happen on these levels, even if not part of station!
 	var/static/list/forced_airmix_levels = list() // z-levels where airmix slowly resets if outdoors, prevents saturating the atmosphere
 	var/static/list/deadly_fall_levels = list() // List of levels where mapping or other similar devices might work fully
@@ -143,7 +143,7 @@ var/list/all_maps = list()
 
 	var/list/planet_datums_to_make = list() // Types of `/datum/planet`s that will be instantiated by SSPlanets.
 
-	// Outpost 21 edit begin - Custom ores per map
+	// Outpost 21 edit(port) begin - Custom ores per map
 	var/list/rare_ore_levels = list()
 	var/common_ores = list(ORE_MARBLE = 3,/* ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 15*/, ORE_URANIUM = 10, ORE_PLATINUM = 10, ORE_HEMATITE = 70, ORE_RUTILE = 15, ORE_CARBON = 70, ORE_DIAMOND = 2, ORE_GOLD = 10, ORE_SILVER = 10, ORE_PHORON = 20, ORE_LEAD = 3,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 1/*, ORE_PAINITE = 1*/)
 	var/rare_ores = list(ORE_MARBLE = 5,/* ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5*/, ORE_URANIUM = 15, ORE_PLATINUM = 20, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 15, ORE_DIAMOND = 3, ORE_GOLD = 15, ORE_SILVER = 15, ORE_PHORON = 25, ORE_LEAD = 5,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 2/*, ORE_PAINITE = 1*/)
@@ -164,7 +164,7 @@ var/list/all_maps = list()
 		persist_levels = station_levels.Copy()
 	if(!mappable_levels?.len)
 		mappable_levels = station_levels.Copy()
-	// Outpost 21 edit begin - Event levels auto-fill as station levels if non exist
+	// Outpost 21 edit(port) begin - Event levels auto-fill as station levels if non exist
 	if(!event_levels?.len)
 		event_levels = station_levels.Copy()
 	// Outpost 21 edit end
@@ -367,7 +367,7 @@ var/list/all_maps = list()
 		map.accessible_z_levels["[z]"] = transit_chance
 	if(flags & MAP_LEVEL_MAPPABLE)
 		map.mappable_levels |= z
-	// Outpost 21 edit begin - Event levels and auto-clear
+	// Outpost 21 edit(port) begin - Event levels and auto-clear
 	if(flags & MAP_LEVEL_EVENTS)
 		map.event_levels += z
 	if(flags & MAP_LEVEL_AIRMIX_CLEANS)

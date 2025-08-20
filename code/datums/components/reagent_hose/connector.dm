@@ -275,7 +275,7 @@
 	return C.udder
 
 
-// Outpost 21 edit begin - Experimental sleepers with hose outputs
+// Outpost 21 edit(port) begin - Experimental sleepers with hose outputs
 /datum/component/hose_connector/output/medical_sleeper/connected_reagents()
 	var/obj/machinery/sleeper/S = carrier
 	return S.beaker?.reagents

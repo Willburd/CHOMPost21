@@ -193,7 +193,7 @@
 	return tagged_message
 
 /mob/proc/hear_radio(var/list/message_pieces, var/verb = "says", var/part_a, var/part_b, var/part_c, var/part_d, var/part_e, var/mob/speaker = null, var/hard_to_hear = 0, var/vname = "")
-	// Outpost 21 edit begin - Translators hear through radios
+	// Outpost 21 edit(port) begin - Translators hear through radios
 	translator_proxy_hear(message_pieces,verb,speaker)
 	// Outpost 21 edit end
 	if(!client)

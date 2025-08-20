@@ -60,7 +60,7 @@
 	else
 		if (has_power)
 			to_chat(src, span_red("You are now running on emergency backup power."))
-			// Outpost 21 edit begin - Disable all items so that they don't vanish from your inventory
+			// Outpost 21 edit(port) begin - Disable all items so that they don't vanish from your inventory
 			var/current_selection_index = get_selected_module() // Will be 0 if nothing is selected.
 			var/i = 0
 			for(var/thing in list(module_state_1, module_state_2, module_state_3))

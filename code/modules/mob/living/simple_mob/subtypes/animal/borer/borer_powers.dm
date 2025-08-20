@@ -77,8 +77,8 @@
 		to_chat(src, span_warning("You cannot infest someone who is already infested!"))
 		return
 
-	var/entering_timer = 30 // Outpost 21 edit begin - borer fixes
-	var/protected = FALSE  // Outpost 21 edit begin - borer fixes
+	var/entering_timer = 30 // Outpost 21 edit(port) begin - borer fixes
+	var/protected = FALSE  // Outpost 21 edit(port) begin - borer fixes
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 
@@ -91,18 +91,18 @@
 			return
 
 		if(H.check_head_coverage())
-			to_chat(src, span_warning("You begin to eat through \the [H]'s protection or find another way inside.")) // Outpost 21 edit begin - borer fixes
-			entering_timer = 55 // Outpost 21 edit begin - borer fixes
-			protected = TRUE  // Outpost 21 edit begin - borer fixes
+			to_chat(src, span_warning("You begin to eat through \the [H]'s protection or find another way inside.")) // Outpost 21 edit(port) begin - borer fixes
+			entering_timer = 55 // Outpost 21 edit(port) begin - borer fixes
+			protected = TRUE  // Outpost 21 edit(port) begin - borer fixes
 			// return
 
-	if(!protected) // Outpost 21 edit begin - borer fixes
+	if(!protected) // Outpost 21 edit(port) begin - borer fixes
 		to_chat(M, "Something slimy begins probing at the opening of your ear canal...")
 	else
-		to_chat(M, "Something slimy begins trying to find a way past your protective gear...") // Outpost 21 edit begin - borer fixes
+		to_chat(M, "Something slimy begins trying to find a way past your protective gear...") // Outpost 21 edit(port) begin - borer fixes
 	to_chat(src, span_warning("You slither up [M] and begin probing at their ear canal..."))
 
-	if(!do_after(src,entering_timer)) // Outpost 21 edit begin - borer fixes
+	if(!do_after(src,entering_timer)) // Outpost 21 edit(port) begin - borer fixes
 		to_chat(src, span_warning("As [M] moves away, you are dislodged and fall to the ground."))
 		return
 
@@ -123,7 +123,7 @@
 		//Update their traitor status.
 		if(host.mind)
 			borers.add_antagonist_mind(host.mind, 1, borers.faction_role_text, borers.faction_welcome)
-			// Outpost 21 edit begin - Make it clear to the player not to scream on radio instantly
+			// Outpost 21 edit(port) begin - Make it clear to the player not to scream on radio instantly
 			tgui_alert(host, "You have been infested by a cortical borer, and are now held hostage by a brain worm. Please listen to what they have to say; they're in your head. Shouting over radio that you've been infected is probably a bad idea...", "Borer Infestation", list("Ok"))
 			// Outpost 21 edit end
 
@@ -232,7 +232,7 @@
 		to_chat(src,  span_warning(span_blue("You are feeling far too docile to do that.")))
 		return
 
-	// Outpost 21 edit begin - borer fixes
+	// Outpost 21 edit(port) begin - borer fixes
 	var/chems_used = 50
 	if(chemicals < chems_used)
 		to_chat(src,  span_warning("You don't have enough chemicals!"))
@@ -303,7 +303,7 @@
 		return
 
 	to_chat(src, span_bolddanger("You squirt a measure of [chem] from your reservoirs into [host]'s bloodstream."))
-	host.reagents.add_reagent(chem, injectsize) // Outpost 21 edit - borer fixes
+	host.reagents.add_reagent(chem, injectsize) // Outpost 21 edit(port) - borer fixes
 	chemicals -= chems_used
 
 /mob/living/simple_mob/animal/borer/verb/dominate_victim()
@@ -323,9 +323,9 @@
 		to_chat(src, span_warning("You cannot do that in your current state."))
 		return
 
-	var/attack_range = 5 // Outpost 21 edit - borer fixes, attack range
+	var/attack_range = 5 // Outpost 21 edit(port) - borer fixes, attack range
 	var/list/choices = list()
-	for(var/mob/living/carbon/C in view(attack_range,src)) // Outpost 21 edit - borer fixes, attack range
+	for(var/mob/living/carbon/C in view(attack_range,src)) // Outpost 21 edit(port) - borer fixes, attack range
 		if(C.stat != 2)
 			choices += C
 
@@ -333,7 +333,7 @@
 		to_chat(src, span_warning("You cannot use that ability again so soon."))
 		return
 
-	// Outpost 21 edit begin - borer fixes, no targets
+	// Outpost 21 edit(port) begin - borer fixes, no targets
 	if(!choices.len)
 		to_chat(src, "<span class='notice'>There are no viable targets within range...</span>")
 		return
@@ -345,7 +345,7 @@
 
 	if(!M || !src) return
 
-	// Outpost 21 edit begin - borer fixes, target lost
+	// Outpost 21 edit(port) begin - borer fixes, target lost
 	if(!(M in view(attack_range,src)))
 		to_chat(src, "<span class='warning'>\The [M] escaped your influence...</span>")
 		return
@@ -357,7 +357,7 @@
 
 	to_chat(src, span_red("You focus your psychic lance on [M] and freeze their limbs with a wave of terrible dread."))
 	to_chat(M, span_red("You feel a creeping, horrible sense of dread come over you, freezing your limbs and setting your heart racing."))
-	// Outpost 21 edit begin - borer fixes, host needs to sleep to avoid radio screaming that ruins the borer interactions
+	// Outpost 21 edit(port) begin - borer fixes, host needs to sleep to avoid radio screaming that ruins the borer interactions
 	M.Sleeping(30)
 	// Outpost 21 edit end
 
@@ -443,7 +443,7 @@
 		to_chat(src, "Your host is already alive.")
 		return
 
-	// Outpost 21 edit begin - borer fixes
+	// Outpost 21 edit(port) begin - borer fixes
 	if(HUSK in mutations)
 		to_chat(src, "Your host is too destroyed to revive.")
 		return

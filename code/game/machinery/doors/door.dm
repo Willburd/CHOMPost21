@@ -78,7 +78,7 @@
 	density = FALSE
 	update_nearby_tiles()
 	. = ..()
-	// Outpost 21 edit begin - Trigger claymores if door is destroyed
+	// Outpost 21 edit(port) begin - Trigger claymores if door is destroyed
 	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
 	if(las)
 		las.Trigger(src)
@@ -408,7 +408,7 @@
 	set_opacity(0)
 	operating = 0
 
-	// Outpost 21 edit begin - Trigger claymores if doors open
+	// Outpost 21 edit(port) begin - Trigger claymores if doors open
 	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
 	if(las)
 		addtimer(CALLBACK(las, TYPE_PROC_REF(/obj/effect/step_trigger/claymore_laser,Trigger), src), 5)
@@ -468,14 +468,13 @@
 	if(fire)
 		qdel(fire)
 
-	// Outpost 21 edit begin - Same as fire above, but for claymores
+	// Outpost 21 edit(port) begin - Same as fire above, but for claymores
 	var/obj/effect/step_trigger/claymore_laser/las = locate() in loc
 	if(las)
 		addtimer(CALLBACK(las, TYPE_PROC_REF(/obj/effect/step_trigger/claymore_laser,Trigger), src), 1)
 	// Outpost 21 edit end
 
 	return 1
-// Outpost 21 edit end
 
 /obj/machinery/door/proc/requiresID()
 	return 1

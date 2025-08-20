@@ -52,8 +52,8 @@
 	icon_state = "utility"
 	can_hold = list(
 		///obj/item/combitool,
-		/obj/item/reagent_scanner, 		// Outpost 21 edit - for industrial refinery
-		/obj/item/reagent_scanner/adv,	// Outpost 21 edit - for industrial refinery
+		/obj/item/reagent_scanner, 		// Outpost 21 edit(port) - for industrial refinery
+		/obj/item/reagent_scanner/adv,	// Outpost 21 edit(port) - for industrial refinery
 		/obj/item/tool/crowbar,
 		/obj/item/tool/screwdriver,
 		/obj/item/weldingtool,

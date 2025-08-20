@@ -969,7 +969,7 @@
 		return
 	var/list/creatures = list()
 	for(var/mob/living/carbon/h in GLOB.mob_list)
-		if(h == src || istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit - autodocs hidden
+		if(h == src || istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit(port) - autodocs hidden
 			continue
 		creatures += h
 	var/mob/target = tgui_input_list(src, "Who do you want to project your mind to?", "Project Mind", creatures)
@@ -1012,7 +1012,7 @@
 			continue
 		if(h == src) // Traitgenes edit - Don't target self
 			continue
-		if(istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit - forbid autodoc
+		if(istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit(port) - forbid autodoc
 			continue
 		if(!((temp_turf.z in using_map.station_levels) || current.z == temp_turf.z) || h.stat!=CONSCIOUS) // Needs to be on station or same z to perform telepathy
 			continue

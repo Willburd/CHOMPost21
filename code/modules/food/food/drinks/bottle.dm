@@ -199,7 +199,7 @@
 		icon_rotation = spin_rotation
 		update_transform()
 
-// Outpost 21 edit begin - Altclick spins bottles without context menu
+// Outpost 21 edit(port) begin - Altclick spins bottles without context menu
 /obj/item/reagent_containers/food/drinks/bottle/AltClick(mob/user)
 	spin_bottle()
 // Outpost 21 edit end

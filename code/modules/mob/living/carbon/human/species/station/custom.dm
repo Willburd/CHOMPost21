@@ -97,7 +97,7 @@
 /datum/species/custom/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0, var/comprehensive = 0)
 	. = ..()
 
-	/* Outpost 21 edit - we use our own tank code
+	/* Outpost 21 edit(port) - we use our own tank code
 	if(breath_type != GAS_O2)
 		H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 		var/obj/item/tank/tankpath

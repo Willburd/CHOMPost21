@@ -27,7 +27,7 @@
 	contains = list(
 			/obj/item/storage/box/emps,
 			/obj/item/grenade/smokebomb = 4,
-			/obj/item/grenade/dephasing = 4, // Outpost 21 edit - Dephasing grenades
+			/obj/item/grenade/dephasing = 4, // Outpost 21 edit(port) - Dephasing grenades
 			/obj/item/grenade/chem_grenade/incendiary
 			)
 	cost = 25
