@@ -2395,12 +2395,7 @@
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
 "aFa" = (
-/obj/structure/showcase{
-	desc = "It looks almost lifelike.";
-	icon = 'icons/obj/statue.dmi';
-	icon_state = "hos";
-	name = "Statue"
-	},
+/obj/structure/prop/statue/jumpscare,
 /turf/simulated/floor/beach/sand/desert{
 	desc = "Sand."
 	},

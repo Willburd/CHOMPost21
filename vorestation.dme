@@ -4793,6 +4793,7 @@
 #include "code\modules\vore\fluffstuff\custom_boxes_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_clothes_ch.dm"
 #include "code\modules\vore\fluffstuff\custom_clothes_vr.dm"
+#include "code\modules\vore\fluffstuff\custom_furniture_yw.dm"
 #include "code\modules\vore\fluffstuff\custom_implants_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_items_vr.dm"
 #include "code\modules\vore\fluffstuff\custom_items_yw.dm"
