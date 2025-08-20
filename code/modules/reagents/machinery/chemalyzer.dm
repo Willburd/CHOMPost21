@@ -89,7 +89,7 @@
 		subdata["cooling_mod"] = R.coolant_modifier
 		if(R.id in get_addictive_reagents(ADDICT_ALL))
 			subdata["addictive"] = TRUE
-		// Outpost 21 edit begin - Our chem data
+		// Outpost 21 edit(port) begin - Our chem data
 		subdata["industrial_use"] = R.industrial_use
 		subdata["supply_points"] = R.supply_conversion_value ? R.supply_conversion_value : 0
 		var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money

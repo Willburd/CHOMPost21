@@ -89,7 +89,7 @@
 	name = "tent"
 	desc = "An old fashioned tent that can easily fit a couple of people."
 	icon = 'icons/obj/closets/tent.dmi'
-	icon_state = "closed_unlocked" // Outpost 21 edit - tweaked to not be broken
+	icon_state = "closed_unlocked" // Outpost 21 edit(port) - tweaked to not be broken
 	closet_appearance = null
 	anchored = 1
 	open_sound = 'sound/effects/rustle3.ogg'

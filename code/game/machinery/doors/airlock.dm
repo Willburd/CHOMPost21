@@ -1140,7 +1140,7 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/proc/user_toggle_open(mob/user)
 	if(!user_allowed(user))
 		return
-	// Outpost 21 edit begin
+	// Outpost 21 edit(port) begin
 	if(brace)
 		to_chat(user, span_warning(text("The airlock's brace holds it firmly in place.")))
 	// Outpost 21 edit end
@@ -1170,7 +1170,7 @@ About the new airlock wires panel:
 			if(src.shock(user, 75))
 				return
 
-	// Outpost 21 edit begin - Attempt to detatch a doorbrace from the airlock
+	// Outpost 21 edit(port) begin - Attempt to detatch a doorbrace from the airlock
 	if(brace && C && istype(C, /obj/item/tool/crowbar/brace_jack) && user.a_intent == I_HELP)
 		return brace.attackby(C, user)
 
@@ -1233,7 +1233,7 @@ About the new airlock wires panel:
 	else if(istype(C, /obj/item/pai_cable))	// -- TLE
 		var/obj/item/pai_cable/cable = C
 		cable.plugin(src, user)
-	// Outpost 21 edit begin - Crowbar can only wedge doors open on help, so you can beat doorbraces off of them! Also brace feedback.
+	// Outpost 21 edit(port) begin - Crowbar can only wedge doors open on help, so you can beat doorbraces off of them! Also brace feedback.
 	else if(C.has_tool_quality(TOOL_CROWBAR) && user.a_intent == I_HELP)
 		if(brace)
 			to_chat(user, span_notice(text("The airlock's brace holds it firmly in place.")))
@@ -1369,7 +1369,7 @@ About the new airlock wires panel:
 		if(distance <= world.view * 2)
 			if(T && T.z == get_z(src))
 				M.playsound_local(get_turf(src), sound, volume, 1, null, 0, TRUE, sound(sound), volume_channel = VOLUME_CHANNEL_DOORS)
-		// Outpost 21 edit begin - AI can hear doors through holograms
+		// Outpost 21 edit(port) begin - AI can hear doors through holograms
 		if(isAI(M))
 			var/mob/living/silicon/ai/A = M
 			if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo))
@@ -1387,7 +1387,7 @@ About the new airlock wires panel:
 	return ..()
 
 /obj/machinery/door/airlock/can_open(var/forced=0)
-	// Outpost 21 edit begin
+	// Outpost 21 edit(port) begin
 	if(brace)
 		return 0
 	// Outpost 21 edit end
@@ -1524,7 +1524,7 @@ About the new airlock wires panel:
 		if(distance <= world.view * 2)
 			if(T && T.z == get_z(src))
 				M.playsound_local(get_turf(src), sound, volume, 1, null, 0, TRUE, sound(sound), volume_channel = VOLUME_CHANNEL_DOORS)
-		// Outpost 21 edit begin - AI can hear doors through holograms
+		// Outpost 21 edit(port) begin - AI can hear doors through holograms
 		if(isAI(M))
 			var/mob/living/silicon/ai/A = M
 			if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo))
@@ -1610,7 +1610,7 @@ About the new airlock wires panel:
 	else
 		wires = new/datum/wires/airlock(src)
 
-	// Outpost 21 edit begin - Door braces attach automatically when placed on a door in mapper
+	// Outpost 21 edit(port) begin - Door braces attach automatically when placed on a door in mapper
 	var/obj/item/airlock_brace/B = locate(/obj/item/airlock_brace) in loc
 	if(!brace && B)
 		B.lock_brace(src)
@@ -1694,7 +1694,7 @@ About the new airlock wires panel:
 	return FALSE
 */
 
-// outpost 21 edit begin - Damage and description overrides to show state of door braces and destroy them
+// outpost 21 edit(port) begin - Damage and description overrides to show state of door braces and destroy them
 /obj/machinery/door/airlock/take_damage(var/damage)
 	if(brace)
 		brace.cur_health = clamp(brace.cur_health - damage, 0, brace.max_health)

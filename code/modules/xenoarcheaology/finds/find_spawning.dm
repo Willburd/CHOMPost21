@@ -451,7 +451,7 @@
 											/obj/item/organ/internal/malignant/tumor,
 											/obj/item/organ/internal/malignant/parasite,
 											/obj/item/organ/internal/malignant/engineered,
-											/obj/item/organ/internal/malignant/engineered/chemorgan) // Outpost 21 edit, add malignant organ basetypes to exclusions
+											/obj/item/organ/internal/malignant/engineered/chemorgan) // Outpost 21 edit(port), add malignant organ basetypes to exclusions
 			//BLACKLIST ABOVE
 
 			var/obj/item/organ/internal/new_organ = pick(possible_object_paths)

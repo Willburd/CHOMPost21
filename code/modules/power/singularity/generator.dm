@@ -20,7 +20,7 @@
 /obj/machinery/the_singularitygen/process()
 	var/turf/T = get_turf(src)
 	if(src.energy >= 200)
-		// Outpost 21 edit begin - Prevent atmo griefing
+		// Outpost 21 edit(port) begin - Prevent atmo griefing
 		if(T && creation_type == /obj/singularity && SSplanets.z_to_planet.len >= T.z)
 			var/datum/planet/P = SSplanets.z_to_planet[T.z]
 			if(P)

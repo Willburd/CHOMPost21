@@ -1274,7 +1274,7 @@
 					/obj/item/gun/projectile/revolver/toy/big_iron = 5,
 					/obj/item/gun/projectile/revolver/toy/crossbow = 5,
 					/obj/item/gun/projectile/automatic/toy = 5,
-					/obj/item/mine/claymore/donksoft = 10 // Outpost 21 edit - Donksoft claymores
+					/obj/item/mine/claymore/donksoft = 10 // Outpost 21 edit(port) - Donksoft claymores
 					)
 	contraband = list()
 	prices = list(/obj/item/ammo_magazine/ammo_box/foam = 50,
@@ -1290,7 +1290,7 @@
 					/obj/item/gun/projectile/revolver/toy/big_iron = 175,
 					/obj/item/gun/projectile/revolver/toy/crossbow = 75,
 					/obj/item/gun/projectile/automatic/toy = 300,
-					/obj/item/mine/claymore/donksoft = 50) // Outpost 21 edit - Donksoft claymores
+					/obj/item/mine/claymore/donksoft = 50) // Outpost 21 edit(port) - Donksoft claymores
 	vending_sound = "machines/vending/vending_cans.ogg"
 
 /*

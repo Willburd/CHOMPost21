@@ -14,7 +14,7 @@
 	circuit = /obj/item/circuitboard/tesla_coil
 
 	var/power_loss = 2
-	var/input_power_multiplier = 3 // Outpost 21 edit - buffed from 1 to 3 because Lady Tesla needs a bit more power output for the danger she poses. Make it comparable to the singulo/SM
+	var/input_power_multiplier = 3 // Outpost 21 edit(port) - buffed from 1 to 3 because Lady Tesla needs a bit more power output for the danger she poses. Make it comparable to the singulo/SM
 	var/zap_cooldown = 100
 	var/last_zap = 0
 	var/datum/wires/tesla_coil/wires = null
@@ -167,13 +167,13 @@
 
 /obj/machinery/power/tesla_coil/amplifier/RefreshParts()
 	..()
-	amp_eff = 1 // Outpost 21 edit - coil fix, incorrect use of local var
+	amp_eff = 1 // Outpost 21 edit(port) - coil fix, incorrect use of local var
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
 		amp_eff += C.rating
 
 /obj/machinery/power/tesla_coil/amplifier/coil_act(var/power)
 	var/power_produced = power / power_loss
-	add_avail(power_produced*amp_eff) // Outpost 21 edit - coil fix, parts actually affect power gain
+	add_avail(power_produced*amp_eff) // Outpost 21 edit(port) - coil fix, parts actually affect power gain
 	flick("[icontype]hit", src)
 	playsound(src, 'sound/effects/lightningshock.ogg', 100, 1, extrarange = 5)
 	tesla_zap(src, 5, power_produced)
@@ -190,7 +190,7 @@
 
 /obj/machinery/power/tesla_coil/recaster/RefreshParts()
 	..()
-	zap_range = 5 // Outpost 21 edit - coil fix, incorrect use of local var
+	zap_range = 5 // Outpost 21 edit(port) - coil fix, incorrect use of local var
 	for(var/obj/item/stock_parts/capacitor/C in component_parts)
 		zap_range += C.rating
 

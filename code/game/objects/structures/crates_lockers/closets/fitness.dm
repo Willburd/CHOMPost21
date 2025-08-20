@@ -80,7 +80,7 @@
 		/obj/item/gun/energy/lasertag/red = 4,
 		/obj/item/lasertagknife/red = 4,
 		/obj/item/clothing/suit/redtag = 4,
-		/obj/item/clothing/head/helmet/lasertag = 4) // Outpost 21 edit - new lasertag kits
+		/obj/item/clothing/head/helmet/lasertag = 4) // Outpost 21 edit(port) - new lasertag kits
 
 
 /obj/structure/closet/lasertag/blue
@@ -92,7 +92,7 @@
 		/obj/item/gun/energy/lasertag/blue = 4,
 		/obj/item/lasertagknife/blue = 4,
 		/obj/item/clothing/suit/bluetag = 4,
-		/obj/item/clothing/head/helmet/lasertag = 4) // Outpost 21 edit - new lasertag kits
+		/obj/item/clothing/head/helmet/lasertag = 4) // Outpost 21 edit(port) - new lasertag kits
 
 /obj/structure/closet/lasertag/red/laserdome
 	name = "red team laserdome equipment"
@@ -120,7 +120,7 @@
 		/obj/item/clothing/head/bluetag = 3,
 		/obj/item/clothing/suit/bluetag = 3)
 
-// Outpost 21 edit begin - omni lasertag
+// Outpost 21 edit(port) begin - omni lasertag
 /obj/structure/closet/lasertag/omni
 	name = "omni laser tag equipment"
 	desc = "It's a storage unit for laser tag equipment."

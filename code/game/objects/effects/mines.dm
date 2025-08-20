@@ -49,7 +49,7 @@
 	s.set_up(3, 1, src)
 	s.start()
 
-	if(ismob(M) && M.client) // Outpost 21 edit - this is a funny tracker
+	if(ismob(M) && M.client) // Outpost 21 edit(port) - this is a funny tracker
 		GLOB.landmines_stepped_on_roundstat++
 
 	if(trap)
@@ -100,12 +100,12 @@
 	if(istype(M, /obj/mecha))
 		explode(M)
 
-	if(istype(M, /obj/vehicle)) // Outpost 21 edit - why do vehicles not trigger them before?
+	if(istype(M, /obj/vehicle)) // Outpost 21 edit(port) - why do vehicles not trigger them before?
 		explode(M)
 
 	if(istype(M, /mob/living/))
 		var/mob/living/L = M
-		if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
+		if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit(port) - flight and tiny creatures are ignored by mines
 			explode(L)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
@@ -374,7 +374,7 @@
 /obj/item/mine/proc/prime(mob/user as mob, var/explode_now = FALSE)
 	visible_message("\The [src.name] beeps as the priming sequence completes.")
 	var/obj/effect/mine/R = new minetype(get_turf(src))
-	// Outpost 21 edit begin - Directional claymore
+	// Outpost 21 edit(port) begin - Directional claymore
 	if(istype(R,/obj/effect/mine/claymore))
 		R.dir = user.dir
 	// Outpost 21 edit end
@@ -442,6 +442,6 @@
 
 // This tells AI mobs to not be dumb and step on mines willingly.
 /obj/item/mine/is_safe_to_step(mob/living/L)
-	if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit - flight and tiny creatures are ignored by mines
+	if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit(port) - flight and tiny creatures are ignored by mines
 		return FALSE
 	return ..()

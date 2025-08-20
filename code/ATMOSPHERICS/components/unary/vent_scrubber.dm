@@ -279,7 +279,7 @@
 		update_icon()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/attackby(var/obj/item/W as obj, var/mob/user as mob)
-	// Outpost 21 edit begin - Allow welding these shut
+	// Outpost 21 edit(port) begin - Allow welding these shut
 	if(istype(W, /obj/item/weldingtool))
 		var/obj/item/weldingtool/WT = W
 		if (WT.remove_fuel(0,user))
@@ -311,7 +311,7 @@
 	if (node && node.level==1 && isturf(T) && !T.is_plating())
 		to_chat(user, span_warning("You must remove the plating first."))
 		return 1
-	// Outpost 21 edit begin - Allow welding these shut
+	// Outpost 21 edit(port) begin - Allow welding these shut
 	if (welded)
 		to_chat(user, span_warning("You cannot unwrench \the [src], it is welded down firmly."))
 		return 1
@@ -335,7 +335,7 @@
 		. += "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 	else
 		. += "You are too far away to read the gauge."
-	// Outpost 21 edit begin - Allow welding these shut
+	// Outpost 21 edit(port) begin - Allow welding these shut
 	if(welded)
 		. += "It seems welded shut."
 	// Outpost 21 edit end

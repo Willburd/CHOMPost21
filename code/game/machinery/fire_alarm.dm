@@ -216,7 +216,7 @@ FIRE ALARM
 	if(!(working))
 		return
 	var/area/area = get_area(src)
-	area.fire_supression_set(FALSE) // Outpost 21 edit - Fire supression
+	area.fire_supression_set(FALSE) // Outpost 21 edit(port) - Fire supression
 	for(var/obj/machinery/firealarm/FA in area)
 		fire_alarm.clearAlarm(src.loc, FA)
 		FA.soundloop.stop() // CHOMPEdit: Soundloop
@@ -229,7 +229,7 @@ FIRE ALARM
 	if(!(working))
 		return
 	var/area/area = get_area(src)
-	area.fire_supression_set(TRUE) // Outpost 21 edit - Fire supression
+	area.fire_supression_set(TRUE) // Outpost 21 edit(port) - Fire supression
 	if(!user && !firewarn && !alarms_hidden) // CHOMPAdd
 		GLOB.global_announcer.autosay("Tripped [area]", "Fire Alarm Monitor", DEPARTMENT_ENGINEERING)
 	for(var/obj/machinery/firealarm/FA in area)

@@ -26,7 +26,7 @@
 		M = new /mob/living/carbon/human(get_turf(source))
 	M.real_name = source.real_name
 	M.name = M.real_name
-	// Outpost 21 edit begin - borer fixes
+	// Outpost 21 edit(port) begin - borer fixes
 	if(!isnull(source.mind))
 		source.mind.transfer_to(M)
 	// Outpost 21 edit end

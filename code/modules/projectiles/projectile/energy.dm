@@ -84,7 +84,7 @@
 	hud_state = "taser"
 	//Damage will be handled on the MOB side, to prevent window shattering.
 
-/* Outpost 21 edit - Removed duplicate def
+/* Outpost 21 edit(port) - Removed duplicate def
 /obj/item/projectile/energy/electrode/strong
 	agony = 55
 	hud_state = "taser"

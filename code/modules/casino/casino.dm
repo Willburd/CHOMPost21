@@ -22,9 +22,9 @@
 	. = ..()
 	AddElement(/datum/element/climbable)
 
-/obj/structure/casino_table/attackby(obj/item/W, mob/user, var/hit_modifier, var/click_parameters) // Outpost 21 edit - Precise placement on casino table
+/obj/structure/casino_table/attackby(obj/item/W, mob/user, var/hit_modifier, var/click_parameters) // Outpost 21 edit(port) - Precise placement on casino table
 	if(item_place)
-		// Outpost 21 edit begin - Precise placement on casino table
+		// Outpost 21 edit(port) begin - Precise placement on casino table
 		if(user.unEquip(W, 0, src.loc) && user.client?.prefs?.read_preference(/datum/preference/toggle/precision_placement))
 			auto_align(W, click_parameters)
 		else

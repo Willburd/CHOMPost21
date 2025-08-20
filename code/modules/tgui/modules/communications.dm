@@ -250,7 +250,7 @@
 			setMenuState(ui.user, COMM_SCREEN_MAIN)
 
 		if("newalertlevel")
-			/* Outpost 21 edit begin - AI can use command console
+			/* Outpost 21 edit(port) begin - AI can use command console
 			if(isAI(ui.user) || isrobot(ui.user))
 				to_chat(ui.user, span_warning("Firewalls prevent you from changing the alert level."))
 				return

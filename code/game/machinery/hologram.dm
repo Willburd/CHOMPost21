@@ -143,8 +143,8 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	A.holo = src
 	if(LAZYLEN(masters))
 		START_MACHINE_PROCESSING(src)
-		
-	// Outpost 21 edit begin - ambience for AI when in hologram
+
+	// Outpost 21 edit(port) begin - ambience for AI when in hologram
 	var/area/ar = get_area(hologram.loc)
 	if(ar)
 		A.lastarea = ar

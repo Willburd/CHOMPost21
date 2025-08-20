@@ -183,7 +183,7 @@
 		if(!do_after(user, 3 SECONDS, M))
 			return 0
 
-	// Outpost 21 edit begin - Autodoc surgery selection
+	// Outpost 21 edit(port) begin - Autodoc surgery selection
 	var/datum/surgery_step/selected_surgery = autodoc_surgery_step_select( user, available_surgeries, "Select which surgery step you wish to perform", "Surgery Select")
 	// Outpost 21 edit end
 
@@ -192,7 +192,7 @@
 	selected_surgery = available_surgeries[selected_surgery] //Sets the name they selected to be the datum.
 
 	// VOREstation edit start
-	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc) && istype(selected_surgery,/datum/surgery_step/generic/amputate)) // Outpost 21 edit - Autodoc support
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc) && istype(selected_surgery,/datum/surgery_step/generic/amputate)) // Outpost 21 edit(port) - Autodoc support
 		var/obj/item/organ/external/affected = M.get_organ(zone)
 		to_chat(user, span_danger("You are preparing to amputate \the [M]'s [affected.name]!"))
 		if(!do_after(user, 3 SECONDS, M))
@@ -211,7 +211,7 @@
 	if(!prob(surface.surgery_odds))
 		success = FALSE
 
-	// Outpost 21 edit begin - Auto doc ignores tool success
+	// Outpost 21 edit(port) begin - Auto doc ignores tool success
 	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
 		// Bad tools make it less likely to succeed.
 		if(!prob(selected_surgery.tool_quality(src)))

@@ -2027,7 +2027,7 @@
 
 	var/wrapped = 0
 	var/monkey_type = "Monkey"
-	var/is_soaked = FALSE // Outpost 21 edit - Soaking monkeycube boxes with water, prevent timer spam
+	var/is_soaked = FALSE // Outpost 21 edit(port) - Soaking monkeycube boxes with water, prevent timer spam
 
 /obj/item/reagent_containers/food/snacks/monkeycube/Initialize(mapload)
 	. = ..()
@@ -2091,7 +2091,7 @@
 	if(reagents.has_reagent(REAGENT_ID_WATER))
 		Expand()
 
-// Outpost 21 edit begin - Soaking monkeycube boxes with water
+// Outpost 21 edit(port) begin - Soaking monkeycube boxes with water
 /obj/item/reagent_containers/food/snacks/monkeycube/proc/soaked()
 	addtimer(CALLBACK(src, PROC_REF(Expand)), rand(2,5) SECONDS, TIMER_DELETE_ME)
 

@@ -74,7 +74,7 @@
 		if("Edit")
 			var/n = tgui_input_text(ui.user, "Please enter message", name, notehtml, multiline = TRUE, prevent_enter = TRUE)
 			if(pda.loc == ui.user)
-				// Outpost 21 edit begin - delete question
+				// Outpost 21 edit(port) begin - delete question
 				if(!n || n == "")
 					if(tgui_alert(ui.user, "Are you sure you want to delete note [GLOB.alphabet_upper[currentnote]]?", "Confirm Delete", list("Delete", "No")) != "Delete")
 						return TRUE

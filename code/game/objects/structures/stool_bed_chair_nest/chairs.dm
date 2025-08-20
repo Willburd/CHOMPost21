@@ -165,7 +165,7 @@
 	desc = "It's a rounded chair. It looks comfy."
 	icon_state = "roundedchair"
 	base_icon = "roundedchair"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit - These need to be base dmi
+	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - These need to be base dmi
 
 /obj/structure/bed/chair/comfy/rounded/brown/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_LEATHER)

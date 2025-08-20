@@ -100,7 +100,7 @@
 		return
 	if(istype(get_turf(src), /turf/simulated/floor/water)) //Important to stop my_slime from filling with null entries in water.
 		return
-	if(locate(/obj/effect/slug_glue) in get_turf(src)) // Outpost 21 edit - Don't stack slime forever
+	if(locate(/obj/effect/slug_glue) in get_turf(src)) // Outpost 21 edit(port) - Don't stack slime forever
 		return
 	var/obj/effect/slug_glue/G = new /obj/effect/slug_glue/(get_turf(src))
 	G.my_slug = src

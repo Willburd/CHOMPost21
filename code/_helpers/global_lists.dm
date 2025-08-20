@@ -600,7 +600,7 @@ GLOBAL_LIST_INIT(unique_gamma_loot, list(
 	/obj/item/organ/internal/augment/armmounted/hand/sword,
 	/obj/item/organ/internal/augment/armmounted/dartbow,
 	/obj/item/organ/internal/augment/armmounted/apc_connector,
-	/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit - New loot
+	/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit(port) - New loot
 	// Outpost 21 edit end
 	))
 

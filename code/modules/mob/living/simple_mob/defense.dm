@@ -234,7 +234,7 @@
 		//var/agonyDam = 0
 		var/armor = run_armor_check(def_zone = null, attack_flag = "energy")
 
-		// Outpost 21 edit begin - Handle simplemob taser damage as stuns with some damage. Instead of treating a high stun time as insane damage.
+		// Outpost 21 edit(port) begin - Handle simplemob taser damage as stuns with some damage. Instead of treating a high stun time as insane damage.
 		var/divisor = 4
 		Stun(stun_amount + rand(0, agony_amount/divisor))
 		Weaken(rand(agony_amount/divisor,agony_amount/(divisor+1)))

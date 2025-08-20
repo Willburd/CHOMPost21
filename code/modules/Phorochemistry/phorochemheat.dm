@@ -117,7 +117,7 @@
 	else
 		user << span_warning("There is nothing on the [src].")
 
-/* Outpost 21 edit - Bunsen burner altered
+/* Outpost 21 edit(port) - Bunsen burner altered
 /obj/machinery/bunsen_burner/proc/try_heating()
 	src.visible_message(span_notice(" icon[src] [src] hisses."))
 	if(held_container && heating)

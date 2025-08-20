@@ -33,7 +33,7 @@
 /datum/event/escaped_slimes/start()
 	var/list/vents = list()
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in GLOB.machines)
-		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.event_levels) && !is_area_occupied(temp_vent.loc.loc)) //borrowed from spiders event, but it works. Distribute the slimes only in rooms with vents // Outpost 21 edit - Check if vent welded
+		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.event_levels) && !is_area_occupied(temp_vent.loc.loc)) //borrowed from spiders event, but it works. Distribute the slimes only in rooms with vents // Outpost 21 edit(port) - Check if vent welded
 			vents += temp_vent
 
 	while((spawncount > 0) && vents.len)

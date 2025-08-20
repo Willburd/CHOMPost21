@@ -57,7 +57,7 @@
 	var/obj/item/vac_attachment/swoopie/Vac
 
 	enzyme_affect = FALSE // Outpost 21 edit
-	shock_resist = 1 // Outpost 21 edit - Don't zap on wires
+	shock_resist = 1 // Outpost 21 edit(port) - Don't zap on wires
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
 	. = ..()
@@ -235,7 +235,7 @@
 	return size_multiplier + 0.55 // Lets teshari get scooped running under it
 // Outpost 21 edit end
 
-// Outpost 21 edit begin - Ejection lever
+// Outpost 21 edit(port) begin - Ejection lever
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/eject_switch()
 	set name = "Eject CHURNO-VAC"
 	set desc = "Releases the contents of the SWOOPIE's CHURNO-VAC."

@@ -70,7 +70,7 @@
 	has_eye_glow = TRUE
 	density = FALSE
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-	faction = FACTION_SPIDERS // Outpost 21 edit - from AWAYMISSION
+	faction = FACTION_SPIDERS // Outpost 21 edit(port) - from AWAYMISSION
 	maxHealth = 200
 	health = 200
 	pass_flags = PASSTABLE
