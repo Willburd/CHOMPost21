@@ -5353,9 +5353,9 @@
 "cFR" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/centcom/nameddorm{
-	name = "Aiek and Kose's Residence";
-	matchnames = list("Aiektaaknell","Kose Ine")
+/obj/machinery/door/airlock/centcom/nameddorm/vox{
+	matchnames = list("Aiektaaknell","Kose Ine");
+	name = "Aiek and Kose's Residence"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
@@ -19865,12 +19865,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/specialty/redspace)
-"jLO" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "rgeneric"
-	},
-/area/centcom)
 "jMG" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -32
@@ -20239,14 +20233,13 @@
 /turf/simulated/floor/wood,
 /area/centcom/specops)
 "jXH" = (
-/obj/machinery/door/airlock/centcom/nameddorm{
-	name = "Karawkkiki's Room";
-	matchnames = list("Karawkkiki")
+/obj/machinery/door/airlock/centcom/nameddorm/vox{
+	matchnames = list("Karawkkiki");
+	name = "Karawkkiki's Room"
 	},
-/turf/simulated/floor/wood{
-	oxygen = 0;
-	phoron = 21.8366
-	},
+/obj/structure/fans/tiny,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "jXQ" = (
 /obj/structure/table/woodentable,
@@ -27466,12 +27459,6 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/unsimulated/floor/steel,
 /area/centcom/holding)
-"olX" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "rgeneric"
-	},
-/area/centcom/medical)
 "ome" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -31690,7 +31677,7 @@
 "qEZ" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/centcom/nameddorm,
+/obj/machinery/door/airlock/centcom/nameddorm/vox,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "qFJ" = (
@@ -33013,9 +33000,9 @@
 "rpx" = (
 /obj/structure/fans/tiny,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/centcom/nameddorm{
-	name = "Ikaya's Residence";
-	matchnames = list("Ikayatachati")
+/obj/machinery/door/airlock/centcom/nameddorm/vox{
+	matchnames = list("Ikayatachati");
+	name = "Ikaya's Residence"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
@@ -38742,13 +38729,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/centcom)
-"uCQ" = (
-/obj/structure/sign/warning/internals_required,
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "rgeneric"
-	},
-/area/centcom/living)
 "uCU" = (
 /obj/structure/sign/warning/moving_parts,
 /turf/simulated/wall/r_wall,
@@ -45281,16 +45261,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
-"ybS" = (
-/obj/effect/step_trigger/lost_in_space,
-/turf/unsimulated/wall{
-	name = "Shuttle Bay Blast Door";
-	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	dir = 8
-	},
-/area/space)
 "ybZ" = (
 /obj/effect/floor_decal/industrial/outline,
 /obj/machinery/metal_detector{
@@ -52625,7 +52595,7 @@ aas
 aas
 vCT
 wix
-uCQ
+aaN
 aas
 mgz
 mgz
@@ -53892,7 +53862,7 @@ aaK
 aaK
 aaK
 aaK
-jLO
+aaK
 gRK
 aaK
 xSg
@@ -65432,7 +65402,7 @@ aaM
 nQN
 vWP
 qiW
-olX
+aaM
 nBt
 nBt
 nBt
@@ -78179,7 +78149,7 @@ vrk
 tKR
 nhL
 vMI
-ybS
+keP
 ybz
 ybz
 ybz
@@ -78503,7 +78473,7 @@ hbz
 tKR
 nhL
 vMI
-ybS
+keP
 ybz
 ybz
 ybz
