@@ -40426,13 +40426,6 @@
 /obj/machinery/door/blast/regular{
 	name = "Supply Elevator"
 	},
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	dir = 8;
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Supply Elevator"
-	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/suppy)
 "vAN" = (
