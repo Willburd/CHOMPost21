@@ -395,7 +395,6 @@
 /obj/structure/bed/chair/sofa/corp
 	name = "black leather sofa"
 	desc = "How corporate!"
-	icon = 'icons/obj/sofas.dmi' // Outpost 21 edit - use this not the override
 	base_icon = "corp_sofamiddle"
 	icon_state = "corp_sofamiddle"
 	applies_material_colour = FALSE
