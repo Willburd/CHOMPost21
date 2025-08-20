@@ -29247,10 +29247,7 @@
 /area/specialty/redspace)
 "pmd" = (
 /obj/structure/sign/warning/biohazard,
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "rgeneric"
-	},
+/turf/unsimulated/wall/r_wall,
 /area/centcom)
 "pmg" = (
 /obj/effect/floor_decal/corner/paleblue,
