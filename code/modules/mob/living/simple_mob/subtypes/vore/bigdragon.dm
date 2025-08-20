@@ -973,14 +973,14 @@ I think I covered everything.
 			if(P.health <= (P.getMaxHealth() * 0.95))	//Nom em'
 				if(vocal)
 					if(last_speak + 30 SECONDS < world.time)
-						// Outpost 21 edit begin - customizable says for heal bellies
+						// Outpost 21 edit(port) begin - customizable says for heal bellies
 						var/message = pick(patient_confirm_say_list(P))
 						// Outpost 21 edit end
 						H.say(message)
 						last_speak = world.time
 					return 1
 
-// Outpost 21 edit begin - customizable says for heal bellies
+// Outpost 21 edit(port) begin - customizable says for heal bellies
 /*/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(var/mob/P)
 	return list(
 				"Hey, [P.name]! You are injured, hold still.",

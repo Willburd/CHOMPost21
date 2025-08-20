@@ -151,7 +151,7 @@
 	data["message_current_id"] = current_viewing_message_id
 	data["message_current"] = current_viewing_message
 
-	// data["lastCallLoc"]     = SSshuttle.emergencyLastCallLoc ? format_text(SSshuttle.emergencyLastCallLoc.name) : null
+	// data["lastCallLoc"]     = SSshuttle.emergencyLastCallLoc ? strip_improper(SSshuttle.emergencyLastCallLoc.name) : null
 	data["msg_cooldown"] = message_cooldown ? (round((message_cooldown - world.time) / 10)) : 0
 	data["cc_cooldown"] = centcomm_message_cooldown ? (round((centcomm_message_cooldown - world.time) / 10)) : 0
 
@@ -250,7 +250,7 @@
 			setMenuState(ui.user, COMM_SCREEN_MAIN)
 
 		if("newalertlevel")
-			/* Outpost 21 edit begin - AI can use command console
+			/* Outpost 21 edit(port) begin - AI can use command console
 			if(isAI(ui.user) || isrobot(ui.user))
 				to_chat(ui.user, span_warning("Firewalls prevent you from changing the alert level."))
 				return

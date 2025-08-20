@@ -132,7 +132,7 @@
 /obj/item/tvcamera/process()
 	if(!showing)
 		return PROCESS_KILL
-	// Outpost 21 edit begin - Use the turf, or distance checks in process() fail
+	// Outpost 21 edit(port) begin - Use the turf, or distance checks in process() fail
 	var/atom/A = showing.resolve()
 	if(!A || QDELETED(A))
 		show_tvs(get_turf(src))
@@ -286,7 +286,7 @@
 
 /obj/item/clothing/accessory/bodycam/Moved(atom/old_loc, direction, forced = FALSE, movetime)
 	. = ..()
-	// Outpost 21 edit begin - Use the turf, or distance checks in process() fail
+	// Outpost 21 edit(port) begin - Use the turf, or distance checks in process() fail
 	var/turf/T = get_turf(loc)
 	if(bcamera.status && T != old_loc)
 		show_bodycamera_tvs(T)
@@ -304,7 +304,7 @@
 /obj/item/clothing/accessory/bodycam/process()
 	if(!showing)
 		return PROCESS_KILL
-	// Outpost 21 edit begin - Use the turf, or distance checks in process() fail
+	// Outpost 21 edit(port) begin - Use the turf, or distance checks in process() fail
 	var/atom/A = showing.resolve()
 	if(!A || QDELETED(A))
 		show_bodycamera_tvs(get_turf(src))

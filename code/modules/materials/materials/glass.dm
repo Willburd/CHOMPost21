@@ -18,7 +18,7 @@
 	created_window = /obj/structure/window/basic
 	created_fulltile_window = /obj/structure/window/basic/full
 	rod_product = /obj/item/stack/material/glass/reinforced
-	supply_conversion_value = 0.25 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 0.25 // Outpost 21 edit(port) - Added supply sell price. This was missing...
 
 /datum/material/glass/build_windows(var/mob/living/user, var/obj/item/stack/used_stack)
 
@@ -113,7 +113,7 @@
 	created_fulltile_window = /obj/structure/window/reinforced/full
 	wire_product = null
 	rod_product = null
-	supply_conversion_value = 0.25 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 0.25 // Outpost 21 edit(port) - Added supply sell price. This was missing...
 
 /datum/material/glass/phoron
 	name = MAT_PGLASS
@@ -128,7 +128,7 @@
 	created_fulltile_window = /obj/structure/window/phoronbasic/full
 	wire_product = null
 	rod_product = /obj/item/stack/material/glass/phoronrglass
-	supply_conversion_value = 5 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 5 // Outpost 21 edit(port) - Added supply sell price. This was missing...
 
 /datum/material/glass/phoron/reinforced
 	name = MAT_RPGLASS
@@ -144,4 +144,4 @@
 	composite_material = list(MAT_STEEL = SHEET_MATERIAL_AMOUNT / 2, MAT_PGLASS = SHEET_MATERIAL_AMOUNT)
 	rod_product = null
 	flags = MATERIAL_UNMELTABLE
-	supply_conversion_value = 5 // Outpost 21 edit - Added supply sell price. This was missing...
+	supply_conversion_value = 5 // Outpost 21 edit(port) - Added supply sell price. This was missing...

@@ -16865,7 +16865,6 @@
 /area/muriki/atmos/voxdump)
 "aEi" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/r_wall,
@@ -48224,6 +48223,22 @@
 /obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
+"bJq" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 16;
+	pixel_x = 9
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 12;
+	pixel_x = -7
+	},
+/turf/simulated/floor/wood/alt,
+/area/maintenance/oldbridge)
+"bJr" = (
+/obj/structure/reagent_dispensers/souppot/half,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/oldbridge)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -59463,7 +59478,6 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/floor/plating,
@@ -67696,6 +67710,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 12;
+	pixel_x = -7
+	},
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
 "nKm" = (
@@ -70183,18 +70201,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/black/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/effect/floor_decal/stairs/station{
 	dir = 8;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+	icon_state = "stair_u"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
@@ -73204,18 +73213,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/black/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 8;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
@@ -78236,14 +78235,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
 "ucq" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/black/border,
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
+/obj/effect/floor_decal/stairs/station{
 	dir = 8;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+	icon_state = "stair_u"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
@@ -81841,18 +81835,12 @@
 /turf/simulated/floor,
 /area/maintenance/med)
 "wnj" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/black/border,
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 8;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_l";
-	name = "steps";
-	pixel_y = 1
-	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "BNK - Bunker Hall East";
 	dir = 1
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
@@ -82225,6 +82213,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = -3;
+	pixel_x = -7
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
@@ -90792,8 +90784,8 @@ xJd
 vqa
 jRR
 dnA
-sNP
-kKa
+bJr
+bJq
 ijJ
 tdB
 kZt

@@ -34,7 +34,7 @@
 
 /obj/structure/reagent_dispensers/examine(mob/user)
 	. = ..()
-	if(get_dist(user, src) <= 2)
+	if(get_dist(user, src) <= 2 && !istype(src,/obj/structure/reagent_dispensers/souppot)) // Outpost 21 edit - Hide soup!
 		. += span_notice("It contains:")
 		if(reagents && reagents.reagent_list.len)
 			for(var/datum/reagent/R in reagents.reagent_list)
@@ -276,7 +276,7 @@
 		explode()
 	return ..()
 
-/obj/structure/reagent_dispensers/fueltank/Move(atom/newloc, direct = 0, movetime)
+/obj/structure/reagent_dispensers/fueltank/Move(atom/newloc, direct, movetime)
 	if (..() && modded)
 		leak_fuel(amount_per_transfer_from_this/10.0)
 
@@ -302,7 +302,7 @@
 /obj/structure/reagent_dispensers/virusfood
 	name = "Virus Food Dispenser"
 	desc = "A dispenser of virus food. Yum."
-	icon = 'icons/obj/virology_vr.dmi'
+	icon = 'icons/obj/virology.dmi'
 	icon_state = "virusfoodtank"
 	anchored = TRUE
 	density = FALSE

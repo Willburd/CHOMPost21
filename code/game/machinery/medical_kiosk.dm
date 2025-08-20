@@ -347,7 +347,7 @@
 		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
 	if(!user.mind)
 		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
-	// Outpost 21 edit begin - VR kiosks don't save
+	// Outpost 21 edit(port) begin - VR kiosks don't save
 	if(istype(get_area(src), /area/vr))
 		return "<br>" + span_warning("Backup simulation performed. Remember to backup when you leave virtual reality!")
 	// Outpost 21 edit end

@@ -5,7 +5,7 @@
 
 /*********************Mining Hammer****************/
 /obj/item/kinetic_crusher
-	icon = 'icons/obj/mining_vr.dmi'
+	icon = 'icons/obj/mining.dmi'
 	icon_state = "crusher"
 	item_state = "crusher0"
 	item_icons = list(
@@ -101,7 +101,7 @@
 
 	if(requires_wield && !wielded)
 		return
-	if(!(user.a_intent == I_HELP && user.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))) // outpost 21 edit - holy shit this thing was silly without a safety
+	if(!(user.a_intent == I_HELP && user.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))) // outpost 21 edit(port) - holy shit this thing was silly without a safety
 		if(!proximity_flag && charged)//Mark a target, or mine a tile.
 			var/turf/proj_turf = user.loc
 			if(!isturf(proj_turf))

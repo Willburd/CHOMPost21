@@ -21,7 +21,7 @@
 	status_flags = CANPUSH
 	pass_flags = PASSTABLE
 	movement_cooldown = 1.5
-	mob_size = MOB_TINY // Outpost 21 edit - borer fixes, no landmines for you
+	mob_size = MOB_TINY // Outpost 21 edit(port) - borer fixes, no landmines for you
 
 	universal_understand = TRUE
 	can_be_antagged = TRUE
@@ -40,7 +40,7 @@
 	var/true_name = null						// String used when speaking among other worms.
 	var/controlling = FALSE						// Used in human death ceck.
 	var/docile = FALSE							// Sugar can stop borers from acting.
-	var/docile_counter = 0						// Outpost 21 edit - borer fixes
+	var/docile_counter = 0						// Outpost 21 edit(port) - borer fixes
 
 	var/has_reproduced = FALSE
 	var/used_dominate							// world.time when the dominate power was last used.
@@ -59,7 +59,7 @@
 	antag = FALSE
 
 /mob/living/simple_mob/animal/borer/Login()
-	. = ..() // Outpost 21 edit - borer fixes
+	. = ..() // Outpost 21 edit(port) - borer fixes
 	if(antag && mind)
 		borers.add_antagonist(mind)
 
@@ -79,9 +79,9 @@
 	request_player()
 
 /mob/living/simple_mob/animal/borer/handle_special()
-	docile_counter-- // Outpost 21 edit - borer fixes
+	docile_counter-- // Outpost 21 edit(port) - borer fixes
 	if(host && !stat && !host.stat)
-		// Outpost 21 edit begin - borer fixes
+		// Outpost 21 edit(port) begin - borer fixes
 		// Handle docility.
 		if(host.reagents.has_reagent(REAGENT_ID_SUGAR) || host.ingested.has_reagent(REAGENT_ID_SUGAR))
 			docile_counter = 1 SECONDS
@@ -118,7 +118,7 @@
 			if(prob(host.brainloss/20))
 				host.say("*[pick(list("blink","blink_r","choke","aflap","drool","twitch","twitch_v","gasp"))]")
 
-	// Outpost 21 edit begin - borer hud
+	// Outpost 21 edit(port) begin - borer hud
 	if(borer_chem_display)
 		borer_chem_display.invisibility = 0
 		switch(chemicals)
@@ -211,7 +211,7 @@
 	if(host.mind)
 		borers.remove_antagonist(host.mind)
 
-	forceMove(get_turf(host.loc)) // Outpost 21 edit - borer fixes
+	forceMove(get_turf(host.loc)) // Outpost 21 edit(port) - borer fixes
 
 	reset_view(null)
 	machine = null
@@ -258,7 +258,7 @@
 /mob/living/simple_mob/animal/borer/cannot_use_vents()
 	return
 
-// Outpost 21 edit begin - borer fixes
+// Outpost 21 edit(port) begin - borer fixes
 /mob/living/simple_mob/animal/borer/extra_huds(var/datum/hud/hud,var/icon/ui_style,var/list/hud_elements)
 	// Chem hud
 	borer_chem_display = new /obj/screen/borer/chems()

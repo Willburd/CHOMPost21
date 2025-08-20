@@ -143,8 +143,8 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	A.holo = src
 	if(LAZYLEN(masters))
 		START_MACHINE_PROCESSING(src)
-		
-	// Outpost 21 edit begin - ambience for AI when in hologram
+
+	// Outpost 21 edit(port) begin - ambience for AI when in hologram
 	var/area/ar = get_area(hologram.loc)
 	if(ar)
 		A.lastarea = ar
@@ -199,7 +199,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
  */
 
 /obj/machinery/hologram
-	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 	anchored = TRUE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 5
@@ -250,7 +250,7 @@ Holographic project of everything else.
 /obj/machinery/hologram/projector
 	name = "hologram projector"
 	desc = "It makes a hologram appear...with magnets or something..."
-	icon = 'icons/obj/stationobjs_vr.dmi' //VOREStation Edit
+	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "hologram0"
 
 

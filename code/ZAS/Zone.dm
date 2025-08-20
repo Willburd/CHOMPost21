@@ -167,11 +167,11 @@ Class Procs:
 		if(E.sleeping)
 			E.recheck()
 
-	// Outpost 21 edit begin - Outdoor atmospheres on planets reset to default state over time.)
+	// Outpost 21 edit(port) begin - Outdoor atmospheres on planets reset to default state over time.)
 	update_planet_surface()
 	// Outpost 21 edit end
 
-// Outpost 21 edit begin - Outdoor atmospheres on planets reset to default state over time.)
+// Outpost 21 edit(port) begin - Outdoor atmospheres on planets reset to default state over time.)
 /zone/proc/update_planet_surface()
 	// Planet airmix cannot be saturated by station antics, slowly bleed this to base air if an outside turf is in our contents. - Willbird
 	// It's advisable to not mix multiple different kinds of outside flagged turfs, if they have different initial atmos, thankfully this probably never happens.

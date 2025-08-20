@@ -199,7 +199,7 @@
 	desc = "A pair of rubbery sacs with large portions dedicated to honeycombed nanite filters."
 	description_info = "This organ, when connected properly to the body, will attempt to keep some other organs repaired."
 	var/list/repair_list = list(O_HEART, O_KIDNEYS, O_VOICE, O_GBLADDER, O_PLASMA)
-	supply_conversion_value = 50 // Outpost 21 edit - Selling engineered organs
+	supply_conversion_value = 50 // Outpost 21 edit(port) - Selling engineered organs
 
 /obj/item/organ/internal/lungs/replicant/mending/handle_organ_proc_special()
 	if(!owner)

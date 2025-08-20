@@ -18,7 +18,7 @@
 		return
 	if(owner.stat != CONSCIOUS)
 		return
-	if(owner.antihistaminescount) // Outpost 21 edit - Medications calm disabilities
+	if(owner.antihistaminescount) // Outpost 21 edit(port) - Medications calm disabilities
 		return
 	if(owner.transforming)
 		return

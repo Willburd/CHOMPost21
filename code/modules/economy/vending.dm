@@ -80,7 +80,7 @@
 	var/has_logs = 0 //defaults to 0, set to anything else for vendor to have logs
 	var/can_rotate = 1 //Defaults to yes, can be set to 0 for vendors without or with unwanted directionals.
 
-	var/forced_icon_path = null // Outpost 21 edit - Cargovendi can be loaded with any item, but icons for them don't exist on tgui side unless they're vendable... So just force an icon instead.
+	var/forced_icon_path = null // Outpost 21 edit(port) - Cargovendi can be loaded with any item, but icons for them don't exist on tgui side unless they're vendable... So just force an icon instead.
 
 /obj/machinery/vending/Initialize(mapload)
 	. = ..()
@@ -189,7 +189,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 
 /obj/machinery/vending/attackby(obj/item/W as obj, mob/user as mob)
 	var/obj/item/card/id/I = W.GetID()
-	// Outpost 21 edit begin - Cargo resale vendor
+	// Outpost 21 edit(port) begin - Cargo resale vendor
 	if(I && panel_open)
 		var/obj/machinery/vending/cargo_resale/CR = src
 		if(CR.cargo_vendor_unlocking( I, user))
@@ -230,7 +230,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			add_overlay("[initial(icon_state)]-panel")
 		else
 			cut_overlay("[initial(icon_state)]-panel")
-			// Outpost 21 edit begin - Cargo vendor locking back up... QoL mostly so you don't need to swipe ID again when closing it
+			// Outpost 21 edit(port) begin - Cargo vendor locking back up... QoL mostly so you don't need to swipe ID again when closing it
 			if(istype(src,/obj/machinery/vending/cargo_resale))
 				var/obj/machinery/vending/cargo_resale/CR = src
 				CR.cargo_locked = TRUE
@@ -266,7 +266,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			anchored = !anchored
 		return
 	else
-		// Outpost 21 edit begin - Cargo resale vendor
+		// Outpost 21 edit(port) begin - Cargo resale vendor
 		if(istype(src,/obj/machinery/vending/cargo_resale))
 			var/obj/machinery/vending/cargo_resale/CR = src
 			if(CR.stock_cargo_vendor( W, user))
@@ -427,7 +427,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 	else
 		data["panel"] = 0
 
-	// Outpost 21 edit begin - Cargo vendor configuring
+	// Outpost 21 edit(port) begin - Cargo vendor configuring
 	data["cargo_configure"] = 0
 	if(istype(src,/obj/machinery/vending/cargo_resale))
 		var/obj/machinery/vending/cargo_resale/CR = src
@@ -498,7 +498,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 				flick("[icon_state]-deny",src)
 				playsound(src, 'sound/machines/deniedbeep.ogg', 50, 0)
 				return
-			// Outpost 21 edit begin - Cargo vendor configuring
+			// Outpost 21 edit(port) begin - Cargo vendor configuring
 			if(istype(src,/obj/machinery/vending/cargo_resale))
 				var/key = text2num(params["vend"])
 				var/datum/stored_item/vending_product/R = product_records[key]
@@ -580,6 +580,8 @@ GLOBAL_LIST_EMPTY(vending_products)
 		to_chat(user, span_warning("Access denied."))	//Unless emagged of course
 		flick("[icon_state]-deny",src)
 		playsound(src, 'sound/machines/deniedbeep.ogg', 50, 0)
+		return FALSE
+	if(R.amount < 1)
 		return FALSE
 	return TRUE
 

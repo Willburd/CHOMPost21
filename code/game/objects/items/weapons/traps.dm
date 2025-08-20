@@ -23,7 +23,7 @@
 	var/camo_net = FALSE
 	var/stun_length = 0.25 SECONDS
 
-// Outpost 21 edit begin - Allow mapset traps to update icon
+// Outpost 21 edit(port) begin - Allow mapset traps to update icon
 /obj/item/beartrap/Initialize(mapload)
 	. = ..()
 	update_icon()

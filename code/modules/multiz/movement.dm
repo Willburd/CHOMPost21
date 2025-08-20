@@ -445,14 +445,14 @@
 	var/turf/oldloc = loc
 
 	// Now lets move there!
-	if(!Move(landing,direct = dir))
+	if(!Move(landing, direct = dir)) //infinite fall fix
 		return 1
 
 	// Detect if we made a silent landing.
 	var/atom/A = find_fall_target(oldloc, landing)
 	if(!A || !A.check_impact(src))
 		return
-	// Outpost 21 edit begin - Deadly falling z levels
+	// Outpost 21 edit(port) begin - Deadly falling z levels
 	if((landing.z in using_map.deadly_fall_levels))
 		fall_impact(A, 6, 12, TRUE, TRUE)
 		visible_message("\The [src] falls from far above and crashes into \the [landing]!", "You hear something crash into \the [landing].")
@@ -553,7 +553,7 @@
 		A.fall_impact(hit_atom, damage_min, damage_max, silent = TRUE)
 
 // Take damage from falling and hitting the ground
-/mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 1, var/damage_max = 5, var/silent = FALSE, var/planetary = FALSE) // Outpost 21 edit - At least 1 damage from falls
+/mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 1, var/damage_max = 5, var/silent = FALSE, var/planetary = FALSE) // Outpost 21 edit(port) - At least 1 damage from falls
 	var/turf/landing = get_turf(hit_atom)
 	var/safe_fall = FALSE
 	if(src.softfall || (isanimal(src) && src.mob_size <= MOB_SMALL))

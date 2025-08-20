@@ -29,12 +29,12 @@
 /datum/supply_pack/med/bloodpack
 	name = "BloodPack crate"
 	desc = "Three boxes of filled bloodbags."
-	contains = list(/obj/item/storage/box/bloodpacks_full = 3) // Outpost 21 edit - Actual blood packs
+	contains = list(/obj/item/storage/box/bloodpacks_full = 3) // Outpost 21 edit(port) - Actual blood packs
 	cost = 10
 	containertype = /obj/structure/closet/crate/medical/blood
 	containername = "BloodPack crate"
 
-// Outpost 21 edit begin - Actual blood packs
+// Outpost 21 edit(port) begin - Actual blood packs
 /datum/supply_pack/med/bloodpack_empty
 	name = "Empty BloodPack crate"
 	desc = "Three boxes of empty bloodbags."

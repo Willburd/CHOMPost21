@@ -229,7 +229,7 @@
 		if(I && !(I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
 			attached_organs[I.name] = organ
 
-	// Outpost 21 edit begin - Autodoc code, and use organs actual name for malignants
+	// Outpost 21 edit(port) begin - Autodoc code, and use organs actual name for malignants
 	var/organ_to_remove = autodoc_organ_select( user, target, attached_organs, "Which organ do you want to prepare for removal?", "Organ Choice" )
 	if(!organ_to_remove)
 		return 0
@@ -310,7 +310,7 @@
 		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && I.parent_organ == target_zone)
 			removable_organs[I.name] = organ
 
-	// Outpost 21 edit begin - Autodoc code, and use organs actual name for malignants
+	// Outpost 21 edit(port) begin - Autodoc code, and use organs actual name for malignants
 	var/organ_to_remove = autodoc_organ_select( user, target, removable_organs, "Which organ do you want to remove?", "Organ Choice" )
 	if(!organ_to_remove) //They chose cancel!
 		to_chat(user, span_notice("You decide against preparing any organs for removal."))
@@ -418,7 +418,7 @@
 		user.balloon_alert(user, "\the [O.organ_tag] [o_do] normally go in \the [affected.name]")
 		return SURGERY_FAILURE
 
-	// Outpost 21 edit begin - Autodoc needs to release it's current stored organ
+	// Outpost 21 edit(port) begin - Autodoc needs to release it's current stored organ
 	if(istype(user,/mob/living/carbon/human/monkey/auto_doc))
 		var/mob/living/carbon/human/monkey/auto_doc/D = user
 		var/obj/machinery/auto_doc/mach = D.owner_machine
@@ -482,7 +482,7 @@
 		if(istype(I) && (I.status & ORGAN_CUT_AWAY) && !(I.robotic >= ORGAN_ROBOT) && I.parent_organ == target_zone)
 			removable_organs[I.name] = organ
 
-	// Outpost 21 edit begin - Autodoc selection behavior
+	// Outpost 21 edit(port) begin - Autodoc selection behavior
 	var/organ_to_replace = autodoc_organ_select( user, target, removable_organs, "Which organ do you want to reattach?", "Organ Choice" )
 	if(!organ_to_replace)
 		return 0

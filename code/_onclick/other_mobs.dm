@@ -33,7 +33,6 @@
 /mob/living/carbon/human/RestrainedClickOn(var/atom/A)
 	return
 
-// Outpost 21 addition begin - telegrip gloves
 /mob/proc/has_telegrip()
 	return TK in mutations
 
@@ -43,7 +42,6 @@
 		if(G.has_grip_power())
 			return TRUE
 	return ..()
-// Outpost 21 addition end
 
 /mob/living/carbon/human/RangedAttack(var/atom/A)
 	if(!gloves && !mutations.len && !spitting)
@@ -55,14 +53,16 @@
 	else if(istype(G) && G.Touch(A,0)) // for magic gloves
 		return
 
-	else if(has_telegrip()) // Outpost 21 edit - use check for gloves
-		// Outpost 21 edit begin - TK gloves power use
+	else if(has_telegrip())
 		if(istype(gloves,/obj/item/clothing/gloves/telekinetic))
 			var/obj/item/clothing/gloves/telekinetic/TKG = gloves
 			TKG.use_grip_power(src,TRUE)
-		// Outpost 21 edit end
-		A.attack_tk(src)
-
+		if(client.eye != src) // Extremely bad exploits if allowed to TK while remote viewing
+			to_chat(src, TK_DENIED_MESSAGE)
+		else if(get_dist(src, A) > tk_maxrange)
+			to_chat(src, TK_OUTRANGED_MESSAGE)
+		else
+			A.attack_tk(src)
 	else if(spitting) //Only used by xenos right now, can be expanded.
 		Spit(A)
 

@@ -1574,8 +1574,8 @@
 	pixel_y = -20
 	},
 /obj/effect/floor_decal/corner/brown/full,
-/obj/vehicle/train/trolley_tank,
 /obj/effect/floor_decal/milspec/box,
+/obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargrecycle)
 "ajG" = (
@@ -2395,12 +2395,7 @@
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
 "aFa" = (
-/obj/structure/showcase{
-	desc = "It looks almost lifelike.";
-	icon = 'icons/obj/statue.dmi';
-	icon_state = "hos";
-	name = "Statue"
-	},
+/obj/structure/prop/statue/jumpscare,
 /turf/simulated/floor/beach/sand/desert{
 	desc = "Sand."
 	},
@@ -40109,12 +40104,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
 "tnH" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/machinery/v_garbosystem{
 	dir = 8;
 	emagged = 1
+	},
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/cargrecycle)

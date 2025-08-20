@@ -14,7 +14,7 @@
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
 	var/list/listeners = GLOB.player_list.Copy() + interior_vehicle_list.Copy()
-	// Outpost 21 edit begin - Get holograms from AIs
+	// Outpost 21 edit(port) begin - Get holograms from AIs
 	var/list/holo_listeners = list() // sorry for the duped bits of code ahead, but this is somewhat required to have AI holograms listen to game sounds - Willbird
 	for(var/mob/living/silicon/ai/A in GLOB.player_list)
 		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
@@ -133,7 +133,7 @@
 		else
 			S.frequency = get_rand_frequency()
 
-	// Outpost 21 edit begin - AI hologram can hear things
+	// Outpost 21 edit(port) begin - AI hologram can hear things
 	var/turf/T = get_turf(src)
 	var/listener_position = T // used exclusively for sound_env stuff
 	if(isAI(src))
@@ -376,7 +376,7 @@
 					'sound/effects/mech/powerloader_step.ogg',
 					'sound/effects/mech/powerloader_step2.ogg')
 
-			// Outpost 21 edit begin - vehicle crushing
+			// Outpost 21 edit(port) begin - vehicle crushing
 			if ("vehicle_crush")
 				soundin = pick(
 					'sound/effects/grillehit.ogg',

@@ -72,12 +72,10 @@
 	},
 /area/wizard_station)
 "an" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	dir = 8;
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
+/obj/machinery/door/blast/regular,
+/turf/unsimulated/floor{
+	icon_state = "plating";
+	name = "plating"
 	},
 /area/muriki/tramstation/shed)
 "ao" = (
@@ -153,12 +151,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
-"ay" = (
-/obj/machinery/door/blast/regular{
-	name = "Tram Shed Shutter"
-	},
-/turf/space,
-/area/muriki/tramstation/shed)
 "az" = (
 /obj/effect/overlay/palmtree_l,
 /turf/unsimulated/beach/sand,
@@ -7708,12 +7700,6 @@
 /obj/structure/table/alien/blue,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/planet/clown)
-"Hp" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/space_vr.dmi';
-	icon_state = "bluespace"
-	},
-/area/space)
 "Hr" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
@@ -14673,17 +14659,17 @@ ag
 ag
 ai
 ai
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
-ay
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
+an
 ai
 ai
 ag
@@ -21912,41 +21898,41 @@ mN
 "}
 (70,1,1) = {"
 Sg
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
 Sg
 mN
 mN
@@ -22074,7 +22060,7 @@ mN
 "}
 (71,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -22108,7 +22094,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -22236,7 +22222,7 @@ mN
 "}
 (72,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -22270,7 +22256,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -22398,7 +22384,7 @@ mN
 "}
 (73,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -22432,7 +22418,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -22560,7 +22546,7 @@ mN
 "}
 (74,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -22594,7 +22580,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -22722,7 +22708,7 @@ mN
 "}
 (75,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -22756,7 +22742,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -22884,7 +22870,7 @@ mN
 "}
 (76,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -22918,7 +22904,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -23046,7 +23032,7 @@ mN
 "}
 (77,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -23080,7 +23066,7 @@ aA
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -23208,7 +23194,7 @@ mN
 "}
 (78,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 aA
@@ -23242,7 +23228,7 @@ aA
 aA
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -23370,7 +23356,7 @@ mN
 "}
 (79,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 aA
@@ -23404,7 +23390,7 @@ EK
 aA
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -23532,7 +23518,7 @@ mN
 "}
 (80,1,1) = {"
 Sg
-Hp
+PB
 PB
 aA
 aA
@@ -23566,7 +23552,7 @@ EK
 aA
 aA
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -23694,7 +23680,7 @@ mN
 "}
 (81,1,1) = {"
 Sg
-Hp
+PB
 PB
 aA
 EK
@@ -23728,7 +23714,7 @@ EK
 EK
 aA
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -23856,7 +23842,7 @@ mN
 "}
 (82,1,1) = {"
 Sg
-Hp
+PB
 PB
 aA
 Sf
@@ -23890,7 +23876,7 @@ bK
 Sf
 aA
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -24018,7 +24004,7 @@ mN
 "}
 (83,1,1) = {"
 Sg
-Hp
+PB
 aA
 aA
 Sf
@@ -24052,7 +24038,7 @@ Rj
 Sf
 aA
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -24180,7 +24166,7 @@ mN
 "}
 (84,1,1) = {"
 Sg
-Hp
+PB
 aA
 EK
 EK
@@ -24214,7 +24200,7 @@ EK
 EK
 EK
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -24342,7 +24328,7 @@ mN
 "}
 (85,1,1) = {"
 Sg
-Hp
+PB
 aA
 Sf
 mm
@@ -24376,7 +24362,7 @@ Km
 wi
 Sf
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -24504,7 +24490,7 @@ mN
 "}
 (86,1,1) = {"
 Sg
-Hp
+PB
 aA
 Sf
 td
@@ -24538,7 +24524,7 @@ bK
 bK
 Sf
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -24666,7 +24652,7 @@ mN
 "}
 (87,1,1) = {"
 Sg
-Hp
+PB
 aA
 Sf
 td
@@ -24700,7 +24686,7 @@ bK
 XH
 Sf
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -24828,7 +24814,7 @@ mN
 "}
 (88,1,1) = {"
 Sg
-Hp
+PB
 aA
 Sf
 jD
@@ -24862,7 +24848,7 @@ bK
 bK
 Sf
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -24990,7 +24976,7 @@ mN
 "}
 (89,1,1) = {"
 Sg
-Hp
+PB
 aA
 Sf
 FD
@@ -25024,7 +25010,7 @@ bK
 BS
 Sf
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -25152,7 +25138,7 @@ mN
 "}
 (90,1,1) = {"
 Sg
-Hp
+PB
 aA
 EK
 EK
@@ -25186,7 +25172,7 @@ EK
 EK
 EK
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -25314,7 +25300,7 @@ mN
 "}
 (91,1,1) = {"
 Sg
-Hp
+PB
 aA
 aA
 Sf
@@ -25348,7 +25334,7 @@ tO
 Sf
 aA
 aA
-Hp
+PB
 Sg
 mN
 mN
@@ -25476,7 +25462,7 @@ mN
 "}
 (92,1,1) = {"
 Sg
-Hp
+PB
 PB
 aA
 Sf
@@ -25510,7 +25496,7 @@ sn
 Sf
 aA
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -25638,7 +25624,7 @@ mN
 "}
 (93,1,1) = {"
 Sg
-Hp
+PB
 PB
 aA
 EK
@@ -25672,7 +25658,7 @@ EK
 EK
 aA
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -25800,7 +25786,7 @@ mN
 "}
 (94,1,1) = {"
 Sg
-Hp
+PB
 PB
 aA
 aA
@@ -25834,7 +25820,7 @@ EK
 aA
 aA
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -25962,7 +25948,7 @@ mN
 "}
 (95,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 aA
@@ -25996,7 +25982,7 @@ EK
 aA
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -26124,7 +26110,7 @@ mN
 "}
 (96,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 aA
@@ -26158,7 +26144,7 @@ aA
 aA
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -26286,7 +26272,7 @@ mN
 "}
 (97,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -26320,7 +26306,7 @@ aA
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -26448,7 +26434,7 @@ mN
 "}
 (98,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -26482,7 +26468,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -26610,7 +26596,7 @@ mN
 "}
 (99,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -26644,7 +26630,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -26772,7 +26758,7 @@ mN
 "}
 (100,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -26806,7 +26792,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -26934,7 +26920,7 @@ mN
 "}
 (101,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -26968,7 +26954,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -27096,7 +27082,7 @@ mN
 "}
 (102,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -27130,7 +27116,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -27258,7 +27244,7 @@ mN
 "}
 (103,1,1) = {"
 Sg
-Hp
+PB
 PB
 PB
 PB
@@ -27292,7 +27278,7 @@ PB
 PB
 PB
 PB
-Hp
+PB
 Sg
 mN
 mN
@@ -27420,41 +27406,41 @@ mN
 "}
 (104,1,1) = {"
 Sg
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
-Hp
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
+PB
 Sg
 mN
 mN

@@ -13,7 +13,7 @@
 	new /obj/item/reagent_containers/blood/empty(src)
 	new /obj/item/reagent_containers/blood/empty(src)
 
-// Outpost 21 edit begin - Actual blood packs
+// Outpost 21 edit(port) begin - Actual blood packs
 /obj/item/storage/box/bloodpacks_full
 	name = "blood bags"
 	desc = "This box contains loaded blood packs."

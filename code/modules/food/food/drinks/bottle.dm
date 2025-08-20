@@ -199,7 +199,7 @@
 		icon_rotation = spin_rotation
 		update_transform()
 
-// Outpost 21 edit begin - Altclick spins bottles without context menu
+// Outpost 21 edit(port) begin - Altclick spins bottles without context menu
 /obj/item/reagent_containers/food/drinks/bottle/AltClick(mob/user)
 	spin_bottle()
 // Outpost 21 edit end
@@ -270,7 +270,7 @@
 	reagents.add_reagent(REAGENT_ID_VODKA, 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/tequila
-	name = "Caccavo Guaranteed Quality Tequilla"
+	name = "Caccavo Guaranteed Quality Tequila"
 	desc = "Made from premium petroleum distillates, pure thalidomide and other fine quality ingredients!"
 	icon_state = "tequilabottle"
 	center_of_mass_x = 16

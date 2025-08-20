@@ -65,7 +65,7 @@ GLOBAL_LIST_INIT(item_vore_blacklist, list(
 		/obj/item/clothing/head/helmet/space,
 		/obj/item/disk/nuclear,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/roiz,
-		/obj/item/airlock_brace)) // Outpost 21 edit - doorbraces too
+		/obj/item/airlock_brace)) // Outpost 21 edit(port) - doorbraces too
 
 //Classic Vore sounds
 GLOBAL_LIST_INIT(classic_vore_sounds, list(
@@ -1126,7 +1126,8 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/circuitboard, \
 	/obj/item/smes_coil, \
 	/obj/item/fuel_assembly, \
-	/obj/item/stack/tile/floor
+	/obj/item/stack/tile/floor, \
+	/obj/item/stack/hose
 
 #define OMNI_GRIPPER \
 	/obj/item

@@ -8540,6 +8540,76 @@
 /obj/machinery/door/airlock/angled_tgmc,
 /turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
+"aoH" = (
+/obj/structure/reagent_dispensers/medical_waste_tank,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
+"aoI" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 1;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/valley)
+"aoJ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 1;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/valley)
+"aoK" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 1;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
+	icon_state = "slab"
+	},
+/area/muriki/grounds/shutt)
+"aoL" = (
+/obj/effect/floor_decal/stairs/station{
+	dir = 1;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
+	icon_state = "slab"
+	},
+/area/muriki/grounds/shutt)
+"aoM" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 1;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
+	icon_state = "slab"
+	},
+/area/muriki/grounds/shutt)
+"aoN" = (
+/obj/effect/floor_decal/stairs/station{
+	dir = 1;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
+	icon_state = "slab"
+	},
+/area/mine/explored/muriki/valley)
 "aoS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -13015,6 +13085,7 @@
 	pixel_x = -21
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
 "bKU" = (
@@ -23516,17 +23587,16 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "ffU" = (
-/obj/machinery/door/airlock/external{
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 8
+	},
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
 	locked = 1;
 	name = "\improper Emergency Elevator Access";
-	req_access = list(13)
-	},
-/obj/effect/floor_decal/industrial/stand_clear/yellow{
-	dir = 8
+	req_one_access = list(13)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/secondary/exit)
@@ -27824,12 +27894,8 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -29540,12 +29606,8 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -29858,17 +29920,14 @@
 	pixel_y = -32;
 	dir = 1
 	},
-/obj/item/radio{
-	canhear_range = 7;
-	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	name = "Virology Emergency Phone";
-	pixel_x = -6;
-	pixel_y = -1
-	},
 /obj/effect/floor_decal/corner/black{
 	dir = 10
+	},
+/obj/item/radio/phone/medbay{
+	name = "Virology Emergency Phone";
+	frequency = 1487;
+	pixel_x = -6;
+	pixel_y = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -34560,17 +34619,16 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cafeteria)
 "iAJ" = (
-/obj/machinery/door/airlock/external{
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
 	locked = 1;
 	name = "\improper Emergency Elevator Access";
-	req_access = list(13)
-	},
-/obj/effect/floor_decal/industrial/stand_clear/yellow{
-	dir = 4
+	req_one_access = list(13)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/secondary/exit)
@@ -35954,6 +36012,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/structure/reagent_dispensers/souppot,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "iXt" = (
@@ -38984,12 +39043,8 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/aft)
 "jRb" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -49464,12 +49519,8 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -51071,7 +51122,6 @@
 /area/rnd/otherlab)
 "nzn" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/r_wall,
@@ -56371,7 +56421,6 @@
 /area/quartermaster/qm)
 "poB" = (
 /obj/structure/sign/warning/biohazard{
-	icon = 'icons/obj/decals_vr.dmi';
 	icon_state = "bio-danger"
 	},
 /turf/simulated/wall/durasteel,
@@ -73071,12 +73120,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "uwm" = (
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -75003,12 +75048,8 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central2{
-	dir = 1;
-	icon = 'icons/obj/structures/multiz.dmi';
-	icon_state = "stair_u";
-	name = "steps";
-	pixel_y = 1
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -75855,15 +75896,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "vnO" = (
-/obj/item/radio{
-	anchored = 1;
-	canhear_range = 4;
-	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
-	icon_state = "red_phone";
-	name = "Break Room Emergency Phone";
-	pixel_y = 9
-	},
 /obj/structure/table/standard,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -75872,6 +75904,12 @@
 	pixel_y = 32
 	},
 /obj/item/toy/plushie/borgplushie/drake/trauma,
+/obj/item/radio/phone/medbay{
+	name = "Break Room Emergency Phone";
+	pixel_x = 6;
+	pixel_y = 8;
+	frequency = 1487
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "vod" = (
@@ -77651,14 +77689,13 @@
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "vQy" = (
-/obj/machinery/door/airlock/external{
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
 	icon_state = "door_locked";
 	id_tag = "escape_dock";
 	locked = 1;
 	name = "\improper Emergency Elevator Access";
-	req_access = list(13)
+	req_one_access = list(13)
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/secondary/exit)
@@ -113321,7 +113358,7 @@ ajP
 ajP
 xSZ
 dkK
-vbu
+aoI
 vbu
 uYz
 igG
@@ -113483,7 +113520,7 @@ ajP
 xSZ
 xSZ
 ths
-hfW
+aoJ
 hfW
 xMD
 igG
@@ -118663,7 +118700,7 @@ trT
 trT
 xgD
 ors
-uwm
+aoN
 uwm
 qcR
 aju
@@ -118825,7 +118862,7 @@ trT
 trT
 xgD
 ors
-uwm
+aoN
 uwm
 qcR
 qcR
@@ -118987,7 +119024,7 @@ trT
 trT
 xgD
 ors
-uwm
+aoN
 uwm
 qcR
 aju
@@ -124404,7 +124441,7 @@ kNy
 mDI
 aoz
 ozu
-aoF
+aoH
 wKG
 wKG
 wKG
@@ -128872,7 +128909,7 @@ sVx
 sVx
 bTO
 fCB
-gGb
+aoK
 gGb
 gqZ
 hxu
@@ -129034,7 +129071,7 @@ sVx
 sVx
 bTO
 bTO
-jRb
+aoL
 jRb
 xlx
 hxu
@@ -129196,7 +129233,7 @@ sVx
 sVx
 bTO
 tNX
-ncz
+aoM
 ncz
 rtU
 hxu

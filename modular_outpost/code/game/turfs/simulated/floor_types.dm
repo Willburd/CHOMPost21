@@ -17,7 +17,7 @@
 
 /turf/simulated/floor/solarpanel
 	name = "solarpanel"
-	icon = 'icons/turf/flooring/plating_vr.dmi'
+	icon = 'icons/turf/flooring/plating.dmi'
 	icon_state = "solarpanel"
 	initial_flooring = /decl/flooring/outpost_roof/hull
 	outdoors = TRUE

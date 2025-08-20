@@ -26,14 +26,10 @@
 /turf/template_noop,
 /area/template_noop)
 "p" = (
-/obj/structure/prop/statue/angel{
-	icon = 'icons/obj/statue_ch.dmi';
-	icon_state = "Angel_Female_ch";
-	anchored = 0
-	},
 /obj/effect/auto_roof{
 	roof_type = /turf/simulated/floor/plating/turfpack/muriki
 	},
+/obj/structure/prop/statue/jumpscare,
 /turf/simulated/floor/plating,
 /area/submap/outpost21/yard_cargocontainer)
 "t" = (

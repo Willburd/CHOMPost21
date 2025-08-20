@@ -318,7 +318,7 @@
 	can_hold = list(/obj/item/reagent_containers/food/snacks/monkeycube)
 	starts_with = list(/obj/item/reagent_containers/food/snacks/monkeycube/wrapped = 4)
 
-// Outpost 21 edit begin - Soaking monkey cubes
+// Outpost 21 edit(port) begin - Soaking monkey cubes
 /obj/item/storage/box/monkeycubes/proc/soaked()
 	for(var/A in contents)
 		var/obj/item/reagent_containers/food/snacks/monkeycube/C = A

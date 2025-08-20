@@ -16,7 +16,7 @@
 		qdel(src)
 
 /obj/effect/electrical_field/proc/shock(var/mob/living/L, var/damage = 2.5)
-	for(var/datum/reagent/R in L.reagents.reagent_list) // Outpost 21 edit - Removed phorochem
+	for(var/datum/reagent/R in L.reagents.reagent_list) // Outpost 21 edit(port) - Removed phorochem
 		if(R.id == REAGENT_ID_FULGURACIN)
 			if(prob(20))
 				L << span_notice("Your hairs stand up, but you resist the shock for the most part.")

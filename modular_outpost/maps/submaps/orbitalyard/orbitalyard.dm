@@ -27,6 +27,8 @@
 #include "container_C.dmm"
 #include "alienship_A.dmm"
 #include "diona_A.dmm"
+#include "delight_A.dmm"
+#include "delight_B.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -227,6 +229,22 @@
 	discard_prob = 55
 	cost = 80
 
+/datum/map_template/outpost21/space/orbitalyard_huge/delight_A
+	name = "Derelict Vessel"
+	desc = "The remains of time long past"
+	mappath = "modular_outpost/maps/submaps/orbitalyard/delight_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 55
+	cost = 80
+
+/datum/map_template/outpost21/space/orbitalyard_huge/delight_B
+	name = "Derelict Vessel"
+	desc = "The remains of time long past"
+	mappath = "modular_outpost/maps/submaps/orbitalyard/delight_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 55
+	cost = 80
+
 //////////////////////////////////////////////////////////////
 // Area definitions
 /area/submap/outpost21/asteroid_generic
@@ -266,4 +284,8 @@
 /area/submap/outpost21/structure_generic/alienshipa
 	name = "\improper Alien Vessel"
 	requires_power = FALSE
+	always_unpowered = FALSE
+
+/area/submap/outpost21/structure_generic/delight_ruins
+	name = "\improper Derelict Vessel"
 	always_unpowered = FALSE

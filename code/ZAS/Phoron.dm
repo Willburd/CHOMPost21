@@ -95,9 +95,9 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 		return
 
 	//Burn skin if exposed.
-	if(vsc.plc.SKIN_BURNS && (species.breath_type != GAS_PHORON) && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
+	if(vsc.plc.SKIN_BURNS && (species.breath_type != GAS_PHORON) && species.phoron_contact_mod > 0) // Outpost 21 edit(port) - phoron contact mod
 		if(!pl_head_protected() || !pl_suit_protected())
-			burn_skin(0.75 * species.phoron_contact_mod) // Outpost 21 edit - phoron contact mod
+			burn_skin(0.75 * species.phoron_contact_mod) // Outpost 21 edit(port) - phoron contact mod
 			if(prob(20))
 				to_chat(src, span_danger("Your skin burns!"))
 			updatehealth()
@@ -129,8 +129,8 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 			burn_eyes()
 
 	//Genetic Corruption
-	if(vsc.plc.GENETIC_CORRUPTION && (species.breath_type != GAS_PHORON) && species.phoron_contact_mod > 0) // Outpost 21 edit - phoron contact mod
-		if(rand(1,10000) < vsc.plc.GENETIC_CORRUPTION * species.phoron_contact_mod) // Outpost 21 edit - phoron contact mod
+	if(vsc.plc.GENETIC_CORRUPTION && (species.breath_type != GAS_PHORON) && species.phoron_contact_mod > 0) // Outpost 21 edit(port) - phoron contact mod
+		if(rand(1,10000) < vsc.plc.GENETIC_CORRUPTION * species.phoron_contact_mod) // Outpost 21 edit(port) - phoron contact mod
 			randmutb(src)
 			to_chat(src, span_danger("High levels of toxins cause you to spontaneously mutate!"))
 			domutcheck(src,null)
@@ -185,7 +185,7 @@ var/image/contamination_overlay = image('icons/effects/contamination.dmi')
 /turf/Entered(obj/item/I)
 	. = ..()
 	//Items that are in phoron, but not on a mob, can still be contaminated.
-	if(istype(I) && vsc && vsc.plc && vsc.plc.CLOTH_CONTAMINATION && I.can_contaminate()) // Outpost 21 edit - nullcheck for persistant trash falling during startup
+	if(istype(I) && vsc && vsc.plc && vsc.plc.CLOTH_CONTAMINATION && I.can_contaminate()) // Outpost 21 edit(port) - nullcheck for persistant trash falling during startup
 		var/datum/gas_mixture/env = return_air(1)
 		if(!env)
 			return
