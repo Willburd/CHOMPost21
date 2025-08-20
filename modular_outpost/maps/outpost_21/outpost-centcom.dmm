@@ -16326,12 +16326,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
-/obj/machinery/door/airlock/external{
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
-	icon_state = "door_locked";
 	id_tag = "centcom_dock_airlock";
 	locked = 1;
+	icon_state = "door_locked";
 	name = "Primary Elevator Access";
 	req_access = list(13)
 	},
@@ -17467,12 +17466,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/specialty/redspace)
 "iAX" = (
-/turf/unsimulated/wall{
-	desc = "That looks like it doesn't open easily.";
-	icon = 'icons/obj/doors/rapid_pdoor.dmi';
-	icon_state = "pdoor1";
-	name = "Shuttle Bay Blast Door"
-	},
+/obj/machinery/door/blast/regular,
+/turf/unsimulated/floor/techfloor_grid,
 /area/centcom/suppy)
 "iBu" = (
 /obj/machinery/disposal,
@@ -20083,22 +20078,6 @@
 	},
 /turf/simulated/shuttle/wall/voidcraft,
 /area/shuttle/escape)
-"jRD" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
-	icon_state = "door_locked";
-	id_tag = "centcom_dock_airlock";
-	locked = 1;
-	name = "Primary Elevator Access";
-	req_access = list(13)
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/centcom/main_hall)
 "jRR" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -21891,10 +21870,7 @@
 /area/centcom/living)
 "kTt" = (
 /obj/structure/sign/department/ai,
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "rgeneric"
-	},
+/turf/unsimulated/wall/r_wall,
 /area/centcom/control)
 "kTw" = (
 /obj/structure/bed/chair/bay/chair/padded/blue{
@@ -24606,12 +24582,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
-/obj/machinery/door/airlock/external{
+/obj/machinery/door/airlock/voidcraft{
 	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
-	icon_state = "door_locked";
 	id_tag = "escape_shuttle_hatch";
 	locked = 1;
+	icon_state = "door_locked";
 	name = "Primary Elevator Hatch";
 	req_access = list(13)
 	},
@@ -28144,12 +28119,6 @@
 "oDk" = (
 /turf/simulated/floor/tiled,
 /area/centcom/medical)
-"oDt" = (
-/turf/unsimulated/wall{
-	icon = 'icons/turf/wall_masks.dmi';
-	icon_state = "rgeneric"
-	},
-/area/centcom/control)
 "oDv" = (
 /obj/item/bedsheet/pillow/green,
 /obj/item/bedsheet/pillow/teal,
@@ -40454,6 +40423,9 @@
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "vAG" = (
+/obj/machinery/door/blast/regular{
+	name = "Supply Elevator"
+	},
 /turf/unsimulated/wall{
 	desc = "That looks like it doesn't open easily.";
 	dir = 8;
@@ -40461,6 +40433,7 @@
 	icon_state = "pdoor1";
 	name = "Supply Elevator"
 	},
+/turf/unsimulated/floor/techfloor_grid,
 /area/centcom/suppy)
 "vAN" = (
 /obj/machinery/button/remote/blast_door{
@@ -40870,24 +40843,6 @@
 /obj/machinery/field_generator,
 /turf/simulated/floor/reinforced/airless,
 /area/specialty/redspace)
-"vLY" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1381;
-	icon = 'icons/obj/doors/shuttledoors.dmi';
-	icon_state = "door_locked";
-	id_tag = "escape_shuttle_hatch";
-	locked = 1;
-	name = "Primary Elevator Hatch";
-	req_access = list(13)
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 1
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/voidcraft,
-/area/shuttle/escape)
 "vMD" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/structure/table/sifwoodentable,
@@ -59143,8 +59098,8 @@ aaQ
 cMR
 cMR
 aaQ
-oDt
-oDt
+aaQ
+aaQ
 cDf
 kTt
 aaQ
@@ -66947,7 +66902,7 @@ xNS
 xNS
 xNS
 dDw
-jRD
+hVx
 hVx
 hVx
 hVx
@@ -67109,7 +67064,7 @@ rff
 rff
 rff
 qQW
-vLY
+mGd
 mGd
 mGd
 mGd
