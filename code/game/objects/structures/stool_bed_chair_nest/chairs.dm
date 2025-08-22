@@ -345,6 +345,7 @@
 	base_icon = "pewmiddle"
 	icon_state = "pewmiddle"
 	applies_material_colour = FALSE
+	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/pew/left
 	icon_state = "pewend_left"
@@ -363,6 +364,7 @@
 	applies_material_colour = FALSE
 	color = null
 	var/padding_color = "#CC0000"
+	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/bench/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..()
@@ -398,6 +400,7 @@
 	base_icon = "corp_sofamiddle"
 	icon_state = "corp_sofamiddle"
 	applies_material_colour = FALSE
+	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/corp/left
 	icon_state = "corp_sofaend_left"
