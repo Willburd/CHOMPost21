@@ -221,10 +221,10 @@
 /obj/item/hookah_pipe/Moved(atom/old_loc, direction, forced, movetime)
 	. = ..()
 	if(ismob(old_loc))
-		UnregisterSignal(old_loc, list(COMSIG_MOVABLE_MOVED,COMSIG_PARENT_QDELETING))
+		UnregisterSignal(old_loc, list(COMSIG_MOVABLE_MOVED,COMSIG_QDELETING))
 	if(ismob(loc))
 		RegisterSignal(loc, COMSIG_MOVABLE_MOVED, PROC_REF(check_retract))
-		RegisterSignal(loc, COMSIG_PARENT_QDELETING, PROC_REF(check_retract))
+		RegisterSignal(loc, COMSIG_QDELETING, PROC_REF(check_retract))
 	// Explaining this:
 	// I have to delay this, because giving something to a mob (even your other hand)
 	// runs Drop from user -> Move to turf -> Pickup -> Move to user. There is no way

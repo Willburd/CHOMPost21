@@ -99,9 +99,6 @@ OL|IL|OL
 /datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
-	var/obj/structure/confinement_beam_generator/control_box/CB = origin_machine?.resolve()
-	if(!CB || !CB.on_target(target_x,target_y))
-		return // Stop making mistakes
 	var/org_wattage = SSsupply.watts_sold
 	SSsupply.watts_sold += power_level * 0.92 // Sell to centcom
 	var/new_wattage = SSsupply.watts_sold

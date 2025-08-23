@@ -9,7 +9,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/custom_circuit_printer_upgrade
 	name = "Integrated circuit printer upgrade - advanced designs"
@@ -22,7 +22,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/wirer
 	name = "Custom wirer tool"
@@ -34,7 +34,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/debugger
 	name = "Custom circuit debugger tool"
@@ -46,7 +46,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 // Assemblies
 /datum/design_techweb/custom_circuit_assembly_small
@@ -60,7 +60,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY + RND_SUBCATEGORY_CIRCUITRY_SHELLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/custom_circuit_assembly_medium
 	name = "Medium custom assembly"
@@ -73,7 +73,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY + RND_SUBCATEGORY_CIRCUITRY_SHELLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/custom_circuit_assembly_large
 	name = "Large custom assembly"
@@ -86,7 +86,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY + RND_SUBCATEGORY_CIRCUITRY_SHELLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/custom_circuit_assembly_drone
 	name = "Drone custom assembly"
@@ -99,7 +99,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY + RND_SUBCATEGORY_CIRCUITRY_SHELLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/custom_circuit_assembly_device
 	name = "Device custom assembly"
@@ -112,7 +112,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY + RND_SUBCATEGORY_CIRCUITRY_SHELLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/custom_circuit_assembly_implant
 	name = "Implant custom assembly"
@@ -125,7 +125,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY + RND_SUBCATEGORY_CIRCUITRY_SHELLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/circuit_bug
 	name = "Circuitry Bug"
@@ -137,4 +137,4 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY + RND_SUBCATEGORY_CIRCUITRY_SHELLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was DEPARTMENT_BITFLAG_SCIENCE
