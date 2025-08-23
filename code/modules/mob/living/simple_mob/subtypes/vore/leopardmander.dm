@@ -53,6 +53,10 @@
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 
+	// Outpost 21 edit begin - muriki enzyme immunity
+	enzyme_affect = FALSE
+	// Outpost 21 edit end
+
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
 	desc = "Classification: S Draconis uncia\

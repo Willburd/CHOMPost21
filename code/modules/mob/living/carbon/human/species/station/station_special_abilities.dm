@@ -1260,6 +1260,7 @@
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
 /datum/reagent/succubi_aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(prob(3))
@@ -1277,6 +1278,7 @@
 	scannable = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
 /datum/reagent/succubi_numbing/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 
@@ -1297,6 +1299,7 @@
 	scannable = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
 /datum/reagent/succubi_paralize/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //will first keep it like that.  lets see what it changes. if nothing, than I will rework the effect again
 

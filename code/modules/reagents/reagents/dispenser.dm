@@ -735,3 +735,4 @@
 	color = "#808000"
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
