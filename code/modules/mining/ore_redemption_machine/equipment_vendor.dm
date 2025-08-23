@@ -265,7 +265,8 @@
 				return
 
 			remove_points(inserted_id, prize.cost)
-			var/obj/item/I = new prize.equipment_path(loc)
+			/*var/obj/item/I = */
+			new prize.equipment_path(loc)
 			// I.persist_storable = FALSE Outpost 21 edit - Let players keep their prizes, at least until security takes them away.
 			flick(icon_vend, src)
 		else
