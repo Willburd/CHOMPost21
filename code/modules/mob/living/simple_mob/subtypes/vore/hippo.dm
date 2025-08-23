@@ -54,7 +54,7 @@
 	enzyme_affect = FALSE
 	// Outpost 21 edit end
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/hippo //I don't know why it's in a seperate line but everyone does it so i do it
