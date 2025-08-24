@@ -105,7 +105,8 @@ var/list/civilian_cartridges = list(
 	name = "\improper R.O.B.U.S.T. cartridge"
 	icon_state = "cart-s"
 	programs = list(
-		new/datum/data/pda/app/crew_records/security)
+		new/datum/data/pda/app/crew_records/security,
+		new/datum/data/pda/app/prisoner_manager) // Outpost 21 edit - Prisoner tracker
 
 /obj/item/cartridge/detective
 	name = "\improper D.E.T.E.C.T. cartridge"
@@ -114,7 +115,8 @@ var/list/civilian_cartridges = list(
 		new/datum/data/pda/app/crew_records/medical,
 		new/datum/data/pda/utility/scanmode/medical,
 
-		new/datum/data/pda/app/crew_records/security)
+		new/datum/data/pda/app/crew_records/security,
+		new/datum/data/pda/app/prisoner_manager) // Outpost 21 edit - Prisoner tracker
 
 
 /obj/item/cartridge/janitor

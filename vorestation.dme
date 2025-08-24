@@ -5527,6 +5527,7 @@
 #include "modular_outpost\code\modules\multiz\misc.dm"
 #include "modular_outpost\code\modules\organs\internal\butts.dm"
 #include "modular_outpost\code\modules\organs\internal\augment\armmounted.dm"
+#include "modular_outpost\code\modules\pda\cart_apps.dm"
 #include "modular_outpost\code\modules\pda\core_apps.dm"
 #include "modular_outpost\code\modules\persistence\noticeboard.dm"
 #include "modular_outpost\code\modules\phorochemistry\beakers.dm"
