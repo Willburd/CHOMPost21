@@ -212,7 +212,7 @@
 /area/submap/outpost21/structure_generic/alienshipa)
 "ra" = (
 /obj/structure/table/alien,
-/obj/structure/prop/prismcontrol,
+/obj/machinery/turretid/lethal,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
