@@ -322,7 +322,6 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "orawhicir"
 	sound_env = SMALL_SOFTFLOOR
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/maintenance/substation/mining
@@ -351,13 +350,11 @@
 	name = "\improper Ore Processing"
 	ambience = AMBIENCE_ENGINEERING
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 
 /area/quartermaster/mining/ore_silo
 	name = "\improper Ore Silo"
 	ambience = AMBIENCE_MAINTENANCE
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/quartermaster/mining/firstaid
@@ -426,7 +423,6 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
-	flags = AREA_FIRE_SUPRESSION
 
 /area/muriki/arrivejani
 	name = "\improper Arrivals Janitorial Closet"
@@ -589,7 +585,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = RAD_SHIELDED | AREA_FIRE_SUPRESSION
+	flags = RAD_SHIELDED
 	color_grading = COLORTINT_DIM
 
 /area/muriki/crew/civmail
@@ -623,7 +619,6 @@
 	name = "\improper Bunker Access Hallway"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/maintenance/roof_tube_access
@@ -650,7 +645,6 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "bluewnew"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/hallway/muriki/civup
@@ -763,7 +757,6 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = LARGE_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	flags = AREA_FIRE_SUPRESSION
 
 /area/engineering/refinery/aid_station
 	name = "\improper Refinery Medical Station"
@@ -1753,7 +1746,6 @@
 /area/medical
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/medical/stairwell
 	name = "\improper Medical Stairwell"
@@ -1795,7 +1787,7 @@
 /area/medical/recovlaund
 	name = "\improper Medical Recovery Laundry"
 	icon_state = "locker"
-	flags = RAD_SHIELDED|AREA_FIRE_SUPRESSION
+	flags = RAD_SHIELDED
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/medical/evastore
@@ -2015,7 +2007,6 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "brig"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/security/brig/lowobservation
@@ -2035,14 +2026,12 @@
 	base_turf = /turf/simulated/open
 	icon_state = "brig"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-	flags = AREA_FIRE_SUPRESSION
 
 /area/security/brig/isolate
 	name = "\improper Security Solitary Confinement"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "brig"
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/security/tankstore
@@ -2065,7 +2054,6 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT // Lets avoid the bowls stacking for the otties
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
-	flags = AREA_FIRE_SUPRESSION
 
 /area/security/eva
 	name = "\improper Security External Access"
@@ -2122,7 +2110,6 @@
 	icon_state = "locker"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/rnd/lockers
@@ -2130,7 +2117,6 @@
 	icon_state = "locker"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/entry
 	name = "\improper Research Entryway Decontamination"
@@ -2182,14 +2168,14 @@
 	icon_state = "xeno_f_lab"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
+	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/xenobiohstore
 	name = "\improper Hazardous Xenobiology Storage"
 	icon_state = "research_storage"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
+	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/burn
 	name = "\improper Xenobiology Threat Supression"
@@ -2202,7 +2188,6 @@
 	name = "\improper Sphenoidal Atmospherics"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/analysis
@@ -2286,7 +2271,6 @@
 	name = "\improper Research Break Room"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/rnd/research/medical_roof
@@ -2311,7 +2295,6 @@
 	icon_state = "magblacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 	lightswitch = 1
 
 /area/rnd/research/phoronics/burn
@@ -2319,7 +2302,6 @@
 	icon_state = "redblacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/phoronics/clean
@@ -2327,14 +2309,12 @@
 	icon_state = "purwhitri"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/research/phoronics/breakroom
 	name = "\improper Phoronics Break Room"
 	icon_state = "purwhicir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/rnd/research/phoronics/gasstore
@@ -2342,7 +2322,6 @@
 	icon_state = "magblasqu"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/phoronics/extrastore
@@ -2350,7 +2329,6 @@
 	icon_state = "magwhicir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/research/phoronics/bombrange
 	name = "\improper Phoronics Bomb Testing Range"
@@ -2370,7 +2348,6 @@
 /area/maintenance/substation/phoronics
 	name = "Phoronics Substation"
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 
 //----------------
 /area/rnd/hallway

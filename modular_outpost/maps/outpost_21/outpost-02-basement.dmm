@@ -46957,6 +46957,9 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/item/multitool{
+	pixel_x = -7
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/oldrd)
 "bGx" = (
