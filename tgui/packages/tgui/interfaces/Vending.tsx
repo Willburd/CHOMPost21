@@ -249,9 +249,9 @@ const VendingRow = (props: { product: product }) => {
         >
           {/* Outpost 21 edit(port) begin - Cargo vendor configuring */}
           {cargo_configure
-            ? 'Set(' + product.price + '₮)'
+            ? `Set(${product.price}₮)`
             : product.price
-              ? 'Buy (' + product.price + '₮)'
+              ? `Buy (${product.price}₮)`
               : 'Vend'}
           {/* Outpost 21 edit end */}
         </Button>

@@ -23,9 +23,7 @@ export const SupplyConsoleMenuOrder = (props) => {
     price_mod,
     cash_points,
   } = data;
-  {
-    /* Outpost 21 edit - Points or thalers */
-  }
+  /* Outpost 21 edit - Points or thalers */
 
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchCategory, setSearchCategory] = useState<string>('');

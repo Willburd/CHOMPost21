@@ -14,7 +14,7 @@ export const MenuArchiveDownload = (props) => {
       {inventory.length > 0 ? (
         inventory.map((book) => (
           <Section
-            title={book.deleted ? 'DELETED - ' + book.title : book.title}
+            title={book.deleted ? `DELETED - ${book.title}` : book.title}
             key={book.id}
           >
             {book.author} - {book.category}

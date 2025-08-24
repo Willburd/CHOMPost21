@@ -55,6 +55,7 @@ export const PublicLibrary = (props) => {
                 </Button>
               )}
               <Section title={title}>
+                {/** biome-ignore lint/security/noDangerouslySetInnerHtml: is only ever passed data by hardcoded datum strings */}
                 <div dangerouslySetInnerHTML={{ __html: body }} />
               </Section>
               <Section title={searchmode}>

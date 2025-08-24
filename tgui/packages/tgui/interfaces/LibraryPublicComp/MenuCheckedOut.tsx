@@ -16,7 +16,7 @@ export const MenuCheckedOut = (props) => {
           <Section title={checkout.bookname} key={checkout.bookname}>
             Checked out to: {checkout.bookname} <br />
             --- Taken: {checkout.timetaken} minutes ago, Due: in{' '}
-            {checkout.overdue ? '(OVERDUE)' : checkout.timedue + ' minutes'}{' '}
+            {checkout.overdue ? '(OVERDUE)' : `${checkout.timedue} minutes`}{' '}
             <br />
             <Button.Confirm
               icon="eye"
