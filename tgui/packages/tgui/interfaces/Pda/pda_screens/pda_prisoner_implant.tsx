@@ -5,6 +5,7 @@ type Data = {
   security: {
     prisoner_implants:
       | {
+          host: string;
           x: number;
           y: number;
           z: number;
@@ -20,17 +21,15 @@ export const pda_prisoner_implant = (props) => {
 
   return (
     <Box>
-      <Section title="Tracking Implants">
-        {(security.prisoner_implants && (
-          <LabeledList>
-            {security.prisoner_implants.map((cart, i) => (
-              <LabeledList.Item key={i} label={cart.area}>
-                {cart.x}.{cart.z}.{cart.z}
-              </LabeledList.Item>
-            ))}
-          </LabeledList>
-        )) || <Box color="bad">There are no implanted prisoners</Box>}
-      </Section>
+      {(security.prisoner_implants && (
+        <LabeledList>
+          {security.prisoner_implants.map((cart, i) => (
+            <LabeledList.Item key={i} label={cart.host}>
+              {cart.area} - {cart.x}.{cart.z}.{cart.z}
+            </LabeledList.Item>
+          ))}
+        </LabeledList>
+      )) || <Box color="bad">There are no implanted prisoners</Box>}
     </Box>
   );
 };
