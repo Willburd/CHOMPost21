@@ -5400,6 +5400,7 @@
 #include "modular_outpost\code\game\objects\effects\map_effects\burnpit.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\fire_supression.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\redspaceexit.dm"
+#include "modular_outpost\code\game\objects\effects\map_effects\shifting_caves.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\terraformer_glands.dm"
 #include "modular_outpost\code\game\objects\effects\posters\eshui.dm"
 #include "modular_outpost\code\game\objects\effects\posters\postersubtypes.dm"
