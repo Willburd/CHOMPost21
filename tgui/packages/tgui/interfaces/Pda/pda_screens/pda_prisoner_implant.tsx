@@ -1,5 +1,5 @@
 import { useBackend } from 'tgui/backend';
-import { Box, LabeledList, Section } from 'tgui-core/components';
+import { Box, LabeledList } from 'tgui-core/components';
 
 type Data = {
   security: {
