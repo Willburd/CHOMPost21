@@ -24,3 +24,34 @@
 
 	secData["prisoner_implants"] = implantData.len ? implantData : null
 	data["security"] = secData
+
+
+
+GLOBAL_LIST_EMPTY(pda_teshpet_scores)
+/datum/data/pda/app/tesh_pet
+	name = "Tesh Petter"
+	icon = "heart"
+	template = "pda_tesh_pet"
+	category = "Clown"
+
+/datum/data/pda/app/tesh_pet/update_ui(mob/user as mob, list/data)
+	var/list/petData = list()
+	petData["scores"] = GLOB.pda_teshpet_scores.Copy()
+	data["teshpet_data"] = petData
+
+/datum/data/pda/app/tesh_pet/tgui_act(action, params, ui, state)
+	if(..())
+		return TRUE
+
+	var/obj/item/card/id/ID = pda.id
+	if(!ID?.registered_name)
+		return FALSE
+	var/found_name = ID.registered_name
+
+	switch(action)
+		if("Pet")
+			GLOB.pda_teshpet_scores[found_name] += 1
+		if("Kill")
+			GLOB.pda_teshpet_scores[found_name] = 0
+
+	return TRUE
