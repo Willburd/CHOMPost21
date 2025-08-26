@@ -30717,7 +30717,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/djstation)
 "oHh" = (
 /obj/machinery/alarm{
