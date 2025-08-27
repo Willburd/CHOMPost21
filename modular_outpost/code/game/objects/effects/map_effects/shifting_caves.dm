@@ -2,16 +2,14 @@
 GLOBAL_LIST_EMPTY(shifting_cave_effects)
 
 /obj/effect/map_effect/interval/shifting_cave
-	name = "closing_cave"
+	name = "closing cave"
 	icon = 'icons/mob/screen1.dmi'
-	icon_state = "x2"
+	icon_state = "warnmarker"
 	opacity = 0
 
 	always_run = TRUE
 	interval_lower_bound = 7 SECONDS
 	interval_upper_bound = 20 SECONDS
-
-	light_color = "#eccb0d"
 
 	var/player_detected = FALSE
 	var/before_turf_path = /turf/simulated/mineral/floor
@@ -66,6 +64,7 @@ GLOBAL_LIST_EMPTY(shifting_cave_effects)
 		qdel(src)
 
 /obj/effect/map_effect/interval/shifting_cave/opening
+	name = "opening cave"
 	before_turf_path = /turf/simulated/mineral/floor
 	after_turf_path = /turf/simulated/mineral
 
