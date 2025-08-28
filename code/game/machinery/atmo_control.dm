@@ -5,6 +5,7 @@
 #define SENSOR_N2			(1<<4)
 #define SENSOR_CO2			(1<<5)
 #define SENSOR_N2O			(1<<6)
+#define SENSOR_CH4			(1<<7)
 
 /obj/machinery/air_sensor
 	icon = 'icons/obj/stationobjs.dmi'
@@ -60,13 +61,14 @@
 					signal.data[GAS_N2] = round(100*air_sample.gas[GAS_N2]/total_moles,0.1)
 				if(output&32)
 					signal.data[GAS_CO2] = round(100*air_sample.gas[GAS_CO2]/total_moles,0.1)
-				if(output&64)
+				if(output&64) // Outpost 21 edit - Methane
 					signal.data[GAS_CH4] = round(100*air_sample.gas[GAS_CH4]/total_moles,0.1)
 			else
 				signal.data[GAS_O2] = 0
 				signal.data[GAS_PHORON] = 0
 				signal.data[GAS_N2] = 0
 				signal.data[GAS_CO2] = 0
+				signal.data[GAS_CH4] = 0 // Outpost 21 edit - Methane
 		signal.data["sigtype"]="status"
 		radio_connection.post_signal(src, signal, radio_filter = RADIO_ATMOSIA)
 
@@ -113,6 +115,7 @@
 		"Nitrogen: [ONOFF_TOGGLE(SENSOR_N2)]" = SENSOR_N2,
 		"Carbon Dioxide: [ONOFF_TOGGLE(SENSOR_CO2)]" = SENSOR_CO2,
 		"Nitrous Oxide: [ONOFF_TOGGLE(SENSOR_N2O)]" = SENSOR_N2O,
+		"Methane: [ONOFF_TOGGLE(SENSOR_CH4)]" = SENSOR_CH4, // Outpost 21 edit - Methane
 		"-SAVE TO BUFFER-" = "multitool"
 	)
 
@@ -137,6 +140,8 @@
 				output ^= SENSOR_CO2
 			if(SENSOR_N2O)
 				output ^= SENSOR_N2O
+			if(SENSOR_CH4) // Outpost 21 edit - Methane
+				output ^= SENSOR_CH4
 			if("frequency")
 				var/new_frequency = tgui_input_number(user, "[src] has a frequency of [frequency]. What would you like it to be?", "[src] frequency", frequency, RADIO_HIGH_FREQ, RADIO_LOW_FREQ)
 				if(new_frequency)
@@ -751,3 +756,4 @@
 #undef SENSOR_N2
 #undef SENSOR_CO2
 #undef SENSOR_N2O
+#undef SENSOR_CH4
