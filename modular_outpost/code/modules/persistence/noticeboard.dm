@@ -25,6 +25,10 @@
 	. = ..()
 
 
+/obj/structure/noticeboard/kitchen
+	name = "Kitchen notice board"
+
+
 /obj/structure/noticeboard/cargo
 	name = "Cargo notice board"
 

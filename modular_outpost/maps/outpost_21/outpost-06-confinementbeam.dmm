@@ -13976,13 +13976,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/wood,
 /area/ai)
-"Qu" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/item/radio/beacon,
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/trawler_airlock)
 "Qx" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15667,7 +15660,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/computer/shuttle_control/multi{
-	shuttle_tag = "Engineering Ferry"
+	shuttle_tag = "Engineering Ferry";
+	name = "Engineering Ferry Remote Control"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
@@ -41597,7 +41591,7 @@ PT
 mc
 qb
 pv
-Qu
+uB
 kE
 mf
 Yu

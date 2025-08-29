@@ -360,7 +360,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	desc = "Used to monitor fires and breaches."
 	icon_keyboard = "power_key"
 	icon_screen = "engie_cams"
-	network = list(NETWORK_ENGINE,NETWORK_SUBSTATIONS,NETWORK_ENGINEERING,NETWORK_ALARM_ATMOS,NETWORK_ALARM_FIRE,NETWORK_ALARM_POWER) // Outpost 21 edit - Default networks
+	network = list(NETWORK_ENGINE,NETWORK_SUBSTATIONS,NETWORK_ENGINEERING,NETWORK_ENGINEERING_OUTPOST,NETWORK_ALARM_ATMOS,NETWORK_ALARM_FIRE,NETWORK_ALARM_POWER) // Outpost 21 edit - Default networks
 	circuit = /obj/item/circuitboard/security/engineering
 	light_color = "#FAC54B"
 

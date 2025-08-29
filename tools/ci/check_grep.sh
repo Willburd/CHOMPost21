@@ -22,14 +22,14 @@ if command -v rg >/dev/null 2>&1; then
 		pcre2_support=0
 	fi
 	code_files="code/**/**.dm modular_outpost/code/**/**.dm" # Outpost 21 edit - Modular code
-	map_files="maps/**/**.dmm modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
+	map_files="modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
 	# shuttle_map_files="_maps/shuttles/**.dmm"
 	code_x_515="code/**/!(__byond_version_compat).dm"
 else
 	pcre2_support=0
 	grep=grep
 	code_files="-r --include=code/**/**.dm --include=modular_outpost/code/**/**.dm" # Outpost 21 edit - Modular code
-	map_files="-r --include=maps/**/**.dmm --include=modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
+	map_files="-r --include=modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
 	# shuttle_map_files="-r --include=_maps/shuttles/**.dmm"
 	code_x_515="-r --include=code/**/!(__byond_version_compat).dm"
 fi;
@@ -61,6 +61,13 @@ part "iconstate tags"
 if grep -P '^\ttag = \"icon' $map_files;	then
 	echo
 	echo -e "${RED}ERROR: tag vars from icon state generation detected in maps, please remove them.${NC}"
+	FAILED=1
+fi;
+
+part "suspicious symbols in maps"
+if grep -P '[<>]' $map_files;	then
+	echo
+	echo -e "${RED}ERROR: potential html code in maps detected.${NC}"
 	FAILED=1
 fi;
 

@@ -50,18 +50,24 @@
 				continue
 			if(!track.implanted)
 				continue
+			// Outpost 21 edit begin - Improved tracker implants
+			var/xyz = "?.?.?"
 			var/loc_display = "Unknown"
 			var/mob/living/L = track.imp_in
 			if((get_z(L) in using_map.station_levels) && !istype(L.loc, /turf/space))
 				loc_display = T.loc
+				xyz = "[T.x].[T.y].[T.z]"
 			if(track.malfunction)
 				loc_display = pick(GLOB.teleportlocs)
+				xyz = "[rand(1,300)].[rand(1,300)].[rand(1,10)]"
 			trackImplants.Add(list(list(
 				"host" = L,
 				"ref" = "\ref[track]",
 				"id" = "[track.id]",
 				"loc" = "[loc_display]",
+				"coords" = xyz,
 			)))
+			// Outpost 21 edit end
 
 	return list("locked" = !screen, "chemImplants" = chemImplants, "trackImplants" = trackImplants)
 

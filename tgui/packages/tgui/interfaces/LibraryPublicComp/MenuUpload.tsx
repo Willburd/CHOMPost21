@@ -38,7 +38,7 @@ export const MenuUpload = (props) => {
           </Button.Confirm>
         </Section>
       ) : (
-        ' - ' + scanerr
+        ` - ${scanerr}`
       )}
     </Section>
   );

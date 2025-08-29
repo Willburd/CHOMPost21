@@ -30440,10 +30440,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/computer/security{
-	dir = 8;
+/obj/machinery/computer/security/research_rd{
 	pixel_x = 5;
-	network = list("research","xenobio","research_outpost")
+	dir = 8
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
@@ -30717,7 +30716,7 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/djstation)
 "oHh" = (
 /obj/machinery/alarm{

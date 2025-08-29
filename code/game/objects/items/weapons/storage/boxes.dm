@@ -250,10 +250,10 @@
 	desc = "Box full of scum-bag tracking utensils."
 	icon_state = "implant"
 	starts_with = list(
-		/obj/item/implantcase/tracking = 4,
+		/obj/item/implantcase/tracking = 5, // Outpost 21 edit - Give an extra
 		/obj/item/implanter,
 		/obj/item/implantpad,
-		/obj/item/locator
+		///obj/item/locator // Outpost 21 edit - Largely pointless with pda
 	)
 
 /obj/item/storage/box/chemimp

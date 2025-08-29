@@ -59,6 +59,10 @@
 #include "tram_A.dmm"
 #include "foundation_A.dmm"
 #include "synthezied_oops.dmm"
+#include "ghost_caveA.dmm"
+#include "ghost_caveB.dmm"
+#include "ghost_caveC.dmm"
+#include "ghost_caveD.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -200,6 +204,38 @@
 	allow_duplicates = FALSE
 	discard_prob = 95
 	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveA
+	name = "Shifting Caves A"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveA.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 30
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveB
+	name = "Shifting Caves B"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveB.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 30
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveC
+	name = "Shifting Caves C"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveC.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 30
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveD
+	name = "Shifting Caves D"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveD.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 30
+	cost = 10
 
 //////////////////////////////////////////////////////////////
 // Retired secrets

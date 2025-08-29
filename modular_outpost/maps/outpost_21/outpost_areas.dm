@@ -48,7 +48,6 @@
 /area/maintenance/tool_storage
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_NONE
 
 /area/hallway/secondary/entry/docking_lounge
@@ -76,49 +75,41 @@
 /area/bridge/meeting_room
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/captain
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/heads/hop
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/heads/hor
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/heads/chief
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/heads/hos
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/heads/cmo
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/courtroom
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/recreation_area_hallway
@@ -231,7 +222,6 @@
 /area/crew_quarters/bar
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_WARM
 
 /area/library
@@ -307,7 +297,6 @@
 /area/crew_quarters/medbreak
 	name = "\improper Medical Break Room"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
 
 /area/crew_quarters/medical_restroom
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -331,7 +320,6 @@
 
 /area/medical/virology
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_CHILL
 
 /area/medical/biostorage
@@ -352,7 +340,6 @@
 
 /area/medical/chemistry
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
 
 /area/medical/surgery
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -387,7 +374,6 @@
 
 /area/medical/genetics
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
 
 /area/medical/genetics_cloning
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
@@ -429,7 +415,6 @@
 /area/rnd/rdoffice
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 
 /area/hydroponics
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
@@ -662,7 +647,6 @@
 
 /area/security/riot_control
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DARK
 
 /area/virtual_reality

@@ -3805,10 +3805,6 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 4
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -8610,6 +8606,37 @@
 	icon_state = "slab"
 	},
 /area/mine/explored/muriki/valley)
+"aoO" = (
+/obj/structure/bed/chair/bay/comfy{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/bridge)
+"aoP" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/effect/landmark/start/engineer,
+/turf/simulated/floor/tiled,
+/area/engineering/corepower)
+"aoQ" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/green,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "aoS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -15863,6 +15890,7 @@
 /obj/effect/floor_decal/corner/green/full{
 	dir = 4
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "cFm" = (
@@ -16228,6 +16256,10 @@
 	dir = 4;
 	pixel_x = -25;
 	pixel_y = -11
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
@@ -16721,6 +16753,7 @@
 	dir = 4
 	},
 /obj/machinery/rnd/production/circuit_imprinter,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "cTd" = (
@@ -18830,14 +18863,9 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
-/obj/structure/table/reinforced,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/sticky_pad/random{
-	pixel_x = -8;
-	pixel_y = 9
+/obj/machinery/computer/prisoner{
+	dir = 4;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/lobby)
@@ -23806,10 +23834,8 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 22
+/obj/structure/noticeboard/kitchen{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/cafeteria)
@@ -26322,15 +26348,6 @@
 /area/maintenance/security_port)
 "gbZ" = (
 /obj/structure/table/glass,
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
-	},
-/obj/machinery/requests_console{
-	department = "Virology";
-	name = "Virology Requests Console";
-	pixel_x = 32
-	},
 /obj/effect/floor_decal/corner/black/full{
 	dir = 4
 	},
@@ -26338,6 +26355,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -26451,20 +26472,15 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "geS" = (
-/obj/structure/table/reinforced,
-/obj/machinery/recharger{
-	pixel_x = 6;
-	pixel_y = 4
-	},
-/obj/machinery/recharger{
-	pixel_x = -6;
-	pixel_y = 4
-	},
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/computer/prisoner{
+	dir = 4;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/checkpoint2)
@@ -27317,12 +27333,12 @@
 /obj/machinery/keycard_auth{
 	pixel_y = -24
 	},
-/obj/structure/table/reinforced,
-/obj/effect/floor_decal/corner/white{
-	dir = 10
+/obj/effect/floor_decal/corner/red/full,
+/obj/structure/window/reinforced{
+	dir = 8
 	},
-/obj/machinery/photocopier/faxmachine{
-	department = "Head of Personnel's Office"
+/obj/machinery/computer/prisoner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -35327,6 +35343,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
+/obj/structure/flora/pottedplant/crystal,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)
 "iKH" = (
@@ -38152,9 +38169,26 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/radio/phone/medbay{
-	name = "Security Lobby Phone"
+	name = "Security Lobby Phone";
+	pixel_x = -7
 	},
 /obj/machinery/light,
+/obj/item/radio{
+	pixel_x = 9
+	},
+/obj/item/radio{
+	pixel_x = 9
+	},
+/obj/item/radio{
+	pixel_x = 9
+	},
+/obj/item/radio{
+	pixel_x = 9
+	},
+/obj/item/sticky_pad/random{
+	pixel_x = 4;
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/lobby)
 "jCK" = (
@@ -40679,6 +40713,7 @@
 /area/bridge)
 "koP" = (
 /obj/effect/floor_decal/corner/white,
+/obj/structure/bed/chair/bay/comfy,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "kpc" = (
@@ -40851,12 +40886,20 @@
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "kqV" = (
-/obj/machinery/space_heater,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/machinery/recharger{
+	pixel_x = 6;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/checkpoint2)
@@ -41121,6 +41164,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "kwh" = (
@@ -42113,12 +42157,11 @@
 /obj/machinery/computer/secure_data{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/red/full,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /obj/machinery/keycard_auth{
 	pixel_y = -24
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -44163,7 +44206,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "lvo" = (
-/obj/structure/flora/pottedplant/crystal,
 /obj/machinery/computer/security/telescreen/bodycamera{
 	pixel_y = -32
 	},
@@ -44171,6 +44213,15 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/drinks/flask/barflask{
+	pixel_x = -4;
+	pixel_y = 8
+	},
+/obj/item/taperecorder,
+/obj/item/megaphone,
+/obj/item/radio/off,
+/obj/item/toy/figure/hos,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)
 "lvr" = (
@@ -56030,6 +56081,11 @@
 	dir = 6
 	},
 /obj/item/geiger/wall/east,
+/obj/machinery/computer/shuttle_control/multi{
+	shuttle_tag = "Engineering Ferry";
+	dir = 8;
+	name = "Engineering Ferry Remote Control"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "pfF" = (
@@ -59095,6 +59151,14 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 6
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
@@ -64439,15 +64503,16 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -26
-	},
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
+	},
+/obj/machinery/requests_console{
+	department = "Virology";
+	name = "Virology Requests Console";
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -73534,15 +73599,13 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "uCE" = (
-/obj/structure/table/reinforced,
 /obj/structure/closet/walllocker/medical/south,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/fire,
-/obj/item/storage/firstaid/o2,
-/obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/regular,
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/structure/table/reinforced,
+/obj/machinery/photocopier/faxmachine{
+	department = "Head of Personnel's Office"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -85332,6 +85395,10 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 4
 	},
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/fire,
+/obj/item/storage/firstaid/adv,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "yie" = (
@@ -85492,24 +85559,19 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
 "ykn" = (
-/obj/item/megaphone,
-/obj/item/radio/off,
-/obj/item/reagent_containers/food/drinks/flask/barflask{
-	pixel_x = -4;
-	pixel_y = 8
-	},
-/obj/item/taperecorder,
-/obj/structure/table/woodentable,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 26
 	},
-/obj/item/toy/figure/hos,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/computer/prisoner{
+	dir = 8;
+	pixel_x = 4
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)
@@ -109855,8 +109917,8 @@ hbn
 rDR
 nIV
 oth
+aoP
 kWn
-alz
 bEZ
 qrp
 rVQ
@@ -125065,7 +125127,7 @@ jss
 bMQ
 bhs
 acK
-cNW
+aoQ
 cNW
 hlB
 rQd
@@ -140363,7 +140425,7 @@ cAp
 rfZ
 iwD
 rfZ
-fjK
+aoO
 uCE
 xUS
 rSV
@@ -140687,7 +140749,7 @@ mpn
 kCf
 tzT
 ksl
-rfZ
+fjK
 kMi
 njP
 xUS
@@ -140849,7 +140911,7 @@ qmu
 eqg
 bgB
 rfZ
-fjK
+rfZ
 wNa
 njP
 dKo
@@ -141173,7 +141235,7 @@ dhQ
 kCf
 byY
 ksl
-fjK
+rfZ
 eZY
 nDI
 fHN
