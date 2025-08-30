@@ -754,6 +754,7 @@
 	src.modules += new /obj/item/borg/combat/mobility(src)
 	src.modules += new /obj/item/melee/robotic/borg_combat_shocker(src)
 	src.modules += new /obj/item/ticket_printer(src)
+	src.modules += new /obj/item/tool/crowbar/brace_jack(src) // Outpost 21 edit - Doorbraces
 	src.emag += new /obj/item/gun/energy/robotic/laser/heavy(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/K9/ert(src)
