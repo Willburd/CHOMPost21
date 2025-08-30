@@ -67,6 +67,7 @@
 		"peacekeeper",
 		"reporter",
 		"live_and_let_live",
+		"eshui_standard", // Outpost 21 edit - Eshui law board
 		"balance",
 
 	)
