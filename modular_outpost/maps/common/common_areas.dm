@@ -1430,6 +1430,13 @@
 	icon_state = "bluwhicir"
 	sound_env = TUNNEL_ENCLOSED
 	outdoors = FALSE
+/area/mine/unexplored/muriki/mountaintop_pathway // special, outdoors but not skyline
+	name = "\improper Muriki Eastern Mountaintop Path"
+	icon_state = "dark"
+	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
+	outdoors = FALSE
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
+	outdoors = TRUE
 
 //Skyline
 /area/muriki/skyline
