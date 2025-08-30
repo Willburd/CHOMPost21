@@ -12,6 +12,7 @@
 		// Outpost 21 addition begin - New apps
 		new/datum/data/pda/app/weather,
 		new/datum/data/pda/app/sop,
+		new/datum/data/pda/app/prisoner_manager,
 		// Outpost 21 addition end
 		new/datum/data/pda/app/messenger)
 
