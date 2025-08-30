@@ -244,6 +244,7 @@
 	src.modules += new /obj/item/reagent_containers/syringe(src)
 	// Outpost 21 edit begin - Additional surgeon modules
 	src.modules += new /obj/item/roller_holder(src)
+	src.modules += new /obj/item/tool/crowbar/brace_jack(src)
 	// Outpost 21 edit end
 
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
@@ -312,6 +313,7 @@
 	*/
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
 	src.modules += new /obj/item/holosign_creator/medical(src)
+	src.modules += new /obj/item/tool/crowbar/brace_jack(src) // Outpost 21 edit - Doorbraces
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 	src.emag += PS
 	PS.reagents.add_reagent(REAGENT_ID_PACID, 250)
@@ -388,6 +390,7 @@
 	src.modules += new /obj/item/dogborg/stasis_clamp(src)
 	src.modules += new /obj/item/storage/pouch/eng_parts/borg(src)
 	src.modules += new /obj/item/holosign_creator/combifan(src) //CHOMPAdd
+	src.modules += new /obj/item/tool/crowbar/brace_jack(src) // Outpost 21 edit - Doorbraces
 
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(40000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(40000)
@@ -433,6 +436,7 @@
 	src.modules += new /obj/item/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/gripper/security(src)
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) // CHOMPedit: Phasegun for regular sec cyborg.
+	src.modules += new /obj/item/tool/crowbar/brace_jack(src) // Outpost 21 edit - Doorbraces
 	src.modules += new /obj/item/ticket_printer(src)
 	src.emag += new /obj/item/gun/energy/robotic/laser/rifle(src)
 
