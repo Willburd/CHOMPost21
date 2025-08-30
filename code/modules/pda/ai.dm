@@ -13,6 +13,8 @@
 		new/datum/data/pda/app/weather,
 		new/datum/data/pda/app/sop,
 		new/datum/data/pda/app/prisoner_manager,
+		new/datum/data/pda/app/crew_records/security,
+		new/datum/data/pda/app/crew_records/medical,
 		// Outpost 21 addition end
 		new/datum/data/pda/app/messenger)
 
