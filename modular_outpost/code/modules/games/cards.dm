@@ -36,3 +36,46 @@
 				P.card_icon = "[colour]col"
 				P.back_icon = "card_back"
 				cards += P
+
+/*
+/obj/item/deck/cards/bizcard
+	name = "business card deck"
+	desc = "A deck of preprinted business cards."
+	icon_state = "deck"
+	drop_sound = 'sound/items/drop/paper.ogg'
+	pickup_sound = 'sound/items/pickup/paper.ogg'
+
+/obj/item/deck/cards/bizcard/Initialize(mapload)
+	. = ..()
+	// Remove original deck
+	for(var/datum/playingcard/C in cards)
+		cards -= C
+		qdel(C)
+
+/obj/item/deck/cards/bizcard/verb/set_deck_info()
+	set name = "Set Business Card Info"
+	set desc = "Sets the name and description of the cards in the deck. Can only be done ONCE."
+	set category = "Object"
+
+	var/current_user = usr
+
+	var/set_name = tgui_input_text(current_user, "What are the cards named?", "Set Business Card Name","Business Card", MAX_NAME_LEN,FALSE)
+	if(!set_name)
+		return
+	var/set_desc = tgui_input_text(current_user, "Haw are the cards described?", "Set Business Card Description","An unassuming business card.", MAX_MESSAGE_LEN,TRUE)
+	if(!set_name)
+		return
+	if(QDELETED(src) || QDELETED(current_user))
+		return
+	if(!current_user.Adjacent(src))
+		return
+
+	var/datum/playingcard/P
+	for(var/i = 0, i<20, i++)
+		P = new()
+		P.name = set_name
+		P.desc = set_desc
+		P.card_icon = "leaf_col"
+		P.back_icon = "black_num"
+		cards += P
+*/

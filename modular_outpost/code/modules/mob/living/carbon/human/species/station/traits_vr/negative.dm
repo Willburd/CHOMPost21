@@ -16,14 +16,3 @@
 	var_changes = list("reagent_tag" = null)
 	cost = -2
 	allowed_species = list(SPECIES_VOX)
-
-/datum/trait/negative/ambulant_blood
-	name = "Ambulant Blood"
-	desc = "Your blood reacts to hostile stimulation such as burning when seperated from your body, as if it was its own creature. You WILL be mistaken for a changeling, you may way to document this. The crew WILL attempt kill you."
-	var_changes = list("ambulant_blood" = TRUE)
-	cost = -1
-
-	// Traitgenes edit begin - Made into a gene trait
-	is_genetrait = TRUE
-	activation_message="You feel like there are spiders in your veins..."
-	// Traitgenes edit end
