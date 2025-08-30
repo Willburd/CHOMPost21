@@ -17754,10 +17754,6 @@
 	dir = 6
 	},
 /obj/machinery/light,
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -26
-	},
 /obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
