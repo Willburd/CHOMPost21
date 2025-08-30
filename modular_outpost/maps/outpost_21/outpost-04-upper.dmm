@@ -1128,12 +1128,6 @@
 	outdoors = 1
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
-"act" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1;
-	outdoors = 1
-	},
-/area/muriki/skyline/north)
 "acw" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -1704,12 +1698,6 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/arrivals)
-"amZ" = (
-/obj/structure/cliff_end{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
-/area/muriki/skyline/north)
 "anH" = (
 /obj/structure/bookcase{
 	name = "Forbidden Knowledge"
@@ -103392,9 +103380,9 @@ ovc
 ovc
 ovc
 pXM
-act
+acn
 pXM
-amZ
+aaZ
 pXM
 dEE
 kxr
