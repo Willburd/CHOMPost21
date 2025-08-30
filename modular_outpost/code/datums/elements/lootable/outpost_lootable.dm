@@ -54,5 +54,6 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/deadringer,
 		/obj/item/organ/internal/augment/armmounted/shoulder/multiple,
 		/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical,
-		/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind
+		/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind,
+		/obj/item/rectape/anna_lore
 	)
