@@ -28,17 +28,19 @@
 		qdel(src)
 		return
 	// End!
+	cur_delay += rand(7 SECONDS, 9 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(finish_message)), cur_delay, TIMER_DELETE_ME)
 
 /datum/bsa_shell_controller/proc/random_setup(xpos,ypos,zpos)
 	var/rounds = pick(1,1,1,1,1,2,3)
 	var/max_rounds = rounds
-	var/cur_delay = rand(3 SECONDS, 8 SECONDS)
+	var/cur_delay = rand(1 SECONDS, 3 SECONDS)
 	while(rounds > 0)
 		addtimer(CALLBACK(src, PROC_REF(announce), xpos, ypos, zpos, (max_rounds == rounds)), cur_delay, TIMER_DELETE_ME)
-		cur_delay += rand(2 SECONDS, 5 SECONDS)
+		cur_delay += rand(12 SECONDS, 15 SECONDS)
 		rounds--
 	// End!
+	cur_delay += rand(7 SECONDS, 9 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(finish_message)), cur_delay, TIMER_DELETE_ME)
 
 /datum/bsa_shell_controller/proc/announce(var/x,var/y,var/z, var/first_shot = TRUE)
@@ -63,7 +65,7 @@
 	s.set_up(2, 1, T)
 	s.start()
 	var/obj/structure/ship_munition/disperser_charge/C = new /obj/structure/ship_munition/disperser_charge/explosive(T)
-	addtimer(CALLBACK(src, PROC_REF(detonate), WEAKREF(C)), rand(1,5), TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(detonate), WEAKREF(C)), rand(1,15), TIMER_DELETE_ME)
 
 /datum/bsa_shell_controller/proc/detonate(var/datum/weakref/WF)
 	var/obj/structure/ship_munition/disperser_charge/C = WF?.resolve()
