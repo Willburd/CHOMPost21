@@ -3,7 +3,7 @@
 	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
 
 /turf/simulated/open
-	dynamic_lighting = FALSE // Disabled due to large lighting lag
+	dynamic_lighting = TRUE
 
 /turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
 	name = "rocks"

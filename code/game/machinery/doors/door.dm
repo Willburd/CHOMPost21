@@ -23,7 +23,7 @@
 	var/maxhealth = 300
 	var/health
 	var/destroy_hits = 10 //How many strong hits it takes to destroy the door
-	var/min_force = 10 //minimum amount of force needed to damage the door with a melee weapon
+	var/min_force = 6 //minimum amount of force needed to damage the door with a melee weapon // Outpost 21 edit - Lowered so any crowbar can damage a door
 	var/hitsound = 'sound/weapons/smash.ogg' //sound door makes when hit with a weapon
 	//var/repairing = 0 //VOREstation Edit: We're not using materials anymore
 	var/block_air_zones = 1 //If set, air zones cannot merge across the door even when it is opened.
