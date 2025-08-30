@@ -3950,7 +3950,6 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_three)
 "afQ" = (
@@ -8030,23 +8029,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
-"ant" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/green/border,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_three)
-"anu" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/green/border,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_three)
 "anv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
@@ -13847,7 +13829,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "bVv" = (
@@ -14182,13 +14163,6 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/machinery/disposal/wall{
-	dir = 4;
-	pixel_x = -35
 	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
@@ -28074,10 +28048,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/junction{
-	dir = 2;
-	icon_state = "pipe-j2"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "gHY" = (
@@ -35417,9 +35388,6 @@
 	c_tag = "CIV - Kitchen Pysch Hall";
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "iMd" = (
@@ -39487,9 +39455,6 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/structure/disposalpipe/segment,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "jXH" = (
@@ -41031,10 +40996,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "ksT" = (
@@ -65002,7 +64963,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/psych)
 "rZu" = (
@@ -67731,9 +67691,6 @@
 /obj/effect/floor_decal/corner/green/bordercorner,
 /obj/effect/floor_decal/corner/green/bordercorner{
 	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
@@ -137630,7 +137587,7 @@ xRy
 nqB
 bJY
 mpI
-ant
+cnz
 uiv
 mta
 mta
@@ -137792,7 +137749,7 @@ vdh
 xRy
 bJY
 mpI
-ant
+cnz
 cto
 vTt
 hRv
@@ -137954,7 +137911,7 @@ eDM
 xRy
 bJY
 mpI
-ant
+cnz
 cto
 nas
 clO
@@ -138278,7 +138235,7 @@ xUv
 xRy
 bJY
 mpI
-ant
+cnz
 cto
 kcH
 clO
@@ -138440,7 +138397,7 @@ ufG
 ufG
 fim
 mpI
-ant
+cnz
 cto
 ilv
 uDc
@@ -138764,7 +138721,7 @@ ksQ
 rZm
 bVl
 afP
-anu
+cnz
 xmK
 qog
 vdM
