@@ -1438,6 +1438,7 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
 	outdoors = TRUE
+	dynamic_lighting = FALSE // Disable sky light
 	base_turf = /turf/simulated/open/muriki
 
 /area/muriki/skyline/east
