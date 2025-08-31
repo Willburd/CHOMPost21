@@ -5400,6 +5400,7 @@
 #include "modular_outpost\code\game\objects\effects\step_triggers.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\atmoglands.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\burnpit.dm"
+#include "modular_outpost\code\game\objects\effects\map_effects\collapsing_cavern.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\fire_supression.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\redspaceexit.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\shifting_caves.dm"
