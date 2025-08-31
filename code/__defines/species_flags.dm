@@ -62,6 +62,14 @@
 #define ALLERGEN_CHOCOLATE	0x2000	// Makes dogs die if they want to?
 #define ALLERGEN_POLLEN		0x4000  // Teshari sneezes! Grasses and plants make you have a reaction.
 #define ALLERGEN_SALT 		0x8000  // Chefs beware, can't have fast food!
+// Outpost 21 edit(port) begin - Medical allergies
+#define ALLERGEN_TRICORD	0x10000
+#define ALLERGEN_BICARD		0x20000
+#define ALLERGEN_DYLO 		0x40000
+#define ALLERGEN_SPACACIL	0x80000
+#define ALLERGEN_PERIDAX	0x100000
+#define ALLERGEN_KELOTANE	0x200000
+// Outpost 21 edit end
 
 // Allergen reactions
 #define AG_PHYS_DMG	0x1	// brute
