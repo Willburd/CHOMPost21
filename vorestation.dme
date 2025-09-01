@@ -5544,7 +5544,6 @@
 #include "modular_outpost\code\modules\pda\core_apps.dm"
 #include "modular_outpost\code\modules\persistence\noticeboard.dm"
 #include "modular_outpost\code\modules\phorochemistry\beakers.dm"
-#include "modular_outpost\code\modules\phorochemistry\bunsen_burner.dm"
 #include "modular_outpost\code\modules\phorochemistry\lockers.dm"
 #include "modular_outpost\code\modules\phorochemistry\reactions.dm"
 #include "modular_outpost\code\modules\phorochemistry\reagents.dm"
