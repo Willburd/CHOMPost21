@@ -24,7 +24,7 @@
 		return
 	if(istype(W,/obj/item/card/id))
 		var/obj/item/card/id/ID = W
-		if(access_keycard_auth in ID.access)
+		if(ACCESS_KEYCARD_AUTH in ID.access)
 			unlocked = !unlocked
 			updateUsrDialog()
 		else

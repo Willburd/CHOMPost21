@@ -86,7 +86,7 @@
 		return
 	if(P.organ_data[BP_TORSO] == "cyborg") // no FBP, too easy to "repair"
 		return
-	if(P.job_engsec_high & CYBORG || P.job_engsec_high & AI) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
+	if(P.job_engsec_high & CYBORG || P.job_engsec_high & AI_DEPT) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
 		return
 	var/mob/living/carbon/human/new_character = new(spawnloc)
 	anim(spawnloc,new_character,'icons/mob/mob.dmi',,"phasein",,new_character.dir)

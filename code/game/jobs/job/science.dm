@@ -77,7 +77,7 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, access_xenobiology, ACCESS_XENOARCH, ACCESS_XENOBOTANY) // Outpost 21 edit - removed robotics
+	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_XENOARCH, ACCESS_XENOBOTANY) // Outpost 21 edit - removed robotics
 	minimal_access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOARCH)
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 	banned_job_species = list(FBP_DIGITAL)

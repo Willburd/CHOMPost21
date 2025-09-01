@@ -76,8 +76,8 @@
 	economic_modifier = 5
 	pto_type = PTO_SECURITY
 	dept_time_required = 20
-	access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_EXTERNAL_AIRLOCKS, access_forensics_lockers) // Outpost 21 edit - Detective is officer now
-	minimal_access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, access_forensics_lockers) // Outpost 21 edit - Detective is officer now
+	access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_FORENSICS_LOCKERS) // Outpost 21 edit - Detective is officer now
+	minimal_access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_FORENSICS_LOCKERS) // Outpost 21 edit - Detective is officer now
 	minimal_player_age = 5
 	banned_job_species = list(SPECIES_ZADDAT, SPECIES_PROMETHEAN, SPECIES_TESHARI, SPECIES_DIONA)
 	alt_titles = list(JOB_ALT_BRIG_SENTRY = /datum/alt_title/brig_sentry, JOB_ALT_ARMORY_SUPERINTENDENT = /datum/alt_title/armory_superintendent, JOB_ALT_MASTERATARMS = /datum/alt_title/master_at_arms)
@@ -163,8 +163,8 @@
 	supervisors = "the " + JOB_HEAD_OF_SECURITY
 	selection_color = "#601C1C"
 	economic_modifier = 5	//CHOMPstation edit - "Offduty officers make more than working, and this brings it in line with the rest of the jobs in sec barring HOS"
-	access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_EXTERNAL_AIRLOCKS, access_forensics_lockers) // Outpost 21 edit - Detective is officer now
-	minimal_access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, access_forensics_lockers) // Outpost 21 edit - Detective is officer now
+	access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_MORGUE, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_FORENSICS_LOCKERS) // Outpost 21 edit - Detective is officer now
+	minimal_access = list(ACCESS_SECURITY, ACCESS_EVA, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_FORENSICS_LOCKERS) // Outpost 21 edit - Detective is officer now
 	minimal_player_age = 3
 	banned_job_species = list(SPECIES_ZADDAT, SPECIES_TESHARI, SPECIES_DIONA)
 

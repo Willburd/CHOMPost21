@@ -407,13 +407,12 @@
 //___________________________________________________________
 
 
-/* Outpost 21 edit - removed job
 //  CHOMPAdd Start
 //  Blueshield jobs
 #define JOB_BLUESHIELD_GUARD "Blueshield Guard"
 #define JOB_SECURITY_PILOT "Security Pilot"
 // CHOMPAdd End
-*/
+
 
 // Mind jobs
 #define JOB_SLIME "slime"
@@ -554,5 +553,5 @@ GLOBAL_LIST_INIT(command_positions, list(
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
 	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into hop
-	JOB_BLUESHIELD_GUARD // CHOMPEnable
+	// JOB_BLUESHIELD_GUARD // CHOMPEnable // Outpost 21 edit - Job disabled
 ))
