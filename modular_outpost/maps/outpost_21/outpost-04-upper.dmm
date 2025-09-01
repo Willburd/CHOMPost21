@@ -26406,7 +26406,7 @@
 /turf/simulated/floor/tiled,
 /area/security/range)
 "mCT" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/CMO_wardrobe,
 /obj/item/pda/heads/cmo,
 /obj/item/cmo_disk_holder,
 /obj/item/defib_kit/compact/combat/loaded,
