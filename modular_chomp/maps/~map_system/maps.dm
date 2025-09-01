@@ -274,7 +274,7 @@ var/list/all_maps = list()
 
 // Access check is of the type requires one. These have been carefully selected to avoid allowing the janitor to see channels he shouldn't
 // This list needs to be purged but people insist on adding more cruft to the radio.
-/datum/map/proc/default_internal_channels()
+/datum/map/proc/default_internal_channels() // Ignore me, look in outpost_presets
 	return list(
 		num2text(PUB_FREQ)   = list(),
 		num2text(AI_FREQ)  = list(ACCESS_SYNTH),
