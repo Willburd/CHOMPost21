@@ -1,7 +1,8 @@
 var/list/engineering_positions = list(
 	JOB_CHIEF_ENGINEER,
 	JOB_ENGINEER,
-	JOB_ATMOSPHERIC_TECHNICIAN
+	JOB_ATMOSPHERIC_TECHNICIAN,
+	JOB_ROBOTICIST // Outpost 21 edit - Moved to engineering
 )
 
 
@@ -18,8 +19,8 @@ var/list/medical_positions = list(
 var/list/science_positions = list(
 	JOB_RESEARCH_DIRECTOR,
 	JOB_SCIENTIST,
-	JOB_GENETICIST,	//Part of both medical and science
-	JOB_ROBOTICIST,
+	// JOB_GENETICIST,	//Part of both medical and science // Outpost 21 edit - Moved to only medical
+	// JOB_ROBOTICIST, // Outpost 21 edit - Moved to engineering
 	JOB_XENOBIOLOGIST
 )
 
@@ -47,7 +48,7 @@ var/list/civilian_positions = list(
 var/list/security_positions = list(
 	JOB_HEAD_OF_SECURITY,
 	JOB_WARDEN,
-	JOB_DETECTIVE,
+	//JOB_DETECTIVE, // Outpost 21 edit - Detective is officer now
 	JOB_SECURITY_OFFICER
 )
 

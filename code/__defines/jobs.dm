@@ -407,11 +407,13 @@
 //___________________________________________________________
 
 
+/* Outpost 21 edit - removed job
 //  CHOMPAdd Start
 //  Blueshield jobs
 #define JOB_BLUESHIELD_GUARD "Blueshield Guard"
 #define JOB_SECURITY_PILOT "Security Pilot"
 // CHOMPAdd End
+*/
 
 // Mind jobs
 #define JOB_SLIME "slime"
@@ -484,7 +486,8 @@
 #define ATMOSTECH (1<<7)
 #define AI_DEPT (1<<8)
 #define CYBORG (1<<9)
-#define BRIGPHYS (1<<10) // CHOMPAdd - Brig Physician
+#define ROBOTICIST (1<<10) // Outpost 21 edit - Moved to engineering
+#define BRIGPHYS (1<<11) // CHOMPAdd - Brig Physician // Outpost 21 edit - altered to 11
 #define CLOWN (1<<13)
 #define MIME (1<<14)
 #define INTERN (1<<15)
@@ -499,12 +502,12 @@
 #define GENETICIST (1<<5)
 #define VIROLOGIST (1<<6)
 #define PSYCHIATRIST (1<<7)
-#define ROBOTICIST (1<<8)
+// define ROBOTICIST (1<<8) // Outpost 21 edit - Moved to engineering
 #define XENOBIOLOGIST (1<<9)
 #define PARAMEDIC (1<<10)
-#define PATHFINDER (1<<11)
-#define EXPLORER (1<<12)
-#define SAR (1<<13)
+// define PATHFINDER (1<<11)	// Outpost 21 edit - removed job
+// define EXPLORER (1<<12)		// Outpost 21 edit - removed job
+// define SAR (1<<13)			// Outpost 21 edit - removed job
 #define XENOBOTANIST (1<<14)
 #define PILOT (1<<15) //ChompEDIT - ours is with the other explo jobs.
 
@@ -522,15 +525,17 @@
 #define LAWYER (1<<9)
 #define CHAPLAIN (1<<10)
 #define ASSISTANT (1<<11)
-#define BRIDGE (1<<12)
+// define BRIDGE (1<<12) //Outpost 21 edit - Command sec folded into hop
 // #define PILOT (1<<13) // CHOMPRemove
 #define ENTERTAINER (1<<14)
 #define ENTREPRENEUR (1<<15)
 
 #define OTHER (1<<10) //VOREStation Note: Unused on VS. Used downstream.
 #define NONCREW (1<<0)
-#define ANOMALY (1<<0) //VOREStation Note: Unused on VS. Used downstream.
+// define ANOMALY (1<<0) //VOREStation Note: Unused on VS. Used downstream. // Outpost 21 edit - removed job
+#define STOWAWAY (1<<1) // Outpost 21 edit - stowaways!
 
+/* Outpost 21 edit - removed job
 #define TALON (1<<3)
 
 #define TALCAP (1<<0)
@@ -539,6 +544,7 @@
 #define TALSEC (1<<3)
 #define TALENG (1<<4)
 #define TALMIN (1<<5)
+*/
 
 GLOBAL_LIST_INIT(command_positions, list(
 	JOB_SITE_MANAGER,
@@ -547,6 +553,6 @@ GLOBAL_LIST_INIT(command_positions, list(
 	JOB_CHIEF_ENGINEER,
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
-	JOB_COMMAND_SECRETARY,
+	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into hop
 	JOB_BLUESHIELD_GUARD // CHOMPEnable
 ))
