@@ -18180,6 +18180,9 @@
 	},
 /obj/structure/cable/green,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/warning/mail_delivery{
+	name = "\improper MAIL OFFICE"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/atmoshall)
 "aGu" = (
@@ -68691,6 +68694,16 @@
 /obj/item/sleevemate,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/security/surgery)
+"onL" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "engmail"
+	},
+/obj/structure/sign/warning/moving_parts{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/engineering/mail)
 "ooc" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -79575,8 +79588,9 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
-/obj/structure/sign/poster{
-	dir = 8
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = -32;
+	name = "\improper MAIL OFFICE"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
@@ -104720,7 +104734,7 @@ wnD
 bNn
 jAv
 egF
-hQX
+onL
 aao
 aYr
 aYP
