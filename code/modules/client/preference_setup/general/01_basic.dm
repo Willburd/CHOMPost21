@@ -95,6 +95,81 @@
 	data["autohiss"] = pref.autohiss
 	data["emote_sound_mode"] = pref.read_preference(/datum/preference/choiced/living/emote_sound_mode)
 
+	// Outpost 21 edit begin - Species stats
+	var/datum/species/species = null
+	var/mob/living/carbon/human/dummy/mannequin/mannequin = get_mannequin(pref.client_ckey)
+	if(mannequin)
+		species = mannequin.species
+	else if(pref.species)
+		species = GLOB.all_species[pref.species]
+	else
+		species = GLOB.all_species[SPECIES_HUMAN]
+
+	var/list/species_stats = list(
+		"total_health" = species.total_health,
+		"slowdown" = "",
+
+		"brute_mod" = species.brute_mod,
+		"burn_mod" = species.burn_mod,
+		"oxy_mod" = species.oxy_mod,
+		"toxins_mod" = species.toxins_mod,
+		"radiation_mod" = species.radiation_mod,
+		"flash_mod" = species.flash_mod,
+
+		"pain_mod" = species.pain_mod,
+		"stun_mod" = species.stun_mod,
+		"weaken_mod" = species.weaken_mod,
+
+		"lightweight" = species.lightweight > 0,
+		"has_vibration_sense" = species.has_vibration_sense > 0,
+		"dispersed_eyes" = species.dispersed_eyes > 0,
+		"trashcan" = species.trashcan > 0,
+		"eat_minerals" = species.eat_minerals > 0,
+		"darksight" = "",
+
+		"breath_type" = GLOB.gas_data.name[species.breath_type] ? GLOB.gas_data.name[species.breath_type] : "NA",
+
+		"cold_level_1" = max(0,species.cold_level_1)-T0C,
+		"heat_level_1" = max(0,species.heat_level_1)-T0C,
+		"chem_strength_heal" = species.chem_strength_heal,
+		"chem_strength_tox" = species.chem_strength_tox,
+
+		"body_temperature" = max(0,species.body_temperature)-T0C,
+
+		"hazard_low_pressure" = max(0,species.hazard_low_pressure),
+		"hazard_high_pressure" = species.hazard_high_pressure == INFINITY ? "INF" : max(0,species.hazard_high_pressure),
+		"siemens_coefficient" = species.siemens_coefficient,
+	)
+
+	switch(species.darksight)
+		if(0 to 2)
+			species_stats["darksight"] = "None"
+		if(4 to 5)
+			species_stats["darksight"] = "Basic"
+		if(5 to 9)
+			species_stats["darksight"] = "Great"
+		if(9 to INFINITY)
+			species_stats["darksight"] = "Advanced"
+
+	switch(species.slowdown)
+		if(-INFINITY to -0.8)
+			species_stats["slowdown"] = "Extremely Fast"
+		if(-0.8 to -0.2)
+			species_stats["slowdown"] = "Very Fast"
+		if(-0.2 to -0.01)
+			species_stats["slowdown"] = "Fast"
+		if(-0.01 to 0.2)
+			species_stats["slowdown"] = "Average"
+		if(0.1 to 0.4)
+			species_stats["slowdown"] = "Slow"
+		if(0.4 to 0.8)
+			species_stats["slowdown"] = "Very Slow"
+		if(0.8 to INFINITY)
+			species_stats["slowdown"] = "Extremely Slow"
+
+	data["species_stats"] = species_stats
+	// Outpost 21 edit end
+
 	return data
 
 /datum/category_item/player_setup_item/general/basic/tgui_static_data(mob/user)
