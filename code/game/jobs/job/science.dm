@@ -15,16 +15,16 @@
 	selection_color = "#AD6BAD"
 	req_admin_notify = 1
 	economic_modifier = 15
-	access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-						access_tox_storage, access_teleporter,
-						access_research, access_xenobiology, access_ai_upload, access_tech_storage,
-						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-						access_explorer, access_pathfinder, access_xenobotany, access_maint_tunnels) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added access_maint_tunnels
-	minimal_access = list(access_rd, access_heads, access_tox, access_genetics, access_morgue,
-						access_tox_storage, access_teleporter,
-						access_research, access_xenobiology, access_ai_upload, access_tech_storage,
-						access_RC_announce, access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_eva, access_network,
-						access_explorer, access_pathfinder, access_xenobotany, access_maint_tunnels) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added access_maint_tunnels
+	access = list(ACCESS_RD, ACCESS_HEADS, ACCESS_TOX, ACCESS_GENETICS, ACCESS_MORGUE,
+						ACCESS_TOX_STORAGE, ACCESS_TELEPORTER,
+						ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_AI_UPLOAD, ACCESS_TECH_STORAGE,
+						ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_GATEWAY, ACCESS_XENOARCH, ACCESS_EVA, ACCESS_NETWORK,
+						ACCESS_EXPLORER, ACCESS_PATHFINDER, ACCESS_XENOBOTANY, ACCESS_MAINT_TUNNELS) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added ACCESS_MAINT_TUNNELS
+	minimal_access = list(ACCESS_RD, ACCESS_HEADS, ACCESS_TOX, ACCESS_GENETICS, ACCESS_MORGUE,
+						ACCESS_TOX_STORAGE, ACCESS_TELEPORTER,
+						ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_AI_UPLOAD, ACCESS_TECH_STORAGE,
+						ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_GATEWAY, ACCESS_XENOARCH, ACCESS_EVA, ACCESS_NETWORK,
+						ACCESS_EXPLORER, ACCESS_PATHFINDER, ACCESS_XENOBOTANY, ACCESS_MAINT_TUNNELS) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added ACCESS_MAINT_TUNNELS
 	alt_titles = list(JOB_ALT_RESEARCH_SUPERVISOR = /datum/alt_title/research_supervisor, JOB_ALT_RESEARCH_MANAGER = /datum/alt_title/research_manager,
 						JOB_ALT_HEAD_OF_DEVELOPMENT = /datum/alt_title/head_of_development,JOB_ALT_HEAD_SCIENTIST = /datum/alt_title/head_scientist)
 
@@ -77,8 +77,8 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_xenoarch, access_xenobotany) // Outpost 21 edit - removed robotics
-	minimal_access = list(access_tox, access_tox_storage, access_research, access_xenoarch)
+	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, access_xenobiology, ACCESS_XENOARCH, ACCESS_XENOBOTANY) // Outpost 21 edit - removed robotics
+	minimal_access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOARCH)
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 	banned_job_species = list(FBP_DIGITAL)
 
@@ -156,8 +156,8 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(access_tox, access_tox_storage, access_research, access_xenobiology, access_hydroponics) // Outpost 21 edit - removed robotics
-	minimal_access = list(access_research, access_xenobiology, access_hydroponics, access_tox_storage)
+	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_HYDROPONICS) // Outpost 21 edit - removed robotics
+	minimal_access = list(ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_HYDROPONICS, ACCESS_TOX_STORAGE)
 	banned_job_species = list(FBP_DIGITAL)
 
 	minimal_player_age = 14
@@ -206,10 +206,10 @@
 	pto_type = PTO_ENGINEERING // Outpost 21 edit - moved to robotics
 	economic_modifier = 5
 	// Outpost 21 edit begin - Moved to engineering
-	//access = list(access_robotics, access_tox, access_tox_storage, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	//minimal_access = list(access_robotics, access_tech_storage, access_morgue, access_research) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	access = list(access_robotics, access_eva, access_engine, access_engine_equip, access_tech_storage, access_maint_tunnels, access_external_airlocks, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
-	minimal_access = list(access_robotics, access_eva, access_engine, access_maint_tunnels, access_emergency_storage, access_construction, access_external_airlocks) // Outpost 21 edit - removed robotics
+	//access = list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_TECH_STORAGE, ACCESS_MORGUE, ACCESS_RESEARCH) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+	//minimal_access = list(ACCESS_ROBOTICS, ACCESS_TECH_STORAGE, ACCESS_MORGUE, ACCESS_RESEARCH) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+	access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS) // Outpost 21 edit - removed robotics
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_MAINT_TUNNELS, ACCESS_EMERGENCY_STORAGE, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS) // Outpost 21 edit - removed robotics
 	// Outpost 21 edit end
 
 	minimal_player_age = 7
@@ -262,8 +262,9 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(access_tox, access_tox_storage, access_research, access_xenobotany, access_hydroponics, access_xenobiology) //CHOMPS KSC 9/2/2020 - Added "access_xenobiology" to their access so they can enter Xenobotany. Outpost 21 edit - removed robotics
-	minimal_access = list(access_research, access_xenobotany, access_hydroponics, access_tox_storage)
+	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBOTANY, ACCESS_HYDROPONICS, ACCESS_XENOBIOLOGY) //CHOMPS KSC 9/2/2020 - Added "access_xenobiology" to their access so they can enter Xenobotany. Outpost 21 edit - removed robotics
+	minimal_access = list(ACCESS_RESEARCH, ACCESS_XENOBOTANY, ACCESS_HYDROPONICS, ACCESS_TOX_STORAGE)
+
 	pto_type = PTO_SCIENCE
 
 	minimal_player_age = 14
