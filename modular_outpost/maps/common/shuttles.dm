@@ -350,7 +350,7 @@
 /obj/machinery/computer/shuttle_control/explore/medical
 	name = "short jump console"
 	shuttle_tag = "Medical Rescue"
-	req_one_access = list(access_medical)
+	req_one_access = list(ACCESS_MEDICAL)
 
 /area/shuttle/medical
 	name = "\improper Medevac Shuttle"
@@ -451,7 +451,7 @@
 /obj/machinery/computer/shuttle_control/explore/security
 	name = "short jump console"
 	shuttle_tag = "Security Carrier"
-	req_one_access = list(access_security)
+	req_one_access = list(ACCESS_SECURITY)
 
 /area/shuttle/security
 	name = "\improper Security Shuttle"
@@ -528,7 +528,7 @@
 /obj/machinery/computer/shuttle_control/explore/trawler
 	name = "short jump console"
 	shuttle_tag = "Mining Trawler"
-	req_one_access = list(access_mining)
+	req_one_access = list(ACCESS_MINING)
 
 /area/shuttle/trawler
 	name = "\improper Mining Trawler"

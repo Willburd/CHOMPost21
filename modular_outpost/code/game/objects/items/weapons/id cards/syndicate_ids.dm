@@ -5,5 +5,5 @@
 
 /obj/item/card/id/syndicate/vox/Initialize(mapload)
 	. = ..()
-	access |= access_trader
-	access |= access_alien
+	access |= ACCESS_TRADER
+	access |= ACCESS_ALIEN

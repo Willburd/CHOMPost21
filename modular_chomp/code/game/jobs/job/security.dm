@@ -13,8 +13,8 @@
 	supervisors = "the " + JOB_HEAD_OF_SECURITY + " and " + JOB_CHIEF_MEDICAL_OFFICER
 	selection_color = "#601C1C"
 	economic_modifier = 7
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_security, access_sec_doors, access_brig, access_eva)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_virology, access_security, access_sec_doors, access_brig, access_eva)
+	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_GENETICS, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_EVA)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_VIROLOGY, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_EVA)
 
 	outfit_type = /decl/hierarchy/outfit/job/security/brigphysician
 	job_description = "The " + JOB_BRIG_PHYSICIAN + " is a doctor that helps security staff with medical issues. They have minimum access to Security, but they are not officers and should not conduct arrests."

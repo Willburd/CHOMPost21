@@ -26406,7 +26406,7 @@
 /turf/simulated/floor/tiled,
 /area/security/range)
 "mCT" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/CMO_wardrobe,
 /obj/item/pda/heads/cmo,
 /obj/item/cmo_disk_holder,
 /obj/item/defib_kit/compact/combat/loaded,
@@ -42472,7 +42472,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/apiary)
 "uvy" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/RD_wardrobe,
 /obj/item/clothing/glasses/omnihud/rnd,
 /obj/item/storage/box/cdeathalarm_kit,
 /obj/effect/landmark{

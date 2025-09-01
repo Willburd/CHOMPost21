@@ -11,7 +11,7 @@
 	var/cargo_locked = TRUE
 	var/vending_account = "Cargo" // Which department bankaccount this goes to
 
-	var/unlock_access = list(access_cargo)
+	var/unlock_access = list(ACCESS_CARGO)
 	forced_icon_path = /obj/item/spacecash/c20
 
 /obj/machinery/vending/cargo_resale/do_not_use
@@ -130,7 +130,7 @@
 	// icon = 'icons/obj/vending_op.dmi'
 	icon_state = "nutri" // Outpost todo - custom vendi
 	vending_account = "Civilian" // Which department bankaccount this goes to
-	unlock_access = list(access_kitchen,access_bar)
+	unlock_access = list(ACCESS_KITCHEN,ACCESS_BAR)
 
 /obj/machinery/vending/cargo_resale/medi
 	name = "Medicare Vendor"
@@ -138,7 +138,7 @@
 	// icon = 'icons/obj/vending_op.dmi'
 	icon_state = "med" // Outpost todo - custom vendi
 	vending_account = "Medical" // Which department bankaccount this goes to
-	unlock_access = list(access_medical)
+	unlock_access = list(ACCESS_MEDICAL)
 
 /obj/machinery/vending/cargo_resale/sci
 	name = "Technology Vendor"
@@ -146,4 +146,4 @@
 	// icon = 'icons/obj/vending_op.dmi'
 	icon_state = "nutri" // Outpost todo - custom vendi
 	vending_account = "Research" // Which department bankaccount this goes to
-	unlock_access = list(access_research)
+	unlock_access = list(ACCESS_RESEARCH)

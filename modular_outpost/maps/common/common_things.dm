@@ -45,7 +45,7 @@
 /obj/machinery/door/airlock/highsecurity/red
 	name = "Bridge Holdout Armory"
 	desc =  "Only to be opened on Code red or greater."
-	req_one_access = list(access_heads)
+	req_one_access = list(ACCESS_HEADS)
 
 /obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
 	if(get_security_level() in list("green","yellow"))
@@ -56,7 +56,7 @@
 //Again, need to be moved to a higher level in the code. These shouldn't be here, these aren't map-specific
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
-	req_one_access = list(access_explorer,access_brig)
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_BRIG)
 
 /obj/structure/closet/secure_closet/guncabinet/excursion/Initialize(mapload)
 	. = ..()

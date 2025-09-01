@@ -230,9 +230,9 @@
 			if(comm_console.check_access_list(ui.user.GetAccess()))
 				authenticated = COMM_AUTHENTICATION_MIN
 		// Outpost 21 edit end
-		if(check_access(ui.user, access_heads))
+		if(check_access(ui.user, ACCESS_HEADS))
 			authenticated = COMM_AUTHENTICATION_MIN
-		if(check_access(ui.user, access_captain))
+		if(check_access(ui.user, ACCESS_CAPTAIN))
 			authenticated = COMM_AUTHENTICATION_MAX
 			var/obj/item/card/id = ui.user.GetIdCard()
 			if(istype(id))
