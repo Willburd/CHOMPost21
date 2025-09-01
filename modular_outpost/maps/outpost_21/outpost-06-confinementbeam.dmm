@@ -1621,13 +1621,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
-"dS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/item/radio/beacon,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/port_airlock)
 "dT" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/firealarm{
@@ -16000,7 +15993,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/radio/beacon,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 8
@@ -40763,7 +40755,7 @@ TV
 of
 of
 of
-dS
+er
 of
 fN
 PJ
