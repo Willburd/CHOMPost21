@@ -48245,6 +48245,16 @@
 /obj/structure/reagent_dispensers/souppot/half,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"bJs" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "engmail"
+	},
+/obj/structure/sign/warning/moving_parts{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/engineering/mail)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -68694,16 +68704,6 @@
 /obj/item/sleevemate,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/security/surgery)
-"onL" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "engmail"
-	},
-/obj/structure/sign/warning/moving_parts{
-	pixel_y = -32
-	},
-/turf/simulated/floor/plating,
-/area/engineering/mail)
 "ooc" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -104734,7 +104734,7 @@ wnD
 bNn
 jAv
 egF
-onL
+bJs
 aao
 aYr
 aYP
