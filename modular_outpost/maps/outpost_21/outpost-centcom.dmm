@@ -217,9 +217,140 @@
 "aaQ" = (
 /turf/unsimulated/wall/r_wall,
 /area/centcom/control)
+"aaR" = (
+/obj/structure/table/wooden_reinforced,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"aaS" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"aaT" = (
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"aaU" = (
+/obj/structure/dogbed,
+/obj/item/toy/plushie/borgplushie/drake/eng,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"aaV" = (
+/obj/structure/bed/double,
+/obj/item/bedsheet/piratedouble,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"aaW" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/flashlight/lantern{
+	pixel_x = 5;
+	pixel_y = 15
+	},
+/obj/item/material/ashtray/bronze{
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"aaX" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/microwave/advanced{
+	pixel_y = 7
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"aaY" = (
+/obj/structure/closet/secure_closet/freezer/meat,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
 "aaZ" = (
 /obj/structure/closet/crate/bin,
 /turf/simulated/floor/tiled/kafel_full/yellow,
+/area/centcom/living)
+"aba" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abb" = (
+/obj/machinery/atmospherics/binary/circulator{
+	dir = 1;
+	anchored = 1
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abc" = (
+/obj/machinery/power/generator{
+	dir = 4;
+	anchored = 1
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abd" = (
+/obj/machinery/atmospherics/binary/circulator{
+	anchored = 1
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abe" = (
+/obj/item/tool/wrench{
+	pixel_y = -6;
+	pixel_x = -7
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abf" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abg" = (
+/obj/item/stack/cable_coil/yellow{
+	pixel_y = -10
+	},
+/obj/item/tool/wirecutters{
+	pixel_y = -10
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abh" = (
+/obj/structure/bed/chair/sofa/right/purp,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abi" = (
+/obj/structure/bed/chair/sofa/left/purp,
+/obj/item/instrument/guitar,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abj" = (
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lantern{
+	pixel_x = -5;
+	pixel_y = 15
+	},
+/obj/item/material/ashtray/bronze{
+	pixel_x = -5;
+	pixel_y = -4
+	},
+/obj/item/flame/lighter/zippo/skull{
+	pixel_x = 6
+	},
+/obj/item/clothing/mask/smokable/cigarette/cigar/havana{
+	pixel_x = 6
+	},
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abk" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abl" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/tool/crowbar/brace_jack,
+/obj/item/multitool,
+/turf/simulated/floor/carpet/retro,
+/area/centcom/living)
+"abm" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/turf/simulated/floor/carpet/retro,
 /area/centcom/living)
 "abu" = (
 /obj/effect/floor_decal/corner/blue{
@@ -13201,8 +13332,10 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "gyR" = (
-/obj/structure/closet/coffin,
-/turf/simulated/floor/wood,
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/retro,
 /area/centcom/living)
 "gyV" = (
 /obj/structure/grille,
@@ -29882,7 +30015,10 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "pEB" = (
-/obj/machinery/door/airlock/centcom/nameddorm,
+/obj/machinery/door/airlock/centcom/nameddorm{
+	matchnames = list("Dynamo","R4Z-GR1Z","T4L-0N");
+	name = "Dynamo's Residence"
+	},
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "pES" = (
@@ -39981,7 +40117,6 @@
 /turf/simulated/floor/tiled,
 /area/centcom/control)
 "vqe" = (
-/obj/structure/closet/secure_closet/RD,
 /obj/item/clothing/glasses/omnihud/rnd,
 /obj/machinery/requests_console/preset/rd{
 	dir = 8;
@@ -51637,11 +51772,11 @@ gqN
 aSx
 aSx
 aSx
-pEB
+aSx
 xxV
 xxV
 tJx
-pEB
+aSx
 hIA
 hIA
 hIA
@@ -53565,7 +53700,7 @@ aas
 xAJ
 xxV
 xxV
-pEB
+aSx
 aSx
 aSx
 aSx
@@ -53585,7 +53720,7 @@ xTv
 xxV
 xxV
 tJx
-pEB
+aSx
 hIA
 hIA
 hIA
@@ -55529,7 +55664,7 @@ mFu
 xxV
 xxV
 tJx
-pEB
+aSx
 hIA
 hIA
 hIA
@@ -56340,7 +56475,7 @@ xAJ
 xxV
 tJx
 aas
-wNy
+dzD
 aGk
 sBb
 aaw
@@ -56830,8 +56965,8 @@ aaw
 liv
 aaw
 aaw
-gyR
-aSx
+aaX
+aaT
 gyR
 aas
 hIA
@@ -56988,13 +57123,13 @@ xAJ
 xxV
 tJx
 aas
-aSx
-aSx
-aSx
+abh
+aaT
+abb
 aaw
-aSx
-aSx
-aSx
+aaY
+aaT
+aaR
 aas
 hIA
 hIA
@@ -57150,13 +57285,13 @@ xAJ
 xxV
 tJx
 aas
-aSx
-aSx
-aSx
+abi
+abg
+abc
 aaw
-aSx
-aSx
-aSx
+aaT
+aaT
+aaS
 aas
 hIA
 hIA
@@ -57312,13 +57447,13 @@ xAJ
 xxV
 tJx
 aas
-aSx
-aSx
-aSx
+abj
+aaT
+abd
 aaw
-aSx
-aSx
-aSx
+aba
+aaT
+aaT
 aas
 hIA
 hIA
@@ -57474,13 +57609,13 @@ xxV
 xxV
 tJx
 pEB
-aSx
-aSx
-aSx
+aaT
+aaT
+abe
 aaw
-aSx
-aSx
-aSx
+aaT
+aaT
+aaT
 aas
 hIA
 hIA
@@ -57636,13 +57771,13 @@ xAJ
 xxV
 tJx
 aas
-aSx
-aSx
-aSx
+abk
+aaT
+aaT
 gqN
-aSx
-aSx
-aSx
+aaT
+aaT
+aaT
 aas
 hIA
 hIA
@@ -57798,13 +57933,13 @@ xAJ
 xxV
 tJx
 aas
-aSx
-aSx
-aSx
+abl
+aaT
+aaT
 aaw
-aSx
-aSx
-aSx
+aaT
+aaT
+aaU
 aas
 hIA
 hIA
@@ -57960,13 +58095,13 @@ xAJ
 xxV
 tJx
 aas
-aSx
-aSx
-aSx
+abm
+aaT
+abf
 aaw
-aSx
-aSx
-aSx
+aaT
+aaW
+aaV
 aas
 hIA
 hIA
