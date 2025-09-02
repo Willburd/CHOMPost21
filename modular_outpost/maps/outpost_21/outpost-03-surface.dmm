@@ -33606,6 +33606,11 @@
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Tool Store"
 	},
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "ilv" = (

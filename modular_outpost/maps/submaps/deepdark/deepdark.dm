@@ -63,6 +63,10 @@
 #include "ghost_caveB.dmm"
 #include "ghost_caveC.dmm"
 #include "ghost_caveD.dmm"
+#include "ghost_caveE.dmm"
+#include "ghost_caveF.dmm"
+#include "ghost_caveG.dmm"
+#include "ghost_caveH.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -210,7 +214,7 @@
 	desc = "Tunnels that change."
 	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveA.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 30
+	discard_prob = 10
 	cost = 10
 
 /datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveB
@@ -218,7 +222,7 @@
 	desc = "Tunnels that change."
 	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveB.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 30
+	discard_prob = 10
 	cost = 10
 
 /datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveC
@@ -226,7 +230,7 @@
 	desc = "Tunnels that change."
 	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveC.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 30
+	discard_prob = 10
 	cost = 10
 
 /datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveD
@@ -234,7 +238,39 @@
 	desc = "Tunnels that change."
 	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveD.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 30
+	discard_prob = 10
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveE
+	name = "Shifting Caves E"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveE.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 10
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveF
+	name = "Shifting Caves F"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveF.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 10
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveG
+	name = "Shifting Caves G"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveG.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 10
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/ghost_caveH
+	name = "Shifting Caves H"
+	desc = "Tunnels that change."
+	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveH.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 10
 	cost = 10
 
 //////////////////////////////////////////////////////////////

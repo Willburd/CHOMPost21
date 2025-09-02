@@ -1,9 +1,9 @@
 import { useBackend } from 'tgui/backend';
-import { Box, LabeledList, Section } from 'tgui-core/components';
+import { Box, LabeledList } from 'tgui-core/components';
 
 type Data = {
   teshpet_data: {
-    scores: Record<string,number>[];
+    scores: Record<string, number>[];
   };
 };
 

@@ -49,19 +49,20 @@ var/static/list/redspace_areas = list (
 		handle_corpse()
 		var/obj/effect/landmark/drop_point
 		// Outpost 21 edit begin - Use our landmarks
-		var/list/redexitlist = list()
-		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
-			if(R.name == "redexit")
-				redexitlist += R
-		if(!redexitlist.len)
-			drop_point = pick(GLOB.latejoin) //Can be changed to whatever exit list you want. By default, uses GLOB.latejoin
-		else
-			drop_point = pick(redexitlist)
-		if(drop_point)
-			unfortunate_soul.forceMove(get_turf(drop_point))
-			unfortunate_soul.maxHealth = max(50, unfortunate_soul.maxHealth) //If they died, send them back with 50 maxHealth or their current maxHealth. Whatever's higher. We're evil, but not mean.
-		else
-			message_admins("Redspace Drain expired, but no drop point was found, leaving [unfortunate_soul] in limbo. This is a bug. Please report it with this info: redspace_drain/on_expire")
+		if(is_type_in_list(get_area(unfortunate_soul), redspace_areas)) // Only teleport if in redspace
+			var/list/redexitlist = list()
+			for(var/obj/effect/landmark/R in GLOB.landmarks_list)
+				if(R.name == "redexit")
+					redexitlist += R
+			if(!redexitlist.len)
+				drop_point = pick(GLOB.latejoin) //Can be changed to whatever exit list you want. By default, uses GLOB.latejoin
+			else
+				drop_point = pick(redexitlist)
+			if(drop_point)
+				unfortunate_soul.forceMove(get_turf(drop_point))
+				unfortunate_soul.maxHealth = max(50, unfortunate_soul.maxHealth) //If they died, send them back with 50 maxHealth or their current maxHealth. Whatever's higher. We're evil, but not mean.
+			else
+				message_admins("Redspace Drain expired, but no drop point was found, leaving [unfortunate_soul] in limbo. This is a bug. Please report it with this info: redspace_drain/on_expire")
 		// Outpost 21 edit end
 	unfortunate_soul = null
 

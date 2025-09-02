@@ -160,6 +160,7 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/distant_alarm,
 		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/tesh_encircle,
+		/datum/station_haunt/shuttle_sabotage,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn,

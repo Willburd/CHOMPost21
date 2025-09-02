@@ -656,6 +656,24 @@
 	end()
 
 
+// sabotage a shuttle if possible
+/datum/station_haunt/shuttle_sabotage
+	name = "Shuttle Sabotage"
+
+/datum/station_haunt/shuttle_sabotage/fire()
+	var/list/viable_shuttles = list()
+	for(var/key in SSshuttles.shuttles)
+		var/datum/shuttle/autodock/multi/check = SSshuttles.shuttles[key]
+		if(istype(check,/datum/shuttle/autodock/multi))
+			if(!check.can_be_haunted && check.crash_locations.len)
+				continue
+			viable_shuttles.Add(check)
+	if(viable_shuttles.len)
+		var/datum/shuttle/autodock/multi/end_shuttle = pick(viable_shuttles)
+		end_shuttle.emagged_crash = TRUE // We choose violence
+	end()
+
+
 // lurker
 /datum/station_haunt/lurker
 	name = "Lurking Spirit"

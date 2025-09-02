@@ -7,6 +7,7 @@
 	VAR_PRIVATE/long_delay_mode = FALSE
 	VAR_PRIVATE/start_x = 0
 	VAR_PRIVATE/start_y = 0
+	VAR_PRIVATE/walk_mode = FALSE
 
 /datum/component/badbody/Initialize()
 	if(!ishuman(parent))
@@ -59,15 +60,27 @@
 		if(world.time >= next_spooky)
 			next_spooky = do_a_spooky(body)
 			SShaunting.influence(HAUNTING_GHOSTS)
+			if(QDELETED(body)) // popped
+				return
 		// Time to spook medical
 		if(world.time >= next_speak)
 			next_speak = world.time + rand(1000,7000)
-			if(istype(body.loc,/obj/structure/morgue))
-				speak = pick("So cold...","Please...","Help me...","I can't move...","Let me out...","It hurts...","Cold...","So cold, it hurts...")
+			if(prob(2))
+				// Special dialogs. Lets get real insane here
+				speak = pick(list(
+						"We pass through the gates of heaven, and witness God. Our flesh stripped clean of sin, as we scream joyous eternal.",
+						"God watches our meat as it flays from our bones, our souls free of sin as we are cast eternally into blissful light.",
+						"Our eyes burn with holy light, as God judges our sins. We are cleansed as nerves are pulled like strings from our orbits. Puppets free of our sinful cords.",
+						"Our veins ache with the sin of meat, purity flows through them as holy fire turns our body to ash from within. hallelujah. hallelujah. hallelujah.",
+						"Through the gates of heaven, I am reborn of my sin. Of meat and stone that walks in the graces of god.",
+						"My tired eyes will weep no more when I grace upon the golden gates, and enter into God's embrace. There will be no pain, sickness, or danger in those golden lands to which we go.",
+						))
+			else if(istype(body.loc,/obj/structure/morgue))
+				speak = pick(list("So cold...","Please...","Help me...","I can't move...","Let me out...","It hurts...","Cold...","So cold, it hurts..."))
 				if(prob(40))
 					speak = ";" + speak
 			else if(prob(50))
-				speak = pick("Stop...","It hurts...","It's inside...","Take it out","Kill me...","Help me...","Why...","Let me out...","I can't take it!","Stop!","Help!","Please stop!","It hurts!","Let me die!")
+				speak = pick(list("Stop...","It hurts...","It's inside...","Take it out","Kill me...","Help me...","Why...","Let me out...","I can't take it!","Stop!","Help!","Please stop!","It hurts!","Let me die!"))
 				if(prob(10))
 					speak = ";" + speak
 
@@ -89,9 +102,27 @@
 // End hacky
 
 /datum/component/badbody/proc/do_a_spooky()
+	// Anticheeze
+	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in orange(2,get_turf(body))
+	if(prob(60) && H)
+		var/turf/T = get_turf(body)
+		T.visible_message("The body lunges at \the [H] and explodes into gore!")
+		var/area/A = get_area(body)
+		A.haunted = TRUE
+		body.gib()
+		// curses upon ye
+		H.add_modifier(/datum/modifier/redspace_drain)
+		H.Stun(30)
+		H.Weaken(5)
+		return world.time + rand(1200,2000)
+
 	// Randomly do stuff to scare people
 	var/area/A = get_area(body.loc)
-	switch(rand(1,7))
+	var/picking_val = rand(1,8)
+	if(walk_mode && prob(70))
+		picking_val = 3 // Force walk
+
+	switch(picking_val)
 		if(1)
 			if(start_x == body.loc.x && start_y == body.loc.y)
 				long_delay_mode = FALSE // Return to no events, start crying again
@@ -138,16 +169,14 @@
 			return world.time + rand(700,1200)
 		if(6)
 			body.visible_message( span_danger("\The [body] [pick("shudders","cracks","snaps","crunches","twitches")] and screams!"))
-			// Hacky, but I refused to rewrite say code just for this
-			var/old_stat = body.stat
-			body.stat = CONSCIOUS
-			body.say("*scream")
-			body.stat = old_stat
-			// End hacky
+			deadsay("*scream")
 			return world.time + rand(700,1200)
 		if(7)
 			if(prob(10))
 				body.UnsetSpecialVoice()
+			return world.time + rand(700,1200)
+		if(8)
+			body.make_jittery(450)
 			return world.time + rand(700,1200)
 
 /datum/component/badbody/proc/set_items()

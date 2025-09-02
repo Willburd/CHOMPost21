@@ -30,7 +30,7 @@
 			)
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Confinement Beam Generator crate"
-	access = list(access_ce)
+	access = list(ACCESS_CE)
 	one_access = TRUE
 
 /datum/supply_pack/eng/engine/confinement_beam_lens
@@ -50,7 +50,7 @@
 			)
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Confinement Beam Lens crate"
-	access = list(access_ce)
+	access = list(ACCESS_CE)
 	one_access = TRUE
 
 /datum/supply_pack/eng/engine/confinement_beam_collector
@@ -66,5 +66,5 @@
 			)
 	containertype = /obj/structure/closet/crate/secure/einstein
 	containername = "Confinement Beam Collector crate"
-	access = list(access_ce)
+	access = list(ACCESS_CE)
 	one_access = TRUE

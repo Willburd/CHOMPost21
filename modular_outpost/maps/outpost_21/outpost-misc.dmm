@@ -9,6 +9,9 @@
 "ac" = (
 /turf/unsimulated/mineral,
 /area/specialty/hell)
+"ad" = (
+/turf/unsimulated/wall,
+/area/mine/unexplored/sinkhole)
 "ae" = (
 /turf/simulated/mineral,
 /area/muriki/tramstation/shed)
@@ -113,6 +116,9 @@
 /obj/effect/overlay/palmtree_r,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"au" = (
+/turf/unsimulated/mineral,
+/area/mine/unexplored/sinkhole)
 "av" = (
 /obj/effect/floor_decal/milspec/hatchmarks,
 /obj/machinery/door/airlock/angled_bay/double/glass{
@@ -14811,9 +14817,9 @@ jj
 jj
 VT
 jj
-cX
-mN
-Sg
+ad
+ad
+ad
 ae
 ag
 ag
@@ -14973,9 +14979,9 @@ jj
 jj
 VT
 jj
-cX
-mN
-Sg
+ad
+au
+ad
 ae
 ag
 ag
@@ -15135,9 +15141,9 @@ jj
 jj
 VT
 jj
-cX
-mN
-Sg
+ad
+au
+ad
 ae
 ag
 ag
@@ -15297,9 +15303,9 @@ jj
 jj
 VT
 jj
-cX
-mN
-Sg
+ad
+au
+ad
 ae
 ag
 ag
@@ -15459,9 +15465,9 @@ jj
 jj
 VT
 jj
-cX
-mN
-Sg
+ad
+au
+ad
 ae
 ag
 ag
@@ -15621,9 +15627,9 @@ QQ
 VT
 VT
 jj
-cX
-mN
-Sg
+ad
+au
+ad
 ae
 ag
 ag
@@ -15783,9 +15789,9 @@ jj
 jj
 VT
 jj
-cX
-mN
-Sg
+ad
+ad
+ad
 Sg
 Sg
 Sg
