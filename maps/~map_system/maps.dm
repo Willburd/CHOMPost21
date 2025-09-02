@@ -340,9 +340,6 @@ var/list/all_maps = list()
 	if(flags & MAP_LEVEL_BELOW_BLOCKED)
 		if (!map.below_blocked_levels) map.below_blocked_levels = list()
 		map.below_blocked_levels += z
-	if(flags & MAP_LEVEL_EXTREMEFALL)
-		if (!map.deadly_fall_levels) map.deadly_fall_levels = list()
-		map.deadly_fall_levels += z
 	if(base_turf)
 		map.base_turf_by_z["[z]"] = base_turf
 	if(transit_chance)
