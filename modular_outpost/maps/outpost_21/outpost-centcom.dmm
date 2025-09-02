@@ -30016,7 +30016,7 @@
 /area/specialty/redspace)
 "pEB" = (
 /obj/machinery/door/airlock/centcom/nameddorm{
-	matchnames = list("Dynamo","R4Z-GR1Z","T4L-0N",);
+	matchnames = list("Dynamo","R4Z-GR1Z","T4L-0N");
 	name = "Dynamo's Residence"
 	},
 /turf/simulated/floor/wood,
@@ -51772,11 +51772,11 @@ gqN
 aSx
 aSx
 aSx
-pEB
+aSx
 xxV
 xxV
 tJx
-pEB
+aSx
 hIA
 hIA
 hIA
@@ -53700,7 +53700,7 @@ aas
 xAJ
 xxV
 xxV
-pEB
+aSx
 aSx
 aSx
 aSx
@@ -53720,7 +53720,7 @@ xTv
 xxV
 xxV
 tJx
-pEB
+aSx
 hIA
 hIA
 hIA
@@ -55664,7 +55664,7 @@ mFu
 xxV
 xxV
 tJx
-pEB
+aSx
 hIA
 hIA
 hIA
