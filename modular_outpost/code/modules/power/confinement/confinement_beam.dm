@@ -56,7 +56,7 @@ OL|IL|OL
 #define EXPLODEHEAT T0C + 100000 // Instead of stacking heat forever it'll just explode at this temp
 #define OFFSET_RAND_MAX 250
 #define PROJECTILE_DELAY 4
-#define NUMBER_OF_PROJECTILES 5
+#define NUMBER_OF_PROJECTILES 1
 
 /datum/confinement_pulse_data
 	var/power_level = 1
