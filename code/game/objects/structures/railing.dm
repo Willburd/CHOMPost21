@@ -27,6 +27,7 @@
 	if (constructed) // player-constructed railings
 		anchored = FALSE
 	AddElement(/datum/element/climbable/unanchored_can_break, 3.4 SECONDS, TRUE) // It's a RAILING!
+	AddElement(/datum/element/headbonk/railing) // Outpost 21 edit - Bonk!
 	if(src.anchored)
 		update_icon(0)
 

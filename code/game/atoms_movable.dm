@@ -265,6 +265,7 @@
 // Make sure you know what you're doing if you call this, this is intended to only be called by byond directly.
 // You probably want CanPass()
 /atom/movable/Cross(atom/movable/AM)
+	SEND_SIGNAL(src, COMSIG_MOVABLE_CROSS, AM) // Outpost 21 edit - Temp signal send, this needs to be done upstream fully
 	return CanPass(AM, loc)
 
 /atom/movable/CanPass(atom/movable/mover, turf/target)

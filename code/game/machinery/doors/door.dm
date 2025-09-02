@@ -73,6 +73,7 @@
 	update_icon()
 
 	update_nearby_tiles(need_rebuild=1)
+	AddElement(/datum/element/headbonk/door) // Outpost 21 edit - Bonk!
 
 /obj/machinery/door/Destroy()
 	density = FALSE
