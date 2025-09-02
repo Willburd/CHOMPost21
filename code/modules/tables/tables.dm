@@ -78,6 +78,7 @@ var/list/table_icon_cache = list()
 	update_material()
 
 	AddElement(/datum/element/climbable/table)
+	AddElement(/datum/element/headbonk/table) // Outpost 21 edit - Bonk!
 
 /obj/structure/table/Destroy()
 	material = null
