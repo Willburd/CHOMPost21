@@ -35,7 +35,7 @@
 		return
 	var/obj/structure/railing/R = source
 	var/mob/M = AM
-	if(M.size_multiplier <= 0.75)
+	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))
 		return // No bonk
 	if(!M.checkpass(PASSTABLE))
 		return // Climbed over
@@ -50,7 +50,7 @@
 		return
 	var/obj/structure/table/T = source
 	var/mob/M = AM
-	if(M.size_multiplier <= 0.75)
+	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))
 		return // No bonk
 	if(!M.checkpass(PASSTABLE))
 		return // Climbed over
@@ -68,7 +68,7 @@
 	if(!..(source,AM))
 		return
 	var/mob/M = AM
-	if(M.size_multiplier <= 1.95)
+	if(M.size_multiplier <= (RESIZE_MAXIMUM - 0.1))
 		return // No bonk
 	// This one is just simple and silly
 	clonk(source,M)
