@@ -60,7 +60,7 @@ GLOBAL_VAR_INIT(security_level, 0)
 				GLOB.security_level = SEC_LEVEL_BLUE
 			if(SEC_LEVEL_RED)
 				if(GLOB.security_level < SEC_LEVEL_RED)
-					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_red_upto)]", "Attention! Code red!", new_sound = sound('modular_outpost/sound/effects/alert_levels/outpost_red_alert.ogg', volume = 75)) // Outpost 21 edit
+					security_announcement_up.Announce("[CONFIG_GET(string/alert_desc_red_upto)]", "Attention! Code red!", new_sound = sound('modular_outpost/sound/effects/alert_levels/outpost_red_alert.ogg', volume = 45)) // Outpost 21 edit
 				else
 					security_announcement_down.Announce("[CONFIG_GET(string/alert_desc_red_downto)]", "Attention! Code red!")
 				GLOB.security_level = SEC_LEVEL_RED
