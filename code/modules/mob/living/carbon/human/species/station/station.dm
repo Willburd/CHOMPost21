@@ -1037,6 +1037,13 @@
 	water_breather = TRUE
 	water_movement = -4 //Negates shallow. Halves deep.
 
+	// Outpost 21 edit begin - skrell pressure tweaks
+	hazard_high_pressure = 1250		// Dangerously high pressure.
+	warning_high_pressure = 910		// High pressure warning.
+	warning_low_pressure = 80		// Low pressure warning.
+	hazard_low_pressure = 50		// Dangerously low pressure.
+	// Outpost 21 edit end
+
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
 	var/obj/item/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
