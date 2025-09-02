@@ -68,3 +68,14 @@
 	containername = "Confinement Beam Collector crate"
 	access = list(ACCESS_CE)
 	one_access = TRUE
+
+/datum/supply_pack/eng/engine/engine_phoron
+	name = "Phoron tank refill crate"
+	desc = "Phoron tanks for engine construction. Requires Chief Engineer access."
+	contains = list(
+			/obj/item/tank/phoron = 10,
+			)
+	cost = 150
+	containertype = /obj/structure/closet/crate/secure/phoron
+	containername = "Phoron tank refill crate"
+	access = list(ACCESS_CE)
