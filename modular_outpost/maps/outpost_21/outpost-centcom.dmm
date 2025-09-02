@@ -40127,6 +40127,7 @@
 	dir = 4
 	},
 /obj/item/storage/box/cdeathalarm_kit,
+/obj/structure/closet/secure_closet/RD_wardrobe,
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "vqg" = (
