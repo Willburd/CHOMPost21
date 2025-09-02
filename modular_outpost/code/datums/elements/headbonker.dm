@@ -15,18 +15,19 @@
 	SIGNAL_HANDLER
 	// Chance to bonk is handled by parent call!
 	SHOULD_CALL_PARENT(TRUE)
-	if(!ismob(AM))
+	if(!isliving(AM))
 		return FALSE
 	if(!prob(bonk_chance))
 		return FALSE
 	return TRUE
 
-/datum/element/headbonk/proc/clonk(atom/source,var/mob/M)
+/datum/element/headbonk/proc/clonk(atom/source,var/mob/living/M)
 	playsound(source,'sound/effects/clang1.ogg')
 	playsound(source,"punch")
 	M.visible_message(span_danger("\The [M] bonks their head into \the [source]!"))
 	M.Stun(5)
 	M.Weaken(5)
+	M.apply_damage(rand(1,3),BRUTE,BP_HEAD)
 
 /// Subtypes
 /datum/element/headbonk/railing/headbonk(atom/source,atom/movable/AM)
