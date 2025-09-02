@@ -1340,7 +1340,7 @@
 	hazard_low_pressure = -1
 
 	warning_high_pressure = 300
-	hazard_high_pressure = INFINITY
+	hazard_high_pressure = HAZARD_HIGH_PRESSURE // Outpost 21 edit - No, infinity is not a number patrick
 
 	cold_level_1 = -1	//Immune to cold
 	cold_level_2 = -1
