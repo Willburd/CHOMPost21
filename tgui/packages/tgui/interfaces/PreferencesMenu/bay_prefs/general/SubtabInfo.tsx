@@ -281,11 +281,12 @@ export const SubtabInfo = (props: {
       </Stack.Item>
       {/* Outpost 21 edit begin - Species stats */}
       <Stack.Item>
+        <Box bold>Physiology</Box>
         <Stack>
           <Stack.Item>
-            <Box bold>Physiology</Box>
+            <Box bold>Physical Limits</Box>
             <LabeledList>
-              <LabeledList.Item label="Max HP">
+              <LabeledList.Item label="Max Health">
                 {species_stats.total_health}
               </LabeledList.Item>
               <LabeledList.Item label="Breathes Gas">
@@ -300,10 +301,10 @@ export const SubtabInfo = (props: {
               <LabeledList.Item label="Heatstroke Threshold">
                 {species_stats.heat_level_1} °C
               </LabeledList.Item>
-              <LabeledList.Item label="Minimum Low Pressure">
+              <LabeledList.Item label="Min' Pressure Limit">
                 {species_stats.hazard_low_pressure} Kpa
               </LabeledList.Item>
-              <LabeledList.Item label="Maximum High Pressure">
+              <LabeledList.Item label="Max' Pressure Limit">
                 {species_stats.hazard_high_pressure} Kpa
               </LabeledList.Item>
             </LabeledList>

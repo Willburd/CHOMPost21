@@ -107,38 +107,31 @@
 
 	var/list/species_stats = list(
 		"total_health" = species.total_health,
-		"slowdown" = "",
-
+		"slowdown" = "?",
 		"brute_mod" = species.brute_mod,
 		"burn_mod" = species.burn_mod,
 		"oxy_mod" = species.oxy_mod,
 		"toxins_mod" = species.toxins_mod,
 		"radiation_mod" = species.radiation_mod,
 		"flash_mod" = species.flash_mod,
-
 		"pain_mod" = species.pain_mod,
 		"stun_mod" = species.stun_mod,
 		"weaken_mod" = species.weaken_mod,
-
 		"lightweight" = species.lightweight > 0,
-		"has_vibration_sense" = species.has_vibration_sense > 0,
 		"dispersed_eyes" = species.dispersed_eyes > 0,
 		"trashcan" = species.trashcan > 0,
 		"eat_minerals" = species.eat_minerals > 0,
-		"darksight" = "",
-
-		"breath_type" = GLOB.gas_data.name[species.breath_type] ? GLOB.gas_data.name[species.breath_type] : "NA",
-
+		"darksight" = "?",
+		"chem_strength_tox" = species.chem_strength_tox,
 		"cold_level_1" = max(0,species.cold_level_1)-T0C,
 		"heat_level_1" = max(0,species.heat_level_1)-T0C,
 		"chem_strength_heal" = species.chem_strength_heal,
-		"chem_strength_tox" = species.chem_strength_tox,
-
-		"body_temperature" = max(0,species.body_temperature)-T0C,
-
-		"hazard_low_pressure" = max(0,species.hazard_low_pressure),
-		"hazard_high_pressure" = species.hazard_high_pressure == INFINITY ? "INF" : max(0,species.hazard_high_pressure),
 		"siemens_coefficient" = species.siemens_coefficient,
+		"has_vibration_sense" = species.has_vibration_sense > 0,
+		"body_temperature" = max(0,species.body_temperature)-T0C,
+		"hazard_low_pressure" = max(0,species.hazard_low_pressure),
+		"breath_type" = GLOB.gas_data.name[species.breath_type] ? GLOB.gas_data.name[species.breath_type] : "NA",
+		"hazard_high_pressure" = species.hazard_high_pressure == INFINITY ? "INF" : max(0,species.hazard_high_pressure),
 	)
 
 	switch(species.darksight)
