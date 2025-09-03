@@ -762,6 +762,7 @@
 					/obj/item/circuitboard/photocopier,
 					/obj/item/circuitboard/fax,
 					/obj/item/circuitboard/request,
+					/obj/item/circuitboard/supply_request_computeralt, // Outpost 21 edit - Alternate request console type
 					/obj/item/circuitboard/microwave,
 					/obj/item/circuitboard/washing,
 					/obj/item/circuitboard/scanner_console,
