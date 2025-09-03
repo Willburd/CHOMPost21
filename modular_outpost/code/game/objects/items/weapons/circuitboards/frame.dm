@@ -14,3 +14,8 @@
 							/obj/item/stock_parts/capacitor/adv = 1,		//for the JUICE
 							/obj/item/stock_parts/motor = 2,
 							/obj/item/stack/cable_coil = 5)
+
+/obj/item/circuitboard/supply_request_computeralt
+	name = T_BOARD("request console computer")
+	build_path = /obj/machinery/computer/supply_request_computeralt
+	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
