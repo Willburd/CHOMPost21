@@ -104,6 +104,33 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 	known_implant = TRUE
 	var/id = 1
 	var/degrade_time = 10 MINUTES	//How long before the implant stops working outside of a living body.
+	// Outpost 21 edit begin - Tracking implant notifications
+	var/in_secure_area = FALSE
+	var/static/list/forbidden_areas = list(
+		/area/security/armoury,
+		/area/security/nuke_storage,
+		/area/bridge,
+		/area/crew_quarters/captain,
+		/area/crew_quarters/heads/hop,
+		/area/crew_quarters/heads/hor,
+		/area/crew_quarters/heads/chief,
+		/area/crew_quarters/heads/hos,
+		/area/crew_quarters/heads/cmo,
+		/area/quartermaster/qm,
+		/area/teleporter,
+		/area/teleporter/bridge,
+		/area/AIsattele,
+		/area/ai_sat,
+		/area/engineering/gravgen,
+		/area/medical/voxlab,
+		/area/offworld/confinementbeam/station,
+		/area/shuttle/medical,
+		/area/shuttle/security,
+		/area/shuttle/trawler,
+		/area/vehicle_interior,
+		/area/muriki/processor,
+	)
+	// Outpost 21 edit end
 
 /obj/item/implant/tracking/weak	//This is for the loadout
 	degrade_time = 2.5 MINUTES
@@ -123,7 +150,11 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 	return ..()
 
 /obj/item/implant/tracking/process()
-	var/implant_location = src.loc
+	// Outpost 21 edit(port) begin - Fix tracking implants using the wrong loc
+	var/obj/item/organ/implant_location = src.loc
+	implant_location = implant_location.owner
+	// Outpost 21 edit(port) end
+
 	if(ismob(implant_location))
 		var/mob/living/L = implant_location
 		if(L.stat == DEAD)
@@ -133,6 +164,16 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 				icon_state = "implant_melted"
 				malfunction = MALFUNCTION_PERMANENT
 				STOP_PROCESSING(SSobj, src)
+		// Outpost 21 edit begin - Tracking implant notifications
+		else
+			var/area/A = get_area(L)
+			if(A && is_type_in_list(A,forbidden_areas))
+				if(!in_secure_area)
+					GLOB.global_announcer.autosay("A tracking implant entered secure area; [A]!", "Tracking Implant Monitor", CHANNEL_SECURITY)
+				in_secure_area = TRUE
+			else
+				in_secure_area = FALSE
+		// Outpost 21 edit end
 	return 1
 
 /obj/item/implant/tracking/get_data()
