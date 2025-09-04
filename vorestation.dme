@@ -5571,6 +5571,7 @@
 #include "modular_outpost\code\modules\reagents\machinery\dispenser\supply.dm"
 #include "modular_outpost\code\modules\reagents\reactions\distilling\distilling.dm"
 #include "modular_outpost\code\modules\reagents\reactions\instant\instant.dm"
+#include "modular_outpost\code\modules\reagents\reagent_containers\blood_pack.dm"
 #include "modular_outpost\code\modules\reagents\reagent_containers\glass.dm"
 #include "modular_outpost\code\modules\reagents\reagent_containers\hypospray.dm"
 #include "modular_outpost\code\modules\reagents\reagent_containers\pill.dm"

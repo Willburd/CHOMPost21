@@ -219,7 +219,7 @@
 				return
 			// CHOMPedit end
 
-			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable)) // CHOMPEdit
+			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable) && !istype(target, /obj/item/reagent_containers/blood/refillable)) // CHOMPEdit, Outpost 21 edit - Medical IV bags
 				to_chat(user, span_notice("You cannot directly fill this object."))
 				return
 			if(!target.reagents.get_free_space())
