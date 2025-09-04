@@ -662,6 +662,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/ai)
+"bu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/dockingbay)
 "bv" = (
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/disposal,
@@ -1102,9 +1108,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "cr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "cs" = (
@@ -8851,8 +8854,7 @@
 /obj/machinery/light_switch/breaker{
 	pixel_y = 28
 	},
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "At" = (
@@ -10192,8 +10194,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/air/airlock,
+/obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "ES" = (
@@ -39986,7 +39987,7 @@ sY
 Fx
 AC
 Ar
-iu
+bu
 cp
 co
 le
