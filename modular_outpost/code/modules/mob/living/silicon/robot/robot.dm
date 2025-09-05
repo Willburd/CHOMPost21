@@ -48,3 +48,20 @@
 			else
 				C.tool_qualities = list()
 				to_chat(usr,span_notice("You will no longer use your [C] to open doors or dismantle floors."))
+
+// This better not be abused
+/mob/living/silicon/robot/verb/detonate_self()
+	set name = "Detonate Self-Destruct Explosive"
+	set category = "Abilities.Silicon"
+
+	var/choice = tgui_alert(usr, "Are you certain that you want to detonate your self-destruct explosive? Abuse of this action may result in OOC punishments. Admins will be notified.","Detonate Self",list("BAD DOG","No"))
+	if(choice == "BAD DOG")
+		var/turf/T = get_turf(src)
+		log_admin("[key_name_admin(usr)] has detonated their self destruct explosives using the manual verb at: [T.x].[T.y].[T.z]")
+
+		var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+		sparks.set_up(5, 0, src)
+		sparks.attach(loc)
+		sparks.start()
+
+		addtimer(CALLBACK(src, PROC_REF(self_destruct)), 1 SECONDS, TIMER_DELETE_ME)

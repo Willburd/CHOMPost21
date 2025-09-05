@@ -352,6 +352,10 @@
 /obj/structure/closet/secure_closet/engineering_personal,
 /turf/simulated/floor/carpet/retro,
 /area/centcom/living)
+"abn" = (
+/obj/machinery/door/airlock/centcom/nameddorm,
+/turf/simulated/floor/wood,
+/area/centcom/living)
 "abu" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -51773,11 +51777,11 @@ gqN
 aSx
 aSx
 aSx
-aSx
+abn
 xxV
 xxV
 tJx
-aSx
+abn
 hIA
 hIA
 hIA
@@ -53701,7 +53705,7 @@ aas
 xAJ
 xxV
 xxV
-aSx
+abn
 aSx
 aSx
 aSx
@@ -53721,7 +53725,7 @@ xTv
 xxV
 xxV
 tJx
-aSx
+abn
 hIA
 hIA
 hIA
@@ -55665,7 +55669,7 @@ mFu
 xxV
 xxV
 tJx
-aSx
+abn
 hIA
 hIA
 hIA

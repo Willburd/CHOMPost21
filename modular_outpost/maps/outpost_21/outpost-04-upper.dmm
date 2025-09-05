@@ -14679,10 +14679,6 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
 "gON" = (
-/obj/machinery/requests_console/preset/ce{
-	dir = 4;
-	pixel_x = -30
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
@@ -14690,6 +14686,10 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/newscaster{
+	layer = 3.3;
+	pixel_x = -27
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
 "gOP" = (
@@ -16178,10 +16178,6 @@
 /area/muriki/tramstation/civ)
 "hBJ" = (
 /obj/structure/table/reinforced,
-/obj/machinery/newscaster{
-	layer = 3.3;
-	pixel_x = 27
-	},
 /obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
 /obj/item/rcd_ammo/large,
@@ -21451,14 +21447,14 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "kbq" = (
-/obj/machinery/disposal/mail_reciever{
-	name = "disposal mail destination(Chief Engineer)"
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/computer/supply_request_computeralt/ce{
+	dir = 1
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
@@ -32886,6 +32882,12 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(Chief Engineer)"
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
 "pKC" = (
@@ -41940,13 +41942,12 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "uil" = (
-/obj/structure/bed/chair/bay/comfy/purple{
-	dir = 1;
-	name = "Research Director's Chair"
-	},
 /obj/machinery/keycard_auth{
 	pixel_x = 21;
 	pixel_y = 25
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 1
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
@@ -46304,6 +46305,9 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
+/obj/machinery/computer/supply_request_computeralt/rd{
+	dir = 4
+	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
 "wpw" = (
@@ -49055,10 +49059,6 @@
 "xLl" = (
 /obj/structure/table/glass,
 /obj/item/clothing/accessory/sweater/uglyxmas,
-/obj/machinery/requests_console/preset/rd{
-	dir = 8;
-	pixel_x = 30
-	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
 "xLo" = (

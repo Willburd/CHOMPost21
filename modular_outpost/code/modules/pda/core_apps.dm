@@ -27,19 +27,20 @@
 	icon = "balance-scale"
 	template = "pda_sop"
 	var/pagenum = 1
-	var/list/soptitles = list()
-	var/list/sopbodies = list()
-	var/list/sopauthor = list()
+	var/static/list/soptitles = list()
+	var/static/list/sopbodies = list()
+	var/static/list/sopauthor = list()
 
 /datum/data/pda/app/sop/start()
 	. = ..()
 	// add each sop datum to the reported entries!
-	var/list/paths = subtypesof(/datum/sop_entry)
-	for(var/subtype in paths)
-		var/datum/sop_entry/entry = new subtype()
-		soptitles.Add(entry.title)
-		sopbodies.Add(entry.body)
-		sopauthor.Add(entry.author)
+	if(!soptitles.len)
+		var/list/paths = subtypesof(/datum/sop_entry)
+		for(var/subtype in paths)
+			var/datum/sop_entry/entry = new subtype()
+			soptitles.Add(entry.title)
+			sopbodies.Add(entry.body)
+			sopauthor.Add(entry.author)
 
 /datum/data/pda/app/sop/update_ui(mob/user as mob, list/data)
 	data["sop_title"] = soptitles[pagenum]

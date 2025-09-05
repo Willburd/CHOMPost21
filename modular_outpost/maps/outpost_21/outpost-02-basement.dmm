@@ -16056,12 +16056,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aCM" = (
-/obj/machinery/requests_console{
-	department = "Atmospherics";
-	departmentType = 3;
-	name = "Atmos RC";
-	pixel_y = 28
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/doorbell_chime{
@@ -16689,6 +16683,10 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
+/obj/machinery/elevator_warning{
+	pixel_y = 18;
+	pixel_x = -7
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "aDP" = (
@@ -16696,6 +16694,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner_techfloor_grid,
+/obj/effect/landmark/start{
+	name = "Atmospheric Technician"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "aDQ" = (
@@ -17833,9 +17834,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/machinery/elevator_warning{
-	pixel_y = 18
-	},
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
@@ -17848,6 +17846,10 @@
 	dir = 8;
 	pixel_x = 30;
 	pixel_y = 8
+	},
+/obj/machinery/computer/supply_request_computeralt/atmos{
+	dir = 8;
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -47148,12 +47150,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "bGN" = (
-/obj/structure/bed/chair/office/dark{
-	dir = 4
-	},
-/obj/effect/landmark/start{
-	name = "Atmospheric Technician"
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -48255,6 +48251,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/mail)
+"bJt" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Atmospheric Technician"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos/monitoring)
 "bJR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -107784,7 +107789,7 @@ nSt
 aGJ
 bxO
 aky
-aky
+bJt
 bru
 adQ
 aHD

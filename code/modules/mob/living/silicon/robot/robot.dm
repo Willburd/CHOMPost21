@@ -1119,7 +1119,11 @@
 	radio.interact(src)//Just use the radio's Topic() instead of bullshit special-snowflake code
 
 /mob/living/silicon/robot/proc/self_destruct()
+	// Outpost 21 edit begin - Boom
+	var/turf/T = get_turf(src)
 	gib()
+	explosion(T,1,1,2,4)
+	// Outpost 21 edit end
 	return
 
 /mob/living/silicon/robot/proc/UnlinkSelf()

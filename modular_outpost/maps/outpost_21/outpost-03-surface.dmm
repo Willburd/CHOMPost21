@@ -3036,7 +3036,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/structure/table/wooden_reinforced,
+/obj/machinery/computer/supply_request_computeralt/captain{
+	pixel_y = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "aex" = (
@@ -4645,10 +4647,6 @@
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/light_switch{
 	pixel_x = -11;
-	pixel_y = 30
-	},
-/obj/machinery/requests_console/preset/engineering{
-	pixel_x = 2;
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -7466,10 +7464,6 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 6
 	},
-/obj/machinery/requests_console/preset/security{
-	dir = 1;
-	pixel_y = -30
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -8029,6 +8023,20 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
+"ant" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
+"anu" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/table/glass,
+/obj/item/storage/box/iv_medpacks{
+	pixel_y = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "anv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
@@ -10342,19 +10350,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/clothing/mask/chewable/candy/lolli,
-/obj/item/candybowl,
-/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "aTk" = (
@@ -13095,6 +13093,36 @@
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /obj/structure/reagent_dispensers/medical_waste_tank,
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
+/obj/item/stack/hose{
+	amount = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
 "bKU" = (
@@ -14010,12 +14038,12 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
+	},
+/obj/machinery/requests_console/preset/medical{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -16726,8 +16754,8 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
 	},
-/obj/machinery/rnd/production/circuit_imprinter,
 /obj/item/geiger/wall/east,
+/obj/machinery/rnd/production/protolathe/department/science,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "cTd" = (
@@ -24839,7 +24867,9 @@
 /obj/machinery/ai_status_display{
 	pixel_x = 32
 	},
-/obj/machinery/rnd/production/protolathe/department/science,
+/obj/machinery/computer/supply_request_computeralt/research{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "fDX" = (
@@ -26448,9 +26478,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/computer/prisoner{
+/obj/machinery/computer/supply_request_computeralt/security{
 	dir = 4;
-	pixel_x = -4
+	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/checkpoint2)
@@ -29182,7 +29212,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "hbd" = (
-/obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment{
@@ -31268,8 +31297,13 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
-/obj/item/sticky_pad/random{
-	pixel_x = -5
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = -5;
+	pixel_y = 8
 	},
 /obj/item/retail_scanner,
 /turf/simulated/floor/tiled/white,
@@ -34868,10 +34902,6 @@
 	dir = 9
 	},
 /obj/item/clothing/head/soft,
-/obj/machinery/requests_console/preset/cargo{
-	dir = 4;
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "iEB" = (
@@ -36060,7 +36090,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/obj/structure/table/standard,
+/obj/machinery/rnd/production/circuit_imprinter,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "iYO" = (
@@ -37491,20 +37521,14 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "jtU" = (
-/obj/structure/table/standard,
-/obj/item/reagent_containers/spray/cleaner{
-	pixel_x = -5;
-	pixel_y = 8
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
-/obj/item/reagent_containers/spray/cleaner,
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
+/obj/machinery/computer/supply_request_computeralt/medical{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -52872,6 +52896,20 @@
 /obj/structure/window/reinforced,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/item/candybowl,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
+/obj/item/clothing/mask/chewable/candy/lolli,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "oel" = (
@@ -53329,6 +53367,10 @@
 	},
 /obj/item/storage/box/pillbottles{
 	pixel_x = 6
+	},
+/obj/item/storage/box/iv_medpacks{
+	pixel_x = -3;
+	pixel_y = -5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -56304,6 +56346,9 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/machinery/computer/supply_request_computeralt/cargo{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "ply" = (
@@ -58632,6 +58677,9 @@
 	req_one_access = list(5,19,40);
 	dir = 1
 	},
+/obj/item/sticky_pad/random{
+	pixel_x = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "pXz" = (
@@ -58724,9 +58772,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/machinery/requests_console/preset/captain{
-	dir = 8;
-	pixel_x = 30
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 26
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -65484,10 +65533,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/requests_console/preset/medical{
-	dir = 8;
-	pixel_x = 30
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "sfu" = (
@@ -66031,6 +66076,7 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
 	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "spu" = (
@@ -67008,13 +67054,13 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 1
 	},
-/obj/machinery/requests_console/preset/medical{
-	pixel_y = 30
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/item/extraction_pack,
+/obj/machinery/alarm{
+	pixel_y = 26
 	},
-/obj/item/extraction_pack,
-/obj/item/extraction_pack,
-/obj/item/extraction_pack,
-/obj/item/extraction_pack,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "sFQ" = (
@@ -69003,6 +69049,10 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/machinery/requests_console/preset/janitor{
+	dir = 4;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/arrivejani)
@@ -80607,9 +80657,11 @@
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "wHz" = (
-/obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
+	},
+/obj/machinery/computer/supply_request_computeralt/engineering{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
@@ -127709,7 +127761,7 @@ hPN
 liu
 xhm
 nwj
-vMX
+anu
 kDU
 dPc
 wGT
@@ -141506,7 +141558,7 @@ hEs
 sgv
 hmt
 sgv
-sgv
+ant
 sgv
 dAu
 qEZ
