@@ -152,6 +152,7 @@
 	containername = "Stolen crate"
 	contraband = 1
 
+/* Outpost 21 edit - Removed these crates
 /datum/supply_pack/supply/wolfgirl
 	name = "Wolfgirl Crate"
 	desc = "Half wolf, half girl, no brains."
@@ -167,6 +168,7 @@
 	containertype = /obj/structure/largecrate/animal/catgirl
 	containername = "Catgirl crate"
 	contraband = 1
+*/
 
 /datum/supply_pack/randomised/hospitality/pizzavouchers //WE ALWAYS DELIVER WE ALWAYS DELIVER WE ALWAYS DELIVER WE ALWAYS DELIVER WE ALWAYS DELIVER
 	num_contained = 3
