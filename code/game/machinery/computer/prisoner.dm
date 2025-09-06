@@ -6,7 +6,7 @@
 	icon_keyboard = "security_key"
 	icon_screen = "explosive"
 	light_color = "#a91515"
-	req_access = list(ACCESS_ARMORY)
+	req_access = list(ACCESS_SECURITY) // Outpost 21 edit - Security instead of warden
 	circuit = /obj/item/circuitboard/prisoner
 	var/id = 0.0
 	var/temp = null
