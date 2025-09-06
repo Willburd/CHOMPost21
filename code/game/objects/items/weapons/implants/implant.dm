@@ -169,7 +169,7 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 			var/area/A = get_area(L)
 			if(A && is_type_in_list(A,forbidden_areas))
 				if(!in_secure_area)
-					GLOB.global_announcer.autosay("A tracking implant entered secure area; [A]!", "Tracking Implant Monitor", CHANNEL_SECURITY)
+					GLOB.global_announcer.autosay("A tracking implant entered secure area: [A]!", "Tracking Implant Monitor", CHANNEL_SECURITY)
 				in_secure_area = TRUE
 			else
 				in_secure_area = FALSE

@@ -4456,6 +4456,7 @@
 #include "code\modules\research\tg\designs\stock_part_designs.dm"
 #include "code\modules\research\tg\designs\tool_designs.dm"
 #include "code\modules\research\tg\designs\weapon_designs.dm"
+#include "code\modules\research\tg\designs\weapons_yw.dm"
 #include "code\modules\research\tg\designs\boards\atmos.dm"
 #include "code\modules\research\tg\designs\boards\boards_ch.dm"
 #include "code\modules\research\tg\designs\boards\cargo.dm"
