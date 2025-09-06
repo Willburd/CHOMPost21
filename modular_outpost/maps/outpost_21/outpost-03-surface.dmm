@@ -80096,14 +80096,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
 "wwz" = (
-/obj/machinery/disposal/wall{
-	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
-	dir = 1;
-	name = "Anmesty Box";
-	pixel_y = -36
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/machinery/disposal/wall/cleaner{
+	dir = 1;
+	name = "Amnesty Box";
+	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
+	pixel_y = -36
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/checkpoint2)
