@@ -37,6 +37,8 @@
 	var/mob/M = AM
 	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))
 		return // No bonk
+	if(M.mob_size <= MOB_TINY)
+		return // No bonk on minis
 	if(!M.checkpass(PASSTABLE))
 		return // Climbed over
 	if(!R.anchored)
@@ -52,6 +54,8 @@
 	var/mob/M = AM
 	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))
 		return // No bonk
+	if(M.mob_size <= MOB_TINY)
+		return // No bonk on minis
 	if(!M.checkpass(PASSTABLE))
 		return // Climbed over
 	if(T.flipped)

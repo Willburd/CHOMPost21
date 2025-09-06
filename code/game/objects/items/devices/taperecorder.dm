@@ -371,7 +371,7 @@
 
 /obj/item/rectape
 	name = "tape"
-	desc = "A magnetic tape that can hold up to ten minutes of content."
+	desc = "A magnetic tape that can hold up to 2 hours of content." // Outpost 21 edit - Buffed record times
 	icon = 'icons/obj/device.dmi'
 	icon_state = "tape_white"
 	item_state = "analyzer"
@@ -379,7 +379,7 @@
 	matter = list(MAT_STEEL=20, MAT_GLASS=5)
 	force = 1
 	throwforce = 0
-	var/max_capacity = 7200 // Outpost 21 edit - Buffed record times
+	var/max_capacity = 2 HOURS // Outpost 21 edit - Buffed record times
 	var/used_capacity = 0
 	var/list/storedinfo = new/list()
 	var/list/timestamp = new/list()

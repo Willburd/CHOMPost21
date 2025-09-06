@@ -70,7 +70,8 @@
 						list("Die with us","Die!","We need you to die!","Come die with us!","We love you","Stay with us forever"),
 						list("DEATH","DIE","KILL"),
 						list("It hurts","The pain","PAIN","HELP"),
-						list("HAHA","HAH","HA","HAHAHAHA")
+						list("HAHA","HAH","HA","HAHAHAHA"),
+						list("SIN","SIN","YOUR THOUGHTS ARE UNCLEAN","UNCLEAN","HATE")
 					)
 	text_set = pick(cursed_text)
 	if(prob(2)) // Secret merps

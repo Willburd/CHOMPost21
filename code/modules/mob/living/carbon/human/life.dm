@@ -748,7 +748,7 @@
 
 			// Enough to make us sleep as well
 			if(SA_pp > SA_sleep_min)
-				Sleeping(5)
+				Sleeping(10) // Outpost 21 edit - Extend the sleeping time just a bit
 
 		// There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
 		else if(SA_pp > 0.15)
