@@ -236,6 +236,12 @@ const GASES = [
   },
   /* Outpost 21 edit end */
   {
+    id: 'methane',
+    name: 'Methane',
+    label: 'CH₄',
+    color: 'orange',
+  },
+  {
     id: 'other',
     name: 'Other',
     label: 'Other',
