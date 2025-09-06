@@ -379,7 +379,7 @@
 	matter = list(MAT_STEEL=20, MAT_GLASS=5)
 	force = 1
 	throwforce = 0
-	var/max_capacity = 7200 // Outpost 21 edit - Buffed record times
+	var/max_capacity = 2 HOURS // Outpost 21 edit - Buffed record times
 	var/used_capacity = 0
 	var/list/storedinfo = new/list()
 	var/list/timestamp = new/list()
