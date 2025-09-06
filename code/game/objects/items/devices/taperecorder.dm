@@ -371,7 +371,7 @@
 
 /obj/item/rectape
 	name = "tape"
-	desc = "A magnetic tape that can hold up to ten minutes of content."
+	desc = "A magnetic tape that can hold up to 2 hours of content." // Outpost 21 edit - Buffed record times
 	icon = 'icons/obj/device.dmi'
 	icon_state = "tape_white"
 	item_state = "analyzer"
