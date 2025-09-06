@@ -10,8 +10,8 @@
 #define ATM_CO2		5
 #define ATM_P		6	//Phoron
 #define ATM_N2O		7
-#define ATM_METHANE 8	// Outpost 21 addition - Methane
-#define ATM_LASTGAS	8   // Outpost 21 addition - Used to be whatever gas was last, use this instead so it's less butts to update with new atmos
+#define ATM_METHANE 8
+#define ATM_LASTGAS	8 // Keep updated to match the latest gas in list above
 
 //--------------------------------------------
 // Omni port datum
