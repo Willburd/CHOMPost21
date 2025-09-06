@@ -34125,12 +34125,19 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/item/storage/box/gloves{
+	pixel_x = 4;
+	pixel_y = 10
+	},
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
+/obj/item/clothing/glasses/goggles,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "qvS" = (
