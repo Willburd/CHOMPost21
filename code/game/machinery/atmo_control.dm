@@ -29,7 +29,6 @@
 	// 8 for phoron concentration
 	// 16 for nitrogen concentration
 	// 32 for carbon dioxide concentration
-	// 64 for methane concentration
 
 	var/datum/radio_frequency/radio_connection
 
@@ -61,14 +60,14 @@
 					signal.data[GAS_N2] = round(100*air_sample.gas[GAS_N2]/total_moles,0.1)
 				if(output&32)
 					signal.data[GAS_CO2] = round(100*air_sample.gas[GAS_CO2]/total_moles,0.1)
-				if(output&64) // Outpost 21 edit - Methane
+				if(output&64)
 					signal.data[GAS_CH4] = round(100*air_sample.gas[GAS_CH4]/total_moles,0.1)
 			else
 				signal.data[GAS_O2] = 0
 				signal.data[GAS_PHORON] = 0
 				signal.data[GAS_N2] = 0
 				signal.data[GAS_CO2] = 0
-				signal.data[GAS_CH4] = 0 // Outpost 21 edit - Methane
+				signal.data[GAS_CH4] = 0
 		signal.data["sigtype"]="status"
 		radio_connection.post_signal(src, signal, radio_filter = RADIO_ATMOSIA)
 
@@ -108,14 +107,14 @@
 #define ONOFF_TOGGLE(flag) "\[[(output & flag) ? "YES" : "NO"]]"
 /obj/machinery/air_sensor/proc/multitool_act(mob/living/user, obj/item/multitool/tool)
 	var/list/options = list(
-		"Pressure: [ONOFF_TOGGLE(SENSOR_PRESSURE)]" = SENSOR_PRESSURE,
-		"Temperature: [ONOFF_TOGGLE(SENSOR_TEMPERATURE)]" = SENSOR_TEMPERATURE,
-		"Oxygen: [ONOFF_TOGGLE(SENSOR_O2)]" = SENSOR_O2,
-		"Toxins: [ONOFF_TOGGLE(SENSOR_PHORON)]" = SENSOR_PHORON,
-		"Nitrogen: [ONOFF_TOGGLE(SENSOR_N2)]" = SENSOR_N2,
-		"Carbon Dioxide: [ONOFF_TOGGLE(SENSOR_CO2)]" = SENSOR_CO2,
-		"Nitrous Oxide: [ONOFF_TOGGLE(SENSOR_N2O)]" = SENSOR_N2O,
-		"Methane: [ONOFF_TOGGLE(SENSOR_CH4)]" = SENSOR_CH4, // Outpost 21 edit - Methane
+		"Pressure: [ONOFF_TOGGLE(SENSOR_PRESSURE)]" 		= SENSOR_PRESSURE,
+		"Temperature: [ONOFF_TOGGLE(SENSOR_TEMPERATURE)]" 	= SENSOR_TEMPERATURE,
+		"[GASNAME_O2]: [ONOFF_TOGGLE(SENSOR_O2)]" 			= SENSOR_O2,
+		"[GASNAME_PHORON]: [ONOFF_TOGGLE(SENSOR_PHORON)]" 	= SENSOR_PHORON,
+		"[GASNAME_N2]: [ONOFF_TOGGLE(SENSOR_N2)]" 			= SENSOR_N2,
+		"[GASNAME_CO2]: [ONOFF_TOGGLE(SENSOR_CO2)]" 		= SENSOR_CO2,
+		"[GASNAME_N2O]: [ONOFF_TOGGLE(SENSOR_N2O)]" 		= SENSOR_N2O,
+		"[GASNAME_CH4]: [ONOFF_TOGGLE(SENSOR_CH4)]" 		= SENSOR_CH4,
 		"-SAVE TO BUFFER-" = "multitool"
 	)
 
@@ -140,7 +139,7 @@
 				output ^= SENSOR_CO2
 			if(SENSOR_N2O)
 				output ^= SENSOR_N2O
-			if(SENSOR_CH4) // Outpost 21 edit - Methane
+			if(SENSOR_CH4)
 				output ^= SENSOR_CH4
 			if("frequency")
 				var/new_frequency = tgui_input_number(user, "[src] has a frequency of [frequency]. What would you like it to be?", "[src] frequency", frequency, RADIO_HIGH_FREQ, RADIO_LOW_FREQ)
