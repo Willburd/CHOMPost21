@@ -129,6 +129,7 @@
 		"stunrevolver",
 		"temp_gun",
 		"vinstunrevolver",
+		"huntergun", // Outpost 21 edit - Accessible hybrid netgun
 		// "ioncarbine",
 		// "lasershell",
 	)
