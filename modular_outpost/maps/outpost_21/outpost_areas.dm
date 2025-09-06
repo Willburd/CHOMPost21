@@ -179,31 +179,31 @@
 /area/crew_quarters/sleep/Dorm_1
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/sleep/Dorm_2
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/sleep/Dorm_3
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/sleep/Dorm_4
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/sleep/Dorm_5
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/cafeteria
