@@ -186,7 +186,7 @@ Class Procs:
 		air.gas[GAS_CO2] 			= LERP(air.gas[GAS_CO2]				,T.carbon_dioxide	,rate)
 		air.gas[GAS_N2] 			= LERP(air.gas[GAS_N2]				,T.nitrogen			,rate)
 		air.gas[GAS_PHORON] 		= LERP(air.gas[GAS_PHORON]			,T.phoron			,rate)
-		air.gas[GAS_CH4] 		= LERP(air.gas[GAS_CH4]			,T.methane			,rate)
+		air.gas[GAS_CH4] 			= LERP(air.gas[GAS_CH4]				,T.methane			,rate)
 		air.gas[GAS_N2O] 			= LERP(air.gas[GAS_N2O]				,T.nitrous_oxide	,rate)
 		air.update_values()
 // Outpost 21 edit end

@@ -1,6 +1,3 @@
-// Gas
-#define GAS_CH4 "methane"
-
 // Misc
 #define REAGENT_HEMOCYANIN	"Hemocyanin"
 #define REAGENT_ID_HEMOCYANIN "hemocyanin"
