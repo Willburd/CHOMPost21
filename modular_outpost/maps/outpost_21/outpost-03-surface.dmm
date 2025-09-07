@@ -69274,7 +69274,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
-/obj/machinery/bunsen_burner,
+/obj/machinery/bunsen_burner{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
 "tmI" = (
@@ -73071,6 +73073,9 @@
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/bunsen_burner{
+	anchored = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
