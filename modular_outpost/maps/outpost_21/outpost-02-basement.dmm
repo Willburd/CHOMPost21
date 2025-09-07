@@ -7373,7 +7373,8 @@
 	dir = 4
 	},
 /obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
@@ -13286,7 +13287,8 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
 	},
 /turf/simulated/floor/plating,
 /area/medical/voxlab/airgap)
@@ -16163,7 +16165,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
@@ -16268,35 +16271,11 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "aDk" = (
+/obj/machinery/door/airlock/maintenance/common,
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/effect/floor_decal/arrow{
-	dir = 8;
-	pixel_x = 11
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "aDl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21020,6 +20999,7 @@
 	pixel_x = 9;
 	pixel_y = -5
 	},
+/obj/item/toy/plushie/borgplushie/medihound,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgtrain)
 "aLN" = (
@@ -21044,6 +21024,9 @@
 /obj/item/tape_roll,
 /obj/item/tape_roll,
 /obj/structure/table/steel,
+/obj/item/retail_scanner{
+	pixel_x = -5
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
 "aLP" = (
@@ -21085,12 +21068,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
 "aLS" = (
-/obj/structure/disposalpipe/up{
-	dir = 1
-	},
-/obj/structure/railing,
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/obj/structure/disposalpipe/junction/yjunction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "aLT" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 1
@@ -22092,7 +22072,6 @@
 "aND" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -22106,7 +22085,6 @@
 /area/medical/medbay2)
 "aNE" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
 	icon_state = "shutter2_0";
@@ -22115,23 +22093,6 @@
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/medbay2)
-"aNF" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/structure/bed/chair/bay/comfy{
-	dir = 8
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 24
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "aNG" = (
 /obj/machinery/door/airlock/maintenance/medical{
 	req_one_access = null
@@ -22566,8 +22527,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/civ)
 "aOp" = (
@@ -23190,7 +23151,8 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular/open{
 	name = "Medbay Emergency Lockdown";
-	dir = 4
+	dir = 4;
+	id = "medbayquar"
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
@@ -30678,13 +30640,6 @@
 "bcx" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
-	},
-/obj/machinery/disposal/wall/cleaner{
-	dir = 4;
-	pixel_x = -36
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/morgue)
@@ -46890,7 +46845,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
@@ -48528,23 +48484,6 @@
 	dir = 10
 	},
 /area/muriki/processor/gland/airmix)
-"bSE" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Autosleever Lobby";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "bSO" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -50082,7 +50021,11 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/med/east_access)
 "cPX" = (
@@ -50278,12 +50221,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"cWh" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/wall,
-/area/constructionsite/medical)
 "cXn" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
@@ -50792,6 +50729,13 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/processor/hall/waterway_low)
+"dmP" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "k"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "dnA" = (
 /obj/item/stack/rods,
 /turf/simulated/floor/wood/alt,
@@ -50848,7 +50792,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/area/maintenance/spine/civ)
 "dqp" = (
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -51827,7 +51771,16 @@
 /area/mine/explored/muriki/cave/sci/west_access)
 "dRR" = (
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light{
+	dir = 4
+	},
 /obj/structure/railing,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "dSg" = (
@@ -52100,32 +52053,15 @@
 	},
 /area/muriki/processor/hall/waterway_low)
 "ebe" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 4;
+	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 5
+/obj/machinery/light/small{
+	dir = 1
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 6
-	},
-/obj/effect/floor_decal/arrow{
-	dir = 1;
-	pixel_y = -22
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "ebu" = (
 /turf/simulated/floor/plating/turfpack/muriki{
 	methane = 140;
@@ -52217,8 +52153,7 @@
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
-	pixel_y = 24;
-	nightshift_setting = 2
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/med/east_access)
@@ -53564,6 +53499,13 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/scilower)
+"eVg" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "e"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "eVv" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -53719,9 +53661,17 @@
 /area/engineering/atmos/tank_storage)
 "faE" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/machinery/atmospherics/pipe/vent/high_volume{
 	dir = 1
+	},
+/obj/structure/cable/green,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/mine/explored/muriki/cave/med/resleever_exit)
@@ -53872,13 +53822,10 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
 "few" = (
-/obj/machinery/door/airlock/maintenance/medical,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/item/airlock_brace,
-/turf/simulated/floor/tiled/techfloor,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/spine/civ)
 "fex" = (
 /obj/effect/mine/taarainbow,
 /obj/structure/bed/chair/comfy/green{
@@ -54634,10 +54581,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/bunker)
-"fAl" = (
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "fAo" = (
 /obj/effect/floor_decal/corner/red/border,
 /obj/machinery/light,
@@ -55049,6 +54992,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/eng)
+"fJi" = (
+/mob/living/simple_mob/vore/pakkun/snapdragon,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sec)
 "fJq" = (
 /obj/structure/railing{
 	dir = 4
@@ -55222,7 +55169,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/area/maintenance/spine/civ)
 "fPr" = (
 /obj/structure/closet/firecloset/full/atmos,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -55920,6 +55867,12 @@
 /obj/effect/landmark/vermin,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"gmL" = (
+/obj/effect/auto_crayon{
+	icon_state = "o"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "gmM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -56370,24 +56323,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
-"gDT" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 9
-	},
-/obj/structure/table/standard,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "gDV" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -56591,12 +56526,9 @@
 	},
 /area/mine/unexplored/muriki/cave/waste)
 "gLr" = (
-/obj/random/maintenance/misc,
-/obj/machinery/atmospherics/pipe/vent/high_volume{
-	dir = 1
-	},
+/obj/structure/stairs/spawner/south,
 /obj/structure/railing{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/med/resleever_exit)
@@ -56679,9 +56611,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
-	},
-/obj/machinery/light/small{
-	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/med/resleever_exit)
@@ -58177,38 +58106,19 @@
 /area/maintenance/cargo)
 "hOv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
-	},
-/obj/structure/disposalpipe/junction/yjunction{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/effect/floor_decal/arrow{
-	dir = 8;
-	pixel_x = 11
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/mine/explored/muriki/cave/med/resleever_exit)
@@ -58643,26 +58553,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_medical{
-	name = "Autosleever Exit";
-	req_one_access = null
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/effect/floor_decal/arrow{
-	dir = 8;
-	pixel_x = 11
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown";
+	dir = 4;
+	id = "medbayquar"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/area/maintenance/spine/civ)
 "ibB" = (
 /obj/structure/barricade,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -59513,19 +59411,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "iGX" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "iHg" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/light,
@@ -60262,24 +60150,12 @@
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "jeL" = (
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "jfw" = (
 /obj/structure/prop/machine/core/starts_on{
 	name = "Bluespace Inhibitor";
@@ -61728,7 +61604,8 @@
 	dir = 4
 	},
 /obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
@@ -62349,6 +62226,12 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
+"kqp" = (
+/obj/effect/auto_crayon{
+	icon_state = "n"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "kqt" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -62538,11 +62421,11 @@
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "kwo" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central6{
 	pixel_x = 32
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/constructionsite/medical)
@@ -62921,6 +62804,13 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"kKg" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "a"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "kKh" = (
 /obj/random/unidentified_medicine,
 /turf/simulated/floor/plating,
@@ -63432,9 +63322,10 @@
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainbase)
 "lbn" = (
-/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
-/turf/simulated/floor,
-/area/maintenance/eng)
+/obj/structure/disposalpipe/segment,
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "lbA" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -63510,9 +63401,6 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
-	},
-/obj/effect/floor_decal/arrow{
-	dir = 8
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
@@ -63669,6 +63557,13 @@
 "lje" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"ljq" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "m"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "ljs" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
@@ -63851,21 +63746,12 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos/tank_storage)
 "lpb" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 6
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "lpn" = (
 /obj/structure/table,
 /turf/simulated/floor/plating,
@@ -63957,6 +63843,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/supermatter)
+"lrh" = (
+/obj/effect/auto_crayon{
+	icon_state = "s"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "lrs" = (
 /obj/random/unidentified_medicine,
 /obj/structure/micro_tunnel{
@@ -64083,6 +63975,10 @@
 /obj/item/trash/namagashi,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/cargo)
+"ltZ" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/wood/alt/panel,
+/area/maintenance/sec)
 "luC" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
@@ -64765,12 +64661,6 @@
 /obj/random/trash,
 /turf/simulated/floor,
 /area/maintenance/eng)
-"lOQ" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "lOX" = (
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
@@ -65195,6 +65085,9 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "maU" = (
@@ -65392,6 +65285,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"mgG" = (
+/obj/effect/auto_crayon{
+	icon_state = "g"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "mgU" = (
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/south_access)
@@ -65792,6 +65691,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
+"mxV" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "mxY" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced/full,
@@ -66511,9 +66416,15 @@
 	},
 /area/muriki/septic)
 "mTy" = (
-/obj/effect/landmark/step_trap,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/area/maintenance/med)
 "mTE" = (
 /obj/structure/table/standard,
 /obj/item/flashlight/lamp,
@@ -67291,10 +67202,6 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
-"nxd" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "nxn" = (
 /obj/structure/cryofeed,
 /obj/structure/window/reinforced/tinted/frosted,
@@ -67593,6 +67500,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
+"nEG" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "i"
+	},
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor,
+/area/maintenance/eng)
 "nET" = (
 /obj/random/maintenance/morestuff,
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
@@ -67973,9 +67888,6 @@
 	},
 /area/mine/unexplored/muriki/cave/terra)
 "nSs" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
@@ -68378,8 +68290,13 @@
 /area/mine/explored/muriki/cave/cargo)
 "odt" = (
 /obj/structure/disposalpipe/segment,
-/obj/item/trash/saturno,
-/turf/simulated/floor/plating,
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown";
+	dir = 4;
+	id = "medbayquar"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "ody" = (
 /turf/simulated/floor/plating,
@@ -68409,11 +68326,13 @@
 /area/mine/explored/muriki/cave/sci/east_access)
 "oet" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/railing,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Autosleever Exit";
 	dir = 4
 	},
+/obj/structure/railing,
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "oez" = (
@@ -68794,23 +68713,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "orQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/disposalpipe/trunk{
-	dir = 1
+/obj/structure/railing{
+	dir = 4
 	},
-/obj/machinery/disposal/wall/cleaner{
-	dir = 4;
-	pixel_x = -36;
-	name = "resleeving ID deposit"
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "orU" = (
 /obj/machinery/atmospherics/binary/pump/on{
@@ -68944,12 +68850,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
-"ovq" = (
-/obj/structure/disposalpipe/up{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "ovy" = (
 /obj/machinery/light,
 /obj/structure/cable/green{
@@ -70409,10 +70309,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
-"prk" = (
-/obj/structure/disposalpipe/junction,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
 "pst" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -70590,21 +70486,17 @@
 /area/mine/unexplored/muriki/cave/sci)
 "pyE" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/effect/floor_decal/arrow{
-	dir = 8;
-	pixel_x = 11
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
 /area/mine/explored/muriki/cave/med/resleever_exit)
@@ -70975,14 +70867,12 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/north)
 "pJf" = (
-/turf/simulated/floor/tiled/techfloor,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "pJx" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
-"pJK" = (
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "pJQ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -71005,11 +70895,6 @@
 "pKZ" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/end)
-"pLj" = (
-/obj/structure/disposalpipe/segment,
-/obj/item/assembly/mousetrap/armed,
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "pLA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -71405,6 +71290,10 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
+"pXs" = (
+/mob/living/simple_mob/vore/aggressive/giant_snake,
+/turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
 "pXt" = (
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/terra)
@@ -71457,7 +71346,8 @@
 	dir = 4
 	},
 /obj/machinery/door/blast/regular/open{
-	name = "Medbay Emergency Lockdown"
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/bathroom/engrefinery)
@@ -71556,23 +71446,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"qdl" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "qdF" = (
 /obj/structure/cliff/corner{
 	dir = 6
@@ -71970,31 +71843,11 @@
 /area/mine/explored/muriki/river/north)
 "qnD" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 2;
+	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/blue/border,
-/obj/effect/floor_decal/corner/blue/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/arrow{
-	dir = 8;
-	pixel_x = 11
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "qnS" = (
 /turf/simulated/flesh,
 /area/muriki/processor/gland/airmix)
@@ -72288,12 +72141,21 @@
 /obj/structure/railing,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"qyP" = (
+/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/tug)
 "qyW" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/obj/machinery/door/blast/regular/open{
+	name = "Medbay Emergency Lockdown";
+	id = "medbayquar"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
 "qzg" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -72700,6 +72562,12 @@
 /obj/item/reagent_containers/food/drinks/drinkingglass,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/mine/unexplored/muriki/mountainbasenorth)
+"qLj" = (
+/obj/effect/mine/frag{
+	camo_net = 1
+	},
+/turf/simulated/floor/outdoors/grass/heavy/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
 "qLy" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -72969,6 +72837,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/tugstorage)
+"qTP" = (
+/mob/living/simple_mob/vore/reindeer,
+/turf/simulated/floor/plating,
+/area/maintenance/med)
 "qUa" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/polarized{
@@ -73193,9 +73065,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/tank_storage)
 "ran" = (
-/obj/structure/ladder/up,
+/obj/structure/disposalpipe/up{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/area/maintenance/med)
 "rap" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -74714,9 +74588,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "rPj" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
@@ -75560,10 +75431,6 @@
 /obj/item/grenade/shooter/energy/lasertagblue,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
-"smA" = (
-/obj/structure/railing,
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
 "smO" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -75604,6 +75471,12 @@
 "snE" = (
 /turf/simulated/floor/gas_crack/phoron,
 /area/maintenance/spine/eng)
+"snS" = (
+/obj/effect/auto_crayon{
+	icon_state = "r"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "snU" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /obj/structure/disposalpipe/segment{
@@ -78382,7 +78255,8 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/blast/regular/open{
 	name = "Medbay Emergency Lockdown";
-	dir = 4
+	dir = 4;
+	id = "medbayquar"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/tug)
@@ -78644,6 +78518,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/tug)
+"upI" = (
+/obj/effect/auto_crayon{
+	icon_state = "c"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "upO" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/tiled/dark,
@@ -78714,6 +78594,13 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"urV" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "t"
+	},
+/turf/simulated/floor,
+/area/maintenance/eng)
 "usq" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -79327,15 +79214,6 @@
 /obj/item/clothing/suit/caution,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
-"uLM" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
 "uMp" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
@@ -79655,9 +79533,13 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "uZO" = (
-/obj/item/assembly/mousetrap/armed,
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/obj/machinery/door/airlock/maintenance/medical,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/airlock_brace,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/med)
 "uZZ" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/terra)
@@ -80282,6 +80164,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"vsb" = (
+/mob/living/simple_mob/vore/aggressive/rat/event,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/maintenance/eng)
 "vsi" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -81398,7 +81284,7 @@
 	},
 /obj/random/unidentified_medicine,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/area/maintenance/med)
 "vZe" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
@@ -82591,10 +82477,10 @@
 /area/maintenance/spine/waste)
 "wKy" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/railing{
-	dir = 1
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/dark,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "wLy" = (
 /obj/structure/cable/heavyduty{
@@ -82861,8 +82747,8 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "wTO" = (
-/turf/simulated/floor/plating,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/turf/simulated/wall/r_wall,
+/area/maintenance/spine/civ)
 "wUe" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -83395,9 +83281,11 @@
 	},
 /area/mine/explored/muriki/tuggrave)
 "xoJ" = (
-/obj/structure/stairs/spawner/south,
-/turf/simulated/floor/tiled/techfloor,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/obj/structure/disposalpipe/up{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "xpa" = (
 /obj/random/maintenance/misc,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -83639,7 +83527,7 @@
 	},
 /obj/item/airlock_brace,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/med/resleever_exit)
+/area/maintenance/med)
 "xwe" = (
 /obj/structure/fence{
 	dir = 4
@@ -83884,6 +83772,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/tug)
+"xFC" = (
+/obj/item/spellbook/oneuse/buttblast,
+/turf/simulated/floor/outdoors/grass/heavy/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
 "xGc" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/carpet/gaycarpet,
@@ -110576,7 +110468,7 @@ wuC
 bIl
 bIl
 wuC
-rdO
+qyP
 aXN
 aKf
 rdO
@@ -114288,7 +114180,7 @@ wuC
 wuC
 wuC
 wuC
-wuC
+vsb
 wuC
 wuC
 wuC
@@ -114939,7 +114831,7 @@ cRG
 rWz
 lOM
 lOM
-cRG
+upI
 aQt
 wuC
 wuC
@@ -115099,9 +114991,9 @@ cRG
 cRG
 rWz
 cRG
-cRG
-rWz
-cRG
+mxV
+dmP
+gmL
 aQt
 wuC
 wuC
@@ -115258,12 +115150,12 @@ wBL
 cQP
 cRG
 rWz
-lbn
+cRG
 rWz
 sCc
-cRG
-rWz
-cRG
+snS
+nEG
+ljq
 aQt
 wuC
 wuC
@@ -115423,9 +115315,9 @@ rWz
 cRG
 cRG
 cRG
-rWz
-cRG
-rWz
+kKg
+kqp
+eVg
 aQt
 wuC
 wuC
@@ -115585,9 +115477,9 @@ cRG
 cRG
 sCc
 cRG
-rWz
-cQP
-rWz
+urV
+mgG
+lrh
 aQt
 wuC
 wuC
@@ -115748,7 +115640,7 @@ cRG
 rWz
 rWz
 rWz
-cRG
+cQP
 rII
 aQt
 wuC
@@ -117405,7 +117297,7 @@ uUI
 bhW
 bir
 bhW
-arq
+ltZ
 arq
 arL
 arq
@@ -121863,7 +121755,7 @@ bIP
 aXx
 aPF
 aQF
-aQF
+qTP
 iBV
 aQF
 gon
@@ -126758,7 +126650,7 @@ aPc
 aPG
 aPG
 aPG
-cWh
+aPG
 aPG
 aPG
 sXl
@@ -126836,7 +126728,7 @@ glX
 glX
 oFI
 oFI
-oFI
+fJi
 glX
 glX
 glX
@@ -129491,8 +129383,8 @@ nun
 iAI
 nXo
 iAI
-iAI
 qOf
+xaP
 rIu
 bDj
 dek
@@ -129653,14 +129545,14 @@ jvN
 aPF
 aPF
 kFA
-aPF
-uLM
-uCi
+gOc
+ydY
+ydY
 xvw
+ydY
+ydY
 uCi
 uCi
-uCi
-qGq
 nLz
 yjx
 ceK
@@ -129814,13 +129706,13 @@ flC
 vzW
 mLf
 aPF
-aPF
 bDj
 qRl
-uCi
+ydY
+xaP
 vYV
-nxd
-nxd
+iAI
+iAI
 hkj
 gXf
 nLz
@@ -129975,14 +129867,14 @@ flC
 flC
 vzW
 pmN
-eep
 aPF
 yfH
-aXx
-uCi
+aPF
+ydY
+iGX
 ran
-ovq
-mTy
+xaP
+lLp
 uCi
 vbg
 uCi
@@ -129990,8 +129882,8 @@ uCi
 hdj
 uCi
 uCi
-uCi
-uCi
+wTO
+wTO
 gsI
 eet
 nIa
@@ -130138,23 +130030,23 @@ pmN
 pmN
 pmN
 aPF
-aPF
-yfH
-aXx
-uCi
-uCi
-few
-uCi
+mTy
+dbh
+ydY
+ydY
+uZO
+ydY
+ydY
 uCi
 gOQ
-pLj
+odt
 oet
 hOv
 orQ
 gLr
 wTO
-fAl
-fxd
+aqB
+gsI
 lkw
 lkw
 lkw
@@ -130304,8 +130196,8 @@ bDj
 llt
 aPF
 aXx
-bDj
-prk
+aLS
+iAI
 bwB
 vHl
 xad
@@ -130314,7 +130206,7 @@ dRR
 pyE
 faE
 wKy
-xad
+few
 fPb
 cPT
 kgI
@@ -130470,15 +130362,15 @@ qRl
 aPF
 aPF
 qGq
-uZO
-wTO
-smA
+qGq
+uCi
+uCi
 aDk
-qdl
-wKy
-aLS
+uCi
+uCi
+wTO
 dpH
-fxd
+gsI
 fxd
 fxd
 fxd
@@ -130631,16 +130523,16 @@ aPF
 qkk
 aPF
 aXx
-qGq
-qGq
-qGq
-qGq
+rRX
+soK
+soK
+wTO
 ibs
-qGq
-lOQ
-smA
+wTO
+soK
+wTO
 qyW
-qGq
+wTO
 soK
 aKP
 wKe
@@ -130794,14 +130686,14 @@ maK
 iGo
 bLp
 rRX
-qGq
-gDT
-bSE
-qnD
-qGq
-qGq
+soK
+soK
 aKP
-kkL
+qnD
+pJf
+xoJ
+aKP
+baY
 aKP
 axL
 aKP
@@ -130956,13 +130848,13 @@ aPF
 aPF
 fKW
 aPF
-qGq
-aNF
-pJK
-ebe
-pJf
-xoJ
 aKP
+soK
+aKP
+ebe
+lbn
+xoJ
+soK
 baY
 axL
 axL
@@ -131118,13 +131010,13 @@ aXx
 aPF
 vJw
 qkJ
-qGq
-jeL
-iGX
-lpb
-qGq
-qGq
 aKP
+jeL
+pJf
+lpb
+soK
+soK
+soK
 baY
 aKP
 axL
@@ -131284,8 +131176,8 @@ aKP
 aOo
 aKP
 aKP
-aKP
-axL
+soK
+soK
 axL
 baY
 aKP
@@ -131601,9 +131493,9 @@ xty
 xty
 nXt
 sbg
-aXx
-nDM
-nDM
+nXt
+aeV
+aeV
 bqW
 aOr
 ghJ
@@ -131863,7 +131755,7 @@ kkl
 kkl
 cFT
 dHT
-dHT
+pXs
 dHT
 dHT
 dHT
@@ -132677,7 +132569,7 @@ dHT
 dHT
 dHT
 dHT
-dHT
+bws
 mpL
 mpL
 mpL
@@ -132838,8 +132730,8 @@ dHT
 dHT
 dHT
 dHT
-dHT
-dHT
+bws
+bws
 mpL
 mpL
 mpL
@@ -133161,8 +133053,8 @@ kkl
 pmy
 dHT
 dHT
-dHT
-bws
+kkl
+kkl
 bws
 mpL
 mpL
@@ -133324,9 +133216,9 @@ kkl
 kkl
 kkl
 kkl
-dHT
-dHT
-dHT
+kkl
+qLj
+xFC
 mpL
 mpL
 mpL
@@ -133485,11 +133377,11 @@ kkl
 kkl
 kkl
 kkl
-dHT
-dHT
-dHT
+kkl
+nJd
+kkl
 mpL
-dHT
+mpL
 mpL
 mpL
 ihb
@@ -133651,7 +133543,7 @@ dHT
 dHT
 dHT
 dHT
-dHT
+mpL
 mpL
 mpL
 ihb
