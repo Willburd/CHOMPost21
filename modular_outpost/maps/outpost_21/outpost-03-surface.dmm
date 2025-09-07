@@ -8672,6 +8672,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
+"aoU" = (
+/obj/structure/sign/redcross{
+	desc = "The Star of Life, a symbol of Medical Aid.";
+	icon_state = "lifestar";
+	name = "Medbay"
+	},
+/turf/simulated/wall/r_wall,
+/area/hallway/secondary/exit)
 "apf" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -17679,7 +17687,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Medbay Paramedic Entrance";
-	req_access = list(5,66)
+	req_one_access = list(5,66)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -35103,9 +35111,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/structure/sign/periodic{
-	pixel_x = 32
-	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
 "iGH" = (
@@ -51364,11 +51369,13 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
-/obj/item/geiger/wall{
-	dir = 1;
-	pixel_y = -30
-	},
 /obj/machinery/light,
+/obj/structure/sign/nosmoking_1{
+	pixel_x = 32
+	},
+/obj/structure/sign/periodic{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
 "nAY" = (
@@ -52270,6 +52277,10 @@
 	icon_state = "shutter2_0";
 	id = "medbayquar";
 	name = "Medbay Emergency Lockdown"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -53318,10 +53329,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = 30
-	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "ojV" = (
@@ -54107,7 +54114,7 @@
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Medbay Paramedic Entrance";
-	req_access = list(5,66)
+	req_one_access = list(5,66)
 	},
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
@@ -83050,9 +83057,6 @@
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "xqc" = (
-/obj/structure/sign/nosmoking_1{
-	pixel_y = -32
-	},
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -129735,7 +129739,7 @@ eXT
 eXT
 hmw
 eXT
-eXT
+boR
 oju
 eql
 lFi
@@ -130059,7 +130063,7 @@ mFj
 moE
 moE
 rbh
-boR
+flr
 yad
 eql
 lFi
@@ -130221,7 +130225,7 @@ moE
 hKp
 pnw
 xqc
-eXT
+gVl
 yad
 dSR
 lFi
@@ -130707,7 +130711,7 @@ nfw
 hlM
 dZi
 tmk
-bKh
+tho
 yad
 eql
 lFi
@@ -130869,7 +130873,7 @@ moE
 mFB
 kTF
 npG
-flr
+bKh
 yad
 eql
 rfk
@@ -131031,7 +131035,7 @@ bOh
 was
 iGy
 nAW
-gVl
+eXT
 hqd
 gvb
 sVc
@@ -131190,10 +131194,10 @@ pid
 eXT
 qks
 kss
+kss
 bDH
 eXT
-eXT
-eIO
+aoU
 tUi
 lLE
 fqV

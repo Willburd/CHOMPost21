@@ -470,6 +470,20 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
+"abd" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
 "abe" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
@@ -12389,20 +12403,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/wall/r_wall,
 /area/tcomfoyer)
-"fAR" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/patient_wing)
 "fAU" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -19645,7 +19645,6 @@
 	pixel_x = -32
 	},
 /obj/item/radio/intercom/department/medbay{
-	broadcasting = 1;
 	dir = 8;
 	pixel_x = -21
 	},
@@ -28594,10 +28593,13 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/item/radio/intercom{
+/obj/machinery/power/apc{
 	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -32450,7 +32452,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/effect/catwalk_plated/white,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -32461,9 +32462,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
+/obj/effect/catwalk_plated/white,
 /turf/simulated/floor/plating,
 /area/medical/patient_wing)
 "pFx" = (
@@ -36223,10 +36222,6 @@
 /obj/structure/bed/chair/sofa/left/blue{
 	dir = 8
 	},
-/obj/machinery/computer/security/telescreen/bodycamera{
-	pixel_x = -32;
-	pixel_y = -6
-	},
 /obj/effect/landmark/start{
 	name = "Medical Doctor"
 	},
@@ -39397,6 +39392,11 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -43662,12 +43662,12 @@
 	dir = 4;
 	pixel_x = -4
 	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -26
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
+	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_x = -32;
+	pixel_y = -6
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
@@ -45471,6 +45471,10 @@
 	dir = 4
 	},
 /obj/structure/hookah,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "vVM" = (
@@ -89740,7 +89744,7 @@ agt
 pFw
 pGa
 pGa
-pGa
+abd
 sTG
 lJl
 ayq
@@ -89899,7 +89903,7 @@ cMu
 nrI
 cMu
 cMu
-fAR
+cMu
 cMu
 cMu
 nMT
