@@ -7993,7 +7993,7 @@
 /obj/structure/window/basic/full,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "anl" = (
 /obj/structure/mopbucket,
 /obj/item/reagent_containers/glass/bucket,
@@ -9535,7 +9535,7 @@
 "aDA" = (
 /obj/structure/railing,
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "aDD" = (
 /obj/structure/filingcabinet/medical{
 	desc = "A large cabinet with hard copy medical records.";
@@ -10501,7 +10501,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "aVw" = (
 /obj/structure/toilet{
 	dir = 8
@@ -15625,7 +15625,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "czv" = (
 /obj/structure/railing,
 /obj/structure/disposalpipe/down{
@@ -16554,7 +16554,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "cNL" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
@@ -20413,7 +20413,7 @@
 	pixel_y = -6
 	},
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "eco" = (
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Virology Quarantine Port";
@@ -20451,7 +20451,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "ecA" = (
 /turf/simulated/floor/redgrid/off,
 /area/muriki/processor/euth)
@@ -27906,7 +27906,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "gDT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -33313,7 +33313,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "ifL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -34426,7 +34426,7 @@
 	},
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "iwK" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -43713,7 +43713,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "lmk" = (
 /turf/simulated/floor/plating,
 /area/medical/virology)
@@ -46452,7 +46452,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "maY" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -53441,9 +53441,6 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"omv" = (
-/turf/simulated/wall,
-/area/medical/reception)
 "omK" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -64169,7 +64166,7 @@
 /obj/structure/disposalpipe/down,
 /obj/structure/lattice,
 /turf/simulated/open,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "rHn" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -65930,7 +65927,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "sjY" = (
 /obj/machinery/door/blast/regular{
 	id = "secmechblast";
@@ -68833,7 +68830,7 @@
 	},
 /obj/structure/railing,
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "tdX" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 8
@@ -77747,7 +77744,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/plating,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "vOA" = (
 /obj/machinery/vending/coffee{
 	dir = 8;
@@ -80442,7 +80439,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/medical/reception)
+/area/maintenance/medbay_aft)
 "wBU" = (
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -131634,7 +131631,7 @@ tdU
 rHk
 aVr
 cNA
-omv
+eWd
 uhE
 scY
 mOT
@@ -131796,7 +131793,7 @@ aDA
 rHk
 czu
 llQ
-omv
+eWd
 kWA
 uwk
 mms
