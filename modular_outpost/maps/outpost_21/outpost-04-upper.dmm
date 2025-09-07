@@ -22114,7 +22114,6 @@
 /area/chapel/chapel_morgue)
 "kvp" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront/teal,
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/item/toy/plushie/teshari/y_yw,
 /turf/simulated/floor/wood,
@@ -32761,7 +32760,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/gamblingtable,
-/obj/item/toy/plushie/borgplushie/drake/trauma,
+/obj/item/toy/plushie/borgplushie/drake/trauma{
+	name = "Prae Prae"
+	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/medbreak)
 "pKF" = (
@@ -35387,7 +35388,6 @@
 /area/security/range)
 "rer" = (
 /obj/structure/bed/pillowpile/teal,
-/obj/structure/bed/pillowpilefront/teal,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
@@ -48816,11 +48816,10 @@
 /area/rnd/xenobiology/xenoflora)
 "xGQ" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
-/obj/item/bedsheet/pillow/teal,
-/obj/item/bedsheet/pillow/teal,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/item/bedsheet/pillow/teal,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "xGR" = (
