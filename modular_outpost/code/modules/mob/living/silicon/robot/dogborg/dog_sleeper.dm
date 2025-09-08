@@ -11,7 +11,7 @@
 	var/escape_time = 20 SECONDS
 	to_chat(prey, "<span class='notice'>You find the emergency ejection controls, and quickly begin using them!</span>")
 	to_chat(hound, "<span class='danger'>Something is trying to operate your emergency ejection system!</span>")
-	if(!do_after(prey, escape_time, hound))
+	if(!do_after(prey, escape_time, target = hound))
 		to_chat(prey, "<span class='danger'>You were jostled around, losing hold of the ejection controls!</span>")
 		to_chat(hound, "<span class='danger'>You jostle the escapee around, making them lose hold of your ejection controls!</span>")
 		return

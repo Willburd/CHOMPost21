@@ -102,7 +102,7 @@
 		to_chat(M, "Something slimy begins trying to find a way past your protective gear...") // Outpost 21 edit(port) begin - borer fixes
 	to_chat(src, span_warning("You slither up [M] and begin probing at their ear canal..."))
 
-	if(!do_after(src,entering_timer)) // Outpost 21 edit(port) begin - borer fixes
+	if(!do_after(src,entering_timer, target = M)) // Outpost 21 edit(port) begin - borer fixes
 		to_chat(src, span_warning("As [M] moves away, you are dislodged and fall to the ground."))
 		return
 

@@ -495,7 +495,7 @@
 		return 0
 	if(entrance_hatch == null || !entrance_hatch.locked)
 		user.visible_message("<span class='notice'>[user] begins to climb into \the [src].</span>", "<span class='notice'>You begin to climb into \the [src].</span>")
-		if(do_after(user, 20))
+		if(do_after(user, 2 SECONDS, target = src))
 			if(Adjacent(user))
 				enter_interior(user)
 	else

@@ -354,7 +354,7 @@
 			holder.prepping_to_ventcrawl = 1
 			spawn(50)
 				holder.prepping_to_ventcrawl = 0
-			if(!do_after(holder, 45, vent_found, 1, 1))
+			if(!do_after(holder, 4 SECONDS, target = vent_found))
 				return
 
 			// spit out
