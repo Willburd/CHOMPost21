@@ -225,7 +225,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		*/
 
 		usr.visible_message("[usr] begins scanning [target]'s mind.",span_notice("You begin scanning [target]'s mind."))
-		if(do_after(usr,8 SECONDS,target))
+		if(do_after(usr, 8 SECONDS, target))
 			// Outpost 21 edit begin - Emagged sleevemate
 			if(emagged)
 				if(target.mind && (target.mind.name in our_db.backed_up))
@@ -257,7 +257,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		var/mob/living/carbon/human/H = target
 
 		usr.visible_message("[usr] begins scanning [target]'s body.",span_notice("You begin scanning [target]'s body."))
-		if(do_after(usr,8 SECONDS,target))
+		if(do_after(usr, 8 SECONDS, target))
 			var/datum/transhuman/body_record/BR = new()
 			BR.init_from_mob(H, TRUE, H.resleeve_lock, database_key = db_key) // Outpost 21 edit - Maintain resleeve_lock
 			// Outpost 21 edit begin - Haunted sleevemates
@@ -285,7 +285,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 		if(choice == "Continue" && usr.get_active_hand() == src && usr.Adjacent(target))
 
 			usr.visible_message(span_warning("[usr] begins downloading [target]'s mind!"),span_notice("You begin downloading [target]'s mind!"))
-			if(do_after(usr,35 SECONDS,target)) //This is powerful, yo.
+			if(do_after(usr, 35 SECONDS, target)) //This is powerful, yo.
 				if(!stored_mind && target.mind)
 					get_mind(target)
 					to_chat(usr,span_notice("Mind downloaded!"))
@@ -338,7 +338,7 @@ var/global/mob/living/carbon/human/dummy/mannequin/sleevemate_mob
 				return
 
 		usr.visible_message(span_warning("[usr] begins uploading someone's mind into [target]!"),span_notice("You begin uploading a mind into [target]!"))
-		if(do_after(usr,35 SECONDS,target))
+		if(do_after(usr, 35 SECONDS, target))
 			if(!stored_mind)
 				to_chat(usr,span_warning("\The [src] no longer has a stored mind."))
 				return

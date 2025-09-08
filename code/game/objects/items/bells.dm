@@ -115,7 +115,7 @@
 			playsound(src, W.usesound, 50, 1)
 			to_chat(user, span_notice("You [anchored ? "secure" : "unsecure"] \the [src]."))
 		else if(W.has_tool_quality(TOOL_SCREWDRIVER) && isturf(loc))
-			if(do_after(5))
+			if(do_after(user, 5, target = src))
 				if(!src) return
 				to_chat(user, span_notice("You dissasemble the desk bell"))
 				new /obj/item/stack/material/steel(get_turf(src), 1)
