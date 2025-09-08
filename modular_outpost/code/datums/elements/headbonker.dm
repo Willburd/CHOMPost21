@@ -35,6 +35,8 @@
 		return
 	var/obj/structure/railing/R = source
 	var/mob/M = AM
+	if(M.m_intent == I_WALK)
+		return // Safe to walk into
 	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))
 		return // No bonk
 	if(M.mob_size <= MOB_TINY)
@@ -52,6 +54,8 @@
 		return
 	var/obj/structure/table/T = source
 	var/mob/M = AM
+	if(M.m_intent == I_WALK)
+		return // Safe to walk into
 	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))
 		return // No bonk
 	if(M.mob_size <= MOB_TINY)
@@ -72,6 +76,8 @@
 	if(!..(source,AM))
 		return
 	var/mob/M = AM
+	if(M.m_intent == I_WALK)
+		return // Safe to walk into
 	if(M.size_multiplier <= (RESIZE_MAXIMUM - 0.1))
 		return // No bonk
 	// This one is just simple and silly
