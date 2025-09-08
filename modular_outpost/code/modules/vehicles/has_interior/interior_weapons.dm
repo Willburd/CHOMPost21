@@ -204,7 +204,7 @@
 		if(ammo_count > 0)
 			usr.visible_message("[usr] begins to extract a shell.", "You begin to extract a shell.")
 			playsound(src, 'sound/items/electronic_assembly_empty.ogg', 100, 1)
-			if(do_after(usr, 60, src) && ammo_count > 0)
+			if(do_after(usr, 6 SECONDS, target = src) && ammo_count > 0)
 				ammo_count--
 				var/obj/item/thing = new ammo_path(usr.loc)
 				usr.visible_message("[usr] picks up \the [thing].", "You pick up \the [thing].")
@@ -228,8 +228,8 @@
 /obj/machinery/ammo_storage/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I,ammo_path))
 		if(ammo_count >= initial(ammo_count))
-			to_chat( usr, "\The [src] is full!")
-		else if(do_after(usr, 20, src))
+			to_chat( user, "\The [src] is full!")
+		else if(do_after(user, 2 SECONDS, target = src))
 			if(ammo_count < initial(ammo_count))
 				ammo_count++
 				user.visible_message("[user] loads a shell into \the [src].", "You load a shell into \the [src].")
@@ -261,7 +261,7 @@
 		if(loaded)
 			to_chat( user, "A shell is already loaded.")
 			return
-		else if(do_after(usr, 20, src) && !loaded)
+		else if(do_after(user, 2 SECONDS, target = src) && !loaded)
 			loaded = TRUE
 			user.visible_message("[user] loads a shell into \the [src].", "You load a shell into \the [src].")
 			I.Destroy()

@@ -83,7 +83,7 @@
 		var/obj/item/tool/crowbar/brace_jack/C = W
 		to_chat(user, "You begin forcibly removing \the [src] with \the [C].")
 		playsound(user, 'sound/machines/door/airlock_creaking.ogg', 100, 1) // pulling doorjack up!
-		if(do_after(user, rand(150,300), airlock))
+		if(do_after(user, rand(15,30) SECONDS, target = airlock))
 			to_chat(user, "You finish removing \the [src].")
 			unlock_brace(user)
 		return

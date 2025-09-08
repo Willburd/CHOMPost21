@@ -222,7 +222,7 @@
 			if(welder.remove_fuel(0,user) && welder && welder.isOn())
 				to_chat(user, span_notice("You start to melt the ice off \the [src]"))
 				playsound(src, welder.usesound, 50, 1)
-				if(do_after(user, welderTime SECONDS))
+				if(do_after(user, welderTime SECONDS, target = src))
 					to_chat(user, span_notice("You finish melting the ice off \the [src]"))
 					unFreeze()
 					return
@@ -246,7 +246,7 @@
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/W as obj, mob/user as mob, var/time = 15 as num)
 	to_chat(user, span_notice("You start to chip at the ice covering \the [src]"))
-	if(do_after(user, text2num(time SECONDS)))
+	if(do_after(user, time SECONDS, target = src))
 		unFreeze()
 		to_chat(user, span_notice("You finish chipping the ice off \the [src]"))
 
