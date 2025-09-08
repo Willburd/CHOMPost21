@@ -281,10 +281,9 @@ export const SubtabInfo = (props: {
       </Stack.Item>
       {/* Outpost 21 edit begin - Species stats */}
       <Stack.Item>
-        <Box bold>Physiology</Box>
         <Stack>
           <Stack.Item>
-            <Box bold>Physical Limits</Box>
+            <Box bold>Physiology</Box>
             <LabeledList>
               <LabeledList.Item label="Max Health">
                 {species_stats.total_health}
@@ -321,11 +320,29 @@ export const SubtabInfo = (props: {
               <LabeledList.Item label="Darksight">
                 {species_stats.darksight}
               </LabeledList.Item>
+              <LabeledList.Item label="Soft Landing">
+                {species_stats.soft_landing ? 'Yes' : 'No'}
+              </LabeledList.Item>
               <LabeledList.Item label="Lightweight">
                 {species_stats.lightweight ? 'Yes' : 'No'}
               </LabeledList.Item>
+              <LabeledList.Item label="Cliff Climber">
+                {species_stats.can_climb ? 'Yes' : 'No'}
+              </LabeledList.Item>
+              <LabeledList.Item label="Water Breathing">
+                {species_stats.water_breather ? 'Yes' : 'No'}
+              </LabeledList.Item>
               <LabeledList.Item label="Vibration Sensing">
                 {species_stats.has_vibration_sense ? 'Yes' : 'No'}
+              </LabeledList.Item>
+              <LabeledList.Item label="Winged Flight">
+                {species_stats.has_flight ? 'Yes' : 'No'}
+              </LabeledList.Item>
+              <LabeledList.Item label="ZeroG Maneuvering">
+                {species_stats.can_zero_g_move ? 'Yes' : 'No'}
+              </LabeledList.Item>
+              <LabeledList.Item label="Space Flight">
+                {species_stats.can_space_freemove ? 'Yes' : 'No'}
               </LabeledList.Item>
               <LabeledList.Item label="Dispersed Eyes">
                 {species_stats.dispersed_eyes ? 'Yes' : 'No'}
@@ -335,6 +352,9 @@ export const SubtabInfo = (props: {
               </LabeledList.Item>
               <LabeledList.Item label="Metal Eating">
                 {species_stats.eat_minerals ? 'Yes' : 'No'}
+              </LabeledList.Item>
+              <LabeledList.Item label="Hemovore">
+                {species_stats.bloodsucker ? 'Yes' : 'No'}
               </LabeledList.Item>
             </LabeledList>
           </Stack.Item>
@@ -376,6 +396,9 @@ export const SubtabInfo = (props: {
               </LabeledList.Item>
               <LabeledList.Item label="Poison">
                 {species_stats.chem_strength_tox}x
+              </LabeledList.Item>
+              <LabeledList.Item label="Item Slowdown">
+                {species_stats.item_slowdown_mod}x
               </LabeledList.Item>
             </LabeledList>
           </Stack.Item>

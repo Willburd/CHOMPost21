@@ -128,10 +128,18 @@
 		"chem_strength_heal" = species.chem_strength_heal,
 		"siemens_coefficient" = species.siemens_coefficient,
 		"has_vibration_sense" = species.has_vibration_sense > 0,
+		"item_slowdown_mod" = species.item_slowdown_mod,
 		"body_temperature" = max(0,species.body_temperature)-T0C,
 		"hazard_low_pressure" = max(0,species.hazard_low_pressure),
 		"breath_type" = GLOB.gas_data.name[species.breath_type] ? GLOB.gas_data.name[species.breath_type] : "NA",
 		"hazard_high_pressure" = species.hazard_high_pressure == INFINITY ? "INF" : max(0,species.hazard_high_pressure),
+		"soft_landing" = species.soft_landing,
+		"bloodsucker" = species.bloodsucker,
+		"can_space_freemove" = species.can_space_freemove,
+		"can_zero_g_move" = species.can_zero_g_move,
+		"water_breather" = species.water_breather,
+		"can_climb" = species.can_climb,
+		"has_flight" = (/mob/living/proc/flying_toggle in species.inherent_verbs),
 	)
 
 	switch(species.darksight)
