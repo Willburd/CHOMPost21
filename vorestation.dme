@@ -4928,7 +4928,6 @@
 #include "maps\groundbase\groundbase_shuttle_defs.dm"
 #include "maps\groundbase\groundbase_telecomm_defs.dm"
 #include "maps\groundbase\groundbase_wilds.dm"
-#include "maps\offmap_vr\common_offmaps.dm"
 #include "maps\redgate\facility_items.dm"
 #include "maps\redgate\fantasy_items.dm"
 #include "maps\redgate\falls\atoll_decals.dm"
