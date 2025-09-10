@@ -521,6 +521,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/debug_global_variables,
 	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
 	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
+	/client/proc/escape_shuttle_force, // Outpost 21 edit - Moving the escape shuttle safely
 	/client/proc/hide_motion_tracker_feedback
 )
 
