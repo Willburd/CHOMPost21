@@ -5397,6 +5397,7 @@
 #include "modular_outpost\code\game\machinery\computer\requestcomputer.dm"
 #include "modular_outpost\code\game\machinery\doors\airlock.dm"
 #include "modular_outpost\code\game\machinery\doors\door.dm"
+#include "modular_outpost\code\game\mecha\submarine.dm"
 #include "modular_outpost\code\game\objects\effects\haunting_sparkle.dm"
 #include "modular_outpost\code\game\objects\effects\job_start_landmarks.dm"
 #include "modular_outpost\code\game\objects\effects\landmarks.dm"

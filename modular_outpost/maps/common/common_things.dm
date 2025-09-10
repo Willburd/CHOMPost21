@@ -156,8 +156,6 @@
 	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
 
 
-
-
 // Life preserver, art by whooshboom
 /obj/structure/showcase/life_preserver
 	name = "Life Preserver"
@@ -169,20 +167,6 @@
 	name = "Life Preserver"
 	icon_state = "preserver_dirty"
 	desc = "A simple floation device. It's seen some better days."
-
-// MDSE INVINCIBLE, art by whooshboom. Port to a interior capable vehicle...
-/obj/structure/showcase/sub_clean
-	name = "MDSE Invincible"
-	icon = 'modular_outpost/icons/obj/structures_64x64.dmi'
-	icon_state = "sub_clean"
-	pixel_x = -16
-	pixel_y = -16
-	desc = "A submersible vehicle."
-
-/obj/structure/showcase/sub_clean/dirty
-	name = "MDSE Invincible"
-	icon_state = "sub_dirty"
-	desc = "A submersible vehicle. It's seen some better days."
 
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
