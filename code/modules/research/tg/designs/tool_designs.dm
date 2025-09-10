@@ -899,7 +899,7 @@
 	build_path = /obj/item/mail_scanner
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_CARGO
 
@@ -910,7 +910,7 @@
 	build_path = /obj/item/holosign_creator/combifan
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
@@ -934,7 +934,7 @@
 	build_path = /obj/item/floor_painter
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
 
@@ -945,6 +945,6 @@
 	build_path = /obj/item/holosign_creator/medical
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL
