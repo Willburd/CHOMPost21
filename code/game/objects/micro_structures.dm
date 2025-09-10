@@ -242,7 +242,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 	enter_tunnel(user)
 
 /obj/structure/micro_tunnel/proc/can_enter(var/mob/living/user)
-	if(user.mob_size <= MOB_TINY || user.get_effective_size(TRUE) <= micro_accepted_scale)
+	if(user.mob_size <= MOB_TINY || user.get_effective_size(TRUE) <= micro_accepted_scale || (/mob/living/proc/ventcrawl in user.verbs)) // Outpost 21 edit - Ventcrawlers can use mouse holes
 		return TRUE
 
 	if(is_type_in_list(user, non_micro_types))
