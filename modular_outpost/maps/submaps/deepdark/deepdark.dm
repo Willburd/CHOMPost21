@@ -67,6 +67,7 @@
 #include "ghost_caveF.dmm"
 #include "ghost_caveG.dmm"
 #include "ghost_caveH.dmm"
+#include "submarine_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -271,6 +272,14 @@
 	mappath = "modular_outpost/maps/submaps/deepdark/ghost_caveH.dmm"
 	allow_duplicates = TRUE
 	discard_prob = 10
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/submarine_A
+	name = "Submarine A"
+	desc = "Lost submarine."
+	mappath = "modular_outpost/maps/submaps/deepdark/submarine_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 70
 	cost = 10
 
 //////////////////////////////////////////////////////////////
