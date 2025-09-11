@@ -29,6 +29,7 @@
 #include "diona_A.dmm"
 #include "delight_A.dmm"
 #include "delight_B.dmm"
+#include "bear_A.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -138,6 +139,13 @@
 	allow_duplicates = TRUE
 	discard_prob = 30
 	cost = 4
+
+/datum/map_template/outpost21/space/orbitalyard/bear_A
+	name = "Space bear asteroid cluster"
+	desc = "Random asteroid with a bear"
+	mappath = "modular_outpost/maps/submaps/orbitalyard/bear_A.dmm"
+	allow_duplicates = FALSE
+	cost = 15
 
 //////////////////////////////////////////////////////////////
 // Huge structures in the yard (usually one at a time...)
