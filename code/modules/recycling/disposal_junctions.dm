@@ -145,6 +145,10 @@
 		sort_scan = TRUE
 
 /obj/structure/disposalpipe/sortjunction/transfer(obj/structure/disposalholder/H)
+	// outpost 21 edit begin - bodies are internally tagged for a special sorter!
+	var/detectedtag = check_corpse_sorter(H)
+	var/nextdir = nextdir(H.dir, detectedtag)
+	// outpost 21 edit end
 	var/nextdir = nextdir(H.dir, H.destinationTag)
 	H.set_dir(nextdir)
 	var/turf/T = H.nextloc()
@@ -173,7 +177,7 @@
 /obj/structure/disposalpipe/sortjunction/wildcard
 	name = "wildcard sorting junction"
 	desc = "An underfloor disposal pipe which filters all wrapped and tagged items."
-	subtype = 1
+	subtype = DISPOSAL_SORT_WILDCARD // Outpost 21 edit(port) - Use your defines
 
 /obj/structure/disposalpipe/sortjunction/wildcard/divert_check(checkTag)
 	return checkTag != ""
@@ -182,7 +186,7 @@
 /obj/structure/disposalpipe/sortjunction/untagged
 	name = "untagged sorting junction"
 	desc = "An underfloor disposal pipe which filters all untagged items."
-	subtype = 2
+	subtype = DISPOSAL_SORT_UNTAGGED // Outpost 21 edit(port) - Use your defines
 
 /obj/structure/disposalpipe/sortjunction/untagged/divert_check(checkTag)
 	return checkTag == ""

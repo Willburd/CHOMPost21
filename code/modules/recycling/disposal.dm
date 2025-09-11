@@ -135,6 +135,12 @@
 				AM.forceMove(T)
 				AM.pipe_eject(direction)
 				AM.throw_at(target, 100, 1)
+				// Outpost 21 edit begin - Disposals gib things if at a high enough damage
+				if(isliving(AM)) // same ignore as above
+					var/mob/living/L = AM
+					if(L.stat == DEAD && L.getBruteLoss() > 150)
+						L.gib() // SPLOOT out of tubes violently in a shower of gore
+				// Outpost 21 edit end
 
 			H.vent_gas(T)
 			qdel(H)
@@ -150,6 +156,12 @@
 				AM.forceMove(T)
 				AM.pipe_eject(0)
 				AM.throw_at(target, 5, 1)
+				// Outpost 21 edit begin - Disposals gib things if at a high enough damage
+				if(isliving(AM)) // same ignore as above
+					var/mob/living/L = AM
+					if(L.stat == DEAD && L.getBruteLoss() > 150)
+						L.gib() // SPLOOT out of tubes violently in a shower of gore
+				// Outpost 21 edit end
 
 			H.vent_gas(T)	// all gas vent to turf
 			qdel(H)

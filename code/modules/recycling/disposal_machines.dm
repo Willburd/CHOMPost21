@@ -12,6 +12,7 @@
 #define DISPOSALMODE_OFF 0
 #define DISPOSALMODE_CHARGING 1
 #define DISPOSALMODE_CHARGED 2
+#define DISPOSALMODE_INTERLOCKERROR 3 // Outpost 21 edit - Interlock error
 
 /obj/machinery/disposal
 	name = "disposal unit"
@@ -335,7 +336,7 @@
 		add_overlay("[initial(icon_state)]-full")
 
 	// charging and ready light
-	if(mode == DISPOSALMODE_CHARGING)
+	if(mode == DISPOSALMODE_CHARGING || mode == DISPOSALMODE_INTERLOCKERROR) // Outpost 21 edit - disposal failure
 		add_overlay("[initial(icon_state)]-charge")
 	else if(mode == DISPOSALMODE_CHARGED)
 		add_overlay("[initial(icon_state)]-ready")
@@ -347,19 +348,39 @@
 		update_use_power(USE_POWER_OFF)
 		return
 
+	// Outpost 21 edit begin - disposal failure
 	flush_count++
-	if( flush_count >= flush_every_ticks )
-		if( contents.len )
-			if(mode == DISPOSALMODE_CHARGED)
+	if(flush_count >= flush_every_ticks)
+		if(mode == DISPOSALMODE_INTERLOCKERROR)
+			// broken machine interlock, flushes rooms to vacuum!
+			spawn(0)
+				feedback_inc("disposal_auto_flush",1)
+				flush()
+			// Make it more obvious
+			visible_message(span_warning("\The [src] sparks violently!"))
+			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+			sparks.set_up(4, 1, get_turf(src))
+			sparks.start()
+			flush_count = rand(0,10)
+		else
+			if(contents.len && mode == DISPOSALMODE_CHARGED)
 				spawn(0)
 					feedback_inc("disposal_auto_flush",1)
 					flush()
-		flush_count = 0
+			flush_count = 0
+	// Outpost 21 edit end
 
 	if(flush && air_contents.return_pressure() >= SEND_PRESSURE )	// flush can happen even without power
 		flush()
 
-	if(mode != DISPOSALMODE_CHARGING) //if off or ready, no need to charge
+	// Outpost 21 edit begin - disposal failure
+	if(mode == DISPOSALMODE_INTERLOCKERROR)
+		pressurize() // drain the room!
+		if(!flush && prob(10))
+			flush = TRUE
+			update()
+	else if(mode != DISPOSALMODE_CHARGING) //if off or ready, no need to charge
+	// Outpost 21 edit end
 		update_use_power(USE_POWER_IDLE)
 	else if(air_contents.return_pressure() >= SEND_PRESSURE)
 		mode = DISPOSALMODE_CHARGED //if full enough, switch to ready mode
@@ -377,7 +398,12 @@
 
 	var/power_draw = -1
 	if(env && env.temperature > 0)
-		var/transfer_moles = (PUMP_MAX_FLOW_RATE/env.volume)*env.total_moles	//group_multiplier is divided out here
+		// Outpost 21 edit begin - disposal failure
+		var/flowrate = PUMP_MAX_FLOW_RATE
+		if(mode == DISPOSALMODE_INTERLOCKERROR)
+			flowrate *= rand(9,29)
+		var/transfer_moles = (flowrate/env.volume)*env.total_moles	//group_multiplier is divided out here
+		// Outpost 21 edit end
 		power_draw = pump_gas(src, env, air_contents, transfer_moles, active_power_usage)
 
 	if (power_draw > 0)
@@ -402,7 +428,9 @@
 /obj/machinery/disposal/proc/flush_resolve()
 	SEND_SIGNAL(src,COMSIG_DISPOSAL_FLUSH,air_contents)
 	air_contents = new(PRESSURE_TANK_VOLUME)	// new empty gas resv. Disposal packet takes ownership of the original one!
-	if(stat_tracking)
+	// Outpost 21 edit begin - disposal failure
+	if(mode != DISPOSALMODE_INTERLOCKERROR && stat_tracking)
+	// Outpost 21 edit end
 		GLOB.disposals_flush_shift_roundstat++
 	flushing = FALSE
 
@@ -487,6 +515,7 @@
 #undef DISPOSALMODE_OFF
 #undef DISPOSALMODE_CHARGING
 #undef DISPOSALMODE_CHARGED
+#undef DISPOSALMODE_INTERLOCKERROR // Outpost 21 edit - Interlock error
 #undef SEND_PRESSURE
 #undef PRESSURE_TANK_VOLUME
 #undef PUMP_MAX_FLOW_RATE
