@@ -80,7 +80,13 @@
 		"tram_crash_eng",
 		"tram_crash_med",
 		"tram_crash_civ",
-		"tram_crash_red"
+		"tram_crash_red",
+		"tram_crash_civ_mean",
+		"tram_crash_civ_ultramean",
+		"tram_crash_eng_mean",
+		"tram_crash_eng_ultramean",
+		"tram_crash_waste_mean",
+		"tram_crash_terraformer_mean",
 	)
 	crash_message = "Tram system derailment detected."
 
@@ -176,6 +182,72 @@
 	base_turf = /turf/simulated/floor/flesh
 
 /obj/effect/shuttle_landmark/premade/tram/crash_red/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_mean
+	name = "Tram Crash - Civ Mean"
+	landmark_tag = "tram_crash_civ_mean"
+	base_area = /area/muriki/tramstation/civ
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_mean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_ultramean
+	name = "Tram Crash - Civ Ultra Mean"
+	landmark_tag = "tram_crash_civ_ultramean"
+	base_area = /area/muriki/tramstation/civ
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_ultramean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_mean
+	name = "Tram Crash - Eng Mean"
+	landmark_tag = "tram_crash_eng_mean"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_mean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_ultramean
+	name = "Tram Crash - Eng Ultra Mean"
+	landmark_tag = "tram_crash_eng_ultramean"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_ultramean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_waste_mean
+	name = "Tram Crash - Waste Mean"
+	landmark_tag = "tram_crash_waste_mean"
+	base_area = /area/muriki/grounds/tramlinewest
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_waste_mean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean
+	name = "Tram Crash - Terraformer Mean"
+	landmark_tag = "tram_crash_terraformer_mean"
+	base_area = /area/muriki/grounds/terraform
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
 		return FALSE
 	return TRUE

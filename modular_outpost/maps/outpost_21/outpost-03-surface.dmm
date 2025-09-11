@@ -8680,6 +8680,26 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/secondary/exit)
+"aoV" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_waste_mean,
+/turf/simulated/floor/maglev/turfpack/muriki,
+/area/muriki/grounds/tramlinewest)
+"aoW" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_mean,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/tramlineeast)
+"aoX" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_mean,
+/turf/simulated/open,
+/area/muriki/tramstation/civ)
+"aoY" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_ultramean,
+/turf/simulated/open,
+/area/muriki/tramstation/cargeng)
+"aoZ" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/terraform)
 "apf" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -80605,6 +80625,7 @@
 /obj/structure/sign/painting/public{
 	pixel_x = -32
 	},
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_ultramean,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
 "wDP" = (
@@ -90871,7 +90892,7 @@ fqQ
 fqQ
 fqQ
 fqQ
-fqQ
+aoZ
 fqQ
 tMf
 cYG
@@ -93311,7 +93332,7 @@ dOB
 ibV
 ibV
 ibV
-ibV
+aoV
 ibV
 ibV
 ibV
@@ -107236,7 +107257,7 @@ ahV
 ahV
 ahV
 ahV
-ahV
+aoY
 ahV
 ahV
 ahV
@@ -110156,7 +110177,7 @@ aje
 aje
 iDi
 sHp
-iDi
+aoW
 iDi
 aje
 xGZ
@@ -130568,7 +130589,7 @@ rhE
 rhE
 rhE
 rhE
-rhE
+aoX
 rhE
 cBd
 iER
