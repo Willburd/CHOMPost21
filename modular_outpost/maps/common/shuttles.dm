@@ -234,7 +234,7 @@
 	name = "Tram Crash - Waste Mean"
 	landmark_tag = "tram_crash_waste_mean"
 	base_area = /area/muriki/grounds/tramlinewest
-	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/tram/crash_waste_mean/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -245,7 +245,7 @@
 	name = "Tram Crash - Terraformer Mean"
 	landmark_tag = "tram_crash_terraformer_mean"
 	base_area = /area/muriki/grounds/terraform
-	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 
 /obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)

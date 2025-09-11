@@ -32,7 +32,22 @@
 // Actually crash the shuttle
 /datum/shuttle/proc/do_crash(var/obj/effect/shuttle_landmark/intended_destination)
 	// Choose the target
-	var/obj/effect/shuttle_landmark/target = pick(crash_locations)
+	// Outpost 21 edit begin - Ensure we don't clobber ourselves when we crash
+	var/list/discard_list = crash_locations.Copy()
+	var/obj/effect/shuttle_landmark/target = pick(discard_list)
+	while(discard_list.len)
+		var/turf/T = get_turf(target)
+		var/turf/ourT = get_turf(current_location)
+		// Found one!
+		if(T.z != ourT.z || T.Distance(ourT) > 20)
+			break
+		// Remove offending one and try again
+		discard_list -= target
+		if(discard_list.len <= 0) // Giveup
+			target = pick(crash_locations)
+			break
+		target = pick(discard_list)
+	// Outpost 21 edit end
 	ASSERT(istype(target))
 
 	// Blow up the target area?
