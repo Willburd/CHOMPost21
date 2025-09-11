@@ -29,7 +29,7 @@
 #include "diona_A.dmm"
 #include "delight_A.dmm"
 #include "delight_B.dmm"
-#include "bear_A"
+#include "bear_A.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
