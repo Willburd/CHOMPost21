@@ -149,7 +149,6 @@
 	var/detectedtag = check_corpse_sorter(H)
 	var/nextdir = nextdir(H.dir, detectedtag)
 	// outpost 21 edit end
-	var/nextdir = nextdir(H.dir, H.destinationTag)
 	H.set_dir(nextdir)
 	var/turf/T = H.nextloc()
 	var/obj/structure/disposalpipe/P = H.findpipe(T)
