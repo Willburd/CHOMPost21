@@ -257,3 +257,26 @@
 	visible_message("\The [src.name] detonates!")
 	spawn(0)
 		qdel(src)
+
+
+
+/obj/item/mine/methane
+	name = "methane mine"
+	desc = "A small explosive mine with a fire symbol on the side."
+	minetype = /obj/effect/mine/methane
+
+/obj/effect/mine/methane
+	mineitemtype = /obj/item/mine/methane
+
+/obj/effect/mine/methane/explode(var/mob/living/M)
+	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
+		return
+	triggered = TRUE
+	for (var/turf/simulated/floor/target in range(1,src))
+		if(!target.blocks_air)
+			target.assume_gas(GAS_CH4, 30)
+			target.hotspot_expose(1000, CELL_VOLUME)
+	visible_message("\The [src.name] detonates!")
+	SSmotiontracker.ping(src,100)
+	spawn(0)
+		qdel(src)
