@@ -646,6 +646,9 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		channels[ch_name] = 0
 	..()
 
+/obj/item/radio/start_off
+	listening = FALSE
+
 ///////////////////////////////
 //////////Borg Radios//////////
 ///////////////////////////////

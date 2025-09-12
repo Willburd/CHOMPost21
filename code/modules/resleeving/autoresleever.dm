@@ -20,7 +20,7 @@
 
 /obj/machinery/transhuman/autoresleever/update_icon()
 	. = ..()
-	if(stat)
+	if(stat & (BROKEN | MAINT | EMPED))
 		icon_state = "autoresleever-o"
 	else
 		icon_state = "autoresleever"
@@ -70,9 +70,9 @@
 	else
 		return
 
-/obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost,var/idscan = FALSE)
-	if(stat)
-		to_chat(ghost, span_warning("Auto-resleever has recieved your ID. Unfortunately it is not functional..."))
+/obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost)
+	if(stat) // Outpost 21 edit - We prefer our autosleever to not work in a powerout, was:  & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
+		to_chat(ghost, span_warning("This machine is not functioning..."))
 		return
 	if(!isobserver(ghost))
 		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.</span>") // Outpost 21 edit - actually inform players
