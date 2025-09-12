@@ -8672,6 +8672,34 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
+"aoU" = (
+/obj/structure/sign/redcross{
+	desc = "The Star of Life, a symbol of Medical Aid.";
+	icon_state = "lifestar";
+	name = "Medbay"
+	},
+/turf/simulated/wall/r_wall,
+/area/hallway/secondary/exit)
+"aoV" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_waste_mean,
+/turf/simulated/floor/maglev/turfpack/muriki,
+/area/muriki/grounds/tramlinewest)
+"aoW" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_mean,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/tramlineeast)
+"aoX" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_mean,
+/turf/simulated/open,
+/area/muriki/tramstation/civ)
+"aoY" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_ultramean,
+/turf/simulated/open,
+/area/muriki/tramstation/cargeng)
+"aoZ" = (
+/obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/terraform)
 "apf" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -17679,7 +17707,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Medbay Paramedic Entrance";
-	req_access = list(5,66)
+	req_one_access = list(5,66)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -35103,9 +35131,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/structure/sign/periodic{
-	pixel_x = 32
-	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
 "iGH" = (
@@ -51364,11 +51389,13 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
-/obj/item/geiger/wall{
-	dir = 1;
-	pixel_y = -30
-	},
 /obj/machinery/light,
+/obj/structure/sign/nosmoking_1{
+	pixel_x = 32
+	},
+/obj/structure/sign/periodic{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
 "nAY" = (
@@ -52270,6 +52297,10 @@
 	icon_state = "shutter2_0";
 	id = "medbayquar";
 	name = "Medbay Emergency Lockdown"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -53318,10 +53349,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = 30
-	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "ojV" = (
@@ -54107,7 +54134,7 @@
 /obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Medbay Paramedic Entrance";
-	req_access = list(5,66)
+	req_one_access = list(5,66)
 	},
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 2;
@@ -69267,7 +69294,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
-/obj/machinery/bunsen_burner,
+/obj/machinery/bunsen_burner{
+	anchored = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
 "tmI" = (
@@ -73064,6 +73093,9 @@
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/bunsen_burner{
+	anchored = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
@@ -80593,6 +80625,7 @@
 /obj/structure/sign/painting/public{
 	pixel_x = -32
 	},
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_ultramean,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
 "wDP" = (
@@ -83050,9 +83083,6 @@
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "xqc" = (
-/obj/structure/sign/nosmoking_1{
-	pixel_y = -32
-	},
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -90862,7 +90892,7 @@ fqQ
 fqQ
 fqQ
 fqQ
-fqQ
+aoZ
 fqQ
 tMf
 cYG
@@ -93302,7 +93332,7 @@ dOB
 ibV
 ibV
 ibV
-ibV
+aoV
 ibV
 ibV
 ibV
@@ -107227,7 +107257,7 @@ ahV
 ahV
 ahV
 ahV
-ahV
+aoY
 ahV
 ahV
 ahV
@@ -110147,7 +110177,7 @@ aje
 aje
 iDi
 sHp
-iDi
+aoW
 iDi
 aje
 xGZ
@@ -129735,7 +129765,7 @@ eXT
 eXT
 hmw
 eXT
-eXT
+boR
 oju
 eql
 lFi
@@ -130059,7 +130089,7 @@ mFj
 moE
 moE
 rbh
-boR
+flr
 yad
 eql
 lFi
@@ -130221,7 +130251,7 @@ moE
 hKp
 pnw
 xqc
-eXT
+gVl
 yad
 dSR
 lFi
@@ -130559,7 +130589,7 @@ rhE
 rhE
 rhE
 rhE
-rhE
+aoX
 rhE
 cBd
 iER
@@ -130707,7 +130737,7 @@ nfw
 hlM
 dZi
 tmk
-bKh
+tho
 yad
 eql
 lFi
@@ -130869,7 +130899,7 @@ moE
 mFB
 kTF
 npG
-flr
+bKh
 yad
 eql
 rfk
@@ -131031,7 +131061,7 @@ bOh
 was
 iGy
 nAW
-gVl
+eXT
 hqd
 gvb
 sVc
@@ -131190,10 +131220,10 @@ pid
 eXT
 qks
 kss
+kss
 bDH
 eXT
-eXT
-eIO
+aoU
 tUi
 lLE
 fqV

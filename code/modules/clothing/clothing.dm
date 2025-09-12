@@ -878,7 +878,7 @@
 		return
 	if(!istype(macro))
 		to_chat(micro, span_notice("You start to climb out of [src]!"))
-		if(do_after(micro, 50, src))
+		if(do_after(micro, 5 SECONDS, target = src))
 			to_chat(micro, span_notice("You climb out of [src]!"))
 			micro.forceMove(loc)
 		return
@@ -893,7 +893,7 @@
 
 	to_chat(micro, span_notice("[escape_message_micro]"))
 	to_chat(macro, span_danger("[escape_message_macro]"))
-	if(!do_after(micro, escape_time, macro))
+	if(!do_after(micro, escape_time, target = macro))
 		to_chat(micro, span_danger("You're pinned underfoot!"))
 		to_chat(macro, span_danger("You pin the escapee underfoot!"))
 		return
@@ -1061,7 +1061,7 @@
 	var/image/standing = ..()
 	if(taurized) //Special snowflake var on suits
 		standing.pixel_x = -16
-		standing.layer = BODY_LAYER + 18 // 18 is above tail layer, so will not be covered by taurbody. TAIL_UPPER_LAYER +1 //CHOMPEDIT - CHECK human/update_icons.dm BEFORE YOU CHANGE THIS.
+		standing.layer = BODY_LAYER + TAIL_UPPER_LAYER + 1
 	return standing
 
 /obj/item/clothing/suit/apply_accessories(var/image/standing)

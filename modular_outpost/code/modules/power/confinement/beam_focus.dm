@@ -119,7 +119,7 @@
 		playsound(src, WT.usesound, 50, 1)
 		if(health == max_hp)
 			to_chat(user, span_notice("\The [src] does not need any repairs."))
-		else if(do_after(user,25 * W.toolspeed))
+		else if(do_after( user, (2 SECONDS) * W.toolspeed, target = src))
 			if(!src || !user || !WT.remove_fuel(5, user)) return
 			to_chat(user, span_notice("You repair \the [src]."))
 			health = max_hp

@@ -478,7 +478,7 @@
 	var/turf/T = get_turf(src.loc)
 	if(T)
 		T.hotspot_expose(700,125)
-		explosion(T, 0, 0, 1, rand(1,2))
+		explosion(T, 0, 1, 2, rand(1,2)) // Outpost 21 edit - Buffed slightly
 	return
 
 /obj/item/pda/Destroy()

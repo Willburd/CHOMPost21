@@ -157,7 +157,10 @@
 				prob(10);/obj/effect/mine/lube, // Outpost 21 addition
 				prob(1);/obj/effect/mine/confetti, // Outpost 21 addition
 				prob(1);/obj/effect/mine/taarainbow, // Outpost 21 addition - CANDY
-				prob(1);/obj/effect/mine/dnascramble) // Outpost 21 addition - Genetics works again lmao
+				prob(1);/obj/effect/mine/dnascramble, // Outpost 21 addition - Genetics works again lmao
+				prob(1);/obj/item/mine/n2o, // Outpost 21 addition
+				prob(1);/obj/item/mine/phoron, // Outpost 21 addition
+				prob(1);/obj/item/mine/methane) // Outpost 21 addition - Methane mine
 
 /obj/random/humanoidremains
 	name = "Random Humanoid Remains"

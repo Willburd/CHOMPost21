@@ -41,7 +41,7 @@
 			"You hear the slow creaking of a spring."
 			)
 
-		if (do_after(user, 60))
+		if (do_after(user, 6 SECONDS, target = src))
 			user.visible_message(
 				span_danger("[user] has deployed \the [src]."),
 				span_danger("You have deployed \the [src]!"),
@@ -61,7 +61,7 @@
 			span_notice("[user] begins freeing [victim] from \the [src]."),
 			span_notice("You carefully begin to free [victim] from \the [src]."),
 			)
-		if(do_after(user, 60))
+		if(do_after(user, 6 SECONDS, target = src))
 			user.visible_message(span_notice("[victim] has been freed from \the [src] by [user]."))
 			for(var/A in buckled_mobs)
 				unbuckle_mob(A)
@@ -74,7 +74,7 @@
 			)
 		playsound(src, 'sound/machines/click.ogg', 50, 1)
 
-		if(do_after(user, 60))
+		if(do_after(user, 6 SECONDS, target = src))
 			user.visible_message(
 				span_danger("[user] has disarmed \the [src]."),
 				span_notice("You have disarmed \the [src]!")
@@ -208,7 +208,7 @@
 			)
 		playsound(src, 'sound/machines/click.ogg', 50, 1)
 
-		if(do_after(user, health))
+		if(do_after(user, health, target = src))
 			user.visible_message(
 				span_danger("[user] has collected \the [src]."),
 				span_notice("You have collected \the [src]!")
@@ -227,7 +227,7 @@
 			"You hear the rustling of [material.name]."
 			)
 
-		if (do_after(user, 60))
+		if (do_after(user, 6 SECONDS, target = src))
 			user.visible_message(
 				span_danger("[user] has deployed \the [src]."),
 				span_danger("You have deployed \the [src]!"),

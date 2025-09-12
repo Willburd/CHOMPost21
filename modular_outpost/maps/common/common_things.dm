@@ -156,7 +156,17 @@
 	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
 
 
+// Life preserver, art by whooshboom
+/obj/structure/showcase/life_preserver
+	name = "Life Preserver"
+	icon = 'modular_outpost/icons/obj/structures_32x32.dmi'
+	icon_state = "preserver_clean"
+	desc = "A simple floation device."
 
+/obj/structure/showcase/life_preserver/dirty
+	name = "Life Preserver"
+	icon_state = "preserver_dirty"
+	desc = "A simple floation device. It's seen some better days."
 
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
@@ -196,7 +206,7 @@
 			if(welder.remove_fuel(0,user) && welder && welder.isOn())
 				to_chat(user, span_notice("You start to melt the ice off \the [src]"))
 				playsound(src, welder.usesound, 50, 1)
-				if(do_after(user, welderTime SECONDS))
+				if(do_after(user, welderTime SECONDS, target = src))
 					to_chat(user, span_notice("You finish melting the ice off \the [src]"))
 					unFreeze()
 					return
@@ -220,7 +230,7 @@
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/W as obj, mob/user as mob, var/time = 15 as num)
 	to_chat(user, span_notice("You start to chip at the ice covering \the [src]"))
-	if(do_after(user, text2num(time SECONDS)))
+	if(do_after(user, time SECONDS, target = src))
 		unFreeze()
 		to_chat(user, span_notice("You finish chipping the ice off \the [src]"))
 

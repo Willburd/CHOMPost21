@@ -133,7 +133,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 /mob/living/simple_mob/animal/statue/attackby(var/obj/item/O as obj, var/mob/user as mob) //banishing the statue is a risky job
 	if(istype(O, /obj/item/nullrod))
 		visible_message("<span class='warning'>[user] tries to banish [src] with [O]!</span>")
-		if(do_after(user, 15, src))
+		if(do_after(user, 2 SECONDS, target = src))
 			if(banishable)
 				visible_message("<span class='warning'>[src] crumbles into dust!</span>")
 				SShaunting.reset_world_haunt()

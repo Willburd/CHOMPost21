@@ -111,6 +111,7 @@
 /mob/living/simple_mob/animal/giant_spider/tunneler/space/Process_Spacemove(var/check_drift = 0)
 	return TRUE
 
+/* Outpost 21 edit - Disable this ghostpod type
 /obj/structure/ghost_pod/manual/survivor/spidership
 	name = "Damaged Emergency Cryopod"
 	desc = "A damaged cryopod smeared with blood. An badly injured body seems frozen in time within."
@@ -124,7 +125,7 @@
 	suffer_toxloss = TRUE
 	tox_severity = 5
 	//Damage is minimum 3 brute, 1 burn, 1 toxloss, maximum 60 brute, 15 burn, 5 toxloss - near crit, but still able to walk.
-
+*/
 
 
 /obj/item/taperecorder/tourist

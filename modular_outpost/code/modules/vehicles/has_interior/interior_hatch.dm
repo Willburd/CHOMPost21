@@ -42,7 +42,7 @@
 
 	// successful, begin exit!
 	user.visible_message( span_notice("[user] starts leaving the [interior_controller]."), span_notice("You start leaving the [interior_controller]."))
-	if(do_after(user, 20))
+	if(do_after(user, 2 SECONDS, target = src))
 		if(Adjacent(user))
 			interior_controller.exit_interior(user)
 

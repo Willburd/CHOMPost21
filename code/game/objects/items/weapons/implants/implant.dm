@@ -295,6 +295,12 @@ Implant Specifics:<BR>"}
 		log_game("Explosive implant triggered in [T] ([T.key]).")
 
 		if(ishuman(imp_in))
+			// Outpost 21 edit begin - Implants in head destroy brains
+			if(istype(part,/obj/item/organ/external/head))
+				var/mob/living/carbon/human/H = T
+				if(H && H.organs_by_name[O_BRAIN])
+					qdel(H.organs_by_name[O_BRAIN])
+			// Outpost 21 edit end
 			if (elevel == "Localized Limb")
 				if(part) //For some reason, small_boom() didn't work. So have this bit of working copypaste.
 					imp_in.visible_message(span_warning("Something beeps inside [imp_in][part ? "'s [part.name]" : ""]!"))
