@@ -544,7 +544,7 @@
 		return FALSE
 	if(target in passthrough)
 		return FALSE
-	if(target.density)		//This thing blocks projectiles, hit it regardless of layer/mob stuns/etc.
+	if(target.density && !istype(target,/obj/item/energy_net))		//This thing blocks projectiles, hit it regardless of layer/mob stuns/etc. Outpost 21 edit - Ignore nets
 		return TRUE
 	if(!isliving(target))
 		if(target.layer < PROJECTILE_HIT_THRESHOLD_LAYER)
