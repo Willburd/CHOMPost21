@@ -483,7 +483,7 @@
 		if(M.client)
 			M.client.perspective = EYE_PERSPECTIVE
 			M.client.eye = src
-		M.loc = src
+		M.forceMove(src) // Outpost 21 edit(port) - More loc to forceMove
 		update_use_power(USE_POWER_ACTIVE)
 		occupant = M
 		occupant.cozyloop.start() // CHOMPStation Add: Cozy Music
@@ -498,7 +498,7 @@
 		occupant.client.eye = occupant.client.mob
 		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.Stasis(0)
-	occupant.loc = src.loc
+	occupant.forceMove(get_turf(src)) // Outpost 21 edit(port) - More loc to forceMove
 	occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
 	occupant = null
 	for(var/atom/movable/A in src) // In case an object was dropped inside or something
