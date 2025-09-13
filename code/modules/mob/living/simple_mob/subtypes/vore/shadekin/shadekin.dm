@@ -219,7 +219,7 @@
 	add_overlay(eye_icon_state)
 
 //They phase back to the dark when killed
-/mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
+/mob/living/simple_mob/shadekin/death(gibbed, deathmessage) // Outpost 21 edit - Remove shadekin death message, was:  = "phases to somewhere far away!")
 	var/special_handling = TRUE //varswitch for downstream
 	if(!special_handling)
 		cut_overlays()

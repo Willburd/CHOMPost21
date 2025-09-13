@@ -58,7 +58,7 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
-	death_message = "phases to somewhere far away!"
+	// death_message = "phases to somewhere far away!" Outpost 21 edit - No darkspace
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -105,7 +105,7 @@
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
-	var/special_handling = TRUE //varswitch for downstream //CHOMPEdit - Enable.
+	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
