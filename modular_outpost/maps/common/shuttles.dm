@@ -75,6 +75,7 @@
 	)
 
 	allow_short_crashes = TRUE
+	crash_message = "Tram system derailment detected."
 	crash_locations = list(
 		"tram_crash_waste",
 		"tram_crash_eng",
@@ -88,7 +89,6 @@
 		"tram_crash_waste_mean",
 		"tram_crash_terraformer_mean",
 	)
-	crash_message = "Tram system derailment detected."
 
 
 /datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
@@ -439,7 +439,9 @@
 	shuttle_area = list(/area/shuttle/medical)
 	fuel_consumption = 1 //much less, due to being teeny
 	ceiling_type = /turf/simulated/shuttle/floor/white/turfpack/muriki
+
 	allow_short_crashes = TRUE
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 	crash_locations = list(
 		"crash_cargoyard",
 		"crash_north",
@@ -502,7 +504,9 @@
 	shuttle_area = list(/area/shuttle/security)
 	fuel_consumption = 1 //much less, due to being teeny
 	ceiling_type = /turf/simulated/shuttle/floor/white/turfpack/muriki
+
 	allow_short_crashes = TRUE
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 	crash_locations = list(
 		"crash_cargoyard",
 		"crash_north",
@@ -579,7 +583,9 @@
 	shuttle_area = list(/area/shuttle/trawler)
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 	fuel_consumption = 2 // chonky
+
 	allow_short_crashes = TRUE
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 	crash_locations = list(
 		"crash_cargoyard",
 		"crash_north",
@@ -661,6 +667,8 @@
 		"beam_sat"
 	)
 
+	allow_short_crashes = TRUE
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 	crash_locations = list(
 		"crash_cargoyard",
 		"crash_north",
