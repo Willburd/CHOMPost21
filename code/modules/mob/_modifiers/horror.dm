@@ -16,8 +16,8 @@ var/static/list/redspace_areas = list (
 	// Outpost 21 edit begin - Curses upon ye
 	/area/specialty/redspace,
 	/area/specialty/thedarkplace,
+	// /area/survivalpod/redspace // Redspace shelters effectively pull a bit of redspace into realspace, so
 	// Outpost 21 edit end
-	/area/survivalpod/redspace // Redspace shelters effectively pull a bit of redspace into realspace, so
 )
 
 /datum/modifier/redspace_drain

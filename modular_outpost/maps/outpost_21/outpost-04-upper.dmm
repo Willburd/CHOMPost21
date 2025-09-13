@@ -25098,13 +25098,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
-"lWB" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
-/turf/simulated/wall,
-/area/muriki/bathroom/medupper)
 "lWU" = (
 /obj/effect/landmark/holiday_event_spawn,
 /obj/effect/floor_decal/corner/blue/full{
@@ -90071,7 +90064,7 @@ gNx
 gNx
 gNx
 eFK
-lWB
+eFK
 pIH
 eFK
 qaG
