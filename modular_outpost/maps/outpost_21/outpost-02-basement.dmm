@@ -22093,6 +22093,14 @@
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/medbay2)
+"aNF" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/structure/easel,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
 "aNG" = (
 /obj/machinery/door/airlock/maintenance/medical{
 	req_one_access = null
@@ -27266,11 +27274,6 @@
 "aWA" = (
 /obj/machinery/chemical_dispenser/bar_soft/full,
 /obj/structure/table/standard,
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Common Channel";
-	pixel_x = 21
-	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "aWB" = (
@@ -27756,6 +27759,11 @@
 	},
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Common Channel";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -79348,9 +79356,6 @@
 /obj/item/reagent_containers/food/condiment/small/sugar,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/item/material/ashtray/plastic,
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = -32
-	},
 /obj/random/mug,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -137523,7 +137528,7 @@ aZD
 aZD
 bbg
 uZr
-bcs
+aNF
 aYT
 aPQ
 bId
