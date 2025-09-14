@@ -139,10 +139,10 @@
 	cached_dir = dir
 
 	if(!istype(intarea))
-		log_debug("Interior vehicle [name] was missing a defined area! Could not init...")
+		log_world("## DEBUG: Interior vehicle [name] was missing a defined area! Could not init...")
 	else
 		// load all interior parts as components of vehicle!
-		log_debug("Interior vehicle [name] setting up...")
+		log_world("## DEBUG: Interior vehicle [name] setting up...")
 
 /obj/vehicle/has_interior/controller/ex_act(severity)
 	// noise!

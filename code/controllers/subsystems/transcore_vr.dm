@@ -280,7 +280,7 @@ SUBSYSTEM_DEF(transcore)
 /datum/transcore_db/proc/removed_mind(var/datum/transhuman/mind_record/MR)
 	ASSERT(MR)
 	backed_up.Remove("[MR.mindname]")
-	log_debug("Removed [MR.mindname] from transcore DB.")
+	log_world("## DEBUG: Removed [MR.mindname] from transcore DB.")
 // Outpost 21 edit end
 
 // Remove a mind_record from the backup-checking list.  Keeps track of it in has_left // Why do we do that? ~Leshana

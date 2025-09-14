@@ -49,7 +49,7 @@
 			qdel(input_obj)
 
 	if(!input_plate)
-		log_misc("a [src] didn't find an input plate.")
+		log_world("## MISC a [src] didn't find an input plate.")
 
 /obj/machinery/gibber/Destroy()
 	occupant = null

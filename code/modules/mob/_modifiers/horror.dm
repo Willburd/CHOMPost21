@@ -71,7 +71,7 @@ var/static/list/redspace_areas = list (
 	// Outpost 21 edit begin - Badbody controller
 	var/turf/T = get_turf(unfortunate_soul)
 	unfortunate_soul.AddComponent(/datum/component/badbody)
-	log_debug("successfully spawned badbody [unfortunate_soul.real_name] at [T.x] [T.y] [T.z].")
+	log_world("## DEBUG: successfully spawned badbody [unfortunate_soul.real_name] at [T.x] [T.y] [T.z].")
 	// Outpost 21 edit end
 	return //Specialty stuff to do to a corpse other than teleport them.
 

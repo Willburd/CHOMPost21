@@ -246,7 +246,6 @@
 		ourmob.Life(1)
 		if(ishuman(M))
 			for(var/obj/item/W in M)
-				log_debug("polymorph items")
 				//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // Outpost 21 edit - Remove backup implants, nif removal
 				//	continue
 				M.drop_from_inventory(W)
@@ -278,7 +277,7 @@
 	reagent_state = LIQUID
 	color = "#ffffff"
 	scannable = 1
-	
+
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_COSMETIC

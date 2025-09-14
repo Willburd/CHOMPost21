@@ -776,6 +776,16 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	name = "phone"
 	anchored = FALSE
 
+// Outpost 21 edit begin - Track these if they exist
+/obj/item/radio/phone/Initialize(mapload)
+	. = ..()
+	phones_on_station.Add(src)
+
+/obj/item/radio/phone/Destroy()
+	. = ..()
+	phones_on_station.Remove(src)
+// Outpost 21 edit end
+
 /obj/item/radio/phone/medbay
 	frequency = MED_I_FREQ
 

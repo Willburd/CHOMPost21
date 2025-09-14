@@ -12,7 +12,7 @@
 /obj/item/rectape/anna_lore/Initialize(mapload)
 	. = ..()
 	icon_state = "tape_[pick("white", "blue", "red", "yellow", "purple")]"
-	switch(rand(1,7))
+	switch(rand(1,8))
 		if(1)
 			add_custom_entry(0, 0, "Recording started.")
 			add_custom_entry(0, 54, "Anna Neso says, '...This is Anna Neso--Xenoarchaeologist--though I know not why I'm... making; a point of saying that, when nobody should be hearing this log but me.'")
