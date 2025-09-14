@@ -167,31 +167,13 @@ OL|IL|OL
 	VAR_PROTECTED/damage_alert = FALSE
 	VAR_PROTECTED/critical_alert = FALSE
 
+/obj/structure/confinement_beam_generator/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/rotatable)
+
 /obj/structure/confinement_beam_generator/Destroy()
 	construction_state = 0
 	. = ..()
-
-/obj/structure/confinement_beam_generator/verb/rotate_clockwise()
-	set name = "Rotate Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if (src.anchored || usr:stat)
-		to_chat(usr, "It is fastened to the floor!")
-		return 0
-	src.set_dir(turn(src.dir, 270))
-	return TRUE
-
-/obj/structure/confinement_beam_generator/verb/rotate_counterclockwise()
-	set name = "Rotate Counter Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if (src.anchored || usr:stat)
-		to_chat(usr, "It is fastened to the floor!")
-		return 0
-	src.set_dir(turn(src.dir, 90))
-	return TRUE
 
 /obj/structure/confinement_beam_generator/examine(mob/user)
 	. = ..()

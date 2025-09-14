@@ -25,16 +25,16 @@
 	spawning = rand(SPIDERS,SLIMES)
 	switch(spawning)
 		if(SPIDERS)
-			log_debug("Hord event, spiders selected.")
+			log_world("## DEBUG: Hord event, spiders selected.")
 			spawncount = rand(4 * severity, 10 * severity)
 			sent_spiders_to_station = 0
 
 		if(TROIDS)
-			log_debug("Horde event, metroids selected.")
+			log_world("## DEBUG: Horde event, metroids selected.")
 			spawncount = rand(2 * severity, 4 * severity)
 
 		if(SLIMES)
-			log_debug("Horde event, slimes selected.")
+			log_world("## DEBUG: Horde event, slimes selected.")
 			spawncount = rand(4 * severity, 10 * severity)
 
 /datum/event/horde_infestation/announce()
