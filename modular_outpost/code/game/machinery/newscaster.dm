@@ -27,16 +27,13 @@
 	var/stored_data = file2text(server_file_path)
 	var/list/json_data = json_decode(stored_data)
 	if(json_data && json_data.len)
-		to_chat(world, "len: [json_data.len]")
 		var/i = 0
 		while(i++ < json_data.len)
 			var/list/subjson = json_data[i]
 			var/datum/feed_message/load_from_file/scanmessage = new(subjson)
-			to_chat(world, " -[subjson["title"]] created from json at index [i]")
 			net.insert_message_in_channel(src, scanmessage) //Adding message to the network's appropriate feed_channel
 
 /datum/feed_network/proc/CreateFeedChannel_FromFile(var/channel_name, var/author, var/server_file_path)
-	to_chat(world, "News channel created from file [channel_name].[server_file_path]")
 	var/datum/feed_channel/load_from_file/newChannel = new /datum/feed_channel/load_from_file(server_file_path,src)
 	newChannel.channel_name = channel_name
 	newChannel.author = author
