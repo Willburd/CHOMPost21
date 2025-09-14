@@ -5,7 +5,9 @@
 	timestamp += (min * 60) + sec
 	var/MM = min
 	if(length(MM) == 1) MM = "0[min]"
-	storedinfo += "\[[MM]:[sec]\] [log]"
+	var/SS = sec
+	if(length(SS) == 1) SS = "0[SS]"
+	storedinfo += "\[[MM]:[SS]\] [log]"
 
 /obj/item/rectape/anna_lore/Initialize(mapload)
 	. = ..()
@@ -127,3 +129,18 @@
 			add_custom_entry(11, 20, "Anna Neso says, '...Y-yes. Of... course.'")
 			add_custom_entry(11, 54, "Anna Neso stutters, '...Rig-gh-h-ht-t.'")
 			add_custom_entry(12, 40, "Recording stopped.")
+
+		if(8)
+			add_custom_entry( 0, 4, "Recording started.")
+			add_custom_entry( 0, 4, "Anna Neso says, '...Egh. Right.'")
+			add_custom_entry( 1, 0, "Anna Neso says, 'This is Anna Neso, Xenoarchaelogist, speaking on strange happenings near the Muriki terraforming outpost on September 13th, 2569.'")
+			add_custom_entry( 1, 3, "Anna Neso says, 'Log begins.'")
+			add_custom_entry( 1, 48, "Anna Neso says, 'Lets out a long, breathy sigh. '...Well, ah... I... found a transcript of that tape that was lost when I... became a changeling, seemingly.''")
+			add_custom_entry( 2, 50, "Anna Neso asks, '...There are copies of it spread about all outside--same as when I found a copy of one of my old tapes. This one, though... it... should be lost?'")
+			add_custom_entry( 3, 21, "Anna Neso says, '...It's, ah... w-well.'")
+			add_custom_entry( 3, 32, "Anna Neso says, '...The contents are... concerning, to say the least.'")
+			add_custom_entry( 4, 20, "Anna Neso says, 'And... there seem t'be a number of them. Outside, and near windows.'")
+			add_custom_entry( 4, 56, "Anna Neso says, 'I've... gone ahead and collected as many as I could. I'd like not t'have Security up my ass trying to investigate--least of all when I'm already dealin' with my crew records being corrupted.'")
+			add_custom_entry( 5, 16, "Anna Neso says, '...In... any case. I might give telescience another shot later, perhaps.'")
+			add_custom_entry( 5, 20, "Anna Neso says, 'End log.'")
+			add_custom_entry( 5, 20, "Recording stopped.")
