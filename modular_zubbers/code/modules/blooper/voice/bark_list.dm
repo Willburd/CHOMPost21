@@ -3,11 +3,11 @@
 
 /datum/controller/subsystem/sounds/create_talk_sound_map()
 	. = ..() // Extend the base sounds!
-	talk_sound_map["Muted String (Low)"] = list('sound/instruments/synthesis_samples/guitar/crisis_muted/C2.ogg')
-	talk_sound_map["Muted String (Medium)"] = list('sound/instruments/synthesis_samples/guitar/crisis_muted/C3.ogg')
-	talk_sound_map["Muted String (High)"] = list('sound/instruments/synthesis_samples/guitar/crisis_muted/C4.ogg')
-	talk_sound_map["Banjo (Medium)"] = list('sound/instruments/banjo/Cn3.ogg')
-	talk_sound_map["Banjo (High)"] = list('sound/instruments/banjo/Cn4.ogg')
+	talk_sound_map["Muted String (Low)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C2.ogg')
+	talk_sound_map["Muted String (Medium)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C3.ogg')
+	talk_sound_map["Muted String (High)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C4.ogg')
+	talk_sound_map["Banjo (Medium)"] = list('sound/runtime/instruments/banjo/Cn3.ogg')
+	talk_sound_map["Banjo (High)"] = list('sound/runtime/instruments/banjo/Cn4.ogg')
 	talk_sound_map["Squeaky"] = list('modular_zubbers/sound/items/toy_squeak/toysqueak1.ogg')
 	talk_sound_map["Chittery"] = list('modular_zubbers/code/modules/blooper/voice/bloopers/chitter.ogg')
 	talk_sound_map["Synthetic (Grunt)"] = list('sound/misc/bloop.ogg')
