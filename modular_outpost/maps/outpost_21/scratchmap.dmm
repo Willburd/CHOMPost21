@@ -28,6 +28,10 @@
 /obj/item/spellbook/oneuse/buttblast,
 /turf/simulated/floor/outdoors/grass/heavy/turfpack/muriki,
 /area/space)
+"ai" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
 "aj" = (
 /mob/living/simple_mob/vore/pitcher,
 /turf/simulated/floor/outdoors/grass/heavy/turfpack/muriki,
@@ -58,6 +62,11 @@
 /obj/random/maintenance/engineering,
 /turf/space,
 /area/space)
+"aq" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "ar" = (
 /obj/effect/landmark/step_trap,
 /turf/space,
@@ -73,6 +82,14 @@
 "au" = (
 /obj/effect/mine/claymore,
 /turf/space,
+/area/space)
+"av" = (
+/obj/structure/cliff_end{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "aw" = (
 /mob/living/simple_mob/vore/pitcher_plant,
@@ -135,6 +152,12 @@
 /obj/effect/landmark/hostile_xenobio,
 /turf/simulated/floor/outdoors/grass/forest/turfpack/muriki,
 /area/space)
+"aK" = (
+/obj/random/maintenance/cargo,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "aL" = (
 /obj/effect/mine/frag,
 /turf/simulated/floor/outdoors/grass/heavy/turfpack/muriki,
@@ -164,6 +187,14 @@
 "aR" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"aS" = (
+/obj/structure/cliff{
+	dir = 6
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "aT" = (
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -207,6 +238,14 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
+"bb" = (
+/obj/structure/cliff/corner{
+	dir = 6
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "bc" = (
 /obj/structure/foamedmetal,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -225,6 +264,14 @@
 	emagged = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"bg" = (
+/obj/structure/cliff{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "bh" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -254,6 +301,12 @@
 /obj/fruitspawner/reishi,
 /obj/fruitspawner/reishi,
 /turf/simulated/floor/tiled,
+/area/space)
+"bn" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "bo" = (
 /obj/machinery/light,
@@ -292,6 +345,18 @@
 /obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/space)
+"bv" = (
+/obj/structure/cliff_end{
+	dir = 1
+	},
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/space)
+"bw" = (
+/obj/item/broken_device/random,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "bx" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
@@ -327,6 +392,14 @@
 /area/space)
 "bF" = (
 /turf/simulated/floor,
+/area/space)
+"bG" = (
+/obj/structure/cliff{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "bH" = (
 /obj/effect/auto_crayon{
@@ -397,6 +470,12 @@
 /obj/item/seeds/ambrosiavulgarisseed,
 /turf/simulated/floor/tiled,
 /area/space)
+"bV" = (
+/obj/vehicle/train/trolley,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "bW" = (
 /obj/structure/table/woodentable,
 /obj/item/seeds/reishimycelium,
@@ -445,6 +524,18 @@
 "cd" = (
 /obj/random/trash,
 /turf/simulated/floor,
+/area/space)
+"ce" = (
+/obj/item/circuitboard/broken,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"cf" = (
+/obj/structure/cliff,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "cg" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
@@ -538,6 +629,14 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"cx" = (
+/obj/item/broken_device/random,
+/obj/item/circuitboard/broken,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "cy" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
@@ -594,6 +693,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"cJ" = (
+/obj/structure/outcrop/silver,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "cK" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -608,6 +713,13 @@
 "cM" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"cN" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/item/circuitboard/broken,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "cO" = (
 /obj/machinery/light/small{
@@ -667,9 +779,24 @@
 /obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"cZ" = (
+/obj/random/maintenance/cargo,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "da" = (
 /obj/structure/closet/crate/mimic/dangerous,
 /turf/simulated/floor/plating,
+/area/space)
+"db" = (
+/obj/structure/cliff/corner{
+	dir = 9
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "dc" = (
 /obj/item/beartrap{
@@ -695,6 +822,14 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor,
 /area/space)
+"dh" = (
+/obj/structure/cliff{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "di" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -703,6 +838,14 @@
 /area/space)
 "dj" = (
 /turf/simulated/floor/wood/alt/broken,
+/area/space)
+"dk" = (
+/obj/structure/cliff{
+	dir = 9
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "dl" = (
 /obj/structure/table/woodentable,
@@ -738,8 +881,24 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/space)
+"dp" = (
+/obj/structure/cliff{
+	dir = 5
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "dq" = (
 /turf/simulated/floor/tiled/techfloor,
+/area/space)
+"dr" = (
+/obj/structure/cliff/corner{
+	dir = 5
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "ds" = (
 /obj/structure/bed/chair/bay/chair{
@@ -770,6 +929,12 @@
 /obj/random/plushie,
 /obj/item/analyzer,
 /turf/simulated/floor/plating,
+/area/space)
+"dx" = (
+/obj/structure/cliff/corner{
+	dir = 5
+	},
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/space)
 "dy" = (
 /obj/effect/landmark/loot_spawn/low,
@@ -812,10 +977,26 @@
 /obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/techmaint,
 /area/space)
+"dH" = (
+/obj/structure/cliff/corner{
+	dir = 10
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "dI" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/tiled/techmaint,
+/area/space)
+"dJ" = (
+/obj/structure/cliff{
+	dir = 10
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "dK" = (
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -830,6 +1011,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
+/area/space)
+"dM" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/cliff,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "dN" = (
 /obj/effect/floor_decal/rust,
@@ -873,6 +1061,12 @@
 /obj/random/contraband,
 /turf/simulated/floor/plating,
 /area/space)
+"dW" = (
+/obj/random/maintenance/misc,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "dX" = (
 /obj/structure/table/woodentable,
 /obj/item/bone/skull,
@@ -885,6 +1079,14 @@
 "dZ" = (
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ea" = (
+/obj/structure/cliff_end{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "eb" = (
 /obj/structure/table/woodentable,
@@ -899,6 +1101,12 @@
 "ed" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/tiled/techmaint,
+/area/space)
+"ee" = (
+/obj/structure/cliff_end,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/space)
 "ef" = (
 /obj/machinery/light/small{
@@ -951,11 +1159,22 @@
 /obj/structure/bed/pillowpile/white,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
+"ep" = (
+/obj/item/broken_device/random,
+/obj/structure/ladder/up,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "eq" = (
 /obj/structure/table/steel,
 /obj/random/maintenance/security,
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"er" = (
+/obj/item/stolenpackage,
+/turf/space,
 /area/space)
 "es" = (
 /obj/item/assembly/mousetrap/armed,
@@ -1137,6 +1356,10 @@
 /obj/random/toolbox,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
+"eU" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/alt,
+/area/space)
 "eV" = (
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
@@ -1169,6 +1392,12 @@
 "fa" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/carpet/tealcarpet,
+/area/space)
+"fb" = (
+/obj/structure/bed/chair/bay/chair{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
 /area/space)
 "fc" = (
 /turf/simulated/floor/carpet/tealcarpet,
@@ -1273,13 +1502,31 @@
 /obj/item/camera,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/space)
+"fp" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/bed/chair/bay/chair{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/space)
 "fq" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/space)
+"fr" = (
+/obj/structure/table/gamblingtable,
+/obj/item/toy/russian_revolver,
+/turf/simulated/floor/wood/alt,
+/area/space)
 "fs" = (
 /obj/item/toy/eight_ball/conch,
 /turf/simulated/floor/plating,
+/area/space)
+"ft" = (
+/obj/structure/bed/chair/bay/chair{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
 /area/space)
 "fu" = (
 /obj/structure/table/woodentable,
@@ -1389,6 +1636,11 @@
 /obj/structure/door_assembly/door_assembly_mai,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/space)
+"fL" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/bed/chair/bay/chair,
+/turf/simulated/floor/wood/alt,
+/area/space)
 "fM" = (
 /turf/simulated/floor/carpet/gaycarpet,
 /area/space)
@@ -1401,6 +1653,42 @@
 	icon_state = "right"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fP" = (
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/item/paper{
+	info = "Stop stealing from my stash, you thieving fuck!";
+	name = "Note from someone"
+	},
+/turf/simulated/floor/plating{
+	nitrogen = 0;
+	nitrous_oxide = 82.1472
+	},
+/area/space)
+"fQ" = (
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/turf/simulated/floor/plating{
+	nitrogen = 0;
+	nitrous_oxide = 82.1472
+	},
 /area/space)
 "fR" = (
 /obj/item/storage/rollingpapers/blunt,
@@ -4090,33 +4378,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+bk
+bk
+bk
+bk
+bk
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+bk
+bk
+bk
+bk
+bk
 hm
 hm
 hm
@@ -4347,33 +4635,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+mj
+mj
+bk
+bk
+bk
+bk
 hm
 hm
 hm
@@ -4604,33 +4892,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+bk
+bk
+bk
+mj
+mj
+bk
+bk
+bk
 hm
 hm
 hm
@@ -4861,33 +5149,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+ee
+bG
+bG
+bG
+dH
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+bk
+bk
+bk
+bk
+mj
+bk
+bk
+bk
 hm
 hm
 hm
@@ -5118,33 +5406,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+aq
+aq
+aq
+aK
+dJ
+dH
+cV
+cV
+cV
+cV
+cV
+cV
+db
+bG
+bG
+bv
+bk
+bk
+bk
+bk
+mj
+mj
+bk
+bk
 hm
 hm
 hm
@@ -5375,33 +5663,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+aq
+bn
+aq
+aq
+aq
+cf
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+cx
+bV
+bk
+bk
+bk
+bk
+bk
+bk
+mj
+mj
+bk
 hm
 hm
 hm
@@ -5632,33 +5920,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+ep
+ce
+aq
+aq
+aS
+bb
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+ce
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+bk
+mj
+bk
 hm
 hm
 hm
@@ -5889,33 +6177,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+aq
+bk
+aq
+aK
+bw
+aq
+cf
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aK
+ce
+bw
+bk
+bk
+bk
+bk
+bk
+bk
+mj
+mj
 hm
 hm
 hm
@@ -6146,33 +6434,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+aT
+aq
+aq
+aq
+aq
+aq
+cf
+cV
+cV
+cV
+cV
+cV
+cV
+db
+dk
+aq
+ce
+aq
+aq
+bk
+bk
+bk
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -6403,33 +6691,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+ai
+aT
+aq
+bV
+aq
+aq
+dW
+dM
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aq
+aq
+aq
+aq
+bn
+aq
+bk
+bk
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -6660,33 +6948,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+aT
+aq
+fi
+ce
+aq
+bw
+cf
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -6917,33 +7205,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+aq
+aq
+aq
+cN
+aq
+cf
+cV
+cV
+cV
+cV
+cV
+cV
+dr
+dp
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -7174,33 +7462,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+bk
+aq
+aq
+aq
+cf
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aT
+mj
 hm
 hm
 hm
@@ -7431,33 +7719,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+aq
+aq
+aq
+aq
+cf
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+bn
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aT
+ai
 hm
 hm
 hm
@@ -7688,33 +7976,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+aq
+bw
+aq
+aq
+dJ
+dH
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aq
+aT
+mj
 hm
 hm
 hm
@@ -7945,33 +8233,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+aq
+bV
+aq
+aq
+aq
+cf
+cV
+cV
+cV
+cV
+cV
+db
+dk
+cJ
+aq
+aq
+aq
+aq
+aq
+aq
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -8202,33 +8490,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+bk
+bk
+aq
+aS
+bg
+bb
+cV
+cV
+cV
+cV
+cV
+dr
+dp
+aq
+aq
+bw
+aq
+aq
+aK
+bk
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -8451,41 +8739,41 @@ bk
 hm
 hm
 hm
+kE
+kE
+kE
+kE
+kE
+kE
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+bk
+bk
+aq
+ea
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+cN
+aq
+aq
+aq
+aq
+aS
+av
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -8708,41 +8996,41 @@ hm
 hm
 hm
 hm
+kE
+bB
+bB
+aT
+aT
+kE
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+bk
+bk
+bk
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+db
+dk
+bw
+aq
+aq
+aS
+bg
+bb
+bk
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -8965,41 +9253,41 @@ kE
 kE
 kE
 hm
+kE
+bB
+fp
+aT
+bB
+kE
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+bk
+bk
+bk
+bk
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aq
+aq
+aq
+aS
+bb
+bk
+bk
+bk
+bk
+bk
+bk
+mj
 hm
 hm
 hm
@@ -9222,41 +9510,41 @@ bC
 bl
 kE
 hm
+kE
+fL
+fr
+fb
+bB
+eU
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+bk
+bk
+bk
+bk
+bk
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aq
+aq
+aS
+bb
+bk
+bk
+bk
+bk
+bk
+bk
+mj
+mj
 hm
 hm
 hm
@@ -9479,41 +9767,41 @@ bC
 bm
 kE
 hm
+kE
+bB
+ft
+bB
+aT
+kE
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+mj
+mj
+mj
+mj
+bk
+bk
+bk
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dh
+aq
+aq
+cf
+bk
+bk
+bk
+bk
+bk
+bk
+mj
+mj
+bk
 hm
 hm
 hm
@@ -9736,41 +10024,41 @@ bC
 bo
 kE
 hm
+kE
+bB
+cB
+aT
+aT
+kE
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+bk
+bk
+bk
+mj
+mj
+bk
+bk
+bk
+bk
+cV
+cV
+cV
+cV
+cV
+dx
+dp
+cZ
+cf
+bk
+bk
+bk
+bk
+bk
+bk
+mj
+bk
+bk
 hm
 hm
 hm
@@ -9993,41 +10281,41 @@ bC
 bp
 kE
 hm
+kE
+kE
+kE
+kE
+kE
+kE
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+aq
+aq
+bk
+bk
+mj
+mj
+bk
+bk
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+dr
+bg
+bb
+bk
+bk
+bk
+bk
+bk
+mj
+mj
+bk
+bk
 hm
 hm
 hm
@@ -10258,33 +10546,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+aq
+aq
+aq
+bk
+bk
+mj
+mj
+mj
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+bk
+bk
+bk
+bk
+mj
+mj
+bk
+bk
+bk
 hm
 hm
 hm
@@ -10515,33 +10803,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+aq
+aq
+aq
+bk
+cV
+cV
+cV
+mj
+mj
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+cV
+bk
+bk
+bk
+bk
+mj
+mj
+bk
+bk
+bk
 hm
 hm
 hm
@@ -10772,33 +11060,33 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+aq
+aq
+bk
+bk
+cV
+cV
+cV
+cV
+mj
+cV
+cV
+cV
+cV
+cV
+cV
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+bk
+bk
+bk
+bk
 hm
 hm
 hm
@@ -14882,7 +15170,7 @@ hm
 hm
 aC
 hm
-hm
+er
 hm
 hm
 hm
@@ -17939,9 +18227,9 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
+kE
+kE
+kE
 hm
 hm
 hm
@@ -18196,9 +18484,9 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
+kE
+fP
+kE
 hm
 hm
 hm
@@ -18453,9 +18741,9 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
+kE
+fQ
+kE
 hm
 hm
 hm
@@ -18710,9 +18998,9 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
+kE
+kE
+kE
 hm
 hm
 hm

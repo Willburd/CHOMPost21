@@ -1,8 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aaa" = (
-/obj/random/cutout,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
 "aab" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -3880,9 +3876,6 @@
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "32-4"
 	},
 /obj/effect/landmark/vermin,
 /turf/simulated/open,
@@ -8469,37 +8462,9 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north)
 "aor" = (
-/turf/simulated/wall/r_wall,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
-"aos" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = null
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
-"aot" = (
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
-"aou" = (
-/obj/structure/ladder,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
-"aov" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
-"aow" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
-/turf/simulated/open/muriki,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
-"aox" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west)
 "aoy" = (
 /turf/simulated/wall/r_wall,
@@ -8700,6 +8665,59 @@
 /obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/terraform)
+"apa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"apb" = (
+/obj/structure/lattice,
+/obj/structure/cable/green{
+	icon_state = "32-1"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
+/turf/simulated/open,
+/area/maintenance/secelev)
+"apc" = (
+/obj/structure/sign/directions/cargo/refinery{
+	dir = 8;
+	pixel_y = 4
+	},
+/obj/structure/sign/directions/cargo/mining{
+	dir = 8;
+	pixel_y = 10
+	},
+/turf/simulated/wall/r_wall,
+/area/maintenance/cargomid)
+"apd" = (
+/obj/structure/sign/directions/medical{
+	dir = 4;
+	pixel_y = 10
+	},
+/obj/structure/sign/directions/cargo/refinery{
+	pixel_y = -2
+	},
+/obj/structure/sign/directions/cargo/mining{
+	pixel_y = 4
+	},
+/turf/simulated/wall,
+/area/muriki/grounds/tramborder)
+"ape" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west)
 "apf" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -16000,9 +16018,6 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall)
-"cFv" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "cFz" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -17363,15 +17378,6 @@
 	},
 /turf/simulated/floor,
 /area/engineering/corepower)
-"dcc" = (
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
 "dcI" = (
 /obj/structure/cliff{
 	dir = 5
@@ -18682,6 +18688,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
 "dye" = (
@@ -19293,8 +19302,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "dHL" = (
-/obj/structure/closet/crate/miningcar,
-/obj/item/storage/firstaid/clotting,
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -26776,7 +26783,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "giv" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/east)
 "giL" = (
 /obj/structure/railing,
@@ -37253,13 +37260,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "joV" = (
@@ -41645,12 +41652,8 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "1-8"
+	icon_state = "1-4"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
 "kDh" = (
@@ -53645,12 +53648,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
-"opc" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = null
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "opg" = (
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/milspec/stripe{
@@ -59162,10 +59159,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
-"qdP" = (
-/obj/structure/ladder/up,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "qdQ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -68999,10 +68992,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"tgR" = (
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "tgU" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -70379,15 +70368,6 @@
 /obj/structure/bed/chair/bay/chair,
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
-"tDc" = (
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountainnorth)
 "tDj" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/red/border,
@@ -70694,11 +70674,6 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/substation/virology)
-"tIL" = (
-/obj/structure/trash_pile,
-/obj/item/stolenpackage,
-/turf/simulated/floor/plating,
-/area/maintenance/wastedisposal)
 "tIP" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/orange{
@@ -71284,9 +71259,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "tSP" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -80800,12 +80772,14 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
-/obj/machinery/disposal/wall{
-	dir = 4;
-	pixel_x = -32
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 1
+	},
+/obj/machinery/disposal/wall/cleaner{
+	dir = 4;
+	name = "Amnesty Box";
+	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
+	pixel_x = -36
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
@@ -90775,8 +90749,8 @@ bcr
 foE
 aFT
 etP
-tIL
 lFM
+apa
 vbI
 sWP
 xwP
@@ -106627,7 +106601,7 @@ uMJ
 uMJ
 uMJ
 cEY
-cEY
+cHU
 cHU
 hZu
 ajT
@@ -107115,7 +107089,7 @@ prJ
 esm
 uMJ
 uMJ
-uMJ
+apc
 eWW
 cHU
 cHU
@@ -111946,7 +111920,7 @@ kOi
 khd
 kHn
 kHn
-kHn
+apd
 cHU
 kHn
 aiZ
@@ -116252,7 +116226,7 @@ aiP
 aiP
 aiP
 aiP
-tDc
+dMj
 dMj
 dMj
 oeQ
@@ -116411,9 +116385,9 @@ aiP
 aiP
 aiP
 aiP
-aor
-aor
-aor
+ape
+ape
+ape
 aor
 aor
 dMj
@@ -116573,11 +116547,11 @@ aiP
 aiP
 aiP
 aiP
+ape
+ape
+ape
+ape
 aor
-aaa
-aov
-aot
-aos
 dMj
 aiP
 hOy
@@ -116735,11 +116709,11 @@ aiP
 aiP
 aiP
 aiP
-aor
-aox
-aow
-aou
-aor
+ape
+ape
+ape
+ape
+ape
 dMj
 hOy
 hOy
@@ -116897,11 +116871,11 @@ aiP
 aiP
 aiP
 aiP
-aor
-aor
-aor
-aor
-aor
+ape
+ape
+ape
+ape
+ape
 dMj
 hOy
 hOy
@@ -123820,7 +123794,7 @@ akZ
 akX
 ala
 dxZ
-onG
+apb
 fyW
 onG
 afL
@@ -146777,7 +146751,7 @@ rJa
 rJa
 rJa
 fhs
-dcc
+fhs
 fhs
 fhs
 fhs
@@ -147101,10 +147075,10 @@ rJa
 rJa
 rJa
 giv
-cFv
-cFv
-tgR
-opc
+giv
+giv
+giv
+giv
 fhs
 rJa
 rJa
@@ -147263,9 +147237,9 @@ rJa
 rJa
 rJa
 giv
-cFv
-cFv
-qdP
+giv
+giv
+giv
 giv
 fhs
 fhs

@@ -10476,9 +10476,11 @@
 /turf/simulated/open,
 /area/maintenance/substation/medical)
 "eBJ" = (
-/obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(Listening Outpost)"
 	},
 /turf/simulated/floor/wood,
 /area/djstation)
