@@ -359,8 +359,8 @@
 				if(!R.lit)
 					R.attack_self(holder)
 				if(R.lit)
-					holder.add_modifier(/datum/modifier/fire/stack_managed/weak, 60 SECONDS)
-					holder.light_range = 2
+					holder.adjust_fire_stacks(8)
+					holder.IgniteMob()
 					holder.make_jittery(115)
 					fear_run = 60
 					holder.visible_message(span_danger("\The [holder] bursts into flames!"),span_danger("You burst into flames!"),span_danger("Something screams!"))
