@@ -5392,6 +5392,7 @@
 #include "modular_outpost\code\datums\standard_operating_procedure.dm"
 #include "modular_outpost\code\datums\autolathe\engineering.dm"
 #include "modular_outpost\code\datums\components\badbody.dm"
+#include "modular_outpost\code\datums\components\grenadetrap.dm"
 #include "modular_outpost\code\datums\elements\headbonker.dm"
 #include "modular_outpost\code\datums\elements\sellable.dm"
 #include "modular_outpost\code\datums\elements\lootable\outpost_lootable.dm"
