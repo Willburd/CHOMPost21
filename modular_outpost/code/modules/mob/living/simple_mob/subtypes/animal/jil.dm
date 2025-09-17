@@ -360,7 +360,7 @@
 					R.attack_self(holder)
 				if(R.lit)
 					holder.adjust_fire_stacks(8)
-					holder.IgniteMob()
+					holder.ignite_mob()
 					holder.make_jittery(115)
 					fear_run = 60
 					holder.visible_message(span_danger("\The [holder] bursts into flames!"),span_danger("You burst into flames!"),span_danger("Something screams!"))
