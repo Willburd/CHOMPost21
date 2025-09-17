@@ -10,8 +10,8 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = FACTION_STATION
-	total_positions = 2
-	spawn_positions = 2
+	total_positions = 3
+	spawn_positions = 3
 	pto_type = PTO_CIVILIAN
 	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - Hydroponics/Service is QM responsibility
 	selection_color = "#aaaaaa" // Outpost 21 edit - Show hydroponics as green, was "#515151"
