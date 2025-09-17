@@ -1,4 +1,5 @@
 /datum/component/grenadetrap
+	var/activated = FALSE
 	var/obj/host
 	var/obj/item/grenade/nade
 
@@ -28,6 +29,9 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/component/grenadetrap/proc/on_attackhand(obj/item/source, mob/user)
 	SIGNAL_HANDLER
+	if(activated)
+		return
+	activated = TRUE
 	trigger_trap()
 
 /datum/component/grenadetrap/proc/on_attackby(obj/item/source, obj/item/W, mob/user, params)
@@ -40,10 +44,16 @@
 		nade = null
 		qdel(src)
 		return
+	if(activated)
+		return
+	activated = TRUE
 	trigger_trap()
 
 /datum/component/grenadetrap/proc/on_bumped(datum/source, atom/A)
 	SIGNAL_HANDLER
+	if(activated)
+		return
+	activated = TRUE
 	addtimer(CALLBACK(src, PROC_REF(trigger_trap)), 1 SECOND, TIMER_DELETE_ME)
 
 /datum/component/grenadetrap/proc/on_examine(datum/source, mob/user, list/examine_texts)
