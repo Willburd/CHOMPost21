@@ -40,7 +40,7 @@
 		if((L.lastsnapemotetime - lasttime) <= 2.5 SECONDS)
 			if(prob(3))
 				L.adjust_fire_stacks(2)
-				L.IgniteMob()
+				L.ignite_mob()
 				L.visible_message(span_danger("[L] bursts into flames!"))
 	// outpost 21 edit end
 
