@@ -226,8 +226,10 @@
 	delete_me = TRUE
 
 /obj/effect/landmark/step_trap/Initialize(mapload)
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
 
+/obj/effect/landmark/step_trap/LateInitialize()
 	if(prob(40))
 		return
 
@@ -319,7 +321,10 @@
 	chance = 100
 
 /obj/effect/landmark/electrify_door/Initialize(mapload)
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/electrify_door/LateInitialize()
 	if(!prob(chance))
 		return
 	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
