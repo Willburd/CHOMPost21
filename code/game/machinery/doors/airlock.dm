@@ -46,7 +46,6 @@
 	var/secured_wires = 0
 	var/security_level = 1 //Acts as a multiplier on the time required to hack an airlock with a hacktool
 	var/datum/wires/airlock/wires = null
-	var/obj/item/airlock_brace/brace = null // Outpost 21 Addition - Door braces
 
 	var/open_sound_powered = 'sound/machines/door/covert1o.ogg'
 	var/open_sound_unpowered = 'sound/machines/door/airlockforced.ogg'
@@ -1142,10 +1141,6 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/proc/user_toggle_open(mob/user)
 	if(!user_allowed(user))
 		return
-	// Outpost 21 edit(port) begin
-	if(brace)
-		to_chat(user, span_warning(text("The airlock's brace holds it firmly in place.")))
-	// Outpost 21 edit end
 	if(welded)
 		to_chat(user, span_warning("The airlock has been welded shut!"))
 	else if(locked)
@@ -1171,23 +1166,6 @@ About the new airlock wires panel:
 		if(src.isElectrified())
 			if(src.shock(user, 75))
 				return
-
-	// Outpost 21 edit(port) begin - Attempt to detatch a doorbrace from the airlock
-	if(brace && C && istype(C, /obj/item/tool/crowbar/brace_jack) && user.a_intent == I_HELP)
-		return brace.attackby(C, user)
-
-	if(!brace && istype(C, /obj/item/airlock_brace))
-		var/obj/item/airlock_brace/A = C
-		if(!density)
-			to_chat(user, span_warning("You must close \the [src] before installing \the [A]!"))
-			return
-
-		playsound(user, 'sound/machines/lockreset.ogg', 50, 1) // pulling doorjack down!
-		if(do_after(user, 6 SECONDS, src) && density && A && user.unEquip(A, src))
-			to_chat(user, span_notice("You successfully install \the [A]."))
-			A.lock_brace(src)
-		return
-	// Outpost 21 edit end
 
 	if(istype(C, /obj/item/taperoll))
 		return
@@ -1235,13 +1213,8 @@ About the new airlock wires panel:
 	else if(istype(C, /obj/item/pai_cable))	// -- TLE
 		var/obj/item/pai_cable/cable = C
 		cable.plugin(src, user)
-	// Outpost 21 edit(port) begin - Crowbar can only wedge doors open on help, so you can beat doorbraces off of them! Also brace feedback.
-	else if(C.has_tool_quality(TOOL_CROWBAR) && user.a_intent == I_HELP)
-		if(brace)
-			to_chat(user, span_notice(text("The airlock's brace holds it firmly in place.")))
-
-		// Outpost 21 edit end
-		else if(can_remove_electronics())
+	else if(C.has_tool_quality(TOOL_CROWBAR) && user.a_intent != I_HURT) // So harm intent can smash airlocks
+		if(can_remove_electronics())
 			playsound(src, C.usesound, 75, 1)
 			user.visible_message("[user] removes the electronics from the airlock assembly.", "You start to remove electronics from the airlock assembly.")
 			if(do_after(user, 4 SECONDS * C.toolspeed, target = src))
@@ -1389,11 +1362,6 @@ About the new airlock wires panel:
 	return ..()
 
 /obj/machinery/door/airlock/can_open(var/forced=0)
-	// Outpost 21 edit(port) begin
-	if(brace)
-		return 0
-	// Outpost 21 edit end
-
 	if(!forced)
 		if(!arePowerSystemsOn() || wires.is_cut(WIRE_OPEN_DOOR))
 			return 0
@@ -1612,12 +1580,6 @@ About the new airlock wires panel:
 	else
 		wires = new/datum/wires/airlock(src)
 
-	// Outpost 21 edit(port) begin - Door braces attach automatically when placed on a door in mapper
-	var/obj/item/airlock_brace/B = locate(/obj/item/airlock_brace) in loc
-	if(!brace && B)
-		B.lock_brace(src)
-	// Outpost 21 edit end
-
 	. = ..()
 
 	if(src.closeOtherId != null)
@@ -1695,24 +1657,3 @@ About the new airlock wires panel:
 			return TRUE
 	return FALSE
 */
-
-// outpost 21 edit(port) begin - Damage and description overrides to show state of door braces and destroy them
-/obj/machinery/door/airlock/take_damage(var/damage)
-	if(brace)
-		brace.cur_health = clamp(brace.cur_health - damage, 0, brace.max_health)
-		if(brace.cur_health <= 0)
-			var/obj/item/airlock_brace/braceTemp = brace // store the brace reference so it can be deleted after
-			visible_message(span_danger(text("\The [braceTemp] is smashed off of the airlock!")))
-			braceTemp.unlock_brace(null)
-			qdel(braceTemp)
-	else
-		..(damage)
-
-/obj/machinery/door/airlock/examine(mob/user)
-	if(brace)
-		. = ..()
-		. += span_danger(text("A [brace] is installed on the airlock, preventing it from opening."))
-		. += brace.examine_health()
-	else
-		. += ..()
-// outpost 21 edit end
