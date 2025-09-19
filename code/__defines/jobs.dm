@@ -250,6 +250,8 @@
 	#define JOB_ALT_VIROLOGIST "Virologist"
 	#define JOB_ALT_MEDICAL_CONTRACTOR "Medical Contractor"
 	#define JOB_ALT_XENOSPECIALIST "Xenoanatomy Specialist" // Outpost 21 addition
+	#define JOB_ALT_CORONER "Coroner"
+
 
 #define JOB_CHEMIST "Chemist"
 	// Chemist alt titles
