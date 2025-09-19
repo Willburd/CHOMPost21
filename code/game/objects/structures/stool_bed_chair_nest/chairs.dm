@@ -66,34 +66,6 @@
 		for(var/mob/living/L as anything in buckled_mobs)
 			L.set_dir(dir)
 
-/obj/structure/bed/chair/verb/rotate_clockwise()
-	set name = "Rotate Chair Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(!usr || !isturf(usr.loc))
-		return
-	if(usr.stat || usr.restrained())
-		return
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
-		return
-
-	src.set_dir(turn(src.dir, 270))
-
-/obj/structure/bed/chair/verb/rotate_counterclockwise()
-	set name = "Rotate Chair Counter-Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if(!usr || !isturf(usr.loc))
-		return
-	if(usr.stat || usr.restrained())
-		return
-	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
-		return
-
-	src.set_dir(turn(src.dir, 90))
-
 /obj/structure/bed/chair/shuttle
 	name = "chair"
 	icon_state = "shuttlechair"
@@ -165,7 +137,6 @@
 	desc = "It's a rounded chair. It looks comfy."
 	icon_state = "roundedchair"
 	base_icon = "roundedchair"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - These need to be base dmi
 
 /obj/structure/bed/chair/comfy/rounded/brown/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_LEATHER)
@@ -345,7 +316,6 @@
 	base_icon = "pewmiddle"
 	icon_state = "pewmiddle"
 	applies_material_colour = FALSE
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/pew/left
 	icon_state = "pewend_left"
@@ -364,7 +334,6 @@
 	applies_material_colour = FALSE
 	color = null
 	var/padding_color = "#CC0000"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/bench/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..()
@@ -400,7 +369,6 @@
 	base_icon = "corp_sofamiddle"
 	icon_state = "corp_sofamiddle"
 	applies_material_colour = FALSE
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/corp/left
 	icon_state = "corp_sofaend_left"

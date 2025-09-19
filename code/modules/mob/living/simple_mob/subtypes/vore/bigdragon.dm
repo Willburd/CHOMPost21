@@ -923,7 +923,7 @@ I think I covered everything.
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
 		M.adjust_fire_stacks(fire_stacks)
-		M.IgniteMob()
+		M.ignite_mob()
 	else
 		. = ..()
 
@@ -1066,7 +1066,7 @@ I think I covered everything.
 					for(var/RG in to_inject)
 						if(!P.reagents.has_reagent(RG))
 							P.reagents.add_reagent(RG, 10)
-				L.ExtinguishMob()
+				L.extinguish_mob()
 			return //Don't attack people if we're on help intent
 	return .=..()
 

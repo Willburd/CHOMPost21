@@ -1,123 +1,146 @@
 /obj/item/rectape/anna_lore
 	name = "old tape"
 
+/obj/item/rectape/proc/add_custom_entry(min,sec,log)
+	timestamp += (min * 60) + sec
+	var/MM = min
+	if(length(MM) == 1) MM = "0[min]"
+	var/SS = sec
+	if(length(SS) == 1) SS = "0[SS]"
+	storedinfo += "\[[MM]:[SS]\] [log]"
+
 /obj/item/rectape/anna_lore/Initialize(mapload)
 	. = ..()
 	icon_state = "tape_[pick("white", "blue", "red", "yellow", "purple")]"
-	switch(rand(1,7))
+	switch(rand(1,8))
 		if(1)
-			storedinfo += "\[00:00\] Recording started."
-			storedinfo += "\[00:54\] Anna Neso says, '...This is Anna Neso--Xenoarchaeologist--though I know not why I'm... making; a point of saying that, when nobody should be hearing this log but me.'"
-			storedinfo += "\[01:53\] Anna Neso says, '...There's... something down there, in the deep caves. It keeps calling to me. Begging for me. I... don't much know what it is, but... Command have been far from forthcoming with information.'"
-			storedinfo += "\[02:20\] Anna Neso says, '...I stand at the precipice, now. Jagged rocks lay below.'"
-			storedinfo += "\[02:31\] Anna Neso says, '...I... don't think those will prove a good spot for landing.'"
-			storedinfo += "\[02:38\] Anna Neso says, '...'"
-			storedinfo += "\[02:49\] Anna Neso says, 'I'll just... see if my remaining steel is enough to build over them, I s'pose.'"
-			storedinfo += "\[03:13\] Anna Neso says, 'Last I was here, things went... poorly. Died. Got held in questioning for hours.'"
-			storedinfo += "\[03:35\] Anna Neso says, '...They let me keep that sleeve's memories, though, at least. Silver lining, I... s'pose.'"
-			storedinfo += "\[03:58\] Anna Neso says, '...Nearly wish they hadn't. That shit... sucked.'"
-			storedinfo += "\[04:09\] Anna Neso says, '...But! It means I know a little more now, at least.'"
-			storedinfo += "\[04:22\] Anna Neso says, 'Enough dawdling--let's see what else I can figure out.'"
-			storedinfo += "\[04:30\] Anna Neso says, 'End Log 1.'"
-			storedinfo += "\[04:30\] Recording stopped."
+			add_custom_entry(0, 0, "Recording started.")
+			add_custom_entry(0, 54, "Anna Neso says, '...This is Anna Neso--Xenoarchaeologist--though I know not why I'm... making; a point of saying that, when nobody should be hearing this log but me.'")
+			add_custom_entry(1, 53, "Anna Neso says, '...There's... something down there, in the deep caves. It keeps calling to me. Begging for me. I... don't much know what it is, but... Command have been far from forthcoming with information.'")
+			add_custom_entry(2, 20, "Anna Neso says, '...I stand at the precipice, now. Jagged rocks lay below.'")
+			add_custom_entry(2, 31, "Anna Neso says, '...I... don't think those will prove a good spot for landing.'")
+			add_custom_entry(2, 38, "Anna Neso says, '...'")
+			add_custom_entry(2, 49, "Anna Neso says, 'I'll just... see if my remaining steel is enough to build over them, I s'pose.'")
+			add_custom_entry(3, 13, "Anna Neso says, 'Last I was here, things went... poorly. Died. Got held in questioning for hours.'")
+			add_custom_entry(3, 35, "Anna Neso says, '...They let me keep that sleeve's memories, though, at least. Silver lining, I... s'pose.'")
+			add_custom_entry(3, 58, "Anna Neso says, '...Nearly wish they hadn't. That shit... sucked.'")
+			add_custom_entry(4, 9, "Anna Neso says, '...But! It means I know a little more now, at least.'")
+			add_custom_entry(4, 22, "Anna Neso says, 'Enough dawdling--let's see what else I can figure out.'")
+			add_custom_entry(4, 30, "Anna Neso says, 'End Log 1.'")
+			add_custom_entry(4, 30, "Recording stopped.")
 
 		if(2)
-			storedinfo += "\[04:31\] Recording started."
-			storedinfo += "\[04:55\] Anna Neso says, '...This place feels... more open, than last time. Less claustrophobic. Maybe that's... just the mesons, though.'"
-			storedinfo += "\[04:56\] Recording stopped."
+			add_custom_entry(4, 31, "Recording started.")
+			add_custom_entry(4, 55, "Anna Neso says, '...This place feels... more open, than last time. Less claustrophobic. Maybe that's... just the mesons, though.'")
+			add_custom_entry(4, 56, "Recording stopped.")
 
 		if(3)
-			storedinfo += "\[04:57\] Recording started."
-			storedinfo += "\[05:08\] Anna Neso says, 'Pants and groans.'"
-			storedinfo += "\[05:17\] Anna Neso asks, 'Hrrfh... hah... there's... fuckin' carp down here?'"
-			storedinfo += "\[05:25\] Anna Neso says, '...There's carp down here. Right.'"
-			storedinfo += "\[05:43\] Anna Neso says, 'I'm... injured somethin' fierce, b-but... it's dead, now. And... I've found a structure.'"
-			storedinfo += "\[06:05\] Anna Neso , 'Yells in pain!'"
-			storedinfo += "\[06:37\] Anna Neso says, '...Living quarters...? Not especially, ah... impressive, though. There's a bug net on a shelf, and uncomfortable-looking bed... and, ah... also, a table with a lamp.'"
-			storedinfo += "\[06:55\] Anna Neso says,'...I'll leave my translocator beacon here, I think.'"
-			storedinfo += "\[06:59\] Anna Neso says, 'End Log 2.'"
-			storedinfo += "\[06:59\] Recording stopped."
+			add_custom_entry(4, 57, "Recording started.")
+			add_custom_entry(5, 8, "Anna Neso says, 'Pants and groans.'")
+			add_custom_entry(5, 17, "Anna Neso asks, 'Hrrfh... hah... there's... fuckin' carp down here?'")
+			add_custom_entry(5, 25, "Anna Neso says, '...There's carp down here. Right.'")
+			add_custom_entry(5, 43, "Anna Neso says, 'I'm... injured somethin' fierce, b-but... it's dead, now. And... I've found a structure.'")
+			add_custom_entry(6, 05, "Anna Neso , 'Yells in pain!'")
+			add_custom_entry(6, 37, "Anna Neso says, '...Living quarters...? Not especially, ah... impressive, though. There's a bug net on a shelf, and uncomfortable-looking bed... and, ah... also, a table with a lamp.'")
+			add_custom_entry(6, 55, "Anna Neso says,'...I'll leave my translocator beacon here, I think.'")
+			add_custom_entry(6, 59, "Anna Neso says, 'End Log 2.'")
+			add_custom_entry(6, 59, "Recording stopped.")
 
 		if(4)
-			storedinfo += "\[07:00\] Recording started."
-			storedinfo += "\[07:13\] Anna Neso says, '...RIGHT. I returned home for some, ah... medical treatment. Yes. That's what it was.'"
-			storedinfo += "\[07:30\] Anna Neso says, '...BUT. Expedition shall... resume, now! End Log 3.'"
-			storedinfo += "\[07:30\] Recording stopped."
+			add_custom_entry(7, 0, "Recording started.")
+			add_custom_entry(7, 13, "Anna Neso says, '...RIGHT. I returned home for some, ah... medical treatment. Yes. That's what it was.'")
+			add_custom_entry(7, 30, "Anna Neso says, '...BUT. Expedition shall... resume, now! End Log 3.'")
+			add_custom_entry(7, 30, "Recording stopped.")
 
 		if(5)
-			storedinfo += "\[07:31\] Recording started."
-			storedinfo += "\[08:23\] Anna Neso asks, '...I've found a medical bay. Abandoned, and destroyed--rife with the flesh that I now know to indicate this is part of The Terraformer. Just what... happened, here? Who was operating this place? Us?'"
-			storedinfo += "\[08:45\] Anna Neso says, 'I... hate the sounds that those sphincter-doors make. Sets me on edge. Always think something's gonna just... j-jump out at me.'"
-			storedinfo += "\[08:46\] Anna Neso , 'Sighs.'"
-			storedinfo += "\[08:50\] Anna Neso says, '...End Log 4.'"
-			storedinfo += "\[08:50\] Recording stopped."
+			add_custom_entry(7, 31, "Recording started.")
+			add_custom_entry(8, 23, "Anna Neso asks, '...I've found a medical bay. Abandoned, and destroyed--rife with the flesh that I now know to indicate this is part of The Terraformer. Just what... happened, here? Who was operating this place? Us?'")
+			add_custom_entry(8, 45, "Anna Neso says, 'I... hate the sounds that those sphincter-doors make. Sets me on edge. Always think something's gonna just... j-jump out at me.'")
+			add_custom_entry(8, 46, "Anna Neso , 'Sighs.'")
+			add_custom_entry(8, 50, "Anna Neso says, '...End Log 4.'")
+			add_custom_entry(8, 50, "Recording stopped.")
 
 		if(6)
-			storedinfo += "\[08:51\] Recording started."
-			storedinfo += "\[09:09\] Anna Neso says, 'Lets out a panicked pant 'n a gasp. '...I-it... s-spoke to me, again. Closer, this time.'"
-			storedinfo += "\[09:17\] Anna Neso says, 'We feel you', it said. Again and again.'"
-			storedinfo += "\[09:24\] Anna Neso says, 'T-the... flesh, I mean.'"
-			storedinfo += "\[09:30\] Anna Neso says, 'The walls, they--'"
-			storedinfo += "\[09:38\] Anna Neso says, 'More of them. They started to grow.'"
-			storedinfo += "\[09:51\] Anna Neso says, '...T-towards me, they did.'"
-			storedinfo += "\[09:55\] Anna Neso says, 'To close me in.'"
-			storedinfo += "\[10:12\] Anna Neso says, '...'Join us', is all the deliberation it asked prior.'"
-			storedinfo += "\[10:24\] Anna Neso says, 'Lets out a sharp, weary sigh.'"
-			storedinfo += "\[10:33\] Anna Neso says, '...S-shit. More of it's coming-'"
-			storedinfo += "\[10:35\] Anna Neso says, 'END LOG 5.'"
-			storedinfo += "\[10:36\] Recording stopped."
+			add_custom_entry(8, 51, "Recording started.")
+			add_custom_entry(9, 9, "Anna Neso says, 'Lets out a panicked pant 'n a gasp. '...I-it... s-spoke to me, again. Closer, this time.'")
+			add_custom_entry(9, 17, "Anna Neso says, 'We feel you', it said. Again and again.'")
+			add_custom_entry(9, 24, "Anna Neso says, 'T-the... flesh, I mean.'")
+			add_custom_entry(9, 30, "Anna Neso says, 'The walls, they--'")
+			add_custom_entry(9, 38, "Anna Neso says, 'More of them. They started to grow.'")
+			add_custom_entry(9, 51, "Anna Neso says, '...T-towards me, they did.'")
+			add_custom_entry(9, 55, "Anna Neso says, 'To close me in.'")
+			add_custom_entry(10, 12, "Anna Neso says, '...'Join us', is all the deliberation it asked prior.'")
+			add_custom_entry(10, 24, "Anna Neso says, 'Lets out a sharp, weary sigh.'")
+			add_custom_entry(10, 33, "Anna Neso says, '...S-shit. More of it's coming-'")
+			add_custom_entry(10, 35, "Anna Neso says, 'END LOG 5.'")
+			add_custom_entry(10, 36, "Recording stopped.")
 
 		if(7)
-			storedinfo += "\[23:14\] Recording started."
-			storedinfo += "\[00:19\] Anna Neso says, '...R-right, ah... this is... Anna Neso, Xenoarchaeologist, concerning a... strange GPS signal, located in the underdark.'"
-			storedinfo += "\[00:30\] Anna Neso says, 'Begin... l-log... 3.'"
-			storedinfo += "\[01:09\] Anna Neso says, '...It's... a corpse. Looks like that... lady in Security.'"
-			storedinfo += "\[01:26\] Anna Neso says, '...Or... at least it... s-should be dead.'"
-			storedinfo += "\[01:37\] Anna Neso asks, '...It's... whispering?'"
-			storedinfo += "\[01:44\] Anna Neso says, '...I'll... try and... g-get... closer.'"
-			storedinfo += "\[02:49\] Anna Neso says, '...R-right, ah... it's... definitely her.'"
-			storedinfo += "\[02:53\] Unknown whispers, 'Help me!'"
-			storedinfo += "\[03:04\] Anna Neso says, '...A-ah, uhm...'"
-			storedinfo += "\[03:22\] Anna Neso says, '...They... appear to be asking for help, in case i--'"
-			storedinfo += "\[03:25\] Anna Neso says, 'GAGHK-'"
-			storedinfo += "\[03:32\] Anna Neso says, 'F-fuck-'"
-			storedinfo += "\[03:37\] Anna Neso says, 'Fuck. Fucking... s-shit--'"
-			storedinfo += "\[03:44\] Anna Neso says, 'She...'"
-			storedinfo += "\[03:51\] Anna Neso says, 'E-eghk... f-fucking... bursted.'"
-			storedinfo += "\[03:59\] Anna Neso says, '...Fuck. Fucking hell.'"
-			storedinfo += "\[04:22\] Anna Neso says, 'Takes a shuddering, hyperventilated breath.'"
-			storedinfo += "\[04:30\] Anna Neso says, '...A-ah, uhm...'"
-			storedinfo += "\[04:37\] Anna Neso says, '...S-something is... writing. On the floor.'"
-			storedinfo += "\[04:53\] Anna Neso stutters, 'G-G-GAG-Ghk... &#34;o-ours-s...&#34;'"
-			storedinfo += "\[05:03\] Anna Neso says, '...S-something... is... something is WRONG.'"
-			storedinfo += "\[05:12\] Anna Neso says, '...I-it's... there's... something... moving.'"
-			storedinfo += "\[05:19\] Anna Neso stammers, 'In-nsid-de of-f... m-me...!'"
-			storedinfo += "\[05:26\] Anna Neso says, 'Lets out a shuddering gasp.'"
-			storedinfo += "\[05:40\] Anna Neso says, '...F-fuck. Sensors. Right. Sensors.'"
-			storedinfo += "\[05:57\] Anna Neso stutters, '...I-I...'"
-			storedinfo += "\[06:47\] Anna Neso stammers, '...S-S-s-st-t-tar-rs, it-t-t-t... it-t-t-t h-h-hur-rt-ts-s...'"
-			storedinfo += "\[06:53\] Anna Neso says, '...Can't... breath...'"
-			storedinfo += "\[07:12\] Anna Neso says, '...T-the... ladder. Right. Gotta... get to the... f-fuckin'...'"
-			storedinfo += "\[07:23\] Anna Neso stammers, '...G-G-Gh-h-hh-hk.'"
-			storedinfo += "\[07:48\] Anna Neso says, '...F-fuck. Is that... mine?'"
-			storedinfo += "\[07:53\] Anna Neso says, 'We feel you... Crawling within us...'"
-			storedinfo += "\[07:59\] Anna Neso , 'Yells in pain!'"
-			storedinfo += "\[08:02\] Anna Neso stammers, '...G-G-g-gag-g-gh-hk-k... w-w-wh-ho...?'"
-			storedinfo += "\[08:05\] Anna Neso stammers, 'Is-s t-t-that-t... m-m-me?'"
-			storedinfo += "\[08:38\] Anna Neso says, '...J-just... m-make it... stop, please...'"
-			storedinfo += "\[08:40\] Anna Neso says, 'We are one now.... Embrace your flesh... We speak in glorious harmony with you.. Let your meat sing with us. Sing... Sing... Forever eternal...'"
-			storedinfo += "\[09:09\] Anna Neso says, '...I-I don't...'"
-			storedinfo += "\[09:23\] Anna Neso says, '...It... hurts. I don't... w-want to.'"
-			storedinfo += "\[09:42\] Anna Neso stutters, '...P-P-p-pl-lease, j-jus-st-t...'"
-			storedinfo += "\[09:45\] Anna Neso stammers, '...A l-lit-ttl-le... f-fur-rt-t-t-th-h-her-r-r.'"
-			storedinfo += "\[09:54\] Anna Neso exclaims, 'Pain brings change, as meat becomes pure... Sing with us. Sing with us!'"
-			storedinfo += "\[09:58\] Anna Neso says, '...Wait, no, this is...'"
-			storedinfo += "\[10:02\] Anna Neso says, 'This is the wrong way-'"
-			storedinfo += "\[10:38\] Anna Neso says, 'Breathes hard, labored, and panicked... the sound of something dripping audible, echoing off the cavern walls.'"
-			storedinfo += "\[10:42\] Anna Neso says, 'We will become one with them all...'"
-			storedinfo += "\[10:54\] Anna Neso says, '...G-ghhk...'"
-			storedinfo += "\[11:06\] Anna Neso stutters, '...W-We... w-we'l-ll-l-l-l...'"
-			storedinfo += "\[11:12\] Anna Neso stammers, '...'"
-			storedinfo += "\[11:20\] Anna Neso says, '...Y-yes. Of... course.'"
-			storedinfo += "\[11:54\] Anna Neso stutters, '...Rig-gh-h-ht-t.'"
-			storedinfo += "\[12:50\] Recording stopped."
+			add_custom_entry(0, 14, "Recording started.")
+			add_custom_entry(0, 19, "Anna Neso says, '...R-right, ah... this is... Anna Neso, Xenoarchaeologist, concerning a... strange GPS signal, located in the underdark.'")
+			add_custom_entry(0, 30, "Anna Neso says, 'Begin... l-log... 3.'")
+			add_custom_entry(1, 9, "Anna Neso says, '...It's... a corpse. Looks like that... lady in Security.'")
+			add_custom_entry(1, 26, "Anna Neso says, '...Or... at least it... s-should be dead.'")
+			add_custom_entry(1, 37, "Anna Neso asks, '...It's... whispering?'")
+			add_custom_entry(1, 44, "Anna Neso says, '...I'll... try and... g-get... closer.'")
+			add_custom_entry(2, 49, "Anna Neso says, '...R-right, ah... it's... definitely her.'")
+			add_custom_entry(2, 53, "Unknown whispers, 'Help me!'")
+			add_custom_entry(3, 04, "Anna Neso says, '...A-ah, uhm...'")
+			add_custom_entry(3, 22, "Anna Neso says, '...They... appear to be asking for help, in case i--'")
+			add_custom_entry(3, 25, "Anna Neso says, 'GAGHK-'")
+			add_custom_entry(3, 32, "Anna Neso says, 'F-fuck-'")
+			add_custom_entry(3, 37, "Anna Neso says, 'Fuck. Fucking... s-shit--'")
+			add_custom_entry(3, 44, "Anna Neso says, 'She...'")
+			add_custom_entry(3, 51, "Anna Neso says, 'E-eghk... f-fucking... bursted.'")
+			add_custom_entry(3, 59, "Anna Neso says, '...Fuck. Fucking hell.'")
+			add_custom_entry(4, 22, "Anna Neso says, 'Takes a shuddering, hyperventilated breath.'")
+			add_custom_entry(4, 30, "Anna Neso says, '...A-ah, uhm...'")
+			add_custom_entry(4, 37, "Anna Neso says, '...S-something is... writing. On the floor.'")
+			add_custom_entry(4, 53, "Anna Neso stutters, 'G-G-GAG-Ghk... &#34;o-ours-s...&#34;'")
+			add_custom_entry(5, 03, "Anna Neso says, '...S-something... is... something is WRONG.'")
+			add_custom_entry(5, 12, "Anna Neso says, '...I-it's... there's... something... moving.'")
+			add_custom_entry(5, 19, "Anna Neso stammers, 'In-nsid-de of-f... m-me...!'")
+			add_custom_entry(5, 26, "Anna Neso says, 'Lets out a shuddering gasp.'")
+			add_custom_entry(5, 40, "Anna Neso says, '...F-fuck. Sensors. Right. Sensors.'")
+			add_custom_entry(5, 57, "Anna Neso stutters, '...I-I...'")
+			add_custom_entry(6, 47, "Anna Neso stammers, '...S-S-s-st-t-tar-rs, it-t-t-t... it-t-t-t h-h-hur-rt-ts-s...'")
+			add_custom_entry(6, 53, "Anna Neso says, '...Can't... breath...'")
+			add_custom_entry(7, 12, "Anna Neso says, '...T-the... ladder. Right. Gotta... get to the... f-fuckin'...'")
+			add_custom_entry(7, 23, "Anna Neso stammers, '...G-G-Gh-h-hh-hk.'")
+			add_custom_entry(7, 48, "Anna Neso says, '...F-fuck. Is that... mine?'")
+			add_custom_entry(7, 53, "Anna Neso says, 'We feel you... Crawling within us...'")
+			add_custom_entry(7, 59, "Anna Neso , 'Yells in pain!'")
+			add_custom_entry(8, 02, "Anna Neso stammers, '...G-G-g-gag-g-gh-hk-k... w-w-wh-ho...?'")
+			add_custom_entry(8, 05, "Anna Neso stammers, 'Is-s t-t-that-t... m-m-me?'")
+			add_custom_entry(8, 38, "Anna Neso says, '...J-just... m-make it... stop, please...'")
+			add_custom_entry(8, 40, "Anna Neso says, 'We are one now.... Embrace your flesh... We speak in glorious harmony with you.. Let your meat sing with us. Sing... Sing... Forever eternal...'")
+			add_custom_entry(9, 9, "Anna Neso says, '...I-I don't...'")
+			add_custom_entry(9, 24, "Anna Neso says, '...It... hurts. I don't... w-want to.'")
+			add_custom_entry(9, 42, "Anna Neso stutters, '...P-P-p-pl-lease, j-jus-st-t...'")
+			add_custom_entry(9, 45, "Anna Neso stammers, '...A l-lit-ttl-le... f-fur-rt-t-t-th-h-her-r-r.'")
+			add_custom_entry(9, 54, "Anna Neso exclaims, 'Pain brings change, as meat becomes pure... Sing with us. Sing with us!'")
+			add_custom_entry(9, 58, "Anna Neso says, '...Wait, no, this is...'")
+			add_custom_entry(10, 02, "Anna Neso says, 'This is the wrong way-'")
+			add_custom_entry(10, 38, "Anna Neso says, 'Breathes hard, labored, and panicked... the sound of something dripping audible, echoing off the cavern walls.'")
+			add_custom_entry(10, 42, "Anna Neso says, 'We will become one with them all...'")
+			add_custom_entry(10, 54, "Anna Neso says, '...G-ghhk...'")
+			add_custom_entry(11, 06, "Anna Neso stutters, '...W-We... w-we'l-ll-l-l-l...'")
+			add_custom_entry(11, 12, "Anna Neso stammers, '...'")
+			add_custom_entry(11, 20, "Anna Neso says, '...Y-yes. Of... course.'")
+			add_custom_entry(11, 54, "Anna Neso stutters, '...Rig-gh-h-ht-t.'")
+			add_custom_entry(12, 40, "Recording stopped.")
+
+		if(8)
+			add_custom_entry( 0, 4, "Recording started.")
+			add_custom_entry( 0, 4, "Anna Neso says, '...Egh. Right.'")
+			add_custom_entry( 1, 0, "Anna Neso says, 'This is Anna Neso, Xenoarchaelogist, speaking on strange happenings near the Muriki terraforming outpost on September 13th, 2569.'")
+			add_custom_entry( 1, 3, "Anna Neso says, 'Log begins.'")
+			add_custom_entry( 1, 48, "Anna Neso says, 'Lets out a long, breathy sigh. '...Well, ah... I... found a transcript of that tape that was lost when I... became a changeling, seemingly.''")
+			add_custom_entry( 2, 50, "Anna Neso asks, '...There are copies of it spread about all outside--same as when I found a copy of one of my old tapes. This one, though... it... should be lost?'")
+			add_custom_entry( 3, 21, "Anna Neso says, '...It's, ah... w-well.'")
+			add_custom_entry( 3, 32, "Anna Neso says, '...The contents are... concerning, to say the least.'")
+			add_custom_entry( 4, 20, "Anna Neso says, 'And... there seem t'be a number of them. Outside, and near windows.'")
+			add_custom_entry( 4, 56, "Anna Neso says, 'I've... gone ahead and collected as many as I could. I'd like not t'have Security up my ass trying to investigate--least of all when I'm already dealin' with my crew records being corrupted.'")
+			add_custom_entry( 5, 16, "Anna Neso says, '...In... any case. I might give telescience another shot later, perhaps.'")
+			add_custom_entry( 5, 20, "Anna Neso says, 'End log.'")
+			add_custom_entry( 5, 20, "Recording stopped.")

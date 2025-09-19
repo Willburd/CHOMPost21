@@ -47,7 +47,7 @@
 		var/obj/item/disk/nuclear/disk = new /obj/item/disk/nuclear(nukedisk_spawn_loc)
 		log_world("Nuclear disk spawned, location [disk.loc.x] [disk.loc.y] [disk.loc.z]")
 	else
-		error("No nuclear landmarks defined")
+		log_world("## ERROR No nuclear landmarks defined")
 
 /obj/machinery/nuclearbomb/station/Destroy()
 	flash_tiles.Cut()
@@ -291,11 +291,11 @@
 		play_cinematic(/datum/cinematic/nuke/self_destruct)
 		if(SSticker.mode)
 			SSticker.mode.explosion_in_progress = 0
-			to_world("<B>The station was destroyed by the nuclear blast!</B>")
+			to_chat(world,"<B>The station was destroyed by the nuclear blast!</B>")
 
 			SSticker.mode.station_was_nuked = FALSE
 			if(!SSticker.mode.check_finished())//If the mode does not deal with the nuke going off so just reboot because everyone is stuck as is
-				to_world("<B>Resetting in 30 seconds!</B>")
+				to_chat(world,"<B>Resetting in 30 seconds!</B>")
 
 				feedback_set_details("end_error","nuke - unhandled ending")
 

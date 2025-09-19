@@ -34,7 +34,7 @@
 		var/datum/component/badbody/B = badbody.AddComponent(/datum/component/badbody)
 		B.harm_body()
 		B.set_items()
-		log_debug("successfully spawned badbody [badbody.real_name] at [T.x] [T.y] [T.z].")
+		log_world("## DEBUG: successfully spawned badbody [badbody.real_name] at [T.x] [T.y] [T.z].")
 		qdel(env)
 
 /client/proc/escape_shuttle_force()

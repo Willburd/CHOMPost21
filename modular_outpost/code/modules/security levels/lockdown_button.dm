@@ -10,6 +10,7 @@
 	idle_power_usage = 2
 	active_power_usage = 6
 	power_channel = ENVIRON
+	req_one_access = list( ACCESS_KEYCARD_AUTH, ACCESS_HEADS, ACCESS_HEADS_VAULT, ACCESS_BRIG)
 	VAR_PRIVATE/unlocked = FALSE
 	VAR_PRIVATE/list/linked_lockdowns = list("Example Name" = "blast_tag")
 	VAR_PRIVATE/list/linked_jokes = list("Example Name" = "Joke here.")
@@ -23,8 +24,7 @@
 		to_chat(user, "This device is not powered.")
 		return
 	if(istype(W,/obj/item/card/id))
-		var/obj/item/card/id/ID = W
-		if(ACCESS_KEYCARD_AUTH in ID.access)
+		if(check_access(W))
 			unlocked = !unlocked
 			updateUsrDialog()
 		else

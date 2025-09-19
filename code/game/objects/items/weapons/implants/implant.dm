@@ -150,15 +150,14 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 	return ..()
 
 /obj/item/implant/tracking/process()
-	// Outpost 21 edit(port) begin - Fix tracking implants using the wrong loc
-	var/obj/item/organ/implant_location = src.loc
-	implant_location = implant_location.owner
-	// Outpost 21 edit(port) end
+	var/mob/living/implant_mob // Get implant's mob from our host organ
+	if(istype(loc, /obj/item/organ))
+		var/obj/item/organ/O = loc
+		implant_mob = O.owner
 
-	if(ismob(implant_location))
-		var/mob/living/L = implant_location
-		if(L.stat == DEAD)
-			if(world.time >= L.timeofdeath + degrade_time)
+	if(ismob(implant_mob))
+		if(implant_mob.stat == DEAD)
+			if(world.time >= implant_mob.timeofdeath + degrade_time)
 				name = "melted implant"
 				desc = "Charred circuit in melted plastic case. Wonder what that used to be..."
 				icon_state = "implant_melted"
@@ -166,7 +165,7 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 				STOP_PROCESSING(SSobj, src)
 		// Outpost 21 edit begin - Tracking implant notifications
 		else
-			var/area/A = get_area(L)
+			var/area/A = get_area(implant_mob)
 			if(A && is_type_in_list(A,forbidden_areas))
 				if(!in_secure_area)
 					GLOB.global_announcer.autosay("A tracking implant entered secure area: [A]!", "Tracking Implant Monitor", CHANNEL_SECURITY)

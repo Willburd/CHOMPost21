@@ -53,6 +53,7 @@
 		if(istype(AM, /mob/living/silicon/robot/drone))
 			var/mob/living/silicon/robot/drone/drone = AM
 			src.destinationTag = drone.mail_destination
+		SEND_SIGNAL(AM, COMSIG_ATOM_DISPOSAL_FLUSHED, src)
 
 // movement process, persists while holder is moving through pipes
 /obj/structure/disposalholder/proc/move()
@@ -144,9 +145,10 @@
 	if(!isliving(user))
 		return
 
+
 	if(user.stat || user.last_special <= world.time)
 		return
-	user.last_special = world.time+100
+	user.last_special = world.time + (1 SECOND) // CHOMPEdit: Clong, clong baby.
 
 	if(QDELETED(src))
 		return

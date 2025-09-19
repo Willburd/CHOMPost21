@@ -221,7 +221,6 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		return
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM

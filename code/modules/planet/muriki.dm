@@ -282,7 +282,7 @@ var/datum/planet/muriki/planet_muriki = null
 	effect_message = span_notice("Acidic mist surrounds you.")
 	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is misting, all you can see are corrosive clouds."
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	transition_messages = list(
 		"All you can see is fog.",
@@ -348,7 +348,7 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 1
 	light_modifier = 0.5
 	effect_message = span_notice("Acidic rain falls on you.")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is raining."
@@ -440,7 +440,7 @@ var/datum/planet/muriki/planet_muriki = null
 	light_modifier = 0.3
 	flight_failure_modifier = 10
 	effect_message = span_notice("Acidic rain falls on you.")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	min_lightning_cooldown = 5 SECONDS
 	max_lightning_cooldown = 1 MINUTE
@@ -574,7 +574,7 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 2
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is knocking you down!")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	min_lightning_cooldown = 5 SECONDS
 	max_lightning_cooldown = 15 SECONDS
@@ -638,7 +638,7 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 4
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is crushing you!")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	min_lightning_cooldown = 1 SECONDS
 	max_lightning_cooldown = 3 SECONDS
@@ -714,7 +714,7 @@ var/datum/planet/muriki/planet_muriki = null
 	timer_low_bound = 2
 	timer_high_bound = 5
 	effect_message = span_warning("The hail smacks into you!")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 

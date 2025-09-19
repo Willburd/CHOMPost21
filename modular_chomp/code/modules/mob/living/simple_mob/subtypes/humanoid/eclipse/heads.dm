@@ -53,10 +53,15 @@
 	armor_penetration = 40 //Large pointy crystal
 	damage_type = BRUTE
 	check_armour = "bullet"
-	modifier_type_to_apply = /datum/modifier/fire/weak
-	modifier_duration = 0.05 MINUTE
 	range = 12
 	hud_state = "laser_sniper"
+
+/obj/item/projectile/energy/flamecrystal/on_hit(atom/target, blocked = 0, def_zone)
+	. = ..()
+	if(isliving(target))
+		var/mob/living/L = target
+		L.adjust_fire_stacks(5)
+		L.ignite_mob()
 
 /obj/item/projectile/bullet/flamegun
 	use_submunitions = 1
@@ -544,10 +549,10 @@
 	var/health = 5
 	var/modifiertype = /datum/modifier/poisoned/weak
 
-/obj/effect/slimeattack/Crossed(atom/movable/AM as mob|obj)
-	if(AM.is_incorporeal())
+/obj/effect/slimeattack/Crossed(atom/movable/source)
+	if(source.is_incorporeal())
 		return
-	Bumped(AM)
+	Bumped(source)
 
 /obj/effect/slimeattack/attackby(var/obj/item/W, var/mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
