@@ -5427,7 +5427,6 @@
 #include "modular_outpost\code\game\jobs\job\medical.dm"
 #include "modular_outpost\code\game\jobs\job\stowaway.dm"
 #include "modular_outpost\code\game\machinery\air_alarm.dm"
-#include "modular_outpost\code\game\machinery\airlock.dm"
 #include "modular_outpost\code\game\machinery\auto_doc.dm"
 #include "modular_outpost\code\game\machinery\braces.dm"
 #include "modular_outpost\code\game\machinery\cryopod.dm"
