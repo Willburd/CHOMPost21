@@ -1899,11 +1899,13 @@
 /obj/item/flag/pirate
 	name = "pirate flag"
 	desc = "Shiver me timbers, hoist the black!"
+	icon_state = "pirate"
 	flag_path = "pirate"
 
 
 /obj/item/flag/pirate/l
 	name = "large pirate flag"
+	icon_state = "pirate"
 	flag_size = 1
 
 //Catpirate
