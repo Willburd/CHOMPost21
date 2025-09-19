@@ -1,8 +1,10 @@
+GLOBAL_VAR_INIT(Recycled_Items, 0)
+
 /obj/machinery/v_garbosystem
 	icon = 'modular_chomp/icons/obj/machines/other.dmi'
 	icon_state = "cronchy_off"
 	name = "garbage grinder"
-	desc = "Mind your fingers. Filter access hatch can be opened with crowbar to release trapped contents within. It also has a fluid trap that can be drained with a hose into something else." // Outpost 21 edit(port) - internal reagent grinding tank
+	desc = "Mind your fingers. Filter access hatch can be opened with crowbar to release trapped contents within."
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	anchored = TRUE
@@ -16,10 +18,8 @@
 
 /obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
-	// Outpost 21 edit(port) begin - internal reagent grinding tank
-	create_reagents(CARGOTANKER_VOLUME * 4)
+	create_reagents(CARGOTANKER_VOLUME * 2)
 	AddComponent(/datum/component/hose_connector/output)
-	// Outpost 21 edit end
 	for(var/dir in GLOB.cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
 		if(src.crusher)
@@ -32,7 +32,6 @@
 			break
 	return
 
-// Outpost 21 edit(port) begin - internal reagent grinding tank
 /obj/machinery/v_garbosystem/Destroy()
 	crusher = null
 	button = null
@@ -40,10 +39,9 @@
 
 /obj/machinery/v_garbosystem/examine(mob/user, infix, suffix)
 	. = ..()
-	. += "The internal fluid tank reads: [reagents.total_volume]/[reagents.maximum_volume]"
-	if(contents.len > 1) // 1 item inside already, the Output!
-		. += "There are items in the filter's trap!"
-// Outpost 21 edit end
+	. += span_infoplain("The internal fluid tank reads: [reagents.total_volume]/[reagents.maximum_volume]")
+	if(contents.len)
+		. += span_warning("There are items in the filter's trap!")
 
 /obj/machinery/v_garbosystem/attack_hand(mob/living/user as mob)
 	operating = !operating
@@ -98,17 +96,22 @@
 							break
 						if(L.stat == DEAD)
 							playsound(src, 'sound/effects/splat.ogg', 50, 1)
+							if(L.meat_amount && L.meat_type) // Get all the goobs outta this goober
+								while(L.meat_amount > 0)
+									var/obj/item/meat = new L.meat_type(src)
+									if(meat.reagents) // Reagents are set on init, might be randomized per meat chunk too so it needs to be done on a per case basis
+										transfer_reagent_to_tank(meat.reagents,1)
+									qdel(meat)
+									L.meat_amount--
 							L.gib()
 							items_taken++
-							// Outpost 21 edit(port) begin - internal reagent grinding tank
-							transfer_organic_to_tank(5)
 							if(ishuman(L))
 								// Splorch
 								var/mob/living/carbon/human/H = L
 								transfer_reagent_to_tank(H.bloodstr,1)
 								transfer_reagent_to_tank(H.ingested,1)
 								transfer_reagent_to_tank(H.vessel,0.5)
-							// Outpost 21 addition end
+							transfer_sludge_to_tank(rand(4,9))
 						else
 							L.adjustBruteLoss(25)
 							items_taken++
@@ -121,12 +124,10 @@
 						A.SpinAnimation(5,3)
 						spawn(15)
 							if(A.loc == loc)
-								// Outpost 21 edit(port) begin - internal reagent grinding tank
 								if(A.reagents)
 									transfer_reagent_to_tank(A.reagents,1)
 								if(istype(A,/obj/item/ore))
 									transfer_ore_to_tank(A,1)
-								// Outpost 21 addition end
 								A.forceMove(src)
 								if(!is_type_in_list(A, GLOB.item_digestion_blacklist))
 									crusher.take_item(A) //Force feed the poor bastard.
@@ -136,10 +137,8 @@
 						spawn(15)
 							if(A)
 								A.forceMove(src)
-								// Outpost 21 edit(port) begin - internal reagent grinding tank
 								if(A.reagents)
 									transfer_reagent_to_tank(A.reagents,1)
-								// Outpost 21 end
 								if(istype(A, /obj/structure/closet))
 									new /obj/item/stack/material/steel(loc, 2)
 								qdel(A)
@@ -159,15 +158,14 @@
 /obj/machinery/v_garbosystem/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.is_crowbar())
 		if(!operating)
-			to_chat(user, "You crowbar the filter hatch open, releasing the items trapped within.")
+			to_chat(user, span_notice("You crowbar the filter hatch open, releasing the items trapped within."))
 			for(var/atom/movable/A in contents)
 				A.forceMove(loc)
 			return
 		else
-			to_chat(user, "Unable to empty filter while the machine is running.")
+			to_chat(user, span_warning("Unable to empty filter while the machine is running."))
 	return ..()
 
-// Outpost 21 edit(port) begin - internal reagent grinding tank
 /obj/machinery/v_garbosystem/proc/transfer_reagent_to_tank(var/datum/reagents/reg,var/multiplier)
 	var/volume_magic = reg.total_volume * multiplier
 	volume_magic -= rand(2,10) // reagent tax
@@ -186,21 +184,11 @@
 			reagents.add_reagent(ore_components, REAGENTS_PER_ORE * multiplier)
 		transfer_sludge_to_tank(rand(1,5))
 
-/obj/machinery/v_garbosystem/proc/transfer_organic_to_tank(var/amt)
-	var/ratioA = FLOOR(amt*0.2,1)
-	var/ratioB = FLOOR(amt*0.8,1)
-	if(ratioA > 0)
-		reagents.add_reagent("protein", ratioA)
-	if(ratioB > 0)
-		reagents.add_reagent("triglyceride", ratioB)
-	if(ratioB > 0 || ratioA > 0)
-		transfer_sludge_to_tank(rand(4,9))
-
 /obj/machinery/v_garbosystem/proc/transfer_sludge_to_tank(var/amt)
 	if(prob(10) || amt >= 5)
-		reagents.add_reagent("toxin",amt)
+		reagents.add_reagent(REAGENT_ID_TOXIN, amt)
 		visible_message("\The [src] gurgles.")
-// Outpost 21 edit end
+
 
 /obj/machinery/button/garbosystem
 	name = "garbage grinder switch"
@@ -212,5 +200,3 @@
 /obj/machinery/button/garbosystem/attack_hand(mob/living/user as mob)
 	if(grinder)
 		return grinder.attack_hand(user)
-
-GLOBAL_VAR_INIT(Recycled_Items, 0)
