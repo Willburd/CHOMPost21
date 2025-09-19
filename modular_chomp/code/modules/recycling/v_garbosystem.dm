@@ -18,7 +18,7 @@ GLOBAL_VAR_INIT(Recycled_Items, 0)
 
 /obj/machinery/v_garbosystem/Initialize(mapload)
 	. = ..()
-	create_reagents(CARGOTANKER_VOLUME * 2)
+	create_reagents(CARGOTANKER_VOLUME * 4) // Outpost 21 edit - Buff reagent size
 	AddComponent(/datum/component/hose_connector/output)
 	for(var/dir in GLOB.cardinal)
 		src.crusher = locate(/obj/machinery/recycling/crusher, get_step(src, dir))
