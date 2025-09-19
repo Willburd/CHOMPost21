@@ -176,7 +176,7 @@
 /obj/structure/disposalpipe/sortjunction/wildcard
 	name = "wildcard sorting junction"
 	desc = "An underfloor disposal pipe which filters all wrapped and tagged items."
-	subtype = DISPOSAL_SORT_WILDCARD // Outpost 21 edit(port) - Use your defines
+	subtype = DISPOSAL_SORT_WILDCARD
 
 /obj/structure/disposalpipe/sortjunction/wildcard/divert_check(checkTag)
 	return checkTag != ""
@@ -185,7 +185,7 @@
 /obj/structure/disposalpipe/sortjunction/untagged
 	name = "untagged sorting junction"
 	desc = "An underfloor disposal pipe which filters all untagged items."
-	subtype = DISPOSAL_SORT_UNTAGGED // Outpost 21 edit(port) - Use your defines
+	subtype = DISPOSAL_SORT_UNTAGGED
 
 /obj/structure/disposalpipe/sortjunction/untagged/divert_check(checkTag)
 	return checkTag == ""

@@ -100,13 +100,13 @@
 	if(istype(M, /obj/mecha))
 		explode(M)
 
-	if(istype(M, /obj/vehicle)) // Outpost 21 edit(port) - why do vehicles not trigger them before?
+	if(istype(M, /obj/vehicle))
 		explode(M)
 
 	if(istype(M, /mob/living/))
-		var/mob/living/L = M
-		if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit(port) - flight and tiny creatures are ignored by mines
-			explode(L)
+		var/mob/living/mob = M
+		if(!(mob.hovering || mob.flying || mob.is_incorporeal() || mob.mob_size <= MOB_TINY))
+			explode(M)
 
 /obj/effect/mine/attackby(obj/item/W as obj, mob/living/user as mob)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
@@ -442,6 +442,6 @@
 
 // This tells AI mobs to not be dumb and step on mines willingly.
 /obj/item/mine/is_safe_to_step(mob/living/L)
-	if(!L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY) // Outpost 21 edit(port) - flight and tiny creatures are ignored by mines
+	if(!(L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY))
 		return FALSE
 	return ..()
