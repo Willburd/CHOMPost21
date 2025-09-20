@@ -1,7 +1,7 @@
 /obj/item/spellbook
 	name = "spell book"
 	desc = "The legendary book of spells of the wizard."
-	icon = 'modular_outpost/icons/obj/library.dmi' // Outpost 21 edit(port) - spellbook
+	icon = 'icons/obj/library.dmi'
 	icon_state ="spellbook"
 	throw_speed = 1
 	throw_range = 5

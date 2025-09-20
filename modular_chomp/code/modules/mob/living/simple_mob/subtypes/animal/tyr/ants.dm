@@ -161,11 +161,19 @@
 	SSradiation.radiate(src, 15)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/tritium
-	name = "ritium ant"
+	name = "tritium ant"
 	icon_state = "tritium_ant"
 	icon_living = "tritium_ant"
 	butchery_loot = list(\
 		/obj/item/stack/material/tritium = 18\
+		)
+
+/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro
+	name = "mhydro ant"
+	icon_state = "mhydro_ant"
+	icon_living = "mhydro_ant"
+	butchery_loot = list(\
+		/obj/item/stack/material/mhydrogen = 6\
 		)
 
 /mob/living/simple_mob/animal/tyr/mineral_ants/builder
@@ -360,7 +368,11 @@ ANT STRUCTURES
 
 /obj/effect/ant_structure/trap/burn
 	icon_state = "burn_trap"
-	modifiertype = /datum/modifier/fire/weak
+	//No modifier.
+
+/obj/effect/ant_structure/trap/burn/attack_mob(mob/living/L)
+	L.adjust_fire_stacks(5)
+	L.ignite_mob()
 
 /obj/effect/ant_structure/trap/slowdown
 	icon_state = "slow_trap"
@@ -401,7 +413,8 @@ ANT STRUCTURES
 	/mob/living/simple_mob/animal/tyr/mineral_ants/diamond,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/verdantium,
 	/mob/living/simple_mob/animal/tyr/mineral_ants/tritium,
-	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium)
+	/mob/living/simple_mob/animal/tyr/mineral_ants/uranium,
+	/mob/living/simple_mob/animal/tyr/mineral_ants/mhydro)
 	faction = FACTION_TYR_ANT
 
 /obj/effect/ant_structure/webbarrier

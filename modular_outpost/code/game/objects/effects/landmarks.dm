@@ -22,6 +22,7 @@
 
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
+	delete_me = TRUE
 
 /obj/effect/landmark/redspacemonsterspawn/Initialize(mapload)
 	. = ..()
@@ -111,6 +112,7 @@
 
 /obj/effect/landmark/hostile_xenobio
 	name = "dangerous xeno spawner"
+	delete_me = TRUE
 
 /obj/effect/landmark/hostile_xenobio/Initialize(mapload)
 	. = ..()
@@ -178,6 +180,7 @@
 
 /obj/effect/landmark/dangerous_situation
 	name = "dangerous situation spawner"
+	delete_me = TRUE
 
 /obj/effect/landmark/dangerous_situation/Initialize(mapload)
 	. = ..()
@@ -220,14 +223,29 @@
 
 /obj/effect/landmark/step_trap
 	name = "step trap spawner"
+	delete_me = TRUE
 
 /obj/effect/landmark/step_trap/Initialize(mapload)
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
 
+/obj/effect/landmark/step_trap/LateInitialize()
 	if(prob(40))
 		return
 
-	if(!isturf(loc))
+	var/turf/T = get_turf(src)
+	if(!T)
+		return
+
+	var/obj/machinery/door/airlock/A = locate() in T
+	if(A && prob(20))
+		A.wires.cut(WIRE_ELECTRIFY)
+		A.electrify()
+		return
+
+	var/obj/structure/cable/C = locate() in T
+	if(C && prob(20) && T.is_plating())
+		C.fray()
 		return
 
 	// creates stuff like ruptured gas tanks, and landmines
@@ -269,3 +287,47 @@
 			M.deployed = TRUE
 			M.update_icon()
 			M.loc = src.loc
+
+
+
+
+/obj/effect/landmark/electrify_door
+	name = "electrify door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/electrify_door/five
+	name = "electrify door 5%"
+	chance = 5
+
+/obj/effect/landmark/electrify_door/ten
+	name = "electrify door 10%"
+	chance = 10
+
+/obj/effect/landmark/electrify_door/twentyfive
+	name = "electrify door 25%"
+	chance = 25
+
+/obj/effect/landmark/electrify_door/fifty
+	name = "electrify door 50%"
+	chance = 50
+
+/obj/effect/landmark/electrify_door/seventyfive
+	name = "electrify door 75%"
+	chance = 75
+
+/obj/effect/landmark/electrify_door/always_electrified
+	name = "electrify door 100%"
+	chance = 100
+
+/obj/effect/landmark/electrify_door/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/electrify_door/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A)
+		A.wires.cut(WIRE_ELECTRIFY)
+		A.electrify()

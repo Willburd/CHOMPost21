@@ -35,7 +35,7 @@
 	category = list(
 		RND_CATEGORY_CIRCUITRY
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - Robotics is engineering, was
 
 /datum/design_techweb/wirer
 	name = "Custom wirer tool"

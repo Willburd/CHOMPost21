@@ -95,7 +95,7 @@
 		// outpost 21 edit begin - nuke item random spawns
 		if("nukeitem")
 			nukeitems += loc
-			delete_me = 1
+			delete_me = TRUE
 		// outpost 21 edit end
 
 	if(delete_me)

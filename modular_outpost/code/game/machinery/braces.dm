@@ -136,18 +136,18 @@
 	// unlock brace to door
 	airlock.brace = null
 	airlock.update_icon()
-	airlock = null
 	anchored = FALSE
 	// reset brace to item layer
 	pixel_x = 0
 	pixel_y = 0
 	reset_plane_and_layer()
-	update_icon()
 	if(user)
 		user.put_in_hands(src)
 		airlock.visible_message("\The [user] removes \the [src] from \the [airlock]!")
 	else
 		dropInto(loc)
+	airlock = null
+	update_icon()
 
 
 /obj/item/airlock_brace/proc/health_percentage()
