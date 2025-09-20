@@ -8061,6 +8061,10 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
+"anu" = (
+/obj/structure/ladder,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
 "anv" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
@@ -8467,11 +8471,6 @@
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north)
-"aor" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/cave/shelter/north_west)
 "aos" = (
 /obj/effect/floor_decal/corner/white/full,
 /obj/machinery/alarm{
@@ -8789,9 +8788,6 @@
 	},
 /turf/simulated/wall,
 /area/muriki/grounds/tramborder)
-"ape" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/north_west)
 "apf" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -116526,11 +116522,11 @@ aiP
 aiP
 aiP
 aiP
-ape
-ape
-ape
-aor
-aor
+aiP
+aiP
+aiP
+dMj
+dMj
 dMj
 oeQ
 oeQ
@@ -116688,11 +116684,11 @@ aiP
 aiP
 aiP
 aiP
-ape
-ape
-ape
-ape
-aor
+aiP
+aiP
+aiP
+aiP
+dMj
 dMj
 aiP
 hOy
@@ -116850,11 +116846,11 @@ aiP
 aiP
 aiP
 aiP
-ape
-ape
-ape
-ape
-ape
+aiP
+aiP
+aiP
+aiP
+aiP
 dMj
 hOy
 hOy
@@ -117012,11 +117008,11 @@ aiP
 aiP
 aiP
 aiP
-ape
-ape
-ape
-ape
-ape
+aiP
+aiP
+aiP
+aiP
+aiP
 dMj
 hOy
 hOy
@@ -148196,7 +148192,7 @@ rJa
 cCp
 jnX
 jnX
-cCp
+anu
 rJa
 rJa
 rJa
