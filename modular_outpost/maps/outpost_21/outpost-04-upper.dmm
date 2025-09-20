@@ -890,9 +890,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
 "abX" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 10
-	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
@@ -1142,6 +1139,22 @@
 	outdoors = 1
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
+"act" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/random/maintenance,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/arrivals)
+"acu" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
 "acw" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -5418,6 +5431,9 @@
 	desc = "A large cabinet with hard copy medical records.";
 	name = "Medical Records"
 	},
+/obj/item/folder/blue{
+	pixel_x = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "cac" = (
@@ -8643,7 +8659,9 @@
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/medbreak)
 "dHc" = (
-/obj/machinery/bodyscanner,
+/obj/machinery/body_scanconsole{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "dHu" = (
@@ -9482,9 +9500,6 @@
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
 "eca" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 5
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "ecs" = (
@@ -12098,7 +12113,6 @@
 /area/maintenance/substation/civilian)
 "fqP" = (
 /obj/machinery/door/firedoor/glass,
-/obj/item/airlock_brace,
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_one_access = list(10)
 	},
@@ -12203,14 +12217,16 @@
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "fvI" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 4
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -35
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "fwg" = (
@@ -13822,6 +13838,9 @@
 /obj/item/paper_bin,
 /obj/item/stamp/cmo,
 /obj/item/pen/fountain4,
+/obj/item/clipboard{
+	pixel_x = 9
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "goB" = (
@@ -17528,6 +17547,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/full,
 /obj/effect/landmark/holiday_event_spawn,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "iiA" = (
@@ -17643,10 +17665,8 @@
 /area/crew_quarters/medbreak)
 "inc" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/medical{
-	id_tag = "ResleevingDoor";
-	name = "Emergency Body Scanner";
-	req_access = list(5)
+/obj/machinery/door/airlock/glass_medical{
+	name = "Emergency Body Scanner"
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/sleevecheck)
@@ -19866,7 +19886,7 @@
 "jsr" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list(10)
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/gravgen)
@@ -20170,9 +20190,6 @@
 	},
 /area/chapel/main)
 "jyY" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 8
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -20996,14 +21013,8 @@
 	},
 /area/chapel/main)
 "jTH" = (
-/obj/effect/floor_decal/corner/pink,
 /obj/structure/cable/green{
 	icon_state = "2-4"
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -28;
-	pixel_y = 12
 	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Shuttle Scanner";
@@ -21754,17 +21765,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintop_pathway)
-"kmY" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 1
-	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 26
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/sleevecheck)
 "knz" = (
 /obj/structure/railing{
 	dir = 4
@@ -23223,9 +23223,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cargobay_roof)
 "kVB" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 6
-	},
 /obj/machinery/power/apc{
 	cell_type = /obj/item/cell/super;
 	dir = 8;
@@ -24020,7 +24017,10 @@
 /obj/structure/table/rack,
 /obj/item/rig/hazmat/equipped,
 /obj/structure/window/reinforced,
-/obj/item/rig/medical/equipped,
+/obj/item/rig/medical/equipped{
+	req_one_access = list(5);
+	req_access = null
+	},
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Medical Rescue Suit Storage";
 	req_access = null;
@@ -26372,7 +26372,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "mEZ" = (
-/obj/machinery/body_scanconsole,
+/obj/machinery/bodyscanner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "mFG" = (
@@ -30600,9 +30602,6 @@
 /turf/simulated/floor,
 /area/rnd/misc_lab)
 "oJY" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 10
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -36150,7 +36149,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list(10)
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/gravgen)
@@ -36224,16 +36223,14 @@
 /area/crew_quarters/medbreak)
 "rAL" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/medical{
-	id_tag = "ResleevingDoor";
-	name = "Emergency Body Scanner";
-	req_access = list(5)
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass_medical{
+	name = "Emergency Body Scanner"
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/sleevecheck)
 "rAO" = (
@@ -38457,6 +38454,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "sIm" = (
@@ -40361,9 +40361,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "tAd" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 5
-	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
@@ -44625,16 +44622,20 @@
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsmainhall)
 "vyr" = (
-/obj/effect/floor_decal/corner/pink{
-	dir = 9
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleevecheck)
 "vzm" = (
-/obj/random/maintenance,
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
 	},
+/obj/structure/table/rack,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "vzN" = (
@@ -46721,8 +46722,6 @@
 /area/muriki/processor/hall)
 "wGx" = (
 /obj/structure/table/reinforced,
-/obj/item/clipboard,
-/obj/item/folder/blue,
 /obj/machinery/computer/skills{
 	dir = 8
 	},
@@ -93131,12 +93130,12 @@ abc
 kCZ
 xFc
 cNn
-hQk
+acu
 hoC
 vgu
 jyY
 vyr
-kmY
+eca
 vgu
 pJM
 iEZ
@@ -93298,7 +93297,7 @@ lOa
 uIJ
 vgu
 inc
-vgu
+uIJ
 uIJ
 alI
 dyk
@@ -96068,7 +96067,7 @@ djC
 lkI
 djC
 xQY
-bWf
+act
 ngx
 bWf
 lwz
