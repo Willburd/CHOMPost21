@@ -5169,7 +5169,6 @@
 #include "modular_chomp\code\modules\halloween\snacks.dm"
 #include "modular_chomp\code\modules\hydro\plants.dm"
 #include "modular_chomp\code\modules\hydro\plantsstorage.dm"
-#include "modular_chomp\code\modules\hydroponics\spreading\spreading.dm"
 #include "modular_chomp\code\modules\instruments\items.dm"
 #include "modular_chomp\code\modules\instruments\stationary.dm"
 #include "modular_chomp\code\modules\living\carbon\human\ai_controlled\ai_controlled.dm"
