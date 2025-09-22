@@ -130,7 +130,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 
 	if(ishuman(usr))
 		var/mob/living/carbon/human/M = usr
-		if(!( istype(over_object, /obj/screen) ))
+		if(!( istype(over_object, /atom/movable/screen) ))
 			return ..()
 		playsound(src, "rustle", 50, 1, -5)
 		if((!( M.restrained() ) && !( M.stat ) && M.back == src))
@@ -223,8 +223,6 @@ GLOBAL_VAR_INIT(photo_count, 0)
 				if(A.invisibility) continue
 				if(A.plane > 0 && !(A.plane in picture_planes)) continue
 			else
-				var/mob/observer/dead/G = A
-				if(G.admin_ghosted) continue // Hide Aghosts
 				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
 			atoms.Add(A)
 			// Outpost 21 edit end

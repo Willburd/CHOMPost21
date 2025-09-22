@@ -249,6 +249,7 @@
 	. += /decl/emote/audible/synth/dwoop
 	. += /decl/emote/audible/synth/boop
 	. += /decl/emote/audible/synth/robochirp
+	. += /decl/emote/audible/synth/bhonk // Outpost 21 edit - Honk borg
 
 /datum/category_item/catalogue/technology/drone/corrupt_hound/janihound
 	name = "Drone - Corrupt Hound"

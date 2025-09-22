@@ -1,2 +1,2 @@
 /mob
-	var/obj/screen/borer/chems/borer_chem_display = null
+	var/atom/movable/borer/chems/borer_chem_display = null
