@@ -6120,6 +6120,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/item/tool/crowbar/brace_jack,
 /turf/simulated/floor/wood/alt,
 /area/mine/unexplored/muriki/mountaintopnorth)
 "crB" = (
@@ -15375,6 +15376,9 @@
 "hfB" = (
 /obj/structure/table/woodentable,
 /obj/fruitspawner/ambrosia,
+/obj/item/material/butterflyblade{
+	material = "durasteel"
+	},
 /turf/simulated/floor/wood/alt,
 /area/mine/unexplored/muriki/mountaintopnorth)
 "hfL" = (
@@ -26849,6 +26853,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/item/toy/plushie/borgplushie/drake/med{
+	name = "Prae Prae";
+	desc = "An adorable stuffed toy of a familiar robot!"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "mQf" = (
@@ -32753,9 +32761,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/gamblingtable,
-/obj/item/toy/plushie/borgplushie/drake/trauma{
-	name = "Prae Prae"
-	},
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/medbreak)
 "pKF" = (
@@ -45104,6 +45109,9 @@
 	},
 /obj/structure/table/woodentable,
 /obj/machinery/microwave,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -35
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "vMd" = (

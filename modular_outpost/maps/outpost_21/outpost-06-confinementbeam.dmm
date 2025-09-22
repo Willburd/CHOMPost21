@@ -1141,6 +1141,14 @@
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
+"cw" = (
+/obj/item/toy/plushie/borgplushie/drake/eng{
+	name = "Raz";
+	desc = "An adorable stuffed toy of a familiar robot!"
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "cx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
@@ -54235,7 +54243,7 @@ vH
 eu
 eu
 IC
-es
+cw
 Ws
 eu
 eu
@@ -54397,7 +54405,7 @@ JF
 eu
 eu
 aN
-eu
+es
 eu
 eu
 ac
