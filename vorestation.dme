@@ -5527,6 +5527,7 @@
 #include "modular_outpost\code\modules\economy\vending_machines.dm"
 #include "modular_outpost\code\modules\emotes\definitions\audible_custom.dm"
 #include "modular_outpost\code\modules\emotes\definitions\audible_scream.dm"
+#include "modular_outpost\code\modules\emotes\definitions\synthetic.dm"
 #include "modular_outpost\code\modules\emotes\definitions\visible.dm"
 #include "modular_outpost\code\modules\emotes\definitions\visible_animated.dm"
 #include "modular_outpost\code\modules\error_handler\error_handler.dm"
