@@ -169,7 +169,7 @@
 /obj/item/encryptionkey/qm
 	name = "quartermaster's encryption key"
 	icon_state = "qm_cypherkey"
-	channels = list(/*CHANNEL_COMMAND = 1,*/ CHANNEL_SUPPLY = 1) // CHOMPEdit Remove Command
+	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SUPPLY = 1) // CHOMPEdit Remove Command. Outpost 21 Back to command!
 
 /obj/item/encryptionkey/pilot
 	name = "pilot's encryption key"
