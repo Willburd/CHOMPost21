@@ -25009,10 +25009,6 @@
 /obj/structure/railing,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
-"fzO" = (
-/obj/structure/ladder,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountainnorth)
 "fzS" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /obj/effect/floor_decal/flesh{
@@ -128925,7 +128921,7 @@ aiP
 aiP
 aiP
 awI
-fzO
+wrH
 wrH
 wrH
 wrH
