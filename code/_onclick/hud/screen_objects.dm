@@ -630,9 +630,14 @@
 
 		if("shadekin status")
 			var/turf/T = get_turf(usr)
+			// outpost 21 addition begin - lockers are dark and spooky!
+			var/darkness = 0
 			if(T)
-				var/darkness = round(1 - T.get_lumcount(),0.1)
+				darkness = round(1 - T.get_lumcount(),0.1)
 				to_chat(usr,span_notice(span_bold("Darkness:") + " [darkness]"))
+			if(istype(usr.loc,/obj/structure/closet)) // it's dark in here!
+				darkness = 1
+			// outpost 21 addition end
 			var/mob/living/H = usr
 			if(ismob(H))
 				var/datum/component/shadekin/SK = H.get_shadekin_component()
@@ -669,6 +674,14 @@
 						feral_passing = FALSE
 					if(feral_passing)
 						var/turf/T = get_turf(H)
+						// outpost 21 addition begin - lockers are dark and spooky!
+						var/darkness = 0
+						if(T)
+							darkness = round(1 - T.get_lumcount(),0.1)
+						if(istype(H.loc,/obj/structure/closet))
+							darkness = 1 // it's dark in here!
+						if(darkness <= 0.1)
+						// outpost 21 addition end
 						if(T.get_lumcount() <= 0.1)
 							to_chat(usr, span_notice("You are slowly calming down in darkness' safety..."))
 						else if(isbelly(H.loc)) // Safety message for if inside a belly.
