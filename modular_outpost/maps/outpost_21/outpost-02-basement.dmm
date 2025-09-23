@@ -23194,6 +23194,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/morgue)
+"aPK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/med)
 "aPL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -34620,7 +34629,7 @@
 	dir = 4
 	},
 /turf/simulated/wall,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bkV" = (
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/tiled/milspec,
@@ -38221,13 +38230,10 @@
 /area/engineering/atmos/monitoring)
 "brv" = (
 /obj/structure/cable/orange{
-	icon_state = "2-9"
-	},
-/obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "brw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -51238,7 +51244,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bPN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -51250,7 +51256,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bPO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -51342,7 +51348,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bPY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -51485,7 +51491,7 @@
 	},
 /obj/structure/cable/orange,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bQj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -51498,7 +51504,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bQk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -54676,11 +54682,7 @@
 "bWA" = (
 /obj/structure/railing,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
-"bWB" = (
-/obj/random/trash,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bWC" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -54767,7 +54769,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bWN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -54780,7 +54782,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bWO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -54796,7 +54798,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bWP" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/structure/cable/orange{
@@ -54856,7 +54858,7 @@
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bXa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -54894,7 +54896,7 @@
 	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bXe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -54927,7 +54929,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bXi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -54939,7 +54941,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
+/area/maintenance/med)
 "bXj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -56805,14 +56807,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
-"cbp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
 "cbs" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -56870,20 +56864,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/liminaltoobs)
-"cbC" = (
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-6"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/tug)
 "cbD" = (
 /obj/structure/cable/orange{
 	icon_state = "2-5"
@@ -112840,8 +112820,8 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bWG
+aPF
+bZf
 bWA
 fUK
 fUK
@@ -113002,10 +112982,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bWB
-bBD
-aXN
+aPF
+bXk
+xaP
+aPF
 fUK
 olM
 olM
@@ -113164,10 +113144,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bBD
-bBD
-aXN
+aPF
+xaP
+xaP
+aPF
 bMU
 fUK
 xOO
@@ -113326,10 +113306,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bWC
-bBD
-aXN
+aPF
+bWW
+xaP
+aPF
 bMU
 fUK
 fUK
@@ -113488,10 +113468,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bBD
-bWB
-aXN
+aPF
+xaP
+bXk
+aPF
 bMU
 bMU
 fUK
@@ -113650,10 +113630,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bBD
-bBD
-aXN
+aPF
+xaP
+xaP
+aPF
 bMU
 bMU
 fUK
@@ -113812,10 +113792,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bBD
-bBD
-aXN
+aPF
+xaP
+xaP
+aPF
 bMU
 bMU
 fUK
@@ -113974,10 +113954,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
-bBD
-bBD
-aXN
+aPF
+xaP
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -114127,19 +114107,19 @@ bMU
 aPF
 ccf
 aPF
-aXN
-cbC
+aPF
+bXd
 bXh
 bXd
-aXN
-aXN
-aXN
-aXN
-aXN
-aXN
-bBD
-bBD
-aXN
+aPF
+aPF
+aPF
+aPF
+aPF
+aPF
+xaP
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -114289,19 +114269,19 @@ aPF
 aPF
 bXG
 bXy
-aXN
-bWB
+aPF
+bXk
 brv
 bQi
-bOq
-cbp
+aPK
+bPW
 bWY
 bPM
-bWC
-aXN
-bWB
-bBD
-aXN
+bWW
+aPF
+bXk
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -114451,19 +114431,19 @@ bJN
 bQx
 aPF
 bQs
-bOq
-cbp
+aPK
+bPW
 bXi
 bQj
-aXN
-aXN
-aXN
+aPF
+aPF
+aPF
 bPX
-cbp
-bOq
+bPW
+aPK
 bPM
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -114613,19 +114593,19 @@ aPF
 bQy
 bXH
 bQt
-aXN
-aXN
-aXN
-aXN
+aPF
+aPF
+aPF
+aPF
 bkU
-cbj
-aXN
-aXN
-aXN
-aXN
+bLV
+aPF
+aPF
+aPF
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -114784,10 +114764,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -114946,10 +114926,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 olM
@@ -115108,10 +115088,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 olM
@@ -115270,10 +115250,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 fUK
 fUK
 olM
@@ -115432,10 +115412,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 fUK
 fUK
 olM
@@ -115594,10 +115574,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bWM
-bWB
-aXN
+bXk
+aPF
 fUK
 olM
 olM
@@ -115756,10 +115736,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 fUK
 olM
 olM
@@ -115918,10 +115898,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 fUK
 olM
 olM
@@ -116080,10 +116060,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 fUK
 olM
 olM
@@ -116242,10 +116222,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bWC
-aXN
+bWW
+aPF
 fUK
 fUK
 olM
@@ -116404,10 +116384,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 olM
@@ -116566,10 +116546,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bWN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 aOr
@@ -116728,10 +116708,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 olM
@@ -116890,10 +116870,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -117052,10 +117032,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -117214,10 +117194,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -117376,10 +117356,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bWN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -117538,10 +117518,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bWO
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -117700,10 +117680,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
@@ -117862,10 +117842,10 @@ bMU
 bMU
 bMU
 bMU
-aXN
+aPF
 bPN
-bBD
-aXN
+xaP
+aPF
 bMU
 bMU
 bMU
