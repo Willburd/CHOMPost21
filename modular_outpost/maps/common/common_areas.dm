@@ -1477,6 +1477,14 @@
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_UNDERDARK
 
+/area/mine/explored/muriki/liminaltoobs
+	name = "\improper Disposal Return Maintenance"
+	base_turf = /turf/simulated/open/muriki
+	sound_env = TUNNEL_ENCLOSED
+	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
+	icon_state = "dk_yellow"
+	color_grading = COLORTINT_DARK
+
 //Moon riiiiver
 /area/mine/explored/muriki/river
 	name = "\improper Muriki River"
