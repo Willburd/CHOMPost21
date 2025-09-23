@@ -7894,6 +7894,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/exit)
+"anc" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
 "and" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/light,
@@ -8026,7 +8032,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "anu" = (
-/obj/structure/ladder,
+/obj/structure/ladder/updown,
+/obj/structure/railing{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "anv" = (
@@ -27061,9 +27070,6 @@
 "gis" = (
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
-"giv" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "giL" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -147134,11 +147140,11 @@ rJa
 rJa
 rJa
 rJa
-giv
-giv
-giv
-giv
-giv
+rJa
+rJa
+rJa
+rJa
+rJa
 fhs
 hdI
 rJa
@@ -147296,11 +147302,11 @@ rJa
 rJa
 rJa
 rJa
-giv
-giv
-giv
-giv
-giv
+rJa
+rJa
+rJa
+rJa
+rJa
 fhs
 rJa
 rJa
@@ -147458,11 +147464,11 @@ rJa
 rJa
 rJa
 rJa
-giv
-giv
-giv
-giv
-giv
+rJa
+rJa
+rJa
+rJa
+rJa
 fhs
 fhs
 rJa
@@ -147620,11 +147626,11 @@ rJa
 rJa
 rJa
 rJa
-giv
-giv
-giv
-giv
-giv
+rJa
+rJa
+rJa
+rJa
+rJa
 fhs
 fhs
 rJa
@@ -148275,8 +148281,8 @@ rJa
 rJa
 rJa
 cCp
-jnX
-jnX
+anc
+anc
 anu
 rJa
 rJa

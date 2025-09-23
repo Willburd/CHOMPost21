@@ -658,10 +658,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
-"abv" = (
-/obj/effect/recycler_beacon,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "abw" = (
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating,
@@ -1155,6 +1151,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"acv" = (
+/obj/structure/ladder,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
 "acw" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -10328,12 +10328,6 @@
 /obj/structure/flora/ausbushes/leafybush,
 /turf/simulated/floor/grass,
 /area/library)
-"exa" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/open/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "exc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -11882,10 +11876,6 @@
 	outdoors = 1
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
-"flt" = (
-/obj/structure/ladder,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "flB" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -13560,15 +13550,6 @@
 /obj/item/storage/firstaid/o2,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/shuttle/medical)
-"ggG" = (
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
 "ghE" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
@@ -21096,9 +21077,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/evastore)
-"jVe" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "jVo" = (
 /obj/structure/cable/orange{
 	icon_state = "2-8"
@@ -32100,13 +32078,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/gravgen)
-"pvL" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
-/turf/simulated/open/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "pwh" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -44659,9 +44630,6 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_roof)
-"vAz" = (
-/turf/simulated/wall/r_wall,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "vAS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -45519,13 +45487,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/library)
-"vXb" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = null
-	},
-/obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/shelter/east)
 "vXk" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -110661,7 +110622,7 @@ hIk
 idv
 idv
 idv
-ggG
+idv
 idv
 idv
 hQF
@@ -110821,11 +110782,11 @@ hIk
 hIk
 hIk
 idv
-vAz
-vAz
-vAz
-vAz
-vAz
+idv
+idv
+idv
+idv
+idv
 idv
 idv
 idv
@@ -110983,11 +110944,11 @@ hIk
 idv
 idv
 idv
-vAz
-abv
-jVe
-jVe
-vXb
+idv
+idv
+hIk
+hIk
+hIk
 idv
 idv
 hIk
@@ -111145,11 +111106,11 @@ hIk
 hIk
 hIk
 hIk
-vAz
-exa
-pvL
-flt
-vAz
+hIk
+idv
+idv
+hIk
+hIk
 hIk
 hIk
 hIk
@@ -111307,11 +111268,11 @@ hIk
 hIk
 hIk
 hIk
-vAz
-vAz
-vAz
-vAz
-vAz
+hIk
+hIk
+hIk
+hIk
+hIk
 hIk
 hIk
 hIk
@@ -111480,8 +111441,8 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
+idv
+idv
 idv
 idv
 idv
@@ -111641,9 +111602,9 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
+idv
+idv
+idv
 hIk
 hIk
 idv
@@ -111801,9 +111762,9 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
+idv
+idv
+idv
 hIk
 hIk
 hIk
@@ -111964,8 +111925,8 @@ hIk
 hIk
 avC
 avC
-aaY
-hIk
+acv
+idv
 hIk
 hIk
 hIk
