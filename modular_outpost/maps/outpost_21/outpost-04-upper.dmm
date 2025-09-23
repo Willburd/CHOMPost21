@@ -1151,10 +1151,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
-"acv" = (
-/obj/structure/ladder,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/river/hole)
 "acw" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -111925,7 +111921,7 @@ hIk
 hIk
 avC
 avC
-acv
+avC
 idv
 hIk
 hIk

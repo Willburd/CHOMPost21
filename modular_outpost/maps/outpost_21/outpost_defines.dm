@@ -87,6 +87,7 @@
 										/area/muriki/processor/pools/pylorus,
 										/area/muriki/processor/gland/nitrogen,
 										/area/muriki/processor/depths,
+										/area/engineering/coreproctunnel,
 										// Skylines don't need scrubbers and vents
 										/area/muriki/skyline/east,
 										/area/muriki/skyline/south,

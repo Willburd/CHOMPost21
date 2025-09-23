@@ -8032,10 +8032,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "anu" = (
-/obj/structure/ladder/updown,
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/structure/ladder,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "anv" = (
@@ -8474,7 +8474,7 @@
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "aot" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -8487,18 +8487,18 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "aou" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "aov" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "aow" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -8524,7 +8524,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "aoy" = (
 /turf/simulated/wall/r_wall,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
@@ -8827,7 +8827,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "api" = (
 /obj/machinery/camera/motion/command{
 	c_tag = "COM - Teleporter (M)";
@@ -8843,10 +8843,10 @@
 /obj/item/gun/energy/pulse_rifle,
 /obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "apj" = (
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "apk" = (
 /obj/structure/cable/green{
 	icon_state = "5-10"
@@ -8867,13 +8867,13 @@
 	},
 /obj/item/ammo_magazine/ammo_box/b12g,
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "apm" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "apn" = (
 /obj/machinery/light_switch{
 	pixel_x = -26;
@@ -8923,7 +8923,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "apq" = (
 /obj/structure/sign/directions/security/armory{
 	pixel_y = 5
@@ -58995,7 +58995,7 @@
 	},
 /obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled,
-/area/muriki/bathroom/bridge)
+/area/teleporter/bridge)
 "pWx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -139389,14 +139389,14 @@ pCR
 dKB
 bPc
 dFx
-kTG
-kTG
-kTG
-kTG
-kTG
-kTG
-kTG
-kTG
+qUe
+qUe
+qUe
+qUe
+qUe
+qUe
+qUe
+qUe
 bSX
 ltL
 ltL
@@ -139551,14 +139551,14 @@ uhB
 afV
 afX
 afY
-kTG
+qUe
 pWi
 apl
 api
 aox
 aou
 aos
-kTG
+qUe
 ltL
 ltL
 ltL
@@ -139713,14 +139713,14 @@ uhB
 haD
 aMf
 cap
-kTG
+qUe
 app
 apm
 apj
 aph
 aov
 aot
-kTG
+qUe
 ltL
 ltL
 fHN
