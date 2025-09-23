@@ -48869,6 +48869,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/atmos)
+"bLf" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/sci/east_access)
 "bLg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -52230,6 +52235,11 @@
 /obj/structure/cable/heavyduty,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
+"bRw" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/cave/sci)
 "bRx" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -52273,6 +52283,11 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
+"bRB" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbasenorth)
 "bRC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -101401,7 +101416,7 @@ bIX
 bIX
 bIX
 bIX
-gqd
+bRB
 gqd
 gqd
 gqd
@@ -101563,9 +101578,9 @@ bIZ
 bIZ
 bIZ
 bNA
-gqd
-gqd
-gqd
+bRB
+bRB
+bRB
 gqd
 tts
 gYJ
@@ -101725,8 +101740,8 @@ bJa
 bIZ
 bIZ
 bIX
-gqd
-gqd
+bRB
+bRB
 gqd
 gqd
 tts
@@ -101887,7 +101902,7 @@ bIX
 bIX
 bIX
 bIX
-gqd
+bRB
 gqd
 gqd
 gqd
@@ -131742,7 +131757,7 @@ qRD
 lCR
 nOv
 tuC
-adC
+bLf
 adC
 adC
 adC
@@ -131904,8 +131919,8 @@ aHp
 uVN
 aJd
 mnT
-adC
-adC
+bLf
+bLf
 adC
 adC
 adC
@@ -132066,8 +132081,8 @@ hWH
 uVN
 xwe
 mnT
-adC
-adC
+bLf
+bLf
 adC
 adC
 adC
@@ -132228,9 +132243,9 @@ aHb
 aHb
 aHb
 aKd
-adC
-adC
-adC
+bLf
+bLf
+bLf
 adC
 adC
 adC
@@ -132390,9 +132405,9 @@ aIi
 aEJ
 aFp
 mnT
-adC
-adC
-adC
+bLf
+bLf
+bLf
 adC
 adC
 adC
@@ -132552,9 +132567,9 @@ bwY
 sMl
 rOZ
 eiR
-adC
-adC
-adC
+bLf
+bLf
+bLf
 adC
 adC
 adC
@@ -132714,9 +132729,9 @@ atN
 aHb
 aHb
 aHl
-adC
-adC
-adC
+bLf
+bLf
+bLf
 adC
 adC
 adC
@@ -132875,9 +132890,9 @@ adC
 adC
 adC
 adC
-adC
-adC
-adC
+bLf
+bLf
+bLf
 adC
 adC
 adC
@@ -139189,8 +139204,8 @@ bIM
 bIM
 bIM
 bIM
-pmN
-pmN
+bRw
+bRw
 pmN
 pmN
 pmN
@@ -139351,9 +139366,9 @@ bSR
 bSR
 bSR
 cbZ
-pmN
-pmN
-pmN
+bRw
+bRw
+bRw
 pmN
 pmN
 pmN
@@ -139513,8 +139528,8 @@ bSR
 bSR
 sos
 bIM
-pmN
-pmN
+bRw
+bRw
 pmN
 pmN
 pmN
