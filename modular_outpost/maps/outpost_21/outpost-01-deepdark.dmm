@@ -33,6 +33,7 @@
 "aai" = (
 /obj/structure/ladder/up,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "aaj" = (
@@ -51,6 +52,583 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
+"aam" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"aan" = (
+/turf/simulated/wall/rplastitanium,
+/area/mine/unexplored/muriki/cave/deepdark)
+"aao" = (
+/turf/simulated/wall/rplastitanium,
+/area/muriki/crew/bunker)
+"aap" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaq" = (
+/obj/structure/bed/chair/bay/comfy/beige{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker)
+"aar" = (
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker)
+"aas" = (
+/obj/structure/bed/chair/bay/comfy/beige{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker)
+"aat" = (
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"aau" = (
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aav" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaw" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aax" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aay" = (
+/obj/machinery/atmospherics/pipe/tank/air/full{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaz" = (
+/obj/structure/table/gamblingtable,
+/obj/item/paper_bin{
+	pixel_y = 3
+	},
+/obj/item/pen/invisible,
+/obj/item/storage/pill_bottle/dice_nerd,
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker)
+"aaA" = (
+/obj/structure/bed/chair/sofa/right/sif_ora{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaB" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaC" = (
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_x = 32
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaD" = (
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaE" = (
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaF" = (
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Bunker";
+	charge = 100000;
+	input_attempt = 1
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaH" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaI" = (
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker)
+"aaJ" = (
+/obj/structure/bed/chair/sofa/sif_ora{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaK" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaL" = (
+/obj/machinery/power/breakerbox{
+	name = "Bunker Power Toggle";
+	RCon_tag = "Bunker Power Toggle"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaM" = (
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaO" = (
+/obj/machinery/vending/coffee{
+	dir = 4;
+	pixel_x = -7
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"aaP" = (
+/obj/structure/bed/chair/sofa/corner/sif_ora{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaQ" = (
+/obj/structure/bed/chair/sofa/sif_ora,
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaR" = (
+/obj/structure/bed/chair/sofa/left/sif_ora,
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker)
+"aaS" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaT" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaU" = (
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Bunker Subgrid";
+	name_tag = "Bunker Subgrid"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaV" = (
+/obj/machinery/vending/foodmeat{
+	dir = 4;
+	pixel_x = -9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"aaW" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaX" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"aaY" = (
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/crew/bunker)
+"aaZ" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/machinery/vending/cigarette{
+	dir = 4;
+	pixel_x = -8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"aba" = (
+/obj/machinery/door/window/northleft,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abb" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abc" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/bed/chair/bay/comfy/beige{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abd" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abe" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/bed/chair/bay/comfy/beige{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abf" = (
+/obj/machinery/door/window/northright,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abg" = (
+/obj/machinery/door/airlock/glass_engineering{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/crew/bunker)
+"abh" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/warning/cee,
+/turf/simulated/floor/reinforced,
+/area/muriki/crew/bunker)
+"abi" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/hatch/blue,
+/turf/simulated/floor/reinforced,
+/area/muriki/crew/bunker)
+"abj" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abk" = (
+/obj/machinery/door/airlock/glass_command{
+	name = "Emergency Alerts"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abl" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Emergency Treatment";
+	req_one_access = list(5,45,52)
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/crew/bunker)
+"abm" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker)
+"abn" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/cee{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/hatch/blue,
+/turf/simulated/floor/reinforced,
+/area/muriki/crew/bunker)
+"abo" = (
+/obj/structure/extraction_point{
+	name = "Bunker fulton recovery beacon"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abp" = (
+/obj/machinery/door/airlock/glass{
+	name = "Cleaning"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/crew/bunker)
+"abq" = (
+/obj/machinery/door/airlock/glass{
+	name = "Barracks"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/crew/bunker)
+"abr" = (
+/obj/machinery/keycard_auth{
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abs" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/adv,
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abt" = (
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abu" = (
+/obj/structure/table/standard,
+/obj/item/defib_kit,
+/obj/item/roller{
+	pixel_y = -3;
+	pixel_x = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abv" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abw" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abx" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/machinery/cryopod,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"aby" = (
+/obj/structure/cryofeed,
+/obj/machinery/computer/cryopod{
+	pixel_y = -32
+	},
+/obj/machinery/light/small,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abz" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "BNK - Bunker Emergency Control";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abA" = (
+/obj/machinery/computer/communications{
+	dir = 8;
+	pixel_x = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abB" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/surgery,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abC" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abD" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abE" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abF" = (
+/obj/structure/table/standard,
+/obj/machinery/photocopier/faxmachine{
+	department = "Captain's Office"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abG" = (
+/obj/structure/table/standard,
+/obj/item/paper_bin{
+	pixel_y = 3
+	},
+/obj/item/pen,
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abH" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abI" = (
+/obj/machinery/computer/crew{
+	dir = 8;
+	pixel_x = 3
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abJ" = (
+/obj/machinery/computer/operating{
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abK" = (
+/obj/machinery/optable,
+/obj/machinery/auto_doc{
+	pixel_y = 3
+	},
+/obj/machinery/oxygen_pump/anesthetic{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abL" = (
+/obj/machinery/iv_drip,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
+/obj/machinery/camera/network/civilian{
+	c_tag = "BNK - Bunker Medical"
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abM" = (
+/obj/structure/table/standard,
+/obj/item/stack/medical/advanced/bruise_pack{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/storage/box/masks{
+	pixel_x = -7;
+	pixel_y = -5
+	},
+/obj/item/storage/box/gloves{
+	pixel_x = 9;
+	pixel_y = -5
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abN" = (
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abO" = (
+/obj/machinery/oxygen_pump/mobile/stabilizer,
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker)
+"abP" = (
+/obj/structure/mopbucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abQ" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/storage/box/lights/mixed,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/item/grenade/chem_grenade/cleaner,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
+"abR" = (
+/obj/structure/bed/padded,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/curtain/open/bed,
+/obj/item/bedsheet/hos,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -241,6 +819,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "tSP" = (
 /obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "tWu" = (
@@ -35849,7 +36428,7 @@ tWu
 gNY
 gNY
 wXd
-uXm
+aam
 loP
 uXm
 ews
@@ -36011,8 +36590,8 @@ tWu
 gNY
 gNY
 wXd
-uXm
-uXm
+aam
+aam
 uXm
 cSc
 uXm
@@ -57701,19 +58280,19 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aao
+aao
+aao
+aao
+aao
+aao
+aao
+aap
+aap
+aap
+aap
+aap
 bHg
 bHg
 bHg
@@ -57863,19 +58442,19 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abF
+abz
+abr
+aao
+aat
+aat
+aao
+aap
+aap
+aap
+aap
+aap
 bHg
 bHg
 bHg
@@ -58025,19 +58604,19 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abG
+aat
+abr
+aao
+aat
+aat
+aao
+aap
+aap
+aap
+aap
+aap
 bHg
 bHg
 bHg
@@ -58187,19 +58766,19 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abH
+aat
+aat
+abk
+aat
+aat
+aao
+aao
+aao
+aao
+aao
+aao
 bHg
 bHg
 bHg
@@ -58349,19 +58928,19 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abI
+abA
+aat
+aao
+aat
+aat
+aaY
+aaw
+aaM
+aaG
+aaw
+aao
 bHg
 bHg
 bHg
@@ -58511,19 +59090,19 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aao
+aao
+aao
+aao
+aat
+aat
+aao
+aaw
+aaN
+aaH
+aax
+aao
 bHg
 bHg
 bHg
@@ -58673,19 +59252,19 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abJ
+abB
+abs
+aao
+aat
+aat
+aao
+aaw
+aay
+aay
+aay
+aao
 bHg
 bHg
 bHg
@@ -58835,20 +59414,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abK
+abt
+abt
+abl
+aat
+aat
+aao
+aao
+aao
+aao
+aao
+aao
+aan
 bHg
 bHg
 bHg
@@ -58997,20 +59576,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abL
+abt
+abt
+abm
+aat
+aat
+aaZ
+aaV
+aaO
+aaI
+aaq
+aaq
+aan
 bHg
 bHg
 bHg
@@ -59159,20 +59738,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abM
+abC
+abu
+aao
+aat
+aat
+aba
+aat
+aat
+aaI
+aar
+aar
+aan
 bHg
 bHg
 bHg
@@ -59321,20 +59900,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abN
+abt
+aao
+aao
+aat
+aat
+abb
+aat
+aat
+aaI
+aaz
+aar
+aan
 bHg
 bHg
 bHg
@@ -59483,20 +60062,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abO
+abt
+aao
+aat
+aat
+aat
+abc
+aat
+aat
+aaI
+aas
+aas
+aan
 bHg
 bHg
 bHg
@@ -59645,20 +60224,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aao
+aao
+aao
+abn
+abi
+abh
+abd
+aat
+aat
+aat
+aat
+aat
+aao
 bHg
 bHg
 bHg
@@ -59807,20 +60386,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aat
+aat
+aao
+abo
+aat
+aat
+abe
+aat
+aaP
+aaJ
+aaA
+aau
+aao
 bHg
 bHg
 bHg
@@ -59969,20 +60548,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aat
+aat
+aao
+aao
+aat
+aat
+abb
+aat
+aaQ
+aau
+aaB
+aau
+aao
 bHg
 bHg
 bHg
@@ -60131,20 +60710,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abP
+aat
+aat
+abp
+aat
+aat
+abf
+aat
+aaR
+aau
+aau
+aau
+aao
 bHg
 bHg
 bHg
@@ -60293,20 +60872,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abQ
+abD
+aat
+aao
+aat
+aat
+abb
+aat
+aau
+aau
+aaC
+aav
+aao
 bHg
 bHg
 bHg
@@ -60455,20 +61034,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aao
+aao
+aao
+aao
+abj
+aat
+aao
+aao
+aao
+aao
+aao
+aao
+aao
 bHg
 bHg
 bHg
@@ -60617,20 +61196,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+abR
+abE
+abv
+aao
+aat
+aat
+aao
+aaW
+aaS
+aaK
+aaD
+aao
+aap
 bHg
 bHg
 bHg
@@ -60779,6 +61358,20 @@ bHg
 bHg
 bHg
 bHg
+aao
+abR
+aat
+aat
+abq
+aat
+aat
+abg
+aaX
+aaT
+aaw
+aaE
+aao
+aap
 bHg
 bHg
 bHg
@@ -60786,20 +61379,6 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-fMG
-fMG
 fMG
 fMG
 fMG
@@ -60941,26 +61520,26 @@ bHg
 bHg
 bHg
 bHg
+aao
+abR
+aat
+abw
+aao
+aat
+aat
+aao
+aaw
+aaU
+aaL
+aaF
+aao
+aap
 bHg
 bHg
 bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-fMG
-fMG
 fMG
 fMG
 fMG
@@ -61103,26 +61682,26 @@ bHg
 bHg
 bHg
 bHg
+aao
+abR
+aat
+abx
+aao
+aat
+aat
+aao
+aao
+aao
+aao
+aao
+aao
+aap
 bHg
 bHg
 bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-fMG
-fMG
 fMG
 fMG
 fMG
@@ -61265,20 +61844,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aat
+aat
+aby
+aao
+aat
+aat
+aao
+aap
+aap
+aap
+aap
+aap
+aap
 bHg
 bHg
 bHg
@@ -61427,20 +62006,20 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aao
+aao
+aao
+aao
+aao
+aao
+aao
+aao
+aap
+aap
+aap
+aap
+aap
+aap
 bHg
 bHg
 bHg

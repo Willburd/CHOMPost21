@@ -34746,6 +34746,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/mine/taarainbow,
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
@@ -41046,6 +41047,7 @@
 /area/muriki/tramstation/waste)
 "knJ" = (
 /obj/structure/ladder/updown,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_roof)
 "knO" = (
@@ -84923,6 +84925,7 @@
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_roof)
 "xSZ" = (
