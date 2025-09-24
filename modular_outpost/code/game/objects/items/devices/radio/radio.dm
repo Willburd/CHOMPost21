@@ -1,6 +1,6 @@
 /obj/item/bluespaceradio/outpost_prelinked
 	name = "bluespace radio (Outpost21)"
-	handset = /obj/item/radio/bluespacehandset/linked/outpost_prelinked
+	handset_path = /obj/item/radio/bluespacehandset/linked/outpost_prelinked
 
 /obj/item/radio/bluespacehandset/linked/outpost_prelinked
 	bs_tx_preload_id = "outpost_rx" //Transmit to a receiver

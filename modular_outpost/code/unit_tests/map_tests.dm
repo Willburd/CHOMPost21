@@ -120,6 +120,7 @@
 		/area/muriki/crew/arcade/lasertagstore,
 		/area/medical/tankstore,
 		/area/muriki/crew/bunker,
+		/area/muriki/crew/bunker_deep,
 		/area/engineering/refinery/pump_station,
 		/area/hallway/muriki/bunkerhall,
 		/area/medical/autosleever,

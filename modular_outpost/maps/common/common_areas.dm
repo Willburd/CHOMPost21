@@ -609,8 +609,8 @@
 	base_turf = /turf/simulated/open
 
 /area/muriki/crew/bunker
-	name = "\improper Emergency Bunker"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	name = "\improper Emergency Bunker Access"
+	base_turf = /turf/simulated/open
 	icon_state = "cyawhicir"
 	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
@@ -620,6 +620,26 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
 	color_grading = COLORTINT_DIM
+
+/area/muriki/crew/bunker_deep
+	name = "\improper Emergency Bunker"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	icon_state = "cyawhicir"
+	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
+	color_grading = COLORTINT_DARK
+	haunted = TRUE
+
+/area/muriki/crew/bunker_deep/eng
+	name = "\improper Bunker Engineering"
+
+/area/muriki/crew/bunker_deep/med
+	name = "\improper Bunker Medical"
+
+/area/muriki/crew/bunker_deep/comm
+	name = "\improper Bunker Command"
+
+/area/muriki/crew/bunker_deep/main
+	name = "\improper Bunker Vault"
 
 /area/maintenance/roof_tube_access
 	name = "Civilian Roof Access"
