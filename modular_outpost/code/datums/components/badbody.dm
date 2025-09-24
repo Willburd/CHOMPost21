@@ -91,6 +91,31 @@
 
 // Hacky, but I refused to rewrite say code just for this
 /datum/component/badbody/proc/deadsay(var/speak)
+	if(isbelly(body.loc))
+		var/obj/belly/B = body.loc
+		B.owner.say(speak, whispering = prob(80))
+		// Get REAL nasty
+		if(prob(40))
+			// Haunting
+			var/area/A = get_area(B.owner)
+			A.haunted = TRUE
+			// Your own fault
+			if(ishuman(B.owner))
+				var/mob/living/carbon/human/H = B.owner
+				H.add_modifier(/datum/modifier/redspace_drain)
+				var/datum/gene/trait/G = get_gene_from_trait(/datum/trait/negative/disability_deteriorating)
+				H.dna.SetSEState(G.block, TRUE)
+				domutcheck(H, null, GENE_ALWAYS_ACTIVATE)
+				H.UpdateAppearance()
+				H.apply_damage(rand(1,10),BIOACID)
+			else
+				B.owner.apply_damage(10,BIOACID)
+			// Killem
+			if(B.owner.stat == DEAD)
+				var/turf/T = get_turf(body)
+				T.visible_message("\The [body] claws its way out of \the [B.owner] in a shower of gore!")
+				B.owner.gib()
+		return
 	var/old_stat = body.stat
 	body.stat = CONSCIOUS
 	if(prob(20)) // Some variety
