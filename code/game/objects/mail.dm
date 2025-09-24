@@ -196,8 +196,13 @@
 	if(recipient_ref)
 		var/datum/mind/recipient = recipient_ref.resolve()
 		if(recipient && recipient.current?.dna.unique_enzymes != user.dna.unique_enzymes)
-			balloon_alert(user, "you can't open somebody's mail! That's <em>illegal</em>")
-			return FALSE
+			// Outpost 21 edit begin - Allow tearing open mail
+			if(user.a_intent != I_HURT)
+				balloon_alert(user, "you can't open somebody's mail! That's <em>illegal</em>")
+				return FALSE
+			else if(!opening)
+				balloon_alert(user, "you rip open the mail!")
+			// Outpost 21 edit end
 
 	if(opening)
 		balloon_alert(user, "already opening that!")
