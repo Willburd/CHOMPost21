@@ -27,7 +27,7 @@
 				/obj/effect/decal/cleanable/bug_remains,
 				/obj/effect/decal/remains/mouse,
 				/obj/effect/decal/cleanable/vomit/old,
-				/obj/effect/decal/cleanable/blood/old,
+				/obj/effect/decal/cleanable/blood, // Outpost 21 edit - wetblood in maint
 				/obj/effect/decal/cleanable/ash,
 				/obj/effect/decal/cleanable/generic,
 				/obj/effect/decal/cleanable/flour,

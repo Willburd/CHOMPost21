@@ -682,7 +682,6 @@
 							darkness = 1 // it's dark in here!
 						if(darkness <= 0.1)
 						// outpost 21 addition end
-						if(T.get_lumcount() <= 0.1)
 							to_chat(usr, span_notice("You are slowly calming down in darkness' safety..."))
 						else if(isbelly(H.loc)) // Safety message for if inside a belly.
 							to_chat(usr, span_notice("You are slowly calming down within the darkness of something's belly, listening to their body as it moves around you. ...safe..."))
