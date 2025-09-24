@@ -3493,7 +3493,6 @@
 #include "code\modules\mob\living\carbon\human\species\station\traits\positive.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits\positive_ch.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits\positive_genes.dm"
-#include "code\modules\mob\living\carbon\human\species\station\traits\positive_genes_op.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits\trait.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits\traits_tutorial.dm"
 #include "code\modules\mob\living\carbon\human\species\station\traits\weaver_objs.dm"
