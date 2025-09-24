@@ -93,6 +93,10 @@
 #define NETWORK_MAINT_DECK "Maintenance Deck"
 // CHHOMPAdd End
 
+// Outpost 21 edit begin
+#define NETWORK_BUNKER "Bunker"
+// Outpost 21 edit end
+
 // Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.
 var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret", NETWORK_COMMUNICATORS, NETWORK_EXPLORATION)
 
