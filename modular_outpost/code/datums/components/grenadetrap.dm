@@ -32,7 +32,7 @@
 	if(activated)
 		return
 	activated = TRUE
-	trigger_trap()
+	addtimer(CALLBACK(src, PROC_REF(trigger_trap)), 0.5 SECOND, TIMER_DELETE_ME)
 
 /datum/component/grenadetrap/proc/on_attackby(obj/item/source, obj/item/W, mob/user, params)
 	SIGNAL_HANDLER
@@ -40,21 +40,20 @@
 		playsound(src, W.usesound, 50, 1)
 		to_chat(user, span_warning("You cut the trap from \the [host]."))
 		nade.forceMove(get_turf(host))
-		nade.activate(null)
 		nade = null
 		qdel(src)
 		return
 	if(activated)
 		return
 	activated = TRUE
-	trigger_trap()
+	addtimer(CALLBACK(src, PROC_REF(trigger_trap)), 0.5 SECOND, TIMER_DELETE_ME)
 
 /datum/component/grenadetrap/proc/on_bumped(datum/source, atom/A)
 	SIGNAL_HANDLER
 	if(activated)
 		return
 	activated = TRUE
-	addtimer(CALLBACK(src, PROC_REF(trigger_trap)), 1 SECOND, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(trigger_trap)), 0.5 SECOND, TIMER_DELETE_ME)
 
 /datum/component/grenadetrap/proc/on_examine(datum/source, mob/user, list/examine_texts)
 	SIGNAL_HANDLER
@@ -68,8 +67,10 @@
 		qdel(src)
 		return
 	var/turf/T = get_turf(host)
+	playsound(src, 'sound/machines/clockcult/integration_cog_install.ogg', 95, 1)
 	T.visible_message(span_danger("A [nade] drops out of \the [host]!"),span_danger("CLUNK!"))
 	nade.forceMove(T)
+	nade.det_time = 1.2 SECONDS
 	nade.activate()
 	nade = null
 	qdel(src)
@@ -93,10 +94,10 @@
 		to_chat(user, span_notice("You finish rigging \the [src]."))
 	else
 		to_chat(user, span_vdanger("\The [nade] slips and goes off!"))
+		nade.det_time = 1.2 SECONDS
 		nade.activate()
 
 // Nade hook
-/* TEMP WIP
 /obj/machinery/door/airlock/attackby(obj/item/C, mob/user)
 	if(istype(C,/obj/item/grenade))
 		var/obj/item/grenade/G = C
@@ -106,4 +107,3 @@
 			attach_grenade_trap(user,G)
 		return TRUE
 	. = ..()
-*/

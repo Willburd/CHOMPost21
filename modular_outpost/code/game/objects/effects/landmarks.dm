@@ -143,6 +143,7 @@
 		prob(90);/mob/living/simple_mob/vore/slug,
 		prob(90);/mob/living/simple_mob/vore/pakkun,
 		prob(55);/mob/living/simple_mob/vore/scel,
+		prob(55);/mob/living/simple_mob/vore/jelly,
 		// Ohno
 		prob(10);/mob/living/simple_mob/vore/alienanimals/chu,
 		prob(35);/mob/living/simple_mob/animal/passive/snake/python,
