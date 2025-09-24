@@ -2027,6 +2027,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
+"aef" = (
+/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/area/security/brig_hole)
 "aeg" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -33308,7 +33311,7 @@
 	dir = 10
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "biG" = (
 /obj/structure/cliff{
 	dir = 10
@@ -33686,7 +33689,7 @@
 	dir = 10
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bjt" = (
 /obj/item/stool/padded{
 	dir = 1
@@ -34207,7 +34210,7 @@
 /area/muriki/bathroom/cargolower)
 "bki" = (
 /turf/simulated/open/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bkj" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -34943,7 +34946,7 @@
 	dir = 8
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "blO" = (
 /obj/structure/disposalpipe/segment,
 /obj/random/trash,
@@ -36156,19 +36159,19 @@
 	dir = 9
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bnK" = (
 /obj/structure/cliff{
 	dir = 9
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bnL" = (
 /obj/structure/cliff{
 	dir = 5
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bnM" = (
 /obj/machinery/light{
 	dir = 1
@@ -36183,7 +36186,7 @@
 	dir = 5
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bnO" = (
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 5
@@ -37403,7 +37406,7 @@
 	dir = 1
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bql" = (
 /turf/simulated/open,
 /area/muriki/lowerelev)
@@ -48038,7 +48041,7 @@
 	dir = 4
 	},
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sec)
+/area/security/brig_hole)
 "bJC" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/mountainbasenorth)
@@ -58797,9 +58800,6 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
-"cgM" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/muriki/crew/bunker)
 "cgN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -65269,10 +65269,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "BNK - Bunker Hall East";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
 "jkA" = (
@@ -66986,6 +66982,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Exterior"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/muriki/crew/bunker)
 "kRR" = (
@@ -68018,12 +68017,12 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "miW" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "BNK - Bunker Entry";
-	dir = 8
-	},
 /obj/structure/sign/warning/falling{
 	pixel_x = 32
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Access Shaft";
+	dir = 8
 	},
 /turf/simulated/open/muriki,
 /area/muriki/crew/bunker)
@@ -75033,7 +75032,7 @@
 	dir = 8;
 	icon_state = "stair_u"
 	},
-/turf/space,
+/turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
 "ucu" = (
 /obj/structure/fence/door,
@@ -76978,7 +76977,7 @@
 /obj/effect/floor_decal/stairs/station{
 	dir = 8
 	},
-/turf/space,
+/turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
 "wnD" = (
 /turf/simulated/wall,
@@ -111541,9 +111540,9 @@ bhW
 bhW
 bhW
 bhW
-rPd
-rPd
-rPd
+aef
+aef
+aef
 brJ
 bhV
 brJ
@@ -111699,13 +111698,13 @@ bhW
 bhW
 bCe
 bhW
-rPd
-rPd
-rPd
-rPd
-rPd
-rPd
-rPd
+aef
+aef
+aef
+aef
+aef
+aef
+aef
 brJ
 bik
 brJ
@@ -111861,13 +111860,13 @@ rPd
 bhW
 bCD
 bhW
-rPd
-rPd
-rPd
+aef
+aef
+aef
 bnJ
 blN
 biF
-rPd
+aef
 brJ
 btp
 btV
@@ -112023,8 +112022,8 @@ rPd
 bhW
 bCD
 bhW
-rPd
-rPd
+aef
+aef
 bnJ
 bnK
 bki
@@ -112185,7 +112184,7 @@ rPd
 bhW
 bCD
 bhW
-rPd
+aef
 bnJ
 bnK
 bki
@@ -112347,7 +112346,7 @@ rPd
 bhW
 bqY
 bhW
-rPd
+aef
 bqk
 bki
 bki
@@ -112509,7 +112508,7 @@ rPd
 bhW
 bCD
 bhW
-rPd
+aef
 bnN
 bJB
 bnL
@@ -112671,9 +112670,9 @@ rPd
 bhW
 bUx
 bhW
-rPd
-rPd
-rPd
+aef
+aef
+aef
 bnN
 bJB
 bJB
@@ -112834,11 +112833,11 @@ bhW
 bCD
 bhW
 bhW
-rPd
-rPd
-rPd
-rPd
-rPd
+aef
+aef
+aef
+aef
+aef
 bqN
 bsP
 brI
@@ -112996,11 +112995,11 @@ bhW
 bCD
 bhW
 bhW
-rPd
-rPd
-rPd
-rPd
-rPd
+aef
+aef
+aef
+aef
+aef
 bqN
 ljs
 btt
@@ -136607,9 +136606,9 @@ lOq
 ucq
 ucq
 lOq
-twq
-twq
-twq
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -136926,7 +136925,7 @@ pmN
 pmN
 pmN
 pmN
-cgM
+pmN
 nkl
 kRw
 qqD
@@ -137088,12 +137087,12 @@ pmN
 pmN
 pmN
 pmN
-cgM
+pmN
 nkl
 xRc
 ttG
 nkl
-cgM
+cYZ
 cYZ
 cYZ
 cYZ
@@ -137248,16 +137247,16 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
+pmN
+pmN
 cgX
 chb
 kZq
 chf
 chb
 cgX
-cgM
-cgM
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -137410,7 +137409,7 @@ pmN
 pmN
 pmN
 pmN
-cgM
+pmN
 cgX
 cgY
 xTO
@@ -137419,7 +137418,7 @@ qvX
 xTO
 cgY
 cgX
-cgM
+cYZ
 cYZ
 cYZ
 cYZ
@@ -137572,7 +137571,7 @@ pmN
 pmN
 pmN
 pmN
-cgM
+pmN
 cgX
 xTO
 xTO
@@ -137581,7 +137580,7 @@ qvX
 xTO
 xTO
 cgX
-cgM
+cYZ
 cYZ
 cYZ
 cYZ
@@ -137731,10 +137730,10 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
 cgX
 xTO
 lQx
@@ -137743,10 +137742,10 @@ lOL
 pcq
 xTO
 cgX
-cgM
-cgM
-cgM
-cgM
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -137893,10 +137892,10 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
 cgX
 xTO
 chi
@@ -137905,10 +137904,10 @@ dcO
 chc
 xTO
 cgX
-cgM
-cgM
-cgM
-cgM
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -138055,10 +138054,10 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
 cgX
 xTO
 hRf
@@ -138067,10 +138066,10 @@ vqU
 jBU
 xTO
 cgX
-cgM
-cgM
-cgM
-cgM
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -138217,10 +138216,10 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
 cgX
 xTO
 xTO
@@ -138229,10 +138228,10 @@ xTO
 xTO
 xTO
 cgX
-cgM
-cgM
-cgM
-cgM
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -138379,10 +138378,10 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
 cgY
 cgX
 cgX
@@ -138391,10 +138390,10 @@ cgX
 cgX
 cgX
 cgY
-cgM
-cgM
-cgM
-cgM
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -138541,22 +138540,22 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
+pmN
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -138703,22 +138702,22 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
+pmN
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -138865,22 +138864,22 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
+pmN
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -139027,22 +139026,22 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
+pmN
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -139189,22 +139188,22 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
+pmN
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -139351,22 +139350,22 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+pmN
+pmN
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
+cYZ
 cYZ
 cYZ
 cYZ
@@ -139513,24 +139512,24 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cYZ
-cYZ
+pmN
+pmN
+pmN
+pmN
+pmN
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
 vSb
 vSb
 vSb
@@ -139677,22 +139676,22 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cYZ
-cYZ
+pmN
+pmN
+pmN
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
 vSb
 vSb
 vSb
@@ -139839,20 +139838,20 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
 vSb
 vSb
 vSb
@@ -140001,20 +140000,20 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
 vSb
 vSb
 vSb
@@ -140163,20 +140162,20 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
 vSb
 vSb
 vSb
@@ -140325,20 +140324,20 @@ pmN
 pmN
 pmN
 pmN
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
-cgM
+pmN
+pmN
+pmN
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
+vSb
 vSb
 vSb
 vSb

@@ -31171,6 +31171,12 @@
 	dir = 8
 	},
 /obj/item/taperecorder,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
 /turf/simulated/floor/carpet,
 /area/library)
 "oYZ" = (

@@ -58,57 +58,87 @@
 /area/mine/explored/muriki/cave/deepdark)
 "aan" = (
 /turf/simulated/wall/rplastitanium,
-/area/mine/unexplored/muriki/cave/deepdark)
+/area/muriki/crew/bunker_deep/main)
 "aao" = (
-/turf/simulated/wall/rplastitanium,
-/area/muriki/crew/bunker)
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	req_one_access = null
+	},
+/obj/item/airlock_brace,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
 "aap" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/muriki/crew/bunker)
+/turf/simulated/wall/rplastitanium,
+/area/muriki/crew/bunker_deep/eng)
 "aaq" = (
 /obj/structure/bed/chair/bay/comfy/beige{
 	dir = 4
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
 /turf/simulated/floor/wood,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aar" = (
 /obj/structure/table/gamblingtable,
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light,
 /turf/simulated/floor/wood,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aas" = (
 /obj/structure/bed/chair/bay/comfy/beige{
 	dir = 8
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
 /turf/simulated/floor/wood,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aat" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aau" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aav" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = 32
 	},
 /obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera{
+	pixel_x = 6
+	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaw" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
-"aax" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
+"aax" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
 "aay" = (
 /obj/machinery/atmospherics/pipe/tank/air/full{
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaz" = (
 /obj/structure/table/gamblingtable,
 /obj/item/paper_bin{
@@ -117,24 +147,39 @@
 /obj/item/pen/invisible,
 /obj/item/storage/pill_bottle/dice_nerd,
 /turf/simulated/floor/wood,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaA" = (
 /obj/structure/bed/chair/sofa/right/sif_ora{
 	dir = 4
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaB" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaC" = (
 /obj/machinery/computer/security/telescreen/bodycamera{
 	pixel_x = 32
 	},
 /obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/taperecorder,
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaD" = (
 /obj/machinery/power/port_gen/pacman/super{
 	anchored = 1
@@ -143,7 +188,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaE" = (
 /obj/machinery/power/terminal{
 	dir = 4
@@ -152,7 +197,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaF" = (
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "Substation - Bunker";
@@ -161,91 +206,134 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Air Supply";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaH" = (
-/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaI" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Main Room West";
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
 /turf/simulated/floor/wood,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaJ" = (
 /obj/structure/bed/chair/sofa/sif_ora{
 	dir = 4
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaK" = (
 /obj/structure/table/rack,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaL" = (
 /obj/machinery/power/breakerbox{
 	name = "Bunker Power Toggle";
 	RCon_tag = "Bunker Power Toggle"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaM" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaO" = (
 /obj/machinery/vending/coffee{
 	dir = 4;
 	pixel_x = -7
 	},
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaP" = (
 /obj/structure/bed/chair/sofa/corner/sif_ora{
 	dir = 4
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaQ" = (
 /obj/structure/bed/chair/sofa/sif_ora,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaR" = (
 /obj/structure/bed/chair/sofa/left/sif_ora,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/turcarpet,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaS" = (
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaT" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaU" = (
 /obj/machinery/power/sensor{
 	name = "Powernet Sensor - Bunker Subgrid";
@@ -257,15 +345,22 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Backup Generator";
+	dir = 8
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaV" = (
 /obj/machinery/vending/foodmeat{
 	dir = 4;
 	pixel_x = -9
 	},
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aaW" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -280,8 +375,11 @@
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaX" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -289,14 +387,22 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaY" = (
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	req_one_access = null
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "aaZ" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -305,18 +411,25 @@
 	dir = 4;
 	pixel_x = -8
 	},
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aba" = (
 /obj/machinery/door/window/northleft,
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abb" = (
 /obj/structure/window/basic{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/machinery/media/jukebox,
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abc" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -324,15 +437,24 @@
 /obj/structure/bed/chair/bay/comfy/beige{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abd" = (
 /obj/structure/window/basic{
 	dir = 1
 	},
 /obj/structure/table/woodentable,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/deck/cards,
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abe" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -340,23 +462,38 @@
 /obj/structure/bed/chair/bay/comfy/beige{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abf" = (
 /obj/machinery/door/window/northright,
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abg" = (
 /obj/machinery/door/airlock/glass_engineering{
 	req_one_access = null
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/eng)
 "abh" = (
 /obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/warning/cee,
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/reinforced,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -366,31 +503,53 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/reinforced,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abj" = (
-/obj/machinery/light/small{
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/machinery/light/small/emergency{
 	dir = 1
 	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abk" = (
 /obj/machinery/door/airlock/glass_command{
 	name = "Emergency Alerts"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abl" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "Emergency Treatment";
 	req_one_access = list(5,45,52)
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abm" = (
 /obj/structure/grille,
 /obj/structure/window/basic/full,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abn" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -400,31 +559,39 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/blue,
 /turf/simulated/floor/reinforced,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abo" = (
 /obj/structure/extraction_point{
 	name = "Bunker fulton recovery beacon"
 	},
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abp" = (
 /obj/machinery/door/airlock/glass{
 	name = "Cleaning"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abq" = (
 /obj/machinery/door/airlock/glass{
 	name = "Barracks"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abr" = (
 /obj/machinery/keycard_auth{
 	pixel_y = -24
 	},
+/obj/effect/floor_decal/corner/white/full,
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abs" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular{
@@ -432,11 +599,28 @@
 	pixel_y = 7
 	},
 /obj/item/storage/firstaid/adv,
+/obj/effect/floor_decal/corner/blue/full,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abu" = (
 /obj/structure/table/standard,
 /obj/item/defib_kit,
@@ -444,27 +628,54 @@
 	pixel_y = -3;
 	pixel_x = 10
 	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abv" = (
 /obj/machinery/light/small,
+/obj/effect/floor_decal/corner/black/full,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abw" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abx" = (
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
 	},
 /obj/machinery/cryopod,
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "aby" = (
 /obj/structure/cryofeed,
 /obj/machinery/computer/cryopod{
@@ -475,53 +686,64 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abz" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "BNK - Bunker Emergency Control";
-	dir = 4
+/obj/effect/floor_decal/corner/white{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abA" = (
 /obj/machinery/computer/communications{
 	dir = 8;
-	pixel_x = 5
+	pixel_x = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abB" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/surgery,
-/obj/machinery/light{
-	dir = 8
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abC" = (
 /obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abD" = (
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
-"abE" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
+"abE" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
 "abF" = (
 /obj/structure/table/standard,
 /obj/machinery/photocopier/faxmachine{
 	department = "Captain's Office"
 	},
+/obj/effect/floor_decal/corner/white/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abG" = (
 /obj/structure/table/standard,
 /obj/item/paper_bin{
@@ -531,27 +753,47 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Command"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abH" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abI" = (
 /obj/machinery/computer/crew{
 	dir = 8;
 	pixel_x = 3
 	},
+/obj/effect/floor_decal/corner/white/full{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/comm)
 "abJ" = (
 /obj/machinery/computer/operating{
 	pixel_y = 2
 	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abK" = (
 /obj/machinery/optable,
 /obj/machinery/auto_doc{
@@ -560,16 +802,27 @@
 /obj/machinery/oxygen_pump/anesthetic{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abL" = (
 /obj/machinery/iv_drip,
 /obj/item/reagent_containers/blood/prelabeled/OMinus,
-/obj/machinery/camera/network/civilian{
-	c_tag = "BNK - Bunker Medical"
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Treatment"
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abM" = (
 /obj/structure/table/standard,
 /obj/item/stack/medical/advanced/bruise_pack{
@@ -588,25 +841,40 @@
 	pixel_x = 9;
 	pixel_y = -5
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abN" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abO" = (
 /obj/machinery/oxygen_pump/mobile/stabilizer,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/med)
 "abP" = (
 /obj/structure/mopbucket,
 /obj/item/reagent_containers/glass/bucket,
 /obj/item/mop,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abQ" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/storage/box/lights/mixed,
@@ -618,8 +886,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
 "abR" = (
 /obj/structure/bed/padded,
 /obj/structure/window/reinforced/tinted/frosted{
@@ -627,8 +898,674 @@
 	},
 /obj/structure/curtain/open/bed,
 /obj/item/bedsheet/hos,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker)
+/area/muriki/crew/bunker_deep/main)
+"abS" = (
+/obj/machinery/light/small/emergency/flicker{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 1;
+	use_power = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"abT" = (
+/obj/structure/table/gamblingtable,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker_deep/main)
+"abU" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker_deep/main)
+"abV" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/light,
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker_deep/main)
+"abW" = (
+/obj/machinery/door/blast/angled{
+	id = "bunkerfireexit"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"abX" = (
+/obj/structure/bed/chair/bay/comfy/beige{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker_deep/main)
+"abY" = (
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker_deep/main)
+"abZ" = (
+/obj/structure/bed/chair/bay/comfy/beige{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker_deep/main)
+"aca" = (
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acb" = (
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker_deep/main)
+"acc" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker_deep/main)
+"acd" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/bunker_deep/main)
+"ace" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Main Room East";
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker_deep/main)
+"acf" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"acg" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"ach" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"aci" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/muriki/crew/bunker_deep/main)
+"acj" = (
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/machinery/button/remote/blast_door{
+	dir = 8;
+	pixel_x = 29;
+	name = "Emergency Fire Exit";
+	id = "bunkerfireexit"
+	},
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"ack" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"acl" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"acm" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"aco" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acp" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acq" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
+"acr" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acs" = (
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/machinery/computer/security/bunker_only,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"act" = (
+/obj/effect/floor_decal/corner/black/full,
+/obj/structure/closet/radiation,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acv" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acw" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acx" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acy" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acz" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acB" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acC" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acE" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acF" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acG" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acH" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acI" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 8
+	},
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acJ" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acL" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acM" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 1
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Hall West"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acN" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acO" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acP" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acQ" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acR" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Ladder lower"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acT" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acU" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Hall East"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acV" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acW" = (
+/turf/simulated/wall/rplastitanium,
+/area/muriki/crew/bunker_deep/comm)
+"acX" = (
+/turf/simulated/wall/rplastitanium,
+/area/muriki/crew/bunker_deep/med)
+"acY" = (
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"acZ" = (
+/obj/machinery/keycard_auth{
+	pixel_y = -24
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/comm)
+"ada" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/comm)
+"adb" = (
+/obj/effect/floor_decal/corner/white/full{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24;
+	nightshift_setting = 3
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/comm)
+"adc" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker_deep/med)
+"add" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"ade" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"adf" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/comm)
+"adg" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/comm)
+"adh" = (
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker_deep/med)
+"adi" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker_deep/med)
+"adj" = (
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/muriki/crew/bunker_deep/med)
+"adk" = (
+/obj/effect/floor_decal/corner/black/full,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"adl" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"adm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"adn" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"ado" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"adp" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Cleaning"
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"adq" = (
+/obj/structure/bed/padded,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/curtain/open/bed,
+/obj/item/bedsheet/hos,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"adr" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -58117,16 +59054,16 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
 bHg
 bHg
 bHg
@@ -58279,21 +59216,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-aao
-aao
-aao
-aao
-aao
-aao
-aao
-aap
-aap
-aap
-aap
-aap
-bHg
+bPH
+acW
+acW
+acW
+acW
+acW
+aan
+aan
+aan
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
 bHg
 bHg
 bHg
@@ -58441,21 +59378,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acW
 abF
 abz
 abr
-aao
-aat
-aat
-aao
+acW
+acI
+act
 aap
 aap
 aap
 aap
 aap
-bHg
+aap
+bPH
 bHg
 bHg
 bHg
@@ -58603,21 +59540,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acW
 abG
-aat
-abr
+adf
+acZ
+acW
+acJ
+acu
 aao
-aat
-aat
-aao
-aap
-aap
-aap
-aap
-aap
-bHg
+acj
+acg
+abW
+abW
+abS
+bPH
 bHg
 bHg
 bHg
@@ -58765,21 +59702,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acW
 abH
-aat
-aat
+adg
+ada
 abk
-aat
-aat
-aao
-aao
-aao
-aao
-aao
-aao
-bHg
+acK
+acv
+aap
+aap
+aap
+aap
+aap
+aap
+bPH
 bHg
 bHg
 bHg
@@ -58927,21 +59864,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acW
 abI
 abA
-aat
-aao
-aat
-aat
+adb
+acW
+acL
+acw
 aaY
-aaw
+ack
 aaM
 aaG
 aaw
-aao
-bHg
+aap
+bPH
 bHg
 bHg
 bHg
@@ -59089,21 +60026,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-aao
-aao
-aao
-aao
-aat
-aat
-aao
-aaw
+bPH
+acW
+acW
+acW
+acW
+acW
+acM
+acx
+aap
+acl
 aaN
 aaH
 aax
-aao
-bHg
+aap
+bPH
 bHg
 bHg
 bHg
@@ -59251,22 +60188,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acX
 abJ
 abB
 abs
-aao
-aat
-aat
-aao
-aaw
+acX
+acN
+acy
+aap
+acf
 aay
 aay
 aay
-aao
-bHg
-bHg
+aap
+bPH
+bPH
 bHg
 bHg
 bHg
@@ -59413,22 +60350,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acX
 abK
-abt
+adh
 abt
 abl
-aat
-aat
-aao
-aao
-aao
-aao
-aao
-aao
+acK
+acz
+aap
+aap
+aap
+aap
+aap
+aap
 aan
-bHg
+bPH
 bHg
 bHg
 bHg
@@ -59575,22 +60512,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acX
 abL
-abt
-abt
+adh
+adc
 abm
-aat
-aat
+acN
+acx
 aaZ
 aaV
 aaO
 aaI
-aaq
+abX
 aaq
 aan
-bHg
+bPH
 bHg
 bHg
 bHg
@@ -59737,22 +60674,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acX
 abM
 abC
 abu
-aao
-aat
-aat
+acX
+acO
+acA
 aba
-aat
-aat
-aaI
-aar
+aca
+aca
+acc
+abY
 aar
 aan
-bHg
+bPH
 bHg
 bHg
 bHg
@@ -59899,22 +60836,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acX
 abN
-abt
-aao
-aao
-aat
-aat
+adi
+acX
+acX
+acN
+acx
 abb
-aat
-aat
-aaI
+aca
+aca
+acc
 aaz
-aar
+abT
 aan
-bHg
+bPH
 bHg
 bHg
 bHg
@@ -60061,22 +60998,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+acX
 abO
-abt
-aao
-aat
-aat
-aat
+adj
+acX
+acY
+acP
+acB
 abc
-aat
-aat
-aaI
-aas
+acm
+aca
+acd
+abZ
 aas
 aan
-bHg
+bPH
 bHg
 bHg
 bHg
@@ -60223,22 +61160,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-aao
-aao
-aao
+bPH
+aan
+aan
+aan
+aan
 abn
 abi
 abh
 abd
+acn
+ach
+aca
+aca
 aat
-aat
-aat
-aat
-aat
-aao
-bHg
+aan
+bPH
 bHg
 bHg
 bHg
@@ -60385,22 +61322,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-aat
-aat
-aao
+bPH
+aan
+ado
+adk
+aan
 abo
-aat
-aat
+acQ
+acC
 abe
-aat
+aco
 aaP
 aaJ
 aaA
 aau
-aao
-bHg
+aan
+bPH
 bHg
 bHg
 bHg
@@ -60547,22 +61484,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-aat
-aat
-aao
-aao
-aat
-aat
-abb
-aat
+bPH
+aan
+adp
+adl
+aan
+aan
+acR
+acx
+acr
+aca
 aaQ
-aau
+acb
 aaB
-aau
-aao
-bHg
+abU
+aan
+bPH
 bHg
 bHg
 bHg
@@ -60709,22 +61646,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+aan
 abP
-aat
-aat
+adm
+acS
 abp
-aat
-aat
+acS
+acD
 abf
-aat
+aca
 aaR
-aau
-aau
-aau
-aao
-bHg
+acb
+acb
+abV
+aan
+bPH
 bHg
 bHg
 bHg
@@ -60871,22 +61808,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+aan
 abQ
 abD
-aat
-aao
-aat
-aat
-abb
-aat
-aau
-aau
+add
+aan
+acT
+acx
+acs
+acp
+aci
+ace
 aaC
 aav
-aao
-bHg
+aan
+bPH
 bHg
 bHg
 bHg
@@ -61033,22 +61970,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-aao
-aao
-aao
-aao
+bPH
+aan
+aan
+aan
+aan
+aan
 abj
-aat
-aao
-aao
-aao
-aao
-aao
-aao
-aao
-bHg
+acE
+aap
+aap
+aap
+aap
+aap
+aap
+aan
+bPH
 bHg
 bHg
 bHg
@@ -61195,22 +62132,22 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
+bPH
+aan
 abR
 abE
 abv
-aao
-aat
-aat
-aao
+aan
+acT
+acx
+aap
 aaW
 aaS
 aaK
 aaD
-aao
 aap
-bHg
+bPH
+bPH
 bHg
 bHg
 bHg
@@ -61357,21 +62294,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-abR
-aat
-aat
+bPH
+aan
+adq
+aca
+ade
 abq
-aat
-aat
+acS
+acF
 abg
 aaX
 aaT
-aaw
+acf
 aaE
-aao
 aap
+bPH
 bHg
 bHg
 bHg
@@ -61519,21 +62456,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-abR
-aat
+bPH
+aan
+adq
+aca
 abw
-aao
+aan
+acU
 aat
-aat
-aao
-aaw
+aap
+acq
 aaU
 aaL
 aaF
-aao
 aap
+bPH
 bHg
 bHg
 bHg
@@ -61681,21 +62618,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-abR
-aat
+bPH
+aan
+adq
+aca
 abx
-aao
-aat
-aat
-aao
-aao
-aao
-aao
-aao
-aao
+aan
+acT
+acG
 aap
+aap
+aap
+aap
+aap
+aap
+bPH
 bHg
 bHg
 bHg
@@ -61843,21 +62780,21 @@ bHg
 bHg
 bHg
 bHg
-bHg
-aao
-aat
-aat
+bPH
+aan
+adr
+adn
 aby
-aao
-aat
-aat
-aao
-aap
-aap
-aap
-aap
-aap
-aap
+aan
+acV
+acH
+aan
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
 bHg
 bHg
 bHg
@@ -62005,21 +62942,21 @@ bHg
 bHg
 bHg
 bHg
+bPH
+aan
+aan
+aan
+aan
+aan
+aan
+aan
+aan
+bPH
 bHg
-aao
-aao
-aao
-aao
-aao
-aao
-aao
-aao
-aap
-aap
-aap
-aap
-aap
-aap
+bHg
+bHg
+bHg
+bHg
 bHg
 bHg
 bHg
@@ -62167,16 +63104,16 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
+bPH
 bHg
 bHg
 bHg
