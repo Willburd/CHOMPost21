@@ -15,7 +15,7 @@
 	blinded = 0
 	anchored = TRUE	//  don't get pushed around
 	var/list/visibleChunks = list()
-	var/datum/visualnet/ghost/visualnet
+	var/datum/visualnet/visualnet // Outpost 21 edit - Ghosts use camera network
 	var/static_visibility_range = 16
 
 	var/can_reenter_corpse
@@ -102,15 +102,17 @@
 	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 	GLOB.observer_mob_list += src
 	. = ..()
-	visualnet = ghostnet
+	visualnet = cameranet // Outpost 21 edit - Ghosts use camera network
 
 /mob/observer/dead/proc/checkStatic()
 	return !(check_rights_for(src.client, R_ADMIN|R_FUN|R_EVENT|R_SERVER) || (client && client.buildmode) || isbelly(loc))
 
 /mob/observer/dead/Moved(atom/old_loc, direction, forced)
 	. = ..()
+	/* // Outpost 21 edit - Ghosts use camera network
 	if(isbelly(loc) && !isbelly(old_loc))
 		visualnet.addVisibility()
+	*/
 	if(visualnet && checkStatic())
 		visualnet.visibility(src, client)
 
@@ -545,7 +547,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		body_backup.moveToNullspace() //YEET
 		qdel(body_backup)
 		body_backup = null
-	visualnet.addVisibility(src, src.client)
+	// visualnet.addVisibility(src, src.client) // Outpost 21 edit - Ghosts use camera network
 	visualnet = null
 	if(ismob(following))
 		var/mob/M = following
