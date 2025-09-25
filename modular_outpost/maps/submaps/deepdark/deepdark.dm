@@ -63,6 +63,7 @@
 #include "fisk_B.dmm"
 #include "fisk_C.dmm"
 #include "fisk_D.dmm"
+#include "pit_A.dmm"
 #include "maint_A.dmm"
 #include "maint_B.dmm"
 #include "maint_C.dmm"
@@ -510,6 +511,14 @@
 	allow_duplicates = FALSE
 	discard_prob = 60
 	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/pit_A
+	name = "Old Tug Graveyard"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/pit_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 70
+	cost = 25
 
 //////////////////////////////////////////////////////////////
 // Huge structures in the cave

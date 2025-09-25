@@ -14,6 +14,7 @@
 "d" = (
 /obj/structure/bed/padded,
 /obj/item/bedsheet/mime,
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "e" = (
