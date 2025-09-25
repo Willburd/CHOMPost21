@@ -15703,6 +15703,14 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4
 	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
+"aCp" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
 "aCq" = (
@@ -24335,6 +24343,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"aRZ" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "aSa" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
@@ -24485,6 +24497,10 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"aSv" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "aSw" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -27658,6 +27674,10 @@
 /obj/structure/stairs/spawner/east,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
+"aXT" = (
+/mob/living/simple_mob/vore/jelly,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
 "aXU" = (
 /turf/simulated/wall/plastitanium,
 /area/muriki/lowerevac)
@@ -32571,6 +32591,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
+"bhc" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/maintenance/sec)
 "bhd" = (
 /obj/machinery/light{
 	dir = 1
@@ -34948,6 +34971,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-10"
 	},
+/obj/item/assembly/mousetrap/armed,
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
@@ -35551,6 +35575,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cargo)
 "bmD" = (
@@ -37637,6 +37662,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bqF" = (
@@ -39277,6 +39303,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
+"btu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "btv" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -40784,6 +40818,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
+"bvz" = (
+/obj/effect/mine/claymore{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
 "bvA" = (
 /turf/simulated/wall{
 	can_open = 1
@@ -43735,6 +43775,11 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/medical/chem_storage)
+"bAW" = (
+/obj/machinery/light/small,
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bAX" = (
 /turf/simulated/wall,
 /area/mine/explored/muriki/tuggrave)
@@ -44403,6 +44448,10 @@
 	name = "reinforced floor"
 	},
 /area/maintenance/incinerator)
+"bCu" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
 "bCv" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -48079,6 +48128,7 @@
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/mountainbasenorth)
 "bJD" = (
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/bunker)
 "bJE" = (
@@ -48168,6 +48218,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/item/assembly/mousetrap/armed,
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
@@ -48801,6 +48852,11 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/eng)
+"bLa" = (
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "bLb" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -48912,8 +48968,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/random/trash,
 /obj/machinery/light/small,
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "bLo" = (
@@ -48987,6 +49044,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1
 	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "bLx" = (
@@ -50079,6 +50137,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "bNR" = (
@@ -50985,6 +51044,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "bPq" = (
@@ -51672,6 +51732,15 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bQw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "bQx" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -53321,6 +53390,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bTK" = (
@@ -53929,6 +53999,7 @@
 	icon_state = "1-10"
 	},
 /obj/effect/landmark/event_spawn/maintpred,
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research/north)
 "bUR" = (
@@ -54660,6 +54731,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/item/assembly/mousetrap/armed,
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
@@ -55529,6 +55601,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/item/assembly/mousetrap/armed,
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
@@ -56038,6 +56111,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bZt" = (
+/obj/effect/landmark/dangerous_situation,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
 "bZu" = (
 /obj/random/trash,
 /obj/machinery/light/small{
@@ -56045,6 +56122,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
+"bZv" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"bZw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bZx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 5
@@ -56112,6 +56212,13 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
+"bZG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bZH" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance/int,
@@ -56149,6 +56256,22 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"bZM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bZN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -56223,6 +56346,20 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
+"bZU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bZV" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -57001,6 +57138,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/liminaltoobs)
 "cbH" = (
@@ -57045,13 +57183,15 @@
 /area/maintenance/atmos_control)
 "cbN" = (
 /obj/machinery/light/small,
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "cbO" = (
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "cbP" = (
-/obj/random/trash,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "cbQ" = (
@@ -57750,6 +57890,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cdD" = (
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "cdE" = (
@@ -57819,6 +57960,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/item/assembly/mousetrap/armed,
 /obj/item/clothing/suit/caution,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
@@ -58233,6 +58375,7 @@
 "cfb" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance/common,
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/arcade/lasertag)
 "cfc" = (
@@ -58833,6 +58976,11 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"cgM" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "cgN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -59333,6 +59481,40 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"cig" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"cih" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"cii" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"cij" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
 "cik" = (
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
@@ -59341,6 +59523,349 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
+"cil" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cim" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cin" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"cio" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"cip" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/random/trash,
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"ciq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cir" = (
+/mob/living/simple_mob/vore/aggressive/rat,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"cis" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"cit" = (
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"ciu" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"civ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"ciw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
+"cix" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/maintenance/cargo)
+"ciy" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/item/trash/stick,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"ciz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/item/trash/dipbowl,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"ciA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/trash/brownies,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"ciB" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/always_electrified,
+/obj/effect/mine/incendiary,
+/obj/item/trash/brownies,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/spine/waste)
+"ciC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/trash/pretzel,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"ciD" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/cave)
+"ciE" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/cave)
+"ciF" = (
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/tuggrave)
+"ciG" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ciH" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 9
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ciI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 6
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ciJ" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ciK" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 10
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ciL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ciM" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
+"ciN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/eng)
+"ciO" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"ciP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
+"ciQ" = (
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
+"ciR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"ciS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"ciT" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"ciU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"ciV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"ciW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"ciX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"ciY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"ciZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"cja" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"cjb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "cjc" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -59350,6 +59875,55 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
+"cjd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"cje" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"cjf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"cjg" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"cjh" = (
+/obj/random/trash,
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"cji" = (
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"cjj" = (
+/mob/living/simple_mob/vore/jelly,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbasenorth)
 "ckQ" = (
 /obj/machinery/porta_turret/stationary,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -84384,7 +84958,7 @@ aIY
 kMh
 aHc
 aMm
-aSa
+bZv
 ccU
 byK
 bDy
@@ -85356,7 +85930,7 @@ aIY
 aIY
 aIY
 kMh
-aNs
+bZw
 kMh
 aLA
 ayE
@@ -86016,7 +86590,7 @@ cfv
 cfv
 cfv
 byK
-aIg
+aCp
 byK
 cfv
 cfv
@@ -86663,7 +87237,7 @@ cfv
 cfv
 cfv
 byK
-ava
+aXT
 bWB
 byK
 iwf
@@ -87943,7 +88517,7 @@ aIY
 aIY
 aIY
 kMh
-aLZ
+bZU
 kMh
 kMh
 kMh
@@ -88077,7 +88651,7 @@ bAs
 bAr
 ayb
 ayb
-aLA
+ciy
 aOI
 kMh
 aIY
@@ -89047,7 +89621,7 @@ kwU
 kwU
 kwU
 kMh
-aLS
+ciA
 kMh
 aIY
 aIY
@@ -89857,7 +90431,7 @@ kwU
 kwU
 kwU
 kMh
-kMh
+ciB
 kMh
 kMh
 kMh
@@ -89888,7 +90462,7 @@ aIY
 aIY
 aIY
 kMh
-aFI
+bZM
 kMh
 iwf
 iwf
@@ -90345,7 +90919,7 @@ kwU
 kMh
 bAo
 kMh
-aRr
+ciz
 aLc
 aLc
 ceY
@@ -91315,7 +91889,7 @@ kwU
 kwU
 kwU
 kMh
-aLS
+ciC
 kMh
 kMh
 kMh
@@ -91827,7 +92401,7 @@ aIY
 kMh
 aHu
 agb
-agb
+cih
 bEV
 agb
 axQ
@@ -92133,7 +92707,7 @@ cfi
 agb
 agb
 bLG
-bEV
+civ
 agb
 axQ
 adc
@@ -93449,7 +94023,7 @@ aIY
 aIY
 kMh
 ccU
-aLS
+cig
 kMh
 aTc
 aRY
@@ -93943,7 +94517,7 @@ aQr
 kMh
 aLS
 aRw
-aSa
+bZv
 aBw
 aSa
 kMh
@@ -97150,7 +97724,7 @@ gWL
 gWL
 gWL
 gWL
-bHD
+ciw
 gWL
 aNL
 aNL
@@ -98148,11 +98722,11 @@ aQg
 bir
 aNP
 aNa
-aNa
+cgM
 aNa
 bfr
 bge
-aUQ
+bZG
 bge
 aNL
 aNL
@@ -99742,7 +100316,7 @@ drJ
 aXN
 bhh
 biq
-bVL
+cix
 bge
 bge
 bge
@@ -100087,7 +100661,7 @@ bge
 aUR
 aNP
 aNa
-bfO
+cii
 bge
 aNL
 aNL
@@ -102143,7 +102717,7 @@ bHt
 bHI
 bYn
 aQt
-bII
+ciN
 bIG
 bKm
 fTo
@@ -102457,7 +103031,7 @@ adu
 bLx
 bLE
 bLA
-bLA
+ciO
 bLA
 bLA
 bLA
@@ -102570,7 +103144,7 @@ cif
 cif
 bIX
 bRB
-bRB
+cjj
 gqd
 gqd
 tts
@@ -102920,7 +103494,7 @@ bDx
 bDx
 bDx
 ans
-adS
+cjb
 acT
 anq
 acT
@@ -103585,7 +104159,7 @@ adu
 bLS
 adu
 adu
-bLS
+chD
 adu
 bLS
 adu
@@ -103631,7 +104205,7 @@ aXN
 aNL
 aNL
 pge
-aQg
+cis
 bOj
 aQg
 pge
@@ -104868,7 +105442,7 @@ bMZ
 bMZ
 bMZ
 adu
-bUd
+ciY
 adu
 bMZ
 bMZ
@@ -105097,7 +105671,7 @@ ceL
 bNM
 bge
 bge
-bFS
+cio
 bUw
 bge
 bsi
@@ -105288,7 +105862,7 @@ aUR
 aNa
 awc
 aDj
-aEL
+bAW
 bge
 ccA
 axM
@@ -105366,7 +105940,7 @@ bMZ
 bMZ
 adu
 bLE
-bLm
+ciR
 chw
 adu
 bMZ
@@ -105742,7 +106316,7 @@ aNL
 aNL
 bge
 aQg
-aQg
+cis
 aQg
 bge
 bge
@@ -106010,10 +106584,10 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
-bMZ
+adu
+adu
+adu
+adu
 adu
 bYT
 adu
@@ -106172,11 +106746,11 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
-bMZ
 adu
+bLx
+bLx
+bLx
+bMc
 bLS
 adu
 bMZ
@@ -106334,10 +106908,10 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
-bMZ
+adu
+adu
+adu
+adu
 adu
 bLS
 adu
@@ -106809,7 +107383,7 @@ bMZ
 adu
 adu
 adu
-bUm
+ciZ
 adu
 adu
 bLx
@@ -107301,7 +107875,7 @@ bLx
 adu
 adu
 adu
-bLF
+ciX
 bLo
 adu
 adu
@@ -108265,7 +108839,7 @@ tts
 bMZ
 adu
 adu
-bUB
+cjd
 adu
 bMZ
 bMZ
@@ -108932,7 +109506,7 @@ bMZ
 bMZ
 bMZ
 adu
-bLS
+chD
 adu
 bMZ
 bMZ
@@ -109311,7 +109885,7 @@ mGE
 aDn
 aDn
 bhW
-bCD
+cil
 bhW
 aDn
 aDn
@@ -109574,7 +110148,7 @@ bMZ
 bMZ
 bMZ
 adu
-bLS
+chD
 adu
 adu
 adu
@@ -109609,11 +110183,11 @@ bFL
 cbt
 bFx
 bFY
-bFL
+ciK
 cbt
-bFx
-bFY
-bBE
+ciH
+ciG
+ciF
 bIq
 bIq
 bIq
@@ -109771,9 +110345,9 @@ bFX
 bFI
 bCc
 cbt
-bFX
-bFI
-bCc
+ciL
+ciJ
+ciI
 cbt
 bWR
 bWQ
@@ -109984,7 +110558,7 @@ bhW
 bhW
 bhW
 bhW
-aDn
+aDq
 bhW
 bhW
 aCc
@@ -110631,11 +111205,11 @@ bhW
 bhW
 aCc
 bhW
-aDn
-aDn
 bhW
 bhW
 bhW
+bhW
+bhB
 bhW
 bhW
 glX
@@ -110793,13 +111367,13 @@ aDn
 bhW
 ayT
 bhW
-aDn
-aDn
-aDn
-glX
-glX
-glX
-glX
+bZt
+bhC
+bhC
+bhW
+bgZ
+bhW
+bhc
 glX
 glX
 glX
@@ -110955,13 +111529,13 @@ bhW
 bhW
 ayT
 bhW
-aDn
-aDn
-aDn
-glX
-glX
-glX
-glX
+bhC
+bhC
+bhC
+bhW
+bhC
+bhW
+bhW
 glX
 glX
 glX
@@ -111117,13 +111691,13 @@ bhW
 cde
 aCf
 bhW
-aDn
-aDn
-aDn
-glX
-glX
-glX
-glX
+bhC
+bhC
+bhC
+bCu
+bhC
+bvz
+bhW
 glX
 glX
 glX
@@ -111253,7 +111827,7 @@ aDn
 aDn
 aDn
 bhW
-bUP
+cip
 bHi
 bDW
 bhW
@@ -111261,7 +111835,7 @@ bSj
 bGz
 bKS
 aOT
-bNc
+cij
 aRl
 bLH
 bhW
@@ -111279,13 +111853,13 @@ bhW
 bhC
 ayT
 bhW
-aDn
-aDn
-aDn
-glX
-glX
-glX
-glX
+bZt
+bhC
+bhC
+bhW
+bhC
+bhC
+bhW
 glX
 glX
 glX
@@ -111441,13 +112015,13 @@ bhW
 bhW
 ayT
 bhW
-aDn
-aDn
-aDn
-glX
-glX
-glX
-glX
+bhW
+bhW
+bhW
+bhW
+bhW
+bhC
+bhW
 glX
 glX
 glX
@@ -111607,9 +112181,9 @@ aDn
 aDn
 aDn
 glX
-glX
-glX
-glX
+bhW
+bhW
+bhW
 glX
 glX
 glX
@@ -113683,7 +114257,7 @@ bVo
 bVo
 rPd
 bhW
-bEi
+ciq
 bhW
 rPd
 rPd
@@ -114108,7 +114682,7 @@ aPF
 aPF
 aPF
 aPF
-bTF
+ciV
 aPF
 bMU
 bMU
@@ -115622,8 +116196,8 @@ olM
 fUK
 fUK
 aDn
-aDn
-aDn
+bhW
+bhW
 bhW
 bhW
 bGz
@@ -115784,8 +116358,8 @@ olM
 fUK
 aDn
 aDn
-aDn
-aDn
+bhW
+bhC
 bhW
 bVq
 buL
@@ -115946,10 +116520,10 @@ olM
 olM
 aDn
 aDn
-aDn
-aDn
 bhW
-bEi
+bhC
+bhW
+ciq
 bhW
 bhW
 aDn
@@ -116108,9 +116682,9 @@ olM
 olM
 aDn
 aDn
-aDn
-aDn
 bhW
+bhC
+bhB
 bEi
 bhW
 aDn
@@ -116214,7 +116788,7 @@ bMU
 bMU
 bMU
 aPF
-bMC
+ciW
 axA
 ayG
 scO
@@ -116270,8 +116844,8 @@ olM
 olM
 aDn
 aDn
-aDn
-aDn
+bhW
+bhW
 bhW
 bUk
 bhW
@@ -116853,7 +117427,7 @@ aPF
 aPF
 aPF
 bMK
-bMQ
+cja
 aPF
 aPF
 bMU
@@ -117329,7 +117903,7 @@ bMU
 bMU
 aPF
 bZe
-bMQ
+cja
 aPF
 adv
 adv
@@ -117410,7 +117984,7 @@ ceG
 bhW
 bGz
 bNB
-bDA
+cim
 bTV
 bhW
 glX
@@ -119043,9 +119617,9 @@ bhW
 bJK
 bhW
 bhW
-glX
-glX
-glX
+bhW
+bhW
+bhW
 glX
 glX
 glX
@@ -119204,10 +119778,10 @@ bJK
 bhW
 bJK
 bJK
+bhB
+bJK
+bJK
 bhW
-glX
-glX
-glX
 glX
 glX
 glX
@@ -119367,9 +119941,9 @@ bhW
 bLl
 bJK
 bhW
-glX
-glX
-glX
+bhW
+bhW
+bhW
 glX
 glX
 glX
@@ -120590,7 +121164,7 @@ adv
 adv
 adv
 adv
-bZn
+ciU
 iAI
 bMQ
 aPF
@@ -120737,7 +121311,7 @@ bMd
 iAI
 iAI
 iAI
-iAI
+cje
 iAI
 iAI
 bYj
@@ -120798,7 +121372,7 @@ aeD
 qMR
 qMR
 aeD
-aey
+ciD
 alY
 olM
 olM
@@ -120894,7 +121468,7 @@ bMU
 aPF
 bMK
 iAI
-bZz
+cjf
 aPF
 aPF
 aPF
@@ -120960,7 +121534,7 @@ aeD
 aeD
 aeD
 aeD
-aey
+ciE
 alY
 olM
 olM
@@ -123185,7 +123759,7 @@ bMU
 bMU
 aPF
 aPF
-bXz
+ciS
 aPF
 bMU
 bMU
@@ -123346,7 +123920,7 @@ bMU
 bMU
 bMU
 aPF
-xaP
+ciT
 bMC
 aPF
 bMU
@@ -124132,7 +124706,7 @@ bJG
 bUL
 caw
 bUL
-bUL
+cjg
 bUL
 bJG
 bMU
@@ -124161,7 +124735,7 @@ amq
 bYM
 bZB
 bYM
-cbX
+ciQ
 uCi
 uCi
 aDk
@@ -124172,7 +124746,7 @@ aNG
 aNG
 aNG
 aNG
-aNG
+fxd
 aKP
 bQX
 aKP
@@ -124335,7 +124909,7 @@ ahC
 ahC
 aKP
 aKP
-aKP
+xST
 bQY
 cbO
 aKP
@@ -124375,9 +124949,9 @@ vka
 vka
 vka
 vka
-vka
-vka
-vka
+aXy
+aOU
+aXy
 aXy
 bhg
 bgP
@@ -124535,11 +125109,11 @@ vka
 vka
 vka
 vka
-vka
-vka
-vka
-vka
-vka
+syy
+aXy
+aXy
+aOU
+aOU
 aXy
 bhi
 aXy
@@ -124697,11 +125271,11 @@ vka
 vka
 vka
 vka
-vka
-vka
-vka
-vka
-vka
+aXy
+cir
+aOU
+aOU
+aOU
 aXy
 bhi
 aXy
@@ -124859,11 +125433,11 @@ vka
 vka
 vka
 vka
-vka
-vka
-vka
-vka
-vka
+aXy
+aXy
+aXy
+aXy
+aOU
 aXy
 bhi
 bpo
@@ -125025,7 +125599,7 @@ vka
 vka
 vka
 vka
-vka
+aXy
 aXy
 bhi
 bpo
@@ -125098,7 +125672,7 @@ pmN
 pmN
 pmN
 bJG
-bUL
+cjg
 bUL
 bJG
 bUL
@@ -125672,7 +126246,7 @@ ceH
 aXy
 bVn
 aOU
-aXy
+cin
 aXy
 aXy
 ayD
@@ -126109,7 +126683,7 @@ pmN
 pmN
 pmN
 amq
-bYL
+ciP
 amq
 ahC
 ahC
@@ -126883,7 +127457,7 @@ pmN
 pmN
 bJG
 bUL
-bUL
+cjg
 bUL
 bJG
 aag
@@ -128015,7 +128589,7 @@ pmN
 bJG
 bUL
 bUL
-cav
+cjh
 bJG
 bJG
 bUL
@@ -128098,7 +128672,7 @@ vka
 aXy
 aOU
 aOU
-bLI
+cit
 aXy
 aXy
 cep
@@ -128940,7 +129514,7 @@ ahb
 ahb
 ahb
 aXy
-avx
+bLa
 aXy
 aZW
 aXy
@@ -131416,7 +131990,7 @@ bUU
 bUU
 bUU
 bUU
-bVa
+cji
 bVi
 caE
 bJG
@@ -133158,8 +133732,8 @@ aXy
 avA
 aql
 amX
+aRZ
 aXy
-aZW
 aXy
 alx
 aXy
@@ -134616,8 +135190,8 @@ aXy
 avz
 aql
 ajR
+aSv
 aXy
-aZW
 aXy
 alx
 aXy
@@ -134868,7 +135442,7 @@ lOq
 qYe
 qYe
 lOq
-bKs
+ciM
 aEI
 fJz
 aUn
@@ -135585,7 +136159,7 @@ ccI
 ccI
 ccI
 aXy
-aum
+btu
 aXy
 ahb
 ahb
@@ -136036,7 +136610,7 @@ aTN
 aXy
 aTx
 aTx
-aTx
+ciu
 aTx
 aTx
 aXy
@@ -137525,7 +138099,7 @@ ahb
 aXy
 aXy
 avz
-anv
+bQw
 aXy
 aXy
 ahb
