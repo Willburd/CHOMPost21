@@ -1,0 +1,352 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/wood/alt/panel,
+/area/mine/explored/muriki/cave/deepdark)
+"g" = (
+/turf/simulated/floor/wood/alt/panel/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/obj/random/firstaid,
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/orange,
+/turf/simulated/floor/wood/alt/panel/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/turf/simulated/wall,
+/area/template_noop)
+"r" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"s" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance,
+/turf/simulated/floor/wood/alt/panel/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"u" = (
+/turf/template_noop,
+/area/template_noop)
+"y" = (
+/obj/structure/table/woodentable,
+/obj/item/flame/candle/everburn,
+/obj/item/storage/box/matches,
+/turf/simulated/floor/wood/alt/panel,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"N" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"R" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/template_noop)
+"S" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/random/plushie,
+/obj/item/analyzer,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/turf/simulated/floor/wood/alt/panel,
+/area/mine/explored/muriki/cave/deepdark)
+"Y" = (
+/obj/random/contraband,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/obj/structure/closet/crate/mimic/dangerous,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+"}
+(2,1,1) = {"
+u
+u
+u
+u
+d
+d
+d
+d
+d
+d
+d
+u
+u
+u
+u
+"}
+(3,1,1) = {"
+u
+u
+N
+a
+a
+a
+a
+a
+a
+a
+a
+a
+u
+u
+u
+"}
+(4,1,1) = {"
+u
+u
+N
+d
+a
+k
+S
+G
+Z
+a
+d
+K
+u
+u
+u
+"}
+(5,1,1) = {"
+u
+u
+N
+d
+a
+Y
+G
+G
+G
+a
+d
+d
+N
+u
+u
+"}
+(6,1,1) = {"
+u
+u
+N
+d
+a
+a
+a
+a
+c
+a
+a
+a
+p
+u
+u
+"}
+(7,1,1) = {"
+u
+u
+u
+d
+d
+d
+a
+o
+T
+y
+a
+d
+u
+u
+u
+"}
+(8,1,1) = {"
+u
+u
+N
+d
+d
+d
+a
+T
+T
+t
+a
+d
+N
+u
+u
+"}
+(9,1,1) = {"
+u
+u
+N
+d
+d
+d
+a
+g
+T
+T
+a
+d
+N
+u
+u
+"}
+(10,1,1) = {"
+u
+u
+u
+d
+d
+d
+a
+T
+T
+e
+a
+d
+N
+u
+u
+"}
+(11,1,1) = {"
+u
+u
+u
+d
+d
+d
+a
+g
+z
+a
+a
+d
+u
+u
+u
+"}
+(12,1,1) = {"
+u
+u
+u
+K
+d
+d
+a
+a
+r
+a
+d
+d
+u
+u
+u
+"}
+(13,1,1) = {"
+u
+u
+u
+u
+d
+d
+s
+s
+s
+a
+d
+u
+u
+u
+u
+"}
+(14,1,1) = {"
+u
+u
+u
+u
+u
+R
+R
+R
+u
+u
+u
+u
+u
+u
+u
+"}
+(15,1,1) = {"
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+u
+"}

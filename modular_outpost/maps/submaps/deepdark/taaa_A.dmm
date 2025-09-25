@@ -1,0 +1,217 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"b" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/obj/structure/table/woodentable,
+/obj/item/seeds/reishimycelium,
+/obj/item/seeds/reishimycelium,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/seeds/ambrosiavulgarisseed,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"h" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/rollingpapers,
+/obj/item/storage/rollingpapers,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"j" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"n" = (
+/obj/effect/decal/cleanable/blood/oil/streak,
+/obj/structure/door_assembly/door_assembly_mai,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"r" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/obj/item/storage/rollingpapers/blunt,
+/obj/item/storage/rollingpapers/blunt,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/obj/item/clothing/suit/storage/teshari/cloak/standard/rainbow,
+/obj/item/clothing/suit/storage/teshari/beltcloak/standard/rainbow,
+/obj/item/clothing/under/teshari/smock/rainbow,
+/obj/item/clothing/under/teshari/undercoat/standard/rainbow,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/obj/item/reagent_containers/rollingpaper,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/turf/simulated/floor/carpet/gaycarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"I" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/carpet/gaycarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"L" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"M" = (
+/turf/template_noop,
+/area/template_noop)
+"V" = (
+/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew,
+/obj/effect/auto_crayon{
+	icon_state = "up"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+"}
+(2,1,1) = {"
+M
+j
+L
+L
+a
+a
+a
+a
+j
+M
+"}
+(3,1,1) = {"
+M
+a
+L
+r
+H
+H
+H
+a
+a
+M
+"}
+(4,1,1) = {"
+M
+a
+b
+V
+A
+t
+r
+a
+a
+M
+"}
+(5,1,1) = {"
+M
+a
+L
+H
+A
+e
+o
+L
+a
+M
+"}
+(6,1,1) = {"
+M
+a
+L
+p
+H
+J
+r
+L
+a
+M
+"}
+(7,1,1) = {"
+M
+a
+L
+I
+h
+r
+H
+n
+a
+M
+"}
+(8,1,1) = {"
+M
+a
+L
+w
+H
+r
+m
+L
+a
+M
+"}
+(9,1,1) = {"
+M
+j
+L
+L
+L
+L
+b
+L
+a
+M
+"}
+(10,1,1) = {"
+M
+M
+M
+M
+M
+M
+M
+M
+M
+M
+"}

@@ -1,0 +1,304 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"b" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/turf/simulated/floor/wood/broken{
+	nitrogen = 0;
+	oxygen = 0;
+	methane = 140
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/obj/item/toy/eight_ball/conch,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/turf/simulated/floor/plating/turfpack/muriki{
+	methane = 140;
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"g" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"i" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/template_noop)
+"l" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"n" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/template_noop)
+"o" = (
+/turf/template_noop,
+/area/template_noop)
+"p" = (
+/obj/random/contraband,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 0;
+	oxygen = 0;
+	methane = 140
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"u" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"v" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"y" = (
+/obj/effect/landmark/dangerous_situation,
+/turf/simulated/floor/plating/turfpack/muriki{
+	methane = 140;
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"B" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki{
+	methane = 140;
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"C" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	methane = 140;
+	oxygen = 0;
+	nitrogen = 0;
+	carbon_dioxide = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"N" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 0;
+	oxygen = 0;
+	methane = 140
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"O" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/turf/simulated/floor/gas_crack/methane,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/structure/dirtybed,
+/turf/simulated/floor/wood/broken{
+	nitrogen = 0;
+	oxygen = 0;
+	methane = 140
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating/turfpack/muriki{
+	methane = 140;
+	oxygen = 0;
+	nitrogen = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(2,1,1) = {"
+o
+o
+o
+i
+i
+i
+o
+o
+o
+o
+"}
+(3,1,1) = {"
+o
+o
+u
+u
+u
+u
+u
+u
+o
+o
+"}
+(4,1,1) = {"
+o
+i
+u
+a
+a
+a
+a
+u
+n
+o
+"}
+(5,1,1) = {"
+o
+n
+u
+a
+e
+m
+a
+u
+n
+o
+"}
+(6,1,1) = {"
+o
+l
+u
+a
+m
+x
+a
+u
+u
+o
+"}
+(7,1,1) = {"
+o
+a
+a
+a
+b
+a
+a
+a
+u
+o
+"}
+(8,1,1) = {"
+o
+a
+y
+f
+p
+N
+g
+a
+O
+o
+"}
+(9,1,1) = {"
+o
+a
+C
+T
+f
+N
+v
+b
+O
+o
+"}
+(10,1,1) = {"
+o
+a
+U
+C
+f
+V
+g
+a
+O
+o
+"}
+(11,1,1) = {"
+o
+a
+y
+d
+B
+a
+a
+a
+l
+o
+"}
+(12,1,1) = {"
+o
+a
+a
+a
+a
+a
+H
+u
+l
+o
+"}
+(13,1,1) = {"
+o
+u
+u
+u
+u
+u
+u
+l
+o
+o
+"}
+(14,1,1) = {"
+o
+o
+n
+n
+i
+i
+o
+o
+o
+o
+"}
+(15,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}

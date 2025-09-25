@@ -11,6 +11,11 @@
 #include "trap_A.dmm"
 #include "den_A.dmm"
 #include "den_B.dmm"
+#include "den_C.dmm"
+#include "den_D.dmm"
+#include "den_E.dmm"
+#include "den_F.dmm"
+#include "den_G.dmm"
 #include "cave_A.dmm"
 #include "cave_B.dmm"
 #include "hall_A.dmm"
@@ -41,10 +46,23 @@
 #include "cat_slug_A.dmm"
 #include "garden_A.dmm"
 #include "garden_B.dmm"
+#include "garden_C.dmm"
 #include "range_A.dmm"
 #include "rat_A.dmm"
 #include "ritual_A.dmm"
 #include "xenolab_A.dmm"
+#include "taaa_A.dmm"
+#include "taaa_B.dmm"
+#include "russian_A.dmm"
+#include "refinery_A.dmm"
+#include "dodge_A.dmm"
+#include "trade_A.dmm"
+#include "recycle_A.dmm"
+#include "conch_A.dmm"
+#include "fisk_A.dmm"
+#include "fisk_B.dmm"
+#include "fisk_C.dmm"
+#include "fisk_D.dmm"
 #include "maint_A.dmm"
 #include "maint_B.dmm"
 #include "maint_C.dmm"
@@ -345,6 +363,150 @@
 	name = "Xenolab A"
 	desc = "Old Secret."
 	mappath = "modular_outpost/maps/submaps/deepdark/xenolab_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 60
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/taaa_A
+	name = "Taaa A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/taaa_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 80
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/taaa_B
+	name = "Taaa B"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/taaa_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 80
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/russian_A
+	name = "Russian A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/russian_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 30
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/refinery_A
+	name = "Refinery A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/refinery_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 30
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/garden_C
+	name = "Garden C"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/garden_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 70
+	cost = 50
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/dodge_A
+	name = "Dodge A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/dodge_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 30
+	cost = 20
+
+/datum/map_template/outpost21/muriki/caves_deepdark/trade_A
+	name = "Trade A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/trade_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/recycle_A
+	name = "Recycle A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/recycle_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/conch_A
+	name = "Conch A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/conch_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 30
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/fisk_A
+	name = "Fisk A"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/fisk_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/fisk_B
+	name = "Fisk B"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/fisk_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/fisk_C
+	name = "Fisk C"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/fisk_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/fisk_D
+	name = "Fisk D"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/fisk_D.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/den_C
+	name = "Den C"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/den_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 30
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/den_D
+	name = "Den D"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/den_D.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 70
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/den_E
+	name = "Den E"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/den_E.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 40
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/den_F
+	name = "Den F"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/den_F.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 50
+	cost = 10
+
+/datum/map_template/outpost21/muriki/caves_deepdark/den_G
+	name = "Den G"
+	desc = "Old Secret."
+	mappath = "modular_outpost/maps/submaps/deepdark/den_G.dmm"
 	allow_duplicates = FALSE
 	discard_prob = 60
 	cost = 15

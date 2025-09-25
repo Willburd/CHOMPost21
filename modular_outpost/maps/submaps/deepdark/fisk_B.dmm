@@ -1,0 +1,204 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/template_noop)
+"i" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/turf/simulated/floor/wood/alt/panel,
+/area/mine/explored/muriki/cave/deepdark)
+"l" = (
+/turf/template_noop,
+/area/template_noop)
+"n" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"s" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"D" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/panel,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+"}
+(2,1,1) = {"
+l
+l
+l
+l
+l
+e
+l
+l
+l
+l
+l
+l
+"}
+(3,1,1) = {"
+l
+l
+s
+s
+K
+x
+n
+s
+s
+s
+l
+l
+"}
+(4,1,1) = {"
+l
+s
+s
+a
+a
+i
+a
+a
+a
+a
+K
+l
+"}
+(5,1,1) = {"
+l
+s
+a
+a
+x
+x
+x
+k
+k
+a
+s
+l
+"}
+(6,1,1) = {"
+l
+s
+a
+x
+k
+k
+k
+x
+k
+a
+s
+l
+"}
+(7,1,1) = {"
+l
+s
+a
+k
+k
+D
+k
+x
+x
+a
+s
+l
+"}
+(8,1,1) = {"
+l
+s
+a
+k
+x
+a
+a
+a
+a
+a
+s
+l
+"}
+(9,1,1) = {"
+l
+K
+a
+a
+a
+a
+s
+s
+s
+s
+s
+l
+"}
+(10,1,1) = {"
+l
+l
+K
+s
+s
+K
+K
+s
+s
+s
+l
+l
+"}
+(11,1,1) = {"
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+"}
+(12,1,1) = {"
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+l
+"}
