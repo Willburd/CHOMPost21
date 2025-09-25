@@ -2,13 +2,13 @@
 	name = "Phoron Vulnerability"
 	desc = "Removes Vox phoron immunity and other reagent mechanics. You interact with phoron like most other species, poorly."
 	var_changes = list("reagent_tag" = null)
-	cost = -2
+	cost = -4
 	allowed_species = list(SPECIES_VOX)
 
 /datum/trait/negative/no_galcom
 	name = "Uncommon Linguistics"
 	desc = "Removes galactic common language from your character."
-	cost = -1
+	cost = -5
 
 /datum/trait/negative/no_galcom/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
 	. = ..()
