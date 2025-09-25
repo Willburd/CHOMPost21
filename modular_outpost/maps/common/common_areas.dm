@@ -2795,6 +2795,41 @@
 	base_turf = /turf/simulated/floor/plating
 
 
+
+//
+// Foundation blocks ---------------------------------------------------------------------
+//
+
+/area/submap/outpost21/foundation_block
+	name = "\improper Foundation Block"
+	icon_state = "red2"
+	flags = AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | RAD_SHIELDED
+	sound_env = SOUND_ENVIRONMENT_HANGAR
+	ambience = AMBIENCE_FOREBODING
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	color_grading = COLORTINT_DARK
+
+/area/submap/outpost21/foundation_block/waste
+	name = "\improper Foundation Block W"
+
+/area/submap/outpost21/foundation_block/eng
+	name = "\improper Foundation Block E"
+
+/area/submap/outpost21/foundation_block/carg
+	name = "\improper Foundation Block C"
+
+/area/submap/outpost21/foundation_block/med
+	name = "\improper Foundation Block M"
+
+/area/submap/outpost21/foundation_block/sec
+	name = "\improper Foundation Block S"
+
+/area/submap/outpost21/foundation_block/research
+	name = "\improper Foundation Block R"
+
+/area/submap/outpost21/foundation_block/bridge
+	name = "\improper Foundation Block B"
+
 //
 // Vehicle interiors ---------------------------------------------------------------------
 //

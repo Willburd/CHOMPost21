@@ -54,8 +54,9 @@
 /area/mine/explored/muriki/cave/deepdark)
 "aam" = (
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/foundation_block/med)
 "aan" = (
 /turf/simulated/wall/rplastitanium,
 /area/muriki/crew/bunker_deep/main)
@@ -1861,6 +1862,560 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
+"adV" = (
+/obj/machinery/trailblazer/red,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/cave/deepdark)
+"adW" = (
+/turf/simulated/wall/r_wall,
+/area/mine/unexplored/muriki/cave/deepdark)
+"adX" = (
+/turf/simulated/wall/concrete,
+/area/submap/outpost21/foundation_block/sec)
+"adY" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/foundation_block/waste)
+"adZ" = (
+/obj/machinery/trailblazer/yellow,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/cave/deepdark)
+"aea" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aeb" = (
+/obj/structure/cable{
+	icon_state = "0-5"
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aec" = (
+/obj/structure/bed/padded,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aed" = (
+/obj/structure/table/rack/shelf,
+/obj/item/roller,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aee" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null;
+	name = "Foundation Block C"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aef" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/foundation_block/sec)
+"aeg" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/camera/network/outside{
+	dir = 4;
+	c_tag = "BLK - W"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aeh" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aei" = (
+/obj/structure/cable{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aej" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aek" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null;
+	name = "Foundation Block W"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"ael" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aem" = (
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aen" = (
+/obj/machinery/power/rtg,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aeo" = (
+/turf/simulated/wall/concrete,
+/area/submap/outpost21/foundation_block/waste)
+"aep" = (
+/obj/structure/cable{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aeq" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aer" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aes" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aet" = (
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aeu" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aev" = (
+/obj/machinery/power/rtg,
+/obj/structure/cable{
+	icon_state = "0-10"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/waste)
+"aew" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable{
+	icon_state = "0-6"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aex" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "BLK - S"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aey" = (
+/obj/structure/bed/padded,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aez" = (
+/obj/structure/table/rack/shelf,
+/obj/item/roller,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"aeA" = (
+/turf/simulated/wall/concrete,
+/area/submap/outpost21/foundation_block/carg)
+"aeB" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/foundation_block/carg)
+"aeC" = (
+/obj/structure/bed/padded,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeD" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeE" = (
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeF" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24;
+	nightshift_setting = 3
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeG" = (
+/obj/structure/cable{
+	icon_state = "1-6"
+	},
+/obj/structure/table/rack/shelf,
+/obj/item/roller,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeH" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeI" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeJ" = (
+/obj/machinery/power/rtg,
+/obj/structure/cable{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeK" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "BLK - C"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeL" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeM" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/foundation_block/bridge)
+"aeN" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null;
+	name = "Foundation Block C"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/carg)
+"aeO" = (
+/obj/machinery/trailblazer/blue,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/cave/deepdark)
+"aeP" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null;
+	name = "Foundation Block B"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeQ" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeR" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeS" = (
+/obj/structure/cable{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeT" = (
+/obj/machinery/power/rtg,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeU" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24;
+	nightshift_setting = 2
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeV" = (
+/obj/structure/cable{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeW" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeX" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"aeY" = (
+/turf/simulated/wall/concrete,
+/area/submap/outpost21/foundation_block/bridge)
+"aeZ" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/camera/network/outside{
+	c_tag = "BLK - B";
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"afa" = (
+/obj/structure/bed/padded,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"afb" = (
+/obj/structure/table/rack/shelf,
+/obj/item/roller,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/bridge)
+"afc" = (
+/obj/machinery/trailblazer/blue,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"afd" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/foundation_block/med)
+"afe" = (
+/obj/structure/cable{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24;
+	nightshift_setting = 2
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/med)
+"aff" = (
+/obj/structure/cable{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/med)
+"afg" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/med)
+"afh" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/camera/network/outside{
+	c_tag = "BLK - M"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/med)
+"afi" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/prop/machine/core/starts_on{
+	name = "Bluespace Inhibitor";
+	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/muriki/crew/bunker_deep/eng)
+"afj" = (
+/turf/simulated/wall/concrete,
+/area/submap/outpost21/foundation_block/eng)
+"afk" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/foundation_block/eng)
+"afl" = (
+/obj/machinery/power/rtg,
+/obj/structure/cable,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afm" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afn" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afo" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afp" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afq" = (
+/turf/simulated/wall/concrete,
+/area/submap/outpost21/foundation_block/research)
+"afr" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "BLK - E";
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afs" = (
+/obj/structure/cable{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"aft" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afu" = (
+/obj/structure/bed/padded,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afv" = (
+/obj/structure/table/rack/shelf,
+/obj/item/roller,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afw" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-10"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afx" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/foundation_block/research)
+"afy" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null;
+	name = "Foundation Block C"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/eng)
+"afz" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afA" = (
+/obj/structure/cable{
+	icon_state = "0-5"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24;
+	nightshift_setting = 2
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afB" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afC" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afD" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null;
+	name = "Foundation Block R"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afE" = (
+/obj/structure/cable{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afF" = (
+/obj/machinery/power/rtg,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afG" = (
+/obj/structure/bed/padded,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afH" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "BLK - R"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afI" = (
+/obj/structure/table/rack/shelf,
+/obj/item/roller,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -1900,7 +2455,7 @@
 	name = "Medical Foundation Access"
 	},
 /turf/simulated/wall/r_wall,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/foundation_block/med)
 "dkS" = (
 /obj/structure/railing{
 	dir = 4
@@ -1913,10 +2468,11 @@
 /area/mine/explored/muriki/cave/deepdark)
 "ews" = (
 /obj/machinery/door/airlock/glass_external{
-	req_one_access = null
+	req_one_access = null;
+	name = "Foundation Block M"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/foundation_block/med)
 "fdT" = (
 /obj/machinery/door/flesh,
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -1973,7 +2529,7 @@
 "loP" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/foundation_block/med)
 "myp" = (
 /obj/effect/landmark{
 	name = "badbody"
@@ -2036,15 +2592,17 @@
 	},
 /obj/structure/table/steel_reinforced,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/foundation_block/med)
 "tcm" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/depths)
 "tPQ" = (
-/obj/structure/table/rack/shelf,
+/obj/structure/cable{
+	icon_state = "0-10"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/foundation_block/med)
 "tRR" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -2053,7 +2611,7 @@
 /obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
+/area/submap/outpost21/foundation_block/med)
 "tWu" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
@@ -5146,7 +5704,7 @@ bHg
 bHg
 bHg
 bHg
-bHg
+adW
 bHg
 bHg
 bHg
@@ -5303,14 +5861,14 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeo
+aeo
+adY
+adY
+adY
+adY
+adW
+adW
 bHg
 bHg
 bHg
@@ -5464,13 +6022,13 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
-adS
-adS
-bHg
-bHg
-bHg
+aeo
+aeo
+aeo
+aeo
+aeg
+aea
+adY
 bHg
 bHg
 bHg
@@ -5626,13 +6184,13 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
-adS
-adS
-bHg
-bHg
-bHg
+aeo
+aeo
+aeo
+aeo
+aeh
+aeb
+adY
 bHg
 bHg
 bHg
@@ -5789,12 +6347,12 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
-bHg
-bHg
-bHg
-bHg
+aeo
+aeo
+aep
+aei
+aec
+adY
 bHg
 bHg
 bHg
@@ -5951,12 +6509,12 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+adY
+aev
+aeq
+aej
+aed
+adY
 bHg
 bHg
 bHg
@@ -6113,13 +6671,13 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+adY
+adY
+adY
+aek
+adY
+adY
+adW
 bHg
 bHg
 bHg
@@ -6277,10 +6835,10 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
+adW
+fMG
+fMG
+adZ
 bHg
 bHg
 bHg
@@ -6440,9 +6998,9 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
+fMG
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -6602,8 +7160,8 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -6764,8 +7322,8 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -6926,8 +7484,8 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -7088,7 +7646,7 @@ bHg
 bHg
 bHg
 bHg
-bHg
+fMG
 bHg
 bHg
 bHg
@@ -7250,7 +7808,7 @@ bHg
 bHg
 bHg
 bHg
-bHg
+fMG
 bHg
 bHg
 bHg
@@ -7412,7 +7970,7 @@ fMG
 bHg
 bHg
 bHg
-bHg
+fMG
 bHg
 bHg
 bHg
@@ -23693,13 +24251,13 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
+afk
+afk
+afk
+afk
+afk
+afj
+afj
 bHg
 bHg
 bHg
@@ -23753,8 +24311,8 @@ fMG
 fMG
 bHg
 bHg
-adS
-adS
+aeA
+aeA
 bHg
 bHg
 bHg
@@ -23854,15 +24412,15 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
-adS
-adS
+fMG
+afk
+afu
+afr
+afn
+afj
+afj
+afj
+afj
 bHg
 bHg
 bHg
@@ -23914,10 +24472,10 @@ bHg
 fMG
 bHg
 bHg
-adS
-adS
-adS
-adS
+aeA
+aeA
+aeA
+aeA
 bHg
 bHg
 bHg
@@ -24009,22 +24567,22 @@ fMG
 fMG
 fMG
 fMG
+fMG
+fMG
+fMG
+fMG
+fMG
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
-adS
-adS
+fMG
+afk
+afv
+afm
+afn
+afj
+afj
+afj
+afj
 bHg
 bHg
 bHg
@@ -24074,12 +24632,12 @@ bHg
 bHg
 bHg
 fMG
-bHg
-bHg
-adS
-adS
-adS
-adS
+aeB
+aeB
+aeA
+aeA
+aeA
+aeA
 bHg
 bHg
 bHg
@@ -24170,22 +24728,22 @@ fMG
 fMG
 fMG
 fMG
+fMG
+fMG
+fMG
+fMG
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
+fMG
+fMG
+fMG
+fMG
+afy
+afm
+afs
+afo
+afl
+afj
+afj
 bHg
 bHg
 bHg
@@ -24236,12 +24794,12 @@ bHg
 bHg
 bHg
 fMG
-bHg
-bHg
-bHg
-adS
-adS
-bHg
+aeB
+aeJ
+aeG
+aeA
+aeA
+aeB
 bHg
 bHg
 bHg
@@ -24332,21 +24890,21 @@ bHg
 fMG
 fMG
 bHg
+fMG
 bHg
 bHg
 bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+adZ
+fMG
+afk
+afw
+aft
+afp
+afm
+afk
 bHg
 bHg
 bHg
@@ -24398,12 +24956,12 @@ bHg
 bHg
 bHg
 fMG
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeB
+aeK
+aeH
+aeE
+aeC
+aeB
 bHg
 bHg
 bHg
@@ -24502,13 +25060,13 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+fMG
+afk
+afk
+afk
+afk
+afk
+afk
 bHg
 bHg
 bHg
@@ -24560,12 +25118,12 @@ bHg
 bHg
 bHg
 fMG
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeN
+aeL
+aeI
+aeF
+aeD
+aeB
 bHg
 bHg
 bHg
@@ -24718,16 +25276,16 @@ bHg
 bHg
 bHg
 bHg
+adZ
 fMG
 fMG
 fMG
-fMG
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeB
+aeB
+aeB
+aeB
+aeB
+aeB
 bHg
 bHg
 bHg
@@ -37014,7 +37572,7 @@ tWu
 tWu
 tWu
 gNY
-qyX
+afc
 gNY
 gNY
 gNY
@@ -37497,11 +38055,11 @@ tWu
 tWu
 gNY
 gNY
-wXd
-wXd
-wXd
-wXd
-wXd
+afd
+afd
+afd
+afd
+afd
 fsm
 wXd
 gNY
@@ -37659,10 +38217,10 @@ tWu
 tWu
 gNY
 gNY
-wXd
-aam
+afd
+afg
 loP
-uXm
+afe
 ews
 uXm
 uXm
@@ -37821,10 +38379,10 @@ tWu
 tWu
 gNY
 gNY
-wXd
+afd
+afh
 aam
-aam
-uXm
+aff
 cSc
 uXm
 uXm
@@ -37983,11 +38541,11 @@ tWu
 tWu
 gNY
 gNY
-wXd
+afd
 tSP
 tPQ
 sQG
-wXd
+afd
 uXm
 uXm
 gNY
@@ -38145,15 +38703,15 @@ tWu
 tWu
 tWu
 tWu
-wXd
-wXd
-wXd
-wXd
-wXd
+afd
+afd
+afd
+afd
+afd
 dkS
 wXd
 gNY
-qyX
+afc
 gNY
 tWu
 tWu
@@ -44831,12 +45389,12 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
+aef
+aef
+aef
+aef
+adX
+adX
 fMG
 fMG
 bHg
@@ -44993,13 +45551,13 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-adS
-adS
-adS
-adS
+aef
+aer
+aer
+adX
+adX
+adX
+adX
 fMG
 bHg
 bHg
@@ -45155,13 +45713,13 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-adS
-adS
-adS
-adS
+aef
+aew
+aes
+adX
+adX
+adX
+adX
 fMG
 bHg
 bHg
@@ -45317,12 +45875,12 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
+aef
+aex
+aet
+ael
+adX
+adX
 fMG
 fMG
 bHg
@@ -45479,15 +46037,15 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
+aef
+aey
+aes
+aem
+aee
 fMG
 fMG
 fMG
-fMG
-bHg
+adV
 bHg
 bHg
 bHg
@@ -45641,11 +46199,11 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-fMG
+aef
+aez
+aeu
+aen
+aef
 fMG
 fMG
 bHg
@@ -45803,11 +46361,11 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-fMG
+aef
+aef
+aef
+aef
+aef
 fMG
 bHg
 bHg
@@ -53659,12 +54217,12 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+afx
+afx
+afx
+afx
+afx
+afx
 bHg
 bHg
 bHg
@@ -53821,12 +54379,12 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+afx
+afG
+afC
+afA
+afz
+afx
 bHg
 bHg
 bHg
@@ -53983,13 +54541,13 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
+afx
+afH
+afE
+afB
+afz
+afq
+afq
 bHg
 bHg
 bHg
@@ -54145,14 +54703,14 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
-adS
-adS
+afx
+afI
+afF
+afC
+afq
+afq
+afq
+afq
 bHg
 bHg
 bHg
@@ -54307,14 +54865,14 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-adS
-adS
-adS
-adS
+afx
+afx
+afx
+afD
+afq
+afq
+afq
+afq
 bHg
 fMG
 fMG
@@ -54471,11 +55029,11 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-adS
-adS
+fMG
+fMG
+adZ
+afq
+afq
 bHg
 bHg
 fMG
@@ -54634,12 +55192,12 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
 fMG
 fMG
 wXp
@@ -54801,7 +55359,7 @@ bHg
 bHg
 bHg
 bHg
-bHg
+fMG
 fMG
 fMG
 fMG
@@ -54963,18 +55521,18 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
 fMG
 fMG
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -55136,7 +55694,7 @@ adS
 adS
 bHg
 bHg
-bHg
+fMG
 bHg
 bHg
 bHg
@@ -55298,7 +55856,7 @@ adS
 adS
 adS
 bHg
-bHg
+fMG
 bHg
 bHg
 bHg
@@ -55460,10 +56018,10 @@ adS
 adS
 adS
 bHg
-bHg
-bHg
-bHg
-bHg
+fMG
+fMG
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -55622,11 +56180,11 @@ adS
 adS
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+fMG
+fMG
+fMG
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -55664,7 +56222,7 @@ fMG
 fMG
 fMG
 fMG
-bHg
+aeO
 bHg
 bHg
 bHg
@@ -55787,8 +56345,8 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
+fMG
+fMG
 bHg
 bHg
 bHg
@@ -55949,23 +56507,23 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
 bHg
 fMG
 fMG
@@ -55985,11 +56543,11 @@ fMG
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeM
+aeM
+aeM
+aeP
+aeM
 bHg
 bHg
 bHg
@@ -56119,15 +56677,15 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
+fMG
 fMG
 fMG
 fMG
@@ -56147,11 +56705,11 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeM
+aeZ
+aeU
+aeQ
+aeM
 bHg
 bHg
 bHg
@@ -56309,11 +56867,11 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeM
+afa
+aeV
+aeR
+aeM
 bHg
 bHg
 bHg
@@ -56471,11 +57029,11 @@ bHg
 bHg
 bHg
 bHg
-bHg
-bHg
-bHg
-bHg
-bHg
+aeM
+afb
+aeW
+aeS
+aeM
 bHg
 bHg
 bHg
@@ -56633,11 +57191,11 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
-bHg
-bHg
-bHg
+aeY
+aeY
+aeX
+aeT
+aeM
 bHg
 bHg
 bHg
@@ -56794,12 +57352,12 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
-adS
-adS
-bHg
-bHg
+aeY
+aeY
+aeY
+aeY
+aeM
+aeM
 bHg
 bHg
 bHg
@@ -56956,10 +57514,10 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
-adS
-adS
+aeY
+aeY
+aeY
+aeY
 bHg
 bHg
 bHg
@@ -57119,8 +57677,8 @@ bHg
 bHg
 bHg
 bHg
-adS
-adS
+aeY
+aeY
 bHg
 bHg
 bHg
@@ -58873,7 +59431,7 @@ ads
 ads
 ads
 adu
-ads
+afi
 ads
 ads
 ads
@@ -59353,7 +59911,7 @@ adt
 ads
 ads
 ads
-ads
+afi
 aan
 adR
 adO
@@ -59525,7 +60083,7 @@ aaU
 adE
 aaF
 aap
-ads
+afi
 gNY
 gNY
 tWu
@@ -60173,7 +60731,7 @@ aaM
 aaG
 aaw
 aap
-ads
+afi
 gNY
 gNY
 gNY
@@ -60321,7 +60879,7 @@ tWu
 tWu
 gNY
 gNY
-ads
+afi
 acW
 acW
 acW
@@ -61470,7 +62028,7 @@ aca
 aca
 aat
 aan
-ads
+afi
 gNY
 gNY
 gNY
@@ -61779,7 +62337,7 @@ tWu
 tWu
 gNY
 gNY
-ads
+afi
 aan
 adp
 adl
@@ -62604,7 +63162,7 @@ adG
 adB
 adw
 aan
-ads
+afi
 gNY
 gNY
 gNY
@@ -63402,7 +63960,7 @@ gNY
 adt
 ads
 ads
-ads
+afi
 adu
 ads
 ads
@@ -63411,7 +63969,7 @@ adt
 ads
 ads
 adu
-ads
+afi
 ads
 ads
 adt

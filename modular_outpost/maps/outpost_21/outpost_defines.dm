@@ -150,6 +150,15 @@
 										/area/offworld/confinementbeam/exterior,
 										/area/ai_sat/core_external,
 										/area/ai_sat/power_control,
+										// Foundation blocks
+										/area/submap/outpost21/foundation_block,
+										/area/submap/outpost21/foundation_block/waste,
+										/area/submap/outpost21/foundation_block/eng,
+										/area/submap/outpost21/foundation_block/carg,
+										/area/submap/outpost21/foundation_block/med,
+										/area/submap/outpost21/foundation_block/sec,
+										/area/submap/outpost21/foundation_block/research,
+										/area/submap/outpost21/foundation_block/bridge,
 										// Actual unit test exceptions
 										/area/comms,
 										/area/muriki/tramstation/waste,
