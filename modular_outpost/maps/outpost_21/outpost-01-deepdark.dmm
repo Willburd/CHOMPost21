@@ -264,7 +264,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "aaM" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -1605,14 +1605,14 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/black/border,
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adx" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
@@ -1624,7 +1624,7 @@
 /obj/effect/floor_decal/corner/black/border,
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "ady" = (
 /obj/machinery/door/airlock/silver{
 	name = "Toilet"
@@ -1633,7 +1633,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adz" = (
 /obj/structure/toilet{
 	dir = 8
@@ -1654,20 +1654,20 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adA" = (
 /obj/effect/floor_decal/corner/black/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adC" = (
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -1681,10 +1681,10 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adD" = (
 /turf/simulated/wall,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adE" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1701,7 +1701,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adG" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1710,7 +1710,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adH" = (
 /obj/structure/sink{
 	dir = 8;
@@ -1728,7 +1728,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adI" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1740,7 +1740,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adJ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -1753,7 +1753,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adK" = (
 /obj/structure/sink{
 	dir = 8;
@@ -1768,7 +1768,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adL" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1778,7 +1778,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adM" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1795,7 +1795,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adN" = (
 /obj/machinery/door/airlock{
 	name = "Bunker Buster";
@@ -1807,7 +1807,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker_deep/main)
+/area/muriki/bathroom/bunker_buster)
 "adO" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -2416,6 +2416,9 @@
 /obj/item/roller,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/research)
+"afJ" = (
+/turf/simulated/wall/rplastitanium,
+/area/muriki/bathroom/bunker_buster)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -62831,13 +62834,13 @@ aan
 aan
 abj
 acE
-aan
-aan
-aan
-aan
-aan
-aan
-aan
+afJ
+afJ
+afJ
+afJ
+afJ
+afJ
+afJ
 ads
 gNY
 gNY
@@ -62993,13 +62996,13 @@ abv
 aan
 acT
 adQ
-aan
+afJ
 adK
 adH
 adF
 adA
 adv
-aan
+afJ
 ads
 gNY
 gNY
@@ -63161,7 +63164,7 @@ adI
 adG
 adB
 adw
-aan
+afJ
 afi
 gNY
 gNY
@@ -63317,13 +63320,13 @@ abw
 aan
 acU
 aat
-aan
+afJ
 adM
 adJ
 aaL
 adC
 adx
-aan
+afJ
 adu
 gNY
 tWu
@@ -63479,13 +63482,13 @@ abx
 aan
 acT
 acG
-aan
+afJ
 ady
 adD
 ady
 adD
 ady
-aan
+afJ
 ads
 gNY
 gNY
@@ -63641,13 +63644,13 @@ aby
 aan
 acV
 acH
-aan
+afJ
 adz
 adD
 adz
 adD
 adz
-aan
+afJ
 ads
 gNY
 gNY
@@ -63803,13 +63806,13 @@ aan
 aan
 aan
 aan
-aan
-aan
-aan
-aan
-aan
-aan
-aan
+afJ
+afJ
+afJ
+afJ
+afJ
+afJ
+afJ
 ads
 gNY
 gNY

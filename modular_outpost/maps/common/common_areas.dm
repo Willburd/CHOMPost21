@@ -300,6 +300,11 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 
+/area/muriki/bathroom/bunker_buster
+	name = "\improper Bunker Buster"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+
 //
 // Medical ---------------------------------------------------------
 //
@@ -2811,24 +2816,31 @@
 
 /area/submap/outpost21/foundation_block/waste
 	name = "\improper Foundation Block W"
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/submap/outpost21/foundation_block/eng
 	name = "\improper Foundation Block E"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/submap/outpost21/foundation_block/carg
 	name = "\improper Foundation Block C"
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/submap/outpost21/foundation_block/med
 	name = "\improper Foundation Block M"
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
 /area/submap/outpost21/foundation_block/sec
 	name = "\improper Foundation Block S"
+	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
 /area/submap/outpost21/foundation_block/research
 	name = "\improper Foundation Block R"
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/submap/outpost21/foundation_block/bridge
 	name = "\improper Foundation Block B"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 //
 // Vehicle interiors ---------------------------------------------------------------------
