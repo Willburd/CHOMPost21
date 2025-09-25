@@ -47,7 +47,8 @@
 	var_changes = list("siemens_coefficient" = 0.6)
 
 /datum/trait/positive/hardy
-	banned_species = null //Temp buff to a lot of these species. Only for the lowest level of hardy, though.
+	banned_species = list(SPECIES_UNATHI, SPECIES_ZADDAT, SPECIES_SHADEKIN, SPECIES_DIONA) //Temp buff to a lot of these species. Only for the lowest level of hardy, though.
+	// Species on banned list already have a better item slowdown modifier
 
 /datum/trait/positive/strength
 	cost = 3 //base 2. Extra attack and slowdown for the same cost as less slowdown? Seems a bit too strong.
