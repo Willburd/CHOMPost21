@@ -382,9 +382,11 @@ ADMIN_VERB(deadmin, R_NONE, "DeAdmin", "Shed your admin powers.", ADMIN_CATEGORY
 	//BLACKBOX_LOG_ADMIN_VERB("Deadmin")
 	feedback_add_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+	/* // Outpost 21 edit - Ghosts use camera network
 	if(isobserver(user.mob))
 		var/mob/observer/dead/our_mob = user.mob
 		our_mob.visualnet?.removeVisibility(our_mob, user)
+	*/
 
 /client/proc/toggle_log_hrefs()
 	set name = "Toggle href logging"

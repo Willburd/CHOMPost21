@@ -52,7 +52,8 @@
 							NETWORK_SECURITY,
 							NETWORK_INTERROGATION,
 							NETWORK_TELECOM,
-							NETWORK_OUTSIDE
+							NETWORK_OUTSIDE,
+							NETWORK_BUNKER,
 							)
 	secondary_networks = list(
 							NETWORK_ERT,

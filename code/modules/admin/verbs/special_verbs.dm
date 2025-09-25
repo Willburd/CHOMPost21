@@ -25,6 +25,8 @@
 	log_admin("[src] re-adminned themselves.")
 	//BLACKBOX_LOG_ADMIN_VERB("Readmin")
 
+	/* // Outpost 21 edit - Ghosts use camera networkv
 	if(isobserver(mob))
 		var/mob/observer/dead/our_mob = mob
 		our_mob.visualnet?.addVisibility(our_mob, src)
+	*/

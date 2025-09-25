@@ -15,7 +15,7 @@
 	blinded = 0
 	anchored = TRUE	//  don't get pushed around
 	var/list/visibleChunks = list()
-	var/datum/visualnet/ghost/visualnet
+	var/datum/visualnet/visualnet // Outpost 21 edit - Ghosts use camera network
 	var/static_visibility_range = 16
 
 	var/can_reenter_corpse
@@ -102,15 +102,17 @@
 	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 	GLOB.observer_mob_list += src
 	. = ..()
-	visualnet = ghostnet
+	visualnet = cameranet // Outpost 21 edit - Ghosts use camera network
 
 /mob/observer/dead/proc/checkStatic()
 	return !(check_rights_for(src.client, R_ADMIN|R_FUN|R_EVENT|R_SERVER) || (client && client.buildmode) || isbelly(loc))
 
 /mob/observer/dead/Moved(atom/old_loc, direction, forced)
 	. = ..()
+	/* // Outpost 21 edit - Ghosts use camera network
 	if(isbelly(loc) && !isbelly(old_loc))
 		visualnet.addVisibility()
+	*/
 	if(visualnet && checkStatic())
 		visualnet.visibility(src, client)
 
@@ -545,7 +547,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		body_backup.moveToNullspace() //YEET
 		qdel(body_backup)
 		body_backup = null
-	visualnet.addVisibility(src, src.client)
+	// visualnet.addVisibility(src, src.client) // Outpost 21 edit - Ghosts use camera network
 	visualnet = null
 	if(ismob(following))
 		var/mob/M = following
@@ -1011,7 +1013,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(message)
 		to_chat(src, span_ghostalert(span_huge("[message]")))
 		if(source)
-			throw_alert("\ref[source]_notify_revive", /obj/screen/alert/notify_cloning, new_master = source)
+			throw_alert("\ref[source]_notify_revive", /atom/movable/screen/alert/notify_cloning, new_master = source)
 	to_chat(src, span_ghostalert("<a href='byond://?src=[REF(src)];reenter=1'>(Click to re-enter)</a>"))
 	if(sound)
 		SEND_SOUND(src, sound(sound))

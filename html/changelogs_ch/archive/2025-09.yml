@@ -394,3 +394,77 @@
   - refactor: Malignant organ code, some basic cleanup
   - bugfix: Changeling chameleon cloths no longer reveal lings by having suit sensors
   - code_imp: clothing code uses suit_sensor defines instead of magic numbers
+2025-09-21:
+  Diana:
+  - bugfix: Borg shocker shows the appropriate on-off state
+  Will:
+  - bugfix: Rounded chairs, pews, metal benches, and corporate couch are no longer
+      invisible
+2025-09-22:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added a new scene item, shibari bindings!
+  - image: Added icons for human and digi shibari bindings.
+  - rscadd: Customizable dragon plushies!
+  - code_imp: moves color_matrix to a tgui_input
+  - code_imp: moves obj/screen to atom/movable/screen
+  FluffMedic:
+  - rscadd: More mining outcrops added to Tyr. Refinery pieces are upon Tyr
+  - rscadd: Tyr guns are now craftable by science. Requires 3 Tyr data discs to be
+      scanned, and the precursor suit researched. More to be added
+  - rscadd: All Tyr bosses are capable of dropping lore discs
+  - rscdel: Deletes some unused tyr related sprites
+  - balance: Tyr Guns have been altered
+  - maptweak: First Tyr Boss Room forces you to learn the fuel mechanics.
+  Ryumi:
+  - qol: Cyborg Rapid-Service-Fabricators now use radial menus for all of its selection
+      menus. Pretty pictures...
+  Will:
+  - code_imp: Reaction unittest strictness includes distillation reactions being blocked
+      by instant reactions
+  - code_imp: Implements COMSIG_REAGENTS_HOLDER_REACTED
+  - refactor: reagent holder handle_reactions() uses number of reactions that happened,
+      and not just completion of the proc for return value
+  - bugfix: peanut butter milkshake reaction no longer blocked by milkshake
+  - bugfix: aloe reaction no longer blocked by irish cream
+  - bugfix: instant beer reaction no longer blocked by corn cooking oil
+  - bugfix: biomass distilling reaction no longer blocked by virology mix 3
+  - bugfix: Disarming push attacks causing combat grabs to drop as items.
+2025-09-23:
+  CHOMPStation2StaffMirrorBot:
+  - image: Halved the size of playing chips' icons.
+  - rscadd: Added several new mapping features for your local mapper
+  - rscadd: digestive nanite turfs. currently mapperbus only
+  - rscadd: faster swimming aquatic trait
+  - qol: catwalks now prevent turfs from slowing people
+  - qol: water turfs now break falls
+  - qol: Maint blood and vomit is old and dried.
+  - balance: ' water turfs now break falls'
+  - bugfix: emergency lights stay red during nightshift
+  MeepleMuncher:
+  - rscdel: Removed the old customizable dragon plushie
+  Will:
+  - code_imp: Adds tethered item component for items that have a handheld subitem
+      that can be removed from it while it is worn
+2025-09-24:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: Huge door code cleanup
+  - refactor: attempt_vr() removal
+  - refactor: hook_vr() removal
+  - refactor: few remaining MinutesToTicks and SecondsToTicks updated to use defines
+      instead
+  - code_imp: Implements COMSIG_DOOR_CAN_OPEN
+  - code_imp: Implements COMSIG_DOOR_CAN_CLOSE
+  - code_imp: Implements COMSIG_DOOR_OPEN
+  - code_imp: Implements COMSIG_DOOR_CLOSE
+  - code_imp: Implements COMSIG_AIRLOCK_SET_BOLT
+  - code_imp: Implements COMSIG_MOB_BUMPED_DOOR_OPEN
+  Diana:
+  - image: Modified scrubbers to use the square sprites instead of the circular sprites
+2025-09-25:
+  Diana:
+  - image: Adjusts scrubbers to their circular state
+  - bugfix: Alraune and Gamma Replicant can be neuter or plural
+  Guti:
+  - rscadd: Added churros and churros recipe
+  Will:
+  - code_imp: Moves turf slip code to a component

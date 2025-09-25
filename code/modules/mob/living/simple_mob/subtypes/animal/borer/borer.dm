@@ -261,7 +261,7 @@
 // Outpost 21 edit(port) begin - borer fixes
 /mob/living/simple_mob/animal/borer/extra_huds(var/datum/hud/hud,var/icon/ui_style,var/list/hud_elements)
 	// Chem hud
-	borer_chem_display = new /obj/screen/borer/chems()
+	borer_chem_display = new /atom/movable/borer/chems()
 	borer_chem_display.screen_loc = ui_ling_chemical_display
 	borer_chem_display.icon_state = "ling_chems"
 	hud_elements |= borer_chem_display
