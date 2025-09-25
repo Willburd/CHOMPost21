@@ -456,13 +456,6 @@
 /obj/item/tool/crowbar,
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
-"aX" = (
-/obj/machinery/porta_turret/ai_defense,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ai)
 "aY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -632,7 +625,7 @@
 	c_tag = "AI - Core North";
 	dir = 1
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "br" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1156,6 +1149,12 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway_alt)
+"cy" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
 "cz" = (
 /obj/machinery/power/apc/critical{
 	dir = 8;
@@ -1214,6 +1213,21 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
+"cD" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
 "cE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -1230,6 +1244,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
+"cF" = (
+/turf/simulated/floor/water/digestive_enzymes/nanites,
+/area/ai)
 "cG" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
@@ -1491,7 +1508,7 @@
 /obj/machinery/camera/network/command{
 	c_tag = "AI - Core South"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "dB" = (
 /obj/structure/sign/directions/engineering/solars{
@@ -1643,7 +1660,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "dQ" = (
 /obj/machinery/power/breakerbox,
@@ -1722,12 +1739,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
-"eh" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ai)
 "ei" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1814,13 +1825,6 @@
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
-"ey" = (
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/greengrid,
-/area/ai)
 "eA" = (
 /obj/structure/confinement_beam_generator/lens/outer_lens{
 	dir = 1
@@ -2688,7 +2692,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "hn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -3507,7 +3511,7 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "jR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "jS" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -4246,13 +4250,6 @@
 /obj/machinery/power/grounding_rod,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
-"lS" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ai)
 "lU" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -4352,7 +4349,7 @@
 /area/offworld/confinementbeam/station/starboard_airlock)
 "mg" = (
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "mk" = (
 /obj/structure/cable/cyan,
@@ -4536,12 +4533,6 @@
 /obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
-"mH" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/greengrid,
-/area/ai)
 "mJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5423,7 +5414,7 @@
 "py" = (
 /obj/machinery/ai_slipper,
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/prim,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "pz" = (
 /obj/machinery/door/firedoor/glass,
@@ -6150,6 +6141,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "rT" = (
@@ -7086,7 +7080,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "uS" = (
 /obj/structure/cable/green{
@@ -7203,7 +7197,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "vj" = (
 /obj/machinery/door/firedoor/glass,
@@ -8695,7 +8689,7 @@
 "zR" = (
 /obj/machinery/ai_slipper,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "zS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -9107,14 +9101,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "AY" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Ba" = (
 /obj/machinery/door/firedoor/glass,
@@ -9420,9 +9411,6 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
 "Cm" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
@@ -9431,6 +9419,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -9987,7 +9978,7 @@
 /area/offworld/confinementbeam/station/hallway)
 "Ec" = (
 /obj/machinery/ai_slipper,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Ed" = (
 /obj/structure/cable/yellow{
@@ -10143,7 +10134,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "EG" = (
 /turf/simulated/wall,
@@ -10289,7 +10280,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Fk" = (
 /obj/effect/floor_decal/corner/orange{
@@ -10451,7 +10442,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "FI" = (
 /obj/structure/bed/chair/sofa/corp/right{
@@ -11065,7 +11056,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "HA" = (
 /obj/structure/cable/yellow{
@@ -11888,9 +11879,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
-"JA" = (
-/turf/simulated/floor/greengrid,
-/area/ai)
 "JC" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -12291,9 +12279,6 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "KI" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
@@ -12302,6 +12287,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -13726,13 +13714,10 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "Pz" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "PB" = (
 /obj/machinery/atmospherics/unary/engine/biggest{
@@ -13780,8 +13765,8 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "PM" = (
 /obj/machinery/porta_turret/ai_defense,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -14211,11 +14196,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "Rc" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Rd" = (
 /obj/structure/cable/orange{
@@ -14819,10 +14801,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
-"SV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/greengrid,
-/area/ai)
 "SY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -15401,7 +15379,7 @@
 	dir = 1;
 	pixel_y = -32
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "UO" = (
 /obj/structure/cable/yellow{
@@ -16077,7 +16055,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "WT" = (
 /obj/structure/cable/cyan{
@@ -25029,9 +25007,9 @@ KK
 Cj
 CN
 br
-aX
-dy
-dy
+Cj
+KK
+Xn
 dy
 bn
 yJ
@@ -25186,14 +25164,14 @@ nr
 Fz
 wz
 yP
-JA
-JA
+cF
+cF
 Ec
-JA
-JA
-eh
-Xn
-dy
+cF
+cF
+cF
+cF
+cy
 dy
 bn
 yq
@@ -25347,13 +25325,13 @@ ql
 Fz
 Fz
 Pc
-JA
+cF
 hm
-ey
-ey
-ey
-ey
-ey
+AY
+AY
+AY
+AY
+AY
 AY
 Cm
 uZ
@@ -25515,8 +25493,8 @@ Fz
 zx
 Fz
 Fz
-JA
-JA
+cF
+cF
 FH
 Kl
 bn
@@ -25832,15 +25810,15 @@ wA
 ql
 Fz
 Hx
-mH
+Pz
 Fj
 UN
 Fz
 zx
 Fz
 Fz
-JA
-JA
+cF
+cF
 FH
 xw
 iN
@@ -25996,12 +25974,12 @@ Fz
 Fz
 dG
 WS
-mH
-mH
-mH
-mH
-mH
-mH
+Pz
+Pz
+Pz
+Pz
+Pz
+Pz
 Pz
 KI
 jx
@@ -26159,11 +26137,11 @@ Fz
 GP
 ty
 jR
-SV
+Rc
 zR
-SV
-SV
-lS
+Rc
+Rc
+Rc
 Rc
 rS
 Dh
@@ -26326,8 +26304,8 @@ tB
 bs
 Mw
 PM
-dy
-Rd
+JX
+cD
 WX
 iN
 FI

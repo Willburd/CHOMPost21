@@ -49384,7 +49384,7 @@
 	req_access = list(1)
 	},
 /turf/simulated/floor/carpet/tealcarpet,
-/area/muriki/grounds/terraform)
+/area/crew_quarters/captain)
 "mSR" = (
 /obj/machinery/vending/fitness,
 /obj/effect/floor_decal/borderfloor{
@@ -54721,6 +54721,14 @@
 	pixel_x = -27;
 	pixel_y = -10
 	},
+/obj/structure/table/standard,
+/obj/item/taperecorder{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
 "oCG" = (
@@ -84266,6 +84274,7 @@
 /obj/effect/landmark{
 	name = "nukeitem"
 	},
+/obj/item/clothing/accessory/bodycam,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "xHg" = (
@@ -84533,6 +84542,7 @@
 /obj/item/gunbox/warden,
 /obj/item/clothing/under/teshari/undercoat/jobs/sec,
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/wrdn,
+/obj/item/clothing/accessory/bodycam,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "xMm" = (
