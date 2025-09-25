@@ -1922,7 +1922,7 @@
 /area/submap/outpost21/foundation_block/sec)
 "aeg" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/foundations{
 	dir = 4;
 	c_tag = "BLK - W"
 	},
@@ -1998,8 +1998,9 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/sec)
 "aeu" = (
-/obj/machinery/light/small{
-	dir = 4
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = -4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/sec)
@@ -2023,7 +2024,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/sec)
 "aex" = (
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/foundations{
 	c_tag = "BLK - S"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -2106,7 +2107,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/carg)
 "aeK" = (
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/foundations{
 	c_tag = "BLK - C"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -2191,7 +2192,7 @@
 /area/submap/outpost21/foundation_block/bridge)
 "aeZ" = (
 /obj/structure/closet/emcloset,
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/foundations{
 	c_tag = "BLK - B";
 	dir = 4
 	},
@@ -2209,6 +2210,10 @@
 "afb" = (
 /obj/structure/table/rack/shelf,
 /obj/item/roller,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = -4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/bridge)
 "afc" = (
@@ -2249,7 +2254,7 @@
 /area/submap/outpost21/foundation_block/med)
 "afh" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/foundations{
 	c_tag = "BLK - M"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -2296,7 +2301,7 @@
 /turf/simulated/wall/concrete,
 /area/submap/outpost21/foundation_block/research)
 "afr" = (
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/foundations{
 	c_tag = "BLK - E";
 	dir = 4
 	},
@@ -2406,7 +2411,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/research)
 "afH" = (
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/foundations{
 	c_tag = "BLK - R"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -2419,6 +2424,27 @@
 "afJ" = (
 /turf/simulated/wall/rplastitanium,
 /area/muriki/bathroom/bunker_buster)
+"afK" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/sec)
+"afL" = (
+/obj/structure/closet/emcloset,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 32;
+	pixel_y = -4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
+"afM" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/foundation_block/research)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -45555,7 +45581,7 @@ bHg
 bHg
 bHg
 aef
-aer
+afK
 aer
 adX
 adX
@@ -54384,7 +54410,7 @@ bHg
 bHg
 afx
 afG
-afC
+afM
 afA
 afz
 afx
@@ -54548,7 +54574,7 @@ afx
 afH
 afE
 afB
-afz
+afL
 afq
 afq
 bHg
