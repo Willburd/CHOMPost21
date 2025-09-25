@@ -99,7 +99,7 @@
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
 
-	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED))
+	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED) || (chosen_species.flags & NO_SLEEVE) || (locate(/datum/trait/negative/noresleeve) in ghost.client.prefs.neg_traits)) // Outpost 21 edit - No sleeve
 		to_chat(ghost, span_warning("This species cannot be resleeved!"))
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
@@ -324,7 +324,7 @@
 		return
 
 	var/datum/species/chosen_species = GLOB.all_species[recordB.mydna.dna.species]
-	if(chosen_species.flags & NO_SLEEVE) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
+	if(chosen_species.flags & NO_SLEEVE || (locate(/datum/trait/negative/noresleeve) in recordB.mydna.dna.species_traits)) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
 		src.visible_message("[src] flashes 'Could not resleeve [D.registered_name]. Invalid species!', and lets out a loud incorrect sounding beep!")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		if((world.time - recordM.last_notification) < 30 MINUTES)
