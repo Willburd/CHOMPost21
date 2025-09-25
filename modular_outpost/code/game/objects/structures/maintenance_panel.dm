@@ -1,29 +1,29 @@
-/obj/structure/window/maint_panel
+/obj/structure/window/maintenance_panel
 	name = "maintenance panel"
 	desc = "A maintenance panel. It covers important things hidden inside the wall."
 	icon = 'modular_outpost/icons/obj/maintenance_panel.dmi'
 	icon_state = "window"
 	basestate = "window"
 	maxhealth = 60
-	glasstype = /obj/item/stack/material/steel
+	glasstype = /obj/item/stack/tile/maintenance_panel
 	maximal_heat = 1800 // steel
 	force_threshold = 7
 	shardtype = null
 
-/obj/structure/window/maint_panel/apply_silicate(var/amount)
+/obj/structure/window/maintenance_panel/apply_silicate(var/amount)
 	return // can't fix it like that
 
-/obj/structure/window/maint_panel/updateSilicate()
+/obj/structure/window/maintenance_panel/updateSilicate()
 	silicate = 0
 	return // can't fix it like that
 
-/obj/structure/window/maint_panel/attack_ghost(mob/observer/dead/user as mob)
+/obj/structure/window/maintenance_panel/attack_ghost(mob/observer/dead/user as mob)
 	return // Too powerful for ghosts
 
-/obj/structure/window/maint_panel/is_fulltile()
+/obj/structure/window/maintenance_panel/is_fulltile()
 	return FALSE // NEVER
 
-/obj/structure/window/maint_panel/take_damage(var/damage = 0,  var/sound_effect = 1)
+/obj/structure/window/maintenance_panel/take_damage(var/damage = 0,  var/sound_effect = 1)
 	var/initialhealth = health
 	health = max(0, health - damage)
 	if(health <= 0)
@@ -42,7 +42,7 @@
 		visible_message("\the [src] is about to break free!" )
 		update_icon()
 
-/obj/structure/window/maint_panel/shatter(var/display_message = 1)
+/obj/structure/window/maintenance_panel/shatter(var/display_message = 1)
 	playsound(src, 'sound/effects/metalscrape3.ogg', 70, 1)
 	if(display_message)
 		visible_message("\the [src] thunks free of the wall!")
@@ -51,25 +51,25 @@
 
 
 
-/datum/material/steel
-	created_window = /obj/structure/window/maint_panel
-	window_options = list("One Direction" = 1)
+// Maintenance panel sheets
+/obj/item/stack/tile/maintenance_panel
+	name = MAT_STEEL
+	desc = "A maintenance panel"
+	icon_state = "techtile_grid"
+	force = 6.0
+	matter = list(DEFAULT_WALL_MATERIAL = SHEET_MATERIAL_AMOUNT / 4)
+	throwforce = 15.0
+	throw_speed = 5
+	throw_range = 20
+	can_weld = TRUE
 
-// Construction
-/datum/material/steel/build_windows(var/mob/living/user, var/obj/item/stack/used_stack)
-	if(!user || !used_stack || !created_window)
+/obj/item/stack/tile/maintenance_panel/attack_self(var/mob/user)
+	var/turf/T = user.loc
+	if(!user || (loc != user && !isrobot(user)) || user.stat || user.loc != T)
 		return 0
 
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, span_warning("This task is too complex for your clumsy hands."))
-		return 1
-
-	var/turf/T = user.loc
-	if(!istype(T))
-		to_chat(user, span_warning("You must be standing on open flooring to build a maintenance panel."))
-		return 1
-
-	if(!used_stack || !user || (used_stack.loc != user && !isrobot(user)) || user.stat || user.loc != T)
 		return 1
 
 	// Get data for building windows here.
@@ -102,7 +102,8 @@
 		to_chat(user, span_warning("There is no room in this location."))
 		return 1
 
-	if(used_stack.get_amount() < sheets_needed)
+	var/sheets_needed = 1
+	if(get_amount() < sheets_needed)
 		to_chat(user, span_warning("You need at least [sheets_needed] sheets to build this."))
 		return 1
 	if(build_dir == SOUTHWEST)
@@ -110,6 +111,13 @@
 		return 1
 
 	// Build the structure and update sheet count etc.
-	used_stack.use(sheets_needed)
-	new created_window(T, build_dir, 1)
+	use(sheets_needed)
+	new /obj/structure/window/maintenance_panel(T, build_dir, 1)
 	return 1
+
+
+
+// Spawner
+/obj/fiftyspawner/maintenance_panel
+	name = "stack of maintenance panels"
+	type_to_spawn = /obj/item/stack/tile/maintenance_panel
