@@ -2,8 +2,8 @@
 	name = "maintenance panel"
 	desc = "A maintenance panel. It covers important things hidden inside the wall."
 	icon = 'modular_outpost/icons/obj/maintenance_panel.dmi'
-	icon_state = "window"
-	basestate = "window"
+	icon_state = "panel"
+	basestate = "panel"
 	maxhealth = 60
 	glasstype = /obj/item/stack/tile/maintenance_panel
 	maximal_heat = 1800 // steel
