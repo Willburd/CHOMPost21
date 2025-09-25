@@ -58927,6 +58927,13 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/crew/bunker)
 "chc" = (
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
 "chd" = (
@@ -67859,6 +67866,11 @@
 	dir = 8
 	},
 /obj/item/hoist_kit,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
 "lQR" = (
@@ -70318,16 +70330,15 @@
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/breakroom)
 "pcq" = (
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -22
-	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/power/rtg,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)

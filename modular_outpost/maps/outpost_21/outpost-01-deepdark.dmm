@@ -128,17 +128,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aax" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aay" = (
 /obj/machinery/atmospherics/pipe/tank/air/full{
 	dir = 8
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaz" = (
 /obj/structure/table/gamblingtable,
@@ -188,7 +188,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaE" = (
 /obj/machinery/power/terminal{
@@ -197,7 +197,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaF" = (
 /obj/machinery/power/smes/buildable{
@@ -206,7 +206,7 @@
 	input_attempt = 1
 	},
 /obj/structure/cable/green,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaG" = (
 /obj/machinery/firealarm{
@@ -218,13 +218,13 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaI" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -253,7 +253,7 @@
 /obj/structure/table/rack,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaL" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3,
@@ -274,7 +274,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -283,7 +283,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaO" = (
 /obj/machinery/vending/coffee{
@@ -330,13 +330,13 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaT" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaU" = (
 /obj/machinery/power/sensor{
@@ -353,7 +353,7 @@
 	c_tag = "BNK - Backup Generator";
 	dir = 8
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaV" = (
 /obj/machinery/vending/foodmeat{
@@ -382,7 +382,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaX" = (
 /obj/structure/cable/green{
@@ -397,7 +397,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaY" = (
 /obj/machinery/door/airlock/glass_engineeringatmos{
@@ -1001,7 +1001,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/muriki/crew/bunker_deep/main)
 "acf" = (
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "acg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -1039,13 +1039,13 @@
 	dir = 8;
 	pixel_x = -26
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "acl" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "acm" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1081,7 +1081,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "acr" = (
 /obj/structure/window/basic{
@@ -1689,7 +1689,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "adF" = (
 /obj/item/radio/intercom{
