@@ -25969,6 +25969,25 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Old Hazop Suit Storage"
 	},
+/obj/item/tank/carbon_dioxide{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/tank/carbon_dioxide{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/tank/nitrogen,
+/obj/item/tank/nitrogen,
+/obj/item/tank/methane{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/tank/methane{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/dark,
 /area/medical/chem_storage)
 "aVd" = (
@@ -103593,8 +103612,8 @@ bnA
 pge
 bnI
 awc
-bcW
-bhb
+aNa
+bfr
 bge
 ayp
 bge
@@ -103756,7 +103775,7 @@ pge
 bge
 bge
 bge
-bhh
+aUQ
 bge
 aUQ
 bge
@@ -103918,7 +103937,7 @@ bNE
 orZ
 aQg
 bNa
-bMk
+ayp
 bge
 aUQ
 bge
@@ -104080,7 +104099,7 @@ bNE
 orZ
 aQg
 aQg
-bhh
+aUQ
 bge
 aUQ
 bge

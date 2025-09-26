@@ -4639,7 +4639,7 @@
 /obj/structure/cable/green{
 	icon_state = "32-8"
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/maintenance/cargomid)
 "agW" = (
 /obj/effect/floor_decal/corner/orange{
@@ -5895,7 +5895,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "aiT" = (
 /obj/effect/landmark/bsa_target,
@@ -5945,7 +5945,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "ajc" = (
 /obj/structure/cable/green{
@@ -11409,7 +11409,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "aWB" = (
 /obj/effect/floor_decal/borderfloor{
@@ -11504,7 +11504,7 @@
 	dir = 4;
 	pixel_x = 32
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "aXA" = (
 /obj/structure/cliff{
@@ -11876,7 +11876,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "bcg" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
@@ -15734,7 +15734,7 @@
 	name = "Cargo Lockdown"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargomid)
 "cnn" = (
 /obj/machinery/door/firedoor/glass/hidden{
@@ -25178,7 +25178,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "frJ" = (
 /turf/simulated/flesh,
@@ -38061,7 +38061,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "joV" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
@@ -41120,7 +41120,7 @@
 	dir = 1;
 	flags = null
 	},
-/turf/simulated/open,
+/turf/simulated/open/muriki,
 /area/maintenance/cargomid)
 "khj" = (
 /turf/simulated/floor/maglev{
@@ -41699,7 +41699,7 @@
 /obj/structure/disposalpipe/sortjunction/untagged{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "kpt" = (
 /obj/structure/fence,
@@ -48709,7 +48709,7 @@
 	pixel_x = 24
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "mxu" = (
 /obj/machinery/door/blast/regular{
@@ -50322,7 +50322,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "mYT" = (
 /obj/effect/floor_decal/borderfloor{
@@ -54070,7 +54070,7 @@
 	name = "Cargo Lockdown"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "ogq" = (
 /obj/structure/cliff/corner{
@@ -63642,7 +63642,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "rkj" = (
 /obj/structure/hookah,
@@ -67680,7 +67680,7 @@
 	name = "Cargo Lockdown"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargomid)
 "sBu" = (
 /obj/structure/curtain/open/shower/medical,
@@ -68379,7 +68379,7 @@
 	dir = 4
 	},
 /obj/structure/ladder,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "sLE" = (
 /obj/structure/bed/chair/sofa/left/teal,
@@ -82113,7 +82113,7 @@
 	dir = 4
 	},
 /obj/machinery/light/small/emergency,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "wPy" = (
 /obj/structure/cable/green{
