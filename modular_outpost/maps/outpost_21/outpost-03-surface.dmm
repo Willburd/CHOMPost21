@@ -23632,6 +23632,10 @@
 	pixel_x = -26
 	},
 /obj/item/hand_labeler,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "eOR" = (
@@ -34224,13 +34228,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/quartermaster/mining/processing)
-"ifH" = (
-/obj/structure/micro_tunnel{
-	dir = 8;
-	pixel_x = -32
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medbay_aft)
 "ifL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -44218,6 +44215,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32
 	},
 /turf/simulated/floor/plating,
 /area/medical/medbay3)
@@ -56731,7 +56731,8 @@
 	c_tag = "MED - Main Hall NorthEast";
 	dir = 4
 	},
-/obj/structure/sign/painting/public{
+/obj/machinery/status_display{
+	layer = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
@@ -132175,7 +132176,7 @@ ics
 bKq
 dRW
 gDv
-ifH
+jue
 vOw
 ecn
 ank

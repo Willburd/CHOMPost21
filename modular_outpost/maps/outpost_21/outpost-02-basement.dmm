@@ -59172,6 +59172,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
 "chj" = (
@@ -66337,6 +66345,10 @@
 	dir = 4
 	},
 /obj/structure/closet/radiation,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
 "jCt" = (
