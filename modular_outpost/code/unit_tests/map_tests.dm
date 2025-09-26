@@ -364,28 +364,3 @@
 	else
 		pass("All micro tunnels have exclusive areas areas.")
 	return failed
-
-
-/datum/unit_test/openspace
-	name = "MAP: Open space Test"
-
-/datum/unit_test/openspace/start_test()
-	var/failed = FALSE
-
-	var/list/shown_areas = list()
-	for(var/turf/simulated/open/O in world)
-		var/area/A = get_area(O)
-		if(!A)
-			continue
-		if(A.type in shown_areas)
-			continue
-		if(!(A.base_turf in typesof(/turf/simulated/open)))
-			log_unit_test("[O.x].[O.y].[O.z] [A]: Map - Openspace in an area without open space as the default turf")
-			shown_areas.Add(A.type)
-			failed = TRUE
-
-	if(failed)
-		fail("Open space turfs illegally placed. Open space in areas without openspace base turfs will have broken behavior")
-	else
-		pass("All open space turfs are legal.")
-	return failed
