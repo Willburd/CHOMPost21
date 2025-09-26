@@ -2122,6 +2122,11 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT //This WOULD become a filth pit
 	lightswitch = 1
 
+/area/security/brig_hole
+	name = "\improper Security Hole"
+	base_turf = /turf/simulated/open
+	color_grading = COLORTINT_DIM
+
 //
 // Science-----------------------------------------------------------------------
 //

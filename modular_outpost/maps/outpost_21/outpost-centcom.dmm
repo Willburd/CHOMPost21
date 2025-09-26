@@ -356,6 +356,18 @@
 /obj/machinery/door/airlock/centcom/nameddorm,
 /turf/simulated/floor/wood,
 /area/centcom/living)
+"abo" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	name = "plating";
+	icon_state = "plating"
+	},
+/area/centcom)
 "abu" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -11751,8 +11763,13 @@
 /area/specialty/redspace)
 "fIL" = (
 /obj/structure/disposalpipe/segment,
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/unsimulated/floor{
+	name = "plating";
+	icon_state = "plating"
 	},
 /area/centcom)
 "fIM" = (
@@ -61000,7 +61017,7 @@ sDl
 sDl
 oRP
 aaK
-tkh
+abo
 pmd
 xuc
 aaK

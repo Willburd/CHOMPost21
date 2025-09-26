@@ -519,6 +519,9 @@
 	name = "AI Upload Access";
 	req_one_access = list(16,52,56)
 	},
+/obj/structure/cable/cyan{
+	icon_state = "6-10"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "bf" = (
@@ -1287,6 +1290,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
+"cJ" = (
+/obj/structure/cable/cyan{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/greengrid,
+/area/ai_upload)
 "cK" = (
 /obj/structure/cable/orange{
 	icon_state = "0-10"
@@ -7302,13 +7311,13 @@
 	pixel_y = -24;
 	nightshift_setting = 3
 	},
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/corner/white/full,
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-9"
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "vt" = (
@@ -16530,15 +16539,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
-"Yq" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
-	},
-/turf/simulated/wall/r_wall,
-/area/ai_upload)
 "Yr" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/milspec,
@@ -28241,7 +28241,7 @@ Jr
 Mj
 US
 au
-PD
+cJ
 OZ
 Jr
 ps
@@ -28403,7 +28403,7 @@ Jr
 Jr
 DS
 be
-Yq
+Jr
 Jr
 Jr
 Vf

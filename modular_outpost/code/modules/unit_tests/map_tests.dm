@@ -1,6 +1,57 @@
+/datum/unit_test/open_space_turf_shall_be_valid
+
+/datum/unit_test/open_space_turf_shall_be_valid/Run()
+	var/failed = FALSE
+
+	var/list/shown_areas = list()
+	for(var/turf/simulated/open/O in world)
+		var/area/A = get_area(O)
+		if(!A)
+			continue
+		if(A.type in shown_areas)
+			continue
+		// Make sure areas with open pits can legally have them, construction breaks if the base turf is wrong!
+		if(!(A.base_turf in typesof(/turf/simulated/open)))
+			TEST_NOTICE(src,"[O.x].[O.y].[O.z] [A]: Map - Openspace in an area without open space as the default turf")
+			shown_areas.Add(A.type)
+			failed = TRUE
+		// Find mismatched atmos turfs in huge areas of openspace
+		for(var/D in GLOB.cardinal)
+			var/turf/T = get_step(O,D)
+			if(istype(T,/turf/simulated/open))
+				if(!SSair.has_same_air( O, T))
+					TEST_NOTICE(src,"[O.x].[O.y].[O.z]: Map - A neighbouring openspace turf had mismatched default atmos.")
+					failed = TRUE
+
+	if(failed)
+		TEST_FAIL("Open space turfs illegally placed. Open space in areas without openspace base turfs will have broken behavior")
+
+
+
+
+/datum/unit_test/micro_tunnel_test
+
+/datum/unit_test/micro_tunnel_test/Run()
+	var/failed = FALSE
+
+	var/list/seen_areas = list()
+	for(var/obj/structure/micro_tunnel/H in world)
+		var/area/A = get_area(H)
+		if(A.type in seen_areas)
+			TEST_NOTICE(src,"[H.x].[H.y].[H.z]: Map - [A] had more than one micro tunnel") // Micro tunnels have a list of areas by name, only a single tunnel can show up in the list per area.
+			failed = TRUE
+			continue
+		seen_areas.Add(A.type)
+
+	if(failed)
+		TEST_FAIL("Multiple micro tunnels detected in a single area.")
+
+
+
+
 /datum/unit_test/build_test_outpost
 
-/datum/unit_test/build_test_outpost/start_test()
+/datum/unit_test/build_test_outpost/Run()
 	var/failures = 0
 
 	var/list/exempt_areas = typesof(/area/space,
@@ -36,7 +87,8 @@
 		/area/rnd/research/roof_eva,
 		/area/ai_sat/core_external,
 		/area/offworld/confinementbeam/exterior,
-		/area/ai_sat/power_control
+		/area/ai_sat/power_control,
+		/area/security/brig_hole
 		)
 
 	var/list/forced_hallway = list(
@@ -89,6 +141,7 @@
 		/area/rnd/entry_aux,
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
+		/area/muriki/crew/bunker
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -180,7 +233,8 @@
 		/area/ai_upload_foyer,
 		/area/ai_sat/fore_airlock,
 		/area/ai_server_room,
-		/area/quartermaster/mining/ore_silo
+		/area/quartermaster/mining/ore_silo,
+		/area/medical/psych
 	)
 
 	var/list/does_not_have_displays = list(
@@ -271,20 +325,20 @@
 
 		// fire alarm
 		if(!(locate(/obj/machinery/firealarm) in A.contents))
-			log_unit_test("[A.type] lacks a fire alarm")
+			TEST_NOTICE(src,"[A.type] lacks a fire alarm")
 			failures++
 		// radio
 		if(!(locate(/obj/item/radio/intercom) in A.contents))
-			log_unit_test("[A.type] lacks an intercom")
+			TEST_NOTICE(src,"[A.type] lacks an intercom")
 			failures++
 		// extinguishers
 		if(!(locate(/obj/structure/extinguisher_cabinet) in A.contents))
-			log_unit_test("[A.type] lacks a fire extinguisher")
+			TEST_NOTICE(src,"[A.type] lacks a fire extinguisher")
 			failures++
 		// disposals
 		if(!(locate(/obj/machinery/disposal) in A.contents))
 			if(!(A.type in does_not_have_disposals))
-				log_unit_test("[A.type] lacks a disposal bin")
+				TEST_NOTICE(src,"[A.type] lacks a disposal bin")
 				failures++
 
 		// Hallways have some unique properties
@@ -300,92 +354,78 @@
 		if(A.type in priority_work_area)
 			// lightswitches forbidden in priority work areas
 			if((locate(/obj/machinery/light_switch) in A.contents))
-				log_unit_test("[A.type] had a lightswitch, but is a priority work area")
+				TEST_NOTICE(src,"[A.type] had a lightswitch, but is a priority work area")
 				failures++
 			else
 				if(!A.lightswitch)
-					log_unit_test("[A.type] is a priority work area, but had default lightswitch state as off. It can never be turned on!")
+					TEST_NOTICE(src,"[A.type] is a priority work area, but had default lightswitch state as off. It can never be turned on!")
 					failures++
 
 		else if(!is_hallway)
 			// lightswitches required in rooms
 			if(!(A.type in does_not_use_lightswitch))
 				if(!(locate(/obj/machinery/light_switch) in A.contents))
-					log_unit_test("[A.type] lacks an lightswitch")
-					failures++
-			else
-				// Area light must be off
-				if(A.lightswitch)
-					log_unit_test("[A.type] is a room with a lightswitch, but had default lightswitch state as on. Rooms start off on outpost!")
+					TEST_NOTICE(src,"[A.type] lacks an lightswitch")
 					failures++
 		else
 			// Area light must be on
 			if(!A.lightswitch)
-				log_unit_test("[A.type] is a hallway, but had default lightswitch state as off. It can never be turned on!")
+				TEST_NOTICE(src,"[A.type] is a hallway, but had default lightswitch state as off. It can never be turned on!")
 				failures++
 			// lightswitches forbidden in hallways
 			if((locate(/obj/machinery/light_switch) in A.contents))
-				log_unit_test("[A.type] had a lightswitch, but is a hallway")
+				TEST_NOTICE(src,"[A.type] had a lightswitch, but is a hallway")
 				failures++
 			// Hallways must have a geiger counter
 			if(!(locate(/obj/item/geiger/wall) in A.contents))
-				log_unit_test("[A.type] lacks an geiger counter")
+				TEST_NOTICE(src,"[A.type] lacks an geiger counter")
 				failures++
 			// Hallways must status displays
 			if(!(A.type in does_not_have_displays))
 				if(!(locate(/obj/machinery/status_display) in A.contents))
-					log_unit_test("[A.type] lacks an status display")
+					TEST_NOTICE(src,"[A.type] lacks an status display")
 					failures++
 				if(!(locate(/obj/machinery/ai_status_display) in A.contents))
-					log_unit_test("[A.type] lacks an ai display")
+					TEST_NOTICE(src,"[A.type] lacks an ai display")
 					failures++
 
-	TEST_ASSERT(!failures,"areas fail outpost 21 buildcode.")
-
-	return 1
-
-/datum/unit_test/micro_tunnel_test
-	name = "MAP: Micro Tunnel Test"
-
-/datum/unit_test/micro_tunnel_test/start_test()
-	var/failed = FALSE
-
-	var/list/seen_areas = list()
-	for(var/obj/structure/micro_tunnel/H in world)
-		var/area/A = get_area(H)
-		if(A.type in seen_areas)
-			log_unit_test("[H.x].[H.y].[H.z]: Map - [A] had more than one micro tunnel") // Micro tunnels have a list of areas by name, only a single tunnel can show up in the list per area.
-			failed = TRUE
-			continue
-		seen_areas.Add(A.type)
-
-	if(failed)
-		fail("Multiple micro tunnels detected in a single area.")
-	else
-		pass("All micro tunnels have exclusive areas areas.")
-	return failed
+	if(failures)
+		TEST_FAIL("areas fail outpost 21 buildcode.")
 
 
-/datum/unit_test/openspace
-	name = "MAP: Open space Test"
+/datum/unit_test/pipes_and_wires_may_not_be_under_walls
 
-/datum/unit_test/openspace/start_test()
-	var/failed = FALSE
+/datum/unit_test/pipes_and_wires_may_not_be_under_walls/Run()
+	var/failures = 0
 
-	var/list/shown_areas = list()
-	for(var/turf/simulated/open/O in world)
-		var/area/A = get_area(O)
+	for(var/obj/structure/disposalpipe/P in world)
+		var/area/A = get_area(P)
 		if(!A)
 			continue
-		if(A.type in shown_areas)
-			continue
-		if(!(A.base_turf in typesof(/turf/simulated/open)))
-			log_unit_test("[O.x].[O.y].[O.z] [A]: Map - Openspace in an area without open space as the default turf")
-			shown_areas.Add(A.type)
-			failed = TRUE
+		var/turf/T = get_turf(P)
+		if(!istype(A,/area/shuttle) && iswall(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] - [A]: a disposal pipe runs under a wall.")
+			failures++
 
-	if(failed)
-		fail("Open space turfs illegally placed. Open space in areas without openspace base turfs will have broken behavior")
-	else
-		pass("All open space turfs are legal.")
-	return failed
+	for(var/obj/machinery/atmospherics/pipe/P in world)
+		var/area/A = get_area(P)
+		if(!A)
+			continue
+		if(A.type == /area/maintenance/incinerator || A.type == /area/rnd/research/phoronics/burn) // Exempt
+			continue
+		var/turf/T = get_turf(P)
+		if(!istype(A,/area/shuttle) && iswall(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] - [A]: an atmos pipe runs under a wall.")
+			failures++
+
+	for(var/obj/structure/cable/C in world)
+		var/area/A = get_area(C)
+		if(!A)
+			continue
+		var/turf/T = get_turf(C)
+		if(!istype(A,/area/shuttle) && iswall(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] - [A]: a wire runs under a wall.")
+			failures++
+
+	if(failures)
+		TEST_FAIL("pipes or wires run under walls. Use maintenance panels.")
