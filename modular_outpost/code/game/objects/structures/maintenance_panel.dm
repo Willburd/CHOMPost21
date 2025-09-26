@@ -1,10 +1,11 @@
 /obj/structure/window/maintenance_panel
 	name = "maintenance panel"
 	desc = "A maintenance panel. It covers important things hidden inside the wall."
+	description_info = "Can be cut through or repaired with a welder. Can be deconstructed with a wrench once detached."
 	icon = 'modular_outpost/icons/obj/maintenance_panel.dmi'
 	icon_state = "panel"
 	basestate = "panel"
-	maxhealth = 60
+	maxhealth = 120
 	glasstype = /obj/item/stack/tile/maintenance_panel
 	maximal_heat = 1800 // steel
 	force_threshold = 7
@@ -23,6 +24,26 @@
 
 /obj/structure/window/maintenance_panel/is_fulltile()
 	return FALSE // NEVER
+
+/obj/structure/window/maintenance_panel/attackby(obj/item/W, mob/user)
+	if(W.has_tool_quality(TOOL_SCREWDRIVER))
+		return // Cannot be screwed down
+	if(istype(W, /obj/item/stack/cable_coil))
+		return // Cannot be electrochromed
+	if(W.has_tool_quality(TOOL_WELDER) && (user.a_intent != I_HELP || health == maxhealth)) // If at max health or not on help
+		var/obj/item/weldingtool/WT = W.get_welder()
+		if(WT.remove_fuel(1 ,user))
+			to_chat(user, span_warning("You begin to [!anchored ? "weld" : "cut"] the [src] [!anchored ? "to" : "off"] the wall."))
+			playsound(src, W.usesound, 75, 1)
+			if(do_after(user, 2 SECONDS, target = src))
+				anchored = !anchored
+				update_nearby_tiles(need_rebuild=1)
+				update_nearby_icons()
+				update_verbs()
+				to_chat(user, span_info("You [anchored ? "weld" : "cut"] the [src] [anchored ? "to" : "off"] the wall."))
+		return
+	. = ..()
+
 
 /obj/structure/window/maintenance_panel/take_damage(var/damage = 0,  var/sound_effect = 1)
 	var/initialhealth = health
