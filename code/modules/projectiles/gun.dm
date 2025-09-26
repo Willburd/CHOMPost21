@@ -198,7 +198,7 @@
 		else if(M.has_modifier_of_type(/datum/modifier/trait/thickdigits))
 			to_chat(user, span_warning("Your hands can't pull the trigger!!"))
 			return FALSE
-		else if(M.has_modifier_of_type(/datum/modifier/shield_projection) && !M.has_modifer_of_type(/datum/modifier/shield_projection/admin)) //OP edit: This makes all PSGs, except the admin one, prevent shooting, as to their original intent when added. Admin one only allows it for extreme abuse situations.
+		else if(M.has_modifier_of_type(/datum/modifier/shield_projection) && !M.has_modifier_of_type(/datum/modifier/shield_projection/admin)) //OP edit: This makes all PSGs, except the admin one, prevent shooting, as to their original intent when added. Admin one only allows it for extreme abuse situations.
 			to_chat(user, span_warning("The shield projection around you prevents you from using anything but melee!!"))
 			return FALSE
 	if(dna_lock && attached_lock.stored_dna)
