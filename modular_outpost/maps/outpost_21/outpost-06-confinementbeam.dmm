@@ -1660,15 +1660,11 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "dP" = (
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000;
-	is_critical = 1
-	},
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/engine_default{
+	is_critical = 1
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
@@ -6477,20 +6473,14 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "sW" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "PTL - Solar Backup";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	inputting = 1;
-	output_level = 100000;
-	outputting = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "PTL - Solar Backup"
+	},
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/solar_control)
 "sX" = (
@@ -10072,20 +10062,14 @@
 /turf/simulated/mineral/alt,
 /area/offworld/confinementbeam/exterior)
 "Eu" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "PTL - AI Solar";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	inputting = 1;
-	output_level = 100000;
-	outputting = 1
-	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "PTL - AI Solar"
+	},
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
 "Ev" = (

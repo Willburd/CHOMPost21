@@ -20454,17 +20454,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "aLh" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Atmospherics";
-	charge = 2e+006;
-	input_attempt = 1;
-	input_level = 70000;
-	output_level = 70000
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
+/obj/item/smes_coil/super_capacity,
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Substation - Atmospherics"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/atmos)
 "aLi" = (
@@ -26732,19 +26729,13 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chem_storage)
 "aWj" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - Incinerator";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 200000;
-	inputting = 1;
-	output_level = 250000;
-	outputting = 1
-	},
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Power - Incinerator"
+	},
+/obj/item/smes_coil/super_io,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "aWk" = (
