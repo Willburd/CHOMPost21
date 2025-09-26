@@ -391,3 +391,30 @@
 
 	if(failures)
 		TEST_FAIL("areas fail outpost 21 buildcode.")
+
+
+/datum/unit_test/pipes_and_wires_may_not_be_under_walls
+
+/datum/unit_test/pipes_and_wires_may_not_be_under_walls/Run()
+	var/failures = 0
+
+	for(var/obj/structure/disposalpipe/P in world)
+		var/turf/T = get_turf(P)
+		if(iswall(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] a disposal pipe runs under a wall.")
+			failures++
+
+	for(var/obj/machinery/atmospherics/pipe/P in world)
+		var/turf/T = get_turf(P)
+		if(iswall(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] an atmos pipe runs under a wall.")
+			failures++
+
+	for(var/obj/structure/cable/C in world)
+		var/turf/T = get_turf(C)
+		if(iswall(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] a wire runs under a wall.")
+			failures++
+
+	if(failures)
+		TEST_FAIL("pipes or wires run under walls. Use maintenance panels.")
