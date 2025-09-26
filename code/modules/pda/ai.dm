@@ -11,7 +11,9 @@
 		new/datum/data/pda/app/news,
 		// Outpost 21 addition begin - New apps
 		new/datum/data/pda/app/weather,
+		#ifndef OUTPOST_FRIENDSHIP_MODE
 		new/datum/data/pda/app/sop,
+		#endif
 		new/datum/data/pda/app/prisoner_manager,
 		new/datum/data/pda/app/crew_records/security,
 		new/datum/data/pda/app/crew_records/medical,
