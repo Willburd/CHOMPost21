@@ -97,9 +97,13 @@
 	. = ..()
 	default_apply_parts()
 	connect_to_network()
-	return INITIALIZE_HINT_LATELOAD
+	if(mapload)
+		return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/power/rtg/LateInitialize()
+	apply_mapped_upgrades()
+
+/obj/machinery/power/rtg/apply_mapped_upgrades()
 	// Detect new parts placed by mappers
 	var/list/parts_found = list()
 	for(var/i = 1, i <= loc.contents.len, i++)
@@ -118,16 +122,14 @@
 			if(isnull(C))
 				break
 			component_parts.Remove(C)
-			C.forceMove(src.loc)
-			C.Destroy()
+			qdel(C)
 	if(locate(/obj/item/stock_parts/micro_laser) in parts_found)
 		while(TRUE)
 			var/obj/item/stock_parts/micro_laser/M = locate(/obj/item/stock_parts/micro_laser) in component_parts
 			if(isnull(M))
 				break
 			component_parts.Remove(M)
-			M.forceMove(src.loc)
-			M.Destroy()
+			qdel(M)
 
 	// Rebuild from mapper's parts
 	for(var/i = 1, i <= parts_found.len, i++)
