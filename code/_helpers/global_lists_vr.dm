@@ -1127,6 +1127,7 @@ GLOBAL_LIST_INIT(area_or_turf_fail_types, typecacheof(list(
 	/obj/item/smes_coil, \
 	/obj/item/fuel_assembly, \
 	/obj/item/stack/tile/floor, \
+	/obj/item/stack/tile/maintenance_panel, \
 	/obj/item/stack/hose
 
 #define OMNI_GRIPPER \
