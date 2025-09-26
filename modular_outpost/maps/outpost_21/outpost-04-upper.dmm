@@ -1499,6 +1499,43 @@
 	},
 /area/hydroponics/publicgarden)
 "adr" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
+"ads" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
+"adt" = (
 /obj/structure/sign/warning/lethal_turrets{
 	pixel_y = -32
 	},
@@ -1508,7 +1545,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomfoyer)
-"ads" = (
+"adu" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomfoyer)
 "adC" = (
@@ -4617,12 +4654,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
+	},
+/obj/machinery/status_display{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -90205,7 +90241,7 @@ kSb
 kSb
 kSb
 sFe
-bOq
+adr
 gNx
 pUs
 rgc
@@ -91663,7 +91699,7 @@ ige
 cUM
 oBg
 mQg
-bOq
+ads
 hYv
 hYv
 hYv
@@ -111009,9 +111045,9 @@ qll
 cgN
 ofL
 qSx
-ads
+adu
 rzw
-adr
+adt
 gro
 bne
 oGT
