@@ -64,7 +64,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
-	dir = 1
+	dir = 1;
+	name = "emergency egress panel"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/crew/bunker_deep/eng)
@@ -1798,8 +1799,7 @@
 /area/muriki/bathroom/bunker_buster)
 "adN" = (
 /obj/machinery/door/airlock{
-	name = "Bunker Buster";
-	req_one_access = list(28)
+	name = "Bunker Buster"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
