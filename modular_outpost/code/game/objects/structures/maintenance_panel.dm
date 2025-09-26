@@ -5,7 +5,7 @@
 	icon = 'modular_outpost/icons/obj/maintenance_panel.dmi'
 	icon_state = "panel"
 	basestate = "panel"
-	maxhealth = 120
+	maxhealth = 250
 	glasstype = /obj/item/stack/tile/maintenance_panel
 	maximal_heat = 1800 // steel
 	force_threshold = 7
@@ -55,13 +55,13 @@
 	if(sound_effect)
 		playsound(src, 'sound/effects/Glasshit.ogg', 100, 1)
 	if(health < maxhealth / 4 && initialhealth >= maxhealth / 4)
-		visible_message("\the [src] looks like it's taking damage!" )
+		visible_message("\the [src] is about to break free!" )
 		update_icon()
 	else if(health < maxhealth / 2 && initialhealth >= maxhealth / 2)
 		visible_message("\the [src] looks seriously damaged!" )
 		update_icon()
 	else if(health < maxhealth * 3/4 && initialhealth >= maxhealth * 3/4)
-		visible_message("\the [src] is about to break free!" )
+		visible_message("\the [src] looks like it's taking damage!" )
 		update_icon()
 
 /obj/structure/window/maintenance_panel/shatter(var/display_message = 1)
