@@ -399,20 +399,23 @@
 	var/failures = 0
 
 	for(var/obj/structure/disposalpipe/P in world)
+		var/area/A = get_area(P)
 		var/turf/T = get_turf(P)
-		if(iswall(T))
+		if(!istype(A,/area/shuttle) && iswall(T))
 			TEST_NOTICE(src,"[T.x].[T.y].[T.z] a disposal pipe runs under a wall.")
 			failures++
 
 	for(var/obj/machinery/atmospherics/pipe/P in world)
+		var/area/A = get_area(P)
 		var/turf/T = get_turf(P)
-		if(iswall(T))
+		if(!istype(A,/area/shuttle) && iswall(T))
 			TEST_NOTICE(src,"[T.x].[T.y].[T.z] an atmos pipe runs under a wall.")
 			failures++
 
 	for(var/obj/structure/cable/C in world)
+		var/area/A = get_area(C)
 		var/turf/T = get_turf(C)
-		if(iswall(T))
+		if(!istype(A,/area/shuttle) && iswall(T))
 			TEST_NOTICE(src,"[T.x].[T.y].[T.z] a wire runs under a wall.")
 			failures++
 
