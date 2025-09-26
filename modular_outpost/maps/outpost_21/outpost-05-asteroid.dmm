@@ -549,7 +549,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/cave)
 "bn" = (
 /obj/structure/sign/securearea,
@@ -6712,7 +6715,11 @@
 /area/offworld/asteroidyard/station/halls)
 "HS" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/storage)
 "HT" = (
 /obj/machinery/light,
@@ -8120,7 +8127,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/access_shaft)
 "OS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
