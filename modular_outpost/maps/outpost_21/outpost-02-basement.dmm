@@ -64396,6 +64396,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/catwalk_plated/white,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/medical/medbay2)
 "hiX" = (
