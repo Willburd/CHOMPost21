@@ -157,6 +157,14 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
+"ay" = (
+/obj/fiftyspawner/steel,
+/obj/structure/table/alien/blue,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/shuttle/skipjack)
 "az" = (
 /obj/effect/overlay/palmtree_l,
 /turf/unsimulated/beach/sand,
@@ -364,6 +372,22 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
+"aY" = (
+/obj/item/radio/intercom/raider{
+	dir = 1;
+	pixel_y = 32
+	},
+/obj/item/integrated_circuit_printer/all_upgrades,
+/obj/structure/table/alien/blue,
+/obj/item/integrated_electronics/debugger{
+	pixel_x = -5
+	},
+/obj/item/multitool,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/shuttle/skipjack)
 "aZ" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/milspec/color/black/half{
@@ -422,6 +446,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
+"be" = (
+/obj/fiftyspawner/steel,
+/obj/structure/table/hardwoodtable,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "bf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
@@ -493,6 +524,17 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"bn" = (
+/obj/item/integrated_circuit_printer/all_upgrades,
+/obj/item/integrated_electronics/debugger{
+	pixel_x = -5
+	},
+/obj/structure/table/hardwoodtable,
+/obj/item/multitool,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "bo" = (
 /obj/structure/closet/walllocker/medical/south,
 /obj/structure/handrail{
@@ -7450,8 +7492,7 @@
 /area/wizard_station)
 "Ff" = (
 /obj/machinery/shieldwallgen{
-	anchored = 1;
-	locked = 0
+	anchored = 1
 	},
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
@@ -51634,9 +51675,9 @@ yb
 jY
 yb
 yb
+bn
 sg
-sg
-sg
+be
 yb
 mN
 mN
@@ -68168,7 +68209,7 @@ mN
 mN
 Bm
 Bm
-AY
+ay
 AY
 zJ
 DE
@@ -68330,7 +68371,7 @@ mN
 mN
 mN
 Bm
-kf
+aY
 AY
 AY
 Bm

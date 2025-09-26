@@ -1,0 +1,161 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/obj/structure/barricade,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"r" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/turf/template_noop,
+/area/template_noop)
+"y" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"L" = (
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"N" = (
+/obj/structure/barricade,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+"}
+(2,1,1) = {"
+x
+x
+W
+W
+W
+W
+W
+W
+x
+x
+"}
+(3,1,1) = {"
+x
+a
+W
+L
+L
+y
+L
+W
+W
+x
+"}
+(4,1,1) = {"
+x
+a
+W
+y
+L
+L
+L
+L
+W
+x
+"}
+(5,1,1) = {"
+x
+a
+W
+W
+L
+L
+y
+y
+W
+x
+"}
+(6,1,1) = {"
+x
+c
+a
+W
+o
+L
+L
+y
+W
+x
+"}
+(7,1,1) = {"
+x
+c
+r
+J
+o
+N
+K
+L
+W
+x
+"}
+(8,1,1) = {"
+x
+r
+r
+W
+L
+N
+W
+W
+W
+x
+"}
+(9,1,1) = {"
+x
+x
+a
+W
+W
+W
+W
+a
+x
+x
+"}
+(10,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+"}
