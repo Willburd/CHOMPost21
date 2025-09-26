@@ -26549,8 +26549,8 @@
 	dir = 8;
 	name = "Energy"
 	},
-/obj/item/personal_shield_generator/belt/melee/loaded,
-/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/security/loaded,
+/obj/item/personal_shield_generator/belt/security/loaded,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /turf/simulated/floor/tiled/dark,
