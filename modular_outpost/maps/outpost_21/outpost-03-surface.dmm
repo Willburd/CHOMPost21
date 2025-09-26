@@ -26462,8 +26462,8 @@
 	dir = 8;
 	name = "Energy"
 	},
-/obj/item/personal_shield_generator/belt/security/loaded,
-/obj/item/personal_shield_generator/belt/security/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /turf/simulated/floor/tiled/dark,
@@ -60545,12 +60545,12 @@
 /obj/effect/landmark{
 	name = "nukeitem"
 	},
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
 /obj/item/melee/energy/spear,
 /obj/item/melee/energy/spear,
 /obj/item/melee/energy/spear,
-/obj/item/personal_shield_generator/belt/security/loaded,
-/obj/item/personal_shield_generator/belt/security/loaded,
-/obj/item/personal_shield_generator/belt/security/loaded,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "qmt" = (
