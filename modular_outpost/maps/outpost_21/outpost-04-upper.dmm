@@ -134,23 +134,16 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/djstation)
 "aal" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - Eng Solar";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	inputting = 1;
-	output_level = 100000;
-	outputting = 1
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Power - Eng Solar"
+	},
+/obj/item/smes_coil/super_io,
 /turf/simulated/floor,
 /area/maintenance/engineering)
 "aam" = (
@@ -5472,9 +5465,7 @@
 /area/mine/unexplored/muriki/mountaintopnorth)
 "bXl" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Medical";
-	input_attempt = 1;
-	input_level = 70000
+	RCon_tag = "Substation - Medical"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
@@ -16886,8 +16877,7 @@
 /area/muriki/rooftop/civilian)
 "hPA" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Civilian";
-	input_attempt = 1
+	RCon_tag = "Substation - Civilian"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -19564,8 +19554,7 @@
 /area/chapel/main)
 "jeN" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Phoronics";
-	input_attempt = 1
+	RCon_tag = "Substation - Phoronics"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -26147,18 +26136,10 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - Solar";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	inputting = 1;
-	output_level = 100000;
-	outputting = 1
-	},
 /obj/structure/cable/orange,
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Power - Solar"
+	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "msS" = (
@@ -29393,8 +29374,7 @@
 /area/engineering/gravgen)
 "obs" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Cargo";
-	input_attempt = 1
+	RCon_tag = "Substation - Cargo"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -33380,8 +33360,7 @@
 /area/maintenance/medicelev)
 "qdd" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Mining";
-	input_attempt = 1
+	RCon_tag = "Substation - Mining"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -36900,14 +36879,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_c)
 "rNj" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Telecomms";
-	charge = 100000;
-	input_attempt = 1;
-	is_critical = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Substation - Telecomms";
+	is_critical = 1
 	},
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
@@ -44739,8 +44716,7 @@
 /area/maintenance/substation/virology)
 "vxE" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Vox-Viro";
-	input_attempt = 1
+	RCon_tag = "Substation - Vox-Viro"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -47385,8 +47361,7 @@
 /area/muriki/rooftop/science)
 "wTy" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Research";
-	input_attempt = 1
+	RCon_tag = "Substation - Research"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"

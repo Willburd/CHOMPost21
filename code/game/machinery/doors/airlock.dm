@@ -303,6 +303,8 @@ About the new airlock wires panel:
 // returns 1 if shocked, 0 otherwise
 // The preceding comment was borrowed from the grille's shock script
 /obj/machinery/door/airlock/shock(mob/user, prb)
+	if(!user) // Outpost 21 edit - userless shock call due to maintenance decay on doors during init
+		return FALSE
 	if(!arePowerSystemsOn())
 		return FALSE
 	if(hasShocked)

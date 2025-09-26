@@ -3163,15 +3163,6 @@
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "aeJ" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - Main";
-	charge = 4e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	output_level = 1e+006
-	},
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
@@ -3180,6 +3171,9 @@
 	},
 /obj/item/smes_coil/super_capacity,
 /obj/item/smes_coil/super_io,
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Power - Main"
+	},
 /turf/simulated/floor,
 /area/engineering/engine_smes)
 "aeK" = (
@@ -3275,22 +3269,14 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engi_engine)
 "aeS" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Core";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	output_level = 100000;
-	outputting = 1;
-	is_critical = 1
-	},
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
 /obj/item/geiger/wall{
 	pixel_y = 30
+	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Core"
 	},
 /turf/simulated/floor,
 /area/engineering/engine_smes)
@@ -3534,8 +3520,7 @@
 /area/storage/tech)
 "afl" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Command";
-	input_attempt = 1
+	RCon_tag = "Substation - Command"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -7995,8 +7980,7 @@
 	icon_state = "0-8"
 	},
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Security";
-	input_attempt = 1
+	RCon_tag = "Substation - Security"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)

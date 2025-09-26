@@ -201,12 +201,10 @@
 /turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaF" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Bunker";
-	charge = 100000;
-	input_attempt = 1
-	},
 /obj/structure/cable/green,
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Bunker"
+	},
 /turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaG" = (
