@@ -407,6 +407,8 @@
 
 	for(var/obj/machinery/atmospherics/pipe/P in world)
 		var/area/A = get_area(P)
+		if(A.type == /area/maintenance/incinerator || A.type == /area/rnd/research/phoronics/burn) // Exempt
+			continue
 		var/turf/T = get_turf(P)
 		if(!istype(A,/area/shuttle) && iswall(T))
 			TEST_NOTICE(src,"[T.x].[T.y].[T.z] - [A]: an atmos pipe runs under a wall.")

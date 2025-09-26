@@ -4060,9 +4060,6 @@
 	dir = 8;
 	pixel_x = -32
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
@@ -4070,11 +4067,11 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/captain)
@@ -9657,6 +9654,49 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medbay_aft)
+"arD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining/processing)
+"arE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/quartermaster/mining/processing)
+"arF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/bridge/hallway)
+"arG" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/effect/mine/n2o{
+	camo_net = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/crew_quarters/captain)
 "arO" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/lino,
@@ -10462,10 +10502,15 @@
 /area/muriki/yard)
 "aGs" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	dir = 4
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/wastedisposal)
 "aGH" = (
 /obj/machinery/door/firedoor/glass,
@@ -21018,7 +21063,10 @@
 /area/security/security_processing)
 "dXz" = (
 /obj/structure/cable/green{
-	icon_state = "2-4"
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -29380,6 +29428,9 @@
 	id = "mining_internal"
 	},
 /obj/structure/plasticflaps/mining,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/processing)
 "gLY" = (
@@ -30024,11 +30075,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -37565,13 +37616,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/bcarpet,
 /area/security/briefing_room)
-"jgw" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/wall,
-/area/maintenance/wastedisposal)
 "jgx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -46621,10 +46665,10 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
-/obj/structure/sign/painting/public{
-	pixel_x = 30
-	},
 /obj/structure/closet/firecloset/full,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "lPD" = (
@@ -46971,6 +47015,9 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "lUv" = (
@@ -51279,6 +51326,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "nmK" = (
@@ -51315,9 +51365,6 @@
 "nnv" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/machinery/camera/network/command{
 	c_tag = "COM - Bridge Hall Entry";
@@ -54453,9 +54500,6 @@
 "onW" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
 	},
 /obj/machinery/alarm{
 	dir = 4;
@@ -74373,7 +74417,13 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engineering)
 "uzF" = (
 /turf/simulated/wall/r_wall,
@@ -76173,12 +76223,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/storage/tech)
-"vck" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/wall/r_wall,
-/area/muriki/bathroom/captain)
 "vcr" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/milspec,
@@ -78425,21 +78469,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
-"vKZ" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel,
-/area/bridge/hallway)
 "vLm" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -83181,11 +83210,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Engineering Substation"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engineering)
@@ -92074,7 +92100,7 @@ etP
 vyp
 etP
 etP
-jgw
+etP
 aGs
 nEv
 nEv
@@ -92398,8 +92424,8 @@ aKN
 vtA
 vyE
 kZP
-vfh
-nzR
+arE
+arD
 nzR
 nzR
 ula
@@ -140798,10 +140824,10 @@ mJU
 pNX
 pdo
 kfK
-dlz
+arF
 dlz
 nht
-vKZ
+dlz
 mfE
 fPM
 fPM
@@ -141122,10 +141148,10 @@ idk
 fft
 rvN
 rvN
-rvN
+arG
 loN
 loN
-vck
+loN
 gZl
 njP
 eqe
@@ -141445,7 +141471,7 @@ euu
 xpp
 rvN
 eRj
-sgv
+tBf
 rpJ
 oQq
 glR
@@ -141607,7 +141633,7 @@ cxd
 swn
 rvN
 jil
-sgv
+tBf
 vij
 oQq
 cMq
