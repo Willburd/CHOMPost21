@@ -51,7 +51,7 @@
 	#ifdef OUTPOST_FRIENDSHIP_MODE
 	// Upstream doesn't like our gibber setup on autosleever. Fix that here.
 	for(var/i in GLOB.cardinal)
-		S = locate( /obj/machinery/transhuman/autoresleever, get_step(src.loc, i) )
+		var/S = locate( /obj/machinery/transhuman/autoresleever, get_step(src.loc, i) )
 		if(S)
 			return INITIALIZE_HINT_QDEL
 	#endif
