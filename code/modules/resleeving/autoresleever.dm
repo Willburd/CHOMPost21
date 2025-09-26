@@ -279,9 +279,16 @@
 
 // Outpost 21 edit begin - our resleever works different
 /obj/machinery/transhuman/autoresleever/proc/link_gibber(var/obj/machinery/gibber/G)
+	// Link gibber normally
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	G.sleevelink = src
 	releaseturf = get_turf(G)
 	throw_dir = G.gib_throw_dir
+	#endif
+	// But upstream doesn't like gibbersleever, so delete it instead so conveyor just goes to the shower
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	qdel(G)
+	#endif
 
 /obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/card/id/D)
 	if(stat || isnull(releaseturf))

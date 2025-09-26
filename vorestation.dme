@@ -27,6 +27,7 @@
 #include "code\global_init.dm"
 #include "code\world.dm"
 #include "code\__defines\__globals.dm"
+#include "code\__defines\__globals_op.dm"
 #include "code\__defines\_ast.dm"
 #include "code\__defines\_atoms.dm"
 #include "code\__defines\_bitfields.dm"

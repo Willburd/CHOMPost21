@@ -47,7 +47,9 @@
 		new/datum/data/pda/app/news,
 		// Outpost 21 addition begin - New apps
 		new/datum/data/pda/app/weather,
+		#ifndef OUTPOST_FRIENDSHIP_MODE
 		new/datum/data/pda/app/sop,
+		#endif
 		// Outpost 21 addition end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,

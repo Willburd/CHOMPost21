@@ -108,6 +108,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////
+/* NOTE: Until neutral traits actually give or cost points, these are not even usable...
 /datum/trait/neutral/allergy_reaction/gibbing // Sploot gives some bonus points
 	cost = -2 // upstream is: 0
 
@@ -128,7 +129,7 @@
 
 /datum/trait/neutral/colorblind/para_taj
 	cost = -1 //Base 0. Ibid.
-
+*/
 /datum/trait/neutral/strongimmunesystem
 	hidden = TRUE //Base False. This is virus immunity reflavored. Fukkin why?
 
