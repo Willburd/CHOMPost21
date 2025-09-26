@@ -61,12 +61,12 @@
 /turf/simulated/wall/rplastitanium,
 /area/muriki/crew/bunker_deep/main)
 "aao" = (
-/obj/machinery/door/airlock/glass_engineeringatmos{
-	req_one_access = null
-	},
-/obj/item/airlock_brace,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating/turfpack/muriki,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/crew/bunker_deep/eng)
 "aap" = (
 /turf/simulated/wall/rplastitanium,

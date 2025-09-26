@@ -3160,9 +3160,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 4
-	},
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "aeJ" = (
@@ -3199,14 +3196,16 @@
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "aeL" = (
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Engineering Substation"
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/engineering)
 "aeM" = (
 /obj/structure/cable/orange{
@@ -3259,9 +3258,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/machinery/camera/network/substations,
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -3269,14 +3265,14 @@
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "aeR" = (
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Engineering"
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engi_engine)
 "aeS" = (
 /obj/machinery/power/smes/buildable{
@@ -3375,6 +3371,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "aeZ" = (
@@ -3384,6 +3381,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "afa" = (
@@ -4631,13 +4629,13 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
 /obj/structure/lattice,
 /obj/structure/cable/green{
 	icon_state = "32-8"
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
 /turf/simulated/open/muriki,
 /area/maintenance/cargomid)
@@ -5750,27 +5748,28 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_one)
 "aiB" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/white/bordercorner,
-/obj/effect/floor_decal/corner/white/bordercorner{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
 "aiC" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance/command,
-/obj/item/tape/engineering,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/lowerelev)
 "aiD" = (
 /obj/structure/railing{
@@ -5887,7 +5886,6 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aiS" = (
-/obj/structure/window/reinforced,
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
@@ -5895,6 +5893,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "aiT" = (
@@ -6602,10 +6601,18 @@
 	icon_state = "4-8"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tactical)
 "akO" = (
 /obj/structure/disposalpipe/segment,
@@ -8759,6 +8766,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "apb" = (
@@ -9610,6 +9620,59 @@
 	},
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
+"arx" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/deployable/barrier,
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/secelev)
+"ary" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/deployable/barrier,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/secelev)
+"arz" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/secelev)
+"arA" = (
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/cargomid)
+"arB" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
+"arC" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/medbay_aft)
 "arO" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/lino,
@@ -9960,9 +10023,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor,
 /area/engineering/engine_smes)
 "azc" = (
@@ -10107,15 +10167,15 @@
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "aAH" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
 /obj/structure/railing,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
@@ -10388,12 +10448,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Cargo Substation";
-	req_one_access = list(11,24,50)
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/cargo)
 "aFy" = (
 /obj/effect/floor_decal/rust,
@@ -10568,15 +10629,17 @@
 	pixel_x = 27;
 	pixel_y = 28
 	},
-/obj/item/radio/intercom/interrogation/observation{
-	dir = 1;
-	pixel_y = 28
-	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
 /obj/effect/landmark/holiday_event_spawn,
 /obj/structure/disposalpipe/segment,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "aJU" = (
@@ -11078,12 +11141,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Engineering Substation";
-	req_one_access = list(1,10)
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/security)
 "aRI" = (
 /obj/structure/cable/green{
@@ -12034,11 +12096,17 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 4
-	},
 /obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tactical)
 "bfh" = (
 /obj/structure/bed/padded,
@@ -12559,10 +12627,13 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/security_port)
 "bnu" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -12665,9 +12736,6 @@
 /turf/simulated/wall/r_wall,
 /area/medical/chemistry)
 "bpf" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 8
@@ -12779,10 +12847,13 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
 "brz" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -14403,19 +14474,16 @@
 /turf/simulated/floor/tiled/neutral,
 /area/crew_quarters/cafeteria)
 "bQQ" = (
-/obj/machinery/door/airlock/maintenance/rnd{
-	name = "Science Maintenance"
-	},
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/scielev)
 "bQR" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
-	},
-/obj/structure/sign/warning/acid{
-	pixel_x = -32
 	},
 /obj/machinery/light{
 	dir = 8
@@ -14429,6 +14497,15 @@
 	pixel_y = 32
 	},
 /obj/structure/cable/green,
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "Security_exit_control";
+	name = "Security Exit Controller";
+	pixel_x = -25;
+	pixel_y = -5;
+	req_one_access = list(1,52);
+	tag_exterior_door = "Security_exit_exterior";
+	tag_interior_door = "Security_exit_interior"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/eva)
 "bQW" = (
@@ -15496,11 +15573,11 @@
 /obj/structure/cable/orange{
 	icon_state = "32-4"
 	},
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/structure/disposalpipe/down{
 	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
 /turf/simulated/open,
 /area/maintenance/scielev)
@@ -16463,7 +16540,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/medbay_aft)
 "czv" = (
-/obj/structure/railing,
 /obj/structure/disposalpipe/down{
 	dir = 2
 	},
@@ -16472,6 +16548,10 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
 /obj/structure/cable/orange{
 	icon_state = "32-4"
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/open,
 /area/muriki/bathroom/cargo)
@@ -17723,9 +17803,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "cUp" = (
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 8
@@ -17738,6 +17815,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "32-1"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
 /turf/simulated/open,
 /area/maintenance/scielev)
@@ -19408,10 +19491,10 @@
 "dxp" = (
 /obj/structure/disposalpipe/down,
 /obj/structure/lattice,
-/obj/structure/railing,
 /obj/structure/cable/green{
 	icon_state = "32-2"
 	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/open,
 /area/maintenance/medicelev)
 "dxv" = (
@@ -21648,9 +21731,13 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/bar)
 "eiX" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance/medical,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/medbay_roof)
 "eiY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -27249,12 +27336,12 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/security_equiptment_storage)
 "gbU" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/open,
@@ -29275,16 +29362,6 @@
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/processor/euth)
-"gLB" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
-	},
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
-/area/security/tactical)
 "gLK" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -31549,9 +31626,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_roof)
 "hut" = (
-/obj/machinery/door/airlock/maintenance/medical,
-/obj/item/airlock_brace,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/virology)
 "huB" = (
 /obj/structure/cable/green{
@@ -32196,10 +32275,6 @@
 /area/crew_quarters/captain)
 "hEt" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 8
 	},
@@ -32215,6 +32290,7 @@
 /obj/structure/cable/orange{
 	icon_state = "16-0"
 	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "hEA" = (
@@ -33228,10 +33304,16 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 4
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/secelev)
 "hSC" = (
 /obj/structure/railing{
@@ -33300,6 +33382,9 @@
 /obj/random/maintenance/security,
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
@@ -34127,12 +34212,12 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "packageSort1"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cargomid)
@@ -34729,11 +34814,19 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
-	},
 /obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/security)
 "inD" = (
 /obj/machinery/light/small{
@@ -35497,9 +35590,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/secondary/exit)
 "izb" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
 /turf/simulated/floor,
 /area/engineering/engine_smes)
 "izf" = (
@@ -36064,12 +36154,12 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/conveyor{
 	dir = 8;
 	id = "packageSort2"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cargomid)
@@ -36166,6 +36256,10 @@
 /obj/structure/lattice,
 /obj/structure/cable/green{
 	icon_state = "32-4"
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/open,
 /area/maintenance/medicelev)
@@ -38625,6 +38719,9 @@
 	pixel_x = 26
 	},
 /obj/structure/catwalk,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
 "jvk" = (
@@ -39062,9 +39159,11 @@
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/valley)
 "jBy" = (
-/obj/machinery/door/airlock/maintenance/common,
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crewstairwell)
 "jBN" = (
@@ -40181,26 +40280,17 @@
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/captain)
 "jTl" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/machinery/door/blast/shutters{
 	dir = 2;
 	id = "com_smes_shut";
 	name = "Command SMES Security Shutters"
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -40692,9 +40782,6 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/firstaid)
 "kaM" = (
-/obj/structure/railing{
-	dir = 1
-	},
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
@@ -40703,6 +40790,12 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
@@ -40806,13 +40899,6 @@
 /area/quartermaster/office)
 "kch" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
-	dir = 1;
-	flags = null
-	},
 /obj/structure/cable/green{
 	icon_state = "16-0"
 	},
@@ -40820,6 +40906,12 @@
 	icon_state = "0-4"
 	},
 /obj/structure/disposalpipe/up{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -41112,13 +41204,12 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
-/obj/structure/railing{
+/obj/structure/lattice,
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
-/obj/structure/lattice,
-/obj/structure/railing{
-	dir = 1;
-	flags = null
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
 /turf/simulated/open/muriki,
 /area/maintenance/cargomid)
@@ -41859,6 +41950,16 @@
 "krx" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
 /turf/simulated/open,
@@ -45006,11 +45107,11 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "lso" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing{
+/obj/structure/window/maintenance_panel{
 	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
@@ -46055,6 +46156,9 @@
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers,
 /obj/machinery/atmospherics/pipe/zpipe/down/supply,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/maintenance/wastedisposal)
 "lGf" = (
@@ -47780,6 +47884,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/structure/sign/warning/acid{
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
 /area/security/eva)
 "mgA" = (
@@ -48080,9 +48187,6 @@
 "mlS" = (
 /obj/structure/railing/grey{
 	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -49838,9 +49942,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/common,
-/obj/machinery/door/firedoor/border_only,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/cargopub)
 "mRH" = (
 /obj/structure/sign/warning/lethal_turrets,
@@ -50290,9 +50398,6 @@
 "mYe" = (
 /obj/machinery/light/small{
 	dir = 1
-	},
-/obj/structure/cable/yellow{
-	icon_state = "2-9"
 	},
 /turf/simulated/floor,
 /area/engineering/engine_smes)
@@ -52543,24 +52648,15 @@
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "nFk" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
 /obj/machinery/door/blast/regular/open{
 	id = "security_lockdown";
 	name = "Security Lockdown Shutters"
 	},
-/obj/structure/cable/green,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/security/brig/observation)
 "nFl" = (
 /obj/effect/floor_decal/corner/red{
@@ -54292,7 +54388,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/obj/structure/cable/yellow,
 /turf/simulated/floor,
 /area/engineering/engine_smes)
 "olG" = (
@@ -56037,23 +56132,12 @@
 /turf/simulated/floor,
 /area/constructionsite/engineering)
 "oNk" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/cable/yellow{
-	icon_state = "0-6"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engine_smes)
 "oNn" = (
 /obj/structure/railing{
@@ -57645,6 +57729,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "pqW" = (
@@ -58194,14 +58279,14 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "pAL" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Engineering"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/techmaint,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/engineering)
 "pAZ" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -58597,8 +58682,8 @@
 /area/crew_quarters/captain)
 "pHx" = (
 /obj/structure/lattice,
-/obj/structure/railing,
 /obj/machinery/atmospherics/pipe/zpipe/down,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/open,
 /area/maintenance/medicelev)
 "pHz" = (
@@ -59866,8 +59951,6 @@
 /turf/simulated/floor/plating,
 /area/security/evidence_storage)
 "qcg" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/medical,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -59877,7 +59960,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/medicelev)
 "qck" = (
 /obj/machinery/camera/network/outside{
@@ -62432,10 +62521,6 @@
 /area/medical/medbay3)
 "qPI" = (
 /obj/structure/lattice,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 4
 	},
@@ -62447,6 +62532,10 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "32-4"
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
 /turf/simulated/open,
 /area/maintenance/medicelev)
@@ -63776,9 +63865,6 @@
 /area/security/checkpoint2)
 "rmM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden,
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
-	},
 /turf/simulated/floor,
 /area/engineering/engine_smes)
 "rmZ" = (
@@ -65171,13 +65257,13 @@
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "rLv" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/structure/lattice,
-/obj/structure/railing,
 /obj/structure/cable/orange{
 	icon_state = "32-2"
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
 /turf/simulated/open,
 /area/maintenance/substation/command)
@@ -66367,9 +66453,6 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sec)
 "scH" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/cargo)
 "scU" = (
@@ -66989,7 +67072,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -68156,14 +68239,13 @@
 /area/shuttle/beamtransit)
 "sIr" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/railing{
-	dir = 1;
-	flags = null
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/up{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -69667,11 +69749,13 @@
 /area/quartermaster/mining/processing)
 "tel" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/maintenance/engi,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "tet" = (
@@ -70692,8 +70776,8 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/trunk,
-/obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "txe" = (
@@ -71444,10 +71528,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 4
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/virology)
 "tIP" = (
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -73651,14 +73736,16 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/valley)
 "uqA" = (
-/obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/maintenance/common{
-	req_one_access = list(28)
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/kitchen)
 "uqC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -73785,10 +73872,16 @@
 	icon_state = "1-2"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 4
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/security/armoury)
 "usP" = (
 /obj/structure/railing,
@@ -75016,9 +75109,6 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 8
 	},
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
@@ -75028,6 +75118,10 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "uLD" = (
@@ -75790,26 +75884,11 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "uXX" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/yellow,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/engine_smes)
 "uYl" = (
 /obj/structure/cable/green{
@@ -75825,7 +75904,11 @@
 /area/muriki/research/showers)
 "uYp" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/security_port)
 "uYz" = (
 /obj/structure/railing{
@@ -76060,12 +76143,8 @@
 /area/engineering/storage)
 "vbI" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/railing,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/structure/cable/orange{
 	icon_state = "16-0"
 	},
@@ -76074,6 +76153,10 @@
 	dir = 8;
 	pixel_x = -32
 	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "vbM" = (
@@ -76338,10 +76421,11 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 4
+/obj/structure/window/maintenance_panel{
+	dir = 1
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/storage/tech)
 "vgw" = (
 /turf/simulated/wall/plastitanium,
@@ -78825,15 +78909,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "vSC" = (
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "Security_exit_control";
-	name = "Security Exit Controller";
-	pixel_x = -25;
-	pixel_y = -5;
-	req_one_access = list(1,52);
-	tag_exterior_door = "Security_exit_exterior";
-	tag_interior_door = "Security_exit_interior"
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
@@ -83106,10 +83181,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "xei" = (
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Engineering"
-	},
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
@@ -83121,7 +83192,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engineering)
 "xej" = (
 /obj/structure/grille,
@@ -85296,16 +85373,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "xQA" = (
-/obj/machinery/door/airlock/maintenance/sec{
-	name = "Security Maintenance";
-	req_access = list(1,12)
-	},
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/security)
 "xQN" = (
 /obj/structure/closet/secure_closet/engineering_electrical,
@@ -109491,7 +109567,7 @@ hns
 kYt
 icS
 vDM
-dxn
+arA
 pxq
 bgo
 uMJ
@@ -124890,9 +124966,9 @@ akW
 aAH
 jvj
 hTM
-onG
-sqq
-jqT
+arz
+ary
+arx
 eLh
 aqd
 aqa
@@ -125049,7 +125125,7 @@ eCt
 eCt
 eCt
 eCt
-gLB
+eCt
 eCt
 eCt
 eCt
@@ -125211,7 +125287,7 @@ dFl
 dFl
 dFl
 dFl
-afp
+dFl
 dFl
 dFl
 dFl
@@ -126116,7 +126192,7 @@ xAU
 sPE
 sPE
 ceP
-hWe
+arB
 wKG
 ncC
 kOd
@@ -129998,7 +130074,7 @@ fRi
 gkd
 rco
 eWd
-jim
+arC
 eWd
 hUY
 hUY

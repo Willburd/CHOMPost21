@@ -456,6 +456,12 @@
 /obj/item/tool/crowbar,
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"aX" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/atmos)
 "aY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -610,7 +616,11 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
 "bq" = (
 /obj/machinery/power/apc/super/critical{
@@ -1162,9 +1172,6 @@
 	pixel_x = -24;
 	nightshift_setting = 3
 	},
-/obj/structure/cable/cyan{
-	icon_state = "0-2"
-	},
 /obj/machinery/button/remote/blast_door{
 	id = "AICore";
 	name = "AI Core Access";
@@ -1176,6 +1183,12 @@
 	icon_state = "0-4"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/cable/cyan{
+	icon_state = "0-10"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "cA" = (
@@ -1348,6 +1361,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/cyan{
+	icon_state = "5-10"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "cZ" = (
@@ -1535,12 +1551,6 @@
 	layer = 3
 	},
 /obj/item/aiModule/purge,
-/obj/item/radio/intercom/locked{
-	frequency = 1343;
-	locked_frequency = 1343;
-	name = "Private AI Channel";
-	pixel_y = -24
-	},
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
@@ -1574,7 +1584,7 @@
 "dH" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/structure/cable/cyan{
-	icon_state = "4-8"
+	icon_state = "5-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -2707,22 +2717,16 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "ho" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/dockingbay)
 "hp" = (
 /obj/machinery/atmospherics/unary/heat_exchanger,
@@ -6064,6 +6068,9 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "rI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
 "rK" = (
@@ -9504,7 +9511,11 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
 "CB" = (
 /obj/effect/floor_decal/corner/orange/full{
@@ -10543,12 +10554,6 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
 "FS" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "1-8"
-	},
 /obj/machinery/button/remote/airlock{
 	id = "ai_main_door";
 	name = "Door Bolt Control";
@@ -10558,6 +10563,9 @@
 	req_one_access = list(16,56)
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/cable/cyan{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "FT" = (
@@ -12477,11 +12485,16 @@
 /turf/simulated/wall/r_wall,
 /area/ai_upload_foyer)
 "Lp" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/power_distribution)
 "Lr" = (
 /obj/structure/table/standard,
@@ -13878,23 +13891,15 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "Qd" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/solar_control)
 "Qe" = (
 /obj/machinery/power/emitter{
@@ -13915,8 +13920,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Qg" = (
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/atmos)
 "Qi" = (
 /obj/machinery/light/small,
@@ -13961,9 +13971,6 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -13978,6 +13985,9 @@
 	dir = 4;
 	pixel_x = -28;
 	pixel_y = -21
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
@@ -14771,6 +14781,12 @@
 /obj/machinery/computer/aiupload{
 	dir = 1;
 	pixel_y = -4
+	},
+/obj/item/radio/intercom/locked{
+	frequency = 1343;
+	locked_frequency = 1343;
+	name = "Private AI Channel";
+	pixel_y = -24
 	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
@@ -16786,15 +16802,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
-"Zk" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
-	},
-/turf/simulated/wall/durasteel,
-/area/ai)
 "Zo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -26792,7 +26799,7 @@ cn
 Fz
 Fz
 cY
-Zk
+Fz
 Fz
 cn
 wA
@@ -53416,7 +53423,7 @@ sX
 kv
 fn
 Cv
-ca
+aX
 pL
 jm
 uC
