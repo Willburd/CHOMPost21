@@ -658,6 +658,9 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
+"abv" = (
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/disposal)
 "abw" = (
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating,
@@ -1151,6 +1154,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"acv" = (
+/obj/machinery/power/rtg/advanced,
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 0
+	},
+/area/djstation)
 "acw" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -1269,6 +1282,12 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/river/hole)
+"acH" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/disposal)
 "acI" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -1286,6 +1305,72 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_c)
+"acJ" = (
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 0
+	},
+/area/tcomfoyer)
+"acK" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/disposal)
+"acL" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/disposal)
+"acM" = (
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/disposal)
+"acN" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/disposal)
+"acO" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/disposal)
+"acP" = (
+/obj/structure/railing,
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"acQ" = (
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"acR" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"acS" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"acT" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"acU" = (
+/obj/structure/prop/war/tgmc_missile_rack/napalm,
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
 "acV" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -1300,6 +1385,117 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor,
 /area/maintenance/substation/research)
+"acW" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"acX" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"acY" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/engineering)
+"acZ" = (
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/engineering)
+"ada" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/engineering)
+"adb" = (
+/obj/structure/cable/orange{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"adc" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"add" = (
+/obj/structure/cable/orange{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"ade" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/civilian)
+"adf" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/medical)
+"adg" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/medical)
+"adh" = (
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/medical)
+"adi" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/medical)
+"adj" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/medical)
+"adk" = (
+/obj/structure/prop/war/tgmc_missile_rack/napalm,
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/medical)
+"adl" = (
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/science)
+"adm" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/science)
+"adn" = (
+/obj/structure/prop/war/tgmc_missile_rack/keeper,
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/science)
+"ado" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/science)
+"adp" = (
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/outdoors/snow/roofing,
+/area/muriki/rooftop/medical)
 "adC" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/bedsheet/pillow/teal,
@@ -2575,7 +2771,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -3106,10 +3302,6 @@
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/chapel/main)
-"aXp" = (
-/obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/rnd/research/phoronics/bombrange)
 "aXE" = (
 /obj/machinery/computer/robotics{
 	dir = 4;
@@ -3297,10 +3489,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-9"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/science)
 "bbm" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -4966,7 +5155,7 @@
 	c_tag = "EXT - Engineering Solar Access";
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/engineering)
 "bOX" = (
 /turf/simulated/floor/grass,
@@ -5071,7 +5260,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/science)
 "bSk" = (
 /obj/structure/disposalpipe/segment{
@@ -5339,7 +5528,7 @@
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Cargo Roof Access"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -5652,7 +5841,9 @@
 /obj/machinery/camera/network/research/xenobio{
 	c_tag = "SCI - Phoronics Impact North"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/rnd/research/phoronics/bombrange)
 "cgy" = (
 /obj/structure/table/woodentable,
@@ -6297,7 +6488,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -6417,7 +6608,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-6"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "cyi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7006,7 +7197,9 @@
 	dir = 8
 	},
 /obj/machinery/light/small,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "cQq" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -7272,7 +7465,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "cWD" = (
 /obj/machinery/hologram/holopad,
@@ -7631,7 +7824,9 @@
 	},
 /area/muriki/crystal)
 "dgh" = (
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/skyline/north)
 "dgj" = (
 /obj/structure/railing{
@@ -8706,7 +8901,9 @@
 	anchored = 1;
 	deployed = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/unexplored/muriki/mountaintopnorth)
 "dJi" = (
 /obj/structure/disposalpipe/segment{
@@ -8767,7 +8964,7 @@
 "dKL" = (
 /obj/structure/cable/yellow,
 /obj/machinery/power/rtg/advanced,
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/djstation)
@@ -8928,7 +9125,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "dOQ" = (
 /obj/structure/cable/green{
@@ -9413,7 +9612,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "eag" = (
 /obj/machinery/door/firedoor,
@@ -9661,7 +9862,9 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "ega" = (
 /obj/machinery/hologram/holopad,
@@ -10937,7 +11140,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-9"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/science)
 "eLj" = (
 /obj/machinery/light_switch{
@@ -11061,7 +11264,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "eNk" = (
 /obj/structure/cable/green{
@@ -11121,7 +11326,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "eOI" = (
 /obj/machinery/pointdefense_control{
@@ -11418,7 +11625,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/engineering)
 "eXM" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -11778,7 +11985,9 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "fiy" = (
 /turf/simulated/floor/tiled/dark,
@@ -11849,7 +12058,7 @@
 /obj/structure/cable/green{
 	icon_state = "6-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "fkY" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -12599,7 +12808,7 @@
 	dir = 8
 	},
 /obj/structure/prop/machine/comm_tower,
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/djstation)
@@ -12926,7 +13135,7 @@
 	name = "\improper POTENTIALLY HAZARDOUS ATMOSPHERE";
 	pixel_y = -32
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -13916,7 +14125,9 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "gqk" = (
 /obj/structure/extinguisher_cabinet{
@@ -14063,7 +14274,9 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/rnd/research/phoronics/burn)
 "guL" = (
 /obj/structure/sign/warning/compressed_gas,
@@ -14307,7 +14520,9 @@
 /area/muriki/rooftop/cargo)
 "gEw" = (
 /obj/machinery/trailblazer/red,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/rnd/research/phoronics/bombrange)
 "gED" = (
 /obj/machinery/light{
@@ -14365,7 +14580,9 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "gFQ" = (
 /obj/structure/grille,
@@ -14784,7 +15001,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -14903,7 +15120,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "gWz" = (
 /obj/structure/cable/green{
@@ -15852,7 +16071,7 @@
 	dir = 4
 	},
 /obj/structure/railing,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "hsL" = (
 /obj/structure/catwalk,
@@ -16668,14 +16887,16 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "hPk" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Med Roof Southeast";
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "hPA" = (
 /obj/machinery/power/smes/buildable{
@@ -17061,7 +17282,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "hXR" = (
 /obj/structure/railing{
@@ -17246,7 +17469,7 @@
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Incin Cold Loop Northeast"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "icF" = (
 /obj/structure/cliff/corner{
@@ -17309,7 +17532,9 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "idO" = (
 /turf/simulated/wall,
@@ -17769,8 +17994,8 @@
 /area/hydroponics/publicgarden)
 "iqB" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
 /area/rnd/research/phoronics/burn)
 "iqM" = (
@@ -18862,7 +19087,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "iSy" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -18874,7 +19099,7 @@
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/djstation)
@@ -19804,7 +20029,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-9"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "jqQ" = (
 /obj/machinery/door/airlock/maintenance/rnd{
@@ -20552,7 +20777,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -21077,7 +21302,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "jVq" = (
 /obj/machinery/camera/network/outside{
@@ -21384,7 +21609,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "kcH" = (
 /obj/machinery/light,
@@ -21507,7 +21732,7 @@
 	name = "roof support";
 	pixel_y = 26
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -21705,9 +21930,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/resleeving)
-"klS" = (
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopnorth)
 "kme" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/greendouble,
@@ -22166,7 +22388,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -22323,7 +22545,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "kzJ" = (
 /obj/machinery/vending/fitness{
@@ -22872,7 +23094,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/djstation)
@@ -23038,7 +23260,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -23961,8 +24183,8 @@
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/pools/pylorus)
 "lrB" = (
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
 "lrD" = (
@@ -24177,7 +24399,7 @@
 	c_tag = "EXT - Sci Roof Civ Access";
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "lyV" = (
 /turf/simulated/floor/wood,
@@ -25187,7 +25409,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "lZx" = (
 /obj/item/beartrap{
@@ -25203,7 +25425,9 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "mag" = (
 /turf/simulated/floor/tiled/white,
@@ -26153,7 +26377,7 @@
 	c_tag = "EXT - Civ Hydroponics North";
 	dir = 1
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "mAk" = (
 /obj/machinery/suit_storage_unit/standard_unit,
@@ -26707,7 +26931,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-6"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/science)
 "mOp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
@@ -28858,7 +29082,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -28896,7 +29120,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/rust,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "nUO" = (
 /obj/machinery/disposal,
@@ -29474,7 +29700,7 @@
 	c_tag = "EXT - Hydroponics Southeast Roof";
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "ojY" = (
 /obj/effect/floor_decal/corner/red{
@@ -30797,7 +31023,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "oPx" = (
 /obj/structure/table/woodentable,
@@ -30950,7 +31176,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "oTD" = (
 /obj/effect/floor_decal/corner/blue{
@@ -31861,7 +32087,9 @@
 /area/medical/first_aid_station_starboard)
 "pqM" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/rnd/research/phoronics/bombrange)
 "pqP" = (
 /obj/structure/bed/chair/sofa/right/blue{
@@ -32632,7 +32860,9 @@
 	c_tag = "SCI - Phoronics Impact South";
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/rnd/research/phoronics/bombrange)
 "pIx" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -32686,7 +32916,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "pJM" = (
 /obj/machinery/suit_storage_unit/standard_unit,
@@ -33092,7 +33324,7 @@
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Engineering Teleporter South"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/engineering)
 "qap" = (
 /obj/structure/railing,
@@ -33551,7 +33783,7 @@
 	dir = 4
 	},
 /obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "qkd" = (
 /turf/simulated/floor/tiled/white,
@@ -33818,7 +34050,7 @@
 	dir = 4
 	},
 /obj/machinery/meter,
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/djstation)
@@ -34576,7 +34808,7 @@
 	pixel_x = 24;
 	nightshift_setting = 3
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/engineering)
 "qJw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -35087,7 +35319,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "qYn" = (
 /obj/effect/landmark/vermin,
@@ -35942,7 +36174,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -35986,7 +36218,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "rvu" = (
 /obj/machinery/door/airlock/medical{
@@ -36105,7 +36339,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "ryx" = (
 /obj/effect/floor_decal/chapel{
@@ -36598,7 +36834,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "rMl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -37092,7 +37328,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/engineering)
 "rYH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -39583,7 +39819,7 @@
 	c_tag = "EXT - Med Roof East";
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "thE" = (
 /obj/machinery/dna_scannernew,
@@ -40228,7 +40464,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -40689,7 +40925,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "tGR" = (
 /obj/machinery/atmospherics/unary/heat_exchanger,
@@ -41019,13 +41255,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/extrastore)
-"tPw" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 5
-	},
-/obj/machinery/rnd/production/protolathe/department/security,
-/turf/simulated/floor/tiled,
-/area/security/vacantoffice)
 "tPL" = (
 /obj/structure/flora/log1,
 /turf/simulated/floor/water/beach/indoors{
@@ -41289,7 +41518,9 @@
 	c_tag = "EXT - Med Roof access";
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "tWS" = (
 /obj/effect/floor_decal/milspec/box,
@@ -42312,7 +42543,7 @@
 	c_tag = "EXT - Chapel East Roof";
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "uus" = (
 /obj/machinery/light{
@@ -43857,7 +44088,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/engineering)
 "viO" = (
 /obj/structure/table/woodentable,
@@ -44072,7 +44305,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -44249,7 +44482,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "vrC" = (
 /obj/machinery/atmospherics/unary/freezer{
@@ -44409,7 +44642,9 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/engineering)
 "vtR" = (
 /obj/effect/floor_decal/corner/lime{
@@ -44470,7 +44705,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-8"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "vuw" = (
 /obj/machinery/portable_atmospherics/hydroponics,
@@ -45372,7 +45607,9 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/rnd/research/phoronics/burn)
 "vUf" = (
 /obj/structure/closet/firecloset,
@@ -45395,7 +45632,9 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "vVj" = (
 /obj/structure/bed/chair{
@@ -45537,7 +45776,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "vXK" = (
 /obj/structure/cable/green{
@@ -45868,7 +46107,9 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/skyline/west)
 "wgG" = (
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/rnd/research/phoronics/bombrange)
 "whh" = (
 /obj/machinery/smartfridge/drying_rack,
@@ -45988,11 +46229,6 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
-"wkE" = (
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
-	},
-/area/rnd/research/phoronics/bombrange)
 "wkN" = (
 /obj/structure/railing,
 /obj/machinery/power/tesla_coil/pre_mapped,
@@ -46212,7 +46448,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "wpG" = (
 /obj/structure/bed/chair/bay/shuttle{
@@ -46401,7 +46639,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
 /area/muriki/rooftop/cargo)
@@ -47330,7 +47568,7 @@
 /obj/structure/sign/warning/falling{
 	pixel_y = -32
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
 "wXr" = (
 /obj/structure/table/woodentable,
@@ -47500,7 +47738,7 @@
 /area/medical/hangar)
 "xbH" = (
 /obj/effect/landmark/event_spawn/dronepod_landing,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "xbQ" = (
 /turf/simulated/open/muriki,
@@ -47715,7 +47953,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/medical)
 "xfN" = (
 /obj/structure/closet/wardrobe/chaplain_black,
@@ -47744,8 +47982,8 @@
 /area/muriki/bathroom/phoronics)
 "xfW" = (
 /obj/structure/railing,
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
 "xgc" = (
@@ -48017,7 +48255,9 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/disposal)
 "xoC" = (
 /obj/machinery/power/sensor{
@@ -48619,7 +48859,7 @@
 	c_tag = "EXT - Mining Roof Central";
 	dir = 4
 	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
 "xEe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -49494,7 +49734,9 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/rooftop/medical)
 "yeb" = (
 /obj/machinery/status_display{
@@ -52680,9 +52922,9 @@ wcK
 bqq
 nfQ
 mMp
-wcK
-wcK
-wcK
+abv
+abv
+abv
 kut
 ttw
 ttw
@@ -52842,8 +53084,8 @@ vYr
 moB
 bJm
 vaQ
-wcK
-wcK
+abv
+abv
 cwo
 kut
 ttw
@@ -53004,7 +53246,7 @@ wcK
 ulB
 lXs
 pFR
-wcK
+abv
 wcK
 wcK
 kut
@@ -53644,7 +53886,7 @@ fkg
 fkg
 bMB
 ugn
-pIx
+acK
 pIx
 pIx
 pIx
@@ -53806,7 +54048,7 @@ fkg
 fkg
 bMB
 ugn
-pIx
+acK
 pIx
 pIx
 pIx
@@ -53968,9 +54210,9 @@ fkg
 fkg
 bMB
 ugn
-pIx
-pIx
-pIx
+acK
+acK
+acK
 pIx
 iEC
 cwo
@@ -54130,9 +54372,9 @@ fkg
 fkg
 bMB
 ugn
-pIx
-pIx
-pIx
+acK
+acK
+acK
 pIx
 iEC
 wcK
@@ -54293,8 +54535,8 @@ fkg
 paC
 ugn
 icx
-aiP
-tmx
+acO
+acL
 aiP
 iEC
 wcK
@@ -54454,10 +54696,10 @@ fkg
 fkg
 vSW
 ugn
-wcK
-wcK
-eWf
-tJW
+abv
+abv
+acM
+acH
 rMf
 lNF
 lNF
@@ -55102,11 +55344,11 @@ fkg
 fkg
 bMB
 ugn
-wcK
-wcK
+abv
+abv
 vut
-cwo
-wcK
+abv
+abv
 lNF
 aox
 lNF
@@ -55264,11 +55506,11 @@ hrv
 hrv
 afG
 ugn
-wcK
-wcK
+abv
+abv
 xbH
 jqD
-wcK
+abv
 xDQ
 mPy
 wcK
@@ -55426,12 +55668,12 @@ fkg
 fkg
 vle
 ugn
-wcK
-cwo
-lej
+abv
+abv
+acN
 kzF
 vXG
-tJW
+acH
 vXk
 tJW
 lMM
@@ -55588,12 +55830,12 @@ fkg
 fkg
 vle
 ugn
-wcK
-wcK
-wcK
-wcK
-wcK
-wcK
+abv
+abv
+abv
+abv
+abv
+abv
 mPy
 iNU
 wcK
@@ -69461,7 +69703,7 @@ pHm
 aKN
 jmQ
 rEM
-uDM
+acZ
 rYA
 uDM
 uDM
@@ -69610,7 +69852,7 @@ uDM
 ioo
 uDM
 uKp
-uDM
+acZ
 rEM
 vRv
 iBD
@@ -69772,12 +70014,12 @@ uDM
 pcN
 uDM
 bhc
-uDM
-uDM
+acZ
+acZ
 vtE
 bOW
-uDM
-uDM
+acZ
+acZ
 rEM
 rEM
 rEM
@@ -69785,8 +70027,8 @@ rEM
 rEM
 rEM
 rEM
-pcN
-sRU
+acZ
+acY
 hEc
 hEc
 hEc
@@ -69934,21 +70176,21 @@ uDM
 ioo
 uDM
 jry
-uDM
-uDM
+acZ
+acZ
 vtE
+acZ
+acZ
 uDM
 uDM
 uDM
 uDM
-uDM
-uDM
-uDM
-uDM
-uDM
-uDM
-uDM
-sRU
+acZ
+acZ
+acZ
+acZ
+acZ
+acY
 ybr
 ybr
 ybr
@@ -70096,20 +70338,20 @@ uDM
 uDM
 uDM
 uKp
-uDM
+acZ
 qJv
 viv
-uDM
-uDM
+acZ
+acZ
 pcN
 eIC
 hEq
 hEq
 hEq
 hEq
-hEq
-hEq
-hEq
+ada
+ada
+ada
 lxo
 otL
 otL
@@ -72476,7 +72718,7 @@ plQ
 (141,1,1) = {"
 vWq
 dGy
-klS
+lrB
 dGy
 kxr
 kxr
@@ -72638,7 +72880,7 @@ plQ
 (142,1,1) = {"
 vWq
 dGy
-klS
+lrB
 dGy
 kxr
 kxr
@@ -72800,8 +73042,8 @@ plQ
 (143,1,1) = {"
 vWq
 dGy
-klS
-klS
+lrB
+lrB
 kxr
 kxr
 kxr
@@ -73125,7 +73367,7 @@ plQ
 vWq
 dGy
 dGy
-klS
+lrB
 dGy
 dGy
 kxr
@@ -85606,13 +85848,13 @@ nKt
 wgG
 wgG
 wgG
-aXp
 wgG
 wgG
 wgG
 wgG
 wgG
-aXp
+wgG
+wgG
 wgG
 wgG
 wgG
@@ -85768,7 +86010,7 @@ nKt
 wgG
 wgG
 wgG
-aXp
+wgG
 wgG
 wgG
 wgG
@@ -86256,7 +86498,7 @@ wgG
 wgG
 wgG
 wgG
-aXp
+wgG
 wgG
 wgG
 wgG
@@ -86422,10 +86664,10 @@ wgG
 wgG
 wgG
 wgG
-aXp
 wgG
 wgG
-aXp
+wgG
+wgG
 nKt
 aFx
 ovc
@@ -86578,16 +86820,16 @@ nKt
 wgG
 wgG
 wgG
-aXp
-aXp
-wgG
-wgG
-aXp
 wgG
 wgG
 wgG
 wgG
-aXp
+wgG
+wgG
+wgG
+wgG
+wgG
+wgG
 nKt
 aFx
 ovc
@@ -87391,7 +87633,7 @@ aFx
 aFx
 nKt
 qzT
-aXp
+wgG
 qzT
 nKt
 aFx
@@ -88128,7 +88370,7 @@ aCm
 mGC
 goV
 bPB
-tPw
+uxs
 tWt
 qKV
 qKV
@@ -88707,7 +88949,7 @@ dqs
 bpu
 rhS
 lfz
-flB
+adi
 flB
 flB
 jSt
@@ -89031,7 +89273,7 @@ bnk
 aRN
 aRN
 aRN
-kEQ
+adh
 kEQ
 kEQ
 hJv
@@ -89186,14 +89428,14 @@ ovc
 kxr
 kxr
 kxr
-jaR
-kEQ
-kEQ
+adj
+adh
+adh
 fkW
-kEQ
-kEQ
-kEQ
-kEQ
+adh
+adh
+adh
+adh
 kEQ
 kEQ
 hJv
@@ -89207,8 +89449,8 @@ kEQ
 hJv
 kEQ
 dzS
-kEQ
-kEQ
+adh
+adh
 eOl
 lZI
 wRN
@@ -89348,11 +89590,11 @@ ovc
 kxr
 kxr
 kxr
-jaR
-kEQ
-kEQ
-kEQ
-hdl
+adj
+adh
+adh
+adh
+adp
 kEQ
 kCy
 kEQ
@@ -89369,8 +89611,8 @@ kEQ
 hJv
 kEQ
 oBv
-kCy
-kEQ
+adh
+adh
 dZW
 tWO
 gLs
@@ -89510,10 +89752,10 @@ kxr
 kxr
 kxr
 kxr
-jaR
-kEQ
-kOx
-kEQ
+adj
+adh
+adk
+adh
 kEQ
 hdl
 kEQ
@@ -90017,9 +90259,9 @@ kEQ
 hJv
 kEQ
 oBv
-kEQ
-kEQ
-kEQ
+adh
+adh
+adh
 ydT
 xmV
 kSb
@@ -95206,12 +95448,12 @@ rBk
 rBk
 pGJ
 rBk
-jaR
-kEQ
-kEQ
-kOx
-kEQ
-kEQ
+adj
+adh
+adh
+adk
+adh
+adh
 eUb
 cac
 fVn
@@ -95369,11 +95611,11 @@ rBk
 rBk
 rBk
 tEZ
-kEQ
-kEQ
-kEQ
-kCy
-kEQ
+adh
+adh
+adh
+adh
+adh
 eUb
 cac
 lgx
@@ -95496,7 +95738,7 @@ wLU
 awX
 awX
 mLh
-wkE
+wgG
 lrB
 lrB
 lrB
@@ -95534,7 +95776,7 @@ lpH
 qjT
 xfm
 oTt
-flB
+adi
 oOW
 eUb
 oGQ
@@ -95696,7 +95938,7 @@ rBk
 rBk
 rBk
 rBk
-jaR
+adj
 jVo
 cFY
 ohf
@@ -96022,24 +96264,24 @@ rBk
 rBk
 rBk
 rBk
-vjj
-kOv
-xIt
+adg
+adf
+adf
 hrH
 rBk
-qEK
-djC
-djC
+adc
+acQ
+acQ
 thD
+acQ
 djC
 djC
 djC
-djC
-djC
-djC
-djC
-lkI
-djC
+acQ
+acQ
+acQ
+acT
+acQ
 xQY
 act
 ngx
@@ -96189,19 +96431,19 @@ rBk
 rBk
 rBk
 rBk
-qEK
+adc
+acQ
+acQ
+djC
+djC
+djC
 tQE
 djC
-djC
-djC
-djC
-tQE
-djC
 fnS
 fnS
 fnS
-lkI
-djC
+acT
+acQ
 odx
 nMr
 eEd
@@ -96362,8 +96604,8 @@ djC
 fnS
 fnS
 fnS
-lkI
-djC
+acT
+acQ
 szm
 amW
 dRn
@@ -96525,7 +96767,7 @@ fnS
 fnS
 fnS
 lkI
-djC
+acQ
 lgC
 lgC
 fqP
@@ -96689,8 +96931,8 @@ fnS
 lkI
 tQE
 hPk
-djC
-djC
+acQ
+acQ
 rsI
 nyi
 knz
@@ -96851,8 +97093,8 @@ djC
 joj
 djC
 djC
-djC
-djC
+acQ
+acQ
 rsI
 obp
 tPU
@@ -97014,7 +97256,7 @@ djC
 ghI
 djC
 djC
-djC
+acQ
 rsI
 obp
 tPU
@@ -100533,8 +100775,8 @@ kxr
 kxr
 kxr
 kxr
-dhy
-srt
+ado
+adl
 pwQ
 gED
 gnk
@@ -100695,8 +100937,8 @@ kxr
 kxr
 kxr
 kxr
-dhy
-anL
+ado
+adn
 glh
 tIl
 iZJ
@@ -100858,7 +101100,7 @@ kxr
 kxr
 kxr
 dhy
-srt
+adl
 nCg
 qkd
 nWp
@@ -101840,11 +102082,11 @@ jeG
 jeG
 jMF
 tpl
-jeG
+adm
 mOi
-srt
-srt
-srt
+adl
+adl
+adl
 bCj
 peF
 xpe
@@ -101856,9 +102098,9 @@ uOf
 eLN
 thK
 thK
-djC
-djC
-djC
+acQ
+acQ
+acQ
 kqa
 uaK
 bea
@@ -102003,10 +102245,10 @@ srt
 euT
 iEu
 srt
-srt
+adl
 eLh
-srt
-srt
+adl
+adl
 vMd
 eBX
 aYg
@@ -102017,10 +102259,10 @@ xvB
 pJe
 dBI
 thK
-djC
-djC
-djC
-djC
+acQ
+acQ
+acQ
+acQ
 dDU
 khP
 vwe
@@ -102166,9 +102408,9 @@ srt
 iEu
 srt
 iUA
-jeG
+adm
 bba
-jeG
+adm
 vOJ
 qeT
 weJ
@@ -102179,13 +102421,13 @@ thK
 thK
 thK
 thK
-djC
-djC
-djC
-djC
-djC
-djC
-djC
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
+acQ
 xIm
 kwB
 qZW
@@ -102330,7 +102572,7 @@ qwW
 srt
 srt
 pYM
-srt
+adl
 bIS
 mSB
 gzr
@@ -102341,13 +102583,13 @@ jHY
 lsn
 cxQ
 lyy
-djC
-djC
+acQ
+acQ
 djC
 sNO
 djC
-djC
-djC
+acQ
+acQ
 xIm
 psC
 ozI
@@ -102481,7 +102723,7 @@ iiA
 iiA
 iiA
 iiA
-srt
+adl
 srt
 euT
 srt
@@ -102501,14 +102743,14 @@ opu
 xgC
 xgC
 opu
-djC
-azn
-djC
-djC
-djC
+acQ
+adb
+acQ
 djC
 djC
 djC
+djC
+acQ
 wWW
 nnu
 uUn
@@ -102643,7 +102885,7 @@ iiA
 mcz
 jvx
 iiA
-srt
+adl
 euT
 srt
 srt
@@ -102663,15 +102905,15 @@ qQa
 qQa
 qQa
 qQa
-qEK
-lkI
+adc
+acT
 djC
 djC
 djC
 djC
 djC
-djC
-djC
+acQ
+acQ
 cOE
 cOE
 cOE
@@ -102806,7 +103048,7 @@ qEB
 cTJ
 hJm
 bRV
-srt
+adl
 srt
 srt
 pTs
@@ -102967,7 +103209,7 @@ iiA
 nih
 lRs
 koV
-srt
+adl
 srt
 srt
 qwW
@@ -102995,7 +103237,7 @@ djC
 djC
 djC
 djC
-djC
+acQ
 cOE
 nkV
 wrM
@@ -103157,7 +103399,7 @@ djC
 djC
 djC
 djC
-djC
+acQ
 cOE
 kqr
 wrM
@@ -103643,7 +103885,7 @@ djC
 ghI
 djC
 djC
-djC
+acQ
 cOE
 mBv
 lTY
@@ -103803,9 +104045,9 @@ sNO
 djC
 djC
 djC
-ghI
-djC
-djC
+add
+acQ
+acQ
 cOE
 ski
 pCH
@@ -103965,9 +104207,9 @@ djC
 djC
 djC
 djC
-djC
-azn
-djC
+acQ
+adb
+acQ
 cOE
 kkj
 lTY
@@ -104126,8 +104368,8 @@ qEK
 djC
 djC
 jbT
-qtV
-qtV
+ade
+ade
 lZt
 tGn
 cOE
@@ -104170,11 +104412,11 @@ tYc
 hUF
 hYr
 pNu
-djC
+acQ
 uuq
-djC
-djC
-rKu
+acQ
+acQ
+acP
 qQa
 qQa
 qQa
@@ -104332,9 +104574,9 @@ vsI
 qeb
 xIX
 pNu
-djC
-djC
-djC
+acQ
+acQ
+acQ
 djC
 rKu
 qQa
@@ -104494,9 +104736,9 @@ qok
 kPX
 xcD
 pNu
-sNO
-djC
-djC
+acR
+acQ
+acQ
 djC
 xvb
 qQa
@@ -104656,8 +104898,8 @@ lQQ
 cde
 rQH
 pNu
-djC
-djC
+acQ
+acQ
 djC
 jPQ
 rKu
@@ -104818,7 +105060,7 @@ hZy
 gSQ
 lVg
 mYx
-ucQ
+acS
 ucQ
 ucQ
 nnd
@@ -105113,11 +105355,11 @@ klJ
 sfb
 xty
 wOV
-djC
-djC
+acQ
+acQ
 ojQ
-djC
-aaK
+acQ
+acU
 kbN
 osB
 iKk
@@ -105275,12 +105517,12 @@ bOX
 bOX
 aZT
 wOV
-djC
-djC
-djC
-djC
-djC
-lkI
+acQ
+acQ
+acQ
+acQ
+acQ
+acT
 gFQ
 emQ
 rRJ
@@ -105437,12 +105679,12 @@ ptF
 bOX
 aDr
 wOV
-sNO
+acR
+acQ
+acQ
 djC
-djC
-djC
-aaK
-lkI
+acU
+acT
 mJw
 sap
 qZR
@@ -105599,8 +105841,8 @@ bOX
 bOX
 vNG
 wOV
-djC
-djC
+acQ
+acQ
 djC
 vFz
 djC
@@ -105761,8 +106003,8 @@ bOX
 bOX
 aDr
 wOV
-djC
-djC
+acQ
+acQ
 djC
 mTh
 djC
@@ -106241,8 +106483,8 @@ tHp
 oby
 oby
 vri
-oby
-oby
+acW
+acW
 iSw
 oby
 oby
@@ -106404,7 +106646,7 @@ ncC
 aaK
 djC
 vFz
-mTh
+acX
 cWA
 djC
 djC
@@ -109220,7 +109462,7 @@ luR
 oLL
 mJm
 jmT
-jmT
+acv
 dKL
 dvt
 szB
@@ -110185,7 +110427,7 @@ luR
 luR
 pLd
 awW
-pLd
+acJ
 ueG
 nHi
 owG
