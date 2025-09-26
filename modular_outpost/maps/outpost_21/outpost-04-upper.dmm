@@ -1498,6 +1498,19 @@
 	desc = "Sand."
 	},
 /area/hydroponics/publicgarden)
+"adr" = (
+/obj/structure/sign/warning/lethal_turrets{
+	pixel_y = -32
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/tcomfoyer)
+"ads" = (
+/turf/simulated/floor/tiled/techfloor,
+/area/tcomfoyer)
 "adC" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/bedsheet/pillow/teal,
@@ -24484,13 +24497,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/radio/intercom/department/security{
-	pixel_y = -21
-	},
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -32
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/computer)
 "lCv" = (
@@ -36343,9 +36349,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/structure/sign/warning/lethal_turrets{
-	pixel_y = -32
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -39490,19 +39493,6 @@
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor,
 /area/maintenance/engineering)
-"tar" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/obj/structure/grille,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/tcommsat/computer)
 "taM" = (
 /obj/machinery/light{
 	dir = 4
@@ -48326,11 +48316,6 @@
 /turf/simulated/floor/water/indoors/beach,
 /area/hydroponics/publicgarden)
 "xsh" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -48343,9 +48328,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/firealarm{
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/item/radio/intercom/department/security{
 	dir = 1;
-	pixel_y = -26
+	pixel_y = 21
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 33
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomfoyer)
@@ -111014,10 +111008,10 @@ luR
 qll
 cgN
 ofL
-tCm
 qSx
+ads
 rzw
-tCm
+adr
 gro
 bne
 oGT
@@ -111175,8 +111169,8 @@ cgN
 phU
 cgN
 cgN
-tar
-loz
+ofL
+xpu
 tCm
 xsh
 tCm
