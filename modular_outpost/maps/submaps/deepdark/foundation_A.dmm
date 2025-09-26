@@ -113,6 +113,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled/techmaint/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "mA" = (
@@ -200,6 +201,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 8
 	},
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "wk" = (
@@ -265,6 +267,7 @@
 /obj/machinery/atmospherics/pipe/vent{
 	dir = 4
 	},
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Cl" = (
@@ -316,6 +319,7 @@
 	dir = 4
 	},
 /obj/structure/bed,
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled/techmaint/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Pl" = (

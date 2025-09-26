@@ -54,6 +54,7 @@
 							NETWORK_TELECOM,
 							NETWORK_OUTSIDE,
 							NETWORK_BUNKER,
+							NETWORK_FOUNDATIONS
 							)
 	secondary_networks = list(
 							NETWORK_ERT,
@@ -88,6 +89,7 @@
 										/area/muriki/processor/pools/pylorus,
 										/area/muriki/processor/gland/nitrogen,
 										/area/muriki/processor/depths,
+										/area/engineering/coreproctunnel,
 										// Skylines don't need scrubbers and vents
 										/area/muriki/skyline/east,
 										/area/muriki/skyline/south,
@@ -149,6 +151,15 @@
 										/area/offworld/confinementbeam/exterior,
 										/area/ai_sat/core_external,
 										/area/ai_sat/power_control,
+										// Foundation blocks
+										/area/submap/outpost21/foundation_block,
+										/area/submap/outpost21/foundation_block/waste,
+										/area/submap/outpost21/foundation_block/eng,
+										/area/submap/outpost21/foundation_block/carg,
+										/area/submap/outpost21/foundation_block/med,
+										/area/submap/outpost21/foundation_block/sec,
+										/area/submap/outpost21/foundation_block/research,
+										/area/submap/outpost21/foundation_block/bridge,
 										// Actual unit test exceptions
 										/area/comms,
 										/area/muriki/tramstation/waste,
@@ -162,7 +173,9 @@
 										/area/medical/voxlab/airgap,
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
-										/area/maintenance/damaged_resleeverB)
+										/area/maintenance/damaged_resleeverB,
+										/area/security/brig_hole,
+										/area/muriki/crew/bunker)
 
 	unit_test_exempt_from_apc = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
@@ -219,7 +232,8 @@
 										/area/muriki/lowerevac,
 										/area/muriki/crystal,
 										/area/maintenance/damaged_resleeverA,
-										/area/maintenance/damaged_resleeverB)
+										/area/maintenance/damaged_resleeverB,
+										/area/security/brig_hole)
 
 	planet_datums_to_make = list(/datum/planet/muriki)
 

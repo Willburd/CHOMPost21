@@ -1,0 +1,1028 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"al" = (
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"aB" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"aI" = (
+/obj/random/trash,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"bz" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"bH" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"bR" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"dr" = (
+/obj/effect/auto_crayon{
+	icon_state = "e"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"eg" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"eZ" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "i"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"fR" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"fY" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"gL" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"gO" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hg" = (
+/obj/structure/trash_pile,
+/obj/effect/floor_decal/industrial/warning/corner,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"hl" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/foamedmetal,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"ho" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"hs" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"iq" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"kb" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"nf" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/obj/random/trash,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"nl" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"nY" = (
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"pv" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"pV" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "a"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"qh" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"qu" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"qE" = (
+/obj/effect/floor_decal/rust,
+/obj/random/trash,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"rI" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"sR" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"uB" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"vJ" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"wh" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"xM" = (
+/obj/random/trash,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"yj" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"yJ" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "k"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"zH" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"Ax" = (
+/obj/effect/auto_crayon{
+	icon_state = "h"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"AR" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/auto_crayon{
+	icon_state = "t"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"Bm" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bx" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"BI" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"De" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ed" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ei" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"Er" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"EM" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"ET" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"EW" = (
+/obj/random/maintenance/engineering,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Hf" = (
+/obj/effect/auto_crayon{
+	icon_state = "r"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"Hu" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/foamedmetal,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"Iq" = (
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"IP" = (
+/obj/effect/auto_crayon{
+	icon_state = "n"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"JM" = (
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Kx" = (
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Nu" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ot" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"OG" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"PF" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Qr" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"QU" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"Rk" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"Rn" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/multi_tile,
+/obj/machinery/door/airlock/multi_tile/metal/mait{
+	name = "Chemical Refinery"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"Sm" = (
+/turf/template_noop,
+/area/template_noop)
+"Ta" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"Uh" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Vp" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/random/trash,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"XZ" = (
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"Zz" = (
+/obj/effect/auto_crayon{
+	icon_state = "g"
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"ZA" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"ZB" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/trash_pile,
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+"}
+(2,1,1) = {"
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+Sm
+Sm
+Sm
+Sm
+Sm
+"}
+(3,1,1) = {"
+Sm
+Sm
+Sm
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+wh
+wh
+kb
+kb
+kb
+kb
+kb
+OG
+OG
+OG
+OG
+Sm
+Sm
+Sm
+Sm
+"}
+(4,1,1) = {"
+Sm
+OG
+OG
+OG
+OG
+OG
+qh
+qh
+qh
+qh
+qh
+qh
+qh
+qh
+qh
+qh
+hs
+hs
+OG
+OG
+OG
+OG
+Sm
+Sm
+Sm
+"}
+(5,1,1) = {"
+Sm
+OG
+OG
+OG
+OG
+kb
+qh
+ZA
+fR
+yj
+fR
+yj
+yj
+yj
+yj
+qh
+qh
+qh
+wh
+OG
+OG
+OG
+Sm
+Sm
+Sm
+"}
+(6,1,1) = {"
+Sm
+OG
+OG
+kb
+kb
+kb
+qh
+Vp
+nY
+nY
+ET
+nY
+nY
+nY
+nY
+nY
+ZB
+qh
+wh
+wh
+OG
+OG
+Sm
+Sm
+Sm
+"}
+(7,1,1) = {"
+Sm
+OG
+kb
+kb
+kb
+kb
+qh
+Ot
+nY
+Iq
+nY
+Iq
+nY
+ET
+qE
+qE
+nY
+qh
+wh
+wh
+OG
+OG
+Sm
+Sm
+Sm
+"}
+(8,1,1) = {"
+Sm
+OG
+kb
+kb
+kb
+kb
+qh
+qu
+nY
+nY
+nY
+nY
+ET
+nY
+QU
+yJ
+Ax
+qh
+wh
+OG
+OG
+OG
+Sm
+Sm
+Sm
+"}
+(9,1,1) = {"
+Sm
+OG
+OG
+kb
+kb
+kb
+qh
+sR
+xM
+nY
+ET
+nY
+ET
+Iq
+Hf
+eZ
+dr
+qh
+wh
+OG
+OG
+OG
+Sm
+Sm
+Sm
+"}
+(10,1,1) = {"
+Sm
+Sm
+OG
+OG
+kb
+kb
+qh
+aB
+ET
+ET
+ET
+nY
+nY
+nY
+pV
+IP
+Hf
+qh
+kb
+OG
+OG
+OG
+Sm
+Sm
+Sm
+"}
+(11,1,1) = {"
+Sm
+Sm
+OG
+OG
+kb
+kb
+qh
+sR
+nY
+Iq
+nY
+nY
+Iq
+nY
+AR
+Zz
+dr
+qh
+kb
+OG
+OG
+OG
+OG
+Sm
+Sm
+"}
+(12,1,1) = {"
+Sm
+Sm
+OG
+OG
+kb
+kb
+qh
+iq
+nY
+Iq
+Iq
+nY
+ET
+ET
+ET
+xM
+Ei
+qh
+kb
+kb
+OG
+OG
+OG
+OG
+Sm
+"}
+(13,1,1) = {"
+Sm
+Sm
+Sm
+OG
+OG
+kb
+qh
+sR
+nY
+nY
+nY
+nY
+nY
+nY
+nY
+ho
+ho
+ho
+ho
+qh
+qh
+wh
+OG
+OG
+Sm
+"}
+(14,1,1) = {"
+Sm
+Sm
+Sm
+OG
+OG
+kb
+BI
+gL
+Rk
+zH
+zH
+nf
+zH
+Rk
+Rk
+Rn
+JM
+rI
+Kx
+eg
+Bx
+Bx
+wh
+wh
+Sm
+"}
+(15,1,1) = {"
+Sm
+Sm
+Sm
+OG
+kb
+kb
+bR
+nY
+nl
+XZ
+nl
+nl
+nl
+nY
+nl
+fY
+nY
+gO
+Kx
+eg
+Bx
+wh
+Bx
+OG
+Sm
+"}
+(16,1,1) = {"
+Sm
+Sm
+OG
+OG
+OG
+kb
+uB
+hl
+nl
+nY
+nl
+bR
+qh
+qh
+qh
+qh
+JM
+Qr
+ho
+qh
+bH
+OG
+OG
+OG
+Sm
+"}
+(17,1,1) = {"
+Sm
+OG
+OG
+OG
+OG
+wh
+EM
+bR
+bR
+uB
+uB
+Hu
+qh
+nY
+Ta
+qh
+Ed
+bz
+kb
+kb
+kb
+OG
+OG
+Sm
+Sm
+"}
+(18,1,1) = {"
+Sm
+OG
+OG
+OG
+wh
+Bx
+qh
+qh
+qh
+pv
+qh
+qh
+qh
+qh
+qh
+qh
+JM
+Bx
+kb
+kb
+kb
+OG
+OG
+Sm
+Sm
+"}
+(19,1,1) = {"
+Sm
+OG
+kb
+kb
+kb
+wh
+aI
+nY
+Nu
+Bx
+qh
+Bx
+bz
+Er
+al
+vJ
+Bx
+hs
+kb
+kb
+kb
+kb
+OG
+OG
+Sm
+"}
+(20,1,1) = {"
+Sm
+kb
+kb
+kb
+kb
+kb
+ho
+hg
+EW
+PF
+Uh
+al
+Bx
+Bx
+Bm
+ho
+kb
+kb
+kb
+kb
+kb
+kb
+kb
+OG
+Sm
+"}
+(21,1,1) = {"
+Sm
+OG
+kb
+kb
+kb
+kb
+ho
+ho
+De
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+kb
+kb
+kb
+kb
+kb
+kb
+kb
+OG
+Sm
+"}
+(22,1,1) = {"
+Sm
+OG
+OG
+kb
+kb
+kb
+kb
+kb
+wh
+Bx
+kb
+kb
+OG
+OG
+OG
+OG
+OG
+kb
+kb
+kb
+kb
+kb
+kb
+OG
+Sm
+"}
+(23,1,1) = {"
+Sm
+OG
+OG
+OG
+kb
+kb
+kb
+kb
+kb
+wh
+wh
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+kb
+OG
+OG
+OG
+Sm
+"}
+(24,1,1) = {"
+Sm
+Sm
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+Sm
+Sm
+Sm
+Sm
+OG
+OG
+OG
+OG
+OG
+OG
+OG
+Sm
+Sm
+"}
+(25,1,1) = {"
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+Sm
+"}

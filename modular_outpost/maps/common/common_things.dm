@@ -6,6 +6,10 @@
 /obj/machinery/camera/network/bunker
 	network = list(NETWORK_BUNKER)
 
+/obj/machinery/camera/network/foundations
+	network = list(NETWORK_FOUNDATIONS)
+
+
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST

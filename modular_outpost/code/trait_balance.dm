@@ -218,13 +218,18 @@
 	cost = -3 //Base -1. ONE point? For no revive at all? That forces resleeving at best.
 	desc = "For whatever strange genetic reason, defibs cannot restart your heart. Make sure this is in your medical records!"
 
+/datum/trait/negative/nodefib
+	banned_species = list(SPECIES_VOX, SPECIES_PROMETHEAN, SPECIES_DIONA) // TEMP TILL FIXED UPSTREAM
+
 /datum/trait/negative/noresleeve
 	cost = -5 //Base -1. BRUH.
 	custom_only = FALSE //Fuck custom species locks.
+	banned_species = list(SPECIES_LLEILL, SPECIES_SHADEKIN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_SHADEKIN_CREW, SPECIES_DIONA, SPECIES_XENOCHIMERA, SPECIES_PROTEAN) // TEMP TILL FIXED UPSTREAM
 
 /datum/trait/negative/onelife
 	cost = -12 //Base -2. For hard mode? I don't think so. Have you SEEN our maintenance tunnels?
 	custom_only = FALSE //Fuck custom species locks.
+	banned_species = list(SPECIES_LLEILL, SPECIES_SHADEKIN, SPECIES_ALRAUNE, SPECIES_PROMETHEAN, SPECIES_SHADEKIN_CREW, SPECIES_DIONA, SPECIES_XENOCHIMERA, SPECIES_PROTEAN) // TEMP TILL FIXED UPSTREAM
 
 /datum/trait/negative/neural_hypersensitivity/xenochimera
 	cost = -3 //Base 0. Brings in line with the other one. Plus its funny for xenochi to always be feral
