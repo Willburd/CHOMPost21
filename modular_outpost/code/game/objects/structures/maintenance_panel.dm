@@ -43,7 +43,7 @@
 		update_icon()
 
 /obj/structure/window/maintenance_panel/shatter(var/display_message = 1)
-	playsound(src, 'sound/effects/metalscrape3.ogg', 70, 1)
+	playsound(src, pick(list('sound/effects/metalscrape1.ogg','sound/effects/metalscrape2.ogg','sound/effects/metalscrape3.ogg')), 70, 1)
 	if(display_message)
 		visible_message("\the [src] thunks free of the wall!")
 	new glasstype(loc)
@@ -53,7 +53,7 @@
 
 // Maintenance panel sheets
 /obj/item/stack/tile/maintenance_panel
-	name = MAT_STEEL
+	name = "maintenance panel"
 	desc = "A maintenance panel"
 	icon_state = "techtile_grid"
 	force = 6.0
