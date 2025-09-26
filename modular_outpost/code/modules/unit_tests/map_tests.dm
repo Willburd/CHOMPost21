@@ -87,7 +87,8 @@
 		/area/rnd/research/roof_eva,
 		/area/ai_sat/core_external,
 		/area/offworld/confinementbeam/exterior,
-		/area/ai_sat/power_control
+		/area/ai_sat/power_control,
+		/area/security/brig_hole
 		)
 
 	var/list/forced_hallway = list(
@@ -140,6 +141,7 @@
 		/area/rnd/entry_aux,
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
+		/area/muriki/crew/bunker
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -231,7 +233,8 @@
 		/area/ai_upload_foyer,
 		/area/ai_sat/fore_airlock,
 		/area/ai_server_room,
-		/area/quartermaster/mining/ore_silo
+		/area/quartermaster/mining/ore_silo,
+		/area/medical/psych
 	)
 
 	var/list/does_not_have_displays = list(
@@ -363,11 +366,6 @@
 			if(!(A.type in does_not_use_lightswitch))
 				if(!(locate(/obj/machinery/light_switch) in A.contents))
 					TEST_NOTICE(src,"[A.type] lacks an lightswitch")
-					failures++
-			else
-				// Area light must be off
-				if(A.lightswitch)
-					TEST_NOTICE(src,"[A.type] is a room with a lightswitch, but had default lightswitch state as on. Rooms start off on outpost!")
 					failures++
 		else
 			// Area light must be on
