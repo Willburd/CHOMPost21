@@ -9,6 +9,7 @@
 	maximal_heat = 1800 // steel
 	force_threshold = 7
 	shardtype = null
+	opacity = 1 // Difficult to see past
 
 /obj/structure/window/maintenance_panel/apply_silicate(var/amount)
 	return // can't fix it like that
