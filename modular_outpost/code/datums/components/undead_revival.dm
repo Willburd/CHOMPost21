@@ -1,6 +1,6 @@
 /// Used for undead mobs that need to revive themselves randomly after death
 /datum/component/undead_revival
-	var/mob/living/host
+	var/mob/living/simple_mob/host
 	var/revive_chance
 	var/health_percent_revive_at
 	var/revive_text
