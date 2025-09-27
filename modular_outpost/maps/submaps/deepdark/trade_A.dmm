@@ -28,7 +28,7 @@
 /turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
 "R" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "W" = (
 /turf/template_noop,

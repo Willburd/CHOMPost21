@@ -41,7 +41,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "t" = (
 /obj/structure/table/woodentable,
@@ -73,7 +73,7 @@
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "R" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "S" = (
 /obj/structure/table/standard{

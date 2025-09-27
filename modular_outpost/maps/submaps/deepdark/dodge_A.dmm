@@ -39,7 +39,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/mine/explored/muriki/cave/deepdark)
 "z" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "A" = (
 /turf/simulated/wall,
@@ -63,7 +63,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "K" = (
 /turf/simulated/floor/plating/turfpack/muriki,

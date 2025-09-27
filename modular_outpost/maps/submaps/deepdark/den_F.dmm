@@ -7,7 +7,7 @@
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/deepdark)
 "e" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "f" = (
 /turf/simulated/wall,
@@ -24,7 +24,7 @@
 /turf/template_noop,
 /area/template_noop)
 "q" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "v" = (
 /obj/machinery/door/airlock/maintenance/int,

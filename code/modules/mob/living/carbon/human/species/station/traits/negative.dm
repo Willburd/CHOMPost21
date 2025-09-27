@@ -208,6 +208,7 @@
 	var_changes_pref = list("extra_languages" = -3)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+	excludes = list(/datum/trait/negative/no_galcom) // Outpost 21 edit- Don't stack this with removing common
 
 /datum/trait/negative/dark_blind
 	name = "Nyctalopia"

@@ -151,7 +151,7 @@
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/deepdark)
 "Z" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 
 (1,1,1) = {"
