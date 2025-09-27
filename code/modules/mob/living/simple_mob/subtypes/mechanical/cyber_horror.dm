@@ -34,6 +34,12 @@
 	var/emp_damage = 0
 	var/nanobot_chance = 40
 
+// Outpost 21 edit begin - Undead reviving mobs
+/mob/living/simple_mob/mechanical/cyber_horror/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/undead_revival, rev_time = 1 MINUTE, rev_chance = 30, rev_hppercent = 50)
+// Outpost 21 edit end
+
 /datum/say_list/cyber_horror
 	speak = list("H@!#$$P M@!$#",
 					"GHAA!@@#",
