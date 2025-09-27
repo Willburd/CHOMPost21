@@ -13768,6 +13768,12 @@
 "ayK" = (
 /turf/simulated/wall,
 /area/medical/voxlab/airgap)
+"ayL" = (
+/obj/effect/mine/claymore/donksoft{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "ayM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4;
@@ -15354,6 +15360,11 @@
 "aBA" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/atmos/monitoring)
+"aBB" = (
+/obj/effect/mine/incendiary,
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "aBC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -38935,7 +38946,7 @@
 	pixel_y = 32
 	},
 /obj/structure/closet/crate{
-	name = "Legcuffs"
+	name = "Muzzles"
 	},
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/mask/muzzle,
@@ -55051,12 +55062,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
-"bXd" = (
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
 "bXe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -58678,12 +58683,6 @@
 /obj/effect/landmark/electrify_door/fifty,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/med)
-"cfT" = (
-/obj/effect/mine/claymore{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/med)
 "cfU" = (
 /obj/structure/railing{
 	dir = 1
@@ -59158,7 +59157,8 @@
 	},
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 1;
-	name = "Bunker"
+	name = "Bunker";
+	id_tag = "bunkerextglass"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -59970,6 +59970,10 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountainbasenorth)
+"cjk" = (
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide/broken,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "cjl" = (
 /obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
@@ -68403,8 +68407,9 @@
 /obj/machinery/button/remote/blast_door{
 	id = "bunkerseal";
 	name = "Bunker Lockdown";
-	pixel_x = -25;
-	pixel_y = 29
+	pixel_x = -26;
+	pixel_y = 23;
+	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -68556,6 +68561,14 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
+/obj/machinery/button/remote/airlock{
+	id = "bunkerextglass";
+	name = "Outer Door Bolt Control";
+	pixel_x = -27;
+	specialfunctions = 4;
+	pixel_y = -28;
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
 "lOX" = (
@@ -101093,7 +101106,7 @@ aHq
 xWz
 wrE
 drJ
-ptE
+aXN
 bVY
 biq
 bOs
@@ -115016,7 +115029,7 @@ lDp
 bIu
 aPF
 aPF
-bJH
+cjk
 xaP
 aPF
 xaP
@@ -115342,9 +115355,9 @@ aPF
 xaP
 xaP
 xaP
-bJQ
+aBB
 xaP
-cfT
+xaP
 aPF
 bMU
 bMU
@@ -115505,7 +115518,7 @@ aPF
 cgs
 xaP
 aPF
-bXd
+xaP
 xaP
 aPF
 bMU
@@ -115668,7 +115681,7 @@ aPF
 aPF
 aPF
 xaP
-xaP
+ayL
 aPF
 bMU
 bMU
