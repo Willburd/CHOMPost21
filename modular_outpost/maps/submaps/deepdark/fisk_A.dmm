@@ -58,10 +58,10 @@
 /turf/simulated/floor/wood/alt,
 /area/mine/explored/muriki/cave/deepdark)
 "T" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "V" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "X" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,

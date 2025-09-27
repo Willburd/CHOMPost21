@@ -5,25 +5,25 @@
 "j" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/material/minihoe,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "m" = (
 /obj/item/material/minihoe,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "r" = (
 /obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "t" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
@@ -32,24 +32,24 @@
 /area/mine/explored/muriki/cave/deepdark)
 "x" = (
 /obj/item/seeds/random,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "H" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "M" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "U" = (
 /obj/random/cutout,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)

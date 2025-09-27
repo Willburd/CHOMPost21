@@ -3,7 +3,7 @@
 /turf/simulated/wall,
 /area/mine/explored/muriki/cave/deepdark)
 "e" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "i" = (
 /obj/machinery/door/airlock/maintenance/int,
@@ -16,7 +16,7 @@
 /turf/template_noop,
 /area/template_noop)
 "n" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
