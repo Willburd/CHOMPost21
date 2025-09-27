@@ -29,10 +29,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
+/obj/structure/panic_button{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
