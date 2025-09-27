@@ -179,8 +179,8 @@
 	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER // Outpost 21 edit - Removed science
 	selection_color = "#013D3B"
 	economic_modifier = 7
-	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_GENETICS) //, ACCESS_RESEARCH) Outpost 21 edit - Removed science access
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_GENETICS) //, ACCESS_RESEARCH) Outpost 21 edit - Removed science access
+	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_GENETICS, ACCESS_MEDICAL_EQUIP) //, ACCESS_RESEARCH) Outpost 21 edit - Removed science access. gave equip access
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_MEDICAL_EQUIP) //, ACCESS_RESEARCH) Outpost 21 edit - Removed science access. gave equip access
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/geneticist
 	job_description = "A " + JOB_GENETICIST + " operates genetic manipulation equipment to repair any genetic defects encountered in crew, from cloning or radiation as examples. \
@@ -203,8 +203,8 @@
 	economic_modifier = 5
 	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER
 	selection_color = "#013D3B"
-	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_PSYCHIATRIST)
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_PSYCHIATRIST)
+	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_PSYCHIATRIST, ACCESS_MEDICAL_EQUIP) // Outpost 21 edit - gave equip access
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_PSYCHIATRIST, ACCESS_MEDICAL_EQUIP) // Outpost 21 edit - gave equip access
 	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
 	job_description = "A " + JOB_PSYCHIATRIST + " provides mental health services to crew members in need. They may also be called upon to determine whatever \
 					ails the mentally unwell, frequently under Security supervision. They understand the effects of various psychoactive drugs."
