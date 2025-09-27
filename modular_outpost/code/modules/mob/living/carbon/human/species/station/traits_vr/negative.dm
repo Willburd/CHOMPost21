@@ -9,6 +9,7 @@
 	name = "Uncommon Linguistics"
 	desc = "Removes galactic common language from your character."
 	cost = -5
+	excludes = list(/datum/trait/negative/monolingual)
 
 /datum/trait/negative/no_galcom/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
 	. = ..()

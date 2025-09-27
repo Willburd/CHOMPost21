@@ -29,10 +29,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
+/obj/structure/panic_button{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
@@ -8021,10 +8019,13 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "xY" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/power_distribution)
 "ya" = (
 /obj/machinery/door/firedoor/glass,
@@ -10044,13 +10045,16 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "Em" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/power_distribution)
 "Eo" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{

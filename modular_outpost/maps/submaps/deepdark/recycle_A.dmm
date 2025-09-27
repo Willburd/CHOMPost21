@@ -40,7 +40,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "A" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "B" = (
 /obj/effect/landmark/loot_spawn/low,
@@ -75,7 +75,7 @@
 /turf/simulated/wall,
 /area/mine/explored/muriki/cave/deepdark)
 "U" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "X" = (
 /turf/template_noop,

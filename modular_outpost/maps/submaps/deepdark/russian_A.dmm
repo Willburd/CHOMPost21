@@ -16,7 +16,7 @@
 /turf/simulated/floor/wood/alt,
 /area/mine/explored/muriki/cave/deepdark)
 "n" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "r" = (
 /obj/structure/simple_door/wood,

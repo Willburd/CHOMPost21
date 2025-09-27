@@ -151,7 +151,7 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "wh" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "xM" = (
 /obj/random/trash,

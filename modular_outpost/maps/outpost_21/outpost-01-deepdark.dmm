@@ -915,12 +915,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "abS" = (
-/obj/machinery/light/small/emergency/flicker{
-	dir = 8
-	},
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
 	use_power = 1
+	},
+/obj/machinery/light/small/emergency{
+	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/crew/bunker_deep/eng)
@@ -2443,6 +2443,40 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/research)
+"afN" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/muriki/crew/bunker_deep/eng)
+"afO" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/muriki/crew/bunker_deep/eng)
+"afP" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/muriki/crew/bunker_deep/eng)
+"afQ" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/light/small/emergency,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/muriki/crew/bunker_deep/eng)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -58967,14 +59001,14 @@ gNY
 gNY
 gNY
 gNY
-tWu
+qyX
 tWu
 tWu
 tWu
 gNY
 gNY
 gNY
-tWu
+qyX
 tWu
 tWu
 tWu
@@ -59454,7 +59488,7 @@ gNY
 gNY
 adt
 ads
-ads
+afP
 ads
 ads
 adu
@@ -59626,7 +59660,7 @@ aap
 aap
 ads
 gNY
-tWu
+qyX
 tWu
 gNY
 tWu
@@ -59786,7 +59820,7 @@ aaS
 aaK
 aaD
 aap
-ads
+afN
 gNY
 gNY
 gNY
@@ -59932,7 +59966,7 @@ bHg
 tWu
 tWu
 tWu
-tWu
+qyX
 gNY
 adt
 ads
@@ -60096,7 +60130,7 @@ tWu
 tWu
 gNY
 gNY
-ads
+afQ
 acW
 acW
 acW
@@ -60903,7 +60937,7 @@ bHg
 bHg
 tWu
 tWu
-tWu
+gNY
 gNY
 gNY
 afi
@@ -61064,7 +61098,7 @@ fMG
 fMG
 fMG
 gNY
-tWu
+qyX
 gNY
 gNY
 gNY
@@ -61392,7 +61426,7 @@ tWu
 tWu
 gNY
 gNY
-ads
+afQ
 acX
 abL
 adh
@@ -61407,10 +61441,10 @@ aaI
 abX
 aaq
 aan
-ads
+afN
 gNY
 gNY
-tWu
+qyX
 tWu
 tWu
 bHg
@@ -62688,7 +62722,7 @@ tWu
 tWu
 gNY
 gNY
-ads
+afQ
 aan
 abQ
 abD
@@ -62706,7 +62740,7 @@ aan
 adt
 gNY
 gNY
-tWu
+qyX
 tWu
 tWu
 bHg
@@ -62847,7 +62881,7 @@ bHg
 bHg
 tWu
 tWu
-gNY
+qyX
 gNY
 gNY
 adt
@@ -63027,7 +63061,7 @@ adF
 adA
 adv
 afJ
-ads
+afN
 gNY
 gNY
 gNY
@@ -63353,7 +63387,7 @@ adx
 afJ
 adu
 gNY
-tWu
+gNY
 gNY
 gNY
 gNY
@@ -63516,14 +63550,14 @@ afJ
 ads
 gNY
 gNY
-tWu
+qyX
 gNY
 gNY
 fMG
 fMG
 fMG
 fMG
-fMG
+adZ
 fMG
 fMG
 fMG
@@ -63822,7 +63856,7 @@ tWu
 tWu
 tWu
 gNY
-ads
+afQ
 aan
 aan
 aan
@@ -63990,14 +64024,14 @@ ads
 afi
 adu
 ads
-ads
+afO
 ads
 adt
 ads
 ads
 adu
 afi
-ads
+afO
 ads
 adt
 gNY
@@ -64307,7 +64341,7 @@ tWu
 tWu
 tWu
 tWu
-tWu
+qyX
 gNY
 gNY
 gNY
@@ -64482,7 +64516,7 @@ tWu
 tWu
 tWu
 tWu
-tWu
+qyX
 gNY
 gNY
 gNY

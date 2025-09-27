@@ -33,7 +33,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "m" = (
 /obj/structure/trash_pile,
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
@@ -59,13 +59,13 @@
 /area/mine/explored/muriki/cave/deepdark)
 "w" = (
 /obj/structure/trash_pile,
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "F" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "L" = (
 /obj/structure/table/woodentable,

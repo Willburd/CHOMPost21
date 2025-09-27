@@ -39,7 +39,7 @@
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/deepdark)
 "n" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "o" = (
 /turf/template_noop,
@@ -80,7 +80,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "C" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1;
 	methane = 140;
 	oxygen = 0;
@@ -100,7 +100,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "O" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "T" = (
 /turf/simulated/floor/gas_crack/methane,

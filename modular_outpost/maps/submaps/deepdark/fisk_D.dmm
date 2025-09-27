@@ -10,7 +10,7 @@
 /turf/simulated/floor/wood,
 /area/mine/explored/muriki/cave/deepdark)
 "r" = (
-/turf/simulated/mineral/floor/turfpack/muriki,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "x" = (
 /turf/template_noop,

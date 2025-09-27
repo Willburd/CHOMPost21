@@ -60,6 +60,12 @@
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to devour"
 
+// Outpost 21 edit begin - Undead reviving mobs
+/mob/living/simple_mob/vore/cryptdrake/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/undead_revival, rev_time = 1 MINUTE, rev_chance = 60, rev_hppercent = 90)
+// Outpost 21 edit end
+
 /mob/living/simple_mob/vore/cryptdrake/Login()
 	. = ..()
 	if(!riding_datum)
