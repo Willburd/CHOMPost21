@@ -6363,6 +6363,9 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "akq" = (
@@ -9714,6 +9717,27 @@
 	},
 /turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/engi)
+"arK" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay3)
+"arL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/stairwell)
 "arO" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/lino,
@@ -35872,14 +35896,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/structure/disposalpipe/segment,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -30;
@@ -35890,6 +35906,12 @@
 	dir = 4;
 	pixel_x = -30;
 	pixel_y = -6
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crewstairwell)
@@ -48248,6 +48270,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -61903,9 +61928,6 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "qGf" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 9
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -70879,6 +70901,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "txN" = (
@@ -76512,6 +76537,7 @@
 	},
 /obj/item/universal_translator/ear,
 /obj/item/clothing/accessory/holster/hip/black,
+/obj/item/storage/belt/security,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "vhk" = (
@@ -130263,7 +130289,7 @@ mFG
 kqF
 lNN
 qIR
-lzN
+arK
 oWT
 ldl
 xxJ
@@ -135600,7 +135626,7 @@ say
 say
 say
 rXB
-hUx
+arL
 iGH
 jZC
 llt

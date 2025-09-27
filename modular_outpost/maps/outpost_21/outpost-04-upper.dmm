@@ -810,6 +810,9 @@
 	pixel_x = 30;
 	pixel_y = -4
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "abQ" = (
@@ -2634,6 +2637,9 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
@@ -5099,6 +5105,9 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/chief)
@@ -8686,6 +8695,9 @@
 	pixel_x = -30;
 	pixel_y = -7
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "dCm" = (
@@ -11231,7 +11243,6 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "eMu" = (
-/obj/effect/floor_decal/rust,
 /obj/structure/table/standard,
 /obj/item/hand_tele,
 /obj/item/radio/intercom{
@@ -11243,6 +11254,10 @@
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled,
 /area/teleporter/engineering)
 "eMC" = (
@@ -13409,6 +13424,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
@@ -16965,6 +16983,9 @@
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter/engineering)
 "hPT" = (
@@ -17611,6 +17632,7 @@
 /obj/structure/sign/warning/internals_required{
 	pixel_y = -32
 	},
+/obj/effect/floor_decal/corner/orange/full,
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/chief)
 "ife" = (
@@ -20721,6 +20743,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/chief)
 "jHn" = (
@@ -22494,6 +22519,9 @@
 	pixel_x = -28;
 	pixel_y = 6
 	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "kyk" = (
@@ -23611,6 +23639,7 @@
 	name = "Research Call";
 	pixel_x = -30
 	},
+/obj/effect/floor_decal/corner/purple/full,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "lci" = (
@@ -24024,6 +24053,9 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
@@ -26506,6 +26538,9 @@
 	},
 /obj/machinery/ai_status_display{
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
@@ -29684,6 +29719,9 @@
 	name = "Research Call";
 	pixel_x = -30
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "ojd" = (
@@ -31689,6 +31727,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/engineering)
@@ -33984,6 +34025,9 @@
 	pixel_x = 32;
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "qqz" = (
@@ -35402,6 +35446,9 @@
 	c_tag = "SCI - Upper Hall N";
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "qZR" = (
@@ -35576,6 +35623,9 @@
 "rem" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/security/range)
@@ -37066,9 +37116,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/hangar)
 "rRx" = (
-/obj/effect/floor_decal/corner/brown{
-	dir = 5
-	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/expl)
 "rRy" = (
@@ -38353,6 +38400,9 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "sxQ" = (
@@ -39536,6 +39586,9 @@
 /obj/structure/table/rack,
 /obj/item/melee/umbrella/random,
 /obj/item/melee/umbrella/random,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/heads/chief)
 "taN" = (
@@ -41633,6 +41686,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora2)
 "uax" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/teleporter/engineering)
@@ -41848,6 +41904,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
@@ -45334,13 +45393,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled,
 /area/shuttle/medical)
-"vMZ" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/hallway/upper)
 "vNG" = (
 /obj/structure/flora/ausbushes/sparsegrass,
 /obj/effect/floor_decal/spline/plain,
@@ -46267,6 +46319,9 @@
 	},
 /obj/machinery/power/thermoregulator/cryogaia{
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
@@ -48609,6 +48664,9 @@
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "xxp" = (
@@ -48783,6 +48841,9 @@
 /area/djstation)
 "xDg" = (
 /obj/structure/closet/crate,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter/engineering)
 "xDi" = (
@@ -90081,7 +90142,7 @@ vVu
 mQg
 qOi
 cbd
-cMu
+gxW
 nrI
 cMu
 cMu
@@ -100426,10 +100487,10 @@ vnB
 qos
 uPQ
 qqx
-eli
-eli
+uvN
+uvN
 gNh
-vMZ
+rIf
 abP
 rAT
 lJr
