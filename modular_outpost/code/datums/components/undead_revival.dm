@@ -35,7 +35,9 @@
 		return
 	// Time for fun!
 	host.visible_message(span_danger("\The [host] [revive_text]"))
-	host.make_jittery(120) // Looks better if they "animate" a bit
+	host.make_jittery(110) // Looks better if they "animate" a bit
+	playsound(host, 'sound/effects/splat.ogg', 50, 1)
+	playsound(host, 'sound/voice/hiss5.ogg', 50, 1)
 	addtimer(CALLBACK(src, PROC_REF(finalize_revive)), 1.2 SECONDS, TIMER_DELETE_ME)
 
 /datum/component/undead_revival/proc/finalize_revive()
