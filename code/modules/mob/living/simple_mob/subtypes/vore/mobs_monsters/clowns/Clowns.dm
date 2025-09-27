@@ -31,7 +31,6 @@
 	minbodytemp = 0
 	maxbodytemp = 700
 
-
 /datum/ai_holder/simple_mob/melee/clowns
 	can_breakthrough = FALSE
 	violent_breakthrough = FALSE

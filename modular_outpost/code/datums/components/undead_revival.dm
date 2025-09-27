@@ -47,3 +47,4 @@
 	host.health *= (health_percent_revive_at / 100)
 	host.health += rand(0,host.health * 0.1) // Get some randomized health
 	host.health = CLAMP(host.health, 0, initial(host.health))
+	host.loot_list = list() // Clear the loot list, we already dropped our loot!
