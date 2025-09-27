@@ -31,12 +31,6 @@
 	minbodytemp = 0
 	maxbodytemp = 700
 
-// Outpost 21 edit begin - Drop horn only once
-/mob/living/simple_mob/clowns/death()
-	. = ..()
-	loot_list = list()
-// Outpost 21 edit end
-
 /datum/ai_holder/simple_mob/melee/clowns
 	can_breakthrough = FALSE
 	violent_breakthrough = FALSE
