@@ -5048,7 +5048,7 @@
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
-/obj/structure/closet/firecloset/full,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahw" = (
@@ -9738,10 +9738,67 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/stairwell)
+"arM" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramlineeast)
+"arN" = (
+/obj/structure/fence/post{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramlineeast)
 "arO" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"arP" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 10
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"arQ" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramborder)
+"arR" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramborder)
+"arS" = (
+/obj/machinery/trailblazer/yellow,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramborder)
 "arT" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -9752,6 +9809,29 @@
 	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
+"arU" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramborder)
+"arV" = (
+/obj/machinery/trailblazer/yellow,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramborder)
 "asp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -38185,16 +38265,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "joj" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 10
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = -32;
@@ -59360,15 +59432,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/valley)
-"pST" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 6
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 5
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
 "pSW" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -110228,7 +110291,7 @@ ivE
 gTB
 rDC
 ahI
-pST
+qoM
 ahV
 ahV
 iCx
@@ -110390,9 +110453,9 @@ ivE
 xMb
 rDC
 ahI
-qoM
-ahV
-ahV
+ahN
+vHD
+arP
 rkA
 pKV
 pKV
@@ -110552,8 +110615,8 @@ ivE
 lWD
 rDC
 ahI
-ahN
-vHD
+ahI
+ahI
 joj
 ahm
 aje
@@ -112654,8 +112717,8 @@ ara
 ara
 khd
 khd
-kOi
-kOi
+khd
+khd
 cHU
 cHU
 nYp
@@ -112813,15 +112876,15 @@ kKt
 ara
 ara
 khd
-ajQ
 khd
-kOi
-kOi
 khd
-kHn
+khd
+khd
+khd
+cHU
 kHn
 apd
-cHU
+kHn
 kHn
 aiZ
 iDi
@@ -112975,15 +113038,15 @@ khd
 khd
 khd
 khd
-khd
-kOi
-kOi
+ajG
 khd
 khd
-kHn
-kHn
-kHn
+khd
+khd
 cHU
+kHn
+kHn
+kHn
 kHn
 aiY
 iDi
@@ -113137,17 +113200,17 @@ khd
 khd
 khd
 khd
-kOi
-kOi
 khd
 khd
+rzX
 khd
-kHn
-kHn
-kHn
+khd
 cHU
-kHn
-aiY
+arS
+arQ
+arQ
+arQ
+arM
 iDi
 iDi
 sHp
@@ -113300,16 +113363,16 @@ kOi
 kOi
 kOi
 kOi
-khd
-khd
-khd
-rzX
-kHn
-kHn
-kHn
+kOi
+kOi
+kOi
+kOi
 cHU
-kHn
-aiY
+arU
+qXH
+qXH
+qXH
+arM
 iDi
 iDi
 sHp
@@ -113466,12 +113529,12 @@ khd
 khd
 khd
 khd
-kHn
-kHn
-kHn
 cHU
-kHn
-aiY
+arU
+qXH
+qXH
+qXH
+arM
 iDi
 iDi
 sHp
@@ -113628,12 +113691,12 @@ khd
 khd
 khd
 khd
-kHn
-ajX
-kHn
 cHU
-kHn
-aiY
+arU
+qXH
+qXH
+qXH
+arM
 iDi
 iDi
 sHp
@@ -113790,12 +113853,12 @@ khd
 khd
 khd
 khd
-kHn
-kHn
-kHn
 cHU
-kHn
-aiZ
+arV
+arR
+arR
+arR
+arN
 iDi
 iDi
 sHp
@@ -113952,10 +114015,10 @@ khd
 khd
 khd
 khd
-kHn
-kHn
-kHn
 cHU
+kHn
+kHn
+kHn
 kHn
 aiY
 iDi
@@ -114114,10 +114177,10 @@ khd
 khd
 khd
 khd
-kHn
+cHU
 kHn
 vHB
-cHU
+kHn
 kHn
 aiY
 iDi
@@ -114276,10 +114339,10 @@ khd
 khd
 khd
 khd
-kHn
-kHn
-kHn
 cHU
+kHn
+kHn
+kHn
 kHn
 aiY
 iDi
@@ -114438,10 +114501,10 @@ khd
 ajG
 khd
 khd
+cHU
 kHn
 kHn
-cHU
-cHU
+kHn
 kHn
 aiY
 iDi
@@ -114600,9 +114663,9 @@ khd
 khd
 khd
 khd
-kHn
-kHn
 cHU
+kHn
+kHn
 kHn
 kHn
 aiY
@@ -114762,9 +114825,9 @@ khd
 khd
 khd
 khd
-kHn
-kHn
 cHU
+cHU
+kHn
 kHn
 kHn
 aiZ
@@ -114925,8 +114988,8 @@ khd
 khd
 khd
 kHn
-kHn
 cHU
+kHn
 aEl
 kHn
 aiY
@@ -115087,8 +115150,8 @@ khd
 khd
 khd
 kHn
-kHn
 cHU
+kHn
 kHn
 kHn
 aiY
@@ -115249,8 +115312,8 @@ khd
 khd
 khd
 kHn
-kHn
 cHU
+kHn
 kHn
 kHn
 aiY
@@ -115411,8 +115474,8 @@ khd
 khd
 khd
 kHn
-kHn
 cHU
+kHn
 kHn
 kHn
 aiY
@@ -115573,8 +115636,8 @@ khd
 khd
 khd
 kHn
-kHn
 cHU
+kHn
 kHn
 kHn
 aiY
@@ -115735,8 +115798,8 @@ khd
 khd
 khd
 wLM
-kHn
 cHU
+kHn
 kHn
 kHn
 aiZ
@@ -115897,8 +115960,8 @@ khd
 khd
 khd
 kHn
-kHn
 cHU
+kHn
 kHn
 kHn
 aiY
@@ -116059,8 +116122,8 @@ khd
 khd
 khd
 jMF
-kHn
 cHU
+kHn
 kHn
 kHn
 aiZ
@@ -116221,7 +116284,7 @@ khd
 khd
 khd
 kHn
-kHn
+cHU
 cHU
 kHn
 kHn
