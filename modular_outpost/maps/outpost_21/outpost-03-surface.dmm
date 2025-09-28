@@ -9832,6 +9832,76 @@
 	outdoors = 1
 	},
 /area/muriki/grounds/tramborder)
+"arW" = (
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramlinewest)
+"arX" = (
+/obj/structure/fence/post{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramlinewest)
+"arY" = (
+/turf/simulated/open/muriki,
+/area/muriki/skyline/cent)
+"arZ" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/engi)
+"asa" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/engi)
+"asb" = (
+/obj/machinery/trailblazer/yellow,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/engi)
+"asc" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/engi)
+"asd" = (
+/obj/machinery/trailblazer/yellow,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/engi)
 "asp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -11961,7 +12031,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/grounds/engi)
 "bal" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -12287,7 +12357,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/tramborder/garage)
+/area/muriki/grounds/tramborder)
 "bfW" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/red/border{
@@ -12797,7 +12867,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/sec/garage_entrance)
+/area/muriki/grounds/sec)
 "bnG" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -20373,14 +20443,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/lockers)
-"dIL" = (
-/obj/structure/fence/post{
-	dir = 4
-	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/tramborder/garage)
 "dIU" = (
 /obj/effect/landmark{
 	name = "JoinLateElevator"
@@ -20484,7 +20546,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/sec/garage_entrance)
+/area/muriki/grounds/sec)
 "dKu" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -37919,14 +37981,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/eva)
-"jiK" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/tramborder/garage)
 "jiT" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -42270,7 +42324,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/tramborder/garage)
+/area/muriki/grounds/tramborder)
 "kvb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -49983,7 +50037,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/sec/garage_entrance)
+/area/muriki/grounds/sec)
 "mOD" = (
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/terraform)
@@ -55414,7 +55468,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/sec/garage_entrance)
+/area/muriki/grounds/sec)
 "oBL" = (
 /obj/structure/stairs/spawner/north,
 /obj/structure/railing{
@@ -59394,7 +59448,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/tramborder/garage)
+/area/muriki/grounds/tramborder)
 "pRL" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -63211,9 +63265,6 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sciupper)
-"qXH" = (
-/turf/simulated/open/muriki,
-/area/muriki/grounds/tramborder/garage)
 "qXP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -70431,7 +70482,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/tramborder/garage)
+/area/muriki/grounds/tramborder)
 "tph" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -80407,7 +80458,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
-/area/muriki/grounds/tramborder/garage)
+/area/muriki/grounds/tramborder)
 "wkJ" = (
 /obj/structure/toilet{
 	dir = 8
@@ -83420,7 +83471,7 @@
 /area/hallway/primary/central_one)
 "xgw" = (
 /turf/simulated/open/muriki,
-/area/muriki/grounds/sec/garage_entrance)
+/area/muriki/skyline/south)
 "xgD" = (
 /turf/simulated/floor/outdoors/sidewalk/turfpack/muriki{
 	icon_state = "slab"
@@ -104135,7 +104186,7 @@ fxo
 fxo
 utS
 utS
-wUu
+utS
 wUu
 kHn
 pZl
@@ -104295,9 +104346,9 @@ fxo
 fxo
 fxo
 utS
-wUu
-wUu
-wUu
+utS
+utS
+utS
 wUu
 kHn
 pZl
@@ -104457,9 +104508,9 @@ utS
 utS
 utS
 utS
-wUu
-wUu
-wUu
+utS
+utS
+utS
 kHn
 kHn
 pZl
@@ -104619,9 +104670,9 @@ utS
 utS
 utS
 utS
-wUu
-wUu
-wUu
+utS
+utS
+utS
 kHn
 kHn
 rZw
@@ -104781,12 +104832,12 @@ gyF
 utS
 utS
 utS
-wUu
-wUu
-kHn
-kHn
-kHn
-aja
+utS
+asb
+arZ
+arQ
+arQ
+arW
 cYb
 cYb
 lQX
@@ -104943,12 +104994,12 @@ utS
 utS
 utS
 utS
-kHn
-kHn
-kHn
-kHn
-kHn
-pZl
+khd
+asc
+arY
+arY
+arY
+arW
 cYb
 cYb
 lQX
@@ -105105,12 +105156,12 @@ khd
 khd
 khd
 khd
-kHn
-kHn
-kHn
-kHn
-kHn
-pZl
+khd
+asc
+arY
+arY
+arY
+arW
 cYb
 vWB
 lQX
@@ -105267,12 +105318,12 @@ khd
 khd
 khd
 khd
-kHn
-kHn
-kHn
-kHn
-kHn
-pZl
+khd
+asc
+arY
+arY
+arY
+arW
 vWB
 vWB
 lQX
@@ -105429,12 +105480,12 @@ khd
 khd
 khd
 khd
-kHn
-kHn
-kHn
-kHn
-kHn
-aqO
+khd
+asd
+asa
+arR
+arR
+arX
 vWB
 vWB
 lQX
@@ -105591,11 +105642,11 @@ arI
 arI
 arI
 arI
-aqr
-aqr
-aqr
+arI
+arI
+arI
 aqq
-aqW
+aqq
 aqP
 aqS
 aqS
@@ -105753,9 +105804,9 @@ arI
 ara
 ara
 ara
-aqq
-aqq
-aqr
+ara
+ara
+arI
 aqr
 aqr
 sUh
@@ -105915,11 +105966,11 @@ ara
 ara
 ara
 ara
-aqq
-aqq
+ara
+ara
 bad
 aqq
-aqq
+aqW
 aqP
 aqS
 aqS
@@ -112739,9 +112790,9 @@ ajf
 ajh
 cHU
 nYp
-kHn
-kHn
-kHn
+cHU
+cHU
+cHU
 kHn
 aiE
 aiH
@@ -112900,10 +112951,10 @@ iDi
 iDi
 aiZ
 hZu
+kHn
+kHn
+kHn
 cHU
-kHn
-qRr
-kHn
 kHn
 aiE
 aiH
@@ -113062,10 +113113,10 @@ iDi
 iDi
 aiY
 kHn
-cHU
+kHn
 kHn
 oeM
-kHn
+cHU
 kHn
 aiE
 aiH
@@ -113224,10 +113275,10 @@ iDi
 iDi
 aiY
 kHn
+kHn
+kHn
+kHn
 cHU
-qRr
-kHn
-kHn
 kHn
 aiE
 aiH
@@ -113369,9 +113420,9 @@ kOi
 kOi
 cHU
 arU
-qXH
-qXH
-qXH
+arY
+arY
+arY
 arM
 iDi
 iDi
@@ -113386,10 +113437,10 @@ iDi
 iDi
 aiY
 kHn
+kHn
+kHn
+kHn
 cHU
-kHn
-kHn
-kHn
 kHn
 aiE
 aiH
@@ -113531,9 +113582,9 @@ khd
 khd
 cHU
 arU
-qXH
-qXH
-qXH
+arY
+arY
+arY
 arM
 iDi
 iDi
@@ -113548,10 +113599,10 @@ iDi
 iDi
 aiY
 vHB
+kHn
+kHn
+kHn
 cHU
-kHn
-kHn
-kHn
 kHn
 aiE
 aiH
@@ -113693,9 +113744,9 @@ khd
 khd
 cHU
 arU
-qXH
-qXH
-qXH
+arY
+arY
+arY
 arM
 iDi
 iDi
@@ -113710,10 +113761,10 @@ iDi
 iDi
 aiY
 kHn
+qRr
+kHn
+kHn
 cHU
-kHn
-kHn
-kHn
 kHn
 aiF
 aiI
@@ -113872,10 +113923,10 @@ iDi
 iDi
 aiZ
 kHn
+kHn
+kHn
+kHn
 cHU
-kHn
-kHn
-kHn
 kHn
 kHn
 kHn
@@ -114034,10 +114085,10 @@ iDi
 iDi
 aiY
 kHn
-cHU
-cmh
 kHn
-ajT
+kHn
+kHn
+iYO
 ajT
 ajT
 ajT
@@ -114196,10 +114247,10 @@ iDi
 iDi
 aiY
 kHn
-cHU
-cHU
 kHn
-ajT
+kHn
+kHn
+iYO
 ajT
 ajT
 ajT
@@ -114359,9 +114410,9 @@ iDi
 aiY
 kHn
 kHn
-cHU
 kHn
-ajT
+kHn
+iYO
 ajT
 ajT
 ajT
@@ -114521,9 +114572,9 @@ iDi
 aiY
 kHn
 kHn
-cHU
 kHn
-ajT
+kHn
+iYO
 ajT
 ajT
 ajT
@@ -114684,8 +114735,8 @@ aiY
 kHn
 kHn
 cHU
-kHn
-ajT
+cHU
+iYO
 ajT
 ajT
 mGV
@@ -114844,7 +114895,7 @@ iDi
 iDi
 aiZ
 aEl
-hZu
+kHn
 cHU
 kHn
 ajT
@@ -115494,7 +115545,7 @@ aiY
 kHn
 cHU
 cHU
-kHn
+qRr
 ajT
 ajT
 ajT
@@ -123578,7 +123629,7 @@ pRx
 tpb
 tpb
 tpb
-jiK
+arM
 iDi
 iDi
 sHp
@@ -123737,10 +123788,10 @@ leU
 kHn
 cHU
 kuZ
-qXH
-qXH
-qXH
-jiK
+arY
+arY
+arY
+arM
 iDi
 iDi
 sHp
@@ -123899,10 +123950,10 @@ cHY
 ajX
 cHU
 kuZ
-qXH
-qXH
-qXH
-dIL
+arY
+arY
+arY
+arN
 iDi
 iDi
 sHp
@@ -124061,10 +124112,10 @@ leU
 kHn
 cHU
 kuZ
-qXH
-qXH
-qXH
-jiK
+arY
+arY
+arY
+arM
 iDi
 iDi
 sHp
@@ -124223,10 +124274,10 @@ fge
 cHU
 cHU
 kuZ
-qXH
-qXH
-qXH
-jiK
+arY
+arY
+arY
+arM
 iDi
 iDi
 sHp
@@ -124388,7 +124439,7 @@ wkF
 bfM
 bfM
 bfM
-jiK
+arM
 iDi
 iDi
 sHp
