@@ -30728,6 +30728,7 @@
 	dir = 4
 	},
 /obj/machinery/light/small,
+/obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "bdq" = (
@@ -47897,6 +47898,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bIZ" = (
@@ -48227,6 +48229,10 @@
 "bJG" = (
 /turf/simulated/wall,
 /area/maintenance/research/north)
+"bJH" = (
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
 "bJI" = (
 /obj/machinery/door/airlock/maintenance/sec{
 	name = "Security Maintenance";
@@ -54152,6 +54158,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "face"
 	},
+/obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bVa" = (
@@ -57333,6 +57340,7 @@
 	name = "north bump";
 	pixel_y = 24
 	},
+/obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "cbX" = (
@@ -60152,6 +60160,69 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
+"cjy" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/civ/east)
+"cjz" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"cjA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cjB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/tug)
+"cjC" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"cjD" = (
+/obj/structure/railing,
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
+"cjE" = (
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/cargo)
 "ckQ" = (
 /obj/machinery/porta_turret/stationary,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -87117,7 +87188,7 @@ aAO
 aAO
 aAO
 aAO
-aAO
+cdw
 aAO
 aAO
 aAO
@@ -93240,7 +93311,7 @@ kwU
 kwU
 kwU
 kMh
-bPd
+cjC
 kMh
 asY
 asY
@@ -97613,7 +97684,7 @@ bMZ
 bMZ
 bMZ
 gWL
-bPH
+cjD
 bPt
 gWL
 gWL
@@ -108475,7 +108546,7 @@ bzH
 bzH
 bzH
 aXN
-bOy
+cjB
 aXN
 aNL
 aNL
@@ -112072,7 +112143,7 @@ ayT
 bhW
 rPd
 bhW
-bhC
+bJH
 ayT
 bhW
 bZt
@@ -112354,7 +112425,7 @@ aNL
 aNL
 aNL
 ayQ
-ayQ
+cjE
 aEq
 aNL
 aNL
@@ -119178,7 +119249,7 @@ aDn
 aDn
 aDn
 bhW
-bGz
+cjA
 bLH
 bhW
 glX
@@ -125823,7 +125894,7 @@ vka
 vka
 aXy
 aXy
-bhi
+cjz
 bpo
 bql
 bql
@@ -126803,7 +126874,7 @@ aOU
 aOU
 bLI
 aOU
-ayD
+cjy
 bdl
 aXy
 baX

@@ -508,6 +508,12 @@
 /area/offworld/asteroidyard/station/halls)
 "bi" = (
 /obj/machinery/telecomms/relay/preset/outpost/recyard,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
 /turf/simulated/floor/bluegrid,
 /area/offworld/asteroidyard/station/telecomms)
 "bj" = (
@@ -676,6 +682,105 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/asteroidyard/station/access_shaft)
+"bB" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_bar)
+"bC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/dockingbay)
+"bD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/dockingbay)
+"bE" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bF" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -31
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls_storage)
+"bG" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
 "bI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -4161,6 +4266,11 @@
 	},
 /obj/item/storage/pill_bottle/tramadol,
 /obj/item/storage/firstaid/regular,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/medbox)
 "uQ" = (
@@ -4362,6 +4472,12 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
 	},
 /turf/simulated/floor/wood,
 /area/offworld/asteroidyard/station/bar)
@@ -7718,6 +7834,11 @@
 /obj/item/binoculars,
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -31
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/observation)
@@ -20231,7 +20352,7 @@ vY
 vY
 vY
 Ud
-bp
+bH
 vY
 cu
 dk
@@ -21549,7 +21670,7 @@ cs
 cs
 hG
 Qu
-cs
+bE
 cs
 cs
 fQ
@@ -23640,7 +23761,7 @@ cs
 cs
 dK
 cs
-aY
+bG
 hG
 cs
 cs
@@ -23827,7 +23948,7 @@ Pa
 Kh
 Pt
 SY
-Pa
+bD
 ta
 Kh
 Pa
@@ -23845,7 +23966,7 @@ rC
 CX
 vt
 WH
-uQ
+bC
 FU
 jD
 bV
@@ -26245,7 +26366,7 @@ Ve
 Jj
 ci
 mm
-Hg
+bF
 mm
 rQ
 mm
@@ -26638,7 +26759,7 @@ bu
 gC
 bu
 bu
-iZ
+bB
 bU
 bu
 gC

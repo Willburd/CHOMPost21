@@ -1551,6 +1551,60 @@
 "adu" = (
 /turf/simulated/floor/tiled/techfloor,
 /area/tcomfoyer)
+"adv" = (
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/purple/full,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/rnd/research/phoronics/extrastore)
+"adw" = (
+/obj/machinery/portable_atmospherics/powered/scrubber,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/techfloor,
+/area/rnd/research/phoronics/extrastore)
+"adx" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/techfloor,
+/area/rnd/research/phoronics/extrastore)
+"ady" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/rnd/research/phoronics/extrastore)
+"adz" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/techfloor,
+/area/rnd/research/phoronics/extrastore)
+"adA" = (
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/turf/simulated/floor/tiled/techfloor,
+/area/rnd/research/phoronics/extrastore)
 "adC" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/bedsheet/pillow/teal,
@@ -12392,16 +12446,14 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "fsC" = (
-/obj/effect/floor_decal/corner/purple/full,
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/portable_atmospherics/powered/scrubber,
-/obj/structure/disposalpipe/trunk{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/disposal/wall{
-	dir = 4;
-	pixel_x = -32
+/obj/machinery/pipedispenser,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
 	},
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/extrastore)
 "ftq" = (
@@ -23213,7 +23265,7 @@
 "kNy" = (
 /obj/structure/sign/warning/bomb_range,
 /turf/simulated/wall/r_wall,
-/area/rnd/hallway/phoronicsmainhall)
+/area/rnd/research/phoronics/extrastore)
 "kND" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -30257,14 +30309,6 @@
 "ows" = (
 /turf/simulated/wall/r_wall,
 /area/medical/patient_c)
-"owy" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 9
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/portable_atmospherics/powered/pump/filled,
-/turf/simulated/floor/tiled/techfloor,
-/area/rnd/research/phoronics/extrastore)
 "owG" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/hidden/blue{
@@ -33389,15 +33433,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/mining)
 "qbH" = (
-/obj/machinery/pipedispenser,
-/obj/effect/floor_decal/corner/purple/full{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 7;
 	pixel_y = 30
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/extrastore)
 "qcl" = (
@@ -96084,10 +96128,10 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
+jad
+jad
+jad
+jad
 kNy
 sWF
 ack
@@ -96246,11 +96290,11 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-bzn
+jad
+adz
+ady
+adv
+jad
 sWF
 nYw
 tSW
@@ -96408,11 +96452,11 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-bzn
+jad
+adA
+vNX
+adw
+jad
 okg
 vyb
 pyS
@@ -96571,9 +96615,9 @@ ovc
 ovc
 ovc
 jad
-jad
-jad
-jad
+adA
+vNX
+adx
 jad
 iIv
 gJV
@@ -96734,7 +96778,7 @@ ovc
 ovc
 jad
 qbH
-owy
+vNX
 fsC
 dOl
 gUQ
