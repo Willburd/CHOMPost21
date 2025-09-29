@@ -22,12 +22,17 @@
 	var/say_sound = pick(list("whimpers","cries","whispers","gasps"))
 	if(our_listener.stat != CONSCIOUS)
 		return
-	if(dist > 11)
+	if(dist > 32)
+		return
+	if(dist > 16)
+		if(prob(80))
+			return
+		to_chat(our_listener, span_deadsay("Something distant [say_sound], \"[Gibberish(message, 100)]\""))
 		return
 	if(dist > 8)
 		if(prob(60))
 			return
-		to_chat(our_listener, span_deadsay("Something distant [say_sound], \"[Gibberish(message, 100)]\""))
+		to_chat(our_listener, span_deadsay("Something distant [say_sound], \"[Gibberish(message, 70)]\""))
 		return
 	if(dist > 4)
 		if(prob(30))
