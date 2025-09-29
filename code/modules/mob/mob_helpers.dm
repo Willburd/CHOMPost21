@@ -471,7 +471,7 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			else
 				name = realname
 
-	// Outpost 21 edit begin - Hearing the dead element
+	// Outpost 21 edit begin - Hearing the dead component
 	if(ismob(subject))
 		SEND_GLOBAL_SIGNAL(COMSIG_OUTPOST_HEAR_DEAD, subject, message)
 	// Outpost 21 edit end

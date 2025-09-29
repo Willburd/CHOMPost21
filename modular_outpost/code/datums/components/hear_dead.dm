@@ -20,6 +20,8 @@
 	var/turf/ghost_turf = get_turf(source)
 	var/dist = our_turf.Distance(ghost_turf)
 	var/say_sound = pick(list("whimpers","cries","whispers","gasps"))
+	if(our_listener.stat != CONSCIOUS)
+		return
 	if(dist > 11)
 		return
 	if(dist > 8)
