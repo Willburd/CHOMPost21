@@ -7,10 +7,11 @@
 		return COMPONENT_INCOMPATIBLE
 	our_listener = parent
 	RegisterSignal(SSdcs, COMSIG_OUTPOST_HEAR_DEAD, PROC_REF(hear_dead))
-	// TODO - Popup a tutorial message saying not to abuse this
+	tgui_alert(our_listener, "At first it begins as a whisper, then a raging torrent of voices, before silence... Yet the whispers persist in the back of your mind, as if they have become a piece of you... (OOC: You can now hear deadchat nearby. This has been gifted to you by admemes, and should be treated as some kind of whispering insanity IC. Either voices in your mind, or hearing the ramblings of demons or ghosts. Ghost chat also likes to meme and talk about ooc things. Try to keep stuff as IC as reasonable, you're absolute allowed to lie about what they're saying too! It's likely only you that hears them.)", "Voices beyond the veil reach out", list("Awaken Your Mind"))
 
 /datum/component/hear_dead/Destroy(force)
 	UnregisterSignal(SSdcs, COMSIG_OUTPOST_HEAR_DEAD)
+	tgui_alert(our_listener, "The voices fall silent. You are now alone in your head once more. (OOC: You will no longer hear deadchat messages.)", "The Voices Are Silent", list("Silence..."))
 	our_listener = null
 	. = ..()
 
