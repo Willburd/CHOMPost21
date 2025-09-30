@@ -5089,7 +5089,6 @@
 #include "modular_chomp\code\game\objects\structures\loot_pile.dm"
 #include "modular_chomp\code\game\objects\structures\tyr_project_props.dm"
 #include "modular_chomp\code\game\objects\structures\watercloset_ch.dm"
-#include "modular_chomp\code\game\objects\structures\weathersignal.dm"
 #include "modular_chomp\code\game\objects\structures\crate_lockers\largecrate.dm"
 #include "modular_chomp\code\game\turfs\simulated\shuttlewall_types.dm"
 #include "modular_chomp\code\game\turfs\simulated\shuttlewalls.dm"
