@@ -81,7 +81,7 @@
 							var/obj/O = thing
 							new /obj/effect/decal/cleanable/ash(O.loc) // Turn it to ashes!
 							O.visible_message(span_warning("[O] turned to ash in the heat of the incinerator!"))
-							qdel(I)
+							qdel(O)
 
 		// random updates to the space above
 		update_space_above()
