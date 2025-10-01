@@ -63,23 +63,25 @@
 						var/obj/item/I = thing
 						if(!I.hidden_uplink)
 							burnedthing = TRUE
+					else if(istype(thing,/obj/structure/closet))
+						burnedthing = TRUE
 
 					if(burnedthing)
 						if(istype(thing,/obj/effect/decal/cleanable/ash)) // ashes to nothing~
 							var/obj/effect/decal/cleanable/ash/A = thing
-							A.Destroy()
+							qdel(A)
 						else if(isliving(thing))
 							var/mob/living/L = thing
 							for(var/obj/item/W in L)
 								L.drop_from_inventory(W)
 							new /obj/effect/decal/cleanable/ash(L.loc) // Turn it to ashes!
 							L.visible_message( span_warning("[L] turned to ash in the heat of the incinerator!"))
-							L.Destroy()
-						else if(istype(thing,/obj/item))
-							var/obj/item/I = thing
-							new /obj/effect/decal/cleanable/ash(I.loc) // Turn it to ashes!
-							I.visible_message(span_warning("[I] turned to ash in the heat of the incinerator!"))
-							I.Destroy()
+							qdel(L)
+						else if(istype(thing,/obj))
+							var/obj/O = thing
+							new /obj/effect/decal/cleanable/ash(O.loc) // Turn it to ashes!
+							O.visible_message(span_warning("[O] turned to ash in the heat of the incinerator!"))
+							qdel(I)
 
 		// random updates to the space above
 		update_space_above()
