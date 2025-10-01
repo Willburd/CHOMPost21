@@ -118,7 +118,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "eshield"
 	item_state = "eshield"
-	slot_flags = SLOT_EARS
+	// slot_flags = SLOT_EARS // Outpost 21 edit - No ear wearing
 	flags = NOCONDUCT
 	force = 3.0
 	throwforce = 5.0

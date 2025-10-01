@@ -36,7 +36,8 @@ NOTICE: Do not leave trailing commas!!!!
 	/obj/item/universal_translator, \
 	/obj/item/clipboard, \
 	/obj/item/measuring_tape, \
-	/obj/item/lightreplacer
+	/obj/item/lightreplacer, \
+	/obj/item/shield/energy
 
 #define POCKET_EMERGENCY \
 	/obj/item/tank/emergency, \
