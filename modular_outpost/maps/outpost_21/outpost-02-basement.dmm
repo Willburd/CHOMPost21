@@ -4789,7 +4789,7 @@
 "aiY" = (
 /obj/machinery/door/airlock/research{
 	name = "Xenobiology Suit Storage";
-	req_one_access = list(7,29)
+	req_one_access = list(55,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -7034,6 +7034,10 @@
 /area/rnd/xenobiology/hallway)
 "amU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/structure/dogbed{
+	name = "chip's bed"
+	},
+/mob/living/simple_mob/vore/alienanimals/chu/chips,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "amV" = (
@@ -8066,7 +8070,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	name = "Xenobiology Lab";
-	req_one_access = list(7,29)
+	req_one_access = list(55,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -8832,7 +8836,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	name = "Xenobiology Lab";
-	req_one_access = list(7,29)
+	req_one_access = list(55,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
