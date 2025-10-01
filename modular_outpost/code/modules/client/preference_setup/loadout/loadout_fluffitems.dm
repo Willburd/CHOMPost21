@@ -38,8 +38,8 @@
 /datum/gear/fluff/ESHUI_bronzeheart
 	display_name = "ESHUI Bronze Heart Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/heart/eshui
-	ckeywhitelist = list("atc_man")
-	character_name = list("Flit")
+	ckeywhitelist = list("atc_man","remthebold")
+	character_name = list("Flit","Ruben Softclaw")
 
 /datum/gear/fluff/ESHUI_bronzemedal
 	display_name = "ESHUI Meritorious Defense Medal"
