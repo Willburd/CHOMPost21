@@ -370,7 +370,7 @@
 						holder.drop_r_hand()
 						holder.death()
 						new /obj/effect/decal/cleanable/ash(holder.loc) // Turn it to ashes!
-						holder.Destroy()
+						qdel(holder)
 		else if(istype(A, /obj/item))
 			var/obj/item/D = A
 			if(!D.anchored)

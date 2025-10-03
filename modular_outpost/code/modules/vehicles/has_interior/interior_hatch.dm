@@ -20,6 +20,9 @@
 	// always works
 	return FALSE
 
+/obj/machinery/door/vehicle_interior_hatch/can_open()
+	return FALSE // Never opens
+
 /obj/machinery/door/vehicle_interior_hatch/Bumped(atom/AM)
 	// do nothing
 
@@ -31,9 +34,12 @@
 	visible_message( span_danger("[src.name] was hit by [AM], with no visible effect."))
 
 /obj/machinery/door/vehicle_interior_hatch/MouseDrop_T(var/atom/movable/C, mob/user as mob)
-	attackby( null, user)
+	attack_hand( user)
 
-/obj/machinery/door/vehicle_interior_hatch/attackby(obj/item/I as obj, mob/user as mob)
+/obj/machinery/door/vehicle_interior_hatch/attackby(obj/item/I, mob/user)
+	attack_hand( user)
+
+/obj/machinery/door/vehicle_interior_hatch/attack_hand(mob/user)
 	if(locked)
 		do_animate("deny")
 		return
@@ -47,7 +53,7 @@
 			interior_controller.exit_interior(user)
 
 /obj/machinery/door/vehicle_interior_hatch/attack_robot(mob/living/user)
-	attackby( null, user)
+	attack_hand( user)
 
 /obj/machinery/door/vehicle_interior_hatch/attack_ai(mob/user)
 	return
@@ -55,7 +61,7 @@
 
 /obj/machinery/door/vehicle_interior_hatch/attack_generic(mob/user as mob)
 	// aliens/borers
-	attackby( null, user)
+	attack_hand( user)
 
 /obj/machinery/door/vehicle_interior_hatch/emag_act(var/remaining_charges)
 	return

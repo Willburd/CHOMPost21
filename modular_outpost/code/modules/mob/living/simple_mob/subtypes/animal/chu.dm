@@ -219,7 +219,7 @@
 
 		// release it! and destroy old body
 		foundbelly.release_specific_contents(CC)
-		foundprey.Destroy()
+		qdel(foundprey)
 		CC.update_icon()
 		update_icon() // self too
 

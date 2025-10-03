@@ -233,7 +233,7 @@
 			if(ammo_count < initial(ammo_count))
 				ammo_count++
 				user.visible_message("[user] loads a shell into \the [src].", "You load a shell into \the [src].")
-				I.Destroy()
+				qdel(I)
 		return
 	attack_hand(user)
 
@@ -264,7 +264,7 @@
 		else if(do_after(user, 2 SECONDS, target = src) && !loaded)
 			loaded = TRUE
 			user.visible_message("[user] loads a shell into \the [src].", "You load a shell into \the [src].")
-			I.Destroy()
+			qdel(I)
 			playsound(src, 'sound/machines/turrets/turret_deploy.ogg', 100, 1)
 			update_icon()
 

@@ -429,3 +429,25 @@
 
 	if(failures)
 		TEST_FAIL("pipes or wires run under walls. Use maintenance panels.")
+
+
+
+
+/datum/unit_test/all_cliffs_shall_be_placed_on_floors
+
+/datum/unit_test/all_cliffs_shall_be_placed_on_floors/Run()
+	var/failed = FALSE
+
+	var/list/shown_areas = list()
+	for(var/obj/structure/cliff/C in world)
+		var/turf/T = get_turf(C)
+		var/area/A = get_area(C)
+		if(isopenspace(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] [A]: Cliff - Cliff placed on openspace")
+			failed = TRUE
+		if(iswall(T))
+			TEST_NOTICE(src,"[T.x].[T.y].[T.z] [A]: Cliff - Cliff placed on wall")
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("Cliffs illegally placed. Cliffs may not be placed on walls, or open space")

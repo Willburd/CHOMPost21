@@ -359,7 +359,7 @@
 					processtobiomass = TRUE
 		if(processtobiomass)
 			// process and destroy
-			thing.Destroy()
+			qdel(thing)
 		else
 			thing.forceMove( src.loc) // Drop it onto the turf for throwing.
 			thing.throw_at( get_edge_target_turf(thing.loc, gib_throw_dir),rand(1,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.

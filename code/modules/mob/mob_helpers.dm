@@ -471,6 +471,11 @@ var/list/intents = list(I_HELP,I_DISARM,I_GRAB,I_HURT)
 			else
 				name = realname
 
+	// Outpost 21 edit begin - Hearing the dead component
+	if(ismob(subject))
+		SEND_GLOBAL_SIGNAL(COMSIG_OUTPOST_HEAR_DEAD, subject, message)
+	// Outpost 21 edit end
+
 	if(subject && subject.forbid_seeing_deadchat && !check_rights_for(subject.client, R_HOLDER))
 		return // Can't talk in deadchat if you can't see it.
 
