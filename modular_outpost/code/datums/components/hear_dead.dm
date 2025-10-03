@@ -15,10 +15,10 @@
 	our_listener = null
 	. = ..()
 
-/datum/component/hear_dead/proc/hear_dead(mob/source, message)
+/datum/component/hear_dead/proc/hear_dead(datum/source, mob/subject, message)
 	SIGNAL_HANDLER
 	var/turf/our_turf = get_turf(our_listener)
-	var/turf/ghost_turf = get_turf(source)
+	var/turf/ghost_turf = get_turf(subject)
 	var/dist = our_turf.Distance(ghost_turf)
 	var/say_sound = pick(list("whimpers","cries","whispers","gasps"))
 	if(our_listener.stat != CONSCIOUS)
