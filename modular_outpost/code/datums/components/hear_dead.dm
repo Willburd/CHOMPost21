@@ -20,7 +20,6 @@
 	var/turf/our_turf = get_turf(our_listener)
 	var/turf/ghost_turf = get_turf(subject)
 	var/dist = our_turf.Distance(ghost_turf)
-	var/say_sound = pick(list("whimpers","cries","whispers","gasps"))
 	if(our_listener.stat != CONSCIOUS)
 		return
 	if(dist > 32)
@@ -28,16 +27,16 @@
 	if(dist > 16)
 		if(prob(80))
 			return
-		to_chat(our_listener, span_deadsay("Something distant [say_sound], \"[Gibberish(message, 100)]\""))
+		to_chat(our_listener, span_deadsay("Something far away [Gibberish(message, 20)]"))
 		return
 	if(dist > 8)
 		if(prob(60))
 			return
-		to_chat(our_listener, span_deadsay("Something distant [say_sound], \"[Gibberish(message, 70)]\""))
+		to_chat(our_listener, span_deadsay("Something distant [Gibberish(message, 10)]"))
 		return
 	if(dist > 4)
 		if(prob(30))
 			return
-		to_chat(our_listener, span_deadsay("Something close [say_sound], \"[Gibberish(message, 50)]\""))
+		to_chat(our_listener, span_deadsay("Something close [Gibberish(message, 5)]"))
 		return
-	to_chat(our_listener, span_deadsay("Something beside you [say_sound], \"[Gibberish(message, 20)]\""))
+	to_chat(our_listener, span_deadsay("Something beside you [Gibberish(message, 1)]"))
