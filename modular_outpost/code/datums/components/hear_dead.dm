@@ -27,16 +27,16 @@
 	if(dist > 16)
 		if(prob(80))
 			return
-		to_chat(our_listener, span_deadsay("Something far away [Gibberish(message, 20)]"))
+		to_chat(our_listener, span_deadsay("Something far away [message]"))
 		return
 	if(dist > 8)
 		if(prob(60))
 			return
-		to_chat(our_listener, span_deadsay("Something distant [Gibberish(message, 10)]"))
+		to_chat(our_listener, span_deadsay("Something distant [message]"))
 		return
 	if(dist > 4)
 		if(prob(30))
 			return
-		to_chat(our_listener, span_deadsay("Something close [Gibberish(message, 5)]"))
+		to_chat(our_listener, span_deadsay("Something close [message]"))
 		return
-	to_chat(our_listener, span_deadsay("Something beside you [Gibberish(message, 1)]"))
+	to_chat(our_listener, span_deadsay("Something beside you [message]"))
