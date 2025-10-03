@@ -15,12 +15,11 @@
 	our_listener = null
 	. = ..()
 
-/datum/component/hear_dead/proc/hear_dead(mob/source, message)
+/datum/component/hear_dead/proc/hear_dead(datum/source, mob/subject, message)
 	SIGNAL_HANDLER
 	var/turf/our_turf = get_turf(our_listener)
-	var/turf/ghost_turf = get_turf(source)
+	var/turf/ghost_turf = get_turf(subject)
 	var/dist = our_turf.Distance(ghost_turf)
-	var/say_sound = pick(list("whimpers","cries","whispers","gasps"))
 	if(our_listener.stat != CONSCIOUS)
 		return
 	if(dist > 32)
@@ -28,16 +27,16 @@
 	if(dist > 16)
 		if(prob(80))
 			return
-		to_chat(our_listener, span_deadsay("Something distant [say_sound], \"[Gibberish(message, 100)]\""))
+		to_chat(our_listener, span_deadsay("Something far away [message]"))
 		return
 	if(dist > 8)
 		if(prob(60))
 			return
-		to_chat(our_listener, span_deadsay("Something distant [say_sound], \"[Gibberish(message, 70)]\""))
+		to_chat(our_listener, span_deadsay("Something distant [message]"))
 		return
 	if(dist > 4)
 		if(prob(30))
 			return
-		to_chat(our_listener, span_deadsay("Something close [say_sound], \"[Gibberish(message, 50)]\""))
+		to_chat(our_listener, span_deadsay("Something close [message]"))
 		return
-	to_chat(our_listener, span_deadsay("Something beside you [say_sound], \"[Gibberish(message, 20)]\""))
+	to_chat(our_listener, span_deadsay("Something beside you [message]"))
