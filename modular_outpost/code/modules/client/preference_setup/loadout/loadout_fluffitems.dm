@@ -38,20 +38,20 @@
 /datum/gear/fluff/ESHUI_bronzeheart
 	display_name = "ESHUI Bronze Heart Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/heart/eshui
-	ckeywhitelist = list("atc_man","remthebold")
+	ckeywhitelist = list("atcman","remthebold")
 	character_name = list("Flit","Ruben Softclaw")
 
 /datum/gear/fluff/ESHUI_bronzemedal
 	display_name = "ESHUI Meritorious Defense Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/sol/eshui
-	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha","rainy_12","bigbade")
+	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha","rainy12","bigbade")
 	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita","Stridefast","Raine Rattlewag","Sitka Niteshade","Anna Neso","Kalun")
 
 /datum/gear/fluff/ESHUI_medalval
 	display_name = "ESHUI Medal of Valor"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sol/eshui
-	ckeywhitelist = list("darklord92","remthebold","ozydev","astraether","atc_man","synxplushy","nate saruli","valinari")
-	character_name = list("Tesum Shari","Trashfire","Cracker","Astra Ether","Flit","Ruben Softclaw","Sitka Nightshade","Cecil Auchmir","Valinari Sandivi Gloria")
+	ckeywhitelist = list("darklord92","remthebold","ozydev","astraether","atcman","synxplushy","natesaruli","valinari")
+	character_name = list("Tesum Shari","Trashfire","Cracker","Astra Ether","Flit","Ruben Softclaw","Sitka Niteshade","Cecil Auchmir","Valinari Sandivi Gloria")
 
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
