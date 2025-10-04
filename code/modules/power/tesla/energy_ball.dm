@@ -27,8 +27,10 @@
 /obj/singularity/energy_ball/Initialize(mapload, starting_energy = 50, is_miniball = FALSE)
 	. = ..()
 	miniball = is_miniball
+	/* Outpost 21 edit - Disable tesla light
 	if(!miniball)
 		set_light(10, 7, "#EEEEFF")
+	*/
 
 /obj/singularity/energy_ball/ex_act(severity, target)
 	return
