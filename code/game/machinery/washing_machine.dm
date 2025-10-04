@@ -155,7 +155,6 @@
 				..()
 		else
 			..()
-	/* Outpost 21 edit(port) - This feature doesn't even work
 	else if(istype(W,/obj/item/grab))
 		if((state == EMPTY_OPEN) && hacked)
 			var/obj/item/grab/G = W
@@ -172,7 +171,6 @@
 						to_chat(user, "You can't shove [G.affecting] in unless the washer is empty and open!")
 		else
 			..()
-	*/
 
 	else if(is_type_in_list(W, disallowed_types))
 		to_chat(user, span_warning("You can't fit \the [W] inside."))
