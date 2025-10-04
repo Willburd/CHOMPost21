@@ -1,7 +1,55 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/template_noop,
+/area/space)
+"ab" = (
+/turf/simulated/wall/titanium,
+/area/space)
+"ac" = (
+/obj/structure/droppod_door{
+	dir = 1
+	},
+/mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
+/turf/simulated/floor/reinforced,
+/area/space)
+"ad" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
+/turf/simulated/floor/reinforced,
+/area/space)
+"ae" = (
+/obj/structure/droppod_door{
+	dir = 4
+	},
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
+/turf/simulated/floor/reinforced,
+/area/space)
+"af" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt1,
+/turf/simulated/floor/reinforced,
+/area/space)
+"ag" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt3,
+/turf/simulated/floor/reinforced,
+/area/space)
+"ah" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt2,
+/turf/simulated/floor/reinforced,
+/area/space)
 "ai" = (
 /obj/machinery/door/airlock/maintenance_hatch,
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"aj" = (
+/obj/structure/droppod_door{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
+/turf/simulated/floor/reinforced,
+/area/space)
+"ak" = (
+/obj/structure/droppod_door,
+/mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
+/turf/simulated/floor/reinforced,
 /area/space)
 "ap" = (
 /obj/random/maintenance/engineering,
@@ -7033,11 +7081,11 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
+aa
+ab
+ae
+ab
+aa
 hm
 hm
 hm
@@ -7290,11 +7338,11 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
+ab
+ab
+af
+ab
+ab
 hm
 hm
 hm
@@ -7547,11 +7595,11 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
+ak
+ad
+ag
+ad
+ac
 hm
 hm
 hm
@@ -7804,11 +7852,11 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
+ab
+ab
+ah
+ab
+ab
 hm
 hm
 hm
@@ -8061,11 +8109,11 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
+aa
+ab
+aj
+ab
+aa
 hm
 hm
 hm

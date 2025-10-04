@@ -357,11 +357,11 @@
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
@@ -579,10 +579,10 @@
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
-/obj/structure/window/phoronreinforced{
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
 /turf/simulated/floor/reinforced/turfpack/muriki,
@@ -2608,11 +2608,11 @@
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
@@ -3005,7 +3005,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/structure/railing,
+/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "aet" = (
@@ -3169,11 +3169,11 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
-/obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_io,
 /obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Power - Main"
 	},
+/obj/item/smes_coil/super_io/hyper,
+/obj/item/smes_coil/super_capacity/hyper,
 /turf/simulated/floor,
 /area/engineering/engine_smes)
 "aeK" = (
@@ -3193,13 +3193,11 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Engineering Substation"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/engineering)
 "aeM" = (
 /obj/structure/cable/orange{
@@ -5150,6 +5148,13 @@
 	layer = 4;
 	pixel_y = 32
 	},
+/obj/item/clothing/head/cone,
+/obj/item/clothing/head/cone{
+	pixel_y = 5
+	},
+/obj/item/clothing/head/cone{
+	pixel_y = 11
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahA" = (
@@ -5178,6 +5183,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/item/clothing/head/cone,
+/obj/item/clothing/head/cone{
+	pixel_y = 5
+	},
+/obj/item/clothing/head/cone{
+	pixel_y = 11
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
@@ -9633,13 +9645,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
-"arA" = (
-/obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/cargomid)
 "arB" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -9902,6 +9907,22 @@
 	outdoors = 1
 	},
 /area/muriki/grounds/engi)
+"ase" = (
+/obj/item/bodybag/large,
+/obj/item/bodybag/large,
+/obj/item/bodybag/large,
+/obj/item/bodybag/large,
+/obj/item/bodybag/large,
+/obj/item/bodybag/large,
+/obj/structure/table/rack,
+/turf/simulated/floor/plating,
+/area/maintenance/medbay_aft)
+"asf" = (
+/obj/effect/mine/claymore/donksoft{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/medbay_aft)
 "asp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -11187,6 +11208,13 @@
 /obj/effect/floor_decal/corner/beige/border,
 /obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = -32
+	},
+/obj/item/clothing/suit/caution,
+/obj/item/clothing/suit/caution{
+	pixel_y = 5
+	},
+/obj/item/clothing/suit/caution{
+	pixel_y = 11
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
@@ -14450,6 +14478,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/stolenpackage,
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "bNf" = (
@@ -49215,6 +49244,13 @@
 	dir = 1;
 	pixel_y = -32
 	},
+/obj/item/clothing/head/cone,
+/obj/item/clothing/head/cone{
+	pixel_y = 5
+	},
+/obj/item/clothing/head/cone{
+	pixel_y = 11
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "mAK" = (
@@ -61740,6 +61776,13 @@
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = -32
 	},
+/obj/item/clothing/suit/caution,
+/obj/item/clothing/suit/caution{
+	pixel_y = 5
+	},
+/obj/item/clothing/suit/caution{
+	pixel_y = 11
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "qBe" = (
@@ -62676,6 +62719,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
+/mob/living/simple_mob/vore/aggressive/rat,
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
 "qPE" = (
@@ -63168,10 +63212,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
 "qVF" = (
-/obj/effect/decal/cleanable/dirt,
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
-	},
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
@@ -109734,7 +109774,7 @@ hns
 kYt
 icS
 vDM
-arA
+dxn
 pxq
 bgo
 uMJ
@@ -128621,7 +128661,7 @@ arf
 lnK
 arf
 dRW
-jue
+asf
 kny
 kny
 kny
@@ -129108,7 +129148,7 @@ cMN
 arf
 dRW
 nqX
-jue
+ase
 kny
 gtO
 yke
