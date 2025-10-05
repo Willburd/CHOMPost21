@@ -60036,6 +60036,10 @@
 /obj/structure/cable/orange{
 	icon_state = "6-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
 "cjO" = (
