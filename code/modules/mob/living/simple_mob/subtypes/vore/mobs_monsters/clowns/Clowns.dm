@@ -29,7 +29,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	maxbodytemp = 700
+	// maxbodytemp = 700 // Outpost 21 edit - Die normally to fire
 
 /datum/ai_holder/simple_mob/melee/clowns
 	can_breakthrough = FALSE
