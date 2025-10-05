@@ -1,7 +1,7 @@
 /mob/living/simple_mob/vore/alienanimals/chu/chips
-	name = "chips"
-	real_name = "chips"
-	desc = "Xenobiology's unfortunate research test subject and \"pet\"..."
+	name = "\proper Chips"
+	real_name = "Chips"
+	desc = "Xenobiology's unfortunate research test subject and \"pet\"... Surprisingly docile for a chu, but that might be the multiple implants in their brain restraining them. Their ability to assimilate others has also been surgically removed."
 	tt_desc = "Chitter"
 	player_msg = "You sure feel happy today!"
 
