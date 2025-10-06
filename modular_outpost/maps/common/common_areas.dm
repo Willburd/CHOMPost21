@@ -1622,8 +1622,8 @@
 
 /area/maintenance/wastedisposal
 	name = "\improper Waste Disposal Maintenance"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "maint_research_shuttle"
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = TRUE
 
@@ -1631,7 +1631,7 @@
 	name = "\improper Waste Department First Aid Station"
 	icon_state = "medbay2"
 	sound_env = SMALL_ENCLOSED
-	base_turf = /turf/simulated/open
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = AREA_FIRE_SUPRESSION
 
