@@ -69472,7 +69472,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Briefing Room"
+	c_tag = "SEC - Briefing Room North"
 	},
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
@@ -72451,7 +72451,7 @@
 "tTv" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Briefing Room";
+	c_tag = "SEC - Briefing Room South";
 	dir = 1
 	},
 /obj/structure/sign/scenery/map/left_outpost21{

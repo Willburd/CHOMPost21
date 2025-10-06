@@ -4038,7 +4038,9 @@
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
 "ahQ" = (
-/obj/machinery/camera/network/research,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Threat Supression Valve"
+	},
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
@@ -4686,7 +4688,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
 	},
-/obj/machinery/camera/network/research,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Threat Supression Pump"
+	},
 /obj/machinery/meter,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -8;
@@ -7210,7 +7214,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics East Acess"
+	c_tag = "ENG - Atmospherics East Acess"
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 7;
@@ -10101,7 +10105,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Hazardous Storage";
+	c_tag = "ENG - Atmospherics Hazardous Storage";
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -12112,7 +12116,7 @@
 "avL" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics East Storage";
+	c_tag = "ENG - Atmospherics East Storage";
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -13120,7 +13124,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Central";
+	c_tag = "ENG - Atmospherics Central";
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -16564,7 +16568,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Office";
+	c_tag = "ENG - Atmospherics Office";
 	dir = 8
 	},
 /obj/item/juke_remote{
@@ -20087,7 +20091,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Hallway North";
+	c_tag = "ENG - Atmospherics Hallway North";
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
@@ -67330,7 +67334,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/meter,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Northeast"
+	c_tag = "ENG - Atmospherics Northeast"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -71026,7 +71030,7 @@
 /area/mine/explored/muriki/cave/waste)
 "mjD" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Northeast Storage";
+	c_tag = "ENG - Atmospherics Northeast Storage";
 	dir = 1
 	},
 /turf/simulated/floor/plating,
