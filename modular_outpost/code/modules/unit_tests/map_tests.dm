@@ -459,74 +459,92 @@
 	var/list/used_cams = list()
 
 	for(var/obj/machinery/camera/network/command/C in world)
+		set background=1
 		if(!validate_camera(C, "COM", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/ai_sat/C in world)
+		set background=1
 		if(!validate_camera(C, "AI", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/research/C in world)
+		set background=1
 		if(!validate_camera(C, "SCI", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/research_outpost/C in world)
+		set background=1
 		if(!validate_camera(C, "SCI", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/medbay/C in world)
+		set background=1
 		if(!validate_camera(C, "MED", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/security/C in world)
+		set background=1
 		if(!validate_camera(C, "SEC", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/prison/C in world)
+		set background=1
 		if(!validate_camera(C, "SEC", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/civilian/C in world)
+		set background=1
 		if(!validate_camera(C, "CIV", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/cargo/C in world)
+		set background=1
 		if(!validate_camera(C, "CRG", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/mining/C in world)
+		set background=1
 		if(!validate_camera(C, "MNG", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/engineering/C in world)
+		set background=1
 		if(!validate_camera(C, "ENG", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/engine/C in world)
+		set background=1
 		if(!validate_camera(C, "ENG", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/substations/C in world)
+		set background=1
 		if(!validate_camera(C, "PWR", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/outside/C in world)
+		set background=1
 		if(!validate_camera(C, "EXT", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/bunker/C in world)
+		set background=1
 		if(!validate_camera(C, "BNK", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/foundations/C in world)
+		set background=1
 		if(!validate_camera(C, "BLK", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/telecom/C in world)
+		set background=1
 		if(!validate_camera(C, "TCM", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/waste/C in world)
+		set background=1
 		if(!validate_camera(C, "WST", used_cams))
 			failed = TRUE
 

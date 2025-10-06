@@ -28882,7 +28882,7 @@
 /area/hydroponics/publicgarden)
 "nMr" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Arrivals Substation"
+	c_tag = "PWR - Arrivals Substation"
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 4
