@@ -510,7 +510,7 @@
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/outside/C in world)
-		if(!validate_camera(C, "OUT", used_tags))
+		if(!validate_camera(C, "EXT", used_tags))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/bunker/C in world)
