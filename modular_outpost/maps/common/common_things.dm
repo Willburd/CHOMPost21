@@ -9,6 +9,8 @@
 /obj/machinery/camera/network/foundations
 	network = list(NETWORK_FOUNDATIONS)
 
+/obj/machinery/camera/network/waste
+	network = list(NETWORK_WASTE)
 
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
 /obj/structure/window/reinforced/polarized/full

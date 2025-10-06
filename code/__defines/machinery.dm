@@ -96,6 +96,7 @@
 // Outpost 21 edit begin
 #define NETWORK_BUNKER "Bunker"
 #define NETWORK_FOUNDATIONS "Foundations"
+#define NETWORK_WASTE "Waste"
 // Outpost 21 edit end
 
 // Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.

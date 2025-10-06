@@ -35225,7 +35225,7 @@
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Cooling Loop";
 	dir = 8
 	},

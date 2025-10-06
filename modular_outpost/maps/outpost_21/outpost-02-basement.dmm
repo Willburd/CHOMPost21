@@ -42039,7 +42039,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Southwest";
 	dir = 1
 	},
@@ -42153,7 +42153,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxK" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Gas Input";
 	dir = 1
 	},
@@ -42279,7 +42279,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Southeast";
 	dir = 1
 	},
@@ -43074,7 +43074,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Access";
 	dir = 8
 	},
@@ -47776,7 +47776,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Septic Lowerr";
 	dir = 8
 	},
@@ -62912,7 +62912,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Western Cavern Access";
 	dir = 1
 	},
@@ -68607,7 +68607,7 @@
 /area/engineering/mail)
 "jBH" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Northwest"
 	},
 /turf/simulated/floor/plating,
@@ -68949,7 +68949,7 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "jSd" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram North"
 	},
 /turf/simulated/floor/plating,
@@ -71019,7 +71019,7 @@
 /turf/simulated/open/muriki,
 /area/muriki/crew/bunker)
 "mjC" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Northern Cavern Access";
 	dir = 8
 	},
@@ -72836,7 +72836,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "oAY" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Northeast"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -76477,7 +76477,7 @@
 /area/security/tankstore)
 "soc" = (
 /obj/effect/map_effect/interval/burnpit,
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Upper Incinerator";
 	dir = 1;
 	name = "Reinforced - Incinerator Camera";
@@ -76691,7 +76691,7 @@
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/maintenance/civ/east)
 "syZ" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Wheel Of Shame";
 	dir = 1
 	},
@@ -78362,7 +78362,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Lower Stair";
 	dir = 8
 	},

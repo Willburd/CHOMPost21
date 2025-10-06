@@ -525,6 +525,10 @@
 		if(!validate_camera(C, "TCM", used_tags))
 			failed = TRUE
 
+	for(var/obj/machinery/camera/network/waste/C in world)
+		if(!validate_camera(C, "WST", used_tags))
+			failed = TRUE
+
 	if(failed)
 		TEST_FAIL("Cameras had incorrect prefix for their network")
 

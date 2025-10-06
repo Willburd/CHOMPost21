@@ -29671,7 +29671,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Drone Fabrication"
 	},
 /obj/structure/bed/chair,
@@ -46919,7 +46919,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Upper Tram Incin";
 	dir = 1
 	},
@@ -75183,7 +75183,7 @@
 "uIu" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/orange/border,
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Upper Tram Southwest";
 	dir = 1
 	},
@@ -82135,7 +82135,7 @@
 /area/security/checkpoint2)
 "wLU" = (
 /obj/structure/lattice,
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Septic Upper";
 	dir = 8
 	},
@@ -82327,7 +82327,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Upper Incinerator";
 	dir = 1;
 	name = "Reinforced - Incinerator Camera";
