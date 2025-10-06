@@ -63758,10 +63758,6 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
-/obj/machinery/camera/network/engineering{
-	dir = 4;
-	c_tag = "ENG - EVA Storage"
-	},
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/hardsuitstore)
 "rgQ" = (
@@ -68438,6 +68434,10 @@
 	req_access = list(11)
 	},
 /obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/camera/network/engineering{
+	dir = 4;
+	c_tag = "ENG - EVA Storage"
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/hardsuitstore)
 "sHh" = (
