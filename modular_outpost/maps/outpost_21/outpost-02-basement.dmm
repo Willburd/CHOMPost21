@@ -2954,7 +2954,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Isolation Cell 1";
 	dir = 4
 	},
@@ -2982,7 +2982,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Isolation Cell 2";
 	dir = 4
 	},
@@ -3017,7 +3017,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Isolation Cell 3";
 	dir = 4
 	},
@@ -6045,7 +6045,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Northeast";
 	dir = 4
 	},
@@ -12389,7 +12389,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "awe" = (
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Southeast";
 	dir = 4
 	},
