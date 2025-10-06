@@ -505,7 +505,7 @@
 
 	for(var/obj/machinery/camera/network/mining/C in world)
 		set background=1
-		if(!validate_camera(C, "MNG", used_cams))
+		if(!validate_camera(C, "MNE", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/engineering/C in world)

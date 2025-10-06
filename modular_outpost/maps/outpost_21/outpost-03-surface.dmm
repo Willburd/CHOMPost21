@@ -304,8 +304,8 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Bridge"
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Bridge"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -380,8 +380,8 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Fuel";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Fuel";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -634,8 +634,8 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Air";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Air";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -693,8 +693,8 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Aid";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Aid";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1223,8 +1223,8 @@
 /obj/machinery/elevator_warning/inverted{
 	pixel_y = 18
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Airlock";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Airlock";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -2095,8 +2095,8 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/milspec/cargo,
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Cargo Aft";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Cargo Aft";
 	dir = 4
 	},
 /obj/structure/anomaly_container,
@@ -2343,8 +2343,8 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Equip";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Equip";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2416,8 +2416,8 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Crew";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Crew";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2456,8 +2456,8 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Cargo Fore";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Cargo Fore";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2508,8 +2508,8 @@
 /obj/structure/handrail{
 	dir = 8
 	},
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Power";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Power";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -2592,8 +2592,8 @@
 	dir = 8
 	},
 /obj/machinery/disposal/deliveryChute,
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Ext";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Ext";
 	dir = 4
 	},
 /obj/structure/railing{
@@ -24324,8 +24324,8 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/milspec/cargo,
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNT - Store";
+/obj/machinery/camera/network/mining{
+	c_tag = "MNE - Store";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -27743,7 +27743,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Equipment"
 	},
 /turf/simulated/floor/tiled,
@@ -31961,7 +31961,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - First Aid"
 	},
 /obj/item/storage/firstaid/adv{
@@ -32629,7 +32629,7 @@
 	pixel_x = -12;
 	pixel_y = 30
 	},
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Ore Processing"
 	},
 /obj/item/radio/intercom{
@@ -49431,7 +49431,7 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Equipment Storage"
 	},
 /obj/machinery/recharger{
@@ -70528,7 +70528,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Main Entrance Hall"
 	},
 /turf/simulated/floor/tiled,

@@ -49830,7 +49830,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - First Aid"
 	},
 /obj/item/storage/firstaid/adv{

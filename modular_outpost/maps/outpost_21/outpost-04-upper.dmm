@@ -1605,6 +1605,16 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/extrastore)
+"adB" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Phoronics";
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/phoronics)
 "adC" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/bedsheet/pillow/teal,
@@ -7456,7 +7466,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Exploration Prep Stairwell Upper"
 	},
 /turf/simulated/floor/tiled,
@@ -10608,7 +10618,9 @@
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
 	},
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Waste"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
 "ewJ" = (
@@ -12694,7 +12706,9 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Cargo"
+	},
 /turf/simulated/open,
 /area/maintenance/substation/cargo)
 "fAF" = (
@@ -13911,7 +13925,8 @@
 /area/muriki/rooftop/engineering)
 "gjn" = (
 /obj/machinery/camera/network/substations{
-	dir = 4
+	dir = 4;
+	c_tag = "PWR - Substation Virology"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/virology)
@@ -19509,7 +19524,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/evastore)
 "jbl" = (
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Civilian"
+	},
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
@@ -19621,7 +19638,7 @@
 	dir = 9
 	},
 /obj/structure/closet/secure_closet/sar,
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Exploration Prep";
 	dir = 4
 	},
@@ -27306,7 +27323,8 @@
 /area/muriki/bathroom/medupper)
 "mTY" = (
 /obj/machinery/camera/network/substations{
-	dir = 8
+	dir = 8;
+	c_tag = "PWR - Substation Medical"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
@@ -32878,7 +32896,7 @@
 "pHx" = (
 /obj/machinery/camera/network/substations{
 	dir = 1;
-	c_tag = "PWR - Telecoms Substation"
+	c_tag = "PWR - Substation Telecoms"
 	},
 /obj/structure/table/standard,
 /obj/item/stock_parts/subspace/analyzer,
@@ -38117,7 +38135,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Exploration Defense Prep";
 	dir = 4
 	},
@@ -102290,7 +102308,7 @@ cKH
 orb
 bwG
 aRH
-orb
+adB
 rZE
 nux
 iII
