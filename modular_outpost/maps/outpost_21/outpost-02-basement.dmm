@@ -20945,6 +20945,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"aLV" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Bunker Cavern Access";
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/civ/east_access)
 "aLW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -61599,12 +61606,9 @@
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
 "cnD" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - NorthWest Cavern Access";
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
@@ -61647,6 +61651,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
 "cnJ" = (
@@ -62118,13 +62123,6 @@
 	dir = 4
 	},
 /obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor/tiled/dark/turfpack/muriki,
-/area/mine/explored/muriki/cave/civ/east_access)
-"cpe" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Southern Cavern Access";
-	dir = 5
-	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
 "cpf" = (
@@ -139203,7 +139201,7 @@ aYn
 cpn
 cpi
 xMD
-cpe
+cpH
 cpc
 coX
 coR
@@ -139498,7 +139496,7 @@ ucq
 ucq
 lOq
 uBZ
-cpH
+aLV
 xMD
 ehN
 ceR
