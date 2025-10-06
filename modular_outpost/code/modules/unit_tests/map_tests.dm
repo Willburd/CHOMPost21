@@ -533,7 +533,7 @@
 	if(C.c_tag in used_tags)
 		TEST_NOTICE(src, "Camera had already existing c_tag [C.c_tag]. Located at [T.x].[T.y].[T.z]")
 		return FALSE
-	if(copytext(C.c_tag,1,5) != "[req_suffix] - ")
+	if(copytext(C.c_tag,1,7) != "[req_suffix] - ")
 		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z]")
 		return FALSE
 	used_tags += C.c_tag
