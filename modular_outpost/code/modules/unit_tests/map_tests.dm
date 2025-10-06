@@ -506,7 +506,7 @@
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/substations/C in world)
-		if(!validate_camera(C, "ENG", used_tags))
+		if(!validate_camera(C, "PWR", used_tags))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/outside/C in world)
