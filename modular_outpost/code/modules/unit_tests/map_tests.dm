@@ -475,7 +475,7 @@
 
 	for(var/obj/machinery/camera/network/research_outpost/C in world)
 		set background=1
-		if(!validate_camera(C, "SCI", used_cams))
+		if(!validate_camera(C, "TOX", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/medbay/C in world)
