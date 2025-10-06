@@ -438,7 +438,6 @@
 /datum/unit_test/all_cliffs_shall_be_placed_on_floors/Run()
 	var/failed = FALSE
 
-	var/list/shown_areas = list()
 	for(var/obj/structure/cliff/C in world)
 		var/turf/T = get_turf(C)
 		var/area/A = get_area(C)
@@ -458,7 +457,6 @@
 /datum/unit_test/all_cameras_shall_respect_naming_conventions/Run()
 	var/failed = FALSE
 
-	var/list/shown_areas = list()
 	for(var/obj/machinery/camera/network/command/C in world)
 		var/area/A = get_area(C)
 		if(!validate_camera(C, "COM"))
