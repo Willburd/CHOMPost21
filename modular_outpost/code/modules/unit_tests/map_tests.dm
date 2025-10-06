@@ -458,9 +458,6 @@
 	var/failed = FALSE
 	var/list/used_cams = list()
 
-	// This takes a while
-	world.loop_checks = FALSE
-
 	for(var/obj/machinery/camera/network/command/C in world)
 		if(!validate_camera(C, "COM", used_cams))
 			failed = TRUE
@@ -532,9 +529,6 @@
 	for(var/obj/machinery/camera/network/waste/C in world)
 		if(!validate_camera(C, "WST", used_cams))
 			failed = TRUE
-
-	// Restore
-	world.loop_checks = TRUE
 
 	if(failed)
 		TEST_FAIL("Cameras had incorrect prefix for their network")
