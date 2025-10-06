@@ -461,71 +461,71 @@
 	var/list/shown_areas = list()
 	for(var/obj/machinery/camera/network/command/C in world)
 		var/area/A = get_area(C)
-		if(!validate_camera(C, "COM", used_tags))
+		if(!validate_camera(C, "COM"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/research/C in world)
-		if(!validate_camera(C, "SCI", used_tags))
+		if(!validate_camera(C, "SCI"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/research_outpost/C in world)
-		if(!validate_camera(C, "SCI", used_tags))
+		if(!validate_camera(C, "SCI"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/medbay/C in world)
-		if(!validate_camera(C, "MED", used_tags))
+		if(!validate_camera(C, "MED"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/security/C in world)
-		if(!validate_camera(C, "SEC", used_tags))
+		if(!validate_camera(C, "SEC"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/prison/C in world)
-		if(!validate_camera(C, "SEC", used_tags))
+		if(!validate_camera(C, "SEC"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/civilian/C in world)
-		if(!validate_camera(C, "CIV", used_tags))
+		if(!validate_camera(C, "CIV"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/cargo/C in world)
-		if(!validate_camera(C, "CRG", used_tags))
+		if(!validate_camera(C, "CRG"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/mining/C in world)
-		if(!validate_camera(C, "MNG", used_tags))
+		if(!validate_camera(C, "MNG"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/engineering/C in world)
-		if(!validate_camera(C, "ENG", used_tags))
+		if(!validate_camera(C, "ENG"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/engine/C in world)
-		if(!validate_camera(C, "ENG", used_tags))
+		if(!validate_camera(C, "ENG"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/substations/C in world)
-		if(!validate_camera(C, "PWR", used_tags))
+		if(!validate_camera(C, "PWR"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/outside/C in world)
-		if(!validate_camera(C, "EXT", used_tags))
+		if(!validate_camera(C, "EXT"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/bunker/C in world)
-		if(!validate_camera(C, "BNK", used_tags))
+		if(!validate_camera(C, "BNK"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/foundations/C in world)
-		if(!validate_camera(C, "BLK", used_tags))
+		if(!validate_camera(C, "BLK"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/telecom/C in world)
-		if(!validate_camera(C, "TCM", used_tags))
+		if(!validate_camera(C, "TCM"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/waste/C in world)
-		if(!validate_camera(C, "WST", used_tags))
+		if(!validate_camera(C, "WST"))
 			failed = TRUE
 
 	if(failed)
@@ -540,5 +540,4 @@
 	if(copytext(C.c_tag,1,7) != "[req_suffix] - ")
 		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z] : [A]")
 		return FALSE
-	used_tags += C.c_tag
 	return TRUE
