@@ -14,7 +14,7 @@
 	// Grenade trapped map spawn
 	var/obj/item/grenade/G = locate() in loc
 	if(G)
-		G.forceMove(A) // Put into the door
+		G.forceMove(src) // Put into the door
 		AddComponent(/datum/component/grenadetrap,G)
 
 	// Maint breaks airlocks sometimes
