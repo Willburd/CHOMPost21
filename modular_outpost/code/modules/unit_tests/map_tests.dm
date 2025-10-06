@@ -461,7 +461,8 @@
 
 	var/list/shown_areas = list()
 	for(var/obj/machinery/camera/network/command/C in world)
-		if(!validate_camera(C, "CMD", used_tags))
+		var/area/A = get_area(C)
+		if(!validate_camera(C, "COM", used_tags))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/research/C in world)
@@ -532,7 +533,7 @@
 	if(C.c_tag in used_tags)
 		TEST_NOTICE(src, "Camera had already existing c_tag [C.c_tag]. Located at [T.x].[T.y].[T.z]")
 		return FALSE
-	if(copytext(C.c_tag,1,6) != "[req_suffix] - ")
+	if(copytext(C.c_tag,1,5) != "[req_suffix] - ")
 		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z]")
 		return FALSE
 	used_tags += C.c_tag
