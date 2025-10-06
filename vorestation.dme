@@ -5496,6 +5496,7 @@
 #include "modular_outpost\code\game\objects\items\weapons\storage\firstaid.dm"
 #include "modular_outpost\code\game\objects\items\weapons\tanks\tank_types.dm"
 #include "modular_outpost\code\game\objects\structures\atmospherepost.dm"
+#include "modular_outpost\code\game\objects\structures\blade_trap.dm"
 #include "modular_outpost\code\game\objects\structures\cliff.dm"
 #include "modular_outpost\code\game\objects\structures\elevator_warning.dm"
 #include "modular_outpost\code\game\objects\structures\extinguisher.dm"
