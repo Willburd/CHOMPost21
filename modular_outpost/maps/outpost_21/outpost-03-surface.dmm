@@ -65930,7 +65930,7 @@
 "rSV" = (
 /obj/structure/ladder,
 /obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge SMES"
+	c_tag = "PWR - Bridge SMES"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
@@ -83024,7 +83024,7 @@
 /obj/effect/floor_decal/corner/green/border{
 	dir = 1
 	},
-/obj/machinery/camera/network/civilian{
+/obj/machinery/camera/network/command{
 	c_tag = "COM - Bridge Access Hallway"
 	},
 /turf/simulated/floor/tiled/steel,

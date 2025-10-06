@@ -350,8 +350,7 @@
 /area/rnd/xenobiology/xenobioh)
 "aaJ" = (
 /obj/machinery/camera/network/research{
-	c_tag = "Secure Xenobiology Fore";
-	network = list("Research","Toxins Test Area")
+	c_tag = "SCI - Secure Xenobiology Fore"
 	},
 /obj/item/storage/box/monkeycubes,
 /obj/item/storage/box/monkeycubes,
@@ -22608,7 +22607,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/obj/machinery/camera/network/civilian{
+/obj/machinery/camera/network/command{
 	c_tag = "COM - Judge's Office"
 	},
 /turf/simulated/floor/wood,
@@ -24631,7 +24630,7 @@
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
 	},
-/obj/machinery/camera/network/civilian{
+/obj/machinery/camera/network/command{
 	c_tag = "COM - Courtroom"
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
