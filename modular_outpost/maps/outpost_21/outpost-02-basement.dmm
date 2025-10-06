@@ -9295,7 +9295,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch East";
 	dir = 8
 	},
@@ -21261,7 +21261,7 @@
 /area/engineering/atmos)
 "aMw" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "Atmospherics Tank - Mix";
+	c_tag = "ENG - Atmospherics Tank - Mix";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,

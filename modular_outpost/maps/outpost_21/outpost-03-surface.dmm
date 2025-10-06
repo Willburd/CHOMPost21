@@ -54471,7 +54471,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/camera/network/civilian{
-	c_tag = "BNK - Bunker Access";
+	c_tag = "CIV - Bunker Access";
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
