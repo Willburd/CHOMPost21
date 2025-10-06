@@ -5621,6 +5621,7 @@
 #include "modular_outpost\code\modules\power\confinement\confinement_beam.dm"
 #include "modular_outpost\code\modules\power\confinement\energy_beam.dm"
 #include "modular_outpost\code\modules\power\confinement\map_datum.dm"
+#include "modular_outpost\code\modules\projectiles\ammunition.dm"
 #include "modular_outpost\code\modules\projectiles\guns\launcher\confetti.dm"
 #include "modular_outpost\code\modules\random_map\diona.dm"
 #include "modular_outpost\code\modules\reagents\machinery\dispenser\cartridge_presets.dm"
