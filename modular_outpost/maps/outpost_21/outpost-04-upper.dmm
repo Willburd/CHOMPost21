@@ -4380,7 +4380,7 @@
 /obj/structure/closet/crate/hydroponics/prespawned,
 /obj/item/clothing/gloves/botanic_leather,
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenobotany lab";
+	c_tag = "SCI - Xenobotany Storage";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -4690,6 +4690,9 @@
 /obj/structure/ladder,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Arrivals Substation"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/arrivals)
@@ -28899,9 +28902,6 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/publicgarden)
 "nMr" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "PWR - Arrivals Substation"
-	},
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
@@ -45508,7 +45508,7 @@
 /area/rnd/research/roof_eva)
 "vPn" = (
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenobotany lab"
+	c_tag = "SCI - Xenobotany lab North"
 	},
 /obj/effect/floor_decal/corner/green{
 	dir = 5

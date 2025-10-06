@@ -832,7 +832,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Tram Aft";
+	c_tag = "CIV - Tram Fore";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,

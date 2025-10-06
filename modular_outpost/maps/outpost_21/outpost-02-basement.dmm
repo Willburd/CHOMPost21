@@ -20012,7 +20012,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Atmospherics"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/atmos)
 "aKm" = (
@@ -43091,7 +43093,9 @@
 /area/maintenance/incinerator)
 "bzx" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Incinerator Generator"
+	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
@@ -48293,10 +48297,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "bJV" = (
-/obj/machinery/camera/network/mining{
-	c_tag = "OPM - Mining Medical";
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
@@ -49834,15 +49834,15 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/camera/network/mining{
-	c_tag = "MNE - First Aid"
-	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 4;
 	pixel_y = 6
 	},
 /obj/item/storage/firstaid/adv{
 	pixel_y = 3
+	},
+/obj/machinery/camera/network/waste{
+	c_tag = "WST - First Aid"
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/wastedisposal/firstaid)
@@ -76481,7 +76481,7 @@
 "soc" = (
 /obj/effect/map_effect/interval/burnpit,
 /obj/machinery/camera/network/waste{
-	c_tag = "WST - Upper Incinerator";
+	c_tag = "WST - Incinerator Core";
 	dir = 1;
 	name = "Reinforced - Incinerator Camera";
 	pressure_resistance = 1000
@@ -80591,7 +80591,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/black/border,
 /obj/machinery/camera/network/civilian{
-	c_tag = "BNK - Bunker Hall West";
+	c_tag = "CIV - Bunker Hall West";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,

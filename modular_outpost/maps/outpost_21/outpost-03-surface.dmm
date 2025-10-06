@@ -3250,7 +3250,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Engineering"
+	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -9645,6 +9647,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
+"arA" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Tool Store Hallway";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "arB" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
@@ -9923,6 +9935,35 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
+"asg" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Medical Room";
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"ash" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Main Hall Central"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"asi" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Main Hall North East";
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "asp" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -12623,15 +12664,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Security"
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
 "bjW" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
-	},
-/obj/machinery/camera/network/substations{
-	dir = 8
 	},
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
@@ -13182,7 +13222,7 @@
 	dir = 5
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "EVA - Main Hall Break"
+	c_tag = "ENG - Main Hall Break"
 	},
 /obj/machinery/status_display{
 	layer = 4;
@@ -14043,13 +14083,14 @@
 /area/quartermaster/mining/firstaid)
 "bGx" = (
 /obj/structure/table/rack,
-/obj/machinery/camera/network/substations{
-	dir = 1
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/machinery/camera/network/command{
+	dir = 1;
+	c_tag = "COM - Backup Generator"
 	},
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/comgen)
 "bGU" = (
@@ -19802,15 +19843,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
-"dyn" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Medical Room"
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
 "dyp" = (
 /obj/machinery/mineral/processing_unit,
 /turf/simulated/floor/tiled,
@@ -23194,7 +23226,7 @@
 /area/muriki/cybstorage)
 "eEo" = (
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Med Tram Station Northwest";
+	c_tag = "CIV - Tram Station Stairwell";
 	dir = 4
 	},
 /turf/simulated/open,
@@ -32630,7 +32662,7 @@
 	pixel_y = 30
 	},
 /obj/machinery/camera/network/mining{
-	c_tag = "MNE - Ore Processing"
+	c_tag = "MNE - Ore Processing North"
 	},
 /obj/item/radio/intercom{
 	dir = 1;
@@ -34874,7 +34906,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Tool Store"
+	c_tag = "ENG - Tool Store North"
 	},
 /obj/item/extinguisher/mini,
 /obj/item/extinguisher/mini,
@@ -35247,7 +35279,7 @@
 "iqH" = (
 /obj/machinery/mech_recharger,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Tool Store";
+	c_tag = "ENG - Tool Store South";
 	dir = 1
 	},
 /obj/item/radio/intercom{
@@ -45805,7 +45837,7 @@
 /area/muriki/station/trawler_dock)
 "lyJ" = (
 /obj/machinery/camera/network/mining{
-	c_tag = "OPM - Mining Production Room";
+	c_tag = "MNE - Ore Processing South";
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown{
@@ -57747,7 +57779,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Evidence lockup";
+	c_tag = "SEC - Evidence lockup East";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -59763,7 +59795,8 @@
 	pixel_y = -32
 	},
 /obj/machinery/camera/network/civilian{
-	dir = 1
+	dir = 1;
+	c_tag = "CIV - Tram Station South East"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -60936,7 +60969,7 @@
 /area/muriki/tramstation/civ)
 "qnV" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Sci Southwest"
+	c_tag = "EXT - Civilian Bridge North"
 	},
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/muriki/grounds/sci)
@@ -63725,6 +63758,10 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
+/obj/machinery/camera/network/engineering{
+	dir = 4;
+	c_tag = "ENG - EVA Storage"
+	},
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/hardsuitstore)
 "rgQ" = (
@@ -65929,7 +65966,7 @@
 /area/hallway/primary/central_two)
 "rSV" = (
 /obj/structure/ladder,
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/substations{
 	c_tag = "PWR - Bridge SMES"
 	},
 /turf/simulated/floor/plating,
@@ -68173,6 +68210,10 @@
 	id_tag = "engdinger";
 	name = "Engineering Dinger";
 	pixel_x = -30
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Main Hall North West";
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -70980,7 +71021,8 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/camera/network/civilian{
-	dir = 1
+	dir = 1;
+	c_tag = "CIV - Tram Station South West"
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -71010,9 +71052,6 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
-	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Main Hall Central"
 	},
 /obj/structure/noticeboard/engineering{
 	pixel_y = 32
@@ -79821,7 +79860,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
-/obj/machinery/camera/network/civilian,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Tram Station North West"
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "wbC" = (
@@ -80418,7 +80459,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/camera/network/civilian,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Tram Station North East"
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "wjt" = (
@@ -83217,7 +83260,7 @@
 "xbE" = (
 /obj/machinery/camera/network/engineering{
 	dir = 8;
-	c_tag = "EVA - Main Hall Tech Storage"
+	c_tag = "ENG - Main Hall Tech Storage"
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -85040,10 +85083,6 @@
 /obj/machinery/sleeper{
 	dir = 8
 	},
-/obj/machinery/camera/network/mining{
-	c_tag = "OPM - Mining Medical";
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
@@ -85688,7 +85727,7 @@
 /area/medical/virology/quarantine_quarantine)
 "xRS" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Bridge South";
+	c_tag = "EXT - Bridge South East";
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
@@ -86324,7 +86363,7 @@
 	},
 /obj/effect/landmark/holiday_event_spawn,
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Evidence lockup"
+	c_tag = "SEC - Evidence lockup North"
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 2
@@ -107287,9 +107326,9 @@ qAc
 vvd
 meJ
 wQC
-dyn
+vYR
 dKF
-fmr
+asg
 qOH
 ili
 oNO
@@ -108430,7 +108469,7 @@ hrt
 cch
 xMx
 xjX
-cch
+arA
 hDs
 cch
 vAk
@@ -108583,7 +108622,7 @@ krN
 krN
 krN
 krN
-oWe
+ash
 ePc
 ukV
 uBz
@@ -111495,7 +111534,7 @@ kWn
 bUE
 yfd
 cch
-cch
+asi
 sut
 anA
 vbq

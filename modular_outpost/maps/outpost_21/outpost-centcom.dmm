@@ -1545,7 +1545,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Greater Force"
+	c_tag = "SEC - Greater Force Interior"
 	},
 /obj/machinery/button/remote/blast_door{
 	name = "Garage Door Opener";
@@ -2203,7 +2203,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Can Of Whoop Ass"
+	c_tag = "SEC - Can Of Whoop Ass Interior"
 	},
 /obj/machinery/button/remote/blast_door{
 	name = "Garage Door Opener";
@@ -2557,15 +2557,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/specialty/redspace)
-"bdF" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Can Of Whoop Ass"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vehicle_interior/heavyarmor_carrier_B)
 "bej" = (
 /obj/structure/bed/chair/bay/shuttle,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -99490,7 +99481,7 @@ aab
 aab
 aab
 auj
-bdF
+bFS
 bFS
 bFS
 auj
