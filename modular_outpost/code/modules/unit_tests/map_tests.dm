@@ -462,6 +462,11 @@
 		if(!validate_camera(C, "COM"))
 			failed = TRUE
 
+	for(var/obj/machinery/camera/network/ai_sat/C in world)
+		var/area/A = get_area(C)
+		if(!validate_camera(C, "AI"))
+			failed = TRUE
+
 	for(var/obj/machinery/camera/network/research/C in world)
 		if(!validate_camera(C, "SCI"))
 			failed = TRUE
@@ -535,7 +540,7 @@
 	if(!C.c_tag)
 		TEST_NOTICE(src, "Camera had null ctag. Located at [T.x].[T.y].[T.z] : [A]")
 		return FALSE
-	if(copytext(C.c_tag,1,7) != "[req_suffix] - ")
+	if(copytext(C.c_tag,1,length(req_suffix) + 4) != "[req_suffix] - ")
 		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z] : [A]")
 		return FALSE
 	return TRUE

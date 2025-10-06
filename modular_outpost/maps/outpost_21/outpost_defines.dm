@@ -55,7 +55,8 @@
 							NETWORK_OUTSIDE,
 							NETWORK_BUNKER,
 							NETWORK_FOUNDATIONS,
-							NETWORK_WASTE
+							NETWORK_WASTE,
+							NETWORK_AISAT
 							)
 	secondary_networks = list(
 							NETWORK_ERT,

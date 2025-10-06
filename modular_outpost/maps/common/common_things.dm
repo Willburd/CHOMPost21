@@ -12,6 +12,12 @@
 /obj/machinery/camera/network/waste
 	network = list(NETWORK_WASTE)
 
+/obj/machinery/camera/network/ai_sat
+	network = list(NETWORK_AISAT)
+
+/obj/machinery/camera/xray/ai_sat
+	network = list(NETWORK_AISAT)
+
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST
