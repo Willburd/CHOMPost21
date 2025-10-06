@@ -472,10 +472,6 @@
 		if(!validate_camera(C, "SCI", used_tags))
 			failed = TRUE
 
-	for(var/obj/machinery/camera/network/xenobio/C in world)
-		if(!validate_camera(C, "SCI", used_tags))
-			failed = TRUE
-
 	for(var/obj/machinery/camera/network/medbay/C in world)
 		if(!validate_camera(C, "MED", used_tags))
 			failed = TRUE
@@ -532,12 +528,12 @@
 		TEST_FAIL("Cameras had incorrect prefix for their network")
 
 /datum/unit_test/all_cameras_shall_respect_naming_conventions/proc/validate_camera(obj/machinery/camera/C, req_suffix, list/used_tags)
+	var/turf/T = get_turf(C)
 	if(C.c_tag in used_tags)
-		TEST_NOTICE(src, "Camera had already existing c_tag [c_tag]. Located at [T.x].[T.y].[T.z]")
+		TEST_NOTICE(src, "Camera had already existing c_tag [C.c_tag]. Located at [T.x].[T.y].[T.z]")
 		return FALSE
 	if(copytext(C.c_tag,1,6) != "[req_suffix] - ")
-		var/turf/T = get_turf(C)
 		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z]")
 		return FALSE
-	used_tags += c_tag
+	used_tags += C.c_tag
 	return TRUE
