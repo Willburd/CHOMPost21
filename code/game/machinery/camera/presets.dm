@@ -173,7 +173,7 @@ GLOBAL_LIST_INIT(engineering_networks, list(
 
 
 /obj/machinery/camera/all/command
-	network = list(NETWORK_COMMAND)
+	network = list(NETWORK_COMMAND, NETWORK_AISAT) // Outpost 21 edit - AI sat too
 
 /obj/machinery/camera/all/Initialize(mapload)
 	. = ..()
