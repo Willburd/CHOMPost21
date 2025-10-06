@@ -130,7 +130,7 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "ap" = (
 /obj/structure/lattice,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube Central"
 	},
 /turf/space,
@@ -632,7 +632,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Core North";
 	dir = 1
 	},
@@ -1509,7 +1509,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
 "dj" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube"
 	},
 /turf/simulated/floor/airless,
@@ -1581,7 +1581,7 @@
 /area/ai)
 "dA" = (
 /obj/machinery/hologram/holopad,
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Core South"
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites,
@@ -2231,7 +2231,7 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "fA" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - South turret"
 	},
 /turf/simulated/mineral/floor/vacuum,
@@ -3555,7 +3555,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "jN" = (
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Cyborg Station";
 	dir = 4
 	},
@@ -3612,7 +3612,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Solar Airlock"
 	},
 /obj/item/radio/intercom{
@@ -4507,7 +4507,7 @@
 	dir = 8;
 	pixel_x = -28
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Transit Tube Arrival";
 	dir = 4
 	},
@@ -4973,7 +4973,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "nV" = (
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Rec Room Port";
 	dir = 1
 	},
@@ -5294,7 +5294,7 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "pa" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - West turret";
 	dir = 8
 	},
@@ -6451,7 +6451,7 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
 "sJ" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Southwest turret";
 	dir = 8
 	},
@@ -6655,7 +6655,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Backup Generator"
 	},
 /obj/machinery/power/rtg/advanced,
@@ -6938,7 +6938,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
 "uq" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Scrubber Vent port";
 	dir = 4
 	},
@@ -9047,7 +9047,7 @@
 /area/ai_sat/core_external)
 "AM" = (
 /obj/structure/lattice,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Transition"
 	},
 /turf/space,
@@ -9638,7 +9638,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Exterior Arrival Hall";
 	dir = 4
 	},
@@ -9793,7 +9793,7 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Dg" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Fore Airlock";
 	dir = 1
 	},
@@ -10055,7 +10055,7 @@
 	pixel_y = -30;
 	dir = 1
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Airlock Air Supply";
 	dir = 1
 	},
@@ -10571,7 +10571,7 @@
 /obj/item/bedsheet/cosmosdouble{
 	icon_state = "dobulesheetcosmos"
 	},
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Rec Room Starboard";
 	dir = 1
 	},
@@ -11050,7 +11050,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "Ht" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Northwest turret";
 	dir = 1
 	},
@@ -11178,7 +11178,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Fore Airlock";
 	dir = 1
 	},
@@ -11772,7 +11772,7 @@
 	pixel_y = 25;
 	req_access = list(16)
 	},
-/obj/machinery/camera/xray/command{
+/obj/machinery/camera/xray/ai_sat{
 	c_tag = "AI - Core"
 	},
 /obj/machinery/ai_slipper,
@@ -12268,7 +12268,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
 "KE" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - North turret";
 	dir = 1
 	},
@@ -12875,7 +12875,7 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "MI" = (
 /obj/structure/lattice,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube Aft"
 	},
 /turf/space,
@@ -13017,7 +13017,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Air Supply";
 	dir = 1
 	},
@@ -14085,7 +14085,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
 "QG" = (
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Messaging Server"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
@@ -14369,7 +14369,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Solar entry"
 	},
 /obj/structure/extinguisher_cabinet{
@@ -15124,7 +15124,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "TW" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Northeast turret";
 	dir = 4
 	},
@@ -15536,7 +15536,7 @@
 /obj/machinery/computer/borgupload{
 	pixel_y = 3
 	},
-/obj/machinery/camera/motion/command{
+/obj/machinery/camera/motion/ai_sat{
 	c_tag = "AI - Upload Chamber"
 	},
 /turf/simulated/floor/greengrid,

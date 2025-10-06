@@ -292,7 +292,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "TRM - Starboard";
+	c_tag = "CIV - Tram Starboard";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -789,7 +789,7 @@
 /area/shuttle/tram)
 "bW" = (
 /obj/machinery/camera/network/civilian{
-	c_tag = "TRM - Aft";
+	c_tag = "CIV - Tram Aft";
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
@@ -832,7 +832,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "TRM - Aft";
+	c_tag = "CIV - Tram Fore";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -1045,7 +1045,7 @@
 "cD" = (
 /obj/structure/bed/chair/sofa/bench,
 /obj/machinery/camera/network/civilian{
-	c_tag = "TRM - Port"
+	c_tag = "CIV - Tram Port"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)

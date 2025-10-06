@@ -350,8 +350,7 @@
 /area/rnd/xenobiology/xenobioh)
 "aaJ" = (
 /obj/machinery/camera/network/research{
-	c_tag = "Secure Xenobiology Fore";
-	network = list("Research","Toxins Test Area")
+	c_tag = "SCI - Secure Xenobiology Fore"
 	},
 /obj/item/storage/box/monkeycubes,
 /obj/item/storage/box/monkeycubes,
@@ -2955,7 +2954,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Isolation Cell 1";
 	dir = 4
 	},
@@ -2983,7 +2982,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Isolation Cell 2";
 	dir = 4
 	},
@@ -3018,7 +3017,7 @@
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Isolation Cell 3";
 	dir = 4
 	},
@@ -4039,7 +4038,9 @@
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
 "ahQ" = (
-/obj/machinery/camera/network/research,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Threat Supression Valve"
+	},
 /obj/machinery/atmospherics/pipe/tank/oxygen,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
@@ -4687,7 +4688,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
 	},
-/obj/machinery/camera/network/research,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenobiology Threat Supression Pump"
+	},
 /obj/machinery/meter,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -8;
@@ -6042,7 +6045,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Northeast";
 	dir = 4
 	},
@@ -7211,7 +7214,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics East Acess"
+	c_tag = "ENG - Atmospherics East Acess"
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 7;
@@ -9292,7 +9295,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch East";
 	dir = 8
 	},
@@ -10102,7 +10105,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Hazardous Storage";
+	c_tag = "ENG - Atmospherics Hazardous Storage";
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
@@ -12113,7 +12116,7 @@
 "avL" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics East Storage";
+	c_tag = "ENG - Atmospherics East Storage";
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -12386,7 +12389,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "awe" = (
-/obj/machinery/camera/network/research_outpost{
+/obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarch Southeast";
 	dir = 4
 	},
@@ -13121,7 +13124,7 @@
 	pixel_x = 32
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Central";
+	c_tag = "ENG - Atmospherics Central";
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -16565,7 +16568,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Office";
+	c_tag = "ENG - Atmospherics Office";
 	dir = 8
 	},
 /obj/item/juke_remote{
@@ -20009,7 +20012,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Atmospherics"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/atmos)
 "aKm" = (
@@ -20088,7 +20093,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Hallway North";
+	c_tag = "ENG - Atmospherics Hallway North";
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
@@ -20945,6 +20950,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"aLV" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Bunker Cavern Access";
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/civ/east_access)
 "aLW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -21249,7 +21261,7 @@
 /area/engineering/atmos)
 "aMw" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "Atmospherics Tank - Mix";
+	c_tag = "ENG - Atmospherics Tank - Mix";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -22601,7 +22613,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/obj/machinery/camera/network/civilian{
+/obj/machinery/camera/network/command{
 	c_tag = "COM - Judge's Office"
 	},
 /turf/simulated/floor/wood,
@@ -24624,7 +24636,7 @@
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
 	},
-/obj/machinery/camera/network/civilian{
+/obj/machinery/camera/network/command{
 	c_tag = "COM - Courtroom"
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -42032,7 +42044,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Southwest";
 	dir = 1
 	},
@@ -42146,7 +42158,7 @@
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxK" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Gas Input";
 	dir = 1
 	},
@@ -42272,7 +42284,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Southeast";
 	dir = 1
 	},
@@ -43067,7 +43079,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Access";
 	dir = 8
 	},
@@ -43081,7 +43093,9 @@
 /area/maintenance/incinerator)
 "bzx" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Incinerator Generator"
+	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
@@ -47769,7 +47783,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Septic Lowerr";
 	dir = 8
 	},
@@ -48283,10 +48297,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "bJV" = (
-/obj/machinery/camera/network/mining{
-	c_tag = "OPM - Mining Medical";
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
@@ -49824,15 +49834,15 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/camera/network/cargo{
-	c_tag = "MNE - First Aid"
-	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 4;
 	pixel_y = 6
 	},
 /obj/item/storage/firstaid/adv{
 	pixel_y = 3
+	},
+/obj/machinery/camera/network/waste{
+	c_tag = "WST - First Aid"
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/wastedisposal/firstaid)
@@ -61599,12 +61609,9 @@
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
 "cnD" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - NorthWest Cavern Access";
-	dir = 1
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
@@ -61647,6 +61654,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/west_access)
 "cnJ" = (
@@ -62118,13 +62126,6 @@
 	dir = 4
 	},
 /obj/effect/landmark/event_spawn/maintpred,
-/turf/simulated/floor/tiled/dark/turfpack/muriki,
-/area/mine/explored/muriki/cave/civ/east_access)
-"cpe" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Southern Cavern Access";
-	dir = 5
-	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
 "cpf" = (
@@ -62914,7 +62915,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Western Cavern Access";
 	dir = 1
 	},
@@ -67333,7 +67334,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/meter,
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Northeast"
+	c_tag = "ENG - Atmospherics Northeast"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -68609,7 +68610,7 @@
 /area/engineering/mail)
 "jBH" = (
 /obj/machinery/portable_atmospherics/canister/nitrogen,
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Northwest"
 	},
 /turf/simulated/floor/plating,
@@ -68951,7 +68952,7 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "jSd" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram North"
 	},
 /turf/simulated/floor/plating,
@@ -71021,7 +71022,7 @@
 /turf/simulated/open/muriki,
 /area/muriki/crew/bunker)
 "mjC" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Northern Cavern Access";
 	dir = 8
 	},
@@ -71029,7 +71030,7 @@
 /area/mine/explored/muriki/cave/waste)
 "mjD" = (
 /obj/machinery/camera/network/engineering{
-	c_tag = "ATM - Atmospherics Northeast Storage";
+	c_tag = "ENG - Atmospherics Northeast Storage";
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -72838,7 +72839,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "oAY" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Lower Tram Northeast"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -76479,8 +76480,8 @@
 /area/security/tankstore)
 "soc" = (
 /obj/effect/map_effect/interval/burnpit,
-/obj/machinery/camera/network/engineering{
-	c_tag = "WST - Upper Incinerator";
+/obj/machinery/camera/network/waste{
+	c_tag = "WST - Incinerator Core";
 	dir = 1;
 	name = "Reinforced - Incinerator Camera";
 	pressure_resistance = 1000
@@ -76693,7 +76694,7 @@
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/maintenance/civ/east)
 "syZ" = (
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Wheel Of Shame";
 	dir = 1
 	},
@@ -78364,7 +78365,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Lower Stair";
 	dir = 8
 	},
@@ -80590,7 +80591,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/black/border,
 /obj/machinery/camera/network/civilian{
-	c_tag = "BNK - Bunker Hall West";
+	c_tag = "CIV - Bunker Hall West";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
@@ -139203,7 +139204,7 @@ aYn
 cpn
 cpi
 xMD
-cpe
+cpH
 cpc
 coX
 coR
@@ -139498,7 +139499,7 @@ ucq
 ucq
 lOq
 uBZ
-cpH
+aLV
 xMD
 ehN
 ceR
