@@ -451,3 +451,93 @@
 
 	if(failed)
 		TEST_FAIL("Cliffs illegally placed. Cliffs may not be placed on walls, or open space")
+
+
+/datum/unit_test/all_cameras_shall_respect_naming_conventions
+
+/datum/unit_test/all_cameras_shall_respect_naming_conventions/Run()
+	var/failed = FALSE
+	var/list/used_tags = list()
+
+	var/list/shown_areas = list()
+	for(var/obj/machinery/camera/network/command/C in world)
+		if(!validate_camera(C, "CMD", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/research/C in world)
+		if(!validate_camera(C, "SCI", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/research_outpost/C in world)
+		if(!validate_camera(C, "SCI", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/xenobio/C in world)
+		if(!validate_camera(C, "SCI", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/medbay/C in world)
+		if(!validate_camera(C, "MED", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/security/C in world)
+		if(!validate_camera(C, "SEC", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/prison/C in world)
+		if(!validate_camera(C, "SEC", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/civilian/C in world)
+		if(!validate_camera(C, "CIV", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/cargo/C in world)
+		if(!validate_camera(C, "CRG", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/mining/C in world)
+		if(!validate_camera(C, "MNG", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/engineering/C in world)
+		if(!validate_camera(C, "ENG", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/engine/C in world)
+		if(!validate_camera(C, "ENGINE", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/substations/C in world)
+		if(!validate_camera(C, "ENG", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/outside/C in world)
+		if(!validate_camera(C, "OUT", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/bunker/C in world)
+		if(!validate_camera(C, "BNK", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/foundations/C in world)
+		if(!validate_camera(C, "BLK", used_tags))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/telecom/C in world)
+		if(!validate_camera(C, "TCM", used_tags))
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("Cameras had incorrect prefix for their network")
+
+/datum/unit_test/all_cameras_shall_respect_naming_conventions/proc/validate_camera(obj/machinery/camera/C, req_suffix, list/used_tags)
+	if(C.c_tag in used_tags)
+		TEST_NOTICE(src, "Camera had already existing c_tag [c_tag]. Located at [T.x].[T.y].[T.z]")
+		return FALSE
+	if(copytext(C.c_tag,1,6) != "[req_suffix] - ")
+		var/turf/T = get_turf(C)
+		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z]")
+		return FALSE
+	used_tags += c_tag
+	return TRUE
