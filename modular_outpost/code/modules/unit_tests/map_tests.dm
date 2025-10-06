@@ -458,12 +458,10 @@
 	var/failed = FALSE
 
 	for(var/obj/machinery/camera/network/command/C in world)
-		var/area/A = get_area(C)
 		if(!validate_camera(C, "COM"))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/ai_sat/C in world)
-		var/area/A = get_area(C)
 		if(!validate_camera(C, "AI"))
 			failed = TRUE
 
