@@ -81,7 +81,6 @@
 				always_cut = prob(10)
 
 		// Add dna before damage, incase of gibbing
-		var/hp_before = target.health
 		if(ishuman(target) || isanimal(target))
 			add_blooddna(target.dna,target)
 		target.apply_damage( raw_damage * (is_hand ? 0.75 : 1), BRUTE, def_zone = target_limb, sharp = TRUE, edge = TRUE, used_weapon = src)
