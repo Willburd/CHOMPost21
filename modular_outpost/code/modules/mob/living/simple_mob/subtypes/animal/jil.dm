@@ -124,11 +124,6 @@
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
 
-	var/obj/structure/closet/C = locate( /obj/structure/closet, loc)
-	if(C && !C.opened)
-		// don't care about sizes, this will be funny when a jillioth is in a closet at map load
-		src.forceMove(C)
-
 /mob/living/simple_mob/vore/alienanimals/jil/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
 		return
