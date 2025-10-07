@@ -22,3 +22,12 @@
 /obj/item/ammo_magazine/ammo_box/examine(mob/user)
 	. = ..()
 	. += to_chat(user, span_notice("Control-click to randomize the order of the contents."))
+
+// For mapper stuff
+/obj/item/ammo_magazine/ammo_box/empty_shotty
+	name = "12g ammo box"
+	desc = "A box with space for 8 shotgun rounds"
+	icon_state = "slug"
+	caliber = "12g"
+	ammo_type = null
+	max_ammo = 8
