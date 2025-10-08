@@ -6,10 +6,11 @@
  */
 
 /obj/structure/blade_trap
-	name = "blade trap"
+	name = "bear slap"
 	gender = PLURAL
 	icon = 'modular_outpost/icons/obj/bladetrap.dmi'
 	icon_state = "bladetrap_1"
+	layer = 2.6
 	desc = "A mechanically activated blade trap. A single swing of this blade could cut bones made of steel."
 	anchored = TRUE
 	var/raw_damage = 35

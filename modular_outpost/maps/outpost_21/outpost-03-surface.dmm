@@ -26517,6 +26517,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/grenade/chem_grenade/cleaner,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cargomid)
 "fIR" = (

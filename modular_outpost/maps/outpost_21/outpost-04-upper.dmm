@@ -1624,6 +1624,37 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
+"adD" = (
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/structure/blade_trap,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
+"adE" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/structure/blade_trap,
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
+"adF" = (
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/crystal)
+"adG" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	oxygen = 0;
+	nitrogen = 0;
+	carbon_dioxide = 0;
+	methane = 250
+	},
+/area/mine/unexplored/muriki/mountaintopnorth)
+"adH" = (
+/turf/simulated/floor/gas_crack/methane,
+/area/mine/unexplored/muriki/mountaintopnorth)
 "adM" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -30818,7 +30849,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/blade_trap,
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "oHs" = (
@@ -32461,6 +32493,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/structure/blade_trap,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "pwK" = (
@@ -88464,8 +88498,8 @@ aCm
 mGC
 goV
 bPB
-uxs
-tWt
+adE
+adD
 qKV
 qKV
 hWT
@@ -95172,10 +95206,10 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+dGy
 tRP
 pqa
 bvn
@@ -95333,11 +95367,11 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+adG
+dGy
 tRP
 yeb
 iTk
@@ -95494,12 +95528,12 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+adG
+adG
+adG
 tRP
 tRP
 eBa
@@ -95656,13 +95690,13 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+adG
+adG
+adG
+adG
+adG
 tRP
 oCZ
 pat
@@ -95818,13 +95852,13 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+adG
+adG
+adH
+adG
+dGy
 tRP
 tsi
 pat
@@ -95980,13 +96014,13 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+adG
+adG
+adG
+dGy
 bzn
 qNH
 kUC
@@ -96143,8 +96177,8 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
+dGy
+dGy
 jad
 jad
 jad
@@ -109144,7 +109178,7 @@ bMv
 bMv
 bMv
 bMv
-mxz
+adF
 mxz
 bMv
 bMv
