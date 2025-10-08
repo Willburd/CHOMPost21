@@ -1655,6 +1655,32 @@
 "adH" = (
 /turf/simulated/floor/gas_crack/methane,
 /area/mine/unexplored/muriki/mountaintopnorth)
+"adI" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adJ" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adK" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Engineering East Airlock Roof";
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adL" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
 "adM" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1665,6 +1691,40 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/powercontrol)
+"adN" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adO" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Engineering West Airlock Roof";
+	dir = 8
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adP" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/power/tesla_coil/pre_mapped,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adQ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
 "aed" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
@@ -32669,14 +32729,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
-"pCq" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
-/obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
 "pCw" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 1
@@ -36710,11 +36762,6 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/gasstore)
-"rEL" = (
-/obj/structure/railing,
-/obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/cargo)
 "rEM" = (
 /turf/simulated/wall/r_wall,
 /area/teleporter/engineering)
@@ -68871,11 +68918,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-rBk
-rBk
+adP
+adL
+adL
+rtP
+adI
 rBk
 rBk
 rBk
@@ -69033,11 +69080,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-rBk
-rBk
+adQ
+uDM
+uDM
+uDM
+adJ
 rBk
 rBk
 rBk
@@ -69195,11 +69242,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-rBk
-rBk
+adQ
+uDM
+adN
+uDM
+sBa
 rBk
 rBk
 rBk
@@ -69356,12 +69403,12 @@ rBk
 rBk
 jVb
 rtP
-rtP
-qlS
-pCq
-rBk
-rBk
-rBk
+adL
+sRU
+uDM
+adO
+uDM
+sBa
 rBk
 rBk
 rBk
@@ -69517,9 +69564,9 @@ rBk
 rBk
 rBk
 qEV
-uDM
 ucX
-sRU
+uDM
+umR
 fri
 fri
 fri
@@ -69680,7 +69727,7 @@ mVx
 hXR
 dgT
 dgT
-dgT
+kYe
 gZO
 fri
 oUl
@@ -69705,7 +69752,7 @@ lEP
 lEP
 plg
 lEP
-rEL
+xPT
 rBk
 rBk
 rBk
@@ -69865,7 +69912,7 @@ oUl
 fri
 lEP
 rBX
-lEP
+qrY
 lEP
 xPT
 rBk
@@ -73896,7 +73943,7 @@ mqh
 mqh
 qoX
 uDM
-uDM
+adK
 sBa
 rBk
 rBk
@@ -95280,21 +95327,21 @@ lfc
 dcp
 eUb
 fJX
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
 lcK
 sXP
 lwn
