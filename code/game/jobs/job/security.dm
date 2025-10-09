@@ -174,7 +174,7 @@
 						No one is above the Law, not Security or Command."
 	alt_titles = list(JOB_ALT_PATROL_OFFICER = /datum/alt_title/patrol_officer, JOB_ALT_SECURITY_GUARD = /datum/alt_title/security_guard,
 						JOB_ALT_SECURITY_DEPUTY = /datum/alt_title/security_guard, JOB_ALT_JUNIOR_OFFICER = /datum/alt_title/junior_officer, JOB_ALT_SECURITY_CONTRACTOR = /datum/alt_title/security_contractor,
-						JOB_ALT_DETECTIVE = /datum/alt_title/detective ,JOB_ALT_INVESTIGATOR = /datum/alt_title/investigator, JOB_ALT_SECURITY_INSPECTOR = /datum/alt_title/security_inspector, JOB_ALT_FORENSIC_TECHNICIAN = /datum/alt_title/forensic_tech) // Outpost 21 edit - Detective is officer now
+						JOB_ALT_DETECTIVE = /datum/alt_title/detective ,JOB_ALT_INVESTIGATOR = /datum/alt_title/investigator, JOB_ALT_SECURITY_INSPECTOR = /datum/alt_title/security_inspector, JOB_ALT_FORENSIC_TECHNICIAN = /datum/alt_title/forensic_tech, JOB_ALT_LOSS_PREVENTION = /datum/alt_title/loss_prevention) // Outpost 21 edit - Detective is officer now
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 3)
 
@@ -199,3 +199,6 @@
 
 /datum/alt_title/security_contractor
 	title = JOB_ALT_SECURITY_CONTRACTOR
+
+/datum/alt_title/loss_prevention
+	title = JOB_ALT_LOSS_PREVENTION
