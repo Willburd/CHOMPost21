@@ -8926,8 +8926,8 @@
 	pixel_x = -32
 	},
 /obj/structure/table/rack,
-/obj/item/gun/energy/pulse_rifle,
 /obj/item/cell/device/weapon,
+/obj/item/gun/energy/gun/burst,
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
 "apj" = (
@@ -57159,8 +57159,7 @@
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Energy"
 	},
-/obj/item/gun/energy/pulse_rifle,
-/obj/item/gun/energy/pulse_rifle,
+/obj/item/gun/energy/lasercannon,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "oTO" = (
