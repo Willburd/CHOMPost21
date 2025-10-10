@@ -1,38 +1,38 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
 /turf/template_noop,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "c" = (
 /obj/structure/cliff{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "l" = (
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "n" = (
 /obj/structure/cliff/corner{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "u" = (
 /obj/structure/cliff{
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "w" = (
 /obj/structure/cliff_end{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "x" = (
 /obj/structure/cliff_end,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "z" = (
 /turf/template_noop,
 /area/template_noop)
@@ -41,68 +41,68 @@
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "C" = (
 /obj/structure/cliff{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "E" = (
 /turf/simulated/open/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "G" = (
 /obj/structure/cliff/corner{
 	dir = 9
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "H" = (
 /obj/structure/cliff_end{
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "N" = (
 /obj/structure/cliff{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "O" = (
 /obj/structure/cliff{
 	dir = 6
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "P" = (
 /obj/structure/cliff/corner{
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "U" = (
 /obj/structure/cliff/corner{
 	dir = 10
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "W" = (
 /obj/structure/cliff,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "X" = (
 /obj/structure/cliff{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 "Y" = (
 /obj/structure/cliff{
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/submap/outpost21/yard_generic)
+/area/submap/outpost21/yard_sinkhole)
 
 (1,1,1) = {"
 z
