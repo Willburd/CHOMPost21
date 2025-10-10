@@ -17,7 +17,6 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_CIVILIAN
 	economic_modifier = 2
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_cargo
 	title = JOB_OFFDUTY_CARGO
@@ -34,7 +33,6 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_CARGO
 	economic_modifier = 2
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_engineering
 	title = JOB_OFFDUTY_ENGINEER
@@ -51,7 +49,6 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_ENGINEERING
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_medical
 	title = JOB_OFFDUTY_MEDIC
@@ -68,7 +65,6 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_MEDICAL
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_science
 	title = JOB_OFFDUTY_SCIENTIST
@@ -85,7 +81,6 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_SCIENCE
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_security
 	title = JOB_OFFDUTY_OFFICER
@@ -102,7 +97,6 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_SECURITY
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_exploration
 	title = JOB_OFFDUTY_EXPLORER
@@ -119,4 +113,3 @@
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_EXPLORATION
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
