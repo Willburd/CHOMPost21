@@ -101,7 +101,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/outpost21/structure_generic/lostshipa)
 "eQ" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -253,7 +253,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/outpost21/structure_generic/lostshipa)
 "qs" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -496,7 +496,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/submap/outpost21/structure_generic/lostshipa)
 "Mv" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -645,7 +645,7 @@
 /turf/simulated/wall/rshull,
 /area/submap/outpost21/structure_generic/lostshipa)
 "VJ" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
