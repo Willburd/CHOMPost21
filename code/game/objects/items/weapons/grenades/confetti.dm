@@ -21,7 +21,7 @@
 
 /obj/item/grenade/confetti/detonate() //Find a good confetti firework or pop sound effect later
 	playsound(src.loc, 'sound/effects/snap.ogg', 50, 1, -3)
-	src.confetti_spread.set_up(10, 0, usr.loc)
+	src.confetti_spread.set_up(10, 0, src.loc) // Outpost 21 edit(port) - usr to src todo
 	spawn(0)
 		for(var/i = 1 to confetti_strength)
 			src.confetti_spread.start()
@@ -41,7 +41,7 @@
 
 /obj/item/grenade/confetti/party_ball/detonate() //Could condense this by making the sound a variable in the parent but I'm lazy.
 	playsound(src.loc, 'sound/effects/confetti_ball.ogg', 50, 1, -3)
-	src.confetti_spread.set_up(10, 0, usr.loc)
+	src.confetti_spread.set_up(10, 0, src.loc) // Outpost 21 edit(port) - usr to src todo
 	spawn(0)
 		for(var/i = 1 to confetti_strength)
 			src.confetti_spread.start()
