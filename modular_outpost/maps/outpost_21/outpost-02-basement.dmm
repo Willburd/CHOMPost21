@@ -1225,8 +1225,7 @@
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Secure Xenobiology Starboard";
-	dir = 4;
-	network = list("Research","Toxins Test Area")
+	dir = 4
 	},
 /obj/machinery/sparker{
 	id = "Xenobiofire";
@@ -1374,8 +1373,7 @@
 /obj/structure/table/rack/shelf,
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Secure Xenobiology Storage";
-	dir = 4;
-	network = list("Research","Toxins Test Area")
+	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
@@ -4098,8 +4096,7 @@
 /obj/effect/floor_decal/corner/purple/full,
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Hazardous Xenobio cleaning closet";
-	dir = 4;
-	network = list("Research","Toxins Test Area")
+	dir = 4
 	},
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/tiled/techfloor,
@@ -5320,8 +5317,7 @@
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenobiology Locker Room";
-	dir = 4;
-	network = list("Research","Toxins Test Area")
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/xenobio_storage)
@@ -8584,8 +8580,7 @@
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarchaeology Main Lab";
-	dir = 1;
-	network = list("Research","Toxins Test Area")
+	dir = 1
 	},
 /obj/item/laser_pointer/purple,
 /obj/item/laser_pointer/purple,
@@ -10355,8 +10350,7 @@
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenoarchaeology Spectrometry lab";
-	dir = 4;
-	network = list("Research","Toxins Test Area")
+	dir = 4
 	},
 /obj/machinery/firealarm{
 	dir = 8;
@@ -63453,8 +63447,7 @@
 	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenobio Shields";
-	dir = 1;
-	network = list("Research","Toxins Test Area")
+	dir = 1
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "Xenobiolock";
