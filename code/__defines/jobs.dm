@@ -56,6 +56,7 @@
 	#define JOB_ALT_SUPPLY_CHIEF "Supply Chief"
 	#define JOB_ALT_LOGISTICS_MANAGER "Logistics Manager"
 	#define JOB_ALT_CARGO_SUPERVISOR "Cargo Supervisor"
+	#define JOB_ALT_CHIEF_STEWARD "Chief Steward" // Outpost 21 addition
 
 #define JOB_PATHFINDER "Pathfinder" // was Pathfinder  //CHOMP explo keep
 	// Pathfinder alt titles
