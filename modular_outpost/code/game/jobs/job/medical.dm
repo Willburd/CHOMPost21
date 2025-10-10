@@ -13,8 +13,7 @@
 	access |= list(ACCESS_MEDICAL_EQUIP)
 	minimal_access -= list(ACCESS_RESEARCH)
 	minimal_access |= list(ACCESS_MEDICAL_EQUIP)
-	if(!alt_titles) alt_titles = list()
-	alt_titles |= list(JOB_ALT_GENE_THERAPIST = /datum/alt_title/genetherapy, JOB_ALT_SLEEVE_ENGINEER = /datum/alt_title/sleeveengineer)
+	alt_titles = list(JOB_ALT_GENE_THERAPIST = /datum/alt_title/genetherapy, JOB_ALT_SLEEVE_ENGINEER = /datum/alt_title/sleeveengineer) // TODO if geneticist gets alt titles change to |=
 
 
 /datum/job/psychiatrist/New()
