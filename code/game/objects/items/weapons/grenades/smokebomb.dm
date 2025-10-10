@@ -23,7 +23,7 @@
 
 /obj/item/grenade/smokebomb/detonate()
 	playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
-	src.smoke.set_up(10, 0, usr.loc)
+	src.smoke.set_up(10, 0, src.loc) // Outpost 21 edit(port) - usr to src todo
 	spawn(0)
 		for(var/i = 1 to smoke_strength)
 			src.smoke.start(smoke_color)

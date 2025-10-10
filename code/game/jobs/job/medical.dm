@@ -75,8 +75,8 @@
 						familiar with basic first aid, and a number of accompanying medications, and can generally save, if not cure, a majority of the \
 						patients they encounter."
 	alt_titles = list(JOB_ALT_PHYSICIAN = /datum/alt_title/physician, JOB_ALT_MEDICAL_PRACTITIONER = /datum/alt_title/medical_practitioner, JOB_ALT_SURGEON = /datum/alt_title/surgeon,
-						JOB_ALT_EMERGENCY_PHYSICIAN = /datum/alt_title/emergency_physician, JOB_ALT_NURSE = /datum/alt_title/nurse, JOB_ALT_ORDERLY = /datum/alt_title/orderly,
-						JOB_ALT_VIROLOGIST = /datum/alt_title/virologist, JOB_ALT_MEDICAL_CONTRACTOR = /datum/alt_title/medical_contractor, JOB_ALT_CORONER = /datum/alt_title/coroner, JOB_ALT_XENOSPECIALIST = /datum/alt_title/xenoanatomyspecialist) // Outpost 21 edit Xenospecialist
+							JOB_ALT_EMERGENCY_PHYSICIAN = /datum/alt_title/emergency_physician, JOB_ALT_NURSE = /datum/alt_title/nurse, JOB_ALT_ORDERLY = /datum/alt_title/orderly,
+						JOB_ALT_VIROLOGIST = /datum/alt_title/virologist, JOB_ALT_MEDICAL_CONTRACTOR = /datum/alt_title/medical_contractor, JOB_ALT_CORONER = /datum/alt_title/coroner)
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 3)
 
@@ -171,22 +171,20 @@
 /datum/job/geneticist
 	title = JOB_GENETICIST
 	flag = GENETICIST
-	departments = list(DEPARTMENT_MEDICAL) // Outpost 21 edit - Removed science
+	departments = list(DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH)
 	department_flag = MEDSCI
 	faction = FACTION_STATION
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER // Outpost 21 edit - Removed science
+	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER + " and " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#013D3B"
 	economic_modifier = 7
-	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_GENETICS, ACCESS_MEDICAL_EQUIP) //, ACCESS_RESEARCH) Outpost 21 edit - Removed science access. gave equip access
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_MEDICAL_EQUIP) //, ACCESS_RESEARCH) Outpost 21 edit - Removed science access. gave equip access
+	access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_GENETICS, ACCESS_RESEARCH)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_RESEARCH)
 
 	outfit_type = /decl/hierarchy/outfit/job/medical/geneticist
 	job_description = "A " + JOB_GENETICIST + " operates genetic manipulation equipment to repair any genetic defects encountered in crew, from cloning or radiation as examples. \
 						When required, geneticists have the skills to clone, and are the superior choice when available for doing so."
-
-	alt_titles = list(JOB_ALT_GENE_THERAPIST = /datum/alt_title/genetherapy, JOB_ALT_SLEEVE_ENGINEER = /datum/alt_title/sleeveengineer) // Outpost 21 addition - Alt titles for geneticist
 
 //////////////////////////////////
 //			Psychiatrist
@@ -203,8 +201,8 @@
 	economic_modifier = 5
 	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER
 	selection_color = "#013D3B"
-	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_PSYCHIATRIST, ACCESS_MEDICAL_EQUIP) // Outpost 21 edit - gave equip access
-	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_PSYCHIATRIST, ACCESS_MEDICAL_EQUIP) // Outpost 21 edit - gave equip access
+	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_PSYCHIATRIST)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_PSYCHIATRIST)
 	outfit_type = /decl/hierarchy/outfit/job/medical/psychiatrist
 	job_description = "A " + JOB_PSYCHIATRIST + " provides mental health services to crew members in need. They may also be called upon to determine whatever \
 					ails the mentally unwell, frequently under Security supervision. They understand the effects of various psychoactive drugs."

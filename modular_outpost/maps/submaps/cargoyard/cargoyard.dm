@@ -9,13 +9,19 @@
 #include "container_E.dmm"
 #include "container_F.dmm"
 #include "container_G.dmm"
+#include "container_H.dmm"
+#include "container_I.dmm"
 #include "path_A.dmm"
 #include "path_B.dmm"
+#include "den_A.dmm"
 #include "light_A.dmm"
 #include "light_B.dmm"
 #include "light_C.dmm"
 #include "largeruin_A.dmm"
 #include "simple_A.dmm"
+#include "sinkhole_A.dmm"
+#include "sinkhole_B.dmm"
+#include "pond_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/cargoyard
@@ -87,7 +93,15 @@
 	mappath = "modular_outpost/maps/submaps/cargoyard/container_H.dmm"
 	allow_duplicates = TRUE
 	cost = 5
+	discard_prob = 70
 
+/datum/map_template/outpost21/muriki/cargoyard/container_I
+	name = "Container Variant I"
+	desc = "Random container."
+	mappath = "modular_outpost/maps/submaps/cargoyard/container_I.dmm"
+	allow_duplicates = TRUE
+	cost = 5
+	discard_prob = 60
 
 /datum/map_template/outpost21/muriki/cargoyard/path_A
 	name = "Path Variant A"
@@ -129,6 +143,14 @@
 	discard_prob = 60
 	cost = 5
 
+/datum/map_template/outpost21/muriki/cargoyard/den_A
+	name = "Den Variant A"
+	desc = "Random creature den."
+	mappath = "modular_outpost/maps/submaps/cargoyard/den_A.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 70
+	cost = 5
+
 //////////////////////////////////////////////////////////////
 // Huge structures in the yard (usually one at a time...)
 
@@ -148,6 +170,30 @@
 	discard_prob = 60
 	cost = 30
 
+/datum/map_template/outpost21/muriki/cargoyard_huge/sinkhole_A
+	name = "Sinkhole Variant A"
+	desc = "Random place in the yard."
+	mappath = "modular_outpost/maps/submaps/cargoyard/sinkhole_A.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 60
+	cost = 20
+
+/datum/map_template/outpost21/muriki/cargoyard_huge/sinkhole_B
+	name = "Sinkhole Variant B"
+	desc = "Random place in the yard."
+	mappath = "modular_outpost/maps/submaps/cargoyard/sinkhole_B.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 60
+	cost = 20
+
+/datum/map_template/outpost21/muriki/cargoyard_huge/pond_A
+	name = "Pond Variant B"
+	desc = "Random place in the yard."
+	mappath = "modular_outpost/maps/submaps/cargoyard/pond_A.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 70
+	cost = 10
+
 //////////////////////////////////////////////////////////////
 // Area definitions
 /area/submap/outpost21/yard_generic
@@ -157,6 +203,14 @@
 	music = 'sound/ambience/ambiatm1.ogg'
 	ambience = AMBIENCE_FOREBODING
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
+
+/area/submap/outpost21/yard_sinkhole
+	name = "\improper Someplace in the Yard"
+	icon_state = "red2"
+	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
+	music = 'sound/ambience/ambiatm1.ogg'
+	ambience = AMBIENCE_FOREBODING
+	base_turf = /turf/simulated/open/muriki
 
 /area/submap/outpost21/yard_cargocontainer
 	name = "\improper Inside Cargo Container"

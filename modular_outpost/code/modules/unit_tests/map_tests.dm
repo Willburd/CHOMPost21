@@ -438,7 +438,6 @@
 /datum/unit_test/all_cliffs_shall_be_placed_on_floors/Run()
 	var/failed = FALSE
 
-	var/list/shown_areas = list()
 	for(var/obj/structure/cliff/C in world)
 		var/turf/T = get_turf(C)
 		var/area/A = get_area(C)
@@ -451,3 +450,141 @@
 
 	if(failed)
 		TEST_FAIL("Cliffs illegally placed. Cliffs may not be placed on walls, or open space")
+
+
+/datum/unit_test/all_cameras_shall_respect_naming_conventions
+
+/datum/unit_test/all_cameras_shall_respect_naming_conventions/Run()
+	var/failed = FALSE
+	var/list/used_cams = list()
+
+	for(var/obj/machinery/camera/network/command/C in world)
+		set background=1
+		if(!validate_camera(C, "COM", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/ai_sat/C in world)
+		set background=1
+		if(!validate_camera(C, "AI", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/research/C in world)
+		set background=1
+		if(!validate_camera(C, "SCI", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/research_outpost/C in world)
+		set background=1
+		if(!validate_camera(C, "TOX", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/medbay/C in world)
+		set background=1
+		if(!validate_camera(C, "MED", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/security/C in world)
+		set background=1
+		if(!validate_camera(C, "SEC", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/prison/C in world)
+		set background=1
+		if(!validate_camera(C, "SEC", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/civilian/C in world)
+		set background=1
+		if(!validate_camera(C, "CIV", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/cargo/C in world)
+		set background=1
+		if(!validate_camera(C, "CRG", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/mining/C in world)
+		set background=1
+		if(!validate_camera(C, "MNE", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/engineering/C in world)
+		set background=1
+		if(!validate_camera(C, "ENG", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/engine/C in world)
+		set background=1
+		if(!validate_camera(C, "ENG", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/substations/C in world)
+		set background=1
+		if(!validate_camera(C, "PWR", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/outside/C in world)
+		set background=1
+		if(!validate_camera(C, "EXT", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/bunker/C in world)
+		set background=1
+		if(!validate_camera(C, "BNK", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/foundations/C in world)
+		set background=1
+		if(!validate_camera(C, "BLK", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/telecom/C in world)
+		set background=1
+		if(!validate_camera(C, "TCM", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/waste/C in world)
+		set background=1
+		if(!validate_camera(C, "WST", used_cams))
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("Cameras had incorrect prefix for their network")
+
+/datum/unit_test/all_cameras_shall_respect_naming_conventions/proc/validate_camera(obj/machinery/camera/C, req_suffix, list/used_cams)
+	var/turf/T = get_turf(C)
+	var/area/A = get_turf(C)
+	if(!C.c_tag)
+		TEST_NOTICE(src, "Camera had null c_tag. Located at [T.x].[T.y].[T.z] : [A]")
+		return FALSE
+	if(C.c_tag in used_cams)
+		TEST_NOTICE(src, "Camera had already existing c_tag [C.c_tag]. Located at [T.x].[T.y].[T.z] : [A]")
+		return FALSE
+	if(copytext(C.c_tag,1,length(req_suffix) + 4) != "[req_suffix] - ")
+		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z] : [A]")
+		return FALSE
+	used_cams += list(C.c_tag)
+	return TRUE
+
+
+
+/datum/unit_test/all_freezing_airlocks_must_be_on_planet
+
+/datum/unit_test/all_freezing_airlocks_must_be_on_planet/Run()
+	var/failed = FALSE
+
+	for(var/obj/machinery/door/airlock/glass_external/freezable/F in world)
+		var/turf/T = get_turf(F)
+		var/area/A = get_area(F)
+		if(T.z > SSplanets.z_to_planet.len)
+			failed = TRUE
+			TEST_NOTICE(src, "Freezable airlock was not placed on a planet. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		var/datum/planet/P = SSplanets.z_to_planet[T.z]
+		if(!P)
+			failed = TRUE
+			TEST_NOTICE(src, "Freezable airlock was not placed on a planet. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+
+	if(failed)
+		TEST_FAIL("Freezable airlock was not placed on a planet")

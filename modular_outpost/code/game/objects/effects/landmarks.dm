@@ -255,6 +255,12 @@
 		A.electrify()
 		return
 
+	if(A && prob(4))
+		var/nade_path = pick(list(/obj/item/grenade/anti_photon, /obj/item/grenade/confetti, /obj/item/grenade/flashbang, /obj/item/grenade/smokebomb, /obj/item/grenade/concussion, /obj/item/grenade/empgrenade))
+		var/obj/item/grenade/G = new nade_path(A)
+		A.AddComponent(/datum/component/grenadetrap,G)
+		return
+
 	var/obj/structure/cable/C = locate() in T
 	if(C && prob(20) && T.is_plating())
 		C.fray()
@@ -299,7 +305,6 @@
 			M.deployed = TRUE
 			M.update_icon()
 			M.loc = src.loc
-
 
 
 

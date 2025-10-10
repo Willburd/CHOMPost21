@@ -1287,7 +1287,7 @@
 
 //cavern access
 /area/mine/explored/muriki/cave/sci/west_access
-	name = "\improper Research Cavern Access West"
+	name = "\improper Research Cavern Access North" // Was west
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "purple"
 /area/mine/explored/muriki/cave/sci/east_access
@@ -1338,6 +1338,14 @@
 
 /area/maintenance/civ/east
 	name = "\improper East Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/west
+	name = "\improper West Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/south
+	name = "\improper South Civilian Maintenance"
 	sound_env = TUNNEL_ENCLOSED
 
 //fillers
@@ -1614,10 +1622,18 @@
 
 /area/maintenance/wastedisposal
 	name = "\improper Waste Disposal Maintenance"
-	base_turf = /turf/simulated/open
 	icon_state = "maint_research_shuttle"
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = TRUE
+
+/area/maintenance/wastedisposal/firstaid
+	name = "\improper Waste Department First Aid Station"
+	icon_state = "medbay2"
+	sound_env = SMALL_ENCLOSED
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	flags = AREA_FIRE_SUPRESSION
 
 /area/maintenance/damaged_resleeverA
 	name = "\improper Collapsed Structure"

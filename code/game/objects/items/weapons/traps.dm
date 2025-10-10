@@ -200,6 +200,10 @@
 		health = round(material.integrity / 3)
 		name = (material.get_edge_damage() * force_divisor > 15) ?  "[material.display_name] razor wire" : "[material.display_name] [initial(name)]"
 
+/obj/item/material/barbedwire/start_active
+	icon_state = "barbedwire-out"
+	anchored = TRUE
+
 /obj/item/material/barbedwire/proc/can_use(mob/user)
 	return (user.IsAdvancedToolUser() && !issilicon(user) && !user.stat && !user.restrained())
 

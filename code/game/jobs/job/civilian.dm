@@ -13,9 +13,8 @@
 	total_positions = 3
 	spawn_positions = 3
 	pto_type = PTO_CIVILIAN
-	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - Hydroponics/Service is QM responsibility
-	selection_color = "#aaaaaa" // Outpost 21 edit - Show hydroponics as green, was "#515151"
-	sorting_order = 2 // Outpost 21 edit - Show hydroponics as green
+	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
+	selection_color = "#515151"
 	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN)
 	minimal_access = list(ACCESS_BAR)
 
@@ -52,11 +51,10 @@
 	total_positions = 2
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
-	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - Hydroponics/Service is QM responsibility
-	selection_color = "#cccccc" // Outpost 21 edit - Show hydroponics as green, was "#515151"
+	supervisors = "the "+ JOB_HEAD_OF_PERSONNEL
+	selection_color = "#515151"
 	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN)
 	minimal_access = list(ACCESS_KITCHEN)
-	sorting_order = 3 // Outpost 21 edit - Show hydroponics as green
 
 	outfit_type = /decl/hierarchy/outfit/job/service/chef
 	job_description = "A " + JOB_CHEF + " cooks food for the crew. They generally have permission to charge for food or deny service to unruly diners."
@@ -87,9 +85,8 @@
 	total_positions = 2
 	spawn_positions = 2
 	pto_type = PTO_CIVILIAN
-	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - Hydroponics/Service is QM responsibility
-	selection_color = "#aaaaaa" // Outpost 21 edit - Show hydroponics as green, was "#515151"
-	sorting_order = 2 // Outpost 21 edit - Show hydroponics as green
+	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
+	selection_color = "#515151"
 	access = list(ACCESS_HYDROPONICS, ACCESS_BAR, ACCESS_KITCHEN)
 	minimal_access = list(ACCESS_HYDROPONICS)
 
@@ -126,19 +123,15 @@
 //////////////////////////////////
 /datum/job/janitor
 	title = JOB_JANITOR
-	/* Outpost 21 edit - Janitor part of cargo
 	flag = JANITOR
 	departments = list(DEPARTMENT_CIVILIAN)
-	*/
-	flag = JANITOR
-	departments = list(DEPARTMENT_CARGO)
 	department_flag = CIVILIAN
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "the " + JOB_QUARTERMASTER // + JOB_HEAD_OF_PERSONNEL // Outpost 21 edit - We put jani in cargo
-	selection_color = "#7a4f33" // Outpost 21 edit - Janitor part of cargo
-	// selection_color = "#515151"
+	pto_type = PTO_CIVILIAN
+	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
+	selection_color = "#515151"
 	access = list(ACCESS_JANITOR, ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_JANITOR, ACCESS_MAINT_TUNNELS)
 
@@ -178,7 +171,6 @@
 	selection_color = "#515151"
 	access = list(ACCESS_LIBRARY, ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_LIBRARY)
-	sorting_order = 1 // Outpost 21 edit - Put visitor and intern next to eachother, move this up
 
 	outfit_type = /decl/hierarchy/outfit/job/librarian
 	job_description = "The " + JOB_LIBRARIAN + " curates the book selection in the Library, so the crew might enjoy it."
@@ -232,7 +224,7 @@
 /datum/job/lawyer
 	title = JOB_INTERNAL_AFFAIRS_AGENT
 	flag = LAWYER
-	departments = list(DEPARTMENT_COMMAND) // Outpost 21 edit - IAA is a commandstaff job here
+	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = CIVILIAN
 	faction = FACTION_STATION
 	total_positions = 2
@@ -240,8 +232,7 @@
 	pto_type = PTO_CIVILIAN
 	disallow_jobhop = TRUE
 	supervisors = "company officials and Corporate Regulations"
-	// selection_color = "#515151" // Outpost 21 edit - IAA is a commandstaff job here
-	selection_color = "#1D1D4F" // Outpost 21 edit - IAA is a commandstaff job here
+	selection_color = "#515151"
 	economic_modifier = 7
 	access = list(ACCESS_LAWYER, ACCESS_SEC_DOORS, ACCESS_MAINT_TUNNELS, ACCESS_HEADS)
 	minimal_access = list(ACCESS_LAWYER, ACCESS_SEC_DOORS, ACCESS_HEADS)
@@ -335,8 +326,7 @@
 						JOB_ALT_MAGICIAN = /datum/alt_title/magician, JOB_ALT_COMEDIAN = /datum/alt_title/comedian, JOB_ALT_TRAGEDIAN = /datum/alt_title/tragedian,
 						JOB_CLOWN = /datum/alt_title/clown, JOB_ALT_JESTER = /datum/alt_title/clown/jester,JOB_ALT_FOOL = /datum/alt_title/clown/fool,
 						JOB_MIME= /datum/alt_title/mime,JOB_ALT_PASEUR= /datum/alt_title/mime/poseur, //CHOMPEDIT: Adding clown + mime and their alts as alts of entertainer
-						JOB_ALT_ARTIST = /datum/alt_title/artist, JOB_ALT_FITNESS_INSTRUCTOR = /datum/alt_title/fitnessinstructor, JOB_ALT_GAME_MASTER = /datum/alt_title/game_master, JOB_ALT_RADIOHOST = /datum/alt_title/radiohost) // Outpost 21 edit - Radiohost
-
+						JOB_ALT_ARTIST = /datum/alt_title/artist, JOB_ALT_FITNESS_INSTRUCTOR = /datum/alt_title/fitnessinstructor, JOB_ALT_GAME_MASTER = /datum/alt_title/game_master)
 // Entertainer Alt Titles
 /datum/alt_title/actor
 	title = JOB_ALT_ACTOR
@@ -414,7 +404,8 @@
 						JOB_ALT_YOGA_TEACHER = /datum/alt_title/yoga_teacher, JOB_ALT_MASSEUSE = /datum/alt_title/masseuse, JOB_ALT_TRADESPERSON = /datum/alt_title/tradesperson,
 						JOB_ALT_STREAMER = /datum/alt_title/streamer, JOB_ALT_INFLUENCER = /datum/alt_title/influencer, JOB_ALT_PARANORMAL_INVESTIGATOR = /datum/alt_title/paranormal_investigator,
 						JOB_ALT_PERSONAL_SECRETARY = /datum/alt_title/personal_secretary, JOB_ALT_STYLIST = /datum/alt_title/stylist, JOB_ALT_FISHER = /datum/alt_title/fisher,
-						JOB_ALT_FORTUNE_TELLER = /datum/alt_title/fortune_teller, JOB_ALT_SPIRIT_HEALER = /datum/alt_title/spirit_healer)
+						JOB_ALT_FORTUNE_TELLER = /datum/alt_title/fortune_teller, JOB_ALT_SPIRIT_HEALER = /datum/alt_title/spirit_healer, JOB_ALT_EDUCATOR = /datum/alt_title/educator,
+						JOB_ALT_INSTRUCTOR = /datum/alt_title/instructor)
 
 /datum/alt_title/lawyer
 	title = JOB_ALT_LAWYER
@@ -500,3 +491,13 @@
 	title = JOB_ALT_SPIRIT_HEALER
 	title_blurb = "A " + JOB_ALT_SPIRIT_HEALER + " offers alternative forms of medicine. Rituals, magic rocks, seances... It totally works. What's that about placebo?"
 	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/spirit_healer
+
+/datum/alt_title/educator
+	title = JOB_ALT_EDUCATOR
+	title_blurb = "A " + JOB_ALT_EDUCATOR + " provides an education of some sort to the crew. Perhaps somebody coming in to teach a health and safety course, or teach about cultures?"
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/educator
+
+/datum/alt_title/instructor
+	title = JOB_ALT_INSTRUCTOR
+	title_blurb = "A " + JOB_ALT_INSTRUCTOR + " provides instructions on how to perform certain tasks, providing training for crew members in new skills."
+	title_outfit = /decl/hierarchy/outfit/job/assistant/entrepreneur/educator

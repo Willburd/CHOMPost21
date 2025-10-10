@@ -3,7 +3,6 @@
 	#include "outpost_defines.dm"
 	#include "outpost_presets.dm"
 	#include "outpost_areas.dm"
-	#include "outpost_jobs.dm"
 	#include "outpost_things.dm"
 	#include "job/outfits.dm"
 

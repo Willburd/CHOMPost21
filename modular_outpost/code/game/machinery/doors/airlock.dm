@@ -3,11 +3,19 @@
 
 /obj/machinery/door/airlock/Initialize(mapload, obj/structure/door_assembly/assembly)
 	. = ..()
+	if(!mapload)
+		return
 
 	// Airlock brace
-	var/obj/item/airlock_brace/B = locate(/obj/item/airlock_brace) in loc
+	var/obj/item/airlock_brace/B = locate() in loc
 	if(!brace && B)
 		B.lock_brace(src)
+
+	// Grenade trapped map spawn
+	var/obj/item/grenade/G = locate() in loc
+	if(G)
+		G.forceMove(src) // Put into the door
+		AddComponent(/datum/component/grenadetrap,G)
 
 	// Maint breaks airlocks sometimes
 	var/area/A = get_area(src)

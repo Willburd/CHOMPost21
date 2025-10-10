@@ -11,8 +11,8 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/camera/network/research/xenobio{
-	c_tag = "SCI - Phoronics Impact Blast"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Impact Blast"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/research/phoronics/bombrange)
@@ -1376,7 +1376,7 @@
 	},
 /obj/machinery/camera/network/substations{
 	dir = 1;
-	c_tag = "ENG - Substation Science"
+	c_tag = "PWR - Substation Science"
 	},
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor,
@@ -1605,6 +1605,16 @@
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/extrastore)
+"adB" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Phoronics";
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/phoronics)
 "adC" = (
 /obj/structure/bed/chair/bay/chair/padded/red/bignest,
 /obj/item/bedsheet/pillow/teal,
@@ -1614,6 +1624,63 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
+"adD" = (
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/structure/blade_trap,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
+"adE" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/structure/blade_trap,
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
+"adF" = (
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/crystal)
+"adG" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	oxygen = 0;
+	nitrogen = 0;
+	carbon_dioxide = 0;
+	methane = 250
+	},
+/area/mine/unexplored/muriki/mountaintopnorth)
+"adH" = (
+/turf/simulated/floor/gas_crack/methane,
+/area/mine/unexplored/muriki/mountaintopnorth)
+"adI" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adJ" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adK" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Engineering East Airlock Roof";
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adL" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
 "adM" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -1624,6 +1691,40 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/powercontrol)
+"adN" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adO" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Engineering West Airlock Roof";
+	dir = 8
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adP" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/power/tesla_coil/pre_mapped,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"adQ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
 "aed" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
@@ -4370,7 +4471,7 @@
 /obj/structure/closet/crate/hydroponics/prespawned,
 /obj/item/clothing/gloves/botanic_leather,
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenobotany lab";
+	c_tag = "SCI - Xenobotany Storage";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -4680,6 +4781,9 @@
 /obj/structure/ladder,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Arrivals Substation"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/arrivals)
@@ -5238,8 +5342,8 @@
 /obj/machinery/atmospherics/binary/pump{
 	name = "Fuel insert pump"
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Burn Chamber Entry";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Burn Chamber Entry";
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/cee{
@@ -5933,8 +6037,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
 "cgm" = (
-/obj/machinery/camera/network/research/xenobio{
-	c_tag = "SCI - Phoronics Impact North"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Impact North"
 	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
@@ -6902,8 +7006,8 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Main Hall Entry";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Main Hall Entry";
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple{
@@ -7456,7 +7560,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Exploration Prep Stairwell Upper"
 	},
 /turf/simulated/floor/tiled,
@@ -10608,7 +10712,9 @@
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
 	},
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Waste"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
 "ewJ" = (
@@ -12694,7 +12800,9 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Cargo"
+	},
 /turf/simulated/open,
 /area/maintenance/substation/cargo)
 "fAF" = (
@@ -13911,7 +14019,8 @@
 /area/muriki/rooftop/engineering)
 "gjn" = (
 /obj/machinery/camera/network/substations{
-	dir = 4
+	dir = 4;
+	c_tag = "PWR - Substation Virology"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/virology)
@@ -14793,8 +14902,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Main Hall West";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Main Hall West";
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple{
@@ -14964,8 +15073,8 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 9
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Burn Chamber East";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Burn Chamber East";
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple{
@@ -15685,8 +15794,8 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Main Hall Mid";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Main Hall Mid";
 	dir = 8
 	},
 /obj/machinery/ai_status_display{
@@ -18751,8 +18860,8 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Lobby";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Lobby";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
@@ -19317,8 +19426,8 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
 	dir = 8
 	},
-/obj/machinery/camera/network/research/xenobio{
-	c_tag = "SCI - Phoronics Impact Burn";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Impact Burn";
 	dir = 8
 	},
 /obj/machinery/sparker{
@@ -19509,7 +19618,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/evastore)
 "jbl" = (
-/obj/machinery/camera/network/substations,
+/obj/machinery/camera/network/substations{
+	c_tag = "PWR - Substation Civilian"
+	},
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
@@ -19621,7 +19732,7 @@
 	dir = 9
 	},
 /obj/structure/closet/secure_closet/sar,
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Exploration Prep";
 	dir = 4
 	},
@@ -20134,8 +20245,8 @@
 /area/maintenance/substation/phoronics)
 "jrn" = (
 /obj/structure/table/standard,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Launch Room"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Launch Room"
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -20352,8 +20463,8 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Cleaning Room"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Cleaning Room"
 	},
 /obj/machinery/floodlight,
 /obj/structure/extinguisher_cabinet{
@@ -27306,7 +27417,8 @@
 /area/muriki/bathroom/medupper)
 "mTY" = (
 /obj/machinery/camera/network/substations{
-	dir = 8
+	dir = 8;
+	c_tag = "PWR - Substation Medical"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
@@ -28496,8 +28608,8 @@
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/pools/pylorus)
 "nzJ" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Burn Chamber West";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Burn Chamber West";
 	dir = 4
 	},
 /obj/machinery/atmospherics/portables_connector{
@@ -28881,9 +28993,6 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/publicgarden)
 "nMr" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Arrivals Substation"
-	},
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
@@ -30800,7 +30909,8 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/blade_trap,
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "oHs" = (
@@ -32255,8 +32365,8 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Bridge South";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Bridge South";
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple{
@@ -32443,6 +32553,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/structure/blade_trap,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "pwK" = (
@@ -32617,14 +32729,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
-"pCq" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
-/obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
 "pCw" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 1
@@ -32878,7 +32982,7 @@
 "pHx" = (
 /obj/machinery/camera/network/substations{
 	dir = 1;
-	c_tag = "COM - Telecoms Substation"
+	c_tag = "PWR - Substation Telecoms"
 	},
 /obj/structure/table/standard,
 /obj/item/stock_parts/subspace/analyzer,
@@ -32934,8 +33038,8 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/med)
 "pIp" = (
-/obj/machinery/camera/network/research/xenobio{
-	c_tag = "SCI - Phoronics Impact South";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Impact South";
 	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
@@ -35081,8 +35185,8 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/security)
 "qPL" = (
-/obj/machinery/camera/network/research/xenobio{
-	c_tag = "SCI - Phoronics Impact Tunnel"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Impact Tunnel"
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -35225,7 +35329,7 @@
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
 	},
-/obj/machinery/camera/network/engineering{
+/obj/machinery/camera/network/waste{
 	c_tag = "WST - Incinerator Cooling Loop";
 	dir = 8
 	},
@@ -36658,11 +36762,6 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/gasstore)
-"rEL" = (
-/obj/structure/railing,
-/obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/cargo)
 "rEM" = (
 /turf/simulated/wall/r_wall,
 /area/teleporter/engineering)
@@ -38117,7 +38216,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/camera/network/cargo{
+/obj/machinery/camera/network/mining{
 	c_tag = "MNE - Exploration Defense Prep";
 	dir = 4
 	},
@@ -39138,8 +39237,8 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Break Room"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Break Room"
 	},
 /obj/machinery/alarm{
 	pixel_y = 26
@@ -41812,8 +41911,8 @@
 	},
 /area/chapel/main)
 "ubn" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Gas Storage"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Gas Storage"
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -44991,8 +45090,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Burn Chamber North"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Burn Chamber North"
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -45490,7 +45589,7 @@
 /area/rnd/research/roof_eva)
 "vPn" = (
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenobotany lab"
+	c_tag = "SCI - Xenobotany lab North"
 	},
 /obj/effect/floor_decal/corner/green{
 	dir = 5
@@ -46059,8 +46158,8 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/cargrecycle)
 "wdE" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Purge";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Purge";
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -48094,7 +48193,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
-/obj/machinery/camera/network/medbay{
+/obj/machinery/camera/network/command{
 	dir = 8;
 	c_tag = "COM - Medsec bridge central"
 	},
@@ -48181,8 +48280,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Main Hall East"
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Main Hall East"
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -48594,9 +48693,8 @@
 	pixel_x = -2
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "Xenobiology Surgery";
-	dir = 8;
-	network = list("Research","Miscellaneous Reseach")
+	c_tag = "SCI - Xenobiology Surgery";
+	dir = 8
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -49242,8 +49340,8 @@
 /area/crew_quarters/heads/cmo)
 "xKT" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Phoronics Bridge North";
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Bridge North";
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple{
@@ -68820,11 +68918,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-rBk
-rBk
+adP
+adL
+adL
+rtP
+adI
 rBk
 rBk
 rBk
@@ -68982,11 +69080,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-rBk
-rBk
+adQ
+uDM
+uDM
+uDM
+adJ
 rBk
 rBk
 rBk
@@ -69144,11 +69242,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-rBk
-rBk
+adQ
+uDM
+adN
+uDM
+sBa
 rBk
 rBk
 rBk
@@ -69305,12 +69403,12 @@ rBk
 rBk
 jVb
 rtP
-rtP
-qlS
-pCq
-rBk
-rBk
-rBk
+adL
+sRU
+uDM
+adO
+uDM
+sBa
 rBk
 rBk
 rBk
@@ -69466,9 +69564,9 @@ rBk
 rBk
 rBk
 qEV
-uDM
 ucX
-sRU
+uDM
+umR
 fri
 fri
 fri
@@ -69629,7 +69727,7 @@ mVx
 hXR
 dgT
 dgT
-dgT
+kYe
 gZO
 fri
 oUl
@@ -69654,7 +69752,7 @@ lEP
 lEP
 plg
 lEP
-rEL
+xPT
 rBk
 rBk
 rBk
@@ -69814,7 +69912,7 @@ oUl
 fri
 lEP
 rBX
-lEP
+qrY
 lEP
 xPT
 rBk
@@ -73845,7 +73943,7 @@ mqh
 mqh
 qoX
 uDM
-uDM
+adK
 sBa
 rBk
 rBk
@@ -88447,8 +88545,8 @@ aCm
 mGC
 goV
 bPB
-uxs
-tWt
+adE
+adD
 qKV
 qKV
 hWT
@@ -95155,10 +95253,10 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+dGy
 tRP
 pqa
 bvn
@@ -95229,21 +95327,21 @@ lfc
 dcp
 eUb
 fJX
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
-oHy
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
+iKs
 lcK
 sXP
 lwn
@@ -95316,11 +95414,11 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+adG
+dGy
 tRP
 yeb
 iTk
@@ -95477,12 +95575,12 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+adG
+adG
+adG
 tRP
 tRP
 eBa
@@ -95639,13 +95737,13 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+adG
+adG
+adG
+adG
+adG
 tRP
 oCZ
 pat
@@ -95801,13 +95899,13 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+adG
+adG
+adH
+adG
+dGy
 tRP
 tsi
 pat
@@ -95963,13 +96061,13 @@ vWq
 ovc
 ovc
 ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
-ovc
+dGy
+dGy
+dGy
+adG
+adG
+adG
+dGy
 bzn
 qNH
 kUC
@@ -96126,8 +96224,8 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
+dGy
+dGy
 jad
 jad
 jad
@@ -102291,7 +102389,7 @@ cKH
 orb
 bwG
 aRH
-orb
+adB
 rZE
 nux
 iII
@@ -109127,7 +109225,7 @@ bMv
 bMv
 bMv
 bMv
-mxz
+adF
 mxz
 bMv
 bMv

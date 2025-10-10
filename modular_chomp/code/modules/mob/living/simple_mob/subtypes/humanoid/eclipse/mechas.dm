@@ -23,6 +23,12 @@
 /mob/living/simple_mob/mechanical/mecha/eclipse/do_special_attack(atom/A)
 	bullet_heck(A, 3, 3)
 
+/mob/living/simple_mob/mechanical/mecha/eclipse/bullet_act(obj/item/projectile/P) //removal of E net cheese
+	if(P == /obj/item/projectile/beam/energy_net)
+		return
+	else
+		..()
+
 /datum/ai_holder/simple_mob/intentional/three_phases
 	use_astar = TRUE
 	wander = FALSE
@@ -580,7 +586,7 @@
 	vore_standing_too = TRUE
 	unacidable = TRUE
 
-	loot_list = list(/obj/item/projectile/energy/wp_shotgun  = 30,
+	loot_list = list(/obj/item/gun/energy/curse_tyrshotgun  = 30,
 		/obj/item/gun/energy/energyballchain  = 30,
 		/obj/item/tool/wirecutters/hybrid/alien  = 30,
 		/obj/item/tool/wrench/hybrid/alien  = 30,
@@ -588,7 +594,7 @@
 		/obj/item/tool/screwdriver/hybrid/alien  = 30,
 		/obj/item/pickaxe/diamonddrill/alien = 30,
 		/obj/item/melee/energy/sword/dualsaber = 30,
-		/obj/item/shield_projector/rectangle/automatic/tyrvault = 0.01,
+		/obj/item/shield_projector/rectangle/automatic/tyrbarrier = 1,
 		/obj/item/stock_parts/scanning_module/omni = 80,
 		/obj/item/stock_parts/micro_laser/omni = 80,
 		/obj/item/stock_parts/capacitor/omni = 80,
@@ -599,7 +605,8 @@
 		/obj/item/stock_parts/capacitor/hyper = 80,
 		/obj/item/stock_parts/manipulator/hyper = 80,
 		/obj/item/stock_parts/matter_bin/hyper = 80,
-		/obj/item/reagent_containers/food/snacks/meat = 100
+		/obj/item/reagent_containers/food/snacks/meat = 100,
+		/obj/item/melee/energy/tyr_sabre = 30
 		)
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chambera //poison boss
@@ -704,14 +711,14 @@
 	name = "experiment 7"
 	desc = "A strange furball gaurded by a transparent barrier."
 	specialattackprojectile = /obj/item/projectile/energy/eclipse/tyrjavelin
-	health = 400
-	maxHealth = 400 //shield mechanic
+	health = 450
+	maxHealth = 450 //shield mechanic
 	icon_state = "UPshield_boss"
 	icon_living = "UPshield_boss"
 	projectiletype = /obj/item/projectile/energy/eclipse/tyrjavelin
 	wreckage = /obj/item/prop/tyrlore/basicshield
-	var/fullshield = 300
-	var/shieldrage = 3
+	var/fullshield = 200
+	var/shieldrage = 200
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/chamberc/load_default_bellies()
 	. = ..()
@@ -728,7 +735,7 @@
 	if(fullshield > 0)
 		fullshield -= P.damage
 		if(P == /obj/item/projectile/ion)
-			fullshield = 0
+			fullshield -= 300
 			visible_message(span_boldwarning(span_orange("[P] breaks the shield!!.")))
 			icon_state = "shield_boss"
 		if(fullshield > 0)
@@ -738,10 +745,10 @@
 			icon_state = "shield_boss"
 	else
 		..()
-		shieldrage--
-		if(shieldrage == 0)
-			shieldrage = 3
-			fullshield = 300
+		shieldrage -= P.damage
+		if(shieldrage > 0)
+			shieldrage = 200
+			fullshield = 200
 			visible_message(span_boldwarning(span_orange("The shield reactivates!!.")))
 			icon_state = "UPshield_boss"
 
@@ -915,13 +922,8 @@
 	..()
 
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/massswarm/do_special_attack(atom/A)
-	rng_cycle = rand(1,2)
-	if(attackcycle == 1)
-		addtimer(CALLBACK(src, PROC_REF(bomb_chaos), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		addtimer(CALLBACK(src, PROC_REF(bomb_lines), A, rng_cycle), 2.5 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
+	for(var/i =1 to 3)
+		new /mob/living/simple_mob/mechanical/hivebot/nanoevent/bright_green/tyr(src.loc)
 
 /*
 /mob/living/simple_mob/mechanical/mecha/eclipse/tankyboss/finale //finale
