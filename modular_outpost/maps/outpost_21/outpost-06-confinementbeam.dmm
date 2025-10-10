@@ -14166,6 +14166,12 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "QR" = (
 /obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/gloves/yellow{
+	pixel_y = -9
+	},
+/obj/item/clothing/gloves/yellow{
+	pixel_y = -9
+	},
 /obj/item/pipe_dispenser,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
