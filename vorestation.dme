@@ -5533,6 +5533,7 @@
 #include "modular_outpost\code\modules\busy_space\organizations.dm"
 #include "modular_outpost\code\modules\catalogue\catalogue_data.dm"
 #include "modular_outpost\code\modules\client\preferences_spawnpoints.dm"
+#include "modular_outpost\code\modules\client\stored_item.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_cyberware.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_fluffitems.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_general.dm"
