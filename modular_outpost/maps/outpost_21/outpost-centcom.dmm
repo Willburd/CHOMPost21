@@ -368,6 +368,20 @@
 	icon_state = "plating"
 	},
 /area/centcom)
+"abp" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/janus,
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/specops)
+"abq" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/pulse_rifle,
+/obj/item/gun/energy/pulse_rifle,
+/obj/item/gun/energy/pulse_rifle,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "abu" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -64526,7 +64540,7 @@ yid
 fkn
 fkn
 lco
-fkn
+abq
 fkn
 fPz
 vjk
@@ -65511,7 +65525,7 @@ aBu
 cpp
 cpp
 kzR
-fVJ
+abp
 rah
 lHL
 dfx
