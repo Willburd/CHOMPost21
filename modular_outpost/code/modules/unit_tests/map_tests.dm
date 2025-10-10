@@ -565,3 +565,26 @@
 		return FALSE
 	used_cams += list(C.c_tag)
 	return TRUE
+
+
+
+/datum/unit_test/all_freezing_airlocks_must_be_on_planet
+
+/datum/unit_test/all_freezing_airlocks_must_be_on_planet/Run()
+	var/failed = FALSE
+
+	for(var/obj/machinery/door/airlock/glass_external/freezable/F in world)
+		var/turf/T = get_turf(F)
+		var/area/A = get_area(F)
+		if(T.z > SSplanets.z_to_planet.len)
+			failed = TRUE
+			TEST_NOTICE(src, "Freezable airlock was not placed on a planet. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		var/datum/planet/P = SSplanets.z_to_planet[T.z]
+		if(!P)
+			failed = TRUE
+			TEST_NOTICE(src, "Freezable airlock was not placed on a planet. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+
+	if(failed)
+		TEST_FAIL("Freezable airlock was not placed on a planet")
