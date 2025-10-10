@@ -10713,7 +10713,7 @@
 /area/engineering/atmos)
 "atp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/machinery/atmospherics/binary/pump{
+/obj/machinery/atmospherics/binary/volume_pump{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -13113,8 +13113,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "axr" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
@@ -20452,6 +20452,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/isolation_a)
+"aKY" = (
+/obj/machinery/atmospherics/binary/volume_pump{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "aKZ" = (
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 1
@@ -49497,6 +49503,10 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
+"bMl" = (
+/obj/machinery/atmospherics/binary/volume_pump,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "bMm" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -64433,16 +64443,10 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "dUh" = (
-/obj/machinery/atmospherics/omni/mixer{
-	active_power_usage = 1000;
-	power_rating = 1000;
-	tag_east = 2;
-	tag_north = 0.5;
-	tag_north_con = 1;
-	tag_south = 0.5;
-	tag_south_con = 1
-	},
 /obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/machinery/atmospherics/trinary/mixer/t_mixer{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -102205,7 +102209,7 @@ atn
 auq
 qWO
 aqm
-aqj
+aKY
 ang
 alP
 aAo
@@ -102681,7 +102685,7 @@ ahj
 aif
 ajf
 aif
-alR
+bMl
 anj
 aoT
 alR
@@ -102690,9 +102694,9 @@ ash
 asi
 aft
 aft
-att
+aft
 axr
-anl
+ads
 azu
 aAq
 att
@@ -103167,7 +103171,7 @@ ahl
 aig
 ajf
 xUS
-alR
+bMl
 ahi
 aur
 aqn
@@ -103977,7 +103981,7 @@ ahm
 aig
 ajl
 akr
-alR
+bMl
 ahi
 anj
 aqn
@@ -104787,7 +104791,7 @@ avK
 aig
 ajl
 akr
-alR
+bMl
 ahi
 aur
 aqo
