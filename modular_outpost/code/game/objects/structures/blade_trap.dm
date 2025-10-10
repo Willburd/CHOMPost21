@@ -20,6 +20,23 @@
 	icon_state = "bladetrap_0"
 	sprung = FALSE
 
+/obj/structure/blade_trap/attackby(obj/item/W, mob/user, attack_modifier, click_parameters)
+	if(W.has_tool_quality(TOOL_WRENCH))
+		playsound(src, W.usesound, 50, 1)
+		if(do_after(user, 12 SECONDS, target = src))
+			user.visible_message(
+				span_danger("[user] has disassembled \the [src]."),
+				span_notice("You disassemble \the [src]!")
+				)
+			sprung = TRUE
+			new /obj/item/blade_trap_kit(get_turf(src))
+			qdel(src)
+		else
+			// Slice off active hand
+			trigger( user, TRUE)
+		return
+	. = ..()
+
 /obj/structure/blade_trap/attack_hand(mob/user)
 	if(!sprung)
 		user.visible_message(
@@ -48,7 +65,7 @@
 
 		if(do_after(user, 9 SECONDS, target = src))
 			playsound(src, 'sound/machines/click.ogg', 50, 1)
-			sprung = TRUE
+			sprung = FALSE // rearmed
 			update_icon()
 
 /obj/structure/blade_trap/proc/trigger(mob/living/target, is_hand)
@@ -84,7 +101,10 @@
 		// Add dna before damage, incase of gibbing
 		if(ishuman(target) || isanimal(target))
 			add_blooddna(target.dna,target)
-		target.apply_damage( raw_damage * (is_hand ? 0.75 : 1), BRUTE, def_zone = target_limb, sharp = TRUE, edge = TRUE, used_weapon = src)
+		var/damage = raw_damage * (is_hand ? 0.75 : 1)
+		if(isanimal(target)) // Cause mobs lack limbs to remove
+			damage *= 2
+		target.apply_damage( damage, BRUTE, def_zone = target_limb, sharp = TRUE, edge = TRUE, used_weapon = src)
 		target.Stun(10)
 		target.Weaken(8)
 		if(ishuman(target))
@@ -114,3 +134,26 @@
 		var/image/bloody = image(icon, "[icon_state]b")
 		bloody.color = blood_color ? blood_color : COLOR_BLOOD_HUMAN
 		add_overlay(bloody)
+
+
+// Constructable item
+/obj/item/blade_trap_kit
+	name = "bear slap assembly kit"
+	gender = PLURAL
+	icon = 'modular_outpost/icons/obj/bladetrap.dmi'
+	icon_state = "bladetrap_item"
+	desc = "A mechanically activated blade trap kit. Can be assembled into a lethal trap."
+	w_class = ITEMSIZE_LARGE
+
+/obj/item/blade_trap_kit/attack_self(mob/user)
+	. = ..()
+	user.visible_message(
+		span_danger("[user] starts to construct \the [src]."),
+		span_notice("You start constructing \the [src]!")
+		)
+	if(do_after(user, 10 SECONDS, target = src))
+		playsound(src, 'sound/machines/click.ogg', 50, 1)
+		playsound(src, 'sound/items/drop/knife.ogg', 80, 1)
+		var/obj/structure/blade_trap/BB = new(get_turf(src))
+		BB.add_fingerprint(user) // for logging
+		qdel(src)
