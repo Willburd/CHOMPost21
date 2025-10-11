@@ -31,7 +31,7 @@
 			sprung = TRUE
 			new /obj/item/blade_trap_kit(get_turf(src))
 			qdel(src)
-		else
+		else if(!sprung)
 			// Slice off active hand
 			trigger( user, TRUE)
 		return
