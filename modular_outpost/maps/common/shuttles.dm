@@ -762,12 +762,14 @@
 	landmark_tag = "outpost_landing_pad"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/grounds/shutt
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/engineering
 	name = "ES Outpost 21 (Near Engineering)"
 	landmark_tag = "outpost_engineering_pad"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/mine/explored/muriki/surface
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/prospector_port
 	name = "Prospector (Far-Port Dock)"
@@ -793,24 +795,28 @@
 	landmark_tag = "orbitalyard_north"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_south
 	name = "Reclaimation Yard (South)"
 	landmark_tag = "orbitalyard_south"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_east
 	name = "Reclaimation Yard (East)"
 	landmark_tag = "orbitalyard_east"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_west
 	name = "Reclaimation Yard (West)"
 	landmark_tag = "orbitalyard_west"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -886,7 +892,7 @@
 	name = "Crash - PTL"
 	landmark_tag = "crash_ptl"
 	base_turf = /turf/space
-	base_area = /area/space
+	base_area = /area/offworld/confinementbeam/exterior
 
 /obj/effect/shuttle_landmark/premade/generic/crash_ptl/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -897,7 +903,7 @@
 	name = "Crash - PTL Engine South"
 	landmark_tag = "crash_ptl_enginesouth"
 	base_turf = /turf/space
-	base_area = /area/space
+	base_area = /area/offworld/confinementbeam/exterior
 
 /obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginesouth/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -908,7 +914,7 @@
 	name = "Crash - PTL Engine North"
 	landmark_tag = "crash_ptl_enginenorth"
 	base_turf = /turf/space
-	base_area = /area/space
+	base_area = /area/offworld/confinementbeam/exterior
 
 /obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginenorth/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -919,7 +925,7 @@
 	name = "Crash - Recyard Basic"
 	landmark_tag = "crash_rec"
 	base_turf = /turf/space
-	base_area = /area/space
+	base_area = /area/offworld/asteroidyard/external
 
 /obj/effect/shuttle_landmark/premade/generic/crash_rec/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
@@ -930,7 +936,7 @@
 	name = "Crash - Recyard TrawlerBad"
 	landmark_tag = "crash_rec_trawlerbad"
 	base_turf = /turf/space
-	base_area = /area/space
+	base_area = /area/offworld/asteroidyard/external
 
 /obj/effect/shuttle_landmark/premade/generic/crash_rec_trawlerbad/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
