@@ -940,7 +940,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
 "bZ" = (
-/obj/machinery/atmospherics/binary/passive_gate{
+/obj/machinery/atmospherics/binary/passive_gate/on{
 	dir = 4
 	},
 /obj/effect/catwalk_plated,

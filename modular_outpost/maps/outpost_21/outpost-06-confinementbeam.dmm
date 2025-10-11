@@ -10388,7 +10388,7 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "Fo" = (
-/obj/machinery/atmospherics/binary/passive_gate{
+/obj/machinery/atmospherics/binary/passive_gate/on{
 	dir = 4
 	},
 /obj/effect/catwalk_plated,
