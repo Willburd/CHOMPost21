@@ -670,6 +670,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "bv" = (
@@ -1119,7 +1120,7 @@
 /obj/machinery/meter{
 	name = "Airlock Feed"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "ct" = (
 /obj/effect/floor_decal/corner/orange{
@@ -1376,6 +1377,10 @@
 /obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"cT" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginesouth,
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "cU" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -1388,6 +1393,10 @@
 "cV" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/confinement_beam)
+"cW" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/atmos)
 "cX" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -1475,6 +1484,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/solar_control)
+"dc" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginenorth,
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "de" = (
 /obj/structure/bed/chair/sofa/corp/left{
 	dir = 8
@@ -4015,7 +4028,10 @@
 /obj/machinery/light_switch/breaker{
 	pixel_y = -32
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "lf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
@@ -10372,10 +10388,10 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "Fo" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	name = "Airlock Resupply Pump"
+/obj/machinery/atmospherics/binary/passive_gate{
+	dir = 4
 	},
+/obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "Fq" = (
@@ -12384,7 +12400,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "KP" = (
 /obj/effect/floor_decal/borderfloor,
@@ -12398,10 +12414,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
-"KQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
 "KS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -15160,21 +15172,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
-"Uc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
 "Ud" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17002,9 +16999,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
-"ZQ" = (
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
 "ZS" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
@@ -40162,8 +40156,8 @@ Yg
 WI
 yx
 Jl
-ZQ
-ZQ
+cr
+cr
 Fo
 wt
 yK
@@ -40325,7 +40319,7 @@ zy
 Ba
 QZ
 HY
-KQ
+HY
 cs
 ko
 hK
@@ -40814,7 +40808,7 @@ vq
 UZ
 PV
 mJ
-Uc
+yK
 oH
 sO
 ze
@@ -46942,7 +46936,7 @@ Po
 Po
 Po
 Po
-Po
+dc
 Po
 rW
 rc
@@ -46981,7 +46975,7 @@ Po
 Po
 Po
 Po
-Po
+cT
 Po
 Po
 Po
@@ -53283,7 +53277,7 @@ GE
 kv
 iF
 SD
-ca
+cW
 xi
 KB
 tf
