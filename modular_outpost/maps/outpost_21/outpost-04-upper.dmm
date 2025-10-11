@@ -1626,14 +1626,12 @@
 /area/crew_quarters/medbreak)
 "adD" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
-/obj/structure/blade_trap,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "adE" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
-/obj/structure/blade_trap,
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
@@ -1725,6 +1723,23 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"adR" = (
+/obj/structure/table/rack/shelf,
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
 "aed" = (
 /obj/structure/bed/chair/wood{
 	dir = 1
@@ -2925,11 +2940,6 @@
 "aGR" = (
 /turf/simulated/floor/wood/alt,
 /area/mine/unexplored/muriki/mountaintopnorth)
-"aGZ" = (
-/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
-	dir = 1
-	},
-/area/muriki/processor/pools/pylorus)
 "aHq" = (
 /obj/structure/table/glass,
 /obj/structure/window/reinforced,
@@ -3983,11 +3993,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
-"biH" = (
-/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
-	dir = 5
-	},
-/area/muriki/processor/pools/pylorus)
 "biZ" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -9459,11 +9464,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/chapel/main)
-"dQI" = (
-/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
-	dir = 9
-	},
-/area/muriki/processor/pools/pylorus)
 "dRl" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -10119,11 +10119,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mining/expl)
-"egD" = (
-/turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki{
-	dir = 4
-	},
-/area/muriki/processor/pools/pylorus)
 "egE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -16632,11 +16627,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
-"hEr" = (
-/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
-	dir = 6
-	},
-/area/muriki/processor/pools/pylorus)
 "hEz" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -18496,9 +18486,6 @@
 	},
 /turf/simulated/wall/r_wall,
 /area/teleporter/engineering)
-"iBK" = (
-/turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki,
-/area/muriki/processor/pools/pylorus)
 "iBW" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -19904,11 +19891,6 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/civilian)
-"jhH" = (
-/turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki{
-	dir = 1
-	},
-/area/muriki/processor/pools/pylorus)
 "jig" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -29841,9 +29823,6 @@
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/resleeving)
-"ohP" = (
-/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki,
-/area/muriki/processor/pools/pylorus)
 "ohQ" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/cable/green{
@@ -30909,7 +30888,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/blade_trap,
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
@@ -32554,7 +32532,6 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
-/obj/structure/blade_trap,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "pwK" = (
@@ -32565,7 +32542,7 @@
 /area/rnd/misc_lab)
 "pwY" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
-/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/pylorus)
 "pxi" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -35508,9 +35485,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "qYo" = (
-/turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki{
-	dir = 8
-	},
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/pylorus)
 "qYK" = (
 /obj/structure/table/standard,
@@ -43861,11 +43836,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/cargo)
-"uVf" = (
-/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
-	dir = 4
-	},
-/area/muriki/processor/pools/pylorus)
 "uVk" = (
 /obj/structure/sign/yessmoking_1{
 	pixel_y = -32
@@ -46889,9 +46859,6 @@
 /obj/machinery/smart_centrifuge,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
-"wzK" = (
-/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
-/area/muriki/processor/pools/pylorus)
 "wzT" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -47819,11 +47786,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
-"wZo" = (
-/turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
-	dir = 10
-	},
-/area/muriki/processor/pools/pylorus)
 "wZt" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_one_access = list(1)
@@ -50121,7 +50083,7 @@
 /area/rnd/entry_aux)
 "yks" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
-/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/pylorus)
 "ykx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -50544,10 +50506,10 @@ ssD
 ssD
 ssD
 ssD
-wzK
-wzK
-wzK
-wzK
+fqq
+fqq
+qYo
+qYo
 ssD
 ssD
 ssD
@@ -50705,14 +50667,14 @@ ssD
 ssD
 ssD
 ssD
-ohP
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
+fqq
+fqq
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 ssD
 ssD
 ssD
@@ -50867,15 +50829,15 @@ fqq
 fqq
 fqq
 fqq
-ohP
-wzK
-wzK
+fqq
+qYo
+qYo
 yks
-wzK
-wzK
-wzK
-wzK
-aGZ
+qYo
+qYo
+qYo
+qYo
+qYo
 fqq
 fqq
 fqq
@@ -51029,14 +50991,14 @@ lqY
 lqY
 lqY
 fqq
-jhH
-wZo
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
+fqq
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 ssD
 fqq
 gNR
@@ -51192,13 +51154,13 @@ lqY
 lqY
 fqq
 fqq
-ohP
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 ssD
 fqq
 fqq
@@ -51354,13 +51316,13 @@ lqY
 lqY
 lqY
 fqq
-ohP
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 ssD
 ssD
 fqq
@@ -51516,15 +51478,15 @@ lqY
 lqY
 fqq
 fqq
-ohP
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-aGZ
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 fqq
 fqq
 ssD
@@ -51677,16 +51639,16 @@ fqq
 fqq
 fqq
 fqq
-iBK
-hEr
-wzK
-wzK
-wzK
+fqq
+qYo
+qYo
+qYo
+qYo
 pwY
-wzK
-wzK
-wzK
-aGZ
+qYo
+qYo
+qYo
+qYo
 gcn
 ivn
 gcn
@@ -51839,16 +51801,16 @@ ssD
 ssD
 fqq
 ssD
-ohP
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-biH
+fqq
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 qYo
 fqq
 fqq
@@ -52001,17 +51963,17 @@ ssD
 gcn
 tMH
 gcn
-ohP
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-biH
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 qYo
 fqq
 nzI
@@ -52163,18 +52125,18 @@ ssD
 ssD
 nzI
 ssD
-ohP
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 yks
-wzK
-wzK
-aGZ
+qYo
+qYo
+qYo
 fqq
 ssD
 cgR
@@ -52327,16 +52289,16 @@ fqq
 fqq
 ssD
 yks
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-dQI
-egD
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 fqq
 ssD
 cgR
@@ -52488,16 +52450,16 @@ hxn
 ssD
 fqq
 fqq
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-aGZ
+fqq
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 fqq
 ssD
 fqq
@@ -52650,16 +52612,16 @@ hxn
 ssD
 ssD
 fqq
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-wzK
-dQI
-egD
+fqq
+fqq
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
+qYo
 fqq
 ssD
 cgR
@@ -52813,14 +52775,14 @@ ssD
 gcn
 ivn
 gcn
-wzK
-wzK
-wzK
-dQI
-uVf
-uVf
+fqq
+fqq
+fqq
+qYo
+qYo
+qYo
 gcn
-egD
+qYo
 ssD
 fqq
 ssD
@@ -88062,7 +88024,7 @@ vjH
 hkh
 uFM
 avW
-skf
+adR
 skf
 sZc
 iUe

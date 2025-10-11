@@ -26,6 +26,8 @@
 	//does it use docking codes?
 	var/use_docking_codes = TRUE
 
+	var/list/local_crash_sites // Outpost 21 edit(port) - Crash sites unique to this destination
+
 /obj/effect/shuttle_landmark/Initialize(mapload)
 	. = ..()
 	if(docking_controller)

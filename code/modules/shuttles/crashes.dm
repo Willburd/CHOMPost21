@@ -32,8 +32,21 @@
 // Actually crash the shuttle
 /datum/shuttle/proc/do_crash(var/obj/effect/shuttle_landmark/intended_destination)
 	// Choose the target
-	// Outpost 21 edit begin - Ensure we don't clobber ourselves when we crash
-	var/list/discard_list = crash_locations.Copy()
+
+	// Outpost 21 edit begin - Ensure we don't clobber ourselves when we crash, and Crash sites unique to this destination.
+	var/list/discard_list = list()
+	if(intended_destination)
+		// Use local crash sites!
+		for(var/location_tag in intended_destination.local_crash_sites)
+			var/obj/effect/shuttle_landmark/L = SSshuttles.get_landmark(location_tag)
+			if(L)
+				discard_list += L
+
+	// Use shuttle base crash sites too
+	if(crash_locations)
+		discard_list += crash_locations
+
+	// Try to do find a site!
 	var/obj/effect/shuttle_landmark/target = pick(discard_list)
 	while(discard_list.len)
 		var/turf/T = get_turf(target)
@@ -44,10 +57,10 @@
 		// Remove offending one and try again
 		discard_list -= target
 		if(discard_list.len <= 0) // Giveup
-			target = pick(crash_locations)
+			target = intended_destination // If all else fails crash at our landing site
 			break
 		target = pick(discard_list)
-	// Outpost 21 edit end
+
 	ASSERT(istype(target))
 
 	// Blow up the target area?

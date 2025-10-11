@@ -4027,6 +4027,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/structure/sign/securearea{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "afZ" = (
@@ -15859,10 +15862,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/light_switch{
-	pixel_x = -29;
-	pixel_y = 28
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -15871,6 +15870,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24;
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
@@ -48487,10 +48490,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/eva)
-"mgA" = (
-/obj/structure/sign/securearea,
-/turf/simulated/wall/r_wall,
-/area/teleporter/bridge)
 "mgO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -105402,7 +105401,7 @@ utS
 utS
 utS
 utS
-khd
+kOi
 asc
 arY
 arY
@@ -105564,7 +105563,7 @@ khd
 khd
 khd
 khd
-khd
+kOi
 asc
 arY
 arY
@@ -105726,7 +105725,7 @@ khd
 khd
 khd
 khd
-khd
+kOi
 asc
 arY
 arY
@@ -105888,7 +105887,7 @@ khd
 khd
 khd
 khd
-khd
+kOi
 asd
 asa
 arR
@@ -141393,7 +141392,7 @@ fPM
 fPM
 nxx
 vPP
-mgA
+qUe
 mcx
 nSe
 wrW
