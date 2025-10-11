@@ -417,14 +417,29 @@ var/list/global/tank_gauge_cache = list()
 				return
 
 			T.assume_air(air_contents)
-			explosion(
-				get_turf(loc),
-				round(min(BOMBCAP_DVSTN_RADIUS, ((mult)*strength)*0.15)),
-				round(min(BOMBCAP_HEAVY_RADIUS, ((mult)*strength)*0.35)),
-				round(min(BOMBCAP_LIGHT_RADIUS, ((mult)*strength)*0.80)),
-				round(min(BOMBCAP_FLASH_RADIUS, ((mult)*strength)*1.20)),
-				)
 
+			// Outpost 21 edit begin - Allow absurd cap with rogueminer
+			var/zname = using_map.get_zlevel_name(T.z)
+			if(zname == "Asteroid Belt 1" || zname == "Asteroid Belt 2") // Ugly name hardcode because define order, idgaf because this is just for outpost anyway
+				// Uncapped to map edge. Don't make me regret this Anna~
+				// Has no z transfers, and explosions WILL eventually end because of map edges
+				explosion(
+					get_turf(loc),
+					round(((mult)*strength)*0.15),
+					round(((mult)*strength)*0.35),
+					round(((mult)*strength)*0.80),
+					round(((mult)*strength)*1.20),
+					)
+			else
+				// standard max cap logic
+				explosion(
+					get_turf(loc),
+					round(min(BOMBCAP_DVSTN_RADIUS, ((mult)*strength)*0.15)),
+					round(min(BOMBCAP_HEAVY_RADIUS, ((mult)*strength)*0.35)),
+					round(min(BOMBCAP_LIGHT_RADIUS, ((mult)*strength)*0.80)),
+					round(min(BOMBCAP_FLASH_RADIUS, ((mult)*strength)*1.20)),
+					)
+			// Outpost 21 edit end
 
 			var/num_fragments = round(rand(8,10) * sqrt(strength * mult))
 			src.fragmentate(T, num_fragments, rand(5) + 7, list(/obj/item/projectile/bullet/pellet/fragment/tank/small = 7,/obj/item/projectile/bullet/pellet/fragment/tank = 2,/obj/item/projectile/bullet/pellet/fragment/strong = 1))
