@@ -13301,7 +13301,7 @@
 /turf/simulated/floor/bluegrid/airless,
 /area/medical/voxlab/airgap)
 "axL" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/maintenance/spine/civ)
 "axM" = (
 /obj/structure/disposalpipe/junction{
@@ -19172,7 +19172,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/atmospherics)
 "aIC" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/maintenance/cave)
 "aID" = (
 /obj/structure/cable/green{
@@ -20459,7 +20459,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
 "aLa" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/maintenance/research/closet)
 "aLb" = (
 /obj/effect/floor_decal/industrial/warning/corner,
@@ -21649,7 +21649,7 @@
 /area/muriki/processor)
 "aNe" = (
 /obj/machinery/door/flesh,
-/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/gizzard)
 "aNf" = (
 /turf/simulated/wall/r_wall,
@@ -21965,7 +21965,7 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "aNG" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/med/east_access)
 "aNH" = (
 /obj/structure/disposalpipe/segment,
@@ -43571,6 +43571,12 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/machinery/access_button/airlock_exterior{
+	pixel_x = -4;
+	pixel_y = 27
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cave)
 "bAo" = (
@@ -55216,6 +55222,9 @@
 /obj/item/beartrap/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
+"bXn" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
 "bXo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -55926,7 +55935,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/trash_pile,
+/obj/structure/trash_pile/disable_mouse_spawn,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "bYK" = (
@@ -59152,6 +59161,10 @@
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"cgL" = (
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "cgM" = (
 /obj/structure/disposalpipe/segment,
 /obj/item/assembly/mousetrap/armed,
@@ -59430,10 +59443,10 @@
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
 "chw" = (
-/obj/structure/trash_pile,
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/structure/trash_pile/disable_mouse_spawn,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "chx" = (
@@ -59572,6 +59585,9 @@
 /obj/effect/landmark/hostile_xenobio,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"chR" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/maintenance/med)
 "chS" = (
 /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -60452,6 +60468,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
+"cjV" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/maintenance/spine/eng)
 "cjW" = (
 /obj/structure/catwalk,
 /obj/structure/sign/warning/acid{
@@ -60709,6 +60728,9 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/waste)
+"ckB" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/maintenance/atmos_control)
 "ckC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -63082,6 +63104,19 @@
 /obj/item/grenade/empgrenade,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/research/north)
+"cqR" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/eng)
+"cqS" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/maintenance/research)
+"cqT" = (
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"cqU" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/maintenance/research/north)
 "crc" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -65331,6 +65366,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/button/int_button,
+/obj/machinery/access_button/airlock_interior{
+	pixel_x = -3;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cave)
@@ -71633,7 +71674,7 @@
 /area/maintenance/oldbridge)
 "mfT" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
-/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/gizzard)
 "mhU" = (
 /obj/effect/catwalk_plated/dark,
@@ -73888,7 +73929,7 @@
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "pbc" = (
-/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/gizzard)
 "pcl" = (
 /obj/item/radio/intercom{
@@ -76586,9 +76627,6 @@
 	temperature = 321.5
 	},
 /area/muriki/processor/hall)
-"rOb" = (
-/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
-/area/muriki/processor/pools/gizzard)
 "rOS" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
@@ -76797,6 +76835,12 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "civ_exterior_basement";
+	name = "Civilian Lower Airlock";
+	dir = 1;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
@@ -77143,9 +77187,6 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
-"soK" = (
-/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
-/area/maintenance/research)
 "soW" = (
 /obj/structure/prop/rock/waterflat,
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
@@ -78687,10 +78728,6 @@
 "ugO" = (
 /turf/simulated/floor/water/blood/turfpack/muriki,
 /area/muriki/processor)
-"uhy" = (
-/obj/machinery/door/flesh,
-/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
-/area/muriki/processor/pools/gizzard)
 "uig" = (
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
@@ -86899,7 +86936,7 @@ agl
 arn
 byK
 byK
-bDy
+bXn
 byK
 byK
 byK
@@ -87870,13 +87907,13 @@ aMm
 bZv
 ccU
 byK
-bDy
+bXn
 byK
 byK
 byK
 byK
 byK
-cfv
+aae
 byK
 arN
 ava
@@ -88032,13 +88069,13 @@ aHc
 aMm
 ccT
 kMh
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 byK
 aQT
 apx
@@ -88194,13 +88231,13 @@ kMh
 aHc
 aFD
 kMh
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 byK
 aQT
 ava
@@ -88356,13 +88393,13 @@ kMh
 kMh
 aFI
 kMh
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 byK
 byK
 aqp
@@ -88518,13 +88555,13 @@ kMh
 kMh
 aGo
 kMh
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
-cfv
+aae
+aae
+aae
+aae
+aae
+aae
+aae
 byK
 byK
 aqB
@@ -91153,7 +91190,7 @@ nRl
 nRl
 sJS
 lSC
-rOb
+pbc
 aNe
 aNe
 aNe
@@ -91315,7 +91352,7 @@ nRl
 nRl
 sJS
 lSC
-rOb
+pbc
 kku
 aNe
 aNe
@@ -91477,7 +91514,7 @@ aBZ
 ogx
 tQZ
 ogx
-uhy
+aNe
 lSC
 aNe
 aNe
@@ -92241,11 +92278,11 @@ aRq
 kMh
 aCm
 byK
-cfv
-cfv
-cfv
-cfv
-cfv
+aae
+aae
+aae
+aae
+aae
 byK
 aCm
 byK
@@ -92403,11 +92440,11 @@ aRr
 aOH
 aKZ
 byK
-cfv
-cfv
-cfv
-cfv
-cfv
+aae
+aae
+aae
+aae
+aae
 byK
 aCo
 awb
@@ -92565,11 +92602,11 @@ kMh
 kMh
 aIg
 byK
-cfv
-cfv
-cfv
-cfv
-cfv
+aae
+aae
+aae
+aae
+aae
 byK
 aIg
 byK
@@ -100596,10 +100633,10 @@ gWL
 bRb
 gWL
 gWL
-baQ
-baQ
-baQ
-baQ
+cjV
+cjV
+cjV
+cjV
 gWL
 gWL
 bRa
@@ -101237,9 +101274,9 @@ aAj
 aAj
 aAj
 acT
-baQ
-baQ
-baQ
+cjV
+cjV
+cjV
 gWL
 bRR
 gWL
@@ -101253,8 +101290,8 @@ gWL
 bRb
 gWL
 gWL
-baQ
-baQ
+cjV
+cjV
 gWL
 bQD
 gWL
@@ -101268,8 +101305,8 @@ cfY
 gWL
 bQb
 gWL
-baQ
-baQ
+cjV
+cjV
 gWL
 lje
 cfZ
@@ -101399,9 +101436,9 @@ aAj
 aBt
 aAj
 acT
-baQ
-baQ
-baQ
+cjV
+cjV
+cjV
 aNf
 bRS
 aNf
@@ -101414,9 +101451,9 @@ aNf
 gWL
 lje
 gWL
-baQ
-baQ
-baQ
+cjV
+cjV
+cjV
 gWL
 bQg
 bQh
@@ -101430,8 +101467,8 @@ bXe
 bQh
 bQc
 gWL
-baQ
-baQ
+cjV
+cjV
 gWL
 lje
 bWE
@@ -101561,9 +101598,9 @@ aAk
 aBu
 oTD
 acT
-baQ
-baQ
-baQ
+cjV
+cjV
+cjV
 aNf
 bRT
 aJk
@@ -101592,8 +101629,8 @@ aNf
 aNf
 aNf
 gWL
-baQ
-baQ
+cjV
+cjV
 gWL
 lje
 cgj
@@ -104357,7 +104394,7 @@ xWz
 wrE
 drJ
 aXN
-aNL
+bpz
 bvA
 bvA
 cey
@@ -104519,8 +104556,8 @@ xWz
 wrE
 drJ
 aXN
-aNL
-aNL
+bpz
+bpz
 bvA
 bvA
 coS
@@ -104681,9 +104718,9 @@ xWz
 wrE
 drJ
 aXN
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 bvA
 bvA
 ceW
@@ -104843,10 +104880,10 @@ xWz
 wrE
 drJ
 aXN
-aNL
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
+bpz
 bvA
 bvA
 coS
@@ -105005,11 +105042,11 @@ ihv
 iVw
 box
 aXN
-aNL
-aNL
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
+bpz
+bpz
 bvA
 bvA
 buK
@@ -105169,10 +105206,10 @@ lne
 aXN
 aXN
 aXN
-aNL
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
+bpz
 bvA
 bNS
 bVt
@@ -105332,9 +105369,9 @@ bfo
 aYO
 aXN
 aXN
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 bvA
 cew
 bvA
@@ -105494,9 +105531,9 @@ bfp
 aYP
 bgb
 aXN
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 bvA
 bNT
 nvw
@@ -105656,9 +105693,9 @@ bfp
 aYP
 bgb
 aXN
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 aNf
 bNU
 aNf
@@ -105818,8 +105855,8 @@ bfq
 aXg
 aXN
 aXN
-aNL
-aNL
+bpz
+bpz
 aNf
 aNf
 bNV
@@ -105979,9 +106016,9 @@ bge
 biq
 bge
 bge
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 aNf
 bOf
 bNW
@@ -106127,9 +106164,9 @@ clq
 aRn
 bLx
 adu
-bLp
-bLp
-bLp
+ckB
+ckB
+ckB
 bge
 aQg
 cga
@@ -106141,9 +106178,9 @@ cfs
 cfw
 cfs
 bge
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 aNf
 ckX
 aNf
@@ -106303,9 +106340,9 @@ cfs
 cfs
 cfs
 bge
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 aNf
 bNY
 aNf
@@ -106446,8 +106483,8 @@ adu
 cls
 bXA
 adu
-bMZ
-bMZ
+cqR
+cqR
 adu
 aCt
 bYI
@@ -106465,9 +106502,9 @@ cfs
 cfs
 cfs
 bge
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 aNf
 bOg
 bNX
@@ -106608,8 +106645,8 @@ adu
 cqi
 adu
 adu
-bMZ
-bMZ
+cqR
+cqR
 adu
 bLx
 cbw
@@ -106627,9 +106664,9 @@ bge
 bge
 bge
 bge
-aNL
-aNL
-aNL
+bpz
+bpz
+bpz
 aNf
 bvA
 bNY
@@ -106937,9 +106974,9 @@ cqa
 adu
 adu
 adu
-bMZ
-bMZ
-bMZ
+cqR
+cqR
+cqR
 bge
 cpu
 cbe
@@ -107099,9 +107136,9 @@ bLx
 bLx
 bLx
 adu
-bMZ
-bMZ
-bMZ
+cqR
+cqR
+cqR
 bge
 axP
 cbd
@@ -107236,7 +107273,7 @@ bMa
 bLi
 bLo
 adu
-bYI
+cqT
 bLs
 adu
 bMZ
@@ -107552,7 +107589,7 @@ bMZ
 bMZ
 adu
 bLS
-bYI
+cqT
 adu
 bLF
 bLi
@@ -112087,8 +112124,8 @@ bMZ
 adu
 bLS
 adu
-bMZ
-bMZ
+cqR
+cqR
 adu
 bLE
 bLm
@@ -112249,8 +112286,8 @@ bMZ
 adu
 chJ
 adu
-bMZ
-bMZ
+cqR
+cqR
 adu
 adu
 bLS
@@ -112411,9 +112448,9 @@ bMZ
 adu
 bYZ
 adu
-bMZ
-bMZ
-bMZ
+cqR
+cqR
+cqR
 adu
 clX
 adu
@@ -112573,9 +112610,9 @@ bMZ
 adu
 cmo
 adu
-bMZ
-bMZ
-bMZ
+cqR
+cqR
+cqR
 adu
 bLS
 adu
@@ -112735,8 +112772,8 @@ bMZ
 adu
 bLS
 adu
-bMZ
-bMZ
+cqR
+cqR
 adu
 adu
 bLS
@@ -112897,8 +112934,8 @@ bMZ
 adu
 bLS
 adu
-bMZ
-bMZ
+cqR
+cqR
 adu
 chy
 bLo
@@ -116450,8 +116487,8 @@ aPF
 bTG
 aPF
 aPF
-bLV
-bLV
+chR
+chR
 aPF
 bZX
 iAI
@@ -116611,7 +116648,7 @@ bLV
 aPF
 bZy
 aPF
-bLV
+chR
 aPF
 aPF
 aPF
@@ -116773,7 +116810,7 @@ bLV
 aPF
 bTF
 aPF
-bLV
+chR
 aPF
 cpP
 cpN
@@ -117634,7 +117671,7 @@ aPF
 aPF
 aPF
 aPF
-bWW
+cqJ
 xaP
 aPF
 bMU
@@ -118925,7 +118962,7 @@ aPF
 aPF
 aPF
 bkU
-bLV
+chR
 aPF
 aPF
 aPF
@@ -119087,10 +119124,10 @@ bcN
 bcN
 bcN
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfU
@@ -119249,10 +119286,10 @@ cpz
 cpz
 cpz
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfV
@@ -119411,10 +119448,10 @@ tJf
 bAi
 bAi
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfV
@@ -119573,10 +119610,10 @@ bhd
 cpz
 cpz
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfU
@@ -119735,10 +119772,10 @@ cuy
 kqO
 kqO
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfU
@@ -119897,10 +119934,10 @@ cuy
 kqO
 kqO
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bWM
 bXk
@@ -120059,10 +120096,10 @@ cuy
 kqO
 kqO
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfW
@@ -120221,10 +120258,10 @@ bAg
 kqO
 kqO
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfU
@@ -120383,10 +120420,10 @@ kqO
 kqO
 kqO
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 xaP
@@ -120495,7 +120532,7 @@ aPF
 aPF
 bMC
 aPF
-bLV
+chR
 aPF
 aPF
 bZe
@@ -120545,13 +120582,13 @@ xpK
 kqO
 kqO
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
-bWW
+cqJ
 aPF
 fUK
 fUK
@@ -120657,8 +120694,8 @@ iAI
 bYj
 bMo
 aPF
-bLV
-bLV
+chR
+chR
 aPF
 aPF
 cad
@@ -120707,10 +120744,10 @@ ecn
 ecn
 ecn
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 xaP
@@ -120869,10 +120906,10 @@ iNP
 bAO
 dDe
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bWN
 cfU
@@ -121031,10 +121068,10 @@ bAm
 bAn
 bAm
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfU
@@ -121193,10 +121230,10 @@ bAT
 cgA
 ibC
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 bPN
 cfU
@@ -121355,10 +121392,10 @@ bAP
 fBm
 rYy
 alY
-bMU
-bMU
-bMU
-bMU
+cqD
+cqD
+cqD
+cqD
 aPF
 cgn
 xaP
@@ -121519,8 +121556,8 @@ ibC
 alY
 aPF
 aPF
-bLV
-bLV
+chR
+chR
 aPF
 bPN
 xaP
@@ -121681,8 +121718,8 @@ bAm
 alY
 cln
 aPF
-bLV
-bLV
+chR
+chR
 aPF
 bWN
 cfU
@@ -126644,7 +126681,7 @@ bMU
 bJG
 bUL
 bJG
-bVg
+cqU
 aPF
 bXk
 aPF
@@ -126687,9 +126724,9 @@ gsI
 aQU
 aRO
 fxd
-bLV
-bLV
-bLV
+chR
+chR
+chR
 aPF
 aPF
 aPF
@@ -126849,11 +126886,11 @@ caW
 nIa
 nIa
 fxd
-bLV
-bLV
-bLV
-bLV
-bLV
+chR
+chR
+chR
+chR
+chR
 aPF
 bQv
 aPF
@@ -127011,11 +127048,11 @@ rzl
 nIa
 inV
 fxd
-bLV
-bLV
-bLV
-bLV
-bLV
+chR
+chR
+chR
+chR
+chR
 aPF
 bXK
 aPF
@@ -127175,9 +127212,9 @@ aLe
 fxd
 fxd
 fxd
-bLV
-bLV
-bLV
+chR
+chR
+chR
 aPF
 bQv
 aPF
@@ -127811,11 +127848,11 @@ amq
 agP
 ibs
 agP
-soK
+cqS
 amq
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 aKP
 aKP
 xST
@@ -127975,9 +128012,9 @@ bLL
 pJf
 xoJ
 amq
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 aKP
 bsg
 clA
@@ -128137,9 +128174,9 @@ ebe
 lbn
 xoJ
 amq
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 aKP
 bYq
 aKP
@@ -128299,9 +128336,9 @@ bLM
 amq
 amq
 amq
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 aKP
 bYp
 aKP
@@ -128459,11 +128496,11 @@ pmN
 amq
 ccn
 amq
-ahC
-ahC
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
+cqS
+cqS
 aKP
 bQY
 aKP
@@ -128907,7 +128944,7 @@ pmN
 bJG
 bUL
 bJG
-bVg
+cqU
 bJG
 cav
 bJG
@@ -128926,10 +128963,10 @@ vXD
 anR
 aag
 aag
-ahC
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
+cqS
 amq
 bZB
 amq
@@ -129069,7 +129106,7 @@ pmN
 bJG
 cqQ
 bJG
-bVg
+cqU
 bJG
 caw
 bJG
@@ -129088,9 +129125,9 @@ vXD
 anR
 aag
 aag
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 amq
 amq
 bZo
@@ -129231,7 +129268,7 @@ pmN
 bJG
 bUL
 bJG
-bVg
+cqU
 bJG
 cie
 bJG
@@ -129250,9 +129287,9 @@ vXD
 anP
 aag
 aag
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 amq
 bZo
 bZA
@@ -129393,7 +129430,7 @@ pmN
 bJG
 caB
 bJG
-bVg
+cqU
 bJG
 bUL
 bJG
@@ -129594,8 +129631,8 @@ pmN
 amq
 ciP
 amq
-ahC
-ahC
+cqS
+cqS
 amq
 amq
 amq
@@ -129756,9 +129793,9 @@ pmN
 amq
 foD
 amq
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 axL
 axL
 aKP
@@ -129902,7 +129939,7 @@ amq
 bZZ
 amq
 amq
-ahC
+cqS
 bzI
 bzI
 bzI
@@ -129918,9 +129955,9 @@ pmN
 amq
 chr
 amq
-ahC
-ahC
-ahC
+cqS
+cqS
+cqS
 axL
 axL
 aKP
@@ -130044,7 +130081,7 @@ bJG
 bUL
 bJG
 bJG
-bVg
+cqU
 aag
 aag
 aat
@@ -130064,7 +130101,7 @@ amq
 bZo
 bZO
 amq
-ahC
+cqS
 bzI
 bTv
 bTl
@@ -130080,8 +130117,8 @@ agP
 amq
 bYL
 amq
-ahC
-ahC
+cqS
+cqS
 aKP
 aKP
 aKP
@@ -130226,7 +130263,7 @@ amq
 agP
 bZP
 agP
-ahC
+cqS
 bzI
 bTw
 bTm
@@ -143751,7 +143788,7 @@ vSb
 vSb
 coc
 coc
-azz
+cgL
 coc
 vSb
 vSb
