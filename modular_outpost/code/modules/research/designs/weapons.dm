@@ -8,7 +8,7 @@
 	category = list(
 		RND_CATEGORY_TOOLS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE | DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/grenade_dephasing
 	name = "Dephasing Grenade"
@@ -20,4 +20,4 @@
 	category = list(
 		RND_CATEGORY_WEAPONS
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
