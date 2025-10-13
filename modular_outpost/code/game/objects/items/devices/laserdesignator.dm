@@ -1,3 +1,6 @@
+#define CAM_DIST 18
+#define CAM_SIZE 6
+
 /obj/item/laser_designator
 	name = "laser designator"
 	desc = "Used to call down the fist of God!"
@@ -16,6 +19,9 @@
 	var/recharging = 0
 	var/recharge_locked = 0
 
+/obj/item/laser_designator/attack_self(mob/user)
+	zoom(user, CAM_DIST, CAM_SIZE) // long but small vision range
+
 /obj/item/laser_designator/attack(mob/living/M, mob/user)
 	laser_act(M, user)
 
@@ -25,9 +31,7 @@
 	laser_act(target, user)
 
 /obj/item/laser_designator/proc/laser_act(var/atom/target, var/mob/living/user)
-	if(!(user in (viewers(world.view,target))))
-		return
-	if(!(target in view(user, world.view)))
+	if(!(user in (viewers(world.view + CAM_DIST + CAM_SIZE,target))))
 		return
 	if(!(world.time - last_used_time >= cooldown))
 		return
@@ -101,3 +105,6 @@
 			recharge_locked = 0
 			visible_message("<span class='notice'>\The [src] has recharged!</span>")
 			..()
+
+#undef CAM_DIST
+#undef CAM_SIZE
