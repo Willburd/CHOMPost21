@@ -47,7 +47,9 @@
 		new/datum/data/pda/app/news,
 		// Outpost 21 addition begin - New apps
 		new/datum/data/pda/app/weather,
+		#ifndef OUTPOST_FRIENDSHIP_MODE
 		new/datum/data/pda/app/sop,
+		#endif
 		// Outpost 21 addition end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,
@@ -195,8 +197,6 @@
 	SStgui.close_uis(src)
 
 /obj/item/pda/attack_self(mob/user as mob)
-	user.set_machine(src)
-
 	if(active_uplink_check(user))
 		return
 
@@ -449,8 +449,7 @@
 			return	//Return in case of failed check or when successful.
 		updateSelfDialog()//For the non-input related code.
 	else if(istype(C, /obj/item/paicard) && !src.pai)
-		user.drop_item()
-		C.loc = src
+		user.drop_item(src)
 		pai = C
 		to_chat(user, span_notice("You slot \the [C] into \the [src]."))
 		SStgui.update_uis(src) // update all UIs attached to src
@@ -459,8 +458,7 @@
 		if(O)
 			to_chat(user, span_notice("There is already a pen in \the [src]."))
 		else
-			user.drop_item()
-			C.loc = src
+			user.drop_item(src)
 			to_chat(user, span_notice("You slot \the [C] into \the [src]."))
 			add_overlay("pda-pen")
 	return

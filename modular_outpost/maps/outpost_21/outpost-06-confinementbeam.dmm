@@ -29,10 +29,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
+/obj/structure/panic_button{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
@@ -132,7 +130,7 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "ap" = (
 /obj/structure/lattice,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube Central"
 	},
 /turf/space,
@@ -457,12 +455,11 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "aX" = (
-/obj/machinery/porta_turret/ai_defense,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ai)
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/atmos)
 "aY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -519,6 +516,9 @@
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
 	req_one_access = list(16,52,56)
+	},
+/obj/structure/cable/cyan{
+	icon_state = "6-10"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
@@ -617,7 +617,11 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
 "bq" = (
 /obj/machinery/power/apc/super/critical{
@@ -628,11 +632,11 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Core North";
 	dir = 1
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "br" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -666,6 +670,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "bv" = (
@@ -1115,7 +1120,7 @@
 /obj/machinery/meter{
 	name = "Airlock Feed"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "ct" = (
 /obj/effect/floor_decal/corner/orange{
@@ -1141,6 +1146,14 @@
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
+"cw" = (
+/obj/item/toy/plushie/borgplushie/drake/eng{
+	name = "Raz";
+	desc = "An adorable stuffed toy of a familiar robot!"
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "cx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
@@ -1148,15 +1161,18 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway_alt)
+"cy" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
 "cz" = (
 /obj/machinery/power/apc/critical{
 	dir = 8;
 	name = "west bump";
 	pixel_x = -24;
 	nightshift_setting = 3
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-2"
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "AICore";
@@ -1169,6 +1185,12 @@
 	icon_state = "0-4"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/cable/cyan{
+	icon_state = "0-10"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "cA" = (
@@ -1206,6 +1228,21 @@
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/docking_wing)
+"cD" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/ai)
 "cE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -1222,6 +1259,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/access_shaft)
+"cF" = (
+/turf/simulated/floor/water/digestive_enzymes/nanites,
+/area/ai)
 "cG" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
@@ -1249,6 +1289,12 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
+"cJ" = (
+/obj/structure/cable/cyan{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/greengrid,
+/area/ai_upload)
 "cK" = (
 /obj/structure/cable/orange{
 	icon_state = "0-10"
@@ -1261,14 +1307,60 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
+"cL" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/vending/coffee{
+	dir = 4;
+	pixel_x = -8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/hallway_alt)
 "cM" = (
 /obj/machinery/body_scanconsole,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
+"cN" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/tesla_coil/collector,
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
+"cO" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/tesla_coil/collector,
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
 "cP" = (
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 1
 	},
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
+"cQ" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "cR" = (
@@ -1277,6 +1369,17 @@
 	c_tag = "PTL - Solar Exterior"
 	},
 /turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
+"cS" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/tesla_coil/collector,
+/turf/simulated/floor/airless,
+/area/offworld/confinementbeam/exterior)
+"cT" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginesouth,
+/turf/space,
 /area/offworld/confinementbeam/exterior)
 "cU" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1290,6 +1393,10 @@
 "cV" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/confinement_beam)
+"cW" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/atmos)
 "cX" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/int_door,
@@ -1323,6 +1430,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/cyan{
+	icon_state = "5-10"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
 "cZ" = (
@@ -1374,6 +1484,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/solar_control)
+"dc" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginenorth,
+/turf/space,
+/area/offworld/confinementbeam/exterior)
 "de" = (
 /obj/structure/bed/chair/sofa/corp/left{
 	dir = 8
@@ -1408,7 +1522,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/backup_power)
 "dj" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube"
 	},
 /turf/simulated/floor/airless,
@@ -1480,10 +1594,10 @@
 /area/ai)
 "dA" = (
 /obj/machinery/hologram/holopad,
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Core South"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "dB" = (
 /obj/structure/sign/directions/engineering/solars{
@@ -1510,12 +1624,6 @@
 	layer = 3
 	},
 /obj/item/aiModule/purge,
-/obj/item/radio/intercom/locked{
-	frequency = 1343;
-	locked_frequency = 1343;
-	name = "Private AI Channel";
-	pixel_y = -24
-	},
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
@@ -1549,7 +1657,7 @@
 "dH" = (
 /obj/machinery/porta_turret/ai_defense,
 /obj/structure/cable/cyan{
-	icon_state = "4-8"
+	icon_state = "5-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -1625,17 +1733,13 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "dP" = (
-/obj/machinery/power/smes/buildable{
-	charge = 5e+006;
-	input_attempt = 1;
-	input_level = 100000;
-	output_level = 200000;
-	is_critical = 1
-	},
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/greengrid,
+/obj/machinery/power/smes/buildable/engine_default{
+	is_critical = 1
+	},
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "dQ" = (
 /obj/machinery/power/breakerbox,
@@ -1714,12 +1818,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
-"eh" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ai)
 "ei" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -1806,13 +1904,6 @@
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
-"ey" = (
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/greengrid,
-/area/ai)
 "eA" = (
 /obj/structure/confinement_beam_generator/lens/outer_lens{
 	dir = 1
@@ -2152,15 +2243,8 @@
 /obj/structure/confinement_beam_generator/lens/outer_lens,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
-"fx" = (
-/obj/machinery/power/tesla_coil/collector,
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
 "fA" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - South turret"
 	},
 /turf/simulated/mineral/floor/vacuum,
@@ -2680,7 +2764,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "hn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -2695,22 +2779,16 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "ho" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/dockingbay)
 "hp" = (
 /obj/machinery/atmospherics/unary/heat_exchanger,
@@ -3036,6 +3114,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/machinery/vending/foodmeat{
+	dir = 4;
+	pixel_x = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
@@ -3425,6 +3507,10 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
+/obj/machinery/vending/cigarette{
+	dir = 8;
+	pixel_x = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_observation)
 "jA" = (
@@ -3482,7 +3568,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "jN" = (
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Cyborg Station";
 	dir = 4
 	},
@@ -3499,7 +3585,7 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "jR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "jS" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -3539,7 +3625,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Solar Airlock"
 	},
 /obj/item/radio/intercom{
@@ -3627,16 +3713,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
-"kq" = (
-/obj/machinery/power/tesla_coil/collector,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
 "ks" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -3952,7 +4028,10 @@
 /obj/machinery/light_switch/breaker{
 	pixel_y = -32
 	},
-/turf/simulated/floor/plating,
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "lf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
@@ -4238,13 +4317,6 @@
 /obj/machinery/power/grounding_rod,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_equipment)
-"lS" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/ai)
 "lU" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 9
@@ -4344,7 +4416,7 @@
 /area/offworld/confinementbeam/station/starboard_airlock)
 "mg" = (
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "mk" = (
 /obj/structure/cable/cyan,
@@ -4451,7 +4523,7 @@
 	dir = 8;
 	pixel_x = -28
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Transit Tube Arrival";
 	dir = 4
 	},
@@ -4528,12 +4600,6 @@
 /obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
-"mH" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/greengrid,
-/area/ai)
 "mJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4923,7 +4989,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "nV" = (
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Rec Room Port";
 	dir = 1
 	},
@@ -5244,7 +5310,7 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "pa" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - West turret";
 	dir = 8
 	},
@@ -5415,7 +5481,7 @@
 "py" = (
 /obj/machinery/ai_slipper,
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/prim,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "pz" = (
 /obj/machinery/door/firedoor/glass,
@@ -6065,6 +6131,9 @@
 /area/offworld/confinementbeam/station/access_shaft)
 "rI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
 "rK" = (
@@ -6142,6 +6211,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "rT" = (
@@ -6395,7 +6467,7 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
 "sJ" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Southwest turret";
 	dir = 8
 	},
@@ -6468,20 +6540,14 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "sW" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "PTL - Solar Backup";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	inputting = 1;
-	output_level = 100000;
-	outputting = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "PTL - Solar Backup"
+	},
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/solar_control)
 "sX" = (
@@ -6605,7 +6671,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Backup Generator"
 	},
 /obj/machinery/power/rtg/advanced,
@@ -6888,7 +6954,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
 "uq" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Scrubber Vent port";
 	dir = 4
 	},
@@ -7078,7 +7144,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "uS" = (
 /obj/structure/cable/green{
@@ -7195,7 +7261,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "vj" = (
 /obj/machinery/door/firedoor/glass,
@@ -7303,13 +7369,13 @@
 	pixel_y = -24;
 	nightshift_setting = 3
 	},
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/corner/white/full,
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/cyan{
+	icon_state = "4-9"
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "vt" = (
@@ -8013,10 +8079,13 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
 "xY" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/power_distribution)
 "ya" = (
 /obj/machinery/door/firedoor/glass,
@@ -8687,7 +8756,7 @@
 "zR" = (
 /obj/machinery/ai_slipper,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "zS" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -8994,7 +9063,7 @@
 /area/ai_sat/core_external)
 "AM" = (
 /obj/structure/lattice,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Transition"
 	},
 /turf/space,
@@ -9099,14 +9168,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "AY" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
-	},
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Ba" = (
 /obj/machinery/door/firedoor/glass,
@@ -9412,9 +9478,6 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
 "Cm" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
@@ -9423,6 +9486,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -9505,7 +9571,11 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/wall/r_wall,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
 "CB" = (
 /obj/effect/floor_decal/corner/orange/full{
@@ -9584,7 +9654,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Exterior Arrival Hall";
 	dir = 4
 	},
@@ -9739,7 +9809,7 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Dg" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Fore Airlock";
 	dir = 1
 	},
@@ -9895,16 +9965,6 @@
 "DK" = (
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
-"DM" = (
-/obj/machinery/power/tesla_coil/collector,
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
 "DN" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
@@ -9979,7 +10039,7 @@
 /area/offworld/confinementbeam/station/hallway)
 "Ec" = (
 /obj/machinery/ai_slipper,
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Ed" = (
 /obj/structure/cable/yellow{
@@ -10011,7 +10071,7 @@
 	pixel_y = -30;
 	dir = 1
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Airlock Air Supply";
 	dir = 1
 	},
@@ -10035,13 +10095,16 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "Em" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/power_distribution)
 "Eo" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -10062,20 +10125,14 @@
 /turf/simulated/mineral/alt,
 /area/offworld/confinementbeam/exterior)
 "Eu" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "PTL - AI Solar";
-	charge = 2.5e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_available = 1;
-	input_level = 200000;
-	inputting = 1;
-	output_level = 100000;
-	outputting = 1
-	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "PTL - AI Solar"
+	},
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
 "Ev" = (
@@ -10135,7 +10192,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "EG" = (
 /turf/simulated/wall,
@@ -10281,7 +10338,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Fk" = (
 /obj/effect/floor_decal/corner/orange{
@@ -10331,10 +10388,10 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "Fo" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	name = "Airlock Resupply Pump"
+/obj/machinery/atmospherics/binary/passive_gate/on{
+	dir = 4
 	},
+/obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "Fq" = (
@@ -10443,7 +10500,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "FI" = (
 /obj/structure/bed/chair/sofa/corp/right{
@@ -10530,7 +10587,7 @@
 /obj/item/bedsheet/cosmosdouble{
 	icon_state = "dobulesheetcosmos"
 	},
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Rec Room Starboard";
 	dir = 1
 	},
@@ -10544,12 +10601,6 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
 "FS" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "1-8"
-	},
 /obj/machinery/button/remote/airlock{
 	id = "ai_main_door";
 	name = "Door Bolt Control";
@@ -10559,6 +10610,9 @@
 	req_one_access = list(16,56)
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/cable/cyan{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "FT" = (
@@ -11012,7 +11066,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "Ht" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Northwest turret";
 	dir = 1
 	},
@@ -11057,7 +11111,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "HA" = (
 /obj/structure/cable/yellow{
@@ -11140,7 +11194,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Fore Airlock";
 	dir = 1
 	},
@@ -11734,7 +11788,7 @@
 	pixel_y = 25;
 	req_access = list(16)
 	},
-/obj/machinery/camera/xray/command{
+/obj/machinery/camera/xray/ai_sat{
 	c_tag = "AI - Core"
 	},
 /obj/machinery/ai_slipper,
@@ -11880,9 +11934,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
-"JA" = (
-/turf/simulated/floor/greengrid,
-/area/ai)
 "JC" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -12233,7 +12284,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
 "KE" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - North turret";
 	dir = 1
 	},
@@ -12283,9 +12334,6 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "KI" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
@@ -12294,6 +12342,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -12349,7 +12400,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "KP" = (
 /obj/effect/floor_decal/borderfloor,
@@ -12363,10 +12414,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_airlock)
-"KQ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
 "KS" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -12481,11 +12528,16 @@
 /turf/simulated/wall/r_wall,
 /area/ai_upload_foyer)
 "Lp" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/power_distribution)
 "Lr" = (
 /obj/structure/table/standard,
@@ -12788,6 +12840,10 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
+/obj/machinery/vending/cola{
+	dir = 8;
+	pixel_x = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
 "Mz" = (
@@ -12831,7 +12887,7 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "MI" = (
 /obj/structure/lattice,
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube Aft"
 	},
 /turf/space,
@@ -12973,7 +13029,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Air Supply";
 	dir = 1
 	},
@@ -13718,13 +13774,10 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "Pz" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "PB" = (
 /obj/machinery/atmospherics/unary/engine/biggest{
@@ -13772,8 +13825,8 @@
 /area/offworld/confinementbeam/station/port_airlock)
 "PM" = (
 /obj/machinery/porta_turret/ai_defense,
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -13885,23 +13938,15 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
 "Qd" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/solar_control)
 "Qe" = (
 /obj/machinery/power/emitter{
@@ -13922,8 +13967,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "Qg" = (
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_ridged,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/atmos)
 "Qi" = (
 /obj/machinery/light/small,
@@ -13968,9 +14018,6 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/cyan{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -13985,6 +14032,9 @@
 	dir = 4;
 	pixel_x = -28;
 	pixel_y = -21
+	},
+/obj/structure/cable/cyan{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
@@ -14047,7 +14097,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
 "QG" = (
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Messaging Server"
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
@@ -14128,6 +14178,12 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "QR" = (
 /obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/gloves/yellow{
+	pixel_y = -9
+	},
+/obj/item/clothing/gloves/yellow{
+	pixel_y = -9
+	},
 /obj/item/pipe_dispenser,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/storage)
@@ -14203,11 +14259,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
 "Rc" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "Rd" = (
 /obj/structure/cable/orange{
@@ -14334,7 +14387,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Solar entry"
 	},
 /obj/structure/extinguisher_cabinet{
@@ -14782,6 +14835,12 @@
 	dir = 1;
 	pixel_y = -4
 	},
+/obj/item/radio/intercom/locked{
+	frequency = 1343;
+	locked_frequency = 1343;
+	name = "Private AI Channel";
+	pixel_y = -24
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "SN" = (
@@ -14811,10 +14870,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
-"SV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/greengrid,
-/area/ai)
 "SY" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -15087,7 +15142,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "TW" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Northeast turret";
 	dir = 4
 	},
@@ -15117,21 +15172,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
-"Uc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
 "Ud" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15393,7 +15433,7 @@
 	dir = 1;
 	pixel_y = -32
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "UO" = (
 /obj/structure/cable/yellow{
@@ -15499,7 +15539,7 @@
 /obj/machinery/computer/borgupload{
 	pixel_y = 3
 	},
-/obj/machinery/camera/motion/command{
+/obj/machinery/camera/motion/ai_sat{
 	c_tag = "AI - Upload Chamber"
 	},
 /turf/simulated/floor/greengrid,
@@ -16069,7 +16109,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/greengrid,
+/turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
 "WT" = (
 /obj/structure/cable/cyan{
@@ -16544,15 +16584,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway)
-"Yq" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
-	},
-/turf/simulated/wall/r_wall,
-/area/ai_upload)
 "Yr" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/milspec,
@@ -16591,16 +16622,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/rad_floor/yellow,
-/turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
-"YA" = (
-/obj/machinery/power/tesla_coil/collector,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "YB" = (
@@ -16800,15 +16821,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
-"Zk" = (
-/obj/structure/cable/cyan{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central6{
-	dir = 1
-	},
-/turf/simulated/wall/durasteel,
-/area/ai)
 "Zo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -16987,9 +16999,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
-"ZQ" = (
-/turf/simulated/floor/plating,
-/area/offworld/confinementbeam/station/dockingbay)
 "ZS" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
@@ -25021,9 +25030,9 @@ KK
 Cj
 CN
 br
-aX
-dy
-dy
+Cj
+KK
+Xn
 dy
 bn
 yJ
@@ -25178,14 +25187,14 @@ nr
 Fz
 wz
 yP
-JA
-JA
+cF
+cF
 Ec
-JA
-JA
-eh
-Xn
-dy
+cF
+cF
+cF
+cF
+cy
 dy
 bn
 yq
@@ -25339,13 +25348,13 @@ ql
 Fz
 Fz
 Pc
-JA
+cF
 hm
-ey
-ey
-ey
-ey
-ey
+AY
+AY
+AY
+AY
+AY
 AY
 Cm
 uZ
@@ -25507,8 +25516,8 @@ Fz
 zx
 Fz
 Fz
-JA
-JA
+cF
+cF
 FH
 Kl
 bn
@@ -25824,15 +25833,15 @@ wA
 ql
 Fz
 Hx
-mH
+Pz
 Fj
 UN
 Fz
 zx
 Fz
 Fz
-JA
-JA
+cF
+cF
 FH
 xw
 iN
@@ -25988,12 +25997,12 @@ Fz
 Fz
 dG
 WS
-mH
-mH
-mH
-mH
-mH
-mH
+Pz
+Pz
+Pz
+Pz
+Pz
+Pz
 Pz
 KI
 jx
@@ -26151,11 +26160,11 @@ Fz
 GP
 ty
 jR
-SV
+Rc
 zR
-SV
-SV
-lS
+Rc
+Rc
+Rc
 Rc
 rS
 Dh
@@ -26318,8 +26327,8 @@ tB
 bs
 Mw
 PM
-dy
-Rd
+JX
+cD
 WX
 iN
 FI
@@ -26806,7 +26815,7 @@ cn
 Fz
 Fz
 cY
-Zk
+Fz
 Fz
 cn
 wA
@@ -28264,7 +28273,7 @@ Jr
 Mj
 US
 au
-PD
+cJ
 OZ
 Jr
 ps
@@ -28426,7 +28435,7 @@ Jr
 Jr
 DS
 be
-Yq
+Jr
 Jr
 Jr
 Vf
@@ -40147,8 +40156,8 @@ Yg
 WI
 yx
 Jl
-ZQ
-ZQ
+cr
+cr
 Fo
 wt
 yK
@@ -40310,7 +40319,7 @@ zy
 Ba
 QZ
 HY
-KQ
+HY
 cs
 ko
 hK
@@ -40799,7 +40808,7 @@ vq
 UZ
 PV
 mJ
-Uc
+yK
 oH
 sO
 ze
@@ -46927,7 +46936,7 @@ Po
 Po
 Po
 Po
-Po
+dc
 Po
 rW
 rc
@@ -46966,7 +46975,7 @@ Po
 Po
 Po
 Po
-Po
+cT
 Po
 Po
 Po
@@ -47234,7 +47243,7 @@ Po
 Po
 yl
 Po
-Po
+yl
 Po
 rc
 Po
@@ -47390,25 +47399,25 @@ Po
 Po
 Po
 Po
-Po
+yl
 Po
 Po
 Po
 yl
 Po
-Po
-Po
+yl
+yl
 rc
-Po
-Po
-Po
-Po
-Po
-Po
+yl
+yl
+yl
+yl
+yl
+yl
 rc
-Po
-Po
-Po
+yl
+yl
+yl
 Po
 Po
 Po
@@ -47552,29 +47561,29 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-yl
-Po
-Po
-Po
-rc
-Po
-Po
-Po
-yl
-yl
 yl
 rc
-Po
-Po
+rc
+rc
+rc
+rc
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
 yl
 yl
 yl
-Po
-Po
+yl
+yl
 Po
 Po
 rc
@@ -47714,25 +47723,25 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
 Po
 Po
 Po
-rc
 Po
-yl
-yl
-yl
-Po
-Po
-rc
-yl
-yl
-yl
+rW
+rW
+Qe
+pl
+pl
+pl
+pl
+pl
+aP
+pl
+pl
+pl
+pl
+pR
 Po
 Po
 Po
@@ -47876,11 +47885,10 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+rc
+Po
+Po
 Po
 Po
 Po
@@ -47890,12 +47898,13 @@ Po
 Po
 Po
 Po
-Po
 rc
 Po
 Po
 Po
 Po
+rW
+SN
 Po
 Po
 Po
@@ -48038,27 +48047,27 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+rc
+rc
+Po
 Po
 Po
 Po
 rc
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
 Po
+Po
+Po
+Po
+Po
+rc
+Po
+Po
+Po
+Po
+Po
+rW
+SN
 Po
 Po
 Po
@@ -48200,28 +48209,28 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+Po
 rc
 rc
+Po
+Po
+Po
+rc
+Po
+Po
+Po
+Po
+Po
+rc
+Po
+Po
+Po
+Po
+Po
 rc
 rW
-rW
-Qe
-pl
-pl
-pl
-pl
-pl
-aP
-pl
-pl
-pl
-pl
-pl
+BL
 pl
 pR
 rW
@@ -48362,14 +48371,11 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
 Po
 Po
-Po
+rc
+rc
 Po
 Po
 rc
@@ -48382,6 +48388,9 @@ rc
 Po
 Po
 Po
+Po
+rc
+rc
 Po
 Po
 Po
@@ -48524,15 +48533,12 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
 Po
 Po
 Po
-Po
+rc
+rc
 Po
 rc
 Po
@@ -48543,6 +48549,9 @@ Po
 rc
 Po
 Po
+Po
+rc
+rc
 Po
 Po
 Po
@@ -48686,16 +48695,13 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
 Po
 Po
 Po
 Po
-Po
+rc
+rc
 rc
 Po
 Po
@@ -48705,6 +48711,9 @@ Po
 rc
 rc
 qL
+rc
+rc
+Po
 Po
 Po
 Po
@@ -48848,25 +48857,25 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+Po
 Po
 Po
 Po
 Po
 du
 rW
-fx
+cS
 ud
 ud
 ud
-DM
+cQ
 ud
 wM
 rc
+rc
+Po
+Po
 Po
 Po
 Kv
@@ -49010,12 +49019,9 @@ Po
 Po
 Po
 Po
-Po
-yl
-Po
-Po
 yl
 eG
+Po
 Po
 Po
 Po
@@ -49029,6 +49035,9 @@ Po
 Hq
 qu
 kg
+Po
+Po
+Po
 Po
 Po
 qC
@@ -49173,9 +49182,6 @@ Po
 Po
 Po
 Po
-yl
-Po
-Po
 Po
 Po
 Po
@@ -49189,8 +49195,11 @@ Po
 rc
 Po
 Po
-YA
+cN
 rc
+Po
+Po
+Po
 Po
 Po
 Kv
@@ -49331,11 +49340,8 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+Po
 Po
 Po
 Po
@@ -49352,6 +49358,9 @@ rW
 rc
 rc
 RV
+ud
+ud
+ud
 ud
 ud
 ud
@@ -49493,11 +49502,8 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+rc
 rc
 rc
 rc
@@ -49515,6 +49521,9 @@ Po
 Po
 qu
 rc
+Po
+Po
+Po
 Po
 Po
 qu
@@ -49655,11 +49664,8 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+Po
 Po
 Po
 Po
@@ -49676,6 +49682,9 @@ rW
 rc
 rc
 Ew
+ud
+ud
+ud
 ud
 ud
 ud
@@ -49817,11 +49826,8 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+Po
 Po
 Po
 Po
@@ -49837,8 +49843,11 @@ Po
 rc
 Po
 Po
-kq
+cO
 rc
+Po
+Po
+Po
 Po
 kk
 Kv
@@ -49979,11 +49988,8 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+Po
 Po
 Po
 Po
@@ -50001,6 +50007,9 @@ Po
 Hq
 qu
 rc
+Po
+Po
+Po
 Po
 Po
 Kv
@@ -50141,10 +50150,7 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
+yl
 Po
 Po
 Po
@@ -50155,14 +50161,17 @@ Po
 Po
 du
 rW
-fx
+cS
 ud
 ud
 ud
-DM
+cQ
 ud
 Ib
 rc
+rc
+Po
+Po
 Po
 Po
 Sy
@@ -50303,12 +50312,6 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
 yl
 Po
 Po
@@ -50316,6 +50319,9 @@ Po
 Po
 Po
 Po
+Po
+rc
+rc
 rc
 Po
 Po
@@ -50325,6 +50331,9 @@ Po
 rc
 rc
 qL
+rc
+rc
+Po
 Po
 Po
 Po
@@ -50465,12 +50474,6 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
 yl
 Po
 Po
@@ -50479,6 +50482,9 @@ Po
 Po
 Po
 rc
+rc
+Po
+rc
 Po
 Po
 Po
@@ -50487,6 +50493,9 @@ Po
 rc
 Po
 Po
+Po
+rc
+rc
 Po
 Po
 Po
@@ -50633,11 +50642,8 @@ Po
 Po
 Po
 Po
-yl
-Po
-Po
-Po
-Po
+rc
+rc
 Po
 Po
 rc
@@ -50650,6 +50656,9 @@ rc
 Po
 Po
 Po
+Po
+rc
+rc
 Po
 Po
 Po
@@ -50791,29 +50800,29 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
+Po
+Po
 rc
 rc
+Po
+Po
+Po
 rc
+Po
+Po
+Po
+Po
+Po
+rc
+Po
+Po
+Po
+Po
+Po
 rc
 rW
-rW
-Ai
-pl
-pl
-aW
-pl
-pl
-Fn
-pl
-pl
-pl
-pl
-pl
+OW
 pl
 Oe
 rW
@@ -50953,28 +50962,28 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
 Po
+rc
+rc
 Po
 Po
 Po
 Po
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
-rW
+rc
 Po
+Po
+Po
+Po
+Po
+rc
+Po
+Po
+Po
+Po
+Po
+rW
+mv
 Po
 Po
 Po
@@ -51115,12 +51124,10 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
 Po
+rc
+Po
 Po
 Po
 Po
@@ -51131,11 +51138,13 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 rc
+Po
+Po
+Po
+Po
+rW
+mv
 Po
 Po
 Po
@@ -51277,26 +51286,26 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
 yl
-yl
-Po
-Po
-Po
-Po
 rc
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
+rc
+rc
+rc
+rc
+rW
+rW
+Ai
+pl
+pl
+aW
+pl
+pl
+Fn
+pl
+pl
+pl
+pl
+Oe
 rc
 Po
 Po
@@ -51439,25 +51448,25 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-yl
 yl
 Po
 Po
 Po
-rc
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
+rW
 Po
 rc
 Po
@@ -51601,17 +51610,17 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
+yl
 Po
 Po
 Po
 yl
-yl
+Po
+Po
 Po
 Po
 rc
+Po
 Po
 Po
 Po
@@ -51763,17 +51772,17 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
+yl
+yl
 Po
 Po
 yl
 yl
+yl
+Po
 Po
 rc
+Po
 Po
 Po
 Po
@@ -51931,15 +51940,15 @@ Po
 Po
 Po
 Po
+yl
+yl
+Po
+rc
 Po
 Po
-yl
-yl
-yl
-yl
-yl
-yl
-yl
+Po
+Po
+Po
 Po
 yl
 yl
@@ -52094,13 +52103,13 @@ Po
 Po
 Po
 Po
-Po
-Po
-Po
-Po
-Po
-Po
-Po
+yl
+yl
+yl
+yl
+yl
+yl
+yl
 Po
 Po
 Po
@@ -52453,7 +52462,7 @@ mG
 cb
 yD
 kz
-Aj
+cL
 Sh
 kv
 bz
@@ -53268,7 +53277,7 @@ GE
 kv
 iF
 SD
-ca
+cW
 xi
 KB
 tf
@@ -53430,7 +53439,7 @@ sX
 kv
 fn
 Cv
-ca
+aX
 pL
 jm
 uC
@@ -54235,7 +54244,7 @@ vH
 eu
 eu
 IC
-es
+cw
 Ws
 eu
 eu
@@ -54397,7 +54406,7 @@ JF
 eu
 eu
 aN
-eu
+es
 eu
 eu
 ac

@@ -52,6 +52,7 @@
 			new /datum/stack_recipe("atmospherics airlock assembly", /obj/structure/door_assembly/door_assembly_atmo, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 			new /datum/stack_recipe("research airlock assembly", /obj/structure/door_assembly/door_assembly_research, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 			new /datum/stack_recipe("medical airlock assembly", /obj/structure/door_assembly/door_assembly_med, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
+			new /datum/stack_recipe("refinery airlock assembly", /obj/structure/door_assembly/door_assembly_outpost_refinery, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"), // Outpost 21 edit - Engiemed door
 			new /datum/stack_recipe("maintenance airlock assembly", /obj/structure/door_assembly/door_assembly_mai, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 			new /datum/stack_recipe("external airlock assembly", /obj/structure/door_assembly/door_assembly_ext, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 			new /datum/stack_recipe("freezer airlock assembly", /obj/structure/door_assembly/door_assembly_fre, 4, time = 50, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
@@ -82,6 +83,7 @@
 		new /datum/stack_recipe("closet", /obj/structure/closet, 2, time = 15, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 		new /datum/stack_recipe("canister", /obj/machinery/portable_atmospherics/canister, 10, time = 15, one_per_turf = 1, on_floor = 1, recycle_material = "[name]"),
 		new /datum/stack_recipe("cannon frame", /obj/item/cannonframe, 10, time = 15, one_per_turf = 0, on_floor = 0, recycle_material = "[name]"),
+		new /datum/stack_recipe("maintenance panel", /obj/item/stack/tile/maintenance_panel, 1, 1, 20, recycle_material = "[name]"), // Outpost 21 edit - Maintenance panels
 		new /datum/stack_recipe_list("floor tiles", list(
 			new /datum/stack_recipe("regular floor tile", /obj/item/stack/tile/floor, 1, 4, 20, recycle_material = "[name]"),
 			new /datum/stack_recipe("steel hi-grip tile", /obj/item/stack/tile/floor/steelgrip, 1, 4, 20, recycle_material = "[name]"),
@@ -154,6 +156,7 @@
 		new /datum/stack_recipe("big floor lamp fixture frame", /obj/machinery/light_construct/bigfloorlamp, 3, recycle_material = "[name]"),
 		new /datum/stack_recipe("apc frame", /obj/item/frame/apc, 2, recycle_material = "[name]"),
 		new /datum/stack_recipe("desk bell", /obj/item/deskbell, 1, on_floor = 1, supplied_material = "[name]"),
+		new /datum/stack_recipe("steel kettle", /obj/item/reagent_containers/glass/kettle, 1, on_floor = 1, supplied_material = "[name]"),
 		new /datum/stack_recipe("bunsen burner", /obj/machinery/bunsen_burner, 1, time = 25, on_floor = 1, supplied_material = "[name]"),
 		new /datum/stack_recipe("tanning rack", /obj/structure/tanning_rack, 3, one_per_turf = TRUE, time = 20, on_floor = TRUE, supplied_material = "[name]"),
 		new /datum/stack_recipe("steel hull sheet", /obj/item/stack/material/steel/hull, 2, 1, 5, time = 20, one_per_turf = 0, on_floor = 1, recycle_material = "[name]")

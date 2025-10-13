@@ -315,6 +315,7 @@
 		/obj/item/taperoll,
 		/obj/item/gun/projectile/colt/detective,
 		/obj/item/holowarrant,
+		/obj/item/shield/energy, // Outpost 21 edit - Add shield to belt
 		/obj/item/ticket_printer	//VOREStation Edit
 		)
 

@@ -306,6 +306,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 /obj/machinery/light/small/emergency
 	light_type = /obj/item/light/bulb/red
+	nightshift_allowed = FALSE
 
 /obj/machinery/light/small/emergency/flicker
 	auto_flicker = TRUE
@@ -889,7 +890,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 // break the light and make sparks if was on
 
-/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = 0)
+/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = FALSE)
 	if(status == LIGHT_EMPTY)
 		return
 

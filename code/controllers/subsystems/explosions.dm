@@ -284,10 +284,16 @@ SUBSYSTEM_DEF(explosions)
 		var/adj_light = max(0, (multi_z_scalar * light_impact_range) - (shaped ? 2 : 0) )
 		var/adj_flash = max(0, (multi_z_scalar * flash_range) - (shaped ? 2 : 0) )
 		if(adj_dev > 0 || adj_heavy > 0)
+			// Outpost 21 edit begin - deadly fall z levels don't transfer explosions up
 			if(HasAbove(epicenter.z) && z_transfer & UP)
-				explosion(GetAbove(epicenter), round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, UP, shaped)
+				var/turf/z_turf = GetAbove(epicenter)
+				if(!((z_turf.z in using_map.deadly_fall_levels) || (epicenter.z in using_map.deadly_fall_levels)))
+					explosion(z_turf, round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, UP, shaped)
 			if(HasBelow(epicenter.z) && z_transfer & DOWN)
-				explosion(GetBelow(epicenter), round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, DOWN, shaped)
+				var/turf/z_turf = GetBelow(epicenter)
+				if(!((z_turf.z in using_map.deadly_fall_levels) || (epicenter.z in using_map.deadly_fall_levels)))
+					explosion(z_turf, round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, DOWN, shaped)
+			// Outpost 21 edit end
 	var/max_range = max(devastation_range, heavy_impact_range, light_impact_range, flash_range)
 
 	// Play sounds; we want sounds to be different depending on distance so we will manually do it ourselves.

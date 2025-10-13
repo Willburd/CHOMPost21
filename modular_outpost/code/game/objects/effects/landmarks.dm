@@ -131,6 +131,17 @@
 		prob(75);/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
 		prob(90);/mob/living/simple_mob/animal/space/carp,
 		prob(90);/mob/living/simple_mob/animal/giant_spider,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/electric,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/frost,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/hunter,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/ion,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/lurker,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/pepper,
+		prob(10);/mob/living/simple_mob/animal/giant_spider/tunneler,
+		prob(10);/mob/living/simple_mob/animal/giant_spider/webslinger,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/phorogenic,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/thermic,
+		prob(1);/mob/living/simple_mob/animal/giant_spider/broodmother,
 		prob(35);/mob/living/simple_mob/vore/leopardmander,
 		prob(90);/mob/living/simple_mob/animal/space/goose,
 		prob(90);/mob/living/simple_mob/vore/oregrub,
@@ -143,6 +154,7 @@
 		prob(90);/mob/living/simple_mob/vore/slug,
 		prob(90);/mob/living/simple_mob/vore/pakkun,
 		prob(55);/mob/living/simple_mob/vore/scel,
+		prob(55);/mob/living/simple_mob/vore/jelly,
 		// Ohno
 		prob(10);/mob/living/simple_mob/vore/alienanimals/chu,
 		prob(35);/mob/living/simple_mob/animal/passive/snake/python,
@@ -243,6 +255,12 @@
 		A.electrify()
 		return
 
+	if(A && prob(4))
+		var/nade_path = pick(list(/obj/item/grenade/anti_photon, /obj/item/grenade/confetti, /obj/item/grenade/flashbang, /obj/item/grenade/smokebomb, /obj/item/grenade/concussion, /obj/item/grenade/empgrenade))
+		var/obj/item/grenade/G = new nade_path(A)
+		A.AddComponent(/datum/component/grenadetrap,G)
+		return
+
 	var/obj/structure/cable/C = locate() in T
 	if(C && prob(20) && T.is_plating())
 		C.fray()
@@ -287,7 +305,6 @@
 			M.deployed = TRUE
 			M.update_icon()
 			M.loc = src.loc
-
 
 
 

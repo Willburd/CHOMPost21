@@ -665,7 +665,7 @@
 	for(var/key in SSshuttles.shuttles)
 		var/datum/shuttle/autodock/multi/check = SSshuttles.shuttles[key]
 		if(istype(check,/datum/shuttle/autodock/multi))
-			if(!check.can_be_haunted && check.crash_locations.len)
+			if(!check.can_be_haunted && LAZYLEN(check.crash_locations))
 				continue
 			viable_shuttles.Add(check)
 	if(viable_shuttles.len)

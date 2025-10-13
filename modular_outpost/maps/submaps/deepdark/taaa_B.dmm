@@ -1,0 +1,396 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/metaglass,
+/obj/item/reagent_containers/food/drinks/metaglass{
+	pixel_y = 4;
+	pixel_x = -4
+	},
+/obj/item/reagent_containers/food/drinks/metaglass{
+	pixel_x = -6
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"g" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/template_noop)
+"i" = (
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_y = 8;
+	pixel_x = -9
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_x = 6;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/food/drinks/drinkingglass,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"l" = (
+/obj/structure/bed/double/padded,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"n" = (
+/obj/item/bedsheet/rainbow,
+/obj/structure/bed/padded,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"r" = (
+/obj/structure/table/standard,
+/obj/item/lightpainter,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"v" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/bottle/cola{
+	pixel_x = -16
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"B" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/sleevemate,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"C" = (
+/obj/item/camera,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"D" = (
+/obj/item/seeds/reishimycelium,
+/obj/item/seeds/reishimycelium,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/item/seeds/ambrosiavulgarisseed,
+/obj/machinery/smartfridge/drying_rack,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"E" = (
+/obj/effect/mine/taarainbow,
+/obj/structure/bed/chair/comfy/green{
+	dir = 8
+	},
+/obj/structure/plushie/tesh/taaa,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/bar_soft/full,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/rollingpapers,
+/obj/item/storage/rollingpapers,
+/obj/item/flame/lighter/zippo/rainbow,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"O" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"Q" = (
+/obj/structure/table/standard,
+/obj/machinery/microwave{
+	pixel_x = -2;
+	pixel_y = 5
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"S" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew,
+/obj/item/reagent_containers/food/drinks/bottle/rum{
+	pixel_x = -10
+	},
+/obj/item/reagent_containers/food/drinks/bottle/whiskey{
+	pixel_x = -7
+	},
+/obj/item/reagent_containers/food/drinks/metaglass{
+	pixel_x = 8;
+	pixel_y = 9
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/structure/closet/crate,
+/obj/item/camera,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/obj/structure/table/standard,
+/obj/item/reagent_containers/food/drinks/bottle/redeemersbrew,
+/obj/item/reagent_containers/food/drinks/bottle/sake{
+	pixel_x = 10
+	},
+/obj/item/reagent_containers/food/drinks/bottle/tequila{
+	pixel_x = 16
+	},
+/obj/item/reagent_containers/food/drinks/bottle/vodka{
+	pixel_y = 1;
+	pixel_x = 4
+	},
+/obj/item/reagent_containers/food/drinks/bottle/cognac{
+	pixel_x = 12
+	},
+/obj/item/reagent_containers/food/drinks/bottle/kahlua{
+	pixel_x = -6;
+	pixel_y = 3
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"X" = (
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/bar_alc/full,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Y" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/obj/effect/mine/phoron,
+/obj/structure/bed/chair/comfy/green{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+g
+g
+g
+g
+g
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+v
+v
+v
+v
+v
+v
+v
+g
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+O
+O
+O
+O
+O
+O
+O
+v
+a
+a
+"}
+(5,1,1) = {"
+a
+v
+O
+X
+i
+Q
+e
+r
+O
+v
+g
+a
+"}
+(6,1,1) = {"
+a
+v
+O
+G
+i
+V
+i
+z
+O
+v
+g
+a
+"}
+(7,1,1) = {"
+a
+v
+O
+k
+i
+S
+i
+c
+O
+v
+g
+a
+"}
+(8,1,1) = {"
+a
+v
+m
+Z
+i
+i
+i
+Y
+O
+v
+g
+a
+"}
+(9,1,1) = {"
+a
+v
+O
+B
+K
+D
+i
+i
+m
+v
+g
+a
+"}
+(10,1,1) = {"
+a
+v
+O
+E
+i
+p
+i
+W
+O
+v
+g
+a
+"}
+(11,1,1) = {"
+a
+v
+O
+C
+i
+i
+i
+W
+O
+v
+g
+a
+"}
+(12,1,1) = {"
+a
+g
+O
+n
+l
+U
+i
+W
+O
+v
+a
+a
+"}
+(13,1,1) = {"
+a
+a
+O
+O
+O
+O
+m
+O
+O
+g
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+a
+g
+g
+g
+g
+g
+a
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

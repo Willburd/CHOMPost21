@@ -23,7 +23,7 @@
 
 /obj/item/grenade/smokebomb/detonate()
 	playsound(src, 'sound/effects/smoke.ogg', 50, 1, -3)
-	src.smoke.set_up(10, 0, usr.loc)
+	src.smoke.set_up(10, 0, src.loc) // Outpost 21 edit(port) - usr to src todo
 	spawn(0)
 		for(var/i = 1 to smoke_strength)
 			src.smoke.start(smoke_color)
@@ -37,3 +37,10 @@
 		var/new_smoke_color = tgui_color_picker(user, "Choose a color for the smoke:", "Smoke Color", smoke_color)
 		if(new_smoke_color)
 			smoke_color = new_smoke_color
+
+/obj/item/grenade/smokebomb/primed
+	desc = "A smoke bomb. This one appears to be already activated!"
+
+/obj/item/grenade/smokebomb/primed/Initialize(mapload)
+	. = ..()
+	activate()

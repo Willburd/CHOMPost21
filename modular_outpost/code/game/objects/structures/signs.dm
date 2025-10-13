@@ -17,6 +17,14 @@
 	icon = 'modular_outpost/icons/obj/decals.dmi'
 	icon_state = "map-right-outpost"
 
+/obj/structure/sign/scenery/map/leftbasement_outpost21
+	icon = 'modular_outpost/icons/obj/decals.dmi'
+	icon_state = "map-left-outpostbasement"
+
+/obj/structure/sign/scenery/map/rightbasement_outpost21
+	icon = 'modular_outpost/icons/obj/decals.dmi'
+	icon_state = "map-right-outpostbasement"
+
 /obj/structure/sign/warning/enzyme
 	icon = 'modular_outpost/icons/obj/stationobjs.dmi'
 	name = "\improper WARNING: ENZYMATIC ATMOSPHERE"

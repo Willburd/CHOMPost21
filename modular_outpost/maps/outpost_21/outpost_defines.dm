@@ -52,7 +52,12 @@
 							NETWORK_SECURITY,
 							NETWORK_INTERROGATION,
 							NETWORK_TELECOM,
-							NETWORK_OUTSIDE
+							NETWORK_OUTSIDE,
+							NETWORK_BUNKER,
+							NETWORK_FOUNDATIONS,
+							NETWORK_WASTE,
+							NETWORK_TCOMMS,
+							NETWORK_AISAT
 							)
 	secondary_networks = list(
 							NETWORK_ERT,
@@ -87,6 +92,7 @@
 										/area/muriki/processor/pools/pylorus,
 										/area/muriki/processor/gland/nitrogen,
 										/area/muriki/processor/depths,
+										/area/engineering/coreproctunnel,
 										// Skylines don't need scrubbers and vents
 										/area/muriki/skyline/east,
 										/area/muriki/skyline/south,
@@ -148,6 +154,15 @@
 										/area/offworld/confinementbeam/exterior,
 										/area/ai_sat/core_external,
 										/area/ai_sat/power_control,
+										// Foundation blocks
+										/area/submap/outpost21/foundation_block,
+										/area/submap/outpost21/foundation_block/waste,
+										/area/submap/outpost21/foundation_block/eng,
+										/area/submap/outpost21/foundation_block/carg,
+										/area/submap/outpost21/foundation_block/med,
+										/area/submap/outpost21/foundation_block/sec,
+										/area/submap/outpost21/foundation_block/research,
+										/area/submap/outpost21/foundation_block/bridge,
 										// Actual unit test exceptions
 										/area/comms,
 										/area/muriki/tramstation/waste,
@@ -161,7 +176,9 @@
 										/area/medical/voxlab/airgap,
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
-										/area/maintenance/damaged_resleeverB)
+										/area/maintenance/damaged_resleeverB,
+										/area/security/brig_hole,
+										/area/muriki/crew/bunker)
 
 	unit_test_exempt_from_apc = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
@@ -218,7 +235,8 @@
 										/area/muriki/lowerevac,
 										/area/muriki/crystal,
 										/area/maintenance/damaged_resleeverA,
-										/area/maintenance/damaged_resleeverB)
+										/area/maintenance/damaged_resleeverB,
+										/area/security/brig_hole)
 
 	planet_datums_to_make = list(/datum/planet/muriki)
 
@@ -435,6 +453,7 @@
 [b]Notice[/b]: ESHUI Base, authorized personnel only"}
 	map_z = list(Z_LEVEL_OUTPOST_ASTEROID)
 	extra_z_levels = list()
+	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -472,6 +491,7 @@
 	map_z = list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
 	extra_z_levels = list()
 	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Medical Rescue" = list("confinementbeam_medical"))
+	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
 	. = ..()

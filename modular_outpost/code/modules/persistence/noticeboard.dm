@@ -140,6 +140,7 @@
 	ADD_NOTICE("Drawing: Borgs","<br>On the paper is a crudely drawn image of a raptor-like creature, and a dogborg. The dogborg looms in the distance with a menacing aura, the raptor is running and hiding from the dogborg. Images of 'X' and skulls surround the borg.",null)
 	ADD_NOTICE("Drawing: Menace","<br>On the paper is a horrifying visage of a ghoulish face. The surrounding paper is scribbled with attempts of drawing... something. The drawing seems to radiate menace, but you're not even sure what it's trying to warn you of.",null)
 	ADD_NOTICE("Drawing: Rest","<br>On the paper is a crudely drawn image of a raptor-like creature, they appear to be laying in a bed with closed eyes. A detailed smile can be seen drawn on the floor of the image. The image appears to display peace and safety.",null)
+	ADD_NOTICE("Drawing: Door","<br>On the paper is a cruedely drawn image of a raptor-like creature, they appear to be reeling back from a door and gently pressing a button on it. The door flashes with a soft light, and they enter. Another image shows the door sparking softly, the raptor then turns away to leave, unharmed.",null)
 	. = ..()
 
 

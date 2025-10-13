@@ -10,6 +10,7 @@
 	var/list/searchedby	= list()// Characters that have searched this trashpile, with values of searched time.
 	var/mob/living/hider		// A simple animal that might be hiding in the pile
 	var/obj/structure/mob_spawner/mouse_nest/mouse_nest = null
+	var/allow_mice = TRUE // Outpost 21 edit(port) - Disable mouse spawning
 
 /obj/structure/trash_pile/Initialize(mapload)
 	. = ..()
@@ -25,9 +26,17 @@
 		"boxfort",
 		"trashbag",
 		"brokecomp")
-	mouse_nest = new(src)
+	// Outpost 21 edit(port) begin - Disable mouse spawning
+	if(allow_mice)
+		mouse_nest = new(src)
+	// Outpost 21 edit end
 	AddElement(/datum/element/lootable/trash_pile)
 	AddElement(/datum/element/climbable)
+
+// Outpost 21 edit(port) begin - Disable mouse spawning
+/obj/structure/trash_pile/disable_mouse_spawn
+	allow_mice = FALSE
+// Outpost 21 edit end
 
 /obj/structure/trash_pile/Destroy()
 	qdel(mouse_nest)

@@ -17,16 +17,14 @@
 	economic_modifier = 15
 	access = list(ACCESS_RD, ACCESS_HEADS, ACCESS_TOX, ACCESS_GENETICS, ACCESS_MORGUE,
 						ACCESS_TOX_STORAGE, ACCESS_TELEPORTER,
-						ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_AI_UPLOAD, ACCESS_TECH_STORAGE,
+						ACCESS_RESEARCH, ACCESS_ROBOTICS, ACCESS_XENOBIOLOGY, ACCESS_AI_UPLOAD, ACCESS_TECH_STORAGE,
 						ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_GATEWAY, ACCESS_XENOARCH, ACCESS_EVA, ACCESS_NETWORK,
-						ACCESS_EXPLORER, ACCESS_PATHFINDER, ACCESS_XENOBOTANY, ACCESS_MAINT_TUNNELS) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added ACCESS_MAINT_TUNNELS
+						ACCESS_EXPLORER, ACCESS_PATHFINDER, ACCESS_XENOBOTANY) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 	minimal_access = list(ACCESS_RD, ACCESS_HEADS, ACCESS_TOX, ACCESS_GENETICS, ACCESS_MORGUE,
 						ACCESS_TOX_STORAGE, ACCESS_TELEPORTER,
-						ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_AI_UPLOAD, ACCESS_TECH_STORAGE,
+						ACCESS_RESEARCH, ACCESS_ROBOTICS, ACCESS_XENOBIOLOGY, ACCESS_AI_UPLOAD, ACCESS_TECH_STORAGE,
 						ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_GATEWAY, ACCESS_XENOARCH, ACCESS_EVA, ACCESS_NETWORK,
-						ACCESS_EXPLORER, ACCESS_PATHFINDER, ACCESS_XENOBOTANY, ACCESS_MAINT_TUNNELS) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany. Outpost 21 edit - removed robotics, added ACCESS_MAINT_TUNNELS
-	alt_titles = list(JOB_ALT_RESEARCH_SUPERVISOR = /datum/alt_title/research_supervisor, JOB_ALT_RESEARCH_MANAGER = /datum/alt_title/research_manager,
-						JOB_ALT_HEAD_OF_DEVELOPMENT = /datum/alt_title/head_of_development,JOB_ALT_HEAD_SCIENTIST = /datum/alt_title/head_scientist)
+						ACCESS_EXPLORER, ACCESS_PATHFINDER, ACCESS_XENOBOTANY) //YW Edit access_gateway, _explorer, _pathfinder, and _xenobotany
 
 	minimum_character_age = 25
 	minimal_player_age = 31 //ChompEDIT
@@ -77,7 +75,7 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_XENOARCH, ACCESS_XENOBOTANY) // Outpost 21 edit - removed robotics
+	access = list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_XENOARCH, ACCESS_XENOBOTANY)
 	minimal_access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOARCH)
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 	banned_job_species = list(FBP_DIGITAL)
@@ -89,8 +87,8 @@
 						the principles and requirements of Research and Development. They may also formulate experiments of their own devising, if \
 						they find an appropriate topic."
 	alt_titles = list(JOB_ALT_RESEARCHER = /datum/alt_title/researcher, JOB_ALT_LAB_ASSISTANT = /datum/alt_title/lab_assistant, JOB_ALT_XENOARCHAEOLOGIST = /datum/alt_title/xenoarch,
-						JOB_ALT_XENOPALEONTOLOGIST = /datum/alt_title/xenopaleontologist, JOB_ALT_ANOMALIST = /datum/alt_title/anomalist, JOB_ALT_PHORON_RESEARCHER = /datum/alt_title/phoron_research,
-						JOB_ALT_GAS_PHYSICIST = /datum/alt_title/gas_physicist /*, JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer, JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer */) // Outpost 21 edit - Circuit jobs moved to engiee roboticist
+							JOB_ALT_XENOPALEONTOLOGIST = /datum/alt_title/xenopaleontologist, JOB_ALT_ANOMALIST = /datum/alt_title/anomalist, JOB_ALT_PHORON_RESEARCHER = /datum/alt_title/phoron_research,
+						JOB_ALT_GAS_PHYSICIST = /datum/alt_title/gas_physicist, JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer, JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer)
 
 /datum/job/scientist/get_request_reasons()
 	return list("Assembling expedition team")
@@ -133,13 +131,13 @@
 
 /datum/alt_title/circuit_designer
 	title = JOB_ALT_CIRCUIT_DESIGNER
-	title_blurb = "A " + JOB_ALT_CIRCUIT_DESIGNER + " is a " + JOB_ENGINEER + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
-				   They work to create various useful devices using the capabilities of integrated circuitry." // Outpost 21 edit - engineering roboticist alt title
+	title_blurb = "A " + JOB_ALT_CIRCUIT_DESIGNER + " is a " + JOB_SCIENTIST + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
+				   They work to create various useful devices using the capabilities of integrated circuitry."
 
 /datum/alt_title/circuit_programmer
 	title = JOB_ALT_CIRCUIT_PROGRAMMER
-	title_blurb = "A " + JOB_ALT_CIRCUIT_PROGRAMMER + " is a " + JOB_ENGINEER + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
-				   They work to create various useful devices using the capabilities of integrated circuitry." // Outpost 21 edit - engineering roboticist alt title
+	title_blurb = "A " + JOB_ALT_CIRCUIT_PROGRAMMER + " is a " + JOB_SCIENTIST + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
+				   They work to create various useful devices using the capabilities of integrated circuitry."
 
 //////////////////////////////////
 //			Xenobiologist
@@ -156,7 +154,7 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_HYDROPONICS) // Outpost 21 edit - removed robotics
+	access = list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_HYDROPONICS)
 	minimal_access = list(ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_HYDROPONICS, ACCESS_TOX_STORAGE)
 	banned_job_species = list(FBP_DIGITAL)
 
@@ -188,30 +186,17 @@
 /datum/job/roboticist
 	title = JOB_ROBOTICIST
 	flag = ROBOTICIST
-	// Outpost 21 edit begin - Moved to engineering
-	//departments = list(DEPARTMENT_RESEARCH)
-	//department_flag = MEDSCI
-	departments = list(DEPARTMENT_ENGINEERING)
-	department_flag = ENGSEC
-	// Outpost 21 edit end
+	departments = list(DEPARTMENT_RESEARCH)
+	department_flag = MEDSCI
 	faction = FACTION_STATION
 	total_positions = 3
 	spawn_positions = 2
-	// Outpost 21 edit begin - Moved to engineering
-	//supervisors = "the " + JOB_RESEARCH_DIRECTOR
-	//selection_color = "#633D63"
-	supervisors = "the " + JOB_CHIEF_ENGINEER
-	selection_color = "#5B4D20"
-	// Outpost 21 edit end
-	pto_type = PTO_ENGINEERING // Outpost 21 edit - moved to robotics
+	pto_type = PTO_SCIENCE
+	supervisors = "the " + JOB_RESEARCH_DIRECTOR
+	selection_color = "#633D63"
 	economic_modifier = 5
-	// Outpost 21 edit begin - Moved to engineering
-	//access = list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_TECH_STORAGE, ACCESS_MORGUE, ACCESS_RESEARCH) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	//minimal_access = list(ACCESS_ROBOTICS, ACCESS_TECH_STORAGE, ACCESS_MORGUE, ACCESS_RESEARCH) //As a job that handles so many corpses, it makes sense for them to have morgue access.
-	access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS) // Outpost 21 edit - removed robotics
-	minimal_access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_MAINT_TUNNELS, ACCESS_EMERGENCY_STORAGE, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS) // Outpost 21 edit - removed robotics
-	// Outpost 21 edit end
-
+	access = list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_TECH_STORAGE, ACCESS_MORGUE, ACCESS_RESEARCH) //As a job that handles so many corpses, it makes sense for them to have morgue access.
+	minimal_access = list(ACCESS_ROBOTICS, ACCESS_TECH_STORAGE, ACCESS_MORGUE, ACCESS_RESEARCH) //As a job that handles so many corpses, it makes sense for them to have morgue access.
 	minimal_player_age = 7
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
 	banned_job_species = list(FBP_DIGITAL)
@@ -220,12 +205,10 @@
 	job_description = "A " + JOB_ROBOTICIST + " maintains and repairs the station's synthetics, including crew with prosthetic limbs. \
 						They can also assist the station by producing simple robots and even pilotable exosuits."
 	alt_titles = list(
-		JOB_ALT_ASSEMBLY_TECHNICIAN = /datum/alt_title/assembly_tech,
-		JOB_ALT_BIOMECHANICAL_ENGINEER = /datum/alt_title/biomech,
-		JOB_ALT_MECHATRONIC_ENGINEER = /datum/alt_title/mech_tech,
-		JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer,
-		JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer,
-		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi) // Outpost 21 edit - Circuit jobs moved to engiee roboticist
+			JOB_ALT_ASSEMBLY_TECHNICIAN = /datum/alt_title/assembly_tech,
+			JOB_ALT_BIOMECHANICAL_ENGINEER = /datum/alt_title/biomech,
+			JOB_ALT_MECHATRONIC_ENGINEER = /datum/alt_title/mech_tech,
+		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi)
 
 /datum/job/roboticist/get_request_reasons()
 	return list("Repairs needed")
@@ -262,9 +245,8 @@
 	supervisors = "the " + JOB_RESEARCH_DIRECTOR
 	selection_color = "#633D63"
 	economic_modifier = 7
-	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBOTANY, ACCESS_HYDROPONICS, ACCESS_XENOBIOLOGY) //CHOMPS KSC 9/2/2020 - Added "access_xenobiology" to their access so they can enter Xenobotany. Outpost 21 edit - removed robotics
+	access = list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_XENOBOTANY, ACCESS_HYDROPONICS, ACCESS_XENOBIOLOGY) //CHOMPS KSC 9/2/2020 - Added "access_xenobiology" to their access so they can enter Xenobotany.
 	minimal_access = list(ACCESS_RESEARCH, ACCESS_XENOBOTANY, ACCESS_HYDROPONICS, ACCESS_TOX_STORAGE)
-
 	pto_type = PTO_SCIENCE
 
 	minimal_player_age = 14

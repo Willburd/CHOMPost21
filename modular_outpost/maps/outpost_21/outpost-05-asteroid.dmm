@@ -508,6 +508,12 @@
 /area/offworld/asteroidyard/station/halls)
 "bi" = (
 /obj/machinery/telecomms/relay/preset/outpost/recyard,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
 /turf/simulated/floor/bluegrid,
 /area/offworld/asteroidyard/station/telecomms)
 "bj" = (
@@ -549,7 +555,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/cave)
 "bn" = (
 /obj/structure/sign/securearea,
@@ -673,6 +682,105 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/asteroidyard/station/access_shaft)
+"bB" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_bar)
+"bC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/dockingbay)
+"bD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/dockingbay)
+"bE" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bF" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -31
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls_storage)
+"bG" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
+"bH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
 "bI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -701,6 +809,36 @@
 /obj/structure/ore_box,
 /turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
+"bK" = (
+/obj/structure/lattice,
+/obj/effect/shuttle_landmark/premade/generic/crash_rec_trawlerbad,
+/turf/space,
+/area/offworld/asteroidyard/external)
+"bL" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/asteroidyard/station/cave)
+"bM" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/asteroidyard/station/cave)
+"bN" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/cave)
 "bO" = (
 /obj/structure/railing{
 	dir = 4
@@ -710,6 +848,56 @@
 	},
 /turf/simulated/floor,
 /area/offworld/asteroidyard/station/halls_bar)
+"bP" = (
+/obj/structure/railing{
+	flags = null
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/cave)
+"bQ" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/cave)
+"bR" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	dir = 1;
+	req_one_access = list(31,48)
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/gps/mining,
+/obj/item/tank/jetpack/carbondioxide,
+/obj/item/clothing/suit/space/void/mining,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/mining,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/item/gps/mining,
+/obj/item/suit_cooling_unit,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled,
+/area/offworld/asteroidyard/station/cave)
+"bT" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/cave)
 "bU" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -732,6 +920,33 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/asteroidyard/station/spelunker)
+"bX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor,
+/area/offworld/asteroidyard/station/cave)
+"bY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/cave)
+"bZ" = (
+/obj/machinery/atmospherics/binary/passive_gate/on{
+	dir = 4
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor,
+/area/offworld/asteroidyard/station/cave)
+"ca" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/cave)
 "cb" = (
 /obj/structure/closet/radiation,
 /turf/simulated/mineral/floor/cave{
@@ -2389,12 +2604,6 @@
 "kZ" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/storage)
-"la" = (
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/asteroidyard/station/cave)
 "lk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4141,10 +4350,10 @@
 /turf/simulated/floor,
 /area/offworld/asteroidyard/station/halls_storage)
 "uK" = (
-/obj/machinery/atmospherics/portables_connector{
+/obj/machinery/atmospherics/pipe/tank/air{
+	start_pressure = 0;
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
 "uO" = (
@@ -4158,6 +4367,11 @@
 	},
 /obj/item/storage/pill_bottle/tramadol,
 /obj/item/storage/firstaid/regular,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/medbox)
 "uQ" = (
@@ -4359,6 +4573,12 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21;
+	listening = 1
 	},
 /turf/simulated/floor/wood,
 /area/offworld/asteroidyard/station/bar)
@@ -4703,12 +4923,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
 "xM" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
@@ -4721,7 +4935,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/cave)
 "xP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -4983,6 +5201,7 @@
 	icon_state = "pipe-j2"
 	},
 /obj/effect/floor_decal/corner/brown,
+/obj/effect/shuttle_landmark/premade/generic/crash_rec,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/observation)
 "zd" = (
@@ -6104,6 +6323,9 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/structure/panic_button{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/observation)
 "EC" = (
@@ -6712,7 +6934,11 @@
 /area/offworld/asteroidyard/station/halls)
 "HS" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/storage)
 "HT" = (
 /obj/machinery/light,
@@ -7070,8 +7296,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
@@ -7711,6 +7937,11 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -31
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/observation)
 "MF" = (
@@ -8120,7 +8351,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/turf/simulated/wall,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/access_shaft)
 "OS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8654,12 +8888,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_storage)
 "Ry" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
@@ -8672,7 +8900,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/cave)
 "Rz" = (
 /obj/structure/table/rack/shelf/steel,
@@ -8830,15 +9062,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/teleport)
 "Sw" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
+/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/cave)
 "Sy" = (
 /obj/structure/lattice,
@@ -9872,15 +10102,13 @@
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/teleport)
 "Yn" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
+/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/asteroidyard/station/cave)
 "Yv" = (
 /obj/structure/railing{
@@ -20226,7 +20454,7 @@ vY
 vY
 vY
 Ud
-bp
+bH
 vY
 cu
 dk
@@ -20597,7 +20825,7 @@ tC
 tC
 wq
 dk
-CR
+bK
 dk
 dk
 dk
@@ -21544,7 +21772,7 @@ cs
 cs
 hG
 Qu
-cs
+bE
 cs
 cs
 fQ
@@ -23635,7 +23863,7 @@ cs
 cs
 dK
 cs
-aY
+bG
 hG
 cs
 cs
@@ -23822,7 +24050,7 @@ Pa
 Kh
 Pt
 SY
-Pa
+bD
 ta
 Kh
 Pa
@@ -23840,7 +24068,7 @@ rC
 CX
 vt
 WH
-uQ
+bC
 FU
 jD
 bV
@@ -26240,7 +26468,7 @@ Ve
 Jj
 ci
 mm
-Hg
+bF
 mm
 rQ
 mm
@@ -26633,7 +26861,7 @@ bu
 gC
 bu
 bu
-iZ
+bB
 bU
 bu
 gC
@@ -27064,7 +27292,7 @@ mq
 oJ
 cl
 Jq
-fy
+bN
 qa
 qa
 qa
@@ -27226,7 +27454,7 @@ kp
 ed
 fe
 Jn
-xL
+bP
 qa
 qa
 qa
@@ -27388,7 +27616,7 @@ fe
 fe
 fe
 fl
-xL
+bP
 qa
 qa
 qa
@@ -27549,8 +27777,8 @@ yI
 yI
 Yf
 Ax
-Ax
-fy
+bT
+bQ
 qa
 qa
 qa
@@ -27711,7 +27939,7 @@ yI
 yI
 Yf
 Ax
-Ax
+bX
 fy
 qa
 qa
@@ -27873,7 +28101,7 @@ yI
 yI
 Ax
 Ax
-Ax
+bY
 xL
 yZ
 qa
@@ -28035,9 +28263,9 @@ yI
 yI
 ni
 Ax
-Ax
+bZ
 Yd
-yI
+bL
 uK
 uK
 uK
@@ -28197,10 +28425,10 @@ yI
 fe
 ni
 Ax
-Ax
-Yd
-fe
-la
+ca
+bR
+bM
+JL
 JL
 JL
 JL

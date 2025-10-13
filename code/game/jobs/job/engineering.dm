@@ -27,15 +27,14 @@
 	dept_time_required = 60
 
 	access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS,
-						ACCESS_TELEPORTER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_ATMOSPHERICS, ACCESS_EMERGENCY_STORAGE, ACCESS_EVA,
-						ACCESS_HEADS, ACCESS_CONSTRUCTION,
-						ACCESS_CE, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_AI_UPLOAD, ACCESS_GATEWAY, ACCESS_ROBOTICS) // Outpost 21 edit - Added robotics
+							ACCESS_TELEPORTER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_ATMOSPHERICS, ACCESS_EMERGENCY_STORAGE, ACCESS_EVA,
+							ACCESS_HEADS, ACCESS_CONSTRUCTION,
+							ACCESS_CE, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_AI_UPLOAD, ACCESS_GATEWAY)
 
 	minimal_access = list(ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS,
-						ACCESS_TELEPORTER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_ATMOSPHERICS, ACCESS_EMERGENCY_STORAGE, ACCESS_EVA,
-						ACCESS_HEADS, ACCESS_CONSTRUCTION,
-						ACCESS_CE, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_AI_UPLOAD, ACCESS_GATEWAY, ACCESS_ROBOTICS) // Outpost 21 edit - Added robotics
-
+							ACCESS_TELEPORTER, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_ATMOSPHERICS, ACCESS_EMERGENCY_STORAGE, ACCESS_EVA,
+							ACCESS_HEADS, ACCESS_CONSTRUCTION,
+							ACCESS_CE, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TCOMSAT, ACCESS_AI_UPLOAD, ACCESS_GATEWAY)
 	alt_titles = list(JOB_ALT_HEAD_ENGINEER = /datum/alt_title/head_engineer, JOB_ALT_FOREMAN = /datum/alt_title/foreman, JOB_ALT_MAINTENANCE_MANAGER = /datum/alt_title/maintenance_manager)
 	minimal_player_age = 31 //ChompEDIT
 
@@ -47,13 +46,13 @@
 /datum/job/chief_engineer/get_request_reasons()
 	return list("Engine setup", "Construction project", "Repairs necessary", "Training crew", "Assembling expedition team")
 
+/* Outpost 21 edit - No wire cheat
 /datum/job/chief_engineer/equip(mob/living/carbon/human/H, alt_title)
 	. = ..()
-	/* Outpost 21 edit - Don't engie wire cheat here
 	ADD_TRAIT(H, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
 	if(H.mind)
 		ADD_TRAIT(H.mind, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
-	*/
+*/
 
 /datum/alt_title/head_engineer
 	title = JOB_ALT_HEAD_ENGINEER
@@ -83,7 +82,7 @@
 	access = list(ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_ATMOSPHERICS)
 	minimal_access = list(ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION)
 	alt_titles = list(JOB_ALT_MAINTENANCE_TECHNICIAN = /datum/alt_title/maint_tech, JOB_ALT_ENGINE_TECHNICIAN = /datum/alt_title/engine_tech,
-					JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor,  JOB_ALT_COMPUTER_TECHNICIAN = /datum/alt_title/computer_tech, JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker, JOB_ALT_CHEMENGINEER = /datum/alt_title/chem_tech) // Outpost 21 addition - shipbreaker, Chemical Engineer
+						JOB_ALT_ELECTRICIAN = /datum/alt_title/electrician, JOB_ALT_CONSTRUCTION_ENGINEER = /datum/alt_title/construction_engi, JOB_ALT_ENGINEERING_CONTRACTOR = /datum/alt_title/engineering_contractor,  JOB_ALT_COMPUTER_TECHNICIAN = /datum/alt_title/computer_tech, JOB_ALT_SALVAGE_TECHNICIAN = /datum/alt_title/salvage_tech, JOB_ALT_DAMAGE_CONTROL_SPECIALIST = /datum/alt_title/damage_control_specialist)
 
 	minimal_player_age = 3
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)
@@ -95,13 +94,13 @@
 /datum/job/engineer/get_request_reasons()
 	return list("Engine setup", "Construction project", "Repairs necessary", "Assembling expedition team")
 
+/* Outpost 21 edit - No wire cheat
 /datum/job/engineer/equip(mob/living/carbon/human/H, alt_title)
 	. = ..()
-	/* Outpost 21 edit - Don't engie wire cheat here
 	ADD_TRAIT(H, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
 	if(H.mind)
 		ADD_TRAIT(H.mind, TRAIT_CAN_SEE_WIRES, JOB_TRAIT)
-	*/
+*/
 
 // Engineer Alt Titles
 /datum/alt_title/maint_tech
@@ -136,6 +135,10 @@
 	title = JOB_ALT_SALVAGE_TECHNICIAN
 	title_blurb = "A " + JOB_ALT_SALVAGE_TECHNICIAN + " is responsible for breaking down debris and obsolete equipment to recover useful components and materials."
 
+/datum/alt_title/damage_control_specialist
+	title = JOB_ALT_DAMAGE_CONTROL_SPECIALIST
+	title_blurb = "A " + JOB_ALT_DAMAGE_CONTROL_SPECIALIST + " is the Engineering Department's answer to first responders like the " + JOB_PARAMEDIC + ", being responsible for stabilizing situations and evacuating personnel, then conducting repairs."
+
 //////////////////////////////////
 //			Atmos Tech
 //////////////////////////////////
@@ -154,8 +157,8 @@
 	access = list(ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_ATMOSPHERICS, ACCESS_EXTERNAL_AIRLOCKS)
 	minimal_access = list(ACCESS_EVA, ACCESS_ENGINE, ACCESS_ATMOSPHERICS, ACCESS_MAINT_TUNNELS, ACCESS_EMERGENCY_STORAGE, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS)
 
-	alt_titles = list(JOB_ALT_ATMOSPHERIC_ENGINEER = /datum/alt_title/atmos_engi, JOB_ALT_ATMOSPHERIC_MAINTAINER = /datum/alt_title/atmos_maint, JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech,
-						JOB_ALT_FUEL_TECHNICIAN = /datum/alt_title/refuel_tech, JOB_ALT_FIREFIGHTER = /datum/alt_title/firefighter) // Outpost 21 edit - reenable disposals tech
+	alt_titles = list(JOB_ALT_ATMOSPHERIC_ENGINEER = /datum/alt_title/atmos_engi, JOB_ALT_ATMOSPHERIC_MAINTAINER = /datum/alt_title/atmos_maint, /*CHOMPEdit JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech*/
+						JOB_ALT_FUEL_TECHNICIAN = /datum/alt_title/refuel_tech, JOB_ALT_FIREFIGHTER = /datum/alt_title/firefighter)
 
 	minimal_player_age = 3
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)

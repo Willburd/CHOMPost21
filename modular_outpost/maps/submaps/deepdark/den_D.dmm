@@ -1,0 +1,267 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "face"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"d" = (
+/obj/random/maintenance/misc,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/obj/random/thermalponcho,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"j" = (
+/obj/random/contraband/nofail,
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"l" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/obj/random/drinkbottle,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"C" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"D" = (
+/obj/effect/landmark/dangerous_situation,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"I" = (
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"O" = (
+/obj/effect/mine/frag,
+/obj/random/tool/alien,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"S" = (
+/turf/template_noop,
+/area/template_noop)
+"T" = (
+/obj/machinery/portable_atmospherics/canister/nitrophoric_oxide/broken,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/random/toolbox,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/obj/effect/mine/claymore{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+S
+S
+S
+S
+S
+S
+S
+S
+S
+S
+S
+S
+"}
+(2,1,1) = {"
+S
+S
+S
+S
+C
+c
+c
+c
+c
+C
+S
+S
+"}
+(3,1,1) = {"
+S
+S
+c
+l
+Z
+m
+m
+m
+C
+C
+C
+S
+"}
+(4,1,1) = {"
+S
+c
+m
+t
+t
+t
+t
+t
+G
+t
+C
+S
+"}
+(5,1,1) = {"
+S
+m
+t
+t
+l
+j
+l
+t
+a
+t
+Z
+S
+"}
+(6,1,1) = {"
+S
+m
+t
+T
+l
+l
+A
+t
+z
+t
+I
+S
+"}
+(7,1,1) = {"
+S
+m
+t
+f
+J
+O
+D
+t
+t
+t
+l
+S
+"}
+(8,1,1) = {"
+S
+Z
+t
+D
+l
+l
+l
+t
+m
+m
+Z
+S
+"}
+(9,1,1) = {"
+S
+Z
+Z
+t
+d
+U
+l
+t
+m
+m
+c
+S
+"}
+(10,1,1) = {"
+S
+S
+Z
+W
+t
+t
+t
+t
+m
+m
+S
+S
+"}
+(11,1,1) = {"
+S
+S
+c
+C
+C
+C
+c
+c
+c
+S
+S
+S
+"}
+(12,1,1) = {"
+S
+S
+S
+S
+S
+S
+S
+S
+S
+S
+S
+S
+"}

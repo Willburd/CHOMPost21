@@ -56,6 +56,7 @@
 	#define JOB_ALT_SUPPLY_CHIEF "Supply Chief"
 	#define JOB_ALT_LOGISTICS_MANAGER "Logistics Manager"
 	#define JOB_ALT_CARGO_SUPERVISOR "Cargo Supervisor"
+	#define JOB_ALT_CHIEF_STEWARD "Chief Steward" // Outpost 21 addition
 
 #define JOB_PATHFINDER "Pathfinder" // was Pathfinder  //CHOMP explo keep
 	// Pathfinder alt titles
@@ -114,6 +115,7 @@
 	#define JOB_ALT_SUPPLY_COURIER "Supply Courier"
 	#define JOB_ALT_DISPOSALS_SORTER "Disposals Sorter"
 	#define JOB_ALT_MAILMAN "Mailman"
+	#define JOB_ALT_DELIVERY_WORKER "Delivery Worker"
 
 #define JOB_SHAFT_MINER "Shaft Miner"
 	// Shaft Miner alt titles
@@ -197,6 +199,8 @@
 	#define JOB_ALT_FORTUNE_TELLER "Fortune Teller"
 	#define JOB_ALT_SPIRIT_HEALER "Spirit Healer"
 	#define JOB_ALT_RADIOHOST "Radio Host" // Outpost 21 addition
+	#define JOB_ALT_EDUCATOR "Educator"
+	#define JOB_ALT_INSTRUCTOR "Instructor"
 //___________________________________________________________
 
 
@@ -212,6 +216,7 @@
 	#define JOB_ALT_CHEMENGINEER "Chemical Engineer" // Outpost 21 addition
 	#define JOB_ALT_COMPUTER_TECHNICIAN "Computer Technician"
 	#define JOB_ALT_SALVAGE_TECHNICIAN "Salvage Technician"
+	#define JOB_ALT_DAMAGE_CONTROL_SPECIALIST "Damage Control Specialist"
 
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
 	// Atmospheric Technician alt titles
@@ -346,6 +351,7 @@
 	#define JOB_ALT_INVESTIGATOR "Investigator"
 	#define JOB_ALT_SECURITY_INSPECTOR "Security Inspector"
 	#define JOB_ALT_FORENSIC_TECHNICIAN "Forensic Technician"
+	#define JOB_ALT_LOSS_PREVENTION "Loss Prevention Officer"
 
 // CHOMPAdd
 #define JOB_BRIG_PHYSICIAN "Brig Physician"
@@ -356,6 +362,7 @@
 	#define JOB_ALT_JUNIOR_BRIGPHYS "Junior Brig Physician"
 	#define JOB_ALT_DETENTION_HEALTH_OFFICER "Detention Health Officer"
 // CHOMPAdd End
+
 //___________________________________________________________
 
 

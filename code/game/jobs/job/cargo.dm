@@ -16,8 +16,8 @@
 	supervisors = "the " + JOB_HEAD_OF_PERSONNEL
 	selection_color = "#9b633e"
 	economic_modifier = 5
-	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TELEPORTER, ACCESS_HEADS) // Outpost 21 edit - Access_keycard_auth, Access_teleporter, Access_heads added
-	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_RC_ANNOUNCE, ACCESS_KEYCARD_AUTH, ACCESS_TELEPORTER, ACCESS_HEADS) // Outpost 21 edit - Access_keycard_auth, Access_teleporter, Access_heads added
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_RC_ANNOUNCE)
+	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_QM, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_RC_ANNOUNCE)
 	banned_job_species = list(FBP_DIGITAL, SPECIES_PROMETHEAN)
 
 	ideal_character_age = 40
@@ -62,7 +62,7 @@
 						because Central Command gives a partial refund."
 
 	alt_titles = list(JOB_ALT_CARGO_LOADER = /datum/alt_title/cargo_loader, JOB_ALT_CARGO_HANDLER = /datum/alt_title/cargo_handler, JOB_ALT_SUPPLY_COURIER = /datum/alt_title/supply_courier,
-					JOB_ALT_DISPOSALS_SORTER = /datum/alt_title/disposal_sorter, JOB_ALT_MAILMAN = /datum/alt_title/mailman)
+					JOB_ALT_DISPOSALS_SORTER = /datum/alt_title/disposal_sorter, JOB_ALT_MAILMAN = /datum/alt_title/mailman, JOB_ALT_DELIVERY_WORKER = /datum/alt_title/delivery_worker)
 
 /datum/alt_title/supply_courier
 	title = JOB_ALT_SUPPLY_COURIER
@@ -84,6 +84,11 @@
 	title = JOB_ALT_MAILMAN
 	title_blurb = "A Mail Carrier is tasked with delivering packages or mail to whoever it might adress."
 	title_outfit = /decl/hierarchy/outfit/job/cargo/cargo_tech/mailman
+
+/datum/alt_title/delivery_worker
+	title = JOB_ALT_DELIVERY_WORKER
+	title_blurb = "A " + JOB_ALT_DELIVERY_WORKER + " takes a more personal role in delivering items directly to those who ordered them."
+
 
 //////////////////////////////////
 //			Shaft Miner

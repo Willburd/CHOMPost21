@@ -11,7 +11,8 @@
 		/area/engineering/gravgen,
 		/area/maintenance/incinerator,
 		/area/engineering/coreproctunnel,
-		/area/muriki/crew/bunker
+		/area/muriki/crew/bunker,
+		/area/muriki/crew/bunker_deep
 	)
 
 	var/spawncount = 0
@@ -45,6 +46,7 @@
 
 	// special behavior on bunker
 	finalareas -= /area/muriki/crew/bunker
+	finalareas -= /area/muriki/crew/bunker_deep
 
 /datum/event/bluespace_shelling/announce()
 	command_announcement.Announce("Attention [station_name()]. Bluespace shelling confirmed for [department_name]. Fire for Effect. All crew must retreat to a safe distance, seek shelter, and remain in place until the all clear is given. ETA 30 seconds.", "Bluespace Shelling")

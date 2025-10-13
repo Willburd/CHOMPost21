@@ -356,6 +356,32 @@
 /obj/machinery/door/airlock/centcom/nameddorm,
 /turf/simulated/floor/wood,
 /area/centcom/living)
+"abo" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	name = "plating";
+	icon_state = "plating"
+	},
+/area/centcom)
+"abp" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/janus,
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/specops)
+"abq" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/pulse_rifle,
+/obj/item/gun/energy/pulse_rifle,
+/obj/item/gun/energy/pulse_rifle,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "abu" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -1533,7 +1559,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Greater Force"
+	c_tag = "SEC - Greater Force Interior"
 	},
 /obj/machinery/button/remote/blast_door{
 	name = "Garage Door Opener";
@@ -2191,7 +2217,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Can Of Whoop Ass"
+	c_tag = "SEC - Can Of Whoop Ass Interior"
 	},
 /obj/machinery/button/remote/blast_door{
 	name = "Garage Door Opener";
@@ -2545,15 +2571,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/specialty/redspace)
-"bdF" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/camera/network/security{
-	c_tag = "SEC - Can Of Whoop Ass"
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/vehicle_interior/heavyarmor_carrier_B)
 "bej" = (
 /obj/structure/bed/chair/bay/shuttle,
 /obj/effect/floor_decal/industrial/outline/red,
@@ -11751,8 +11768,13 @@
 /area/specialty/redspace)
 "fIL" = (
 /obj/structure/disposalpipe/segment,
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/unsimulated/floor{
+	name = "plating";
+	icon_state = "plating"
 	},
 /area/centcom)
 "fIM" = (
@@ -61000,7 +61022,7 @@ sDl
 sDl
 oRP
 aaK
-tkh
+abo
 pmd
 xuc
 aaK
@@ -64518,7 +64540,7 @@ yid
 fkn
 fkn
 lco
-fkn
+abq
 fkn
 fPz
 vjk
@@ -65503,7 +65525,7 @@ aBu
 cpp
 cpp
 kzR
-fVJ
+abp
 rah
 lHL
 dfx
@@ -99473,7 +99495,7 @@ aab
 aab
 aab
 auj
-bdF
+bFS
 bFS
 bFS
 auj

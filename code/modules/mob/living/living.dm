@@ -18,6 +18,8 @@
 
 	selected_image = image(icon = GLOB.buildmode_hud, loc = src, icon_state = "ai_sel")
 
+	AddElement(/datum/element/spontaneous_vore)
+
 /mob/living/proc/get_visible_name()
 	var/datum/component/shadekin/SK = get_shadekin_component()
 	if(SK && SK.in_phase)
@@ -95,12 +97,13 @@
 			organs -= OR
 			qdel(OR)
 
-	if(LAZYLEN(internal_organs) && !istype(src, /mob/living/simple_mob/animal))
+	if(LAZYLEN(internal_organs))
 		internal_organs_by_name.Cut()
 		while(internal_organs.len)
 			var/obj/item/OR = internal_organs[1]
 			internal_organs -= OR
-			qdel(OR)
+			if(isobj(OR))
+				qdel(OR)
 
 	cultnet.updateVisibility(src, 0)
 
@@ -858,8 +861,6 @@
 		else
 			resist_restraints()
 
-	if(attempt_vr(src,"vore_process_resist",args)) return TRUE
-
 /mob/living/proc/resist_buckle()
 	if(buckled)
 		if(istype(buckled, /obj/vehicle))
@@ -1271,8 +1272,6 @@
 	// We just swapped hands, so the thing in our inactive hand will notice it's not the focus
 	var/obj/item/I = get_inactive_hand()
 	if(I)
-		if(I.zoom)
-			I.zoom()
 		I.in_inactive_hand(src)	//This'll do specific things, determined by the item
 	return
 
@@ -1483,6 +1482,8 @@
 		screen_icon.icon = HUD.ui_style
 		screen_icon.color = HUD.ui_color
 		screen_icon.alpha = HUD.ui_alpha
+	if(isAI(user))
+		screen_icon.screen_loc = ui_ai_pda_send
 	LAZYADD(HUD.other_important, screen_icon)
 	user.client?.screen += screen_icon
 

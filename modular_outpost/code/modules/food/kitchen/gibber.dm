@@ -48,8 +48,14 @@
 			// keep gib throw dir default
 			qdel(input_obj)
 
-	if(!input_plate)
-		log_world("## MISC a [src] didn't find an input plate.")
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	// Upstream doesn't like our gibber setup on autosleever. Fix that here.
+	for(var/i in GLOB.cardinal)
+		var/S = locate( /obj/machinery/transhuman/autoresleever, get_step(src.loc, i) )
+		if(S)
+			return INITIALIZE_HINT_QDEL
+	#endif
+
 
 /obj/machinery/gibber/Destroy()
 	occupant = null
@@ -353,7 +359,7 @@
 					processtobiomass = TRUE
 		if(processtobiomass)
 			// process and destroy
-			thing.Destroy()
+			qdel(thing)
 		else
 			thing.forceMove( src.loc) // Drop it onto the turf for throwing.
 			thing.throw_at( get_edge_target_turf(thing.loc, gib_throw_dir),rand(1,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.
@@ -362,7 +368,6 @@
 	spawn(12)
 		for (var/mob/M in contents)
 			M.forceMove( src.loc) // Drop it onto the turf for throwing.
-			M.reset_view(null)
 			visible_message("<span class='notice'>\The [M] crawls out of the [src] unharmed!</span>")
 
 /obj/machinery/gibber/proc/updatesleever()

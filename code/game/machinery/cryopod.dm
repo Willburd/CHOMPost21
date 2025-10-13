@@ -384,7 +384,7 @@
 		despawn_occupant(M)
 
 	// VOREStation
-	hook_vr("despawn", list(to_despawn, src))
+	persist_despawned_mob(to_despawn, src)
 	if(isliving(to_despawn))
 		var/mob/living/L = to_despawn
 		for(var/obj/belly/B as anything in L.vore_organs)
@@ -644,8 +644,6 @@
 			return
 
 		usr.stop_pulling()
-		usr.client.perspective = EYE_PERSPECTIVE
-		usr.client.eye = src
 		usr.forceMove(src)
 		set_occupant(usr)
 		if(ishuman(usr) && applies_stasis)
@@ -681,9 +679,6 @@
 	if(!occupant)
 		return
 
-	if(occupant.client)
-		occupant.client.eye = occupant.client.mob
-		occupant.client.perspective = MOB_PERSPECTIVE
 	if(!skip_move)
 		occupant.forceMove(get_turf(src))
 	if(ishuman(occupant) && applies_stasis)
@@ -736,10 +731,6 @@
 				to_chat(user, span_warning("\The [src] is already occupied."))
 				return
 			M.forceMove(src)
-
-			if(M.client)
-				M.client.perspective = EYE_PERSPECTIVE
-				M.client.eye = src
 		else return
 
 		icon_state = occupied_icon_state

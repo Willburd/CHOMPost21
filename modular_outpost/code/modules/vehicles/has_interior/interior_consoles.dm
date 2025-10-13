@@ -10,16 +10,13 @@
 	light_color = "#a91515"
 	circuit = /obj/item/circuitboard/security
 
-	var/list/viewers // Weakrefs to mobs in direct-view mode.
+	VAR_PRIVATE/list/viewers // Weakrefs to mobs in direct-view mode.
 	var/obj/vehicle/has_interior/controller/interior_controller = null
 	var/obj/structure/bed/chair/vehicle_interior_seat/paired_seat = null
 	var/controls_weapon_index = 0 // if above 0, controls weapons in interior_controller.internal_weapon_list
 
-/obj/machinery/computer/vehicle_interior_console/Initialize(mapload)
-	. = ..()
-
 /obj/machinery/computer/vehicle_interior_console/Destroy()
-	clean_all_viewers()
+	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 	return ..()
 
 /obj/machinery/computer/vehicle_interior_console/tgui_interact(mob/user, datum/tgui/ui = null)
@@ -28,70 +25,67 @@
 /obj/machinery/computer/vehicle_interior_console/attack_ai(mob/user)
 	to_chat (user, "<span class='warning'>A firewall prevents you from interfacing with this device!</span>")
 
-/obj/machinery/computer/vehicle_interior_console/attack_robot(mob/living/user)
-	attack_hand( null, user)
+/obj/machinery/computer/vehicle_interior_console/attack_robot(mob/user)
+	attack_hand(user)
 
-/obj/machinery/computer/vehicle_interior_console/attack_generic(mob/user as mob)
-	attack_hand( null, user)
+/obj/machinery/computer/vehicle_interior_console/attack_generic(mob/user)
+	attack_hand(user)
 
 /obj/machinery/computer/vehicle_interior_console/attack_hand(mob/user)
 	add_fingerprint(user)
 	if(stat & (BROKEN|NOPOWER))
 		return
-	if(issilicon(user) || isrobot(user))
-		to_chat (user, "<span class='warning'>A firewall prevents you from interfacing with this device!</span>")
+	if(!interior_controller)
+		to_chat(user, span_danger("Something is very wrong! Inform a coder that the vehicle you were in was deleted!"))
 		return
-	if(user.blinded)
-		to_chat(user, "<span class='notice'>You cannot see!</span>")
+	if(isrobot(user) || isAI(user))
+		to_chat(user, span_warning("A firewall prevents you from interfacing with this device!"))
 		return
 	// remove all others...
-	clean_all_viewers()
-	if(interior_controller.health <= 0)
-		to_chat(user, "<span class='notice'>It's not functional!</span>")
+	if(is_viewing_tank())
+		SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 		return
+	if(interior_controller.health <= 0)
+		to_chat(user, span_notice("It's not functional!"))
+		return
+	if(check_eye(user) < 0)
+		return
+	// EXPECTS you to be in the pilot seat!
+	if(!paired_seat || !paired_seat.has_buckled_mobs() || paired_seat.buckled_mobs[1] != user)
+		to_chat(user, span_notice("You need to buckle into the seat to use this console!"))
+		return
+	// Start view
 	playsound(src, "keyboard", 40) // into console
-	look(user)
+	if(!viewers) viewers = list() // List must exist for pass by reference to work
+	start_coordinated_remoteview(user, interior_controller, viewers)
+
+/obj/machinery/computer/vehicle_interior_console/look(var/mob/user)
+	if(!interior_controller)
+		return
+	if(user.machine != src)
+		user.set_machine(src)
+	user.set_viewsize(world.view + interior_controller.extra_view)
+	if(isliving(user))
+		var/mob/living/L = user
+		L.handle_vision()
+
+/obj/machinery/computer/vehicle_interior_console/unlook(var/mob/user)
+	interior_controller.stop_move_sound()
+	user.unset_machine()
+	user.set_viewsize() // reset to default
+	if(isliving(user))
+		var/mob/living/L = user
+		L.handle_vision()
 
 /obj/machinery/computer/vehicle_interior_console/check_eye(var/mob/user)
-	if(!get_dist(user, src) > 1)
-		unlook(user)
+	if(!get_dist(user, src) > 1 || user.blinded || !interior_controller)
+		user.reset_perspective()
 		return -1
 	else
 		return 0
 
-/obj/machinery/computer/vehicle_interior_console/proc/look(var/mob/user)
-	if(interior_controller)
-		if(user.machine != src)
-			user.set_machine(src)
-		if(isliving(user))
-			var/mob/living/L = user
-			L.looking_elsewhere = 1
-			L.handle_vision()
-		user.reset_view(interior_controller)
-		user.set_viewsize(world.view + interior_controller.extra_view)
-		RegisterSignal(user, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
-		LAZYDISTINCTADD(viewers, WEAKREF(user))
-	else
-		clean_all_viewers()
-
-/obj/machinery/computer/vehicle_interior_console/proc/unlook(var/mob/user)
-	interior_controller.stop_move_sound()
-	user.unset_machine()
-	if(isliving(user))
-		var/mob/living/L = user
-		L.looking_elsewhere = 0
-		L.handle_vision()
-	user.set_viewsize() // reset to default
-	user.reset_view()
-	UnregisterSignal(user, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
-	LAZYREMOVE(viewers, WEAKREF(user))
-
-/obj/machinery/computer/vehicle_interior_console/proc/clean_all_viewers()
-	if(LAZYLEN(viewers))
-		for(var/datum/weakref/W in viewers)
-			var/M = W.resolve()
-			if(M)
-				unlook(M)
+/obj/machinery/computer/vehicle_interior_console/proc/is_viewing_tank()
+	return LAZYLEN(viewers)
 
 /obj/machinery/computer/vehicle_interior_console/ex_act(severity)
 	return // nothing
@@ -144,13 +138,6 @@
 		remove_key()
 	else
 		return ..()
-
-/obj/machinery/computer/vehicle_interior_console/attack_hand(mob/user)
-	// same as normal, but EXPECTS you to be in the pilot seat!
-	if(!interior_controller || !paired_seat || !paired_seat.has_buckled_mobs() || paired_seat.buckled_mobs[1] != user)
-		to_chat(user, "<span class='notice'>You need to buckle into the seat to use this console!</span>")
-		return
-	. = ..()
 
 /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine()
 	set name = "Start engine"
@@ -254,9 +241,3 @@
 /obj/machinery/computer/vehicle_interior_console/gunner
 	name = "Gunner Periscope"
 	desc = "Targeting cameras for onboard weaponry."
-
-/obj/machinery/computer/vehicle_interior_console/gunner/examine(mob/user)
-	. = ..()
-	//if(ishuman(user) && Adjacent(user))
-	//	. += "The power light is [interior_controller.on ? "on" : "off"].\nThere are[interior_controller.key ? "" : " no"] keys in the ignition."
-	//	. += "The charge meter reads [interior_controller.cell? round(interior_controller.cell.percent(), 0.01) : 0]%"

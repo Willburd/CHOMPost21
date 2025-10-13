@@ -9,6 +9,7 @@
 	opacity = FALSE
 	var/hoses_taken = 0
 	var/lit = FALSE
+	flags = REMOTEVIEW_ON_ENTER
 
 	var/mob/living/occupant // micro abuse
 
@@ -92,7 +93,6 @@
 	if(occupant != living)
 		return FALSE
 	to_chat(occupant, span_warning("You manage to pull yourself free of \the [src]."))
-	occupant.reset_view(null)
 	occupant.forceMove(get_turf(src))
 	occupant = null
 
@@ -112,14 +112,12 @@
 	if(user && prob(2))
 		str += ", and you're sucked away with them"
 		to_chat(C, span_danger("[str]!"))
-		if(user.can_be_drop_pred && user.food_vore && user.vore_selected)
+		if(user.food_vore && user.vore_selected)
 			if(!C.can_be_drop_prey || !C.food_vore)
 				to_chat(C, span_warning("You manage to pull yourself free of \the [src] at the last second!"))
-				to_chat(user, span_notice("[C] barely escapes from your mouth!"))
-				C.reset_view(null)
+				to_chat(user, span_notice("[C] barely escapes from your [user.vore_selected]!"))
 				C.forceMove(get_turf(src))
 			else
-				C.reset_view(null)
 				C.forceMove(user.vore_selected)
 			occupant = null
 	else

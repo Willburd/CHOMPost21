@@ -8,7 +8,7 @@ medals - Ordered by importance
 
 /obj/item/clothing/accessory/medal/solgov/bronze/heart/eshui
 	name = "\improper Bronze Heart Medal"
-	desc = "A bronze heart awarded to crew members by Command Staff for permanent injury or death in the line of duty, sadly resleeving tech has made this nearly impossible to get.."
+	desc = "A bronze heart awarded to crew members by Command Staff for permanent injury or death in the line of duty, sadly resleeving tech has made this nearly impossible to get."
 
 /obj/item/clothing/accessory/medal/solgov/iron/star/eshui
 	name = "\improper Defensive Operations Medal"
