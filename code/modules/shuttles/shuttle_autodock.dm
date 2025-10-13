@@ -168,7 +168,7 @@
 	"Public" procs
 */
 // Queue shuttle for undock and launch by shuttle subsystem.
-/datum/shuttle/autodock/proc/launch(var/user)
+/datum/shuttle/autodock/proc/launch(var/mob/user)
 	if (!can_launch()) return
 
 	in_use = user	//obtain an exclusive lock on the shuttle
