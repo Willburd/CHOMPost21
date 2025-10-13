@@ -368,7 +368,6 @@
 	spawn(12)
 		for (var/mob/M in contents)
 			M.forceMove( src.loc) // Drop it onto the turf for throwing.
-			M.reset_view(null)
 			visible_message("<span class='notice'>\The [M] crawls out of the [src] unharmed!</span>")
 
 /obj/machinery/gibber/proc/updatesleever()
