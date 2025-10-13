@@ -97,7 +97,7 @@
 	// Outpost 21 addition begin - Clicking while driving a interior controlled vehicle
 	if(!is_incorporeal() && buckled && istype(buckled,/obj/structure/bed/chair/vehicle_interior_seat) && (isturf(A) || isturf(A.loc)))
 		var/obj/structure/bed/chair/vehicle_interior_seat/S = buckled
-		if(LAZYLEN(S.paired_console.viewers))
+		if(S.paired_console.is_viewing_tank())
 			return S.click_action(A, src, params)
 	// Outpost 21 addition end
 
@@ -272,7 +272,7 @@
 	A.ShiftClick(src)
 	return
 /atom/proc/ShiftClick(var/mob/user)
-	if(user.client && user.client.eye == user)
+	if(user.client && !user.is_remote_viewing())
 		user.examinate(src)
 	return
 
