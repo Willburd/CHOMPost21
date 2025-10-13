@@ -173,6 +173,14 @@
 
 	in_use = user	//obtain an exclusive lock on the shuttle
 
+	//Outpost 21 edit begin - AHAHAHAHAHAHAHA
+	if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(0.5))
+		emagged_crash = 1
+	var/area/A = get_area(user)
+	if(A.haunted && prob(1))
+		emagged_crash = 1
+	//Outpost 21 edit end
+
 	process_state = WAIT_LAUNCH
 	undock()
 
