@@ -41,15 +41,14 @@
 	if(isrobot(user) || isAI(user))
 		to_chat(user, span_warning("A firewall prevents you from interfacing with this device!"))
 		return
-	if(user.blinded)
-		to_chat(user, span_notice("You cannot see!"))
-		return
 	// remove all others...
 	if(is_viewing_tank())
 		SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 		return
 	if(interior_controller.health <= 0)
 		to_chat(user, span_notice("It's not functional!"))
+		return
+	if(check_eye(user) < 0)
 		return
 	// EXPECTS you to be in the pilot seat!
 	if(!paired_seat || !paired_seat.has_buckled_mobs() || paired_seat.buckled_mobs[1] != user)
