@@ -3,7 +3,7 @@
 
 /obj/structure/bed/chair/vehicle_interior_seat
 	name = "shuttle seat"
-	desc = "A comfortable, secure seat. It has a sturdy-looking buckling system for smoother flights."
+	desc = "A comfortable, secure seat. It has a sturdy-looking buckling system for smoother drives."
 	base_icon = "shuttle_chair"
 	icon_state = "shuttle_chair_preview"
 	buckle_movable = TRUE // we do some silly stuff though
@@ -38,27 +38,24 @@
 		add_overlay(I)
 
 /obj/structure/bed/chair/vehicle_interior_seat/unbuckle_mob(mob/living/buckled_mob, force = FALSE)
-	if(LAZYLEN(paired_console.viewers))
+	if(paired_console.is_viewing_tank())
 		playsound(src, "keyboard", 40) // out of console
-		paired_console.clean_all_viewers()
-		buckled_mob.setClickCooldown(3) // lower cooldown than normal, but still have one
+		SEND_SIGNAL(paired_console,COMSIG_REMOTE_VIEW_CLEAR)
+		buckled_mob.setClickCooldown(1) // lower cooldown than normal, but still have one
 	else
 		. = ..()
 
 /obj/structure/bed/chair/vehicle_interior_seat/Destroy()
-	if(LAZYLEN(paired_console.viewers))
-		paired_console.clean_all_viewers()
+	SEND_SIGNAL(paired_console,COMSIG_REMOTE_VIEW_CLEAR)
 	return ..()
 
 /obj/structure/bed/chair/vehicle_interior_seat/ex_act(severity)
-	// knock out of camera view
-	if(LAZYLEN(paired_console.viewers))
-		paired_console.clean_all_viewers()
+	SEND_SIGNAL(paired_console,COMSIG_REMOTE_VIEW_CLEAR)
 
 ////////////////////////////////////////////////////////////////////////////////
 // Pilot seat
 /obj/structure/bed/chair/vehicle_interior_seat/pilot/relaymove(mob/user, direction)
-	if(LAZYLEN(paired_console.viewers) > 0) // only if driver is looking!
+	if(paired_console.is_viewing_tank()) // only if driver is looking!
 		return paired_console.interior_controller.relaymove(user, direction) // forward to vehicle!
 	else
 		return FALSE

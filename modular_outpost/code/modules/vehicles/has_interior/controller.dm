@@ -475,14 +475,7 @@
 /obj/vehicle/has_interior/controller/explode()
 	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
 	playsound(src, 'sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
-	// unbucker riders and camera viewers
-	if(istype(interior_helm,/obj/machinery/computer/vehicle_interior_console))
-		interior_helm.clean_all_viewers()
-	for(var/obj/item/vehicle_interior_weapon/W in internal_weapons_list)
-		if(istype(W))
-			var/obj/machinery/computer/vehicle_interior_console/CC = W.control_console
-			if(istype(CC,/obj/machinery/computer/vehicle_interior_console))
-				CC.clean_all_viewers()
+	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 	update_icon()
 
 //-------------------------------------------
@@ -616,6 +609,8 @@
 /obj/vehicle/has_interior/controller/proc/remote_turn_off()
 	turn_off()
 	if(interior_helm)
+		SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
+
 		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
 		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
 		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
