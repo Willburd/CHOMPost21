@@ -265,6 +265,8 @@
 // Goldstars
 /obj/item/clothing/accessory/gold_sticker/fluff
 	var/user_giving = ""
+	var/star_title = ""
+	var/star_desc = ""
 
 /obj/item/clothing/accessory/gold_sticker/fluff/Initialize(mapload)
 	. = ..()
