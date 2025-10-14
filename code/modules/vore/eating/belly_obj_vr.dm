@@ -1052,7 +1052,7 @@
 						I.gurgle_contaminate(contents, contamination_flavor, contamination_color) //We do an initial contamination pass to get stuff like IDs wet.
 					if(item_digest_mode == IM_HOLD)
 						items_preserved |= I
-					else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(I,/obj/item/reagent_containers/food) || istype(I,/obj/item/organ) || istype(I,/obj/item/reagent_containers/pill))) // Outpost 21 edit - digest pills in vore bellies
+					else if(item_digest_mode == IM_DIGEST_FOOD && !(istype(I,/obj/item/reagent_containers/food) || istype(I,/obj/item/organ) || istype(I,/obj/item/reagent_containers/pill))) // CHOMPEdit - Allow pills to digest in bellies
 						items_preserved |= I
 
 	//Reagent transfer
