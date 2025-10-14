@@ -257,11 +257,14 @@
 		..()
 
 /mob/living/simple_mob/vore/alienanimals/jil/proc/hunkamania_brother()
-	if(holder.stat)
+	if(stat != CONSCIOUS)
 		return
 	var/obj/item/holder/mob_holder = get_active_hand()
 	if(istype(mob_holder))
-		var/turf/target_turf = get_edge_target_turf(src, pick(GLOB.alldirs), rand (5,10))
+		var/di = pick(GLOB.alldirs)
+		if(prob(70))
+			di = dir
+		var/turf/target_turf = get_edge_target_turf(src, di, rand (5,10))
 		throw_item(target_turf)
 
 // Jil noises
