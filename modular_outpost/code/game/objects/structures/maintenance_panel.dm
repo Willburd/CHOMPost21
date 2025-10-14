@@ -5,9 +5,9 @@
 	icon = 'modular_outpost/icons/obj/maintenance_panel.dmi'
 	icon_state = "panel"
 	basestate = "panel"
-	maxhealth = 250
+	maxhealth = 350
 	glasstype = /obj/item/stack/tile/maintenance_panel
-	maximal_heat = 1800 // steel
+	maximal_heat = /datum/material/steel::melting_point
 	force_threshold = 7
 	shardtype = null
 	opacity = 1 // Difficult to see past
@@ -71,6 +71,12 @@
 	new glasstype(loc)
 	qdel(src)
 
+/obj/structure/window/maintenance_panel/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	if(exposed_temperature <= maximal_heat)
+		return
+	var/burndamage = log(RAND_F(0.9, 1.1) * (exposed_temperature - maximal_heat))
+	if(burndamage)
+		take_damage(burndamage)
 
 
 // Maintenance panel sheets
@@ -136,8 +142,6 @@
 	use(sheets_needed)
 	new /obj/structure/window/maintenance_panel(T, build_dir, 1)
 	return 1
-
-
 
 // Spawner
 /obj/fiftyspawner/maintenance_panel
