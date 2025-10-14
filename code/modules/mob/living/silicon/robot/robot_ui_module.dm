@@ -41,7 +41,7 @@
 			modules.Add(R.restrict_modules_to)
 		else if(R.shell)
 			modules.Add(GLOB.robot_module_types) // CHOMPEdit
-			// CHOMPAdd Start, shell blacklist and crisis mode for shells
+			// CHOMPAdd Start, crisis mode for shells
 			modules.Remove(GLOB.shell_module_blacklist)
 			// Outpost 21 edit begin - Admins always have ERT access
 			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
