@@ -588,3 +588,27 @@
 
 	if(failed)
 		TEST_FAIL("Freezable airlock was not placed on a planet")
+
+
+
+/datum/unit_test/all_airlock_controllers_shall_have_unique_ids
+
+/datum/unit_test/all_airlock_controllers_shall_have_unique_ids/Run()
+	var/failed = FALSE
+
+	var/list/used_tags = list()
+	for(var/obj/machinery/embedded_controller/radio/airlock/controller in world)
+		var/turf/T = get_turf(controller)
+		var/area/A = get_area(controller)
+		if(!controller.id_tag)
+			failed = TRUE
+			TEST_NOTICE(src, "Airlock controller was missing an id_tag. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		if(controller.id_tag in used_tags)
+			failed = TRUE
+			TEST_NOTICE(src, "Airlock controller id_tag \"[controller.id_tag]\" was already in use. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		used_tags += controller.id_tag
+
+	if(failed)
+		TEST_FAIL("One or more airlock controllers had an incorrect id_tag set")
