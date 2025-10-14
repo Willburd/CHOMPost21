@@ -262,6 +262,32 @@
 	)
 
 
+// Goldstars
+/obj/item/clothing/accessory/gold_sticker/fluff
+	var/user_giving = ""
+
+/obj/item/clothing/accessory/gold_sticker/fluff/Initialize(mapload)
+	. = ..()
+	desc = "A gold star issued by [user_giving] for [star_title], if you look closely, the fine print reads: [star_desc]"
+	name = "Gold Star for [star_title]"
+
+/obj/item/clothing/accessory/gold_sticker/fluff/for_not_die
+	user_giving = "Iskgarl"
+	star_title = "doimg Gud"
+	star_desc = "for not dfie"
+
+/obj/item/clothing/accessory/gold_sticker/fluff/for_violence
+	user_giving = "Iskgarl"
+	star_title = "For vlnce"
+	star_desc = "prtecrting oudpust frm inverding mrarferderd"
+
+/obj/item/clothing/accessory/gold_sticker/fluff/for_killing_crew
+	user_giving = "Iskgarl"
+	star_title = "For vlnce"
+	star_desc = "Fr prTecxtIng oUtpsT an ExuCUtiinG CrwMetEs"
+
+
+
 // TEMP DEFINITIONS SOME NOT MEANT FOR HERE! These exist purely to placate loadout code's typechecks
 /obj/item/toy/plushie/fluff
 	name = "TEMP PLUSH BASE - DELETE ONCE WE ADD A PLUSH"
