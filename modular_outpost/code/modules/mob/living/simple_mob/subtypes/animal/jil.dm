@@ -244,10 +244,7 @@
 					face_atom(A)
 					var/mob/living/carbon/human/scoopee = A
 					scoopee.get_scooped(src)
-					var/obj/item/holder/mob_holder = get_active_hand()
-					if(istype(mob_holder))
-						var/turf/target_turf = get_edge_target_turf(src, pick(GLOB.alldirs), rand (5,10))
-						throw_item(target_turf)
+					addtimer(CALLBACK(src, PROC_REF(hunkamania_brother)), rand(1,2) SECONDS, TIMER_DELETE_ME)
 				else
 					..()
 		else // normal jil, just kidnap
@@ -258,6 +255,14 @@
 
 	else
 		..()
+
+/mob/living/simple_mob/vore/alienanimals/jil/proc/hunkamania_brother()
+	if(holder.stat)
+		return
+	var/obj/item/holder/mob_holder = get_active_hand()
+	if(istype(mob_holder))
+		var/turf/target_turf = get_edge_target_turf(src, pick(GLOB.alldirs), rand (5,10))
+		throw_item(target_turf)
 
 // Jil noises
 /datum/say_list/jil
