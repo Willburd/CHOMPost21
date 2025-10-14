@@ -261,10 +261,9 @@
 		return
 	var/obj/item/holder/mob_holder = get_active_hand()
 	if(istype(mob_holder))
-		var/di = pick(GLOB.alldirs)
-		if(prob(70))
-			di = dir
-		var/turf/target_turf = get_edge_target_turf(src, di, rand (5,10))
+		if(prob(20))
+			dir = pick(GLOB.alldirs)
+		var/turf/target_turf = get_edge_target_turf(src, dir, rand (5,10))
 		throw_item(target_turf)
 
 // Jil noises
