@@ -4411,17 +4411,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
-"cbx" = (
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	name = "Virology Quarantine Access Console";
-	pixel_x = 22;
-	id_tag = "virologyq_airlock_control";
-	tag_exterior_door = "virologyq_airlock_exterior";
-	tag_interior_door = "virologyq_airlock_interior"
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/tiled/white,
-/area/specialty/redspace)
 "cbA" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
@@ -43512,14 +43501,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/specialty/redspace)
 "xeG" = (
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	name = "Virology Access Console";
-	pixel_x = 8;
-	pixel_y = -22;
-	id_tag = "virology_airlock_control";
-	tag_exterior_door = "virology_airlock_exterior";
-	tag_interior_door = "virology_airlock_interior"
-	},
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
@@ -95824,7 +95805,7 @@ haW
 hFU
 cst
 cst
-cbx
+xeG
 hJj
 eOt
 bIx
