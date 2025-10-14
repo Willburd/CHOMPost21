@@ -78,6 +78,10 @@
 	if(burndamage)
 		take_damage(burndamage)
 
+/obj/structure/window/maintenance_panel/examine(mob/user)
+	. = ..()
+	if(!anchored)
+		. += span_warning("It's hanging freely, and hasn't been welded in place!")
 
 // Maintenance panel sheets
 /obj/item/stack/tile/maintenance_panel
