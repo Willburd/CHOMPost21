@@ -5527,6 +5527,7 @@
 #include "modular_outpost\code\game\turfs\unsimulated\floor.dm"
 #include "modular_outpost\code\game\turfs\unsimulated\wall\planetary.dm"
 #include "modular_outpost\code\modules\admin\admin_verbs.dm"
+#include "modular_outpost\code\modules\admin\debug_verbs.dm"
 #include "modular_outpost\code\modules\ai\ai_holder_pathfinding.dm"
 #include "modular_outpost\code\modules\assembly\signaler.dm"
 #include "modular_outpost\code\modules\busy_space\chatter_artillery.dm"

@@ -17,6 +17,8 @@
 
 	var/firework_override = FALSE
 
+	var/locked = FALSE // Outpost 21 edit - Locking weather
+
 /datum/weather_holder/New(var/source)
 	..()
 	our_planet = source
@@ -66,6 +68,12 @@
 	log_game("[our_planet.name]'s weather is now [new_weather], with a temperature of [temperature]&deg;K ([temperature - T0C]&deg;C | [temperature * 1.8 - 459.67]&deg;F).")
 
 /datum/weather_holder/process()
+	// Outpost 21 edit begin - Locking weather
+	if(current_weather && locked)
+		current_weather.process_effects()
+		current_weather.process_sounds()
+		return
+	// Outpost 21 edit end
 	if(imminent_weather && world.time >= imminent_weather_shift)
 		proceed_to_imminent_weather()
 	else if(!imminent_weather && world.time >= next_weather_shift)
@@ -132,7 +140,12 @@
 	forecast.Cut()
 	build_forecast()
 
-
+// Outpost 21 edit(port) being - Forecast accessors
+/datum/weather_holder/proc/get_forecast_data()
+	if(locked)
+		return list(current_weather,current_weather,current_weather) // locked in
+	return forecast
+// Outpost 21 edit end
 
 /datum/weather_holder/proc/update_icon_effects()
 	visuals.icon_state = current_weather.icon_state
