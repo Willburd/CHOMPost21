@@ -10294,6 +10294,14 @@
 	},
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/muriki/grounds/engi)
+"asF" = (
+/obj/structure/table/standard,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/lab)
 "asN" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -18355,6 +18363,9 @@
 	},
 /obj/item/geiger/wall/east,
 /obj/machinery/rnd/production/protolathe/department/science,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "cTd" = (
@@ -19237,6 +19248,9 @@
 	pixel_x = 32
 	},
 /obj/machinery/computer/rdconsole_tg{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -26135,6 +26149,7 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
+/obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "fya" = (
@@ -26475,6 +26490,9 @@
 	pixel_x = 32
 	},
 /obj/machinery/computer/supply_request_computeralt/research{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -35277,6 +35295,7 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
+/obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "img" = (
@@ -37700,6 +37719,9 @@
 	pixel_x = 21
 	},
 /obj/machinery/rnd/production/circuit_imprinter,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "iYO" = (
@@ -39191,6 +39213,7 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
+/obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "juH" = (
@@ -49680,8 +49703,8 @@
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/obj/item/clothing/glasses/omnihud/rnd,
 /obj/item/retail_scanner,
+/obj/item/clothing/glasses/omnihud/rnd,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "mCm" = (
@@ -52180,17 +52203,16 @@
 /turf/simulated/floor/plating,
 /area/muriki/crew/baraid)
 "nqF" = (
-/obj/effect/floor_decal/milspec/color/purple/half{
-	dir = 6
-	},
 /obj/machinery/light,
-/obj/structure/table/standard,
-/obj/item/experi_scanner,
-/obj/item/experi_scanner,
-/obj/item/experi_scanner,
-/obj/item/experi_scanner,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = 32
+	},
+/obj/machinery/rnd/destructive_analyzer,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -137620,7 +137642,7 @@ lBo
 ima
 cJR
 wxz
-jxv
+asF
 pDJ
 aXq
 aXq
