@@ -253,7 +253,7 @@ GLOBAL_DATUM_INIT(catalogue_data, /datum/category_collection/catalogue, new)
 	and appear to be well adapted to their role as space-faring raiders, \
 	leading many to speculate that they're heavily bioengineered, \
 	an assumption which is at odds with their ramshackle technological level."
-	value = CATALOGUER_REWARD_EASY // Since Vox are much rarer. // Outpost 21 edit - slight nerf
+	value = CATALOGUER_REWARD_MEDIUM
 
 
 /datum/category_item/catalogue/technology
