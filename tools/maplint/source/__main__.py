@@ -118,6 +118,9 @@ def main(args):
             if "modular_outpost/maps/submaps/retiredsecrets/ported" in map_filename: # Outpost 21 edit, ignore our archive
                 print(yellow("SKIPPED"))
                 continue
+            if "modular_outpost/maps/northern_star" in map_filename: # Outpost 21 edit, TEMP IGNORE
+                print(yellow("SKIPPED"))
+                continue
             if "modular_outpost/maps/" not in map_filename and "maps/outpost21/" not in map_filename : # Outpost 21 edit
                 print(yellow("SKIPPED"))
                 continue
