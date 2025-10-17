@@ -70,6 +70,7 @@
 /datum/weather_holder/process()
 	// Outpost 21 edit begin - Locking weather
 	if(current_weather && locked)
+		imminent_weather = null // We are too powerful for you
 		current_weather.process_effects()
 		current_weather.process_sounds()
 		return
