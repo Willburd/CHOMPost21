@@ -847,6 +847,8 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
+	effect_message = span_warning("The ice shards cut into you!")
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 	transition_chances = list(
 		WEATHER_SNOW = 45,
 		WEATHER_BLIZZARD = 40,
@@ -897,9 +899,9 @@ var/datum/planet/muriki/planet_muriki = null
 				return // No need to apply damage.
 			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sharp ice")
 
-		// show transition messages
-		if(show_message)
-			to_chat(L, effect_message)
+			// show transition messages
+			if(show_message)
+				to_chat(L, effect_message)
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // FIREWORKS
