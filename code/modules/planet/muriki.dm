@@ -604,16 +604,13 @@ var/datum/planet/muriki/planet_muriki = null
 			return // They're indoors, so no need to rain on them.
 
 		// If they have an open umbrella, knock it off
-		if(ishuman(L))
-			var/mob/living/carbon/human/H = L
-			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
-
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
-					H.drop_both_hands()
+		var/obj/item/melee/umbrella/U = L.get_active_hand()
+		if(!istype(U) || !U.open)
+			U = L.get_inactive_hand()
+		if(istype(U) && U.open)
+			if(show_message)
+				to_chat(L, span_notice("The storm pushes the umbrella out of your hands!"))
+				L.drop_both_hands()
 
 		L.water_act(2)
 		L.Weaken(3)
@@ -865,6 +862,44 @@ var/datum/planet/muriki/planet_muriki = null
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 	color_grading = COLORTINT_COLD
 
+/datum/weather/muriki/blizzard/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors or dead, so no need to pelt them with ice.
+
+		if(prob(10))
+			// If they have an open umbrella, it'll guard from hail
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
+			if(!istype(U) || !U.open)
+				U = L.get_inactive_hand()
+			if(istype(U) && U.open)
+				if(prob(10))
+					if(show_message)
+						to_chat(L, span_notice("The storm pushes the umbrella out of your hands!"))
+						L.drop_both_hands()
+				else
+					if(show_message)
+						to_chat(L, span_notice("ice shards patter onto your umbrella."))
+				return
+
+			var/target_zone = pick(BP_ALL)
+			var/amount_blocked = L.run_armor_check(target_zone, "melee")
+			var/amount_soaked = L.get_armor_soak(target_zone, "melee")
+
+			var/damage = rand(1,3)
+
+			if(amount_blocked >= 30)
+				return // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
+				//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
+
+			if(amount_soaked >= damage)
+				return // No need to apply damage.
+			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sharp ice")
+
+		// show transition messages
+		if(show_message)
+			to_chat(L, effect_message)
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // FIREWORKS
