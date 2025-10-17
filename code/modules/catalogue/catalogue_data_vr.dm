@@ -51,7 +51,7 @@
 	<br> <br>\
 	Contrary to popular belief, Roanoke Syndrome colonies do not seek out sapient life. Any exposure \
 	is incidental and not part of a plot – xenochimera without sapient thought are simply wild animals or disease vectors." //CHOMPedit
-	value = CATALOGUER_REWARD_EASY // Outpost 21 edit bumped from trivial to easy
+	value = CATALOGUER_REWARD_TRIVIAL
 
 /datum/category_item/catalogue/fauna/vulpkanin
 	name = "Sapients - Vulpkanin"

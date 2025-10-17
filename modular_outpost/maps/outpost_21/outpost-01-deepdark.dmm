@@ -433,40 +433,31 @@
 /obj/machinery/media/jukebox,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
-"abc" = (
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/bed/chair/bay/comfy/beige{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/black{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker_deep/main)
 "abd" = (
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/structure/table/woodentable,
 /obj/effect/floor_decal/corner/black{
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/deck/cards,
+/obj/structure/table/woodentable,
+/obj/machinery/chemical_dispenser/bar_soft/full{
+	pixel_y = 3
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "abe" = (
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/structure/bed/chair/bay/comfy/beige{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/black{
 	dir = 5
+	},
+/obj/structure/table/woodentable,
+/obj/machinery/chemical_dispenser/bar_alc/full{
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
@@ -743,6 +734,10 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "abF" = (
@@ -960,6 +955,7 @@
 /area/muriki/crew/bunker_deep/main)
 "abY" = (
 /obj/structure/table/gamblingtable,
+/obj/item/deck/cards,
 /turf/simulated/floor/wood,
 /area/muriki/crew/bunker_deep/main)
 "abZ" = (
@@ -1518,6 +1514,7 @@
 /area/muriki/crew/bunker_deep/med)
 "adk" = (
 /obj/effect/floor_decal/corner/black/full,
+/obj/structure/closet/l3closet/janitor,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "adl" = (
@@ -1538,16 +1535,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
-"adn" = (
-/obj/effect/floor_decal/corner/black{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/bunker_deep/main)
 "ado" = (
 /obj/effect/floor_decal/corner/black/full{
 	dir = 8
 	},
+/obj/structure/closet/l3closet/janitor,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "adp" = (
@@ -1578,9 +1570,8 @@
 /obj/effect/floor_decal/corner/black/full{
 	dir = 1
 	},
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
+/obj/structure/table/gamblingtable,
+/obj/machinery/librarywikicomp,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "ads" = (
@@ -61758,7 +61749,7 @@ acX
 acX
 acN
 acx
-abb
+acr
 aca
 aca
 acc
@@ -61920,7 +61911,7 @@ acX
 acY
 acP
 acB
-abc
+abb
 acm
 aca
 acd
@@ -62084,8 +62075,8 @@ abi
 abh
 abd
 acn
-ach
 aca
+ach
 aca
 aat
 aan
@@ -63697,7 +63688,7 @@ gNY
 ads
 aan
 adr
-adn
+acp
 aby
 aan
 acV

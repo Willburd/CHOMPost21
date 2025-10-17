@@ -3,19 +3,11 @@
 	access |= list(ACCESS_ROBOTICS)
 	minimal_access |= list(ACCESS_ROBOTICS)
 
-/datum/job/chief_engineer/equip(mob/living/carbon/human/H, alt_title)
-	. = ..()
-	REMOVE_TRAIT(H, TRAIT_CAN_SEE_WIRES, JOB_TRAIT) // No wirecheat here
-
 
 /datum/job/engineer/New()
 	. = ..()
 	alt_titles |= list(	JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker,
 						JOB_ALT_CHEMENGINEER = /datum/alt_title/chem_tech)
-
-/datum/job/engineer/equip(mob/living/carbon/human/H, alt_title)
-	. = ..()
-	REMOVE_TRAIT(H, TRAIT_CAN_SEE_WIRES, JOB_TRAIT) // No wirecheat here
 
 
 /datum/job/atmos/New()

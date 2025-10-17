@@ -891,12 +891,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/cave)
-"bS" = (
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/turf/space,
-/area/offworld/asteroidyard/external)
 "bT" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -30700,7 +30694,7 @@ dk
 dk
 dk
 dk
-bS
+dk
 dk
 dk
 dk

@@ -1,0 +1,1 @@
+/datum/category_item/catalogue/information/organization/altevian_hegemony

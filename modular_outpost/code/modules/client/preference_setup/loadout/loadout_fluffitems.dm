@@ -115,6 +115,12 @@
 	ckeywhitelist = list("astraether")
 	character_name = list("Astra Ether")
 
+/datum/gear/fluff/golden_star/for_killing_crew
+	display_name = "Gold Star Sticker For Killing Crew"
+	path = /obj/item/clothing/accessory/gold_sticker/fluff/for_killing_crew
+	ckeywhitelist = list("astraether")
+	character_name = list("Astra Ether")
+
 //  B CKEYS
 
 //  C CKEYS
@@ -147,6 +153,11 @@
 //  I CKEYS
 
 //  J CKEYS
+/datum/gear/fluff/golden_star/doing_good
+	display_name = "Gold Star Sticker For Doing Good"
+	path = /obj/item/clothing/accessory/gold_sticker/fluff/for_not_die
+	ckeywhitelist = list("jollytjerry11")
+	character_name = list("Ed'Reith Foley")
 
 //  K CKEYS
 
@@ -177,6 +188,12 @@
 	description = "Dreamt up in a strange feverish dream, this coffee cup seems to have been heavily modified with a variety of unlikely parts and wires, and never seems to run out of coffee. Truly the differance between madmen and genius is success."
 	ckeywhitelist = list("remthebold")
 	character_name = list("Trashfire")
+
+/datum/gear/fluff/golden_star/for_violence
+	display_name = "Gold Star Sticker For Violence"
+	path = /obj/item/clothing/accessory/gold_sticker/fluff/for_violence
+	ckeywhitelist = list("remthebold")
+	character_name = list("Ruben Softclaw")
 
 //  S CKEYS
 

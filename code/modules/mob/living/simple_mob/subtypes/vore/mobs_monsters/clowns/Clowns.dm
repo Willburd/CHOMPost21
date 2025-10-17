@@ -31,6 +31,11 @@
 	minbodytemp = 0
 	// maxbodytemp = 700 // Outpost 21 edit - Die normally to fire
 
+	// Outpost 21 edit begin - Clown butchering
+	meat_amount = 5
+	meat_type = /obj/item/reagent_containers/food/snacks/meat/human
+	// Outpost 21 edit end
+
 /datum/ai_holder/simple_mob/melee/clowns
 	can_breakthrough = TRUE // Outpost 21 edit - ANGRY CLOWNS
 	violent_breakthrough = TRUE // Outpost 21 edit - ANGRY CLOWNS

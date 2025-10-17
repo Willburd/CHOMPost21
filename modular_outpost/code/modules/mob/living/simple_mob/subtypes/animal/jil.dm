@@ -231,6 +231,41 @@
 		return
 	return ..()
 
+/mob/living/simple_mob/vore/alienanimals/jil/do_attack(atom/A, turf/T)
+	if(istype(A, /mob/living/carbon/human))
+		if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth)) //We're a jillioth! We throw!
+			if(!(ai_holder.check_attacker(A))) //Grab and kidnap!
+				face_atom(A)
+				var/mob/living/carbon/human/scoopee = A
+				scoopee.get_scooped(src)
+
+			else if((ai_holder.check_attacker(A))) //We attacked them before! They hate us!
+				if(prob(25))
+					face_atom(A)
+					var/mob/living/carbon/human/scoopee = A
+					scoopee.get_scooped(src)
+					addtimer(CALLBACK(src, PROC_REF(hunkamania_brother)), rand(1,2) SECONDS, TIMER_DELETE_ME)
+				else
+					..()
+		else // normal jil, just kidnap
+			face_atom(A)
+			var/mob/living/carbon/human/scoopee = A
+			scoopee.get_scooped(src)
+			return
+
+	else
+		..()
+
+/mob/living/simple_mob/vore/alienanimals/jil/proc/hunkamania_brother()
+	if(stat != CONSCIOUS)
+		return
+	var/obj/item/holder/mob_holder = get_active_hand()
+	if(istype(mob_holder))
+		if(prob(20))
+			dir = pick(GLOB.alldirs)
+		var/turf/target_turf = get_edge_target_turf(src, dir, rand (5,10))
+		throw_item(target_turf)
+
 // Jil noises
 /datum/say_list/jil
 	speak = list()
@@ -478,6 +513,15 @@
 		if(can_attack(A) && !forbid && !isliving(A))
 			// for item pickup targeting
 			. += A
+
+		if(can_attack(A) && !forbid && ishuman(A))
+			var/mob/living/living_target = A
+			var/sizediff = holder.size_multiplier - living_target.size_multiplier //50% size diff! //1 size jil can pick up 0.5 teshari!
+			var/sizediff_treshold = 0.5
+			if(istype(holder, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
+				sizediff_treshold = 0.8 // jillioth can pick up somewhat bigger!
+			if(sizediff >= sizediff_treshold)
+				. += A
 
 	for(var/obj/item/I in .)
 		last_search = world.time
