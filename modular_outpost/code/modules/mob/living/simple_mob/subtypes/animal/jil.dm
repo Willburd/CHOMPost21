@@ -243,26 +243,32 @@
 
 /mob/living/simple_mob/vore/alienanimals/jil/do_attack(atom/A, turf/T)
 	if(istype(A, /mob/living/carbon/human))
-		if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth)) //We're a jillioth! We throw!
-			if(!(ai_holder.check_attacker(A))) //Grab and kidnap!
-				face_atom(A)
-				var/mob/living/carbon/human/scoopee = A
-				scoopee.get_scooped(src)
 
-			else if((ai_holder.check_attacker(A))) //We attacked them before! They hate us!
-				if(prob(25))
+		//Size calculation checks
+		var/mob/living/carbon/human/scoopee = A
+		var/sizediff = size_multiplier - scoopee.size_multiplier //50% size diff! //1 size jil can pick up 0.5 teshari!
+		var/sizediff_treshold = 0.5 //Size difference required for them to pick you up. This means it must be below
+		if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
+			sizediff_treshold = 0.2 // jillioth can pick up somewhat bigger!
+		sizediff = round(sizediff, 0.01) //A person at 80% size being attached by a 100% size jillioth returns... 0.199999. BULLSHIT!
+		if(sizediff >= sizediff_treshold)
+			if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth)) //We're a jillioth! We throw!
+				if(!(ai_holder.check_attacker(A))) //Grab and kidnap!
 					face_atom(A)
-					var/mob/living/carbon/human/scoopee = A
 					scoopee.get_scooped(src)
-					addtimer(CALLBACK(src, PROC_REF(hunkamania_brother)), rand(1,2) SECONDS, TIMER_DELETE_ME)
-				else
-					..()
-		else // normal jil, just kidnap
-			face_atom(A)
-			var/mob/living/carbon/human/scoopee = A
-			scoopee.get_scooped(src)
-			return
 
+				else if((ai_holder.check_attacker(A))) //We attacked them before! They hate us!
+					if(prob(25))
+						face_atom(A)
+						scoopee.get_scooped(src)
+						addtimer(CALLBACK(src, PROC_REF(hunkamania_brother)), rand(1,2) SECONDS, TIMER_DELETE_ME)
+					else
+						..()
+			else // normal jil, just kidnap
+				face_atom(A)
+				scoopee.get_scooped(src)
+				return
+		else ..()
 	else
 		..()
 
@@ -537,8 +543,10 @@
 			var/sizediff = holder.size_multiplier - living_target.size_multiplier //50% size diff! //1 size jil can pick up 0.5 teshari!
 			var/sizediff_treshold = 0.5
 			if(istype(holder, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
-				sizediff_treshold = 0.8 // jillioth can pick up somewhat bigger!
+				sizediff_treshold = 0.2 // jillioth can pick up somewhat bigger!
 			if(sizediff >= sizediff_treshold)
+				. += A
+			if(fear_run) //We're upset/scared! Fight!
 				. += A
 
 	for(var/obj/item/I in .)
