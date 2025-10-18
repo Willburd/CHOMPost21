@@ -26621,9 +26621,6 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
-"aVU" = (
-/turf/simulated/wall/bay,
-/area/muriki/crew/arcade/lasertag)
 "aVV" = (
 /turf/simulated/wall/bay/blue,
 /area/muriki/crew/arcade/lasertag)
@@ -36797,6 +36794,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/civ/west)
 "boL" = (
@@ -47625,15 +47623,13 @@
 	dir = 1
 	},
 /obj/structure/table/woodentable,
-/obj/item/paint_palette,
-/obj/item/paint_palette,
-/obj/item/paint_brush,
-/obj/item/paint_brush,
-/obj/random/mug,
 /obj/item/sticky_pad/random{
 	pixel_x = 6;
 	pixel_y = 9
 	},
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bIi" = (
@@ -53723,7 +53719,9 @@
 	},
 /obj/structure/catwalk,
 /obj/structure/railing,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "bUk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -54343,7 +54341,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/south)
 "bVv" = (
 /obj/effect/auto_crayon{
@@ -55271,7 +55271,9 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "bXs" = (
 /obj/structure/disposalpipe/segment{
@@ -55683,7 +55685,9 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "bYg" = (
 /obj/structure/disposalpipe/segment{
@@ -55691,7 +55695,9 @@
 	},
 /obj/structure/railing,
 /obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "bYh" = (
 /obj/structure/disposalpipe/segment{
@@ -55701,7 +55707,9 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "bYi" = (
 /obj/structure/disposalpipe/segment{
@@ -56596,7 +56604,9 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "cag" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -56606,7 +56616,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "cah" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -56620,7 +56632,9 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/mine/explored/muriki/river/north)
 "cai" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -58249,11 +58263,8 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
 "ceq" = (
-/obj/item/bikehorn,
 /obj/item/grenade/shooter/energy/lasertagred,
 /mob/living/simple_mob/vore/alienanimals/jil,
-/obj/item/bikehorn,
-/obj/item/bikehorn,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -58407,7 +58418,9 @@
 /area/maintenance/sec)
 "ceH" = (
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
 /area/maintenance/civ/west)
 "ceI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -62285,28 +62298,6 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
-"coB" = (
-/obj/item/bikehorn,
-/mob/living/simple_mob/vore/alienanimals/jil,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/cave/civ/east_access)
-"coC" = (
-/obj/item/bikehorn,
-/mob/living/simple_mob/vore/alienanimals/jil/jillioth,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/cave/civ/east_access)
-"coD" = (
-/obj/item/bikehorn,
-/obj/item/bikehorn,
-/obj/item/bikehorn,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/cave/civ/east_access)
 "coE" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -62314,18 +62305,13 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "coF" = (
-/obj/item/bikehorn,
 /obj/item/clothing/head/helmet/lasertag,
-/obj/item/bikehorn,
-/obj/item/bikehorn,
 /obj/item/bone,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
 "coG" = (
-/obj/item/bikehorn,
-/obj/item/bikehorn,
 /obj/item/gun/energy/lasertag/omni,
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -62344,16 +62330,7 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
-"coJ" = (
-/obj/item/bikehorn,
-/obj/item/bikehorn,
-/mob/living/simple_mob/vore/alienanimals/jil,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/cave/civ/east_access)
 "coK" = (
-/obj/item/bikehorn,
 /obj/item/grenade/shooter/energy/lasertagall,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -62372,13 +62349,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
-"coN" = (
-/obj/item/bikehorn,
-/obj/item/bikehorn,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/cave/civ/east_access)
 "coO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -63286,6 +63256,31 @@
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"cru" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/mine/explored/muriki/river/south)
+"crv" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
+/area/maintenance/civ/west)
 "crw" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
@@ -63296,6 +63291,95 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
+"crx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/mine/explored/muriki/river/south)
+"cry" = (
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
+/area/maintenance/civ/west)
+"crz" = (
+/obj/structure/prop/rock/small/wateralt,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
+"crA" = (
+/obj/structure/prop/rock/small/water,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
+"crB" = (
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"crC" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/flesh{
+	dir = 1
+	},
+/obj/effect/floor_decal/flesh,
+/obj/effect/mist,
+/turf/simulated/floor{
+	temperature = 321.5
+	},
+/area/muriki/processor/hall)
+"crD" = (
+/obj/effect/map_effect/interval/atmogland/bodyheat,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"crE" = (
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/gland/airmix)
+"crF" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"crG" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
+	},
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"crH" = (
+/obj/structure/catwalk,
+/obj/effect/floor_decal/flesh{
+	dir = 8
+	},
+/obj/effect/floor_decal/flesh{
+	dir = 4
+	},
+/obj/effect/mist,
+/turf/simulated/floor{
+	temperature = 321.5
+	},
+/area/muriki/processor/hall)
+"crI" = (
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki{
+	methane = 101;
+	nitrogen = 0;
+	oxygen = 0
+	},
+/area/muriki/processor)
+"crJ" = (
+/obj/machinery/door/flesh,
+/obj/effect/mist,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
+/area/muriki/processor/pools/gizzard)
 "csG" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
@@ -67939,7 +68023,9 @@
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 1
+	},
 /area/maintenance/civ/west)
 "hWH" = (
 /obj/structure/closet/emcloset,
@@ -71831,6 +71917,7 @@
 /area/maintenance/oldbridge)
 "mfT" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
+/obj/effect/mist,
 /turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/gizzard)
 "mhU" = (
@@ -72485,6 +72572,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 4
 	},
+/obj/effect/mist,
 /turf/simulated/floor{
 	temperature = 321.5
 	},
@@ -72610,6 +72698,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
+/obj/effect/mist,
 /turf/simulated/floor{
 	temperature = 321.5
 	},
@@ -75650,6 +75739,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
+/obj/effect/mist,
 /turf/simulated/floor{
 	temperature = 321.5
 	},
@@ -77420,6 +77510,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/effect/mist,
 /turf/simulated/floor{
 	temperature = 321.5
 	},
@@ -82811,7 +82902,7 @@ ugO
 avw
 avw
 avw
-axj
+crB
 avw
 avw
 avw
@@ -82973,7 +83064,7 @@ ugO
 eGs
 avw
 avw
-axj
+crB
 iHJ
 avw
 avw
@@ -83308,7 +83399,7 @@ avw
 axj
 sDz
 avw
-axj
+crB
 avw
 avw
 ugO
@@ -83459,7 +83550,7 @@ qnS
 qnS
 qnS
 qnS
-gYq
+crE
 gYq
 qnS
 avw
@@ -83470,7 +83561,7 @@ avw
 avw
 avw
 avy
-aBY
+crC
 avy
 avw
 ugO
@@ -83632,7 +83723,7 @@ avw
 avw
 iHJ
 axj
-axj
+crB
 avw
 avw
 ugO
@@ -83783,7 +83874,7 @@ pdq
 gYq
 gYq
 gYq
-gYq
+crE
 qnS
 qnS
 qnS
@@ -84230,7 +84321,7 @@ aCO
 aCO
 aCO
 aCO
-aCO
+crI
 aCO
 aCO
 avw
@@ -84239,9 +84330,9 @@ avw
 axj
 avw
 avw
-axj
+crB
 mWE
-gYq
+crE
 gYq
 gYq
 gYq
@@ -84391,9 +84482,9 @@ aCO
 aCO
 bcK
 bgY
-aCO
-aCO
-aCO
+crI
+crI
+crI
 aCO
 avw
 axj
@@ -84554,7 +84645,7 @@ bKV
 aCO
 aCO
 aCO
-aCO
+crI
 aCO
 aCO
 avw
@@ -85373,7 +85464,7 @@ avw
 avw
 axj
 czg
-gYq
+crE
 gYq
 gYq
 uig
@@ -85536,7 +85627,7 @@ axj
 axj
 avw
 qnS
-gYq
+crE
 gYq
 eVM
 kLI
@@ -88294,7 +88385,7 @@ avw
 eGs
 avw
 qnS
-gYq
+crE
 gYq
 gYq
 gYq
@@ -88486,7 +88577,7 @@ gYq
 qnS
 avw
 avw
-axj
+crB
 fEw
 ehk
 xJd
@@ -88618,7 +88709,7 @@ avw
 avw
 avw
 avw
-axj
+crB
 avw
 qnS
 gYq
@@ -88648,8 +88739,8 @@ qnS
 qnS
 avw
 czg
-axj
-iHJ
+crB
+crD
 ehk
 xJd
 eRP
@@ -88810,7 +88901,7 @@ qnS
 avw
 avw
 avw
-axj
+crB
 axj
 ehk
 xJd
@@ -90377,7 +90468,7 @@ nRl
 sJS
 lSC
 pbc
-aNe
+crJ
 aNe
 lSC
 avw
@@ -91377,9 +91468,9 @@ avw
 avw
 avw
 avw
-bsL
+crG
 ssB
-pxd
+crF
 hUB
 avw
 aac
@@ -92174,9 +92265,9 @@ aJe
 aJe
 fZJ
 dZp
-axj
-aEm
-axj
+crB
+crH
+crB
 avw
 avw
 bBb
@@ -112496,9 +112587,9 @@ bOq
 bIW
 bVl
 bIW
-bVl
+crx
 bVu
-bIW
+cru
 bVl
 bIW
 bBG
@@ -115267,7 +115358,7 @@ aef
 brJ
 bhV
 brJ
-aHF
+bhW
 aHF
 aHF
 aHF
@@ -115566,9 +115657,9 @@ aEq
 mGE
 mGE
 mGE
-goc
-sKi
-goc
+crz
+crA
+crz
 mGE
 aDn
 aDn
@@ -117039,7 +117130,7 @@ bhW
 bEi
 bhW
 bhW
-rPd
+bVo
 rPd
 ntg
 cEU
@@ -129344,7 +129435,7 @@ aXU
 vka
 vka
 cnU
-aOU
+cry
 ceH
 cnU
 bVn
@@ -129507,7 +129598,7 @@ vka
 vka
 cnU
 hWs
-bgP
+crv
 bNK
 aOU
 cnU
@@ -138065,10 +138156,10 @@ fJz
 aUl
 aUO
 aVx
-aVU
-aVU
-aVU
-aVU
+aVV
+aVV
+aVV
+aVV
 aVV
 aVV
 aVV
@@ -138082,10 +138173,10 @@ aZL
 bdL
 bdL
 bdL
-aVU
-aVU
-aVU
-aVU
+bdL
+bdL
+bdL
+bdL
 cpl
 aUO
 bgU
@@ -140039,11 +140130,11 @@ coX
 coR
 cfG
 cfG
+cfG
+coI
+coI
+cfG
 coH
-coJ
-coB
-cfG
-cfG
 aXy
 aTx
 aXy
@@ -140201,10 +140292,10 @@ ehN
 ceR
 cfG
 cfG
-coN
+cfG
 coK
 coF
-coB
+coI
 cfG
 aXy
 aTx
@@ -140363,10 +140454,10 @@ ehN
 ceR
 cfG
 cfG
-coB
+coI
 ceq
 coG
-coC
+coA
 cfG
 aXy
 ccc
@@ -140527,8 +140618,8 @@ cfG
 cfG
 cfG
 cfG
-coH
-coD
+cfG
+cfG
 cfG
 aXy
 aXy
@@ -140687,7 +140778,7 @@ cfG
 cfG
 cfG
 cfG
-cfG
+coH
 cfG
 coI
 cfG
