@@ -5493,6 +5493,7 @@
 #include "modular_outpost\code\game\objects\items\toys\toys.dm"
 #include "modular_outpost\code\game\objects\items\weapons\AI_modules.dm"
 #include "modular_outpost\code\game\objects\items\weapons\lasertagknife.dm"
+#include "modular_outpost\code\game\objects\items\weapons\material_subtypes.dm"
 #include "modular_outpost\code\game\objects\items\weapons\tape.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\frame.dm"
 #include "modular_outpost\code\game\objects\items\weapons\grenades\dephase.dm"
