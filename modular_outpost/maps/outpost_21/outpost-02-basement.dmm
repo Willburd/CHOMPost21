@@ -26621,6 +26621,18 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
+"aVU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
 "aVV" = (
 /turf/simulated/wall/bay/blue,
 /area/muriki/crew/arcade/lasertag)
@@ -67335,6 +67347,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/acid{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/robotics)
 "gWU" = (
@@ -76592,12 +76607,13 @@
 	c_tag = "ENG - Computer Storage Room West";
 	dir = 4
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/structure/cable/green,
 /obj/structure/reagent_dispensers/fueltank/high,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
 /turf/simulated/floor/plating,
 /area/constructionsite/atmospherics)
 "rwh" = (
@@ -119892,7 +119908,7 @@ bqN
 bqN
 bqN
 bqN
-btB
+aVU
 buu
 buW
 buX

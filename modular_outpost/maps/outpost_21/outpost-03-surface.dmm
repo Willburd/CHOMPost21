@@ -3798,6 +3798,9 @@
 	c_tag = "SEC - Green Armory Southeast";
 	dir = 9
 	},
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "afE" = (
@@ -7479,6 +7482,12 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/item/storage/belt/detective,
+/obj/item/storage/belt/detective,
+/obj/item/storage/belt/detective,
+/obj/item/storage/belt/detective,
+/obj/item/storage/belt/detective,
+/obj/item/storage/belt/detective,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "amm" = (
@@ -8054,6 +8063,7 @@
 	dir = 4;
 	icon_state = "pipe-j2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "ann" = (
@@ -10594,6 +10604,9 @@
 /obj/item/forensics/sample_kit,
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/red/border,
+/obj/item/reagent_containers/spray/luminol,
+/obj/item/reagent_containers/spray/luminol,
+/obj/item/reagent_containers/spray/luminol,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "awZ" = (
@@ -28911,6 +28924,7 @@
 /obj/item/storage/briefcase/crimekit,
 /obj/item/storage/briefcase/crimekit,
 /obj/effect/floor_decal/corner/red/border,
+/obj/item/storage/briefcase/crimekit,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "gus" = (
@@ -51455,6 +51469,15 @@
 	},
 /obj/item/gun/energy/ionrifle/pistol,
 /obj/item/gun/energy/ionrifle/pistol,
+/obj/item/ammo_magazine/ammo_box/b45/emp{
+	pixel_y = 12
+	},
+/obj/item/ammo_magazine/ammo_box/b45/emp{
+	pixel_y = 12
+	},
+/obj/item/ammo_magazine/ammo_box/b45/emp{
+	pixel_y = 12
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "nif" = (
@@ -53974,14 +53997,20 @@
 /area/muriki/bathroom/bridge)
 "nZk" = (
 /obj/structure/table/rack/shelf,
-/obj/item/reagent_containers/spray/luminol,
-/obj/item/reagent_containers/spray/luminol,
-/obj/item/reagent_containers/spray/luminol,
 /obj/machinery/light,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/red/border,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
+/obj/item/storage/bag/detective,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "nZn" = (
@@ -54861,6 +54890,15 @@
 /obj/structure/table/rack,
 /obj/item/gun/projectile/automatic/c20r/rubber,
 /obj/item/gun/projectile/automatic/c20r/rubber,
+/obj/item/ammo_magazine/ammo_box/b10mm/emp{
+	pixel_y = 13
+	},
+/obj/item/ammo_magazine/ammo_box/b10mm/emp{
+	pixel_y = 13
+	},
+/obj/item/ammo_magazine/ammo_box/b10mm/emp{
+	pixel_y = 13
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "opg" = (
@@ -73310,6 +73348,9 @@
 /obj/item/clothing/under/teshari/undercoat/jobs/sec,
 /obj/item/clothing/shoes/footwraps,
 /obj/item/clothing/shoes/footwraps,
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "ugR" = (
@@ -78968,10 +79009,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crewstairwell)
-"vRY" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/freezer,
-/area/security/detectives_office)
 "vSh" = (
 /obj/item/radio/beacon,
 /obj/structure/cable/green{
@@ -121236,7 +121273,7 @@ ohX
 ano
 ano
 anm
-vRY
+hBZ
 hBZ
 awJ
 uIj
