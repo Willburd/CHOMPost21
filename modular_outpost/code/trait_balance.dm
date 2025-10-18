@@ -24,6 +24,9 @@
 /datum/trait/positive/darksight // See in dark like xenochi
 	cost = 2 // upstream is: 1
 
+/datum/trait/positive/darksight_plus
+	cost = 3 // upstream is: 2
+
 /datum/trait/positive/photosynth
 	cost = 1 //Base: 3. Can't get fat, kinda doodoo overall. It's fine.
 
