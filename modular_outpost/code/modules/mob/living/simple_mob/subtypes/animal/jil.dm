@@ -220,16 +220,26 @@
 	if(istype(O, /obj/item/holder))
 		return ..()
 	if(user.a_intent != I_HELP)
-		// num num num
-		if(istype(O,/obj/item/reagent_containers/food))
-			var/obj/item/reagent_containers/food/F = O
-			F.attack(src,src)
+		handle_self_use(O)
 	if(istype(O, /obj/item/newspaper))
 		visible_message("<font color='blue'>[user] baps \the [src] on the nose with the rolled up [O]</font>")
 		drop_l_hand()
 		drop_r_hand()
 		return
 	return ..()
+
+/mob/living/simple_mob/vore/alienanimals/jil/proc/handle_self_use(var/obj/item/O)
+	// num num num
+	if(istype(O,/obj/item/reagent_containers/food))
+		var/obj/item/reagent_containers/food/F = O
+		F.attack(src,src)
+	// boom
+	if(istype(O,/obj/item/assembly/signaler))
+		var/obj/item/assembly/signaler/S = O
+		S.AltClick(src)
+	if(istype(O,/obj/item/transfer_valve))
+		var/obj/item/transfer_valve/T = O
+		T.toggle_valve()
 
 /mob/living/simple_mob/vore/alienanimals/jil/do_attack(atom/A, turf/T)
 	if(istype(A, /mob/living/carbon/human))
@@ -330,12 +340,21 @@
 		home_turf = A // new nest!
 		last_pickup_turf = null // clear
 
+/datum/ai_holder/simple_mob/intentional/jil/proc/self_use_item(var/obj/item/O)
+	if(istype(O,/obj/item/reagent_containers/food))
+		return TRUE
+	if(istype(O,/obj/item/assembly/signaler))
+		return TRUE
+	if(istype(O,/obj/item/transfer_valve))
+		return TRUE
+	return FALSE
 
 /datum/ai_holder/simple_mob/intentional/jil/pre_melee_attack(atom/A)
 	if(istype(A, /obj/item))
-		var/obj/item/I = A
-		if(istype(I, /obj/item/reagent_containers/food))	// If we can't pick it up, or it's edible, go to harm.
+		if(self_use_item(A))	// If we can't pick it up, or it's edible, go to harm.
 			holder.a_intent = I_HURT
+			var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
+			J.handle_self_use(A) // MEEP!
 		else
 			holder.a_intent = I_HELP
 	else
@@ -437,7 +456,6 @@
 	else
 		J.bonk(J,prob(5))
 
-
 /datum/ai_holder/simple_mob/intentional/jil/list_targets()
 	. = hearers(vision_range, holder) - holder
 	if(!hoard_items)
@@ -456,7 +474,7 @@
 			continue
 
 		// disable for things already in hoard, food needs to be eaten though
-		if(!istype(A, /obj/item/reagent_containers/food) && get_dist(A, home_turf) < hoard_distance)
+		if(!self_use_item(A) && get_dist(A, home_turf) < hoard_distance)
 			continue
 
 		// collect items!
