@@ -1701,23 +1701,6 @@
 	},
 /turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/engineering)
-"adR" = (
-/obj/structure/table/rack/shelf,
-/obj/effect/floor_decal/corner/red{
-	dir = 9
-	},
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/turf/simulated/floor/tiled,
-/area/security/vacantoffice)
 "adS" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/shovel/spade,
@@ -87513,7 +87496,7 @@ vjH
 hkh
 uFM
 avW
-adR
+skf
 skf
 sZc
 iUe
