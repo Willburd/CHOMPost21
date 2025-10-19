@@ -36693,6 +36693,8 @@
 	RCon_tag = "Substation - Telecomms";
 	is_critical = 1
 	},
+/obj/item/smes_coil/super_io/hyper,
+/obj/item/smes_coil/super_capacity/hyper,
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "rNl" = (

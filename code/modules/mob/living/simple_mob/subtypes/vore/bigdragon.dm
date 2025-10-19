@@ -187,7 +187,7 @@ I think I covered everything.
 	// Outpost 21 edit begin - muriki enzyme immunity
 	enzyme_affect = FALSE
 	// Outpost 21 edit end
-	
+
 	can_be_drop_prey = FALSE
 
 ///
@@ -223,10 +223,11 @@ I think I covered everything.
 	allow_spontaneous_tf = 0 //No mouseray cheat for you.
 	resizable = 0 //No size gun cheesing~
 	capture_crystal = FALSE //He ain't your pet... honestly I should do this for the default type... maybe same with the others, tbfh.
+	maxHealth = 1200 //small health boost, up from 800.
 
 	armor = list(
 				"melee" = 25,
-				"bullet" = 25,
+				"bullet" = 35,
 				"laser" = 50,
 				"energy" = 10,
 				"bomb" = 80,

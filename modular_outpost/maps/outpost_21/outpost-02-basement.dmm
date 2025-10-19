@@ -26804,7 +26804,8 @@
 /obj/machinery/power/smes/buildable/engine_default{
 	RCon_tag = "Power - Incinerator"
 	},
-/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_io/hyper,
+/obj/item/smes_coil/super_capacity/hyper,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "aWk" = (

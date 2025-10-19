@@ -60108,6 +60108,7 @@
 /area/muriki/bathroom/medical)
 "pZb" = (
 /obj/effect/floor_decal/corner_techfloor_grid,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "pZc" = (
@@ -70923,6 +70924,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "tvX" = (
@@ -127260,7 +127262,7 @@ wNw
 hMg
 wQx
 abb
-mEH
+cNL
 hhl
 bqx
 qtL

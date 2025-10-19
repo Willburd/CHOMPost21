@@ -73,7 +73,7 @@
 			"bullet" = 60, // was 30
 			"laser" = 40, // was 20
 			"energy" = 15, // was 5
-			"bomb" = 545, // was 50
+			"bomb" = 45, // was 50
 			"bio" = 100, // was 100
 			"rad" = 100 // Actual should be 60, but mobs get REALLY unhappy and break with less than 100 rad
 			) // Changes these values to match wearing an actual syndie suit. They're as close to 1-1 as I can get
