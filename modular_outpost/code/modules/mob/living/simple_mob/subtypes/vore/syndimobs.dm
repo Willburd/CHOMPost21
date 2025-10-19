@@ -4,7 +4,6 @@
 	ai_holder.threaten = FALSE
 	ai_holder.returns_home = FALSE
 
-
 //Serdy's syndie subtypes, but tweaked to make it make sense. Do edits here.
 /mob/living/simple_mob/vore/otie/syndicate
 	armor = list(		// Half the values of the actual syndies, rounded down.
@@ -67,6 +66,7 @@
 				)
 
 /mob/living/simple_mob/vore/wolftaur/syndicate
+	maxHealth = 275 //Editing to better match in-game values where HP is double what it says. You can reach 150 Hp easily without trait debt
 	projectiletype = /obj/item/projectile/bullet/rifle/a762 // This is the bullet the Z8 actually fires
 	armor = list(			// Values for normal getarmor() checks
 			"melee" = 75, // was 40
@@ -77,6 +77,7 @@
 			"bio" = 100, // was 100
 			"rad" = 100 // Actual should be 60, but mobs get REALLY unhappy and break with less than 100 rad
 			) // Changes these values to match wearing an actual syndie suit. They're as close to 1-1 as I can get
+	base_attack_cooldown = 4 //small fire rate buff. Was 8
 
 /mob/living/simple_mob/vore/wolftaur/syndicate/lmg
 	projectiletype = /obj/item/projectile/bullet/rifle/a545 // Fixes this to use the same bullet as the actual LMG
@@ -85,3 +86,4 @@
 
 /mob/living/simple_mob/vore/wolftaur/syndicate/smg
 	projectiletype = /obj/item/projectile/bullet/pistol // The actual bullet the p90 uses. Technically this one is a nerf.
+	loot_list = list(/obj/item/gun/projectile/automatic/p90 = 1) //Matching with others. I think this is percent?
