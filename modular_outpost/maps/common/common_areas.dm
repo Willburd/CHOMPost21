@@ -367,7 +367,7 @@
 	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 	lightswitch = 1
 
 /area/quartermaster/cargupbreak
@@ -558,7 +558,7 @@
 	icon_state = "medbay2"
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/muriki/crew/baraid
 	name = "\improper Public First Aid Station"
@@ -566,7 +566,7 @@
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/muriki/crew/engyaid
 	name = "\improper Public Cargo First Aid Station"
@@ -574,7 +574,7 @@
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/chapel/chapel_music
 	name = "\improper Music Room"
@@ -630,7 +630,7 @@
 	name = "\improper Emergency Bunker"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
-	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
+	flags = /area/muriki/crew/bunker::flags
 	color_grading = COLORTINT_DARK
 	haunted = TRUE
 
@@ -2224,6 +2224,7 @@
 	icon_state = "xeno_f_lab"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	flags = /area/rnd::flags
 
 /area/rnd/xenobiology/xenobioh
 	name = "\improper Hazardous Xenobiology Lab"
@@ -2339,7 +2340,7 @@
 	name = "\improper Research First aid"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 	lightswitch = 1
 
 /area/rnd/research/roof_eva
@@ -2397,7 +2398,7 @@
 	icon_state = "redwhitri"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FLAG_IS_NOT_PERSISTENT
 	use_emergency_overlay = FALSE
 
 /area/rnd/research/phoronics/med
@@ -2405,7 +2406,7 @@
 	icon_state = "blublacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 
 /area/maintenance/substation/phoronics
 	name = "Phoronics Substation"
@@ -2868,7 +2869,7 @@
 //
 /area/vehicle_interior
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
+	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 	requires_power = FALSE
 	color_grading = COLORTINT_DIM
 
@@ -2903,7 +2904,7 @@
 	base_turf = /turf/simulated/floor/flesh
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_BLOCK_PHASE_SHIFT
+	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_BLOCK_PHASE_SHIFT
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
@@ -2917,8 +2918,7 @@
 	base_turf = /turf/simulated/floor/weird_things/dark
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_BLOCK_PHASE_SHIFT
-	sound_env = SPACE
+	flags = /area/specialty/redspace::flags
 	ambience = AMBIENCE_FOREBODING
 	music = 'sound/ambience/ambisin1.ogg'
 	haunted = TRUE
@@ -2945,7 +2945,7 @@
 	base_turf = /turf/simulated/floor/lava
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_PHASE_SHIFT
+	flags = /area/specialty/redspace::flags
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
