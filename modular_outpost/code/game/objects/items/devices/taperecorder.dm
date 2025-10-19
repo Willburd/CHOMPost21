@@ -12,7 +12,7 @@
 /obj/item/rectape/anna_lore/Initialize(mapload)
 	. = ..()
 	icon_state = "tape_[pick("white", "blue", "red", "yellow", "purple")]"
-	switch(rand(1,12))
+	switch(rand(1,14))
 		if(1)
 			add_custom_entry(0, 0, "Recording started.")
 			add_custom_entry(0, 54, "Anna Neso says, '...This is Anna Neso--Xenoarchaeologist--though I know not why I'm... making; a point of saying that, when nobody should be hearing this log but me.'")
@@ -712,3 +712,16 @@
 			add_custom_entry( 59, 13, "Recording started.")
 			add_custom_entry( 59, 29, "Anna Neso says, 'P-pressed for time, but... a valve caught me. Dialogue with Nipper was enlightening, but... not so much as I'd hoped. E-end... log.'")
 			add_custom_entry( 59, 30, "Recording stopped.")
+
+		if(13)
+			add_custom_entry( 0, 8, "Recording started.")
+			add_custom_entry( 0, 20, "Anna Neso says, 'This is Anna Neso, Xenoarchaeologist. The date is 2569-10-18.")
+			add_custom_entry( 0, 37, "Anna Neso says, 'I have discovered a spellbook. I have become capable of blasting ass.")
+			add_custom_entry( 0, 43, "Anna Neso says, 'That is all.")
+			add_custom_entry( 0, 47, "Anna Neso says, 'End log.")
+			add_custom_entry( 0, 49, "Recording stopped.")
+
+		if(14)
+			add_custom_entry( 0, 50, "Recording started.")
+			add_custom_entry( 1, 33, "Anna Neso says, 'Resume log, actually. I've been left with a burning desire for more spells. I'm... going to see if there are any more, secreted around. I'm sure this is a very great idea, and not hubris on my part.")
+			add_custom_entry( 1, 34, "Recording stopped.")
