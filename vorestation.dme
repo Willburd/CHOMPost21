@@ -2766,7 +2766,6 @@
 #include "code\modules\events\infestation.dm"
 #include "code\modules\events\ion_storm.dm"
 #include "code\modules\events\jellyfish_migration.dm"
-#include "code\modules\events\maint_spawner.dm"
 #include "code\modules\events\meteor_strike_vr.dm"
 #include "code\modules\events\meteors.dm"
 #include "code\modules\events\money_hacker.dm"

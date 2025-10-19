@@ -18,7 +18,6 @@
 	be_special_flag = BE_MAINTLURKER
 	question = "It appears a strange individual is lurking in maintenance. Do you want to play as them? ((You can spawn as your currently loaded character slot, but your arrival will not be announced and you will not appear on the manifest.))"
 	cutoff_number = 1
-*/
 
 /datum/ghost_query/maints_spawner
 	role_name = "Maintenance Spawner"
