@@ -32,6 +32,7 @@
 		"pros_spleen",
 		"pros_larynx",
 		"pros_stomach",
+		"pros_butt", // Outpost 21 edit - Prosthetic butt
 		// Robots
 		"robot_exoskeleton",
 		"robot_torso",
