@@ -569,6 +569,7 @@
 
 // Replacement protean bits
 
+/* Outpost 21 edit - Protean removal
 /datum/design_techweb/prosfab/orchestrator
 	name = "Protean Orchestrator"
 	id = "prot_orch"
@@ -582,6 +583,7 @@
 	build_path = /obj/item/organ/internal/nano/refactory
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_GOLD = 2000)
 	// req_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_DATA = 5)
+*/
 
 ///// pAI parts!!!
 
