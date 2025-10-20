@@ -1,3 +1,6 @@
+
+
+// Overrides
 /datum/design_techweb/hunter
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED

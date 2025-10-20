@@ -4503,7 +4503,6 @@
 #include "code\modules\research\tg\designs\mechfab_equipment_designs.dm"
 #include "code\modules\research\tg\designs\misc_designs.dm"
 #include "code\modules\research\tg\designs\modsuit_designs.dm"
-#include "code\modules\research\tg\designs\modular_computer_designs.dm"
 #include "code\modules\research\tg\designs\prosfab_designs.dm"
 #include "code\modules\research\tg\designs\stock_part_designs.dm"
 #include "code\modules\research\tg\designs\tool_designs.dm"

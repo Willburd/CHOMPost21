@@ -162,7 +162,6 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
 
-/* Outpost 21 edit - Backup removal
 // Implants root node
 /datum/techweb_node/passive_implants
 	id = TECHWEB_NODE_PASSIVE_IMPLANTS
@@ -170,7 +169,7 @@
 	description = "Implants designed to operate seamlessly without active user input, enhancing various physiological functions or providing continuous benefits."
 	prereq_ids = list(TECHWEB_NODE_AUGMENTATION)
 	design_ids = list(
-		"implant_backup",
+		// "implant_backup", // Outpost 21 edit - Backup removal
 		"health_scan_implant",
 		// "skill_station",
 		// "implant_trombone",
@@ -185,13 +184,12 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SECURITY, CHANNEL_MEDICAL)
-*/
 
 /datum/techweb_node/cyber_implants
 	id = TECHWEB_NODE_CYBER_IMPLANTS
 	display_name = "Cybernetic Implants"
 	description = "Advanced technological enhancements integrated into the body, offering improved physical capabilities."
-	prereq_ids = list(TECHWEB_NODE_CYBERNETICS) // Outpost 21 edit - Remove TECHWEB_NODE_PASSIVE_IMPLANTS
+	prereq_ids = list(TECHWEB_NODE_PASSIVE_IMPLANTS)
 	design_ids = list(
 		"implant_chem",
 		// "ci-breather",

@@ -2,7 +2,6 @@
 	name = "Eshui Standard"
 	id = "eshui_standard"
 	build_path = /obj/item/aiModule/eshui_standard
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 
 // Overrides
