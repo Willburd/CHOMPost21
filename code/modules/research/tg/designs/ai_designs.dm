@@ -6,7 +6,7 @@
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_CORE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - These are engineering, was: DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mmi
 	name = "Man-machine interface"
@@ -18,7 +18,7 @@
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG + RND_SUBCATEGORY_MECHFAB_CONTROL_INTERFACES
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - These are engineering, was: DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/posibrain
 	name = "Positronic brain"
@@ -30,7 +30,7 @@
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG + RND_SUBCATEGORY_MECHFAB_CONTROL_INTERFACES
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - These are engineering, was: DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/dronebrain
 	name = "Robotic intelligence circuit"
@@ -42,7 +42,7 @@
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG + RND_SUBCATEGORY_MECHFAB_CONTROL_INTERFACES
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - These are engineering, was: DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/paicard
 	name = "'pAI', personal artificial intelligence device"
@@ -54,7 +54,7 @@
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_CORE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - These are engineering, was: DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/intellicard
 	name = "intelliCore"
@@ -67,7 +67,7 @@
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_CORE
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - These are engineering, was: DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/aimodule
 	build_type = IMPRINTER
@@ -75,7 +75,7 @@
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_LAW_MANIPULATION
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING // Outpost 21 edit - These are engineering, was: DEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/aimodule/New()
 	. = ..()
@@ -276,11 +276,3 @@
 	id = "balance"
 	// req_tech = list(TECH_DATA = 4, TECH_ILLEGAL = 2, TECH_MATERIAL = 2, TECH_COMBAT = 3)
 	build_path = /obj/item/aiModule/balance
-
-// Outpost 21 edit begin - Eshui law board
-/datum/design_techweb/aimodule/eshui
-	name = "Eshui Standard"
-	id = "eshui_standard"
-	// req_tech = list(TECH_DATA = 5, TECH_ILLEGAL = 3, TECH_MATERIAL = 4, TECH_COMBAT = 3)
-	build_path = /obj/item/aiModule/eshui_standard
-// Outpost 21 edit end
