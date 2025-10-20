@@ -6,7 +6,7 @@
 	category = list(
 		RND_CATEGORY_AI + RND_SUBCATEGORY_AI_CORE
 	)
-	departmental_flags = DDEPARTMENT_BITFLAG_SCIENCE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/mmi
 	name = "Man-machine interface"
