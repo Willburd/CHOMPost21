@@ -1,0 +1,92 @@
+/obj/item/melee/baton/stunstaff
+	name = "Stun Staff" //OP edit - New name, description, and path
+	desc = "A six foot long staff from dull, rugged metal, with two stylized bulbs at the end. An illogical upgrade to the stun baton, but loved by security nonetheless."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
+	icon_state = "stunstaff00"
+	var/base_icon = "stunstaff"
+	force = 5
+	sharp = FALSE
+	edge = FALSE
+	throwforce = 7
+	w_class = ITEMSIZE_HUGE
+	origin_tech = list(TECH_COMBAT = 2)
+	attack_verb = list("beaten")
+	lightcolor = "#CC33FF"
+
+	//Two Handed
+	var/wielded = 0
+	var/base_name = "stunstaff"
+
+/obj/item/melee/baton/stunstaff/Initialize(mapload)
+	. = ..()
+	bcell = new/obj/item/cell/device/weapon(src)
+	update_icon()
+
+/obj/item/melee/baton/stunstaff/update_held_icon()
+	var/mob/living/M = loc
+	if(istype(M) && !issmall(M) && M.item_is_in_hands(src) && !M.hands_are_full())
+		wielded = 1
+		force = 15
+		name = "[base_name] (wielded)"
+		update_icon()
+	else
+		wielded = 0
+		force = 8
+		name = "[base_name]"
+	update_icon()
+	..()
+
+/obj/item/melee/baton/stunstaff/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
+	if(wielded && default_parry_check(user, attacker, damage_source) && prob(40)) //OP edit, buffing to 40, from 30
+		user.visible_message(span_danger("\The [user] parries [attack_text] with \the [src]!"))
+		playsound(src, 'sound/weapons/punchmiss.ogg', 50, 1)
+		return 1
+	return 0
+
+/obj/item/melee/baton/stunstaff/update_icon()
+	icon_state = "[base_icon][wielded][status]"
+	item_state = icon_state
+	if(status==1)
+		set_light(2, 2, lightcolor)
+	else
+		set_light(0)
+
+/obj/item/melee/baton/stunstaff/dropped(mob/user)
+	..()
+	if(wielded)
+		wielded = 0
+		spawn(0)
+			update_held_icon()
+
+/obj/item/melee/baton/stunstaff/attack_self(mob/user)
+	if(bcell && bcell.charge > hitcost)
+		status = !status
+		to_chat(user, span_notice("[src] is now [status ? "on" : "off"]."))
+		if(status == 0)
+			playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
+		else
+			playsound(src, 'sound/weapons/saberon.ogg', 50, 1)
+	else
+		status = 0
+		to_chat(user, span_warning("[src] is out of charge."))
+	update_held_icon()
+	add_fingerprint(user)
+
+/obj/item/storage/backpack/stunstaff
+	name = "Stun staff carrying case"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "holster_stunstaff"
+	desc = "A sturdy synthetic leather sheath with matching belt and rubberized interior."
+	slot_flags = SLOT_BACK
+	item_icons = list(slot_back_str = 'icons/vore/custom_clothes_mob.dmi', slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
+
+	can_hold = list(/obj/item/melee/baton/stunstaff)
+
+	w_class = ITEMSIZE_HUGE
+	max_w_class = ITEMSIZE_HUGE
+	max_storage_space = 16
+
+/obj/item/storage/backpack/stunstaff/Initialize(mapload)
+	. = ..()
+	new /obj/item/melee/baton/stunstaff(src)
