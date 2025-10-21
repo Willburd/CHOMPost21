@@ -1,3 +1,4 @@
+//New name, description, and path
 /obj/item/melee/baton/stunstaff
 	name = "Stun Staff" //OP edit - New name, description, and path
 	desc = "A six foot long staff from dull, rugged metal, with two stylized bulbs at the end. An illogical upgrade to the stun baton, but loved by security nonetheless."
@@ -5,6 +6,7 @@
 	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
 	icon_state = "stunstaff00"
 	var/base_icon = "stunstaff"
+	reach = 2 // it's a spear!
 	force = 5
 	sharp = FALSE
 	edge = FALSE
@@ -15,7 +17,7 @@
 	lightcolor = "#CC33FF"
 
 	//Two Handed
-	var/wielded = 0
+	var/wielded = 0 // I need to make this a component don't I... - Willbird
 	var/base_name = "stunstaff"
 
 /obj/item/melee/baton/stunstaff/Initialize(mapload)

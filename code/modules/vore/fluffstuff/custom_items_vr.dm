@@ -928,6 +928,7 @@
 	. = ..(mapload," ") //See materials_vr_dmi for more information as to why this is a blank space.
 
 //jacknoir413:Areax Third
+/* Outpost 21 edit - Disable original to avoid confusion
 /obj/item/melee/baton/fluff/stunstaff
 	name = "Electrostaff"
 	desc = "Six-foot long staff from dull, rugged metal, with two thin spikes protruding from each end. Small etching near to the middle of it reads 'Children Of Nyx Facilities: Product No. 12'."
@@ -1020,7 +1021,7 @@
 /obj/item/storage/backpack/fluff/stunstaff/Initialize(mapload)
 	. = ..()
 	new /obj/item/melee/baton/fluff/stunstaff(src)
-
+*/
 
 /*
  * Awoo Sword
