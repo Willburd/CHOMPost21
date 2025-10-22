@@ -59,3 +59,40 @@
 /obj/structure/prop/fake_status_display/bsod/Initialize(mapload)
 	. = ..()
 	set_picture("ai_bsod")
+
+
+
+/// Fake Supermatter
+/obj/structure/prop/fake_supermatter
+	name = "Supermatter"
+	desc = "A strangely translucent and iridescent crystal. " + span_red("Something appears off about it.")
+	icon = 'icons/obj/supermatter.dmi'
+	icon_state = "darkmatter"
+	plane = MOB_PLANE // So people can walk behind the top part
+	layer = ABOVE_MOB_LAYER // So people can walk behind the top part
+	density = TRUE
+	anchored = FALSE
+	unacidable = TRUE
+	light_range = 4
+
+/obj/structure/prop/fake_supermatter/shielded
+	icon_state = "psy_shielded_unused"
+
+/obj/structure/prop/fake_supermatter/alt_color
+	icon_state = "psy_unused"
+
+
+
+/// Fake smes
+/obj/structure/prop/fake_smes
+	name = "power storage unit"
+	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit. This one is locked down!"
+	icon = 'icons/obj/power.dmi'
+	icon_state = "smes"
+	density = TRUE
+	anchored = TRUE
+	unacidable = TRUE
+
+
+
+///
