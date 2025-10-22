@@ -68,7 +68,7 @@
 /obj/structure/sign/secure_eshui_facility_highsec
 	icon = 'modular_outpost/icons/obj/decals.dmi'
 	name = "No Entry"
-	desc = "WARNING, high security restricted area. No entry without prior orders. A command officer must be present at all times while in this area."
+	desc = "WARNING: Secure area. Authorized personnel only. Area patrolled by security drone. Lethal force authorized. No entry without approval from base commander."
 	icon_state = "eshui_high_secure"
 
 

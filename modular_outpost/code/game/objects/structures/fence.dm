@@ -13,7 +13,7 @@
 
 /obj/structure/fence/eshui_sign_high_sec
 	name = "No Entry"
-	desc = "WARNING, high security restricted area. No entry without prior orders. A command officer must be present at all times while in this area."
+	desc = "WARNING: Secure area. Authorized personnel only. Area patrolled by security drone. Lethal force authorized. No entry without approval from base commander."
 	icon = 'modular_outpost/icons/obj/fence.dmi'
 	icon_state = "secure_eshui_high"
 
