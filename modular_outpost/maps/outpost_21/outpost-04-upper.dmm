@@ -26434,6 +26434,7 @@
 	},
 /obj/item/gun/energy/sickshot,
 /obj/item/clothing/accessory/holster/waist,
+/obj/item/reagent_containers/hypospray/vial,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "mDb" = (

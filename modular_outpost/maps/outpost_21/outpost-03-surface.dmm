@@ -49798,10 +49798,10 @@
 	req_access = list(2);
 	dir = 2
 	},
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
-/obj/item/clothing/mask/gas/sechailer,
+/obj/item/melee/baton/stunstaff,
+/obj/item/melee/baton/stunstaff,
+/obj/item/melee/baton/stunstaff,
+/obj/item/melee/baton/stunstaff,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "mGh" = (
