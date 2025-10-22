@@ -5,7 +5,6 @@
 	plane = TURF_PLANE
 	layer = ABOVE_WINDOW_LAYER
 	name = "status display"
-	anchored = TRUE
 	density = FALSE
 	unacidable = TRUE
 
@@ -70,8 +69,6 @@
 	icon_state = "darkmatter"
 	plane = MOB_PLANE // So people can walk behind the top part
 	layer = ABOVE_MOB_LAYER // So people can walk behind the top part
-	density = TRUE
-	anchored = FALSE
 	unacidable = TRUE
 	light_range = 4
 
@@ -89,10 +86,30 @@
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit. This one is locked down!"
 	icon = 'icons/obj/power.dmi'
 	icon_state = "smes"
-	density = TRUE
-	anchored = TRUE
 	unacidable = TRUE
 
 
 
-///
+/// Circulator for TEG
+/obj/structure/prop/fake_circulator
+	name = "circulator"
+	desc = "A gas circulator turbine and heat exchanger."
+	icon = 'icons/obj/power.dmi'
+	icon_state = "circ-unassembled"
+	unacidable = TRUE
+
+/obj/structure/prop/fake_circulator/assembled
+	icon_state = "circ-assembled"
+
+
+
+/// Generator for TEG
+/obj/structure/prop/fake_generator
+	name = "thermoelectric generator"
+	desc = "It's a high efficiency thermoelectric generator."
+	icon = 'icons/obj/power.dmi'
+	icon_state = "teg-unassembled"
+	unacidable = TRUE
+
+/obj/structure/prop/fake_generator/assembled
+	icon_state = "teg-assembled"
