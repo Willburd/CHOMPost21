@@ -33,10 +33,10 @@
 	// no interaction
 
 /obj/machinery/door/flesh/attack_generic(mob/user, damage)
-	attack_hand(mob/user)
+	attack_hand(user)
 
 /obj/machinery/door/flesh/attack_alien(mob/user)
-	attack_hand(mob/user)
+	attack_hand(user)
 
 /obj/machinery/door/flesh/emag_act(var/remaining_charges)
 	// no behavior
