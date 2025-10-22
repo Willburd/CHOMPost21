@@ -73,7 +73,7 @@
 	hud_state = "rocket_he"
 	hud_state_empty = "rocket_empty"
 
-#define SHELL_EXPLOSION explosion(get_turf(src), 2, 3, 4, 4)
+#define SHELL_EXPLOSION explosion(get_turf(src), 1, 2, 3, 4)
 #define SHELL_FRAGMENTS fragmentate(get_turf(src), 12, 7, list(/obj/item/projectile/bullet/pellet/fragment))
 /obj/item/projectile/bullet/kyshell/on_hit(atom/target, blocked=0)
 	SHELL_FRAGMENTS
