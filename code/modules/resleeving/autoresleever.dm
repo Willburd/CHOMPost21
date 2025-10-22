@@ -241,8 +241,9 @@
 
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(new_character.mind.name)
 	if(db)
+
 		var/datum/transhuman/mind_record/record = db.backed_up[new_character.mind.name]
-		if((world.time - record.last_notification) < 30 MINUTES)
+		if((world.time - record.last_notification) < 30 MINUTES && istype(get_area(src), /area/medical)) // Outpost 21 edit - Only notify if in medical
 			GLOB.global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Engineering" : "Medical") // Outpost 21 edit - Robotics is engineering here
 
 		/* Outpost 21 edit - Nif removal
