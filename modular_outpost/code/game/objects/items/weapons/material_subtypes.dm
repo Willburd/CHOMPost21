@@ -1,10 +1,10 @@
 // Makes mat overrides for all
 #define WEAPON_SET(x,y); \
 /obj/item/material/knife/tacknife/combatknife/x {default_material = ##y;}\
-/obj/item/material/knife/tacknife/fireaxe/x {default_material = ##y;}\
 /obj/item/material/knife/tacknife/butterflyblade/x {default_material = ##y;}\
 /obj/item/material/knife/machete/x {default_material = ##y;}\
 /obj/item/material/knife/tacknife/survival/x {default_material = ##y;}\
+/obj/item/material/twohanded/fireaxe/x {default_material = ##y;}\
 /obj/item/material/twohanded/spear/x {default_material = ##y;}\
 /obj/item/material/twohanded/baseballbat/x {default_material = ##y;}\
 /obj/item/material/butterfly/switchblade/x {default_material = ##y;}\
