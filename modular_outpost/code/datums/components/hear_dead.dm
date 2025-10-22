@@ -11,7 +11,7 @@
 
 /datum/component/hear_dead/Destroy(force)
 	UnregisterSignal(SSdcs, COMSIG_OUTPOST_HEAR_DEAD)
-	tgui_alert(our_listener, "The voices fall silent. You are now alone in your head once more. (OOC: You will no longer hear deadchat messages.)", "The Voices Are Silent", list("Silence..."))
+	to_chat(our_listener, span_cult("The voices fall silent. You are now alone in your head once more. (OOC: You will no longer hear deadchat messages.)"))
 	our_listener = null
 	. = ..()
 
