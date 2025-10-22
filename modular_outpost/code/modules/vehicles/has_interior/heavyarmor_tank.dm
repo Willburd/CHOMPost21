@@ -66,28 +66,36 @@
 	desc = "Boom"
 	icon = 'modular_outpost/icons/obj/grenade.dmi'
 	icon_state = "shell"
-	damage = 35 // Bonk
+	damage = 65 // Bonk
 	range = 90
 	sharp = FALSE
 	nondirectional_sprite = TRUE
 	hud_state = "rocket_he"
 	hud_state_empty = "rocket_empty"
 
+#define SHELL_EXPLOSION explosion(get_turf(src), 1, 2, 3, 4)
+#define SHELL_FRAGMENTS fragmentate(get_turf(src), 12, 7, list(/obj/item/projectile/bullet/pellet/fragment))
 /obj/item/projectile/bullet/kyshell/on_hit(atom/target, blocked=0)
-	explosion(target, 1, 2, 2, 4)
+	SHELL_FRAGMENTS
+	SHELL_EXPLOSION
 	return 1
 
 /obj/item/projectile/bullet/kyshell/throw_impact(atom/target, var/speed)
-	explosion(target, 1, 2, 2, 4)
+	SHELL_FRAGMENTS
+	SHELL_EXPLOSION
 	qdel(src)
 
 /obj/item/projectile/bullet/kyshell/on_range()
 	. = ..()
-	explosion(loc, 1, 2, 2, 4)
+	SHELL_FRAGMENTS
+	SHELL_EXPLOSION
 
 /obj/item/projectile/bullet/kyshell/on_impact(atom/A)
 	. = ..()
-	explosion(loc, 1, 2, 2, 4)
+	SHELL_FRAGMENTS
+	SHELL_EXPLOSION
+#undef SHELL_EXPLOSION
+#undef SHELL_FRAGMENTS
 
 /obj/item/ammo_casing/kyshell
 	name = "TD Type-L \"Reclaimer\" Shell"

@@ -484,6 +484,7 @@
 /turf/simulated/floor/airless/ceiling
 /turf/simulated/floor/plating
 /turf/simulated/floor/plating/external // To be overrided by the map files.
+	outdoors = TRUE // Outpost 21 edit - Make external plating behave
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
