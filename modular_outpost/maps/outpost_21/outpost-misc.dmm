@@ -453,6 +453,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
+"be" = (
+/obj/machinery/atmospherics/unary/engine/biggest{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/mercenary)
 "bf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
@@ -524,6 +530,9 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"bn" = (
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/mercenary)
 "bo" = (
 /obj/structure/closet/walllocker/medical/south,
 /obj/structure/handrail{
@@ -565,9 +574,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
-"bu" = (
-/turf/simulated/shuttle/wall/dark,
-/area/space)
 "bv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -721,13 +727,6 @@
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/beach/sand,
 /area/beach)
-"bM" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 4;
-	start_pressure = 740.5
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "bN" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/techfloor,
@@ -1074,6 +1073,13 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"cH" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
+	},
+/obj/machinery/light/small/emergency,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "cI" = (
 /obj/machinery/light{
 	dir = 4
@@ -1183,6 +1189,13 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/planet/clown)
+"cS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/power/port_gen/large_altevian,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "cT" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/blast/shutters{
@@ -1281,13 +1294,6 @@
 /obj/item/bikehorn/rubberducky,
 /turf/space,
 /area/space)
-"dd" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
-	},
-/obj/machinery/meter,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "de" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger{
@@ -1295,21 +1301,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"df" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "merc_shuttle";
-	name = "interior access button";
-	pixel_x = 25;
-	pixel_y = 25;
-	req_access = list(150)
-	},
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dg" = (
 /obj/structure/table/alien,
 /obj/item/juke_remote,
@@ -1318,26 +1309,10 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
-"dh" = (
-/obj/machinery/suit_cycler/syndicate{
-	locked = 0
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"di" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/shuttle/plating,
-/area/space)
+"dj" = (
+/obj/machinery/light/small,
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/mercenary)
 "dk" = (
 /obj/machinery/autolathe{
 	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
@@ -1346,16 +1321,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"dl" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_inner";
-	name = "Ship External Access";
-	req_access = list(0)
-	},
-/obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dm" = (
 /obj/structure/table/standard,
 /obj/item/radio/headset/alt/syndicate,
@@ -1390,12 +1355,6 @@
 	},
 /turf/unsimulated/beach/sand,
 /area/beach)
-"dp" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "plant-10"
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dq" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark{
@@ -1407,18 +1366,6 @@
 /mob/living/simple_mob/animal/passive/crab/Coffee,
 /turf/unsimulated/beach/sand,
 /area/beach)
-"ds" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"dt" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "du" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark{
@@ -1426,70 +1373,15 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
-"dv" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"dw" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/space)
 "dx" = (
 /turf/unsimulated/wall/fakeglass,
 /area/syndicate_mothership)
-"dy" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "smindicate";
-	name = "ship lockdown control";
-	pixel_x = -25
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"dz" = (
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 1
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "merc_shuttle_sensor";
-	pixel_x = 8;
-	pixel_y = 25
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dA" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/retro,
 /area/planet/clown)
-"dB" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "merc_shuttle";
-	pixel_x = -8;
-	pixel_y = 25;
-	req_access = list(150)
-	},
-/obj/effect/shuttle_landmark/premade/mercenary/base,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dC" = (
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/mercenary)
@@ -1500,9 +1392,6 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
-"dE" = (
-/turf/space,
-/area/shuttle/mercenary)
 "dF" = (
 /obj/structure/prop/war/minirocket_pod,
 /turf/simulated/shuttle/plating/airless,
@@ -1520,7 +1409,14 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/shuttle/plating/airless,
+/area/shuttle/mercenary)
+"dI" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "dJ" = (
 /obj/machinery/door/airlock/highsecurity{
@@ -1634,6 +1530,10 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"ea" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "eb" = (
 /obj/machinery/autolathe/armory,
 /turf/simulated/shuttle/floor/darkred,
@@ -1708,10 +1608,20 @@
 /area/shuttle/mercenary)
 "eo" = (
 /obj/structure/prop/machine/tgmc_console3/starts_on,
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "ep" = (
 /obj/structure/prop/machine/tgmc_console5/starts_on,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"eq" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "er" = (
@@ -1725,6 +1635,10 @@
 "es" = (
 /obj/structure/table/steel_reinforced,
 /turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
+"et" = (
+/obj/machinery/atmospherics/unary/engine/bigger,
+/turf/simulated/shuttle/plating/airless,
 /area/shuttle/mercenary)
 "eu" = (
 /obj/machinery/shipsensors{
@@ -1870,6 +1784,12 @@
 /obj/item/flag,
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
+"eQ" = (
+/obj/machinery/suit_cycler/syndicate{
+	locked = 0
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "eR" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger{
@@ -1879,10 +1799,6 @@
 	pixel_x = 6
 	},
 /turf/simulated/shuttle/floor/darkred,
-/area/shuttle/mercenary)
-"eS" = (
-/obj/structure/shuttle/engine/heater,
-/turf/simulated/shuttle/plating/airless,
 /area/shuttle/mercenary)
 "eT" = (
 /obj/machinery/recharge_station,
@@ -1970,12 +1886,6 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "fe" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_outer";
-	name = "Ship External Access";
-	req_access = list(150)
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -1984,7 +1894,26 @@
 	opacity = 0
 	},
 /obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/external{
+	frequency = 1331;
+	id_tag = "merc_shuttle_inner";
+	name = "Ship External Access";
+	req_access = list(0)
+	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/shuttle/floor/black/turfpack,
+/area/shuttle/mercenary)
+"ff" = (
+/obj/machinery/atmospherics/pipe/tank/air{
+	start_pressure = 740.5
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fg" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "fh" = (
 /turf/unsimulated/floor{
@@ -2004,6 +1933,40 @@
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"fk" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fl" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list(150)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/black/airless,
+/area/shuttle/mercenary)
+"fm" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 10
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fn" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 8
+	},
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fo" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fp" = (
 /obj/structure/lattice,
 /turf/simulated/mineral,
@@ -2087,6 +2050,15 @@
 	name = "plating"
 	},
 /area/syndicate_mothership)
+"fA" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 4
+	},
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fB" = (
 /obj/item/clothing/under/tactical,
 /obj/item/clothing/under/tactical,
@@ -2133,6 +2105,14 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"fG" = (
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fH" = (
 /obj/structure/table/rack,
 /obj/item/gps/syndie,
@@ -2195,6 +2175,14 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"fO" = (
+/obj/machinery/power/solar/fake,
+/turf/simulated/shuttle/plating/airless,
+/area/shuttle/mercenary)
+"fP" = (
+/obj/machinery/light/small,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fQ" = (
 /obj/structure/table/alien,
 /obj/item/champagne,
@@ -2309,6 +2297,13 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"gb" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list(150)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/black/airless,
+/area/shuttle/mercenary)
 "gc" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -2415,6 +2410,12 @@
 	name = "plating"
 	},
 /area/syndicate_mothership)
+"go" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "gp" = (
 /obj/item/storage/backpack/dufflebag/syndie,
 /obj/item/storage/backpack/dufflebag/syndie,
@@ -2458,6 +2459,15 @@
 /obj/structure/table/reinforced,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
+"gu" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "gv" = (
 /obj/item/storage/backpack/dufflebag/syndie,
 /obj/item/storage/backpack/dufflebag/syndie,
@@ -2473,6 +2483,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gw" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "gx" = (
 /obj/structure/medical_stand,
 /turf/unsimulated/floor{
@@ -2495,6 +2511,20 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gz" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
+"gA" = (
+/obj/structure/table/rack,
+/obj/item/material/butterfly/switchblade/dura,
+/obj/item/material/butterfly/switchblade/dura,
+/obj/item/material/butterfly/switchblade/dura,
+/obj/item/material/butterfly/switchblade/dura,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "gB" = (
 /obj/item/storage/belt/security/tactical,
 /obj/item/storage/belt/security/tactical,
@@ -2507,6 +2537,17 @@
 /obj/item/storage/belt/security/tactical,
 /obj/item/storage/belt/security/tactical,
 /obj/item/storage/belt/security/tactical,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gC" = (
+/obj/structure/table/rack,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2843,6 +2884,20 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gX" = (
+/obj/structure/table/rack,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "gY" = (
 /obj/structure/table/rack,
 /obj/item/ammo_magazine/ammo_box/b45/emp,
@@ -2887,6 +2942,12 @@
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
+"hd" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
 "he" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Energy Armory";
@@ -2945,6 +3006,9 @@
 /obj/machinery/recharger/wallcharger{
 	pixel_x = 4;
 	pixel_y = 23
+	},
+/obj/machinery/light/small/emergency{
+	dir = 1
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -3153,6 +3217,17 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"hB" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
+"hC" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list(150)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/black/turfpack,
+/area/shuttle/mercenary)
 "hD" = (
 /obj/structure/table/rack,
 /obj/item/storage/pouch/eng_supply,
@@ -3198,6 +3273,13 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"hF" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "hG" = (
 /obj/item/card/data/clown,
 /obj/structure/table/alien,
@@ -3260,6 +3342,44 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"hM" = (
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"hN" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1331;
+	master_tag = "merc_shuttle";
+	name = "interior access button";
+	pixel_x = -25;
+	pixel_y = 25;
+	req_access = list(150)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"hO" = (
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1331;
+	master_tag = "merc_shuttle";
+	name = "interior access button";
+	pixel_x = 25;
+	pixel_y = 25;
+	req_access = list(150)
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"hP" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/awp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "hQ" = (
 /obj/effect/landmark{
 	name = "Nuclear-Code"
@@ -3400,6 +3520,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"id" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "ie" = (
 /obj/structure/table/rack,
 /obj/item/flame/lighter/zippo,
@@ -3460,6 +3586,23 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"ik" = (
+/obj/machinery/button/remote/blast_door{
+	id = "smindicate";
+	name = "ship lockdown control";
+	pixel_y = -30;
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"il" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1331;
+	id_tag = "merc_shuttle_pump"
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "im" = (
 /obj/structure/table/rack,
 /obj/item/rig/merc/empty,
@@ -3612,6 +3755,27 @@
 	icon_state = "milspec"
 	},
 /area/syndicate_mothership)
+"iA" = (
+/obj/effect/shuttle_landmark/premade/mercenary/base,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1331;
+	id_tag = "merc_shuttle";
+	pixel_x = -8;
+	pixel_y = 25;
+	req_access = list(150)
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1331;
+	id_tag = "merc_shuttle_sensor";
+	pixel_x = 8;
+	pixel_y = 25
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1331;
+	id_tag = "merc_shuttle_pump"
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "iB" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/magboots,
@@ -3773,7 +3937,12 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "iX" = (
-/obj/structure/table/rack,
+/obj/machinery/suit_cycler/syndicate{
+	locked = 0
+	},
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "iY" = (
@@ -5905,6 +6074,9 @@
 /area/shuttle/mercenary)
 "vD" = (
 /obj/machinery/teleport/station,
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "vF" = (
@@ -5945,12 +6117,8 @@
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
 "vT" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/mercenary)
-"vU" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r"
+/obj/machinery/atmospherics/unary/engine/bigger{
+	dir = 1
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/mercenary)
@@ -9496,6 +9664,8 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
+/obj/item/material/twohanded/longsword/plas,
+/obj/item/material/twohanded/longsword/plas,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "Qh" = (
@@ -48450,7 +48620,7 @@ dC
 dC
 dC
 dC
-dC
+et
 fR
 mK
 fR
@@ -48619,7 +48789,7 @@ fx
 fR
 dC
 dC
-mN
+be
 mN
 mN
 mN
@@ -48766,10 +48936,10 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
+fO
+fO
+fO
+fO
 fR
 fR
 fR
@@ -48777,11 +48947,11 @@ fR
 fR
 fR
 fy
-fx
+cH
 fR
 dC
 dC
-mN
+bn
 mN
 mN
 mN
@@ -48928,22 +49098,22 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
+fO
+fO
+fO
+fO
 fR
 gL
 vD
 vH
-hl
+eQ
 iV
 fy
 fx
 iV
 dC
 dC
-mN
+bn
 mN
 mN
 mN
@@ -49090,9 +49260,9 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
+fO
+fO
+fO
 ed
 fR
 hl
@@ -49237,7 +49407,7 @@ fR
 mK
 fR
 fR
-eS
+dC
 vT
 mN
 mN
@@ -49399,8 +49569,8 @@ eY
 eV
 hl
 fR
-eS
-vU
+dC
+bn
 mN
 mN
 mN
@@ -49418,14 +49588,14 @@ fx
 iV
 ee
 ga
-ga
+fA
 ga
 hl
 fR
 dX
 hl
 hl
-dN
+cS
 fR
 mN
 mN
@@ -49576,16 +49746,16 @@ ev
 fR
 fR
 eo
-hl
-dW
-hl
-hl
-hl
-hl
-hl
+go
+gb
+fo
+fo
+fo
+fo
+dI
 fR
-hl
-hl
+ff
+dI
 hl
 dN
 fR
@@ -49738,16 +49908,16 @@ ex
 es
 iV
 ep
-fx
+gu
 iV
 fR
 fR
 fR
 iV
-dW
+fl
 iV
-hl
-hl
+ff
+ea
 hl
 dN
 fR
@@ -49878,38 +50048,38 @@ lK
 jB
 jv
 fe
-hl
-hl
-eJ
-hl
-hl
-hl
-eJ
-hl
-hl
-hl
-eJ
-rt
-rt
-rt
-rt
-dW
-rt
-rt
-rt
-rt
-dW
-hl
-hl
+il
+id
+hC
+hN
+hF
+fo
+hC
+fo
+hF
+fo
+hC
+gz
+gz
+gz
+gz
+gb
+gz
+gz
+gz
+gz
+gb
+fo
+gw
 fR
 ef
-hl
+fP
 fR
 dZ
-dQ
-dQ
-dQ
-dQ
+fm
+fk
+fg
+eq
 dQ
 dP
 fR
@@ -50040,8 +50210,8 @@ sg
 yb
 sg
 fR
-hl
-hl
+iA
+ik
 iV
 fR
 iV
@@ -50054,9 +50224,9 @@ iV
 eH
 rt
 rt
-rt
+hB
 iV
-rt
+hd
 rt
 rt
 rt
@@ -50075,7 +50245,7 @@ hl
 hl
 hl
 fR
-dE
+mN
 mN
 mN
 mN
@@ -50202,15 +50372,15 @@ sg
 jB
 jw
 fe
-hl
+il
+gw
+eJ
+hO
+hM
 hl
 eJ
 hl
-hl
-hl
-eJ
-hl
-hl
+hM
 hl
 eJ
 rt
@@ -50237,7 +50407,7 @@ hl
 hl
 vC
 fR
-dE
+mN
 mN
 mN
 mN
@@ -50399,7 +50569,7 @@ hl
 hl
 hl
 fR
-dE
+mN
 mN
 mN
 mN
@@ -50561,7 +50731,7 @@ hl
 hl
 hl
 fR
-dE
+mN
 mN
 mN
 mN
@@ -50581,12 +50751,12 @@ ab
 mN
 mN
 mN
-bu
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -50695,7 +50865,7 @@ eX
 eX
 eU
 fR
-eS
+dC
 vT
 mN
 mN
@@ -50714,7 +50884,7 @@ fx
 iV
 ek
 gd
-gd
+fG
 gd
 hl
 fR
@@ -50723,7 +50893,7 @@ hl
 hl
 hl
 fR
-dE
+mN
 mN
 mN
 mN
@@ -50743,12 +50913,12 @@ ab
 mN
 mN
 mN
-bu
-dw
-dp
-bu
-bM
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -50857,8 +51027,8 @@ fR
 mK
 fR
 fR
-eS
-vU
+dC
+bn
 mN
 mN
 mN
@@ -50905,12 +51075,12 @@ ab
 mN
 mN
 mN
-bu
-dy
-ds
-di
-dd
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -51034,9 +51204,9 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
+fO
+fO
+fO
 ed
 fR
 hl
@@ -51067,12 +51237,12 @@ ab
 mN
 mN
 mN
-bu
-dz
-dt
-dl
-df
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -51196,22 +51366,22 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
+fO
+fO
+fO
+fO
 fR
 eb
-fL
+fn
 fS
 fL
 mK
 dR
-mM
+dj
 fR
 dC
 dC
-mN
+be
 mN
 mN
 mN
@@ -51229,12 +51399,12 @@ ab
 mN
 mN
 mN
-bu
-dB
-dv
-di
-dh
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -51336,10 +51506,10 @@ sg
 jF
 mu
 mN
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
 va
 va
 mN
@@ -51358,10 +51528,10 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
+fO
+fO
+fO
+fO
 fR
 fR
 fR
@@ -51373,7 +51543,7 @@ mM
 fR
 dC
 dC
-mN
+bn
 mN
 mN
 TW
@@ -51391,12 +51561,12 @@ ab
 mN
 mN
 mN
-bu
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -51500,8 +51670,8 @@ sl
 sl
 sl
 sl
-mu
-mu
+mN
+mN
 va
 va
 mN
@@ -51528,14 +51698,14 @@ dC
 dC
 dC
 dC
-dC
+et
 fR
 dV
 mM
 fR
 dC
 dC
-mN
+bn
 mN
 TW
 TW
@@ -51662,8 +51832,8 @@ sl
 sl
 sl
 sl
-mu
-mu
+mN
+mN
 va
 va
 mN
@@ -51825,7 +51995,7 @@ sl
 sl
 sl
 sl
-mu
+mN
 va
 va
 mN
@@ -52148,7 +52318,7 @@ jy
 jh
 je
 iN
-iN
+hP
 dU
 yb
 ip
@@ -52310,7 +52480,7 @@ jy
 jh
 je
 iN
-iN
+hP
 dU
 yb
 ir
@@ -52958,7 +53128,7 @@ jz
 jh
 je
 iN
-iN
+hP
 iH
 yb
 ix
@@ -53120,7 +53290,7 @@ jz
 jh
 je
 iN
-iN
+hP
 iH
 yb
 iy
@@ -54433,7 +54603,7 @@ la
 sg
 qx
 yb
-kQ
+gA
 sg
 kQ
 hf
@@ -54593,9 +54763,9 @@ sg
 hJ
 hD
 sg
-kQ
+gX
 yb
-kQ
+gC
 sg
 kQ
 kQ

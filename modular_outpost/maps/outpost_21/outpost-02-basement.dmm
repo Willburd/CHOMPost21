@@ -45731,6 +45731,9 @@
 /area/security/tankstore)
 "bEG" = (
 /obj/machinery/light,
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = -32
+	},
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/security/tankstore)
 "bEH" = (
@@ -62311,6 +62314,26 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
+"coB" = (
+/obj/structure/catwalk,
+/obj/structure/sign/secure_eshui_facility{
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
+"coC" = (
+/obj/structure/sign/secure_eshui_facility{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cave)
+"coD" = (
+/obj/structure/sign/directions/outpost/bunker{
+	pixel_y = -9;
+	dir = 4
+	},
+/turf/simulated/wall/r_wall,
+/area/hallway/muriki/bunkerhall)
 "coE" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -62343,6 +62366,18 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
+"coJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/engineering/coreproctunnel)
 "coK" = (
 /obj/item/grenade/shooter/energy/lasertagall,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -62824,6 +62859,9 @@
 /obj/structure/catwalk,
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/sign/secure_eshui_facility{
+	pixel_x = 32
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -68039,9 +68077,7 @@
 	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 1
-	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
 "hWH" = (
 /obj/structure/closet/emcloset,
@@ -70907,6 +70943,9 @@
 	},
 /obj/machinery/camera/network/bunker{
 	c_tag = "BNK - Exterior"
+	},
+/obj/structure/sign/securearea{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel,
 /area/muriki/crew/bunker)
@@ -94405,7 +94444,7 @@ kwU
 kwU
 kwU
 gKH
-bTh
+coJ
 gKH
 kwU
 kwU
@@ -100599,7 +100638,7 @@ ckk
 ckg
 cpT
 ckf
-bJz
+coB
 cpT
 bJz
 bJz
@@ -120681,7 +120720,7 @@ cRH
 aWR
 gTT
 gTT
-kqO
+coC
 kqO
 kqO
 alY
@@ -138973,7 +139012,7 @@ pmN
 pmN
 pmN
 lOq
-lOq
+coD
 pIS
 jDI
 lOq
@@ -140593,7 +140632,7 @@ pmN
 pmN
 pmN
 pmN
-lOq
+coD
 wnj
 wnj
 lOq

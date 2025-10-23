@@ -373,25 +373,34 @@
 /obj/mecha/combat/phazon/janus,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
-"abr" = (
+"abq" = (
 /obj/structure/table/rack,
-/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/gun/magnetic/railgun,
+/obj/item/gun/magnetic/railgun,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"abr" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/effect/floor_decal/industrial/outline/cut_corners,
+/obj/item/healthanalyzer/guide,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vehicle_interior/heavyarmor_medic_recovery)
 "abs" = (
 /obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
-	},
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
@@ -399,7 +408,26 @@
 /area/centcom/specops)
 "abt" = (
 /obj/structure/table/rack,
-/obj/item/gun/energy/gun/burst/mg42,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -412,8 +440,14 @@
 /area/specialty/redspace)
 "abv" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/mg42,
-/obj/item/ammo_magazine/mg42,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -421,37 +455,46 @@
 "abw" = (
 /obj/structure/table/rack,
 /obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
 "abx" = (
 /obj/structure/table/rack,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/red,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
 "aby" = (
 /obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
 	},
-/obj/item/laser_designator,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -512,6 +555,173 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"abD" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abE" = (
+/obj/structure/table/rack,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abF" = (
+/obj/structure/table/rack,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abG" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abH" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abI" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/grenade/underslung,
+/obj/item/gun/launcher/grenade/underslung,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abJ" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abK" = (
+/obj/structure/table/rack,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abL" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/rocket,
+/obj/item/gun/launcher/rocket,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abM" = (
+/obj/structure/table/rack,
+/obj/item/clothing/glasses/omni,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abN" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"abO" = (
+/turf/space,
+/area/centcom)
 "abP" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/dispenser/phoron,
@@ -521,6 +731,30 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/specialty/redspace)
+"abQ" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vehicle_interior/heavyarmor_medic_recovery)
+"abR" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"abS" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/security)
 "abW" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 4
@@ -1012,13 +1246,15 @@
 /area/vehicle_interior/heavyarmor_tank_B)
 "aoV" = (
 /obj/structure/table/rack,
+/obj/item/flamethrower/full,
+/obj/item/flamethrower/full,
+/obj/item/flamethrower/full,
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
 	},
-/obj/item/clothing/glasses/omni,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -2812,9 +3048,9 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/specialty/redspace)
 "biR" = (
-/obj/structure/table/rack/shelf/steel,
-/obj/item/healthanalyzer/advanced,
-/obj/item/sleevemate,
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
+/obj/structure/medical_stand/anesthetic,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "bjy" = (
@@ -2935,10 +3171,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
-"bmj" = (
-/obj/effect/floor_decal/industrial/hatch,
-/turf/simulated/floor/tiled/steel_grid,
-/area/vehicle_interior/heavyarmor_medic_recovery)
 "bmn" = (
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 10
@@ -4855,13 +5087,13 @@
 /area/specialty/redspace)
 "clw" = (
 /obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/mg42,
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
 	},
-/obj/item/gun/projectile/automatic/as24,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -5464,13 +5696,28 @@
 /area/specialty/redspace)
 "cEp" = (
 /obj/structure/table/rack,
-/obj/item/tank/phoron,
-/obj/item/tank/phoron,
-/obj/item/tank/phoron,
-/obj/item/tank/phoron,
-/obj/item/tank/phoron,
-/obj/item/flamethrower/full,
-/obj/item/flamethrower/full,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -7009,14 +7256,9 @@
 /area/specialty/redspace)
 "dtl" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/gun/projectile/automatic/serdy/hectate{
-	pixel_x = -9
-	},
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
@@ -8539,16 +8781,7 @@
 /area/specialty/redspace)
 "ejm" = (
 /obj/structure/table/rack,
-/obj/item/gun/launcher/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
-/obj/item/ammo_casing/rocket,
+/obj/item/laser_designator,
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
@@ -9584,6 +9817,9 @@
 	dir = 1
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "eIC" = (
@@ -10562,13 +10798,26 @@
 /area/specialty/redspace)
 "fiE" = (
 /obj/structure/table/rack,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
 	},
-/obj/item/gun/projectile/serdy_pistols/tp23s,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -19382,11 +19631,16 @@
 /area/specialty/redspace)
 "jvP" = (
 /obj/structure/table/rack,
-/obj/item/gun/magnetic/railgun,
+/obj/item/gun/projectile/automatic/serdy/hectate{
+	pixel_x = -9
+	},
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/red,
+/obj/item/gun/projectile/automatic/serdy/hectate{
+	pixel_x = -9
+	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -29755,9 +30009,7 @@
 /obj/item/storage/box/flashbangs,
 /obj/item/storage/belt/security/tactical,
 /obj/item/clothing/glasses/sunglasses/sechud/tactical,
-/obj/item/material/knife/tacknife/combatknife{
-	default_material = "durasteel"
-	},
+/obj/item/material/knife/tacknife/combatknife/durahull,
 /turf/simulated/floor/wood,
 /area/centcom/specops)
 "pDI" = (
@@ -32041,7 +32293,11 @@
 /area/shuttle/escape)
 "qQP" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -37162,6 +37418,9 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
+/obj/structure/sign/secure_eshui_facility{
+	pixel_x = -32
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "tJx" = (
@@ -37402,13 +37661,6 @@
 	color = "#385e60"
 	},
 /area/centcom/living)
-"tPJ" = (
-/obj/structure/table/rack,
-/obj/item/gun/energy/alien,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
 "tPM" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -37886,20 +38138,16 @@
 /area/specialty/redspace)
 "ues" = (
 /obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 1
 	},
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -38049,18 +38297,12 @@
 /area/specialty/redspace)
 "ujT" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/ammo_magazine/m9mmp90,
-/obj/item/gun/projectile/automatic/p90,
-/obj/item/gun/projectile/automatic/p90,
-/obj/item/gun/projectile/automatic/p90,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -40777,6 +41019,9 @@
 	dir = 9
 	},
 /obj/item/banner/solgov,
+/obj/structure/sign/secure_eshui_facility{
+	pixel_x = -32
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "vOJ" = (
@@ -41948,6 +42193,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
@@ -45477,9 +45725,8 @@
 /area/specialty/redspace)
 "yid" = (
 /obj/structure/table/rack,
-/obj/item/material/knife/tacknife/combatknife{
-	default_material = "durasteel"
-	},
+/obj/item/gun/energy/gun/burst/mg42,
+/obj/item/gun/energy/gun/burst/mg42,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -62660,7 +62907,7 @@ esY
 dHx
 fnb
 cEW
-thi
+fkn
 ajr
 ajr
 fPz
@@ -63620,10 +63867,10 @@ hPE
 dHx
 qQP
 abt
-fkn
+abJ
 cEp
-fkn
-uMX
+abE
+abD
 fPz
 esY
 iQm
@@ -63780,12 +64027,12 @@ hPE
 hPE
 hPE
 dHx
-fkn
+abM
 abv
-fkn
+abK
 ujT
-fkn
-wcQ
+abF
+lco
 fPz
 vjk
 iQm
@@ -64104,12 +64351,12 @@ uho
 uho
 hPE
 dHx
-cyO
+abN
 abw
-fkn
-fkn
-fkn
-tPJ
+abH
+abH
+uMX
+wcQ
 fPz
 esY
 iQm
@@ -64263,15 +64510,15 @@ uho
 uho
 uho
 uho
-uho
+abO
 hPE
 dHx
 yid
-fkn
-fkn
-lco
-fkn
-abr
+abL
+cyO
+cyO
+abG
+thi
 fPz
 vjk
 iQm
@@ -64425,7 +64672,7 @@ uho
 uho
 uho
 uho
-uho
+abO
 hPE
 dHx
 hsz
@@ -64587,16 +64834,16 @@ uho
 uho
 uho
 uho
-uho
+abO
 hPE
 dNu
 ejm
 abx
 dtl
-wQj
+abI
 jvP
-pMY
-iJS
+wQj
+abq
 rWp
 iQm
 aLT
@@ -64749,7 +64996,7 @@ uho
 uho
 uho
 uho
-uho
+abO
 hPE
 hPE
 hPE
@@ -65590,7 +65837,7 @@ bOi
 ccD
 ccD
 ccD
-oVU
+tjK
 rlO
 qiN
 qiN
@@ -65912,7 +66159,7 @@ uip
 uip
 nvB
 ccD
-ffc
+abR
 yaJ
 yaJ
 yaJ
@@ -66555,7 +66802,7 @@ xzD
 xzD
 mfA
 ccD
-dDx
+abS
 dDx
 kaF
 kaF
@@ -105545,7 +105792,7 @@ aab
 awd
 biR
 bJS
-lQj
+abr
 awd
 aab
 aab
@@ -105705,7 +105952,7 @@ aab
 aab
 aab
 awd
-kju
+abQ
 bKa
 lOq
 awd
@@ -105867,9 +106114,9 @@ aab
 aab
 aab
 awd
-bmj
+kju
 bKl
-bmj
+lQj
 awd
 aab
 aab

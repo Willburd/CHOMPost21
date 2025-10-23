@@ -1,7 +1,7 @@
 /obj/vehicle/has_interior/controller/heavyarmor_tank
 	name = "K72-4"
 	desc = "Kylos model 72 varient 4, heavy asset reclaimation vehicle. For when lesser force has failed."
-	move_delay = 4
+	move_delay = 3 //was 4. Slight speed buff to make it more worthwhile to use
 
 	key_type = /obj/item/key/heavyarmor_tank
 
