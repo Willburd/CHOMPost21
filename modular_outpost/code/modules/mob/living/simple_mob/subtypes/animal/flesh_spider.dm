@@ -22,7 +22,7 @@
 
 	pass_flags = PASSTABLE
 	faction = FACTION_BLOB // A faction so they don't fight eachother
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/hit_and_run
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 
 	maxHealth = 50
 	health = 50
