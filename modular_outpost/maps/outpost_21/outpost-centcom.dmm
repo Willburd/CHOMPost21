@@ -385,6 +385,12 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"abr" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/effect/floor_decal/industrial/outline/cut_corners,
+/obj/item/healthanalyzer/guide,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vehicle_interior/heavyarmor_medic_recovery)
 "abs" = (
 /obj/structure/table/rack,
 /obj/item/gun/projectile/automatic/serdy/m41a,
@@ -725,6 +731,30 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/specialty/redspace)
+"abQ" = (
+/obj/machinery/optable,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vehicle_interior/heavyarmor_medic_recovery)
+"abR" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"abS" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/security)
 "abW" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 4
@@ -3018,9 +3048,9 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/specialty/redspace)
 "biR" = (
-/obj/structure/table/rack/shelf/steel,
-/obj/item/healthanalyzer/advanced,
-/obj/item/sleevemate,
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
+/obj/structure/medical_stand/anesthetic,
+/obj/item/reagent_containers/blood/prelabeled/OMinus,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "bjy" = (
@@ -3141,10 +3171,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
-"bmj" = (
-/obj/effect/floor_decal/industrial/hatch,
-/turf/simulated/floor/tiled/steel_grid,
-/area/vehicle_interior/heavyarmor_medic_recovery)
 "bmn" = (
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 10
@@ -9791,6 +9817,9 @@
 	dir = 1
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "eIC" = (
@@ -37389,6 +37418,9 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
+/obj/structure/sign/secure_eshui_facility{
+	pixel_x = -32
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "tJx" = (
@@ -40987,6 +41019,9 @@
 	dir = 9
 	},
 /obj/item/banner/solgov,
+/obj/structure/sign/secure_eshui_facility{
+	pixel_x = -32
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "vOJ" = (
@@ -42158,6 +42193,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
@@ -65799,7 +65837,7 @@ bOi
 ccD
 ccD
 ccD
-oVU
+tjK
 rlO
 qiN
 qiN
@@ -66121,7 +66159,7 @@ uip
 uip
 nvB
 ccD
-ffc
+abR
 yaJ
 yaJ
 yaJ
@@ -66764,7 +66802,7 @@ xzD
 xzD
 mfA
 ccD
-dDx
+abS
 dDx
 kaF
 kaF
@@ -105754,7 +105792,7 @@ aab
 awd
 biR
 bJS
-lQj
+abr
 awd
 aab
 aab
@@ -105914,7 +105952,7 @@ aab
 aab
 aab
 awd
-kju
+abQ
 bKa
 lOq
 awd
@@ -106076,9 +106114,9 @@ aab
 aab
 aab
 awd
-bmj
+kju
 bKl
-bmj
+lQj
 awd
 aab
 aab
