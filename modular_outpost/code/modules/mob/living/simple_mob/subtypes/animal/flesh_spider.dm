@@ -11,7 +11,7 @@
 /mob/living/simple_mob/animal/giant_spider/flesh
 	name = "flesh spider"
 	desc = "A odd fleshy creature in the shape of a spider. Its eyes are pitch black and soulless."
-	tt_desc = "X Atrax robustus gigantus"
+	tt_desc = "Caro Atraxus"
 	catalogue_data = list(/datum/category_item/catalogue/fauna/giant_spider/flesh_spider)
 
 	icon = 'modular_outpost/icons/mob/flesh_spider.dmi'
