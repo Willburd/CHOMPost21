@@ -63496,6 +63496,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
+"crP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/concussion,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "csG" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
@@ -112534,7 +112542,7 @@ bGC
 cbt
 cbt
 cbt
-bGC
+crP
 cbt
 cbt
 cbt

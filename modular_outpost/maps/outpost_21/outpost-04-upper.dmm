@@ -315,6 +315,44 @@
 	},
 /turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/civilian)
+"aaK" = (
+/obj/structure/table/rack/shelf,
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/tool/wirecutters,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
 "aaL" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/prop/war/tgmc_missile_rack/napalm,
@@ -37600,6 +37638,36 @@
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/red{
 	dir = 9
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
+	},
+/obj/item/material/barbedwire{
+	default_material = "durasteel"
 	},
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
@@ -87499,7 +87567,7 @@ vjH
 hkh
 uFM
 avW
-skf
+aaK
 skf
 sZc
 iUe
