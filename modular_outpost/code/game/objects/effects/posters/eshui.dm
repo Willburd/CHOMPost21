@@ -68,6 +68,19 @@
 	listing_name = "Big Borg Is Watching"
 	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
 
+/decl/poster/eshui/outpost_seesay
+	icon_state="seesay"
+	name = "If You See Something Say Something"
+	desc = "If you see something, say something! Proactive measures save lives!"
+	listing_name = "If You See Something Say Something"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
+
+/decl/poster/eshui/outpost_lings
+	icon_state="lings"
+	name = "Beware the Changeling Threat"
+	desc = "Beware the changeling threat! Do not trust stowaways or strangers!"
+	listing_name = "Beware the Changeling Threat"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
 
 
 // NSFW/hidden posters

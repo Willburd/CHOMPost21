@@ -26434,6 +26434,7 @@
 	},
 /obj/item/gun/energy/sickshot,
 /obj/item/clothing/accessory/holster/waist,
+/obj/item/reagent_containers/hypospray/vial,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "mDb" = (
@@ -36693,6 +36694,8 @@
 	RCon_tag = "Substation - Telecomms";
 	is_critical = 1
 	},
+/obj/item/smes_coil/super_io/hyper,
+/obj/item/smes_coil/super_capacity/hyper,
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "rNl" = (

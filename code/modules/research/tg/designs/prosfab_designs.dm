@@ -188,16 +188,6 @@
 	build_path = /obj/item/organ/internal/stomach
 	materials = list(MAT_STEEL = 5625, MAT_GLASS = 1000)
 
-/* Outpost 21 TODO - Prosthetic butt
-/datum/design/item/prosfab/pros/internal/butt
-	name = "Prosthetic Butt"
-	id = "pros_butt"
-	build_path = /obj/item/organ/internal/butt
-	time = 15
-	materials = list(MAT_STEEL = 3000, MAT_GLASS = 1000)
-//	req_tech = list(TECH_ENGINEERING = 2, TECH_MATERIAL = 2)
-*/
-
 //////////////////// Cyborg Parts ////////////////////
 /datum/design_techweb/prosfab/cyborg
 	category = list(
@@ -579,6 +569,7 @@
 
 // Replacement protean bits
 
+/* Outpost 21 edit - Protean removal
 /datum/design_techweb/prosfab/orchestrator
 	name = "Protean Orchestrator"
 	id = "prot_orch"
@@ -592,6 +583,7 @@
 	build_path = /obj/item/organ/internal/nano/refactory
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_GOLD = 2000)
 	// req_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_DATA = 5)
+*/
 
 ///// pAI parts!!!
 

@@ -10,11 +10,9 @@
 	icon_state = "tunnel_hole"
 	icon_state_opened = "tunnel_hole"
 	density = FALSE
-	ghost_query_type = /datum/ghost_query/maints_pred
 	anchored = TRUE
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
-	var/announce_prob = 35
 
 /obj/structure/ghost_pod/ghost_activated/maintpred/create_occupant(var/mob/M)
 	..()
@@ -66,9 +64,6 @@
 			newPred.vore_selected = newPred.vore_organs[1]
 	qdel(src)
 
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce
-	announce_prob = 0
-
 /* Outpost 21 edit - Role disabled here
 /obj/structure/ghost_pod/ghost_activated/morphspawn
 	name = "weird goo"
@@ -77,11 +72,9 @@
 	icon_state = "morph"
 	icon_state_opened = "morph_dead"
 	density = FALSE
-	ghost_query_type = /datum/ghost_query/morph
 	anchored = TRUE
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE
-	var/announce_prob = 50
 
 /obj/structure/ghost_pod/ghost_activated/morphspawn/create_occupant(var/mob/M)
 	..()
@@ -112,13 +105,9 @@
 			newMorph.vore_selected = newMorph.vore_organs[1]
 	qdel(src)
 
-/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce
-	announce_prob = 0
-
 /obj/structure/ghost_pod/ghost_activated/maintpred/redgate //For ghostpods placed in the redgate that aren't spawned via an event
 	name = "creature hole"
 	desc = "Looks like some creature dug is hiding in the redgate..."
-	announce_prob = 0
 	icon_state = "redgate_hole"
 	icon_state_opened = "redgate_hole"
 
@@ -133,7 +122,6 @@
 	icon_state = "tunnel_hole"
 	icon_state_opened = "tunnel_hole"
 	density = FALSE
-	ghost_query_type = /datum/ghost_query/maints_lurker
 	anchored = TRUE
 	invisibility = INVISIBILITY_OBSERVER
 	spawn_active = TRUE

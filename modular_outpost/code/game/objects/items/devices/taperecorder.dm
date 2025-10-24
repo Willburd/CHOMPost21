@@ -1,3 +1,37 @@
+/obj/item/taperecorder/print_transcript()
+	handle_progressive_log()
+	. = ..()
+	if(mytape && mytape.self_deleting)
+		mytape.storedinfo.Cut()
+		mytape.timestamp.Cut()
+
+/obj/item/taperecorder/playback_memory()
+	// Reset text
+	handle_progressive_log()
+	. = ..()
+	if(mytape && mytape.self_deleting)
+		mytape.storedinfo.Cut()
+		mytape.timestamp.Cut()
+
+/obj/item/taperecorder/proc/handle_progressive_log()
+	if(!LAZYLEN(mytape.progressive_tape))
+		return
+	mytape.storedinfo.Cut()
+	mytape.timestamp.Cut()
+	mytape.self_deleting = TRUE
+
+	var/entry = mytape.progressive_tape[1]
+	mytape.storedinfo += entry
+	mytape.progressive_tape -= entry
+
+	if(!mytape.progressive_tape.len)
+		mytape.progressive_tape = null
+
+
+/obj/item/rectape
+	var/self_deleting = FALSE
+	var/list/progressive_tape = null
+
 /obj/item/rectape/anna_lore
 	name = "old tape"
 
@@ -9,10 +43,15 @@
 	if(length(SS) == 1) SS = "0[SS]"
 	storedinfo += "\[[MM]:[SS]\] [log]"
 
+/obj/item/rectape/proc/add_progressive(log)
+	if(!progressive_tape)
+		progressive_tape = list()
+	progressive_tape += log
+
 /obj/item/rectape/anna_lore/Initialize(mapload)
 	. = ..()
 	icon_state = "tape_[pick("white", "blue", "red", "yellow", "purple")]"
-	switch(rand(1,12))
+	switch(rand(1,19))
 		if(1)
 			add_custom_entry(0, 0, "Recording started.")
 			add_custom_entry(0, 54, "Anna Neso says, '...This is Anna Neso--Xenoarchaeologist--though I know not why I'm... making; a point of saying that, when nobody should be hearing this log but me.'")
@@ -420,6 +459,8 @@
 			add_custom_entry( 4, 00, "Anna Neso says, 'Or--'")
 			add_custom_entry( 4, 22, "Anna Neso says, 'No, not surgical. But... an emergency substation. There are cryostorage units, as well. One of the walls is built of durasteel.'")
 			add_custom_entry( 5, 0, "Recording stopped.")
+
+		if(13)
 			add_custom_entry( 5, 1, "Recording started.")
 			add_custom_entry( 5, 18, "Anna Neso says, '...Dormitories adjacent to it all, looks like. In an absolutely decrepit state, though.'")
 			add_custom_entry( 6, 10, "Anna Neso says, '...Power seems... functional, here, oddly enough.'")
@@ -712,3 +753,47 @@
 			add_custom_entry( 59, 13, "Recording started.")
 			add_custom_entry( 59, 29, "Anna Neso says, 'P-pressed for time, but... a valve caught me. Dialogue with Nipper was enlightening, but... not so much as I'd hoped. E-end... log.'")
 			add_custom_entry( 59, 30, "Recording stopped.")
+
+		if(14)
+			add_custom_entry( 0, 8, "Recording started.")
+			add_custom_entry( 0, 20, "Anna Neso says, 'This is Anna Neso, Xenoarchaeologist. The date is 2569-10-18.")
+			add_custom_entry( 0, 37, "Anna Neso says, 'I have discovered a spellbook. I have become capable of blasting ass.")
+			add_custom_entry( 0, 43, "Anna Neso says, 'That is all.")
+			add_custom_entry( 0, 47, "Anna Neso says, 'End log.")
+			add_custom_entry( 0, 49, "Recording stopped.")
+
+		if(15)
+			add_custom_entry( 0, 50, "Recording started.")
+			add_custom_entry( 1, 33, "Anna Neso says, 'Resume log, actually. I've been left with a burning desire for more spells. I'm... going to see if there are any more, secreted around. I'm sure this is a very great idea, and not hubris on my part.")
+			add_custom_entry( 1, 34, "Recording stopped.")
+
+		if(16)
+			add_custom_entry( 0, 7, "Recording started.")
+			add_custom_entry( 0, 32, "Stridefast gives out a cog rattling sigh. 'Least that stone will remain lost in this dimension for now. Just a matter of-'")
+			add_custom_entry( 0, 49, "Stridefast: 'What is that NOISE?!'")
+			add_custom_entry( 1, 19, "Stridefast: 'Hopefully I don't ever enounter whatever that...thing was making that racket.'")
+			add_custom_entry( 1, 28, "Stridefast: 'I really should leave....but...part of me feels ot- oh...it's gone'")
+			add_custom_entry( 2, 12, "Stridefast: 'COGS ABOVE-'")
+			add_custom_entry( 2, 20, "Stridefast: 'THIS PLACE IS REALLY HELL...'")
+			add_custom_entry( 4, 14, "Stridefast gives out a rattling sigh once more, stomping about for a while before the noises become *squishier* sounding as walks off metal onto flesh. 'This place is...very similar to back at the outpost...almost a copy though theres definately...different parts...I wonder if accesses are the same...going to see if I can find engineering.'")
+			add_custom_entry( 4, 19, "Stridefast: 'Though my inhibitors keeping my emotions in check when I don't want them....I can feel the heat from it working over time...'")
+			add_custom_entry( 5, 26, "Stridefast: 'I've found engineering....and seems even here...the creatures that inhabit the place fight amongst themselves...'")
+			add_custom_entry( 5, 32, "Stridefast: 'Access does seem to carry between the dimensions too...'")
+			add_custom_entry( 5, 41, "Stridefast: 'Cogs above the hell was that thing?!'")
+			add_custom_entry( 6, 4, "Stridefast: 'I need to get out of here- my inhibitor is goign to melt down at this rate...'")
+			add_custom_entry( 7, 44, "Stridefast: 'What the-'")
+			add_custom_entry( 7, 56, "Stridefast: 'Hey can someone let me out? I'm in....the recovery room?'")
+			add_custom_entry( 7, 59, "Recording stopped.")
+
+		if(17)
+			add_progressive("We know what you did.")
+
+		if(18)
+			add_progressive("You failed them all.")
+			if(prob(20))
+				add_progressive("You let them die.")
+
+		if(19)
+			add_progressive("You let them die.")
+			if(prob(20))
+				add_progressive("You failed them all.")

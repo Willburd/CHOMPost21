@@ -243,10 +243,12 @@
 	},
 /area/wizard_station)
 "aJ" = (
-/obj/structure/grille,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
+/obj/structure/table/wooden_reinforced,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "aK" = (
 /obj/machinery/light{
 	dir = 8
@@ -353,9 +355,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "aV" = (
-/obj/structure/lattice,
-/turf/space,
-/area/space)
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "aW" = (
 /obj/structure/bed/chair/sofa/bench/right{
 	dir = 1;
@@ -447,12 +454,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
 "be" = (
-/obj/fiftyspawner/steel,
-/obj/structure/table/hardwoodtable,
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/machinery/atmospherics/unary/engine/biggest{
+	dir = 1
 	},
-/area/syndicate_mothership)
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/mercenary)
 "bf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
@@ -525,16 +531,8 @@
 	},
 /area/wizard_station)
 "bn" = (
-/obj/item/integrated_circuit_printer/all_upgrades,
-/obj/item/integrated_electronics/debugger{
-	pixel_x = -5
-	},
-/obj/structure/table/hardwoodtable,
-/obj/item/multitool,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/mercenary)
 "bo" = (
 /obj/structure/closet/walllocker/medical/south,
 /obj/structure/handrail{
@@ -576,9 +574,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
-"bu" = (
-/turf/simulated/shuttle/wall/dark,
-/area/space)
 "bv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -732,13 +727,6 @@
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/beach/sand,
 /area/beach)
-"bM" = (
-/obj/machinery/atmospherics/pipe/tank/air{
-	dir = 4;
-	start_pressure = 740.5
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "bN" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/techfloor,
@@ -1086,10 +1074,12 @@
 	},
 /area/syndicate_mothership)
 "cH" = (
-/obj/structure/lattice,
-/obj/structure/grille,
-/turf/space,
-/area/space)
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
+	},
+/obj/machinery/light/small/emergency,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "cI" = (
 /obj/machinery/light{
 	dir = 4
@@ -1200,10 +1190,12 @@
 /turf/simulated/shuttle/plating,
 /area/planet/clown)
 "cS" = (
-/obj/structure/lattice,
-/obj/structure/grille/broken,
-/turf/space,
-/area/space)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/power/port_gen/large_altevian,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "cT" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/blast/shutters{
@@ -1302,13 +1294,6 @@
 /obj/item/bikehorn/rubberducky,
 /turf/space,
 /area/space)
-"dd" = (
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 4
-	},
-/obj/machinery/meter,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "de" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger{
@@ -1316,21 +1301,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"df" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "merc_shuttle";
-	name = "interior access button";
-	pixel_x = 25;
-	pixel_y = 25;
-	req_access = list(150)
-	},
-/obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dg" = (
 /obj/structure/table/alien,
 /obj/item/juke_remote,
@@ -1339,38 +1309,10 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
-"dh" = (
-/obj/machinery/suit_cycler/syndicate{
-	locked = 0
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"di" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/shuttle/plating,
-/area/space)
 "dj" = (
-/obj/structure/table/standard,
-/obj/item/flashlight/lamp{
-	pixel_x = 4;
-	pixel_y = 8
-	},
-/obj/item/clothing/glasses/sunglasses/prescription,
-/obj/item/clothing/glasses/sunglasses/prescription,
-/turf/unsimulated/floor{
-	icon_state = "lino"
-	},
-/area/syndicate_mothership)
+/obj/machinery/light/small,
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/mercenary)
 "dk" = (
 /obj/machinery/autolathe{
 	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
@@ -1379,16 +1321,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"dl" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_inner";
-	name = "Ship External Access";
-	req_access = list(0)
-	},
-/obj/machinery/atmospherics/pipe/simple/visible,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dm" = (
 /obj/structure/table/standard,
 /obj/item/radio/headset/alt/syndicate,
@@ -1423,12 +1355,6 @@
 	},
 /turf/unsimulated/beach/sand,
 /area/beach)
-"dp" = (
-/obj/structure/flora/pottedplant{
-	icon_state = "plant-10"
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dq" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark{
@@ -1440,18 +1366,6 @@
 /mob/living/simple_mob/animal/passive/crab/Coffee,
 /turf/unsimulated/beach/sand,
 /area/beach)
-"ds" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"dt" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "du" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark{
@@ -1459,70 +1373,15 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
-"dv" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"dw" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/space)
 "dx" = (
 /turf/unsimulated/wall/fakeglass,
 /area/syndicate_mothership)
-"dy" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "smindicate";
-	name = "ship lockdown control";
-	pixel_x = -25
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
-"dz" = (
-/obj/machinery/atmospherics/pipe/manifold/visible{
-	dir = 1
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "merc_shuttle_sensor";
-	pixel_x = 8;
-	pixel_y = 25
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dA" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/retro,
 /area/planet/clown)
-"dB" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 8;
-	frequency = 1331;
-	id_tag = "merc_shuttle_pump"
-	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "merc_shuttle";
-	pixel_x = -8;
-	pixel_y = 25;
-	req_access = list(150)
-	},
-/obj/effect/shuttle_landmark/premade/mercenary/base,
-/turf/simulated/shuttle/floor/darkred,
-/area/space)
 "dC" = (
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/mercenary)
@@ -1533,9 +1392,6 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
-"dE" = (
-/turf/simulated/shuttle/plating/airless,
-/area/space)
 "dF" = (
 /obj/structure/prop/war/minirocket_pod,
 /turf/simulated/shuttle/plating/airless,
@@ -1553,12 +1409,15 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/mercenary)
 "dI" = (
-/obj/structure/prop/war/minirocket_pod,
-/turf/simulated/shuttle/plating/airless,
-/area/space)
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "dJ" = (
 /obj/machinery/door/airlock/highsecurity{
 	req_one_access = list(150)
@@ -1633,10 +1492,9 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/mercenary)
 "dU" = (
-/obj/item/bedsheet/hos,
-/obj/structure/bed/padded,
+/mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
 /turf/unsimulated/floor{
-	icon_state = "lino"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "dV" = (
@@ -1673,13 +1531,9 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "ea" = (
-/obj/effect/landmark{
-	name = "Syndicate-Spawn"
-	},
-/turf/unsimulated/floor{
-	icon_state = "lino"
-	},
-/area/syndicate_mothership)
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "eb" = (
 /obj/machinery/autolathe/armory,
 /turf/simulated/shuttle/floor/darkred,
@@ -1754,6 +1608,9 @@
 /area/shuttle/mercenary)
 "eo" = (
 /obj/structure/prop/machine/tgmc_console3/starts_on,
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "ep" = (
@@ -1761,7 +1618,10 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "eq" = (
-/obj/structure/table/steel_reinforced,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "er" = (
@@ -1777,13 +1637,9 @@
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/mercenary)
 "et" = (
-/obj/structure/urinal{
-	pixel_y = 32
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership)
+/obj/machinery/atmospherics/unary/engine/bigger,
+/turf/simulated/shuttle/plating/airless,
+/area/shuttle/mercenary)
 "eu" = (
 /obj/machinery/shipsensors{
 	dir = 1
@@ -1929,12 +1785,11 @@
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
 "eQ" = (
-/obj/structure/frame/computer,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+/obj/machinery/suit_cycler/syndicate{
+	locked = 0
 	},
-/area/syndicate_mothership)
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "eR" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger{
@@ -1944,10 +1799,6 @@
 	pixel_x = 6
 	},
 /turf/simulated/shuttle/floor/darkred,
-/area/shuttle/mercenary)
-"eS" = (
-/obj/structure/shuttle/engine/heater,
-/turf/simulated/shuttle/plating/airless,
 /area/shuttle/mercenary)
 "eT" = (
 /obj/machinery/recharge_station,
@@ -2035,12 +1886,6 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "fe" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_outer";
-	name = "Ship External Access";
-	req_access = list(150)
-	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
@@ -2049,22 +1894,27 @@
 	opacity = 0
 	},
 /obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/external{
+	frequency = 1331;
+	id_tag = "merc_shuttle_inner";
+	name = "Ship External Access";
+	req_access = list(0)
+	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/shuttle/floor/black/turfpack,
 /area/shuttle/mercenary)
 "ff" = (
-/obj/structure/window/reinforced{
-	dir = 4
+/obj/machinery/atmospherics/pipe/tank/air{
+	start_pressure = 740.5
 	},
-/turf/space,
-/area/space)
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fg" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/space)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fh" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2084,53 +1934,141 @@
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
 "fk" = (
-/obj/structure/undies_wardrobe,
-/turf/unsimulated/floor{
-	icon_state = "lino"
-	},
-/area/syndicate_mothership)
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fl" = (
-/obj/structure/table/standard,
-/obj/item/pda/syndicate,
-/turf/unsimulated/floor{
-	icon_state = "lino"
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list(150)
 	},
-/area/syndicate_mothership)
-"fm" = (
-/obj/structure/window/reinforced{
+/obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/turf/simulated/shuttle/floor/black/airless,
+/area/shuttle/mercenary)
+"fm" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 10
 	},
-/area/space)
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fn" = (
-/obj/structure/window/reinforced{
+/obj/structure/bed/chair/bay/comfy/black{
 	dir = 8
 	},
-/turf/space,
-/area/space)
-"fo" = (
-/obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_base_hatch";
-	req_access = list(150)
+/obj/machinery/light/small/emergency{
+	dir = 4
 	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fo" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fp" = (
+/obj/structure/lattice,
+/turf/simulated/mineral,
+/area/syndicate_mothership)
+"fq" = (
+/obj/structure/table/standard,
+/obj/item/clothing/glasses/sunglasses/prescription,
+/obj/item/flashlight/lamp{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/clothing/glasses/sunglasses/prescription,
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/syndicate_mothership)
+"fr" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/hos,
+/obj/effect/landmark{
+	name = "Syndicate-Spawn"
+	},
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/syndicate_mothership)
+"fs" = (
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/structure/table/alien/blue,
+/obj/item/holosign_creator/combifan,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/shuttle/skipjack)
+"ft" = (
+/obj/machinery/door/airlock/glass,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/space)
-"fA" = (
-/obj/structure/window/reinforced{
+/area/syndicate_mothership)
+"fu" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2"
+	},
+/area/syndicate_mothership)
+"fv" = (
+/obj/effect/landmark{
+	name = "Syndicate-Uplink"
+	},
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/syndicate_mothership)
+"fw" = (
+/obj/structure/table/standard,
+/turf/unsimulated/floor{
+	icon_state = "lino"
+	},
+/area/syndicate_mothership)
+"fx" = (
+/obj/structure/bed/chair/bay/comfy/black{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fy" = (
+/obj/structure/bed/chair/bay/comfy/black,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fz" = (
+/obj/machinery/vending/fitness{
+	dir = 8;
+	pixel_x = 6
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
+"fA" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 4
+	},
+/obj/machinery/light/small/emergency{
 	dir = 8
 	},
-/obj/structure/grille,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fB" = (
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/structure/closet,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "fC" = (
@@ -2144,15 +2082,56 @@
 /obj/effect/landmark/start/clown,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
-"fG" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/grille,
+"fE" = (
+/obj/structure/closet,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fF" = (
+/obj/structure/table/rack,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/obj/item/universal_translator/ear,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fG" = (
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fH" = (
+/obj/structure/table/rack,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/obj/item/gps/syndie,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "fI" = (
@@ -2163,9 +2142,31 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"fJ" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/dbandolier,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fK" = (
 /turf/space,
 /area/centcom/command)
+"fL" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fM" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "fN" = (
 /obj/item/digestion_remains/skull/vox,
 /obj/structure/table/alien,
@@ -2175,29 +2176,13 @@
 	},
 /area/syndicate_mothership)
 "fO" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/syndicate_mothership)
+/obj/machinery/power/solar/fake,
+/turf/simulated/shuttle/plating/airless,
+/area/shuttle/mercenary)
 "fP" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Barracks";
-	req_access = list(150);
-	req_one_access = list()
-	},
-/turf/unsimulated/floor{
-	icon_state = "lino"
-	},
-/area/syndicate_mothership)
+/obj/machinery/light/small,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "fQ" = (
 /obj/structure/table/alien,
 /obj/item/champagne,
@@ -2206,19 +2191,119 @@
 "fR" = (
 /turf/simulated/shuttle/wall/dark,
 /area/shuttle/mercenary)
-"gb" = (
-/obj/structure/window/reinforced{
-	dir = 4
+"fS" = (
+/obj/machinery/button/flasher{
+	id = "syndieflash";
+	name = "Flasher";
+	pixel_x = 27
 	},
-/obj/structure/window/reinforced{
+/obj/structure/bed/chair/bay/comfy/black{
 	dir = 8
 	},
-/obj/structure/grille,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"fT" = (
+/obj/machinery/door/airlock/glass{
+	name = "Locker Room"
+	},
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"fU" = (
+/obj/structure/table/rack,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/obj/item/storage/pouch,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fV" = (
+/obj/structure/table/rack,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fW" = (
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/structure/table/rack,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fX" = (
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/structure/table/rack,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fY" = (
+/obj/item/storage/pouch/large,
+/obj/item/storage/pouch/large,
+/obj/item/storage/pouch/large,
+/obj/item/storage/pouch/large,
+/obj/item/storage/pouch/large,
+/obj/item/storage/pouch/large,
+/obj/structure/table/rack,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fZ" = (
+/obj/structure/table/rack,
+/obj/item/clothing/under/syndicate/combat,
+/obj/item/clothing/under/syndicate/combat,
+/obj/item/clothing/under/syndicate/combat,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ga" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"gb" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list(150)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/black/airless,
+/area/shuttle/mercenary)
 "gc" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -2234,6 +2319,11 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"gd" = (
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "ge" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
@@ -2242,6 +2332,21 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"gf" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/storage/photo_album,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
+"gg" = (
+/obj/item/flag/xcom,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "gh" = (
 /obj/structure/table/alien,
 /obj/machinery/librarywikicomp/personal{
@@ -2274,6 +2379,19 @@
 	name = "plating"
 	},
 /area/syndicate_mothership)
+"gl" = (
+/obj/structure/table/rack,
+/obj/item/pinpointer/nukeop,
+/obj/item/pinpointer/nukeop,
+/obj/item/pinpointer/nukeop,
+/obj/item/pinpointer/nukeop,
+/obj/item/pinpointer/nukeop,
+/obj/item/pinpointer/nukeop,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "gm" = (
 /obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = 32
@@ -2293,13 +2411,25 @@
 	},
 /area/syndicate_mothership)
 "go" = (
-/obj/machinery/vending/snack{
-	name = "hacked Getmore Chocolate Corp";
-	prices = list()
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
 	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"gp" = (
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/structure/table/rack,
 /turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "gq" = (
@@ -2309,10 +2439,14 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/planet/clown)
 "gr" = (
-/obj/structure/table/standard,
-/obj/machinery/chemical_dispenser/bar_soft/full,
+/obj/structure/table/rack,
+/obj/item/tank/emergency/carbon_dioxide/double,
+/obj/item/tank/emergency/carbon_dioxide/double,
+/obj/item/tank/emergency/carbon_dioxide/double,
+/obj/item/tank/emergency/carbon_dioxide/double,
+/obj/item/tank/emergency/carbon_dioxide/double,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "gs" = (
@@ -2326,23 +2460,35 @@
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
 "gu" = (
-/obj/structure/table/standard,
-/obj/item/storage/box/glasses/square{
-	pixel_x = 1;
-	pixel_y = 4
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"gv" = (
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/structure/table/rack,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "gw" = (
-/obj/structure/sink/kitchen{
-	pixel_y = 28
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
 	},
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership)
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "gx" = (
 /obj/structure/medical_stand,
 /turf/unsimulated/floor{
@@ -2350,24 +2496,75 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"gz" = (
-/obj/structure/closet/secure_closet/freezer/fridge,
+"gy" = (
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/structure/table/rack,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gz" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
 "gA" = (
-/obj/effect/landmark{
-	name = "Nuclear-Code"
+/obj/structure/table/rack,
+/obj/item/material/butterfly/switchblade/dura,
+/obj/item/material/butterfly/switchblade/dura,
+/obj/item/material/butterfly/switchblade/dura,
+/obj/item/material/butterfly/switchblade/dura,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
+/area/syndicate_mothership)
+"gB" = (
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/structure/table/rack,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "gC" = (
-/obj/effect/landmark{
-	name = "Nuclear-Bomb"
+/obj/structure/table/rack,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
+/obj/item/material/knife/machete/dura,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
+/area/syndicate_mothership)
+"gD" = (
+/obj/structure/table/rack,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/mask/gas/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2382,19 +2579,347 @@
 /obj/item/melee/energy/sword/red,
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
+"gF" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gG" = (
+/obj/structure/table/rack,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/obj/item/flashlight/maglight,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gH" = (
+/obj/structure/bed/chair/bay/comfy/captain{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"gI" = (
+/obj/machinery/door/airlock/centcom{
+	req_access = list(150);
+	req_one_access = list();
+	name = "Secure Airlock"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gJ" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/gun/projectile/shotgun/pump/shorty,
+/obj/item/gun/projectile/shotgun/pump/shorty,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gK" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/ammo_magazine/ammo_box/b12g/flechette,
+/obj/item/gun/projectile/shotgun/pump/USDF,
+/obj/item/gun/projectile/shotgun/pump/USDF,
+/obj/item/gun/projectile/shotgun/pump/USDF,
+/obj/item/gun/projectile/shotgun/pump/USDF,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "gL" = (
 /obj/structure/frame/computer,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"gM" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/ak74,
+/obj/item/gun/projectile/automatic/serdy/ak74,
+/obj/item/gun/projectile/automatic/serdy/ak74,
+/obj/item/gun/projectile/automatic/serdy/ak74,
+/obj/item/gun/projectile/automatic/serdy/ak74,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/gun/projectile/automatic/serdy/ak74,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gN" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/gun/projectile/revolver/mateba,
+/obj/item/gun/projectile/revolver/mateba,
+/obj/item/gun/projectile/revolver/mateba,
+/obj/item/gun/projectile/revolver/mateba,
+/obj/item/gun/projectile/revolver/mateba,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gO" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/ammo_magazine/m45/ap,
+/obj/item/gun/projectile/silenced,
+/obj/item/gun/projectile/silenced,
+/obj/item/gun/projectile/silenced,
+/obj/item/gun/projectile/silenced,
+/obj/item/gun/projectile/silenced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gP" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/lasershotgun,
+/obj/item/gun/energy/lasershotgun,
+/obj/item/gun/energy/lasershotgun,
+/obj/item/gun/energy/lasershotgun,
+/obj/item/gun/energy/lasershotgun,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gQ" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/tommylaser,
+/obj/item/gun/energy/tommylaser,
+/obj/item/gun/energy/tommylaser,
+/obj/item/gun/energy/tommylaser,
+/obj/item/gun/energy/tommylaser,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gR" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/ionrifle/pistol,
+/obj/item/gun/energy/ionrifle/pistol,
+/obj/item/gun/energy/ionrifle/pistol,
+/obj/item/gun/energy/ionrifle/pistol,
+/obj/item/gun/energy/ionrifle/pistol,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gS" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/gun/burst,
+/obj/item/gun/energy/gun/burst,
+/obj/item/gun/energy/gun/burst,
+/obj/item/gun/energy/gun/burst,
+/obj/item/gun/energy/gun/burst,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "gT" = (
 /obj/machinery/computer/communications,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"gX" = (
-/obj/structure/bed/chair/comfy/black,
+"gU" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/xray,
+/obj/item/gun/energy/xray,
+/obj/item/gun/energy/xray,
+/obj/item/gun/energy/xray,
+/obj/item/gun/energy/xray,
 /turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gV" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gW" = (
+/obj/machinery/autolathe{
+	name = "Unlocked Autolathe";
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gX" = (
+/obj/structure/table/rack,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gY" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"gZ" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Ballistics Armory";
+	req_access = list(150);
+	req_one_access = list()
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "ha" = (
@@ -2402,13 +2927,14 @@
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
 "hb" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Kitchen";
-	req_access = list(150);
-	req_one_access = list()
-	},
+/obj/structure/table/rack,
+/obj/item/tank/emergency/methane,
+/obj/item/tank/emergency/methane,
+/obj/item/tank/emergency/methane,
+/obj/item/tank/emergency/methane,
+/obj/item/tank/emergency/methane,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "hc" = (
@@ -2417,13 +2943,51 @@
 	},
 /area/syndicate_mothership)
 "hd" = (
-/obj/structure/table/reinforced,
-/obj/machinery/microwave{
-	pixel_x = -1;
-	pixel_y = 8
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
+"he" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Energy Armory";
+	req_access = list(150);
+	req_one_access = list()
 	},
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hf" = (
+/obj/structure/table/rack,
+/obj/item/cell/device/weapon/recharge/alien/omni{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien/omni{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien/omni{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien/omni{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien/omni,
+/obj/item/cell/device/weapon/recharge/alien/omni,
+/obj/item/cell/device/weapon/recharge/alien/omni{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon/recharge/alien/omni{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "hg" = (
@@ -2433,9 +2997,103 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"hh" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 32
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 23
+	},
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"hi" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/ammo_box/b357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hj" = (
+/obj/item/broken_gun/laserrifle,
+/turf/simulated/floor/indoorrocks,
+/area/specialty/hell)
+"hk" = (
+/obj/structure/bed/chair/bay/comfy/black{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
 "hl" = (
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"hm" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/ammo_magazine/m545saw/ap,
+/obj/item/gun/projectile/automatic/l6_saw,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hn" = (
+/obj/structure/table/rack,
+/obj/item/melee/energy/sword/color,
+/obj/item/melee/energy/sword/color,
+/obj/item/melee/energy/sword/color,
+/obj/item/melee/energy/sword/color,
+/obj/item/melee/energy/sword/color,
+/obj/item/melee/energy/sword/color,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ho" = (
+/obj/structure/table/rack,
+/obj/item/melee/energy/sword/ionic_rapier/lance,
+/obj/item/melee/energy/sword/ionic_rapier/lance,
+/obj/item/melee/energy/sword/ionic_rapier/lance,
+/obj/item/melee/energy/sword/ionic_rapier/lance,
+/obj/item/melee/energy/sword/ionic_rapier/lance,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hp" = (
+/obj/structure/table/rack,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "hq" = (
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor{
@@ -2443,6 +3101,54 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"hr" = (
+/obj/structure/table/rack,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/flamethrower/full,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hs" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ht" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/rocket,
+/obj/item/gun/launcher/rocket,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hu" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/obj/item/storage/box/smokes,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "hv" = (
 /obj/item/toy/plushie/vox{
 	name = "Iggy"
@@ -2457,6 +3163,20 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"hw" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/teargas,
+/obj/item/storage/box/teargas,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "hx" = (
 /obj/machinery/photocopier,
 /turf/unsimulated/floor{
@@ -2464,52 +3184,149 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
-"hB" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 4
+"hy" = (
+/obj/structure/table/rack,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/obj/item/grenade/chem_grenade/incendiary,
+/turf/simulated/floor/tiled/dark,
+/area/syndicate_mothership)
+"hz" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Tool Storage";
+	req_access = list(150);
+	req_one_access = list()
 	},
 /turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"hC" = (
-/obj/item/folder{
-	pixel_y = 2
-	},
-/obj/structure/table/glass,
-/obj/item/radio/intercom{
-	desc = "Talk through this. Evilly";
-	frequency = 1213;
-	name = "Syndicate Intercom";
-	pixel_y = -32;
-	subspace_transmission = 1;
-	syndie = 1
-	},
+"hA" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/utility/alien/full,
+/obj/item/storage/belt/utility/alien/full,
+/obj/item/storage/belt/utility/alien/full,
+/obj/item/storage/belt/utility/alien/full,
 /turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hB" = (
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
+"hC" = (
+/obj/machinery/door/airlock/hatch{
+	req_one_access = list(150)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/black/turfpack,
+/area/shuttle/mercenary)
+"hD" = (
+/obj/structure/table/rack,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hE" = (
+/obj/structure/table/rack,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "hF" = (
-/obj/item/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/machinery/light/small/emergency{
+	dir = 4
 	},
-/obj/item/pen{
-	pixel_y = 4
-	},
-/obj/structure/table/glass,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
-	},
-/area/syndicate_mothership)
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "hG" = (
 /obj/item/card/data/clown,
 /obj/structure/table/alien,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"hH" = (
+/obj/structure/table/rack,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hI" = (
+/obj/structure/table/rack,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/obj/item/grenade/chem_grenade/frost,
+/turf/simulated/floor/tiled/dark,
+/area/syndicate_mothership)
+"hJ" = (
+/obj/structure/table/rack,
+/obj/item/storage/pouch/eng_tool,
+/obj/item/storage/pouch/eng_tool,
+/obj/item/storage/pouch/eng_tool,
+/obj/item/storage/pouch/eng_tool,
+/obj/item/storage/pouch/eng_tool,
+/obj/item/storage/pouch/eng_tool,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "hK" = (
 /obj/machinery/door/airlock/alien,
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -2526,40 +3343,79 @@
 	},
 /area/wizard_station)
 "hM" = (
-/obj/structure/bed/chair/comfy/black{
+/obj/machinery/light/small/emergency{
 	dir = 8
 	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
-	},
-/area/syndicate_mothership)
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "hN" = (
-/obj/structure/table/reinforced,
-/obj/item/storage/box/donkpockets{
-	pixel_x = 3;
-	pixel_y = 3
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1331;
+	master_tag = "merc_shuttle";
+	name = "interior access button";
+	pixel_x = -25;
+	pixel_y = 25;
+	req_access = list(150)
 	},
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/syndicate_mothership)
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "hO" = (
-/obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black/green,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black/green,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1331;
+	master_tag = "merc_shuttle";
+	name = "interior access button";
+	pixel_x = 25;
+	pixel_y = 25;
+	req_access = list(150)
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"hP" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/awp,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"hP" = (
+"hQ" = (
+/obj/effect/landmark{
+	name = "Nuclear-Code"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
+"hR" = (
 /obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black/blue,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black/blue,
+/obj/item/storage/box/anti_photons,
+/obj/item/storage/box/anti_photons,
+/obj/item/storage/box/anti_photons,
+/obj/item/storage/box/anti_photons,
+/obj/item/storage/box/anti_photons,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hS" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hT" = (
+/obj/structure/table/rack,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/binoculars,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2572,6 +3428,29 @@
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/planet/clown)
+"hV" = (
+/obj/structure/table/rack,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hW" = (
+/obj/structure/table/rack,
+/obj/item/shield_projector/line,
+/obj/item/shield_projector/line,
+/obj/item/shield_projector/line,
+/obj/item/shield_projector/line,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "hX" = (
 /obj/structure/sign/scenery/map/right{
 	pixel_y = 32
@@ -2585,6 +3464,40 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire,
 /turf/simulated/floor/lava,
 /area/specialty/hell)
+"hZ" = (
+/obj/effect/landmark{
+	name = "Nuclear-Bomb"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/space)
+"ia" = (
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake,
+/obj/structure/closet,
+/turf/simulated/shuttle/floor/white,
+/area/shuttle/mercenary)
 "ib" = (
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
@@ -2594,41 +3507,155 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"ic" = (
+/obj/structure/table/rack,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "id" = (
-/obj/structure/bed/chair/comfy/black{
-	dir = 1
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"ie" = (
+/obj/structure/table/rack,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/obj/item/flame/lighter/zippo,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"if" = (
+/obj/structure/table/rack,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ig" = (
+/obj/structure/table/rack,
+/obj/item/tank/emergency/phoron/double,
+/obj/item/tank/emergency/phoron/double,
+/obj/item/tank/emergency/phoron/double,
+/obj/item/tank/emergency/phoron/double,
+/obj/item/tank/emergency/phoron/double,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ih" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Overflow Storage";
+	req_access = list(150);
+	req_one_access = list()
 	},
 /turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "ii" = (
 /obj/machinery/optable,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"ik" = (
-/obj/machinery/vending/cola{
-	name = "hacked Robust Softdrinks";
-	prices = list()
-	},
+"ij" = (
+/obj/structure/table/rack,
+/obj/item/rig/military,
+/obj/item/rig/military,
 /turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"il" = (
-/obj/structure/closet/secure_closet/freezer/kitchen{
-	req_access = list(150)
+"ik" = (
+/obj/machinery/button/remote/blast_door{
+	id = "smindicate";
+	name = "ship lockdown control";
+	pixel_y = -30;
+	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"il" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1331;
+	id_tag = "merc_shuttle_pump"
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"im" = (
+/obj/structure/table/rack,
+/obj/item/rig/merc/empty,
+/obj/item/rig/merc/empty,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"in" = (
+/obj/structure/table/rack,
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/tank/emergency/nitrogen/double,
+/obj/item/tank/emergency/nitrogen/double,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "io" = (
-/obj/structure/reagent_dispensers/beerkeg/fakenuke,
+/obj/structure/table/rack,
+/obj/item/reagent_containers/spray/chemsprayer/hosed,
+/obj/item/reagent_containers/spray/chemsprayer/hosed,
+/obj/item/reagent_containers/spray/chemsprayer/hosed,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ip" = (
+/obj/item/tank/carbon_dioxide{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/tank/carbon_dioxide{
+	pixel_x = 5;
+	pixel_y = -5
+	},
+/obj/item/tank/nitrogen,
+/obj/item/tank/nitrogen,
+/obj/item/tank/methane{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/item/tank/methane{
+	pixel_x = -4;
+	pixel_y = 4
+	},
+/obj/structure/table/rack/shelf,
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_y = 30
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "iq" = (
@@ -2636,6 +3663,26 @@
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
+	},
+/area/syndicate_mothership)
+"ir" = (
+/obj/structure/table/rack,
+/obj/structure/reagent_dispensers/peppertank{
+	pixel_y = 30
+	},
+/obj/item/tank/vox,
+/obj/item/tank/vox,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"is" = (
+/obj/structure/table/rack,
+/obj/structure/reagent_dispensers/acid{
+	pixel_y = 30
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "it" = (
@@ -2650,65 +3697,177 @@
 	},
 /area/wizard_station)
 "iu" = (
-/obj/structure/table/reinforced,
-/obj/item/tray{
-	pixel_y = 5
-	},
+/obj/structure/table/rack,
+/obj/item/reagent_containers/spray/chemsprayer,
+/obj/item/reagent_containers/spray/chemsprayer,
+/obj/item/reagent_containers/spray/chemsprayer,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iv" = (
+/obj/structure/table/rack,
+/obj/item/tool/crowbar/brass,
+/obj/item/tool/crowbar/brass,
+/obj/item/tool/crowbar/brass,
+/obj/item/tool/crowbar/brass,
+/obj/item/tool/crowbar/brass,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "iw" = (
-/obj/structure/table/reinforced,
-/obj/item/reagent_containers/food/drinks/bottle/vodka{
-	pixel_x = 3;
-	pixel_y = 12
-	},
-/obj/item/reagent_containers/food/drinks/bottle/wine{
-	pixel_x = -1;
-	pixel_y = 8
-	},
+/obj/structure/table/rack,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
 /turf/unsimulated/floor{
-	icon_state = "white"
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ix" = (
+/obj/fiftyspawner/steel,
+/obj/structure/table/rack,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iy" = (
+/obj/item/integrated_circuit_printer/all_upgrades,
+/obj/item/integrated_electronics/debugger{
+	pixel_x = -5
+	},
+/obj/item/multitool,
+/obj/structure/table/rack,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iz" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/vending/security_armor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/syndicate_mothership)
 "iA" = (
-/obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black/med,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black/med,
-/turf/unsimulated/floor{
-	icon_state = "dark"
+/obj/effect/shuttle_landmark/premade/mercenary/base,
+/obj/machinery/embedded_controller/radio/airlock/docking_port{
+	frequency = 1331;
+	id_tag = "merc_shuttle";
+	pixel_x = -8;
+	pixel_y = 25;
+	req_access = list(150)
 	},
-/area/syndicate_mothership)
+/obj/machinery/airlock_sensor{
+	frequency = 1331;
+	id_tag = "merc_shuttle_sensor";
+	pixel_x = 8;
+	pixel_y = 25
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1331;
+	id_tag = "merc_shuttle_pump"
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
 "iB" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black/orange,
+/obj/item/clothing/suit/space/void/merc,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/clothing/head/helmet/space/void/merc,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
 /obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black/orange,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"iL" = (
-/obj/machinery/vending/cigarette{
-	name = "hacked cigarette machine";
-	prices = list();
-	products = list(/obj/item/storage/fancy/cigarettes = 10, /obj/item/storage/box/matches = 10, /obj/item/flame/lighter/zippo = 4, /obj/item/clothing/mask/smokable/cigarette/cigar/havana = 2)
-	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+"iC" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack,
+/obj/fiftyspawner/titanium,
+/obj/fiftyspawner/titanium,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/syndicate_mothership)
-"iM" = (
+"iD" = (
 /obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black/engie,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black/engie,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/leather,
+/obj/fiftyspawner/leather,
+/obj/item/tool/wirecutters/brass,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/syndicate_mothership)
+"iE" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/durasteel,
+/obj/fiftyspawner/durasteel,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/syndicate_mothership)
+"iF" = (
+/mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iG" = (
+/mob/living/simple_mob/vore/wolf/direwolf/syndicate,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iH" = (
+/mob/living/simple_mob/vore/wolf/direwolf/syndicate,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iI" = (
+/obj/machinery/recharge_station,
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership)
+"iJ" = (
+/obj/machinery/door/airlock/silver{
+	name = "Toilet"
+	},
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership)
+"iK" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/structure/handrail,
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
+	},
+/area/syndicate_mothership)
+"iN" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
+/obj/structure/window/reinforced,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2721,6 +3880,16 @@
 /obj/item/reagent_containers/glass/beaker/large,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
+"iP" = (
+/obj/structure/window/reinforced,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "iQ" = (
 /obj/machinery/vending/cigarette,
 /obj/machinery/light{
@@ -2728,14 +3897,23 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"iR" = (
-/obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black/red,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black/red,
+"iS" = (
+/obj/structure/window/reinforced,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely"
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iT" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Raid Station";
+	req_access = list(150);
+	req_one_access = list()
+	},
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
 "iU" = (
@@ -2744,6 +3922,46 @@
 "iV" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/shuttle/mercenary)
+"iW" = (
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/structure/table/rack,
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"iX" = (
+/obj/machinery/suit_cycler/syndicate{
+	locked = 0
+	},
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/darkred,
+/area/shuttle/mercenary)
+"iY" = (
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iZ" = (
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ja" = (
 /obj/item/aicard,
 /obj/structure/table/alien,
@@ -2760,40 +3978,43 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
-"jd" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 8
+"jc" = (
+/obj/structure/mirror/raider{
+	pixel_y = 30
 	},
-/obj/structure/grille,
+/obj/structure/sink,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
-"jf" = (
+"je" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
 /obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/grille,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "jg" = (
-/obj/machinery/shower{
-	pixel_y = 32
+/obj/structure/closet/crate{
+	name = "Grenade Crate"
 	},
-/obj/structure/window/basic{
-	dir = 8
-	},
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/grenade/chem_grenade,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/igniter,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/obj/item/assembly/timer,
+/turf/simulated/floor/tiled/dark,
+/area/syndicate_mothership)
+"jh" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt3,
+/obj/structure/window/reinforced,
 /turf/unsimulated/floor{
-	icon_state = "freezerfloor"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "ji" = (
@@ -2802,6 +4023,43 @@
 "jj" = (
 /turf/unsimulated/wall/bronze,
 /area/specialty/thedarkplace)
+"jk" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/obj/item/storage/pouch/medical,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jl" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/obj/item/reagent_containers/glass/beaker/large,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
 "jm" = (
 /obj/structure/table/alien,
 /obj/item/tray{
@@ -2812,41 +4070,167 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
-"jo" = (
-/obj/machinery/shower{
-	pixel_y = 32
-	},
-/obj/item/soap/syndie,
+"jn" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/syringes,
+/obj/item/storage/box/syringes,
 /turf/unsimulated/floor{
-	icon_state = "freezerfloor"
+	icon_state = "white"
 	},
 /area/syndicate_mothership)
-"jq" = (
+"jo" = (
 /obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/syndicate/black,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/syndicate/black,
+/obj/item/storage/box/emps,
+/obj/item/storage/box/emps,
+/obj/item/storage/box/emps,
+/obj/item/storage/box/emps,
+/obj/item/storage/box/emps,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jp" = (
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jr" = (
+/obj/structure/table/reinforced,
+/obj/item/dnainjector/set_trait/hulk,
+/obj/item/dnainjector/set_trait/hulk,
+/obj/item/dnainjector/set_trait/hulk,
+/obj/item/dnainjector/set_trait/hulk,
+/obj/item/dnainjector/set_trait/regenerate{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/regenerate{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/regenerate{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/regenerate{
+	pixel_y = 6
+	},
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"js" = (
+/obj/structure/table/reinforced,
+/obj/item/dnainjector/set_trait/flashproof,
+/obj/item/dnainjector/set_trait/flashproof,
+/obj/item/dnainjector/set_trait/flashproof,
+/obj/item/dnainjector/set_trait/flashproof,
+/obj/item/dnainjector/set_trait/nonconduct{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/nonconduct{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/nonconduct{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/nonconduct{
+	pixel_y = 6
+	},
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jt" = (
+/obj/item/dnainjector/set_trait/noprints,
+/obj/item/dnainjector/set_trait/noprints,
+/obj/item/dnainjector/set_trait/noprints,
+/obj/item/dnainjector/set_trait/noprints,
+/obj/structure/table/reinforced,
+/obj/item/dnainjector/set_trait/haste{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/haste{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/haste{
+	pixel_y = 6
+	},
+/obj/item/dnainjector/set_trait/haste{
+	pixel_y = 6
+	},
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"ju" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/space,
+/area/syndicate_mothership)
+"jv" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jw" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jx" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/space,
+/area/syndicate_mothership)
+"jy" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt1,
+/obj/structure/window/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jz" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/alt2,
+/obj/structure/window/reinforced,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "jA" = (
 /obj/structure/table/rack,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/mask/balaclava,
-/obj/item/clothing/mask/balaclava,
+/obj/item/shield_projector/rectangle,
+/obj/item/shield_projector/rectangle,
+/obj/item/shield_projector/rectangle,
+/obj/item/shield_projector/rectangle,
 /turf/unsimulated/floor{
 	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jB" = (
+/obj/machinery/door/airlock/external{
+	frequency = 1331;
+	id_tag = "merc_base_hatch";
+	req_access = list(150)
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jC" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 8
 	},
 /area/syndicate_mothership)
 "jD" = (
@@ -2857,9 +4241,147 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"jE" = (
+/turf/unsimulated/wall/fakeglass2{
+	dir = 1
+	},
+/area/syndicate_mothership)
+"jF" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4
+	},
+/area/syndicate_mothership)
+"jG" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Backup";
+	req_access = list(150);
+	req_one_access = list()
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jH" = (
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jI" = (
+/obj/item/storage/quickdraw/syringe_case/clotting,
+/obj/item/storage/quickdraw/syringe_case/clotting,
+/obj/item/storage/quickdraw/syringe_case/clotting,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jJ" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Medical";
+	req_access = list(150);
+	req_one_access = list()
+	},
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
 "jK" = (
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"jL" = (
+/obj/structure/bed/chair/bay/comfy/black,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jM" = (
+/obj/machinery/vending/fitness,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jN" = (
+/obj/item/storage/firstaid/vox{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/vox{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/vox{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jO" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/combat{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/combat{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/combat{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jP" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 4;
+	pixel_y = 6
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jQ" = (
+/obj/machinery/chemical_dispenser/ert,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"jR" = (
+/obj/machinery/chemical_dispenser/full,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
 "jS" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
@@ -2878,61 +4400,51 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"jT" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
+"jU" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Heavy Armor";
+	req_access = list(150);
+	req_one_access = list()
 	},
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "jV" = (
 /obj/structure/barricade/cutout/clown,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
-"jY" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Bathroom";
-	req_access = list(150);
-	req_one_access = list()
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership)
-"kb" = (
-/obj/machinery/shower{
-	dir = 1
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership)
-"ke" = (
-/obj/structure/table/rack,
-/obj/item/clothing/suit/storage/vest/heavy/merc{
-	pixel_x = 2;
-	pixel_y = 2
-	},
-/obj/item/clothing/suit/storage/vest/heavy/merc{
-	pixel_x = -2;
-	pixel_y = -2
-	},
-/obj/item/clothing/suit/storage/vest/heavy/merc,
-/obj/item/clothing/suit/storage/vest/heavy/merc,
-/obj/item/clothing/suit/storage/vest/heavy/merc,
-/obj/item/clothing/suit/storage/vest/heavy/merc,
+"jW" = (
+/obj/structure/table/reinforced,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
+/area/syndicate_mothership)
+"jX" = (
+/obj/mecha/combat/marauder/mauler,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/greengrid,
+/area/syndicate_mothership)
+"jZ" = (
+/obj/machinery/mecha_part_fabricator_tg,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ka" = (
+/obj/machinery/rnd/production/circuit_imprinter,
+/obj/structure/reagent_dispensers/acid{
+	pixel_y = 32
+	},
+/obj/item/reagent_containers/glass/beaker/sulphuric,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kc" = (
+/obj/mecha/combat/durand,
+/obj/machinery/mech_recharger,
+/turf/simulated/floor/greengrid,
 /area/syndicate_mothership)
 "kf" = (
 /obj/item/radio/intercom/raider{
@@ -2956,34 +4468,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"kq" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/syndicate_mothership)
-"kr" = (
-/obj/structure/mirror{
-	dir = 4;
-	pixel_x = -32
-	},
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/turf/unsimulated/floor{
-	icon_state = "freezerfloor"
-	},
-/area/syndicate_mothership)
 "ks" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/red,
@@ -2994,20 +4478,12 @@
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
 "kx" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
+/obj/structure/table/rack,
+/obj/item/storage/belt/medical/alien,
+/obj/item/storage/belt/medical/alien,
+/obj/item/storage/belt/medical/alien,
 /turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "kz" = (
@@ -3022,24 +4498,16 @@
 /area/syndicate_mothership)
 "kG" = (
 /obj/structure/table/rack,
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 5;
-	pixel_y = 32
-	},
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"kJ" = (
-/obj/structure/table/rack,
-/obj/item/gun/energy/ionrifle,
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 5;
-	pixel_y = 32
-	},
-/obj/item/gun/energy/ionrifle,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3073,13 +4541,11 @@
 	},
 /area/syndicate_mothership)
 "kR" = (
-/obj/structure/table/rack,
-/obj/item/megaphone,
-/obj/item/megaphone,
-/obj/item/megaphone,
-/obj/item/megaphone,
-/obj/item/megaphone,
-/obj/item/megaphone,
+/obj/machinery/door/airlock/centcom{
+	name = "Explosives Armory";
+	req_access = list(150);
+	req_one_access = list()
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3089,41 +4555,10 @@
 	icon_state = "white"
 	},
 /area/tdome/tdomeobserve)
-"kU" = (
-/obj/structure/table/rack,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/obj/item/flashlight/maglight,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "la" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/ammo_magazine/m10mm,
-/obj/item/gun/projectile/automatic/c20r,
-/obj/item/gun/projectile/automatic/c20r,
-/obj/item/gun/projectile/automatic/c20r,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"ld" = (
-/obj/structure/table/rack,
-/obj/item/ammo_magazine/m545,
-/obj/item/ammo_magazine/m545,
-/obj/item/ammo_magazine/m545,
-/obj/item/ammo_magazine/m545,
-/obj/item/gun/projectile/automatic/sts35,
-/obj/item/gun/projectile/automatic/sts35,
+/obj/item/storage/toolbox/syndicate/powertools,
+/obj/item/storage/toolbox/syndicate/powertools,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3135,11 +4570,6 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"lI" = (
-/obj/structure/window/reinforced,
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "lK" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1331;
@@ -3147,24 +4577,6 @@
 	pixel_x = -25;
 	pixel_y = -5
 	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"lM" = (
-/obj/structure/table/rack,
-/obj/item/pinpointer/nukeop,
-/obj/item/pinpointer/nukeop,
-/obj/item/pinpointer/nukeop,
-/obj/item/pinpointer/nukeop,
-/obj/item/pinpointer/nukeop,
-/obj/item/pinpointer/nukeop,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
-/obj/item/shield/energy,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3225,14 +4637,6 @@
 "mu" = (
 /turf/space,
 /area/syndicate_mothership)
-"mv" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "mA" = (
 /obj/machinery/door/airlock/vault{
 	name = "Armory";
@@ -3252,20 +4656,6 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
-"mD" = (
-/obj/effect/landmark{
-	name = "Syndicate-Uplink"
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"mF" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "mK" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -3317,12 +4707,6 @@
 	icon_state = "dark"
 	},
 /area/wizard_station)
-"ns" = (
-/obj/structure/window/reinforced,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "nu" = (
 /obj/structure/table/rack,
 /obj/item/tank/jetpack/oxygen,
@@ -3343,12 +4727,6 @@
 /obj/item/tank/jetpack/carbondioxide,
 /obj/item/tank/jetpack/carbondioxide,
 /obj/item/tank/jetpack/carbondioxide,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"nw" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3379,35 +4757,6 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
-"nH" = (
-/obj/machinery/button/flasher{
-	id = "syndieflash";
-	name = "Flasher";
-	pixel_x = 27
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/mercenary)
-"nJ" = (
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/lattice,
-/turf/space,
-/area/space)
-"nL" = (
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/grille,
-/turf/unsimulated/floor{
-	icon_state = "plating";
-	name = "plating"
-	},
-/area/syndicate_mothership)
 "nN" = (
 /obj/structure/table/woodentable,
 /turf/unsimulated/floor{
@@ -3417,12 +4766,12 @@
 /area/wizard_station)
 "nO" = (
 /obj/structure/table/rack,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
-/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/storage/pouch/ammo,
+/obj/item/storage/pouch/ammo,
+/obj/item/storage/pouch/ammo,
+/obj/item/storage/pouch/ammo,
+/obj/item/storage/pouch/ammo,
+/obj/item/storage/pouch/ammo,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3437,12 +4786,19 @@
 /area/wizard_station)
 "nS" = (
 /obj/structure/table/rack,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
-/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/gun/projectile/automatic/serdy/awp,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3469,12 +4825,16 @@
 /area/syndicate_mothership)
 "nW" = (
 /obj/structure/table/rack,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
-/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3484,76 +4844,6 @@
 /obj/item/bikehorn,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/planet/clown)
-"of" = (
-/obj/structure/table/rack,
-/obj/item/binoculars,
-/obj/item/binoculars,
-/obj/item/binoculars,
-/obj/item/binoculars,
-/obj/item/binoculars,
-/obj/item/binoculars,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"oi" = (
-/obj/structure/table/rack,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/obj/item/flashlight/flare,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"oq" = (
-/obj/structure/table/rack,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"or" = (
-/obj/structure/table/rack,
-/obj/item/gun/energy/gun,
-/obj/item/gun/energy/gun,
-/obj/item/gun/energy/gun,
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 5;
-	pixel_y = -32
-	},
-/obj/item/cell/device/weapon,
-/obj/item/cell/device/weapon,
-/obj/item/cell/device/weapon,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"os" = (
-/obj/structure/table/rack,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "ot" = (
 /obj/machinery/vending/wardrobe/clowndrobe,
 /obj/machinery/light{
@@ -3663,10 +4953,11 @@
 /area/overmap)
 "ps" = (
 /obj/structure/table/rack,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/merc,
-/obj/item/clothing/mask/gas/syndicate,
-/obj/item/clothing/head/helmet/space/void/merc,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3953,7 +5244,13 @@
 	},
 /area/syndicate_mothership)
 "qx" = (
-/obj/structure/closet/wardrobe/tactical,
+/obj/structure/table/rack,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4199,13 +5496,6 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
-"rJ" = (
-/obj/structure/table/rack,
-/obj/item/rig/merc/empty,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "rK" = (
 /obj/structure/table/rack/steel,
 /obj/structure/window/phoronreinforced{
@@ -4784,6 +6074,9 @@
 /area/shuttle/mercenary)
 "vD" = (
 /obj/machinery/teleport/station,
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "vF" = (
@@ -4824,12 +6117,8 @@
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
 "vT" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/mercenary)
-"vU" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r"
+/obj/machinery/atmospherics/unary/engine/bigger{
+	dir = 1
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/mercenary)
@@ -4862,16 +6151,6 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
-"vZ" = (
-/obj/structure/table/glass,
-/obj/machinery/librarywikicomp/personal{
-	pixel_y = 7
-	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
-	},
-/area/syndicate_mothership)
 "wa" = (
 /obj/structure/table/alien/blue,
 /obj/effect/landmark/start/clown,
@@ -5944,6 +7223,12 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/item/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
+/obj/item/melee/energy/sword/pirate,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -6949,6 +8234,10 @@
 /obj/machinery/door/window/northright{
 	name = "Simple rigs"
 	},
+/obj/item/rig/ch/precursor,
+/obj/item/rig/ch/precursor,
+/obj/item/rig/ch/precursor,
+/obj/item/rig/ch/precursor,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -7008,12 +8297,6 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
-"Gh" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 1;
-	icon_state = "fakewindows2"
-	},
-/area/syndicate_mothership)
 "Go" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark{
@@ -8381,6 +9664,8 @@
 /obj/random/toolbox,
 /obj/random/toolbox,
 /obj/random/toolbox,
+/obj/item/material/twohanded/longsword/plas,
+/obj/item/material/twohanded/longsword/plas,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "Qh" = (
@@ -9325,15 +10610,6 @@
 "VT" = (
 /turf/simulated/floor/bronze,
 /area/specialty/thedarkplace)
-"VY" = (
-/obj/structure/bed/chair{
-	dir = 8
-	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
-	},
-/area/syndicate_mothership)
 "Wa" = (
 /obj/machinery/optable,
 /turf/simulated/shuttle/floor/red,
@@ -45878,19 +47154,19 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-fR
-mK
-fR
-fR
-dF
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -46040,20 +47316,20 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-fR
-hl
-hl
-fR
-dC
-dC
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -46201,21 +47477,21 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-fR
-fR
-fR
-fR
-fR
-fR
-hl
-hl
-fR
-dC
-dC
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -46363,21 +47639,21 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-fR
-gL
-vD
-vH
-hl
-iV
-hl
-hl
-iV
-dC
-dC
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -46525,21 +47801,21 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-ed
-fR
-hl
-hl
-hl
-hl
-dW
-hl
-hl
-dJ
-dC
-dC
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -46667,13 +47943,6 @@ mN
 mN
 mN
 mN
-fR
-fR
-mK
-fR
-fR
-eS
-vT
 mN
 mN
 mN
@@ -46685,22 +47954,29 @@ mN
 mN
 mN
 mN
-fR
-fR
-fR
-fR
-fR
-fR
-fR
-iV
-dW
-iV
-fR
-fR
-fR
-dM
-dL
-dH
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -46829,13 +48105,6 @@ mN
 mN
 mN
 mN
-eZ
-eY
-eV
-hl
-fR
-eS
-vU
 mN
 mN
 mN
@@ -46846,22 +48115,29 @@ mN
 mN
 mN
 mN
-dC
-fR
-en
-hl
-iV
-ee
-hl
-hl
-hl
-hl
-fR
-dX
-hl
-hl
-dN
-fR
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -46988,42 +48264,42 @@ mN
 mN
 mN
 mN
-fR
-fR
-fR
-fR
-hl
-hl
-hl
-fR
-fR
-fR
-fR
-fR
-fR
-eB
-ev
-fR
-fR
-fR
-eB
-ev
-fR
-fR
-eo
-hl
-dW
-hl
-hl
-hl
-hl
-hl
-fR
-hl
-hl
-hl
-dN
-fR
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -47148,44 +48424,44 @@ mN
 mN
 mN
 mN
-ff
-ff
-fR
-fc
-hl
-iV
-hl
-hl
-hl
-iV
-eT
-eR
-eK
-iV
-rt
-rt
-eE
-eE
-iV
-eC
-es
-ex
-es
-iV
-ep
-hl
-iV
-fR
-fR
-fR
-iV
-dW
-iV
-hl
-hl
-hl
-dN
-fR
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -47310,46 +48586,46 @@ mN
 mN
 mN
 mN
-fo
-fg
-fe
-hl
-hl
-eJ
-hl
-hl
-hl
-eJ
-hl
-hl
-hl
-eJ
-rt
-rt
-rt
-rt
-dW
-rt
-rt
-rt
-rt
-dW
-hl
-hl
-fR
-ef
-hl
-fR
-dZ
-dQ
-dQ
-dQ
-dQ
-dQ
-dP
-fR
 mN
 mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+et
+fR
+mK
+fR
+fR
+dF
 mN
 mN
 mN
@@ -47472,48 +48748,48 @@ mN
 mN
 mN
 mN
-Sg
-fh
-fR
-hl
-hl
-iV
-fR
-iV
-eJ
-iV
-fR
-fR
-fR
-iV
-eH
-rt
-rt
-rt
-iV
-rt
-rt
-rt
-rt
-iV
-fR
-fR
-fR
-eh
-hl
-iV
-rL
-hl
-hl
-hl
-hl
-hl
-hl
-fR
 mN
 mN
 mN
 mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+fR
+fy
+fx
+fR
+dC
+dC
+be
 mN
 mN
 mN
@@ -47634,48 +48910,48 @@ mN
 mN
 mN
 mN
-fo
-fm
-fe
-hl
-hl
-eJ
-hl
-hl
-hl
-eJ
-hl
-hl
-hl
-eJ
-rt
-rt
-eG
-rt
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+fO
+fO
+fO
+fO
 fR
-rt
-rt
-ey
-rt
-dW
-hl
-hl
 fR
-ej
-hl
-dW
-hl
-hl
-hl
-hl
-hl
-hl
-vC
 fR
-mN
-mN
-mN
-mN
+fR
+fR
+fR
+fy
+cH
+fR
+dC
+dC
+bn
 mN
 mN
 mN
@@ -47796,48 +49072,48 @@ mN
 mN
 mN
 mN
-fn
-fn
-fR
-fd
-hl
-iV
-eX
-eX
-eU
-fR
-eT
-eR
-eN
-iV
-rt
-rt
-qP
-eF
-fR
-eD
-vp
-rP
-rt
-iV
-hl
-hl
-iV
-fR
-fR
-fR
-iV
-dW
-iV
-hl
-hl
-hl
-hl
-fR
 mN
 mN
 mN
 mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+fO
+fO
+fO
+fO
+fR
+gL
+vD
+vH
+eQ
+iV
+fy
+fx
+iV
+dC
+dC
+bn
 mN
 mN
 mN
@@ -47960,45 +49236,45 @@ mN
 mN
 mN
 mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+fO
+fO
+fO
+ed
 fR
-fR
-fR
-fR
-eX
-eX
-eU
-fR
-fR
-fR
-fR
-fR
-fR
-eB
-ev
-fR
-fR
-fR
-eB
-ev
-fR
-fR
-eq
+hl
+hl
+hl
 hl
 dW
 hl
 hl
-hl
-hl
-hl
-fR
-hl
-hl
-hl
-hl
-fR
-mN
-mN
-mN
+dJ
+dC
+dC
 mN
 mN
 mN
@@ -48125,12 +49401,13 @@ mN
 mN
 mN
 mN
+mN
 fR
-eX
-eX
-eU
 fR
-eS
+mK
+fR
+fR
+dC
 vT
 mN
 mN
@@ -48142,24 +49419,23 @@ mN
 mN
 mN
 mN
-eu
+mN
 fR
-er
-hl
+fR
+fR
+fR
+fR
+fR
+fR
 iV
-ek
-hl
-hl
-hl
-hl
+dW
+iV
 fR
-hl
-hl
-hl
-hl
 fR
-mN
-mN
+fR
+dM
+dL
+dH
 mN
 mN
 mN
@@ -48287,13 +49563,14 @@ mN
 mN
 mN
 mN
+mN
+eZ
+eY
+eV
+hl
 fR
-fR
-mK
-fR
-fR
-eS
-vU
+dC
+bn
 mN
 mN
 mN
@@ -48304,23 +49581,22 @@ mN
 mN
 mN
 mN
-mN
+dC
 fR
-fR
-fR
-fR
-fR
-fR
-fR
+en
+fx
 iV
-dW
-iV
+ee
+ga
+fA
+ga
+hl
 fR
+dX
+hl
+hl
+cS
 fR
-fR
-fR
-fR
-dE
 mN
 mN
 mN
@@ -48447,43 +49723,43 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-dC
-dC
-dC
-ed
+fR
+fR
+fR
 fR
 hl
 hl
 hl
-hl
-dW
-mM
-mM
 fR
-dE
-dE
+fR
+fR
+fR
+fR
+fR
+eB
+ev
+fR
+fR
+fR
+eB
+ev
+fR
+fR
+eo
+go
+gb
+fo
+fo
+fo
+fo
+dI
+fR
+ff
+dI
+hl
+dN
+fR
+mN
 mN
 mN
 mN
@@ -48604,48 +49880,48 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-dC
-dC
-dC
-dC
+yb
+yb
+yb
+yb
+ju
 fR
-eb
+fc
+iW
+iV
 hl
-nH
 hl
-mK
-dR
-mM
+hl
+iV
+eT
+eR
+eK
+iV
+ia
+rt
+eE
+eE
+iV
+eC
+es
+ex
+es
+iV
+ep
+gu
+iV
 fR
-dE
-dE
+fR
+fR
+iV
+fl
+iV
+ff
+ea
+hl
+dN
+fR
+mN
 mN
 mN
 mN
@@ -48766,48 +50042,48 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-dC
-dC
-dC
-dC
+jC
+jL
+lK
+jB
+jv
+fe
+il
+id
+hC
+hN
+hF
+fo
+hC
+fo
+hF
+fo
+hC
+gz
+gz
+gz
+gz
+gb
+gz
+gz
+gz
+gz
+gb
+fo
+gw
 fR
+ef
+fP
 fR
+dZ
+fm
+fk
+fg
+eq
+dQ
+dP
 fR
-fR
-fR
-fR
-dT
-mM
-fR
-dE
-dE
+mN
 mN
 mN
 mN
@@ -48928,48 +50204,48 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
+jE
+jL
+sg
+yb
+sg
 fR
-dV
-mM
+iA
+ik
+iV
 fR
-dE
-dE
+iV
+eJ
+iV
+fR
+fR
+fR
+iV
+eH
+rt
+rt
+hB
+iV
+hd
+rt
+rt
+rt
+iV
+fR
+fR
+fR
+eh
+gH
+iV
+rL
+hl
+hl
+hl
+hl
+hl
+hl
+fR
+mN
 mN
 mN
 mN
@@ -49090,47 +50366,47 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
+jE
+jL
+sg
+jB
+jw
+fe
+il
+gw
+eJ
+hO
+hM
+hl
+eJ
+hl
+hM
+hl
+eJ
+rt
+rt
+eG
+rt
 fR
-mK
+rt
+rt
+ey
+rt
+dW
+hl
+hl
 fR
+ej
+hl
+dW
+hl
+hl
+hl
+hl
+hl
+hl
+vC
 fR
-dI
 mN
 mN
 mN
@@ -49252,47 +50528,47 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+jE
+jL
+sg
+jC
+jx
+fR
+fd
+iX
+iV
+eX
+eX
+eU
+fR
+eT
+eR
+eN
+iV
+hk
+rt
+qP
+eF
+fR
+eD
+vp
+rP
+hk
+iV
+hl
+hl
+iV
+fR
+fR
+fR
+iV
+dW
+iV
+hl
+hl
+hl
+hl
+fR
 mN
 mN
 mN
@@ -49414,47 +50690,47 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+jE
+jL
+sg
+jE
+mu
+fR
+fR
+fR
+fR
+eX
+eX
+eU
+fR
+fR
+fR
+fR
+fR
+fR
+eB
+ev
+fR
+fR
+fR
+eB
+ev
+fR
+fR
+hh
+hl
+dW
+hl
+hl
+hl
+hl
+hl
+fR
+hl
+hl
+hl
+hl
+fR
 mN
 mN
 mN
@@ -49475,12 +50751,12 @@ ab
 mN
 mN
 mN
-bu
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -49576,23 +50852,21 @@ mN
 mN
 mN
 mN
-mN
-aJ
-aJ
-aJ
-cH
-cS
-mN
+jE
+jM
+sg
+jE
+mu
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fR
+eX
+eX
+eU
+fR
+dC
+vT
 mN
 mN
 mN
@@ -49603,20 +50877,22 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+eu
+fR
+er
+fx
+iV
+ek
+gd
+fG
+gd
+hl
+fR
+hl
+hl
+hl
+hl
+fR
 mN
 mN
 mN
@@ -49637,12 +50913,12 @@ ab
 mN
 mN
 mN
-bu
-dw
-dp
-bu
-bM
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -49738,25 +51014,21 @@ mN
 TW
 TW
 mN
-mN
-mN
-aV
-mN
-aV
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-fA
-gb
-gb
-gb
-gb
-gb
-jd
+jE
+jM
+sg
+jE
+va
+va
+va
+va
+fR
+fR
+mK
+fR
+fR
+dC
+bn
 mN
 mN
 mN
@@ -49768,18 +51040,22 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fR
+fR
+fR
+fR
+fR
+fR
+fR
+iV
+dW
+iV
+fR
+fR
+fR
+fR
+fR
+dC
 mN
 mN
 mN
@@ -49799,12 +51075,12 @@ ab
 mN
 mN
 mN
-bu
-dy
-ds
-di
-dd
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -49899,29 +51175,19 @@ mN
 mN
 TW
 TW
-TW
-TW
-aV
-TW
-TW
-TW
-aV
+mN
+jE
+sg
+sg
+jE
+mu
 mN
 mN
 mN
 mN
 mN
-mN
-fG
-gk
-gk
-hB
-gk
-vZ
-fG
-mN
-mN
-cS
+va
+va
 mN
 mN
 mN
@@ -49938,11 +51204,21 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+fO
+fO
+fO
+ed
+fR
+hl
+hl
+hl
+hl
+dW
+mM
+mM
+fR
+dC
+dC
 mN
 mN
 mN
@@ -49961,12 +51237,12 @@ ab
 mN
 mN
 mN
-bu
-dz
-dt
-dl
-df
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -50061,35 +51337,19 @@ mN
 mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 mN
-mN
-mN
-mN
-mN
-mN
-fG
-gm
-gX
-hC
-id
-VY
-fG
-mN
-mN
-cH
-lI
+jE
+sg
+sg
+jE
 mu
-mu
-nJ
-aV
-cH
+mN
+mN
+mN
+mN
+mN
+va
+va
 mN
 mN
 mN
@@ -50106,6 +51366,22 @@ mN
 mN
 mN
 mN
+fO
+fO
+fO
+fO
+fR
+eb
+fn
+fS
+fL
+mK
+dR
+dj
+fR
+dC
+dC
+be
 mN
 mN
 mN
@@ -50123,12 +51399,12 @@ ab
 mN
 mN
 mN
-bu
-dB
-dv
-di
-dh
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -50223,51 +51499,51 @@ mN
 mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-yb
-dS
-Gh
-dx
-yb
+mN
+jE
+sg
+sg
+jF
+mu
+mN
+mN
+mN
+mN
+mN
+va
+va
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 fO
-gn
-gX
-hF
-id
-gk
-jf
-mN
-mN
-cH
-lI
-mv
-ns
-nJ
-mN
-cH
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+fO
+fO
+fO
+fR
+fR
+fR
+fR
+fR
+fR
+dT
+mM
+fR
+dC
+dC
+bn
 mN
 mN
 TW
@@ -50285,12 +51561,12 @@ ab
 mN
 mN
 mN
-bu
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -50385,35 +51661,19 @@ mN
 mN
 mN
 TW
-TW
-TW
-TW
-TW
-TW
-TW
+mN
+jE
+sg
+sg
 yb
-yb
-dU
-dU
-dU
-yb
-yb
-yb
-gk
-eQ
-hM
-gk
-gk
-yb
-jT
-kq
-yb
-yb
-mu
-mu
-yb
-aV
-cH
+sl
+sl
+sl
+sl
+mN
+mN
+va
+va
 mN
 mN
 mN
@@ -50430,6 +51690,22 @@ mN
 mN
 mN
 mN
+mN
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+et
+fR
+dV
+mM
+fR
+dC
+dC
+bn
 mN
 TW
 TW
@@ -50548,34 +51824,18 @@ mN
 mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
+jF
+sg
+sg
 yb
-dj
-ea
-ea
-ea
-ec
-fk
-yb
-gk
-gk
-gk
-gk
-gk
-sg
-sg
-sg
-sg
-lK
-sg
-sg
-nL
+sl
+sl
+sl
+sl
 mN
-cH
+mN
+va
+va
 mN
 mN
 mN
@@ -50590,6 +51850,22 @@ mN
 mN
 mN
 mN
+mN
+mN
+mN
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+dC
+fR
+mK
+fR
+fR
+dF
 mN
 mN
 TW
@@ -50707,35 +51983,21 @@ mN
 ab
 mN
 mN
-mN
-mN
-TW
-TW
-TW
 TW
 TW
 TW
 yb
-dm
-ec
-ec
-ec
-ec
-ec
-fP
-gk
-gk
-gk
-gk
-gk
 sg
 sg
-sg
-sg
-sg
-sg
-sg
-fG
+yb
+sl
+sl
+sl
+sl
+sl
+mN
+va
+va
 mN
 mN
 mN
@@ -50752,6 +52014,20 @@ mN
 mN
 mN
 mN
+mN
+va
+va
+va
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+va
 mN
 mN
 TW
@@ -50868,52 +52144,52 @@ mN
 mN
 ab
 mN
-mN
-mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
 yb
-dn
-ea
-ea
-ea
-ec
-fl
 yb
-go
-gk
-gk
-ik
-iL
+yb
+yb
+yb
 sg
 sg
-sg
-sg
-sg
-sg
-sg
-jf
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+dS
+fu
+fu
+fu
+fu
+dx
+yb
+dS
+fu
+fu
+fu
+fu
+dx
+yb
+dS
+fu
+fu
+fu
+fu
+dx
+yb
+dS
+fu
+fu
+fu
+fu
+dx
+yb
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+va
 mN
 mN
 mN
@@ -51030,52 +52306,52 @@ mN
 mN
 ab
 mN
-mN
-mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
 yb
-yb
-dU
-dU
-dU
-yb
-yb
-yb
-yb
-hb
-yb
-yb
-yb
-yb
-jY
-yb
-yb
-bn
+jZ
 sg
-be
+jW
+jC
+sg
+sg
+jC
+jy
+jh
+je
+iN
+hP
+dU
+yb
+ip
+sg
+in
+hb
+sg
+kQ
+yb
+rA
+sg
+hE
+kQ
+sg
+kQ
+yb
+hm
+sg
+kQ
+kQ
+sg
+kQ
+yb
+gg
+gk
+gk
+gk
+gk
+gk
 yb
 mN
 mN
-mN
-aJ
-aJ
-cS
-aJ
-aJ
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+va
 mN
 mN
 mN
@@ -51192,52 +52468,52 @@ mN
 mN
 ab
 mN
-mN
-mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
 yb
+ka
+sg
+jW
+jE
+sg
+sg
+jF
+jy
+jh
+je
+iN
+hP
+dU
 yb
-yb
-yb
-yb
-TW
-yb
+ir
+sg
 gr
-hc
-hc
-il
+ig
+sg
+kQ
 yb
-et
-ew
-kr
+rA
+sg
+kQ
+hu
+sg
+kQ
 yb
+kQ
+sg
+kQ
+gV
+sg
+gJ
 yb
-mA
+gk
+fM
+fM
+fM
+fM
+gk
 yb
-yb
-TW
 mN
 mN
-mN
-aV
-mN
-aV
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+va
 mN
 mN
 mN
@@ -51354,52 +52630,52 @@ mN
 mN
 ab
 mN
-mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 yb
-gu
-hc
-hc
+sg
+sg
+jW
+jF
+sg
+sg
+yb
+iY
+iY
+iY
+iY
+iP
+iF
+yb
+is
+sg
+kQ
+kQ
+sg
 io
 yb
-et
-ew
-ew
-yb
+rA
 sg
+hH
+hw
 sg
-nu
+kQ
 yb
-TW
-TW
-mN
-aV
-TW
-TW
-aV
-mN
-mN
+kQ
+sg
+kQ
+gV
+sg
+gK
+yb
+gm
+gf
 aJ
 aJ
 aJ
-aJ
-aJ
+gk
+yb
 mN
-mN
+va
+va
 mN
 mN
 mN
@@ -51516,53 +52792,53 @@ mN
 mN
 ab
 mN
-mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 yb
-gw
-hc
-hc
+jW
+sg
+sg
+jU
+sg
+sg
+jG
+sg
+sg
+sg
+sg
+sg
+sg
+yb
+is
+sg
+kQ
+kQ
+sg
 iu
 yb
 jg
-kb
-yb
-yb
-lM
 sg
-nv
+hI
+hy
+sg
+kQ
 yb
+kQ
+sg
+gW
+gW
+sg
+gM
 yb
-TW
-TW
-TW
-TW
-TW
-TW
-aV
-mN
-mN
-aV
-mN
-aV
-mN
-mN
-mN
-mN
+gn
+aJ
+aJ
+aJ
+aJ
+gk
+yb
+va
+va
+va
+va
 mN
 mN
 mN
@@ -51678,54 +52954,54 @@ mN
 mN
 ab
 mN
-mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 yb
-gz
-hd
-hN
+jW
+sg
+sg
+jC
+sg
+sg
+yb
+iZ
+iZ
+iZ
+iZ
+iS
+iG
+yb
+iv
+sg
+kQ
+kQ
+sg
 iw
 yb
 jo
-kb
-yb
+sg
+kG
 kG
 sg
-sg
-sg
-nO
+hr
 yb
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+nO
+sg
+hi
+gY
+sg
+gM
+yb
+gk
 aV
 aV
 aV
 aV
-aV
+gk
+yb
+va
 mN
-mN
-mN
-mN
+va
+va
+va
 mN
 mN
 mN
@@ -51840,55 +53116,55 @@ mN
 mN
 ab
 mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 yb
-yb
-yb
-yb
-yb
-yb
-yb
-yb
-yb
-kJ
 sg
-rA
 sg
+sg
+jE
+sg
+sg
+jC
+jz
+jh
+je
+iN
+hP
+iH
+yb
+ix
+sg
+sg
+sg
+sg
+ic
+yb
+hR
+sg
+sg
+sg
+sg
+hs
+yb
 nS
+sg
+sg
+sg
+sg
+gN
 yb
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-aV
+gk
+gk
+gk
+gk
+gk
+gk
+yb
 mN
 mN
+va
 mN
-mN
-mN
-mN
+va
+fp
 mN
 mN
 mN
@@ -52002,55 +53278,55 @@ mN
 mN
 ab
 mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 yb
-kQ
+kc
+sg
+jX
+jF
+sg
+sg
+jF
+jz
+jh
+je
+iN
+hP
+iH
+yb
+iy
 sg
 sg
 sg
+sg
+ie
+yb
+hS
+sg
+sg
+sg
+sg
+ht
+yb
 nW
+sg
+sg
+sg
+sg
+gO
 yb
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-aV
-aV
+gl
+gk
+gk
+gk
+fz
+fz
+yb
 mN
 mN
+va
 mN
-mN
-mN
+fp
+sl
 mN
 mN
 mN
@@ -52164,58 +53440,58 @@ mN
 mN
 ab
 mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 yb
+yb
+yb
+yb
+yb
+mA
+mA
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+dS
+dx
+ih
+ih
+yb
+yb
+yb
+dS
+dx
 kR
-sg
-sg
-sg
-of
+kR
+dS
+dx
 yb
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-aV
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+dS
+dx
+gZ
+gZ
+dS
+dx
+yb
+dS
+dx
+ft
+ft
+dS
+dx
+yb
+dS
+fu
+fu
+dx
+yb
+sl
+sl
+sl
+sl
 mN
 mN
 mN
@@ -52327,59 +53603,59 @@ mN
 ab
 mN
 mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
+sl
+sl
 yb
-kU
 sg
 sg
 sg
-oi
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+gI
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
 yb
+sl
+sl
+sl
+sl
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
 mN
 mN
 mN
@@ -52491,57 +53767,57 @@ mN
 mN
 mN
 mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
-yb
-yb
-yb
-yb
-yb
-yb
-yb
-yb
-kQ
 sg
 sg
 sg
-oq
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+gI
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
+sg
 yb
-yb
-yb
-yb
-yb
-yb
+sl
+sl
+sl
+sl
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
-mN
-mN
-mN
 mN
 mN
 mN
@@ -52652,60 +53928,60 @@ ab
 mN
 mN
 mN
-mN
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
-gA
-yb
-hO
-iA
-iM
-jq
-jq
-kx
-sg
-sg
-mD
-sg
-sg
-kx
-ps
-ps
-ps
-ps
+jJ
+jJ
+dS
+fu
+dx
 yb
 yb
+iT
+yb
+yb
+dS
+dx
+kz
+kz
+yb
+yb
+yb
+dS
+dx
+hz
+hz
+dS
+dx
+yb
+dS
+dx
+he
+he
+dS
+dx
+yb
+dS
+dx
+ft
+fT
+dS
+dx
+yb
+dS
+dx
+ft
+ft
+yb
+yb
+yb
+sl
+sl
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
-mN
-mN
-mN
-mN
 mN
 mN
 mN
@@ -52814,60 +54090,60 @@ ab
 mN
 mN
 mN
-mN
-mN
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
-sg
+hc
+hc
+hc
+hc
+jk
 yb
-sg
-sg
-sg
-sg
-sg
-kz
-sg
-sg
-sg
-sg
-sg
-kz
-sg
-sg
-sg
-sg
-rF
+jc
+ew
+iI
 yb
+nu
+sg
+sg
+sg
+sg
+hp
+yb
+hT
+sg
+sg
+sg
+sg
+fV
+yb
+hn
+sg
+sg
+sg
+sg
+gP
+yb
+gp
+sg
+sg
+sg
+sg
+fB
+yb
+dn
+fw
+ec
+ec
+dm
+fq
+yb
+sl
+sl
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
-mN
-mN
-mN
 mN
 mN
 mN
@@ -52975,61 +54251,61 @@ mN
 ab
 mN
 mN
-mN
-mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
-gC
+hc
+hc
+hc
+hc
+jl
 yb
-sg
-sg
-sg
-sg
-sg
-kz
-sg
-sg
-sg
-sg
-sg
-kz
-sg
-sg
-sg
-sg
-rJ
+jc
+ew
+iI
 yb
+nv
+sg
+sg
+sg
+sg
+if
+yb
+hV
+sg
+sg
+sg
+sg
+fV
+yb
+ho
+sg
+sg
+sg
+sg
+gQ
+yb
+gv
+sg
+sg
+sg
+sg
+fB
+yb
+ec
+ec
+ec
+ec
+ec
+ec
+yb
+sl
+sl
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
-mN
-mN
 mN
 mN
 mN
@@ -53137,62 +54413,62 @@ mN
 ab
 mN
 mN
-mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
+jN
+hc
+hc
+hc
+jn
+yb
+jc
+ew
+ew
+yb
+iz
 sg
-yb
-hP
+rF
+rF
+sg
 iB
-iR
+yb
 jA
-ke
-kx
-sg
-sg
-sg
-sg
 sg
 kx
-ps
-ps
-ps
+hA
+sg
+fV
+yb
+hp
+sg
+kQ
+hf
+sg
 ps
 yb
+gy
+sg
+fY
+fU
+sg
+fE
 yb
+ec
+ec
+ec
+ec
+ec
+ec
+yb
+sl
+sl
 TW
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
-mN
-mN
 mN
 mN
 mN
@@ -53301,61 +54577,61 @@ mN
 mN
 mN
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
+jO
+hc
+hc
+hc
+jp
 yb
+ew
+ew
+ew
 yb
+iC
+sg
+ij
+ij
+sg
+iB
 yb
-yb
-yb
-yb
-yb
-yb
+hW
+sg
+la
 la
 sg
 qx
+yb
+gA
 sg
-or
+kQ
+hf
+sg
+gR
 yb
+gB
+sg
+fV
+fV
+sg
+fE
 yb
+ec
+ec
+fv
+ec
+ec
+ec
 yb
-yb
-yb
-yb
+sl
+sl
 TW
 TW
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
-mN
-mN
 mN
 mN
 mN
@@ -53463,61 +54739,61 @@ mN
 mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
-la
-sg
-qx
-sg
-or
+jP
+hc
+jH
+hc
+jr
 yb
+ew
+ew
+ew
+yb
+iD
+sg
+im
+im
+sg
+iB
+yb
+kQ
+sg
+hJ
+hD
+sg
+gX
+yb
+gC
+sg
+kQ
+kQ
+sg
+gS
+yb
+gD
+sg
+fZ
+fW
+sg
+fF
+yb
+ec
+fr
+fr
+fr
+fr
+ec
+yb
+sl
+sl
 TW
 TW
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
 mN
 mN
 mN
@@ -53625,34 +54901,55 @@ mN
 mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
-ld
-sg
-sg
-sg
-os
+jQ
+hc
+jH
+hc
+js
 yb
+iJ
+yb
+iJ
+yb
+iE
+sg
+iB
+iB
+sg
+iB
+yb
+kQ
+sg
+kQ
+kQ
+sg
+kQ
+yb
+kQ
+sg
+kQ
+kQ
+sg
+gU
+yb
+gF
+sg
+fZ
+fX
+sg
+fH
+yb
+ec
+ec
+ec
+ec
+ec
+ec
+yb
+sl
+sl
 TW
 TW
 TW
@@ -53660,27 +54957,6 @@ TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
 mN
 mN
 ab
@@ -53787,33 +55063,52 @@ mN
 mN
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
+jR
+hc
+jI
+hc
+jt
+yb
+iK
+yb
+iK
 yb
 lQ
-mF
-nw
+sg
+iB
+iB
+sg
+iB
 yb
+kQ
+sg
+kQ
+kQ
+sg
+kQ
+yb
+kQ
+sg
+kQ
+kQ
+sg
+kQ
+yb
+gG
+sg
+fZ
+fX
+sg
+fJ
+yb
+fr
+fr
+fr
+fr
+fr
+fr
 yb
 TW
 TW
@@ -53824,25 +55119,6 @@ TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
-mN
-mN
 mN
 mN
 ab
@@ -53949,33 +55225,53 @@ mN
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
 yb
 yb
 yb
 yb
 yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
+yb
 TW
 TW
 TW
@@ -53985,26 +55281,6 @@ TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-mN
 mN
 mN
 ab
@@ -54111,53 +55387,53 @@ TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
+sl
 TW
 TW
 TW
@@ -54453,10 +55729,10 @@ TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
+Sg
+hZ
+fh
+hQ
 Sg
 TW
 TW
@@ -54615,10 +55891,10 @@ TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
+Sg
+Sg
+Sg
+Sg
 Sg
 TW
 TW
@@ -55434,7 +56710,7 @@ TW
 TW
 Sg
 ac
-sd
+hj
 sd
 sd
 bZ
@@ -65657,7 +66933,7 @@ AY
 Hd
 Bm
 zP
-AY
+fs
 xo
 yW
 xo

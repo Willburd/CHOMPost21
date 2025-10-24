@@ -391,7 +391,8 @@
 	base_attack_cooldown = 0.1
 	reload_max = 15
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged
-/*
+
+// Outpost 21 edit begin - Uncomments because we want them
 /mob/living/simple_mob/vore/wolftaur/syndicate/awp
 	name = "mercenary commando sniper"
 	desc = "A tough looking armored canid creature armed with a sniper rifle!"
@@ -410,7 +411,6 @@
 	ranged_attack_delay = 2.5
 	reload_max = 5
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/sniper/torch
-\*
-*/
+// Outpost 21 edit end
 
 ///commented this guy out because i couldn't figure out how to make him do the neat little laser pointer targeting thingy the regular merc sniper does before blastin' - Serdy

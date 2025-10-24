@@ -65,7 +65,11 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	// Outpost 21 edit begin - muriki enzyme immunity
 	enzyme_affect = FALSE
 	// Outpost 21 edit end
-	
+
+	// Outpost 21 edit begin - increased pitcher visibility
+	plane = ABOVE_PLANE
+	// Outpost 21 edit end
+
 	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/pitcher_plant //Putting vore variables separately because apparently that's tradition.

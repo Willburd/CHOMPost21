@@ -156,9 +156,9 @@
 		if(3)
 			take_damage(10)
 		if(2)
-			take_damage(30)
+			take_damage(20)
 		if(1)
-			take_damage(50)
+			take_damage(30)
 
 /obj/vehicle/has_interior/controller/relaymove(mob/user, direction)
 	if(stat)
@@ -192,8 +192,16 @@
 			checka = get_step(checkm, EAST)
 			checkb = get_step(checkm, WEST)
 
+		// Check for huge mobs
+		var/mob_blocker = null
+		for(var/mob/living/M in checkm.contents + checka.contents + checkb.contents)
+			if(M.density && M.mob_size == MOB_HUGE)
+				mob_blocker = M
+				break
+
 		// tank only likes to turn if able to move, cannot 180!
-		could_move = Move(newloc, direction)
+		if(!mob_blocker)
+			could_move = Move(newloc, direction)
 		if(!could_move)
 			// normally called from Moved()!
 			if(dir == reverse_direction(cached_dir))
@@ -462,8 +470,11 @@
 		var/mob/living/M = target
 		if(!M.is_incorporeal())
 			visible_message("<font color='red'>[src] runs over [M]!</font>")
-			M.apply_effects(5, 5)				//knock people down if you hit them
-			M.apply_damages(move_damage)	// and do damage according to how fast the train is going
+			if(M.mob_size < MOB_HUGE)
+				M.apply_effects(5, 5)				//knock people down if you hit them
+				M.apply_damages(move_damage)	// and do damage according to how fast the train is going
+			else
+				M.apply_damages(move_damage / 3)	// Lower damage because it stops it
 
 			// cab sounds
 			playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)

@@ -167,6 +167,7 @@
 		prob(35);/mob/living/simple_mob/clowns/big/longface,
 		prob(75);/mob/living/simple_mob/animal/space/carp/large,
 		prob(5);/mob/living/simple_mob/vore/otie/syndicate,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/flesh,
 		// Troidin
 		prob(75);/mob/living/simple_mob/metroid/juvenile/baby,
 		prob(55);/mob/living/simple_mob/metroid/juvenile/alpha,
