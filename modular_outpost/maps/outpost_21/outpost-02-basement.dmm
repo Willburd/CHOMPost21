@@ -28755,6 +28755,9 @@
 	pixel_x = -8;
 	pixel_y = 30
 	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "aZU" = (
@@ -47172,6 +47175,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
 "bHk" = (
@@ -53084,6 +53090,9 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
@@ -62397,6 +62406,15 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
+"coN" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = -32
+	},
+/obj/structure/cable/orange,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
 "coO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -63431,6 +63449,53 @@
 /obj/effect/mist,
 /turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/gizzard)
+"crK" = (
+/obj/structure/cable/orange{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"crL" = (
+/obj/structure/cable/orange{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
+"crM" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = -32
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/maintenance/cave)
+"crN" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
+"crO" = (
+/obj/structure/cable/orange{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
 "csG" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
@@ -68546,6 +68611,9 @@
 "iAF" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "iAI" = (
@@ -71949,6 +72017,9 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "mdx" = (
@@ -73136,6 +73207,9 @@
 	layer = 4;
 	pixel_y = -32
 	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "nLz" = (
@@ -73752,6 +73826,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
@@ -74379,6 +74456,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/ai_status_display{
 	pixel_y = -32
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
@@ -102751,8 +102831,8 @@ aHq
 bcz
 aHq
 clf
-wrE
-drJ
+crK
+coN
 aXN
 coO
 bvA
@@ -121856,7 +121936,7 @@ aWQ
 aMW
 bAR
 bZJ
-ibC
+crM
 alY
 aPF
 aPF
@@ -122018,7 +122098,7 @@ xSM
 aMW
 bAm
 eQG
-bAm
+crN
 alY
 cln
 aPF
@@ -122990,7 +123070,7 @@ aWT
 aVN
 qXV
 lOX
-lOX
+crO
 lOX
 lOX
 lOX
@@ -123153,7 +123233,7 @@ aVN
 aXR
 lOX
 lOX
-lOX
+crL
 lOX
 afU
 lOX
