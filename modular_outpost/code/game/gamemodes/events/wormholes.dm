@@ -10,5 +10,4 @@
 		P.icon_state = "rift"
 		P.return_portal = is_return_portal
 		P.set_light(4, 9, "#d678d7")
-	spawn(rand(min_duration,max_duration))
-		qdel(P)
+	QDEL_IN(P, rand(min_duration,max_duration))

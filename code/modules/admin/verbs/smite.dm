@@ -242,6 +242,9 @@ var/redspace_abduction_z
 	dynamic_lighting = FALSE
 
 /proc/redspace_abduction(mob/living/target, user)
+	// Outpost 21 edit begin - Use our redspace
+	send_to_redspace(target)
+	/*
 	if(redspace_abduction_z < 0)
 		to_chat(user,span_warning("The abduction z-level is already being created. Please wait."))
 		return
@@ -321,6 +324,8 @@ var/redspace_abduction_z
 	to_chat(user, span_notice("The mob has been moved. ([admin_jump_link(target, check_rights_for(usr.client, R_HOLDER))])"))
 
 	target.transforming = FALSE
+	*/
+	// Outpost 21 edit end
 
 /proc/fake_autosave(var/mob/living/target, var/client/user, var/wide)
 	if(!istype(target) || !target.client)

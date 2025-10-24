@@ -201,8 +201,13 @@
 		name = (material.get_edge_damage() * force_divisor > 15) ?  "[material.display_name] razor wire" : "[material.display_name] [initial(name)]"
 
 /obj/item/material/barbedwire/start_active
-	icon_state = "barbedwire-out"
 	anchored = TRUE
+
+// Outpost 21 edit(port) begin - Fixed icon vanishing
+/obj/item/material/barbedwire/start_active/Initialize(mapload, material_key)
+	. = ..()
+	update_icon()
+// Outpost 21 edit ned
 
 /obj/item/material/barbedwire/proc/can_use(mob/user)
 	return (user.IsAdvancedToolUser() && !issilicon(user) && !user.stat && !user.restrained())
@@ -264,6 +269,12 @@
 			if(!shock(user, 100, pick(BP_L_HAND, BP_R_HAND)))
 				playsound(src, W.usesound, 100, 1)
 				inc_damage *= 3
+				// Outpost 21 edit begin - Need gloves to safely remove this
+				var/mob/living/carbon/human/H = user
+				if(istype(H) && !H.gloves)
+					if(H.apply_damage(force, BRUTE, pick(BP_R_HAND, BP_L_HAND), 0, 0, sharp, edge, src))
+						to_chat(H, span_danger("You cut your unprotected hands as you attempt to remove \the [src]!"))
+				// Outpost 21 edit end
 
 		if(W.damtype != BRUTE)
 			inc_damage *= 0.3
@@ -399,11 +410,13 @@
 				return
 			check -= picked
 
+	/* Outpost 21 edit - Disable breaking on crossing
 	if(material.is_brittle() && prob(material.hardness))
 		health = 0
 	else if(!prob(material.hardness))
 		health--
 	check_health()
+	*/
 
 	return
 
