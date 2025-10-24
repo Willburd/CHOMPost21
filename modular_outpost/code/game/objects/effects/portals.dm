@@ -53,7 +53,7 @@
 		var/obj/effect/landmark/L = pick( redexitlist)
 		do_teleport(M, L.loc, 0,local = FALSE, bohsafe = TRUE)
 	else
-		do_teleport(M, get_turf(src), 1)  // fail...
+		do_teleport(M, get_turf(M), 1)  // fail...
 
 	// passout on return to reality
 	if(ishuman(M))
