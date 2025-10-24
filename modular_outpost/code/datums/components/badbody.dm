@@ -8,6 +8,7 @@
 	VAR_PRIVATE/start_x = 0
 	VAR_PRIVATE/start_y = 0
 	VAR_PRIVATE/walk_mode = FALSE
+	VAR_PRIVATE/can_lunge = TRUE
 
 /datum/component/badbody/Initialize()
 	if(!ishuman(parent))
@@ -17,6 +18,9 @@
 	start_y = body.loc.y
 	body.SetSpecialVoice("Unknown") // Hide voice at first
 	body.stat = DEAD
+	var/area/A = get_area(body)
+	if(istype(A, /area/specialty)) // Redspace returns don't lunge
+		can_lunge = FALSE
 	RegisterSignal(body, COMSIG_LIVING_LIFE, PROC_REF(process_component))
 
 /datum/component/badbody/Destroy(force = FALSE)
@@ -129,7 +133,7 @@
 /datum/component/badbody/proc/do_a_spooky()
 	// Anticheeze
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in orange(2,get_turf(body))
-	if(prob(60) && H)
+	if(prob(60) && H && can_lunge)
 		var/turf/T = get_turf(body)
 		T.visible_message("The body lunges at \the [H] and explodes into gore!")
 		var/area/A = get_area(body)
