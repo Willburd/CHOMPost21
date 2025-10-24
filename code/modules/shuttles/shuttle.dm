@@ -321,6 +321,11 @@
 					continue
 				if(isobserver(AM) || isEye(AM))
 					continue
+				// Outpost 21 edit(port) begin - multi-loc objects need to check if it's their actual loc, and not just a corner!
+				if(AM.locs.len > 1)
+					if(AM.loc != dst_turf)
+						continue
+				// Outpost 21 edit end
 				if(isliving(AM))
 					var/mob/living/bug = AM
 					if(bluespace || !bug.is_incorporeal()) // Outpost 21 edit - shuttles that don't gib phased shadekin
