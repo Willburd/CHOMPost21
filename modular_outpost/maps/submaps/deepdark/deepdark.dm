@@ -987,22 +987,7 @@
 			if(!AM.can_fall()) // flying checks
 				return
 		if(ismob( A))
-			var/mob/M = A
-			var/list/redexitlist = list()
-			for(var/obj/effect/landmark/R in GLOB.landmarks_list)
-				if(R.name == "redexit")
-					redexitlist += R
-
-			if(redexitlist.len > 0)
-				var/obj/effect/landmark/L = pick( redexitlist)
-				do_teleport(M, L.loc, 0,local = FALSE)
-				to_chat( A, span_danger(death_message))
-				// passout on return to reality
-				if(ishuman(M))
-					var/mob/living/carbon/human/H = M
-					H.AdjustSleeping(15)
-					H.AdjustWeakened(3)
-					H.adjustHalLoss(-9)
+			send_to_realspace(A, FALSE)
 
 /turf/simulated/deathdrop/foundation
 	death_message = "You fall into the darkness, the huge tension cables that secure the foundations of the outpost to the rock beneath it battering your body before you slam into the machinery beneath. There is nothing left of you except the bloody dent in the tensioning equipment."
