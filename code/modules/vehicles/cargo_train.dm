@@ -62,7 +62,7 @@
 		return FALSE
 
 	//space check ~no flying space trains sorry
-	if(on && istype(newloc, /turf/space))
+	if(on && isnonsolidturf(newloc))
 		return FALSE
 
 	return ..()
@@ -156,7 +156,7 @@
 		verbs += /obj/vehicle/train/engine/verb/stop_engine
 
 /obj/vehicle/train/RunOver(var/mob/living/M)
-	if(pulledby == M) // Don't destroy people pulling vehicles up stairs, Also why is this base train vehicle proc in the cargo train file? I spent hours running in circles for this - Willbird
+	if(pulledby == M) // Don't destroy people pulling vehicles up stairs
 		return
 
 	var/list/parts = list(BP_HEAD, BP_TORSO, BP_L_LEG, BP_R_LEG, BP_L_ARM, BP_R_ARM)
