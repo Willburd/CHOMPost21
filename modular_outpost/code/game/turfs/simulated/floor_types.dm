@@ -39,6 +39,14 @@
 	spawn(0)
 		if(A.is_incorporeal())
 			return
+		// Outpost 21 edit(port) begin - multi-loc objects need to check if it's their actual loc, and not just a corner!
+		if(!istype(src,/turf/simulated/deathdrop)) // If we stopped being a death drop, shuttles etc
+			return
+		if(ismovable(A))
+			var/atom/movable/AM = A
+			if(AM.locs.len > 1 && AM.loc != src)
+				return
+		// Outpost 21 edit end
 		if(istype( A, /atom/movable))
 			var/atom/movable/AM = A
 			if(!AM.can_fall()) // flying checks
