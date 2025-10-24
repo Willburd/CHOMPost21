@@ -78,7 +78,7 @@
 		return FALSE
 
 	//space check ~no flying space trains sorry
-	if(on && isopenturf(newloc))
+	if(on && isnonsolidturf(newloc))
 		return FALSE
 
 	return ..()
