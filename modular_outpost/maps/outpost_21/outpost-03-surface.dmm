@@ -11549,6 +11549,9 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_airlock)
 "aKs" = (
@@ -11918,9 +11921,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
@@ -31844,6 +31844,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "hmY" = (
@@ -43404,6 +43407,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
 "kGr" = (
@@ -54543,6 +54549,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "oem" = (
@@ -56291,9 +56300,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
@@ -62389,9 +62395,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "qHe" = (
@@ -67706,9 +67709,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
@@ -70275,6 +70275,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
