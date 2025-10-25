@@ -11677,9 +11677,7 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/publicgarden)
 "eTR" = (
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input,
 /obj/structure/cable/cyan,
 /obj/machinery/light{
 	dir = 8
@@ -34348,9 +34346,7 @@
 	},
 /area/mine/unexplored/muriki/mountaintopeast)
 "qBZ" = (
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input,
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
 	},
@@ -47228,9 +47224,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "wWf" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Arrivals";
-	input_attempt = 1
+/obj/machinery/power/smes/buildable/max_input{
+	RCon_tag = "Substation - Arrivals"
 	},
 /obj/structure/cable/green,
 /obj/structure/cable/green{
