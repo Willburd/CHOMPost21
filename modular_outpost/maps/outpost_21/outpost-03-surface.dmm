@@ -2794,9 +2794,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "adZ" = (
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
@@ -3469,10 +3467,8 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_three)
 "afh" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Engineering";
-	input_attempt = 1;
-	input_available = 1
+/obj/machinery/power/smes/buildable/max_input{
+	RCon_tag = "Substation - Engineering"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -10550,6 +10546,22 @@
 "atw" = (
 /turf/simulated/floor/outdoors/ice/dark_smooth/turfpack/muriki,
 /area/muriki/grounds/engi)
+"atx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/item/radio/beacon,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/main)
 "aty" = (
 /obj/machinery/trailblazer/yellow,
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
@@ -11527,9 +11539,6 @@
 	},
 /obj/machinery/light{
 	dir = 1
-	},
-/obj/machinery/computer/security/telescreen/bodycamera{
-	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -28797,16 +28806,15 @@
 	dir = 9
 	},
 /obj/structure/table/rack,
-/obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
-/obj/item/implanter,
-/obj/item/implantpad,
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -28
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/implanter/compliance,
+/obj/item/implant/compliance,
+/obj/item/implant/compliance,
+/obj/item/implant/compliance,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "gpj" = (
@@ -40593,10 +40601,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
-"jPo" = (
-/obj/machinery/door/airlock/angled_tgmc,
-/turf/simulated/floor/tiled/milspec,
-/area/mine/unexplored/muriki/mountaineast)
 "jPs" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -50000,10 +50004,10 @@
 	req_access = list(2);
 	dir = 2
 	},
-/obj/item/melee/baton/stunstaff,
-/obj/item/melee/baton/stunstaff,
-/obj/item/melee/baton/stunstaff,
-/obj/item/melee/baton/stunstaff,
+/obj/item/storage/backpack/stunstaff,
+/obj/item/storage/backpack/stunstaff,
+/obj/item/storage/backpack/stunstaff,
+/obj/item/storage/backpack/stunstaff,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "mGh" = (
@@ -136647,7 +136651,7 @@ czI
 bZv
 ihq
 kjG
-qxZ
+atx
 wJz
 czI
 czI
@@ -148859,7 +148863,7 @@ wXi
 rJa
 wgY
 wgY
-jPo
+aoG
 aBU
 aBU
 sXQ

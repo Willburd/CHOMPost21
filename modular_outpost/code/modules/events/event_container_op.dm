@@ -40,12 +40,9 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Failure",			/datum/event/gravity,	 				2,		null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				5,		null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					3,		null, FALSE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Prison Break",				/datum/event/prison_break,				3,		null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 3)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				4,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				4,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					4,		null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Virology Breach",			/datum/event/prison_break/virology,		1,		null, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Xenobiology Breach",		/datum/event/prison_break/xenobiology,	1,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Spider Infestation",		/datum/event/spider_infestation, 		5,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grub Infestation",			/datum/event/grub_infestation,			5,		null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Drone Pod Drop",			/datum/event/drone_pod_drop,			4,		null, FALSE),
@@ -64,6 +61,8 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Disposal Damage",			/datum/event/disposal_damage,			1,		null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Random Borg Laws",			/datum/event/law_reset,					1, 		null, TRUE, min_jobs = list(JOB_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bsa Test",					/datum/event/bsa_test_fire, 			3,		null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hostile Runtime", 			/datum/event/hostile_runtime, 			1, 		null, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Lockers", 		/datum/event/bluespace_locker, 			1, 		null, TRUE),
 	)
 	add_disabled_events(list(
 	))
@@ -72,8 +71,8 @@
 	available_events = list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Nothing",				/datum/event/nothing						,5),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meteor Wave",			/datum/event/meteor_wave					,2	, null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Meaty Ores Wave", 	/datum/event/meteor_wave/meatyores			,1	, null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Carp Migration",		/datum/event/carp_migration					,4	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 3)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Containment Breach",	/datum/event/prison_break/station			,2	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jellyfish Migration",	/datum/event/jellyfish_migration			,4	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disease Outbreak",	/datum/event/disease_outbreak				,1	, null, TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Chu Infestation",		/datum/event/chu_infestation				,1	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 1)),
@@ -93,7 +92,9 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blood Writing",		/datum/event/dirty_room/cult				,1	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Fire",		/datum/event/electrical_fire				,5	, null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Security Advisement",	/datum/event/security_drill					,5	, null, FALSE, min_jobs = list(DEPARTMENT_SECURITY = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Storm",	/datum/event/electrical_storm				,5	, null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Septic Explosion",	/datum/event/septic_explosion				,1	, null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Hostile Runtime", 	/datum/event/hostile_runtime				,1  , null, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,1	, null, FALSE, min_jobs = list(JOB_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "All Is Clean",		/datum/event/allisclean						,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Engineering",	/datum/event/bluespace_shelling/engineering	,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
