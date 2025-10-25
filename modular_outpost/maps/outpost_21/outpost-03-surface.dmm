@@ -2794,9 +2794,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "adZ" = (
-/obj/machinery/power/smes/buildable/point_of_interest{
-	input_attempt = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
@@ -3469,10 +3467,8 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_three)
 "afh" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Engineering";
-	input_attempt = 1;
-	input_available = 1
+/obj/machinery/power/smes/buildable/max_input{
+	RCon_tag = "Substation - Engineering"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -40605,10 +40601,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
-"jPo" = (
-/obj/machinery/door/airlock/angled_tgmc,
-/turf/simulated/floor/tiled/milspec,
-/area/mine/unexplored/muriki/mountaineast)
 "jPs" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -148871,7 +148863,7 @@ wXi
 rJa
 wgY
 wgY
-jPo
+aoG
 aBU
 aBU
 sXQ
