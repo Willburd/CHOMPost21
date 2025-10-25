@@ -12687,7 +12687,7 @@
 	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
 	},
 /turf/simulated/floor/outdoors/snow/roofing,
-/area/muriki/skyline/east)
+/area/muriki/skyline/west)
 "fxX" = (
 /obj/item/toy/figure/bounty_hunter,
 /turf/simulated/floor/plating,
@@ -18066,9 +18066,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
-"ipH" = (
-/turf/simulated/mineral/alt/ignore_mapgen,
-/area/mine/unexplored/muriki/mountaintopeast)
 "iqa" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 1
@@ -109436,7 +109433,7 @@ pEi
 pEi
 pEi
 pEi
-ipH
+pEi
 hIk
 hIk
 hIk

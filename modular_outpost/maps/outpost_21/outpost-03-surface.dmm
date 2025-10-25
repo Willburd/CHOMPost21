@@ -40601,10 +40601,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
-"jPo" = (
-/obj/machinery/door/airlock/angled_tgmc,
-/turf/simulated/floor/tiled/milspec,
-/area/mine/unexplored/muriki/mountaineast)
 "jPs" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -148867,7 +148863,7 @@ wXi
 rJa
 wgY
 wgY
-jPo
+aoG
 aBU
 aBU
 sXQ
