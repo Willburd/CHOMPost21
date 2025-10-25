@@ -33486,6 +33486,17 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/standard,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implantcase/tracking,
+/obj/item/implanter,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/security/surgery)
 "biI" = (

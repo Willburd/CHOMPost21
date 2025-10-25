@@ -10550,6 +10550,22 @@
 "atw" = (
 /turf/simulated/floor/outdoors/ice/dark_smooth/turfpack/muriki,
 /area/muriki/grounds/engi)
+"atx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/item/radio/beacon,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/main)
 "aty" = (
 /obj/machinery/trailblazer/yellow,
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
@@ -11527,9 +11543,6 @@
 	},
 /obj/machinery/light{
 	dir = 1
-	},
-/obj/machinery/computer/security/telescreen/bodycamera{
-	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -28797,16 +28810,15 @@
 	dir = 9
 	},
 /obj/structure/table/rack,
-/obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
-/obj/item/implanter,
-/obj/item/implantpad,
 /obj/machinery/light_switch{
 	dir = 4;
 	pixel_x = -28
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/implanter/compliance,
+/obj/item/implant/compliance,
+/obj/item/implant/compliance,
+/obj/item/implant/compliance,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "gpj" = (
@@ -50000,10 +50012,10 @@
 	req_access = list(2);
 	dir = 2
 	},
-/obj/item/melee/baton/stunstaff,
-/obj/item/melee/baton/stunstaff,
-/obj/item/melee/baton/stunstaff,
-/obj/item/melee/baton/stunstaff,
+/obj/item/storage/backpack/stunstaff,
+/obj/item/storage/backpack/stunstaff,
+/obj/item/storage/backpack/stunstaff,
+/obj/item/storage/backpack/stunstaff,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "mGh" = (
@@ -136647,7 +136659,7 @@ czI
 bZv
 ihq
 kjG
-qxZ
+atx
 wJz
 czI
 czI

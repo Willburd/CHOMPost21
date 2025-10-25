@@ -688,6 +688,12 @@
 "abv" = (
 /turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/disposal)
+"abw" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/boxing/gym,
+/area/security/brig/lowobservation)
 "abx" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
@@ -861,6 +867,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/med)
+"abS" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/boxing/gym,
+/area/security/brig/lowobservation)
 "abT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1696,6 +1706,12 @@
 	},
 /turf/simulated/floor/outdoors/snow/roofing,
 /area/muriki/rooftop/engineering)
+"adL" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/boxing/gym,
+/area/security/brig/lowobservation)
 "adM" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -6409,6 +6425,7 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "cmS" = (
@@ -7061,6 +7078,9 @@
 	},
 /obj/structure/railing/grey{
 	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
 	},
 /turf/simulated/floor/boxing/gym,
 /area/security/brig/lowobservation)
@@ -12353,6 +12373,9 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
 /turf/simulated/floor/boxing/gym,
 /area/security/brig/lowobservation)
 "fpp" = (
@@ -14466,6 +14489,9 @@
 /area/rnd/rdoffice)
 "gyX" = (
 /obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
 /turf/simulated/floor/boxing/gym,
@@ -21667,6 +21693,9 @@
 /area/maintenance/medbay_fore)
 "kdx" = (
 /obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
 /turf/simulated/floor/boxing/gym,
@@ -31778,6 +31807,9 @@
 	},
 /obj/structure/railing/grey{
 	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
 	},
 /turf/simulated/floor/boxing/gym,
 /area/security/brig/lowobservation)
@@ -84990,7 +85022,7 @@ kdx
 kdx
 kdx
 kdx
-pfq
+abw
 wWk
 goV
 goV
@@ -85152,7 +85184,7 @@ pfq
 pfq
 pfq
 pfq
-pfq
+abS
 wWk
 goV
 goV
@@ -85314,7 +85346,7 @@ pfq
 pfq
 pfq
 pfq
-pfq
+abS
 wWk
 goV
 goV
@@ -85476,7 +85508,7 @@ pfq
 pfq
 pfq
 pfq
-pfq
+abS
 wWk
 goV
 goV
@@ -85638,7 +85670,7 @@ pfq
 pfq
 pfq
 pfq
-pfq
+abS
 wWk
 goV
 goV
@@ -85800,7 +85832,7 @@ foG
 foG
 foG
 foG
-pfq
+adL
 wWk
 goV
 goV
