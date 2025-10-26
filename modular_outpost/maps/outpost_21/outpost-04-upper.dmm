@@ -9838,7 +9838,6 @@
 "ebg" = (
 /obj/machinery/door/airlock/glass_research{
 	name = "Phoronics";
-	req_access = list(8);
 	req_one_access = list(8,47,52)
 	},
 /obj/machinery/door/blast/regular/open{
@@ -15599,7 +15598,6 @@
 "hcA" = (
 /obj/machinery/door/airlock/glass_research{
 	name = "Phoronics";
-	req_access = list(8);
 	req_one_access = list(8,47,52)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -24097,7 +24095,6 @@
 	},
 /obj/machinery/door/airlock/glass_research{
 	name = "Phoronics";
-	req_access = list(8);
 	req_one_access = list(8,47,52)
 	},
 /obj/structure/disposalpipe/segment,
@@ -27020,6 +27017,10 @@
 /obj/item/toy/plushie/borgplushie/drake/med{
 	name = "Prae Prae";
 	desc = "An adorable stuffed toy of a familiar robot!"
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Break East";
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
@@ -32287,7 +32288,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/airlock/glass_research{
 	name = "Phoronics";
-	req_access = list(8);
 	req_one_access = list(8,47,52)
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -40140,6 +40140,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/item/reagent_containers/food/drinks/drinkingglass{
+	pixel_x = 12
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
 "ttl" = (
@@ -41803,6 +41806,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
 	},
+/mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "uil" = (
@@ -45419,6 +45423,10 @@
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 26
+	},
+/obj/machinery/camera/network/medbay{
+	dir = 8;
+	c_tag = "MED - Break East"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)

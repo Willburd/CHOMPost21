@@ -16196,6 +16196,17 @@
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
+"aDn" = (
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/turf/simulated/floor/greengrid,
+/area/muriki/crew/vr_train)
 "aDo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -21444,15 +21455,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay4)
-"aMJ" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
-/obj/structure/bed/chair/wood/wings{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "aMK" = (
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 10
@@ -21875,13 +21877,6 @@
 	},
 /turf/simulated/wall,
 /area/medical/surgtrain)
-"aNx" = (
-/obj/structure/bed/chair/wood/wings{
-	dir = 1;
-	name = "Prosecutions Chair"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "aNy" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -21972,11 +21967,28 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/crew/judge)
 "aNJ" = (
-/turf/simulated/wall,
-/area/muriki/bathroom/courthouse)
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
 "aNK" = (
-/turf/simulated/wall/r_wall,
-/area/muriki/bathroom/courthouse)
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Courtroom"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
 "aNL" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/cargo)
@@ -22531,11 +22543,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "aOA" = (
-/obj/structure/table/woodentable,
-/obj/item/megaphone/super{
-	desc = "Order in the court!";
-	name = "Gaveltron 3000"
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
@@ -22543,102 +22550,90 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/obj/structure/table/rack,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aOB" = (
-/obj/structure/table/woodentable,
 /obj/machinery/light{
 	dir = 1
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/material/ashtray/plastic,
-/obj/item/taperecorder,
-/obj/item/rectape,
-/obj/item/rectape,
-/obj/item/rectape,
-/obj/item/rectape,
-/obj/item/rectape,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/structure/table/rack,
+/obj/fiftyspawner/plastic{
+	pixel_x = -12
+	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aOC" = (
-/obj/item/storage/secure/safe{
-	pixel_x = 6;
-	pixel_y = 28
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/fiftyspawner/bcarpet,
+/obj/fiftyspawner/blucarpet,
+/obj/fiftyspawner/blucarpet2,
+/obj/fiftyspawner/brncarpet,
+/obj/structure/closet/crate,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aOD" = (
-/obj/structure/closet/secure_closet/courtroom,
-/obj/item/clothing/head/philosopher_wig,
-/obj/item/clothing/suit/judgerobe,
-/obj/item/gun/projectile/revolver/judge,
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/fiftyspawner/greencarpet,
+/obj/fiftyspawner/oracarpet,
+/obj/fiftyspawner/purcarpet,
+/obj/fiftyspawner/purplecarpet,
+/obj/fiftyspawner/sblucarpet,
+/obj/fiftyspawner/tealcarpet,
+/obj/fiftyspawner/turcarpet,
+/obj/structure/closet/crate,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aOE" = (
-/obj/structure/closet/secure_closet/courtroom,
-/obj/item/clothing/head/philosopher_wig,
-/obj/item/clothing/suit/judgerobe,
-/obj/item/clothing/head/turban,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 5
-	},
 /obj/machinery/camera/network/command{
 	c_tag = "COM - Judge's Office"
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/floor_painter,
+/obj/item/lightpainter,
+/obj/structure/table/rack,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aOF" = (
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
-	},
-/obj/structure/mirror{
-	dir = 4;
-	pixel_x = -28
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/courthouse)
-"aOG" = (
-/obj/structure/toilet{
-	dir = 8
-	},
-/obj/machinery/light/small{
+/obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
+/obj/machinery/light{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/courthouse)
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
+"aOG" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
 "aOH" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance/int,
@@ -23032,113 +23027,24 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/med)
 "aPo" = (
-/obj/structure/table/woodentable,
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -36
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
-/obj/item/paper_bin{
-	pixel_y = 3
-	},
-/obj/item/pen,
-/turf/simulated/floor/wood,
-/area/muriki/crew/judge)
-"aPp" = (
-/obj/structure/bed/chair/wood/wings{
 	dir = 8
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
-"aPq" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
+"aPp" = (
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
-"aPr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/wood,
-/area/muriki/crew/judge)
-"aPs" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/spline/fancy/wood/corner,
+"aPv" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
+/obj/effect/floor_decal/spline/fancy/wood/corner,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
-"aPt" = (
-/obj/machinery/door/airlock{
-	name = "Judge's Dreadbox"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel_ridged,
-/area/muriki/bathroom/courthouse)
-"aPu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/courthouse)
-"aPv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 6
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3,
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/courthouse)
 "aPw" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/engi,
@@ -23374,14 +23280,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -23395,36 +23293,37 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aPX" = (
-/obj/machinery/door/airlock/command{
-	name = "Judge"
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel_grid,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/crew/judge)
 "aPY" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/muriki/crew/judge)
-"aPZ" = (
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
+"aPZ" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/disposal/wall{
 	pixel_y = -32;
@@ -23453,12 +23352,6 @@
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aQb" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
 /obj/effect/floor_decal/spline/fancy/wood/corner,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
@@ -23467,48 +23360,36 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 25;
+	pixel_y = -28
+	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aQc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 6
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 7;
-	pixel_y = -32;
-	dir = 1
-	},
+/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aQd" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -36
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 8
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/courthouse)
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
 "aQe" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/courthouse)
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
 "aQf" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/small{
@@ -23989,9 +23870,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aRa" = (
-/obj/machinery/door/airlock/command{
-	name = "Judge"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
@@ -24002,29 +23880,11 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock{
+	name = "Multipurpose Storage"
+	},
 /turf/simulated/floor/wood,
-/area/muriki/crew/judge)
-"aRb" = (
-/obj/machinery/shower{
-	dir = 1
-	},
-/obj/structure/curtain/open/shower,
-/obj/effect/floor_decal/spline/plain{
-	dir = 1;
-	icon_state = "spline_plain_full"
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/muriki/bathroom/courthouse)
-"aRc" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/table/standard,
-/obj/item/soap,
-/obj/machinery/light/small,
-/obj/item/towel/random,
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/courthouse)
+/area/crew_quarters/courtroom)
 "aRd" = (
 /obj/random/cutout,
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -24351,21 +24211,6 @@
 /turf/simulated/wall,
 /area/crew_quarters/courtroom)
 "aRV" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aRW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
@@ -24373,16 +24218,14 @@
 /area/crew_quarters/courtroom)
 "aRX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aRY" = (
@@ -24552,102 +24395,16 @@
 "aSw" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/polarized/full{
-	id = "courtroom"
-	},
+/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
-"aSx" = (
-/obj/structure/table/rack,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aSy" = (
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/table/woodentable,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aSz" = (
-/obj/structure/window/basic,
-/obj/structure/bed/chair/bay/comfy/captain{
-	name = "Judges Chair"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "aSA" = (
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/table/woodentable,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 1
-	},
-/obj/item/taperecorder,
-/obj/item/rectape,
-/obj/item/rectape,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aSB" = (
-/obj/structure/bed/chair/wood/wings{
-	name = "Witness Chair"
-	},
-/obj/structure/sign/scenery/map/left_outpost21{
-	pixel_y = 32
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aSC" = (
-/obj/structure/sign/scenery/map/right_outpost21{
-	pixel_y = 32
-	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Courtroom"
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aSD" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aSE" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
@@ -24847,17 +24604,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aSY" = (
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aSZ" = (
-/obj/structure/table/woodentable,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aTa" = (
-/obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aTb" = (
@@ -25095,11 +24841,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aTu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
@@ -25114,6 +24860,9 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/landmark{
+	name = "blobstart"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aTw" = (
@@ -25245,9 +24994,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
 "aTL" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
 /obj/machinery/light{
 	dir = 4
 	},
@@ -25460,12 +25206,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/med)
-"aUf" = (
-/obj/structure/bed/chair/wood/wings{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "aUg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -26189,7 +25929,7 @@
 "aVj" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/gold{
-	name = "Court Room"
+	name = "Ceremony Room"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -26222,22 +25962,14 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"aVl" = (
-/obj/structure/table/steel,
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_x = 6;
 	pixel_y = -28
 	},
-/obj/machinery/button/windowtint{
-	id = "courtroom";
-	pixel_y = -28
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
+"aVl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -26254,10 +25986,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aVm" = (
-/obj/structure/bed/chair/bay/comfy/red{
-	dir = 1;
-	name = "Baliff's Chair"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -26279,12 +26007,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aVn" = (
-/obj/structure/bed/chair/wood/wings{
-	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -26305,9 +26027,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aVo" = (
-/obj/structure/bed/chair/wood/wings{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -26325,9 +26044,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aVp" = (
-/obj/structure/bed/chair/wood/wings{
-	dir = 1
-	},
 /obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 1;
@@ -26340,10 +26056,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aVq" = (
-/obj/machinery/door/window{
-	dir = 8;
-	name = "jury box"
-	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
@@ -35794,28 +35506,6 @@
 	},
 /turf/simulated/floor,
 /area/security/riot_control)
-"bmQ" = (
-/obj/structure/table/rack,
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
-"bmR" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 5
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "bmS" = (
 /obj/structure/table/glass,
 /obj/machinery/firealarm{
@@ -44978,10 +44668,14 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
 "bDh" = (
-/obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/maintenance/command,
-/turf/simulated/floor/tiled/steel_ridged,
-/area/muriki/bathroom/courthouse)
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/crew/judge)
 "bDi" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -47660,6 +47354,18 @@
 /obj/item/pen/crayon/marker/rainbow,
 /obj/item/pen/crayon/marker/rainbow,
 /obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/rainbow{
+	pixel_x = 11
+	},
+/obj/item/pen/crayon/rainbow{
+	pixel_x = 11
+	},
+/obj/item/pen/crayon/rainbow{
+	pixel_x = 11
+	},
+/obj/item/pen/crayon/rainbow{
+	pixel_x = 11
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bIi" = (
@@ -57178,15 +56884,8 @@
 /area/mine/explored/muriki/liminaltoobs)
 "cbo" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 5
-	},
-/obj/structure/bed/chair/bay/chair/padded{
-	dir = 8
-	},
+/obj/machinery/vr_sleeper,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "cbp" = (
@@ -63512,6 +63211,86 @@
 /obj/item/grenade/concussion,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/liminaltoobs)
+"crQ" = (
+/obj/structure/grille,
+/obj/structure/window/basic,
+/turf/simulated/floor/greengrid,
+/area/muriki/crew/vr_train)
+"crR" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/structure/sign/scenery/map/left_outpost21{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
+"crS" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/sign/scenery/map/right_outpost21{
+	pixel_y = 32
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
+"crT" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
+"crU" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
+"crV" = (
+/turf/simulated/wall,
+/area/muriki/crew/judge)
+"crW" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/item/storage/toolbox/mechanical,
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
+"crX" = (
+/obj/machinery/light/small/emergency{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"crY" = (
+/obj/structure/closet,
+/mob/living/simple_mob/vore/alienanimals/jil{
+	name = "Blip";
+	desc = "A fluffy thieving creature that wanders maintenance... Allahu Akmerp"
+	},
+/obj/item/assembly/signaler,
+/obj/item/assembly/signaler,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"crZ" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/maintenance/research/north)
+"csa" = (
+/obj/effect/auto_crayon{
+	icon_state = "down"
+	},
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "csG" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
@@ -64458,16 +64237,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "dEE" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/table/glass,
+/obj/machinery/vr_sleeper,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "dFo" = (
@@ -66794,9 +66569,6 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
-"geR" = (
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/courtroom)
 "ggB" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/black/border,
@@ -67090,6 +66862,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
@@ -68110,13 +67885,6 @@
 	},
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall)
-"hUV" = (
-/obj/structure/bed/chair/wood/wings{
-	dir = 1;
-	name = "Defendants Chair"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "hVM" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -68603,13 +68371,9 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/crew_quarters/courtroom)
 "iyw" = (
 /obj/structure/cable/green{
@@ -69060,19 +68824,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
-"iZb" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/machinery/ai_status_display{
-	pixel_y = 32
-	},
-/obj/structure/bed/chair/bay/chair/padded,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "iZs" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -69694,18 +69445,6 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
-"jCH" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "jCO" = (
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 1
@@ -70807,12 +70546,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/engineering/refinery/pump_station)
 "kJi" = (
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/grille,
-/turf/simulated/floor/greengrid,
+/obj/machinery/vr_sleeper,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "kJj" = (
 /obj/structure/cable/green{
@@ -70948,6 +70685,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/status_display{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
@@ -71141,15 +70881,6 @@
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
-"lbA" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/effect/landmark{
-	name = "blobstart"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "lbF" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 1
@@ -72821,19 +72552,6 @@
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
-"njC" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/structure/bed/chair/bay/chair/padded{
-	dir = 4
-	},
-/obj/item/geiger/wall/north,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "nkg" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -73010,17 +72728,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"nwD" = (
-/obj/structure/table/woodentable,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/item/paper_bin{
-	pixel_y = 3
-	},
-/obj/item/pen,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "nwK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
@@ -73651,14 +73358,6 @@
 /obj/item/stack/rods,
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
-"omJ" = (
-/obj/machinery/vr_sleeper{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/effect/landmark/redspaceexit,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "onl" = (
 /obj/structure/loot_pile/mecha/phazon,
 /obj/effect/decal/cleanable/blood/oil,
@@ -73725,9 +73424,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "orn" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
@@ -74034,12 +73730,10 @@
 "oHG" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/polarized/full{
-	id = "courtroom"
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
 "oID" = (
@@ -74077,13 +73771,6 @@
 /obj/item/bedsheet/reddouble,
 /turf/simulated/floor/wood/alt/parquet,
 /area/muriki/crew/arcade/lasertag)
-"oNl" = (
-/obj/machinery/vr_sleeper{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "oNz" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -74590,14 +74277,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
-"pmo" = (
-/obj/structure/table/woodentable,
-/obj/item/paper_bin{
-	pixel_y = 3
-	},
-/obj/item/pen,
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "pmN" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/sci)
@@ -74727,15 +74406,11 @@
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall)
 "ptZ" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - VR Trainer East"
 	},
+/obj/machinery/vr_sleeper,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "pui" = (
@@ -74853,13 +74528,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "pzn" = (
+/obj/structure/grille,
+/obj/structure/window/basic,
 /obj/structure/window/basic{
 	dir = 1
 	},
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/grille,
 /turf/simulated/floor/greengrid,
 /area/muriki/crew/vr_train)
 "pzA" = (
@@ -75536,12 +75209,13 @@
 /area/muriki/crew/casino)
 "qiI" = (
 /obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/window/basic{
 	dir = 8
 	},
 /obj/structure/grille,
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 1
+	},
 /turf/simulated/floor/greengrid,
 /area/muriki/crew/vr_train)
 "qkp" = (
@@ -76177,20 +75851,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
-"qVy" = (
-/obj/structure/table/woodentable,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
-/obj/item/paper_bin{
-	pixel_y = 3
-	},
-/obj/item/paper_bin{
-	pixel_y = 3
-	},
-/obj/item/pen,
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "qVF" = (
 /obj/effect/floor_decal/flesh,
 /obj/effect/floor_decal/flesh{
@@ -76654,10 +76314,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
-"rsi" = (
-/obj/effect/landmark/redspaceexit,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "rsk" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -76726,18 +76382,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
-"ruy" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 9
-	},
-/obj/structure/bed/chair/bay/chair/padded{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "rvd" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Computer Storage Room West";
@@ -77836,6 +77480,7 @@
 	dir = 8;
 	pixel_x = 7
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "sCm" = (
@@ -78517,14 +78162,12 @@
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "tvn" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
@@ -78864,19 +78507,6 @@
 "tQZ" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/pools/eastfund)
-"tRE" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/obj/machinery/vending/loadout/gadget,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "tRZ" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
@@ -79217,18 +78847,6 @@
 "uoh" = (
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
-"uom" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "uoy" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -79390,16 +79008,11 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/oldbridge)
 "uzC" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/bed/chair/bay/chair/padded,
+/obj/machinery/vr_sleeper,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "uAQ" = (
@@ -79779,18 +79392,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
-"uYc" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/structure/bed/chair/bay/chair/padded{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "uYP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -80998,13 +80599,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
-"woQ" = (
-/obj/machinery/vr_sleeper{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "wqm" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -81634,23 +81228,11 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "wZu" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - VR Trainer West"
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 7;
-	pixel_y = 30
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -8;
-	pixel_y = 30
-	},
+/obj/machinery/vr_sleeper,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "wZz" = (
@@ -82095,19 +81677,6 @@
 "xJd" = (
 /turf/simulated/wall/durasteel,
 /area/maintenance/oldbridge)
-"xKa" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/structure/table/glass,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "xKg" = (
 /obj/item/storage/box/syringes,
 /obj/item/storage/box/syringes,
@@ -82259,14 +81828,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
-"xSe" = (
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/grille,
-/turf/simulated/floor/greengrid,
-/area/muriki/crew/vr_train)
 "xSk" = (
 /obj/random/maintenance,
 /obj/machinery/light/small/emergency/flicker{
@@ -127571,9 +127132,9 @@ cmR
 bUL
 bJG
 bJG
-bMU
-bMU
-bMU
+bJG
+bJG
+bJG
 bMU
 bMU
 bMU
@@ -127732,10 +127293,10 @@ bJG
 cav
 bJG
 bJG
-bMU
-bMU
-bMU
-bMU
+bJG
+crY
+crX
+bJG
 bMU
 bMU
 bMU
@@ -127892,12 +127453,12 @@ bJG
 bJG
 bJG
 bUL
+crZ
+bUL
+crZ
+bUL
+bUL
 bJG
-bMU
-bMU
-bMU
-bMU
-bMU
 bMU
 bMU
 bMU
@@ -128052,14 +127613,14 @@ bJG
 bUL
 caw
 bUL
-cjg
+csa
 bUL
 bJG
-bMU
-bMU
-bMU
-bMU
-bMU
+bJG
+bJG
+bJG
+bJG
+bJG
 bMU
 bMU
 bMU
@@ -128743,7 +128304,7 @@ aKP
 bYp
 aKP
 axL
-axL
+fpG
 fpG
 fpG
 ogB
@@ -128905,9 +128466,9 @@ aKP
 bQY
 aKP
 axL
-axL
 fpG
-ruy
+crQ
+teD
 eDP
 sfF
 lAb
@@ -129067,13 +128628,13 @@ aKP
 bQY
 aKP
 aKP
-axL
 fpG
+crQ
 dEE
 rFZ
-rsi
-woQ
-woQ
+oxh
+oxh
+oxh
 rjB
 rFZ
 opV
@@ -129229,14 +128790,14 @@ aKP
 bQL
 bQK
 aKP
-axL
 fpG
-uYc
+crQ
+teD
 rFZ
 eMH
 qiI
-kJi
 teD
+oxh
 tCD
 kbo
 fpG
@@ -129391,14 +128952,14 @@ aKP
 aKP
 bQY
 aKP
-axL
 fpG
+crQ
 wZu
 rFZ
 eMH
 pzn
-xSe
 teD
+oxh
 gsY
 mJD
 fpG
@@ -129553,13 +129114,13 @@ aKP
 aKP
 bYp
 aKP
-axL
 fpG
-tRE
+crQ
+teD
 rFZ
-oxh
-oNl
-oNl
+eMH
+pzn
+teD
 oxh
 qsJ
 fpG
@@ -129715,13 +129276,13 @@ cbX
 aKP
 bQY
 aKP
-axL
 fpG
+crQ
 uzC
 mYL
-oxh
-oxh
-oxh
+eMH
+pzn
+teD
 oxh
 cRo
 dmm
@@ -129877,13 +129438,13 @@ clE
 clD
 bQY
 aKP
-axL
 fpG
-iZb
+crQ
+teD
 rFZ
-oxh
-woQ
-woQ
+eMH
+pzn
+teD
 oxh
 cRo
 xCj
@@ -130039,14 +129600,14 @@ amq
 aKP
 bQY
 aKP
-axL
 fpG
+crQ
 ptZ
 rFZ
 eMH
-qiI
+pzn
 kJi
-teD
+oxh
 kxH
 tgj
 fpG
@@ -130201,14 +129762,14 @@ axL
 aKP
 clB
 aKP
-axL
 fpG
-njC
+crQ
+teD
 rFZ
 eMH
-pzn
-xSe
+aDn
 teD
+oxh
 oxh
 qXw
 fpG
@@ -130363,13 +129924,13 @@ axL
 aKP
 bQY
 aKP
-axL
 fpG
-xKa
+crQ
+uzC
 rFZ
 oxh
-omJ
-oNl
+oxh
+oxh
 rjB
 oxh
 nQR
@@ -130525,8 +130086,8 @@ aKP
 aKP
 bQY
 aKP
-axL
 fpG
+crQ
 cbo
 kzJ
 gxG
@@ -130687,7 +130248,7 @@ bQC
 bQC
 bQZ
 aKP
-axL
+fpG
 fpG
 fpG
 tIt
@@ -134571,9 +134132,9 @@ amq
 ahC
 ahC
 ahC
-agP
+amq
 aPX
-aNI
+aRU
 aRU
 aSw
 aSw
@@ -134732,16 +134293,16 @@ dQF
 aJc
 aJc
 agP
-agP
-agP
+amq
+amq
 bLT
-aNI
 aRU
-bmQ
+crR
+tOk
 tOk
 fFg
-qVy
-aMJ
+tOk
+tOk
 tOk
 aVk
 aRU
@@ -134897,13 +134458,13 @@ aNI
 aOA
 aPo
 aPY
-aNI
 aRU
-aSx
+crS
+aSY
 aSY
 orn
-aTa
-hUV
+aSY
+aSY
 aSY
 aVl
 aRU
@@ -135059,12 +134620,12 @@ aNI
 aOB
 aPp
 aPZ
-aNI
+aRU
 aRV
-aSy
 aSY
-aTu
-aTa
+aSY
+orn
+aSY
 aSY
 aSY
 aVm
@@ -135219,11 +134780,11 @@ uwl
 nRH
 aNI
 aOC
-aPq
+aPp
 aQa
-aNI
-aRW
-aSz
+aRU
+aRV
+aSY
 aSY
 aTu
 aSY
@@ -135381,14 +134942,14 @@ aJc
 aJc
 aNI
 aOD
-aPr
+aPp
 aQb
 aRa
 aRX
 aSA
-nwD
+aUg
 aTv
-aSZ
+aUg
 aUg
 aUg
 aVo
@@ -135541,17 +135102,17 @@ aJb
 aHV
 aJc
 fCx
-aNI
+crV
 aOE
-aPs
+aPp
 aQc
-aNI
-geR
-aSB
-aTa
+aRU
+aRV
+aSY
+aSY
 aTw
-aTa
-aNx
+aSY
+aSY
 aSY
 aVp
 aRU
@@ -135703,17 +135264,17 @@ pvI
 aJb
 aJc
 fCx
-aNK
+crV
+crW
+aPp
 aNJ
-aPt
-aNJ
+aRU
 aNK
-aNK
-aSC
 aSY
-lbA
-pmo
-aUf
+aSY
+orn
+aSY
+aSY
 aSY
 pdE
 aRU
@@ -135865,18 +135426,18 @@ aJc
 aJc
 aJc
 fCx
-aNK
+crV
 aOF
-aPu
+aPp
 aQd
-aRb
-aNK
-uom
-aSD
-jCH
-aSD
-aSD
-aSD
+aRU
+crT
+aSY
+aSY
+orn
+aSY
+aSY
+aSY
 aVq
 aRU
 aWt
@@ -136027,13 +135588,13 @@ adC
 adC
 adC
 adC
-aNK
+crV
 aOG
 aPv
 aQe
-aRc
-aNK
-bmR
+aRU
+crU
+aSE
 aSE
 tvn
 aTL
@@ -136189,12 +135750,12 @@ adC
 adC
 adC
 adC
-aNK
-aNK
+crV
+crV
 bDh
-aNK
-aNK
-aNK
+crV
+aRU
+aRU
 aRU
 aRU
 iyg
