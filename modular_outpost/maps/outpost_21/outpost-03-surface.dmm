@@ -702,6 +702,14 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
+"abb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
 "abc" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -3646,6 +3654,9 @@
 /area/security/tactical)
 "afv" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "afw" = (
@@ -3833,6 +3844,10 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
@@ -6058,6 +6073,12 @@
 	},
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/tramlinewest)
+"ajm" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
 "ajn" = (
 /obj/random/cutout,
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -6210,6 +6231,9 @@
 	dir = 1
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "ajL" = (
@@ -8208,6 +8232,9 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/item/geiger/wall/south,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "anF" = (
@@ -8240,6 +8267,9 @@
 	},
 /obj/machinery/light,
 /obj/item/geiger/wall/south,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "anI" = (
@@ -10840,6 +10870,17 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
+"aul" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/security/armoury)
+"aum" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
 "aun" = (
 /obj/machinery/conveyor{
 	id = "burnpit"
@@ -10849,6 +10890,49 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
+"auo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
+"aup" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
+"auq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/security/armoury)
+"aur" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/security/armoury)
+"aus" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
+"aut" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/security/armoury)
 "auu" = (
 /obj/structure/table/marble,
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
@@ -10860,6 +10944,115 @@
 /obj/structure/window/basic/full,
 /turf/simulated/floor/plating,
 /area/medical/sleeper)
+"auw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/security/armoury)
+"aux" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
+"auy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
+"auz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/security/armoury)
+"auA" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/security/tactical)
+"auB" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
+"auC" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
+"auD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
+"auE" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
+"auF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
+"auG" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/machinery/disposal/wall/cleaner{
+	dir = 1;
+	name = "FINE DROP OFF";
+	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
+	pixel_y = -36
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
+"auH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/nuke_storage)
 "auJ" = (
 /obj/structure/table/woodentable,
 /obj/item/toy/plushie/borgplushie/drake/sci{
@@ -12014,6 +12207,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "aOg" = (
@@ -14125,6 +14321,10 @@
 "bvd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "bvk" = (
@@ -15346,6 +15546,10 @@
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/lobby)
 "bOX" = (
@@ -16446,6 +16650,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "cgh" = (
@@ -16455,6 +16662,9 @@
 "cgm" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
@@ -16509,6 +16719,10 @@
 /obj/effect/floor_decal/corner/blue,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled,
@@ -17140,6 +17354,10 @@
 /obj/effect/landmark{
 	name = "xeno_spawn";
 	pixel_x = -1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -19964,6 +20182,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "dnE" = (
@@ -21563,6 +21784,10 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -24368,6 +24593,9 @@
 /area/medical/sleeper)
 "eLa" = (
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "eLh" = (
@@ -25900,6 +26128,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "fmb" = (
@@ -26565,6 +26794,10 @@
 "fBx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
@@ -29416,6 +29649,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "gxW" = (
@@ -30638,11 +30874,15 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "gUl" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
@@ -32080,6 +32320,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "hoE" = (
@@ -33827,6 +34068,7 @@
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "hPn" = (
@@ -33861,6 +34103,7 @@
 	name = "Vault Blast Door"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/nuke_storage)
 "hPw" = (
@@ -35696,6 +35939,7 @@
 	req_one_access = list(1,40)
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/armor)
 "ipG" = (
@@ -36559,6 +36803,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/tactical)
 "iDi" = (
@@ -36786,6 +37031,10 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "2-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -40079,6 +40328,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "jFD" = (
@@ -40828,6 +41078,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "jQM" = (
@@ -41172,6 +41423,10 @@
 	dir = 5
 	},
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "jWh" = (
@@ -42571,6 +42826,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "kqF" = (
@@ -43104,6 +43360,7 @@
 	layer = 4;
 	pixel_x = 32
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "kzL" = (
@@ -43326,6 +43583,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
 "kDS" = (
@@ -44003,6 +44261,7 @@
 	pixel_x = 32
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "kNP" = (
@@ -44969,6 +45228,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "les" = (
@@ -45123,6 +45386,10 @@
 	icon_state = "2-8"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "lhL" = (
@@ -45347,6 +45614,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
@@ -46704,6 +46975,7 @@
 	icon_state = "5-10"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "lEn" = (
@@ -47192,6 +47464,9 @@
 	pixel_y = -26
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "lNE" = (
@@ -51393,6 +51668,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "ndG" = (
@@ -52709,6 +52985,10 @@
 /obj/structure/closet/crate/secure{
 	name = "Bulleon Crate";
 	req_one_access = list(19,53,58)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -55261,6 +55541,10 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "oqR" = (
@@ -61987,6 +62271,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-10"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "qAc" = (
@@ -62456,6 +62743,9 @@
 "qHo" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -64290,6 +64580,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "rls" = (
@@ -65036,6 +65330,7 @@
 	dir = 8
 	},
 /obj/item/geiger/wall/east,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "rxK" = (
@@ -65200,6 +65495,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "rBO" = (
@@ -65849,6 +66145,10 @@
 	dir = 10
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "rOa" = (
@@ -66090,6 +66390,9 @@
 	req_one_access = list(1,3,19)
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/armoury)
 "rRF" = (
@@ -66984,6 +67287,10 @@
 "sdH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
@@ -72765,6 +73072,10 @@
 /area/medical/stairwell)
 "tUw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "tUH" = (
@@ -72910,6 +73221,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "tWD" = (
@@ -75123,6 +75435,10 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "uFr" = (
@@ -75445,6 +75761,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/armor)
 "uJK" = (
@@ -78431,6 +78748,10 @@
 /area/security/kennels)
 "vFn" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_small_r,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "vFz" = (
@@ -80069,6 +80390,10 @@
 	icon_state = "0-2"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "wcF" = (
@@ -81410,6 +81735,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "wvZ" = (
@@ -82662,6 +82988,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-5"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "wSx" = (
@@ -82722,6 +83049,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
@@ -84935,6 +85265,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "xCg" = (
@@ -85073,12 +85406,6 @@
 	},
 /turf/simulated/floor/carpet/blue,
 /area/medical/psych)
-"xEk" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/security/armor)
 "xEp" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/structure/bed/chair/office/dark{
@@ -86616,6 +86943,10 @@
 /obj/item/gun/projectile/silenced,
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
@@ -124571,7 +124902,7 @@ fZn
 myz
 uuQ
 xBV
-aVq
+auH
 crt
 qHo
 myz
@@ -124902,7 +125233,7 @@ myz
 lAj
 xjm
 wNw
-hMg
+lzd
 svz
 qjX
 jUc
@@ -125712,12 +126043,12 @@ krW
 auc
 iKH
 dPJ
-ylH
+auE
 ipz
 kzI
 kNL
 hnZ
-nNi
+auD
 rNT
 eCt
 iId
@@ -126046,8 +126377,8 @@ anE
 iId
 qOa
 rla
-ffV
-ffV
+aux
+aux
 wSs
 rBJ
 uEQ
@@ -126204,14 +126535,14 @@ izL
 xMw
 nZx
 nNi
-rNT
+auB
 xVT
 rGx
 gUl
-tUw
+auy
 lDM
-tUw
-tUw
+aum
+aum
 tUw
 xJI
 tDX
@@ -126368,7 +126699,7 @@ xOX
 nNi
 lhH
 iDe
-uEQ
+auA
 lln
 qAb
 fYn
@@ -126694,7 +127025,7 @@ iqL
 fYz
 nqW
 lef
-ffV
+aup
 pHI
 hCd
 anr
@@ -126856,11 +127187,11 @@ osI
 iId
 bjA
 sdH
-yfH
-yfH
-yfH
-yfH
-yfH
+abb
+auo
+abb
+auo
+abb
 yfH
 fqN
 qTJ
@@ -127018,11 +127349,11 @@ akI
 iId
 bJE
 xty
-ffV
-ffV
-ffV
-ffV
-ffV
+aus
+aup
+aus
+aup
+ajm
 qsR
 iId
 xNH
@@ -127184,7 +127515,7 @@ nhE
 uBV
 ooT
 naQ
-ffV
+ajm
 iId
 iId
 jJo
@@ -127508,7 +127839,7 @@ sKe
 sNN
 iKp
 vCz
-htv
+aul
 wao
 xBK
 mkW
@@ -127670,7 +128001,7 @@ bKU
 xCg
 aWI
 bwt
-htv
+aul
 htv
 htv
 htv
@@ -127827,11 +128158,11 @@ oJu
 jOY
 jar
 bvd
-bvd
+auz
 bvd
 jWd
-htv
-htv
+aut
+auq
 afv
 tBQ
 mGb
@@ -127986,14 +128317,14 @@ wQx
 xMw
 xMw
 bRA
-iqL
+auC
 kDH
-htv
-htv
-htv
+auw
+aur
+auw
 fBx
-htv
-htv
+auw
+aur
 vFn
 pVB
 xBt
@@ -128306,7 +128637,7 @@ wvV
 tWy
 rxD
 jFC
-xEk
+izZ
 flY
 jQL
 gUh
@@ -128784,7 +129115,7 @@ gSP
 uJK
 anY
 vJP
-hpu
+auF
 gFB
 fIe
 jtg
@@ -129270,7 +129601,7 @@ obr
 uJK
 neC
 tlP
-hMg
+auG
 gND
 key
 wlE
