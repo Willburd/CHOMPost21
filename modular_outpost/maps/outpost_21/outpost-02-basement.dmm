@@ -21455,6 +21455,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay4)
+"aMJ" = (
+/obj/item/radio/beacon,
+/turf/simulated/floor,
+/area/maintenance/oldbridge)
 "aMK" = (
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 10
@@ -63503,6 +63507,7 @@
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
+/obj/item/radio/beacon/syndicate,
 /obj/item/towel/random,
 /turf/simulated/floor/tiled{
 	icon_state = "white"
@@ -86360,7 +86365,7 @@ aad
 aad
 vqa
 gKs
-uoh
+aMJ
 uoh
 vim
 qfh
