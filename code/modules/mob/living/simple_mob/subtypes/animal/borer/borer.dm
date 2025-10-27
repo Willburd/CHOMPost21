@@ -213,7 +213,7 @@
 
 	forceMove(get_turf(host.loc)) // Outpost 21 edit(port) - borer fixes
 
-	machine = null
+	unset_machine()
 
 	if(ishuman(host))
 		var/mob/living/carbon/human/H = host
@@ -221,7 +221,7 @@
 		if(head)
 			head.implants -= src
 
-	host.machine = null
+	host.unset_machine()
 	host = null
 
 /mob/living/simple_mob/animal/borer/proc/request_player()

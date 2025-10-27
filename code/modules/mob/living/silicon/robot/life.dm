@@ -169,12 +169,13 @@
 
 	// outpost 21 addition begin - lockers are dark and spooky!
 	if(istype(loc, /obj/structure/closet))
-		src.blinded = 1
+		blinded = 1
 	// outpost 21 addition end
 
-	return 1
+	// Call parent to handle signals
+	. = ..()
 
-/mob/living/silicon/robot/handle_regular_hud_updates()
+/mob/living/silicon/robot/handle_vision()
 	var/fullbright = FALSE
 	var/seemeson = FALSE
 	var/seejanhud = sight_mode & BORGJAN
@@ -236,7 +237,13 @@
 		plane_holder.set_vis(VIS_MESONS,seemeson)
 		plane_holder.set_vis(VIS_JANHUD,seejanhud)
 
+	// Call parent to handle signals
 	..()
+
+/mob/living/silicon/robot/handle_regular_hud_updates()
+	. = ..()
+	if(!.)
+		return
 
 	if (healths)
 		if (stat != 2)
@@ -274,7 +281,7 @@
 		else
 			healths.icon_state = "health7"
 
-	if (syndicate && client)
+	if (syndicate)
 		for(var/datum/mind/tra in traitors.current_antagonists)
 			if(tra.current)
 				// TODO: Update to new antagonist system.
@@ -317,15 +324,10 @@
 			set_fullscreen(eye_blurry, "blurry", /atom/movable/screen/fullscreen/blurry)
 			set_fullscreen(druggy, "high", /atom/movable/screen/fullscreen/high)
 
-	if (machine && machine.check_eye(src) < 0)
-		reset_perspective()
-
 	if(emagged)
 		throw_alert("hacked", /atom/movable/screen/alert/hacked)
 	else
 		clear_alert("hacked")
-
-	return 1
 
 /mob/living/silicon/robot/proc/update_cell()
 	if(cell)
@@ -402,7 +404,10 @@
 		. = ..()
 
 // outpost 21 addition begin - radiation and haunting affects borg vision
-/mob/living/silicon/robot/proc/handle_radiation()
+/mob/living/silicon/robot/handle_radiation()
+	. = ..()
+	if(.)
+		return
 	if(!client) // This is purely visual for borgs so we shouldn't bother otherwise
 		radiation = 0
 		return
