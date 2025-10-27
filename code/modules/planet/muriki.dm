@@ -168,7 +168,9 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_DOWNPOUR 		= new /datum/weather/muriki/downpour(),
 		WEATHER_DOWNPOURFATAL 	= new /datum/weather/muriki/downpourfatal(),
 		WEATHER_FALLOUT_TEMP	= new /datum/weather/muriki/fallout/temp(),
-		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti()
+		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti(),
+		WEATHER_COLDDARKNESS	= new /datum/weather/muriki/clear/hidden_evildarkness(),
+		WEATHER_LONGBLIZZARD	= new /datum/weather/muriki/blizzard/hidden_dangerous()
 		)
 	roundstart_weather_chances = list() // See New() for seasonal starting weathers
 
@@ -208,7 +210,8 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_OVERCAST = 0,
 				WEATHER_RAIN = 20,
 				WEATHER_STORM = 10,
-				WEATHER_HAIL = 25
+				WEATHER_HAIL = 24,
+				WEATHER_LONGBLIZZARD = 1
 				)
 	. = ..()
 
@@ -932,6 +935,52 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
 	color_grading = COLORTINT_OMEN
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// EVENT WEATHERS
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// EXTREME BLIZZARD
+/////////////////////////////////////////////////////////////////////////////////////////
+/datum/weather/muriki/blizzard/hidden_dangerous
+	name = "extreme blizzard"
+	temp_high = 213.15 // -60c
+	temp_low = 183.15 // -90c
+	light_modifier = 0.1
+	flight_failure_modifier = 10
+	transition_chances = list(
+		WEATHER_LONGBLIZZARD = 95,
+		WEATHER_BLIZZARD = 5,
+		)
+	color_grading = COLORTINT_EXTREMECOLD
+	observed_message = "The blizzard grows more intense."
+	transition_messages = list(
+		"The blizzard's wind chills you to your bones."
+	)
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// EVIL DARKNESS
+/////////////////////////////////////////////////////////////////////////////////////////
+/datum/weather/muriki/clear/hidden_evildarkness
+	name = "frigid darkness"
+	temp_high = 120
+	temp_low = 100
+	wind_high = 0
+	wind_low = 0
+	light_modifier = 0.01
+	transition_chances = list(
+		WEATHER_COLDDARKNESS = 95,
+		WEATHER_CLEAR = 5,
+		)
+	color_grading = COLORTINT_UNDERDARK
+	observed_message = "The world feels still."
+	transition_messages = list(
+		"Everything around you seems to stop, it's quiet enough to hear the air creaking under the weight of something you cannot see."
+	)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
