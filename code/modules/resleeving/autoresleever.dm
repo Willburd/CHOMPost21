@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(active_autoresleevers)
+
 /obj/machinery/transhuman/autoresleever
 	name = "automatic resleever"
 	desc = "Uses advanced technology to detect when someone needs to be resleeved, and automatically prints and sleeves them into a new body. It even generates its own biomass!"
@@ -17,6 +19,14 @@
 	var/releaseturf
 	var/throw_dir = WEST
 	// Outpost 21 addition end
+
+/obj/machinery/transhuman/autoresleever/Initialize(mapload)
+	. = ..()
+	GLOB.active_autoresleevers += src
+
+/obj/machinery/transhuman/autoresleever/Destroy()
+	. = ..()
+	GLOB.active_autoresleevers -= src
 
 /obj/machinery/transhuman/autoresleever/update_icon()
 	. = ..()
