@@ -5746,6 +5746,7 @@
 #include "modular_outpost\code\outpost_lore\species\xenochimera.dm"
 #include "modular_outpost\code\outpost_lore\species\zaddat.dm"
 #include "modular_outpost\code\outpost_lore\species\zorren.dm"
+#include "modular_outpost\code\ZAS\Zone.dm"
 #include "modular_outpost\maps\common\common_areas.dm"
 #include "modular_outpost\maps\common\common_defines.dm"
 #include "modular_outpost\maps\common\common_things.dm"
