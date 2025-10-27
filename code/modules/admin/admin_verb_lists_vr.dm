@@ -461,6 +461,7 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/make_red_exit, // Outpost 21 edit - Spawn redspace exit command
 	/client/proc/escape_shuttle_force, // Outpost 21 edit - Moving the escape shuttle safely
 	/datum/admins/proc/lock_weather, // Outpost 21 edit - Locking weather
+	/datum/admins/proc/change_weather_temp, // Outpost 21 edit - Weather temp lock
 	// /client/proc/base_all_turfs,
 	/client/proc/modify_event_collector,
 	/client/proc/induce_malfunction,
