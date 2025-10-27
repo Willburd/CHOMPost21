@@ -62,7 +62,7 @@
 /obj/machinery/computer/vehicle_interior_console/look(var/mob/user)
 	if(!interior_controller)
 		return
-	if(user.machine != src)
+	if(!user.check_current_machine(src))
 		user.set_machine(src)
 	user.set_viewsize(world.view + interior_controller.extra_view)
 	if(isliving(user))

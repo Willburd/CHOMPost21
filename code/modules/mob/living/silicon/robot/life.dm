@@ -404,7 +404,10 @@
 		. = ..()
 
 // outpost 21 addition begin - radiation and haunting affects borg vision
-/mob/living/silicon/robot/proc/handle_radiation()
+/mob/living/silicon/robot/handle_radiation()
+	. = ..()
+	if(.)
+		return
 	if(!client) // This is purely visual for borgs so we shouldn't bother otherwise
 		radiation = 0
 		return
