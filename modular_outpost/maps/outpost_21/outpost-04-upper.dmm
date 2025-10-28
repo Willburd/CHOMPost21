@@ -27019,7 +27019,7 @@
 	desc = "An adorable stuffed toy of a familiar robot!"
 	},
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Break East";
+	c_tag = "MED - Break West";
 	dir = 4
 	},
 /turf/simulated/floor/wood,

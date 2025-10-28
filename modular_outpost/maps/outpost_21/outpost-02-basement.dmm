@@ -24230,6 +24230,10 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 28
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aRY" = (
@@ -24997,15 +25001,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
-"aTL" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "aTM" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor,
@@ -26629,10 +26624,6 @@
 	dir = 1
 	},
 /obj/machinery/recharge_station,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 7;
-	pixel_y = 30
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -8;
 	pixel_y = 30
@@ -68826,6 +68817,10 @@
 "iYi" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
@@ -135602,7 +135597,7 @@ crU
 aSE
 aSE
 tvn
-aTL
+aSE
 aSE
 aSE
 iYi

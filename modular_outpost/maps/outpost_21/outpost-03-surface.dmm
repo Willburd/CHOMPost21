@@ -37085,7 +37085,7 @@
 	pixel_y = -32
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Break Room South";
+	c_tag = "SEC - Briefing South";
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -70013,7 +70013,7 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Briefing Room North"
+	c_tag = "SEC - Briefing North"
 	},
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
