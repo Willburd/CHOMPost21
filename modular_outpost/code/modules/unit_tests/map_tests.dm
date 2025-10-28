@@ -553,12 +553,19 @@
 
 /datum/unit_test/all_cameras_shall_respect_naming_conventions/proc/validate_camera(obj/machinery/camera/C, req_suffix, list/used_cams)
 	var/turf/T = get_turf(C)
-	var/area/A = get_turf(C)
+	var/area/A = get_area(C)
 	if(!C.c_tag)
 		TEST_NOTICE(src, "Camera had null c_tag. Located at [T.x].[T.y].[T.z] : [A]")
 		return FALSE
 	if(C.c_tag in used_cams)
 		TEST_NOTICE(src, "Camera had already existing c_tag [C.c_tag]. Located at [T.x].[T.y].[T.z] : [A]")
+		for(var/obj/machinery/camera/X in world)
+			if(X == C)
+				continue
+			if(C.c_tag == X.c_tag)
+				T = get_turf(X)
+				A = get_area(X)
+				TEST_NOTICE(src, "Other Camera(s) located at [T.x].[T.y].[T.z] : [A]")
 		return FALSE
 	if(copytext(C.c_tag,1,length(req_suffix) + 4) != "[req_suffix] - ")
 		TEST_NOTICE(src, "Camera had incorrect c_tag for [req_suffix] prefix area. was tagged [C.c_tag]. Located at [T.x].[T.y].[T.z] : [A]")
