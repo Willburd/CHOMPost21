@@ -22,6 +22,12 @@ var/datum/planet/muriki/planet_muriki = null
 // This code is horrible.
 /datum/planet/muriki/update_sun()
 	..()
+	// Debug locked lighting
+	if(!isnull(locked_light_color))
+		spawn(1)
+			update_sun_deferred(locked_light_intensity, locked_light_color)
+		return
+	// Normal sunlight
 	var/datum/time/time = current_time
 	var/length_of_day = time.seconds_in_day / 10 / 60 / 60
 	var/noon = length_of_day / 2

@@ -28,6 +28,9 @@
 	var/moon_name = null // Purely for flavor. Null means no moon exists.
 	var/moon_phase = null // Set if above is defined.
 
+	var/locked_light_intensity = 0 // Outpost 21 edit - Locking light levels
+	var/locked_light_color = null // Outpost 21 edit - Locking light levels
+
 /datum/planet/New()
 	..()
 	weather_holder = new(src)
