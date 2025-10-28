@@ -4,7 +4,7 @@
 	path = "outpost"
 
 	lobby_screens = list('html/lobby/OUTPOST21.gif')
-	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
+	id_hud_icons = 'modular_outpost/icons/mob/hud/hud_jobs.dmi'
 
 	default_law_type = /datum/ai_laws/eshui_standard
 
