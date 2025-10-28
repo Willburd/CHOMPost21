@@ -64,7 +64,7 @@
 	var/heavy = round((mult*strength)*2)
 	var/light = round((mult*strength)*1)
 
-	return FLOOR(round(dev + (heavy/2) + (light/3),1),1)
+	return FLOOR(dev + heavy + light,1)
 
 /datum/element/sellable/transfer_valve/sell(obj/source, var/datum/exported_crate/EC, var/in_crate)
 	. = ..()
