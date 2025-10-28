@@ -5635,6 +5635,7 @@
 #include "modular_outpost\code\modules\pda\cart.dm"
 #include "modular_outpost\code\modules\pda\cart_apps.dm"
 #include "modular_outpost\code\modules\pda\core_apps.dm"
+#include "modular_outpost\code\modules\pda\pda_subtypes.dm"
 #include "modular_outpost\code\modules\persistence\noticeboard.dm"
 #include "modular_outpost\code\modules\phorochemistry\beakers.dm"
 #include "modular_outpost\code\modules\phorochemistry\lockers.dm"

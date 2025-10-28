@@ -17,6 +17,7 @@ var/list/security_cartridges = list(
 
 var/list/engineering_cartridges = list(
 	/obj/item/cartridge/engineering,
+	/obj/item/cartridge/signal/engineering, // Outpost 21 edit - Robotics in engineering
 	/obj/item/cartridge/atmos,
 	/obj/item/cartridge/ce
 	)
