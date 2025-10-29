@@ -113,6 +113,7 @@
 		if(LOC_MEDICAL)
 			spawn_area_type = /area/medical
 			locstring = "medical"
+		/* Outpost 21 edit - Use ours
 		if(LOC_TECH)
 			spawn_area_type = /area/storage/tech
 			locstring = "technical storage"
@@ -125,8 +126,7 @@
 		if(LOC_HANGAR3)
 			spawn_area_type = /area/hangar/three
 			locstring = "the hangar deck"
-			
-			sadadssad
+		*/
 		if(LOC_VAULT)
 			spawn_area_type = /area/security/nuke_storage
 			locstring = "the vault"
