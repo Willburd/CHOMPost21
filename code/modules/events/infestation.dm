@@ -130,6 +130,7 @@
 		if(LOC_VAULT)
 			spawn_area_type = /area/security/nuke_storage
 			locstring = "the vault"
+
 	return spawn_area_type
 		// ChompEDIT End
 /* CHOMPedit - Upstream Code, not implmeneted here
