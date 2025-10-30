@@ -497,7 +497,7 @@
 		cloneloss = round(cloneloss / h_mult)
 	maxHealth = newMaxHealth
 
-/mob/living/Stun(amount)
+/mob/living/Stun(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -505,14 +505,14 @@
 	if(stunned > 0)
 		add_status_indicator("stunned")
 
-/mob/living/SetStunned(amount)
+/mob/living/SetStunned(amount, ignore_canstun = FALSE)
 	..()
 	if(stunned <= 0)
 		remove_status_indicator("stunned")
 	else
 		add_status_indicator("stunned")
 
-/mob/living/AdjustStunned(amount)
+/mob/living/AdjustStunned(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -523,7 +523,7 @@
 	else
 		add_status_indicator("stunned")
 
-/mob/living/Weaken(amount)
+/mob/living/Weaken(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -531,14 +531,14 @@
 	if(weakened > 0)
 		add_status_indicator("weakened")
 
-/mob/living/SetWeakened(amount)
+/mob/living/SetWeakened(amount, ignore_canstun = FALSE)
 	..()
 	if(weakened <= 0)
 		remove_status_indicator("weakened")
 	else
 		add_status_indicator("weakened")
 
-/mob/living/AdjustWeakened(amount)
+/mob/living/AdjustWeakened(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -549,7 +549,7 @@
 	else
 		add_status_indicator("weakened")
 
-/mob/living/Paralyse(amount)
+/mob/living/Paralyse(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -557,14 +557,14 @@
 	if(paralysis > 0)
 		add_status_indicator("paralysis")
 
-/mob/living/SetParalysis(amount)
+/mob/living/SetParalysis(amount, ignore_canstun = FALSE)
 	..()
 	if(paralysis <= 0)
 		remove_status_indicator("paralysis")
 	else
 		add_status_indicator("paralysis")
 
-/mob/living/AdjustParalysis(amount)
+/mob/living/AdjustParalysis(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -575,7 +575,7 @@
 	else
 		add_status_indicator("paralysis")
 
-/mob/living/Sleeping(amount)
+/mob/living/Sleeping(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -583,14 +583,14 @@
 	if(sleeping > 0)
 		add_status_indicator("sleeping")
 
-/mob/living/SetSleeping(amount)
+/mob/living/SetSleeping(amount, ignore_canstun = FALSE)
 	..()
 	if(sleeping <= 0)
 		remove_status_indicator("sleeping")
 	else
 		add_status_indicator("sleeping")
 
-/mob/living/AdjustSleeping(amount)
+/mob/living/AdjustSleeping(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -601,7 +601,7 @@
 	else
 		add_status_indicator("sleeping")
 
-/mob/living/Confuse(amount)
+/mob/living/Confuse(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -609,14 +609,14 @@
 	if(confused > 0)
 		add_status_indicator("confused")
 
-/mob/living/SetConfused(amount)
+/mob/living/SetConfused(amount, ignore_canstun = FALSE)
 	..()
 	if(confused <= 0)
 		remove_status_indicator("confused")
 	else
 		add_status_indicator("confused")
 
-/mob/living/AdjustConfused(amount)
+/mob/living/AdjustConfused(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
@@ -627,7 +627,7 @@
 	else
 		add_status_indicator("confused")
 
-/mob/living/Blind(amount)
+/mob/living/Blind(amount, ignore_canstun = FALSE)
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.disable_duration_percent))
 			amount = round(amount * M.disable_duration_percent)
@@ -635,14 +635,14 @@
 	if(eye_blind > 0)
 		add_status_indicator("blinded")
 
-/mob/living/SetBlinded(amount)
+/mob/living/SetBlinded(amount, ignore_canstun = FALSE)
 	..()
 	if(eye_blind <= 0)
 		remove_status_indicator("blinded")
 	else
 		add_status_indicator("blinded")
 
-/mob/living/AdjustBlinded(amount)
+/mob/living/AdjustBlinded(amount, ignore_canstun = FALSE)
 	if(amount > 0)
 		for(var/datum/modifier/M in modifiers)
 			if(!isnull(M.disable_duration_percent))
