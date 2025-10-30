@@ -111,7 +111,7 @@
 		stance_damage -= 4
 
 	// standing is poor
-	if(stance_damage >= 4 || (stance_damage >= 2 && prob(5)))
+	if(stance_damage >= 4 || (stance_damage >= 2 && prob(1))) // Outpost 21 edit(port) - Probability to 1 from 5
 		if(!(lying || resting) && !isbelly(loc))
 			if(limb_pain)
 				emote("scream")
