@@ -138,7 +138,6 @@
 	icon_state = "roundedchair"
 	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	base_icon = "roundedchair"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - These need to be base dmi
 
 /obj/structure/bed/chair/comfy/rounded/brown/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_LEATHER)
@@ -319,7 +318,6 @@
 	icon_state = "pewmiddle"
 	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/pew/left
 	icon_state = "pewend_left"
@@ -339,7 +337,6 @@
 	applies_material_colour = FALSE
 	color = null
 	var/padding_color = "#CC0000"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/bench/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..()
@@ -376,7 +373,6 @@
 	icon_state = "corp_sofamiddle"
 	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/corp/left
 	icon_state = "corp_sofaend_left"

@@ -152,6 +152,7 @@
 	hardness = 5
 	integrity = 10
 	supply_conversion_value = 1 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	stack_type = /obj/item/stack/material/cotton
 
 /datum/material/fibers
 	name = MAT_FIBERS

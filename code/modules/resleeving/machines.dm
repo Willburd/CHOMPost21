@@ -492,7 +492,7 @@
 		to_chat(occupant, span_warning("Your eyes wince at the light as you try to remember what happened, weren't you just in the lobby? It's disorienting."))
 	// Outpost 21 edit end
 
-	occupant.confused = max(occupant.confused, confuse_amount)
+	occupant.SetConfused(max(occupant.confused, confuse_amount))								// Apply immedeate effects
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
 
 	// Vore deaths get a fake modifier labeled as such

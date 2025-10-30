@@ -884,6 +884,12 @@
 	if (!(M in contents))
 		return 0 // They weren't in this belly anyway
 
+	// Outpost 21 edit(port) begin - Blowout pipes if we are ventcrawling
+	if(istype(owner.loc,/obj/machinery/atmospherics))
+		var/obj/machinery/atmospherics/A = owner.loc
+		A.blowout(owner)
+	// Outpost 21 edit end
+
 	if(istype(M, /mob/living/simple_mob/vore/morph/dominated_prey))
 		var/mob/living/simple_mob/vore/morph/dominated_prey/p = M
 		p.undo_prey_takeover(FALSE)

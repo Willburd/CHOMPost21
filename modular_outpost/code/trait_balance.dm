@@ -1,3 +1,4 @@
+#ifndef OUTPOST_FRIENDSHIP_MODE
 // Only modify upstream traits here, do our own directly!!!
 // They are in modular_outpost\code\modules\mob\living\carbon\human\species\station\traits_vr\X.dm
 
@@ -255,3 +256,5 @@
 
 /datum/trait/neutral/addiction_asustenance
 	cost = -2 //Base 0. Unlike other addictions, you can't wean this one off. You WILL die without your gatoraid, if someone steals it: GG.
+
+#endif

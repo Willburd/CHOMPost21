@@ -375,8 +375,8 @@
 	icon_state = "cart"
 	req_access = list(ACCESS_HOP)
 	products = list(/obj/item/cartridge/medical = 10,/obj/item/cartridge/engineering = 10,/obj/item/cartridge/security = 10,
-					/obj/item/cartridge/janitor = 10,/obj/item/cartridge/signal/science = 10,/obj/item/pda/heads = 10,
-					/obj/item/cartridge/captain = 3,/obj/item/cartridge/quartermaster = 10)
+					/obj/item/cartridge/janitor = 10,/obj/item/cartridge/signal/engineering = 10,/obj/item/pda/heads = 10,
+					/obj/item/cartridge/captain = 3,/obj/item/cartridge/quartermaster = 10) // Outpost 21 edit - Robotics in engineering
 	req_log_access = ACCESS_HOP
 	has_logs = 1
 

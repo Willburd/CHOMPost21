@@ -574,6 +574,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
+"bu" = (
+/obj/machinery/porta_turret/stationary/syndie/CIWS,
+/turf/simulated/shuttle/plating/airless,
+/area/shuttle/mercenary)
 "bv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -727,6 +731,26 @@
 /obj/item/reagent_containers/food/drinks/cans/cola,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"bM" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/rpk,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/ammo_magazine/akm/drum/ap,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "bN" = (
 /obj/machinery/atmospherics/pipe/simple/visible,
 /turf/simulated/floor/tiled/techfloor,
@@ -1294,6 +1318,25 @@
 /obj/item/bikehorn/rubberducky,
 /turf/space,
 /area/space)
+"dd" = (
+/obj/structure/table/rack,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "de" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger{
@@ -1301,12 +1344,39 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
+"df" = (
+/obj/structure/table/rack,
+/obj/item/radio_jammer,
+/obj/item/radio_jammer,
+/obj/item/radio_jammer,
+/obj/item/radio_jammer,
+/obj/item/radio_jammer,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dg" = (
 /obj/structure/table/alien,
 /obj/item/juke_remote,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
+	},
+/area/syndicate_mothership)
+"dh" = (
+/obj/structure/table/rack,
+/obj/structure/reagent_dispensers/acid{
+	pixel_y = 30
+	},
+/obj/item/bodysnatcher,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"di" = (
+/obj/machinery/porta_turret/stationary/syndie,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "dj" = (
@@ -1321,6 +1391,11 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
+"dl" = (
+/turf/unsimulated/wall/fakeglass2{
+	dir = 4
+	},
+/area/syndicate_mothership)
 "dm" = (
 /obj/structure/table/standard,
 /obj/item/radio/headset/alt/syndicate,
@@ -1355,6 +1430,16 @@
 	},
 /turf/unsimulated/beach/sand,
 /area/beach)
+"dp" = (
+/obj/machinery/door/airlock/centcom{
+	name = "One Way Ticket";
+	req_access = list(150);
+	req_one_access = list()
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dq" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark{
@@ -1366,6 +1451,18 @@
 /mob/living/simple_mob/animal/passive/crab/Coffee,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"ds" = (
+/obj/machinery/teleport/hub,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"dt" = (
+/obj/machinery/teleport/station,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "du" = (
 /obj/structure/bed/chair,
 /obj/effect/landmark{
@@ -1373,6 +1470,15 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
+"dv" = (
+/obj/machinery/computer/teleporter{
+	dir = 2;
+	pixel_y = -3
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dx" = (
 /turf/unsimulated/wall/fakeglass,
 /area/syndicate_mothership)
@@ -1740,6 +1846,11 @@
 	pixel_x = -8;
 	pixel_y = 30
 	},
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/structure/table/rack,
+/obj/item/roller/adv,
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/mercenary)
 "eI" = (
@@ -2067,6 +2178,14 @@
 /obj/item/clothing/under/tactical,
 /obj/item/clothing/under/tactical,
 /obj/structure/closet,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2287,6 +2406,9 @@
 /obj/item/clothing/under/syndicate/combat,
 /obj/item/clothing/under/syndicate/combat,
 /obj/item/clothing/under/syndicate/combat,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/accessory/holster/leg/black,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2732,7 +2854,9 @@
 	},
 /area/syndicate_mothership)
 "gL" = (
-/obj/structure/frame/computer,
+/obj/machinery/computer/teleporter{
+	pixel_x = -4
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "gM" = (
@@ -3594,6 +3718,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/machinery/porta_turret/stationary/syndie,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "il" = (
@@ -5529,6 +5654,7 @@
 	pixel_x = 7;
 	pixel_y = 30
 	},
+/obj/machinery/porta_turret/stationary/syndie,
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "rP" = (
@@ -49101,7 +49227,7 @@ mN
 fO
 fO
 fO
-fO
+bu
 fR
 gL
 vD
@@ -49262,8 +49388,8 @@ mN
 mN
 fO
 fO
-fO
 ed
+fR
 fR
 hl
 hl
@@ -51011,7 +51137,7 @@ mN
 ab
 mN
 mN
-TW
+mN
 TW
 mN
 jE
@@ -51055,7 +51181,7 @@ fR
 fR
 fR
 fR
-dC
+bu
 mN
 mN
 mN
@@ -51206,8 +51332,8 @@ mN
 mN
 fO
 fO
-fO
 ed
+fR
 fR
 hl
 hl
@@ -51338,7 +51464,7 @@ mN
 TW
 TW
 mN
-jE
+jF
 sg
 sg
 jE
@@ -51369,7 +51495,7 @@ mN
 fO
 fO
 fO
-fO
+bu
 fR
 eb
 fn
@@ -51497,13 +51623,13 @@ mN
 ab
 mN
 mN
-TW
-TW
-mN
+yb
+yb
+yb
+yb
+sg
+sg
 jE
-sg
-sg
-jF
 mu
 mN
 mN
@@ -51659,14 +51785,14 @@ mN
 ab
 mN
 mN
-mN
-TW
-mN
-jE
-sg
-sg
 yb
-sl
+ds
+sg
+dl
+sg
+sg
+jF
+yb
 sl
 sl
 sl
@@ -51821,14 +51947,14 @@ mN
 ab
 mN
 mN
-mN
-TW
-TW
-jF
-sg
-sg
 yb
-sl
+dt
+sg
+dp
+sg
+sg
+di
+yb
 sl
 sl
 sl
@@ -51983,14 +52109,14 @@ mN
 ab
 mN
 mN
-TW
-TW
-TW
 yb
+dv
+sg
+dl
 sg
 sg
+dl
 yb
-sl
 sl
 sl
 sl
@@ -52497,7 +52623,7 @@ hu
 sg
 kQ
 yb
-kQ
+bM
 sg
 kQ
 gV
@@ -52807,7 +52933,7 @@ sg
 sg
 sg
 yb
-is
+dh
 sg
 kQ
 kQ
@@ -52819,7 +52945,7 @@ sg
 hI
 hy
 sg
-kQ
+dd
 yb
 kQ
 sg
@@ -53605,8 +53731,8 @@ mN
 mN
 sl
 sl
-sl
 yb
+di
 sg
 sg
 sg
@@ -53767,8 +53893,8 @@ mN
 mN
 mN
 mN
-sl
 yb
+di
 sg
 sg
 sg
@@ -53929,7 +54055,7 @@ mN
 mN
 mN
 TW
-sl
+yb
 yb
 jJ
 jJ
@@ -54758,7 +54884,7 @@ im
 sg
 iB
 yb
-kQ
+df
 sg
 hJ
 hD

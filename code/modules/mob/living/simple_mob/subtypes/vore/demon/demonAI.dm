@@ -97,7 +97,7 @@
 	if(shifted_out)
 		density = FALSE
 
-/mob/living/simple_mob/vore/demonAI/handle_atmos()
+/mob/living/simple_mob/vore/demonAI/handle_environment()
 	if(shifted_out)
 		return
 	else

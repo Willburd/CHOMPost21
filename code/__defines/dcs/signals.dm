@@ -389,6 +389,11 @@
 ///From /mob/living/proc/updatehealth().
 #define COMSIG_UPDATE_HEALTH "update_health"
 	#define COMSIG_UPDATE_HEALTH_GOD_MODE (1<<0) //If this will set health to 100 and stat to conscious.
+///From /mob/handle_vision().
+#define COMSIG_LIVING_HANDLE_VISION "living_handle_vision"
+///From /mob/handle_regular_hud_updates().
+#define COMSIG_LIVING_HANDLE_HUD "living_handle_hud"
+
 
 // Damage specific signals for /mob/living
 ///from /mob/living/proc/adjustBrainLoss(amount) and /mob/living/proc/setBrainLoss(amount)
@@ -433,22 +438,35 @@
 
 //ALL OF THESE DO NOT TAKE INTO ACCOUNT WHETHER AMOUNT IS 0 OR LOWER AND ARE SENT REGARDLESS!
 
-///from base of mob/living/Stun() (amount, update, ignore)
+///from base of mob/Stun() (amount, ignore_canstun)
 #define COMSIG_LIVING_STATUS_STUN "living_stun"
-///from base of mob/living/Knockdown() (amount, update, ignore)
+///from base of mob/Knockdown() (amount, update, ignore)
 #define COMSIG_LIVING_STATUS_KNOCKDOWN "living_knockdown"
-///from base of mob/living/Paralyze() (amount, update, ignore)
+///from base of mob/Weaken() (amount, ignore_canstun)
+#define COMSIG_LIVING_STATUS_WEAKEN "living_weaken"
+///from base of mob/Paralyze() (amount, ignore_canstun)
 #define COMSIG_LIVING_STATUS_PARALYZE "living_paralyze"
-///from base of mob/living/Immobilize() (amount, update, ignore)
+///from base of mob/Immobilize() (amount, update, ignore)
 #define COMSIG_LIVING_STATUS_IMMOBILIZE "living_immobilize"
-///from base of mob/living/Unconscious() (amount, update, ignore)
+///from base of mob/Unconscious() (amount, update, ignore)
 #define COMSIG_LIVING_STATUS_UNCONSCIOUS "living_unconscious"
-///from base of mob/living/Sleeping() (amount, update, ignore)
+///from base of mob/Sleeping() (amount, ignore_canstun)
 #define COMSIG_LIVING_STATUS_SLEEP "living_sleeping"
-	#define COMPONENT_NO_STUN (1<<0)									//For all of them
+///from base of mob/Confuse() (amount, ignore_canstun)
+#define COMSIG_LIVING_STATUS_CONFUSE "living_confuse"
+///from base of mob/Blind() (amount, ignore_canstun)
+#define COMSIG_LIVING_STATUS_BLIND "living_blind"
+/// from mob/living/check_stun_immunity(): (check_flags)
+#define COMSIG_LIVING_GENERIC_STUN_CHECK "living_check_stun"
+	#define COMPONENT_NO_STUN (1<<0) //For all of them
 ///from base of /mob/living/can_track(): (mob/user)
 #define COMSIG_LIVING_CAN_TRACK "mob_cantrack"
 	#define COMPONENT_CANT_TRACK (1<<0)
+
+///from base of /mob/living/proc/apply_effect(var/effect = 0,var/effecttype = STUN, var/blocked = 0, var/check_protection = 1, rad_protection)
+#define COMSIG_LIVING_IRRADIATE_EFFECT "living_irradiate_effect"
+	///Return this if you want to block the effect.
+	#define COMPONENT_BLOCK_IRRADIATION (1<<0)
 
 // /mob/living/carbon signals
 
@@ -694,6 +712,12 @@
 #define COMSIG_HUMAN_DNA_FINALIZED "human_dna_finished"
 ///from /proc/domutcheck(): ()
 #define COMSIG_MOB_DNA_MUTATION "mob_dna_mutation"
+///from /mob/living/proc/handle_radiation()
+#define COMSIG_HANDLE_RADIATION "handle_radiation"
+	#define COMPONENT_BLOCK_LIVING_RADIATION (1<<0)
+///from /mob/living/proc/handle_mutations()
+#define COMSIG_HANDLE_MUTATIONS "handle_mutations"
+	#define COMPONENT_BLOCK_LIVING_MUTATIONS (1<<0)
 
 // Organ specific signals
 

@@ -47,9 +47,7 @@
 		new/datum/data/pda/app/news,
 		// Outpost 21 addition begin - New apps
 		new/datum/data/pda/app/weather,
-		#ifndef OUTPOST_FRIENDSHIP_MODE
 		new/datum/data/pda/app/sop,
-		#endif
 		// Outpost 21 addition end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,
@@ -445,9 +443,7 @@
 				if(id_check(user, 2))
 					to_chat(user, span_notice("You put the ID into \the [src]'s slot."))
 					add_overlay("pda-id")
-					updateSelfDialog()//Update self dialog on success.
 			return	//Return in case of failed check or when successful.
-		updateSelfDialog()//For the non-input related code.
 	else if(istype(C, /obj/item/paicard) && !src.pai)
 		user.drop_item(src)
 		pai = C

@@ -1018,7 +1018,9 @@ var/datum/announcement/minor/admin_min_announcer = new
 
 	if(!check_rights(R_SERVER|R_EVENT))	return
 	if (SSticker.current_state >= GAME_STATE_PLAYING)
-		SSticker.delay_end = !SSticker.delay_end
+		// Tell the ticker to delay/resume
+		SSticker.toggle_delay()
+
 		log_admin("[key_name(usr)] [SSticker.delay_end ? "delayed the round end" : "has made the round end normally"].")
 		message_admins(span_blue("[key_name(usr)] [SSticker.delay_end ? "delayed the round end" : "has made the round end normally"]."), 1)
 		return
@@ -1505,7 +1507,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 	else
 		to_chat(usr, "You do not have access to this command.")
 
-
+/* Outpost 21 edit - Use ours
 /datum/admins/proc/sendFax()
 	set category = "Fun.Event Kit"
 	set name = "Send Fax"
@@ -1530,7 +1532,7 @@ var/datum/announcement/minor/admin_min_announcer = new
 			P.destination = sendto
 
 			P.adminbrowse()
-
+*/
 
 /datum/admins/var/obj/item/paper/admin/faxreply // var to hold fax replies in
 
