@@ -1673,6 +1673,8 @@ GLOBAL_LIST_INIT(suitable_fish_turf_types,  list(
 
 GLOBAL_LIST_EMPTY(vats_to_rain_into) // Outpost 21 edit - rainy vats
 
+GLOBAL_LIST_BOILERPLATE(papers_dockingcode, /obj/item/paper/dockingcodes)
+
 //Chamelion clothing was all stupid so it's done here instead.
 //Jumpsuit
 GLOBAL_LIST(chamelion_jumpsuit_choices)
