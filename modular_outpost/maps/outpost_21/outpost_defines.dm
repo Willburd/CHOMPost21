@@ -17,6 +17,7 @@
 
 	station_name  = "ESHUI Atmospheric Terraforming Outpost 21"
 	station_short = "Outpost 21"
+	facility_type = "top-side facility"
 	dock_name     = "Central Command Bunker"
 	boss_name     = "Central Command"
 	boss_short    = "CentCom"

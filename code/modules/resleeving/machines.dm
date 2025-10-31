@@ -484,6 +484,8 @@
 		new_imp.post_implant(occupant)
 	*/
 
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, occupant, MR.mind_ref)
+	
 	// Outpost 21 edit begin - Small edits to the flavor text. - Ignus
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
