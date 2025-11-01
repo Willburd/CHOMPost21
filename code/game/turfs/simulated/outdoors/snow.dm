@@ -52,6 +52,7 @@
 	desc = "Looks slippery."
 	edge_blending_priority = 0
 	can_be_plated = FALSE
+	wet = TURFSLIP_ICE // Outpost 21 edit(port) - Ice respects slipcode
 
 /turf/simulated/floor/outdoors/ice/dark
 	name = "black ice"
@@ -63,6 +64,7 @@
 	icon_state = "ice_dark_smooth"
 	desc = "Dark rock that has been smoothened to be perfectly even. It's coated in a layer of slippey ice"
 
+/* Outpost 21 edit(port) - Ice respects slipcode
 /turf/simulated/floor/outdoors/ice/Entered(var/mob/living/M)
 	if(isliving(M))
 		if((M.weakened && prob(10)) || (M.m_intent == "walk" && prob(95)))
@@ -73,6 +75,7 @@
 		to_chat(M, span_warning("You slide across the ice!"))
 	M.SetWeakened(3)
 	step(M,M.dir)
+*/
 
 // Ice that is used for, say, areas floating on water or similar.
 /turf/simulated/floor/outdoors/shelfice

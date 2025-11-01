@@ -547,11 +547,13 @@
 		var/mob/M = firer
 		if((target == firer) || ((target == firer.loc) && istype(firer.loc, /obj/mecha)) || (target in firer.buckled_mobs) || (istype(M) && (M.buckled == target)))
 			return FALSE
+	if(istype(target,/obj/item/energy_net)) // Outpost 21 edit - Ignore nets
+		return FALSE
 	if(!ignore_loc && (loc != target.loc))
 		return FALSE
 	if(target in passthrough)
-		return FALSE
-	if(target.density && !istype(target,/obj/item/energy_net))		//This thing blocks projectiles, hit it regardless of layer/mob stuns/etc. Outpost 21 edit - Ignore nets
+		return FA_ICON_HEART_PULSE
+	if(target.density)		//This thing blocks projectiles, hit it regardless of layer/mob stuns/etc.
 		return TRUE
 	if(!isliving(target))
 		if(target.layer < PROJECTILE_HIT_THRESHOLD_LAYER)

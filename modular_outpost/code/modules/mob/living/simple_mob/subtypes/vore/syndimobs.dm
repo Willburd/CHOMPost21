@@ -78,6 +78,14 @@
 			"rad" = 100 // Actual should be 60, but mobs get REALLY unhappy and break with less than 100 rad
 			) // Changes these values to match wearing an actual syndie suit. They're as close to 1-1 as I can get
 	base_attack_cooldown = 4 //small fire rate buff. Was 8
+	// Internal suits
+	enzyme_affect = FALSE
+	min_oxy = 0
+	// disable max atmos
+	max_tox = 0
+	max_co2 = 0
+	max_n2 = 0
+	max_ch4 = 0
 
 /mob/living/simple_mob/vore/wolftaur/syndicate/lmg
 	projectiletype = /obj/item/projectile/bullet/rifle/a545 // Fixes this to use the same bullet as the actual LMG

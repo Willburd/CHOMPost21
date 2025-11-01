@@ -232,7 +232,7 @@
 
 /datum/category_item/autolathe/arms/b12g/emp
 	name = "ammo box (12 gauge EMP)"
-	path = /obj/item/ammo_magazine/ammo_box/b12g/beanbag
+	path = /obj/item/ammo_magazine/ammo_box/b12g/emp // Outpost 21 edit(port) - Wrong ammo print
 	hidden = 1
 
 /datum/category_item/autolathe/arms/b12g/flechette

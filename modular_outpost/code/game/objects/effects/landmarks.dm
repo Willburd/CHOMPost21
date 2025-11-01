@@ -199,6 +199,13 @@
 	. = ..()
 	if(!isturf(loc))
 		return
+
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(40))
+		return
+	#endif
+
 	// creates stuff like ruptured gas tanks, and landmines
 	switch(rand(1,4))
 		if(1)
@@ -245,6 +252,12 @@
 /obj/effect/landmark/step_trap/LateInitialize()
 	if(prob(40))
 		return
+
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(30))
+		return
+	#endif
 
 	var/turf/T = get_turf(src)
 	if(!T)
@@ -345,6 +358,11 @@
 /obj/effect/landmark/electrify_door/LateInitialize()
 	if(!prob(chance))
 		return
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(20))
+		return
+	#endif
 	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
 	if(A)
 		A.wires.cut(WIRE_ELECTRIFY)
