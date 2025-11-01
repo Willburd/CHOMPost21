@@ -1479,8 +1479,28 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"dw" = (
+/obj/structure/table/rack,
+/obj/item/storage/backpack/saddlebag_common/robust,
+/obj/item/storage/backpack/saddlebag_common/robust,
+/obj/item/storage/backpack/saddlebag_common/robust,
+/obj/item/storage/backpack/saddlebag_common/robust,
+/obj/item/storage/backpack/saddlebag_common/robust,
+/obj/item/storage/backpack/saddlebag_common/robust,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dx" = (
 /turf/unsimulated/wall/fakeglass,
+/area/syndicate_mothership)
+"dy" = (
+/obj/structure/table/rack,
+/obj/item/holosign_creator/medical,
+/obj/item/holosign_creator/medical,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
 /area/syndicate_mothership)
 "dA" = (
 /obj/machinery/light{
@@ -4382,6 +4402,7 @@
 	req_access = list(150);
 	req_one_access = list()
 	},
+/obj/item/tape/police,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4950,16 +4971,20 @@
 /area/syndicate_mothership)
 "nW" = (
 /obj/structure/table/rack,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
-/obj/item/material/knife/tacknife/combatknife,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
+/obj/item/material/knife/tacknife/combatknife/dura,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -52439,7 +52464,7 @@ jW
 jC
 sg
 sg
-jC
+yb
 jy
 jh
 je
@@ -52601,7 +52626,7 @@ jW
 jE
 sg
 sg
-jF
+yb
 jy
 jh
 je
@@ -52614,7 +52639,7 @@ sg
 gr
 ig
 sg
-kQ
+dw
 yb
 rA
 sg
@@ -52623,7 +52648,7 @@ hu
 sg
 kQ
 yb
-bM
+kQ
 sg
 kQ
 gV
@@ -52785,7 +52810,7 @@ hw
 sg
 kQ
 yb
-kQ
+bM
 sg
 kQ
 gV
@@ -53249,7 +53274,7 @@ sg
 jE
 sg
 sg
-jC
+yb
 jz
 jh
 je
@@ -53411,7 +53436,7 @@ jX
 jF
 sg
 sg
-jF
+yb
 jz
 jh
 je
@@ -54069,13 +54094,6 @@ yb
 yb
 dS
 dx
-kz
-kz
-yb
-yb
-yb
-dS
-dx
 hz
 hz
 dS
@@ -54085,6 +54103,13 @@ dS
 dx
 he
 he
+dS
+dx
+yb
+dS
+dx
+kz
+kz
 dS
 dx
 yb
@@ -54229,13 +54254,6 @@ jc
 ew
 iI
 yb
-nu
-sg
-sg
-sg
-sg
-hp
-yb
 hT
 sg
 sg
@@ -54249,6 +54267,13 @@ sg
 sg
 sg
 gP
+yb
+nu
+sg
+sg
+sg
+sg
+hp
 yb
 gp
 sg
@@ -54391,13 +54416,6 @@ jc
 ew
 iI
 yb
-nv
-sg
-sg
-sg
-sg
-if
-yb
 hV
 sg
 sg
@@ -54411,6 +54429,13 @@ sg
 sg
 sg
 gQ
+yb
+nv
+sg
+sg
+sg
+sg
+if
 yb
 gv
 sg
@@ -54553,13 +54578,6 @@ jc
 ew
 ew
 yb
-iz
-sg
-rF
-rF
-sg
-iB
-yb
 jA
 sg
 kx
@@ -54573,6 +54591,13 @@ kQ
 hf
 sg
 ps
+yb
+iz
+sg
+rF
+rF
+sg
+iB
 yb
 gy
 sg
@@ -54715,13 +54740,6 @@ ew
 ew
 ew
 yb
-iC
-sg
-ij
-ij
-sg
-iB
-yb
 hW
 sg
 la
@@ -54735,6 +54753,13 @@ kQ
 hf
 sg
 gR
+yb
+iC
+sg
+ij
+ij
+sg
+iB
 yb
 gB
 sg
@@ -54877,13 +54902,6 @@ ew
 ew
 ew
 yb
-iD
-sg
-im
-im
-sg
-iB
-yb
 df
 sg
 hJ
@@ -54897,6 +54915,13 @@ kQ
 kQ
 sg
 gS
+yb
+iD
+sg
+im
+im
+sg
+iB
 yb
 gD
 sg
@@ -55039,14 +55064,7 @@ iJ
 yb
 iJ
 yb
-iE
-sg
-iB
-iB
-sg
-iB
-yb
-kQ
+dy
 sg
 kQ
 kQ
@@ -55059,6 +55077,13 @@ kQ
 kQ
 sg
 gU
+yb
+iE
+sg
+iB
+iB
+sg
+iB
 yb
 gF
 sg
@@ -55201,26 +55226,26 @@ iK
 yb
 iK
 yb
+kQ
+sg
+kQ
+kQ
+sg
+kQ
+yb
+kQ
+sg
+kQ
+kQ
+sg
+kQ
+yb
 lQ
 sg
 iB
 iB
 sg
 iB
-yb
-kQ
-sg
-kQ
-kQ
-sg
-kQ
-yb
-kQ
-sg
-kQ
-kQ
-sg
-kQ
 yb
 gG
 sg
