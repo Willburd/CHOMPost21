@@ -242,45 +242,50 @@
 		T.toggle_valve()
 
 /mob/living/simple_mob/vore/alienanimals/jil/do_attack(atom/A, turf/T)
-	if(istype(A, /mob/living/carbon/human))
+	if(!istype(A, /mob/living/carbon/human))
+		return ..()
 
-		//Size calculation checks
-		var/mob/living/carbon/human/scoopee = A
-		var/sizediff = size_multiplier - scoopee.size_multiplier //50% size diff! //1 size jil can pick up 0.5 teshari!
-		var/sizediff_treshold = 0.5 //Size difference required for them to pick you up. This means it must be below
-		if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
-			sizediff_treshold = 0.2 // jillioth can pick up somewhat bigger!
-		sizediff = round(sizediff, 0.01) //A person at 80% size being attached by a 100% size jillioth returns... 0.199999. BULLSHIT!
-		if(sizediff >= sizediff_treshold)
-			if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth)) //We're a jillioth! We throw!
-				if(!(ai_holder.check_attacker(A))) //Grab and kidnap!
-					face_atom(A)
-					scoopee.get_scooped(src)
+	//Size calculation checks
+	var/mob/living/carbon/human/scoopee = A
+	var/sizediff = size_multiplier - scoopee.size_multiplier //50% size diff! //1 size jil can pick up 0.5 teshari!
+	var/sizediff_treshold = 0.5 //Size difference required for them to pick you up. This means it must be below
+	if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
+		sizediff_treshold = 0.2 // jillioth can pick up somewhat bigger!
+	sizediff = round(sizediff, 0.01) //A person at 80% size being attached by a 100% size jillioth returns... 0.199999. BULLSHIT!
+	if(sizediff < sizediff_treshold)
+		return ..()
 
-				else if((ai_holder.check_attacker(A))) //We attacked them before! They hate us!
-					if(prob(25))
-						face_atom(A)
-						scoopee.get_scooped(src)
-						addtimer(CALLBACK(src, PROC_REF(hunkamania_brother)), rand(1,2) SECONDS, TIMER_DELETE_ME)
-					else
-						..()
-			else // normal jil, just kidnap
-				face_atom(A)
-				scoopee.get_scooped(src)
-				return
-		else ..()
-	else
-		..()
+	// normal jil, just kidnap
+	if(!istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
+		face_atom(A)
+		scoopee.get_scooped(src)
+		return TRUE
+
+	// Jillioth kidnapping
+	if(!(ai_holder.check_attacker(A)))
+		face_atom(A)
+		scoopee.get_scooped(src)
+		return TRUE
+
+	//We're a jillioth! We throw!
+	if(prob(25))
+		face_atom(A)
+		scoopee.get_scooped(src)
+		addtimer(CALLBACK(src, PROC_REF(hunkamania_brother)), rand(1,2) SECONDS, TIMER_DELETE_ME)
+		return TRUE
+
+	. = ..()
 
 /mob/living/simple_mob/vore/alienanimals/jil/proc/hunkamania_brother()
 	if(stat != CONSCIOUS)
 		return
 	var/obj/item/holder/mob_holder = get_active_hand()
-	if(istype(mob_holder))
-		if(prob(20))
-			dir = pick(GLOB.alldirs)
-		var/turf/target_turf = get_edge_target_turf(src, dir, rand (5,10))
-		throw_item(target_turf)
+	if(!istype(mob_holder))
+		return
+	if(prob(20))
+		dir = pick(GLOB.alldirs)
+	var/turf/target_turf = get_edge_target_turf(src, dir, rand (5,10))
+	throw_item(target_turf)
 
 // Jil noises
 /datum/say_list/jil
@@ -356,16 +361,7 @@
 	return FALSE
 
 /datum/ai_holder/simple_mob/intentional/jil/pre_melee_attack(atom/A)
-	if(istype(A, /obj/item))
-		if(self_use_item(A))	// If we can't pick it up, or it's edible, go to harm.
-			holder.a_intent = I_HURT
-			var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
-			J.handle_self_use(A) // MEEP!
-		else
-			holder.a_intent = I_HELP
-	else
-		// bonk for all others
-		holder.a_intent = I_HELP
+	holder.a_intent = I_HELP
 
 	// update forbiddens
 	update_forbidden_list()
@@ -390,23 +386,32 @@
 			last_pickup_turf = target.loc // for closet fix
 		give_up_movement()
 		lose_target()
-	else
-		// if a closet that a jillioth has seen...
-		if(istype(A, /obj/structure/closet))
-			// stop slamming
-			failed_breakthroughs = 4
+		return
 
-			// cancel it once destroyed
-			give_up_movement()
-			lose_target()
-		else
-			// keep trying!
-			failed_breakthroughs = 0
+	// if a closet that a jillioth has seen...
+	if(istype(A, /obj/structure/closet))
+		// stop slamming
+		failed_breakthroughs = 4
+
+		// cancel it once destroyed
+		give_up_movement()
+		lose_target()
+		return
+
+	// keep trying!
+	failed_breakthroughs = 0
 
 
 /datum/ai_holder/simple_mob/intentional/jil/post_melee_attack(atom/A)
 	if(istype(A, /obj/item) && !holder.get_active_hand() && holder.Adjacent(A))
-		if(istype(A, /obj/item/flame/lighter))
+		if(self_use_item(A))
+			var/obj/item/I = A
+			I.attack_hand(holder)
+			spawn(5)
+				var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
+				J.handle_self_use(A) // MEEP!
+
+		else if(istype(A, /obj/item/flame/lighter))
 			var/obj/item/flame/lighter/R = A
 			var/obj/item/I = A
 			I.attack_hand(holder)
@@ -426,6 +431,7 @@
 						holder.death()
 						new /obj/effect/decal/cleanable/ash(holder.loc) // Turn it to ashes!
 						qdel(holder)
+
 		else if(istype(A, /obj/item))
 			var/obj/item/D = A
 			if(!D.anchored)
@@ -436,10 +442,6 @@
 				if(istype(A, /obj/item/radio/intercom))
 					var/obj/item/radio/intercom/Ic = D
 					Ic.listening = !Ic.listening
-		else
-			// attempt grab of target!
-			var/obj/item/I = A
-			I.attack_hand(holder)
 
 	else if(istype(A, /obj/structure/closet))
 		// attempt to open!
