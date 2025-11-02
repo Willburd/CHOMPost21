@@ -2710,15 +2710,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adS" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/brown/border{
-	dir = 10
-	},
-/obj/effect/floor_decal/milspec/cargo,
-/obj/structure/closet/crate/miningcar,
-/turf/simulated/floor/tiled/techmaint,
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/plating,
 /area/shuttle/trawler)
 "adT" = (
 /obj/effect/floor_decal/borderfloorblack/corner{
@@ -11053,6 +11047,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
+"auI" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/machinery/trailblazer/yellow,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/muriki/grounds/med)
 "auJ" = (
 /obj/structure/table/woodentable,
 /obj/item/toy/plushie/borgplushie/drake/sci{
@@ -19432,10 +19434,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
-"dcK" = (
-/obj/machinery/trailblazer/yellow,
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/civ)
 "dcR" = (
 /obj/structure/cliff/corner{
 	dir = 6
@@ -95613,7 +95611,7 @@ jWE
 xGE
 tqt
 apZ
-apZ
+tAo
 apZ
 apZ
 apZ
@@ -95753,7 +95751,7 @@ aqq
 aqq
 aqq
 aqq
-aqq
+hZu
 aqZ
 aqq
 aqq
@@ -95775,7 +95773,7 @@ iya
 vYf
 kaC
 wbE
-apZ
+aqh
 apZ
 apZ
 apZ
@@ -95939,7 +95937,7 @@ uut
 iMI
 apZ
 apZ
-tAo
+apZ
 apZ
 apZ
 apZ
@@ -105745,7 +105743,7 @@ ara
 ara
 ara
 ara
-ara
+ajQ
 nhe
 ara
 ara
@@ -108712,7 +108710,7 @@ aqq
 sxD
 aqq
 aqM
-aqq
+hZu
 aqZ
 aqq
 aqM
@@ -112885,7 +112883,7 @@ hts
 hts
 hts
 ara
-ara
+ajQ
 aqZ
 aqq
 aqq
@@ -114005,7 +114003,7 @@ ara
 ara
 ara
 ara
-ara
+ajQ
 nhe
 ara
 ara
@@ -120864,8 +120862,8 @@ aqi
 aqi
 aqi
 aqi
-aqi
-aqi
+mPR
+aqp
 aqi
 aqi
 aqi
@@ -121167,7 +121165,7 @@ iDi
 iDi
 aiY
 aqq
-aqq
+aqJ
 aqq
 aqr
 aqq
@@ -123798,7 +123796,7 @@ vEe
 aqi
 fgn
 aqi
-mPR
+aqi
 gBL
 gBL
 gBL
@@ -133275,7 +133273,7 @@ arf
 arf
 arf
 arf
-ari
+auI
 atB
 arf
 dRW
@@ -134883,7 +134881,7 @@ are
 are
 are
 are
-are
+aty
 are
 eGS
 xZC
@@ -134963,7 +134961,7 @@ apP
 apP
 apP
 jSM
-apP
+aqn
 apP
 apP
 dtK
@@ -135074,7 +135072,7 @@ tSA
 pVL
 aqw
 aqw
-aqw
+aqY
 aqw
 aqw
 aqw
@@ -135400,7 +135398,7 @@ aqw
 aqw
 dKo
 dKo
-dcK
+dKo
 smy
 aqw
 aqw
@@ -137529,7 +137527,7 @@ aqw
 aqw
 aqw
 aqw
-aqw
+aqY
 aqw
 aqw
 jfF
@@ -138274,7 +138272,7 @@ arq
 arq
 are
 are
-are
+aty
 hEA
 are
 epD
@@ -140401,7 +140399,7 @@ kWc
 are
 are
 are
-are
+aty
 hEA
 are
 are
@@ -142188,7 +142186,7 @@ apR
 aqw
 aqw
 aqw
-aqw
+aqY
 aqw
 eTa
 ucE
@@ -144632,7 +144630,7 @@ aqw
 aqw
 aqw
 aqw
-aqw
+aqY
 lwo
 aqw
 aqw

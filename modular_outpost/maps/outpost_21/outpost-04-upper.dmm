@@ -15042,11 +15042,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "gPS" = (
-/obj/structure/closet,
-/obj/effect/floor_decal/corner/brown{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/steel_grid,
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/industrial/danger/full,
+/turf/simulated/floor/plating,
 /area/quartermaster/mining/expl)
 "gPX" = (
 /obj/structure/toilet{
