@@ -1661,6 +1661,7 @@
 /area/crew_quarters/medbreak)
 "adD" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/machinery/deployable/barrier,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "adE" = (
@@ -1668,6 +1669,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/machinery/deployable/barrier,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "adF" = (
@@ -1755,6 +1757,12 @@
 	},
 /turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"adR" = (
+/obj/effect/shuttle_landmark/premade/mercenary/station_n{
+	name = "OP21 - Mountainside"
+	},
+/turf/simulated/open/muriki,
+/area/muriki/skyline/north)
 "adS" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/shovel/spade,
@@ -30619,6 +30627,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/machinery/deployable/barrier,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "oHs" = (
@@ -32241,6 +32250,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/machinery/deployable/barrier,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "pwK" = (
@@ -80540,7 +80550,7 @@ ovc
 ovc
 ovc
 ovc
-ovc
+hci
 kxr
 kxr
 kxr
@@ -80702,7 +80712,7 @@ ovc
 ovc
 ovc
 ovc
-ovc
+hci
 kxr
 kxr
 kxr
@@ -80863,8 +80873,8 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
+hci
+hci
 kxr
 kxr
 kxr
@@ -81025,8 +81035,8 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
+hci
+hci
 kxr
 kxr
 kxr
@@ -81187,10 +81197,10 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
+hci
+hci
 kxr
-kxr
+adR
 kxr
 kxr
 kxr
@@ -81349,8 +81359,8 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
+hci
+hci
 kxr
 kxr
 kxr
@@ -81511,8 +81521,8 @@ ovc
 ovc
 ovc
 ovc
-ovc
-ovc
+hci
+hci
 kxr
 kxr
 kxr
@@ -81674,7 +81684,7 @@ ovc
 ovc
 ovc
 ovc
-ovc
+hci
 kxr
 kxr
 kxr
