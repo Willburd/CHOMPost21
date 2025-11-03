@@ -15,15 +15,6 @@
 				"bio" = 100, //Except these
 				"rad" = 100
 				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 0, // all set to 0, upstream wants to move away from armor soak apparently
-				"bullet" = 0,
-				"laser" = 0,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
 
 /mob/living/simple_mob/vore/otie/syndicate/chubby
 	armor = list(			// Values for normal getarmor() checks // Half the values of the actual syndies, rounded down.
@@ -35,15 +26,6 @@
 				"bio" = 100, //Except these
 				"rad" = 100
 				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 0, // all set to 0, upstream wants to move away from armor soak apparently
-				"bullet" = 0,
-				"laser" = 0,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
 
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate
 	armor = list(			// Values for normal getarmor() checks // Half the values of the actual syndies, rounded down.
@@ -54,15 +36,6 @@
 				"bomb" = 0,
 				"bio" = 100, //Except these
 				"rad" = 100
-				)
-	armor_soak = list(		// Values for getsoak() checks.
-				"melee" = 0, // all set to 0, upstream wants to move away from armor soak apparently
-				"bullet" = 0,
-				"laser" = 0,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
 				)
 
 /mob/living/simple_mob/vore/wolftaur/syndicate

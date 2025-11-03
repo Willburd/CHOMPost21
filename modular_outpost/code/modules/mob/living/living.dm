@@ -45,10 +45,8 @@
 		real_damage = max(1, real_damage)
 
 		var/armour = throw_mob.run_armor_check(hit_zone, "melee")
-		var/soaked = throw_mob.get_armor_soak(hit_zone, "melee")
-
 		attack.apply_effects(src, throw_mob, armour, rand_damage, hit_zone)
-		throw_mob.apply_damage(real_damage, hit_dam_type, hit_zone, armour, soaked)
+		throw_mob.apply_damage(real_damage, hit_dam_type, hit_zone, armour)
 
 		// sound and logging
 		playsound(src, attack.attack_sound, 25, 1, -1)
