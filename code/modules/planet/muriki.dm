@@ -686,17 +686,13 @@ var/datum/planet/muriki/planet_muriki = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = L.run_armor_check(target_zone, "melee")
-		var/amount_soaked = L.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(10,30) //Ow
 
 		if(amount_blocked >= 30)
 			return
 
-		if(amount_soaked >= damage)
-			return // No need to apply damage.
-
-		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
+		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "rain bludgoning")
 		L.Weaken(3)
 
 		if(show_message)
@@ -757,7 +753,6 @@ var/datum/planet/muriki/planet_muriki = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = L.run_armor_check(target_zone, "melee")
-		var/amount_soaked = L.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(1,3)
 
@@ -765,9 +760,7 @@ var/datum/planet/muriki/planet_muriki = null
 			return // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
 			//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
 
-		if(amount_soaked >= damage)
-			return // No need to apply damage.
-		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "hail")
 
 		// show transition messages
 		if(show_message)
@@ -896,7 +889,6 @@ var/datum/planet/muriki/planet_muriki = null
 
 			var/target_zone = pick(BP_ALL)
 			var/amount_blocked = L.run_armor_check(target_zone, "melee")
-			var/amount_soaked = L.get_armor_soak(target_zone, "melee")
 
 			var/damage = rand(1,3)
 
@@ -904,9 +896,7 @@ var/datum/planet/muriki/planet_muriki = null
 				return // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
 				//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
 
-			if(amount_soaked >= damage)
-				return // No need to apply damage.
-			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "sharp ice")
+			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "sharp ice")
 
 			// show transition messages
 			if(show_message)

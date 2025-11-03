@@ -73,23 +73,16 @@ export const VorePanel = () => {
     />
   );
   */
-  tabs[1] = general_pref_data &&
-    our_bellies && ( // Outpost 21 edit - Disable soulgems
-      <VoreUserGeneral
-        general_pref_data={general_pref_data}
-        our_bellies={our_bellies}
-        editMode={editMode}
-        toggleEditMode={setEditMode}
-        persist_edit_mode={persist_edit_mode}
-      />
-    );
-  tabs[2] = prefs && ( // Outpost 21 edit - Disable soulgems
-    <VoreUserPreferences
-      prefs={prefs}
-      show_pictures={show_pictures}
-      icon_overflow={icon_overflow}
+  tabs[1] = general_pref_data && our_bellies && (
+    <VoreUserGeneral
+      general_pref_data={general_pref_data}
+      our_bellies={our_bellies}
+      editMode={editMode}
+      toggleEditMode={setEditMode}
+      persist_edit_mode={persist_edit_mode}
     />
   );
+  tabs[2] = prefs && <VoreUserPreferences prefs={prefs} />;
 
   return (
     <Window width={1030} height={760} theme="abstract">
