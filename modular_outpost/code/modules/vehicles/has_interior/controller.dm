@@ -390,7 +390,7 @@
 			if(W.density)
 				// stopped speed!
 				has_breaking_speed = FALSE
-				W.visible_message("<span class='danger'>Something crashes against \the [W]!</span>")
+				W.visible_message(span_danger("\The [src] crashes against \the [W]!"))
 				W.ex_act(severity)
 
 				// breaking stuff
@@ -422,7 +422,7 @@
 			var/obj/structure/S = target
 			if(!S.unacidable)
 				if(S.density || prob(1))
-					S.visible_message("<span class='danger'>Something crashes against \the [S]!</span>")
+					S.visible_message(span_danger("\The [src] crashes against \the [S]!"))
 					S.ex_act(severity)
 
 					// breaking stuff
@@ -441,7 +441,7 @@
 		if(istype(target, /obj/machinery/))
 			var/obj/machinery/M = target
 			if(M.density || prob(3))
-				M.visible_message("<span class='danger'>Something crashes against \the [M]!</span>")
+				M.visible_message(span_danger("\The [src] crashes against \the [M]!"))
 				M.ex_act(severity)
 
 				// breaking stuff
@@ -469,7 +469,7 @@
 	if(isliving(target))
 		var/mob/living/M = target
 		if(!M.is_incorporeal())
-			visible_message("<font color='red'>[src] runs over [M]!</font>")
+			visible_message(span_danger("\The [src] runs over [M]!"))
 			if(M.mob_size < MOB_HUGE)
 				M.apply_effects(5, 5)				//knock people down if you hit them
 				M.apply_damages(move_damage)	// and do damage according to how fast the train is going
