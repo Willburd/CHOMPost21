@@ -325,7 +325,6 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/sendFax,
 	/datum/admins/proc/view_persistent_data,
 	/client/proc/start_vote,
-	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )
 
