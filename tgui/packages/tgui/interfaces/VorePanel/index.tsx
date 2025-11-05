@@ -157,7 +157,7 @@ export const VorePanel = () => {
                   <Icon name="person-shelter" ml={0.5} />
                 </Tabs.Tab>
               )}
-			  {/* // Outpost 21 edit - Disable soulgems
+              {/* // Outpost 21 edit - Disable soulgems
               <Tabs.Tab
                 selected={active_tab === 2}
                 onClick={() => act('change_tab', { tab: 2 })}
