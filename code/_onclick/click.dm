@@ -95,10 +95,12 @@
 		return TRUE
 
 	// Outpost 21 addition begin - Clicking while driving a interior controlled vehicle
-	if(!is_incorporeal() && buckled && istype(buckled,/obj/structure/bed/chair/vehicle_interior_seat) && (isturf(A) || isturf(A.loc)))
-		var/obj/structure/bed/chair/vehicle_interior_seat/S = buckled
-		if(S.paired_console.is_viewing_tank())
-			return S.click_action(A, src, params)
+	var/datum/component/remote_view/R = GetComponent(/datum/component/remote_view)
+	if(!is_incorporeal() && R && (isturf(A) || isturf(A.loc)))
+		if(istype(R.get_coordinator(), /obj/machinery/computer/vehicle_interior_console))
+			var/obj/machinery/computer/vehicle_interior_console/C = R.get_coordinator()
+			if(C)
+				return C.click_action(A, src, params)
 	// Outpost 21 addition end
 
 	var/obj/item/W = get_active_hand()

@@ -235,13 +235,7 @@ default behaviour is:
 // Almost all of this handles pulling movables behind us
 /mob/living/Move(atom/newloc, direct, movetime)
 	if(buckled && buckled.loc != newloc) //not updating position
-		// Outpost 21 addition being - Interior capable vehicles, forwarding input from the seat
-		if(istype(buckled,/obj/structure/bed/chair/vehicle_interior_seat/pilot))
-			var/obj/structure/bed/chair/vehicle_interior_seat/pilot/P = buckled
-			P.relaymove(src, direct)
-			return 0
-		// Outpost 21 addition being end
-		else if(!buckled.anchored && buckled.buckle_movable)
+		if(!buckled.anchored && buckled.buckle_movable)
 			return buckled.Move(newloc, direct)
 		else
 			return 0

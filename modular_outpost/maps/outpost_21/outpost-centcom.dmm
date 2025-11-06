@@ -56,6 +56,24 @@
 "aao" = (
 /turf/space/transit/north,
 /area/space)
+"aap" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vehicle_interior/heavyarmor_carrier_A)
+"aaq" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vehicle_interior/heavyarmor_carrier_B)
 "aar" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
@@ -1750,12 +1768,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/specialty/redspace)
-"aCS" = (
-/obj/structure/bed/chair/vehicle_interior_seat/pilot{
-	dir = 8
-	},
-/turf/simulated/floor,
-/area/vehicle_interior/heavyarmor_tank_A)
 "aDA" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
@@ -2113,12 +2125,6 @@
 	},
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_B)
-"aKq" = (
-/obj/structure/bed/chair/vehicle_interior_seat/pilot{
-	dir = 8
-	},
-/turf/simulated/floor,
-/area/vehicle_interior/heavyarmor_tank_B)
 "aKQ" = (
 /obj/item/toy/plushie/pillow/green,
 /obj/item/bedsheet/pillow/black,
@@ -2358,12 +2364,6 @@
 	icon_state = "dark"
 	},
 /area/centcom/holding)
-"aPN" = (
-/obj/structure/bed/chair/vehicle_interior_seat/pilot{
-	dir = 8
-	},
-/turf/simulated/floor,
-/area/vehicle_interior/heavyarmor_tank_C)
 "aPY" = (
 /obj/machinery/shower{
 	pixel_y = 3
@@ -2509,7 +2509,7 @@
 /turf/simulated/wall/r_wall,
 /area/specialty/redspace)
 "aUt" = (
-/obj/structure/bed/chair/vehicle_interior_seat/pilot{
+/obj/structure/bed/chair/shuttle_padded{
 	dir = 8
 	},
 /turf/simulated/floor,
@@ -2830,7 +2830,7 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "bbR" = (
-/obj/structure/bed/chair/vehicle_interior_seat/pilot{
+/obj/structure/bed/chair/shuttle_padded{
 	dir = 8
 	},
 /turf/simulated/floor,
@@ -3243,12 +3243,12 @@
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "bof" = (
-/obj/structure/bed/chair/vehicle_interior_seat{
-	dir = 1
-	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_A)
@@ -3370,12 +3370,12 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "brr" = (
-/obj/structure/bed/chair/vehicle_interior_seat{
-	dir = 1
-	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_B)
@@ -3472,12 +3472,12 @@
 /turf/simulated/floor/plating,
 /area/specialty/redspace)
 "btA" = (
-/obj/structure/bed/chair/vehicle_interior_seat{
-	dir = 1
-	},
 /obj/item/radio/intercom/department/security{
 	dir = 4;
 	pixel_x = 21
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_C)
@@ -3517,11 +3517,11 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "bub" = (
-/obj/structure/bed/chair/vehicle_interior_seat,
 /obj/item/radio/intercom/department/security{
 	dir = 8;
 	pixel_x = -21
 	},
+/obj/structure/bed/chair/shuttle_padded,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_carrier_A)
 "buc" = (
@@ -3909,11 +3909,11 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "bEN" = (
-/obj/structure/bed/chair/vehicle_interior_seat,
 /obj/item/radio/intercom/department/security{
 	dir = 8;
 	pixel_x = -21
 	},
+/obj/structure/bed/chair/shuttle_padded,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_carrier_B)
 "bEU" = (
@@ -9020,7 +9020,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/specialty/redspace)
 "eqf" = (
-/obj/structure/bed/chair/vehicle_interior_seat{
+/obj/structure/bed/chair/shuttle_padded{
 	dir = 8
 	},
 /turf/simulated/floor,
@@ -9669,11 +9669,11 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/escape)
 "eGk" = (
-/obj/structure/bed/chair/vehicle_interior_seat/pilot{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/blue/border,
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "eGI" = (
@@ -10871,6 +10871,9 @@
 /obj/machinery/ammo_storage{
 	pixel_y = -4
 	},
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_C)
 "fjX" = (
@@ -11070,6 +11073,9 @@
 /obj/effect/floor_decal/industrial/loading,
 /obj/machinery/ammo_storage{
 	pixel_y = -4
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_A)
@@ -20991,6 +20997,7 @@
 "kju" = (
 /obj/machinery/oxygen_pump/mobile/stabilizer,
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "kjC" = (
@@ -21957,6 +21964,9 @@
 /obj/effect/floor_decal/industrial/loading,
 /obj/machinery/ammo_storage{
 	pixel_y = -4
+	},
+/obj/structure/handrail{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_B)
@@ -23630,6 +23640,9 @@
 "lQj" = (
 /obj/effect/floor_decal/industrial/hatch,
 /obj/structure/bed/roller/adv,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "lQU" = (
@@ -36738,7 +36751,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "tok" = (
-/obj/structure/bed/chair/vehicle_interior_seat{
+/obj/structure/bed/chair/shuttle_padded{
 	dir = 8
 	},
 /turf/simulated/floor,
@@ -45084,7 +45097,7 @@
 	},
 /area/centcom/specops)
 "xTE" = (
-/obj/structure/bed/chair/vehicle_interior_seat{
+/obj/structure/bed/chair/shuttle_padded{
 	dir = 8
 	},
 /turf/simulated/floor,
@@ -80004,7 +80017,7 @@ aab
 aab
 aab
 anb
-aCS
+xTE
 bmJ
 xTE
 amM
@@ -84216,7 +84229,7 @@ aab
 aab
 aab
 aqr
-aKq
+eqf
 bpZ
 eqf
 aoG
@@ -89400,7 +89413,7 @@ aab
 aab
 aab
 arv
-aPN
+tok
 bsd
 tok
 arn
@@ -93938,7 +93951,7 @@ aab
 ate
 aUG
 bus
-bus
+aap
 ate
 aab
 aab
@@ -99446,7 +99459,7 @@ aab
 auj
 bFS
 bFS
-bFS
+aaq
 auj
 aab
 aab
