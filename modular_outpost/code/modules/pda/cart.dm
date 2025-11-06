@@ -16,6 +16,7 @@
 
 // UAV type that spawns with a cart
 /obj/item/uav/has_cart/Initialize(mapload)
+	. = ..()
 	new /obj/item/cartridge/uav_control(loc)
 
 /obj/item/cartridge/uav_control
