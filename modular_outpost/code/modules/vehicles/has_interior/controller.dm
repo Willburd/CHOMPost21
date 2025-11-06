@@ -117,10 +117,8 @@
 					remote_turn_off()		//so engine verbs are correctly set
 					interior_helm = C 		// update vehicle, we found the pilot seat, so we know which console is the drivers!
 
-				for(var/obj/structure/bed/chair/vehicle_interior_seat/S in get_step(C.loc,C.dir))
-					S.paired_console = C
-					C.paired_seat = S
-					C.paired_seat.name = C.name + " Seat"
+				for(var/obj/structure/bed/chair/S in get_step(C.loc,C.dir))
+					S.name = C.name + " Seat"
 					break
 
 				if(C.controls_weapon_index > 0)
@@ -161,67 +159,68 @@
 			take_damage(30)
 
 /obj/vehicle/has_interior/controller/relaymove(mob/user, direction)
-	if(stat)
-		// Destroyed
+	if(stat || !on)
 		return FALSE
 
-	if(on)
-		// attempt destination
-		cached_dir = dir // update cached dir
-		var/could_move = FALSE
-		var/turf/newloc = get_step(src, direction)
+	// attempt destination
+	cached_dir = dir // update cached dir
+	var/could_move = FALSE
+	var/turf/newloc = get_step(src, direction)
 
-		if(user.stat || !user.canmove)
-			// knocked out controller
-			return FALSE
+	if(user.stat || !user.canmove || !user.buckled)
+		// knocked out controller, or not in seat
+		return FALSE
 
-		// stairs check
-		for(var/obj/structure/stairs/S in newloc)
-			could_move = Move(newloc, direction) // move to pos,
-			if(!could_move && S.dir == direction) // bumped back step...
-				S.use_stairs(src, newloc) // ... so use stairs!
-				start_move_sound()
-				return TRUE
-			return could_move // stop movement here, do not break walls
+	// Respect move delay for crushing
+	if(world.time < l_move_time + move_delay)
+		return TRUE
 
-		// standard move
-		var/turf/checkm = get_step(newloc, direction)
-		var/turf/checka = get_step(checkm, NORTH)
-		var/turf/checkb = get_step(checkm, SOUTH)
-		if(direction == NORTH || direction == SOUTH)
-			checka = get_step(checkm, EAST)
-			checkb = get_step(checkm, WEST)
+	// stairs check
+	for(var/obj/structure/stairs/S in newloc)
+		could_move = Move(newloc, direction) // move to pos,
+		if(!could_move && S.dir == direction) // bumped back step...
+			S.use_stairs(src, newloc) // ... so use stairs!
+			start_move_sound()
+			return TRUE
+		return TRUE // stop movement here, do not break walls
 
-		// Check for huge mobs
-		var/mob_blocker = null
-		for(var/mob/living/M in checkm.contents + checka.contents + checkb.contents)
-			if(M.density && M.mob_size == MOB_HUGE)
-				mob_blocker = M
-				break
+	// standard move
+	var/turf/checkm = get_step(newloc, direction)
+	var/turf/checka = get_step(checkm, NORTH)
+	var/turf/checkb = get_step(checkm, SOUTH)
+	if(direction == NORTH || direction == SOUTH)
+		checka = get_step(checkm, EAST)
+		checkb = get_step(checkm, WEST)
 
-		// tank only likes to turn if able to move, cannot 180!
-		if(!mob_blocker)
-			could_move = Move(newloc, direction)
-		if(!could_move)
-			// normally called from Moved()!
-			if(dir == reverse_direction(cached_dir))
-				dir = cached_dir // hold direction...
+	// Check for huge mobs
+	var/mob_blocker = null
+	for(var/mob/living/M in checkm.contents + checka.contents + checkb.contents)
+		if(M.density && M.mob_size == MOB_HUGE)
+			mob_blocker = M
+			break
 
-		// break things we run over, IS A WIDE BOY
-		smash_at_loc(checkm) // at destination
-		if(!could_move) crush_mobs_at_loc(checkm)
-		smash_at_loc(checka) // and at --
-		if(!could_move) crush_mobs_at_loc(checka)
-		smash_at_loc(checkb) // -- each side
-		if(!could_move) crush_mobs_at_loc(checkb)
+	// tank only likes to turn if able to move, cannot 180!
+	if(!mob_blocker)
+		could_move = Move(newloc, direction)
+	if(!could_move)
+		// normally called from Moved()!
+		if(dir == reverse_direction(cached_dir))
+			dir = cached_dir // hold direction...
 
-		// UNRELENTING VIOLENCE
-		for(var/turf/T in locs)
-			crush_mobs_at_loc(T)
+	// break things we run over, IS A WIDE BOY
+	smash_at_loc(checkm) // at destination
+	if(!could_move) crush_mobs_at_loc(checkm)
+	smash_at_loc(checka) // and at --
+	if(!could_move) crush_mobs_at_loc(checka)
+	smash_at_loc(checkb) // -- each side
+	if(!could_move) crush_mobs_at_loc(checkb)
 
-		start_move_sound()
-		return could_move
-	return FALSE
+	// UNRELENTING VIOLENCE
+	for(var/turf/T in locs)
+		crush_mobs_at_loc(T)
+
+	start_move_sound()
+	return TRUE
 
 /obj/vehicle/has_interior/controller/Moved(atom/old_loc, direction, forced = FALSE, movetime)
 	. = ..()

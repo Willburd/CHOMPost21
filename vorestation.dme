@@ -5689,7 +5689,6 @@
 #include "modular_outpost\code\modules\vehicles\has_interior\heavyarmor_tank.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_consoles.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_hatch.dm"
-#include "modular_outpost\code\modules\vehicles\has_interior\interior_seat.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_weapons.dm"
 #include "modular_outpost\code\modules\vore\fluffstuff\custom_items.dm"
 #include "modular_outpost\code\modules\xenobio\items\extracts.dm"

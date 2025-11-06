@@ -67,19 +67,19 @@
 	var/angledir = angle2dir( solve_aim_angle(text2num(tX),text2num(tY)))
 	var/turf/targloc = get_turf(target)
 	if(!curloc || !targloc)
-		return
+		return FALSE
 	if(targloc.x == 0 && targloc.y == 0)
 		// stop thinking darkness is bottom left of the map, just don't allow firing...
-		return
+		return FALSE
 	if(dir != angledir)
 		// turn toward!
 		update_weapon_turn( angledir)
-		return
+		return FALSE
 
 	// intent check
 	if(user_calling.a_intent == I_HELP && user_calling.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))
 		to_chat(user_calling, "<span class='warning'>You refrain from firing the mounted \the [src] as your intent is set to help.</span>")
-		return
+		return FALSE
 
 	// check if loaded
 	var/obj/machinery/ammo_loader/L
@@ -88,19 +88,14 @@
 	if(L)
 		if(!L.loaded)
 			to_chat(user_calling, "<span class='warning'>You are unable to fire \the [src] as there is no shell loaded.</span>")
-			return
+			return FALSE
 		else
 			L.fire()
 
 	// ACTUALLY fire
 	control_console.interior_controller.visible_message("<span class='warning'>[user_calling] fires [src]!</span>")
 	to_chat(user_calling,"<span class='warning'>You fire [src]!</span>")
-	var/target_for_log = "unknown"
-	if(ismob(target))
-		target_for_log = target
-	else if(target)
-		target_for_log = "[target.name]"
-	add_attack_logs(user_calling,target_for_log,"Fired vehicle [control_console.interior_controller.name] weapon [src.name] (MANUAL)")
+	add_attack_logs(user_calling, target, "Fired vehicle [control_console.interior_controller] weapon [src] (MANUAL)")
 
 	for(var/i = 1 to min(projectiles, projectiles_per_shot))
 		var/turf/aimloc = targloc
@@ -125,10 +120,10 @@
 
 	// reload
 	projectiles = projectiles_per_shot
-	return
+	return TRUE
 
 /obj/item/vehicle_interior_weapon/proc/get_pilot_zone_sel(var/mob/user)
-	if(!control_console.paired_seat.has_buckled_mobs() || !user.zone_sel || user.stat)
+	if(!user.zone_sel || user.stat)
 		return BP_TORSO
 
 	return user.zone_sel.selecting
