@@ -106,14 +106,16 @@
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
-	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable
+	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable shadekin death fizzle
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
+		/* Outpost 21 edit - Disable shadekin death fizzle
 		spawn(1)
 			for(var/obj/item/W in H)
 				H.drop_from_inventory(W)
 			qdel(H)
+		*/
 	else
 		if(!SK)
 			return
