@@ -104,3 +104,11 @@
 	name = "\improper Backup Generator"
 	desc = "A direction sign, pointing out the way to an Emergency Generator."
 	icon_state = "direction_gen"
+
+
+// Central AI
+/obj/structure/showcase/AI_central
+	name = "Central Command AI"
+	desc = "Manages central command's AI tasks."
+	icon_state = "ai-red"
+	icon = 'icons/mob/AI.dmi'
