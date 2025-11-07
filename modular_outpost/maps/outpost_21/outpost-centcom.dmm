@@ -36865,7 +36865,7 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "trw" = (
-/obj/item/toy/AI,
+/obj/structure/showcase/AI_central,
 /turf/simulated/floor/redgrid/animated,
 /area/centcom/control)
 "trK" = (
