@@ -110,12 +110,15 @@
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
-		/* Outpost 21 edit - Disable shadekin death fizzle
+		/* Outpost 21 edit begin - Disable shadekin death fizzle
 		spawn(1)
 			for(var/obj/item/W in H)
 				H.drop_from_inventory(W)
 			qdel(H)
 		*/
+		H.drop_l_hand()
+		H.drop_r_hand()
+		// Outpost 21 edit end, ignore the drop items, can't have an empty block
 	else
 		if(!SK)
 			return
