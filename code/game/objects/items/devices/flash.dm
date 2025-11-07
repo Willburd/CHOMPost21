@@ -18,7 +18,7 @@
 	var/break_mod = 3 // The percent to break increased by every use on the flash.
 
 	var/can_break = TRUE // Can the flash break?
-	var/can_repair = FALSE // Can you repair the flash?
+	var/can_repair = TRUE // Can you repair the flash? // Outpost 21 edit - Repairable flashes
 	var/repairing = FALSE // Are we repairing right now?
 
 	var/safe_flashes = 2 // How many flashes are kept in 1% breakchance?
