@@ -395,9 +395,14 @@
 		return
 
 	//set oxyloss so that the patient is just barely in crit, if possible
+	/* Outpost 21 edit begin - Disable oxycrit
 	var/barely_in_crit = H.get_crit_point() - 1
 	var/adjust_health = barely_in_crit - H.health //need to increase health by this much
 	H.adjustOxyLoss(-adjust_health)
+	*/
+	H.Weaken(30)
+	H.Stun(20)
+	// Outpost 21 edit end
 
 	if(H.isSynthetic())
 		H.adjustToxLoss(-H.getToxLoss())

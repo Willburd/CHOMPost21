@@ -66,7 +66,8 @@
 		end()
 
 /datum/station_haunt/haunt_area/end()
-	targ_area.haunted = FALSE
+	if(targ_area)
+		targ_area.haunted = FALSE
 	. = ..()
 
 

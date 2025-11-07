@@ -94,7 +94,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/make_red_exit, // Outpost 21 edit - Spawn redspace exit command
 	// /client/proc/base_all_turfs,
-	/client/proc/reload_jobwhitelist, //ChompADD
+	// /client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
@@ -232,7 +232,7 @@ var/list/admin_verbs_debug = list(
 	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	*/
-	/client/proc/reload_jobwhitelist, //ChompADD
+	// /client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist, //ChompADD
 	/client/proc/reload_configuration //CHOMPAdd
 	)
@@ -325,7 +325,6 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/sendFax,
 	/datum/admins/proc/view_persistent_data,
 	/client/proc/start_vote,
-	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )
 
@@ -469,6 +468,6 @@ var/list/admin_verbs_event_manager = list(
 	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	*/
-	/client/proc/reload_jobwhitelist, //ChompADD
+	// /client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )

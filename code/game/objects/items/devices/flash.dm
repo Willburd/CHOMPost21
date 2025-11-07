@@ -18,7 +18,7 @@
 	var/break_mod = 3 // The percent to break increased by every use on the flash.
 
 	var/can_break = TRUE // Can the flash break?
-	var/can_repair = FALSE // Can you repair the flash?
+	var/can_repair = TRUE // Can you repair the flash? // Outpost 21 edit - Repairable flashes
 	var/repairing = FALSE // Are we repairing right now?
 
 	var/safe_flashes = 2 // How many flashes are kept in 1% breakchance?
@@ -198,7 +198,7 @@
 						H.eye_blurry = max(H.eye_blurry, flash_strength + 5)
 						H.flash_eyes()
 						H.adjustHalLoss(halloss_per_flash * (flash_strength / 5)) // Should take four flashes to stun.
-						H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0, 0)
+						H.apply_damage(flash_strength * H.species.flash_burn/5, BURN, BP_HEAD, 0)
 
 			else
 				flashfail = 1

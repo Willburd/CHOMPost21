@@ -55,7 +55,7 @@
 	var/manual_respite = FALSE
 	var/respite_activating = FALSE
 	///If we return to The Dark upon death or not.
-	var/no_retreat = TRUE // Outpost 21 edit - No retreating
+	var/no_retreat = FALSE
 
 	//Dark Tunneling Vars (Unused on Virgo)
 	///If we have already made a dark tunnel

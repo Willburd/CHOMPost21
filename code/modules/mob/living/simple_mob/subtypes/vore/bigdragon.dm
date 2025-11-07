@@ -234,15 +234,6 @@ I think I covered everything.
 				"bio" = 100,
 				"rad" = 100) //Tough boi ain't so easy to take down. Lasereyes aren't a win button here~ High armor to rad, bombs, and bio for cheese protection.
 
-	armor_soak = list(
-				"melee" = 7,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 0,
-				"bomb" = 10,
-				"bio" = 0,
-				"rad" = 0) //Straight removal of damage, after(?) the above armor percentage kicks in. Allows it to be immune to being nibbled to death by weak mobs that don't hit the gym.
-
 //Outpost addition end.
 
 ///
