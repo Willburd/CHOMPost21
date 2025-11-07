@@ -79,10 +79,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jil Infestation",		/datum/event/jil_infestation				,3	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clowns",				/datum/event/clune_infestation				,4	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Redspace",			/datum/event/redspacefissure				,5	, null, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Body",		/datum/event/badbody						,1	, null, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Morgue",		/datum/event/badbody/morgue					,1	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psychic Screach",		/datum/event/psychic_screach				,1  , null, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Weeping Statue",		/datum/event/weeping_statue					,1	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Borg Freedom Law",	/datum/event/borglawerror					,1	, null, TRUE, min_jobs = list(JOB_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Migration",	/datum/event/spider_migration				,2	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disposal Damage",		/datum/event/disposal_damage				,1	, null, TRUE),
@@ -105,6 +102,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Medical",		/datum/event/bluespace_shelling/medical		,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Waste",			/datum/event/bluespace_shelling/waste		,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Station",		/datum/event/bluespace_shelling				,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Weeping Statue Forced",/datum/event/weeping_statue				,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Body Forced",	/datum/event/badbody/forced					,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Morgue Forced",/datum/event/badbody/morgue/forced			,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99))
 	)
@@ -118,6 +116,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Medical",		/datum/event/bluespace_shelling/medical		,0  , list(), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Waste",			/datum/event/bluespace_shelling/waste		,0  , list(), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Station",		/datum/event/bluespace_shelling				,0  , list(), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Weeping Statue Forced",/datum/event/weeping_statue				,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Body Forced",	/datum/event/badbody/forced					,0	, list(), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Morgue Forced",/datum/event/badbody/morgue/forced			,0	, list(), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99))
 	))

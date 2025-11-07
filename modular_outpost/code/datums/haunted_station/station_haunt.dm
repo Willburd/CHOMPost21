@@ -781,6 +781,7 @@
 	. = ..()
 	var/list/ent_list = subtypesof(/datum/haunting_entity) - SShaunting.used_haunt_entities // Don't allow repeats
 	if(!ent_list.len)
+		message_admins("Haunting requested entity, but had used them all.")
 		return
 	var/ent = pick(ent_list)
 	entity = WEAKREF(new ent())
@@ -825,6 +826,10 @@
 	// We're prepped and ready
 	target_mob = WEAKREF(targeting_actual)
 	loc = T
+	// Always play the entity stinger
+	targeting_actual.playsound_local(get_turf(targeting_actual), 'sound/goonstation/spooky/Void_Wail.ogg', vol = 50, channel = CHANNEL_AMBIENCE_FORCED)
+	to_chat(targeting_actual,span_cult("Something feels terribly wrong."))
+	message_admins("Haunting Entity: [name]")
 
 /datum/haunting_entity/Destroy(force)
 	STOP_PROCESSING(SSfastprocess, src)

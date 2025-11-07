@@ -109,7 +109,6 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/knock_down,
 		/datum/station_haunt/bleeding,
 		/datum/station_haunt/blood_rain,
-		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
@@ -138,8 +137,6 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/blood_rain,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/lurker/pyromanic,
-		/datum/station_haunt/entity_spawn,
-		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/camera_stare
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
@@ -161,10 +158,6 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/shuttle_sabotage,
-		/datum/station_haunt/entity_spawn,
-		/datum/station_haunt/entity_spawn,
-		/datum/station_haunt/entity_spawn,
-		/datum/station_haunt/entity_spawn,
 		/datum/station_haunt/entity_spawn
 		)
 
@@ -341,16 +334,19 @@ SUBSYSTEM_DEF(haunting)
 				clear_player_target()
 				log_haunting("SEARCH")
 				return
-			if(prob(5))
+			if(prob(1))
+				intense_world_haunt()
+				log_haunting("INTENSIFTY")
+			if(prob(1))
 				reset_world_haunt()
 				log_haunting("RESET")
 				return
 		if(MODE_SUPERSPOOKY)
-			if(prob(5))
+			if(prob(20))
 				clear_player_target()
 				log_haunting("SEARCH")
 				return
-			if(prob(20))
+			if(prob(5))
 				reset_world_haunt()
 				log_haunting("RESET")
 				return
