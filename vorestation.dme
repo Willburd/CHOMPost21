@@ -5420,7 +5420,6 @@
 #include "modular_outpost\code\trait_balance.dm"
 #include "modular_outpost\code\_helpers\atmospherics.dm"
 #include "modular_outpost\code\_helpers\global_lists.dm"
-#include "modular_outpost\code\ATMOSPHERICS\atmospherics.dm"
 #include "modular_outpost\code\ATMOSPHERICS\components\unary\vent_pump.dm"
 #include "modular_outpost\code\controllers\subsystems\haunting.dm"
 #include "modular_outpost\code\datums\ai_law_sets.dm"

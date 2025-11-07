@@ -101,9 +101,7 @@
 /mob/living/simple_mob/proc/handle_special()
 	return
 
-// Outpost 21 edit(port) begin - simple mobs should respect ventcrawling atmos
 // Handle interacting with and taking damage from atmos
-// TODO - Refactor this to use handle_environment() like a good /mob/living
 /mob/living/simple_mob/handle_environment(datum/gas_mixture/environment)
 
 	if(in_stasis)
@@ -111,7 +109,7 @@
 	if(is_incorporeal())
 		return 1
 
-	if( abs(environment.temperature - bodytemperature) > temperature_range )	//VOREStation Edit: heating adjustments
+	if( abs(environment.temperature - bodytemperature) > temperature_range )
 		bodytemperature += ((environment.temperature - bodytemperature) / 5)
 
 	var/atmos_unsuitable = 0
