@@ -5,6 +5,9 @@
 
 	if(!check_rights(R_ADMIN|R_EVENT))
 		return
+	var/mob/ply = tgui_input_list(usr,"Select player to haunt","Select Player", GLOB.player_list)
+	if(!isliving(ply))
+		return
 	var/list/all_haunt = subtypesof(/datum/station_haunt)
 	SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
 
