@@ -41,7 +41,7 @@
 /obj/machinery/door/flesh/emag_act(var/remaining_charges)
 	// no behavior
 
-/obj/machinery/door/flesh/emp_act(severity)
+/obj/machinery/door/flesh/emp_act(severity, recursive)
 	// immune to
 	src.health = src.maxhealth
 
