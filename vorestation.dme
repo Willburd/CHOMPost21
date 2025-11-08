@@ -5492,7 +5492,6 @@
 #include "modular_outpost\code\game\objects\effects\haunting_sparkle.dm"
 #include "modular_outpost\code\game\objects\effects\job_start_landmarks.dm"
 #include "modular_outpost\code\game\objects\effects\landmarks.dm"
-#include "modular_outpost\code\game\objects\effects\mines.dm"
 #include "modular_outpost\code\game\objects\effects\portals.dm"
 #include "modular_outpost\code\game\objects\effects\spiders.dm"
 #include "modular_outpost\code\game\objects\effects\step_triggers.dm"
