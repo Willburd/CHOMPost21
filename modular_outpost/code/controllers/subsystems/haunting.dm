@@ -6,7 +6,7 @@
 #define MODE_SCARY 4
 #define MODE_SUPERSPOOKY 5
 
-#define MODE_SIZE 300
+#define MODE_SIZE 250
 
 SUBSYSTEM_DEF(haunting)
 	name = "Haunting"
@@ -180,6 +180,7 @@ SUBSYSTEM_DEF(haunting)
 	world_mode += 1
 	if(world_mode > MODE_SUPERSPOOKY)
 		world_mode = MODE_SUPERSPOOKY
+	message_admins("Haunting level increased to [world_mode]")
 
 /datum/controller/subsystem/haunting/proc/reduce_world_haunt()
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -187,6 +188,7 @@ SUBSYSTEM_DEF(haunting)
 	world_mode -= 1
 	if(world_mode < MODE_CALM)
 		world_mode = MODE_CALM
+	message_admins("Haunting level decreased to [world_mode]")
 
 /datum/controller/subsystem/haunting/proc/reset_world_haunt()
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -225,6 +227,17 @@ SUBSYSTEM_DEF(haunting)
 		clear_player_target()
 		return null
 	return M
+
+/datum/controller/subsystem/haunting/proc/force_player_target(var/mob/potential)
+	clear_player_target()
+	if(!potential)
+		return FALSE
+	if(isnewplayer(potential))
+		return FALSE
+	if(potential.away_from_keyboard || isAI(potential) || potential.is_incorporeal())
+		return FALSE
+	current_player_target = WEAKREF(potential)
+	return TRUE
 
 /datum/controller/subsystem/haunting/proc/get_random_player()
 	SHOULD_NOT_OVERRIDE(TRUE)

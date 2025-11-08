@@ -8,8 +8,9 @@
 	var/mob/ply = tgui_input_list(usr,"Select player to haunt","Select Player", GLOB.player_list)
 	if(!isliving(ply))
 		return
-	var/list/all_haunt = subtypesof(/datum/station_haunt)
-	SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
+	if(SShaunting.force_player_target(ply))
+		var/list/all_haunt = subtypesof(/datum/station_haunt)
+		SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
 
 /client/proc/spawn_bad_body()
 	set name = "Spawn Badbody"
