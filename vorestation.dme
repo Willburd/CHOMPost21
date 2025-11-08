@@ -5458,6 +5458,7 @@
 #include "modular_outpost\code\datums\supplypacks\hospitality.dm"
 #include "modular_outpost\code\datums\supplypacks\materials.dm"
 #include "modular_outpost\code\datums\supplypacks\supply.dm"
+#include "modular_outpost\code\defines\gases.dm"
 #include "modular_outpost\code\game\area\areas.dm"
 #include "modular_outpost\code\game\gamemodes\objective.dm"
 #include "modular_outpost\code\game\gamemodes\events\power_failure.dm"
