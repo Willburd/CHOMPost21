@@ -5452,6 +5452,7 @@
 #include "modular_outpost\code\datums\haunted_station\station_haunt.dm"
 #include "modular_outpost\code\datums\helper_datums\teleport.dm"
 #include "modular_outpost\code\datums\Outfits\jobs\engineering.dm"
+#include "modular_outpost\code\datums\Outfits\jobs\medical.dm"
 #include "modular_outpost\code\datums\Outfits\jobs\stowaway.dm"
 #include "modular_outpost\code\datums\supplypacks\engineering.dm"
 #include "modular_outpost\code\datums\supplypacks\hospitality.dm"
