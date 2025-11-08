@@ -96,7 +96,6 @@
 /obj/machinery/computer/security/exploration
 	name = "head mounted camera monitor"
 	desc = "Used to access the built-in cameras in helmets."
-	// icon_state = "syndicam" // Outpost 21 edit - CI wants this fixed
 	network = list(NETWORK_EXPLORATION)
 	circuit = null
 
