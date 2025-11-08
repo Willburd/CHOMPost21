@@ -128,7 +128,7 @@
 
 	else
 		other_feed_message_start(user, target)
-		if(!do_mob(user, target))
+		if(!do_after(user, 3 SECONDS, target))
 			return FALSE
 		other_feed_message_finish(user, target)
 
