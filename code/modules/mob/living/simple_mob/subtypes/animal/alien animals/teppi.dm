@@ -146,10 +146,6 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 		/obj/item/bone/horn = 1\
 		)
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
-
 /////////////////////////////////////// Vore stuff///////////////////////////////////////////
 
 	swallowTime = 1 SECONDS

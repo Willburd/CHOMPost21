@@ -59,7 +59,7 @@
 			if(istype(loc, /obj/item/gun/energy)) // Are we in a gun currently?
 				var/obj/item/gun/energy/gun = loc
 				var/mob/living/user = gun.loc
-				if(istype(user) && user?.hud_used) // Outpost 21 edit - runtime fix for powercells in guns in mobs without huds
+				if(istype(user) && user?.hud_used) // Outpost 21 edit(port) - runtime fix for powercells in guns in mobs without huds
 					user.hud_used.update_ammo_hud(user, gun) // Update the HUD
 	else
 		return PROCESS_KILL

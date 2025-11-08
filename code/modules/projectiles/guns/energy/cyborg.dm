@@ -36,7 +36,6 @@
 	projectile_type = /obj/item/projectile/beam/stun
 	charge_cost = 160
 	recharge_time = 5 //Time it takes for shots to recharge (in ticks)
-	icon = 'icons/obj/gun.dmi' // Outpost 21 edit - TEMP ICON
 
 /obj/item/gun/energy/robotic/disabler
 	borg_flags = COUNTS_AS_ROBOT_GUN | COUNTS_AS_ROBOT_DISABLER

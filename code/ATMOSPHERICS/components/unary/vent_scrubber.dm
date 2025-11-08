@@ -146,7 +146,7 @@
 	if(!use_power || (stat & (NOPOWER|BROKEN)))
 		return 0
 
-	// Outpost 21 edit begin - Don't do anything if welded
+	// Outpost 21 edit(port) begin - Don't do anything if welded
 	if(welded)
 		SSmachines.hibernate_vent(src)
 		return 0

@@ -184,10 +184,6 @@ I think I covered everything.
 	)
 	var/eyes
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
-
 	can_be_drop_prey = FALSE
 
 ///
