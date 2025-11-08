@@ -64,10 +64,6 @@
 
 	var/knockdown_chance = 15
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
-	
 	var/random_color = FALSE
 	var/rarechance = 1
 

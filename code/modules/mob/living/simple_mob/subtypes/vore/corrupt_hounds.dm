@@ -78,10 +78,6 @@
 	can_be_drop_prey = FALSE
 	allow_mind_transfer = TRUE
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
-
 /mob/living/simple_mob/vore/aggressive/corrupthound/prettyboi
 	name = "corrupt corrupt hound"
 	desc = "Bad boy machine broke as well. Seems an attempt was made to achieve a less threatening look, and this one is definitely having some conflicting feelings about it."

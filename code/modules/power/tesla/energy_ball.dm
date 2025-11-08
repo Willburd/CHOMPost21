@@ -230,7 +230,7 @@
 			if(SEND_SIGNAL(L, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL)
 				continue
 			if(dist <= zap_range && (dist < closest_dist || !closest_mob) && L.stat != DEAD)
-				// Outpost 21 edit begin - Lightning doesn't bleed indoors to kill mobs
+				// Outpost 21 edit(port) begin - Lightning doesn't bleed indoors to kill mobs
 				if(isturf(L.loc))
 					var/turf/flr = L.loc
 					// being indoors will save you, also stops department pets dying to zaps out a window

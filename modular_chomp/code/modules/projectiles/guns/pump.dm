@@ -40,11 +40,3 @@
 	muzzle_type = /obj/effect/projectile/muzzle/phaser/heavy
 	tracer_type = /obj/effect/projectile/tracer/phaser/heavy
 	impact_type = /obj/effect/projectile/impact/phaser/heavy
-
-// Outpost 21 edit begin - Unlocked varient
-/obj/item/gun/energy/locked/frontier/shotgun/unlocked
-	desc = "A much larger, heavier weapon than the typical frontier-type weapons."
-	req_access = newlist() //for toggling safety
-	locked = 0
-	lockable = 0
-// Outpost 21 edit end
