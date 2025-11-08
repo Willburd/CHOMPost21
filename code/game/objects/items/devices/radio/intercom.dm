@@ -70,13 +70,13 @@
 	name = "station intercom (Medbay)"
 	icon_state = "medintercom"
 	light_color = "#00aaff"
-	frequency = MED_FREQ // Outpost 21 edit - Use department comms not internal
+	frequency = MED_I_FREQ
 
 /obj/item/radio/intercom/department/security
 	name = "station intercom (Security)"
 	icon_state = "secintercom"
 	light_color = "#ff0000"
-	frequency = SEC_FREQ // Outpost 21 edit - Use department comms not internal
+	frequency = SEC_I_FREQ
 
 /obj/item/radio/intercom/entertainment
 	name = "entertainment intercom"
