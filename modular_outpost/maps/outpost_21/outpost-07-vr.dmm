@@ -68,18 +68,18 @@
 /area/vr/lighting)
 "aJ" = (
 /obj/structure/table/darkglass,
-/obj/item/clothing/suit/omnitag,
+/obj/item/clothing/suit/lasertag/omni,
 /obj/effect/floor_decal/borderfloor,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
-/obj/item/clothing/suit/omnitag,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
+/obj/item/clothing/suit/lasertag/omni,
 /turf/simulated/floor/tiled,
 /area/vr)
 "aK" = (
@@ -104,7 +104,7 @@
 	dir = 8
 	},
 /obj/structure/table/darkglass,
-/obj/item/clothing/suit/omnitag,
+/obj/item/clothing/suit/lasertag/omni,
 /turf/simulated/floor/tiled,
 /area/vr)
 "aU" = (
@@ -1105,7 +1105,7 @@
 /area/vr/lighting)
 "hq" = (
 /obj/structure/table/darkglass,
-/obj/item/clothing/suit/omnitag,
+/obj/item/clothing/suit/lasertag/omni,
 /turf/simulated/floor/tiled,
 /area/vr)
 "hr" = (
@@ -4028,7 +4028,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/item/clothing/suit/omnitag,
+/obj/item/clothing/suit/lasertag/omni,
 /turf/simulated/floor/tiled,
 /area/vr)
 "DN" = (

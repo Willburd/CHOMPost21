@@ -180,7 +180,7 @@
 						T.UpdateDamageIcon()
 				add_attack_logs(src,T,"Infest (chu)")
 
-		if(!do_mob(src, foundprey, 90))
+		if(!do_after(src, 9 SECONDS, target = foundprey))
 			to_chat(src, "<span class='warning'>Your infestation of [foundprey] has been interrupted!</span>")
 			isinfesting = FALSE
 			return
