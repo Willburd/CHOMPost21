@@ -2,6 +2,32 @@
 /datum/category_item/autolathe/arms
 	var/lethal = TRUE // assume it
 
+// Missing 5.56 ammos
+/datum/category_item/autolathe/arms/m16_556
+	name = "M16 magazine (5.56x45mm standard)"
+	path = /obj/item/ammo_magazine/m16
+	hidden = 1
+
+/datum/category_item/autolathe/arms/m16_556_ap
+	name = "M16 magazine (5.56x45mm armor-piercing)"
+	path = /obj/item/ammo_magazine/m16/ap
+	hidden = 1
+
+/datum/category_item/autolathe/arms/m16_556_hp
+	name = "M16 magazine (5.56x45mm hollow-point)"
+	path = /obj/item/ammo_magazine/m16/hp
+	hidden = 1
+
+/datum/category_item/autolathe/arms/m16_556_rubber
+	name = "M16 magazine (5.56x45mm less-lethal)"
+	path = /obj/item/ammo_magazine/m16/rubber
+	lethal = FALSE
+
+/datum/category_item/autolathe/arms/mauser_792
+	name = "drum mag (7.92x57mm Mauser)"
+	path = /obj/item/ammo_magazine/mg42
+	hidden = 1
+
 ////////////////////////////////////////////////////////////////////////////////////
 // Overrides
 ////////////////////////////////////////////////////////////////////////////////////
