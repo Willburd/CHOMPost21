@@ -5514,7 +5514,6 @@
 #include "modular_outpost\code\game\objects\items\devices\radio\radio.dm"
 #include "modular_outpost\code\game\objects\items\toys\toys.dm"
 #include "modular_outpost\code\game\objects\items\weapons\AI_modules.dm"
-#include "modular_outpost\code\game\objects\items\weapons\lasertagknife.dm"
 #include "modular_outpost\code\game\objects\items\weapons\material_subtypes.dm"
 #include "modular_outpost\code\game\objects\items\weapons\stunstaff.dm"
 #include "modular_outpost\code\game\objects\items\weapons\tape.dm"
