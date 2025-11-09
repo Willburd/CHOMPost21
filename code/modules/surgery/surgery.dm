@@ -195,9 +195,7 @@
 	var/obj/item/organ/external/affected = M.get_organ(zone)
 	selected_surgery = available_surgeries[selected_surgery] //Sets the name they selected to be the datum.
 
-	// VOREstation edit start
 	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc) && istype(selected_surgery,/datum/surgery_step/generic/amputate)) // Outpost 21 edit(port) - Autodoc support
-		var/obj/item/organ/external/affected = M.get_organ(zone)
 		to_chat(user, span_danger("You are preparing to amputate \the [M]'s [affected.name]!"))
 		if(!do_after(user, 3 SECONDS, target = M))
 			to_chat(user, span_warning("You reconsider performing an amputation..."))
