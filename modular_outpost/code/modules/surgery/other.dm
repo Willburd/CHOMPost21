@@ -15,7 +15,7 @@
 	max_duration = 120
 
 /datum/surgery_step/treat_necrosis_bioregen/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if(!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 
 	if (target_zone == O_MOUTH || target_zone == O_EYES)

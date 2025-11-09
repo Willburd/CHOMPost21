@@ -257,4 +257,7 @@
 /datum/trait/neutral/addiction_asustenance
 	cost = -2 //Base 0. Unlike other addictions, you can't wean this one off. You WILL die without your gatoraid, if someone steals it: GG.
 
+/datum/trait/negative/boneless
+	custom_only = FALSE // Base TRUE, let anyone suffer
+
 #endif
