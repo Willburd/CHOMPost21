@@ -1,7 +1,8 @@
 /* SURGERY STEPS */
 
 /obj/
-	var/surgery_odds = 0 // Used for tables/etc which can have surgery done of them.
+	///How clean an object is for surgery purposes. Cleaner = less chance of infection.
+	var/surgery_cleanliness = 0 // Used for tables/etc which can have surgery done of them.
 
 /datum/surgery_step
 	var/priority = 0	//steps with higher priority would be attempted first
@@ -135,19 +136,21 @@
 
 /obj/item/proc/do_surgery(mob/living/carbon/M, mob/living/user, var/zone)
 	if(!can_do_surgery(M, user))
-		return 0
+		return FALSE
 	if(!istype(M))
-		return 0
+		return FALSE
 	if (user.a_intent == I_HURT)	//check for Hippocratic Oath
 		//Insert intentional hurt medical code here.
-		return 0
+		return FALSE
 	// var/zone = user.zone_sel.selecting,  Outpost 21 edit - This is passed in manually in the autodoc instead of detected here!
 	if(zone in M.op_stage.in_progress) //Can't operate on someone repeatedly.
 		to_chat(user, span_warning("You can't operate on this area while surgery is already in progress."))
-		return 1
-	var/obj/surface = M.get_surgery_surface(user)
-	if(!surface || !surface.surgery_odds) 	// If the surface has a chance of 0% surgery odds (ground), don't even bother trying to do surgery.
-		return 0 							// This is meant to prevent the 'glass shard mouth 60 damage click' exploit. Also saves CPU by doing it here!
+		return TRUE
+	///How 'clean' the surace we're doing surgery on is.
+	///100 = fully clean, 0 = filthy
+	var/cleanliness = M.get_surgery_cleanliness(user)
+	if(isnull(cleanliness)) //They're standing upright.
+		return FALSE
 
 	var/list/datum/surgery_step/available_surgeries = list()
 	for(var/datum/surgery_step/S in GLOB.surgery_steps)
@@ -181,14 +184,15 @@
 	if(M == user)	// Once we determine if we can actually do a step at all, give a slight delay to self-surgery to confirm attempts.
 		to_chat(user, span_critical("You focus on attempting to perform surgery upon yourself."))
 		if(!do_after(user, 3 SECONDS, target = M))
-			return 0
+			return FALSE
 
 	// Outpost 21 edit(port) begin - Autodoc surgery selection
 	var/datum/surgery_step/selected_surgery = autodoc_surgery_step_select( user, available_surgeries, "Select which surgery step you wish to perform", "Surgery Select")
 	// Outpost 21 edit end
 
 	if(isnull(selected_surgery)) //They clicked 'cancel'
-		return 1
+		return TRUE
+	var/obj/item/organ/external/affected = M.get_organ(zone)
 	selected_surgery = available_surgeries[selected_surgery] //Sets the name they selected to be the datum.
 
 	// VOREstation edit start
@@ -197,19 +201,10 @@
 		to_chat(user, span_danger("You are preparing to amputate \the [M]'s [affected.name]!"))
 		if(!do_after(user, 3 SECONDS, target = M))
 			to_chat(user, span_warning("You reconsider performing an amputation..."))
-			return 0
-	// VOREstation edit end
+			return FALSE
 	M.op_stage.in_progress += zone
 	selected_surgery.begin_step(user, M, zone, src)		//start on it
 	var/success = TRUE
-
-	// Bad tools make it less likely to succeed.
-	if(!prob(selected_surgery.tool_quality(src)))
-		success = FALSE
-
-	// Bad surface may mean failure as well.
-	if(!prob(surface.surgery_odds))
-		success = FALSE
 
 	// Outpost 21 edit(port) begin - Auto doc ignores tool success
 	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
@@ -225,6 +220,7 @@
 	// Not staying still fails you too.
 	if(success)
 		var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
+		calc_duration *= CLAMP((100-cleanliness)/10 + 1, 1, 10)
 		if(!do_after(user, calc_duration * toolspeed, M, target_zone = zone, max_distance = reach))
 			success = FALSE
 			to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
@@ -232,6 +228,8 @@
 
 	if(success)
 		selected_surgery.end_step(user, M, zone, src)
+		if(prob(100-cleanliness)) //Infection chance based on cleanliness.
+			affected.adjust_germ_level(rand(10,20))
 	else
 		selected_surgery.fail_step(user, M, zone, src)
 		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN) //Gets rid of instakill mechanics.
@@ -240,7 +238,7 @@
 	if (ishuman(M))
 		var/mob/living/carbon/human/H = M
 		H.update_surgery()
-	return	1	  												//don't want to do weapony things after surgery
+	return	TRUE	  												//don't want to do weapony things after surgery
 
 /proc/sort_surgeries()
 	var/gap = GLOB.surgery_steps.len

@@ -192,8 +192,8 @@
 	surgery_name = "Remove Implant"
 	allowed_tools = list(
 		/obj/item/surgical/hemostat = 100,	\
-		/obj/item/material/kitchen/utensil/fork = 80
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/kitchen/utensil/fork = 50
+	)
 
 	allowed_procs = list(IS_WIRECUTTER = 75)
 
@@ -266,7 +266,7 @@
 			worm.detatch()
 			worm.leave_host()
 		else
-			obj.loc = get_turf(target)
+			obj.forceMove(get_turf(target))
 			obj.add_blood(target)
 			obj.update_icon()
 			if(istype(obj,/obj/item/implant))
@@ -286,11 +286,13 @@
 /datum/surgery_step/cavity/implant_removal/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	..()
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
-	if (affected.implants.len)
+	if(LAZYLEN(affected.implants))
 		var/fail_prob = 10
 		fail_prob += 100 - tool_quality(tool)
-		if (prob(fail_prob))
+		if(prob(fail_prob))
 			var/obj/item/implant/imp = affected.implants[1]
+			if(!istype(imp))
+				return
 			user.visible_message(span_danger(" Something beeps inside [target]'s [affected.name]!"))
 			playsound(imp, 'sound/items/countdown.ogg', 75, 1, -3)
 			spawn(25)

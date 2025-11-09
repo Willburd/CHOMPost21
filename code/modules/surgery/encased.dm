@@ -28,8 +28,10 @@
 		/obj/item/material/knife/machete/hatchet = 95
 	) // Outpost 21 edit - Buffing ghetto surgery
 
-	min_duration = 50 //CHOMPedit
-	max_duration = 50 //CHOMPedit
+	allowed_procs = list(IS_CROWBAR = 50)
+
+	min_duration = 50
+	max_duration = 50 //CHOMPEdit
 
 /datum/surgery_step/open_encased/saw/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(!ishuman(target))
