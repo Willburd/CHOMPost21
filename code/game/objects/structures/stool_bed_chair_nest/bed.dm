@@ -226,7 +226,7 @@
 	icon = 'icons/obj/rollerbed.dmi'
 	icon_state = "rollerbed"
 	anchored = FALSE
-	surgery_odds = 85 // Outpost 21 edit - Buffing ghetto surgery
+	surgery_cleanliness = 60
 	var/bedtype = /obj/structure/bed/roller
 	var/rollertype = /obj/item/roller
 	flippable = FALSE
@@ -234,6 +234,7 @@
 /obj/structure/bed/roller/adv
 	name = "advanced roller bed"
 	icon_state = "rollerbedadv"
+	surgery_cleanliness = 75
 	bedtype = /obj/structure/bed/roller/adv
 	rollertype = /obj/item/roller/adv
 

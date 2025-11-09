@@ -83,7 +83,7 @@
 		/obj/item/surgical/scalpel/laser2 = 100, \
 		/obj/item/surgical/scalpel/laser1 = 100, \
 		/obj/item/melee/energy/sword = 75
-	) // Outpost 21 edit - Buffing ghetto surgery
+	)
 	priority = 2
 	req_open = 0
 	min_duration = 40 //CHOMPedit
@@ -131,7 +131,7 @@
 	span_danger("Your hand slips as the blade sputters, searing a long gash in [target]'s [affected.name] with \the [tool]!"))
 	user.balloon_alert_visible("slips, searing a long gash on \the [affected.name]", "your hand slips, searing a long gash on [affected.name].")
 	affected.createwound(CUT, 7.5)
-	affected.createwound(BURN, 12.5)
+	affected.createwound(BURN, 7.5)
 
 ///////////////////////////////////////////////////////////////
 // Incision Management Surgery
@@ -192,9 +192,9 @@
 	surgery_name = "Clamp Bleeders"
 	allowed_tools = list(
 		/obj/item/surgical/hemostat = 100,	\
-		/obj/item/stack/cable_coil = 95, 	\
-		/obj/item/assembly/mousetrap = 60
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/stack/cable_coil = 75, 	\
+		/obj/item/assembly/mousetrap = 25
+	)
 
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit
@@ -361,8 +361,9 @@
 	surgery_name = "Amputate Limb"
 	allowed_tools = list(
 		/obj/item/surgical/circular_saw = 100, \
-		/obj/item/material/knife/machete/hatchet = 95
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/twohanded/fireaxe = 99, \
+		/obj/item/material/knife/machete/hatchet = 75
+	)
 	req_open = 0
 
 	min_duration = 100 //CHOMPedit
