@@ -211,10 +211,6 @@
 		// Bad tools make it less likely to succeed.
 		if(!prob(selected_surgery.tool_quality(src)))
 			success = FALSE
-
-		// Bad surface may mean failure as well.
-		if(!prob(surface.surgery_odds))
-			success = FALSE
 	// Outpost 21 edit end
 
 	// Not staying still fails you too.
