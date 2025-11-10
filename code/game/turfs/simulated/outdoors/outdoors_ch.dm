@@ -18,7 +18,7 @@
 	if(!demote_to)
 		return // Cannot demote further.
 
-	ChangeTurf(demote_to, preserve_outdoors = TRUE) // Outpost 21 edit(port) - Preserve outdoor state
+	ChangeTurf(demote_to, preserve_outdoors = TRUE)
 
 /turf/simulated/floor/outdoors/grass
 	demote_to = /turf/simulated/floor/outdoors/dirt
