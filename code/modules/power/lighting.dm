@@ -282,9 +282,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	plane = OBJ_PLANE
 	layer = OBJ_LAYER
 	desc = "A floor lamp."
-	// Outpost 21 edit(port) begin - why was this a large bulb? It makes fixing it manually a pain when it's mostly used as room lighting...
-	light_type = /obj/item/light/bulb //large
-	// Outpost 21 edit end
+	light_type = /obj/item/light/bulb/large
 	construct_type = /obj/machinery/light_construct/flamp
 	shows_alerts = FALSE
 	var/lamp_shade = 1
