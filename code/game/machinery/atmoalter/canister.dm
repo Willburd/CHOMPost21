@@ -341,7 +341,7 @@ update_flag
 	switch(action)
 		if("relabel")
 			if(can_label)
-				// Outpost 21 edit(port) - Added CH4 and PN20
+				// Outpost 21 edit(port) - Added PN20
 				var/list/colors = list(\
 					"\[N2O\]" = "redws", \
 					"\[N2\]" = "red", \

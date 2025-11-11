@@ -126,11 +126,11 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 					if(cigar_counter >= smoke_rate)
 						cigar_counter = 0
 					if(cigar_counter == 0 || amount > 1) // Taking a drag is at 5 units, 1 is passive and over time...
-						reagents.trans_to_mob(C, amount, CHEM_INGEST, 0.2)
+						reagents.trans_to_mob(C, amount, CHEM_INGEST, 0.2, can_dialysis = FALSE)
 					cigar_counter += amount
 				// Outpost 21 edit end
 				else
-					reagents.trans_to_mob(C, amount, CHEM_INGEST, 1.5) // I don't predict significant balance issues by letting blunts actually WORK.
+					reagents.trans_to_mob(C, amount, CHEM_INGEST, 1.5, can_dialysis = FALSE) // I don't predict significant balance issues by letting blunts actually WORK.
 		else // else just remove some of the reagents
 			reagents.remove_any(REM)
 
