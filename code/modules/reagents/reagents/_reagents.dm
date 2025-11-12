@@ -42,6 +42,7 @@
 	var/list/glass_special = null // null equivalent to list()
 
 	var/from_belly = FALSE
+	var/dialysis_returnable = TRUE
 	var/wiki_flag = 0 // Bitflags for secret/food/drink reagent sorting
 	var/ppe_flags = 0 // Outpost 21 edit - PPE affecting chems
 	var/supply_conversion_value = null
