@@ -207,10 +207,11 @@
 	//Flashes can only flash THREE things: Humans, Silicons, and Robots. NOTHING ELSE!!!
 	if(ishuman(target))
 		var/mob/living/carbon/human/human_target = target
+		/* Outpost 21 edit - Nif removal
 		if(human_target.nif && human_target.nif.flag_check(NIF_V_FLASHPROT,NIF_FLAGS_VISION))
 			human_target.nif.notify("High intensity light detected, and blocked!",TRUE)
 			return FALSE
-
+		*/
 		var/safety = human_target.eyecheck()
 		if(safety <= 0)
 			flash_strength = flash_strength * human_target.species.flash_mod
