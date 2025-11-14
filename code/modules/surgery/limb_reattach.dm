@@ -10,7 +10,7 @@
 	can_infect = 0
 
 /datum/surgery_step/limb/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected)
@@ -93,9 +93,9 @@
 	surgery_name = "Connect Limb"
 	allowed_tools = list(
 	/obj/item/surgical/hemostat = 100,	\
-	/obj/item/stack/cable_coil = 95, 	\
-	/obj/item/assembly/mousetrap = 60
-	) // Outpost 21 edit - Buffing ghetto surgery
+	/obj/item/stack/cable_coil = 75, 	\
+	/obj/item/assembly/mousetrap = 25
+	)
 	can_infect = 1
 
 	min_duration = 70 //CHOMPedit Keeping this one on the longer side

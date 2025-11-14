@@ -859,11 +859,12 @@
 /mob/living/carbon/human/handle_environment(datum/gas_mixture/environment)
 	if(!environment)
 		return
+
+	if(is_incorporeal()) //Not in this plane of existance right now, tbh.
+		return
+
 	//Stuff like the xenomorph's plasma regen happens here.
 	species.handle_environment_special(src)
-
-	if(is_incorporeal())
-		return
 
 	//Moved pressure calculations here for use in skip-processing check.
 	var/pressure = environment.return_pressure()
@@ -892,7 +893,10 @@
 			loc_temp = cc.air_contents.temperature
 		else if(isbelly(loc))
 			var/obj/belly/b = loc
-			loc_temp = b.bellytemperature
+			if(allowtemp)
+				loc_temp = b.bellytemperature
+			else
+				loc_temp = species.body_temperature //Should be safe for just about anyone
 		else
 			loc_temp = environment.temperature
 
@@ -2048,30 +2052,47 @@
 	temp = max(0, temp + modifier_shift)	// No negative pulses.
 
 	if(Pump)
-		for(var/datum/reagent/R in reagents.reagent_list)
-			if(R.id in bradycardics)
-				if(temp <= Pump.standard_pulse_level + 3 && temp >= Pump.standard_pulse_level)
-					temp--
-			if(R.id in tachycardics)
-				if(temp <= Pump.standard_pulse_level + 1 && temp >= PULSE_NONE)
+		///Prevents duplicating a reagent if it's in our gut and blood
+		var/list/current_medications = list()
+		//Stuff in our stomach, such as coffee, nicotine, 13loko, etc.
+		for(var/datum/reagent/R in ingested.reagent_list)
+			if((R.id in GLOB.tachycardics) && !(R.id in current_medications))
+				if(temp < PULSE_THREADY && temp != PULSE_NONE) //If we really push it, we can get our pulse to thready.
 					temp++
-			if(R.id in heartstopper) //To avoid using fakedeath
+					current_medications += R.id
+			if((R.id in GLOB.bradycardics) && !(R.id in current_medications))
+				if(temp >= PULSE_NORM)
+					temp--
+					current_medications += R.id
+		//Stuff in our bloodstream. This is checked AFTER stomach so the heartstoppers can have their fun.
+		for(var/datum/reagent/R in reagents.reagent_list)
+			if((R.id in GLOB.tachycardics) && !(R.id in current_medications))
+				if(temp < PULSE_THREADY && temp != PULSE_NONE) //We can reach a thready pulse, but only if we actually have a pulse.
+					temp++
+					current_medications += R.id
+			if((R.id in GLOB.bradycardics) && !(R.id in current_medications))
+				if(temp >= PULSE_NORM) //Can get to PULSE_SLOW but never PULSE_NONE
+					temp--
+					current_medications += R.id
+			if(R.id in GLOB.heartstopper) //To avoid using fakedeath
 				temp = PULSE_NONE
-			if(R.id in cheartstopper) //Conditional heart-stoppage
+				break //No amount of medications is getting you out of this.
+			if(R.id in GLOB.cheartstopper) //Conditional heart-stoppage
 				if(R.volume >= R.overdose)
 					temp = PULSE_NONE
+					break //No amount of medications is getting you out of this.
 		return temp * brain_modifier
 	//handles different chems' influence on pulse
 	for(var/datum/reagent/R in reagents.reagent_list)
-		if(R.id in bradycardics)
+		if(R.id in GLOB.bradycardics)
 			if(temp <= PULSE_THREADY && temp >= PULSE_NORM)
 				temp--
-		if(R.id in tachycardics)
+		if(R.id in GLOB.tachycardics)
 			if(temp <= PULSE_FAST && temp >= PULSE_NONE)
 				temp++
-		if(R.id in heartstopper) //To avoid using fakedeath
+		if(R.id in GLOB.heartstopper) //To avoid using fakedeath
 			temp = PULSE_NONE
-		if(R.id in cheartstopper) //Conditional heart-stoppage
+		if(R.id in GLOB.cheartstopper) //Conditional heart-stoppage
 			if(R.volume >= R.overdose)
 				temp = PULSE_NONE
 

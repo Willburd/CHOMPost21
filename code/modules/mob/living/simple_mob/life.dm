@@ -172,7 +172,6 @@
 		adjustOxyLoss(unsuitable_atoms_damage)
 	else
 		adjustOxyLoss(-unsuitable_atoms_damage)
-// Outpost 21 edit(port) end
 
 /mob/living/simple_mob/proc/handle_guts()
 	for(var/obj/item/organ/OR in internal_organs)

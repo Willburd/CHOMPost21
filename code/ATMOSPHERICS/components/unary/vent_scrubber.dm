@@ -145,12 +145,9 @@
 	//broadcast_status()
 	if(!use_power || (stat & (NOPOWER|BROKEN)))
 		return 0
-
-	// Outpost 21 edit(port) begin - Don't do anything if welded
-	if(welded)
+	if(welded) // Don't do anything if welded
 		SSmachines.hibernate_vent(src)
 		return 0
-	// Outpost 21 edit end
 
 	var/datum/gas_mixture/environment = loc.return_air()
 
@@ -282,7 +279,7 @@
 		if (WT.remove_fuel(0,user))
 			to_chat(user, span_notice("Now welding the vent."))
 
-			if(do_after(user, 20 * WT.toolspeed))
+			if(do_after(user, 20 * WT.toolspeed, src))
 				if(!src || !WT.isOn()) return
 				playsound(src, WT.usesound, 50, 1)
 				if(!welded)

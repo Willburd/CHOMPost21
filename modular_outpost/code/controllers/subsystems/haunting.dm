@@ -360,6 +360,9 @@ SUBSYSTEM_DEF(haunting)
 				log_haunting("SEARCH")
 				return
 			if(prob(5))
+				reduce_world_haunt()
+				log_haunting("REDUCE")
+			if(prob(5))
 				reset_world_haunt()
 				log_haunting("RESET")
 				return
