@@ -5447,6 +5447,7 @@
 #include "modular_outpost\code\datums\haunted_station\entity_angel.dm"
 #include "modular_outpost\code\datums\haunted_station\entity_badbody.dm"
 #include "modular_outpost\code\datums\haunted_station\entity_badmorgue.dm"
+#include "modular_outpost\code\datums\haunted_station\entity_fleshspiders.dm"
 #include "modular_outpost\code\datums\haunted_station\entity_frigiddarkness.dm"
 #include "modular_outpost\code\datums\haunted_station\station_haunt.dm"
 #include "modular_outpost\code\datums\helper_datums\teleport.dm"
