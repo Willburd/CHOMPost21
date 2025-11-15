@@ -32498,6 +32498,9 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "hrR" = (
@@ -51234,6 +51237,9 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "mWu" = (
@@ -60355,6 +60361,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "pUZ" = (
