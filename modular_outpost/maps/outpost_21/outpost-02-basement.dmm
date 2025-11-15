@@ -33478,6 +33478,9 @@
 /area/crew_quarters/sleep/Dorm_1)
 "biZ" = (
 /obj/structure/closet,
+/obj/item/stack/material/steel{
+	amount = 30
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "bja" = (
@@ -38303,6 +38306,9 @@
 "brM" = (
 /obj/structure/railing,
 /obj/structure/closet,
+/obj/item/stack/material/steel{
+	amount = 30
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "brN" = (
@@ -55088,7 +55094,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "bXl" = (
-/obj/machinery/portable_atmospherics/canister/methane/broken,
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide/broken,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "bXm" = (
@@ -55228,10 +55234,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
-"bXA" = (
-/obj/item/flame/candle/everburn,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/atmos_control)
 "bXB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -56811,6 +56813,9 @@
 /area/maintenance/civ/west)
 "caS" = (
 /obj/structure/closet,
+/obj/item/stack/material/steel{
+	amount = 30
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "caT" = (
@@ -58243,6 +58248,9 @@
 /area/mine/explored/muriki/cave/waste)
 "ceF" = (
 /obj/structure/closet,
+/obj/item/stack/material/steel{
+	amount = 30
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "ceG" = (
@@ -58526,6 +58534,9 @@
 "cfr" = (
 /obj/structure/closet,
 /obj/effect/mine/n2o,
+/obj/item/stack/material/steel{
+	amount = 15
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
 "cfs" = (
@@ -62890,6 +62901,9 @@
 "cqH" = (
 /obj/structure/blade_trap/start_active,
 /obj/structure/closet,
+/obj/item/stack/material/steel{
+	amount = 30
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "cqI" = (
@@ -106627,7 +106641,7 @@ bMZ
 bMZ
 adu
 cls
-bXA
+bLx
 adu
 cqR
 cqR
