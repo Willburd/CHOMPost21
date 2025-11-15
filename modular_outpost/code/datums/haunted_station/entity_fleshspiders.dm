@@ -19,7 +19,7 @@
 		return
 	for(var/i = 1 to rand(1,3))
 		var/obj/machinery/atmospherics/unary/vent_pump/check_vent = pick(vents)
-		for(var/i = 1 to rand(10,15))
+		for(var/t = 1 to rand(10,15))
 			new /obj/effect/spider/spiderling/flesh(get_turf(check_vent))
 
 /datum/haunting_entity/flesh_spiders/process()
