@@ -262,9 +262,9 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	// Outpost 21 edit begin - Toggle verb
 	if(modifiers["alt"])
 		toggle_on_off()
-	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
 		return
 	// Outpost 21 edit end
+	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
 	if(modifiers["shift"])
 		attack_hand(usr)
 		return
@@ -319,7 +319,8 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 
 /obj/machinery/computer/security/telescreen/bodycamera/proc/stop_showing()
 	// Reverse of the above
-	bpinboard.vis_contents = null
+	if(bpinboard)
+		bpinboard.vis_contents = null
 	showing = null
 	the_camera = null
 
