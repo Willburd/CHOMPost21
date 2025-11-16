@@ -11,7 +11,7 @@
 
 /datum/robot_sprite/fluff/darklord92
 	name = CUSTOM_BORGSPRITE("Tangent")
-	module_type = "Default"
+	module_type = "Standard"
 
 	sprite_icon = 'modular_outpost/icons/mob/robot/fluff_wide.dmi'
 	sprite_icon_state = "darklord92-tangent"
