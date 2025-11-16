@@ -140,9 +140,9 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	// Outpost 21 edit begin - Toggle verb
 	if(modifiers["alt"])
 		toggle_on_off()
-	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
 		return
 	// Outpost 21 edit end
+	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
 	if(modifiers["shift"])
 		attack_hand(usr)
 		return
@@ -172,11 +172,13 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	if(stat & NOPOWER)
 		return
 	showing = WEAKREF(thing)
-	pinboard.vis_contents = list(thing)
+	if(pinboard)
+		pinboard.vis_contents = list(thing)
 
 /obj/machinery/computer/security/telescreen/entertainment/proc/stop_showing()
 	// Reverse of the above
-	pinboard.vis_contents = null
+	if(pinboard)
+		pinboard.vis_contents = null
 	showing = null
 
 /obj/machinery/computer/security/telescreen/entertainment/proc/maybe_stop_showing(datum/weakref/thingref)
@@ -315,7 +317,8 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 			break
 	thing = recursive_loc // should get the topmost atom, which *should* be a mob, or a locker, or something that isnt just ~clothes~
 	showing = WEAKREF(thing)
-	bpinboard.vis_contents = list(thing)
+	if(bpinboard)
+		bpinboard.vis_contents = list(thing)
 
 /obj/machinery/computer/security/telescreen/bodycamera/proc/stop_showing()
 	// Reverse of the above
@@ -361,7 +364,6 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	desc = "Used to monitor fires and breaches."
 	icon_keyboard = "power_key"
 	icon_screen = "engie_cams"
-	network = list(NETWORK_ENGINE,NETWORK_SUBSTATIONS,NETWORK_ENGINEERING,NETWORK_ENGINEERING_OUTPOST,NETWORK_ALARM_ATMOS,NETWORK_ALARM_FIRE,NETWORK_ALARM_POWER,NETWORK_FOUNDATIONS,NETWORK_WASTE) // Outpost 21 edit - Default networks
 	circuit = /obj/item/circuitboard/security/engineering
 	light_color = "#FAC54B"
 

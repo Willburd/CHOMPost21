@@ -5488,6 +5488,7 @@
 #include "modular_outpost\code\game\machinery\vox_pump.dm"
 #include "modular_outpost\code\game\machinery\atmoalter\canister.dm"
 #include "modular_outpost\code\game\machinery\computer\camera.dm"
+#include "modular_outpost\code\game\machinery\computer\presets.dm"
 #include "modular_outpost\code\game\machinery\computer\requestcomputer.dm"
 #include "modular_outpost\code\game\machinery\doors\airlock.dm"
 #include "modular_outpost\code\game\machinery\doors\airlock_subtypes.dm"

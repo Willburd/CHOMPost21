@@ -22,6 +22,8 @@ GLOBAL_LIST_INIT(station_networks, list(
 										NETWORK_INTERROGATION
 										))
 */
+
+/* Outpost 21 edit - Use ours
 GLOBAL_LIST_INIT(engineering_networks, list(
 										NETWORK_ENGINE,
 										NETWORK_SUBSTATIONS, //YAWN ADD: new substations subnet
@@ -30,6 +32,8 @@ GLOBAL_LIST_INIT(engineering_networks, list(
 										NETWORK_ALARM_ATMOS,
 										NETWORK_ALARM_FIRE,
 										NETWORK_ALARM_POWER))
+*/
+
 /obj/machinery/camera/network/crescent
 	network = list(NETWORK_CRESCENT)
 
