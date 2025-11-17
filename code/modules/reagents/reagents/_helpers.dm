@@ -23,4 +23,5 @@
 		istype(src, /obj/item/slime_extract) || \
 		istype(src, /obj/item/clothing/mask/smokable/cigarette) || \
 		istype(src, /obj/item/storage/fancy/cigarettes) || \
-		istype(src, /obj/item/clothing/mask/chewable) // CHOMPEdit
+		istype(src, /obj/item/clothing/mask/chewable) || \
+		istype(src, /obj/item/reagent_containers/blood/refillable) // CHOMPEdit, Outpost 21 edit - Refillable bloodbags
