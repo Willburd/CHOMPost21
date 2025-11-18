@@ -69,6 +69,8 @@
 	circuit = null
 
 GLOBAL_LIST_EMPTY(entertainment_screens)
+GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
+
 /obj/machinery/computer/security/telescreen/entertainment
 	name = "entertainment monitor"
 	desc = "Damn, why do they never have anything interesting on these things? (Alt-click to toggle the display)"
@@ -94,6 +96,9 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 
 	add_overlay(MAT_GLASS)
 
+	pinboard = SSvis_overlays.add_vis_overlay(src, icon = icon, iconstate = "pinboard", layer = 0.1, add_appearance_flags = KEEP_TOGETHER, add_vis_flags = VIS_INHERIT_ID|VIS_INHERIT_PLANE, unique = TRUE)
+	pinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
+	/*
 	pinboard = new()
 	pinboard.icon = icon
 	pinboard.icon_state = "pinboard"
@@ -102,6 +107,7 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 	pinboard.appearance_flags = KEEP_TOGETHER
 	pinboard.add_filter("screen cutter", 1, alpha_mask_filter(icon = mask))
 	vis_contents += pinboard
+	*/
 
 	. = ..()
 
@@ -135,8 +141,13 @@ GLOBAL_LIST_EMPTY(entertainment_screens)
 		if(isliving(usr) && Adjacent(usr) && !usr.incapacitated())
 			toggle()
 			visible_message(span_infoplain(span_bold("[usr]") + " toggles [src] [enabled ? "on" : "off"]."),span_info("You toggle [src] [enabled ? "on" : "off"]."), runemessage = "click")
-	else
+	//CHOMPEdit start - Changing click to only come into play when shift or alt clicking. These things are ANNOYING.
+			return
+	if(modifiers["shift"])
 		attack_hand(usr)
+		return
+	..()
+	//CHOMPEdit end
 
 /obj/machinery/computer/security/telescreen/entertainment/update_icon()
 	return // NUH
