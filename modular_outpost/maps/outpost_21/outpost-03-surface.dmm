@@ -4444,6 +4444,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/medical/first_aid_station)
 "agE" = (
@@ -11063,6 +11064,87 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
+"auK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
+"auL" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/security/detectives_office)
+"auM" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techmaint,
+/area/security/evidence_storage)
+"auN" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/steel,
+/area/bridge/hallway)
+"auO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"auP" = (
+/obj/effect/floor_decal/corner_kafel/white/diagonal,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/kafel_full,
+/area/crew_quarters/kitchen)
+"auQ" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_three)
+"auR" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/main)
 "avc" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
@@ -16815,6 +16897,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
 "cjU" = (
@@ -17399,6 +17482,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
 "crO" = (
@@ -21920,6 +22004,7 @@
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "dSE" = (
@@ -28720,6 +28805,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
 "ghO" = (
@@ -35017,6 +35103,7 @@
 /obj/effect/landmark{
 	name = "JoinLateElevator"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "ibA" = (
@@ -35729,6 +35816,7 @@
 /obj/effect/landmark{
 	name = "JoinLateCryo"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/cybstorage)
 "ims" = (
@@ -38928,7 +39016,6 @@
 /obj/machinery/door/airlock/command{
 	id_tag = "HoSdoor";
 	name = "Head of Security";
-	req_access = newlist();
 	req_one_access = list(52,58)
 	},
 /obj/structure/cable/green{
@@ -44156,6 +44243,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "kMi" = (
@@ -57177,6 +57265,7 @@
 /obj/effect/landmark{
 	name = "JoinLateElevator"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "oPP" = (
@@ -58400,6 +58489,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_smes)
 "pnr" = (
@@ -63713,6 +63803,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crewstairwell)
 "qVd" = (
@@ -66074,6 +66165,7 @@
 	pixel_x = -32
 	},
 /obj/effect/floor_decal/corner/red/full,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/security/brig/drunk)
 "rMu" = (
@@ -77396,6 +77488,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/stairwell)
 "vki" = (
@@ -83677,6 +83770,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "xbI" = (
@@ -84588,6 +84682,7 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/arrivejani)
 "xqO" = (
@@ -86963,6 +87058,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "ygl" = (
@@ -121510,7 +121606,7 @@ oYM
 sen
 dfb
 uBM
-kux
+auL
 qbJ
 mrc
 nRr
@@ -122153,7 +122249,7 @@ fZx
 oTU
 itg
 fAs
-fAs
+auM
 kKp
 axS
 dfb
@@ -125243,7 +125339,7 @@ svz
 qjX
 jUc
 ydu
-nNi
+auK
 knd
 akY
 akZ
@@ -133130,7 +133226,7 @@ eWd
 uhE
 scY
 mOT
-wAv
+xTA
 sPo
 kwR
 cke
@@ -136684,7 +136780,7 @@ qUO
 jXZ
 hhC
 jca
-hhC
+auR
 gmG
 pmx
 bwH
@@ -139322,7 +139418,7 @@ pOb
 tor
 xKL
 jwx
-gkm
+auN
 jwx
 hYv
 clT
@@ -141740,7 +141836,7 @@ rKN
 eId
 exh
 wYL
-cxd
+auO
 idk
 fft
 rvN
@@ -141878,7 +141974,7 @@ qQv
 rLi
 oJb
 uTc
-nmA
+auQ
 hQG
 gzS
 oaQ
@@ -142211,7 +142307,7 @@ qKL
 cGe
 oVR
 dBt
-nuL
+auP
 nuL
 hmc
 cGe

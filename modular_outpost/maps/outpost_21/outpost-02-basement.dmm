@@ -5954,6 +5954,7 @@
 	pixel_x = -30;
 	pixel_y = 9
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
 "akZ" = (
@@ -8125,6 +8126,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "aoN" = (
@@ -16683,6 +16685,7 @@
 /area/muriki/atmos/voxdump)
 "aEd" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
 "aEe" = (
@@ -21129,6 +21132,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "aMj" = (
@@ -24113,6 +24117,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/surgery_storage)
 "aRD" = (
@@ -27715,6 +27720,7 @@
 /area/crew_quarters/coffee_shop)
 "aYh" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "aYi" = (
@@ -31686,19 +31692,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "bft" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/pool)
-"bfu" = (
-/obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -31800,6 +31797,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
 "bfE" = (
@@ -32202,6 +32200,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "bgt" = (
@@ -34701,10 +34700,6 @@
 /obj/item/stool/padded{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/pool)
-"bln" = (
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "blo" = (
@@ -37589,6 +37584,7 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "bqI" = (
@@ -42497,6 +42493,7 @@
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 5
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/steel,
 /area/muriki/crew/glass)
 "byt" = (
@@ -43629,6 +43626,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bAN" = (
@@ -45808,6 +45806,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "bFj" = (
@@ -45820,6 +45819,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "bFk" = (
@@ -47978,6 +47978,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/ore_silo)
 "bJm" = (
@@ -48890,6 +48891,7 @@
 /obj/structure/disposalpipe/sortjunction/bodies/flipped{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "bLc" = (
@@ -55234,6 +55236,20 @@
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bXA" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
 "bXB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -56419,6 +56435,16 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"cab" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "cac" = (
 /obj/structure/disposalpipe/segment,
 /obj/random/trash,
@@ -59909,6 +59935,16 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"ciY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "ciZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -61343,6 +61379,10 @@
 /mob/living/simple_mob/vore/aggressive/rat,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
+"cmu" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/medical/tankstore)
 "cmv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -62881,6 +62921,16 @@
 /obj/structure/closet/firecloset,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"cqB" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
 "cqC" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -63482,6 +63532,34 @@
 /obj/item/trash/rkibble,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"csk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
+"csl" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/wood,
+/area/muriki/crew/judge)
+"csm" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/engineering/refinery/main)
 "csG" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
@@ -76480,6 +76558,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/mail)
 "rqO" = (
@@ -119580,7 +119659,7 @@ aCT
 aDU
 axz
 cmc
-sze
+csm
 fDP
 fDP
 fDP
@@ -119761,7 +119840,7 @@ gTT
 aXO
 aSe
 aSe
-aSe
+cmu
 aSe
 aYq
 gTT
@@ -133875,7 +133954,7 @@ bdW
 beo
 beD
 beW
-bfu
+bft
 bff
 bgi
 bgA
@@ -135141,14 +135220,14 @@ aJc
 aJc
 aNI
 aOD
-aPp
+csl
 aQb
 aRa
 aRX
 aSA
 aUg
 aTv
-aUg
+csk
 aUg
 aUg
 aVo
@@ -135171,7 +135250,7 @@ bdY
 aRR
 beG
 bfe
-bfx
+ciY
 bff
 bff
 bff
@@ -135182,8 +135261,8 @@ bff
 bff
 bff
 bjA
-bkn
-bln
+cab
+bff
 blX
 bnV
 boj
@@ -137743,7 +137822,7 @@ bKr
 aTM
 aUj
 aUN
-aUN
+cqB
 aVS
 aWD
 aWD
@@ -137783,7 +137862,7 @@ bfm
 bfm
 bqy
 brj
-bgI
+bXA
 bfm
 soH
 bfm
