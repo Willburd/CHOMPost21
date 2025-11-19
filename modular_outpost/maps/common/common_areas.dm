@@ -2143,6 +2143,11 @@
 	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_DIM
 
+/area/security/uav_bay
+	name = "\improper UAV Bay"
+	sound_env = LARGE_ENCLOSED
+	base_turf = /turf/simulated/open
+
 //
 // Science-----------------------------------------------------------------------
 //
