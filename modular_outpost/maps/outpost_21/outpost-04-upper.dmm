@@ -1941,7 +1941,7 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_x = 5;
+	pixel_x = 8;
 	pixel_y = -28
 	},
 /obj/structure/cable/orange{
@@ -1952,6 +1952,11 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26;
+	pixel_x = -5
 	},
 /turf/simulated/floor/tiled,
 /area/security/uav_bay)
@@ -2027,13 +2032,18 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26;
+	pixel_y = -7
+	},
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
 	pixel_x = 30;
-	pixel_y = 8
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 6
+	pixel_y = 10
 	},
 /turf/simulated/floor/tiled,
 /area/security/uav_bay)
