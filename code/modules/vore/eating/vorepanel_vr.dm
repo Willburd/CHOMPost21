@@ -738,10 +738,12 @@
 			var/new_size = text2num(params["new_mob_size"])
 			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 			if(istype(host, /mob/living))
-				var/mob/living/H = host
-				if(H.nutrition >= VORE_RESIZE_COST)
-					H.adjust_nutrition(-VORE_RESIZE_COST)
-					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
+				var/mob/living/living_host = host
+				if(new_size == living_host.size_multiplier)
+					return FALSE
+				if(living_host.nutrition >= VORE_RESIZE_COST)
+					living_host.adjust_nutrition(-VORE_RESIZE_COST)
+					living_host.resize(new_size, uncapped = living_host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
 		/* Outpost 21 edit - Disable soulgems
 		//Soulcatcher functions
