@@ -6,9 +6,12 @@
 
 /obj/item/organ/external/head/crewkin
 	min_broken_damage = 15
-
+	/* Outpost 21 edit - Contrasting shadekin eyes
 	eye_icon_location = 'icons/mob/human_face_vr.dmi'
 	eye_icon = "eyes_shadekin_station"
+	*/
+	eye_icon_location = 'icons/mob/human_face_vr.dmi'
+	eye_icon = "eyes_shadekin"
 
 /obj/item/organ/external/arm/crewkin
 	min_broken_damage = 15
