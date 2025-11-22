@@ -1384,7 +1384,7 @@
 	poison_type = null
 	water_breather = TRUE //They do not quite breathe...
 
-	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_UNDERWEAR
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR // Outpost 21 edit - Has eye colors
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
