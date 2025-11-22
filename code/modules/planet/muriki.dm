@@ -949,8 +949,8 @@ var/datum/planet/muriki/planet_muriki = null
 	light_modifier = 0.1
 	flight_failure_modifier = 10
 	transition_chances = list(
-		WEATHER_LONGBLIZZARD = 95,
-		WEATHER_BLIZZARD = 5,
+		WEATHER_LONGBLIZZARD = 98,
+		WEATHER_BLIZZARD = 2,
 		)
 	color_grading = COLORTINT_EXTREMECOLD
 	observed_message = "The blizzard grows more intense."
@@ -969,8 +969,8 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 0
 	light_modifier = 0.01
 	transition_chances = list(
-		WEATHER_COLDDARKNESS = 95,
-		WEATHER_CLEAR = 5,
+		WEATHER_COLDDARKNESS = 99,
+		WEATHER_CLEAR = 1,
 		)
 	color_grading = COLORTINT_UNDERDARK
 	observed_message = "The world feels still."

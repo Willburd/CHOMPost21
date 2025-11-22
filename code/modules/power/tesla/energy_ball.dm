@@ -229,7 +229,7 @@
 			var/mob/living/L = A
 			if(SEND_SIGNAL(L, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL)
 				continue
-			if(dist <= zap_range && (dist < closest_dist || !closest_mob) && L.stat != DEAD)
+			if(dist <= zap_range && (dist < closest_dist || !closest_mob) && L.stat != DEAD && !HAS_TRAIT(L, TRAIT_TESLA_SHOCKIMMUNE))
 				// Outpost 21 edit(port) begin - Lightning doesn't bleed indoors to kill mobs
 				if(isturf(L.loc))
 					var/turf/flr = L.loc
@@ -239,7 +239,6 @@
 						closest_atom = A
 						closest_dist = dist
 				// Outpost 21 edit end
-
 		else if(closest_mob)
 			continue
 
