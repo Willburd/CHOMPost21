@@ -1502,12 +1502,32 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"dz" = (
+/obj/structure/table/alien/blue,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/shuttle/skipjack)
 "dA" = (
 /obj/machinery/light{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/retro,
 /area/planet/clown)
+"dB" = (
+/obj/structure/table/reinforced,
+/obj/machinery/reagentgrinder,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
 "dC" = (
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/mercenary)
@@ -1518,6 +1538,44 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
+"dE" = (
+/obj/item/reagent_containers/chem_canister/aluminum{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/aluminum{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/calcium{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/calcium{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/carbon{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dF" = (
 /obj/structure/prop/war/minirocket_pod,
 /turf/simulated/shuttle/plating/airless,
@@ -1931,6 +1989,44 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
+"eS" = (
+/obj/item/reagent_containers/chem_canister/chlorine{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/chlorine{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/copper{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/copper{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/ethanol{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/ethanol{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/fluorine{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/fluorine{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "eT" = (
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/darkred,
@@ -4010,6 +4106,82 @@
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
+"iL" = (
+/obj/item/reagent_containers/chem_canister/hydrogen{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/hydrogen{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/iron{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/iron{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/lithium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/lithium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/mercury{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/mercury{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"iM" = (
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/nitrogen{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/oxygen{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "iN" = (
 /mob/living/simple_mob/vore/wolftaur/syndicate/smg,
 /obj/structure/window/reinforced,
@@ -4042,6 +4214,47 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
+"iR" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/phosphorus{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/potassium{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "iS" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/window{
@@ -4132,9 +4345,85 @@
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
+"jd" = (
+/obj/item/reagent_containers/chem_canister/radium{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/radium{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sacid{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sacid{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/silicon{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "je" = (
 /mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
 /obj/structure/window/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jf" = (
+/obj/item/reagent_containers/chem_canister/sodium{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sodium{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sulfur{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sulfur{
+	pixel_x = 7;
+	pixel_y = 13
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = -7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/item/reagent_containers/chem_canister/sugar{
+	pixel_x = 7;
+	pixel_y = -2
+	},
+/obj/structure/table/rack/shelf,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -53753,7 +54042,7 @@ mN
 mN
 ab
 mN
-mN
+sl
 sl
 sl
 yb
@@ -53915,9 +54204,9 @@ mN
 mN
 ab
 mN
-mN
-mN
-mN
+sl
+sl
+sl
 yb
 di
 sg
@@ -54076,10 +54365,10 @@ mN
 mN
 mN
 ab
-mN
-mN
-mN
 TW
+sl
+sl
+yb
 yb
 yb
 jJ
@@ -54238,12 +54527,12 @@ mN
 mN
 mN
 ab
-mN
-mN
-mN
 TW
 sl
+sl
 yb
+dE
+hc
 hc
 hc
 hc
@@ -54400,12 +54689,12 @@ mN
 mN
 mN
 ab
-mN
-mN
-TW
 TW
 sl
+sl
 yb
+eS
+hc
 hc
 hc
 hc
@@ -54562,12 +54851,12 @@ mN
 mN
 mN
 ab
-mN
-mN
-TW
 TW
 sl
+sl
 yb
+iL
+hc
 jN
 hc
 hc
@@ -54724,12 +55013,12 @@ mN
 mN
 mN
 ab
-mN
-mN
-mN
 TW
 sl
+sl
 yb
+iM
+hc
 jO
 hc
 hc
@@ -54886,12 +55175,12 @@ mN
 mN
 mN
 ab
-mN
-mN
-TW
 TW
 sl
+sl
 yb
+iR
+hc
 jP
 hc
 jH
@@ -55048,15 +55337,15 @@ mN
 mN
 mN
 ab
-mN
-mN
-TW
 TW
 sl
+sl
 yb
+jd
+hc
 jQ
 hc
-jH
+dB
 hc
 js
 yb
@@ -55210,12 +55499,12 @@ mN
 mN
 mN
 ab
-mN
-mN
-TW
 TW
 sl
+sl
 yb
+jf
+hc
 jR
 hc
 jI
@@ -55372,11 +55661,11 @@ mN
 mN
 mN
 ab
-mN
-TW
-TW
 TW
 sl
+sl
+yb
+yb
 yb
 yb
 yb
@@ -55535,9 +55824,9 @@ mN
 mN
 ab
 TW
-TW
-TW
-TW
+sl
+sl
+sl
 sl
 sl
 sl
@@ -66764,7 +67053,7 @@ Au
 zJ
 yW
 zJ
-AW
+dz
 BH
 Bm
 mN
