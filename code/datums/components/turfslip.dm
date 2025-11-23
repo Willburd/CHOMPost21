@@ -48,7 +48,7 @@
 
 			if(TURFSLIP_ICE)
 				floor_type = "icy"
-				slip_dist = 1
+				slip_dist = rand(1,3) // Outpost 21 edit - We like our randomized slip dist for ice
 				slip_stun = 4
 				dirtslip = FALSE
 
@@ -77,7 +77,7 @@
 			return
 		// reduce absurd slip distances to something reasonable if we are no longer standing on lube
 		if(slip_dist > 4)
-			slip_dist = 4
+			slip_dist = rand(2,4) // Outpost 21 edit - We like our randomized slip dist for lube
 
 	else if(ground.wet == TURFSLIP_LUBE)
 		// Lube slips forever, if we re-enter the lube then restore our slip
