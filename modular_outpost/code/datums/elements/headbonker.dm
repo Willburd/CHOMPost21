@@ -1,5 +1,5 @@
 /datum/element/headbonk
-	var/bonk_chance = 1
+	var/bonk_chance = 0.5
 
 /datum/element/headbonk/Attach(atom/target)
 	. = ..()
@@ -54,6 +54,8 @@
 		return
 	var/obj/structure/table/T = source
 	var/mob/M = AM
+	if(M.resting || M.lying)
+		return // Safe to slide under
 	if(M.m_intent == I_WALK)
 		return // Safe to walk into
 	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))
