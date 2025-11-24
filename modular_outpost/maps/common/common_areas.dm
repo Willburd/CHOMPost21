@@ -1301,11 +1301,12 @@
 	name = "\improper Research Maintenance Closet"
 	icon_state = "pmaint"
 
-/area/mine/explored/muriki/cave/med/east_access
-	name = "\improper Medical Cavern Access West"
-	sound_env = TUNNEL_ENCLOSED
+/area/mine/explored/muriki/cave/med/west_access
+	name = "\improper Chemical Refinery Cavern Access"
+	sound_env = LARGE_ENCLOSED
 	icon_state = "bluenew"
 	color_grading = COLORTINT_DIM
+
 /area/mine/explored/muriki/cave/med/resleever_exit
 	name = "\improper Medical Automatic Resleeving Access"
 	sound_env = TUNNEL_ENCLOSED
@@ -1672,6 +1673,11 @@
 /area/maintenance/med
 	name = "\improper Near Medical Maintenance"
 	icon_state = "bluenew"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+
+/area/maintenance/med_refinery
+	name = "\improper Near Chemical Refinery Maintenance"
+	icon_state = "maint_medbay"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/sci
