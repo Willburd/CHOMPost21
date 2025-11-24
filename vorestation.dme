@@ -5554,6 +5554,7 @@
 #include "modular_outpost\code\game\objects\structures\crate_lockers\_closets_appearance_definitions.dm"
 #include "modular_outpost\code\game\objects\structures\crate_lockers\closets\secure\security.dm"
 #include "modular_outpost\code\game\objects\structures\props\bloodstar.dm"
+#include "modular_outpost\code\game\objects\structures\props\misc.dm"
 #include "modular_outpost\code\game\objects\structures\props\warefare.dm"
 #include "modular_outpost\code\game\objects\structures\stool_bed_chair_nest\chairs.dm"
 #include "modular_outpost\code\game\turfs\flooring\flooring.dm"

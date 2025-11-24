@@ -52790,13 +52790,11 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "nsK" = (
-/obj/structure/flora/skeleton{
-	name = "\proper Wilhelm"
-	},
 /obj/effect/floor_decal/corner/blue/full,
 /obj/structure/sign/painting/public{
 	pixel_x = -32
 	},
+/obj/structure/prop/skeleton,
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "nsQ" = (
