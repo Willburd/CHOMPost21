@@ -41,6 +41,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "ag" = (
@@ -57,6 +60,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "ai" = (
@@ -445,6 +449,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/medical_treatment)
 "aW" = (
@@ -520,6 +525,9 @@
 /obj/structure/cable/cyan{
 	icon_state = "6-10"
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "bf" = (
@@ -578,6 +586,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "bl" = (
@@ -608,6 +617,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ai)
 "bo" = (
@@ -755,6 +767,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ai_sat/docking_wing)
 "bC" = (
@@ -794,6 +809,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
 "bH" = (
@@ -813,6 +831,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "bK" = (
@@ -981,6 +1002,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/power_distribution)
 "cf" = (
@@ -1159,6 +1181,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway_alt)
 "cy" = (
@@ -1208,6 +1233,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
@@ -1408,6 +1436,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_airlock)
 "cY" = (
@@ -1432,6 +1463,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/cyan{
 	icon_state = "5-10"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
@@ -1539,6 +1573,24 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"dk" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/solar_control)
 "dl" = (
 /obj/effect/floor_decal/industrial/caution/yellow{
 	dir = 1
@@ -1555,6 +1607,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
 "dn" = (
@@ -1563,6 +1618,30 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
+"do" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/starboard_observation)
+"dp" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/backup_power)
 "dq" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
 /obj/machinery/atmospherics/portables_connector,
@@ -1585,10 +1664,68 @@
 /obj/fiftyspawner/uranium,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/starboard_equipment)
+"ds" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/starboard_observation)
+"dt" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/starboard_observation)
 "du" = (
 /obj/machinery/power/grounding_rod,
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"dv" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/storage)
+"dw" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
 "dx" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
@@ -1702,6 +1839,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "dL" = (
@@ -1717,6 +1857,13 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/ai_upload_foyer)
+"dM" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/offworld/confinementbeam/station/hallway)
 "dN" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -1741,6 +1888,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
@@ -1770,6 +1920,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
+"dS" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/offworld/confinementbeam/station/hallway)
 "dT" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/firealarm{
@@ -1778,6 +1935,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_observation)
+"dU" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway)
 "dV" = (
 /obj/machinery/button/remote/blast_door{
 	id = "ptlcargodoor";
@@ -1792,6 +1964,33 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
+"dW" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway)
+"dX" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
 "dY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1803,8 +2002,38 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/starboard_equipment)
+"ea" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
+"eb" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
 "ec" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -1829,6 +2058,31 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/hallway)
+"ef" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway_alt)
+"eg" = (
+/obj/structure/flora/tree/pine/xmas/presents,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/access_shaft)
+"eh" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway)
 "ei" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -1864,6 +2118,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "el" = (
@@ -1889,6 +2146,17 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/dockingbay)
+"ep" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway)
 "eq" = (
 /obj/structure/transit_tube{
 	icon_state = "D-SW"
@@ -1909,6 +2177,11 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
+"et" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/offworld/confinementbeam/station/hallway)
 "eu" = (
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
@@ -1916,12 +2189,81 @@
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
+"ew" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway)
+"ex" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/hallway)
+"ey" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/trawler_airlock)
+"ez" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/access_shaft)
 "eA" = (
 /obj/structure/confinement_beam_generator/lens/outer_lens{
 	dir = 1
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
+"eB" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/access_shaft)
 "eC" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -2015,6 +2357,21 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_observation)
+"eL" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/access_shaft)
 "eM" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -2043,6 +2400,24 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_equipment)
+"eP" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "eQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -2082,6 +2457,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/hallway_alt)
+"eT" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "eU" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/map_helper/airlock/door/ext_door,
@@ -2100,6 +2490,9 @@
 /area/offworld/confinementbeam/station/starboard_equipment)
 "eV" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway_alt)
 "eW" = (
@@ -2108,6 +2501,21 @@
 	},
 /turf/space,
 /area/offworld/confinementbeam/exterior)
+"eX" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "eY" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -2121,6 +2529,22 @@
 /obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
+"eZ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
 "fa" = (
 /obj/machinery/shower{
 	dir = 8;
@@ -2139,8 +2563,69 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
+"fc" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
+"fd" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/beam_emitter)
+"fe" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/port_airlock)
+"ff" = (
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "AI Core";
+	req_access = list(16)
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor{
+	color = "#eacd7c"
+	},
+/area/ai)
 "fi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -2148,6 +2633,9 @@
 /obj/machinery/door/airlock/glass_engineering,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_sat/fore_airlock)
@@ -2221,6 +2709,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -2315,6 +2806,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "fI" = (
@@ -2412,6 +2904,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "fY" = (
@@ -2453,6 +2948,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/starboard_observation)
 "gf" = (
@@ -2475,6 +2973,7 @@
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/hallway)
 "gi" = (
@@ -2516,6 +3015,9 @@
 	},
 /obj/structure/transit_tube{
 	icon_state = "N-S"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -2640,6 +3142,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/dockingbay)
 "gO" = (
@@ -2652,6 +3157,9 @@
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_equipment)
@@ -2681,6 +3189,9 @@
 /area/muriki/bathroom/confinement_beam)
 "gV" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "gW" = (
@@ -2926,6 +3437,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/confinement_beam)
 "hG" = (
@@ -2952,6 +3466,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -3117,6 +3634,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "ik" = (
@@ -3186,6 +3706,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "iu" = (
@@ -3214,6 +3737,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "iy" = (
@@ -3346,6 +3870,7 @@
 	dir = 4;
 	health = 1e+006
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/atmos)
 "iS" = (
@@ -3398,6 +3923,9 @@
 	},
 /obj/structure/transit_tube{
 	icon_state = "N-S"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -3623,6 +4151,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/command,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor{
 	color = "#eacd7c"
 	},
@@ -3865,6 +4394,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
 "kJ" = (
@@ -4033,6 +4565,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/solar_control)
 "le" = (
@@ -4186,6 +4719,9 @@
 "lw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "lx" = (
@@ -4362,6 +4898,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "lX" = (
@@ -4515,6 +5054,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
 "my" = (
@@ -4646,6 +5188,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "mP" = (
@@ -4709,6 +5254,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -4887,6 +5435,7 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/solar_control)
 "nH" = (
@@ -4929,6 +5478,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/power_distribution)
 "nM" = (
@@ -4953,6 +5503,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -5082,6 +5635,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
 "oe" = (
@@ -5174,6 +5730,7 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/docking_wing)
 "ox" = (
@@ -5182,6 +5739,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
@@ -5239,6 +5799,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "oJ" = (
@@ -5250,6 +5811,9 @@
 	req_one_access = list(5,10,11,18,19)
 	},
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -5297,6 +5861,9 @@
 /area/ai)
 "oS" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/dockingbay)
 "oU" = (
@@ -5318,6 +5885,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -5358,6 +5928,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/access_shaft)
 "pg" = (
@@ -5386,6 +5957,7 @@
 	pixel_x = -24;
 	pixel_y = -9
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/solar_control)
 "pj" = (
@@ -5420,6 +5992,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/port_equipment)
 "pq" = (
@@ -5503,6 +6076,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway_alt)
 "pC" = (
@@ -5561,6 +6137,9 @@
 "pK" = (
 /obj/machinery/door/airlock/glass_command{
 	name = "Teleporter Access"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -5692,6 +6271,9 @@
 /obj/structure/window/reinforced{
 	dir = 4;
 	health = 1e+006
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
@@ -5912,6 +6494,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
 "qV" = (
@@ -5979,6 +6564,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/backup_power)
 "rk" = (
@@ -6038,6 +6624,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/backup_power)
 "ru" = (
@@ -6103,6 +6690,9 @@
 	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_equipment)
@@ -6259,6 +6849,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
 "rY" = (
@@ -6508,6 +7099,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/backup_power)
 "sR" = (
@@ -6670,6 +7264,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
 "tl" = (
@@ -6703,6 +7300,9 @@
 	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_observation)
@@ -6778,6 +7378,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_equipment)
 "tI" = (
@@ -6796,6 +7399,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
 "tK" = (
@@ -7078,6 +7682,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "uC" = (
@@ -7198,6 +7803,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/atmos)
 "uZ" = (
@@ -7285,6 +7891,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_observation)
 "vk" = (
@@ -7337,6 +7946,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
 "vq" = (
@@ -7490,10 +8100,16 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "vQ" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ai_sat/docking_wing)
 "vT" = (
@@ -7504,6 +8120,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
 "vU" = (
@@ -7536,6 +8153,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/solar_control)
 "vY" = (
@@ -7619,6 +8237,7 @@
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
 "wm" = (
@@ -7658,6 +8277,9 @@
 "wp" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway)
 "wq" = (
@@ -7829,6 +8451,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_airlock)
 "wY" = (
@@ -7863,6 +8488,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
@@ -7922,6 +8550,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/medical_treatment)
 "xq" = (
@@ -7954,6 +8585,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -8109,6 +8743,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "yc" = (
@@ -8223,6 +8858,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/fore_airlock)
 "yu" = (
@@ -8263,6 +8901,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -8377,6 +9018,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_observation)
 "yM" = (
@@ -8457,6 +9099,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
 "yW" = (
@@ -8517,6 +9162,9 @@
 	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_observation)
@@ -8665,6 +9313,9 @@
 	name = "AI Core";
 	req_access = list(16)
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor{
 	color = "#eacd7c"
 	},
@@ -8723,6 +9374,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway)
@@ -9197,6 +9851,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Bb" = (
@@ -9228,6 +9885,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -9287,6 +9947,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
@@ -9389,6 +10052,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "BP" = (
@@ -9449,6 +10113,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/port_observation)
 "Cc" = (
@@ -9514,6 +10179,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "Co" = (
@@ -9790,6 +10456,12 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
 "Da" = (
@@ -9871,6 +10543,9 @@
 /obj/structure/transit_tube{
 	icon_state = "N-S"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/access_shaft)
 "Dr" = (
@@ -9911,6 +10586,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
 "Dy" = (
@@ -10010,6 +10686,9 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_airlock)
 "DX" = (
@@ -10022,6 +10701,9 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_sat/atmos)
@@ -10069,6 +10751,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Eh" = (
@@ -10226,6 +10911,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "EK" = (
@@ -10337,6 +11023,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Fh" = (
@@ -10377,6 +11066,7 @@
 	name = "AI Upload Access";
 	req_one_access = list(16,52,56)
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
 "Fm" = (
@@ -10445,6 +11135,9 @@
 	frequency = 1381;
 	icon_state = "door_locked";
 	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/dockingbay)
@@ -10540,6 +11233,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "FL" = (
@@ -10648,6 +11342,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "FW" = (
@@ -10737,6 +11432,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "Gi" = (
@@ -10753,6 +11451,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway_alt)
@@ -10820,6 +11521,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "GC" = (
@@ -10906,6 +11608,7 @@
 	name = "Toilet"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
 "GP" = (
@@ -11055,6 +11758,9 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -11227,6 +11933,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_observation)
 "HM" = (
@@ -11293,6 +12002,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/access_shaft)
 "HT" = (
@@ -11348,6 +12060,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -11737,6 +12452,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
 "Jc" = (
@@ -11910,6 +12626,9 @@
 /obj/structure/transit_tube{
 	icon_state = "N-S"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/access_shaft)
 "Jv" = (
@@ -11978,6 +12697,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "JF" = (
@@ -11994,6 +12716,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/medical_treatment)
 "JI" = (
@@ -12009,6 +12734,9 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -12193,6 +12921,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/docking_wing)
 "Kq" = (
@@ -12218,6 +12947,7 @@
 /obj/machinery/door/airlock/glass_command{
 	name = "AI Break Room"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor{
 	color = "#eacd7c"
 	},
@@ -12291,6 +13021,9 @@
 	locked = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -12399,6 +13132,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "KO" = (
@@ -12518,6 +13252,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway_alt)
 "Lm" = (
@@ -12590,6 +13327,9 @@
 	icon_state = "door_locked";
 	locked = 1
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "LB" = (
@@ -12600,6 +13340,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/backup_power)
 "LC" = (
@@ -12636,6 +13377,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -12740,6 +13484,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/access_shaft)
 "Mg" = (
@@ -12779,6 +13524,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_observation)
 "Mn" = (
@@ -12786,6 +13534,9 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -12803,6 +13554,7 @@
 	pixel_y = 7
 	},
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
 "Mp" = (
@@ -12818,6 +13570,9 @@
 "Ms" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -13073,6 +13828,7 @@
 	dir = 4;
 	health = 1e+006
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "Nk" = (
@@ -13227,6 +13983,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/atmos)
 "NK" = (
@@ -13239,6 +13998,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -13254,6 +14016,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "NQ" = (
@@ -13314,6 +14077,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/starboard_observation)
 "Oa" = (
@@ -13322,6 +14088,7 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway)
 "Oc" = (
@@ -13358,6 +14125,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "Oh" = (
@@ -13389,6 +14159,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/solar_control)
 "On" = (
@@ -13405,6 +14178,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
 "Op" = (
@@ -13505,6 +14279,7 @@
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/docking_wing)
 "OG" = (
@@ -13522,6 +14297,9 @@
 "OI" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_airlock)
 "OK" = (
@@ -13577,6 +14355,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/port_equipment)
 "OP" = (
@@ -13611,6 +14392,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
 "OS" = (
@@ -13624,6 +14406,9 @@
 	icon_state = "door_locked";
 	id_tag = "beam_sat_alt_door";
 	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/hallway)
@@ -13758,6 +14543,9 @@
 /area/space)
 "Pu" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/storage)
 "Pw" = (
@@ -14155,6 +14943,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
 "QO" = (
@@ -14172,6 +14963,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
@@ -14418,6 +15212,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_airlock)
 "RG" = (
@@ -14491,6 +15286,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -14868,6 +15666,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/atmos)
 "SS" = (
@@ -14920,6 +15719,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
 "Tb" = (
@@ -14928,6 +15728,9 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/power_distribution)
 "Td" = (
@@ -14947,6 +15750,9 @@
 	locked = 1
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/hallway)
 "Tf" = (
@@ -15176,6 +15982,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/medical_treatment)
 "Ua" = (
@@ -15285,6 +16094,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_observation)
 "Up" = (
@@ -15366,6 +16176,9 @@
 	icon_state = "4-9"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/confinementbeam/station/beam_emitter)
 "UC" = (
@@ -15577,6 +16390,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/hallway_alt)
 "Vj" = (
@@ -15649,6 +16465,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/docking_wing)
 "Vw" = (
@@ -15659,6 +16476,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -15691,6 +16511,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_observation)
 "VJ" = (
@@ -15772,6 +16593,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "VU" = (
@@ -15832,6 +16656,9 @@
 	dir = 8
 	},
 /obj/item/geiger/wall/south,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
 "Wa" = (
@@ -15854,6 +16681,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
 "Wc" = (
@@ -15913,6 +16741,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/ai_upload)
 "Wl" = (
@@ -15926,6 +16755,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/storage)
 "Wo" = (
@@ -15992,6 +16822,9 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/port_airlock)
@@ -16115,6 +16948,7 @@
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/hallway_alt)
 "WS" = (
@@ -16222,6 +17056,9 @@
 /obj/structure/cable/green{
 	icon_state = "5-10"
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/atmos)
 "Xk" = (
@@ -16245,6 +17082,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/port_observation)
 "Xn" = (
@@ -16380,6 +17218,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/fore_airlock)
 "XK" = (
@@ -16447,6 +17288,9 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/starboard_airlock)
@@ -16516,6 +17360,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/port_equipment)
 "Ye" = (
@@ -16672,6 +17517,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/access_shaft)
 "YJ" = (
@@ -16709,6 +17555,9 @@
 "YO" = (
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = list(5,10,11,18,19)
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -16765,6 +17614,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -16840,6 +17692,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/starboard_equipment)
 "Zp" = (
@@ -16973,6 +17826,9 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/access_shaft)
 "ZM" = (
@@ -17030,10 +17886,16 @@
 	name = "AI Core Lockdown";
 	id = "sensitive_lock"
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
 "ZT" = (
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/confinementbeam/station/hallway)
 "ZU" = (
@@ -25849,7 +26711,7 @@ Pz
 Fj
 UN
 Fz
-zx
+ff
 Fz
 Fz
 cF
@@ -39205,7 +40067,7 @@ Po
 vt
 vt
 vt
-vX
+dk
 vt
 vt
 vt
@@ -39825,7 +40687,7 @@ gk
 QT
 Nl
 PJ
-YY
+fe
 pK
 PJ
 hV
@@ -40660,7 +41522,7 @@ PV
 DR
 KO
 oc
-sO
+dp
 ZA
 Lj
 Hm
@@ -40822,7 +41684,7 @@ PV
 mJ
 yK
 oH
-sO
+dp
 ze
 Lj
 Lj
@@ -41292,7 +42154,7 @@ MR
 wf
 eI
 iO
-uB
+ey
 AD
 Hd
 yw
@@ -41616,7 +42478,7 @@ Qf
 Qf
 vk
 GK
-uB
+ey
 Ez
 Uy
 mc
@@ -42426,7 +43288,7 @@ Po
 Po
 Po
 Po
-pf
+ez
 yo
 Wl
 Wl
@@ -42588,9 +43450,9 @@ Po
 Po
 Po
 Po
-YI
+eB
 yo
-Wl
+eg
 Wl
 Cc
 Wl
@@ -42750,7 +43612,7 @@ Po
 Po
 Po
 Po
-YI
+eB
 yo
 Wl
 Wl
@@ -42912,7 +43774,7 @@ Po
 Po
 Po
 Po
-Mc
+eL
 yo
 Wl
 Wl
@@ -43563,9 +44425,9 @@ wg
 wg
 wg
 wg
-ZT
+dM
 ek
-ZT
+dM
 Iq
 Iq
 Iq
@@ -44214,7 +45076,7 @@ TZ
 aR
 NX
 JS
-bG
+dv
 Us
 tz
 AJ
@@ -44376,7 +45238,7 @@ TZ
 aR
 yi
 ik
-bG
+dv
 av
 gI
 tO
@@ -44538,7 +45400,7 @@ TZ
 aR
 NX
 JS
-bG
+dv
 uu
 tz
 GD
@@ -45186,7 +46048,7 @@ TZ
 aR
 GL
 ik
-bG
+dv
 gI
 qB
 LJ
@@ -45348,7 +46210,7 @@ TZ
 Ji
 IW
 JS
-bG
+dv
 Us
 Qb
 gD
@@ -45510,7 +46372,7 @@ TZ
 aR
 IW
 JS
-bG
+dv
 HP
 gD
 Qk
@@ -45992,7 +46854,7 @@ No
 ux
 Hh
 BA
-wp
+eh
 XK
 Um
 IH
@@ -46154,7 +47016,7 @@ XF
 aT
 gT
 gT
-Oa
+ep
 gT
 kR
 pw
@@ -46316,7 +47178,7 @@ ee
 hY
 rK
 xj
-ZT
+et
 ik
 NX
 Ye
@@ -46479,9 +47341,9 @@ kK
 kK
 kK
 kK
-ZT
+dS
 ft
-ZT
+dS
 kD
 kK
 kK
@@ -46802,7 +47664,7 @@ rW
 rW
 rW
 rW
-fH
+dU
 zk
 NX
 JS
@@ -46964,7 +47826,7 @@ rW
 rW
 rW
 rW
-EJ
+dW
 Gv
 sx
 Xk
@@ -47126,7 +47988,7 @@ rW
 rW
 rW
 rW
-Cn
+ew
 zk
 NX
 JS
@@ -48273,9 +49135,9 @@ nu
 nu
 nu
 nu
-JJ
-HL
-vj
+dt
+ds
+do
 nu
 tM
 rW
@@ -48747,7 +49609,7 @@ rW
 rW
 rW
 ET
-fH
+dU
 um
 fH
 ET
@@ -48909,7 +49771,7 @@ rW
 rW
 rW
 rW
-EJ
+dW
 um
 EJ
 rW
@@ -49071,7 +49933,7 @@ rW
 rW
 rW
 rW
-EJ
+dW
 um
 EJ
 rW
@@ -49718,11 +50580,11 @@ rW
 rW
 LE
 kK
-Gh
+ex
 kK
 KG
 Cs
-Vh
+dw
 Cs
 IF
 rW
@@ -49881,7 +50743,7 @@ rW
 qu
 rW
 rW
-tJ
+dX
 zs
 tJ
 rW
@@ -50043,7 +50905,7 @@ zN
 lQ
 pl
 pl
-Dv
+ea
 wn
 Dv
 pl
@@ -50205,7 +51067,7 @@ jC
 qu
 rW
 rW
-Oo
+eb
 uS
 Oo
 rW
@@ -50367,7 +51229,7 @@ jC
 qu
 rW
 lg
-fb
+ef
 zs
 fb
 lg
@@ -53762,7 +54624,7 @@ Xv
 YB
 xa
 xa
-NM
+eZ
 TB
 RC
 wa
@@ -53924,7 +54786,7 @@ OA
 Po
 Po
 Po
-GB
+fc
 Df
 MM
 MM
@@ -54086,7 +54948,7 @@ xa
 xa
 xa
 xa
-FK
+fd
 TB
 tQ
 LK
@@ -54411,7 +55273,7 @@ Po
 Po
 Po
 rc
-ya
+eT
 sF
 BR
 JF
@@ -54573,7 +55435,7 @@ Po
 Po
 rc
 rc
-FU
+eX
 fv
 GT
 lf
@@ -54898,7 +55760,7 @@ rc
 Po
 Po
 Po
-BM
+eP
 ke
 vH
 Jf
@@ -55223,7 +56085,7 @@ Po
 Po
 Po
 Po
-BM
+eP
 eu
 eu
 nw

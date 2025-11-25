@@ -108,6 +108,9 @@
 /turf/unsimulated/beach/sand,
 /area/beach)
 "as" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/wall/fancy_shuttle/window{
 	fancy_shuttle_tag = "tram"
 	},
@@ -131,6 +134,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "aw" = (
@@ -140,6 +146,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
@@ -154,6 +163,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
@@ -1164,6 +1176,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "cO" = (
@@ -1174,6 +1187,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "cP" = (
@@ -1188,6 +1202,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "cQ" = (
@@ -4534,6 +4549,14 @@
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
+"jq" = (
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/wall/fancy_shuttle/window{
+	fancy_shuttle_tag = "tram"
+	},
+/area/shuttle/tram)
 "jr" = (
 /obj/structure/table/reinforced,
 /obj/item/dnainjector/set_trait/hulk,
@@ -4835,6 +4858,12 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"jT" = (
+/obj/structure/sign/christmas/lights,
+/turf/simulated/wall/fancy_shuttle/window{
+	fancy_shuttle_tag = "tram"
+	},
+/area/shuttle/tram)
 "jU" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Heavy Armor";
@@ -6694,6 +6723,8 @@
 	dir = 4
 	},
 /obj/item/clothing/accessory/scarf/christmas,
+/obj/item/clothing/head/crown/goose_king/christmas,
+/obj/item/clothing/head/crown/goose_queen/christmas,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -12401,7 +12432,7 @@ ag
 ag
 ai
 ai
-as
+jT
 bs
 bX
 bs
@@ -12563,7 +12594,7 @@ ag
 ag
 ai
 ai
-as
+jT
 bs
 bX
 bs
@@ -13697,7 +13728,7 @@ ag
 ag
 ai
 ai
-as
+jT
 cC
 bi
 bB
@@ -13859,7 +13890,7 @@ ag
 ag
 ai
 ai
-as
+jT
 cD
 bi
 bi
@@ -14021,7 +14052,7 @@ ag
 ag
 ai
 ai
-as
+jT
 cE
 bi
 bx
@@ -15155,7 +15186,7 @@ ag
 ag
 ai
 ai
-as
+jT
 cK
 bi
 co
@@ -15317,7 +15348,7 @@ ag
 ag
 ai
 ai
-as
+jT
 cL
 bi
 cp
@@ -15645,9 +15676,9 @@ ap
 ap
 ap
 ap
-as
-as
-as
+jq
+jq
+jq
 ap
 ap
 ap

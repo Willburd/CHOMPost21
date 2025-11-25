@@ -12,6 +12,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_bar)
 "ac" = (
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_bar)
 "ad" = (
@@ -29,6 +32,9 @@
 	},
 /obj/machinery/cryopod{
 	dir = 2
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
@@ -118,6 +124,9 @@
 /area/shuttle/belter)
 "ar" = (
 /obj/machinery/door/unpowered/shuttle,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
 /area/shuttle/belter)
 "as" = (
@@ -244,6 +253,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "aH" = (
@@ -253,6 +263,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "aI" = (
@@ -277,6 +288,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "aK" = (
@@ -300,6 +312,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
@@ -607,6 +622,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/telecomms)
 "bs" = (
@@ -959,6 +975,61 @@
 	ignore_cavegen = 1
 	},
 /area/offworld/asteroidyard/station/cave)
+"cc" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls_bar)
+"cd" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls_bar)
+"ce" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls_bar)
+"cf" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls_bar)
 "cg" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 1
@@ -966,18 +1037,45 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet/turcarpet,
 /area/offworld/asteroidyard/station/bar)
+"ch" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls_bar)
 "ci" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_storage)
+"cj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_bar)
 "ck" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
 	id_tag = "orbyardsol_inner";
 	locked = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls)
 "cl" = (
@@ -987,8 +1085,44 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
+"cm" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls_bar)
+"cn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls_bar)
+"co" = (
+/obj/machinery/door/unpowered/shuttle,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
+/area/shuttle/belter)
 "cp" = (
 /obj/structure/railing{
 	dir = 1
@@ -999,6 +1133,21 @@
 /obj/machinery/trailblazer/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
+"cq" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
 "cr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -1027,6 +1176,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
 "cu" = (
@@ -1034,6 +1184,94 @@
 	ignore_cavegen = 1
 	},
 /area/offworld/asteroidyard/external)
+"cv" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
+"cw" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/access_shaft)
+"cx" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_mining{
+	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/cave)
+"cy" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_mining{
+	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/observation)
+"cz" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_mining{
+	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/cave)
+"cA" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/dockingbay)
+"cB" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/dockingbay)
+"cC" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/glass_mining{
+	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_storage)
 "cD" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -1044,6 +1282,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
+"cE" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
 "cF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -1059,6 +1304,19 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/dockingbay)
+"cH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/halls)
 "cI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1071,8 +1329,64 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/dockingbay)
+"cJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls)
+"cK" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls)
+"cL" = (
+/obj/machinery/door/firedoor/glass/hidden/steel,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls)
+"cM" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls)
 "cN" = (
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	frequency = 1381;
@@ -1094,6 +1408,21 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/asteroidyard/station/access_shaft)
+"cO" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls)
 "cP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1119,6 +1448,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "cR" = (
@@ -1139,6 +1469,33 @@
 	},
 /turf/simulated/floor,
 /area/offworld/asteroidyard/station/cave)
+"cU" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls)
+"cV" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/asteroidyard/station/halls)
 "da" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -1198,6 +1555,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/asteroidyard/station/washing)
 "dh" = (
@@ -1251,6 +1611,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/dockingbay)
 "dv" = (
@@ -1383,6 +1744,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_storage)
 "dV" = (
@@ -1455,6 +1817,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_storage)
 "eu" = (
@@ -1473,6 +1838,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "eI" = (
@@ -1649,6 +2015,7 @@
 /obj/machinery/door/airlock/glass_engineering{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/dockingbay)
 "fS" = (
@@ -1693,6 +2060,12 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_storage)
 "gh" = (
@@ -1707,6 +2080,9 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/bar)
@@ -1878,6 +2254,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/dockingbay)
 "hq" = (
@@ -1915,6 +2294,9 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
 "hA" = (
@@ -1963,6 +2345,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/medbox)
 "hK" = (
@@ -2049,6 +2432,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/dockingbay)
 "ib" = (
@@ -2092,6 +2478,12 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_bar)
 "ii" = (
@@ -2105,6 +2497,7 @@
 	id_tag = "orbyardbig_inner";
 	locked = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/access_shaft)
 "ik" = (
@@ -2117,6 +2510,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -2228,6 +2624,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
 "iM" = (
@@ -2248,6 +2647,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
 "iT" = (
@@ -2302,6 +2702,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/solarControl)
 "jg" = (
@@ -2315,6 +2718,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_storage)
 "jh" = (
@@ -2341,6 +2745,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/bar)
 "jk" = (
@@ -2372,6 +2780,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/observation)
 "jy" = (
@@ -2413,6 +2822,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
 "jU" = (
@@ -2463,6 +2873,7 @@
 /obj/machinery/door/airlock{
 	name = "Rock box"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/asteroidyard/station/halls_storage)
 "jZ" = (
@@ -2654,6 +3065,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/dockingbay)
 "lq" = (
@@ -2764,6 +3178,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_storage)
 "lO" = (
@@ -2795,6 +3212,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
 "mb" = (
@@ -2865,6 +3283,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_bar)
 "mx" = (
@@ -2877,6 +3298,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
 "mz" = (
@@ -2892,6 +3316,9 @@
 	frequency = 1381;
 	master_tag = "orbyard";
 	pixel_y = -23
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/access_shaft)
@@ -3018,6 +3445,9 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
 "nc" = (
@@ -3104,6 +3534,7 @@
 "nx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/observation)
 "ny" = (
@@ -3220,6 +3651,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
 "nX" = (
@@ -3297,6 +3729,9 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/dockingbay)
 "oD" = (
@@ -3322,6 +3757,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_storage)
 "oJ" = (
@@ -3412,6 +3850,7 @@
 "pj" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
 "pp" = (
@@ -3466,6 +3905,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_storage)
 "pF" = (
@@ -3513,6 +3955,9 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
 "pS" = (
@@ -3662,6 +4107,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/bar)
@@ -3920,6 +4368,12 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/dockingbay)
 "sn" = (
@@ -3936,6 +4390,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/observation)
@@ -4012,6 +4469,9 @@
 /obj/machinery/door/airlock/glass_engineering{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/solarControl)
 "sK" = (
@@ -4063,6 +4523,9 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
@@ -4160,6 +4623,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/observation)
 "tF" = (
@@ -4193,6 +4657,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
 "tU" = (
@@ -4224,6 +4691,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/solarControl)
 "ua" = (
@@ -4244,6 +4714,9 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/medbox)
 "uh" = (
@@ -4268,6 +4741,7 @@
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls)
 "ul" = (
@@ -4300,6 +4774,9 @@
 	},
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/observation)
@@ -4415,6 +4892,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
 "vj" = (
@@ -4771,6 +5251,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/bar)
 "wQ" = (
@@ -4896,6 +5379,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/cave)
 "xH" = (
@@ -4984,6 +5470,9 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/storage_aux)
 "yc" = (
@@ -5069,6 +5558,7 @@
 /obj/machinery/door/airlock/glass_engineering{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/dockingbay)
 "yz" = (
@@ -5219,6 +5709,7 @@
 	pixel_x = 25;
 	pixel_y = -8
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls)
 "zf" = (
@@ -5346,6 +5837,9 @@
 "zF" = (
 /obj/machinery/door/airlock/maintenance/common{
 	name = "Trash Pit"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/storage)
@@ -5489,6 +5983,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/observation)
 "Ao" = (
@@ -5560,6 +6055,12 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -5643,6 +6144,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced/full,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
 "Bk" = (
@@ -5696,6 +6200,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
 "Bq" = (
@@ -5774,6 +6279,7 @@
 "BC" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_bar)
 "BE" = (
@@ -5925,6 +6431,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_bar)
 "Cs" = (
@@ -5948,6 +6457,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_storage)
 "CE" = (
@@ -6175,6 +6685,9 @@
 "Dx" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/dockingbay)
 "Dy" = (
@@ -6242,6 +6755,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_storage)
@@ -6417,6 +6933,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/dockingbay)
 "EU" = (
@@ -6441,6 +6958,10 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/observation)
 "Fn" = (
@@ -6608,6 +7129,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_bar)
 "Gq" = (
@@ -6621,6 +7145,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/access_shaft)
 "Gv" = (
@@ -6719,6 +7244,9 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/medbox)
 "GX" = (
@@ -6789,6 +7317,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/observation)
@@ -6897,6 +7428,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/solarControl)
@@ -7042,6 +7576,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/solarControl)
 "Ip" = (
@@ -7129,6 +7666,7 @@
 	locked = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/access_shaft)
 "IL" = (
@@ -7354,6 +7892,7 @@
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 1
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls)
 "JN" = (
@@ -7397,6 +7936,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_bar)
@@ -7835,6 +8377,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/bar)
 "Mk" = (
@@ -7864,6 +8409,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_bar)
 "Ms" = (
@@ -7893,6 +8441,9 @@
 	},
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7930,6 +8481,9 @@
 	},
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_storage)
@@ -8098,6 +8652,9 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/observation)
@@ -8288,6 +8845,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/cave)
 "Ou" = (
@@ -8300,6 +8858,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "Ov" = (
@@ -8375,6 +8934,9 @@
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
@@ -8627,6 +9189,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/dockingbay)
 "Qf" = (
@@ -8716,6 +9281,9 @@
 	frequency = 1381;
 	id_tag = "orbyard_inner";
 	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/access_shaft)
@@ -8819,6 +9387,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/engineering)
 "Ra" = (
@@ -8844,6 +9415,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls_bar)
 "Rl" = (
@@ -8948,6 +9520,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "RL" = (
@@ -8970,6 +9545,9 @@
 "RO" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
 "RP" = (
@@ -9061,6 +9639,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/teleport)
 "Sw" = (
@@ -9220,6 +9799,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineeringatmos,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/engineering)
 "Tm" = (
@@ -9327,6 +9907,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -9475,6 +10058,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/asteroidyard/station/spelunker)
 "UQ" = (
@@ -9658,6 +10242,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/access_shaft)
 "VZ" = (
@@ -9730,6 +10315,7 @@
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Tool Shed"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/storage_aux)
 "Wj" = (
@@ -9897,6 +10483,12 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/engineering)
 "Xl" = (
@@ -9909,6 +10501,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/engineering)
 "Xm" = (
@@ -10016,6 +10611,9 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/halls)
@@ -10143,6 +10741,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/observation)
 "YD" = (
@@ -10213,6 +10814,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/asteroidyard/station/spelunker)
 "YW" = (
@@ -10280,6 +10884,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	req_one_access = null
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/asteroidyard/station/access_shaft)
 "Zt" = (
@@ -10299,6 +10904,9 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
@@ -19671,7 +20279,7 @@ dk
 dk
 CR
 dk
-ds
+cB
 Yw
 dN
 dN
@@ -21264,7 +21872,7 @@ dk
 dk
 dk
 CR
-Bp
+cO
 Fn
 lv
 Bp
@@ -21426,7 +22034,7 @@ dk
 dk
 dk
 CR
-ct
+cU
 Fn
 lv
 ct
@@ -21588,7 +22196,7 @@ CR
 CR
 CR
 CR
-ct
+cU
 Fn
 lv
 ct
@@ -21750,7 +22358,7 @@ dk
 dk
 dk
 CR
-ct
+cU
 Fn
 lv
 ct
@@ -21912,7 +22520,7 @@ dk
 dk
 dk
 CR
-jK
+cV
 Fn
 lv
 jK
@@ -23696,7 +24304,7 @@ vY
 vY
 vY
 Mx
-ti
+cL
 vY
 vY
 Zv
@@ -23870,7 +24478,7 @@ hG
 cs
 cs
 cs
-cs
+cE
 WM
 lv
 Ye
@@ -24032,7 +24640,7 @@ cr
 vH
 Fp
 Nu
-vH
+cH
 ax
 QN
 Ye
@@ -24174,17 +24782,17 @@ vY
 vY
 vY
 vY
-Zv
-tR
-tR
-mx
+cM
+cK
+cK
+cJ
 vY
 vY
 vY
-Zv
-tR
-tR
-mx
+cM
+cK
+cK
+cJ
 vY
 vY
 Ye
@@ -24209,7 +24817,7 @@ HH
 HH
 el
 oz
-Dx
+cA
 Sr
 dX
 dX
@@ -24706,7 +25314,7 @@ dX
 fe
 fe
 sW
-Op
+cz
 fe
 xz
 fe
@@ -26306,7 +26914,7 @@ NE
 Ea
 Fz
 MC
-dQ
+cC
 JO
 JO
 JO
@@ -27160,13 +27768,13 @@ rR
 rR
 rR
 rR
-Kg
-mt
-Mr
+ch
+cf
+ce
 rR
-Kg
-mt
-Mr
+ch
+cf
+ce
 rR
 yc
 pR
@@ -27175,18 +27783,18 @@ yc
 rR
 ae
 ac
-ab
+cj
 rR
 rR
 rR
 rR
-Kg
-mt
-mt
-mt
-mt
-mt
-Mr
+ch
+cf
+cf
+cf
+cf
+cf
+ce
 rR
 rR
 rR
@@ -27351,7 +27959,7 @@ dk
 dk
 CR
 hM
-Cr
+cc
 sk
 wA
 cD
@@ -27513,7 +28121,7 @@ dk
 dk
 dk
 dk
-Go
+cd
 If
 TA
 Lt
@@ -27817,8 +28425,8 @@ oR
 oR
 rR
 yc
-pR
-RO
+cn
+cm
 yc
 rR
 RP
@@ -28598,7 +29206,7 @@ fe
 fe
 fe
 mY
-Op
+cx
 fe
 fe
 bm
@@ -29730,7 +30338,7 @@ Ai
 pg
 wp
 qc
-Nv
+cy
 Hm
 lX
 wI
@@ -30065,7 +30673,7 @@ Wo
 Wo
 Wo
 xm
-ev
+cq
 Ly
 dZ
 ev
@@ -30227,7 +30835,7 @@ dk
 dk
 dk
 tg
-cQ
+cv
 Ob
 Zi
 cQ
@@ -30389,7 +30997,7 @@ dk
 dk
 CR
 CR
-cQ
+cv
 dG
 dZ
 cQ
@@ -30551,7 +31159,7 @@ dk
 dk
 dk
 CR
-Ou
+cw
 nU
 nL
 Ou
@@ -30875,7 +31483,7 @@ dk
 dk
 dk
 CR
-ev
+cq
 aU
 aR
 Um
@@ -31037,7 +31645,7 @@ dk
 dk
 CR
 CR
-cQ
+cv
 ql
 aS
 zx
@@ -31199,7 +31807,7 @@ dk
 dk
 dk
 CR
-Ou
+cw
 ql
 aT
 Rl
@@ -31858,7 +32466,7 @@ aE
 ah
 ah
 ah
-ar
+co
 ah
 ah
 ah

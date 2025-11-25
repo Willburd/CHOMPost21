@@ -404,6 +404,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/bunker_deep/eng)
 "aaZ" = (
@@ -416,6 +417,9 @@
 	},
 /obj/effect/floor_decal/corner/black/full{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
@@ -431,6 +435,9 @@
 	dir = 5
 	},
 /obj/machinery/media/jukebox,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "abd" = (
@@ -446,6 +453,9 @@
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	pixel_y = 3
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "abe" = (
@@ -458,6 +468,9 @@
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/bar_alc/full{
 	pixel_y = 3
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
@@ -474,6 +487,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/bunker_deep/eng)
 "abh" = (
@@ -525,6 +539,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/comm)
 "abl" = (
@@ -537,11 +552,15 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/bunker_deep/med)
 "abm" = (
 /obj/structure/grille,
 /obj/structure/window/basic/full,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/crew/bunker_deep/med)
 "abn" = (
@@ -570,6 +589,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/bunker_deep/main)
 "abq" = (
@@ -578,6 +598,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/bunker_deep/main)
 "abr" = (
@@ -1085,6 +1106,9 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 5
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "acs" = (
@@ -1095,6 +1119,9 @@
 	dir = 1
 	},
 /obj/machinery/computer/security/bunker_only,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "act" = (
@@ -1201,6 +1228,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "acB" = (
@@ -1234,6 +1264,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
@@ -1622,6 +1655,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/muriki/bathroom/bunker_buster)
 "adz" = (
@@ -1795,6 +1831,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/bathroom/bunker_buster)
 "adO" = (
