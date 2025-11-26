@@ -5,7 +5,7 @@
 // Extract artifacts
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/research/extract_artifacts
-	name = "extract artifact powers"
+	name = "Extract Artifact Powers"
 	goal_text = null
 	var/artifact_count = 0
 	var/extraction_count = 0
@@ -31,7 +31,7 @@
 // Extract slimes
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/research/extract_slime_cores
-	name = "extract slime cores"
+	name = "Extract Slime Cores"
 	goal_text = null
 	var/slime_count = 0
 	var/extraction_count = 0

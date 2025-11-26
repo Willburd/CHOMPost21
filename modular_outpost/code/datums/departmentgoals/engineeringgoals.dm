@@ -5,7 +5,7 @@
 // Export power by PTL
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/engineering/export_power
-	name = "export PTL power"
+	name = "Export PTL Power"
 	goal_text = null
 	var/wattage = 0
 

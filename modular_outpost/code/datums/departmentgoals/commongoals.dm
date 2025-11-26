@@ -5,7 +5,7 @@
 // Clean floors
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/common/clean_floors
-	name = "clean dirty floors"
+	name = "Clean Dirty Floors"
 	goal_text = null
 	var/total_floors_to_clean = 0
 	var/cleaned_floors = 0
@@ -31,7 +31,7 @@
 // Cardio
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/common/just_walk
-	name = "cardio quota"
+	name = "Cardio Quota"
 	goal_text = null
 	var/total_steps_to_take = 0
 
@@ -47,7 +47,7 @@
 // Grow plants
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/common/grow_plants
-	name = "grow crops"
+	name = "Grow Crops"
 	goal_text = null
 	var/total_crops_to_grow = 0
 

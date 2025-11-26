@@ -7,6 +7,9 @@ SUBSYSTEM_DEF(departmentgoals)
 	)
 	runlevels = RUNLEVEL_GAME
 
+	VAR_PRIVATE/min_goals = 2
+	VAR_PRIVATE/max_goals = 5
+
 	VAR_PRIVATE/list/currentrun = list()
 	VAR_PRIVATE/list/department_goals = list() // List of goal paths that exist for each dept
 	var/list/active_department_goals = list() // List of goal datums that were assigned on round start
@@ -57,15 +60,33 @@ SUBSYSTEM_DEF(departmentgoals)
 	for(var/category in department_goals)
 		active_department_goals[category] = list()
 
-		var/list/cat_goals = department_goals[category]
-		var/goal_count = rand(2,4)
-		for(var/count = 1 to goal_count)
-			if(LAZYLEN(cat_goals))
-				var/new_path = pick(cat_goals)
-				var/datum/goal/rand_goal = new new_path()
-				rand_goal.active_goal = TRUE
-				active_department_goals[category] += rand_goal
-				cat_goals -= rand_goal
+	var/list/all_goal_types = subtypesof(/datum/goal)
+	for(var/count = 1 to rand(min_goals, max_goals))
+		var/new_path = pick(all_goal_types)
+		all_goal_types -= new_path
+
+		var/datum/goal/new_goal = new new_path()
+		active_department_goals[new_goal.category] += new_goal
+
+	// Lets admins set somes stuff quickly
+	addtimer(CALLBACK(src, PROC_REF(announce_goals)), 30 SECONDS)
+
+/datum/controller/subsystem/departmentgoals/proc/announce_goals()
+	var/list/all_goals = list()
+	for(var/category in active_department_goals)
+		var/list/cat_goals = active_department_goals[category]
+		if(!cat_goals.len)
+			continue
+		all_goals += cat_goals
+
+	if(!all_goals.len)
+		command_announcement.Announce("There are no department goals for this shift.", "Central Command")
+		return
+
+	var/display_goals = ""
+	for(var/datum/goal/goal in all_goals)
+		display_goals += "[span_notice(span_bold(goal.category))]: [span_info(goal.name)], [goal.goal_text]<br>"
+	command_announcement.Announce("Department goals for this shift have been updated!<br>[display_goals]", "Central Command")
 
 /datum/controller/subsystem/departmentgoals/proc/handle_round_end()
 	SIGNAL_HANDLER
@@ -74,16 +95,22 @@ SUBSYSTEM_DEF(departmentgoals)
 	show_goal_status_to(world)
 
 /datum/controller/subsystem/departmentgoals/proc/show_goal_status_to(user)
-	to_chat(user, span_world("Department goals are:"))
+	to_chat(user, span_notice(span_world("Department goals are:")))
 
+	var/any_goals = FALSE
 	for(var/category in active_department_goals)
 		var/list/cat_goals = active_department_goals[category]
 		if(!cat_goals.len)
-			return
+			continue
+
 		to_chat(user, span_filter_system(span_bold("[category]:")))
 		for(var/datum/goal/G in cat_goals)
-			to_chat(user, span_filter_system("[G.get_completed() ? span_notice("[G.name]") : span_danger("[G.name]")]"))
-			to_chat(user, span_filter_system("[G.goal_text]"))
+			to_chat(user, span_filter_system("[G.get_completed() ? span_notice("[G.name]") : span_danger("[G.name]")]: [span_filter_system("[G.goal_text]")]"))
+			any_goals = TRUE
+
+	if(!any_goals)
+		to_chat(usr, span_info("There are no station goals."))
+
 
 /// Debugging only, should probably leave commented out as well. Adds one of each goal type to the active list
 /datum/controller/subsystem/departmentgoals/proc/debug_remove_all_goals()
@@ -91,7 +118,7 @@ SUBSYSTEM_DEF(departmentgoals)
 		var/list/active_goals_sublist = active_department_goals[category]
 		QDEL_LIST(active_goals_sublist)
 
-/datum/controller/subsystem/departmentgoals/proc/debug_add_add_goals()
+/datum/controller/subsystem/departmentgoals/proc/debug_add_all_goals()
 	for(var/subtype in subtypesof(/datum/goal))
 		var/datum/goal/goal_template = subtype
 		if(goal_template.name == /datum/goal::name)

@@ -17,7 +17,7 @@
 // Sell sheets
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/cargo/sell_sheets
-	name = "sell refined materials"
+	name = "Sell Refined Materials"
 	goal_text = null
 	var/mat_to_sell = MAT_STEEL
 	var/sheet_required = 0
@@ -51,10 +51,10 @@
 			sheet_required = rand(150,300)
 
 	var/datum/material/mat_datum = get_material_by_name(mat_to_sell)
-	goal_text = "Export a total of [mat_datum.name] [mat_to_sell] [mat_datum.sheet_plural_name]."
+	goal_text = "Export a total of [sheet_required] [mat_datum.name] [mat_datum.sheet_plural_name]."
 
 /datum/goal/cargo/sell_sheets/check_completion(has_completed)
-	. = ..(sheet_required >= sheets_sold)
+	. = ..(sheets_sold >= sheet_required)
 
 /datum/goal/cargo/sell_sheets/handle_cargo_sale(datum/source, atom/movable/sold_item, sold_successfully, datum/exported_crate/export_data, area/shuttle_subarea)
 	if(!sold_successfully)
@@ -70,7 +70,7 @@
 // Sell chemicals
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/cargo/sell_chemicals
-	name = "export chemical tanks"
+	name = "Export Chemical Tanks"
 	goal_text = null
 	var/tank_total = 0
 	var/chosen_reagent = null
@@ -119,7 +119,7 @@
 // Drill Rock
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/cargo/mine_rock
-	name = "mining productivity"
+	name = "Mining Productivity"
 	goal_text = null
 	var/rock_to_dig = 0
 
