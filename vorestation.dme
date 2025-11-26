@@ -5633,7 +5633,6 @@
 #include "modular_outpost\code\modules\mining\mine_turfs.dm"
 #include "modular_outpost\code\modules\mob\enzyme_immune.dm"
 #include "modular_outpost\code\modules\mob\hear_say.dm"
-#include "modular_outpost\code\modules\mob\mob_defines.dm"
 #include "modular_outpost\code\modules\mob\transform_procs.dm"
 #include "modular_outpost\code\modules\mob\dead\observer.dm"
 #include "modular_outpost\code\modules\mob\language\animal.dm"
