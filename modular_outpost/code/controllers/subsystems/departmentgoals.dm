@@ -107,7 +107,7 @@ SUBSYSTEM_DEF(departmentgoals)
 
 		to_chat(user, span_filter_system(span_bold("[category]:")))
 		for(var/datum/goal/G in cat_goals)
-			to_chat(user, span_filter_system("[G.get_completed() ? span_notice("[G.name]") : span_danger("[G.name]")]: [span_filter_system("[G.goal_text]")]"))
+			to_chat(user, span_filter_system("[G.get_completed() ? span_notice("[G.name]") : span_danger("[G.name]")]: [span_filter_system("[G.goal_text]")] [G.progress_string()]"))
 			any_goals = TRUE
 
 	if(!any_goals)

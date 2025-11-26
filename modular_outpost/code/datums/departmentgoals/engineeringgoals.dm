@@ -7,12 +7,12 @@
 /datum/goal/engineering/export_power
 	name = "Export PTL Power"
 	goal_text = null
-	var/wattage = 0
 
 /datum/goal/engineering/export_power/New()
 	. = ..()
-	wattage = rand(25,100)
-	goal_text = "Export [wattage]GW of power via the power transmission laser."
+	goal_count = rand(25,100)
+	goal_text = "Export [goal_count]GW of power via the power transmission laser."
 
 /datum/goal/engineering/export_power/check_completion(has_completed)
-	. = ..(SSsupply.watts_sold >= (wattage GIGAWATTS))
+	current_count = SSsupply.watts_sold
+	. = ..(current_count >= (goal_count GIGAWATTS))

@@ -72,13 +72,11 @@
 /datum/goal/cargo/sell_chemicals
 	name = "Export Chemical Tanks"
 	goal_text = null
-	var/tank_total = 0
 	var/chosen_reagent = null
-	var/volume_sold = 0
 
 /datum/goal/cargo/sell_chemicals/New()
 	. = ..()
-	tank_total = rand(10,15)
+	goal_count = rand(10,15)
 	chosen_reagent = pick(list(
 							REAGENT_ID_BICARIDINE,
 							REAGENT_ID_ANTITOXIN,
@@ -103,17 +101,17 @@
 							REAGENT_ID_PACID
 							))
 	var/datum/reagent/chem = SSchemistry.chemical_reagents[chosen_reagent]
-	goal_text = "Export [tank_total * CARGOTANKER_VOLUME]u of [chem.name]."
+	goal_text = "Export [goal_count * CARGOTANKER_VOLUME]u of [chem.name]."
 
 /datum/goal/cargo/sell_chemicals/check_completion(has_completed)
-	. = ..(volume_sold >= tank_total * CARGOTANKER_VOLUME)
+	. = ..(current_count >= goal_count * CARGOTANKER_VOLUME)
 
 /datum/goal/cargo/sell_chemicals/handle_cargo_sale(datum/source, atom/movable/sold_item, sold_successfully, datum/exported_crate/export_data, area/shuttle_subarea)
 	if(!sold_successfully)
 		return
 	if(!istype(sold_item,/obj/vehicle/train/trolley_tank))
 		return
-	volume_sold += sold_item.reagents.get_reagent_amount(chosen_reagent)
+	current_count += sold_item.reagents.get_reagent_amount(chosen_reagent)
 
 
 // Drill Rock
@@ -121,11 +119,11 @@
 /datum/goal/cargo/mine_rock
 	name = "Mining Productivity"
 	goal_text = null
-	var/rock_to_dig = 0
 
 /datum/goal/cargo/mine_rock/New()
-	rock_to_dig = rand(1500,2500)
-	goal_text = "Drill through at least [rock_to_dig] rock walls, keeping our miners in shape!"
+	goal_count = rand(1500,2500)
+	goal_text = "Drill through at least [goal_count] rock walls, keeping our miners in shape!"
 
 /datum/goal/cargo/mine_rock/check_completion(has_completed)
-	. = ..(GLOB.rocks_drilled_roundstat >= rock_to_dig)
+	current_count = GLOB.rocks_drilled_roundstat
+	. = ..(current_count >= goal_count)
