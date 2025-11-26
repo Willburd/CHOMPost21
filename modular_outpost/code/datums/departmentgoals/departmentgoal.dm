@@ -2,7 +2,6 @@
 	var/name = "goal"
 	var/category = null
 	var/active_goal = FALSE
-	var/completed = FALSE
 	var/goal_text = "Do nothing! Congratulations."
 	VAR_PRIVATE/completed = FALSE
 
