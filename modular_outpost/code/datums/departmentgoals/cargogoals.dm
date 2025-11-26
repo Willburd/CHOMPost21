@@ -59,10 +59,9 @@
 /datum/goal/cargo/sell_sheets/handle_cargo_sale(datum/source, atom/movable/sold_item, sold_successfully, datum/exported_crate/export_data, area/shuttle_subarea)
 	if(!sold_successfully)
 		return
-	if(!istype(MA,/obj/structure/closet/crate))
+	if(!istype(sold_item,/obj/structure/closet/crate))
 		return
-	var/obj/structure/closet/crate/CR = MA
-	for(var/obj/item/stack/material/sheet_stack in MA)
+	for(var/obj/item/stack/material/sheet_stack in sold_item)
 		if(sheet_stack.name != mat_to_sell)
 			continue
 		sheets_sold += sheet_stack.amount
@@ -112,6 +111,6 @@
 /datum/goal/cargo/sell_chemicals/handle_cargo_sale(datum/source, atom/movable/sold_item, sold_successfully, datum/exported_crate/export_data, area/shuttle_subarea)
 	if(!sold_successfully)
 		return
-	if(!istype(MA,/obj/vehicle/train/trolley_tank))
+	if(!istype(sold_item,/obj/vehicle/train/trolley_tank))
 		return
-	volume_sold += MA.reagents.get_reagent_amount(chosen_reagent)
+	volume_sold += sold_item.reagents.get_reagent_amount(chosen_reagent)

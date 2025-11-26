@@ -4,6 +4,7 @@
 
 // Extract artifacts
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/*
 /datum/goal/research/extract_artifacts
 	name = "extract artifact powers"
 	goal_text = null
@@ -15,3 +16,4 @@
 
 /datum/goal/research/extract_artifacts/check_completion(has_completed)
 	. = ..(FALSE)
+*/
