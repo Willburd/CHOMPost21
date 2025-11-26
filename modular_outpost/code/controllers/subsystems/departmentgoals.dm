@@ -58,12 +58,12 @@ SUBSYSTEM_DEF(departmentgoals)
 		var/list/cat_goals = department_goals[category]
 		var/goal_count = rand(2,4)
 		for(var/count = 1 to goal_count)
-			var/datum/goal/rand_goal
 			if(LAZYLEN(cat_goals))
-				rand_goal = pick(cat_goals)
+				var/new_path = pick(cat_goals)
+				var/datum/goal/rand_goal = new new_path()
 				rand_goal.active_goal = TRUE
-				cat_goals -= rand_goal
 				active_department_goals[category] += rand_goal
+				cat_goals -= rand_goal
 
 /datum/controller/subsystem/departmentgoals/proc/handle_round_end()
 	SIGNAL_HANDLER
