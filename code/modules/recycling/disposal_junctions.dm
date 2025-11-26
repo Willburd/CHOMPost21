@@ -145,10 +145,7 @@
 		sort_scan = TRUE
 
 /obj/structure/disposalpipe/sortjunction/transfer(obj/structure/disposalholder/H)
-	// outpost 21 edit begin - bodies are internally tagged for a special sorter!
-	var/detectedtag = check_corpse_sorter(H)
-	var/nextdir = nextdir(H.dir, detectedtag)
-	// outpost 21 edit end
+	var/nextdir = nextdir(H.dir, H.destinationTag)
 	H.set_dir(nextdir)
 	var/turf/T = H.nextloc()
 	var/obj/structure/disposalpipe/P = H.findpipe(T)
@@ -198,3 +195,54 @@
 
 /obj/structure/disposalpipe/sortjunction/untagged/flipped
 	icon_state = "pipe-j2s"
+
+//junction that filters bodies and IDs
+#define CORPSE_SORT_TAG "corpse"
+
+/obj/structure/disposalpipe/sortjunction/bodies
+	name = "body recovery junction"
+	desc = "An underfloor disposal pipe which filters out detectable bodies, living or soon to be dead. Also diverts anything containing an ID."
+	subtype = DISPOSAL_SORT_BODIES
+
+/obj/structure/disposalpipe/sortjunction/bodies/transfer(obj/structure/disposalholder/H)
+	if(H.destinationTag == "")
+		// If the package isn't mail and we're a body sorter, check if it has a body/ID, and divert it if so.
+		H.destinationTag = check_for_corpse_or_id(H)
+	. = ..()
+
+/obj/structure/disposalpipe/sortjunction/bodies/divert_check(var/checkTag)
+	return checkTag == CORPSE_SORT_TAG
+
+/obj/structure/disposalpipe/sortjunction/bodies/flipped
+	icon_state = "pipe-j2s"
+
+/obj/structure/disposalpipe/sortjunction/bodies/proc/check_for_corpse_or_id(var/obj/structure/disposalholder/H)
+	for(var/mob/living/L in H)
+		if(iscarbon(L)) // only living carbons count not silicons, drones can control their own mailing destination...
+			return CORPSE_SORT_TAG
+
+	// Check for microholders, you can't skip the system this way either!
+	for(var/obj/item/holder/hl in H)
+		if(isliving(hl.held_mob))
+			return CORPSE_SORT_TAG
+
+	// find an ID in items
+	for(var/obj/item/card/id in H)
+		if(!istype(id,/obj/item/card/id/guest))
+			return CORPSE_SORT_TAG
+	for(var/obj/item/pda/P in H)
+		if(!istype(P.id,/obj/item/card/id/guest))
+			return CORPSE_SORT_TAG
+
+	// Check in bags, only one level deep. Need to check for pda again too
+	for(var/obj/item/storage in H)
+		for(var/obj/item/pda/P in storage.contents)
+			if(!istype(P.id,/obj/item/card/id/guest))
+				return CORPSE_SORT_TAG
+		for(var/obj/item/card/id in storage.contents)
+			if(!istype(id,/obj/item/card/id/guest))
+				return CORPSE_SORT_TAG
+
+	return H.destinationTag
+
+#undef CORPSE_SORT_TAG

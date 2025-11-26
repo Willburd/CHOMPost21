@@ -1,1 +1,0 @@
-#define DISPOSAL_SORT_BODIES 3
