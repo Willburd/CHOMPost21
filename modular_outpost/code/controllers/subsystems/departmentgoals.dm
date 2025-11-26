@@ -78,9 +78,8 @@ SUBSYSTEM_DEF(departmentgoals)
 
 	for(var/category in active_department_goals)
 		var/list/cat_goals = active_department_goals[category]
-		if(!LAZYLEN(cat_goals))
+		if(!cat_goals.len)
 			return
-
 		to_chat(user, span_filter_system(span_bold("[category]:")))
 		for(var/datum/goal/G in cat_goals)
 			to_chat(user, span_filter_system("[G.get_completed() ? span_notice("[G.name]") : span_danger("[G.name]")]"))
@@ -89,10 +88,8 @@ SUBSYSTEM_DEF(departmentgoals)
 /// Debugging only, should probably leave commented out as well. Adds one of each goal type to the active list
 /datum/controller/subsystem/departmentgoals/proc/debug_remove_all_goals()
 	for(var/category in active_department_goals)
-		var/list/active_goals_sublist = active_department_goals[goal_template.category]
-		for(var/datum/goal/goal in active_goals_sublist)
-			qdel(goal)
-		active_goals_sublist.Cut()
+		var/list/active_goals_sublist = active_department_goals[category]
+		QDEL_LIST(active_goals_sublist)
 
 /datum/controller/subsystem/departmentgoals/proc/debug_add_add_goals()
 	for(var/subtype in subtypesof(/datum/goal))
