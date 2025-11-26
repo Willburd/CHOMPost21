@@ -1485,7 +1485,7 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
 "acd" = (
 /obj/machinery/door/airlock/glass_external{
@@ -8325,7 +8325,7 @@
 /area/medical/stairwell)
 "any" = (
 /obj/effect/shuttle_landmark/premade/beamtransit/base,
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
 "anz" = (
 /obj/structure/disposalpipe/segment,
@@ -15639,7 +15639,7 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
 "bBk" = (
 /obj/structure/grille,
@@ -21198,7 +21198,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "dmy" = (
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
 "dmN" = (
 /obj/structure/sign/scenery/map/right_outpost21{
@@ -38094,7 +38094,7 @@
 /area/security/warden)
 "iyT" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/muriki,
 /area/shuttle/beamtransit)
 "iza" = (
 /obj/structure/cable/green{
@@ -51333,7 +51333,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/muriki,
 /area/shuttle/beamtransit)
 "mug" = (
 /turf/simulated/open,
@@ -52900,7 +52900,7 @@
 /obj/machinery/computer/shuttle_control/multi{
 	shuttle_tag = "Engineering Ferry"
 	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
 "mUF" = (
 /obj/structure/table/rack{
@@ -59989,7 +59989,7 @@
 /obj/structure/sign/christmas/wreath{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/voidcraft/light,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
 "pfd" = (
 /obj/machinery/hologram/holopad,
@@ -71208,7 +71208,7 @@
 	dir = 8;
 	c_tag = "ENG - Short-range Shuttle"
 	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
 "sIr" = (
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -75974,7 +75974,7 @@
 /area/medical/medbay3)
 "udM" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/muriki,
 /area/shuttle/beamtransit)
 "udO" = (
 /obj/effect/floor_decal/corner/red{
@@ -82773,7 +82773,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
-/turf/simulated/shuttle/floor/voidcraft/dark,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/muriki,
 /area/shuttle/beamtransit)
 "wbf" = (
 /obj/structure/disposalpipe/broken{
