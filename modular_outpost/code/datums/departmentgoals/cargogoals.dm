@@ -114,3 +114,18 @@
 	if(!istype(sold_item,/obj/vehicle/train/trolley_tank))
 		return
 	volume_sold += sold_item.reagents.get_reagent_amount(chosen_reagent)
+
+
+// Drill Rock
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/goal/cargo/mine_rock
+	name = "mining productivity"
+	goal_text = null
+	var/rock_to_dig = 0
+
+/datum/goal/cargo/mine_rock/New()
+	rock_to_dig = rand(1500,2500)
+	goal_text = "Drill through at least [rock_to_dig] rock walls, keeping our miners in shape!"
+
+/datum/goal/cargo/mine_rock/check_completion(has_completed)
+	. = ..(GLOB.rocks_drilled_roundstat >= rock_to_dig)
