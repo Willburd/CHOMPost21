@@ -28,9 +28,30 @@
 	extraction_count++
 
 
-// Breed slimes
+// Extract slimes
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/goal/research/extract_slime_cores
+	name = "extract slime cores"
+	goal_text = null
+	var/slime_count = 0
+	var/extraction_count = 0
 
+/datum/goal/research/extract_slime_cores/New()
+	. = ..()
+	slime_count = rand(50,100)
+	goal_text = "Extract the cores of [slime_count] slimes, regardless of type."
+	RegisterSignal(SSdcs,COMSIG_GLOB_HARVEST_SLIME_CORE,PROC_REF(handle_slime_harvest))
+
+/datum/goal/research/extract_slime_cores/Destroy(force)
+	UnregisterSignal(SSdcs,COMSIG_GLOB_HARVEST_SLIME_CORE)
+	. = ..()
+
+/datum/goal/research/extract_slime_cores/check_completion(has_completed)
+	. = ..(extraction_count >= slime_count)
+
+/datum/goal/research/extract_slime_cores/proc/handle_slime_harvest(atom/source)
+	SIGNAL_HANDLER
+	extraction_count++
 
 // Explode TTVs
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
