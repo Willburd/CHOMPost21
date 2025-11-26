@@ -35,11 +35,13 @@ SUBSYSTEM_DEF(departmentgoals)
 	return ..()
 
 /datum/controller/subsystem/departmentgoals/fire()
+	// If no queue exists, make one and start it
 	if(!currentrun.len)
 		for(var/category in active_department_goals)
 			var/list/dept_goals = active_department_goals[category]
 			for(var/datum/goal/dept_goal in dept_goals)
 				currentrun += dept_goal
+	// Solve the current queue until empty, over multiple ticks if needed
 	while(currentrun.len)
 		var/datum/goal/dept_goal = currentrun[1]
 		dept_goal.check_completion()
@@ -84,8 +86,21 @@ SUBSYSTEM_DEF(departmentgoals)
 			to_chat(user, span_filter_system("[G.get_completed() ? span_notice("[G.name]") : span_danger("[G.name]")]"))
 			to_chat(user, span_filter_system("[G.goal_text]"))
 
+/// Debugging only, should probably leave commented out as well. Adds one of each goal type to the active list
+/datum/controller/subsystem/departmentgoals/proc/debug_remove_all_goals()
+	for(var/category in active_department_goals)
+		var/list/active_goals_sublist = active_department_goals[goal_template.category]
+		for(var/datum/goal/goal in active_goals_sublist)
+			qdel(goal)
+		active_goals_sublist.Cut()
 
-
+/datum/controller/subsystem/departmentgoals/proc/debug_add_add_goals()
+	for(var/subtype in subtypesof(/datum/goal))
+		var/datum/goal/goal_template = subtype
+		if(goal_template.name == /datum/goal::name)
+			continue
+		var/list/active_goals_sublist = active_department_goals[goal_template.category]
+		active_goals_sublist += new goal_template()
 
 
 // Move these helpers when upported or make a tgui instead
