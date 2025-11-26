@@ -54,13 +54,27 @@
 	extraction_count++
 
 
-// Research techweb nodes
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-// Explode TTVs
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 // Build Mechs
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/goal/research/build_mechs
+	name = "Extract Slime Cores"
+	goal_text = null
+	var/mech_count = 0
+	var/build_mech_goal_count = 0
+
+/datum/goal/research/build_mechs/New()
+	. = ..()
+	build_mech_goal_count = rand(10,20)
+	goal_text = "Flex the RnD budget and produce [build_mech_goal_count] mechs of any type."
+	RegisterSignal(SSdcs,COMSIG_GLOB_MECH_CONSTRUCTED,PROC_REF(handle_mech_construction))
+
+/datum/goal/research/build_mechs/Destroy(force)
+	UnregisterSignal(SSdcs,COMSIG_GLOB_MECH_CONSTRUCTED)
+	. = ..()
+
+/datum/goal/research/build_mechs/check_completion(has_completed)
+	. = ..(mech_count >= build_mech_goal_count)
+
+/datum/goal/research/build_mechs/proc/handle_mech_construction(atom/source)
+	SIGNAL_HANDLER
+	mech_count++

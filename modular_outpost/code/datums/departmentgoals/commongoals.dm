@@ -58,3 +58,45 @@
 
 /datum/goal/common/grow_plants/check_completion(has_completed)
 	. = ..(GLOB.seed_planted_shift_roundstat >= total_crops_to_grow)
+
+
+// Prey eaten
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/goal/common/prey_eaten
+	name = "Crew \"Morale\" Booster"
+	goal_text = null
+	var/total_prey_to_eat = 0
+
+/datum/goal/common/prey_eaten/New()
+	. = ..()
+	total_prey_to_eat = rand(10,30)
+	goal_text = "Crew should engage in more \"Recreational\" activities, with and even inside each other! Have at least [total_prey_to_eat] \"breaks\" together and find out just how close you can be as a crew!"
+
+/datum/goal/common/prey_eaten/check_completion(has_completed)
+	. = ..(GLOB.prey_eaten_roundstat >= total_prey_to_eat)
+
+
+// Food cooked
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/goal/common/food_prepared
+	name = "Cook Food"
+	goal_text = null
+	var/total_meals_to_make = 0
+	var/meals_made = 0
+
+/datum/goal/common/food_prepared/New()
+	. = ..()
+	total_meals_to_make = rand(20,50)
+	goal_text = "Get those friers ready, and cook up at least [total_meals_to_make] meals of any type for the crew!"
+	RegisterSignal(SSdcs,COMSIG_GLOB_FOOD_PREPARED,PROC_REF(handle_food_prepared))
+
+/datum/goal/common/food_prepared/Destroy(force)
+	UnregisterSignal(SSdcs,COMSIG_GLOB_FOOD_PREPARED)
+	. = ..()
+
+/datum/goal/common/food_prepared/check_completion(has_completed)
+	. = ..(meals_made >= total_meals_to_make)
+
+/datum/goal/common/clean_floors/proc/handle_food_prepared(/datum/recipe/source, obj/container, list/results)
+	SIGNAL_HANDLER
+	meals_made++
