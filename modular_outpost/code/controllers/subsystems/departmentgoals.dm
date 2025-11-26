@@ -5,7 +5,7 @@ SUBSYSTEM_DEF(departmentgoals)
 	dependencies = list(
 		/datum/controller/subsystem/mobs
 	)
-	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
+	runlevels = RUNLEVEL_GAME
 
 	VAR_PRIVATE/list/currentrun = null
 	VAR_PRIVATE/list/department_goals = list() // List of goal paths that exist for each dept
@@ -21,10 +21,14 @@ SUBSYSTEM_DEF(departmentgoals)
 			if(goal_template.category == category)
 				department_goals[category] += goal_template
 
-	RegisterSignal(COMSIG_GLOB_ROUND_START, PROC_REF(handle_round_start))
-	RegisterSignal(COMSIG_GLOB_ROUND_END, PROC_REF(handle_round_end))
-
+	RegisterSignal(SSdcs, COMSIG_GLOB_ROUND_START, PROC_REF(handle_round_start))
+	RegisterSignal(SSdcs, COMSIG_GLOB_ROUND_END, PROC_REF(handle_round_end))
 	return SS_INIT_SUCCESS
+
+/datum/controller/subsystem/departmentgoals/Shutdown()
+	UnregisterSignal(SSdcs, COMSIG_GLOB_ROUND_START)
+	UnregisterSignal(SSdcs, COMSIG_GLOB_ROUND_END)
+	. = ..()
 
 /datum/controller/subsystem/departmentgoals/stat_entry(msg)
 	msg = "Active Goals: [active_department_goals.len]"
@@ -42,7 +46,6 @@ SUBSYSTEM_DEF(departmentgoals)
 		currentrun -= dept_goal
 		if(MC_TICK_CHECK)
 			return
-
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 // Signals for roundstart announcements and round end praise
@@ -66,15 +69,62 @@ SUBSYSTEM_DEF(departmentgoals)
 	SIGNAL_HANDLER
 	if(!active_department_goals.len)
 		return
-	to_chat(world, span_world("Department goals!"))
+	show_goal_status_to(world)
+
+/datum/controller/subsystem/departmentgoals/proc/show_goal_status_to(user)
+	to_chat(user, span_world("Department goals are:"))
 
 	for(var/category in active_department_goals)
 		var/list/cat_goals = active_department_goals[category]
 		if(!LAZYLEN(cat_goals))
 			return
 
-		to_chat(world, span_filter_system(span_bold("[category]:")))
+		to_chat(user, span_filter_system(span_bold("[category]:")))
 		for(var/datum/goal/G in cat_goals)
-			var/success = G.check_completion()
-			to_chat(world, span_filter_system("[success ? span_notice("[G.name]") : span_warning("[G.name]")]"))
-			to_chat(world, span_filter_system("[success ? G.goal_text : G.fail_text]"))
+			to_chat(user, span_filter_system("[G.get_completed() ? span_notice("[G.name]") : span_danger("[G.name]")]"))
+			to_chat(user, span_filter_system("[G.goal_text]"))
+
+// Move this helper when upported or make a tgui instead
+/mob/verb/check_round_goals()
+	set name = "Check Round Goals"
+	set desc = "View currently active round goals, and if they have been completed."
+	set category = "IC.Notes"
+
+	SSdepartmentgoals.show_goal_status_to(usr)
+
+/datum/admins/proc/add_department_goal()
+	set category = "Debug.Events"
+	set name = "Add Department Goal"
+	set desc = "Adds a goal for the station to reach."
+
+	if(!check_rights(R_EVENT))
+		return
+	var/choice = tgui_input_list(usr,"Choose goal to add:","New Goal", subtypesof(/datum/goal))
+	if(!choice)
+		return
+
+	var/datum/goal/template = choice
+	var/list/dept_goals = active_department_goals[template.category]
+	dept_goals += new template()
+
+/datum/admins/proc/remove_department_goal()
+	set category = "Debug.Events"
+	set name = "Remote Department Goal"
+	set desc = "Remove a goal from the station's current department goals."
+
+	if(!check_rights(R_EVENT))
+		return
+
+	var/list/all_goals = list()
+	for(var/category in active_department_goals)
+		all_goals += active_department_goals[category]
+	if(!all_goals.len)
+		to_chat(usr, span_warning("There are no station goals."))
+		return
+
+	var/choice = tgui_input_list(usr,"Choose goal to remove:","Remove Goal", all_goals)
+	if(!choice)
+		return
+
+	active_department_goals -= choice
+	qdel(choice)

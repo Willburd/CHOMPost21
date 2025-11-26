@@ -1,31 +1,18 @@
 /datum/goal
 	var/name = "goal"
-	var/goal_text = "Do nothing! Congratulations."
-	var/fail_text = "How did you fail to do nothing!?"
-	var/active_goal = FALSE
 	var/category = null
+	var/active_goal = FALSE
 	var/completed = FALSE
+	var/goal_text = "Do nothing! Congratulations."
+	VAR_PRIVATE/completed = FALSE
 
-/datum/goal/proc/check_completion(has_completed)
+/// Handles midround announcement, the override should pass TRUE to the parent call if the goal completes during the round!
+/datum/goal/proc/check_completion(has_completed = TRUE)
 	SHOULD_CALL_PARENT(TRUE)
-	if(has_completed && !completed) // Midround announcement
+	if(has_completed && !completed)
 		command_announcement.Announce(span_boldannounce("The [category] \"[name]\" has been completed, congratulations!"), "Central Command")
+		completed = TRUE
 	return completed
 
-/datum/goal/common
-	category = GOAL_GENERAL
-
-/datum/goal/medical
-	category = GOAL_MEDICAL
-
-/datum/goal/security
-	category = GOAL_SECURITY
-
-/datum/goal/engineering
-	category = GOAL_ENGINEERING
-
-/datum/goal/cargo
-	category = GOAL_CARGO
-
-/datum/goal/research
-	category = GOAL_RESEARCH
+/datum/goal/proc/get_completed() // Faster, does not recalculate
+	return completed
