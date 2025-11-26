@@ -60,7 +60,13 @@ SUBSYSTEM_DEF(departmentgoals)
 	for(var/category in department_goals)
 		active_department_goals[category] = list()
 
-	var/list/all_goal_types = subtypesof(/datum/goal)
+	// Get some random goals, respects the enabled flag too, the admin set ones don't care!
+	var/list/all_goal_types = list()
+	for(var/datum/goal/checked_goal as anything in subtypesof(/datum/goal))
+		if(checked_goal.name == /datum/goal::name || !checked_goal.enabled)
+			continue
+		all_goal_types += checked_goal
+
 	for(var/count = 1 to rand(min_goals, max_goals))
 		var/new_path = pick(all_goal_types)
 		all_goal_types -= new_path
@@ -82,11 +88,7 @@ SUBSYSTEM_DEF(departmentgoals)
 	if(!all_goals.len)
 		command_announcement.Announce("There are no department goals for this shift.", "Central Command")
 		return
-
-	var/display_goals = ""
-	for(var/datum/goal/goal in all_goals)
-		display_goals += "[span_notice(span_bold(goal.category))]: [span_info(goal.name)], [goal.goal_text]<br>"
-	command_announcement.Announce("Department goals for this shift have been updated!<br>[display_goals]", "Central Command")
+	command_announcement.Announce("Department goals have been updated for this shift. (Check your IC tab's \"Check Round Goals\" for details!)", "Central Command")
 
 /datum/controller/subsystem/departmentgoals/proc/handle_round_end()
 	SIGNAL_HANDLER
@@ -109,7 +111,7 @@ SUBSYSTEM_DEF(departmentgoals)
 			any_goals = TRUE
 
 	if(!any_goals)
-		to_chat(usr, span_info("There are no station goals."))
+		to_chat(user, span_info("There are no station goals."))
 
 
 /// Debugging only, should probably leave commented out as well. Adds one of each goal type to the active list

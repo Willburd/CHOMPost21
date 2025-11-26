@@ -2,6 +2,7 @@
 	var/name = "goal"
 	var/category = null
 	var/goal_text = "Do nothing! Congratulations."
+	var/enabled = TRUE // Allows easy disabling downstream
 	VAR_PRIVATE/completed = FALSE
 
 /// Handles midround announcement, the override should pass TRUE to the parent call if the goal completes during the round!

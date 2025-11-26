@@ -78,7 +78,7 @@
 
 /datum/goal/cargo/sell_chemicals/New()
 	. = ..()
-	tank_total = rand(15,25)
+	tank_total = rand(10,20)
 	chosen_reagent = pick(list(
 							REAGENT_ID_BICARIDINE,
 							REAGENT_ID_ANTITOXIN,
