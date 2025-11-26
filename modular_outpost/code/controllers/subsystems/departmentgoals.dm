@@ -7,7 +7,7 @@ SUBSYSTEM_DEF(departmentgoals)
 	)
 	runlevels = RUNLEVEL_GAME
 
-	VAR_PRIVATE/list/currentrun = null
+	VAR_PRIVATE/list/currentrun = list()
 	VAR_PRIVATE/list/department_goals = list() // List of goal paths that exist for each dept
 	var/list/active_department_goals = list() // List of goal datums that were assigned on round start
 
