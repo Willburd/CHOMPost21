@@ -5461,6 +5461,7 @@
 #include "modular_outpost\code\datums\departmentgoals\departmentgoal.dm"
 #include "modular_outpost\code\datums\departmentgoals\engineeringgoals.dm"
 #include "modular_outpost\code\datums\departmentgoals\medicalgoals.dm"
+#include "modular_outpost\code\datums\departmentgoals\outpostunique.dm"
 #include "modular_outpost\code\datums\departmentgoals\researchgoals.dm"
 #include "modular_outpost\code\datums\departmentgoals\securitygoals.dm"
 #include "modular_outpost\code\datums\elements\headbonker.dm"

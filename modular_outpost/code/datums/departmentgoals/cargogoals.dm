@@ -18,10 +18,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/cargo/sell_sheets
 	name = "Sell Refined Materials"
-	goal_text = null
 	var/mat_to_sell = MAT_STEEL
-	var/sheet_required = 0
-	var/sheets_sold = 0
 
 /datum/goal/cargo/sell_sheets/New()
 	. = ..()
@@ -46,15 +43,12 @@
 						))
 	switch(mat_to_sell)
 		if(MAT_SUPERMATTER, MAT_VALHOLLIDE, MAT_METALHYDROGEN, MAT_MORPHIUM)
-			sheet_required = rand(25,50)
+			goal_count = rand(25,50)
 		else
-			sheet_required = rand(150,300)
+			goal_count = rand(150,300)
 
 	var/datum/material/mat_datum = get_material_by_name(mat_to_sell)
-	goal_text = "Export a total of [sheet_required] [mat_datum.name] [mat_datum.sheet_plural_name]."
-
-/datum/goal/cargo/sell_sheets/check_completion(has_completed)
-	. = ..(sheets_sold >= sheet_required)
+	goal_text = "Export a total of [goal_count] [mat_datum.name] [mat_datum.sheet_plural_name]."
 
 /datum/goal/cargo/sell_sheets/handle_cargo_sale(datum/source, atom/movable/sold_item, sold_successfully, datum/exported_crate/export_data, area/shuttle_subarea)
 	if(!sold_successfully)
@@ -64,19 +58,18 @@
 	for(var/obj/item/stack/material/sheet_stack in sold_item)
 		if(sheet_stack.name != mat_to_sell)
 			continue
-		sheets_sold += sheet_stack.amount
+		current_count += sheet_stack.amount
 
 
 // Sell chemicals
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/cargo/sell_chemicals
 	name = "Export Chemical Tanks"
-	goal_text = null
 	var/chosen_reagent = null
 
 /datum/goal/cargo/sell_chemicals/New()
 	. = ..()
-	goal_count = rand(10,15)
+	goal_count = rand(10,15) * CARGOTANKER_VOLUME
 	chosen_reagent = pick(list(
 							REAGENT_ID_BICARIDINE,
 							REAGENT_ID_ANTITOXIN,
@@ -101,10 +94,7 @@
 							REAGENT_ID_PACID
 							))
 	var/datum/reagent/chem = SSchemistry.chemical_reagents[chosen_reagent]
-	goal_text = "Export [goal_count * CARGOTANKER_VOLUME]u of [chem.name]."
-
-/datum/goal/cargo/sell_chemicals/check_completion(has_completed)
-	. = ..(current_count >= goal_count * CARGOTANKER_VOLUME)
+	goal_text = "Export [goal_count]u of [chem.name]."
 
 /datum/goal/cargo/sell_chemicals/handle_cargo_sale(datum/source, atom/movable/sold_item, sold_successfully, datum/exported_crate/export_data, area/shuttle_subarea)
 	if(!sold_successfully)
@@ -118,12 +108,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/cargo/mine_rock
 	name = "Mining Productivity"
-	goal_text = null
 
 /datum/goal/cargo/mine_rock/New()
 	goal_count = rand(1500,2500)
 	goal_text = "Drill through at least [goal_count] rock walls, keeping our miners in shape!"
 
-/datum/goal/cargo/mine_rock/check_completion(has_completed)
+/datum/goal/cargo/mine_rock/check_completion()
 	current_count = GLOB.rocks_drilled_roundstat
-	. = ..(current_count >= goal_count)
+	. = ..()

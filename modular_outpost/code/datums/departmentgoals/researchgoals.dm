@@ -6,7 +6,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/research/extract_artifacts
 	name = "Extract Artifact Powers"
-	goal_text = null
 
 /datum/goal/research/extract_artifacts/New()
 	. = ..()
@@ -18,9 +17,6 @@
 	UnregisterSignal(SSdcs,COMSIG_GLOB_HARVEST_ARTIFACT)
 	. = ..()
 
-/datum/goal/research/extract_artifacts/check_completion(has_completed)
-	. = ..(current_count >= goal_count)
-
 /datum/goal/research/extract_artifacts/proc/handle_artifact_harvest(atom/source, obj/item/anobattery/inserted_battery, mob/user)
 	SIGNAL_HANDLER
 	current_count++
@@ -30,7 +26,6 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/research/extract_slime_cores
 	name = "Extract Slime Cores"
-	goal_text = null
 
 /datum/goal/research/extract_slime_cores/New()
 	. = ..()
@@ -42,9 +37,6 @@
 	UnregisterSignal(SSdcs,COMSIG_GLOB_HARVEST_SLIME_CORE)
 	. = ..()
 
-/datum/goal/research/extract_slime_cores/check_completion(has_completed)
-	. = ..(current_count >= goal_count)
-
 /datum/goal/research/extract_slime_cores/proc/handle_slime_harvest(atom/source)
 	SIGNAL_HANDLER
 	current_count++
@@ -53,8 +45,7 @@
 // Build Mechs
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/research/build_mechs
-	name = "Extract Slime Cores"
-	goal_text = null
+	name = "Construct Mechs"
 
 /datum/goal/research/build_mechs/New()
 	. = ..()
@@ -65,9 +56,6 @@
 /datum/goal/research/build_mechs/Destroy(force)
 	UnregisterSignal(SSdcs,COMSIG_GLOB_MECH_CONSTRUCTED)
 	. = ..()
-
-/datum/goal/research/build_mechs/check_completion(has_completed)
-	. = ..(current_count >= goal_count)
 
 /datum/goal/research/build_mechs/proc/handle_mech_construction(atom/source)
 	SIGNAL_HANDLER

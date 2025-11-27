@@ -86,9 +86,9 @@ SUBSYSTEM_DEF(departmentgoals)
 		all_goals += cat_goals
 
 	if(!all_goals.len)
-		command_announcement.Announce("There are no department goals for this shift.", "Central Command")
+		command_announcement.Announce("There are no department goals for this shift.", "Station Resource Department")
 		return
-	command_announcement.Announce("Department goals have been updated for this shift. (Check your IC tab's \"Check Round Goals\" for details!)", "Central Command")
+	command_announcement.Announce("Department goals have been updated for this shift. (Check your IC tab's \"Check Round Goals\" for details!)", "Station Resource Department")
 
 /datum/controller/subsystem/departmentgoals/proc/handle_round_end()
 	SIGNAL_HANDLER
@@ -154,7 +154,7 @@ SUBSYSTEM_DEF(departmentgoals)
 
 /datum/admins/proc/remove_department_goal()
 	set category = "Debug.Events"
-	set name = "Remote Department Goal"
+	set name = "Remove Department Goal"
 	set desc = "Remove a goal from the station's current department goals."
 
 	if(!check_rights(R_EVENT))
@@ -167,9 +167,9 @@ SUBSYSTEM_DEF(departmentgoals)
 		to_chat(usr, span_warning("There are no station goals."))
 		return
 
-	var/choice = tgui_input_list(usr,"Choose goal to remove:","Remove Goal", all_goals)
+	var/datum/goal/choice = tgui_input_list(usr,"Choose goal to remove:","Remove Goal", all_goals)
 	if(!choice)
 		return
 
-	SSdepartmentgoals.active_department_goals -= choice
+	SSdepartmentgoals.active_department_goals[choice.category] -= choice
 	qdel(choice)

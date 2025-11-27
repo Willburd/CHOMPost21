@@ -18,3 +18,5 @@
 #define COMSIG_GLOB_MECH_CONSTRUCTED "!mecha_constructed"
 // when trashpiles are successfully searched : (mob/living/user, list/searched_by)
 #define COMSIG_GLOB_TRASHPILE_SEARCHED "!trash_pile_searched"
+// base /obj/item/autopsy_scanner/do_surgery() : (mob/user, mob/target)
+#define COMSIG_GLOB_AUTOPSY_PERFORMED "!performed_autopsy"
