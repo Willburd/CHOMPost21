@@ -7,8 +7,8 @@ SUBSYSTEM_DEF(departmentgoals)
 	)
 	runlevels = RUNLEVEL_GAME
 
-	VAR_PRIVATE/min_goals = 2
-	VAR_PRIVATE/max_goals = 5
+	VAR_PRIVATE/min_goals = 3
+	VAR_PRIVATE/max_goals = 7
 
 	VAR_PRIVATE/list/currentrun = list()
 	VAR_PRIVATE/list/department_goals = list() // List of goal paths that exist for each dept

@@ -96,3 +96,27 @@
 /datum/goal/common/food_prepared/proc/handle_food_prepared(datum/recipe/source, obj/container, list/results)
 	SIGNAL_HANDLER
 	current_count++
+
+
+// Trash searched
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/goal/common/trashpiles
+	name = "Clean Out Maintenance Trash"
+	goal_text = null
+
+/datum/goal/common/trashpiles/New()
+	. = ..()
+	goal_count = rand(40,90)
+	goal_text = "Get that trash cleaned out of maintenance! Dig at least [goal_count] things out of the trashpiles in maintenance."
+	RegisterSignal(SSdcs,COMSIG_GLOB_FOOD_PREPARED,PROC_REF(handle_trash_searched))
+
+/datum/goal/common/trashpiles/Destroy(force)
+	UnregisterSignal(SSdcs,COMSIG_GLOB_FOOD_PREPARED)
+	. = ..()
+
+/datum/goal/common/trashpiles/check_completion(has_completed)
+	. = ..(current_count >= goal_count)
+
+/datum/goal/common/trashpiles/proc/handle_trash_searched(datum/source, mob/living/user, list/searched_by)
+	SIGNAL_HANDLER
+	current_count++

@@ -2,8 +2,10 @@
 
 // Outpost 21 edit(port) - Departmentgoal signals
 
+// base /decl/emote/proc/do_emote() : (mob/user, extra_params)
+#define COMSIG_GLOB_EMOTE_PERFORMED "!emote_performed"
 // base /proc/say_dead_direct() : (message)
-#define COMSIG_GLOB_DEAD_SAY "!hear_dead_talk"
+#define COMSIG_GLOB_DEAD_SAY "!dead_say"
 // base /turf/wash() : ()
 #define COMSIG_GLOB_MOPFLOOR "!mopped_floor"
 // base /obj/machinery/artifact_harvester/proc/harvest() : (obj/item/anobattery/inserted_battery, mob/user)
@@ -14,3 +16,5 @@
 #define COMSIG_GLOB_FOOD_PREPARED "!recipe_food_completed"
 // base /datum/construction/proc/spawn_result() : (/obj/mecha/result_mech)
 #define COMSIG_GLOB_MECH_CONSTRUCTED "!mecha_constructed"
+// when trashpiles are successfully searched : (mob/living/user, list/searched_by)
+#define COMSIG_GLOB_TRASHPILE_SEARCHED "!trash_pile_searched"
