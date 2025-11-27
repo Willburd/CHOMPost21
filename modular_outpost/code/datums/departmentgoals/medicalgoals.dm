@@ -6,7 +6,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/goal/medical/autopsies
 	name = "Perform Autopsies"
-	var/list/scanned_mobs = list()
+	var/list/scanned_mobs = list() // List of mob NAMES scanned, no refs here
 
 /datum/goal/medical/autopsies/New()
 	. = ..()
@@ -24,7 +24,7 @@
 
 /datum/goal/medical/autopsies/proc/handle_autopsy_perform(atom/source, mob/user, mob/target)
 	SIGNAL_HANDLER
-	if(!target.dna)
+	if(!target?.dna?.real_name) // Should never happen unless somethings broken horribly
 		return
 	if(target.dna.real_name in scanned_mobs)
 		return
