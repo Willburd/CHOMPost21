@@ -9,20 +9,28 @@ SUBSYSTEM_DEF(departmentgoals)
 
 	VAR_PRIVATE/min_goals = 2
 	VAR_PRIVATE/max_goals = 5
-
 	VAR_PRIVATE/list/currentrun = list()
-	VAR_PRIVATE/list/department_goals = list() // List of goal paths that exist for each dept
 	var/list/active_department_goals = list() // List of goal datums that were assigned on round start
+	VAR_PRIVATE/completed_goals = 0
 
 /datum/controller/subsystem/departmentgoals/Initialize()
 	for(var/category in list(GOAL_GENERAL, GOAL_MEDICAL, GOAL_SECURITY, GOAL_ENGINEERING, GOAL_CARGO, GOAL_RESEARCH))
-		department_goals[category] = list()
-		for(var/subtype in subtypesof(/datum/goal))
-			var/datum/goal/goal_template = subtype
-			if(goal_template.name == /datum/goal::name)
-				continue
-			if(goal_template.category == category)
-				department_goals[category] += goal_template
+		active_department_goals[category] = list()
+
+	// Get the pool of available goals
+	var/list/all_goal_types = list()
+	for(var/datum/goal/checked_goal as anything in subtypesof(/datum/goal))
+		if(checked_goal.name == /datum/goal::name || !checked_goal.enabled)
+			continue
+		all_goal_types += checked_goal
+
+	// Pick random goals
+	for(var/count = 1 to rand(min_goals, max_goals))
+		var/new_path = pick(all_goal_types)
+		all_goal_types -= new_path
+
+		var/datum/goal/new_goal = new new_path()
+		active_department_goals[new_goal.category] += new_goal
 
 	RegisterSignal(SSdcs, COMSIG_GLOB_ROUND_START, PROC_REF(handle_round_start))
 	RegisterSignal(SSdcs, COMSIG_GLOB_ROUND_END, PROC_REF(handle_round_end))
@@ -34,7 +42,7 @@ SUBSYSTEM_DEF(departmentgoals)
 	. = ..()
 
 /datum/controller/subsystem/departmentgoals/stat_entry(msg)
-	msg = "Active Goals: [active_department_goals.len]"
+	msg = "G: [active_department_goals.len] | F: [completed_goals] | Cr: [currentrun.len]"
 	return ..()
 
 /datum/controller/subsystem/departmentgoals/fire()
@@ -44,10 +52,11 @@ SUBSYSTEM_DEF(departmentgoals)
 			var/list/dept_goals = active_department_goals[category]
 			for(var/datum/goal/dept_goal in dept_goals)
 				currentrun += dept_goal
+			completed_goals = 0
 	// Solve the current queue until empty, over multiple ticks if needed
 	while(currentrun.len)
 		var/datum/goal/dept_goal = currentrun[1]
-		dept_goal.check_completion()
+		completed_goals += dept_goal.check_completion()
 		currentrun -= dept_goal
 		if(MC_TICK_CHECK)
 			return
@@ -57,23 +66,6 @@ SUBSYSTEM_DEF(departmentgoals)
 ///////////////////////////////////////////////////////////////////////////////////////////////
 /datum/controller/subsystem/departmentgoals/proc/handle_round_start()
 	SIGNAL_HANDLER
-	for(var/category in department_goals)
-		active_department_goals[category] = list()
-
-	// Get some random goals, respects the enabled flag too, the admin set ones don't care!
-	var/list/all_goal_types = list()
-	for(var/datum/goal/checked_goal as anything in subtypesof(/datum/goal))
-		if(checked_goal.name == /datum/goal::name || !checked_goal.enabled)
-			continue
-		all_goal_types += checked_goal
-
-	for(var/count = 1 to rand(min_goals, max_goals))
-		var/new_path = pick(all_goal_types)
-		all_goal_types -= new_path
-
-		var/datum/goal/new_goal = new new_path()
-		active_department_goals[new_goal.category] += new_goal
-
 	// Lets admins set somes stuff quickly
 	addtimer(CALLBACK(src, PROC_REF(announce_goals)), 30 SECONDS)
 
