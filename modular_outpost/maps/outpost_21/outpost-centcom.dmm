@@ -13612,11 +13612,14 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/clothing/suit/armor/swat,
-/obj/item/clothing/mask/gas/swat,
-/obj/item/clothing/shoes/boots/swat,
-/obj/item/clothing/gloves/swat,
-/obj/item/clothing/head/helmet/swat,
+/obj/item/rig/ert/assetprotection,
+/obj/item/rig/ert/assetprotection,
+/obj/item/clothing/mask/gas/swat{
+	pixel_x = -7
+	},
+/obj/item/clothing/mask/gas/swat{
+	pixel_x = -7
+	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
