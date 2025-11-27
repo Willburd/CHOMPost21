@@ -56,7 +56,7 @@
 	if(!istype(sold_item,/obj/structure/closet/crate))
 		return
 	for(var/obj/item/stack/material/sheet_stack in sold_item)
-		if(sheet_stack.name != mat_to_sell)
+		if(!sheet_stack.material || sheet_stack.material.name != mat_to_sell)
 			continue
 		current_count += sheet_stack.amount
 

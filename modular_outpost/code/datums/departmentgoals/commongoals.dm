@@ -44,7 +44,7 @@
 
 /datum/goal/common/grow_plants/New()
 	. = ..()
-	goal_count = rand(200,1000)
+	goal_count = rand(200,500)
 	goal_text = "Crew should grow at least [goal_count] plants of any type to encourage hydroponics and kitchen crew productivity."
 
 /datum/goal/common/grow_plants/check_completion()

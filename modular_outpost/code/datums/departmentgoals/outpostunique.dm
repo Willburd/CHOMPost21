@@ -5,7 +5,7 @@
 
 /datum/goal/engineering/export_power/New()
 	. = ..()
-	goal_count = rand(25,100)
+	goal_count = rand(15,35)
 	goal_text = "Export [goal_count]GW of power via the power transmission laser."
 	goal_count = goal_count GIGAWATTS
 
