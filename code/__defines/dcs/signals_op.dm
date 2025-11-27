@@ -20,3 +20,5 @@
 #define COMSIG_GLOB_TRASHPILE_SEARCHED "!trash_pile_searched"
 // base /obj/item/autopsy_scanner/do_surgery() : (mob/user, mob/target)
 #define COMSIG_GLOB_AUTOPSY_PERFORMED "!performed_autopsy"
+// upon forensics swap or sample kit forensics collection : (atom/target, mob/user)
+#define COMSIG_GLOB_FORENSICS_COLLECTED "!performed_forensics_collection"
