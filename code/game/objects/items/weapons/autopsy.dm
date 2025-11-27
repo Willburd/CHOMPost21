@@ -180,5 +180,6 @@
 	M.visible_message(span_infoplain(span_bold("\The [user]") + " scans the wounds on [M]'s [S.name] with [src]"))
 
 	src.add_data(S)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_AUTOPSY_PERFORMED, user, M) // Outpost 21 edit(port) - Departmentgoal signals
 
 	return 1

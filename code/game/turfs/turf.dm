@@ -520,6 +520,8 @@
 
 	if(istype(src, /turf/simulated))
 		var/turf/simulated/T = src
+		if(T.dirt > 0) // Outpost 21 edit(port) - Departmentgoal signals
+			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOPFLOOR)
 		T.dirt = 0
 
 	for(var/am in src)
