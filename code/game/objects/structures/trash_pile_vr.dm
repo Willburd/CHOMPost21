@@ -138,6 +138,7 @@
 				to_chat(user,span_danger("Some sort of creature leaps out of \the [src]!"))
 			else
 				SEND_SIGNAL(src,COMSIG_LOOT_REWARD,user,searchedby, 5)
+				SEND_GLOBAL_SIGNAL(COMSIG_GLOB_TRASHPILE_SEARCHED,user,searchedby) // Outpost 21 edit(port) - Departmentgoal signals
 		busy = FALSE
 	else
 		return ..()

@@ -462,6 +462,8 @@ var/list/admin_verbs_event_manager = list(
 	/datum/admins/proc/lock_weather, // Outpost 21 edit - Locking weather
 	/datum/admins/proc/change_weather_temp, // Outpost 21 edit - Weather temp lock
 	/datum/admins/proc/lock_planet_light, // Outpost 21 edit - Light level lock
+	/datum/admins/proc/add_department_goal, // Outpost 21 edit - Department goals
+	/datum/admins/proc/remove_department_goal, // Outpost 21 edit - Department goals
 	// /client/proc/base_all_turfs,
 	/client/proc/modify_event_collector,
 	/client/proc/induce_malfunction,

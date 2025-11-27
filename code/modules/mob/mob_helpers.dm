@@ -469,7 +469,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 	// Outpost 21 edit begin - Hearing the dead component
 	if(ismob(subject))
-		SEND_GLOBAL_SIGNAL(COMSIG_OUTPOST_HEAR_DEAD, subject, message)
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_DEAD_SAY, subject, message)
 	// Outpost 21 edit end
 
 	if(subject && subject.forbid_seeing_deadchat && !check_rights_for(subject.client, R_HOLDER))

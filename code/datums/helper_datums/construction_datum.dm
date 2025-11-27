@@ -74,7 +74,7 @@
 
 /datum/construction/proc/spawn_result()
 	if(result)
-		new result(get_turf(holder))
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MECH_CONSTRUCTED, new result(get_turf(holder))) // Outpost 21 edit(port) - Departmentgoal signals
 		spawn()
 			qdel(holder)
 	return
