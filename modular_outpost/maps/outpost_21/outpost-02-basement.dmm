@@ -65191,6 +65191,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
+/obj/structure/sign/nosmoking_1{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/engineering/refinery/lab)
 "ctK" = (
@@ -65300,6 +65303,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
 "ctS" = (
@@ -65355,6 +65359,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engrefinery)
 "ctW" = (
@@ -65368,6 +65376,9 @@
 	dir = 4;
 	pixel_x = -28;
 	pixel_y = -26
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
@@ -65384,6 +65395,10 @@
 /obj/structure/bed/chair/office/light,
 /obj/effect/landmark/start/engineer{
 	name = "Chemical Engineer"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
@@ -65423,6 +65438,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/bathroom/engrefinery)
 "cua" = (
@@ -65435,6 +65453,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/bathroom/engrefinery)
 "cub" = (
@@ -65445,6 +65466,9 @@
 	pixel_y = 26
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -65460,6 +65484,10 @@
 	},
 /obj/structure/handrail{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engrefinery)
@@ -68316,11 +68344,12 @@
 	pixel_x = 28;
 	pixel_y = -26
 	},
-/obj/structure/sign/nosmoking_1{
-	pixel_y = -32
-	},
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 6
+	},
+/obj/machinery/vending/wallmed1{
+	name = "NanoMed Wall";
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
@@ -76304,7 +76333,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
 "oFF" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
@@ -76313,6 +76341,10 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -76471,6 +76503,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
 "oQK" = (
@@ -78300,9 +78333,12 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/orange,
-/obj/machinery/vending/wallmed1{
-	name = "NanoMed Wall";
-	pixel_y = -32
+/obj/machinery/disposal/wall{
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
@@ -79033,6 +79069,9 @@
 	dir = 4
 	},
 /obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -81821,6 +81860,7 @@
 /obj/effect/landmark{
 	name = "bluespacerift"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
 "uxB" = (
