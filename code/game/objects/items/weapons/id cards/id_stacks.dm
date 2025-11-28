@@ -160,12 +160,10 @@
 	initial_sprite_stack = list("base-stamp-silver", "top-orange", "stamp-n", "pips-gold")
 	rank = JOB_CHIEF_ENGINEER
 
-// Outpost 21 edit(port) begin - Chemical Engineering
 /obj/item/card/id/engineering/chemical
 	name = JOB_ALT_CHEMENGINEER + "'s ID"
 	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "pips-medblu", "stripe-white")
 	rank = JOB_ENGINEER
-// Outpost 21 edit end
 
 //Science
 
