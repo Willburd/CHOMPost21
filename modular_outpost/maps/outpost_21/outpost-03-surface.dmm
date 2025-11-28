@@ -8775,10 +8775,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "aox" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 1
@@ -11977,6 +11973,15 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
+"awi" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/bluespace_denier,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/teleporter/bridge)
 "awl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -144260,7 +144265,7 @@ sfu
 xKb
 ras
 uTG
-nSe
+awi
 kXw
 gWk
 iLC
