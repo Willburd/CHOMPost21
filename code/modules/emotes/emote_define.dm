@@ -147,7 +147,7 @@
 
 	do_extra(user, target)
 	do_sound(user)
-	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_EMOTE_PERFORMED, user, extra_params) // Outpost 21 edit(port) - Departmentgoal signals
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_EMOTE_PERFORMED, user, extra_params)
 
 /decl/emote/proc/replace_target_tokens(var/msg, var/atom/target)
 	. = msg
