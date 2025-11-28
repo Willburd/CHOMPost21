@@ -86,7 +86,9 @@
 		/obj/item/integrated_electronics/debugger,
 		/obj/item/shovel/spade,
 		/obj/item/stack/nanopaste,
-		/obj/item/geiger
+		/obj/item/geiger,
+		/obj/item/reagent_scanner,
+		/obj/item/lightpainter
 		)
 
 /obj/item/storage/belt/utility/full
@@ -108,6 +110,16 @@
 		/obj/item/tool/wirecutters,
 		/obj/item/stack/cable_coil/random_belt,
 		/obj/item/multitool
+	)
+
+/obj/item/storage/belt/utility/chemtech
+	starts_with = list(
+		/obj/item/tool/screwdriver,
+		/obj/item/tool/wrench,
+		/obj/item/weldingtool,
+		/obj/item/tool/crowbar,
+		/obj/item/tool/wirecutters,
+		/obj/item/reagent_scanner
 	)
 
 /obj/item/storage/belt/utility/atmostech
@@ -223,7 +235,9 @@
 		/obj/item/lightreplacer,
 		/obj/item/lightpainter, // Outpost 21 edit(port) - Light painter in belt
 		/obj/item/pickaxe/plasmacutter,
-		/obj/item/holosign_creator/combifan
+		/obj/item/holosign_creator/combifan,
+		/obj/item/reagent_scanner,
+		/obj/item/lightpainter
 	)
 
 
