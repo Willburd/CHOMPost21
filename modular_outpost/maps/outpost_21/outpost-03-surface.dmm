@@ -11972,6 +11972,11 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
+"awh" = (
+/obj/item/toy/desk/fan,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/milspec,
+/area/bridge)
 "awl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -15530,6 +15535,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "bzk" = (
@@ -21529,7 +21535,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
 "dsd" = (
-/obj/machinery/hologram/holopad,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "dse" = (
@@ -41768,6 +41774,10 @@
 /obj/item/sticky_pad/random{
 	pixel_x = 4;
 	pixel_y = 9
+	},
+/obj/item/toy/desk/fan{
+	pixel_x = -7;
+	pixel_y = 13
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/lobby)
@@ -62654,13 +62664,18 @@
 /area/security/security_equiptment_storage)
 "pZc" = (
 /obj/structure/table/standard,
-/obj/machinery/recharger,
+/obj/machinery/recharger{
+	pixel_x = 6
+	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
 /obj/item/toy/xmastree{
 	pixel_x = -7;
 	pixel_y = 13
+	},
+/obj/item/toy/desk/fan{
+	pixel_x = -8
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
@@ -81413,6 +81428,9 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/structure/sign/christmas/lights,
+/obj/item/toy/desk/fan{
+	pixel_x = 14
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "vIv" = (
@@ -145211,7 +145229,7 @@ rvN
 qmu
 eqg
 bgB
-rfZ
+awh
 rfZ
 wNa
 njP

@@ -32794,11 +32794,22 @@
 /area/shuttle/escape)
 "qQP" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
-	},
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
