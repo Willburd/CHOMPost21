@@ -11,10 +11,10 @@
 	. = ..()
 	goal_count = rand(1000,2000)
 	goal_text = "Clean up [goal_count] dirty sections of floor, this station gets filthy!"
-	RegisterSignal(SSdcs,COMSIG_GLOB_MOPFLOOR,PROC_REF(handle_mopped_floor))
+	RegisterSignal(SSdcs,COMSIG_GLOB_WASHED_FLOOR,PROC_REF(handle_mopped_floor))
 
 /datum/goal/common/clean_floors/Destroy(force)
-	UnregisterSignal(SSdcs,COMSIG_GLOB_MOPFLOOR)
+	UnregisterSignal(SSdcs,COMSIG_GLOB_WASHED_FLOOR)
 	. = ..()
 
 /datum/goal/common/clean_floors/proc/handle_mopped_floor(turf/source)
