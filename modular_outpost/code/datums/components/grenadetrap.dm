@@ -36,13 +36,17 @@
 
 /datum/component/grenadetrap/proc/on_attackby(obj/item/source, obj/item/W, mob/user, params)
 	SIGNAL_HANDLER
-	if(nade && W.has_tool_quality(TOOL_WIRECUTTER))
+	if(!nade)
+		return
+	if(W.has_tool_quality(TOOL_WIRECUTTER))
 		playsound(src, W.usesound, 50, 1)
 		to_chat(user, span_warning("You cut the trap from \the [host]."))
 		nade.forceMove(get_turf(host))
 		nade = null
 		qdel(src)
-		return
+		return COMPONENT_CANCEL_ATTACK_CHAIN
+	if(nade == W) // Can happen on setup
+		return COMPONENT_CANCEL_ATTACK_CHAIN
 	if(activated)
 		return
 	activated = TRUE

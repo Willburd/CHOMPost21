@@ -25,10 +25,7 @@
 		return
 
 	else
-		var/A
-
-		A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons)
-
+		var/obj/structure/extraction_point/A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons) // Outpost 21 edit(port) - Fulton nullspace destination fix
 		if(QDELETED(A)) // Outpost 21 edit(port) - Fulton nullspace destination fix
 			return
 		beacon = A
