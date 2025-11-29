@@ -112,6 +112,8 @@ I think I covered everything.
 
 	plane = MOB_PLANE
 
+	mob_size = MOB_HUGE // Why was he medium... // outpost 21 edit(port) - These are huge. wtf
+
 	//Dragon vars
 	var/notame
 	var/norange
