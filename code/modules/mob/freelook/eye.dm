@@ -88,7 +88,10 @@
 
 	return eyeobj.EyeMove(n, direct)
 
-/mob/observer/eye/proc/GetViewerClient()
+/mob/observer/proc/GetViewerClient() // Outpost 21 edit(port) - Literally no reason for this not to be base observer level
+	return client
+
+/mob/observer/eye/GetViewerClient() // Outpost 21 edit(port) - Literally no reason for this not to be base observer level
 	if(owner)
 		return owner.client
 	return null

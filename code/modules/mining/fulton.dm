@@ -25,17 +25,14 @@
 		return
 
 	else
-		var/A
-
-		A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons)
-
-		if(!A)
+		var/obj/structure/extraction_point/A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons) // Outpost 21 edit(port) - Fulton nullspace destination fix
+		if(QDELETED(A)) // Outpost 21 edit(port) - Fulton nullspace destination fix
 			return
 		beacon = A
 		to_chat(user, "You link the extraction pack to the beacon system.")
 
 /obj/item/extraction_pack/afterattack(atom/movable/A, mob/living/carbon/human/user, flag, params)
-	if(!beacon)
+	if(QDELETED(beacon)) // Outpost 21 edit(port) - Fulton nullspace destination fix
 		to_chat(user, "[src] is not linked to a beacon, and cannot be used.")
 		return
 	// Outpost 21 edit begin - No escaping redspace
@@ -50,6 +47,9 @@
 		if(redlist.len > 0)
 			warp_goal = pick(redlist)
 	// Outpost 21 edit end
+	if(!warp_goal) // Outpost 21 edit(port) - Fulton nullspace destination fix
+		beacon = null
+		return
 	if(!can_use_indoors)
 		var/turf/T = get_turf(A)
 		if(T && !T.is_outdoors())

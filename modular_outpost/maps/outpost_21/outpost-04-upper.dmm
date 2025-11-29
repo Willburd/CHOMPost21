@@ -161,7 +161,6 @@
 /area/muriki/rooftop/security)
 "aan" = (
 /mob/living/simple_mob/vore/bigdragon/murikiboss,
-/obj/item/clothing/accessory/medal/gold/heroismmelted/eshui,
 /obj/item/casino_platinum_chip,
 /turf/simulated/floor/indoorrocks/turfpack/muriki{
 	icon_state = "rock_grey"

@@ -29,7 +29,7 @@
 
 /datum/goal/common/just_walk/New()
 	. = ..()
-	goal_count = rand(3000,8000)
+	goal_count = rand(10000,90000)
 	goal_text = "Crew should take at least [goal_count] steps to ensure their cardio quotas are met."
 
 /datum/goal/common/just_walk/check_completion()
