@@ -38,15 +38,6 @@
 	SIGNAL_HANDLER
 	if(!nade)
 		return
-	if(W.has_tool_quality(TOOL_WIRECUTTER))
-		playsound(src, W.usesound, 50, 1)
-		to_chat(user, span_warning("You cut the trap from \the [host]."))
-		nade.forceMove(get_turf(host))
-		nade = null
-		qdel(src)
-		return COMPONENT_CANCEL_ATTACK_CHAIN
-	if(nade == W) // Can happen on setup
-		return COMPONENT_CANCEL_ATTACK_CHAIN
 	if(activated)
 		return
 	activated = TRUE
@@ -110,4 +101,14 @@
 		else
 			attach_grenade_trap(user,G)
 		return TRUE
+
+	var/datum/component/grenadetrap/GT = GetComponent(/datum/component/grenadetrap) // Awaiting upstream fix, fucking door code
+	if(GT && C.has_tool_quality(TOOL_WIRECUTTER))
+		playsound(src, C.usesound, 50, 1)
+		to_chat(user, span_warning("You cut the trap from \the [src]."))
+		GT.nade.forceMove(get_turf(user))
+		GT.nade = null
+		qdel(GT)
+		return TRUE
+
 	. = ..()
