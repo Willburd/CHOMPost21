@@ -143,6 +143,7 @@ SUBSYSTEM_DEF(departmentgoals)
 	var/datum/goal/template = choice
 	var/list/dept_goals = SSdepartmentgoals.active_department_goals[template.category]
 	dept_goals += new template()
+	log_admin("[key_name(usr)] has added a department goal: [template.name].")
 
 /datum/admins/proc/remove_department_goal()
 	set category = "Debug.Events"
@@ -163,5 +164,6 @@ SUBSYSTEM_DEF(departmentgoals)
 	if(!choice)
 		return
 
+	log_admin("[key_name(usr)] has removed the department goal: [choice].")
 	SSdepartmentgoals.active_department_goals[choice.category] -= choice
 	qdel(choice)
