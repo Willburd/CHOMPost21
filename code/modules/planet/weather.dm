@@ -236,21 +236,29 @@
 	if(effect_flags & HAS_PLANET_EFFECT)
 		if(effect_flags & EFFECT_ALL_MOBS)
 			for(var/mob/M as anything in GLOB.mob_list)
+				if(isobserver(M)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(M.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(M)
 		if(effect_flags & EFFECT_ONLY_LIVING)
 			for(var/mob/living/L as anything in GLOB.living_mob_list)
+				if(isobserver(L)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(L.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(L)
 		if(effect_flags & EFFECT_ONLY_HUMANS)
 			for(var/mob/living/carbon/H as anything in GLOB.human_mob_list)
+				if(isobserver(H)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(H.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(H)
 		if(effect_flags & EFFECT_ONLY_ROBOTS)
 			for(var/mob/living/silicon/R as anything in GLOB.silicon_mob_list)
+				if(isobserver(R)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(R.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(R)
