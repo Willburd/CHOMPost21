@@ -468,12 +468,12 @@
 	if(isliving(target))
 		var/mob/living/M = target
 		if(!M.is_incorporeal())
-			visible_message(span_danger("\The [src] runs over [M]!"))
 			if(M.mob_size < MOB_HUGE)
 				M.apply_effects(5, 5)				//knock people down if you hit them
 				M.apply_damages(move_damage)	// and do damage according to how fast the train is going
+				visible_message(span_danger("\The [src] runs over [M]!")) // Only if successful
 			else
-				M.apply_damages(move_damage / 3)	// Lower damage because it stops it
+				M.apply_damages(move_damage / 5)	// Lower damage because it stops it
 
 			// cab sounds
 			playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
