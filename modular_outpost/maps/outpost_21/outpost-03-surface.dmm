@@ -11982,6 +11982,20 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/teleporter/bridge)
+"awj" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/civ)
+"awk" = (
+/obj/machinery/trailblazer/yellow,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/civ)
 "awl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -11994,6 +12008,37 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
+"awm" = (
+/turf/simulated/open/muriki,
+/area/muriki/grounds/civ)
+"awn" = (
+/obj/effect/landmark/step_trap,
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/civ)
+"awo" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/civ)
+"awp" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/civ)
 "awu" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
@@ -28302,7 +28347,15 @@
 	dir = 4;
 	c_tag = "EXT - Main Elevator Northeast"
 	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/grounds/civ)
 "fEH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -139216,10 +139269,10 @@ aqw
 aqw
 aqw
 fEf
-aqw
-aqw
-aqw
-aqw
+awm
+awm
+awm
+awj
 aqw
 aqw
 aqw
@@ -139377,11 +139430,11 @@ aqw
 tuk
 aqw
 aqw
-aqw
-aqw
-aqw
-aqw
-aqw
+awp
+awm
+awm
+awm
+awj
 aqw
 aqw
 aqw
@@ -139539,14 +139592,14 @@ aqw
 aqw
 aqw
 aqw
+awp
+awm
+awm
+awm
+awj
 aqw
 aqw
 aqw
-aqw
-aqw
-aqw
-aqw
-tuk
 aqw
 aqw
 aqw
@@ -139701,11 +139754,11 @@ aqw
 aqw
 aqw
 aqw
-aqw
-aqw
-aqw
-aqV
-aqw
+awk
+awo
+awo
+awn
+awk
 aqw
 aqw
 aqw

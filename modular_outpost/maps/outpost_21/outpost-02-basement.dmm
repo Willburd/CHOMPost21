@@ -19734,8 +19734,9 @@
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 1
 	},
-/obj/machinery/computer/security/telescreen/bodycamera{
-	pixel_y = 30
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgtrain)
@@ -19795,6 +19796,9 @@
 	},
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 1
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgtrain)
@@ -43344,18 +43348,6 @@
 /obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
-"byC" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/machinery/ai_status_display{
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/steel,
-/area/crew_quarters/recreation_area_hallway)
 "byD" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/incinerator)
@@ -50357,6 +50349,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bME" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
 "bMF" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -53571,6 +53567,23 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bSt" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/recreation_area_hallway)
 "bSu" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
@@ -64438,6 +64451,16 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
+"csm" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "csn" = (
 /turf/simulated/gore,
 /area/muriki/processor/hall)
@@ -65560,6 +65583,59 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"cuh" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cui" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cuj" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
+/obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/recreation_area_hallway)
+"cuk" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cul" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cum" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "cun" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
@@ -65578,12 +65654,204 @@
 	},
 /turf/simulated/floor/reinforced/nitrogen,
 /area/engineering/atmos)
+"cuo" = (
+/obj/structure/catwalk,
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cup" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cuq" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cur" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cus" = (
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cut" = (
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cuu" = (
+/obj/structure/sign/painting/public{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cuv" = (
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/recreation_area_hallway)
+"cuw" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/recreation_area_hallway)
+"cux" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
 "cuy" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cave)
+"cuz" = (
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/item/beartrap/start_active,
+/obj/item/trash/chipbasket,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cuA" = (
+/obj/structure/catwalk,
+/obj/structure/sign/warning/acid{
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cuB" = (
+/obj/structure/catwalk,
+/obj/structure/sign/warning/acid{
+	pixel_x = 32
+	},
+/obj/item/beartrap/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cuC" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cuD" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/sign/secure_eshui_facility{
+	pixel_x = -33
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/crew_quarters/recreation_area_hallway)
+"cuE" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/crew_quarters/recreation_area_hallway)
+"cuF" = (
+/obj/item/bikehorn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cuG" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/closet)
+"cuH" = (
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/closet)
+"cuI" = (
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/crew_quarters/recreation_area_hallway)
+"cuJ" = (
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
 "cuK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -65596,6 +65864,57 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"cuL" = (
+/obj/structure/stairs/spawner/north,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/crew_quarters/recreation_area_hallway)
+"cuM" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cuN" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cuO" = (
+/obj/structure/sign/yessmoking_1,
+/turf/simulated/wall,
+/area/muriki/crew/casino)
+"cuP" = (
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"cuQ" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"cuR" = (
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"cuS" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 8
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"cuT" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 4
+	},
+/obj/structure/sign/poster/eshui{
+	dir = 1
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"cuU" = (
+/obj/structure/table/gamblingtable,
+/obj/item/flashlight/lamp,
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
 "cvB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -72934,16 +73253,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
@@ -72964,19 +73281,6 @@
 /obj/item/flag/laser/blue,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
-"kAI" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/steel,
-/area/crew_quarters/recreation_area_hallway)
 "kDF" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -80524,9 +80828,6 @@
 /area/maintenance/oldbridge)
 "sQj" = (
 /obj/structure/bed/chair/bay/comfy/black,
-/obj/structure/sign/yessmoking_1{
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
@@ -83030,21 +83331,6 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
-"vMa" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/structure/sign/painting/public{
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/steel,
-/area/crew_quarters/recreation_area_hallway)
 "vNc" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -133568,11 +133854,11 @@ aKP
 bKi
 bHF
 aKP
-vka
-vka
-vka
-vka
-vka
+aKP
+aKP
+bKB
+ccl
+bKB
 aXU
 aYs
 aYs
@@ -133729,12 +134015,12 @@ bXZ
 bQH
 aKP
 bXQ
+cuM
+cuN
+cuM
+bKB
 aKP
-vka
-vka
-vka
-vka
-vka
+ccl
 aXU
 aYs
 aYs
@@ -133892,11 +134178,11 @@ bQJ
 bQE
 bHH
 aKP
-vka
-vka
-vka
-vka
-vka
+aKP
+aKP
+aKP
+bKB
+bKB
 aXU
 aYs
 aYs
@@ -134056,9 +134342,9 @@ rJg
 rJg
 rJg
 rJg
-vka
-vka
-vka
+aKP
+cuM
+aKP
 aXU
 aXU
 aXU
@@ -134218,18 +134504,18 @@ mFa
 doR
 gdq
 rJg
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+aKP
+bKB
+cuv
+cuv
+cuv
+cuv
+cuv
+cuv
+aPO
+aPO
+aPO
+aPO
 vka
 vka
 vka
@@ -134380,18 +134666,18 @@ joN
 wUn
 pAr
 rJg
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+bKB
+bKB
+cuv
+cuL
+cuI
+cuD
+cuA
+cuw
+cuo
+cuk
+bME
+aPO
 vka
 vka
 vka
@@ -134542,17 +134828,17 @@ ewc
 wsV
 fIc
 rJg
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+bKB
+xST
+cuv
+cuL
+cuI
+cuE
+bME
+cux
+bME
+bME
+bME
 bcq
 bcq
 bcq
@@ -134704,17 +134990,17 @@ joN
 wUn
 paw
 rJg
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+ccl
+xST
+cuv
+cuL
+cuI
+cuE
+cuB
+cuw
+bME
+bME
+bME
 bcq
 bcZ
 bdz
@@ -134866,17 +135152,17 @@ bKd
 sSe
 ygY
 rJg
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+bKB
+aKP
+cuv
+cuv
+cuv
+cuv
+cuv
+cuv
+bSt
+cul
+bSt
 bcq
 bcZ
 bdz
@@ -135028,17 +135314,17 @@ bKe
 ctd
 wyM
 rJg
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+bKB
+bKB
+bKB
+bKB
+cuJ
+cuF
+aKP
+aKP
+cup
+cum
+csm
 bcq
 bcZ
 bdz
@@ -135195,12 +135481,12 @@ sLP
 sLP
 sLP
 sLP
-vka
-vka
-vka
-vka
-vka
-vka
+ccl
+bKB
+cuz
+aPQ
+aXa
+aRR
 bcq
 bda
 bdz
@@ -135357,12 +135643,12 @@ oOA
 pRP
 rpg
 sLP
-vka
-vka
-vka
-vka
-vka
-vka
+bKB
+cbP
+aKP
+cuq
+aXa
+cuh
 bcq
 bcq
 bFh
@@ -135502,10 +135788,10 @@ amq
 amq
 bYN
 ccn
-amq
-ahC
-ahC
-ahC
+bZB
+cuP
+cuP
+cuP
 rJg
 xqb
 ppH
@@ -135519,12 +135805,12 @@ wha
 bTI
 ume
 sLP
-vka
-vka
-vka
-vka
-vka
-vka
+bKB
+cuC
+aKP
+cur
+aXa
+aRR
 bcq
 bdb
 bdy
@@ -135665,9 +135951,9 @@ amq
 amq
 bRU
 amq
-ahC
-ahC
-ahC
+cuP
+cuP
+cuP
 rJg
 siu
 jqS
@@ -135681,12 +135967,12 @@ pnK
 sZY
 mXl
 mXl
+cuG
 mXl
 mXl
-mXl
-vka
-vka
-vka
+bIg
+aXa
+aRR
 bcq
 bem
 bdy
@@ -135827,9 +136113,9 @@ bLk
 bGU
 chl
 amq
-ahC
-ahC
-ahC
+cuT
+cuQ
+cuP
 rJg
 qNK
 sHp
@@ -135843,12 +136129,12 @@ dAx
 dQJ
 mXl
 bHo
-fPM
+cuH
 fPM
 mXl
-vka
-vka
-vka
+cus
+aXa
+aRR
 bcq
 bdd
 bdA
@@ -135989,10 +136275,10 @@ bRD
 amq
 amq
 amq
-ahC
-ahC
-ahC
-rJg
+cuU
+cuR
+cuP
+cuO
 sQj
 iiP
 bRp
@@ -136008,9 +136294,9 @@ aYu
 clp
 pFo
 mXl
-vka
-vka
-vka
+cut
+aXa
+aRR
 bcq
 bde
 bdy
@@ -136150,10 +136436,10 @@ bRG
 bLg
 amq
 ahC
-ahC
-ahC
-ahC
-ahC
+amq
+cuR
+cuR
+cuP
 rJg
 dlQ
 nAX
@@ -136170,9 +136456,9 @@ aYv
 nZz
 rHk
 mXl
-vka
-vka
-vka
+cuu
+aXa
+aRR
 bcq
 bdf
 bdB
@@ -136312,10 +136598,10 @@ bYF
 amq
 amq
 ahC
-ahC
-ahC
-ahC
-ahC
+amq
+cuS
+cuS
+cuP
 rJg
 tYY
 gwo
@@ -136332,9 +136618,9 @@ bFr
 nZz
 aTC
 mXl
-vka
-vka
-vka
+bpm
+aXa
+cui
 bcq
 bdg
 qKh
@@ -136494,9 +136780,9 @@ bFs
 aYS
 mXl
 mXl
-aPO
-aPO
-aPO
+cuj
+cuj
+cuj
 bcq
 bcq
 iUJ
@@ -136656,9 +136942,9 @@ bFt
 aTt
 uXX
 vgy
-vMa
-kAI
-byC
+aPR
+aXa
+aRS
 vgy
 ibp
 bqF
