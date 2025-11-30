@@ -136,7 +136,7 @@
 
 /mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord/Initialize(mapload)
 	. = ..()
-	resize(2, animate = FALSE, ignore_prefs = TRUE)
+	resize(3, animate = FALSE, ignore_prefs = TRUE)
 
 /mob/living/simple_mob/vore/alienanimals/jil/Initialize(mapload)
 	. = ..()
