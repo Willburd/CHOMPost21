@@ -40,7 +40,6 @@
 	attacktext = list("nipped", "bit", "chomped")
 
 	movement_cooldown = 0
-	animate_movement = SLIDE_STEPS
 
 	layer = MOB_LAYER
 	density = FALSE
@@ -110,6 +109,7 @@
 	mob_size = MOB_LARGE
 	meat_amount = 25
 	butchery_loot = list()
+	movement_cooldown = -2
 
 	// enlorgen
 	icon_state = "jil_big"
@@ -117,6 +117,26 @@
 	icon_dead = "jil_big_dead"
 	icon_splat = "jil_big_splat"
 	icon_rest = "jil_big_sleep"
+
+/mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord
+	name = "jillord"
+	real_name = "jillord"
+	desc = "You are already collected."
+	tt_desc = "Crinitus Imperius"
+
+	maxHealth = 5000
+	health = 5000
+
+	mob_size = MOB_HUGE
+	meat_amount = 40
+	melee_damage_lower = 30
+	melee_damage_upper = 40
+
+	voice_freq = 22500
+
+/mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord/Initialize(mapload)
+	. = ..()
+	resize(2, animate = FALSE, ignore_prefs = TRUE)
 
 /mob/living/simple_mob/vore/alienanimals/jil/Initialize(mapload)
 	. = ..()
