@@ -1,3 +1,8 @@
+/datum/job/cmo/New()
+	. = ..()
+	access |= list(ACCESS_CHANGE_IDS)
+	minimal_access |= list(ACCESS_CHANGE_IDS)
+
 /datum/job/doctor/New()
 	. = ..()
 	alt_titles |= list(JOB_ALT_XENOSPECIALIST = /datum/alt_title/xenoanatomyspecialist)

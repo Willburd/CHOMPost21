@@ -1,3 +1,9 @@
+/datum/job/hos/New()
+	. = ..()
+	access |= list(ACCESS_CHANGE_IDS)
+	minimal_access |= list(ACCESS_CHANGE_IDS)
+
+
 /datum/job/warden/New()
 	. = ..()
 	access |= list(ACCESS_FORENSICS_LOCKERS)

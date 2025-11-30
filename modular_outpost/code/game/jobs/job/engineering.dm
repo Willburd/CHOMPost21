@@ -1,7 +1,7 @@
 /datum/job/chief_engineer/New()
 	. = ..()
-	access |= list(ACCESS_ROBOTICS)
-	minimal_access |= list(ACCESS_ROBOTICS)
+	access |= list(ACCESS_ROBOTICS, ACCESS_CHANGE_IDS)
+	minimal_access |= list(ACCESS_ROBOTICS, ACCESS_CHANGE_IDS)
 
 
 /datum/job/engineer/New()
