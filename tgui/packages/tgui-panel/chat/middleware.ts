@@ -36,7 +36,7 @@ import {
   toggleAcceptedType,
   updateMessageCount,
 } from './actions';
-import { createMessage, serializeMessage } from './model';
+import { createMessage } from './model';
 import { chatRenderer } from './renderer';
 import { selectChat, selectCurrentChatPage } from './selectors';
 import type { message } from './types';
@@ -55,6 +55,7 @@ const saveChatToStorage = async (store: Store<number, Action<string>>) => {
       0,
       chatRenderer.messages.length - settings.persistentMessageLimit,
     );
+    /*
     const messages = chatRenderer.messages
       .slice(fromIndex)
       .map((message) => serializeMessage(message));
@@ -63,20 +64,23 @@ const saveChatToStorage = async (store: Store<number, Action<string>>) => {
       'chat-messages-archive',
       chatRenderer.archivedMessages.map((message) => serializeMessage(message)),
     );
+    */ // Outpost 21 TODO - chat to database, this is a hack job
   } // FIXME: Better chat history
 };
 
 const loadChatFromStorage = async (store: Store<number, Action<string>>) => {
   const [state, messages, archivedMessages] = await Promise.all([
     storage.get('chat-state'),
-    storage.get('chat-messages'),
-    storage.get('chat-messages-archive'), // FIXME: Better chat history
+    null, // storage.get('chat-messages'), // Outpost 21 TODO - chat to database, this is a hack job
+    null, // storage.get('chat-messages-archive'), // FIXME: Better chat history
   ]);
   // Discard incompatible versions
   if (state && state.version <= 4) {
     store.dispatch(loadChat());
     return;
   }
+  // Outpost 21 TODO - chat to database, this is a hack job
+  /*
   if (messages) {
     for (const message of messages) {
       if (message.html) {
@@ -140,6 +144,7 @@ const loadChatFromStorage = async (store: Store<number, Action<string>>) => {
       chatRenderer.archivedMessages = archivedMessages;
     }
   }
+  */
   store.dispatch(loadChat(state));
 };
 
