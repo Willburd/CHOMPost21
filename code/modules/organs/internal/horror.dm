@@ -205,6 +205,7 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
 	var/spider_chance = 10 //for admemes
 	supply_conversion_value = 25 // Outpost 21 edit - Selling redspace organs
+	var/growth_level = 0 // Outpost 21 edit - Flesh spider chance
 
 /obj/item/organ/internal/stomach/horror/process()
 	..()
@@ -224,6 +225,9 @@
 				spider.color = "[owner.species.blood_color]"
 				spider.name = "writhing tendril mass"
 				spider.desc = "A small, writhing mass of flesh and tendrils."
+				if(prob(20) && growth_level > 100) // Outpost 21 edit - Flesh spider chance
+					new /obj/effect/spider/spiderling/flesh(T)
+	growth_level += rand(0.1,1) // Outpost 21 edit - Flesh spider chance
 
 /obj/item/organ/internal/voicebox/horror
 	name = "mass"

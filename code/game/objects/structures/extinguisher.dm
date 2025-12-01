@@ -26,17 +26,17 @@
 	if(istype(O, /obj/item/extinguisher))
 		if(!has_extinguisher && opened)
 			to_chat(user, span_notice("You place [O] in [src]."))
-			connected_extinguisher(user, O) // Outpost 21 edit - Fire extinguisher foam regeneration
+			connected_extinguisher(user, O) // Outpost 21 edit(port) - Fire extinguisher foam regeneration
 		else
 			opened = !opened
 	if(O.has_tool_quality(TOOL_WRENCH))
 		if(!has_extinguisher)
 			to_chat(user, span_notice("You start to unwrench the extinguisher cabinet."))
 			playsound(src, O.usesound, 50, 1)
-			if(do_after(user, 15 * O.toolspeed))
+			if(do_after(user, 15 * O.toolspeed, target = src))
 				to_chat(user, span_notice("You unwrench the extinguisher cabinet."))
 				new /obj/item/frame/extinguisher_cabinet( src.loc )
-				STOP_PROCESSING(SSobj, src) // Outpost 21 edit - Fire extinguisher foam regeneration
+				STOP_PROCESSING(SSobj, src) // Outpost 21 edit(port) - Fire extinguisher foam regeneration
 				qdel(src)
 			return
 	else
@@ -47,7 +47,7 @@
 /obj/structure/extinguisher_cabinet/attack_hand(mob/living/user)
 	if(isrobot(user))
 		return
-	if (ishuman(user))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (user.hand)
@@ -59,7 +59,7 @@
 		user.put_in_hands(has_extinguisher)
 		to_chat(user, span_notice("You take [has_extinguisher] from [src]."))
 		opened = 1
-		removed_extinguisher() // Outpost 21 edit - Fire extinguisher foam regeneration
+		removed_extinguisher() // Outpost 21 edit(port) - Fire extinguisher foam regeneration
 	else
 		opened = !opened
 	update_icon()
@@ -69,7 +69,7 @@
 		has_extinguisher.loc = loc
 		to_chat(user, span_notice("You telekinetically remove [has_extinguisher] from [src]."))
 		opened = 1
-		removed_extinguisher() // Outpost 21 edit - Fire extinguisher foam regeneration
+		removed_extinguisher() // Outpost 21 edit(port) - Fire extinguisher foam regeneration
 	else
 		opened = !opened
 	update_icon()

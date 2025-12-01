@@ -54,12 +54,14 @@
 		if(src.case.imp)
 			if(istype(src.case.imp, /obj/item/implant))
 				dat += src.case.imp.get_data()
+				/* Outpost 21 edit - This is no longer needed
 				if(istype(src.case.imp, /obj/item/implant/tracking))
 					dat += {"ID (1-100):
 					<A href='byond://?src=\ref[src];tracking_id=-10'>-</A>
 					<A href='byond://?src=\ref[src];tracking_id=-1'>-</A> [case.imp:id]
 					<A href='byond://?src=\ref[src];tracking_id=1'>+</A>
 					<A href='byond://?src=\ref[src];tracking_id=10'>+</A><BR>"}
+				*/
 		else
 			dat += "The implant casing is empty."
 	else

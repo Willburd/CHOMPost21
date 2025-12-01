@@ -77,7 +77,6 @@
 			user.drop_item()
 			O.loc = src
 			update_icon()
-			updateUsrDialog(user)
 			return 0
 
 	if(holdingitems && holdingitems.len >= limit)
@@ -108,7 +107,6 @@
 		else
 			to_chat(user, "You fill \the [src] from \the [O].")
 
-		src.updateUsrDialog(user)
 		return 0
 
 	if(istype(O,/obj/item/gripper))

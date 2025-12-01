@@ -25,7 +25,7 @@
 
 /datum/job/assistant/get_access()
 	if(CONFIG_GET(flag/assistant_maint))
-		return list(access_maint_tunnels)
+		return list(ACCESS_MAINT_TUNNELS)
 	else
 		return list()
 
@@ -71,7 +71,7 @@
 	total_positions = -1
 	spawn_positions = -1
 	supervisors = "the staff from the department you're interning in"
-	selection_color = "#515151" // Outpost 21 edit, why was this different? was "#555555"
+	selection_color = "#555555"
 	economic_modifier = 2
 	access = list()			//See /datum/job/intern/get_access()
 	minimal_access = list()	//See /datum/job/intern/get_access()
@@ -143,7 +143,7 @@
 
 /datum/job/intern/get_access()
 	if(CONFIG_GET(flag/assistant_maint))
-		return list(access_maint_tunnels)
+		return list(ACCESS_MAINT_TUNNELS)
 	else
 		return list()
 
@@ -153,7 +153,7 @@
 
 /datum/job/assistant		// Visitor
 	title = JOB_ALT_VISITOR
-	supervisors = "nobody! You don't work here, but station rank and laws still apply to you" // Outpost 21 edit - Some sanity to visitor job
+	supervisors = "nobody! You don't work here"
 	job_description = "A " + JOB_ALT_VISITOR + " is just there to visit the place. They have no real authority or responsibility."
 	timeoff_factor = 0
 	requestable = FALSE

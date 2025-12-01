@@ -138,14 +138,15 @@
 			is_loaded = null
 			non_lethal = TRUE
 
-	if(is_loaded)
-		weapon_stats += "\nIf fired, it would deal [describe_firepower()] damage, [describe_proj_penetration()], and has [describe_firerate()] between shots."
-	else if(less_lethal)
-		weapon_stats += "\nIf fired, it would deal stunning damage to incapacitate targets, and has [describe_firerate()] between shots."
-	else if(non_lethal)
-		weapon_stats += "\nThis is an entirely non-lethal weapon, such as a mouseray, toy, or sizegun! Its effects cannot easily be quantified."
-	else
-		weapon_stats += "\nIt isn't loaded!"
+	if(!istype(src,/obj/item/gun/magnetic)) // Outpost 21 edit - Don't show this info for railguns
+		if(is_loaded)
+			weapon_stats += "\nIf fired, it would deal [describe_firepower()] damage, [describe_proj_penetration()], and has [describe_firerate()] between shots."
+		else if(less_lethal)
+			weapon_stats += "\nIf fired, it would deal stunning damage to incapacitate targets, and has [describe_firerate()] between shots."
+		else if(non_lethal)
+			weapon_stats += "\nThis is an entirely non-lethal weapon, such as a mouseray, toy, or sizegun! Its effects cannot easily be quantified."
+		else
+			weapon_stats += "\nIt isn't loaded!"
 	if(force)
 		weapon_stats += "\nIf used in melee, it deals [describe_power()] [sharp ? "sharp" : "blunt"] damage, [describe_penetration()], and has [describe_speed()]."
 	if(can_cleave)

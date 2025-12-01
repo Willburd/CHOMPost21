@@ -26,8 +26,8 @@
 				/obj/effect/decal/cleanable/blood/oil/streak,
 				/obj/effect/decal/cleanable/bug_remains,
 				/obj/effect/decal/remains/mouse,
-				/obj/effect/decal/cleanable/vomit,
-				/obj/effect/decal/cleanable/blood/splatter,
+				/obj/effect/decal/cleanable/vomit/old,
+				/obj/effect/decal/cleanable/blood/old,
 				/obj/effect/decal/cleanable/ash,
 				/obj/effect/decal/cleanable/generic,
 				/obj/effect/decal/cleanable/flour,
@@ -157,7 +157,10 @@
 				prob(10);/obj/effect/mine/lube, // Outpost 21 addition
 				prob(1);/obj/effect/mine/confetti, // Outpost 21 addition
 				prob(1);/obj/effect/mine/taarainbow, // Outpost 21 addition - CANDY
-				prob(1);/obj/effect/mine/dnascramble) // Outpost 21 addition - Genetics works again lmao
+				prob(1);/obj/effect/mine/dnascramble, // Outpost 21 addition - Genetics works again lmao
+				prob(1);/obj/item/mine/n2o, // Outpost 21 addition
+				prob(1);/obj/item/mine/phoron, // Outpost 21 addition
+				prob(1);/obj/item/mine/methane) // Outpost 21 addition - Methane mine
 
 /obj/random/humanoidremains
 	name = "Random Humanoid Remains"

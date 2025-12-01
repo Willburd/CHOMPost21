@@ -8,6 +8,10 @@
 /datum/antagonist/proc/create_objectives(var/datum/mind/player)
 	if(CONFIG_GET(flag/objectives_disabled))
 		return 0
+	// Outpost 21 edit begin - Disable auto objectives, yes i see it above. this is so we set a custom temp objective
+	if(outpost_custom_antag_objectives(player))
+		return 0
+	// Outpost 21 edit end
 	if(create_global_objectives() || global_objectives.len)
 		player.objectives |= global_objectives
 	return 1
@@ -24,10 +28,10 @@
 			if(!O.completed && !O.check_completion())
 				result = 0
 		if(result && victory_text)
-			to_world(span_boldannounce(span_large("[victory_text]")))
+			to_chat(world, span_boldannounce(span_large("[victory_text]")))
 			if(victory_feedback_tag) feedback_set_details("round_end_result","[victory_feedback_tag]")
 		else if(loss_text)
-			to_world(span_boldannounce(span_large("[loss_text]")))
+			to_chat(world, span_boldannounce(span_large("[loss_text]")))
 			if(loss_feedback_tag) feedback_set_details("round_end_result","[loss_feedback_tag]")
 
 /mob/living/proc/write_ambition()

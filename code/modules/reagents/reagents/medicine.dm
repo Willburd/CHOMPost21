@@ -62,6 +62,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
+	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -103,6 +104,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
+	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -153,6 +155,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
+	allergen_type = ALLERGEN_KELOTANE // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -229,6 +232,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
+	allergen_type = ALLERGEN_DYLO // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -349,14 +353,16 @@
 	reagent_state = LIQUID
 	color = "#8040FF"
 	scannable = 1
-	
+
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
-	
+
+	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
+
 	//YW ADDITIONS START
 	overdose = REAGENTS_OVERDOSE * 8 //240 overdose // Outpost 21 edit - raised overdose
-	
+
 /datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien) //YW EDIT START
 	..()
 	M.druggy = max(M.druggy, 5)
@@ -387,6 +393,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
+	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
@@ -781,6 +788,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
+	allergen_type = ALLERGEN_PERIDAX // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/peridaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -1274,6 +1282,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
+	allergen_type = ALLERGEN_SPACACIL // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/spaceacillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -1420,7 +1429,7 @@
 /datum/reagent/sterilizine
 	name = REAGENT_STERILIZINE
 	id = REAGENT_ID_STERILIZINE
-	description = "Sterilizes wounds in preparation for surgery and thoroughly removes blood."
+	description = "Sterilizes wounds in preparation for surgery and thoroughly removes blood. Can additionally be used to prepare a surface for surgery to lower risk of infection."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
 	color = "#C8A5DC"
@@ -1447,12 +1456,12 @@
 
 /datum/reagent/sterilizine/touch_obj(var/obj/O)
 	..()
-	O.germ_level -= min(volume*20, O.germ_level)
+	O.germ_level -= min(volume*200, O.germ_level)
 	O.was_bloodied = null
 
 /datum/reagent/sterilizine/touch_turf(var/turf/T)
 	..()
-	T.germ_level -= min(volume*20, T.germ_level)
+	T.germ_level -= min(volume*200, T.germ_level)
 	for(var/obj/item/I in T.contents)
 		I.was_bloodied = null
 	for(var/obj/effect/decal/cleanable/blood/B in T)
@@ -1515,6 +1524,7 @@
 /datum/reagent/rezadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
 		return
+	var/strength_mod = 1 * M.species.chem_strength_heal
 	var/mob/living/carbon/human/H = M
 	if(alien == IS_SLIME && istype(H))
 		if(prob(50))
@@ -1538,10 +1548,10 @@
 				H.b_hair = round((H.b_hair + 50)/2)
 			if(H.b_facial)
 				H.b_facial = round((H.b_facial + 50)/2)
-	M.adjustCloneLoss(-20 * removed)
-	M.adjustOxyLoss(-2 * removed)
-	M.heal_organ_damage(20 * removed, 20 * removed)
-	M.adjustToxLoss(-20 * removed)
+	M.adjustCloneLoss(-20 * removed * strength_mod)
+	M.adjustOxyLoss(-2 * removed * strength_mod)
+	M.heal_organ_damage(20 * removed, 20 * removed * strength_mod)
+	M.adjustToxLoss(-20 * removed * strength_mod)
 	if(dose > 3)
 		M.status_flags &= ~DISFIGURED
 	if(dose > 10)
@@ -1667,3 +1677,13 @@
 	if(current_addiction <= 0)
 		current_addiction = 40
 	return current_addiction
+
+/datum/reagent/tercozolam
+	name = REAGENT_TERCOZOLAM
+	id = REAGENT_ID_TERCOZOLAM
+	color = "#afeb17"
+	metabolism = 0.05
+	description = "A well respected drug used for treatment of schizophrenia in specific."
+	overdose = REAGENTS_OVERDOSE * 2
+	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
+	industrial_use = REFINERYEXPORT_REASON_DRUG

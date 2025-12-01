@@ -2,8 +2,8 @@
 	name = "Cleanbot"
 	desc = "A little cleaning robot, it looks so excited!"
 	icon_state = "cleanbot0"
-	req_one_access = list(access_robotics, access_janitor)
-	botcard_access = list(access_janitor)
+	req_one_access = list(ACCESS_ROBOTICS, ACCESS_JANITOR)
+	botcard_access = list(ACCESS_JANITOR)
 	pass_flags = PASSTABLE
 
 	max_frustration = 12	//CHOMPEdit
@@ -120,7 +120,7 @@
 		cleantime = istype(D, /obj/effect/decal/cleanable/dirt) ? 10 : 50
 		if(prob(20))
 			automatic_custom_emote(AUDIBLE_MESSAGE, "begins to clean up \the [D]")
-		if(do_after(src, cleantime * cTimeMult))
+		if(do_after(src, cleantime * cTimeMult, target = D))
 			if(istype(loc, /turf/simulated))
 				var/turf/simulated/f = loc
 				f.dirt = 0
@@ -139,7 +139,7 @@
 		if(cleantime != 0)
 			if(prob(20))
 				automatic_custom_emote(AUDIBLE_MESSAGE, "begins to clean up \the [loc]")
-			if(do_after(src, cleantime * cTimeMult))
+			if(do_after(src, cleantime * cTimeMult, target = loc))
 				if(blood)
 					wash(CLEAN_TYPE_BLOOD)
 				if(istype(loc, /turf/simulated))
@@ -202,7 +202,6 @@
 /mob/living/bot/cleanbot/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	ui.user.set_machine(src)
 	add_fingerprint(ui.user)
 	switch(action)
 		if("start")

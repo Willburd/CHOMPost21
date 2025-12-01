@@ -1,0 +1,182 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/bed/chair/bay/chair{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"n" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"r" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/obj/structure/bed/chair/bay/chair{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"u" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/obj/effect/decal/cleanable/blood,
+/obj/structure/bed/chair/bay/chair,
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/obj/structure/table/gamblingtable,
+/obj/item/toy/russian_revolver,
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"O" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/obj/structure/bed/chair/bay/chair{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+e
+R
+n
+n
+R
+R
+e
+e
+a
+"}
+(3,1,1) = {"
+a
+R
+u
+u
+u
+u
+u
+u
+e
+a
+"}
+(4,1,1) = {"
+a
+n
+u
+k
+k
+O
+O
+u
+R
+a
+"}
+(5,1,1) = {"
+a
+R
+u
+k
+c
+O
+k
+u
+n
+a
+"}
+(6,1,1) = {"
+a
+R
+u
+G
+H
+P
+k
+r
+n
+a
+"}
+(7,1,1) = {"
+a
+n
+u
+k
+t
+k
+O
+u
+R
+a
+"}
+(8,1,1) = {"
+a
+n
+u
+k
+A
+O
+O
+u
+R
+a
+"}
+(9,1,1) = {"
+a
+e
+u
+u
+u
+u
+u
+u
+e
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

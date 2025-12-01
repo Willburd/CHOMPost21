@@ -219,13 +219,15 @@
 	add_overlay(eye_icon_state)
 
 //They phase back to the dark when killed
-/mob/living/simple_mob/shadekin/death(gibbed, deathmessage = "phases to somewhere far away!")
-	var/special_handling = TRUE //varswitch for downstream
+/mob/living/simple_mob/shadekin/death(gibbed, deathmessage) // Outpost 21 edit - Remove shadekin death message, was:  = "phases to somewhere far away!")
+	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Remove shadekin death message
 	if(!special_handling)
+		/* Outpost 21 edit - Remove shadekin death message
 		cut_overlays()
 		icon_state = ""
 		flick("tp_out",src)
 		QDEL_IN(src, 1 SECOND)
+		*/
 		. = ..(FALSE, deathmessage)
 	else
 		if(comp.respite_activating)
@@ -346,12 +348,6 @@
 	if(comp.in_phase)
 		return TRUE
 	return FALSE
-
-/mob/living/simple_mob/shadekin/handle_atmos()
-	if(comp.in_phase)
-		return
-	else
-		return .=..()
 
 /* //VOREStation AI Removal
 //Friendly ones wander towards people, maybe shy-ly if they are set to shy

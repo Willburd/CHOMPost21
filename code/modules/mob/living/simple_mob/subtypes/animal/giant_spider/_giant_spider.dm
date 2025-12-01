@@ -69,8 +69,8 @@
 	icon_dead = "guard_dead"
 	has_eye_glow = TRUE
 	density = FALSE
-	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
-	faction = FACTION_SPIDERS // Outpost 21 edit - from AWAYMISSION
+	minbodytemp = 175
+	faction = FACTION_SPIDERS
 	maxHealth = 200
 	health = 200
 	pass_flags = PASSTABLE
@@ -118,9 +118,6 @@
 		/obj/item/stack/material/chitin = 1\
 		)
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
 	allow_mind_transfer = TRUE
 	can_be_drop_prey = FALSE
 	species_sounds = "Spider"

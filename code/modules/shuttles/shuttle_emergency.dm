@@ -1,7 +1,7 @@
 // Formerly /datum/shuttle/ferry/emergency
 /datum/shuttle/autodock/ferry/emergency
 	category = /datum/shuttle/autodock/ferry/emergency
-	var/frequency = 1381 // Why this frequency? BECAUSE! Thats what someone decided once.
+	var/frequency = AUTODOCK_FREQ // Why this frequency? BECAUSE! Thats what someone decided once.
 	var/datum/radio_frequency/radio_connection
 
 /datum/shuttle/autodock/ferry/emergency/New()
@@ -37,10 +37,11 @@
 			emergency_shuttle.departed = 1
 			var/estimated_time = round(emergency_shuttle.estimate_arrival_time()/60,1)
 
-			if (emergency_shuttle.evac)
-				priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"))
-			else
-				priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s")) //CHOMP reversion
+			if(!emergency_shuttle.admin_override_mode) // Outpost 21 edit - Only message if not admin controlled
+				if (emergency_shuttle.evac)
+					priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"))
+				else
+					priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s")) //CHOMP reversion
 	..()
 
 /datum/shuttle/autodock/ferry/emergency/can_launch(var/user)
@@ -73,7 +74,7 @@
 	if (istype(user, /obj/machinery/computer/shuttle_control/emergency))	//if we were given a command by an emergency shuttle console
 		if (emergency_shuttle.autopilot)
 			emergency_shuttle.autopilot = 0
-			to_world(span_boldnotice("Alert: The shuttle autopilot has been overridden. Launch sequence initiated!"))
+			to_chat(world, span_boldnotice("Alert: The shuttle autopilot has been overridden. Launch sequence initiated!"))
 
 	if(usr)
 		log_admin("[key_name(usr)] has overridden the departure shuttle's autopilot and activated the launch sequence.")
@@ -87,7 +88,7 @@
 	if (istype(user, /obj/machinery/computer/shuttle_control/emergency))	//if we were given a command by an emergency shuttle console
 		if (emergency_shuttle.autopilot)
 			emergency_shuttle.autopilot = 0
-			to_world(span_boldnotice("Alert: The shuttle autopilot has been overridden. Bluespace drive engaged!"))
+			to_chat(world, span_boldnotice("Alert: The shuttle autopilot has been overridden. Bluespace drive engaged!"))
 
 	if(usr)
 		log_admin("[key_name(usr)] has overridden the departure shuttle's autopilot and forced immediate launch.")
@@ -163,7 +164,7 @@
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 0)
 		return 0
 
-	if (!(access_heads in access))
+	if (!(ACCESS_HEADS in access))
 		src.visible_message("\The [src] buzzes, rejecting [ident].")
 		playsound(src, 'sound/machines/deniedbeep.ogg', 50, 0)
 		return 0

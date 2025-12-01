@@ -19497,7 +19497,6 @@
 	anchored = 1;
 	canhear_range = 1;
 	frequency = 1487;
-	icon = 'icons/obj/items.dmi';
 	icon_state = "red_phone";
 	name = "Reception Emergency Phone";
 	pixel_x = -5
@@ -23592,12 +23591,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/power/smes/buildable/power_shuttle{
-	charge = 4e+006;
-	input_attempt = 1;
-	inputting = 1;
-	outputting = 1
-	},
+/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input_base_output,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -28097,7 +28091,7 @@
 /turf/simulated/floor/tiled/steel_dirty,
 /area/surface/outpost/wall/checkpoint)
 "mkY" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /obj/machinery/firealarm{
 	pixel_y = 24
 	},
@@ -34236,7 +34230,7 @@
 /turf/simulated/floor/outdoors/grass/heavy,
 /area/surface/outside/plains/outpost)
 "paK" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30
 	},
@@ -38280,14 +38274,13 @@
 /turf/simulated/floor/tiled,
 /area/janitor)
 "qLB" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Main";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 750000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Engine - Main"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -40977,14 +40970,13 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -32
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Engine - Input";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 100
+/obj/machinery/power/smes/buildable/engine_default{
+	RCon_tag = "Engine - Input"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
@@ -55167,14 +55159,13 @@
 /turf/simulated/floor/plating,
 /area/engineering/external_lights)
 "xBC" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Outpost Lighting SMES";
-	charge = 2e+007;
-	cur_coils = 4;
-	input_attempt = 1;
-	input_level = 750000;
-	output_level = 500000
+/obj/machinery/power/smes/buildable/max_charge_max_input{
+	RCon_tag = "Outpost Lighting SMES"
 	},
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/smes_coil,
 /obj/machinery/light/small{
 	dir = 4
 	},

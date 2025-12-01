@@ -142,11 +142,11 @@ ADMIN_VERB(list_signalers, R_ADMIN, "List Signalers", "View all signalers.", ADM
 	user.holder.list_signalers()
 	//BLACKBOX_LOG_ADMIN_VERB("List Signalers")
 
-ADMIN_VERB(list_law_changes, R_ADMIN, "List Law Changes", "View all AI law changes.", ADMIN_CATEGORY_DEBUG)
+ADMIN_VERB(list_law_changes, R_ADMIN, "List Law Changes", "View all AI law changes.", ADMIN_CATEGORY_DEBUG_INVESTIGATE)
 	user.holder.list_law_changes()
 	//BLACKBOX_LOG_ADMIN_VERB("List Law Changes")
 
-ADMIN_VERB(show_manifest, R_ADMIN, "Show Manifest", "View the shift's Manifest.", ADMIN_CATEGORY_DEBUG)
+ADMIN_VERB(show_manifest, R_ADMIN, "Show Manifest", "View the shift's Manifest.", ADMIN_CATEGORY_DEBUG_GAME)
 	user.holder.show_manifest()
 	//BLACKBOX_LOG_ADMIN_VERB("Show Manifest")
 
@@ -192,6 +192,10 @@ ADMIN_VERB(unban_panel, R_BAN, "Unbanning Panel", "Unban players here.", ADMIN_C
 ADMIN_VERB(game_panel, R_ADMIN|R_SERVER|R_FUN, "Game Panel", "Look at the state of the game.", ADMIN_CATEGORY_GAME)
 	user.holder.Game()
 	feedback_add_details("admin_verb","GP") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/// Returns this client's stealthed ckey
+/client/proc/getStealthKey()
+	return GLOB.stealthminID[ckey]
 
 /client/proc/findStealthKey(txt)
 	if(txt)
@@ -278,7 +282,7 @@ ADMIN_VERB(stealth, R_STEALTH, "Stealth Mode", "Toggle stealth.", "Admin.Game")
 	set desc = "Cause an explosion of varying strength at your location."
 
 	var/turf/epicenter = mob.loc
-	var/list/choices = list("Small Bomb", "Medium Bomb", "Big Bomb", "Custom Bomb", "Cancel")
+	var/list/choices = list("Small Bomb", "Medium Bomb", "Big Bomb", "Maxcap Bomb", "SM Blast", "Custom Bomb", "Cancel")
 	var/choice = tgui_input_list(usr, "What size explosion would you like to produce?", "Explosion Choice", choices)
 	switch(choice)
 		if(null)
@@ -291,6 +295,10 @@ ADMIN_VERB(stealth, R_STEALTH, "Stealth Mode", "Toggle stealth.", "Admin.Game")
 			explosion(epicenter, 2, 3, 4, 4)
 		if("Big Bomb")
 			explosion(epicenter, 3, 5, 7, 5)
+		if("Maxcap Bomb") // Being able to test what players can legally make themselves sounds good, no?~
+			explosion(epicenter, BOMBCAP_DVSTN_RADIUS, BOMBCAP_HEAVY_RADIUS, BOMBCAP_LIGHT_RADIUS, BOMBCAP_FLASH_RADIUS)
+		if("SM Blast")
+			explosion(epicenter, 8, 16, 24, 32)
 		if("Custom Bomb")
 			var/devastation_range = tgui_input_number(usr, "Devastation range (in tiles):")
 			var/heavy_impact_range = tgui_input_number(usr, "Heavy impact range (in tiles):")
@@ -374,9 +382,11 @@ ADMIN_VERB(deadmin, R_NONE, "DeAdmin", "Shed your admin powers.", ADMIN_CATEGORY
 	//BLACKBOX_LOG_ADMIN_VERB("Deadmin")
 	feedback_add_details("admin_verb","DAS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
+	/* // Outpost 21 edit - Ghosts use camera network
 	if(isobserver(user.mob))
 		var/mob/observer/dead/our_mob = user.mob
 		our_mob.visualnet?.removeVisibility(our_mob, user)
+	*/
 
 /client/proc/toggle_log_hrefs()
 	set name = "Toggle href logging"
@@ -613,49 +623,6 @@ ADMIN_VERB(debug_statpanel, R_DEBUG, "Debug Stat Panel", "Toggles local debug of
 		return
 	SSmotiontracker.hide_all = !SSmotiontracker.hide_all
 	log_admin("[key_name(usr)] changed the motion echo visibility to [SSmotiontracker.hide_all ? "hidden" : "visible"].")
-
-// Outpost 21 edit begin - IT DA SPOOKY STATION!
-/client/proc/test_haunting_controller()
-	set name = "Test Station Haunting"
-	set desc = "Selects a haunting subsystem event to begin."
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
-	var/list/all_haunt = subtypesof(/datum/station_haunt)
-	SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
-// Outpost 21 edit end
-
-// Outpost 21 edit begin - spawning badbodies
-/client/proc/spawn_bad_body()
-	set name = "Spawn Badbody"
-	set desc = "Spawns a badbody haunting from a selectable list of the current crew."
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
-
-	var/list/checks = list()
-	for(var/client/C in GLOB.clients)
-		if(C)
-			checks["[C.ckey]"] = C
-	var/CK = tgui_input_list(usr,"Choose a client to spawn a body from","Bad body spawn",checks)
-	if(!CK)
-		return
-	var/client/spawn_client = checks[CK]
-	var/datum/event/badbody/env = new(external_use = TRUE) // The fact someone already coded a fix as external_use is a godsend
-	var/turf/T = get_turf(usr.loc)
-	if(!T)
-		return
-
-	var/mob/living/carbon/human/badbody = env.spawn_body(spawn_client,T)
-	spawn(1)
-		var/datum/component/badbody/B = badbody.AddComponent(/datum/component/badbody)
-		B.harm_body()
-		B.set_items()
-		log_debug("successfully spawned badbody [badbody.real_name] at [T.x] [T.y] [T.z].")
-		qdel(env)
-// Outpost 21 edit end
 
 /client/proc/adminorbit()
 	set category = "Fun.Event Kit"

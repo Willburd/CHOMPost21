@@ -94,7 +94,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/make_red_exit, // Outpost 21 edit - Spawn redspace exit command
 	// /client/proc/base_all_turfs,
-	/client/proc/reload_jobwhitelist, //ChompADD
+	// /client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 	)
 
@@ -217,7 +217,6 @@ var/list/admin_verbs_debug = list(
 	/client/proc/hide_verbs,			//hides all our adminverbs,
 	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs,
 	/client/proc/cmd_check_new_players,	//allows us to see every new player,
-	/datum/admins/proc/view_runtimes,
 	// /client/proc/show_gm_status, //We don't use SSgame_master yet.
 	/datum/admins/proc/set_uplink,
 	/datum/admins/proc/change_weather,
@@ -233,7 +232,7 @@ var/list/admin_verbs_debug = list(
 	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	*/
-	/client/proc/reload_jobwhitelist, //ChompADD
+	// /client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist, //ChompADD
 	/client/proc/reload_configuration //CHOMPAdd
 	)
@@ -326,7 +325,6 @@ var/list/admin_verbs_mod = list(
 	/datum/admins/proc/sendFax,
 	/datum/admins/proc/view_persistent_data,
 	/client/proc/start_vote,
-	/client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )
 
@@ -460,12 +458,18 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/test_haunting_controller, // Outpost 21 edit - IT DA SPOOKY STATION!
 	/client/proc/spawn_bad_body, // Outpost 21 edit - spawning haunted bodies
 	/client/proc/make_red_exit, // Outpost 21 edit - Spawn redspace exit command
+	/client/proc/escape_shuttle_force, // Outpost 21 edit - Moving the escape shuttle safely
+	/datum/admins/proc/lock_weather, // Outpost 21 edit - Locking weather
+	/datum/admins/proc/change_weather_temp, // Outpost 21 edit - Weather temp lock
+	/datum/admins/proc/lock_planet_light, // Outpost 21 edit - Light level lock
+	/datum/admins/proc/add_department_goal, // Outpost 21 edit - Department goals
+	/datum/admins/proc/remove_department_goal, // Outpost 21 edit - Department goals
 	// /client/proc/base_all_turfs,
 	/client/proc/modify_event_collector,
 	/client/proc/induce_malfunction,
 	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
 	*/
-	/client/proc/reload_jobwhitelist, //ChompADD
+	// /client/proc/reload_jobwhitelist, //ChompADD
 	/client/proc/reload_alienwhitelist //ChompADD
 )

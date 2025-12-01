@@ -42,6 +42,7 @@
 #define TECHWEB_NODE_ELECTRIC_WEAPONS "electric_weapons"
 #define TECHWEB_NODE_ENERGY_MANIPULATION "energy_manipulation"
 #define TECHWEB_NODE_CHEM_REFINERY "chem_refinery"
+#define TECHWEB_NODE_CHEM_ISOLATION "chem_isolation"
 #define TECHWEB_NODE_EXODRONE "exodrone"
 #define TECHWEB_NODE_EXOTIC_AMMO "exotic_ammo"
 #define TECHWEB_NODE_EXP_TOOLS "exp_tools"
@@ -151,4 +152,5 @@
 #define TECHWEB_NODE_METAMORPHOSIS_RAY "metamorphosis_ray" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_MOD_ANOMALY_SUIT "mod_anomaly_suit" //CHOMPEDIT Add - Adds Anomaly RIGs
 #define TECHWEB_NODE_MECH_SHIELDS "mech_shields" //CHOMPEDIT Add - Adds Mech Shields
+#define TECHWEB_NODE_TYRGOODS "tyrian tech" //CHOMPEDIT Add - Adds Craftable Tyr Loot
 //CHOMPEDIT End - Chomp Specific techwebs.

@@ -126,20 +126,19 @@
 	if(camera.status && !isturf(target))
 		show_tvs(target)
 		user.visible_message(span_infoplain(span_bold("[user]") + " aims [src] at [target]."), span_info("You aim [src] at [target]."))
-		if(user.machine == src)
+		if(user.check_current_machine(src))
 			show_ui(user) // refresh the UI
 
 /obj/item/tvcamera/process()
 	if(!showing)
 		return PROCESS_KILL
-	// Outpost 21 edit begin - Use the turf, or distance checks in process() fail
+
 	var/atom/A = showing.resolve()
 	if(!A || QDELETED(A))
-		show_tvs(get_turf(src))
-	var/turf/T = get_turf(A)
-	if(get_dist(get_turf(src), T) > 0) // No realtime updates
-		show_tvs(T)
-	// Outpost 21 edit end
+		show_tvs(loc)
+
+	if(get_dist(get_turf(src), get_turf(A)) > 0) // No realtime updates
+		show_tvs(loc)
 		update_feed()
 
 /obj/item/tvcamera/update_icon()
@@ -286,11 +285,8 @@
 
 /obj/item/clothing/accessory/bodycam/Moved(atom/old_loc, direction, forced = FALSE, movetime)
 	. = ..()
-	// Outpost 21 edit begin - Use the turf, or distance checks in process() fail
-	var/turf/T = get_turf(loc)
-	if(bcamera.status && T != old_loc)
-		show_bodycamera_tvs(T)
-	// Outpost 21 edit end
+	if(bcamera.status && loc != old_loc)
+		show_bodycamera_tvs(loc)
 
 /*  // Kinda unneeded, since this one is worn on the suit.
 /obj/item/clothing/accessory/bodycam/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
@@ -304,14 +300,12 @@
 /obj/item/clothing/accessory/bodycam/process()
 	if(!showing)
 		return PROCESS_KILL
-	// Outpost 21 edit begin - Use the turf, or distance checks in process() fail
+
 	var/atom/A = showing.resolve()
 	if(!A || QDELETED(A))
-		show_bodycamera_tvs(get_turf(src))
-	var/turf/T = get_turf(A)
-	if(get_dist(get_turf(src), T) > 0) // No realtime updates
-		show_bodycamera_tvs(T)
-	// Outpost 21 edit end
+		show_bodycamera_tvs(loc)
+
+	if(get_dist(get_turf(src), get_turf(A)) > 0) // No realtime updates
 		update_feed()
 
 /obj/item/clothing/accessory/bodycam/proc/update_feed()

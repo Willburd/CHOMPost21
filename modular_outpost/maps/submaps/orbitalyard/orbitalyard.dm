@@ -29,6 +29,7 @@
 #include "diona_A.dmm"
 #include "delight_A.dmm"
 #include "delight_B.dmm"
+#include "bear_A.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -139,6 +140,13 @@
 	discard_prob = 30
 	cost = 4
 
+/datum/map_template/outpost21/space/orbitalyard/bear_A
+	name = "Space bear asteroid cluster"
+	desc = "Random asteroid with a bear"
+	mappath = "modular_outpost/maps/submaps/orbitalyard/bear_A.dmm"
+	allow_duplicates = FALSE
+	cost = 15
+
 //////////////////////////////////////////////////////////////
 // Huge structures in the yard (usually one at a time...)
 /datum/map_template/outpost21/space/orbitalyard_huge/giant_asteroid_A
@@ -213,6 +221,14 @@
 	discard_prob = 10
 	cost = 55
 
+/datum/map_template/outpost21/space/orbitalyard_huge/lost_ship_C
+	name = "Lost Ship Variant C"
+	desc = "An old derelict ship"
+	mappath = "modular_outpost/maps/submaps/orbitalyard/lost_ship_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 50
+
 /datum/map_template/outpost21/space/orbitalyard_huge/alienship_A
 	name = "Abandoned Alien Vessel"
 	desc = "An old derelict ship"
@@ -245,6 +261,13 @@
 	discard_prob = 55
 	cost = 80
 
+/datum/map_template/outpost21/space/orbitalyard_huge/asteroid_maze_A
+	name = "Asteroid Maze A"
+	desc = "Theres a hole in the side, I wonder where it leads?"
+	mappath = "modular_outpost/maps/submaps/orbitalyard/asteroid_maze_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 40
+	cost = 60
 //////////////////////////////////////////////////////////////
 // Area definitions
 /area/submap/outpost21/asteroid_generic

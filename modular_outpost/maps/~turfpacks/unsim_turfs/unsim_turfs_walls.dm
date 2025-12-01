@@ -215,6 +215,11 @@
 
 /turf/unsimulated/wall/r_wall
 	icon_state = "rgeneric"
+	icon = 'icons/turf/wall_masks.dmi'
+
+/turf/unsimulated/wall/steel
+	icon_state = "generic"
+	icon = 'icons/turf/wall_masks.dmi'
 
 /turf/unsimulated/wall/shull
 	icon_state = "hull-steel"

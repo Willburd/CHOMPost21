@@ -66,6 +66,8 @@
 
 // connect the machine to a powernet if a node cable is present on the turf
 /obj/machinery/power/proc/connect_to_network()
+	if(SSmachines.powernet_is_defered()) return 0;
+
 	var/turf/T = src.loc
 	if(!T || !istype(T))
 		return 0
@@ -311,7 +313,7 @@
 			if(G.siemens_coefficient == 0)	return 0		//to avoid spamming with insulated glvoes on
 
 //Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
-		for(var/datum/reagent/R in M.reagents.reagent_list) // Outpost 21 edit - Removed phorochem
+		for(var/datum/reagent/R in M.reagents.reagent_list) // Outpost 21 edit(port) - Removed phorochem
 			if(R.id == REAGENT_ID_FULGURACIN)
 				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
 				return 0 //no shock for you

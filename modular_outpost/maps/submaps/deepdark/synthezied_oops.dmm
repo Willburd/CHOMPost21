@@ -44,14 +44,14 @@
 /obj/item/clothing/mask/breath{
 	pixel_x = 5
 	},
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "W" = (
 /obj/item/rms,
 /obj/item/stack/material/supermatter,
-/turf/simulated/mineral/floor/turfpack/muriki{
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)

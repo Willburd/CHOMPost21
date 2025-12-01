@@ -10,7 +10,7 @@ var/list/all_maps = list()
 		else
 			M = new type
 		if(!M.path)
-			log_debug("Map '[M]' does not have a defined path, not adding to map list!")
+			log_world("## DEBUG: Map '[M]' does not have a defined path, not adding to map list!")
 		else
 			all_maps[M.path] = M
 	return 1
@@ -82,7 +82,7 @@ var/list/all_maps = list()
 	var/list/mining_outpost_z = list()
 	//VOREStation Addition End
 
-	// Outpost 21 edit begin - custom zlevel lists
+	// Outpost 21 edit(port) begin - custom zlevel lists
 	var/static/list/event_levels = list() // Events happen on these levels, even if not part of station!
 	var/static/list/forced_airmix_levels = list() // z-levels where airmix slowly resets if outdoors, prevents saturating the atmosphere
 	var/static/list/deadly_fall_levels = list() // List of levels where mapping or other similar devices might work fully
@@ -90,6 +90,7 @@ var/list/all_maps = list()
 
 	var/station_name  = "BAD Station"
 	var/station_short = "Baddy"
+	var/facility_type = "facility"
 	var/dock_name	 = "THE PirateBay"
 	var/dock_type	 = "station"	//VOREStation Edit - for a list of valid types see the switch block in air_traffic.dm at line 148
 	var/boss_name	 = "Captain Roger"
@@ -143,7 +144,7 @@ var/list/all_maps = list()
 
 	var/list/planet_datums_to_make = list() // Types of `/datum/planet`s that will be instantiated by SSPlanets.
 
-	// Outpost 21 edit begin - Custom ores per map
+	// Outpost 21 edit(port) begin - Custom ores per map
 	var/list/rare_ore_levels = list()
 	var/common_ores = list(ORE_MARBLE = 3,/* ORE_QUARTZ = 10, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 15*/, ORE_URANIUM = 10, ORE_PLATINUM = 10, ORE_HEMATITE = 70, ORE_RUTILE = 15, ORE_CARBON = 70, ORE_DIAMOND = 2, ORE_GOLD = 10, ORE_SILVER = 10, ORE_PHORON = 20, ORE_LEAD = 3,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 1/*, ORE_PAINITE = 1*/)
 	var/rare_ores = list(ORE_MARBLE = 5,/* ORE_QUARTZ = 15, ORE_COPPER = 10, ORE_TIN = 5, ORE_BAUXITE = 5*/, ORE_URANIUM = 15, ORE_PLATINUM = 20, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 15, ORE_DIAMOND = 3, ORE_GOLD = 15, ORE_SILVER = 15, ORE_PHORON = 25, ORE_LEAD = 5,/* ORE_VOPAL = 1,*/ ORE_VERDANTIUM = 2/*, ORE_PAINITE = 1*/)
@@ -164,7 +165,7 @@ var/list/all_maps = list()
 		persist_levels = station_levels.Copy()
 	if(!mappable_levels?.len)
 		mappable_levels = station_levels.Copy()
-	// Outpost 21 edit begin - Event levels auto-fill as station levels if non exist
+	// Outpost 21 edit(port) begin - Event levels auto-fill as station levels if non exist
 	if(!event_levels?.len)
 		event_levels = station_levels.Copy()
 	// Outpost 21 edit end
@@ -297,20 +298,20 @@ var/list/all_maps = list()
 // This list needs to be purged but people insist on adding more cruft to the radio.
 /datum/map/proc/default_internal_channels()
 	return list(
-		num2text(PUB_FREQ)   = list(),
-		num2text(AI_FREQ)	= list(access_synth),
-		num2text(ENT_FREQ)   = list(),
-		num2text(ERT_FREQ)   = list(access_cent_specops),
-		num2text(COMM_FREQ)  = list(access_heads),
-		num2text(ENG_FREQ)   = list(access_engine_equip, access_atmospherics),
-		num2text(MED_FREQ)   = list(access_medical_equip),
-		num2text(MED_I_FREQ) = list(access_medical_equip),
-		num2text(BDCM_FREQ)  = list(access_security), // CHOMPEdit
-		num2text(SEC_FREQ)   = list(access_security),
-		num2text(SEC_I_FREQ) = list(access_security),
-		num2text(SCI_FREQ)   = list(access_tox,access_robotics,access_xenobiology),
-		num2text(SUP_FREQ)   = list(access_cargo),
-		num2text(SRV_FREQ)   = list(access_janitor, access_hydroponics),
+		num2text(PUB_FREQ)	= list(),
+		num2text(AI_FREQ)	= list(ACCESS_SYNTH),
+		num2text(ENT_FREQ)	= list(),
+		num2text(ERT_FREQ)	= list(ACCESS_CENT_SPECOPS),
+		num2text(COMM_FREQ)	= list(ACCESS_HEADS),
+		num2text(ENG_FREQ)	= list(ACCESS_ENGINE_EQUIP, ACCESS_ATMOSPHERICS),
+		num2text(MED_FREQ)	= list(ACCESS_MEDICAL_EQUIP),
+		num2text(MED_I_FREQ)= list(ACCESS_MEDICAL_EQUIP),
+		num2text(BDCM_FREQ)	= list(ACCESS_SECURITY), // CHOMPAdd
+		num2text(SEC_FREQ)	= list(ACCESS_SECURITY),
+		num2text(SEC_I_FREQ)= list(ACCESS_SECURITY),
+		num2text(SCI_FREQ)	= list(ACCESS_TOX,ACCESS_ROBOTICS,ACCESS_XENOBIOLOGY),
+		num2text(SUP_FREQ)	= list(ACCESS_CARGO),
+		num2text(SRV_FREQ)	= list(ACCESS_JANITOR, ACCESS_HYDROPONICS),
 	)
 
 /datum/map/proc/get_skybox_datum(z)
@@ -367,11 +368,13 @@ var/list/all_maps = list()
 		map.accessible_z_levels["[z]"] = transit_chance
 	if(flags & MAP_LEVEL_MAPPABLE)
 		map.mappable_levels |= z
-	// Outpost 21 edit begin - Event levels and auto-clear
+	// Outpost 21 edit(port) begin - Event levels and auto-clear
 	if(flags & MAP_LEVEL_EVENTS)
 		map.event_levels += z
 	if(flags & MAP_LEVEL_AIRMIX_CLEANS)
 		map.forced_airmix_levels += z
+	if(flags & MAP_LEVEL_EXTREMEFALL)
+		map.deadly_fall_levels += z
 	// Outpost 21 edit end
 	// Holomaps
 	// Auto-center the map if needed (Guess based on maxx/maxy)

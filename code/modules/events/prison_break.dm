@@ -37,7 +37,7 @@
 
 /datum/event/prison_break/announce()
 	if(areas && areas.len > 0)
-		command_announcement.Announce("[pick("Gr3y.T1d3 virus","Malignant trojan")] detected in [station_name()] [(eventDept == "Security")? "imprisonment":"containment"] subroutines. Secure any compromised areas immediately. Station AI involvement is recommended.", "[eventDept] Alert")
+		command_announcement.Announce("[pick("Gr3y.T1d3 virus","Malignant trojan")] detected in [station_name()] [(eventDept == "Security")? "imprisonment":"containment"] subroutines. Secure any compromised areas immediately. Involvement of [using_map.facility_type] AI is recommended.", "[eventDept] Alert")
 
 
 /datum/event/prison_break/start()
@@ -54,7 +54,7 @@
 			to_chat(A, span_danger("Malicious program detected in the [english_list(areaName)] lighting and airlock control systems by [my_department]."))
 
 	else
-		to_world_log("ERROR: Could not initate grey-tide. Unable to find suitable containment area.")
+		log_world("ERROR: Could not initate grey-tide. Unable to find suitable containment area.")
 		kill()
 
 

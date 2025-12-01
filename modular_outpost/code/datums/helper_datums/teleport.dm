@@ -13,8 +13,8 @@
 		var/turf/T = get_turf(user)
 		user.drop_from_inventory(bag_holding,T)
 		user.drop_from_inventory(stored_item,T)
-		do_teleport(bag_holding, locate(rand(5, world.maxx - 5), rand(5, world.maxy -5), user.z), 0, TRUE,local = FALSE, bohsafe = TRUE)
-		do_teleport(stored_item, locate(rand(5, world.maxx - 5), rand(5, world.maxy -5), user.z), 0, TRUE,local = FALSE, bohsafe = TRUE)
+		do_teleport(bag_holding, locate(rand(5, world.maxx - 5), rand(5, world.maxy -5), user.z), 0, TRUE, forced = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
+		do_teleport(stored_item, locate(rand(5, world.maxx - 5), rand(5, world.maxy -5), user.z), 0, TRUE, forced = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
 		return
 
 	if(prob(10))
@@ -45,19 +45,19 @@
 
 		var/turf/left_dest = locate(rand(5, world.maxx - 5), rand(5, world.maxy -5), user.z)
 		var/turf/right_dest = locate(rand(5, world.maxx - 5), rand(5, world.maxy -5), user.z)
-		do_teleport(bag_holding, left_dest, 0, TRUE, local = FALSE,bohsafe = TRUE)
-		do_teleport(stored_item, right_dest, 0, TRUE, local = FALSE,bohsafe = TRUE)
+		do_teleport(bag_holding, left_dest, 0, TRUE, forced = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
+		do_teleport(stored_item, right_dest, 0, TRUE, forced = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
 
 		var/obj/item/organ/external/left_arm = H.get_organ(BP_L_ARM)
 		if(left_arm)
 			left_arm.removed(H)
 			new /obj/effect/gibspawner/human(H.loc,H.dna,H.species.flesh_color,H.species.blood_color)
-			do_teleport(left_arm, left_dest, 0, TRUE,local = FALSE,bohsafe = TRUE)
+			do_teleport(left_arm, left_dest, 0, TRUE, forced = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
 		var/obj/item/organ/external/right_arm = H.get_organ(BP_R_ARM)
 		if(right_arm)
 			right_arm.removed(H)
 			new /obj/effect/gibspawner/human(H.loc,H.dna,H.species.flesh_color,H.species.blood_color)
-			do_teleport(right_arm, right_arm, 0, TRUE,local = FALSE,bohsafe = TRUE)
+			do_teleport(right_arm, right_arm, 0, TRUE, forced = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
 		if(left_arm || right_arm)
 			H.emote("scream")
 		return

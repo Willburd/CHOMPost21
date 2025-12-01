@@ -2,7 +2,6 @@
 	name = "ammolathe"
 	desc = "An autolathe that produces ammunition using metal and glass."
 	hacked = 1
-	var/stun_only = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /obj/machinery/autolathe/armory/tgui_static_data(mob/user)
 	var/list/data = ..()
@@ -31,10 +30,3 @@
 	data["categories"] = categories
 
 	return data
-
-// Outpost 21 edit begin - stunonly range autolathe varient
-/obj/machinery/autolathe/armory/stun_only
-	name = "training ammolathe"
-	desc = "An autolathe that produces training ammunition using metal and glass."
-	stun_only = TRUE
-// Outpost 21 edit end

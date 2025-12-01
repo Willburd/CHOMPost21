@@ -22,14 +22,14 @@ if command -v rg >/dev/null 2>&1; then
 		pcre2_support=0
 	fi
 	code_files="code/**/**.dm modular_outpost/code/**/**.dm" # Outpost 21 edit - Modular code
-	map_files="maps/**/**.dmm modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
+	map_files="modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
 	# shuttle_map_files="_maps/shuttles/**.dmm"
 	code_x_515="code/**/!(__byond_version_compat).dm"
 else
 	pcre2_support=0
 	grep=grep
 	code_files="-r --include=code/**/**.dm --include=modular_outpost/code/**/**.dm" # Outpost 21 edit - Modular code
-	map_files="-r --include=maps/**/**.dmm --include=modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
+	map_files="-r --include=modular_outpost/maps/**/**.dmm" # Outpost 21 edit - Modular maps
 	# shuttle_map_files="-r --include=_maps/shuttles/**.dmm"
 	code_x_515="-r --include=code/**/!(__byond_version_compat).dm"
 fi;
@@ -61,6 +61,13 @@ part "iconstate tags"
 if grep -P '^\ttag = \"icon' $map_files;	then
 	echo
 	echo -e "${RED}ERROR: tag vars from icon state generation detected in maps, please remove them.${NC}"
+	FAILED=1
+fi;
+
+part "suspicious symbols in maps"
+if grep -P '[<>]' $map_files;	then
+	echo
+	echo -e "${RED}ERROR: potential html code in maps detected.${NC}"
 	FAILED=1
 fi;
 
@@ -133,7 +140,7 @@ part "improperly pathed static lists"
 if $grep -i 'var/list/static/.*' $code_files; then
 	echo
 	echo -e "${RED}ERROR: Found incorrect static list definition 'var/list/static/', it should be 'var/static/list/' instead.${NC}"
-	st=1
+	FAILED=1
 fi;
 
 part "changelog"
@@ -162,22 +169,23 @@ if ls -1 tgui/**/*.jsx 2>/dev/null; then
 fi;
 
 part "balloon_alert sanity"
-if $grep 'balloon_alert\(".*"\)' $code_files; then
+if $grep 'balloon_alert\(".*"' $code_files; then
 	echo
 	echo -e "${RED}ERROR: Found a balloon alert with improper arguments.${NC}"
 	FAILED=1
 fi;
 
-if $grep 'balloon_alert(.*span_)' $code_files; then
+part "balloon_alert span check"
+if $grep 'balloon_alert\(.*[Ss][Pp][Aa][Nn]' $code_files; then
 	echo
 	echo -e "${RED}ERROR: Balloon alerts should never contain spans.${NC}"
 	FAILED=1
 fi;
 
 part "balloon_alert idiomatic usage"
-if $grep 'balloon_alert\(.*?, ?"[A-Z]' $code_files; then
+if $grep 'balloon_alert\(.*?,\s*"[\sA-Z]' $code_files; then
 	echo
-	echo -e "${RED}ERROR: Balloon alerts should not start with capital letters. This includes text like 'AI'. If this is a false positive, wrap the text in UNLINT().${NC}"
+	echo -e "${RED}ERROR: Balloon alerts should not start with capital letters or whitespace. This includes text like 'AI'. If this is a false positive, wrap the text in UNLINT().${NC}"
 	FAILED=1
 fi;
 
@@ -220,6 +228,13 @@ fi;
 
 if [ "$pcre2_support" -eq 1 ]; then
 	section "regexes requiring PCRE2"
+
+    part "deoptimization of range/view with as anything"
+	if $grep -PU 'var\/(?!atom).* as anything in o?(range|view)\(' $code_files; then
+		echo
+		echo -e "${RED}ERROR: range(), orange(), view(), and oview() perform significantly worse with as anything.${NC}"
+		FAILED=1
+	fi;
 
 	part "empty variable values"
 	if $grep -PU '{\n\t},' $map_files; then

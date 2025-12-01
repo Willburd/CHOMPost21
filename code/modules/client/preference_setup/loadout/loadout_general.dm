@@ -90,6 +90,8 @@
 	blacklisted_types += /obj/item/toy/plushie/teshari
 	blacklisted_types += subtypesof(/obj/item/toy/plushie/teshari)
 	// Outpost 21 edit end
+	blacklisted_types += /obj/item/toy/plushie/dragon/gold_east
+	blacklisted_types += /obj/item/toy/plushie/customizable
 	for(var/obj/item/toy/plushie/plushie_type as anything in subtypesof(/obj/item/toy/plushie) - blacklisted_types)
 		plushies[initial(plushie_type.name)] = plushie_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(plushies))

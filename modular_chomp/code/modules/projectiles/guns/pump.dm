@@ -4,7 +4,6 @@
 /obj/item/gun/energy/locked/frontier/shotgun
 	name = "frontier shotgun"
 	desc = "A much larger, heavier weapon than the typical frontier-type weapons. This one has a safety interlock that prevents firing while in proximity to the facility."
-	icon = 'icons/obj/gun_vr.dmi'
 	icon_state = "oldphaser" //note to self, make a unquie more fitting sprite at some point.
 	item_state = "sniper"
 	item_state_slots = list(slot_r_hand_str = "lsniper", slot_l_hand_str = "lsniper")
@@ -41,11 +40,3 @@
 	muzzle_type = /obj/effect/projectile/muzzle/phaser/heavy
 	tracer_type = /obj/effect/projectile/tracer/phaser/heavy
 	impact_type = /obj/effect/projectile/impact/phaser/heavy
-
-// Outpost 21 edit begin - Unlocked varient
-/obj/item/gun/energy/locked/frontier/shotgun/unlocked
-	desc = "A much larger, heavier weapon than the typical frontier-type weapons."
-	req_access = newlist() //for toggling safety
-	locked = 0
-	lockable = 0
-// Outpost 21 edit end

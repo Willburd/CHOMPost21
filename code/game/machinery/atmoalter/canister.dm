@@ -63,6 +63,12 @@
 	canister_color = "black"
 	can_label = 0
 
+/obj/machinery/portable_atmospherics/canister/methane
+	name = "Canister: \[CH4\]"
+	icon_state = "green"
+	canister_color = "green"
+	can_label = 0
+
 /obj/machinery/portable_atmospherics/canister/air
 	name = "Canister \[Air\]"
 	icon_state = "grey"
@@ -97,6 +103,10 @@
 	icon_state = "redws"
 	canister_color = "redws"
 
+/obj/machinery/portable_atmospherics/canister/empty/methane
+	name = "Canister \[CH4\]"
+	icon_state = "green"
+	canister_color = "green"
 
 
 
@@ -257,7 +267,7 @@ update_flag
 			to_chat(user, span_warning("\The [src]'s internal pressure is too high! Empty the canister before attempting to weld it apart."))
 			return
 		playsound(src, WT.usesound, 50, 1)
-		if(do_after(user, 20 * WT.toolspeed))
+		if(do_after(user, 2 SECONDS * WT.toolspeed, target = src))
 			if(!src || !WT.isOn()) return
 			to_chat(user, span_notice("You deconstruct the [src]."))
 			new /obj/item/stack/material/steel( src.loc, 10)
@@ -331,7 +341,7 @@ update_flag
 	switch(action)
 		if("relabel")
 			if(can_label)
-				// Outpost 21 edit - Added CH4 and PN20
+				// Outpost 21 edit(port) - Added PN20
 				var/list/colors = list(\
 					"\[N2O\]" = "redws", \
 					"\[N2\]" = "red", \
@@ -441,6 +451,10 @@ update_flag
 	air_contents.adjust_gas(GAS_CO2, MolesForPressure())
 	update_icon()
 
+/obj/machinery/portable_atmospherics/canister/methane/Initialize(mapload)
+	. = ..()
+	air_contents.adjust_gas(GAS_CH4, MolesForPressure())
+	update_icon()
 
 /obj/machinery/portable_atmospherics/canister/air/Initialize(mapload)
 	. = ..()

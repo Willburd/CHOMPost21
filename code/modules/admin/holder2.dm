@@ -31,6 +31,7 @@ GLOBAL_PROTECT(href_token)
 
 	var/datum/filter_editor/filteriffic
 	var/datum/particle_editor/particle_test
+	var/datum/whitelist_editor/whitelist_editor
 
 	/// A lazylist of tagged datums, for quick reference with the View Tags verb
 	var/list/tagged_datums
@@ -268,7 +269,7 @@ you will have to do something like if(client.rights & R_ADMIN) yourself.
 		var/client/C = usr.client
 		if(!C)
 			// CRASH("No client for HrefToken()!") //Chomp EDIT - this seems be to encountered and we don't want this to crash
-			log_debug("Attempted to retrieve a HrefToken of an entity with no client.") //Chomp EDIT
+			log_runtime("Attempted to retrieve a HrefToken of an entity with no client.") //Chomp EDIT
 			return 0 //Chomp EDIT
 		var/datum/admins/holder = C.holder
 		if(holder)

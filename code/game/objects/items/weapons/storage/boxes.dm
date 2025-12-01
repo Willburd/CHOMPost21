@@ -78,7 +78,8 @@
 	starts_with = list(
 		/obj/item/tool/prybar/red,
 		/obj/item/clothing/glasses/goggles,
-		/obj/item/clothing/mask/breath
+		/obj/item/clothing/mask/breath,
+		/obj/item/radio/start_off
 	)
 
 /obj/item/storage/box/survival/synth
@@ -87,7 +88,8 @@
 	icon_state = "survival_synth"
 	starts_with = list(
 		/obj/item/tool/prybar/red,
-		/obj/item/clothing/glasses/goggles
+		/obj/item/clothing/glasses/goggles,
+		/obj/item/radio/start_off
 	)
 
 /obj/item/storage/box/survival/comp
@@ -250,10 +252,10 @@
 	desc = "Box full of scum-bag tracking utensils."
 	icon_state = "implant"
 	starts_with = list(
-		/obj/item/implantcase/tracking = 4,
+		/obj/item/implantcase/tracking = 5, // Outpost 21 edit - Give an extra
 		/obj/item/implanter,
 		/obj/item/implantpad,
-		/obj/item/locator
+		///obj/item/locator // Outpost 21 edit - Largely pointless with pda
 	)
 
 /obj/item/storage/box/chemimp
@@ -318,7 +320,7 @@
 	can_hold = list(/obj/item/reagent_containers/food/snacks/monkeycube)
 	starts_with = list(/obj/item/reagent_containers/food/snacks/monkeycube/wrapped = 4)
 
-// Outpost 21 edit begin - Soaking monkey cubes
+// Outpost 21 edit(port) begin - Soaking monkey cubes
 /obj/item/storage/box/monkeycubes/proc/soaked()
 	for(var/A in contents)
 		var/obj/item/reagent_containers/food/snacks/monkeycube/C = A
@@ -471,19 +473,27 @@
 	use_to_pickup = TRUE // for picking up broken bulbs, not that most people will try
 
 /obj/item/storage/box/lights/bulbs
-	starts_with = list(/obj/item/light/bulb = 24)
+	starts_with = list(
+		/obj/item/light/bulb = 20,
+		/obj/item/light/bulb/large = 4
+	)
 
 /obj/item/storage/box/lights/tubes
 	name = "box of replacement tubes"
 	icon_state = "lighttube"
-	starts_with = list(/obj/item/light/tube = 24)
+	starts_with = list(
+		/obj/item/light/tube = 20,
+		/obj/item/light/tube/large = 4
+	)
 
 /obj/item/storage/box/lights/mixed
 	name = "box of replacement lights"
 	icon_state = "lightmixed"
 	starts_with = list(
-		/obj/item/light/tube = 16,
-		/obj/item/light/bulb = 8
+		/obj/item/light/tube = 12,
+		/obj/item/light/tube/large = 2,
+		/obj/item/light/bulb = 8,
+		/obj/item/light/bulb/large = 2
 	)
 
 /obj/item/storage/box/freezer

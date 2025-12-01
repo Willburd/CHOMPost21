@@ -20,8 +20,3 @@
 #define MURIKI_SET_ATMOS	nitrogen=MURIKI_MOL_N2;oxygen=MURIKI_MOL_O2;carbon_dioxide=MURIKI_MOL_CO2;phoron=MURIKI_MOL_PHORON;temperature=MURIKI_AVG_TEMP
 #define MURIKI_TURF_CREATE(x)	x/muriki/nitrogen=MURIKI_MOL_N2;x/muriki/oxygen=MURIKI_MOL_O2;x/muriki/carbon_dioxide=MURIKI_MOL_CO2;x/muriki/phoron=MURIKI_MOL_PHORON;x/muriki/temperature=MURIKI_AVG_TEMP;x/muriki/outdoors=TRUE;x/muriki/update_graphic(list/graphic_add = null, list/graphic_remove = null) return 0
 #define MURIKI_TURF_CREATE_UN(x)	x/muriki/nitrogen=MURIKI_MOL_N2;x/muriki/oxygen=MURIKI_MOL_O2;x/muriki/carbon_dioxide=MURIKI_MOL_CO2;x/muriki/phoron=MURIKI_MOL_PHORON;x/muriki/temperature=MURIKI_AVG_TEMP
-
-/turf/simulated/floor/reinforced/methane
-	oxygen = 0
-	nitrogen = 0
-	methane = ATMOSTANK_METHANE

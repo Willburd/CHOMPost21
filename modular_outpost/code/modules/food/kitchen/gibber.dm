@@ -7,7 +7,7 @@
 	density = TRUE
 	anchored = TRUE
 	unacidable = TRUE
-	req_access = list(access_kitchen,access_morgue)
+	req_access = list(ACCESS_KITCHEN,ACCESS_MORGUE)
 
 	var/operating = 0 //Is it on?
 	var/dirty = 0 // Does it need cleaning?
@@ -30,8 +30,7 @@
 
 /obj/machinery/gibber/autogibber/Initialize(mapload)
 	. = ..()
-	add_overlay("grjam") // Outpost 21 edit - overlay runtime fix
-	// outpost 21 edit - add gibber from above detection
+	add_overlay("grjam") // overlay runtime fix
 	var/obj/machinery/mineral/input/input_obj = locate( /obj/machinery/mineral/input, get_zstep(src, UP))
 	if(!input_obj)
 		for(var/i in GLOB.cardinal)
@@ -48,8 +47,14 @@
 			// keep gib throw dir default
 			qdel(input_obj)
 
-	if(!input_plate)
-		log_misc("a [src] didn't find an input plate.")
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	// Upstream doesn't like our gibber setup on autosleever. Fix that here.
+	for(var/i in GLOB.cardinal)
+		var/S = locate( /obj/machinery/transhuman/autoresleever, get_step(src.loc, i) )
+		if(S)
+			return INITIALIZE_HINT_QDEL
+	#endif
+
 
 /obj/machinery/gibber/Destroy()
 	occupant = null
@@ -177,7 +182,7 @@
 
 	user.visible_message("<span class='danger'>[user] starts to put [victim] into the gibber!</span>")
 	src.add_fingerprint(user)
-	if(do_after(user, 30) && victim.Adjacent(src) && user.Adjacent(src) && victim.Adjacent(user) && !occupant)
+	if(do_after(user, 3 SECONDS, target = src) && victim.Adjacent(src) && user.Adjacent(src) && victim.Adjacent(user) && !occupant)
 		user.visible_message("<span class='danger'>[user] stuffs [victim] into the gibber!</span>")
 		if(victim.client)
 			victim.client.perspective = EYE_PERSPECTIVE
@@ -353,7 +358,7 @@
 					processtobiomass = TRUE
 		if(processtobiomass)
 			// process and destroy
-			thing.Destroy()
+			qdel(thing)
 		else
 			thing.forceMove( src.loc) // Drop it onto the turf for throwing.
 			thing.throw_at( get_edge_target_turf(thing.loc, gib_throw_dir),rand(1,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.
@@ -362,7 +367,6 @@
 	spawn(12)
 		for (var/mob/M in contents)
 			M.forceMove( src.loc) // Drop it onto the turf for throwing.
-			M.reset_view(null)
 			visible_message("<span class='notice'>\The [M] crawls out of the [src] unharmed!</span>")
 
 /obj/machinery/gibber/proc/updatesleever()

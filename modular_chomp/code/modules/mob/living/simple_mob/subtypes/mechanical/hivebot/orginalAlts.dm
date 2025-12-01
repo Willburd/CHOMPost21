@@ -16,128 +16,36 @@
 	projectiletype = /obj/item/projectile/arc //Polaris, don't make the same mob twice.
 
 /mob/living/simple_mob/mechanical/hivebot/tyr
-	name = "terraforming hivebot"
+	name = "tyrian hivebot"
 	maxHealth = 0.5 LASERS_TO_KILL // 20 hp
 	health = 0.5 LASERS_TO_KILL
 	icon = 'modular_chomp/icons/mob/hivebot.dmi'
-	desc = "A robot with strange gardening looking gear."
-	loot_list = list(/obj/structure/foamedmetal = 100
-			)
 	pass_flags = PASSTABLE
 	hovering = TRUE
-	movement_cooldown = -3
-	icon_state = "janitor"
-	icon_living = "janitor"
+	movement_cooldown = 1
 	faction = FACTION_TYR
+	melee_damage_lower = 12
+	melee_damage_upper = 12
+	icon_state = "orange"
+	icon_living = "orange"
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr
-	name = "ai control center"
-	desc = "A large, very important looking ai. Plating appears similiar to albative plating."
-	icon_state = "powertower"
-	icon_living = "powertower"
-	faction = FACTION_TYR
-	movement_cooldown = 10
-	size_multiplier = 2
-	maxHealth = 500
-	health = 500
-	wreckage = /obj/item/prop/tyrlore/reddisc
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases
-	anchored = 1
-	armor = list(melee = 40, bullet = 40, laser = 80, energy = 80, bomb = 50, bio = 100, rad = 100)
+/mob/living/simple_mob/mechanical/hivebot/tyr/swarm
+	maxHealth = 3
+	health = 3
+	icon_state = "bright_green"
+	icon_living = "bright_green"
 
-/datum/ai_holder/simple_mob/intentional/three_phases/nomove/walk_to_destination()
-	return
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/do_special_attack(atom/A)
-	. = TRUE // So we don't fire a bolt as well.
-	if(attackcycle == 1)
-		say("Prepare. Area. Cleanse. Radiation.")
-		specialattackprojectile = /obj/item/projectile/beam/gamma
-		addtimer(CALLBACK(src, PROC_REF(giant_burst), A, 2), 6 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, 3, 15), 1 SECOND, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 3)
-		specialattackprojectile = /obj/item/projectile/energy/spikeenergy_ball/boss
-		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, 1, 0.5 SECONDS), 1 SECOND, TIMER_DELETE_ME)
-		attackcycle = 0
-
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/tyr/proc/summon_janitor(atom/target, var/amount, var/next_cycle)
-	if(!target)
-		return
-	new /mob/living/simple_mob/mechanical/hivebot/tyr(src.loc)
-	amount--
-	if(amount > 0)
-		addtimer(CALLBACK(src, PROC_REF(summon_janitor), target, amount, next_cycle), 0.5 SECONDS, TIMER_DELETE_ME)
-	else
-		attackcycle = next_cycle
+/mob/living/simple_mob/mechanical/hivebot/tyr/meteor
+	maxHealth = 2 LASERS_TO_KILL // 80 hp
+	health = 2 LASERS_TO_KILL
+	ai_holder_type = /datum/ai_holder/hostile/ranged/robust
+	projectiletype = /obj/item/projectile/energy/agate_lighting/fast
 
 /obj/item/projectile/energy/spikeenergy_ball/boss
 	damage = 40
 	armor_penetration = 60
 	speed = 10
 	crawl_destroy = TRUE
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower
-	name = "ai control center"
-	desc = "A large, very important looking ai."
-	icon_state = "bluetower"
-	icon_living = "bluetower"
-	faction = FACTION_HIVEBOT
-	movement_cooldown = 10
-	size_multiplier = 2
-	maxHealth = 500
-	health = 500
-	wreckage = /obj/structure/loot_pile/surface/alien/engineering
-	ai_holder_type = /datum/ai_holder/simple_mob/intentional/three_phases/nomove
-	anchored = 1
-	armor = list(melee = 60, bullet = 60, laser = 60, energy = 60, bomb = 50, bio = 100, rad = 100)
-	loot_list = list(/obj/item/prop/alien/junk = 100,
-		/obj/item/multitool/alien = 30,
-		/obj/item/stack/cable_coil/alien = 30,
-		/obj/item/tool/crowbar/alien = 30,
-		/obj/item/tool/screwdriver/alien = 30,
-		/obj/item/weldingtool/alien = 30,
-		/obj/item/tool/wirecutters/alien = 30,
-		/obj/item/tool/wrench/alien = 30,
-		/obj/item/cell/device/weapon/recharge/alien = 40,
-		/obj/item/prop/nanoweave/terraformers = 50,
-		/obj/item/prop/nanoweave/cyan = 50,
-		/obj/item/prop/nanoweave/lime = 50,
-		/obj/item/perfect_tele/alien = 100
-			)
-
-/mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower/do_special_attack(atom/A)
-	. = TRUE // So we don't fire a bolt as well.
-	var/rng_cycle
-	if(attackcycle == 1)
-		specialattackprojectile = /obj/item/projectile/beam/burstlaser
-		rng_cycle = rand(1,4)
-		say("PROTOCOL: CROSS X.")
-		addtimer(CALLBACK(src, PROC_REF(star_burst), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 2)
-		specialattackprojectile = /obj/item/projectile/energy/wallbreaker/boss
-		rng_cycle = rand(1,4)
-		say("PROTOCOL: PRECISION. SWEEP.")
-		addtimer(CALLBACK(src, PROC_REF(dual_spin), A, rng_cycle, 25), 2 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 3)
-		specialattackprojectile = /obj/item/projectile/energy/lightingspark/nanoweave
-		rng_cycle = rand(1,4)
-		say("PROTOCOL: DISCHARGE.")
-		addtimer(CALLBACK(src, PROC_REF(quad_random_firing), A, 12, rng_cycle, 15), 1 SECOND, TIMER_DELETE_ME)
-		attackcycle = 0
-	else if(attackcycle == 4)
-		specialattackprojectile = /obj/item/projectile/arc/explosive_rocket/big
-		rng_cycle = rand(1,4)
-		Beam(A, icon_state = "r_beam", time = 1 SECOND, maxdistance = INFINITY)
-		say("PROTOCOL: MISSILE.")
-		addtimer(CALLBACK(src, PROC_REF(singleproj), A, rng_cycle), 2 SECONDS, TIMER_DELETE_ME)
-		attackcycle = 0
 
 
 /mob/living/simple_mob/mechanical/hivebot/eclipse

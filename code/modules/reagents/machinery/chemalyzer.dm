@@ -13,8 +13,13 @@
 	use_power = TRUE
 	idle_power_usage = 20
 	clicksound = "button"
+	circuit = /obj/item/circuitboard/chemical_analyzer
 	var/analyzing = FALSE
 	var/list/found_reagents = list()
+
+/obj/machinery/chemical_analyzer/Initialize(mapload)
+	. = ..()
+	default_apply_parts()
 
 /obj/machinery/chemical_analyzer/update_icon()
 	icon_state = "chem_analyzer[analyzing ? "-working":""]"
@@ -89,7 +94,6 @@
 		subdata["cooling_mod"] = R.coolant_modifier
 		if(R.id in get_addictive_reagents(ADDICT_ALL))
 			subdata["addictive"] = TRUE
-		// Outpost 21 edit begin - Our chem data
 		subdata["industrial_use"] = R.industrial_use
 		subdata["supply_points"] = R.supply_conversion_value ? R.supply_conversion_value : 0
 		var/value = R.supply_conversion_value * REAGENTS_PER_SHEET * SSsupply.points_per_money
@@ -97,7 +101,6 @@
 		subdata["market_price"] = value
 		subdata["sintering"] = SSinternal_wiki.assemble_sintering(GLOB.reagent_sheets[R.id])
 		subdata["overdose"] = R.overdose
-		// Outpost 21 edit end
 		subdata["flavor"] = R.taste_description
 		subdata["allergen"] = SSinternal_wiki.assemble_allergens(R.allergen_type)
 		subdata["beakerAmount"] = found_reagents[ID]

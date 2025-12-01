@@ -12,7 +12,7 @@
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
 /datum/reagent/hemocyanin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(M.species.poison_type != GAS_O2) // outpost 21 edit, changed form alien != IS_VOX to be consistant with poison oxygen behavior
+	if(M.species.poison_type != GAS_O2)
 		M.adjustToxLoss(removed * 9)
 	else if(alien != IS_DIONA)
 		M.adjustOxyLoss(-15 * removed * M.species.chem_strength_heal)

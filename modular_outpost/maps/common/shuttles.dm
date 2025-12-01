@@ -75,14 +75,8 @@
 	)
 
 	allow_short_crashes = TRUE
-	crash_locations = list(
-		"tram_crash_waste",
-		"tram_crash_eng",
-		"tram_crash_med",
-		"tram_crash_civ",
-		"tram_crash_red"
-	)
 	crash_message = "Tram system derailment detected."
+	crash_locations = list("tram_crash_red")
 
 
 /datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
@@ -101,29 +95,31 @@
 	base_area = /area/muriki/tramstation/shed
 	base_turf = /turf/simulated/floor/reinforced
 
+/obj/effect/shuttle_landmark/premade/tram/transit
+	name = "Tram Station - Transit"
+	landmark_tag = "tram_transit"
+	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/premade/tram/base
 	name = "Tram Station - Waste and Maintenance"
 	landmark_tag = "tram_waste"
 	base_area = /area/muriki/tramstation/waste
 	base_turf = /turf/simulated/open
-
-/obj/effect/shuttle_landmark/premade/tram/transit
-	name = "Tram Station - Transit"
-	landmark_tag = "tram_transit"
-	base_turf = /turf/simulated/open
+	local_crash_sites = list("tram_crash_waste","tram_crash_waste_mean","tram_crash_terraformer_mean")
 
 /obj/effect/shuttle_landmark/premade/tram/eng
 	name = "Tram Station - Engineering Cargo"
 	landmark_tag = "tram_eng"
 	base_area = /area/muriki/tramstation/cargeng
 	base_turf = /turf/simulated/open
+	local_crash_sites = list("tram_crash_eng","tram_crash_eng_mean","tram_crash_eng_ultramean")
 
 /obj/effect/shuttle_landmark/premade/tram/civ
 	name = "Tram Station - Civilian"
 	landmark_tag = "tram_civ"
 	base_area = /area/muriki/tramstation/civ
 	base_turf = /turf/simulated/open
+	local_crash_sites = list("tram_crash_civ","tram_crash_civ_mean","tram_crash_civ_ultramean")
 
 /obj/effect/shuttle_landmark/premade/tram/crash_waste
 	name = "Tram Crash - Waste"
@@ -176,6 +172,72 @@
 	base_turf = /turf/simulated/floor/flesh
 
 /obj/effect/shuttle_landmark/premade/tram/crash_red/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_mean
+	name = "Tram Crash - Civ Mean"
+	landmark_tag = "tram_crash_civ_mean"
+	base_area = /area/muriki/tramstation/civ
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_mean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_ultramean
+	name = "Tram Crash - Civ Ultra Mean"
+	landmark_tag = "tram_crash_civ_ultramean"
+	base_area = /area/muriki/tramstation/civ
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_civ_ultramean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_mean
+	name = "Tram Crash - Eng Mean"
+	landmark_tag = "tram_crash_eng_mean"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_mean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_ultramean
+	name = "Tram Crash - Eng Ultra Mean"
+	landmark_tag = "tram_crash_eng_ultramean"
+	base_area = /area/muriki/grounds/tramlineeast
+	base_turf = /turf/simulated/open
+
+/obj/effect/shuttle_landmark/premade/tram/crash_eng_ultramean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_waste_mean
+	name = "Tram Crash - Waste Mean"
+	landmark_tag = "tram_crash_waste_mean"
+	base_area = /area/muriki/grounds/tramlinewest
+	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_waste_mean/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean
+	name = "Tram Crash - Terraformer Mean"
+	landmark_tag = "tram_crash_terraformer_mean"
+	base_area = /area/muriki/grounds/terraform
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
+
+/obj/effect/shuttle_landmark/premade/tram/crash_terraformer_mean/is_valid(var/datum/shuttle/shuttle)
 	if(shuttle.current_location == src)
 		return FALSE
 	return TRUE
@@ -350,7 +412,7 @@
 /obj/machinery/computer/shuttle_control/explore/medical
 	name = "short jump console"
 	shuttle_tag = "Medical Rescue"
-	req_one_access = list(access_medical)
+	req_one_access = list(ACCESS_MEDICAL)
 
 /area/shuttle/medical
 	name = "\improper Medevac Shuttle"
@@ -367,17 +429,13 @@
 	shuttle_area = list(/area/shuttle/medical)
 	fuel_consumption = 1 //much less, due to being teeny
 	ceiling_type = /turf/simulated/shuttle/floor/white/turfpack/muriki
+
 	allow_short_crashes = TRUE
-	crash_locations = list(
-		"crash_cargoyard",
-		"crash_north",
-		"crash_south",
-		"crash_engi_roof",
-		"crash_sec_roof",
-		"crash_garden_roof"
-	)
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 
 /datum/shuttle/autodock/overmap/medical/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(!intended_destination.local_crash_sites?.len)
+		return FALSE
 	if(emagged_crash)
 		return TRUE
 	// If on highest level of spooky let the tram crash happen
@@ -386,11 +444,16 @@
 	return FALSE
 
 // Docks
+#define OUTPOST_SURFACE_CRASHES list("crash_cargoyard","crash_north","crash_south","crash_engi_roof","crash_sec_roof","crash_garden_roof")
+#define OUTPOST_CONFINEMENTBEAM_CRASHES list("crash_ptl","crash_ptl_enginesouth","crash_ptl_enginenorth")
+#define OUTPOST_ASTEROID_CRASHES list("crash_rec","crash_rec_trawlerbad")
+
 /obj/effect/shuttle_landmark/premade/medical/muriki
 	name = "ES Outpost 21 (Medical Dock)"
 	landmark_tag = "outpost_medical_hangar"
 	base_turf = /turf/simulated/floor
 	base_area = /area/medical/hangar
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/medical/prospector
 	name = "Prospector (Starboard Dock)"
@@ -410,6 +473,7 @@
 	docking_controller = "beam_sat_medical_controller"
 	base_turf = /turf/space
 	base_area = /area/offworld/confinementbeam/exterior
+	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
 
 //////////////////////////////////////////////////////////////
 // Security shuttle
@@ -430,17 +494,13 @@
 	shuttle_area = list(/area/shuttle/security)
 	fuel_consumption = 1 //much less, due to being teeny
 	ceiling_type = /turf/simulated/shuttle/floor/white/turfpack/muriki
+
 	allow_short_crashes = TRUE
-	crash_locations = list(
-		"crash_cargoyard",
-		"crash_north",
-		"crash_south",
-		"crash_engi_roof",
-		"crash_sec_roof",
-		"crash_garden_roof"
-	)
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 
 /datum/shuttle/autodock/overmap/security/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(!intended_destination.local_crash_sites?.len)
+		return FALSE
 	if(emagged_crash)
 		return TRUE
 	// If on highest level of spooky let the tram crash happen
@@ -451,7 +511,7 @@
 /obj/machinery/computer/shuttle_control/explore/security
 	name = "short jump console"
 	shuttle_tag = "Security Carrier"
-	req_one_access = list(access_security)
+	req_one_access = list(ACCESS_SECURITY)
 
 /area/shuttle/security
 	name = "\improper Security Shuttle"
@@ -467,6 +527,7 @@
 	landmark_tag = "outpost_security_hangar"
 	base_turf = /turf/simulated/floor
 	base_area = /area/security/hangar
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/security/prospector
 	name = "Prospector (Port Dock)"
@@ -480,6 +541,7 @@
 	docking_controller = "beam_sat_security_controller"
 	base_turf = /turf/space
 	base_area = /area/offworld/confinementbeam/exterior
+	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
 
 /obj/effect/shuttle_landmark/premade/security/aisat_security
 	name = "AI Satellite (Security Dock)"
@@ -487,6 +549,7 @@
 	docking_controller = "aisat_security_controller"
 	base_turf = /turf/space
 	base_area = /area/offworld/confinementbeam/exterior
+	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
 
 //////////////////////////////////////////////////////////////
 // Trawler Shuttle
@@ -507,17 +570,13 @@
 	shuttle_area = list(/area/shuttle/trawler)
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 	fuel_consumption = 2 // chonky
+
 	allow_short_crashes = TRUE
-	crash_locations = list(
-		"crash_cargoyard",
-		"crash_north",
-		"crash_south",
-		"crash_engi_roof",
-		"crash_sec_roof",
-		"crash_garden_roof"
-	)
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 
 /datum/shuttle/autodock/overmap/trawler/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(!intended_destination.local_crash_sites?.len)
+		return FALSE
 	if(emagged_crash)
 		return TRUE
 	// If on highest level of spooky let the tram crash happen
@@ -528,7 +587,7 @@
 /obj/machinery/computer/shuttle_control/explore/trawler
 	name = "short jump console"
 	shuttle_tag = "Mining Trawler"
-	req_one_access = list(access_mining)
+	req_one_access = list(ACCESS_MINING)
 
 /area/shuttle/trawler
 	name = "\improper Mining Trawler"
@@ -543,12 +602,14 @@
 	landmark_tag = "outpost_trawler_pad"
 	base_turf = /turf/simulated/floor/plating/external/turfpack/muriki
 	base_area = /area/muriki/station/trawler_dock
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/trawler/beltmine
 	name = "Reclaimation Yard (Trawler bay)"
 	landmark_tag = "trawler_yard"
 	base_turf = /turf/simulated/floor
 	base_area = /area/offworld/asteroidyard/station/dockingbay
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/trawler/prospector
 	name = "Prospector (Trawler Dock)"
@@ -561,6 +622,7 @@
 	landmark_tag = "confinementbeam_trawler"
 	base_turf = /turf/space
 	base_area = /area/offworld/confinementbeam/exterior
+	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
 
 //////////////////////////////////////////////////////////////
 // Engineering Ferry
@@ -589,16 +651,12 @@
 		"beam_sat"
 	)
 
-	crash_locations = list(
-		"crash_cargoyard",
-		"crash_north",
-		"crash_south",
-		"crash_engi_roof",
-		"crash_sec_roof",
-		"crash_garden_roof"
-	)
+	allow_short_crashes = TRUE
+	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 
 /datum/shuttle/autodock/multi/beamtransit/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+	if(!intended_destination.local_crash_sites?.len)
+		return FALSE
 	if(emagged_crash)
 		return TRUE
 	// If on highest level of spooky let the tram crash happen
@@ -612,6 +670,7 @@
 	docking_controller = "beam_base_controller"
 	base_turf = /turf/simulated/floor/plating/external/turfpack/muriki
 	base_area = /area/muriki/grounds/engi
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/beamtransit/transit
 	name = "Deep Space"
@@ -623,6 +682,7 @@
 	docking_controller = "beam_sat_controller"
 	base_area = /area/offworld/confinementbeam/exterior
 	base_turf = /turf/simulated/floor/airless
+	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
 
 //////////////////////////////////////////////////////////////
 // RogueMiner "Belter: Shuttle
@@ -702,12 +762,14 @@
 	landmark_tag = "outpost_landing_pad"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/grounds/shutt
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/engineering
 	name = "ES Outpost 21 (Near Engineering)"
 	landmark_tag = "outpost_engineering_pad"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/mine/explored/muriki/surface
+	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/prospector_port
 	name = "Prospector (Far-Port Dock)"
@@ -726,32 +788,40 @@
 	landmark_tag = "orbitalyard_civ"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_north
 	name = "Reclaimation Yard (North)"
 	landmark_tag = "orbitalyard_north"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_south
 	name = "Reclaimation Yard (South)"
 	landmark_tag = "orbitalyard_south"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_east
 	name = "Reclaimation Yard (East)"
 	landmark_tag = "orbitalyard_east"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_west
 	name = "Reclaimation Yard (West)"
 	landmark_tag = "orbitalyard_west"
 	base_turf = /turf/space
 	base_area = /area/offworld/asteroidyard
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Crash bang boom!
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /obj/effect/shuttle_landmark/premade/generic/crash_cargoyard
 	name = "Crash - Cargo Yard"
 	landmark_tag = "crash_cargoyard"
@@ -817,6 +887,63 @@
 	if(shuttle.current_location == src)
 		return FALSE
 	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl
+	name = "Crash - PTL"
+	landmark_tag = "crash_ptl"
+	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
+
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginesouth
+	name = "Crash - PTL Engine South"
+	landmark_tag = "crash_ptl_enginesouth"
+	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
+
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginesouth/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginenorth
+	name = "Crash - PTL Engine North"
+	landmark_tag = "crash_ptl_enginenorth"
+	base_turf = /turf/space
+	base_area = /area/offworld/confinementbeam/exterior
+
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginenorth/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_rec
+	name = "Crash - Recyard Basic"
+	landmark_tag = "crash_rec"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard/external
+
+/obj/effect/shuttle_landmark/premade/generic/crash_rec/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+/obj/effect/shuttle_landmark/premade/generic/crash_rec_trawlerbad
+	name = "Crash - Recyard TrawlerBad"
+	landmark_tag = "crash_rec_trawlerbad"
+	base_turf = /turf/space
+	base_area = /area/offworld/asteroidyard/external
+
+/obj/effect/shuttle_landmark/premade/generic/crash_rec_trawlerbad/is_valid(var/datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
+
+#undef OUTPOST_SURFACE_CRASHES
 
 // ELEVATORS --------------------------------------------------------
 /obj/turbolift_map_holder/muriki/medevator

@@ -6,7 +6,7 @@
 		icon_state = "Shield_Gen"
 		anchored = FALSE
 		density = TRUE
-		req_access = list(access_engine_equip)
+		req_access = list() // Outpost 21 edit - No access needed to unlock this, just a card
 		var/active = 0
 		var/power = 0
 		var/state = 0
@@ -14,7 +14,7 @@
 		var/last_check = 0
 		var/check_delay = 10
 		var/recalc = 0
-		var/locked = 1
+		var/locked = 0 // Outpost 21 edit - Shieldgens start unlocked by default
 		var/destroyed = 0
 		var/directwired = 1
 //		var/maxshieldload = 200

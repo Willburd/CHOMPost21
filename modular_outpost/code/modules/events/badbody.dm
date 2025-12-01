@@ -16,7 +16,7 @@
 
 /datum/event/badbody/setup()
 	if(prob(60) && !force_chance)
-		log_debug("Badbody failed successfully.")
+		log_world("## DEBUG: Badbody failed successfully.")
 		kill()
 		return
 
@@ -31,7 +31,7 @@
 				spawn_locations.Add(C.loc)
 
 	if(!spawn_locations.len)
-		log_debug("Badbody had no spawn points.")
+		log_world("## DEBUG: Badbody had no spawn points.")
 		kill()
 		return
 
@@ -54,7 +54,7 @@
 				var/datum/component/badbody/B = badbody.AddComponent(/datum/component/badbody)
 				B.harm_body()
 				B.set_items()
-				log_debug("successfully spawned badbody [badbody.real_name] at [spot.x] [spot.y] [spot.z].")
+				log_world("## DEBUG: successfully spawned badbody [badbody.real_name] at [spot.x] [spot.y] [spot.z].")
 			bodies--
 			if(in_morgue)
 				spawn_locations.Remove(spot)
@@ -64,7 +64,7 @@
 				break
 
 	if(bodies > 0)
-		log_debug("Badbody failed to spawn successful body.")
+		log_world("## DEBUG: Badbody failed to spawn successful body.")
 		kill()
 
 /datum/event/badbody/announce()
@@ -86,7 +86,7 @@
 		return
 	if(P.organ_data[BP_TORSO] == "cyborg") // no FBP, too easy to "repair"
 		return
-	if(P.job_engsec_high & CYBORG || P.job_engsec_high & AI) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
+	if(P.job_engsec_high & CYBORG || P.job_engsec_high & AI_DEPT) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
 		return
 	var/mob/living/carbon/human/new_character = new(spawnloc)
 	anim(spawnloc,new_character,'icons/mob/mob.dmi',,"phasein",,new_character.dir)

@@ -1,8 +1,7 @@
 /obj/item/gun/energy
 	name = "energy gun"
 	desc = "A basic energy-based gun."
-	icon = 'icons/obj/gun_ch.dmi' // CHOMPEdit: Gun Sprites
-	icon_state = "energystun" // CHOMPEdit: Gun Sprites
+	icon_state = "energy"
 	fire_sound_text = "laser blast"
 
 	var/obj/item/cell/power_supply //What type of power cell this uses
@@ -111,7 +110,7 @@
 	if(..())
 		update_icon()
 
-/obj/item/gun/energy/emp_act(severity)
+/obj/item/gun/energy/emp_act(severity, recursive)
 	..()
 	update_icon()
 
@@ -135,7 +134,7 @@
 				to_chat(user, span_notice("[src] already has a power cell."))
 			else
 				user.visible_message("[user] is reloading [src].", span_notice("You start to insert [P] into [src]."))
-				if(do_after(user, reload_time * P.w_class))
+				if(do_after(user, reload_time * P.w_class, target = src))
 					user.remove_from_mob(P)
 					power_supply = P
 					P.loc = src

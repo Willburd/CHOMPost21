@@ -46,7 +46,7 @@
 		. += "Time To Start: Server Initializing"
 
 	else if(SSticker.current_state == GAME_STATE_PREGAME)
-		. += "Time To Start: [round(SSticker.timeLeft, 1)][GLOB.round_progressing ? "" : " (DELAYED)"]"
+		. += "Time To Start: [round(SSticker.timeLeft / 10, 1)][GLOB.round_progressing ? "" : " (DELAYED)"]"
 		. += "Players: [totalPlayers]"
 		. += "Players Ready: [totalPlayersReady]"
 		totalPlayers = 0
@@ -331,14 +331,14 @@
 			SSticker.minds += character.mind
 			ticker.minds += character.mind
 	*/ //CHOMPEdit End
-	
+
 	// Outpost 21 edit begin - Stowaways behave the same as above!
 	if(rank == JOB_STOWAWAY)
 		log_and_message_admins("has joined the round as non-crew. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			SSticker.minds += character.mind
 	// Outpost 21 edit end
-	
+
 	else if(J.mob_type & JOB_SILICON)
 		AnnounceCyborg(character, rank, join_message, announce_channel, character.z)
 	else
@@ -365,11 +365,7 @@
 		character.forceMove(cryst)
 		cryst.update_icon()
 	else if(itemtf)
-		itemtf.inhabit_item(character, itemtf.name, character)
-		var/mob/living/possessed_voice = itemtf.possessed_voice
-		itemtf.trash_eatable = character.devourable
-		itemtf.unacidable = !character.digestable
-		character.forceMove(possessed_voice)
+		character.tf_into(itemtf, TRUE, itemtf.name)
 	else if(prey)
 		character.copy_from_prefs_vr(1,1) //Yes I know we're reloading these, shut up
 		var/obj/belly/gut_to_enter
@@ -407,6 +403,7 @@
 	late_choices_dialog.tgui_interact(src)
 
 /mob/new_player/proc/create_character(var/turf/T)
+	SHOULD_NOT_SLEEP(TRUE)
 	spawning = 1
 	close_spawn_windows()
 

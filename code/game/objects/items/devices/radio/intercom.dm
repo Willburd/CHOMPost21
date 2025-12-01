@@ -2,7 +2,7 @@
 	listening = 0 //CHOMP Edit: Temporary bandaid fix for comms lag.
 	name = "station intercom (General)"
 	desc = "Talk through this."
-	icon = 'icons/obj/radio_vr.dmi'
+	icon = 'icons/obj/radio.dmi'
 	icon_state = "intercom"
 	layer = ABOVE_WINDOW_LAYER
 	anchored = TRUE
@@ -70,13 +70,13 @@
 	name = "station intercom (Medbay)"
 	icon_state = "medintercom"
 	light_color = "#00aaff"
-	frequency = MED_FREQ // Outpost 21 edit - Use department comms not internal
+	frequency = MED_I_FREQ
 
 /obj/item/radio/intercom/department/security
 	name = "station intercom (Security)"
 	icon_state = "secintercom"
 	light_color = "#ff0000"
-	frequency = SEC_FREQ // Outpost 21 edit - Use department comms not internal
+	frequency = SEC_I_FREQ
 
 /obj/item/radio/intercom/entertainment
 	name = "entertainment intercom"
@@ -85,7 +85,7 @@
 /obj/item/radio/intercom/omni
 	name = "global announcer"
 /obj/item/radio/intercom/omni/Initialize(mapload)
-	channels = radiochannels.Copy()
+	channels = GLOB.radiochannels.Copy()
 	return ..()
 
 /obj/item/radio/intercom/Initialize(mapload)
@@ -100,7 +100,7 @@
 	. = ..()
 	internal_channels = list(
 		num2text(PUB_FREQ) = list(),
-		num2text(SEC_I_FREQ) = list(access_security)
+		num2text(SEC_I_FREQ) = list(ACCESS_SECURITY)
 	)
 
 /obj/item/radio/intercom/entertainment/Initialize(mapload)
@@ -119,7 +119,7 @@
 
 /obj/item/radio/intercom/syndicate/Initialize(mapload)
 	. = ..()
-	internal_channels[num2text(SYND_FREQ)] = list(access_syndicate)
+	internal_channels[num2text(SYND_FREQ)] = list(ACCESS_SYNDICATE)
 
 /obj/item/radio/intercom/raider
 	name = "illicit intercom"
@@ -130,7 +130,7 @@
 
 /obj/item/radio/intercom/raider/Initialize(mapload)
 	. = ..()
-	internal_channels[num2text(RAID_FREQ)] = list(access_syndicate)
+	internal_channels[num2text(RAID_FREQ)] = list(ACCESS_SYNDICATE)
 
 /obj/item/radio/intercom/attack_ai(mob/user as mob)
 	src.add_fingerprint(user)
@@ -239,4 +239,4 @@
 
 /obj/item/radio/intercom/locked/confessional
 	name = "confessional intercom"
-	frequency = 1481
+	frequency = LOCKED_COM_FREQ

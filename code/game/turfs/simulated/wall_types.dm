@@ -123,6 +123,21 @@
 	. = ..(mapload,  MAT_SIFWOOD, MAT_SIFWOOD, MAT_SIFWOOD)
 // CHOMPEdit End
 
+/turf/simulated/wall/birchwood/Initialize(mapload)
+	. = ..(mapload,  MAT_BIRCHWOOD)
+
+/turf/simulated/wall/pinewood/Initialize(mapload)
+	. = ..(mapload,  MAT_PINEWOOD)
+
+/turf/simulated/wall/oakwood/Initialize(mapload)
+	. = ..(mapload,  MAT_OAKWOOD)
+
+/turf/simulated/wall/acaciawood/Initialize(mapload)
+	. = ..(mapload,  MAT_ACACIAWOOD)
+
+/turf/simulated/wall/redwood/Initialize(mapload)
+	. = ..(mapload,  MAT_REDWOOD)
+
 /turf/simulated/wall/log/Initialize(mapload)
 	. = ..(mapload,  MAT_LOG)
 
@@ -382,7 +397,7 @@
 		break
 
 	if(!T)
-		warning("Hull corner at [x],[y] not placed adjacent to a hull it can find.")
+		WARNING("Hull corner at [x],[y] not placed adjacent to a hull it can find.")
 
 /obj/structure/hull_corner/long_vert
 	icon = 'icons/turf/wall_masks32x64.dmi'
@@ -606,6 +621,10 @@
 /turf/simulated/wall/tgmc/darkwall/deco3
 	icon_state = "darkwall_deco3"
 	force_icon = "_deco3"
+/turf/simulated/wall/tgmc/darkwall/fake_door
+	icon = 'icons/obj/doors/angled/elevator/door.dmi'
+	icon_state = "preview"
+	name = "locked elevator"
 
 /turf/simulated/wall/tgmc/whitewall
 	icon_state = "white0"
@@ -697,6 +716,12 @@
 	var/window_types = WINDOW_GLASS
 	strict_blending = TRUE
 	diagonal_blending = TRUE
+
+/turf/simulated/wall/tgmc/window/CanPass(atom/movable/mover, turf/target)
+	// This IS a glass window, so things that can pass glass should pass through here!
+	if(istype(mover) && mover.checkpass(PASSGLASS))
+		return TRUE
+	return ..()
 
 /turf/simulated/wall/tgmc/window/rwall
 	icon_state = "rwall_window0"

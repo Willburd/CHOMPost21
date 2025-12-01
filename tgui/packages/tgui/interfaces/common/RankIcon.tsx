@@ -62,7 +62,7 @@ const rank2icon = {
   'Maintenance Technician': 'wrench',
   'Engine Technician': 'toolbox',
   'Ship Breaker': 'rocket', // Outpost 21 addition
-  'Chemical Engineer': ['mortar-pestle', 'wrench'], // Outpost 21 addition
+  'Chemical Engineer': ['mortar-pestle', 'wrench'],
   Electrician: 'screwdriver',
   'Construction Engineer': 'trowel-bricks',
   'Engineering Contractor': 'ruler',
@@ -386,7 +386,7 @@ const rank2color = {
   'Maintenance Technician': 'orange',
   'Engine Technician': 'orange',
   'Ship Breaker': 'orange', // Outpost 21 addition
-  'Chemical Engineer': 'orange', // Outpost 21 addition
+  'Chemical Engineer': 'orange',
   Electrician: 'orange',
   'Construction Engineer': 'orange',
   'Engineering Contractor': 'orange',

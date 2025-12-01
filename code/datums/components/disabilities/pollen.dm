@@ -14,7 +14,7 @@
 
 	if(QDELETED(parent))
 		return
-	if(owner.antihistaminescount) // Outpost 21 edit - medication for allergies
+	if(owner.antihistaminescount) // Outpost 21 edit(port) - medication for allergies
 		return
 	if(!prob(allergy_chance))
 		return

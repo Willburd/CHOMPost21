@@ -8,10 +8,6 @@
 "ab" = (
 /turf/simulated/shuttle/floor/alienplating/blue,
 /area/submap/XenoWeaveMajor)
-"ac" = (
-/obj/machinery/door/blast/regular,
-/turf/simulated/shuttle/floor/alien/blue,
-/area/submap/XenoWeaveMajor)
 "ad" = (
 /obj/structure/table/darkglass,
 /obj/machinery/button/remote/blast_door{
@@ -19,9 +15,131 @@
 	},
 /turf/simulated/shuttle/floor/alien/blue,
 /area/submap/XenoWeaveMajor)
+"ae" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"af" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ag" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 6
+	},
+/mob/living/simple_mob/mechanical/hivebot/nanoevent/pink,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ah" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 8
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ai" = (
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alien/blue,
+/area/submap/XenoWeaveMajor)
+"aj" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 10
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 4
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"ak" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/techfloor/orange/corner,
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 9
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"al" = (
+/obj/effect/floor_decal/techfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 5
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/shuttle/floor/alienplating/blue,
+/area/submap/XenoWeaveMajor)
+"am" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
 "an" = (
 /mob/living/simple_mob/mechanical/mecha/eclipse/hivebot/nanoweavetower,
 /turf/simulated/shuttle/floor/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ao" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ap" = (
+/obj/machinery/disposal/deliveryChute,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
+"aq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/alien/blue,
+/area/submap/XenoWeaveMajor)
+"ar" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/shuttle/wall/alien/blue,
 /area/submap/XenoWeaveMajor)
 "bO" = (
 /obj/effect/floor_decal/techfloor{
@@ -185,7 +303,8 @@
 /area/submap/XenoWeaveMajor)
 "kg" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/shuttle/wall/alien/blue,
 /area/submap/XenoWeaveMajor)
@@ -741,7 +860,7 @@ TP
 wC
 wC
 hg
-mJ
+ag
 Wj
 Wj
 Wj
@@ -885,9 +1004,9 @@ wC
 wC
 wC
 wC
-XE
-mJ
-ed
+ak
+ae
+ai
 KM
 jV
 wC
@@ -937,8 +1056,8 @@ wC
 TR
 jb
 jb
-jb
-mJ
+ah
+ae
 wC
 wC
 dE
@@ -1030,10 +1149,10 @@ wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
+aq
+ao
+ao
+ao
 kg
 wC
 wC
@@ -1074,17 +1193,17 @@ Yg
 TP
 TP
 wC
+aa
 wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
-wC
-kg
-wC
+ar
+ap
+ab
+ab
+ab
+ad
 wC
 wC
 wC
@@ -1123,6 +1242,7 @@ TP
 TP
 wC
 wC
+aa
 wC
 wC
 wC
@@ -1131,8 +1251,7 @@ wC
 wC
 wC
 wC
-wC
-Xb
+aa
 wC
 wC
 wC
@@ -1171,8 +1290,8 @@ ot
 TP
 wC
 wC
-ad
-Wj
+wC
+aa
 wC
 ab
 ab
@@ -1221,7 +1340,7 @@ TP
 wC
 wC
 wC
-Wj
+aa
 wC
 ab
 Wj
@@ -1320,19 +1439,19 @@ wC
 wC
 mZ
 Wj
-ac
-ab
-Wj
-dE
-Wj
-Wj
-Wj
-Wj
-Wj
-dE
-Wj
-ab
 aa
+ab
+Wj
+dE
+Wj
+Wj
+Wj
+Wj
+Wj
+dE
+Wj
+ab
+wC
 jV
 ed
 jV
@@ -1381,7 +1500,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 jV
 ed
 hH
@@ -1430,7 +1549,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 dE
 Wj
 Wj
@@ -1479,7 +1598,7 @@ Wj
 dE
 Wj
 ab
-aa
+wC
 Dz
 HW
 Rf
@@ -1516,19 +1635,19 @@ wC
 wC
 mZ
 Wj
-ac
-ab
-Wj
-dE
-Wj
-Wj
-Wj
-Wj
-Wj
-dE
-Wj
-ab
 aa
+ab
+Wj
+dE
+Wj
+Wj
+Wj
+Wj
+Wj
+dE
+Wj
+ab
+wC
 Dz
 HW
 Dz
@@ -1613,7 +1732,7 @@ TP
 wC
 wC
 wC
-Wj
+aa
 wC
 ab
 Wj
@@ -1661,8 +1780,8 @@ ot
 TP
 wC
 wC
-ad
-Wj
+wC
+aa
 wC
 ab
 ab
@@ -1711,6 +1830,7 @@ ot
 ot
 wC
 wC
+aa
 wC
 wC
 wC
@@ -1719,8 +1839,7 @@ wC
 wC
 wC
 wC
-wC
-TN
+aa
 wC
 wC
 wC
@@ -1760,17 +1879,17 @@ ot
 ot
 ot
 wC
+aa
 wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
-wC
-kg
-wC
+aq
+ap
+ab
+ab
+ab
+ad
 wC
 wC
 wC
@@ -1814,11 +1933,11 @@ wC
 wC
 wC
 wC
-wC
-wC
-wC
-wC
-kg
+ar
+ao
+ao
+ao
+am
 wC
 wC
 wC
@@ -1917,8 +2036,8 @@ wC
 XE
 jb
 jb
-jb
-UV
+ah
+af
 wC
 wC
 dE
@@ -1963,9 +2082,9 @@ wC
 wC
 wC
 wC
-TR
-cB
-Wj
+al
+aj
+ai
 Wj
 dE
 wC

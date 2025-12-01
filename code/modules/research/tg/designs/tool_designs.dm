@@ -12,7 +12,7 @@
 
 /datum/design_techweb/light_replacer
 	name = "Light replacer"
-	desc = "A device to automatically replace lights. Refill with working lightbulbs."
+	desc = "A device to automatically replace lights. Refill with working lightbulbs. Can also recycle broken bulbs, but this requires several broken bulbs to make a functioning one."
 	id = "light_replacer"
 	build_type = PROTOLATHE
 	materials = list(MAT_STEEL = 1500, MAT_SILVER = 150, MAT_GLASS = 3000)
@@ -20,7 +20,7 @@
 	category = list(
 		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_JANITORIAL
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/spraybottle
 	name = "spray bottle"
@@ -196,7 +196,7 @@
 	category = list(
 		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_MISC
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
 
 /datum/design_techweb/beaker_noreact
 	name = "Cryostasis Beaker"
@@ -878,6 +878,7 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 */
 
+// Decided that we were not keen on this being able to be printed freely as we immediately saw undesirable behaviour //CHOMPEdit - Re-enable
 /datum/design_techweb/telekinetic_gloves
 	name = "Kinesis Assistance Module"
 	id = "tk_gloves"
@@ -889,6 +890,7 @@
 		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_ENGINEERING_ADVANCED
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
+//CHOMPEDit - Re-enable
 
 /datum/design_techweb/mail_scanner
 	name = "Mail Scanner"
@@ -897,7 +899,7 @@
 	build_path = /obj/item/mail_scanner
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_CARGO
 
@@ -908,7 +910,7 @@
 	build_path = /obj/item/holosign_creator/combifan
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
@@ -932,7 +934,7 @@
 	build_path = /obj/item/floor_painter
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
 
@@ -943,6 +945,6 @@
 	build_path = /obj/item/holosign_creator/medical
 	build_type = PROTOLATHE
 	category = list(
-		RND_CATEGORY_MACHINE
+		RND_CATEGORY_TOOLS
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_MEDICAL

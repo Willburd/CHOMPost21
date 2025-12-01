@@ -167,7 +167,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 			for(var/turf/T in E.connecting_turfs)
 				edge_log += "+--- Connecting Turf [T] ([T.type]) @ [T.x], [T.y], [T.z] ([T.loc])"
 
-		log_debug("Active Edges on ZAS Startup\n" + edge_log.Join("\n"))
+		log_mapping("Active Edges on ZAS Startup\n" + edge_log.Join("\n"))
 		startup_active_edge_log = edge_log.Copy()
 
 	return SS_INIT_SUCCESS
@@ -527,9 +527,9 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		return FALSE
 	if(A.carbon_dioxide != B.carbon_dioxide)
 		return FALSE
-	if(A.nitrous_oxide != B.nitrous_oxide) // Outpost 21 edit - Nitrous oxide
+	if(A.nitrous_oxide != B.nitrous_oxide)
 		return FALSE
-	if(A.methane != B.methane) // Outpost 21 edit - Methane
+	if(A.methane != B.methane)
 		return FALSE
 	if(A.temperature != B.temperature)
 		return FALSE

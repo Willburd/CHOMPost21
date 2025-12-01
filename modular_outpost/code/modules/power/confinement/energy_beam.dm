@@ -24,7 +24,11 @@
 /obj/item/projectile/beam/confinement/on_hit(atom/target, blocked, def_zone)
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 	if(!visual_only && data) // Forward the beam to the next lens
-		if(data.dir == target.dir && istype(target,/obj/structure/confinement_beam_generator/lens/inner_lens))
+		if(isliving(target))
+			var/mob/living/M = target
+			if(M.maxHealth <= 200) // DED
+				M.dust()
+		else if(istype(target,/obj/structure/confinement_beam_generator/lens/inner_lens) && data.dir == target.dir)
 			var/obj/structure/confinement_beam_generator/lens/inner_lens/L = target
 			if(L.is_valid_state())
 				var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(L,data.dir)

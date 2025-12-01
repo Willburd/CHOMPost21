@@ -3,6 +3,24 @@
 /obj/machinery/camera/network/outside
 	network = list(NETWORK_OUTSIDE)
 
+/obj/machinery/camera/network/bunker
+	network = list(NETWORK_BUNKER)
+
+/obj/machinery/camera/network/foundations
+	network = list(NETWORK_FOUNDATIONS)
+
+/obj/machinery/camera/network/waste
+	network = list(NETWORK_WASTE)
+
+/obj/machinery/camera/network/ai_sat
+	network = list(NETWORK_AISAT)
+
+/obj/machinery/camera/xray/ai_sat
+	network = list(NETWORK_AISAT)
+
+/obj/machinery/camera/motion/ai_sat
+	network = list(NETWORK_AISAT)
+
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST
@@ -45,7 +63,7 @@
 /obj/machinery/door/airlock/highsecurity/red
 	name = "Bridge Holdout Armory"
 	desc =  "Only to be opened on Code red or greater."
-	req_one_access = list(access_heads)
+	req_one_access = list(ACCESS_HEADS)
 
 /obj/machinery/door/airlock/highsecurity/red/allowed(mob/user)
 	if(get_security_level() in list("green","yellow"))
@@ -56,7 +74,7 @@
 //Again, need to be moved to a higher level in the code. These shouldn't be here, these aren't map-specific
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
-	req_one_access = list(access_explorer,access_brig)
+	req_one_access = list(ACCESS_EXPLORER,ACCESS_BRIG)
 
 /obj/structure/closet/secure_closet/guncabinet/excursion/Initialize(mapload)
 	. = ..()
@@ -78,7 +96,6 @@
 /obj/machinery/computer/security/exploration
 	name = "head mounted camera monitor"
 	desc = "Used to access the built-in cameras in helmets."
-	// icon_state = "syndicam" // Outpost 21 edit - CI wants this fixed
 	network = list(NETWORK_EXPLORATION)
 	circuit = null
 
@@ -101,7 +118,7 @@
 		playsound(get_turf(src), 'sound/effects/supermatter.ogg', 75, 1)
 	if(ismob(A) && prob(5))//lucky day
 		var/destturf = locate(rand(5,world.maxx-5),rand(5,world.maxy-5),pick(using_map.event_levels))
-		new /datum/teleport/instant(A, destturf, 0, 1, null, null, null, 'sound/effects/phasein.ogg')
+		do_teleport(A, destturf, 0, 1, asoundin = 'sound/effects/phasein.ogg', forced = TRUE)
 	else
 		return ..()
 
@@ -156,7 +173,17 @@
 	desc = "The sign states: 'This planet is undergoing intense terraforming. As a result, the atmosphere outside is acidic, enzymatic, and highly fatal. You will be painfully digested outside without proper protection!'"
 
 
+// Life preserver, art by whooshboom
+/obj/structure/showcase/life_preserver
+	name = "Life Preserver"
+	icon = 'modular_outpost/icons/obj/structures_32x32.dmi'
+	icon_state = "preserver_clean"
+	desc = "A simple floation device."
 
+/obj/structure/showcase/life_preserver/dirty
+	name = "Life Preserver"
+	icon_state = "preserver_dirty"
+	desc = "A simple floation device. It's seen some better days."
 
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
@@ -196,7 +223,7 @@
 			if(welder.remove_fuel(0,user) && welder && welder.isOn())
 				to_chat(user, span_notice("You start to melt the ice off \the [src]"))
 				playsound(src, welder.usesound, 50, 1)
-				if(do_after(user, welderTime SECONDS))
+				if(do_after(user, welderTime SECONDS, target = src))
 					to_chat(user, span_notice("You finish melting the ice off \the [src]"))
 					unFreeze()
 					return
@@ -220,7 +247,7 @@
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/W as obj, mob/user as mob, var/time = 15 as num)
 	to_chat(user, span_notice("You start to chip at the ice covering \the [src]"))
-	if(do_after(user, text2num(time SECONDS)))
+	if(do_after(user, time SECONDS, target = src))
 		unFreeze()
 		to_chat(user, span_notice("You finish chipping the ice off \the [src]"))
 

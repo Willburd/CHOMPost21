@@ -54,12 +54,11 @@
 		return 0
 
 	if(direction == DOWN)
-		var/turf/simulated/floor/water/deep/ocean/diving/sink = start
-		if(istype(sink) && !destination.density)
+		if(isdiveablewater(start) && !destination.density)
 			var/pull_up_time = max((3 SECONDS + (src.movement_delay() * 10) * swim_modifier), 1)
 			to_chat(src, span_notice("You start diving underwater..."))
 			src.audible_message(span_notice("[src] begins to dive under the water."), runemessage = "splish splosh")
-			if(do_after(src, pull_up_time))
+			if(do_after(src, pull_up_time, target = src))
 				to_chat(src, span_notice("You reach the sea floor."))
 			else
 				to_chat(src, span_warning("You stopped swimming downwards."))
@@ -84,17 +83,17 @@
 				var/pull_up_time = max((5 SECONDS + (src.movement_delay() * 10) * climb_modifier), 1)
 				to_chat(src, span_notice("You grab \the [lattice] and start pulling yourself upward..."))
 				src.audible_message(span_notice("[src] begins climbing up \the [lattice]."), runemessage = "clank clang")
-				if(do_after(src, pull_up_time))
+				if(do_after(src, pull_up_time, target = src))
 					to_chat(src, span_notice("You pull yourself up."))
 				else
 					to_chat(src, span_warning("You gave up on pulling yourself up."))
 					return 0
 
-			else if(istype(destination, /turf/simulated/floor/water/deep/ocean/diving))
+			else if(isdiveablewater(destination))
 				var/pull_up_time = max((5 SECONDS + (src.movement_delay() * 10) * swim_modifier), 1)
 				to_chat(src, span_notice("You start swimming upwards..."))
 				src.audible_message(span_notice("[src] begins to swim towards the surface."), runemessage = "splish splosh")
-				if(do_after(src, pull_up_time))
+				if(do_after(src, pull_up_time, target = src))
 					to_chat(src, span_notice("You reach the surface."))
 				else
 					to_chat(src, span_warning("You stopped swimming upwards."))
@@ -109,7 +108,7 @@
 					to_chat(src, span_notice("There's something in the way up above in that direction, try another."))
 					return 0
 				src.audible_message(span_notice("[src] begins climbing up \the [lattice]."), runemessage = "clank clang")
-				if(do_after(src, pull_up_time))
+				if(do_after(src, pull_up_time, target = src))
 					to_chat(src, span_notice("You pull yourself up."))
 				else
 					to_chat(src, span_warning("You gave up on pulling yourself up."))
@@ -130,7 +129,7 @@
 					var/fly_time = max(7 SECONDS + (H.movement_delay() * 10), 1) //So it's not too useful for combat. Could make this variable somehow, but that's down the road.
 					to_chat(src, span_notice("You begin to fly upwards..."))
 					H.audible_message(span_notice("[H] begins to flap \his wings, preparing to move upwards!"), runemessage = "flap flap")
-					if(do_after(H, fly_time) && H.flying)
+					if(do_after(H, fly_time, target = src) && H.flying)
 						to_chat(src, span_notice("You fly upwards."))
 					else
 						to_chat(src, span_warning("You stopped flying upwards."))
@@ -389,7 +388,7 @@
 
 /mob/living/carbon/human/can_fall()
 	if(..())
-		return species.can_fall(src)
+		return species?.can_fall(src)
 
 // Another check that we probably can just merge into can_fall exept for messing up overrides
 /atom/movable/proc/can_fall_to(turf/landing)
@@ -445,14 +444,14 @@
 	var/turf/oldloc = loc
 
 	// Now lets move there!
-	if(!Move(landing,direct = dir))
+	if(!Move(landing, direct = dir)) //infinite fall fix
 		return 1
 
 	// Detect if we made a silent landing.
 	var/atom/A = find_fall_target(oldloc, landing)
 	if(!A || !A.check_impact(src))
 		return
-	// Outpost 21 edit begin - Deadly falling z levels
+	// Outpost 21 edit(port) begin - Deadly falling z levels
 	if((landing.z in using_map.deadly_fall_levels))
 		fall_impact(A, 6, 12, TRUE, TRUE)
 		visible_message("\The [src] falls from far above and crashes into \the [landing]!", "You hear something crash into \the [landing].")
@@ -553,7 +552,7 @@
 		A.fall_impact(hit_atom, damage_min, damage_max, silent = TRUE)
 
 // Take damage from falling and hitting the ground
-/mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 1, var/damage_max = 5, var/silent = FALSE, var/planetary = FALSE) // Outpost 21 edit - At least 1 damage from falls
+/mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 1, var/damage_max = 5, var/silent = FALSE, var/planetary = FALSE) // Outpost 21 edit(port) - At least 1 damage from falls
 	var/turf/landing = get_turf(hit_atom)
 	var/safe_fall = FALSE
 	if(src.softfall || (isanimal(src) && src.mob_size <= MOB_SMALL))
@@ -582,14 +581,28 @@
 				visible_message(span_warning("\The [src] falls from above and slams into \the [landing]!"), \
 					span_danger("You fall off and hit \the [landing]!"), \
 					"You hear something slam into \the [landing].")
-			playsound(src, "punch", 25, 1, -1)
+			if(HAS_TRAIT(src, TRAIT_HEAVY_LANDING))
+				playsound(src, 'sound/effects/meteorimpact.ogg', 75, TRUE, 3)
+			else
+				playsound(src, "punch", 25, TRUE, -1)
 
 		// Because wounds heal rather quickly, 10 (the default for this proc) should be enough to discourage jumping off but not be enough to ruin you, at least for the first time.
 		// Hits 10 times, because apparently targeting individual limbs lets certain species survive the fall from atmosphere
-		for(var/i = 1 to 10)
-			adjustBruteLoss(rand(damage_min, damage_max))
-		Weaken(4)
-		updatehealth()
+		if(HAS_TRAIT(src, TRAIT_HEAVY_LANDING))
+			for(var/i = 1 to 10)
+				adjustBruteLoss(rand((damage_min * 2), (damage_max * 2)))
+			Weaken(20)
+			updatehealth()
+			if(istype(landing, /turf/simulated/floor) && prob(50))
+				var/turf/simulated/floor/our_crash = landing
+				our_crash.break_tile()
+		else
+			for(var/i = 1 to 10)
+				adjustBruteLoss(rand(damage_min, damage_max))
+			Weaken(4)
+			updatehealth()
+	// There is really no situation where smacking into a floor and possibly dying horribly would NOT result in you dropping your remote view... It's also safer then assuming they should persist.
+	reset_perspective()
 
 /mob/living/carbon/human/fall_impact(atom/hit_atom, damage_min, damage_max, silent, planetary)
 	if(!species?.handle_falling(src, hit_atom, damage_min, damage_max, silent, planetary))

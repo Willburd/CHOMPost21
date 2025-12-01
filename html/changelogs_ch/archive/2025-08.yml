@@ -424,3 +424,173 @@
   - image: Deletes a lot of duplicate icon states.
   - code_imp: Makes egg code better, just swaps to _open instead of changing the icon.
   - maptweak: Removes hardcoded icon varset from redgate map
+2025-08-19:
+  CHOMPStation2StaffMirrorBot:
+  - refactor: cleaned up icon files for headsets and ear-things - there shouldn't
+      be any player-facing changes, but please report any invisible or bugged clothes
+      in appropriate channels
+  - rscdel: Disabled the telekinesis node in techwebs for the time being.
+  Diana:
+  - spellcheck: Removed the SSsun mentions from solar panels.
+  - bugfix: we no longer have the curent grid
+  - qol: Borgs can now pick up reagent hoses
+  - bugfix: Weavers can walk through weaver walls
+  Guti:
+  - maptweak: Added a few more goodies upon the Refinery
+  - maptweak: Added some platings to the wire leading to the Refinery's APCs
+  - maptweak: Added a cargo tank tug to the Refinery
+  - maptweak: Added a large room to the Refinery
+  Will:
+  - bugfix: Crates will no longer make flashlight beams vanish when closed over them
+  - bugfix: Crates closed on flashlights and other directional light sources no longer
+      leave the light floating in place where it was closed
+  Will, Diana:
+  - qol: Clang event will now increase security level to blue for the duration of
+      the CLANG event, getting people's attention even if alt-tabbed.
+  - code_imp: Clang event is now better on the backend
+2025-08-20:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Telekinesis range exploits
+  - bugfix: Telekinesis and remote viewing in any form no longer work together
+  - bugfix: vending machines allowing to purchase non available items
+  - bugfix: Fixes lleill sparking and losing energy when choosing no option when trying
+      teleport to a ring.
+  - bugfix: Seismic charges and plastique explosive blast distance fixed for new explosion
+      subsystem
+  - spellcheck: cannisters are now cantisters and have been spellcorrected to be the
+      proper word
+  - bugfix: Fixes doppler sprite missing
+  Diana:
+  - qol: Makes it so jetpacks function inside voidsuits/suit storage
+2025-08-21:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Prevents reflexive biting from biting through headwear.
+  - maptweak: rids of legacy vars
+  - bugfix: shift trivia display
+  - bugfix: game end countdown
+  - qol: Suit cyclers can be used to swap to metamorphic mode, automatically becoming
+      the proper worn state
+  - qol: Clothing can be equipped and it will fallback to the default worn state if
+      your species does not have species specific sprites for it.
+  - code_imp: swapped a few hardcoded "thing" with its appropriate define when used
+  - rscadd: Consolidates all the species mob.dmi sprites together
+  - bugfix: atmos consoles not working
+  Diana:
+  - code_imp: Suit icons are now smart and will automatically fallback to the original
+      icon if a species does not possess the icon state.
+  - refactor: Makes all uses of X in cached_icon_states(icon) into the much faster
+      RUST based icon_exists() proc
+  Will:
+  - bugfix: Fluidpump pumping speed now scales off of the their manipulator and not
+      their motor, as motors have no upgrades.
+  - refactor: Explosions moved to a subsystem to substantially reduce lag of massive
+      explosions.
+  - bugfix: missing icons fixed for church pews, metal benches, corporate sofas, and
+      rounded chairs
+  - rscadd: Deep mining scanner will show some or all fluid pump fracking results
+      depending on if advanced type or not
+2025-08-28:
+  CHOMPStation2StaffMirrorBot:
+  - qol: Made it so that you can Alt click reagent containers to set transfer volume.
+  - refactor: Changed transfer amounts to be set by number input rather than lists.
+  - rscadd: Made the luxury cabin capsules more feature-complete with fully privacy-enabled
+      dorms, as well as generally polishing and moving around a few things in them.
+  Diana:
+  - bugfix: Organ printer now shows left arms
+  - bugfix: Unattaching your left arm will now show a proper sprite
+  - bugfix: 'Skrell stomachs no longer require you to download Counter Strike: Source'
+  - bugfix: Loyalty potions now allow slime spawn to be eaten easily
+  - bugfix: Loyalty potion now immediately triggers a slime's mood changing, making
+      them able to be eaten.
+  Guti:
+  - bugfix: Fixed body scanner consoles lights staying on forever
+2025-08-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: adds larger and resting belly states to the deertaur
+  Diana:
+  - image: Removes a bunch of placeholder/missing vox sprites
+  - bugfix: Gets rid of override preventing shadekin from wearing rigsuits. (Although
+      it's still a bad idea to wear it as one.)
+  JParker890:
+  - rscadd: Drakeborgs now have belly sprites for their bellyup rest pose
+  Jordhin Xenshire:
+  - rscadd: 'Volumetric Pump: This fast pump cares only about moving gasses quickly
+      from one side to the other without slowing - or care for accuracy. It has a
+      pressure limit lower than a standard pump, however this can be bipassed with
+      a Multitool. What consequences could there be?'
+  - rscadd: The ability to build Gas Sensors from the Rapid Pipe Dispenser.
+  - rscadd: The ability to link Gas Sensors, Meters, Injectors, Unary Vents to an
+      Atmos Air Controller. This enables you to build custom tanks. Functionality
+      is somewhat limited for now. This can be done with a multitool.
+  - rscadd: Ability to print Tank Control computer circuit board.
+2025-08-30:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: removes an exploit that allowed pais to download all software, no matter
+      how much ram they had free
+  - rscadd: vbo_maw27
+  - bugfix: fixed request consoles turning invisible after receiving messages
+  - qol: one can now skip the lobby timer on test servers
+  - qol: multiple bellies can be imported selectively if tgui input framework is enabled
+  - bugfix: tgui input checkboxes now consistently returns null or a list of strings
+  - bugfix: payloads with invalid id counts now timeout
+  - code_imp: Gets rid of some sleeps
+  - code_imp: cleans up the cell code...
+  - maptweak: added a light tube to fix a weird dark spot in the back of engineering's
+      EVA equipment room on the Stellar Delight
+  - maptweak: extended the hazard plating under the PA to include the three spaces
+      in front of it, because that's also a hazardous area when it's in operation
+  - maptweak: replaces the mapedited radiation and high voltage warning signs around
+      the tesla core with their correct presets
+  - code_imp: cleans up vacpack code
+  - code_imp: cleans up some more material things
+  - bugfix: chat auto scaling
+  - admin: readd VV cords
+  - rscadd: Added Compactor Energy Net Gun
+  - maptweak: (Stellar Delight) Added a circuit kit and Vendomat to the maintenance
+      tunnel behind Science.
+  - maptweak: Fixed an Underdark POI having no gravity on a specific row of tiles.
+  - rscadd: 'Belly Temperature: [Set to 20C by default] Prey feel the temperature
+      in your belly, will an icon if it''s uncomfortably warm/cold.
+
+      Based on belly temperature and not the body temperature math of the prey, so
+      easier to trigger. Does not paste any messages in chat. Has a range of -100C
+      to +200C.'
+  - rscadd: 'Temperature Damage: [Set off by default] If on, can deal damage to the
+      prey, ONLY if they have digestion turned on.'
+  - rscadd: 'Preference for Affected By Temperature: [Set on by default] You will
+      only have the above apply to you at all as prey if this is enabled. You will
+      still only take damage if you have digestion turned on and the pred has damage
+      turned on.'
+  - refactor: calculations in human/life.dm now only apply temperature warnings and
+      damage effects when the characters location is not a belly, this skips these
+      sections of code when the prey is in a belly only.
+  - bugfix: Fixes a bug where heat and cold discomfort alerts were cleared instantly
+      outside of bellies.
+  - bugfix: Fixes a SmartVend UI alphabetical ordering to use modern code.
+2025-08-31:
+  CHOMPStation2StaffMirrorBot:
+  - qol: bellies now have a display name option as their object names are unique
+  - qol: alters some message handling with owner struggle messages
+  - bugfix: size netgun build path
+  - maptweak: (Stellar Delight) Fixed a missing scrubber pipe in the Engineering Workshop.
+  - maptweak: (Stellar Delight) Fixed a misshapen air distro pipe in exploration.
+  - maptweak: (Stellar Delight) Fixed exploration disposals' pipes spitting items
+      out into each other.
+  - bugfix: program manager not properly reopening the main UI
+  - bugfix: stating robot laws failing
+  Will:
+  - rscadd: 'Bunsen burner, a table machine for simple distilling reactions in chemistry
+
+      add:chemical analyzer circuitboard'
+  - balance: chemical analyzer and smart centrifuge moved to their own techweb entry
+  - bugfix: chemical analyzer can be properly deconstructed
+  - bugfix: tin added to dexalin reaction as a possible inhibitor, to fix an issue
+      in the chemical refinery
+  - bugfix: reduce sodium distillation reaction no longer produces twice as much sodium
+      as it should, it also does not require a specific atmosphere anymore
+  - bugfix: vitals monitor techweb entry no longer accidentally overwritten by rtg
+      techweb entry
+  - code_imp: handle_reaction() properly returns true or false if the reaction was
+      successful or not
+  Zizzi:
+  - rscadd: Circuitry cloning.

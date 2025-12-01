@@ -5,7 +5,7 @@
 
 	say_list_type = /datum/say_list/clown
 
-	can_be_drop_prey = FALSE //CHOMP Add
+	can_be_drop_prey = FALSE
 
 /datum/say_list/clown
 	speak = list("HONK", "Honk!", "Henk!")
@@ -362,3 +362,9 @@
 	response_help = "pokes"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
+
+// Outpost 21 edit begin - Undead reviving mobs
+/mob/living/simple_mob/clowns/normal/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/undead_revival, rev_time = 45 SECONDS, rev_chance = 80, rev_hppercent = 50)
+// Outpost 21 edit end

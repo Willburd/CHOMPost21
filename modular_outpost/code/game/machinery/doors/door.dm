@@ -29,10 +29,19 @@
 /obj/machinery/door/flesh/attackby(obj/item/I as obj, mob/user as mob)
 	// no interaction
 
+/obj/machinery/door/flesh/attack_hand(mob/user)
+	// no interaction
+
+/obj/machinery/door/flesh/attack_generic(mob/user, damage)
+	attack_hand(user)
+
+/obj/machinery/door/flesh/attack_alien(mob/user)
+	attack_hand(user)
+
 /obj/machinery/door/flesh/emag_act(var/remaining_charges)
 	// no behavior
 
-/obj/machinery/door/flesh/emp_act(severity)
+/obj/machinery/door/flesh/emp_act(severity, recursive)
 	// immune to
 	src.health = src.maxhealth
 

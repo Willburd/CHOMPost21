@@ -49,7 +49,7 @@
 	if(I.has_tool_quality(TOOL_CROWBAR))
 		to_chat(user, span_notice("You start to [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]."))
 		playsound(src, 'sound/effects/stonedoor_openclose.ogg', 50, 1)
-		if(do_after(user, 30))
+		if(do_after(user, 3 SECONDS, target = src))
 			user.visible_message(span_notice("[user] [cistern ? "replaces the lid on the cistern" : "lifts the lid off the cistern"]!"), span_notice("You [cistern ? "replace the lid on the cistern" : "lift the lid off the cistern"]!"), "You hear grinding porcelain.")
 			cistern = !cistern
 			update_icon()
@@ -69,7 +69,7 @@
 				if(open && !swirlie)
 					user.visible_message(span_danger("[user] starts to give [GM.name] a swirlie!"), span_notice("You start to give [GM.name] a swirlie!"))
 					swirlie = GM
-					if(do_after(user, 30, GM))
+					if(do_after(user, 3 SECONDS, target = GM))
 						user.visible_message(span_danger("[user] gives [GM.name] a swirlie!"), span_notice("You give [GM.name] a swirlie!"), "You hear a toilet flushing.")
 						if(!GM.internal)
 							GM.adjustOxyLoss(5)
@@ -115,7 +115,7 @@
 				if(open && !swirlie)
 					user.visible_message(span_danger("[user] starts to give [GM.name] a swirlie!"), span_notice("You start to give [GM.name] a swirlie!"))
 					swirlie = GM
-					if(do_after(user, 30, GM))
+					if(do_after(user, 3 SECONDS, target = GM))
 						user.visible_message(span_danger("[user] gives [GM.name] a swirlie!"), span_notice("You give [GM.name] a swirlie!"), "You hear a toilet flushing.")
 						if(!GM.internal)
 							GM.adjustOxyLoss(5)
@@ -206,7 +206,7 @@
 		var/newtemp = tgui_input_list(user, "What setting would you like to set the temperature valve to?", "Water Temperature Valve", temperature_settings)
 		to_chat(user, span_notice("You begin to adjust the temperature valve with \the [I]."))
 		playsound(src, I.usesound, 50, 1)
-		if(do_after(user, 50 * I.toolspeed))
+		if(do_after(user, 5 SECONDS * I.toolspeed, target = src))
 			watertemp = newtemp
 			user.visible_message(span_notice("[user] adjusts the shower with \the [I]."), span_notice("You adjust the shower with \the [I]."))
 			add_fingerprint(user)
@@ -253,8 +253,8 @@
 
 	if(isliving(O))
 		var/mob/living/L = O
-		L.ExtinguishMob()
-		L.fire_stacks = -20 //Douse ourselves with water to avoid fire more easily
+		L.extinguish_mob()
+		L.adjust_fire_stacks(-20) //Douse ourselves with water to avoid fire more easily
 
 	if(iscarbon(O))
 		//flush away reagents on the skin
@@ -265,7 +265,7 @@
 
 	O.wash(CLEAN_SCRUB)
 
-	// Outpost 21 edit begin - splash monkey cubes
+	// Outpost 21 edit(port) begin - splash monkey cubes
 	if(istype(O,/obj/item/storage/box/monkeycubes))
 		var/obj/item/storage/box/monkeycubes/M = O
 		M.soaked()
@@ -273,7 +273,7 @@
 		var/obj/item/reagent_containers/food/snacks/monkeycube/C = O
 		C.soaked()
 	// Outpost 21 edit end
-	
+
 	reagents.splash(O, 10, min_spill = 0, max_spill = 0)
 
 /obj/machinery/shower/process()
@@ -293,7 +293,7 @@
 	is_washing = 1
 	var/turf/T = get_turf(src)
 	T.wash(CLEAN_SCRUB)
-	reagents.splash(T, 10, min_spill = 0, max_spill = 0) // Outpost 21 edit - Fire suppression sprinklers
+	reagents.splash(T, 10, min_spill = 0, max_spill = 0) // Outpost 21 edit(port) - Fire suppression sprinklers
 	addtimer(VARSET_CALLBACK(src, is_washing, 0), 100, TIMER_DELETE_ME)
 
 /obj/machinery/shower/proc/process_heat(mob/living/M)
@@ -409,7 +409,10 @@
 	return
 
 /obj/item/bikehorn/rubberducky/pink/container_resist(var/mob/living/escapee)
-	escapee.forceMove(get_turf(src))
+	if(isdisposalpacket(loc))
+		escapee.forceMove(loc)
+	else
+		escapee.forceMove(get_turf(src))
 	to_chat(escapee, span_vnotice("You managed to crawl out of the rubber ducky!"))
 
 /obj/item/bikehorn/rubberducky/grey
@@ -606,7 +609,7 @@
 	thing.update_icon()
 
 /obj/structure/sink/attack_hand(mob/user as mob)
-	if (ishuman(user))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (H.hand)
@@ -629,7 +632,7 @@
 	playsound(src, 'sound/effects/sink_long.ogg', 75, 1)
 
 	busy = 1
-	if(!do_after(user, 40, src))
+	if(!do_after(user, 4 SECONDS, target = src))
 		busy = 0
 		to_chat(user, span_notice("You stop washing your hands."))
 		return
@@ -681,10 +684,9 @@
 					R.cell.charge -= 20
 				else
 					B.deductcharge(B.hitcost)
-				var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 				user.visible_message( \
-					span_danger("[user] was stunned by [TU.his] wet [O]!"), \
-					span_userdanger("[user] was stunned by [TU.his] wet [O]!"))
+					span_danger("[user] was stunned by [user.p_their()] wet [O]!"), \
+					span_userdanger("[user] was stunned by [user.p_their()] wet [O]!"))
 				return 1
 	else if(istype(O, /obj/item/mop))
 		O.reagents.add_reagent(REAGENT_ID_WATER, 5)
@@ -713,7 +715,7 @@
 	to_chat(user, span_notice("You start washing \the [I]."))
 
 	busy = 1
-	if(!do_after(user, 40, src))
+	if(!do_after(user, 4 SECONDS, target = src))
 		busy = 0
 		to_chat(user, span_notice("You stop washing \the [I]."))
 		return

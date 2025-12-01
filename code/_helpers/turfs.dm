@@ -79,7 +79,7 @@
 
 		var/turf/target = locate(dst_origin.x + x_pos, dst_origin.y + y_pos, dst_origin.z + z_pos)
 		if(!target)
-			error("Null turf in translation @ ([dst_origin.x + x_pos], [dst_origin.y + y_pos], [dst_origin.z + z_pos])")
+			log_world("## ERROR Null turf in translation @ ([dst_origin.x + x_pos], [dst_origin.y + y_pos], [dst_origin.z + z_pos])")
 		turf_map[source] = target //if target is null, preserve that information in the turf map
 
 	return turf_map
@@ -106,7 +106,7 @@
 
 	//You can stay, though.
 	if(istype(T,/turf/space))
-		error("Tried to translate a space turf: src=[log_info_line(T)] dst=[log_info_line(B)]")
+		log_world("## ERROR Tried to translate a space turf: src=[log_info_line(T)] dst=[log_info_line(B)]")
 		return FALSE // TODO - Is this really okay to do nothing?
 
 	var/turf/X //New Destination Turf
@@ -155,7 +155,7 @@
 	//Move the objects. Not forceMove because the object isn't "moving" really, it's supposed to be on the "same" turf.
 	for(var/obj/O in T)
 		if(O.simulated)
-			// Outpost 21 edit begin - multi-loc objects need to check if it's their actual loc, and not just a corner!
+			// Outpost 21 edit(port) begin - multi-loc objects need to check if it's their actual loc, and not just a corner!
 			if(O.locs.len > 1)
 				if(O.loc == T)
 					O.loc = X
@@ -166,7 +166,7 @@
 				O.update_light()
 			if(z_level_change) // The objects still need to know if their z-level changed.
 				O.onTransitZ(T.z, X.z)
-			// Outpost 21 edit begin - Shuttle updates interior capable vehicles properly on movement
+			// Outpost 21 edit(port) begin - Shuttle updates interior capable vehicles properly on movement
 			if(istype(O,/obj/vehicle/has_interior/controller))
 				// kinda hacky... but this is the only thing that has had issues.
 				// Because the shuttle doesn't actually call move(),

@@ -94,7 +94,7 @@
 		if(9)	//Sep
 			switch(DD)
 				if(19)
-					return new /obj/item/flag/pirate(here)						// talk like a pirate date
+					return new /obj/structure/sign/flag/pirate(here)			// talk like a pirate date
 
 		if(10)	//Oct
 			return new /obj/effect/landmark/carved_pumpkin_spawn(here)			// SPOOKYMONTH

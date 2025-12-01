@@ -20,7 +20,7 @@
 	refer to them as 'shitbirds' for their violent and offensive nature, as well as their horrible \
 	smell.<br/><br/>Most humans will never meet a Vox raider, instead learning of this insular species through \
 	dealing with their traders and merchants; those that do rarely enjoy the experience."
-	wikilink="https://wiki.vore-station.net/Vox"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Vox" //CHOMPEdit
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vox)
 
 //	taste_sensitivity = TASTE_DULL
@@ -75,13 +75,13 @@
 
 
 	has_organ = list(
-		O_HEART =    /obj/item/organ/internal/heart/vox,
-		O_LUNGS =    /obj/item/organ/internal/lungs/vox,
-		O_VOICE =	 /obj/item/organ/internal/voicebox,
-		O_LIVER =    /obj/item/organ/internal/liver/vox,
-		O_KIDNEYS =  /obj/item/organ/internal/kidneys/vox,
-		O_BRAIN =    /obj/item/organ/internal/brain/vox,
-		O_EYES =     /obj/item/organ/internal/eyes,
+		O_HEART =	/obj/item/organ/internal/heart/vox,
+		O_LUNGS =	/obj/item/organ/internal/lungs/vox,
+		O_VOICE =	/obj/item/organ/internal/voicebox/vox,
+		O_LIVER =	/obj/item/organ/internal/liver/vox,
+		O_KIDNEYS =	/obj/item/organ/internal/kidneys/vox,
+		O_BRAIN =	/obj/item/organ/internal/brain/vox,
+		O_EYES =	/obj/item/organ/internal/eyes,
 		)
 
 	genders = list(NEUTER)
@@ -98,7 +98,7 @@
 /datum/species/vox/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0,var/comprehensive = 0)
 	. = ..()
 
-	/* Outpost 21 edit - we use our own tank code
+	/* Outpost 21 edit(port) - we use our own tank code
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back) //CHOMPedit

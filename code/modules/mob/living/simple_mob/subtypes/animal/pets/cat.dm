@@ -146,7 +146,7 @@ var/list/_cat_default_emotes = list(
 	holder_type = /obj/item/holder/cat/runtime
 	makes_dirt = 0 //Vorestation Edit
 
-// Outpost 21 edit begin - Runtime error handler
+// Outpost 21 edit(port) begin - Runtime error handler
 /mob/living/simple_mob/animal/passive/cat/runtime/Initialize(mapload)
 	. = ..()
 	GLOB.runtimes_in_world.Add(src)

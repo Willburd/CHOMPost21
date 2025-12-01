@@ -7,8 +7,6 @@
 	var/mirrored = FALSE
 	var/tee = FALSE
 
-	var/initial_icon_updated = FALSE // Outpost 21 edit - These need to wait a bit, then do an icon update, or they won't init the icon correctly on map spawn!
-
 	var/datum/gas_mixture/air1
 	var/datum/gas_mixture/air2
 	var/datum/gas_mixture/air3
@@ -62,7 +60,7 @@
 		return 1
 	playsound(src, W.usesound, 50, 1)
 	to_chat(user, span_notice("You begin to unfasten \the [src]..."))
-	if (do_after(user, 40 * W.toolspeed))
+	if (do_after(user, 40 * W.toolspeed, target = src))
 		user.visible_message( \
 			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
 			span_notice("You have unfastened \the [src]."), \

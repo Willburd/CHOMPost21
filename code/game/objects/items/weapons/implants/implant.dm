@@ -104,6 +104,33 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 	known_implant = TRUE
 	var/id = 1
 	var/degrade_time = 10 MINUTES	//How long before the implant stops working outside of a living body.
+	// Outpost 21 edit begin - Tracking implant notifications
+	var/in_secure_area = FALSE
+	var/static/list/forbidden_areas = list(
+		/area/security/armoury,
+		/area/security/nuke_storage,
+		/area/bridge,
+		/area/crew_quarters/captain,
+		/area/crew_quarters/heads/hop,
+		/area/crew_quarters/heads/hor,
+		/area/crew_quarters/heads/chief,
+		/area/crew_quarters/heads/hos,
+		/area/crew_quarters/heads/cmo,
+		/area/quartermaster/qm,
+		/area/teleporter,
+		/area/teleporter/bridge,
+		/area/AIsattele,
+		/area/ai_sat,
+		/area/engineering/gravgen,
+		/area/medical/voxlab,
+		/area/offworld/confinementbeam/station,
+		/area/shuttle/medical,
+		/area/shuttle/security,
+		/area/shuttle/trawler,
+		/area/vehicle_interior,
+		/area/muriki/processor,
+	)
+	// Outpost 21 edit end
 
 /obj/item/implant/tracking/weak	//This is for the loadout
 	degrade_time = 2.5 MINUTES
@@ -123,16 +150,29 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 	return ..()
 
 /obj/item/implant/tracking/process()
-	var/implant_location = src.loc
-	if(ismob(implant_location))
-		var/mob/living/L = implant_location
-		if(L.stat == DEAD)
-			if(world.time >= L.timeofdeath + degrade_time)
+	var/mob/living/implant_mob // Get implant's mob from our host organ
+	if(istype(loc, /obj/item/organ))
+		var/obj/item/organ/O = loc
+		implant_mob = O.owner
+
+	if(ismob(implant_mob))
+		if(implant_mob.stat == DEAD)
+			if(world.time >= implant_mob.timeofdeath + degrade_time)
 				name = "melted implant"
 				desc = "Charred circuit in melted plastic case. Wonder what that used to be..."
 				icon_state = "implant_melted"
 				malfunction = MALFUNCTION_PERMANENT
 				STOP_PROCESSING(SSobj, src)
+		// Outpost 21 edit begin - Tracking implant notifications
+		else
+			var/area/A = get_area(implant_mob)
+			if(A && is_type_in_list(A,forbidden_areas))
+				if(!in_secure_area)
+					GLOB.global_announcer.autosay("A tracking implant entered secure area: [A]!", "Tracking Implant Monitor", CHANNEL_SECURITY)
+				in_secure_area = TRUE
+			else
+				in_secure_area = FALSE
+		// Outpost 21 edit end
 	return 1
 
 /obj/item/implant/tracking/get_data()
@@ -152,7 +192,7 @@ circuitry. As a result neurotoxins can cause massive damage.<HR>
 Implant Specifics:<BR>"}
 	return dat
 
-/obj/item/implant/tracking/emp_act(severity)
+/obj/item/implant/tracking/emp_act(severity, recursive)
 	if (malfunction)	//no, dawg, you can't malfunction while you are malfunctioning
 		return
 	malfunction = MALFUNCTION_TEMPORARY
@@ -254,6 +294,12 @@ Implant Specifics:<BR>"}
 		log_game("Explosive implant triggered in [T] ([T.key]).")
 
 		if(ishuman(imp_in))
+			// Outpost 21 edit begin - Implants in head destroy brains
+			if(istype(part,/obj/item/organ/external/head))
+				var/mob/living/carbon/human/H = T
+				if(H && H.organs_by_name[O_BRAIN])
+					qdel(H.organs_by_name[O_BRAIN])
+			// Outpost 21 edit end
 			if (elevel == "Localized Limb")
 				if(part) //For some reason, small_boom() didn't work. So have this bit of working copypaste.
 					imp_in.visible_message(span_warning("Something beeps inside [imp_in][part ? "'s [part.name]" : ""]!"))
@@ -292,7 +338,7 @@ Implant Specifics:<BR>"}
 	usr.mind.store_memory("Explosive implant in [source] can be activated by saying something containing the phrase ''[src.phrase]'', <B>say [src.phrase]</B> to attempt to activate.", 0, 0)
 	to_chat(usr, "The implanted explosive implant in [source] can be activated by saying something containing the phrase ''[src.phrase]'', <B>say [src.phrase]</B> to attempt to activate.")
 
-/obj/item/implant/explosive/emp_act(severity)
+/obj/item/implant/explosive/emp_act(severity, recursive)
 	if (malfunction)
 		return
 	malfunction = MALFUNCTION_TEMPORARY
@@ -396,7 +442,7 @@ the implant may become unstable and either pre-maturely inject the subject or si
 			qdel(src)
 	return
 
-/obj/item/implant/chem/emp_act(severity)
+/obj/item/implant/chem/emp_act(severity, recursive)
 	if (malfunction)
 		return
 	malfunction = MALFUNCTION_TEMPORARY
@@ -555,7 +601,7 @@ the implant may become unstable and either pre-maturely inject the subject or si
 			qdel(a)
 			STOP_PROCESSING(SSobj, src)
 
-/obj/item/implant/death_alarm/emp_act(severity)			//for some reason alarms stop going off in case they are emp'd, even without this
+/obj/item/implant/death_alarm/emp_act(severity, recursive)			//for some reason alarms stop going off in case they are emp'd, even without this
 	if (malfunction)		//so I'm just going to add a meltdown chance here
 		return
 	malfunction = MALFUNCTION_TEMPORARY

@@ -56,7 +56,7 @@ OL|IL|OL
 #define EXPLODEHEAT T0C + 100000 // Instead of stacking heat forever it'll just explode at this temp
 #define OFFSET_RAND_MAX 250
 #define PROJECTILE_DELAY 4
-#define NUMBER_OF_PROJECTILES 5
+#define NUMBER_OF_PROJECTILES 1
 
 /datum/confinement_pulse_data
 	var/power_level = 1
@@ -99,9 +99,6 @@ OL|IL|OL
 /datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
-	var/obj/structure/confinement_beam_generator/control_box/CB = origin_machine?.resolve()
-	if(!CB || !CB.on_target(target_x,target_y))
-		return // Stop making mistakes
 	var/org_wattage = SSsupply.watts_sold
 	SSsupply.watts_sold += power_level * 0.92 // Sell to centcom
 	var/new_wattage = SSsupply.watts_sold
@@ -170,31 +167,13 @@ OL|IL|OL
 	VAR_PROTECTED/damage_alert = FALSE
 	VAR_PROTECTED/critical_alert = FALSE
 
+/obj/structure/confinement_beam_generator/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/rotatable)
+
 /obj/structure/confinement_beam_generator/Destroy()
 	construction_state = 0
 	. = ..()
-
-/obj/structure/confinement_beam_generator/verb/rotate_clockwise()
-	set name = "Rotate Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if (src.anchored || usr:stat)
-		to_chat(usr, "It is fastened to the floor!")
-		return 0
-	src.set_dir(turn(src.dir, 270))
-	return TRUE
-
-/obj/structure/confinement_beam_generator/verb/rotate_counterclockwise()
-	set name = "Rotate Counter Clockwise"
-	set category = "Object"
-	set src in oview(1)
-
-	if (src.anchored || usr:stat)
-		to_chat(usr, "It is fastened to the floor!")
-		return 0
-	src.set_dir(turn(src.dir, 90))
-	return TRUE
 
 /obj/structure/confinement_beam_generator/examine(mob/user)
 	. = ..()

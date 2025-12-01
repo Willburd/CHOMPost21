@@ -103,7 +103,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		if (src.stage == 1)
 			playsound(src, W.usesound, 75, 1)
 			to_chat(user, "You begin deconstructing [src].")
-			if (!do_after(user, 30 * W.toolspeed))
+			if (!do_after(user, 3 SECONDS * W.toolspeed, target = src))
 				return
 			new /obj/item/stack/material/steel( get_turf(src.loc), sheets_refunded )
 			user.visible_message("[user.name] deconstructs [src].", \
@@ -282,9 +282,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	plane = OBJ_PLANE
 	layer = OBJ_LAYER
 	desc = "A floor lamp."
-	// Outpost 21 edit begin - why was this a large bulb? It makes fixing it manually a pain when it's mostly used as room lighting...
-	light_type = /obj/item/light/bulb //large
-	// Outpost 21 edit end
+	light_type = /obj/item/light/bulb/large
 	construct_type = /obj/machinery/light_construct/flamp
 	shows_alerts = FALSE
 	var/lamp_shade = 1
@@ -306,6 +304,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 /obj/machinery/light/small/emergency
 	light_type = /obj/item/light/bulb/red
+	nightshift_allowed = FALSE
 
 /obj/machinery/light/small/emergency/flicker
 	auto_flicker = TRUE
@@ -889,7 +888,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 // break the light and make sparks if was on
 
-/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = 0)
+/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = FALSE)
 	if(status == LIGHT_EMPTY)
 		return
 
@@ -1037,6 +1036,8 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 /obj/item/light/tube/large
 	w_class = ITEMSIZE_SMALL
 	name = "large light tube"
+	icon_state = "ltube_large"
+	base_state = "ltube_large"
 	brightness_range = 15
 	brightness_power = 4
 
@@ -1070,6 +1071,8 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 // For 'floor lamps' in outdoor use and such
 /obj/item/light/bulb/large
 	name = "large light bulb"
+	icon_state = "lbulb_large"
+	base_state = "lbulb_large"
 	brightness_range = 7
 	brightness_power = 1.5
 
@@ -1089,6 +1092,12 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	brightness_range = 4
 	color = "#da0205"
 	brightness_color = "#da0205"
+	init_brightness_range = 4
+
+/obj/item/light/bulb/blue
+	brightness_range = 4
+	color = "#028bda"
+	brightness_color = "#028bda"
 	init_brightness_range = 4
 
 /obj/item/light/bulb/fire

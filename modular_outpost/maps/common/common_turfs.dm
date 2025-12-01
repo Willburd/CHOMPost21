@@ -3,7 +3,7 @@
 	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
 
 /turf/simulated/open
-	dynamic_lighting = 1 //I don't care if there's no true multiz lighting, this looks so much nicer it's not even funny -KK (from turf_yw)
+	dynamic_lighting = TRUE
 
 /turf/simulated/floor/indoorrocks //Not outdoor rocks to prevent weather fuckery
 	name = "rocks"
@@ -180,18 +180,19 @@
 
 // Walking on maglev tracks will shock you! Horray!
 /turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
-	if(locate(/obj/structure/catwalk) in AM.loc) // Outpost 21 edit - safe to walk over!
+	if(!isliving(AM) || prob(50))
 		return
-	if(isliving(AM) && !(AM.is_incorporeal()) && prob(50))
-		track_zap(AM)
+	if(locate(/obj/structure/catwalk) in src) // safe to walk over as a bridge!
+		return
+	track_zap(AM)
 
 /turf/simulated/floor/maglev/attack_hand(var/mob/user)
 	if(prob(75))
 		track_zap(user)
 
 /turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)
-	if (!istype(user)) return
-	if (user.is_incorporeal()) return // Outpost 21 edit - Zapkin
+	if(!istype(user) || user.is_incorporeal())
+		return
 	if (electrocute_mob(user, shock_area, src))
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
@@ -199,17 +200,25 @@
 
 // override of newly added unsimulated deathdrop tile with black darkness appearance!
 /turf/unsimulated/deathdrop/elevator_shaft
+	name = "Openspace"
+	desc = "It looks like a long way down..."
 	death_message = "You fall into the elevator shaft, the thin atmosphere inside does little to slow you down and by the time you hit the bottom there is nothing more than a bloody smear. The damage you did to the elevator and the cost of your potential resleeve will be deducted from your pay."
 
 /turf/simulated/deathdrop/elevator_shaft
+	name = "Openspace"
+	desc = "It looks like a long way down..."
 	death_message = "You fall into the elevator shaft, the thin atmosphere inside does little to slow you down and by the time you hit the bottom there is nothing more than a bloody smear. The damage you did to the elevator and the cost of your potential resleeve will be deducted from your pay."
 
 /turf/unsimulated/deathdrop/waterfall
+	name = "Lethal Rapids"
+	desc = "The water churns violently."
 	death_message = "The increasing speed and current of the river swiftly drags you into the rapids, destoying any boat you had and cracking your body against the rocks. The harsh acids of the water then make short work at dissolving your corpse, lost to the river forever."
 	icon = 'modular_outpost/icons/turf/outdoors.dmi'
 	icon_state = "searapids" // So it shows up in the map editor as water.
 
 /turf/simulated/deathdrop/waterfall
+	name = "Lethal Rapids"
+	desc = "The water churns violently."
 	death_message = "The increasing speed and current of the river swiftly drags you into the rapids, destoying any boat you had and cracking your body against the rocks. The harsh acids of the water then make short work at dissolving your corpse, lost to the river forever."
 	icon = 'modular_outpost/icons/turf/outdoors.dmi'
 	icon_state = "searapids" // So it shows up in the map editor as water.

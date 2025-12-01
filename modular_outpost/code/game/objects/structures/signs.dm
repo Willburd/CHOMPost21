@@ -17,6 +17,14 @@
 	icon = 'modular_outpost/icons/obj/decals.dmi'
 	icon_state = "map-right-outpost"
 
+/obj/structure/sign/scenery/map/leftbasement_outpost21
+	icon = 'modular_outpost/icons/obj/decals.dmi'
+	icon_state = "map-left-outpostbasement"
+
+/obj/structure/sign/scenery/map/rightbasement_outpost21
+	icon = 'modular_outpost/icons/obj/decals.dmi'
+	icon_state = "map-right-outpostbasement"
+
 /obj/structure/sign/warning/enzyme
 	icon = 'modular_outpost/icons/obj/stationobjs.dmi'
 	name = "\improper WARNING: ENZYMATIC ATMOSPHERE"
@@ -50,6 +58,21 @@
 	icon_state = "atmos_ch4"
 
 
+/obj/structure/sign/secure_eshui_facility
+	icon = 'modular_outpost/icons/obj/decals.dmi'
+	name = "ESHUI Secure Facility"
+	desc = "WARNING, restricted area. It is unlawful to enter this area without the permission of the installation commander. No trespassing beyond this point. This perimeter is patrolled by drones. Use of deadly force is authorized."
+	icon_state = "eshui_restricted"
+
+
+/obj/structure/sign/secure_eshui_facility_highsec
+	icon = 'modular_outpost/icons/obj/decals.dmi'
+	name = "No Entry"
+	desc = "WARNING: Secure area. Authorized personnel only. Area patrolled by security drone. Lethal force authorized. No entry without approval from base commander."
+	icon_state = "eshui_high_secure"
+
+
+
 //Direction signs
 /obj/structure/sign/directions/outpost
 	name = "\improper Outpost Sign"
@@ -81,3 +104,11 @@
 	name = "\improper Backup Generator"
 	desc = "A direction sign, pointing out the way to an Emergency Generator."
 	icon_state = "direction_gen"
+
+
+// Central AI
+/obj/structure/showcase/AI_central
+	name = "Central Command AI"
+	desc = "Manages central command's AI tasks."
+	icon_state = "ai-red"
+	icon = 'icons/mob/AI.dmi'

@@ -95,7 +95,7 @@
 		// outpost 21 edit begin - nuke item random spawns
 		if("nukeitem")
 			nukeitems += loc
-			delete_me = 1
+			delete_me = TRUE
 		// outpost 21 edit end
 
 	if(delete_me)
@@ -127,7 +127,7 @@
 	if(using_map)
 		using_map.secret_levels |= z
 	else
-		log_error("[type] mapped in but no using_map")
+		log_mapping("[type] mapped in but no using_map")
 
 /obj/effect/landmark/hidden_level
 	delete_me = TRUE
@@ -137,7 +137,7 @@
 	if(using_map)
 		using_map.hidden_levels |= z
 	else
-		log_error("[type] mapped in but no using_map")
+		log_mapping("[type] mapped in but no using_map")
 
 
 /obj/effect/landmark/virtual_reality
@@ -305,3 +305,11 @@
 /// In landmarks.dm and not unit_test.dm so it is always active in the mapping tools.
 /obj/effect/landmark/unit_test_top_right
 	name = "unit test zone top right"
+
+/obj/effect/landmark/bslocker
+	name = "bslocker spawn"
+
+/obj/effect/landmark/bslocker/Initialize(mapload)
+	. = ..()
+	var/obj/structure/closet/closet = new /obj/structure/closet/bluespace(loc)
+	GLOB.bslockers.Add(closet)

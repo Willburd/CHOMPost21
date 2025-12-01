@@ -4,9 +4,17 @@
 //Above comment has been cleaned by the holy light of someone who knows vaguely what they are doing, and was told their ideas were pretty neato. - Willbird
 var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let this be easily abused! Admins can manually set this if they want more during a round...
 
+// fake mob-like statue
+/obj/structure/prop/statue/jumpscare
+	name = /mob/living/simple_mob/animal/statue::name
+	desc = /mob/living/simple_mob/animal/statue::desc
+	icon = /mob/living/simple_mob/animal/statue::icon
+	icon_state = /mob/living/simple_mob/animal/statue::icon_state
+
+// actual mob
 /mob/living/simple_mob/animal/statue
 	name = "statue" // matches the name of the statue with the flesh-to-stone spell
-	desc = "An incredibly lifelike marble statue, depicting an angellic figure." // same as an ordinary statue with the added "eye following you" description
+	desc = "An incredibly lifelike marble statue, depicting an angelic figure." // same as an ordinary statue with the added "eye following you" description
 	tt_desc = "angelum weepicus"
 
 	icon = 'icons/obj/statue_ch.dmi'
@@ -125,7 +133,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 /mob/living/simple_mob/animal/statue/attackby(var/obj/item/O as obj, var/mob/user as mob) //banishing the statue is a risky job
 	if(istype(O, /obj/item/nullrod))
 		visible_message("<span class='warning'>[user] tries to banish [src] with [O]!</span>")
-		if(do_after(user, 15, src))
+		if(do_after(user, 2 SECONDS, target = src))
 			if(banishable)
 				visible_message("<span class='warning'>[src] crumbles into dust!</span>")
 				SShaunting.reset_world_haunt()

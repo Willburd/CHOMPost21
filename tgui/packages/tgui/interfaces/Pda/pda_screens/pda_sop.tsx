@@ -33,7 +33,7 @@ export const pda_sop = (props) => {
           Next
         </Button>
         <Section title={sop_title}>
-          {/* Uses dangerouslySetInnerHTML, This likely needs more sanitization, but it's not editable by players anyway? */}
+          {/** biome-ignore lint/security/noDangerouslySetInnerHtml: is only ever passed data by hardcoded datum strings */}
           <div dangerouslySetInnerHTML={{ __html: sop_body }} />
           <br />
           <hr />

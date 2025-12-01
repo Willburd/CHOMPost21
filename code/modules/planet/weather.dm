@@ -17,6 +17,8 @@
 
 	var/firework_override = FALSE
 
+	var/locked = FALSE // Outpost 21 edit - Locking weather
+
 /datum/weather_holder/New(var/source)
 	..()
 	our_planet = source
@@ -29,14 +31,14 @@
 
 /datum/weather_holder/proc/apply_to_turf(turf/T)
 	if(visuals in T.vis_contents)
-		warning("Was asked to add weather to [T.x], [T.y], [T.z] despite already having us in it's vis contents")
+		WARNING("Was asked to add weather to [T.x], [T.y], [T.z] despite already having us in it's vis contents")
 		return
 	T.vis_contents += visuals
 	T.vis_contents += special_visuals
 
 /datum/weather_holder/proc/remove_from_turf(turf/T)
 	if(!(visuals in T.vis_contents))
-		//warning("Was asked to remove weather from [T.x], [T.y], [T.z] despite it not having us in it's vis contents") // Outpost 21 edit - Cripples explosion performance, disabled this logging
+		//WARNING("Was asked to remove weather from [T.x], [T.y], [T.z] despite it not having us in it's vis contents") // Outpost 21 edit - Cripples explosion performance, disabled this logging
 		return
 	T.vis_contents -= visuals
 	T.vis_contents -= special_visuals
@@ -63,9 +65,16 @@
 	update_wind()
 	if(old_light_modifier && current_weather.light_modifier != old_light_modifier) // Updating the sun should be done sparingly.
 		our_planet.update_sun()
-	log_debug("[our_planet.name]'s weather is now [new_weather], with a temperature of [temperature]&deg;K ([temperature - T0C]&deg;C | [temperature * 1.8 - 459.67]&deg;F).")
+	log_game("[our_planet.name]'s weather is now [new_weather], with a temperature of [temperature]&deg;K ([temperature - T0C]&deg;C | [temperature * 1.8 - 459.67]&deg;F).")
 
 /datum/weather_holder/process()
+	// Outpost 21 edit begin - Locking weather
+	if(current_weather && locked)
+		imminent_weather = null // We are too powerful for you
+		current_weather.process_effects()
+		current_weather.process_sounds()
+		return
+	// Outpost 21 edit end
 	if(imminent_weather && world.time >= imminent_weather_shift)
 		proceed_to_imminent_weather()
 	else if(!imminent_weather && world.time >= next_weather_shift)
@@ -125,14 +134,19 @@
 			var/datum/weather/W = allowed_weather_types[position] // Get the actual datum and not a string.
 			var/new_weather = get_next_weather(W) // Get a suitable weather pattern to shift to from this one.
 			forecast += new_weather
-	log_debug("[our_planet.name]'s weather forecast is now '[english_list(forecast, and_text = " then ", final_comma_text = ", ")]'.")
+	log_game("[our_planet.name]'s weather forecast is now '[english_list(forecast, and_text = " then ", final_comma_text = ", ")]'.")
 
 // Wipes the forecast and regenerates it. Used for when the weather is forcefully changed, such as with admin verbs.
 /datum/weather_holder/proc/rebuild_forecast()
 	forecast.Cut()
 	build_forecast()
 
-
+// Outpost 21 edit(port) being - Forecast accessors
+/datum/weather_holder/proc/get_forecast_data()
+	if(locked)
+		return list(current_weather,current_weather,current_weather) // locked in
+	return forecast
+// Outpost 21 edit end
 
 /datum/weather_holder/proc/update_icon_effects()
 	visuals.icon_state = current_weather.icon_state
@@ -222,21 +236,29 @@
 	if(effect_flags & HAS_PLANET_EFFECT)
 		if(effect_flags & EFFECT_ALL_MOBS)
 			for(var/mob/M as anything in GLOB.mob_list)
+				if(isobserver(M)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(M.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(M)
 		if(effect_flags & EFFECT_ONLY_LIVING)
 			for(var/mob/living/L as anything in GLOB.living_mob_list)
+				if(isobserver(L)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(L.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(L)
 		if(effect_flags & EFFECT_ONLY_HUMANS)
 			for(var/mob/living/carbon/H as anything in GLOB.human_mob_list)
+				if(isobserver(H)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(H.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(H)
 		if(effect_flags & EFFECT_ONLY_ROBOTS)
 			for(var/mob/living/silicon/R as anything in GLOB.silicon_mob_list)
+				if(isobserver(R)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(R.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(R)

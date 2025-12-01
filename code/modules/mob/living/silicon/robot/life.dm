@@ -60,16 +60,6 @@
 	else
 		if (has_power)
 			to_chat(src, span_red("You are now running on emergency backup power."))
-			// Outpost 21 edit begin - Disable all items so that they don't vanish from your inventory
-			var/current_selection_index = get_selected_module() // Will be 0 if nothing is selected.
-			var/i = 0
-			for(var/thing in list(module_state_1, module_state_2, module_state_3))
-				i++
-				select_module(i)
-				uneq_active()
-			if(current_selection_index) // Select the slot that the player had before if possible.
-				select_module(current_selection_index)
-			// Outpost 21 edit end
 		has_power = 0
 		if(lights_on) // Light is on but there is no power!
 			lights_on = 0
@@ -169,12 +159,13 @@
 
 	// outpost 21 addition begin - lockers are dark and spooky!
 	if(istype(loc, /obj/structure/closet))
-		src.blinded = 1
+		blinded = 1
 	// outpost 21 addition end
 
-	return 1
+	// Call parent to handle signals
+	. = ..()
 
-/mob/living/silicon/robot/handle_regular_hud_updates()
+/mob/living/silicon/robot/handle_vision()
 	var/fullbright = FALSE
 	var/seemeson = FALSE
 	var/seejanhud = sight_mode & BORGJAN
@@ -236,45 +227,15 @@
 		plane_holder.set_vis(VIS_MESONS,seemeson)
 		plane_holder.set_vis(VIS_JANHUD,seejanhud)
 
+	// Call parent to handle signals
 	..()
 
-	if (healths)
-		if (stat != 2)
-			if(istype(src,/mob/living/silicon/robot/drone))
-				switch(health)
-					if(35 to INFINITY)
-						healths.icon_state = "health0"
-					if(25 to 34)
-						healths.icon_state = "health1"
-					if(15 to 24)
-						healths.icon_state = "health2"
-					if(5 to 14)
-						healths.icon_state = "health3"
-					if(0 to 4)
-						healths.icon_state = "health4"
-					if(-35 to 0)
-						healths.icon_state = "health5"
-					else
-						healths.icon_state = "health6"
-			else
-				if(health >= 200)
-					healths.icon_state = "health0"
-				else if(health >= 150)
-					healths.icon_state = "health1"
-				else if(health >= 100)
-					healths.icon_state = "health2"
-				else if(health >= 50)
-					healths.icon_state = "health3"
-				else if(health >= 0)
-					healths.icon_state = "health4"
-				else if(health >= (-getMaxHealth()))
-					healths.icon_state = "health5"
-				else
-					healths.icon_state = "health6"
-		else
-			healths.icon_state = "health7"
+/mob/living/silicon/robot/handle_regular_hud_updates()
+	. = ..()
+	if(!.)
+		return
 
-	if (syndicate && client)
+	if (syndicate)
 		for(var/datum/mind/tra in traitors.current_antagonists)
 			if(tra.current)
 				// TODO: Update to new antagonist system.
@@ -294,42 +255,76 @@
 	if(environment)
 		switch(environment.temperature) //310.055 optimal body temp
 			if(400 to INFINITY)
-				throw_alert("temp", /obj/screen/alert/hot/robot, HOT_ALERT_SEVERITY_MODERATE)
+				throw_alert("temp", /atom/movable/screen/alert/hot/robot, HOT_ALERT_SEVERITY_MODERATE)
 			if(360 to 400)
-				throw_alert("temp", /obj/screen/alert/hot/robot, HOT_ALERT_SEVERITY_LOW)
+				throw_alert("temp", /atom/movable/screen/alert/hot/robot, HOT_ALERT_SEVERITY_LOW)
 			if(260 to 360)
 				clear_alert("temp")
 			if(200 to 260)
-				throw_alert("temp", /obj/screen/alert/cold/robot, COLD_ALERT_SEVERITY_LOW)
+				throw_alert("temp", /atom/movable/screen/alert/cold/robot, COLD_ALERT_SEVERITY_LOW)
 			else
-				throw_alert("temp", /obj/screen/alert/cold/robot, COLD_ALERT_SEVERITY_MODERATE)
+				throw_alert("temp", /atom/movable/screen/alert/cold/robot, COLD_ALERT_SEVERITY_MODERATE)
 
-//Oxygen and fire does nothing yet!!
-//	if (oxygen) oxygen.icon_state = "oxy[oxygen_alert ? 1 : 0]"
-//	if (fire) fire.icon_state = "fire[fire_alert ? 1 : 0]"
+	//Oxygen and fire does nothing yet!!
+	//if (oxygen) oxygen.icon_state = "oxy[oxygen_alert ? 1 : 0]"
+	//if (fire) fire.icon_state = "fire[fire_alert ? 1 : 0]"
 
 	if(stat != 2)
 		if(blinded)
-			overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+			overlay_fullscreen("blind", /atom/movable/screen/fullscreen/blind)
 		else
 			clear_fullscreen("blind")
-			set_fullscreen(disabilities & NEARSIGHTED, "impaired", /obj/screen/fullscreen/impaired, 1)
-			set_fullscreen(eye_blurry, "blurry", /obj/screen/fullscreen/blurry)
-			set_fullscreen(druggy, "high", /obj/screen/fullscreen/high)
-
-	if (machine)
-		if (machine.check_eye(src) < 0)
-			reset_view(null)
-	else
-		if(client && !client.adminobs)
-			reset_view(null)
+			set_fullscreen(disabilities & NEARSIGHTED, "impaired", /atom/movable/screen/fullscreen/impaired, 1)
+			set_fullscreen(eye_blurry, "blurry", /atom/movable/screen/fullscreen/blurry)
+			set_fullscreen(druggy, "high", /atom/movable/screen/fullscreen/high)
 
 	if(emagged)
-		throw_alert("hacked", /obj/screen/alert/hacked)
+		throw_alert("hacked", /atom/movable/screen/alert/hacked)
 	else
 		clear_alert("hacked")
 
-	return 1
+/mob/living/silicon/robot/handle_hud_icons_health()
+	. = ..()
+	if(!. || !healths)
+		return
+
+	if(stat == DEAD)
+		healths.icon_state = "health7"
+		return
+
+	if(istype(src,/mob/living/silicon/robot/drone))
+		switch(health)
+			if(35 to INFINITY)
+				healths.icon_state = "health0"
+			if(25 to 34)
+				healths.icon_state = "health1"
+			if(15 to 24)
+				healths.icon_state = "health2"
+			if(5 to 14)
+				healths.icon_state = "health3"
+			if(0 to 4)
+				healths.icon_state = "health4"
+			if(-35 to 0)
+				healths.icon_state = "health5"
+			else
+				healths.icon_state = "health6"
+		return
+
+	// Not a switch because of the -max_health() case
+	if(health >= 200)
+		healths.icon_state = "health0"
+	else if(health >= 150)
+		healths.icon_state = "health1"
+	else if(health >= 100)
+		healths.icon_state = "health2"
+	else if(health >= 50)
+		healths.icon_state = "health3"
+	else if(health >= 0)
+		healths.icon_state = "health4"
+	else if(health >= (-getMaxHealth()))
+		healths.icon_state = "health5"
+	else
+		healths.icon_state = "health6"
 
 /mob/living/silicon/robot/proc/update_cell()
 	if(cell)
@@ -338,15 +333,15 @@
 			if(0.75 to INFINITY)
 				clear_alert("charge")
 			if(0.5 to 0.75)
-				throw_alert("charge", /obj/screen/alert/lowcell, 1)
+				throw_alert("charge", /atom/movable/screen/alert/lowcell, 1)
 			if(0.25 to 0.5)
-				throw_alert("charge", /obj/screen/alert/lowcell, 2)
+				throw_alert("charge", /atom/movable/screen/alert/lowcell, 2)
 			if(0.01 to 0.25)
-				throw_alert("charge", /obj/screen/alert/lowcell, 3)
+				throw_alert("charge", /atom/movable/screen/alert/lowcell, 3)
 			else
-				throw_alert("charge", /obj/screen/alert/emptycell)
+				throw_alert("charge", /atom/movable/screen/alert/emptycell)
 	else
-		throw_alert("charge", /obj/screen/alert/nocell)
+		throw_alert("charge", /atom/movable/screen/alert/nocell)
 
 
 /mob/living/silicon/robot/proc/update_items()
@@ -389,14 +384,14 @@
 		canmove = FALSE
 	return canmove
 
+/mob/living/silicon/robot/fire_act()
+	if(!on_fire) //Silicons don't gain stacks from hotspots, but hotspots can ignite them
+		ignite_mob()
+
 /mob/living/silicon/robot/update_fire()
 	cut_overlay(image(icon = 'icons/mob/OnFire.dmi', icon_state = get_fire_icon_state()))
 	if(on_fire)
 		add_overlay(image(icon = 'icons/mob/OnFire.dmi', icon_state = get_fire_icon_state()))
-
-/mob/living/silicon/robot/fire_act()
-	if(!on_fire) //Silicons don't gain stacks from hotspots, but hotspots can ignite them
-		IgniteMob()
 
 /mob/living/silicon/robot/handle_light()
 	if(lights_on)
@@ -406,7 +401,10 @@
 		. = ..()
 
 // outpost 21 addition begin - radiation and haunting affects borg vision
-/mob/living/silicon/robot/proc/handle_radiation()
+/mob/living/silicon/robot/handle_radiation()
+	. = ..()
+	if(.)
+		return
 	if(!client) // This is purely visual for borgs so we shouldn't bother otherwise
 		radiation = 0
 		return

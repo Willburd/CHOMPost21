@@ -36,7 +36,7 @@
 	hazard_low_pressure = -1
 
 	warning_high_pressure = 300
-	hazard_high_pressure = INFINITY
+	hazard_high_pressure = HAZARD_HIGH_PRESSURE // Outpost 21 edit - No, infinity is not a number patrick
 
 	cold_level_1 = -1	//Immune to cold
 	cold_level_2 = -1
@@ -58,7 +58,7 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
-	death_message = "phases to somewhere far away!"
+	// death_message = "phases to somewhere far away!" Outpost 21 edit - No darkspace
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -101,18 +101,24 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
-	species_component = /datum/component/shadekin/full //CHOMPEdit: Enabling full shadekin.
+
+	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/shadekin) //CHOMPEdit: Enabling full shadekin.
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
-	var/special_handling = TRUE //varswitch for downstream //CHOMPEdit - Enable.
+	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable shadekin death fizzle
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
+		/* Outpost 21 edit begin - Disable shadekin death fizzle
 		spawn(1)
 			for(var/obj/item/W in H)
 				H.drop_from_inventory(W)
 			qdel(H)
+		*/
+		H.drop_l_hand()
+		H.drop_r_hand()
+		// Outpost 21 edit end, ignore the drop items, can't have an empty block
 	else
 		if(!SK)
 			return

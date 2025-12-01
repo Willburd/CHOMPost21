@@ -1,6 +1,3 @@
-
-
-
 /datum/reagent
 	var/name = REAGENT_DEVELOPER_WARNING
 	var/id = REAGENT_ID_DEVELOPER_WARNING
@@ -45,6 +42,7 @@
 	var/list/glass_special = null // null equivalent to list()
 
 	var/from_belly = FALSE
+	var/dialysis_returnable = TRUE
 	var/wiki_flag = 0 // Bitflags for secret/food/drink reagent sorting
 	var/ppe_flags = 0 // Outpost 21 edit - PPE affecting chems
 	var/supply_conversion_value = null
@@ -176,7 +174,7 @@
 			if(CHEM_BLOOD)
 				affect_blood(M, alien, removed)
 			if(CHEM_INGEST)
-				if(istype(src, /datum/reagent/toxin) && M.toxin_gut) //CHOMPAdd
+				if(istype(src, /datum/reagent/toxin) && HAS_TRAIT(M, INGESTED_TOXIN_IMMUNE))
 					remove_self(removed)
 					return
 				affect_ingest(M, alien, removed * ingest_abs_mult)

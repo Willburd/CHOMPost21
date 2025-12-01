@@ -10,16 +10,12 @@
 	light_color = "#a91515"
 	circuit = /obj/item/circuitboard/security
 
-	var/list/viewers // Weakrefs to mobs in direct-view mode.
+	VAR_PRIVATE/list/viewers // Weakrefs to mobs in direct-view mode.
 	var/obj/vehicle/has_interior/controller/interior_controller = null
-	var/obj/structure/bed/chair/vehicle_interior_seat/paired_seat = null
 	var/controls_weapon_index = 0 // if above 0, controls weapons in interior_controller.internal_weapon_list
 
-/obj/machinery/computer/vehicle_interior_console/Initialize(mapload)
-	. = ..()
-
 /obj/machinery/computer/vehicle_interior_console/Destroy()
-	clean_all_viewers()
+	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 	return ..()
 
 /obj/machinery/computer/vehicle_interior_console/tgui_interact(mob/user, datum/tgui/ui = null)
@@ -28,82 +24,80 @@
 /obj/machinery/computer/vehicle_interior_console/attack_ai(mob/user)
 	to_chat (user, "<span class='warning'>A firewall prevents you from interfacing with this device!</span>")
 
-/obj/machinery/computer/vehicle_interior_console/attack_robot(mob/living/user)
-	attack_hand( null, user)
+/obj/machinery/computer/vehicle_interior_console/attack_robot(mob/user)
+	attack_hand(user)
 
-/obj/machinery/computer/vehicle_interior_console/attack_generic(mob/user as mob)
-	attack_hand( null, user)
+/obj/machinery/computer/vehicle_interior_console/attack_generic(mob/user)
+	attack_hand(user)
 
 /obj/machinery/computer/vehicle_interior_console/attack_hand(mob/user)
 	add_fingerprint(user)
 	if(stat & (BROKEN|NOPOWER))
 		return
-	if(issilicon(user) || isrobot(user))
-		to_chat (user, "<span class='warning'>A firewall prevents you from interfacing with this device!</span>")
+	if(!interior_controller)
+		to_chat(user, span_danger("Something is very wrong! Inform a coder that the vehicle you were in was deleted!"))
 		return
-	if(user.blinded)
-		to_chat(user, "<span class='notice'>You cannot see!</span>")
+	if(isrobot(user) || isAI(user))
+		to_chat(user, span_warning("A firewall prevents you from interfacing with this device!"))
 		return
 	// remove all others...
-	clean_all_viewers()
-	if(interior_controller.health <= 0)
-		to_chat(user, "<span class='notice'>It's not functional!</span>")
+	if(is_viewing_tank())
+		SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 		return
+	if(interior_controller.health <= 0)
+		to_chat(user, span_notice("It's not functional!"))
+		return
+	if(!interior_controller.on)
+		to_chat(user, span_notice("You need to start it up with the keys!"))
+		return
+	if(!user.buckled)
+		to_chat(user, span_notice("You need to buckle in!"))
+		return
+	if(!get_dist(user, src) > 1 || user.blinded || !interior_controller)
+		return
+	// Start view
 	playsound(src, "keyboard", 40) // into console
-	look(user)
+	if(!viewers) viewers = list() // List must exist for pass by reference to work
+	var/view_type = /datum/remote_view_config/interior_vehicle
+	if(istype(src,/obj/machinery/computer/vehicle_interior_console/helm))
+		view_type = /datum/remote_view_config/interior_vehicle/helm
+	start_coordinated_remoteview(user, interior_controller, viewers, view_type)
 
-/obj/machinery/computer/vehicle_interior_console/check_eye(var/mob/user)
-	if(!get_dist(user, src) > 1)
-		unlook(user)
-		return -1
-	else
-		return 0
+/obj/machinery/computer/vehicle_interior_console/look(var/mob/user)
+	if(!interior_controller)
+		return
+	user.set_viewsize(world.view + interior_controller.extra_view)
 
-/obj/machinery/computer/vehicle_interior_console/proc/look(var/mob/user)
-	if(interior_controller)
-		if(user.machine != src)
-			user.set_machine(src)
-		if(isliving(user))
-			var/mob/living/L = user
-			L.looking_elsewhere = 1
-			L.handle_vision()
-		user.reset_view(interior_controller)
-		user.set_viewsize(world.view + interior_controller.extra_view)
-		RegisterSignal(user, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
-		LAZYDISTINCTADD(viewers, WEAKREF(user))
-	else
-		clean_all_viewers()
-
-/obj/machinery/computer/vehicle_interior_console/proc/unlook(var/mob/user)
+/obj/machinery/computer/vehicle_interior_console/unlook(var/mob/user)
 	interior_controller.stop_move_sound()
-	user.unset_machine()
-	if(isliving(user))
-		var/mob/living/L = user
-		L.looking_elsewhere = 0
-		L.handle_vision()
 	user.set_viewsize() // reset to default
-	user.reset_view()
-	UnregisterSignal(user, COMSIG_OBSERVER_MOVED, PROC_REF(unlook))
-	LAZYREMOVE(viewers, WEAKREF(user))
 
-/obj/machinery/computer/vehicle_interior_console/proc/clean_all_viewers()
-	if(LAZYLEN(viewers))
-		for(var/datum/weakref/W in viewers)
-			var/M = W.resolve()
-			if(M)
-				unlook(M)
+/obj/machinery/computer/vehicle_interior_console/proc/is_viewing_tank()
+	return LAZYLEN(viewers)
 
 /obj/machinery/computer/vehicle_interior_console/ex_act(severity)
 	return // nothing
 
-/obj/machinery/computer/vehicle_interior_console/computer/update_icon()
-	if(!interior_controller.on)
+/obj/machinery/computer/vehicle_interior_console/update_icon()
+	if(!interior_controller?.on)
 		// power off in vehicle
 		cut_overlays()
 		if(icon_keyboard)
 			return add_overlay("[icon_keyboard]_off")
 	else
 		. = ..()
+
+//-------------------------------------------
+// Click through procs, for when you click in vehicle view!
+//-------------------------------------------
+/obj/machinery/computer/vehicle_interior_console/proc/click_action(atom/target,mob/user, params)
+	if(controls_weapon_index <= 0)
+		return FALSE
+	var/obj/item/vehicle_interior_weapon/W = interior_controller.internal_weapons_list[controls_weapon_index]
+	if(!W || interior_controller.health <= 0)
+		to_chat(user, span_warning("Weapon is inoperable!"))
+		return FALSE
+	return W.action(target, params, user)
 
 ////////////////////////////////////////////////////////////////////////////////
 // Pilot console
@@ -144,13 +138,6 @@
 		remove_key()
 	else
 		return ..()
-
-/obj/machinery/computer/vehicle_interior_console/attack_hand(mob/user)
-	// same as normal, but EXPECTS you to be in the pilot seat!
-	if(!interior_controller || !paired_seat || !paired_seat.has_buckled_mobs() || paired_seat.buckled_mobs[1] != user)
-		to_chat(user, "<span class='notice'>You need to buckle into the seat to use this console!</span>")
-		return
-	. = ..()
 
 /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine()
 	set name = "Start engine"
@@ -255,8 +242,66 @@
 	name = "Gunner Periscope"
 	desc = "Targeting cameras for onboard weaponry."
 
-/obj/machinery/computer/vehicle_interior_console/gunner/examine(mob/user)
-	. = ..()
-	//if(ishuman(user) && Adjacent(user))
-	//	. += "The power light is [interior_controller.on ? "on" : "off"].\nThere are[interior_controller.key ? "" : " no"] keys in the ignition."
-	//	. += "The charge meter reads [interior_controller.cell? round(interior_controller.cell.percent(), 0.01) : 0]%"
+////
+////  Settings for remote view
+////
+/datum/remote_view_config/interior_vehicle
+	override_health_hud = TRUE
+	var/original_health_hud_icon
+
+/datum/remote_view_config/interior_vehicle/helm
+	relay_movement = TRUE
+
+/datum/remote_view_config/interior_vehicle/handle_relay_movement( datum/component/remote_view/owner_component, mob/host_mob, direction)
+	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = owner_component.get_coordinator()
+	if(tgui_owner?.interior_controller && host_mob.buckled)
+		return tgui_owner.interior_controller.relaymove(host_mob, direction)
+	return FALSE
+
+/datum/remote_view_config/interior_vehicle/handle_apply_visuals( datum/component/remote_view/owner_component, mob/host_mob)
+	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = owner_component.get_coordinator()
+	if(!tgui_owner)
+		return
+	if(get_dist(host_mob, tgui_owner.tgui_host()) > 1 || !tgui_owner.interior_controller || !host_mob.buckled)
+		host_mob.reset_perspective()
+		return
+
+// We are responsible for restoring the health UI's icons on removal
+/datum/remote_view_config/interior_vehicle/attached_to_mob( datum/component/remote_view/owner_component, mob/host_mob)
+	original_health_hud_icon = host_mob.healths?.icon
+
+/datum/remote_view_config/interior_vehicle/detatch_from_mob( datum/component/remote_view/owner_component, mob/host_mob)
+	if(host_mob.healths && original_health_hud_icon)
+		host_mob.healths.icon = original_health_hud_icon
+		host_mob.healths.appearance = null
+
+// Show the uav health instead of the mob's while it is viewing
+/datum/remote_view_config/interior_vehicle/handle_hud_health( datum/component/remote_view/owner_component, mob/host_mob)
+	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = owner_component.get_coordinator()
+
+	var/mutable_appearance/MA = new (host_mob.healths)
+	MA.icon = 'icons/mob/screen1_robot_minimalist.dmi'
+	MA.cut_overlays()
+
+	if(!tgui_owner?.interior_controller)
+		MA.icon_state = "health7"
+	else
+		switch(100 * (tgui_owner.interior_controller.health / initial(tgui_owner.interior_controller.health)))
+			if(100 to INFINITY)
+				MA.icon_state = "health0"
+			if(80 to 100)
+				MA.icon_state = "health1"
+			if(60 to 80)
+				MA.icon_state = "health2"
+			if(40 to 60)
+				MA.icon_state = "health3"
+			if(20 to 40)
+				MA.icon_state = "health4"
+			if(0 to 20)
+				MA.icon_state = "health5"
+			else
+				MA.icon_state = "health6"
+
+	host_mob.healths.icon_state = "blank"
+	host_mob.healths.appearance = MA
+	return COMSIG_COMPONENT_HANDLED_HEALTH_ICON

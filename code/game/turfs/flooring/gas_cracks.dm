@@ -44,7 +44,7 @@
 
 /turf/simulated/floor/gas_crack/oxygen
 	gas_type = list(GAS_O2)
-	oxygen = 2500 // Outpost 21 edit
+	oxygen = 500
 
 /turf/simulated/floor/gas_crack/oxygen/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -57,7 +57,7 @@
 
 /turf/simulated/floor/gas_crack/nitrogen
 	gas_type = list(GAS_N2)
-	nitrogen = 2500 // Outpost 21 edit
+	nitrogen = 500
 
 /turf/simulated/floor/gas_crack/nitrogen/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -69,7 +69,7 @@
 
 /turf/simulated/floor/gas_crack/carbon
 	gas_type = list(GAS_CO2)
-	carbon_dioxide = 2500 // Outpost 21 edit
+	carbon_dioxide = 500
 
 /turf/simulated/floor/gas_crack/carbon/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -81,7 +81,8 @@
 
 /turf/simulated/floor/gas_crack/nitro
 	gas_type = list(GAS_N2O)
-	nitrous_oxide = 2500 // Outpost 21 edit
+	nitrogen = 250
+	carbon_dioxide = 250
 
 /turf/simulated/floor/gas_crack/nitro/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -94,7 +95,7 @@
 
 /turf/simulated/floor/gas_crack/phoron
 	gas_type = list(GAS_PHORON)
-	phoron = 2500 // Outpost 21 edit
+	phoron = 500
 
 /turf/simulated/floor/gas_crack/phoron/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -106,8 +107,8 @@
 
 /turf/simulated/floor/gas_crack/air
 	gas_type = list(GAS_O2,GAS_N2)
-	oxygen = 2500 // Outpost 21 edit
-	nitrogen = 2500 // Outpost 21 edit
+	oxygen = 250
+	nitrogen = 250
 
 /turf/simulated/floor/gas_crack/air/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -118,11 +119,24 @@
 	. = ..()
 	. += "A fresh breeze blows through it."
 
+/turf/simulated/floor/gas_crack/methane
+	gas_type = list(GAS_CH4)
+	methane = 250
+
+/turf/simulated/floor/gas_crack/methane/pump_reagents(var/datum/reagents/R, var/volume)
+	. = ..()
+	R.add_reagent(REAGENT_ID_SULFUR, round(volume / 2, 0.1))
+	R.add_reagent(REAGENT_ID_PHOSPHORUS, round(volume / 2, 0.1))
+
+/turf/simulated/floor/gas_crack/methane/examine(mob/user)
+	. = ..()
+	. += "A terrible smell wafts from beneath it."
+
 
 /turf/simulated/floor/gas_crack/terrible
-	gas_type = list(GAS_PHORON,GAS_CH4) // Outpost 21 edit
-	methane = 2500 // Outpost 21 edit
-	phoron = 2500 // Outpost 21 edit
+	gas_type = list(GAS_CO2,GAS_PHORON,GAS_N2O)
+	methane = 250
+	phoron = 250
 
 /turf/simulated/floor/gas_crack/terrible/pump_reagents(var/datum/reagents/R, var/volume)
 	. = ..()
@@ -156,8 +170,10 @@
 		gas_type.Add(GAS_O2)
 	if(prob(15))
 		gas_type.Add(GAS_N2)
+	if(prob(15))
+		gas_type.Add(GAS_CH4)
 	if(!gas_type.len)
-		gas_type.Add(pick(list(GAS_CO2,GAS_PHORON,GAS_N2O,GAS_O2,GAS_N2)))
+		gas_type.Add(pick(list(GAS_CO2,GAS_PHORON,GAS_N2O,GAS_O2,GAS_N2,GAS_CH4)))
 	// Set fracking reagent
 	add_random_reagent()
 	if(prob(60))

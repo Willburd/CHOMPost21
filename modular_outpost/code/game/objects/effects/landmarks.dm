@@ -22,6 +22,7 @@
 
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
+	delete_me = TRUE
 
 /obj/effect/landmark/redspacemonsterspawn/Initialize(mapload)
 	. = ..()
@@ -111,6 +112,7 @@
 
 /obj/effect/landmark/hostile_xenobio
 	name = "dangerous xeno spawner"
+	delete_me = TRUE
 
 /obj/effect/landmark/hostile_xenobio/Initialize(mapload)
 	. = ..()
@@ -129,6 +131,17 @@
 		prob(75);/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
 		prob(90);/mob/living/simple_mob/animal/space/carp,
 		prob(90);/mob/living/simple_mob/animal/giant_spider,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/electric,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/frost,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/hunter,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/ion,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/lurker,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/pepper,
+		prob(10);/mob/living/simple_mob/animal/giant_spider/tunneler,
+		prob(10);/mob/living/simple_mob/animal/giant_spider/webslinger,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/phorogenic,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/thermic,
+		prob(1);/mob/living/simple_mob/animal/giant_spider/broodmother,
 		prob(35);/mob/living/simple_mob/vore/leopardmander,
 		prob(90);/mob/living/simple_mob/animal/space/goose,
 		prob(90);/mob/living/simple_mob/vore/oregrub,
@@ -141,6 +154,7 @@
 		prob(90);/mob/living/simple_mob/vore/slug,
 		prob(90);/mob/living/simple_mob/vore/pakkun,
 		prob(55);/mob/living/simple_mob/vore/scel,
+		prob(55);/mob/living/simple_mob/vore/jelly,
 		// Ohno
 		prob(10);/mob/living/simple_mob/vore/alienanimals/chu,
 		prob(35);/mob/living/simple_mob/animal/passive/snake/python,
@@ -153,6 +167,7 @@
 		prob(35);/mob/living/simple_mob/clowns/big/longface,
 		prob(75);/mob/living/simple_mob/animal/space/carp/large,
 		prob(5);/mob/living/simple_mob/vore/otie/syndicate,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/flesh,
 		// Troidin
 		prob(75);/mob/living/simple_mob/metroid/juvenile/baby,
 		prob(55);/mob/living/simple_mob/metroid/juvenile/alpha,
@@ -178,11 +193,19 @@
 
 /obj/effect/landmark/dangerous_situation
 	name = "dangerous situation spawner"
+	delete_me = TRUE
 
 /obj/effect/landmark/dangerous_situation/Initialize(mapload)
 	. = ..()
 	if(!isturf(loc))
 		return
+
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(40))
+		return
+	#endif
+
 	// creates stuff like ruptured gas tanks, and landmines
 	switch(rand(1,4))
 		if(1)
@@ -220,14 +243,41 @@
 
 /obj/effect/landmark/step_trap
 	name = "step trap spawner"
+	delete_me = TRUE
 
 /obj/effect/landmark/step_trap/Initialize(mapload)
-	. = ..()
+	..()
+	return INITIALIZE_HINT_LATELOAD
 
+/obj/effect/landmark/step_trap/LateInitialize()
 	if(prob(40))
 		return
 
-	if(!isturf(loc))
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(30))
+		return
+	#endif
+
+	var/turf/T = get_turf(src)
+	if(!T)
+		return
+
+	var/obj/machinery/door/airlock/A = locate() in T
+	if(A && prob(20))
+		A.wires.cut(WIRE_ELECTRIFY)
+		A.electrify()
+		return
+
+	if(A && prob(4))
+		var/nade_path = pick(list(/obj/item/grenade/anti_photon, /obj/item/grenade/confetti, /obj/item/grenade/flashbang, /obj/item/grenade/smokebomb, /obj/item/grenade/concussion, /obj/item/grenade/empgrenade))
+		var/obj/item/grenade/G = new nade_path(A)
+		A.AddComponent(/datum/component/grenadetrap,G)
+		return
+
+	var/obj/structure/cable/C = locate() in T
+	if(C && prob(20) && T.is_plating())
+		C.fray()
 		return
 
 	// creates stuff like ruptured gas tanks, and landmines
@@ -269,3 +319,51 @@
 			M.deployed = TRUE
 			M.update_icon()
 			M.loc = src.loc
+
+
+
+/obj/effect/landmark/electrify_door
+	name = "electrify door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/electrify_door/five
+	name = "electrify door 5%"
+	chance = 5
+
+/obj/effect/landmark/electrify_door/ten
+	name = "electrify door 10%"
+	chance = 10
+
+/obj/effect/landmark/electrify_door/twentyfive
+	name = "electrify door 25%"
+	chance = 25
+
+/obj/effect/landmark/electrify_door/fifty
+	name = "electrify door 50%"
+	chance = 50
+
+/obj/effect/landmark/electrify_door/seventyfive
+	name = "electrify door 75%"
+	chance = 75
+
+/obj/effect/landmark/electrify_door/always_electrified
+	name = "electrify door 100%"
+	chance = 100
+
+/obj/effect/landmark/electrify_door/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/electrify_door/LateInitialize()
+	if(!prob(chance))
+		return
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(20))
+		return
+	#endif
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A)
+		A.wires.cut(WIRE_ELECTRIFY)
+		A.electrify()

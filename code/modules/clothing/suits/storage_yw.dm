@@ -7,7 +7,7 @@
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 	siemens_coefficient = 0.9
 	flags_inv = HIDEHOLSTER //VOREStation Add - These obviously do.
-	allowed = list(POCKET_GENERIC, POCKET_EMERGENCY, POCKET_DETECTIVE)
+	allowed = list(POCKET_GENERIC, POCKET_EMERGENCY, POCKET_DETECTIVE, /obj/item/clothing/head/beret)
 
 /obj/item/clothing/suit/storage/explorer/crew
 	name = "\improper Explorer jacket"

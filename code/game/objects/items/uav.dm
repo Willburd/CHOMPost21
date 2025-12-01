@@ -99,7 +99,7 @@
 		if("(Dis)Assemble")
 			if(can_transition_to(state == UAV_PACKED ? UAV_OFF : UAV_PACKED, user))
 				user.visible_message(span_infoplain(span_bold("[user]") + " starts [state == UAV_PACKED ? "unpacking" : "packing"] [src]."), span_info("You start [state == UAV_PACKED ? "unpacking" : "packing"] [src]."))
-				if(do_after(user, 10 SECONDS, src))
+				if(do_after(user, 10 SECONDS, target = src))
 					return toggle_packed(user)
 		// Can toggle power from on and off
 		if("Toggle Power")
@@ -111,6 +111,22 @@
 				return toggle_pairing(user)
 
 /obj/item/uav/attackby(var/obj/item/I, var/mob/user)
+	// Outpost 21 edit begin - PDA pairing
+	if(istype(I, /obj/item/pda) && state == UAV_PAIRING)
+		var/obj/item/pda/P = I
+		if(istype(P.cartridge,/obj/item/cartridge/uav_control))
+			var/obj/item/cartridge/uav_control/C = P.cartridge
+			var/datum/data/pda/app/uav_control/U = C.programs[1]
+			SEND_SIGNAL(U,COMSIG_REMOTE_VIEW_CLEAR) // Crash all of em out
+			U.our_uav = WEAKREF(src)
+			playsound(src, 'sound/machines/buttonbeep.ogg', 50, 1)
+			visible_message(span_notice("[user] pairs [I] to [nickname]"))
+			toggle_pairing()
+		else
+			playsound(src, 'sound/machines/buzz-sigh.ogg', 50, 1)
+			toggle_pairing()
+	// Outpost 21 edit end
+
 	if(istype(I, /obj/item/modular_computer) && state == UAV_PAIRING)
 		var/obj/item/modular_computer/MC = I
 		LAZYDISTINCTADD(MC.paired_uavs, WEAKREF(src))
@@ -119,7 +135,7 @@
 		toggle_pairing()
 
 	else if(I.has_tool_quality(TOOL_SCREWDRIVER) && cell)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, 3 SECONDS, target = src))
 			to_chat(user, span_notice("You remove [cell] into [nickname]."))
 			playsound(src, I.usesound, 50, 1)
 			power_down()
@@ -127,7 +143,7 @@
 			cell = null
 
 	else if(istype(I, /obj/item/cell) && !cell)
-		if(do_after(user, 3 SECONDS, src))
+		if(do_after(user, 3 SECONDS, target = src))
 			to_chat(user, span_notice("You insert [I] into [nickname]."))
 			playsound(src, 'sound/items/deconstruct.ogg', 50, 1)
 			power_down()
@@ -280,12 +296,6 @@
 
 /obj/item/uav/proc/remove_master(var/mob/living/M)
 	LAZYREMOVE(masters, WEAKREF(M))
-
-/obj/item/uav/check_eye()
-	if(state == UAV_ON)
-		return 0
-	else
-		return -1
 
 /obj/item/uav/proc/start_hover()
 	if(!ion_trail.on) //We'll just use this to store if we're floating or not

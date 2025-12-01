@@ -9,6 +9,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 	anchored = TRUE
 	density = FALSE
 
+	var/random = FALSE //For random tummels- spits the micro out at a random location.
 	var/magic = FALSE	//For events and stuff, if true, this tunnel will show up in the list regardless of whether it's in valid range, of if you're in a tunnel with this var, all tunnels of the same faction will show up redardless of range
 	micro_target = TRUE
 
@@ -155,14 +156,14 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 				if(!destinations.len)
 					to_chat(user, span_warning("There are no other tunnels connected to this one!"))
 					return
-				else if(destinations.len == 1)
+				else if(destinations.len == 1 || random)
 					choice = pick(destinations)
 				else
 					choice = tgui_input_list(user, "Where would you like to go?", "Pick a tunnel", destinations)
 				if(!choice)
 					return
 				to_chat(user,span_notice("You begin moving..."))
-				if(!do_after(user, 10 SECONDS, exclusive = TRUE))
+				if(!do_after(user, 10 SECONDS, target = src))
 					return
 				user.forceMove(choice)
 				user.cancel_camera()
@@ -196,7 +197,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 
 	if(!can_enter(user))
 		user.visible_message(span_warning("\The [user] reaches into \the [src]. . ."),span_warning("You reach into \the [src]. . ."))
-		if(!do_after(user, 3 SECONDS, exclusive = TRUE))
+		if(!do_after(user, 3 SECONDS, target = src))
 			user.visible_message(span_notice("\The [user] pulls their hand out of \the [src]."),span_warning("You pull your hand out of \the [src]"))
 			return
 		if(!src.contents.len)
@@ -235,14 +236,14 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 			return
 
 	user.visible_message(span_notice("\The [user] begins climbing into \the [src]!"))
-	if(!do_after(user, 10 SECONDS, exclusive = TRUE))
+	if(!do_after(user, 10 SECONDS, target = src))
 		to_chat(user, span_warning("You didn't go into \the [src]!"))
 		return
 
 	enter_tunnel(user)
 
 /obj/structure/micro_tunnel/proc/can_enter(var/mob/living/user)
-	if(user.mob_size <= MOB_TINY || user.get_effective_size(TRUE) <= micro_accepted_scale)
+	if(user.mob_size <= MOB_TINY || user.get_effective_size(TRUE) <= micro_accepted_scale || (/mob/living/proc/ventcrawl in user.verbs)) // Outpost 21 edit - Ventcrawlers can use mouse holes
 		return TRUE
 
 	if(is_type_in_list(user, non_micro_types))
@@ -262,7 +263,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 	var/mob/living/k = M
 
 	k.visible_message(span_notice("\The [k] begins climbing into \the [src]!"))
-	if(!do_after(k, 3 SECONDS, exclusive = TRUE))
+	if(!do_after(k, 3 SECONDS, target = src))
 		to_chat(k, span_warning("You didn't go into \the [src]!"))
 		return
 
@@ -295,9 +296,8 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 /obj/structure/micro_tunnel/magic
 	magic = TRUE
 
-/obj
-	var/micro_accepted_scale = 0.5
-	var/micro_target = FALSE
+/obj/structure/micro_tunnel/random
+	random = TRUE
 
 /obj/Initialize(mapload)
 	. = ..()
@@ -358,7 +358,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 				if(!choice)
 					return
 				to_chat(usr,span_notice("You begin moving..."))
-				if(!do_after(usr, 10 SECONDS, exclusive = TRUE))
+				if(!do_after(usr, 10 SECONDS, target = src))
 					return
 				if(QDELETED(src))
 					return
@@ -396,7 +396,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 
 	if(!(usr.mob_size <= MOB_TINY || usr.get_effective_size(TRUE) <= micro_accepted_scale))
 		usr.visible_message(span_warning("\The [usr] reaches into \the [src]. . ."),span_warning("You reach into \the [src]. . ."))
-		if(!do_after(usr, 3 SECONDS, exclusive = TRUE))
+		if(!do_after(usr, 3 SECONDS, target = src))
 			usr.visible_message(span_notice("\The [usr] pulls their hand out of \the [src]."),span_warning("You pull your hand out of \the [src]"))
 			return
 
@@ -437,7 +437,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 			return
 
 	usr.visible_message(span_notice("\The [usr] begins climbing into \the [src]!"))
-	if(!do_after(usr, 10 SECONDS, exclusive = TRUE))
+	if(!do_after(usr, 10 SECONDS, target = src))
 		to_chat(usr, span_warning("You didn't go into \the [src]!"))
 		return
 

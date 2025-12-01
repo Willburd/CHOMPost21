@@ -23,6 +23,10 @@
 	var/turf/base_turf
 	//Name of the shuttle, null for generic waypoint
 	var/shuttle_restricted
+	//does it use docking codes?
+	var/use_docking_codes = TRUE
+
+	var/list/local_crash_sites // Outpost 21 edit(port) - Crash sites unique to this destination
 
 /obj/effect/shuttle_landmark/Initialize(mapload)
 	. = ..()
@@ -51,10 +55,10 @@
 	var/docking_tag = docking_controller
 	docking_controller = SSshuttles.docking_registry[docking_tag]
 	if(!istype(docking_controller))
-		log_error("Could not find docking controller for shuttle waypoint '[name]', docking tag was '[docking_tag]'.")
+		log_mapping("Could not find docking controller for shuttle waypoint '[name]', docking tag was '[docking_tag]'.")
 	if(using_map.use_overmap)
 		var/obj/effect/overmap/visitable/location = get_overmap_sector(z)
-		if(location && location.docking_codes)
+		if(location && location.docking_codes && use_docking_codes)
 			docking_controller.docking_codes = location.docking_codes
 
 /obj/effect/shuttle_landmark/forceMove()

@@ -129,7 +129,7 @@
 				S.use(1)
 				digest_stage = w_class
 		else
-			// Outpost 21 edit begin - pill digestion support
+			// Outpost 21 edit(port) begin - pill digestion support
 			if(istype(B) && istype(src, /obj/item/reagent_containers/pill))
 				if(ishuman(B.owner) && reagents)
 					var/mob/living/carbon/human/H = B.owner
@@ -247,10 +247,3 @@
 	return FALSE
 
 //moved prot organ digest to their appropriate file
-
-// Gradual damage measurement
-/obj/item
-	var/digest_stage = null
-	var/d_mult_old = 1 //digest stage descriptions
-	var/d_mult = 1 //digest stage descriptions
-	var/d_stage_overlay //digest stage effects

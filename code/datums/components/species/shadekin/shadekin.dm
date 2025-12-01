@@ -40,6 +40,14 @@
 	var/drop_items_on_phase = FALSE
 	///If cameras count as watchers for us
 	var/camera_counts_as_watcher = FALSE
+	///Phase in animation
+	var/obj/effect/temp_visual/phase_in_anim = /obj/effect/temp_visual/shadekin/phase_in
+	///Phase out animation
+	var/obj/effect/temp_visual/phase_out_anim = /obj/effect/temp_visual/shadekin/phase_out
+	//How long does it take to complete
+	var/phase_time = 0.5 SECONDS
+	//Phase sound
+	var/phase_noise = 'sound/effects/stealthoff.ogg'
 
 	//Dark Respite Vars (Unused on Virgo)
 	///If we are in dark respite or not
@@ -165,6 +173,9 @@
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
+	// outpost 21 addition begin - Haunting areas have effects
+	haunted_effect()
+	// outpost 21 addition end
 	// outpost 21 addition begin - lockers are dark and spooky!
 	if(istype(owner.loc,/obj/structure/closet)) // it's dark in here!
 		darkness = 1
@@ -187,7 +198,7 @@
 		else
 			dark_gains = energy_light
 
-	handle_nutrition_conversion(dark_gains)
+	dark_gains = handle_nutrition_conversion(dark_gains)
 
 	shadekin_adjust_energy(dark_gains)
 
@@ -291,3 +302,22 @@
 		return FALSE
 
 	SK.tgui_interact(src)
+
+// Outpost 21 edit begin - Haunted areas sparkle
+/datum/component/shadekin/proc/haunted_effect()
+	if(!owner.client)
+		return
+	if(prob(60))
+		return
+	var/area/A = get_area(owner)
+	if(!A || !A.haunted)
+		return
+	// Place at root turf offset from signal responder's turf using px offsets. So it will show up over visblocking.
+	var/list/icos = list("redgate_hole","slash","red_static","drain","summoning")
+	var/image/client_only/motion_echo/E = new /image/client_only/motion_echo('icons/effects/effects.dmi', get_turf(owner), pick(icos), OBFUSCATION_LAYER, SOUTH)
+	var/rand_limit = 300
+	E.pixel_x += rand(-rand_limit,rand_limit)
+	E.pixel_y += rand(-rand_limit,rand_limit)
+	E.append_client(owner.client)
+	animate(E, alpha = 0,time = 1 SECOND)
+// Outpost 21 edit end

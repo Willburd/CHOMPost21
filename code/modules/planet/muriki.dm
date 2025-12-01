@@ -22,6 +22,12 @@ var/datum/planet/muriki/planet_muriki = null
 // This code is horrible.
 /datum/planet/muriki/update_sun()
 	..()
+	// Debug locked lighting
+	if(!isnull(locked_light_color))
+		spawn(1)
+			update_sun_deferred(locked_light_intensity, locked_light_color)
+		return
+	// Normal sunlight
 	var/datum/time/time = current_time
 	var/length_of_day = time.seconds_in_day / 10 / 60 / 60
 	var/noon = length_of_day / 2
@@ -168,7 +174,9 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_DOWNPOUR 		= new /datum/weather/muriki/downpour(),
 		WEATHER_DOWNPOURFATAL 	= new /datum/weather/muriki/downpourfatal(),
 		WEATHER_FALLOUT_TEMP	= new /datum/weather/muriki/fallout/temp(),
-		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti()
+		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti(),
+		WEATHER_COLDDARKNESS	= new /datum/weather/muriki/clear/hidden_evildarkness(),
+		WEATHER_LONGBLIZZARD	= new /datum/weather/muriki/blizzard/hidden_dangerous()
 		)
 	roundstart_weather_chances = list() // See New() for seasonal starting weathers
 
@@ -208,7 +216,8 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_OVERCAST = 0,
 				WEATHER_RAIN = 20,
 				WEATHER_STORM = 10,
-				WEATHER_HAIL = 25
+				WEATHER_HAIL = 24,
+				WEATHER_LONGBLIZZARD = 1
 				)
 	. = ..()
 
@@ -282,7 +291,7 @@ var/datum/planet/muriki/planet_muriki = null
 	effect_message = span_notice("Acidic mist surrounds you.")
 	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is misting, all you can see are corrosive clouds."
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	transition_messages = list(
 		"All you can see is fog.",
@@ -348,7 +357,7 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 1
 	light_modifier = 0.5
 	effect_message = span_notice("Acidic rain falls on you.")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	transition_chances = list() // See New() for seasonal transitions
 	observed_message = "It is raining."
@@ -440,7 +449,7 @@ var/datum/planet/muriki/planet_muriki = null
 	light_modifier = 0.3
 	flight_failure_modifier = 10
 	effect_message = span_notice("Acidic rain falls on you.")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	min_lightning_cooldown = 5 SECONDS
 	max_lightning_cooldown = 1 MINUTE
@@ -574,7 +583,7 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 2
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is knocking you down!")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	min_lightning_cooldown = 5 SECONDS
 	max_lightning_cooldown = 15 SECONDS
@@ -604,16 +613,13 @@ var/datum/planet/muriki/planet_muriki = null
 			return // They're indoors, so no need to rain on them.
 
 		// If they have an open umbrella, knock it off
-		if(ishuman(L))
-			var/mob/living/carbon/human/H = L
-			var/obj/item/melee/umbrella/U = L.get_active_hand()
-			if(!istype(U) || !U.open)
-				U = L.get_inactive_hand()
-
-			if(istype(U) && U.open)
-				if(show_message)
-					to_chat(L, span_notice("The rain pushes the umbrella off your hands!"))
-					H.drop_both_hands()
+		var/obj/item/melee/umbrella/U = L.get_active_hand()
+		if(!istype(U) || !U.open)
+			U = L.get_inactive_hand()
+		if(istype(U) && U.open)
+			if(show_message)
+				to_chat(L, span_notice("The storm pushes the umbrella out of your hands!"))
+				L.drop_both_hands()
 
 		L.water_act(2)
 		L.Weaken(3)
@@ -638,7 +644,7 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 4
 	flight_failure_modifier = 100
 	effect_message = span_warning("Extreme rain is crushing you!")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 
 	min_lightning_cooldown = 1 SECONDS
 	max_lightning_cooldown = 3 SECONDS
@@ -680,17 +686,13 @@ var/datum/planet/muriki/planet_muriki = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = L.run_armor_check(target_zone, "melee")
-		var/amount_soaked = L.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(10,30) //Ow
 
 		if(amount_blocked >= 30)
 			return
 
-		if(amount_soaked >= damage)
-			return // No need to apply damage.
-
-		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "rain bludgoning")
+		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "rain bludgoning")
 		L.Weaken(3)
 
 		if(show_message)
@@ -714,7 +716,7 @@ var/datum/planet/muriki/planet_muriki = null
 	timer_low_bound = 2
 	timer_high_bound = 5
 	effect_message = span_warning("The hail smacks into you!")
-	effect_flags = HAS_PLANET_EFFECT|EFFECT_ALL_MOBS
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
@@ -751,7 +753,6 @@ var/datum/planet/muriki/planet_muriki = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = L.run_armor_check(target_zone, "melee")
-		var/amount_soaked = L.get_armor_soak(target_zone, "melee")
 
 		var/damage = rand(1,3)
 
@@ -759,9 +760,7 @@ var/datum/planet/muriki/planet_muriki = null
 			return // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
 			//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
 
-		if(amount_soaked >= damage)
-			return // No need to apply damage.
-		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+		L.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "hail")
 
 		// show transition messages
 		if(show_message)
@@ -850,6 +849,8 @@ var/datum/planet/muriki/planet_muriki = null
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
+	effect_message = span_warning("The ice shards cut into you!")
+	effect_flags = HAS_PLANET_EFFECT|EFFECT_ONLY_LIVING
 	transition_chances = list(
 		WEATHER_SNOW = 45,
 		WEATHER_BLIZZARD = 40,
@@ -865,6 +866,41 @@ var/datum/planet/muriki/planet_muriki = null
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 	color_grading = COLORTINT_COLD
 
+/datum/weather/muriki/blizzard/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors or dead, so no need to pelt them with ice.
+
+		if(prob(10))
+			// If they have an open umbrella, it'll guard from hail
+			var/obj/item/melee/umbrella/U = L.get_active_hand()
+			if(!istype(U) || !U.open)
+				U = L.get_inactive_hand()
+			if(istype(U) && U.open)
+				if(prob(10))
+					if(show_message)
+						to_chat(L, span_notice("The storm pushes the umbrella out of your hands!"))
+						L.drop_both_hands()
+				else
+					if(show_message)
+						to_chat(L, span_notice("ice shards patter onto your umbrella."))
+				return
+
+			var/target_zone = pick(BP_ALL)
+			var/amount_blocked = L.run_armor_check(target_zone, "melee")
+
+			var/damage = rand(1,3)
+
+			if(amount_blocked >= 30)
+				return // No need to apply damage. Hardhats are 30. They should probably protect you from hail on your head.
+				//Voidsuits are likewise 40, and riot, 80. Clothes are all less than 30.
+
+			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, used_weapon = "sharp ice")
+
+			// show transition messages
+			if(show_message)
+				to_chat(L, effect_message)
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // FIREWORKS
@@ -895,6 +931,52 @@ var/datum/planet/muriki/planet_muriki = null
 	)
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
 	color_grading = COLORTINT_OMEN
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// EVENT WEATHERS
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// EXTREME BLIZZARD
+/////////////////////////////////////////////////////////////////////////////////////////
+/datum/weather/muriki/blizzard/hidden_dangerous
+	name = "extreme blizzard"
+	temp_high = 213.15 // -60c
+	temp_low = 183.15 // -90c
+	light_modifier = 0.1
+	flight_failure_modifier = 10
+	transition_chances = list(
+		WEATHER_LONGBLIZZARD = 98,
+		WEATHER_BLIZZARD = 2,
+		)
+	color_grading = COLORTINT_EXTREMECOLD
+	observed_message = "The blizzard grows more intense."
+	transition_messages = list(
+		"The blizzard's wind chills you to your bones."
+	)
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// EVIL DARKNESS
+/////////////////////////////////////////////////////////////////////////////////////////
+/datum/weather/muriki/clear/hidden_evildarkness
+	name = "frigid darkness"
+	temp_high = 120
+	temp_low = 100
+	wind_high = 0
+	wind_low = 0
+	light_modifier = 0.01
+	transition_chances = list(
+		WEATHER_COLDDARKNESS = 99,
+		WEATHER_CLEAR = 1,
+		)
+	color_grading = COLORTINT_UNDERDARK
+	observed_message = "The world feels still."
+	transition_messages = list(
+		"Everything around you seems to stop, it's quiet enough to hear the air creaking under the weight of something you cannot see."
+	)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////

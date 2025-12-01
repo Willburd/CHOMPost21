@@ -8019,12 +8019,6 @@
 	icon_state = "vault"
 	},
 /area/survivalpod)
-"csh" = (
-/obj/structure/ghost_pod/ghost_activated/maintpred/no_announce,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
 "csn" = (
 /obj/item/bone/skull/unathi,
 /turf/simulated/fitness{
@@ -45961,7 +45955,7 @@
 	},
 /area/survivalpod)
 "nwq" = (
-/obj/structure/closet/secure_closet/CMO,
+/obj/structure/closet/secure_closet/chief_medical_officer,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -55781,12 +55775,6 @@
 /area/survivalpod)
 "qsg" = (
 /obj/item/stamp/einstein,
-/turf/simulated/fitness{
-	icon_state = "vault"
-	},
-/area/survivalpod)
-"qsi" = (
-/obj/structure/ghost_pod/ghost_activated/morphspawn/no_announce,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -76167,7 +76155,7 @@
 	},
 /area/survivalpod)
 "wsV" = (
-/obj/structure/closet/secure_closet/RD,
+/obj/structure/closet/secure_closet/research_director,
 /turf/simulated/fitness{
 	icon_state = "vault"
 	},
@@ -88812,7 +88800,7 @@ bCw
 eUy
 fxB
 bSW
-csh
+pDu
 bSW
 bSW
 bSW
@@ -89216,7 +89204,7 @@ ugJ
 qMm
 kZl
 bSW
-qsi
+ldZ
 bSW
 hVu
 bSW

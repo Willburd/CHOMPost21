@@ -15,7 +15,6 @@ SUBSYSTEM_DEF(chemistry)
 	var/list/chemical_reagents = list()
 
 /datum/controller/subsystem/chemistry/Recover()
-	log_debug("[name] subsystem Recover().")
 	chemical_reactions = SSchemistry.chemical_reactions
 	chemical_reagents = SSchemistry.chemical_reagents
 
@@ -68,9 +67,9 @@ SUBSYSTEM_DEF(chemistry)
 		if(!D.name)
 			continue
 		chemical_reagents[D.id] = D
-	randomize_chemical_market_prices() // Outpost 21 edit - randomization of reagent prices... Yes this should be SSsupply, but doing it here is much safer...
+	randomize_chemical_market_prices() // Outpost 21 edit(port) - randomization of reagent prices... Yes this should be SSsupply, but doing it here is much safer...
 
-// Outpost 21 edit begin - randomization of reagent prices... Yes this should be SSsupply, but doing it here is much safer...
+// Outpost 21 edit(port) begin - randomization of reagent prices... Yes this should be SSsupply, but doing it here is much safer...
 /datum/controller/subsystem/chemistry/proc/randomize_chemical_market_prices()
 	var/major_varience = rand(2,5)
 	var/moderate_varience = rand(3,7)

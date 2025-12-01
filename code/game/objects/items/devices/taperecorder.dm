@@ -346,9 +346,8 @@
 		t1 += "[printedmessage]<BR>"
 	P.info = t1
 	P.name = "Transcript"
-	canprint = 0
-	sleep(300)
-	canprint = 1
+	canprint = FALSE
+	VARSET_IN(src, canprint, TRUE, 30 SECONDS)
 
 
 /obj/item/taperecorder/attack_self(mob/user)
@@ -372,7 +371,7 @@
 
 /obj/item/rectape
 	name = "tape"
-	desc = "A magnetic tape that can hold up to ten minutes of content."
+	desc = "A magnetic tape that can hold up to 2 hours of content." // Outpost 21 edit - Buffed record times
 	icon = 'icons/obj/device.dmi'
 	icon_state = "tape_white"
 	item_state = "analyzer"
@@ -380,7 +379,7 @@
 	matter = list(MAT_STEEL=20, MAT_GLASS=5)
 	force = 1
 	throwforce = 0
-	var/max_capacity = 1800
+	var/max_capacity = 2 HOURS // Outpost 21 edit - Buffed record times
 	var/used_capacity = 0
 	var/list/storedinfo = new/list()
 	var/list/timestamp = new/list()
@@ -427,7 +426,7 @@
 	if(ruined && I.has_tool_quality(TOOL_SCREWDRIVER))
 		to_chat(user, span_notice("You start winding the tape back in..."))
 		playsound(src, I.usesound, 50, 1)
-		if(do_after(user, 120 * I.toolspeed, target = src))
+		if(do_after(user, 12 SECONDS * I.toolspeed, target = src))
 			to_chat(user, span_notice("You wound the tape back in."))
 			fix()
 		return

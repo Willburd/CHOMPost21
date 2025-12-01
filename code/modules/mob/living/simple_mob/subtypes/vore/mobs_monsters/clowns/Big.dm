@@ -29,6 +29,14 @@
 	minbodytemp = 0
 	maxbodytemp = 700
 
+	meat_amount = 10 // Outpost 21 edit - Clown butchering
+
+// Outpost 21 edit begin - Undead reviving mobs
+/mob/living/simple_mob/clowns/big/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/undead_revival, rev_time = 35 SECONDS, rev_chance = 60, rev_hppercent = 70)
+// Outpost 21 edit end
+
 /datum/ai_holder/simple_mob/melee/angryclowns
 	can_breakthrough = TRUE
 	violent_breakthrough = FALSE

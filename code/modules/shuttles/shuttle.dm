@@ -321,6 +321,11 @@
 					continue
 				if(isobserver(AM) || isEye(AM))
 					continue
+				// Outpost 21 edit(port) begin - multi-loc objects need to check if it's their actual loc, and not just a corner!
+				if(AM.locs.len > 1)
+					if(AM.loc != dst_turf)
+						continue
+				// Outpost 21 edit end
 				if(isliving(AM))
 					var/mob/living/bug = AM
 					if(bluespace || !bug.is_incorporeal()) // Outpost 21 edit - shuttles that don't gib phased shadekin
@@ -338,6 +343,8 @@
 					TA.ChangeTurf(get_base_turf_by_area(TA), 1, 1)
 		if(knockdown)
 			for(var/mob/living/M in A)
+				if(M.is_incorporeal()) // Outpost 21 edit(port) - No shadekin knockdown on shuttle movmeent
+					continue
 				if(M.buckled)
 					to_chat(M, span_red("Sudden acceleration presses you into \the [M.buckled]!"))
 					shake_camera(M, 3, 1)

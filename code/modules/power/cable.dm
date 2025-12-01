@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	layer = WIRES_LAYER
 	color = COLOR_RED
 	var/obj/machinery/power/breakerbox/breaker_box
-	var/broken = FALSE // Outpost 21 edit - broken wire trap
+	var/broken = FALSE // Outpost 21 edit(port) - broken wire trap
 
 /obj/structure/cable/drain_power(var/drain_check, var/surge, var/amount = 0)
 	if(drain_check)
@@ -105,7 +105,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	if(level==1) hide(!T.is_plating())
 	GLOB.cable_list += src //add it to the global cable list
 
-// Outpost 21 edit begin - broken wire trap
+// Outpost 21 edit(port) begin - broken wire trap
 /obj/structure/cable/Initialize(mapload)
 	. = ..()
 	if(mapload && prob(1))
@@ -115,7 +115,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 // Outpost 21 edit end
 
 /obj/structure/cable/Destroy()					// called when a cable is deleted
-	// Outpost 21 edit begin - broken wire trap
+	// Outpost 21 edit(port) begin - broken wire trap
 	if(broken)
 		unsense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
 	// Outpost 21 edit end
@@ -127,7 +127,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 /obj/structure/cable/examine(mob/user)
 	. = ..()
-	// Outpost 21 edit begin - broken wire trap
+	// Outpost 21 edit(port) begin - broken wire trap
 	if(broken)
 		. += span_warning("It looks frayed! Some tape might help.")
 	// Outpost 21 edit end
@@ -181,7 +181,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		return
 	icon_state = "[d1]-[d2]"
 	alpha = invisibility ? 127 : 255
-	// Outpost 21 edit begin - broken wire trap
+	// Outpost 21 edit(port) begin - broken wire trap
 	cut_overlays()
 	if(broken && !invisibility)
 		var/image/broke = image('icons/obj/power_cond_damaged.dmi', src, "[d1]-[d2]")
@@ -196,7 +196,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		add_overlay(spark)
 	// Outpost 21 edit end
 
-// Outpost 21 edit begin - broken wire trap
+// Outpost 21 edit(port) begin - broken wire trap
 /obj/structure/cable/proc/fray()
 	if(d1 >= 16 || breaker_box)
 		return // Invalid
@@ -221,7 +221,6 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		return
 	var/atom/movable/AM = WF.resolve()
 	if(isnull(AM))
-		log_debug("DEBUG: HasProximity called with [AM] on [src] ([usr]).")
 		return
 	if(ishuman(AM))
 		var/mob/living/carbon/human/H = AM
@@ -255,7 +254,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	if(!T.is_plating())
 		return
 
-	// Outpost 21 edit begin - broken wire trap
+	// Outpost 21 edit(port) begin - broken wire trap
 	if(broken && istype(W,/obj/item/tape_roll))
 		if(do_after(user,2 SECONDS,src))
 			if(broken)
@@ -298,7 +297,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 		investigate_log("was cut by [key_name(user, user.client)] in [user.loc.loc]","wires")
 
-		if(broken) // Outpost 21 edit - Cutting cable off should fix it too, somehow it was persisting broken state...?
+		if(broken) // Outpost 21 edit(port) - Cutting cable off should fix it too, somehow it was persisting broken state...?
 			unfray()
 
 		qdel(src)
@@ -327,7 +326,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	else
 		if(!(W.flags & NOCONDUCT))
 			shock(user, 50, 0.7)
-		// Outpost 21 edit begin - broken wire trap
+		// Outpost 21 edit(port) begin - broken wire trap
 		if(is_sharp(W))
 			fray()
 		// Outpost 21 edit end
@@ -352,7 +351,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		if(1.0)
 			qdel(src)
 		if(2.0)
-			// Outpost 21 edit begin - broken wire trap
+			// Outpost 21 edit(port) begin - broken wire trap
 			if (prob(10))
 				fray()
 			else if (prob(50))
@@ -362,7 +361,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 		if(3.0)
 			if (prob(25))
-				// Outpost 21 edit begin - broken wire trap
+				// Outpost 21 edit(port) begin - broken wire trap
 				fray()
 				//new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
 				//qdel(src)
@@ -382,6 +381,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 //handles merging diagonally matching cables
 //for info : direction^3 is flipping horizontally, direction^12 is flipping vertically
 /obj/structure/cable/proc/mergeDiagonalsNetworks(var/direction)
+	if(SSmachines.powernet_is_defered()) return;
 
 	//search for and merge diagonally matching cables from the first direction component (north/south)
 	var/turf/T  = get_step(src, direction&3)//go north/south
@@ -426,6 +426,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 // merge with the powernets of power objects in the given direction
 /obj/structure/cable/proc/mergeConnectedNetworks(var/direction)
+	if(SSmachines.powernet_is_defered()) return;
 
 	var/fdir = direction ? GLOB.reverse_dir[direction] : 0 //flip the direction, to match with the source position on its turf
 
@@ -454,6 +455,8 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 // merge with the powernets of power objects in the source turf
 /obj/structure/cable/proc/mergeConnectedNetworksOnTurf()
+	if(SSmachines.powernet_is_defered()) return;
+
 	var/list/to_connect = list()
 
 	if(!powernet) //if we somehow have no powernet, make one (should not happen for cables)
@@ -542,6 +545,8 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 //should be called after placing a cable which extends another cable, creating a "smooth" cable that no longer terminates in the centre of a turf.
 //needed as this can, unlike other placements, disconnect cables
 /obj/structure/cable/proc/denode()
+	if(SSmachines.powernet_is_defered()) return;
+
 	var/turf/T1 = loc
 	if(!T1) return
 
@@ -577,8 +582,9 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	loc = null
 	powernet.remove_cable(src) //remove the cut cable from its powernet
 
-	var/datum/powernet/newPN = new()// creates a new powernet...
-	propagate_network(P_list[1], newPN)//... and propagates it to the other side of the cable
+	if(!SSmachines.powernet_is_defered()) // Deferring until rebuild
+		var/datum/powernet/newPN = new()// creates a new powernet...
+		propagate_network(P_list[1], newPN)//... and propagates it to the other side of the cable
 
 	// Disconnect machines connected to nodes
 	if(d1 == 0) // if we cut a node (O-X) cable
@@ -1085,7 +1091,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 				src.add_fingerprint(user)
 				CC.add_fingerprint(user)
 				spawn(0)
-					if (src && user.machine==src)
+					if (src && user.check_current_machine(src))
 						src.interact(user)
 		else
 			return

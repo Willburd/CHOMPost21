@@ -6,7 +6,7 @@
 	exclaim_verb = "screams"
 	key = "c"
 	flags = WHITELISTED
-	machine_understands = FALSE
+	machine_understands = TRUE // It's funny
 	space_chance = 100
 	syllables = list("chitter", "chatter", "giggles", "hisses", "squeeks")
 
@@ -18,6 +18,6 @@
 	exclaim_verb = "meeps"
 	key = "R"
 	flags = RESTRICTED
-	machine_understands = FALSE
+	machine_understands = TRUE // It's funny
 	space_chance = 100
 	syllables = list("merp","mip","meep","mep")

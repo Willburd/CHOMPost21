@@ -1,0 +1,344 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"s" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"u" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/turf/simulated/floor/plating{
+	nitrogen = 0;
+	nitrous_oxide = 82.1472
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/obj/structure/barricade,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"y" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/turf/simulated/wall,
+/area/template_noop)
+"B" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"O" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"X" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/item/paper{
+	info = "Stop stealing from my stash, you thieving fuck!";
+	name = "Note from someone"
+	},
+/turf/simulated/floor/plating{
+	nitrogen = 0;
+	nitrous_oxide = 82.1472
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+V
+V
+V
+V
+a
+a
+a
+a
+"}
+(3,1,1) = {"
+a
+a
+a
+d
+d
+s
+T
+T
+X
+X
+T
+T
+V
+a
+a
+"}
+(4,1,1) = {"
+a
+a
+d
+T
+T
+s
+X
+X
+X
+X
+X
+X
+X
+d
+a
+"}
+(5,1,1) = {"
+a
+V
+T
+T
+T
+s
+s
+s
+s
+s
+s
+u
+X
+X
+a
+"}
+(6,1,1) = {"
+a
+V
+X
+X
+T
+y
+x
+c
+c
+c
+s
+s
+s
+s
+a
+"}
+(7,1,1) = {"
+a
+V
+X
+s
+s
+s
+x
+c
+P
+P
+c
+s
+T
+T
+a
+"}
+(8,1,1) = {"
+a
+K
+X
+s
+Z
+s
+c
+P
+P
+B
+c
+s
+X
+T
+a
+"}
+(9,1,1) = {"
+a
+K
+X
+s
+w
+s
+c
+O
+c
+P
+P
+s
+X
+X
+a
+"}
+(10,1,1) = {"
+a
+z
+s
+s
+s
+s
+s
+s
+y
+s
+s
+s
+s
+d
+a
+"}
+(11,1,1) = {"
+a
+K
+X
+X
+X
+s
+T
+T
+T
+X
+X
+X
+X
+X
+a
+"}
+(12,1,1) = {"
+a
+K
+K
+X
+X
+s
+T
+T
+T
+X
+X
+X
+X
+d
+a
+"}
+(13,1,1) = {"
+a
+K
+K
+X
+X
+T
+T
+T
+T
+X
+X
+X
+K
+a
+a
+"}
+(14,1,1) = {"
+a
+a
+K
+K
+K
+a
+V
+V
+a
+a
+K
+K
+a
+a
+a
+"}
+(15,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

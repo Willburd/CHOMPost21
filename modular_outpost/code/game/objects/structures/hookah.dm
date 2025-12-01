@@ -9,6 +9,7 @@
 	opacity = FALSE
 	var/hoses_taken = 0
 	var/lit = FALSE
+	flags = REMOTEVIEW_ON_ENTER
 
 	var/mob/living/occupant // micro abuse
 
@@ -92,7 +93,6 @@
 	if(occupant != living)
 		return FALSE
 	to_chat(occupant, span_warning("You manage to pull yourself free of \the [src]."))
-	occupant.reset_view(null)
 	occupant.forceMove(get_turf(src))
 	occupant = null
 
@@ -112,14 +112,12 @@
 	if(user && prob(2))
 		str += ", and you're sucked away with them"
 		to_chat(C, span_danger("[str]!"))
-		if(user.can_be_drop_pred && user.food_vore && user.vore_selected)
+		if(user.food_vore && user.vore_selected)
 			if(!C.can_be_drop_prey || !C.food_vore)
 				to_chat(C, span_warning("You manage to pull yourself free of \the [src] at the last second!"))
-				to_chat(user, span_notice("[C] barely escapes from your mouth!"))
-				C.reset_view(null)
+				to_chat(user, span_notice("[C] barely escapes from your [user.vore_selected]!"))
 				C.forceMove(get_turf(src))
 			else
-				C.reset_view(null)
 				C.forceMove(user.vore_selected)
 			occupant = null
 	else
@@ -221,10 +219,10 @@
 /obj/item/hookah_pipe/Moved(atom/old_loc, direction, forced, movetime)
 	. = ..()
 	if(ismob(old_loc))
-		UnregisterSignal(old_loc, list(COMSIG_MOVABLE_MOVED,COMSIG_PARENT_QDELETING))
+		UnregisterSignal(old_loc, list(COMSIG_MOVABLE_MOVED,COMSIG_QDELETING))
 	if(ismob(loc))
 		RegisterSignal(loc, COMSIG_MOVABLE_MOVED, PROC_REF(check_retract))
-		RegisterSignal(loc, COMSIG_PARENT_QDELETING, PROC_REF(check_retract))
+		RegisterSignal(loc, COMSIG_QDELETING, PROC_REF(check_retract))
 	// Explaining this:
 	// I have to delay this, because giving something to a mob (even your other hand)
 	// runs Drop from user -> Move to turf -> Pickup -> Move to user. There is no way

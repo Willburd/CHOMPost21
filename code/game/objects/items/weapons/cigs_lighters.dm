@@ -38,7 +38,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/flame/match/process()
 	if(isliving(loc))
 		var/mob/living/M = loc
-		M.IgniteMob()
+		M.ignite_mob()
 	var/turf/location = get_turf(src)
 	smoketime--
 	if(smoketime < 1)
@@ -71,7 +71,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/flame/match/proc/burn_out()
 	lit = 0
 	burnt = 1
-	damtype = "brute"
+	damtype = BRUTE
 	icon_state = "match_burnt"
 	item_state = "cigoff"
 	name = "burnt match"
@@ -98,7 +98,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/weldermes = "USER lights NAME with FLAME"
 	var/ignitermes = "USER lights NAME with FLAME"
 	var/brand
-	var/cigar_counter = 0 // Outpost 21 edit - Cigars dispense reagents over longer periods, using a timer
+	var/cigar_counter = 0 // Outpost 21 edit(port) - Cigars dispense reagents over longer periods, using a timer
 	blood_sprite_state = null //Can't bloody these
 	drop_sound = 'sound/items/cigs_lighters/cig_snuff.ogg'
 
@@ -119,18 +119,18 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(ishuman(loc))
 			var/mob/living/carbon/human/C = loc
 			if (src == C.wear_mask && C.check_has_mouth()) // if it's in the human/monkey mouth, transfer reagents to the mob
-				// Outpost 21 edit begin - Increase cigar nicotine use time, as they are expected to last much longer
+				// Outpost 21 edit(port) begin - Increase cigar nicotine use time, as they are expected to last much longer
 				if(istype(src,/obj/item/clothing/mask/smokable/cigarette/cigar))
 					// We do this weird order of incrementing the timer so that we can trigger first puff instantly!
 					var/smoke_rate = max_smoketime / 10 // Seemed a good rate based on highest value cigar at 2200 - Willbird
 					if(cigar_counter >= smoke_rate)
 						cigar_counter = 0
 					if(cigar_counter == 0 || amount > 1) // Taking a drag is at 5 units, 1 is passive and over time...
-						reagents.trans_to_mob(C, amount, CHEM_INGEST, 0.2)
+						reagents.trans_to_mob(C, amount, CHEM_INGEST, 0.2, can_dialysis = FALSE)
 					cigar_counter += amount
 				// Outpost 21 edit end
 				else
-					reagents.trans_to_mob(C, amount, CHEM_INGEST, 1.5) // I don't predict significant balance issues by letting blunts actually WORK.
+					reagents.trans_to_mob(C, amount, CHEM_INGEST, 1.5, can_dialysis = FALSE) // I don't predict significant balance issues by letting blunts actually WORK.
 		else // else just remove some of the reagents
 			reagents.remove_any(REM)
 
@@ -182,7 +182,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(!src.lit)
 		src.lit = 1
 		playsound(src, 'sound/items/cigs_lighters/cig_light.ogg', 75, 1, -1)
-		damtype = "fire"
+		damtype = BURN
 		if(reagents.get_reagent_amount(REAGENT_ID_PHORON)) // the phoron explodes when exposed to fire
 			var/datum/effect/effect/system/reagents_explosion/e = new()
 			e.set_up(round(reagents.get_reagent_amount(REAGENT_ID_PHORON) / 2.5, 1), get_turf(src), 0, 0)
@@ -392,8 +392,8 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	has become slightly bastardized over the years, overall quality has remained \
 	relatively the same, even if there is a large quantity of 'Havanian' cigars."
 	icon_state = "cigar2"
-	max_smoketime = 2200 // Outpost 21 edit - Addition code can't keep up
-	smoketime = 2200 // Outpost 21 edit - Addition code can't keep up
+	max_smoketime = 2200 // Outpost 21 edit(port) - Addiction code can't keep up
+	smoketime = 2200 // Outpost 21 edit(port) - Addiction code can't keep up
 	chem_volume = 30
 	nicotine_amt = 10
 
@@ -664,7 +664,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	if(lit == 1)
-		M.IgniteMob()
+		M.ignite_mob()
 		add_attack_logs(user,M,"Lit on fire with [src]")
 
 	if(istype(M.wear_mask, /obj/item/clothing/mask/smokable/cigarette) && user.zone_sel.selecting == O_MOUTH && lit)
@@ -869,7 +869,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	if(lit == 1)
-		M.IgniteMob()
+		M.ignite_mob()
 		add_attack_logs(user,M,"Lit on fire with [src]")
 
 	if(istype(M.wear_mask, /obj/item/clothing/mask/smokable/cigarette) && user.zone_sel.selecting == O_MOUTH && lit)
@@ -945,7 +945,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	if(lit == 1)
-		M.IgniteMob()
+		M.ignite_mob()
 		add_attack_logs(user,M,"Lit on fire with [src]")
 
 	if(istype(M.wear_mask, /obj/item/clothing/mask/smokable/cigarette) && user.zone_sel.selecting == O_MOUTH && lit)
@@ -1116,7 +1116,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		return
 
 	if (lit == 1)
-		M.IgniteMob()
+		M.ignite_mob()
 		add_attack_logs(user, M, "Lit on fire with [src]")
 
 	if (istype(M.wear_mask, /obj/item/clothing/mask/smokable/cigarette) && user.zone_sel.selecting == O_MOUTH && lit)

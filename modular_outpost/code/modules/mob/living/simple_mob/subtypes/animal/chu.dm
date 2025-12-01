@@ -180,7 +180,7 @@
 						T.UpdateDamageIcon()
 				add_attack_logs(src,T,"Infest (chu)")
 
-		if(!do_mob(src, foundprey, 90))
+		if(!do_after(src, 9 SECONDS, target = foundprey))
 			to_chat(src, "<span class='warning'>Your infestation of [foundprey] has been interrupted!</span>")
 			isinfesting = FALSE
 			return
@@ -219,7 +219,7 @@
 
 		// release it! and destroy old body
 		foundbelly.release_specific_contents(CC)
-		foundprey.Destroy()
+		qdel(foundprey)
 		CC.update_icon()
 		update_icon() // self too
 
@@ -354,7 +354,7 @@
 			holder.prepping_to_ventcrawl = 1
 			spawn(50)
 				holder.prepping_to_ventcrawl = 0
-			if(!do_after(holder, 45, vent_found, 1, 1))
+			if(!do_after(holder, 4 SECONDS, target = vent_found))
 				return
 
 			// spit out

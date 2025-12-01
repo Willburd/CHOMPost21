@@ -255,7 +255,7 @@
 
 	glass_name = REAGENT_ID_OILSLIDE
 	glass_desc = "Tasty, if you're a synth, not so much for organics."
-	wiki_flag = WIKI_DRINK // Outpost 21 edit - this is a drink!
+	wiki_flag = WIKI_DRINK // Outpost 21 edit(port) - this is a drink!
 
 /datum/reagent/ethanol/sitonmyface
 	name = REAGENT_SITONMYFACE
@@ -524,7 +524,7 @@
 	glass_name = "enraged arachnid slammer"
 	glass_desc = "A pint of Enraged Arachnid Slammer. It bubbles and sparkles fiercly as if it was in a berserking state!"
 
-	wiki_flag = WIKI_DRINK // Outpost 21 edit - This is a drink
+	wiki_flag = WIKI_DRINK // Outpost 21 edit(port) - This is a drink
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -655,7 +655,7 @@
 /datum/reagent/ethanol/mauna_loa/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(prob(10))
 		M.adjust_fire_stacks(5*removed)
-		M.IgniteMob()
+		M.ignite_mob()
 
 /datum/reagent/ethanol/hiveminderaser
 	name = REAGENT_HIVEMINDERASER
@@ -705,6 +705,6 @@
 	reagent_state = SOLID
 	color = "#f3b44e"
 
-	wiki_flag = WIKI_FOOD // Outpost 21 edit - This is food
+	wiki_flag = WIKI_FOOD // Outpost 21 edit(port) - This is food
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD

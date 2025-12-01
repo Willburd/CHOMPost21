@@ -29,12 +29,12 @@
 /datum/supply_pack/med/bloodpack
 	name = "BloodPack crate"
 	desc = "Three boxes of filled bloodbags."
-	contains = list(/obj/item/storage/box/bloodpacks_full = 3) // Outpost 21 edit - Actual blood packs
+	contains = list(/obj/item/storage/box/bloodpacks_full = 3) // Outpost 21 edit(port) - Actual blood packs
 	cost = 10
 	containertype = /obj/structure/closet/crate/medical/blood
 	containername = "BloodPack crate"
 
-// Outpost 21 edit begin - Actual blood packs
+// Outpost 21 edit(port) begin - Actual blood packs
 /datum/supply_pack/med/bloodpack_empty
 	name = "Empty BloodPack crate"
 	desc = "Three boxes of empty bloodbags."
@@ -42,6 +42,16 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/medical/blood
 	containername = "BloodPack crate"
+// Outpost 21 edit end
+
+// Outpost 21 edit begin - Medical IV bags
+/datum/supply_pack/med/iv_medpacks
+	name = "Medication IV Bags crate"
+	desc = "Three boxes of IV medication bags."
+	contains = list(/obj/item/storage/box/iv_medpacks = 3)
+	cost = 10
+	containertype = /obj/structure/closet/crate/medical/blood
+	containername = "Medication IV Bags crate"
 // Outpost 21 edit end
 
 /datum/supply_pack/med/synthplas
@@ -87,7 +97,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/veymed
 	containername = "Surgery crate"
-	access = access_medical
+	access = ACCESS_MEDICAL
 
 /datum/supply_pack/med/deathalarm
 	name = "Death Alarm crate"
@@ -99,7 +109,7 @@
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure/ward
 	containername = "Death Alarm crate"
-	access = access_medical
+	access = ACCESS_MEDICAL
 
 /datum/supply_pack/med/clotting
 	name = "Clotting Medicine crate"
@@ -110,7 +120,7 @@
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/zenghu
 	containername = "Clotting Medicine crate"
-	access = access_medical
+	access = ACCESS_MEDICAL
 
 /datum/supply_pack/med/sterile
 	name = "Sterile equipment crate"
@@ -138,7 +148,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = "Medical surplus equipment"
-	access = access_medical
+	access = ACCESS_MEDICAL
 
 /datum/supply_pack/med/cmogear
 	name = "Chief Medical Officer equipment"
@@ -164,7 +174,7 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = "Chief medical officer equipment"
-	access = access_cmo
+	access = ACCESS_CMO
 
 /datum/supply_pack/med/doctorgear
 	name = JOB_MEDICAL_DOCTOR + " equipment"
@@ -188,7 +198,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = JOB_MEDICAL_DOCTOR + " equipment"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/chemistgear
 	name = JOB_CHEMIST + " equipment"
@@ -212,7 +222,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = JOB_CHEMIST + " equipment"
-	access = access_chemistry
+	access = ACCESS_CHEMISTRY
 
 /datum/supply_pack/med/paramedicgear
 	name = JOB_PARAMEDIC + " equipment"
@@ -226,7 +236,7 @@
 			/obj/item/clothing/suit/storage/toggle/labcoat/emt,
 			/obj/item/clothing/under/rank/medical/paramedic,
 			/obj/item/clothing/suit/storage/toggle/fr_jacket,
-			/obj/item/clothing/mask/gas,
+			/obj/item/clothing/mask/gas/clear,
 			/obj/item/clothing/under/rank/medical/paramedic_alt,
 			/obj/item/clothing/accessory/stethoscope,
 			/obj/item/storage/firstaid/adv,
@@ -241,7 +251,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = JOB_PARAMEDIC + " equipment"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/psychiatristgear
 	name = JOB_PSYCHIATRIST + " equipment"
@@ -261,7 +271,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = JOB_PSYCHIATRIST + " equipment"
-	access = access_psychiatrist
+	access = ACCESS_PSYCHIATRIST
 
 /datum/supply_pack/med/medicalscrubs
 	name = "Medical scrubs"
@@ -283,7 +293,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = "Medical scrubs crate"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/autopsy
 	name = "Autopsy equipment"
@@ -301,7 +311,7 @@
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure/veymed
 	containername = "Autopsy equipment crate"
-	access = access_morgue
+	access = ACCESS_MORGUE
 
 /datum/supply_pack/med/medicaluniforms
 	name = "Medical uniforms"
@@ -329,7 +339,7 @@
 	cost = 10
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = "Medical uniform crate"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/medicalbiosuits
 	name = "Medical biohazard gear"
@@ -340,7 +350,7 @@
 			/obj/item/clothing/suit/bio_suit/cmo,
 			/obj/item/clothing/head/bio_hood/cmo,
 			/obj/item/clothing/shoes/white = 4,
-			/obj/item/clothing/mask/gas/clear = 4, //ChompEdit: Proper implementation of clear gas masks
+			/obj/item/clothing/mask/gas/clear = 4,
 			/obj/item/tank/oxygen = 4,
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
@@ -348,7 +358,7 @@
 	cost = 50
 	containertype = /obj/structure/closet/crate/secure/nanomed
 	containername = "Medical biohazard equipment"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/portablefreezers
 	name = "Portable freezers crate"
@@ -357,7 +367,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/veymed
 	containername = "Portable freezers"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/virus
 	name = "Virus culture crate"
@@ -366,7 +376,7 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate/secure/zenghu
 	containername = "Virus culture crate"
-	access = access_cmo
+	access = ACCESS_CMO
 
 /datum/supply_pack/med/defib
 	name = "Defibrillator crate"
@@ -422,7 +432,7 @@
 	contains = list(
 			/obj/item/clothing/suit/bio_suit/virology = 3,
 			/obj/item/clothing/head/bio_hood/virology = 3,
-			/obj/item/clothing/mask/gas/clear = 3, //ChompEdit: Proper implementation of clear gas masks
+			/obj/item/clothing/mask/gas/clear = 3,
 			/obj/item/tank/oxygen = 3,
 			/obj/item/storage/box/masks,
 			/obj/item/storage/box/gloves
@@ -430,7 +440,7 @@
 	cost = 40
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Virology biohazard equipment"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/disease
 	name = "Experimental Disease crate"
@@ -440,7 +450,7 @@
 	)
 	cost = 60
 	containertype = /obj/structure/closet/crate/freezer
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/disease_minor
 	name = "Minor Experimental Disease crate"
@@ -450,7 +460,7 @@
 	)
 	cost = 40
 	containertype = /obj/structure/closet/crate/freezer
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP
 
 /datum/supply_pack/med/compactdefib
 	name = "Compact Defibrillator crate"
@@ -459,4 +469,4 @@
 	cost = 90
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Compact Defibrillator crate"
-	access = access_medical_equip
+	access = ACCESS_MEDICAL_EQUIP

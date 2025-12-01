@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(active_autoresleevers)
+
 /obj/machinery/transhuman/autoresleever
 	name = "automatic resleever"
 	desc = "Uses advanced technology to detect when someone needs to be resleeved, and automatically prints and sleeves them into a new body. It even generates its own biomass!"
@@ -18,9 +20,17 @@
 	var/throw_dir = WEST
 	// Outpost 21 addition end
 
+/obj/machinery/transhuman/autoresleever/Initialize(mapload)
+	. = ..()
+	GLOB.active_autoresleevers += src
+
+/obj/machinery/transhuman/autoresleever/Destroy()
+	. = ..()
+	GLOB.active_autoresleevers -= src
+
 /obj/machinery/transhuman/autoresleever/update_icon()
 	. = ..()
-	if(stat)
+	if(stat & (BROKEN | MAINT | EMPED))
 		icon_state = "autoresleever-o"
 	else
 		icon_state = "autoresleever"
@@ -71,8 +81,8 @@
 		return
 
 /obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost,var/idscan = FALSE)
-	if(stat)
-		to_chat(ghost, span_warning("Auto-resleever has recieved your ID. Unfortunately it is not functional..."))
+	if(stat) // Outpost 21 edit - We prefer our autosleever to not work in a powerout, was:  & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
+		to_chat(ghost, span_warning("This machine is not functioning..."))
 		return
 	if(!isobserver(ghost))
 		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.</span>") // Outpost 21 edit - actually inform players
@@ -99,7 +109,7 @@
 	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[ghost_client.prefs.species]
 
-	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED))
+	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED) || (chosen_species.flags & NO_SLEEVE) || (locate(/datum/trait/negative/noresleeve) in ghost.client.prefs.neg_traits)) // Outpost 21 edit - No sleeve
 		to_chat(ghost, span_warning("This species cannot be resleeved!"))
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
@@ -216,6 +226,7 @@
 			new_character.default_language = def_lang
 
 	SEND_SIGNAL(new_character, COMSIG_HUMAN_DNA_FINALIZED)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, new_character, new_character.mind)
 
 	//If desired, apply equipment.
 	if(equip_body)
@@ -241,8 +252,9 @@
 
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(new_character.mind.name)
 	if(db)
+
 		var/datum/transhuman/mind_record/record = db.backed_up[new_character.mind.name]
-		if((world.time - record.last_notification) < 30 MINUTES)
+		if((world.time - record.last_notification) < 30 MINUTES && istype(get_area(src), /area/medical)) // Outpost 21 edit - Only notify if in medical
 			GLOB.global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Engineering" : "Medical") // Outpost 21 edit - Robotics is engineering here
 
 		/* Outpost 21 edit - Nif removal
@@ -324,7 +336,7 @@
 		return
 
 	var/datum/species/chosen_species = GLOB.all_species[recordB.mydna.dna.species]
-	if(chosen_species.flags & NO_SLEEVE) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
+	if(chosen_species.flags & NO_SLEEVE || (locate(/datum/trait/negative/noresleeve) in recordB.mydna.dna.species_traits)) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
 		src.visible_message("[src] flashes 'Could not resleeve [D.registered_name]. Invalid species!', and lets out a loud incorrect sounding beep!")
 		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		if((world.time - recordM.last_notification) < 30 MINUTES)

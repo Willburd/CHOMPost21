@@ -13,7 +13,7 @@ import type { BooleanLike } from 'tgui-core/react';
 type Data = {
   auth: BooleanLike;
   yes_code: BooleanLike;
-  code: String;
+  code: string;
   safety: BooleanLike;
   timeleft: number;
   timing: BooleanLike;
@@ -102,7 +102,7 @@ export const NukeConsole = (props) => {
                 >
                   {timing ? (
                     <Button disabled={!timing} onClick={() => act('abort')}>
-                      {timeString + ' REMAINING - ABORT?'}
+                      {`${timeString} REMAINING - ABORT?`}
                     </Button>
                   ) : (
                     <>

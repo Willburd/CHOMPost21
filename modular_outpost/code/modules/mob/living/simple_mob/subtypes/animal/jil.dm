@@ -40,7 +40,6 @@
 	attacktext = list("nipped", "bit", "chomped")
 
 	movement_cooldown = 0
-	animate_movement = SLIDE_STEPS
 
 	layer = MOB_LAYER
 	density = FALSE
@@ -110,6 +109,7 @@
 	mob_size = MOB_LARGE
 	meat_amount = 25
 	butchery_loot = list()
+	movement_cooldown = -2
 
 	// enlorgen
 	icon_state = "jil_big"
@@ -118,16 +118,31 @@
 	icon_splat = "jil_big_splat"
 	icon_rest = "jil_big_sleep"
 
+/mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord
+	name = "jillord"
+	real_name = "jillord"
+	desc = "You are already collected."
+	tt_desc = "Crinitus Imperius"
+
+	maxHealth = 5000
+	health = 5000
+
+	mob_size = MOB_HUGE
+	meat_amount = 40
+	melee_damage_lower = 30
+	melee_damage_upper = 40
+
+	voice_freq = 22500
+
+/mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord/Initialize(mapload)
+	. = ..()
+	resize(3, animate = FALSE, ignore_prefs = TRUE)
+
 /mob/living/simple_mob/vore/alienanimals/jil/Initialize(mapload)
 	. = ..()
 
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
-
-	var/obj/structure/closet/C = locate( /obj/structure/closet, loc)
-	if(C && !C.opened)
-		// don't care about sizes, this will be funny when a jillioth is in a closet at map load
-		src.forceMove(C)
 
 /mob/living/simple_mob/vore/alienanimals/jil/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
@@ -225,16 +240,72 @@
 	if(istype(O, /obj/item/holder))
 		return ..()
 	if(user.a_intent != I_HELP)
-		// num num num
-		if(istype(O,/obj/item/reagent_containers/food))
-			var/obj/item/reagent_containers/food/F = O
-			F.attack(src,src)
+		handle_self_use(O)
 	if(istype(O, /obj/item/newspaper))
 		visible_message("<font color='blue'>[user] baps \the [src] on the nose with the rolled up [O]</font>")
 		drop_l_hand()
 		drop_r_hand()
 		return
 	return ..()
+
+/mob/living/simple_mob/vore/alienanimals/jil/proc/handle_self_use(var/obj/item/O)
+	// num num num
+	if(istype(O,/obj/item/reagent_containers/food))
+		var/obj/item/reagent_containers/food/F = O
+		F.attack(src,src)
+	// boom
+	if(istype(O,/obj/item/assembly/signaler))
+		var/obj/item/assembly/signaler/S = O
+		S.AltClick(src)
+	if(istype(O,/obj/item/transfer_valve))
+		var/obj/item/transfer_valve/T = O
+		T.toggle_valve()
+
+/mob/living/simple_mob/vore/alienanimals/jil/do_attack(atom/A, turf/T)
+	if(!istype(A, /mob/living/carbon/human))
+		return ..()
+
+	//Size calculation checks
+	var/mob/living/carbon/human/scoopee = A
+	var/sizediff = size_multiplier - scoopee.size_multiplier //50% size diff! //1 size jil can pick up 0.5 teshari!
+	var/sizediff_treshold = 0.5 //Size difference required for them to pick you up. This means it must be below
+	if(istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
+		sizediff_treshold = 0.2 // jillioth can pick up somewhat bigger!
+	sizediff = round(sizediff, 0.01) //A person at 80% size being attached by a 100% size jillioth returns... 0.199999. BULLSHIT!
+	if(sizediff < sizediff_treshold)
+		return ..()
+
+	// normal jil, just kidnap
+	if(!istype(src, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
+		face_atom(A)
+		scoopee.get_scooped(src)
+		return TRUE
+
+	// Jillioth kidnapping
+	if(!(ai_holder.check_attacker(A)))
+		face_atom(A)
+		scoopee.get_scooped(src)
+		return TRUE
+
+	//We're a jillioth! We throw!
+	if(prob(25))
+		face_atom(A)
+		scoopee.get_scooped(src)
+		addtimer(CALLBACK(src, PROC_REF(hunkamania_brother)), rand(1,2) SECONDS, TIMER_DELETE_ME)
+		return TRUE
+
+	. = ..()
+
+/mob/living/simple_mob/vore/alienanimals/jil/proc/hunkamania_brother()
+	if(stat != CONSCIOUS)
+		return
+	var/obj/item/holder/mob_holder = get_active_hand()
+	if(!istype(mob_holder))
+		return
+	if(prob(20))
+		dir = pick(GLOB.alldirs)
+	var/turf/target_turf = get_edge_target_turf(src, dir, rand (5,10))
+	throw_item(target_turf)
 
 // Jil noises
 /datum/say_list/jil
@@ -300,17 +371,17 @@
 		home_turf = A // new nest!
 		last_pickup_turf = null // clear
 
+/datum/ai_holder/simple_mob/intentional/jil/proc/self_use_item(var/obj/item/O)
+	if(istype(O,/obj/item/reagent_containers/food))
+		return TRUE
+	if(istype(O,/obj/item/assembly/signaler))
+		return TRUE
+	if(istype(O,/obj/item/transfer_valve))
+		return TRUE
+	return FALSE
 
 /datum/ai_holder/simple_mob/intentional/jil/pre_melee_attack(atom/A)
-	if(istype(A, /obj/item))
-		var/obj/item/I = A
-		if(istype(I, /obj/item/reagent_containers/food))	// If we can't pick it up, or it's edible, go to harm.
-			holder.a_intent = I_HURT
-		else
-			holder.a_intent = I_HELP
-	else
-		// bonk for all others
-		holder.a_intent = I_HELP
+	holder.a_intent = I_HELP
 
 	// update forbiddens
 	update_forbidden_list()
@@ -335,23 +406,32 @@
 			last_pickup_turf = target.loc // for closet fix
 		give_up_movement()
 		lose_target()
-	else
-		// if a closet that a jillioth has seen...
-		if(istype(A, /obj/structure/closet))
-			// stop slamming
-			failed_breakthroughs = 4
+		return
 
-			// cancel it once destroyed
-			give_up_movement()
-			lose_target()
-		else
-			// keep trying!
-			failed_breakthroughs = 0
+	// if a closet that a jillioth has seen...
+	if(istype(A, /obj/structure/closet))
+		// stop slamming
+		failed_breakthroughs = 4
+
+		// cancel it once destroyed
+		give_up_movement()
+		lose_target()
+		return
+
+	// keep trying!
+	failed_breakthroughs = 0
 
 
 /datum/ai_holder/simple_mob/intentional/jil/post_melee_attack(atom/A)
 	if(istype(A, /obj/item) && !holder.get_active_hand() && holder.Adjacent(A))
-		if(istype(A, /obj/item/flame/lighter))
+		if(self_use_item(A))
+			var/obj/item/I = A
+			I.attack_hand(holder)
+			spawn(5)
+				var/mob/living/simple_mob/vore/alienanimals/jil/J = holder
+				J.handle_self_use(A) // MEEP!
+
+		else if(istype(A, /obj/item/flame/lighter))
 			var/obj/item/flame/lighter/R = A
 			var/obj/item/I = A
 			I.attack_hand(holder)
@@ -359,8 +439,8 @@
 				if(!R.lit)
 					R.attack_self(holder)
 				if(R.lit)
-					holder.add_modifier(/datum/modifier/fire/stack_managed/weak, 60 SECONDS)
-					holder.light_range = 2
+					holder.adjust_fire_stacks(8)
+					holder.ignite_mob()
 					holder.make_jittery(115)
 					fear_run = 60
 					holder.visible_message(span_danger("\The [holder] bursts into flames!"),span_danger("You burst into flames!"),span_danger("Something screams!"))
@@ -370,7 +450,8 @@
 						holder.drop_r_hand()
 						holder.death()
 						new /obj/effect/decal/cleanable/ash(holder.loc) // Turn it to ashes!
-						holder.Destroy()
+						qdel(holder)
+
 		else if(istype(A, /obj/item))
 			var/obj/item/D = A
 			if(!D.anchored)
@@ -381,10 +462,6 @@
 				if(istype(A, /obj/item/radio/intercom))
 					var/obj/item/radio/intercom/Ic = D
 					Ic.listening = !Ic.listening
-		else
-			// attempt grab of target!
-			var/obj/item/I = A
-			I.attack_hand(holder)
 
 	else if(istype(A, /obj/structure/closet))
 		// attempt to open!
@@ -407,7 +484,6 @@
 	else
 		J.bonk(J,prob(5))
 
-
 /datum/ai_holder/simple_mob/intentional/jil/list_targets()
 	. = hearers(vision_range, holder) - holder
 	if(!hoard_items)
@@ -426,7 +502,7 @@
 			continue
 
 		// disable for things already in hoard, food needs to be eaten though
-		if(!istype(A, /obj/item/reagent_containers/food) && get_dist(A, home_turf) < hoard_distance)
+		if(!self_use_item(A) && get_dist(A, home_turf) < hoard_distance)
 			continue
 
 		// collect items!
@@ -483,6 +559,17 @@
 		if(can_attack(A) && !forbid && !isliving(A))
 			// for item pickup targeting
 			. += A
+
+		if(can_attack(A) && !forbid && ishuman(A))
+			var/mob/living/living_target = A
+			var/sizediff = holder.size_multiplier - living_target.size_multiplier //50% size diff! //1 size jil can pick up 0.5 teshari!
+			var/sizediff_treshold = 0.5
+			if(istype(holder, /mob/living/simple_mob/vore/alienanimals/jil/jillioth))
+				sizediff_treshold = 0.2 // jillioth can pick up somewhat bigger!
+			if(sizediff >= sizediff_treshold)
+				. += A
+			if(fear_run) //We're upset/scared! Fight!
+				. += A
 
 	for(var/obj/item/I in .)
 		last_search = world.time

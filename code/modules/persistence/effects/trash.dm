@@ -8,6 +8,10 @@
 	for(var/obj/item/trash/trash in T)
 		if(istype(T, /obj/item/trash/spitwad) || istype(T, /obj/item/trash/spitgum))
 			return FALSE
+		// Outpost 21 edit(port) begin - GARBAGE DAY, do not spawn trash in garbage bins
+		if(locate(/obj/structure/closet/crate/bin) in T)
+			return FALSE
+		// Outpost 21 edit(port) end
 		too_much_trash++
 		if(too_much_trash >= 5)
 			return FALSE

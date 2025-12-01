@@ -52,7 +52,7 @@
 	if(air_contents)
 		poot()
 		return
-	if(do_after(user, 2 SECONDS, src))
+	if(do_after(user, 2 SECONDS, target = src))
 		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
 			if(istype(H.internal,/obj/item/tank))

@@ -83,7 +83,7 @@
 		var/obj/item/tool/crowbar/brace_jack/C = W
 		to_chat(user, "You begin forcibly removing \the [src] with \the [C].")
 		playsound(user, 'sound/machines/door/airlock_creaking.ogg', 100, 1) // pulling doorjack up!
-		if(do_after(user, rand(150,300), airlock))
+		if(do_after(user, rand(15,30) SECONDS, target = airlock))
 			to_chat(user, "You finish removing \the [src].")
 			unlock_brace(user)
 		return
@@ -136,18 +136,18 @@
 	// unlock brace to door
 	airlock.brace = null
 	airlock.update_icon()
-	airlock = null
 	anchored = FALSE
 	// reset brace to item layer
 	pixel_x = 0
 	pixel_y = 0
 	reset_plane_and_layer()
-	update_icon()
 	if(user)
 		user.put_in_hands(src)
 		airlock.visible_message("\The [user] removes \the [src] from \the [airlock]!")
 	else
 		dropInto(loc)
+	airlock = null
+	update_icon()
 
 
 /obj/item/airlock_brace/proc/health_percentage()

@@ -12,7 +12,7 @@
 		return 0
 	if (target_zone == O_EYES)	//there are specific steps for eye surgery
 		return 0
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return 0
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected == null)
@@ -46,7 +46,7 @@
 /datum/surgery_step/robotics/unscrew_hatch/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
-		return affected && affected.open == 0 && target_zone != O_MOUTH
+		return affected && !affected.open && target_zone != O_MOUTH
 
 /datum/surgery_step/robotics/unscrew_hatch/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -60,10 +60,12 @@
 	user.visible_message(span_notice("[user] has opened the maintenance hatch on [target]'s [affected.name] with \the [tool]."), \
 	span_notice("You have opened the maintenance hatch on [target]'s [affected.name] with \the [tool]."),)
 	user.balloon_alert_visible("opens the maintenance hatch on [target]'s [affected.name]", "maintenance hatch opened on \the [affected.name]")
-	affected.open = 1
+	affected.open = INCISION_MADE
 
 /datum/surgery_step/robotics/unscrew_hatch/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+	if(istype(tool, /obj/item/coin))
+		user.drop_item()
 	user.visible_message(span_warning("[user]'s [tool.name] slips, failing to unscrew [target]'s [affected.name]."), \
 	span_warning("Your [tool] slips, failing to unscrew [target]'s [affected.name]."))
 	user.balloon_alert_visible("slips, failing to unscrew [target]'s [affected.name]", "your [tool] slips, failing to unscrew \the [affected.name]")
@@ -111,8 +113,8 @@
 	surgery_name = "Open Hatch"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100,
-		/obj/item/material/kitchen/utensil = 80
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/kitchen/utensil = 50
+	)
 
 	allowed_procs = list(IS_CROWBAR = 100)
 
@@ -152,8 +154,8 @@
 	surgery_name = "Close Hatch"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100,
-		/obj/item/material/kitchen/utensil = 80
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/kitchen/utensil = 50
+	)
 
 	allowed_procs = list(IS_CROWBAR = 100)
 
@@ -194,8 +196,8 @@
 	surgery_name = "Repair Robotic Brute"
 	allowed_tools = list(
 		/obj/item/weldingtool = 100,
-		/obj/item/pickaxe/plasmacutter = 80
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/pickaxe/plasmacutter = 50
+	)
 
 	min_duration = 50
 	max_duration = 60
@@ -211,7 +213,7 @@
 			else
 				if(!welder.isOn() || !welder.remove_fuel(1,user))
 					return 0
-		return affected && affected.open == 3 && (affected.disfigured || affected.brute_dam > 0) && target_zone != O_MOUTH // CHOMPEdit End.
+		return affected && affected.open == BONE_RETRACTED  && (affected.disfigured || affected.brute_dam > 0) && target_zone != O_MOUTH // CHOMPEdit End.
 
 /datum/surgery_step/robotics/repair_brute/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -265,7 +267,7 @@
 				else
 					C.use(5)
 
-		return affected && affected.open == 3 && (affected.disfigured || affected.burn_dam > 0) && target_zone != O_MOUTH
+		return affected && affected.open == BONE_RETRACTED && (affected.disfigured || affected.burn_dam > 0) && target_zone != O_MOUTH
 
 /datum/surgery_step/robotics/repair_burn/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -299,8 +301,8 @@
 	surgery_name = "Fix Robotic Organ"
 	allowed_tools = list(
 	/obj/item/stack/nanopaste = 100,		\
-	/obj/item/surgical/bonegel = 60, 		\
-	) // Outpost 21 edit - Buffing ghetto surgery
+	/obj/item/surgical/bonegel = 30, 		\
+	)
 
 	allowed_procs = list(IS_SCREWDRIVER = 100)
 
@@ -308,7 +310,7 @@
 	max_duration = 70 //CHOMPedit
 
 /datum/surgery_step/robotics/fix_organ_robotic/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(!affected) return
@@ -317,10 +319,10 @@
 		if(I.damage > 0 && (I.robotic >= ORGAN_ROBOT))
 			is_organ_damaged = 1
 			break
-	return affected.open == 3 && is_organ_damaged
+	return affected.open == BONE_RETRACTED && is_organ_damaged
 
 /datum/surgery_step/robotics/fix_organ_robotic/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
@@ -335,7 +337,7 @@
 	..()
 
 /datum/surgery_step/robotics/fix_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
@@ -350,7 +352,7 @@
 					target.sdisabilities &= ~BLIND
 
 /datum/surgery_step/robotics/fix_organ_robotic/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	if (!hasorgans(target))
+	if(!ishuman(target))
 		return
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
@@ -409,20 +411,19 @@
 		to_chat(user, span_notice("You decide against preparing any organs for removal."))
 		return
 	target.op_stage.current_organ = organ_to_remove
-
-	user.visible_message(span_filter_notice("[user] starts to decouple [target]'s [target.op_stage.current_organ] with \the [tool]."), \
-	span_filter_notice("You start to decouple [target]'s [target.op_stage.current_organ] with \the [tool].") )
-	user.balloon_alert_visible("starts to decouple [target]'s [target.op_stage.current_organ]", "decoupling \the [target.op_stage.current_organ]")
+	var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
+	user.visible_message(span_filter_notice("[user] starts to decouple [target]'s [O.name] with \the [tool]."), \
+	span_filter_notice("You start to decouple [target]'s [O.name] with \the [tool].") )
+	user.balloon_alert_visible("starts to decouple [target]'s [O.name]", "decoupling \the [O.name]")
 	..()
 
 /datum/surgery_step/robotics/detatch_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message(span_notice("[user] has decoupled [target]'s [target.op_stage.current_organ] with \the [tool].") , \
-	span_notice("You have decoupled [target]'s [target.op_stage.current_organ] with \the [tool]."))
-	user.balloon_alert_visible("decoupled [target]'s [target.op_stage.current_organ]", "decouple \the [target.op_stage.current_organ]")
+	var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
+	user.visible_message(span_notice("[user] has decoupled [target]'s [O.name] with \the [tool].") , \
+	span_notice("You have decoupled [target]'s [O.name] with \the [tool]."))
+	user.balloon_alert_visible("decoupled [target]'s [O.name]", "decouple \the [O.name]")
 
-	var/obj/item/organ/internal/I = target.internal_organs_by_name[target.op_stage.current_organ]
-	if(I && istype(I))
-		I.status |= ORGAN_CUT_AWAY
+	O.status |= ORGAN_CUT_AWAY
 	target.op_stage.current_organ = null
 
 /datum/surgery_step/robotics/detatch_organ_robotic/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -476,20 +477,18 @@
 
 
 	target.op_stage.current_organ = organ_to_replace
-
-	user.visible_message(span_filter_notice("[user] begins reattaching [target]'s [target.op_stage.current_organ] with \the [tool]."), \
-	span_filter_notice("You start reattaching [target]'s [target.op_stage.current_organ] with \the [tool]."))
-	user.balloon_alert_visible("begins reattaching [target]'s [target.op_stage.current_organ]", "reattaching \the [target.op_stage.current_organ]")
+	var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
+	user.visible_message(span_filter_notice("[user] begins reattaching [target]'s [O.name] with \the [tool]."), \
+	span_filter_notice("You start reattaching [target]'s [O.name] with \the [tool]."))
+	user.balloon_alert_visible("begins reattaching [target]'s [O.name]", "reattaching \the [O.name]")
 	..()
 
 /datum/surgery_step/robotics/attach_organ_robotic/end_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	user.visible_message(span_notice("[user] has reattached [target]'s [target.op_stage.current_organ] with \the [tool].") , \
-	span_notice("You have reattached [target]'s [target.op_stage.current_organ] with \the [tool]."))
-	user.balloon_alert_visible("reattaches [target]'s [target.op_stage.current_organ]", "reattached \the [target.op_stage.current_organ]")
-
-	var/obj/item/organ/I = target.internal_organs_by_name[target.op_stage.current_organ]
-	if(I && istype(I))
-		I.status &= ~ORGAN_CUT_AWAY
+	var/obj/item/organ/O = target.internal_organs_by_name[target.op_stage.current_organ]
+	user.visible_message(span_notice("[user] has reattached [target]'s [O.name] with \the [tool].") , \
+	span_notice("You have reattached [target]'s [O.name] with \the [tool]."))
+	user.balloon_alert_visible("reattaches [target]'s [O.name]", "reattached \the [O.name]")
+	O.status &= ~ORGAN_CUT_AWAY
 	target.op_stage.current_organ = null
 
 /datum/surgery_step/robotics/attach_organ_robotic/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -516,7 +515,7 @@
 
 	var/obj/item/mmi/M = tool
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	if(!(affected && affected.open == 3))
+	if(!(affected && affected.open == BONE_RETRACTED))
 		return 0
 
 	if(!istype(M))
@@ -619,7 +618,7 @@
 	var/obj/item/holder/diona/N = tool
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
-	if(!(affected && affected.open == 3))
+	if(!(affected && affected.open == BONE_RETRACTED))
 		return 0
 
 	if(!istype(N))

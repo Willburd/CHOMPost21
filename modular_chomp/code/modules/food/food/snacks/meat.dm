@@ -20,7 +20,7 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_LIQUIDFIRE = 6)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_RADIUM = 6) // , REAGENT_ID_LIQUIDFIRE = 6) // Outpost 21 edit - Removing badly designed chems
 	bitesize = 6
 
 /obj/item/reagent_containers/food/snacks/dragonmeat/Initialize(mapload)

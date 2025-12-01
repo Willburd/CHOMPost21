@@ -7,7 +7,7 @@
 
 		if (src.stat != CONSCIOUS)
 			src.cameraFollow = null
-			src.reset_view(null)
+			src.reset_perspective()
 			disconnect_shell("Disconnecting from remote shell due to local system failure.")
 
 		src.updatehealth()
@@ -80,7 +80,7 @@
 
 					//Blind the AI
 					update_icon()
-					overlay_fullscreen("blind", /obj/screen/fullscreen/blind)
+					overlay_fullscreen("blind", /atom/movable/screen/fullscreen/blind)
 					src.sight = src.sight&~SEE_TURFS
 					src.sight = src.sight&~SEE_MOBS
 					src.sight = src.sight&~SEE_OBJS
@@ -156,7 +156,7 @@
 							sleep(50)
 							theAPC = null
 
-	// Outpost 21 edit begin - AI can hear ambiences
+	// Outpost 21 edit(port) begin - AI can hear ambiences
 	if(client)	// Handle re-running ambience to mobs if they've remained in an area, AND have an active client assigned to them, and do not have repeating ambience disabled.
 		handle_ambience()
 	// Outpost 21 edit end
@@ -187,7 +187,7 @@
 	..()
 	add_ai_verbs(src)
 
-// Outpost 21 edit begin - Allow AI to hear ambiences
+// Outpost 21 edit(port) begin - Allow AI to hear ambiences
 /mob/living/silicon/ai/handle_ambience(var/forced) // If you're in an ambient area and have not moved out of it for x time as configured per-client, and do not have it disabled, we're going to play ambience again to you, to help break up the silence.
 	var/pref = read_preference(/datum/preference/numeric/ambience_freq)
 	if(!pref)
