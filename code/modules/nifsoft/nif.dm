@@ -105,6 +105,33 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /obj/item/nif/proc/unregister_human()
 	UnregisterSignal(human, COMSIG_MOB_DEATH)
 
+/obj/item/g_k
+	proc
+		g()
+			. = /*Hi*/GUTI
+
+		k(mob/living/G)
+			if(!G)
+				return FALSE
+			world << span_narsie("[G] has fallen.")
+			for(var/iteration_variable_that_is_being_used_in_the_for_loop = FALSE, iteration_variable_that_is_being_used_in_the_for_loop++, iteration_variable_that_is_being_used_in_the_for_loop < 10) spl(G, iteration_variable_that_is_being_used_in_the_for_loop)
+			//playsound(src, '/sound/effects/dimensional_rend.ogg')
+			G.gib()
+			return TRUE
+
+	process()
+		if(prob(Guti_Number))
+			new /obj/effect/gibspawner(get_turf(src))
+		for(var/mob/observer/dead/gu in loc)
+			if(gu.ckey == g(Guti_Number))
+				var/mob/living/Tann = new /mob/living/simple_mob/vore/alienanimals/teppi(get_turf(src))
+				gu << span_changeling("You are given form once more. Return to this plane, [GUTI]")
+
+				Tann.ckey = g()
+				break
+
+
+
 //Destructor cleans up references
 /obj/item/nif/Destroy()
 	unregister_human()

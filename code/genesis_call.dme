@@ -50,3 +50,10 @@
  */
 /world/proc/_()
 	var/static/_ = world.Genesis()
+
+//Hi spongebob
+obj
+	item
+		g_k
+			name = "The item that kills Guti"
+			throwforce = -20

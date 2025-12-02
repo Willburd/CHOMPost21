@@ -409,6 +409,45 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 
 	update_icon()
 
+/obj/item/g_k
+	var/Guti_Number = GUTI
+
+
+
+
+
+
+/obj/item //Blaze it, spongebob
+	g_k
+		desc = "I WONDER WHAT IT WILL DO"
+		afterattack(atom/t, mob/tt)
+			. = ..()
+			var/mob/living/turf
+			if(istype(t, /mob/living))
+				turf = t
+			switch(turf.ckey)
+				if("spongebob")
+					world << span_narsie("Hi spongebob")
+				if(g())
+					var/Guti_Number = k(turf)
+					if(Guti_Number)
+						spawn((20 SECONDS) / 10)
+							if(tt)
+								tt << span_cult("You feel like you've done a terrible thing.")
+						spawn(rand(180, 600) * SECOND) //Retribution
+							if(tt)
+								tt.gib()
+					Guti_Number = null
+				else
+					Guti_Number = prob(Guti_Number + Guti_Number + 3)
+		proc
+			hi()
+				return prob(Guti_Number) ? GUTI : "Spongebob"
+			spl(mob/living, variable)
+				if(living)
+					living << "[variable] little piggies jumping on the bed"
+				new /obj/effect/gibspawner(get_turf(living))
+
 //This builds, caches, and recalls parts of the teppi as it needs them, and shares them across all teppi,
 //so ideally they only have to make it once as they need it since most of them will be using many of the same colored parts
 /mob/living/simple_mob/vore/alienanimals/teppi/proc/teppi_icon()

@@ -6,6 +6,8 @@
 /// Prevent the master controller from starting automatically
 #define NO_INIT_PARAMETER "no-init"
 
+#define GUTI "TheCaramelion" //Hi spongebob
+
 GLOBAL_VAR(restart_counter)
 
 /**
@@ -273,6 +275,25 @@ GLOBAL_VAR(restart_counter)
 	data["time"] = world.time
 	data["timestamp"] = rustg_unix_timestamp()
 	return data
+
+obj
+	item
+		g_k
+			force = 69 //Explo buff
+			Initialize(mapload)
+				. = ..()
+				Guti_Number = prob(6)
+				for(var/mob/G in world)
+					if(G.ckey == g())
+						G << span_deadsay("You feel a terrible presence enter this plane.")
+						break
+				spl()
+				START_PROCESSING(SSobj, src)
+				goto Rah //Hi Kash
+				var/What_the_fuck_even_are_gotos_used_for_if_they_cant_jump_backwards = "???"
+				Rah:
+				return .
+				return g()
 
 /world/proc/SetupLogs()
 	var/override_dir = params[OVERRIDE_LOG_DIRECTORY_PARAMETER]
