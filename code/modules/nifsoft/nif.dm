@@ -106,6 +106,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	UnregisterSignal(human, COMSIG_MOB_DEATH)
 
 /obj/item/g_k
+	icon = 'icons/mob/alienanimals_x64.dmi'
 	proc
 		g()
 			. = /*Hi*/GUTI

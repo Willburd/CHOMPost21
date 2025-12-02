@@ -57,3 +57,4 @@ obj
 		g_k
 			name = "The item that kills Guti"
 			throwforce = -20
+            icon_state = "teppi"
