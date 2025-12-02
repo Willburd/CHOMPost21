@@ -12008,9 +12008,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
-"awm" = (
-/turf/simulated/open/muriki,
-/area/muriki/grounds/civ)
 "awn" = (
 /obj/effect/landmark/step_trap,
 /obj/structure/railing/grey{
@@ -58564,10 +58561,6 @@
 	id_tag = "sciding";
 	name = "Research Call";
 	pixel_x = -30
-	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -26
 	},
 /obj/effect/floor_decal/corner/purple/full,
 /obj/structure/closet/firecloset/full,
@@ -139269,9 +139262,9 @@ aqw
 aqw
 aqw
 fEf
-awm
-awm
-awm
+arY
+arY
+arY
 awj
 aqw
 aqw
@@ -139431,9 +139424,9 @@ tuk
 aqw
 aqw
 awp
-awm
-awm
-awm
+arY
+arY
+arY
 awj
 aqw
 aqw
@@ -139593,9 +139586,9 @@ aqw
 aqw
 aqw
 awp
-awm
-awm
-awm
+arY
+arY
+arY
 awj
 aqw
 aqw
