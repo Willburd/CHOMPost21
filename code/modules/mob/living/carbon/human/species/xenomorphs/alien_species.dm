@@ -54,9 +54,7 @@
 		O_HIVE =     /obj/item/organ/internal/xenos/hivenode,
 		O_NUTRIENT = /obj/item/organ/internal/diona/nutrients,
 		O_STOMACH =		/obj/item/organ/internal/stomach/xeno,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno
 		)
 
 	bump_flag = ALIEN
@@ -178,9 +176,7 @@
 		O_RESIN =		/obj/item/organ/internal/xenos/resinspinner,
 		O_NUTRIENT =	/obj/item/organ/internal/diona/nutrients,
 		O_STOMACH =		/obj/item/organ/internal/stomach/xeno,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno
 		)
 
 	inherent_verbs = list(
@@ -217,9 +213,7 @@
 		O_HIVE =     /obj/item/organ/internal/xenos/hivenode,
 		O_NUTRIENT = /obj/item/organ/internal/diona/nutrients,
 		O_STOMACH =		/obj/item/organ/internal/stomach/xeno,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno
 		)
 
 	inherent_verbs = list(
@@ -249,9 +243,7 @@
 		O_HIVE =     /obj/item/organ/internal/xenos/hivenode,
 		O_NUTRIENT = /obj/item/organ/internal/diona/nutrients,
 		O_STOMACH =		/obj/item/organ/internal/stomach/xeno,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno
 		)
 
 	inherent_verbs = list(
@@ -289,9 +281,7 @@
 		O_RESIN =    /obj/item/organ/internal/xenos/resinspinner,
 		O_NUTRIENT = /obj/item/organ/internal/diona/nutrients,
 		O_STOMACH =		/obj/item/organ/internal/stomach/xeno,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine/xeno
 		)
 
 	inherent_verbs = list(
