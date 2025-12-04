@@ -41012,6 +41012,7 @@
 /area/quartermaster/cargrecycle)
 "sYU" = (
 /obj/machinery/door/airlock/glass_external/public,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopnorth)
 "sYZ" = (

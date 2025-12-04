@@ -60932,6 +60932,7 @@
 	name = "Security Maintenance";
 	req_access = list(1,12)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "cjn" = (
