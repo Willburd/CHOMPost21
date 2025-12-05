@@ -117,7 +117,9 @@ export const SubtabNotes = (props: {
                   </Stack.Item>
                 </>
               )}
+              { /* Outpost 21 edit - Nife removal
               <Stack.Item>NIF: {nif ? 'Installed' : 'None'}</Stack.Item>
+              */ }
             </Stack>
           </Stack.Item>
         </Stack>
