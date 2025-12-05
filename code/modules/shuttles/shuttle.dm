@@ -343,7 +343,7 @@
 					TA.ChangeTurf(get_base_turf_by_area(TA), 1, 1)
 		if(knockdown)
 			for(var/mob/living/M in A)
-				if(M.is_incorporeal()) // Outpost 21 edit(port) - No shadekin knockdown on shuttle movmeent
+				if(M.is_incorporeal())
 					continue
 				if(M.buckled)
 					to_chat(M, span_red("Sudden acceleration presses you into \the [M.buckled]!"))

@@ -64343,12 +64343,16 @@
 	dir = 6
 	},
 /obj/structure/table/standard,
-/obj/item/storage/box/cdeathalarm_kit,
-/obj/item/storage/box/cdeathalarm_kit,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 26
 	},
+/obj/item/storage/box/holobadge{
+	pixel_y = 10;
+	pixel_x = 6
+	},
+/obj/item/storage/box/cdeathalarm_kit,
+/obj/item/storage/box/cdeathalarm_kit,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "qzF" = (
