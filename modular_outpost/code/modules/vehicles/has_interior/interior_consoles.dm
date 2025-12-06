@@ -122,22 +122,22 @@
 		return
 	..()
 
-/obj/machinery/computer/vehicle_interior_console/helm/CtrlClick(var/mob/user)
+/obj/machinery/computer/vehicle_interior_console/helm/click_ctrl(var/mob/user)
 	// helm expects pilot seat
-	if(Adjacent(user))
-		if(interior_controller.on)
-			stop_engine()
-		else
-			start_engine()
-	else
+	if(!Adjacent(user))
 		return ..()
+	if(interior_controller.on)
+		stop_engine()
+		return CLICK_ACTION_SUCCESS
+	start_engine()
+	return CLICK_ACTION_SUCCESS
 
-/obj/machinery/computer/vehicle_interior_console/helm/AltClick(var/mob/user)
+/obj/machinery/computer/vehicle_interior_console/helm/click_alt(var/mob/user)
 	// helm expects pilot seat
-	if(Adjacent(user))
-		remove_key()
-	else
+	if(!Adjacent(user))
 		return ..()
+	remove_key()
+	return CLICK_ACTION_SUCCESS
 
 /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine()
 	set name = "Start engine"

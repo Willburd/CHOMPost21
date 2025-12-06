@@ -256,7 +256,7 @@
 	// boom
 	if(istype(O,/obj/item/assembly/signaler))
 		var/obj/item/assembly/signaler/S = O
-		S.AltClick(src)
+		S.click_alt(src)
 	if(istype(O,/obj/item/transfer_valve))
 		var/obj/item/transfer_valve/T = O
 		T.toggle_valve()
