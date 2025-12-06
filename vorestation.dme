@@ -5642,6 +5642,7 @@
 #include "modular_outpost\code\modules\events\septic_explosion.dm"
 #include "modular_outpost\code\modules\events\spacemoss.dm"
 #include "modular_outpost\code\modules\events\weeping_statue.dm"
+#include "modular_outpost\code\modules\food\drinks\bottle.dm"
 #include "modular_outpost\code\modules\food\kitchen\gibber.dm"
 #include "modular_outpost\code\modules\games\cards.dm"
 #include "modular_outpost\code\modules\hydroponics\spreading\spreading.dm"
