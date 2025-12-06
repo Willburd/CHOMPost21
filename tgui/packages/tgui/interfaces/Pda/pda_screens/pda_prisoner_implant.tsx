@@ -25,7 +25,7 @@ export const pda_prisoner_implant = (props) => {
         <LabeledList>
           {security.prisoner_implants.map((cart, i) => (
             <LabeledList.Item key={i} label={cart.host}>
-              {cart.area} - {cart.x}.{cart.z}.{cart.z}
+              {cart.area} - {cart.x}.{cart.y}.{cart.z}
             </LabeledList.Item>
           ))}
         </LabeledList>
