@@ -14,6 +14,8 @@
 	for(var/obj/item/implant/tracking/B in GLOB.all_tracking_implants)
 		if(!B.implanted)
 			continue
+		if(is_fully_vore_jammed(B))
+			continue
 		var/turf/bl = get_turf(B)
 		if(bl)
 			var/area/A = get_area(bl)
