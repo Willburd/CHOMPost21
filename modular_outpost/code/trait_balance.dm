@@ -260,4 +260,8 @@
 /datum/trait/negative/boneless
 	custom_only = FALSE // Base TRUE, let anyone suffer
 
+/datum/trait/negative/ambulant_blood
+	is_genetrait = TRUE // Base FALSE, We want it to be a gene...
+	hidden = TRUE // Base FAlSE, ...Because taking it from the start is too disruptive to ling gameplay
+
 #endif
