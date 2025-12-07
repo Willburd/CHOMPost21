@@ -52,8 +52,6 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/vore/gryphon
 	say_list_type = /datum/say_list/gryphon
 
-	enzyme_affect = FALSE // Outpost 21 edit - Enzyme immune
-
 	can_be_drop_prey = FALSE
 	var/leap_warmup = 2 SECOND // How long the leap telegraphing is.
 	var/leap_sound = 'sound/weapons/spiderlunge.ogg'

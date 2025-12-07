@@ -33,3 +33,22 @@
 
 /mob/living/simple_mob/vore/pitcher_plant
 	enzyme_affect = FALSE
+
+/mob/living/simple_mob/construct
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
+	enzyme_affect = FALSE
+	shock_resist = 1
+
+/mob/living/simple_mob/vore/scel
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/horse/kelpie
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/gryphon
+	enzyme_affect = FALSE
