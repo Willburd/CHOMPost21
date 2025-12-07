@@ -31,7 +31,7 @@
 		if(!istype(M))
 			return
 		for(var/metal in GLOB.deepore_fracking_reagents)
-			if(!M.resources[metal])
+			if(!(metal in M.resources))
 				continue
 			var/list/ore_list = GLOB.deepore_fracking_reagents[metal]
 			if(!ore_list || !ore_list.len)
