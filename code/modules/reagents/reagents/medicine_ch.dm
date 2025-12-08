@@ -95,8 +95,8 @@
 	name = REAGENT_TERCOZOLAM
 	id = REAGENT_ID_TERCOZOLAM
 	color = "#afeb17"
-	metabolism = 0.05
-	description = "A well respected drug used for treatment of schizophrenia in specific. Stablizes patients experiencing severe hallucinations or chemical highs." // Outpost 21 edit - Tercozalam buff
+	metabolism = 0.01 // Outpost 21 edit - Tercozolam buff
+	description = "A well respected drug used for treatment of schizophrenia in specific. Stablizes patients experiencing severe hallucinations or chemical highs." // Outpost 21 edit - Tercozolam buff
 	overdose = REAGENTS_OVERDOSE * 2
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -104,7 +104,7 @@
 // Outpost 21 edit begin - Tercozalam buff
 /datum/reagent/tercozolam/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	// Cures druggy and hallucinations/fakepain
-	M.adjustHalLoss(-1)
+	M.adjustHalLoss(-0.1)
 	M.hallucination = max(M.hallucination - 1, 0)
 	M.druggy = max(M.druggy - 1, 0)
 // Outpost 21 edit end
