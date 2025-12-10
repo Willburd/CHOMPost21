@@ -640,7 +640,7 @@
 			failed = TRUE
 			TEST_NOTICE(src, "Telebeacon already in use [beacon.tele_name]. Located at [T.x].[T.y].[T.z] : [A]")
 			continue
-		used_tags += controller.id_tag
+		used_tags += beacon.tele_name
 
 	if(failed)
-		TEST_FAIL("One or more airlock controllers had an incorrect id_tag set")
+		TEST_FAIL("One or more tele_beacon objects are incorrectly setup or are duplicates")
