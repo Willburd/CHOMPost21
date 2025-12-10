@@ -2545,10 +2545,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverB)
 "afZ" = (
-/obj/machinery/transhuman/autoresleever{
-	ghost_spawns = 1;
-	name = "rogue resleever"
-	},
+/obj/machinery/transhuman/autoresleever/rogue,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverB)
 "aga" = (
