@@ -48,7 +48,7 @@
 
 			if(TURFSLIP_ICE)
 				floor_type = "icy"
-				slip_dist = rand(1,3) // Outpost 21 edit - We like our randomized slip dist for ice
+				slip_dist = 99 //Eternal slip for ice puzzles
 				slip_stun = 4
 				dirtslip = FALSE
 
@@ -79,7 +79,7 @@
 		if(slip_dist > 4)
 			slip_dist = rand(2,4) // Outpost 21 edit - We like our randomized slip dist for lube
 
-	else if(ground.wet == TURFSLIP_LUBE)
+	else if(ground.wet >= TURFSLIP_LUBE) // Lube and above slips forever
 		// Lube slips forever, if we re-enter the lube then restore our slip
 		slip_dist = 99
 
