@@ -1,6 +1,6 @@
 /datum/event/redspacefissure
 	startWhen	= 0
-	endWhen		= 120
+	endWhen		= 220
 
 /datum/event/redspacefissure/start()
 	wormhole_event(redspace = TRUE)

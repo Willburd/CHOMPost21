@@ -11506,6 +11506,8 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
+/obj/effect/mine/n2o,
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/cybstorage)
 "avt" = (
@@ -12008,9 +12010,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
-"awm" = (
-/turf/simulated/open/muriki,
-/area/muriki/grounds/civ)
 "awn" = (
 /obj/effect/landmark/step_trap,
 /obj/structure/railing/grey{
@@ -31291,13 +31290,14 @@
 /area/quartermaster/office)
 "gCE" = (
 /obj/machinery/door/airlock/maintenance/engi{
-	name = "Engineering Substation";
+	name = "Security Substation";
 	req_one_access = list(1,10)
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/security)
 "gCL" = (
@@ -36892,6 +36892,11 @@
 "igz" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
 	pixel_y = -32;
 	dir = 1
 	},
@@ -50615,9 +50620,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/security/checkpoint2)
 "mgu" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/structure/catwalk,
 /obj/machinery/door/blast/gate/thin/open{
 	dir = 4;
@@ -58565,10 +58567,6 @@
 	name = "Research Call";
 	pixel_x = -30
 	},
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -26
-	},
 /obj/effect/floor_decal/corner/purple/full,
 /obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
@@ -64295,14 +64293,11 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
-/obj/machinery/door/blast/gate/thin/open{
-	dir = 8;
-	icon_state = "shutter2_0";
-	id = "security_lockdown";
-	name = "Security Lockdown"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
@@ -64348,12 +64343,16 @@
 	dir = 6
 	},
 /obj/structure/table/standard,
-/obj/item/storage/box/cdeathalarm_kit,
-/obj/item/storage/box/cdeathalarm_kit,
 /obj/machinery/alarm{
 	dir = 8;
 	pixel_x = 26
 	},
+/obj/item/storage/box/holobadge{
+	pixel_y = 10;
+	pixel_x = 6
+	},
+/obj/item/storage/box/cdeathalarm_kit,
+/obj/item/storage/box/cdeathalarm_kit,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "qzF" = (
@@ -80562,6 +80561,7 @@
 	dir = 4
 	},
 /obj/item/airlock_brace,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_grid,
 /area/muriki/bathroom/security)
 "vvd" = (
@@ -88701,10 +88701,10 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/window/maintenance_panel{
-	dir = 1
+/obj/machinery/door/airlock/maintenance/sec{
+	name = "Security Maintenance"
 	},
-/obj/structure/window/maintenance_panel,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/security)
 "xQN" = (
@@ -139269,9 +139269,9 @@ aqw
 aqw
 aqw
 fEf
-awm
-awm
-awm
+arY
+arY
+arY
 awj
 aqw
 aqw
@@ -139431,9 +139431,9 @@ tuk
 aqw
 aqw
 awp
-awm
-awm
-awm
+arY
+arY
+arY
 awj
 aqw
 aqw
@@ -139593,9 +139593,9 @@ aqw
 aqw
 aqw
 awp
-awm
-awm
-awm
+arY
+arY
+arY
 awj
 aqw
 aqw

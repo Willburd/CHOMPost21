@@ -169,10 +169,11 @@
 		user.drop_item(src)
 		insert_organ(user,O)
 
-/obj/machinery/auto_doc/AltClick(var/mob/user)
-	. = ..()
+/obj/machinery/auto_doc/click_alt(var/mob/user)
+	..()
 	add_fingerprint(user)
 	remove_organ(user)
+	return CLICK_ACTION_SUCCESS
 
 /obj/machinery/auto_doc/verb/empty_organ()
 	set name = "Eject Stored Organ"

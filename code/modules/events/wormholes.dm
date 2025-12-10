@@ -1,6 +1,6 @@
 /datum/event/wormholes
 	startWhen	= 0
-	endWhen		= 80
+	endWhen		= 220 // Outpost 21 edit - much longer to end message
 
 /datum/event/wormholes/start()
 	wormhole_event()

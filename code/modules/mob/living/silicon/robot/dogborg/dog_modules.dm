@@ -486,7 +486,7 @@
 /obj/item/reagent_containers/glass/beaker/large/borg/Initialize(mapload)
 	. = ..()
 	R = loc.loc
-	RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
+	RegisterSignal(src, COMSIG_MOVABLE_MOVED, PROC_REF(check_loc))
 
 /obj/item/reagent_containers/glass/beaker/large/borg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
 	SIGNAL_HANDLER
@@ -502,7 +502,7 @@
 			hud_layerise()
 
 /obj/item/reagent_containers/glass/beaker/large/borg/Destroy()
-	UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
+	UnregisterSignal(src, COMSIG_MOVABLE_MOVED)
 	R = null
 	last_robot_loc = null
 	. = ..()
@@ -531,7 +531,7 @@
 	exact = TRUE
 	to_chat(user, span_notice("You've upgraded the mining scanner for [upgrade_cost] points."))
 
-/obj/item/mining_scanner/robot/AltClick(mob/user)
+/obj/item/mining_scanner/robot/click_alt(mob/user)
 	change_size(user)
 
 /obj/item/mining_scanner/robot/proc/change_size(mob/user)

@@ -1,8 +1,3 @@
-/obj/item/ammo_magazine/ammo_box/CtrlClick(mob/user)
-	if(isliving(user) && Adjacent(user) && shake_ammo(user))
-		return
-	..()
-
 /obj/item/ammo_magazine/ammo_box/verb/jumblize_ammo()
 	set category = "Object"
 	set name = "Jumble Ammo"

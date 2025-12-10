@@ -29834,19 +29834,18 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/effect/catwalk_plated,
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/effect/catwalk_plated,
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area_hallway)
@@ -43348,6 +43347,13 @@
 /obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/incinerator)
+"byC" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/west)
 "byD" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/incinerator)
@@ -60926,6 +60932,7 @@
 	name = "Security Maintenance";
 	req_access = list(1,12)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "cjn" = (
@@ -65689,6 +65696,7 @@
 	pixel_x = 7;
 	pixel_y = 30
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cur" = (
@@ -65726,6 +65734,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cuu" = (
@@ -65836,7 +65845,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "cuG" = (
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/civ/closet)
 "cuH" = (
@@ -65871,7 +65880,7 @@
 	},
 /area/crew_quarters/recreation_area_hallway)
 "cuM" = (
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/civ)
 "cuN" = (
@@ -65915,6 +65924,204 @@
 /obj/item/flashlight/lamp,
 /turf/simulated/floor/wood/hardwood/parquet,
 /area/maintenance/research)
+"cuV" = (
+/obj/random/trash,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
+"cuW" = (
+/turf/simulated/floor/wood,
+/area/maintenance/civ/west)
+"cuX" = (
+/turf/simulated/floor/wood/broken,
+/area/maintenance/civ/west)
+"cuY" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/wood,
+/area/maintenance/civ/west)
+"cuZ" = (
+/obj/structure/bed,
+/obj/item/bedsheet/yellow,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/wood,
+/area/maintenance/civ/west)
+"cva" = (
+/obj/structure/table/oak,
+/turf/simulated/floor/wood/broken,
+/area/maintenance/civ/west)
+"cvb" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
+"cvc" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/muriki/crew/poollocker)
+"cvd" = (
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
+"cve" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor,
+/area/crew_quarters/recreation_area_hallway)
+"cvf" = (
+/obj/structure/catwalk,
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cvg" = (
+/obj/structure/catwalk,
+/obj/structure/table/rack,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cvh" = (
+/obj/structure/catwalk,
+/obj/structure/table/rack,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"cvi" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvj" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvk" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvl" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvq" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"cvr" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
+/obj/machinery/door/airlock/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/crew_quarters/recreation_area_hallway)
+"cvs" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "cvB" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -134516,17 +134723,17 @@ aPO
 aPO
 aPO
 aPO
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+cnU
+cnU
+cnU
+cnU
+cnU
+cnU
+cnU
+cnU
+cor
+cor
+cor
 vka
 vka
 vka
@@ -134676,20 +134883,20 @@ cuA
 cuw
 cuo
 cuk
-bME
-aPO
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+cvf
+cve
+cvd
+cvb
+bLI
+aOU
+bLI
+aOU
+bSL
+cnU
+cor
+cor
+cor
+cor
 cnU
 cnU
 cnU
@@ -134838,20 +135045,20 @@ bME
 cux
 bME
 bME
-bME
+cvg
+bcq
+bcq
+cvc
 bcq
 bcq
 bcq
-bcq
-bcq
-bcq
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+cnU
+ayD
+cnU
+cnU
+cnU
+cnU
+cnU
 cnU
 aOU
 aOU
@@ -135000,20 +135207,20 @@ cuB
 cuw
 bME
 bME
-bME
+cvh
 bcq
 bcZ
 bdz
 bdR
 beh
 bcq
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+ceX
+aOU
+aOU
+cuV
+cit
+ayD
+bSa
 cnU
 aOU
 cnU
@@ -135169,14 +135376,14 @@ bdz
 bdR
 beh
 bcq
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+aOU
+bLI
+cdD
 cnU
+cnU
+cnU
+bSa
+byC
 ckL
 aOU
 cnU
@@ -135331,12 +135538,12 @@ bdz
 bdR
 beh
 bcq
-vka
-vka
-vka
-vka
-vka
-vka
+cnU
+ayD
+cnU
+cnU
+cor
+cnU
 cnU
 cnU
 cnU
@@ -135486,19 +135693,19 @@ bKB
 cuz
 aPQ
 aXa
-aRR
+bpk
 bcq
 bda
 bdz
 bdR
 bei
 bcq
-vka
-vka
-vka
-vka
-vka
-vka
+cuZ
+cuW
+cnU
+cor
+cor
+cor
 cnU
 ceX
 cnU
@@ -135647,20 +135854,20 @@ bKB
 cbP
 aKP
 cuq
-aXa
-cuh
+cvm
+cvi
 bcq
 bcq
 bFh
 csP
 bcq
 bcq
-vka
-vka
-vka
-vka
-vka
-vka
+cuW
+cuX
+cnU
+cor
+cor
+cor
 cnU
 aOU
 ceT
@@ -135809,20 +136016,20 @@ bKB
 cuC
 aKP
 cur
-aXa
-aRR
+cvn
+cuh
 bcq
 bdb
 bdy
 swx
 bej
 bcq
-vka
-vka
-vka
-vka
-vka
-vka
+cva
+cuY
+cnU
+cor
+cor
+cor
 cnU
 aOU
 cnU
@@ -135970,8 +136177,8 @@ mXl
 cuG
 mXl
 mXl
-bIg
-aXa
+cvs
+cvo
 aRR
 bcq
 bem
@@ -136133,8 +136340,8 @@ cuH
 fPM
 mXl
 cus
-aXa
-aRR
+cvp
+cvj
 bcq
 bdd
 bdA
@@ -136295,8 +136502,8 @@ clp
 pFo
 mXl
 cut
-aXa
-aRR
+cvq
+cvk
 bcq
 bde
 bdy
@@ -136457,8 +136664,8 @@ nZz
 rHk
 mXl
 cuu
-aXa
-aRR
+cvp
+cvl
 bcq
 bdf
 bdB
@@ -136618,8 +136825,8 @@ bFr
 nZz
 aTC
 mXl
-bpm
-aXa
+bdC
+cvp
 cui
 bcq
 bdg
@@ -136781,7 +136988,7 @@ aYS
 mXl
 mXl
 cuj
-cuj
+cvr
 cuj
 bcq
 bcq
@@ -136943,7 +137150,7 @@ aTt
 uXX
 vgy
 aPR
-aXa
+cvp
 aRS
 vgy
 ibp

@@ -8,15 +8,15 @@
 		return COMPONENT_INCOMPATIBLE
 	host = parent
 	nade = G
-	RegisterSignal(host, COMSIG_PARENT_ATTACKBY, PROC_REF(on_attackby))
-	RegisterSignal(host, COMSIG_PARENT_EXAMINE, PROC_REF(on_examine))
+	RegisterSignal(host, COMSIG_ATOM_ATTACKBY, PROC_REF(on_attackby))
+	RegisterSignal(host, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
 	RegisterSignal(host, COMSIG_ATOM_ATTACK_HAND, PROC_REF(on_attackhand))
 	RegisterSignal(host, COMSIG_ATOM_BUMPED, PROC_REF(on_bumped))
 	RegisterSignal(host, COMSIG_QDELETING, PROC_REF(trigger_trap))
 
 /datum/component/grenadetrap/Destroy(force = FALSE)
-	UnregisterSignal(host, COMSIG_PARENT_ATTACKBY)
-	UnregisterSignal(host, COMSIG_PARENT_EXAMINE)
+	UnregisterSignal(host, COMSIG_ATOM_ATTACKBY)
+	UnregisterSignal(host, COMSIG_ATOM_EXAMINE)
 	UnregisterSignal(host, COMSIG_ATOM_ATTACK_HAND)
 	UnregisterSignal(host, COMSIG_ATOM_BUMPED)
 	UnregisterSignal(host, COMSIG_QDELETING)

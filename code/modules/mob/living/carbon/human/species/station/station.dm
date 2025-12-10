@@ -44,9 +44,7 @@
 		O_SPLEEN = 		/obj/item/organ/internal/spleen,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	species_sounds = "Human Male"
@@ -170,9 +168,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain/unathi,
 		O_EYES =		/obj/item/organ/internal/eyes/unathi,
 		O_STOMACH =		/obj/item/organ/internal/stomach/unathi,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/unathi,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine/unathi
 		)
 
 
@@ -306,9 +302,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain,
 		O_EYES =		/obj/item/organ/internal/eyes/tajaran,
 		O_STOMACH =		/obj/item/organ/internal/stomach/tajaran,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	default_emotes = list(
@@ -426,9 +420,7 @@
 		O_SPLEEN = 		/obj/item/organ/internal/spleen/skrell,
 		O_EYES =		/obj/item/organ/internal/eyes/skrell,
 		O_STOMACH =		/obj/item/organ/internal/stomach/skrell,
-		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine/skrell
 		)
 
 	default_emotes = list(
@@ -523,9 +515,7 @@
 	O_BRAIN =		/obj/item/organ/internal/brain,
 	O_EYES =		/obj/item/organ/internal/eyes,
 	O_STOMACH =		/obj/item/organ/internal/stomach,
-	O_INTESTINE =	/obj/item/organ/internal/intestine,
-	// Outpost 21 edit - butt
-	O_BUTT = 		/obj/item/organ/internal/butt
+	O_INTESTINE =	/obj/item/organ/internal/intestine
 	)
 
 
@@ -660,6 +650,7 @@
 
 /datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)
 	H.gender = NEUTER
+	ADD_TRAIT(H, UNIQUE_MINDSTRUCTURE, ROUNDSTART_TRAIT)
 	return ..()
 
 /datum/species/diona/handle_death(var/mob/living/carbon/human/H)
@@ -1045,13 +1036,6 @@
 	water_breather = TRUE
 	water_movement = -4 //Negates shallow. Halves deep.
 
-	// Outpost 21 edit begin - skrell pressure tweaks
-	hazard_high_pressure = 1250		// Dangerously high pressure.
-	warning_high_pressure = 910		// High pressure warning.
-	warning_low_pressure = 80		// Low pressure warning.
-	hazard_low_pressure = 50		// Dangerously low pressure.
-	// Outpost 21 edit end
-
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
 	var/obj/item/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
@@ -1062,6 +1046,7 @@
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
+
 /datum/species/harpy
 	name = SPECIES_RAPALA
 	name_plural = "Rapala"
@@ -1231,9 +1216,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	unarmed_types = list(
@@ -1355,7 +1338,7 @@
 	hazard_low_pressure = -1
 
 	warning_high_pressure = 300
-	hazard_high_pressure = HAZARD_HIGH_PRESSURE // Outpost 21 edit - No, infinity is not a number patrick
+	hazard_high_pressure = INFINITY
 
 	cold_level_1 = -1	//Immune to cold
 	cold_level_2 = -1
@@ -1366,7 +1349,7 @@
 	heat_level_3 = 1150
 
 	flags =  NO_DNA | NO_SLEEVE
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE // Outpost 21 edit - restored crewkin
+	spawn_flags = SPECIES_IS_RESTRICTED
 	reagent_tag = IS_SHADEKIN		// for shadekin-unqiue chem interactions
 
 	flesh_color = "#FFC896"
@@ -1384,7 +1367,7 @@
 	poison_type = null
 	water_breather = TRUE //They do not quite breathe...
 
-	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR // Outpost 21 edit - Has eye colors
+	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_UNDERWEAR
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
 
@@ -1397,9 +1380,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	has_limbs = list(
@@ -1668,7 +1649,7 @@
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
-	spawn_flags		 = SPECIES_IS_RESTRICTED // SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE // Outpost 21 edit - none of these
+	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
 	flesh_color = "#AFA59E"
@@ -1762,9 +1743,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	flesh_color = "#AFA59E"

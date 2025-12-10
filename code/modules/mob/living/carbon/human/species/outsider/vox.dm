@@ -44,12 +44,12 @@
 	cold_level_2 = 50
 	cold_level_3 = 0
 
-	breath_type = GAS_PHORON // Outpost 21 edit - phoron vox is correct thankyou
+	breath_type = GAS_N2
 	poison_type = GAS_O2
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
 
-	flags = NO_DNA | NO_DEFIB // Outpost 21 edit - Vox are no longer NO_SLEEVE
+	flags = NO_DNA | NO_DEFIB | NO_SLEEVE
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_SKIN_COLOR
 

@@ -56,9 +56,6 @@
 											// Outpost 21 edit end
 	var/obj/item/vac_attachment/swoopie/Vac
 
-	enzyme_affect = FALSE // Outpost 21 edit
-	shock_resist = 1 // Outpost 21 edit(port) - Don't zap on wires
-
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
 	. = ..()
 	if(!voremob_loaded)

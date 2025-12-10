@@ -374,11 +374,6 @@
 	icon_state = "plating"
 	},
 /area/centcom)
-"abp" = (
-/obj/machinery/mech_recharger,
-/obj/mecha/combat/phazon/janus,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "abq" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/black{
@@ -1182,6 +1177,51 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom)
+"acP" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/janus,
+/turf/unsimulated/shuttle/plating,
+/area/centcom/specops)
+"acQ" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon,
+/turf/unsimulated/shuttle/plating,
+/area/centcom/specops)
+"acR" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/specops)
+"acS" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/specops)
+"acT" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/mech/super,
+/obj/item/cell/mech/super,
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/specops)
+"acU" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/gas/reinforced,
+/obj/item/mecha_parts/component/gas/reinforced,
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/specops)
 "adg" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -2117,18 +2157,12 @@
 /area/specialty/redspace)
 "aBu" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
-/obj/item/cell/hyper,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "aBC" = (
@@ -4067,13 +4101,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
-"bxE" = (
-/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
-/obj/item/mecha_parts/mecha_equipment/tool/sleeper,
-/obj/item/mecha_parts/mecha_equipment/tool/syringe_gun,
-/obj/structure/table/steel_reinforced,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "bxH" = (
 /obj/machinery/light{
 	dir = 8
@@ -6502,8 +6529,18 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
 "cNT" = (
-/obj/machinery/mech_recharger,
-/obj/mecha/combat/marauder/mauler,
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/storage/bluespace,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/item/mecha_parts/mecha_equipment/generator/nuclear,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "cNY" = (
@@ -7350,15 +7387,21 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "dnA" = (
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
-/obj/item/mecha_parts/mecha_equipment/repair_droid,
 /obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/storage/bluespace,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/item/mecha_parts/mecha_equipment/generator,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/frag,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "dnH" = (
@@ -12945,11 +12988,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
-"fVJ" = (
-/obj/machinery/mech_recharger,
-/obj/mecha/working/ripley/firefighter,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "fVK" = (
 /obj/structure/mopbucket,
 /obj/item/mop,
@@ -14144,10 +14182,6 @@
 /obj/item/material/ashtray/glass,
 /turf/simulated/floor/lino,
 /area/specialty/redspace)
-"gCu" = (
-/obj/machinery/computer/rdconsole_tg,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "gCv" = (
 /obj/structure/table/gamblingtable,
 /obj/item/deck/cards,
@@ -18741,12 +18775,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/centcom/medical)
-"iPn" = (
-/obj/item/mecha_parts/mecha_equipment/tool/extinguisher,
-/obj/item/mecha_parts/mecha_equipment/tool/rcd,
-/obj/structure/table/steel_reinforced,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "iPo" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
@@ -19832,11 +19860,6 @@
 /obj/structure/table/reinforced,
 /obj/item/card/id/centcom/ERT/commander,
 /turf/simulated/floor/wood,
-/area/centcom/specops)
-"jnB" = (
-/obj/machinery/mech_recharger,
-/obj/mecha/medical/odysseus/loaded,
-/turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "jnY" = (
 /obj/structure/bed/chair{
@@ -23238,11 +23261,6 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
-"lld" = (
-/obj/mecha/combat/gygax/dark,
-/obj/machinery/mech_recharger,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "llf" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/beige/border,
@@ -34251,13 +34269,6 @@
 	},
 /turf/simulated/floor/carpet/blue2,
 /area/centcom/living)
-"rDr" = (
-/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
-/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
-/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "rDw" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -37626,11 +37637,6 @@
 /obj/structure/bed/chair/sofa/bench/left,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/darktransit)
-"tyT" = (
-/obj/mecha/combat/phazon/equipped,
-/obj/machinery/mech_recharger,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "tyY" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -37848,14 +37854,6 @@
 	fancy_shuttle_tag = "hell"
 	},
 /area/shuttle/darktransit)
-"tES" = (
-/obj/structure/table/reinforced,
-/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
-/obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp,
-/obj/item/mecha_parts/mecha_equipment/tool/passenger,
-/obj/item/mecha_parts/mecha_equipment/tool/passenger,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "tET" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled{
@@ -42214,15 +42212,6 @@
 /obj/item/reagent_containers/spray/cleaner,
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
-"whM" = (
-/obj/item/mecha_parts/mecha_equipment/teleporter,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/item/mecha_parts/mecha_tracking,
-/obj/structure/table/steel_reinforced,
-/turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
 "wic" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Blue Armory";
@@ -46156,12 +46145,6 @@
 /area/specialty/redspace)
 "yfq" = (
 /turf/simulated/floor/wood,
-/area/centcom/specops)
-"yfs" = (
-/obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill,
-/obj/item/mecha_parts/mecha_equipment/tool/cable_layer,
-/obj/structure/table/steel_reinforced,
-/turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
 "yfG" = (
 /obj/structure/window/reinforced{
@@ -65099,11 +65082,11 @@ esY
 hxk
 hqD
 kzR
-cpp
 kzR
 kzR
 ahB
 esY
+lHL
 lHL
 qwG
 edO
@@ -65261,11 +65244,11 @@ rah
 ieO
 hqD
 kzR
-cpp
 kzR
 kzR
 kfC
 rah
+lHL
 lHL
 dfx
 edO
@@ -65420,7 +65403,6 @@ rWp
 iQm
 aLT
 vjk
-gCu
 kzR
 kzR
 kzR
@@ -65428,6 +65410,7 @@ kzR
 kzR
 gFx
 vjk
+lHL
 lHL
 kSy
 edO
@@ -65586,10 +65569,10 @@ hPE
 hPE
 kzR
 kzR
-kzR
 hPE
 hPE
 hPE
+lHL
 lHL
 bOi
 edO
@@ -65744,14 +65727,14 @@ rWp
 iQm
 aLT
 esY
-lld
-jnB
+kzR
+kzR
 kzR
 kzR
 kzR
 cNT
-tyT
 esY
+lHL
 lHL
 qwG
 edO
@@ -65911,9 +65894,9 @@ kzR
 kzR
 kzR
 kzR
-kzR
-kzR
+acP
 rah
+lHL
 lHL
 dfx
 edO
@@ -66071,11 +66054,11 @@ iNq
 kzR
 kzR
 aBu
-cpp
-cpp
+acR
 kzR
-abp
+kzR
 rah
+lHL
 lHL
 dfx
 edO
@@ -66232,12 +66215,12 @@ uwj
 iNq
 kzR
 kzR
-cpp
-cpp
-cpp
+acT
+acS
 kzR
-fVJ
+kzR
 rah
+lHL
 lHL
 kSy
 edO
@@ -66394,12 +66377,12 @@ aLT
 esY
 kzR
 kzR
+acU
+cpp
 kzR
-kzR
-kzR
-kzR
-kzR
+acQ
 rah
+lHL
 lHL
 bOi
 wGh
@@ -66554,14 +66537,14 @@ rWp
 iQm
 aLT
 vjk
-rDr
-bxE
-iPn
-tES
-yfs
+kzR
+kzR
+kzR
+kzR
+kzR
 dnA
-whM
 vjk
+lHL
 lHL
 bOi
 edO

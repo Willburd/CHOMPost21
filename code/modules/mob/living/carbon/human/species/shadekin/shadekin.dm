@@ -36,7 +36,7 @@
 	hazard_low_pressure = -1
 
 	warning_high_pressure = 300
-	hazard_high_pressure = HAZARD_HIGH_PRESSURE // Outpost 21 edit - No, infinity is not a number patrick
+	hazard_high_pressure = INFINITY
 
 	cold_level_1 = -1	//Immune to cold
 	cold_level_2 = -1
@@ -58,7 +58,7 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
-	// death_message = "phases to somewhere far away!" Outpost 21 edit - No darkspace
+	death_message = SHADEKIN_DEATH_NOTICE // Outpost 21 edit - More obvious message that they are gone
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -83,9 +83,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain/shadekin,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	has_limbs = list(
@@ -106,19 +104,14 @@
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
-	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable shadekin death fizzle
+	var/special_handling = FALSE //varswitch for downstream
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
-		/* Outpost 21 edit begin - Disable shadekin death fizzle
 		spawn(1)
 			for(var/obj/item/W in H)
 				H.drop_from_inventory(W)
 			qdel(H)
-		*/
-		H.drop_l_hand()
-		H.drop_r_hand()
-		// Outpost 21 edit end, ignore the drop items, can't have an empty block
 	else
 		if(!SK)
 			return
@@ -131,7 +124,7 @@
 			log_and_message_admins("[H] died outside of the dark but there were no valid floors to warp to")
 			return
 
-		H.visible_message("<b>\The [H.name]</b> phases to somewhere far away!")
+		H.visible_message("<b>\The [H.name]</b> [SHADEKIN_DEATH_NOTICE]") // Outpost 21 edit - More obvious message that they are gone
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanimout = new /obj/effect/temp_visual/shadekin/phase_out(H.loc)
 		phaseanimout.dir = H.dir
 		SK.respite_activating = TRUE
