@@ -5934,4 +5934,5 @@
 #include "modular_outpost\maps\~turfpacks\unsim_turfs\unsim_turfs_tiles.dm"
 #include "modular_outpost\maps\~turfpacks\unsim_turfs\unsim_turfs_walls.dm"
 #include "modular_zubbers\code\modules\blooper\voice\bark_list.dm"
+#include "modular_zubbers\code\modules\emotes\definitions\audible.dm"
 // END_INCLUDE
