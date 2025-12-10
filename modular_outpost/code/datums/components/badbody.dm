@@ -21,13 +21,20 @@
 	var/area/A = get_area(body)
 	if(istype(A, /area/specialty)) // Redspace returns don't lunge
 		can_lunge = FALSE
-	RegisterSignal(body, COMSIG_LIVING_LIFE, PROC_REF(process_component))
 
 /datum/component/badbody/Destroy(force = FALSE)
-	UnregisterSignal(body, COMSIG_LIVING_LIFE)
-	body = null
 	. = ..()
+	body = null
 
+/datum/component/badbody/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_LIVING_LIFE, PROC_REF(process_component))
+
+/datum/component/badbody/UnregisterFromParent()
+	UnregisterSignal(parent, COMSIG_LIVING_LIFE)
+
+
+// Signal handlers
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/component/badbody/proc/process_component()
 	if(QDELETED(src))
 		return

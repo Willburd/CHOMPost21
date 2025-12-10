@@ -11,6 +11,9 @@
 /datum/component/haunting_vision/UnregisterFromParent()
 	UnregisterSignal(parent, COMSIG_LIVING_LIFE)
 
+
+// Signal handlers
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/component/haunting_vision/proc/handle_comp()
 	SIGNAL_HANDLER
 	var/mob/living/owner = parent
