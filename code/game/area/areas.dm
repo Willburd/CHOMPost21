@@ -394,13 +394,6 @@ var/list/mob/living/forced_ambiance_list = list()
 		L.disable_spoiler_vision()
 	check_phase_shift(M)
 
-	// Outpost 21 edit begin - Constant horror!
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
-		if(is_type_in_list(src, redspace_areas) || (haunted && prob(4) && !H.job == JOB_STOWAWAY)) // Stowaways spawn in haunted areas, lets not screw em/metagame
-			H.add_modifier(/datum/modifier/redspace_drain)
-	// Outpost 21 edit end
-
 	// Update the area's color grading
 	if(L.client && L.client.color != get_color_tint()) // Try to check if we should bother changing before doing blending
 		L.update_client_color()

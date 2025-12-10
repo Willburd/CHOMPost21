@@ -8,7 +8,7 @@
 	reagent_state = LIQUID
 	color = "#888888"
 	overdose = 10
-	
+
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Cannot make it anyway
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_COSMETIC
@@ -61,7 +61,7 @@
 	reagent_state = LIQUID
 	color = "#888888"
 	overdose = 10
-	
+
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Cannot make it anyway
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_COSMETIC
@@ -413,21 +413,6 @@
 	..()
 	if(volume >= 5)
 		T.holy = 1
-		SShaunting.influence(HAUNTING_BLESSING) // Significant push, to avoid punishing mechanics
-		// Outpost 21 edit begin - consecrate ground!
-		for(var/card in GLOB.alldirs) // spread it out more...
-			var/turf/TR = get_step(src,card)
-			if(TR)
-				TR.holy = 1
-		var/area/A = get_area(T)
-		if(A && A.haunted && !(T.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
-			if(prob(10)) // ANGY MODE
-				SShaunting.intense_world_haunt()
-			else
-				SShaunting.reduce_world_haunt()
-			T.visible_message("\The [A] was consecrate!")
-			A.haunted = FALSE
-		// Outpost 21 edit end
 	return
 
 /datum/reagent/ammonia
@@ -797,7 +782,7 @@
 	reagent_state = LIQUID
 	color = "#b51d05"
 	taste_description = "carpet"
-	
+
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret plant chem
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR

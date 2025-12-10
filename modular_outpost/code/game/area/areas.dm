@@ -22,3 +22,22 @@
 	if(!fire_supress)
 		return
 	QDEL_NULL(fire_supress)
+
+
+// Haunted area logic
+/area/Entered(mob/M)
+	. = ..()
+
+	// Constant horror!
+	if(!istype(M) || !M.ckey || !ishuman(M))
+		return
+	var/mob/living/carbon/human/H = M
+
+	// Stowaways spawn in haunted areas, lets not screw em/metagame
+	if(is_type_in_list(src, redspace_areas) || (haunted && !H.job == JOB_STOWAWAY))
+		if(!prob(4))
+			return
+		if(prob(70)) // Just give them sparkly haunted vision usually instead of redspace organs
+			H.AddComponent(/datum/component/haunting_vision)
+		else
+			H.add_modifier(/datum/modifier/redspace_drain)
