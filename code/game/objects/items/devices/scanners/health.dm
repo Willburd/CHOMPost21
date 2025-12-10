@@ -79,35 +79,29 @@
 	var/BR = M.getBruteLoss() > 50 	? 	span_bold("[M.getBruteLoss()]")  	: M.getBruteLoss()
 	var/analyzed_results = ""
 
-	// Outpost 21 edit being - show custom species
-	var/speciesdata = "???";
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
-		speciesdata = H.species.name
-		if(H.custom_species)
-			if( H.species.name == SPECIES_CUSTOM )
-				speciesdata = "[H.custom_species]"
-			else
-				speciesdata = "[H.custom_species] \[Similar biology to [H.species.name]\]"
-	// Outpost 21 edit end
-
 	if(M.status_flags & FAKEDEATH)
 		OX = fake_oxy > 50 			? 	span_bold("[fake_oxy]") 			: fake_oxy
-		dat += span_notice("Analyzing Results for [M]:")
-		dat += "<br>"
-		if(advscan >= 2) // Outpost 21 edit(port) - show custom species
-			dat += "\tSapient Species: [speciesdata]<br>"
-		dat += span_notice("Overall Status: dead")
-		dat += "<br>"
+		TX = 0 //This is a dead giveaway if they're using zombiepowder.
+		analyzed_results += "Analyzing Results for [M]:\n\t Overall Status: dead<br>"
 	else
 		analyzed_results += "Analyzing Results for [M]:\n\t Overall Status: [M.stat > 1 ? "dead" : "[round((M.health/M.getMaxHealth())*100) ]% healthy"]<br>"
-		if(advscan >= 2) // Outpost 21 edit(port) - show custom species
-			analyzed_results += "\tSapient Species: [speciesdata]<br>"
+	// Outpost 21 edit being - show custom species
+	if(advscan >= 2)
+		var/speciesdata = "???";
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			speciesdata = H.species.name
+			if(H.custom_species)
+				if( H.species.name == SPECIES_CUSTOM )
+					speciesdata = "[H.custom_species]"
+				else
+					speciesdata = "[H.custom_species] \[Similar biology to [H.species.name]\]"
+		analyzed_results += "\tSapient Species: [speciesdata]<br>"
+	// Outpost 21 edit end
 	analyzed_results += "\tKey: [span_cyan("Suffocation")]/[span_green("Toxin")]/[span_orange("Burns")]/[span_red("Brute")]<br>"
 	analyzed_results += "\tDamage Specifics: [span_cyan("[OX]")] - [span_green("[TX]")] - [span_orange("[BU]")] - [span_red("[BR]")]<br>"
 	analyzed_results +=	"Body Temperature: [M.bodytemperature-T0C]&deg;C ([M.bodytemperature*1.8-459.67]&deg;F)<br>"
-	if(!(M.status_flags & FAKEDEATH))
-		analyzed_results = span_notice(analyzed_results)
+	analyzed_results = span_notice(analyzed_results)
 	dat += analyzed_results
 	if(M.timeofdeath && (M.stat == DEAD || (M.status_flags & FAKEDEATH)))
 		dat += 	span_notice("Time of Death: [worldtime2stationtime(M.timeofdeath)]")
@@ -151,6 +145,7 @@
 	BR = M.getBruteLoss() > 50 ? "[span_red(span_bold("Severe anatomical damage detected"))]"		 		: 	"Subject brute-force injury status O.K"
 	if(M.status_flags & FAKEDEATH)
 		OX = fake_oxy > 50 ? 		span_warning("Severe oxygen deprivation detected") 	: 	"Subject bloodstream oxygen level normal"
+		TX = 0 //This is a dead giveaway if they're using zombiepowder.
 	dat += "[OX] | [TX] | [BU] | [BR]<br>"
 	if(M.radiation)
 		if(advscan >= 2 && showadvscan == 1)
