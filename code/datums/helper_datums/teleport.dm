@@ -62,6 +62,24 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 		if(can_spontaneous_vore(belly.owner, teleatom) && belly.owner != teleatom)
 			destturf = destination
 
+	// Outpost 21 edit begin - Teleport redspace chance
+	if(isturf(destturf))
+		var/area/current_area = get_area(curturf)
+		var/chance = 1
+		if(current_area?.haunted)
+			chance = 10
+		var/area/red_area_check = get_area(destturf)
+		if((prob(chance) || istype(current_area,/area/specialty/redspace)) && !istype(red_area_check,/area/specialty/redspace))
+			var/list/redlist = list()
+			for(var/obj/effect/landmark/R in GLOB.landmarks_list)
+				if(R.name == "redentrance")
+					redlist += R
+			if(redlist.len > 0)
+				destturf = get_turf(pick(redlist))
+				to_chat(teleatom,span_danger("Something feels wrong..."))
+				forced = TRUE // No escape
+	// Outpost 21 edit end
+
 	// HOLD IT! destturf? Hell nah, televore finally works again.
 	// Now CHECK if someone capable of televoring is in the same turf...
 
