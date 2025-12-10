@@ -21,6 +21,11 @@
 	supervisors = "the " + JOB_QUARTERMASTER
 	selection_color = "#7a4f33"
 
+/datum/job/janitor/New()
+	. = ..()
+	access |= list(ACCESS_CARGO, ACCESS_MAILSORTING)
+	minimal_access |= list(ACCESS_CARGO, ACCESS_MAILSORTING)
+
 
 /datum/job/lawyer
 	departments = list(DEPARTMENT_COMMAND)
