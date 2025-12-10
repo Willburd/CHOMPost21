@@ -68768,7 +68768,7 @@
 "rUH" = (
 /obj/machinery/door/airlock{
 	name = "Custodial Closet";
-	req_access = list(26)
+	req_access = list(26,31)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
