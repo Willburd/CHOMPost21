@@ -10124,7 +10124,10 @@
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "dJA" = (
-/obj/machinery/transhuman/autoresleever,
+/obj/machinery/transhuman/autoresleever{
+	ghost_spawns = 1;
+	name = "rogue resleever"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverA)
 "dJI" = (

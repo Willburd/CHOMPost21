@@ -1647,7 +1647,7 @@
 
 /area/maintenance/damaged_resleeverB
 	name = "\improper Damaged Structure"
-	base_turf = /turf/simulated/open
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "maint_research_shuttle"
 	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	requires_power = FALSE
