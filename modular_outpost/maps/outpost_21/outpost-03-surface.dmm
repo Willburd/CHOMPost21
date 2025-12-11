@@ -12065,7 +12065,7 @@
 /area/hallway/primary/central_two)
 "aws" = (
 /turf/simulated/wall/rplastitanium,
-/area/mine/unexplored/muriki/mountaineast)
+/area/muriki/crew/bunker)
 "awt" = (
 /obj/structure/lattice,
 /obj/machinery/camera/network/bunker{
@@ -12073,7 +12073,7 @@
 	dir = 4
 	},
 /turf/simulated/open/muriki,
-/area/mine/unexplored/muriki/mountaineast)
+/area/muriki/crew/bunker)
 "awu" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
@@ -12081,7 +12081,7 @@
 "awv" = (
 /obj/machinery/light/small/emergency,
 /turf/simulated/floor/reinforced,
-/area/mine/unexplored/muriki/mountaineast)
+/area/muriki/crew/bunker)
 "aww" = (
 /obj/machinery/door/airlock/vault{
 	name = "Emergency Bunker Egress"
@@ -12089,7 +12089,7 @@
 /obj/item/airlock_brace,
 /obj/item/grenade/spawnergrenade/manhacks/station,
 /turf/simulated/floor/reinforced,
-/area/mine/unexplored/muriki/mountaineast)
+/area/muriki/crew/bunker)
 "awx" = (
 /obj/item/perfect_tele_beacon/stationary{
 	tele_name = "Medical"
