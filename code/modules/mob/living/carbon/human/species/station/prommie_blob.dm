@@ -457,12 +457,6 @@
 	//Message
 	blob.visible_message(span_infoplain(span_bold("[src.name]") + " pulls together, forming a humanoid shape!"))
 
-	// Outpost 21 edit begin - Pop the vent if you unblob in one
-	if(istype(loc,/obj/machinery/atmospherics/pipe))
-		var/obj/machinery/atmospherics/pipe/P = loc
-		P.blowout(src)
-	// Outpost 21 edit end
-
 	//Record where they should go
 	var/atom/reform_spot = blob.drop_location()
 
