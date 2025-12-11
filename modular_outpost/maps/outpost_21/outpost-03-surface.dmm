@@ -4687,21 +4687,6 @@
 /obj/item/tape_roll,
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
-"agU" = (
-/obj/effect/floor_decal/corner/beige{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/light{
-	dir = 8
-	},
-/obj/structure/noticeboard/janitor{
-	pixel_x = -32;
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/janitor)
 "agV" = (
 /obj/structure/disposalpipe/down{
 	dir = 8
@@ -8192,6 +8177,10 @@
 	name = "tram control console";
 	shuttle_tag = "Station Tram"
 	},
+/obj/item/storage/secure/safe{
+	pixel_x = 6;
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "ani" = (
@@ -8759,6 +8748,10 @@
 "aou" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
@@ -10417,6 +10410,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Engineering"
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "asv" = (
@@ -11975,15 +11971,6 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
-"awi" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/bluespace_denier,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
-/turf/simulated/floor/tiled/dark,
-/area/teleporter/bridge)
 "awj" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -12010,6 +11997,18 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
+"awm" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/corner/beige/full,
+/turf/simulated/floor/tiled/milspec,
+/area/janitor)
 "awn" = (
 /obj/effect/landmark/step_trap,
 /obj/structure/railing/grey{
@@ -12038,10 +12037,65 @@
 	outdoors = 1
 	},
 /area/muriki/grounds/civ)
+"awq" = (
+/obj/machinery/rnd/production/protolathe/department/service,
+/obj/structure/noticeboard/janitor{
+	pixel_x = -32;
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/janitor)
+"awr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Bar"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"aws" = (
+/turf/simulated/wall/rplastitanium,
+/area/mine/unexplored/muriki/mountaineast)
+"awt" = (
+/obj/structure/lattice,
+/obj/machinery/camera/network/bunker{
+	c_tag = "BNK - Vent Shaft";
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "awu" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
 /area/security/briefing_room)
+"awv" = (
+/obj/machinery/light/small/emergency,
+/turf/simulated/floor/reinforced,
+/area/mine/unexplored/muriki/mountaineast)
+"aww" = (
+/obj/machinery/door/airlock/vault{
+	name = "Emergency Bunker Egress"
+	},
+/obj/item/airlock_brace,
+/obj/item/grenade/spawnergrenade/manhacks/station,
+/turf/simulated/floor/reinforced,
+/area/mine/unexplored/muriki/mountaineast)
+"awx" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Medical"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/reception)
 "awy" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -31861,6 +31915,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/machinery/light_switch{
+	pixel_x = -28;
+	pixel_y = 27
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "gLT" = (
@@ -32651,12 +32709,17 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/storage/box/lights/mixed,
 /obj/item/reagent_containers/spray/cleaner,
-/obj/effect/floor_decal/corner/beige/full,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /obj/item/lightreplacer,
 /obj/item/flashlight,
+/obj/effect/floor_decal/corner/beige{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "haj" = (
@@ -41898,6 +41961,9 @@
 	},
 /obj/effect/landmark{
 	name = "vinestart"
+	},
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Evac"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
@@ -58394,22 +58460,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
-"oFh" = (
-/obj/random/maintenance/clean,
-/obj/random/maintenance/clean,
-/obj/structure/table/rack,
-/obj/item/flashlight,
-/obj/item/flashlight,
-/obj/item/flashlight,
-/obj/item/flashlight,
-/obj/item/storage/bag/trash,
-/obj/item/storage/bag/trash,
-/obj/item/storage/box/lights/mixed,
-/obj/item/storage/box/lights/mixed,
-/obj/item/storage/box/lights/mixed,
-/obj/item/storage/box/lights/mixed,
-/turf/simulated/floor/plating,
-/area/maintenance/cargomid)
 "oFk" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
@@ -61797,9 +61847,6 @@
 /turf/simulated/floor/reinforced,
 /area/muriki/tramstation/cargeng)
 "pLA" = (
-/obj/effect/floor_decal/corner/beige{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
@@ -63093,7 +63140,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/card/id/gold/captain/spare,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "qfh" = (
@@ -63595,6 +63641,13 @@
 	name = "Janitor"
 	},
 /obj/item/stool/padded,
+/obj/machinery/button/remote/blast_door{
+	id = "janitor_blast";
+	name = "Privacy Shutters";
+	pixel_x = 26;
+	dir = 1;
+	pixel_y = -25
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "qmz" = (
@@ -63788,17 +63841,19 @@
 /turf/simulated/wall,
 /area/rnd/hallway/main)
 "qqV" = (
-/obj/effect/floor_decal/corner/beige/full,
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/corner/beige{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -27;
+	pixel_y = -28
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "qrp" = (
@@ -65151,16 +65206,6 @@
 /turf/simulated/floor,
 /area/bridge/meeting_room)
 "qMq" = (
-/obj/machinery/button/remote/blast_door{
-	id = "janitor_blast";
-	name = "Privacy Shutters";
-	pixel_x = 26;
-	dir = 8
-	},
-/obj/machinery/light_switch{
-	pixel_x = 34;
-	pixel_y = 1
-	},
 /obj/effect/floor_decal/corner/beige/full{
 	dir = 4
 	},
@@ -66537,9 +66582,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/item/perfect_tele{
-	name = "Director's translocator"
-	},
 /obj/effect/landmark{
 	name = "nukeitem"
 	},
@@ -79667,6 +79709,9 @@
 /obj/item/universal_translator/ear,
 /obj/item/clothing/accessory/holster/hip/black,
 /obj/item/storage/belt/security,
+/obj/item/perfect_tele{
+	name = "Director's translocator"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "vhk" = (
@@ -83049,7 +83094,6 @@
 	req_access = null;
 	req_one_access = list(19,52)
 	},
-/obj/item/card/id/gold/security/spare,
 /obj/machinery/lockdown_console{
 	linked_jokes = list("Sensitive Area Lockdown" = "It locks down AI Core, Telecoms, and The Terraformer","Bridge Lockdown" = "It locks down the bridge, congrats, you have trapped yourself.","Captain Office Lockdown" = "It locks the captain in their office. Finally, naptime can be achieved.","Medbay Emergency Lockdown Control" = "It locks down the medbay, except for the main entrance.","Medbay Entrance Quarantine Shutters Control" = "A specialized lock to allow patients into the main entrance during a medical lockdown.","Virology Emergency Lockdown Control" = "It locks down the sniffle-zone.","Security Lockdown" = "It locks down security, typically a good idea.","Prison Lockdown" = "It locks down the brigs, to prevent escapes.","Brig Observation Shutters" = "It locks down the windows looking into the brigs","Security Forced Check-in" = "It locks down the hallway to force newcomers to the station to get cleared through security","Engineering Lockdown" = "It locks down engineering. Finally, a way to contain Taaa.","Atmospherics Lockdown" = "It locks down atmospherics, for when it explodes.","Chemical Refinery Lockdown" = "It locks down the chemical refinery, for when someone is about to mix 5k units of oxygen and potassium.","Science Lockdown" = "It locks down science, but probably not for long.","Phoronics Emergency Lockdown" = "It locks down phoronics, but its probably too little too late.","Cargo Lockdown" = "It locks down Cargonia... or more aptly, opens it when they shut themselves in.","Kitchen Shutters Control" = "It kindof locks down the kitchen. Like the chef deserves.");
 	linked_lockdowns = list("Sensitive Area Lockdown" = "sensitive_lock","Bridge Lockdown" = "bridge blast","Captain Office Lockdown" = "cap_office","Medbay Emergency Lockdown Control" = "medbayquar","Medbay Entrance Quarantine Shutters Control" = "medbayrecquar","Security Lockdown" = "security_lockdown","Prison Lockdown" = "Secure Gate","Brig Observation Shutters" = "brigobs","Security Forced Check-in" = "seccheck","Engineering Lockdown" = "englockdown","Atmospherics Lockdown" = "atmoslockdown","Chemical Refinery Lockdown" = "refine_lock","Science Lockdown" = "Scilock","Phoronics Emergency Lockdown" = "phoronic_lockdown","Virology Emergency Lockdown Control" = "virologyquar","Cargo Lockdown" = "cargolock","Kitchen Shutters Control" = "kitchen");
@@ -83057,6 +83101,16 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/item/card/id/gold/captain/spare{
+	pixel_y = 5
+	},
+/obj/item/card/id/gold/security/spare{
+	pixel_y = -4
+	},
+/obj/item/paper{
+	name = "Notice Regarding Spare IDs";
+	info = "Notice to crew: It is a Felony offense to utilize these ID cards without just cause and authorization. They are provided for emergency situations only, not for crew convenience. If a head of staff is present, it is their responsibility to secure these spare IDs as they are not necessary with appropriate crew. A wall-safe is provided in this room for that purpose."
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -86597,10 +86651,6 @@
 	name = "Privacy Shutters";
 	pixel_x = 26;
 	pixel_y = 28
-	},
-/obj/machinery/light_switch{
-	pixel_x = 34;
-	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
@@ -111593,7 +111643,7 @@ vWk
 iDJ
 uMJ
 uMJ
-oFh
+uMJ
 uMJ
 vcT
 uMJ
@@ -111754,9 +111804,9 @@ wEQ
 fmb
 rNC
 gZY
-uMJ
-uMJ
-uMJ
+awq
+awm
+cuG
 wye
 sVG
 kOV
@@ -111916,7 +111966,7 @@ uuS
 rfK
 scA
 pLA
-agU
+scA
 qqV
 oGN
 bdF
@@ -134881,7 +134931,7 @@ tky
 dyj
 tky
 qUH
-pSX
+awx
 keu
 pSX
 pSX
@@ -143978,7 +144028,7 @@ utT
 cLQ
 dVC
 fov
-pqf
+awr
 idk
 qOs
 xla
@@ -144318,7 +144368,7 @@ sfu
 xKb
 ras
 uTG
-awi
+nSe
 kXw
 gWk
 iLC
@@ -149136,10 +149186,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
+rZO
+aws
+aws
+aws
 rJa
 rJa
 rJa
@@ -149298,10 +149348,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
+rZO
+aws
+awt
+aws
 rJa
 rJa
 rJa
@@ -149460,10 +149510,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
+rZO
+aws
+awv
+aws
 rJa
 rJa
 rJa
@@ -149622,10 +149672,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
+rZO
+aws
+aww
+aws
 rJa
 rJa
 rJa
@@ -149786,7 +149836,7 @@ rJa
 rJa
 rJa
 rJa
-rJa
+tKI
 rJa
 rJa
 fhs
@@ -149948,8 +149998,8 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
+fhs
+fhs
 fhs
 fhs
 fhs

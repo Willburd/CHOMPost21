@@ -1496,6 +1496,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
+"cW" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Rec Yard"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/dockingbay)
 "da" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -24503,7 +24509,7 @@ pp
 Tb
 Tb
 Tb
-Tb
+cW
 AK
 Tb
 Tb
