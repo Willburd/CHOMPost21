@@ -402,7 +402,7 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not.
+	// remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not. // Outpost 21 edit - Promie blob ventcrawl
 	remove_verb(blob, /mob/living/simple_mob/proc/set_name) // We already have a name.
 	temporary_form = blob
 
@@ -457,6 +457,12 @@
 	//Message
 	blob.visible_message(span_infoplain(span_bold("[src.name]") + " pulls together, forming a humanoid shape!"))
 
+	// Outpost 21 edit begin - Pop the vent if you unblob in one
+	if(istype(loc,/obj/machinery/atmospherics/pipe))
+		var/obj/machinery/atmospherics/pipe/P = loc
+		P.blowout(src)
+	// Outpost 21 edit end
+
 	//Record where they should go
 	var/atom/reform_spot = blob.drop_location()
 
@@ -510,6 +516,7 @@
 
 	if(blob.mob_radio)
 		blob.mob_radio.forceMove(src)
+		equip_to_appropriate_slot(blob.mob_radio) // Outpost 21 edit(port) - Actually put it back on the mob in a slot
 		blob.mob_radio = null
 	if(blob.myid)
 		blob.myid = null
