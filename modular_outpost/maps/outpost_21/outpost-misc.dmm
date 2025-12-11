@@ -6941,13 +6941,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"wU" = (
-/obj/item/perfect_tele_beacon/magic,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/wizard_station)
 "wW" = (
 /obj/structure/prop/machine/gravygen,
 /turf/unsimulated/floor{
@@ -27418,7 +27411,7 @@ Sf
 Sf
 Zy
 bK
-wU
+bK
 bK
 bK
 bK

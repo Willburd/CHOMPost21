@@ -182,6 +182,8 @@
 
 	var/voice_name = "unidentifiable voice"
 
+	var/list/ventcraw_item_admin_allow = null // If this is a list, it will be appended to the default list of items the mob is allowed to ventcrawl with
+
 	var/faction = FACTION_NEUTRAL //Used for checking whether hostile simple animals will attack you, possibly more stuff later
 	var/AI_ignores = FALSE  //Outpost 21 addition - makes a mob ignored by AI
 

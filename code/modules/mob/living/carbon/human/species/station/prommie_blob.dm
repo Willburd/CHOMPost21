@@ -510,7 +510,7 @@
 
 	if(blob.mob_radio)
 		blob.mob_radio.forceMove(src)
-		equip_to_appropriate_slot(blob.mob_radio) // Outpost 21 edit(port) - Actually put it back on the mob in a slot
+		equip_to_appropriate_slot(blob.mob_radio) // Actually put it back on the mob in a slot
 		blob.mob_radio = null
 	if(blob.myid)
 		blob.myid = null
