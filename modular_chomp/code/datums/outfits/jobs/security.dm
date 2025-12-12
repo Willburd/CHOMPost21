@@ -2,7 +2,7 @@
 	name = OUTFIT_JOB_NAME(JOB_BRIG_PHYSICIAN)
 	uniform = /obj/item/clothing/under/rank/brigphys
 	id_type = /obj/item/card/id/security/brigphysician
-	pda_type = /obj/item/pda/medical
+	pda_type = /obj/item/pda/security // Outpost 21 edit - Sec pda instead
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	glasses = /obj/item/clothing/glasses/sunglasses/medhud

@@ -71,7 +71,7 @@
 	display_name = "Security HUD selector"
 	description = "Select from a range of Security HUD eyepieces that can display the ID status and security records of people in line of sight."
 	path = /obj/item/clothing/glasses/hud/security
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT, JOB_BRIG_PHYSICIAN) //YW ADDITIONS // Outpost 21 edit - Detective is officer now, brig physician
 
 /datum/gear/eyes/security/New()
 	..()
@@ -91,7 +91,7 @@
 	display_name = "Medical HUD selector"
 	description = "Select from a range of Medical HUD eyepieces that can display the health status of people in line of sight."
 	path = /obj/item/clothing/glasses/hud/health
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST,JOB_FIELD_MEDIC) //CHOMP keep explo
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST,JOB_FIELD_MEDIC, JOB_BRIG_PHYSICIAN) //CHOMP keep explo, brig physician
 
 /datum/gear/eyes/medical/New()
 	..()
