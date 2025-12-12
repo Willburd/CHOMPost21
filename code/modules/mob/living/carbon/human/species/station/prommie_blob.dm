@@ -402,7 +402,7 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not.
+	// remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not. // Outpost 21 edit - Promie blob ventcrawl
 	remove_verb(blob, /mob/living/simple_mob/proc/set_name) // We already have a name.
 	temporary_form = blob
 
@@ -510,6 +510,7 @@
 
 	if(blob.mob_radio)
 		blob.mob_radio.forceMove(src)
+		equip_to_appropriate_slot(blob.mob_radio) // Actually put it back on the mob in a slot
 		blob.mob_radio = null
 	if(blob.myid)
 		blob.myid = null

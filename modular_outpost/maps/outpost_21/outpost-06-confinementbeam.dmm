@@ -2626,6 +2626,12 @@
 	color = "#eacd7c"
 	},
 /area/ai)
+"fg" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "PTL"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/confinementbeam/station/power_distribution)
 "fi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -53816,7 +53822,7 @@ af
 kQ
 wi
 Ft
-Bu
+fg
 ta
 Xh
 ei

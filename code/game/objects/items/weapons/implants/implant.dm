@@ -164,7 +164,7 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 				malfunction = MALFUNCTION_PERMANENT
 				STOP_PROCESSING(SSobj, src)
 		// Outpost 21 edit begin - Tracking implant notifications
-		else
+		else if(!is_vore_jammed(src))
 			var/area/A = get_area(implant_mob)
 			if(A && is_type_in_list(A,forbidden_areas))
 				if(!in_secure_area)

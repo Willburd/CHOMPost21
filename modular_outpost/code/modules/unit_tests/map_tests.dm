@@ -619,3 +619,28 @@
 
 	if(failed)
 		TEST_FAIL("One or more airlock controllers had an incorrect id_tag set")
+
+
+
+
+/datum/unit_test/all_tele_beacons_must_be_unique
+
+/datum/unit_test/all_tele_beacons_must_be_unique/Run()
+	var/failed = FALSE
+
+	var/list/used_tags = list()
+	for(var/obj/item/perfect_tele_beacon/beacon in world)
+		var/turf/T = get_turf(beacon)
+		var/area/A = get_area(beacon)
+		if(!beacon.tele_name)
+			failed = TRUE
+			TEST_NOTICE(src, "Telebeacon not assigned a tele_name. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		if(beacon.tele_name in used_tags)
+			failed = TRUE
+			TEST_NOTICE(src, "Telebeacon already in use [beacon.tele_name]. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		used_tags += beacon.tele_name
+
+	if(failed)
+		TEST_FAIL("One or more tele_beacon objects are incorrectly setup or are duplicates")

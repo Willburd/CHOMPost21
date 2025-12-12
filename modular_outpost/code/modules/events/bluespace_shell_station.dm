@@ -77,7 +77,7 @@
 			if(prob(20))
 				boom(1)
 			endWhen = 0 // Now
-			command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. All clear. Assess damage, and begin repair operations.", "Bluespace Shelling")
+			command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. Assess damage, and begin repair operations.", "Bluespace Shelling")
 		spawncount--
 
 /datum/event/bluespace_shelling/proc/boom(var/mult)

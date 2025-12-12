@@ -2706,6 +2706,24 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
+"afR" = (
+/obj/effect/auto_crayon{
+	icon_state = "down"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "d"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/gravgen)
+"afS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "up"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/gravgen)
 "agj" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
@@ -10124,7 +10142,7 @@
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "dJA" = (
-/obj/machinery/transhuman/autoresleever,
+/obj/machinery/transhuman/autoresleever/rogue,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverA)
 "dJI" = (
@@ -28149,6 +28167,9 @@
 	dir = 4
 	},
 /obj/item/robotanalyzer,
+/obj/item/perfect_tele{
+	name = "CE's Translocator"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
 "mKl" = (
@@ -35981,7 +36002,7 @@
 "qDL" = (
 /obj/machinery/door/airlock{
 	name = "Custodial Closet";
-	req_access = list(26)
+	req_access = list(26,31)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -42540,6 +42561,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/randomized,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "tIi" = (
@@ -93153,8 +93175,8 @@ mYU
 mYU
 cGv
 iKs
-sXP
-wVW
+fKM
+afS
 sXP
 fci
 mrO
@@ -93641,7 +93663,7 @@ cGv
 iKs
 sXP
 rzf
-mfx
+afR
 fci
 erP
 xWH

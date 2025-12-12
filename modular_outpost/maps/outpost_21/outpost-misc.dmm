@@ -5000,6 +5000,54 @@
 /obj/effect/landmark/ai_multicam_room,
 /turf/unsimulated/ai_visible,
 /area/ai_multicam_room)
+"kh" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/pellet{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/gun/projectile/shotgun/doublebarrel/pellet,
+/obj/item/gun/projectile/shotgun/doublebarrel/pellet,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ko" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/head/fancy_crown,
@@ -6888,13 +6936,6 @@
 	},
 /obj/structure/table/steel_reinforced,
 /obj/item/mmi/radio_enabled,
-/turf/unsimulated/floor{
-	dir = 5;
-	icon_state = "vault"
-	},
-/area/wizard_station)
-"wU" = (
-/obj/item/perfect_tele_beacon/magic,
 /turf/unsimulated/floor{
 	dir = 5;
 	icon_state = "vault"
@@ -27370,7 +27411,7 @@ Sf
 Sf
 Zy
 bK
-wU
+bK
 bK
 bK
 bK
@@ -52887,7 +52928,7 @@ sg
 kQ
 kQ
 sg
-kQ
+kh
 yb
 gg
 gk

@@ -39,6 +39,12 @@
 	starts_with = list(/obj/item/reagent_containers/pill/lithium = 14)
 	wrapper_color = COLOR_BABY_BLUE
 
+/obj/item/storage/pill_bottle/tercozolam
+	name = "pill bottle (Tercozolam)"
+	desc = "Used in the treatment of schizophrenia, and periodic delerium."
+	starts_with = list(/obj/item/reagent_containers/pill/tercozolam = 14)
+	wrapper_color = COLOR_GREEN_GRAY
+
 /obj/item/reagent_containers/syringe/voxkit
 	name = "Syringe (phoron stim)"
 	desc = "\[WARNING\] Contains raw phoron. Intended only for vox crewmembers."

@@ -6,7 +6,7 @@
 	var/zz = 0
 
 /datum/event/bsa_test_fire/announce()
-	command_announcement.Announce("An impromptu bluespace artillery test-fire will be performed in ten minutes. Await further announcements for designated target coordinates.", "Announcement")
+	command_announcement.Announce("A scheduled bluespace artillery test-fire will be performed in ten minutes. Await further announcements for designated target coordinates.", "Announcement")
 
 /datum/event/bsa_test_fire/start()
 	addtimer(CALLBACK(src, PROC_REF(locate_target)), 1 MINUTE, TIMER_DELETE_ME)

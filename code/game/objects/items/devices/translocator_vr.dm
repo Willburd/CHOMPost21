@@ -277,16 +277,12 @@ This device records all warnings given and teleport events for admin review in c
 			for(var/rider in L.buckled_mobs)
 				R.force_dismount(rider)
 
-	//Failure chance
-	if (!ignore_fail_chance)
-		if(prob(failure_chance) && beacons.len >= 2)
-			var/list/wrong_choices = beacons - destination.tele_name
-			var/wrong_name = pick(wrong_choices)
-			destination = beacons[wrong_name]
-			to_chat(user,span_warning("\The [src] malfunctions and sends you to the wrong beacon!"))
-
 	// Outpost 21 edit begin - Teleport redspace chance
-	else if(prob(1))
+	var/area/current_area = get_area(target)
+	var/chance = 1
+	if(current_area?.haunted)
+		chance = 10
+	if(prob(chance) || istype(current_area,/area/specialty/redspace))
 		var/list/redlist = list()
 		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redentrance")
@@ -295,7 +291,16 @@ This device records all warnings given and teleport events for admin review in c
 			// if teleport worked, drop out... otherwise just teleport normally, it means there was no redspace spawns!
 			destination = pick(redlist)
 			to_chat(user,span_danger("Something feels wrong..."))
+	//Failure chance
+	else if (!ignore_fail_chance)
 	// Outpost 21 edit end
+		if(prob(failure_chance) && beacons.len >= 2)
+			var/list/wrong_choices = beacons - destination.tele_name
+			var/wrong_name = pick(wrong_choices)
+			destination = beacons[wrong_name]
+			to_chat(user,span_warning("\The [src] malfunctions and sends you to the wrong beacon!"))
+
+
 
 	//Destination beacon vore checking
 	var/turf/dT = get_turf(destination)
