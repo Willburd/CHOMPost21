@@ -3619,6 +3619,7 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
 "agT" = (
@@ -7018,6 +7019,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Anomalist"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "amD" = (
@@ -8141,6 +8145,7 @@
 	name = "Research Call";
 	pixel_y = 30
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/research/isolation_hall)
 "aoz" = (
@@ -13674,6 +13679,7 @@
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
 "axT" = (
@@ -14243,6 +14249,9 @@
 	},
 /obj/structure/window/basic{
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Anomalist"
 	},
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
@@ -81838,6 +81847,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/effect/landmark/start{
+	name = "Anomalist"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)

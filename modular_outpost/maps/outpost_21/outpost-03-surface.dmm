@@ -4080,6 +4080,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "afX" = (
@@ -5871,9 +5872,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
-	},
-/obj/effect/landmark{
-	name = "JoinLate"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -12423,6 +12421,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "aBi" = (
@@ -22311,6 +22310,7 @@
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "dDA" = (
@@ -29755,6 +29755,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "gaG" = (
@@ -37784,6 +37785,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "isA" = (
@@ -67276,9 +67278,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/shuttles/right,
-/obj/effect/landmark{
-	name = "JoinLate"
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "ruz" = (
@@ -70637,6 +70636,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "sxz" = (
@@ -76209,7 +76209,6 @@
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
-/obj/effect/landmark/start/stowaway,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargopub)
 "ufz" = (
@@ -78253,6 +78252,7 @@
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 1
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "uKA" = (
@@ -79334,6 +79334,7 @@
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 4
 	},
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "vbq" = (
@@ -79543,9 +79544,6 @@
 /obj/effect/floor_decal/shuttles,
 /obj/structure/cable/green{
 	icon_state = "1-8"
-	},
-/obj/effect/landmark{
-	name = "JoinLate"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -88139,6 +88137,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "xEx" = (
