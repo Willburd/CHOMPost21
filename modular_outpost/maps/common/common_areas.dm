@@ -419,7 +419,6 @@
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
 	flags = AREA_FIRE_SUPRESSION
-	lightswitch = 0
 
 /area/muriki/arriveproc
 	name = "\improper Arrivals Processing"
@@ -463,7 +462,6 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
-	lightswitch = 0
 
 /area/muriki/crew/
 	name = "\improper Crew Area"
