@@ -459,10 +459,8 @@ ADMIN_VERB(cmd_controller_view_ui, R_SERVER|R_DEBUG, "Controller Overview", "Vie
 	to_chat(world, span_boldannounce("[msg]"), MESSAGE_TYPE_DEBUG)
 	log_world(msg)
 
-	/* Outpost 21 edit - Lets NOT. Disables powershell access for tg init finish announcement.
 	if(world.system_type == MS_WINDOWS && CONFIG_GET(flag/toast_notification_on_init) && !length(GLOB.clients))
 		world.shelleo("start /min powershell -ExecutionPolicy Bypass -File tools/initToast/initToast.ps1 -name \"[world.name]\" -icon %CD%\\icons\\virgoicon_16.png -port [world.port]")
-	*/
 
 	// Set world options.
 	world.change_fps(CONFIG_GET(number/fps))

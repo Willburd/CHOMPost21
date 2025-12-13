@@ -31,8 +31,8 @@
 		inserters += ch
 
 	// spawn the disk and paper!
-	if(nukeitems.len)
-		var/paper_spawn_loc = pick(nukeitems)
+	if(GLOB.nukeitems.len)
+		var/paper_spawn_loc = pick(GLOB.nukeitems)
 		if(paper_spawn_loc)
 			// Create and pass on the bomb code paper.
 			var/obj/item/paper/P = new(paper_spawn_loc)
@@ -40,10 +40,10 @@
 			P.name = "nuclear bomb code"
 			log_world("Nuclear codes paper spawned, location [P.loc.x] [P.loc.y] [P.loc.z]")
 
-		nukeitems -= paper_spawn_loc
+		GLOB.nukeitems -= paper_spawn_loc
 		var/nukedisk_spawn_loc = paper_spawn_loc
-		if(nukeitems.len > 0)
-			nukedisk_spawn_loc = pick(nukeitems)
+		if(GLOB.nukeitems.len > 0)
+			nukedisk_spawn_loc = pick(GLOB.nukeitems)
 		var/obj/item/disk/nuclear/disk = new /obj/item/disk/nuclear(nukedisk_spawn_loc)
 		log_world("Nuclear disk spawned, location [disk.loc.x] [disk.loc.y] [disk.loc.z]")
 	else

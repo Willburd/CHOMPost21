@@ -92,7 +92,7 @@
 		camera = new /obj/machinery/camera(src)
 		camera.c_tag = "[name] ([rand(1000,9999)])" // camera bullshit needs unique name
 		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
-	interior_vehicle_list += src
+	GLOB.interior_vehicle_list += src
 
 	// find interior entrypos
 	for(var/area/A)
@@ -285,7 +285,7 @@
 		qdel(move_loop)
 		move_loop = null
 	. = ..()
-	interior_vehicle_list -= src;
+	GLOB.interior_vehicle_list -= src;
 
 /obj/vehicle/has_interior/controller/proc/start_move_sound()
 	if(move_loop)

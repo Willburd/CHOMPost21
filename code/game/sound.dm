@@ -13,7 +13,7 @@
 	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
-	var/list/listeners = GLOB.player_list.Copy() + interior_vehicle_list.Copy()
+	var/list/listeners = GLOB.player_list.Copy() + GLOB.interior_vehicle_list.Copy()
 	// Outpost 21 edit(port) begin - Get holograms from AIs
 	var/list/holo_listeners = list() // sorry for the duped bits of code ahead, but this is somewhat required to have AI holograms listen to game sounds - Willbird
 	for(var/mob/living/silicon/ai/A in GLOB.player_list)

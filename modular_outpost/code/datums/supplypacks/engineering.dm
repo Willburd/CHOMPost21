@@ -79,3 +79,6 @@
 	containertype = /obj/structure/closet/crate/secure/phoron
 	containername = "Phoron tank refill crate"
 	access = list(ACCESS_CE)
+
+/datum/supply_pack/eng/inducer
+	contains = list(/obj/item/inducer/unloaded = 3) // Science rebalance

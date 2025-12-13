@@ -94,7 +94,7 @@
 		//VORE Station Add End
 		// outpost 21 edit begin - nuke item random spawns
 		if("nukeitem")
-			nukeitems += loc
+			GLOB.nukeitems += loc
 			delete_me = TRUE
 		// outpost 21 edit end
 
