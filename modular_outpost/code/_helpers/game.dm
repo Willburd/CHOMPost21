@@ -15,7 +15,7 @@
 
 			// We only want mobs who can reasonably hear us to get radio messages
 			for(var/mob/M in current_batch)
-				if(!M.client || !(R in view(world.view,get_turf(M))))
+				if(!M.client || (!(R in view(world.view,get_turf(M))) && !(R in M.contents)) )
 					current_batch -= M
 
 			. |= current_batch
