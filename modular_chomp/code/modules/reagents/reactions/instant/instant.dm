@@ -61,14 +61,14 @@
 	name = REAGENT_ID_SOULDEW
 	id = REAGENT_ID_SOULDEW
 	result = REAGENT_ID_SOULDEW
-	required_reagents = list(REAGENT_ID_ALKYSINE = 1, REAGENT_ID_TRICORDRAZINE = 1, REAGENT_ID_PHORON = 1) // Outpost 21 edit - Chem update rebalance, REAGENT_ID_SULFUR to REAGENT_ID_PHORON
+	required_reagents = list(REAGENT_ID_ALKYSINE = 1, REAGENT_ID_TRICORDRAZINE = 1, REAGENT_ID_SULFUR = 1)
 	result_amount = 3
 
 /decl/chemical_reaction/instant/quadcord
 	name = REAGENT_QUADCORD
 	id = REAGENT_ID_QUADCORD
 	result = REAGENT_ID_QUADCORD
-	required_reagents = list(REAGENT_ID_TRICORDRAZINE = 1, REAGENT_ID_SULFUR = 1, REAGENT_ID_SACID = 1) // Outpost 21 edit - Chem update rebalance, REAGENT_ID_PHORON to REAGENT_ID_SULFUR
+	required_reagents = list(REAGENT_ID_TRICORDRAZINE = 1, REAGENT_ID_PHORON = 1, REAGENT_ID_SACID = 1)
 	result_amount = 3
 
 //tier 2

@@ -1,2 +1,4 @@
-var/global/list/interior_vehicle_list = list()		//List of all interior capable vehicles
-var/global/list/nukeitems         = list()
+GLOBAL_LIST_EMPTY(interior_vehicle_list)
+GLOBAL_LIST_EMPTY(nukeitems)
+
+GLOBAL_LIST_EMPTY(vats_to_rain_into)

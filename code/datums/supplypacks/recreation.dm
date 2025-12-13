@@ -31,8 +31,7 @@
 			/obj/item/ammo_magazine/ammo_box/foam = 2,
 			/obj/item/gun/projectile/shotgun/pump/toy = 2,
 			/obj/item/gun/projectile/pistol/toy = 2,
-			/obj/item/ammo_magazine/mfoam_dart/pistol = 2,
-			/obj/item/mine/claymore/donksoft = 5 // Outpost 21 edit(port) - Donksoft claymores
+			/obj/item/ammo_magazine/mfoam_dart/pistol = 2
 			)
 	cost = 50
 	containertype = /obj/structure/closet/crate/allico

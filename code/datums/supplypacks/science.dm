@@ -70,7 +70,7 @@
 	name = "Xenoarchaeology Tech crate"
 	desc = "A set of standard xenoarchaeological supplies. Requires Xenoarchaeology access."
 	contains = list(
-				// /obj/item/pickaxe/excavationdrill, // Outpost 21 edit - No roundstart xenodrills
+				/obj/item/pickaxe/excavationdrill,
 				/obj/item/xenoarch_multi_tool,
 				/obj/item/clothing/suit/space/anomaly,
 				/obj/item/clothing/head/helmet/space/anomaly,

@@ -276,13 +276,6 @@ SUBSYSTEM_DEF(transcore)
 	backed_up[MR.mindname] = MR
 	backed_up = sortAssoc(backed_up)
 
-// Outpost 21 edit begin - Remove a mind record from list, without preventing recreation
-/datum/transcore_db/proc/removed_mind(var/datum/transhuman/mind_record/MR)
-	ASSERT(MR)
-	backed_up.Remove("[MR.mindname]")
-	log_world("## DEBUG: Removed [MR.mindname] from transcore DB.")
-// Outpost 21 edit end
-
 // Remove a mind_record from the backup-checking list.  Keeps track of it in has_left // Why do we do that? ~Leshana
 /datum/transcore_db/proc/stop_backup(var/datum/transhuman/mind_record/MR)
 	ASSERT(MR)

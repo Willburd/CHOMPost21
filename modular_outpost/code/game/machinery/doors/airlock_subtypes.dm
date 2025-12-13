@@ -31,3 +31,18 @@
 	department_open_powered = 'sound/machines/door/med1o.ogg'
 	department_close_powered = 'sound/machines/door/med1c.ogg'
 	security_level = 1.5
+
+
+
+//Makes alien door unhackable by making it impossible to remove it's panel or use tools on it
+/obj/machinery/door/airlock/alien/attackby(obj/item/C, mob/user)
+	if(C.has_tool_quality(TOOL_SCREWDRIVER))
+		p_open = FALSE
+		return
+	if(istype(C, /obj/item/multitool))
+		p_open = FALSE
+		return
+	. = ..()
+
+/obj/machinery/door/airlock/alien/emag_act(remaining_charges)
+	return

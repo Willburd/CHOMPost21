@@ -435,7 +435,7 @@
 	containername = "algae sheets crate"
 
 /datum/supply_pack/eng/inducer
-	contains = list(/obj/item/inducer/unloaded = 3) // Outpost 21 edit - Science rebalance
+	contains = list(/obj/item/inducer = 3)
 	name = "inducer"
 	desc = "A trio of inducers, used for remotely recharging powered devices. Requires Engine access."
 	cost = 90	//Relatively expensive

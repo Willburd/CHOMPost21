@@ -8,10 +8,6 @@
 /datum/antagonist/proc/create_objectives(var/datum/mind/player)
 	if(CONFIG_GET(flag/objectives_disabled))
 		return 0
-	// Outpost 21 edit begin - Disable auto objectives, yes i see it above. this is so we set a custom temp objective
-	if(outpost_custom_antag_objectives(player))
-		return 0
-	// Outpost 21 edit end
 	if(create_global_objectives() || global_objectives.len)
 		player.objectives |= global_objectives
 	return 1

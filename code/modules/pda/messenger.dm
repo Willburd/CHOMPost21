@@ -169,6 +169,12 @@
 				if(signal.data["compression"] > 0)
 					t = Gibberish(t, signal.data["compression"] + 50)
 
+	// Outpost 21 end begin - Haunting areas affect pda
+	var/area/A = get_area(P)
+	if(A && A.haunted)
+		t = Gibberish(t, 100) // Nothing in or out
+	// Outpost 21 end end
+
 	if(useMS && useTC) // only send the message if it's stable
 		if(useTC != 2) // Does our recipient have a broadcaster on their level?
 			to_chat(U, "ERROR: Cannot reach recipient.")
