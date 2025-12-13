@@ -136,8 +136,6 @@
 		O_HIVE =     	/obj/item/organ/internal/xenos/hivenode, // Lets them speak Hivemind and open resin doors.
 		O_RESIN =		/obj/item/organ/internal/xenos/resinspinner/weak, // Weaker weed nodes with less spread range.
 		O_EGG =         /obj/item/organ/internal/xenos/eggsac, // Fluff organ.
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
 		)
 
 
