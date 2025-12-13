@@ -244,20 +244,6 @@
 		var/obj/structure/ladder/L = A
 		L.attack_hand(src)
 		return
-		
-	// Outpost 21 edit begin - Allow some really specific PAI interactions, allow pais to do a bit more then just sit around being pointless.
-	if(A.type in global.pai_accessible_objects) // direct paths not a type-check
-		var/obj/O = A
-		O.attack_hand(src)
-		return
-	if(istype(A,/obj/item/flashlight/lamp))
-		var/obj/item/flashlight/lamp/L = A
-		L.toggle_light()
-		return
-	if(istype(A,/obj/machinery/computer)) // All other computers explain why it's not compatible
-		to_chat(src,span_warning("A firewall prevents you from interfacing with this device!"))
-		return
-	// Outpost 21 edit end
 
 	if(!ismob(A) || A == src)
 		return

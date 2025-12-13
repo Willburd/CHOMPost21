@@ -72,11 +72,6 @@ GLOBAL_DATUM_INIT(tgui_default_state, /datum/tgui_state/default, new)
 		. = min(., shared_living_tgui_distance(src_object)) //simple animals can only use things they're near.
 
 /mob/living/silicon/pai/default_can_use_tgui_topic(src_object)
-	// Outpost 21 edit(port) begin - Allow some really specific PAI interactions, allow pais to do a bit more then just sit around being pointless.
-	var/datum/D = src_object
-	if(D && (D.type in global.pai_accessible_objects) && get_dist(src_object, src) <= 1 && !stat) // direct paths not a type-check
-		return STATUS_INTERACTIVE
-	// Outpost 21 edit end
 	// pAIs can only use themselves and the owner's radio.
 	if((src_object == src || src_object == radio || src_object == communicator) && !stat)
 		return STATUS_INTERACTIVE

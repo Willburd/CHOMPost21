@@ -2,11 +2,11 @@
 	name = OUTFIT_JOB_NAME(JOB_BRIG_PHYSICIAN)
 	uniform = /obj/item/clothing/under/rank/brigphys
 	id_type = /obj/item/card/id/security/brigphysician
-	pda_type = /obj/item/pda/security // Outpost 21 edit - Sec pda instead
+	pda_type = /obj/item/pda/medical
 	shoes = /obj/item/clothing/shoes/white
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	glasses = /obj/item/clothing/glasses/sunglasses/medhud
-	l_hand = /obj/item/storage/firstaid/regular // Outpost 21 edit - chomp uses adv, we use standard
+	l_hand = /obj/item/storage/firstaid/adv
 	r_pocket = /obj/item/flashlight/pen
 	backpack = /obj/item/storage/backpack/medic
 	backpack_contents = null
