@@ -84414,13 +84414,14 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "casinobath";
-	name = "Door lock";
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "casinobath";
+	name = "Door Bolt Control";
+	specialfunctions = 4;
+	pixel_y = 29
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/casino)
