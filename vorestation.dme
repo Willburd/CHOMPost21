@@ -5746,6 +5746,7 @@
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_fluffitems.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_outpost\code\modules\clothing\accessories\fluff_awards.dm"
+#include "modular_outpost\code\modules\clothing\accessories\neoclothing.dm"
 #include "modular_outpost\code\modules\clothing\suits\miscellaneous.dm"
 #include "modular_outpost\code\modules\clothing\under\xenos\vox.dm"
 #include "modular_outpost\code\modules\economy\price_list.dm"
