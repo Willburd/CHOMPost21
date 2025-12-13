@@ -5590,7 +5590,6 @@
 #include "modular_outpost\code\suit_rebalancing.dm"
 #include "modular_outpost\code\trait_balance.dm"
 #include "modular_outpost\code\_helpers\atmospherics.dm"
-#include "modular_outpost\code\_helpers\game.dm"
 #include "modular_outpost\code\_helpers\global_lists.dm"
 #include "modular_outpost\code\ATMOSPHERICS\components\unary\vent_pump.dm"
 #include "modular_outpost\code\controllers\subsystems\chemistry.dm"
