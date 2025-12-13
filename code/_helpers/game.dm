@@ -219,7 +219,7 @@
 
 	return hear
 
-/* Outpost 21 edit - Use ours
+// Outpost 21 edit - Use ours - TEMP UNDO
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
 	. = list()
@@ -236,7 +236,7 @@
 			. -= M
 	for (var/mob/observer/O in GLOB.player_list)
 		. |= O
-*/
+//
 
 /mob/proc/can_hear_radio(var/list/hearturfs)
 	return FALSE
