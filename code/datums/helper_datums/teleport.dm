@@ -63,7 +63,7 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 			destturf = destination
 
 	// Outpost 21 edit begin - Teleport redspace chance
-	if(isturf(destturf))
+	if(isturf(destturf) && !forced)
 		var/area/current_area = get_area(curturf)
 		var/chance = 1
 		if(current_area?.haunted)
