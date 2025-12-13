@@ -38,7 +38,7 @@
 			H.AddComponent(/datum/component/haunting_vision)
 
 		// Stowaways spawn in haunted areas, lets not screw em/metagame
-		else if(haunted && H.job != JOB_STOWAWAY && rob(4))
+		else if(haunted && H.job != JOB_STOWAWAY && prob(4))
 			if(prob(70)) // Just give them sparkly haunted vision usually instead of redspace organs most of the time
 				H.AddComponent(/datum/component/haunting_vision)
 			else
