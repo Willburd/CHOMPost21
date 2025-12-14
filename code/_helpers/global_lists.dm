@@ -492,7 +492,7 @@ GLOBAL_LIST_INIT(vr_mob_spawner_options, list(
 	"Cat" = /mob/living/simple_mob/animal/passive/cat,
 	"Fox" = /mob/living/simple_mob/animal/passive/fox,
 	"Cow" = /mob/living/simple_mob/animal/passive/cow,
-	"Dog" = /mob/living/simple_mob/vore/woof,
+	// "Dog" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Remove softdogs
 	"Horse" = /mob/living/simple_mob/vore/horse/big,
 	"Hippo" = /mob/living/simple_mob/vore/hippo,
 	"Sheep" = /mob/living/simple_mob/vore/sheep,

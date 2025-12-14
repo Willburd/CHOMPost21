@@ -266,7 +266,7 @@
 	var/list/tf_list = list(/mob/living/simple_mob/animal/passive/mouse,
 		/mob/living/simple_mob/animal/passive/mouse/rat/strong,
 		/mob/living/simple_mob/vore/alienanimals/dustjumper,
-		/mob/living/simple_mob/vore/woof,
+		// /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Remove softdogs
 		/mob/living/simple_mob/animal/passive/dog/corgi,
 		/mob/living/simple_mob/animal/passive/cat,
 		/mob/living/simple_mob/animal/passive/chicken,
