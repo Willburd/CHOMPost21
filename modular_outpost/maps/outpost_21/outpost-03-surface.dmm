@@ -1453,6 +1453,9 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "aca" = (
@@ -38114,6 +38117,10 @@
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/mining,
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/mining,
 /obj/item/clothing/under/teshari/undercoat/jobs/mining,
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
 "ixl" = (
@@ -71725,6 +71732,9 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 5
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
