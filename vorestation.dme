@@ -5717,6 +5717,7 @@
 #include "modular_outpost\code\game\objects\items\weapons\id cards\station_ids.dm"
 #include "modular_outpost\code\game\objects\items\weapons\id cards\syndicate_ids.dm"
 #include "modular_outpost\code\game\objects\items\weapons\implants\implant.dm"
+#include "modular_outpost\code\game\objects\items\weapons\implants\neuralbasic.dm"
 #include "modular_outpost\code\game\objects\items\weapons\storage\belt.dm"
 #include "modular_outpost\code\game\objects\items\weapons\storage\boxes.dm"
 #include "modular_outpost\code\game\objects\items\weapons\storage\firstaid.dm"
