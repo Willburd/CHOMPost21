@@ -31267,6 +31267,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
+"bds" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"bdt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "bdu" = (
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -61193,15 +61207,6 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/cargo)
-"cjQ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cjR" = (
@@ -113188,7 +113193,7 @@ bge
 bge
 bge
 bge
-cjQ
+aUQ
 cbh
 cgg
 bge
@@ -113351,7 +113356,7 @@ bMZ
 bge
 aKe
 cjR
-cgb
+aQg
 caX
 bge
 aNL
@@ -113818,7 +113823,7 @@ bFY
 bHA
 cbt
 bGc
-bFY
+bds
 bFL
 cbt
 bGc
@@ -114462,7 +114467,7 @@ bFY
 bFL
 cbt
 bGc
-bFY
+bds
 bHu
 cbt
 bKb
@@ -114780,7 +114785,7 @@ bMZ
 bMZ
 cbt
 cbt
-bGC
+bdt
 cbt
 cbt
 cbt
@@ -115114,7 +115119,7 @@ bFY
 bFL
 cbt
 bFx
-bFY
+bds
 bKn
 cbt
 bKa
@@ -115444,7 +115449,7 @@ bGC
 cbt
 cbt
 cbt
-bGC
+bdt
 cbt
 cbt
 cbt
@@ -115762,7 +115767,7 @@ bFY
 bHA
 cbt
 bGc
-bFY
+bds
 bHA
 cbt
 bGc
@@ -115770,7 +115775,7 @@ bFY
 bFL
 cbt
 bGc
-bFY
+bds
 bHA
 cbt
 bGb
@@ -116410,7 +116415,7 @@ bFY
 bFL
 cbt
 bFx
-bFY
+bds
 bHu
 cbt
 bKb
@@ -116422,7 +116427,7 @@ bFY
 bHB
 cbt
 bGc
-bFY
+bds
 cbz
 bzH
 bWX
@@ -117066,7 +117071,7 @@ bFY
 bHu
 cbt
 bGc
-bFY
+bds
 bFL
 cbt
 bFx
