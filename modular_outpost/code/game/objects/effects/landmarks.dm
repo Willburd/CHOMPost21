@@ -396,7 +396,7 @@
 	name = "bolt door 75%"
 	chance = 75
 
-/obj/effect/landmark/bolt_door/always_electrified
+/obj/effect/landmark/bolt_door/always_bolted
 	name = "bolt door 100%"
 	chance = 100
 
