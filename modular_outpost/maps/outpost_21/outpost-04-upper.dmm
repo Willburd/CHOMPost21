@@ -2724,6 +2724,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
+"afT" = (
+/obj/structure/bed/chair/office/dark,
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/wood,
+/area/library_conference_room)
+"afU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark/start/xenobot,
+/turf/simulated/floor/tiled/hydro,
+/area/rnd/xenobiology/xenoflora)
+"afV" = (
+/obj/effect/landmark/start/xenobot,
+/turf/simulated/floor/tiled/hydro,
+/area/rnd/xenobiology/xenoflora)
 "agj" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
@@ -15454,6 +15470,7 @@
 	pixel_y = -26
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/upper)
 "grl" = (
@@ -16732,6 +16749,7 @@
 	dir = 10
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "hdw" = (
@@ -20427,6 +20445,7 @@
 	c_tag = "SCI - Chemlab";
 	dir = 1
 	},
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "iUx" = (
@@ -24488,7 +24507,6 @@
 /obj/machinery/chemical_dispenser/kettle/full{
 	pixel_y = 2
 	},
-/obj/machinery/bunsen_burner,
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "kNw" = (
@@ -32784,6 +32802,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/storage/bible,
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -43636,6 +43655,9 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
+/obj/effect/landmark/start{
+	name = "Research Director"
+	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
 "uiC" = (
@@ -51239,6 +51261,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/upper)
 "xVg" = (
@@ -101391,7 +101414,7 @@ fnK
 vuw
 kvs
 fnK
-vrV
+afU
 vsu
 eUD
 ozu
@@ -102525,7 +102548,7 @@ fnK
 kvs
 kvs
 fnK
-fnK
+afV
 qyw
 afI
 xJq
@@ -103361,7 +103384,7 @@ tUI
 vVs
 bIk
 jml
-llN
+afT
 nns
 gbr
 bZV

@@ -3619,6 +3619,7 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
 "agT" = (
@@ -7018,6 +7019,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Anomalist"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "amD" = (
@@ -8141,6 +8145,7 @@
 	name = "Research Call";
 	pixel_y = 30
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/research/isolation_hall)
 "aoz" = (
@@ -9247,7 +9252,7 @@
 /area/engineering/atmos)
 "aqp" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
@@ -13674,6 +13679,7 @@
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
 "axT" = (
@@ -14243,6 +14249,9 @@
 	},
 /obj/structure/window/basic{
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Anomalist"
 	},
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
@@ -16078,7 +16087,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
@@ -31258,6 +31267,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
+"bds" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"bdt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "bdu" = (
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -33158,7 +33181,7 @@
 /area/muriki/processor)
 "bgZ" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
@@ -36755,7 +36778,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "right"
@@ -36777,7 +36800,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -48399,7 +48422,7 @@
 /area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "bIv" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -50250,7 +50273,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -50329,7 +50352,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -50434,7 +50457,7 @@
 "bMP" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -51762,7 +51785,7 @@
 /area/maintenance/spine/eng)
 "bPj" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
@@ -52265,7 +52288,7 @@
 	dir = 9
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
@@ -53101,7 +53124,7 @@
 /area/maintenance/spine/civ)
 "bRA" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -53364,7 +53387,7 @@
 /area/maintenance/cargo)
 "bRW" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
@@ -54196,7 +54219,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -57934,7 +57957,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -58006,7 +58029,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -58372,7 +58395,7 @@
 /area/maintenance/research/north)
 "ccx" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
@@ -58515,7 +58538,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -58603,7 +58626,7 @@
 /area/maintenance/spine/waste)
 "cdd" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -59147,7 +59170,7 @@
 	dir = 8
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "up"
@@ -59829,7 +59852,7 @@
 /area/maintenance/cave)
 "cgw" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/med_refinery)
@@ -59985,7 +60008,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
@@ -60138,7 +60161,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -61186,15 +61209,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
-"cjQ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/cargo)
 "cjR" = (
 /obj/structure/cable/orange{
 	icon_state = "4-10"
@@ -61959,7 +61973,7 @@
 /area/maintenance/spine/civ)
 "clE" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
@@ -62116,10 +62130,10 @@
 /area/maintenance/atmos_control)
 "cmb" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "face"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "face"
+	icon_state = "h"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -62177,7 +62191,7 @@
 "cmi" = (
 /obj/structure/prop/poicanister,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -62570,7 +62584,7 @@
 /area/rnd/research/exp_prep)
 "cnh" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research/north)
@@ -63669,7 +63683,7 @@
 	icon_state = "5-9"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "down"
@@ -63695,7 +63709,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -63739,7 +63753,7 @@
 /area/mine/explored/muriki/liminaltoobs)
 "cqp" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
@@ -69892,7 +69906,7 @@
 /area/muriki/processor/hall)
 "fZL" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
@@ -70422,7 +70436,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -72708,7 +72722,7 @@
 "jpD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -72856,7 +72870,7 @@
 "jvX" = (
 /obj/structure/ladder,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -73582,7 +73596,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -76099,10 +76113,6 @@
 "nfq" = (
 /turf/simulated/wall,
 /area/server)
-"nfS" = (
-/obj/effect/landmark/dangerous_situation,
-/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
-/area/mine/explored/muriki/river/mouth)
 "ngt" = (
 /obj/structure/railing{
 	dir = 8
@@ -76257,7 +76267,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -81838,6 +81848,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/effect/landmark/start{
+	name = "Anomalist"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
@@ -101516,7 +101529,7 @@ fVT
 wZz
 wZz
 fVT
-nfS
+fVT
 wZz
 wZz
 bPf
@@ -113180,7 +113193,7 @@ bge
 bge
 bge
 bge
-cjQ
+aUQ
 cbh
 cgg
 bge
@@ -113343,7 +113356,7 @@ bMZ
 bge
 aKe
 cjR
-cgb
+aQg
 caX
 bge
 aNL
@@ -113810,7 +113823,7 @@ bFY
 bHA
 cbt
 bGc
-bFY
+bds
 bFL
 cbt
 bGc
@@ -114454,7 +114467,7 @@ bFY
 bFL
 cbt
 bGc
-bFY
+bds
 bHu
 cbt
 bKb
@@ -114772,7 +114785,7 @@ bMZ
 bMZ
 cbt
 cbt
-bGC
+bdt
 cbt
 cbt
 cbt
@@ -115106,7 +115119,7 @@ bFY
 bFL
 cbt
 bFx
-bFY
+bds
 bKn
 cbt
 bKa
@@ -115436,7 +115449,7 @@ bGC
 cbt
 cbt
 cbt
-bGC
+bdt
 cbt
 cbt
 cbt
@@ -115754,7 +115767,7 @@ bFY
 bHA
 cbt
 bGc
-bFY
+bds
 bHA
 cbt
 bGc
@@ -115762,7 +115775,7 @@ bFY
 bFL
 cbt
 bGc
-bFY
+bds
 bHA
 cbt
 bGb
@@ -116402,7 +116415,7 @@ bFY
 bFL
 cbt
 bFx
-bFY
+bds
 bHu
 cbt
 bKb
@@ -116414,7 +116427,7 @@ bFY
 bHB
 cbt
 bGc
-bFY
+bds
 cbz
 bzH
 bWX
@@ -117058,7 +117071,7 @@ bFY
 bHu
 cbt
 bGc
-bFY
+bds
 bFL
 cbt
 bFx
