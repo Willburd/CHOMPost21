@@ -5592,6 +5592,7 @@
 #include "modular_outpost\code\ATMOSPHERICS\components\unary\vent_pump.dm"
 #include "modular_outpost\code\controllers\subsystems\chemistry.dm"
 #include "modular_outpost\code\controllers\subsystems\departmentgoals.dm"
+#include "modular_outpost\code\controllers\subsystems\events.dm"
 #include "modular_outpost\code\controllers\subsystems\haunting.dm"
 #include "modular_outpost\code\controllers\subsystems\transcore_vr.dm"
 #include "modular_outpost\code\datums\ai_law_sets.dm"
