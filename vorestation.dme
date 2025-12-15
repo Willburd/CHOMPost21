@@ -5737,6 +5737,7 @@
 #include "modular_outpost\code\game\objects\structures\props\bloodstar.dm"
 #include "modular_outpost\code\game\objects\structures\props\misc.dm"
 #include "modular_outpost\code\game\objects\structures\props\warefare.dm"
+#include "modular_outpost\code\game\objects\structures\stool_bed_chair_nest\bed.dm"
 #include "modular_outpost\code\game\objects\structures\stool_bed_chair_nest\chairs.dm"
 #include "modular_outpost\code\game\turfs\flooring\flooring.dm"
 #include "modular_outpost\code\game\turfs\flooring\flooring_decals.dm"
