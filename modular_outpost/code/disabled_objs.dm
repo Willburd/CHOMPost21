@@ -149,7 +149,8 @@
 	BADOBJ
 /obj/item/paper/awaygate/snowfield/final_note
 	BADOBJ
-
+/obj/random/mob/semirandom_mob_spawner/animal
+	BADOBJ
 
 #endif
 #undef BADSHUTTLE
