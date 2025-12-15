@@ -143,7 +143,7 @@
 /datum/component/badbody/proc/do_a_spooky()
 	// Anticheeze
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in orange(2,get_turf(body))
-	if(prob(60) && H && can_lunge)
+	if(prob(10) && H && can_lunge)
 		var/turf/T = get_turf(body)
 		T.visible_message("The body lunges at \the [H] and explodes into gore!")
 		var/area/A = get_area(body)
