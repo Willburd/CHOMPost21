@@ -5825,6 +5825,7 @@
 #include "modular_outpost\code\modules\mob\living\silicon\silicon.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\pai\pai.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\robot.dm"
+#include "modular_outpost\code\modules\mob\living\silicon\robot\robot_simple_items.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\dogborg\dog_sleeper.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\sprites\fluff.dm"
 #include "modular_outpost\code\modules\mob\living\simple_animal\statue.dm"
