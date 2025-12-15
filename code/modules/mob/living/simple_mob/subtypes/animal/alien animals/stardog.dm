@@ -34,7 +34,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/woof/stardog
 
 	has_langs = list(LANGUAGE_ANIMAL, LANGUAGE_CANILUNZT, LANGUAGE_GALCOM)
-	say_list_type = /datum/say_list/softdog
+	// say_list_type = /datum/say_list/softdog // Outpost 21 edit - Softdog removal
 	swallowTime = 0.1 SECONDS
 
 	loot_list = list(/obj/random/underdark/uncertain)
@@ -576,8 +576,8 @@
 		/mob/living/simple_mob/vore/weretiger,
 		/mob/living/simple_mob/vore/wolf,
 		/mob/living/simple_mob/vore/wolf/direwolf,
-		/mob/living/simple_mob/vore/wolfgirl,
-		/mob/living/simple_mob/vore/woof
+		/mob/living/simple_mob/vore/wolfgirl
+		// /mob/living/simple_mob/vore/woof // Outpost 21 edit - Softdog removal
 	)
 
 /obj/structure/flora/tree/fur/choose_icon_state()
@@ -955,9 +955,11 @@
 	sound_env = SOUND_ENVIRONMENT_DIZZY
 
 	valid_mobs = list(	//Dog map spawns the dogs. It's not hard to understand!
+		/* // Outpost 21 edit - Softdog removal
 		list(
 			/mob/living/simple_mob/vore/woof
 			) = 100,
+		*/
 		list(
 			/mob/living/simple_mob/vore/wolf,
 			/mob/living/simple_mob/vore/wolf/direwolf,

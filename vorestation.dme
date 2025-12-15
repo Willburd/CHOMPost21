@@ -1628,7 +1628,6 @@
 #include "code\game\objects\effects\overlays.dm"
 #include "code\game\objects\effects\particle_holder.dm"
 #include "code\game\objects\effects\portals.dm"
-#include "code\game\objects\effects\semirandom_mobs_vr.dm"
 #include "code\game\objects\effects\shared_particle_holder.dm"
 #include "code\game\objects\effects\spiders.dm"
 #include "code\game\objects\effects\step_triggers.dm"

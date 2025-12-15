@@ -310,7 +310,7 @@
 		"mothroach" = /mob/living/simple_mob/animal/passive/mothroach,
 		"giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,

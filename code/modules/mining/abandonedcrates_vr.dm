@@ -64,7 +64,7 @@
 			list(/obj/item/gun/energy/netgun, 7) = 2,
 			list(pick(prob(300);/obj/item/gun/energy/mouseray,
 				prob(50);/obj/item/gun/energy/mouseray/corgi,
-				prob(50);/obj/item/gun/energy/mouseray/woof,
+				// prob(50);/obj/item/gun/energy/mouseray/woof, // Outpost 21 edit - Softdog removal
 				prob(50);/obj/item/gun/energy/mouseray/cat,
 				prob(50);/obj/item/gun/energy/mouseray/chicken,
 				prob(50);/obj/item/gun/energy/mouseray/lizard,
