@@ -1,4 +1,9 @@
 // We want our version of radio listening to consider the view as well, and not just being around the radio
+
+
+// THis is a big todo that's hard to figure out a non-laggy as fuck solution for.
+
+
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
 	. = list()

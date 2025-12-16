@@ -367,3 +367,47 @@
 	if(A)
 		A.wires.cut(WIRE_ELECTRIFY)
 		A.electrify()
+
+
+
+
+/obj/effect/landmark/bolt_door
+	name = "bolt door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/bolt_door/five
+	name = "bolt door 5%"
+	chance = 5
+
+/obj/effect/landmark/bolt_door/ten
+	name = "bolt door 10%"
+	chance = 10
+
+/obj/effect/landmark/bolt_door/twentyfive
+	name = "bolt door 25%"
+	chance = 25
+
+/obj/effect/landmark/bolt_door/fifty
+	name = "bolt door 50%"
+	chance = 50
+
+/obj/effect/landmark/bolt_door/seventyfive
+	name = "bolt door 75%"
+	chance = 75
+
+/obj/effect/landmark/bolt_door/always_bolted
+	name = "bolt door 100%"
+	chance = 100
+
+/obj/effect/landmark/bolt_door/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/bolt_door/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A) // We don't want to call signals, just treat the door as if it was already locked. So skip calling lock()
+		A.locked = TRUE
+		A.update_icon()

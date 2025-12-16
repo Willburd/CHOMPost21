@@ -1,14 +1,19 @@
+//Baseline armor vest for comparison: melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0
+//Basic principals: Void suits should slow you down more, but protect you more, than rigs.
+
 ////////////////////////////////////////////////////////////////////////////
 // VOID - ERT
 ////////////////////////////////////////////////////////////////////////////
 /obj/item/clothing/suit/space/void/responseteam
 	// slowdown = 0.5
+	//armor = list(melee = 65, bullet = 55, laser = 55, energy = 15, bomb = 50, bio = 100, rad = 100) //These are SAME AS BASE, just here as reference.
 
 /obj/item/clothing/suit/space/void/responseteam/command
 	// slowdown = 0.5
 
 /obj/item/clothing/suit/space/void/responseteam/medical
 	// slowdown = 0.5
+	armor = list(melee = 25, bullet = 10, laser = 25, energy = 5, bomb = 10, bio = 100, rad = 100) //Less armor, more zoom
 
 /obj/item/clothing/suit/space/void/responseteam/engineer
 	// slowdown = 0.5
@@ -17,7 +22,8 @@
 	// slowdown = 0.5
 
 /obj/item/clothing/suit/space/void/responseteam/janitor
-	// slowdown = 0
+	// slowdown = 0.5
+	armor = list(melee = 20, bullet = 10, laser = 20, energy = 5, bomb = 10, bio = 100, rad = 100)
 
 
 ////////////////////////////////////////////////////////////////////////////
@@ -25,6 +31,7 @@
 ////////////////////////////////////////////////////////////////////////////
 /obj/item/clothing/suit/space/void/refurb/talon
 	// slowdown = 0.5
+	// armor = list(melee = 30, bullet = 15, laser = 15,energy = 5, bomb = 20, bio = 100, rad = 50) //No changes, baseline.
 
 /obj/item/clothing/suit/space/void/refurb/engineering/talon
 	// slowdown = 0.5

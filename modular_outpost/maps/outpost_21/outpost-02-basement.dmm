@@ -841,6 +841,9 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 6
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
 "abJ" = (
@@ -2059,6 +2062,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "aec" = (
@@ -2319,6 +2325,9 @@
 "aeA" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 5
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
@@ -2686,6 +2695,9 @@
 "afs" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 6
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
@@ -3619,6 +3631,7 @@
 /obj/structure/window/basic{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
 "agT" = (
@@ -6258,6 +6271,9 @@
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/corner/purple/full,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "alo" = (
@@ -7018,6 +7034,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/landmark/start{
+	name = "Anomalist"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "amD" = (
@@ -8141,6 +8160,7 @@
 	name = "Research Call";
 	pixel_y = 30
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/research/isolation_hall)
 "aoz" = (
@@ -9247,7 +9267,7 @@
 /area/engineering/atmos)
 "aqp" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
@@ -9663,12 +9683,14 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "arg" = (
-/obj/structure/closet,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
@@ -10289,6 +10311,8 @@
 /obj/item/stack/medical/splint,
 /obj/item/stack/medical/splint,
 /obj/item/stack/medical/splint,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical)
 "asd" = (
@@ -13148,6 +13172,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "awX" = (
@@ -13674,6 +13701,7 @@
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
 "axT" = (
@@ -14243,6 +14271,9 @@
 	},
 /obj/structure/window/basic{
 	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Anomalist"
 	},
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
@@ -16078,7 +16109,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
@@ -31258,6 +31289,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
+"bds" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"bdt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "bdu" = (
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -32061,6 +32106,10 @@
 	},
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
+	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -33158,7 +33207,7 @@
 /area/muriki/processor)
 "bgZ" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
@@ -34206,6 +34255,9 @@
 /obj/item/toy/plushie/pillow/green,
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
 	},
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/breakroom)
@@ -36755,7 +36807,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "right"
@@ -36777,7 +36829,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -44384,6 +44436,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
+/obj/structure/blade_trap/start_active,
+/obj/item/trash/turkeybones,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/maintenance/secelevbasement)
 "bAK" = (
@@ -45529,6 +45584,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
+"bDa" = (
+/turf/simulated/wall,
+/area/mine/unexplored/muriki/cave/east)
 "bDb" = (
 /obj/vehicle/boat/dragon{
 	dir = 8
@@ -48399,7 +48457,7 @@
 /area/mine/unexplored/muriki/cave/underdark_pit/medical_access)
 "bIv" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -50193,6 +50251,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 8;
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/wastedisposal/firstaid)
 "bMk" = (
@@ -50250,7 +50312,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -50329,7 +50391,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -50434,7 +50496,7 @@
 "bMP" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -50560,6 +50622,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bNf" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/tinted/full,
+/turf/simulated/floor/plating,
+/area/mine/unexplored/muriki/cave/east)
 "bNg" = (
 /obj/structure/foamedmetal,
 /turf/simulated/floor/plating,
@@ -51762,7 +51830,7 @@
 /area/maintenance/spine/eng)
 "bPj" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
@@ -52265,7 +52333,7 @@
 	dir = 9
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
@@ -53101,7 +53169,7 @@
 /area/maintenance/spine/civ)
 "bRA" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -53364,7 +53432,7 @@
 /area/maintenance/cargo)
 "bRW" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
@@ -54196,7 +54264,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -57934,7 +58002,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -58006,7 +58074,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -58372,7 +58440,7 @@
 /area/maintenance/research/north)
 "ccx" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
@@ -58515,7 +58583,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -58603,7 +58671,7 @@
 /area/maintenance/spine/waste)
 "cdd" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -59147,7 +59215,7 @@
 	dir = 8
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "up"
@@ -59829,7 +59897,7 @@
 /area/maintenance/cave)
 "cgw" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/med_refinery)
@@ -59985,7 +60053,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
@@ -60138,7 +60206,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -61072,6 +61140,13 @@
 /obj/item/bikehorn,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"cjE" = (
+/obj/structure/undies_wardrobe,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
 "cjF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -61187,14 +61262,14 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cjQ" = (
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/diagonal{
 	dir = 4
 	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/cargo)
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
 "cjR" = (
 /obj/structure/cable/orange{
 	icon_state = "4-10"
@@ -61959,7 +62034,7 @@
 /area/maintenance/spine/civ)
 "clE" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
@@ -62116,10 +62191,10 @@
 /area/maintenance/atmos_control)
 "cmb" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "face"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "face"
+	icon_state = "h"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -62177,7 +62252,7 @@
 "cmi" = (
 /obj/structure/prop/poicanister,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -62570,7 +62645,7 @@
 /area/rnd/research/exp_prep)
 "cnh" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research/north)
@@ -63669,7 +63744,7 @@
 	icon_state = "5-9"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/auto_crayon{
 	icon_state = "down"
@@ -63695,7 +63770,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -63739,7 +63814,7 @@
 /area/mine/explored/muriki/liminaltoobs)
 "cqp" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
@@ -65586,6 +65661,10 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/vending/wallmed1/public{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cuj" = (
@@ -66407,6 +66486,10 @@
 /obj/item/storage/pill_bottle/tramadol{
 	pixel_x = 6
 	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 8;
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled/old_tile/turfpack/muriki,
 /area/maintenance/oldbridge)
 "cwA" = (
@@ -66629,10 +66712,230 @@
 /mob/living/simple_mob/vore/pakkun,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainbasenorth)
+"cxq" = (
+/obj/machinery/light,
+/obj/structure/flora/pottedplant/mysterious,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxr" = (
+/obj/structure/closet/emcloset,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxs" = (
+/obj/structure/filingcabinet/chestdrawer,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxt" = (
+/obj/machinery/door/airlock/medical,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/effect/landmark/bolt_door/always_bolted,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/random/pizzabox,
+/obj/item/toy/plushie/moth{
+	name = "Bib plushie";
+	desc = "I think we found out why the door was bolted..."
+	},
+/obj/item/clothing/head/beret{
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/steel/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/diagonal,
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxx" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxy" = (
+/obj/machinery/vending/wallmed1/public{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/medihound{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxz" = (
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxA" = (
+/obj/machinery/iv_drip,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
 "cxB" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
+"cxC" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/medical,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxD" = (
+/obj/structure/table/standard,
+/obj/item/flashlight/pen,
+/obj/item/clothing/accessory/stethoscope,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxE" = (
+/obj/structure/table/standard,
+/obj/structure/salvageable/personal,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cxF" = (
+/obj/effect/auto_crayon{
+	icon_state = "h"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/north)
+"cxG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
+"cxH" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/vending/wallmed1/public{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"cxI" = (
+/obj/machinery/vending/wallmed1/public{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
+"cxJ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/item/clothing/head/cone,
+/obj/item/clothing/head/cone{
+	pixel_y = 5
+	},
+/obj/item/clothing/head/cone{
+	pixel_y = 11
+	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
+"cxK" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/railing,
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
+"cxL" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(1);
+	name = "Valinari's locker"
+	},
+/obj/fiftyspawner/mhydrogen,
+/turf/simulated/floor/plating,
+/area/maintenance/secelevbasement)
+"cxM" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/wall/r_wall,
+/area/security/brig)
+"cxN" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/research/anomaly_storage)
+"cxO" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
 "cyp" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -67743,6 +68046,10 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -69892,7 +70199,7 @@
 /area/muriki/processor/hall)
 "fZL" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
@@ -70422,7 +70729,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -72708,7 +73015,7 @@
 "jpD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -72856,7 +73163,7 @@
 "jvX" = (
 /obj/structure/ladder,
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -73582,7 +73889,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -73862,6 +74169,19 @@
 /obj/structure/disposalpipe/broken{
 	dir = 8
 	},
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/structure/table/rack,
 /turf/simulated/floor/tiled/techfloor,
 /area/constructionsite/medical)
 "kwU" = (
@@ -74671,6 +74991,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -76099,10 +76422,6 @@
 "nfq" = (
 /turf/simulated/wall,
 /area/server)
-"nfS" = (
-/obj/effect/landmark/dangerous_situation,
-/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
-/area/mine/explored/muriki/river/mouth)
 "ngt" = (
 /obj/structure/railing{
 	dir = 8
@@ -76257,7 +76576,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "x"
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
@@ -81838,6 +82157,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/effect/landmark/start{
+	name = "Anomalist"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
@@ -92122,7 +92444,7 @@ agU
 iBE
 kcx
 jew
-rBM
+cxI
 nbb
 yjs
 bWh
@@ -101516,7 +101838,7 @@ fVT
 wZz
 wZz
 fVT
-nfS
+fVT
 wZz
 wZz
 bPf
@@ -108812,7 +109134,7 @@ bcz
 aHq
 xWz
 wrE
-drJ
+cxH
 aXN
 bpz
 bpz
@@ -113180,7 +113502,7 @@ bge
 bge
 bge
 bge
-cjQ
+aUQ
 cbh
 cgg
 bge
@@ -113343,7 +113665,7 @@ bMZ
 bge
 aKe
 cjR
-cgb
+aQg
 caX
 bge
 aNL
@@ -113810,7 +114132,7 @@ bFY
 bHA
 cbt
 bGc
-bFY
+bds
 bFL
 cbt
 bGc
@@ -114454,7 +114776,7 @@ bFY
 bFL
 cbt
 bGc
-bFY
+bds
 bHu
 cbt
 bKb
@@ -114772,7 +115094,7 @@ bMZ
 bMZ
 cbt
 cbt
-bGC
+bdt
 cbt
 cbt
 cbt
@@ -115106,7 +115428,7 @@ bFY
 bFL
 cbt
 bFx
-bFY
+bds
 bKn
 cbt
 bKa
@@ -115436,7 +115758,7 @@ bGC
 cbt
 cbt
 cbt
-bGC
+bdt
 cbt
 cbt
 cbt
@@ -115754,7 +116076,7 @@ bFY
 bHA
 cbt
 bGc
-bFY
+bds
 bHA
 cbt
 bGc
@@ -115762,7 +116084,7 @@ bFY
 bFL
 cbt
 bGc
-bFY
+bds
 bHA
 cbt
 bGb
@@ -116402,7 +116724,7 @@ bFY
 bFL
 cbt
 bFx
-bFY
+bds
 bHu
 cbt
 bKb
@@ -116414,7 +116736,7 @@ bFY
 bHB
 cbt
 bGc
-bFY
+bds
 cbz
 bzH
 bWX
@@ -117058,7 +117380,7 @@ bFY
 bHu
 cbt
 bGc
-bFY
+bds
 bFL
 cbt
 bFx
@@ -122768,7 +123090,7 @@ bqP
 brC
 bsu
 bqe
-btB
+cxG
 bup
 buS
 bvS
@@ -123260,7 +123582,7 @@ bqN
 oFm
 oFm
 buO
-buO
+cxM
 buO
 buO
 buO
@@ -123912,7 +124234,7 @@ bvU
 buX
 bzW
 aNM
-aNM
+cxL
 bzU
 bzU
 ctT
@@ -126463,7 +126785,7 @@ jRN
 lmO
 gRH
 cgr
-cgr
+cxJ
 afY
 bCA
 lOX
@@ -128890,7 +129212,7 @@ alY
 qMR
 cgx
 alY
-cCW
+cxK
 aiy
 qMR
 aeD
@@ -134202,11 +134524,11 @@ bzI
 bTw
 bTm
 cct
-bSl
-bSl
+cxN
+cxN
 bSD
-bSl
-bSl
+cxN
+cxN
 bSD
 cqw
 cqv
@@ -134616,8 +134938,8 @@ ahb
 ahb
 akQ
 bMO
+cxF
 cqV
-bMg
 bMg
 bMg
 bMg
@@ -134782,10 +135104,10 @@ akQ
 akQ
 akQ
 akQ
-bMq
-bMq
-bMq
 akQ
+bMg
+bMg
+bMg
 akQ
 akQ
 bMq
@@ -134944,11 +135266,11 @@ akQ
 ahb
 mpL
 mpL
-mpL
-mpL
-mpL
-mpL
-mpL
+bDa
+bNf
+cxt
+bNf
+bDa
 mpL
 mpL
 mpL
@@ -135106,11 +135428,11 @@ akQ
 ahb
 mpL
 mpL
-mpL
-mpL
-mpL
-mpL
-mpL
+bDa
+cxz
+cxu
+cjE
+bDa
 mpL
 mpL
 mpL
@@ -135268,11 +135590,11 @@ akQ
 ahb
 mpL
 mpL
-mpL
-mpL
-mpL
-mpL
-mpL
+bDa
+cxA
+cxv
+cjQ
+bDa
 mpL
 mpL
 mpL
@@ -135430,11 +135752,11 @@ akQ
 ahb
 mpL
 mpL
-mpL
-mpL
-mpL
-mpL
-mpL
+bDa
+cxC
+cxw
+cxq
+bDa
 mpL
 mpL
 mpL
@@ -135592,11 +135914,11 @@ ahb
 ahb
 mpL
 mpL
-mpL
-mpL
-mpL
-mpL
-mpL
+bDa
+cxD
+cxx
+cxr
+bDa
 mpL
 mpL
 mpL
@@ -135754,11 +136076,11 @@ akQ
 ahb
 mpL
 mpL
-mpL
-mpL
-mpL
-mpL
-mpL
+bDa
+cxE
+cxy
+cxs
+bDa
 mpL
 mpL
 mpL
@@ -135916,11 +136238,11 @@ akQ
 akQ
 mpL
 mpL
-mpL
-mpL
-mpL
-mpL
-mpL
+bDa
+bDa
+bDa
+bDa
+bDa
 mpL
 mpL
 mpL
@@ -144566,7 +144888,7 @@ aqc
 avp
 avh
 avn
-avn
+cxO
 bpj
 avn
 fwe

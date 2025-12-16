@@ -365,6 +365,8 @@
 
 /obj/item/robot_module/robot/engineering/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
+	src.modules += new /obj/item/robotanalyzer(src) // Outpost 21 edit - Robotics moved to engineering
+	src.modules += new /obj/item/card/robot(src) // Outpost 21 edit - Robotics moved to engineering
 	src.modules += new /obj/item/robotic_multibelt(src)
 	src.modules += new /obj/item/robotic_multibelt(src)
 	src.modules += new /obj/item/borg/sight/meson(src)
@@ -685,8 +687,8 @@
 /obj/item/robot_module/robot/research/create_equipment(var/mob/living/silicon/robot/robot)
 	..()
 	src.modules += new /obj/item/experi_scanner(src)
-	src.modules += new /obj/item/robotanalyzer(src)
-	src.modules += new /obj/item/card/robot(src)
+	// src.modules += new /obj/item/robotanalyzer(src) // Outpost 21 edit - Robotics moved to engineering
+	// src.modules += new /obj/item/card/robot(src) // Outpost 21 edit - Robotics moved to engineering
 	src.modules += new /obj/item/gripper/research(src)
 	src.modules += new /obj/item/robotic_multibelt(src)
 	src.modules += new /obj/item/robotic_multibelt(src)

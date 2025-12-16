@@ -143,17 +143,25 @@
 /datum/component/badbody/proc/do_a_spooky()
 	// Anticheeze
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in orange(2,get_turf(body))
-	if(prob(60) && H && can_lunge)
-		var/turf/T = get_turf(body)
-		T.visible_message("The body lunges at \the [H] and explodes into gore!")
-		var/area/A = get_area(body)
-		A.haunted = TRUE
-		body.gib()
-		// curses upon ye
-		H.add_modifier(/datum/modifier/redspace_drain)
-		H.Stun(30)
-		H.Weaken(5)
-		return world.time + rand(1200,2000)
+	if(prob(60) && isturf(body.loc) && H && can_lunge && body.pulledby)
+		// Make this more picky
+		var/valid_to_explode = prob(1)
+		if(locate(/obj/machinery/conveyor) in orange(5,get_turf(body)))
+			valid_to_explode = TRUE
+		if(locate(/obj/structure/morgue/crematorium) in orange(5,get_turf(body)))
+			valid_to_explode = TRUE
+
+		if(valid_to_explode)
+			var/turf/T = get_turf(body)
+			T.visible_message("The body lunges at \the [H] and explodes into gore!")
+			var/area/A = get_area(body)
+			A.haunted = TRUE
+			body.gib()
+			// curses upon ye
+			H.add_modifier(/datum/modifier/redspace_drain)
+			H.Stun(30)
+			H.Weaken(5)
+			return world.time + rand(1200,2000)
 
 	// Randomly do stuff to scare people
 	var/area/A = get_area(body.loc)

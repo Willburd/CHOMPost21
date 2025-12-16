@@ -43,10 +43,26 @@
 		next_event_time += (60 * 10)
 
 
-/datum/event_container/proc/acquire_event()
+/datum/event_container/proc/acquire_event(var/test_mode = FALSE)
 	if(available_events.len == 0)
 		return
-	var/active_with_role = number_active_with_role()
+
+	// Outpost 21 edit begin - Event weight testing code
+	var/list/active_with_role = number_active_with_role()
+	if(test_mode)
+		active_with_role[DEPARTMENT_ENGINEERING] = rand(-1,3)
+		active_with_role[DEPARTMENT_MEDICAL] = rand(-1,3)
+		active_with_role[DEPARTMENT_SECURITY] = rand(-1,3)
+		active_with_role[DEPARTMENT_RESEARCH] = rand(-1,3)
+		active_with_role[JOB_AI] = rand(-1,2)
+		active_with_role[JOB_CYBORG] = rand(-1,3)
+		active_with_role[JOB_JANITOR] = rand(-1,3)
+		active_with_role[JOB_BOTANIST] = rand(-1,3)
+		active_with_role[JOB_HEAD_OF_SECURITY] = rand(-1,3)
+		active_with_role[JOB_WARDEN] = rand(-1,3)
+		active_with_role[DEPARTMENT_CARGO] = rand(-1,3)
+		active_with_role[JOB_CHAPLAIN] = rand(-1,3)
+	// Outpost 21 edit end
 
 	var/list/possible_events = list()
 	for(var/datum/event_meta/EM in available_events)

@@ -11,8 +11,10 @@
 	containername = "Goat crate"
 	access = ACCESS_HYDROPONICS
 
+/* Outpost 21 edit - Softdog removal
 /datum/supply_pack/hydro/woofdog
 	name = "Dog crate"
 	cost = 50
 	containertype = /obj/structure/largecrate/animal/woofdog
 	containername = "Dog carrier"
+*/

@@ -530,8 +530,10 @@
 	name = "master capture crystal"
 	capture_chance_modifier = 100
 
+/* Outpost 21 edit - Softdog removal
 /obj/item/capture_crystal/cass
 	spawn_mob_type = /mob/living/simple_mob/vore/woof/cass
+*/
 /obj/item/capture_crystal/adg
 	spawn_mob_type = /mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced
 /obj/item/capture_crystal/bigdragon
@@ -599,7 +601,7 @@
 			),
 		list(/mob/living/simple_mob/vore/rabbit),
 		list(/mob/living/simple_mob/vore/redpanda),
-		list(/mob/living/simple_mob/vore/woof),
+		// list(/mob/living/simple_mob/vore/woof), // Outpost 21 edit - Softdog removal
 		list(/mob/living/simple_mob/vore/fennec),
 		list(/mob/living/simple_mob/vore/fennix),
 		list(/mob/living/simple_mob/vore/hippo),
@@ -833,7 +835,7 @@
 			/mob/living/simple_mob/vore/sect_queen = 1
 			),
 		list(/mob/living/simple_mob/vore/solargrub),
-		list(/mob/living/simple_mob/vore/woof),
+		// list(/mob/living/simple_mob/vore/woof), // Outpost 21 edit - Softdog removal
 		list(/mob/living/simple_mob/vore/alienanimals/teppi),
 		list(/mob/living/simple_mob/vore/alienanimals/space_ghost),
 		list(/mob/living/simple_mob/vore/alienanimals/catslug),

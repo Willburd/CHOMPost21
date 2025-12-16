@@ -253,6 +253,9 @@
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
 	},
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aax" = (
@@ -1452,6 +1455,9 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
@@ -4080,6 +4086,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "afX" = (
@@ -4687,6 +4694,22 @@
 /obj/item/tape_roll,
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
+"agU" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	frequency = 1475;
+	name = "Station Intercom (Security)";
+	pixel_x = 21
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/main)
 "agV" = (
 /obj/structure/disposalpipe/down{
 	dir = 8
@@ -5046,7 +5069,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/structure/candybowl/engineering,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahr" = (
@@ -5871,9 +5894,6 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
-	},
-/obj/effect/landmark{
-	name = "JoinLate"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -8823,7 +8843,7 @@
 "aoE" = (
 /obj/effect/floor_decal/milspec/color/purple/half,
 /obj/structure/table/standard,
-/obj/structure/candybowl/science,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "aoF" = (
@@ -11971,6 +11991,14 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
+"awi" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/item/toy/mistletoe,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled,
+/area/quartermaster/mining)
 "awj" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -12423,6 +12451,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "aBi" = (
@@ -21669,8 +21698,8 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/candybowl/security,
 /obj/structure/table/standard,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "dta" = (
@@ -22019,6 +22048,9 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/otherlab)
 "dzY" = (
@@ -22311,6 +22343,7 @@
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "dDA" = (
@@ -24736,8 +24769,8 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
-/obj/structure/candybowl/medical,
 /obj/structure/table/standard,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "etA" = (
@@ -29755,6 +29788,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "gaG" = (
@@ -37784,6 +37818,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "isA" = (
@@ -38112,6 +38147,10 @@
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/mining,
 /obj/item/clothing/suit/storage/teshari/cloak/jobs/mining,
 /obj/item/clothing/under/teshari/undercoat/jobs/mining,
+/obj/machinery/vending/wallmed1/public{
+	dir = 4;
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
 "ixl" = (
@@ -41625,7 +41664,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
 "jxv" = (
-/obj/structure/table/standard,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "jxy" = (
@@ -44222,6 +44263,7 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = 6
 	},
+/obj/item/healthanalyzer,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
 "klb" = (
@@ -52623,7 +52665,6 @@
 /area/rnd/hallway/main)
 "mMA" = (
 /obj/structure/table/standard,
-/obj/item/healthanalyzer,
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
@@ -52636,6 +52677,10 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
 "mMH" = (
@@ -52856,7 +52901,7 @@
 /area/security/brig/observation)
 "mRP" = (
 /obj/structure/closet/secure_closet{
-	req_one_access = list(7)
+	req_one_access = list(7,47)
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -55450,9 +55495,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cargomid)
 "nCD" = (
-/obj/structure/closet/secure_closet{
-	req_one_access = list(7)
-	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
@@ -55460,6 +55502,9 @@
 	pixel_y = -32
 	},
 /obj/structure/cable/green,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
 "nCK" = (
@@ -63426,6 +63471,7 @@
 	dir = 8
 	},
 /obj/structure/table/woodentable,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "qjX" = (
@@ -64584,6 +64630,9 @@
 	c_tag = "SCI - Main Hall Northeast";
 	network = list("Research","Miscellaneous Reseach");
 	dir = 8
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
@@ -67276,9 +67325,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/shuttles/right,
-/obj/effect/landmark{
-	name = "JoinLate"
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "ruz" = (
@@ -68796,6 +68842,9 @@
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "rUi" = (
@@ -69365,6 +69414,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
@@ -70167,6 +70219,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
+/obj/item/lightreplacer,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "spu" = (
@@ -70637,6 +70690,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "sxz" = (
@@ -71725,6 +71779,9 @@
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 5
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
@@ -76209,7 +76266,6 @@
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
-/obj/effect/landmark/start/stowaway,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargopub)
 "ufz" = (
@@ -76377,6 +76433,9 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
@@ -77574,8 +77633,8 @@
 	pixel_y = -32;
 	pixel_x = -6
 	},
-/obj/structure/candybowl/cargo,
 /obj/structure/table/standard,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "uzo" = (
@@ -78253,6 +78312,7 @@
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 1
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "uKA" = (
@@ -78602,6 +78662,9 @@
 	pixel_x = -28;
 	pixel_y = -28;
 	dir = 4
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
@@ -79334,6 +79397,7 @@
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 4
 	},
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "vbq" = (
@@ -79543,9 +79607,6 @@
 /obj/effect/floor_decal/shuttles,
 /obj/structure/cable/green{
 	icon_state = "1-8"
-	},
-/obj/effect/landmark{
-	name = "JoinLate"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
@@ -88017,13 +88078,14 @@
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "xCs" = (
-/obj/structure/table/rack/shelf,
-/obj/item/lightreplacer,
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -88139,6 +88201,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "xEx" = (
@@ -88147,8 +88210,6 @@
 	},
 /obj/structure/table/glass,
 /obj/item/walkpod,
-/obj/item/toy/mistletoe,
-/obj/item/toy/mistletoe,
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "xEF" = (
@@ -96115,7 +96176,7 @@ klO
 wjC
 wjC
 yiH
-qAN
+awi
 amM
 npU
 oMD
@@ -141227,7 +141288,7 @@ akO
 fbJ
 rUc
 qCv
-bLX
+agU
 eXa
 uga
 eXa

@@ -2724,6 +2724,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
+"afT" = (
+/obj/structure/bed/chair/office/dark,
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/wood,
+/area/library_conference_room)
+"afU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark/start/xenobot,
+/turf/simulated/floor/tiled/hydro,
+/area/rnd/xenobiology/xenoflora)
+"afV" = (
+/obj/effect/landmark/start/xenobot,
+/turf/simulated/floor/tiled/hydro,
+/area/rnd/xenobiology/xenoflora)
 "agj" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
@@ -11951,6 +11967,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Roof Access"
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/roof_eva)
 "eCr" = (
@@ -15454,6 +15471,7 @@
 	pixel_y = -26
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/upper)
 "grl" = (
@@ -16732,6 +16750,7 @@
 	dir = 10
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "hdw" = (
@@ -20427,6 +20446,7 @@
 	c_tag = "SCI - Chemlab";
 	dir = 1
 	},
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "iUx" = (
@@ -23794,6 +23814,9 @@
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "kyk" = (
@@ -24488,7 +24511,6 @@
 /obj/machinery/chemical_dispenser/kettle/full{
 	pixel_y = 2
 	},
-/obj/machinery/bunsen_burner,
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "kNw" = (
@@ -25366,6 +25388,9 @@
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "lnt" = (
@@ -25591,12 +25616,7 @@
 /area/rnd/research/roof_eva)
 "lss" = (
 /obj/structure/table/rack,
-/obj/item/rig/hazmat/equipped,
 /obj/structure/window/reinforced,
-/obj/item/rig/medical/equipped{
-	req_one_access = list(5);
-	req_access = null
-	},
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Medical Rescue Suit Storage";
 	req_access = null;
@@ -25606,6 +25626,16 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/rig/medical/equipped{
+	req_one_access = list(5);
+	req_access = null;
+	pixel_x = 5
+	},
+/obj/item/rig/hazmat/equipped{
+	req_one_access = list(5);
+	req_access = null;
+	pixel_x = -7
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/evastore)
 "ltk" = (
@@ -32784,6 +32814,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/storage/bible,
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -33071,6 +33102,9 @@
 /area/hydroponics/publicgarden)
 "peF" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/roof_eva)
 "pfj" = (
@@ -42040,6 +42074,9 @@
 /area/muriki/rooftop/cargo)
 "twV" = (
 /obj/effect/floor_decal/corner/purple/full,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "twX" = (
@@ -43635,6 +43672,9 @@
 	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
+	},
+/obj/effect/landmark/start{
+	name = "Research Director"
 	},
 /turf/simulated/floor/glass/reinforced,
 /area/rnd/rdoffice)
@@ -45373,6 +45413,9 @@
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
 "uYh" = (
@@ -45975,6 +46018,9 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "voo" = (
@@ -46544,6 +46590,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
@@ -51239,6 +51288,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/upper)
 "xVg" = (
@@ -51474,6 +51524,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/research/phoronics/bombrange)
 "yeA" = (
@@ -101391,7 +101444,7 @@ fnK
 vuw
 kvs
 fnK
-vrV
+afU
 vsu
 eUD
 ozu
@@ -102525,7 +102578,7 @@ fnK
 kvs
 kvs
 fnK
-fnK
+afV
 qyw
 afI
 xJq
@@ -103361,7 +103414,7 @@ tUI
 vVs
 bIk
 jml
-llN
+afT
 nns
 gbr
 bZV

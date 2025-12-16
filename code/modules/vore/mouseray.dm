@@ -248,7 +248,7 @@
 		"mouse" = /mob/living/simple_mob/animal/passive/mouse,
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,
@@ -274,7 +274,7 @@
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,
@@ -334,9 +334,11 @@
 	tf_type = tf_possible_types[choice]
 	. = ..()
 
+/* // Outpost 21 edit - Softdog removal
 /obj/item/gun/energy/mouseray/woof
 	name = "woof ray"
 	tf_type = /mob/living/simple_mob/vore/woof
+*/
 
 /obj/item/gun/energy/mouseray/corgi
 	name = "corgi ray"
@@ -406,7 +408,7 @@
 /obj/random/mouseray/item_to_spawn()
 	return pick(prob(300);/obj/item/gun/energy/mouseray,
 				prob(50);/obj/item/gun/energy/mouseray/corgi,
-				prob(50);/obj/item/gun/energy/mouseray/woof,
+				// prob(50);/obj/item/gun/energy/mouseray/woof, // Outpost 21 edit - Softdog removal
 				prob(50);/obj/item/gun/energy/mouseray/cat,
 				prob(50);/obj/item/gun/energy/mouseray/chicken,
 				prob(50);/obj/item/gun/energy/mouseray/lizard,
