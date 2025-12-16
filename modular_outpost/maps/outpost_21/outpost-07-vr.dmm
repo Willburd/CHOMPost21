@@ -80,7 +80,9 @@
 /obj/machinery/porta_turret/ai_defense{
 	installation = /obj/item/gun/projectile/automatic/serdy/hectate;
 	projectile = /obj/item/projectile/bullet/rifle/a145;
-	lethal_projectile = /obj/item/projectile/bullet/rifle/a145
+	lethal_projectile = /obj/item/projectile/bullet/rifle/a145;
+	lethal_shot_sound = "sound/weapons/serdy/sks.ogg";
+	shot_sound = "sound/weapons/serdy/sks.ogg"
 	},
 /turf/simulated/floor/tiled,
 /area/vr)
@@ -98,7 +100,9 @@
 	installation = /obj/item/gun/projectile/automatic/serdy/rpk;
 	projectile = /obj/item/projectile/bullet/rifle/a762;
 	lethal_projectile = /obj/item/projectile/bullet/rifle/a762;
-	shot_delay = 5
+	shot_delay = 2;
+	lethal_shot_sound = "sound/weapons/serdy/molniyab.ogg";
+	shot_sound = "sound/weapons/serdy/molniyab.ogg"
 	},
 /turf/simulated/floor/tiled,
 /area/vr)
