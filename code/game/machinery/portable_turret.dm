@@ -47,6 +47,8 @@
 	req_one_access = list(ACCESS_SECURITY, ACCESS_HEADS)
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
+	speed_process = TRUE //Outpost 21 edit - moving things to a quicker proc loop.
+
 	var/raised = FALSE			//if the turret cover is "open" and the turret is raised
 	var/raising= FALSE			//if the turret is currently opening or closing its cover
 	var/health = 80				//the turret's health

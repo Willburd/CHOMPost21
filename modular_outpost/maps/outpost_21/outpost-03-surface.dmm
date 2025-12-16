@@ -12111,7 +12111,12 @@
 "awz" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/machinery/porta_turret/ai_defense{
-	installation = /obj/item/gun/energy/lasercannon
+	installation = /obj/item/gun/projectile/automatic/serdy/rpk;
+	projectile = /obj/item/projectile/bullet/rifle/a762;
+	lethal_projectile = /obj/item/projectile/bullet/rifle/a762;
+	shot_delay = 2;
+	lethal_shot_sound = "sound/weapons/serdy/molniyab.ogg";
+	shot_sound = "sound/weapons/serdy/molniyab.ogg"
 	},
 /turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/terraform)
@@ -12123,10 +12128,14 @@
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "awB" = (
-/obj/machinery/porta_turret/ai_defense{
-	installation = /obj/item/gun/energy/lasercannon
-	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/porta_turret/ai_defense{
+	installation = /obj/item/gun/projectile/automatic/serdy/hectate;
+	projectile = /obj/item/projectile/bullet/rifle/a145;
+	lethal_projectile = /obj/item/projectile/bullet/rifle/a145;
+	lethal_shot_sound = "sound/weapons/serdy/sks.ogg";
+	shot_sound = "sound/weapons/serdy/sks.ogg"
+	},
 /turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "awC" = (
@@ -48594,6 +48603,7 @@
 /area/maintenance/disposal)
 "lzG" = (
 /obj/effect/floor_decal/spline/plain,
+/obj/structure/loot_pile/christmas_tree,
 /turf/simulated/floor/tiled/techfloor{
 	color = "#eacd7c"
 	},
@@ -76552,7 +76562,6 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/flora/tree/pine/xmas/presents,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "uit" = (
@@ -80401,7 +80410,8 @@
 	name = "Kitchen Shutters Control";
 	pixel_x = -25;
 	pixel_y = -24;
-	req_access = list(28)
+	req_access = list(28);
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/green{
 	dir = 10

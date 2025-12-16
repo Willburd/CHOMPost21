@@ -4900,7 +4900,8 @@
 /area/syndicate_mothership)
 "jX" = (
 /obj/mecha/combat/marauder/mauler{
-	internals_req_access = list(150)
+	internals_req_access = list(150);
+	mech_faction = "syndicate"
 	},
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/greengrid,
@@ -4955,7 +4956,8 @@
 "kc" = (
 /obj/mecha/combat/durand{
 	operation_req_access = list(150);
-	internals_req_access = list(150)
+	internals_req_access = list(150);
+	mech_faction = "syndicate"
 	},
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/greengrid,
