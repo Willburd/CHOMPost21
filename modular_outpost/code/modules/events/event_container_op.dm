@@ -63,6 +63,14 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bsa Test",					/datum/event/bsa_test_fire, 			3,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hostile Runtime", 			/datum/event/hostile_runtime, 			2, 		null, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Lockers", 		/datum/event/bluespace_locker, 			3, 		null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bluespace Anomaly",		/datum/event/anomaly/bluespace,			1,		null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Bioscrambler Anomaly",		/datum/event/anomaly/bioscrambler,		1,		null, TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Dimensional Anomaly",		/datum/event/anomaly/dimensional,		1,		null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Anomaly", 			/datum/event/anomaly/grav, 				1,		null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Pyroclastic Anomaly", 		/datum/event/anomaly/pyro,				1,		null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hallucination Anomaly",	/datum/event/anomaly/hallucination,		1,		null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Flux Anomaly",				/datum/event/anomaly/flux,				1,		null, TRUE),
+
 	)
 	add_disabled_events(list(
 	))
