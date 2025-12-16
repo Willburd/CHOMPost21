@@ -5069,7 +5069,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/structure/candybowl/engineering,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahr" = (
@@ -8843,7 +8843,7 @@
 "aoE" = (
 /obj/effect/floor_decal/milspec/color/purple/half,
 /obj/structure/table/standard,
-/obj/structure/candybowl/science,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "aoF" = (
@@ -11991,6 +11991,14 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
+"awi" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/item/toy/mistletoe,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled,
+/area/quartermaster/mining)
 "awj" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -21690,8 +21698,8 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/structure/candybowl/security,
 /obj/structure/table/standard,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "dta" = (
@@ -24761,8 +24769,8 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
-/obj/structure/candybowl/medical,
 /obj/structure/table/standard,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "etA" = (
@@ -63463,6 +63471,7 @@
 	dir = 8
 	},
 /obj/structure/table/woodentable,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "qjX" = (
@@ -77624,8 +77633,8 @@
 	pixel_y = -32;
 	pixel_x = -6
 	},
-/obj/structure/candybowl/cargo,
 /obj/structure/table/standard,
+/obj/item/toy/mistletoe,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "uzo" = (
@@ -88201,8 +88210,6 @@
 	},
 /obj/structure/table/glass,
 /obj/item/walkpod,
-/obj/item/toy/mistletoe,
-/obj/item/toy/mistletoe,
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "xEF" = (
@@ -96169,7 +96176,7 @@ klO
 wjC
 wjC
 yiH
-qAN
+awi
 amM
 npU
 oMD
