@@ -1,3 +1,4 @@
+#define INVENTORY_POUCH_SPACE ITEMSIZE_COST_SMALL*4 // Gotta copy this from \\code\game\objects\items\weapons\storage\pouches.dm because of fuck
 /* First aid storage
  * Contains:
  *		First Aid Kits
@@ -27,6 +28,36 @@
 		/obj/item/healthanalyzer
 	)
 
+/obj/item/storage/pouch/ifak
+	name = "Individual First Aid Kit"
+	desc = "Remember: this is YOURS, for when YOU get hit."
+	icon = 'modular_outpost/icons/obj/storage.dmi'
+	icon_state = "medical_ifak"
+	max_storage_space = INVENTORY_POUCH_SPACE*2 //Just to make sure it can hold everything, and give it a nice niche.
+	starts_with = list(
+		/obj/item/stack/medical/advanced/bruise_pack,
+		/obj/item/stack/medical/advanced/bruise_pack,
+		/obj/item/stack/medical/advanced/ointment,
+		/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+		/obj/item/stack/medical/splint,
+		/obj/item/storage/pill_bottle/assorted
+	)
+	can_hold = list(
+		/obj/item/healthanalyzer,
+		/obj/item/reagent_containers/pill,
+		/obj/item/reagent_containers/syringe,
+		/obj/item/storage/quickdraw/syringe_case,
+		/obj/item/storage/pill_bottle,
+		/obj/item/reagent_containers/hypospray/,
+		/obj/item/stack/medical,
+		/obj/item/stack/medical/splint,
+		/obj/item/stack/nanopaste,
+
+	) //much more limited than the medical case
+	remove_delay = 0 //Very fast access for your 'uh oh' moments.
+
+
+
 /obj/item/storage/pill_bottle/paroxetine
 	name = "pill bottle (Paroxetine)"
 	desc = "Stabilizes the mind greatly, but has a chance of adverse effects. Medicate cautiously."
@@ -54,3 +85,6 @@
 	reagents.add_reagent("phoron", 15)
 	//mode = SYRINGE_INJECT //VOREStation Edit - Starts capped
 	//update_icon()
+
+
+#undef INVENTORY_POUCH_SPACE //Then we banish the heathenous shitcode

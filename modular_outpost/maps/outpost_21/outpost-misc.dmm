@@ -5048,6 +5048,19 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"ki" = (
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/merc/odst,
+/obj/item/clothing/head/helmet/space/void/merc/odst,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/clothing/mask/breath,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ko" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/head/fancy_crown,
@@ -55517,8 +55530,8 @@ gU
 yb
 iE
 sg
-iB
-iB
+ki
+ki
 sg
 iB
 yb
@@ -55679,8 +55692,8 @@ kQ
 yb
 lQ
 sg
-iB
-iB
+ki
+ki
 sg
 iB
 yb

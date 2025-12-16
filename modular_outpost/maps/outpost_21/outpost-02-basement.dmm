@@ -841,6 +841,9 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 6
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
 "abJ" = (
@@ -2059,6 +2062,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "aec" = (
@@ -2319,6 +2325,9 @@
 "aeA" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 5
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
@@ -2686,6 +2695,9 @@
 "afs" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 6
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
@@ -6259,6 +6271,9 @@
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/corner/purple/full,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "alo" = (
@@ -9668,12 +9683,14 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "arg" = (
-/obj/structure/closet,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
@@ -13152,6 +13169,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
@@ -44414,6 +44434,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
+/obj/structure/blade_trap/start_active,
+/obj/item/trash/turkeybones,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/maintenance/secelevbasement)
 "bAK" = (
@@ -66887,6 +66910,30 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
+"cxL" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(1);
+	name = "Valinari's locker"
+	},
+/obj/fiftyspawner/mhydrogen,
+/turf/simulated/floor/plating,
+/area/maintenance/secelevbasement)
+"cxM" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/wall/r_wall,
+/area/security/brig)
+"cxN" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/research/anomaly_storage)
+"cxO" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
 "cyp" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -74929,6 +74976,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -123517,7 +123567,7 @@ bqN
 oFm
 oFm
 buO
-buO
+cxM
 buO
 buO
 buO
@@ -124169,7 +124219,7 @@ bvU
 buX
 bzW
 aNM
-aNM
+cxL
 bzU
 bzU
 ctT
@@ -134459,11 +134509,11 @@ bzI
 bTw
 bTm
 cct
-bSl
-bSl
+cxN
+cxN
 bSD
-bSl
-bSl
+cxN
+cxN
 bSD
 cqw
 cqv
@@ -144823,7 +144873,7 @@ aqc
 avp
 avh
 avn
-avn
+cxO
 bpj
 avn
 fwe
