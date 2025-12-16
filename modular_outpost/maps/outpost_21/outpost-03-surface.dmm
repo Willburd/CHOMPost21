@@ -253,6 +253,9 @@
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
 	},
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aax" = (
@@ -44252,6 +44255,7 @@
 /obj/item/bodybag/cryobag{
 	pixel_x = 6
 	},
+/obj/item/healthanalyzer,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
 "klb" = (
@@ -52653,7 +52657,6 @@
 /area/rnd/hallway/main)
 "mMA" = (
 /obj/structure/table/standard,
-/obj/item/healthanalyzer,
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
@@ -52666,6 +52669,10 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
 "mMH" = (
