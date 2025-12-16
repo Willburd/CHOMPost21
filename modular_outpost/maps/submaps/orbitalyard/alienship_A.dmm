@@ -279,7 +279,7 @@
 "ra" = (
 /obj/structure/table/alien,
 /obj/machinery/turretid/lethal{
-	control_area = /area/submap/outpost21/structure_generic/alienshipa;
+	control_area = "\improper Alien Vessel";
 	req_access = list(803)
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
