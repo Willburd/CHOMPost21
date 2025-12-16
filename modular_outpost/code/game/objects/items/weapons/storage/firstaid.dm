@@ -52,6 +52,7 @@
 		/obj/item/stack/medical,
 		/obj/item/stack/medical/splint,
 		/obj/item/stack/nanopaste,
+		/obj/item/clothing/mask/chewable/candy/lolli,
 
 	) //much more limited than the medical case
 	remove_delay = 0 //Very fast access for your 'uh oh' moments.
