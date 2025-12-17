@@ -47,8 +47,8 @@
 	req_one_access = list(ACCESS_SECURITY, ACCESS_HEADS)
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
-	speed_process = TRUE //Outpost 21 edit - moving things to a quicker proc loop.
-	var/last_process_time = 0 // Outpost 21 edit - Moving turrets to SSfast processing
+	speed_process = TRUE //Outpost 21 edit(port) - moving things to a quicker proc loop.
+	var/last_process_time = 0 // Outpost 21 edit(port) - Moving turrets to SSfast processing
 
 	var/raised = FALSE			//if the turret cover is "open" and the turret is raised
 	var/raising= FALSE			//if the turret is currently opening or closing its cover
@@ -680,6 +680,13 @@
 /obj/machinery/porta_turret/process()
 	//the main machinery process
 
+	// Outpost 21 edit(port) begin - Moving turrets to SSfast processing
+	var/can_heal = (last_process_time > 0) // Only heal on standard delays, not instant ticks
+	if(world.time < last_process_time + (/datum/controller/subsystem/machines::wait)) // Use the timing that the machines subsystem would have normally. Things later in this process can force us to process instantly next tick!
+		return
+	last_process_time = world.time
+	// Outpost 21 edit end
+
 	if(stat & (NOPOWER|BROKEN))
 		//if the turret has no power or is broken, make the turret pop down if it hasn't already
 		popDown()
@@ -690,12 +697,6 @@
 		popDown()
 		return
 
-	// Outpost 21 edit begin - Moving turrets to SSfast processing
-	if(world.time < last_process_time + (0.1 SECONDS)) //Temporarily set to 0.1, this needs to be increased much higher when the code is unfucked, so sleeps aren't forcing it to use this as a minimum.
-		return
-	last_process_time = world.time
-	// Outpost 21 edit end
-
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
@@ -705,7 +706,7 @@
 	if(!tryToShootAt(targets) && !tryToShootAt(secondarytargets) && --timeout <= 0)
 		popDown() // no valid targets, close the cover
 
-	if(auto_repair && (health < maxhealth))
+	if(can_heal && auto_repair && (health < maxhealth)) // Outpost 21 edit(port) - Moving turrets to SSfast processing, Only heal if we are not on an instant tick process
 		use_power(20000)
 		health = min(health+1, maxhealth) // 1HP for 20kJ
 
@@ -814,7 +815,7 @@
 	set_raised_raising(1, 0)
 	update_icon()
 	timeout = 10
-	last_process_time = 0 // Outpost 21 edit - Moving turrets to SSfast processing
+	last_process_time = 0 // Outpost 21 edit(port) - Moving turrets to SSfast processing. we just popped up let us fire instantly!
 
 /obj/machinery/porta_turret/proc/popDown()	//pops the turret down
 	set waitfor = FALSE
@@ -852,21 +853,30 @@
 			last_target = target
 			popUp()				//pop the turret up if it's not already up.
 			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
-//			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound //Outpost 21 edit - Let's make these less noisy, especially with the new fire rates.
+//			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound //Outpost 21 edit(port) - Let's make these less noisy, especially with the new fire rates.
 			spawn()
 				shootAt(target)
 			return TRUE
 	return FALSE
 
 /obj/machinery/porta_turret/proc/shootAt(var/mob/living/target)
+	// Outpost 21 edit(port) begin - Turrets moved to SSFast processing, Modified emag logic
+
 	//any emagged turrets will shoot extremely fast! This not only is deadly, but drains a lot power!
-	if(!(emagged || attacked))		//if it hasn't been emagged or attacked, it has to obey a cooldown rate
-		if(last_fired || !raised)	//prevents rapid-fire shooting, unless it's been emagged
-			return
-		last_fired = TRUE
-		spawn()
-			sleep(shot_delay)
-			last_fired = FALSE
+	var/current_delay = shot_delay
+	if(emagged || attacked)		//if it hasn't been emagged or attacked, it has to obey a cooldown rate
+		current_delay = min(shot_delay,0.6 SECONDS) // Emag fire rate
+
+	if(last_fired || !raised)	//prevents rapid-fire shooting, unless it's been emagged
+		return
+	last_fired = TRUE
+
+	spawn()
+		sleep(current_delay)
+		last_fired = FALSE
+		last_process_time = 0
+
+	// Outpost 21 edit end
 
 	if(!isturf(get_turf(src)) || !isturf(get_turf(target)))
 		return
@@ -906,7 +916,6 @@
 
 	// Reset the time needed to go back down, since we just tried to shoot at someone.
 	timeout = 10
-	last_process_time = 0 // Outpost 21 edit - Moving turrets to SSfast processing
 
 /datum/turret_checks
 	var/enabled
