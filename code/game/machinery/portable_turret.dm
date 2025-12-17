@@ -852,7 +852,7 @@
 			last_target = target
 			popUp()				//pop the turret up if it's not already up.
 			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
-			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
+//			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound //Outpost 21 edit - Let's make these less noisy, especially with the new fire rates.
 			spawn()
 				shootAt(target)
 			return TRUE

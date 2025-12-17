@@ -5671,6 +5671,7 @@
 #include "modular_outpost\code\game\machinery\newscaster.dm"
 #include "modular_outpost\code\game\machinery\nuclear_bomb.dm"
 #include "modular_outpost\code\game\machinery\oxygen_pump.dm"
+#include "modular_outpost\code\game\machinery\portable_turret.dm"
 #include "modular_outpost\code\game\machinery\sleeper.dm"
 #include "modular_outpost\code\game\machinery\trailblazer.dm"
 #include "modular_outpost\code\game\machinery\vox_pump.dm"

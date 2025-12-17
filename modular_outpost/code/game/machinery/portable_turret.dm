@@ -4,6 +4,7 @@
 	installation = /obj/item/gun/energy/lasercannon //Bigger gun, bigger ow
 	health = 400 // Since lasers do 40 each. //op- So 10 hits~? Sounds fair~
 	maxhealth = 400
+	shot_delay = 2 SECONDS //These are... a bit nasty so let's slow them down.
 	auto_repair = TRUE
 	lethal = TRUE
 	lethal_is_configurable = FALSE //Always angry, always lethal
@@ -39,6 +40,20 @@
 	installation = /obj/item/gun/projectile/automatic/serdy/rpk //Give the syndies a different gun
 	shot_delay = 0.18 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
 	reqpower = 50
+
+/obj/machinery/porta_turret/heavy/target(var/mob/living/target)
+	if(disabled)
+		return FALSE
+	if(target)
+		if(target in check_trajectory(target, src))	//Finally, check if we can actually hit the target
+			last_target = target
+			popUp()				//pop the turret up if it's not already up.
+			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
+//			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
+			spawn()
+				shootAt(target)
+			return TRUE
+	return FALSE
 
 //This seems hacky as fuck, taken from the alien turrets.
 /obj/machinery/porta_turret/heavy/emp_act(severity, recursive) // This is overrided to give an EMP resistance as well as avoid scambling the turret settings.
