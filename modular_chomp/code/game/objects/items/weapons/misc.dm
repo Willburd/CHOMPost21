@@ -14,7 +14,7 @@
 	. = ..()
 	if(AM.is_incorporeal())
 		return
-	if(isliving(loc) && loc != AM) // Must be in a mob's hand
+	if(loc != AM) // Must be in a mob's hand
 		return
-	if(prob(40))
+	if(prob(30))
 		playsound(src, 'modular_outpost/sound/misc/jbells.ogg', 90, 1)
