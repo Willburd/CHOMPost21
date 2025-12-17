@@ -5249,6 +5249,7 @@
 #include "modular_chomp\code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "modular_chomp\code\game\objects\items\devices\radio\headset.dm"
 #include "modular_chomp\code\game\objects\items\devices\radio\radio.dm"
+#include "modular_chomp\code\game\objects\items\weapons\misc.dm"
 #include "modular_chomp\code\game\objects\items\weapons\RCD.dm"
 #include "modular_chomp\code\game\objects\items\weapons\melee\shock_maul.dm"
 #include "modular_chomp\code\game\objects\items\weapons\storage\backpack.dm"
