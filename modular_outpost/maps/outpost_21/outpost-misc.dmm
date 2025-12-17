@@ -2328,7 +2328,9 @@
 	},
 /area/syndicate_mothership)
 "fC" = (
-/mob/living/simple_mob/animal/synx/ai/pet/synth/goodboy,
+/mob/living/simple_mob/animal/synx/ai/pet/synth/goodboy{
+	faction = "vox"
+	},
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -5063,6 +5065,42 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kj" = (
+/obj/machinery/porta_turret/alien{
+	check_all = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0
+	},
+/turf/simulated/mineral,
+/area/space)
+"kk" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/table/rack/steel,
+/obj/machinery/door/window/northright{
+	name = "light rig"
+	},
+/obj/item/clothing/suit/armor/alien,
+/obj/item/clothing/suit/armor/alien,
+/obj/item/clothing/suit/armor/alien,
+/obj/item/clothing/suit/armor/alien,
+/obj/item/clothing/suit/armor/alien,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
+"kl" = (
+/obj/item/paper{
+	info = "Set your faction to vox. Skipjack needs acces 300 to fly."
+	},
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/syndicate_mothership)
 "ko" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/head/fancy_crown,
@@ -5899,7 +5937,8 @@
 	check_all = 0;
 	check_anomalies = 0;
 	check_arrest = 0;
-	check_records = 0
+	check_records = 0;
+	faction = "vox"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
@@ -6410,7 +6449,8 @@
 	check_all = 0;
 	check_anomalies = 0;
 	check_arrest = 0;
-	check_records = 0
+	check_records = 0;
+	faction = "vox"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
@@ -6706,7 +6746,8 @@
 	check_all = 0;
 	check_anomalies = 0;
 	check_arrest = 0;
-	check_records = 0
+	check_records = 0;
+	faction = "vox"
 	},
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
@@ -7860,8 +7901,12 @@
 	},
 /area/shuttle/skipjack)
 "zV" = (
-/obj/machinery/pointdefense{
-	id_tag = "trawler_pd"
+/obj/machinery/porta_turret/alien{
+	check_all = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0;
+	faction = "vox"
 	},
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/skipjack)
@@ -7946,7 +7991,8 @@
 /area/shuttle/skipjack)
 "At" = (
 /obj/machinery/computer/shuttle_control/multi/skipjack{
-	dir = 8
+	dir = 8;
+	req_access = list(300)
 	},
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
@@ -8074,7 +8120,8 @@
 	check_all = 0;
 	check_anomalies = 0;
 	check_arrest = 0;
-	check_records = 0
+	check_records = 0;
+	faction = "vox"
 	},
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
@@ -8231,13 +8278,6 @@
 /obj/item/storage/firstaid/bonemed,
 /obj/item/storage/firstaid/clotting,
 /turf/simulated/shuttle/floor/alien/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/shuttle/skipjack)
-"BF" = (
-/obj/machinery/pointdefense_control,
-/turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -11436,15 +11476,6 @@
 /obj/machinery/dna_scannernew,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
-"Xj" = (
-/obj/machinery/porta_turret/alien{
-	check_all = 0;
-	check_anomalies = 0;
-	check_arrest = 0;
-	check_records = 0
-	},
-/turf/simulated/shuttle/plating/airless,
-/area/shuttle/skipjack)
 "Xk" = (
 /obj/structure/bed/chair/comfy/black,
 /turf/simulated/shuttle/floor/black,
@@ -64291,7 +64322,7 @@ TW
 TW
 TW
 TW
-TW
+kj
 TW
 TW
 TW
@@ -65398,7 +65429,7 @@ TW
 wR
 sx
 wZ
-wZ
+kl
 wZ
 wZ
 wZ
@@ -66731,7 +66762,7 @@ AY
 AW
 AY
 AY
-BF
+AY
 Bm
 mN
 mN
@@ -66863,7 +66894,7 @@ wZ
 qb
 ru
 wZ
-sO
+kk
 wR
 TW
 mN
@@ -67205,11 +67236,11 @@ DE
 Bm
 Bm
 Bm
-Vs
+zV
 Vs
 yI
 Vs
-Xj
+zV
 Bm
 zO
 Au
