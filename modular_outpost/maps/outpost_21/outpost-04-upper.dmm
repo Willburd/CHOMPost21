@@ -2740,6 +2740,14 @@
 /obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
+"afW" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
+/area/muriki/skyline/west)
 "agj" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
@@ -4340,10 +4348,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
-"aTS" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
-/area/muriki/skyline/west)
 "aUb" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1381;
@@ -13792,7 +13796,6 @@
 /area/maintenance/gravgen)
 "fxy" = (
 /obj/structure/railing,
-/obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/prop/machine/core/starts_on{
 	name = "Bluespace Inhibitor";
 	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
@@ -24431,7 +24434,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/prop/machine/core/starts_on{
 	name = "Bluespace Inhibitor";
 	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
@@ -31058,13 +31060,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
-"ohE" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
-/area/muriki/skyline/west)
 "ohM" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -33757,13 +33752,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/rnd/rdoffice)
-"pvv" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
-/area/muriki/skyline/west)
 "pvw" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Elevator Gravity Assist - North"
@@ -42844,12 +42832,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
-"tPd" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
-/area/muriki/skyline/west)
 "tPp" = (
 /obj/structure/sign/directions/outpost/gen{
 	dir = 4;
@@ -55906,7 +55888,7 @@ aeL
 aeL
 aeL
 aeL
-aeL
+aeK
 vKq
 wqX
 bpJ
@@ -56719,7 +56701,7 @@ aeK
 aeK
 aeK
 aeK
-aeL
+aeK
 aeK
 aeK
 aeK
@@ -57035,7 +57017,7 @@ cgR
 cgR
 cgR
 cgR
-wlx
+cgR
 wlx
 aeK
 aeK
@@ -58502,7 +58484,7 @@ wlx
 cgR
 cgR
 cgR
-aeL
+cgR
 aeL
 aeL
 aeL
@@ -58988,7 +58970,7 @@ cgR
 cgR
 qMg
 qMg
-qMg
+cgR
 cgR
 aeP
 aeK
@@ -61115,10 +61097,10 @@ dWV
 dWV
 dWV
 dWV
-aTS
-aTS
-tPd
-pvv
+hoH
+run
+aaV
+ttw
 ttw
 ttw
 ttw
@@ -61276,11 +61258,11 @@ dWV
 dWV
 dWV
 dWV
-aTS
-aTS
 hoH
-hoH
+eqt
 run
+aaV
+ttw
 ttw
 ttw
 ttw
@@ -61438,11 +61420,11 @@ dWV
 dWV
 dWV
 kLN
-aTS
-hoH
-eqt
-hoH
-run
+lGd
+lGd
+afW
+aaV
+ttw
 ttw
 ttw
 ttw
@@ -61600,11 +61582,11 @@ dWV
 dWV
 aaV
 aaV
-sMo
-hoH
-hoH
-wTh
-run
+aaV
+aaV
+aaV
+aaV
+ttw
 ttw
 ttw
 ttw
@@ -61762,11 +61744,11 @@ dWV
 aaV
 aaV
 ttw
-nPk
-lGd
-lGd
-lGd
-ohE
+ttw
+ttw
+ttw
+ttw
+ttw
 ttw
 ttw
 ttw
