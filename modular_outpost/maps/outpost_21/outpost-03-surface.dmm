@@ -6502,6 +6502,12 @@
 	outdoors = 0
 	},
 /area/engineering/engine_room)
+"akj" = (
+/obj/machinery/camera/motion/command{
+	c_tag = "COM - Terraformer Access Entry"
+	},
+/turf/simulated/floor/redgrid/off,
+/area/muriki/processor/euth)
 "akk" = (
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
@@ -12110,14 +12116,7 @@
 /area/muriki/grounds/terraform)
 "awz" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/machinery/porta_turret/ai_defense{
-	installation = /obj/item/gun/projectile/automatic/serdy/rpk;
-	projectile = /obj/item/projectile/bullet/rifle/a762;
-	lethal_projectile = /obj/item/projectile/bullet/rifle/a762;
-	shot_delay = 2;
-	lethal_shot_sound = "sound/weapons/serdy/molniyab.ogg";
-	shot_sound = "sound/weapons/serdy/molniyab.ogg"
-	},
+/obj/machinery/porta_turret/heavy/lmg,
 /turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "awA" = (
@@ -12129,13 +12128,7 @@
 /area/muriki/grounds/terraform)
 "awB" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/machinery/porta_turret/ai_defense{
-	installation = /obj/item/gun/projectile/automatic/serdy/hectate;
-	projectile = /obj/item/projectile/bullet/rifle/a145;
-	lethal_projectile = /obj/item/projectile/bullet/rifle/a145;
-	lethal_shot_sound = "sound/weapons/serdy/sks.ogg";
-	shot_sound = "sound/weapons/serdy/sks.ogg"
-	},
+/obj/machinery/porta_turret/heavy/sniper,
 /turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "awC" = (
@@ -12160,7 +12153,7 @@
 /area/muriki/processor/euth)
 "awG" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/machinery/camera/network/outside{
+/obj/machinery/camera/motion/command{
 	c_tag = "EXT - Terraformer Access East";
 	dir = 4
 	},
@@ -12247,13 +12240,10 @@
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
 "awU" = (
-/obj/machinery/porta_turret/ai_defense{
-	use_power = 0;
-	installation = /obj/item/gun/energy/lasercannon
-	},
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
 "awV" = (
@@ -12265,13 +12255,10 @@
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
 "awW" = (
-/obj/machinery/porta_turret/ai_defense{
-	use_power = 0;
-	installation = /obj/item/gun/energy/lasercannon
-	},
 /obj/structure/window/plastitanium{
 	dir = 8
 	},
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
 "awX" = (
@@ -12301,11 +12288,11 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "axa" = (
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Terraformer Euthanizer Defense"
-	},
 /obj/structure/sign/secure_eshui_facility_highsec{
 	pixel_y = 32
+	},
+/obj/machinery/camera/motion/command{
+	c_tag = "COM - Terraformer Euthanizer Last Defense"
 	},
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
@@ -12346,7 +12333,7 @@
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
 "axf" = (
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/motion/command{
 	c_tag = "COM - Terraformer Euthanizer Access";
 	dir = 1
 	},
@@ -17357,13 +17344,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/brig/drunk)
-"bWj" = (
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Terraformer Access Entry";
-	dir = 4
-	},
-/turf/simulated/floor/redgrid/off,
-/area/muriki/processor/euth)
 "bWn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -37335,10 +37315,10 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/qm)
 "iku" = (
-/obj/machinery/camera/network/outside{
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/camera/motion/command{
 	c_tag = "EXT - Terraformer Access South"
 	},
-/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "ikC" = (
@@ -60278,7 +60258,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/motion/command{
 	c_tag = "COM - Terraformer Euthanizer";
 	dir = 1
 	},
@@ -99169,7 +99149,7 @@ ixt
 nyl
 nLl
 hHl
-bWj
+ecA
 awE
 nLl
 jms
@@ -99330,7 +99310,7 @@ nyl
 eJe
 eJe
 vRJ
-ecA
+akj
 fGR
 ecA
 awD

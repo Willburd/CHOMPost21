@@ -48,6 +48,7 @@
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
 	speed_process = TRUE //Outpost 21 edit - moving things to a quicker proc loop.
+	var/last_process_time = 0 // Outpost 21 edit - Moving turrets to SSfast processing
 
 	var/raised = FALSE			//if the turret cover is "open" and the turret is raised
 	var/raising= FALSE			//if the turret is currently opening or closing its cover
@@ -689,6 +690,12 @@
 		popDown()
 		return
 
+	// Outpost 21 edit begin - Moving turrets to SSfast processing
+	if(world.time < last_process_time + (0.1 SECONDS)) //Temporarily set to 0.1, this needs to be increased much higher when the code is unfucked, so sleeps aren't forcing it to use this as a minimum.
+		return
+	last_process_time = world.time
+	// Outpost 21 edit end
+
 	var/list/targets = list()			//list of primary targets
 	var/list/secondarytargets = list()	//targets that are least important
 
@@ -807,6 +814,7 @@
 	set_raised_raising(1, 0)
 	update_icon()
 	timeout = 10
+	last_process_time = 0 // Outpost 21 edit - Moving turrets to SSfast processing
 
 /obj/machinery/porta_turret/proc/popDown()	//pops the turret down
 	set waitfor = FALSE
@@ -898,6 +906,7 @@
 
 	// Reset the time needed to go back down, since we just tried to shoot at someone.
 	timeout = 10
+	last_process_time = 0 // Outpost 21 edit - Moving turrets to SSfast processing
 
 /datum/turret_checks
 	var/enabled

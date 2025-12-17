@@ -4,13 +4,9 @@
 	installation = /obj/item/gun/energy/lasercannon //Bigger gun, bigger ow
 	health = 400 // Since lasers do 40 each. //op- So 10 hits~? Sounds fair~
 	maxhealth = 400
-	shot_delay = 1.5 SECONDS
 	auto_repair = TRUE
 	lethal = TRUE
 	lethal_is_configurable = FALSE //Always angry, always lethal
-	check_synth	 = TRUE	//if active, will shoot at anything not an AI or cyborg
-	check_all = TRUE		//If active, will fire on anything, including synthetics.
-	power_mult = 0.5 //More efficient.
 
 /obj/machinery/porta_turret/heavy/sniper
 	name = "hardened defense turret"
@@ -21,6 +17,7 @@
 	shot_sound = "sound/weapons/serdy/sks.ogg"
 	lethal_shot_sound = "sound/weapons/serdy/sks.ogg"
 	shot_delay = 2.5 SECONDS //Slower firing, but it hits like a truck. 1 shot will almost down you, 2 will paincrit. 3 confirms the kill.
+	reqpower = 50 //Significantly less, due to actual gun, not laser
 
 /obj/machinery/porta_turret/heavy/lmg
 	name = "hardened defense turret"
@@ -31,15 +28,17 @@
 	shot_sound = "sound/weapons/Gunshot_light.ogg"
 	lethal_shot_sound = "sound/weapons/Gunshot_light.ogg"
 	shot_delay = 0.18 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
+	reqpower = 50
 
 /obj/machinery/porta_turret/stationary/CIWS //Why do the AA guns suck?
 	installation = /obj/item/gun/projectile/automatic/l6_saw
-	shot_delay = 0.1 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
+	shot_delay = 0.18 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
+	reqpower = 50
 
 /obj/machinery/porta_turret/stationary/syndie/CIWS
 	installation = /obj/item/gun/projectile/automatic/serdy/rpk //Give the syndies a different gun
-	shot_delay = 0.1 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
-
+	shot_delay = 0.18 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
+	reqpower = 50
 
 //This seems hacky as fuck, taken from the alien turrets.
 /obj/machinery/porta_turret/heavy/emp_act(severity, recursive) // This is overrided to give an EMP resistance as well as avoid scambling the turret settings.

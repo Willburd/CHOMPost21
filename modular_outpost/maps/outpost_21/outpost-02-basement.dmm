@@ -62414,6 +62414,9 @@
 "cmH" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mine/claymore,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
 "cmI" = (
@@ -66913,13 +66916,17 @@
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
+/obj/machinery/camera/motion/command{
+	c_tag = "COM - Terraformer Ventillation Access";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
 "cxQ" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
 "cxR" = (
@@ -66948,8 +66955,8 @@
 	},
 /area/muriki/processor/hall)
 "cxS" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/structure/window/phoronreinforced,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
 "cxT" = (
