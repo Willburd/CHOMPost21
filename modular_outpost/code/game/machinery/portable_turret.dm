@@ -4,6 +4,7 @@
 	installation = /obj/item/gun/energy/lasercannon //Bigger gun, bigger ow
 	health = 400 // Since lasers do 40 each. //op- So 10 hits~? Sounds fair~
 	maxhealth = 400
+	faction = "outpost21" //Makes sure specific station critters, like swoopies, aren't targeted
 	shot_delay = 2 SECONDS //These are... a bit nasty so let's slow them down.
 	auto_repair = TRUE
 	lethal = TRUE
