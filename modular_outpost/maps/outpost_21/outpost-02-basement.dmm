@@ -13384,7 +13384,6 @@
 	},
 /obj/machinery/turretid/lethal{
 	check_all = 1;
-	control_area = "\improper Facility Terraformer Base";
 	name = "Terraformer Gas Return Defenses";
 	req_access = null;
 	pixel_y = -32;
