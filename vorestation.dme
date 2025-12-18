@@ -5845,6 +5845,7 @@
 #include "modular_outpost\code\modules\mob\new_player\sprite_accessories_scav.dm"
 #include "modular_outpost\code\modules\multiz\misc.dm"
 #include "modular_outpost\code\modules\organs\internal\butts.dm"
+#include "modular_outpost\code\modules\organs\internal\horror.dm"
 #include "modular_outpost\code\modules\organs\internal\augment\armmounted.dm"
 #include "modular_outpost\code\modules\pda\cart.dm"
 #include "modular_outpost\code\modules\pda\cart_apps.dm"
