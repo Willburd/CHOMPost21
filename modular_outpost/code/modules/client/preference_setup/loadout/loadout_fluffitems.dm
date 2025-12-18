@@ -51,7 +51,7 @@
 	display_name = "ESHUI Medal of Valor"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sol/eshui
 	ckeywhitelist = list("darklord92","remthebold","ozydev","astraether","atcman","synxplushy","natesaruli","valinari")
-	character_name = list("Tesum Shari","Trashfire","Cracker","Astra Ether","Flit","Ruben Softclaw","Sitka Niteshade","Cecil Auchmir","Valinari Sandivi Gloria")
+	character_name = list("Tesum Shari","Trashfire","Cracker","Astra Ether","Flit","Ruben Softclaw","Sitka Niteshade","Cecil Colfax","Valinari Sandivi Gloria")
 
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
