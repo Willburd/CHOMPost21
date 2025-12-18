@@ -566,13 +566,13 @@
 		user.setClickCooldown(user.get_attack_speed(I))
 		take_damage(I.force * 0.5)
 		if(I.force * 0.5 > 1) //if the force of impact dealt at least 1 damage, the turret gets pissed off
-			if(!attacked && !emagged)
+			if(!attacked && !emagged && !(stat & (NOPOWER|BROKEN))) // Outpost 21 edit - Turrets use SSFast, check broken on retaliate
 				attacked = 1
-				playsound(src, 'sound/machines/buzzbeep.ogg', 100, 1) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
+				playsound(src, 'sound/machines/terminal_alert.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
 				spawn()
 					sleep(1.5 SECONDS) // Outpost 21 edit - Turrets use SSFast, lower retaliation time
 					attacked = 0
-					playsound(src, 'sound/machines/terminal_alert.ogg', 100, 1) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
+					playsound(src, 'sound/machines/buzzbeep.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
 
 		..()
 
@@ -619,12 +619,14 @@
 	if(!damage)
 		return
 
-	if(enabled)
+	if(enabled && !(stat & (NOPOWER|BROKEN))) // Outpost 21 edit - Turrets use SSFast, check broken on retaliate
 		if(!attacked && !emagged)
 			attacked = 1
+			playsound(src, 'sound/machines/terminal_alert.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
 			spawn()
 				sleep(60)
 				attacked = FALSE
+				playsound(src, 'sound/machines/buzzbeep.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
 
 	..()
 
