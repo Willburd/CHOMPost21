@@ -11,12 +11,12 @@
 // do not feed their withdrawls. The handle_addiction proc also handles if you become cured of your addiction! If it returns 0, it will end your addiction.
 
 // Outpost 21 edit begin - Faster addictions
-#define ADDICTION_PROC -2000
-#define SLOWADDICT_PROC -6000
-// Outpost 21 edit end
-#define FASTADDICT_PROC -1000
+#define SLOWADDICT_PROC -1000
+#define ADDICTION_PROC -750
+#define FASTADDICT_PROC -500
 #define POISONADDICT_PROC -100
-#define ADDICTION_PEAK 300
+#define ADDICTION_PEAK 250
+// Outpost 21 edit end
 
 /mob/living/carbon/proc/sync_addictions()
 	SHOULD_NOT_OVERRIDE(TRUE)
