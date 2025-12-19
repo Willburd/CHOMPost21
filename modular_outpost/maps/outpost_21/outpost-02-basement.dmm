@@ -76389,13 +76389,6 @@
 "mXl" = (
 /turf/simulated/wall,
 /area/maintenance/civ/closet)
-"mXt" = (
-/obj/vehicle/has_interior/controller/heavyarmor_medic{
-	haskey = 0;
-	interior_area = /area/vehicle_interior/heavyarmor_medic_recovery
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/medical/tankstore)
 "mYL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -124208,7 +124201,7 @@ gpp
 sdW
 aSe
 aSe
-mXt
+aSe
 aSe
 aWS
 cta
