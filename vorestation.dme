@@ -5701,6 +5701,7 @@
 #include "modular_outpost\code\game\objects\effects\map_effects\terraformer_glands.dm"
 #include "modular_outpost\code\game\objects\effects\posters\eshui.dm"
 #include "modular_outpost\code\game\objects\effects\posters\postersubtypes.dm"
+#include "modular_outpost\code\game\objects\effects\posters\willlewd.dm"
 #include "modular_outpost\code\game\objects\items\candybowl.dm"
 #include "modular_outpost\code\game\objects\items\crayons.dm"
 #include "modular_outpost\code\game\objects\items\whoopiecushion.dm"
