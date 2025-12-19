@@ -8,9 +8,11 @@
 
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios
+
 	for(var/obj/item/radio/R as anything in radios)
 		if(get_turf(R))
 			var/list/current_batch = list()
+			var/list/holding_personal_radio = list()
 
 			// Get all turfs with stuff in it that could be listening
 			for(var/turf/T in R.can_broadcast_to())
@@ -20,10 +22,13 @@
 
 			// We only want mobs who can reasonably hear us to get radio messages
 			for(var/mob/M in current_batch)
-				if(!M.client || (!(R in view(world.view,get_turf(M))) && !(R in M.contents)) )
+				if( !M.client || !(R in view(world.view,get_turf(M))) )
 					current_batch -= M
+					if(R.loc == M)
+						holding_personal_radio |= M
 
 			. |= current_batch
+			. |= holding_personal_radio
 
 	for (var/mob/M as anything in .)
 		if (!istype(M) || !M.client)
