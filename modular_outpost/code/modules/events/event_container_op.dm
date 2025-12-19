@@ -85,6 +85,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disease Outbreak",	/datum/event/disease_outbreak				,3	, null, TRUE, min_jobs = list(DEPARTMENT_MEDICAL = 2)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Chu Infestation",		/datum/event/chu_infestation				,2	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Jil Infestation",		/datum/event/jil_infestation				,3	, null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Mouse Assault",		/datum/event/mouse_assualt					,1	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clowns",				/datum/event/clune_infestation				,2	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Redspace",			/datum/event/redspacefissure				,2	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psychic Screach",		/datum/event/psychic_screach				,2  , null, TRUE),
