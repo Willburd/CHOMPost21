@@ -8257,6 +8257,20 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
+"ann" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/obj/item/clothing/head/santa,
+/turf/simulated/floor/carpet/turcarpet,
+/area/hallway/secondary/entry/docking_lounge)
 "ano" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
@@ -63522,7 +63536,16 @@
 	dir = 8
 	},
 /obj/structure/table/woodentable,
-/obj/item/toy/mistletoe,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
+/obj/item/clothing/head/santa/green,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "qjX" = (
@@ -136586,7 +136609,7 @@ rTX
 jIn
 sVJ
 sLE
-hHZ
+ann
 hHZ
 hqJ
 nBo

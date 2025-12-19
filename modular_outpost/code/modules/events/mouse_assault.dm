@@ -18,7 +18,7 @@
 	while(spawncount > 0 && possibleSpawnspots.len)
 		var/turf/spawnspot = get_turf(pick(possibleSpawnspots))
 
-		var/subcount = pick(1,3)
+		var/subcount = pick(0,0,1,2)
 		while(subcount > 0)
 			var/chosen_rat = pick(
 			list(
@@ -32,7 +32,7 @@
 			C.ai_holder.violent_breakthrough = TRUE // OHNO
 			subcount--
 
-		subcount = pick(3,5)
+		subcount = pick(2,3,4)
 		while(subcount > 0)
 			var/chosen_rat = pick(
 			list(
