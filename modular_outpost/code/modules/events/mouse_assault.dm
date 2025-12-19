@@ -29,7 +29,7 @@
 			C.ai_holder.hostile = TRUE // OHNO
 			C.ai_holder.violent_breakthrough = TRUE // OHNO
 
-		subcount = pick(2,3,4)
+		var/subcount = pick(2,3,4)
 		while(subcount > 0)
 			var/chosen_rat = pick(
 			list(
