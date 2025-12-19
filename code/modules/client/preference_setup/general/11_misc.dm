@@ -103,7 +103,7 @@
 			if(QDELETED(character) || QDELETED(pref) || character.GetComponent(/datum/component/badbody)) // Outpost 21 edit - Disable if badbody
 				return // They might have been deleted during the wait
 			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/perform_exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore
-				if(want_body_save)
+				if(want_body_save && !(character.species.flags & NO_SLEEVE)) // Nosleeve flag overrides character pref editor. Otherwise resleevable species still get one even if they took a trait to not be sleevable.
 					var/datum/transhuman/body_record/BR = new()
 					BR.init_from_mob(character, TRUE, pref.resleeve_lock)
 				if(want_mind_save)
