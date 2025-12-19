@@ -47,6 +47,9 @@
 	req_one_access = list(ACCESS_SECURITY, ACCESS_HEADS)
 	blocks_emissive = EMISSIVE_BLOCK_UNIQUE
 
+	speed_process = TRUE //Outpost 21 edit(port) - moving things to a quicker proc loop.
+	var/last_process_time = 0 // Outpost 21 edit(port) - Moving turrets to SSfast processing
+
 	var/raised = FALSE			//if the turret cover is "open" and the turret is raised
 	var/raising= FALSE			//if the turret is currently opening or closing its cover
 	var/health = 80				//the turret's health
@@ -563,11 +566,14 @@
 		user.setClickCooldown(user.get_attack_speed(I))
 		take_damage(I.force * 0.5)
 		if(I.force * 0.5 > 1) //if the force of impact dealt at least 1 damage, the turret gets pissed off
-			if(!attacked && !emagged)
+			if(!attacked && !emagged && !(stat & (NOPOWER|BROKEN))) // Outpost 21 edit - Turrets use SSFast, check broken on retaliate
 				attacked = 1
+				playsound(src, 'sound/machines/terminal_alert.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
 				spawn()
-					sleep(60)
+					sleep(1.5 SECONDS) // Outpost 21 edit - Turrets use SSFast, lower retaliation time
 					attacked = 0
+					playsound(src, 'sound/machines/buzzbeep.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
+
 		..()
 
 /obj/machinery/porta_turret/attack_generic(mob/living/L, damage)
@@ -613,12 +619,14 @@
 	if(!damage)
 		return
 
-	if(enabled)
+	if(enabled && !(stat & (NOPOWER|BROKEN))) // Outpost 21 edit - Turrets use SSFast, check broken on retaliate
 		if(!attacked && !emagged)
 			attacked = 1
+			playsound(src, 'sound/machines/terminal_alert.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
 			spawn()
 				sleep(60)
 				attacked = FALSE
+				playsound(src, 'sound/machines/buzzbeep.ogg', 150) // Outpost 21 edit - Turrets use SSFast, notify when finished retaliation mode
 
 	..()
 
@@ -677,6 +685,13 @@
 /obj/machinery/porta_turret/process()
 	//the main machinery process
 
+	// Outpost 21 edit(port) begin - Moving turrets to SSfast processing
+	var/can_heal = (last_process_time > 0) // Only heal on standard delays, not instant ticks
+	if(world.time < last_process_time + (/datum/controller/subsystem/machines::wait)) // Use the timing that the machines subsystem would have normally. Things later in this process can force us to process instantly next tick!
+		return
+	last_process_time = world.time
+	// Outpost 21 edit end
+
 	if(stat & (NOPOWER|BROKEN))
 		//if the turret has no power or is broken, make the turret pop down if it hasn't already
 		popDown()
@@ -696,7 +711,7 @@
 	if(!tryToShootAt(targets) && !tryToShootAt(secondarytargets) && --timeout <= 0)
 		popDown() // no valid targets, close the cover
 
-	if(auto_repair && (health < maxhealth))
+	if(can_heal && auto_repair && (health < maxhealth)) // Outpost 21 edit(port) - Moving turrets to SSfast processing, Only heal if we are not on an instant tick process
 		use_power(20000)
 		health = min(health+1, maxhealth) // 1HP for 20kJ
 
@@ -805,6 +820,7 @@
 	set_raised_raising(1, 0)
 	update_icon()
 	timeout = 10
+	last_process_time = 0 // Outpost 21 edit(port) - Moving turrets to SSfast processing. we just popped up let us fire instantly!
 
 /obj/machinery/porta_turret/proc/popDown()	//pops the turret down
 	set waitfor = FALSE
@@ -842,21 +858,30 @@
 			last_target = target
 			popUp()				//pop the turret up if it's not already up.
 			set_dir(get_dir(src, target))	//even if you can't shoot, follow the target
-			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound
+//			playsound(src, 'sound/machines/turrets/turret_rotate.ogg', 100, 1) // Play rotating sound //Outpost 21 edit(port) - Let's make these less noisy, especially with the new fire rates.
 			spawn()
 				shootAt(target)
 			return TRUE
 	return FALSE
 
 /obj/machinery/porta_turret/proc/shootAt(var/mob/living/target)
+	// Outpost 21 edit(port) begin - Turrets moved to SSFast processing, Modified emag logic
+
 	//any emagged turrets will shoot extremely fast! This not only is deadly, but drains a lot power!
-	if(!(emagged || attacked))		//if it hasn't been emagged or attacked, it has to obey a cooldown rate
-		if(last_fired || !raised)	//prevents rapid-fire shooting, unless it's been emagged
-			return
-		last_fired = TRUE
-		spawn()
-			sleep(shot_delay)
-			last_fired = FALSE
+	var/current_delay = shot_delay
+	if(emagged || attacked)		//if it hasn't been emagged or attacked, it has to obey a cooldown rate
+		current_delay = min(shot_delay,0.6 SECONDS) // Emag fire rate
+
+	if(last_fired || !raised)	//prevents rapid-fire shooting, unless it's been emagged
+		return
+	last_fired = TRUE
+
+	spawn()
+		sleep(current_delay)
+		last_fired = FALSE
+		last_process_time = 0
+
+	// Outpost 21 edit end
 
 	if(!isturf(get_turf(src)) || !isturf(get_turf(target)))
 		return

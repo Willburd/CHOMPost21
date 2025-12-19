@@ -218,6 +218,8 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/synth/rstartup,
 	/decl/emote/audible/synth/rshutdown,
 	/decl/emote/audible/synth/error,
+	/decl/emote/audible/synth/rberr,
+	/decl/emote/audible/synth/rbpos,
 	//outpost 21 add end
 )
 
@@ -388,6 +390,8 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/synth/rstartup,
 	/decl/emote/audible/synth/rshutdown,
 	/decl/emote/audible/synth/error,
+	/decl/emote/audible/synth/rberr,
+	/decl/emote/audible/synth/rbpos,
 	//outpost 21 add end
 	)
 	//VOREStation Add End

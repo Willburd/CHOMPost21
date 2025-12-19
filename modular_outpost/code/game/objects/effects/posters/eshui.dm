@@ -82,6 +82,12 @@
 	listing_name = "Beware the Changeling Threat"
 	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
 
+/decl/poster/eshui/outpost_reomakeout
+	icon_state="reomakeout"
+	name = "Love Wins"
+	desc = "I've come to make an announcement, Willburd the Bird is a bitch ass motherfucker he pissed on my fucking Disposal Code. That's right, he took his avian fucking feather-y dick out and he pissed on my fucking disposals and he said his dick was \"using signals\" and I said \"That's disgusting.\" so I'm making a call-out post on my github dot com. Willburd the Bird you got a small dick, it's the size of this walnut except way smaller, and guess what? Here's what my PR looks like. That's right baby, all verbs, no elements, no components, look at that it looks like two runtimes and a hard del! He fucked my disposals, so guess what? I'm gonna fuck the Codebase! That's right, this is what you get! My super laser refactor! Except I'm not gonna refactor on the Codebase. I'm gonna go higher. I'm prob(80)ing on THE ATMOS! How do you like that Kash? I PROB(80)ED ON THE ATMOS YOU IDIOT! You have 23 hours until the atmos optimizations hit the fucking Codebase, now get out of my fucking sight before I refactor on you too."
+	listing_name = "Love Wins"
+	icon_override = 'modular_outpost/icons/obj/contraband.dmi'
 
 // NSFW/hidden posters
 /decl/poster/lewd/eshui

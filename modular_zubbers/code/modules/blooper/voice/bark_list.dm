@@ -3,6 +3,8 @@
 
 /datum/controller/subsystem/sounds/create_talk_sound_map()
 	. = ..() // Extend the base sounds!
+	talk_sound_map["Vox Shriek"] = list('sound/voice/shriek1.ogg')
+	// Bubbers base
 	talk_sound_map["Muted String (Low)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C2.ogg')
 	talk_sound_map["Muted String (Medium)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C3.ogg')
 	talk_sound_map["Muted String (High)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C4.ogg')

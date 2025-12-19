@@ -13384,7 +13384,6 @@
 	},
 /obj/machinery/turretid/lethal{
 	check_all = 1;
-	control_area = "\improper Facility Terraformer Base";
 	name = "Terraformer Gas Return Defenses";
 	req_access = null;
 	pixel_y = -32;
@@ -48709,25 +48708,6 @@
 "bJc" = (
 /turf/simulated/wall/durasteel,
 /area/muriki/processor/hall/entrance)
-"bJd" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
-/obj/structure/catwalk,
-/obj/effect/floor_decal/flesh{
-	dir = 1
-	},
-/obj/effect/floor_decal/flesh,
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
-/area/muriki/processor/hall/entrance)
 "bJe" = (
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
@@ -62433,6 +62413,9 @@
 "cmH" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mine/claymore,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
 "cmI" = (
@@ -64265,14 +64248,6 @@
 	temperature = 321.5
 	},
 /area/muriki/processor/hall)
-"crI" = (
-/obj/effect/mist,
-/turf/simulated/floor/flesh/turfpack/muriki{
-	methane = 101;
-	nitrogen = 0;
-	oxygen = 0
-	},
-/area/muriki/processor)
 "crJ" = (
 /obj/machinery/door/flesh,
 /obj/effect/mist,
@@ -66936,6 +66911,57 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"cxP" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/machinery/camera/motion/command{
+	c_tag = "COM - Terraformer Ventillation Access";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/muriki/processor/hall/entrance)
+"cxQ" = (
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/machinery/porta_turret/heavy,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/muriki/processor/hall/entrance)
+"cxR" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/effect/floor_decal/flesh{
+	dir = 1
+	},
+/obj/effect/floor_decal/flesh,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/effect/mine/n2o{
+	camo_net = 1
+	},
+/turf/simulated/floor{
+	temperature = 321.5
+	},
+/area/muriki/processor/hall)
+"cxS" = (
+/obj/structure/window/phoronreinforced,
+/obj/machinery/porta_turret/heavy,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/muriki/processor/hall/entrance)
+"cxT" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor)
 "cyp" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -84027,7 +84053,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "vuL" = (
-/obj/machinery/porta_turret/ai_defense,
+/obj/structure/window/phoronreinforced,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
 "vwt" = (
@@ -88329,7 +88355,7 @@ aCO
 aCO
 aCO
 aCO
-crI
+aCO
 aCO
 aCO
 avw
@@ -88490,9 +88516,9 @@ aCO
 aCO
 bcK
 bgY
-crI
-crI
-crI
+aCO
+aCO
+aCO
 aCO
 avw
 axj
@@ -88653,7 +88679,7 @@ bKV
 aCO
 aCO
 aCO
-crI
+aCO
 aCO
 aCO
 avw
@@ -94824,7 +94850,7 @@ avw
 avw
 axj
 aEm
-axj
+czg
 axj
 avw
 axj
@@ -96447,7 +96473,7 @@ eGs
 aac
 aac
 aac
-tHM
+cxT
 aac
 aac
 avw
@@ -96936,10 +96962,10 @@ qab
 tHM
 aac
 aac
-avw
-avw
-ayj
-avw
+avy
+avy
+cxR
+avy
 aad
 aad
 aad
@@ -97097,12 +97123,12 @@ aac
 aac
 aac
 aac
-aac
-ahR
-ahR
-bJd
-ahR
-bJc
+aNd
+cxS
+aAU
+azx
+aAU
+cxP
 aad
 aad
 aad
@@ -97264,7 +97290,7 @@ vuL
 aAU
 azx
 aAU
-bJc
+cxQ
 aad
 aad
 lHb

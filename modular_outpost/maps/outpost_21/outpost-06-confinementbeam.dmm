@@ -1804,9 +1804,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "dH" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/structure/cable/cyan{
 	icon_state = "5-8"
+	},
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -7358,7 +7360,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "tC" = (
@@ -8247,11 +8251,13 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
 "wm" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = 28
+	},
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
 	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
@@ -8332,8 +8338,10 @@
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
 "wz" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "wA" = (
@@ -9832,10 +9840,12 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/confinementbeam/station/port_equipment)
 "AW" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = 28
+	},
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -10148,9 +10158,11 @@
 /turf/simulated/wall/rshull,
 /area/muriki/bathroom/confinement_beam)
 "Cj" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -11618,9 +11630,11 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/confinement_beam)
 "GP" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
+	},
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -13472,12 +13486,14 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_server_room)
 "LZ" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "Mc" = (
@@ -13506,11 +13522,13 @@
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/beam_emitter)
 "Mj" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 31;
 	dir = 8;
 	pixel_y = -6
+	},
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
 	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
@@ -14442,8 +14460,10 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
 "OZ" = (
-/obj/machinery/porta_turret/ai_defense,
 /obj/item/geiger/wall/east,
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
 "Pb" = (
@@ -14630,7 +14650,9 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/confinementbeam/station/port_airlock)
 "PM" = (
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/ai_defense{
+	faction = "outpost21"
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
