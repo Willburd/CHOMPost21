@@ -411,3 +411,56 @@
 	if(A) // We don't want to call signals, just treat the door as if it was already locked. So skip calling lock()
 		A.locked = TRUE
 		A.update_icon()
+
+
+
+
+// Soak floor with no end timer
+/obj/effect/landmark/wet_floor
+	name = "wet floor 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/wet_floor/twentyfive
+	name = "wet floor 25%"
+	chance = 25
+
+/obj/effect/landmark/wet_floor/fifty
+	name = "wet floor 50%"
+	chance = 50
+
+/obj/effect/landmark/wet_floor/always_wet
+	name = "wet floor 100%"
+	chance = 100
+
+/obj/effect/landmark/wet_floor/LateInitialize()
+	if(!prob(chance))
+		return
+	var/turf/simulated/floor/T = get_turf(src)
+	T.wet = TURFSLIP_WET
+
+
+
+// lube floor with no end timer
+/obj/effect/landmark/lube_floor
+	name = "lube floor 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/lube_floor/twentyfive
+	name = "lube floor 25%"
+	chance = 25
+
+/obj/effect/landmark/lube_floor/fifty
+	name = "lube floor 50%"
+	chance = 50
+
+/obj/effect/landmark/lube_floor/always_lubed
+	name = "lube floor 100%"
+	chance = 100
+
+/obj/effect/landmark/lube_floor/LateInitialize()
+	if(!prob(chance))
+		return
+	var/turf/simulated/floor/T = get_turf(src)
+	T.wet = TURFSLIP_LUBE
