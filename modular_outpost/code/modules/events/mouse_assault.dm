@@ -18,19 +18,16 @@
 	while(spawncount > 0 && possibleSpawnspots.len)
 		var/turf/spawnspot = get_turf(pick(possibleSpawnspots))
 
-		var/subcount = pick(0,0,1,2)
-		while(subcount > 0)
-			var/chosen_rat = pick(
+		if(prob(10))
+			var/chosen_tank = pick(
 			list(
 				/mob/living/simple_mob/mechanical/mecha/mouse_tank/eraticator/manned,
 				/mob/living/simple_mob/mechanical/mecha/mouse_tank/livewire/manned,
 				/mob/living/simple_mob/mechanical/mecha/mouse_tank/manned
 			))
-
-			var/mob/living/simple_mob/mechanical/mecha/mouse_tank/C = new chosen_rat(spawnspot.loc)
+			var/mob/living/simple_mob/mechanical/mecha/mouse_tank/C = new chosen_tank(spawnspot.loc)
 			C.ai_holder.hostile = TRUE // OHNO
 			C.ai_holder.violent_breakthrough = TRUE // OHNO
-			subcount--
 
 		subcount = pick(2,3,4)
 		while(subcount > 0)
