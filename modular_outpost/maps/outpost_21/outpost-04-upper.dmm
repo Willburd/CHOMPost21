@@ -51632,7 +51632,6 @@
 /obj/machinery/requests_console/preset/cmo{
 	pixel_y = 30
 	},
-/obj/item/key/heavyarmor_medic,
 /obj/item/toy/figure/cmo,
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
