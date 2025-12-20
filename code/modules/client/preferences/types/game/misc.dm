@@ -11,7 +11,7 @@
 	var/datum/plane_holder/PH = client?.mob?.plane_holder
 	if(PH)
 		PH.set_ao(VIS_OBJS, value)
-		PH.set_ao(VIS_MOBS, value)
+		// PH.set_ao(VIS_MOBS, value) // Outpost 21 edit - Completely broken for stealth
 
 /datum/preference/toggle/attack_icons
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
