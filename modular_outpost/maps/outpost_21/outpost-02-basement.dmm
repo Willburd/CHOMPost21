@@ -46823,7 +46823,8 @@
 /area/crew_quarters/recreation_area_hallway)
 "bFv" = (
 /turf/simulated/floor/water/acidic/deep/indoor{
-	methane = 27
+	methane = 27;
+	name = "septic water"
 	},
 /area/muriki/septic)
 "bFw" = (
