@@ -6881,8 +6881,7 @@
 /area/offworld/confinementbeam/station/medical_treatment)
 "sc" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	dir = 1
+	frequency = 1381
 	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1

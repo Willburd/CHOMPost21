@@ -11391,6 +11391,15 @@
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /turf/simulated/floor/gorefloor2/turfpack/muriki,
 /area/muriki/processor/hall)
+"avb" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
+/area/shuttle/beamtransit)
 "avc" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
@@ -86238,7 +86247,6 @@
 /obj/item/ammo_magazine/mg42,
 /obj/item/ammo_magazine/mg42,
 /obj/item/ammo_magazine/mg42,
-/obj/item/gun/energy/gun/burst/mg42,
 /obj/item/gun/projectile/automatic/mg42,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
@@ -116329,7 +116337,7 @@ buE
 gie
 acc
 sIn
-acc
+avb
 waN
 udM
 cso
