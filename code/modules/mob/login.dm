@@ -70,7 +70,7 @@
 	// AO support
 	var/ao_enabled = client.prefs?.read_preference(/datum/preference/toggle/ambient_occlusion)
 	plane_holder.set_ao(VIS_OBJS, ao_enabled)
-	plane_holder.set_ao(VIS_MOBS, ao_enabled)
+	// plane_holder.set_ao(VIS_MOBS, ao_enabled) // Outpost 21 edit - Completely broken for stealth
 
 	// Status indicators
 	var/status_enabled = client.prefs?.read_preference(/datum/preference/toggle/status_indicators)
