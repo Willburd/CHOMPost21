@@ -56,18 +56,29 @@
 	ASSERT(MR)
 	if(!client)	return
 
+	var/no_sleeve = FALSE
+	var/no_clone = FALSE
 	var/turf/T = null
 	if(mind && mind.current && can_reenter_corpse)
+		if(iscarbon(mind.current))
+			var/mob/living/carbon/C = mind.current
+			no_sleeve = (C.species.flags & NO_SLEEVE)
+			no_clone = (C.species.flags & NO_DNA)
+
 		if(!istype(T,/turf/space))
 			T = get_turf(mind.current.loc)
 		if(T && !(T.z in using_map.station_levels))
 			T = null // lost in spess
 
+	var/sleeve_report = "Resleeving is confirmed legal."
+	if(no_sleeve || no_clone)
+		sleeve_report "They are incapable of being resleeved, recovery is required."
+
 	if(T)
 		// Found location of body
 		var/xx = T.x + rand(-5,5)
 		var/yy = T.y + rand(-5,5)
-		GLOB.global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan. Their last known GPS location was near [xx], [yy], [ using_map.get_zlevel_name(T.z) ]. The crew is advised to recover their body if possible. They have been verified as deceased by scout drones. No other bio-signature matches detected, resleeving is confirmed legal.", "TransCore Oversight", CHANNEL_COMMON)
+		GLOB.global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan. Their last known GPS location was near [xx], [yy], [ using_map.get_zlevel_name(T.z) ]. The crew is advised to recover their body if possible. They have been verified as deceased by scout drones. No other bio-signature matches detected, [sleeve_report]", "TransCore Oversight", CHANNEL_COMMON)
 	else
 		// No body found
-		GLOB.global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan, and cannot be located on the planet's surface. Medical is advised to resleeve them if possible, as scanner drones have been unable to locate their body. A missing persons notice will be forwarded to SolGov authorities if an abduction has occured.", "TransCore Oversight", CHANNEL_COMMON)
+		GLOB.global_announcer.autosay("[MR.mindname]'s bio-signature was recently lost on TransCore wide area scan, and cannot be located on the planet's surface. Scanner drones have been unable to locate their body. A missing persons notice will be forwarded to SolGov authorities if an abduction has occured. Consult records if resleeving is confirmed legal", "TransCore Oversight", CHANNEL_COMMON)
