@@ -72,7 +72,7 @@
 
 	var/sleeve_report = "Resleeving is confirmed legal."
 	if(no_sleeve || no_clone)
-		sleeve_report "They are incapable of being resleeved, recovery is required."
+		sleeve_report = "They are incapable of being resleeved, recovery is required."
 
 	if(T)
 		// Found location of body
