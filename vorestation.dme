@@ -5875,6 +5875,7 @@
 #include "modular_outpost\code\modules\power\confinement\confinement_beam.dm"
 #include "modular_outpost\code\modules\power\confinement\energy_beam.dm"
 #include "modular_outpost\code\modules\power\confinement\map_datum.dm"
+#include "modular_outpost\code\modules\projectiles\ammo_autolathe.dm"
 #include "modular_outpost\code\modules\projectiles\ammunition.dm"
 #include "modular_outpost\code\modules\projectiles\guns\pump.dm"
 #include "modular_outpost\code\modules\projectiles\guns\launcher\confetti.dm"
