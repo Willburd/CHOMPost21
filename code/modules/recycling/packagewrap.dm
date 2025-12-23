@@ -50,10 +50,15 @@
 			P.add_fingerprint(user)
 			O.add_fingerprint(user)
 			src.add_fingerprint(user)
-			src.amount -= 1
-			user.visible_message("\The [user] wraps \a [target] with \a [src].",\
-			span_notice("You wrap \the [target], leaving [amount] units of paper on \the [src]."),\
-			"You hear someone taping paper around a small object.")
+			if(is_robot_module(loc)) // Outpost 21 edit(port) - Makes cargo borg possible
+				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
+				span_notice("You wrap \the [target]."),\
+				"You hear someone taping paper around a small object.")
+			else
+				src.amount -= 1
+				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
+				span_notice("You wrap \the [target], leaving [amount] units of paper on \the [src]."),\
+				"You hear someone taping paper around a small object.")
 			playsound(src, 'sound/items/package_wrap.ogg', 50, 1)
 	else if (istype(target, /obj/structure/closet/crate))
 		var/obj/structure/closet/crate/O = target
@@ -62,10 +67,15 @@
 			P.icon_state = "deliverycrate"
 			P.wrapped = O
 			O.loc = P
-			src.amount -= 3
-			user.visible_message("\The [user] wraps \a [target] with \a [src].",\
-			span_notice("You wrap \the [target], leaving [amount] units of paper on \the [src]."),\
-			"You hear someone taping paper around a large object.")
+			if(is_robot_module(loc)) // Outpost 21 edit(port) - Makes cargo borg possible
+				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
+				span_notice("You wrap \the [target]."),\
+				"You hear someone taping paper around a large object.")
+			else
+				src.amount -= 3
+				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
+				span_notice("You wrap \the [target], leaving [amount] units of paper on \the [src]."),\
+				"You hear someone taping paper around a large object.")
 			playsound(src, 'sound/items/package_wrap.ogg', 50, 1)
 		else if(src.amount < 3)
 			to_chat(user, span_warning("You need more paper."))
@@ -76,10 +86,15 @@
 			P.wrapped = O
 			O.sealed = 1
 			O.loc = P
-			src.amount -= 3
-			user.visible_message("\The [user] wraps \a [target] with \a [src].",\
-			span_notice("You wrap \the [target], leaving [amount] units of paper on \the [src]."),\
-			"You hear someone taping paper around a large object.")
+			if(is_robot_module(loc)) // Outpost 21 edit(port) - Makes cargo borg possible
+				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
+				span_notice("You wrap \the [target]."),\
+				"You hear someone taping paper around a large object.")
+			else
+				src.amount -= 3
+				user.visible_message("\The [user] wraps \a [target] with \a [src].",\
+				span_notice("You wrap \the [target], leaving [amount] units of paper on \the [src]."),\
+				"You hear someone taping paper around a large object.")
 			playsound(src, 'sound/items/package_wrap.ogg', 50, 1)
 		else if(src.amount < 3)
 			to_chat(user, span_warning("You need more paper."))
@@ -93,5 +108,5 @@
 
 /obj/item/packageWrap/examine(mob/user)
 	. = ..()
-	if(get_dist(user, src) <= 0)
+	if(get_dist(user, src) <= 0 && !is_robot_module(loc)) // Outpost 21 edit(port) - Makes cargo borg possible
 		. += span_blue("There are [amount] units of package wrap left!")

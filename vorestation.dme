@@ -5896,6 +5896,7 @@
 #include "modular_outpost\code\modules\reagents\reagents\other.dm"
 #include "modular_outpost\code\modules\reagents\reagents\reagent_ppe.dm"
 #include "modular_outpost\code\modules\recycling\disposal.dm"
+#include "modular_outpost\code\modules\recycling\packagewrap.dm"
 #include "modular_outpost\code\modules\research\designs\ai_designs.dm"
 #include "modular_outpost\code\modules\research\designs\chomp_designs.dm"
 #include "modular_outpost\code\modules\research\designs\circuitry_designs.dm"
