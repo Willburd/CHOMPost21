@@ -664,6 +664,8 @@
 	src.modules += new /obj/item/card/id/cargo/miner/borg(src)
 	src.modules += new /obj/item/gun/energy/robotic/phasegun(src) //CHOMPedit: Phasegun for regular mining cyborg.
 	src.modules += new /obj/item/vac_attachment(src) //CHOMPAdd
+	src.modules += new /obj/item/destTagger(src) // Outpost 21 edit(port) - Makes cargo borg possible
+	src.modules += new /obj/item/packageWrap/borg(src) // Outpost 21 edit(port) - Makes cargo borg possible
 	src.emag += new /obj/item/kinetic_crusher/machete/dagger(src)
 
 	var/datum/matter_synth/beacon = new /datum/matter_synth/beacon(10000)
