@@ -3,7 +3,9 @@
 		for(var/turf/simulated/floor/tiled/T in world)
 			if(!T.zone) // Outpost 21 edit(port) - Possibly space turfs blocking this test
 				var/area/A = get_area(T)
-				TEST_NOTICE(src, "-------BAD AIR TURF [T] [T.x].[T.y].[T.z] - [A]")
+				TEST_NOTICE(src, "-------BAD AIR TURF [T] - [T.type] - [T.x].[T.y].[T.z] - [A]")
+				for(var/atom/thing in T.contents)
+					TEST_NOTICE(src, "---------------Contained: [thing] - [thing.path]")
 				continue
 			var/pressure = T.zone.air.return_pressure()
 			if(90 < pressure && pressure < 120) // Find a turf between 90 and 120
