@@ -5,7 +5,7 @@
 				var/area/A = get_area(T)
 				TEST_NOTICE(src, "-------BAD AIR TURF [T] - [T.type] - [T.x].[T.y].[T.z] - [A]")
 				for(var/atom/thing in T.contents)
-					TEST_NOTICE(src, "---------------Contained: [thing] - [thing.path]")
+					TEST_NOTICE(src, "---------------Contained: [thing] - [thing.type]")
 				continue
 			var/pressure = T.zone.air.return_pressure()
 			if(90 < pressure && pressure < 120) // Find a turf between 90 and 120
