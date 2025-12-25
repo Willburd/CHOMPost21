@@ -1,7 +1,7 @@
 /datum/unit_test/proc/create_test_human(turf/loc = null)
 	if(!loc)
 		for(var/turf/simulated/floor/tiled/T in world)
-			if(!T.zone) // Outpost 21 edit(port) - Possibly space turfs blocking this test
+			if(!T.zone)
 				continue
 			var/pressure = T.zone.air.return_pressure()
 			if(90 < pressure && pressure < 120) // Find a turf between 90 and 120
