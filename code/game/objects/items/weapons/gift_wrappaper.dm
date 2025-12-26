@@ -211,7 +211,7 @@
 		/obj/item/lightreplacer,
 		/obj/item/book/tome,
 		/obj/item/cell/device/weapon/recharge/alien/hybrid,
-		/obj/item/disk/nifsoft/compliance,
+		// /obj/item/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 		/obj/item/implanter/adrenalin,
 		/obj/item/moneybag,
 		/obj/item/pickaxe/diamonddrill,
@@ -259,7 +259,7 @@
 		/obj/item/grenade/spawnergrenade/casino/otie,
 		/obj/item/dnainjector/set_trait/nobreathe,
 		/obj/item/dnainjector/set_trait/regenerate,
-		/obj/item/dnainjector/set_trait/remoteview,
+		// /obj/item/dnainjector/set_trait/remoteview, Outpost 21 edit - Disabled due to balance issues
 		/obj/item/dnainjector/set_trait/haste,
 		/obj/item/dnainjector/set_trait/tk,
 		/obj/item/instrument/accordion,
