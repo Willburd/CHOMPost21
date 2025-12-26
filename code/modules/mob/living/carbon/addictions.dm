@@ -11,9 +11,9 @@
 // do not feed their withdrawls. The handle_addiction proc also handles if you become cured of your addiction! If it returns 0, it will end your addiction.
 
 // Outpost 21 edit begin - Faster addictions
-#define SLOWADDICT_PROC -1000
-#define ADDICTION_PROC -750
-#define FASTADDICT_PROC -500
+#define SLOWADDICT_PROC -1750
+#define ADDICTION_PROC -1000
+#define FASTADDICT_PROC -750
 #define POISONADDICT_PROC -100
 #define ADDICTION_PEAK 250
 // Outpost 21 edit end

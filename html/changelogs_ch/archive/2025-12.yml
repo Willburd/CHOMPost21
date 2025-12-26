@@ -287,3 +287,29 @@
   - rscadd: no sleeving trait prevents characters from having a round start body record
   zeskorion:
   - bugfix: fixes a few things about cetus again
+2025-12-21:
+  CHOMPStation2StaffMirrorBot:
+  - rscdel: VBOs with unknown licensing
+  - code_imp: unit test simple mob belly_fullscreens
+  Diana:
+  - code_imp: Properly has some signals apply.
+  FluffMedic:
+  - rscadd: Lethal armament for sec
+  TheCaramelion:
+  - rscdel: Deactivated appreciation day
+  Willbird:
+  - bugfix: Fixes shadekin getting set on fire while in phase, and being able to spread
+      fire while phased
+  zeskorion:
+  - balance: expands traits available to synths and non-custom species
+2025-12-23:
+  CHOMPStation2StaffMirrorBot:
+  - admin: Global narrate and Admin Subtle PM can now use HTML
+  - bugfix: large, chunked payloads hitting rate limits
+2025-12-25:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixes an oversight from landmarks lasting forever
+  - qol: the belly preview is now realtime color rendered
+  - code_imp: move icon_states usage fully to rust g based icon_states_fast
+  - bugfix: preview breaking on fast image swapping
+  - bugfix: bad layer order on some vore overlays

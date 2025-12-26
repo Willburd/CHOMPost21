@@ -120,10 +120,11 @@
 #include "timer_sanity.dm"
 #include "trait_tests.dm"
 #include "unit_test.dm"
-// #include "vore_tests.dm" // FIXME: REWRITE OR FIX THIS
 // Outpost 21 edit begin - Our tests
 #include "../../../modular_outpost/code/modules/unit_tests/map_tests.dm"
 // Outpost 21 edit end
+#include "vbo_tests.dm"
+#include "vore_tests.dm"
 // END_INCLUDE
 #ifdef REFERENCE_TRACKING_DEBUG //Don't try and parse this file if ref tracking isn't turned on. IE: don't parse ref tracking please mr linter
 #include "find_reference_sanity.dm"
