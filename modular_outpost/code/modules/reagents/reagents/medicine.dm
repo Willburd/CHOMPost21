@@ -7,9 +7,9 @@
 	color = "#309bb3"
 	overdose = 7
 	overdose_mod = 1.25
-	scannable = 1
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
+	scannable = SCANNABLE_BENEFICIAL
 
 /datum/reagent/hemocyanin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.species.poison_type != GAS_O2)
