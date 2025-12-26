@@ -10,6 +10,7 @@
 	reagent_state = LIQUID
 	color = "#FFFF00" // rgb: 255, 255, 0
 	metabolism = 0.01
+	scannable = SCANNABLE_BENEFICIAL
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
@@ -24,6 +25,7 @@
 /datum/reagent/microcillin
 	name = REAGENT_MICROCILLIN
 	id = REAGENT_ID_MICROCILLIN
+	scannable = SCANNABLE_BENEFICIAL
 	description = "Murky purple liquid."
 	reagent_state = LIQUID
 	color = "#800080"
@@ -43,6 +45,7 @@
 /datum/reagent/normalcillin
 	name = REAGENT_NORMALCILLIN
 	id = REAGENT_ID_NORMALCILLIN
+	scannable = SCANNABLE_BENEFICIAL
 	description = "Translucent cyan liquid."
 	reagent_state = LIQUID
 	color = "#00FFFF"
@@ -64,6 +67,7 @@
 /datum/reagent/sizeoxadone
 	name = REAGENT_SIZEOXADONE
 	id = REAGENT_ID_SIZEOXADONE
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A volatile liquid used as a precursor to size-altering chemicals. Causes dizziness if taken unprocessed."
 	reagent_state = LIQUID
 	color = "#1E90FF"
@@ -85,6 +89,7 @@
 /datum/reagent/ickypak
 	name = REAGENT_ICKYPAK
 	id = REAGENT_ID_ICKYPAK
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A foul-smelling green liquid, for inducing muscle contractions to expel accidentally ingested things."
 	reagent_state = LIQUID
 	color = "#0E900E"
@@ -111,6 +116,7 @@
 /datum/reagent/unsorbitol
 	name = REAGENT_UNSORBITOL
 	id = REAGENT_ID_UNSORBITOL
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A frothy pink liquid, for causing cellular-level hetrogenous structure separation."
 	reagent_state = LIQUID
 	color = "#EF77E5"
@@ -146,6 +152,7 @@
 /datum/reagent/amorphorovir
 	name = REAGENT_AMORPHOROVIR
 	id = REAGENT_ID_AMORPHOROVIR
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A base medical concoction, capable of rapidly altering genetic and physical structure of the body. Requires extra processing to allow for a targeted transformation."
 	reagent_state = LIQUID
 	color = "#AAAAAA"
@@ -155,6 +162,7 @@
 /datum/reagent/androrovir
 	name = REAGENT_ANDROROVIR
 	id = REAGENT_ID_ANDROROVIR
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems to realign the target's gender to be male."
 	reagent_state = LIQUID
 	color = "#00BBFF"
@@ -178,6 +186,7 @@
 /datum/reagent/gynorovir
 	name = REAGENT_GYNOROVIR
 	id = REAGENT_ID_GYNOROVIR
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems to realign the target's gender to be female."
 	reagent_state = LIQUID
 	color = "#FF00AA"
@@ -201,6 +210,7 @@
 /datum/reagent/androgynorovir
 	name = REAGENT_ANDROGYNOROVIR
 	id = REAGENT_ID_ANDROGYNOROVIR
+	scannable = SCANNABLE_BENEFICIAL
 	description = "A medical concoction, capable of rapidly altering genetic and physical structure of the body. This one seems to realign the target's gender to be mixed."
 	reagent_state = LIQUID
 	color = "#6600FF"
@@ -252,6 +262,7 @@
 /datum/reagent/paralysis_toxin
 	name = REAGENT_PARALYSISTOXIN
 	id = REAGENT_ID_PARALYSISTOXIN
+	scannable = SCANNABLE_ADVANCED
 	description = "A potent toxin commonly found in a plethora of species. When exposed to the toxin, causes extreme, paralysis for a prolonged period, with only essential functions of the body being unhindered. Commonly used by covert operatives and used as a crowd control tool."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
@@ -272,6 +283,7 @@
 /datum/reagent/pain_enzyme
 	name = REAGENT_PAINENZYME
 	id = REAGENT_ID_PAINENZYME
+	scannable = SCANNABLE_ADVANCED
 	description = "An enzyme found in a variety of species. When exposed to the toxin, will cause severe, agonizing pain. The effects can last for hours depending on the dose. Only known cure is an equally strong painkiller or dialysis."
 	taste_description = "sourness"
 	reagent_state = LIQUID
@@ -293,6 +305,7 @@
 /datum/reagent/aphrodisiac
 	name = REAGENT_APHRODISIAC
 	id = REAGENT_ID_APHRODISIAC
+	scannable = SCANNABLE_ADVANCED
 	description = "You so horny."
 	taste_description = "sweetness"
 	reagent_state = LIQUID
