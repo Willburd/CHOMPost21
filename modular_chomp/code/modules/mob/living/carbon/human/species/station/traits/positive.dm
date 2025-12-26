@@ -64,6 +64,8 @@
 
 /datum/trait/positive/heavyweight
 	custom_only = FALSE
+	cost = 3 // base 2: increased to 3 as stuns are massively powerful
+	var_changes = list("stun_mod" = 0.60, "weaken_mod" = 0.60) //Nerfed from 50% to 60 the value of the stun
 
 /datum/trait/positive/grappling_expert
 	custom_only = FALSE //I hate this trait, but I can't justify it being a custom only trait in my head

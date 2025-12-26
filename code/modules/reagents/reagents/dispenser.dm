@@ -6,6 +6,7 @@
 	taste_mult = 1.1
 	reagent_state = SOLID
 	color = "#A8A8A8"
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = 1  // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_RAW
 
@@ -16,6 +17,7 @@
 	taste_description = "metallic chalk" // Apparently, calcium tastes like calcium.
 	taste_mult = 1.3
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#e9e6e4"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -39,6 +41,7 @@
 	taste_description = "sour chalk"
 	taste_mult = 1.5
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#1C1300"
 	ingest_met = REM * 5
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
@@ -71,6 +74,7 @@
 	taste_description = "pool water"
 	reagent_state = GAS
 	color = "#808080"
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 0.15
@@ -89,6 +93,7 @@
 	description = "A highly ductile metal."
 	taste_description = "pennies"
 	color = "#6E3B08"
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = 0.5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
@@ -98,6 +103,7 @@
 	description = "A well-known alcohol with a variety of applications."
 	taste_description = "pure alcohol"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#404030"
 	cup_prefix = "alcoholic"
 
@@ -305,6 +311,7 @@
 	description = "A highly-reactive chemical element."
 	taste_description = "acid"
 	reagent_state = GAS
+	scannable = SCANNABLE_ADVANCED
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -323,6 +330,7 @@
 	description = "A colorless, odorless, nonmetallic, tasteless, highly combustible diatomic gas."
 	taste_mult = 0 //no taste
 	reagent_state = GAS
+	scannable = SCANNABLE_ADVANCED
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -335,6 +343,7 @@
 	description = "Pure iron is a metal."
 	taste_description = "metal"
 	reagent_state = SOLID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#353535"
 	supply_conversion_value = 1 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -345,6 +354,7 @@
 	description = "A chemical element, used as antidepressant."
 	taste_description = "metal"
 	reagent_state = SOLID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -365,6 +375,7 @@
 	description = "A chemical element."
 	taste_mult = 0 //mercury apparently is tasteless. IDK
 	reagent_state = LIQUID
+	scannable = SCANNABLE_ADVANCED
 	color = "#484848"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -385,6 +396,7 @@
 	description = "A colorless, odorless, tasteless gas."
 	taste_mult = 0 //no taste
 	reagent_state = GAS
+	scannable = SCANNABLE_ADVANCED
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -396,6 +408,7 @@
 	description = "A colorless, odorless gas."
 	taste_mult = 0
 	reagent_state = GAS
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -413,6 +426,7 @@
 	description = "A chemical element, the backbone of biological energy carriers."
 	taste_description = "vinegar"
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#832828"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -425,6 +439,7 @@
 	description = "A soft, low-melting solid that can easily be cut with a knife. Reacts violently with water."
 	taste_description = "sweetness" //potassium is bitter in higher doses but sweet in lower ones.
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#A0A0A0"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -435,6 +450,7 @@
 	description = "Radium is an alkaline earth metal. It is extremely radioactive."
 	taste_mult = 0	//Apparently radium is tasteless
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#C7C7C7"
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -460,6 +476,7 @@
 	description = "Concentrated Radium is a more potent variant of regular radium, able to pierce and irradiate a subject through their skin."
 	taste_mult = 0	//Apparently radium is tasteless
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#C7C7C7"
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -480,6 +497,7 @@
 	description = "A very corrosive mineral acid with the molecular formula H2SO4."
 	taste_description = "acid"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_ADVANCED
 	color = "#DB5008"
 	metabolism = REM * 2
 	touch_met = 50 // It's acid!
@@ -618,6 +636,7 @@
 	description = "A tetravalent metalloid, silicon is less reactive than its chemical analog carbon."
 	taste_mult = 0
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#A8A8A8"
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -628,6 +647,7 @@
 	description = "A chemical element, readily reacts with water."
 	taste_description = "salty metal"
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -640,6 +660,7 @@
 	taste_description = "sugar"
 	taste_mult = 1.8
 	reagent_state = SOLID
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#FFFFFF"
 
 	glass_name = REAGENT_ID_SUGAR
@@ -677,6 +698,7 @@
 	description = "A chemical element with a pungent smell."
 	taste_description = "old eggs"
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#BF8C00"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
@@ -689,6 +711,7 @@
 	taste_description = "metal"
 	taste_mult = 0 //no taste
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#DCDCDC"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -700,6 +723,7 @@
 	taste_description = "metal"
 	taste_mult = 0 //no taste
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#cadcef"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_COSMETIC
@@ -711,6 +735,7 @@
 	taste_description = "metal"
 	taste_mult = 0 //no taste
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#cadcef"
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
@@ -722,6 +747,7 @@
 	taste_description = "metal"
 	taste_mult = 0 //no taste
 	reagent_state = SOLID
+	scannable = SCANNABLE_ADVANCED
 	color = "#efe9ca"
 	supply_conversion_value = 0.5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -731,6 +757,7 @@
 	id = REAGENT_ID_MIASMA
 	description = "Not necessarily a gas, miasma refers to biological pollutants found in the atmosphere."
 	reagent_state = GAS
+	scannable = SCANNABLE_ADVANCED
 	taste_description = "indescribable"
 	color = "#808000"
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
