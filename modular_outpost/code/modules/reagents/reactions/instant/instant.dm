@@ -6,13 +6,6 @@
 	catalysts = list(REAGENT_ID_PHORON = 1)
 	result_amount = 20
 
-/decl/chemical_reaction/instant/artificial_sustenance
-	name = REAGENT_ASUSTENANCE
-	id = REAGENT_ID_ASUSTENANCE
-	result = REAGENT_ID_ASUSTENANCE
-	required_reagents = list(REAGENT_ID_NUTRIMENT = 1, REAGENT_ID_MUTAGEN = 1, REAGENT_ID_PHORON = 1)
-	result_amount = 1
-
 /decl/chemical_reaction/instant/sulphuricacid
 	name = REAGENT_SACID
 	id = REAGENT_ID_SACID
