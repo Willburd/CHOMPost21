@@ -126,18 +126,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
-"aaz" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 10
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "tile_full";
-	color = "#385e60"
-	},
-/area/centcom/living)
 "aaA" = (
 /obj/effect/shuttle_landmark/premade/mercenary/transit,
 /turf/space/transit/north,
@@ -198,9 +186,6 @@
 /turf/unsimulated/wall/r_wall,
 /area/centcom)
 "aaL" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
 	},
@@ -359,7 +344,6 @@
 /area/centcom/living)
 "abn" = (
 /obj/machinery/door/airlock/centcom/nameddorm,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "abo" = (
@@ -767,33 +751,6 @@
 	icon_state = "milspec"
 	},
 /area/centcom/security)
-"abT" = (
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "tile_full";
-	color = "#385e60"
-	},
-/area/centcom/living)
-"abU" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 5
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "tile_full";
-	color = "#385e60"
-	},
-/area/centcom/living)
-"abV" = (
-/obj/structure/sign/christmas/lights,
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/main_hall)
 "abW" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 4
@@ -809,73 +766,8 @@
 	id = "centralreleasethehounds"
 	},
 /obj/structure/fans/hardlight,
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/shuttle/plating,
 /area/centcom/security)
-"abY" = (
-/obj/machinery/door/airlock/glass_medical{
-	name = "Virology Quarantine";
-	req_access = list(39)
-	},
-/obj/structure/sign/christmas/wreath,
-/turf/simulated/floor/tiled/milspec/sterile,
-/area/centcom/medical)
-"abZ" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/main_hall)
-"aca" = (
-/obj/structure/fans/tiny,
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	name = "Security Door";
-	icon_state = "pdoor0";
-	opacity = 0;
-	density = 0;
-	dir = 4;
-	id = "residential"
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 8
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"acb" = (
-/obj/structure/fans/tiny,
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	name = "Security Door";
-	icon_state = "pdoor0";
-	opacity = 0;
-	density = 0;
-	dir = 4;
-	id = "residential"
-	},
-/obj/structure/sign/christmas/wreath,
-/turf/unsimulated/floor/steel{
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"acc" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/main_hall)
-"acd" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
-/turf/unsimulated/wall/fakeglass,
-/area/centcom/medical)
 "ace" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
 /obj/machinery/atmospherics/portables_connector{
@@ -887,243 +779,10 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
-"acf" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
-/turf/unsimulated/wall/fakeglass{
-	dir = 1
-	},
-/area/centcom/medical)
-"acg" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 9
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "tile_full";
-	color = "#385e60"
-	},
-/area/centcom/living)
-"ach" = (
-/obj/structure/sign/christmas/wreath{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "tile_full";
-	color = "#385e60"
-	},
-/area/centcom/living)
-"aci" = (
-/obj/effect/floor_decal/corner/grey{
-	dir = 6
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "tile_full";
-	color = "#385e60"
-	},
-/area/centcom/living)
-"acj" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 6
-	},
-/obj/structure/sign/christmas/wreath,
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
-"ack" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/main_hall)
 "acl" = (
 /obj/structure/salvageable/computer_os,
 /turf/simulated/floor/reinforced,
 /area/specialty/redspace)
-"acm" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
-/obj/structure/sign/christmas/lights,
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
-"acn" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/obj/structure/sign/christmas/lights,
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/main_hall)
-"aco" = (
-/obj/structure/sign/christmas/wreath,
-/turf/simulated/floor/wood,
-/area/centcom/restaurant)
-"acp" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/medical)
-"acq" = (
-/obj/machinery/door/blast/regular{
-	name = "Security Door";
-	icon_state = "pdoor0";
-	opacity = 0;
-	density = 0;
-	id = "residential"
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "dark"
-	},
-/area/centcom/main_hall)
-"acr" = (
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel,
-/area/centcom/main_hall)
-"acs" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass{
-	dir = 8
-	},
-/area/centcom/control)
-"act" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass{
-	dir = 4
-	},
-/area/centcom/control)
-"acu" = (
-/obj/machinery/porta_turret/crescent{
-	density = 1
-	},
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel,
-/area/centcom/main_hall)
-"acv" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 5
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel,
-/area/centcom/main_hall)
-"acw" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/control)
-"acx" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass,
-/area/centcom/control)
-"acy" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass{
-	icon_state = "fakewindows2"
-	},
-/area/centcom/control)
-"acz" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/security)
-"acA" = (
-/obj/effect/floor_decal/corner/purple,
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel,
-/area/centcom)
-"acB" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass,
-/area/centcom/suppy)
-"acC" = (
-/obj/machinery/door/airlock/centcom{
-	name = "General Access";
-	req_access = list(101)
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/centcom/control)
-"acD" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass{
-	dir = 1
-	},
-/area/centcom/control)
-"acE" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel,
-/area/centcom)
-"acF" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass{
-	icon_state = "fakewindows2"
-	},
-/area/centcom/suppy)
-"acG" = (
-/obj/machinery/door/airlock/security{
-	name = "Security"
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/centcom/security)
-"acH" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass{
-	dir = 8
-	},
-/area/centcom/security)
 "acI" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -1138,56 +797,6 @@
 	icon_state = "milspec"
 	},
 /area/centcom/control)
-"acJ" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass{
-	icon_state = "fakewindows2";
-	dir = 1
-	},
-/area/centcom/security)
-"acK" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass{
-	dir = 4
-	},
-/area/centcom/security)
-"acL" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
-	},
-/area/centcom/security)
-"acM" = (
-/obj/machinery/door/airlock/centcom{
-	name = "General Access";
-	req_access = list(101)
-	},
-/obj/structure/sign/christmas/wreath,
-/turf/simulated/floor/tiled,
-/area/centcom/control)
-"acN" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
-/turf/unsimulated/wall/fakeglass{
-	dir = 1
-	},
-/area/centcom/suppy)
-"acO" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 4
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel,
-/area/centcom)
 "acP" = (
 /obj/machinery/mech_recharger,
 /obj/mecha/combat/phazon/janus,
@@ -3507,9 +3116,6 @@
 /turf/simulated/floor/tiled/white,
 /area/centcom/bathroom)
 "bkl" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 4
 	},
@@ -3921,9 +3527,6 @@
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_C)
 "btD" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
 	},
@@ -4275,7 +3878,6 @@
 	id = "residential"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/floor/steel{
 	icon_state = "dark"
 	},
@@ -5413,9 +5015,6 @@
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/specialty/redspace)
 "cjQ" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 4
 	},
@@ -6054,7 +5653,6 @@
 /obj/machinery/door/airlock/security{
 	name = "Security"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/floor/steel{
 	icon_state = "dark"
 	},
@@ -6221,7 +5819,6 @@
 	matchnames = list("Aiektaaknell","Kose Ine");
 	name = "Aiek and Kose's Residence"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "cFU" = (
@@ -9366,9 +8963,6 @@
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
 	health = 25
 	},
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "enz" = (
@@ -9953,9 +9547,6 @@
 "eAl" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/simulated/floor/tiled,
 /area/centcom/suppy)
 "eAs" = (
@@ -10683,9 +10274,6 @@
 /turf/simulated/floor/carpet/geo,
 /area/centcom/living)
 "eSE" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2";
 	dir = 1
@@ -11382,9 +10970,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "fkn" = (
@@ -11727,9 +11312,6 @@
 /area/specialty/redspace)
 "fuE" = (
 /obj/machinery/status_display/supply_display,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass2{
 	dir = 1
 	},
@@ -12234,9 +11816,6 @@
 /obj/effect/floor_decal/corner/grey{
 	dir = 10
 	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
 /turf/unsimulated/floor/steel{
 	icon_state = "tile_full";
 	color = "#385e60"
@@ -12715,7 +12294,6 @@
 /obj/machinery/door/airlock/diamond{
 	name = "The Tesh Pit"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/old_tile/beige,
 /area/centcom/living)
 "fOo" = (
@@ -12898,7 +12476,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
 "fSg" = (
@@ -13144,7 +12721,6 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
-/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "fZa" = (
@@ -13459,9 +13035,6 @@
 	},
 /area/centcom/specops)
 "gfX" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
 	},
@@ -13727,7 +13300,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
 "gmf" = (
@@ -14043,7 +13615,6 @@
 	name = "Tretch's Residence";
 	matchnames = list("Tretch Qet")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "gyz" = (
@@ -14082,9 +13653,6 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "gzy" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2"
 	},
@@ -15847,9 +15415,6 @@
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/suppy)
 "hrf" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/unsimulated/wall/fakeglass,
 /area/centcom)
 "hrk" = (
@@ -16019,9 +15584,6 @@
 	desc = "A secure, and safe, location to deposit any contraband without getting in trouble."
 	},
 /obj/structure/disposalpipe/trunk,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "hva" = (
@@ -16741,7 +16303,6 @@
 	name = "Me Eep's Residence";
 	matchnames = list("Me Eep")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "hKx" = (
@@ -17103,9 +16664,6 @@
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "hUo" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/unsimulated/wall/fakeglass2,
 /area/centcom/medical)
 "hUx" = (
@@ -17183,9 +16741,6 @@
 	req_access = list(13);
 	locked = 1;
 	id_tag = "centcom_dock_airlock"
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/centcom/main_hall)
@@ -17698,9 +17253,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "imo" = (
@@ -17787,9 +17339,6 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "ion" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
 	},
@@ -18494,7 +18043,6 @@
 /obj/machinery/door/airlock{
 	name = "House of Commons"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/centcom/bathroom)
 "iGa" = (
@@ -18613,7 +18161,6 @@
 /area/specialty/redspace)
 "iJY" = (
 /obj/machinery/door/airlock/multi_tile/glass,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/centcom/medical)
 "iKc" = (
@@ -18699,9 +18246,6 @@
 	},
 /area/centcom/holding)
 "iMz" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/unsimulated/wall/fakeglass,
 /area/centcom/suppy)
 "iMJ" = (
@@ -19501,9 +19045,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
 /turf/unsimulated/floor/steel{
 	icon_state = "dark"
 	},
@@ -19529,7 +19070,6 @@
 	req_access = list(103)
 	},
 /obj/structure/disposalpipe/segment,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/control)
 "jcc" = (
@@ -19600,9 +19140,6 @@
 	},
 /area/centcom/main_hall)
 "jdB" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass2{
 	dir = 1
 	},
@@ -19698,9 +19235,6 @@
 	name = "Emergency Surgery Ward";
 	req_access = newlist();
 	req_one_access = list(45,52)
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/centcom/medical)
@@ -21081,7 +20615,6 @@
 	},
 /obj/structure/fans/tiny,
 /obj/machinery/door/firedoor,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "jXQ" = (
@@ -21993,9 +21526,6 @@
 /area/specialty/redspace)
 "kxd" = (
 /obj/machinery/door/airlock/glass_medical,
-/obj/structure/sign/christmas/wreath{
-	dir = 8
-	},
 /turf/simulated/shuttle/floor/white,
 /area/shuttle/escape)
 "kxr" = (
@@ -22780,9 +22310,6 @@
 	},
 /obj/machinery/computer/cryopod/dorms{
 	pixel_y = -30
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "dark"
@@ -24280,7 +23807,6 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/floor/steel,
 /area/centcom/suppy)
 "lVf" = (
@@ -24767,7 +24293,6 @@
 	name = "Vel's Residence";
 	matchnames = list("Vel Kliss")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "mlV" = (
@@ -24815,9 +24340,6 @@
 	name = "Cargo Ordering";
 	dir = 2;
 	req_access = list(50)
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/centcom/suppy)
@@ -25337,7 +24859,6 @@
 	name = "Taaa's Abode";
 	matchnames = list("Taaa")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "mFX" = (
@@ -25383,9 +24904,6 @@
 	req_access = list(13);
 	locked = 1;
 	id_tag = "escape_shuttle_hatch"
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 8
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/escape)
@@ -25434,9 +24952,6 @@
 	},
 /area/centcom/specops)
 "mHz" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2"
 	},
@@ -26618,9 +26133,6 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/centcom/living)
 "npm" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass2{
 	dir = 1
 	},
@@ -27172,9 +26684,6 @@
 	},
 /area/specialty/redspace)
 "nFC" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
 	},
@@ -28041,7 +27550,6 @@
 /turf/simulated/floor/tiled/kafel_full/blue,
 /area/centcom/living)
 "ogh" = (
-/obj/structure/sign/christmas/lights,
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2";
 	dir = 1
@@ -28792,9 +28300,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "ozG" = (
@@ -28850,9 +28355,6 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "oCc" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
 	},
@@ -28913,7 +28415,6 @@
 /turf/simulated/floor/tiled/white,
 /area/centcom/bathroom)
 "oDk" = (
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/centcom/medical)
 "oDv" = (
@@ -29438,6 +28939,7 @@
 /area/centcom/specops)
 "oUs" = (
 /obj/structure/table/reinforced,
+/obj/item/toy/nuke,
 /turf/simulated/floor/wood,
 /area/centcom/specops)
 "oUW" = (
@@ -29793,7 +29295,6 @@
 "pfw" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/steel_grid,
 /area/centcom)
 "pgs" = (
@@ -30608,7 +30109,6 @@
 	matchnames = list("Dynamo","R4Z-GR1Z","T4L-0N");
 	name = "Dynamo's Residence"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "pES" = (
@@ -31295,9 +30795,6 @@
 /obj/machinery/door/airlock/centcom{
 	name = "General Access";
 	req_access = list(101)
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "tile_full";
@@ -32103,9 +31600,6 @@
 /turf/simulated/floor/water/acidic/indoor,
 /area/specialty/redspace)
 "qxV" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 4
 	},
@@ -32407,7 +31901,6 @@
 /obj/structure/fans/tiny,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/centcom/nameddorm/vox,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "qFJ" = (
@@ -32442,9 +31935,6 @@
 /obj/machinery/door/airlock/centcom/nameddorm{
 	name = "Cracker's Residence";
 	matchnames = list("Cracker","Raine Rattlewag","K-01","Ecise Nei","Katchik","Mica Shimmerfluff")
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/centcom/living)
@@ -32573,7 +32063,6 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/control)
 "qKv" = (
@@ -32658,7 +32147,6 @@
 	req_one_access = list(5);
 	id_tag = "ICU_South"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "qLZ" = (
@@ -33754,7 +33242,6 @@
 	matchnames = list("Ikayatachati");
 	name = "Ikaya's Residence"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "rpy" = (
@@ -33816,7 +33303,7 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "rrv" = (
-/obj/structure/flora/tree/pine/xmas,
+/obj/structure/flora/tree/pine/xmas/presents,
 /turf/simulated/floor/tiled/freezer{
 	oxygen = 0;
 	phoron = 21.8366
@@ -33905,9 +33392,6 @@
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "rto" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass2{
 	dir = 1
 	},
@@ -34363,7 +33847,6 @@
 	name = "Drake's Residence";
 	matchnames = list("Drake Downcrest")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "rES" = (
@@ -34647,7 +34130,6 @@
 	name = "Meek and Feldam's Residence";
 	matchnames = list("Meek","Feldam")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "rNJ" = (
@@ -36109,7 +35591,6 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "sBo" = (
-/obj/structure/sign/christmas/lights,
 /turf/unsimulated/wall/fakeglass{
 	dir = 4
 	},
@@ -36639,7 +36120,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/restaurant)
 "sSI" = (
@@ -37065,7 +36545,6 @@
 /obj/machinery/door/airlock/security{
 	name = "Security"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/dark,
 /area/centcom/security)
 "tih" = (
@@ -37378,9 +36857,6 @@
 	dir = 1;
 	req_access = list(101);
 	locked = 1
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
@@ -39634,9 +39110,6 @@
 /obj/effect/floor_decal/corner/grey{
 	dir = 5
 	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
 /turf/unsimulated/floor/steel{
 	icon_state = "tile_full";
 	color = "#385e60"
@@ -39652,7 +39125,6 @@
 /area/specialty/redspace)
 "uKz" = (
 /obj/structure/fans/hardlight,
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/shuttle/plating,
 /area/centcom/security)
 "uLl" = (
@@ -39703,9 +39175,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/specialty/redspace)
 "uMo" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 4
 	},
@@ -39713,9 +39182,6 @@
 "uMt" = (
 /obj/machinery/door/airlock/centcom{
 	req_one_access = list()
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 8
 	},
 /turf/simulated/floor/reinforced,
 /area/centcom/main_hall)
@@ -39952,9 +39418,6 @@
 /area/specialty/redspace)
 "uSe" = (
 /obj/structure/sign/warning/lethal_turrets,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass2{
 	dir = 4
 	},
@@ -40489,9 +39952,6 @@
 /turf/simulated/floor/carpet,
 /area/specialty/redspace)
 "vhM" = (
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2"
 	},
@@ -40590,9 +40050,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/specialty/redspace)
 "vlK" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
 	},
@@ -41824,7 +41281,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/centcom/medical)
 "vVE" = (
-/obj/structure/sign/christmas/lights,
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
 	},
@@ -42279,9 +41735,6 @@
 	name = "Vox Habitation"
 	},
 /obj/structure/fans/hardlight,
-/obj/structure/sign/christmas/wreath{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark,
 /area/centcom/living)
 "wiB" = (
@@ -42493,9 +41946,6 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "wnS" = (
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/wall/fakeglass2{
 	dir = 4
 	},
@@ -42796,7 +42246,6 @@
 	name = "Medical Elevator";
 	on_store_name = "Centcom Elevator Alert"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/unsimulated/elevator_shaft,
 /area/centcom/medical)
 "wwQ" = (
@@ -43062,7 +42511,6 @@
 	name = "Schale and Trashfire's Residence";
 	matchnames = list("Schale Vam","Trashfire")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "wDQ" = (
@@ -43683,9 +43131,6 @@
 /area/centcom/living)
 "wUS" = (
 /obj/effect/floor_decal/industrial/outline,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "wUU" = (
@@ -43699,9 +43144,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/centcom/medical)
 "wVH" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
 /turf/unsimulated/wall/fakeglass2{
 	dir = 4
 	},
@@ -43716,9 +43158,6 @@
 	density = 0;
 	dir = 4;
 	id = "residential"
-	},
-/obj/structure/sign/christmas/wreath{
-	dir = 4
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "dark"
@@ -43804,7 +43243,6 @@
 	name = "Kitchen";
 	req_access = list(28)
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/white,
 /area/centcom/restaurant)
 "wXK" = (
@@ -43991,7 +43429,6 @@
 	},
 /obj/structure/fans/hardlight,
 /obj/structure/disposalpipe/segment,
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled,
 /area/centcom/control)
 "xaG" = (
@@ -44709,9 +44146,6 @@
 	name = "Escape Shuttle Cockpit";
 	req_access = list(19)
 	},
-/obj/structure/sign/christmas/wreath{
-	dir = 8
-	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/escape)
 "xuM" = (
@@ -45139,9 +44573,6 @@
 /turf/simulated/floor/tiled,
 /area/centcom/main_hall)
 "xFP" = (
-/obj/structure/sign/christmas/lights{
-	dir = 8
-	},
 /turf/unsimulated/wall/fakeglass,
 /area/centcom/medical)
 "xFQ" = (
@@ -45617,7 +45048,6 @@
 	name = "Custodial Closet";
 	req_access = list(26)
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/milspec,
 /area/centcom/main_hall)
 "xSd" = (
@@ -45689,7 +45119,6 @@
 	name = "Keith's Residence";
 	matchnames = list("Keith Winters")
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/living)
 "xTy" = (
@@ -45914,7 +45343,6 @@
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Bar"
 	},
-/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/wood,
 /area/centcom/restaurant)
 "xZW" = (
@@ -53470,10 +52898,10 @@ hOG
 uho
 uho
 tjK
-ack
-acr
+taE
+yaJ
 toQ
-ack
+taE
 tjK
 uho
 uho
@@ -54433,12 +53861,12 @@ orZ
 avm
 pfw
 izt
-acO
-acE
-acE
-acE
-acE
-acA
+kHO
+orZ
+orZ
+orZ
+orZ
+xrs
 izt
 pfw
 uVC
@@ -55892,11 +55320,11 @@ aaP
 aaP
 aaP
 aaP
-acN
-acF
-acF
-acF
-acB
+gfX
+mHz
+mHz
+mHz
+iMz
 aaP
 aaP
 tjK
@@ -59639,9 +59067,9 @@ aas
 aas
 aas
 aas
-abU
-abT
-aaz
+xAJ
+xxV
+tJx
 aas
 aas
 aas
@@ -59659,9 +59087,9 @@ aas
 aas
 aas
 aas
-abU
-abT
-aaz
+xAJ
+xxV
+tJx
 aas
 rwm
 mdj
@@ -59804,7 +59232,7 @@ qCC
 hsA
 xxV
 tBK
-acg
+qCC
 qCC
 qCC
 qCC
@@ -59966,7 +59394,7 @@ xxV
 xxV
 xxV
 xxV
-ach
+xxV
 xxV
 xxV
 xxV
@@ -60110,7 +59538,7 @@ xqn
 iHy
 aBJ
 xqn
-acw
+rJs
 hrQ
 rus
 yaJ
@@ -60128,7 +59556,7 @@ hva
 bph
 bph
 bph
-aci
+bph
 bph
 bph
 bph
@@ -60270,14 +59698,14 @@ wiW
 aaQ
 aaQ
 aaQ
-acC
+hvH
 aaQ
 aaQ
 aaQ
 jbP
-acq
-acq
-acq
+iFA
+iFA
+iFA
 oRP
 oRP
 oRP
@@ -60597,7 +60025,7 @@ aBJ
 hvg
 fsi
 fkA
-acs
+xEr
 rUU
 yaJ
 yaJ
@@ -60753,13 +60181,13 @@ sGs
 xtu
 aBJ
 aBJ
-acM
+hvH
 iHy
 iHy
 mDT
 nPb
 fkA
-act
+vmO
 rUU
 yaJ
 yaJ
@@ -61080,9 +60508,9 @@ wiW
 aaQ
 xqn
 aaQ
-acD
-acy
-acx
+ruh
+iGD
+gZy
 aaQ
 rUU
 yaJ
@@ -61412,7 +60840,7 @@ hur
 tnm
 yaJ
 yaJ
-aco
+sDl
 sDl
 sDl
 sDl
@@ -64318,7 +63746,7 @@ crd
 rFK
 jcC
 wWv
-acH
+qwG
 bkI
 wSx
 wSx
@@ -64480,7 +63908,7 @@ pPd
 qwG
 edO
 jfi
-acJ
+dfx
 sAJ
 wSx
 wSx
@@ -64495,7 +63923,7 @@ sCj
 vWP
 vWP
 oOX
-acj
+iXj
 iXj
 vWP
 vWP
@@ -64642,7 +64070,7 @@ pPd
 dfx
 edO
 jfi
-acJ
+dfx
 sAJ
 wSx
 wSx
@@ -64656,7 +64084,7 @@ bkl
 cHO
 vWP
 vWP
-acm
+foe
 hUx
 bsx
 vWP
@@ -64804,7 +64232,7 @@ mDE
 kSy
 edO
 jfi
-acK
+kSy
 aWs
 wSx
 wSx
@@ -64818,7 +64246,7 @@ iJY
 dzR
 vWP
 vWP
-acm
+foe
 qYE
 uvO
 vWP
@@ -64980,7 +64408,7 @@ oDk
 rsN
 vWP
 vWP
-acm
+foe
 vgG
 vWP
 vWP
@@ -64996,7 +64424,7 @@ skj
 ccg
 vWP
 vWP
-abY
+exQ
 kwV
 kwV
 exQ
@@ -65138,7 +64566,7 @@ yaJ
 rRh
 yaJ
 eqO
-acp
+wVH
 lKF
 iXj
 iXj
@@ -65158,7 +64586,7 @@ iXj
 rsN
 vWP
 vWP
-abY
+exQ
 iPN
 iPN
 exQ
@@ -65290,7 +64718,7 @@ lHL
 dfx
 edO
 jfi
-acL
+dZE
 wSx
 gQX
 gQX
@@ -65302,20 +64730,20 @@ jOo
 rJh
 aaM
 aaM
-acf
+nFC
 hUo
 hUo
-acd
+xFP
 aaM
 aaM
 fOr
 aaM
 aaM
-acf
-acd
+nFC
+xFP
 jgL
-acf
-acd
+nFC
+xFP
 aaM
 nQN
 vWP
@@ -65453,9 +64881,9 @@ kSy
 edO
 jfi
 bOi
-acG
-acz
-acz
+thW
+dZE
+dZE
 ccD
 oVU
 fst
@@ -65619,7 +65047,7 @@ kUm
 gXA
 efa
 dZE
-acu
+eSZ
 awX
 gTT
 sCq
@@ -65781,7 +65209,7 @@ wSx
 wSx
 ewy
 hhw
-acv
+bwr
 utq
 oyq
 eKr
@@ -65938,7 +65366,7 @@ lHL
 dfx
 edO
 jfi
-acH
+qwG
 sAJ
 wSx
 wSx
@@ -66100,7 +65528,7 @@ lHL
 dfx
 edO
 jfi
-acJ
+dfx
 sAJ
 wSx
 bFs
@@ -66262,12 +65690,12 @@ lHL
 kSy
 edO
 jfi
-acK
+kSy
 xWk
 ldp
 ygy
 dZE
-acu
+eSZ
 jOo
 jOo
 jOo
@@ -66436,8 +65864,8 @@ qiN
 qiN
 tjK
 tjK
-ack
-acn
+taE
+taE
 wBs
 wBs
 aaM
@@ -66600,8 +66028,8 @@ tJq
 oTj
 eSZ
 taE
-ack
-ack
+taE
+taE
 aaM
 aaM
 aaM
@@ -66764,7 +66192,7 @@ cml
 gge
 gge
 iKr
-acb
+wVP
 sVU
 gge
 gge
@@ -66774,7 +66202,7 @@ cml
 gge
 gge
 ilU
-acb
+wVP
 dgQ
 yaJ
 cml
@@ -66926,7 +66354,7 @@ yaJ
 yaJ
 yaJ
 wFO
-acb
+wVP
 dVV
 yaJ
 yaJ
@@ -66936,7 +66364,7 @@ yaJ
 yaJ
 yaJ
 bHB
-acb
+wVP
 dVV
 yaJ
 yaJ
@@ -67088,7 +66516,7 @@ yaJ
 yaJ
 xMy
 eYS
-acb
+wVP
 hyp
 fot
 fot
@@ -67098,7 +66526,7 @@ fot
 fot
 fot
 cUP
-acb
+wVP
 waT
 yaJ
 xMy
@@ -67255,11 +66683,11 @@ tjK
 tjK
 tjK
 tjK
-abZ
-abZ
-abZ
-abZ
-abZ
+taE
+taE
+taE
+taE
+taE
 cYP
 wVP
 wVP
@@ -67422,7 +66850,7 @@ wBs
 wBs
 wBs
 wBs
-acc
+taE
 cMi
 yaJ
 wFO
@@ -67584,7 +67012,7 @@ wBs
 wBs
 wBs
 wBs
-acc
+taE
 cMi
 yaJ
 hRS
@@ -67746,7 +67174,7 @@ wBs
 wBs
 wBs
 wBs
-acc
+taE
 cMi
 yaJ
 wFO
@@ -68233,9 +67661,9 @@ wBs
 tjK
 tjK
 tjK
-aca
-aca
-aca
+wVP
+wVP
+wVP
 tjK
 tjK
 tjK
@@ -68554,7 +67982,7 @@ uho
 uho
 uho
 wBs
-acc
+taE
 cMi
 fgm
 gTL
@@ -68562,7 +67990,7 @@ gTL
 gTL
 fgm
 hRS
-abV
+taE
 wBs
 wBs
 uho
@@ -68716,7 +68144,7 @@ uho
 uho
 wBs
 wBs
-acc
+taE
 cMi
 pmD
 giS
@@ -68724,7 +68152,7 @@ iCP
 giS
 vZe
 hRS
-abV
+taE
 wBs
 wBs
 wBs
@@ -68878,7 +68306,7 @@ uho
 uho
 wBs
 wBs
-acc
+taE
 cMi
 vvU
 giS
@@ -68886,7 +68314,7 @@ uks
 giS
 fgm
 hRS
-abV
+taE
 wBs
 wBs
 wBs
@@ -69040,7 +68468,7 @@ uho
 uho
 wBs
 wBs
-acc
+taE
 cMi
 pmD
 giS
@@ -69048,7 +68476,7 @@ qdO
 giS
 vZe
 hRS
-abV
+taE
 wBs
 wBs
 wBs
@@ -69202,7 +68630,7 @@ uho
 uho
 uho
 wBs
-acc
+taE
 cMi
 fgm
 bFa
@@ -69210,7 +68638,7 @@ qfm
 bFa
 fgm
 hRS
-abV
+taE
 wBs
 wBs
 uho
@@ -69528,11 +68956,11 @@ uho
 wBs
 tjK
 tjK
-abZ
-abZ
-abZ
-abZ
-abZ
+taE
+taE
+taE
+taE
+taE
 tjK
 tjK
 uho
