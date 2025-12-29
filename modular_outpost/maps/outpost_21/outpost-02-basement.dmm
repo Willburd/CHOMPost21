@@ -54501,19 +54501,13 @@
 	},
 /area/mine/explored/muriki/tuggrave)
 "bWc" = (
-/obj/structure/cryofeed,
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
+/obj/machinery/cryopod/robot,
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "bWd" = (
@@ -70814,12 +70808,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/oldbridge)
-"iuT" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "ivq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -71762,6 +71750,9 @@
 	},
 /obj/structure/window/basic{
 	dir = 4
+	},
+/obj/structure/window/basic{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
@@ -93315,7 +93306,7 @@ aad
 xJd
 kGE
 rBM
-iuT
+rBM
 vap
 iVB
 nws
